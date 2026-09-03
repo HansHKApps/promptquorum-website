@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Amazon Associates: 카테고리에 따라 1–4% (PC 부품 → 전자제품). 쿠키 24시간. GPU, RAM, NAS 구매는 높은 가격대에서 상당한 수수료를 발생시킵니다.',
           'Newegg 제휴 프로그램: 고정 2.5%, 쿠키 7일. PC 부품을 구매하는 미국 독자층에 적합합니다. Commission Junction(CJ Affiliate)을 통해 가입합니다.',
         ],
-        note: '한국 독자층에는 쿠팡 파트너스(coupang.com/partners) — PC 부품 카탈로그를 보유하며 원화로 지급합니다 — 또는 Amazon.co.jp를 고려해 보십시오.',
+        note: '한국 독자층에는 쿠팡 파트너스([coupang.com/partners](https://coupang.com/partners)) — PC 부품 카탈로그를 보유하며 원화로 지급합니다 — 또는 Amazon.co.jp를 고려해 보십시오.',
         affiliateLinks: [
           { url: 'https://affiliate-program.amazon.com/', productName: 'Amazon Associates', productCategory: 'affiliate_program', priceRange: '1–4%', label: 'Amazon Associates 가입 →' },
           { url: 'https://www.newegg.com/affiliates', productName: 'Newegg Affiliate Program', productCategory: 'affiliate_program', priceRange: '2.5%', label: 'Newegg 제휴 프로그램 가입 →' },

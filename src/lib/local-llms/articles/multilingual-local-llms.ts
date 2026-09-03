@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Run MGSM (Multilingual Grade School Math) -- tests math reasoning across 10 languages. Available on Hugging Face: datasets/juletxara/mgsm.',
             'Run m-MMLU -- the multilingual version of MMLU covering 57 subjects in multiple languages.',
             'For conversational quality: write 10 test prompts in your target language covering different task types (summarization, Q&A, translation, creative writing). Evaluate responses manually or with a native speaker.',
-            'For Japanese specifically: use JMT-bench (github.com/Stability-AI/lm-evaluation-harness) which covers Japanese instruction-following.',
+            'For Japanese specifically: use JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness)) which covers Japanese instruction-following.',
             'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-5.6 simultaneously to quantify the quality gap on your specific use case.',
           ],
         },
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ejecuta MGSM (Multilingual Grade School Math) -- prueba el razonamiento matemático en 10 idiomas. Disponible en Hugging Face: datasets/juletxara/mgsm.',
             'Ejecuta m-MMLU -- la versión multilingue de MMLU que cubre 57 materias en varios idiomas.',
             'Para calidad conversacional: escribe 10 prompts de prueba en tu idioma objetivo que abarquen distintos tipos de tarea (resumen, preguntas y respuestas, traducción, escritura creativa). Evalúa las respuestas manualmente o con un hablante nativo.',
-            'Para japonés específicamente: usa JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cubre el seguimiento de instrucciones en japonés.',
+            'Para japonés específicamente: usa JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness)), que cubre el seguimiento de instrucciones en japonés.',
             'Compara tu modelo local con APIs en la nube usando [PromptQuorum](/) -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.6 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.',
           ],
         },
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'HowToStep',
             'position': 4,
             'name': 'Usar JMT-bench para japonés',
-            'text': 'Para japonés específicamente: usa JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cubre el seguimiento de instrucciones en japonés.'
+            'text': 'Para japonés específicamente: usa JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness)), que cubre el seguimiento de instrucciones en japonés.'
           },
           {
             '@type': 'HowToStep',
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'شغّل MGSM (Multilingual Grade School Math) -- يختبر الاستدلال الرياضي بـ 10 لغات. متاح على Hugging Face: datasets/juletxara/mgsm.',
             'شغّل m-MMLU -- النسخة متعددة اللغات من MMLU التي تغطي 57 مادة بعدة لغات.',
             'للجودة الحوارية: اكتب 10 محفّزات اختبار بلغتك المستهدفة تشمل أنواع مهام مختلفة (تلخيص، أسئلة وأجوبة، ترجمة، كتابة إبداعية). قيّم الإجابات يدويًا أو مع متحدث أصلي.',
-            'لليابانية تحديدًا: استخدم JMT-bench (github.com/Stability-AI/lm-evaluation-harness)، الذي يغطي اتباع التعليمات باليابانية.',
+            'لليابانية تحديدًا: استخدم JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness))، الذي يغطي اتباع التعليمات باليابانية.',
             'قارن نموذجك المحلي بواجهات API السحابية باستخدام [PromptQuorum](/) -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.6 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.',
           ],
         },
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'HowToStep',
             'position': 4,
             'name': 'استخدام JMT-bench لليابانية',
-            'text': 'لليابانية تحديدًا: استخدم JMT-bench (github.com/Stability-AI/lm-evaluation-harness)، الذي يغطي اتباع التعليمات باليابانية.'
+            'text': 'لليابانية تحديدًا: استخدم JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness))، الذي يغطي اتباع التعليمات باليابانية.'
           },
           {
             '@type': 'HowToStep',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Execute o MGSM (Multilingual Grade School Math) -- testa o raciocínio matemático em 10 idiomas. Disponível no Hugging Face: datasets/juletxara/mgsm.',
             'Execute o m-MMLU -- a versão multilíngue do MMLU, cobrindo 57 disciplinas em vários idiomas.',
             'Para qualidade conversacional: escreva 10 prompts de teste no idioma alvo cobrindo diferentes tipos de tarefa (resumo, perguntas e respostas, tradução, escrita criativa). Avalie as respostas manualmente ou com um falante nativo.',
-            'Para japonês especificamente: use o JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cobre o seguimento de instruções em japonês.',
+            'Para japonês especificamente: use o JMT-bench ([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness)), que cobre o seguimento de instruções em japonês.',
             'Compare seu modelo local com APIs na nuvem usando o [PromptQuorum](/pt) -- envie o mesmo prompt multilíngue simultaneamente para seu modelo Ollama local e para o GPT-5.6 para quantificar a diferença de qualidade no seu caso de uso específico.',
           ],
         },
@@ -2895,7 +2895,7 @@ schema: {
             'MGSM(Multilingual Grade School Math)을 실행하십시오 -- 10개 언어에서 수학적 추론을 테스트합니다. Hugging Face에서 확인 가능합니다: datasets/juletxara/mgsm.',
             'm-MMLU를 실행하십시오 -- 여러 언어로 57개 주제를 다루는 MMLU의 다국어 버전입니다.',
             '대화 품질의 경우: 요약, Q&A, 번역, 창의적 글쓰기 등 다양한 작업 유형을 포함하여 대상 언어로 10개의 테스트 프롬프트를 작성하십시오. 결과를 수동으로 또는 원어민 화자와 함께 평가하십시오.',
-            '일본어의 경우: JMT-bench(github.com/Stability-AI/lm-evaluation-harness)를 사용하십시오 -- 일본어 명령 수행을 다룹니다.',
+            '일본어의 경우: JMT-bench([github.com/Stability-AI/lm-evaluation-harness](https://github.com/Stability-AI/lm-evaluation-harness))를 사용하십시오 -- 일본어 명령 수행을 다룹니다.',
             '[PromptQuorum](/)을 사용하여 로컬 모델과 클라우드 API를 비교하십시오 -- 동일한 다국어 프롬프트를 로컬 Ollama 모델과 GPT-5.6에 동시에 전송하여 특정 사용 사례에서의 품질 격차를 정량화하십시오.',
           ],
         },

@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI Review 2026: On-Device AI for iPhone, iPad, Mac',
     seoTitle: 'Enclave AI Review 2026: On-Device AI Assistant',
-    intro: 'Enclave AI (enclaveai.app) is an app for iPhone, iPad, and Mac that runs open-source AI models directly on your device instead of sending your messages to a server. It is built by independent developer Piotr Gorzelany, distributed through the App Store as a free download with in-app purchases, and works without an account or internet connection once a model is downloaded.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) is an app for iPhone, iPad, and Mac that runs open-source AI models directly on your device instead of sending your messages to a server. It is built by independent developer Piotr Gorzelany, distributed through the App Store as a free download with in-app purchases, and works without an account or internet connection once a model is downloaded.',
     metaDescription: 'Enclave AI runs open-source models on-device on iPhone, iPad, and Mac — no account, no internet needed once a model is downloaded. Here is what it actually offers.',
     readTime: '9 min read',
     targetKeywords: [
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is Enclave AI?', a: 'Enclave AI (enclaveai.app) is an app for iPhone, iPad, and Mac that runs open-source AI models on-device, using the device\'s own hardware rather than a cloud server. It is built by independent developer Piotr Gorzelany, requires no account, and lets you chat offline once a model is downloaded.' },
+          { q: 'What is Enclave AI?', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) is an app for iPhone, iPad, and Mac that runs open-source AI models on-device, using the device\'s own hardware rather than a cloud server. It is built by independent developer Piotr Gorzelany, requires no account, and lets you chat offline once a model is downloaded.' },
           { q: 'Does Enclave AI require an account?', a: 'No. Enclave AI does not require an account to use.' },
           { q: 'Does Enclave AI work without an internet connection?', a: 'Once you have downloaded a model, chat with that model works fully offline — no internet connection is needed. Downloading the model itself does require an internet connection.' },
           { q: 'How many models can I use in Enclave AI?', a: 'Enclave AI lets you try hundreds of open-source models. Check the app\'s current model library for the specific list, since it can change between updates.' },
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI Review 2026: KI auf dem Gerät für iPhone, iPad, Mac',
     seoTitle: 'Enclave AI Review 2026: KI auf dem Gerät',
-    intro: 'Enclave AI (enclaveai.app) ist eine App für iPhone, iPad und Mac, die Open-Source-KI-Modelle direkt auf dem Gerät ausführt, statt Nachrichten an einen Server zu senden. Sie wird vom unabhängigen Entwickler Piotr Gorzelany gebaut, über den App Store als kostenloser Download mit In-App-Käufen vertrieben und funktioniert ohne Konto und ohne Internetverbindung, sobald ein Modell heruntergeladen wurde.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) ist eine App für iPhone, iPad und Mac, die Open-Source-KI-Modelle direkt auf dem Gerät ausführt, statt Nachrichten an einen Server zu senden. Sie wird vom unabhängigen Entwickler Piotr Gorzelany gebaut, über den App Store als kostenloser Download mit In-App-Käufen vertrieben und funktioniert ohne Konto und ohne Internetverbindung, sobald ein Modell heruntergeladen wurde.',
     metaDescription: 'Enclave AI führt Open-Source-Modelle direkt auf iPhone, iPad und Mac aus — kein Konto nötig, kein Internet nach dem Download eines Modells. Hier die Fakten zur App.',
     readTime: '9 Min. Lesezeit',
     targetKeywords: [
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was ist Enclave AI?', a: 'Enclave AI (enclaveai.app) ist eine App für iPhone, iPad und Mac, die Open-Source-KI-Modelle auf dem Gerät ausführt, mit der eigenen Hardware statt einem Cloud-Server. Sie wird vom unabhängigen Entwickler Piotr Gorzelany gebaut, erfordert kein Konto und ermöglicht offline Chat, sobald ein Modell heruntergeladen ist.' },
+          { q: 'Was ist Enclave AI?', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) ist eine App für iPhone, iPad und Mac, die Open-Source-KI-Modelle auf dem Gerät ausführt, mit der eigenen Hardware statt einem Cloud-Server. Sie wird vom unabhängigen Entwickler Piotr Gorzelany gebaut, erfordert kein Konto und ermöglicht offline Chat, sobald ein Modell heruntergeladen ist.' },
           { q: 'Braucht Enclave AI ein Konto?', a: 'Nein. Enclave AI erfordert kein Konto zur Nutzung.' },
           { q: 'Funktioniert Enclave AI ohne Internetverbindung?', a: 'Sobald ein Modell heruntergeladen wurde, funktioniert der Chat damit vollständig offline — keine Internetverbindung nötig. Für das Herunterladen des Modells selbst ist eine Internetverbindung erforderlich.' },
           { q: 'Wie viele Modelle kann ich in Enclave AI nutzen?', a: 'Enclave AI ermöglicht das Ausprobieren von Hunderten Open-Source-Modellen. Prüfen Sie die aktuelle Modellbibliothek der App für die genaue Liste, da sie sich zwischen Updates ändern kann.' },
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI Review 2026 : IA sur l\'appareil pour iPhone, iPad, Mac',
     seoTitle: 'Enclave AI Review 2026 : IA embarquée sur l\'appareil',
-    intro: 'Enclave AI (enclaveai.app) est une application pour iPhone, iPad et Mac qui exécute des modèles d\'IA open source directement sur l\'appareil, sans envoyer vos messages à un serveur. Elle est développée par Piotr Gorzelany, développeur indépendant, distribuée sur l\'App Store en téléchargement gratuit avec achats intégrés, et fonctionne sans compte ni connexion internet une fois un modèle téléchargé.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) est une application pour iPhone, iPad et Mac qui exécute des modèles d\'IA open source directement sur l\'appareil, sans envoyer vos messages à un serveur. Elle est développée par Piotr Gorzelany, développeur indépendant, distribuée sur l\'App Store en téléchargement gratuit avec achats intégrés, et fonctionne sans compte ni connexion internet une fois un modèle téléchargé.',
     metaDescription: 'Enclave AI exécute des modèles open source sur l\'appareil, sur iPhone, iPad et Mac — sans compte, sans internet après le téléchargement d\'un modèle. Voici ce que propose vraiment l\'app.',
     readTime: '9 min de lecture',
     targetKeywords: [
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Qu\'est-ce qu\'Enclave AI ?', a: 'Enclave AI (enclaveai.app) est une application pour iPhone, iPad et Mac qui exécute des modèles d\'IA open source sur l\'appareil, avec son propre matériel plutôt qu\'un serveur cloud. Elle est développée par le développeur indépendant Piotr Gorzelany, ne nécessite aucun compte, et permet de discuter hors ligne une fois un modèle téléchargé.' },
+          { q: 'Qu\'est-ce qu\'Enclave AI ?', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) est une application pour iPhone, iPad et Mac qui exécute des modèles d\'IA open source sur l\'appareil, avec son propre matériel plutôt qu\'un serveur cloud. Elle est développée par le développeur indépendant Piotr Gorzelany, ne nécessite aucun compte, et permet de discuter hors ligne une fois un modèle téléchargé.' },
           { q: 'Enclave AI nécessite-t-elle un compte ?', a: 'Non. Enclave AI ne nécessite pas de compte pour être utilisée.' },
           { q: 'Enclave AI fonctionne-t-elle sans connexion internet ?', a: 'Une fois un modèle téléchargé, discuter avec ce modèle fonctionne entièrement hors ligne — aucune connexion internet n\'est nécessaire. Le téléchargement du modèle lui-même nécessite une connexion internet.' },
           { q: 'Combien de modèles puis-je utiliser dans Enclave AI ?', a: 'Enclave AI permet d\'essayer des centaines de modèles open source. Consultez la bibliothèque de modèles actuelle de l\'application pour la liste précise, celle-ci pouvant évoluer d\'une mise à jour à l\'autre.' },
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI Review 2026: IA en el dispositivo para iPhone, iPad, Mac',
     seoTitle: 'Enclave AI Review 2026: IA en el dispositivo',
-    intro: 'Enclave AI (enclaveai.app) es una app para iPhone, iPad y Mac que ejecuta modelos de IA de código abierto directamente en tu dispositivo, en lugar de enviar tus mensajes a un servidor. La desarrolla Piotr Gorzelany, un desarrollador independiente, se distribuye en la App Store como descarga gratuita con compras dentro de la app, y funciona sin cuenta y sin conexión a internet una vez descargado un modelo.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) es una app para iPhone, iPad y Mac que ejecuta modelos de IA de código abierto directamente en tu dispositivo, en lugar de enviar tus mensajes a un servidor. La desarrolla Piotr Gorzelany, un desarrollador independiente, se distribuye en la App Store como descarga gratuita con compras dentro de la app, y funciona sin cuenta y sin conexión a internet una vez descargado un modelo.',
     metaDescription: 'Enclave AI ejecuta modelos de código abierto en el dispositivo, en iPhone, iPad y Mac — sin cuenta, sin internet tras descargar un modelo. Esto es lo que ofrece realmente.',
     readTime: '9 min de lectura',
     targetKeywords: [
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué es Enclave AI?', a: 'Enclave AI (enclaveai.app) es una app para iPhone, iPad y Mac que ejecuta modelos de IA de código abierto en el dispositivo, con su propio hardware en lugar de un servidor en la nube. La desarrolla el desarrollador independiente Piotr Gorzelany, no requiere cuenta, y permite chatear sin conexión una vez descargado un modelo.' },
+          { q: '¿Qué es Enclave AI?', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) es una app para iPhone, iPad y Mac que ejecuta modelos de IA de código abierto en el dispositivo, con su propio hardware en lugar de un servidor en la nube. La desarrolla el desarrollador independiente Piotr Gorzelany, no requiere cuenta, y permite chatear sin conexión una vez descargado un modelo.' },
           { q: '¿Enclave AI requiere una cuenta?', a: 'No. Enclave AI no requiere una cuenta para usarse.' },
           { q: '¿Enclave AI funciona sin conexión a internet?', a: 'Una vez descargado un modelo, chatear con él funciona completamente sin conexión — no hace falta internet. Descargar el modelo en sí sí requiere conexión a internet.' },
           { q: '¿Cuántos modelos puedo usar en Enclave AI?', a: 'Enclave AI permite probar cientos de modelos de código abierto. Revisa la biblioteca de modelos actual de la app para la lista concreta, ya que puede cambiar entre actualizaciones.' },
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI Review 2026: IA no dispositivo para iPhone, iPad, Mac',
     seoTitle: 'Enclave AI Review 2026: IA no dispositivo',
-    intro: 'Enclave AI (enclaveai.app) é um aplicativo para iPhone, iPad e Mac que executa modelos de IA de código aberto diretamente no seu dispositivo, em vez de enviar suas mensagens para um servidor. É desenvolvido por Piotr Gorzelany, um desenvolvedor independente, distribuído na App Store como download gratuito com compras no app, e funciona sem conta e sem conexão à internet depois que um modelo é baixado.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) é um aplicativo para iPhone, iPad e Mac que executa modelos de IA de código aberto diretamente no seu dispositivo, em vez de enviar suas mensagens para um servidor. É desenvolvido por Piotr Gorzelany, um desenvolvedor independente, distribuído na App Store como download gratuito com compras no app, e funciona sem conta e sem conexão à internet depois que um modelo é baixado.',
     metaDescription: 'Enclave AI executa modelos de código aberto no dispositivo, em iPhone, iPad e Mac — sem conta, sem internet após baixar um modelo. Veja o que o app realmente oferece.',
     readTime: '9 min de leitura',
     targetKeywords: [
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O que é o Enclave AI?', a: 'Enclave AI (enclaveai.app) é um aplicativo para iPhone, iPad e Mac que executa modelos de IA de código aberto no dispositivo, com o próprio hardware em vez de um servidor na nuvem. É desenvolvido pelo desenvolvedor independente Piotr Gorzelany, não exige conta, e permite conversar offline depois que um modelo é baixado.' },
+          { q: 'O que é o Enclave AI?', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) é um aplicativo para iPhone, iPad e Mac que executa modelos de IA de código aberto no dispositivo, com o próprio hardware em vez de um servidor na nuvem. É desenvolvido pelo desenvolvedor independente Piotr Gorzelany, não exige conta, e permite conversar offline depois que um modelo é baixado.' },
           { q: 'O Enclave AI exige conta?', a: 'Não. O Enclave AI não exige conta para ser usado.' },
           { q: 'O Enclave AI funciona sem conexão à internet?', a: 'Depois que um modelo é baixado, conversar com ele funciona totalmente offline — não é preciso internet. Baixar o modelo em si exige conexão à internet.' },
           { q: 'Quantos modelos posso usar no Enclave AI?', a: 'O Enclave AI permite experimentar centenas de modelos de código aberto. Consulte a biblioteca de modelos atual do app para a lista específica, já que ela pode mudar entre atualizações.' },
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'مراجعة Enclave AI 2026: ذكاء اصطناعي على الجهاز لـ iPhone وiPad وMac',
     seoTitle: 'مراجعة Enclave AI 2026: ذكاء اصطناعي على الجهاز',
-    intro: 'Enclave AI (enclaveai.app) هو تطبيق لأجهزة iPhone وiPad وMac يشغّل نماذج ذكاء اصطناعي مفتوحة المصدر مباشرة على جهازك بدلاً من إرسال رسائلك إلى خادم. طوّره المطوّر المستقل Piotr Gorzelany، ويُوزَّع عبر App Store كتنزيل مجاني مع مشتريات داخل التطبيق، ويعمل دون حساب ودون اتصال بالإنترنت بمجرد تنزيل أحد النماذج.',
+    intro: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) هو تطبيق لأجهزة iPhone وiPad وMac يشغّل نماذج ذكاء اصطناعي مفتوحة المصدر مباشرة على جهازك بدلاً من إرسال رسائلك إلى خادم. طوّره المطوّر المستقل Piotr Gorzelany، ويُوزَّع عبر App Store كتنزيل مجاني مع مشتريات داخل التطبيق، ويعمل دون حساب ودون اتصال بالإنترنت بمجرد تنزيل أحد النماذج.',
     metaDescription: 'يشغّل Enclave AI نماذج مفتوحة المصدر على الجهاز في iPhone وiPad وMac — دون حساب، ودون إنترنت بعد تنزيل النموذج. إليك ما يقدّمه التطبيق فعليًا.',
     readTime: '9 دقائق للقراءة',
     targetKeywords: [
@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو Enclave AI؟', a: 'Enclave AI (enclaveai.app) هو تطبيق لأجهزة iPhone وiPad وMac يشغّل نماذج ذكاء اصطناعي مفتوحة المصدر على الجهاز، بعتاده الخاص بدلاً من خادم سحابي. طوّره المطوّر المستقل Piotr Gorzelany، ولا يتطلب حسابًا، ويتيح المحادثة دون اتصال بمجرد تنزيل نموذج.' },
+          { q: 'ما هو Enclave AI؟', a: 'Enclave AI ([enclaveai.app](https://enclaveai.app)) هو تطبيق لأجهزة iPhone وiPad وMac يشغّل نماذج ذكاء اصطناعي مفتوحة المصدر على الجهاز، بعتاده الخاص بدلاً من خادم سحابي. طوّره المطوّر المستقل Piotr Gorzelany، ولا يتطلب حسابًا، ويتيح المحادثة دون اتصال بمجرد تنزيل نموذج.' },
           { q: 'هل يتطلب Enclave AI حسابًا؟', a: 'لا. لا يتطلب Enclave AI حسابًا لاستخدامه.' },
           { q: 'هل يعمل Enclave AI دون اتصال بالإنترنت؟', a: 'بمجرد تنزيل نموذج، تعمل المحادثة معه دون اتصال بالكامل — دون حاجة إلى إنترنت. أما تنزيل النموذج نفسه فيتطلب اتصالًا بالإنترنت.' },
           { q: 'كم عدد النماذج التي يمكنني استخدامها في Enclave AI؟', a: 'يتيح Enclave AI تجربة مئات النماذج مفتوحة المصدر. راجع مكتبة النماذج الحالية في التطبيق للحصول على القائمة الدقيقة، لأنها قد تتغير بين التحديثات.' },
@@ -1997,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Enclave AI',
     title: 'Enclave AI 리뷰 2026: iPhone·iPad·Mac용 온디바이스 AI',
     seoTitle: 'Enclave AI 리뷰 2026: 온디바이스 AI 어시스턴트',
-    intro: 'Enclave AI(enclaveai.app)는 메시지를 서버로 전송하는 대신 오픈소스 AI 모델을 기기에서 직접 실행하는 iPhone, iPad, Mac용 앱입니다. 독립 개발자 Piotr Gorzelany가 개발했으며, App Store에서 인앱 구매가 포함된 무료 다운로드로 배포되고, 모델을 다운로드하면 계정 없이 인터넷 연결 없이도 사용할 수 있습니다.',
+    intro: 'Enclave AI([enclaveai.app](https://enclaveai.app))는 메시지를 서버로 전송하는 대신 오픈소스 AI 모델을 기기에서 직접 실행하는 iPhone, iPad, Mac용 앱입니다. 독립 개발자 Piotr Gorzelany가 개발했으며, App Store에서 인앱 구매가 포함된 무료 다운로드로 배포되고, 모델을 다운로드하면 계정 없이 인터넷 연결 없이도 사용할 수 있습니다.',
     metaDescription: 'Enclave AI는 iPhone, iPad, Mac에서 오픈소스 모델을 온디바이스로 실행합니다 — 계정 불필요, 모델 다운로드 후 인터넷 불필요. 이 앱이 실제로 제공하는 기능을 소개합니다.',
     readTime: '9분 읽기',
     targetKeywords: [
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Enclave AI란 무엇입니까?', a: 'Enclave AI(enclaveai.app)는 클라우드 서버가 아닌 기기 자체의 하드웨어로 오픈소스 AI 모델을 실행하는 iPhone, iPad, Mac용 앱입니다. 독립 개발자 Piotr Gorzelany가 개발했으며 계정이 필요 없고, 모델을 다운로드하면 오프라인으로 대화할 수 있습니다.' },
+          { q: 'Enclave AI란 무엇입니까?', a: 'Enclave AI([enclaveai.app](https://enclaveai.app))는 클라우드 서버가 아닌 기기 자체의 하드웨어로 오픈소스 AI 모델을 실행하는 iPhone, iPad, Mac용 앱입니다. 독립 개발자 Piotr Gorzelany가 개발했으며 계정이 필요 없고, 모델을 다운로드하면 오프라인으로 대화할 수 있습니다.' },
           { q: 'Enclave AI를 사용하려면 계정이 필요합니까?', a: '아니요. Enclave AI는 사용에 계정이 필요하지 않습니다.' },
           { q: 'Enclave AI는 인터넷 연결 없이 작동합니까?', a: '모델을 다운로드하면 그 모델과의 채팅은 완전히 오프라인으로 작동하며 인터넷 연결이 필요하지 않습니다. 모델 자체를 다운로드하려면 인터넷 연결이 필요합니다.' },
           { q: 'Enclave AI에서 사용할 수 있는 모델은 몇 개입니까?', a: 'Enclave AI에서는 수백 개의 오픈소스 모델을 사용해볼 수 있습니다. 업데이트마다 바뀔 수 있으므로 구체적인 목록은 앱 내 최신 모델 라이브러리에서 확인하세요.' },

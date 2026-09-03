@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: 'What Is AutoGPT in 2026?',
-        content: 'AutoGPT (github.com/Significant-Gravitas/AutoGPT) was the project that popularized the idea of an "autonomous agent" in 2023: give an LLM a goal, and let it plan, act, and self-critique in a loop without a human approving every step. In 2026, the same GitHub organization ships something structurally different: a commercial, hosted product called the AutoGPT Platform, with the original autonomous-loop agent kept alive as a secondary, MIT-licensed component.',
+        content: 'AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) was the project that popularized the idea of an "autonomous agent" in 2023: give an LLM a goal, and let it plan, act, and self-critique in a loop without a human approving every step. In 2026, the same GitHub organization ships something structurally different: a commercial, hosted product called the AutoGPT Platform, with the original autonomous-loop agent kept alive as a secondary, MIT-licensed component.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): the current flagship product, a hosted and paid visual agent builder',
           'AutoPilot: a chat-to-agent surface — describe a task in natural language and the Platform assembles an agent for it',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: 'Was ist AutoGPT 2026?',
-        content: 'AutoGPT (github.com/Significant-Gravitas/AutoGPT) war das Projekt, das 2023 die Idee eines „autonomen Agenten" populär machte: einem LLM ein Ziel geben und es in einer Schleife planen, handeln und sich selbst kritisieren lassen, ohne dass ein Mensch jeden Schritt freigibt. 2026 liefert dieselbe GitHub-Organisation etwas strukturell anderes: ein kommerzielles, gehostetes Produkt namens AutoGPT Platform, wobei der ursprüngliche autonome Schleifen-Agent als sekundäre, MIT-lizenzierte Komponente am Leben gehalten wird.',
+        content: 'AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) war das Projekt, das 2023 die Idee eines „autonomen Agenten" populär machte: einem LLM ein Ziel geben und es in einer Schleife planen, handeln und sich selbst kritisieren lassen, ohne dass ein Mensch jeden Schritt freigibt. 2026 liefert dieselbe GitHub-Organisation etwas strukturell anderes: ein kommerzielles, gehostetes Produkt namens AutoGPT Platform, wobei der ursprüngliche autonome Schleifen-Agent als sekundäre, MIT-lizenzierte Komponente am Leben gehalten wird.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): das aktuelle Flaggschiffprodukt, ein gehosteter und kostenpflichtiger visueller Agent-Builder',
           'AutoPilot: eine Chat-zu-Agent-Oberfläche — eine Aufgabe in natürlicher Sprache beschreiben, und die Platform stellt einen passenden Agenten zusammen',
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: 'Qu\'est-ce qu\'AutoGPT en 2026 ?',
-        content: 'AutoGPT (github.com/Significant-Gravitas/AutoGPT) est le projet qui a popularisé l\'idée d\'un « agent autonome » en 2023 : donner un objectif à un LLM et le laisser planifier, agir et s\'autocritiquer en boucle sans qu\'un humain n\'approuve chaque étape. En 2026, la même organisation GitHub propose quelque chose de structurellement différent : un produit commercial hébergé appelé AutoGPT Platform, l\'agent en boucle autonome d\'origine étant maintenu en vie comme composant secondaire sous licence MIT.',
+        content: 'AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) est le projet qui a popularisé l\'idée d\'un « agent autonome » en 2023 : donner un objectif à un LLM et le laisser planifier, agir et s\'autocritiquer en boucle sans qu\'un humain n\'approuve chaque étape. En 2026, la même organisation GitHub propose quelque chose de structurellement différent : un produit commercial hébergé appelé AutoGPT Platform, l\'agent en boucle autonome d\'origine étant maintenu en vie comme composant secondaire sous licence MIT.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co) : le produit phare actuel, un constructeur d\'agents visuel hébergé et payant',
           'AutoPilot : une interface chat-vers-agent — décrivez une tâche en langage naturel et la Platform assemble un agent pour l\'accomplir',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: '¿Qué es AutoGPT en 2026?',
-        content: 'AutoGPT (github.com/Significant-Gravitas/AutoGPT) fue el proyecto que popularizó la idea de un "agente autónomo" en 2023: dar a un LLM un objetivo y dejar que planifique, actúe y se autocritique en bucle sin que un humano apruebe cada paso. En 2026, la misma organización de GitHub ofrece algo estructuralmente distinto: un producto comercial y alojado llamado AutoGPT Platform, con el agente de bucle autónomo original mantenido vivo como componente secundario, con licencia MIT.',
+        content: 'AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) fue el proyecto que popularizó la idea de un "agente autónomo" en 2023: dar a un LLM un objetivo y dejar que planifique, actúe y se autocritique en bucle sin que un humano apruebe cada paso. En 2026, la misma organización de GitHub ofrece algo estructuralmente distinto: un producto comercial y alojado llamado AutoGPT Platform, con el agente de bucle autónomo original mantenido vivo como componente secundario, con licencia MIT.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): el producto insignia actual, un constructor visual de agentes alojado y de pago',
           'AutoPilot: una interfaz de chat a agente — describe una tarea en lenguaje natural y la Platform ensambla un agente para ella',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: 'O Que É o AutoGPT em 2026?',
-        content: 'O AutoGPT (github.com/Significant-Gravitas/AutoGPT) foi o projeto que popularizou a ideia de um "agente autônomo" em 2023: dar um objetivo a um LLM e deixá-lo planejar, agir e se autocriticar em loop sem um humano aprovando cada passo. Em 2026, a mesma organização no GitHub lança algo estruturalmente diferente: um produto comercial e hospedado chamado AutoGPT Platform, com o agente de loop autônomo original mantido vivo como um componente secundário, licenciado sob MIT.',
+        content: 'O AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) foi o projeto que popularizou a ideia de um "agente autônomo" em 2023: dar um objetivo a um LLM e deixá-lo planejar, agir e se autocriticar em loop sem um humano aprovando cada passo. Em 2026, a mesma organização no GitHub lança algo estruturalmente diferente: um produto comercial e hospedado chamado AutoGPT Platform, com o agente de loop autônomo original mantido vivo como um componente secundário, licenciado sob MIT.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): o produto principal atual, um construtor visual de agentes hospedado e pago',
           'AutoPilot: uma interface de chat-para-agente — descreva uma tarefa em linguagem natural e a Platform monta um agente para ela',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: 'ما هو AutoGPT في 2026؟',
-        content: 'كان AutoGPT (github.com/Significant-Gravitas/AutoGPT) المشروع الذي أشهر فكرة "الوكيل المستقل" عام 2023: أعطِ نموذج لغة كبير هدفًا، ودعه يخطط وينفذ وينتقد ذاته في حلقة متكررة دون موافقة إنسان على كل خطوة. في 2026، تطلق المنظمة نفسها على GitHub شيئًا مختلفًا في بنيته: منتجًا تجاريًا مستضافًا يُدعى AutoGPT Platform، مع إبقاء وكيل الحلقة المستقلة الأصلي حيًا كمكوّن ثانوي مرخّص بموجب MIT.',
+        content: 'كان AutoGPT ([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)) المشروع الذي أشهر فكرة "الوكيل المستقل" عام 2023: أعطِ نموذج لغة كبير هدفًا، ودعه يخطط وينفذ وينتقد ذاته في حلقة متكررة دون موافقة إنسان على كل خطوة. في 2026، تطلق المنظمة نفسها على GitHub شيئًا مختلفًا في بنيته: منتجًا تجاريًا مستضافًا يُدعى AutoGPT Platform، مع إبقاء وكيل الحلقة المستقلة الأصلي حيًا كمكوّن ثانوي مرخّص بموجب MIT.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): المنتج الرئيسي الحالي، أداة بناء وكلاء بصرية مستضافة ومدفوعة',
           'AutoPilot: واجهة تحويل المحادثة إلى وكيل — تصف المهمة بلغة طبيعية فتجمّع المنصة وكيلًا لتنفيذها',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: '2026年のAutoGPTとは',
-        content: 'AutoGPT(github.com/Significant-Gravitas/AutoGPT)は、2023年に「自律型エージェント」という概念を一般化したプロジェクトだ。LLMに目標を与えれば、人間が各ステップを承認しなくても計画・実行・自己批評をループで行う、というアイデアである。2026年現在、同じGitHub organizationは構造的にまったく異なるものを提供している。AutoGPT Platformという商用のホスト型製品であり、元々の自律ループ型エージェントはMITライセンスの副次的コンポーネントとして維持されている。',
+        content: 'AutoGPT([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT))は、2023年に「自律型エージェント」という概念を一般化したプロジェクトだ。LLMに目標を与えれば、人間が各ステップを承認しなくても計画・実行・自己批評をループで行う、というアイデアである。2026年現在、同じGitHub organizationは構造的にまったく異なるものを提供している。AutoGPT Platformという商用のホスト型製品であり、元々の自律ループ型エージェントはMITライセンスの副次的コンポーネントとして維持されている。',
         items: [
           'AutoGPT Platform(agpt.co / platform.agpt.co): 現在の主力製品であり、ホスト型・有料のビジュアルエージェントビルダー',
           'AutoPilot: チャットからエージェントを作るインターフェース — タスクを自然言語で説明すると、Platformがそのためのエージェントを組み立てる',
@@ -2110,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-autogpt-in-2026',
         title: '2026년 AutoGPT란 무엇인가?',
-        content: 'AutoGPT(github.com/Significant-Gravitas/AutoGPT)는 2023년 "자율 에이전트"라는 개념을 대중화한 프로젝트였다: LLM에 목표를 주면 사람이 매 단계를 승인하지 않아도 스스로 계획하고, 행동하고, 자기 비판하는 루프를 돌게 한다. 2026년, 같은 GitHub 조직은 구조적으로 전혀 다른 것을 내놓고 있다: AutoGPT Platform이라는 상업적 호스팅형 제품이 그것이며, 원조 자율 루프 에이전트는 MIT 라이선스의 부차적인 구성 요소로 명맥을 유지하고 있다.',
+        content: 'AutoGPT([github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT))는 2023년 "자율 에이전트"라는 개념을 대중화한 프로젝트였다: LLM에 목표를 주면 사람이 매 단계를 승인하지 않아도 스스로 계획하고, 행동하고, 자기 비판하는 루프를 돌게 한다. 2026년, 같은 GitHub 조직은 구조적으로 전혀 다른 것을 내놓고 있다: AutoGPT Platform이라는 상업적 호스팅형 제품이 그것이며, 원조 자율 루프 에이전트는 MIT 라이선스의 부차적인 구성 요소로 명맥을 유지하고 있다.',
         items: [
           'AutoGPT Platform (agpt.co / platform.agpt.co): 현재의 대표 제품, 호스팅형 유료 비주얼 에이전트 빌더',
           'AutoPilot: 채팅으로 에이전트를 만드는 인터페이스 — 자연어로 작업을 설명하면 Platform이 그에 맞는 에이전트를 구성해준다',

@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**DeepSeek V4 Pro** (DeepSeek, April 23, 2026) — Algorithmic-coding specialist, 93.5% LiveCodeBench, MIT license. Budget sibling DeepSeek V4 Flash for lighter hardware. Pull: `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6** (Moonshot AI, April 20, 2026) — Frontier coding model, SWE-Bench Pro 58.6, SWE-bench Verified 80.2%. MoE architecture (32B active / 1T total). Modified MIT license. Pull: `ollama pull kimi-k2.6`',
             '**Qwen3.8-27B** (Alibaba, April 16, 2026) — Best overall on consumer hardware, 61.7% SWE-bench, Apache 2.0, fits 24 GB at Q4. Also Qwen3.6-35B-A3B (MoE, 73.4 SWE-bench). Pull: `ollama pull qwen3.8:27b`',
-            '**GLM-5.3** (Z.ai) — 744B / 40B active MoE, MIT license. Structured code generation leader. Pull: `ollama pull glm-5.3`',
+            '**GLM-5.3** ([Z.ai](https://Z.ai)) — 744B / 40B active MoE, MIT license. Structured code generation leader. Pull: `ollama pull glm-5.3`',
             '**gpt-oss** (OpenAI, 2026) — Open-weight MoE: gpt-oss:20b (21B total / 3.6B active, runs in 16 GB, ~o3-mini level, adjustable reasoning) and gpt-oss:120b (80 GB). Pull: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google, April 2, 2026) — Multimodal sizes E2B / E4B / E12B (26B MoE) / E27B (31B dense), all with vision and tool calling. Now ~90% faster on Apple Silicon (July 2026 MLX update). E4B runs in ~6 GB VRAM. Pull: `ollama pull gemma4:e4b`',
           ],
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How often does the Ollama library get updated with new models?',
-              a: 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+              a: 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository ([github.com/ollama/ollama](https://github.com/ollama/ollama)) or the Ollama Twitter/X account for new model announcements.',
             },
             {
               q: 'What is the difference between `ollama pull` and `ollama run`?',
@@ -528,7 +528,7 @@ schema: {
             'name': 'How often does the Ollama library get updated with new models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+              'text': 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository ([github.com/ollama/ollama](https://github.com/ollama/ollama)) or the Ollama Twitter/X account for new model announcements.',
             }
           },
           {
@@ -735,7 +735,7 @@ schema: {
             '**DeepSeek V4 Pro** (DeepSeek, 23 de abril de 2026) — Especialista en programación algorítmica, 93,5% LiveCodeBench, licencia MIT. Hermano económico DeepSeek V4 Flash para hardware más ligero. Descarga: `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6** (Moonshot AI, 20 de abril de 2026) — Modelo de programación de frontera, SWE-Bench Pro 58.6, SWE-bench Verified 80,2%. Arquitectura MoE (32B activos / 1T total). Licencia Modified MIT. Descarga: `ollama pull kimi-k2.6`',
             '**Qwen3.8-27B** (Alibaba, 16 de abril de 2026) — Mejor general en hardware de consumo, 61,7% SWE-bench, Apache 2.0, cabe en 24 GB con Q4. También Qwen3.6-35B-A3B (MoE, 73,4 SWE-bench). Descarga: `ollama pull qwen3.8:27b`',
-            '**GLM-5.3** (Z.ai) — 744B / 40B activos MoE, licencia MIT. Líder en generación de código estructurado. Descarga: `ollama pull glm-5.3`',
+            '**GLM-5.3** ([Z.ai](https://Z.ai)) — 744B / 40B activos MoE, licencia MIT. Líder en generación de código estructurado. Descarga: `ollama pull glm-5.3`',
             '**gpt-oss** (OpenAI, 2026) — MoE de pesos abiertos: gpt-oss:20b (21B total / 3,6B activos, se ejecuta en 16 GB, ~nivel o3-mini, razonamiento ajustable) y gpt-oss:120b (80 GB). Descarga: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google, 2 de abril de 2026) — Tamaños multimodales E2B / E4B / E12B (26B MoE) / E27B (31B denso), todos con visión y tool calling. Ahora ~90% más rápido en Apple Silicon (actualización MLX de julio de 2026). E4B se ejecuta en ~6 GB de VRAM. Descarga: `ollama pull gemma4:e4b`',
           ],
@@ -928,7 +928,7 @@ schema: {
             { q: '¿Cuál es la última versión de Ollama?', a: 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.' },
             { q: '¿Dónde puedo ver el changelog y las notas de versión de Ollama?', a: 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).' },
             { q: '¿Cómo compruebo qué versión de Ollama tengo instalada?', a: 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.' },
-            { q: '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?', a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.' },
+            { q: '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?', a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.' },
             { q: '¿Cuál es la diferencia entre `ollama pull` y `ollama run`?', a: '`ollama pull` descarga el archivo del modelo al almacenamiento local (operación única). `ollama run` inicia una sesión interactiva inmediatamente después de descargar, o reutiliza el modelo ya descargado si está disponible. Puedes descargar una vez y ejecutar múltiples veces sin volver a descargar.' },
             { q: '¿Puedo ejecutar varios modelos simultáneamente en la misma máquina?', a: 'Sí, si tu hardware tiene suficiente VRAM. Usa ventanas de terminal o sesiones de shell separadas -- una ventana ejecuta `ollama run llama3.2` mientras otra ejecuta `ollama run qwen2.5:7b`. Ollama gestiona automáticamente el uso compartido de VRAM. Monitorea `nvidia-smi` o la actividad del sistema para evitar sobrecargas.' },
             { q: '¿Cómo actualizo un modelo a la última versión?', a: '`ollama pull [nombre-del-modelo]` verifica las actualizaciones y descarga la última versión si está disponible. Para revertir o usar versiones específicas, usa tags de versión: `ollama pull llama3.1:8b` o `ollama pull llama3.1:8b-instruct-q4_K_M`. Comprueba las versiones disponibles con `ollama show [nombre-del-modelo]`.' },
@@ -1137,7 +1137,7 @@ schema: {
             'name': '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
+              'text': 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
             },
           },
           {
@@ -1362,7 +1362,7 @@ schema: {
             '**DeepSeek V4 Pro** (DeepSeek, 23. April 2026) — Spezialist für algorithmisches Coding, 93.5% LiveCodeBench, MIT-Lizenz. Budget-Variante DeepSeek V4 Flash für leichtere Hardware. Pull: `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6** (Moonshot AI, 20. April 2026) — Frontier-Coding-Modell, SWE-Bench Pro 58.6, SWE-bench Verified 80.2%. MoE-Architektur (32B aktiv / 1T gesamt). Modified MIT-Lizenz.',
             '**Qwen3.8-27B** (Alibaba, 16. April 2026) — Bestes Modell fuer Consumer-Hardware, 61,7% SWE-bench, Apache 2.0, passt in 24 GB bei Q4. Auch Qwen3.6-35B-A3B (MoE, 73,4 SWE-bench).',
-            '**GLM-5.3** (Z.ai) — 744B / 40B aktiv MoE, MIT-Lizenz. Führender Structured Code Generator.',
+            '**GLM-5.3** ([Z.ai](https://Z.ai)) — 744B / 40B aktiv MoE, MIT-Lizenz. Führender Structured Code Generator.',
             '**gpt-oss** (OpenAI, 2026) — Open-Weight MoE: gpt-oss:20b (21B gesamt / 3,6B aktiv, läuft in 16 GB, ~o3-mini-Niveau, einstellbares Reasoning) und gpt-oss:120b (80 GB).',
             '**Gemma 4** (Google, 2. April 2026) — Multimodale Größen E2B / E4B / E12B (26B MoE) / E27B (31B dicht), alle mit Vision und Tool Calling. Jetzt ~90% schneller auf Apple Silicon (MLX-Update Juli 2026). E4B läuft in ~6 GB VRAM.',
           ],
@@ -1838,7 +1838,7 @@ schema: {
             '**DeepSeek V4 Pro** (DeepSeek, 23 avril 2026) — Spécialiste du codage algorithmique, 93.5% LiveCodeBench, licence MIT. Variante économique DeepSeek V4 Flash pour le materiel plus léger. Téléchargement : `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6** (Moonshot AI, 20 avril 2026) — Modèle de codage de frontière, SWE-Bench Pro 58.6, SWE-bench Verified 80.2% (à égalité avec GPT-5.5). Architecture MoE (32B actif / 1T au total). Licence Modified MIT.',
             '**Qwen3.8-27B** (Alibaba, 16 avril 2026) — Meilleur global sur materiel grand public, 61,7% SWE-bench, Apache 2.0, tient en 24 Go en Q4. Aussi Qwen3.6-35B-A3B (MoE, 73,4 SWE-bench).',
-            '**GLM-5.3** (Z.ai) — 744B / 40B actif MoE, licence MIT. Leader en génération de code structuré.',
+            '**GLM-5.3** ([Z.ai](https://Z.ai)) — 744B / 40B actif MoE, licence MIT. Leader en génération de code structuré.',
             '**gpt-oss** (OpenAI, 2026) — MoE à poids ouverts : gpt-oss:20b (21B au total / 3,6B actif, tourne en 16 Go, ~niveau o3-mini, raisonnement reglable) et gpt-oss:120b (80 Go).',
             '**Gemma 4** (Google, 2 avril 2026) — Tailles multimodales E2B / E4B / E12B (26B MoE) / E27B (31B dense), toutes avec vision et appel d\'outils. Désormais ~90 % plus rapide sur Apple Silicon (mise à jour MLX de juillet 2026). E4B tourne en ~6 Go VRAM.',
           ],
@@ -3253,7 +3253,7 @@ schema: {
             '**DeepSeek V4 Pro**(DeepSeek, 2026년 4월 23일) — 알고리즘 코딩 특화 모델, 93.5% LiveCodeBench, MIT 라이선스. 경량 하드웨어용 보급형 모델 DeepSeek V4 Flash. Pull: `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6**(Moonshot AI, 2026년 4월 20일) — 최전선 코딩 모델, SWE-Bench Pro 58.6, SWE-bench Verified 80.2%(GPT-5.5와 동점). MoE 아키텍처(32B 활성 / 1T 전체). Modified MIT 라이선스. Pull: `ollama pull kimi-k2.6`',
             '**Qwen3.8-27B**(Alibaba, 2026년 4월 16일) — 소비자 하드웨어 전반 최고, 61.7% SWE-bench, Apache 2.0, Q4에서 24GB에 적합. 또한 Qwen3.6-35B-A3B(MoE, 73.4 SWE-bench)도 있습니다. Pull: `ollama pull qwen3.8:27b`',
-            '**GLM-5.3**(Z.ai) — 744B / 40B 활성 MoE, MIT 라이선스. 구조화된 코드 생성 분야 선두. Pull: `ollama pull glm-5.3`',
+            '**GLM-5.3**([Z.ai](https://Z.ai)) — 744B / 40B 활성 MoE, MIT 라이선스. 구조화된 코드 생성 분야 선두. Pull: `ollama pull glm-5.3`',
             '**gpt-oss**(OpenAI, 2026년) — 오픈 웨이트 MoE: gpt-oss:20b(21B 전체 / 3.6B 활성, 16GB에서 실행, ~o3-mini 수준, 조정 가능한 추론)와 gpt-oss:120b(80GB). Pull: `ollama pull gpt-oss:20b`',
             '**Gemma 4**(Google, 2026년 4월 2일) — 멀티모달 크기 E2B / E4B / E12B(26B MoE) / E27B(31B 밀집), 모두 비전과 도구 호출 지원. Apple Silicon에서 이제 약 90% 빨라졌습니다(2026년 7월 MLX 업데이트). E4B는 ~6GB VRAM에서 실행됩니다. Pull: `ollama pull gemma4:e4b`',
           ],
@@ -3477,7 +3477,7 @@ schema: {
             },
             {
               q: 'Ollama 라이브러리는 얼마나 자주 새 모델로 업데이트됩니까?',
-              a: 'Ollama 팀은 주요 릴리스 후 며칠에서 몇 주 내에 새 모델을 추가합니다. Laguna XS 2.1(2026년 7월 2일), Kimi K2.7 Code, Kimi K2.6, Qwen 3.6은 모두 출시 후 며칠 내에 등장했습니다. 현재 Ollama 버전은 v0.33.1(2026년 8월 26일)입니다. 새 모델 발표를 위해 Ollama GitHub 저장소(github.com/ollama/ollama) 또는 Ollama Twitter/X 계정을 팔로우하십시오.',
+              a: 'Ollama 팀은 주요 릴리스 후 며칠에서 몇 주 내에 새 모델을 추가합니다. Laguna XS 2.1(2026년 7월 2일), Kimi K2.7 Code, Kimi K2.6, Qwen 3.6은 모두 출시 후 며칠 내에 등장했습니다. 현재 Ollama 버전은 v0.33.1(2026년 8월 26일)입니다. 새 모델 발표를 위해 Ollama GitHub 저장소([github.com/ollama/ollama](https://github.com/ollama/ollama)) 또는 Ollama Twitter/X 계정을 팔로우하십시오.',
             },
             {
               q: '`ollama pull`과 `ollama run`의 차이는 무엇입니까?',
@@ -3624,7 +3624,7 @@ schema: {
             '**DeepSeek V4 Pro** (DeepSeek، 23 أبريل 2026) — متخصص في البرمجة الخوارزمية، 93.5% LiveCodeBench، رخصة MIT. النسخة الاقتصادية DeepSeek V4 Flash للعتاد الأخف. للتنزيل: `ollama pull deepseek-v4-pro`',
             '**Kimi K2.6** (Moonshot AI، 20 أبريل 2026) — نموذج برمجة متقدم، SWE-Bench Pro 58.6، SWE-bench Verified 80.2%. بنية MoE (32B نشط / 1T إجمالي). رخصة Modified MIT. للتنزيل: `ollama pull kimi-k2.6`',
             '**Qwen3.8-27B** (Alibaba، 16 أبريل 2026) — أفضل خيار عام على عتاد المستهلك، 61.7% SWE-bench، رخصة Apache 2.0، يلائم 24 GB عند Q4. وكذلك Qwen3.6-35B-A3B (MoE، 73.4 SWE-bench). للتنزيل: `ollama pull qwen3.8:27b`',
-            '**GLM-5.3** (Z.ai) — MoE بحجم 744B / 40B نشط، رخصة MIT. رائد في توليد الشيفرة المنظّمة. للتنزيل: `ollama pull glm-5.3`',
+            '**GLM-5.3** ([Z.ai](https://Z.ai)) — MoE بحجم 744B / 40B نشط، رخصة MIT. رائد في توليد الشيفرة المنظّمة. للتنزيل: `ollama pull glm-5.3`',
             '**gpt-oss** (OpenAI، 2026) — MoE مفتوح الأوزان: gpt-oss:20b (21B إجمالي / 3.6B نشط، يعمل في 16 GB، بمستوى ~o3-mini، استدلال قابل للضبط) وgpt-oss:120b (80 GB). للتنزيل: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google، 2 أبريل 2026) — أحجام متعددة الوسائط E2B / E4B / E12B (26B MoE) / E27B (31B كثيف)، جميعها تدعم الرؤية واستدعاء الأدوات. أصبح الآن أسرع بنحو 90% على Apple Silicon (تحديث MLX يوليو 2026). يعمل E4B في ~6 GB VRAM. للتنزيل: `ollama pull gemma4:e4b`',
           ],
@@ -3845,7 +3845,7 @@ schema: {
             },
             {
               q: 'كم مرة تُحدَّث مكتبة Ollama بنماذج جديدة؟',
-              a: 'يضيف فريق Ollama نماذج جديدة خلال أيام إلى أسابيع من الإصدارات الكبرى. ظهرت Laguna XS 2.1 (2 يوليو 2026) وKimi K2.7 Code وKimi K2.6 وQwen3.8 جميعها خلال أيام من إطلاقها. الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026). تابع مستودع Ollama على GitHub (github.com/ollama/ollama) أو حساب Ollama على Twitter/X لإعلانات النماذج الجديدة.',
+              a: 'يضيف فريق Ollama نماذج جديدة خلال أيام إلى أسابيع من الإصدارات الكبرى. ظهرت Laguna XS 2.1 (2 يوليو 2026) وKimi K2.7 Code وKimi K2.6 وQwen3.8 جميعها خلال أيام من إطلاقها. الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026). تابع مستودع Ollama على GitHub ([github.com/ollama/ollama](https://github.com/ollama/ollama)) أو حساب Ollama على Twitter/X لإعلانات النماذج الجديدة.',
             },
             {
               q: 'ما الفرق بين `ollama pull` و`ollama run`؟',

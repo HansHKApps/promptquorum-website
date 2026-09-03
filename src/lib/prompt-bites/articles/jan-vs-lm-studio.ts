@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The Open Source vs Polish Trade-off',
         content: [
-          '<strong>Jan (github.com/janhq/jan) is MIT-licensed and fully open source — you can read, fork, and modify the code.</strong> LM Studio (lmstudio.ai) is proprietary software that is free to use but closed source. Jan ships an extension system that lets developers add custom functionality, a feature LM Studio does not offer.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) is MIT-licensed and fully open source — you can read, fork, and modify the code.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) is proprietary software that is free to use but closed source. Jan ships an extension system that lets developers add custom functionality, a feature LM Studio does not offer.',
           'Real extension use cases include: connecting Jan to cloud APIs (OpenAI, Anthropic, Groq) for hybrid local/cloud workflows, adding custom prompt templates and chat presets, and integrating with external tools like Obsidian for note-taking. Around 30 community extensions exist.',
           'LM Studio\'s main advantage is its built-in model store. You can browse, preview, and download hundreds of GGUF models without leaving the app. Jan requires you to find models on Hugging Face or import them manually — more friction for users who just want to get started quickly.',
           'For developers who want to build on top of the application, Jan\'s open-source codebase and extension API are meaningful advantages. For everyone else, the choice comes down to which workflow matches your daily use.',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open Source vs. Komfort: Der Kompromiss',
         content: [
-          '<strong>Jan (github.com/janhq/jan) ist MIT-lizenziert und vollständig Open Source — Sie können den Code lesen, forken und verändern.</strong> LM Studio (lmstudio.ai) ist proprietäre Software, die kostenlos nutzbar, aber closed source ist. Jan verfügt über ein Erweiterungssystem, mit dem Entwickler benutzerdefinierte Funktionen hinzufügen können — eine Funktion, die LM Studio nicht bietet.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) ist MIT-lizenziert und vollständig Open Source — Sie können den Code lesen, forken und verändern.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) ist proprietäre Software, die kostenlos nutzbar, aber closed source ist. Jan verfügt über ein Erweiterungssystem, mit dem Entwickler benutzerdefinierte Funktionen hinzufügen können — eine Funktion, die LM Studio nicht bietet.',
           'Konkrete Anwendungsfälle für Erweiterungen: Jan mit Cloud-APIs (OpenAI, Anthropic, Groq) für hybride lokale/Cloud-Workflows verbinden, benutzerdefinierte Prompt-Vorlagen und Chat-Presets hinzufügen, sowie die Integration mit externen Tools wie Obsidian für Notizen. Stand Mai 2026 gibt es rund 30 Community-Erweiterungen.',
           'Der Hauptvorteil von LM Studio ist sein integrierter Modellshop. Sie können Hunderte von GGUF-Modellen durchsuchen, in der Vorschau anzeigen und herunterladen, ohne die App zu verlassen. Bei Jan müssen Sie Modelle auf Hugging Face suchen oder manuell importieren — mehr Aufwand für Nutzer, die schnell loslegen möchten.',
           'Für Entwickler, die auf der Anwendung aufbauen möchten, sind Jans Open-Source-Codebase und die Extension-API bedeutende Vorteile. Für alle anderen hängt die Wahl davon ab, welcher Workflow zum täglichen Einsatz passt.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open source vs ergonomie : le compromis',
         content: [
-          '<strong>Jan (github.com/janhq/jan) est sous licence MIT et entièrement open source — vous pouvez lire, forker et modifier le code.</strong> LM Studio (lmstudio.ai) est un logiciel propriétaire gratuit mais à source fermée. Jan propose un système d\'extensions permettant aux développeurs d\'ajouter des fonctionnalités personnalisées — une fonctionnalité absente de LM Studio.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) est sous licence MIT et entièrement open source — vous pouvez lire, forker et modifier le code.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) est un logiciel propriétaire gratuit mais à source fermée. Jan propose un système d\'extensions permettant aux développeurs d\'ajouter des fonctionnalités personnalisées — une fonctionnalité absente de LM Studio.',
           'Cas d\'usage concrets des extensions : connecter Jan à des API cloud (OpenAI, Anthropic, Groq) pour des workflows hybrides local/cloud, ajouter des modèles de prompt et des préréglages de chat personnalisés, et s\'intégrer à des outils externes comme Obsidian pour la prise de notes. Environ 30 extensions communautaires existent en mai 2026.',
           'Le principal avantage de LM Studio est son magasin de modèles intégré. Vous pouvez parcourir, prévisualiser et télécharger des centaines de modèles GGUF sans quitter l\'application. Jan nécessite de trouver des modèles sur Hugging Face ou de les importer manuellement — plus de friction pour les utilisateurs qui veulent démarrer rapidement.',
           'Pour les développeurs souhaitant construire sur l\'application, la base de code open source de Jan et son API d\'extension constituent des avantages significatifs. Pour les autres, le choix dépend du workflow qui correspond à votre usage quotidien.',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O dilema: código aberto vs. refinamento',
         content: [
-          '<strong>Jan (github.com/janhq/jan) tem licença MIT e é completamente código aberto — você pode ler, fazer fork e modificar o código.</strong> LM Studio (lmstudio.ai) é software proprietário que é gratuito, mas de código fechado. Jan inclui um sistema de extensões que permite aos desenvolvedores adicionar funcionalidades personalizadas, recurso que o LM Studio não oferece.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) tem licença MIT e é completamente código aberto — você pode ler, fazer fork e modificar o código.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) é software proprietário que é gratuito, mas de código fechado. Jan inclui um sistema de extensões que permite aos desenvolvedores adicionar funcionalidades personalizadas, recurso que o LM Studio não oferece.',
           'Casos de uso reais de extensões incluem: conectar Jan a APIs em nuvem (OpenAI, Anthropic, Groq) para fluxos de trabalho híbridos local/nuvem, adicionar modelos de prompt personalizados e predefinições de chat, e integrar com ferramentas externas como o Obsidian para anotações. Cerca de 30 extensões comunitárias existem a partir de maio de 2026.',
           'A principal vantagem do LM Studio é sua loja de modelos integrada. Você pode navegar, visualizar e baixar centenas de modelos GGUF sem sair do app. Jan exige que você encontre modelos no Hugging Face ou os importe manualmente — mais atrito para usuários que só querem começar rapidamente.',
           'Para desenvolvedores que querem construir sobre a aplicação, a base de código aberto do Jan e a API de extensões são vantagens significativas. Para todos os outros, a escolha depende de qual fluxo de trabalho combina com seu uso diário.',
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'El dilema: código abierto vs. pulido',
         content: [
-          '<strong>Jan (github.com/janhq/jan) tiene licencia MIT y es completamente código abierto — puedes leer, hacer fork y modificar el código.</strong> LM Studio (lmstudio.ai) es software propietario que es gratuito pero cerrado. Jan incluye un sistema de extensiones que permite a los desarrolladores agregar funcionalidad personalizada, característica que LM Studio no ofrece.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) tiene licencia MIT y es completamente código abierto — puedes leer, hacer fork y modificar el código.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) es software propietario que es gratuito pero cerrado. Jan incluye un sistema de extensiones que permite a los desarrolladores agregar funcionalidad personalizada, característica que LM Studio no ofrece.',
           'Los casos de uso reales de extensiones incluyen: conectar Jan a APIs en la nube (OpenAI, Anthropic, Groq) para flujos de trabajo híbridos local/nube, agregar plantillas de prompt personalizadas y presets de chat, e integrar con herramientas externas como Obsidian para tomar notas. Alrededor de 30 extensiones comunitarias existen a partir de mayo 2026.',
           'La ventaja principal de LM Studio es su tienda de modelos integrada. Puedes explorar, previsualizar y descargar cientos de modelos GGUF sin salir de la app. Jan requiere que encuentres modelos en Hugging Face o los importes manualmente — más fricción para usuarios que solo quieren empezar rápidamente.',
           'Para desarrolladores que quieren construir sobre la aplicación, la base de código de código abierto de Jan y su API de extensiones son ventajas significativas. Para todos los demás, la elección depende del flujo de trabajo que coincida con tu uso diario.',
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'المعضلة: مفتوح المصدر مقابل الصقل',
         content: [
-          '<strong>Jan (github.com/janhq/jan) مرخص بموجب MIT ومفتوح المصدر بالكامل — يمكنك قراءة الكود وعمل fork وتعديله.</strong> LM Studio (lmstudio.ai) برنامج ملكية خاصة مجاني لكن مغلق المصدر. Jan يتضمن نظام إضافات يسمح للمطورين بإضافة وظائف مخصصة، وهي ميزة لا يقدمها LM Studio.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan)) مرخص بموجب MIT ومفتوح المصدر بالكامل — يمكنك قراءة الكود وعمل fork وتعديله.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai)) برنامج ملكية خاصة مجاني لكن مغلق المصدر. Jan يتضمن نظام إضافات يسمح للمطورين بإضافة وظائف مخصصة، وهي ميزة لا يقدمها LM Studio.',
           'حالات الاستخدام الفعلية للإضافات تشمل: ربط Jan بواجهات API سحابية (OpenAI، Anthropic، Groq) لسير عمل هجينة محلية/سحابية، إضافة قوالب مطالبات مخصصة وإعدادات دردشة مسبقة، والتكامل مع أدوات خارجية مثل Obsidian لتدوين الملاحظات. حوالي 30 إضافة مجتمعية متاحة اعتباراً من مايو 2026.',
           'الميزة الرئيسية لـ LM Studio هي متجر النماذج المدمج. يمكنك تصفح مئات من نماذج GGUF ومعاينتها وتنزيلها دون مغادرة التطبيق. Jan يتطلب منك العثور على النماذج في Hugging Face أو استيرادها يدوياً — احتكاك أكبر للمستخدمين الراغبين في البدء بسرعة.',
           'للمطورين الراغبين في البناء على التطبيق، كود Jan مفتوح المصدر وAPI الإضافات مزايا مهمة. لجميع المستخدمين الآخرين، يعتمد الاختيار على سير العمل الذي يتناسب مع استخدامك اليومي.',
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
         content: [
-          '<strong>Jan (github.com/janhq/jan)은 MIT 라이선스로 완전한 오픈 소스입니다. 코드를 읽고, 포크하고, 수정할 수 있습니다.</strong> LM Studio (lmstudio.ai)는 무료로 사용할 수 있지만 소스가 공개되지 않은 독점 소프트웨어입니다. Jan은 개발자가 맞춤 기능을 추가할 수 있는 확장 시스템을 제공하며, 이는 LM Studio에서 제공하지 않는 기능입니다.',
+          '<strong>Jan ([github.com/janhq/jan](https://github.com/janhq/jan))은 MIT 라이선스로 완전한 오픈 소스입니다. 코드를 읽고, 포크하고, 수정할 수 있습니다.</strong> LM Studio ([lmstudio.ai](https://lmstudio.ai))는 무료로 사용할 수 있지만 소스가 공개되지 않은 독점 소프트웨어입니다. Jan은 개발자가 맞춤 기능을 추가할 수 있는 확장 시스템을 제공하며, 이는 LM Studio에서 제공하지 않는 기능입니다.',
           '실제 확장 기능 활용 사례로는 OpenAI, Anthropic, Groq 등 클라우드 API와 Jan을 연결하여 로컬/클라우드 하이브리드 워크플로우를 구축하거나, 맞춤 프롬프트 템플릿 및 채팅 프리셋 추가, Obsidian 같은 외부 도구와의 통합 등이 있습니다. 2026년 5월 기준 약 30개의 커뮤니티 확장 기능이 존재합니다.',
           'LM Studio의 주요 장점은 내장 모델 스토어입니다. 앱을 벗어나지 않고도 수백 개의 GGUF 모델을 탐색, 미리 보기, 다운로드할 수 있습니다. Jan은 Hugging Face에서 모델을 찾거나 수동으로 가져와야 합니다. 빠르게 시작하고 싶은 사용자에게는 마찰이 더 많습니다.',
           '앱 위에 무언가를 구축하려는 개발자에게 Jan의 오픈 소스 코드베이스와 확장 API는 중요한 이점입니다. 그 외의 사용자에게는 일상적인 사용 패턴에 맞는 워크플로우를 선택하는 것이 핵심입니다.',

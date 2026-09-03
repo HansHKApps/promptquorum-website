@@ -2291,14 +2291,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickComparison: {
         id: 'quick-comparison',
         title: 'مقارنة سريعة: الحزمة المحلية مقابل GitHub Copilot',
-        columns: ['المعيار', 'الحزمة المحلية (Continue.dev)', 'GitHub Copilot Pro'],
+        columns: ['المعيار', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))', 'GitHub Copilot Pro'],
         rows: [
-          { 'المعيار': 'التكلفة', 'الحزمة المحلية (Continue.dev)': '$0/شهر (بعد الجهاز)', 'GitHub Copilot Pro': '$20/شهر' },
-          { 'المعيار': 'الخصوصية', 'الحزمة المحلية (Continue.dev)': 'كامل — لا يغادر الكود الجهاز', 'GitHub Copilot Pro': 'يُرسَل إلى خوادم GitHub' },
-          { 'المعيار': 'الجودة (TS/Python)', 'الحزمة المحلية (Continue.dev)': '90–95% من Copilot', 'GitHub Copilot Pro': 'المرجع' },
-          { 'المعيار': 'المكتبات غير الشائعة', 'الحزمة المحلية (Continue.dev)': 'أضعف', 'GitHub Copilot Pro': 'أقوى' },
-          { 'المعيار': 'الاستخدام دون اتصال', 'الحزمة المحلية (Continue.dev)': 'نعم', 'GitHub Copilot Pro': 'لا' },
-          { 'المعيار': 'وضع الوكيل', 'الحزمة المحلية (Continue.dev)': 'نعم (Continue.dev وكيل)', 'GitHub Copilot Pro': 'نعم (Copilot Agent)' },
+          { 'المعيار': 'التكلفة', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': '$0/شهر (بعد الجهاز)', 'GitHub Copilot Pro': '$20/شهر' },
+          { 'المعيار': 'الخصوصية', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': 'كامل — لا يغادر الكود الجهاز', 'GitHub Copilot Pro': 'يُرسَل إلى خوادم GitHub' },
+          { 'المعيار': 'الجودة (TS/Python)', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': '90–95% من Copilot', 'GitHub Copilot Pro': 'المرجع' },
+          { 'المعيار': 'المكتبات غير الشائعة', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': 'أضعف', 'GitHub Copilot Pro': 'أقوى' },
+          { 'المعيار': 'الاستخدام دون اتصال', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': 'نعم', 'GitHub Copilot Pro': 'لا' },
+          { 'المعيار': 'وضع الوكيل', 'الحزمة المحلية ([Continue.dev](https://Continue.dev))': 'نعم (Continue.dev وكيل)', 'GitHub Copilot Pro': 'نعم (Copilot Agent)' },
         ],
       },
       recommendedStack: {

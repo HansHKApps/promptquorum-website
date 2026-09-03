@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go Review 2026: Msty\'s Local-First AI Agent',
     seoTitle: 'Msty Go Review 2026: Local-First AI Agent',
-    intro: 'Msty Go (msty.ai/go) is a task-automation app from the makers of Msty, the desktop chat client. Where Msty is a chat interface for talking to local or cloud models, Msty Go is a separate, newer product built to run multi-step tasks with autonomy — connecting to your own folders and tools, working through a goal, and handing back structured results for you to review.',
+    intro: 'Msty Go ([msty.ai/go](https://msty.ai/go)) is a task-automation app from the makers of Msty, the desktop chat client. Where Msty is a chat interface for talking to local or cloud models, Msty Go is a separate, newer product built to run multi-step tasks with autonomy — connecting to your own folders and tools, working through a goal, and handing back structured results for you to review.',
     metaDescription: 'Msty Go runs autonomous multi-step tasks locally with sandboxed tools and scoped folder access. Currently free beta for macOS, Windows, Linux — here is what it actually does.',
     readTime: '10 min read',
     targetKeywords: [
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Currently in beta for macOS, Windows, and Linux; free for personal use while the company works on reliability and expands features',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go is a separate product from Msty (msty.app), the company\'s desktop chat client — the two are not the same app under different names. See the comparison section below for what distinguishes them.' },
+          { type: 'note', text: 'Msty Go is a separate product from Msty ([msty.app](https://msty.app)), the company\'s desktop chat client — the two are not the same app under different names. See the comparison section below for what distinguishes them.' },
         ],
       },
       overview: {
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: What Is the Difference?',
-        content: '**Msty Go and Msty are two different products from the same company, not two names for the same app.** Msty (msty.app) is the original desktop chat client — a conversational interface for talking to local or cloud models. Msty Go is a newer, more agentic product built specifically for autonomous, multi-step task automation rather than chat.',
+        content: '**Msty Go and Msty are two different products from the same company, not two names for the same app.** Msty ([msty.app](https://msty.app)) is the original desktop chat client — a conversational interface for talking to local or cloud models. Msty Go is a newer, more agentic product built specifically for autonomous, multi-step task automation rather than chat.',
         columns: ['Aspect', 'Msty', 'Msty Go'],
         rows: [
           { 'Aspect': 'Product type', 'Msty': 'Desktop chat client', 'Msty Go': 'Task-automation agent' },
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'You need a stable, production-ready release rather than beta software whose reliability and features the company is still actively changing',
               'You need documented, audited sandbox security guarantees today rather than a stated design description — this review has not independently verified the sandbox\'s isolation properties',
-              'You need a chat interface rather than a task-automation agent — Msty (msty.app), the company\'s other product, is built for that',
+              'You need a chat interface rather than a task-automation agent — Msty ([msty.app](https://msty.app)), the company\'s other product, is built for that',
               'You need clear published pricing for commercial or team use — Msty Go does not have that published yet, per Msty\'s own beta materials',
             ],
           },
@@ -226,8 +226,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is Msty Go?', a: 'Msty Go (msty.ai/go) is a task-automation app from the makers of Msty. It lets you delegate multi-step work to an AI agent: you set a goal, connect the tools and folders it needs, and it works through the task with autonomy while you control access and review the structured outcome.' },
-          { q: 'Is Msty Go the same as Msty?', a: 'No. Msty (msty.app) is the company\'s desktop chat client, built for conversational interaction with local or cloud models. Msty Go is a separate, newer, more agentic product built for autonomous multi-step task automation rather than chat.' },
+          { q: 'What is Msty Go?', a: 'Msty Go ([msty.ai/go](https://msty.ai/go)) is a task-automation app from the makers of Msty. It lets you delegate multi-step work to an AI agent: you set a goal, connect the tools and folders it needs, and it works through the task with autonomy while you control access and review the structured outcome.' },
+          { q: 'Is Msty Go the same as Msty?', a: 'No. Msty ([msty.app](https://msty.app)) is the company\'s desktop chat client, built for conversational interaction with local or cloud models. Msty Go is a separate, newer, more agentic product built for autonomous multi-step task automation rather than chat.' },
           { q: 'Was Msty Go previously called something else?', a: 'Yes. It was originally called "Msty Claw." The rename to Msty Go — covering the product name, release language, and brand references — was completed in version 0.14.0.' },
           { q: 'Does Msty Go run entirely on my own machine?', a: 'Msty Go runs autonomous multi-step tasks on your own machine, using sandboxed tools and scoped folder access that you configure. It works with local or cloud models — Msty describes this as local-first control, not local-only, so cloud models remain an option depending on your setup.' },
           { q: 'How does Msty Go keep an autonomous agent from doing something unwanted?', a: 'Msty Go scopes what the agent can access before a task runs — sandboxed tools and specific connected folders — and you review the structured outcome after the task completes rather than approving every step. This review has not independently audited the sandbox\'s security guarantees; treat the description as Msty\'s stated design rather than third-party-verified testing.' },
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including Msty (msty.app) listed as a separate chat product.',
+          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including Msty ([msty.app](https://msty.app)) listed as a separate chat product.',
           '[AutoGPT Review 2026](/power-local-llm/autogpt-local-review-2026) — another autonomous task agent, comparing a classic MIT-licensed CLI agent against a hosted platform.',
           '[Do Autonomous Local Agents Actually Work?](/power-local-llm/autonomous-local-agents-actually-work) — a hands-on evaluation of scoped vs. autonomous local agent stacks.',
           '[Best Local Models for Tool Calling 2026](/power-local-llm/best-local-models-tool-calling-2026) — for readers who want to run Msty Go against a local model backend.',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go Review 2026: Der lokal-first KI-Agent von Msty',
     seoTitle: 'Msty Go Review 2026: Lokal-first KI-Agent',
-    intro: 'Msty Go (msty.ai/go) ist eine App zur Aufgabenautomatisierung von den Machern von Msty, dem Desktop-Chat-Client. Während Msty eine Chat-Oberfläche für lokale oder Cloud-Modelle ist, ist Msty Go ein separates, neueres Produkt, das mehrstufige Aufgaben mit Autonomie ausführt — es verbindet sich mit Ihren eigenen Ordnern und Tools, arbeitet auf ein Ziel hin und liefert strukturierte Ergebnisse zur Überprüfung.',
+    intro: 'Msty Go ([msty.ai/go](https://msty.ai/go)) ist eine App zur Aufgabenautomatisierung von den Machern von Msty, dem Desktop-Chat-Client. Während Msty eine Chat-Oberfläche für lokale oder Cloud-Modelle ist, ist Msty Go ein separates, neueres Produkt, das mehrstufige Aufgaben mit Autonomie ausführt — es verbindet sich mit Ihren eigenen Ordnern und Tools, arbeitet auf ein Ziel hin und liefert strukturierte Ergebnisse zur Überprüfung.',
     metaDescription: 'Msty Go führt autonome, mehrstufige Aufgaben lokal aus — mit sandboxed Tools und begrenztem Ordnerzugriff. Aktuell kostenlose Beta für macOS, Windows, Linux — hier die Fakten.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aktuell in der Beta für macOS, Windows und Linux; kostenlos für die private Nutzung, während das Unternehmen an Zuverlässigkeit arbeitet und Funktionen erweitert',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go ist ein eigenständiges Produkt neben Msty (msty.app), dem Desktop-Chat-Client des Unternehmens — beide sind nicht dieselbe App unter anderem Namen. Der Vergleichsabschnitt unten erklärt die Unterschiede.' },
+          { type: 'note', text: 'Msty Go ist ein eigenständiges Produkt neben Msty ([msty.app](https://msty.app)), dem Desktop-Chat-Client des Unternehmens — beide sind nicht dieselbe App unter anderem Namen. Der Vergleichsabschnitt unten erklärt die Unterschiede.' },
         ],
       },
       overview: {
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: Was ist der Unterschied?',
-        content: '**Msty Go und Msty sind zwei verschiedene Produkte desselben Unternehmens, nicht zwei Namen für dieselbe App.** Msty (msty.app) ist der ursprüngliche Desktop-Chat-Client — eine Gesprächsoberfläche für lokale oder Cloud-Modelle. Msty Go ist ein neueres, agentischeres Produkt, das speziell für autonome, mehrstufige Aufgabenautomatisierung statt Chat gebaut wurde.',
+        content: '**Msty Go und Msty sind zwei verschiedene Produkte desselben Unternehmens, nicht zwei Namen für dieselbe App.** Msty ([msty.app](https://msty.app)) ist der ursprüngliche Desktop-Chat-Client — eine Gesprächsoberfläche für lokale oder Cloud-Modelle. Msty Go ist ein neueres, agentischeres Produkt, das speziell für autonome, mehrstufige Aufgabenautomatisierung statt Chat gebaut wurde.',
         columns: ['Aspekt', 'Msty', 'Msty Go'],
         rows: [
           { 'Aspekt': 'Produkttyp', 'Msty': 'Desktop-Chat-Client', 'Msty Go': 'Aufgabenautomatisierungs-Agent' },
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'eine stabile, produktionsreife Version statt Beta-Software benötigen, deren Zuverlässigkeit und Funktionen das Unternehmen noch aktiv verändert',
               'heute dokumentierte, geprüfte Sandbox-Sicherheitsgarantien statt einer angegebenen Designbeschreibung benötigen — diese Review hat die Isolationseigenschaften der Sandbox nicht unabhängig verifiziert',
-              'eine Chat-Oberfläche statt eines Aufgabenautomatisierungs-Agenten benötigen — dafür ist Msty (msty.app), das andere Produkt des Unternehmens, gebaut',
+              'eine Chat-Oberfläche statt eines Aufgabenautomatisierungs-Agenten benötigen — dafür ist Msty ([msty.app](https://msty.app)), das andere Produkt des Unternehmens, gebaut',
               'klar veröffentlichte Preise für kommerzielle oder Team-Nutzung benötigen — die gibt es bei Msty Go laut Mstys eigenem Beta-Material noch nicht',
             ],
           },
@@ -482,8 +482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was ist Msty Go?', a: 'Msty Go (msty.ai/go) ist eine App zur Aufgabenautomatisierung von den Machern von Msty. Sie können mehrstufige Arbeit an einen KI-Agenten delegieren: Sie legen ein Ziel fest, verbinden die benötigten Tools und Ordner, und er arbeitet autonom an der Aufgabe, während Sie den Zugriff kontrollieren und das strukturierte Ergebnis prüfen.' },
-          { q: 'Ist Msty Go dasselbe wie Msty?', a: 'Nein. Msty (msty.app) ist der Desktop-Chat-Client des Unternehmens, gebaut für die dialogische Interaktion mit lokalen oder Cloud-Modellen. Msty Go ist ein separates, neueres, agentischeres Produkt für autonome, mehrstufige Aufgabenautomatisierung statt Chat.' },
+          { q: 'Was ist Msty Go?', a: 'Msty Go ([msty.ai/go](https://msty.ai/go)) ist eine App zur Aufgabenautomatisierung von den Machern von Msty. Sie können mehrstufige Arbeit an einen KI-Agenten delegieren: Sie legen ein Ziel fest, verbinden die benötigten Tools und Ordner, und er arbeitet autonom an der Aufgabe, während Sie den Zugriff kontrollieren und das strukturierte Ergebnis prüfen.' },
+          { q: 'Ist Msty Go dasselbe wie Msty?', a: 'Nein. Msty ([msty.app](https://msty.app)) ist der Desktop-Chat-Client des Unternehmens, gebaut für die dialogische Interaktion mit lokalen oder Cloud-Modellen. Msty Go ist ein separates, neueres, agentischeres Produkt für autonome, mehrstufige Aufgabenautomatisierung statt Chat.' },
           { q: 'Hieß Msty Go früher anders?', a: 'Ja. Es hieß ursprünglich "Msty Claw". Die Umbenennung zu Msty Go — inklusive Produktname, Release-Sprache und Markenverweise — wurde in Version 0.14.0 abgeschlossen.' },
           { q: 'Läuft Msty Go vollständig auf dem eigenen Rechner?', a: 'Msty Go führt autonome, mehrstufige Aufgaben auf dem eigenen Rechner aus, mit sandboxed Tools und begrenztem Ordnerzugriff, den Sie konfigurieren. Es funktioniert mit lokalen oder Cloud-Modellen — Msty beschreibt dies als lokal-first Kontrolle, nicht lokal-only, sodass Cloud-Modelle je nach Setup weiterhin eine Option bleiben.' },
           { q: 'Wie verhindert Msty Go, dass ein autonomer Agent Unerwünschtes tut?', a: 'Msty Go begrenzt vor Beginn einer Aufgabe, worauf der Agent zugreifen kann — sandboxed Tools und bestimmte verbundene Ordner — und Sie prüfen das strukturierte Ergebnis nach Abschluss der Aufgabe, statt jeden Schritt freizugeben. Diese Review hat die Sicherheitsgarantien der Sandbox nicht unabhängig geprüft; behandeln Sie die Beschreibung als Mstys eigene Designangabe, nicht als unabhängig verifizierte Tests.' },
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Msty (msty.app) als separatem Chat-Produkt.',
+          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Msty ([msty.app](https://msty.app)) als separatem Chat-Produkt.',
           '[AutoGPT Review 2026](/de/power-local-llm/autogpt-local-review-2026) — ein weiterer autonomer Aufgaben-Agent, der einen klassischen MIT-lizenzierten CLI-Agenten mit einer gehosteten Plattform vergleicht.',
           '[Funktionieren autonome lokale Agenten wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — eine praktische Bewertung von begrenzten vs. autonomen lokalen Agenten-Stacks.',
           '[Beste lokale Modelle für Tool-Aufrufe 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — für Leser, die Msty Go mit einem lokalen Modell-Backend betreiben möchten.',
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go Review 2026 : l\'agent IA local-first de Msty',
     seoTitle: 'Msty Go Review 2026 : agent IA local-first',
-    intro: 'Msty Go (msty.ai/go) est une application d\'automatisation de tâches des créateurs de Msty, le client de chat de bureau. Là où Msty est une interface de chat pour dialoguer avec des modèles locaux ou cloud, Msty Go est un produit distinct, plus récent, conçu pour exécuter des tâches multi-étapes avec autonomie — en se connectant à vos propres dossiers et outils, en avançant vers un objectif, et en restituant des résultats structurés à vérifier.',
+    intro: 'Msty Go ([msty.ai/go](https://msty.ai/go)) est une application d\'automatisation de tâches des créateurs de Msty, le client de chat de bureau. Là où Msty est une interface de chat pour dialoguer avec des modèles locaux ou cloud, Msty Go est un produit distinct, plus récent, conçu pour exécuter des tâches multi-étapes avec autonomie — en se connectant à vos propres dossiers et outils, en avançant vers un objectif, et en restituant des résultats structurés à vérifier.',
     metaDescription: 'Msty Go exécute des tâches autonomes multi-étapes en local, avec des outils sandboxés et un accès limité aux dossiers. Bêta gratuite pour macOS, Windows, Linux — ce qu\'il fait vraiment.',
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Actuellement en bêta pour macOS, Windows et Linux ; gratuit pour un usage personnel pendant que l\'entreprise travaille sur la fiabilité et étend les fonctionnalités',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go est un produit distinct de Msty (msty.app), le client de chat de bureau de l\'entreprise — les deux ne sont pas la même application sous des noms différents. Voir la section de comparaison ci-dessous pour ce qui les distingue.' },
+          { type: 'note', text: 'Msty Go est un produit distinct de Msty ([msty.app](https://msty.app)), le client de chat de bureau de l\'entreprise — les deux ne sont pas la même application sous des noms différents. Voir la section de comparaison ci-dessous pour ce qui les distingue.' },
         ],
       },
       overview: {
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty : quelle différence ?',
-        content: '**Msty Go et Msty sont deux produits différents de la même entreprise, pas deux noms pour la même application.** Msty (msty.app) est le client de chat de bureau d\'origine — une interface conversationnelle pour dialoguer avec des modèles locaux ou cloud. Msty Go est un produit plus récent et plus agentique, conçu spécifiquement pour l\'automatisation de tâches autonomes multi-étapes plutôt que pour le chat.',
+        content: '**Msty Go et Msty sont deux produits différents de la même entreprise, pas deux noms pour la même application.** Msty ([msty.app](https://msty.app)) est le client de chat de bureau d\'origine — une interface conversationnelle pour dialoguer avec des modèles locaux ou cloud. Msty Go est un produit plus récent et plus agentique, conçu spécifiquement pour l\'automatisation de tâches autonomes multi-étapes plutôt que pour le chat.',
         columns: ['Aspect', 'Msty', 'Msty Go'],
         rows: [
           { 'Aspect': 'Type de produit', 'Msty': 'Client de chat de bureau', 'Msty Go': 'Agent d\'automatisation de tâches' },
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'avez besoin d\'une version stable et prête pour la production plutôt que d\'un logiciel bêta dont l\'entreprise fait encore évoluer activement la fiabilité et les fonctionnalités',
               'avez besoin dès aujourd\'hui de garanties de sécurité de sandbox documentées et auditées, plutôt que d\'une description de conception annoncée — cet avis n\'a pas vérifié de façon indépendante les propriétés d\'isolation de la sandbox',
-              'avez besoin d\'une interface de chat plutôt que d\'un agent d\'automatisation de tâches — Msty (msty.app), l\'autre produit de l\'entreprise, est conçu pour cela',
+              'avez besoin d\'une interface de chat plutôt que d\'un agent d\'automatisation de tâches — Msty ([msty.app](https://msty.app)), l\'autre produit de l\'entreprise, est conçu pour cela',
               'avez besoin de tarifs clairement publiés pour un usage commercial ou en équipe — Msty Go n\'en a pas encore publié, selon les propres documents de bêta de Msty',
             ],
           },
@@ -738,8 +738,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Qu\'est-ce que Msty Go ?', a: 'Msty Go (msty.ai/go) est une application d\'automatisation de tâches des créateurs de Msty. Elle permet de déléguer un travail multi-étapes à un agent IA : vous définissez un objectif, connectez les outils et dossiers nécessaires, et il avance sur la tâche avec autonomie pendant que vous contrôlez l\'accès et vérifiez le résultat structuré.' },
-          { q: 'Msty Go est-il identique à Msty ?', a: 'Non. Msty (msty.app) est le client de chat de bureau de l\'entreprise, conçu pour l\'interaction conversationnelle avec des modèles locaux ou cloud. Msty Go est un produit distinct, plus récent et plus agentique, conçu pour l\'automatisation de tâches autonomes multi-étapes plutôt que pour le chat.' },
+          { q: 'Qu\'est-ce que Msty Go ?', a: 'Msty Go ([msty.ai/go](https://msty.ai/go)) est une application d\'automatisation de tâches des créateurs de Msty. Elle permet de déléguer un travail multi-étapes à un agent IA : vous définissez un objectif, connectez les outils et dossiers nécessaires, et il avance sur la tâche avec autonomie pendant que vous contrôlez l\'accès et vérifiez le résultat structuré.' },
+          { q: 'Msty Go est-il identique à Msty ?', a: 'Non. Msty ([msty.app](https://msty.app)) est le client de chat de bureau de l\'entreprise, conçu pour l\'interaction conversationnelle avec des modèles locaux ou cloud. Msty Go est un produit distinct, plus récent et plus agentique, conçu pour l\'automatisation de tâches autonomes multi-étapes plutôt que pour le chat.' },
           { q: 'Msty Go portait-il auparavant un autre nom ?', a: 'Oui. Il s\'appelait à l\'origine « Msty Claw ». Le renommage en Msty Go — couvrant le nom du produit, le langage de version et les références de marque — a été achevé en version 0.14.0.' },
           { q: 'Msty Go fonctionne-t-il entièrement sur ma propre machine ?', a: 'Msty Go exécute des tâches autonomes multi-étapes sur votre propre machine, avec des outils sandboxés et un accès limité aux dossiers que vous configurez. Il fonctionne avec des modèles locaux ou cloud — Msty décrit cela comme un contrôle local-first, pas local uniquement, donc les modèles cloud restent une option selon votre configuration.' },
           { q: 'Comment Msty Go empêche-t-il un agent autonome de faire quelque chose d\'indésirable ?', a: 'Msty Go délimite ce que l\'agent peut atteindre avant l\'exécution d\'une tâche — outils sandboxés et dossiers spécifiques connectés — et vous vérifiez le résultat structuré une fois la tâche terminée, plutôt que d\'approuver chaque étape. Cet avis n\'a pas audité de façon indépendante les garanties de sécurité de la sandbox ; considérez cette description comme la conception annoncée par Msty, pas comme des tests vérifiés par un tiers.' },
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant Msty (msty.app) listé comme un produit de chat distinct.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant Msty ([msty.app](https://msty.app)) listé comme un produit de chat distinct.',
           '[Avis AutoGPT 2026](/fr/power-local-llm/autogpt-local-review-2026) — un autre agent de tâches autonome, comparant un agent CLI classique sous licence MIT à une plateforme hébergée.',
           '[Les agents locaux autonomes fonctionnent-ils vraiment ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — une évaluation pratique des architectures d\'agents locaux limités vs. autonomes.',
           '[Meilleurs modèles locaux pour l\'appel d\'outils 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — pour les lecteurs qui veulent utiliser Msty Go avec un moteur de modèle local.',
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go Review 2026: el agente de IA local-first de Msty',
     seoTitle: 'Msty Go Review 2026: agente de IA local-first',
-    intro: 'Msty Go (msty.ai/go) es una aplicación de automatización de tareas de los creadores de Msty, el cliente de chat de escritorio. Mientras que Msty es una interfaz de chat para hablar con modelos locales o en la nube, Msty Go es un producto separado y más reciente, creado para ejecutar tareas de varios pasos con autonomía: se conecta a tus propias carpetas y herramientas, avanza hacia un objetivo y te devuelve resultados estructurados para que los revises.',
+    intro: 'Msty Go ([msty.ai/go](https://msty.ai/go)) es una aplicación de automatización de tareas de los creadores de Msty, el cliente de chat de escritorio. Mientras que Msty es una interfaz de chat para hablar con modelos locales o en la nube, Msty Go es un producto separado y más reciente, creado para ejecutar tareas de varios pasos con autonomía: se conecta a tus propias carpetas y herramientas, avanza hacia un objetivo y te devuelve resultados estructurados para que los revises.',
     metaDescription: 'Msty Go ejecuta tareas autónomas de varios pasos en local, con herramientas sandboxed y acceso limitado a carpetas. Beta gratuita para macOS, Windows y Linux: esto es lo que realmente hace.',
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Actualmente en beta para macOS, Windows y Linux; gratuita para uso personal mientras la empresa trabaja en la fiabilidad y amplía funciones',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go es un producto distinto de Msty (msty.app), el cliente de chat de escritorio de la empresa; ambos no son la misma app con nombres diferentes. Consulta la sección de comparación más abajo para ver qué los distingue.' },
+          { type: 'note', text: 'Msty Go es un producto distinto de Msty ([msty.app](https://msty.app)), el cliente de chat de escritorio de la empresa; ambos no son la misma app con nombres diferentes. Consulta la sección de comparación más abajo para ver qué los distingue.' },
         ],
       },
       overview: {
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: ¿cuál es la diferencia?',
-        content: '**Msty Go y Msty son dos productos diferentes de la misma empresa, no dos nombres para la misma app.** Msty (msty.app) es el cliente de chat de escritorio original: una interfaz conversacional para hablar con modelos locales o en la nube. Msty Go es un producto más reciente y más agéntico, creado específicamente para la automatización autónoma de tareas de varios pasos en lugar de para el chat.',
+        content: '**Msty Go y Msty son dos productos diferentes de la misma empresa, no dos nombres para la misma app.** Msty ([msty.app](https://msty.app)) es el cliente de chat de escritorio original: una interfaz conversacional para hablar con modelos locales o en la nube. Msty Go es un producto más reciente y más agéntico, creado específicamente para la automatización autónoma de tareas de varios pasos en lugar de para el chat.',
         columns: ['Aspecto', 'Msty', 'Msty Go'],
         rows: [
           { 'Aspecto': 'Tipo de producto', 'Msty': 'Cliente de chat de escritorio', 'Msty Go': 'Agente de automatización de tareas' },
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'necesitas una versión estable y lista para producción en lugar de software beta cuya fiabilidad y funciones la empresa sigue cambiando activamente',
               'necesitas garantías de seguridad del sandbox documentadas y auditadas hoy, en lugar de una descripción de diseño declarada; esta review no ha verificado de forma independiente las propiedades de aislamiento del sandbox',
-              'necesitas una interfaz de chat en lugar de un agente de automatización de tareas; Msty (msty.app), el otro producto de la empresa, está hecho para eso',
+              'necesitas una interfaz de chat en lugar de un agente de automatización de tareas; Msty ([msty.app](https://msty.app)), el otro producto de la empresa, está hecho para eso',
               'necesitas precios claros y publicados para uso comercial o en equipo; Msty Go aún no los tiene publicados, según los propios materiales de beta de Msty',
             ],
           },
@@ -1506,8 +1506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué es Msty Go?', a: 'Msty Go (msty.ai/go) es una app de automatización de tareas de los creadores de Msty. Te permite delegar trabajo de varios pasos a un agente de IA: defines un objetivo, conectas las herramientas y carpetas que necesita, y avanza en la tarea con autonomía mientras tú controlas el acceso y revisas el resultado estructurado.' },
-          { q: '¿Msty Go es lo mismo que Msty?', a: 'No. Msty (msty.app) es el cliente de chat de escritorio de la empresa, creado para la interacción conversacional con modelos locales o en la nube. Msty Go es un producto separado, más reciente y más agéntico, creado para la automatización autónoma de tareas de varios pasos en lugar de para el chat.' },
+          { q: '¿Qué es Msty Go?', a: 'Msty Go ([msty.ai/go](https://msty.ai/go)) es una app de automatización de tareas de los creadores de Msty. Te permite delegar trabajo de varios pasos a un agente de IA: defines un objetivo, conectas las herramientas y carpetas que necesita, y avanza en la tarea con autonomía mientras tú controlas el acceso y revisas el resultado estructurado.' },
+          { q: '¿Msty Go es lo mismo que Msty?', a: 'No. Msty ([msty.app](https://msty.app)) es el cliente de chat de escritorio de la empresa, creado para la interacción conversacional con modelos locales o en la nube. Msty Go es un producto separado, más reciente y más agéntico, creado para la automatización autónoma de tareas de varios pasos en lugar de para el chat.' },
           { q: '¿Msty Go se llamaba antes de otra forma?', a: 'Sí. Originalmente se llamaba "Msty Claw". El cambio de nombre a Msty Go, que cubre el nombre del producto, el lenguaje de lanzamiento y las referencias de marca, se completó en la versión 0.14.0.' },
           { q: '¿Msty Go se ejecuta completamente en mi propio equipo?', a: 'Msty Go ejecuta tareas autónomas de varios pasos en tu propio equipo, usando herramientas sandboxed y acceso limitado a carpetas que tú configuras. Funciona con modelos locales o en la nube; Msty describe esto como control local-first, no exclusivamente local, por lo que los modelos en la nube siguen siendo una opción según tu configuración.' },
           { q: '¿Cómo evita Msty Go que un agente autónomo haga algo no deseado?', a: 'Msty Go delimita lo que puede acceder el agente antes de que se ejecute una tarea (herramientas sandboxed y carpetas específicas conectadas), y revisas el resultado estructurado después de que la tarea se completa en lugar de aprobar cada paso. Esta review no ha auditado de forma independiente las garantías de seguridad del sandbox; trata la descripción como el diseño declarado por Msty, no como pruebas verificadas por terceros.' },
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo Msty (msty.app) listado como un producto de chat aparte.',
+          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo Msty ([msty.app](https://msty.app)) listado como un producto de chat aparte.',
           '[AutoGPT Review 2026](/es/power-local-llm/autogpt-local-review-2026) — otro agente de tareas autónomo, comparando un agente clásico de CLI con licencia MIT frente a una plataforma alojada.',
           '[¿Realmente funcionan los agentes locales autónomos?](/es/power-local-llm/autonomous-local-agents-actually-work) — una evaluación práctica de stacks de agentes locales limitados frente a autónomos.',
           '[Mejores modelos locales para llamadas a herramientas 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — para lectores que quieren ejecutar Msty Go contra un backend de modelo local.',
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go Review 2026: o agente de IA local-first da Msty',
     seoTitle: 'Msty Go Review 2026: agente de IA local-first',
-    intro: 'O Msty Go (msty.ai/go) é um app de automação de tarefas dos criadores do Msty, o cliente de chat para desktop. Enquanto o Msty é uma interface de chat para conversar com modelos locais ou na nuvem, o Msty Go é um produto separado e mais recente, criado para executar tarefas de várias etapas com autonomia — conectando-se às suas próprias pastas e ferramentas, avançando em direção a um objetivo e devolvendo resultados estruturados para você revisar.',
+    intro: 'O Msty Go ([msty.ai/go](https://msty.ai/go)) é um app de automação de tarefas dos criadores do Msty, o cliente de chat para desktop. Enquanto o Msty é uma interface de chat para conversar com modelos locais ou na nuvem, o Msty Go é um produto separado e mais recente, criado para executar tarefas de várias etapas com autonomia — conectando-se às suas próprias pastas e ferramentas, avançando em direção a um objetivo e devolvendo resultados estruturados para você revisar.',
     metaDescription: 'O Msty Go executa tarefas autônomas de várias etapas localmente, com ferramentas em sandbox e acesso limitado a pastas. Beta gratuito para macOS, Windows e Linux — veja o que ele realmente faz.',
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atualmente em beta para macOS, Windows e Linux; gratuito para uso pessoal enquanto a empresa trabalha na confiabilidade e expande funcionalidades',
         ],
         callouts: [
-          { type: 'note', text: 'O Msty Go é um produto separado do Msty (msty.app), o cliente de chat para desktop da empresa — os dois não são o mesmo app com nomes diferentes. Veja a seção de comparação abaixo para entender o que os diferencia.' },
+          { type: 'note', text: 'O Msty Go é um produto separado do Msty ([msty.app](https://msty.app)), o cliente de chat para desktop da empresa — os dois não são o mesmo app com nomes diferentes. Veja a seção de comparação abaixo para entender o que os diferencia.' },
         ],
       },
       overview: {
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: qual é a diferença?',
-        content: '**O Msty Go e o Msty são dois produtos diferentes da mesma empresa, não dois nomes para o mesmo app.** O Msty (msty.app) é o cliente de chat para desktop original — uma interface conversacional para falar com modelos locais ou na nuvem. O Msty Go é um produto mais recente e mais agêntico, criado especificamente para automação de tarefas autônomas de várias etapas, em vez de chat.',
+        content: '**O Msty Go e o Msty são dois produtos diferentes da mesma empresa, não dois nomes para o mesmo app.** O Msty ([msty.app](https://msty.app)) é o cliente de chat para desktop original — uma interface conversacional para falar com modelos locais ou na nuvem. O Msty Go é um produto mais recente e mais agêntico, criado especificamente para automação de tarefas autônomas de várias etapas, em vez de chat.',
         columns: ['Aspecto', 'Msty', 'Msty Go'],
         rows: [
           { 'Aspecto': 'Tipo de produto', 'Msty': 'Cliente de chat para desktop', 'Msty Go': 'Agente de automação de tarefas' },
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'precisa de uma versão estável e pronta para produção, em vez de software beta cuja confiabilidade e funcionalidades a empresa ainda está mudando ativamente',
               'precisa de garantias de segurança de sandbox documentadas e auditadas hoje, em vez de uma descrição de design declarada — esta review não verificou de forma independente as propriedades de isolamento do sandbox',
-              'precisa de uma interface de chat em vez de um agente de automação de tarefas — o Msty (msty.app), o outro produto da empresa, foi criado para isso',
+              'precisa de uma interface de chat em vez de um agente de automação de tarefas — o Msty ([msty.app](https://msty.app)), o outro produto da empresa, foi criado para isso',
               'precisa de preços claros e publicados para uso comercial ou em equipe — o Msty Go ainda não tem isso publicado, segundo o próprio material de beta da Msty',
             ],
           },
@@ -1762,8 +1762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O que é o Msty Go?', a: 'O Msty Go (msty.ai/go) é um app de automação de tarefas dos criadores do Msty. Ele permite delegar trabalho de várias etapas a um agente de IA: você define um objetivo, conecta as ferramentas e pastas necessárias, e ele avança na tarefa com autonomia enquanto você controla o acesso e revisa o resultado estruturado.' },
-          { q: 'O Msty Go é o mesmo que o Msty?', a: 'Não. O Msty (msty.app) é o cliente de chat para desktop da empresa, criado para interação conversacional com modelos locais ou na nuvem. O Msty Go é um produto separado, mais recente e mais agêntico, criado para automação de tarefas autônomas de várias etapas em vez de chat.' },
+          { q: 'O que é o Msty Go?', a: 'O Msty Go ([msty.ai/go](https://msty.ai/go)) é um app de automação de tarefas dos criadores do Msty. Ele permite delegar trabalho de várias etapas a um agente de IA: você define um objetivo, conecta as ferramentas e pastas necessárias, e ele avança na tarefa com autonomia enquanto você controla o acesso e revisa o resultado estruturado.' },
+          { q: 'O Msty Go é o mesmo que o Msty?', a: 'Não. O Msty ([msty.app](https://msty.app)) é o cliente de chat para desktop da empresa, criado para interação conversacional com modelos locais ou na nuvem. O Msty Go é um produto separado, mais recente e mais agêntico, criado para automação de tarefas autônomas de várias etapas em vez de chat.' },
           { q: 'O Msty Go já teve outro nome?', a: 'Sim. Ele se chamava originalmente "Msty Claw". A renomeação para Msty Go — cobrindo o nome do produto, a linguagem de lançamento e as referências de marca — foi concluída na versão 0.14.0.' },
           { q: 'O Msty Go roda inteiramente no meu próprio computador?', a: 'O Msty Go executa tarefas autônomas de várias etapas no seu próprio computador, usando ferramentas em sandbox e acesso limitado a pastas que você configura. Ele funciona com modelos locais ou na nuvem — a Msty descreve isso como controle local-first, não apenas local, então modelos na nuvem continuam sendo uma opção dependendo da sua configuração.' },
           { q: 'Como o Msty Go evita que um agente autônomo faça algo indesejado?', a: 'O Msty Go delimita o que o agente pode acessar antes de uma tarefa rodar — ferramentas em sandbox e pastas específicas conectadas — e você revisa o resultado estruturado depois que a tarefa é concluída, em vez de aprovar cada etapa. Esta review não auditou de forma independente as garantias de segurança do sandbox; trate a descrição como o design declarado pela Msty, não como testes verificados por terceiros.' },
@@ -1786,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo o Msty (msty.app) listado como um produto de chat separado.',
+          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo o Msty ([msty.app](https://msty.app)) listado como um produto de chat separado.',
           '[Review do AutoGPT 2026](/pt/power-local-llm/autogpt-local-review-2026) — outro agente de tarefas autônomo, comparando um agente clássico de CLI licenciado em MIT com uma plataforma hospedada.',
           '[Os agentes locais autônomos realmente funcionam?](/pt/power-local-llm/autonomous-local-agents-actually-work) — uma avaliação prática de stacks de agentes locais limitados vs. autônomos.',
           '[Melhores modelos locais para chamada de ferramentas 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — para leitores que querem rodar o Msty Go com um backend de modelo local.',
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'مراجعة Msty Go لعام 2026: وكيل Msty الذكي المحلي أولًا',
     seoTitle: 'مراجعة Msty Go 2026: وكيل ذكاء اصطناعي محلي أولًا',
-    intro: 'تطبيق Msty Go (msty.ai/go) هو تطبيق لأتمتة المهام من صانعي Msty، عميل المحادثة لسطح المكتب. بينما يُعد Msty واجهة محادثة للتواصل مع نماذج محلية أو سحابية، فإن Msty Go منتج منفصل وأحدث، صُمم لتنفيذ مهام متعددة الخطوات بشكل مستقل — يتصل بمجلداتك وأدواتك الخاصة، ويعمل نحو هدف محدد، ويعيد نتائج منظمة لمراجعتها.',
+    intro: 'تطبيق Msty Go ([msty.ai/go](https://msty.ai/go)) هو تطبيق لأتمتة المهام من صانعي Msty، عميل المحادثة لسطح المكتب. بينما يُعد Msty واجهة محادثة للتواصل مع نماذج محلية أو سحابية، فإن Msty Go منتج منفصل وأحدث، صُمم لتنفيذ مهام متعددة الخطوات بشكل مستقل — يتصل بمجلداتك وأدواتك الخاصة، ويعمل نحو هدف محدد، ويعيد نتائج منظمة لمراجعتها.',
     metaDescription: 'يُنفّذ Msty Go مهامًا مستقلة متعددة الخطوات محليًا، باستخدام أدوات معزولة (sandboxed) ووصول محدود النطاق للمجلدات. نسخة تجريبية مجانية حاليًا لـ macOS وWindows وLinux — إليك ما يفعله فعليًا.',
     readTime: '10 دقائق للقراءة',
     targetKeywords: [
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'حاليًا في مرحلة تجريبية لأنظمة macOS وWindows وLinux؛ مجاني للاستخدام الشخصي بينما تعمل الشركة على تحسين الموثوقية وتوسيع الميزات',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go منتج منفصل عن Msty (msty.app)، عميل المحادثة لسطح المكتب التابع للشركة — الاثنان ليسا نفس التطبيق بأسماء مختلفة. راجع قسم المقارنة أدناه لمعرفة ما يميزهما.' },
+          { type: 'note', text: 'Msty Go منتج منفصل عن Msty ([msty.app](https://msty.app))، عميل المحادثة لسطح المكتب التابع للشركة — الاثنان ليسا نفس التطبيق بأسماء مختلفة. راجع قسم المقارنة أدناه لمعرفة ما يميزهما.' },
         ],
       },
       overview: {
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go مقابل Msty: ما الفرق؟',
-        content: '**Msty Go وMsty منتجان مختلفان من نفس الشركة، وليسا اسمين لنفس التطبيق.** Msty (msty.app) هو عميل المحادثة الأصلي لسطح المكتب — واجهة حوارية للتواصل مع نماذج محلية أو سحابية. أما Msty Go فهو منتج أحدث وأكثر اعتمادًا على الوكلاء، صُمم خصيصًا لأتمتة المهام المستقلة متعددة الخطوات بدلًا من المحادثة.',
+        content: '**Msty Go وMsty منتجان مختلفان من نفس الشركة، وليسا اسمين لنفس التطبيق.** Msty ([msty.app](https://msty.app)) هو عميل المحادثة الأصلي لسطح المكتب — واجهة حوارية للتواصل مع نماذج محلية أو سحابية. أما Msty Go فهو منتج أحدث وأكثر اعتمادًا على الوكلاء، صُمم خصيصًا لأتمتة المهام المستقلة متعددة الخطوات بدلًا من المحادثة.',
         columns: ['الجانب', 'Msty', 'Msty Go'],
         rows: [
           { 'الجانب': 'نوع المنتج', 'Msty': 'عميل محادثة لسطح المكتب', 'Msty Go': 'وكيل أتمتة مهام' },
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'تحتاج إصدارًا مستقرًا وجاهزًا للإنتاج بدلًا من برنامج تجريبي لا تزال الشركة تُغيّر موثوقيته وميزاته بنشاط',
               'تحتاج ضمانات أمان معزولة موثقة ومدققة اليوم بدلًا من وصف تصميم مُعلَن — لم تتحقق هذه المراجعة بشكل مستقل من خصائص عزل البيئة المعزولة',
-              'تحتاج واجهة محادثة بدلًا من وكيل أتمتة مهام — Msty (msty.app)، المنتج الآخر للشركة، صُمم لذلك',
+              'تحتاج واجهة محادثة بدلًا من وكيل أتمتة مهام — Msty ([msty.app](https://msty.app))، المنتج الآخر للشركة، صُمم لذلك',
               'تحتاج تسعيرًا واضحًا ومعلنًا للاستخدام التجاري أو الجماعي — لم يُنشر ذلك بعد في Msty Go، وفقًا لمواد Msty التجريبية نفسها',
             ],
           },
@@ -2018,8 +2018,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو Msty Go؟', a: 'تطبيق Msty Go (msty.ai/go) هو تطبيق لأتمتة المهام من صانعي Msty. يتيح لك تفويض عمل متعدد الخطوات إلى وكيل ذكاء اصطناعي: تحدد هدفًا، وتوصّل الأدوات والمجلدات التي يحتاجها، ويعمل على المهمة باستقلالية بينما تتحكم في الوصول وتراجع النتيجة المنظمة.' },
-          { q: 'هل Msty Go هو نفسه Msty؟', a: 'لا. Msty (msty.app) هو عميل المحادثة لسطح المكتب التابع للشركة، صُمم للتفاعل الحواري مع النماذج المحلية أو السحابية. أما Msty Go فهو منتج منفصل وأحدث وأكثر اعتمادًا على الوكلاء، صُمم لأتمتة المهام المستقلة متعددة الخطوات بدلًا من المحادثة.' },
+          { q: 'ما هو Msty Go؟', a: 'تطبيق Msty Go ([msty.ai/go](https://msty.ai/go)) هو تطبيق لأتمتة المهام من صانعي Msty. يتيح لك تفويض عمل متعدد الخطوات إلى وكيل ذكاء اصطناعي: تحدد هدفًا، وتوصّل الأدوات والمجلدات التي يحتاجها، ويعمل على المهمة باستقلالية بينما تتحكم في الوصول وتراجع النتيجة المنظمة.' },
+          { q: 'هل Msty Go هو نفسه Msty؟', a: 'لا. Msty ([msty.app](https://msty.app)) هو عميل المحادثة لسطح المكتب التابع للشركة، صُمم للتفاعل الحواري مع النماذج المحلية أو السحابية. أما Msty Go فهو منتج منفصل وأحدث وأكثر اعتمادًا على الوكلاء، صُمم لأتمتة المهام المستقلة متعددة الخطوات بدلًا من المحادثة.' },
           { q: 'هل كان اسم Msty Go مختلفًا سابقًا؟', a: 'نعم. كان يُسمى أصلًا "Msty Claw". اكتملت إعادة التسمية إلى Msty Go — وشملت اسم المنتج ولغة الإصدار ومراجع العلامة التجارية — في الإصدار 0.14.0.' },
           { q: 'هل يعمل Msty Go بالكامل على جهازي الخاص؟', a: 'ينفذ Msty Go مهامًا مستقلة متعددة الخطوات على جهازك الخاص، باستخدام أدوات معزولة (sandboxed) ووصول محدود النطاق للمجلدات تقوم أنت بتهيئته. يعمل مع نماذج محلية أو سحابية — تصف Msty هذا بأنه تحكم محلي أولًا، وليس محليًا فقط، لذا تبقى النماذج السحابية خيارًا حسب إعدادك.' },
           { q: 'كيف يمنع Msty Go الوكيل المستقل من فعل شيء غير مرغوب فيه؟', a: 'يحدد Msty Go ما يمكن للوكيل الوصول إليه قبل تشغيل المهمة — أدوات معزولة ومجلدات محددة موصولة — وتراجع النتيجة المنظمة بعد اكتمال المهمة بدلًا من الموافقة على كل خطوة. لم تدقق هذه المراجعة بشكل مستقل ضمانات أمان البيئة المعزولة؛ تعامل مع الوصف كتصميم مُعلَن من Msty، وليس كاختبار تم التحقق منه من طرف ثالث.' },
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية الكبيرة لعام 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك Msty (msty.app) المُدرج كمنتج محادثة منفصل.',
+          '[دليل برمجيات نماذج اللغة المحلية الكبيرة لعام 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك Msty ([msty.app](https://msty.app)) المُدرج كمنتج محادثة منفصل.',
           '[مراجعة AutoGPT لعام 2026](/ar/power-local-llm/autogpt-local-review-2026) — وكيل مهام مستقل آخر، يقارن وكيل سطر أوامر كلاسيكيًا مرخصًا بموجب MIT بمنصة مستضافة.',
           '[هل تعمل الوكلاء المحلية المستقلة فعلًا؟](/ar/power-local-llm/autonomous-local-agents-actually-work) — تقييم عملي لأنظمة الوكلاء المحلية محددة النطاق مقابل المستقلة.',
           '[أفضل النماذج المحلية لاستدعاء الأدوات لعام 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — للقراء الراغبين في تشغيل Msty Go مع محرك نموذج محلي.',
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Msty Go',
     title: 'Msty Go 리뷰 2026: Msty의 로컬 우선 AI 에이전트',
     seoTitle: 'Msty Go 리뷰 2026: 로컬 우선 AI 에이전트',
-    intro: 'Msty Go(msty.ai/go)는 데스크톱 채팅 클라이언트인 Msty 제작사가 내놓은 작업 자동화 앱입니다. Msty가 로컬 또는 클라우드 모델과 대화하기 위한 채팅 인터페이스라면, Msty Go는 자율적으로 다단계 작업을 수행하도록 만들어진 별도의 최신 제품입니다. 사용자 본인의 폴더와 도구에 연결해 목표를 향해 작업을 진행하고, 검토할 수 있는 구조화된 결과를 반환합니다.',
+    intro: 'Msty Go([msty.ai/go](https://msty.ai/go))는 데스크톱 채팅 클라이언트인 Msty 제작사가 내놓은 작업 자동화 앱입니다. Msty가 로컬 또는 클라우드 모델과 대화하기 위한 채팅 인터페이스라면, Msty Go는 자율적으로 다단계 작업을 수행하도록 만들어진 별도의 최신 제품입니다. 사용자 본인의 폴더와 도구에 연결해 목표를 향해 작업을 진행하고, 검토할 수 있는 구조화된 결과를 반환합니다.',
     metaDescription: 'Msty Go는 샌드박스화된 도구와 범위가 제한된 폴더 접근으로 자율적인 다단계 작업을 로컬에서 실행합니다. 현재 macOS/Windows/Linux용 무료 베타로, 실제로 무엇을 하는지 정리했습니다.',
     readTime: '10분 읽기',
     targetKeywords: [
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '현재 macOS, Windows, Linux용 베타 단계이며, 회사가 안정성 향상과 기능 확장에 힘쓰는 동안 개인 사용은 무료입니다',
         ],
         callouts: [
-          { type: 'note', text: 'Msty Go는 해당 회사의 데스크톱 채팅 클라이언트인 Msty(msty.app)와는 별개의 제품입니다 — 두 제품은 이름만 다른 같은 앱이 아닙니다. 둘의 차이는 아래 비교 섹션을 참고하십시오.' },
+          { type: 'note', text: 'Msty Go는 해당 회사의 데스크톱 채팅 클라이언트인 Msty([msty.app](https://msty.app))와는 별개의 제품입니다 — 두 제품은 이름만 다른 같은 앱이 아닙니다. 둘의 차이는 아래 비교 섹션을 참고하십시오.' },
         ],
       },
       overview: {
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonMsty: {
         id: 'msty-go-vs-msty',
         title: 'Msty Go 대 Msty: 차이점은 무엇입니까?',
-        content: '**Msty Go와 Msty는 같은 회사의 서로 다른 두 제품이며, 같은 앱의 두 가지 이름이 아닙니다.** Msty(msty.app)는 원래의 데스크톱 채팅 클라이언트로, 로컬 또는 클라우드 모델과 대화하기 위한 대화형 인터페이스입니다. Msty Go는 채팅이 아니라 자율적인 다단계 작업 자동화를 위해 특별히 만들어진, 더 최신이고 에이전트적인 제품입니다.',
+        content: '**Msty Go와 Msty는 같은 회사의 서로 다른 두 제품이며, 같은 앱의 두 가지 이름이 아닙니다.** Msty([msty.app](https://msty.app))는 원래의 데스크톱 채팅 클라이언트로, 로컬 또는 클라우드 모델과 대화하기 위한 대화형 인터페이스입니다. Msty Go는 채팅이 아니라 자율적인 다단계 작업 자동화를 위해 특별히 만들어진, 더 최신이고 에이전트적인 제품입니다.',
         columns: ['항목', 'Msty', 'Msty Go'],
         rows: [
           { '항목': '제품 유형', 'Msty': '데스크톱 채팅 클라이언트', 'Msty Go': '작업 자동화 에이전트' },
@@ -2241,7 +2241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               '회사가 여전히 안정성과 기능을 적극적으로 바꾸고 있는 베타 소프트웨어가 아니라 안정적이고 프로덕션 준비가 된 릴리스가 필요한 경우',
               '밝혀진 설계 설명이 아니라 오늘 당장 문서화되고 감사된 샌드박스 보안 보장이 필요한 경우 — 이 리뷰는 샌드박스의 격리 특성을 독립적으로 검증하지 않았습니다',
-              '작업 자동화 에이전트가 아니라 채팅 인터페이스가 필요한 경우 — 해당 회사의 다른 제품인 Msty(msty.app)가 그 목적에 맞게 만들어졌습니다',
+              '작업 자동화 에이전트가 아니라 채팅 인터페이스가 필요한 경우 — 해당 회사의 다른 제품인 Msty([msty.app](https://msty.app))가 그 목적에 맞게 만들어졌습니다',
               '상업적 또는 팀 사용을 위한 명확하게 공개된 가격이 필요한 경우 — Msty 자체 베타 자료에 따르면 Msty Go는 아직 이를 공개하지 않았습니다',
             ],
           },
@@ -2274,8 +2274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Msty Go란 무엇입니까?', a: 'Msty Go(msty.ai/go)는 Msty 제작사가 내놓은 작업 자동화 앱입니다. 다단계 작업을 AI 에이전트에 위임할 수 있게 해줍니다: 목표를 설정하고 필요한 도구와 폴더를 연결하면, 에이전트는 자율적으로 작업을 진행하며 사용자는 접근을 통제하고 구조화된 결과를 검토합니다.' },
-          { q: 'Msty Go는 Msty와 같은 것입니까?', a: '아닙니다. Msty(msty.app)는 로컬 또는 클라우드 모델과의 대화형 상호작용을 위해 만들어진 해당 회사의 데스크톱 채팅 클라이언트입니다. Msty Go는 채팅이 아니라 자율적인 다단계 작업 자동화를 위해 만들어진, 더 최신이고 에이전트적인 별도의 제품입니다.' },
+          { q: 'Msty Go란 무엇입니까?', a: 'Msty Go([msty.ai/go](https://msty.ai/go))는 Msty 제작사가 내놓은 작업 자동화 앱입니다. 다단계 작업을 AI 에이전트에 위임할 수 있게 해줍니다: 목표를 설정하고 필요한 도구와 폴더를 연결하면, 에이전트는 자율적으로 작업을 진행하며 사용자는 접근을 통제하고 구조화된 결과를 검토합니다.' },
+          { q: 'Msty Go는 Msty와 같은 것입니까?', a: '아닙니다. Msty([msty.app](https://msty.app))는 로컬 또는 클라우드 모델과의 대화형 상호작용을 위해 만들어진 해당 회사의 데스크톱 채팅 클라이언트입니다. Msty Go는 채팅이 아니라 자율적인 다단계 작업 자동화를 위해 만들어진, 더 최신이고 에이전트적인 별도의 제품입니다.' },
           { q: 'Msty Go는 이전에 다른 이름이었습니까?', a: '예. 원래는 "Msty Claw"라고 불렸습니다. 제품명, 릴리스 표기, 브랜드 표기를 포함한 Msty Go로의 이름 변경은 버전 0.14.0에서 완료되었습니다.' },
           { q: 'Msty Go는 전적으로 제 기기에서 실행됩니까?', a: 'Msty Go는 사용자가 구성하는 샌드박스화된 도구와 범위가 제한된 폴더 접근을 사용해 사용자 본인의 기기에서 자율적인 다단계 작업을 실행합니다. 로컬 또는 클라우드 모델과 작동합니다 — Msty는 이를 로컬 전용이 아닌 로컬 우선 제어로 설명하므로, 설정에 따라 클라우드 모델도 여전히 선택지로 남습니다.' },
           { q: 'Msty Go는 자율 에이전트가 원치 않는 일을 하지 않도록 어떻게 방지합니까?', a: 'Msty Go는 작업이 실행되기 전에 에이전트가 접근할 수 있는 범위 — 샌드박스화된 도구와 연결된 특정 폴더 — 를 제한하며, 사용자는 각 단계를 승인하는 대신 작업 완료 후 구조화된 결과를 검토합니다. 이 리뷰는 샌드박스의 보안 보장을 독립적으로 감사하지 않았습니다. 이 설명은 Msty가 밝힌 설계로 취급해야 하며, 제3자가 검증한 테스트로 취급해서는 안 됩니다.' },
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 아티클',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 이 아티클이 속한 로컬 AI 도구의 전체 카탈로그로, 별도의 채팅 제품으로 등재된 Msty(msty.app)를 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 이 아티클이 속한 로컬 AI 도구의 전체 카탈로그로, 별도의 채팅 제품으로 등재된 Msty([msty.app](https://msty.app))를 포함합니다.',
           '[AutoGPT 리뷰 2026](/ko/power-local-llm/autogpt-local-review-2026) — 또 다른 자율 작업 에이전트로, MIT 라이선스의 클래식 CLI 에이전트를 호스팅형 플랫폼과 비교합니다.',
           '[자율 로컬 에이전트는 실제로 작동하는가?](/ko/power-local-llm/autonomous-local-agents-actually-work) — 범위 제한형 대 자율형 로컬 에이전트 스택에 대한 실전 평가입니다.',
           '[도구 호출을 위한 최고의 로컬 모델 2026](/ko/power-local-llm/best-local-models-tool-calling-2026) — Msty Go를 로컬 모델 백엔드와 함께 실행하고 싶은 독자를 위한 것입니다.',

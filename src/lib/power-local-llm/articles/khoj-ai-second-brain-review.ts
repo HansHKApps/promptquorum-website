@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Is Khoj still maintained, and can I still use it?',
         answer: 'Yes. The open-source Khoj project on GitHub is actively developed — Khoj Cloud, the paid hosted version, was sunset on April 15, 2026, but self-hosting via Docker or pip is fully supported and is now the only way to run Khoj.',
         bullets: [
-          'Khoj Cloud (app.khoj.dev) sunset: April 15, 2026',
+          'Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)) sunset: April 15, 2026',
           'GitHub repository: over 36,000 stars, not archived, commits continuing',
           'License: AGPL 3.0 (copyleft, network-use clause)',
           'Self-host via Docker (docker-compose) or pip install khoj[local]',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'AGPL 3.0 license — free and open-source, but copyleft with a network-use clause (explained in detail below)',
-          'Self-hosting is now the only supported way to run Khoj: Khoj Cloud (app.khoj.dev), the paid hosted version, was sunset on April 15, 2026',
+          'Self-hosting is now the only supported way to run Khoj: Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)), the paid hosted version, was sunset on April 15, 2026',
           'The core open-source project is not affected — GitHub commits continued past the cloud shutdown, and the repository is not archived',
           'Syncs Obsidian vaults through a dedicated plugin, and Notion workspaces through direct sync from the web app',
           'Chats with local models (through Ollama, llama-cpp-server, or any OpenAI-API-compatible server) or cloud models (OpenAI, Anthropic, Google, and others) side by side',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Wird Khoj noch gepflegt, und kann ich es noch nutzen?',
         answer: 'Ja. Das quelloffene Khoj-Projekt auf GitHub wird aktiv weiterentwickelt — Khoj Cloud, die kostenpflichtige gehostete Version, wurde am 15. April 2026 eingestellt, aber Self-Hosting über Docker oder pip wird vollständig unterstützt und ist inzwischen der einzige Weg, Khoj zu betreiben.',
         bullets: [
-          'Khoj Cloud (app.khoj.dev) eingestellt: 15. April 2026',
+          'Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)) eingestellt: 15. April 2026',
           'GitHub-Repository: über 36.000 Sterne, nicht archiviert, Commits laufen weiter',
           'Lizenz: AGPL 3.0 (Copyleft mit Netzwerknutzungsklausel)',
           'Self-Hosting über Docker (docker-compose) oder pip install khoj[local]',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'AGPL-3.0-Lizenz — kostenlos und quelloffen, aber Copyleft mit Netzwerknutzungsklausel (unten im Detail erklärt)',
-          'Self-Hosting ist inzwischen der einzige unterstützte Weg: Khoj Cloud (app.khoj.dev), die kostenpflichtige gehostete Version, wurde am 15. April 2026 eingestellt',
+          'Self-Hosting ist inzwischen der einzige unterstützte Weg: Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)), die kostenpflichtige gehostete Version, wurde am 15. April 2026 eingestellt',
           'Das quelloffene Kernprojekt ist davon nicht betroffen — GitHub-Commits liefen nach der Cloud-Einstellung weiter, das Repository ist nicht archiviert',
           'Synchronisiert Obsidian-Vaults über ein dediziertes Plugin und Notion-Workspaces über direkte Synchronisierung in der Web-App',
           'Chattet gleichzeitig mit lokalen Modellen (über Ollama, llama-cpp-server oder jeden OpenAI-API-kompatiblen Server) oder Cloud-Modellen (OpenAI, Anthropic, Google und weitere)',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Khoj est-il encore maintenu, et puis-je encore l\'utiliser ?',
         answer: 'Oui. Le projet open source Khoj sur GitHub est activement développé — Khoj Cloud, la version hébergée payante, a fermé le 15 avril 2026, mais l\'autohébergement via Docker ou pip est pleinement pris en charge et constitue désormais le seul moyen d\'utiliser Khoj.',
         bullets: [
-          'Fermeture de Khoj Cloud (app.khoj.dev) : 15 avril 2026',
+          'Fermeture de Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)) : 15 avril 2026',
           'Dépôt GitHub : plus de 36 000 étoiles, non archivé, commits en cours',
           'Licence : AGPL 3.0 (copyleft, clause d\'usage réseau)',
           'Autohébergement via Docker (docker-compose) ou pip install khoj[local]',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licence AGPL 3.0 — gratuite et open source, mais copyleft avec une clause d\'usage réseau (détaillée plus bas)',
-          'L\'autohébergement est désormais le seul moyen pris en charge : Khoj Cloud (app.khoj.dev), la version hébergée payante, a fermé le 15 avril 2026',
+          'L\'autohébergement est désormais le seul moyen pris en charge : Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)), la version hébergée payante, a fermé le 15 avril 2026',
           'Le projet open source principal n\'est pas affecté — les commits GitHub ont continué après la fermeture du cloud, et le dépôt n\'est pas archivé',
           'Synchronise les coffres Obsidian via un plugin dédié, et les espaces Notion via synchronisation directe depuis l\'appli web',
           'Discute avec des modèles locaux (via Ollama, llama-cpp-server, ou tout serveur compatible API OpenAI) ou des modèles cloud (OpenAI, Anthropic, Google et autres), au choix',
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Khoj sigue manteniéndose y todavía se puede usar?',
         answer: 'Sí. El proyecto de código abierto Khoj en GitHub se desarrolla activamente — Khoj Cloud, la versión de pago alojada, cerró el 15 de abril de 2026, pero el autoalojamiento vía Docker o pip cuenta con soporte completo y es ahora la única forma de usar Khoj.',
         bullets: [
-          'Cierre de Khoj Cloud (app.khoj.dev): 15 de abril de 2026',
+          'Cierre de Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)): 15 de abril de 2026',
           'Repositorio de GitHub: más de 36.000 estrellas, no archivado, con commits continuos',
           'Licencia: AGPL 3.0 (copyleft, con cláusula de uso en red)',
           'Autoalojamiento vía Docker (docker-compose) o pip install khoj[local]',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licencia AGPL 3.0 — gratuita y de código abierto, pero copyleft con una cláusula de uso en red (explicada en detalle más abajo)',
-          'El autoalojamiento es ahora la única vía compatible: Khoj Cloud (app.khoj.dev), la versión de pago alojada, cerró el 15 de abril de 2026',
+          'El autoalojamiento es ahora la única vía compatible: Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)), la versión de pago alojada, cerró el 15 de abril de 2026',
           'El proyecto de código abierto principal no se vio afectado — los commits en GitHub continuaron tras el cierre de la nube, y el repositorio no está archivado',
           'Sincroniza bóvedas de Obsidian mediante un plugin dedicado, y espacios de Notion mediante sincronización directa desde la app web',
           'Chatea con modelos locales (vía Ollama, llama-cpp-server, o cualquier servidor compatible con la API de OpenAI) o modelos en la nube (OpenAI, Anthropic, Google y otros), según elijas',
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O Khoj ainda é mantido, e ainda dá para usar?',
         answer: 'Sim. O projeto open source Khoj no GitHub é desenvolvido ativamente — o Khoj Cloud, a versão paga hospedada, foi encerrado em 15 de abril de 2026, mas o self-hosting via Docker ou pip é totalmente suportado e agora é a única forma de rodar o Khoj.',
         bullets: [
-          'Encerramento do Khoj Cloud (app.khoj.dev): 15 de abril de 2026',
+          'Encerramento do Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)): 15 de abril de 2026',
           'Repositório no GitHub: mais de 36.000 estrelas, não arquivado, commits contínuos',
           'Licença: AGPL 3.0 (copyleft, com cláusula de uso em rede)',
           'Self-hosting via Docker (docker-compose) ou pip install khoj[local]',
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Licença AGPL 3.0 — gratuita e open source, mas copyleft com uma cláusula de uso em rede (explicada em detalhes abaixo)',
-          'O self-hosting agora é a única via suportada: o Khoj Cloud (app.khoj.dev), a versão paga hospedada, foi encerrado em 15 de abril de 2026',
+          'O self-hosting agora é a única via suportada: o Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)), a versão paga hospedada, foi encerrado em 15 de abril de 2026',
           'O projeto open source principal não foi afetado — os commits no GitHub continuaram após o encerramento da nuvem, e o repositório não está arquivado',
           'Sincroniza vaults do Obsidian por um plugin dedicado, e espaços do Notion por sincronização direta a partir do app web',
           'Conversa com modelos locais (via Ollama, llama-cpp-server, ou qualquer servidor compatível com a API da OpenAI) ou modelos na nuvem (OpenAI, Anthropic, Google e outros), à sua escolha',
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Khojはまだメンテナンスされていて、今でも使える?',
         answer: 'はい。GitHub上のオープンソースKhojプロジェクトは活発に開発が続いている——有料ホスト版のKhoj Cloudは2026年4月15日に終了したが、Dockerまたはpipによるセルフホストは完全にサポートされており、現在はそれがKhojを使う唯一の方法になっている。',
         bullets: [
-          'Khoj Cloud(app.khoj.dev)終了:2026年4月15日',
+          'Khoj Cloud([app.khoj.dev](https://app.khoj.dev))終了:2026年4月15日',
           'GitHubリポジトリ:スター36,000超、アーカイブされておらずコミットも継続中',
           'ライセンス:AGPL 3.0(コピーレフト、ネットワーク利用条項あり)',
           'Docker(docker-compose)またはpip install khoj[local]でセルフホスト可能',
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'AGPL 3.0ライセンス — 無料でオープンソースだが、ネットワーク利用条項付きのコピーレフト(詳細は下記)',
-          'セルフホストが現在唯一サポートされる方法:有料ホスト版のKhoj Cloud(app.khoj.dev)は2026年4月15日に終了',
+          'セルフホストが現在唯一サポートされる方法:有料ホスト版のKhoj Cloud([app.khoj.dev](https://app.khoj.dev))は2026年4月15日に終了',
           'オープンソースの本体プロジェクトは影響を受けていない — クラウド終了後もGitHubのコミットは続き、リポジトリもアーカイブされていない',
           'Obsidianのvaultは専用プラグインで同期し、NotionワークスペースはWebアプリから直接同期する',
           'ローカルモデル(Ollama、llama-cpp-server、OpenAI API互換の任意のサーバー経由)またはクラウドモデル(OpenAI、Anthropic、Googleなど)を選んでチャットできる',
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Khoj还有人维护吗?现在还能用吗?',
         answer: '是的。GitHub上的开源Khoj项目仍在积极开发——收费托管版Khoj Cloud已于2026年4月15日停止服务,但通过Docker或pip进行自托管完全受支持,现已成为运行Khoj的唯一方式。',
         bullets: [
-          'Khoj Cloud(app.khoj.dev)停止服务:2026年4月15日',
+          'Khoj Cloud([app.khoj.dev](https://app.khoj.dev))停止服务:2026年4月15日',
           'GitHub仓库:星标超36,000,未被归档,提交仍在持续',
           '许可证:AGPL 3.0(著佐权,含网络使用条款)',
           '可通过Docker(docker-compose)或pip install khoj[local]自托管',
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'AGPL 3.0许可证——免费开源,但属于著佐权许可证,含网络使用条款(下文详解)',
-          '自托管现已成为唯一受支持的方式:收费托管版Khoj Cloud(app.khoj.dev)已于2026年4月15日停止服务',
+          '自托管现已成为唯一受支持的方式:收费托管版Khoj Cloud([app.khoj.dev](https://app.khoj.dev))已于2026年4月15日停止服务',
           '开源核心项目未受影响——云端服务终止后GitHub提交仍在继续,仓库也未被归档',
           '通过专用插件同步Obsidian库,通过网页应用直接同步Notion工作区',
           '可在本地模型(通过Ollama、llama-cpp-server或任何兼容OpenAI API的服务器)与云端模型(OpenAI、Anthropic、Google等)之间自由切换聊天',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل Khoj ما زالت تُصان، وهل ما زال بإمكاني استخدامها؟',
         answer: 'نعم. مشروع Khoj مفتوح المصدر على GitHub قيد التطوير النشط — توقفت النسخة المستضافة المدفوعة Khoj Cloud في 15 أبريل 2026، لكن الاستضافة الذاتية عبر Docker أو pip مدعومة بالكامل، وهي الآن الطريقة الوحيدة لتشغيل Khoj.',
         bullets: [
-          'توقف Khoj Cloud (app.khoj.dev): 15 أبريل 2026',
+          'توقف Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)): 15 أبريل 2026',
           'مستودع GitHub: أكثر من 36,000 نجمة، غير مؤرشف، والالتزامات (commits) مستمرة',
           'الترخيص: AGPL 3.0 (كوبي-لفت مع بند استخدام الشبكة)',
           'استضافة ذاتية عبر Docker (docker-compose) أو pip install khoj[local]',
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'ترخيص AGPL 3.0 — مجاني ومفتوح المصدر، لكنه كوبي-لفت مع بند استخدام الشبكة (مشروح بالتفصيل أدناه)',
-          'الاستضافة الذاتية أصبحت الآن الطريقة الوحيدة المدعومة: توقفت النسخة المستضافة المدفوعة Khoj Cloud (app.khoj.dev) في 15 أبريل 2026',
+          'الاستضافة الذاتية أصبحت الآن الطريقة الوحيدة المدعومة: توقفت النسخة المستضافة المدفوعة Khoj Cloud ([app.khoj.dev](https://app.khoj.dev)) في 15 أبريل 2026',
           'المشروع الأساسي مفتوح المصدر لم يتأثر — استمرت التزامات GitHub بعد إغلاق الخدمة السحابية، والمستودع غير مؤرشف',
           'يزامن مخازن Obsidian عبر إضافة مخصصة، ومساحات عمل Notion عبر مزامنة مباشرة من تطبيق الويب',
           'يدردش مع نماذج محلية (عبر Ollama أو llama-cpp-server أو أي خادم متوافق مع واجهة برمجة OpenAI) أو نماذج سحابية (OpenAI وAnthropic وGoogle وغيرها) حسب الاختيار',
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Khoj는 아직 유지보수되고 있으며 지금도 사용할 수 있나요?',
         answer: '네. GitHub의 오픈소스 Khoj 프로젝트는 활발히 개발되고 있습니다 — 유료 호스팅 버전인 Khoj Cloud는 2026년 4월 15일 종료되었지만, Docker나 pip를 통한 셀프 호스팅은 완전히 지원되며 이제 Khoj를 사용하는 유일한 방법입니다.',
         bullets: [
-          'Khoj Cloud(app.khoj.dev) 종료: 2026년 4월 15일',
+          'Khoj Cloud([app.khoj.dev](https://app.khoj.dev)) 종료: 2026년 4월 15일',
           'GitHub 저장소: 스타 36,000개 이상, 아카이브되지 않음, 커밋 계속 진행 중',
           '라이선스: AGPL 3.0(카피레프트, 네트워크 사용 조항 포함)',
           'Docker(docker-compose) 또는 pip install khoj[local]로 셀프 호스팅 가능',
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'AGPL 3.0 라이선스 — 무료이자 오픈소스지만, 네트워크 사용 조항이 있는 카피레프트(아래에서 자세히 설명)',
-          '이제 셀프 호스팅이 유일하게 지원되는 방법: 유료 호스팅 버전인 Khoj Cloud(app.khoj.dev)는 2026년 4월 15일 종료됨',
+          '이제 셀프 호스팅이 유일하게 지원되는 방법: 유료 호스팅 버전인 Khoj Cloud([app.khoj.dev](https://app.khoj.dev))는 2026년 4월 15일 종료됨',
           '오픈소스 핵심 프로젝트는 영향을 받지 않음 — 클라우드 종료 이후에도 GitHub 커밋이 계속되었고 저장소도 아카이브되지 않음',
           'Obsidian 보관함은 전용 플러그인으로 동기화하고, Notion 워크스페이스는 웹 앱에서 직접 동기화',
           '로컬 모델(Ollama, llama-cpp-server, 또는 OpenAI API 호환 서버)이나 클라우드 모델(OpenAI, Anthropic, Google 등) 중 선택해 채팅 가능',

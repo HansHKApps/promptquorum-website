@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**Hugging Face** (huggingface.co): the primary source for open models. Each file has a verified SHA256 hash. Stick to models from well-known publishers (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-            '**Ollama library** (ollama.com/library): Ollama verifies model hashes before storing them. Models pulled via `ollama pull` are safe.',
+            '**Ollama library** ([ollama.com/library](https://ollama.com/library)): Ollama verifies model hashes before storing them. Models pulled via `ollama pull` are safe.',
             '**LM Studio model browser**: searches Hugging Face directly. The same trust rules apply -- check the publisher account.',
             '**Avoid**: anonymous file sharing sites, Discord file drops, and any source that does not provide a verifiable hash.',
           ],
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             { q: 'Can a local LLM access my files or the internet?', a: 'No -- the model itself is a static file that generates text. It has no ability to read your file system or make network requests. However, the inference tool running the model (Ollama, LM Studio) has normal OS-level access. Some tools include features that do read files -- such as GPT4All\'s LocalDocs or LM Studio\'s file attachment feature. These features are opt-in and explicitly documented.' },
             { q: 'Is it safe to use a local LLM with HIPAA-covered data?', a: 'Local inference removes the third-party data processor risk that cloud APIs create. However, HIPAA compliance requires more than private inference -- you need full-disk encryption, access controls, audit logging, and a Business Associate Agreement if any software vendor could access PHI. Using Ollama with FileVault enabled and telemetry disabled is a reasonable starting point, but formal HIPAA compliance requires a full risk assessment.' },
-            { q: 'Does Ollama send my prompts anywhere?', a: 'No. Ollama is open source (github.com/ollama/ollama) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.' },
+            { q: 'Does Ollama send my prompts anywhere?', a: 'No. Ollama is open source ([github.com/ollama/ollama](https://github.com/ollama/ollama)) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.' },
             { q: 'Is using a local LLM more private than using the OpenAI API?', a: 'Yes, for prompt privacy. With a local LLM, your prompts never leave your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. OpenAI\'s API Terms of Service state that API input/output is not used to train models by default, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.' },
             { q: 'How do I verify that a downloaded model file is safe?', a: 'Download models only from Hugging Face (huggingface.co) or the official Ollama library. On Hugging Face, each file shows a SHA256 hash -- verify it with `sha256sum <model_file>` after downloading. Stick to models from known publishers: Meta, Google, Microsoft, Mistral AI, and Qwen/Alibaba. Avoid anonymous file shares or Discord file drops.' },
             { q: 'What is the difference between privacy and security for local LLMs?', a: 'Privacy means your prompts and outputs are not accessible to third parties. Security means your system is protected from threats. A local LLM can be private (no data leaves your machine) but insecure (model downloaded from an untrusted source, or Ollama API exposed on the network). Both must be addressed independently.' },
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Where can you find additional sources?',
           items: [
-            '**OWASP Top 10 for LLM Applications** (owasp.org/www-project-top-10-for-large-language-model-applications/) -- Security risks for LLM deployments including prompt injection and supply chain attacks',
+            '**OWASP Top 10 for LLM Applications** ([owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) -- Security risks for LLM deployments including prompt injection and supply chain attacks',
             '**Hugging Face Model Card Documentation** (huggingface.co/docs/hub/model-cards) -- Model provenance standards and SHA256 hash verification',
             '**VeraCrypt** (veracrypt.fr) -- Open-source full-disk and folder encryption for Windows, macOS, and Linux',
           ],
@@ -302,7 +302,7 @@ schema: {
             'name': 'Does Ollama send my prompts anywhere?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Ollama is open source (github.com/ollama/ollama) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.',
+              'text': 'No. Ollama is open source ([github.com/ollama/ollama](https://github.com/ollama/ollama)) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.',
             },
           },
           {
@@ -481,7 +481,7 @@ schema: {
         ],
         items: [
           '**Hugging Face** (huggingface.co): la fuente principal para modelos abiertos. Cada archivo tiene un hash SHA256 verificado. Limítate a modelos de publicadores reconocidos (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Biblioteca de Ollama** (ollama.com/library): Ollama verifica los hashes de los modelos antes de almacenarlos. Los modelos descargados con `ollama pull` son seguros.',
+          '**Biblioteca de Ollama** ([ollama.com/library](https://ollama.com/library)): Ollama verifica los hashes de los modelos antes de almacenarlos. Los modelos descargados con `ollama pull` son seguros.',
           '**Navegador de modelos de LM Studio**: busca directamente en Hugging Face. Se aplican las mismas reglas de confianza -- verifica la cuenta del publicador.',
           '**Evita**: sitios de intercambio de archivos anónimos, archivos compartidos en Discord y cualquier fuente que no proporcione un hash verificable.',
         ],
@@ -520,7 +520,7 @@ schema: {
         faqs: [
             { q: '¿Puede un LLM local acceder a mis archivos o a internet?', a: 'No -- el modelo en sí es un archivo estático que genera texto. No tiene capacidad para leer tu sistema de archivos ni hacer solicitudes de red. Sin embargo, la herramienta de inferencia que ejecuta el modelo (Ollama, LM Studio) tiene acceso normal a nivel de sistema operativo. Algunas herramientas incluyen funciones que sí leen archivos -- como LocalDocs de GPT4All o la función de adjuntar archivos de LM Studio. Estas funciones son opt-in y están explícitamente documentadas.' },
             { q: '¿Es seguro usar un LLM local con datos cubiertos por HIPAA?', a: 'La inferencia local elimina el riesgo del procesador de datos de terceros que crean las APIs en la nube. Sin embargo, el cumplimiento de HIPAA requiere más que inferencia privada -- necesitas cifrado de disco completo, controles de acceso, registro de auditoría y un Acuerdo de Socio Comercial si algún proveedor de software pudiera acceder a PHI. Usar Ollama con FileVault habilitado y telemetría deshabilitada es un punto de partida razonable, pero el cumplimiento formal de HIPAA requiere una evaluación de riesgos completa.' },
-            { q: '¿Ollama envía mis prompts a algún lugar?', a: 'No. Ollama es código abierto (github.com/ollama/ollama) y no contiene código de telemetría ni recopilación de datos. Los prompts son procesados localmente por llama.cpp y nunca se transmiten. La única actividad de red saliente de Ollama son las descargas de modelos desde ollama.com cuando ejecutas `ollama pull`.' },
+            { q: '¿Ollama envía mis prompts a algún lugar?', a: 'No. Ollama es código abierto ([github.com/ollama/ollama](https://github.com/ollama/ollama)) y no contiene código de telemetría ni recopilación de datos. Los prompts son procesados localmente por llama.cpp y nunca se transmiten. La única actividad de red saliente de Ollama son las descargas de modelos desde ollama.com cuando ejecutas `ollama pull`.' },
             { q: '¿Es usar un LLM local más privado que usar la API de OpenAI?', a: 'Sí, en cuanto a privacidad de prompts. Con un LLM local, tus prompts nunca salen de tu máquina. La API de OpenAI envía los prompts a los servidores de OpenAI para su procesamiento. Los Términos de Servicio de la API de OpenAI indican que la entrada/salida de la API no se usa para entrenar modelos por defecto, pero los datos sí transitan por su infraestructura. Para datos sensibles o regulados (médicos, legales, financieros), la inferencia local es la opción más conservadora.' },
             { q: '¿Cómo verifico que un archivo de modelo descargado es seguro?', a: 'Descarga modelos solo desde Hugging Face (huggingface.co) o la biblioteca oficial de Ollama. En Hugging Face, cada archivo muestra un hash SHA256 -- verifícalo con `sha256sum <model_file>` después de descargar. Limítate a modelos de publicadores conocidos: Meta, Google, Microsoft, Mistral AI y Qwen/Alibaba. Evita archivos compartidos anónimamente o en Discord.' },
             { q: '¿Cuál es la diferencia entre privacidad y seguridad para los LLMs locales?', a: 'Privacidad significa que tus prompts y salidas no son accesibles a terceros. Seguridad significa que tu sistema está protegido contra amenazas. Un LLM local puede ser privado (ningún dato sale de tu máquina) pero inseguro (modelo descargado de una fuente no confiable, o API de Ollama expuesta en la red). Ambos deben abordarse de forma independiente.' },
@@ -534,7 +534,7 @@ schema: {
         id: 'sources',
         title: '¿Dónde puedes encontrar fuentes adicionales?',
         items: [
-          '**OWASP Top 10 para Aplicaciones LLM** (owasp.org/www-project-top-10-for-large-language-model-applications/) -- Riesgos de seguridad para implementaciones de LLMs incluyendo inyección de prompts y ataques a la cadena de suministro',
+          '**OWASP Top 10 para Aplicaciones LLM** ([owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) -- Riesgos de seguridad para implementaciones de LLMs incluyendo inyección de prompts y ataques a la cadena de suministro',
           '**Documentación de Hugging Face Model Card** (huggingface.co/docs/hub/model-cards) -- Estándares de procedencia de modelos y verificación de hashes SHA256',
           '**VeraCrypt** (veracrypt.fr) -- Cifrado de disco completo y carpetas de código abierto para Windows, macOS y Linux',
         ],
@@ -624,7 +624,7 @@ schema: {
             'name': '¿Ollama envía mis prompts a algún lugar?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Ollama es código abierto (github.com/ollama/ollama) y no contiene código de telemetría ni recopilación de datos. Los prompts son procesados localmente por llama.cpp y nunca se transmiten. La única actividad de red saliente de Ollama son las descargas de modelos desde ollama.com cuando ejecutas `ollama pull`.',
+              'text': 'No. Ollama es código abierto ([github.com/ollama/ollama](https://github.com/ollama/ollama)) y no contiene código de telemetría ni recopilación de datos. Los prompts son procesados localmente por llama.cpp y nunca se transmiten. La única actividad de red saliente de Ollama son las descargas de modelos desde ollama.com cuando ejecutas `ollama pull`.',
             },
           },
           {
@@ -803,7 +803,7 @@ schema: {
         ],
         items: [
           '**Hugging Face** (huggingface.co): المصدر الرئيسي للنماذج المفتوحة. لكل ملف تجزئة SHA256 مُتحقق منها. التزم بنماذج الناشرين المعروفين (Meta، Google، Microsoft، Mistral AI، Qwen/Alibaba).',
-          '**مكتبة Ollama** (ollama.com/library): يتحقق Ollama من تجزئات النماذج قبل تخزينها. النماذج المُنزَّلة بـ`ollama pull` آمنة.',
+          '**مكتبة Ollama** ([ollama.com/library](https://ollama.com/library)): يتحقق Ollama من تجزئات النماذج قبل تخزينها. النماذج المُنزَّلة بـ`ollama pull` آمنة.',
           '**متصفح نماذج LM Studio**: يبحث مباشرة في Hugging Face. تنطبق قواعد الثقة نفسها — تحقق من حساب الناشر.',
           '**تجنّب**: مواقع تبادل الملفات المجهولة، والملفات المشتركة على Discord، وأي مصدر لا يوفّر تجزئة قابلة للتحقق.',
         ],
@@ -842,7 +842,7 @@ schema: {
         faqs: [
             { q: 'هل يمكن لنموذج LLM محلي الوصول إلى ملفاتي أو الإنترنت؟', a: 'لا — النموذج نفسه ملف ثابت يولّد نصًا. لا يملك القدرة على قراءة نظام ملفاتك أو إجراء طلبات شبكة. ومع ذلك، فإن أداة الاستدلال التي تُشغّل النموذج (Ollama، LM Studio) تملك وصولًا عاديًا على مستوى نظام التشغيل. تتضمن بعض الأدوات ميزات تقرأ الملفات فعلاً — مثل LocalDocs في GPT4All أو ميزة إرفاق الملفات في LM Studio. هذه الميزات اختيارية وموثّقة صراحةً.' },
             { q: 'هل من الآمن استخدام نموذج LLM محلي مع بيانات مشمولة بـHIPAA؟', a: 'يلغي الاستدلال المحلي خطر معالج البيانات الطرف الثالث الذي تُنشئه واجهات API السحابية. ومع ذلك، يتطلب الامتثال لـHIPAA أكثر من الاستدلال الخاص — تحتاج إلى تشفير قرص كامل وضوابط وصول وتسجيل تدقيق واتفاقية شريك أعمال إذا كان أي مزوّد برمجيات قد يصل إلى PHI. استخدام Ollama مع FileVault مُفعّلًا والقياس عن بُعد مُعطّلًا نقطة انطلاق معقولة، لكن الامتثال الرسمي لـHIPAA يتطلب تقييم مخاطر كاملًا.' },
-            { q: 'هل يُرسل Ollama مطالباتي إلى أي مكان؟', a: 'لا. Ollama مفتوح المصدر (github.com/ollama/ollama) ولا يحتوي على شيفرة قياس عن بُعد أو جمع بيانات. تُعالَج المطالبات محليًا بواسطة llama.cpp ولا تُنقَل أبدًا. النشاط الشبكي الصادر الوحيد لـOllama هو تنزيلات النماذج من ollama.com عند تشغيل `ollama pull`.' },
+            { q: 'هل يُرسل Ollama مطالباتي إلى أي مكان؟', a: 'لا. Ollama مفتوح المصدر ([github.com/ollama/ollama](https://github.com/ollama/ollama)) ولا يحتوي على شيفرة قياس عن بُعد أو جمع بيانات. تُعالَج المطالبات محليًا بواسطة llama.cpp ولا تُنقَل أبدًا. النشاط الشبكي الصادر الوحيد لـOllama هو تنزيلات النماذج من ollama.com عند تشغيل `ollama pull`.' },
             { q: 'هل استخدام نموذج LLM محلي أكثر خصوصية من استخدام واجهة API الخاصة بـOpenAI؟', a: 'نعم، من حيث خصوصية المطالبات. مع نموذج LLM محلي، لا تغادر مطالباتك جهازك أبدًا. تُرسل واجهة API الخاصة بـOpenAI المطالبات إلى خوادم OpenAI للمعالجة. تشير شروط خدمة واجهة API الخاصة بـOpenAI إلى أن مدخلات/مخرجات API لا تُستخدم لتدريب النماذج افتراضيًا، لكن البيانات تمر فعلاً عبر بنيتها التحتية. للبيانات الحساسة أو الخاضعة للتنظيم (طبية، قانونية، مالية)، الاستدلال المحلي هو الخيار الأكثر تحفظًا.' },
             { q: 'كيف أتحقق من أن ملف نموذج مُنزَّل آمن؟', a: 'نزّل النماذج فقط من Hugging Face (huggingface.co) أو مكتبة Ollama الرسمية. في Hugging Face، يعرض كل ملف تجزئة SHA256 — تحقق منها بـ`sha256sum <model_file>` بعد التنزيل. التزم بنماذج الناشرين المعروفين: Meta، Google، Microsoft، Mistral AI وQwen/Alibaba. تجنّب الملفات المشتركة بشكل مجهول أو على Discord.' },
             { q: 'ما الفرق بين الخصوصية والأمان لنماذج LLM المحلية؟', a: 'الخصوصية تعني أن مطالباتك ومخرجاتك غير قابلة للوصول من قبل الأطراف الثالثة. الأمان يعني أن نظامك محمي من التهديدات. قد يكون نموذج LLM محلي خاصًا (لا تغادر أي بيانات جهازك) لكن غير آمن (نموذج مُنزَّل من مصدر غير موثوق، أو واجهة API لـOllama مكشوفة على الشبكة). يجب معالجة الاثنين بشكل مستقل.' },
@@ -856,7 +856,7 @@ schema: {
         id: 'sources',
         title: 'أين يمكنك إيجاد مصادر إضافية؟',
         items: [
-          '**OWASP Top 10 لتطبيقات LLM** (owasp.org/www-project-top-10-for-large-language-model-applications/) — مخاطر أمان تطبيقات نماذج LLM بما في ذلك حقن المطالبات وهجمات سلسلة التوريد',
+          '**OWASP Top 10 لتطبيقات LLM** ([owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) — مخاطر أمان تطبيقات نماذج LLM بما في ذلك حقن المطالبات وهجمات سلسلة التوريد',
           '**توثيق بطاقة نموذج Hugging Face** (huggingface.co/docs/hub/model-cards) — معايير مصدر النماذج والتحقق من تجزئات SHA256',
           '**VeraCrypt** (veracrypt.fr) — تشفير قرص ومجلدات كامل مفتوح المصدر لـWindows وmacOS وLinux',
         ],
@@ -946,7 +946,7 @@ schema: {
             'name': 'هل يُرسل Ollama مطالباتي إلى أي مكان؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا. Ollama مفتوح المصدر (github.com/ollama/ollama) ولا يحتوي على شيفرة قياس عن بُعد أو جمع بيانات. تُعالَج المطالبات محليًا بواسطة llama.cpp ولا تُنقَل أبدًا. النشاط الشبكي الصادر الوحيد لـOllama هو تنزيلات النماذج من ollama.com عند تشغيل `ollama pull`.',
+              'text': 'لا. Ollama مفتوح المصدر ([github.com/ollama/ollama](https://github.com/ollama/ollama)) ولا يحتوي على شيفرة قياس عن بُعد أو جمع بيانات. تُعالَج المطالبات محليًا بواسطة llama.cpp ولا تُنقَل أبدًا. النشاط الشبكي الصادر الوحيد لـOllama هو تنزيلات النماذج من ollama.com عند تشغيل `ollama pull`.',
             },
           },
           {
@@ -1101,7 +1101,7 @@ schema: {
           },
           {
             q: 'O Ollama envia meus prompts para algum lugar?',
-            a: 'Não. O Ollama é de código aberto (github.com/ollama/ollama) e não contém código de telemetria ou coleta de dados. Os prompts são processados localmente pelo llama.cpp e nunca são transmitidos. A única atividade de rede de saída do Ollama são os downloads de modelos a partir de ollama.com quando você executa `ollama pull`.',
+            a: 'Não. O Ollama é de código aberto ([github.com/ollama/ollama](https://github.com/ollama/ollama)) e não contém código de telemetria ou coleta de dados. Os prompts são processados localmente pelo llama.cpp e nunca são transmitidos. A única atividade de rede de saída do Ollama são os downloads de modelos a partir de ollama.com quando você executa `ollama pull`.',
           },
           {
             q: 'Usar um LLM local é mais privado do que usar a API da OpenAI?',
@@ -1250,7 +1250,7 @@ schema: {
         ],
         items: [
           '**Hugging Face** (huggingface.co): die primäre Quelle für offene Modelle. Jede Datei hat einen verifizierten SHA256-Hash. Halten Sie sich an Modelle von bekannten Verlegern (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Ollama-Bibliothek** (ollama.com/library): Ollama verifiziert Modell-Hashes vor dem Speichern. über `ollama pull` abgerufene Modelle sind sicher.',
+          '**Ollama-Bibliothek** ([ollama.com/library](https://ollama.com/library)): Ollama verifiziert Modell-Hashes vor dem Speichern. über `ollama pull` abgerufene Modelle sind sicher.',
           '**LM Studio-Modellbrowser**: durchsucht Hugging Face direkt. Die gleichen Vertrauensregeln gelten -- überprüfen Sie das Verleger-Konto.',
           '**Vermeiden Sie**: anonyme Datei-Freigabe-Seiten, Discord-Datei-Drops und jede Quelle, die keinen verifizierbaren Hash bereitstellt.',
         ],
@@ -1297,7 +1297,7 @@ schema: {
           },
           {
             q: 'Sendet Ollama meine Prompts irgendwohin?',
-            a: 'Nein. Ollama ist Open Source (github.com/ollama/ollama) und enthält keinen Telemetrie- oder Datenerfassungs-Code. Prompts werden lokal von llama.cpp verarbeitet und niemals übertragen. Die einzige ausgehende Netzwerkaktivität von Ollama sind Modell-Downloads von ollama.com, wenn Sie `ollama pull` ausführen.',
+            a: 'Nein. Ollama ist Open Source ([github.com/ollama/ollama](https://github.com/ollama/ollama)) und enthält keinen Telemetrie- oder Datenerfassungs-Code. Prompts werden lokal von llama.cpp verarbeitet und niemals übertragen. Die einzige ausgehende Netzwerkaktivität von Ollama sind Modell-Downloads von ollama.com, wenn Sie `ollama pull` ausführen.',
           },
           {
             q: 'Kann ich Ollama in einem Unternehmen mit BSI C5-Anforderungen einsetzen?',
@@ -1324,7 +1324,7 @@ schema: {
       sources: {
         title: 'Wo können Sie zusätzliche Quellen finden?',
         items: [
-          '**OWASP Top 10 für LLM-Anwendungen** (owasp.org/www-project-top-10-for-large-language-model-applications/) -- Sicherheitsrisiken für LLM-Bereitstellungen einschließlich Prompt-Injection und Supply-Chain-Angriffen',
+          '**OWASP Top 10 für LLM-Anwendungen** ([owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) -- Sicherheitsrisiken für LLM-Bereitstellungen einschließlich Prompt-Injection und Supply-Chain-Angriffen',
           '**Hugging Face Model Card Documentation** (huggingface.co/docs/hub/model-cards) -- Modellherkunftsstandards und SHA256-Hash-Verifizierung',
           '**VeraCrypt** (veracrypt.fr) -- Open-Source-Vollverschlüsselung und Ordnerverschlüsselung für Windows, macOS und Linux',
         ],
@@ -1496,7 +1496,7 @@ schema: {
         ],
         items: [
           '**Hugging Face** (huggingface.co) : source primaire. Hash SHA256 vérifié. Préférez éditeurs établis (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
-          '**Ollama library** (ollama.com/library) : Ollama vérifie hashes. Modèles via `ollama pull` sûrs.',
+          '**Ollama library** ([ollama.com/library](https://ollama.com/library)) : Ollama vérifie hashes. Modèles via `ollama pull` sûrs.',
           '**LM Studio browser** : recherche Hugging Face directement. Mêmes règles -- vérifiez compte éditeur.',
           '**Évitez** : partage anon, Discord drops, sources sans hash vérifiable.',
         ],
@@ -1543,7 +1543,7 @@ schema: {
           },
           {
             q: 'Ollama envoie-t-il mes invites quelque part ?',
-            a: 'Non. Ollama open source (github.com/ollama/ollama), pas de code télémétrie. Invites traités localement par llama.cpp. Seule activité sortante : téléchargements modèles ollama.com.',
+            a: 'Non. Ollama open source ([github.com/ollama/ollama](https://github.com/ollama/ollama)), pas de code télémétrie. Invites traités localement par llama.cpp. Seule activité sortante : téléchargements modèles ollama.com.',
           },
         ],
       },
@@ -2208,7 +2208,7 @@ schema: {
           ],
           items: [
             '**Hugging Face**(huggingface.co): 오픈 모델의 주요 출처입니다. 각 파일에는 검증된 SHA256 해시가 있습니다. 잘 알려진 게시자(Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba)의 모델만 사용하십시오.',
-            '**Ollama 라이브러리**(ollama.com/library): Ollama는 모델을 저장하기 전에 해시를 검증합니다. `ollama pull`로 가져온 모델은 안전합니다.',
+            '**Ollama 라이브러리**([ollama.com/library](https://ollama.com/library)): Ollama는 모델을 저장하기 전에 해시를 검증합니다. `ollama pull`로 가져온 모델은 안전합니다.',
             '**LM Studio 모델 브라우저**: Hugging Face를 직접 검색합니다. 동일한 신뢰 규칙이 적용됩니다. 게시자 계정을 확인하십시오.',
             '**피해야 할 것**: 익명 파일 공유 사이트, Discord 파일 전송, 검증 가능한 해시를 제공하지 않는 출처.',
           ],
@@ -2255,7 +2255,7 @@ schema: {
             },
             {
               q: 'Ollama가 내 프롬프트를 어딘가로 전송합니까?',
-              a: '아니요. Ollama는 오픈 소스(github.com/ollama/ollama)이며 텔레메트리나 데이터 수집 코드가 없습니다. 프롬프트는 llama.cpp에 의해 로컬에서 처리되며 절대 전송되지 않습니다. Ollama의 유일한 아웃바운드 네트워크 활동은 `ollama pull`을 실행할 때 ollama.com에서 모델을 다운로드하는 것입니다.',
+              a: '아니요. Ollama는 오픈 소스([github.com/ollama/ollama](https://github.com/ollama/ollama))이며 텔레메트리나 데이터 수집 코드가 없습니다. 프롬프트는 llama.cpp에 의해 로컬에서 처리되며 절대 전송되지 않습니다. Ollama의 유일한 아웃바운드 네트워크 활동은 `ollama pull`을 실행할 때 ollama.com에서 모델을 다운로드하는 것입니다.',
             },
             {
               q: '로컬 LLM을 사용하는 것이 OpenAI API를 사용하는 것보다 더 비공개입니까?',
@@ -2283,7 +2283,7 @@ schema: {
           id: 'sources',
           title: '추가 자료는 어디에서 찾을 수 있습니까?',
           items: [
-            '**OWASP LLM 애플리케이션 상위 10위**(owasp.org/www-project-top-10-for-large-language-model-applications/) -- 프롬프트 인젝션 및 공급망 공격을 포함한 LLM 배포의 보안 위험',
+            '**OWASP LLM 애플리케이션 상위 10위**([owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/)) -- 프롬프트 인젝션 및 공급망 공격을 포함한 LLM 배포의 보안 위험',
             '**Hugging Face 모델 카드 문서**(huggingface.co/docs/hub/model-cards) -- 모델 출처 표준 및 SHA256 해시 검증',
             '**VeraCrypt**(veracrypt.fr) -- Windows, macOS, Linux용 오픈 소스 전체 디스크 및 폴더 암호화',
           ],

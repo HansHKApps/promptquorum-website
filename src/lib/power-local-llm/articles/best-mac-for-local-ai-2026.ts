@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Apple sells every configuration directly; Amazon and other retailers stock common configurations, sometimes below Apple list price.** The links below are plain product-search links; they carry no affiliate tags and earn no commission.',
         items: [
-          '**Apple Store (apple.com):** the only source for every memory and storage configuration, including build-to-order. Required if you want a non-standard config, and the only place to order the new Mac Mini and Mac Studio configurations ahead of their September 22, 2026 ship date.',
+          '**Apple Store ([apple.com](https://apple.com)):** the only source for every memory and storage configuration, including build-to-order. Required if you want a non-standard config, and the only place to order the new Mac Mini and Mac Studio configurations ahead of their September 22, 2026 ship date.',
           '**Amazon:** stocks popular fixed configurations of the Mac Mini and MacBook Pro, sometimes discounted below Apple list. Selection of high-memory build-to-order configs is limited.',
           '**Apple refurbished:** previous-generation Macs (M4 Max Mac Studio, M4 Pro Mac Mini, earlier MacBook Pros) at a discount with full warranty — a sensible option for a 70B desktop before the new lineup ships.',
           '**B&H Photo and authorized resellers:** carry common configs and occasionally beat Apple pricing; useful for the MacBook Pro 16".',
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Apple vende cada configuración directamente; Amazon y otros minoristas tienen configuraciones comunes, a veces por debajo del precio de lista de Apple.** Los enlaces a continuación son simples enlaces de búsqueda de productos; no llevan etiquetas de afiliado y no generan comisión.',
         items: [
-          '**Apple Store (apple.com):** la única fuente para cada configuración de memoria y almacenamiento, incluidas las personalizadas. Necesaria si quieres una configuración no estándar.',
+          '**Apple Store ([apple.com](https://apple.com)):** la única fuente para cada configuración de memoria y almacenamiento, incluidas las personalizadas. Necesaria si quieres una configuración no estándar.',
           '**Amazon:** tiene configuraciones fijas populares del Mac Mini y MacBook Pro, a veces con descuento por debajo del precio de lista de Apple. La selección de configuraciones personalizadas con mucha memoria es limitada.',
           '**Apple reacondicionado:** Mac de generaciones anteriores (Mac Studio M4 Max, Mac Mini M4 Pro, MacBook Pro anteriores) a precio reducido con garantía completa — una opción sensata para un escritorio 70B antes de que llegue la nueva línea.',
           '**B&H Photo y distribuidores autorizados:** tienen configuraciones comunes y ocasionalmente superan el precio de Apple; útil para el MacBook Pro 16".',
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Apple verkauft jede Konfiguration direkt; Amazon und andere Händler führen gängige Konfigurationen, mitunter unter dem Apple-Listenpreis.** Die untenstehenden Links sind schlichte Produktsuch-Links; sie tragen keine Affiliate-Kennungen und bringen keine Provision ein.',
         items: [
-          '**Apple Store (apple.com):** die einzige Quelle für jede Speicher- und Festplattenkonfiguration, einschließlich Build-to-Order. Erforderlich, wenn Sie eine nicht standardmäßige Konfiguration wünschen.',
+          '**Apple Store ([apple.com](https://apple.com)):** die einzige Quelle für jede Speicher- und Festplattenkonfiguration, einschließlich Build-to-Order. Erforderlich, wenn Sie eine nicht standardmäßige Konfiguration wünschen.',
           '**Amazon:** führt beliebte feste Konfigurationen von Mac Mini und MacBook Pro, mitunter unter dem Apple-Listenpreis rabattiert. Die Auswahl an Build-to-Order-Konfigurationen mit viel Speicher ist begrenzt.',
           '**Apple Refurbished:** Macs der Vorgenerationen (Mac Studio M4 Max, Mac Mini M4 Pro, ältere MacBook Pros) mit Rabatt und voller Garantie — eine sinnvolle Option für einen 70B-Desktop, bevor die neue Reihe erscheint.',
           '**Fachhändler und autorisierte Wiederverkäufer:** führen gängige Konfigurationen und unterbieten gelegentlich den Apple-Preis; nützlich für das MacBook Pro 16".',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Apple vend chaque configuration en direct ; Amazon et d\'autres revendeurs stockent les configurations courantes, parfois sous le prix catalogue Apple.** Les liens ci-dessous sont de simples liens de recherche produit ; ils ne portent aucune balise d\'affiliation et ne génèrent aucune commission.',
         items: [
-          '**Apple Store (apple.com) :** la seule source pour chaque configuration de mémoire et de stockage, y compris la personnalisation à la commande. Indispensable si vous voulez une configuration non standard.',
+          '**Apple Store ([apple.com](https://apple.com)) :** la seule source pour chaque configuration de mémoire et de stockage, y compris la personnalisation à la commande. Indispensable si vous voulez une configuration non standard.',
           '**Amazon :** stocke les configurations fixes populaires du Mac mini et du MacBook Pro, parfois remisées sous le prix catalogue Apple. Le choix de configurations personnalisées à forte mémoire est limité.',
           '**Apple reconditionné :** des Mac de génération précédente (Mac Studio M4 Max, Mac mini M4 Pro, MacBook Pro plus anciens) avec remise et garantie complète — une option sensée pour un bureau 70B avant l\'arrivée de la nouvelle gamme.',
           '**Revendeurs agréés et spécialisés :** proposent les configurations courantes et battent parfois le tarif Apple ; utile pour le MacBook Pro 16".',
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A Apple vende cada configuração diretamente; a Amazon e outros varejistas têm configurações comuns, às vezes abaixo do preço de tabela da Apple.** Os links a seguir são simples links de busca de produtos; não levam etiquetas de afiliado e não geram comissão.',
         items: [
-          '**Apple Store (apple.com):** a única fonte para cada configuração de memória e armazenamento, incluídas as personalizadas. Necessária se você quer uma configuração não padrão.',
+          '**Apple Store ([apple.com](https://apple.com)):** a única fonte para cada configuração de memória e armazenamento, incluídas as personalizadas. Necessária se você quer uma configuração não padrão.',
           '**Amazon:** tem configurações fixas populares do Mac Mini e do MacBook Pro, às vezes com desconto abaixo do preço de tabela da Apple. A seleção de configurações personalizadas com muita memória é limitada.',
           '**Apple recondicionado:** Macs de gerações anteriores (Mac Studio M4 Max, Mac Mini M4 Pro, MacBook Pro anteriores) a preço reduzido com garantia completa — uma opção sensata para um desktop 70B antes da nova linha chegar.',
           '**B&H Photo e revendedores autorizados:** têm configurações comuns e ocasionalmente superam o preço da Apple; útil para o MacBook Pro 16".',
@@ -3988,7 +3988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تبيع Apple كل تهيئة مباشرةً؛ Amazon وبائعو التجزئة الآخرون لديهم تهيئات شائعة، أحياناً بأسعار أقل من Apple.** الروابط التالية روابط بحث بسيطة للمنتجات؛ لا تحمل علامات شركاء ولا تُدرّ عمولة.',
         items: [
-          '**Apple Store (apple.com):** المصدر الوحيد لكل تهيئة ذاكرة وتخزين، بما فيها المخصصة. ضروري إذا كنت تريد تهيئة غير قياسية.',
+          '**Apple Store ([apple.com](https://apple.com)):** المصدر الوحيد لكل تهيئة ذاكرة وتخزين، بما فيها المخصصة. ضروري إذا كنت تريد تهيئة غير قياسية.',
           '**Amazon:** لديه تهيئات Mac Mini وMacBook Pro الشائعة الثابتة، أحياناً بخصم عن سعر Apple. تحديد التهيئات المخصصة عالية الذاكرة محدود.',
           '**Apple المُجدَّد:** أجهزة Mac من أجيال سابقة (Mac Studio M4 Max، وMac Mini M4 Pro، وMacBook Pro سابق) بسعر مخفض مع ضمان كامل — خيار عملي لسطح مكتب 70B قبل وصول الخط الجديد.',
           '**B&H Photo والموزعون المعتمدون:** لديهم تهيئات شائعة وأحياناً يتفوقون على سعر Apple؛ مفيد لـMacBook Pro 16".',
@@ -4506,7 +4506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다.',
         items: [
-          '**Apple Store(apple.com):** 맞춤 구성을 포함한 모든 메모리 및 저장 공간 구성의 유일한 소스입니다. 비표준 구성을 원하는 경우 필수입니다.',
+          '**Apple Store([apple.com](https://apple.com)):** 맞춤 구성을 포함한 모든 메모리 및 저장 공간 구성의 유일한 소스입니다. 비표준 구성을 원하는 경우 필수입니다.',
           '**Amazon:** Mac Mini 및 MacBook Pro의 일반적인 고정 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다. 고용량 사용자 정의 구성의 선택은 제한적입니다.',
           '**Apple 리퍼비시:** 이전 세대 Mac(Mac Studio M4 Max, Mac Mini M4 Pro, 이전 MacBook Pro)을 전체 보증과 함께 할인된 가격으로 제공합니다. 새 라인업이 나오기 전 데스크톱 70B를 원하는 경우 합리적인 옵션입니다.',
           '**B&H Photo 및 공인 대리점:** 일반적인 구성을 보유하고 있으며 때로는 Apple 가격을 능가합니다. MacBook Pro 16"에 유용합니다.',

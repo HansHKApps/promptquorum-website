@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT (github.com/h2oai/h2ogpt) is a free, Apache 2.0-licensed tool for private, self-hosted document chat and RAG, with roughly 12,000 GitHub stars — but H2O.ai archived the repository (made it read-only) on February 26, 2026, so it no longer receives commits, issues, or pull requests. H2O.ai\'s actively developed successor for production use is h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) is a free, Apache 2.0-licensed tool for private, self-hosted document chat and RAG, with roughly 12,000 GitHub stars — but H2O.ai archived the repository (made it read-only) on February 26, 2026, so it no longer receives commits, issues, or pull requests. H2O.ai\'s actively developed successor for production use is h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       en: {
         question: 'Is h2oGPT still maintained in 2026?',
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT (github.com/h2oai/h2ogpt) ist ein kostenloses, Apache-2.0-lizenziertes Tool für privaten, selbst gehosteten Dokumenten-Chat und RAG mit rund 12.000 GitHub-Stars — aber H2O.ai hat das Repository am 26. Februar 2026 archiviert (nur lesbar gemacht), es erhält also keine Commits, Issues oder Pull Requests mehr. H2O.ais aktiv entwickelter Nachfolger für den Produktivbetrieb ist h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) ist ein kostenloses, Apache-2.0-lizenziertes Tool für privaten, selbst gehosteten Dokumenten-Chat und RAG mit rund 12.000 GitHub-Stars — aber H2O.ai hat das Repository am 26. Februar 2026 archiviert (nur lesbar gemacht), es erhält also keine Commits, Issues oder Pull Requests mehr. H2O.ais aktiv entwickelter Nachfolger für den Produktivbetrieb ist h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       de: {
         question: 'Wird h2oGPT 2026 noch gepflegt?',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT (github.com/h2oai/h2ogpt) est un outil gratuit sous licence Apache 2.0 pour le chat documentaire privé et auto-hébergé, avec environ 12 000 étoiles GitHub — mais H2O.ai a archivé le dépôt (mis en lecture seule) le 26 février 2026, il ne reçoit donc plus de commits, d\'issues ni de pull requests. Le successeur activement développé par H2O.ai pour la production est h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) est un outil gratuit sous licence Apache 2.0 pour le chat documentaire privé et auto-hébergé, avec environ 12 000 étoiles GitHub — mais H2O.ai a archivé le dépôt (mis en lecture seule) le 26 février 2026, il ne reçoit donc plus de commits, d\'issues ni de pull requests. Le successeur activement développé par H2O.ai pour la production est h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       fr: {
         question: 'h2oGPT est-il encore maintenu en 2026 ?',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT (github.com/h2oai/h2ogpt) es una herramienta gratuita bajo licencia Apache 2.0 para chat documental privado y autoalojado, con cerca de 12.000 estrellas en GitHub — pero H2O.ai archivó el repositorio (lo dejó en solo lectura) el 26 de febrero de 2026, por lo que ya no recibe commits, issues ni pull requests. El sucesor activamente desarrollado por H2O.ai para producción es h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) es una herramienta gratuita bajo licencia Apache 2.0 para chat documental privado y autoalojado, con cerca de 12.000 estrellas en GitHub — pero H2O.ai archivó el repositorio (lo dejó en solo lectura) el 26 de febrero de 2026, por lo que ya no recibe commits, issues ni pull requests. El sucesor activamente desarrollado por H2O.ai para producción es h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       es: {
         question: '¿Sigue manteniéndose h2oGPT en 2026?',
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'O h2oGPT (github.com/h2oai/h2ogpt) é uma ferramenta gratuita sob licença Apache 2.0 para chat documental privado e auto-hospedado, com cerca de 12.000 estrelas no GitHub — mas a H2O.ai arquivou o repositório (tornou-o somente leitura) em 26 de fevereiro de 2026, então ele não recebe mais commits, issues ou pull requests. O sucessor ativamente desenvolvido pela H2O.ai para produção é o h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'O h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) é uma ferramenta gratuita sob licença Apache 2.0 para chat documental privado e auto-hospedado, com cerca de 12.000 estrelas no GitHub — mas a H2O.ai arquivou o repositório (tornou-o somente leitura) em 26 de fevereiro de 2026, então ele não recebe mais commits, issues ou pull requests. O sucessor ativamente desenvolvido pela H2O.ai para produção é o h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       pt: {
         question: 'O h2oGPT ainda é mantido em 2026?',
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT مقابل open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT (github.com/h2oai/h2ogpt) أداة مجانية برخصة Apache 2.0 للدردشة الخاصة على المستندات ذاتية الاستضافة، بنحو 12,000 نجمة على GitHub — لكن H2O.ai أرشفت المستودع (جعلته للقراءة فقط) في 26 فبراير 2026، فلم يعد يتلقى commits أو issues أو pull requests. الخَلَف الذي تطوّره H2O.ai بنشاط للاستخدام الإنتاجي هو h2oGPTe (Enterprise h2oGPT).',
+    leadAnswerBlock: 'h2oGPT ([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)) أداة مجانية برخصة Apache 2.0 للدردشة الخاصة على المستندات ذاتية الاستضافة، بنحو 12,000 نجمة على GitHub — لكن H2O.ai أرشفت المستودع (جعلته للقراءة فقط) في 26 فبراير 2026، فلم يعد يتلقى commits أو issues أو pull requests. الخَلَف الذي تطوّره H2O.ai بنشاط للاستخدام الإنتاجي هو h2oGPTe (Enterprise h2oGPT).',
     quickAnswerTop: {
       ar: {
         question: 'هل لا يزال h2oGPT قيد الصيانة في 2026؟',
@@ -2060,7 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'h2oGPT vs open webui',
       'h2oGPTe enterprise',
     ],
-    leadAnswerBlock: 'h2oGPT(github.com/h2oai/h2ogpt)는 약 12,000개의 GitHub 스타를 보유한, 비공개 자체 호스팅 문서 채팅 및 RAG를 위한 무료 Apache 2.0 라이선스 도구입니다 — 하지만 H2O.ai는 2026년 2월 26일 저장소를 아카이브(읽기 전용화)하여 더 이상 커밋, 이슈, 풀 리퀘스트를 받지 않습니다. 프로덕션 용도로 H2O.ai가 적극적으로 개발 중인 후속 제품은 h2oGPTe(Enterprise h2oGPT)입니다.',
+    leadAnswerBlock: 'h2oGPT([github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt))는 약 12,000개의 GitHub 스타를 보유한, 비공개 자체 호스팅 문서 채팅 및 RAG를 위한 무료 Apache 2.0 라이선스 도구입니다 — 하지만 H2O.ai는 2026년 2월 26일 저장소를 아카이브(읽기 전용화)하여 더 이상 커밋, 이슈, 풀 리퀘스트를 받지 않습니다. 프로덕션 용도로 H2O.ai가 적극적으로 개발 중인 후속 제품은 h2oGPTe(Enterprise h2oGPT)입니다.',
     quickAnswerTop: {
       ko: {
         question: '2026년에도 h2oGPT는 여전히 유지 관리되나요?',

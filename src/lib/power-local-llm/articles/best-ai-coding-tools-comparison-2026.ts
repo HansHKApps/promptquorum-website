@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Four AI Coding Tools Compare in 2026',
         content:
-          'Local LLM support, IDE coverage, and open-source status are taken from each vendor\'s published documentation. Pricing is a July 2026 snapshot of the standard individual or per-user tier — vendors revise plans, so confirm the current figure and tier on the vendor pricing page before subscribing. Local LLM support ranges from native (Continue.dev) to custom-endpoint configuration (Cursor) to Ollama configuration (Cody) to none (GitHub Copilot).',
+          'Local LLM support, IDE coverage, and open-source status are taken from each vendor\'s published documentation. Pricing is a July 2026 snapshot of the standard individual or per-user tier — vendors revise plans, so confirm the current figure and tier on the vendor pricing page before subscribing. Local LLM support ranges from native ([Continue.dev](https://Continue.dev)) to custom-endpoint configuration (Cursor) to Ollama configuration (Cody) to none (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'So schneiden die vier KI-Coding-Tools 2026 ab',
         content:
-          'Unterstützung für lokale LLMs, IDE-Abdeckung und Open-Source-Status stammen aus der veröffentlichten Dokumentation des jeweiligen Anbieters. Die Preisangabe ist eine Momentaufnahme von Juli 2026 der Standard-Einzelnutzer- oder Pro-Nutzer-Stufe — Anbieter überarbeiten Tarife, bestätigen Sie also die aktuelle Zahl und Stufe auf der Anbieter-Preisseite, bevor Sie ein Abonnement abschließen. Die Unterstützung für lokale LLMs reicht von nativ (Continue.dev) über die Konfiguration eines benutzerdefinierten Endpunkts (Cursor) und die Ollama-Konfiguration (Cody) bis hin zu keiner (GitHub Copilot).',
+          'Unterstützung für lokale LLMs, IDE-Abdeckung und Open-Source-Status stammen aus der veröffentlichten Dokumentation des jeweiligen Anbieters. Die Preisangabe ist eine Momentaufnahme von Juli 2026 der Standard-Einzelnutzer- oder Pro-Nutzer-Stufe — Anbieter überarbeiten Tarife, bestätigen Sie also die aktuelle Zahl und Stufe auf der Anbieter-Preisseite, bevor Sie ein Abonnement abschließen. Die Unterstützung für lokale LLMs reicht von nativ ([Continue.dev](https://Continue.dev)) über die Konfiguration eines benutzerdefinierten Endpunkts (Cursor) und die Ollama-Konfiguration (Cody) bis hin zu keiner (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison des quatre outils de codage IA en 2026',
         content:
-          "La prise en charge des LLM locaux, la couverture des IDE et le statut open source proviennent de la documentation publiée par chaque éditeur. Les tarifs sont un instantané de juillet 2026 du palier standard individuel ou par utilisateur — les éditeurs révisent leurs plans, donc confirmez le chiffre et le palier courants sur la page de tarifs de l'éditeur avant de souscrire. La prise en charge des LLM locaux va de native (Continue.dev) à la configuration d'un point de terminaison personnalisé (Cursor), à la configuration d'Ollama (Cody), à aucune (GitHub Copilot).",
+          "La prise en charge des LLM locaux, la couverture des IDE et le statut open source proviennent de la documentation publiée par chaque éditeur. Les tarifs sont un instantané de juillet 2026 du palier standard individuel ou par utilisateur — les éditeurs révisent leurs plans, donc confirmez le chiffre et le palier courants sur la page de tarifs de l'éditeur avant de souscrire. La prise en charge des LLM locaux va de native ([Continue.dev](https://Continue.dev)) à la configuration d'un point de terminaison personnalisé (Cursor), à la configuration d'Ollama (Cody), à aucune (GitHub Copilot).",
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1525,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '4つのAIコーディングツールは2026年にどう比較されるか',
         content:
-          'ローカルLLMサポート、IDEカバレッジ、オープンソースのステータスは、各ベンダーの公開ドキュメントから取得しています。価格は標準的な個人またはユーザーごとのティアの2026年7月時点のスナップショットです — ベンダーはプランを改定するため、契約前にベンダーの価格ページで現在の数値とティアを確認してください。ローカルLLMサポートは、ネイティブ (Continue.dev)、カスタムエンドポイント設定 (Cursor)、Ollama設定 (Cody)、なし (GitHub Copilot) まで幅があります。',
+          'ローカルLLMサポート、IDEカバレッジ、オープンソースのステータスは、各ベンダーの公開ドキュメントから取得しています。価格は標準的な個人またはユーザーごとのティアの2026年7月時点のスナップショットです — ベンダーはプランを改定するため、契約前にベンダーの価格ページで現在の数値とティアを確認してください。ローカルLLMサポートは、ネイティブ ([Continue.dev](https://Continue.dev))、カスタムエンドポイント設定 (Cursor)、Ollama設定 (Cody)、なし (GitHub Copilot) まで幅があります。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2447,7 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las cuatro herramientas de programación con IA en 2026',
         content:
-          'El soporte para LLM local, la cobertura de IDE y el estado de código abierto se toman de la documentación publicada por cada proveedor. Los precios son una instantánea de julio de 2026 del plan estándar individual o por usuario — los proveedores revisan sus planes, así que confirma la cifra y el plan actuales en la página de precios del proveedor antes de suscribirte. El soporte para LLM local va desde nativo (Continue.dev) hasta configuración de endpoint personalizado (Cursor), configuración de Ollama (Cody) o ninguno (GitHub Copilot).',
+          'El soporte para LLM local, la cobertura de IDE y el estado de código abierto se toman de la documentación publicada por cada proveedor. Los precios son una instantánea de julio de 2026 del plan estándar individual o por usuario — los proveedores revisan sus planes, así que confirma la cifra y el plan actuales en la página de precios del proveedor antes de suscribirte. El soporte para LLM local va desde nativo ([Continue.dev](https://Continue.dev)) hasta configuración de endpoint personalizado (Cursor), configuración de Ollama (Cody) o ninguno (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as quatro ferramentas de programação com IA se comparam em 2026',
         content:
-          'O suporte para LLM local, a cobertura de IDE e o status de código aberto são extraídos da documentação publicada por cada fornecedor. Os preços são um retrato de julho de 2026 do plano padrão individual ou por usuário — os fornecedores revisam seus planos, então confirme o valor e o plano atuais na página de preços do fornecedor antes de assinar. O suporte para LLM local vai de nativo (Continue.dev) a configuração de endpoint personalizado (Cursor), configuração de Ollama (Cody) ou nenhum (GitHub Copilot).',
+          'O suporte para LLM local, a cobertura de IDE e o status de código aberto são extraídos da documentação publicada por cada fornecedor. Os preços são um retrato de julho de 2026 do plano padrão individual ou por usuário — os fornecedores revisam seus planos, então confirme o valor e o plano atuais na página de preços do fornecedor antes de assinar. O suporte para LLM local vai de nativo ([Continue.dev](https://Continue.dev)) a configuração de endpoint personalizado (Cursor), configuração de Ollama (Cody) ou nenhum (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3395,7 +3395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن أدوات البرمجة بالذكاء الاصطناعي الأربع في 2026',
         content:
-          'دعم النموذج المحلي وتغطية بيئة التطوير وحالة المصدر المفتوح مستخرجة من وثائق كل مورّد المنشورة. الأسعار هي صورة من يوليو 2026 للخطة الفردية أو للمستخدم المعيارية — الموردون يراجعون خططهم، لذا تحقق من القيمة والخطة الحاليتين على صفحة أسعار المورّد قبل الاشتراك. دعم النموذج المحلي يتراوح بين أصلي (Continue.dev) وإعداد نقطة نهاية مخصصة (Cursor) وإعداد Ollama (Cody) ولا شيء (GitHub Copilot).',
+          'دعم النموذج المحلي وتغطية بيئة التطوير وحالة المصدر المفتوح مستخرجة من وثائق كل مورّد المنشورة. الأسعار هي صورة من يوليو 2026 للخطة الفردية أو للمستخدم المعيارية — الموردون يراجعون خططهم، لذا تحقق من القيمة والخطة الحاليتين على صفحة أسعار المورّد قبل الاشتراك. دعم النموذج المحلي يتراوح بين أصلي ([Continue.dev](https://Continue.dev)) وإعداد نقطة نهاية مخصصة (Cursor) وإعداد Ollama (Cody) ولا شيء (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3869,7 +3869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 4가지 AI 코딩 도구 비교',
         content:
-          '로컬 LLM 지원, IDE 지원 범위, 오픈소스 여부는 각 공급업체가 게시한 문서에서 가져왔습니다. 가격은 개인 또는 사용자당 표준 요금제의 2026년 7월 스냅샷입니다 — 공급업체는 요금제를 개편하므로, 구독 전에 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오. 로컬 LLM 지원은 네이티브(Continue.dev)부터 맞춤형 엔드포인트 설정(Cursor), Ollama 설정(Cody), 미지원(GitHub Copilot)까지 다양합니다.',
+          '로컬 LLM 지원, IDE 지원 범위, 오픈소스 여부는 각 공급업체가 게시한 문서에서 가져왔습니다. 가격은 개인 또는 사용자당 표준 요금제의 2026년 7월 스냅샷입니다 — 공급업체는 요금제를 개편하므로, 구독 전에 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오. 로컬 LLM 지원은 네이티브([Continue.dev](https://Continue.dev))부터 맞춤형 엔드포인트 설정(Cursor), Ollama 설정(Cody), 미지원(GitHub Copilot)까지 다양합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',

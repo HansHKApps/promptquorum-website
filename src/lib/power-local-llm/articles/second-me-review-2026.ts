@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me Review 2026: Train Your Own Personal AI Locally',
     seoTitle: 'Second Me Review 2026: Local Personal AI on GitHub',
-    intro: 'Second Me (github.com/mindverse/Second-Me) is an open-source project, released under the Apache License 2.0, for training a personalized AI representation of yourself from your own data rather than talking to a generic chatbot. It runs locally through llama.cpp, uses Microsoft\'s GraphRAG to turn your data into something the model can draw on, and starts from base models in the Qwen2.5 series.',
+    intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) is an open-source project, released under the Apache License 2.0, for training a personalized AI representation of yourself from your own data rather than talking to a generic chatbot. It runs locally through llama.cpp, uses Microsoft\'s GraphRAG to turn your data into something the model can draw on, and starts from base models in the Qwen2.5 series.',
     metaDescription: 'Second Me is an open-source (Apache 2.0) project for training a personal AI from your own data, using GraphRAG and llama.cpp with Qwen2.5 base models. Here is what it actually does.',
     readTime: '9 min read',
     targetKeywords: [
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'What Is Second Me?',
-        content: 'Second Me (github.com/mindverse/Second-Me) is an open-source project for training a personalized AI representation of yourself, built from your own data rather than a shared, generic training set. The goal the project states is an AI that reflects your own context, preferences, and thinking patterns, instead of giving the same generic answers a stock chatbot would give any user.',
+        content: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) is an open-source project for training a personalized AI representation of yourself, built from your own data rather than a shared, generic training set. The goal the project states is an AI that reflects your own context, preferences, and thinking patterns, instead of giving the same generic answers a stock chatbot would give any user.',
         items: [
           'License: Apache License 2.0 (permissive open-source)',
           'Core concept: your "Second Me" is trained on data and memories you provide, so its outputs are shaped by your own information rather than a generic corpus',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me Review 2026: Trainieren Sie Ihre eigene KI lokal',
     seoTitle: 'Second Me Review 2026: Lokale persönliche KI auf GitHub',
-    intro: 'Second Me (github.com/mindverse/Second-Me) ist ein Open-Source-Projekt unter der Apache License 2.0, mit dem Sie eine personalisierte KI-Repräsentation Ihrer selbst aus Ihren eigenen Daten trainieren, statt mit einem generischen Chatbot zu sprechen. Es läuft lokal über llama.cpp, nutzt Microsofts GraphRAG, um Ihre Daten in eine für das Modell nutzbare Form zu bringen, und startet von Basismodellen der Qwen2.5-Serie.',
+    intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) ist ein Open-Source-Projekt unter der Apache License 2.0, mit dem Sie eine personalisierte KI-Repräsentation Ihrer selbst aus Ihren eigenen Daten trainieren, statt mit einem generischen Chatbot zu sprechen. Es läuft lokal über llama.cpp, nutzt Microsofts GraphRAG, um Ihre Daten in eine für das Modell nutzbare Form zu bringen, und startet von Basismodellen der Qwen2.5-Serie.',
     metaDescription: 'Second Me ist ein Open-Source-Projekt (Apache 2.0) zum Trainieren einer persönlichen KI aus Ihren eigenen Daten, mit GraphRAG und llama.cpp auf Qwen2.5-Basismodellen. Was es wirklich tut.',
     readTime: '9 min read',
     targetKeywords: [
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'Was ist Second Me?',
-        content: 'Second Me (github.com/mindverse/Second-Me) ist ein Open-Source-Projekt zum Trainieren einer personalisierten KI-Repräsentation Ihrer selbst, aufgebaut aus Ihren eigenen Daten statt aus einem gemeinsamen, generischen Trainingssatz. Das vom Projekt erklärte Ziel ist eine KI, die Ihren eigenen Kontext, Ihre Präferenzen und Denkmuster widerspiegelt, statt die generischen Antworten zu geben, die ein Standard-Chatbot jedem Nutzer gäbe.',
+        content: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) ist ein Open-Source-Projekt zum Trainieren einer personalisierten KI-Repräsentation Ihrer selbst, aufgebaut aus Ihren eigenen Daten statt aus einem gemeinsamen, generischen Trainingssatz. Das vom Projekt erklärte Ziel ist eine KI, die Ihren eigenen Kontext, Ihre Präferenzen und Denkmuster widerspiegelt, statt die generischen Antworten zu geben, die ein Standard-Chatbot jedem Nutzer gäbe.',
         items: [
           'Lizenz: Apache License 2.0 (freizügig quelloffen)',
           'Kernkonzept: Ihr "Second Me" wird auf von Ihnen bereitgestellten Daten und Erinnerungen trainiert, sodass seine Ausgaben von Ihren eigenen Informationen geprägt sind statt von einem generischen Korpus',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me Review 2026 : entraînez votre propre IA en local',
     seoTitle: 'Second Me Review 2026 : IA personnelle locale sur GitHub',
-    intro: 'Second Me (github.com/mindverse/Second-Me) est un projet open source sous licence Apache 2.0, permettant d\'entraîner une représentation IA personnalisée de vous-même à partir de vos propres données, plutôt que de parler à un chatbot générique. Il fonctionne en local via llama.cpp, utilise GraphRAG de Microsoft pour transformer vos données en une forme exploitable par le modèle, et part de modèles de base de la série Qwen2.5.',
+    intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) est un projet open source sous licence Apache 2.0, permettant d\'entraîner une représentation IA personnalisée de vous-même à partir de vos propres données, plutôt que de parler à un chatbot générique. Il fonctionne en local via llama.cpp, utilise GraphRAG de Microsoft pour transformer vos données en une forme exploitable par le modèle, et part de modèles de base de la série Qwen2.5.',
     metaDescription: 'Second Me est un projet open source (Apache 2.0) pour entraîner une IA personnelle à partir de vos données, avec GraphRAG et llama.cpp sur des modèles de base Qwen2.5. Ce qu\'il fait réellement.',
     readTime: '9 min read',
     targetKeywords: [
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'Qu\'est-ce que Second Me ?',
-        content: 'Second Me (github.com/mindverse/Second-Me) est un projet open source pour entraîner une représentation IA personnalisée de vous-même, construite à partir de vos propres données plutôt que d\'un ensemble d\'entraînement partagé et générique. L\'objectif déclaré par le projet est une IA qui reflète votre propre contexte, vos préférences et vos schémas de pensée, au lieu de donner les mêmes réponses génériques qu\'un chatbot standard donnerait à n\'importe quel utilisateur.',
+        content: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) est un projet open source pour entraîner une représentation IA personnalisée de vous-même, construite à partir de vos propres données plutôt que d\'un ensemble d\'entraînement partagé et générique. L\'objectif déclaré par le projet est une IA qui reflète votre propre contexte, vos préférences et vos schémas de pensée, au lieu de donner les mêmes réponses génériques qu\'un chatbot standard donnerait à n\'importe quel utilisateur.',
         items: [
           'Licence : Apache License 2.0 (open source permissif)',
           'Concept central : votre « Second Me » est entraîné sur des données et souvenirs que vous fournissez, si bien que ses sorties sont façonnées par vos propres informations plutôt que par un corpus générique',
@@ -1124,7 +1124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me Review 2026: entrena tu propia IA en local',
     seoTitle: 'Second Me Review 2026: IA personal local en GitHub',
-    intro: 'Second Me (github.com/mindverse/Second-Me) es un proyecto de código abierto bajo la Apache License 2.0 para entrenar una representación de IA personalizada de ti mismo a partir de tus propios datos, en lugar de hablar con un chatbot genérico. Funciona en local mediante llama.cpp, usa GraphRAG de Microsoft para convertir tus datos en algo que el modelo pueda aprovechar, y parte de modelos base de la serie Qwen2.5.',
+    intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) es un proyecto de código abierto bajo la Apache License 2.0 para entrenar una representación de IA personalizada de ti mismo a partir de tus propios datos, en lugar de hablar con un chatbot genérico. Funciona en local mediante llama.cpp, usa GraphRAG de Microsoft para convertir tus datos en algo que el modelo pueda aprovechar, y parte de modelos base de la serie Qwen2.5.',
     metaDescription: 'Second Me es un proyecto de código abierto (Apache 2.0) para entrenar una IA personal con tus propios datos, usando GraphRAG y llama.cpp sobre modelos base Qwen2.5. Esto es lo que realmente hace.',
     readTime: '9 min read',
     targetKeywords: [
@@ -1187,7 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: '¿Qué es Second Me?',
-        content: 'Second Me (github.com/mindverse/Second-Me) es un proyecto de código abierto para entrenar una representación de IA personalizada de ti mismo, construida a partir de tus propios datos en lugar de un conjunto de entrenamiento compartido y genérico. El objetivo declarado por el proyecto es una IA que refleje tu propio contexto, preferencias y patrones de pensamiento, en lugar de dar las mismas respuestas genéricas que un chatbot estándar daría a cualquier usuario.',
+        content: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) es un proyecto de código abierto para entrenar una representación de IA personalizada de ti mismo, construida a partir de tus propios datos en lugar de un conjunto de entrenamiento compartido y genérico. El objetivo declarado por el proyecto es una IA que refleje tu propio contexto, preferencias y patrones de pensamiento, en lugar de dar las mismas respuestas genéricas que un chatbot estándar daría a cualquier usuario.',
         items: [
           'Licencia: Apache License 2.0 (código abierto permisivo)',
           'Concepto central: tu "Second Me" se entrena con datos y recuerdos que tú proporcionas, de modo que sus salidas están moldeadas por tu propia información en lugar de un corpus genérico',
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me Review 2026: treine sua própria IA localmente',
     seoTitle: 'Second Me Review 2026: IA pessoal local no GitHub',
-    intro: 'O Second Me (github.com/mindverse/Second-Me) é um projeto open source sob a Apache License 2.0, para treinar uma representação de IA personalizada de você a partir dos seus próprios dados, em vez de conversar com um chatbot genérico. Ele roda localmente via llama.cpp, usa o GraphRAG da Microsoft para transformar seus dados em algo que o modelo pode aproveitar, e parte de modelos base da série Qwen2.5.',
+    intro: 'O Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) é um projeto open source sob a Apache License 2.0, para treinar uma representação de IA personalizada de você a partir dos seus próprios dados, em vez de conversar com um chatbot genérico. Ele roda localmente via llama.cpp, usa o GraphRAG da Microsoft para transformar seus dados em algo que o modelo pode aproveitar, e parte de modelos base da série Qwen2.5.',
     metaDescription: 'O Second Me é um projeto open source (Apache 2.0) para treinar uma IA pessoal a partir dos seus próprios dados, usando GraphRAG e llama.cpp em modelos base Qwen2.5. Veja o que ele realmente faz.',
     readTime: '9 min read',
     targetKeywords: [
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'O que é o Second Me?',
-        content: 'O Second Me (github.com/mindverse/Second-Me) é um projeto open source para treinar uma representação de IA personalizada de você mesmo, construída a partir dos seus próprios dados em vez de um conjunto de treinamento compartilhado e genérico. O objetivo declarado pelo projeto é uma IA que reflita seu próprio contexto, preferências e padrões de pensamento, em vez de dar as mesmas respostas genéricas que um chatbot padrão daria a qualquer usuário.',
+        content: 'O Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) é um projeto open source para treinar uma representação de IA personalizada de você mesmo, construída a partir dos seus próprios dados em vez de um conjunto de treinamento compartilhado e genérico. O objetivo declarado pelo projeto é uma IA que reflita seu próprio contexto, preferências e padrões de pensamento, em vez de dar as mesmas respostas genéricas que um chatbot padrão daria a qualquer usuário.',
         items: [
           'Licença: Apache License 2.0 (open source permissiva)',
           'Conceito central: seu "Second Me" é treinado com dados e memórias que você fornece, então suas saídas são moldadas pelas suas próprias informações, não por um corpus genérico',
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'مراجعة Second Me لعام 2026: درّب ذكاءك الاصطناعي الخاص محليًا',
     seoTitle: 'مراجعة Second Me 2026: ذكاء اصطناعي شخصي محلي على GitHub',
-    intro: 'Second Me (github.com/mindverse/Second-Me) هو مشروع مفتوح المصدر بموجب رخصة Apache 2.0، يتيح لك تدريب تمثيل ذكاء اصطناعي شخصي عنك من بياناتك الخاصة، بدلاً من التحدث إلى روبوت محادثة عام. يعمل محليًا عبر llama.cpp، ويستخدم GraphRAG من Microsoft لتحويل بياناتك إلى شكل يمكن للنموذج الاستفادة منه، وينطلق من نماذج أساس من سلسلة Qwen2.5.',
+    intro: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) هو مشروع مفتوح المصدر بموجب رخصة Apache 2.0، يتيح لك تدريب تمثيل ذكاء اصطناعي شخصي عنك من بياناتك الخاصة، بدلاً من التحدث إلى روبوت محادثة عام. يعمل محليًا عبر llama.cpp، ويستخدم GraphRAG من Microsoft لتحويل بياناتك إلى شكل يمكن للنموذج الاستفادة منه، وينطلق من نماذج أساس من سلسلة Qwen2.5.',
     metaDescription: 'Second Me هو مشروع مفتوح المصدر (Apache 2.0) لتدريب ذكاء اصطناعي شخصي من بياناتك الخاصة، باستخدام GraphRAG وllama.cpp على نماذج أساس Qwen2.5. إليك ما يفعله فعليًا.',
     readTime: '9 min read',
     targetKeywords: [
@@ -1631,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'ما هو Second Me؟',
-        content: 'Second Me (github.com/mindverse/Second-Me) هو مشروع مفتوح المصدر لتدريب تمثيل ذكاء اصطناعي شخصي عنك، مبني من بياناتك الخاصة بدلاً من مجموعة تدريب عامة مشتركة. الهدف الذي يعلنه المشروع هو ذكاء اصطناعي يعكس سياقك وتفضيلاتك وأنماط تفكيرك الخاصة، بدلاً من تقديم نفس الإجابات العامة التي يقدمها روبوت محادثة قياسي لأي مستخدم.',
+        content: 'Second Me ([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)) هو مشروع مفتوح المصدر لتدريب تمثيل ذكاء اصطناعي شخصي عنك، مبني من بياناتك الخاصة بدلاً من مجموعة تدريب عامة مشتركة. الهدف الذي يعلنه المشروع هو ذكاء اصطناعي يعكس سياقك وتفضيلاتك وأنماط تفكيرك الخاصة، بدلاً من تقديم نفس الإجابات العامة التي يقدمها روبوت محادثة قياسي لأي مستخدم.',
         items: [
           'الترخيص: Apache License 2.0 (مفتوح المصدر متساهل)',
           'المفهوم الأساسي: يُدرَّب "Second Me" الخاص بك على بيانات وذكريات تقدمها أنت، بحيث تتشكل مخرجاته من معلوماتك الخاصة بدلاً من مجموعة بيانات عامة',
@@ -1790,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Second Me',
     title: 'Second Me 리뷰 2026: 나만의 AI를 로컬에서 훈련하기',
     seoTitle: 'Second Me 리뷰 2026: GitHub의 로컬 개인 AI',
-    intro: 'Second Me(github.com/mindverse/Second-Me)는 Apache License 2.0 라이선스로 공개된 오픈소스 프로젝트로, 범용 챗봇과 대화하는 대신 자신의 데이터로 개인화된 AI 표현을 훈련할 수 있게 해줍니다. llama.cpp를 통해 로컬에서 실행되며, Microsoft의 GraphRAG를 사용해 데이터를 모델이 활용할 수 있는 형태로 변환하고, Qwen2.5 시리즈의 베이스 모델에서 시작합니다.',
+    intro: 'Second Me([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me))는 Apache License 2.0 라이선스로 공개된 오픈소스 프로젝트로, 범용 챗봇과 대화하는 대신 자신의 데이터로 개인화된 AI 표현을 훈련할 수 있게 해줍니다. llama.cpp를 통해 로컬에서 실행되며, Microsoft의 GraphRAG를 사용해 데이터를 모델이 활용할 수 있는 형태로 변환하고, Qwen2.5 시리즈의 베이스 모델에서 시작합니다.',
     metaDescription: 'Second Me는 GraphRAG와 llama.cpp를 사용해 Qwen2.5 베이스 모델 위에서 자신의 데이터로 개인 AI를 훈련하는 오픈소스(Apache 2.0) 프로젝트입니다. 실제로 무엇을 하는지 알아봅니다.',
     readTime: '9 min read',
     targetKeywords: [
@@ -1853,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-second-me',
         title: 'Second Me란 무엇인가?',
-        content: 'Second Me(github.com/mindverse/Second-Me)는 공유된 범용 훈련 세트가 아닌 자신의 데이터로 구축되는, 자신에 대한 개인화된 AI 표현을 훈련하기 위한 오픈소스 프로젝트입니다. 프로젝트가 밝힌 목표는 표준 챗봇이 모든 사용자에게 주는 동일한 범용 답변이 아니라, 사용자 본인의 맥락, 선호도, 사고 패턴을 반영하는 AI입니다.',
+        content: 'Second Me([github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me))는 공유된 범용 훈련 세트가 아닌 자신의 데이터로 구축되는, 자신에 대한 개인화된 AI 표현을 훈련하기 위한 오픈소스 프로젝트입니다. 프로젝트가 밝힌 목표는 표준 챗봇이 모든 사용자에게 주는 동일한 범용 답변이 아니라, 사용자 본인의 맥락, 선호도, 사고 패턴을 반영하는 AI입니다.',
         items: [
           '라이선스: Apache License 2.0(관대한 오픈소스)',
           '핵심 개념: 당신의 "Second Me"는 당신이 제공하는 데이터와 기억으로 훈련되므로, 그 출력은 범용 코퍼스가 아닌 당신 본인의 정보에 의해 형성됩니다',

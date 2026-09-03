@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Need absolute latest hardware: US clouds (RunPod, Vast.ai) get new GPUs 3–6 months before EU providers',
           'Processing non-personal data only: Anonymized, synthetic, or public data don\'t trigger GDPR — use cheaper US providers',
-          'Cost is absolute priority: US spot (Vast.ai) is 50–70% cheaper than EU alternatives for non-personal workloads',
+          'Cost is absolute priority: US spot ([Vast.ai](https://Vast.ai)) is 50–70% cheaper than EU alternatives for non-personal workloads',
           'Team is US-based with US data only: GDPR isn\'t your concern — optimize for cost and latency',
           'Need GPUs EU providers don\'t offer: AMD MI300X, certain Intel offerings have thin EU availability',
         ],
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Necesitas el hardware más reciente: Las clouds de EE.UU. (RunPod, Vast.ai) reciben nuevas GPUs 3–6 meses antes que los proveedores EU',
           'Solo procesas datos no personales: Los datos anonimizados, sintéticos o públicos no activan el RGPD — usa proveedores de EE.UU. más baratos',
-          'El costo es la prioridad absoluta: El spot de EE.UU. (Vast.ai) es 50–70% más barato que las alternativas EU para cargas no personales',
+          'El costo es la prioridad absoluta: El spot de EE.UU. ([Vast.ai](https://Vast.ai)) es 50–70% más barato que las alternativas EU para cargas no personales',
           'Tu equipo está en EE.UU. con datos solo de EE.UU.: El RGPD no te afecta — optimiza por costo y latencia',
           'Necesitas GPUs que los proveedores EU no ofrecen: AMD MI300X, ciertos modelos Intel tienen disponibilidad delgada en la UE',
         ],
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'تحتاج أحدث عتاد: تتلقى سحابات الولايات المتحدة (RunPod، Vast.ai) وحدات GPU جديدة قبل 3–6 أشهر من مزودي الاتحاد الأوروبي',
           'تعالج بيانات غير شخصية فقط: البيانات مجهولة الهوية أو الاصطناعية أو العامة لا تفعّل GDPR — استخدم مزودي الولايات المتحدة الأرخص',
-          'التكلفة هي الأولوية المطلقة: الأسعار الفورية في الولايات المتحدة (Vast.ai) أرخص بـ 50–70% من بدائل الاتحاد الأوروبي للأعباء غير الشخصية',
+          'التكلفة هي الأولوية المطلقة: الأسعار الفورية في الولايات المتحدة ([Vast.ai](https://Vast.ai)) أرخص بـ 50–70% من بدائل الاتحاد الأوروبي للأعباء غير الشخصية',
           'فريقك في الولايات المتحدة ببيانات أمريكية فقط: GDPR لا يؤثر عليك — حسّن للتكلفة وزمن الاستجابة',
           'تحتاج وحدات GPU لا يقدّمها مزودو الاتحاد الأوروبي: AMD MI300X وطرازات Intel معينة لها توافر ضعيف في الاتحاد الأوروبي',
         ],

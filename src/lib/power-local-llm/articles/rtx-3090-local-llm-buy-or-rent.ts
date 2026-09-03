@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '24 GB VRAM, 936 GB/s bandwidth, 350 W — unchanged since 2020, still the cheapest 24 GB card',
           'Used price $850–$1,050; up from $600–$800 in spring 2026 because of the memory shortage',
-          'Cloud rental $0.12/hr (Vast.ai) to $0.22/hr (RunPod Community); median $0.15/hr across 8 providers',
+          'Cloud rental $0.12/hr ([Vast.ai](https://Vast.ai)) to $0.22/hr (RunPod Community); median $0.15/hr across 8 providers',
           'Break-even against a $0.15/hr rental at 2 hours a day is roughly 17 years — at 8 hours a day it is about 4',
           'Buy for privacy, latency, always-on agents and constant fine-tuning; rent for bursts and experiments',
         ],
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Memory bandwidth: 936 GB/s, which is what actually sets token generation speed on a memory-bound workload.',
           'Power: 350 W card TDP; budget roughly 450 W at the wall for the whole system under inference load.',
           'Used price: $850–$1,050 typical, with eBay averages near $1,000 — up from $600–$800 in spring 2026.',
-          'Cloud rental: $0.12/hour (Vast.ai) to $0.50/hour (RunPod Secure); median $0.15/hour across eight providers.',
+          'Cloud rental: $0.12/hour ([Vast.ai](https://Vast.ai)) to $0.50/hour (RunPod Secure); median $0.15/hour across eight providers.',
           'Electricity: at the 2026 US residential average of $0.18/kWh, running it costs about $0.08/hour.',
         ],
       },

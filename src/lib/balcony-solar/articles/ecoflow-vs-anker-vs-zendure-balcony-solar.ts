@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Balcony solar buyers comparing EcoFlow, Anker, and Zendure ecosystems',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**Anker SOLIX Solarbank models are not sold or certified for the US market — confirmed directly against Anker\'s own US storefront (ankersolix.com), which lists 17 portable power-station products but no Solarbank, plus the absence of any UL 1741 grid-interactive inverter certification, which is legally required for grid-connected sale in the US.** Between the two brands that are US-viable, EcoFlow\'s STREAM Ultra leads on raw specs but requires its cloud app with no verified local-API path, while Zendure\'s SolarFlow line has the most mature local-control ecosystem of any balcony battery brand, via community zenSDK REST API integrations that need no cloud account at all.',
+    leadAnswerBlock: '**Anker SOLIX Solarbank models are not sold or certified for the US market — confirmed directly against Anker\'s own US storefront ([ankersolix.com](https://ankersolix.com)), which lists 17 portable power-station products but no Solarbank, plus the absence of any UL 1741 grid-interactive inverter certification, which is legally required for grid-connected sale in the US.** Between the two brands that are US-viable, EcoFlow\'s STREAM Ultra leads on raw specs but requires its cloud app with no verified local-API path, while Zendure\'s SolarFlow line has the most mature local-control ecosystem of any balcony battery brand, via community zenSDK REST API integrations that need no cloud account at all.',
     quickAnswerTop: {
       en: {
         question: 'Which balcony solar ecosystem should I choose: EcoFlow, Anker, or Zendure?',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'Price & Warranty by Region',
         content: [
-          '**EcoFlow\'s STREAM Ultra is priced at $1,279 (list $1,899) with a 10-year warranty on its LFP cells, rated for 6,000 cycles at 70% capacity retention — pulled directly from EcoFlow\'s own US product page (us.ecoflow.com/products/stream-ultra) at write-time, 2026-07-02.** Zendure\'s SolarFlow line was not independently priced in this research pass; check current pricing directly given how quickly this product category moves. Anker\'s pricing is not applicable here given its confirmed absence from the US market.',
+          '**EcoFlow\'s STREAM Ultra is priced at $1,279 (list $1,899) with a 10-year warranty on its LFP cells, rated for 6,000 cycles at 70% capacity retention — pulled directly from EcoFlow\'s own US product page ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) at write-time, 2026-07-02.** Zendure\'s SolarFlow line was not independently priced in this research pass; check current pricing directly given how quickly this product category moves. Anker\'s pricing is not applicable here given its confirmed absence from the US market.',
         ],
       },
       verdict: {
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energía solar de balcón comparando los ecosistemas de EcoFlow, Anker y Zendure',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado de EE. UU. — confirmado directamente contra la propia tienda estadounidense de Anker (ankersolix.com), que lista 17 productos de estaciones de energía portátiles pero ningún Solarbank, además de la ausencia de cualquier certificación de inversor interactivo con la red UL 1741, requerida legalmente para la venta conectada a la red en EE. UU.** Entre las dos marcas viables en EE. UU., el STREAM Ultra de EcoFlow lidera en especificaciones brutas pero requiere su aplicación en la nube sin ninguna vía de API local verificada, mientras que la línea SolarFlow de Zendure tiene el ecosistema de control local más maduro de cualquier marca de baterías de balcón, mediante integraciones de la API REST zenSDK de la comunidad que no requieren ninguna cuenta en la nube.',
+    leadAnswerBlock: '**Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado de EE. UU. — confirmado directamente contra la propia tienda estadounidense de Anker ([ankersolix.com](https://ankersolix.com)), que lista 17 productos de estaciones de energía portátiles pero ningún Solarbank, además de la ausencia de cualquier certificación de inversor interactivo con la red UL 1741, requerida legalmente para la venta conectada a la red en EE. UU.** Entre las dos marcas viables en EE. UU., el STREAM Ultra de EcoFlow lidera en especificaciones brutas pero requiere su aplicación en la nube sin ninguna vía de API local verificada, mientras que la línea SolarFlow de Zendure tiene el ecosistema de control local más maduro de cualquier marca de baterías de balcón, mediante integraciones de la API REST zenSDK de la comunidad que no requieren ninguna cuenta en la nube.',
     quickAnswerTop: {
       es: {
         question: '¿Qué ecosistema de energía solar de balcón debo elegir: EcoFlow, Anker o Zendure?',
@@ -233,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'Precio y garantía por región',
         content: [
-          '**El STREAM Ultra de EcoFlow tiene un precio de $1,279 (lista $1,899) con una garantía de 10 años en sus celdas LFP, calificado para 6,000 ciclos con retención del 70% de la capacidad — extraído directamente de la propia página de producto de EE. UU. de EcoFlow (us.ecoflow.com/products/stream-ultra) al momento de la redacción, 2026-07-02.** La línea SolarFlow de Zendure no fue evaluada de forma independiente en precio en esta investigación; verifica el precio actual directamente dado lo rápido que se mueve esta categoría de producto. El precio de Anker no aplica aquí dada su ausencia confirmada del mercado de EE. UU.',
+          '**El STREAM Ultra de EcoFlow tiene un precio de $1,279 (lista $1,899) con una garantía de 10 años en sus celdas LFP, calificado para 6,000 ciclos con retención del 70% de la capacidad — extraído directamente de la propia página de producto de EE. UU. de EcoFlow ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) al momento de la redacción, 2026-07-02.** La línea SolarFlow de Zendure no fue evaluada de forma independiente en precio en esta investigación; verifica el precio actual directamente dado lo rápido que se mueve esta categoría de producto. El precio de Anker no aplica aquí dada su ausencia confirmada del mercado de EE. UU.',
         ],
       },
       verdict: {
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energia solar de varanda comparando os ecossistemas EcoFlow, Anker e Zendure',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA — confirmado diretamente na própria loja americana da Anker (ankersolix.com), que lista 17 produtos de estações de energia portáteis, mas nenhum Solarbank, além da ausência de qualquer certificação de inversor interativo com a rede UL 1741, legalmente exigida para venda conectada à rede nos EUA.** Entre as duas marcas viáveis nos EUA, o STREAM Ultra da EcoFlow lidera em especificações brutas, mas requer seu aplicativo na nuvem sem nenhum caminho de API local verificado, enquanto a linha SolarFlow da Zendure tem o ecossistema de controle local mais maduro de qualquer marca de baterias de varanda, por meio de integrações da API REST zenSDK da comunidade que não exigem nenhuma conta na nuvem.',
+    leadAnswerBlock: '**Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA — confirmado diretamente na própria loja americana da Anker ([ankersolix.com](https://ankersolix.com)), que lista 17 produtos de estações de energia portáteis, mas nenhum Solarbank, além da ausência de qualquer certificação de inversor interativo com a rede UL 1741, legalmente exigida para venda conectada à rede nos EUA.** Entre as duas marcas viáveis nos EUA, o STREAM Ultra da EcoFlow lidera em especificações brutas, mas requer seu aplicativo na nuvem sem nenhum caminho de API local verificado, enquanto a linha SolarFlow da Zendure tem o ecossistema de controle local mais maduro de qualquer marca de baterias de varanda, por meio de integrações da API REST zenSDK da comunidade que não exigem nenhuma conta na nuvem.',
     quickAnswerTop: {
       pt: {
         question: 'Qual ecossistema de energia solar de varanda devo escolher: EcoFlow, Anker ou Zendure?',
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'Preço e garantia por região',
         content: [
-          '**O STREAM Ultra da EcoFlow custa $1,279 (preço de tabela $1,899) com garantia de 10 anos nas células LFP, avaliado para 6.000 ciclos com retenção de 70% da capacidade — extraído diretamente da própria página de produto americana da EcoFlow (us.ecoflow.com/products/stream-ultra) no momento da redação, 2026-07-02.** A linha SolarFlow da Zendure não foi precificada de forma independente nesta pesquisa; verifique o preço atual diretamente dado quão rápido essa categoria de produto se move. O preço da Anker não se aplica aqui dada sua ausência confirmada do mercado dos EUA.',
+          '**O STREAM Ultra da EcoFlow custa $1,279 (preço de tabela $1,899) com garantia de 10 anos nas células LFP, avaliado para 6.000 ciclos com retenção de 70% da capacidade — extraído diretamente da própria página de produto americana da EcoFlow ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) no momento da redação, 2026-07-02.** A linha SolarFlow da Zendure não foi precificada de forma independente nesta pesquisa; verifique o preço atual diretamente dado quão rápido essa categoria de produto se move. O preço da Anker não se aplica aqui dada sua ausência confirmada do mercado dos EUA.',
         ],
       },
       verdict: {
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'مشترو الطاقة الشمسية للشرفة الذين يقارنون بين أنظمة EcoFlow وAnker وZendure',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**طرازات Anker SOLIX Solarbank غير مباعة أو معتمدة للسوق الأمريكية — تم التأكيد مباشرة من متجر Anker الأمريكي الخاص (ankersolix.com)، الذي يعرض 17 منتجًا من محطات الطاقة المحمولة لكن لا يعرض أي Solarbank، بالإضافة إلى غياب أي شهادة عاكس تفاعلي مع الشبكة UL 1741، المطلوبة قانونيًا للبيع المتصل بالشبكة في الولايات المتحدة.** من بين العلامتين التجاريتين القابلتين للتطبيق في الولايات المتحدة، يتصدر STREAM Ultra من EcoFlow من حيث المواصفات الخام لكنه يتطلب تطبيقه السحابي دون أي مسار API محلي موثّق، بينما تمتلك سلسلة SolarFlow من Zendure أنضج نظام تحكم محلي بين جميع علامات بطاريات الشرفة، عبر تكاملات API REST الخاصة بـ zenSDK من المجتمع التي لا تتطلب أي حساب سحابي على الإطلاق.',
+    leadAnswerBlock: '**طرازات Anker SOLIX Solarbank غير مباعة أو معتمدة للسوق الأمريكية — تم التأكيد مباشرة من متجر Anker الأمريكي الخاص ([ankersolix.com](https://ankersolix.com))، الذي يعرض 17 منتجًا من محطات الطاقة المحمولة لكن لا يعرض أي Solarbank، بالإضافة إلى غياب أي شهادة عاكس تفاعلي مع الشبكة UL 1741، المطلوبة قانونيًا للبيع المتصل بالشبكة في الولايات المتحدة.** من بين العلامتين التجاريتين القابلتين للتطبيق في الولايات المتحدة، يتصدر STREAM Ultra من EcoFlow من حيث المواصفات الخام لكنه يتطلب تطبيقه السحابي دون أي مسار API محلي موثّق، بينما تمتلك سلسلة SolarFlow من Zendure أنضج نظام تحكم محلي بين جميع علامات بطاريات الشرفة، عبر تكاملات API REST الخاصة بـ zenSDK من المجتمع التي لا تتطلب أي حساب سحابي على الإطلاق.',
     quickAnswerTop: {
       ar: {
         question: 'أي نظام طاقة شمسية للشرفة يجب أن أختار: EcoFlow أم Anker أم Zendure؟',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'السعر والضمان حسب المنطقة',
         content: [
-          '**يُسعَّر STREAM Ultra من EcoFlow بـ 1,279 دولارًا (السعر المُعلن 1,899 دولارًا) مع ضمان 10 سنوات على خلايا LFP الخاصة به، مصنَّف لـ 6,000 دورة مع الاحتفاظ بـ 70% من السعة — مأخوذ مباشرة من صفحة المنتج الأمريكية الخاصة بـ EcoFlow (us.ecoflow.com/products/stream-ultra) وقت الكتابة، 2026-07-02.** لم تُسعَّر سلسلة SolarFlow من Zendure بشكل مستقل في هذا البحث؛ تحقق من السعر الحالي مباشرة نظرًا لمدى سرعة تحرك هذه الفئة من المنتجات. سعر Anker لا ينطبق هنا نظرًا لغيابها المؤكد عن السوق الأمريكية.',
+          '**يُسعَّر STREAM Ultra من EcoFlow بـ 1,279 دولارًا (السعر المُعلن 1,899 دولارًا) مع ضمان 10 سنوات على خلايا LFP الخاصة به، مصنَّف لـ 6,000 دورة مع الاحتفاظ بـ 70% من السعة — مأخوذ مباشرة من صفحة المنتج الأمريكية الخاصة بـ EcoFlow ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) وقت الكتابة، 2026-07-02.** لم تُسعَّر سلسلة SolarFlow من Zendure بشكل مستقل في هذا البحث؛ تحقق من السعر الحالي مباشرة نظرًا لمدى سرعة تحرك هذه الفئة من المنتجات. سعر Anker لا ينطبق هنا نظرًا لغيابها المؤكد عن السوق الأمريكية.',
         ],
       },
       verdict: {
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Acheteurs de solaire de balcon comparant les écosystèmes EcoFlow, Anker et Zendure',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain — confirmé directement sur la boutique américaine d\'Anker (ankersolix.com), qui répertorie 17 produits de stations d\'alimentation portables mais aucun Solarbank, en plus de l\'absence de toute certification d\'onduleur interactif avec le réseau UL 1741, légalement requise pour une vente raccordée au réseau aux États-Unis.** Entre les deux marques viables aux États-Unis, le STREAM Ultra d\'EcoFlow domine sur les caractéristiques brutes mais nécessite son application cloud sans aucune voie d\'API locale vérifiée, tandis que la gamme SolarFlow de Zendure possède l\'écosystème de contrôle local le plus mature de toutes les marques de batteries de balcon, via des intégrations API REST zenSDK communautaires ne nécessitant aucun compte cloud.',
+    leadAnswerBlock: '**Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain — confirmé directement sur la boutique américaine d\'Anker ([ankersolix.com](https://ankersolix.com)), qui répertorie 17 produits de stations d\'alimentation portables mais aucun Solarbank, en plus de l\'absence de toute certification d\'onduleur interactif avec le réseau UL 1741, légalement requise pour une vente raccordée au réseau aux États-Unis.** Entre les deux marques viables aux États-Unis, le STREAM Ultra d\'EcoFlow domine sur les caractéristiques brutes mais nécessite son application cloud sans aucune voie d\'API locale vérifiée, tandis que la gamme SolarFlow de Zendure possède l\'écosystème de contrôle local le plus mature de toutes les marques de batteries de balcon, via des intégrations API REST zenSDK communautaires ne nécessitant aucun compte cloud.',
     quickAnswerTop: {
       fr: {
         question: 'Quel écosystème solaire de balcon choisir : EcoFlow, Anker ou Zendure ?',
@@ -948,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'Prix et garantie par région',
         content: [
-          '**Le STREAM Ultra d\'EcoFlow est proposé à 1 279 $ (prix catalogue 1 899 $) avec une garantie de 10 ans sur ses cellules LFP, homologué pour 6 000 cycles à 70 % de rétention de capacité — information extraite directement de la page produit officielle américaine d\'EcoFlow (us.ecoflow.com/products/stream-ultra) au moment de la rédaction, le 2 juillet 2026.** La gamme SolarFlow de Zendure n\'a pas été chiffrée indépendamment dans cette recherche ; vérifiez le prix actuel directement compte tenu de la rapidité d\'évolution de cette catégorie de produits. Le prix d\'Anker n\'est pas applicable ici étant donné son absence confirmée du marché américain.',
+          '**Le STREAM Ultra d\'EcoFlow est proposé à 1 279 $ (prix catalogue 1 899 $) avec une garantie de 10 ans sur ses cellules LFP, homologué pour 6 000 cycles à 70 % de rétention de capacité — information extraite directement de la page produit officielle américaine d\'EcoFlow ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) au moment de la rédaction, le 2 juillet 2026.** La gamme SolarFlow de Zendure n\'a pas été chiffrée indépendamment dans cette recherche ; vérifiez le prix actuel directement compte tenu de la rapidité d\'évolution de cette catégorie de produits. Le prix d\'Anker n\'est pas applicable ici étant donné son absence confirmée du marché américain.',
         ],
       },
       verdict: {
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Käufer von Balkonkraftwerken, die die Ökosysteme von EcoFlow, Anker und Zendure vergleichen',
     primaryTerm: 'EcoFlow Anker Zendure Balkonkraftwerk Vergleich',
     targetKeywords: ['EcoFlow Anker Zendure Vergleich', 'Zendure SolarFlow Home Assistant', 'Anker SOLIX Balkonkraftwerk', 'EcoFlow STREAM Ultra vs Zendure'],
-    leadAnswerBlock: '**Die Anker SOLIX Solarbank-Modelle werden in den USA weder verkauft noch zertifiziert — direkt am US-Storefront von Anker (ankersolix.com) bestätigt, der 17 portable Powerstation-Produkte listet, aber kein Solarbank, zuzüglich der fehlenden UL-1741-Zertifizierung für netzgekoppelte Wechselrichter, die für den Netzverkauf in den USA gesetzlich vorgeschrieben ist.** Unter den beiden US-tauglichen Marken führt EcoFlows STREAM Ultra bei den Rohdaten, erfordert jedoch die Cloud-App ohne verifizierten lokalen API-Pfad; Zendures SolarFlow-Reihe hat hingegen das ausgereifteste lokale Steuerungsökosystem aller Balkonbatterie-Marken — dank Community-entwickelter zenSDK-REST-API-Integrationen, die ohne Cloud-Konto auskommen.',
+    leadAnswerBlock: '**Die Anker SOLIX Solarbank-Modelle werden in den USA weder verkauft noch zertifiziert — direkt am US-Storefront von Anker ([ankersolix.com](https://ankersolix.com)) bestätigt, der 17 portable Powerstation-Produkte listet, aber kein Solarbank, zuzüglich der fehlenden UL-1741-Zertifizierung für netzgekoppelte Wechselrichter, die für den Netzverkauf in den USA gesetzlich vorgeschrieben ist.** Unter den beiden US-tauglichen Marken führt EcoFlows STREAM Ultra bei den Rohdaten, erfordert jedoch die Cloud-App ohne verifizierten lokalen API-Pfad; Zendures SolarFlow-Reihe hat hingegen das ausgereifteste lokale Steuerungsökosystem aller Balkonbatterie-Marken — dank Community-entwickelter zenSDK-REST-API-Integrationen, die ohne Cloud-Konto auskommen.',
     quickAnswerTop: {
       de: {
         question: 'Welches Balkonkraftwerk-Ökosystem soll ich wählen: EcoFlow, Anker oder Zendure?',
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: 'Preis und Garantie nach Region',
         content: [
-          '**EcoFlows STREAM Ultra ist zum Preis von 1.279 USD (Listenpreis 1.899 USD) erhältlich, mit 10 Jahren Garantie auf die LFP-Zellen und einer Auslegung für 6.000 Zyklen bei 70 % Kapazitätserhalt — direkt von EcoFlows eigenem US-Produktseite (us.ecoflow.com/products/stream-ultra) zum Schreibzeitpunkt, 2026-07-02, entnommen. Für den deutschen Markt sind alle drei Marken — EcoFlow, Anker SOLIX Solarbank und Zendure SolarFlow — in Deutschland erhältlich; Preise in EUR inkl. MwSt. variieren und sollten direkt beim Händler geprüft werden.** Zendures SolarFlow-Reihe wurde in dieser Recherche nicht eigenständig bepreist; prüfen Sie die aktuellen Preise direkt angesichts der Schnelllebigkeit dieser Produktkategorie. Ankers US-Preis ist hier nicht zutreffend, da die Marke dort nicht verkauft wird.',
+          '**EcoFlows STREAM Ultra ist zum Preis von 1.279 USD (Listenpreis 1.899 USD) erhältlich, mit 10 Jahren Garantie auf die LFP-Zellen und einer Auslegung für 6.000 Zyklen bei 70 % Kapazitätserhalt — direkt von EcoFlows eigenem US-Produktseite ([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra)) zum Schreibzeitpunkt, 2026-07-02, entnommen. Für den deutschen Markt sind alle drei Marken — EcoFlow, Anker SOLIX Solarbank und Zendure SolarFlow — in Deutschland erhältlich; Preise in EUR inkl. MwSt. variieren und sollten direkt beim Händler geprüft werden.** Zendures SolarFlow-Reihe wurde in dieser Recherche nicht eigenständig bepreist; prüfen Sie die aktuellen Preise direkt angesichts der Schnelllebigkeit dieser Produktkategorie. Ankers US-Preis ist hier nicht zutreffend, da die Marke dort nicht verkauft wird.',
         ],
       },
       verdict: {
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'EcoFlow, Anker, Zendure 생태계를 비교 중인 발코니 태양광 구매자',
     primaryTerm: 'ecoflow vs anker vs zendure',
     targetKeywords: ['ecoflow vs anker vs zendure', 'zendure solarflow home assistant', 'anker solix balcony solar us', 'ecoflow stream ultra vs zendure'],
-    leadAnswerBlock: '**Anker SOLIX Solarbank 시리즈는 미국 시장에서 판매되거나 인증받지 않았습니다 — Anker의 미국 공식 스토어(ankersolix.com)를 직접 확인한 결과, 17종의 휴대용 전원 제품은 등재되어 있으나 Solarbank는 존재하지 않으며, 미국 내 계통연계 판매에 법적으로 필수인 UL 1741 계통연계형 인버터 인증도 취득하지 않은 것으로 확인되었습니다.** 미국에서 선택 가능한 두 브랜드 중, EcoFlow의 STREAM Ultra는 사양 면에서 앞서 있지만 클라우드 앱이 필수이며 검증된 로컬 API 경로는 확인되지 않았습니다. 반면 Zendure의 SolarFlow 시리즈는 커뮤니티 주도의 zenSDK REST API 연동을 통해 클라우드 계정 없이도 완전한 로컬 제어가 가능한, 발코니 배터리 브랜드 중 가장 성숙한 로컬 제어 생태계를 갖추고 있습니다.',
+    leadAnswerBlock: '**Anker SOLIX Solarbank 시리즈는 미국 시장에서 판매되거나 인증받지 않았습니다 — Anker의 미국 공식 스토어([ankersolix.com](https://ankersolix.com))를 직접 확인한 결과, 17종의 휴대용 전원 제품은 등재되어 있으나 Solarbank는 존재하지 않으며, 미국 내 계통연계 판매에 법적으로 필수인 UL 1741 계통연계형 인버터 인증도 취득하지 않은 것으로 확인되었습니다.** 미국에서 선택 가능한 두 브랜드 중, EcoFlow의 STREAM Ultra는 사양 면에서 앞서 있지만 클라우드 앱이 필수이며 검증된 로컬 API 경로는 확인되지 않았습니다. 반면 Zendure의 SolarFlow 시리즈는 커뮤니티 주도의 zenSDK REST API 연동을 통해 클라우드 계정 없이도 완전한 로컬 제어가 가능한, 발코니 배터리 브랜드 중 가장 성숙한 로컬 제어 생태계를 갖추고 있습니다.',
     quickAnswerTop: {
       ko: {
         question: '발코니 태양광은 EcoFlow, Anker, Zendure 중 어느 것을 선택해야 하나요?',
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'price-warranty',
         title: '지역별 가격 및 보증',
         content: [
-          '**EcoFlow의 STREAM Ultra는 1,279달러(정가 1,899달러)이며, LFP 셀에 10년 보증이 제공되고, 70% 용량 유지 기준 6,000회 사이클로 정격되어 있습니다 — 이는 집필 시점인 2026년 7월 2일 EcoFlow 미국 공식 제품 페이지(us.ecoflow.com/products/stream-ultra)에서 직접 확인한 정보입니다.** Zendure의 SolarFlow 시리즈는 이번 조사에서 독립적으로 가격을 확인하지 않았습니다. 이 제품 카테고리는 변동이 빠르므로 현재 가격을 반드시 직접 확인하십시오. Anker의 가격은 미국 시장 부재가 확인되었으므로 해당 사항이 없습니다.',
+          '**EcoFlow의 STREAM Ultra는 1,279달러(정가 1,899달러)이며, LFP 셀에 10년 보증이 제공되고, 70% 용량 유지 기준 6,000회 사이클로 정격되어 있습니다 — 이는 집필 시점인 2026년 7월 2일 EcoFlow 미국 공식 제품 페이지([us.ecoflow.com/products/stream-ultra](https://us.ecoflow.com/products/stream-ultra))에서 직접 확인한 정보입니다.** Zendure의 SolarFlow 시리즈는 이번 조사에서 독립적으로 가격을 확인하지 않았습니다. 이 제품 카테고리는 변동이 빠르므로 현재 가격을 반드시 직접 확인하십시오. Anker의 가격은 미국 시장 부재가 확인되었으므로 해당 사항이 없습니다.',
         ],
       },
       verdict: {

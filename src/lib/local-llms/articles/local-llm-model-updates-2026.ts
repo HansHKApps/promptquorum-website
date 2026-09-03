@@ -129,10 +129,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         stayUpdated: {
           title: 'How Do You Stay Updated on New Local LLM Releases?',
           items: [
-            '**Ollama blog** (ollama.com/blog) -- announces new models added to the Ollama library, typically within days of open-weight releases.',
+            '**Ollama blog** ([ollama.com/blog](https://ollama.com/blog)) -- announces new models added to the Ollama library, typically within days of open-weight releases.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- tracks benchmark scores for all newly released models.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- the most active community for local AI news, benchmarks, and hardware discussion.',
-            '**GitHub Releases**: follow the repositories for llama.cpp (github.com/ggerganov/llama.cpp) and Ollama (github.com/ollama/ollama) to track engine updates that enable new models.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- the most active community for local AI news, benchmarks, and hardware discussion.',
+            '**GitHub Releases**: follow the repositories for llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) and Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) to track engine updates that enable new models.',
             '**PromptQuorum**: this guide is updated when major model releases change the recommendations. Check the dateModified field for the most recent update.',
           ],
         },
@@ -506,10 +506,10 @@ schema: {
         stayUpdated: {
           title: '¿Cómo mantenerse actualizado sobre los nuevos lanzamientos de LLM locales?',
           items: [
-            '**Blog de Ollama** (ollama.com/blog) -- anuncia los nuevos modelos añadidos a la biblioteca de Ollama, normalmente en días tras los lanzamientos open-weight.',
+            '**Blog de Ollama** ([ollama.com/blog](https://ollama.com/blog)) -- anuncia los nuevos modelos añadidos a la biblioteca de Ollama, normalmente en días tras los lanzamientos open-weight.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- rastrea las puntuaciones de benchmark de todos los modelos recién lanzados.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- la comunidad más activa para noticias de IA local, benchmarks y debates sobre hardware.',
-            '**GitHub Releases**: sigue los repositorios de llama.cpp (github.com/ggerganov/llama.cpp) y Ollama (github.com/ollama/ollama) para rastrear las actualizaciones del motor que habilitan nuevos modelos.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- la comunidad más activa para noticias de IA local, benchmarks y debates sobre hardware.',
+            '**GitHub Releases**: sigue los repositorios de llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) y Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) para rastrear las actualizaciones del motor que habilitan nuevos modelos.',
             '**PromptQuorum**: esta guía se actualiza cuando los principales lanzamientos de modelos cambian las recomendaciones. Consulta el campo dateModified para ver la última actualización.',
           ],
         },
@@ -835,10 +835,10 @@ schema: {
         stayUpdated: {
           title: 'كيف تبقى محدّثاً بشأن إصدارات نماذج LLM المحلية الجديدة؟',
           items: [
-            '**مدونة Ollama** (ollama.com/blog) -- تعلن عن النماذج الجديدة المضافة إلى مكتبة Ollama، عادةً خلال أيام من إصدارات فتح الأوزان.',
+            '**مدونة Ollama** ([ollama.com/blog](https://ollama.com/blog)) -- تعلن عن النماذج الجديدة المضافة إلى مكتبة Ollama، عادةً خلال أيام من إصدارات فتح الأوزان.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- يتتبع نتائج اختبارات جميع النماذج الصادرة حديثاً.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- المجتمع الأكثر نشاطاً لأخبار الذكاء الاصطناعي المحلي والاختبارات ونقاشات العتاد.',
-            '**GitHub Releases**: تابع مستودعي llama.cpp (github.com/ggerganov/llama.cpp) وOllama (github.com/ollama/ollama) لتتبع تحديثات المحرك التي تتيح نماذج جديدة.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- المجتمع الأكثر نشاطاً لأخبار الذكاء الاصطناعي المحلي والاختبارات ونقاشات العتاد.',
+            '**GitHub Releases**: تابع مستودعي llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) وOllama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) لتتبع تحديثات المحرك التي تتيح نماذج جديدة.',
             '**PromptQuorum**: يُحدَّث هذا الدليل عندما تغيّر إصدارات النماذج الرئيسية التوصيات. راجع حقل dateModified لرؤية آخر تحديث.',
           ],
         },
@@ -1524,10 +1524,10 @@ schema: {
         stayUpdated: {
           title: 'Wie bleiben Sie über neue lokale LLM-Releases auf dem Laufenden?',
           items: [
-            '**Ollama Blog** (ollama.com/blog) -- kündigt neue Modelle an, die der Ollama-Bibliothek hinzugefügt werden, typischerweise innerhalb von Tagen nach Open-Weight-Releases.',
+            '**Ollama Blog** ([ollama.com/blog](https://ollama.com/blog)) -- kündigt neue Modelle an, die der Ollama-Bibliothek hinzugefügt werden, typischerweise innerhalb von Tagen nach Open-Weight-Releases.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- verfolgt Benchmark-Scores für alle neu veröffentlichten Modelle.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- die aktivste Community für lokale KI-Nachrichten, Benchmarks und Hardware-Diskussionen.',
-            '**GitHub Releases**: folgen Sie den Repositories für llama.cpp (github.com/ggerganov/llama.cpp) und Ollama (github.com/ollama/ollama), um Engine-Updates zu verfolgen, die neue Modelle ermöglichen.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- die aktivste Community für lokale KI-Nachrichten, Benchmarks und Hardware-Diskussionen.',
+            '**GitHub Releases**: folgen Sie den Repositories für llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) und Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)), um Engine-Updates zu verfolgen, die neue Modelle ermöglichen.',
             '**PromptQuorum**: dieser Leitfaden wird aktualisiert, wenn große Modell-Releases die Empfehlungen ändern. Überprüfen Sie das Feld dateModified für die neueste Aktualisierung.',
           ],
         },
@@ -2166,10 +2166,10 @@ schema: {
         stayUpdated: {
           title: 'Comment rester à jour sur les nouvelles releases de LLM locaux ?',
           items: [
-            '**Blog Ollama** (ollama.com/blog) -- annonce les nouveaux modèles ajoutés à la bibliothèque Ollama, généralement dans les jours suivant les releases open-weight.',
+            '**Blog Ollama** ([ollama.com/blog](https://ollama.com/blog)) -- annonce les nouveaux modèles ajoutés à la bibliothèque Ollama, généralement dans les jours suivant les releases open-weight.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- suit les scores de benchmark pour tous les modèles nouvellement publiés.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- la communauté la plus active pour les nouvelles IA locales, benchmarks et discussions matérielles.',
-            '**GitHub Releases** : suivez les repositories pour llama.cpp (github.com/ggerganov/llama.cpp) et Ollama (github.com/ollama/ollama) pour suivre les mises à jour du moteur qui activent les nouveaux modèles.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- la communauté la plus active pour les nouvelles IA locales, benchmarks et discussions matérielles.',
+            '**GitHub Releases** : suivez les repositories pour llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) et Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) pour suivre les mises à jour du moteur qui activent les nouveaux modèles.',
             '**PromptQuorum** : ce guide est mis à jour lorsque les grandes releases de modèles changent les recommandations. Vérifiez le champ dateModified pour la mise à jour la plus récente.',
           ],
         },
@@ -2446,10 +2446,10 @@ schema: {
         stayUpdated: {
           title: '새로운 로컬 LLM 출시 정보를 어떻게 최신 상태로 유지합니까?',
           items: [
-            '**Ollama 블로그** (ollama.com/blog) -- 오픈 웨이트 출시 후 보통 며칠 내에 Ollama 라이브러리에 추가된 새 모델을 발표합니다.',
+            '**Ollama 블로그** ([ollama.com/blog](https://ollama.com/blog)) -- 오픈 웨이트 출시 후 보통 며칠 내에 Ollama 라이브러리에 추가된 새 모델을 발표합니다.',
             '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) -- 새로 출시된 모든 모델의 벤치마크 점수를 실시간으로 추적합니다.',
-            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) -- 로컬 AI 뉴스, 벤치마크, 하드웨어 논의를 위한 가장 활발한 커뮤니티입니다.',
-            '**GitHub Releases**: llama.cpp (github.com/ggerganov/llama.cpp) 및 Ollama (github.com/ollama/ollama) 저장소를 팔로우하여 새 모델을 지원하는 엔진 업데이트를 추적하십시오.',
+            '**r/LocalLLaMA** ([reddit.com/r/LocalLLaMA](https://reddit.com/r/LocalLLaMA)) -- 로컬 AI 뉴스, 벤치마크, 하드웨어 논의를 위한 가장 활발한 커뮤니티입니다.',
+            '**GitHub Releases**: llama.cpp ([github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)) 및 Ollama ([github.com/ollama/ollama](https://github.com/ollama/ollama)) 저장소를 팔로우하여 새 모델을 지원하는 엔진 업데이트를 추적하십시오.',
             '**PromptQuorum**: 주요 모델 출시로 추천 사항이 변경될 때 이 가이드가 업데이트됩니다. 가장 최근 업데이트는 dateModified 필드를 확인하십시오.',
           ],
         },

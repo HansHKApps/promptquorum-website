@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'This review describes what Bodega One Code publishes about itself on bodegaone.ai and its GitHub releases repository (github.com/BodegaoneAI/bodegaone-releases). PromptQuorum has not independently benchmarked the verification loop, the air-gap mode, or provider-switching latency, and no affiliate or commercial relationship exists between PromptQuorum and Bodega One Code.',
+            text: 'This review describes what Bodega One Code publishes about itself on bodegaone.ai and its GitHub releases repository ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)). PromptQuorum has not independently benchmarked the verification loop, the air-gap mode, or provider-switching latency, and no affiliate or commercial relationship exists between PromptQuorum and Bodega One Code.',
           },
         ],
       },
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test beschreibt, was Bodega One Code auf bodegaone.ai und im GitHub-Releases-Repository (github.com/BodegaoneAI/bodegaone-releases) über sich selbst veröffentlicht. PromptQuorum hat die Verifikationsschleife, den Air-Gap-Modus oder die Latenz beim Anbieterwechsel nicht unabhängig getestet, und es besteht keine Affiliate- oder Geschäftsbeziehung zwischen PromptQuorum und Bodega One Code.',
+            text: 'Dieser Test beschreibt, was Bodega One Code auf bodegaone.ai und im GitHub-Releases-Repository ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)) über sich selbst veröffentlicht. PromptQuorum hat die Verifikationsschleife, den Air-Gap-Modus oder die Latenz beim Anbieterwechsel nicht unabhängig getestet, und es besteht keine Affiliate- oder Geschäftsbeziehung zwischen PromptQuorum und Bodega One Code.',
           },
         ],
       },
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Cette évaluation décrit ce que Bodega One Code publie sur lui-même sur bodegaone.ai et son dépôt GitHub de releases (github.com/BodegaoneAI/bodegaone-releases). PromptQuorum n\'a pas testé indépendamment la boucle de vérification, le mode air-gap ni la latence de changement de fournisseur, et il n\'existe aucune relation d\'affiliation ou commerciale entre PromptQuorum et Bodega One Code.',
+            text: 'Cette évaluation décrit ce que Bodega One Code publie sur lui-même sur bodegaone.ai et son dépôt GitHub de releases ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)). PromptQuorum n\'a pas testé indépendamment la boucle de vérification, le mode air-gap ni la latence de changement de fournisseur, et il n\'existe aucune relation d\'affiliation ou commerciale entre PromptQuorum et Bodega One Code.',
           },
         ],
       },
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta reseña describe lo que Bodega One Code publica sobre sí mismo en bodegaone.ai y en su repositorio de versiones en GitHub (github.com/BodegaoneAI/bodegaone-releases). PromptQuorum no ha evaluado de forma independiente el bucle de verificación, el modo air-gap ni la latencia al cambiar de proveedor, y no existe ninguna relación de afiliación o comercial entre PromptQuorum y Bodega One Code.',
+            text: 'Esta reseña describe lo que Bodega One Code publica sobre sí mismo en bodegaone.ai y en su repositorio de versiones en GitHub ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)). PromptQuorum no ha evaluado de forma independiente el bucle de verificación, el modo air-gap ni la latencia al cambiar de proveedor, y no existe ninguna relación de afiliación o comercial entre PromptQuorum y Bodega One Code.',
           },
         ],
       },
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise descreve o que a Bodega One Code publica sobre si mesma em bodegaone.ai e em seu repositório de releases no GitHub (github.com/BodegaoneAI/bodegaone-releases). A PromptQuorum não avaliou de forma independente o ciclo de verificação, o modo air-gap nem a latência da troca de provedor, e não existe relação de afiliação ou comercial entre a PromptQuorum e a Bodega One Code.',
+            text: 'Esta análise descreve o que a Bodega One Code publica sobre si mesma em bodegaone.ai e em seu repositório de releases no GitHub ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)). A PromptQuorum não avaliou de forma independente o ciclo de verificação, o modo air-gap nem a latência da troca de provedor, e não existe relação de afiliação ou comercial entre a PromptQuorum e a Bodega One Code.',
           },
         ],
       },
@@ -2594,7 +2594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'تصف هذه المراجعة ما تنشره Bodega One Code عن نفسها على bodegaone.ai ومستودع الإصدارات الخاص بها على GitHub (github.com/BodegaoneAI/bodegaone-releases). لم تقيّم PromptQuorum بشكل مستقل حلقة التحقق أو وضع العزل الشبكي أو زمن استجابة تبديل المزود، ولا توجد أي علاقة تابعة أو تجارية بين PromptQuorum وBodega One Code.',
+            text: 'تصف هذه المراجعة ما تنشره Bodega One Code عن نفسها على bodegaone.ai ومستودع الإصدارات الخاص بها على GitHub ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)). لم تقيّم PromptQuorum بشكل مستقل حلقة التحقق أو وضع العزل الشبكي أو زمن استجابة تبديل المزود، ولا توجد أي علاقة تابعة أو تجارية بين PromptQuorum وBodega One Code.',
           },
         ],
       },
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 Bodega One Code가 bodegaone.ai와 GitHub 릴리스 저장소(github.com/BodegaoneAI/bodegaone-releases)에서 스스로 공개한 내용을 설명합니다. PromptQuorum은 검증 루프, 에어갭 모드, 제공업체 전환 지연 시간을 독립적으로 벤치마크하지 않았으며, PromptQuorum과 Bodega One Code 사이에는 제휴 또는 상업적 관계가 존재하지 않습니다.',
+            text: '이 리뷰는 Bodega One Code가 bodegaone.ai와 GitHub 릴리스 저장소([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases))에서 스스로 공개한 내용을 설명합니다. PromptQuorum은 검증 루프, 에어갭 모드, 제공업체 전환 지연 시간을 독립적으로 벤치마크하지 않았으며, PromptQuorum과 Bodega One Code 사이에는 제휴 또는 상업적 관계가 존재하지 않습니다.',
           },
         ],
       },
@@ -2961,7 +2961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Bodega One Code는 에디터, AI 채팅 인터페이스, 자율 코딩 에이전트를 결합한 데스크톱 코딩 IDE로, 제조사가 아니라 개발자가 어떤 LLM이 작업을 수행할지 선택한다는 아이디어를 중심으로 설계되었습니다.** Bodega One Code는 이 접근 방식을 "직접 LLM 가져오기"(BYOLLM)라고 부릅니다. 애플리케이션 자체가 인터페이스와 도구 계층이며, 채팅 질문에 답하거나 코딩 에이전트를 구동하는 모델은 완전히 로컬 모델일 수도, 사용자가 선택한 호스팅형 클라우드 API일 수도 있습니다.',
           '이는 단일 모델 계열에 고정되어 제공되는 IDE의 기본 방식과는 다릅니다. Bodega One Code가 인터페이스를 모델 제공업체와 분리하기 때문에, 개발자는 최대 성능을 위해 OpenAI나 Anthropic 같은 클라우드 모델로 시작한 다음, 오프라인 작업이나 민감한 코드를 다룰 때는 애플리케이션을 바꾸지 않고도 동일한 워크플로를 Ollama나 llama.cpp 같은 로컬 런타임으로 옮길 수 있습니다.',
-          '이 제품은 bodegaone.ai(www.bodegaone.ai에서도 접근 가능)를 통해 배포되며, 릴리스 빌드는 GitHub(github.com/BodegaoneAI/bodegaone-releases)에서 추적됩니다.',
+          '이 제품은 bodegaone.ai(www.bodegaone.ai에서도 접근 가능)를 통해 배포되며, 릴리스 빌드는 GitHub([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases))에서 추적됩니다.',
         ],
       },
       byollmProviders: {

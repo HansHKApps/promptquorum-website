@@ -187,6 +187,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'What Every Prompt Changelog Entry Must Include',
         content: [
           '**A prompt changelog entry requires 5 fields: version, date, author, change type, and expected output delta.** The output delta is the most important field: it describes how the model\'s response will differ after the change, so downstream callers know what to update.',
@@ -352,7 +353,7 @@ jobs:
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — Canonical MAJOR.MINOR.PATCH specification, directly applicable to prompt versioning',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — Canonical MAJOR.MINOR.PATCH specification, directly applicable to prompt versioning',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — Official reference for the primary rollback mechanism used in prompt version control workflows',
           '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — Technical guide to prompt versioning, automated testing, and CI/CD integration using dedicated tooling',
         ],
@@ -535,6 +536,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'Was jeder Prompt-Changelog-Eintrag enthalten muss',
         content: [
           '**Ein Prompt-Changelog-Eintrag erfordert 5 Felder: Version, Datum, Autor, Änderungstyp und erwartetes Ausgabedelta.** Das Ausgabedelta ist das wichtigste Feld: Es beschreibt, wie die Modellantwort sich nach der Änderung unterscheiden wird, damit nachgelagerte Aufrufer wissen, was sie anpassen müssen.',
@@ -679,7 +681,7 @@ jobs:
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — Kanonische MAJOR.MINOR.PATCH-Spezifikation, direkt auf Prompt-Versionierung anwendbar',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — Kanonische MAJOR.MINOR.PATCH-Spezifikation, direkt auf Prompt-Versionierung anwendbar',
           '[Git-Dokumentation: git revert](https://git-scm.com/docs/git-revert) — Offizielle Referenz für den primären Rollback-Mechanismus in Prompt-Versionskontroll-Workflows',
           '[Braintrust: Prompt-Evaluierung und Versionierungsleitfaden](https://www.braintrust.dev/docs/guides/evals) — Technischer Leitfaden zur Prompt-Versionierung, automatisierten Tests und CI/CD-Integration mit dediziertem Tooling',
         ],
@@ -864,6 +866,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'Qué debe incluir cada entrada del changelog de un prompt',
         content: [
           '**Una entrada del changelog de un prompt requiere 5 campos: versión, fecha, autor, tipo de cambio y delta de salida esperado.** El delta de salida es el campo más importante: describe cómo diferirá la respuesta del modelo tras el cambio, para que los llamadores posteriores sepan qué actualizar.',
@@ -1029,7 +1032,7 @@ jobs:
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — Especificación canónica MAJOR.MINOR.PATCH, directamente aplicable al versionado de prompts',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — Especificación canónica MAJOR.MINOR.PATCH, directamente aplicable al versionado de prompts',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — Referencia oficial para el mecanismo de rollback principal usado en flujos de trabajo de control de versiones de prompts',
           '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — Guía técnica sobre versionado de prompts, pruebas automatizadas e integración CI/CD usando herramientas dedicadas',
         ],
@@ -1214,6 +1217,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'ما يجب أن تتضمنه كل إدخال في سجل التغييرات للموجّه',
         content: [
           '**إدخال سجل التغييرات للموجّه يتطلب 5 حقول: الإصدار والتاريخ والمؤلف ونوع التغيير والتغيير المتوقع في المخرجات.** التغيير في المخرجات هو الحقل الأهم: يصف كيف ستختلف استجابة النموذج بعد التغيير، لكي يعرف المستدعون اللاحقون ما يجب تحديثه.',
@@ -1379,7 +1383,7 @@ jobs:
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — مواصفة MAJOR.MINOR.PATCH القانونية، قابلة للتطبيق مباشرة على إصدار الموجّهات',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — مواصفة MAJOR.MINOR.PATCH القانونية، قابلة للتطبيق مباشرة على إصدار الموجّهات',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — المرجع الرسمي لآلية التراجع الرئيسية المستخدمة في سير عمل التحكم في إصدارات الموجّهات',
           '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — دليل تقني حول إصدار الموجّهات والاختبارات الآلية وتكامل CI/CD باستخدام أدوات مخصصة',
         ],
@@ -1559,6 +1563,7 @@ jobs:
       },
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'O que cada entrada do changelog de um prompt deve incluir',
         content: [
           '**Uma entrada do changelog de um prompt requer 5 campos: versão, data, autor, tipo de alteração e delta de saída esperado.** O delta de saída é o campo mais importante: descreve como a resposta do modelo diferirá após a alteração, para que os chamadores posteriores saibam o que atualizar.',
@@ -1672,7 +1677,7 @@ jobs:
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — Especificação canônica MAJOR.MINOR.PATCH, diretamente aplicável ao versionamento de prompts',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — Especificação canônica MAJOR.MINOR.PATCH, diretamente aplicável ao versionamento de prompts',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — Referência oficial para o mecanismo de rollback principal',
           '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — Guia técnico sobre versionamento de prompts, testes automatizados e integração CI/CD',
         ],
@@ -1854,6 +1859,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'Ce que doit contenir chaque entrée de changelog de prompt',
         content: [
           '**Une entrée de changelog de prompt exige 5 champs : version, date, auteur, type de changement et delta de sortie attendu.** Le delta de sortie est le champ le plus important : il décrit comment la réponse du modèle différera après le changement, afin que les appelants en aval sachent ce qu\'ils doivent mettre à jour.',
@@ -1995,7 +2001,7 @@ jobs:
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Spécification Semantic Versioning (semver.org)](https://semver.org/) — Spécification canonique MAJOR.MINOR.PATCH, directement applicable au versioning des prompts',
+          '[Spécification Semantic Versioning ([semver.org](https://semver.org))](https://semver.org/) — Spécification canonique MAJOR.MINOR.PATCH, directement applicable au versioning des prompts',
           '[Documentation Git : git revert](https://git-scm.com/docs/git-revert) — Référence officielle pour le mécanisme de rollback principal utilisé dans les workflows de versioning des prompts',
           '[Braintrust : Guide d\'évaluation et de versioning des prompts](https://www.braintrust.dev/docs/guides/evals) — Guide technique sur le versioning, les tests automatisés et l\'intégration CI/CD avec des outils dédiés',
         ],
@@ -2183,6 +2189,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: 'プロンプトChangelogエントリに必須の記録項目',
         content: [
           '**プロンプトchangelogエントリには5つのフィールドが必要です：バージョン・日付・作成者・変更タイプ・期待される出力デルタ。** 出力デルタが最も重要なフィールドです。変更後のモデルレスポンスの違いを説明することで、下流の呼び出し元が何を更新すべきか把握できます。',
@@ -2545,6 +2552,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: '每条 Prompt 变更日志必须包含的内容',
         content: [
           '**Prompt 变更日志条目需要 5 个字段：版本、日期、作者、变更类型和预期输出差异。** 预期输出差异是最重要的字段：它描述变更后模型响应将如何不同，使下游调用方了解需要更新的内容。',
@@ -2904,6 +2912,7 @@ jobs:
 
       changelog: {
         id: 'changelog',
+        itemHeadings: true,
         title: '프롬프트 체인지로그의 각 항목에 포함해야 할 내용',
         content: [
           '**프롬프트 체인지로그 항목에는 5개 필드가 필요합니다: 버전, 날짜, 작성자, 변경 유형, 예상 출력 변화.** 예상 출력 변화는 가장 중요한 필드입니다: 변경 후 모델 응답이 어떻게 달라질지 설명하여 다운스트림 호출자가 무엇을 업데이트해야 하는지 알 수 있게 합니다.',
@@ -3069,7 +3078,7 @@ jobs:
         id: 'sources',
         title: '출처',
         items: [
-          '[Semantic Versioning Specification (semver.org)](https://semver.org/) — 프롬프트 버전 관리에 직접 적용 가능한 표준 MAJOR.MINOR.PATCH 규격',
+          '[Semantic Versioning Specification ([semver.org](https://semver.org))](https://semver.org/) — 프롬프트 버전 관리에 직접 적용 가능한 표준 MAJOR.MINOR.PATCH 규격',
           '[Git Documentation: git revert](https://git-scm.com/docs/git-revert) — 프롬프트 버전 관리 워크플로에서 사용되는 주요 롤백 메커니즘에 대한 공식 참조',
           '[Braintrust: Prompt Evaluation and Versioning Guide](https://www.braintrust.dev/docs/guides/evals) — 전용 도구를 사용한 프롬프트 버전 관리, 자동화 테스트, CI/CD 통합에 대한 기술 가이드',
         ],

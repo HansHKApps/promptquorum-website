@@ -11,8 +11,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.webp',
     title: "IKEA's Matter Ecosystem: Complete Guide (2026)",
     seoTitle: 'IKEA Matter Ecosystem Guide (2026)',
-    // Verified 2026-07-16 against IKEA's own US product listing (ikea.com/us/en/cat/smart-home-products-36812/)
-    // and Home Assistant's own product page (home-assistant.io/green/) for the price comparison.
+    // Verified 2026-07-16 against IKEA's own US product listing ([ikea.com/us/en/cat/smart-home-products-36812/](https://ikea.com/us/en/cat/smart-home-products-36812/))
+    // and Home Assistant's own product page ([home-assistant.io/green/](https://home-assistant.io/green/)) for the price comparison.
     intro:
       "IKEA sells a Matter-compatible smart home lineup — the DIRIGERA hub ($119.99), plus sensors and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
     metaDescription:

@@ -17,6 +17,7 @@ Summary of non-negotiable rules:
 - **Entity names:** Use full product/company names on first mention (e.g., "PromptQuorum", "OpenAI GPT-4o", "Ollama"). Be consistent throughout.
 - **Schema markup:** Every page needs relevant JSON-LD (Article, FAQPage, HowTo, BreadcrumbList, etc.).
 - **No marketing fluff:** Every sentence must add information. Delete anything decorative.
+- **Clickable URLs:** Any domain or URL mentioned in reader-facing prose (`content`, `items`, `faqs`, `note`, `callouts`, table cells, etc.) must be a markdown link `[label](https://url)`, never bare text like `(cherry-ai.com)`. See GEO_WRITING_GUIDELINES.md Rule 44.
 
 ---
 

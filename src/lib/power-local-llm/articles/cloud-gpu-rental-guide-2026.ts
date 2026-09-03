@@ -336,9 +336,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Each provider has a direct signup page with free starter credit — enough to benchmark your own workload before committing.** The links below are plain provider links; they carry no affiliate tags and earn no commission.',
         items: [
-          '**RunPod (runpod.io):** $10 signup credit, instant access to Secure Cloud and On-Demand tiers, EU regions available at signup.',
-          '**Lambda Labs (lambdalabs.com):** $15 signup credit, the most polished onboarding, reserved-instance options for long-term commitments.',
-          '**Vast.ai (vast.ai):** roughly $5 starter credit (varies by promotion), the largest GPU catalog, but a more technical setup — budget about 10 minutes.',
+          '**RunPod ([runpod.io](https://runpod.io)):** $10 signup credit, instant access to Secure Cloud and On-Demand tiers, EU regions available at signup.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** $15 signup credit, the most polished onboarding, reserved-instance options for long-term commitments.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** roughly $5 starter credit (varies by promotion), the largest GPU catalog, but a more technical setup — budget about 10 minutes.',
           '**Test before you commit:** run your actual model on each provider\'s free credit and measure total job cost, not the sticker rate, before choosing.',
         ],
         callouts: [
@@ -770,9 +770,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Jeder Anbieter hat eine direkte Registrierungsseite mit kostenlosem Startguthaben — genug, um Ihre eigene Arbeitslast vor der Festlegung zu benchmarken.** Die untenstehenden Links sind reine Anbieterlinks; sie tragen keine Affiliate-Kennungen und erzielen keine Provision.',
         items: [
-          '**RunPod (runpod.io):** $10 Registrierungsguthaben, sofortiger Zugriff auf Secure-Cloud- und On-Demand-Stufen, EU-Regionen bei der Registrierung verfügbar.',
-          '**Lambda Labs (lambdalabs.com):** $15 Registrierungsguthaben, das ausgefeilteste Onboarding, Optionen für reservierte Instanzen bei langfristigen Zusagen.',
-          '**Vast.ai (vast.ai):** rund $5 Startguthaben (je nach Aktion), der größte GPU-Katalog, aber eine technischere Einrichtung — rechnen Sie mit etwa 10 Minuten.',
+          '**RunPod ([runpod.io](https://runpod.io)):** $10 Registrierungsguthaben, sofortiger Zugriff auf Secure-Cloud- und On-Demand-Stufen, EU-Regionen bei der Registrierung verfügbar.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** $15 Registrierungsguthaben, das ausgefeilteste Onboarding, Optionen für reservierte Instanzen bei langfristigen Zusagen.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** rund $5 Startguthaben (je nach Aktion), der größte GPU-Katalog, aber eine technischere Einrichtung — rechnen Sie mit etwa 10 Minuten.',
           '**Testen Sie vor der Festlegung:** Führen Sie Ihr tatsächliches Modell mit dem kostenlosen Guthaben jedes Anbieters aus und messen Sie die Gesamtkosten des Auftrags, nicht den Listenpreis, bevor Sie sich entscheiden.',
         ],
         callouts: [
@@ -1212,9 +1212,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Chaque fournisseur dispose d'une page d'inscription directe avec un crédit de démarrage gratuit — assez pour évaluer votre propre charge de travail avant de vous engager.** Les liens ci-dessous sont de simples liens vers les fournisseurs ; ils ne portent aucune balise d'affiliation et ne génèrent aucune commission.",
         items: [
-          "**RunPod (runpod.io) :** $10 de crédit à l'inscription, accès instantané aux niveaux Secure Cloud et On-Demand, régions UE disponibles à l'inscription.",
-          "**Lambda Labs (lambdalabs.com) :** $15 de crédit à l'inscription, l'intégration la plus aboutie, des options d'instances réservées pour les engagements à long terme.",
-          '**Vast.ai (vast.ai) :** environ $5 de crédit de démarrage (selon la promotion), le plus grand catalogue de GPU, mais une configuration plus technique — comptez environ 10 minutes.',
+          "**RunPod ([runpod.io](https://runpod.io)) :** $10 de crédit à l'inscription, accès instantané aux niveaux Secure Cloud et On-Demand, régions UE disponibles à l'inscription.",
+          "**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)) :** $15 de crédit à l'inscription, l'intégration la plus aboutie, des options d'instances réservées pour les engagements à long terme.",
+          '**Vast.ai ([vast.ai](https://vast.ai)) :** environ $5 de crédit de démarrage (selon la promotion), le plus grand catalogue de GPU, mais une configuration plus technique — comptez environ 10 minutes.',
           "**Testez avant de vous engager :** exécutez votre modèle réel avec le crédit gratuit de chaque fournisseur et mesurez le coût total de la tâche, pas le tarif affiché, avant de choisir.",
         ],
         callouts: [
@@ -2514,9 +2514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cada proveedor tiene una página de registro directo con crédito inicial gratuito — suficiente para hacer benchmark de tu propia carga de trabajo antes de comprometerte.** Los enlaces de abajo son simples enlaces de proveedor; no llevan etiquetas de afiliado y no generan comisión.',
         items: [
-          '**RunPod (runpod.io):** $10 de crédito al registrarse, acceso inmediato a los niveles Secure Cloud y On-Demand, regiones EU disponibles al registrarse.',
-          '**Lambda Labs (lambdalabs.com):** $15 de crédito al registrarse, el proceso de incorporación más pulido, opciones de instancias reservadas para compromisos a largo plazo.',
-          '**Vast.ai (vast.ai):** aproximadamente $5 de crédito inicial (varía según la promoción), el catálogo de GPU más amplio, pero una configuración más técnica — presupuesta unos 10 minutos.',
+          '**RunPod ([runpod.io](https://runpod.io)):** $10 de crédito al registrarse, acceso inmediato a los niveles Secure Cloud y On-Demand, regiones EU disponibles al registrarse.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** $15 de crédito al registrarse, el proceso de incorporación más pulido, opciones de instancias reservadas para compromisos a largo plazo.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** aproximadamente $5 de crédito inicial (varía según la promoción), el catálogo de GPU más amplio, pero una configuración más técnica — presupuesta unos 10 minutos.',
           '**Prueba antes de comprometerte:** ejecuta tu modelo real con el crédito gratuito de cada proveedor y mide el costo total del trabajo, no la tarifa anunciada, antes de elegir.',
         ],
         callouts: [
@@ -2961,9 +2961,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cada provedor tem uma página de cadastro direto com crédito inicial gratuito — suficiente para fazer benchmark da sua própria carga de trabalho antes de se comprometer.** Os links abaixo são simples links de provedor; eles não levam etiquetas de afiliado e não geram comissão.',
         items: [
-          '**RunPod (runpod.io):** $10 de crédito ao se cadastrar, acesso imediato aos níveis Secure Cloud e On-Demand, regiões EU disponíveis no cadastro.',
-          '**Lambda Labs (lambdalabs.com):** $15 de crédito ao se cadastrar, o processo de onboarding mais polido, opções de instâncias reservadas para compromissos de longo prazo.',
-          '**Vast.ai (vast.ai):** aproximadamente $5 de crédito inicial (varia conforme a promoção), o catálogo de GPU mais amplo, mas uma configuração mais técnica — orce cerca de 10 minutos.',
+          '**RunPod ([runpod.io](https://runpod.io)):** $10 de crédito ao se cadastrar, acesso imediato aos níveis Secure Cloud e On-Demand, regiões EU disponíveis no cadastro.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** $15 de crédito ao se cadastrar, o processo de onboarding mais polido, opções de instâncias reservadas para compromissos de longo prazo.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** aproximadamente $5 de crédito inicial (varia conforme a promoção), o catálogo de GPU mais amplo, mas uma configuração mais técnica — orce cerca de 10 minutos.',
           '**Teste antes de se comprometer:** execute o seu modelo real com o crédito gratuito de cada provedor e meça o custo total do trabalho, não a tarifa anunciada, antes de escolher.',
         ],
         callouts: [
@@ -3409,9 +3409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**لكل مزود صفحة تسجيل مباشرة مع رصيد أولي مجاني — يكفي لاختبار أداء حمل عملك قبل الالتزام.** الروابط أدناه روابط مزودين مباشرة؛ لا تحمل علامات تتبع ولا تُدرّ عمولات.',
         items: [
-          '**RunPod (runpod.io):** رصيد 10$ عند التسجيل، وصول فوري لمستويَي Secure Cloud وOn-Demand، مناطق EU متاحة عند التسجيل.',
-          '**Lambda Labs (lambdalabs.com):** رصيد 15$ عند التسجيل، أكثر عملية إلحاق صقلاً، خيارات نسخ محجوزة للالتزامات طويلة الأمد.',
-          '**Vast.ai (vast.ai):** حوالي 5$ رصيد أولي (يتفاوت حسب العرض)، أوسع كتالوج GPU، لكن إعداد أكثر تقنيةً — خصص حوالي 10 دقائق.',
+          '**RunPod ([runpod.io](https://runpod.io)):** رصيد 10$ عند التسجيل، وصول فوري لمستويَي Secure Cloud وOn-Demand، مناطق EU متاحة عند التسجيل.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** رصيد 15$ عند التسجيل، أكثر عملية إلحاق صقلاً، خيارات نسخ محجوزة للالتزامات طويلة الأمد.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** حوالي 5$ رصيد أولي (يتفاوت حسب العرض)، أوسع كتالوج GPU، لكن إعداد أكثر تقنيةً — خصص حوالي 10 دقائق.',
           '**اختبر قبل الالتزام:** شغّل نموذجك الفعلي بالرصيد المجاني من كل مزود وقس التكلفة الإجمالية للعمل لا التعرفة المُعلنة، قبل الاختيار.',
         ],
         callouts: [
@@ -3856,9 +3856,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**각 제공업체는 초기 무료 크레딧이 포함된 직접 가입 페이지를 제공합니다 — 확정 전 실제 워크로드를 벤치마크하기에 충분한 금액입니다.** 아래 링크는 단순 제공업체 링크입니다. 제휴 태그가 포함되지 않으며 수수료가 발생하지 않습니다.',
         items: [
-          '**RunPod (runpod.io):** 가입 시 $10 크레딧, Secure Cloud 및 On-Demand 티어 즉시 이용 가능, 가입 시 EU 리전 선택 가능.',
-          '**Lambda Labs (lambdalabs.com):** 가입 시 $15 크레딧, 가장 세련된 온보딩 프로세스, 장기 약정에 대한 예약 인스턴스 옵션.',
-          '**Vast.ai (vast.ai):** 초기 크레딧 약 $5(프로모션에 따라 변동), 가장 광범위한 GPU 카탈로그, 더 기술적인 설정 필요 — 약 10분 예상.',
+          '**RunPod ([runpod.io](https://runpod.io)):** 가입 시 $10 크레딧, Secure Cloud 및 On-Demand 티어 즉시 이용 가능, 가입 시 EU 리전 선택 가능.',
+          '**Lambda Labs ([lambdalabs.com](https://lambdalabs.com)):** 가입 시 $15 크레딧, 가장 세련된 온보딩 프로세스, 장기 약정에 대한 예약 인스턴스 옵션.',
+          '**Vast.ai ([vast.ai](https://vast.ai)):** 초기 크레딧 약 $5(프로모션에 따라 변동), 가장 광범위한 GPU 카탈로그, 더 기술적인 설정 필요 — 약 10분 예상.',
           '**확정 전 테스트:** 각 제공업체의 무료 크레딧으로 실제 모델을 실행하고, 공시 요금이 아닌 총 작업 비용을 측정한 후 선택하십시오.',
         ],
         callouts: [

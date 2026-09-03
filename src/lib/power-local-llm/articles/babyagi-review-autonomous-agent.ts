@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is BabyAGI still maintained, and does it run on local models?',
-        answer: 'The main BabyAGI repository (github.com/yoheinakajima/babyagi) is a 2024 rebuild around a function-management framework called functionz, still receiving occasional commits from its solo maintainer, Yohei Nakajima. The original 2023 task-loop script that made BabyAGI famous is frozen in a separate babyagi_archive repository and receives no further updates. Neither version has documented native support for local models such as Ollama — both are built around the OpenAI API key.',
+        answer: 'The main BabyAGI repository ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) is a 2024 rebuild around a function-management framework called functionz, still receiving occasional commits from its solo maintainer, Yohei Nakajima. The original 2023 task-loop script that made BabyAGI famous is frozen in a separate babyagi_archive repository and receives no further updates. Neither version has documented native support for local models such as Ollama — both are built around the OpenAI API key.',
         bullets: [
           'Creator: Yohei Nakajima, first released as a public script in 2023',
           'Current main repo: over 22,000 GitHub stars, MIT license, rebuilt in 2024 around the functionz framework',
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wird BabyAGI noch gepflegt, und läuft es mit lokalen Modellen?',
-        answer: 'Das Haupt-Repository von BabyAGI (github.com/yoheinakajima/babyagi) ist ein 2024er Umbau rund um ein Function-Management-Framework namens functionz, das gelegentlich Commits von seinem alleinigen Maintainer Yohei Nakajima erhält. Das ursprüngliche Aufgaben-Loop-Skript von 2023, das BabyAGI bekannt machte, ist in einem separaten babyagi_archive-Repository eingefroren und erhält keine weiteren Updates. Keine der beiden Versionen dokumentiert native Unterstützung für lokale Modelle wie Ollama — beide setzen auf einen OpenAI-API-Key.',
+        answer: 'Das Haupt-Repository von BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) ist ein 2024er Umbau rund um ein Function-Management-Framework namens functionz, das gelegentlich Commits von seinem alleinigen Maintainer Yohei Nakajima erhält. Das ursprüngliche Aufgaben-Loop-Skript von 2023, das BabyAGI bekannt machte, ist in einem separaten babyagi_archive-Repository eingefroren und erhält keine weiteren Updates. Keine der beiden Versionen dokumentiert native Unterstützung für lokale Modelle wie Ollama — beide setzen auf einen OpenAI-API-Key.',
         bullets: [
           'Entwickler: Yohei Nakajima, 2023 erstmals als öffentliches Skript veröffentlicht',
           'Aktuelles Haupt-Repository: über 22.000 GitHub-Sterne, MIT-Lizenz, 2024 rund um das functionz-Framework umgebaut',
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'BabyAGI est-il encore maintenu, et fonctionne-t-il avec des modèles locaux ?',
-        answer: 'Le dépôt principal de BabyAGI (github.com/yoheinakajima/babyagi) est une reconstruction de 2024 autour d\'un framework de gestion de fonctions nommé functionz, qui reçoit encore des commits occasionnels de son unique mainteneur, Yohei Nakajima. Le script original de 2023, à l\'origine de la notoriété de BabyAGI, est figé dans un dépôt babyagi_archive séparé et ne reçoit plus de mise à jour. Aucune des deux versions ne documente de support natif pour des modèles locaux comme Ollama — les deux reposent sur une clé API OpenAI.',
+        answer: 'Le dépôt principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) est une reconstruction de 2024 autour d\'un framework de gestion de fonctions nommé functionz, qui reçoit encore des commits occasionnels de son unique mainteneur, Yohei Nakajima. Le script original de 2023, à l\'origine de la notoriété de BabyAGI, est figé dans un dépôt babyagi_archive séparé et ne reçoit plus de mise à jour. Aucune des deux versions ne documente de support natif pour des modèles locaux comme Ollama — les deux reposent sur une clé API OpenAI.',
         bullets: [
           'Créateur : Yohei Nakajima, publié pour la première fois comme script public en 2023',
           'Dépôt principal actuel : plus de 22 000 étoiles GitHub, licence MIT, reconstruit en 2024 autour du framework functionz',
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Sigue mantenido BabyAGI, y funciona con modelos locales?',
-        answer: 'El repositorio principal de BabyAGI (github.com/yoheinakajima/babyagi) es una reconstrucción de 2024 en torno a un framework de gestión de funciones llamado functionz, que aún recibe commits ocasionales de su único mantenedor, Yohei Nakajima. El script original de bucle de tareas de 2023, el que hizo famoso a BabyAGI, está congelado en un repositorio babyagi_archive separado y ya no recibe actualizaciones. Ninguna de las dos versiones documenta soporte nativo para modelos locales como Ollama — ambas dependen de una clave de API de OpenAI.',
+        answer: 'El repositorio principal de BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) es una reconstrucción de 2024 en torno a un framework de gestión de funciones llamado functionz, que aún recibe commits ocasionales de su único mantenedor, Yohei Nakajima. El script original de bucle de tareas de 2023, el que hizo famoso a BabyAGI, está congelado en un repositorio babyagi_archive separado y ya no recibe actualizaciones. Ninguna de las dos versiones documenta soporte nativo para modelos locales como Ollama — ambas dependen de una clave de API de OpenAI.',
         bullets: [
           'Creador: Yohei Nakajima, publicado por primera vez como script público en 2023',
           'Repositorio principal actual: más de 22.000 estrellas en GitHub, licencia MIT, reconstruido en 2024 en torno al framework functionz',
@@ -1522,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O BabyAGI ainda é mantido, e funciona com modelos locais?',
-        answer: 'O repositório principal do BabyAGI (github.com/yoheinakajima/babyagi) é uma reconstrução de 2024 em torno de um framework de gestão de funções chamado functionz, que ainda recebe commits ocasionais de seu único mantenedor, Yohei Nakajima. O script original de loop de tarefas de 2023, que tornou o BabyAGI famoso, está congelado em um repositório babyagi_archive separado e não recebe mais atualizações. Nenhuma das versões documenta suporte nativo a modelos locais como o Ollama — ambas dependem de uma chave de API da OpenAI.',
+        answer: 'O repositório principal do BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) é uma reconstrução de 2024 em torno de um framework de gestão de funções chamado functionz, que ainda recebe commits ocasionais de seu único mantenedor, Yohei Nakajima. O script original de loop de tarefas de 2023, que tornou o BabyAGI famoso, está congelado em um repositório babyagi_archive separado e não recebe mais atualizações. Nenhuma das versões documenta suporte nativo a modelos locais como o Ollama — ambas dependem de uma chave de API da OpenAI.',
         bullets: [
           'Criador: Yohei Nakajima, publicado pela primeira vez como script público em 2023',
           'Repositório principal atual: mais de 22.000 estrelas no GitHub, licença MIT, reconstruído em 2024 em torno do framework functionz',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل BabyAGI ما زال مدعومًا، وهل يعمل مع النماذج المحلية؟',
-        answer: 'المستودع الرئيسي لـ BabyAGI (github.com/yoheinakajima/babyagi) هو إعادة بناء من عام 2024 حول إطار عمل لإدارة الوظائف يُدعى functionz، ولا يزال يتلقى التزامات (commits) عرضية من مشرفه الوحيد Yohei Nakajima. أما النص البرمجي الأصلي لحلقة المهام من عام 2023، الذي جعل BabyAGI مشهورًا، فهو مجمّد في مستودع babyagi_archive منفصل ولا يتلقى أي تحديثات. لا توثّق أي من النسختين دعمًا أصليًا لنماذج محلية مثل Ollama — تعتمد كلتاهما على مفتاح واجهة برمجة OpenAI.',
+        answer: 'المستودع الرئيسي لـ BabyAGI ([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi)) هو إعادة بناء من عام 2024 حول إطار عمل لإدارة الوظائف يُدعى functionz، ولا يزال يتلقى التزامات (commits) عرضية من مشرفه الوحيد Yohei Nakajima. أما النص البرمجي الأصلي لحلقة المهام من عام 2023، الذي جعل BabyAGI مشهورًا، فهو مجمّد في مستودع babyagi_archive منفصل ولا يتلقى أي تحديثات. لا توثّق أي من النسختين دعمًا أصليًا لنماذج محلية مثل Ollama — تعتمد كلتاهما على مفتاح واجهة برمجة OpenAI.',
         bullets: [
           'المنشئ: Yohei Nakajima، نُشر لأول مرة كنص برمجي عام في 2023',
           'المستودع الرئيسي الحالي: أكثر من 22,000 نجمة على GitHub، ترخيص MIT، أُعيد بناؤه عام 2024 حول إطار functionz',
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'BabyAGI는 여전히 유지보수되고 있으며, 로컬 모델에서 작동하는가?',
-        answer: 'BabyAGI의 메인 저장소(github.com/yoheinakajima/babyagi)는 functionz라는 함수 관리 프레임워크를 중심으로 2024년에 재구축된 버전으로, 유일한 관리자인 Yohei Nakajima로부터 가끔 커밋을 받는다. BabyAGI를 유명하게 만든 2023년 원본 작업 루프 스크립트는 별도의 babyagi_archive 저장소에 동결되어 있으며 더 이상 업데이트되지 않는다. 두 버전 모두 Ollama와 같은 로컬 모델에 대한 네이티브 지원을 문서화하지 않았으며——둘 다 OpenAI API 키에 의존한다.',
+        answer: 'BabyAGI의 메인 저장소([github.com/yoheinakajima/babyagi](https://github.com/yoheinakajima/babyagi))는 functionz라는 함수 관리 프레임워크를 중심으로 2024년에 재구축된 버전으로, 유일한 관리자인 Yohei Nakajima로부터 가끔 커밋을 받는다. BabyAGI를 유명하게 만든 2023년 원본 작업 루프 스크립트는 별도의 babyagi_archive 저장소에 동결되어 있으며 더 이상 업데이트되지 않는다. 두 버전 모두 Ollama와 같은 로컬 모델에 대한 네이티브 지원을 문서화하지 않았으며——둘 다 OpenAI API 키에 의존한다.',
         bullets: [
           '개발자: Yohei Nakajima, 2023년 공개 스크립트로 최초 공개',
           '현재 메인 저장소: GitHub 스타 22,000개 이상, MIT 라이선스, 2024년 functionz 프레임워크로 재구축',

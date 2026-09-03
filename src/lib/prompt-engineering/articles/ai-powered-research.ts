@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'The Right Tool for Each Research Stage',
           content: [
             '**No single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
-            'Elicit (elicit.com) uses semantic search across 138M+ academic papers and 545,000 clinical trials to extract structured data directly from PDFs — methodologies, sample sizes, outcomes — without requiring keyword matches. Consensus (consensus.app) searches ~200 million papers and returns a "Consensus Meter" summarizing scientific agreement (Yes / No / Possibly) on a specific question. Perplexity AI provides the fastest general-purpose cited answers across both the open web and academic literature, making it optimal for exploratory phases.',
+            'Elicit ([elicit.com](https://elicit.com)) uses semantic search across 138M+ academic papers and 545,000 clinical trials to extract structured data directly from PDFs — methodologies, sample sizes, outcomes — without requiring keyword matches. Consensus ([consensus.app](https://consensus.app)) searches ~200 million papers and returns a "Consensus Meter" summarizing scientific agreement (Yes / No / Possibly) on a specific question. Perplexity AI provides the fastest general-purpose cited answers across both the open web and academic literature, making it optimal for exploratory phases.',
           ],
           columns: ['Tool', 'Database', 'Primary Function', 'Free Tier'],
           rows: [
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Das richtige Tool für jede Forschungsphase',
           content: [
             '**Kein einzelnes KI-Forschungs-Tool verarbeitet alle Forschungsphasen gut – die hochwertigsten Workflows leiten jede Aufgabe an das Tool, das dafür am besten ausgelegt ist.**',
-            'Elicit (elicit.com) nutzt semantische Suche über 138M+ akademische Papiere und 545.000 klinische Versuche, um strukturierte Daten direkt aus PDFs zu extrahieren – Methodologien, Stichprobengrößen, Ergebnisse – ohne Keyword-Übereinstimmung zu erfordern. Consensus (consensus.app) durchsucht ~200 Millionen Papiere und gibt einen "Consensus Meter" zurück, der die wissenschaftliche Übereinstimmung (Ja / Nein / Möglich) zu einer bestimmten Frage zusammenfasst. Perplexity AI liefert die schnellsten allgemeinen zitierten Antworten über Web und akademische Literatur hinweg, was es für explorative Phasen optimal macht.',
+            'Elicit ([elicit.com](https://elicit.com)) nutzt semantische Suche über 138M+ akademische Papiere und 545.000 klinische Versuche, um strukturierte Daten direkt aus PDFs zu extrahieren – Methodologien, Stichprobengrößen, Ergebnisse – ohne Keyword-Übereinstimmung zu erfordern. Consensus ([consensus.app](https://consensus.app)) durchsucht ~200 Millionen Papiere und gibt einen "Consensus Meter" zurück, der die wissenschaftliche Übereinstimmung (Ja / Nein / Möglich) zu einer bestimmten Frage zusammenfasst. Perplexity AI liefert die schnellsten allgemeinen zitierten Antworten über Web und akademische Literatur hinweg, was es für explorative Phasen optimal macht.',
           ],
           columns: ['Tool', 'Datenbank', 'Primäre Funktion', 'Kostenlos'],
           rows: [
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'La herramienta correcta para cada fase de investigación',
           content: [
             '**Ninguna herramienta de investigación con IA maneja bien todas las fases de investigación — los flujos de trabajo de mayor calidad enrutan cada tarea a la herramienta mejor diseñada para ello.**',
-            'Elicit (elicit.com) usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos para extraer datos estructurados directamente de PDFs — metodologías, tamaños de muestra, resultados — sin requerir coincidencias de palabras clave. Consensus (consensus.app) busca en ~200 millones de artículos y devuelve un "Consensus Meter" que resume el acuerdo científico (Sí / No / Posiblemente) sobre una pregunta específica. Perplexity AI proporciona las respuestas citadas de propósito general más rápidas tanto en la web abierta como en la literatura académica, haciéndola óptima para fases exploratorias.',
+            'Elicit ([elicit.com](https://elicit.com)) usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos para extraer datos estructurados directamente de PDFs — metodologías, tamaños de muestra, resultados — sin requerir coincidencias de palabras clave. Consensus ([consensus.app](https://consensus.app)) busca en ~200 millones de artículos y devuelve un "Consensus Meter" que resume el acuerdo científico (Sí / No / Posiblemente) sobre una pregunta específica. Perplexity AI proporciona las respuestas citadas de propósito general más rápidas tanto en la web abierta como en la literatura académica, haciéndola óptima para fases exploratorias.',
           ],
           columns: ['Herramienta', 'Base de Datos', 'Función Principal', 'Nivel Gratuito'],
           rows: [
@@ -1857,7 +1857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'الأداة الصحيحة لكل مرحلة بحثية',
           content: [
             '**لا توجد أداة بحث واحدة بالذكاء الاصطناعي تتعامل بشكل جيد مع جميع مراحل البحث — سير العمل الأعلى جودة تُوجِّه كل مهمة إلى الأداة الأفضل تصميمًا لها.**',
-            'Elicit (elicit.com) يستخدم البحث الدلالي في أكثر من 138 مليون ورقة أكاديمية و545 ألف تجربة سريرية لاستخراج بيانات منظمة مباشرةً من ملفات PDF — منهجيات وأحجام عينات ونتائج — دون الحاجة إلى مطابقة كلمات مفتاحية. Consensus (consensus.app) يبحث في ~200 مليون ورقة ويعيد "مؤشر Consensus" الذي يلخص الاتفاق العلمي (نعم/لا/ربما) حول سؤال محدد. Perplexity AI يوفر أسرع الإجابات المستشهد بها للأغراض العامة عبر الويب المفتوح والأدبيات الأكاديمية، مما يجعله الأمثل للمراحل الاستكشافية.',
+            'Elicit ([elicit.com](https://elicit.com)) يستخدم البحث الدلالي في أكثر من 138 مليون ورقة أكاديمية و545 ألف تجربة سريرية لاستخراج بيانات منظمة مباشرةً من ملفات PDF — منهجيات وأحجام عينات ونتائج — دون الحاجة إلى مطابقة كلمات مفتاحية. Consensus ([consensus.app](https://consensus.app)) يبحث في ~200 مليون ورقة ويعيد "مؤشر Consensus" الذي يلخص الاتفاق العلمي (نعم/لا/ربما) حول سؤال محدد. Perplexity AI يوفر أسرع الإجابات المستشهد بها للأغراض العامة عبر الويب المفتوح والأدبيات الأكاديمية، مما يجعله الأمثل للمراحل الاستكشافية.',
           ],
           columns: ['الأداة', 'قاعدة البيانات', 'الوظيفة الرئيسية', 'الطبقة المجانية'],
           rows: [
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'A ferramenta certa para cada fase de pesquisa',
           content: [
             '**Nenhuma ferramenta de pesquisa com IA lida bem com todas as fases de pesquisa — os fluxos de trabalho de maior qualidade encaminham cada tarefa para a ferramenta melhor projetada para isso.**',
-            'Elicit (elicit.com) usa busca semântica em mais de 138M de artigos acadêmicos e 545.000 ensaios clínicos para extrair dados estruturados diretamente de PDFs — metodologias, tamanhos de amostra, resultados — sem exigir correspondências de palavras-chave. Consensus (consensus.app) busca em ~200 milhões de artigos e retorna um "Consensus Meter" que resume o acordo científico (Sim / Não / Possivelmente) sobre uma pergunta específica. Perplexity AI fornece as respostas citadas de propósito geral mais rápidas tanto na web aberta quanto na literatura acadêmica, tornando-a ideal para fases exploratórias.',
+            'Elicit ([elicit.com](https://elicit.com)) usa busca semântica em mais de 138M de artigos acadêmicos e 545.000 ensaios clínicos para extrair dados estruturados diretamente de PDFs — metodologias, tamanhos de amostra, resultados — sem exigir correspondências de palavras-chave. Consensus ([consensus.app](https://consensus.app)) busca em ~200 milhões de artigos e retorna um "Consensus Meter" que resume o acordo científico (Sim / Não / Possivelmente) sobre uma pergunta específica. Perplexity AI fornece as respostas citadas de propósito geral mais rápidas tanto na web aberta quanto na literatura acadêmica, tornando-a ideal para fases exploratórias.',
           ],
           columns: ['Ferramenta', 'Banco de Dados', 'Função Principal', 'Nível Gratuito'],
           rows: [
@@ -2914,7 +2914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Le bon outil pour chaque étape de recherche',
           content: [
             '**Aucun outil de recherche IA unique ne gère bien toutes les étapes de recherche — les workflows de meilleure qualité acheminent chaque tâche vers l\'outil le mieux conçu pour elle.**',
-            'Elicit (elicit.com) utilise la recherche sémantique sur 138M+ articles académiques et 545 000 essais cliniques pour extraire des données structurées directement des PDFs — méthodologies, tailles d\'échantillon, résultats — sans nécessiter de correspondance par mots-clés. Consensus (consensus.app) recherche dans ~200 millions d\'articles et retourne un "Consensus Meter" résumant l\'accord scientifique (Oui / Non / Peut-être) sur une question spécifique. Perplexity AI fournit les réponses citées les plus rapides sur le web et la littérature académique, ce qui en fait un choix optimal pour les phases exploratoires.',
+            'Elicit ([elicit.com](https://elicit.com)) utilise la recherche sémantique sur 138M+ articles académiques et 545 000 essais cliniques pour extraire des données structurées directement des PDFs — méthodologies, tailles d\'échantillon, résultats — sans nécessiter de correspondance par mots-clés. Consensus ([consensus.app](https://consensus.app)) recherche dans ~200 millions d\'articles et retourne un "Consensus Meter" résumant l\'accord scientifique (Oui / Non / Peut-être) sur une question spécifique. Perplexity AI fournit les réponses citées les plus rapides sur le web et la littérature académique, ce qui en fait un choix optimal pour les phases exploratoires.',
           ],
           columns: ['Outil', 'Base de données', 'Fonction principale', 'Gratuit'],
           rows: [
@@ -4474,7 +4474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '각 연구 단계에 적합한 도구',
         content: [
           '**어떤 단일 AI 연구 도구도 모든 연구 단계를 잘 처리하지 못합니다 — 최고 품질의 워크플로우는 각 작업을 가장 잘 설계된 도구로 라우팅합니다.**',
-          'Elicit(elicit.com)은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하여 키워드 매칭 없이도 PDF에서 직접 방법론, 표본 크기, 결과를 비교 테이블로 추출합니다. Consensus(consensus.app)는 약 2억 개의 논문을 검색하고 특정 질문에 대한 과학적 합의(예/아니오/가능)를 요약하는 "Consensus Meter"를 반환합니다. Perplexity AI는 개방형 웹과 학술 문헌 모두에서 가장 빠른 범용 인용 응답을 제공하여 탐색 단계에 최적입니다.',
+          'Elicit([elicit.com](https://elicit.com))은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하여 키워드 매칭 없이도 PDF에서 직접 방법론, 표본 크기, 결과를 비교 테이블로 추출합니다. Consensus([consensus.app](https://consensus.app))는 약 2억 개의 논문을 검색하고 특정 질문에 대한 과학적 합의(예/아니오/가능)를 요약하는 "Consensus Meter"를 반환합니다. Perplexity AI는 개방형 웹과 학술 문헌 모두에서 가장 빠른 범용 인용 응답을 제공하여 탐색 단계에 최적입니다.',
         ],
         columns: ['도구', '데이터베이스', '주요 기능', '무료 티어'],
         rows: [

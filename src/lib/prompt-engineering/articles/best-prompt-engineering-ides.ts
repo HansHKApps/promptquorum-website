@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: System Prompt & Model Testing',
-        content: '**Anthropic Console (console.anthropic.com) is optimized for testing Claude models and system prompts.** You can craft complex system prompts, test against multiple Claude versions (Claude Sonnet 5, Claude Opus 5), and compare outputs side-by-side. Vision support for image inputs.',
+        content: '**Anthropic Console ([console.anthropic.com](https://console.anthropic.com)) is optimized for testing Claude models and system prompts.** You can craft complex system prompts, test against multiple Claude versions (Claude Sonnet 5, Claude Opus 5), and compare outputs side-by-side. Vision support for image inputs.',
         numberedItems: [
           'Best for Claude-specific development and system prompt refinement',
           'Supports Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (current versions)',
@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio: Free Gemini Experimentation',
-        content: '**Google AI Studio (aistudio.google.com) is Google\'s no-code playground for Gemini.** Free tier allows extensive exploration. Multimodal support: test prompts against text, images, videos, and audio. Drag-and-drop interface, no API key required to start.',
+        content: '**Google AI Studio ([aistudio.google.com](https://aistudio.google.com)) is Google\'s no-code playground for Gemini.** Free tier allows extensive exploration. Multimodal support: test prompts against text, images, videos, and audio. Drag-and-drop interface, no API key required to start.',
         numberedItems: [
           'Best for Gemini exploration and multimodal prompt testing',
           'Free tier includes video and audio input (no limits stated)',
@@ -299,11 +299,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Cursor Documentation (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: Systemprompt- und Modell-Tests',
-        content: '**Die Anthropic Console (console.anthropic.com) ist für das Testen von Claude-Modellen und Systemprompts optimiert.** Sie können komplexe Systemprompts erstellen, diese gegen mehrere Claude-Versionen (Claude Sonnet 5, Claude Opus 5) testen und Ausgaben direkt vergleichen. Vision-Unterstützung für Bildeingaben.',
+        content: '**Die Anthropic Console ([console.anthropic.com](https://console.anthropic.com)) ist für das Testen von Claude-Modellen und Systemprompts optimiert.** Sie können komplexe Systemprompts erstellen, diese gegen mehrere Claude-Versionen (Claude Sonnet 5, Claude Opus 5) testen und Ausgaben direkt vergleichen. Vision-Unterstützung für Bildeingaben.',
         numberedItems: [
           'Bestens geeignet für Claude-spezifische Entwicklung und Systemprompt-Optimierung',
           'Unterstützt Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (aktuelle Versionen)',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio: Kostenlose Gemini-Experimente',
-        content: '**Google AI Studio (aistudio.google.com) ist Googles No-Code-Playground für Gemini.** Das kostenlose Kontingent ermöglicht umfangreiche Erkundungen. Multimodale Unterstützung: Testen Sie Prompts mit Text, Bildern, Videos und Audio. Drag-and-Drop-Oberfläche, kein API-Schlüssel für den Einstieg erforderlich.',
+        content: '**Google AI Studio ([aistudio.google.com](https://aistudio.google.com)) ist Googles No-Code-Playground für Gemini.** Das kostenlose Kontingent ermöglicht umfangreiche Erkundungen. Multimodale Unterstützung: Testen Sie Prompts mit Text, Bildern, Videos und Audio. Drag-and-Drop-Oberfläche, kein API-Schlüssel für den Einstieg erforderlich.',
         numberedItems: [
           'Bestens geeignet für Gemini-Erkundung und multimodale Prompt-Tests',
           'Kostenloses Kontingent umfasst Video- und Audioeingaben (keine angegebenen Limits)',
@@ -603,11 +603,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Quellen',
         items: [
           '[Cursor-Dokumentation (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: testing de system prompts y modelos',
-        content: '**La Anthropic Console (console.anthropic.com) está optimizada para testear modelos Claude y system prompts.** Puedes crear system prompts complejos, testearlos contra múltiples versiones de Claude (Claude Sonnet 5, Claude Opus 5) y comparar outputs lado a lado. Soporte de visión para entradas de imagen.',
+        content: '**La Anthropic Console ([console.anthropic.com](https://console.anthropic.com)) está optimizada para testear modelos Claude y system prompts.** Puedes crear system prompts complejos, testearlos contra múltiples versiones de Claude (Claude Sonnet 5, Claude Opus 5) y comparar outputs lado a lado. Soporte de visión para entradas de imagen.',
         numberedItems: [
           'Ideal para desarrollo específico de Claude y refinamiento de system prompts',
           'Soporta Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versiones actuales)',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio: experimentación gratuita con Gemini',
-        content: '**Google AI Studio (aistudio.google.com) es el playground no-code de Google para Gemini.** El tier gratuito permite una exploración extensa. Soporte multimodal: testea prompts con texto, imágenes, vídeos y audio. Interfaz drag-and-drop, no se requiere clave API para empezar.',
+        content: '**Google AI Studio ([aistudio.google.com](https://aistudio.google.com)) es el playground no-code de Google para Gemini.** El tier gratuito permite una exploración extensa. Soporte multimodal: testea prompts con texto, imágenes, vídeos y audio. Interfaz drag-and-drop, no se requiere clave API para empezar.',
         numberedItems: [
           'Ideal para exploración de Gemini y testing multimodal de prompts',
           'El tier gratuito incluye entrada de vídeo y audio (sin límites indicados)',
@@ -905,11 +905,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes',
         items: [
           '[Documentación de Cursor (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: testes de system prompts e modelos',
-        content: '**A Anthropic Console (console.anthropic.com) é otimizada para testar modelos Claude e system prompts.** Você pode criar system prompts complexos, testá-los contra múltiplas versões do Claude (Claude Sonnet 5, Claude Opus 5) e comparar saídas lado a lado. Suporte de visão para entradas de imagem.',
+        content: '**A Anthropic Console ([console.anthropic.com](https://console.anthropic.com)) é otimizada para testar modelos Claude e system prompts.** Você pode criar system prompts complexos, testá-los contra múltiplas versões do Claude (Claude Sonnet 5, Claude Opus 5) e comparar saídas lado a lado. Suporte de visão para entradas de imagem.',
         numberedItems: [
           'Ideal para desenvolvimento específico de Claude e refinamento de system prompts',
           'Suporta Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versões atuais)',
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio: experimentação gratuita com Gemini',
-        content: '**Google AI Studio (aistudio.google.com) é o playground no-code do Google para Gemini.** O tier gratuito permite uma exploração extensa. Suporte multimodal: teste prompts com texto, imagens, vídeos e áudio. Interface drag-and-drop, não é necessária chave de API para começar.',
+        content: '**Google AI Studio ([aistudio.google.com](https://aistudio.google.com)) é o playground no-code do Google para Gemini.** O tier gratuito permite uma exploração extensa. Suporte multimodal: teste prompts com texto, imagens, vídeos e áudio. Interface drag-and-drop, não é necessária chave de API para começar.',
         numberedItems: [
           'Ideal para exploração do Gemini e testes multimodais de prompts',
           'O tier gratuito inclui entrada de vídeo e áudio (sem limites indicados)',
@@ -1205,11 +1205,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fontes',
         items: [
           '[Documentação do Cursor (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console : tests de system prompt et de modèle',
-        content: '**Anthropic Console (console.anthropic.com) est optimisé pour tester les modèles Claude et les system prompts.** Vous pouvez concevoir des system prompts complexes, les tester sur plusieurs versions de Claude (Claude Sonnet 5, Claude Opus 5) et comparer les sorties côte à côte. Support vision pour les entrées image.',
+        content: '**Anthropic Console ([console.anthropic.com](https://console.anthropic.com)) est optimisé pour tester les modèles Claude et les system prompts.** Vous pouvez concevoir des system prompts complexes, les tester sur plusieurs versions de Claude (Claude Sonnet 5, Claude Opus 5) et comparer les sorties côte à côte. Support vision pour les entrées image.',
         numberedItems: [
           'Idéal pour le développement spécifique à Claude et l\'optimisation des system prompts',
           'Supporte Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versions actuelles)',
@@ -1410,7 +1410,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio : expérimentation Gemini gratuite',
-        content: '**Google AI Studio (aistudio.google.com) est le playground no-code de Google pour Gemini.** La version gratuite permet une exploration étendue. Support multimodal : testez des prompts avec du texte, des images, des vidéos et de l\'audio. Interface drag-and-drop, aucune clé API requise pour commencer.',
+        content: '**Google AI Studio ([aistudio.google.com](https://aistudio.google.com)) est le playground no-code de Google pour Gemini.** La version gratuite permet une exploration étendue. Support multimodal : testez des prompts avec du texte, des images, des vidéos et de l\'audio. Interface drag-and-drop, aucune clé API requise pour commencer.',
         numberedItems: [
           'Idéal pour l\'exploration Gemini et les tests de prompts multimodaux',
           'La version gratuite inclut les entrées vidéo et audio (sans limites annoncées)',
@@ -1508,11 +1508,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Documentation Cursor (cursor.sh)](https://cursor.sh)',
-          '[GitHub Continue.dev (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[GitHub Continue.dev ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -1810,11 +1810,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '参考資料',
         items: [
           '[Cursorドキュメント (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -2112,11 +2112,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '参考资料',
         items: [
           '[Cursor文档 (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -2378,11 +2378,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'المصادر',
         items: [
           '[توثيق Cursor (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev على GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev على GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },
@@ -2570,7 +2570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: system 프롬프트 및 모델 테스트',
-        content: '**Anthropic Console(console.anthropic.com)은 Claude 모델과 system 프롬프트 테스트에 최적화되어 있습니다.** 복잡한 system 프롬프트를 작성하고, 여러 Claude 버전(Claude Sonnet 5, Claude Opus 5)에 대해 테스트하고, 출력을 나란히 비교할 수 있습니다. 이미지 입력을 위한 비전 지원.',
+        content: '**Anthropic Console([console.anthropic.com](https://console.anthropic.com))은 Claude 모델과 system 프롬프트 테스트에 최적화되어 있습니다.** 복잡한 system 프롬프트를 작성하고, 여러 Claude 버전(Claude Sonnet 5, Claude Opus 5)에 대해 테스트하고, 출력을 나란히 비교할 수 있습니다. 이미지 입력을 위한 비전 지원.',
         numberedItems: [
           'Claude 특화 개발 및 system 프롬프트 정제에 이상적',
           'Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 지원(현재 버전)',
@@ -2581,7 +2581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       googleAIStudio: {
         id: 'google-ai-studio',
         title: 'Google AI Studio: Gemini 무료 실험',
-        content: '**Google AI Studio(aistudio.google.com)는 Gemini를 위한 Google의 노코드 플레이그라운드입니다.** 무료 티어로 광범위한 탐색이 가능합니다. 멀티모달 지원: 텍스트, 이미지, 동영상, 오디오로 프롬프트를 테스트하십시오. 드래그 앤 드롭 인터페이스, 시작하는 데 API 키가 필요 없습니다.',
+        content: '**Google AI Studio([aistudio.google.com](https://aistudio.google.com))는 Gemini를 위한 Google의 노코드 플레이그라운드입니다.** 무료 티어로 광범위한 탐색이 가능합니다. 멀티모달 지원: 텍스트, 이미지, 동영상, 오디오로 프롬프트를 테스트하십시오. 드래그 앤 드롭 인터페이스, 시작하는 데 API 키가 필요 없습니다.',
         numberedItems: [
           'Gemini 탐색 및 멀티모달 프롬프트 테스트에 이상적',
           '무료 티어에 동영상 및 오디오 입력 포함(명시된 한도 없음)',
@@ -2679,11 +2679,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '출처',
         items: [
           '[Cursor 문서 (cursor.sh)](https://cursor.sh)',
-          '[Continue.dev GitHub (github.com/continuedev/continue)](https://github.com/continuedev/continue)',
-          '[OpenAI Playground (platform.openai.com/playground)](https://platform.openai.com/playground)',
-          '[Claude Console (console.anthropic.com)](https://console.anthropic.com)',
-          '[Google AI Studio (aistudio.google.com)](https://aistudio.google.com)',
-          '[LM Studio (lmstudio.ai)](https://lmstudio.ai)',
+          '[Continue.dev GitHub ([github.com/continuedev/continue](https://github.com/continuedev/continue))](https://github.com/continuedev/continue)',
+          '[OpenAI Playground ([platform.openai.com/playground](https://platform.openai.com/playground))](https://platform.openai.com/playground)',
+          '[Claude Console ([console.anthropic.com](https://console.anthropic.com))](https://console.anthropic.com)',
+          '[Google AI Studio ([aistudio.google.com](https://aistudio.google.com))](https://aistudio.google.com)',
+          '[LM Studio ([lmstudio.ai](https://lmstudio.ai))](https://lmstudio.ai)',
         ],
       },
     },

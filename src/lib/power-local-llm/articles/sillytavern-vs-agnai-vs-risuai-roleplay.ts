@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is SillyTavern only for adult roleplay?',
-            a: 'No. SillyTavern is a general-purpose chat frontend with character cards, persona management, and lore books — useful for any dialogue-heavy or character-driven creative work. Many writers use it for non-adult fiction drafting, multi-character scenes, voice-consistency work across long projects, screenwriting exercises, and game-narrative drafting. The community character ecosystem (chub.ai) includes adult content but is not limited to it.',
+            a: 'No. SillyTavern is a general-purpose chat frontend with character cards, persona management, and lore books — useful for any dialogue-heavy or character-driven creative work. Many writers use it for non-adult fiction drafting, multi-character scenes, voice-consistency work across long projects, screenwriting exercises, and game-narrative drafting. The community character ecosystem ([chub.ai](https://chub.ai)) includes adult content but is not limited to it.',
           },
           {
             q: 'How do I share characters with friends?',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist SillyTavern nur für Erwachsenen-Roleplay?',
-            a: 'Nein. SillyTavern ist eine Allzweck-Chat-Oberfläche mit Character Cards, Persona-Verwaltung und Lore-Büchern — nützlich für jede dialogreiche oder charaktergetriebene Kreativarbeit. Viele Autorinnen und Autoren verwenden es für nicht-adultes Fiction-Entwerfen, Multi-Charakter-Szenen, Stimmenkonsistenz-Arbeit über lange Projekte, Drehbuchübungen und Spielnarrativen-Entwurf. Das Community-Charakter-Ökosystem (chub.ai) enthält Adult-Inhalte, ist aber nicht darauf beschränkt.',
+            a: 'Nein. SillyTavern ist eine Allzweck-Chat-Oberfläche mit Character Cards, Persona-Verwaltung und Lore-Büchern — nützlich für jede dialogreiche oder charaktergetriebene Kreativarbeit. Viele Autorinnen und Autoren verwenden es für nicht-adultes Fiction-Entwerfen, Multi-Charakter-Szenen, Stimmenkonsistenz-Arbeit über lange Projekte, Drehbuchübungen und Spielnarrativen-Entwurf. Das Community-Charakter-Ökosystem ([chub.ai](https://chub.ai)) enthält Adult-Inhalte, ist aber nicht darauf beschränkt.',
           },
           {
             q: 'Wie teile ich Charaktere mit Freunden?',
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿SillyTavern es solo para roleplay adulto?',
-            a: 'No. SillyTavern es una interfaz de chat de propósito general con tarjetas de personaje, gestión de personas y libros de lore — útil para cualquier trabajo creativo con mucho diálogo o centrado en personajes. Muchos escritores lo usan para redacción de ficción no adulta, escenas multicarácter, trabajo de consistencia de voz en proyectos largos, ejercicios de escritura de guiones y redacción de narrativas de juegos. El ecosistema de personajes de la comunidad (chub.ai) incluye contenido adulto pero no se limita a él.',
+            a: 'No. SillyTavern es una interfaz de chat de propósito general con tarjetas de personaje, gestión de personas y libros de lore — útil para cualquier trabajo creativo con mucho diálogo o centrado en personajes. Muchos escritores lo usan para redacción de ficción no adulta, escenas multicarácter, trabajo de consistencia de voz en proyectos largos, ejercicios de escritura de guiones y redacción de narrativas de juegos. El ecosistema de personajes de la comunidad ([chub.ai](https://chub.ai)) incluye contenido adulto pero no se limita a él.',
           },
           {
             q: '¿Cómo comparto personajes con amigos?',
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'SillyTavern은 성인 롤플레이 전용입니까?',
-            a: '아니요. SillyTavern은 캐릭터 카드, 페르소나 관리, 로어북을 갖춘 범용 채팅 인터페이스입니다 — 많은 대화나 캐릭터 중심의 모든 창의적 작업에 유용합니다. 많은 작가들이 비성인 픽션 작성, 멀티캐릭터 장면, 장기 프로젝트의 목소리 일관성 작업, 스크립팅 연습, 게임 내러티브 작성에 사용합니다. 커뮤니티 캐릭터 생태계(chub.ai)는 성인 콘텐츠를 포함하지만 이에 국한되지 않습니다.',
+            a: '아니요. SillyTavern은 캐릭터 카드, 페르소나 관리, 로어북을 갖춘 범용 채팅 인터페이스입니다 — 많은 대화나 캐릭터 중심의 모든 창의적 작업에 유용합니다. 많은 작가들이 비성인 픽션 작성, 멀티캐릭터 장면, 장기 프로젝트의 목소리 일관성 작업, 스크립팅 연습, 게임 내러티브 작성에 사용합니다. 커뮤니티 캐릭터 생태계([chub.ai](https://chub.ai))는 성인 콘텐츠를 포함하지만 이에 국한되지 않습니다.',
           },
           {
             q: '친구들과 캐릭터를 어떻게 공유합니까?',
@@ -2466,7 +2466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'SillyTavern est-il réservé au roleplay adulte ?',
-            a: 'Non. SillyTavern est une interface de chat généraliste avec cartes de personnages, gestion de personas et livres de lore — utile pour tout travail créatif riche en dialogues ou axé sur les personnages. De nombreux auteurs l\'utilisent pour l\'ébauche de fiction non adulte, les scènes multi-personnages, le travail de cohérence de voix sur de longs projets, les exercices de scénario et l\'élaboration de narratifs de jeux. L\'écosystème communautaire (chub.ai) inclut du contenu adulte mais ne s\'y limite pas.',
+            a: 'Non. SillyTavern est une interface de chat généraliste avec cartes de personnages, gestion de personas et livres de lore — utile pour tout travail créatif riche en dialogues ou axé sur les personnages. De nombreux auteurs l\'utilisent pour l\'ébauche de fiction non adulte, les scènes multi-personnages, le travail de cohérence de voix sur de longs projets, les exercices de scénario et l\'élaboration de narratifs de jeux. L\'écosystème communautaire ([chub.ai](https://chub.ai)) inclut du contenu adulte mais ne s\'y limite pas.',
           },
           {
             q: 'Comment partager des personnages avec des amis ?',

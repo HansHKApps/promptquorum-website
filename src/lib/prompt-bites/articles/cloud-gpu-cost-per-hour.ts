@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Why does the same GPU cost so differently across providers?',
-            a: 'Managed clouds (Lambda, AWS, GCP) include support, SLAs, and dedicated hardware — they cost more. Marketplaces (Vast.ai) source from individual hosts, which can be interruptible. Region and demand also shift prices.',
+            a: 'Managed clouds (Lambda, AWS, GCP) include support, SLAs, and dedicated hardware — they cost more. Marketplaces ([Vast.ai](https://Vast.ai)) source from individual hosts, which can be interruptible. Region and demand also shift prices.',
           },
           {
             q: 'Are quoted rates inclusive of storage and bandwidth?',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Warum kostet dieselbe GPU bei verschiedenen Anbietern so unterschiedlich?',
-            a: 'Managed-Clouds (Lambda, AWS, GCP) beinhalten Support, SLAs und dedizierte Hardware — sie kosten mehr. Marktplätze (Vast.ai) beziehen von Einzel-Hosts, was unterbrechbar sein kann. Region und Nachfrage verschieben Preise ebenfalls.',
+            a: 'Managed-Clouds (Lambda, AWS, GCP) beinhalten Support, SLAs und dedizierte Hardware — sie kosten mehr. Marktplätze ([Vast.ai](https://Vast.ai)) beziehen von Einzel-Hosts, was unterbrechbar sein kann. Region und Nachfrage verschieben Preise ebenfalls.',
           },
           {
             q: 'Beinhalten genannte Tarife Speicher und Bandbreite?',
@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Pourquoi le même GPU coûte-t-il si différemment selon le fournisseur ?',
-            a: 'Les clouds managés (Lambda, AWS, GCP) incluent support, SLA et matériel dédié — plus cher. Les places de marché (Vast.ai) s\'appuient sur des hôtes individuels, parfois interruptibles. Région et demande font aussi varier les prix.',
+            a: 'Les clouds managés (Lambda, AWS, GCP) incluent support, SLA et matériel dédié — plus cher. Les places de marché ([Vast.ai](https://Vast.ai)) s\'appuient sur des hôtes individuels, parfois interruptibles. Région et demande font aussi varier les prix.',
           },
           {
             q: 'Les tarifs incluent-ils stockage et bande passante ?',
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '同じGPUがプロバイダごとに料金が違うのはなぜ？',
-            a: 'マネージドクラウド(Lambda、AWS、GCP)はサポート、SLA、専用ハードを含むため高くなります。マーケット(Vast.ai)は個人ホストが提供し、中断可能なこともあります。リージョンと需要も価格に影響します。',
+            a: 'マネージドクラウド(Lambda、AWS、GCP)はサポート、SLA、専用ハードを含むため高くなります。マーケット([Vast.ai](https://Vast.ai))は個人ホストが提供し、中断可能なこともあります。リージョンと需要も価格に影響します。',
           },
           {
             q: '提示の料金にストレージと帯域は含まれますか？',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '同一GPU不同提供商价格差异为何这么大？',
-            a: '托管云(Lambda、AWS、GCP)含支持、SLA与专属硬件 — 更贵。市场(Vast.ai)来自个人主机,可中断。区域与需求也左右价格。',
+            a: '托管云(Lambda、AWS、GCP)含支持、SLA与专属硬件 — 更贵。市场([Vast.ai](https://Vast.ai))来自个人主机,可中断。区域与需求也左右价格。',
           },
           {
             q: '报价是否包含存储与带宽？',
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Por que a mesma GPU custa tão diferente por provedor?',
-            a: 'Nuvens gerenciadas (Lambda, AWS, GCP) incluem suporte, SLA e hardware dedicado — são mais caras. Marketplaces (Vast.ai) são de hosts individuais, que podem ser interrompíveis. Região e demanda também deslocam os preços.',
+            a: 'Nuvens gerenciadas (Lambda, AWS, GCP) incluem suporte, SLA e hardware dedicado — são mais caras. Marketplaces ([Vast.ai](https://Vast.ai)) são de hosts individuais, que podem ser interrompíveis. Região e demanda também deslocam os preços.',
           },
           {
             q: 'As tarifas incluem armazenamento e largura de banda?',
@@ -972,7 +972,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Por qué el mismo GPU cuesta tan diferente según el proveedor?',
-            a: 'Las nubes gestionadas (Lambda, AWS, GCP) incluyen soporte, SLA y hardware dedicado — son más caras. Los marketplaces (Vast.ai) provienen de hosts individuales, que pueden ser interrumpibles. La región y la demanda también desplazan los precios.',
+            a: 'Las nubes gestionadas (Lambda, AWS, GCP) incluyen soporte, SLA y hardware dedicado — son más caras. Los marketplaces ([Vast.ai](https://Vast.ai)) provienen de hosts individuales, que pueden ser interrumpibles. La región y la demanda también desplazan los precios.',
           },
           {
             q: '¿Las tarifas incluyen almacenamiento y ancho de banda?',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'لماذا يتفاوت سعر نفس GPU بين المزودين تفاوتًا كبيرًا؟',
-            a: 'السحابات المُدارة (Lambda وAWS وGCP) تشمل الدعم واتفاقيات مستوى الخدمة والأجهزة المخصصة — وهذا يرفع السعر. الأسواق (Vast.ai) تعمل عبر مضيفين أفراد وقد تكون قابلة للمقاطعة. المنطقة الجغرافية والطلب يؤثران أيضًا على الأسعار.',
+            a: 'السحابات المُدارة (Lambda وAWS وGCP) تشمل الدعم واتفاقيات مستوى الخدمة والأجهزة المخصصة — وهذا يرفع السعر. الأسواق ([Vast.ai](https://Vast.ai)) تعمل عبر مضيفين أفراد وقد تكون قابلة للمقاطعة. المنطقة الجغرافية والطلب يؤثران أيضًا على الأسعار.',
           },
           {
             q: 'هل الأسعار المذكورة تشمل التخزين وعرض النطاق الترددي؟',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '같은 GPU가 공급업체마다 가격이 크게 다른 이유는 무엇입니까?',
-            a: '관리형 클라우드(Lambda, AWS, GCP)는 지원, SLA, 전용 하드웨어를 포함하므로 더 비쌉니다. 마켓플레이스(Vast.ai)는 개인 호스트로부터 제공되며 인터럽트 가능할 수 있습니다. 지역과 수요도 가격에 영향을 줍니다.',
+            a: '관리형 클라우드(Lambda, AWS, GCP)는 지원, SLA, 전용 하드웨어를 포함하므로 더 비쌉니다. 마켓플레이스([Vast.ai](https://Vast.ai))는 개인 호스트로부터 제공되며 인터럽트 가능할 수 있습니다. 지역과 수요도 가격에 영향을 줍니다.',
           },
           {
             q: '표시된 요금에 스토리지와 대역폭이 포함됩니까?',
