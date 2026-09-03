@@ -759,6 +759,9 @@ const HUB_THEMES: Array<{
       'run-ai-on-tablet-ipad-android',
       'mobile-llm-models-phi4-gemma-smollm',
       'voice-assistant-local-mobile-offline',
+      'edge-ai-hardware-for-local-llms',
+      'vla-models-robots-local-inference',
+      'vlm-video-analytics-drones-edge',
     ],
   },
   {

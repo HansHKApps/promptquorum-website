@@ -12,9 +12,6 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
 import { CostCalculator } from '@/components/CostCalculator'
-import { EdgeHardwareSelector } from '@/components/EdgeHardwareSelector'
-import { RobotInferenceBudgetCalculator } from '@/components/RobotInferenceBudgetCalculator'
-import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
@@ -469,24 +466,6 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {section.component === 'CostCalculator' && (
         <div className="my-8">
           <CostCalculator />
-        </div>
-      )}
-
-      {section.component === 'EdgeHardwareSelector' && (
-        <div className="my-8">
-          <EdgeHardwareSelector />
-        </div>
-      )}
-
-      {section.component === 'RobotInferenceBudgetCalculator' && (
-        <div className="my-8">
-          <RobotInferenceBudgetCalculator />
-        </div>
-      )}
-
-      {section.component === 'EdgeVideoBandwidthCalculator' && (
-        <div className="my-8">
-          <EdgeVideoBandwidthCalculator />
         </div>
       )}
 

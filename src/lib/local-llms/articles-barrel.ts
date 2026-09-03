@@ -70,9 +70,6 @@ import { article as a_apple_on_device_ai_vs_local_llms } from "./articles/apple-
 import { article as a_uae_pdpl_data_sovereignty_local_ai_2026 } from "./articles/uae-pdpl-data-sovereignty-local-ai-2026";
 import { article as a_best_arabic_local_llms_2026 } from "./articles/best-arabic-local-llms-2026";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
-import { article as a_edge_ai_hardware_for_local_llms } from "./articles/edge-ai-hardware-for-local-llms";
-import { article as a_vla_models_robots_local_inference } from "./articles/vla-models-robots-local-inference";
-import { article as a_vlm_video_analytics_drones_edge } from "./articles/vlm-video-analytics-drones-edge";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
 import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
@@ -206,9 +203,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llms-with-vscode-cursor": a_local_llms_with_vscode_cursor,
   "headless-local-llms": a_headless_local_llms,
   "local-llm-hardware-guide-2026": a_local_llm_hardware_guide_2026,
-  "edge-ai-hardware-for-local-llms": a_edge_ai_hardware_for_local_llms,
-  "vla-models-robots-local-inference": a_vla_models_robots_local_inference,
-  "vlm-video-analytics-drones-edge": a_vlm_video_analytics_drones_edge,
   "vram-calculator-local-llm": a_vram_calculator_local_llm,
   "gpu-vs-cpu-vs-apple-silicon": a_gpu_vs_cpu_vs_apple_silicon,
   "apple-silicon-vs-nvidia-gpu-local-llm": a_apple_silicon_vs_nvidia_gpu_local_llm,

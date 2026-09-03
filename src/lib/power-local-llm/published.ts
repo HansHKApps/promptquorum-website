@@ -170,6 +170,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'librechat-review-2026',
   // Hermes Agent (Nous Research) self-hosted agent review — 2026-09-03
   'hermes-agent-review-2026',
+
+  // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster.
+  // Published (not left in the default-closed state new power-local-llm slugs get)
+  // because they were live and indexed under /local-llms/ during the brief interim
+  // move there — this keeps them continuously indexed through the second move.
+  'edge-ai-hardware-for-local-llms',
+  'vla-models-robots-local-inference',
+  'vlm-video-analytics-drones-edge',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
