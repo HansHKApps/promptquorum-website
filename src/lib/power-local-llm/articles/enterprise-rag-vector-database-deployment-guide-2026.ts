@@ -78,6 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (managed Milvus)', productCategory: 'dev-tool', priceRange: 'Serverless + committed-use tiers', label: 'See Zilliz Cloud Pricing →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'Contact sales for enterprise tier', label: 'See Pinecone Enterprise →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'Custom enterprise pricing', label: 'See Qdrant Cloud Tiers →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'From $45/mo', label: 'See Weaviate Pricing →' },
     ],
     sections: {
       tldr: {
@@ -346,6 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (Managed Milvus)', productCategory: 'dev-tool', priceRange: 'Serverless + Committed-Use-Stufen', label: 'Zilliz Cloud Preise ansehen →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'Enterprise-Stufe auf Anfrage', label: 'Pinecone Enterprise ansehen →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'Individuelle Enterprise-Preise', label: 'Qdrant Cloud Stufen ansehen →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Ab 45 $/Mon.', label: 'Weaviate-Preise ansehen →' },
     ],
     sections: {
       tldr: {
@@ -614,6 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (Milvus managé)', productCategory: 'dev-tool', priceRange: 'Serverless + paliers committed-use', label: 'Voir les tarifs Zilliz Cloud →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'Contacter les ventes pour le palier entreprise', label: 'Voir Pinecone Enterprise →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'Tarification entreprise personnalisée', label: 'Voir les paliers Qdrant Cloud →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Dès 45 $/mois', label: 'Voir les tarifs Weaviate →' },
     ],
     sections: {
       tldr: {
@@ -882,6 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (Milvus gestionado)', productCategory: 'dev-tool', priceRange: 'Niveles serverless + uso comprometido', label: 'Ver precios de Zilliz Cloud →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'Contactar ventas para nivel empresarial', label: 'Ver Pinecone Enterprise →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'Precios empresariales personalizados', label: 'Ver niveles de Qdrant Cloud →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Desde $45/mes', label: 'Ver precios de Weaviate →' },
     ],
     sections: {
       tldr: {
@@ -1150,6 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (Milvus gerenciado)', productCategory: 'dev-tool', priceRange: 'Serverless + níveis de uso comprometido', label: 'Ver preços do Zilliz Cloud →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'Contate vendas para o nível empresarial', label: 'Ver Pinecone Enterprise →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'Preços empresariais personalizados', label: 'Ver níveis do Qdrant Cloud →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'A partir de $45/mês', label: 'Ver preços do Weaviate →' },
     ],
     sections: {
       tldr: {
@@ -1418,6 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud（マネージドMilvus）', productCategory: 'dev-tool', priceRange: 'サーバーレス + コミット利用型', label: 'Zilliz Cloudの料金を見る →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'エンタープライズ層は要問い合わせ', label: 'Pinecone Enterpriseを見る →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'カスタムエンタープライズ料金', label: 'Qdrant Cloudの各プランを見る →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '月45ドルから', label: 'Weaviateの料金を見る →' },
     ],
     sections: {
       tldr: {
@@ -1686,6 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud（托管版Milvus）', productCategory: 'dev-tool', priceRange: 'Serverless + 承诺用量等级', label: '查看Zilliz Cloud定价 →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: '企业版需联系销售', label: '查看Pinecone Enterprise →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: '定制企业定价', label: '查看Qdrant Cloud各等级 →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/月起', label: '查看Weaviate定价 →' },
     ],
     sections: {
       tldr: {
@@ -1954,6 +1961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (نسخة Milvus المُدارة)', productCategory: 'dev-tool', priceRange: 'خالٍ من الخادم + مستويات استخدام ملتزم', label: 'عرض أسعار Zilliz Cloud ←' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: 'تواصل مع المبيعات للمستوى المؤسسي', label: 'عرض Pinecone Enterprise ←' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: 'تسعير مؤسسي مخصص', label: 'عرض مستويات Qdrant Cloud ←' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'من 45$/شهرياً', label: 'عرض أسعار Weaviate ←' },
     ],
     sections: {
       tldr: {
@@ -2222,6 +2230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://zilliz.com/pricing', productName: 'Zilliz Cloud (매니지드 Milvus)', productCategory: 'dev-tool', priceRange: '서버리스 + 약정 사용량 등급', label: 'Zilliz Cloud 요금 보기 →' },
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone Enterprise', productCategory: 'dev-tool', priceRange: '기업용 등급은 영업팀 문의', label: 'Pinecone Enterprise 보기 →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Hybrid/Private Cloud', productCategory: 'dev-tool', priceRange: '맞춤형 기업용 요금', label: 'Qdrant Cloud 등급 보기 →' },
+      { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/월부터', label: 'Weaviate 가격 보기 →' },
     ],
     sections: {
       tldr: {

@@ -63,6 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Free–$50/mo+', label: 'See Pinecone Pricing →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Free forever tier', label: 'Try Qdrant Free →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'From $45/mo', label: 'See Weaviate Pricing →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Free–$250/mo+', label: 'See Chroma Pricing →' },
     ],
     sections: {
       tldr: {
@@ -513,6 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Kostenlos–50 $/Mon.+', label: 'Pinecone-Preise ansehen →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Für immer kostenlose Stufe', label: 'Qdrant kostenlos testen →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Ab 45 $/Mon.', label: 'Weaviate-Preise ansehen →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Kostenlos–250 $/Mon.+', label: 'Chroma-Preise ansehen →' },
     ],
     sections: {
       tldr: {
@@ -893,6 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Gratuit–50 $/mois+', label: 'Voir les tarifs Pinecone →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Palier gratuit à vie', label: 'Essayer Qdrant gratuitement →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Dès 45 $/mois', label: 'Voir les tarifs Weaviate →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Gratuit–250 $/mois+', label: 'Voir les tarifs Chroma →' },
     ],
     sections: {
       tldr: {
@@ -1247,6 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Gratis–$50/mes+', label: 'Ver precios de Pinecone →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Nivel gratis para siempre', label: 'Probar Qdrant gratis →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'Desde $45/mes', label: 'Ver precios de Weaviate →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Gratis–$250/mes+', label: 'Ver precios de Chroma →' },
     ],
     sections: {
       tldr: {
@@ -1601,6 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '無料〜月50ドル+', label: 'Pineconeの料金を見る →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '永久無料層', label: 'Qdrantを無料で試す →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '月45ドルから', label: 'Weaviateの料金を見る →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '無料〜月250ドル+', label: 'Chromaの料金を見る →' },
     ],
     sections: {
       tldr: {
@@ -1955,6 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '免费–$50/月+', label: '查看Pinecone定价 →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '永久免费层', label: '免费试用Qdrant →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/月起', label: '查看Weaviate定价 →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '免费–$250/月+', label: '查看Chroma定价 →' },
     ],
     sections: {
       tldr: {
@@ -2309,6 +2315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'Grátis–$50/mês+', label: 'Ver preços do Pinecone →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'Camada gratuita para sempre', label: 'Testar o Qdrant grátis →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'A partir de $45/mês', label: 'Ver preços do Weaviate →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'Grátis–$250/mês+', label: 'Ver preços do Chroma →' },
     ],
     sections: {
       tldr: {
@@ -2639,6 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: 'مجاني–50$/شهرياً+', label: 'عرض أسعار Pinecone ←' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: 'طبقة مجانية للأبد', label: 'جرّب Qdrant مجاناً ←' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: 'من 45$/شهرياً', label: 'عرض أسعار Weaviate ←' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: 'مجاني–250$/شهرياً+', label: 'عرض أسعار Chroma ←' },
     ],
     sections: {
       tldr: {
@@ -2969,6 +2977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.pinecone.io/pricing/', productName: 'Pinecone', productCategory: 'dev-tool', priceRange: '무료–$50/월+', label: 'Pinecone 가격 보기 →' },
       { url: 'https://qdrant.tech/pricing/', productName: 'Qdrant Cloud', productCategory: 'dev-tool', priceRange: '영구 무료 계층', label: 'Qdrant 무료로 시작하기 →' },
       { url: 'https://weaviate.io/pricing/serverless', productName: 'Weaviate Cloud', productCategory: 'dev-tool', priceRange: '$45/월부터', label: 'Weaviate 가격 보기 →' },
+      { url: 'https://www.trychroma.com/pricing', productName: 'Chroma', productCategory: 'dev-tool', priceRange: '무료–$250/월+', label: 'Chroma 가격 보기 →' },
     ],
     sections: {
       tldr: {
