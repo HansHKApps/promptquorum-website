@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'docker-setup',
         title: 'Docker API Server Setup — Ollama + Open WebUI + Nginx',
         content:
-          '**The fastest production Qwen stack is three containers: Ollama (inference), Open WebUI (UI), and Nginx (reverse proxy + auth).** This setup takes under 10 minutes and exposes a permanent OpenAI-compatible API at `http://your-server:11434/v1`.',
+          '**The fastest production Qwen stack is three containers: Ollama (inference), Open WebUI (UI), and Nginx (reverse proxy + auth).** This setup takes under 10 minutes and exposes a permanent OpenAI-compatible API at `[your-server:11434/v1](http://your-server:11434/v1)`.',
         numberedItems: [
           {
             title: 'Install Docker and Docker Compose',
@@ -1320,7 +1320,7 @@ docker run --gpus all \\
         id: 'docker-setup',
         title: 'Configuración del servidor API con Docker — Ollama + Open WebUI + Nginx',
         content:
-          '**El stack Qwen de producción más rápido consta de tres contenedores: Ollama (inferencia), Open WebUI (UI) y Nginx (reverse proxy + autenticación).** Esta configuración tarda menos de 10 minutos y expone una API permanente compatible con OpenAI en `http://tu-servidor:11434/v1`.',
+          '**El stack Qwen de producción más rápido consta de tres contenedores: Ollama (inferencia), Open WebUI (UI) y Nginx (reverse proxy + autenticación).** Esta configuración tarda menos de 10 minutos y expone una API permanente compatible con OpenAI en `[tu-servidor:11434/v1](http://tu-servidor:11434/v1)`.',
         numberedItems: [
           {
             title: 'Instala Docker y Docker Compose',
@@ -1866,7 +1866,7 @@ docker run --gpus all \\
         id: 'docker-setup',
         title: 'Configuração do servidor API com Docker — Ollama + Open WebUI + Nginx',
         content:
-          '**O stack Qwen de produção mais rápido consiste em três contêineres: Ollama (inferência), Open WebUI (UI) e Nginx (reverse proxy + autenticação).** Essa configuração leva menos de 10 minutos e expõe uma API permanente compatível com OpenAI em `http://seu-servidor:11434/v1`.',
+          '**O stack Qwen de produção mais rápido consiste em três contêineres: Ollama (inferência), Open WebUI (UI) e Nginx (reverse proxy + autenticação).** Essa configuração leva menos de 10 minutos e expõe uma API permanente compatível com OpenAI em `[seu-servidor:11434/v1](http://seu-servidor:11434/v1)`.',
         numberedItems: [
           {
             title: 'Instale o Docker e o Docker Compose',
@@ -2811,7 +2811,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'docker-setup',
         title: 'Docker API 서버 설정 — Ollama + Open WebUI + Nginx',
         content:
-          '**가장 빠른 Qwen 프로덕션 스택은 세 가지 컨테이너로 구성됩니다: Ollama(추론), Open WebUI(UI), Nginx(리버스 프록시 + 인증).** 이 설정은 10분 이내에 완료되며 `http://your-server:11434/v1`에 영구적인 OpenAI 호환 API를 노출합니다.',
+          '**가장 빠른 Qwen 프로덕션 스택은 세 가지 컨테이너로 구성됩니다: Ollama(추론), Open WebUI(UI), Nginx(리버스 프록시 + 인증).** 이 설정은 10분 이내에 완료되며 `[your-server:11434/v1](http://your-server:11434/v1)`에 영구적인 OpenAI 호환 API를 노출합니다.',
         numberedItems: [
           {
             title: 'Docker 및 Docker Compose를 설치합니다',

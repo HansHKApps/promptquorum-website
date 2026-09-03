@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Create a working directory (e.g., `~/n8n-stack`) and add a `docker-compose.yml` file that defines an n8n service with persistent volume — see code block below.',
           'Run `docker compose up -d` from that directory. n8n starts on `http://localhost:5678`.',
           'Open `http://localhost:5678`, create the local admin account, and verify the dashboard loads.',
-          'In n8n, add an Ollama credential: Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) or `http://172.17.0.1:11434` (Linux).',
+          'In n8n, add an Ollama credential: Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) or `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           'Import the first workflow JSON (Workflow 1: Gmail to Notion is the highest-value first build).',
           'Add Gmail and Notion OAuth credentials in n8n. The flow is identical to Zapier — n8n redirects you to each provider, then stores the access + refresh token.',
           'Test the workflow with the "Execute Workflow" button before activating the schedule. Activate when output looks correct.',
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loop over messages: pass subject + first 1,000 characters of the body to the Ollama node.',
           'Ollama prompt: classify as one of {Action, FYI, Newsletter}, then write a 2-sentence summary. Ask for JSON output: `{"category": "...", "summary": "..."}`.',
           'JSON parse node: extract `category` and `summary` fields.',
-          'Notion node: create a new page in your "Inbox" database with title = email subject, properties = sender, category, summary, and a URL field linking to `https://mail.google.com/mail/u/0/#inbox/<messageId>`.',
+          'Notion node: create a new page in your "Inbox" database with title = email subject, properties = sender, category, summary, and a URL field linking to `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`.',
           'Optional: archive or label the Gmail message after processing to prevent reprocessing on the next run.',
         ],
         callouts: [
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What about webhooks — can I receive them locally?',
-            a: 'Yes, but you need a public tunnel. Cloudflare Tunnel is free and gives you a stable hostname like `https://abc.trycloudflare.com` that forwards to your local n8n. Run `cloudflared` as a systemd or launchd service for 24/7 uptime. ngrok works too but the free tier rotates URLs.',
+            a: 'Yes, but you need a public tunnel. Cloudflare Tunnel is free and gives you a stable hostname like `[abc.trycloudflare.com](https://abc.trycloudflare.com)` that forwards to your local n8n. Run `cloudflared` as a systemd or launchd service for 24/7 uptime. ngrok works too but the free tier rotates URLs.',
           },
           {
             q: 'Does n8n self-hosted work with local LLMs?',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein Arbeitsverzeichnis erstellen (z. B. `~/n8n-stack`) und eine `docker-compose.yml`-Datei hinzufügen, die einen n8n-Service mit persistentem Volume definiert — siehe Code-Block unten.',
           '`docker compose up -d` in diesem Verzeichnis ausführen. n8n startet auf `http://localhost:5678`.',
           '`http://localhost:5678` öffnen, das lokale Admin-Konto erstellen und überprüfen, dass das Dashboard lädt.',
-          'In n8n eine Ollama-Anmeldedaten hinzufügen: Settings → Credentials → New → Ollama → Basis-URL `http://host.docker.internal:11434` (macOS/Windows) oder `http://172.17.0.1:11434` (Linux).',
+          'In n8n eine Ollama-Anmeldedaten hinzufügen: Settings → Credentials → New → Ollama → Basis-URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) oder `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           'Den ersten Workflow JSON importieren (Workflow 1: Gmail zu Notion ist der höchste Wert beim ersten Aufbau).',
           'Gmail- und Notion-OAuth-Anmeldedaten in n8n hinzufügen. Der Flow ist identisch mit Zapier — n8n leitet Sie zu jedem Provider weiter, speichert dann Access- und Refresh-Token.',
           'Den Workflow mit der Schaltfläche "Execute Workflow" testen, bevor Sie den Zeitplan aktivieren. Aktivieren, wenn die Ausgabe korrekt aussieht.',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über Nachrichten loopen: Betreff + erste 1.000 Zeichen des Body an den Ollama-Knoten weitergeben.',
           'Ollama-Prompt: Klassifizieren als eine von {Action, FYI, Newsletter}, dann eine 2-Satz-Zusammenfassung schreiben. JSON-Ausgabe anfordern: `{"category": "...", "summary": "..."}`.',
           'JSON-Parse-Knoten: `category` und `summary`-Felder extrahieren.',
-          'Notion-Knoten: Neue Seite in Ihrer "Inbox"-Datenbank erstellen mit title = E-Mail-Betreff, Eigenschaften = Absender, Kategorie, Zusammenfassung und ein URL-Feld, das auf `https://mail.google.com/mail/u/0/#inbox/<messageId>` verlinkt.',
+          'Notion-Knoten: Neue Seite in Ihrer "Inbox"-Datenbank erstellen mit title = E-Mail-Betreff, Eigenschaften = Absender, Kategorie, Zusammenfassung und ein URL-Feld, das auf `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>` verlinkt.',
           'Optional: Gmail-Nachricht nach der Verarbeitung archivieren oder kennzeichnen, um eine erneute Verarbeitung beim nächsten Durchlauf zu verhindern.',
         ],
         callouts: [
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist mit Webhooks — kann ich sie lokal erhalten?',
-            a: 'Ja, aber Sie brauchen einen öffentlichen Tunnel. Cloudflare Tunnel ist kostenlos und gibt Ihnen einen stabilen Hostname wie `https://abc.trycloudflare.com`, der zu Ihrem lokalen n8n weiterleitet. `cloudflared` als systemd- oder launchd-Service für 24/7-Verfügbarkeit ausführen. ngrok funktioniert auch, aber der Kostenlos-Tier rotiert URLs.',
+            a: 'Ja, aber Sie brauchen einen öffentlichen Tunnel. Cloudflare Tunnel ist kostenlos und gibt Ihnen einen stabilen Hostname wie `[abc.trycloudflare.com](https://abc.trycloudflare.com)`, der zu Ihrem lokalen n8n weiterleitet. `cloudflared` als systemd- oder launchd-Service für 24/7-Verfügbarkeit ausführen. ngrok funktioniert auch, aber der Kostenlos-Tier rotiert URLs.',
           },
           {
             q: 'Funktioniert n8n selbstgehostet mit lokalen LLMs?',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Créer un répertoire de travail (par exemple `~/n8n-stack`) et ajouter un fichier `docker-compose.yml` qui définit un service n8n avec un volume persistant — voir le bloc de code ci-dessous.',
           'Exécuter `docker compose up -d` depuis ce répertoire. n8n démarre sur `http://localhost:5678`.',
           'Ouvrir `http://localhost:5678`, créer le compte administrateur local et vérifier que le tableau de bord se charge.',
-          'Dans n8n, ajouter les identifiants Ollama : Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) ou `http://172.17.0.1:11434` (Linux).',
+          'Dans n8n, ajouter les identifiants Ollama : Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) ou `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           'Importer le premier JSON de workflow (Workflow 1 : Gmail vers Notion est la valeur la plus élevée pour la première construction).',
           'Ajouter les identifiants OAuth Gmail et Notion dans n8n. Le flux est identique à Zapier — n8n vous redirige vers chaque fournisseur, puis stocke le token d\'accès + actualisation.',
           'Tester le workflow avec le bouton "Execute Workflow" avant d\'activer l\'horaire. Activer quand la sortie semble correcte.',
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Boucler sur les messages : passer le sujet + les 1 000 premiers caractères du corps au nœud Ollama.',
           'Prompt Ollama : classer comme l\'un de {Action, FYI, Newsletter}, puis écrire un résumé de 2 phrases. Demander une sortie JSON : `{"category": "...", "summary": "..."}`.',
           'Nœud JSON parse : extraire les champs `category` et `summary`.',
-          'Nœud Notion : créer une nouvelle page dans votre base de données "Inbox" avec title = sujet de l\'e-mail, propriétés = expéditeur, catégorie, résumé et champ URL lié à `https://mail.google.com/mail/u/0/#inbox/<messageId>`.',
+          'Nœud Notion : créer une nouvelle page dans votre base de données "Inbox" avec title = sujet de l\'e-mail, propriétés = expéditeur, catégorie, résumé et champ URL lié à `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`.',
           'Optionnel : archiver ou étiqueter le message Gmail après traitement pour éviter un retraitement lors de la prochaine exécution.',
         ],
         callouts: [
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Et les webhooks — puis-je les recevoir localement ?',
-            a: 'Oui, mais vous avez besoin d\'un tunnel public. Tunnel Cloudflare est gratuit et vous donne un nom d\'hôte stable comme `https://abc.trycloudflare.com` qui redirige vers votre n8n local. Exécuter `cloudflared` comme service systemd ou launchd pour la disponibilité 24/7. ngrok fonctionne aussi mais le tier gratuit fait pivoter les URLs.',
+            a: 'Oui, mais vous avez besoin d\'un tunnel public. Tunnel Cloudflare est gratuit et vous donne un nom d\'hôte stable comme `[abc.trycloudflare.com](https://abc.trycloudflare.com)` qui redirige vers votre n8n local. Exécuter `cloudflared` comme service systemd ou launchd pour la disponibilité 24/7. ngrok fonctionne aussi mais le tier gratuit fait pivoter les URLs.',
           },
           {
             q: 'n8n auto-hébergé fonctionne-t-il avec les LLMs locaux ?',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ワーキングディレクトリ作成 (例 `~/n8n-stack`)、persistent volume 定義 n8n service の `docker-compose.yml` ファイル追加 — 下のコードブロック参照。',
           '`docker compose up -d` このディレクトリから実行。n8n は `http://localhost:5678` で起動。',
           '`http://localhost:5678` 開く、ローカル管理者アカウント作成、ダッシュボード読み込み確認。',
-          'n8n で Ollama クレデンシャル追加：Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) または `http://172.17.0.1:11434` (Linux)。',
+          'n8n で Ollama クレデンシャル追加：Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) または `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux)。',
           '最初のワークフロー JSON インポート (ワークフロー1：Gmail→Notion は最初の構築に最高価値)。',
           'n8n に Gmail と Notion OAuth クレデンシャル追加。フロー Zapier と同じ — n8n が各プロバイダーにリダイレクト、access + refresh token 保存。',
           '\"Execute Workflow\" ボタンでテスト、スケジュール有効化前に出力確認。出力正常に見えたら有効化。',
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'メッセージ毎にループ：件名 + 最初の1,000文字 body を Ollama ノードへ pass。',
           'Ollama prompt：{Action, FYI, Newsletter} の1つに分類、2文要約を書く。JSON 出力要求：`{"category": "...", "summary": "..."}`。',
           'JSON parse ノード：`category` と `summary` フィールド抽出。',
-          'Notion ノード：\"Inbox\" DB に新ページ作成、title = メール件名、properties = 送信者・カテゴリ・要約、URL フィールドは `https://mail.google.com/mail/u/0/#inbox/<messageId>` へリンク。',
+          'Notion ノード：\"Inbox\" DB に新ページ作成、title = メール件名、properties = 送信者・カテゴリ・要約、URL フィールドは `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>` へリンク。',
           'オプション：処理後メッセージをアーカイブ或いはラベル付け、次回実行時の再処理防止。',
         ],
         callouts: [
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'webhook は？ローカル受信可？',
-            a: 'はい、ただし public tunnel 必須。Cloudflare Tunnel が無料、`https://abc.trycloudflare.com` のような stable hostname 提供、ローカル n8n へ forward。24/7 稼働用 systemd or launchd service で `cloudflared` 実行。ngrok も動くが free tier が URL rotate。',
+            a: 'はい、ただし public tunnel 必須。Cloudflare Tunnel が無料、`[abc.trycloudflare.com](https://abc.trycloudflare.com)` のような stable hostname 提供、ローカル n8n へ forward。24/7 稼働用 systemd or launchd service で `cloudflared` 実行。ngrok も動くが free tier が URL rotate。',
           },
           {
             q: 'n8n self-hosted、ローカル LLM で work？',
@@ -2118,7 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '创建工作目录（如 `~/n8n-stack`）并添加定义 n8n 服务和持久卷的 `docker-compose.yml` 文件 —— 见下面代码块。',
           '从该目录运行 `docker compose up -d`。n8n 在 `http://localhost:5678` 启动。',
           '打开 `http://localhost:5678`，创建本地管理员账户，验证仪表板加载。',
-          '在 n8n 中添加 Ollama 凭证：Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434`(macOS/Windows) 或 `http://172.17.0.1:11434`(Linux)。',
+          '在 n8n 中添加 Ollama 凭证：Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)`(macOS/Windows) 或 `[172.17.0.1:11434](http://172.17.0.1:11434)`(Linux)。',
           '导入第一个工作流 JSON（工作流 1：Gmail 到 Notion 是首次构建的最高价值）。',
           '在 n8n 中添加 Gmail 和 Notion OAuth 凭证。流程与 Zapier 相同 —— n8n 重定向你到每个提供商，然后存储 access + refresh token。',
           '使用"Execute Workflow"按钮测试，在激活计划前验证输出。输出看起来正确时激活。',
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '循环消息：将主题 + 前 1,000 个字符正文传给 Ollama 节点。',
           'Ollama 提示：分类为 {Action、FYI、Newsletter} 之一，然后写 2 句摘要。请求 JSON 输出：`{"category": "...", "summary": "..."}`。',
           'JSON 解析节点：提取 `category` 和 `summary` 字段。',
-          'Notion 节点：在"Inbox"数据库中创建新页面，标题 = 邮件主题，属性 = 发件人、类别、摘要，URL 字段链接到 `https://mail.google.com/mail/u/0/#inbox/<messageId>`。',
+          'Notion 节点：在"Inbox"数据库中创建新页面，标题 = 邮件主题，属性 = 发件人、类别、摘要，URL 字段链接到 `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`。',
           '可选：处理后归档或标记 Gmail 消息，防止下次运行时重新处理。',
         ],
         callouts: [
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'webhook —— 能本地接收吗？',
-            a: '能，但需公开隧道。Cloudflare Tunnel 免费并给你像 `https://abc.trycloudflare.com` 的稳定主机名，转发到本地 n8n。24/7 稼动用 systemd 或 launchd 服务运行 `cloudflared`。ngrok 也动但免费层轮转 URL。',
+            a: '能，但需公开隧道。Cloudflare Tunnel 免费并给你像 `[abc.trycloudflare.com](https://abc.trycloudflare.com)` 的稳定主机名，转发到本地 n8n。24/7 稼动用 systemd 或 launchd 服务运行 `cloudflared`。ngrok 也动但免费层轮转 URL。',
           },
           {
             q: 'n8n 自托管，能用本地 LLM 吗？',
@@ -2598,7 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Crea un directorio de trabajo (p. ej., `~/n8n-stack`) y agrega un archivo `docker-compose.yml` que defina un servicio n8n con volumen persistente — ver el bloque de código a continuación.',
           'Ejecuta `docker compose up -d` desde ese directorio. n8n inicia en `http://localhost:5678`.',
           'Abre `http://localhost:5678`, crea la cuenta de administrador local y verifica que el panel carga.',
-          'En n8n, agrega una credencial de Ollama: Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) o `http://172.17.0.1:11434` (Linux).',
+          'En n8n, agrega una credencial de Ollama: Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) o `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           'Importa el primer JSON de flujo (Flujo 1: Gmail a Notion es el de mayor valor para construir primero).',
           'Agrega las credenciales OAuth de Gmail y Notion en n8n. El proceso es idéntico a Zapier — n8n te redirige a cada proveedor y luego almacena el token de acceso + refresco.',
           'Prueba el flujo con el botón "Execute Workflow" antes de activar el horario. Actívalo cuando la salida parezca correcta.',
@@ -2617,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bucle sobre mensajes: pasar el asunto + los primeros 1.000 caracteres del cuerpo al nodo de Ollama.',
           'Prompt de Ollama: clasificar como uno de {Acción, FYI, Newsletter}, luego escribir un resumen de 2 oraciones. Pedir salida JSON: `{"category": "...", "summary": "..."}`.',
           'Nodo JSON parse: extraer los campos `category` y `summary`.',
-          'Nodo Notion: crear una nueva página en tu base de datos "Inbox" con título = asunto del correo, propiedades = remitente, categoría, resumen y un campo URL que enlaza a `https://mail.google.com/mail/u/0/#inbox/<messageId>`.',
+          'Nodo Notion: crear una nueva página en tu base de datos "Inbox" con título = asunto del correo, propiedades = remitente, categoría, resumen y un campo URL que enlaza a `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`.',
           'Opcional: archivar o etiquetar el mensaje de Gmail después de procesarlo para evitar su reprocesamiento en la próxima ejecución.',
         ],
         callouts: [
@@ -2830,7 +2830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué hay de los webhooks — puedo recibirlos de forma local?',
-            a: 'Sí, pero necesitas un túnel público. Cloudflare Tunnel es gratuito y te da un hostname estable como `https://abc.trycloudflare.com` que redirige a tu n8n local. Ejecuta `cloudflared` como servicio systemd o launchd para disponibilidad 24/7. ngrok también funciona pero el nivel gratuito rota las URLs.',
+            a: 'Sí, pero necesitas un túnel público. Cloudflare Tunnel es gratuito y te da un hostname estable como `[abc.trycloudflare.com](https://abc.trycloudflare.com)` que redirige a tu n8n local. Ejecuta `cloudflared` como servicio systemd o launchd para disponibilidad 24/7. ngrok también funciona pero el nivel gratuito rota las URLs.',
           },
           {
             q: '¿n8n autoalojado funciona con LLMs locales?',
@@ -3091,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Crie um diretório de trabalho (por exemplo, `~/n8n-stack`) e adicione um arquivo `docker-compose.yml` que define um serviço n8n com volume persistente — veja o bloco de código a seguir.',
           'Execute `docker compose up -d` a partir desse diretório. O n8n inicia em `http://localhost:5678`.',
           'Abra `http://localhost:5678`, crie a conta de administrador local e verifique se o painel carrega.',
-          'No n8n, adicione uma credencial do Ollama: Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) ou `http://172.17.0.1:11434` (Linux).',
+          'No n8n, adicione uma credencial do Ollama: Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) ou `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           'Importe o primeiro JSON de fluxo (Fluxo 1: Gmail para Notion é o de maior valor para construir primeiro).',
           'Adicione as credenciais OAuth de Gmail e Notion no n8n. O processo é idêntico ao Zapier — o n8n redireciona você para cada provedor e depois armazena o token de acesso + refresh.',
           'Teste o fluxo com o botão "Execute Workflow" antes de ativar o agendamento. Ative-o quando a saída parecer correta.',
@@ -3110,7 +3110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loop sobre as mensagens: passar o assunto + os primeiros 1.000 caracteres do corpo ao nó do Ollama.',
           'Prompt do Ollama: classificar como um de {Ação, FYI, Newsletter}, depois escrever um resumo de 2 frases. Pedir saída JSON: `{"category": "...", "summary": "..."}`.',
           'Nó JSON parse: extrair os campos `category` e `summary`.',
-          'Nó Notion: criar uma nova página no seu banco de dados "Inbox" com título = assunto do e-mail, propriedades = remetente, categoria, resumo e um campo URL que linka para `https://mail.google.com/mail/u/0/#inbox/<messageId>`.',
+          'Nó Notion: criar uma nova página no seu banco de dados "Inbox" com título = assunto do e-mail, propriedades = remetente, categoria, resumo e um campo URL que linka para `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`.',
           'Opcional: arquivar ou marcar a mensagem do Gmail após processá-la para evitar o reprocessamento na próxima execução.',
         ],
         callouts: [
@@ -3323,7 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'E os webhooks — posso recebê-los de forma local?',
-            a: 'Sim, mas você precisa de um túnel público. O Cloudflare Tunnel é gratuito e lhe dá um hostname estável como `https://abc.trycloudflare.com` que redireciona para o seu n8n local. Execute `cloudflared` como serviço systemd ou launchd para disponibilidade 24/7. O ngrok também funciona, mas o nível gratuito rotaciona as URLs.',
+            a: 'Sim, mas você precisa de um túnel público. O Cloudflare Tunnel é gratuito e lhe dá um hostname estável como `[abc.trycloudflare.com](https://abc.trycloudflare.com)` que redireciona para o seu n8n local. Execute `cloudflared` como serviço systemd ou launchd para disponibilidade 24/7. O ngrok também funciona, mas o nível gratuito rotaciona as URLs.',
           },
           {
             q: 'O n8n auto-hospedado funciona com LLMs locais?',
@@ -3635,7 +3635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا عن الـ webhooks — هل يمكنني استقبالها محليًا؟',
-            a: 'نعم، لكنك تحتاج نفقًا عامًا. Cloudflare Tunnel مجاني ويمنحك hostname ثابتًا مثل `https://abc.trycloudflare.com` يُعيد التوجيه إلى n8n المحلي. شغّل `cloudflared` كخدمة systemd أو launchd للتوفر 24/7.',
+            a: 'نعم، لكنك تحتاج نفقًا عامًا. Cloudflare Tunnel مجاني ويمنحك hostname ثابتًا مثل `[abc.trycloudflare.com](https://abc.trycloudflare.com)` يُعيد التوجيه إلى n8n المحلي. شغّل `cloudflared` كخدمة systemd أو launchd للتوفر 24/7.',
           },
           {
             q: 'هل يعمل n8n المستضاف ذاتيًا مع نماذج LLM المحلية؟',
@@ -3880,7 +3880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '작업 디렉터리를 만들고(예: `~/n8n-stack`) 영구 볼륨이 있는 n8n 서비스를 정의하는 `docker-compose.yml` 파일을 추가합니다 — 아래 코드 블록 참조.',
           '해당 디렉터리에서 `docker compose up -d`를 실행합니다. n8n이 `http://localhost:5678`에서 시작됩니다.',
           '`http://localhost:5678`을 열고, 로컬 관리자 계정을 만들고, 대시보드가 로드되는지 확인합니다.',
-          'n8n에서 Ollama 자격 증명을 추가합니다: Settings → Credentials → New → Ollama → Base URL `http://host.docker.internal:11434` (macOS/Windows) 또는 `http://172.17.0.1:11434` (Linux).',
+          'n8n에서 Ollama 자격 증명을 추가합니다: Settings → Credentials → New → Ollama → Base URL `[host.docker.internal:11434](http://host.docker.internal:11434)` (macOS/Windows) 또는 `[172.17.0.1:11434](http://172.17.0.1:11434)` (Linux).',
           '첫 번째 워크플로우 JSON을 가져옵니다 (워크플로우 1: Gmail에서 Notion으로가 먼저 구축하기에 가장 가치 있습니다).',
           'n8n에서 Gmail 및 Notion OAuth 자격 증명을 추가합니다. 프로세스는 Zapier와 동일합니다 — n8n이 각 제공업체로 리디렉션하고 액세스 + 갱신 토큰을 저장합니다.',
           '스케줄을 활성화하기 전에 "Execute Workflow" 버튼으로 워크플로우를 테스트합니다. 출력이 올바르게 보이면 활성화합니다.',
@@ -3899,7 +3899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '메시지 루프: 제목 + 본문의 첫 1,000자를 Ollama 노드에 전달.',
           'Ollama 프롬프트: {조치, FYI, 뉴스레터} 중 하나로 분류한 다음 2문장 요약 작성. JSON 출력 요청: `{"category": "...", "summary": "..."}`.',
           'JSON parse 노드: `category` 및 `summary` 필드 추출.',
-          'Notion 노드: "Inbox" 데이터베이스에 새 페이지 생성 — 제목 = 이메일 제목, 속성 = 발신자, 카테고리, 요약, `https://mail.google.com/mail/u/0/#inbox/<messageId>`로 연결되는 URL 필드.',
+          'Notion 노드: "Inbox" 데이터베이스에 새 페이지 생성 — 제목 = 이메일 제목, 속성 = 발신자, 카테고리, 요약, `[mail.google.com/mail/u/0/#inbox/](https://mail.google.com/mail/u/0/#inbox/)<messageId>`로 연결되는 URL 필드.',
           '선택 사항: 다음 실행에서 재처리를 방지하기 위해 처리 후 Gmail 메시지를 보관하거나 레이블 지정.',
         ],
         callouts: [
@@ -4112,7 +4112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '웹훅은 어떻습니까 — 로컬에서 수신할 수 있습니까?',
-            a: '네, 하지만 공개 터널이 필요합니다. Cloudflare Tunnel은 무료이며 로컬 n8n으로 리디렉션되는 `https://abc.trycloudflare.com`과 같은 안정적인 호스트 이름을 제공합니다. 24/7 가용성을 위해 `cloudflared`를 systemd 또는 launchd 서비스로 실행하십시오. ngrok도 작동하지만 무료 등급은 URL을 변경합니다.',
+            a: '네, 하지만 공개 터널이 필요합니다. Cloudflare Tunnel은 무료이며 로컬 n8n으로 리디렉션되는 `[abc.trycloudflare.com](https://abc.trycloudflare.com)`과 같은 안정적인 호스트 이름을 제공합니다. 24/7 가용성을 위해 `cloudflared`를 systemd 또는 launchd 서비스로 실행하십시오. ngrok도 작동하지만 무료 등급은 URL을 변경합니다.',
           },
           {
             q: '자체 호스팅 n8n이 로컬 LLM과 작동합니까?',
@@ -4187,9 +4187,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Zapier를 로컬 AI 에이전트로 교체하기', item: 'https://www.promptquorum.com/ko/power-local-llm/replace-zapier-with-local-ai-agents' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: 'Zapier를 로컬 AI 에이전트로 교체하기', item: '[www.promptquorum.com/ko/power-local-llm/replace-zapier-with-local-ai-agents](https://www.promptquorum.com/ko/power-local-llm/replace-zapier-with-local-ai-agents)' },
       ],
     },
   },

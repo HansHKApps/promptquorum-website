@@ -3380,9 +3380,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 사용자', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '로컬 LLM으로 소설과 시나리오 집필하기', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 사용자', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '로컬 LLM으로 소설과 시나리오 집필하기', item: '[www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting](https://www.promptquorum.com/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting)' },
       ],
     },
   },

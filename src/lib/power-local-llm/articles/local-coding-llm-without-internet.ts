@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**For teams that travel together or work in the same restricted environment, caches are share-able.** This is the difference between a 60 GB download per developer and a 60 GB download once on the office network.',
         items: [
-          '**Verdaccio runs as a team server too.** Point a small office server at Verdaccio, set `npm config set registry http://team-cache.local:4873/` for everyone. New developers get the cache automatically; offline travel just means pre-syncing what you need to your laptop.',
+          '**Verdaccio runs as a team server too.** Point a small office server at Verdaccio, set `npm config set registry [team-cache.local:4873/](http://team-cache.local:4873/)` for everyone. New developers get the cache automatically; offline travel just means pre-syncing what you need to your laptop.',
           '**Models can be hosted on a team Ollama server.** `ollama serve` on a beefy office machine, point each developer\'s Continue.dev config at the team server when in the office, switch to `localhost:11434` (with locally-pulled models) for travel.',
           '**Devdocs has no native team mode but is trivially share-able as a static folder.** Build it once, host on `http://docs.team.local`, everyone bookmarks. For travel, individual developers run `localhost` instances.',
           '**Git is already team-shareable.** A local Gitea or self-hosted GitLab inside the office network gives every developer offline-from-the-office repo access; combine with `git clone --mirror` on individual laptops for travel.',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Para equipos que viajan juntos o trabajan en el mismo entorno restringido, los cachés son compartibles.** Esta es la diferencia entre una descarga de 60 GB por desarrollador y una descarga de 60 GB una vez en la red de la oficina.',
         items: [
-          '**Verdaccio también funciona como servidor de equipo.** Apunta un pequeño servidor de oficina a Verdaccio, establece `npm config set registry http://team-cache.local:4873/` para todos. Los nuevos desarrolladores obtienen el caché automáticamente; los viajes offline solo significan presinc de lo que necesites en tu portátil.',
+          '**Verdaccio también funciona como servidor de equipo.** Apunta un pequeño servidor de oficina a Verdaccio, establece `npm config set registry [team-cache.local:4873/](http://team-cache.local:4873/)` para todos. Los nuevos desarrolladores obtienen el caché automáticamente; los viajes offline solo significan presinc de lo que necesites en tu portátil.',
           '**Los modelos pueden hospedarse en un servidor Ollama del equipo.** `ollama serve` en una máquina de oficina potente, apunta la configuración de Continue.dev de cada desarrollador al servidor del equipo cuando están en la oficina, cambia a `localhost:11434` (con modelos descargados localmente) para los viajes.',
           '**Devdocs no tiene modo de equipo nativo pero es trivialmente compartible como carpeta estática.** Compílalo una vez, hospédalo en `http://docs.team.local`, que todos lo marquen como favorito. Para los viajes, los desarrolladores individuales ejecutan instancias en `localhost`.',
           '**Git ya es compartible en equipo.** Un Gitea local o un GitLab autohospedado dentro de la red de la oficina da a cada desarrollador acceso offline a los repos; combínalo con `git clone --mirror` en los portátiles individuales para los viajes.',
@@ -1400,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Para times que viajam juntos ou trabalham no mesmo ambiente restrito, os caches são compartilháveis.** Esta é a diferença entre um download de 60 GB por desenvolvedor e um download de 60 GB uma vez na rede do escritório.',
         items: [
-          '**O Verdaccio também funciona como servidor de time.** Aponte um pequeno servidor de escritório para o Verdaccio, defina `npm config set registry http://team-cache.local:4873/` para todos. Os novos desenvolvedores obtêm o cache automaticamente; as viagens offline significam apenas pré-sincronizar o que você precisa no seu notebook.',
+          '**O Verdaccio também funciona como servidor de time.** Aponte um pequeno servidor de escritório para o Verdaccio, defina `npm config set registry [team-cache.local:4873/](http://team-cache.local:4873/)` para todos. Os novos desenvolvedores obtêm o cache automaticamente; as viagens offline significam apenas pré-sincronizar o que você precisa no seu notebook.',
           '**Os modelos podem ser hospedados em um servidor Ollama do time.** `ollama serve` em uma máquina de escritório potente, aponte a configuração do Continue.dev de cada desenvolvedor para o servidor do time quando estão no escritório, mude para `localhost:11434` (com modelos baixados localmente) para as viagens.',
           '**O Devdocs não tem modo de time nativo mas é trivialmente compartilhável como pasta estática.** Compile-o uma vez, hospede-o em `http://docs.team.local`, que todos o marquem como favorito. Para as viagens, os desenvolvedores individuais executam instâncias em `localhost`.',
           '**O Git já é compartilhável em time.** Um Gitea local ou um GitLab auto-hospedado dentro da rede do escritório dá a cada desenvolvedor acesso offline aos repos; combine-o com `git clone --mirror` nos notebooks individuais para as viagens.',
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**للفرق التي تسافر معاً أو تعمل في نفس البيئة المقيّدة، الذاكرة المؤقتة قابلة للمشاركة.** هذا هو الفرق بين تنزيل 60 غيغابايت لكل مطوّر وتنزيل 60 غيغابايت مرة واحدة على شبكة المكتب.',
         items: [
-          '**برنامج Verdaccio يعمل أيضاً كخادم فريق.** أشر إليه خادم مكتبي صغير، واضبط `npm config set registry http://team-cache.local:4873/` للجميع. يحصل المطوّرون الجدد على التخزين المؤقت تلقائياً؛ السفر دون اتصال يعني فقط المزامنة المسبقة لما تحتاجه على جهازك المحمول.',
+          '**برنامج Verdaccio يعمل أيضاً كخادم فريق.** أشر إليه خادم مكتبي صغير، واضبط `npm config set registry [team-cache.local:4873/](http://team-cache.local:4873/)` للجميع. يحصل المطوّرون الجدد على التخزين المؤقت تلقائياً؛ السفر دون اتصال يعني فقط المزامنة المسبقة لما تحتاجه على جهازك المحمول.',
           '**يمكن استضافة النماذج على خادم Ollama للفريق.** `ollama serve` على جهاز مكتبي قوي، وأشر إعدادات Continue.dev لكل مطوّر إلى خادم الفريق حين في المكتب، وبدّل إلى `localhost:11434` (مع نماذج مسحوبة محلياً) للسفر.',
           '**Devdocs لا يملك وضع فريق أصلياً لكنه قابل للمشاركة بسهولة كمجلد ثابت.** ابنِه مرة واحدة، واستضفه على `http://docs.team.local`، وضعه في مفضلة الجميع. للسفر، يشغّل المطوّرون الأفراد نسخاً على `localhost`.',
           '**Git قابل للمشاركة مع الفريق بالفعل.** خادم Gitea محلي أو GitLab مستضاف ذاتياً داخل شبكة المكتب يمنح كل مطوّر وصولاً إلى المستودعات دون اتصال بالمكتب؛ اجمعه مع `git clone --mirror` على أجهزة الكمبيوتر المحمولة الفردية للسفر.',
@@ -2607,7 +2607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**함께 여행하거나 동일한 제한된 환경에서 작업하는 팀의 경우 캐시를 공유할 수 있습니다.** 이것이 개발자당 60 GB 다운로드와 사무실 네트워크에서 60 GB 한 번 다운로드의 차이입니다.',
         items: [
-          '**Verdaccio도 팀 서버로 작동합니다.** 소규모 사무실 서버에 Verdaccio를 가리키고, 모든 사람을 위해 `npm config set registry http://team-cache.local:4873/`을 설정하십시오. 새 개발자는 자동으로 캐시를 얻습니다; 오프라인 여행은 노트북에서 필요한 것을 미리 동기화하는 것만 의미합니다.',
+          '**Verdaccio도 팀 서버로 작동합니다.** 소규모 사무실 서버에 Verdaccio를 가리키고, 모든 사람을 위해 `npm config set registry [team-cache.local:4873/](http://team-cache.local:4873/)`을 설정하십시오. 새 개발자는 자동으로 캐시를 얻습니다; 오프라인 여행은 노트북에서 필요한 것을 미리 동기화하는 것만 의미합니다.',
           '**모델은 팀 Ollama 서버에 호스팅될 수 있습니다.** 강력한 사무실 머신에서 `ollama serve`를 실행하고, 각 개발자의 Continue.dev 설정을 사무실에 있을 때 팀 서버를 가리키도록 하고, 여행용으로는 `localhost:11434`(로컬에 다운로드된 모델)로 전환하십시오.',
           '**Devdocs는 네이티브 팀 모드가 없지만 정적 폴더로 사소하게 공유 가능합니다.** 한 번 빌드하고 `http://docs.team.local`에 호스팅하여 모두가 북마크하십시오. 여행 시 개발자들은 `localhost`에서 개별 인스턴스를 실행합니다.',
           '**Git은 이미 팀 공유 가능합니다.** 사무실 네트워크 내 로컬 Gitea 또는 자체 호스팅 GitLab은 각 개발자에게 레포에 대한 오프라인 접근을 제공합니다; 개별 노트북의 `git clone --mirror`와 결합해 여행하십시오.',
@@ -2716,9 +2716,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '인터넷 없이 코딩하는 로컬 LLM', item: 'https://www.promptquorum.com/ko/power-local-llm/local-coding-llm-without-internet' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '인터넷 없이 코딩하는 로컬 LLM', item: '[www.promptquorum.com/ko/power-local-llm/local-coding-llm-without-internet](https://www.promptquorum.com/ko/power-local-llm/local-coding-llm-without-internet)' },
       ],
     },
   },

@@ -1373,9 +1373,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)', item: 'https://www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)', item: '[www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour](https://www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour)' },
       ],
     },
     schema: { '@type': 'TechArticle', headline: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour', inLanguage: 'ko' },

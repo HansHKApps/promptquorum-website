@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I run the AI plugin on a different machine?',
-            a: 'Yes. Run Ollama on a more powerful home server (mini PC, NAS, or dedicated workstation), bind it to the LAN with `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, then enter the server\'s LAN IP in each plugin\'s config (e.g., `http://192.168.1.20:11434/v1`). This lets a low-powered laptop or mobile device use full 70B models running on the home server. Pair with Tailscale to make it work from anywhere, not just home Wi-Fi.',
+            a: 'Yes. Run Ollama on a more powerful home server (mini PC, NAS, or dedicated workstation), bind it to the LAN with `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, then enter the server\'s LAN IP in each plugin\'s config (e.g., `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). This lets a low-powered laptop or mobile device use full 70B models running on the home server. Pair with Tailscale to make it work from anywhere, not just home Wi-Fi.',
           },
         ],
       },
@@ -898,7 +898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich das KI-Plugin auf einem anderen Rechner laufen lassen?',
-            a: 'Ja. Betreiben Sie Ollama auf einem leistungsstärkeren Heimserver (Mini-PC, NAS oder dedizierte Workstation), binden Sie es mit `OLLAMA_HOST=0.0.0.0:11434 ollama serve` ans LAN, und tragen Sie die LAN-IP des Servers in die Konfiguration jedes Plugins ein (z. B. `http://192.168.1.20:11434/v1`). So kann ein leistungsschwacher Laptop oder Mobilgerät auf vollwertige 70B-Modelle des Heimservers zugreifen. Kombinieren Sie das mit Tailscale, damit es nicht nur im Heim-WLAN funktioniert.',
+            a: 'Ja. Betreiben Sie Ollama auf einem leistungsstärkeren Heimserver (Mini-PC, NAS oder dedizierte Workstation), binden Sie es mit `OLLAMA_HOST=0.0.0.0:11434 ollama serve` ans LAN, und tragen Sie die LAN-IP des Servers in die Konfiguration jedes Plugins ein (z. B. `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). So kann ein leistungsschwacher Laptop oder Mobilgerät auf vollwertige 70B-Modelle des Heimservers zugreifen. Kombinieren Sie das mit Tailscale, damit es nicht nur im Heim-WLAN funktioniert.',
           },
         ],
       },
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je exécuter le plugin IA sur une autre machine ?',
-            a: 'Oui. Exécutez Ollama sur un serveur domestique plus puissant (mini PC, NAS ou station de travail dédiée), liez-le à votre LAN avec `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, puis entrez l\'adresse IP LAN du serveur dans la configuration de chaque plugin (par ex. `http://192.168.1.20:11434/v1`). Cela permet à un ordinateur portable ou un appareil mobile peu puissant d\'utiliser des modèles complets 70B exécutés sur le serveur domestique. Associez avec Tailscale pour le faire fonctionner de n\'importe où, pas seulement le Wi-Fi domestique.',
+            a: 'Oui. Exécutez Ollama sur un serveur domestique plus puissant (mini PC, NAS ou station de travail dédiée), liez-le à votre LAN avec `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, puis entrez l\'adresse IP LAN du serveur dans la configuration de chaque plugin (par ex. `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). Cela permet à un ordinateur portable ou un appareil mobile peu puissant d\'utiliser des modèles complets 70B exécutés sur le serveur domestique. Associez avec Tailscale pour le faire fonctionner de n\'importe où, pas seulement le Wi-Fi domestique.',
           },
         ],
       },
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AIプラグインを別マシンで実行できますか?',
-            a: 'はい。ホームサーバーでOllamaを実行 (ミニPC、NAS、または専用ワークステーション)、`OLLAMA_HOST=0.0.0.0:11434 ollama serve` でLAN にバインド、各プラグイン設定にサーバーのLAN IP (例: `http://192.168.1.20:11434/v1`) を入力。低パワーノートパソコンまたはモバイルデバイスがホームサーバーで実行中フルサイズ70Bモデル使用可能。Tailscaleで組み合わせてホームWi-Fi外でも動作。',
+            a: 'はい。ホームサーバーでOllamaを実行 (ミニPC、NAS、または専用ワークステーション)、`OLLAMA_HOST=0.0.0.0:11434 ollama serve` でLAN にバインド、各プラグイン設定にサーバーのLAN IP (例: `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`) を入力。低パワーノートパソコンまたはモバイルデバイスがホームサーバーで実行中フルサイズ70Bモデル使用可能。Tailscaleで組み合わせてホームWi-Fi外でも動作。',
           },
         ],
       },
@@ -2257,7 +2257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以在不同的机器上运行 AI 插件吗？',
-            a: '可以。在更强大的家庭服务器（迷你 PC、NAS 或专用工作站）上运行 Ollama，使用 `OLLAMA_HOST=0.0.0.0:11434 ollama serve` 将其绑定到 LAN，然后在每个插件的配置中输入服务器的 LAN IP（例如 `http://192.168.1.20:11434/v1`）。这让低功率笔记本或移动设备可以使用在家庭服务器上运行的完整 70B 模型。与 Tailscale 配对，使其从任何地方工作，而不仅仅是家庭 Wi-Fi。',
+            a: '可以。在更强大的家庭服务器（迷你 PC、NAS 或专用工作站）上运行 Ollama，使用 `OLLAMA_HOST=0.0.0.0:11434 ollama serve` 将其绑定到 LAN，然后在每个插件的配置中输入服务器的 LAN IP（例如 `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`）。这让低功率笔记本或移动设备可以使用在家庭服务器上运行的完整 70B 模型。与 Tailscale 配对，使其从任何地方工作，而不仅仅是家庭 Wi-Fi。',
           },
         ],
       },
@@ -2710,7 +2710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo ejecutar el plugin de IA en una máquina diferente?',
-            a: 'Sí. Ejecuta Ollama en un servidor doméstico más potente (mini PC, NAS o estación de trabajo dedicada), vincúlalo a la LAN con `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, luego ingresa la IP LAN del servidor en la configuración de cada plugin (por ejemplo, `http://192.168.1.20:11434/v1`). Esto permite que un portátil de baja potencia o dispositivo móvil use modelos completos de 70B que se ejecutan en el servidor doméstico. Combínalo con Tailscale para que funcione desde cualquier lugar, no solo el Wi-Fi de casa.',
+            a: 'Sí. Ejecuta Ollama en un servidor doméstico más potente (mini PC, NAS o estación de trabajo dedicada), vincúlalo a la LAN con `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, luego ingresa la IP LAN del servidor en la configuración de cada plugin (por ejemplo, `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). Esto permite que un portátil de baja potencia o dispositivo móvil use modelos completos de 70B que se ejecutan en el servidor doméstico. Combínalo con Tailscale para que funcione desde cualquier lugar, no solo el Wi-Fi de casa.',
           },
         ],
       },
@@ -3194,7 +3194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso rodar o plugin de IA em uma máquina diferente?',
-            a: 'Sim. Rode o Ollama em um servidor doméstico mais potente (mini PC, NAS ou estação de trabalho dedicada), vincule-o à LAN com `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, depois insira o IP LAN do servidor na configuração de cada plugin (por exemplo, `http://192.168.1.20:11434/v1`). Isso permite que um notebook de baixa potência ou dispositivo móvel use modelos completos de 70B rodando no servidor doméstico. Combine com o Tailscale para que funcione de qualquer lugar, não só o Wi-Fi de casa.',
+            a: 'Sim. Rode o Ollama em um servidor doméstico mais potente (mini PC, NAS ou estação de trabalho dedicada), vincule-o à LAN com `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, depois insira o IP LAN do servidor na configuração de cada plugin (por exemplo, `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). Isso permite que um notebook de baixa potência ou dispositivo móvel use modelos completos de 70B rodando no servidor doméstico. Combine com o Tailscale para que funcione de qualquer lugar, não só o Wi-Fi de casa.',
           },
         ],
       },
@@ -3660,7 +3660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني تشغيل ملحق الذكاء الاصطناعي على جهاز مختلف؟',
-            a: 'نعم. شغّل Ollama على خادم منزلي أقوى (ميني PC أو NAS أو محطة عمل مخصصة)، اربطه بالشبكة المحلية مع `OLLAMA_HOST=0.0.0.0:11434 ollama serve`، ثم أدخل عنوان IP LAN للخادم في إعدادات كل ملحق (مثلاً `http://192.168.1.20:11434/v1`). يتيح هذا لجهاز محمول منخفض الأداء أو الجوّال استخدام نماذج كاملة بـ 70B مليار معامل تعمل على الخادم المنزلي. ادمجه مع Tailscale للعمل من أي مكان، وليس فقط شبكة Wi-Fi المنزل.',
+            a: 'نعم. شغّل Ollama على خادم منزلي أقوى (ميني PC أو NAS أو محطة عمل مخصصة)، اربطه بالشبكة المحلية مع `OLLAMA_HOST=0.0.0.0:11434 ollama serve`، ثم أدخل عنوان IP LAN للخادم في إعدادات كل ملحق (مثلاً `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). يتيح هذا لجهاز محمول منخفض الأداء أو الجوّال استخدام نماذج كاملة بـ 70B مليار معامل تعمل على الخادم المنزلي. ادمجه مع Tailscale للعمل من أي مكان، وليس فقط شبكة Wi-Fi المنزل.',
           },
         ],
       },
@@ -4126,7 +4126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '다른 기기에서 AI 플러그인을 실행할 수 있습니까?',
-            a: '예. 더 강력한 홈 서버(미니 PC, NAS 또는 전용 워크스테이션)에서 Ollama를 실행하고, `OLLAMA_HOST=0.0.0.0:11434 ollama serve`로 LAN에 바인딩한 다음, 각 플러그인 설정에서 서버 LAN IP를 입력하십시오(예: `http://192.168.1.20:11434/v1`). 이를 통해 저전력 노트북이나 모바일 기기가 홈 서버에서 실행되는 전체 70B 모델을 사용할 수 있습니다. Tailscale과 결합하면 집 Wi-Fi뿐만 아니라 어디서나 작동합니다.',
+            a: '예. 더 강력한 홈 서버(미니 PC, NAS 또는 전용 워크스테이션)에서 Ollama를 실행하고, `OLLAMA_HOST=0.0.0.0:11434 ollama serve`로 LAN에 바인딩한 다음, 각 플러그인 설정에서 서버 LAN IP를 입력하십시오(예: `[192.168.1.20:11434/v1](http://192.168.1.20:11434/v1)`). 이를 통해 저전력 노트북이나 모바일 기기가 홈 서버에서 실행되는 전체 70B 모델을 사용할 수 있습니다. Tailscale과 결합하면 집 Wi-Fi뿐만 아니라 어디서나 작동합니다.',
           },
         ],
       },

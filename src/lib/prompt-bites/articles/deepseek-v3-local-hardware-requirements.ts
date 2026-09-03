@@ -1211,9 +1211,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: 'DeepSeek V3 로컬 실행 하드웨어 요구사항', item: 'https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: 'DeepSeek V3 로컬 실행 하드웨어 요구사항', item: '[www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements](https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements)' },
       ],
     },
     faqSchema: {

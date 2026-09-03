@@ -337,10 +337,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Sources',
           items: [
-            '**OpenAI. (2026).** "Structured Outputs — JSON Mode and Responses API." https://platform.openai.com/docs/guides/structured-outputs — Server-side JSON schema enforcement for GPT-5.6 with 100% schema adherence.',
-            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude — API-level constraint enforcement for Claude Sonnet 5 and Opus 5.',
-            '**Google. (2026).** "Gemini API: Controlled Generation with response_schema." https://ai.google.dev/gemini-api/docs/controlled-generation — Native JSON mode and structured output enforcement for Gemini 3.1 Pro.',
-            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." https://arxiv.org/abs/2302.11382 — Academic taxonomy of prompt patterns including constraint-based prompting techniques.',
+            '**OpenAI. (2026).** "Structured Outputs — JSON Mode and Responses API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs) — Server-side JSON schema enforcement for GPT-5.6 with 100% schema adherence.',
+            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude) — API-level constraint enforcement for Claude Sonnet 5 and Opus 5.',
+            '**Google. (2026).** "Gemini API: Controlled Generation with response_schema." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation) — Native JSON mode and structured output enforcement for Gemini 3.1 Pro.',
+            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382) — Academic taxonomy of prompt patterns including constraint-based prompting techniques.',
             '**Zhou et al. (2022).** "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910 — Research on automated constraint optimization and prompt refinement.',
           ],
         },
@@ -755,10 +755,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Quellen',
           items: [
-            '**OpenAI. (2026).** "Strukturierte Ausgaben — JSON Mode und Responses API." https://platform.openai.com/docs/guides/structured-outputs — Server-seitige JSON-Schema-Durchsetzung für GPT-5.6 mit 100% Schema-Adhäsion.',
-            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude — API-Level Constraint-Durchsetzung für Claude Sonnet 5 und Opus 5.',
-            '**Google. (2026).** "Gemini API: Kontrollierte Generierung mit response_schema." https://ai.google.dev/gemini-api/docs/controlled-generation — Native JSON-Modus und strukturierte Ausgabe-Durchsetzung für Gemini 3.1 Pro.',
-            '**White et al. (2023).** "Ein Prompt-Pattern-Katalog zur Verbesserung des Prompt Engineering mit ChatGPT." https://arxiv.org/abs/2302.11382 — Akademische Taxonomie von Prompt-Mustern einschließlich Constraint-basierter Prompting-Techniken.',
+            '**OpenAI. (2026).** "Strukturierte Ausgaben — JSON Mode und Responses API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs) — Server-seitige JSON-Schema-Durchsetzung für GPT-5.6 mit 100% Schema-Adhäsion.',
+            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude) — API-Level Constraint-Durchsetzung für Claude Sonnet 5 und Opus 5.',
+            '**Google. (2026).** "Gemini API: Kontrollierte Generierung mit response_schema." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation) — Native JSON-Modus und strukturierte Ausgabe-Durchsetzung für Gemini 3.1 Pro.',
+            '**White et al. (2023).** "Ein Prompt-Pattern-Katalog zur Verbesserung des Prompt Engineering mit ChatGPT." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382) — Akademische Taxonomie von Prompt-Mustern einschließlich Constraint-basierter Prompting-Techniken.',
             '**Zhou et al. (2022).** "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910 — Forschung zu automatisierter Constraint-Optimierung und Prompt-Verfeinerung.',
           ],
         },
@@ -1100,10 +1100,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '**OpenAI. (2026).** "Structured Outputs — Modo JSON y Responses API." https://platform.openai.com/docs/guides/structured-outputs — Aplicación de esquema JSON del lado del servidor para GPT-5.6 con 100 % de adherencia al esquema.',
-            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude — Aplicación de constraints a nivel de API para Claude Sonnet 5 y Opus 5.',
-            '**Google. (2026).** "Gemini API: Generación controlada con response_schema." https://ai.google.dev/gemini-api/docs/controlled-generation — Modo JSON nativo y aplicación de salida estructurada para Gemini 3.1 Pro.',
-            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." https://arxiv.org/abs/2302.11382 — Taxonomía académica de patrones de prompt incluyendo técnicas de prompting basadas en constraints.',
+            '**OpenAI. (2026).** "Structured Outputs — Modo JSON y Responses API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs) — Aplicación de esquema JSON del lado del servidor para GPT-5.6 con 100 % de adherencia al esquema.',
+            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude) — Aplicación de constraints a nivel de API para Claude Sonnet 5 y Opus 5.',
+            '**Google. (2026).** "Gemini API: Generación controlada con response_schema." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation) — Modo JSON nativo y aplicación de salida estructurada para Gemini 3.1 Pro.',
+            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382) — Taxonomía académica de patrones de prompt incluyendo técnicas de prompting basadas en constraints.',
             '**Zhou et al. (2022).** "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910 — Investigación sobre optimización automatizada de constraints y refinamiento de prompts.',
           ],
         },
@@ -1440,10 +1440,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'المصادر',
           items: [
-            '**OpenAI. (2026).** "Structured Outputs — وضع JSON وResponses API." https://platform.openai.com/docs/guides/structured-outputs',
-            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude',
-            '**Google. (2026).** "Gemini API: توليد مُتحكَّم به مع response_schema." https://ai.google.dev/gemini-api/docs/controlled-generation',
-            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." https://arxiv.org/abs/2302.11382',
+            '**OpenAI. (2026).** "Structured Outputs — وضع JSON وResponses API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs)',
+            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude)',
+            '**Google. (2026).** "Gemini API: توليد مُتحكَّم به مع response_schema." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation)',
+            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382)',
             '**Zhou et al. (2022).** "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910',
           ],
         },
@@ -1778,10 +1778,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Fontes',
           items: [
-            '**OpenAI. (2026).** "Structured Outputs — Modo JSON e Responses API." https://platform.openai.com/docs/guides/structured-outputs',
-            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude',
-            '**Google. (2026).** "Gemini API: Geração controlada com response_schema." https://ai.google.dev/gemini-api/docs/controlled-generation',
-            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." https://arxiv.org/abs/2302.11382',
+            '**OpenAI. (2026).** "Structured Outputs — Modo JSON e Responses API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs)',
+            '**Anthropic. (2026).** "Claude Structured Outputs — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude)',
+            '**Google. (2026).** "Gemini API: Geração controlada com response_schema." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation)',
+            '**White et al. (2023).** "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382)',
             '**Zhou et al. (2022).** "Large Language Models Are Human-Level Prompt Engineers." arXiv:2211.01910',
           ],
         },
@@ -2394,9 +2394,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'APIレベルの制約強制',
       content: '多くのLLM APIプロバイダーは、プロンプトレベルの制約に加えて、APIレベルでの制約強制もサポートしています。これらは、プロバイダーのシステム側でスキーマ準拠を検証し、無効な応答を拒否します。',
       items: [
-        '**OpenAI：関数呼び出しと構造化出力**：JSON Schema を定義。モデルはスキーマに準拠した構造化出力を生成。無効な応答は関数呼び出しレイヤーで検証。https://platform.openai.com/docs/guides/function-calling',
-        '**Anthropic Claude：制約付き出力**：JSON スキーマまたは XML タグで形式を指定。モデルは絶対に指定形式から逸脱しません。https://docs.anthropic.com',
-        '**Google Generative AI：Structured Output**：スキーマを API リクエストに含める。モデルは常にスキーマに準拠した JSON を返す。https://ai.google.dev/docs'
+        '**OpenAI：関数呼び出しと構造化出力**：JSON Schema を定義。モデルはスキーマに準拠した構造化出力を生成。無効な応答は関数呼び出しレイヤーで検証。[platform.openai.com/docs/guides/function-calling](https://platform.openai.com/docs/guides/function-calling)',
+        '**Anthropic Claude：制約付き出力**：JSON スキーマまたは XML タグで形式を指定。モデルは絶対に指定形式から逸脱しません。[docs.anthropic.com](https://docs.anthropic.com)',
+        '**Google Generative AI：Structured Output**：スキーマを API リクエストに含める。モデルは常にスキーマに準拠した JSON を返す。[ai.google.dev/docs](https://ai.google.dev/docs)'
       ],
       callouts: [
         {
@@ -2538,7 +2538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'TechArticle',
     'headline': '制約付きプロンプティング：完全ガイド',
     'url': 'https://www.promptquorum.com/ja/prompt-engineering/constrained-prompting',
-    'image': 'https://www.promptquorum.com/og-constrained-prompting-ja.png',
+    'image': '[www.promptquorum.com/og-constrained-prompting-ja.png](https://www.promptquorum.com/og-constrained-prompting-ja.png)',
     'datePublished': '2026-01-20',
     'dateModified': '2026-07-13',
     'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -2903,9 +2903,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'API级别的约束强制',
       content: '许多LLM API提供商除了提示级约束外，还支持API级约束强制。这些在提供商系统层验证架构遵守，拒绝无效响应。',
       items: [
-        '**OpenAI：函数调用和结构化输出**：定义JSON Schema。模型生成符合架构的结构化输出。无效响应在函数调用层被拒绝。https://platform.openai.com/docs/guides/function-calling',
-        '**Anthropic Claude：约束输出**：用JSON Schema或XML标签指定格式。模型绝不偏离指定格式。https://docs.anthropic.com',
-        '**Google Generative AI：结构化输出**：在API请求中包含架构。模型始终返回符合架构的JSON。https://ai.google.dev/docs'
+        '**OpenAI：函数调用和结构化输出**：定义JSON Schema。模型生成符合架构的结构化输出。无效响应在函数调用层被拒绝。[platform.openai.com/docs/guides/function-calling](https://platform.openai.com/docs/guides/function-calling)',
+        '**Anthropic Claude：约束输出**：用JSON Schema或XML标签指定格式。模型绝不偏离指定格式。[docs.anthropic.com](https://docs.anthropic.com)',
+        '**Google Generative AI：结构化输出**：在API请求中包含架构。模型始终返回符合架构的JSON。[ai.google.dev/docs](https://ai.google.dev/docs)'
       ],
       callouts: [
         {
@@ -3047,7 +3047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'TechArticle',
     'headline': '受限提示：完整指南',
     'url': 'https://www.promptquorum.com/zh/prompt-engineering/constrained-prompting',
-    'image': 'https://www.promptquorum.com/og-constrained-prompting-zh.png',
+    'image': '[www.promptquorum.com/og-constrained-prompting-zh.png](https://www.promptquorum.com/og-constrained-prompting-zh.png)',
     'datePublished': '2026-01-20',
     'dateModified': '2026-07-13',
     'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -3565,10 +3565,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '**OpenAI. (2026).** "구조화된 출력 — JSON 모드 및 응답 API." https://platform.openai.com/docs/guides/structured-outputs — GPT-5.6를 위한 100% 스키마 준수의 서버 측 JSON 스키마 적용.',
-          '**Anthropic. (2026).** "Claude 구조화된 출력 — output_config.format." https://docs.anthropic.com/en/docs/build-with-claude — Claude Sonnet 5과 Opus 5을 위한 API 수준 제약 적용.',
-          '**Google. (2026).** "Gemini API: response_schema를 통한 제어된 생성." https://ai.google.dev/gemini-api/docs/controlled-generation — Gemini 3.1 Pro를 위한 네이티브 JSON 모드 및 구조화된 출력 적용.',
-          '**White et al. (2023).** "ChatGPT와 함께 프롬프트 엔지니어링을 향상시키기 위한 프롬프트 패턴 카탈로그." https://arxiv.org/abs/2302.11382 — 제약 기반 프롬프팅 기법을 포함한 프롬프트 패턴의 학술적 분류.',
+          '**OpenAI. (2026).** "구조화된 출력 — JSON 모드 및 응답 API." [platform.openai.com/docs/guides/structured-outputs](https://platform.openai.com/docs/guides/structured-outputs) — GPT-5.6를 위한 100% 스키마 준수의 서버 측 JSON 스키마 적용.',
+          '**Anthropic. (2026).** "Claude 구조화된 출력 — output_config.format." [docs.anthropic.com/en/docs/build-with-claude](https://docs.anthropic.com/en/docs/build-with-claude) — Claude Sonnet 5과 Opus 5을 위한 API 수준 제약 적용.',
+          '**Google. (2026).** "Gemini API: response_schema를 통한 제어된 생성." [ai.google.dev/gemini-api/docs/controlled-generation](https://ai.google.dev/gemini-api/docs/controlled-generation) — Gemini 3.1 Pro를 위한 네이티브 JSON 모드 및 구조화된 출력 적용.',
+          '**White et al. (2023).** "ChatGPT와 함께 프롬프트 엔지니어링을 향상시키기 위한 프롬프트 패턴 카탈로그." [arxiv.org/abs/2302.11382](https://arxiv.org/abs/2302.11382) — 제약 기반 프롬프팅 기법을 포함한 프롬프트 패턴의 학술적 분류.',
           '**Zhou et al. (2022).** "대형 언어 모델은 인간 수준의 프롬프트 엔지니어입니다." arXiv:2211.01910 — 자동화된 제약 최적화 및 프롬프트 개선에 관한 연구.',
         ],
       },

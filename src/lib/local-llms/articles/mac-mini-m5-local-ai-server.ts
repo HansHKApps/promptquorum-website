@@ -274,7 +274,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -659,7 +659,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -1046,7 +1046,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -1431,7 +1431,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -1816,7 +1816,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -2203,7 +2203,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -2603,7 +2603,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',
@@ -3213,7 +3213,7 @@ vectordb = Chroma.from_documents(
     "title": "Mac Mini DeepSeek Coder",
     "provider": "ollama",
     "model": "deepseek-coder-v2:16b",
-    "apiBase": "http://macmini.local:11434"
+    "apiBase": "[macmini.local:11434](http://macmini.local:11434)"
   }]
 }`,
         codeLanguage: 'json',

@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -2636,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -3556,7 +3556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -4476,7 +4476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -5399,7 +5399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -6321,7 +6321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -7241,7 +7241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {
@@ -8159,7 +8159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts'
+        '@id': '[promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts](https://promptquorum.com/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)'
       }
     },
     faqSchema: {

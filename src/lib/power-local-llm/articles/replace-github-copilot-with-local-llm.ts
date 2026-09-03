@@ -2853,9 +2853,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'GitHub Copilot을 로컬 LLM으로 대체하기', item: 'https://www.promptquorum.com/ko/power-local-llm/replace-github-copilot-with-local-llm' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: 'GitHub Copilot을 로컬 LLM으로 대체하기', item: '[www.promptquorum.com/ko/power-local-llm/replace-github-copilot-with-local-llm](https://www.promptquorum.com/ko/power-local-llm/replace-github-copilot-with-local-llm)' },
       ],
     },
   },

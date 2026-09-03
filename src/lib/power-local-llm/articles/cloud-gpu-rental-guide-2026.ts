@@ -3982,9 +3982,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '2026 클라우드 GPU 임대 가이드', item: 'https://www.promptquorum.com/ko/power-local-llm/cloud-gpu-rental-guide-2026' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '2026 클라우드 GPU 임대 가이드', item: '[www.promptquorum.com/ko/power-local-llm/cloud-gpu-rental-guide-2026](https://www.promptquorum.com/ko/power-local-llm/cloud-gpu-rental-guide-2026)' },
       ],
     },
   },

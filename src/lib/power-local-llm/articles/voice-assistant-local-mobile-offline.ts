@@ -259,18 +259,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'On the home machine (Mac, PC, or NAS): install Ollama. Pull a 70B model: `ollama pull llama3.3:70b` (requires ~40 GB free disk + ~48 GB RAM or 24 GB GPU VRAM).',
           'Bind Ollama to your local network: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Note the home machine\'s local IP (e.g., 192.168.1.20).',
-          'On the phone, configure your voice assistant pipeline (iOS Shortcut or Android Tasker) to send the Whisper transcript via HTTP POST to `http://192.168.1.20:11434/api/generate` instead of the local LLM call.',
+          'On the phone, configure your voice assistant pipeline (iOS Shortcut or Android Tasker) to send the Whisper transcript via HTTP POST to `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` instead of the local LLM call.',
           'TTS still runs on the phone (Piper or system voice) using the response text from the home machine.',
           'Result: Whisper STT runs on-phone (audio never leaves the device), home Ollama generates a 70B-quality response in ~600–1200 ms, TTS speaks on-phone. Total latency ~1.5–2.5 seconds — slightly higher than fully on-device but with much better LLM quality.',
         ],
         promptExamples: [
           {
             label: 'iOS Shortcut: hybrid voice assistant (Action Button trigger)',
-            text: '1. Record Audio → save to temp file.\n2. Transcribe with Whisper Transcription → output: transcript text.\n3. Get Contents of URL → URL: http://192.168.1.20:11434/api/generate, Method: POST, JSON body: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → output: response text.\n4. Speak Text → input: response text, voice: iOS system voice.\nAssign to Action Button. Hold to record; release to send. First audio plays in ~1.5–2.5 sec.',
+            text: '1. Record Audio → save to temp file.\n2. Transcribe with Whisper Transcription → output: transcript text.\n3. Get Contents of URL → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Method: POST, JSON body: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → output: response text.\n4. Speak Text → input: response text, voice: iOS system voice.\nAssign to Action Button. Hold to record; release to send. First audio plays in ~1.5–2.5 sec.',
           },
           {
             label: 'Tasker: Android hybrid voice assistant',
-            text: '1. Variable: %TRANSCRIPT = (output of whisper-cli on recorded audio file).\n2. HTTP Request: URL http://192.168.1.20:11434/api/generate, Method POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (parsed "response" field from JSON).\n4. Say: %REPLY (Android system TTS or Piper if installed).\nTrigger via quick-tile, Bluetooth button, or Side-key long-press on Pixel 9 Pro.',
+            text: '1. Variable: %TRANSCRIPT = (output of whisper-cli on recorded audio file).\n2. HTTP Request: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Method POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (parsed "response" field from JSON).\n4. Say: %REPLY (Android system TTS or Piper if installed).\nTrigger via quick-tile, Bluetooth button, or Side-key long-press on Pixel 9 Pro.',
           },
         ],
         callouts: [
@@ -698,18 +698,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'Auf dem Home-Computer (Mac, PC oder NAS): Installieren Sie Ollama. Ziehen Sie ein 70B Modell: `ollama pull llama3.3:70b` (erfordert ~40 GB freier Speicher + ~48 GB RAM oder 24 GB GPU VRAM).',
           'Binden Sie Ollama an Ihr lokales Netzwerk: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Notieren Sie sich die lokale IP des Home-Computers (z. B. 192.168.1.20).',
-          'Auf dem Telefon konfigurieren Sie Ihre Voice-Assistant-Pipeline (iOS Shortcut oder Android Tasker), um die Whisper-Abschrift per HTTP POST an `http://192.168.1.20:11434/api/generate` zu senden, anstatt den lokalen LLM-Aufruf zu machen.',
+          'Auf dem Telefon konfigurieren Sie Ihre Voice-Assistant-Pipeline (iOS Shortcut oder Android Tasker), um die Whisper-Abschrift per HTTP POST an `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` zu senden, anstatt den lokalen LLM-Aufruf zu machen.',
           'TTS läuft immer noch auf dem Telefon (Piper oder Systemstimme) unter Verwendung des Antworttextes vom Home-Computer.',
           'Ergebnis: Whisper STT läuft auf dem Telefon (Audio verlässt niemals das Gerät), Home Ollama generiert eine 70B-Qualität-Antwort in ~600–1200 ms, TTS spricht auf dem Telefon. Gesamtlatenz ~1,5–2,5 Sekunden — etwas höher als vollständig auf dem Gerät, aber mit viel besserer LLM-Qualität.',
         ],
         promptExamples: [
           {
             label: 'iOS Shortcut: Hybrid Voice Assistant (Action Button Trigger)',
-            text: '1. Audio aufnehmen → in Temp-Datei speichern.\n2. Mit Whisper Transcription transkribieren → Ausgabe: Transkript-Text.\n3. Inhalte der URL abrufen → URL: http://192.168.1.20:11434/api/generate, Methode: POST, JSON Body: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → Ausgabe: Antwort-Text.\n4. Text sprechen → Eingabe: Antwort-Text, Stimme: iOS-Systemstimme.\nZuweisen zu Action Button. Halten zum Aufnehmen; loslassen zum Senden. Erstes Audio spielt in ~1,5–2,5 Sekunden ab.',
+            text: '1. Audio aufnehmen → in Temp-Datei speichern.\n2. Mit Whisper Transcription transkribieren → Ausgabe: Transkript-Text.\n3. Inhalte der URL abrufen → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Methode: POST, JSON Body: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → Ausgabe: Antwort-Text.\n4. Text sprechen → Eingabe: Antwort-Text, Stimme: iOS-Systemstimme.\nZuweisen zu Action Button. Halten zum Aufnehmen; loslassen zum Senden. Erstes Audio spielt in ~1,5–2,5 Sekunden ab.',
           },
           {
             label: 'Tasker: Android Hybrid Voice Assistant',
-            text: '1. Variable: %TRANSCRIPT = (Ausgabe von Whisper-CLI auf aufgenommener Audiodatei).\n2. HTTP Request: URL http://192.168.1.20:11434/api/generate, Methode POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (geparster „response" Feld aus JSON).\n4. Sagen: %REPLY (Android System-TTS oder Piper, falls installiert).\nAuslösen über Schnellkachel, Bluetooth-Button oder Side-Key Langdruck auf Pixel 9 Pro.',
+            text: '1. Variable: %TRANSCRIPT = (Ausgabe von Whisper-CLI auf aufgenommener Audiodatei).\n2. HTTP Request: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Methode POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (geparster „response" Feld aus JSON).\n4. Sagen: %REPLY (Android System-TTS oder Piper, falls installiert).\nAuslösen über Schnellkachel, Bluetooth-Button oder Side-Key Langdruck auf Pixel 9 Pro.',
           },
         ],
         callouts: [
@@ -1181,18 +1181,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'Sur l\'ordinateur maison (Mac, PC ou NAS) : installez Ollama. Tirez un modèle 70B : `ollama pull llama3.3:70b` (nécessite ~40 GB d\'espace disque libre + ~48 GB de RAM ou 24 GB de VRAM GPU).',
           'Liez Ollama à votre réseau local : `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Notez l\'adresse IP locale de l\'ordinateur maison (par exemple, 192.168.1.20).',
-          'Sur le téléphone, configurez votre pipeline d\'assistant vocal (Raccourci iOS ou Tasker Android) pour envoyer la transcription Whisper via HTTP POST à `http://192.168.1.20:11434/api/generate` au lieu de l\'appel LLM local.',
+          'Sur le téléphone, configurez votre pipeline d\'assistant vocal (Raccourci iOS ou Tasker Android) pour envoyer la transcription Whisper via HTTP POST à `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` au lieu de l\'appel LLM local.',
           'Le TTS s\'exécute toujours sur le téléphone (Piper ou voix système) en utilisant le texte de réponse de l\'ordinateur maison.',
           'Résultat : Whisper STT s\'exécute sur téléphone (l\'audio ne quitte jamais l\'appareil), Ollama maison génère une réponse de qualité 70B en ~600–1200 ms, TTS parle sur téléphone. Latence totale ~1,5–2,5 secondes — un peu plus que entièrement sur l\'appareil mais avec bien meilleure qualité LLM.',
         ],
         promptExamples: [
           {
             label: 'Raccourci iOS : assistant vocal hybride (déclenchement Bouton d\'action)',
-            text: '1. Enregistrer l\'audio → enregistrer dans le fichier temp.\n2. Transcrire avec Whisper Transcription → résultat : texte de transcription.\n3. Obtenir les contenus de l\'URL → URL : http://192.168.1.20:11434/api/generate, Méthode : POST, JSON body : {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → résultat : texte de réponse.\n4. Parler le texte → entrée : texte de réponse, voix : voix système iOS.\nAttribuer au Bouton d\'action. Maintenez pour enregistrer ; relâchez pour envoyer. Premier audio se joue en ~1,5–2,5 secondes.',
+            text: '1. Enregistrer l\'audio → enregistrer dans le fichier temp.\n2. Transcrire avec Whisper Transcription → résultat : texte de transcription.\n3. Obtenir les contenus de l\'URL → URL : [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Méthode : POST, JSON body : {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → résultat : texte de réponse.\n4. Parler le texte → entrée : texte de réponse, voix : voix système iOS.\nAttribuer au Bouton d\'action. Maintenez pour enregistrer ; relâchez pour envoyer. Premier audio se joue en ~1,5–2,5 secondes.',
           },
           {
             label: 'Tasker : assistant vocal hybride Android',
-            text: '1. Variable : %TRANSCRIPT = (résultat de whisper-cli sur le fichier audio enregistré).\n2. Requête HTTP : URL http://192.168.1.20:11434/api/generate, Méthode POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable : %REPLY = (champ « response » analysé à partir de JSON).\n4. Dire : %REPLY (TTS système Android ou Piper s\'il est installé).\nDéclencher via tuile rapide, bouton Bluetooth ou appui long sur la clé d\'action sur Pixel 9 Pro.',
+            text: '1. Variable : %TRANSCRIPT = (résultat de whisper-cli sur le fichier audio enregistré).\n2. Requête HTTP : URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Méthode POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable : %REPLY = (champ « response » analysé à partir de JSON).\n4. Dire : %REPLY (TTS système Android ou Piper s\'il est installé).\nDéclencher via tuile rapide, bouton Bluetooth ou appui long sur la clé d\'action sur Pixel 9 Pro.',
           },
         ],
         callouts: [
@@ -1664,18 +1664,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'ホームマシン（Mac、PC、またはNAS）では：Ollama をインストール。70Bモデルをプル：`ollama pull llama3.3:70b`（~40 GBフリーディスク+ ~48 GB RAMまたは24 GB GPU VRAMが必要）。',
           'Ollamaをローカルネットワークにバインド：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。ホームマシンのローカルIP（例：192.168.1.20）に注意してください。',
-          'スマートフォンでは、音声アシスタントパイプライン（iOSショートカットまたはAndroid Tasker）をWhisperトランスクリプトをHTTP POSTで`http://192.168.1.20:11434/api/generate`に送信するように構成します。',
+          'スマートフォンでは、音声アシスタントパイプライン（iOSショートカットまたはAndroid Tasker）をWhisperトランスクリプトをHTTP POSTで`[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)`に送信するように構成します。',
           'TTSはスマートフォン上で動作し続けます（Piperまたはシステムボイスはホームマシンからの応答テキストを使用）。',
           '結果：Whisper STTはスマートフォンで実行されます（オーディオはデバイスを離れることはありません）、ホームOlamaは70B品質の応答を~600～1200 msで生成し、TTSはスマートフォンで話します。総レイテンシ~1.5～2.5秒—完全にデバイス上よりわずかに高いですが、より優れたLLM品質を備えています。',
         ],
         promptExamples: [
           {
             label: 'iOSショートカット：ハイブリッド音声アシスタント（アクションボタントリガー）',
-            text: '1. オーディオ記録→tempdファイルに保存します。\n2. Whisper Transcriptionで転写→出力：トランスクリプトテキスト。\n3. URLの内容を取得→URL：http://192.168.1.20:11434/api/generate、メソッド：POST、JSONボディ：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→出力：応答テキスト。\n4. テキストを話す→入力：応答テキスト、ボイス：iOSシステムボイス。\nアクションボタンに割り当てます。レコードを保持；送信をリリース。最初のオーディオ~1.5～2.5秒再生します。',
+            text: '1. オーディオ記録→tempdファイルに保存します。\n2. Whisper Transcriptionで転写→出力：トランスクリプトテキスト。\n3. URLの内容を取得→URL：[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)、メソッド：POST、JSONボディ：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→出力：応答テキスト。\n4. テキストを話す→入力：応答テキスト、ボイス：iOSシステムボイス。\nアクションボタンに割り当てます。レコードを保持；送信をリリース。最初のオーディオ~1.5～2.5秒再生します。',
           },
           {
             label: 'Tasker：Androidハイブリッド音声アシスタント',
-            text: '1. 変数：%TRANSCRIPT =（記録されたオーディオファイル上のwhisper-CLIの出力）。\n2. HTTPリクエスト：URLhttp://192.168.1.20:11434/api/generate、メソッドPOST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 変数：%REPLY =（JSONから解析された「応答」フィールド）。\n4. 言う：%REPLY（Androidシステムティスまたはインストールされている場合はPiper）。\nクイックタイル、Bluetoothボタン、またはPixel 9 Proのサイドキーロングプレスからトリガーします。',
+            text: '1. 変数：%TRANSCRIPT =（記録されたオーディオファイル上のwhisper-CLIの出力）。\n2. HTTPリクエスト：URL[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)、メソッドPOST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 変数：%REPLY =（JSONから解析された「応答」フィールド）。\n4. 言う：%REPLY（Androidシステムティスまたはインストールされている場合はPiper）。\nクイックタイル、Bluetoothボタン、またはPixel 9 Proのサイドキーロングプレスからトリガーします。',
           },
         ],
         callouts: [
@@ -2147,18 +2147,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           '在家庭机器（Mac、PC或NAS）上：安装Ollama。拉取70B模型：`ollama pull llama3.3:70b`（需要~40 GB自由磁盘+ ~48 GB RAM或24 GB GPU VRAM）。',
           '将Ollama绑定到您的本地网络：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。注意家庭机器的本地IP（例如192.168.1.20）。',
-          '在手机上，配置您的语音助手管道（iOS快捷方式或Android Tasker）以通过HTTP POST将Whisper转录发送到`http://192.168.1.20:11434/api/generate`，而不是本地LLM调用。',
+          '在手机上，配置您的语音助手管道（iOS快捷方式或Android Tasker）以通过HTTP POST将Whisper转录发送到`[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)`，而不是本地LLM调用。',
           'TTS仍在手机上运行（Piper或系统语音），使用来自家庭机器的响应文本。',
           '结果：Whisper STT在手机上运行（音频从不离开设备），家庭Ollama在~600-1200 ms中生成70B质量响应，TTS在手机上说话。总延迟~1.5-2.5秒—略高于完全设备上但具有更好的LLM质量。',
         ],
         promptExamples: [
           {
             label: 'iOS快捷方式：混合语音助手（操作按钮触发器）',
-            text: '1. 录制音频→保存到临时文件。\n2. 使用Whisper Transcription转录→输出：转录文本。\n3. 获取URL内容→URL：http://192.168.1.20:11434/api/generate、方法：POST、JSON正文：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→输出：响应文本。\n4. 说文本→输入：响应文本、语音：iOS系统语音。\n分配到操作按钮。按住录制；释放发送。首个音频在~1.5-2.5秒处播放。',
+            text: '1. 录制音频→保存到临时文件。\n2. 使用Whisper Transcription转录→输出：转录文本。\n3. 获取URL内容→URL：[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)、方法：POST、JSON正文：{"model":"llama3.3:70b","prompt":"[transcript]","stream":false}→输出：响应文本。\n4. 说文本→输入：响应文本、语音：iOS系统语音。\n分配到操作按钮。按住录制；释放发送。首个音频在~1.5-2.5秒处播放。',
           },
           {
             label: 'Tasker：Android混合语音助手',
-            text: '1. 变量：%TRANSCRIPT =（记录的音频文件上的whisper-cli输出）。\n2. HTTP请求：URL http://192.168.1.20:11434/api/generate、方法POST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 变量：%REPLY =（从JSON解析的"response"字段）。\n4. 说：%REPLY（Android系统TTS或Piper（如果安装））。\n从快速拼贴、蓝牙按钮或Pixel 9 Pro上的Side-key长按触发。',
+            text: '1. 变量：%TRANSCRIPT =（记录的音频文件上的whisper-cli输出）。\n2. HTTP请求：URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)、方法POST、Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}。\n3. 变量：%REPLY =（从JSON解析的"response"字段）。\n4. 说：%REPLY（Android系统TTS或Piper（如果安装））。\n从快速拼贴、蓝牙按钮或Pixel 9 Pro上的Side-key长按触发。',
           },
         ],
         callouts: [
@@ -2630,18 +2630,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'En el ordenador de casa (Mac, PC o NAS): instala Ollama. Descarga un modelo 70B: `ollama pull llama3.3:70b` (requiere ~40 GB de espacio libre en disco + ~48 GB de RAM o 24 GB de VRAM de GPU).',
           'Vincula Ollama a tu red local: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Anota la IP local del ordenador de casa (por ejemplo, 192.168.1.20).',
-          'En el teléfono, configura tu pipeline de asistente de voz (Atajo de iOS o Tasker de Android) para enviar la transcripción de Whisper mediante HTTP POST a `http://192.168.1.20:11434/api/generate` en lugar de la llamada al LLM local.',
+          'En el teléfono, configura tu pipeline de asistente de voz (Atajo de iOS o Tasker de Android) para enviar la transcripción de Whisper mediante HTTP POST a `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` en lugar de la llamada al LLM local.',
           'El TTS sigue ejecutándose en el teléfono (Piper o voz del sistema) usando el texto de respuesta del ordenador de casa.',
           'Resultado: Whisper STT se ejecuta en el teléfono (el audio nunca sale del dispositivo), Ollama en casa genera una respuesta de calidad 70B en ~600–1200 ms, el TTS habla en el teléfono. Latencia total ~1,5–2,5 segundos — algo mayor que completamente en el dispositivo pero con mucha mejor calidad de LLM.',
         ],
         promptExamples: [
           {
             label: 'Atajo de iOS: asistente de voz híbrido (activación con el Botón de acción)',
-            text: '1. Grabar audio → guardar en archivo temporal.\n2. Transcribir con Whisper Transcription → salida: texto de transcripción.\n3. Obtener contenido de URL → URL: http://192.168.1.20:11434/api/generate, Método: POST, cuerpo JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → salida: texto de respuesta.\n4. Reproducir texto → entrada: texto de respuesta, voz: voz del sistema iOS.\nAsignar al Botón de acción. Mantén pulsado para grabar; suelta para enviar. El primer audio suena en ~1,5–2,5 seg.',
+            text: '1. Grabar audio → guardar en archivo temporal.\n2. Transcribir con Whisper Transcription → salida: texto de transcripción.\n3. Obtener contenido de URL → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Método: POST, cuerpo JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → salida: texto de respuesta.\n4. Reproducir texto → entrada: texto de respuesta, voz: voz del sistema iOS.\nAsignar al Botón de acción. Mantén pulsado para grabar; suelta para enviar. El primer audio suena en ~1,5–2,5 seg.',
           },
           {
             label: 'Tasker: asistente de voz híbrido en Android',
-            text: '1. Variable: %TRANSCRIPT = (salida de whisper-cli sobre el archivo de audio grabado).\n2. Solicitud HTTP: URL http://192.168.1.20:11434/api/generate, Método POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (campo "response" analizado del JSON).\n4. Decir: %REPLY (TTS del sistema Android o Piper si está instalado).\nActivar mediante mosaico rápido, botón Bluetooth o pulsación larga en la tecla lateral del Pixel 9 Pro.',
+            text: '1. Variable: %TRANSCRIPT = (salida de whisper-cli sobre el archivo de audio grabado).\n2. Solicitud HTTP: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Método POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variable: %REPLY = (campo "response" analizado del JSON).\n4. Decir: %REPLY (TTS del sistema Android o Piper si está instalado).\nActivar mediante mosaico rápido, botón Bluetooth o pulsación larga en la tecla lateral del Pixel 9 Pro.',
           },
         ],
         callouts: [
@@ -3113,18 +3113,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           '집의 컴퓨터(Mac, PC 또는 NAS)에 Ollama를 설치하십시오. 70B 모델 다운로드: `ollama pull llama3.3:70b`(~40GB 여유 디스크 공간 + ~48GB RAM 또는 24GB GPU VRAM 필요).',
           'Ollama를 로컬 네트워크에 바인딩: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. 집 컴퓨터의 로컬 IP를 메모하십시오(예: 192.168.1.20).',
-          '전화기에서 음성 비서 파이프라인(iOS Shortcut 또는 Android Tasker)을 설정하여 Whisper 전사를 로컬 LLM 호출 대신 `http://192.168.1.20:11434/api/generate`로 HTTP POST로 전송하십시오.',
+          '전화기에서 음성 비서 파이프라인(iOS Shortcut 또는 Android Tasker)을 설정하여 Whisper 전사를 로컬 LLM 호출 대신 `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)`로 HTTP POST로 전송하십시오.',
           'TTS는 집 컴퓨터의 응답 텍스트를 사용하여 전화기에서 계속 실행됩니다(Piper 또는 시스템 음성).',
           '결과: Whisper STT가 전화기에서 실행되고(오디오가 기기를 떠나지 않음), 집의 Ollama가 ~600–1200ms에 70B급 응답을 생성하며, TTS가 전화기에서 말합니다. 총 지연 ~1.5–2.5초 — 완전히 기기 내보다 약간 더 많지만 훨씬 더 나은 LLM 품질.',
         ],
         promptExamples: [
           {
             label: 'iOS Shortcut: 하이브리드 음성 비서 (동작 버튼으로 활성화)',
-            text: '1. 오디오 녹음 → 임시 파일에 저장.\n2. Whisper Transcription으로 전사 → 출력: 전사 텍스트.\n3. URL에서 콘텐츠 가져오기 → URL: http://192.168.1.20:11434/api/generate, 메서드: POST, JSON 본문: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → 출력: 응답 텍스트.\n4. 텍스트 재생 → 입력: 응답 텍스트, 음성: iOS 시스템 음성.\n동작 버튼에 할당. 길게 누르기로 녹음; 놓기로 전송. 첫 오디오가 ~1.5–2.5초에 들림.',
+            text: '1. 오디오 녹음 → 임시 파일에 저장.\n2. Whisper Transcription으로 전사 → 출력: 전사 텍스트.\n3. URL에서 콘텐츠 가져오기 → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), 메서드: POST, JSON 본문: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → 출력: 응답 텍스트.\n4. 텍스트 재생 → 입력: 응답 텍스트, 음성: iOS 시스템 음성.\n동작 버튼에 할당. 길게 누르기로 녹음; 놓기로 전송. 첫 오디오가 ~1.5–2.5초에 들림.',
           },
           {
             label: 'Tasker: Android에서 하이브리드 음성 비서',
-            text: '1. 변수: %TRANSCRIPT = (녹음된 오디오 파일에서 whisper-cli 출력).\n2. HTTP 요청: URL http://192.168.1.20:11434/api/generate, 메서드 POST, 본문 {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. 변수: %REPLY = (JSON에서 파싱된 "response" 필드).\n4. 말하기: %REPLY (Android 시스템 TTS 또는 Piper가 설치된 경우).\n빠른 타일, Bluetooth 버튼 또는 Pixel 9 Pro 사이드 키 길게 누르기로 활성화.',
+            text: '1. 변수: %TRANSCRIPT = (녹음된 오디오 파일에서 whisper-cli 출력).\n2. HTTP 요청: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), 메서드 POST, 본문 {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. 변수: %REPLY = (JSON에서 파싱된 "response" 필드).\n4. 말하기: %REPLY (Android 시스템 TTS 또는 Piper가 설치된 경우).\n빠른 타일, Bluetooth 버튼 또는 Pixel 9 Pro 사이드 키 길게 누르기로 활성화.',
           },
         ],
         callouts: [
@@ -3596,18 +3596,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'No computador de casa (Mac, PC ou NAS): instale o Ollama. Baixe um modelo 70B: `ollama pull llama3.3:70b` (requer ~40 GB de espaço livre em disco + ~48 GB de RAM ou 24 GB de VRAM de GPU).',
           'Vincule o Ollama à sua rede local: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Anote o IP local do computador de casa (por exemplo, 192.168.1.20).',
-          'No telefone, configure o seu pipeline de assistente de voz (Atalho do iOS ou Tasker do Android) para enviar a transcrição do Whisper via HTTP POST para `http://192.168.1.20:11434/api/generate` em vez da chamada ao LLM local.',
+          'No telefone, configure o seu pipeline de assistente de voz (Atalho do iOS ou Tasker do Android) para enviar a transcrição do Whisper via HTTP POST para `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` em vez da chamada ao LLM local.',
           'O TTS continua sendo executado no telefone (Piper ou voz do sistema) usando o texto de resposta do computador de casa.',
           'Resultado: o Whisper STT é executado no telefone (o áudio nunca sai do dispositivo), o Ollama em casa gera uma resposta de qualidade 70B em ~600–1200 ms, o TTS fala no telefone. Latência total ~1,5–2,5 segundos — um pouco maior do que totalmente no dispositivo mas com qualidade de LLM muito melhor.',
         ],
         promptExamples: [
           {
             label: 'Atalho do iOS: assistente de voz híbrido (acionamento com o Botão de Ação)',
-            text: '1. Gravar áudio → salvar em arquivo temporário.\n2. Transcrever com Whisper Transcription → saída: texto da transcrição.\n3. Obter conteúdo de URL → URL: http://192.168.1.20:11434/api/generate, Método: POST, corpo JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → saída: texto de resposta.\n4. Reproduzir texto → entrada: texto de resposta, voz: voz do sistema iOS.\nAtribua ao Botão de Ação. Mantenha pressionado para gravar; solte para enviar. O primeiro áudio soa em ~1,5–2,5 seg.',
+            text: '1. Gravar áudio → salvar em arquivo temporário.\n2. Transcrever com Whisper Transcription → saída: texto da transcrição.\n3. Obter conteúdo de URL → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Método: POST, corpo JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → saída: texto de resposta.\n4. Reproduzir texto → entrada: texto de resposta, voz: voz do sistema iOS.\nAtribua ao Botão de Ação. Mantenha pressionado para gravar; solte para enviar. O primeiro áudio soa em ~1,5–2,5 seg.',
           },
           {
             label: 'Tasker: assistente de voz híbrido no Android',
-            text: '1. Variável: %TRANSCRIPT = (saída do whisper-cli sobre o arquivo de áudio gravado).\n2. Solicitação HTTP: URL http://192.168.1.20:11434/api/generate, Método POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variável: %REPLY = (campo "response" analisado do JSON).\n4. Falar: %REPLY (TTS do sistema Android ou Piper se instalado).\nAcionar via bloco rápido, botão Bluetooth ou pressionamento longo na tecla lateral do Pixel 9 Pro.',
+            text: '1. Variável: %TRANSCRIPT = (saída do whisper-cli sobre o arquivo de áudio gravado).\n2. Solicitação HTTP: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate), Método POST, Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. Variável: %REPLY = (campo "response" analisado do JSON).\n4. Falar: %REPLY (TTS do sistema Android ou Piper se instalado).\nAcionar via bloco rápido, botão Bluetooth ou pressionamento longo na tecla lateral do Pixel 9 Pro.',
           },
         ],
         callouts: [
@@ -4080,18 +4080,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           'على جهاز الكمبيوتر المنزلي ‏(Mac أو PC أو NAS)‏: ثبّت Ollama. نزّل نموذج 70B: `ollama pull llama3.3:70b` ‏(يتطلب ~40 جيجابايت مساحة + ~48 جيجابايت RAM أو 24 جيجابايت VRAM للـ GPU)‏.',
           'ربط Ollama بشبكتك المحلية: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. سجّل IP الجهاز المنزلي ‏(مثلًا 192.168.1.20)‏.',
-          'على الهاتف، هيّئ خط أنابيب المساعد الصوتي ‏(iOS Shortcut أو Tasker على Android)‏ لإرسال نسخ Whisper عبر HTTP POST إلى `http://192.168.1.20:11434/api/generate` بدلًا من مكالمة LLM المحلية.',
+          'على الهاتف، هيّئ خط أنابيب المساعد الصوتي ‏(iOS Shortcut أو Tasker على Android)‏ لإرسال نسخ Whisper عبر HTTP POST إلى `[192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)` بدلًا من مكالمة LLM المحلية.',
           'يستمر TTS في العمل على الهاتف ‏(Piper أو صوت النظام)‏ باستخدام نص الرد من الجهاز المنزلي.',
           'النتيجة: Whisper STT يعمل على الهاتف ‏(الصوت لا يغادر الجهاز أبدًا)‏، Ollama المنزلي يولّد ردًا بجودة 70B في ~600–1200 مللي ثانية، TTS يتكلم على الهاتف. الكمون الإجمالي ~1.5–2.5 ثانية — أعلى قليلًا من الجهاز بالكامل لكن بجودة LLM أفضل بكثير.',
         ],
         promptExamples: [
           {
             label: 'iOS Shortcut: مساعد صوتي هجين ‏(تفعيل بزر الإجراء)‏',
-            text: '1. تسجيل صوت → حفظ في ملف مؤقت.\n2. نسخ مع Whisper Transcription → إخراج: نص النسخ.\n3. الحصول على محتوى URL → URL: http://192.168.1.20:11434/api/generate، الطريقة: POST، جسم JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → إخراج: نص الرد.\n4. تشغيل النص → إدخال: نص الرد، الصوت: صوت نظام iOS.\nعيّن لزر الإجراء. اضغط مطولًا للتسجيل؛ أفلت للإرسال. أول صوت يُسمع بعد ~1.5–2.5 ث.',
+            text: '1. تسجيل صوت → حفظ في ملف مؤقت.\n2. نسخ مع Whisper Transcription → إخراج: نص النسخ.\n3. الحصول على محتوى URL → URL: [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)، الطريقة: POST، جسم JSON: {"model":"llama3.3:70b","prompt":"[transcript]","stream":false} → إخراج: نص الرد.\n4. تشغيل النص → إدخال: نص الرد، الصوت: صوت نظام iOS.\nعيّن لزر الإجراء. اضغط مطولًا للتسجيل؛ أفلت للإرسال. أول صوت يُسمع بعد ~1.5–2.5 ث.',
           },
           {
             label: 'Tasker: مساعد صوتي هجين على Android',
-            text: '1. متغير: %TRANSCRIPT = (إخراج whisper-cli على ملف الصوت المسجّل).\n2. طلب HTTP: URL http://192.168.1.20:11434/api/generate، الطريقة POST، Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. متغير: %REPLY = (حقل "response" المُحلَّل من JSON).\n4. قل: %REPLY (TTS نظام Android أو Piper إن كان مثبتًا).\nتفعيل عبر اختصار سريع أو زر Bluetooth أو ضغطة طويلة على الزر الجانبي لـ Pixel 9 Pro.',
+            text: '1. متغير: %TRANSCRIPT = (إخراج whisper-cli على ملف الصوت المسجّل).\n2. طلب HTTP: URL [192.168.1.20:11434/api/generate](http://192.168.1.20:11434/api/generate)، الطريقة POST، Body {"model":"llama3.3:70b","prompt":"%TRANSCRIPT","stream":false}.\n3. متغير: %REPLY = (حقل "response" المُحلَّل من JSON).\n4. قل: %REPLY (TTS نظام Android أو Piper إن كان مثبتًا).\nتفعيل عبر اختصار سريع أو زر Bluetooth أو ضغطة طويلة على الزر الجانبي لـ Pixel 9 Pro.',
           },
         ],
         callouts: [

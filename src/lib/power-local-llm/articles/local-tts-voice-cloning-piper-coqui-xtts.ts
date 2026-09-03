@@ -3632,9 +3632,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '로컬 TTS 및 음성 복제 2026', item: 'https://www.promptquorum.com/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '로컬 TTS 및 음성 복제 2026', item: '[www.promptquorum.com/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts](https://www.promptquorum.com/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)' },
       ],
     },
   },
