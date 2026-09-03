@@ -201,7 +201,23 @@ function validateEvergreen(filePath, content) {
     // Strip "direct current"/"alternating current" (DC/AC electrical
     // terminology) before scanning — not a freshness claim, but only this
     // narrow phrase is exempted, not every "current" on the line.
-    const scanLine = line.replace(ELECTRICAL_CURRENT, '');
+    //
+    // Also strip link targets (structured url:/href: fields, and markdown
+    // `](...)` targets, both internal and external) before scanning. A link
+    // target isn't a freshness claim made by this article's own prose — see
+    // isPureLinkLine's rationale above — but until now that reasoning only
+    // gated an all-or-nothing line skip, so a line mixing a link target with
+    // any other digit (e.g. a sentence naming "Apache-2.0" that also links to
+    // a `-2026`-slugged article, or a citation whose visible license name is
+    // followed by its own versioned URL like apache.org/licenses/LICENSE-2.0)
+    // still scanned the raw, unstripped URL and could false-positive on a
+    // year or version number that lives only in the link target, not the
+    // prose. Stripping the target text itself (not just skip-if-pure) closes
+    // that gap for every pattern, not only the ones with a manual exemption.
+    const scanLine = line
+      .replace(ELECTRICAL_CURRENT, '')
+      .replace(/(?:url|href):\s*'\/[^']*'/g, '')
+      .replace(/\]\([^)]*\)/g, ']()');
 
     // Check for forbidden patterns
     for (const [patternName, pattern] of Object.entries(FORBIDDEN_PATTERNS)) {

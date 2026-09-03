@@ -11,6 +11,8 @@
 export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 0 — Overview & Reference (1)
   'local-llm-software-directory-2026',
+  // AI & open-source license taxonomy (evergreen reference) — 2026-09-03
+  'ai-tool-licenses-explained',
 
   // Cat 1 — Getting Started
   'easiest-local-ai-app-windows-mac-linux',

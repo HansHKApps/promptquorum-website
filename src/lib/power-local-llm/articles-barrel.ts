@@ -52,6 +52,7 @@ import { article as a_local_ai_app_with_built_in_rag } from './articles/local-ai
 import { article as a_local_coding_llm_without_internet } from './articles/local-coding-llm-without-internet'
 import { article as a_local_llm_code_review_ci_cd } from './articles/local-llm-code-review-ci-cd'
 import { article as a_local_llm_software_directory_2026 } from './articles/local-llm-software-directory-2026'
+import { article as a_ai_tool_licenses_explained } from './articles/ai-tool-licenses-explained'
 import { article as a_local_llm_with_obsidian_2026 } from './articles/local-llm-with-obsidian-2026'
 import { article as a_local_llm_with_logseq_and_joplin } from './articles/local-llm-with-logseq-and-joplin'
 import { article as a_local_llm_personal_knowledge_base_2026 } from './articles/local-llm-personal-knowledge-base-2026'
@@ -155,6 +156,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-coding-llm-without-internet':      a_local_coding_llm_without_internet,
   'local-llm-code-review-ci-cd':            a_local_llm_code_review_ci_cd,
   'local-llm-software-directory-2026':      a_local_llm_software_directory_2026,
+  'ai-tool-licenses-explained':              a_ai_tool_licenses_explained,
   'local-llm-with-obsidian-2026':           a_local_llm_with_obsidian_2026,
   'local-llm-with-logseq-and-joplin':       a_local_llm_with_logseq_and_joplin,
   'local-llm-personal-knowledge-base-2026': a_local_llm_personal_knowledge_base_2026,

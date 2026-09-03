@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Instead of separately wiring up a document search system, a chatbot, and an agent framework, Dify puts all three behind one drag-and-drop canvas that you can self-host or run as a paid cloud service.' },
         ],
         items: [
-          'License is not plain Apache 2.0 — the "Dify Open Source License" adds a clause barring unauthorized multi-tenant SaaS deployments and a logo/branding retention requirement',
+          'License is not plain Apache 2.0 — the "Dify Open Source License" adds a clause barring unauthorized multi-tenant SaaS deployments and a logo/branding retention requirement — see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for how this source-available pattern differs from a plain permissive license',
           'Community Edition (self-hosted) is free, open source, and single-workspace via Docker',
           'Dify Cloud is a paid managed option with a free Sandbox tier and per-workspace annual pricing',
           'Dify Enterprise adds SSO/SAML, RBAC, SOC 2 Type II and ISO 27001 compliance for self-hosted or VPC deployment',
