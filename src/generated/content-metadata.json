@@ -3796,6 +3796,96 @@
         "ko"
       ],
       "images": []
+    },
+    "enterprise-gpu-server-buying-guide-2026": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "soc2-iso27001-self-hosted-llm-compliance": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "data-residency-sovereign-ai-eu-gdpr-enterprise": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-commercial-license-guide-business": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "renting-gpu-cloud-vs-buying-on-prem-enterprise-ai": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-engineering": {
@@ -6358,7 +6448,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7314,6 +7404,24 @@
       ],
       "images": []
     },
+    "enterprise-rag-vector-database-deployment-guide-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "wechat-bot-local-llm-personal-assistant-2026": {
       "dateModified": "2026-08-25",
       "lastFactChecked": null,
@@ -7575,10 +7683,51 @@
       ],
       "images": []
     },
+    "enterprise-llm-inference-servers-vllm-tgi-nim-2026": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/enterprise-llm-inference-servers-comparison-en.svg",
+          "title": "vLLM (Apache 2.0, PagedAttention, tensor + pipeline parallel) vs TGI (Apache 2.0, Rust router, HF-native) vs NVIDIA NIM (paid, TensorRT-LLM, SLA support) vs Ollama (MIT, single-node, not multi-tenant)."
+        }
+      ]
+    },
     "dify-ai-workflow-builder-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "h2ogpt-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
       "hasSections": true,
       "langs": [
         "en",
@@ -7684,6 +7833,114 @@
       "images": []
     },
     "khoj-ai-second-brain-review": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "real-esrgan-ai-image-upscaler-review": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-local-llms-customer-support-call-centers-enterprise": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "enterprise-chatbot-deployment-helpdesk-hr-bots": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-ai-hr-software-enterprise-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-ai-marketing-software-enterprise-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "autogpt-local-review-2026": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
