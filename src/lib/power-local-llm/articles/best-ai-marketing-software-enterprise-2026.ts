@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI-powered marketing software compared: mainstream vendor platforms vs. self-hosted local LLMs for customer segmentation, brand-voice content, and high-volume ad copy.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Enterprise marketing and CMO-office leaders and IT buyers evaluating AI-powered marketing software for content generation, personalization, and campaign automation.',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'KI-Marketing-Software im Vergleich: etablierte Anbieterplattformen vs. selbst gehostete Local LLMs für Kundensegmentierung, Markenstimme-Content und Anzeigentexte in großem Umfang.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Marketing- und CMO-Verantwortliche sowie IT-Einkäufer in Unternehmen, die KI-gestützte Marketing-Software für Content-Generierung, Personalisierung und Kampagnenautomatisierung evaluieren.',
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       "Logiciels marketing IA comparés : plateformes éditeurs courantes vs LLM locaux auto-hébergés pour la segmentation client, le contenu de marque et les textes publicitaires à grande échelle.",
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       "Responsables marketing et direction CMO ainsi qu'acheteurs IT en entreprise évaluant des logiciels marketing IA pour la génération de contenu, la personnalisation et l'automatisation de campagnes.",
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AIマーケティングソフトウェア比較:主流ベンダープラットフォーム vs セルフホスト型ローカルLLM——顧客セグメンテーション、ブランドボイスコンテンツ、大量の広告コピー生成。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'コンテンツ生成、パーソナライゼーション、キャンペーン自動化のためのAIマーケティングソフトウェアを評価する企業マーケティング・CMO部門のリーダーおよびIT購買担当者。',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI营销软件对比:主流厂商平台 vs 自托管本地LLM——用于客户细分、品牌调性内容和大规模广告文案生成。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '正在评估AI营销软件以用于内容生成、个性化和营销活动自动化的企业营销及CMO办公室负责人和IT采购人员。',
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Software de marketing con IA comparado: plataformas de proveedores habituales vs. LLM locales autoalojados para segmentación de clientes, contenido de marca y textos publicitarios a gran escala.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Responsables de marketing y de la oficina del CMO, y compradores de TI en empresas que evalúan software de marketing con IA para generación de contenido, personalización y automatización de campañas.',
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Softwares de marketing com IA comparados: plataformas de fornecedores conhecidos vs. LLMs locais autogerenciados para segmentação de clientes, conteúdo de marca e textos publicitários em grande escala.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Líderes de marketing e da diretoria de marketing (CMO), além de compradores de TI em empresas que avaliam software de marketing com IA para geração de conteúdo, personalização e automação de campanhas.',
@@ -2099,7 +2099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'مقارنة برامج التسويق بالذكاء الاصطناعي: منصات الموردين الشائعة مقابل نماذج LLM محلية مستضافة ذاتيًا لتقسيم العملاء ومحتوى العلامة التجارية ونصوص الإعلانات على نطاق واسع.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'قادة التسويق ومكتب المدير التنفيذي للتسويق ومشترو تقنية المعلومات في المؤسسات الذين يقيّمون برامج التسويق بالذكاء الاصطناعي لتوليد المحتوى والتخصيص وأتمتة الحملات.',
@@ -2372,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI 마케팅 소프트웨어 비교: 주요 공급업체 플랫폼 vs. 셀프 호스팅형 로컬 LLM—고객 세분화, 브랜드 보이스 콘텐츠, 대규모 광고 카피 생성.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '콘텐츠 생성, 개인화, 캠페인 자동화를 위한 AI 마케팅 소프트웨어를 평가하는 기업 마케팅·CMO 조직 리더 및 IT 구매 담당자.',
