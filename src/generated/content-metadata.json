@@ -5511,6 +5511,24 @@
     }
   },
   "power-local-llm": {
+    "hermes-agent-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "anythingllm-vs-privategpt-vs-openwebui-rag": {
       "dateModified": "2026-08-27",
       "lastFactChecked": null,
@@ -6466,7 +6484,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7962,6 +7980,42 @@
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "librechat-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "bodega-one-code-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
       "hasSections": true,
       "langs": [
         "en",
