@@ -12,6 +12,7 @@ import { article as a_best_ai_hr_software_enterprise_2026 } from './articles/bes
 import { article as a_best_ai_marketing_software_enterprise_2026 } from './articles/best-ai-marketing-software-enterprise-2026'
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
+import { article as a_babyagi_review_autonomous_agent } from './articles/babyagi-review-autonomous-agent'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_gpu_buying_guide_local_llm_2026 } from './articles/best-gpu-buying-guide-local-llm-2026'
 import { article as a_best_mac_for_local_ai_2026 } from './articles/best-mac-for-local-ai-2026'
@@ -80,6 +81,7 @@ import { article as a_deepseek_r1_vs_distills_explained_2026 } from './articles/
 import { article as a_deepseek_offline_china_self_hosted_2026 } from './articles/deepseek-offline-china-self-hosted-2026'
 import { article as a_local_ai_video_generation_vs_cloud } from './articles/local-ai-video-generation-vs-cloud'
 import { article as a_local_ai_image_generation_vs_cloud } from './articles/local-ai-image-generation-vs-cloud'
+import { article as a_animatediff_video_generation_guide_2026 } from './articles/animatediff-video-generation-guide-2026'
 import { article as a_loci_ai_review_offline_local_ai } from './articles/loci-ai-review-offline-local-ai'
 import { article as a_backyard_ai_review_local_roleplay_2026 } from './articles/backyard-ai-review-local-roleplay-2026'
 import { article as a_voice_ai_writers_cloud_vs_local } from './articles/voice-ai-writers-cloud-vs-local'
@@ -99,10 +101,12 @@ import { article as a_txtai_embedded_vector_database_review } from './articles/t
 import { article as a_quivr_self_hosted_knowledge_assistant_review } from './articles/quivr-self-hosted-knowledge-assistant-review'
 import { article as a_ragflow_document_understanding_rag_review } from './articles/ragflow-document-understanding-rag-review'
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
+import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
   'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
+  'babyagi-review-autonomous-agent':        a_babyagi_review_autonomous_agent,
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-gpu-buying-guide-local-llm-2026':   a_best_gpu_buying_guide_local_llm_2026,
   'best-mac-for-local-ai-2026':             a_best_mac_for_local_ai_2026,
@@ -181,6 +185,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':                a_local_ai_video_generation_vs_cloud,
   'local-ai-image-generation-vs-cloud':                a_local_ai_image_generation_vs_cloud,
+  'animatediff-video-generation-guide-2026':           a_animatediff_video_generation_guide_2026,
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
   'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
@@ -192,6 +197,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
   'ragflow-document-understanding-rag-review':         a_ragflow_document_understanding_rag_review,
   'khoj-ai-second-brain-review':                       a_khoj_ai_second_brain_review,
+  'real-esrgan-ai-image-upscaler-review':              a_real_esrgan_ai_image_upscaler_review,
   'best-local-llms-customer-support-call-centers-enterprise': a_best_local_llms_customer_support_call_centers_enterprise,
   'enterprise-chatbot-deployment-helpdesk-hr-bots': a_enterprise_chatbot_deployment_helpdesk_hr_bots,
   'best-ai-hr-software-enterprise-2026':            a_best_ai_hr_software_enterprise_2026,

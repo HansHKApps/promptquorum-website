@@ -255,11 +255,17 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS7Row3Purpose}</Td>
                     <Td>{t.privacyS7Row3Duration}</Td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-100">
                     <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row4Cookie}</code></Td>
                     <Td>{t.privacyS7Row4SetBy}</Td>
                     <Td>{t.privacyS7Row4Purpose}</Td>
                     <Td>{t.privacyS7Row4Duration}</Td>
+                  </tr>
+                  <tr>
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row5Cookie}</code></Td>
+                    <Td>{t.privacyS7Row5SetBy}</Td>
+                    <Td>{t.privacyS7Row5Purpose}</Td>
+                    <Td>{t.privacyS7Row5Duration}</Td>
                   </tr>
                 </tbody>
               </table>

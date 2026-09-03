@@ -33,6 +33,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
+  'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -107,6 +108,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':           'local-ai-video-generation-vs-cloud',
   'local-ai-image-generation-vs-cloud':           'local-ai-image-generation-vs-cloud',
+  'animatediff-video-generation-guide-2026':      'animatediff-video-generation-guide-2026',
 
   // Hosting Guides 2026-08-30
   'best-web-hosting-2026':                        'best-web-hosting-2026',
@@ -131,6 +133,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ragflow-document-understanding-rag-review':    'ragflow-document-understanding-rag-review',
   // Khoj review 2026-09-02
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
+  // Real-ESRGAN review 2026-09-02
+  'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',

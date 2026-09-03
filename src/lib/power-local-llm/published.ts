@@ -37,6 +37,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autonomous-local-agents-actually-work',
   'local-ai-agents-business-workflows-eu-compliance',
   'replace-zapier-with-local-ai-agents',
+  'babyagi-review-autonomous-agent',
 
   // Cat 5 — Creative Writing
   'best-local-llm-creative-writing-2026',
@@ -113,6 +114,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-video-generation-vs-cloud',
   'local-ai-image-generation-vs-cloud',
 
+  // AnimateDiff guide — 2026-09-02
+  'animatediff-video-generation-guide-2026',
+
   // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
   'best-web-hosting-2026',
 
@@ -142,6 +146,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ragflow-document-understanding-rag-review',
   // Khoj review — 2026-09-02
   'khoj-ai-second-brain-review',
+  'real-esrgan-ai-image-upscaler-review',
+
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise',
   // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03

@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "khoj-ai-second-brain-review",
         "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
         "url": "/power-local-llm/khoj-ai-second-brain-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/local-llm-hardware-guide-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-pc-build-1000",
-        "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
-        "url": "/local-llms/local-llm-pc-build-1000",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 191,
+    "totalCount": 192,
     "capped": true
   },
   "llama.cpp": {
@@ -460,6 +460,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "local-llm-pc-build-1000",
         "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
@@ -522,17 +530,9 @@
         "url": "/local-llms/local-llm-security-privacy-checklist",
         "dateModified": "2026-08-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-one-click-installers",
-        "title": "Ollama vs LM Studio vs Jan AI vs GPT4All: Which Local LLM Installer in 2026? (Comparison + Install Guide)",
-        "url": "/local-llms/local-llm-one-click-installers",
-        "dateModified": "2026-08-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 120,
+    "totalCount": 121,
     "capped": true
   },
   "Atomic Chat": {
@@ -1362,7 +1362,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "Cline": {
@@ -1448,7 +1448,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Windsurf": {
@@ -1939,6 +1939,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
         "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -1946,7 +1954,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Langflow": {
@@ -1958,6 +1966,14 @@
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -1984,7 +2000,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "LlamaIndex": {
@@ -2270,7 +2286,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "CrewAI": {
@@ -2292,6 +2308,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-stack-use-case",
         "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
@@ -2308,7 +2332,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "AutoGen": {
@@ -2409,6 +2433,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -2422,17 +2454,9 @@
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "haystack-deepset-rag-framework-review",
-        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
-        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "OpenClaw": {
@@ -3246,6 +3270,14 @@
   "Stable Diffusion": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cloud-gpu-rental-comparison-2026",
         "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
@@ -3316,21 +3348,21 @@
         "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-vs-sillytavern",
-        "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
-        "url": "/local-llms/open-webui-vs-sillytavern",
-        "dateModified": "2026-08-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 15,
     "capped": true
   },
   "ComfyUI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-video-generation-vs-cloud",
@@ -3364,11 +3396,33 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "AUTOMATIC1111 WebUI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "ControlNet": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
@@ -3386,7 +3440,37 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
+    "capped": false
+  },
+  "AnimateDiff": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-08-21",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "Smart Connections": {
@@ -3543,6 +3627,36 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "BabyAGI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "MetaGPT": {

@@ -42,6 +42,7 @@ const ARTICLE_DIRS = [
   'src/lib/prompt-bites/articles',
   'src/lib/smart-home/articles',
   'src/lib/balcony-solar/articles',
+  'src/lib/enterprise-ai/articles',
 ]
 
 // Single monolithic files that still use the old 'slug': { en: {...} } shape.
