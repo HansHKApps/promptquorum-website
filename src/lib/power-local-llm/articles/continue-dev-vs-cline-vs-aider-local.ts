@@ -499,6 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local AI Agents With MCP in 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — for users who want extended tool calling beyond the harnesses above.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — adjacent technical depth on tool-call reliability.',
           '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm) — the inference engine layer beneath all three harnesses.',
+          '[Bodega One Code Review (2026)](/power-local-llm/bodega-one-code-review-2026) — a standalone BYOLLM IDE that bundles editor, chat, and agent instead of extending VS Code like the tools above.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
         ],
       },

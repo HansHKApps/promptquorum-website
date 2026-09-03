@@ -26,6 +26,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-coding-models-2026':               'best-local-coding-models-2026',
   'local-coding-llm-without-internet':           'local-coding-llm-without-internet',
   'local-llm-code-review-ci-cd':                 'local-llm-code-review-ci-cd',
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026':                 'bodega-one-code-review-2026',
 
   // Category 4 — Local AI Agents & Tool Use
   'local-ai-agents-with-mcp-2026':               'local-ai-agents-with-mcp-2026',

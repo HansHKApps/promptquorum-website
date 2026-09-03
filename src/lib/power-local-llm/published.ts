@@ -31,6 +31,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-coding-llm-without-internet',
   'replace-github-copilot-with-local-llm',
   'local-llm-code-review-ci-cd',
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',

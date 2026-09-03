@@ -35,6 +35,7 @@ import { article as a_best_local_llm_creative_writing_2026 } from './articles/be
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
+import { article as a_bodega_one_code_review_2026 } from './articles/bodega-one-code-review-2026'
 import { article as a_local_ai_agents_business_workflows_eu_compliance } from './articles/local-ai-agents-business-workflows-eu-compliance'
 import { article as a_local_ai_agents_with_mcp_2026 } from './articles/local-ai-agents-with-mcp-2026'
 import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-studio-vs-jan-vs-gpt4all-2026'
@@ -209,4 +210,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-ai-marketing-software-enterprise-2026':     a_best_ai_marketing_software_enterprise_2026,
   // AutoGPT classic-vs-Platform review — 2026-09-02
   'autogpt-local-review-2026':                         a_autogpt_local_review_2026,
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026':                       a_bodega_one_code_review_2026,
 }
