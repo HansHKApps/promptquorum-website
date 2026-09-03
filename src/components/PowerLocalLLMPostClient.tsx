@@ -839,7 +839,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                           )}
                           :
                         </dt>
-                        <dd>{renderInlineLinks(row[col]!, lang)}</dd>
+                        <dd>{renderInlineLinks(row[col] ?? '—', lang)}</dd>
                       </div>
                     )
                   })}
