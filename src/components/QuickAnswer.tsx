@@ -1,8 +1,60 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ReactNode, Fragment } from 'react'
+import Link from 'next/link'
 
 type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
+
+// Parses [text](url) links, bare URLs, and **bold** markers into React nodes.
+// Content in article data follows GEO Rule 1 (bold-wrapped lead sentence) and
+// occasionally links — this must render them, not print the raw markdown.
+function renderRichText(text: string, lang: Language): ReactNode {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return parts.map((part, i) => {
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (linkMatch) {
+      const [, label, url] = linkMatch
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+        return (
+          <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="text-teal-400 font-medium hover:underline">
+            {label}
+          </a>
+        )
+      }
+      const finalUrl = lang !== 'en' && url.startsWith('/') && !url.startsWith(`/${lang}/`) ? `/${lang}${url}` : url
+      return (
+        <Link key={i} href={finalUrl} className="text-teal-400 font-medium hover:underline">
+          {label}
+        </Link>
+      )
+    }
+
+    const urlSegments = part.split(/(https?:\/\/[^\s,;)\]"]+)/g)
+    return (
+      <Fragment key={i}>
+        {urlSegments.map((seg, j) => {
+          if (/^https?:\/\//.test(seg)) {
+            return (
+              <a key={j} href={seg} target="_blank" rel="noopener noreferrer" className="text-teal-400 font-medium hover:underline break-all">
+                {seg}
+              </a>
+            )
+          }
+          const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
+          return (
+            <Fragment key={j}>
+              {boldParts.map((bp, k) =>
+                bp.startsWith('**') && bp.endsWith('**')
+                  ? <strong key={k} className="font-semibold text-white">{bp.slice(2, -2)}</strong>
+                  : bp
+              )}
+            </Fragment>
+          )
+        })}
+      </Fragment>
+    )
+  })
+}
 
 interface QuickAnswerProps {
   lang?: Language
@@ -57,11 +109,11 @@ export function QuickAnswer({
         </div>
 
         <h2 className="text-lg sm:text-xl font-bold leading-tight text-gray-100 mb-3">
-          {question}
+          {renderRichText(question, lang)}
         </h2>
 
         <p className="text-base leading-relaxed text-gray-200 max-w-3xl mb-3">
-          {answer}
+          {renderRichText(answer, lang)}
         </p>
 
         {bullets.length > 0 && (
@@ -77,7 +129,7 @@ export function QuickAnswer({
                 >
                   →
                 </span>
-                {bullet}
+                {renderRichText(bullet.replace(/^(→|->|➜|➔)\s*/, ''), lang)}
               </li>
             ))}
           </ul>

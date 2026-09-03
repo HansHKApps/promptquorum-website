@@ -2717,6 +2717,9 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
 | Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 | ToC anchor-to-section-id matching | Rule 42 | Rule 8c (top-of-page sequence) |
+| `quickAnswerTop` block structure | Rule 43 | Rule 31 (lead answer block) |
+| Clickable URLs in body text | Rule 44 | Rule 6a (internal linking) |
+| Markdown must render, not display raw | Rule 45 | Rule 43 (`quickAnswerTop`), Rule 1 (bold opener) |
 
 ---
 
@@ -2876,6 +2879,30 @@ quickAnswerTop: {
 - `[ ]` Every such reference is wrapped as `[label](https://full-url)`
 - `[ ]` Internal links use relative paths (`/cluster/slug`), not the full domain
 - `[ ]` External link labels are short (bare domain or `domain.com/path`), not the full URL repeated as the label
+
+---
+
+### Rule 45: Markdown Must Render, Not Display Raw (Mandatory)
+
+**Before writing content into any field, confirm the component that renders it actually parses `**bold**` and `[label](url)` — otherwise the reader sees literal asterisks and brackets, which is a visible AI-generated-copy tell.** Content following Rule 1 (bold-wrapped lead sentence) and Rule 44 (markdown links) is only correct if the destination component converts that markdown into `<strong>`/`<a>`. A field that prints raw text will leak `**` straight onto the page.
+
+This was found live on 2026-09-03: `src/components/QuickAnswer.tsx` (the `quickAnswerTop` box used by `local-llms`, `power-local-llm`, `smart-home`, and `balcony-solar`) printed `question`/`answer`/`bullets` as plain strings with no markdown parsing, so every `**bold**` lead sentence written per Rule 1 rendered as literal asterisks on the live site, in all languages, across ~400 articles.
+
+**Wrong (data escapes to the page as literal characters):**
+- ❌ A component doing `{answer}` or `{bullet}` directly in JSX when the string contains `**...**` or `[...](...)`.
+
+**Correct:**
+- ✅ Route the string through the shared bold/link parser (see `renderInlineLinks` in the cluster `*PostClient.tsx` files, or `renderRichText` in `QuickAnswer.tsx`) before rendering.
+
+**Also applies to bullet markers**: if a component already draws a bullet glyph (an arrow `→`, dot, or dash) via CSS or a `<span>`, never hand-type that same glyph as a literal prefix inside the bullet string itself (`'→ Open WebUI: ...'`) — it doubles up as `→ → Open WebUI: ...` on the page. Write the bullet text with no leading glyph; let the component supply it.
+
+**When adding a new content field or a new component that renders one**: write a one-line smoke test — fetch the rendered page (or `curl` the dev server) and grep the output for `**` or a doubled bullet glyph before calling the field "done." This is exactly what the risk-checker/page-updater review misses, because it reads the source `.ts` file, not the rendered HTML — the markdown looks correct in the data.
+
+#### Compliance Checklist
+
+- `[ ]` The component consuming a new content field parses `**bold**` and `[label](url)` before render, or the field is documented as intentionally plain text
+- `[ ]` No bullet string starts with a glyph (`→`, `•`, `-`, `➜`) that the rendering component already supplies via CSS/markup
+- `[ ]` Rendered HTML (not just source data) was checked for literal `**`, `[...]`, or doubled bullet glyphs before shipping
 
 ---
 
