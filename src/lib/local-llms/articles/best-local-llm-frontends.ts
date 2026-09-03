@@ -346,6 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Setup guide for the underlying model engine.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of the two most popular local LLM tools.',
             '[Best Local RAG Tools](/local-llms/best-local-rag-tools) -- Deep dive into Open WebUI RAG and other document-based LLM tools.',
+            '[Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client-2026) -- Free multi-provider desktop client with built-in knowledge bases and MCP support.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How to use the API directly from code.',
             '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) -- Setup Continue.dev and VS Code integrations.',
             '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, licence, and link.',

@@ -478,6 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review-2026) — Nous Research\'s MIT-licensed autonomous agent with persistent memory, a self-improving skill loop, and messaging-platform access (Telegram, Discord, Slack, WhatsApp, Signal, email).',
           '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — what enables agents under the hood; protocol layer for filesystem, database, browser, and GitHub tools.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — the model layer; head-to-head benchmarks for the tool-callers recommended above (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — adjacent harness comparison for coding-shaped work.',

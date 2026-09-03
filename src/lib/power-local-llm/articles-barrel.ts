@@ -35,6 +35,7 @@ import { article as a_best_local_llm_creative_writing_2026 } from './articles/be
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
+import { article as a_bodega_one_code_review_2026 } from './articles/bodega-one-code-review-2026'
 import { article as a_local_ai_agents_business_workflows_eu_compliance } from './articles/local-ai-agents-business-workflows-eu-compliance'
 import { article as a_local_ai_agents_with_mcp_2026 } from './articles/local-ai-agents-with-mcp-2026'
 import { article as a_lm_studio_vs_jan_vs_gpt4all_2026 } from './articles/lm-studio-vs-jan-vs-gpt4all-2026'
@@ -95,17 +96,21 @@ import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-
 import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
 import { article as a_haystack_deepset_rag_framework_review } from './articles/haystack-deepset-rag-framework-review'
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
+import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
+import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
 import { article as a_quivr_self_hosted_knowledge_assistant_review } from './articles/quivr-self-hosted-knowledge-assistant-review'
 import { article as a_ragflow_document_understanding_rag_review } from './articles/ragflow-document-understanding-rag-review'
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
 import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
+import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
+  'hermes-agent-review-2026':               a_hermes_agent_review_2026,
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
   'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
   'babyagi-review-autonomous-agent':        a_babyagi_review_autonomous_agent,
@@ -193,6 +198,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
   'enterprise-llm-inference-servers-vllm-tgi-nim-2026': a_enterprise_llm_inference_servers_vllm_tgi_nim_2026,
   'dify-ai-workflow-builder-review':                   a_dify_ai_workflow_builder_review,
+  'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
@@ -208,4 +214,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'autogpt-local-review-2026':                         a_autogpt_local_review_2026,
   // Atomic Chat review — 2026-09-03
   'atomic-chat-review':                                a_atomic_chat_review,
+  // LibreChat review — 2026-09-03
+  'librechat-review-2026':                             a_librechat_review_2026,
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026':                       a_bodega_one_code_review_2026,
 }

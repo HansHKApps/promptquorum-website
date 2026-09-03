@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Self-hosted internal chatbots for IT helpdesk and HR: access-control patterns so one employee never sees another\'s HR data, SSO, and Dify/Flowise/Open WebUI deployment.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Internal IT and HR-operations leads deploying self-hosted chatbots for IT helpdesk ticket deflection, HR policy Q&A, and benefits/PTO lookup on company infrastructure.',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Selbst gehostete interne Chatbots für IT-Helpdesk und HR: Zugriffskontrolle, damit keine HR-Daten zwischen Mitarbeitern durchsickern, SSO und Dify/Flowise/Open-WebUI-Deployment.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Interne IT- und HR-Verantwortliche, die selbst gehostete Chatbots für IT-Helpdesk-Ticket-Deflektion, HR-Richtlinien-Q&A und Urlaubs-/Benefits-Abfragen einsetzen.',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Chatbots internes auto-hébergés pour helpdesk IT et RH : contrôle d\'accès pour qu\'aucune donnée RH ne fuite entre salariés, SSO, et déploiement Dify/Flowise/Open WebUI.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Responsables IT et RH internes déployant des chatbots auto-hébergés pour la déflexion de tickets helpdesk, les questions sur les politiques RH et la consultation des congés/avantages.',
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'セルフホスト型社内チャットボット:ITヘルプデスクと人事Bot。従業員間で人事データが漏れないアクセス制御、SSO、Dify/Flowise/Open WebUIでの構築パターン。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'ITヘルプデスクのチケット偏向、人事ポリシーQ&A、福利厚生・有給残日数照会のためにセルフホスト型チャットボットを検討する社内IT・人事担当リーダー。',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '自托管内部聊天机器人:IT帮助台与HR机器人。防止HR数据在员工间泄露的访问控制、SSO,以及Dify/Flowise/Open WebUI部署模式。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '负责在自有基础设施上部署自托管聊天机器人、用于IT帮助台工单转移、HR政策问答及福利/年假查询的企业内部IT与HR运营负责人。',
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Chatbots internos autoalojados para IT y RR. HH.: control de acceso para que ningún dato de RR. HH. se filtre entre empleados, SSO, y despliegue con Dify/Flowise/Open WebUI.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Responsables internos de IT y RR. HH. que despliegan chatbots autoalojados para desvío de tickets de helpdesk, preguntas sobre políticas de RR. HH. y consultas de beneficios/vacaciones.',
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Chatbots internos auto-hospedados para helpdesk de TI e RH: controle de acesso pra nenhum dado de RH vazar entre colaboradores, SSO e implantação com Dify/Flowise/Open WebUI.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Líderes internos de TI e RH implantando chatbots auto-hospedados para desvio de chamados de helpdesk, dúvidas sobre políticas de RH e consultas de benefícios/férias.',
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'روبوتات دردشة داخلية مستضافة ذاتيًا للدعم التقني والموارد البشرية: تحكم بالوصول يمنع تسرب بيانات الموارد البشرية بين الموظفين، وتسجيل دخول موحد، ونمط نشر عبر Dify وFlowise وOpen WebUI.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'مسؤولو تقنية المعلومات والموارد البشرية الداخليون الذين ينشرون روبوتات دردشة مستضافة ذاتيًا لتحويل تذاكر الدعم التقني، والإجابة عن أسئلة سياسات الموارد البشرية، والاستعلام عن الإجازات والمزايا.',
@@ -2748,7 +2748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '자체 호스팅 사내 챗봇: IT 헬프데스크와 HR 봇. 직원 간 HR 데이터 유출을 막는 접근 제어, SSO, Dify/Flowise/Open WebUI 배포 패턴.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Phi-3.5 Mini 3.8B', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'IT 헬프데스크 티켓 전환, HR 정책 Q&A, 복지/연차 조회를 위해 자체 호스팅 챗봇 도입을 검토하는 사내 IT·HR 운영 담당자.',

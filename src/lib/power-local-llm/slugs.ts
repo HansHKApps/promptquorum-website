@@ -26,6 +26,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-coding-models-2026':               'best-local-coding-models-2026',
   'local-coding-llm-without-internet':           'local-coding-llm-without-internet',
   'local-llm-code-review-ci-cd':                 'local-llm-code-review-ci-cd',
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026':                 'bodega-one-code-review-2026',
 
   // Category 4 — Local AI Agents & Tool Use
   'local-ai-agents-with-mcp-2026':               'local-ai-agents-with-mcp-2026',
@@ -35,6 +37,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
+  'hermes-agent-review-2026':                    'hermes-agent-review-2026',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -136,6 +139,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Real-ESRGAN review 2026-09-02
   'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
+  // LibreChat review 2026-09-03
+  'librechat-review-2026':                        'librechat-review-2026',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',
@@ -145,7 +150,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-hr-software-enterprise-2026':          'best-ai-hr-software-enterprise-2026',
   // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
   'best-ai-marketing-software-enterprise-2026':   'best-ai-marketing-software-enterprise-2026',
-
   // Atomic Chat review — 2026-09-03
   'atomic-chat-review':                           'atomic-chat-review',
+  // h2oGPT enterprise review — 2026-09-03
+  'h2ogpt-review-2026':                           'h2ogpt-review-2026',
 }

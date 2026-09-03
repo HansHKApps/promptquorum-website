@@ -14,7 +14,14 @@ export function loadRegistry(root = process.cwd()) {
 }
 
 export function normalize(s) {
-  return s.toLowerCase().replace(/\s+/g, ' ').trim()
+  return s
+    .replace(/（/g, '(')
+    .replace(/）/g, ')')
+    .replace(/　/g, ' ') // full-width space (used in some ja/zh locale strings)
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([()])\s*/g, '$1') // ja/zh locale strings often omit the space before a full-width paren
+    .trim()
 }
 
 export function buildRegistryIndex(registry) {

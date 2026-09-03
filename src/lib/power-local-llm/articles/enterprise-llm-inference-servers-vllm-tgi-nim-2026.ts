@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Enterprise LLM serving is not a laptop problem. vLLM, TGI, and NVIDIA NIM compared on multi-GPU throughput, Kubernetes deployment, and licensing -- and why Ollama is not built for it.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'IT infrastructure leads and platform engineers evaluating multi-GPU, multi-user inference serving stacks for enterprise deployment -- not individual developers running a single local model.',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Enterprise-LLM-Serving ist kein Laptop-Problem. vLLM, TGI und NVIDIA NIM im Vergleich bei Multi-GPU-Durchsatz, Kubernetes-Deployment und Lizenzierung -- und warum Ollama dafür nicht gebaut ist.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'IT-Infrastrukturverantwortliche und Platform Engineers, die Multi-GPU-Serving-Stacks für den Enterprise-Einsatz bewerten -- nicht einzelne Entwickler, die ein Modell lokal betreiben.',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Le serving LLM en entreprise n\'est pas un problème d\'ordinateur portable. vLLM, TGI et NVIDIA NIM comparés sur le débit multi-GPU, le déploiement Kubernetes et les licences -- et pourquoi Ollama n\'est pas conçu pour cela.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'Responsables infrastructure IT et platform engineers évaluant des stacks de serving multi-GPU pour un déploiement en entreprise -- pas des développeurs individuels exécutant un modèle local.',
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Servir LLM en la empresa no es un problema de portátil. vLLM, TGI y NVIDIA NIM comparados en rendimiento multi-GPU, despliegue en Kubernetes y licencias -- y por qué Ollama no está pensado para esto.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'Responsables de infraestructura IT e ingenieros de plataforma que evalúan stacks de servicio multi-GPU para despliegue empresarial -- no desarrolladores individuales que ejecutan un modelo local.',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Servir LLMs na empresa não é um problema de notebook. vLLM, TGI e NVIDIA NIM comparados em throughput multi-GPU, deploy no Kubernetes e licenciamento -- e por que o Ollama não foi feito para isso.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'Líderes de infraestrutura de TI e engenheiros de plataforma avaliando stacks de serving multi-GPU para uso corporativo -- não desenvolvedores individuais rodando um modelo local.',
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'エンタープライズLLMサービングはノートパソコンの問題ではありません。vLLM、TGI、NVIDIA NIMをマルチGPUスループット、Kubernetes展開、ライセンスで比較 -- なぜOllamaはこの用途向けではないのか。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'エンタープライズ向けにマルチGPU・マルチユーザーの推論サービング基盤を検討するITインフラ責任者およびプラットフォームエンジニア -- ローカルモデルを1台で動かす個人開発者は対象外。',
@@ -1874,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '企业级LLM服务不是笔记本电脑的问题。vLLM、TGI和NVIDIA NIM在多GPU吞吐量、Kubernetes部署和许可协议上的对比——以及为什么Ollama不是为此设计的。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       '评估企业部署多GPU、多用户推理服务栈的IT基础设施负责人和平台工程师——不是运行单个本地模型的个人开发者。',
@@ -2179,7 +2179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'خدمة نماذج اللغة الكبيرة في المؤسسات ليست مشكلة جهاز محمول. مقارنة vLLM وTGI وNVIDIA NIM في الإنتاجية ونشر Kubernetes والترخيص -- ولماذا لم يُصمَّم Ollama لذلك.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       'قادة البنية التحتية لتقنية المعلومات ومهندسو المنصات الذين يقيّمون حزم خدمة متعددة وحدات المعالجة الرسومية للنشر المؤسسي -- وليس المطورين الأفراد الذين يشغّلون نموذجاً محلياً واحداً.',
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '엔터프라이즈 LLM 서빙은 노트북 문제가 아닙니다. vLLM, TGI, NVIDIA NIM을 멀티 GPU 처리량, Kubernetes 배포, 라이선스로 비교하고 -- Ollama가 이 용도로 설계되지 않은 이유를 설명합니다.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Llama 3.3 70B', 'Mistral Large', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 4 Scout', 'Mistral Large', 'Qwen3.6'],
     current_hardware_mentioned: ['NVIDIA H100 80GB', 'NVIDIA A100 80GB', 'NVIDIA L40S'],
     audience:
       '엔터프라이즈 배포를 위한 멀티 GPU, 다중 사용자 추론 서빙 스택을 검토하는 IT 인프라 리더 및 플랫폼 엔지니어 -- 로컬 모델 하나를 실행하는 개인 개발자는 대상이 아닙니다.',

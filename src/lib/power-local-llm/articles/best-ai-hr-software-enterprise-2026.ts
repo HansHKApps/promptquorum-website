@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI-powered HR software compared: mainstream vendor platforms vs. self-hosted local LLMs for resume screening, sentiment analysis, and performance-review drafting.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'HR and People-Operations leaders and IT buyers evaluating AI-powered HR software for enterprise hiring, onboarding, and performance workflows.',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'KI-HR-Software im Vergleich: Marktführer-Plattformen vs. selbst gehostete lokale LLMs für Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'HR- und People-Operations-Verantwortliche sowie IT-Einkäufer, die KI-gestützte HR-Software für Recruiting-, Onboarding- und Leistungsprozesse im Unternehmen evaluieren.',
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Logiciels RH IA comparés : plateformes leaders vs LLM locaux auto-hébergés pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Responsables RH et People Operations, et acheteurs IT évaluant des logiciels RH IA pour le recrutement, l\'intégration et les processus de performance en entreprise.',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI人事ソフト比較：大手プラットフォーム vs セルフホスト型ローカルLLM。履歴書スクリーニング、感情分析、考課下書きを検討。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '企業の採用・オンボーディング・考課プロセス向けにAI人事ソフトを検討するHR・People Ops責任者およびIT購買担当者。',
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI人力资源软件对比：主流平台 vs 自托管本地LLM，涵盖简历筛选、情绪分析与绩效评语起草。',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '正在为企业招聘、入职与绩效流程评估AI人力资源软件的HR与People Ops负责人及IT采购决策者。',
@@ -1564,7 +1564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Software de RR. HH. con IA comparado: plataformas líderes vs. LLM locales autoalojados para filtrado de CV, análisis de clima laboral y redacción de evaluaciones.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Responsables de RR. HH. y People Operations, y compradores de TI que evalúan software de RR. HH. con IA para reclutamiento, incorporación y procesos de desempeño en la empresa.',
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Software de RH com IA comparado: plataformas líderes vs. LLMs locais auto-hospedados para triagem de currículos, análise de clima e redação de avaliações.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'Líderes de RH e People Operations e compradores de TI avaliando software de RH com IA para recrutamento, onboarding e processos de desempenho na empresa.',
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'مقارنة برمجيات الموارد البشرية بالذكاء الاصطناعي: المنصات الرائدة مقابل نماذج اللغة المحلية المستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       'قادة الموارد البشرية وعمليات الأفراد ومشترو تقنية المعلومات الذين يقيّمون برمجيات الموارد البشرية بالذكاء الاصطناعي لعمليات التوظيف والتأهيل والأداء في المؤسسة.',
@@ -2394,7 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'AI 인사 소프트웨어 비교: 주요 플랫폼 vs 자체 호스팅 로컬 LLM. 이력서 심사, 감정 분석, 인사고과 초안 작성을 검토합니다.',
     affiliateDisclosure: true,
-    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3 32B', 'Llama 3.3 70B', 'Mistral 7B'],
+    current_models_mentioned: ['Qwen2.5 7B', 'Qwen3.6', 'Llama 4 Scout', 'Mistral 7B'],
     current_hardware_mentioned: ['NVIDIA RTX 4090', 'NVIDIA A100 80GB'],
     audience:
       '기업의 채용, 온보딩, 성과 관리 프로세스를 위해 AI 인사 소프트웨어를 검토하는 HR·People Ops 책임자 및 IT 구매 담당자.',

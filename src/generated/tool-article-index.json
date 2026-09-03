@@ -3,6 +3,46 @@
     "articles": [
       {
         "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hermes-agent-review-2026",
+        "title": "Hermes Agent Review 2026: Self-Hosted AI Agent",
+        "url": "/power-local-llm/hermes-agent-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "fastest-local-llms-low-end-pcs",
         "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
@@ -26,72 +66,56 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI in 2026: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "cluster": "local-llms",
+        "slug": "soc2-iso27001-self-hosted-llm-compliance",
+        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
+        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "khoj-ai-second-brain-review",
-        "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
-        "url": "/power-local-llm/khoj-ai-second-brain-review",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-gpus-local-llm",
-        "title": "Best AMD GPU for Local LLMs",
-        "url": "/local-llms/best-amd-gpus-local-llm",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-mini-pc-local-llm-2026",
-        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
-        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-budget-gpus-local-llm",
-        "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
-        "url": "/local-llms/best-budget-gpus-local-llm",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-ai-code-review-vs-coderabbit-2026",
-        "title": "Local AI Code Review vs. CodeRabbit: Is DIY Worth It?",
-        "url": "/local-llms/local-ai-code-review-vs-coderabbit-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide-2026",
-        "title": "Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide-2026",
-        "dateModified": "2026-09-01",
         "tier": "about"
       }
     ],
-    "totalCount": 192,
+    "totalCount": 201,
     "capped": true
   },
   "llama.cpp": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "fastest-local-llms-low-end-pcs",
         "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -142,37 +166,53 @@
         "url": "/local-llms/open-webui-vs-sillytavern",
         "dateModified": "2026-08-30",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
-        "title": "Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison",
-        "url": "/local-llms/text-generation-webui-vs-vllm-vs-llamacpp",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 104,
+    "totalCount": 109,
     "capped": true
   },
   "vLLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "soc2-iso27001-self-hosted-llm-compliance",
+        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
+        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "best-amd-gpus-local-llm",
@@ -212,53 +252,29 @@
         "url": "/local-llms/best-local-llm-stack-use-case",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
-        "title": "Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison",
-        "url": "/local-llms/text-generation-webui-vs-vllm-vs-llamacpp",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "double-local-llm-speed",
-        "title": "How to Double Local LLM Speed: Optimization Techniques",
-        "url": "/local-llms/double-local-llm-speed",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "headless-local-llms",
-        "title": "Headless Local LLMs: Running Models Without a UI (2026)",
-        "url": "/local-llms/headless-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llamacpp-vs-ollama-vs-vllm",
-        "title": "llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks",
-        "url": "/local-llms/llamacpp-vs-ollama-vs-vllm",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-developer-stack",
-        "title": "Best Local LLM Stack for Developers",
-        "url": "/local-llms/local-llm-developer-stack",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 65,
+    "totalCount": 77,
     "capped": true
   },
   "LocalAI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -276,11 +292,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "TensorRT-LLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
@@ -290,7 +314,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "MLC LLM": {
@@ -371,11 +395,27 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -394,7 +434,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 5,
     "capped": false
   },
   "Llamafile": {
@@ -409,6 +449,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
@@ -416,7 +464,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "MLX-LM": {
@@ -451,6 +499,22 @@
   },
   "LM Studio": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -514,29 +578,21 @@
         "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-security-privacy-checklist",
-        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
-        "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-08-31",
-        "tier": "about"
       }
     ],
-    "totalCount": 121,
+    "totalCount": 125,
     "capped": true
   },
   "Atomic Chat": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
@@ -546,11 +602,27 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Jan": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "easiest-local-ai-app-windows-mac-linux",
@@ -614,29 +686,29 @@
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-with-built-in-rag",
-        "title": "Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)",
-        "url": "/power-local-llm/local-ai-app-with-built-in-rag",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 30,
     "capped": true
   },
   "GPT4All": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "easiest-local-ai-app-windows-mac-linux",
@@ -694,35 +766,51 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "small-local-llm-models",
-        "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
-        "url": "/local-llms/small-local-llm-models",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "long-context-local-llms",
-        "title": "Long Context Local LLMs 2026: Best 128K Models Compared",
-        "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-08-28",
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 19,
     "capped": true
   },
   "AnythingLLM": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "quivr-self-hosted-knowledge-assistant-review",
@@ -770,45 +858,21 @@
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-with-built-in-rag",
-        "title": "Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)",
-        "url": "/power-local-llm/local-ai-app-with-built-in-rag",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-rag-on-your-pdfs-step-by-step",
-        "title": "Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)",
-        "url": "/power-local-llm/local-rag-on-your-pdfs-step-by-step",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 28,
     "capped": true
   },
   "Msty": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
@@ -826,7 +890,37 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
+    "capped": false
+  },
+  "Cherry Studio": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-08-31",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "ollama-vs-lm-studio",
+        "title": "Ollama vs LM Studio 2026: CLI vs GUI — Speed, API, Privacy & Setup Compared",
+        "url": "/local-llms/ollama-vs-lm-studio",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "Backyard AI": {
@@ -932,6 +1026,46 @@
   "Open WebUI": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-embedding-models-local-rag-2026",
         "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
@@ -970,53 +1104,29 @@
         "url": "/local-llms/best-local-rag-tools",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "ollama-vs-lm-studio",
-        "title": "Ollama vs LM Studio 2026: CLI vs GUI — Speed, API, Privacy & Setup Compared",
-        "url": "/local-llms/ollama-vs-lm-studio",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.33.1 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chat-with-1000-pdfs-locally",
-        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
-        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
-        "tier": "about"
       }
     ],
-    "totalCount": 49,
+    "totalCount": 53,
     "capped": true
   },
   "LibreChat": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
@@ -1034,7 +1144,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "text-generation-webui": {
@@ -1049,9 +1159,25 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
@@ -1102,29 +1228,21 @@
         "url": "/local-llms/double-local-llm-speed",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "headless-local-llms",
-        "title": "Headless Local LLMs: Running Models Without a UI (2026)",
-        "url": "/local-llms/headless-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llamacpp-vs-ollama-vs-vllm",
-        "title": "llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks",
-        "url": "/local-llms/llamacpp-vs-ollama-vs-vllm",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 15,
     "capped": true
   },
   "SillyTavern": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
@@ -1196,21 +1314,21 @@
         "url": "/local-llms/ollama-vs-lm-studio",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-screenwriting-and-novel-drafting",
-        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "LobeChat": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -1220,7 +1338,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Big-AGI": {
@@ -1232,9 +1350,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "NextChat": {
@@ -1246,9 +1372,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Page Assist": {
@@ -1260,9 +1394,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Chatbox": {
@@ -1274,13 +1416,29 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Continue.dev": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
@@ -1352,21 +1510,29 @@
         "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-developer-stack",
-        "title": "Best Local LLM Stack for Developers",
-        "url": "/local-llms/local-llm-developer-stack",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 35,
+    "totalCount": 37,
     "capped": true
   },
   "Cline": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
@@ -1430,25 +1596,9 @@
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp-2026",
-        "title": "Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026",
-        "url": "/power-local-llm/local-ai-agents-with-mcp-2026",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-coding-llm-without-internet",
-        "title": "Local Coding LLM Without Internet: Fully Offline Dev Setup (2026)",
-        "url": "/power-local-llm/local-coding-llm-without-internet",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 24,
     "capped": true
   },
   "Windsurf": {
@@ -1601,8 +1751,46 @@
     "totalCount": 1,
     "capped": false
   },
+  "Bodega One Code": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-ide-plugins-2026",
+        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
+        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
+        "dateModified": "2026-08-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-vs-cline-vs-aider-local",
+        "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
+        "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
   "Aider": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "bodega-one-code-review-2026",
+        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
+        "url": "/power-local-llm/bodega-one-code-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
@@ -1652,43 +1840,51 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-09-01",
+        "cluster": "power-local-llm",
+        "slug": "best-ai-hr-software-enterprise-2026",
+        "title": "Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
+        "url": "/power-local-llm/best-ai-hr-software-enterprise-2026",
+        "dateModified": "2026-09-03",
         "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
-        "slug": "multimodal-local-llms",
-        "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
-        "url": "/local-llms/multimodal-local-llms",
-        "dateModified": "2026-08-31",
+        "slug": "soc2-iso27001-self-hosted-llm-compliance",
+        "title": "SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments (2026)",
+        "url": "/local-llms/soc2-iso27001-self-hosted-llm-compliance",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
       {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Kimi K2.6 vs Qwen vs Devstral",
-        "url": "/local-llms/best-local-llms-for-coding",
-        "dateModified": "2026-08-30",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-developer-stack",
-        "title": "Best Local LLM Stack for Developers",
-        "url": "/local-llms/local-llm-developer-stack",
-        "dateModified": "2026-08-28",
+        "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 29,
     "capped": true
   },
   "PrivateGPT": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-embedding-models-local-rag-2026",
@@ -1723,6 +1919,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -1744,33 +1948,9 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langflow-visual-ai-orchestration-review",
-        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
-        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "quivr-self-hosted-knowledge-assistant-review",
-        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
-        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ragflow-document-understanding-rag-review",
-        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
-        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 19,
     "capped": true
   },
   "Quivr": {
@@ -1845,6 +2025,22 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -1869,6 +2065,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "langflow-visual-ai-orchestration-review",
         "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
@@ -1882,21 +2102,21 @@
         "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Flowise": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
@@ -1954,11 +2174,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Langflow": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "langflow-visual-ai-orchestration-review",
@@ -2000,7 +2228,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LlamaIndex": {
@@ -2286,7 +2514,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "CrewAI": {
@@ -2433,6 +2661,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI in 2026: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
@@ -2446,17 +2682,9 @@
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "flowise-ai-visual-workflow-builder-review",
-        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
-        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "OpenClaw": {
@@ -2471,6 +2699,44 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "Hermes Agent": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "hermes-agent-review-2026",
+        "title": "Hermes Agent Review 2026: Self-Hosted AI Agent",
+        "url": "/power-local-llm/hermes-agent-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "babyagi-review-autonomous-agent",
+        "title": "BabyAGI in 2026: What the First AI Agent Became",
+        "url": "/power-local-llm/babyagi-review-autonomous-agent",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 4,
     "capped": false
   },
   "Whisper.cpp": {
@@ -2814,6 +3080,14 @@
   "LLaVA": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "multimodal-local-llms",
         "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
@@ -2884,17 +3158,9 @@
         "url": "/local-llms/ollama-on-mac-apple-silicon-setup-2026",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-models-apple-silicon-2026",
-        "title": "Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB",
-        "url": "/local-llms/best-models-apple-silicon-2026",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Ollama vision models": {
@@ -3071,6 +3337,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llms-customer-support-call-centers-enterprise",
+        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
+        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-obsidian-2026",
         "title": "Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)",
         "url": "/power-local-llm/local-llm-with-obsidian-2026",
@@ -3102,7 +3376,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "LLM Farm": {
@@ -3271,6 +3545,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
         "url": "/power-local-llm/animatediff-video-generation-guide-2026",
@@ -3326,31 +3608,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "fastest-local-llms-low-end-pcs",
         "title": "Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide",
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-mini-pc-local-llm-2026",
-        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
-        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 18,
     "capped": true
   },
   "ComfyUI": {
@@ -3360,6 +3634,14 @@
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
         "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "real-esrgan-ai-image-upscaler-review",
+        "title": "Real-ESRGAN Review: Free, Local AI Image Upscaler",
+        "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -3396,11 +3678,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "AUTOMATIC1111 WebUI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "real-esrgan-ai-image-upscaler-review",
+        "title": "Real-ESRGAN Review: Free, Local AI Image Upscaler",
+        "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
@@ -3410,7 +3700,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "ControlNet": {
@@ -3441,6 +3731,20 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "Real-ESRGAN": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "real-esrgan-ai-image-upscaler-review",
+        "title": "Real-ESRGAN Review: Free, Local AI Image Upscaler",
+        "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "AnimateDiff": {
@@ -3641,6 +3945,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hermes-agent-review-2026",
+        "title": "Hermes Agent Review 2026: Self-Hosted AI Agent",
+        "url": "/power-local-llm/hermes-agent-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "langflow-visual-ai-orchestration-review",
         "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
@@ -3656,7 +3968,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "MetaGPT": {
@@ -3717,6 +4029,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
@@ -3732,7 +4052,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "RisuAI": {
@@ -3771,6 +4091,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
@@ -3794,7 +4122,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   }
 }
