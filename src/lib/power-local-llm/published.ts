@@ -31,6 +31,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-coding-llm-without-internet',
   'replace-github-copilot-with-local-llm',
   'local-llm-code-review-ci-cd',
+  // Bodega One Code review — 2026-09-03
+  'bodega-one-code-review-2026',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -164,6 +166,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'h2ogpt-review-2026',
   // LibreChat review — 2026-09-03
   'librechat-review-2026',
+  // Hermes Agent (Nous Research) self-hosted agent review — 2026-09-03
+  'hermes-agent-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
