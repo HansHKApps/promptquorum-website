@@ -88,10 +88,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Milestone': 'Original script published', 'Date': '2023', 'What it means': 'The task-create-prioritize-execute loop that made BabyAGI viral; OpenAI API + a vector store for task memory' },
-          { 'Milestone': 'Original code frozen', 'Date': '2024-09', 'What it means': 'Moved to the babyagi_archive repository as a snapshot; no further updates to that codebase' },
-          { 'Milestone': 'functionz rebuild', 'Date': '2024', 'What it means': 'Current main repository replaces the task loop with a function-registration and dashboard framework' },
-          { 'Milestone': 'BabyAGI 2o / BabyAGI 3', 'Date': '2024–2026', 'What it means': 'Separate side-projects by the same author exploring self-building agents and a minimal autonomous assistant' },
+          { 'Milestone': 'Original script published', 'Date': '2023', 'What it means': 'The task-create-prioritize-execute loop that made BabyAGI viral; OpenAI API + a vector store for task memory. Preserved at [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'Milestone': 'Original code frozen', 'Date': '2024-09', 'What it means': 'Moved to the [babyagi_archive repository](https://github.com/yoheinakajima/babyagi_archive) as a snapshot; no further updates to that codebase' },
+          { 'Milestone': 'functionz rebuild', 'Date': '2024', 'What it means': 'Current [main repository](https://github.com/yoheinakajima/babyagi) replaces the task loop with a function-registration and dashboard framework' },
+          { 'Milestone': 'BabyAGI 2o / BabyAGI 3', 'Date': '2024–2026', 'What it means': 'Separate side-projects by the same author exploring self-building agents and a minimal autonomous assistant — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) and [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['Milestone', 'Date', 'What it means'],
         callouts: [
@@ -337,10 +337,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Meilenstein': 'Original-Skript veröffentlicht', 'Datum': '2023', 'Bedeutung': 'Der Erstellen-Priorisieren-Ausführen-Loop, der BabyAGI viral machte; OpenAI-API + eine Vektordatenbank für den Aufgabenspeicher' },
-          { 'Meilenstein': 'Original-Code eingefroren', 'Datum': '2024-09', 'Bedeutung': 'Als Snapshot ins babyagi_archive-Repository verschoben; keine weiteren Updates für diese Codebasis' },
-          { 'Meilenstein': 'functionz-Umbau', 'Datum': '2024', 'Bedeutung': 'Das aktuelle Haupt-Repository ersetzt den Aufgaben-Loop durch ein Function-Registrierungs- und Dashboard-Framework' },
-          { 'Meilenstein': 'BabyAGI 2o / BabyAGI 3', 'Datum': '2024–2026', 'Bedeutung': 'Separate Nebenprojekte desselben Autors zu self-building agents und einem minimalen autonomen Assistenten' },
+          { 'Meilenstein': 'Original-Skript veröffentlicht', 'Datum': '2023', 'Bedeutung': 'Der Erstellen-Priorisieren-Ausführen-Loop, der BabyAGI viral machte; OpenAI-API + eine Vektordatenbank für den Aufgabenspeicher. Erhalten unter [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'Meilenstein': 'Original-Code eingefroren', 'Datum': '2024-09', 'Bedeutung': 'Als Snapshot ins [babyagi_archive-Repository](https://github.com/yoheinakajima/babyagi_archive) verschoben; keine weiteren Updates für diese Codebasis' },
+          { 'Meilenstein': 'functionz-Umbau', 'Datum': '2024', 'Bedeutung': 'Das aktuelle [Haupt-Repository](https://github.com/yoheinakajima/babyagi) ersetzt den Aufgaben-Loop durch ein Function-Registrierungs- und Dashboard-Framework' },
+          { 'Meilenstein': 'BabyAGI 2o / BabyAGI 3', 'Datum': '2024–2026', 'Bedeutung': 'Separate Nebenprojekte desselben Autors zu self-building agents und einem minimalen autonomen Assistenten — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) und [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['Meilenstein', 'Datum', 'Bedeutung'],
         callouts: [
@@ -585,10 +585,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Étape': 'Script original publié', 'Date': '2023', 'Signification': 'La boucle créer-prioriser-exécuter qui a rendu BabyAGI viral ; API OpenAI + une base vectorielle pour la mémoire des tâches' },
-          { 'Étape': 'Code original figé', 'Date': '2024-09', 'Signification': 'Déplacé vers le dépôt babyagi_archive sous forme d\'instantané ; aucune mise à jour ultérieure de cette base de code' },
-          { 'Étape': 'Reconstruction functionz', 'Date': '2024', 'Signification': 'Le dépôt principal actuel remplace la boucle de tâches par un framework d\'enregistrement de fonctions et de tableau de bord' },
-          { 'Étape': 'BabyAGI 2o / BabyAGI 3', 'Date': '2024–2026', 'Signification': 'Projets annexes séparés du même auteur explorant les agents auto-constructeurs et un assistant autonome minimal' },
+          { 'Étape': 'Script original publié', 'Date': '2023', 'Signification': 'La boucle créer-prioriser-exécuter qui a rendu BabyAGI viral ; API OpenAI + une base vectorielle pour la mémoire des tâches. Conservé sur [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'Étape': 'Code original figé', 'Date': '2024-09', 'Signification': 'Déplacé vers le [dépôt babyagi_archive](https://github.com/yoheinakajima/babyagi_archive) sous forme d\'instantané ; aucune mise à jour ultérieure de cette base de code' },
+          { 'Étape': 'Reconstruction functionz', 'Date': '2024', 'Signification': 'Le [dépôt principal](https://github.com/yoheinakajima/babyagi) actuel remplace la boucle de tâches par un framework d\'enregistrement de fonctions et de tableau de bord' },
+          { 'Étape': 'BabyAGI 2o / BabyAGI 3', 'Date': '2024–2026', 'Signification': 'Projets annexes séparés du même auteur explorant les agents auto-constructeurs et un assistant autonome minimal — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) et [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['Étape', 'Date', 'Signification'],
         callouts: [
@@ -833,10 +833,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'マイルストーン': '元のスクリプト公開', '日付': '2023年', '意味': 'BabyAGIをバイラルにしたタスク作成・優先順位付け・実行ループ。OpenAI APIとタスク記憶用のベクトルストアを使用' },
-          { 'マイルストーン': '元のコードが凍結', '日付': '2024年9月', '意味': 'babyagi_archiveリポジトリへスナップショットとして移動。以後このコードベースへの更新なし' },
-          { 'マイルストーン': 'functionzへの作り替え', '日付': '2024年', '意味': '現在のメインリポジトリはタスクループを関数登録・ダッシュボードフレームワークに置き換え' },
-          { 'マイルストーン': 'BabyAGI 2o / BabyAGI 3', '日付': '2024〜2026年', '意味': '同じ開発者による別プロジェクトで、self-building agentと最小限の自律アシスタントを探求' },
+          { 'マイルストーン': '元のスクリプト公開', '日付': '2023年', '意味': 'BabyAGIをバイラルにしたタスク作成・優先順位付け・実行ループ。OpenAI APIとタスク記憶用のベクトルストアを使用。[github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)で保存' },
+          { 'マイルストーン': '元のコードが凍結', '日付': '2024年9月', '意味': '[babyagi_archiveリポジトリ](https://github.com/yoheinakajima/babyagi_archive)へスナップショットとして移動。以後このコードベースへの更新なし' },
+          { 'マイルストーン': 'functionzへの作り替え', '日付': '2024年', '意味': '現在の[メインリポジトリ](https://github.com/yoheinakajima/babyagi)はタスクループを関数登録・ダッシュボードフレームワークに置き換え' },
+          { 'マイルストーン': 'BabyAGI 2o / BabyAGI 3', '日付': '2024〜2026年', '意味': '同じ開発者による別プロジェクトで、self-building agentと最小限の自律アシスタントを探求 — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o)、[babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['マイルストーン', '日付', '意味'],
         callouts: [
@@ -1081,10 +1081,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { '里程碑': '原始脚本发布', '日期': '2023年', '意味着什么': '让BabyAGI爆红的创建-排序-执行任务循环；使用OpenAI API和向量存储保存任务记忆' },
-          { '里程碑': '原始代码冻结', '日期': '2024年9月', '意味着什么': '作为快照移至babyagi_archive仓库；该代码库不再有后续更新' },
-          { '里程碑': 'functionz重建', '日期': '2024年', '意味着什么': '当前主仓库以函数注册与仪表盘框架取代了任务循环' },
-          { '里程碑': 'BabyAGI 2o / BabyAGI 3', '日期': '2024–2026年', '意味着什么': '同一作者的独立子项目，探索自构建智能体与最小化自主助手' },
+          { '里程碑': '原始脚本发布', '日期': '2023年', '意味着什么': '让BabyAGI爆红的创建-排序-执行任务循环；使用OpenAI API和向量存储保存任务记忆。保存于[github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { '里程碑': '原始代码冻结', '日期': '2024年9月', '意味着什么': '作为快照移至[babyagi_archive仓库](https://github.com/yoheinakajima/babyagi_archive)；该代码库不再有后续更新' },
+          { '里程碑': 'functionz重建', '日期': '2024年', '意味着什么': '当前[主仓库](https://github.com/yoheinakajima/babyagi)以函数注册与仪表盘框架取代了任务循环' },
+          { '里程碑': 'BabyAGI 2o / BabyAGI 3', '日期': '2024–2026年', '意味着什么': '同一作者的独立子项目，探索自构建智能体与最小化自主助手 — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o)、[babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['里程碑', '日期', '意味着什么'],
         callouts: [
@@ -1329,10 +1329,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Hito': 'Script original publicado', 'Fecha': '2023', 'Qué significa': 'El bucle crear-priorizar-ejecutar que hizo viral a BabyAGI; API de OpenAI + una base de datos vectorial para la memoria de tareas' },
-          { 'Hito': 'Código original congelado', 'Fecha': '2024-09', 'Qué significa': 'Trasladado al repositorio babyagi_archive como instantánea; sin más actualizaciones a esa base de código' },
-          { 'Hito': 'Reconstrucción functionz', 'Fecha': '2024', 'Qué significa': 'El repositorio principal actual sustituye el bucle de tareas por un framework de registro de funciones y panel' },
-          { 'Hito': 'BabyAGI 2o / BabyAGI 3', 'Fecha': '2024–2026', 'Qué significa': 'Proyectos paralelos separados del mismo autor que exploran agentes autoconstructores y un asistente autónomo mínimo' },
+          { 'Hito': 'Script original publicado', 'Fecha': '2023', 'Qué significa': 'El bucle crear-priorizar-ejecutar que hizo viral a BabyAGI; API de OpenAI + una base de datos vectorial para la memoria de tareas. Conservado en [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'Hito': 'Código original congelado', 'Fecha': '2024-09', 'Qué significa': 'Trasladado al [repositorio babyagi_archive](https://github.com/yoheinakajima/babyagi_archive) como instantánea; sin más actualizaciones a esa base de código' },
+          { 'Hito': 'Reconstrucción functionz', 'Fecha': '2024', 'Qué significa': 'El [repositorio principal](https://github.com/yoheinakajima/babyagi) actual sustituye el bucle de tareas por un framework de registro de funciones y panel' },
+          { 'Hito': 'BabyAGI 2o / BabyAGI 3', 'Fecha': '2024–2026', 'Qué significa': 'Proyectos paralelos separados del mismo autor que exploran agentes autoconstructores y un asistente autónomo mínimo — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) y [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['Hito', 'Fecha', 'Qué significa'],
         callouts: [
@@ -1577,10 +1577,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Marco': 'Script original publicado', 'Data': '2023', 'O que significa': 'O loop criar-priorizar-executar que tornou o BabyAGI viral; API da OpenAI + um banco de dados vetorial para a memória de tarefas' },
-          { 'Marco': 'Código original congelado', 'Data': '2024-09', 'O que significa': 'Movido para o repositório babyagi_archive como um snapshot; sem mais atualizações para essa base de código' },
-          { 'Marco': 'Reconstrução functionz', 'Data': '2024', 'O que significa': 'O repositório principal atual substitui o loop de tarefas por um framework de registro de funções e painel' },
-          { 'Marco': 'BabyAGI 2o / BabyAGI 3', 'Data': '2024–2026', 'O que significa': 'Projetos paralelos separados do mesmo autor explorando agentes autoconstrutores e um assistente autônomo mínimo' },
+          { 'Marco': 'Script original publicado', 'Data': '2023', 'O que significa': 'O loop criar-priorizar-executar que tornou o BabyAGI viral; API da OpenAI + um banco de dados vetorial para a memória de tarefas. Preservado em [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'Marco': 'Código original congelado', 'Data': '2024-09', 'O que significa': 'Movido para o [repositório babyagi_archive](https://github.com/yoheinakajima/babyagi_archive) como um snapshot; sem mais atualizações para essa base de código' },
+          { 'Marco': 'Reconstrução functionz', 'Data': '2024', 'O que significa': 'O [repositório principal](https://github.com/yoheinakajima/babyagi) atual substitui o loop de tarefas por um framework de registro de funções e painel' },
+          { 'Marco': 'BabyAGI 2o / BabyAGI 3', 'Data': '2024–2026', 'O que significa': 'Projetos paralelos separados do mesmo autor explorando agentes autoconstrutores e um assistente autônomo mínimo — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) e [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['Marco', 'Data', 'O que significa'],
         callouts: [
@@ -1825,10 +1825,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'المحطة': 'نشر النص البرمجي الأصلي', 'التاريخ': '2023', 'المعنى': 'حلقة الإنشاء-الترتيب-التنفيذ التي جعلت BabyAGI منتشرًا؛ واجهة برمجة OpenAI + قاعدة بيانات متجهية لذاكرة المهام' },
-          { 'المحطة': 'تجميد الكود الأصلي', 'التاريخ': '2024-09', 'المعنى': 'نُقل كلقطة إلى مستودع babyagi_archive؛ لا مزيد من التحديثات لقاعدة الكود تلك' },
-          { 'المحطة': 'إعادة بناء functionz', 'التاريخ': '2024', 'المعنى': 'المستودع الرئيسي الحالي يستبدل حلقة المهام بإطار عمل لتسجيل الوظائف ولوحة تحكم' },
-          { 'المحطة': 'BabyAGI 2o / BabyAGI 3', 'التاريخ': '2024–2026', 'المعنى': 'مشاريع جانبية منفصلة من نفس المؤلف تستكشف عملاء ذاتيي البناء ومساعدًا مستقلًا بسيطًا' },
+          { 'المحطة': 'نشر النص البرمجي الأصلي', 'التاريخ': '2023', 'المعنى': 'حلقة الإنشاء-الترتيب-التنفيذ التي جعلت BabyAGI منتشرًا؛ واجهة برمجة OpenAI + قاعدة بيانات متجهية لذاكرة المهام. محفوظ على [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)' },
+          { 'المحطة': 'تجميد الكود الأصلي', 'التاريخ': '2024-09', 'المعنى': 'نُقل كلقطة إلى [مستودع babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)؛ لا مزيد من التحديثات لقاعدة الكود تلك' },
+          { 'المحطة': 'إعادة بناء functionz', 'التاريخ': '2024', 'المعنى': '[المستودع الرئيسي](https://github.com/yoheinakajima/babyagi) الحالي يستبدل حلقة المهام بإطار عمل لتسجيل الوظائف ولوحة تحكم' },
+          { 'المحطة': 'BabyAGI 2o / BabyAGI 3', 'التاريخ': '2024–2026', 'المعنى': 'مشاريع جانبية منفصلة من نفس المؤلف تستكشف عملاء ذاتيي البناء ومساعدًا مستقلًا بسيطًا — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o) و[babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['المحطة', 'التاريخ', 'المعنى'],
         callouts: [
@@ -2073,10 +2073,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { '이정표': '원본 스크립트 공개', '날짜': '2023년', '의미': 'BabyAGI를 바이럴로 만든 작업 생성-우선순위 지정-실행 루프; 작업 기억을 위한 OpenAI API + 벡터 스토어 사용' },
-          { '이정표': '원본 코드 동결', '날짜': '2024년 9월', '의미': 'babyagi_archive 저장소로 스냅샷 형태로 이동; 해당 코드베이스에 대한 추가 업데이트 없음' },
-          { '이정표': 'functionz 재구축', '날짜': '2024년', '의미': '현재 메인 저장소가 작업 루프를 함수 등록 및 대시보드 프레임워크로 대체' },
-          { '이정표': 'BabyAGI 2o / BabyAGI 3', '날짜': '2024–2026년', '의미': '동일 저자의 별도 사이드 프로젝트로 self-building agent와 최소한의 자율 어시스턴트를 탐구' },
+          { '이정표': '원본 스크립트 공개', '날짜': '2023년', '의미': 'BabyAGI를 바이럴로 만든 작업 생성-우선순위 지정-실행 루프; 작업 기억을 위한 OpenAI API + 벡터 스토어 사용. [github.com/yoheinakajima/babyagi_archive](https://github.com/yoheinakajima/babyagi_archive)에 보존됨' },
+          { '이정표': '원본 코드 동결', '날짜': '2024년 9월', '의미': '[babyagi_archive 저장소](https://github.com/yoheinakajima/babyagi_archive)로 스냅샷 형태로 이동; 해당 코드베이스에 대한 추가 업데이트 없음' },
+          { '이정표': 'functionz 재구축', '날짜': '2024년', '의미': '현재 [메인 저장소](https://github.com/yoheinakajima/babyagi)가 작업 루프를 함수 등록 및 대시보드 프레임워크로 대체' },
+          { '이정표': 'BabyAGI 2o / BabyAGI 3', '날짜': '2024–2026년', '의미': '동일 저자의 별도 사이드 프로젝트로 self-building agent와 최소한의 자율 어시스턴트를 탐구 — [babyagi-2o](https://github.com/yoheinakajima/babyagi-2o), [babyagi3](https://github.com/yoheinakajima/babyagi3)' },
         ],
         columns: ['이정표', '날짜', '의미'],
         callouts: [

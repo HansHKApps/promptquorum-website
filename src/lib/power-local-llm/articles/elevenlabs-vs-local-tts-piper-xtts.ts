@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: Free tier (10,000 credits/month), Starter $6/month (30k credits), Creator $22/month (121k credits), Pro $99/month (600k credits), Scale $299/month, Business $990/month. Also offers pay-as-you-go API credits with no subscription.',
           'ElevenLabs cut self-serve API pricing by up to 55% in May 2026 and introduced pay-as-you-go for developers who don\'t want a monthly plan.',
-          'Piper: free, MIT-licensed engine, CPU-friendly, works offline once installed. Individual voice/model licenses can still differ.',
+          'Piper: free, GPL-3.0-licensed engine (voices licensed separately), CPU-friendly, works offline once installed. Individual voice/model licenses can still differ.',
           'XTTS v2: free engine, supports voice cloning from a short reference clip, needs more setup and typically a GPU.',
           'For most creators: test ElevenLabs\' free tier first. Move to local TTS only if you hit a specific offline, privacy, or scale constraint.'
         ],
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'Try ElevenLabs Free'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -87,12 +87,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The Piper software repository is MIT licensed, but the licenses and intended use of individual voice datasets/checkpoints can differ. Treat the engine license and the selected voice/model license as separate questions.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide are checked against the live pricing page at each update — confirm current figures there before deciding, since providers change plans and credit allowances without notice.'
+        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The actively maintained Piper repository (OHF-Voice/piper1-gpl) is GPL-3.0 licensed; an earlier version of the project was MIT-licensed before that repository was archived, so don\'t assume MIT from older sources. Individual voice datasets/checkpoints carry their own licenses and intended use, which can differ from the engine license and from each other. Treat the engine license and the selected voice/model license as separate questions, and confirm both against the current repository before commercial use.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide are checked against the live pricing page at each update — confirm current figures there before deciding, since providers change plans and credit allowances without notice.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'Our Verdict',
-        content: '🏆 **Best overall:** ElevenLabs — the easiest path to a polished, professional voice with no local setup.\n💰 **Best free/local TTS:** Piper — free, MIT-licensed, CPU-friendly, and offline-capable.\n🔒 **Best for local voice cloning:** XTTS v2 — clones a voice from a short reference clip on hardware you control.\n⚡ **Best for getting a voiceover today:** ElevenLabs.\n🖥️ **Best for Raspberry Pi / CPU-only:** Piper.\n🧑‍💻 **Best for developers who want maximum local control:** XTTS v2.\n\nFor most creators and businesses, start with ElevenLabs. For offline, privacy-sensitive, or embedded applications, look at Piper. For local voice cloning, investigate XTTS v2 and comparable local models.',
+        content: '🏆 **Best overall:** ElevenLabs — the easiest path to a polished, professional voice with no local setup.\n💰 **Best free/local TTS:** Piper — free, GPL-3.0-licensed, CPU-friendly, and offline-capable.\n🔒 **Best for local voice cloning:** XTTS v2 — clones a voice from a short reference clip on hardware you control.\n⚡ **Best for getting a voiceover today:** ElevenLabs.\n🖥️ **Best for Raspberry Pi / CPU-only:** Piper.\n🧑‍💻 **Best for developers who want maximum local control:** XTTS v2.\n\nFor most creators and businesses, start with ElevenLabs. For offline, privacy-sensitive, or embedded applications, look at Piper. For local voice cloning, investigate XTTS v2 and comparable local models.',
         decisionBlock: {
           title: 'Choose your TTS approach',
           cloudIf: [
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper on GitHub'
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Local TTS trades recurring service spend for upfront setup and ongoing responsibility. That is a great trade when you need control; it is usually a poor trade if you only need a polished voiceover before a publishing deadline.'
           }
         ],
-        blockquote: '**Want full offline control for a voice assistant or embedded product?** Piper is the most accessible local TTS engine for beginners. For voice cloning, Coqui TTS and XTTS v2 offer privacy-first alternatives. [Explore Piper →](https://github.com/rhasspy/piper)'
+        blockquote: '**Want full offline control for a voice assistant or embedded product?** Piper is the most accessible local TTS engine for beginners. For voice cloning, Coqui TTS and XTTS v2 offer privacy-first alternatives. [Explore Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Commercial use',
             ElevenLabs: 'Check your plan and current terms',
-            Piper: 'Engine is MIT licensed; verify each selected voice/model separately',
+            Piper: 'Engine is GPL-3.0 licensed; verify each selected voice/model separately',
             'XTTS v2 or Similar Local Cloning Stack': 'Verify the engine, checkpoint, datasets, output-use terms, and consent obligations'
           },
           {
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is local TTS free for commercial use?',
-            a: 'Sometimes, but do not assume it. The Piper software repository is MIT licensed, while individual voice models/checkpoints can have separate licenses and attribution or use requirements. Other local TTS/cloning projects have their own terms. Review every layer before commercial deployment.'
+            a: 'Sometimes, but do not assume it. The actively maintained Piper repository is GPL-3.0 licensed (an earlier MIT-licensed version exists but is archived and no longer the maintained codebase), while individual voice models/checkpoints can have separate licenses and attribution or use requirements. Other local TTS/cloning projects have their own terms. Review every layer, including which Piper repository is actually in use, before commercial deployment.'
           },
           {
             q: 'Does local voice cloning work offline?',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Piper completely free?',
-            a: 'The Piper software engine is MIT licensed, which is free and unrestricted. Individual voice models/checkpoints can carry separate licenses, so check the specific voice you plan to use before commercial deployment.'
+            a: 'The actively maintained Piper software engine is GPL-3.0 licensed — free to use, but with copyleft obligations for derivative works, not the "use it however you like" terms a permissive license gives. Individual voice models/checkpoints can carry separate licenses, so check both the GPL-3.0 terms on the engine and the specific voice you plan to use before commercial deployment.'
           },
           {
             q: 'Can Piper clone voices?',
@@ -700,9 +700,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Official announcement of the May 2026 API price cuts (up to 55% on Text to Speech) and the new pay-as-you-go option.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Piper Repository',
-            description: 'MIT-licensed open-source text-to-speech engine.'
+            description: 'GPL-3.0-licensed open-source text-to-speech engine.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'MIT-licensed open-source local TTS engine, CPU-efficient, offline-capable'
+          'description': 'GPL-3.0-licensed open-source local TTS engine, CPU-efficient, offline-capable'
         },
         {
           '@type': 'Thing',
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Is local TTS free for commercial use?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sometimes, but do not assume it. The Piper software repository is MIT licensed, while individual voice models/checkpoints can have separate licenses and attribution or use requirements. Other local TTS/cloning projects have their own terms. Review every layer before commercial deployment.'
+            'text': 'Sometimes, but do not assume it. The actively maintained Piper repository is GPL-3.0 licensed (an earlier MIT-licensed version exists but is archived and no longer the maintained codebase), while individual voice models/checkpoints can have separate licenses and attribution or use requirements. Other local TTS/cloning projects have their own terms. Review every layer, including which Piper repository is actually in use, before commercial deployment.'
           }
         },
         {
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Is Piper completely free?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'The Piper software engine is MIT licensed, which is free and unrestricted. Individual voice models/checkpoints can carry separate licenses, so check the specific voice you plan to use before commercial deployment.'
+            'text': 'The actively maintained Piper software engine is GPL-3.0 licensed — free to use, but with copyleft obligations for derivative works, not the "use it however you like" terms a permissive license gives. Individual voice models/checkpoints can carry separate licenses, so check both the GPL-3.0 terms on the engine and the specific voice you plan to use before commercial deployment.'
           }
         },
         {
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: Gratistarif (10.000 Credits/Monat), Starter 6 $/Monat (30k Credits), Creator 22 $/Monat (121k Credits), Pro 99 $/Monat (600k Credits), Scale 299 $/Monat, Business 990 $/Monat. Zusätzlich nutzungsbasierte API-Credits ohne Abo.',
           'ElevenLabs senkte die Self-Serve-API-Preise im Mai 2026 um bis zu 55 % und führte nutzungsbasierte Abrechnung für Entwickler ohne Monatsabo ein.',
-          'Piper: kostenlose, MIT-lizenzierte Engine, CPU-freundlich, funktioniert nach der Installation offline. Einzelne Stimm-/Modelllizenzen können abweichen.',
+          'Piper: kostenlose, GPL-3.0-lizenzierte Engine (Stimmen separat lizenziert), CPU-freundlich, funktioniert nach der Installation offline. Einzelne Stimm-/Modelllizenzen können abweichen.',
           'XTTS v2: kostenlose Engine, unterstützt Voice Cloning aus einem kurzen Referenzclip, benötigt mehr Einrichtung und meist eine GPU.',
           'Für die meisten Creator: Testen Sie zuerst den ElevenLabs-Gratistarif. Wechseln Sie nur bei konkreten Offline-, Datenschutz- oder Skalierungsanforderungen zu lokaler TTS.'
         ],
@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'ElevenLabs kostenlos testen'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -1023,12 +1023,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs ist eine gehostete Sprachplattform. Die aktuellen Pläne bündeln Text-to-Speech mit anderen Sprach- und Medienfunktionen; Credits werden produktübergreifend geteilt. Der Gratistarif listet 10.000 Credits pro Monat, während bezahlte Pläne kommerziellen Lizenzzugang und höhere Kontingente hinzufügen. Prüfen Sie die aktuelle Preisseite, bevor Sie sich auf einen Betrag verlassen, da sich Funktionen, Credits und Preise ändern können.\n\nPiper ist eine Open-Source-TTS-Engine für den lokalen Betrieb. Das Piper-Software-Repository ist MIT-lizenziert, aber die Lizenzen und der vorgesehene Verwendungszweck einzelner Sprachdatensätze/Checkpoints können abweichen. Behandeln Sie die Engine-Lizenz und die Lizenz der ausgewählten Stimme/des Modells als getrennte Fragen.\n\nXTTS v2 und andere lokale, klonfähige Stacks können Ihnen mehr lokale Kontrolle geben, erfordern aber oft mehr Einrichtung, stärkere Hardware und eine sorgfältigere Prüfung von Modell-, Stimm- und kommerziellen Nutzungsbedingungen.\n\nDie richtige Entscheidung lautet daher nicht "welche Stimme ist am besten?" Sondern: **Wollen Sie einen Produktionsservice, der die Infrastruktur abstrahiert, oder ein lokales Sprachsystem, das Sie selbst betreiben und kontrollieren?**\n\nPreis- und Tarifangaben in diesem Leitfaden werden bei jeder Aktualisierung mit der Live-Preisseite abgeglichen — bestätigen Sie aktuelle Zahlen dort, da Anbieter Pläne und Credit-Kontingente ohne Vorankündigung ändern.'
+        content: 'ElevenLabs ist eine gehostete Sprachplattform. Die aktuellen Pläne bündeln Text-to-Speech mit anderen Sprach- und Medienfunktionen; Credits werden produktübergreifend geteilt. Der Gratistarif listet 10.000 Credits pro Monat, während bezahlte Pläne kommerziellen Lizenzzugang und höhere Kontingente hinzufügen. Prüfen Sie die aktuelle Preisseite, bevor Sie sich auf einen Betrag verlassen, da sich Funktionen, Credits und Preise ändern können.\n\nPiper ist eine Open-Source-TTS-Engine für den lokalen Betrieb. Das aktiv weiterentwickelte Piper-Repository (OHF-Voice/piper1-gpl) ist GPL-3.0-lizenziert; eine frühere Version des Projekts war MIT-lizenziert, bevor dieses Repository archiviert wurde — gehen Sie also nicht ohne Prüfung von MIT aus. Die Lizenzen und der vorgesehene Verwendungszweck einzelner Sprachdatensätze/Checkpoints können von der Engine-Lizenz und voneinander abweichen. Behandeln Sie die Engine-Lizenz und die Lizenz der ausgewählten Stimme/des Modells als getrennte Fragen und prüfen Sie beide anhand des aktuellen Repositorys, bevor Sie kommerziell einsetzen.\n\nXTTS v2 und andere lokale, klonfähige Stacks können Ihnen mehr lokale Kontrolle geben, erfordern aber oft mehr Einrichtung, stärkere Hardware und eine sorgfältigere Prüfung von Modell-, Stimm- und kommerziellen Nutzungsbedingungen.\n\nDie richtige Entscheidung lautet daher nicht "welche Stimme ist am besten?" Sondern: **Wollen Sie einen Produktionsservice, der die Infrastruktur abstrahiert, oder ein lokales Sprachsystem, das Sie selbst betreiben und kontrollieren?**\n\nPreis- und Tarifangaben in diesem Leitfaden werden bei jeder Aktualisierung mit der Live-Preisseite abgeglichen — bestätigen Sie aktuelle Zahlen dort, da Anbieter Pläne und Credit-Kontingente ohne Vorankündigung ändern.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'Unser Fazit',
-        content: '🏆 **Beste Gesamtwahl:** ElevenLabs — der einfachste Weg zu einer ausgereiften, professionellen Stimme ohne lokale Einrichtung.\n💰 **Beste kostenlose/lokale TTS:** Piper — kostenlos, MIT-lizenziert, CPU-freundlich und offline-fähig.\n🔒 **Beste Wahl für lokales Voice Cloning:** XTTS v2 — klont eine Stimme aus einem kurzen Referenzclip auf Hardware, die Sie kontrollieren.\n⚡ **Beste Wahl für ein Voiceover noch heute:** ElevenLabs.\n🖥️ **Beste Wahl für Raspberry Pi / CPU-only:** Piper.\n🧑‍💻 **Beste Wahl für Entwickler mit maximaler lokaler Kontrolle:** XTTS v2.\n\nFür die meisten Creator und Unternehmen: starten Sie mit ElevenLabs. Für Offline-, datenschutzkritische oder eingebettete Anwendungen: schauen Sie sich Piper an. Für lokales Voice Cloning: prüfen Sie XTTS v2 und vergleichbare lokale Modelle.',
+        content: '🏆 **Beste Gesamtwahl:** ElevenLabs — der einfachste Weg zu einer ausgereiften, professionellen Stimme ohne lokale Einrichtung.\n💰 **Beste kostenlose/lokale TTS:** Piper — kostenlos, GPL-3.0-lizenziert, CPU-freundlich und offline-fähig.\n🔒 **Beste Wahl für lokales Voice Cloning:** XTTS v2 — klont eine Stimme aus einem kurzen Referenzclip auf Hardware, die Sie kontrollieren.\n⚡ **Beste Wahl für ein Voiceover noch heute:** ElevenLabs.\n🖥️ **Beste Wahl für Raspberry Pi / CPU-only:** Piper.\n🧑‍💻 **Beste Wahl für Entwickler mit maximaler lokaler Kontrolle:** XTTS v2.\n\nFür die meisten Creator und Unternehmen: starten Sie mit ElevenLabs. Für Offline-, datenschutzkritische oder eingebettete Anwendungen: schauen Sie sich Piper an. Für lokales Voice Cloning: prüfen Sie XTTS v2 und vergleichbare lokale Modelle.',
         decisionBlock: {
           title: 'Wählen Sie Ihren TTS-Ansatz',
           cloudIf: [
@@ -1187,7 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Lokale Kosten', 'Was das bedeutet'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper auf GitHub'
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Lokale TTS tauscht laufende Servicekosten gegen anfängliche Einrichtung und laufende Verantwortung. Das ist ein guter Tausch, wenn Sie Kontrolle brauchen; meist ein schlechter Tausch, wenn Sie nur ein poliertes Voiceover vor einer Veröffentlichungsfrist brauchen.'
           }
         ],
-        blockquote: '**Wollen Sie volle Offline-Kontrolle für einen Sprachassistenten oder ein eingebettetes Produkt?** Piper ist die zugänglichste lokale TTS-Engine für Einsteiger. Für Voice Cloning bieten Coqui TTS und XTTS v2 datenschutzfreundliche Alternativen. [Piper erkunden →](https://github.com/rhasspy/piper)'
+        blockquote: '**Wollen Sie volle Offline-Kontrolle für einen Sprachassistenten oder ein eingebettetes Produkt?** Piper ist die zugänglichste lokale TTS-Engine für Einsteiger. Für Voice Cloning bieten Coqui TTS und XTTS v2 datenschutzfreundliche Alternativen. [Piper erkunden →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         itemHeadings: true,
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Kommerzielle Nutzung',
             ElevenLabs: 'Prüfen Sie Ihren Tarif und aktuelle Bedingungen',
-            Piper: 'Engine ist MIT-lizenziert; jede gewählte Stimme/jedes Modell separat prüfen',
+            Piper: 'Engine ist GPL-3.0-lizenziert; jede gewählte Stimme/jedes Modell separat prüfen',
             'XTTS v2 or Similar Local Cloning Stack': 'Prüfen Sie Engine, Checkpoint, Datensätze, Nutzungsbedingungen der Ausgaben und Einwilligungspflichten'
           },
           {
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist lokale TTS für kommerzielle Nutzung kostenlos?',
-            a: 'Manchmal, aber gehen Sie nicht davon aus. Das Piper-Software-Repository ist MIT-lizenziert, während einzelne Sprachmodelle/Checkpoints separate Lizenzen mit Zuschreibungs- oder Nutzungspflichten haben können. Andere lokale TTS-/Cloning-Projekte haben eigene Bedingungen. Prüfen Sie jede Ebene vor kommerziellem Einsatz.'
+            a: 'Manchmal, aber gehen Sie nicht davon aus. Das aktiv weiterentwickelte Piper-Repository ist GPL-3.0-lizenziert (eine frühere MIT-lizenzierte Version existiert, ist aber archiviert und nicht mehr der gepflegte Code), während einzelne Sprachmodelle/Checkpoints separate Lizenzen mit Zuschreibungs- oder Nutzungspflichten haben können. Andere lokale TTS-/Cloning-Projekte haben eigene Bedingungen. Prüfen Sie jede Ebene — einschließlich welches Piper-Repository Sie tatsächlich verwenden — vor kommerziellem Einsatz.'
           },
           {
             q: 'Funktioniert lokales Voice Cloning offline?',
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Piper vollständig kostenlos?',
-            a: 'Die Piper-Software-Engine ist MIT-lizenziert, also kostenlos und uneingeschränkt. Einzelne Sprachmodelle/Checkpoints können separate Lizenzen tragen, prüfen Sie daher die konkrete Stimme, bevor Sie sie kommerziell einsetzen.'
+            a: 'Die aktiv weiterentwickelte Piper-Software-Engine ist GPL-3.0-lizenziert — kostenlos, aber mit Copyleft-Pflichten für abgeleitete Werke, nicht so uneingeschränkt wie eine permissive Lizenz. Einzelne Sprachmodelle/Checkpoints können separate Lizenzen tragen, prüfen Sie daher sowohl die GPL-3.0-Bedingungen der Engine als auch die konkrete Stimme, bevor Sie kommerziell einsetzen.'
           },
           {
             q: 'Kann Piper Stimmen klonen?',
@@ -1638,9 +1638,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Offizielle Ankündigung der API-Preissenkungen vom Mai 2026 (bis zu 55 % bei Text-to-Speech) und der neuen nutzungsbasierten Abrechnung.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Piper Repository',
-            description: 'MIT-lizenzierte Open-Source-Text-to-Speech-Engine.'
+            description: 'GPL-3.0-lizenzierte Open-Source-Text-to-Speech-Engine.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'MIT-lizenzierte Open-Source-TTS-Engine für den lokalen Betrieb, CPU-effizient, offline-fähig'
+          'description': 'GPL-3.0-lizenzierte Open-Source-TTS-Engine für den lokalen Betrieb, CPU-effizient, offline-fähig'
         },
         {
           '@type': 'Thing',
@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Ist lokale TTS für kommerzielle Nutzung kostenlos?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Manchmal, aber gehen Sie nicht davon aus. Das Piper-Software-Repository ist MIT-lizenziert, während einzelne Sprachmodelle/Checkpoints separate Lizenzen mit Zuschreibungs- oder Nutzungspflichten haben können. Andere lokale TTS-/Cloning-Projekte haben eigene Bedingungen. Prüfen Sie jede Ebene vor kommerziellem Einsatz.'
+            'text': 'Manchmal, aber gehen Sie nicht davon aus. Das aktiv weiterentwickelte Piper-Repository ist GPL-3.0-lizenziert (eine frühere MIT-lizenzierte Version existiert, ist aber archiviert und nicht mehr der gepflegte Code), während einzelne Sprachmodelle/Checkpoints separate Lizenzen mit Zuschreibungs- oder Nutzungspflichten haben können. Andere lokale TTS-/Cloning-Projekte haben eigene Bedingungen. Prüfen Sie jede Ebene — einschließlich welches Piper-Repository Sie tatsächlich verwenden — vor kommerziellem Einsatz.'
           }
         },
         {
@@ -1819,7 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Ist Piper vollständig kostenlos?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Die Piper-Software-Engine ist MIT-lizenziert, also kostenlos und uneingeschränkt. Einzelne Sprachmodelle/Checkpoints können separate Lizenzen tragen, prüfen Sie daher die konkrete Stimme, bevor Sie sie kommerziell einsetzen.'
+            'text': 'Die aktiv weiterentwickelte Piper-Software-Engine ist GPL-3.0-lizenziert — kostenlos, aber mit Copyleft-Pflichten für abgeleitete Werke, nicht so uneingeschränkt wie eine permissive Lizenz. Einzelne Sprachmodelle/Checkpoints können separate Lizenzen tragen, prüfen Sie daher sowohl die GPL-3.0-Bedingungen der Engine als auch die konkrete Stimme, bevor Sie kommerziell einsetzen.'
           }
         },
         {
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs : plan gratuit (10 000 crédits/mois), Starter 6 $/mois (30k crédits), Creator 22 $/mois (121k crédits), Pro 99 $/mois (600k crédits), Scale 299 $/mois, Business 990 $/mois. Propose aussi des crédits API à l\'usage sans abonnement.',
           'ElevenLabs a réduit ses tarifs API en libre-service jusqu\'à 55 % en mai 2026 et a introduit la facturation à l\'usage pour les développeurs qui ne veulent pas d\'abonnement mensuel.',
-          'Piper : moteur gratuit sous licence MIT, adapté CPU, fonctionne hors ligne une fois installé. Les licences de voix/modèle individuelles peuvent différer.',
+          'Piper : moteur gratuit sous licence GPL-3.0 (voix sous licences séparées), adapté CPU, fonctionne hors ligne une fois installé. Les licences de voix/modèle individuelles peuvent différer.',
           'XTTS v2 : moteur gratuit, prend en charge le clonage vocal à partir d\'un court extrait de référence, exige plus de configuration et généralement un GPU.',
           'Pour la plupart des créateurs : testez d\'abord le plan gratuit ElevenLabs. Passez au TTS local seulement en cas de contrainte spécifique hors ligne, de confidentialité ou d\'échelle.'
         ],
@@ -1948,7 +1948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'Essayer ElevenLabs gratuitement'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -1961,12 +1961,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs est une plateforme vocale hébergée. Ses plans actuels regroupent la synthèse vocale avec d\'autres fonctionnalités vocales et médias ; les crédits sont partagés entre les produits. Son plan gratuit propose 10 000 crédits par mois, tandis que les plans payants ajoutent l\'accès à la licence commerciale et des quotas plus élevés. Vérifiez la page de tarification en direct avant de vous fier à un montant, car fonctionnalités, crédits et prix peuvent changer.\n\nPiper est un moteur TTS local open source. Le dépôt logiciel Piper est sous licence MIT, mais les licences et l\'usage prévu des jeux de données/checkpoints vocaux individuels peuvent différer. Traitez la licence du moteur et celle de la voix/du modèle sélectionné comme des questions distinctes.\n\nXTTS v2 et d\'autres stacks locaux capables de clonage peuvent vous offrir plus de contrôle local, mais exigent souvent plus de configuration, un matériel plus lourd et un examen plus attentif des conditions de modèle, de voix et d\'usage commercial.\n\nLa bonne décision n\'est donc pas « quelle voix est la meilleure ? ». C\'est : **voulez-vous un service de production qui masque l\'infrastructure, ou un système vocal local que vous exploitez et contrôlez vous-même ?**\n\nLes informations de prix et de plans de ce guide sont vérifiées par rapport à la page de tarification en direct à chaque mise à jour — confirmez-y les chiffres actuels, car les fournisseurs modifient leurs plans et quotas de crédits sans préavis.'
+        content: 'ElevenLabs est une plateforme vocale hébergée. Ses plans actuels regroupent la synthèse vocale avec d\'autres fonctionnalités vocales et médias ; les crédits sont partagés entre les produits. Son plan gratuit propose 10 000 crédits par mois, tandis que les plans payants ajoutent l\'accès à la licence commerciale et des quotas plus élevés. Vérifiez la page de tarification en direct avant de vous fier à un montant, car fonctionnalités, crédits et prix peuvent changer.\n\nPiper est un moteur TTS local open source. Le dépôt activement maintenu (OHF-Voice/piper1-gpl) est sous licence GPL-3.0 ; une version antérieure du projet était sous licence MIT avant que ce dépôt ne soit archivé — ne présumez donc pas la licence MIT sans vérifier. Les licences et l\'usage prévu des jeux de données/checkpoints vocaux individuels peuvent différer de la licence du moteur et entre eux. Traitez la licence du moteur et celle de la voix/du modèle sélectionné comme des questions distinctes, et vérifiez les deux sur le dépôt actuel avant tout usage commercial.\n\nXTTS v2 et d\'autres stacks locaux capables de clonage peuvent vous offrir plus de contrôle local, mais exigent souvent plus de configuration, un matériel plus lourd et un examen plus attentif des conditions de modèle, de voix et d\'usage commercial.\n\nLa bonne décision n\'est donc pas « quelle voix est la meilleure ? ». C\'est : **voulez-vous un service de production qui masque l\'infrastructure, ou un système vocal local que vous exploitez et contrôlez vous-même ?**\n\nLes informations de prix et de plans de ce guide sont vérifiées par rapport à la page de tarification en direct à chaque mise à jour — confirmez-y les chiffres actuels, car les fournisseurs modifient leurs plans et quotas de crédits sans préavis.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'Notre verdict',
-        content: '🏆 **Meilleur choix global :** ElevenLabs — le chemin le plus simple vers une voix professionnelle aboutie, sans configuration locale.\n💰 **Meilleur TTS gratuit/local :** Piper — gratuit, sous licence MIT, adapté CPU et capable hors ligne.\n🔒 **Meilleur pour le clonage vocal local :** XTTS v2 — clone une voix à partir d\'un court extrait de référence, sur un matériel que vous contrôlez.\n⚡ **Meilleur pour obtenir une voix off dès aujourd\'hui :** ElevenLabs.\n🖥️ **Meilleur pour Raspberry Pi / CPU-only :** Piper.\n🧑‍💻 **Meilleur pour les développeurs voulant un contrôle local maximal :** XTTS v2.\n\nPour la plupart des créateurs et des entreprises, commencez avec ElevenLabs. Pour les usages hors ligne, sensibles en confidentialité ou embarqués, regardez Piper. Pour le clonage vocal local, étudiez XTTS v2 et les modèles locaux comparables.',
+        content: '🏆 **Meilleur choix global :** ElevenLabs — le chemin le plus simple vers une voix professionnelle aboutie, sans configuration locale.\n💰 **Meilleur TTS gratuit/local :** Piper — gratuit, sous licence GPL-3.0, adapté CPU et capable hors ligne.\n🔒 **Meilleur pour le clonage vocal local :** XTTS v2 — clone une voix à partir d\'un court extrait de référence, sur un matériel que vous contrôlez.\n⚡ **Meilleur pour obtenir une voix off dès aujourd\'hui :** ElevenLabs.\n🖥️ **Meilleur pour Raspberry Pi / CPU-only :** Piper.\n🧑‍💻 **Meilleur pour les développeurs voulant un contrôle local maximal :** XTTS v2.\n\nPour la plupart des créateurs et des entreprises, commencez avec ElevenLabs. Pour les usages hors ligne, sensibles en confidentialité ou embarqués, regardez Piper. Pour le clonage vocal local, étudiez XTTS v2 et les modèles locaux comparables.',
         decisionBlock: {
           title: 'Choisissez votre approche TTS',
           cloudIf: [
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Coût local', 'Ce que ça signifie'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper sur GitHub'
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Le TTS local échange une dépense de service récurrente contre une configuration initiale et une responsabilité continue. C\'est un bon compromis quand vous avez besoin de contrôle ; c\'est généralement un mauvais compromis si vous avez juste besoin d\'une voix off soignée avant une échéance de publication.'
           }
         ],
-        blockquote: '**Vous voulez un contrôle hors ligne complet pour un assistant vocal ou un produit embarqué ?** Piper est le moteur TTS local le plus accessible pour les débutants. Pour le clonage vocal, Coqui TTS et XTTS v2 offrent des alternatives axées confidentialité. [Explorer Piper →](https://github.com/rhasspy/piper)'
+        blockquote: '**Vous voulez un contrôle hors ligne complet pour un assistant vocal ou un produit embarqué ?** Piper est le moteur TTS local le plus accessible pour les débutants. Pour le clonage vocal, Coqui TTS et XTTS v2 offrent des alternatives axées confidentialité. [Explorer Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         itemHeadings: true,
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Usage commercial',
             ElevenLabs: 'Vérifiez votre plan et les conditions actuelles',
-            Piper: 'Le moteur est sous licence MIT ; vérifiez chaque voix/modèle sélectionné séparément',
+            Piper: 'Le moteur est sous licence GPL-3.0 ; vérifiez chaque voix/modèle sélectionné séparément',
             'XTTS v2 or Similar Local Cloning Stack': 'Vérifiez le moteur, le checkpoint, les jeux de données, les conditions d\'usage des sorties et les obligations de consentement'
           },
           {
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Le TTS local est-il gratuit pour un usage commercial ?',
-            a: 'Parfois, mais ne le supposez pas. Le dépôt logiciel Piper est sous licence MIT, tandis que les modèles/checkpoints vocaux individuels peuvent avoir des licences séparées avec des exigences d\'attribution ou d\'usage. D\'autres projets TTS/clonage locaux ont leurs propres conditions. Vérifiez chaque couche avant un déploiement commercial.'
+            a: 'Parfois, mais ne le supposez pas. Le dépôt activement maintenu de Piper est sous licence GPL-3.0 (une version antérieure sous licence MIT existe mais est archivée et n\'est plus le code maintenu), tandis que les modèles/checkpoints vocaux individuels peuvent avoir des licences séparées avec des exigences d\'attribution ou d\'usage. D\'autres projets TTS/clonage locaux ont leurs propres conditions. Vérifiez chaque couche — y compris quel dépôt Piper vous utilisez réellement — avant un déploiement commercial.'
           },
           {
             q: 'Le clonage vocal local fonctionne-t-il hors ligne ?',
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Piper est-il entièrement gratuit ?',
-            a: 'Le moteur logiciel Piper est sous licence MIT, donc gratuit et sans restriction. Les modèles/checkpoints vocaux individuels peuvent porter des licences séparées, vérifiez donc la voix spécifique que vous prévoyez d\'utiliser avant un déploiement commercial.'
+            a: 'Le moteur logiciel Piper activement maintenu est sous licence GPL-3.0 — gratuit, mais avec des obligations copyleft sur les travaux dérivés, pas les conditions « sans restriction » d\'une licence permissive. Les modèles/checkpoints vocaux individuels peuvent porter des licences séparées, vérifiez donc à la fois les conditions GPL-3.0 du moteur et la voix spécifique que vous prévoyez d\'utiliser avant un déploiement commercial.'
           },
           {
             q: 'Piper peut-il cloner des voix ?',
@@ -2576,9 +2576,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Annonce officielle des baisses de tarifs API de mai 2026 (jusqu\'à 55 % sur la synthèse vocale) et de la nouvelle facturation à l\'usage.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Dépôt Piper',
-            description: 'Moteur text-to-speech open source sous licence MIT.'
+            description: 'Moteur text-to-speech open source sous licence GPL-3.0.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -2666,7 +2666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'Moteur TTS local open source sous licence MIT, efficace en CPU, capable hors ligne'
+          'description': 'Moteur TTS local open source sous licence GPL-3.0, efficace en CPU, capable hors ligne'
         },
         {
           '@type': 'Thing',
@@ -2709,7 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Le TTS local est-il gratuit pour un usage commercial ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Parfois, mais ne le supposez pas. Le dépôt logiciel Piper est sous licence MIT, tandis que les modèles/checkpoints vocaux individuels peuvent avoir des licences séparées avec des exigences d\'attribution ou d\'usage. D\'autres projets TTS/clonage locaux ont leurs propres conditions. Vérifiez chaque couche avant un déploiement commercial.'
+            'text': 'Parfois, mais ne le supposez pas. Le dépôt activement maintenu de Piper est sous licence GPL-3.0 (une version antérieure sous licence MIT existe mais est archivée et n\'est plus le code maintenu), tandis que les modèles/checkpoints vocaux individuels peuvent avoir des licences séparées avec des exigences d\'attribution ou d\'usage. D\'autres projets TTS/clonage locaux ont leurs propres conditions. Vérifiez chaque couche — y compris quel dépôt Piper vous utilisez réellement — avant un déploiement commercial.'
           }
         },
         {
@@ -2757,7 +2757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Piper est-il entièrement gratuit ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Le moteur logiciel Piper est sous licence MIT, donc gratuit et sans restriction. Les modèles/checkpoints vocaux individuels peuvent porter des licences séparées, vérifiez donc la voix spécifique que vous prévoyez d\'utiliser avant un déploiement commercial.'
+            'text': 'Le moteur logiciel Piper activement maintenu est sous licence GPL-3.0 — gratuit, mais avec des obligations copyleft sur les travaux dérivés, pas les conditions « sans restriction » d\'une licence permissive. Les modèles/checkpoints vocaux individuels peuvent porter des licences séparées, vérifiez donc à la fois les conditions GPL-3.0 du moteur et la voix spécifique que vous prévoyez d\'utiliser avant un déploiement commercial.'
           }
         },
         {
@@ -2838,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs：免费版（每月1万额度）、Starter每月6美元（3万额度）、Creator每月22美元（12.1万额度）、Pro每月99美元（60万额度）、Scale每月299美元、Business每月990美元。还提供无需订阅的按使用付费API额度。',
           'ElevenLabs于2026年5月将自助API价格最多下调55%，并为不想按月订阅的开发者推出了按使用付费方案。',
-          'Piper：免费的MIT许可引擎，对CPU友好，安装后可离线运行。个别语音/模型许可可能不同。',
+          'Piper：免费引擎，采用GPL-3.0许可（语音单独授权），对CPU友好，安装后可离线运行。个别语音/模型许可可能不同。',
           'XTTS v2：免费引擎，支持从一段简短参考音频克隆声音，需要更多搭建、通常还需要GPU。',
           '对大多数创作者：先测试ElevenLabs免费版。只有遇到具体的离线、隐私或规模限制时才转向本地TTS。'
         ],
@@ -2886,7 +2886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: '免费试用ElevenLabs'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -2899,12 +2899,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs是一个托管语音平台。它目前的方案将文本转语音与其他语音、媒体功能捆绑在一起；额度在各产品间共享。免费版列出每月1万额度，付费方案则增加商用许可和更高的额度上限。由于功能、额度和价格可能变动，依赖任何数字前请先查阅实时定价页面。\n\nPiper是一个开源本地TTS引擎。Piper软件仓库本身采用MIT许可，但各个语音数据集/模型检查点的许可和适用范围可能不同。请将引擎许可和所选语音/模型许可视为两个独立的问题。\n\nXTTS v2及其他支持本地克隆的技术栈能给你更强的本地控制权，但通常需要更多搭建工作、更强的硬件，以及对模型、语音和商用条款的更细致审查。\n\n因此，真正的决策不是"哪个语音最好？"而是：**你想要一个屏蔽了基础设施细节的生产级服务，还是一个由你自己运维和控制的本地语音系统？**\n\n本指南中的价格和方案详情会随每次更新与实时定价页面核对——由于服务商会在不另行通知的情况下调整方案和额度，请务必在那里确认最新数字。'
+        content: 'ElevenLabs是一个托管语音平台。它目前的方案将文本转语音与其他语音、媒体功能捆绑在一起；额度在各产品间共享。免费版列出每月1万额度，付费方案则增加商用许可和更高的额度上限。由于功能、额度和价格可能变动，依赖任何数字前请先查阅实时定价页面。\n\nPiper是一个开源本地TTS引擎。目前积极维护的仓库（OHF-Voice/piper1-gpl）采用GPL-3.0许可；项目早期版本曾采用MIT许可，但该仓库已被归档，因此不要想当然地认为是MIT许可。各个语音数据集/模型检查点的许可和适用范围可能与引擎许可不同，彼此之间也可能不同。请将引擎许可和所选语音/模型许可视为两个独立的问题，并在商用前对照当前仓库核实两者。\n\nXTTS v2及其他支持本地克隆的技术栈能给你更强的本地控制权，但通常需要更多搭建工作、更强的硬件，以及对模型、语音和商用条款的更细致审查。\n\n因此，真正的决策不是"哪个语音最好？"而是：**你想要一个屏蔽了基础设施细节的生产级服务，还是一个由你自己运维和控制的本地语音系统？**\n\n本指南中的价格和方案详情会随每次更新与实时定价页面核对——由于服务商会在不另行通知的情况下调整方案和额度，请务必在那里确认最新数字。'
       },
       shortAnswer: {
         id: 'short-answer',
         title: '我们的结论',
-        content: '🏆 **综合最佳：** ElevenLabs——无需本地搭建，通往成品级专业语音最简单的路径。\n💰 **最佳免费/本地TTS：** Piper——免费、MIT许可、对CPU友好、可离线运行。\n🔒 **本地声音克隆最佳：** XTTS v2——在你掌控的硬件上，从一段简短参考音频克隆声音。\n⚡ **今天就要配音的最佳选择：** ElevenLabs。\n🖥️ **树莓派/CPU-only最佳：** Piper。\n🧑‍💻 **追求最大本地控制权的开发者最佳：** XTTS v2。\n\n对大多数创作者和企业来说，从ElevenLabs开始。对离线、隐私敏感或嵌入式应用，看看Piper。对本地声音克隆，研究XTTS v2和同类本地模型。',
+        content: '🏆 **综合最佳：** ElevenLabs——无需本地搭建，通往成品级专业语音最简单的路径。\n💰 **最佳免费/本地TTS：** Piper——免费、GPL-3.0许可、对CPU友好、可离线运行。\n🔒 **本地声音克隆最佳：** XTTS v2——在你掌控的硬件上，从一段简短参考音频克隆声音。\n⚡ **今天就要配音的最佳选择：** ElevenLabs。\n🖥️ **树莓派/CPU-only最佳：** Piper。\n🧑‍💻 **追求最大本地控制权的开发者最佳：** XTTS v2。\n\n对大多数创作者和企业来说，从ElevenLabs开始。对离线、隐私敏感或嵌入式应用，看看Piper。对本地声音克隆，研究XTTS v2和同类本地模型。',
         decisionBlock: {
           title: '选择你的TTS方案',
           cloudIf: [
@@ -3061,7 +3061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper on GitHub'
@@ -3109,7 +3109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '本地TTS是用前期搭建和持续运维责任来换取节省下来的持续服务开销。如果你需要控制权，这是一笔划算的交易；但如果你只是想在截稿前拿到一段成品配音，这通常是一笔不划算的交易。'
           }
         ],
-        blockquote: '**想为语音助手或嵌入式产品实现完全离线的控制？** Piper是最适合新手上手的本地TTS引擎。若要声音克隆，Coqui TTS和XTTS v2提供隐私优先的替代方案。[了解Piper →](https://github.com/rhasspy/piper)'
+        blockquote: '**想为语音助手或嵌入式产品实现完全离线的控制？** Piper是最适合新手上手的本地TTS引擎。若要声音克隆，Coqui TTS和XTTS v2提供隐私优先的替代方案。[了解Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -3167,7 +3167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: '商业用途',
             ElevenLabs: '请核实你的方案和现行条款',
-            Piper: '引擎为MIT许可；请单独核实所选每个语音/模型',
+            Piper: '引擎为GPL-3.0许可；请单独核实所选每个语音/模型',
             'XTTS v2 or Similar Local Cloning Stack': '请核实引擎、检查点、数据集、产出使用条款和同意授权义务'
           },
           {
@@ -3209,7 +3209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -3415,7 +3415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本地TTS商用是免费的吗？',
-            a: '有时是，但不要想当然。Piper软件仓库本身采用MIT许可，而单个语音模型/检查点可能有独立的许可及署名或使用要求。其他本地TTS/克隆项目各有自己的条款。商用部署前请逐层核实。'
+            a: '有时是，但不要想当然。目前积极维护的Piper仓库采用GPL-3.0许可（早期存在一个MIT许可版本，但该仓库已归档，不再是维护中的代码），而单个语音模型/检查点可能有独立的许可及署名或使用要求。其他本地TTS/克隆项目各有自己的条款。商用部署前请逐层核实，包括你实际使用的是哪一个Piper仓库。'
           },
           {
             q: '本地声音克隆能离线工作吗？',
@@ -3439,7 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Piper完全免费吗？',
-            a: 'Piper软件引擎采用MIT许可，免费且无限制。单个语音模型/检查点可能带有独立许可，因此商用部署前请检查你计划使用的具体语音。'
+            a: '目前积极维护的Piper软件引擎采用GPL-3.0许可——免费，但对衍生作品附带Copyleft义务，并非宽松许可那种"无限制使用"。单个语音模型/检查点可能带有独立许可，因此商用部署前请同时检查引擎的GPL-3.0条款和你计划使用的具体语音。'
           },
           {
             q: 'Piper能克隆声音吗？',
@@ -3511,9 +3511,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '官方公告：2026年5月的API降价（文本转语音最多降55%）及新的按使用付费方案。'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Piper代码仓库',
-            description: 'MIT许可的开源文本转语音引擎。'
+            description: 'GPL-3.0许可的开源文本转语音引擎。'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -3601,7 +3601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'MIT许可的开源本地TTS引擎，CPU高效，支持离线运行'
+          'description': 'GPL-3.0许可的开源本地TTS引擎，CPU高效，支持离线运行'
         },
         {
           '@type': 'Thing',
@@ -3644,7 +3644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '本地TTS商用是免费的吗？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '有时是，但不要想当然。Piper软件仓库本身采用MIT许可，而单个语音模型/检查点可能有独立的许可及署名或使用要求。其他本地TTS/克隆项目各有自己的条款。商用部署前请逐层核实。'
+            'text': '有时是，但不要想当然。目前积极维护的Piper仓库采用GPL-3.0许可（早期存在一个MIT许可版本，但该仓库已归档，不再是维护中的代码），而单个语音模型/检查点可能有独立的许可及署名或使用要求。其他本地TTS/克隆项目各有自己的条款。商用部署前请逐层核实，包括你实际使用的是哪一个Piper仓库。'
           }
         },
         {
@@ -3692,7 +3692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Piper完全免费吗？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Piper软件引擎采用MIT许可，免费且无限制。单个语音模型/检查点可能带有独立许可，因此商用部署前请检查你计划使用的具体语音。'
+            'text': '目前积极维护的Piper软件引擎采用GPL-3.0许可——免费，但对衍生作品附带Copyleft义务，并非宽松许可那种"无限制使用"。单个语音模型/检查点可能带有独立许可，因此商用部署前请同时检查引擎的GPL-3.0条款和你计划使用的具体语音。'
           }
         },
         {
@@ -3773,7 +3773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs:無料プラン(月間10,000クレジット)、Starter月額$6(30,000クレジット)、Creator月額$22(121,000クレジット)、Pro月額$99(600,000クレジット)、Scale月額$299、Business月額$990。サブスクリプション不要の従量課金APIクレジットも提供。',
           'ElevenLabsは2026年5月、セルフサービスAPI料金を最大55%引き下げ、月額サブスクリプションを望まない開発者向けに従量課金制を導入しました。',
-          'Piper:無料のMITライセンスエンジン、CPUフレンドリー、インストール後はオフラインで動作。個々の音声・モデルのライセンスは異なる場合があります。',
+          'Piper:無料のGPL-3.0ライセンスエンジン(音声は別ライセンス)、CPUフレンドリー、インストール後はオフラインで動作。個々の音声・モデルのライセンスは異なる場合があります。',
           'XTTS v2:無料エンジン、短い参照音声からの音声クローンに対応、より多くのセットアップと通常GPUが必要。',
           'ほとんどのクリエイターには:まずElevenLabsの無料プランを試しましょう。特定のオフライン、プライバシー、規模の制約に直面した場合のみローカルTTSへ移行してください。'
         ],
@@ -3821,7 +3821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'ElevenLabsを無料で試す'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -3834,12 +3834,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabsはホスト型の音声プラットフォームです。現在のプランでは、テキスト読み上げが他の音声・メディア機能とセットになっており、クレジットは製品間で共有されます。無料プランは月間10,000クレジットを提供し、有料プランでは商用ライセンスの利用権と割り当ての増加が追加されます。機能、クレジット、料金は変更される可能性があるため、金額を当てにする前に最新の料金ページを確認してください。\n\nPiperはオープンソースのローカルTTSエンジンです。Piperのソフトウェアリポジトリ自体はMITライセンスですが、個々の音声データセットやチェックポイントのライセンスと想定用途は異なる場合があります。エンジンのライセンスと、選択した音声・モデルのライセンスは別問題として扱ってください。\n\nXTTS v2や他のローカルクローン対応スタックは、より高いローカル制御性を提供できますが、多くの場合、より多くのセットアップ、より重いハードウェア、モデル・音声・商用利用条件のより慎重な確認が必要です。\n\nしたがって正しい判断基準は「どの音声が一番優れているか?」ではありません。「インフラを意識せずに済むプロダクションサービスが欲しいのか、それとも自分で運用・制御するローカル音声システムが欲しいのか?」です。\n\nこのガイドの料金とプラン詳細は更新のたびに最新の料金ページと照合しています——プロバイダーは予告なくプランやクレジット割り当てを変更するため、判断の前に必ずそちらで最新の数値を確認してください。'
+        content: 'ElevenLabsはホスト型の音声プラットフォームです。現在のプランでは、テキスト読み上げが他の音声・メディア機能とセットになっており、クレジットは製品間で共有されます。無料プランは月間10,000クレジットを提供し、有料プランでは商用ライセンスの利用権と割り当ての増加が追加されます。機能、クレジット、料金は変更される可能性があるため、金額を当てにする前に最新の料金ページを確認してください。\n\nPiperはオープンソースのローカルTTSエンジンです。現在アクティブに開発が続くリポジトリ(OHF-Voice/piper1-gpl)はGPL-3.0ライセンスです。プロジェクトの初期バージョンはMITライセンスでしたが、そのリポジトリはアーカイブ済みのため、MITライセンスだと思い込まないでください。個々の音声データセットやチェックポイントのライセンスと想定用途は、エンジンのライセンスやそれぞれの間でも異なる場合があります。エンジンのライセンスと、選択した音声・モデルのライセンスは別問題として扱い、商用利用前に現行リポジトリで両方を確認してください。\n\nXTTS v2や他のローカルクローン対応スタックは、より高いローカル制御性を提供できますが、多くの場合、より多くのセットアップ、より重いハードウェア、モデル・音声・商用利用条件のより慎重な確認が必要です。\n\nしたがって正しい判断基準は「どの音声が一番優れているか?」ではありません。「インフラを意識せずに済むプロダクションサービスが欲しいのか、それとも自分で運用・制御するローカル音声システムが欲しいのか?」です。\n\nこのガイドの料金とプラン詳細は更新のたびに最新の料金ページと照合しています——プロバイダーは予告なくプランやクレジット割り当てを変更するため、判断の前に必ずそちらで最新の数値を確認してください。'
       },
       shortAnswer: {
         id: 'short-answer',
         title: '結論を先に',
-        content: '🏆 **総合的に最良:** ElevenLabs——ローカルセットアップ不要で洗練されたプロ品質の音声への最も簡単な道。\n💰 **最良の無料/ローカルTTS:** Piper——無料、MITライセンス、CPUフレンドリー、オフライン対応。\n🔒 **ローカル音声クローンに最良:** XTTS v2——自分で管理するハードウェア上で、短い参照音声からクローンを作成。\n⚡ **今すぐナレーションが欲しい場合に最良:** ElevenLabs。\n🖥️ **Raspberry Pi・CPU専用に最良:** Piper。\n🧑‍💻 **最大限のローカル制御を求める開発者に最良:** XTTS v2。\n\nほとんどのクリエイターと企業は、ElevenLabsから始めてください。オフライン、プライバシー重視、組み込み用途なら、Piperを検討してください。ローカル音声クローンなら、XTTS v2や同等のローカルモデルを調べてください。',
+        content: '🏆 **総合的に最良:** ElevenLabs——ローカルセットアップ不要で洗練されたプロ品質の音声への最も簡単な道。\n💰 **最良の無料/ローカルTTS:** Piper——無料、GPL-3.0ライセンス、CPUフレンドリー、オフライン対応。\n🔒 **ローカル音声クローンに最良:** XTTS v2——自分で管理するハードウェア上で、短い参照音声からクローンを作成。\n⚡ **今すぐナレーションが欲しい場合に最良:** ElevenLabs。\n🖥️ **Raspberry Pi・CPU専用に最良:** Piper。\n🧑‍💻 **最大限のローカル制御を求める開発者に最良:** XTTS v2。\n\nほとんどのクリエイターと企業は、ElevenLabsから始めてください。オフライン、プライバシー重視、組み込み用途なら、Piperを検討してください。ローカル音声クローンなら、XTTS v2や同等のローカルモデルを調べてください。',
         decisionBlock: {
           title: 'TTSアプローチを選ぶ',
           cloudIf: [
@@ -3996,7 +3996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'PiperのGitHubページ'
@@ -4044,7 +4044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ローカルTTSは、継続的なサービス費用を、先行セットアップと継続的な運用責任と引き換えにします。制御性が必要な場合は良いトレードオフですが、公開締め切り前に洗練されたナレーションが欲しいだけなら、通常は割に合いません。'
           }
         ],
-        blockquote: '**音声アシスタントや組み込み製品で完全なオフライン制御が欲しい?**Piperは初心者にとって最も扱いやすいローカルTTSエンジンです。音声クローンには、Coqui TTSとXTTS v2がプライバシー重視の代替手段になります。[Piperを見る→](https://github.com/rhasspy/piper)'
+        blockquote: '**音声アシスタントや組み込み製品で完全なオフライン制御が欲しい?**Piperは初心者にとって最も扱いやすいローカルTTSエンジンです。音声クローンには、Coqui TTSとXTTS v2がプライバシー重視の代替手段になります。[Piperを見る→](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -4102,7 +4102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: '商用利用',
             ElevenLabs: '自分のプランと現在の規約を確認すること',
-            Piper: 'エンジンはMITライセンス。選択した各音声・モデルは個別に確認すること',
+            Piper: 'エンジンはGPLv3ライセンス。選択した各音声・モデルは個別に確認すること',
             'XTTS v2 or Similar Local Cloning Stack': 'エンジン、チェックポイント、データセット、出力利用条件、同意義務を確認すること'
           },
           {
@@ -4144,7 +4144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -4350,7 +4350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルTTSは商用利用にも無料ですか?',
-            a: '場合によりますが、当然だと思わないでください。Piperのソフトウェアリポジトリ自体はMITライセンスですが、個々の音声モデル・チェックポイントには別のライセンスや帰属・使用要件がある場合があります。他のローカルTTS・クローンプロジェクトにも独自の規約があります。商用デプロイ前にすべての層を確認してください。'
+            a: '場合によりますが、当然だと思わないでください。現在アクティブに開発が続くPiperリポジトリはGPLv3ライセンスです(MITライセンスの旧バージョンも存在しますが、アーカイブ済みで現在の開発対象ではありません)。個々の音声モデル・チェックポイントには別のライセンスや帰属・使用要件がある場合があります。他のローカルTTS・クローンプロジェクトにも独自の規約があります。実際に使用しているPiperリポジトリがどちらかも含め、商用デプロイ前にすべての層を確認してください。'
           },
           {
             q: 'ローカル音声クローンはオフラインで動作しますか?',
@@ -4374,7 +4374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Piperは完全に無料ですか?',
-            a: 'Piperのソフトウェアエンジン自体はMITライセンスで、無料かつ制限なしです。個々の音声モデル・チェックポイントには別のライセンスが付く場合があるため、商用デプロイ前に使用予定の特定の音声を確認してください。'
+            a: '現在アクティブに開発が続くPiperのソフトウェアエンジンはGPLv3ライセンスです——無料ですが、派生物にコピーレフトの義務が伴い、パーミッシブライセンスのような「制限なし」ではありません。個々の音声モデル・チェックポイントには別のライセンスが付く場合があるため、商用デプロイ前にエンジンのGPLv3条件と使用予定の特定の音声の両方を確認してください。'
           },
           {
             q: 'Piperは音声をクローンできますか?',
@@ -4446,9 +4446,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '2026年5月のAPI値下げ(テキスト読み上げ最大55%)と新しい従量課金制についての公式発表。'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Piperリポジトリ',
-            description: 'MITライセンスのオープンソーステキスト読み上げエンジン。'
+            description: 'GPL-3.0ライセンスのオープンソーステキスト読み上げエンジン。'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -4536,7 +4536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'MITライセンスのオープンソースローカルTTSエンジン。CPU効率が良くオフライン対応'
+          'description': 'GPLv3ライセンスのオープンソースローカルTTSエンジン。CPU効率が良くオフライン対応'
         },
         {
           '@type': 'Thing',
@@ -4579,7 +4579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'ローカルTTSは商用利用にも無料ですか?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '場合によりますが、当然だと思わないでください。Piperのソフトウェアリポジトリ自体はMITライセンスですが、個々の音声モデル・チェックポイントには別のライセンスや帰属・使用要件がある場合があります。他のローカルTTS・クローンプロジェクトにも独自の規約があります。商用デプロイ前にすべての層を確認してください。'
+            'text': '場合によりますが、当然だと思わないでください。現在アクティブに開発が続くPiperリポジトリはGPLv3ライセンスです(MITライセンスの旧バージョンも存在しますが、アーカイブ済みで現在の開発対象ではありません)。個々の音声モデル・チェックポイントには別のライセンスや帰属・使用要件がある場合があります。他のローカルTTS・クローンプロジェクトにも独自の規約があります。実際に使用しているPiperリポジトリがどちらかも含め、商用デプロイ前にすべての層を確認してください。'
           }
         },
         {
@@ -4627,7 +4627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Piperは完全に無料ですか?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Piperのソフトウェアエンジン自体はMITライセンスで、無料かつ制限なしです。個々の音声モデル・チェックポイントには別のライセンスが付く場合があるため、商用デプロイ前に使用予定の特定の音声を確認してください。'
+            'text': '現在アクティブに開発が続くPiperのソフトウェアエンジンはGPLv3ライセンスです——無料ですが、派生物にコピーレフトの義務が伴い、パーミッシブライセンスのような「制限なし」ではありません。個々の音声モデル・チェックポイントには別のライセンスが付く場合があるため、商用デプロイ前にエンジンのGPLv3条件と使用予定の特定の音声の両方を確認してください。'
           }
         },
         {
@@ -4708,7 +4708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: nivel gratuito (10.000 créditos/mes), Starter 6 $/mes (30k créditos), Creator 22 $/mes (121k créditos), Pro 99 $/mes (600k créditos), Scale 299 $/mes, Business 990 $/mes. También ofrece créditos de API por uso sin suscripción.',
           'ElevenLabs redujo los precios de su API en autoservicio hasta un 55 % en mayo de 2026 e introdujo el pago por uso para desarrolladores que no quieren una suscripción mensual.',
-          'Piper: motor gratuito con licencia MIT, apto para CPU, funciona offline una vez instalado. Las licencias de voces/modelos individuales pueden variar.',
+          'Piper: motor gratuito con licencia GPL-3.0 (las voces tienen licencias separadas), apto para CPU, funciona offline una vez instalado. Las licencias de voces/modelos individuales pueden variar.',
           'XTTS v2: motor gratuito, admite clonación de voz a partir de un clip de referencia corto, necesita más configuración y normalmente una GPU.',
           'Para la mayoría de creadores: prueba primero el nivel gratuito de ElevenLabs. Cambia a TTS local solo si te topas con una limitación específica de offline, privacidad o escala.'
         ],
@@ -4756,7 +4756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'Prueba ElevenLabs gratis'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -4769,12 +4769,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs es una plataforma de voz alojada. Sus planes actuales combinan texto a voz con otras funciones de voz y medios; los créditos se comparten entre productos. Su nivel gratuito ofrece 10.000 créditos al mes, mientras que los planes de pago añaden acceso a licencia comercial y límites más altos. Revisa la página de precios en vivo antes de basarte en cualquier cifra, porque las funciones, los créditos y los precios pueden cambiar.\n\nPiper es un motor de TTS local de código abierto. El repositorio de software de Piper tiene licencia MIT, pero las licencias y el uso previsto de los conjuntos de voces/checkpoints individuales pueden diferir. Trata la licencia del motor y la licencia de la voz/modelo seleccionado como cuestiones separadas.\n\nXTTS v2 y otros stacks locales con capacidad de clonación pueden darte mayor control local, pero suelen requerir más configuración, hardware más potente y una revisión más cuidadosa de los términos del modelo, la voz y el uso comercial.\n\nPor eso, la decisión correcta no es "¿qué voz es mejor?" Es: **¿Quieres un servicio de producción que abstraiga la infraestructura, o un sistema de voz local que tú operes y controles?**\n\nLos precios y detalles de planes de esta guía se contrastan con la página de precios en vivo en cada actualización; confirma ahí las cifras actuales, ya que los proveedores cambian planes y asignaciones de créditos sin previo aviso.'
+        content: 'ElevenLabs es una plataforma de voz alojada. Sus planes actuales combinan texto a voz con otras funciones de voz y medios; los créditos se comparten entre productos. Su nivel gratuito ofrece 10.000 créditos al mes, mientras que los planes de pago añaden acceso a licencia comercial y límites más altos. Revisa la página de precios en vivo antes de basarte en cualquier cifra, porque las funciones, los créditos y los precios pueden cambiar.\n\nPiper es un motor de TTS local de código abierto. El repositorio activamente mantenido (OHF-Voice/piper1-gpl) tiene licencia GPL-3.0; una versión anterior del proyecto tenía licencia MIT antes de que ese repositorio quedara archivado, así que no des por hecho la licencia MIT sin verificarlo. Las licencias y el uso previsto de los conjuntos de voces/checkpoints individuales pueden diferir de la licencia del motor y entre sí. Trata la licencia del motor y la licencia de la voz/modelo seleccionado como cuestiones separadas, y verifica ambas contra el repositorio actual antes de un uso comercial.\n\nXTTS v2 y otros stacks locales con capacidad de clonación pueden darte mayor control local, pero suelen requerir más configuración, hardware más potente y una revisión más cuidadosa de los términos del modelo, la voz y el uso comercial.\n\nPor eso, la decisión correcta no es "¿qué voz es mejor?" Es: **¿Quieres un servicio de producción que abstraiga la infraestructura, o un sistema de voz local que tú operes y controles?**\n\nLos precios y detalles de planes de esta guía se contrastan con la página de precios en vivo en cada actualización; confirma ahí las cifras actuales, ya que los proveedores cambian planes y asignaciones de créditos sin previo aviso.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'Nuestro veredicto',
-        content: '🏆 **Mejor opción general:** ElevenLabs — el camino más sencillo hacia una voz profesional pulida, sin configuración local.\n💰 **Mejor TTS gratis/local:** Piper — gratis, con licencia MIT, apto para CPU y capaz de funcionar offline.\n🔒 **Mejor para clonación de voz local:** XTTS v2 — clona una voz a partir de un clip de referencia corto en hardware que tú controlas.\n⚡ **Mejor para conseguir una locución hoy mismo:** ElevenLabs.\n🖥️ **Mejor para Raspberry Pi / solo CPU:** Piper.\n🧑‍💻 **Mejor para desarrolladores que quieren máximo control local:** XTTS v2.\n\nPara la mayoría de creadores y empresas, empieza con ElevenLabs. Para aplicaciones offline, sensibles a la privacidad o embebidas, mira Piper. Para clonación de voz local, investiga XTTS v2 y modelos locales comparables.',
+        content: '🏆 **Mejor opción general:** ElevenLabs — el camino más sencillo hacia una voz profesional pulida, sin configuración local.\n💰 **Mejor TTS gratis/local:** Piper — gratis, con licencia GPL-3.0, apto para CPU y capaz de funcionar offline.\n🔒 **Mejor para clonación de voz local:** XTTS v2 — clona una voz a partir de un clip de referencia corto en hardware que tú controlas.\n⚡ **Mejor para conseguir una locución hoy mismo:** ElevenLabs.\n🖥️ **Mejor para Raspberry Pi / solo CPU:** Piper.\n🧑‍💻 **Mejor para desarrolladores que quieren máximo control local:** XTTS v2.\n\nPara la mayoría de creadores y empresas, empieza con ElevenLabs. Para aplicaciones offline, sensibles a la privacidad o embebidas, mira Piper. Para clonación de voz local, investiga XTTS v2 y modelos locales comparables.',
         decisionBlock: {
           title: 'Elige tu enfoque de TTS',
           cloudIf: [
@@ -4933,7 +4933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper en GitHub'
@@ -4981,7 +4981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El TTS local cambia el gasto recurrente de un servicio por configuración inicial y responsabilidad continua. Es un gran intercambio cuando necesitas control; suele ser un mal intercambio si solo necesitas una locución pulida antes de una fecha límite de publicación.'
           }
         ],
-        blockquote: '**¿Quieres control offline total para un asistente de voz o un producto embebido?** Piper es el motor de TTS local más accesible para principiantes. Para clonación de voz, Coqui TTS y XTTS v2 ofrecen alternativas centradas en la privacidad. [Explora Piper →](https://github.com/rhasspy/piper)'
+        blockquote: '**¿Quieres control offline total para un asistente de voz o un producto embebido?** Piper es el motor de TTS local más accesible para principiantes. Para clonación de voz, Coqui TTS y XTTS v2 ofrecen alternativas centradas en la privacidad. [Explora Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         itemHeadings: true,
@@ -5040,7 +5040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Uso comercial',
             ElevenLabs: 'Revisa tu plan y los términos actuales',
-            Piper: 'El motor tiene licencia MIT; verifica cada voz/modelo seleccionado por separado',
+            Piper: 'El motor tiene licencia GPL-3.0; verifica cada voz/modelo seleccionado por separado',
             'XTTS v2 or Similar Local Cloning Stack': 'Verifica el motor, el checkpoint, los conjuntos de datos, los términos de uso de la salida y las obligaciones de consentimiento'
           },
           {
@@ -5082,7 +5082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -5288,7 +5288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿El TTS local es gratis para uso comercial?',
-            a: 'A veces, pero no lo des por hecho. El repositorio de software de Piper tiene licencia MIT, mientras que los modelos/checkpoints de voz individuales pueden tener licencias separadas y requisitos de atribución o uso. Otros proyectos de TTS/clonación local tienen sus propios términos. Revisa cada capa antes de un despliegue comercial.'
+            a: 'A veces, pero no lo des por hecho. El repositorio de Piper activamente mantenido tiene licencia GPL-3.0 (existe una versión anterior con licencia MIT, pero está archivada y ya no es el código mantenido), mientras que los modelos/checkpoints de voz individuales pueden tener licencias separadas y requisitos de atribución o uso. Otros proyectos de TTS/clonación local tienen sus propios términos. Revisa cada capa, incluyendo qué repositorio de Piper estás usando realmente, antes de un despliegue comercial.'
           },
           {
             q: '¿Funciona la clonación de voz local sin conexión?',
@@ -5312,7 +5312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es Piper completamente gratis?',
-            a: 'El motor de software de Piper tiene licencia MIT, que es gratuita y sin restricciones. Los modelos/checkpoints de voz individuales pueden llevar licencias separadas, así que comprueba la voz concreta que planeas usar antes de un despliegue comercial.'
+            a: 'El motor de software de Piper activamente mantenido tiene licencia GPL-3.0 — gratuita, pero con obligaciones de copyleft sobre los trabajos derivados, no el "sin restricciones" de una licencia permisiva. Los modelos/checkpoints de voz individuales pueden llevar licencias separadas, así que comprueba tanto las condiciones GPL-3.0 del motor como la voz concreta que planeas usar antes de un despliegue comercial.'
           },
           {
             q: '¿Puede Piper clonar voces?',
@@ -5384,9 +5384,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Anuncio oficial de las rebajas de precios de la API de mayo de 2026 (hasta un 55 % en texto a voz) y el nuevo pago por uso.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Repositorio de Piper',
-            description: 'Motor de texto a voz de código abierto con licencia MIT.'
+            description: 'Motor de texto a voz de código abierto con licencia GPL-3.0.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -5474,7 +5474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'Motor de TTS local de código abierto con licencia MIT, eficiente en CPU, capaz de funcionar offline'
+          'description': 'Motor de TTS local de código abierto con licencia GPL-3.0, eficiente en CPU, capaz de funcionar offline'
         },
         {
           '@type': 'Thing',
@@ -5517,7 +5517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿El TTS local es gratis para uso comercial?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'A veces, pero no lo des por hecho. El repositorio de software de Piper tiene licencia MIT, mientras que los modelos/checkpoints de voz individuales pueden tener licencias separadas y requisitos de atribución o uso. Otros proyectos de TTS/clonación local tienen sus propios términos. Revisa cada capa antes de un despliegue comercial.'
+            'text': 'A veces, pero no lo des por hecho. El repositorio de Piper activamente mantenido tiene licencia GPL-3.0 (existe una versión anterior con licencia MIT, pero está archivada y ya no es el código mantenido), mientras que los modelos/checkpoints de voz individuales pueden tener licencias separadas y requisitos de atribución o uso. Otros proyectos de TTS/clonación local tienen sus propios términos. Revisa cada capa, incluyendo qué repositorio de Piper estás usando realmente, antes de un despliegue comercial.'
           }
         },
         {
@@ -5565,7 +5565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Es Piper completamente gratis?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'El motor de software de Piper tiene licencia MIT, que es gratuita y sin restricciones. Los modelos/checkpoints de voz individuales pueden llevar licencias separadas, así que comprueba la voz concreta que planeas usar antes de un despliegue comercial.'
+            'text': 'El motor de software de Piper activamente mantenido tiene licencia GPL-3.0 — gratuita, pero con obligaciones de copyleft sobre los trabajos derivados, no el "sin restricciones" de una licencia permisiva. Los modelos/checkpoints de voz individuales pueden llevar licencias separadas, así que comprueba tanto las condiciones GPL-3.0 del motor como la voz concreta que planeas usar antes de un despliegue comercial.'
           }
         },
         {
@@ -5646,7 +5646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: plano gratuito (10.000 créditos/mês), Starter $6/mês (30 mil créditos), Creator $22/mês (121 mil créditos), Pro $99/mês (600 mil créditos), Scale $299/mês, Business $990/mês. Também oferece créditos de API por uso sem assinatura.',
           'O ElevenLabs cortou os preços da API self-service em até 55% em maio de 2026 e introduziu o pagamento por uso para desenvolvedores que não querem assinatura mensal.',
-          'Piper: engine gratuita licenciada sob MIT, amigável para CPU, funciona offline após instalado. Licenças de voz/modelo individuais podem variar.',
+          'Piper: engine gratuita licenciada sob GPL-3.0 (vozes com licenças separadas), amigável para CPU, funciona offline após instalado. Licenças de voz/modelo individuais podem variar.',
           'XTTS v2: engine gratuita, suporta clonagem de voz a partir de um clipe curto de referência, exige mais configuração e geralmente uma GPU.',
           'Para a maioria dos criadores: teste primeiro o plano gratuito do ElevenLabs. Migre para TTS local apenas se encontrar uma restrição específica de offline, privacidade ou escala.'
         ],
@@ -5694,7 +5694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'Experimente o ElevenLabs gratuitamente'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -5707,12 +5707,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'O ElevenLabs é uma plataforma de voz hospedada. Seus planos atuais combinam text-to-speech com outros recursos de voz e mídia; os créditos são compartilhados entre produtos. O plano gratuito lista 10.000 créditos por mês, enquanto os planos pagos adicionam acesso a licença comercial e limites mais altos. Verifique a página de preços ao vivo antes de contar com qualquer valor, porque recursos, créditos e preços podem mudar.\n\nO Piper é uma engine de TTS local de código aberto. O repositório de software do Piper é licenciado sob MIT, mas as licenças e o uso pretendido de datasets/checkpoints de vozes individuais podem diferir. Trate a licença da engine e a licença da voz/modelo selecionado como questões separadas.\n\nO XTTS v2 e outras stacks locais capazes de clonagem podem dar a você maior controle local, mas geralmente exigem mais configuração, hardware mais pesado e uma revisão mais cuidadosa dos termos de modelo, voz e uso comercial.\n\nA decisão correta, portanto, não é "qual voz é melhor?" É: **Você quer um serviço de produção que abstrai a infraestrutura, ou um sistema de fala local que você opera e controla?**\n\nOs detalhes de preços e planos neste guia são conferidos com a página de preços ao vivo a cada atualização — confirme os valores atuais lá, já que os provedores mudam planos e limites de créditos sem aviso prévio.'
+        content: 'O ElevenLabs é uma plataforma de voz hospedada. Seus planos atuais combinam text-to-speech com outros recursos de voz e mídia; os créditos são compartilhados entre produtos. O plano gratuito lista 10.000 créditos por mês, enquanto os planos pagos adicionam acesso a licença comercial e limites mais altos. Verifique a página de preços ao vivo antes de contar com qualquer valor, porque recursos, créditos e preços podem mudar.\n\nO Piper é uma engine de TTS local de código aberto. O repositório atualmente mantido (OHF-Voice/piper1-gpl) é licenciado sob GPL-3.0; uma versão anterior do projeto era licenciada sob MIT antes de esse repositório ser arquivado, então não presuma a licença MIT sem verificar. As licenças e o uso pretendido de datasets/checkpoints de vozes individuais podem diferir da licença da engine e entre si. Trate a licença da engine e a licença da voz/modelo selecionado como questões separadas, e verifique ambas no repositório atual antes de uso comercial.\n\nO XTTS v2 e outras stacks locais capazes de clonagem podem dar a você maior controle local, mas geralmente exigem mais configuração, hardware mais pesado e uma revisão mais cuidadosa dos termos de modelo, voz e uso comercial.\n\nA decisão correta, portanto, não é "qual voz é melhor?" É: **Você quer um serviço de produção que abstrai a infraestrutura, ou um sistema de fala local que você opera e controla?**\n\nOs detalhes de preços e planos neste guia são conferidos com a página de preços ao vivo a cada atualização — confirme os valores atuais lá, já que os provedores mudam planos e limites de créditos sem aviso prévio.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'Nosso Veredito',
-        content: '🏆 **Melhor escolha geral:** ElevenLabs — o caminho mais fácil para uma voz profissional refinada, sem configuração local.\n💰 **Melhor TTS gratuito/local:** Piper — gratuito, licenciado sob MIT, amigável para CPU e capaz de rodar offline.\n🔒 **Melhor para clonagem de voz local:** XTTS v2 — clona uma voz a partir de um clipe curto de referência em hardware que você controla.\n⚡ **Melhor para conseguir um voiceover hoje:** ElevenLabs.\n🖥️ **Melhor para Raspberry Pi / apenas CPU:** Piper.\n🧑‍💻 **Melhor para desenvolvedores que querem controle local máximo:** XTTS v2.\n\nPara a maioria dos criadores e empresas, comece com o ElevenLabs. Para aplicações offline, sensíveis à privacidade ou embarcadas, veja o Piper. Para clonagem de voz local, investigue o XTTS v2 e modelos locais comparáveis.',
+        content: '🏆 **Melhor escolha geral:** ElevenLabs — o caminho mais fácil para uma voz profissional refinada, sem configuração local.\n💰 **Melhor TTS gratuito/local:** Piper — gratuito, licenciado sob GPL-3.0, amigável para CPU e capaz de rodar offline.\n🔒 **Melhor para clonagem de voz local:** XTTS v2 — clona uma voz a partir de um clipe curto de referência em hardware que você controla.\n⚡ **Melhor para conseguir um voiceover hoje:** ElevenLabs.\n🖥️ **Melhor para Raspberry Pi / apenas CPU:** Piper.\n🧑‍💻 **Melhor para desenvolvedores que querem controle local máximo:** XTTS v2.\n\nPara a maioria dos criadores e empresas, comece com o ElevenLabs. Para aplicações offline, sensíveis à privacidade ou embarcadas, veja o Piper. Para clonagem de voz local, investigue o XTTS v2 e modelos locais comparáveis.',
         decisionBlock: {
           title: 'Escolha sua abordagem de TTS',
           cloudIf: [
@@ -5871,7 +5871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper no GitHub'
@@ -5919,7 +5919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O TTS local troca gastos recorrentes com serviço por configuração inicial e responsabilidade contínua. Essa é uma ótima troca quando você precisa de controle; geralmente é uma troca ruim se você só precisa de um voiceover refinado antes de um prazo de publicação.'
           }
         ],
-        blockquote: '**Quer controle offline completo para um assistente de voz ou produto embarcado?** O Piper é a engine de TTS local mais acessível para iniciantes. Para clonagem de voz, o Coqui TTS e o XTTS v2 oferecem alternativas focadas em privacidade. [Explore o Piper →](https://github.com/rhasspy/piper)'
+        blockquote: '**Quer controle offline completo para um assistente de voz ou produto embarcado?** O Piper é a engine de TTS local mais acessível para iniciantes. Para clonagem de voz, o Coqui TTS e o XTTS v2 oferecem alternativas focadas em privacidade. [Explore o Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -5977,7 +5977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Uso comercial',
             ElevenLabs: 'Verifique seu plano e os termos atuais',
-            Piper: 'A engine é licenciada sob MIT; verifique cada voz/modelo selecionado separadamente',
+            Piper: 'A engine é licenciada sob GPL-3.0; verifique cada voz/modelo selecionado separadamente',
             'XTTS v2 or Similar Local Cloning Stack': 'Verifique a engine, o checkpoint, os datasets, os termos de uso da saída e as obrigações de consentimento'
           },
           {
@@ -6019,7 +6019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -6225,7 +6225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O TTS local é gratuito para uso comercial?',
-            a: 'Às vezes, mas não presuma isso. O repositório de software do Piper é licenciado sob MIT, enquanto modelos/checkpoints de voz individuais podem ter licenças separadas e requisitos de atribuição ou uso. Outros projetos de TTS/clonagem local têm seus próprios termos. Revise cada camada antes da implantação comercial.'
+            a: 'Às vezes, mas não presuma isso. O repositório do Piper atualmente mantido é licenciado sob GPL-3.0 (existe uma versão anterior licenciada sob MIT, mas está arquivada e não é mais o código mantido), enquanto modelos/checkpoints de voz individuais podem ter licenças separadas e requisitos de atribuição ou uso. Outros projetos de TTS/clonagem local têm seus próprios termos. Revise cada camada, incluindo qual repositório do Piper você está realmente usando, antes da implantação comercial.'
           },
           {
             q: 'A clonagem de voz local funciona offline?',
@@ -6249,7 +6249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Piper é completamente gratuito?',
-            a: 'A engine de software do Piper é licenciada sob MIT, o que é gratuito e sem restrições. Modelos/checkpoints de voz individuais podem ter licenças separadas, então verifique a voz específica que você planeja usar antes da implantação comercial.'
+            a: 'A engine de software do Piper atualmente mantida é licenciada sob GPL-3.0 — gratuita, mas com obrigações de copyleft sobre trabalhos derivados, não o "sem restrições" de uma licença permissiva. Modelos/checkpoints de voz individuais podem ter licenças separadas, então verifique tanto os termos GPL-3.0 da engine quanto a voz específica que você planeja usar antes da implantação comercial.'
           },
           {
             q: 'O Piper pode clonar vozes?',
@@ -6321,9 +6321,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Anúncio oficial dos cortes de preço da API de maio de 2026 (até 55% em text-to-speech) e o novo pagamento por uso.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Repositório do Piper',
-            description: 'Engine de text-to-speech de código aberto licenciada sob MIT.'
+            description: 'Engine de text-to-speech de código aberto licenciada sob GPL-3.0.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -6411,7 +6411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'Engine de TTS local de código aberto licenciada sob MIT, eficiente em CPU, capaz de rodar offline'
+          'description': 'Engine de TTS local de código aberto licenciada sob GPL-3.0, eficiente em CPU, capaz de rodar offline'
         },
         {
           '@type': 'Thing',
@@ -6454,7 +6454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'O TTS local é gratuito para uso comercial?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Às vezes, mas não presuma isso. O repositório de software do Piper é licenciado sob MIT, enquanto modelos/checkpoints de voz individuais podem ter licenças separadas e requisitos de atribuição ou uso. Outros projetos de TTS/clonagem local têm seus próprios termos. Revise cada camada antes da implantação comercial.'
+            'text': 'Às vezes, mas não presuma isso. O repositório do Piper atualmente mantido é licenciado sob GPL-3.0 (existe uma versão anterior licenciada sob MIT, mas está arquivada e não é mais o código mantido), enquanto modelos/checkpoints de voz individuais podem ter licenças separadas e requisitos de atribuição ou uso. Outros projetos de TTS/clonagem local têm seus próprios termos. Revise cada camada, incluindo qual repositório do Piper você está realmente usando, antes da implantação comercial.'
           }
         },
         {
@@ -6502,7 +6502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'O Piper é completamente gratuito?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'A engine de software do Piper é licenciada sob MIT, o que é gratuito e sem restrições. Modelos/checkpoints de voz individuais podem ter licenças separadas, então verifique a voz específica que você planeja usar antes da implantação comercial.'
+            'text': 'A engine de software do Piper atualmente mantida é licenciada sob GPL-3.0 — gratuita, mas com obrigações de copyleft sobre trabalhos derivados, não o "sem restrições" de uma licença permissiva. Modelos/checkpoints de voz individuais podem ter licenças separadas, então verifique tanto os termos GPL-3.0 da engine quanto a voz específica que você planeja usar antes da implantação comercial.'
           }
         },
         {
@@ -6583,7 +6583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: 무료 티어(월 10,000 크레딧), Starter 월 $6(3만 크레딧), Creator 월 $22(12만 1천 크레딧), Pro 월 $99(60만 크레딧), Scale 월 $299, Business 월 $990. 구독 없이 쓸 수 있는 사용량 기반 API 크레딧도 제공합니다.',
           'ElevenLabs는 2026년 5월 셀프서비스 API 요금을 최대 55% 인하했고, 월 구독을 원하지 않는 개발자를 위해 사용량 기반 결제를 도입했습니다.',
-          'Piper: 무료 MIT 라이선스 엔진으로 CPU에 친화적이며, 설치 후에는 오프라인으로 작동합니다. 개별 음성·모델 라이선스는 다를 수 있습니다.',
+          'Piper: 무료 GPL-3.0 라이선스 엔진(음성은 별도 라이선스)으로 CPU에 친화적이며, 설치 후에는 오프라인으로 작동합니다. 개별 음성·모델 라이선스는 다를 수 있습니다.',
           'XTTS v2: 무료 엔진으로 짧은 참조 음성 클립으로 음성 복제를 지원하며, 더 많은 설정과 대개 GPU가 필요합니다.',
           '대부분의 크리에이터에게는 먼저 ElevenLabs 무료 티어를 테스트해볼 것을 권장합니다. 오프라인, 프라이버시, 규모 면에서 구체적인 제약에 부딪힐 때만 로컬 TTS로 전환하세요.'
         ],
@@ -6631,7 +6631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'ElevenLabs 무료로 시작하기'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -6644,12 +6644,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs는 호스팅형 음성 플랫폼입니다. 현재 플랜은 텍스트 음성 변환을 다른 음성·미디어 기능과 묶어 제공하며, 크레딧은 제품 간에 공유됩니다. 무료 티어는 월 10,000 크레딧을 제공하며, 유료 플랜은 상업적 라이선스 이용과 더 많은 허용량을 추가합니다. 기능, 크레딧, 가격은 변경될 수 있으므로 특정 수치에 의존하기 전에 실시간 가격 페이지를 확인하세요.\n\nPiper는 오픈소스 로컬 TTS 엔진입니다. Piper 소프트웨어 저장소는 MIT 라이선스이지만, 개별 음성 데이터셋/체크포인트의 라이선스와 사용 목적은 다를 수 있습니다. 엔진 라이선스와 선택한 음성/모델 라이선스는 별개의 문제로 취급해야 합니다.\n\nXTTS v2와 그 외 로컬 복제가 가능한 스택은 더 큰 로컬 통제권을 제공할 수 있지만, 보통 더 많은 설정, 더 무거운 하드웨어, 모델·음성·상업적 이용 약관에 대한 더 신중한 검토가 필요합니다.\n\n따라서 올바른 질문은 "어떤 음성이 가장 좋은가?"가 아닙니다. 진짜 질문은 다음과 같습니다. **인프라를 대신 처리해주는 프로덕션 서비스를 원하는가, 아니면 직접 운영하고 통제하는 로컬 음성 시스템을 원하는가?**\n\n이 가이드의 가격 및 플랜 세부 정보는 업데이트할 때마다 실시간 가격 페이지와 대조합니다. 제공업체가 예고 없이 플랜과 크레딧 할당량을 바꾸므로, 결정을 내리기 전에 그곳에서 현재 수치를 확인하세요.'
+        content: 'ElevenLabs는 호스팅형 음성 플랫폼입니다. 현재 플랜은 텍스트 음성 변환을 다른 음성·미디어 기능과 묶어 제공하며, 크레딧은 제품 간에 공유됩니다. 무료 티어는 월 10,000 크레딧을 제공하며, 유료 플랜은 상업적 라이선스 이용과 더 많은 허용량을 추가합니다. 기능, 크레딧, 가격은 변경될 수 있으므로 특정 수치에 의존하기 전에 실시간 가격 페이지를 확인하세요.\n\nPiper는 오픈소스 로컬 TTS 엔진입니다. 현재 활발히 유지보수되는 저장소(OHF-Voice/piper1-gpl)는 GPL-3.0 라이선스입니다. 프로젝트 초기 버전은 MIT 라이선스였지만 해당 저장소는 아카이브되었으므로, MIT 라이선스라고 함부로 가정하지 마세요. 개별 음성 데이터셋/체크포인트의 라이선스와 사용 목적은 엔진 라이선스와 다를 수 있고, 서로 간에도 다를 수 있습니다. 엔진 라이선스와 선택한 음성/모델 라이선스는 별개의 문제로 취급하고, 상업적 사용 전에 현재 저장소를 기준으로 둘 다 확인하세요.\n\nXTTS v2와 그 외 로컬 복제가 가능한 스택은 더 큰 로컬 통제권을 제공할 수 있지만, 보통 더 많은 설정, 더 무거운 하드웨어, 모델·음성·상업적 이용 약관에 대한 더 신중한 검토가 필요합니다.\n\n따라서 올바른 질문은 "어떤 음성이 가장 좋은가?"가 아닙니다. 진짜 질문은 다음과 같습니다. **인프라를 대신 처리해주는 프로덕션 서비스를 원하는가, 아니면 직접 운영하고 통제하는 로컬 음성 시스템을 원하는가?**\n\n이 가이드의 가격 및 플랜 세부 정보는 업데이트할 때마다 실시간 가격 페이지와 대조합니다. 제공업체가 예고 없이 플랜과 크레딧 할당량을 바꾸므로, 결정을 내리기 전에 그곳에서 현재 수치를 확인하세요.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: '결론',
-        content: '🏆 **종합적으로 최선:** ElevenLabs — 로컬 설정 없이 완성도 높은 전문가급 음성으로 가는 가장 쉬운 길입니다.\n💰 **최선의 무료/로컬 TTS:** Piper — 무료, MIT 라이선스, CPU 친화적, 오프라인 사용 가능.\n🔒 **로컬 음성 복제에 최선:** XTTS v2 — 직접 관리하는 하드웨어에서 짧은 참조 음성 클립으로 음성을 복제합니다.\n⚡ **오늘 당장 보이스오버가 필요할 때 최선:** ElevenLabs.\n🖥️ **Raspberry Pi·CPU 전용에 최선:** Piper.\n🧑‍💻 **최대한의 로컬 통제권을 원하는 개발자에게 최선:** XTTS v2.\n\n대부분의 크리에이터와 기업은 ElevenLabs부터 시작하세요. 오프라인, 프라이버시 민감, 임베디드 용도라면 Piper를 살펴보세요. 로컬 음성 복제라면 XTTS v2와 비슷한 로컬 모델을 조사해보세요.',
+        content: '🏆 **종합적으로 최선:** ElevenLabs — 로컬 설정 없이 완성도 높은 전문가급 음성으로 가는 가장 쉬운 길입니다.\n💰 **최선의 무료/로컬 TTS:** Piper — 무료, GPL-3.0 라이선스, CPU 친화적, 오프라인 사용 가능.\n🔒 **로컬 음성 복제에 최선:** XTTS v2 — 직접 관리하는 하드웨어에서 짧은 참조 음성 클립으로 음성을 복제합니다.\n⚡ **오늘 당장 보이스오버가 필요할 때 최선:** ElevenLabs.\n🖥️ **Raspberry Pi·CPU 전용에 최선:** Piper.\n🧑‍💻 **최대한의 로컬 통제권을 원하는 개발자에게 최선:** XTTS v2.\n\n대부분의 크리에이터와 기업은 ElevenLabs부터 시작하세요. 오프라인, 프라이버시 민감, 임베디드 용도라면 Piper를 살펴보세요. 로컬 음성 복제라면 XTTS v2와 비슷한 로컬 모델을 조사해보세요.',
         decisionBlock: {
           title: 'TTS 방식을 선택하세요',
           cloudIf: [
@@ -6806,7 +6806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'GitHub의 Piper'
@@ -6854,7 +6854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '로컬 TTS는 반복되는 서비스 지출을 초기 설정과 지속적인 책임으로 대체합니다. 통제권이 필요할 때는 훌륭한 거래지만, 발행 마감 전에 완성도 높은 보이스오버만 필요하다면 보통 좋지 않은 거래입니다.'
           }
         ],
-        blockquote: '**음성 비서나 임베디드 제품을 위해 완전한 오프라인 통제권을 원하시나요?** Piper는 초보자에게 가장 접근하기 쉬운 로컬 TTS 엔진입니다. 음성 복제라면 Coqui TTS와 XTTS v2가 프라이버시 우선 대안을 제공합니다. [Piper 살펴보기 →](https://github.com/rhasspy/piper)'
+        blockquote: '**음성 비서나 임베디드 제품을 위해 완전한 오프라인 통제권을 원하시나요?** Piper는 초보자에게 가장 접근하기 쉬운 로컬 TTS 엔진입니다. 음성 복제라면 Coqui TTS와 XTTS v2가 프라이버시 우선 대안을 제공합니다. [Piper 살펴보기 →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -6912,7 +6912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: '상업적 이용',
             ElevenLabs: '플랜과 현재 약관을 확인하세요',
-            Piper: '엔진은 MIT 라이선스이며, 선택한 각 음성/모델을 별도로 확인하세요',
+            Piper: '엔진은 GPL-3.0 라이선스이며, 선택한 각 음성/모델을 별도로 확인하세요',
             'XTTS v2 or Similar Local Cloning Stack': '엔진, 체크포인트, 데이터셋, 출력물 사용 약관, 동의 의무를 확인하세요'
           },
           {
@@ -6954,7 +6954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -7160,7 +7160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 TTS는 상업적으로 사용해도 무료인가요?',
-            a: '경우에 따라 다르지만, 당연하게 여기지 마세요. Piper 소프트웨어 저장소는 MIT 라이선스이지만, 개별 음성 모델/체크포인트는 별도의 라이선스와 저작자 표시 또는 사용 요구 사항을 가질 수 있습니다. 다른 로컬 TTS/복제 프로젝트는 자체 약관을 가지고 있습니다. 상업적으로 배포하기 전에 모든 계층을 검토하세요.'
+            a: '경우에 따라 다르지만, 당연하게 여기지 마세요. 현재 활발히 유지보수되는 Piper 저장소는 GPL-3.0 라이선스입니다(MIT 라이선스였던 이전 버전이 존재하지만 아카이브되어 더 이상 유지보수되는 코드가 아닙니다). 개별 음성 모델/체크포인트는 별도의 라이선스와 저작자 표시 또는 사용 요구 사항을 가질 수 있습니다. 다른 로컬 TTS/복제 프로젝트는 자체 약관을 가지고 있습니다. 실제로 어떤 Piper 저장소를 사용하는지를 포함해, 상업적으로 배포하기 전에 모든 계층을 검토하세요.'
           },
           {
             q: '로컬 음성 복제는 오프라인에서 작동하나요?',
@@ -7184,7 +7184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Piper는 완전히 무료인가요?',
-            a: 'Piper 소프트웨어 엔진은 MIT 라이선스로, 무료이며 제약이 없습니다. 개별 음성 모델/체크포인트는 별도의 라이선스를 가질 수 있으므로, 상업적으로 배포하기 전에 사용하려는 특정 음성을 확인하세요.'
+            a: '현재 활발히 유지보수되는 Piper 소프트웨어 엔진은 GPL-3.0 라이선스로, 무료이지만 파생물에 카피레프트 의무가 따르며 허용적 라이선스처럼 "제약이 없는" 것은 아닙니다. 개별 음성 모델/체크포인트는 별도의 라이선스를 가질 수 있으므로, 상업적으로 배포하기 전에 엔진의 GPL-3.0 조건과 사용하려는 특정 음성을 모두 확인하세요.'
           },
           {
             q: 'Piper로 음성을 복제할 수 있나요?',
@@ -7256,9 +7256,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '2026년 5월 API 가격 인하(텍스트 음성 변환 최대 55%)와 새로운 사용량 기반 결제에 대한 공식 발표.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'Piper 저장소',
-            description: 'MIT 라이선스 오픈소스 텍스트 음성 변환 엔진.'
+            description: 'GPL-3.0 라이선스 오픈소스 텍스트 음성 변환 엔진.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -7346,7 +7346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'MIT 라이선스 오픈소스 로컬 TTS 엔진, CPU 효율적, 오프라인 사용 가능'
+          'description': 'GPL-3.0 라이선스 오픈소스 로컬 TTS 엔진, CPU 효율적, 오프라인 사용 가능'
         },
         {
           '@type': 'Thing',
@@ -7389,7 +7389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '로컬 TTS는 상업적으로 사용해도 무료인가요?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '경우에 따라 다르지만, 당연하게 여기지 마세요. Piper 소프트웨어 저장소는 MIT 라이선스이지만, 개별 음성 모델/체크포인트는 별도의 라이선스와 저작자 표시 또는 사용 요구 사항을 가질 수 있습니다. 다른 로컬 TTS/복제 프로젝트는 자체 약관을 가지고 있습니다. 상업적으로 배포하기 전에 모든 계층을 검토하세요.'
+            'text': '경우에 따라 다르지만, 당연하게 여기지 마세요. 현재 활발히 유지보수되는 Piper 저장소는 GPL-3.0 라이선스입니다(MIT 라이선스였던 이전 버전이 존재하지만 아카이브되어 더 이상 유지보수되는 코드가 아닙니다). 개별 음성 모델/체크포인트는 별도의 라이선스와 저작자 표시 또는 사용 요구 사항을 가질 수 있습니다. 다른 로컬 TTS/복제 프로젝트는 자체 약관을 가지고 있습니다. 실제로 어떤 Piper 저장소를 사용하는지를 포함해, 상업적으로 배포하기 전에 모든 계층을 검토하세요.'
           }
         },
         {
@@ -7437,7 +7437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Piper는 완전히 무료인가요?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Piper 소프트웨어 엔진은 MIT 라이선스로, 무료이며 제약이 없습니다. 개별 음성 모델/체크포인트는 별도의 라이선스를 가질 수 있으므로, 상업적으로 배포하기 전에 사용하려는 특정 음성을 확인하세요.'
+            'text': '현재 활발히 유지보수되는 Piper 소프트웨어 엔진은 GPL-3.0 라이선스로, 무료이지만 파생물에 카피레프트 의무가 따르며 허용적 라이선스처럼 "제약이 없는" 것은 아닙니다. 개별 음성 모델/체크포인트는 별도의 라이선스를 가질 수 있으므로, 상업적으로 배포하기 전에 엔진의 GPL-3.0 조건과 사용하려는 특정 음성을 모두 확인하세요.'
           }
         },
         {
@@ -7515,7 +7515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'ElevenLabs: خطة مجانية (10,000 رصيد شهريًا)، Starter بسعر 6 دولارات شهريًا (30 ألف رصيد)، Creator بسعر 22 دولارًا شهريًا (121 ألف رصيد)، Pro بسعر 99 دولارًا شهريًا (600 ألف رصيد)، Scale بسعر 299 دولارًا شهريًا، Business بسعر 990 دولارًا شهريًا. يوفر أيضًا أرصدة API حسب الاستخدام دون اشتراك.',
           'خفّض ElevenLabs أسعار واجهة برمجة التطبيقات (API) الذاتية الخدمة بنسبة تصل إلى 55% في مايو 2026، وأطلق نظام الدفع حسب الاستخدام للمطورين الذين لا يريدون اشتراكًا شهريًا.',
-          'Piper: محرك مجاني مرخّص بموجب MIT، متوافق مع المعالج المركزي، ويعمل دون اتصال بالإنترنت بعد التثبيت. تراخيص الأصوات/النماذج الفردية قد تختلف.',
+          'Piper: محرك مجاني مرخّص بموجب GPL-3.0 (الأصوات مرخّصة بشكل منفصل)، متوافق مع المعالج المركزي، ويعمل دون اتصال بالإنترنت بعد التثبيت. تراخيص الأصوات/النماذج الفردية قد تختلف.',
           'XTTS v2: محرك مجاني، يدعم استنساخ الصوت من مقطع صوتي مرجعي قصير، يتطلب إعدادًا أكبر وعادةً وحدة معالجة رسومية.',
           'بالنسبة لمعظم صناع المحتوى: جرّب أولًا الخطة المجانية من ElevenLabs. انتقل إلى TTS المحلي فقط إذا واجهت قيدًا محددًا يتعلق بالعمل دون اتصال بالإنترنت أو الخصوصية أو حجم الاستخدام.'
         ],
@@ -7563,7 +7563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         label: 'جرّب ElevenLabs مجانًا'
       },
       {
-        url: 'https://github.com/rhasspy/piper',
+        url: 'https://github.com/OHF-Voice/piper1-gpl',
         productName: 'Piper',
         productCategory: 'Open-Source Local TTS'
       },
@@ -7576,12 +7576,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs منصة صوتية مُستضافة. تجمع خططها الحالية بين تحويل النص إلى كلام وميزات صوتية وإعلامية أخرى؛ ويتم تقاسم الأرصدة بين المنتجات. تتضمن خطتها المجانية 10,000 رصيد شهريًا، بينما تضيف الخطط المدفوعة وصولًا إلى الترخيص التجاري وحصصًا أعلى. تحقق من صفحة التسعير الحية قبل الاعتماد على أي رقم لأن الميزات والأرصدة والأسعار قابلة للتغيير.\n\nPiper محرك تحويل نص إلى كلام محلي مفتوح المصدر. مستودع برنامج Piper مرخّص بموجب رخصة MIT، لكن تراخيص واستخدامات ملفات الأصوات ونقاط التحقق الفردية قد تختلف. تعامل مع ترخيص المحرك وترخيص الصوت/النموذج المُختار كمسألتين منفصلتين.\n\nيمكن أن يمنحك XTTS v2 وحزم الاستنساخ المحلية الأخرى تحكمًا محليًا أكبر، لكنها غالبًا ما تتطلب إعدادًا أكثر وأجهزة أثقل ومراجعة أدق لشروط النموذج والصوت والاستخدام التجاري.\n\nلذلك، فإن القرار الصحيح ليس "أي صوت هو الأفضل؟" بل هو: **هل تريد خدمة إنتاجية تُخفي عنك تفاصيل البنية التحتية، أم نظام كلام محلي تُشغّله وتتحكم فيه بنفسك؟**\n\nتتم مطابقة التسعير وتفاصيل الخطط في هذا الدليل مع صفحة التسعير الحية عند كل تحديث — تأكد من الأرقام الحالية هناك، لأن مزودي الخدمة يغيّرون الخطط وحصص الأرصدة دون إشعار مسبق.'
+        content: 'ElevenLabs منصة صوتية مُستضافة. تجمع خططها الحالية بين تحويل النص إلى كلام وميزات صوتية وإعلامية أخرى؛ ويتم تقاسم الأرصدة بين المنتجات. تتضمن خطتها المجانية 10,000 رصيد شهريًا، بينما تضيف الخطط المدفوعة وصولًا إلى الترخيص التجاري وحصصًا أعلى. تحقق من صفحة التسعير الحية قبل الاعتماد على أي رقم لأن الميزات والأرصدة والأسعار قابلة للتغيير.\n\nPiper محرك تحويل نص إلى كلام محلي مفتوح المصدر. المستودع الذي يخضع للصيانة النشطة حاليًا (OHF-Voice/piper1-gpl) مرخّص بموجب GPL-3.0؛ كانت نسخة سابقة من المشروع مرخّصة بموجب MIT قبل أن يُؤرشف ذلك المستودع، لذا لا تفترض ترخيص MIT دون تحقق. تراخيص واستخدامات ملفات الأصوات ونقاط التحقق الفردية قد تختلف عن ترخيص المحرك وعن بعضها البعض. تعامل مع ترخيص المحرك وترخيص الصوت/النموذج المُختار كمسألتين منفصلتين، وتحقق من كليهما مقابل المستودع الحالي قبل أي استخدام تجاري.\n\nيمكن أن يمنحك XTTS v2 وحزم الاستنساخ المحلية الأخرى تحكمًا محليًا أكبر، لكنها غالبًا ما تتطلب إعدادًا أكثر وأجهزة أثقل ومراجعة أدق لشروط النموذج والصوت والاستخدام التجاري.\n\nلذلك، فإن القرار الصحيح ليس "أي صوت هو الأفضل؟" بل هو: **هل تريد خدمة إنتاجية تُخفي عنك تفاصيل البنية التحتية، أم نظام كلام محلي تُشغّله وتتحكم فيه بنفسك؟**\n\nتتم مطابقة التسعير وتفاصيل الخطط في هذا الدليل مع صفحة التسعير الحية عند كل تحديث — تأكد من الأرقام الحالية هناك، لأن مزودي الخدمة يغيّرون الخطط وحصص الأرصدة دون إشعار مسبق.'
       },
       shortAnswer: {
         id: 'short-answer',
         title: 'خلاصتنا',
-        content: '🏆 **الأفضل بشكل عام:** ElevenLabs — أسهل طريق لصوت احترافي متقن دون أي إعداد محلي.\n💰 **أفضل TTS مجاني/محلي:** Piper — مجاني، مرخّص بموجب MIT، متوافق مع المعالج المركزي، ويعمل دون اتصال بالإنترنت.\n🔒 **الأفضل لاستنساخ الصوت محليًا:** XTTS v2 — يستنسخ صوتًا من مقطع صوتي مرجعي قصير على أجهزة تتحكم بها بنفسك.\n⚡ **الأفضل للحصول على تعليق صوتي اليوم:** ElevenLabs.\n🖥️ **الأفضل لـ Raspberry Pi / المعالج المركزي فقط:** Piper.\n🧑‍💻 **الأفضل للمطورين الراغبين في أقصى تحكم محلي:** XTTS v2.\n\nبالنسبة لمعظم صناع المحتوى والشركات، ابدأ بـ ElevenLabs. أما للتطبيقات العاملة دون اتصال بالإنترنت أو الحساسة للخصوصية أو المدمجة في الأجهزة، فانظر إلى Piper. وفيما يخص استنساخ الصوت محليًا، ابحث في XTTS v2 والنماذج المحلية المماثلة.',
+        content: '🏆 **الأفضل بشكل عام:** ElevenLabs — أسهل طريق لصوت احترافي متقن دون أي إعداد محلي.\n💰 **أفضل TTS مجاني/محلي:** Piper — مجاني، مرخّص بموجب GPL-3.0، متوافق مع المعالج المركزي، ويعمل دون اتصال بالإنترنت.\n🔒 **الأفضل لاستنساخ الصوت محليًا:** XTTS v2 — يستنسخ صوتًا من مقطع صوتي مرجعي قصير على أجهزة تتحكم بها بنفسك.\n⚡ **الأفضل للحصول على تعليق صوتي اليوم:** ElevenLabs.\n🖥️ **الأفضل لـ Raspberry Pi / المعالج المركزي فقط:** Piper.\n🧑‍💻 **الأفضل للمطورين الراغبين في أقصى تحكم محلي:** XTTS v2.\n\nبالنسبة لمعظم صناع المحتوى والشركات، ابدأ بـ ElevenLabs. أما للتطبيقات العاملة دون اتصال بالإنترنت أو الحساسة للخصوصية أو المدمجة في الأجهزة، فانظر إلى Piper. وفيما يخص استنساخ الصوت محليًا، ابحث في XTTS v2 والنماذج المحلية المماثلة.',
         decisionBlock: {
           title: 'اختر نهج TTS الخاص بك',
           cloudIf: [
@@ -7739,7 +7739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Local Cost', 'What It Means'],
         affiliateLinks: [
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper TTS',
             productCategory: 'Open-Source Local TTS',
             label: 'Piper على GitHub'
@@ -7787,7 +7787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'يستبدل TTS المحلي الإنفاق المتكرر على الخدمة بإعداد أولي ومسؤولية مستمرة. هذه مفاضلة ممتازة عندما تحتاج إلى التحكم؛ وعادة ما تكون مفاضلة سيئة إذا كنت تحتاج فقط إلى تعليق صوتي احترافي قبل موعد نشر نهائي.'
           }
         ],
-        blockquote: '**تريد تحكمًا كاملًا دون اتصال بالإنترنت لمساعد صوتي أو منتج مدمج؟** يُعد Piper محرك TTS المحلي الأسهل للمبتدئين. أما للاستنساخ الصوتي، فتقدّم Coqui TTS و XTTS v2 بدائل تُقدّم الخصوصية أولاً. [استكشف Piper ←](https://github.com/rhasspy/piper)'
+        blockquote: '**تريد تحكمًا كاملًا دون اتصال بالإنترنت لمساعد صوتي أو منتج مدمج؟** يُعد Piper محرك TTS المحلي الأسهل للمبتدئين. أما للاستنساخ الصوتي، فتقدّم Coqui TTS و XTTS v2 بدائل تُقدّم الخصوصية أولاً. [استكشف Piper ←](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -7845,7 +7845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'الاستخدام التجاري',
             ElevenLabs: 'تحقق من خطتك والشروط الحالية',
-            Piper: 'المحرك مرخّص بموجب MIT؛ تحقق من كل صوت/نموذج مختار على حدة',
+            Piper: 'المحرك مرخّص بموجب GPL-3.0؛ تحقق من كل صوت/نموذج مختار على حدة',
             'XTTS v2 or Similar Local Cloning Stack': 'تحقق من المحرك ونقطة التحقق ومجموعات البيانات وشروط استخدام المخرجات والتزامات الموافقة'
           },
           {
@@ -7887,7 +7887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Cloud TTS / Voice AI'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             productName: 'Piper',
             productCategory: 'Open-Source Local TTS'
           },
@@ -8093,7 +8093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل TTS المحلي مجاني للاستخدام التجاري؟',
-            a: 'أحيانًا، لكن لا تفترض ذلك. مستودع برنامج Piper مرخّص بموجب MIT، بينما قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة ومتطلبات إسناد أو استخدام. تحمل مشاريع TTS/الاستنساخ المحلية الأخرى شروطها الخاصة. راجع كل طبقة قبل النشر التجاري.'
+            a: 'أحيانًا، لكن لا تفترض ذلك. المستودع الذي يخضع للصيانة النشطة حاليًا لـPiper مرخّص بموجب GPL-3.0 (توجد نسخة سابقة مرخّصة بموجب MIT، لكنها مؤرشفة ولم تعد الشيفرة الخاضعة للصيانة). قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة ومتطلبات إسناد أو استخدام. تحمل مشاريع TTS/الاستنساخ المحلية الأخرى شروطها الخاصة. راجع كل طبقة، بما في ذلك أي مستودع Piper تستخدمه فعليًا، قبل النشر التجاري.'
           },
           {
             q: 'هل يعمل استنساخ الصوت المحلي دون اتصال بالإنترنت؟',
@@ -8117,7 +8117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Piper مجاني بالكامل؟',
-            a: 'محرك برنامج Piper مرخّص بموجب MIT، وهو مجاني وغير مقيّد. قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة، لذا تحقق من الصوت المحدد الذي تنوي استخدامه قبل النشر التجاري.'
+            a: 'محرك برنامج Piper الذي يخضع للصيانة النشطة حاليًا مرخّص بموجب GPL-3.0 — وهو مجاني، لكنه يفرض التزامات copyleft على الأعمال المشتقة، وليس "غير مقيّد" كما هو الحال في رخصة تساهلية. قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة، لذا تحقق من شروط GPL-3.0 الخاصة بالمحرك ومن الصوت المحدد الذي تنوي استخدامه قبل النشر التجاري.'
           },
           {
             q: 'هل يمكن لـ Piper استنساخ الأصوات؟',
@@ -8189,9 +8189,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'الإعلان الرسمي عن تخفيضات أسعار واجهة برمجة التطبيقات في مايو 2026 (حتى 55% على تحويل النص إلى كلام) ونظام الدفع الجديد حسب الاستخدام.'
           },
           {
-            url: 'https://github.com/rhasspy/piper',
+            url: 'https://github.com/OHF-Voice/piper1-gpl',
             title: 'مستودع Piper',
-            description: 'محرك تحويل نص إلى كلام مفتوح المصدر مرخّص بموجب MIT.'
+            description: 'محرك تحويل نص إلى كلام مفتوح المصدر مرخّص بموجب GPL-3.0.'
           },
           {
             url: 'https://github.com/coqui-ai/TTS',
@@ -8279,7 +8279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Thing',
           'name': 'Piper',
-          'description': 'محرك تحويل نص إلى كلام محلي مفتوح المصدر مرخّص بموجب MIT، فعّال على المعالج المركزي، ويعمل دون اتصال بالإنترنت'
+          'description': 'محرك تحويل نص إلى كلام محلي مفتوح المصدر مرخّص بموجب GPL-3.0، فعّال على المعالج المركزي، ويعمل دون اتصال بالإنترنت'
         },
         {
           '@type': 'Thing',
@@ -8322,7 +8322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'هل TTS المحلي مجاني للاستخدام التجاري؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'أحيانًا، لكن لا تفترض ذلك. مستودع برنامج Piper مرخّص بموجب MIT، بينما قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة ومتطلبات إسناد أو استخدام. تحمل مشاريع TTS/الاستنساخ المحلية الأخرى شروطها الخاصة. راجع كل طبقة قبل النشر التجاري.'
+            'text': 'أحيانًا، لكن لا تفترض ذلك. المستودع الذي يخضع للصيانة النشطة حاليًا لـPiper مرخّص بموجب GPL-3.0 (توجد نسخة سابقة مرخّصة بموجب MIT، لكنها مؤرشفة ولم تعد الشيفرة الخاضعة للصيانة). قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة ومتطلبات إسناد أو استخدام. تحمل مشاريع TTS/الاستنساخ المحلية الأخرى شروطها الخاصة. راجع كل طبقة، بما في ذلك أي مستودع Piper تستخدمه فعليًا، قبل النشر التجاري.'
           }
         },
         {
@@ -8370,7 +8370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'هل Piper مجاني بالكامل؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'محرك برنامج Piper مرخّص بموجب MIT، وهو مجاني وغير مقيّد. قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة، لذا تحقق من الصوت المحدد الذي تنوي استخدامه قبل النشر التجاري.'
+            'text': 'محرك برنامج Piper الذي يخضع للصيانة النشطة حاليًا مرخّص بموجب GPL-3.0 — وهو مجاني، لكنه يفرض التزامات copyleft على الأعمال المشتقة، وليس "غير مقيّد" كما هو الحال في رخصة تساهلية. قد تحمل نماذج/نقاط تحقق الأصوات الفردية تراخيص منفصلة، لذا تحقق من شروط GPL-3.0 الخاصة بالمحرك ومن الصوت المحدد الذي تنوي استخدامه قبل النشر التجاري.'
           }
         },
         {

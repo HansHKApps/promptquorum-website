@@ -28,20 +28,20 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-01',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2026-10-03',
+    last_full_refresh: '2026-09-03',
     current_hardware_mentioned: ['NVIDIA RTX 3090', 'NVIDIA RTX 3090 Ti', 'NVIDIA RTX 4090', 'NVIDIA RTX 5090'],
 
     theme: 'Overview & Reference',
     heroImage: '/images/rtx-3090-local-llm-buy-or-rent-hero-en.webp',
-    title: 'RTX 3090 for Local LLMs: Should You Buy One or Rent One?',
-    seoTitle: 'RTX 3090 for Local LLMs: Buy Used or Rent? | PromptQuorum',
+    title: 'RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?',
+    seoTitle: 'RTX 3090 for Local LLMs in 2026: Buy Used or Rent?',
 
     intro: 'The RTX 3090 is the cheapest way to get 24 GB of VRAM under your own desk, and renting the same card in the cloud costs cents per hour. This guide works out where the line between those two options actually falls.',
-    metaDescription: 'A used RTX 3090 costs $850–$1,050; renting one runs $0.12–$0.22/hour. Here is the break-even math on 24 GB of VRAM — and which side of it you are on.',
+    metaDescription: 'A used RTX 3090 costs $850–$1,050 in 2026; renting one runs $0.12–$0.22/hour. Here is the buy-vs-rent break-even math on 24 GB of VRAM for local LLMs.',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
-    readTime: '11 min read',
+    dateModified: '2026-09-03',
+    readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers and small teams deciding between buying a used 24 GB GPU and renting cloud GPU time for local LLM inference',
     primaryTerm: 'RTX 3090',
@@ -51,6 +51,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'used rtx 3090 price',
       'rtx 3090 vs cloud gpu rental',
       '24gb vram gpu for llm',
+      'rtx 3090 ollama',
+      'rtx 3090 70b model',
     ],
 
     affiliateDisclosure: true,
@@ -75,10 +77,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'RTX 3090 for Local LLMs: Should You Buy One or Rent One?',
+      headline: 'RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?',
       description: 'Break-even analysis between buying a used NVIDIA RTX 3090 and renting the same GPU from cloud providers for local LLM inference, with 2026 pricing.',
       datePublished: '2026-09-01',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-03',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -189,6 +191,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
 
+      modelCapacity: {
+        id: 'model-capacity',
+        title: 'What 24 GB Actually Runs: Model Sizes and Quantization',
+        content: [
+          '**"Fits in 24 GB" and "runs comfortably for interactive use" are two different claims, and buying guides that conflate them set the wrong expectation.** A model can technically load and still leave no room for context, which means it works for a single short prompt and breaks the moment a conversation gets long. The table below separates the two.',
+          'The variable that moves a model between these columns is context length: every token of conversation history and every generated token needs space in the KV cache, on top of the weights themselves. A 27B model at 4-bit quantization with a 4K context comfortably fits; the same model pushed to 32K context can crowd out the headroom the quantization bought you.',
+        ],
+        columns: ['Model class', 'Fits in 24 GB (4-bit)', 'Interactive use'],
+        rows: [
+          { 'Model class': '7B–8B', 'Fits in 24 GB (4-bit)': 'Yes, with room to spare', 'Interactive use': 'Fast, long context comfortable' },
+          { 'Model class': '13B–14B', 'Fits in 24 GB (4-bit)': 'Yes', 'Interactive use': 'Fast, generous context' },
+          { 'Model class': '27B–34B', 'Fits in 24 GB (4-bit)': 'Yes', 'Interactive use': 'Comfortable / watch KV cache at long context' },
+          { 'Model class': '70B (4-bit, single card)', 'Fits in 24 GB (4-bit)': 'Technically, with CPU offload', 'Interactive use': 'Slow — offloaded layers bottleneck generation' },
+          { 'Model class': '70B (4-bit, two cards)', 'Fits in 24 GB (4-bit)': 'Yes, 48 GB combined', 'Interactive use': 'Comfortable, no offloading' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'A 70B-class model at 4-bit quantization needs roughly 40–45 GB of VRAM for weights alone, before context. A single 24 GB card gets there only by offloading part of the model to system RAM, which is why the single-card row above is listed as technically possible rather than comfortable.',
+          },
+        ],
+      },
+
+      ollamaLmStudio: {
+        id: 'ollama-lm-studio',
+        title: 'RTX 3090 with Ollama and LM Studio',
+        content: [
+          '**The RTX 3090\'s 24 GB is particularly relevant for Ollama and LM Studio, because both default to loading a model entirely in GPU memory when it fits, and fall back to slower CPU/GPU offloading when it does not.** With 24 GB available, both tools can run 27B-class models fully on the card instead of splitting them.',
+          'Actual tokens-per-second depends on the specific model, the quantization level, context length, which backend build is in use (llama.cpp under the hood for both), how much of the prompt still needs processing versus how much is cached, and what else is running on the same machine. Neither tool publishes official RTX 3090 benchmarks, so treat any single "X tokens/sec" figure you see elsewhere as one person\'s setup, not a guarantee for yours.',
+          'Practically: install either tool, pull a 27B-class model at 4-bit quantization, and check GPU memory usage in `nvidia-smi` (or the tool\'s own display) while it runs — if usage sits comfortably under 24 GB, the model is fully on the card and you are getting the RTX 3090\'s full memory bandwidth.',
+        ],
+      },
+
       buyUsed: {
         id: 'buy-used',
         title: 'Buying Used: What to Check Before You Pay',
@@ -228,6 +263,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
 
+      bestVariants: {
+        id: 'best-variants',
+        title: 'Choosing a Card: Cooling, Size and Power Connectors',
+        itemHeadings: true,
+        content: [
+          '**Every RTX 3090 has the same 24 GB of VRAM, so the model-fitting question is settled the moment you pick "RTX 3090." What differs between cards is how bearable it is to own one.** No single manufacturer cooler design is objectively best across every listing — used-market condition varies more than the design does — but these are the factors worth checking before you buy.',
+        ],
+        columns: ['Factor', 'What to check'],
+        rows: [
+          { Factor: 'Cooling design', 'What to check': 'Triple-fan open-air coolers run quieter under sustained load than blower-style cards; ask how loud it is at idle vs. under inference.' },
+          { Factor: 'Physical size', 'What to check': 'Most RTX 3090s are three-slot, 30+ cm long cards — measure your case before buying, not after.' },
+          { Factor: 'Power connectors', 'What to check': 'Standard 8-pin PCIe (two or three) on most models; confirm your PSU has enough native connectors before relying on adapters.' },
+          { Factor: 'Warranty', 'What to check': 'Original manufacturer warranties on this generation have mostly expired — treat any used 3090 as sold as-is unless the seller states otherwise.' },
+          { Factor: 'Used condition', 'What to check': 'Prior mining use is not disqualifying (see the buying checklist above); prior heavy overclocking with poor cooling is a bigger risk signal.' },
+          { Factor: 'Price vs. risk', 'What to check': 'The cheapest listing is not the best deal if it has no returns — a $50–100 premium for buyer protection is usually worth it on a five-year-old card.' },
+        ],
+      },
+
       whyRentInstead: {
         id: 'why-rent-instead',
         title: 'Why Renting Is the Better Answer More Often Than People Expect',
@@ -252,6 +305,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Provider: 'RunPod Community', 'Price/hour': '$0.22', 'Best for': 'Predictable capacity at a modest premium' },
           { Provider: 'RunPod Secure', 'Price/hour': '$0.50', 'Best for': 'Enterprise reliability and support' },
           { Provider: 'Median of 8 providers', 'Price/hour': '$0.15', 'Best for': 'The figure to use for your own break-even math' },
+        ],
+        items: [
+          'Setup complexity: Vast.ai and similar marketplaces require picking a host and template yourself; RunPod and other managed providers offer one-click templates with Ollama or a web UI pre-installed.',
+          'Persistence: a stopped instance on most providers still bills for attached storage; check whether a provider charges for storage while the GPU itself is paused before leaving a large model cached between sessions.',
+          'Minimum rental: marketplace listings are typically billed by the minute with no minimum; some managed-capacity tiers require a minimum block — check the pricing page of the specific provider before committing to a job.',
+          'Geographic availability: marketplace GPUs are wherever their owners are, so a specific region is not guaranteed; managed providers publish fixed data-center regions, which matters if you have data-residency requirements.',
         ],
         callouts: [
           {
@@ -339,6 +398,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
 
+      verdict: {
+        id: 'verdict',
+        title: 'Our Verdict',
+        content: [
+          '**Buy a used RTX 3090 if you will use it more than about four hours a day for the next two years, or if your data cannot leave your building — it is still the cheapest way to own 24 GB of VRAM. Rent one if your usage is occasional, bursty or you are still finding out whether local inference suits your workload. If you are unsure which you are, rent first.**',
+          'For frequent local LLM use and privacy: buy. For occasional experimentation: rent. For uncertain or changing usage: rent first, and revisit the decision in six months once you know your actual hours. For anyone specifically chasing inexpensive 24 GB VRAM, a good-condition used RTX 3090 remains compelling in 2026 — the memory-shortage price increase has not changed that, only pushed the break-even further out. For a new purchase where efficiency, warranty and current-generation features matter more than upfront price, compare against a [current-generation card](/power-local-llm/best-gpu-buying-guide-local-llm-2026) instead.',
+          'Bottom line: the RTX 3090\'s advantage is 24 GB of VRAM at used-market prices. Its costs are age, high power draw, heat, noise and the lack of a warranty. Neither side of that trade-off has changed in 2026 — only the purchase price has, and it moved against buying.',
+        ],
+      },
+
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -346,6 +415,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Is the RTX 3090 still worth buying in 2026?',
             a: 'For sustained local inference, yes — it remains the cheapest 24 GB card at $850–$1,050 used. For light or occasional use, no: renting the same GPU at $0.12–$0.22 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
+          },
+          {
+            q: 'Is the RTX 3090 good for Ollama?',
+            a: 'Yes. Ollama loads a model fully into GPU memory when it fits, and 24 GB is enough to run 27B-class models at 4-bit quantization entirely on the card rather than splitting across CPU and GPU. Confirm full GPU residency with `nvidia-smi` while a model is loaded.',
+          },
+          {
+            q: 'Is the RTX 3090 good for LM Studio?',
+            a: 'Yes, for the same reason as Ollama — both run on a llama.cpp-based backend and benefit equally from 24 GB of VRAM. LM Studio shows GPU memory usage directly in its interface, which makes it easy to confirm a model is fully loaded rather than partially offloaded.',
           },
           {
             q: 'RTX 3090 or RTX 4090 for local LLMs?',
@@ -396,6 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Best GPUs for Local LLMs: Complete Buying Guide](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — compare the RTX 3090 against current-generation cards across every price tier.',
           '[Used GPUs for Local LLMs: Best Value Picks](/local-llms/used-gpus-for-local-llms) — the wider used-market guide covering the RTX 3060, 3080 and 4090 alongside this card.',
+          '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — how the two tools this GPU pairs with actually differ, beyond both sharing a llama.cpp backend.',
           '[Cheapest Practical Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — where two RTX 3090s fit into the cheapest 70B setup.',
           '[How Much VRAM for a 70B Model?](/prompt-bites/vram-for-70b-model) — the VRAM arithmetic behind the two-card recommendation above.',
           '[Local LLM Cost Calculator: Build vs Rent](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — run the break-even calculation with your own numbers and hardware.',

@@ -73,6 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'Nous Research was reportedly in talks for new funding at a $1.5B valuation as of July 2026 (TechCrunch). "In talks" is not a closed round — treat this as company context, not confirmation that the funding happened.' },
+          { type: 'warning', text: 'Hermes Agent has a real, disclosed vulnerability history, not just theoretical risk. An independent audit published April 11, 2026 found 4 Critical and 9 High-severity issues in its default configuration, and [OpenCVE tracks 44 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project as of September 2026, including a CVSS 8.8 remote-code-execution issue. See the "Realistic Expectations and Risks" section below before deploying.' },
         ],
       },
       overview: {
@@ -162,13 +163,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'What Are Realistic Expectations for Running Hermes Agent?',
-        content: '**An autonomous agent with persistent memory and a self-improving skill loop needs closer supervision than a stateless chatbot, because its behavior accumulates over time instead of resetting each session.**',
+        content: '**An autonomous agent with persistent memory and a self-improving skill loop needs closer supervision than a stateless chatbot, because its behavior accumulates over time instead of resetting each session — and Hermes Agent specifically has an active, disclosed vulnerability history you should account for before deploying it, not just an architectural "supervise it closely" caveat.**',
         items: [
-          'Persistent memory means mistakes or bad assumptions the agent makes can persist and compound across sessions if unreviewed — periodically check what it has stored',
-          'Self-written skills are, by definition, code or routines the agent produced itself; review skills it creates before letting it run unattended on sensitive tasks, the same way you would review any automation you didn\'t write by hand',
+          'An independent security audit by researcher @Anic888, published April 11, 2026, found 4 Critical and 9 High-severity findings in Hermes Agent\'s default configuration: unrestricted shell execution that bypasses the built-in command-detection guard, unrestricted credential-file access (the audit lists SSH private keys, API key files, browser profiles, git credential caches, and cloud-provider config files as readable with no deny list), container environments that unconditionally skip approval checks, and a persistent skill-injection path where an attacker can write files to `~/.hermes/skills/` that keep running across sessions',
+          'As of September 2026, [OpenCVE lists 44 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8 — remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3 — a supply-chain vulnerability in the bundled MCP catalog that could propagate malicious code to every host that installed an affected catalog entry). CVE counts and severities change as new issues are filed and old ones are patched — check the current list for the version you plan to run before deploying',
+          'Security researchers at Repello.ai also describe risk classes that will not show up as individual CVE numbers: indirect prompt injection through the agent\'s own memory store (an attacker who can write into memory can plant instructions the agent later retrieves and executes) and unverified Model Context Protocol servers that can inject instructions into a connected agent without the user approving each one',
+          'Persistent memory means mistakes or bad assumptions the agent makes can persist and compound across sessions if unreviewed — periodically check what it has stored, and treat the memory store itself as sensitive data, since a security review by [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) notes it can accumulate account details and client information over time',
+          'Self-written skills are, by definition, code or routines the agent produced itself; review the contents of `~/.hermes/skills/` before letting it run unattended on sensitive tasks — this directory is specifically the mechanism the April 2026 audit flagged for persistent skill injection, so check the files themselves, not just what the agent reports doing',
           'Messaging-platform access widens the agent\'s attack surface compared with a terminal-only tool — treat bot tokens and API credentials for Telegram, Discord, Slack, WhatsApp, Signal, and email with the same care as any other credential that grants access to an automated process',
           'Model choice affects both cost and privacy: a fully local Hermes 4.3 setup keeps data on your own infrastructure, while an OpenRouter-backed setup sends requests to whichever third-party model provider you select, subject to that provider\'s own data-handling terms',
-          'This site has not run its own long-duration test of Hermes Agent\'s skill-loop or memory behavior at the time of writing; the points above describe the architecture as documented, not results from independent testing',
+          'Update to the current release before deploying, and disable any "skip all approval checks" / unrestricted-autonomy setting for production use — several of the critical findings above are specifically about approval checks being bypassed or absent by default, not about a missing convenience feature',
+          'This site has not run its own long-duration test of Hermes Agent\'s skill-loop or memory behavior at the time of writing; the architecture points above describe documented behavior, and the vulnerability points are sourced to the named independent audit and CVE database, not to an incident this site observed directly',
+        ],
+        callouts: [
+          { type: 'warning', text: 'This is disclosed, architecture-level vulnerability risk, not a report of a specific completed breach. No independently verified report of a successful attack via these vectors against a real deployment was found at the time of writing — the point is that these are real, patchable weaknesses in default configurations, confirmed by an outside audit and a public CVE record, not hypothetical ones. Patch to the current release and review the configuration above before trusting the agent with sensitive tasks, files, or credentials.' },
         ],
       },
       whoShouldUse: {
@@ -229,6 +237,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Mistake 4: Skipping credential hygiene for messaging channels',
             content: 'Connecting Hermes Agent to Telegram, Discord, Slack, WhatsApp, Signal, or email means those platforms\' bot tokens and API credentials now grant access to a persistent, self-modifying agent. Treat those credentials with the same care you would for any automation with broad access, not as a casual convenience feature.',
           },
+          {
+            title: 'Mistake 5: Deploying the default configuration without checking known vulnerabilities',
+            content: 'An independent audit published April 11, 2026 found 4 Critical and 9 High-severity issues in Hermes Agent\'s default configuration, including unrestricted shell execution and unrestricted credential-file access, and [OpenCVE lists 44 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against the project as of September 2026, including a CVSS 8.8 remote-code-execution issue. Update to the current release, disable unrestricted-autonomy / "skip approval" settings, and check the CVE list for your target version before trusting the agent with sensitive tasks — treat this as ongoing patch hygiene, not a one-time setup step.',
+          },
         ],
       },
       faq: {
@@ -245,6 +257,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Who makes Hermes Agent?', a: 'Nous Research, the organization also behind the Hermes model family (including Hermes 4.3) and the official hermes-agent.org site. Nous Research was reportedly in talks for funding at a $1.5B valuation as of July 2026 per TechCrunch, though that describes talks, not a confirmed closed round.' },
           { q: 'Can Hermes Agent run completely offline with no internet access?', a: 'Yes, if configured to use a local model backend (Ollama or Hugging Face running Hermes 4.3) rather than OpenRouter, which requires an internet connection to reach its hosted models.' },
           { q: 'Is it safe to give Hermes Agent access to my Telegram, Discord, or email account?', a: 'That depends on how carefully you manage the credentials and how closely you supervise the agent\'s memory and self-written skills. Because Hermes Agent persists state and can modify its own skills over time, review what it has stored and treat its messaging-channel credentials with the same caution you would apply to any automation with broad account access.' },
+          { q: 'Does Hermes Agent have known security vulnerabilities?', a: 'Yes. As of September 2026, [OpenCVE lists 44 published CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) against NousResearch/hermes-agent, including CVE-2026-71963 (CVSS 8.8, remote code execution via a malicious git config file) and CVE-2026-82021 (CVSS 8.3, a supply-chain vulnerability in the bundled MCP catalog). A separate independent audit published April 11, 2026 found 4 Critical and 9 High-severity issues in the default configuration, including unrestricted shell execution and unrestricted credential-file access. Check the current CVE list and update to the latest release before deploying.' },
+          { q: 'Is Hermes Agent safe to use for business or production workloads?', a: 'Treat it as software with a real, disclosed vulnerability history rather than as pre-hardened for production. Independent security reviewers ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommend permission scoping, memory-access policies, and human approval gates rather than running it unattended with broad file, shell, or credential access. It also shipped in February 2026, so it has fewer years of production hardening behind it than older agent frameworks.' },
         ],
       },
       sources: {
@@ -254,6 +268,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent on GitHub', description: 'The source repository, including the LICENSE file (MIT) and current setup documentation for local (Ollama/Hugging Face) and OpenRouter model backends.' },
           { url: 'https://hermes-agent.org', title: 'Hermes Agent official site', description: 'Nous Research\'s official site for Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'The organization behind Hermes Agent and the Hermes model family.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'Research note covering the April 11, 2026 independent audit (4 Critical, 9 High-severity findings in the default configuration) and subsequent CVE activity.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: hermes-agent CVE list', description: 'Live, continuously updated list of published CVEs against NousResearch/hermes-agent, with CVSS scores and affected versions.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'Analysis of architectural risk classes (memory injection, MCP server trust boundary, skill-marketplace supply chain) beyond individual CVEs.' },
         ],
       },
       relatedReading: {
@@ -339,6 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'Nous Research befand sich Berichten zufolge Stand Juli 2026 in Gesprächen über eine neue Finanzierungsrunde bei einer Bewertung von 1,5 Mrd. $ (TechCrunch). "In Gesprächen" ist keine abgeschlossene Runde — dies ist Unternehmenskontext, keine Bestätigung, dass die Finanzierung erfolgt ist.' },
+          { type: 'warning', text: 'Hermes Agent hat eine reale, offengelegte Sicherheitslücken-Historie, kein rein theoretisches Risiko. Ein unabhängiges Audit vom 11. April 2026 fand 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration, und [OpenCVE listet 44 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, Stand September 2026, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Siehe den Abschnitt "Realistische Erwartungen und Risiken" unten vor dem Einsatz.' },
         ],
       },
       overview: {
@@ -428,13 +446,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'Was sind realistische Erwartungen beim Betrieb von Hermes Agent?',
-        content: '**Ein autonomer Agent mit persistentem Gedächtnis und selbstverbessernder Skill-Loop braucht engere Beaufsichtigung als ein zustandsloser Chatbot, weil sich sein Verhalten über die Zeit aufbaut, statt sich bei jeder Sitzung zurückzusetzen.**',
+        content: '**Ein autonomer Agent mit persistentem Gedächtnis und selbstverbessernder Skill-Loop braucht engere Beaufsichtigung als ein zustandsloser Chatbot, weil sich sein Verhalten über die Zeit aufbaut, statt sich bei jeder Sitzung zurückzusetzen — und bei Hermes Agent kommt eine aktive, offengelegte Sicherheitslücken-Historie dazu, die vor dem Einsatz zu berücksichtigen ist, nicht nur ein architektonischer "genau beaufsichtigen"-Hinweis.**',
         items: [
-          'Persistentes Gedächtnis bedeutet, dass Fehler oder falsche Annahmen des Agenten unbemerkt über Sitzungen hinweg fortbestehen und sich aufsummieren können — regelmäßig prüfen, was gespeichert wurde',
-          'Selbst geschriebene Skills sind per Definition Code oder Routinen, die der Agent selbst erzeugt hat; vom Agenten erstellte Skills prüfen, bevor er unbeaufsichtigt mit sensiblen Aufgaben betraut wird, genau wie bei jeder Automatisierung, die man nicht selbst geschrieben hat',
+          'Ein unabhängiges Sicherheitsaudit des Forschers @Anic888, veröffentlicht am 11. April 2026, fand 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration von Hermes Agent: uneingeschränkte Shell-Ausführung, die die eingebaute Befehlserkennung umgeht, uneingeschränkter Zugriff auf Zugangsdaten-Dateien (das Audit listet SSH-Private-Keys, API-Key-Dateien, Browser-Profile, Git-Zugangsdaten-Caches und Cloud-Provider-Konfigurationsdateien als ohne Sperrliste lesbar), Container-Umgebungen, die Freigabeprüfungen bedingungslos überspringen, sowie einen Pfad für persistente Skill-Injection, bei dem Angreifer Dateien nach `~/.hermes/skills/` schreiben können, die sitzungsübergreifend weiterlaufen',
+          'Stand September 2026 [listet OpenCVE 44 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8 — Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3 — eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog, die bösartigen Code auf jeden Host verteilen konnte, der einen betroffenen Katalogeintrag installierte). CVE-Zahlen und Schweregrade ändern sich laufend, da neue Einträge hinzukommen und alte gepatcht werden — vor dem Einsatz die aktuelle Liste für die geplante Version prüfen',
+          'Sicherheitsforscher von Repello.ai beschreiben zudem Risikoklassen, die nicht als einzelne CVE-Nummer auftauchen: indirekte Prompt-Injection über den eigenen Gedächtnisspeicher des Agenten (wer in das Gedächtnis schreiben kann, kann Anweisungen platzieren, die der Agent später abruft und ausführt) sowie ungeprüfte Model-Context-Protocol-Server, die einem verbundenen Agenten Anweisungen unterschieben können, ohne dass Nutzer jede einzelne freigeben',
+          'Persistentes Gedächtnis bedeutet, dass Fehler oder falsche Annahmen des Agenten unbemerkt über Sitzungen hinweg fortbestehen und sich aufsummieren können — regelmäßig prüfen, was gespeichert wurde, und den Gedächtnisspeicher selbst als sensible Daten behandeln, da ein Sicherheitsreview von [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) festhält, dass sich dort über die Zeit Kontodaten und Kundeninformationen ansammeln können',
+          'Selbst geschriebene Skills sind per Definition Code oder Routinen, die der Agent selbst erzeugt hat; den Inhalt von `~/.hermes/skills/` prüfen, bevor er unbeaufsichtigt mit sensiblen Aufgaben betraut wird — genau dieses Verzeichnis war der Mechanismus, den das Audit vom April 2026 für persistente Skill-Injection markierte, also die Dateien selbst prüfen, nicht nur, was der Agent über sein Tun berichtet',
           'Zugriff über Messaging-Plattformen vergrößert die Angriffsfläche gegenüber einem reinen Terminal-Tool — Bot-Tokens und API-Zugangsdaten für Telegram, Discord, Slack, WhatsApp, Signal und E-Mail mit derselben Sorgfalt behandeln wie jede andere Zugangsberechtigung für einen automatisierten Prozess',
           'Die Modellwahl beeinflusst Kosten und Datenschutz gleichermaßen: Ein vollständig lokales Hermes-4.3-Setup hält Daten auf der eigenen Infrastruktur, während ein OpenRouter-gestütztes Setup Anfragen an den jeweils gewählten Drittanbieter sendet, vorbehaltlich von dessen eigenen Datenverarbeitungsbedingungen',
-          'Diese Seite hat zum Zeitpunkt der Veröffentlichung keinen eigenen Langzeittest des Skill-Loop- oder Gedächtnisverhaltens von Hermes Agent durchgeführt; die obigen Punkte beschreiben die dokumentierte Architektur, nicht Ergebnisse unabhängiger Tests',
+          'Vor dem Einsatz auf die aktuelle Version aktualisieren und jede "alle Freigabeprüfungen überspringen"-Einstellung für den produktiven Betrieb deaktivieren — mehrere der oben genannten kritischen Befunde betreffen genau umgangene oder standardmäßig fehlende Freigabeprüfungen, nicht ein fehlendes Komfortfeature',
+          'Diese Seite hat zum Zeitpunkt der Veröffentlichung keinen eigenen Langzeittest des Skill-Loop- oder Gedächtnisverhaltens von Hermes Agent durchgeführt; die Architekturpunkte oben beschreiben dokumentiertes Verhalten, die Sicherheitslücken-Punkte stammen aus dem genannten unabhängigen Audit und der öffentlichen CVE-Datenbank, nicht aus einem von dieser Seite selbst beobachteten Vorfall',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Dies ist offengelegtes Risiko auf Architekturebene, kein Bericht über einen konkreten, abgeschlossenen Einbruch. Zum Zeitpunkt der Veröffentlichung wurde kein unabhängig bestätigter Bericht über einen erfolgreichen Angriff über diese Vektoren gegen ein reales Deployment gefunden — der Punkt ist, dass es sich um reale, behebbare Schwächen in Standardkonfigurationen handelt, bestätigt durch ein externes Audit und eine öffentliche CVE-Historie, nicht um hypothetische. Vor dem Anvertrauen sensibler Aufgaben, Dateien oder Zugangsdaten auf die aktuelle Version patchen und die obige Konfiguration prüfen.' },
         ],
       },
       whoShouldUse: {
@@ -495,6 +520,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Fehler 4: Zugangsdaten-Hygiene bei Messaging-Kanälen vernachlässigen',
             content: 'Die Verbindung von Hermes Agent mit Telegram, Discord, Slack, WhatsApp, Signal oder E-Mail bedeutet, dass die Bot-Tokens und API-Zugangsdaten dieser Plattformen nun Zugriff auf einen persistenten, sich selbst verändernden Agenten gewähren. Diese Zugangsdaten mit derselben Sorgfalt behandeln wie bei jeder Automatisierung mit weitreichendem Zugriff, nicht als beiläufiges Komfortfeature.',
           },
+          {
+            title: 'Fehler 5: Die Standardkonfiguration einsetzen, ohne bekannte Sicherheitslücken zu prüfen',
+            content: 'Ein unabhängiges Audit vom 11. April 2026 fand 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration von Hermes Agent, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien, und [OpenCVE listet Stand September 2026 44 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für das Projekt, darunter eine Remote-Code-Execution-Lücke mit CVSS 8,8. Vor dem Anvertrauen sensibler Aufgaben auf die aktuelle Version aktualisieren, Einstellungen zum Überspringen von Freigabeprüfungen deaktivieren und die CVE-Liste für die eigene Zielversion prüfen — als laufende Patch-Hygiene behandeln, nicht als einmaligen Einrichtungsschritt.',
+          },
         ],
       },
       faq: {
@@ -511,6 +540,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wer entwickelt Hermes Agent?', a: 'Nous Research, die Organisation, die auch hinter der Hermes-Modellfamilie (einschließlich Hermes 4.3) und der offiziellen Website hermes-agent.org steht. Nous Research befand sich laut TechCrunch Stand Juli 2026 Berichten zufolge in Gesprächen über eine Finanzierung bei einer Bewertung von 1,5 Mrd. $, wobei dies Gespräche beschreibt, keine bestätigte, abgeschlossene Runde.' },
           { q: 'Kann Hermes Agent komplett ohne Internetzugang laufen?', a: 'Ja, wenn er auf ein lokales Modell-Backend (Ollama oder Hugging Face mit Hermes 4.3) statt auf OpenRouter konfiguriert ist, das für den Zugriff auf seine gehosteten Modelle eine Internetverbindung benötigt.' },
           { q: 'Ist es sicher, Hermes Agent Zugriff auf mein Telegram-, Discord- oder E-Mail-Konto zu geben?', a: 'Das hängt davon ab, wie sorgfältig die Zugangsdaten verwaltet werden und wie eng Gedächtnis und selbst geschriebene Skills des Agenten beaufsichtigt werden. Da Hermes Agent Zustand über Zeit speichert und eigene Skills verändern kann, sollte regelmäßig geprüft werden, was gespeichert wurde, und die Zugangsdaten der Messaging-Kanäle sollten mit derselben Vorsicht behandelt werden wie bei jeder Automatisierung mit weitreichendem Kontozugriff.' },
+          { q: 'Hat Hermes Agent bekannte Sicherheitslücken?', a: 'Ja. Stand September 2026 [listet OpenCVE 44 veröffentlichte CVEs](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) für NousResearch/hermes-agent, darunter CVE-2026-71963 (CVSS 8,8, Remote Code Execution über eine manipulierte git-Konfigurationsdatei) und CVE-2026-82021 (CVSS 8,3, eine Supply-Chain-Schwachstelle im mitgelieferten MCP-Katalog). Ein separates unabhängiges Audit vom 11. April 2026 fand 4 kritische und 9 hohe Schweregrade in der Standardkonfiguration, darunter uneingeschränkte Shell-Ausführung und uneingeschränkten Zugriff auf Zugangsdaten-Dateien. Vor dem Einsatz die aktuelle CVE-Liste prüfen und auf die neueste Version aktualisieren.' },
+          { q: 'Ist Hermes Agent für den geschäftlichen oder produktiven Einsatz sicher?', a: 'Als Software mit einer realen, offengelegten Sicherheitslücken-Historie behandeln, nicht als für den Produktivbetrieb vorgehärtet. Unabhängige Sicherheitsprüfer ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) empfehlen eingeschränkte Berechtigungen, Richtlinien für den Gedächtniszugriff und manuelle Freigabe-Schritte, statt ihn unbeaufsichtigt mit weitreichendem Datei-, Shell- oder Zugangsdaten-Zugriff laufen zu lassen. Er erschien zudem im Februar 2026 und hat damit weniger Jahre Produktivhärtung hinter sich als ältere Agent-Frameworks.' },
         ],
       },
       sources: {
@@ -520,6 +551,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent auf GitHub', description: 'Das Quell-Repository, einschließlich der LICENSE-Datei (MIT) und der aktuellen Setup-Dokumentation für lokale (Ollama/Hugging Face) und OpenRouter-Modell-Backends.' },
           { url: 'https://hermes-agent.org', title: 'Offizielle Hermes-Agent-Website', description: 'Nous Researchs offizielle Website für Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'Die Organisation hinter Hermes Agent und der Hermes-Modellfamilie.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'Research Note zum unabhängigen Audit vom 11. April 2026 (4 kritische, 9 hohe Schweregrade in der Standardkonfiguration) und zur nachfolgenden CVE-Aktivität.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: CVE-Liste für hermes-agent', description: 'Live, laufend aktualisierte Liste veröffentlichter CVEs für NousResearch/hermes-agent mit CVSS-Werten und betroffenen Versionen.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'Analyse architektonischer Risikoklassen (Memory Injection, MCP-Server-Vertrauensgrenze, Skill-Marketplace-Supply-Chain) jenseits einzelner CVEs.' },
         ],
       },
       relatedReading: {
@@ -605,6 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'Nous Research aurait été, selon TechCrunch, en discussion pour une nouvelle levée de fonds à une valorisation de 1,5 Md $ en juillet 2026. « En discussion » n\'est pas un tour de table conclu — considérez ceci comme un contexte d\'entreprise, pas une confirmation que le financement a eu lieu.' },
+          { type: 'warning', text: 'Hermes Agent a un historique de vulnérabilités réel et documenté, pas seulement un risque théorique. Un audit indépendant publié le 11 avril 2026 a relevé 4 failles critiques et 9 de sévérité élevée dans sa configuration par défaut, et [OpenCVE recense 44 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet en date de septembre 2026, dont une faille d\'exécution de code à distance notée CVSS 8,8. Voir la section « Attentes réalistes et risques » ci-dessous avant tout déploiement.' },
         ],
       },
       overview: {
@@ -694,13 +729,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'Quelles sont les attentes réalistes pour faire tourner Hermes Agent ?',
-        content: '**Un agent autonome doté d\'une mémoire persistante et d\'une boucle de compétences auto-améliorante nécessite une surveillance plus étroite qu\'un chatbot sans état, car son comportement s\'accumule dans le temps au lieu de se réinitialiser à chaque session.**',
+        content: '**Un agent autonome doté d\'une mémoire persistante et d\'une boucle de compétences auto-améliorante nécessite une surveillance plus étroite qu\'un chatbot sans état, car son comportement s\'accumule dans le temps au lieu de se réinitialiser à chaque session — et Hermes Agent a en plus un historique de vulnérabilités actif et documenté à prendre en compte avant tout déploiement, pas seulement une mise en garde architecturale de type « surveillez-le de près ».**',
         items: [
-          'La mémoire persistante signifie que les erreurs ou hypothèses erronées de l\'agent peuvent persister et s\'accumuler d\'une session à l\'autre si elles ne sont pas revues — vérifiez périodiquement ce qu\'il a stocké',
-          'Les compétences auto-écrites sont, par définition, du code ou des routines produits par l\'agent lui-même ; examinez les compétences qu\'il crée avant de le laisser tourner sans surveillance sur des tâches sensibles, comme pour toute automatisation que vous n\'auriez pas écrite vous-même',
+          'Un audit de sécurité indépendant mené par le chercheur @Anic888, publié le 11 avril 2026, a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de Hermes Agent : une exécution shell sans restriction qui contourne le garde-fou intégré de détection de commandes, un accès sans restriction aux fichiers d\'identifiants (l\'audit liste comme lisibles, sans liste de blocage, les clés SSH privées, les fichiers de clés API, les profils de navigateur, les caches d\'identifiants git et les fichiers de configuration des fournisseurs cloud), des environnements conteneurisés qui ignorent systématiquement les contrôles de validation, et une voie d\'injection persistante de compétences permettant à un attaquant d\'écrire des fichiers dans `~/.hermes/skills/` qui continuent de s\'exécuter d\'une session à l\'autre',
+          'En date de septembre 2026, [OpenCVE recense 44 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8 — exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3 — une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni, capable de propager du code malveillant à chaque hôte ayant installé une entrée de catalogue affectée). Le nombre et la sévérité des CVE évoluent au fil des nouveaux signalements et des correctifs — vérifiez la liste actuelle pour la version que vous envisagez de déployer',
+          'Des chercheurs en sécurité de Repello.ai décrivent aussi des classes de risque qui n\'apparaissent pas comme des CVE individuelles : l\'injection indirecte de prompt via la mémoire propre de l\'agent (un attaquant capable d\'écrire dans la mémoire peut y placer des instructions que l\'agent récupérera et exécutera plus tard) et des serveurs Model Context Protocol non vérifiés capables d\'injecter des instructions à un agent connecté sans validation individuelle par l\'utilisateur',
+          'La mémoire persistante signifie que les erreurs ou hypothèses erronées de l\'agent peuvent persister et s\'accumuler d\'une session à l\'autre si elles ne sont pas revues — vérifiez périodiquement ce qu\'il a stocké, et traitez la mémoire elle-même comme une donnée sensible, une analyse de sécurité de [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) notant qu\'elle peut accumuler dans le temps des informations de compte et des données clients',
+          'Les compétences auto-écrites sont, par définition, du code ou des routines produits par l\'agent lui-même ; examinez le contenu de `~/.hermes/skills/` avant de le laisser tourner sans surveillance sur des tâches sensibles — c\'est précisément ce répertoire que l\'audit d\'avril 2026 a identifié comme vecteur d\'injection persistante de compétences, donc vérifiez les fichiers eux-mêmes, pas seulement ce que l\'agent rapporte avoir fait',
           'L\'accès via plateformes de messagerie élargit la surface d\'attaque par rapport à un outil limité au terminal — traitez les tokens de bot et identifiants d\'API pour Telegram, Discord, Slack, WhatsApp, Signal et l\'e-mail avec la même prudence que tout autre identifiant donnant accès à un processus automatisé',
           'Le choix du modèle affecte à la fois le coût et la confidentialité : une configuration entièrement locale avec Hermes 4.3 garde les données sur votre propre infrastructure, tandis qu\'une configuration adossée à OpenRouter envoie les requêtes au fournisseur tiers choisi, selon les conditions de traitement des données de ce fournisseur',
-          'Ce site n\'a pas mené son propre test de longue durée du comportement de la boucle de compétences ou de la mémoire de Hermes Agent à ce jour ; les points ci-dessus décrivent l\'architecture telle que documentée, pas des résultats de tests indépendants',
+          'Mettez à jour vers la version actuelle avant tout déploiement, et désactivez tout paramètre de type « ignorer tous les contrôles de validation » pour un usage en production — plusieurs des failles critiques ci-dessus concernent précisément des contrôles de validation contournés ou absents par défaut, pas une fonctionnalité de confort manquante',
+          'Ce site n\'a pas mené son propre test de longue durée du comportement de la boucle de compétences ou de la mémoire de Hermes Agent à ce jour ; les points d\'architecture ci-dessus décrivent un comportement documenté, et les points de vulnérabilité s\'appuient sur l\'audit indépendant cité et la base de données CVE publique, pas sur un incident observé directement par ce site',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Il s\'agit d\'un risque de vulnérabilité documenté au niveau de l\'architecture, pas du signalement d\'une intrusion réelle et confirmée. Aucun rapport indépendamment vérifié d\'attaque réussie via ces vecteurs contre un déploiement réel n\'a été trouvé à ce jour — le point est que ce sont des faiblesses réelles et corrigeables dans les configurations par défaut, confirmées par un audit externe et un historique CVE public, pas des risques hypothétiques. Mettez à jour vers la version actuelle et vérifiez la configuration ci-dessus avant de confier à l\'agent des tâches, fichiers ou identifiants sensibles.' },
         ],
       },
       whoShouldUse: {
@@ -761,6 +803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Erreur 4 : négliger l\'hygiène des identifiants pour les canaux de messagerie',
             content: 'Connecter Hermes Agent à Telegram, Discord, Slack, WhatsApp, Signal ou l\'e-mail signifie que les tokens de bot et identifiants d\'API de ces plateformes donnent désormais accès à un agent persistant et capable de se modifier lui-même. Traitez ces identifiants avec la même prudence que pour toute automatisation ayant un accès étendu, pas comme une simple commodité.',
           },
+          {
+            title: 'Erreur 5 : déployer la configuration par défaut sans vérifier les vulnérabilités connues',
+            content: 'Un audit indépendant publié le 11 avril 2026 a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut de Hermes Agent, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants, et [OpenCVE recense 44 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre le projet en date de septembre 2026, dont une faille d\'exécution de code à distance notée CVSS 8,8. Mettez à jour vers la version actuelle, désactivez les paramètres permettant d\'ignorer les contrôles de validation, et vérifiez la liste des CVE pour la version ciblée avant de confier des tâches sensibles à l\'agent — traitez cela comme une hygiène de correctifs continue, pas comme une étape de configuration ponctuelle.',
+          },
         ],
       },
       faq: {
@@ -777,6 +823,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qui développe Hermes Agent ?', a: 'Nous Research, l\'organisation également derrière la famille de modèles Hermes (y compris Hermes 4.3) et le site officiel hermes-agent.org. Selon TechCrunch, Nous Research aurait été en discussion pour un financement à une valorisation de 1,5 Md $ en juillet 2026, bien que cela décrive des discussions, pas un tour de table confirmé et conclu.' },
           { q: 'Hermes Agent peut-il fonctionner complètement sans accès internet ?', a: 'Oui, s\'il est configuré pour utiliser un backend de modèle local (Ollama ou Hugging Face avec Hermes 4.3) plutôt qu\'OpenRouter, qui nécessite une connexion internet pour accéder à ses modèles hébergés.' },
           { q: 'Est-il sûr de donner à Hermes Agent accès à mon compte Telegram, Discord ou e-mail ?', a: 'Cela dépend du soin apporté à la gestion des identifiants et du niveau de supervision de la mémoire et des compétences auto-écrites de l\'agent. Comme Hermes Agent conserve un état dans le temps et peut modifier ses propres compétences, vérifiez ce qu\'il a stocké et traitez les identifiants de ses canaux de messagerie avec la même prudence que pour toute automatisation ayant un accès étendu à un compte.' },
+          { q: 'Hermes Agent a-t-il des vulnérabilités de sécurité connues ?', a: 'Oui. En date de septembre 2026, [OpenCVE recense 44 CVE publiées](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contre NousResearch/hermes-agent, dont CVE-2026-71963 (CVSS 8,8, exécution de code à distance via un fichier de configuration git malveillant) et CVE-2026-82021 (CVSS 8,3, une vulnérabilité de la chaîne d\'approvisionnement dans le catalogue MCP fourni). Un audit indépendant distinct, publié le 11 avril 2026, a relevé 4 failles critiques et 9 de sévérité élevée dans la configuration par défaut, dont une exécution shell sans restriction et un accès sans restriction aux fichiers d\'identifiants. Vérifiez la liste actuelle des CVE et mettez à jour vers la dernière version avant tout déploiement.' },
+          { q: 'Hermes Agent est-il sûr pour un usage professionnel ou en production ?', a: 'Traitez-le comme un logiciel doté d\'un historique de vulnérabilités réel et documenté, pas comme préalablement renforcé pour la production. Des évaluateurs de sécurité indépendants ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recommandent de restreindre les permissions, d\'établir des politiques d\'accès à la mémoire et d\'exiger une validation humaine, plutôt que de le faire tourner sans surveillance avec un accès étendu aux fichiers, au shell ou aux identifiants. Il est aussi sorti en février 2026, il dispose donc de moins d\'années de durcissement en production que des frameworks d\'agents plus anciens.' },
         ],
       },
       sources: {
@@ -786,6 +834,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent sur GitHub', description: 'Le dépôt source, incluant le fichier LICENSE (MIT) et la documentation d\'installation actuelle pour les backends de modèle local (Ollama/Hugging Face) et OpenRouter.' },
           { url: 'https://hermes-agent.org', title: 'Site officiel de Hermes Agent', description: 'Le site officiel de Nous Research pour Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'L\'organisation derrière Hermes Agent et la famille de modèles Hermes.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance : 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'Note de recherche sur l\'audit indépendant du 11 avril 2026 (4 failles critiques, 9 de sévérité élevée dans la configuration par défaut) et l\'activité CVE qui a suivi.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE : liste des CVE pour hermes-agent', description: 'Liste en direct, mise à jour en continu, des CVE publiées contre NousResearch/hermes-agent, avec scores CVSS et versions affectées.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai : Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'Analyse des classes de risque architecturales (injection mémoire, frontière de confiance des serveurs MCP, chaîne d\'approvisionnement du marketplace de compétences) au-delà des CVE individuelles.' },
         ],
       },
       relatedReading: {
@@ -871,6 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'Según TechCrunch, Nous Research estaría en conversaciones para una nueva ronda de financiación con una valoración de 1.500 M$ a fecha de julio de 2026. "En conversaciones" no equivale a una ronda cerrada — trátese como contexto de la empresa, no como confirmación de que la financiación se haya concretado.' },
+          { type: 'warning', text: 'Hermes Agent tiene un historial real y documentado de vulnerabilidades, no solo un riesgo teórico. Una auditoría independiente publicada el 11 de abril de 2026 encontró 4 hallazgos críticos y 9 de severidad alta en su configuración por defecto, y [OpenCVE registra 44 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto a fecha de septiembre de 2026, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Consulta la sección "Expectativas realistas y riesgos" más abajo antes de desplegarlo.' },
         ],
       },
       overview: {
@@ -960,13 +1012,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: '¿Cuáles son las expectativas realistas al ejecutar Hermes Agent?',
-        content: '**Un agente autónomo con memoria persistente y un bucle de habilidades autosuperador necesita una supervisión más estrecha que un chatbot sin estado, porque su comportamiento se acumula con el tiempo en lugar de reiniciarse en cada sesión.**',
+        content: '**Un agente autónomo con memoria persistente y un bucle de habilidades autosuperador necesita una supervisión más estrecha que un chatbot sin estado, porque su comportamiento se acumula con el tiempo en lugar de reiniciarse en cada sesión — y Hermes Agent, en concreto, tiene un historial de vulnerabilidades activo y documentado que hay que tener en cuenta antes de desplegarlo, no solo una advertencia arquitectónica de "supervísalo de cerca".**',
         items: [
-          'La memoria persistente implica que los errores o suposiciones equivocadas del agente pueden persistir y acumularse entre sesiones si no se revisan — comprueba periódicamente qué ha almacenado',
-          'Las habilidades autoescritas son, por definición, código o rutinas producidos por el propio agente; revisa las habilidades que crea antes de dejarlo funcionar sin supervisión en tareas sensibles, igual que harías con cualquier automatización que no hayas escrito tú mismo',
+          'Una auditoría de seguridad independiente del investigador @Anic888, publicada el 11 de abril de 2026, encontró 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de Hermes Agent: ejecución de shell sin restricciones que evita la protección integrada de detección de comandos, acceso sin restricciones a archivos de credenciales (la auditoría enumera claves SSH privadas, archivos de claves de API, perfiles de navegador, cachés de credenciales de git y archivos de configuración de proveedores cloud como legibles sin ninguna lista de bloqueo), entornos en contenedores que omiten incondicionalmente las comprobaciones de aprobación, y una vía de inyección persistente de habilidades por la que un atacante puede escribir archivos en `~/.hermes/skills/` que siguen ejecutándose entre sesiones',
+          'A fecha de septiembre de 2026, [OpenCVE registra 44 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8 — ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3 — una vulnerabilidad de cadena de suministro en el catálogo MCP incluido, capaz de propagar código malicioso a cada host que instalara una entrada de catálogo afectada). El número y la severidad de las CVE cambian a medida que se registran nuevos problemas y se corrigen los antiguos — comprueba la lista actual para la versión que planeas usar antes de desplegarla',
+          'Investigadores de seguridad de Repello.ai también describen clases de riesgo que no aparecen como números de CVE individuales: inyección indirecta de prompts a través de la propia memoria del agente (un atacante que pueda escribir en la memoria puede dejar instrucciones que el agente recupere y ejecute más adelante) y servidores de Model Context Protocol no verificados capaces de inyectar instrucciones en un agente conectado sin que el usuario apruebe cada uno',
+          'La memoria persistente implica que los errores o suposiciones equivocadas del agente pueden persistir y acumularse entre sesiones si no se revisan — comprueba periódicamente qué ha almacenado, y trata la propia memoria como datos sensibles, ya que una revisión de seguridad de [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) señala que puede acumular con el tiempo datos de cuentas e información de clientes',
+          'Las habilidades autoescritas son, por definición, código o rutinas producidos por el propio agente; revisa el contenido de `~/.hermes/skills/` antes de dejarlo funcionar sin supervisión en tareas sensibles — precisamente ese directorio es el mecanismo que la auditoría de abril de 2026 señaló para la inyección persistente de habilidades, así que revisa los archivos en sí, no solo lo que el agente informa haber hecho',
           'El acceso por plataformas de mensajería amplía la superficie de ataque respecto a una herramienta limitada a la terminal — trata los tokens de bot y las credenciales de API de Telegram, Discord, Slack, WhatsApp, Signal y correo electrónico con el mismo cuidado que cualquier otra credencial que dé acceso a un proceso automatizado',
           'La elección del modelo afecta tanto al coste como a la privacidad: una configuración totalmente local con Hermes 4.3 mantiene los datos en tu propia infraestructura, mientras que una configuración respaldada por OpenRouter envía solicitudes al proveedor externo que elijas, sujeta a las condiciones de manejo de datos de ese proveedor',
-          'Este sitio no ha realizado su propia prueba de larga duración del comportamiento del bucle de habilidades o de la memoria de Hermes Agent a la fecha de publicación; los puntos anteriores describen la arquitectura tal como está documentada, no resultados de pruebas independientes',
+          'Actualiza a la versión actual antes de desplegar, y desactiva cualquier configuración de tipo "omitir todas las comprobaciones de aprobación" para uso en producción — varios de los hallazgos críticos anteriores tratan precisamente sobre comprobaciones de aprobación evitadas o ausentes por defecto, no sobre una función de conveniencia que falte',
+          'Este sitio no ha realizado su propia prueba de larga duración del comportamiento del bucle de habilidades o de la memoria de Hermes Agent a la fecha de publicación; los puntos de arquitectura anteriores describen comportamiento documentado, y los puntos de vulnerabilidad proceden de la auditoría independiente citada y de la base de datos pública de CVE, no de un incidente observado directamente por este sitio',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Se trata de un riesgo de vulnerabilidad documentado a nivel de arquitectura, no del informe de una brecha concreta y confirmada. No se ha encontrado, a la fecha de publicación, ningún informe independientemente verificado de un ataque exitoso mediante estos vectores contra un despliegue real — el punto es que son debilidades reales y corregibles en las configuraciones por defecto, confirmadas por una auditoría externa y un historial público de CVE, no hipotéticas. Actualiza a la versión actual y revisa la configuración anterior antes de confiarle al agente tareas, archivos o credenciales sensibles.' },
         ],
       },
       whoShouldUse: {
@@ -1027,6 +1086,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Error 4: descuidar la higiene de credenciales en los canales de mensajería',
             content: 'Conectar Hermes Agent a Telegram, Discord, Slack, WhatsApp, Signal o correo electrónico implica que los tokens de bot y las credenciales de API de esas plataformas dan ahora acceso a un agente persistente y capaz de modificarse a sí mismo. Trata esas credenciales con el mismo cuidado que cualquier automatización con acceso amplio, no como una función de conveniencia sin importancia.',
           },
+          {
+            title: 'Error 5: desplegar la configuración por defecto sin comprobar las vulnerabilidades conocidas',
+            content: 'Una auditoría independiente publicada el 11 de abril de 2026 encontró 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto de Hermes Agent, incluyendo ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales, y [OpenCVE registra 44 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra el proyecto a fecha de septiembre de 2026, incluyendo una vulnerabilidad de ejecución remota de código con CVSS 8,8. Actualiza a la versión actual, desactiva las configuraciones que omiten comprobaciones de aprobación, y comprueba la lista de CVE para la versión que uses antes de confiarle tareas sensibles al agente — trátalo como higiene continua de parches, no como un paso de configuración único.',
+          },
         ],
       },
       faq: {
@@ -1043,6 +1106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Quién desarrolla Hermes Agent?', a: 'Nous Research, la organización también responsable de la familia de modelos Hermes (incluido Hermes 4.3) y del sitio oficial hermes-agent.org. Según TechCrunch, Nous Research estaría en conversaciones para una financiación con una valoración de 1.500 M$ a fecha de julio de 2026, aunque eso describe conversaciones, no una ronda confirmada y cerrada.' },
           { q: '¿Puede Hermes Agent funcionar completamente sin acceso a internet?', a: 'Sí, si se configura para usar un backend de modelo local (Ollama o Hugging Face con Hermes 4.3) en lugar de OpenRouter, que necesita conexión a internet para acceder a sus modelos alojados.' },
           { q: '¿Es seguro dar a Hermes Agent acceso a mi cuenta de Telegram, Discord o correo electrónico?', a: 'Eso depende de cuán cuidadosamente gestiones las credenciales y de qué tan de cerca supervises la memoria y las habilidades autoescritas del agente. Como Hermes Agent conserva estado a lo largo del tiempo y puede modificar sus propias habilidades, revisa qué ha almacenado y trata las credenciales de sus canales de mensajería con la misma precaución que aplicarías a cualquier automatización con acceso amplio a una cuenta.' },
+          { q: '¿Tiene Hermes Agent vulnerabilidades de seguridad conocidas?', a: 'Sí. A fecha de septiembre de 2026, [OpenCVE registra 44 CVE publicadas](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra NousResearch/hermes-agent, incluyendo CVE-2026-71963 (CVSS 8,8, ejecución remota de código mediante un archivo de configuración de git malicioso) y CVE-2026-82021 (CVSS 8,3, una vulnerabilidad de cadena de suministro en el catálogo MCP incluido). Una auditoría independiente distinta, publicada el 11 de abril de 2026, encontró 4 hallazgos críticos y 9 de severidad alta en la configuración por defecto, incluyendo ejecución de shell sin restricciones y acceso sin restricciones a archivos de credenciales. Comprueba la lista actual de CVE y actualiza a la última versión antes de desplegarlo.' },
+          { q: '¿Es seguro usar Hermes Agent para cargas de trabajo empresariales o de producción?', a: 'Trátalo como software con un historial real y documentado de vulnerabilidades, no como algo ya reforzado para producción. Revisores de seguridad independientes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomiendan limitar permisos, establecer políticas de acceso a la memoria y exigir aprobación humana, en lugar de ejecutarlo sin supervisión con acceso amplio a archivos, shell o credenciales. Además, se lanzó en febrero de 2026, por lo que tiene menos años de endurecimiento en producción que frameworks de agentes más antiguos.' },
         ],
       },
       sources: {
@@ -1052,6 +1117,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent en GitHub', description: 'El repositorio fuente, incluyendo el archivo LICENSE (MIT) y la documentación de configuración actual para los backends de modelo local (Ollama/Hugging Face) y OpenRouter.' },
           { url: 'https://hermes-agent.org', title: 'Sitio oficial de Hermes Agent', description: 'El sitio oficial de Nous Research para Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'La organización detrás de Hermes Agent y de la familia de modelos Hermes.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'Nota de investigación sobre la auditoría independiente del 11 de abril de 2026 (4 hallazgos críticos, 9 de severidad alta en la configuración por defecto) y la actividad de CVE posterior.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: lista de CVE de hermes-agent', description: 'Lista en vivo, actualizada continuamente, de las CVE publicadas contra NousResearch/hermes-agent, con puntuaciones CVSS y versiones afectadas.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'Análisis de clases de riesgo arquitectónico (inyección en memoria, frontera de confianza de servidores MCP, cadena de suministro del marketplace de habilidades) más allá de las CVE individuales.' },
         ],
       },
       relatedReading: {
@@ -1137,6 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'Segundo a TechCrunch, a Nous Research estaria em conversas para uma nova rodada de investimento com avaliação de US$ 1,5 bi em julho de 2026. "Em conversas" não é uma rodada fechada — trate isso como contexto sobre a empresa, não como confirmação de que o investimento aconteceu.' },
+          { type: 'warning', text: 'O Hermes Agent tem um histórico real e documentado de vulnerabilidades, não apenas um risco teórico. Uma auditoria independente publicada em 11 de abril de 2026 encontrou 4 achados críticos e 9 de severidade alta na configuração padrão, e [o OpenCVE lista 44 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto até setembro de 2026, incluindo uma falha de execução remota de código com CVSS 8,8. Veja a seção "Expectativas realistas e riscos" abaixo antes de colocar em produção.' },
         ],
       },
       overview: {
@@ -1226,13 +1295,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'Quais são as expectativas realistas ao rodar o Hermes Agent?',
-        content: '**Um agente autônomo com memória persistente e loop de habilidades autoaperfeiçoável precisa de supervisão mais próxima do que um chatbot sem estado, porque seu comportamento se acumula ao longo do tempo em vez de reiniciar a cada sessão.**',
+        content: '**Um agente autônomo com memória persistente e loop de habilidades autoaperfeiçoável precisa de supervisão mais próxima do que um chatbot sem estado, porque seu comportamento se acumula ao longo do tempo em vez de reiniciar a cada sessão — e o Hermes Agent, especificamente, tem um histórico de vulnerabilidades ativo e documentado a considerar antes de colocar em produção, não apenas um aviso arquitetural de "supervisione de perto".**',
         items: [
-          'Memória persistente significa que erros ou suposições ruins do agente podem persistir e se acumular entre sessões se não forem revisados — verifique periodicamente o que ele armazenou',
-          'Habilidades autoescritas são, por definição, código ou rotinas produzidos pelo próprio agente; revise as habilidades que ele cria antes de deixá-lo rodar sem supervisão em tarefas sensíveis, da mesma forma que você revisaria qualquer automação que não escreveu à mão',
+          'Uma auditoria de segurança independente do pesquisador @Anic888, publicada em 11 de abril de 2026, encontrou 4 achados críticos e 9 de severidade alta na configuração padrão do Hermes Agent: execução de shell sem restrições que contorna a proteção embutida de detecção de comandos, acesso sem restrições a arquivos de credenciais (a auditoria lista chaves SSH privadas, arquivos de chaves de API, perfis de navegador, caches de credenciais git e arquivos de configuração de provedores de nuvem como legíveis sem nenhuma lista de bloqueio), ambientes em contêiner que pulam incondicionalmente as verificações de aprovação, e um caminho de injeção persistente de habilidades pelo qual um invasor pode escrever arquivos em `~/.hermes/skills/` que continuam rodando entre sessões',
+          'Até setembro de 2026, [o OpenCVE lista 44 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8 — execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3 — uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído, capaz de propagar código malicioso para todo host que instalasse uma entrada afetada do catálogo). O número e a severidade dos CVEs mudam conforme novos problemas são registrados e antigos são corrigidos — verifique a lista atual para a versão que você pretende rodar antes de colocar em produção',
+          'Pesquisadores de segurança da Repello.ai também descrevem classes de risco que não aparecem como números de CVE individuais: injeção indireta de prompt através da própria memória do agente (um invasor que consiga escrever na memória pode plantar instruções que o agente recupera e executa depois) e servidores de Model Context Protocol não verificados capazes de injetar instruções em um agente conectado sem que o usuário aprove cada um',
+          'Memória persistente significa que erros ou suposições ruins do agente podem persistir e se acumular entre sessões se não forem revisados — verifique periodicamente o que ele armazenou, e trate a própria memória como dado sensível, já que uma análise de segurança da [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) observa que ela pode acumular dados de contas e informações de clientes ao longo do tempo',
+          'Habilidades autoescritas são, por definição, código ou rotinas produzidos pelo próprio agente; revise o conteúdo de `~/.hermes/skills/` antes de deixá-lo rodar sem supervisão em tarefas sensíveis — esse diretório é exatamente o mecanismo que a auditoria de abril de 2026 apontou para injeção persistente de habilidades, então verifique os arquivos em si, não só o que o agente relata ter feito',
           'O acesso por plataformas de mensagens amplia a superfície de ataque em comparação com uma ferramenta só de terminal — trate tokens de bot e credenciais de API do Telegram, Discord, Slack, WhatsApp, Signal e e-mail com o mesmo cuidado que qualquer outra credencial que dê acesso a um processo automatizado',
           'A escolha do modelo afeta custo e privacidade: uma configuração totalmente local com Hermes 4.3 mantém os dados na sua própria infraestrutura, enquanto uma configuração baseada em OpenRouter envia solicitações ao provedor terceirizado escolhido, sujeitas aos termos de tratamento de dados desse provedor',
-          'Este site não realizou seu próprio teste de longa duração do comportamento do loop de habilidades ou da memória do Hermes Agent até o momento; os pontos acima descrevem a arquitetura conforme documentada, não resultados de testes independentes',
+          'Atualize para a versão atual antes de colocar em produção, e desative qualquer configuração do tipo "pular todas as verificações de aprovação" para uso em produção — vários dos achados críticos acima tratam exatamente de verificações de aprovação contornadas ou ausentes por padrão, não de um recurso de conveniência faltando',
+          'Este site não realizou seu próprio teste de longa duração do comportamento do loop de habilidades ou da memória do Hermes Agent até o momento; os pontos de arquitetura acima descrevem comportamento documentado, e os pontos de vulnerabilidade vêm da auditoria independente citada e do banco de dados público de CVEs, não de um incidente observado diretamente por este site',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Isso é risco de vulnerabilidade documentado no nível de arquitetura, não o relato de uma invasão concreta e confirmada. Nenhum relato independentemente verificado de um ataque bem-sucedido através desses vetores contra um deployment real foi encontrado até o momento — o ponto é que são fraquezas reais e corrigíveis em configurações padrão, confirmadas por uma auditoria externa e um histórico público de CVEs, não hipotéticas. Atualize para a versão atual e revise a configuração acima antes de confiar ao agente tarefas, arquivos ou credenciais sensíveis.' },
         ],
       },
       whoShouldUse: {
@@ -1293,6 +1369,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Erro 4: negligenciar a higiene de credenciais dos canais de mensagens',
             content: 'Conectar o Hermes Agent ao Telegram, Discord, Slack, WhatsApp, Signal ou e-mail significa que os tokens de bot e credenciais de API dessas plataformas agora dão acesso a um agente persistente e capaz de se automodificar. Trate essas credenciais com o mesmo cuidado que trataria qualquer automação com acesso amplo, não como um recurso de conveniência qualquer.',
           },
+          {
+            title: 'Erro 5: colocar a configuração padrão em produção sem checar vulnerabilidades conhecidas',
+            content: 'Uma auditoria independente publicada em 11 de abril de 2026 encontrou 4 achados críticos e 9 de severidade alta na configuração padrão do Hermes Agent, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais, e [o OpenCVE lista 44 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o projeto até setembro de 2026, incluindo uma falha de execução remota de código com CVSS 8,8. Atualize para a versão atual, desative configurações que pulam verificações de aprovação, e confira a lista de CVEs para a versão que você vai usar antes de confiar tarefas sensíveis ao agente — trate isso como higiene contínua de patches, não como um passo único de configuração.',
+          },
         ],
       },
       faq: {
@@ -1309,6 +1389,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quem desenvolve o Hermes Agent?', a: 'A Nous Research, organização também responsável pela família de modelos Hermes (incluindo o Hermes 4.3) e pelo site oficial hermes-agent.org. Segundo a TechCrunch, a Nous Research estaria em conversas para um investimento com avaliação de US$ 1,5 bi em julho de 2026, embora isso descreva conversas, não uma rodada confirmada e fechada.' },
           { q: 'O Hermes Agent pode rodar completamente sem acesso à internet?', a: 'Sim, se configurado para usar um backend de modelo local (Ollama ou Hugging Face com Hermes 4.3) em vez do OpenRouter, que precisa de conexão com a internet para acessar seus modelos hospedados.' },
           { q: 'É seguro dar ao Hermes Agent acesso à minha conta do Telegram, Discord ou e-mail?', a: 'Isso depende de quão cuidadosamente você gerencia as credenciais e de quão de perto supervisiona a memória e as habilidades autoescritas do agente. Como o Hermes Agent mantém estado ao longo do tempo e pode modificar suas próprias habilidades, verifique o que ele armazenou e trate as credenciais de seus canais de mensagens com a mesma cautela que aplicaria a qualquer automação com acesso amplo a uma conta.' },
+          { q: 'O Hermes Agent tem vulnerabilidades de segurança conhecidas?', a: 'Sim. Até setembro de 2026, [o OpenCVE lista 44 CVEs publicados](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) contra o NousResearch/hermes-agent, incluindo o CVE-2026-71963 (CVSS 8,8, execução remota de código via um arquivo de configuração git malicioso) e o CVE-2026-82021 (CVSS 8,3, uma vulnerabilidade de cadeia de suprimentos no catálogo MCP incluído). Uma auditoria independente separada, publicada em 11 de abril de 2026, encontrou 4 achados críticos e 9 de severidade alta na configuração padrão, incluindo execução de shell sem restrições e acesso sem restrições a arquivos de credenciais. Confira a lista atual de CVEs e atualize para a versão mais recente antes de colocar em produção.' },
+          { q: 'O Hermes Agent é seguro para uso empresarial ou em produção?', a: 'Trate-o como um software com um histórico real e documentado de vulnerabilidades, não como algo já preparado para produção. Revisores de segurança independentes ([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) recomendam limitar permissões, definir políticas de acesso à memória e exigir aprovação humana, em vez de deixá-lo rodar sem supervisão com acesso amplo a arquivos, shell ou credenciais. Ele também foi lançado em fevereiro de 2026, então tem menos anos de blindagem em produção do que frameworks de agentes mais antigos.' },
         ],
       },
       sources: {
@@ -1318,6 +1400,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent no GitHub', description: 'O repositório-fonte, incluindo o arquivo LICENSE (MIT) e a documentação de configuração atual para os backends de modelo local (Ollama/Hugging Face) e OpenRouter.' },
           { url: 'https://hermes-agent.org', title: 'Site oficial do Hermes Agent', description: 'O site oficial da Nous Research para o Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'A organização por trás do Hermes Agent e da família de modelos Hermes.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'Nota de pesquisa sobre a auditoria independente de 11 de abril de 2026 (4 achados críticos, 9 de severidade alta na configuração padrão) e a atividade de CVEs subsequente.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: lista de CVEs do hermes-agent', description: 'Lista ao vivo, atualizada continuamente, dos CVEs publicados contra o NousResearch/hermes-agent, com notas CVSS e versões afetadas.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'Análise de classes de risco arquitetural (injeção de memória, fronteira de confiança de servidores MCP, cadeia de suprimentos do marketplace de habilidades) além dos CVEs individuais.' },
         ],
       },
       relatedReading: {
@@ -1403,6 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'TechCrunchによれば、Nous Researchは2026年7月時点で評価額15億ドルでの新規資金調達について協議中と報じられている。「協議中」は成立した資金調達ラウンドではない — これは企業に関する文脈として扱い、資金調達が実現した確認情報とは見なさないこと。' },
+          { type: 'warning', text: 'Hermes Agentには、単なる理論上のリスクではなく、実際に開示されている脆弱性の履歴があります。2026年4月11日に公開された独立監査では、デフォルト設定に4件のCriticalと9件のHighの重大度の問題が見つかっており、[OpenCVEは2026年9月時点で44件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して記録しています。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれます。導入前に、下記の「現実的な期待値とリスク」セクションを確認してください。' },
         ],
       },
       overview: {
@@ -1492,13 +1578,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'Hermes Agentを運用する際の現実的な期待値とは？',
-        content: '**永続的な記憶と自己改善型スキルループを持つ自律型エージェントは、セッションごとにリセットされる無状態のチャットボットよりも、挙動が時間とともに蓄積されていくため、より綿密な監督を必要とする。**',
+        content: '**永続的な記憶と自己改善型スキルループを持つ自律型エージェントは、セッションごとにリセットされる無状態のチャットボットよりも、挙動が時間とともに蓄積されていくため、より綿密な監督を必要とします。さらにHermes Agentの場合、「綿密に監督すべき」という設計上の注意にとどまらず、導入前に考慮すべき実際に開示されている脆弱性の履歴があります。**',
         items: [
-          '永続的な記憶は、エージェントのミスや誤った前提がレビューされないままセッションをまたいで持続・蓄積しうることを意味する — 何が保存されているか定期的に確認すること',
-          '自己記述型スキルは、定義上エージェント自身が生成したコードやルーチンである。自分で書いていない自動化のレビューと同様に、無人で機密性の高いタスクを任せる前にエージェントが作成したスキルを確認すること',
-          'メッセージングプラットフォーム経由のアクセスは、ターミナルのみのツールと比べて攻撃対象領域を広げる — Telegram、Discord、Slack、WhatsApp、Signal、メールのBotトークンやAPI認証情報は、自動化プロセスへのアクセスを許可する他の認証情報と同じ注意で扱うこと',
-          'モデルの選択はコストとプライバシーの両方に影響する：完全にローカルなHermes 4.3のセットアップはデータを自前のインフラにとどめるが、OpenRouterを利用するセットアップは選択したサードパーティのモデルプロバイダーにリクエストを送信し、そのプロバイダー独自のデータ取扱条件が適用される',
-          '執筆時点で本サイトはHermes Agentのスキルループや記憶の挙動について独自の長時間テストを実施していない。上記のポイントは文書化されたアーキテクチャの説明であり、独立したテストの結果ではない',
+          '研究者@Anic888による独立セキュリティ監査（2026年4月11日公開）では、Hermes Agentのデフォルト設定に4件のCriticalと9件のHighの重大度の問題が見つかりました。組み込みのコマンド検出をすり抜ける無制限のシェル実行、デンイリストなしでSSH秘密鍵・APIキーファイル・ブラウザプロファイル・gitの認証情報キャッシュ・クラウドプロバイダーの設定ファイルが読み取り可能となる無制限の認証情報ファイルアクセス、承認チェックを無条件にスキップするコンテナ環境、そして攻撃者が`~/.hermes/skills/`にファイルを書き込みセッションをまたいで実行し続けられる永続的なスキルインジェクションの経路です',
+          '2026年9月時点で、[OpenCVEはNousResearch/hermes-agentに対して44件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を記録しています。その中には、悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱のMCPカタログのサプライチェーン脆弱性で影響を受けるカタログエントリをインストールした全ホストに悪意あるコードを伝播しうるCVE-2026-82021（CVSS 8.3）が含まれます。CVEの件数と重大度は新規の報告や修正に応じて常に変動するため、導入予定のバージョンについて最新の一覧を確認してください',
+          'Repello.aiのセキュリティ研究者は、個別のCVE番号としては現れないリスクの種類も指摘しています。エージェント自身の記憶ストアを介した間接的なプロンプトインジェクション（記憶に書き込める攻撃者は、エージェントが後で取得・実行する指示を仕込める）と、ユーザーが個別に承認せずとも接続済みエージェントに指示を注入できる未検証のModel Context Protocolサーバーです',
+          '永続的な記憶は、エージェントのミスや誤った前提がレビューされないままセッションをまたいで持続・蓄積しうることを意味します — 何が保存されているか定期的に確認し、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)のセキュリティレビューが指摘するように、記憶自体にアカウント情報や顧客情報が時間とともに蓄積しうる機密データとして扱ってください',
+          '自己記述型スキルは、定義上エージェント自身が生成したコードやルーチンです。無人で機密性の高いタスクを任せる前に`~/.hermes/skills/`の中身を確認してください — 2026年4月の監査が永続的なスキルインジェクションの手段として指摘したのはまさにこのディレクトリであり、エージェントが報告する内容だけでなく、ファイル自体を確認する必要があります',
+          'メッセージングプラットフォーム経由のアクセスは、ターミナルのみのツールと比べて攻撃対象領域を広げます — Telegram、Discord、Slack、WhatsApp、Signal、メールのBotトークンやAPI認証情報は、自動化プロセスへのアクセスを許可する他の認証情報と同じ注意で扱ってください',
+          'モデルの選択はコストとプライバシーの両方に影響します：完全にローカルなHermes 4.3のセットアップはデータを自前のインフラにとどめますが、OpenRouterを利用するセットアップは選択したサードパーティのモデルプロバイダーにリクエストを送信し、そのプロバイダー独自のデータ取扱条件が適用されます',
+          '導入前に最新版へアップデートし、本番運用では「すべての承認チェックをスキップする」といった設定を無効化してください — 上記の重大な問題の多くは、便利機能が欠けているという話ではなく、承認チェックがデフォルトで回避または欠落していること自体を指摘しています',
+          '執筆時点で本サイトはHermes Agentのスキルループや記憶の挙動について独自の長時間テストを実施していません。上記のアーキテクチャに関するポイントは文書化された挙動の説明であり、脆弱性に関するポイントは本サイトが直接観測した事象ではなく、上記の独立監査と公開CVEデータベースを出典としています',
+        ],
+        callouts: [
+          { type: 'warning', text: 'これは設計レベルで開示されている脆弱性リスクの説明であり、実際に発生・確認された侵害の報告ではありません。執筆時点で、これらの経路を通じた実際のデプロイへの攻撃が成功したという独立検証済みの報告は見つかっていません。要点は、これらが外部監査と公開CVE履歴によって確認された、デフォルト設定における現実的かつ修正可能な弱点であり、仮説上のものではないということです。機密性の高いタスク・ファイル・認証情報をエージェントに任せる前に、最新版へパッチを当て、上記の設定を確認してください。' },
         ],
       },
       whoShouldUse: {
@@ -1559,6 +1652,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '誤解4：メッセージングチャンネルの認証情報管理を軽視する',
             content: 'Hermes AgentをTelegram、Discord、Slack、WhatsApp、Signal、メールに接続するということは、それらのプラットフォームのBotトークンやAPI認証情報が、持続的で自己変更可能なエージェントへのアクセス権を与えることを意味する。これらの認証情報は、広範なアクセス権を持つ他の自動化と同じ注意で扱うべきであり、単なる便利機能として軽視すべきではない。',
           },
+          {
+            title: '誤解5：既知の脆弱性を確認せずにデフォルト設定を導入する',
+            content: '2026年4月11日公開の独立監査では、Hermes Agentのデフォルト設定に無制限のシェル実行や無制限の認証情報ファイルアクセスを含む4件のCriticalと9件のHighの重大度の問題が見つかっており、[OpenCVEは2026年9月時点で44件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を本プロジェクトに対して記録している。その中にはCVSS 8.8のリモートコード実行の脆弱性も含まれる。機密性の高いタスクをエージェントに任せる前に、最新版へアップデートし、承認チェックをスキップする設定を無効化し、対象バージョンのCVE一覧を確認すること — これは一度きりのセットアップ手順ではなく、継続的なパッチ管理として扱うべきである。',
+          },
         ],
       },
       faq: {
@@ -1575,6 +1672,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Hermes Agentを開発しているのは誰ですか？', a: 'Nous Researchであり、同社はHermesモデルファミリー（Hermes 4.3を含む）や公式サイトhermes-agent.orgも手がけている。TechCrunchによると、Nous Researchは2026年7月時点で評価額15億ドルでの資金調達について協議中と報じられているが、これは協議段階を説明するものであり、確定・成立したラウンドではない。' },
           { q: 'Hermes Agentはインターネットアクセスが全くない状態で完全に動作できますか？', a: 'はい、ホストされたモデルにアクセスするためにインターネット接続を必要とするOpenRouterではなく、ローカルのモデルバックエンド（Hermes 4.3を使うOllamaまたはHugging Face）を使うよう設定した場合に限られる。' },
           { q: 'Hermes AgentにTelegram、Discord、メールアカウントへのアクセスを許可しても安全ですか？', a: 'それは認証情報をどれだけ慎重に管理し、エージェントの記憶や自分で書いたスキルをどれだけ綿密に監督するかによる。Hermes Agentは時間の経過とともに状態を保持し、自分のスキルを変更しうるため、何が保存されているかを確認し、メッセージングチャンネルの認証情報は、アカウントへの広範なアクセス権を持つ他の自動化と同じ注意で扱うこと。' },
+          { q: 'Hermes Agentには既知のセキュリティ脆弱性がありますか？', a: 'はい。2026年9月時点で、[OpenCVEはNousResearch/hermes-agentに対して44件の公開CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)を記録しており、その中には悪意あるgit設定ファイルによるリモートコード実行のCVE-2026-71963（CVSS 8.8）と、同梱MCPカタログのサプライチェーン脆弱性であるCVE-2026-82021（CVSS 8.3）が含まれる。別の独立監査（2026年4月11日公開）でも、無制限のシェル実行や無制限の認証情報ファイルアクセスを含む4件のCriticalと9件のHighの重大度の問題がデフォルト設定に見つかっている。導入前に最新のCVE一覧を確認し、最新版へアップデートすること。' },
+          { q: 'Hermes Agentはビジネス用途や本番環境で安全に使えますか？', a: '本番向けにあらかじめ堅牢化されたソフトウェアとしてではなく、実際に開示されている脆弱性履歴を持つソフトウェアとして扱ってください。独立系のセキュリティレビュアー（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）は、ファイル・シェル・認証情報への広範なアクセス権を持たせたまま無人で稼働させるのではなく、権限のスコープ制限、記憶アクセスに関するポリシー、人間による承認ゲートを推奨している。また2026年2月にリリースされたばかりであり、より古いエージェントフレームワークと比べて本番運用での実績年数も短い。' },
         ],
       },
       sources: {
@@ -1584,6 +1683,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'GitHub上のNousResearch/hermes-agent', description: 'LICENSEファイル（MIT）、およびローカル（Ollama/Hugging Face）とOpenRouterのモデルバックエンドに関する現在のセットアップドキュメントを含むソースリポジトリ。' },
           { url: 'https://hermes-agent.org', title: 'Hermes Agent公式サイト', description: 'Nous ResearchによるHermes Agentの公式サイト。' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'Hermes AgentとHermesモデルファミリーを手がける組織。' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: '2026年4月11日の独立監査（デフォルト設定における4件のCriticalと9件のHighの重大度の問題）とその後のCVE動向に関するリサーチノート。' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: hermes-agentのCVE一覧', description: 'NousResearch/hermes-agentに対して公開されたCVEのCVSSスコアと影響を受けるバージョンを含む、継続的に更新されるライブ一覧。' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: '個々のCVEにとどまらない、記憶インジェクション・MCPサーバーの信頼境界・スキルマーケットプレイスのサプライチェーンといった設計上のリスク分類の分析。' },
         ],
       },
       relatedReading: {
@@ -1669,6 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: '据TechCrunch报道，截至2026年7月，Nous Research据称正在洽谈以15亿美元估值进行新一轮融资。"正在洽谈"并不等于已完成的融资轮次——请将其视为公司背景信息，而非融资已经落地的确认。' },
+          { type: 'warning', text: 'Hermes Agent存在真实、已公开披露的漏洞记录，而非仅仅是理论风险。2026年4月11日发布的一份独立审计发现，其默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，[OpenCVE截至2026年9月记录了针对该项目的44个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。部署前请先阅读下方"现实预期与风险"一节。' },
         ],
       },
       overview: {
@@ -1758,13 +1861,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: '运行Hermes Agent有哪些现实预期？',
-        content: '**具备持久记忆和自我改进技能循环的自主代理，比每次会话都会重置的无状态聊天机器人需要更密切的监督，因为它的行为会随时间累积，而不是每次重置。**',
+        content: '**具备持久记忆和自我改进技能循环的自主代理，比每次会话都会重置的无状态聊天机器人需要更密切的监督，因为它的行为会随时间累积，而不是每次重置。而Hermes Agent的特殊之处在于，它还有一份真实、已公开披露的漏洞记录，需要在部署前加以考虑，而不仅仅是架构层面"需密切监督"的提醒。**',
         items: [
-          '持久记忆意味着，如果不加审查，代理的错误或错误假设可能会跨会话持续存在并累积——请定期检查它存储了什么',
-          '自写技能从定义上讲就是代理自己生成的代码或例程；在让代理无人值守地处理敏感任务之前，请审查它创建的技能，就像审查任何非你亲手编写的自动化流程一样',
+          '研究者@Anic888于2026年4月11日发布的一份独立安全审计发现，Hermes Agent默认配置中存在4个严重（Critical）和9个高危（High）级别的问题：绕过内置命令检测防护的无限制Shell执行、无限制的凭据文件访问（该审计列出SSH私钥、API密钥文件、浏览器配置文件、git凭据缓存和云服务商配置文件均可在没有任何拒绝列表的情况下读取）、容器环境无条件跳过审批检查，以及攻击者可向`~/.hermes/skills/`写入文件、使其跨会话持续运行的持久技能注入路径',
+          '截至2026年9月，[OpenCVE记录了针对NousResearch/hermes-agent的44个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8——通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3——内置MCP目录中的供应链漏洞，可能将恶意代码传播到每个安装了受影响目录条目的主机）。CVE的数量和严重程度会随着新问题的报告和旧问题的修复而不断变化——部署前请核实你计划使用的版本的最新列表',
+          'Repello.ai的安全研究人员还指出了一些不会以单独CVE编号出现的风险类别：通过代理自身记忆存储进行的间接提示注入（能够写入记忆的攻击者可以植入指令，供代理稍后检索并执行），以及未经验证的Model Context Protocol服务器，可以在用户未逐一批准的情况下向已连接的代理注入指令',
+          '持久记忆意味着，如果不加审查，代理的错误或错误假设可能会跨会话持续存在并累积——请定期检查它存储了什么，并将记忆存储本身视为敏感数据，[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)的安全审查指出，它可能会随时间累积账户信息和客户资料',
+          '自写技能从定义上讲就是代理自己生成的代码或例程；在让代理无人值守地处理敏感任务之前，请检查`~/.hermes/skills/`目录的内容——2026年4月的审计指出的持久技能注入机制正是这个目录，因此请检查文件本身，而不仅仅是代理报告自己做了什么',
           '通过消息平台访问会比仅限终端的工具带来更大的攻击面——对待Telegram、Discord、Slack、WhatsApp、Signal和电子邮件的机器人令牌与API凭据，应像对待任何能访问自动化进程的其他凭据一样谨慎',
           '模型选择同时影响成本和隐私：完全本地的Hermes 4.3设置会将数据保留在你自己的基础设施上，而基于OpenRouter的设置会将请求发送给你选择的第三方模型提供商，并受该提供商自身的数据处理条款约束',
-          '截至撰稿时，本站尚未对Hermes Agent的技能循环或记忆行为进行自己的长期测试；以上要点描述的是文档中记载的架构，而非独立测试的结果',
+          '部署前请更新到当前版本，并在生产环境中禁用任何"跳过所有审批检查"类的设置——上述多项严重问题都恰恰涉及审批检查被绕过或默认缺失，而非缺少某个便利功能',
+          '截至撰稿时，本站尚未对Hermes Agent的技能循环或记忆行为进行自己的长期测试；以上关于架构的要点描述的是文档中记载的行为，而关于漏洞的要点则来自上述独立审计和公开CVE数据库，而非本站直接观察到的事件',
+        ],
+        callouts: [
+          { type: 'warning', text: '这是架构层面已公开披露的漏洞风险，而非某次具体、已确认入侵事件的报告。截至撰稿时，尚未发现任何经独立验证的报告显示有人通过这些途径成功攻击了真实部署环境——关键在于，这些是经外部审计和公开CVE记录证实的默认配置中真实存在、可修复的弱点，而非假设性的问题。在把敏感任务、文件或凭据交给代理之前，请更新到当前版本，并核查上述配置。' },
         ],
       },
       whoShouldUse: {
@@ -1825,6 +1935,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '误区4：忽视消息渠道的凭据管理',
             content: '将Hermes Agent连接到Telegram、Discord、Slack、WhatsApp、Signal或电子邮件，意味着这些平台的机器人令牌和API凭据现在可以访问一个持久且能自我修改的代理。这些凭据应像对待任何拥有广泛访问权限的自动化流程一样谨慎处理，而不是当作可有可无的便利功能。',
           },
+          {
+            title: '误区5：不检查已知漏洞就部署默认配置',
+            content: '2026年4月11日发布的一份独立审计发现，Hermes Agent默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，包括无限制的Shell执行和无限制的凭据文件访问，[OpenCVE截至2026年9月记录了针对该项目的44个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括一个CVSS评分为8.8的远程代码执行漏洞。在把敏感任务交给代理之前，请更新到当前版本、禁用跳过审批检查的设置，并核查你所用版本的CVE列表——把这当作持续的补丁维护工作，而不是一次性的配置步骤。',
+          },
         ],
       },
       faq: {
@@ -1841,6 +1955,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '谁在开发Hermes Agent？', a: 'Nous Research，该组织还打造了Hermes模型家族（包括Hermes 4.3）以及官方网站hermes-agent.org。据TechCrunch报道，截至2026年7月，Nous Research据称正在洽谈以15亿美元估值进行融资，不过这描述的是洽谈阶段，而非已确认、已完成的融资轮次。' },
           { q: 'Hermes Agent能在完全没有互联网接入的情况下运行吗？', a: '可以，但前提是将其配置为使用本地模型后端（通过Ollama或Hugging Face运行的Hermes 4.3），而不是需要联网才能访问其托管模型的OpenRouter。' },
           { q: '让Hermes Agent访问我的Telegram、Discord或邮箱账户安全吗？', a: '这取决于你对凭据的管理有多谨慎，以及你对代理的记忆和自写技能的监督有多密切。由于Hermes Agent会随时间保留状态，并可能修改自己的技能，请检查它存储了哪些内容，并像对待任何拥有广泛账户访问权限的自动化流程一样，谨慎处理其消息渠道的凭据。' },
+          { q: 'Hermes Agent有已知的安全漏洞吗？', a: '有。截至2026年9月，[OpenCVE记录了针对NousResearch/hermes-agent的44个已公开CVE](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)，其中包括CVE-2026-71963（CVSS 8.8，通过恶意git配置文件实现远程代码执行）和CVE-2026-82021（CVSS 8.3，内置MCP目录中的供应链漏洞）。另一份独立审计（2026年4月11日发布）也发现默认配置中存在4个严重（Critical）和9个高危（High）级别的问题，包括无限制的Shell执行和无限制的凭据文件访问。部署前请核实最新的CVE列表并更新到最新版本。' },
+          { q: 'Hermes Agent能安全地用于企业或生产环境吗？', a: '请将其视为一款拥有真实、已公开披露漏洞记录的软件，而非已针对生产环境预先加固的产品。独立安全评审机构（[Repello.ai](https://repello.ai/blog/hermes-agent-security)、[Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)）建议限制权限范围、制定记忆访问策略并设置人工审批环节，而不是让它在拥有广泛文件、Shell或凭据访问权限的情况下无人值守运行。此外，它于2026年2月才发布，相比更成熟的代理框架，其生产环境的实践积累也更少。' },
         ],
       },
       sources: {
@@ -1850,6 +1966,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'GitHub上的NousResearch/hermes-agent', description: '源代码仓库，包含LICENSE文件（MIT）以及本地（Ollama/Hugging Face）与OpenRouter模型后端的最新配置文档。' },
           { url: 'https://hermes-agent.org', title: 'Hermes Agent官方网站', description: 'Nous Research为Hermes Agent设立的官方网站。' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'Hermes Agent与Hermes模型家族背后的组织。' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: '关于2026年4月11日独立审计（默认配置中4个严重、9个高危问题）及后续CVE动态的研究简报。' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE：hermes-agent的CVE列表', description: '持续更新的实时列表，记录针对NousResearch/hermes-agent发布的CVE，含CVSS评分与受影响版本。' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai：Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: '对超越单个CVE的架构性风险类别（记忆注入、MCP服务器信任边界、技能市场供应链）的分析。' },
         ],
       },
       relatedReading: {
@@ -1935,6 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'وفقًا لتقرير TechCrunch، كانت Nous Research في محادثات — بحسب التقارير — للحصول على تمويل جديد بتقييم 1.5 مليار دولار حتى يوليو 2026. "محادثات" لا تعني جولة تمويل مُغلقة — يجب اعتبار هذا سياقًا عن الشركة، لا تأكيدًا على أن التمويل قد تم فعليًا.' },
+          { type: 'warning', text: 'لدى Hermes Agent سجل ثغرات حقيقي ومُعلَن عنه، لا مجرد مخاطرة نظرية. وجد تدقيق أمني مستقل نُشر في 11 أبريل 2026 أربع مشكلات حرجة (Critical) وتسع مشكلات عالية الخطورة (High) في الإعداد الافتراضي، ويسرد [OpenCVE 44 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع حتى سبتمبر 2026، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. راجع قسم "توقعات واقعية ومخاطر" أدناه قبل النشر الفعلي.' },
         ],
       },
       overview: {
@@ -2024,13 +2144,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'ما هي التوقعات الواقعية لتشغيل Hermes Agent؟',
-        content: '**يحتاج وكيل مستقل يمتلك ذاكرة دائمة وحلقة مهارات ذاتية التحسين إلى إشراف أوثق من روبوت دردشة عديم الحالة، لأن سلوكه يتراكم مع الوقت بدلًا من إعادة الضبط في كل جلسة.**',
+        content: '**يحتاج وكيل مستقل يمتلك ذاكرة دائمة وحلقة مهارات ذاتية التحسين إلى إشراف أوثق من روبوت دردشة عديم الحالة، لأن سلوكه يتراكم مع الوقت بدلًا من إعادة الضبط في كل جلسة — ولدى Hermes Agent تحديدًا سجل ثغرات نشط ومُعلَن عنه يجب أخذه بالحسبان قبل النشر الفعلي، لا مجرد تنبيه معماري بـ"الإشراف عن كثب".**',
         items: [
-          'تعني الذاكرة الدائمة أن أخطاء الوكيل أو افتراضاته الخاطئة قد تستمر وتتراكم عبر الجلسات إن لم تُراجَع — تحقق دوريًا مما خزّنه',
-          'المهارات المكتوبة ذاتيًا هي، بحكم تعريفها، كود أو روتينات أنتجها الوكيل نفسه؛ راجع المهارات التي ينشئها قبل تركه يعمل دون إشراف في مهام حساسة، تمامًا كما تراجع أي أتمتة لم تكتبها بنفسك',
+          'وجد تدقيق أمني مستقل أجراه الباحث @Anic888 ونُشر في 11 أبريل 2026 أربع مشكلات حرجة (Critical) وتسع مشكلات عالية الخطورة (High) في الإعداد الافتراضي لـ Hermes Agent: تنفيذ أوامر طرفية بلا قيود يتجاوز آلية كشف الأوامر المدمجة، ووصول غير مقيَّد إلى ملفات بيانات الاعتماد (يُدرج التدقيق مفاتيح SSH الخاصة، وملفات مفاتيح واجهة برمجة التطبيقات، وملفات تعريف المتصفح، وذواكر بيانات اعتماد git المؤقتة، وملفات إعداد مزوّدي الخدمات السحابية كقابلة للقراءة دون أي قائمة حظر)، وبيئات حاويات تتخطى فحوصات الموافقة دون قيد أو شرط، ومسار حقن مهارات دائم يتيح لمهاجم كتابة ملفات في `~/.hermes/skills/` تستمر في العمل عبر الجلسات',
+          'حتى سبتمبر 2026، [يسرد OpenCVE 44 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8 — تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3 — ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن، قادرة على نشر تعليمات برمجية ضارة إلى كل مضيف ثبّت عنصر كتالوج متأثرًا). يتغير عدد وخطورة ثغرات CVE باستمرار مع تسجيل مشكلات جديدة وإصلاح القديمة — تحقق من القائمة الحالية للإصدار الذي تنوي تشغيله قبل النشر الفعلي',
+          'يصف باحثو أمن من Repello.ai أيضًا فئات مخاطر لا تظهر كأرقام CVE منفردة: حقن أوامر غير مباشر عبر مخزن ذاكرة الوكيل نفسه (يمكن لمهاجم قادر على الكتابة في الذاكرة زرع تعليمات يستردها الوكيل وينفذها لاحقًا)، وخوادم بروتوكول سياق النموذج (MCP) غير موثَّقة يمكنها حقن تعليمات في وكيل متصل دون موافقة المستخدم على كل واحدة',
+          'تعني الذاكرة الدائمة أن أخطاء الوكيل أو افتراضاته الخاطئة قد تستمر وتتراكم عبر الجلسات إن لم تُراجَع — تحقق دوريًا مما خزّنه، وتعامل مع مخزن الذاكرة نفسه كبيانات حساسة، إذ تشير مراجعة أمنية من [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business) إلى أنه قد يُراكم تفاصيل حسابات ومعلومات عملاء مع الوقت',
+          'المهارات المكتوبة ذاتيًا هي، بحكم تعريفها، كود أو روتينات أنتجها الوكيل نفسه؛ راجع محتوى `~/.hermes/skills/` قبل تركه يعمل دون إشراف في مهام حساسة — هذا المجلد بالتحديد هو الآلية التي أشار إليها تدقيق أبريل 2026 لحقن المهارات الدائم، لذا راجع الملفات نفسها لا ما يبلّغ عنه الوكيل فقط',
           'يوسّع الوصول عبر منصات المراسلة سطح الهجوم مقارنة بأداة تقتصر على الطرفية — تعامل مع رموز بوت وبيانات اعتماد واجهة برمجة تطبيقات Telegram وDiscord وSlack وWhatsApp وSignal والبريد الإلكتروني بنفس الحذر الذي تعامل به أي بيانات اعتماد أخرى تمنح وصولًا إلى عملية آلية',
           'يؤثر اختيار النموذج على التكلفة والخصوصية معًا: يحافظ إعداد Hermes 4.3 المحلي بالكامل على بقاء البيانات داخل بنيتك التحتية الخاصة، بينما يرسل إعداد معتمد على OpenRouter الطلبات إلى مزوّد النموذج الخارجي الذي تختاره، وتخضع لشروط معالجة البيانات الخاصة بذلك المزوّد',
-          'لم يُجرِ هذا الموقع اختباره الخاص طويل المدى لسلوك حلقة المهارات أو الذاكرة في Hermes Agent حتى وقت كتابة هذا المقال؛ تصف النقاط أعلاه البنية كما هي موثَّقة، لا نتائج اختبارات مستقلة',
+          'حدِّث إلى الإصدار الحالي قبل النشر الفعلي، وعطِّل أي إعداد من نوع "تخطي جميع فحوصات الموافقة" للاستخدام الإنتاجي — يتعلق العديد من النتائج الحرجة أعلاه تحديدًا بفحوصات موافقة مُتجاوَزة أو غائبة افتراضيًا، لا بميزة راحة مفقودة',
+          'لم يُجرِ هذا الموقع اختباره الخاص طويل المدى لسلوك حلقة المهارات أو الذاكرة في Hermes Agent حتى وقت كتابة هذا المقال؛ تصف نقاط البنية أعلاه سلوكًا موثَّقًا، أما نقاط الثغرات فمصدرها التدقيق المستقل المذكور وقاعدة بيانات CVE العلنية، لا حادثة لاحظها هذا الموقع مباشرة',
+        ],
+        callouts: [
+          { type: 'warning', text: 'هذه مخاطرة ثغرات موثَّقة على مستوى البنية، لا تقرير عن اختراق فعلي ومؤكد. لم يُعثر حتى وقت كتابة هذا المقال على أي تقرير مُتحقَّق منه بشكل مستقل عن هجوم ناجح عبر هذه المسارات ضد نشر فعلي — الفكرة أن هذه نقاط ضعف حقيقية وقابلة للإصلاح في الإعدادات الافتراضية، أكدها تدقيق خارجي وسجل CVE علني، لا افتراضية. حدِّث إلى الإصدار الحالي وراجع الإعدادات أعلاه قبل تكليف الوكيل بمهام أو ملفات أو بيانات اعتماد حساسة.' },
         ],
       },
       whoShouldUse: {
@@ -2091,6 +2218,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'الخطأ 4: إهمال نظافة بيانات الاعتماد الخاصة بقنوات المراسلة',
             content: 'ربط Hermes Agent بـ Telegram أو Discord أو Slack أو WhatsApp أو Signal أو البريد الإلكتروني يعني أن رموز بوت وبيانات اعتماد واجهة برمجة تطبيقات تلك المنصات تمنح الآن وصولًا إلى وكيل دائم وقادر على تعديل نفسه. تعامل مع بيانات الاعتماد هذه بنفس الحذر الذي تعامل به أي أتمتة ذات وصول واسع، لا كميزة راحة عابرة.',
           },
+          {
+            title: 'الخطأ 5: نشر الإعداد الافتراضي دون التحقق من الثغرات المعروفة',
+            content: 'وجد تدقيق مستقل نُشر في 11 أبريل 2026 أربع مشكلات حرجة (Critical) وتسع مشكلات عالية الخطورة (High) في الإعداد الافتراضي لـ Hermes Agent، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد، ويسرد [OpenCVE 44 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد المشروع حتى سبتمبر 2026، من بينها ثغرة تنفيذ تعليمات برمجية عن بُعد بدرجة CVSS تبلغ 8.8. حدِّث إلى الإصدار الحالي، وعطِّل إعدادات تخطي فحوصات الموافقة، وتحقق من قائمة CVE الخاصة بالإصدار المستهدف قبل تكليف الوكيل بمهام حساسة — تعامل مع هذا كصيانة تحديثات مستمرة، لا خطوة إعداد لمرة واحدة.',
+          },
         ],
       },
       faq: {
@@ -2107,6 +2238,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'من يطوّر Hermes Agent؟', a: 'Nous Research، المنظمة نفسها القائمة على عائلة نماذج Hermes (بما فيها Hermes 4.3) والموقع الرسمي hermes-agent.org. وبحسب TechCrunch، كانت Nous Research — بحسب ما ذُكر — في محادثات لتمويل بتقييم 1.5 مليار دولار حتى يوليو 2026، رغم أن ذلك يصف محادثات، لا جولة مؤكدة ومُغلقة.' },
           { q: 'هل يمكن تشغيل Hermes Agent دون أي وصول للإنترنت على الإطلاق؟', a: 'نعم، إذا تم ضبطه لاستخدام خلفية نموذج محلية (Ollama أو Hugging Face مع Hermes 4.3) بدلًا من OpenRouter، التي تحتاج اتصالًا بالإنترنت للوصول إلى نماذجها المستضافة.' },
           { q: 'هل من الآمن منح Hermes Agent وصولًا إلى حساب Telegram أو Discord أو البريد الإلكتروني الخاص بي؟', a: 'يعتمد ذلك على مدى حرصك في إدارة بيانات الاعتماد ومدى دقة إشرافك على ذاكرة الوكيل والمهارات التي يكتبها بنفسه. وبما أن Hermes Agent يحتفظ بحالته مع الوقت ويمكنه تعديل مهاراته الخاصة، راجع ما خزّنه وتعامل مع بيانات اعتماد قنوات مراسلته بنفس الحذر الذي تطبّقه على أي أتمتة ذات وصول واسع لحساب ما.' },
+          { q: 'هل لدى Hermes Agent ثغرات أمنية معروفة؟', a: 'نعم. حتى سبتمبر 2026، [يسرد OpenCVE 44 ثغرة CVE منشورة](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch) ضد NousResearch/hermes-agent، من بينها CVE-2026-71963 (بدرجة CVSS 8.8، تنفيذ تعليمات برمجية عن بُعد عبر ملف إعداد git ضار) وCVE-2026-82021 (بدرجة CVSS 8.3، ثغرة في سلسلة التوريد داخل كتالوج MCP المُضمَّن). كما وجد تدقيق مستقل منفصل نُشر في 11 أبريل 2026 أربع مشكلات حرجة وتسع مشكلات عالية الخطورة في الإعداد الافتراضي، من بينها تنفيذ أوامر طرفية بلا قيود ووصول غير مقيَّد إلى ملفات بيانات الاعتماد. تحقق من قائمة CVE الحالية وحدِّث إلى أحدث إصدار قبل النشر الفعلي.' },
+          { q: 'هل Hermes Agent آمن للاستخدام في بيئات العمل أو الإنتاج؟', a: 'تعامل معه كبرنامج له سجل ثغرات حقيقي ومُعلَن عنه، لا كبرنامج مُحصَّن مسبقًا للإنتاج. يوصي مراجعو أمن مستقلون ([Repello.ai](https://repello.ai/blog/hermes-agent-security)، [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)) بتقييد الصلاحيات، ووضع سياسات للوصول إلى الذاكرة، واشتراط موافقة بشرية، بدلًا من تشغيله دون إشراف مع وصول واسع إلى الملفات أو الطرفية أو بيانات الاعتماد. كما صدر في فبراير 2026، ما يعني أن سنوات تحصينه في بيئات الإنتاج أقل من أطر عمل وكلاء أقدم.' },
         ],
       },
       sources: {
@@ -2116,6 +2249,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'NousResearch/hermes-agent على GitHub', description: 'المستودع المصدري، ويشمل ملف LICENSE (MIT) ووثائق الإعداد الحالية لخلفيات النموذج المحلي (Ollama/Hugging Face) وOpenRouter.' },
           { url: 'https://hermes-agent.org', title: 'الموقع الرسمي لـ Hermes Agent', description: 'الموقع الرسمي لـ Nous Research الخاص بـ Hermes Agent.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'المنظمة القائمة على Hermes Agent وعائلة نماذج Hermes.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: 'مذكرة بحثية عن التدقيق المستقل الذي نُشر في 11 أبريل 2026 (أربع مشكلات حرجة وتسع عالية الخطورة في الإعداد الافتراضي) ونشاط CVE اللاحق.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: قائمة ثغرات hermes-agent', description: 'قائمة حية ومُحدَّثة باستمرار بثغرات CVE المنشورة ضد NousResearch/hermes-agent، مع درجات CVSS والإصدارات المتأثرة.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: 'تحليل لفئات مخاطر معمارية (حقن الذاكرة، حدود الثقة بخوادم MCP، سلسلة توريد سوق المهارات) تتجاوز ثغرات CVE الفردية.' },
         ],
       },
       relatedReading: {
@@ -2201,6 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'note', text: 'TechCrunch에 따르면 Nous Research는 2026년 7월 기준 15억 달러 밸류에이션으로 신규 투자 유치를 협의 중인 것으로 보도되었다. "협의 중"은 완료된 투자 라운드가 아니다 — 이는 회사에 관한 배경 정보로만 취급하고, 투자가 실제로 성사되었다는 확인으로 받아들이지 말 것.' },
+          { type: 'warning', text: 'Hermes Agent에는 단순한 이론적 위험이 아니라 실제로 공개된 취약점 이력이 있습니다. 2026년 4월 11일 공개된 독립 감사에서는 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 발견되었으며, [OpenCVE는 2026년 9월 기준 이 프로젝트에 대해 44건의 공개 CVE를 기록](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 배포하기 전에 아래 "현실적인 기대치와 위험 요소" 섹션을 확인하십시오.' },
         ],
       },
       overview: {
@@ -2290,13 +2427,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       expectations: {
         id: 'realistic-expectations-and-risks',
         title: 'Hermes Agent를 운영할 때 현실적인 기대치는 무엇인가?',
-        content: '**영구 메모리와 자기개선형 스킬 루프를 가진 자율형 에이전트는, 세션마다 초기화되는 상태 없는 챗봇보다 더 밀접한 감독이 필요하다. 행동이 시간이 지나며 초기화되지 않고 누적되기 때문이다.**',
+        content: '**영구 메모리와 자기개선형 스킬 루프를 가진 자율형 에이전트는, 세션마다 초기화되는 상태 없는 챗봇보다 더 밀접한 감독이 필요하다. 행동이 시간이 지나며 초기화되지 않고 누적되기 때문이다. 게다가 Hermes Agent에는 "면밀히 감독하라"는 아키텍처 차원의 주의만이 아니라, 배포 전에 반드시 고려해야 할 실제로 공개된 취약점 이력이 존재한다.**',
         items: [
-          '영구 메모리는 에이전트의 실수나 잘못된 가정이 검토되지 않으면 세션 간 지속되고 누적될 수 있다는 뜻이다 — 무엇이 저장되었는지 주기적으로 확인할 것',
-          '스스로 작성한 스킬은 정의상 에이전트 자신이 만들어낸 코드나 루틴이다; 직접 작성하지 않은 자동화를 검토하는 것과 마찬가지로, 민감한 작업을 무감독으로 맡기기 전에 에이전트가 만든 스킬을 검토할 것',
-          '메시징 플랫폼을 통한 접근은 터미널 전용 도구에 비해 공격 표면을 넓힌다 — Telegram, Discord, Slack, WhatsApp, Signal, 이메일의 봇 토큰과 API 자격 증명은 자동화 프로세스에 대한 접근 권한을 부여하는 다른 모든 자격 증명과 동일한 주의로 다룰 것',
-          '모델 선택은 비용과 프라이버시 모두에 영향을 미친다: 완전 로컬 Hermes 4.3 설정은 데이터를 자체 인프라에 유지하는 반면, OpenRouter 기반 설정은 선택한 타사 모델 제공업체로 요청을 보내며 그 제공업체 자체의 데이터 처리 조건이 적용된다',
-          '이 사이트는 작성 시점 기준으로 Hermes Agent의 스킬 루프나 메모리 동작에 대한 자체 장기 테스트를 실시하지 않았다; 위 내용은 문서화된 아키텍처를 설명한 것이지 독립적인 테스트 결과가 아니다',
+          '연구자 @Anic888이 2026년 4월 11일 공개한 독립 보안 감사에서는 Hermes Agent의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 발견되었습니다: 내장된 명령어 탐지 방어를 우회하는 무제한 셸 실행, 거부 목록 없이 SSH 개인 키·API 키 파일·브라우저 프로필·git 자격 증명 캐시·클라우드 제공업체 설정 파일을 읽을 수 있는 무제한 자격 증명 파일 접근, 승인 검사를 무조건 건너뛰는 컨테이너 환경, 그리고 공격자가 `~/.hermes/skills/`에 파일을 써서 세션 간에도 계속 실행되게 하는 영구적인 스킬 인젝션 경로입니다',
+          '2026년 9월 기준 [OpenCVE는 NousResearch/hermes-agent에 대해 44건의 공개 CVE를 기록](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과, 영향받은 카탈로그 항목을 설치한 모든 호스트에 악성 코드를 전파할 수 있는 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. CVE 건수와 심각도는 새 문제가 보고되고 기존 문제가 수정되면서 계속 변하므로, 배포하려는 버전에 대한 최신 목록을 반드시 확인하십시오',
+          'Repello.ai의 보안 연구자들은 개별 CVE 번호로는 드러나지 않는 위험 유형도 지적합니다: 에이전트 자신의 메모리 저장소를 통한 간접 프롬프트 인젝션(메모리에 쓸 수 있는 공격자는 에이전트가 나중에 가져와 실행할 지시를 심어둘 수 있음)과, 사용자가 하나하나 승인하지 않아도 연결된 에이전트에 지시를 주입할 수 있는 검증되지 않은 Model Context Protocol 서버입니다',
+          '영구 메모리는 에이전트의 실수나 잘못된 가정이 검토되지 않으면 세션 간 지속되고 누적될 수 있다는 뜻입니다 — 무엇이 저장되었는지 주기적으로 확인하고, [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business)의 보안 리뷰가 지적하듯 메모리 저장소 자체를 시간이 지나며 계정 정보와 고객 정보가 쌓일 수 있는 민감한 데이터로 취급하십시오',
+          '스스로 작성한 스킬은 정의상 에이전트 자신이 만들어낸 코드나 루틴입니다; 민감한 작업을 무감독으로 맡기기 전에 `~/.hermes/skills/`의 내용을 직접 검토하십시오 — 2026년 4월 감사가 영구적인 스킬 인젝션 수단으로 지목한 것이 바로 이 디렉터리이므로, 에이전트가 보고하는 내용만이 아니라 파일 자체를 확인해야 합니다',
+          '메시징 플랫폼을 통한 접근은 터미널 전용 도구에 비해 공격 표면을 넓힙니다 — Telegram, Discord, Slack, WhatsApp, Signal, 이메일의 봇 토큰과 API 자격 증명은 자동화 프로세스에 대한 접근 권한을 부여하는 다른 모든 자격 증명과 동일한 주의로 다루십시오',
+          '모델 선택은 비용과 프라이버시 모두에 영향을 미칩니다: 완전 로컬 Hermes 4.3 설정은 데이터를 자체 인프라에 유지하는 반면, OpenRouter 기반 설정은 선택한 타사 모델 제공업체로 요청을 보내며 그 제공업체 자체의 데이터 처리 조건이 적용됩니다',
+          '배포 전에 최신 버전으로 업데이트하고, 프로덕션 사용에서는 "모든 승인 검사 건너뛰기" 같은 설정을 비활성화하십시오 — 위에서 언급한 여러 심각한 문제는 편의 기능이 빠진 것이 아니라, 승인 검사가 기본값에서 우회되거나 아예 없는 것 자체를 지적하고 있습니다',
+          '이 사이트는 작성 시점 기준으로 Hermes Agent의 스킬 루프나 메모리 동작에 대한 자체 장기 테스트를 실시하지 않았습니다; 위의 아키텍처 관련 내용은 문서화된 동작을 설명한 것이며, 취약점 관련 내용은 이 사이트가 직접 관찰한 사건이 아니라 앞서 언급한 독립 감사와 공개 CVE 데이터베이스를 출처로 합니다',
+        ],
+        callouts: [
+          { type: 'warning', text: '이는 아키텍처 수준에서 공개된 취약점 위험에 대한 설명이지, 실제로 발생하고 확인된 침해 사고 보고가 아닙니다. 작성 시점 기준으로 이러한 경로를 통해 실제 배포 환경에 대한 공격이 성공했다는 독립적으로 검증된 보고는 발견되지 않았습니다 — 핵심은 이것이 가설이 아니라, 외부 감사와 공개 CVE 이력으로 확인된 기본 설정상의 실제 수정 가능한 약점이라는 점입니다. 민감한 작업, 파일, 자격 증명을 에이전트에 맡기기 전에 최신 버전으로 패치하고 위의 설정을 점검하십시오.' },
         ],
       },
       whoShouldUse: {
@@ -2357,6 +2501,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '오해 4: 메시징 채널의 자격 증명 관리를 소홀히 하는 것',
             content: 'Hermes Agent를 Telegram, Discord, Slack, WhatsApp, Signal, 이메일에 연결한다는 것은 그 플랫폼들의 봇 토큰과 API 자격 증명이 이제 영구적이고 스스로를 수정할 수 있는 에이전트에 대한 접근 권한을 부여한다는 뜻이다. 이런 자격 증명은 사소한 편의 기능이 아니라, 광범위한 접근 권한을 가진 다른 자동화와 동일한 주의로 다룰 것.',
           },
+          {
+            title: '오해 5: 알려진 취약점을 확인하지 않고 기본 설정을 배포하는 것',
+            content: '2026년 4월 11일 공개된 독립 감사에서는 무제한 셸 실행과 무제한 자격 증명 파일 접근을 포함해 Hermes Agent의 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 발견되었으며, [OpenCVE는 2026년 9월 기준 이 프로젝트에 대해 44건의 공개 CVE를 기록](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있습니다. 그중에는 CVSS 8.8의 원격 코드 실행 취약점도 포함됩니다. 민감한 작업을 에이전트에 맡기기 전에 최신 버전으로 업데이트하고, 승인 검사를 건너뛰는 설정을 비활성화하며, 사용 중인 버전의 CVE 목록을 확인하십시오 — 이는 한 번으로 끝나는 설정 단계가 아니라 지속적인 패치 관리로 다루어야 합니다.',
+          },
         ],
       },
       faq: {
@@ -2373,6 +2521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Hermes Agent는 누가 만드나요?', a: 'Nous Research로, Hermes 모델 패밀리(Hermes 4.3 포함)와 공식 사이트 hermes-agent.org도 함께 만드는 조직이다. TechCrunch에 따르면 Nous Research는 2026년 7월 기준 15억 달러 밸류에이션의 투자를 협의 중인 것으로 보도되었으나, 이는 협의 단계를 설명할 뿐 확정되고 성사된 라운드는 아니다.' },
           { q: 'Hermes Agent는 인터넷 접근이 전혀 없이 완전히 작동할 수 있나요?', a: '그렇다. 호스팅 모델에 접근하기 위해 인터넷 연결이 필요한 OpenRouter 대신, 로컬 모델 백엔드(Hermes 4.3을 사용하는 Ollama 또는 Hugging Face)를 사용하도록 설정한 경우에 한한다.' },
           { q: 'Hermes Agent에 내 Telegram, Discord, 이메일 계정 접근 권한을 주는 것이 안전한가요?', a: '이는 자격 증명을 얼마나 신중하게 관리하는지, 에이전트의 메모리와 스스로 작성한 스킬을 얼마나 면밀히 감독하는지에 달려 있다. Hermes Agent는 시간이 지나며 상태를 유지하고 자신의 스킬을 수정할 수 있으므로, 무엇이 저장되었는지 확인하고, 광범위한 계정 접근 권한을 가진 다른 모든 자동화와 동일한 주의로 메시징 채널의 자격 증명을 다룰 것.' },
+          { q: 'Hermes Agent에 알려진 보안 취약점이 있나요?', a: '있습니다. 2026년 9월 기준 [OpenCVE는 NousResearch/hermes-agent에 대해 44건의 공개 CVE를 기록](https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch)하고 있으며, 여기에는 악성 git 설정 파일을 통한 원격 코드 실행 취약점인 CVE-2026-71963(CVSS 8.8)과 번들 MCP 카탈로그의 공급망 취약점인 CVE-2026-82021(CVSS 8.3)이 포함됩니다. 별도의 독립 감사(2026년 4월 11일 공개)에서도 무제한 셸 실행과 무제한 자격 증명 파일 접근을 포함해 기본 설정에서 Critical 4건과 High 9건의 심각도 문제가 발견되었습니다. 배포하기 전에 최신 CVE 목록을 확인하고 최신 버전으로 업데이트하십시오.' },
+          { q: 'Hermes Agent를 비즈니스 용도나 프로덕션 환경에서 안전하게 사용할 수 있나요?', a: '이를 프로덕션용으로 미리 강화된 소프트웨어가 아니라, 실제로 공개된 취약점 이력이 있는 소프트웨어로 취급하십시오. 독립 보안 검토 기관([Repello.ai](https://repello.ai/blog/hermes-agent-security), [Layer3Labs](https://www.layer3labs.io/guides/is-hermes-agent-safe-for-business))은 파일·셸·자격 증명에 대한 광범위한 접근 권한을 준 채로 무감독 실행하기보다, 권한 범위를 제한하고 메모리 접근 정책을 마련하며 사람의 승인 절차를 두라고 권장합니다. 또한 2026년 2월에 출시되어, 더 오래된 에이전트 프레임워크에 비해 프로덕션 환경에서의 검증 기간이 짧습니다.' },
         ],
       },
       sources: {
@@ -2382,6 +2532,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://github.com/NousResearch/hermes-agent', title: 'GitHub의 NousResearch/hermes-agent', description: 'LICENSE 파일(MIT)과 로컬(Ollama/Hugging Face) 및 OpenRouter 모델 백엔드에 대한 최신 설정 문서를 포함한 소스 리포지토리.' },
           { url: 'https://hermes-agent.org', title: 'Hermes Agent 공식 사이트', description: 'Nous Research의 Hermes Agent 공식 사이트.' },
           { url: 'https://nousresearch.com', title: 'Nous Research', description: 'Hermes Agent와 Hermes 모델 패밀리를 만든 조직.' },
+          { url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504-csa-styled/', title: 'Cloud Security Alliance: 9 CVEs in 4 Days — What Hermes Agent Enterprises Must Learn', description: '2026년 4월 11일 독립 감사(기본 설정에서 Critical 4건, High 9건)와 이후 CVE 동향을 다룬 리서치 노트.' },
+          { url: 'https://app.opencve.io/cve/?product=hermes-agent&vendor=nousresearch', title: 'OpenCVE: hermes-agent CVE 목록', description: 'NousResearch/hermes-agent에 대해 공개된 CVE를 CVSS 점수 및 영향받는 버전과 함께 지속적으로 업데이트하는 실시간 목록.' },
+          { url: 'https://repello.ai/blog/hermes-agent-security', title: 'Repello.ai: Hermes Agent Security — A Threat Model for Enterprise Workstation Deployment', description: '개별 CVE를 넘어선 아키텍처 차원의 위험 유형(메모리 인젝션, MCP 서버 신뢰 경계, 스킬 마켓플레이스 공급망)에 대한 분석.' },
         ],
       },
       relatedReading: {
