@@ -139,6 +139,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ragflow-document-understanding-rag-review':    'ragflow-document-understanding-rag-review',
   // Khoj review 2026-09-02
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
+  // Second Me review 2026-09-03
+  'second-me-review-2026':                        'second-me-review-2026',
   // Real-ESRGAN review 2026-09-02
   'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
   // LibreChat review 2026-09-03
