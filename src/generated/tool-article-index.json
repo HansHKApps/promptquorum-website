@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 201,
+    "totalCount": 203,
     "capped": true
   },
   "llama.cpp": {
@@ -306,6 +306,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "vla-models-robots-local-inference",
+        "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
+        "url": "/local-llms/vla-models-robots-local-inference",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
@@ -314,7 +322,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "MLC LLM": {
@@ -3089,6 +3097,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "vlm-video-analytics-drones-edge",
+        "title": "VLMs in Cameras and on Drones 2026: On-Device Video Understanding",
+        "url": "/local-llms/vlm-video-analytics-drones-edge",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "multimodal-local-llms",
         "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
         "url": "/local-llms/multimodal-local-llms",
@@ -3129,6 +3145,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "vla-models-robots-local-inference",
+        "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
+        "url": "/local-llms/vla-models-robots-local-inference",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
@@ -3142,25 +3166,9 @@
         "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-claude-pro",
-        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-        "url": "/local-llms/local-llms-vs-claude-pro",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "ollama-on-mac-apple-silicon-setup-2026",
-        "title": "Ollama on Mac 2026: Complete Apple Silicon Setup Guide (M1–M5, Metal GPU)",
-        "url": "/local-llms/ollama-on-mac-apple-silicon-setup-2026",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 15,
     "capped": true
   },
   "Ollama vision models": {

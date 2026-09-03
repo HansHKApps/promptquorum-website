@@ -1203,6 +1203,60 @@
         }
       ]
     },
+    "edge-ai-hardware-for-local-llms": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vla-models-robots-local-inference": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vlm-video-analytics-drones-edge": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "vram-calculator-local-llm": {
       "dateModified": "2026-08-28",
       "lastFactChecked": null,
@@ -13019,62 +13073,6 @@
           "title": "BLUETTI's Balco series is built to comply with Germany's 800W balcony-solar output cap — a market-requirement claim, not independently re-verified against a specific certifying body in this research pass."
         }
       ]
-    }
-  },
-  "edge-ai": {
-    "edge-ai-hardware-for-local-llms": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "vla-models-robots-local-inference": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "vlm-video-analytics-drones-edge": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
     }
   },
   "blog": {

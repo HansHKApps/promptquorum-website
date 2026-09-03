@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'SmolVLA', 'Params': '~450M (secondary)', 'Access': 'Open', 'Onboard target': 'Low-power accelerators' },
           { 'Model': 'Octo / RT-2', 'Params': 'Varies', 'Access': 'Open (research)', 'Onboard target': 'Historical reference only' },
         ],
-        note: 'For hardware tier specifics (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — power envelopes and pricing tiers), see [Edge AI Hardware for Local LLMs](/edge-ai/edge-ai-hardware-for-local-llms) rather than re-deriving specs here — this article focuses on what runs where, not the silicon itself.',
+        note: 'For hardware tier specifics (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — power envelopes and pricing tiers), see [Edge AI Hardware for Local LLMs](/local-llms/edge-ai-hardware-for-local-llms) rather than re-deriving specs here — this article focuses on what runs where, not the silicon itself.',
         faqs: [
           { q: 'What is the difference between a VLA and a VLM in a robotics context?', a: 'A VLM (vision-language model) takes an image and text and produces text — a scene description, an answer, a label. A VLA (vision-language-action model) takes the same inputs but outputs a robot action — a target pose, a joint trajectory, a grasp point. A robot stack often uses a VLM for the perception/scene-understanding layer and a VLA for the task-planning layer, and sometimes only needs the VLM if no autonomous action is required.' },
           { q: 'Is OpenVLA a good choice for a latency-sensitive onboard deployment?', a: 'It is the standard academic baseline at 7B parameters, which makes it heavier than purpose-built alternatives like Isaac GR00T N1.5 (~2.2B, secondary-sourced) or SmolVLA (~450M, secondary-sourced) for a tight onboard latency budget. It remains useful as a well-documented reference point for benchmarking newer, smaller models against.' },
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Buying Guide: What to Actually Shop For',
         content: [
           '**Three hardware categories cover most of an on-robot inference build: a Jetson-class dev kit for the reasoning tier, one or more depth/stereo cameras for perception input, and a robot development platform to mount everything on.** This section names categories, not specific SKUs, prices, or vendor claims — verify current specs and pricing directly with each vendor before purchasing, since both change faster than an article can track.',
-          'Jetson Orin and Jetson Thor development kits are the standard starting point for evaluating an onboard VLA or VLM — see [Edge AI Hardware for Local LLMs](/edge-ai/edge-ai-hardware-for-local-llms) for the tier-by-tier breakdown (Orin Nano through AGX Thor) covering power envelope and relative compute.',
+          'Jetson Orin and Jetson Thor development kits are the standard starting point for evaluating an onboard VLA or VLM — see [Edge AI Hardware for Local LLMs](/local-llms/edge-ai-hardware-for-local-llms) for the tier-by-tier breakdown (Orin Nano through AGX Thor) covering power envelope and relative compute.',
           'Depth or stereo cameras are the standard perception input for a VLA — most published VLA research and vendor reference designs assume RGB-D or stereo input rather than monocular RGB alone, since depth simplifies the grasp-point and obstacle-distance estimation the action-output layer depends on.',
           'A robot development platform — a wheeled or arm-based reference platform rather than a from-scratch mechanical build — is the practical starting point for a team validating a VLA integration before committing to custom hardware.',
         ],
@@ -266,8 +266,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'Related Reading',
         items: [
-          '[Edge AI Hardware for Local LLMs](/edge-ai/edge-ai-hardware-for-local-llms) — hardware tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenced throughout this article',
-          '[VLM Video Analytics for Drones and Edge Cameras](/edge-ai/vlm-video-analytics-drones-edge) — the observation-side sibling to this article\'s action-side focus, sharing the same silicon but a different latency constraint',
+          '[Edge AI Hardware for Local LLMs](/local-llms/edge-ai-hardware-for-local-llms) — hardware tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenced throughout this article',
+          '[VLM Video Analytics for Drones and Edge Cameras](/local-llms/vlm-video-analytics-drones-edge) — the observation-side sibling to this article\'s action-side focus, sharing the same silicon but a different latency constraint',
           '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — general local-LLM model landscape beyond the robotics-specific VLA models covered here',
           '[Local Vision Models: LLaVA and Ollama 2026](/power-local-llm/local-vision-models-llava-ollama-2026) — running vision-language models locally outside a robotics context',
         ],
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'en',
-      url: 'https://www.promptquorum.com/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'SmolVLA', 'Parameter': '~450 Mio. (sekundär)', 'Zugang': 'Offen', 'Onboard-Ziel': 'Low-Power-Beschleuniger' },
           { 'Modell': 'Octo / RT-2', 'Parameter': 'Variiert', 'Zugang': 'Offen (Forschung)', 'Onboard-Ziel': 'Nur historische Referenz' },
         ],
-        note: 'Für spezifische Hardware-Tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — Leistungsklassen und Preisstufen) siehe [Edge-AI-Hardware für lokale LLMs](/de/edge-ai/edge-ai-hardware-for-local-llms), statt die Spezifikationen hier neu herzuleiten — dieser Artikel konzentriert sich darauf, was wo läuft, nicht auf die Chips selbst.',
+        note: 'Für spezifische Hardware-Tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — Leistungsklassen und Preisstufen) siehe [Edge-AI-Hardware für lokale LLMs](/de/local-llms/edge-ai-hardware-for-local-llms), statt die Spezifikationen hier neu herzuleiten — dieser Artikel konzentriert sich darauf, was wo läuft, nicht auf die Chips selbst.',
         faqs: [
           { q: 'Was ist der Unterschied zwischen einem VLA und einem VLM im Robotik-Kontext?', a: 'Ein VLM (Vision-Language-Modell) nimmt ein Bild und Text entgegen und erzeugt Text — eine Szenenbeschreibung, eine Antwort, ein Label. Ein VLA (Vision-Language-Action-Modell) nimmt dieselben Eingaben, gibt aber eine Roboteraktion aus — eine Zielpose, eine Gelenktrajektorie, einen Greifpunkt. Ein Roboter-Stack nutzt oft ein VLM für die Wahrnehmungs-/Szenenverständnisebene und ein VLA für die Aufgabenplanungsebene, und manchmal wird nur das VLM benötigt, wenn keine autonome Aktion erforderlich ist.' },
           { q: 'Ist OpenVLA eine gute Wahl für einen latenzsensiblen Onboard-Einsatz?', a: 'Es ist die standardmäßige akademische Baseline mit 7 Mrd. Parametern, was es schwerer macht als zweckgebaute Alternativen wie Isaac GR00T N1.5 (~2,2 Mrd., sekundär) oder SmolVLA (~450 Mio., sekundär) für ein knappes Onboard-Latenzbudget. Es bleibt als gut dokumentierter Referenzpunkt nützlich, um neuere, kleinere Modelle daran zu benchmarken.' },
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kaufberatung: Wonach Sie tatsächlich suchen sollten',
         content: [
           '**Drei Hardware-Kategorien decken den größten Teil eines On-Robot-Inferenz-Aufbaus ab: ein Jetson-Entwicklungskit für die Reasoning-Ebene, eine oder mehrere Tiefen-/Stereokameras für die Wahrnehmungseingabe und eine Roboter-Entwicklungsplattform, auf der alles montiert wird.** Dieser Abschnitt nennt Kategorien, keine konkreten Artikelnummern, Preise oder Herstellerangaben — prüfen Sie aktuelle Spezifikationen und Preise direkt beim jeweiligen Hersteller vor dem Kauf, da sich beides schneller ändert, als ein Artikel es verfolgen kann.',
-          'Jetson-Orin- und Jetson-Thor-Entwicklungskits sind der Standardausgangspunkt zur Bewertung eines Onboard-VLA oder -VLM — siehe [Edge-AI-Hardware für lokale LLMs](/de/edge-ai/edge-ai-hardware-for-local-llms) für die stufenweise Aufschlüsselung (Orin Nano bis AGX Thor) mit Leistungsklasse und relativer Rechenleistung.',
+          'Jetson-Orin- und Jetson-Thor-Entwicklungskits sind der Standardausgangspunkt zur Bewertung eines Onboard-VLA oder -VLM — siehe [Edge-AI-Hardware für lokale LLMs](/de/local-llms/edge-ai-hardware-for-local-llms) für die stufenweise Aufschlüsselung (Orin Nano bis AGX Thor) mit Leistungsklasse und relativer Rechenleistung.',
           'Tiefen- oder Stereokameras sind die Standard-Wahrnehmungseingabe für ein VLA — die meisten veröffentlichten VLA-Forschungsarbeiten und Hersteller-Referenzdesigns setzen RGB-D- oder Stereoeingaben statt reiner monokularer RGB-Eingaben voraus, da Tiefeninformation die Greifpunkt- und Hindernisabstandsschätzung vereinfacht, auf der die Aktionsausgabeebene basiert.',
           'Eine Roboter-Entwicklungsplattform — eine Rad- oder armbasierte Referenzplattform statt eines mechanischen Aufbaus von Grund auf — ist der praktische Ausgangspunkt für ein Team, das eine VLA-Integration validiert, bevor es sich auf kundenspezifische Hardware festlegt.',
         ],
@@ -559,8 +559,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'Weiterführende Artikel',
         items: [
-          '[Edge-AI-Hardware für lokale LLMs](/de/edge-ai/edge-ai-hardware-for-local-llms) — Hardware-Tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor), auf die dieser Artikel durchgängig verweist',
-          '[VLM-Videoanalyse für Drohnen und Edge-Kameras](/de/edge-ai/vlm-video-analytics-drones-edge) — das Beobachtungs-Pendant zum Handlungs-Fokus dieses Artikels, auf derselben Hardware, aber mit anderer Latenzanforderung',
+          '[Edge-AI-Hardware für lokale LLMs](/de/local-llms/edge-ai-hardware-for-local-llms) — Hardware-Tiers (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor), auf die dieser Artikel durchgängig verweist',
+          '[VLM-Videoanalyse für Drohnen und Edge-Kameras](/de/local-llms/vlm-video-analytics-drones-edge) — das Beobachtungs-Pendant zum Handlungs-Fokus dieses Artikels, auf derselben Hardware, aber mit anderer Latenzanforderung',
           '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — allgemeine Landschaft lokaler LLM-Modelle über die hier behandelten robotikspezifischen VLA-Modelle hinaus',
           '[Lokale Vision-Modelle: LLaVA und Ollama 2026](/de/power-local-llm/local-vision-models-llava-ollama-2026) — lokale Vision-Language-Modelle außerhalb eines Robotik-Kontexts',
         ],
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'de',
-      url: 'https://www.promptquorum.com/de/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/de/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'SmolVLA', 'Paramètres': '~450 M (secondaire)', 'Accès': 'Ouvert', 'Cible embarquée': 'Accélérateurs faible puissance' },
           { 'Modèle': 'Octo / RT-2', 'Paramètres': 'Variable', 'Accès': 'Ouvert (recherche)', 'Cible embarquée': 'Référence historique uniquement' },
         ],
-        note: 'Pour les spécificités des paliers matériels (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — enveloppes de puissance et paliers tarifaires), voir [Matériel Edge AI pour LLM locaux](/fr/edge-ai/edge-ai-hardware-for-local-llms) plutôt que de redériver les spécifications ici — cet article se concentre sur ce qui tourne où, pas sur le silicium lui-même.',
+        note: 'Pour les spécificités des paliers matériels (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — enveloppes de puissance et paliers tarifaires), voir [Matériel Edge AI pour LLM locaux](/fr/local-llms/edge-ai-hardware-for-local-llms) plutôt que de redériver les spécifications ici — cet article se concentre sur ce qui tourne où, pas sur le silicium lui-même.',
         faqs: [
           { q: 'Quelle est la différence entre un VLA et un VLM en robotique ?', a: 'Un VLM (modèle vision-langage) prend une image et du texte en entrée et produit du texte — une description de scène, une réponse, une étiquette. Un VLA (modèle vision-langage-action) prend les mêmes entrées mais produit une action robotique — une pose cible, une trajectoire articulaire, un point de préhension. Une pile robotique utilise souvent un VLM pour la couche perception/compréhension de scène et un VLA pour la couche planification de tâche, et n\'a parfois besoin que du VLM si aucune action autonome n\'est requise.' },
           { q: 'OpenVLA est-il un bon choix pour un déploiement embarqué sensible à la latence ?', a: 'C\'est la référence académique standard à 7 milliards de paramètres, ce qui le rend plus lourd que des alternatives conçues sur mesure comme Isaac GR00T N1.5 (~2,2 Md, source secondaire) ou SmolVLA (~450 M, source secondaire) pour un budget de latence embarqué serré. Il reste utile comme point de référence bien documenté pour comparer des modèles plus récents et plus petits.' },
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Guide d\'achat : que rechercher concrètement',
         content: [
           '**Trois catégories de matériel couvrent l\'essentiel d\'une construction d\'inférence embarquée sur robot : un kit de développement de la classe Jetson pour le niveau de raisonnement, une ou plusieurs caméras de profondeur/stéréo pour l\'entrée de perception, et une plateforme de développement robotique pour tout monter.** Cette section nomme des catégories, pas des références précises, des prix ou des affirmations constructeur — vérifiez les spécifications et prix actuels directement auprès de chaque fournisseur avant d\'acheter, les deux évoluant plus vite qu\'un article ne peut le suivre.',
-          'Les kits de développement Jetson Orin et Jetson Thor sont le point de départ standard pour évaluer un VLA ou un VLM embarqué — voir [Matériel Edge AI pour LLM locaux](/fr/edge-ai/edge-ai-hardware-for-local-llms) pour la répartition palier par palier (Orin Nano à AGX Thor) couvrant l\'enveloppe de puissance et le calcul relatif.',
+          'Les kits de développement Jetson Orin et Jetson Thor sont le point de départ standard pour évaluer un VLA ou un VLM embarqué — voir [Matériel Edge AI pour LLM locaux](/fr/local-llms/edge-ai-hardware-for-local-llms) pour la répartition palier par palier (Orin Nano à AGX Thor) couvrant l\'enveloppe de puissance et le calcul relatif.',
           'Les caméras de profondeur ou stéréo constituent l\'entrée de perception standard pour un VLA — la plupart des recherches VLA publiées et des designs de référence constructeur supposent une entrée RGB-D ou stéréo plutôt qu\'une simple RGB monoculaire, la profondeur simplifiant l\'estimation du point de préhension et de la distance aux obstacles dont dépend la couche de sortie d\'action.',
           'Une plateforme de développement robotique — une plateforme de référence à roues ou à bras plutôt qu\'une construction mécanique de zéro — constitue le point de départ pratique pour une équipe validant une intégration VLA avant de s\'engager sur du matériel sur mesure.',
         ],
@@ -852,8 +852,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'Pour aller plus loin',
         items: [
-          '[Matériel Edge AI pour LLM locaux](/fr/edge-ai/edge-ai-hardware-for-local-llms) — paliers matériels (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) référencés tout au long de cet article',
-          '[Analyse vidéo VLM pour drones et caméras Edge](/fr/edge-ai/vlm-video-analytics-drones-edge) — le pendant côté observation au focus côté action de cet article, sur le même silicium mais avec une contrainte de latence différente',
+          '[Matériel Edge AI pour LLM locaux](/fr/local-llms/edge-ai-hardware-for-local-llms) — paliers matériels (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) référencés tout au long de cet article',
+          '[Analyse vidéo VLM pour drones et caméras Edge](/fr/local-llms/vlm-video-analytics-drones-edge) — le pendant côté observation au focus côté action de cet article, sur le même silicium mais avec une contrainte de latence différente',
           '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) — paysage général des modèles LLM locaux au-delà des modèles VLA spécifiques à la robotique traités ici',
           '[Modèles de vision locaux : LLaVA et Ollama 2026](/fr/power-local-llm/local-vision-models-llava-ollama-2026) — exécution locale de modèles vision-langage en dehors d\'un contexte robotique',
         ],
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'fr',
-      url: 'https://www.promptquorum.com/fr/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/fr/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'SmolVLA', 'パラメータ': '〜4億5000万（二次）', 'アクセス': 'オープン', '搭載ターゲット': '低電力アクセラレータ' },
           { 'モデル': 'Octo / RT-2', 'パラメータ': '様々', 'アクセス': 'オープン（研究用）', '搭載ターゲット': '歴史的参照のみ' },
         ],
-        note: 'ハードウェア階層の詳細（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor——電力エンベロープと価格帯）については、ここで仕様を再導出するのではなく[ローカルLLM向けエッジAIハードウェア](/ja/edge-ai/edge-ai-hardware-for-local-llms)を参照してください——本記事は何がどこで動くかに焦点を当てており、シリコン自体には焦点を当てていません。',
+        note: 'ハードウェア階層の詳細（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor——電力エンベロープと価格帯）については、ここで仕様を再導出するのではなく[ローカルLLM向けエッジAIハードウェア](/ja/local-llms/edge-ai-hardware-for-local-llms)を参照してください——本記事は何がどこで動くかに焦点を当てており、シリコン自体には焦点を当てていません。',
         faqs: [
           { q: 'ロボティクスの文脈でVLAとVLMの違いは何ですか？', a: 'VLM（ビジョン言語モデル）は画像とテキストを入力として受け取り、テキストを出力します——シーン記述、回答、ラベルなどです。VLA（ビジョン言語アクションモデル）は同じ入力を受け取りますが、ロボットのアクション——目標姿勢、関節軌道、把持点——を出力します。ロボットスタックは知覚/シーン理解レイヤーにVLM、タスク計画レイヤーにVLAを使うことが多く、自律的なアクションが不要な場合はVLMだけで済むこともあります。' },
           { q: 'OpenVLAはレイテンシに敏感な搭載展開に適した選択肢ですか？', a: 'それは70億パラメータの標準的な学術ベースラインであり、タイトな搭載レイテンシ予算に対してはIsaac GR00T N1.5（〜22億、二次情報源）やSmolVLA（〜4億5000万、二次情報源）のような専用設計の代替と比べて重くなります。新しく小さいモデルをベンチマークする際の文書化された参照点としては有用であり続けます。' },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '購入ガイド：実際に何を探すべきか',
         content: [
           '**3つのハードウェアカテゴリが、オンロボット推論構築の大半をカバーします。推論層向けのJetson系開発キット、知覚入力向けの1台以上の深度/ステレオカメラ、そしてすべてを搭載するロボット開発プラットフォームです。** このセクションではカテゴリのみを示し、具体的な型番・価格・ベンダーの主張は示しません——両方とも記事が追跡できるより速く変化するため、購入前に各ベンダーで最新の仕様と価格を直接確認してください。',
-          'Jetson OrinおよびJetson Thor開発キットは、搭載VLAまたはVLMを評価するための標準的な出発点です——電力エンベロープと相対的な計算能力を含む階層別の内訳（Orin NanoからAGX Thorまで）については[ローカルLLM向けエッジAIハードウェア](/ja/edge-ai/edge-ai-hardware-for-local-llms)を参照してください。',
+          'Jetson OrinおよびJetson Thor開発キットは、搭載VLAまたはVLMを評価するための標準的な出発点です——電力エンベロープと相対的な計算能力を含む階層別の内訳（Orin NanoからAGX Thorまで）については[ローカルLLM向けエッジAIハードウェア](/ja/local-llms/edge-ai-hardware-for-local-llms)を参照してください。',
           '深度またはステレオカメラは、VLAの標準的な知覚入力です——公開されているVLA研究とベンダーのリファレンスデザインの大半は、単眼RGBのみではなくRGB-Dまたはステレオ入力を前提としています。深度情報が、アクション出力レイヤーが依存する把持点と障害物距離の推定を単純化するためです。',
           'ロボット開発プラットフォーム——ゼロからの機械的な組み立てではなく、車輪型またはアーム型のリファレンスプラットフォーム——は、カスタムハードウェアに踏み切る前にVLA統合を検証するチームにとって実務的な出発点です。',
         ],
@@ -1145,8 +1145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '関連記事',
         items: [
-          '[ローカルLLM向けエッジAIハードウェア](/ja/edge-ai/edge-ai-hardware-for-local-llms) — 本記事全体で参照しているハードウェア階層（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor）',
-          '[ドローン・エッジカメラ向けVLA映像解析](/ja/edge-ai/vlm-video-analytics-drones-edge) — 本記事のアクション側の焦点に対する観測側の対となる記事。同じシリコンを共有しつつ異なるレイテンシ制約を持つ',
+          '[ローカルLLM向けエッジAIハードウェア](/ja/local-llms/edge-ai-hardware-for-local-llms) — 本記事全体で参照しているハードウェア階層（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor）',
+          '[ドローン・エッジカメラ向けVLA映像解析](/ja/local-llms/vlm-video-analytics-drones-edge) — 本記事のアクション側の焦点に対する観測側の対となる記事。同じシリコンを共有しつつ異なるレイテンシ制約を持つ',
           '[ベストなローカルLLM 2026](/ja/local-llms/best-local-llms-2026) — 本記事が扱うロボティクス特化のVLAモデルを超えた、一般的なローカルLLMモデルの全体像',
           '[ローカルビジョンモデル：LLaVAとOllama 2026](/ja/power-local-llm/local-vision-models-llava-ollama-2026) — ロボティクスの文脈を離れたローカルでのビジョン言語モデルの実行',
         ],
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'ja',
-      url: 'https://www.promptquorum.com/ja/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/ja/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'SmolVLA', '参数量': '~4.5亿（二手）', '访问方式': '开放', '机身目标': '低功耗加速器' },
           { '模型': 'Octo / RT-2', '参数量': '不定', '访问方式': '开放（研究用）', '机身目标': '仅作历史参考' },
         ],
-        note: '关于具体硬件层级（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor——功耗范围与价格档位），请参阅[本地LLM边缘AI硬件](/zh/edge-ai/edge-ai-hardware-for-local-llms)，而非在此重新推导规格——本文关注的是什么运行在哪里，而不是芯片本身。',
+        note: '关于具体硬件层级（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor——功耗范围与价格档位），请参阅[本地LLM边缘AI硬件](/zh/local-llms/edge-ai-hardware-for-local-llms)，而非在此重新推导规格——本文关注的是什么运行在哪里，而不是芯片本身。',
         faqs: [
           { q: '在机器人语境下，VLA和VLM有什么区别？', a: 'VLM（视觉语言模型）接收图像和文本作为输入，输出文本——如场景描述、回答或标签。VLA（视觉语言动作模型）接收相同的输入，但输出的是机器人动作——目标姿态、关节轨迹、抓取点。机器人系统常常同时使用两者：VLM用于感知/场景理解层，VLA用于任务规划层；如果不需要自主动作，有时只需要VLM即可。' },
           { q: 'OpenVLA适合对延迟敏感的机身部署吗？', a: '它是70亿参数的标准学术基线，这使它相对于Isaac GR00T N1.5（~22亿，二手信息）或SmolVLA（~4.5亿，二手信息）等专为机身端设计的替代方案而言，在延迟预算紧张的场景下显得更重。它作为文档完善的参考点，在对更新、更小的模型做基准对比时仍然有用。' },
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '选购指南：实际该关注什么',
         content: [
           '**三类硬件覆盖了机器人端推理搭建的大部分需求：用于推理层的Jetson级开发套件，用于感知输入的一个或多个深度/立体摄像头，以及用来安装一切的机器人开发平台。** 本节列出的是类别，而非具体型号、价格或厂商宣称——购买前请直接向各厂商核实当前规格和价格，因为二者变化的速度都快于任何一篇文章能够追踪的程度。',
-          'Jetson Orin和Jetson Thor开发套件是评估机身端VLA或VLM的标准起点——关于按层级划分的详细对比（从Orin Nano到AGX Thor，涵盖功耗范围和相对算力），请参阅[本地LLM边缘AI硬件](/zh/edge-ai/edge-ai-hardware-for-local-llms)。',
+          'Jetson Orin和Jetson Thor开发套件是评估机身端VLA或VLM的标准起点——关于按层级划分的详细对比（从Orin Nano到AGX Thor，涵盖功耗范围和相对算力），请参阅[本地LLM边缘AI硬件](/zh/local-llms/edge-ai-hardware-for-local-llms)。',
           '深度或立体摄像头是VLA的标准感知输入——大多数已发表的VLA研究和厂商参考设计都假设使用RGB-D或立体输入，而非单纯的单目RGB，因为深度信息简化了动作输出层所依赖的抓取点和障碍物距离估计。',
           '机器人开发平台——一个轮式或机械臂式的参考平台，而非从零开始的机械搭建——是团队在投入定制硬件之前验证VLA集成的实际起点。',
         ],
@@ -1438,8 +1438,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '延伸阅读',
         items: [
-          '[本地LLM边缘AI硬件](/zh/edge-ai/edge-ai-hardware-for-local-llms) — 本文通篇引用的硬件层级（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor）',
-          '[面向无人机与边缘摄像头的VLM视频分析](/zh/edge-ai/vlm-video-analytics-drones-edge) — 本文聚焦"行动"侧的姊妹篇，聚焦"观测"侧，共享同样的芯片但延迟约束不同',
+          '[本地LLM边缘AI硬件](/zh/local-llms/edge-ai-hardware-for-local-llms) — 本文通篇引用的硬件层级（Hailo-10H、Jetson Orin Nano/NX、AGX Orin、AGX Thor）',
+          '[面向无人机与边缘摄像头的VLM视频分析](/zh/local-llms/vlm-video-analytics-drones-edge) — 本文聚焦"行动"侧的姊妹篇，聚焦"观测"侧，共享同样的芯片但延迟约束不同',
           '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 超越本文所涵盖的机器人专用VLA模型的通用本地LLM模型全景',
           '[本地视觉模型：LLaVA与Ollama 2026](/zh/power-local-llm/local-vision-models-llava-ollama-2026) — 在机器人语境之外本地运行视觉语言模型',
         ],
@@ -1463,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'zh',
-      url: 'https://www.promptquorum.com/zh/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/zh/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'SmolVLA', 'Parámetros': '~450M (secundaria)', 'Acceso': 'Abierto', 'Objetivo a bordo': 'Aceleradores de bajo consumo' },
           { 'Modelo': 'Octo / RT-2', 'Parámetros': 'Variable', 'Acceso': 'Abierto (investigación)', 'Objetivo a bordo': 'Solo referencia histórica' },
         ],
-        note: 'Para las especificidades de los niveles de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor: envolventes de potencia y niveles de precio), consulta [Hardware Edge AI para LLM locales](/es/edge-ai/edge-ai-hardware-for-local-llms) en lugar de rederivar las especificaciones aquí: este artículo se centra en qué corre dónde, no en el silicio en sí.',
+        note: 'Para las especificidades de los niveles de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor: envolventes de potencia y niveles de precio), consulta [Hardware Edge AI para LLM locales](/es/local-llms/edge-ai-hardware-for-local-llms) en lugar de rederivar las especificaciones aquí: este artículo se centra en qué corre dónde, no en el silicio en sí.',
         faqs: [
           { q: '¿Cuál es la diferencia entre un VLA y un VLM en un contexto de robótica?', a: 'Un VLM (modelo de visión y lenguaje) toma una imagen y texto y produce texto: una descripción de escena, una respuesta, una etiqueta. Un VLA (modelo de visión-lenguaje-acción) toma las mismas entradas pero produce una acción robótica: una pose objetivo, una trayectoria articular, un punto de agarre. Un stack de robot suele usar un VLM para la capa de percepción/comprensión de escena y un VLA para la capa de planificación de tareas, y a veces solo necesita el VLM si no se requiere ninguna acción autónoma.' },
           { q: '¿Es OpenVLA una buena elección para un despliegue a bordo sensible a la latencia?', a: 'Es la línea base académica estándar con 7.000 millones de parámetros, lo que lo hace más pesado que alternativas diseñadas específicamente como Isaac GR00T N1.5 (~2,2B, fuente secundaria) o SmolVLA (~450M, fuente secundaria) para un presupuesto de latencia a bordo ajustado. Sigue siendo útil como punto de referencia bien documentado para comparar modelos más nuevos y pequeños.' },
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Guía de compra: qué buscar realmente',
         content: [
           '**Tres categorías de hardware cubren la mayor parte de una construcción de inferencia a bordo de un robot: un kit de desarrollo de la clase Jetson para el nivel de razonamiento, una o más cámaras de profundidad/estéreo para la entrada de percepción, y una plataforma de desarrollo robótico sobre la que montar todo.** Esta sección nombra categorías, no SKUs específicos, precios o afirmaciones del fabricante: verifica las especificaciones y precios actuales directamente con cada fabricante antes de comprar, ya que ambos cambian más rápido de lo que un artículo puede seguir.',
-          'Los kits de desarrollo Jetson Orin y Jetson Thor son el punto de partida estándar para evaluar un VLA o VLM a bordo: consulta [Hardware Edge AI para LLM locales](/es/edge-ai/edge-ai-hardware-for-local-llms) para el desglose nivel por nivel (de Orin Nano a AGX Thor) que cubre la envolvente de potencia y el cómputo relativo.',
+          'Los kits de desarrollo Jetson Orin y Jetson Thor son el punto de partida estándar para evaluar un VLA o VLM a bordo: consulta [Hardware Edge AI para LLM locales](/es/local-llms/edge-ai-hardware-for-local-llms) para el desglose nivel por nivel (de Orin Nano a AGX Thor) que cubre la envolvente de potencia y el cómputo relativo.',
           'Las cámaras de profundidad o estéreo son la entrada de percepción estándar para un VLA: la mayoría de la investigación VLA publicada y los diseños de referencia de fabricantes asumen entrada RGB-D o estéreo en lugar de RGB monocular únicamente, ya que la profundidad simplifica la estimación del punto de agarre y la distancia a obstáculos de la que depende la capa de salida de acción.',
           'Una plataforma de desarrollo robótico —una plataforma de referencia con ruedas o basada en brazo en lugar de una construcción mecánica desde cero— es el punto de partida práctico para un equipo que valida una integración VLA antes de comprometerse con hardware personalizado.',
         ],
@@ -1731,8 +1731,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'Lecturas relacionadas',
         items: [
-          '[Hardware Edge AI para LLM locales](/es/edge-ai/edge-ai-hardware-for-local-llms) — niveles de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenciados a lo largo de este artículo',
-          '[Análisis de vídeo VLM para drones y cámaras Edge](/es/edge-ai/vlm-video-analytics-drones-edge) — el artículo hermano del lado de la observación frente al enfoque en el lado de la acción de este artículo, compartiendo el mismo silicio pero con una restricción de latencia distinta',
+          '[Hardware Edge AI para LLM locales](/es/local-llms/edge-ai-hardware-for-local-llms) — niveles de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenciados a lo largo de este artículo',
+          '[Análisis de vídeo VLM para drones y cámaras Edge](/es/local-llms/vlm-video-analytics-drones-edge) — el artículo hermano del lado de la observación frente al enfoque en el lado de la acción de este artículo, compartiendo el mismo silicio pero con una restricción de latencia distinta',
           '[Mejores LLM locales 2026](/es/local-llms/best-local-llms-2026) — panorama general de modelos LLM locales más allá de los modelos VLA específicos de robótica cubiertos aquí',
           '[Modelos de visión locales: LLaVA y Ollama 2026](/es/power-local-llm/local-vision-models-llava-ollama-2026) — ejecución local de modelos de visión y lenguaje fuera de un contexto de robótica',
         ],
@@ -1756,7 +1756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'es',
-      url: 'https://www.promptquorum.com/es/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/es/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -1888,7 +1888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'SmolVLA', 'Parâmetros': '~450M (secundária)', 'Acesso': 'Aberto', 'Alvo embarcado': 'Aceleradores de baixa potência' },
           { 'Modelo': 'Octo / RT-2', 'Parâmetros': 'Variável', 'Acesso': 'Aberto (pesquisa)', 'Alvo embarcado': 'Apenas referência histórica' },
         ],
-        note: 'Para especificidades dos níveis de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — envelopes de potência e faixas de preço), veja [Hardware Edge AI para LLMs Locais](/pt/edge-ai/edge-ai-hardware-for-local-llms) em vez de rederivar especificações aqui — este artigo foca no que roda onde, não no silício em si.',
+        note: 'Para especificidades dos níveis de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — envelopes de potência e faixas de preço), veja [Hardware Edge AI para LLMs Locais](/pt/local-llms/edge-ai-hardware-for-local-llms) em vez de rederivar especificações aqui — este artigo foca no que roda onde, não no silício em si.',
         faqs: [
           { q: 'Qual é a diferença entre um VLA e um VLM em um contexto de robótica?', a: 'Um VLM (modelo de visão e linguagem) recebe uma imagem e texto e produz texto — uma descrição de cena, uma resposta, um rótulo. Um VLA (modelo de visão-linguagem-ação) recebe as mesmas entradas mas produz uma ação de robô — uma pose alvo, uma trajetória de articulação, um ponto de preensão. Uma pilha de robô costuma usar um VLM para a camada de percepção/compreensão de cena e um VLA para a camada de planejamento de tarefas, e às vezes só precisa do VLM se nenhuma ação autônoma for necessária.' },
           { q: 'O OpenVLA é uma boa escolha para uma implantação embarcada sensível à latência?', a: 'É a linha de base acadêmica padrão com 7 bilhões de parâmetros, o que o torna mais pesado que alternativas construídas sob medida como o Isaac GR00T N1.5 (~2,2B, fonte secundária) ou o SmolVLA (~450M, fonte secundária) para um orçamento de latência embarcada apertado. Continua útil como ponto de referência bem documentado para comparar modelos mais novos e menores.' },
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Guia de compra: o que realmente procurar',
         content: [
           '**Três categorias de hardware cobrem a maior parte de uma construção de inferência embarcada em robô: um kit de desenvolvimento da classe Jetson para a camada de raciocínio, uma ou mais câmeras de profundidade/estéreo para entrada de percepção, e uma plataforma de desenvolvimento de robô para montar tudo.** Esta seção nomeia categorias, não SKUs específicos, preços ou alegações de fabricante — verifique especificações e preços atuais diretamente com cada fabricante antes de comprar, já que ambos mudam mais rápido do que um artigo consegue acompanhar.',
-          'Kits de desenvolvimento Jetson Orin e Jetson Thor são o ponto de partida padrão para avaliar um VLA ou VLM embarcado — veja [Hardware Edge AI para LLMs Locais](/pt/edge-ai/edge-ai-hardware-for-local-llms) para a divisão nível por nível (Orin Nano até AGX Thor) cobrindo envelope de potência e computação relativa.',
+          'Kits de desenvolvimento Jetson Orin e Jetson Thor são o ponto de partida padrão para avaliar um VLA ou VLM embarcado — veja [Hardware Edge AI para LLMs Locais](/pt/local-llms/edge-ai-hardware-for-local-llms) para a divisão nível por nível (Orin Nano até AGX Thor) cobrindo envelope de potência e computação relativa.',
           'Câmeras de profundidade ou estéreo são a entrada de percepção padrão para um VLA — a maioria das pesquisas VLA publicadas e designs de referência de fabricantes assume entrada RGB-D ou estéreo em vez de RGB monocular apenas, já que a profundidade simplifica a estimativa de ponto de preensão e distância a obstáculos da qual a camada de saída de ação depende.',
           'Uma plataforma de desenvolvimento de robô — uma plataforma de referência com rodas ou baseada em braço em vez de uma construção mecânica do zero — é o ponto de partida prático para uma equipe validando uma integração VLA antes de se comprometer com hardware personalizado.',
         ],
@@ -2024,8 +2024,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'Leituras relacionadas',
         items: [
-          '[Hardware Edge AI para LLMs Locais](/pt/edge-ai/edge-ai-hardware-for-local-llms) — níveis de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenciados ao longo deste artigo',
-          '[Análise de Vídeo VLM para Drones e Câmeras Edge](/pt/edge-ai/vlm-video-analytics-drones-edge) — o artigo irmão do lado da observação frente ao foco do lado da ação deste artigo, compartilhando o mesmo silício mas com uma restrição de latência diferente',
+          '[Hardware Edge AI para LLMs Locais](/pt/local-llms/edge-ai-hardware-for-local-llms) — níveis de hardware (Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor) referenciados ao longo deste artigo',
+          '[Análise de Vídeo VLM para Drones e Câmeras Edge](/pt/local-llms/vlm-video-analytics-drones-edge) — o artigo irmão do lado da observação frente ao foco do lado da ação deste artigo, compartilhando o mesmo silício mas com uma restrição de latência diferente',
           '[Melhores LLMs Locais 2026](/pt/local-llms/best-local-llms-2026) — panorama geral de modelos LLM locais além dos modelos VLA específicos de robótica cobertos aqui',
           '[Modelos de Visão Locais: LLaVA e Ollama 2026](/pt/power-local-llm/local-vision-models-llava-ollama-2026) — execução local de modelos de visão-linguagem fora de um contexto de robótica',
         ],
@@ -2049,7 +2049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'pt-BR',
-      url: 'https://www.promptquorum.com/pt/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/pt/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'SmolVLA', 'المعاملات': '~450 مليون (ثانوي)', 'الوصول': 'مفتوح', 'الهدف على متن الجهاز': 'مسرّعات منخفضة الطاقة' },
           { 'النموذج': 'Octo / RT-2', 'المعاملات': 'متغير', 'الوصول': 'مفتوح (بحثي)', 'الهدف على متن الجهاز': 'مرجع تاريخي فقط' },
         ],
-        note: 'للاطلاع على تفاصيل مستويات العتاد (Hailo-10H، Jetson Orin Nano/NX، AGX Orin، AGX Thor — نطاقات الطاقة وفئات الأسعار)، راجع [عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/edge-ai/edge-ai-hardware-for-local-llms) بدلًا من إعادة اشتقاق المواصفات هنا — يركّز هذا المقال على ما يعمل وأين، لا على الشرائح نفسها.',
+        note: 'للاطلاع على تفاصيل مستويات العتاد (Hailo-10H، Jetson Orin Nano/NX، AGX Orin، AGX Thor — نطاقات الطاقة وفئات الأسعار)، راجع [عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/local-llms/edge-ai-hardware-for-local-llms) بدلًا من إعادة اشتقاق المواصفات هنا — يركّز هذا المقال على ما يعمل وأين، لا على الشرائح نفسها.',
         faqs: [
           { q: 'ما الفرق بين VLA وVLM في سياق الروبوتات؟', a: 'يأخذ VLM (نموذج رؤية-لغة) صورة ونصًا وينتج نصًا — وصف مشهد، إجابة، تسمية. يأخذ VLA (نموذج رؤية-لغة-إجراء) المدخلات نفسها لكنه ينتج إجراء روبوت — وضعية مستهدفة، مسار مفصلي، نقطة إمساك. غالبًا ما تستخدم حزمة الروبوت VLM لطبقة الإدراك/فهم المشهد وVLA لطبقة تخطيط المهام، وأحيانًا لا تحتاج سوى VLM إذا لم يكن هناك حاجة إلى إجراء مستقل.' },
           { q: 'هل يُعد OpenVLA خيارًا جيدًا لنشر على متن الجهاز حساس لزمن الاستجابة؟', a: 'إنه خط الأساس الأكاديمي القياسي بحجم 7 مليارات معامل، ما يجعله أثقل من بدائل مصمَّمة خصيصًا مثل Isaac GR00T N1.5 (~2.2 مليار، مصدر ثانوي) أو SmolVLA (~450 مليون، مصدر ثانوي) بالنسبة لميزانية زمن استجابة محدودة على متن الجهاز. يظل مفيدًا كنقطة مرجعية موثّقة جيدًا لمقارنة نماذج أحدث وأصغر.' },
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'دليل الشراء: ما الذي يجب البحث عنه فعليًا',
         content: [
           '**تغطي ثلاث فئات من العتاد معظم بناء استدلال على متن الروبوت: عدة تطوير من فئة Jetson لطبقة الاستدلال، وكاميرا عمق/استيريو واحدة أو أكثر لمدخلات الإدراك، ومنصة تطوير روبوت لتركيب كل شيء عليها.** يسمي هذا القسم فئات، لا أرقام منتجات محددة أو أسعارًا أو ادعاءات من موردين — تحقق من المواصفات والأسعار الحالية مباشرة مع كل مورّد قبل الشراء، إذ يتغير كلاهما أسرع مما يستطيع أي مقال تتبعه.',
-          'تُعد عُدد تطوير Jetson Orin وJetson Thor نقطة البداية المعتادة لتقييم VLA أو VLM على متن الجهاز — راجع [عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/edge-ai/edge-ai-hardware-for-local-llms) للاطلاع على التصنيف مستوى بمستوى (من Orin Nano إلى AGX Thor) الذي يغطي نطاق الطاقة والحوسبة النسبية.',
+          'تُعد عُدد تطوير Jetson Orin وJetson Thor نقطة البداية المعتادة لتقييم VLA أو VLM على متن الجهاز — راجع [عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/local-llms/edge-ai-hardware-for-local-llms) للاطلاع على التصنيف مستوى بمستوى (من Orin Nano إلى AGX Thor) الذي يغطي نطاق الطاقة والحوسبة النسبية.',
           'تُعد كاميرات العمق أو الاستيريو مدخل الإدراك المعتاد لـVLA — تفترض معظم أبحاث VLA المنشورة وتصاميم المورّدين المرجعية مدخل RGB-D أو استيريو بدلًا من RGB أحادي العين فقط، إذ يبسّط العمق تقدير نقطة الإمساك والمسافة عن العوائق التي تعتمد عليها طبقة مخرجات الإجراء.',
           'تُعد منصة تطوير الروبوت — منصة مرجعية ذات عجلات أو قائمة على ذراع بدلًا من بناء ميكانيكي من الصفر — نقطة البداية العملية لفريق يتحقق من صحة تكامل VLA قبل الالتزام بعتاد مخصص.',
         ],
@@ -2317,8 +2317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: 'قراءات ذات صلة',
         items: [
-          '[عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/edge-ai/edge-ai-hardware-for-local-llms) — مستويات العتاد (Hailo-10H، Jetson Orin Nano/NX، AGX Orin، AGX Thor) المشار إليها في هذا المقال بأكمله',
-          '[تحليل فيديو VLM للطائرات المسيّرة وكاميرات الحافة](/ar/edge-ai/vlm-video-analytics-drones-edge) — المقال الشقيق من جانب المراقبة مقابل تركيز هذا المقال على جانب الفعل، بمشاركة الشرائح نفسها لكن بقيد زمن استجابة مختلف',
+          '[عتاد الذكاء الاصطناعي الطرفي لنماذج LLM المحلية](/ar/local-llms/edge-ai-hardware-for-local-llms) — مستويات العتاد (Hailo-10H، Jetson Orin Nano/NX، AGX Orin، AGX Thor) المشار إليها في هذا المقال بأكمله',
+          '[تحليل فيديو VLM للطائرات المسيّرة وكاميرات الحافة](/ar/local-llms/vlm-video-analytics-drones-edge) — المقال الشقيق من جانب المراقبة مقابل تركيز هذا المقال على جانب الفعل، بمشاركة الشرائح نفسها لكن بقيد زمن استجابة مختلف',
           '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) — مشهد عام لنماذج LLM المحلية يتجاوز نماذج VLA الخاصة بالروبوتات التي يغطيها هذا المقال',
           '[نماذج الرؤية المحلية: LLaVA وOllama 2026](/ar/power-local-llm/local-vision-models-llava-ollama-2026) — تشغيل نماذج رؤية-لغة محليًا خارج سياق الروبوتات',
         ],
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'ar',
-      url: 'https://www.promptquorum.com/ar/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/ar/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },
@@ -2474,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'SmolVLA', '파라미터': '~4.5억 (2차)', '접근성': '오픈', '온보드 대상': '저전력 가속기' },
           { '모델': 'Octo / RT-2', '파라미터': '다양', '접근성': '오픈 (연구용)', '온보드 대상': '역사적 참고용' },
         ],
-        note: '하드웨어 등급별 세부 사항(Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — 전력 범위와 가격대)은 여기서 사양을 다시 도출하는 대신 [로컬 LLM용 엣지 AI 하드웨어](/ko/edge-ai/edge-ai-hardware-for-local-llms)를 참고하세요 — 이 글은 무엇이 어디서 실행되는지에 초점을 맞추며, 실리콘 자체에는 초점을 두지 않습니다.',
+        note: '하드웨어 등급별 세부 사항(Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor — 전력 범위와 가격대)은 여기서 사양을 다시 도출하는 대신 [로컬 LLM용 엣지 AI 하드웨어](/ko/local-llms/edge-ai-hardware-for-local-llms)를 참고하세요 — 이 글은 무엇이 어디서 실행되는지에 초점을 맞추며, 실리콘 자체에는 초점을 두지 않습니다.',
         faqs: [
           { q: '로보틱스 맥락에서 VLA와 VLM의 차이는 무엇입니까?', a: 'VLM(비전-언어 모델)은 이미지와 텍스트를 받아 텍스트를 출력합니다 — 장면 설명, 답변, 라벨 등입니다. VLA(비전-언어-액션 모델)는 동일한 입력을 받지만 로봇 액션을 출력합니다 — 목표 자세, 관절 궤적, 파지점입니다. 로봇 스택은 종종 지각/장면 이해 계층에는 VLM을, 작업 계획 계층에는 VLA를 사용하며, 자율적인 액션이 필요 없는 경우에는 VLM만 필요할 때도 있습니다.' },
           { q: 'OpenVLA는 지연시간에 민감한 온보드 배포에 좋은 선택입니까?', a: '70억 파라미터의 표준 학술 기준선이며, 이 때문에 촘촘한 온보드 지연시간 예산에서는 Isaac GR00T N1.5(~22억, 2차 출처)나 SmolVLA(~4.5억, 2차 출처) 같은 목적에 맞게 설계된 대안보다 무겁습니다. 더 새롭고 작은 모델을 벤치마킹할 때 문서화가 잘 된 참고 기준점으로는 여전히 유용합니다.' },
@@ -2526,7 +2526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '구매 가이드: 실제로 무엇을 찾아야 하는가',
         content: [
           '**세 가지 하드웨어 카테고리가 온보드 추론 구축의 대부분을 아우릅니다: 추론 계층을 위한 Jetson급 개발 키트, 지각 입력을 위한 하나 이상의 깊이/스테레오 카메라, 그리고 모든 것을 탑재할 로봇 개발 플랫폼입니다.** 이 섹션은 카테고리만 언급하며 구체적인 제품 코드, 가격, 벤더 주장은 다루지 않습니다 — 구매 전 각 벤더에서 직접 최신 사양과 가격을 확인하세요. 둘 다 어떤 글이 추적할 수 있는 것보다 더 빠르게 바뀝니다.',
-          'Jetson Orin과 Jetson Thor 개발 키트는 온보드 VLA나 VLM을 평가하기 위한 표준 출발점입니다 — 전력 범위와 상대적 연산 능력을 다루는 등급별 세부 분류(Orin Nano부터 AGX Thor까지)는 [로컬 LLM용 엣지 AI 하드웨어](/ko/edge-ai/edge-ai-hardware-for-local-llms)를 참고하세요.',
+          'Jetson Orin과 Jetson Thor 개발 키트는 온보드 VLA나 VLM을 평가하기 위한 표준 출발점입니다 — 전력 범위와 상대적 연산 능력을 다루는 등급별 세부 분류(Orin Nano부터 AGX Thor까지)는 [로컬 LLM용 엣지 AI 하드웨어](/ko/local-llms/edge-ai-hardware-for-local-llms)를 참고하세요.',
           '깊이 또는 스테레오 카메라는 VLA를 위한 표준 지각 입력입니다 — 공개된 대부분의 VLA 연구와 벤더 레퍼런스 설계는 단안 RGB만이 아니라 RGB-D나 스테레오 입력을 전제하는데, 깊이 정보가 액션 출력 계층이 의존하는 파지점과 장애물 거리 추정을 단순화하기 때문입니다.',
           '로봇 개발 플랫폼 — 처음부터 기계적으로 제작하기보다 바퀴형 또는 팔 기반 레퍼런스 플랫폼 — 은 커스텀 하드웨어에 투자하기 전에 VLA 통합을 검증하는 팀에게 실용적인 출발점입니다.',
         ],
@@ -2610,8 +2610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '관련 자료',
         items: [
-          '[로컬 LLM용 엣지 AI 하드웨어](/ko/edge-ai/edge-ai-hardware-for-local-llms) — 이 글 전체에서 참조한 하드웨어 등급(Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor)',
-          '[드론과 엣지 카메라를 위한 VLM 영상 분석](/ko/edge-ai/vlm-video-analytics-drones-edge) — 이 글이 액션 측에 초점을 맞춘 것과 대비되는 관측 측의 자매 글로, 동일한 실리콘을 공유하지만 지연시간 제약이 다름',
+          '[로컬 LLM용 엣지 AI 하드웨어](/ko/local-llms/edge-ai-hardware-for-local-llms) — 이 글 전체에서 참조한 하드웨어 등급(Hailo-10H, Jetson Orin Nano/NX, AGX Orin, AGX Thor)',
+          '[드론과 엣지 카메라를 위한 VLM 영상 분석](/ko/local-llms/vlm-video-analytics-drones-edge) — 이 글이 액션 측에 초점을 맞춘 것과 대비되는 관측 측의 자매 글로, 동일한 실리콘을 공유하지만 지연시간 제약이 다름',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 여기서 다룬 로보틱스 전용 VLA 모델을 넘어선 일반적인 로컬 LLM 모델 전반',
           '[로컬 비전 모델: LLaVA와 Ollama 2026](/ko/power-local-llm/local-vision-models-llava-ollama-2026) — 로보틱스 맥락을 벗어난 로컬 비전-언어 모델 실행',
         ],
@@ -2635,7 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       inLanguage: 'ko',
-      url: 'https://www.promptquorum.com/ko/edge-ai/vla-models-robots-local-inference',
+      url: 'https://www.promptquorum.com/ko/local-llms/vla-models-robots-local-inference',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
     },

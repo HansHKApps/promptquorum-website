@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Related Reading',
         items: [
-          '[Edge AI Silicon for Local LLMs 2026](/edge-ai/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
+          '[Edge AI Silicon for Local LLMs 2026](/local-llms/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
           '[Best Local LLM for 6 GB VRAM](/prompt-bites/best-local-llm-6gb-vram) — a genuinely practical low-budget GPU alternative',
           '[How Much RAM Does a 7B Model Need?](/prompt-bites/how-much-ram-for-7b-model) — why 7B is out of reach for a Pi 5 CPU',
           '[Best Mini PC for an Always-On Ollama Server](/prompt-bites/best-mini-pc-for-ollama-server-always-on) — a more practical always-on alternative',
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'قراءات ذات صلة',
         items: [
-          '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/edge-ai/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
+          '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/local-llms/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
           '[أفضل LLM محلي لذاكرة VRAM سعة 6 GB](/prompt-bites/best-local-llm-6gb-vram) — بديل GPU بميزانية منخفضة عملي فعليًا',
           '[كم RAM يحتاجه نموذج 7B؟](/prompt-bites/how-much-ram-for-7b-model) — لماذا 7B خارج متناول معالج Pi 5',
           '[أفضل جهاز mini PC لخادم Ollama دائم التشغيل](/prompt-bites/best-mini-pc-for-ollama-server-always-on) — بديل دائم التشغيل أكثر عملية',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Weiterführende Artikel',
         items: [
-          '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/edge-ai/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
+          '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/local-llms/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
           '[Bestes lokales LLM für 6 GB VRAM](/de/prompt-bites/best-local-llm-6gb-vram) — eine wirklich praktische Low-Budget-GPU-Alternative',
           '[Wie viel RAM braucht ein 7B-Modell?](/de/prompt-bites/how-much-ram-for-7b-model) — warum 7B für eine Pi-5-CPU außer Reichweite ist',
           '[Bester Mini-PC für einen dauerhaft laufenden Ollama-Server](/de/prompt-bites/best-mini-pc-for-ollama-server-always-on) — eine praktischere, dauerhaft laufende Alternative',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Silicio de IA de Borde para LLM Locales 2026](/es/edge-ai/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
+          '[Silicio de IA de Borde para LLM Locales 2026](/es/local-llms/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
           '[Mejor LLM Local para 6 GB de VRAM](/es/prompt-bites/best-local-llm-6gb-vram) — una alternativa de GPU económica genuinamente práctica',
           '[¿Cuánta RAM Necesita un Modelo de 7B?](/es/prompt-bites/how-much-ram-for-7b-model) — por qué 7B está fuera del alcance de la CPU de una Pi 5',
           '[Mejor Mini PC para un Servidor Ollama Siempre Encendido](/es/prompt-bites/best-mini-pc-for-ollama-server-always-on) — una alternativa siempre encendida más práctica',
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Lectures complémentaires',
         items: [
-          '[Silicium IA embarquee pour LLM locaux 2026](/fr/edge-ai/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
+          '[Silicium IA embarquee pour LLM locaux 2026](/fr/local-llms/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
           '[Meilleur LLM local pour 6 Go de VRAM](/fr/prompt-bites/best-local-llm-6gb-vram) — une alternative GPU réellement pratique à petit budget',
           '[De combien de RAM un modèle 7B a-t-il besoin ?](/fr/prompt-bites/how-much-ram-for-7b-model) — pourquoi le 7B est hors de portée du CPU d\'un Pi 5',
           '[Meilleur mini PC pour un serveur Ollama permanent](/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on) — une alternative permanente plus pratique',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '関連記事',
         items: [
-          '[エッジAIシリコン ローカルLLM向け 2026](/ja/edge-ai/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
+          '[エッジAIシリコン ローカルLLM向け 2026](/ja/local-llms/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
           '[6GB VRAMに最適なローカルLLM](/ja/prompt-bites/best-local-llm-6gb-vram) — 本当に実用的な低予算GPU代替案',
           '[7Bモデルにはどれだけのメモリが必要?](/ja/prompt-bites/how-much-ram-for-7b-model) — 7BがPi 5のCPUには手が届かない理由',
           '[常時稼働Ollamaサーバーに最適なミニPC](/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on) — より実用的な常時稼働の代替案',
@@ -1512,7 +1512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/edge-ai/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
+          '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/local-llms/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
           '[6GB VRAM을 위한 최적의 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram) — 진정으로 실용적인 저예산 GPU 대안',
           '[7B 모델에는 얼마나 많은 RAM이 필요한가?](/ko/prompt-bites/how-much-ram-for-7b-model) — 7B가 Pi 5 CPU에는 왜 무리인지',
           '[상시 가동 Ollama 서버를 위한 최적의 미니 PC](/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on) — 더 실용적인 상시 가동 대안',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: 'Leitura Relacionada',
         items: [
-          '[Silicio de IA de Borda para LLMs Locais 2026](/pt/edge-ai/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
+          '[Silicio de IA de Borda para LLMs Locais 2026](/pt/local-llms/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
           '[Melhor LLM Local para 6 GB de VRAM](/pt/prompt-bites/best-local-llm-6gb-vram) — uma alternativa de GPU de baixo orçamento genuinamente prática',
           '[Quanta RAM um Modelo de 7B Precisa?](/pt/prompt-bites/how-much-ram-for-7b-model) — por que 7B está fora de alcance para a CPU de um Pi 5',
           '[Melhor Mini PC para um Servidor Ollama Sempre Ligado](/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on) — uma alternativa mais prática sempre ligada',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '相关阅读',
         items: [
-          '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/edge-ai/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
+          '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/local-llms/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
           '[6 GB 显存的最佳本地 LLM](/zh/prompt-bites/best-local-llm-6gb-vram) — 真正实用的低预算 GPU 替代方案',
           '[7B 模型需要多少内存？](/zh/prompt-bites/how-much-ram-for-7b-model) — 为什么 7B 对 Pi 5 的 CPU 来说遥不可及',
           '[常开 Ollama 服务器的最佳迷你 PC](/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on) — 更实用的常开替代方案',

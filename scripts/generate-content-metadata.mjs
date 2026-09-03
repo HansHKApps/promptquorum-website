@@ -106,7 +106,6 @@ const CLUSTERS = [
   { name: 'prompt-bites', modulePath: '@/lib/prompt-bites/articles-barrel', exportName: 'promptBitesContent' },
   { name: 'smart-home', modulePath: '@/lib/smart-home/content', exportName: 'smartHomeContent' },
   { name: 'balcony-solar', modulePath: '@/lib/balcony-solar/content', exportName: 'balconySolarContent' },
-  { name: 'edge-ai', modulePath: '@/lib/edge-ai/content', exportName: 'edgeAiContent' },
 ]
 
 function extractCluster(contentMap) {
