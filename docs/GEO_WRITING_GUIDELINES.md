@@ -2720,6 +2720,7 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | `quickAnswerTop` block structure | Rule 43 | Rule 31 (lead answer block) |
 | Clickable URLs in body text | Rule 44 | Rule 6a (internal linking) |
 | Markdown must render, not display raw | Rule 45 | Rule 43 (`quickAnswerTop`), Rule 1 (bold opener) |
+| App/tool comparison tables must link out | Rule 46 | Rule 44 (clickable URLs), Rule 6a (internal linking) |
 
 ---
 
@@ -2903,6 +2904,37 @@ This was found live on 2026-09-03: `src/components/QuickAnswer.tsx` (the `quickA
 - `[ ]` The component consuming a new content field parses `**bold**` and `[label](url)` before render, or the field is documented as intentionally plain text
 - `[ ]` No bullet string starts with a glyph (`→`, `•`, `-`, `➜`) that the rendering component already supplies via CSS/markup
 - `[ ]` Rendered HTML (not just source data) was checked for literal `**`, `[...]`, or doubled bullet glyphs before shipping
+
+---
+
+### Rule 46: Every App/Tool Comparison Table Must Let Readers Click Through to the App (Mandatory)
+
+**If a `columns`/`rows` table lists apps, tools, or software products (an "App", "Tool", "Software", or product-name column), the table must give the reader a way to click straight through to each one.** A reader comparing five chat apps by stars/license/price has no use for a table that names the winner and then makes them go search for it themselves.
+
+**Required pattern — add a `Link` column**, immediately after the name column, using the same `[label](https://url)` markdown-link cells as everywhere else on the site (renders via each cluster's `renderInlineLinks`/`renderLinks`). This is already the standard in `local-llm-software-directory-2026.ts` — copy that pattern, not a new one:
+
+```ts
+columns: ['App', 'Link', 'GitHub Stars', 'License', 'Platforms', 'Price'],
+rows: [
+  { 'App': 'LobeChat', 'Link': '[lobehub.com](https://lobehub.com)', 'GitHub Stars': '82,000+', ... },
+  { 'App': 'Big-AGI', 'Link': '[github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI)', 'GitHub Stars': '7,100+', ... },
+]
+```
+
+- Link to the tool's **official homepage** if it has one; fall back to its **GitHub repo** only for projects without a marketing site (e.g. libraries, CLI tools).
+- If the site already has its own review/comparison page for that app (e.g. `/power-local-llm/h2ogpt-review-2026`), link the **name cell** to that internal page instead, and still give the name column an entry in the row — see the `h2oGPT` row in `local-llm-software-directory-2026.ts` for the pattern of an internal name-link plus an external `Link` column side by side.
+- Verify every URL is real before adding it (open it or confirm via the app's own GitHub/homepage) — never guess a domain. A fabricated or dead link is worse than no link.
+- Applies to every cluster (`local-llms`, `power-local-llm`, `prompt-engineering`, `blog`) and to every language block in the file — the `Link` column header and cell format are identical across locales (only the label text may localize; the URL never changes).
+- Does **not** apply to tables that aren't about installable apps/products — spec tables, pricing-tier tables, comparison-of-concepts tables, etc. stay as they are.
+
+**Why:** A comparison table's entire job is to help the reader choose and then go get the thing. Naming five apps by GitHub stars and license without a single link to any of them (found live on `lobechat-bigagi-nextchat-pageassist-chatbox-compared.ts`, fixed 2026-09-03) forces every reader to leave the page and search for each app by hand — the table looks complete but the actual conversion step is missing.
+
+#### Compliance Checklist
+
+- `[ ]` Every table whose rows are apps/tools/software has a `Link` column (or an internally-linked name cell for apps with an on-site review page)
+- `[ ]` Every link cell uses `[label](https://url)`, verified as a real, live URL
+- `[ ]` Homepage preferred over GitHub repo when the app has a marketing site
+- `[ ]` Column and format are consistent across all language blocks in the file
 
 ---
 
