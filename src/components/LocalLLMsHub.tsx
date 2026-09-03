@@ -2161,17 +2161,17 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           </div>
 
           {/* PE Sidebar */}
-          <div className="mb-10 bg-blue-950/40 border border-blue-900/50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-blue-50 mb-2">
+          <div className="mb-10 bg-blue-50 border border-blue-200 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-blue-900 mb-2">
               {HUB_PE_SIDEBAR_TITLE[lang] ?? HUB_PE_SIDEBAR_TITLE['en']}
             </h3>
-            <p className="text-sm text-blue-100 mb-4">
+            <p className="text-sm text-blue-800 mb-4">
               {HUB_PE_SIDEBAR_BODY[lang] ?? HUB_PE_SIDEBAR_BODY['en']}
             </p>
             <div className="space-y-2">
               {(HUB_PE_SIDEBAR_LINKS[lang] ?? HUB_PE_SIDEBAR_LINKS['en']).map((link, i) => (
                 <div key={i}>
-                  <Link href={link.href} className="text-blue-300 hover:text-blue-200 text-sm font-medium transition-colors">
+                  <Link href={link.href} className="text-blue-700 hover:text-blue-900 text-sm font-medium transition-colors">
                     → {link.label}
                   </Link>
                 </div>
@@ -2180,17 +2180,17 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           </div>
 
           {/* PB Sidebar */}
-          <div className="mb-10 bg-purple-950/40 border border-purple-900/50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-purple-50 mb-2">
+          <div className="mb-10 bg-purple-50 border border-purple-200 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-purple-900 mb-2">
               {HUB_PB_SIDEBAR_TITLE[lang] ?? HUB_PB_SIDEBAR_TITLE['en']}
             </h3>
-            <p className="text-sm text-purple-100 mb-4">
+            <p className="text-sm text-purple-800 mb-4">
               {HUB_PB_SIDEBAR_BODY[lang] ?? HUB_PB_SIDEBAR_BODY['en']}
             </p>
             <div className="space-y-2">
               {(HUB_PB_SIDEBAR_LINKS[lang] ?? HUB_PB_SIDEBAR_LINKS['en']).map((link, i) => (
                 <div key={i}>
-                  <Link href={link.href} className="text-purple-300 hover:text-purple-200 text-sm font-medium transition-colors">
+                  <Link href={link.href} className="text-purple-700 hover:text-purple-900 text-sm font-medium transition-colors">
                     → {link.label}
                   </Link>
                 </div>

@@ -22,6 +22,7 @@ import { AffiliateLink } from '@/components/AffiliateLink'
 import { CopyButton } from '@/components/CopyButton'
 import { NextStepBlock } from '@/components/NextStepBlock'
 import { StickyNextStepBar } from '@/components/StickyNextStepBar'
+import { getCalloutLabel } from '@/lib/calloutLabels'
 
 interface Props {
   slug: string
@@ -692,7 +693,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
               <div key={i} className={`border ${bgColor} rounded-lg p-4`}>
                 <p className="text-text-secondary text-sm">
                   <span className="mr-2">{icon}</span>
-                  <span className="font-semibold">{callout.type.charAt(0).toUpperCase() + callout.type.slice(1)}:</span>{' '}
+                  <span className="font-semibold">{getCalloutLabel(callout.type, lang)}:</span>{' '}
                   {renderLinks(callout.text)}
                 </p>
               </div>

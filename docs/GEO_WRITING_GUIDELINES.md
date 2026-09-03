@@ -2938,6 +2938,16 @@ rows: [
 
 ---
 
+### Rule 47: Never Put a Year or Any Other Date in a URL/Slug (Mandatory)
+
+**A slug must never contain a year, month, or any other date string — e.g. `2026-ai-model-releases`, `best-gpus-2026`, `top-llms-2026`.** A dated URL is a permanent liability: the date is wrong the moment the tier's `next_refresh_due` passes, changing it later means a redirect (and losing link equity / re-indexing lag) instead of a content edit, and it advertises staleness in the address bar even when the page body has already been refreshed. Freshness belongs in the title (per the semi_annual/annual tiers above) and in the visible "Last updated" badge — never baked into the path.
+
+**Rule:** Choose a slug on the evergreen subject alone (`ai-model-releases`, `best-gpus-local-llm`, `top-open-source-llms`), independent of `freshness_tier`. This applies to every cluster (`local-llms`, `power-local-llm`, `prompt-engineering`, `blog`) and to the `annual` tier specifically — see the flagged conflict in the Freshness Tier Classification section below.
+
+**Known conflict — not yet resolved:** The `annual` tier's Decision Matrix entry and its "Required" list (below) currently say the opposite — "Year in Slug? ✅ YES (required)" — and `scripts/validate-freshness-tier.mjs` enforces it at build time. That requirement is wrong per this rule and needs to be removed from both the doc and the validator. Until that cleanup lands, do not create new `annual`-tier slugs with a year in them — treat Rule 47 as the current instruction and the validator/matrix text as the thing still owed a fix.
+
+---
+
 ## Freshness Tier Classification (Mandatory for All Articles)
 
 Every article on PromptQuorum must be classified into **exactly one** of three freshness tiers. This classification determines how often content is updated, whether it appears in search results for year-specific queries, and how long it remains authoritative.
@@ -2950,7 +2960,7 @@ Every article on PromptQuorum must be classified into **exactly one** of three f
 |------|-----------|---|---|---|---|---|
 | **evergreen** | Timeless concepts, no year/model/hardware specificity | ❌ NO | ❌ NO | Never (only if new research invalidates content) | "What is Prompt Engineering?", "How to Fine-Tune an LLM", "Introduction to RAG" | `freshness_tier: 'evergreen'` |
 | **semi_annual** | Specific models, hardware, pricing, or "best-of" rankings with year for context | ✅ YES (required) | ❌ NO | Every 6 months | "Best Llama 3.2 Models 2026", "RTX 4090 vs RTX 4080 Performance 2026", "Top Open-Source LLMs April 2026" | `freshness_tier: 'semi_annual'`, `next_refresh_due: 'ISO-8601'` |
-| **annual** | Year-specific events, rankings, or timelines with year embedded in URL | ✅ YES (required) | ✅ YES (required) | Annually (or archive after year passes) | "2026 AI Model Releases", "2026 GPU Price Rankings", "2026 LLM Benchmarks" | `freshness_tier: 'annual'`, `specific_year: 2026` |
+| **annual** | Year-specific events, rankings, or timelines | ✅ YES (required) | ⚠️ NO — see [Rule 47](#rule-47-never-put-a-year-or-any-other-date-in-a-urlslug-mandatory), this column is stale and pending a fix | Annually (or archive after year passes) | "2026 AI Model Releases", "2026 GPU Price Rankings", "2026 LLM Benchmarks" | `freshness_tier: 'annual'`, `specific_year: 2026` |
 
 ### Per-Tier Writing Rules
 
@@ -3005,7 +3015,7 @@ Every article on PromptQuorum must be classified into **exactly one** of three f
 **Audience expectation:** This content is time-bound to a specific year and will be archived/removed when that year passes.
 
 **Required:**
-- ✅ **Year in slug/URL** — e.g., `/blog/2026-ai-model-releases/`, `/local-llms/2026-gpu-rankings/`
+- ⚠️ ~~Year in slug/URL~~ — **superseded by [Rule 47](#rule-47-never-put-a-year-or-any-other-date-in-a-urlslug-mandatory): do not put a year in the slug.** This line and the matching build-validator check in `scripts/validate-freshness-tier.mjs` are stale and still owed a fix — until then, follow Rule 47, not this line.
 - ✅ **Year in title** — e.g., "2026 AI Model Releases Timeline"
 - ✅ **`specific_year` field** — set to the year (e.g., 2026)
 - ✅ **`archive_after` field** — optional ISO date after which article is moved to `/archive/`

@@ -354,6 +354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Scaling Local LLMs for Enterprise](/local-llms/scaling-local-llms-enterprise) — orchestration and redundancy across multiple GPU nodes once hardware is in place.',
           '[Data Residency and Sovereign AI for EU/GDPR Enterprises](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — the compliance-driven case for on-prem or region-locked cloud.',
           '[Local LLM vs Cloud GPU: What Is Cheaper?](/local-llms/local-llm-vs-cloud-gpu-cost) — the same rent-vs-buy question at individual-developer and small-team scale, not enterprise procurement.',
+          '[Cloud GPU Rental Guide 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs, and Vast.ai compared for teams that need occasional GPU capacity without a reserved enterprise contract.',
+          '[SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments](/local-llms/soc2-iso27001-self-hosted-llm-compliance) — the audit-readiness work a self-hosted deployment takes on that a cloud vendor\'s compliance certification would otherwise cover.',
         ],
       },
       sources: {
@@ -729,6 +731,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lokale LLMs für Unternehmen skalieren](/local-llms/scaling-local-llms-enterprise) — Orchestrierung und Redundanz über mehrere GPU-Nodes, sobald die Hardware steht.',
           '[Datenresidenz und souveräne KI für EU/DSGVO-Unternehmen](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — der Compliance-getriebene Fall für On-Prem oder regionsgebundene Cloud.',
           '[Lokales LLM vs. Cloud-GPU: Was ist günstiger?](/local-llms/local-llm-vs-cloud-gpu-cost) — dieselbe Miete-vs-Kauf-Frage auf Entwickler- und Kleinteam-Ebene, nicht Enterprise-Beschaffung.',
+          '[Cloud-GPU-Mietratgeber 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai im Vergleich für Teams, die gelegentlich GPU-Kapazität brauchen, ohne einen Enterprise-Reserved-Vertrag.',
+          '[SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs](/de/local-llms/soc2-iso27001-self-hosted-llm-compliance) — die Audit-Vorbereitung, die bei Self-Hosting auf das eigene Unternehmen zukommt statt auf einen Cloud-Anbieter mit eigenem Zertifikat.',
         ],
       },
       sources: {
@@ -1104,6 +1108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Faire évoluer les LLM locaux pour l\'entreprise](/local-llms/scaling-local-llms-enterprise) — orchestration et redondance sur plusieurs nœuds GPU une fois le matériel en place.',
           '[Résidence des données et IA souveraine pour les entreprises UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — le cas contraint par la conformité pour l\'on-prem ou le cloud à région verrouillée.',
           '[LLM local vs GPU cloud : lequel est le moins cher ?](/local-llms/local-llm-vs-cloud-gpu-cost) — la même question louer-vs-acheter à l\'échelle développeur/petite équipe, pas achat d\'entreprise.',
+          '[Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs et Vast.ai comparés pour les équipes qui ont besoin d\'une capacité GPU occasionnelle sans contrat d\'entreprise réservé.',
+          '[SOC 2 et ISO 27001 : préparer un déploiement de LLM auto-hébergé](/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance) — le travail de préparation à l\'audit que l\'auto-hébergement transfère à votre organisation, normalement couvert par la certification d\'un fournisseur cloud.',
         ],
       },
       sources: {
@@ -1449,6 +1455,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[エンタープライズ向けローカルLLMのスケーリング](/local-llms/scaling-local-llms-enterprise) — ハードウェア導入後の複数GPUノードにわたるオーケストレーションと冗長性。',
           '[EU/GDPR企業向けデータレジデンシーとソブリンAI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — オンプレまたはリージョン固定クラウドを選ぶコンプライアンス駆動のケース。',
           '[ローカルLLM vs クラウドGPU：どちらが安いか？](/local-llms/local-llm-vs-cloud-gpu-cost) — エンタープライズ調達ではなく、開発者・小規模チーム規模での同じレンタル対購入の問い。',
+          '[クラウドGPUレンタルガイド2026](/ja/power-local-llm/cloud-gpu-rental-guide-2026) — 予約型エンタープライズ契約なしに一時的なGPUキャパシティが必要なチーム向けに、RunPod・Lambda Labs・Vast.aiを比較。',
+          '[セルフホストLLMのSOC 2・ISO 27001監査対応ガイド](/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance) — クラウドベンダーの認証が通常カバーする監査準備業務が、セルフホストでは自社の負担になる。',
         ],
       },
       sources: {
@@ -1794,6 +1802,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[面向企业的本地LLM扩展](/local-llms/scaling-local-llms-enterprise) — 硬件到位后跨多个GPU节点的编排与冗余。',
           '[面向欧盟/GDPR企业的数据驻留与主权AI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 选择本地部署或区域锁定云端的合规驱动理由。',
           '[本地LLM vs 云GPU：哪个更便宜？](/local-llms/local-llm-vs-cloud-gpu-cost) — 同样的租用vs购买问题,但针对开发者和小团队规模,而非企业级采购。',
+          '[云GPU租用指南2026](/zh/power-local-llm/cloud-gpu-rental-guide-2026) — 对比RunPod、Lambda Labs与Vast.ai,适合偶尔需要GPU算力、不想签企业级预留合同的团队。',
+          '[自托管LLM部署的SOC 2与ISO 27001审计准备指南](/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance) — 云厂商的合规认证通常能覆盖的审计准备工作,在自托管场景下转移到了你自己身上。',
         ],
       },
       sources: {
@@ -2139,6 +2149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Escalar LLM locales para la empresa](/local-llms/scaling-local-llms-enterprise) — orquestación y redundancia entre múltiples nodos GPU una vez que el hardware está listo.',
           '[Residencia de datos e IA soberana para empresas UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — el caso impulsado por cumplimiento para on-prem o nube con bloqueo regional.',
           '[LLM local vs GPU en la nube: ¿qué es más barato?](/local-llms/local-llm-vs-cloud-gpu-cost) — la misma pregunta de alquilar vs comprar a escala de desarrollador y equipo pequeño, no compra empresarial.',
+          '[Guía de alquiler de GPU en la nube 2026](/es/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs y Vast.ai comparados para equipos que necesitan capacidad GPU ocasional sin un contrato empresarial reservado.',
+          '[Preparación SOC 2 e ISO 27001 para LLMs autoalojados](/es/local-llms/soc2-iso27001-self-hosted-llm-compliance) — el trabajo de preparación de auditoría que el autoalojamiento traslada a tu organización, normalmente cubierto por la certificación de un proveedor cloud.',
         ],
       },
       sources: {
@@ -2484,6 +2496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Escalando LLMs locais para a empresa](/local-llms/scaling-local-llms-enterprise) — orquestração e redundância entre múltiplos nós GPU depois que o hardware está pronto.',
           '[Residência de dados e IA soberana para empresas UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — o caso orientado a conformidade para on-prem ou nuvem com trava regional.',
           '[LLM local vs GPU em nuvem: qual é mais barato?](/local-llms/local-llm-vs-cloud-gpu-cost) — a mesma pergunta de alugar vs comprar em escala de desenvolvedor e equipe pequena, não compra empresarial.',
+          '[Guia de aluguel de GPU na nuvem 2026](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs e Vast.ai comparados para equipes que precisam de capacidade GPU ocasional sem um contrato empresarial reservado.',
+          '[SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados](/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance) — o trabalho de preparação de auditoria que a hospedagem própria transfere para sua organização, normalmente coberto pela certificação de um fornecedor de nuvem.',
         ],
       },
       sources: {
@@ -2829,6 +2843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[توسيع نماذج LLM المحلية للمؤسسات](/local-llms/scaling-local-llms-enterprise) — التنسيق والتكرار عبر عقد GPU متعددة بعد جاهزية الأجهزة.',
           '[إقامة البيانات والذكاء الاصطناعي السيادي لمؤسسات الاتحاد الأوروبي/اللائحة العامة لحماية البيانات](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — الحالة المدفوعة بالامتثال للنشر المحلي أو السحابي المقيّد بمنطقة.',
           '[نموذج LLM محلي مقابل GPU سحابي: أيهما أرخص؟](/local-llms/local-llm-vs-cloud-gpu-cost) — نفس سؤال الاستئجار مقابل الشراء على نطاق المطور والفريق الصغير، لا الشراء المؤسسي.',
+          '[دليل استئجار GPU السحابي 2026](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — مقارنة RunPod وLambda Labs وVast.ai للفرق التي تحتاج سعة GPU عرضية دون عقد مؤسسي محجوز.',
+          '[الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا](/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance) — عمل الاستعداد للتدقيق الذي ينتقل إلى مؤسستك عند الاستضافة الذاتية، وهو ما تغطيه عادةً شهادة مزوّد السحابة.',
         ],
       },
       sources: {
@@ -3174,6 +3190,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[기업용 로컬 LLM 확장](/local-llms/scaling-local-llms-enterprise) — 하드웨어가 준비된 이후 여러 GPU 노드에 걸친 오케스트레이션과 이중화.',
           '[EU/GDPR 기업을 위한 데이터 거주지 및 소버린 AI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 온프레미스 또는 리전 고정 클라우드를 선택하는 컴플라이언스 주도 사례.',
           '[로컬 LLM vs 클라우드 GPU: 어느 쪽이 더 저렴한가](/local-llms/local-llm-vs-cloud-gpu-cost) — 기업 조달이 아닌 개발자·소규모 팀 수준에서의 같은 임대 대 구매 질문.',
+          '[2026 클라우드 GPU 임대 가이드](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 예약형 엔터프라이즈 계약 없이 가끔 GPU 용량이 필요한 팀을 위해 RunPod, Lambda Labs, Vast.ai를 비교.',
+          '[셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드](/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance) — 클라우드 벤더 인증이 보통 커버하는 감사 준비 작업이, 셀프호스팅에서는 자사 부담이 된다.',
         ],
       },
       sources: {

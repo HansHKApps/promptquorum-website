@@ -1231,6 +1231,63 @@ const POST_UI: Record<string, Record<string, string>> = {
     ar: 'حقائق سريعة',
     ko: '핵심 정보',
   },
+  domainLabel: {
+    en: 'Domain', de: 'Bereich', fr: 'Domaine', ja: '分野', zh: '领域', es: 'Dominio', pt: 'Domínio',
+    ar: 'المجال', ko: '분야',
+  },
+  filterAll: {
+    en: 'All', de: 'Alle', fr: 'Tous', ja: 'すべて', zh: '全部', es: 'Todos', pt: 'Todos',
+    ar: 'الكل', ko: '전체',
+  },
+  filterBeginner: {
+    en: 'Beginner', de: 'Anfänger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',
+    ar: 'مبتدئ', ko: '초급',
+  },
+  filterIntermediate: {
+    en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário',
+    ar: 'متوسط', ko: '중급',
+  },
+  filterAdvanced: {
+    en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado',
+    ar: 'متقدم', ko: '고급',
+  },
+  filterAgents: {
+    en: 'Agents', de: 'Agenten', fr: 'Agents', ja: 'エージェント', zh: '智能体', es: 'Agentes', pt: 'Agentes',
+    ar: 'الوكلاء', ko: '에이전트',
+  },
+  filterRag: {
+    en: 'RAG', de: 'RAG', fr: 'RAG', ja: 'RAG', zh: 'RAG', es: 'RAG', pt: 'RAG',
+    ar: 'RAG', ko: 'RAG',
+  },
+  filterSafety: {
+    en: 'Safety', de: 'Sicherheit', fr: 'Sécurité', ja: '安全性', zh: '安全性', es: 'Seguridad', pt: 'Segurança',
+    ar: 'السلامة', ko: '안전성',
+  },
+  filterReasoning: {
+    en: 'Reasoning', de: 'Schlussfolgern', fr: 'Raisonnement', ja: '推論', zh: '推理', es: 'Razonamiento', pt: 'Raciocínio',
+    ar: 'الاستدلال', ko: '추론',
+  },
+  filterFineTuning: {
+    en: 'Fine-tuning', de: 'Feinabstimmung', fr: 'Fine-tuning', ja: 'ファインチューニング', zh: '微调', es: 'Ajuste fino', pt: 'Ajuste fino',
+    ar: 'الضبط الدقيق', ko: '파인튜닝',
+  },
+  filterEvaluation: {
+    en: 'Evaluation', de: 'Evaluation', fr: 'Évaluation', ja: '評価', zh: '评估', es: 'Evaluación', pt: 'Avaliação',
+    ar: 'التقييم', ko: '평가',
+  },
+}
+
+const FILTER_VALUE_KEYS: Record<string, string> = {
+  all: 'filterAll',
+  beginner: 'filterBeginner',
+  intermediate: 'filterIntermediate',
+  advanced: 'filterAdvanced',
+  agents: 'filterAgents',
+  rag: 'filterRag',
+  safety: 'filterSafety',
+  reasoning: 'filterReasoning',
+  'fine-tuning': 'filterFineTuning',
+  evaluation: 'filterEvaluation',
 }
 
 const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
@@ -1430,7 +1487,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           <div className="mb-8">
             {/* Level filter */}
             <div className="mb-4">
-              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">Level</p>
+              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">{POST_UI.levelLabel[lang] ?? POST_UI.levelLabel['en']}</p>
               <div className="flex flex-wrap gap-2">
                 {['all', 'beginner', 'intermediate', 'advanced'].map(level => (
                   <button
@@ -1442,7 +1499,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
                         : 'bg-primary/10 text-text-secondary border border-primary/20 hover:border-primary/40'
                     }`}
                   >
-                    {level === 'all' ? 'All' : level.charAt(0).toUpperCase() + level.slice(1)}
+                    {POST_UI[FILTER_VALUE_KEYS[level]][lang] ?? POST_UI[FILTER_VALUE_KEYS[level]]['en']}
                   </button>
                 ))}
               </div>
@@ -1450,7 +1507,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
 
             {/* Domain filter */}
             <div>
-              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">Domain</p>
+              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">{POST_UI.domainLabel[lang] ?? POST_UI.domainLabel['en']}</p>
               <div className="flex flex-wrap gap-2">
                 {['all', 'agents', 'rag', 'safety', 'reasoning', 'fine-tuning', 'evaluation'].map(domain => (
                   <button
@@ -1462,7 +1519,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
                         : 'bg-primary/10 text-text-secondary border border-primary/20 hover:border-primary/40'
                     }`}
                   >
-                    {domain === 'all' ? 'All' : domain.charAt(0).toUpperCase() + domain.slice(1)}
+                    {POST_UI[FILTER_VALUE_KEYS[domain]][lang] ?? POST_UI[FILTER_VALUE_KEYS[domain]]['en']}
                   </button>
                 ))}
               </div>

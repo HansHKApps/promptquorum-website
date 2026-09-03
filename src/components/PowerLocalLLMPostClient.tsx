@@ -34,6 +34,7 @@ import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
+import { getCalloutLabel } from '@/lib/calloutLabels'
 
 type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
@@ -1037,7 +1038,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
               <div key={i} className={`border ${bgColor} rounded-lg p-4`}>
                 <p className="text-text-secondary text-sm">
                   <span className="mr-2">{icon}</span>
-                  <span className="font-semibold">{callout.type.charAt(0).toUpperCase() + callout.type.slice(1)}:</span>{' '}
+                  <span className="font-semibold">{getCalloutLabel(callout.type, lang)}:</span>{' '}
                   {renderInlineLinks(callout.text, lang)}
                 </p>
               </div>

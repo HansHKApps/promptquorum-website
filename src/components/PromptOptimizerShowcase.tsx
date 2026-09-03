@@ -19,6 +19,7 @@ type ShowcaseStrings = {
   yourPrompt: string
   promptPlaceholder: string
   promptTip: string
+  tipLabel: string
   primaryProvider: string
   optimizePrompt: string
   compareFrameworks: string
@@ -44,6 +45,7 @@ const translations = {
     yourPrompt: 'Your Prompt',
     promptPlaceholder: 'Enter your prompt here... Describe what you want the AI to do.',
     promptTip: 'Be specific about your requirements, context, and desired output format.',
+    tipLabel: 'Tip',
     primaryProvider: 'Primary Provider',
     optimizePrompt: 'Optimize Prompt',
     compareFrameworks: 'Compare Frameworks',
@@ -67,6 +69,7 @@ const translations = {
     yourPrompt: 'Tu Prompt',
     promptPlaceholder: 'Ingresa tu prompt aquí... Describe lo que quieres que haga la IA.',
     promptTip: 'Sé específico sobre tus requisitos, contexto y formato de salida deseado.',
+    tipLabel: 'Consejo',
     primaryProvider: 'Proveedor Principal',
     optimizePrompt: 'Optimizar Prompt',
     compareFrameworks: 'Comparar Frameworks',
@@ -90,6 +93,7 @@ const translations = {
     yourPrompt: 'Ihr Prompt',
     promptPlaceholder: 'Geben Sie Ihren Prompt hier ein... Beschreiben Sie, was die KI tun soll.',
     promptTip: 'Seien Sie konkret mit Ihren Anforderungen, dem Kontext und dem gewünschten Ausgabeformat.',
+    tipLabel: 'Tipp',
     primaryProvider: 'Primärer Anbieter',
     optimizePrompt: 'Prompt optimieren',
     compareFrameworks: 'Frameworks vergleichen',
@@ -113,6 +117,7 @@ const translations = {
     yourPrompt: 'Votre Prompt',
     promptPlaceholder: 'Entrez votre prompt ici... Décrivez ce que vous voulez que l\'IA fasse.',
     promptTip: 'Soyez spécifique sur vos exigences, contexte et format de sortie souhaité.',
+    tipLabel: 'Astuce',
     primaryProvider: 'Fournisseur Principal',
     optimizePrompt: 'Optimiser le Prompt',
     compareFrameworks: 'Comparer les Frameworks',
@@ -136,6 +141,7 @@ const translations = {
     yourPrompt: 'あなたのプロンプト',
     promptPlaceholder: 'ここにプロンプトを入力してください... AIに何をさせたいかを説明してください。',
     promptTip: '要件、コンテキスト、目的の出力形式について具体的にしてください。',
+    tipLabel: 'ヒント',
     primaryProvider: 'プライマリプロバイダー',
     optimizePrompt: 'プロンプトを最適化',
     compareFrameworks: 'フレームワークを比較',
@@ -159,6 +165,7 @@ const translations = {
     yourPrompt: '您的提示词',
     promptPlaceholder: '在此输入提示词...描述您希望 AI 执行的操作。',
     promptTip: '在您的要求、上下文和期望输出格式方面要具体。',
+    tipLabel: '提示',
     primaryProvider: '主要提供商',
     optimizePrompt: '优化提示词',
     compareFrameworks: '比较框架',
@@ -182,6 +189,7 @@ const translations = {
     yourPrompt: 'Seu Prompt',
     promptPlaceholder: 'Digite seu prompt aqui... Descreva o que você quer que a IA faça.',
     promptTip: 'Seja específico sobre seus requisitos, contexto e formato de saída desejado.',
+    tipLabel: 'Dica',
     primaryProvider: 'Provedor Principal',
     optimizePrompt: 'Otimizar Prompt',
     compareFrameworks: 'Comparar Frameworks',
@@ -205,6 +213,7 @@ const translations = {
     yourPrompt: 'طلبك',
     promptPlaceholder: 'أدخل طلبك هنا... وصف ما تريد من الذكاء الاصطناعي أن يفعله.',
     promptTip: 'كن محددًا بشأن متطلباتك والسياق وصيغة الإخراج المطلوبة.',
+    tipLabel: 'نصيحة',
     primaryProvider: 'المزود الأساسي',
     optimizePrompt: 'حسِّن الطلب',
     compareFrameworks: 'قارن الأطر',
@@ -228,6 +237,7 @@ const translations = {
     yourPrompt: '프롬프트',
     promptPlaceholder: '프롬프트를 입력하세요... AI에게 원하는 작업을 설명해 주세요.',
     promptTip: '요구 사항, 맥락, 원하는 출력 형식에 대해 구체적으로 작성하세요.',
+    tipLabel: '팁',
     primaryProvider: '기본 공급자',
     optimizePrompt: '프롬프트 최적화',
     compareFrameworks: '프레임워크 비교',
@@ -322,7 +332,7 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
           className="w-full h-32 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none font-mono text-sm"
         />
         <p className="text-xs text-text-secondary mt-2">
-          💡 <strong>Tip:</strong> {t.promptTip}
+          💡 <strong>{t.tipLabel}:</strong> {t.promptTip}
         </p>
       </div>
 
