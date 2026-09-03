@@ -25,11 +25,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot, and Cline all run an "agent mode" that edits multiple files and runs terminal commands on your behalf, but they differ on price, model access, and where your code goes. This guide compares the four on the criteria that decide a real purchase: agentic capability, pricing (verified against each vendor\'s own pricing page in August 2026), model flexibility, and IDE support.',
+      'Cursor, Windsurf, GitHub Copilot, and Cline all run an "agent mode" that edits multiple files and runs terminal commands on your behalf, but they differ on price, model access, and where your code goes. This guide compares those four, plus Bodega One Code — a local-first IDE with a built-in agent, currently in open beta — on the criteria that decide a real purchase: agentic capability, pricing (verified against each vendor\'s own pricing page, most recently in September 2026), model flexibility, and IDE support.',
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. Pricing verified on each vendor site.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing an AI coding assistant with agent mode who want to compare Cursor, Windsurf, GitHub Copilot, and Cline on price, model access, and workflow fit.',
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf now costs the same as Cursor Pro ($20/month, up from $15 earlier in the year) and no longer wins on price — pick it only if you specifically prefer its Cascade agent flow. No single tool wins every category; pick based on workflow, not marketing claims.',
+      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf now costs the same as Cursor Pro ($20/month, up from $15 earlier in the year) and no longer wins on price — pick it only if you specifically prefer its Cascade agent flow. Bodega One Code is worth watching if you want one integrated local-first IDE with agent mode built in rather than an extension bolted onto an existing editor, but it is still in open beta with unfinalized Pro pricing. No single tool wins every category; pick based on workflow, not marketing claims.',
     quickAnswerTop: {
       en: {
         question: 'Which AI coding assistant has the best agent mode in 2026?',
@@ -56,9 +56,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: Cascade agent, $20/month Pro (raised from $15 in March 2026) — price parity with Cursor',
           'GitHub Copilot: coding agent tied to GitHub Issues/PRs, $10/month Pro, $39/month Pro+, $100/month Max',
           'Cline: open-source extension, $0 itself — cost is whatever LLM API you connect, or $0 with a local model via Ollama/LM Studio',
-          'None of the four has a standard public affiliate/commission program',
+          'Bodega One Code: local-first desktop IDE with a built-in agent, open beta — Personal free forever, Pro is a one-time purchase with an unannounced price',
+          'None of the five has a standard public affiliate/commission program',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -73,6 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'Final Verdict', anchor: '#final-verdict' },
       { label: 'Affiliate Program Status', anchor: '#affiliate-status' },
       { label: 'FAQ', anchor: '#faq' },
@@ -121,12 +123,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
-        content: 'Verified directly against cursor.com/pricing, windsurf.com (redirects to devin.ai/pricing following the Cognition acquisition), github.com/features/copilot/plans, and cline.bot/pricing, cross-checked against independent pricing trackers. Subscription pricing for developer tools changes with plan revisions — confirm the current rate on the vendor site before subscribing.',
+        content: 'Verified directly against cursor.com/pricing, windsurf.com (redirects to devin.ai/pricing following the Cognition acquisition), github.com/features/copilot/plans, cline.bot/pricing, and bodegaone.ai/pricing, cross-checked against independent pricing trackers. Subscription pricing for developer tools changes with plan revisions — confirm the current rate on the vendor site before subscribing.',
         items: [
           '**Cursor:** free Hobby tier; Pro, Pro+, and Ultra all share a $20/month base with escalating included-usage multipliers (Pro+ ≈3x, Ultra ≈20x), plus usage-based billing once included usage runs out; Teams from $40/user/month.',
           '**Windsurf:** free tier with a light daily/weekly quota; Pro $20/month (raised from $15 in March 2026, matching Cursor); Max $200/month; Teams $40/user/month; Enterprise custom. The credit-pool system was replaced by daily/weekly quotas in March 2026.',
           '**GitHub Copilot:** Free tier (2,000 completions/month); Pro $10/month ($15 included AI credits); Pro+ $39/month ($70 included AI credits); Max $100/month ($200 included AI credits); Business $19/user/month (1,900 AI credits); Enterprise $39/user/month (3,900 AI credits). Moved to usage-based AI-credit billing on June 1, 2026.',
           '**Cline:** the extension itself is $0, open source, MIT-licensed. Real cost is whatever LLM API you connect (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek, and more), or $0 if you point it at a local model via Ollama or LM Studio — both work with no API key required.',
+          '**Bodega One Code:** Personal tier is free forever (one machine, non-commercial, one workspace); Pro is a one-time purchase — not a subscription — that adds commercial-use rights, a second machine, and unlimited workspaces, but the vendor lists its price as "TBD" ahead of full release; Enterprise is custom-priced. The whole app, including commercial use, is free during the open beta.',
           '**Windsurf is now under Cognition (maker of Devin).** windsurf.com redirects to devin.ai\'s pricing page following Cognition\'s acquisition of Windsurf\'s team, product, and brand; the Windsurf editor continues to ship under its own name with Devin integration layered in.',
         ],
       },
@@ -146,9 +149,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline vs Bodega One Code',
         content:
-          'Pricing is an August 2026 snapshot verified against each vendor\'s own pricing page — Cursor, Windsurf, and GitHub Copilot all changed their pricing structure at least once in 2026, so confirm the current rate before subscribing. "Model Access" reflects what each tool lets you choose at the model-selection level, not just what powers autocomplete.',
+          'Pricing is an August–September 2026 snapshot verified against each vendor\'s own pricing page — Cursor, Windsurf, and GitHub Copilot all changed their pricing structure at least once in 2026, so confirm the current rate before subscribing. "Model Access" reflects what each tool lets you choose at the model-selection level, not just what powers autocomplete.',
         columns: ['Tool', 'Link', 'Best For', 'Pricing (Aug 2026)', 'Model Access', 'Agent Mode', 'IDE', 'Why Pay?'],
         rows: [
           {
@@ -191,6 +194,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             'Why Pay?': 'Max control — BYOK or local model, $0',
           },
+          {
+            'Tool': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'Best For': 'All-in-one local-first IDE (beta)',
+            'Pricing (Aug 2026)': 'Free beta / Pro one-time, price TBD',
+            'Model Access': '10+ providers incl. Ollama, LM Studio',
+            'Agent Mode': 'Built-in autonomous agent',
+            'IDE': 'Bodega One Code (Monaco-based)',
+            'Why Pay?': 'Commercial use, 2nd machine',
+          },
         ],
       },
       decisionMatrix: {
@@ -207,6 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'If You Are…': 'Zero subscription budget', 'Use': 'Cline' },
           { 'If You Are…': 'Want BYOK', 'Use': 'Cline' },
           { 'If You Are…': 'Prefer Cascade workflow', 'Use': 'Windsurf' },
+          { 'If You Are…': 'Want one local-first IDE, not an extension', 'Use': 'Bodega One Code (beta)' },
         ],
         note: 'Don\'t choose from a table alone — the fastest way to pick is to run the same coding task in each tool on the same repository (Cursor, then Windsurf, then Copilot, then Cline with a local model) and see which one required the least manual intervention.',
       },
@@ -220,7 +234,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**You like Cascade\'s agent UX specifically →** Windsurf. It no longer wins on price (both are $20/month), so pick it only if you\'ve tried both and prefer its flow.',
           '**Team standardized on GitHub Issues, PRs, and Azure DevOps →** GitHub Copilot. The coding agent reads and writes directly against your existing GitHub workflow.',
           '**Budget is $0 and you\'re willing to run a local model or pay per API token →** Cline. It has no subscription tier at all — you control cost directly.',
-          '**Your code is proprietary, NDA-bound, or under regulatory constraints →** Cline with a local model via Ollama or LM Studio is the only one of the four that can run with zero code leaving your machine.',
+          '**Your code is proprietary, NDA-bound, or under regulatory constraints →** Cline with a local model via Ollama or LM Studio, or Bodega One Code with its air-gap mode, are the only options here that can run with zero code leaving your machine.',
+          '**You want one integrated local-first IDE instead of an extension, and don\'t mind running open-beta software →** Bodega One Code. It bundles editor, chat, and an autonomous agent with an offline/air-gap mode, but its Pro tier price isn\'t finalized yet and it has a shorter track record than the other four tools here.',
         ],
         note: 'Skip this comparison entirely if you only need inline autocomplete, not multi-step agent behavior — a lighter-weight completion plugin (or your IDE\'s built-in AI features) will cost less and set up faster than any of these four.',
       },
@@ -268,6 +283,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Workstation Build Guide](/local-llms/local-llm-workstation-build) — for a dedicated multi-GPU workstation running larger coding models.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: Local-First IDE With a Built-In Agent (Beta)',
+        content: [
+          '**Bodega One Code is a local-first AI desktop IDE, currently in open beta, that bundles a Monaco-based code editor, AI chat, and an autonomous coding agent into one application** — rather than layering agent features onto an existing editor fork, which is how Cursor and Windsurf are built.',
+          'The agent connects to more than 10 model providers, including local runners (Ollama, LM Studio, llama.cpp) alongside cloud providers (Anthropic, OpenAI, Groq, and others), and ships an air-gap mode that blocks all network access so nothing leaves the machine when running a local model — the same offline guarantee Cline offers with a local model, but built into a full IDE rather than added as an extension.',
+          'Bodega One Code runs on Windows, macOS, and Linux. Per the vendor\'s own pricing page, the **Personal tier is free forever** (one machine, non-commercial use, one workspace at a time), and the **Pro tier is a one-time purchase rather than a subscription** — the exact price is listed as "TBD" ahead of full release, and Pro adds commercial-use rights, a second machine activation, and unlimited workspaces. A custom-priced Enterprise tier adds an admin console, SSO, and priority support.',
+          '**During the open beta, the vendor states the entire application — including commercial use — is free.** The company has not published a beta end date, so treat every feature and price here as a snapshot verified in September 2026, not a permanent commitment.',
+          'PromptQuorum found no public affiliate or referral program for Bodega One Code.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'It\'s new. Bodega One Code launched into open beta in 2026 and has a shorter track record than the other four tools on this page. If stability and long-term support matter more than being an early adopter, wait for a stable release before moving your primary workflow onto it.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'Free (beta) / Pro one-time, TBD', label: 'Try Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'Final Verdict',
@@ -277,6 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — best for teams.** Choose it if your workflow already revolves around GitHub or Azure DevOps.',
           '🥉 **Cline — best for control.** Choose it for bring-your-own-key access, local models, privacy, or zero subscription cost.',
           '**Windsurf — best alternative.** Choose it if the Cascade agent flow is the workflow you prefer.',
+          '**Bodega One Code — one to watch.** A local-first, all-in-one alternative to running Cline in a separate editor, but it\'s in open beta with unfinalized Pro pricing — pick it only if you\'re comfortable running beta software.',
           'Still not sure? Try Cursor and Cline first — together they cover the paid-agentic and free-local extremes, and most developers land on one of the two.',
         ],
         affiliateLinks: [
@@ -287,16 +320,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'Does Any of These Four Tools Have an Affiliate Program?',
+        title: 'Does Any of These Five Tools Have an Affiliate Program?',
         content:
-          '**None of the four vendors runs a standard, publicly available, pay-per-referral affiliate program.** What each vendor actually offers is narrower than "affiliate program":',
+          '**None of the five vendors runs a standard, publicly available, pay-per-referral affiliate program.** What each vendor actually offers is narrower than "affiliate program":',
         items: [
           '**Cursor:** a limited-rollout referral program (not universally available) — referrers get $25 usage credit per referred paying customer, referred users get 50% off month one. This is a referral incentive, not a commission-based affiliate program open to publishers.',
           '**Windsurf:** a referral link that gives new signups 250 free flex credits. Also a referral incentive, not an affiliate/commission program.',
           '**GitHub Copilot:** a "Copilot Partner Program" for building Copilot Chat technology integrations — this is a developer/technology partnership, not a pay-per-referral affiliate arrangement.',
           '**Cline:** no referral or affiliate program of any kind; it is a community open-source project.',
+          '**Bodega One Code:** no public affiliate or referral program found as of September 2026.',
         ],
-        note: 'PromptQuorum has no current affiliate relationship with Cursor, Windsurf, GitHub Copilot, or Cline. Every link on this page is a plain, disclosed product link and earns no commission.',
+        note: 'PromptQuorum has no current affiliate relationship with Cursor, Windsurf, GitHub Copilot, Cline, or Bodega One Code. Every link on this page is a plain, disclosed product link and earns no commission.',
       },
       faqSection: {
         id: 'faq',
@@ -331,16 +365,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Cline paired with a local model (Ollama or LM Studio) costs $0 total. If you want occasional access to a stronger cloud model without a subscription, Cline with a pay-per-token API key (OpenAI, Anthropic, or OpenRouter) keeps cost proportional to actual usage instead of a flat monthly fee.',
           },
           {
-            q: 'Do any of these four tools work fully offline?',
-            a: 'Only Cline, and only when paired with a local model via Ollama or LM Studio — in that configuration, no code or prompt data leaves your machine. Cursor, Windsurf, and GitHub Copilot are all built around cloud-hosted models by default; Cursor supports pointing at a custom (including local) OpenAI-compatible endpoint, but its core product experience assumes a network connection.',
+            q: 'Do any of these tools work fully offline?',
+            a: 'Cline, when paired with a local model via Ollama or LM Studio, and Bodega One Code, using its air-gap mode with a local model — in both configurations, no code or prompt data leaves your machine. Cursor, Windsurf, and GitHub Copilot are all built around cloud-hosted models by default; Cursor supports pointing at a custom (including local) OpenAI-compatible endpoint, but its core product experience assumes a network connection.',
           },
           {
             q: 'Which tool is best for a team already standardized on GitHub or Azure DevOps?',
             a: 'GitHub Copilot. Its coding agent reads and writes directly against GitHub Issues and pull requests, and Business ($19/user/month) and Enterprise ($39/user/month) tiers add the organizational controls — audit logs, policy management, IP indemnity — that a Microsoft-standardized compliance stack typically requires.',
           },
           {
-            q: 'Do Cursor, Windsurf, GitHub Copilot, or Cline pay a commission to writers who recommend them?',
-            a: 'No. None of the four runs a standard public affiliate/commission program. Cursor and Windsurf each offer a limited referral-credit incentive (not open to general publishers), GitHub runs a technology-integration partner program (not pay-per-referral), and Cline is a community open-source project with no monetization layer. This page carries no affiliate relationship with any of the four.',
+            q: 'What is Bodega One Code and how does it compare to Cursor or Cline?',
+            a: 'Bodega One Code is a local-first AI IDE, currently in open beta, that bundles a Monaco-based editor, AI chat, and an autonomous coding agent in one app rather than as an extension added to an existing editor. Like Cline, it can run entirely offline against a local model (Ollama, LM Studio, or llama.cpp) via an air-gap mode that blocks network access; unlike Cline, that offline capability is built into a full IDE rather than an extension. Its Personal tier is free forever for non-commercial use on one machine; Pro is a one-time purchase — not a subscription — whose exact price has not been announced. Because it is still in beta, it has a shorter track record than Cursor, Windsurf, GitHub Copilot, or Cline.',
+          },
+          {
+            q: 'Do Cursor, Windsurf, GitHub Copilot, Cline, or Bodega One Code pay a commission to writers who recommend them?',
+            a: 'No. None of the five runs a standard public affiliate/commission program. Cursor and Windsurf each offer a limited referral-credit incentive (not open to general publishers), GitHub runs a technology-integration partner program (not pay-per-referral), Cline is a community open-source project with no monetization layer, and Bodega One Code has no public referral or affiliate program. This page carries no affiliate relationship with any of the five.',
           },
         ],
       },
@@ -355,6 +393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'GitHub Copilot Organization Billing', description: 'GitHub documentation on Business/Enterprise AI-credit billing, effective June 1, 2026.' },
           { url: 'https://cline.bot/pricing', title: 'Cline Pricing/FAQ', description: 'Official confirmation that the Cline extension is free and open source, with usage-based API billing.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: Running Models Locally', description: 'Official Cline documentation for connecting Ollama and LM Studio local models.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Bodega One Code Pricing', description: 'Official Bodega One Code pricing page — Personal, Pro, and Enterprise tiers.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'About Bodega One Code', description: 'Official product page describing Bodega One Code\'s local-first architecture, agent, and platform support.' },
         ],
       },
       relatedReading: {
@@ -374,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. Pricing verified on each vendor site.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-en.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-en.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'en',
@@ -388,6 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -399,6 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Is Cursor better than GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For agentic multi-file work and model flexibility, Cursor is generally the stronger pick — it supports GPT, Claude, and Gemini and its Composer/Cloud Agents handle larger refactors with less manual steering. GitHub Copilot is the better choice specifically for teams already standardized on GitHub Issues, pull requests, and Azure DevOps, since its coding agent works directly against that workflow rather than as a separate editor.' } },
         { '@type': 'Question', 'name': 'Is there a free AI coding assistant with agent mode?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Cline is completely free and open source with no subscription tier — you pay only for the LLM API tokens you use, or nothing at all if you connect a local model via Ollama or LM Studio.' } },
         { '@type': 'Question', 'name': 'What is the actual difference between Windsurf and Cursor in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The two are priced identically at $20/month for their Pro tiers. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'What is Bodega One Code and how does it compare to Cursor or Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code is a local-first AI IDE, currently in open beta, that bundles a Monaco-based editor, AI chat, and an autonomous coding agent in one app rather than as an extension added to an existing editor. Its Personal tier is free forever for non-commercial use on one machine; Pro is a one-time purchase whose exact price has not been announced.' } },
       ],
     },
   },
@@ -410,11 +452,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Bester agentischer KI-Coding-Assistent 2026: Cursor vs. Windsurf vs. GitHub Copilot vs. Cline',
     seoTitle: 'Cursor vs. Windsurf vs. Copilot vs. Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot und Cline verfügen alle über einen "Agentenmodus", der mehrere Dateien bearbeitet und Terminalbefehle in Ihrem Auftrag ausführt — sie unterscheiden sich jedoch bei Preis, Modellzugriff und dem Umgang mit Ihrem Code. Dieser Leitfaden vergleicht die vier Tools anhand der Kriterien, die eine echte Kaufentscheidung bestimmen: agentische Fähigkeiten, Preise (im August 2026 direkt auf den Preisseiten der Anbieter verifiziert), Modellflexibilität und IDE-Unterstützung.',
+      'Cursor, Windsurf, GitHub Copilot und Cline verfügen alle über einen "Agentenmodus", der mehrere Dateien bearbeitet und Terminalbefehle in Ihrem Auftrag ausführt — sie unterscheiden sich jedoch bei Preis, Modellzugriff und dem Umgang mit Ihrem Code. Dieser Leitfaden vergleicht die vier Tools, plus Bodega One Code — eine local-first IDE mit integriertem Agenten, derzeit in offener Beta —, anhand der Kriterien, die eine echte Kaufentscheidung bestimmen: agentische Fähigkeiten, Preise (direkt auf den Preisseiten der Anbieter verifiziert, zuletzt im September 2026), Modellflexibilität und IDE-Unterstützung.',
     metaDescription:
       'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preise direkt bei jedem Anbieter verifiziert.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die einen KI-Coding-Assistenten mit Agentenmodus wählen und Cursor, Windsurf, GitHub Copilot und Cline nach Preis, Modellzugriff und Workflow-Eignung vergleichen möchten.',
@@ -430,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor ist 2026 der beste Allround-KI-Coding-Assistent mit Agentenmodus für die meisten professionellen Entwickler, GitHub Copilot ist die sicherere Standardwahl für Teams, die auf GitHub oder Azure standardisiert sind, und Cline ist die beste kostenlose Option, wenn Sie Ihren eigenen API-Schlüssel mitbringen oder ein lokales Modell nutzen.** Windsurf kostet inzwischen genauso viel wie Cursor Pro (20 $/Monat seit August 2026, zuvor 15 $/Monat) und gewinnt preislich nicht mehr — wählen Sie es nur, wenn Sie den Cascade-Agentenablauf gezielt bevorzugen. Kein einzelnes Tool gewinnt in jeder Kategorie; entscheiden Sie nach Workflow, nicht nach Marketingaussagen.',
+      '**Cursor ist 2026 der beste Allround-KI-Coding-Assistent mit Agentenmodus für die meisten professionellen Entwickler, GitHub Copilot ist die sicherere Standardwahl für Teams, die auf GitHub oder Azure standardisiert sind, und Cline ist die beste kostenlose Option, wenn Sie Ihren eigenen API-Schlüssel mitbringen oder ein lokales Modell nutzen.** Windsurf kostet inzwischen genauso viel wie Cursor Pro (20 $/Monat seit August 2026, zuvor 15 $/Monat) und gewinnt preislich nicht mehr — wählen Sie es nur, wenn Sie den Cascade-Agentenablauf gezielt bevorzugen. Bodega One Code ist einen Blick wert, wenn Sie eine einzige integrierte local-first IDE mit eingebautem Agentenmodus wollen, statt einer Erweiterung, die einem bestehenden Editor aufgesetzt ist — allerdings befindet es sich noch in offener Beta mit unklarer Pro-Preisgestaltung. Kein einzelnes Tool gewinnt in jeder Kategorie; entscheiden Sie nach Workflow, nicht nach Marketingaussagen.',
     quickAnswerTop: {
       de: {
         question: 'Welcher KI-Coding-Assistent hat 2026 den besten Agentenmodus?',
@@ -441,9 +483,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: Cascade-Agent, 20 $/Monat Pro (im März 2026 von 15 $ erhöht) — Preisgleichstand mit Cursor',
           'GitHub Copilot: Coding-Agent an GitHub Issues/PRs gekoppelt, 10 $/Monat Pro, 39 $/Monat Pro+, 100 $/Monat Max',
           'Cline: Open-Source-Erweiterung, 0 $ selbst — Kosten entstehen nur durch die verbundene LLM-API, oder 0 $ bei einem lokalen Modell über Ollama/LM Studio',
-          'Keines der vier Tools hat Stand August 2026 ein reguläres öffentliches Affiliate-/Provisionsprogramm',
+          'Bodega One Code: local-first Desktop-IDE mit eingebautem Agenten, offene Beta — Personal für immer kostenlos, Pro ist ein Einmalkauf mit noch nicht bekanntgegebenem Preis',
+          'Keines der fünf Tools hat ein reguläres öffentliches Affiliate-/Provisionsprogramm',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -458,6 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'Fazit', anchor: '#final-verdict' },
       { label: 'Status der Affiliate-Programme', anchor: '#affiliate-status' },
       { label: 'FAQ', anchor: '#faq' },
@@ -506,12 +550,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Kurzfakten (verifiziert im)',
-        content: 'Direkt verifiziert anhand von cursor.com/pricing, windsurf.com (leitet nach der Cognition-Übernahme auf devin.ai/pricing weiter), github.com/features/copilot/plans und cline.bot/pricing, abgeglichen mit unabhängigen Preis-Trackern. Die Abo-Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — prüfen Sie den aktuellen Preis vor dem Abschluss auf der Anbieterseite. Preise sind USD-Preise; die Anbieter zeigen keine gesondert recherchierbaren EUR-Listenpreise für diese Abos — beim Checkout kann eine lokale Zahlungswährung angeboten werden, die aktuellen USD-Preise gelten aber global.',
+        content: 'Direkt verifiziert anhand von cursor.com/pricing, windsurf.com (leitet nach der Cognition-Übernahme auf devin.ai/pricing weiter), github.com/features/copilot/plans, cline.bot/pricing und bodegaone.ai/pricing, abgeglichen mit unabhängigen Preis-Trackern. Die Abo-Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — prüfen Sie den aktuellen Preis vor dem Abschluss auf der Anbieterseite. Preise sind USD-Preise; die Anbieter zeigen keine gesondert recherchierbaren EUR-Listenpreise für diese Abos — beim Checkout kann eine lokale Zahlungswährung angeboten werden, die aktuellen USD-Preise gelten aber global.',
         items: [
           '**Cursor:** kostenloser Hobby-Tarif; Pro, Pro+ und Ultra teilen sich eine 20-$/Monat-Basis mit steigenden Nutzungs-Multiplikatoren (Pro+ ca. 3x, Ultra ca. 20x), zzgl. nutzungsbasierter Abrechnung nach Verbrauch des enthaltenen Kontingents; Teams ab 40 $/Nutzer/Monat.',
           '**Windsurf:** kostenloser Tarif mit geringem Tages-/Wochenkontingent; Pro 20 $/Monat (im März 2026 von 15 $ erhöht, jetzt gleich mit Cursor); Max 200 $/Monat; Teams 40 $/Nutzer/Monat; Enterprise individuell. Das Guthaben-Pool-System wurde im März 2026 durch Tages-/Wochenkontingente ersetzt.',
           '**GitHub Copilot:** kostenloser Tarif (2.000 Vervollständigungen/Monat); Pro 10 $/Monat (15 $ enthaltenes KI-Guthaben); Pro+ 39 $/Monat (70 $ enthalten); Max 100 $/Monat (200 $ enthalten); Business 19 $/Nutzer/Monat (1.900 KI-Guthaben); Enterprise 39 $/Nutzer/Monat (3.900 KI-Guthaben). Wechsel zur nutzungsbasierten KI-Guthabenabrechnung am 1. Juni 2026.',
           '**Cline:** die Erweiterung selbst ist kostenlos, Open Source, MIT-lizenziert. Reale Kosten entstehen durch die verbundene LLM-API (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek u. a.), oder 0 $ bei einem lokalen Modell über Ollama oder LM Studio — beide funktionieren ohne API-Schlüssel.',
+          '**Bodega One Code:** Der Personal-Tarif ist für immer kostenlos (ein Gerät, nicht-kommerziell, ein Workspace); Pro ist ein Einmalkauf — kein Abo —, der kommerzielle Nutzungsrechte, ein zweites Gerät und unbegrenzte Workspaces hinzufügt, doch der Anbieter nennt den Preis vor dem vollständigen Release als „TBD"; Enterprise wird individuell bepreist. Die gesamte App, einschließlich kommerzieller Nutzung, ist während der offenen Beta kostenlos.',
           '**Windsurf gehört inzwischen zu Cognition**, dem Unternehmen hinter dem autonomen Coding-Agenten Devin, nach der Übernahme von Team, Produkt und Marke durch Cognition. windsurf.com leitet derzeit auf die Preisseite von devin.ai weiter; Devin wird direkt in den Windsurf-Editor integriert statt ihn zu ersetzen.',
         ],
       },
@@ -531,9 +576,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline',
+        title: 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline vs. Bodega One Code',
         content:
-          'Die Preise sind eine Momentaufnahme von August 2026, verifiziert anhand der jeweiligen Anbieter-Preisseite — Cursor, Windsurf und GitHub Copilot haben ihre Preisstruktur 2026 alle mindestens einmal geändert, prüfen Sie also den aktuellen Preis vor dem Abschluss. „Modellzugriff" zeigt, was jedes Tool auf Modellauswahl-Ebene erlaubt, nicht nur, was die Autovervollständigung antreibt.',
+          'Die Preise sind eine Momentaufnahme von August–September 2026, verifiziert anhand der jeweiligen Anbieter-Preisseite — Cursor, Windsurf und GitHub Copilot haben ihre Preisstruktur 2026 alle mindestens einmal geändert, prüfen Sie also den aktuellen Preis vor dem Abschluss. „Modellzugriff" zeigt, was jedes Tool auf Modellauswahl-Ebene erlaubt, nicht nur, was die Autovervollständigung antreibt.',
         columns: ['Tool', 'Link', 'Am besten für', 'Preis (Aug. 2026)', 'Modellzugriff', 'Agentenmodus', 'IDE', 'Warum zahlen?'],
         rows: [
           {
@@ -576,6 +621,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             'Warum zahlen?': 'Volle Kontrolle — BYOK oder lokal, 0 $',
           },
+          {
+            'Tool': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'Am besten für': 'All-in-One local-first IDE (Beta)',
+            'Preis (Aug. 2026)': 'Beta kostenlos / Pro Einmalkauf, TBD',
+            'Modellzugriff': '10+ Provider inkl. Ollama, LM Studio',
+            'Agentenmodus': 'Eingebauter autonomer Agent',
+            'IDE': 'Bodega One Code (Monaco-basiert)',
+            'Warum zahlen?': 'Kommerzielle Nutzung, 2. Gerät',
+          },
         ],
       },
       decisionMatrix: {
@@ -592,6 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Wenn Sie sind …': 'Ohne Abo-Budget', 'Nutzen Sie': 'Cline' },
           { 'Wenn Sie sind …': 'An BYOK interessiert', 'Nutzen Sie': 'Cline' },
           { 'Wenn Sie sind …': 'Fan des Cascade-Workflows', 'Nutzen Sie': 'Windsurf' },
+          { 'Wenn Sie sind …': 'Auf der Suche nach lokaler IDE statt Erweiterung', 'Nutzen Sie': 'Bodega One Code (Beta)' },
         ],
         note: 'Verlassen Sie sich nicht allein auf die Tabelle — am schnellsten wählen Sie, indem Sie dieselbe Coding-Aufgabe im selben Repository in jedem Tool ausprobieren (Cursor, dann Windsurf, dann Copilot, dann Cline mit lokalem Modell) und sehen, welches am wenigsten manuelles Eingreifen brauchte.',
       },
@@ -605,7 +661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sie mögen speziell die Cascade-Agenten-UX →** Windsurf. Preislich gewinnt es nicht mehr (beide kosten 20 $/Monat) — wählen Sie es nur, wenn Sie beide getestet haben und den Ablauf bevorzugen.',
           '**Team standardisiert auf GitHub Issues, PRs und Azure DevOps →** GitHub Copilot. Der Coding-Agent liest und schreibt direkt gegen Ihren bestehenden GitHub-Workflow.',
           '**Budget ist 0 $ und Sie sind bereit, ein lokales Modell zu betreiben oder pro API-Token zu zahlen →** Cline. Es hat gar keinen Abo-Tarif — Sie kontrollieren die Kosten direkt.',
-          '**Ihr Code ist proprietär, NDA-gebunden oder regulatorisch eingeschränkt →** Cline mit einem lokalen Modell über Ollama oder LM Studio ist das einzige der vier Tools, bei dem kein Code Ihren Rechner verlässt.',
+          '**Ihr Code ist proprietär, NDA-gebunden oder regulatorisch eingeschränkt →** Cline mit einem lokalen Modell über Ollama oder LM Studio, oder Bodega One Code mit seinem Air-Gap-Modus, sind hier die einzigen Optionen, bei denen kein Code Ihren Rechner verlässt.',
+          '**Sie wollen eine integrierte local-first IDE statt einer Erweiterung und haben nichts gegen offene Beta-Software →** Bodega One Code. Es bündelt Editor, Chat und einen autonomen Agenten mit einem Offline-/Air-Gap-Modus, doch der Preis des Pro-Tarifs steht noch nicht fest, und es hat eine kürzere Erfolgsbilanz als die anderen vier Tools hier.',
         ],
         note: 'Überspringen Sie diesen Vergleich ganz, wenn Sie nur Inline-Autovervollständigung brauchen, kein mehrstufiges Agentenverhalten — ein leichteres Vervollständigungs-Plugin (oder die integrierten KI-Funktionen Ihrer IDE) kostet weniger und ist schneller eingerichtet als jedes dieser vier Tools.',
       },
@@ -653,6 +710,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local-LLM-Workstation-Bauanleitung](/de/local-llms/local-llm-workstation-build) — für eine dedizierte Multi-GPU-Workstation für größere Coding-Modelle.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: Local-First IDE mit eingebautem Agenten (Beta)',
+        content: [
+          '**Bodega One Code ist eine local-first KI-Desktop-IDE, derzeit in offener Beta, die einen Monaco-basierten Code-Editor, KI-Chat und einen autonomen Coding-Agenten in einer Anwendung bündelt** — statt Agentenfunktionen auf einen bestehenden Editor-Fork aufzusetzen, wie es bei Cursor und Windsurf der Fall ist.',
+          'Der Agent verbindet sich mit mehr als 10 Modell-Providern, darunter lokale Runner (Ollama, LM Studio, llama.cpp) neben Cloud-Providern (Anthropic, OpenAI, Groq und andere), und bietet einen Air-Gap-Modus, der jeglichen Netzwerkzugriff blockiert, sodass bei einem lokalen Modell nichts den Rechner verlässt — dieselbe Offline-Garantie, die Cline mit einem lokalen Modell bietet, hier jedoch in eine vollständige IDE eingebaut statt als Erweiterung hinzugefügt.',
+          'Bodega One Code läuft unter Windows, macOS und Linux. Laut der eigenen Preisseite des Anbieters ist der **Personal-Tarif für immer kostenlos** (ein Gerät, nicht-kommerzielle Nutzung, jeweils ein Workspace), und der **Pro-Tarif ist ein Einmalkauf statt eines Abos** — der genaue Preis wird vor dem vollständigen Release als „TBD" angegeben, und Pro fügt kommerzielle Nutzungsrechte, eine zweite Geräteaktivierung und unbegrenzte Workspaces hinzu. Ein individuell bepreister Enterprise-Tarif ergänzt eine Admin-Konsole, SSO und priorisierten Support.',
+          '**Während der offenen Beta ist laut Anbieter die gesamte Anwendung — einschließlich kommerzieller Nutzung — kostenlos.** Das Unternehmen hat kein Beta-Enddatum veröffentlicht, behandeln Sie also jede hier genannte Funktion und jeden Preis als im September 2026 verifizierte Momentaufnahme, nicht als dauerhafte Zusage.',
+          'PromptQuorum hat kein öffentliches Affiliate- oder Empfehlungsprogramm für Bodega One Code gefunden.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Es ist neu. Bodega One Code startete 2026 in die offene Beta und hat eine kürzere Erfolgsbilanz als die anderen vier Tools auf dieser Seite. Wenn Ihnen Stabilität und langfristiger Support wichtiger sind als früher Zugang, warten Sie auf eine stabile Version, bevor Sie Ihren Hauptworkflow darauf umstellen.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'Kostenlos (Beta) / Pro Einmalkauf, TBD', label: 'Bodega One Code testen' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'Fazit',
@@ -662,6 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — am besten für Teams.** Wählen Sie es, wenn Ihr Workflow bereits um GitHub oder Azure DevOps kreist.',
           '🥉 **Cline — am besten für Kontrolle.** Wählen Sie es für eigenen API-Schlüssel, lokale Modelle, Datenschutz oder null Abo-Kosten.',
           '**Windsurf — beste Alternative.** Wählen Sie es, wenn der Cascade-Agentenablauf der von Ihnen bevorzugte Workflow ist.',
+          '**Bodega One Code — einen Blick wert.** Eine local-first All-in-one-Alternative zum Betrieb von Cline in einem separaten Editor, doch es befindet sich in offener Beta mit noch nicht feststehendem Pro-Preis — wählen Sie es nur, wenn Sie mit Beta-Software zurechtkommen.',
           'Noch unsicher? Testen Sie zuerst Cursor und Cline — zusammen decken sie die bezahlt-agentische und die kostenlos-lokale Extremposition ab, und die meisten Entwickler landen bei einem der beiden.',
         ],
         affiliateLinks: [
@@ -672,16 +747,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'Hat eines dieser vier Tools ein Affiliate-Programm?',
+        title: 'Hat eines dieser fünf Tools ein Affiliate-Programm?',
         content:
-          '**Stand August 2026 betreibt keiner der vier Anbieter ein reguläres, öffentlich zugängliches Provisions-Affiliate-Programm.** Was jeder Anbieter tatsächlich bietet, ist enger als „Affiliate-Programm":',
+          '**Keiner der fünf Anbieter betreibt ein reguläres, öffentlich zugängliches Provisions-Affiliate-Programm.** Was jeder Anbieter tatsächlich bietet, ist enger als „Affiliate-Programm":',
         items: [
           '**Cursor:** ein Empfehlungsprogramm mit eingeschränktem Rollout (nicht allgemein verfügbar) — Empfehlende erhalten 25 $ Nutzungsguthaben pro geworbenem zahlendem Kunden, geworbene Nutzer erhalten 50 % Rabatt im ersten Monat. Dies ist ein Empfehlungsanreiz, kein für Publisher offenes provisionsbasiertes Affiliate-Programm.',
           '**Windsurf:** ein Empfehlungslink, der Neuanmeldungen 250 kostenlose Flex-Guthaben gibt. Ebenfalls ein Empfehlungsanreiz, kein Affiliate-/Provisionsprogramm.',
           '**GitHub Copilot:** ein "Copilot Partner Program" für den Bau von Copilot-Chat-Technologieintegrationen — dies ist eine Entwickler-/Technologiepartnerschaft, keine Provisions-Affiliate-Vereinbarung.',
           '**Cline:** kein Empfehlungs- oder Affiliate-Programm jeglicher Art; es ist ein Community-Open-Source-Projekt.',
+          '**Bodega One Code:** Stand September 2026 kein öffentliches Affiliate- oder Empfehlungsprogramm gefunden.',
         ],
-        note: 'PromptQuorum hat derzeit keine Affiliate-Beziehung zu Cursor, Windsurf, GitHub Copilot oder Cline. Jeder Link auf dieser Seite ist ein einfacher, offengelegter Produktlink ohne Provision.',
+        note: 'PromptQuorum hat derzeit keine Affiliate-Beziehung zu Cursor, Windsurf, GitHub Copilot, Cline oder Bodega One Code. Jeder Link auf dieser Seite ist ein einfacher, offengelegter Produktlink ohne Provision.',
       },
       faqSection: {
         id: 'faq',
@@ -694,9 +770,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie richte ich Cline mit einem lokalen Modell ein?', a: 'Installieren Sie Ollama oder LM Studio, laden Sie ein Coding-Modell herunter (Clines Dokumentation empfiehlt Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 oder Codestral), und wählen Sie in Cline Ollama oder LM Studio als API-Provider — Ollamas Standard-Endpunkt ist http://localhost:11434, LM Studio stellt eine OpenAI-kompatible API auf Port 1234 bereit. Beide benötigen keinen API-Schlüssel. Nutzen Sie mindestens ein 32K-Token-Kontextfenster; intensivere agentische Sitzungen brauchen oft 64K.' },
           { q: 'Kann ich mehrere dieser Tools gleichzeitig nutzen?', a: 'Ja, viele Entwickler tun das — zum Beispiel Cline mit einem lokalen Modell für routinemäßige, wenig sensible Änderungen, und Wechsel zu Cursor oder GitHub Copilot für schwierigere Probleme, bei denen ein stärkeres Cloud-Modell hilft. Es gibt keinen technischen Konflikt beim gleichzeitigen Betrieb mehrerer Erweiterungen in derselben VS-Code-Installation, üblicherweise ist jedoch nur ein Tool pro Sitzung als primärer Agent aktiv.' },
           { q: 'Was ist der beste KI-Coding-Assistent für Einzelentwickler mit knappem Budget?', a: 'Cline in Kombination mit einem lokalen Modell (Ollama oder LM Studio) kostet insgesamt 0 $. Wenn Sie gelegentlich ein stärkeres Cloud-Modell ohne Abo nutzen möchten, hält Cline mit einem API-Schlüssel auf Token-Basis (OpenAI, Anthropic oder OpenRouter) die Kosten proportional zur tatsächlichen Nutzung statt einer festen monatlichen Gebühr.' },
-          { q: 'Funktioniert eines dieser vier Tools vollständig offline?', a: 'Nur Cline, und nur in Kombination mit einem lokalen Modell über Ollama oder LM Studio — in dieser Konfiguration verlässt kein Code und keine Prompt-Daten Ihren Rechner. Cursor, Windsurf und GitHub Copilot basieren standardmäßig alle auf Cloud-gehosteten Modellen; Cursor unterstützt einen benutzerdefinierten (auch lokalen) OpenAI-kompatiblen Endpunkt, doch das Kernprodukt setzt eine Netzwerkverbindung voraus.' },
+          { q: 'Funktioniert eines dieser Tools vollständig offline?', a: 'Cline, in Kombination mit einem lokalen Modell über Ollama oder LM Studio, sowie Bodega One Code, mit seinem Air-Gap-Modus und einem lokalen Modell — in beiden Konfigurationen verlässt kein Code und keine Prompt-Daten Ihren Rechner. Cursor, Windsurf und GitHub Copilot basieren standardmäßig alle auf Cloud-gehosteten Modellen; Cursor unterstützt einen benutzerdefinierten (auch lokalen) OpenAI-kompatiblen Endpunkt, doch das Kernprodukt setzt eine Netzwerkverbindung voraus.' },
           { q: 'Welches Tool eignet sich am besten für ein Team, das bereits auf GitHub oder Azure DevOps standardisiert ist?', a: 'GitHub Copilot. Der Coding-Agent liest und schreibt direkt gegen GitHub Issues und Pull Requests, und die Tarife Business (19 $/Nutzer/Monat) und Enterprise (39 $/Nutzer/Monat) fügen die organisatorischen Kontrollen — Audit-Logs, Richtlinienverwaltung, IP-Freistellung — hinzu, die ein Microsoft-standardisierter Compliance-Stack typischerweise verlangt.' },
-          { q: 'Zahlen Cursor, Windsurf, GitHub Copilot oder Cline eine Provision an Autoren, die sie empfehlen?', a: 'Nein. Stand August 2026 betreibt keines der vier Tools ein reguläres öffentliches Affiliate-/Provisionsprogramm. Cursor und Windsurf bieten jeweils einen eingeschränkten Empfehlungsguthaben-Anreiz (nicht offen für allgemeine Publisher), GitHub betreibt ein Technologie-Integrationsprogramm (keine Provision pro Empfehlung), und Cline ist ein Community-Open-Source-Projekt ohne Monetarisierungsebene. Diese Seite hat keine Affiliate-Beziehung zu einem der vier Tools.' },
+          { q: 'Was ist Bodega One Code, und wie schneidet es im Vergleich zu Cursor oder Cline ab?', a: 'Bodega One Code ist eine local-first KI-IDE, derzeit in offener Beta, die einen Monaco-basierten Editor, KI-Chat und einen autonomen Coding-Agenten in einer Anwendung bündelt, statt als Erweiterung zu einem bestehenden Editor hinzugefügt zu werden. Wie Cline kann es vollständig offline gegen ein lokales Modell (Ollama, LM Studio oder llama.cpp) laufen, dank eines Air-Gap-Modus, der Netzwerkzugriff blockiert; anders als bei Cline ist diese Offline-Fähigkeit in eine vollständige IDE eingebaut statt als Erweiterung. Der Personal-Tarif ist für nicht-kommerzielle Nutzung auf einem Gerät für immer kostenlos; Pro ist ein Einmalkauf — kein Abo —, dessen genauer Preis noch nicht bekanntgegeben wurde. Da es sich noch in der Beta befindet, hat es eine kürzere Erfolgsbilanz als Cursor, Windsurf, GitHub Copilot oder Cline.' },
+          { q: 'Zahlen Cursor, Windsurf, GitHub Copilot, Cline oder Bodega One Code eine Provision an Autoren, die sie empfehlen?', a: 'Nein. Keines der fünf Tools betreibt ein reguläres öffentliches Affiliate-/Provisionsprogramm. Cursor und Windsurf bieten jeweils einen eingeschränkten Empfehlungsguthaben-Anreiz (nicht offen für allgemeine Publisher), GitHub betreibt ein Technologie-Integrationsprogramm (keine Provision pro Empfehlung), Cline ist ein Community-Open-Source-Projekt ohne Monetarisierungsebene, und Bodega One Code hat kein öffentliches Empfehlungs- oder Affiliate-Programm. Diese Seite hat keine Affiliate-Beziehung zu einem der fünf Tools.' },
         ],
       },
       sources: {
@@ -710,6 +787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'GitHub-Copilot-Organisationsabrechnung', description: 'GitHub-Dokumentation zur Business-/Enterprise-KI-Guthabenabrechnung, gültig ab 1. Juni 2026.' },
           { url: 'https://cline.bot/pricing', title: 'Cline-Preise/FAQ', description: 'Offizielle Bestätigung, dass die Cline-Erweiterung kostenlos und Open Source ist, mit nutzungsbasierter API-Abrechnung.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: Modelle lokal ausführen', description: 'Offizielle Cline-Dokumentation zur Anbindung lokaler Ollama- und LM-Studio-Modelle.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Bodega One Code Preise', description: 'Offizielle Bodega-One-Code-Preisseite — Personal-, Pro- und Enterprise-Tarife.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'Über Bodega One Code', description: 'Offizielle Produktseite zur local-first Architektur, dem Agenten und der Plattformunterstützung von Bodega One Code.' },
         ],
       },
       relatedReading: {
@@ -729,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preise direkt bei jedem Anbieter verifiziert.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-de.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-de.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'de',
@@ -743,6 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/de/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -754,6 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Ist Cursor besser als GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für agentische Mehrdatei-Arbeit und Modellflexibilität ist Cursor in der Regel die stärkere Wahl. GitHub Copilot ist speziell für Teams die bessere Wahl, die bereits auf GitHub Issues, Pull Requests und Azure DevOps standardisiert sind.' } },
         { '@type': 'Question', 'name': 'Gibt es einen kostenlosen KI-Coding-Assistenten mit Agentenmodus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Cline ist vollständig kostenlos und Open Source ohne Abo-Tarif — Sie zahlen nur für die genutzten LLM-API-Token, oder gar nichts bei einem lokalen Modell über Ollama oder LM Studio.' } },
         { '@type': 'Question', 'name': 'Was ist der tatsächliche Unterschied zwischen Windsurf und Cursor 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Stand August 2026 sind beide bei ihren Pro-Tarifen preislich identisch bei 20 $/Monat. Der verbleibende Unterschied ist der Workflow: Windsurf nutzt Cascade, Cursor nutzt Composer und Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'Was ist Bodega One Code, und wie schneidet es im Vergleich zu Cursor oder Cline ab?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code ist eine local-first KI-IDE, derzeit in offener Beta, die einen Monaco-basierten Editor, KI-Chat und einen autonomen Coding-Agenten in einer Anwendung bündelt, statt als Erweiterung zu einem bestehenden Editor hinzugefügt zu werden. Der Personal-Tarif ist für nicht-kommerzielle Nutzung auf einem Gerät für immer kostenlos; Pro ist ein Einmalkauf, dessen genauer Preis noch nicht bekanntgegeben wurde.' } },
       ],
     },
   },
@@ -765,11 +846,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleur assistant de code IA agentique 2026 : Cursor vs Windsurf vs GitHub Copilot vs Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot et Cline disposent tous d\'un « mode agent » capable de modifier plusieurs fichiers et d\'exécuter des commandes terminal pour vous, mais ils diffèrent sur le prix, l\'accès aux modèles et la destination de votre code. Ce guide compare les quatre outils sur les critères qui déterminent un achat réel : capacité agentique, tarifs (vérifiés sur la page de prix de chaque éditeur en août 2026), flexibilité de modèle et prise en charge des IDE.',
+      'Cursor, Windsurf, GitHub Copilot et Cline disposent tous d\'un « mode agent » capable de modifier plusieurs fichiers et d\'exécuter des commandes terminal pour vous, mais ils diffèrent sur le prix, l\'accès aux modèles et la destination de votre code. Ce guide compare les quatre outils, plus Bodega One Code — un IDE local-first avec un agent intégré, actuellement en bêta ouverte —, sur les critères qui déterminent un achat réel : capacité agentique, tarifs (vérifiés sur la page de prix de chaque éditeur, en dernier lieu en septembre 2026), flexibilité de modèle et prise en charge des IDE.',
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparés sur le mode agent, les tarifs et l\'accès aux modèles. Prix d\'août 2026 vérifiés sur chaque site éditeur.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui choisissent un assistant de code IA avec mode agent et veulent comparer Cursor, Windsurf, GitHub Copilot et Cline sur le prix, l\'accès aux modèles et l\'adéquation au workflow.',
@@ -785,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor est le meilleur assistant de code IA agentique généraliste en 2026 pour la plupart des développeurs professionnels, GitHub Copilot est le choix le plus sûr pour les équipes déjà standardisées sur GitHub ou Azure, et Cline est la meilleure option gratuite si vous apportez votre propre clé API ou utilisez un modèle local.** Windsurf coûte désormais le même prix que Cursor Pro (20 $/mois depuis août 2026, contre 15 $ plus tôt dans l\'année) et ne gagne plus sur le prix — choisissez-le uniquement si vous préférez spécifiquement son flux d\'agent Cascade. Aucun outil ne gagne dans toutes les catégories ; choisissez selon votre workflow, pas selon le marketing.',
+      '**Cursor est le meilleur assistant de code IA agentique généraliste en 2026 pour la plupart des développeurs professionnels, GitHub Copilot est le choix le plus sûr pour les équipes déjà standardisées sur GitHub ou Azure, et Cline est la meilleure option gratuite si vous apportez votre propre clé API ou utilisez un modèle local.** Windsurf coûte désormais le même prix que Cursor Pro (20 $/mois depuis août 2026, contre 15 $ plus tôt dans l\'année) et ne gagne plus sur le prix — choisissez-le uniquement si vous préférez spécifiquement son flux d\'agent Cascade. Bodega One Code mérite d\'être surveillé si vous voulez un IDE local-first intégré avec un mode agent natif plutôt qu\'une extension greffée sur un éditeur existant, mais il reste en bêta ouverte avec une tarification Pro non finalisée. Aucun outil ne gagne dans toutes les catégories ; choisissez selon votre workflow, pas selon le marketing.',
     quickAnswerTop: {
       fr: {
         question: 'Quel assistant de code IA a le meilleur mode agent en 2026 ?',
@@ -796,9 +877,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf : agent Cascade, Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026) — parité de prix avec Cursor',
           'GitHub Copilot : agent de codage lié aux issues/PR GitHub, Pro à 10 $/mois, Pro+ à 39 $/mois, Max à 100 $/mois',
           'Cline : extension open source, 0 $ en soi — le coût dépend uniquement de l\'API LLM connectée, ou 0 $ avec un modèle local via Ollama/LM Studio',
-          'Aucun des quatre éditeurs n\'a de programme d\'affiliation public standard en août 2026',
+          'Bodega One Code : IDE de bureau local-first avec agent intégré, bêta ouverte — Personal gratuit à vie, Pro est un achat unique avec un prix encore non annoncé',
+          'Aucun des cinq éditeurs n\'a de programme d\'affiliation public standard',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -813,6 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'Verdict final', anchor: '#final-verdict' },
       { label: 'Statut des programmes d\'affiliation', anchor: '#affiliate-status' },
       { label: 'FAQ', anchor: '#faq' },
@@ -861,12 +944,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Faits rapides (vérifiés en)',
-        content: 'Vérifiés directement sur cursor.com/pricing, windsurf.com (redirige vers devin.ai/pricing après le rachat par Cognition), github.com/features/copilot/plans et cline.bot/pricing, recoupés avec des trackers de prix indépendants. Les tarifs des outils de développement changent avec les révisions de plans — confirmez le tarif actuel sur le site de l\'éditeur avant de vous abonner. Les prix sont en USD ; ces abonnements ne disposent pas de tarifs EUR distincts publiés — le paiement peut proposer une devise locale au moment du règlement, mais le tarif USD affiché est global.',
+        content: 'Vérifiés directement sur cursor.com/pricing, windsurf.com (redirige vers devin.ai/pricing après le rachat par Cognition), github.com/features/copilot/plans, cline.bot/pricing et bodegaone.ai/pricing, recoupés avec des trackers de prix indépendants. Les tarifs des outils de développement changent avec les révisions de plans — confirmez le tarif actuel sur le site de l\'éditeur avant de vous abonner. Les prix sont en USD ; ces abonnements ne disposent pas de tarifs EUR distincts publiés — le paiement peut proposer une devise locale au moment du règlement, mais le tarif USD affiché est global.',
         items: [
           '**Cursor :** palier Hobby gratuit ; Pro, Pro+ et Ultra partagent tous une base à 20 $/mois avec des multiplicateurs d\'usage inclus croissants (Pro+ environ 3x, Ultra environ 20x), plus une facturation à l\'usage une fois l\'usage inclus épuisé ; Teams à partir de 40 $/utilisateur/mois.',
           '**Windsurf :** palier gratuit avec un quota quotidien/hebdomadaire léger ; Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026, au niveau de Cursor) ; Max à 200 $/mois ; Teams à 40 $/utilisateur/mois ; Enterprise sur devis. Le système de pool de crédits a été remplacé par des quotas quotidiens/hebdomadaires en mars 2026.',
           '**GitHub Copilot :** palier gratuit (2 000 complétions/mois) ; Pro à 10 $/mois (15 $ de crédits IA inclus) ; Pro+ à 39 $/mois (70 $ inclus) ; Max à 100 $/mois (200 $ inclus) ; Business à 19 $/utilisateur/mois (1 900 crédits IA) ; Enterprise à 39 $/utilisateur/mois (3 900 crédits IA). Passage à la facturation par crédits IA à l\'usage le 1er juin 2026.',
           '**Cline :** l\'extension elle-même est gratuite, open source, sous licence MIT. Le coût réel dépend de l\'API LLM connectée (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek, etc.), ou 0 $ avec un modèle local via Ollama ou LM Studio — les deux fonctionnent sans clé API.',
+          '**Bodega One Code :** le palier Personal est gratuit à vie (un poste, usage non commercial, un espace de travail) ; Pro est un achat unique — pas un abonnement — qui ajoute les droits d\'usage commercial, un second poste et des espaces de travail illimités, mais l\'éditeur affiche son prix comme « à définir » avant la sortie complète ; Enterprise est tarifé sur devis. L\'application entière, y compris l\'usage commercial, est gratuite pendant la bêta ouverte.',
           '**Windsurf appartient désormais à Cognition**, l\'entreprise derrière l\'agent de codage autonome Devin, après le rachat par Cognition de l\'équipe, du produit et de la marque Windsurf. windsurf.com redirige actuellement vers la page de tarifs de devin.ai, et Devin est intégré directement dans l\'éditeur Windsurf plutôt que de le remplacer.',
         ],
       },
@@ -886,9 +970,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline vs Bodega One Code',
         content:
-          'Les tarifs sont une photographie d\'août 2026 vérifiée sur la page de prix de chaque éditeur — Cursor, Windsurf et GitHub Copilot ont tous changé leur structure tarifaire au moins une fois en 2026, confirmez donc le tarif actuel avant de vous abonner. « Accès aux modèles » reflète ce que chaque outil permet de choisir au niveau sélection de modèle, pas seulement ce qui alimente l\'auto-complétion.',
+          'Les tarifs sont une photographie d\'août–septembre 2026 vérifiée sur la page de prix de chaque éditeur — Cursor, Windsurf et GitHub Copilot ont tous changé leur structure tarifaire au moins une fois en 2026, confirmez donc le tarif actuel avant de vous abonner. « Accès aux modèles » reflète ce que chaque outil permet de choisir au niveau sélection de modèle, pas seulement ce qui alimente l\'auto-complétion.',
         columns: ['Outil', 'Lien', 'Idéal pour', 'Tarif (août 2026)', 'Accès modèles', 'Mode agent', 'IDE', 'Pourquoi payer ?'],
         rows: [
           {
@@ -931,6 +1015,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             'Pourquoi payer ?': 'Contrôle maximal — BYOK ou local, 0 $',
           },
+          {
+            'Outil': 'Bodega One Code',
+            'Lien': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'Idéal pour': 'IDE local-first tout-en-un (bêta)',
+            'Tarif (août 2026)': 'Bêta gratuite / Pro achat unique, prix TBD',
+            'Accès modèles': '10+ fournisseurs dont Ollama, LM Studio',
+            'Mode agent': 'Agent autonome intégré',
+            'IDE': 'Bodega One Code (basé sur Monaco)',
+            'Pourquoi payer ?': 'Usage commercial, 2e poste',
+          },
         ],
       },
       decisionMatrix: {
@@ -947,6 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Si vous êtes…': 'Sans budget d\'abonnement', 'Utilisez': 'Cline' },
           { 'Si vous êtes…': 'Intéressé par le BYOK', 'Utilisez': 'Cline' },
           { 'Si vous êtes…': 'Adepte du workflow Cascade', 'Utilisez': 'Windsurf' },
+          { 'Si vous êtes…': 'À la recherche d\'un IDE local, pas une extension', 'Utilisez': 'Bodega One Code (bêta)' },
         ],
         note: 'Ne choisissez pas uniquement à partir du tableau — le plus rapide est d\'exécuter la même tâche de code dans chaque outil sur le même dépôt (Cursor, puis Windsurf, puis Copilot, puis Cline avec un modèle local) et de voir lequel a demandé le moins d\'intervention manuelle.',
       },
@@ -960,7 +1055,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vous appréciez spécifiquement l\'ergonomie de l\'agent Cascade →** Windsurf. Il ne l\'emporte plus sur le prix (les deux coûtent 20 $/mois) — choisissez-le seulement après avoir testé les deux et préféré son flux.',
           '**Équipe standardisée sur les issues GitHub, les PR et Azure DevOps →** GitHub Copilot. L\'agent de codage lit et écrit directement dans votre workflow GitHub existant.',
           '**Budget de 0 $, prêt à faire tourner un modèle local ou à payer par jeton API →** Cline. Il n\'a aucun palier d\'abonnement — vous contrôlez le coût directement.',
-          '**Votre code est propriétaire, sous NDA ou soumis à des contraintes réglementaires →** Cline avec un modèle local via Ollama ou LM Studio est le seul des quatre à pouvoir fonctionner sans qu\'aucun code ne quitte votre machine.',
+          '**Votre code est propriétaire, sous NDA ou soumis à des contraintes réglementaires →** Cline avec un modèle local via Ollama ou LM Studio, ou Bodega One Code avec son mode air-gap, sont les seules options ici à pouvoir fonctionner sans qu\'aucun code ne quitte votre machine.',
+          '**Vous voulez un IDE local-first intégré plutôt qu\'une extension, et cela ne vous dérange pas de faire tourner un logiciel en bêta ouverte →** Bodega One Code. Il regroupe éditeur, chat et un agent autonome avec un mode hors ligne/air-gap, mais le prix de son palier Pro n\'est pas encore finalisé et il a un historique plus court que les quatre autres outils ici.',
         ],
         note: 'Passez complètement ce comparatif si vous avez seulement besoin d\'auto-complétion en ligne, pas d\'un comportement d\'agent multi-étapes — un plugin de complétion plus léger (ou les fonctions IA intégrées de votre IDE) coûtera moins cher et se configurera plus vite que ces quatre outils.',
       },
@@ -1008,6 +1104,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guide de construction d\'une station de travail LLM local](/fr/local-llms/local-llm-workstation-build) — pour une station de travail multi-GPU dédiée aux modèles de code plus volumineux.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code : IDE local-first avec agent intégré (bêta)',
+        content: [
+          '**Bodega One Code est un IDE de bureau IA local-first, actuellement en bêta ouverte, qui regroupe un éditeur de code basé sur Monaco, un chat IA et un agent de codage autonome en une seule application** — plutôt que de superposer des fonctionnalités d\'agent à un fork d\'éditeur existant, comme le font Cursor et Windsurf.',
+          'L\'agent se connecte à plus de 10 fournisseurs de modèles, y compris des exécuteurs locaux (Ollama, LM Studio, llama.cpp) aux côtés de fournisseurs cloud (Anthropic, OpenAI, Groq et autres), et propose un mode air-gap qui bloque tout accès réseau afin que rien ne quitte la machine lors de l\'usage d\'un modèle local — la même garantie hors ligne que Cline offre avec un modèle local, mais intégrée dans un IDE complet plutôt qu\'ajoutée en tant qu\'extension.',
+          'Bodega One Code fonctionne sous Windows, macOS et Linux. Selon la page de prix officielle de l\'éditeur, le **palier Personal est gratuit à vie** (un poste, usage non commercial, un espace de travail à la fois), et le **palier Pro est un achat unique plutôt qu\'un abonnement** — le prix exact est indiqué comme « à définir » avant la sortie complète, et Pro ajoute les droits d\'usage commercial, l\'activation d\'un second poste et des espaces de travail illimités. Un palier Enterprise tarifé sur devis ajoute une console d\'administration, le SSO et un support prioritaire.',
+          '**Pendant la bêta ouverte, l\'éditeur indique que l\'application entière — y compris l\'usage commercial — est gratuite.** L\'entreprise n\'a pas publié de date de fin de bêta ; traitez donc chaque fonctionnalité et chaque prix indiqués ici comme une photographie vérifiée en septembre 2026, pas un engagement permanent.',
+          'PromptQuorum n\'a trouvé aucun programme d\'affiliation ou de parrainage public pour Bodega One Code.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'C\'est nouveau. Bodega One Code est entré en bêta ouverte en 2026 et a un historique plus court que les quatre autres outils de cette page. Si la stabilité et le support à long terme comptent plus pour vous que le fait d\'être un adopteur précoce, attendez une version stable avant d\'y transférer votre flux de travail principal.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'Gratuit (bêta) / Pro achat unique, TBD', label: 'Essayer Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'Verdict final',
@@ -1017,6 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — le meilleur pour les équipes.** Choisissez-le si votre workflow tourne déjà autour de GitHub ou Azure DevOps.',
           '🥉 **Cline — le meilleur pour le contrôle.** Choisissez-le pour l\'accès par clé API personnelle, les modèles locaux, la confidentialité ou zéro coût d\'abonnement.',
           '**Windsurf — la meilleure alternative.** Choisissez-le si le flux d\'agent Cascade est le workflow que vous préférez.',
+          '**Bodega One Code — à surveiller.** Une alternative local-first tout-en-un à l\'exécution de Cline dans un éditeur séparé, mais il est en bêta ouverte avec une tarification Pro non finalisée — choisissez-le seulement si vous êtes à l\'aise avec un logiciel en bêta.',
           'Encore hésitant ? Essayez d\'abord Cursor et Cline — ensemble, ils couvrent les deux extrêmes payant-agentique et gratuit-local, et la plupart des développeurs se fixent sur l\'un des deux.',
         ],
         affiliateLinks: [
@@ -1027,16 +1141,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'L\'un de ces quatre outils a-t-il un programme d\'affiliation ?',
+        title: 'L\'un de ces cinq outils a-t-il un programme d\'affiliation ?',
         content:
-          '**En août 2026, aucun des quatre éditeurs ne gère de programme d\'affiliation à commission public et standard.** Ce que chaque éditeur propose réellement est plus restreint qu\'un « programme d\'affiliation » :',
+          '**Aucun des cinq éditeurs ne gère de programme d\'affiliation à commission public et standard.** Ce que chaque éditeur propose réellement est plus restreint qu\'un « programme d\'affiliation » :',
         items: [
           '**Cursor :** un programme de parrainage à déploiement limité (pas universellement accessible) — les parrains reçoivent 25 $ de crédit d\'usage par client payant parrainé, les utilisateurs parrainés obtiennent 50 % de réduction le premier mois. C\'est une incitation au parrainage, pas un programme d\'affiliation à commission ouvert aux éditeurs de contenu.',
           '**Windsurf :** un lien de parrainage offrant 250 crédits flex gratuits aux nouvelles inscriptions. Également une incitation au parrainage, pas un programme d\'affiliation/commission.',
           '**GitHub Copilot :** un « Copilot Partner Program » pour construire des intégrations technologiques Copilot Chat — c\'est un partenariat développeur/technologique, pas un accord d\'affiliation à commission par recommandation.',
           '**Cline :** aucun programme de parrainage ou d\'affiliation d\'aucune sorte ; c\'est un projet communautaire open source.',
+          '**Bodega One Code :** aucun programme d\'affiliation ou de parrainage public trouvé en date de septembre 2026.',
         ],
-        note: 'PromptQuorum n\'a actuellement aucune relation d\'affiliation avec Cursor, Windsurf, GitHub Copilot ou Cline. Chaque lien de cette page est un simple lien produit divulgué et ne génère aucune commission.',
+        note: 'PromptQuorum n\'a actuellement aucune relation d\'affiliation avec Cursor, Windsurf, GitHub Copilot, Cline ou Bodega One Code. Chaque lien de cette page est un simple lien produit divulgué et ne génère aucune commission.',
       },
       faqSection: {
         id: 'faq',
@@ -1049,9 +1164,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Comment configurer Cline avec un modèle local ?', a: 'Installez Ollama ou LM Studio, téléchargez un modèle de codage (la documentation de Cline recommande Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 ou Codestral), puis dans Cline choisissez Ollama ou LM Studio comme fournisseur d\'API — le point de terminaison par défaut d\'Ollama est http://localhost:11434, LM Studio expose une API compatible OpenAI sur le port 1234. Aucun des deux ne nécessite de clé API. Utilisez au moins une fenêtre de contexte de 32K jetons ; les sessions agentiques plus intensives nécessitent souvent 64K.' },
           { q: 'Puis-je utiliser plusieurs de ces outils en même temps ?', a: 'Oui, et beaucoup de développeurs le font — par exemple en utilisant Cline avec un modèle local pour les modifications routinières et peu sensibles, et en basculant vers Cursor ou GitHub Copilot pour les problèmes plus difficiles où un modèle cloud plus puissant aide. Il n\'y a pas de conflit technique à exécuter plusieurs extensions dans la même installation de VS Code, bien qu\'une seule soit généralement active comme agent principal par session.' },
           { q: 'Quel est le meilleur assistant de code IA pour un développeur solo avec un budget limité ?', a: 'Cline associé à un modèle local (Ollama ou LM Studio) coûte 0 $ au total. Si vous voulez un accès occasionnel à un modèle cloud plus puissant sans abonnement, Cline avec une clé API payée au jeton (OpenAI, Anthropic ou OpenRouter) garde un coût proportionnel à l\'usage réel plutôt qu\'un forfait mensuel fixe.' },
-          { q: 'L\'un de ces quatre outils fonctionne-t-il entièrement hors ligne ?', a: 'Seul Cline, et uniquement associé à un modèle local via Ollama ou LM Studio — dans cette configuration, aucun code ni aucune donnée de prompt ne quitte votre machine. Cursor, Windsurf et GitHub Copilot reposent tous par défaut sur des modèles hébergés dans le cloud ; Cursor permet de pointer vers un point de terminaison compatible OpenAI personnalisé (y compris local), mais son expérience produit de base suppose une connexion réseau.' },
+          { q: 'L\'un de ces outils fonctionne-t-il entièrement hors ligne ?', a: 'Cline, associé à un modèle local via Ollama ou LM Studio, ainsi que Bodega One Code, via son mode air-gap avec un modèle local — dans les deux configurations, aucun code ni aucune donnée de prompt ne quitte votre machine. Cursor, Windsurf et GitHub Copilot reposent tous par défaut sur des modèles hébergés dans le cloud ; Cursor permet de pointer vers un point de terminaison compatible OpenAI personnalisé (y compris local), mais son expérience produit de base suppose une connexion réseau.' },
           { q: 'Quel outil convient le mieux à une équipe déjà standardisée sur GitHub ou Azure DevOps ?', a: 'GitHub Copilot. Son agent de codage lit et écrit directement dans les issues et pull requests GitHub, et les paliers Business (19 $/utilisateur/mois) et Enterprise (39 $/utilisateur/mois) ajoutent les contrôles organisationnels — journaux d\'audit, gestion des politiques, indemnisation propriété intellectuelle — qu\'une pile de conformité standardisée Microsoft exige généralement.' },
-          { q: 'Cursor, Windsurf, GitHub Copilot ou Cline versent-ils une commission aux rédacteurs qui les recommandent ?', a: 'Non. En août 2026, aucun des quatre ne gère de programme d\'affiliation/commission public standard. Cursor et Windsurf offrent chacun une incitation limitée par crédit de parrainage (non ouverte aux éditeurs de contenu en général), GitHub gère un programme de partenariat d\'intégration technologique (pas de commission par recommandation), et Cline est un projet communautaire open source sans couche de monétisation. Cette page n\'a aucune relation d\'affiliation avec aucun des quatre outils.' },
+          { q: 'Qu\'est-ce que Bodega One Code et comment se compare-t-il à Cursor ou Cline ?', a: 'Bodega One Code est un IDE IA local-first, actuellement en bêta ouverte, qui regroupe un éditeur basé sur Monaco, un chat IA et un agent de codage autonome en une seule application plutôt que comme une extension ajoutée à un éditeur existant. Comme Cline, il peut fonctionner entièrement hors ligne avec un modèle local (Ollama, LM Studio ou llama.cpp) via un mode air-gap qui bloque l\'accès réseau ; contrairement à Cline, cette capacité hors ligne est intégrée dans un IDE complet plutôt qu\'en extension. Son palier Personal est gratuit à vie pour un usage non commercial sur un poste ; Pro est un achat unique — pas un abonnement — dont le prix exact n\'a pas été annoncé. Étant encore en bêta, il a un historique plus court que Cursor, Windsurf, GitHub Copilot ou Cline.' },
+          { q: 'Cursor, Windsurf, GitHub Copilot, Cline ou Bodega One Code versent-ils une commission aux rédacteurs qui les recommandent ?', a: 'Non. Aucun des cinq ne gère de programme d\'affiliation/commission public standard. Cursor et Windsurf offrent chacun une incitation limitée par crédit de parrainage (non ouverte aux éditeurs de contenu en général), GitHub gère un programme de partenariat d\'intégration technologique (pas de commission par recommandation), Cline est un projet communautaire open source sans couche de monétisation, et Bodega One Code n\'a aucun programme public de parrainage ou d\'affiliation. Cette page n\'a aucune relation d\'affiliation avec aucun des cinq outils.' },
         ],
       },
       sources: {
@@ -1065,6 +1181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'Facturation organisationnelle GitHub Copilot', description: 'Documentation GitHub sur la facturation par crédits IA Business/Enterprise, effective au 1er juin 2026.' },
           { url: 'https://cline.bot/pricing', title: 'Tarifs/FAQ Cline', description: 'Confirmation officielle que l\'extension Cline est gratuite et open source, avec facturation API à l\'usage.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline : exécuter des modèles localement', description: 'Documentation officielle de Cline pour connecter des modèles locaux Ollama et LM Studio.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Tarifs Bodega One Code', description: 'Page officielle des tarifs Bodega One Code — paliers Personal, Pro et Enterprise.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'À propos de Bodega One Code', description: 'Page produit officielle décrivant l\'architecture local-first, l\'agent et le support de plateformes de Bodega One Code.' },
         ],
       },
       relatedReading: {
@@ -1084,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline comparés sur le mode agent, les tarifs et l\'accès aux modèles. Prix d\'août 2026 vérifiés sur chaque site éditeur.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-fr.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-fr.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'fr',
@@ -1098,6 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/fr/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -1109,6 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Cursor est-il meilleur que GitHub Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour le travail agentique multi-fichiers et la flexibilité de modèles, Cursor est généralement le choix le plus solide. GitHub Copilot est le meilleur choix pour les équipes déjà standardisées sur GitHub et Azure DevOps.' } },
         { '@type': 'Question', 'name': 'Existe-t-il un assistant de code IA gratuit avec mode agent ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Cline est totalement gratuit et open source sans aucun palier d\'abonnement — vous ne payez que les jetons d\'API LLM utilisés, ou rien avec un modèle local via Ollama ou LM Studio.' } },
         { '@type': 'Question', 'name': 'Quelle est la différence réelle entre Windsurf et Cursor en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En août 2026, les deux sont tarifés de façon identique à 20 $/mois pour leurs paliers Pro. La différence restante est le workflow : Windsurf utilise Cascade, Cursor utilise Composer et Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'Qu\'est-ce que Bodega One Code et comment se compare-t-il à Cursor ou Cline ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code est un IDE IA local-first, actuellement en bêta ouverte, qui regroupe un éditeur basé sur Monaco, un chat IA et un agent de codage autonome en une seule application plutôt que comme une extension ajoutée à un éditeur existant. Son palier Personal est gratuit à vie pour un usage non commercial sur un poste ; Pro est un achat unique dont le prix exact n\'a pas été annoncé.' } },
       ],
     },
   },
@@ -1120,11 +1240,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mejor asistente de código IA agéntico 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot y Cline tienen un "modo agente" que edita varios archivos y ejecuta comandos de terminal por ti, pero difieren en precio, acceso a modelos y adónde va tu código. Esta guía compara los cuatro según los criterios que deciden una compra real: capacidad agéntica, precios (verificados en la página oficial de cada proveedor en agosto de 2026), flexibilidad de modelos y soporte de IDE.',
+      'Cursor, Windsurf, GitHub Copilot y Cline tienen un "modo agente" que edita varios archivos y ejecuta comandos de terminal por ti, pero difieren en precio, acceso a modelos y adónde va tu código. Esta guía compara los cuatro, más Bodega One Code — un IDE local-first con un agente integrado, actualmente en beta abierta —, según los criterios que deciden una compra real: capacidad agéntica, precios (verificados en la página oficial de cada proveedor, la última vez en septiembre de 2026), flexibilidad de modelos y soporte de IDE.',
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados en modo agente, precios y acceso a modelos. Precios de agosto de 2026 verificados en cada sitio oficial.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que eligen un asistente de código IA con modo agente y quieren comparar Cursor, Windsurf, GitHub Copilot y Cline por precio, acceso a modelos y ajuste al flujo de trabajo.',
@@ -1140,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor es el mejor asistente de código IA agéntico general en 2026 para la mayoría de desarrolladores profesionales, GitHub Copilot es la opción más segura para equipos ya estandarizados en GitHub o Azure, y Cline es la mejor opción gratuita si aportas tu propia clave API o usas un modelo local.** Windsurf ahora cuesta lo mismo que Cursor Pro (20 $/mes desde agosto de 2026, antes 15 $) y ya no gana en precio — elígelo solo si prefieres específicamente su flujo de agente Cascade. Ninguna herramienta gana en todas las categorías; elige según tu flujo de trabajo, no según el marketing.',
+      '**Cursor es el mejor asistente de código IA agéntico general en 2026 para la mayoría de desarrolladores profesionales, GitHub Copilot es la opción más segura para equipos ya estandarizados en GitHub o Azure, y Cline es la mejor opción gratuita si aportas tu propia clave API o usas un modelo local.** Windsurf ahora cuesta lo mismo que Cursor Pro (20 $/mes desde agosto de 2026, antes 15 $) y ya no gana en precio — elígelo solo si prefieres específicamente su flujo de agente Cascade. Bodega One Code vale la pena vigilarlo si quieres un único IDE local-first integrado con modo agente incorporado en lugar de una extensión añadida a un editor existente, pero todavía está en beta abierta con precios Pro sin definir. Ninguna herramienta gana en todas las categorías; elige según tu flujo de trabajo, no según el marketing.',
     quickAnswerTop: {
       es: {
         question: '¿Qué asistente de código IA tiene el mejor modo agente en 2026?',
@@ -1151,9 +1271,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: agente Cascade, Pro 20 $/mes (subió desde 15 $ en marzo de 2026) — paridad de precio con Cursor',
           'GitHub Copilot: agente de código ligado a issues/PR de GitHub, Pro 10 $/mes, Pro+ 39 $/mes, Max 100 $/mes',
           'Cline: extensión de código abierto, 0 $ en sí misma — el costo depende solo de la API LLM conectada, o 0 $ con un modelo local vía Ollama/LM Studio',
-          'Ninguno de los cuatro tiene un programa de afiliados público estándar en agosto de 2026',
+          'Bodega One Code: IDE de escritorio local-first con agente integrado, beta abierta — Personal gratis para siempre, Pro es una compra única con un precio aún no anunciado',
+          'Ninguno de los cinco tiene un programa de afiliados público estándar',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -1168,6 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'Veredicto final', anchor: '#final-verdict' },
       { label: 'Estado de los programas de afiliados', anchor: '#affiliate-status' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
@@ -1216,12 +1338,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Datos rápidos (verificados en)',
-        content: 'Verificados directamente en cursor.com/pricing, windsurf.com (redirige a devin.ai/pricing tras la adquisición por Cognition), github.com/features/copilot/plans y cline.bot/pricing, contrastados con rastreadores de precios independientes. Los precios de las suscripciones de herramientas de desarrollo cambian con revisiones de planes — confirma el precio actual en el sitio del proveedor antes de suscribirte. Los precios están en USD; estas suscripciones no publican tarifas separadas en EUR — el pago puede ofrecer moneda local al finalizar la compra, pero la tarifa en USD mostrada es global.',
+        content: 'Verificados directamente en cursor.com/pricing, windsurf.com (redirige a devin.ai/pricing tras la adquisición por Cognition), github.com/features/copilot/plans, cline.bot/pricing y bodegaone.ai/pricing, contrastados con rastreadores de precios independientes. Los precios de las suscripciones de herramientas de desarrollo cambian con revisiones de planes — confirma el precio actual en el sitio del proveedor antes de suscribirte. Los precios están en USD; estas suscripciones no publican tarifas separadas en EUR — el pago puede ofrecer moneda local al finalizar la compra, pero la tarifa en USD mostrada es global.',
         items: [
           '**Cursor:** plan Hobby gratis; Pro, Pro+ y Ultra comparten una base de 20 $/mes con multiplicadores de uso incluido crecientes (Pro+ ≈3x, Ultra ≈20x), más facturación por uso una vez agotado el uso incluido; Teams desde 40 $/usuario/mes.',
           '**Windsurf:** plan gratis con una cuota diaria/semanal ligera; Pro 20 $/mes (subió desde 15 $ en marzo de 2026, igualando a Cursor); Max 200 $/mes; Teams 40 $/usuario/mes; Enterprise a medida. El sistema de pool de créditos fue reemplazado por cuotas diarias/semanales en marzo de 2026.',
           '**GitHub Copilot:** plan gratis (2.000 completados/mes); Pro 10 $/mes (15 $ de créditos IA incluidos); Pro+ 39 $/mes (70 $ incluidos); Max 100 $/mes (200 $ incluidos); Business 19 $/usuario/mes (1.900 créditos IA); Enterprise 39 $/usuario/mes (3.900 créditos IA). Pasó a facturación por créditos IA basada en uso el 1 de junio de 2026.',
           '**Cline:** la extensión en sí es gratis, código abierto, licencia MIT. El costo real depende de la API LLM conectada (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek y más), o 0 $ con un modelo local vía Ollama o LM Studio — ambos funcionan sin clave API.',
+          '**Bodega One Code:** el plan Personal es gratis para siempre (un equipo, uso no comercial, un espacio de trabajo); Pro es una compra única — no una suscripción — que añade derechos de uso comercial, un segundo equipo y espacios de trabajo ilimitados, pero el proveedor indica su precio como "TBD" antes del lanzamiento completo; Enterprise tiene precio a medida. La aplicación completa, incluido el uso comercial, es gratis durante la beta abierta.',
           '**Windsurf ahora pertenece a Cognition**, la empresa detrás del agente de código autónomo Devin, tras la adquisición por Cognition del equipo, producto y marca de Windsurf. windsurf.com actualmente redirige a la página de precios de devin.ai, y Devin se está integrando directamente en el editor Windsurf en lugar de reemplazarlo del todo.',
         ],
       },
@@ -1241,9 +1364,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline vs Bodega One Code',
         content:
-          'Los precios son una foto de agosto de 2026 verificada en la página oficial de cada proveedor — Cursor, Windsurf y GitHub Copilot cambiaron su estructura de precios al menos una vez en 2026, así que confirma la tarifa actual antes de suscribirte. "Acceso a modelos" refleja qué permite elegir cada herramienta a nivel de selección de modelo, no solo qué impulsa el autocompletado.',
+          'Los precios son una foto de agosto–septiembre de 2026 verificada en la página oficial de cada proveedor — Cursor, Windsurf y GitHub Copilot cambiaron su estructura de precios al menos una vez en 2026, así que confirma la tarifa actual antes de suscribirte. "Acceso a modelos" refleja qué permite elegir cada herramienta a nivel de selección de modelo, no solo qué impulsa el autocompletado.',
         columns: ['Herramienta', 'Enlace', 'Ideal para', 'Precio (ago. 2026)', 'Acceso a modelos', 'Modo agente', 'IDE', '¿Por qué pagar?'],
         rows: [
           {
@@ -1286,6 +1409,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             '¿Por qué pagar?': 'Control máximo — BYOK o local, 0 $',
           },
+          {
+            'Herramienta': 'Bodega One Code',
+            'Enlace': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'Ideal para': 'IDE local-first todo en uno (beta)',
+            'Precio (ago. 2026)': 'Beta gratis / Pro compra única, TBD',
+            'Acceso a modelos': '10+ proveedores incl. Ollama, LM Studio',
+            'Modo agente': 'Agente autónomo integrado',
+            'IDE': 'Bodega One Code (basado en Monaco)',
+            '¿Por qué pagar?': 'Uso comercial, 2º equipo',
+          },
         ],
       },
       decisionMatrix: {
@@ -1302,6 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Si eres…': 'Sin presupuesto de suscripción', 'Usa': 'Cline' },
           { 'Si eres…': 'Interesado en BYOK', 'Usa': 'Cline' },
           { 'Si eres…': 'Prefieres el flujo Cascade', 'Usa': 'Windsurf' },
+          { 'Si eres…': 'Buscas un IDE local, no una extensión', 'Usa': 'Bodega One Code (beta)' },
         ],
         note: 'No decidas solo con la tabla — lo más rápido es ejecutar la misma tarea de código en cada herramienta sobre el mismo repositorio (Cursor, luego Windsurf, luego Copilot, luego Cline con un modelo local) y ver cuál necesitó menos intervención manual.',
       },
@@ -1315,7 +1449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prefieres específicamente la experiencia del agente Cascade →** Windsurf. Ya no gana en precio (ambos cuestan 20 $/mes) — elígelo solo si probaste ambas y prefieres su flujo.',
           '**Equipo estandarizado en issues de GitHub, PR y Azure DevOps →** GitHub Copilot. El agente de código lee y escribe directamente sobre tu flujo de GitHub existente.',
           '**Presupuesto de 0 $, dispuesto a ejecutar un modelo local o pagar por token de API →** Cline. No tiene ningún plan de suscripción — controlas el costo directamente.',
-          '**Tu código es propietario, sujeto a NDA o con restricciones regulatorias →** Cline con un modelo local vía Ollama o LM Studio es la única de las cuatro que puede funcionar sin que ningún código salga de tu máquina.',
+          '**Tu código es propietario, sujeto a NDA o con restricciones regulatorias →** Cline con un modelo local vía Ollama o LM Studio, o Bodega One Code con su modo air-gap, son las únicas opciones aquí que pueden funcionar sin que ningún código salga de tu máquina.',
+          '**Quieres un único IDE local-first integrado en lugar de una extensión, y no te importa usar software en beta abierta →** Bodega One Code. Combina editor, chat y un agente autónomo con un modo sin conexión/air-gap, pero el precio de su plan Pro aún no está definido y tiene un historial más corto que las otras cuatro herramientas aquí.',
         ],
         note: 'Salta esta comparación por completo si solo necesitas autocompletado en línea, no comportamiento de agente multipaso — un plugin de completado más ligero (o las funciones de IA integradas de tu IDE) costará menos y se configurará más rápido que cualquiera de estas cuatro herramientas.',
       },
@@ -1363,6 +1498,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guía para construir una estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build) — para una estación de trabajo multi-GPU dedicada a modelos de código más grandes.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: IDE local-first con agente integrado (beta)',
+        content: [
+          '**Bodega One Code es un IDE de escritorio con IA local-first, actualmente en beta abierta, que combina un editor de código basado en Monaco, chat de IA y un agente de código autónomo en una sola aplicación** — en lugar de añadir funciones de agente a un fork de editor existente, como hacen Cursor y Windsurf.',
+          'El agente se conecta a más de 10 proveedores de modelos, incluidos ejecutores locales (Ollama, LM Studio, llama.cpp) junto a proveedores en la nube (Anthropic, OpenAI, Groq y otros), e incluye un modo air-gap que bloquea todo acceso a la red para que nada salga de la máquina al usar un modelo local — la misma garantía sin conexión que ofrece Cline con un modelo local, pero integrada en un IDE completo en lugar de añadida como extensión.',
+          'Bodega One Code funciona en Windows, macOS y Linux. Según la propia página de precios del proveedor, el **plan Personal es gratis para siempre** (un equipo, uso no comercial, un espacio de trabajo a la vez), y el **plan Pro es una compra única en lugar de una suscripción** — el precio exacto se indica como "TBD" antes del lanzamiento completo, y Pro añade derechos de uso comercial, activación de un segundo equipo y espacios de trabajo ilimitados. Un plan Enterprise con precio a medida añade una consola de administración, SSO y soporte prioritario.',
+          '**Durante la beta abierta, el proveedor indica que toda la aplicación — incluido el uso comercial — es gratis.** La empresa no ha publicado una fecha de fin de beta, así que trata cada función y precio aquí como una foto verificada en septiembre de 2026, no un compromiso permanente.',
+          'PromptQuorum no encontró ningún programa de afiliados o de referidos público para Bodega One Code.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Es nuevo. Bodega One Code lanzó su beta abierta en 2026 y tiene un historial más corto que las otras cuatro herramientas de esta página. Si la estabilidad y el soporte a largo plazo te importan más que ser un early adopter, espera a una versión estable antes de mover tu flujo de trabajo principal a ella.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'Gratis (beta) / Pro compra única, TBD', label: 'Probar Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'Veredicto final',
@@ -1372,6 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — la mejor para equipos.** Elígelo si tu flujo de trabajo ya gira en torno a GitHub o Azure DevOps.',
           '🥉 **Cline — la mejor para control.** Elígela por acceso con clave API propia, modelos locales, privacidad o costo de suscripción cero.',
           '**Windsurf — la mejor alternativa.** Elígelo si el flujo de agente Cascade es el flujo de trabajo que prefieres.',
+          '**Bodega One Code — una a vigilar.** Una alternativa local-first todo en uno a ejecutar Cline en un editor separado, pero está en beta abierta con precios Pro sin definir — elígela solo si te sientes cómodo usando software en beta.',
           '¿Aún no estás seguro? Prueba primero Cursor y Cline — juntas cubren los extremos de pago-agéntico y gratis-local, y la mayoría de desarrolladores se decide por una de las dos.',
         ],
         affiliateLinks: [
@@ -1382,16 +1535,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: '¿Alguna de estas cuatro herramientas tiene un programa de afiliados?',
+        title: '¿Alguna de estas cinco herramientas tiene un programa de afiliados?',
         content:
-          '**En agosto de 2026, ninguno de los cuatro proveedores gestiona un programa de afiliados con comisión público y estándar.** Lo que cada proveedor ofrece realmente es más limitado que un "programa de afiliados":',
+          '**Ninguno de los cinco proveedores gestiona un programa de afiliados con comisión público y estándar.** Lo que cada proveedor ofrece realmente es más limitado que un "programa de afiliados":',
         items: [
           '**Cursor:** un programa de referidos de despliegue limitado (no disponible universalmente) — los referidores reciben 25 $ de crédito de uso por cada cliente pagador referido, los usuarios referidos obtienen 50 % de descuento el primer mes. Es un incentivo de referidos, no un programa de afiliados con comisión abierto a creadores de contenido.',
           '**Windsurf:** un enlace de referido que da a nuevas inscripciones 250 créditos flex gratis. También un incentivo de referidos, no un programa de afiliados/comisión.',
           '**GitHub Copilot:** un "Copilot Partner Program" para construir integraciones tecnológicas de Copilot Chat — es una alianza de desarrolladores/tecnología, no un acuerdo de afiliados con comisión por referido.',
           '**Cline:** ningún programa de referidos o afiliados de ningún tipo; es un proyecto comunitario de código abierto.',
+          '**Bodega One Code:** no se encontró ningún programa de afiliados o de referidos público a fecha de septiembre de 2026.',
         ],
-        note: 'PromptQuorum no tiene actualmente ninguna relación de afiliación con Cursor, Windsurf, GitHub Copilot o Cline. Cada enlace de esta página es un enlace de producto simple y divulgado, sin comisión.',
+        note: 'PromptQuorum no tiene actualmente ninguna relación de afiliación con Cursor, Windsurf, GitHub Copilot, Cline o Bodega One Code. Cada enlace de esta página es un enlace de producto simple y divulgado, sin comisión.',
       },
       faqSection: {
         id: 'faq',
@@ -1404,9 +1558,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cómo configuro Cline con un modelo local?', a: 'Instala Ollama o LM Studio, descarga un modelo de código (la documentación de Cline recomienda Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 o Codestral), y en Cline elige Ollama o LM Studio como proveedor de API — el endpoint por defecto de Ollama es http://localhost:11434, LM Studio expone una API compatible con OpenAI en el puerto 1234. Ninguno requiere clave API. Usa al menos una ventana de contexto de 32K tokens; sesiones agénticas más intensas suelen necesitar 64K.' },
           { q: '¿Puedo usar más de una de estas herramientas a la vez?', a: 'Sí, y muchos desarrolladores lo hacen — por ejemplo, usando Cline con un modelo local para ediciones rutinarias y poco sensibles, y cambiando a Cursor o GitHub Copilot para problemas más difíciles donde ayuda un modelo en la nube más potente. No hay conflicto técnico en ejecutar varias extensiones en la misma instalación de VS Code, aunque normalmente solo una está activa como agente principal por sesión.' },
           { q: '¿Cuál es el mejor asistente de código IA para un desarrollador solo con presupuesto limitado?', a: 'Cline junto con un modelo local (Ollama o LM Studio) cuesta 0 $ en total. Si quieres acceso ocasional a un modelo en la nube más potente sin suscripción, Cline con una clave API de pago por token (OpenAI, Anthropic u OpenRouter) mantiene el costo proporcional al uso real en lugar de una tarifa mensual fija.' },
-          { q: '¿Alguna de estas cuatro herramientas funciona completamente sin conexión?', a: 'Solo Cline, y solo combinada con un modelo local vía Ollama o LM Studio — en esa configuración, ningún código ni dato de prompt sale de tu máquina. Cursor, Windsurf y GitHub Copilot se basan por defecto en modelos alojados en la nube; Cursor admite apuntar a un endpoint personalizado (incluido local) compatible con OpenAI, pero su experiencia de producto principal asume conexión de red.' },
+          { q: '¿Alguna de estas herramientas funciona completamente sin conexión?', a: 'Cline, combinada con un modelo local vía Ollama o LM Studio, y Bodega One Code, usando su modo air-gap con un modelo local — en ambas configuraciones, ningún código ni dato de prompt sale de tu máquina. Cursor, Windsurf y GitHub Copilot se basan por defecto en modelos alojados en la nube; Cursor admite apuntar a un endpoint personalizado (incluido local) compatible con OpenAI, pero su experiencia de producto principal asume conexión de red.' },
           { q: '¿Qué herramienta es mejor para un equipo ya estandarizado en GitHub o Azure DevOps?', a: 'GitHub Copilot. Su agente de código lee y escribe directamente sobre issues y pull requests de GitHub, y los planes Business (19 $/usuario/mes) y Enterprise (39 $/usuario/mes) añaden los controles organizacionales — registros de auditoría, gestión de políticas, indemnización de propiedad intelectual — que normalmente exige una pila de cumplimiento estandarizada en Microsoft.' },
-          { q: '¿Cursor, Windsurf, GitHub Copilot o Cline pagan comisión a quienes los recomiendan?', a: 'No. En agosto de 2026, ninguna de las cuatro gestiona un programa de afiliados/comisión público estándar. Cursor y Windsurf ofrecen cada uno un incentivo limitado de crédito por referido (no abierto a creadores de contenido en general), GitHub gestiona un programa de alianza de integración tecnológica (sin comisión por referido), y Cline es un proyecto comunitario de código abierto sin capa de monetización. Esta página no tiene relación de afiliación con ninguna de las cuatro herramientas.' },
+          { q: '¿Qué es Bodega One Code y cómo se compara con Cursor o Cline?', a: 'Bodega One Code es un IDE de IA local-first, actualmente en beta abierta, que combina un editor basado en Monaco, chat de IA y un agente de código autónomo en una sola aplicación en lugar de como una extensión añadida a un editor existente. Como Cline, puede funcionar completamente sin conexión con un modelo local (Ollama, LM Studio o llama.cpp) mediante un modo air-gap que bloquea el acceso a la red; a diferencia de Cline, esa capacidad sin conexión está integrada en un IDE completo en lugar de en una extensión. Su plan Personal es gratis para siempre para uso no comercial en un equipo; Pro es una compra única — no una suscripción — cuyo precio exacto no se ha anunciado. Por estar aún en beta, tiene un historial más corto que Cursor, Windsurf, GitHub Copilot o Cline.' },
+          { q: '¿Cursor, Windsurf, GitHub Copilot, Cline o Bodega One Code pagan comisión a quienes los recomiendan?', a: 'No. Ninguna de las cinco gestiona un programa de afiliados/comisión público estándar. Cursor y Windsurf ofrecen cada uno un incentivo limitado de crédito por referido (no abierto a creadores de contenido en general), GitHub gestiona un programa de alianza de integración tecnológica (sin comisión por referido), Cline es un proyecto comunitario de código abierto sin capa de monetización, y Bodega One Code no tiene ningún programa público de referidos o afiliados. Esta página no tiene relación de afiliación con ninguna de las cinco herramientas.' },
         ],
       },
       sources: {
@@ -1420,6 +1575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'Facturación organizacional de GitHub Copilot', description: 'Documentación de GitHub sobre facturación por créditos IA Business/Enterprise, vigente desde el 1 de junio de 2026.' },
           { url: 'https://cline.bot/pricing', title: 'Precios/preguntas frecuentes de Cline', description: 'Confirmación oficial de que la extensión Cline es gratis y de código abierto, con facturación de API por uso.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: ejecutar modelos localmente', description: 'Documentación oficial de Cline para conectar modelos locales de Ollama y LM Studio.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Precios de Bodega One Code', description: 'Página oficial de precios de Bodega One Code — planes Personal, Pro y Enterprise.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'Acerca de Bodega One Code', description: 'Página oficial del producto que describe la arquitectura local-first, el agente y el soporte de plataformas de Bodega One Code.' },
         ],
       },
       relatedReading: {
@@ -1439,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados en modo agente, precios y acceso a modelos. Precios de agosto de 2026 verificados en cada sitio oficial.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-es.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-es.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'es',
@@ -1453,6 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/es/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -1464,6 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': '¿Es Cursor mejor que GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para trabajo agéntico multiarchivo y flexibilidad de modelos, Cursor suele ser la opción más sólida. GitHub Copilot es mejor para equipos ya estandarizados en GitHub y Azure DevOps.' } },
         { '@type': 'Question', 'name': '¿Existe un asistente de código IA gratuito con modo agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Cline es completamente gratis y de código abierto sin plan de suscripción — solo pagas los tokens de API LLM que uses, o nada con un modelo local vía Ollama o LM Studio.' } },
         { '@type': 'Question', 'name': '¿Cuál es la diferencia real entre Windsurf y Cursor en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En agosto de 2026 ambos cuestan lo mismo, 20 $/mes, en sus planes Pro. La diferencia restante es el flujo de trabajo: Windsurf usa Cascade, Cursor usa Composer y Cloud Agents.' } },
+        { '@type': 'Question', 'name': '¿Qué es Bodega One Code y cómo se compara con Cursor o Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code es un IDE de IA local-first, actualmente en beta abierta, que combina un editor basado en Monaco, chat de IA y un agente de código autónomo en una sola aplicación en lugar de como una extensión añadida a un editor existente. Su plan Personal es gratis para siempre para uso no comercial en un equipo; Pro es una compra única cuyo precio exacto no se ha anunciado.' } },
       ],
     },
   },
@@ -1475,11 +1634,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年ベストのエージェント型AIコーディングアシスタント：Cursor対Windsurf対GitHub Copilot対Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline（2026）',
     intro:
-      'Cursor、Windsurf、GitHub Copilot、Clineはいずれも複数ファイルを編集しターミナルコマンドを代行実行する「エージェントモード」を備えていますが、価格・モデルアクセス・コードの送信先が異なります。本ガイドは、実際の購入判断を左右する基準——エージェント能力、価格（2026年8月に各社公式価格ページで検証）、モデルの柔軟性、IDE対応——で4製品を比較します。',
+      'Cursor、Windsurf、GitHub Copilot、Clineはいずれも複数ファイルを編集しターミナルコマンドを代行実行する「エージェントモード」を備えていますが、価格・モデルアクセス・コードの送信先が異なります。本ガイドは、この4製品に加え、現在オープンベータ提供中のエージェント内蔵ローカルファーストIDE「Bodega One Code」も含め、実際の購入判断を左右する基準——エージェント能力、価格（各社公式価格ページで検証、直近では2026年9月）、モデルの柔軟性、IDE対応——で比較します。',
     metaDescription:
       'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。価格は各社公式サイトで検証済み。',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13分で読める',
     educationalLevel: 'Intermediate',
     audience: 'エージェントモード搭載のAIコーディングアシスタントを選ぶ開発者で、Cursor、Windsurf、GitHub Copilot、Clineを価格・モデルアクセス・ワークフロー適合性で比較したい方。',
@@ -1495,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursorは2026年、多くのプロ開発者にとって最も優れた総合型エージェントAIコーディングアシスタントであり、GitHub Copilotは既にGitHubやAzureに標準化しているチームにとって無難な既定選択肢、Clineは自前のAPIキーを使うかローカルモデルを動かせるなら最良の無料選択肢です。** Windsurfは2026年8月時点でCursor Proと同額（月20ドル、年初の月15ドルから値上げ）となり、価格面での優位性を失いました——特にCascadeエージェントの操作感を好む場合のみ選びましょう。すべてのカテゴリで勝つツールはなく、宣伝文句ではなくワークフローに基づいて選んでください。',
+      '**Cursorは2026年、多くのプロ開発者にとって最も優れた総合型エージェントAIコーディングアシスタントであり、GitHub Copilotは既にGitHubやAzureに標準化しているチームにとって無難な既定選択肢、Clineは自前のAPIキーを使うかローカルモデルを動かせるなら最良の無料選択肢です。** Windsurfは2026年8月時点でCursor Proと同額（月20ドル、年初の月15ドルから値上げ）となり、価格面での優位性を失いました——特にCascadeエージェントの操作感を好む場合のみ選びましょう。既存エディタに追加したエクステンションではなく、エージェントモードを内蔵した一体型のローカルファーストIDEを求めるなら、Bodega One Codeは注目に値します。ただし依然としてオープンベータ段階で、Pro料金も未確定です。すべてのカテゴリで勝つツールはなく、宣伝文句ではなくワークフローに基づいて選んでください。',
     quickAnswerTop: {
       ja: {
         question: '2026年、最もエージェントモードが優れたAIコーディングアシスタントはどれですか？',
@@ -1506,9 +1665,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf：Cascadeエージェント、Pro月20ドル（2026年3月に15ドルから値上げ）——Cursorと価格が同等',
           'GitHub Copilot：GitHub Issue/PRに連動するコーディングエージェント、Pro月10ドル、Pro+月39ドル、Max月100ドル',
           'Cline：オープンソース拡張機能、それ自体は0ドル——コストは接続したLLM APIのみ、Ollama/LM Studioでローカルモデルなら0ドル',
-          '2026年8月時点で4社とも標準的な公開アフィリエイト・成果報酬プログラムなし',
+          'Bodega One Code：エージェント内蔵のローカルファースト・デスクトップIDE、オープンベータ——Personalは永久無料、Proは未発表価格の買い切り',
+          '5社とも標準的な公開アフィリエイト・成果報酬プログラムなし',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -1523,6 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: '最終結論', anchor: '#final-verdict' },
       { label: 'アフィリエイトプログラムの状況', anchor: '#affiliate-status' },
       { label: 'よくある質問', anchor: '#faq' },
@@ -1571,12 +1732,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'クイックファクト （検証済み）',
-        content: 'cursor.com/pricing、windsurf.com（Cognitionによる買収後devin.ai/pricingへリダイレクト）、github.com/features/copilot/plans、cline.bot/pricingで直接検証し、独立した価格追跡サイトと照合しました。開発ツールのサブスクリプション価格はプラン改定により変動します——契約前に各社サイトで最新料金を確認してください。価格はすべて米ドル建てで、これらのサブスクリプションに個別のJPY定価は公開されていません——決済時にローカル通貨が提示される場合がありますが、表示されているUSD料金がグローバル基準です。',
+        content: 'cursor.com/pricing、windsurf.com（Cognitionによる買収後devin.ai/pricingへリダイレクト）、github.com/features/copilot/plans、cline.bot/pricing、bodegaone.ai/pricingで直接検証し、独立した価格追跡サイトと照合しました。開発ツールのサブスクリプション価格はプラン改定により変動します——契約前に各社サイトで最新料金を確認してください。価格はすべて米ドル建てで、これらのサブスクリプションに個別のJPY定価は公開されていません——決済時にローカル通貨が提示される場合がありますが、表示されているUSD料金がグローバル基準です。',
         items: [
           '**Cursor：** 無料Hobbyプラン。Pro、Pro+、Ultraはすべて月20ドルの共通ベースで、含まれる使用量の倍率が異なります（Pro+は約3倍、Ultraは約20倍）。含まれる使用量を超えると従量課金が発生します。Teamsは1ユーザー月40ドルから。',
           '**Windsurf：** 軽い日次/週次クォータ付き無料プラン。Pro月20ドル（2026年3月に15ドルから値上げ、Cursorと同額）。Max月200ドル。Teams 1ユーザー月40ドル。Enterpriseは個別見積もり。クレジットプール制は2026年3月に日次/週次クォータへ置き換えられました。',
           '**GitHub Copilot：** 無料プラン（月2,000補完）。Pro月10ドル（AIクレジット15ドル分込み）。Pro+月39ドル（70ドル分込み）。Max月100ドル（200ドル分込み）。Business 1ユーザー月19ドル（AIクレジット1,900分）。Enterprise 1ユーザー月39ドル（AIクレジット3,900分）。2026年6月1日に使用量ベースAIクレジット課金へ移行。',
           '**Cline：** 拡張機能自体は無料、オープンソース、MITライセンス。実際のコストは接続したLLM API次第（OpenAI、Anthropic、Google、OpenRouter、AWS Bedrock、GCP Vertex、Groq、Cerebras、DeepSeekほか）、またはOllamaやLM Studio経由のローカルモデルなら0ドル——どちらもAPIキー不要です。',
+          '**Bodega One Code：** Personalプランは永久無料（1台のマシン、非商用、ワークスペース1つ）。Proはサブスクリプションではなく買い切りで、商用利用権・2台目のマシン・無制限のワークスペースが追加されますが、正式リリース前の現時点で価格は「TBD（未定）」とされています。Enterpriseは個別見積もりです。オープンベータ期間中は、商用利用を含めアプリ全体が無料です。',
           '**Windsurfは現在Cognition傘下です。** 自律型コーディングエージェントDevinを手がける同社が、Windsurfのチーム・製品・ブランドを買収しました。windsurf.comは現在devin.aiの価格ページへリダイレクトされ、DevinはWindsurfエディタを完全に置き換えるのではなく、直接統合される形になっています。',
         ],
       },
@@ -1596,9 +1758,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor対Windsurf対GitHub Copilot対Cline',
+        title: 'Cursor対Windsurf対GitHub Copilot対Cline対Bodega One Code',
         content:
-          '価格は各社公式価格ページで検証した2026年8月時点のスナップショットです——Cursor、Windsurf、GitHub Copilotはいずれも2026年中に価格体系を少なくとも一度変更しているため、契約前に最新料金を確認してください。「モデルアクセス」は、単なる補完機能の裏側ではなく、各ツールがモデル選択レベルで選べる範囲を示します。',
+          '価格は各社公式価格ページで検証した2026年8月〜9月時点のスナップショットです——Cursor、Windsurf、GitHub Copilotはいずれも2026年中に価格体系を少なくとも一度変更しているため、契約前に最新料金を確認してください。「モデルアクセス」は、単なる補完機能の裏側ではなく、各ツールがモデル選択レベルで選べる範囲を示します。',
         columns: ['ツール', 'リンク', '最適な用途', '価格', 'モデルアクセス', 'エージェントモード', 'IDE', 'なぜ課金？'],
         rows: [
           {
@@ -1641,6 +1803,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code、JetBrains',
             'なぜ課金？': '最大限のコントロール——BYOKかローカルで0ドル',
           },
+          {
+            'ツール': 'Bodega One Code',
+            'リンク': '[bodegaone.ai](https://www.bodegaone.ai)',
+            '最適な用途': 'オールインワンのローカルファーストIDE（ベータ）',
+            '価格': 'ベータ無料 / Pro買い切り、価格TBD',
+            'モデルアクセス': 'Ollama、LM Studioなど10以上のプロバイダー',
+            'エージェントモード': '内蔵の自律エージェント',
+            'IDE': 'Bodega One Code（Monacoベース）',
+            'なぜ課金？': '商用利用、2台目のマシン',
+          },
         ],
       },
       decisionMatrix: {
@@ -1657,6 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況は…': 'サブスク予算ゼロ', '選ぶツール': 'Cline' },
           { 'あなたの状況は…': 'BYOK希望', '選ぶツール': 'Cline' },
           { 'あなたの状況は…': 'Cascadeワークフロー志向', '選ぶツール': 'Windsurf' },
+          { 'あなたの状況は…': '拡張機能ではなくローカルIDEが欲しい', '選ぶツール': 'Bodega One Code（ベータ）' },
         ],
         note: '表だけで決めないでください——最も速い方法は、同じリポジトリで同じコーディング課題を各ツールで実行し（Cursor、次にWindsurf、次にCopilot、次にローカルモデル付きCline）、手動での介入が最も少なかったものを確認することです。',
       },
@@ -1670,7 +1843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**特にCascadeエージェントの操作感が好みの場合 →** Windsurf。もはや価格では勝りません（両方とも月20ドル）——両方試した上で操作感を好む場合のみ選んでください。',
           '**GitHub Issue、PR、Azure DevOpsに標準化されたチーム →** GitHub Copilot。コーディングエージェントは既存のGitHubワークフローに対して直接読み書きします。',
           '**予算0ドルで、ローカルモデルを運用するかAPIトークン単位で支払う意思がある場合 →** Cline。サブスクリプション階層が一切なく、コストを直接コントロールできます。',
-          '**コードが独自・NDA対象・規制制約下にある場合 →** OllamaやLM Studio経由のローカルモデルを使うClineは、4製品中唯一コードが端末外に一切出ずに動作できます。',
+          '**コードが独自・NDA対象・規制制約下にある場合 →** OllamaやLM Studio経由のローカルモデルを使うClineか、エアギャップモードを備えたBodega One Codeが、コードが端末外に一切出ずに動作できる唯一の選択肢です。',
+          '**拡張機能ではなく統合されたローカルファーストIDEが欲しく、オープンベータのソフトウェアを使うことに抵抗がない場合 →** Bodega One Code。エディタ・チャット・自律エージェントをオフライン/エアギャップモード付きで一体化していますが、Proプランの価格はまだ確定しておらず、ここに挙げた他の4製品より実績は短いです。',
         ],
         note: 'インライン自動補完のみが必要で複数ステップのエージェント動作が不要な場合は、この比較自体を丸ごとスキップしてください——より軽量な補完プラグイン（またはIDE内蔵のAI機能）の方がこの4製品のいずれよりも安く早く導入できます。',
       },
@@ -1718,6 +1892,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build) — より大きなコーディングモデルを動かす専用マルチGPUワークステーション向け。',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code：エージェント内蔵のローカルファーストIDE（ベータ）',
+        content: [
+          '**Bodega One Codeは、現在オープンベータ提供中のローカルファーストAIデスクトップIDEで、Monacoベースのコードエディタ、AIチャット、自律型コーディングエージェントを1つのアプリに統合しています**——CursorやWindsurfのように既存のエディタフォークにエージェント機能を後付けするのではなく、最初から一体化された設計です。',
+          'このエージェントは、Ollama、LM Studio、llama.cppといったローカルランナーと、Anthropic、OpenAI、Groqなどのクラウドプロバイダーを合わせて10以上のモデルプロバイダーに接続でき、すべてのネットワークアクセスを遮断するエアギャップモードを搭載しているため、ローカルモデル実行時は何もマシン外に出ません——これはローカルモデルを使うClineと同じオフライン保証ですが、拡張機能としてではなく完全なIDEに組み込まれています。',
+          'Bodega One CodeはWindows、macOS、Linuxで動作します。ベンダー自身の価格ページによると、**Personalプランは永久無料**（1台のマシン、非商用利用、同時に1つのワークスペース）で、**Proプランはサブスクリプションではなく買い切り**です——正式リリース前の現時点で正確な価格は「TBD（未定）」とされており、Proは商用利用権、2台目のマシンのアクティベーション、無制限のワークスペースを追加します。個別見積もりのEnterpriseプランは、管理コンソール、SSO、優先サポートを追加します。',
+          '**オープンベータ期間中は、商用利用を含めアプリ全体が無料だとベンダーは述べています。** 同社はベータ終了日を公表していないため、ここに記載する機能や価格はすべて2026年9月時点で検証されたスナップショットであり、恒久的な確約ではないものとして扱ってください。',
+          'PromptQuorumは、Bodega One Codeの公開アフィリエイト・紹介プログラムを確認できませんでした。',
+        ],
+        callouts: [
+          { type: 'warning', text: '新しい製品です。Bodega One Codeは2026年にオープンベータを開始したばかりで、本ページの他4製品より実績が短いです。安定性や長期サポートがアーリーアダプターであることより重要な場合は、安定版のリリースを待ってからメインのワークフローに組み込むことをお勧めします。' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: '無料（ベータ）/ Pro買い切り、TBD', label: 'Bodega One Codeを試す' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: '最終結論',
@@ -1727,6 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot——チーム向けベスト。** ワークフローが既にGitHubやAzure DevOps中心なら選んでください。',
           '🥉 **Cline——コントロール重視のベスト。** 自前APIキー、ローカルモデル、プライバシー、サブスク費用ゼロを求めるなら選んでください。',
           '**Windsurf——代替ベスト。** Cascadeエージェントの操作フローが好みなら選んでください。',
+          '**Bodega One Code——注目株。** 別エディタでClineを動かす代わりの、ローカルファーストなオールインワンの選択肢ですが、オープンベータでPro料金も未確定です——ベータ版ソフトウェアを使うことに抵抗がない場合のみ選んでください。',
           'まだ迷っている場合は、まずCursorとClineを試してください——両者は有料エージェント型と無料ローカル型という両極端をカバーしており、多くの開発者はどちらかに落ち着きます。',
         ],
         affiliateLinks: [
@@ -1737,16 +1929,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'これら4製品にアフィリエイトプログラムはありますか？',
+        title: 'これら5製品にアフィリエイトプログラムはありますか？',
         content:
-          '**2026年8月時点で、4社とも標準的で公開されている成果報酬型アフィリエイトプログラムを運営していません。** 各社が実際に提供しているものは「アフィリエイトプログラム」より限定的です。',
+          '**5社とも標準的で公開されている成果報酬型アフィリエイトプログラムを運営していません。** 各社が実際に提供しているものは「アフィリエイトプログラム」より限定的です。',
         items: [
           '**Cursor：** 限定展開の紹介プログラム（一般には利用不可）——紹介者は有料顧客紹介ごとに25ドルの利用クレジットを受け取り、紹介された利用者は初月50%割引を得ます。これは紹介インセンティブであり、パブリッシャーに開放された成果報酬型アフィリエイトプログラムではありません。',
           '**Windsurf：** 紹介リンク経由の新規登録者に250の無料フレックスクレジットを付与。これも紹介インセンティブであり、アフィリエイト・成果報酬プログラムではありません。',
           '**GitHub Copilot：** Copilot Chatのテクノロジー統合を構築するための「Copilot Partner Program」——これは開発者・テクノロジーパートナーシップであり、紹介成果報酬型のアフィリエイト契約ではありません。',
           '**Cline：** 紹介・アフィリエイトプログラムは一切なし。コミュニティ主導のオープンソースプロジェクトです。',
+          '**Bodega One Code：** 2026年9月時点で、公開されているアフィリエイト・紹介プログラムは確認されていません。',
         ],
-        note: 'PromptQuorumは現在、Cursor、Windsurf、GitHub Copilot、Clineのいずれともアフィリエイト関係を結んでいません。本ページのすべてのリンクは開示済みの単純な製品リンクであり、報酬は発生しません。',
+        note: 'PromptQuorumは現在、Cursor、Windsurf、GitHub Copilot、Cline、Bodega One Codeのいずれともアフィリエイト関係を結んでいません。本ページのすべてのリンクは開示済みの単純な製品リンクであり、報酬は発生しません。',
       },
       faqSection: {
         id: 'faq',
@@ -1759,9 +1952,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Clineをローカルモデルで設定するにはどうすればよいですか？', a: 'OllamaまたはLM Studioをインストールし、コーディングモデルを取得します（Clineの公式ドキュメントはQwen2.5 Coder、Llama 3.3、DeepSeek Coder V3、Codestralを推奨）。次にCline側でOllamaまたはLM StudioをAPIプロバイダーとして選択します——Ollamaの既定エンドポイントは http://localhost:11434、LM StudioはポートNo.1234でOpenAI互換APIを提供します。どちらもAPIキーは不要です。最低32Kトークンのコンテキストウィンドウを使用してください。負荷の高いエージェントセッションでは64Kが必要になることがよくあります。' },
           { q: 'これらのツールを複数同時に使えますか？', a: 'はい、多くの開発者がそうしています——例えば、日常的で機密度の低い編集にはローカルモデル付きのClineを使い、より強力なクラウドモデルが役立つ難しい問題にはCursorやGitHub Copilotへ切り替える、といった具合です。同じVS Codeインストール内で複数の拡張機能を実行すること自体に技術的な競合はありませんが、通常セッションごとにメインエージェントとして稼働するのは1つだけです。' },
           { q: '予算が限られた個人開発者に最適なAIコーディングアシスタントは何ですか？', a: 'ローカルモデル（OllamaまたはLM Studio）と組み合わせたClineなら総コストは0ドルです。サブスクリプションなしでより強力なクラウドモデルにたまにアクセスしたい場合、トークン従量課金のAPIキー（OpenAI、Anthropic、OpenRouter）を使ったClineなら、固定月額料金ではなく実際の使用量に比例したコストに保てます。' },
-          { q: 'これら4製品のいずれかは完全にオフラインで動作しますか？', a: 'Clineのみ、それもOllamaまたはLM Studio経由のローカルモデルと組み合わせた場合に限られます——その構成では、コードもプロンプトデータも端末外に一切出ません。Cursor、Windsurf、GitHub Copilotはいずれも既定でクラウドホスト型モデルを前提としています。Cursorはカスタム（ローカルを含む）OpenAI互換エンドポイントの指定に対応していますが、コア製品体験はネットワーク接続を前提としています。' },
+          { q: 'これらのツールのいずれかは完全にオフラインで動作しますか？', a: 'OllamaまたはLM Studio経由のローカルモデルと組み合わせたClineと、エアギャップモードでローカルモデルを使うBodega One Code——どちらの構成でも、コードもプロンプトデータも端末外に一切出ません。Cursor、Windsurf、GitHub Copilotはいずれも既定でクラウドホスト型モデルを前提としています。Cursorはカスタム（ローカルを含む）OpenAI互換エンドポイントの指定に対応していますが、コア製品体験はネットワーク接続を前提としています。' },
           { q: '既にGitHubまたはAzure DevOpsに標準化されているチームに最適なツールはどれですか？', a: 'GitHub Copilotです。コーディングエージェントはGitHubのIssueとプルリクエストに対して直接読み書きし、Business（1ユーザー月19ドル）とEnterprise（1ユーザー月39ドル）プランは、Microsoft標準化コンプライアンススタックが通常求める組織統制——監査ログ、ポリシー管理、知的財産補償——を追加します。' },
-          { q: 'Cursor、Windsurf、GitHub Copilot、Clineは推薦者に成果報酬を支払いますか？', a: 'いいえ。2026年8月時点で、4社とも標準的な公開アフィリエイト・成果報酬プログラムを運営していません。CursorとWindsurfはそれぞれ限定的な紹介クレジットのインセンティブを提供しています（一般のパブリッシャーには開放されていません）。GitHubはテクノロジー統合パートナーシッププログラムを運営していますが紹介報酬はありません。Clineはコミュニティ主導のオープンソースプロジェクトで収益化の仕組み自体がありません。本ページはこれら4製品のいずれともアフィリエイト関係を持っていません。' },
+          { q: 'Bodega One Codeとは何で、CursorやClineとどう比較されますか？', a: 'Bodega One Codeは、現在オープンベータ提供中のローカルファーストAI IDEで、Monacoベースのエディタ、AIチャット、自律型コーディングエージェントを、既存のエディタに追加する拡張機能としてではなく1つのアプリに統合しています。Clineと同様に、ネットワークアクセスを遮断するエアギャップモードを通じてローカルモデル（Ollama、LM Studio、llama.cpp）に対して完全にオフラインで動作できます。Clineと異なる点は、そのオフライン機能が拡張機能ではなく完全なIDEに組み込まれていることです。Personalプランは1台のマシンでの非商用利用なら永久無料で、Proはサブスクリプションではなく買い切りですが、正確な価格はまだ発表されていません。まだベータ段階のため、Cursor、Windsurf、GitHub Copilot、Clineより実績は短いです。' },
+          { q: 'Cursor、Windsurf、GitHub Copilot、Cline、Bodega One Codeは推薦者に成果報酬を支払いますか？', a: 'いいえ。5社とも標準的な公開アフィリエイト・成果報酬プログラムを運営していません。CursorとWindsurfはそれぞれ限定的な紹介クレジットのインセンティブを提供しています（一般のパブリッシャーには開放されていません）。GitHubはテクノロジー統合パートナーシッププログラムを運営していますが紹介報酬はありません。Clineはコミュニティ主導のオープンソースプロジェクトで収益化の仕組み自体がなく、Bodega One Codeには公開の紹介・アフィリエイトプログラムがありません。本ページはこれら5製品のいずれともアフィリエイト関係を持っていません。' },
         ],
       },
       sources: {
@@ -1775,6 +1969,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'GitHub Copilot組織向け請求', description: '2026年6月1日発効のBusiness/Enterprise AIクレジット課金に関するGitHub公式ドキュメント。' },
           { url: 'https://cline.bot/pricing', title: 'Cline料金/FAQ', description: 'Cline拡張機能が無料かつオープンソースであり、API課金は従量制であることの公式確認。' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline：モデルをローカルで実行する', description: 'OllamaおよびLM Studioのローカルモデル接続に関するCline公式ドキュメント。' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Bodega One Code料金', description: 'Personal、Pro、Enterprise各プランを掲載するBodega One Code公式価格ページ。' },
+          { url: 'https://www.bodegaone.ai/about', title: 'Bodega One Codeについて', description: 'Bodega One Codeのローカルファーストアーキテクチャ、エージェント、対応プラットフォームを説明する公式製品ページ。' },
         ],
       },
       relatedReading: {
@@ -1794,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。価格は各社公式サイトで検証済み。',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ja.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ja.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'ja',
@@ -1808,6 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ja/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -1819,6 +2016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'CursorはGitHub Copilotより優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'エージェント型の複数ファイル作業とモデルの柔軟性では、一般にCursorの方が優れています。GitHub Copilotは、既にGitHubとAzure DevOpsに標準化しているチームに特に適しています。' } },
         { '@type': 'Question', 'name': 'エージェントモード搭載の無料AIコーディングアシスタントはありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'あります。Clineは完全無料・オープンソースでサブスクリプションはなく、使用したLLM APIトークン分のみ支払うか、Ollama/LM Studio経由のローカルモデルなら費用ゼロです。' } },
         { '@type': 'Question', 'name': '2026年のWindsurfとCursorの実質的な違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年8月時点で両者のProプランは月20ドルで同額です。残る違いはワークフローで、WindsurfはCascade、CursorはComposerとCloud Agentsを使います。' } },
+        { '@type': 'Question', 'name': 'Bodega One Codeとは何で、CursorやClineとどう比較されますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Codeは、現在オープンベータ提供中のローカルファーストAI IDEで、Monacoベースのエディタ、AIチャット、自律型コーディングエージェントを、拡張機能としてではなく1つのアプリに統合しています。Personalプランは1台のマシンでの非商用利用なら永久無料で、Proは正確な価格がまだ発表されていない買い切りです。' } },
       ],
     },
   },
@@ -1830,11 +2028,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年最佳智能体式AI编程助手：Cursor对比Windsurf对比GitHub Copilot对比Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline（2026）',
     intro:
-      'Cursor、Windsurf、GitHub Copilot和Cline都提供能够编辑多个文件并代为执行终端命令的"智能体模式"，但在价格、模型访问权限和代码去向上各不相同。本指南按照决定实际购买决策的标准比较这四款工具：智能体能力、定价（2026年8月于各厂商官方定价页面核实）、模型灵活性和IDE支持。',
+      'Cursor、Windsurf、GitHub Copilot和Cline都提供能够编辑多个文件并代为执行终端命令的"智能体模式"，但在价格、模型访问权限和代码去向上各不相同。本指南在这四款工具之外，还加入了目前处于公开测试阶段、内置智能体的本地优先IDE Bodega One Code，按照决定实际购买决策的标准进行比较：智能体能力、定价（在各厂商官方定价页面核实，最近一次为2026年9月）、模型灵活性和IDE支持。',
     metaDescription:
       'Cursor对比Windsurf对比GitHub Copilot对比Cline：智能体模式、定价与模型访问权限比较。2026年8月定价已在各官网核实。',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
     audience: '正在选择带智能体模式的AI编程助手、希望比较Cursor、Windsurf、GitHub Copilot和Cline在价格、模型访问权限和工作流适配性上差异的开发者。',
@@ -1850,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**对大多数专业开发者而言，Cursor是2026年综合最佳的智能体式AI编程助手；对已在GitHub或Azure上标准化的团队，GitHub Copilot是更稳妥的默认选择；如果你自带API密钥或运行本地模型，Cline是最佳免费选项。**Windsurf目前定价与Cursor Pro相同（自2026年8月起为20美元/月，此前为15美元），已不再具备价格优势——只有在你特别偏好其Cascade智能体流程时才选它。没有一款工具能在所有类别都胜出；请根据工作流而非营销说辞来选择。',
+      '**对大多数专业开发者而言，Cursor是2026年综合最佳的智能体式AI编程助手；对已在GitHub或Azure上标准化的团队，GitHub Copilot是更稳妥的默认选择；如果你自带API密钥或运行本地模型，Cline是最佳免费选项。**Windsurf目前定价与Cursor Pro相同（自2026年8月起为20美元/月，此前为15美元），已不再具备价格优势——只有在你特别偏好其Cascade智能体流程时才选它。如果你想要一款内置智能体模式的一体化本地优先IDE，而不是叠加在现有编辑器上的扩展，Bodega One Code值得关注，但它仍处于公开测试阶段，Pro定价尚未确定。没有一款工具能在所有类别都胜出；请根据工作流而非营销说辞来选择。',
     quickAnswerTop: {
       zh: {
         question: '2026年哪款AI编程助手的智能体模式最佳？',
@@ -1861,9 +2059,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf：Cascade智能体，Pro 20美元/月（2026年3月从15美元上调）——与Cursor价格持平',
           'GitHub Copilot：编程智能体与GitHub Issue/PR绑定，Pro 10美元/月，Pro+ 39美元/月，Max 100美元/月',
           'Cline：开源扩展，本身0美元——成本仅取决于所连接的LLM API，或通过Ollama/LM Studio使用本地模型时为0美元',
-          '截至2026年8月，四家均无标准公开的联盟/佣金计划',
+          'Bodega One Code：内置智能体的本地优先桌面IDE，公开测试阶段——Personal永久免费，Pro为一次性购买且价格尚未公布',
+          '五家均无标准公开的联盟/佣金计划',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -1878,6 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: '最终结论', anchor: '#final-verdict' },
       { label: '联盟计划现状', anchor: '#affiliate-status' },
       { label: '常见问题', anchor: '#faq' },
@@ -1926,12 +2126,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: '快速事实',
-        content: '直接在cursor.com/pricing、windsurf.com（Cognition收购后重定向至devin.ai/pricing）、github.com/features/copilot/plans和cline.bot/pricing上核实，并与独立价格追踪网站交叉核对。开发工具的订阅定价会随套餐调整而变化——订阅前请在厂商官网确认当前价格。以上均为美元定价；这些订阅未公布单独的人民币零售价——结账时可能显示本地货币选项，但所示美元价格为全球统一标准。',
+        content: '直接在cursor.com/pricing、windsurf.com（Cognition收购后重定向至devin.ai/pricing）、github.com/features/copilot/plans、cline.bot/pricing和bodegaone.ai/pricing上核实，并与独立价格追踪网站交叉核对。开发工具的订阅定价会随套餐调整而变化——订阅前请在厂商官网确认当前价格。以上均为美元定价；这些订阅未公布单独的人民币零售价——结账时可能显示本地货币选项，但所示美元价格为全球统一标准。',
         items: [
           '**Cursor：**免费Hobby档位；Pro、Pro+和Ultra共享20美元/月基础费，包含使用量倍数递增（Pro+约3倍，Ultra约20倍），超出包含用量后按需计费；Teams起价40美元/用户/月。',
           '**Windsurf：**免费档位含较少的每日/每周额度；Pro 20美元/月（2026年3月从15美元上调，与Cursor持平）；Max 200美元/月；Teams 40美元/用户/月；Enterprise定制报价。信用点池系统已于2026年3月替换为每日/每周额度制。',
           '**GitHub Copilot：**免费档位（每月2,000次补全）；Pro 10美元/月（含15美元AI信用点）；Pro+ 39美元/月（含70美元）；Max 100美元/月（含200美元）；Business 19美元/用户/月（1,900 AI信用点）；Enterprise 39美元/用户/月（3,900 AI信用点）。已于2026年6月1日转为按量计费的AI信用点模式。',
           '**Cline：**扩展本身免费、开源，MIT许可。实际成本取决于所连接的LLM API（OpenAI、Anthropic、Google、OpenRouter、AWS Bedrock、GCP Vertex、Groq、Cerebras、DeepSeek等），若通过Ollama或LM Studio使用本地模型则为0美元——两者均无需API密钥。',
+          '**Bodega One Code：**Personal档位永久免费（一台设备、非商业用途、单一工作区）；Pro为一次性购买——而非订阅——增加商业使用权、第二台设备及无限工作区，但厂商在正式发布前将其定价列为"待定"；Enterprise为定制报价。在公开测试期间，包括商业用途在内，整个应用均免费。',
           '**Windsurf目前隶属于Cognition**，即自主编程智能体Devin背后的公司，此前Cognition收购了Windsurf的团队、产品和品牌。windsurf.com目前重定向至devin.ai的定价页面，Devin正被直接整合进Windsurf编辑器，而非完全取而代之。',
         ],
       },
@@ -1951,9 +2152,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor对比Windsurf对比GitHub Copilot对比Cline',
+        title: 'Cursor对比Windsurf对比GitHub Copilot对比Cline对比Bodega One Code',
         content:
-          '定价为2026年8月快照，已在各厂商官方定价页面核实——Cursor、Windsurf和GitHub Copilot均在2026年内至少调整过一次定价结构，订阅前请务必确认当前价格。"模型访问权限"反映的是各工具在模型选择层面允许你选择的范围，而不仅仅是驱动自动补全的模型。',
+          '定价为2026年8月至9月快照，已在各厂商官方定价页面核实——Cursor、Windsurf和GitHub Copilot均在2026年内至少调整过一次定价结构，订阅前请务必确认当前价格。"模型访问权限"反映的是各工具在模型选择层面允许你选择的范围，而不仅仅是驱动自动补全的模型。',
         columns: ['工具', '链接', '最适合', '定价（2026年8月）', '模型访问权限', '智能体模式', 'IDE', '为何付费？'],
         rows: [
           {
@@ -1996,6 +2197,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code、JetBrains',
             '为何付费？': '最大控制权——BYOK或本地，0美元',
           },
+          {
+            '工具': 'Bodega One Code',
+            '链接': '[bodegaone.ai](https://www.bodegaone.ai)',
+            '最适合': '一体化本地优先IDE（测试版）',
+            '定价（2026年8月）': '测试版免费 / Pro一次性购买，价格待定',
+            '模型访问权限': '10余家服务商，含Ollama、LM Studio',
+            '智能体模式': '内置自主智能体',
+            'IDE': 'Bodega One Code（基于Monaco）',
+            '为何付费？': '商业用途、第二台设备',
+          },
         ],
       },
       decisionMatrix: {
@@ -2012,6 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的情况是…': '没有订阅预算', '选择': 'Cline' },
           { '你的情况是…': '希望使用BYOK', '选择': 'Cline' },
           { '你的情况是…': '偏好Cascade工作流', '选择': 'Windsurf' },
+          { '你的情况是…': '想要本地IDE而非扩展', '选择': 'Bodega One Code（测试版）' },
         ],
         note: '不要只凭表格决定——最快的方法是在同一代码仓库中用每款工具执行同一编码任务（先Cursor，再Windsurf，再Copilot，再搭配本地模型的Cline），看哪款所需的手动干预最少。',
       },
@@ -2025,7 +2237,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你特别喜欢Cascade智能体的操作体验 →** Windsurf。它已不再具备价格优势（两者均为20美元/月）——只有在两者都试用过并偏好其流程后才选择它。',
           '**团队已标准化使用GitHub Issue、PR和Azure DevOps →** GitHub Copilot。其编程智能体直接对接你现有的GitHub工作流进行读写。',
           '**预算为0美元，且愿意运行本地模型或按API令牌付费 →** Cline。它完全没有订阅档位——你可以直接控制成本。',
-          '**你的代码属于专有、受NDA约束或存在监管限制 →** 通过Ollama或LM Studio搭配本地模型的Cline，是四款工具中唯一能做到代码完全不离开你电脑的选项。',
+          '**你的代码属于专有、受NDA约束或存在监管限制 →** 通过Ollama或LM Studio搭配本地模型的Cline，或使用其气隙模式的Bodega One Code，是这里唯一能做到代码完全不离开你电脑的选项。',
+          '**你想要一体化的本地优先IDE而非扩展，并且不介意使用公开测试版软件 →** Bodega One Code。它将编辑器、聊天和自主智能体与离线/气隙模式整合在一起，但其Pro档位价格尚未确定，且相较于本文其他四款工具，其市场验证时间较短。',
         ],
         note: '如果你只需要内联自动补全而不需要多步骤智能体行为，可以完全跳过这个比较——更轻量的补全插件（或你IDE内置的AI功能）比这四款工具中任何一款都更便宜、配置更快。',
       },
@@ -2073,6 +2286,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地LLM工作站搭建指南](/zh/local-llms/local-llm-workstation-build) — 适合运行更大编程模型的专用多GPU工作站。',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code：内置智能体的本地优先IDE（测试版）',
+        content: [
+          '**Bodega One Code是一款目前处于公开测试阶段的本地优先AI桌面IDE，将基于Monaco的代码编辑器、AI聊天和自主编程智能体整合进一个应用中**——而不是像Cursor和Windsurf那样，在现有编辑器分支上叠加智能体功能。',
+          '该智能体可连接10余家模型服务商，既包括本地运行环境（Ollama、LM Studio、llama.cpp），也包括云端服务商（Anthropic、OpenAI、Groq等），并配备气隙模式，可屏蔽所有网络访问，确保运行本地模型时任何内容都不会离开设备——这与Cline搭配本地模型提供的离线保证相同，但被整合进了完整的IDE中，而非以扩展形式添加。',
+          'Bodega One Code可在Windows、macOS和Linux上运行。根据厂商自己的定价页面，**Personal档位永久免费**（一台设备、非商业用途、同一时间一个工作区），**Pro档位为一次性购买而非订阅**——正式发布前的准确价格标注为"待定"，Pro增加了商业使用权、第二台设备激活及无限工作区。定制报价的Enterprise档位增加了管理控制台、单点登录和优先支持。',
+          '**厂商表示，在公开测试期间，包括商业用途在内的整个应用均免费。**该公司尚未公布测试结束日期，因此请将此处列出的所有功能和价格视为2026年9月核实的快照，而非永久承诺。',
+          'PromptQuorum未发现Bodega One Code有任何公开的联盟或推荐计划。',
+        ],
+        callouts: [
+          { type: 'warning', text: '这是一款新产品。Bodega One Code于2026年进入公开测试阶段，相较于本页其他四款工具，其市场验证时间较短。如果稳定性和长期支持对你来说比抢先体验更重要，建议等待稳定版发布后再将其纳入你的主要工作流。' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: '免费（测试版）/ Pro一次性购买，价格待定', label: '试用Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: '最终结论',
@@ -2082,6 +2312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot——团队最佳。**如果你的工作流已经围绕GitHub或Azure DevOps展开，选它。',
           '🥉 **Cline——控制权最佳。**如果你需要自带API密钥、本地模型、隐私保护或零订阅成本，选它。',
           '**Windsurf——最佳替代方案。**如果Cascade智能体流程是你偏好的工作方式，选它。',
+          '**Bodega One Code——值得关注。**它是在独立编辑器中运行Cline之外的一体化本地优先替代方案，但目前处于公开测试阶段，Pro定价尚未确定——只有在你能接受使用测试版软件时才选它。',
           '仍拿不定主意？先试试Cursor和Cline——两者分别覆盖了付费智能体和免费本地这两个极端，大多数开发者最终会定在其中一款。',
         ],
         affiliateLinks: [
@@ -2092,16 +2323,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: '这四款工具中有联盟计划吗？',
+        title: '这五款工具中有联盟计划吗？',
         content:
-          '**截至2026年8月，四家厂商均未运营标准的、公开可用的按推荐付费联盟计划。**各厂商实际提供的内容都比"联盟计划"要有限：',
+          '**五家厂商均未运营标准的、公开可用的按推荐付费联盟计划。**各厂商实际提供的内容都比"联盟计划"要有限：',
         items: [
           '**Cursor：**一个有限推广的推荐计划（并非普遍可用）——推荐人每推荐一名付费客户可获得25美元使用信用点，被推荐用户首月可获50%折扣。这是一种推荐奖励，而非面向内容发布者开放的佣金制联盟计划。',
           '**Windsurf：**一个通过推荐链接向新注册用户提供250个免费flex信用点的计划。同样是推荐奖励，而非联盟/佣金计划。',
           '**GitHub Copilot：**用于构建Copilot Chat技术集成的"Copilot Partner Program"——这是开发者/技术合作关系，而非按推荐付费的联盟协议。',
           '**Cline：**没有任何形式的推荐或联盟计划；它是一个社区驱动的开源项目。',
+          '**Bodega One Code：**截至2026年9月，未发现任何公开的联盟或推荐计划。',
         ],
-        note: 'PromptQuorum目前与Cursor、Windsurf、GitHub Copilot或Cline均无任何联盟关系。本页所有链接均为已披露的普通产品链接，不产生任何佣金。',
+        note: 'PromptQuorum目前与Cursor、Windsurf、GitHub Copilot、Cline或Bodega One Code均无任何联盟关系。本页所有链接均为已披露的普通产品链接，不产生任何佣金。',
       },
       faqSection: {
         id: 'faq',
@@ -2114,9 +2346,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '如何为Cline配置本地模型？', a: '安装Ollama或LM Studio，拉取一个编程模型（Cline文档推荐Qwen2.5 Coder、Llama 3.3、DeepSeek Coder V3或Codestral），然后在Cline中选择Ollama或LM Studio作为API服务商——Ollama的默认端点是http://localhost:11434，LM Studio在1234端口提供OpenAI兼容API。两者均无需API密钥。请使用至少32K令牌的上下文窗口；强度更高的智能体会话通常需要64K。' },
           { q: '我可以同时使用多款这类工具吗？', a: '可以，许多开发者都这样做——例如，对于日常、低敏感度的编辑使用搭配本地模型的Cline，而对于需要更强云端模型帮助的难题则切换到Cursor或GitHub Copilot。在同一VS Code安装中运行多个扩展没有技术冲突，不过通常每个会话中只有一款作为主智能体处于激活状态。' },
           { q: '预算有限的独立开发者最适合哪款AI编程助手？', a: 'Cline搭配本地模型（Ollama或LM Studio）总成本为0美元。如果你希望在没有订阅的情况下偶尔访问更强的云端模型，使用按令牌付费的API密钥（OpenAI、Anthropic或OpenRouter）的Cline能让成本与实际用量成正比，而非固定月费。' },
-          { q: '这四款工具中有能完全离线工作的吗？', a: '只有Cline，且仅在搭配Ollama或LM Studio的本地模型时——在这种配置下，代码和提示词数据完全不会离开你的电脑。Cursor、Windsurf和GitHub Copilot默认都基于云端托管模型；Cursor支持指向自定义（包括本地）的OpenAI兼容端点，但其核心产品体验默认需要网络连接。' },
+          { q: '这些工具中有能完全离线工作的吗？', a: '搭配Ollama或LM Studio本地模型的Cline，以及使用其气隙模式搭配本地模型的Bodega One Code——在这两种配置下，代码和提示词数据完全不会离开你的电脑。Cursor、Windsurf和GitHub Copilot默认都基于云端托管模型；Cursor支持指向自定义（包括本地）的OpenAI兼容端点，但其核心产品体验默认需要网络连接。' },
           { q: '哪款工具最适合已标准化使用GitHub或Azure DevOps的团队？', a: 'GitHub Copilot。其编程智能体直接对接GitHub Issue和拉取请求进行读写，Business（19美元/用户/月）和Enterprise（39美元/用户/月）档位增加了微软标准化合规体系通常要求的组织级控制——审计日志、策略管理、知识产权赔偿。' },
-          { q: 'Cursor、Windsurf、GitHub Copilot或Cline会向推荐它们的作者支付佣金吗？', a: '不会。截至2026年8月，四款工具均未运营标准的公开联盟/佣金计划。Cursor和Windsurf各自提供有限的推荐信用点奖励（并未向一般内容发布者开放），GitHub运营的是技术集成合作伙伴计划（不按推荐付费），而Cline是没有变现层的社区开源项目。本页与这四款工具均无任何联盟关系。' },
+          { q: 'Bodega One Code是什么？它与Cursor或Cline相比如何？', a: 'Bodega One Code是一款目前处于公开测试阶段的本地优先AI IDE，将基于Monaco的编辑器、AI聊天和自主编程智能体整合进一个应用中，而不是作为添加到现有编辑器上的扩展。与Cline类似，它可以通过屏蔽网络访问的气隙模式，针对本地模型（Ollama、LM Studio或llama.cpp）完全离线运行；与Cline不同的是，这种离线能力被整合进了完整的IDE中，而不是扩展。其Personal档位在一台设备上用于非商业用途时永久免费；Pro为一次性购买——而非订阅——其确切价格尚未公布。由于仍处于测试阶段，其市场验证时间比Cursor、Windsurf、GitHub Copilot或Cline都要短。' },
+          { q: 'Cursor、Windsurf、GitHub Copilot、Cline或Bodega One Code会向推荐它们的作者支付佣金吗？', a: '不会。五款工具均未运营标准的公开联盟/佣金计划。Cursor和Windsurf各自提供有限的推荐信用点奖励（并未向一般内容发布者开放），GitHub运营的是技术集成合作伙伴计划（不按推荐付费），Cline是没有变现层的社区开源项目，而Bodega One Code没有任何公开的推荐或联盟计划。本页与这五款工具均无任何联盟关系。' },
         ],
       },
       sources: {
@@ -2130,6 +2363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'GitHub Copilot组织计费', description: '关于Business/Enterprise AI信用点计费的GitHub官方文档，自2026年6月1日生效。' },
           { url: 'https://cline.bot/pricing', title: 'Cline定价/FAQ', description: '官方确认Cline扩展免费且开源，API采用按量计费。' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline：本地运行模型', description: 'Cline官方文档，介绍如何连接Ollama和LM Studio本地模型。' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Bodega One Code定价', description: 'Bodega One Code官方定价页面——Personal、Pro和Enterprise档位。' },
+          { url: 'https://www.bodegaone.ai/about', title: '关于Bodega One Code', description: '官方产品页面，介绍Bodega One Code的本地优先架构、智能体和平台支持情况。' },
         ],
       },
       relatedReading: {
@@ -2149,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor对比Windsurf对比GitHub Copilot对比Cline：智能体模式、定价与模型访问权限比较。2026年8月定价已在各官网核实。',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-zh.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-zh.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'zh',
@@ -2163,6 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/zh/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -2174,6 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Cursor比GitHub Copilot更好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在智能体式多文件工作和模型灵活性方面，Cursor通常更有力。对已在GitHub和Azure DevOps上标准化的团队，GitHub Copilot是更合适的选择。' } },
         { '@type': 'Question', 'name': '有带智能体模式的免费AI编程助手吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有。Cline完全免费且开源，没有订阅档位——只需为使用的LLM API令牌付费，或通过Ollama/LM Studio连接本地模型即可免费。' } },
         { '@type': 'Question', 'name': '2026年Windsurf和Cursor之间的实际差异是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '截至2026年8月，两者的Pro档位均为20美元/月，价格相同。剩下的差异在于工作流：Windsurf使用Cascade，Cursor使用Composer和Cloud Agents。' } },
+        { '@type': 'Question', 'name': 'Bodega One Code是什么？它与Cursor或Cline相比如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code是一款目前处于公开测试阶段的本地优先AI IDE，将基于Monaco的编辑器、AI聊天和自主编程智能体整合进一个应用中，而不是作为添加到现有编辑器上的扩展。其Personal档位在一台设备上用于非商业用途时永久免费；Pro为一次性购买，其确切价格尚未公布。' } },
       ],
     },
   },
@@ -2185,11 +2422,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhor Assistente de Código IA Agêntico 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot e Cline têm um "modo agente" que edita vários arquivos e executa comandos de terminal por você, mas diferem em preço, acesso a modelos e para onde vai o seu código. Este guia compara os quatro pelos critérios que decidem uma compra real: capacidade agêntica, preços (verificados na página oficial de preços de cada fornecedor em agosto de 2026), flexibilidade de modelos e suporte a IDEs.',
+      'Cursor, Windsurf, GitHub Copilot e Cline têm um "modo agente" que edita vários arquivos e executa comandos de terminal por você, mas diferem em preço, acesso a modelos e para onde vai o seu código. Este guia compara os quatro, mais o Bodega One Code — uma IDE local-first com um agente integrado, atualmente em beta aberto —, pelos critérios que decidem uma compra real: capacidade agêntica, preços (verificados na página oficial de preços de cada fornecedor, mais recentemente em setembro de 2026), flexibilidade de modelos e suporte a IDEs.',
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados em modo agente, preços e acesso a modelos. Preços de agosto de 2026 verificados em cada site oficial.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que escolhem um assistente de código IA com modo agente e querem comparar Cursor, Windsurf, GitHub Copilot e Cline em preço, acesso a modelos e adequação ao fluxo de trabalho.',
@@ -2205,7 +2442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**O Cursor é o melhor assistente de código IA agêntico geral em 2026 para a maioria dos desenvolvedores profissionais, o GitHub Copilot é a opção mais segura para equipes já padronizadas em GitHub ou Azure, e o Cline é a melhor opção gratuita se você usar sua própria chave de API ou rodar um modelo local.** O Windsurf agora custa o mesmo que o Cursor Pro (20 $/mês desde agosto de 2026, ante 15 $ no início do ano) e não vence mais em preço — escolha-o apenas se preferir especificamente o fluxo de agente Cascade. Nenhuma ferramenta vence em todas as categorias; escolha com base no fluxo de trabalho, não no marketing.',
+      '**O Cursor é o melhor assistente de código IA agêntico geral em 2026 para a maioria dos desenvolvedores profissionais, o GitHub Copilot é a opção mais segura para equipes já padronizadas em GitHub ou Azure, e o Cline é a melhor opção gratuita se você usar sua própria chave de API ou rodar um modelo local.** O Windsurf agora custa o mesmo que o Cursor Pro (20 $/mês desde agosto de 2026, ante 15 $ no início do ano) e não vence mais em preço — escolha-o apenas se preferir especificamente o fluxo de agente Cascade. O Bodega One Code vale a pena acompanhar se você quer uma única IDE local-first integrada com modo agente embutido em vez de uma extensão colada a um editor existente, mas ele ainda está em beta aberto com preço do Pro não finalizado. Nenhuma ferramenta vence em todas as categorias; escolha com base no fluxo de trabalho, não no marketing.',
     quickAnswerTop: {
       pt: {
         question: 'Qual assistente de código IA tem o melhor modo agente em 2026?',
@@ -2216,9 +2453,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: agente Cascade, Pro 20 $/mês (subiu de 15 $ em março de 2026) — preço igual ao Cursor',
           'GitHub Copilot: agente de código vinculado a issues/PRs do GitHub, Pro 10 $/mês, Pro+ 39 $/mês, Max 100 $/mês',
           'Cline: extensão de código aberto, 0 $ em si — o custo depende apenas da API LLM conectada, ou 0 $ com um modelo local via Ollama/LM Studio',
-          'Nenhum dos quatro tem um programa de afiliados público padrão em agosto de 2026',
+          'Bodega One Code: IDE de desktop local-first com agente integrado, beta aberto — Personal grátis para sempre, Pro é uma compra única com preço ainda não anunciado',
+          'Nenhum dos cinco tem um programa de afiliados público padrão',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -2233,6 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'Veredito Final', anchor: '#final-verdict' },
       { label: 'Status dos Programas de Afiliados', anchor: '#affiliate-status' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
@@ -2281,12 +2520,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Fatos Rápidos (verificados em)',
-        content: 'Verificados diretamente em cursor.com/pricing, windsurf.com (redireciona para devin.ai/pricing após a aquisição pela Cognition), github.com/features/copilot/plans e cline.bot/pricing, cruzados com rastreadores de preços independentes. Os preços de assinatura de ferramentas de desenvolvimento mudam com revisões de planos — confirme o valor atual no site do fornecedor antes de assinar. Os preços são em dólares (USD); essas assinaturas não publicam tabelas de preço separadas em reais — o checkout pode oferecer moeda local, mas o valor em USD exibido é global.',
+        content: 'Verificados diretamente em cursor.com/pricing, windsurf.com (redireciona para devin.ai/pricing após a aquisição pela Cognition), github.com/features/copilot/plans, cline.bot/pricing e bodegaone.ai/pricing, cruzados com rastreadores de preços independentes. Os preços de assinatura de ferramentas de desenvolvimento mudam com revisões de planos — confirme o valor atual no site do fornecedor antes de assinar. Os preços são em dólares (USD); essas assinaturas não publicam tabelas de preço separadas em reais — o checkout pode oferecer moeda local, mas o valor em USD exibido é global.',
         items: [
           '**Cursor:** plano Hobby grátis; Pro, Pro+ e Ultra compartilham uma base de 20 $/mês com multiplicadores de uso incluído crescentes (Pro+ cerca de 3x, Ultra cerca de 20x), mais cobrança por uso após esgotar o uso incluído; Teams a partir de 40 $/usuário/mês.',
           '**Windsurf:** plano grátis com uma cota diária/semanal leve; Pro 20 $/mês (subiu de 15 $ em março de 2026, igualando o Cursor); Max 200 $/mês; Teams 40 $/usuário/mês; Enterprise sob consulta. O sistema de pool de créditos foi substituído por cotas diárias/semanais em março de 2026.',
           '**GitHub Copilot:** plano grátis (2.000 completions/mês); Pro 10 $/mês (15 $ de créditos de IA incluídos); Pro+ 39 $/mês (70 $ incluídos); Max 100 $/mês (200 $ incluídos); Business 19 $/usuário/mês (1.900 créditos de IA); Enterprise 39 $/usuário/mês (3.900 créditos de IA). Migrou para cobrança por créditos de IA baseada em uso em 1º de junho de 2026.',
           '**Cline:** a extensão em si é grátis, código aberto, licença MIT. O custo real depende da API LLM conectada (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek e outras), ou 0 $ com um modelo local via Ollama ou LM Studio — ambos funcionam sem chave de API.',
+          '**Bodega One Code:** o plano Personal é grátis para sempre (uma máquina, uso não comercial, um workspace); o Pro é uma compra única — não uma assinatura — que adiciona direitos de uso comercial, uma segunda máquina e workspaces ilimitados, mas o fornecedor lista o preço como "TBD" antes do lançamento completo; o Enterprise tem preço sob consulta. O aplicativo inteiro, incluindo uso comercial, é gratuito durante o beta aberto.',
           '**O Windsurf agora pertence à Cognition**, empresa por trás do agente de código autônomo Devin, após a aquisição pela Cognition da equipe, produto e marca do Windsurf. O windsurf.com atualmente redireciona para a página de preços do devin.ai, e o Devin está sendo integrado diretamente ao editor Windsurf em vez de substituí-lo completamente.',
         ],
       },
@@ -2306,9 +2546,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline vs Bodega One Code',
         content:
-          'Os preços são um retrato de agosto de 2026 verificado na página oficial de preços de cada fornecedor — Cursor, Windsurf e GitHub Copilot mudaram sua estrutura de preços pelo menos uma vez em 2026, então confirme o valor atual antes de assinar. "Acesso a Modelos" reflete o que cada ferramenta permite escolher no nível de seleção de modelo, não apenas o que alimenta o autocompletar.',
+          'Os preços são um retrato de agosto–setembro de 2026 verificado na página oficial de preços de cada fornecedor — Cursor, Windsurf e GitHub Copilot mudaram sua estrutura de preços pelo menos uma vez em 2026, então confirme o valor atual antes de assinar. "Acesso a Modelos" reflete o que cada ferramenta permite escolher no nível de seleção de modelo, não apenas o que alimenta o autocompletar.',
         columns: ['Ferramenta', 'Link', 'Melhor Para', 'Preço (ago. 2026)', 'Acesso a Modelos', 'Modo Agente', 'IDE', 'Por Que Pagar?'],
         rows: [
           {
@@ -2351,6 +2591,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             'Por Que Pagar?': 'Controle máximo — BYOK ou local, 0 $',
           },
+          {
+            'Ferramenta': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'Melhor Para': 'IDE local-first tudo-em-um (beta)',
+            'Preço (ago. 2026)': 'Beta grátis / Pro compra única, preço TBD',
+            'Acesso a Modelos': '10+ provedores incl. Ollama, LM Studio',
+            'Modo Agente': 'Agente autônomo integrado',
+            'IDE': 'Bodega One Code (baseado em Monaco)',
+            'Por Que Pagar?': 'Uso comercial, 2ª máquina',
+          },
         ],
       },
       decisionMatrix: {
@@ -2367,6 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Se Você É…': 'Sem orçamento para assinatura', 'Use': 'Cline' },
           { 'Se Você É…': 'Interessado em BYOK', 'Use': 'Cline' },
           { 'Se Você É…': 'Prefere o fluxo Cascade', 'Use': 'Windsurf' },
+          { 'Se Você É…': 'Quer uma IDE local em vez de uma extensão', 'Use': 'Bodega One Code (beta)' },
         ],
         note: 'Não decida só pela tabela — o jeito mais rápido é rodar a mesma tarefa de código em cada ferramenta no mesmo repositório (Cursor, depois Windsurf, depois Copilot, depois Cline com um modelo local) e ver qual exigiu menos intervenção manual.',
       },
@@ -2380,7 +2631,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Você gosta especificamente da UX do agente Cascade →** Windsurf. Não vence mais em preço (ambos custam 20 $/mês) — escolha-o apenas se testou ambos e prefere seu fluxo.',
           '**Equipe padronizada em issues, PRs e Azure DevOps do GitHub →** GitHub Copilot. O agente de código lê e escreve diretamente no seu fluxo de trabalho existente do GitHub.',
           '**Orçamento de 0 $ e disposto a rodar um modelo local ou pagar por token de API →** Cline. Não tem nenhum plano de assinatura — você controla o custo diretamente.',
-          '**Seu código é proprietário, sujeito a NDA ou tem restrições regulatórias →** o Cline com um modelo local via Ollama ou LM Studio é o único dos quatro que pode rodar sem que nenhum código saia da sua máquina.',
+          '**Seu código é proprietário, sujeito a NDA ou tem restrições regulatórias →** o Cline com um modelo local via Ollama ou LM Studio, ou o Bodega One Code com seu modo air-gap, são as únicas opções aqui que podem rodar sem que nenhum código saia da sua máquina.',
+          '**Você quer uma única IDE local-first integrada em vez de uma extensão, e não se importa em rodar software em beta aberto →** Bodega One Code. Ele reúne editor, chat e um agente autônomo com modo offline/air-gap, mas o preço do plano Pro ainda não está definido e ele tem um histórico mais curto que as outras quatro ferramentas aqui.',
         ],
         note: 'Pule esta comparação completamente se você só precisa de autocompletar em linha, não de comportamento de agente multi-etapa — um plugin de completar mais leve (ou os recursos de IA integrados da sua IDE) custará menos e será configurado mais rápido que qualquer uma dessas quatro ferramentas.',
       },
@@ -2428,6 +2680,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guia de Montagem de Workstation para LLM Local](/pt/local-llms/local-llm-workstation-build) — para uma workstation dedicada multi-GPU rodando modelos de código maiores.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: IDE Local-First com Agente Integrado (Beta)',
+        content: [
+          '**O Bodega One Code é uma IDE de desktop de IA local-first, atualmente em beta aberto, que reúne um editor de código baseado em Monaco, chat de IA e um agente de código autônomo em um único aplicativo** — em vez de adicionar recursos de agente a um fork de editor existente, como fazem o Cursor e o Windsurf.',
+          'O agente se conecta a mais de 10 provedores de modelos, incluindo runners locais (Ollama, LM Studio, llama.cpp) ao lado de provedores em nuvem (Anthropic, OpenAI, Groq e outros), e traz um modo air-gap que bloqueia todo acesso à rede para que nada saia da máquina ao rodar um modelo local — a mesma garantia offline que o Cline oferece com um modelo local, mas embutida em uma IDE completa em vez de adicionada como extensão.',
+          'O Bodega One Code roda em Windows, macOS e Linux. Segundo a própria página de preços do fornecedor, o **plano Personal é grátis para sempre** (uma máquina, uso não comercial, um workspace por vez), e o **plano Pro é uma compra única em vez de uma assinatura** — o preço exato é listado como "TBD" antes do lançamento completo, e o Pro adiciona direitos de uso comercial, ativação de uma segunda máquina e workspaces ilimitados. Um plano Enterprise com preço sob consulta adiciona um console de administração, SSO e suporte prioritário.',
+          '**Durante o beta aberto, o fornecedor afirma que o aplicativo inteiro — incluindo uso comercial — é gratuito.** A empresa não publicou uma data de término do beta, então trate cada recurso e preço aqui como um retrato verificado em setembro de 2026, não um compromisso permanente.',
+          'A PromptQuorum não encontrou nenhum programa público de afiliados ou indicação para o Bodega One Code.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'É novo. O Bodega One Code entrou em beta aberto em 2026 e tem um histórico mais curto que as outras quatro ferramentas desta página. Se estabilidade e suporte de longo prazo importam mais para você do que ser um adotante inicial, espere um lançamento estável antes de mover seu fluxo de trabalho principal para ele.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'Grátis (beta) / Pro compra única, TBD', label: 'Testar o Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'Veredito Final',
@@ -2437,6 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — a melhor para equipes.** Escolha-o se seu fluxo de trabalho já gira em torno do GitHub ou Azure DevOps.',
           '🥉 **Cline — a melhor para controle.** Escolha-o por acesso com chave de API própria, modelos locais, privacidade ou custo zero de assinatura.',
           '**Windsurf — a melhor alternativa.** Escolha-o se o fluxo de agente Cascade é o fluxo de trabalho que você prefere.',
+          '**Bodega One Code — uma para observar.** Uma alternativa local-first e tudo-em-um a rodar o Cline em um editor separado, mas está em beta aberto com preço do Pro não finalizado — escolha-o só se estiver confortável rodando software beta.',
           'Ainda em dúvida? Teste primeiro o Cursor e o Cline — juntos eles cobrem os extremos pago-agêntico e grátis-local, e a maioria dos desenvolvedores se decide por um dos dois.',
         ],
         affiliateLinks: [
@@ -2447,16 +2717,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'Alguma Dessas Quatro Ferramentas Tem Programa de Afiliados?',
+        title: 'Alguma Dessas Cinco Ferramentas Tem Programa de Afiliados?',
         content:
-          '**Em agosto de 2026, nenhum dos quatro fornecedores mantém um programa de afiliados por comissão público e padrão.** O que cada fornecedor realmente oferece é mais restrito que um "programa de afiliados":',
+          '**Nenhum dos cinco fornecedores mantém um programa de afiliados por comissão público e padrão.** O que cada fornecedor realmente oferece é mais restrito que um "programa de afiliados":',
         items: [
           '**Cursor:** um programa de indicação de lançamento limitado (não universalmente disponível) — indicadores recebem 25 $ de crédito de uso por cliente pagante indicado, usuários indicados recebem 50% de desconto no primeiro mês. É um incentivo de indicação, não um programa de afiliados por comissão aberto a publishers.',
           '**Windsurf:** um link de indicação que dá a novos cadastros 250 créditos flex gratuitos. Também um incentivo de indicação, não um programa de afiliados/comissão.',
           '**GitHub Copilot:** um "Copilot Partner Program" para construir integrações tecnológicas do Copilot Chat — isso é uma parceria de desenvolvedor/tecnologia, não um acordo de afiliados por comissão de indicação.',
           '**Cline:** nenhum programa de indicação ou afiliados de qualquer tipo; é um projeto de código aberto comunitário.',
+          '**Bodega One Code:** nenhum programa público de afiliados ou indicação encontrado até setembro de 2026.',
         ],
-        note: 'A PromptQuorum atualmente não tem relação de afiliação com Cursor, Windsurf, GitHub Copilot ou Cline. Todo link nesta página é um link de produto simples e divulgado, sem geração de comissão.',
+        note: 'A PromptQuorum atualmente não tem relação de afiliação com Cursor, Windsurf, GitHub Copilot, Cline ou Bodega One Code. Todo link nesta página é um link de produto simples e divulgado, sem geração de comissão.',
       },
       faqSection: {
         id: 'faq',
@@ -2469,9 +2740,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Como configuro o Cline com um modelo local?', a: 'Instale o Ollama ou LM Studio, baixe um modelo de código (a documentação do Cline recomenda Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 ou Codestral), depois no Cline escolha Ollama ou LM Studio como provedor de API — o endpoint padrão do Ollama é http://localhost:11434, o LM Studio expõe uma API compatível com OpenAI na porta 1234. Nenhum dos dois exige chave de API. Use pelo menos uma janela de contexto de 32K tokens; sessões agênticas mais intensas costumam precisar de 64K.' },
           { q: 'Posso usar mais de uma dessas ferramentas ao mesmo tempo?', a: 'Sim, e muitos desenvolvedores fazem isso — por exemplo, usando o Cline com um modelo local para edições rotineiras e pouco sensíveis, e alternando para o Cursor ou GitHub Copilot em problemas mais difíceis onde um modelo em nuvem mais forte ajuda. Não há conflito técnico em rodar várias extensões na mesma instalação do VS Code, embora normalmente apenas uma esteja ativa como agente principal por sessão.' },
           { q: 'Qual é o melhor assistente de código IA para um desenvolvedor solo com orçamento limitado?', a: 'O Cline combinado com um modelo local (Ollama ou LM Studio) custa 0 $ no total. Se você quiser acesso ocasional a um modelo em nuvem mais forte sem assinatura, o Cline com uma chave de API paga por token (OpenAI, Anthropic ou OpenRouter) mantém o custo proporcional ao uso real em vez de uma taxa mensal fixa.' },
-          { q: 'Alguma dessas quatro ferramentas funciona totalmente offline?', a: 'Somente o Cline, e apenas quando combinado com um modelo local via Ollama ou LM Studio — nessa configuração, nenhum código ou dado de prompt sai da sua máquina. Cursor, Windsurf e GitHub Copilot são todos construídos em torno de modelos hospedados na nuvem por padrão; o Cursor permite apontar para um endpoint compatível com OpenAI personalizado (incluindo local), mas a experiência principal do produto assume conexão de rede.' },
+          { q: 'Alguma dessas ferramentas funciona totalmente offline?', a: 'O Cline, quando combinado com um modelo local via Ollama ou LM Studio, e o Bodega One Code, usando seu modo air-gap com um modelo local — nas duas configurações, nenhum código ou dado de prompt sai da sua máquina. Cursor, Windsurf e GitHub Copilot são todos construídos em torno de modelos hospedados na nuvem por padrão; o Cursor permite apontar para um endpoint compatível com OpenAI personalizado (incluindo local), mas a experiência principal do produto assume conexão de rede.' },
           { q: 'Qual ferramenta é melhor para uma equipe já padronizada em GitHub ou Azure DevOps?', a: 'GitHub Copilot. Seu agente de código lê e escreve diretamente em issues e pull requests do GitHub, e os planos Business (19 $/usuário/mês) e Enterprise (39 $/usuário/mês) adicionam os controles organizacionais — logs de auditoria, gestão de políticas, indenização de propriedade intelectual — que uma pilha de conformidade padronizada pela Microsoft geralmente exige.' },
-          { q: 'Cursor, Windsurf, GitHub Copilot ou Cline pagam comissão a autores que os recomendam?', a: 'Não. Em agosto de 2026, nenhuma das quatro mantém um programa de afiliados/comissão público padrão. Cursor e Windsurf oferecem cada um um incentivo limitado de crédito por indicação (não aberto a publishers em geral), o GitHub mantém um programa de parceria de integração tecnológica (sem comissão por indicação), e o Cline é um projeto de código aberto comunitário sem camada de monetização. Esta página não tem relação de afiliação com nenhuma das quatro ferramentas.' },
+          { q: 'O que é o Bodega One Code e como ele se compara ao Cursor ou ao Cline?', a: 'O Bodega One Code é uma IDE de IA local-first, atualmente em beta aberto, que reúne um editor baseado em Monaco, chat de IA e um agente de código autônomo em um único aplicativo em vez de como uma extensão adicionada a um editor existente. Assim como o Cline, ele pode rodar totalmente offline com um modelo local (Ollama, LM Studio ou llama.cpp) via um modo air-gap que bloqueia o acesso à rede; diferente do Cline, essa capacidade offline está embutida em uma IDE completa em vez de em uma extensão. Seu plano Personal é grátis para sempre para uso não comercial em uma máquina; o Pro é uma compra única — não uma assinatura — cujo preço exato não foi anunciado. Por ainda estar em beta, tem um histórico mais curto que Cursor, Windsurf, GitHub Copilot ou Cline.' },
+          { q: 'Cursor, Windsurf, GitHub Copilot, Cline ou Bodega One Code pagam comissão a autores que os recomendam?', a: 'Não. Nenhuma das cinco mantém um programa de afiliados/comissão público padrão. Cursor e Windsurf oferecem cada um um incentivo limitado de crédito por indicação (não aberto a publishers em geral), o GitHub mantém um programa de parceria de integração tecnológica (sem comissão por indicação), o Cline é um projeto de código aberto comunitário sem camada de monetização, e o Bodega One Code não tem nenhum programa público de indicação ou afiliados. Esta página não tem relação de afiliação com nenhuma das cinco ferramentas.' },
         ],
       },
       sources: {
@@ -2485,6 +2757,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'Cobrança Organizacional do GitHub Copilot', description: 'Documentação do GitHub sobre cobrança por créditos de IA Business/Enterprise, em vigor desde 1º de junho de 2026.' },
           { url: 'https://cline.bot/pricing', title: 'Preços/FAQ do Cline', description: 'Confirmação oficial de que a extensão Cline é gratuita e de código aberto, com cobrança de API baseada em uso.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: Rodando Modelos Localmente', description: 'Documentação oficial do Cline para conectar modelos locais Ollama e LM Studio.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Preços do Bodega One Code', description: 'Página oficial de preços do Bodega One Code — planos Personal, Pro e Enterprise.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'Sobre o Bodega One Code', description: 'Página oficial do produto descrevendo a arquitetura local-first, o agente e o suporte a plataformas do Bodega One Code.' },
         ],
       },
       relatedReading: {
@@ -2504,7 +2778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados em modo agente, preços e acesso a modelos. Preços de agosto de 2026 verificados em cada site oficial.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-pt.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-pt.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'pt-BR',
@@ -2518,6 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/pt/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -2529,6 +2804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'O Cursor é melhor que o GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para trabalho agêntico multi-arquivo e flexibilidade de modelos, o Cursor geralmente é a escolha mais forte. O GitHub Copilot é melhor para equipes já padronizadas em GitHub e Azure DevOps.' } },
         { '@type': 'Question', 'name': 'Existe um assistente de código IA gratuito com modo agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. O Cline é totalmente gratuito e de código aberto sem plano de assinatura — você paga apenas pelos tokens de API LLM usados, ou nada com um modelo local via Ollama ou LM Studio.' } },
         { '@type': 'Question', 'name': 'Qual é a diferença real entre Windsurf e Cursor em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Em agosto de 2026, ambos custam o mesmo, 20 $/mês, em seus planos Pro. A diferença restante é o fluxo de trabalho: o Windsurf usa Cascade, o Cursor usa Composer e Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'O que é o Bodega One Code e como ele se compara ao Cursor ou ao Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Bodega One Code é uma IDE de IA local-first, atualmente em beta aberto, que reúne um editor baseado em Monaco, chat de IA e um agente de código autônomo em um único aplicativo em vez de como uma extensão adicionada a um editor existente. Seu plano Personal é grátis para sempre para uso não comercial em uma máquina; o Pro é uma compra única cujo preço exato não foi anunciado.' } },
       ],
     },
   },
@@ -2540,11 +2816,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل مساعد برمجة بالذكاء الاصطناعي الوكيلي 2026: Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline',
     seoTitle: 'Cursor مقابل Windsurf مقابل Copilot مقابل Cline (2026)',
     intro:
-      'تمتلك أدوات Cursor وWindsurf وGitHub Copilot وCline جميعها "وضع وكيل" يعدّل عدة ملفات وينفّذ أوامر الطرفية نيابة عنك، لكنها تختلف في السعر والوصول إلى النماذج ووجهة كودك. يقارن هذا الدليل الأدوات الأربع وفق المعايير التي تحدد قرار شراء حقيقي: القدرة الوكيلية، والتسعير (تم التحقق منه على صفحة التسعير الرسمية لكل مزود في أغسطس 2026)، ومرونة النماذج، ودعم بيئات التطوير.',
+      'تمتلك أدوات Cursor وWindsurf وGitHub Copilot وCline جميعها "وضع وكيل" يعدّل عدة ملفات وينفّذ أوامر الطرفية نيابة عنك، لكنها تختلف في السعر والوصول إلى النماذج ووجهة كودك. يقارن هذا الدليل الأدوات الأربع، إضافة إلى Bodega One Code — بيئة تطوير محلية أولاً بوكيل مدمج، وهي حالياً في مرحلة تجريبية عامة —، وفق المعايير التي تحدد قرار شراء حقيقي: القدرة الوكيلية، والتسعير (تم التحقق منه على صفحة التسعير الرسمية لكل مزود، وآخر مرة في سبتمبر 2026)، ومرونة النماذج، ودعم بيئات التطوير.',
     metaDescription:
       'مقارنة Cursor وWindsurf وGitHub Copilot وCline من حيث وضع الوكيل والتسعير والوصول إلى النماذج. أسعار أغسطس 2026 موثقة من موقع كل مزود.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مطورون يختارون مساعد برمجة بالذكاء الاصطناعي بوضع وكيل ويريدون مقارنة Cursor وWindsurf وGitHub Copilot وCline من حيث السعر والوصول إلى النماذج وملاءمة سير العمل.',
@@ -2560,7 +2836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor هو أفضل مساعد برمجة بالذكاء الاصطناعي الوكيلي الشامل لعام 2026 لمعظم المطورين المحترفين، وGitHub Copilot هو الخيار الأكثر أماناً للفرق التي توحّدت بالفعل على GitHub أو Azure، وCline هو أفضل خيار مجاني إذا أحضرت مفتاح API الخاص بك أو شغّلت نموذجاً محلياً.** أصبح Windsurf الآن بنفس سعر Cursor Pro (20 دولاراً/الشهر منذ أغسطس 2026، بعد أن كان 15 دولاراً في وقت سابق من العام) ولم يعد يتفوق في السعر — اختره فقط إذا كنت تفضل تحديداً تدفق وكيل Cascade. لا توجد أداة واحدة تتفوق في كل فئة؛ اختر بناءً على سير العمل، لا على ادعاءات التسويق.',
+      '**Cursor هو أفضل مساعد برمجة بالذكاء الاصطناعي الوكيلي الشامل لعام 2026 لمعظم المطورين المحترفين، وGitHub Copilot هو الخيار الأكثر أماناً للفرق التي توحّدت بالفعل على GitHub أو Azure، وCline هو أفضل خيار مجاني إذا أحضرت مفتاح API الخاص بك أو شغّلت نموذجاً محلياً.** أصبح Windsurf الآن بنفس سعر Cursor Pro (20 دولاراً/الشهر منذ أغسطس 2026، بعد أن كان 15 دولاراً في وقت سابق من العام) ولم يعد يتفوق في السعر — اختره فقط إذا كنت تفضل تحديداً تدفق وكيل Cascade. تستحق Bodega One Code المتابعة إذا كنت تريد بيئة تطوير محلية أولاً متكاملة بوضع وكيل مدمج بدلاً من إضافة مُلحقة بمحرر موجود، لكنها لا تزال في مرحلة تجريبية عامة بتسعير Pro غير نهائي. لا توجد أداة واحدة تتفوق في كل فئة؛ اختر بناءً على سير العمل، لا على ادعاءات التسويق.',
     quickAnswerTop: {
       ar: {
         question: 'أي مساعد برمجة بالذكاء الاصطناعي يملك أفضل وضع وكيل في 2026؟',
@@ -2571,9 +2847,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: وكيل Cascade، Pro بـ20 دولاراً/الشهر (ارتفع من 15 دولاراً في مارس 2026) — تعادل سعري مع Cursor',
           'GitHub Copilot: وكيل برمجة مرتبط بمشكلات/طلبات سحب GitHub، Pro بـ10 دولارات/الشهر، Pro+ بـ39 دولاراً/الشهر، Max بـ100 دولار/الشهر',
           'Cline: إضافة مفتوحة المصدر، 0 دولار بحد ذاتها — التكلفة تعتمد فقط على واجهة LLM المتصلة، أو 0 دولار مع نموذج محلي عبر Ollama/LM Studio',
-          'لا يملك أي من الأربعة برنامج شراكة/عمولة عام قياسي حتى أغسطس 2026',
+          'Bodega One Code: بيئة تطوير محلية أولاً بوكيل مدمج، مرحلة تجريبية عامة — فئة Personal مجانية دائماً، وPro شراء لمرة واحدة بسعر لم يُعلن بعد',
+          'لا يملك أي من الخمسة برنامج شراكة/عمولة عام قياسي',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -2588,6 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: 'الحكم النهائي', anchor: '#final-verdict' },
       { label: 'حالة برامج الشراكة', anchor: '#affiliate-status' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
@@ -2636,12 +2914,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'حقائق سريعة (تم التحقق منها في)',
-        content: 'تم التحقق مباشرة على cursor.com/pricing وwindsurf.com (يُعاد توجيهه إلى devin.ai/pricing بعد استحواذ Cognition) وgithub.com/features/copilot/plans وcline.bot/pricing، مع مقارنة مع متتبعات أسعار مستقلة. تتغير أسعار اشتراكات أدوات التطوير مع مراجعات الخطط — تأكد من السعر الحالي على موقع المزود قبل الاشتراك. الأسعار كلها بالدولار الأمريكي؛ لا تنشر هذه الاشتراكات أسعاراً محلية منفصلة — قد يعرض الدفع عملة محلية عند الدفع، لكن السعر بالدولار المعروض هو السعر العالمي.',
+        content: 'تم التحقق مباشرة على cursor.com/pricing وwindsurf.com (يُعاد توجيهه إلى devin.ai/pricing بعد استحواذ Cognition) وgithub.com/features/copilot/plans وcline.bot/pricing وbodegaone.ai/pricing، مع مقارنة مع متتبعات أسعار مستقلة. تتغير أسعار اشتراكات أدوات التطوير مع مراجعات الخطط — تأكد من السعر الحالي على موقع المزود قبل الاشتراك. الأسعار كلها بالدولار الأمريكي؛ لا تنشر هذه الاشتراكات أسعاراً محلية منفصلة — قد يعرض الدفع عملة محلية عند الدفع، لكن السعر بالدولار المعروض هو السعر العالمي.',
         items: [
           '**Cursor:** فئة Hobby مجانية؛ تشترك Pro وPro+ وUltra جميعاً في قاعدة 20 دولاراً/الشهر مع مضاعفات استخدام مضمّنة متصاعدة (Pro+ نحو 3 أضعاف، Ultra نحو 20 ضعفاً)، إضافة إلى فوترة قائمة على الاستخدام بعد استنفاد الاستخدام المضمّن؛ تبدأ Teams من 40 دولاراً/المستخدم/الشهر.',
           '**Windsurf:** فئة مجانية بحصة يومية/أسبوعية خفيفة؛ Pro بـ20 دولاراً/الشهر (ارتفعت من 15 دولاراً في مارس 2026، لتصبح مساوية لـCursor)؛ Max بـ200 دولار/الشهر؛ Teams بـ40 دولاراً/المستخدم/الشهر؛ Enterprise حسب الطلب. استُبدل نظام مجمّع الرصيد بحصص يومية/أسبوعية في مارس 2026.',
           '**GitHub Copilot:** فئة مجانية (2000 إكمال/الشهر)؛ Pro بـ10 دولارات/الشهر (15 دولاراً من رصيد الذكاء الاصطناعي مُضمّنة)؛ Pro+ بـ39 دولاراً/الشهر (70 دولاراً مُضمّنة)؛ Max بـ100 دولار/الشهر (200 دولار مُضمّنة)؛ Business بـ19 دولاراً/المستخدم/الشهر (1900 رصيد ذكاء اصطناعي)؛ Enterprise بـ39 دولاراً/المستخدم/الشهر (3900 رصيد ذكاء اصطناعي). انتقلت إلى الفوترة برصيد ذكاء اصطناعي قائم على الاستخدام في 1 يونيو 2026.',
           '**Cline:** الإضافة نفسها مجانية، مفتوحة المصدر، برخصة MIT. تعتمد التكلفة الفعلية على واجهة LLM المتصلة (OpenAI، Anthropic، Google، OpenRouter، AWS Bedrock، GCP Vertex، Groq، Cerebras، DeepSeek وغيرها)، أو 0 دولار مع نموذج محلي عبر Ollama أو LM Studio — يعمل كلاهما دون مفتاح API.',
+          '**Bodega One Code:** فئة Personal مجانية دائماً (جهاز واحد، استخدام غير تجاري، مساحة عمل واحدة)؛ وPro شراء لمرة واحدة — وليس اشتراكاً — يضيف حقوق الاستخدام التجاري وجهازاً ثانياً ومساحات عمل غير محدودة، لكن المزود يدرج سعره كـ"غير محدد بعد" قبل الإصدار الكامل؛ Enterprise بسعر حسب الطلب. التطبيق بأكمله، بما في ذلك الاستخدام التجاري، مجاني خلال المرحلة التجريبية العامة.',
           '**تنتمي Windsurf الآن إلى Cognition**، الشركة صاحبة وكيل البرمجة المستقل Devin، بعد استحواذ Cognition على فريق Windsurf ومنتجها وعلامتها التجارية. يُعاد توجيه windsurf.com حالياً إلى صفحة تسعير devin.ai، ويجري دمج Devin مباشرة في محرر Windsurf بدلاً من استبداله بالكامل.',
         ],
       },
@@ -2661,9 +2940,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline',
+        title: 'Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline مقابل Bodega One Code',
         content:
-          'التسعير هو لقطة من أغسطس 2026 موثقة على صفحة التسعير الرسمية لكل مزود — غيّرت Cursor وWindsurf وGitHub Copilot جميعها هيكل تسعيرها مرة واحدة على الأقل في 2026، لذا تأكد من السعر الحالي قبل الاشتراك. يعكس "الوصول إلى النماذج" ما تسمح كل أداة باختياره على مستوى اختيار النموذج، وليس فقط ما يشغّل الإكمال التلقائي.',
+          'التسعير هو لقطة من أغسطس–سبتمبر 2026 موثقة على صفحة التسعير الرسمية لكل مزود — غيّرت Cursor وWindsurf وGitHub Copilot جميعها هيكل تسعيرها مرة واحدة على الأقل في 2026، لذا تأكد من السعر الحالي قبل الاشتراك. يعكس "الوصول إلى النماذج" ما تسمح كل أداة باختياره على مستوى اختيار النموذج، وليس فقط ما يشغّل الإكمال التلقائي.',
         columns: ['الأداة', 'الرابط', 'الأفضل لـ', 'السعر (أغسطس 2026)', 'الوصول للنماذج', 'وضع الوكيل', 'بيئة التطوير', 'لماذا تدفع؟'],
         rows: [
           {
@@ -2706,6 +2985,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'بيئة التطوير': 'VS Code، JetBrains',
             'لماذا تدفع؟': 'أقصى تحكم — BYOK أو محلي، 0 دولار',
           },
+          {
+            'الأداة': 'Bodega One Code',
+            'الرابط': '[bodegaone.ai](https://www.bodegaone.ai)',
+            'الأفضل لـ': 'بيئة تطوير محلية شاملة (تجريبية)',
+            'السعر (أغسطس 2026)': 'تجريبية مجانية / Pro شراء لمرة واحدة، السعر غير محدد',
+            'الوصول للنماذج': '10+ مزودين بما فيهم Ollama وLM Studio',
+            'وضع الوكيل': 'وكيل مستقل مدمج',
+            'بيئة التطوير': 'Bodega One Code (مبني على Monaco)',
+            'لماذا تدفع؟': 'الاستخدام التجاري، جهاز ثانٍ',
+          },
         ],
       },
       decisionMatrix: {
@@ -2722,6 +3011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'إذا كنت…': 'بلا ميزانية اشتراك', 'استخدم': 'Cline' },
           { 'إذا كنت…': 'مهتماً بـBYOK', 'استخدم': 'Cline' },
           { 'إذا كنت…': 'تفضّل سير عمل Cascade', 'استخدم': 'Windsurf' },
+          { 'إذا كنت…': 'تريد بيئة تطوير محلية لا إضافة', 'استخدم': 'Bodega One Code (تجريبية)' },
         ],
         note: 'لا تقرر بناءً على الجدول وحده — أسرع طريقة هي تشغيل نفس مهمة البرمجة في كل أداة على نفس المستودع (Cursor، ثم Windsurf، ثم Copilot، ثم Cline مع نموذج محلي) ومعرفة أيها احتاج أقل تدخل يدوي.',
       },
@@ -2735,7 +3025,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تفضل تحديداً تجربة وكيل Cascade →** Windsurf. لم يعد يتفوق في السعر (كلاهما 20 دولاراً/الشهر) — اختره فقط إذا جرّبت الاثنين وفضّلت تدفقه.',
           '**فريق موحّد على مشكلات وطلبات سحب GitHub وAzure DevOps →** GitHub Copilot. يقرأ وكيل البرمجة ويكتب مباشرة على سير عمل GitHub الحالي لديك.',
           '**الميزانية 0 دولار ومستعد لتشغيل نموذج محلي أو الدفع لكل رمز API →** Cline. لا يملك أي فئة اشتراك على الإطلاق — تتحكم بالتكلفة مباشرة.',
-          '**كودك ملكية خاصة أو مرتبط باتفاقية عدم إفصاح أو خاضع لقيود تنظيمية →** Cline مع نموذج محلي عبر Ollama أو LM Studio هو الوحيد من الأربعة القادر على العمل دون مغادرة أي كود لجهازك.',
+          '**كودك ملكية خاصة أو مرتبط باتفاقية عدم إفصاح أو خاضع لقيود تنظيمية →** Cline مع نموذج محلي عبر Ollama أو LM Studio، أو Bodega One Code بوضع العزل عن الشبكة، هما الخياران الوحيدان هنا القادران على العمل دون مغادرة أي كود لجهازك.',
+          '**تريد بيئة تطوير محلية متكاملة بدلاً من إضافة، ولا تمانع تشغيل برنامج في مرحلة تجريبية عامة →** Bodega One Code. تجمع بين المحرر والدردشة ووكيل مستقل بوضع عمل دون اتصال/عزل عن الشبكة، لكن سعر فئة Pro فيها لم يُحسم بعد وسجلها أقصر من الأدوات الأربع الأخرى هنا.',
         ],
         note: 'تخطَّ هذه المقارنة كلياً إذا كنت تحتاج فقط إلى إكمال تلقائي مضمّن، لا سلوك وكيل متعدد الخطوات — فإضافة إكمال أخف وزناً (أو ميزات الذكاء الاصطناعي المدمجة في بيئة التطوير الخاصة بك) ستكلف أقل وتُعدّ بسرعة أكبر من أي من هذه الأدوات الأربع.',
       },
@@ -2783,6 +3074,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[دليل بناء محطة عمل لنماذج LLM المحلية](/ar/local-llms/local-llm-workstation-build) — لمحطة عمل مخصصة متعددة GPU لتشغيل نماذج برمجة أكبر.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: بيئة تطوير محلية أولاً بوكيل مدمج (تجريبية)',
+        content: [
+          '**Bodega One Code هي بيئة تطوير سطح مكتب محلية أولاً بالذكاء الاصطناعي، حالياً في مرحلة تجريبية عامة، تجمع محرر كود مبنياً على Monaco ودردشة ذكاء اصطناعي ووكيل برمجة مستقل في تطبيق واحد** — بدلاً من إضافة ميزات وكيل فوق نسخة معدّلة من محرر موجود، وهي الطريقة التي بُني بها Cursor وWindsurf.',
+          'يتصل الوكيل بأكثر من 10 مزودي نماذج، بما في ذلك أدوات تشغيل محلية (Ollama، LM Studio، llama.cpp) إلى جانب مزودين سحابيين (Anthropic، OpenAI، Groq وغيرها)، ويقدّم وضع عزل عن الشبكة يمنع أي وصول للشبكة بحيث لا يغادر أي شيء الجهاز عند تشغيل نموذج محلي — وهو نفس ضمان العمل دون اتصال الذي يقدّمه Cline مع نموذج محلي، لكنه مدمج في بيئة تطوير كاملة بدلاً من إضافته كإضافة.',
+          'يعمل Bodega One Code على Windows وmacOS وLinux. وفقاً لصفحة تسعير المزود نفسها، فإن **فئة Personal مجانية دائماً** (جهاز واحد، استخدام غير تجاري، مساحة عمل واحدة في كل مرة)، و**فئة Pro شراء لمرة واحدة بدلاً من اشتراك** — يُدرج السعر الدقيق كـ"غير محدد بعد" قبل الإصدار الكامل، وتضيف Pro حقوق الاستخدام التجاري وتفعيل جهاز ثانٍ ومساحات عمل غير محدودة. تضيف فئة Enterprise بسعر حسب الطلب لوحة تحكم إدارية وتسجيل دخول موحد ودعماً ذا أولوية.',
+          '**خلال المرحلة التجريبية العامة، يذكر المزود أن التطبيق بأكمله — بما في ذلك الاستخدام التجاري — مجاني.** لم تنشر الشركة تاريخاً لانتهاء المرحلة التجريبية، لذا تعامل مع كل ميزة وسعر هنا كلقطة تم التحقق منها في سبتمبر 2026، لا كالتزام دائم.',
+          'لم تجد PromptQuorum أي برنامج شراكة أو إحالة عام لـBodega One Code.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'إنها جديدة. أطلقت Bodega One Code مرحلتها التجريبية العامة في 2026، وسجلها أقصر من الأدوات الأربع الأخرى في هذه الصفحة. إذا كانت الاستقرارية والدعم طويل الأمد أهم بالنسبة لك من كونك من أوائل المتبنّين، انتظر إصداراً مستقراً قبل نقل سير عملك الأساسي إليها.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: 'مجاني (تجريبي) / Pro شراء لمرة واحدة، غير محدد', label: 'جرّب Bodega One Code' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: 'الحكم النهائي',
@@ -2792,6 +3100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — الأفضل للفرق.** اختره إذا كان سير عملك يدور بالفعل حول GitHub أو Azure DevOps.',
           '🥉 **Cline — الأفضل للتحكم.** اختره للوصول بمفتاح API خاص، أو نماذج محلية، أو الخصوصية، أو تكلفة اشتراك صفرية.',
           '**Windsurf — أفضل بديل.** اختره إذا كان تدفق وكيل Cascade هو سير العمل الذي تفضله.',
+          '**Bodega One Code — أداة تستحق المتابعة.** بديل محلي شامل لتشغيل Cline في محرر منفصل، لكنها في مرحلة تجريبية عامة بتسعير Pro غير نهائي — اختره فقط إذا كنت مرتاحاً لتشغيل برنامج تجريبي.',
           'ما زلت غير متأكد؟ جرّب Cursor وCline أولاً — فهما معاً يغطيان الطرفين المدفوع-الوكيلي والمجاني-المحلي، ويستقر معظم المطورين على أحدهما.',
         ],
         affiliateLinks: [
@@ -2802,16 +3111,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: 'هل تملك أي من هذه الأدوات الأربع برنامج شراكة؟',
+        title: 'هل تملك أي من هذه الأدوات الخمس برنامج شراكة؟',
         content:
-          '**حتى أغسطس 2026، لا يدير أي من المزودين الأربعة برنامج شراكة بعمولة عام قياسي.** ما يقدّمه كل مزود فعلياً أضيق من "برنامج شراكة":',
+          '**لا يدير أي من المزودين الخمسة برنامج شراكة بعمولة عام قياسي.** ما يقدّمه كل مزود فعلياً أضيق من "برنامج شراكة":',
         items: [
           '**Cursor:** برنامج إحالة محدود الطرح (غير متاح للجميع) — يحصل المُحيلون على 25 دولاراً رصيد استخدام لكل عميل مدفوع تمت إحالته، ويحصل المستخدمون المُحالون على خصم 50٪ في الشهر الأول. هذا حافز إحالة، وليس برنامج شراكة بعمولة مفتوحاً لناشري المحتوى.',
           '**Windsurf:** رابط إحالة يمنح المسجّلين الجدد 250 رصيداً مرناً مجانياً. أيضاً حافز إحالة، وليس برنامج شراكة/عمولة.',
           '**GitHub Copilot:** "Copilot Partner Program" لبناء تكاملات تقنية لـCopilot Chat — هذه شراكة مطورين/تقنية، وليست اتفاقية شراكة بعمولة إحالة.',
           '**Cline:** لا يوجد أي برنامج إحالة أو شراكة من أي نوع؛ إنه مشروع مفتوح المصدر يقوده المجتمع.',
+          '**Bodega One Code:** لم يُعثر على أي برنامج شراكة أو إحالة عام حتى سبتمبر 2026.',
         ],
-        note: 'لا تملك PromptQuorum حالياً أي علاقة شراكة مع Cursor أو Windsurf أو GitHub Copilot أو Cline. كل رابط في هذه الصفحة هو رابط منتج بسيط ومُفصح عنه ولا يحقق أي عمولة.',
+        note: 'لا تملك PromptQuorum حالياً أي علاقة شراكة مع Cursor أو Windsurf أو GitHub Copilot أو Cline أو Bodega One Code. كل رابط في هذه الصفحة هو رابط منتج بسيط ومُفصح عنه ولا يحقق أي عمولة.',
       },
       faqSection: {
         id: 'faq',
@@ -2824,9 +3134,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كيف أُعِدّ Cline مع نموذج محلي؟', a: 'ثبّت Ollama أو LM Studio، واسحب نموذج برمجة (توصي وثائق Cline بـQwen2.5 Coder أو Llama 3.3 أو DeepSeek Coder V3 أو Codestral)، ثم اختر في Cline إما Ollama أو LM Studio كمزود API — نقطة النهاية الافتراضية لـOllama هي http://localhost:11434، ويقدّم LM Studio واجهة متوافقة مع OpenAI على المنفذ 1234. لا يتطلب أي منهما مفتاح API. استخدم نافذة سياق لا تقل عن 32 ألف رمز؛ غالباً ما تحتاج الجلسات الوكيلية الأكثر كثافة إلى 64 ألف رمز.' },
           { q: 'هل يمكنني استخدام أكثر من أداة من هذه الأدوات في وقت واحد؟', a: 'نعم، ويفعل ذلك كثير من المطورين — على سبيل المثال تشغيل Cline مع نموذج محلي للتعديلات الروتينية منخفضة الحساسية، والتبديل إلى Cursor أو GitHub Copilot للمشكلات الأصعب حيث يساعد نموذج سحابي أقوى. لا يوجد تعارض تقني في تشغيل عدة إضافات في نفس تثبيت VS Code، رغم أن واحدة فقط عادة ما تكون نشطة كوكيل رئيسي لكل جلسة.' },
           { q: 'ما أفضل مساعد برمجة بالذكاء الاصطناعي لمطور فردي بميزانية محدودة؟', a: 'يكلّف Cline مع نموذج محلي (Ollama أو LM Studio) 0 دولار إجمالاً. إذا كنت تريد وصولاً عرضياً إلى نموذج سحابي أقوى دون اشتراك، فإن Cline مع مفتاح API بدفع لكل رمز (OpenAI أو Anthropic أو OpenRouter) يبقي التكلفة متناسبة مع الاستخدام الفعلي بدلاً من رسوم شهرية ثابتة.' },
-          { q: 'هل تعمل أي من هذه الأدوات الأربع دون اتصال تماماً؟', a: 'فقط Cline، وفقط عند اقترانه بنموذج محلي عبر Ollama أو LM Studio — في هذا الإعداد، لا يغادر أي كود أو بيانات موجّهات جهازك. تعتمد Cursor وWindsurf وGitHub Copilot جميعها افتراضياً على نماذج مستضافة سحابياً؛ يدعم Cursor الإشارة إلى نقطة نهاية مخصصة (بما فيها محلية) متوافقة مع OpenAI، لكن تجربة المنتج الأساسية تفترض اتصال شبكة.' },
+          { q: 'هل تعمل أي من هذه الأدوات دون اتصال تماماً؟', a: 'Cline، عند اقترانه بنموذج محلي عبر Ollama أو LM Studio، وBodega One Code، باستخدام وضع العزل عن الشبكة مع نموذج محلي — في كلا الإعدادين، لا يغادر أي كود أو بيانات موجّهات جهازك. تعتمد Cursor وWindsurf وGitHub Copilot جميعها افتراضياً على نماذج مستضافة سحابياً؛ يدعم Cursor الإشارة إلى نقطة نهاية مخصصة (بما فيها محلية) متوافقة مع OpenAI، لكن تجربة المنتج الأساسية تفترض اتصال شبكة.' },
           { q: 'ما الأداة الأفضل لفريق موحّد بالفعل على GitHub أو Azure DevOps؟', a: 'GitHub Copilot. يقرأ وكيل البرمجة فيه ويكتب مباشرة على مشكلات وطلبات سحب GitHub، وتضيف فئتا Business (19 دولاراً/المستخدم/الشهر) وEnterprise (39 دولاراً/المستخدم/الشهر) الضوابط التنظيمية — سجلات التدقيق، إدارة السياسات، تعويض الملكية الفكرية — التي عادة ما تتطلبها منظومة امتثال موحّدة على Microsoft.' },
-          { q: 'هل تدفع Cursor أو Windsurf أو GitHub Copilot أو Cline عمولة للكتّاب الذين يوصون بها؟', a: 'لا. حتى أغسطس 2026، لا تدير أي من الأربعة برنامج شراكة/عمولة عاماً قياسياً. تقدّم Cursor وWindsurf كل منهما حافز رصيد إحالة محدوداً (غير مفتوح لناشري المحتوى عموماً)، وتدير GitHub برنامج شراكة تكامل تقني (دون عمولة إحالة)، وCline مشروع مفتوح المصدر يقوده المجتمع دون طبقة تحقيق دخل. هذه الصفحة لا تملك أي علاقة شراكة مع أي من الأدوات الأربع.' },
+          { q: 'ما هي Bodega One Code وكيف تقارن بـCursor أو Cline؟', a: 'Bodega One Code هي بيئة تطوير محلية أولاً بالذكاء الاصطناعي، حالياً في مرحلة تجريبية عامة، تجمع محرراً مبنياً على Monaco ودردشة ذكاء اصطناعي ووكيل برمجة مستقل في تطبيق واحد بدلاً من كونها إضافة تُضاف إلى محرر موجود. مثل Cline، يمكنها العمل دون اتصال تماماً مع نموذج محلي (Ollama أو LM Studio أو llama.cpp) عبر وضع عزل عن الشبكة يمنع الوصول للشبكة؛ وخلافاً لـCline، هذه القدرة على العمل دون اتصال مدمجة في بيئة تطوير كاملة بدلاً من إضافة. فئة Personal فيها مجانية دائماً للاستخدام غير التجاري على جهاز واحد؛ وPro شراء لمرة واحدة — وليس اشتراكاً — لم يُعلن سعره الدقيق بعد. ولأنها لا تزال في المرحلة التجريبية، فإن سجلها أقصر من Cursor أو Windsurf أو GitHub Copilot أو Cline.' },
+          { q: 'هل تدفع Cursor أو Windsurf أو GitHub Copilot أو Cline أو Bodega One Code عمولة للكتّاب الذين يوصون بها؟', a: 'لا. لا تدير أي من الأدوات الخمس برنامج شراكة/عمولة عاماً قياسياً. تقدّم Cursor وWindsurf كل منهما حافز رصيد إحالة محدوداً (غير مفتوح لناشري المحتوى عموماً)، وتدير GitHub برنامج شراكة تكامل تقني (دون عمولة إحالة)، وCline مشروع مفتوح المصدر يقوده المجتمع دون طبقة تحقيق دخل، وBodega One Code ليس لديها أي برنامج إحالة أو شراكة عام. هذه الصفحة لا تملك أي علاقة شراكة مع أي من الأدوات الخمس.' },
         ],
       },
       sources: {
@@ -2840,6 +3151,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'فوترة مؤسسات GitHub Copilot', description: 'وثائق GitHub حول فوترة رصيد الذكاء الاصطناعي لـBusiness/Enterprise، سارية منذ 1 يونيو 2026.' },
           { url: 'https://cline.bot/pricing', title: 'تسعير/أسئلة Cline الشائعة', description: 'تأكيد رسمي بأن إضافة Cline مجانية ومفتوحة المصدر، مع فوترة API قائمة على الاستخدام.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: تشغيل النماذج محلياً', description: 'وثائق Cline الرسمية لتوصيل نماذج Ollama وLM Studio المحلية.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'تسعير Bodega One Code', description: 'صفحة تسعير Bodega One Code الرسمية — فئات Personal وPro وEnterprise.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'عن Bodega One Code', description: 'صفحة المنتج الرسمية التي تصف بنية Bodega One Code المحلية أولاً ووكيلها ودعمها للمنصات.' },
         ],
       },
       relatedReading: {
@@ -2859,7 +3172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'مقارنة Cursor وWindsurf وGitHub Copilot وCline من حيث وضع الوكيل والتسعير والوصول إلى النماذج. أسعار أغسطس 2026 موثقة من موقع كل مزود.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ar.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ar.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'ar',
@@ -2873,6 +3186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ar/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -2884,6 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'هل Cursor أفضل من GitHub Copilot؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'بالنسبة للعمل الوكيلي متعدد الملفات ومرونة النماذج، يعد Cursor عموماً الخيار الأقوى. GitHub Copilot هو الخيار الأفضل للفرق الموحّدة بالفعل على GitHub وAzure DevOps.' } },
         { '@type': 'Question', 'name': 'هل يوجد مساعد برمجة بالذكاء الاصطناعي مجاني بوضع وكيل؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. Cline مجاني بالكامل ومفتوح المصدر دون اشتراك — تدفع فقط مقابل رموز واجهة LLM المستخدمة، أو لا شيء مع نموذج محلي عبر Ollama أو LM Studio.' } },
         { '@type': 'Question', 'name': 'ما الفرق الفعلي بين Windsurf وCursor في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'حتى أغسطس 2026 يتماثل سعر الأداتين عند 20 دولاراً/الشهر لفئتي Pro. الفرق المتبقي هو سير العمل: يستخدم Windsurf تدفق Cascade، ويستخدم Cursor Composer وCloud Agents.' } },
+        { '@type': 'Question', 'name': 'ما هي Bodega One Code وكيف تقارن بـCursor أو Cline؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code هي بيئة تطوير محلية أولاً بالذكاء الاصطناعي، حالياً في مرحلة تجريبية عامة، تجمع محرراً مبنياً على Monaco ودردشة ذكاء اصطناعي ووكيل برمجة مستقل في تطبيق واحد بدلاً من كونها إضافة. فئة Personal فيها مجانية دائماً للاستخدام غير التجاري على جهاز واحد؛ وPro شراء لمرة واحدة لم يُعلن سعره الدقيق بعد.' } },
       ],
     },
   },
@@ -2895,11 +3210,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026년 최고의 에이전틱 AI 코딩 어시스턴트: Cursor vs Windsurf vs GitHub Copilot vs Cline',
     seoTitle: 'Cursor vs Windsurf vs Copilot vs Cline (2026)',
     intro:
-      'Cursor, Windsurf, GitHub Copilot, Cline은 모두 여러 파일을 수정하고 터미널 명령을 대신 실행하는 "에이전트 모드"를 제공하지만, 가격, 모델 접근성, 코드가 어디로 전송되는지가 서로 다릅니다. 이 가이드는 실제 구매 결정을 좌우하는 기준 — 에이전트 능력, 가격(2026년 8월 각 공급업체 공식 가격 페이지에서 확인), 모델 유연성, IDE 지원 — 으로 네 도구를 비교합니다.',
+      'Cursor, Windsurf, GitHub Copilot, Cline은 모두 여러 파일을 수정하고 터미널 명령을 대신 실행하는 "에이전트 모드"를 제공하지만, 가격, 모델 접근성, 코드가 어디로 전송되는지가 서로 다릅니다. 이 가이드는 이 네 도구에 더해, 현재 오픈 베타 중인 에이전트 내장형 로컬 퍼스트 IDE인 Bodega One Code까지 포함하여, 실제 구매 결정을 좌우하는 기준 — 에이전트 능력, 가격(각 공급업체 공식 가격 페이지에서 확인, 가장 최근은 2026년 9월), 모델 유연성, IDE 지원 — 으로 비교합니다.',
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 가격은 각 공식 사이트에서 확인했습니다.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     readTime: '13분 읽기',
     educationalLevel: 'Intermediate',
     audience: '에이전트 모드가 있는 AI 코딩 어시스턴트를 선택하려는 개발자로, Cursor, Windsurf, GitHub Copilot, Cline을 가격, 모델 접근성, 워크플로 적합성 기준으로 비교하고자 하는 분.',
@@ -2915,7 +3230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor는 2026년 대부분의 전문 개발자에게 가장 우수한 종합형 에이전틱 AI 코딩 어시스턴트이며, GitHub Copilot은 이미 GitHub 또는 Azure로 표준화된 팀에 더 안전한 기본 선택지이고, Cline은 자체 API 키를 사용하거나 로컬 모델을 실행할 의향이 있다면 최고의 무료 옵션입니다.** Windsurf는 이제 Cursor Pro와 동일한 가격(2026년 8월 기준 월 20달러, 연초의 15달러에서 인상)이 되어 더 이상 가격으로 우위를 점하지 못합니다 — Cascade 에이전트 흐름을 특별히 선호하는 경우에만 선택하세요. 모든 항목에서 승리하는 단일 도구는 없습니다. 마케팅이 아닌 워크플로를 기준으로 선택하십시오.',
+      '**Cursor는 2026년 대부분의 전문 개발자에게 가장 우수한 종합형 에이전틱 AI 코딩 어시스턴트이며, GitHub Copilot은 이미 GitHub 또는 Azure로 표준화된 팀에 더 안전한 기본 선택지이고, Cline은 자체 API 키를 사용하거나 로컬 모델을 실행할 의향이 있다면 최고의 무료 옵션입니다.** Windsurf는 이제 Cursor Pro와 동일한 가격(2026년 8월 기준 월 20달러, 연초의 15달러에서 인상)이 되어 더 이상 가격으로 우위를 점하지 못합니다 — Cascade 에이전트 흐름을 특별히 선호하는 경우에만 선택하세요. 기존 에디터에 덧붙인 확장 프로그램이 아니라 에이전트 모드가 내장된 통합형 로컬 퍼스트 IDE를 원한다면 Bodega One Code를 주목할 만하지만, 아직 오픈 베타 단계이며 Pro 가격이 확정되지 않았습니다. 모든 항목에서 승리하는 단일 도구는 없습니다. 마케팅이 아닌 워크플로를 기준으로 선택하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년 최고의 에이전트 모드를 갖춘 AI 코딩 어시스턴트는 무엇입니까?',
@@ -2926,9 +3241,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: Cascade 에이전트, Pro 월 20달러(2026년 3월 15달러에서 인상) — Cursor와 가격 동일',
           'GitHub Copilot: GitHub 이슈/PR과 연동된 코딩 에이전트, Pro 월 10달러, Pro+ 월 39달러, Max 월 100달러',
           'Cline: 오픈소스 확장 프로그램, 그 자체는 0달러 — 비용은 연결한 LLM API에만 좌우되며, Ollama/LM Studio로 로컬 모델을 쓰면 0달러',
-          '2026년 8월 기준 네 곳 모두 표준 공개 제휴 프로그램 없음',
+          'Bodega One Code: 에이전트가 내장된 로컬 퍼스트 데스크톱 IDE, 오픈 베타 — Personal은 영구 무료, Pro는 가격 미정의 일회성 구매',
+          '다섯 곳 모두 표준 공개 제휴 프로그램 없음',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-09-03',
       },
     },
     toc: [
@@ -2943,6 +3259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Windsurf', anchor: '#windsurf' },
       { label: 'GitHub Copilot', anchor: '#github-copilot' },
       { label: 'Cline', anchor: '#cline' },
+      { label: 'Bodega One Code', anchor: '#bodega-one-code' },
       { label: '최종 결론', anchor: '#final-verdict' },
       { label: '제휴 프로그램 현황', anchor: '#affiliate-status' },
       { label: '자주 묻는 질문', anchor: '#faq' },
@@ -2991,12 +3308,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: '빠른 사실',
-        content: 'cursor.com/pricing, windsurf.com(Cognition 인수 후 devin.ai/pricing으로 리디렉션), github.com/features/copilot/plans, cline.bot/pricing에서 직접 확인했으며 독립적인 가격 추적 사이트와 교차 확인했습니다. 개발 도구 구독 가격은 요금제 개편에 따라 변경됩니다 — 구독 전 공급업체 사이트에서 현재 요금을 확인하십시오. 모든 가격은 미국 달러 기준이며, 이들 구독 서비스는 별도의 원화 정가를 공시하지 않습니다 — 결제 시 현지 통화가 표시될 수 있지만 표시된 USD 요금이 전 세계 공통 기준입니다.',
+        content: 'cursor.com/pricing, windsurf.com(Cognition 인수 후 devin.ai/pricing으로 리디렉션), github.com/features/copilot/plans, cline.bot/pricing, bodegaone.ai/pricing에서 직접 확인했으며 독립적인 가격 추적 사이트와 교차 확인했습니다. 개발 도구 구독 가격은 요금제 개편에 따라 변경됩니다 — 구독 전 공급업체 사이트에서 현재 요금을 확인하십시오. 모든 가격은 미국 달러 기준이며, 이들 구독 서비스는 별도의 원화 정가를 공시하지 않습니다 — 결제 시 현지 통화가 표시될 수 있지만 표시된 USD 요금이 전 세계 공통 기준입니다.',
         items: [
           '**Cursor:** 무료 Hobby 요금제; Pro, Pro+, Ultra는 모두 월 20달러 기본 요금을 공유하며 포함 사용량 배수가 다릅니다(Pro+는 약 3배, Ultra는 약 20배). 포함 사용량 소진 후에는 사용량 기반 과금이 적용됩니다. Teams는 사용자당 월 40달러부터.',
           '**Windsurf:** 가벼운 일일/주간 한도가 있는 무료 요금제; Pro 월 20달러(2026년 3월 15달러에서 인상, Cursor와 동일); Max 월 200달러; Teams 사용자당 월 40달러; Enterprise는 별도 견적. 크레딧 풀 시스템은 2026년 3월 일일/주간 한도제로 대체되었습니다.',
           '**GitHub Copilot:** 무료 요금제(월 2,000회 완성); Pro 월 10달러(AI 크레딧 15달러 포함); Pro+ 월 39달러(70달러 포함); Max 월 100달러(200달러 포함); Business 사용자당 월 19달러(AI 크레딧 1,900); Enterprise 사용자당 월 39달러(AI 크레딧 3,900). 2026년 6월 1일 사용량 기반 AI 크레딧 과금으로 전환.',
           '**Cline:** 확장 프로그램 자체는 무료, 오픈소스, MIT 라이선스. 실제 비용은 연결한 LLM API에 따라 달라지며(OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek 등), Ollama나 LM Studio로 로컬 모델을 쓰면 0달러 — 둘 다 API 키 없이 작동합니다.',
+          '**Bodega One Code:** Personal 요금제는 영구 무료입니다(기기 1대, 비상업적 용도, 워크스페이스 1개). Pro는 구독이 아닌 일회성 구매로, 상업적 사용 권한, 두 번째 기기, 무제한 워크스페이스를 추가하지만 공급업체는 정식 출시 전까지 가격을 "TBD"로 표시하고 있습니다. Enterprise는 별도 견적입니다. 상업적 사용을 포함해 앱 전체가 오픈 베타 기간 동안 무료입니다.',
           '**Windsurf는 현재 Cognition 소속입니다.** 자율 코딩 에이전트 Devin을 만든 이 회사가 Windsurf의 팀, 제품, 브랜드를 인수했습니다. windsurf.com은 현재 devin.ai의 가격 페이지로 리디렉션되며, Devin은 Windsurf 에디터를 완전히 대체하기보다 직접 통합되고 있습니다.',
         ],
       },
@@ -3016,9 +3334,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline vs Bodega One Code',
         content:
-          '가격은 각 공급업체의 공식 가격 페이지에서 확인한 2026년 8월 시점의 스냅샷입니다 — Cursor, Windsurf, GitHub Copilot 모두 2026년 중 가격 구조를 최소 한 번 변경했으므로 구독 전 현재 요금을 확인하십시오. "모델 접근성"은 단순히 자동 완성을 구동하는 모델이 아니라 각 도구가 모델 선택 수준에서 허용하는 범위를 나타냅니다.',
+          '가격은 각 공급업체의 공식 가격 페이지에서 확인한 2026년 8~9월 시점의 스냅샷입니다 — Cursor, Windsurf, GitHub Copilot 모두 2026년 중 가격 구조를 최소 한 번 변경했으므로 구독 전 현재 요금을 확인하십시오. "모델 접근성"은 단순히 자동 완성을 구동하는 모델이 아니라 각 도구가 모델 선택 수준에서 허용하는 범위를 나타냅니다.',
         columns: ['도구', '링크', '최적 용도', '가격', '모델 접근성', '에이전트 모드', 'IDE', '왜 유료인가?'],
         rows: [
           {
@@ -3061,6 +3379,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'IDE': 'VS Code, JetBrains',
             '왜 유료인가?': '최대의 통제권 — BYOK 또는 로컬, 0달러',
           },
+          {
+            '도구': 'Bodega One Code',
+            '링크': '[bodegaone.ai](https://www.bodegaone.ai)',
+            '최적 용도': '올인원 로컬 퍼스트 IDE(베타)',
+            '가격': '베타 무료 / Pro 일회성 구매, 가격 TBD',
+            '모델 접근성': 'Ollama, LM Studio 등 10개 이상 제공업체',
+            '에이전트 모드': '내장 자율 에이전트',
+            'IDE': 'Bodega One Code(Monaco 기반)',
+            '왜 유료인가?': '상업적 사용, 두 번째 기기',
+          },
         ],
       },
       decisionMatrix: {
@@ -3077,6 +3405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '해당 상황': '구독 예산이 없음', '선택': 'Cline' },
           { '해당 상황': 'BYOK를 원함', '선택': 'Cline' },
           { '해당 상황': 'Cascade 워크플로 선호', '선택': 'Windsurf' },
+          { '해당 상황': '확장 프로그램이 아닌 로컬 IDE를 원함', '선택': 'Bodega One Code(베타)' },
         ],
         note: '표만 보고 결정하지 마십시오 — 가장 빠른 방법은 같은 저장소에서 각 도구로 동일한 코딩 작업을 실행해 보고(Cursor, 다음 Windsurf, 다음 Copilot, 다음 로컬 모델을 사용한 Cline 순) 수동 개입이 가장 적었던 도구를 확인하는 것입니다.',
       },
@@ -3090,7 +3419,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**특히 Cascade 에이전트의 사용 경험을 선호하는 경우 →** Windsurf. 더 이상 가격으로 우위를 점하지 못하므로(둘 다 월 20달러), 둘 다 사용해보고 그 흐름을 선호할 때만 선택하십시오.',
           '**GitHub 이슈, PR, Azure DevOps로 표준화된 팀 →** GitHub Copilot. 코딩 에이전트가 기존 GitHub 워크플로에 직접 읽고 씁니다.',
           '**예산이 0달러이며 로컬 모델을 운영하거나 API 토큰당 비용을 지불할 의향이 있는 경우 →** Cline. 구독 요금제가 전혀 없어 비용을 직접 통제할 수 있습니다.',
-          '**코드가 독점적이거나 NDA에 묶여 있거나 규제 제약이 있는 경우 →** Ollama나 LM Studio를 통한 로컬 모델을 사용하는 Cline이 네 도구 중 유일하게 코드가 전혀 컴퓨터를 벗어나지 않고 작동할 수 있습니다.',
+          '**코드가 독점적이거나 NDA에 묶여 있거나 규제 제약이 있는 경우 →** Ollama나 LM Studio를 통한 로컬 모델을 사용하는 Cline, 또는 에어갭 모드를 갖춘 Bodega One Code가 여기서 코드가 전혀 컴퓨터를 벗어나지 않고 작동할 수 있는 유일한 옵션입니다.',
+          '**확장 프로그램이 아니라 통합된 로컬 퍼스트 IDE를 원하고, 오픈 베타 소프트웨어를 사용하는 데 거리낌이 없는 경우 →** Bodega One Code. 에디터, 채팅, 자율 에이전트를 오프라인/에어갭 모드와 함께 하나로 묶었지만, Pro 요금제 가격이 아직 확정되지 않았고 여기 나온 다른 네 도구보다 사용 이력이 짧습니다.',
         ],
         note: '다단계 에이전트 동작이 아닌 인라인 자동 완성만 필요하다면 이 비교 자체를 완전히 건너뛰십시오 — 더 가벼운 완성 플러그인(또는 사용 중인 IDE 내장 AI 기능)이 이 네 도구 중 어떤 것보다 저렴하고 빠르게 설정됩니다.',
       },
@@ -3138,6 +3468,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM 워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build) — 더 큰 코딩 모델을 실행할 전용 다중 GPU 워크스테이션을 위한 가이드입니다.',
         ],
       },
+      bodegaOneCode: {
+        id: 'bodega-one-code',
+        title: 'Bodega One Code: 에이전트가 내장된 로컬 퍼스트 IDE(베타)',
+        content: [
+          '**Bodega One Code는 현재 오픈 베타 중인 로컬 퍼스트 AI 데스크톱 IDE로, Monaco 기반 코드 에디터, AI 채팅, 자율 코딩 에이전트를 하나의 애플리케이션에 결합했습니다** — Cursor와 Windsurf처럼 기존 에디터 포크에 에이전트 기능을 덧붙이는 방식이 아닙니다.',
+          '이 에이전트는 로컬 러너(Ollama, LM Studio, llama.cpp)와 클라우드 공급업체(Anthropic, OpenAI, Groq 등)를 포함해 10개 이상의 모델 공급업체에 연결되며, 모든 네트워크 접근을 차단하는 에어갭 모드를 제공해 로컬 모델 실행 시 아무것도 기기를 벗어나지 않습니다 — 이는 Cline이 로컬 모델로 제공하는 것과 동일한 오프라인 보장이지만, 확장 프로그램이 아니라 완전한 IDE에 내장되어 있습니다.',
+          'Bodega One Code는 Windows, macOS, Linux에서 실행됩니다. 공급업체 자체 가격 페이지에 따르면 **Personal 요금제는 영구 무료**이며(기기 1대, 비상업적 용도, 워크스페이스 1개씩), **Pro 요금제는 구독이 아닌 일회성 구매**입니다 — 정확한 가격은 정식 출시 전까지 "TBD"로 표시되며, Pro는 상업적 사용 권한, 두 번째 기기 활성화, 무제한 워크스페이스를 추가합니다. 별도 견적의 Enterprise 요금제는 관리자 콘솔, SSO, 우선 지원을 추가합니다.',
+          '**오픈 베타 기간 동안 공급업체는 상업적 사용을 포함해 앱 전체가 무료라고 밝히고 있습니다.** 회사는 베타 종료일을 공개하지 않았으므로, 여기 나온 모든 기능과 가격은 영구적인 약속이 아니라 2026년 9월 시점에 확인된 스냅샷으로 취급하십시오.',
+          'PromptQuorum은 Bodega One Code에 대한 공개 제휴 또는 추천 프로그램을 찾지 못했습니다.',
+        ],
+        callouts: [
+          { type: 'warning', text: '신생 제품입니다. Bodega One Code는 2026년에 오픈 베타를 시작했으며 이 페이지의 다른 네 도구보다 사용 이력이 짧습니다. 안정성과 장기 지원이 얼리 어답터가 되는 것보다 더 중요하다면, 안정 버전이 나올 때까지 기다린 뒤 주요 워크플로를 옮기십시오.' },
+        ],
+        affiliateLinks: [
+          { url: 'https://www.bodegaone.ai', productName: 'Bodega One Code', productCategory: 'dev-tool', priceRange: '무료(베타) / Pro 일회성 구매, TBD', label: 'Bodega One Code 체험하기' },
+        ],
+      },
       finalVerdict: {
         id: 'final-verdict',
         title: '최종 결론',
@@ -3147,6 +3494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '🥈 **GitHub Copilot — 팀에 최적.** 워크플로가 이미 GitHub나 Azure DevOps를 중심으로 돌아간다면 선택하십시오.',
           '🥉 **Cline — 통제에 최적.** 자체 API 키 접근, 로컬 모델, 프라이버시, 또는 구독료 0을 원한다면 선택하십시오.',
           '**Windsurf — 최고의 대안.** Cascade 에이전트 흐름이 선호하는 워크플로라면 선택하십시오.',
+          '**Bodega One Code — 지켜볼 만한 도구.** 별도 에디터에서 Cline을 실행하는 것을 대신할 로컬 퍼스트 올인원 대안이지만, 오픈 베타 상태이며 Pro 가격이 확정되지 않았습니다 — 베타 소프트웨어 사용이 편안한 경우에만 선택하십시오.',
           '아직 결정하지 못했습니까? 먼저 Cursor와 Cline을 사용해 보십시오 — 두 도구는 각각 유료 에이전트형과 무료 로컬형이라는 양극단을 다루며, 대부분의 개발자는 둘 중 하나로 정착합니다.',
         ],
         affiliateLinks: [
@@ -3157,16 +3505,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       affiliateStatus: {
         id: 'affiliate-status',
-        title: '이 네 도구 중 제휴 프로그램이 있는 곳이 있습니까?',
+        title: '이 다섯 도구 중 제휴 프로그램이 있는 곳이 있습니까?',
         content:
-          '**2026년 8월 기준, 네 공급업체 모두 표준적이고 공개적으로 이용 가능한 수수료 기반 제휴 프로그램을 운영하지 않습니다.** 각 업체가 실제로 제공하는 것은 "제휴 프로그램"보다 훨씬 제한적입니다.',
+          '**다섯 공급업체 모두 표준적이고 공개적으로 이용 가능한 수수료 기반 제휴 프로그램을 운영하지 않습니다.** 각 업체가 실제로 제공하는 것은 "제휴 프로그램"보다 훨씬 제한적입니다.',
         items: [
           '**Cursor:** 제한적으로 배포되는 추천 프로그램(일반적으로 이용 불가) — 추천인은 유료 고객을 추천할 때마다 25달러의 사용 크레딧을, 추천받은 이용자는 첫 달 50% 할인을 받습니다. 이는 추천 인센티브이며 콘텐츠 발행자에게 열려 있는 수수료 기반 제휴 프로그램이 아닙니다.',
           '**Windsurf:** 추천 링크를 통해 신규 가입자에게 250개의 무료 flex 크레딧을 제공하는 프로그램. 이 역시 추천 인센티브이며 제휴·수수료 프로그램이 아닙니다.',
           '**GitHub Copilot:** Copilot Chat 기술 통합을 구축하기 위한 "Copilot Partner Program" — 이는 개발자·기술 파트너십이지 추천 수수료 방식의 제휴 계약이 아닙니다.',
           '**Cline:** 어떤 형태의 추천이나 제휴 프로그램도 없습니다. 커뮤니티 주도 오픈소스 프로젝트입니다.',
+          '**Bodega One Code:** 2026년 9월 현재 공개된 제휴 또는 추천 프로그램을 찾을 수 없습니다.',
         ],
-        note: 'PromptQuorum은 현재 Cursor, Windsurf, GitHub Copilot, Cline 중 어느 곳과도 제휴 관계가 없습니다. 이 페이지의 모든 링크는 공개된 단순 제품 링크이며 어떠한 수수료도 발생시키지 않습니다.',
+        note: 'PromptQuorum은 현재 Cursor, Windsurf, GitHub Copilot, Cline, Bodega One Code 중 어느 곳과도 제휴 관계가 없습니다. 이 페이지의 모든 링크는 공개된 단순 제품 링크이며 어떠한 수수료도 발생시키지 않습니다.',
       },
       faqSection: {
         id: 'faq',
@@ -3179,9 +3528,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Cline을 로컬 모델로 설정하려면 어떻게 해야 합니까?', a: 'Ollama나 LM Studio를 설치하고 코딩 모델을 내려받으세요(Cline 문서는 Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3, Codestral을 권장합니다). 그런 다음 Cline에서 API 공급자로 Ollama나 LM Studio를 선택하세요 — Ollama의 기본 엔드포인트는 http://localhost:11434이며, LM Studio는 포트 1234에서 OpenAI 호환 API를 제공합니다. 둘 다 API 키가 필요 없습니다. 최소 32K 토큰 컨텍스트 윈도를 사용하십시오. 더 강도 높은 에이전틱 세션은 보통 64K가 필요합니다.' },
           { q: '이 도구들을 여러 개 동시에 사용할 수 있습니까?', a: '가능하며 많은 개발자가 그렇게 하고 있습니다 — 예를 들어 일상적이고 민감도가 낮은 수정에는 로컬 모델을 사용하는 Cline을 쓰고, 더 강력한 클라우드 모델이 도움이 되는 어려운 문제에는 Cursor나 GitHub Copilot으로 전환하는 식입니다. 같은 VS Code 설치에서 여러 확장 프로그램을 실행하는 데 기술적 충돌은 없지만, 보통 세션당 주 에이전트로 활성화되는 것은 하나뿐입니다.' },
           { q: '예산이 제한된 1인 개발자에게 가장 좋은 AI 코딩 어시스턴트는 무엇입니까?', a: '로컬 모델(Ollama 또는 LM Studio)과 짝지은 Cline은 총비용이 0달러입니다. 구독 없이 가끔 더 강력한 클라우드 모델에 접근하고 싶다면, 토큰당 과금되는 API 키(OpenAI, Anthropic, OpenRouter)를 사용하는 Cline은 고정 월 요금이 아니라 실제 사용량에 비례한 비용을 유지해줍니다.' },
-          { q: '이 네 도구 중 완전히 오프라인으로 작동하는 것이 있습니까?', a: 'Cline만 가능하며, Ollama나 LM Studio를 통한 로컬 모델과 결합했을 때에 한합니다 — 이 구성에서는 코드나 프롬프트 데이터가 컴퓨터를 전혀 벗어나지 않습니다. Cursor, Windsurf, GitHub Copilot은 모두 기본적으로 클라우드 호스팅 모델을 중심으로 만들어졌습니다. Cursor는 사용자 지정(로컬 포함) OpenAI 호환 엔드포인트를 가리키는 것을 지원하지만, 핵심 제품 경험은 네트워크 연결을 전제로 합니다.' },
+          { q: '이 도구들 중 완전히 오프라인으로 작동하는 것이 있습니까?', a: 'Ollama나 LM Studio를 통한 로컬 모델과 결합한 Cline, 그리고 로컬 모델과 함께 에어갭 모드를 사용하는 Bodega One Code가 가능합니다 — 두 구성 모두 코드나 프롬프트 데이터가 컴퓨터를 전혀 벗어나지 않습니다. Cursor, Windsurf, GitHub Copilot은 모두 기본적으로 클라우드 호스팅 모델을 중심으로 만들어졌습니다. Cursor는 사용자 지정(로컬 포함) OpenAI 호환 엔드포인트를 가리키는 것을 지원하지만, 핵심 제품 경험은 네트워크 연결을 전제로 합니다.' },
           { q: '이미 GitHub나 Azure DevOps로 표준화된 팀에는 어떤 도구가 가장 적합합니까?', a: 'GitHub Copilot입니다. 코딩 에이전트가 GitHub 이슈와 풀 리퀘스트에 직접 읽고 쓰며, Business(사용자당 월 19달러)와 Enterprise(사용자당 월 39달러) 요금제는 Microsoft 표준화 규정 준수 스택이 일반적으로 요구하는 조직 차원의 통제 — 감사 로그, 정책 관리, 지식재산권 배상 — 를 추가로 제공합니다.' },
-          { q: 'Cursor, Windsurf, GitHub Copilot, Cline은 이들을 추천하는 작성자에게 수수료를 지급합니까?', a: '지급하지 않습니다. 2026년 8월 기준 네 곳 모두 표준적인 공개 제휴·수수료 프로그램을 운영하지 않습니다. Cursor와 Windsurf는 각각 제한적인 추천 크레딧 인센티브를 제공하며(일반 콘텐츠 발행자에게는 열려 있지 않음), GitHub는 기술 통합 파트너십 프로그램을 운영하지만 추천 수수료는 없고, Cline은 수익화 계층 자체가 없는 커뮤니티 오픈소스 프로젝트입니다. 이 페이지는 네 도구 중 어느 곳과도 제휴 관계가 없습니다.' },
+          { q: 'Bodega One Code는 무엇이며 Cursor나 Cline과 어떻게 비교됩니까?', a: 'Bodega One Code는 현재 오픈 베타 중인 로컬 퍼스트 AI IDE로, Monaco 기반 에디터, AI 채팅, 자율 코딩 에이전트를 기존 에디터에 추가하는 확장 프로그램이 아니라 하나의 애플리케이션에 결합했습니다. Cline과 마찬가지로 네트워크 접근을 차단하는 에어갭 모드를 통해 로컬 모델(Ollama, LM Studio, llama.cpp)로 완전히 오프라인 작동이 가능합니다. Cline과 다른 점은 그 오프라인 기능이 확장 프로그램이 아니라 완전한 IDE에 내장되어 있다는 것입니다. Personal 요금제는 기기 1대에서 비상업적 용도로 영구 무료이며, Pro는 구독이 아닌 일회성 구매로 정확한 가격은 아직 발표되지 않았습니다. 아직 베타 단계이므로 Cursor, Windsurf, GitHub Copilot, Cline보다 사용 이력이 짧습니다.' },
+          { q: 'Cursor, Windsurf, GitHub Copilot, Cline, Bodega One Code는 이들을 추천하는 작성자에게 수수료를 지급합니까?', a: '지급하지 않습니다. 다섯 곳 모두 표준적인 공개 제휴·수수료 프로그램을 운영하지 않습니다. Cursor와 Windsurf는 각각 제한적인 추천 크레딧 인센티브를 제공하며(일반 콘텐츠 발행자에게는 열려 있지 않음), GitHub는 기술 통합 파트너십 프로그램을 운영하지만 추천 수수료는 없고, Cline은 수익화 계층 자체가 없는 커뮤니티 오픈소스 프로젝트이며, Bodega One Code는 공개된 추천이나 제휴 프로그램이 없습니다. 이 페이지는 다섯 도구 중 어느 곳과도 제휴 관계가 없습니다.' },
         ],
       },
       sources: {
@@ -3195,6 +3545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises', title: 'GitHub Copilot 조직 청구', description: '2026년 6월 1일부터 적용된 Business/Enterprise AI 크레딧 과금에 관한 GitHub 공식 문서.' },
           { url: 'https://cline.bot/pricing', title: 'Cline 가격/FAQ', description: 'Cline 확장 프로그램이 무료이자 오픈소스이며 API 과금이 사용량 기반임을 공식 확인.' },
           { url: 'https://docs.cline.bot/running-models-locally/overview', title: 'Cline: 모델을 로컬에서 실행하기', description: 'Ollama와 LM Studio 로컬 모델 연결에 관한 Cline 공식 문서.' },
+          { url: 'https://www.bodegaone.ai/pricing', title: 'Bodega One Code 가격', description: 'Personal, Pro, Enterprise 요금제를 다루는 Bodega One Code 공식 가격 페이지.' },
+          { url: 'https://www.bodegaone.ai/about', title: 'Bodega One Code 소개', description: 'Bodega One Code의 로컬 퍼스트 아키텍처, 에이전트, 플랫폼 지원을 설명하는 공식 제품 페이지.' },
         ],
       },
       relatedReading: {
@@ -3214,7 +3566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 가격은 각 공식 사이트에서 확인했습니다.',
       'image': '[www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ko.webp](https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ko.webp)',
       'datePublished': '2026-08-27',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'ko',
@@ -3228,6 +3580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'Windsurf' },
         { '@type': 'Thing', 'name': 'GitHub Copilot' },
         { '@type': 'Thing', 'name': 'Cline' },
+        { '@type': 'Thing', 'name': 'Bodega One Code' },
       ],
       'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ko/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026' },
     },
@@ -3239,6 +3592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Cursor가 GitHub Copilot보다 좋습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '에이전틱 다중 파일 작업과 모델 유연성 측면에서는 일반적으로 Cursor가 더 강력합니다. GitHub Copilot은 이미 GitHub와 Azure DevOps로 표준화된 팀에 더 적합합니다.' } },
         { '@type': 'Question', 'name': '에이전트 모드가 있는 무료 AI 코딩 어시스턴트가 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '있습니다. Cline은 구독 없이 완전 무료 오픈소스입니다 — 사용한 LLM API 토큰 비용만 지불하거나, Ollama나 LM Studio로 로컬 모델을 쓰면 무료입니다.' } },
         { '@type': 'Question', 'name': '2026년 Windsurf와 Cursor의 실질적인 차이는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 8월 기준 두 Pro 요금제 모두 월 20달러로 동일합니다. 남은 차이는 워크플로로, Windsurf는 Cascade를, Cursor는 Composer와 Cloud Agents를 사용합니다.' } },
+        { '@type': 'Question', 'name': 'Bodega One Code는 무엇이며 Cursor나 Cline과 어떻게 비교됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code는 현재 오픈 베타 중인 로컬 퍼스트 AI IDE로, Monaco 기반 에디터, AI 채팅, 자율 코딩 에이전트를 기존 에디터에 추가하는 확장 프로그램이 아니라 하나의 애플리케이션에 결합했습니다. Personal 요금제는 기기 1대에서 비상업적 용도로 영구 무료이며, Pro는 정확한 가격이 아직 발표되지 않은 일회성 구매입니다.' } },
       ],
     },
   },
