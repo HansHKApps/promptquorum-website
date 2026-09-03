@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -59,9 +59,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Best ASUS Mini PC for Local AI', anchor: 'buying-guide' },
       { label: 'Spec & Price Comparison', anchor: 'comparison' },
       { label: 'What Can These Machines Actually Run?', anchor: 'llm-capacity' },
+      { label: 'How Much RAM Do You Need?', anchor: 'ram-tiers' },
       { label: 'Which Configuration Should You Buy?', anchor: 'configurations' },
       { label: 'Where to Buy', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec & MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 & MINISFORUM AI X1 Pro in Depth', anchor: 'alternatives-deep-dive' },
       { label: 'Buy ASUS If / Skip It If', anchor: 'who-should-buy' },
       { label: 'Common Mistakes', anchor: 'common-mistakes' },
       { label: 'FAQ', anchor: 'faq' },
@@ -173,6 +175,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'RAM math is quantization arithmetic (model parameters × bits per weight), not a benchmark — it tells you what fits, not how fast it runs. Actual tokens/second depends on memory bandwidth and how much of the shared pool the OS lets the iGPU address, which neither ASUS unit has published independent numbers for as of September 2026.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'How Much RAM Do You Need for Local LLMs?',
+        content:
+          '**Target at least 64GB if local AI is a primary reason for the purchase; treat 16GB as a floor for light experimentation only.** Memory capacity, not CPU benchmark scores, is what decides which model sizes a mini PC can load at all — see the fit table above for the exact math per model size.',
+        items: [
+          '**16GB:** covers 3B–7B models at Q4 quantization, basic embeddings, and small assistants. Not a configuration to buy specifically for local AI — treat it as a minimum for casual experimentation on a machine bought for other reasons.',
+          '**32GB:** a reasonable entry point for 7B–14B models, retrieval-augmented generation (RAG), and single-agent coding assistants. This is the lowest tier worth buying deliberately for local AI.',
+          '**64GB:** fits 14B–32B models at Q4 with headroom for a RAG database, multiple background services, and normal desktop use at the same time. On both ASUS units in this guide, this is the tier where local AI stops feeling constrained.',
+          '**96–128GB:** required for comfortable 70B-class inference at Q4, or for running several models and services concurrently. The NUC 16 Pro reaches this tier only on its DDR5 SO-DIMM configuration, the PN55 tops out at 96GB, and the GMKtec EVO-X2 and MINISFORUM AI X1 Pro both reach 128GB — see Which Configuration Should You Buy below for the exact ASUS SKU trade-offs.',
+        ],
+        note: 'These tiers describe RAM capacity needed to load a model, not measured inference speed. Memory bandwidth and iGPU memory allocation, not capacity alone, decide tokens/second — none of the units in this guide has an independent published benchmark for that as of September 2026.',
+      },
       configurations: {
         id: 'configurations',
         title: 'Which Configuration Should You Buy?',
@@ -212,6 +227,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The ASUS NUC 16 Pro closes part of this gap on its 128GB DDR5 configuration, matching the EVO-X2 and AI X1 Pro on raw RAM ceiling — but it does so on the lower Core Ultra 5/7 tier, not the flagship X7/X9 chip, and it still lacks the EVO-X2\'s larger integrated GPU. If your only question is "which mini PC fits the largest model at the best GPU," the EVO-X2 still answers it more directly than any ASUS configuration.',
         ],
         note: 'Skip ASUS if raw local-LLM GPU throughput is your only buying criterion — the GMKtec EVO-X2\'s larger integrated GPU beats every configuration of both ASUS units on that specific metric, even though the NUC 16 Pro\'s 128GB DDR5 configuration now matches it on RAM alone.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 and MINISFORUM AI X1 Pro in Depth',
+        content:
+          '**These two units are the ones to compare directly against a fully configured NUC 16 Pro if local-LLM capacity, not ASUS\'s brand or warranty, is the deciding factor.** Neither carries ASUS\'s business-channel support, so weigh that trade-off against the specs below.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'Best local-LLM performance alternative to ASUS',
+            verdict:
+              'AMD Ryzen AI Max+ 395 ("Strix Halo"), Radeon 8060S integrated GPU (40 RDNA 3.5 compute units), up to 128GB of soldered LPDDR5X unified memory, NPU rated up to 50 TOPS. A configurable share of that 128GB pool can be allocated as GPU-addressable memory, which is what lets it hold larger quantized models than a 96GB DDR5 ASUS configuration can fit. Priced from roughly $2,199.',
+            pros: [
+              'Larger integrated GPU (Radeon 8060S) than either ASUS unit — the current mini-PC GPU leader in this comparison',
+              '128GB unified memory matches the NUC 16 Pro\'s top DDR5 tier while keeping the flagship Strix Halo chip, which the ASUS 128GB configuration does not',
+              'Independent reviews exist (see Sources) — unlike either ASUS unit, which has no published third-party local-LLM benchmark as of September 2026',
+            ],
+            cons: [
+              'No ASUS-style business-channel warranty or procurement path',
+              'Memory is soldered — not upgradeable after purchase, same limitation as the NUC 16 Pro\'s LPDDR5x configuration',
+              'Highest sticker price of the units compared in this guide',
+            ],
+            affiliateLinks: [
+              { label: 'Check GMKtec EVO-X2 price →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'Best high-memory value alternative to ASUS',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, up to 128GB of upgradeable DDR5 SO-DIMM memory — standard, swappable modules rather than soldered chips. Barebone pricing starts at roughly $759, meaning the buyer sources their own RAM and SSD, which changes the effective price versus a fully configured ASUS unit.',
+            pros: [
+              'Cheapest confirmed path to a 128GB RAM ceiling in this comparison',
+              'Upgradeable DDR5 SO-DIMM memory — unlike the GMKtec EVO-X2\'s soldered LPDDR5X or the NUC 16 Pro\'s soldered LPDDR5x tier',
+              'Reaches the same 128GB ceiling as the NUC 16 Pro\'s DDR5 configuration at a lower starting price',
+            ],
+            cons: [
+              'Barebone starting price excludes RAM and storage — add their cost before comparing to a fully configured ASUS price',
+              'Smaller integrated GPU than the GMKtec EVO-X2\'s Radeon 8060S',
+              'No ASUS-style business-channel warranty or procurement path',
+            ],
+            affiliateLinks: [
+              { label: 'Check MINISFORUM AI X1 Pro price →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'Product links, no current affiliate relationship. Prices vary by region, retailer, and configuration — confirm the current listing before buying.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -304,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ASUS Mini PC for Local AI: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Best ASUS mini PC for local AI 2026: NUC 16 Pro vs. ExpertCenter PN55, compared on price, RAM configuration, and real local-LLM capacity — plus GMKtec EVO-X2 and MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -326,7 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -379,9 +443,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Bester ASUS Mini-PC für lokale KI', anchor: 'buying-guide' },
       { label: 'Spec- und Preisvergleich', anchor: 'comparison' },
       { label: 'Was läuft auf diesen Geräten wirklich?', anchor: 'llm-capacity' },
+      { label: 'Wie viel RAM brauchen Sie?', anchor: 'ram-tiers' },
       { label: 'Welche Konfiguration sollten Sie kaufen?', anchor: 'configurations' },
       { label: 'Wo kaufen', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec & MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 & MINISFORUM AI X1 Pro im Detail', anchor: 'alternatives-deep-dive' },
       { label: 'ASUS kaufen oder lieber nicht?', anchor: 'who-should-buy' },
       { label: 'Häufige Fehler', anchor: 'common-mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
@@ -493,6 +559,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Die RAM-Rechnung ist Quantisierungsarithmetik (Modellparameter × Bits pro Gewicht), kein Benchmark — sie zeigt, was passt, nicht wie schnell es läuft. Die tatsächlichen Tokens/Sekunde hängen von der Speicherbandbreite und davon ab, wie viel vom gemeinsamen Speicherpool das Betriebssystem der iGPU zuweist — dazu hat keines der beiden ASUS-Geräte bis September 2026 unabhängige Zahlen veröffentlicht.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'Wie viel RAM brauchen Sie für lokale LLMs?',
+        content:
+          '**Zielen Sie auf mindestens 64 GB, wenn lokale KI ein Hauptgrund für den Kauf ist; 16 GB gelten nur als Untergrenze für leichtes Experimentieren.** Die Speicherkapazität, nicht der CPU-Benchmark-Wert, entscheidet, welche Modellgrößen ein Mini-PC überhaupt laden kann — die genaue Rechnung pro Modellgröße finden Sie in der Tabelle oben.',
+        items: [
+          '**16 GB:** deckt 3B–7B-Modelle bei Q4-Quantisierung, einfache Embeddings und kleine Assistenten ab. Keine Konfiguration, die man gezielt für lokale KI kaufen sollte — eher eine Mindestgrenze für gelegentliches Experimentieren auf einem aus anderen Gründen gekauften Gerät.',
+          '**32 GB:** ein vernünftiger Einstieg für 7B–14B-Modelle, Retrieval-Augmented Generation (RAG) und einzelne Coding-Assistenten. Die niedrigste Stufe, die sich für lokale KI gezielt zu kaufen lohnt.',
+          '**64 GB:** passt für 14B–32B-Modelle bei Q4 mit Spielraum für eine RAG-Datenbank, mehrere Hintergrunddienste und normale Desktop-Nutzung gleichzeitig. Bei beiden ASUS-Geräten in diesem Ratgeber ist dies die Stufe, ab der sich lokale KI nicht mehr beengt anfühlt.',
+          '**96–128 GB:** notwendig für komfortable 70B-Klasse-Inferenz bei Q4 oder für mehrere gleichzeitig laufende Modelle und Dienste. Der NUC 16 Pro erreicht diese Stufe nur in der DDR5-SO-DIMM-Konfiguration, der PN55 deckelt bei 96 GB, und GMKtec EVO-X2 sowie MINISFORUM AI X1 Pro erreichen beide 128 GB — die genauen ASUS-SKU-Kompromisse finden Sie unten unter „Welche Konfiguration sollten Sie kaufen".',
+        ],
+        note: 'Diese Stufen beschreiben die RAM-Kapazität zum Laden eines Modells, nicht die gemessene Inferenzgeschwindigkeit. Speicherbandbreite und iGPU-Speicherzuweisung, nicht die Kapazität allein, entscheiden über Tokens/Sekunde — dazu hat keines der Geräte in diesem Ratgeber bis September 2026 einen unabhängigen veröffentlichten Benchmark.',
+      },
       configurations: {
         id: 'configurations',
         title: 'Welche Konfiguration sollten Sie kaufen?',
@@ -532,6 +611,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der ASUS NUC 16 Pro schließt einen Teil dieser Lücke bei seiner 128-GB-DDR5-Konfiguration und zieht bei der reinen RAM-Obergrenze mit dem EVO-X2 und dem AI X1 Pro gleich — allerdings auf der niedrigeren Core-Ultra-5/7-Stufe statt dem Flaggschiff X7/X9, und weiterhin ohne die größere integrierte GPU des EVO-X2. Wenn Ihre einzige Frage lautet „Welcher Mini-PC passt zum größten Modell bei der besten GPU?", beantwortet der EVO-X2 das immer noch direkter als jede ASUS-Konfiguration.',
         ],
         note: 'Meiden Sie ASUS, wenn reiner lokaler LLM-GPU-Durchsatz Ihr einziges Kaufkriterium ist — die größere integrierte GPU des GMKtec EVO-X2 schlägt jede Konfiguration beider ASUS-Geräte bei genau dieser Kennzahl, auch wenn die 128-GB-DDR5-Konfiguration des NUC 16 Pro inzwischen beim RAM allein gleichzieht.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 und MINISFORUM AI X1 Pro im Detail',
+        content:
+          '**Diese beiden Geräte sind die richtige Vergleichsbasis zu einem voll ausgestatteten NUC 16 Pro, wenn lokale LLM-Kapazität und nicht ASUS\' Marke oder Garantie den Ausschlag gibt.** Keines der beiden hat ASUS\' Business-Support-Kanal — wägen Sie diesen Kompromiss gegen die Specs unten ab.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'Beste lokale-LLM-Leistungsalternative zu ASUS',
+            verdict:
+              'AMD Ryzen AI Max+ 395 („Strix Halo"), Radeon 8060S integrierte Grafik (40 RDNA-3.5-Recheneinheiten), bis zu 128 GB verlöteter LPDDR5X Unified Memory, NPU mit bis zu 50 TOPS. Ein konfigurierbarer Anteil dieses 128-GB-Pools lässt sich als GPU-adressierbarer Speicher zuweisen — dadurch passen größere quantisierte Modelle als auf eine 96-GB-DDR5-ASUS-Konfiguration. Preise ab ca. 2.199 $.',
+            pros: [
+              'Größere integrierte GPU (Radeon 8060S) als beide ASUS-Geräte — aktuell die GPU-Spitze unter Mini-PCs in diesem Vergleich',
+              '128 GB Unified Memory erreicht die Top-DDR5-Stufe des NUC 16 Pro, behält dabei aber den Flaggschiff-Strix-Halo-Chip, den die 128-GB-ASUS-Konfiguration nicht hat',
+              'Unabhängige Tests existieren (siehe Quellen) — anders als bei beiden ASUS-Geräten, für die bis September 2026 kein veröffentlichter Drittanbieter-Benchmark für lokale LLMs vorliegt',
+            ],
+            cons: [
+              'Kein ASUS-typischer Business-Kanal-Support oder Beschaffungsweg',
+              'Speicher ist verlötet — nach dem Kauf nicht aufrüstbar, gleiche Einschränkung wie bei der LPDDR5x-Konfiguration des NUC 16 Pro',
+              'Höchster Listenpreis der in diesem Ratgeber verglichenen Geräte',
+            ],
+            affiliateLinks: [
+              { label: 'GMKtec EVO-X2 Preis prüfen →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'Beste High-RAM-Preis-Leistungs-Alternative zu ASUS',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, bis zu 128 GB aufrüstbarer DDR5-SO-DIMM-Speicher — standardmäßige, austauschbare Module statt verlöteter Chips. Der Barebone-Einstiegspreis liegt bei ca. 759 $, das heißt: Käufer besorgen RAM und SSD selbst, was den effektiven Preis gegenüber einem voll ausgestatteten ASUS-Gerät verändert.',
+            pros: [
+              'Günstigster gesicherter Weg zu einer 128-GB-RAM-Obergrenze in diesem Vergleich',
+              'Aufrüstbarer DDR5-SO-DIMM-Speicher — anders als der verlötete LPDDR5X des GMKtec EVO-X2 oder die verlötete LPDDR5x-Stufe des NUC 16 Pro',
+              'Erreicht dieselbe 128-GB-Obergrenze wie die DDR5-Konfiguration des NUC 16 Pro zu einem niedrigeren Einstiegspreis',
+            ],
+            cons: [
+              'Barebone-Einstiegspreis ohne RAM und Speicher — deren Kosten vor dem Vergleich mit einem voll ausgestatteten ASUS-Preis addieren',
+              'Kleinere integrierte GPU als die Radeon 8060S des GMKtec EVO-X2',
+              'Kein ASUS-typischer Business-Kanal-Support oder Beschaffungsweg',
+            ],
+            affiliateLinks: [
+              { label: 'MINISFORUM AI X1 Pro Preis prüfen →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'Produktlinks, aktuell keine Affiliate-Beziehung. Preise variieren je nach Region, Händler und Konfiguration — prüfen Sie das aktuelle Angebot vor dem Kauf.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -624,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ASUS Mini-PC für lokale KI: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Bester ASUS Mini-PC für lokale KI 2026: NUC 16 Pro vs. ExpertCenter PN55 im Vergleich bei Preis, RAM-Konfiguration und realer lokaler LLM-Kapazität — plus GMKtec EVO-X2 und MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -646,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -699,9 +827,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Meilleur mini PC ASUS pour l\'IA locale', anchor: 'buying-guide' },
       { label: 'Comparatif specs et prix', anchor: 'comparison' },
       { label: 'Que peuvent vraiment exécuter ces appareils ?', anchor: 'llm-capacity' },
+      { label: 'Combien de RAM vous faut-il ?', anchor: 'ram-tiers' },
       { label: 'Quelle configuration acheter ?', anchor: 'configurations' },
       { label: 'Où acheter', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec et MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 et MINISFORUM AI X1 Pro en détail', anchor: 'alternatives-deep-dive' },
       { label: 'Acheter ASUS ou pas ?', anchor: 'who-should-buy' },
       { label: 'Erreurs courantes', anchor: 'common-mistakes' },
       { label: 'Questions fréquentes', anchor: 'faq' },
@@ -812,6 +942,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Le calcul de RAM est de l\'arithmétique de quantification (paramètres du modèle × bits par poids), pas un benchmark — il indique ce qui tient, pas la vitesse d\'exécution. Les tokens/seconde réels dépendent de la bande passante mémoire et de la part du pool partagé que l\'OS alloue à l\'iGPU, chiffres qu\'aucun des deux appareils ASUS n\'a publiés de façon indépendante en septembre 2026.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'Combien de RAM vous faut-il pour les LLM locaux ?',
+        content:
+          '**Visez au moins 64 Go si l\'IA locale est une raison principale de l\'achat ; 16 Go n\'est qu\'un minimum pour de l\'expérimentation légère.** La capacité mémoire, pas le score de benchmark CPU, décide quelles tailles de modèle un mini PC peut charger — le calcul exact par taille de modèle figure dans le tableau ci-dessus.',
+        items: [
+          '**16 Go :** couvre les modèles 3B–7B en quantification Q4, les embeddings basiques et les petits assistants. Pas une configuration à acheter spécifiquement pour l\'IA locale — plutôt un minimum pour de l\'expérimentation occasionnelle sur une machine achetée pour d\'autres raisons.',
+          '**32 Go :** un point d\'entrée raisonnable pour les modèles 7B–14B, la génération augmentée par récupération (RAG) et les assistants de code mono-agent. Le palier le plus bas qui mérite un achat délibéré pour l\'IA locale.',
+          '**64 Go :** convient aux modèles 14B–32B en Q4 avec de la marge pour une base RAG, plusieurs services en arrière-plan et un usage bureautique normal en parallèle. Sur les deux appareils ASUS de ce guide, c\'est le palier où l\'IA locale cesse de sembler contrainte.',
+          '**96–128 Go :** nécessaire pour une inférence confortable en classe 70B en Q4, ou pour exécuter plusieurs modèles et services simultanément. Le NUC 16 Pro n\'atteint ce palier que sur sa configuration DDR5 SO-DIMM, le PN55 plafonne à 96 Go, et le GMKtec EVO-X2 comme le MINISFORUM AI X1 Pro atteignent tous deux 128 Go — voir les compromis exacts par SKU ASUS dans « Quelle configuration acheter » ci-dessous.',
+        ],
+        note: 'Ces paliers décrivent la capacité RAM nécessaire pour charger un modèle, pas la vitesse d\'inférence mesurée. La bande passante mémoire et l\'allocation mémoire de l\'iGPU, pas la capacité seule, déterminent les tokens/seconde — aucun appareil de ce guide n\'a de benchmark indépendant publié à ce sujet en septembre 2026.',
+      },
       configurations: {
         id: 'configurations',
         title: 'Quelle configuration acheter ?',
@@ -851,6 +994,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le NUC 16 Pro d\'ASUS comble une partie de cet écart sur sa configuration 128 Go DDR5, égalant l\'EVO-X2 et l\'AI X1 Pro sur le plafond brut de RAM — mais sur le palier Core Ultra 5/7 inférieur, pas la puce phare X7/X9, et toujours sans le GPU intégré plus grand de l\'EVO-X2. Si votre seule question est « quel mini PC accueille le plus grand modèle avec le meilleur GPU ? », l\'EVO-X2 y répond toujours plus directement que n\'importe quelle configuration ASUS.',
         ],
         note: 'Évitez ASUS si le débit GPU brut pour l\'IA locale est votre seul critère d\'achat — le GPU intégré plus grand du GMKtec EVO-X2 devance toute configuration des deux appareils ASUS sur ce point précis, même si la configuration 128 Go DDR5 du NUC 16 Pro égale désormais son plafond de RAM seul.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 et MINISFORUM AI X1 Pro en détail',
+        content:
+          '**Ces deux appareils sont ceux à comparer directement à un NUC 16 Pro pleinement configuré si la capacité LLM locale, et non la marque ou la garantie ASUS, est le critère décisif.** Aucun des deux n\'offre le support de canal professionnel d\'ASUS — pesez ce compromis face aux spécifications ci-dessous.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'Meilleure alternative de performance LLM locale à ASUS',
+            verdict:
+              'AMD Ryzen AI Max+ 395 (« Strix Halo »), GPU intégré Radeon 8060S (40 unités de calcul RDNA 3.5), jusqu\'à 128 Go de mémoire unifiée LPDDR5X soudée, NPU jusqu\'à 50 TOPS. Une part configurable de ce pool de 128 Go peut être allouée comme mémoire adressable par le GPU, ce qui permet de charger des modèles quantifiés plus grands qu\'une configuration ASUS 96 Go DDR5. Prix à partir d\'environ 2 199 $.',
+            pros: [
+              'GPU intégré plus grand (Radeon 8060S) que les deux appareils ASUS — le leader GPU actuel parmi les mini PC de ce comparatif',
+              'Les 128 Go de mémoire unifiée égalent le palier DDR5 supérieur du NUC 16 Pro tout en conservant la puce Strix Halo phare, absente de la configuration ASUS 128 Go',
+              'Des tests indépendants existent (voir Sources) — contrairement aux deux appareils ASUS, sans benchmark LLM local tiers publié en septembre 2026',
+            ],
+            cons: [
+              'Aucun support de canal professionnel ni voie d\'achat entreprise à la ASUS',
+              'Mémoire soudée — non évolutive après achat, même limite que la configuration LPDDR5x du NUC 16 Pro',
+              'Prix affiché le plus élevé des appareils comparés dans ce guide',
+            ],
+            affiliateLinks: [
+              { label: 'Voir le prix du GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'Meilleure alternative rapport RAM/prix à ASUS',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, jusqu\'à 128 Go de mémoire DDR5 SO-DIMM évolutive — des modules standards et remplaçables plutôt que des puces soudées. Le prix barebone démarre à environ 759 $, ce qui signifie que l\'acheteur fournit sa propre RAM et son propre SSD, ce qui change le prix effectif par rapport à un appareil ASUS pleinement configuré.',
+            pros: [
+              'Voie confirmée la moins chère vers un plafond de 128 Go de RAM dans ce comparatif',
+              'Mémoire DDR5 SO-DIMM évolutive — contrairement à la LPDDR5X soudée du GMKtec EVO-X2 ou au palier LPDDR5x soudé du NUC 16 Pro',
+              'Atteint le même plafond de 128 Go que la configuration DDR5 du NUC 16 Pro à un prix de départ inférieur',
+            ],
+            cons: [
+              'Le prix barebone de départ exclut la RAM et le stockage — ajoutez leur coût avant de comparer à un prix ASUS pleinement configuré',
+              'GPU intégré plus petit que le Radeon 8060S du GMKtec EVO-X2',
+              'Aucun support de canal professionnel ni voie d\'achat entreprise à la ASUS',
+            ],
+            affiliateLinks: [
+              { label: 'Voir le prix du MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'Liens produits, aucune relation d\'affiliation actuelle. Les prix varient selon la région, le revendeur et la configuration — vérifiez l\'offre actuelle avant l\'achat.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -943,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS pour l\'IA locale : NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Meilleur mini PC ASUS pour l\'IA locale 2026 : NUC 16 Pro vs. ExpertCenter PN55, comparés sur le prix, la configuration RAM et la capacité réelle pour l\'IA locale — plus GMKtec EVO-X2 et MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -965,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1018,9 +1210,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ローカルAI向けベストASUS mini PC', anchor: 'buying-guide' },
       { label: 'スペック・価格比較', anchor: 'comparison' },
       { label: '実際に何が動くのか', anchor: 'llm-capacity' },
+      { label: '必要なRAM容量の目安', anchor: 'ram-tiers' },
       { label: 'どの構成を買うべきか', anchor: 'configurations' },
       { label: 'どこで買うか', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink・GMKtec・MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2とMINISFORUM AI X1 Proの詳細', anchor: 'alternatives-deep-dive' },
       { label: 'ASUSを買うべきか、避けるべきか', anchor: 'who-should-buy' },
       { label: 'よくある間違い', anchor: 'common-mistakes' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -1131,6 +1325,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'このRAM計算は量子化の算術（モデルパラメータ数×重みあたりビット数）であり、ベンチマークではありません — 収まるかどうかを示すもので、動作速度は示しません。実際のトークン毎秒はメモリ帯域幅と、OSが共有プールのうちどれだけをiGPUに割り当てるかに左右され、いずれのASUS機種についても2026年9月時点で独立系の数値は公表されていません。',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'ローカルLLMに必要なRAM容量の目安',
+        content:
+          '**購入の主目的がローカルAIなら最低64GBを目安にしてください。16GBは軽い実験用の下限にすぎません。** ミニPCがどのモデルサイズを読み込めるかを決めるのはCPUベンチマークのスコアではなくメモリ容量です — モデルサイズごとの正確な計算は上の表を参照してください。',
+        items: [
+          '**16GB:** Q4量子化の3B〜7Bモデル、基本的な埋め込み、小規模アシスタントに対応。ローカルAI目的で意図的に選ぶ構成ではなく、別の理由で購入した機種でたまに試す場合の下限と考えてください。',
+          '**32GB:** 7B〜14BモデルやRAG（検索拡張生成）、単一エージェントのコーディング支援に妥当な入門構成です。ローカルAI目的で意図的に購入する価値がある最低ラインです。',
+          '**64GB:** Q4の14B〜32Bモデルに、RAGデータベースや複数のバックグラウンドサービス、通常のデスクトップ利用を並行させる余裕があります。本ガイドの両ASUS機種では、この段階からローカルAIの窮屈さが解消されます。',
+          '**96〜128GB:** Q4での快適な70Bクラス推論、または複数モデル・サービスの同時実行に必要です。NUC 16 ProはDDR5 SO-DIMM構成でのみこの段階に達し、PN55は96GBが上限で、GMKtec EVO-X2とMINISFORUM AI X1 Proはいずれも128GBに達します — 具体的なASUS SKUごとのトレードオフは下記「どの構成を買うべきか」を参照してください。',
+        ],
+        note: 'これらの段階はモデルを読み込むために必要なRAM容量を示すもので、実測の推論速度ではありません。トークン毎秒を左右するのは容量だけでなく、メモリ帯域幅とiGPUへのメモリ割り当てです — 本ガイドのいずれの機種についても2026年9月時点で独立系ベンチマークは公表されていません。',
+      },
       configurations: {
         id: 'configurations',
         title: 'どの構成を買うべきか',
@@ -1170,6 +1377,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ASUSのNUC 16 Proは128GB DDR5構成でこの差の一部を埋め、EVO-X2やAI X1 ProとRAM上限そのものでは並びます — ただしそれは下位のCore Ultra 5/7段階であり、フラッグシップのX7/X9チップではなく、EVO-X2のより大きな内蔵GPUも依然として搭載していません。「どのmini PCが、最良のGPUで最大のモデルを収められるか」だけが問いであれば、EVO-X2の方がどのASUS構成よりも直接的な答えになります。',
         ],
         note: 'ローカルLLMの生のGPUスループットだけが購入基準であれば、ASUSは避けてください — GMKtec EVO-X2のより大きな内蔵GPUは、この指標において両ASUS機種のどの構成も上回ります。NUC 16 Proの128GB DDR5構成がRAM単体では並んだとしても同様です。',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2とMINISFORUM AI X1 Proの詳細',
+        content:
+          '**ASUSのブランドや保証ではなく、ローカルLLM容量が決め手であれば、フル構成のNUC 16 Proと直接比較すべき2機種がこれらです。** どちらもASUSのようなビジネス向けサポート体制は持たないため、下記のスペックとこのトレードオフを比較検討してください。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'ASUSに対するローカルLLM性能面での最有力代替',
+            verdict:
+              'AMD Ryzen AI Max+ 395（「Strix Halo」）、Radeon 8060S内蔵GPU（RDNA 3.5コンピュートユニット40基）、最大128GBの実装済みLPDDR5X統合メモリ、NPUは最大50TOPS。この128GBプールの一部は設定によりGPUがアドレス可能なメモリとして割り当てられ、96GB DDR5構成のASUS機種より大きな量子化モデルを読み込めます。価格は約2,199ドルから。',
+            pros: [
+              '両ASUS機種より大きな内蔵GPU（Radeon 8060S）— 本比較のミニPCの中で現時点のGPU性能トップ',
+              '128GBの統合メモリはNUC 16Proの最上位DDR5段階に並びつつ、128GB ASUS構成にはないフラッグシップStrix Haloチップを維持',
+              '独立レビューが存在（出典参照）— 両ASUS機種は2026年9月時点で公表されたサードパーティのローカルLLMベンチマークがない',
+            ],
+            cons: [
+              'ASUSのようなビジネス向けサポート体制や調達経路がない',
+              'メモリは実装済みで購入後の増設不可 — NUC 16 ProのLPDDR5x構成と同じ制約',
+              '本ガイドで比較した機種の中で表示価格が最も高い',
+            ],
+            affiliateLinks: [
+              { label: 'GMKtec EVO-X2の価格を確認 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'ASUSに対する高RAM・コスパ面での最有力代替',
+            verdict:
+              'AMD Ryzen AI 9 HX 370、最大128GBの増設可能DDR5 SO-DIMMメモリ — 実装済みチップではなく標準的で交換可能なモジュールです。バラック（本体のみ）価格は約759ドルから。つまり購入者自身がRAMとSSDを用意する必要があり、フル構成のASUS機種との実質価格比較はその分変わります。',
+            pros: [
+              '本比較の中で128GBのRAM上限に達する最も安価な確認済みの手段',
+              '増設可能なDDR5 SO-DIMMメモリ — GMKtec EVO-X2の実装済みLPDDR5XやNUC 16 Proの実装済みLPDDR5x段階とは異なる',
+              'NUC 16 ProのDDR5構成と同じ128GB上限に、より低い開始価格で到達',
+            ],
+            cons: [
+              'バラック開始価格にRAMとストレージは含まれない — フル構成のASUS価格と比較する前にその費用を加算する必要がある',
+              'GMKtec EVO-X2のRadeon 8060Sより内蔵GPUが小さい',
+              'ASUSのようなビジネス向けサポート体制や調達経路がない',
+            ],
+            affiliateLinks: [
+              { label: 'MINISFORUM AI X1 Proの価格を確認 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: '商品リンクであり、現時点でアフィリエイト関係はありません。価格は地域・販売店・構成によって変動します。購入前に最新の販売価格を確認してください。',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -1262,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ローカルAI向けASUS mini PC: NUC 16 Pro vs. ExpertCenter PN55（2026年）',
       'description': 'ローカルAI向けベストASUS mini PC 2026: NUC 16 Pro vs. ExpertCenter PN55を価格・RAM構成・実際のローカルLLM容量で比較 — GMKtec EVO-X2、MINISFORUM AI X1 Proとの位置づけも解説。',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1289,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1342,9 +1598,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '本地AI最佳ASUS迷你主机', anchor: 'buying-guide' },
       { label: '规格与价格对比', anchor: 'comparison' },
       { label: '这些机型实际能跑什么', anchor: 'llm-capacity' },
+      { label: '需要多少RAM', anchor: 'ram-tiers' },
       { label: '该买哪种配置', anchor: 'configurations' },
       { label: '在哪里购买', anchor: 'where-to-buy' },
       { label: 'ASUS对比Beelink、GMKtec与MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2与MINISFORUM AI X1 Pro深度解析', anchor: 'alternatives-deep-dive' },
       { label: '该不该买ASUS', anchor: 'who-should-buy' },
       { label: '常见错误', anchor: 'common-mistakes' },
       { label: '常见问题', anchor: 'faq' },
@@ -1455,6 +1713,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'RAM计算属于量化算术(模型参数量×每权重比特数),不是基准测试——它说明能否装下,而非运行速度。实际每秒token数取决于内存带宽,以及操作系统分配给核显的共享内存比例,截至2026年9月两款ASUS机型均未公布相关独立数据。',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: '本地LLM到底需要多少RAM',
+        content:
+          '**如果购买主要为了本地AI,至少瞄准64GB;16GB仅够轻度实验使用的下限。** 决定迷你主机能加载哪种规模模型的是内存容量,而不是CPU跑分——每种模型规模的具体计算见上方表格。',
+        items: [
+          '**16GB:** 可覆盖Q4量化的3B–7B模型、基础嵌入和小型助手。不是专为本地AI刻意购买的配置——更适合作为因其他原因购入的机型上偶尔试验的下限。',
+          '**32GB:** 面向7B–14B模型、检索增强生成(RAG)和单智能体编程助手的合理入门配置。是值得为本地AI刻意购买的最低档位。',
+          '**64GB:** 可在Q4下运行14B–32B模型,同时留有余量运行RAG数据库、多个后台服务及正常桌面使用。本指南中两款ASUS机型从这一档位起,本地AI才不再感到局促。',
+          '**96–128GB:** Q4下舒适运行70B级模型,或同时运行多个模型与服务所需。NUC 16 Pro仅在DDR5 SO-DIMM配置下达到此档位,PN55上限为96GB,GMKtec EVO-X2与MINISFORUM AI X1 Pro均可达到128GB——具体ASUS SKU权衡见下方"该买哪种配置"。',
+        ],
+        note: '这些档位描述的是加载模型所需的RAM容量,而非实测推理速度。决定每秒token数的是内存带宽和核显可分配的内存量,而非容量本身——截至2026年9月,本指南中任何机型均未公布相关独立基准测试。',
+      },
       configurations: {
         id: 'configurations',
         title: '该买哪种配置',
@@ -1494,6 +1765,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ASUS的NUC 16 Pro在128GB DDR5配置上弥补了部分差距,在纯RAM上限上与EVO-X2、AI X1 Pro持平——但这是较低阶的Core Ultra 5/7,而非旗舰级X7/X9芯片,而且仍然缺少EVO-X2那颗更大的核显。如果你唯一关心的问题是"哪款迷你主机能以最好的GPU装下最大的模型",EVO-X2仍然比任何ASUS配置给出的答案更直接。',
         ],
         note: '如果原始本地LLM的GPU吞吐量是你唯一的购买标准,请避开ASUS——GMKtec EVO-X2更大的核显在这一具体指标上优于两款ASUS机型的任何配置,即便NUC 16 Pro的128GB DDR5配置现在已在RAM本身上与之持平。',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2与MINISFORUM AI X1 Pro深度解析',
+        content:
+          '**如果决定因素是本地LLM容量而非ASUS的品牌或质保,这两款机型才是应该与满配NUC 16 Pro直接对比的对象。** 两者都没有ASUS式的商用渠道支持——请将这一权衡与下方规格一并考虑。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: '本地LLM性能方面对ASUS的最佳替代',
+            verdict:
+              'AMD Ryzen AI Max+ 395("Strix Halo")、Radeon 8060S核显(40个RDNA 3.5计算单元)、最高128GB板载LPDDR5X统一内存,NPU最高50 TOPS。该128GB内存池中可配置一部分作为核显可寻址内存,这使其能装下比96GB DDR5的ASUS配置更大的量化模型。起售价约2,199美元。',
+            pros: [
+              '核显(Radeon 8060S)大于两款ASUS机型——本对比中迷你主机的当前GPU性能领先者',
+              '128GB统一内存与NUC 16 Pro最高DDR5档位持平,同时保留了128GB ASUS配置所不具备的旗舰Strix Halo芯片',
+              '存在独立评测(见资料来源)——两款ASUS机型截至2026年9月均无第三方公布的本地LLM基准测试',
+            ],
+            cons: [
+              '没有ASUS式的商用渠道支持或采购路径',
+              '内存为板载,购买后不可升级,与NUC 16 Pro的LPDDR5x配置存在同样限制',
+              '本指南所比较机型中标价最高',
+            ],
+            affiliateLinks: [
+              { label: '查看GMKtec EVO-X2价格 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: '高RAM性价比方面对ASUS的最佳替代',
+            verdict:
+              'AMD Ryzen AI 9 HX 370,最高128GB可升级DDR5 SO-DIMM内存——采用标准可更换模组,而非板载芯片。整机(barebone)起售价约759美元,意味着买家需自行配置RAM与SSD,这会改变与满配ASUS机型的实际价格对比。',
+            pros: [
+              '本对比中达到128GB RAM上限的最经济确认途径',
+              '可升级的DDR5 SO-DIMM内存——不同于GMKtec EVO-X2的板载LPDDR5X或NUC 16 Pro的板载LPDDR5x档位',
+              '以更低起售价达到与NUC 16 Pro DDR5配置相同的128GB上限',
+            ],
+            cons: [
+              '整机起售价不含RAM和存储——与满配ASUS价格对比前需加上这部分成本',
+              '核显小于GMKtec EVO-X2的Radeon 8060S',
+              '没有ASUS式的商用渠道支持或采购路径',
+            ],
+            affiliateLinks: [
+              { label: '查看MINISFORUM AI X1 Pro价格 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: '产品链接,目前没有任何联盟营销关系。价格因地区、经销商和配置差异很大;购买前请核实当前报价。',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -1586,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': '本地AI用ASUS迷你主机：NUC 16 Pro对比ExpertCenter PN55（2026版）',
       'description': '2026年本地AI最佳ASUS迷你主机:NUC 16 Pro对比ExpertCenter PN55,从价格、RAM配置和真实本地LLM容量对比——并说明相对GMKtec EVO-X2、MINISFORUM AI X1 Pro的定位。',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1613,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1666,9 +1986,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Mejor mini PC ASUS para IA local', anchor: 'buying-guide' },
       { label: 'Comparativa de especificaciones y precios', anchor: 'comparison' },
       { label: '¿Qué pueden ejecutar realmente estos equipos?', anchor: 'llm-capacity' },
+      { label: '¿Cuánta RAM necesitas?', anchor: 'ram-tiers' },
       { label: '¿Qué configuración comprar?', anchor: 'configurations' },
       { label: 'Dónde comprar', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec y MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 y MINISFORUM AI X1 Pro en detalle', anchor: 'alternatives-deep-dive' },
       { label: '¿Comprar ASUS o no?', anchor: 'who-should-buy' },
       { label: 'Errores comunes', anchor: 'common-mistakes' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -1779,6 +2101,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'El cálculo de RAM es aritmética de cuantización (parámetros del modelo × bits por peso), no un benchmark — indica qué cabe, no la velocidad de ejecución. Los tokens por segundo reales dependen del ancho de banda de memoria y de cuánta memoria compartida asigna el sistema operativo a la iGPU, cifras que ninguno de los dos equipos ASUS ha publicado de forma independiente a septiembre de 2026.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: '¿Cuánta RAM necesitas para LLM locales?',
+        content:
+          '**Apunta a al menos 64 GB si la IA local es una razón principal de la compra; 16 GB es solo un mínimo para experimentación ligera.** La capacidad de memoria, no la puntuación de benchmark de la CPU, decide qué tamaños de modelo puede cargar un mini PC — el cálculo exacto por tamaño de modelo está en la tabla de arriba.',
+        items: [
+          '**16 GB:** cubre modelos de 3B–7B en cuantización Q4, embeddings básicos y asistentes pequeños. No es una configuración que valga la pena comprar específicamente para IA local — trátala como un mínimo para experimentación ocasional en un equipo comprado por otras razones.',
+          '**32 GB:** un punto de entrada razonable para modelos de 7B–14B, generación aumentada por recuperación (RAG) y asistentes de código de un solo agente. El nivel más bajo que merece la pena comprar deliberadamente para IA local.',
+          '**64 GB:** permite modelos de 14B–32B en Q4 con margen para una base de datos RAG, varios servicios en segundo plano y uso normal de escritorio al mismo tiempo. En ambos equipos ASUS de esta guía, este es el nivel a partir del cual la IA local deja de sentirse limitada.',
+          '**96–128 GB:** necesario para inferencia cómoda de clase 70B en Q4, o para ejecutar varios modelos y servicios a la vez. El NUC 16 Pro solo alcanza este nivel en su configuración DDR5 SO-DIMM, el PN55 tiene un tope de 96 GB, y tanto el GMKtec EVO-X2 como el MINISFORUM AI X1 Pro alcanzan 128 GB — ver los compromisos exactos por SKU de ASUS en "¿Qué configuración comprar?" más abajo.',
+        ],
+        note: 'Estos niveles describen la capacidad de RAM necesaria para cargar un modelo, no la velocidad de inferencia medida. El ancho de banda de memoria y la asignación de memoria a la iGPU, no la capacidad por sí sola, deciden los tokens por segundo — ningún equipo de esta guía tiene un benchmark independiente publicado al respecto a septiembre de 2026.',
+      },
       configurations: {
         id: 'configurations',
         title: '¿Qué configuración comprar?',
@@ -1818,6 +2153,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El NUC 16 Pro de ASUS cierra parte de esa brecha con su configuración de 128 GB DDR5, igualando al EVO-X2 y al AI X1 Pro en límite bruto de RAM — pero lo hace en el nivel inferior Core Ultra 5/7, no en el chip insignia X7/X9, y sigue sin la GPU integrada más grande del EVO-X2. Si tu única pregunta es "¿qué mini PC aloja el modelo más grande con la mejor GPU?", el EVO-X2 sigue respondiéndola de forma más directa que cualquier configuración ASUS.',
         ],
         note: 'Evita ASUS si el rendimiento bruto de GPU para LLM local es tu único criterio de compra — la GPU integrada más grande del GMKtec EVO-X2 supera a cualquier configuración de ambos equipos ASUS en esa métrica específica, aunque la configuración de 128 GB DDR5 del NUC 16 Pro ya iguale su límite solo en RAM.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 y MINISFORUM AI X1 Pro en detalle',
+        content:
+          '**Estos dos equipos son los que hay que comparar directamente con un NUC 16 Pro totalmente configurado si la capacidad de LLM local, y no la marca o la garantía de ASUS, es el factor decisivo.** Ninguno de los dos tiene el soporte de canal empresarial de ASUS — valora ese compromiso frente a las especificaciones de abajo.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'Mejor alternativa de rendimiento LLM local frente a ASUS',
+            verdict:
+              'AMD Ryzen AI Max+ 395 ("Strix Halo"), GPU integrada Radeon 8060S (40 unidades de cómputo RDNA 3.5), hasta 128 GB de memoria unificada LPDDR5X soldada, NPU de hasta 50 TOPS. Una parte configurable de ese conjunto de 128 GB puede asignarse como memoria direccionable por la GPU, lo que permite cargar modelos cuantizados más grandes que en una configuración ASUS de 96 GB DDR5. Precio desde aproximadamente 2.199 $.',
+            pros: [
+              'GPU integrada más grande (Radeon 8060S) que ambos equipos ASUS — el líder actual en GPU entre los mini PC de esta comparativa',
+              'Los 128 GB de memoria unificada igualan el nivel DDR5 superior del NUC 16 Pro y conservan el chip insignia Strix Halo, ausente en la configuración ASUS de 128 GB',
+              'Existen reseñas independientes (ver Fuentes) — a diferencia de ambos equipos ASUS, sin benchmark de LLM local de terceros publicado a septiembre de 2026',
+            ],
+            cons: [
+              'Sin soporte de canal empresarial ni vía de adquisición al estilo ASUS',
+              'La memoria está soldada, no se puede ampliar después de la compra — misma limitación que la configuración LPDDR5x del NUC 16 Pro',
+              'El precio de lista más alto de los equipos comparados en esta guía',
+            ],
+            affiliateLinks: [
+              { label: 'Ver precio del GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'Mejor alternativa de valor con alta RAM frente a ASUS',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, hasta 128 GB de memoria DDR5 SO-DIMM ampliable — módulos estándar e intercambiables en lugar de chips soldados. El precio "barebone" parte de unos 759 $, lo que significa que el comprador aporta su propia RAM y SSD, algo que cambia el precio efectivo frente a un equipo ASUS totalmente configurado.',
+            pros: [
+              'La vía confirmada más barata para llegar a un límite de 128 GB de RAM en esta comparativa',
+              'Memoria DDR5 SO-DIMM ampliable — a diferencia de la LPDDR5X soldada del GMKtec EVO-X2 o el nivel LPDDR5x soldado del NUC 16 Pro',
+              'Alcanza el mismo límite de 128 GB que la configuración DDR5 del NUC 16 Pro a un precio de entrada más bajo',
+            ],
+            cons: [
+              'El precio inicial "barebone" excluye RAM y almacenamiento — suma su coste antes de comparar con un precio ASUS totalmente configurado',
+              'GPU integrada más pequeña que la Radeon 8060S del GMKtec EVO-X2',
+              'Sin soporte de canal empresarial ni vía de adquisición al estilo ASUS',
+            ],
+            affiliateLinks: [
+              { label: 'Ver precio del MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'Enlaces de producto, sin relación de afiliación actual. Los precios varían según la región, el vendedor y la configuración; confirma el precio actual antes de comprar.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -1910,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Mejor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados en precio, configuración de RAM y capacidad real de IA local — más su posición frente a GMKtec EVO-X2 y MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1932,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1985,9 +2369,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Melhor mini PC ASUS para IA local', anchor: 'buying-guide' },
       { label: 'Comparativo de especificações e preços', anchor: 'comparison' },
       { label: 'O que esses equipamentos rodam de verdade?', anchor: 'llm-capacity' },
+      { label: 'Quanta RAM você precisa?', anchor: 'ram-tiers' },
       { label: 'Qual configuração comprar?', anchor: 'configurations' },
       { label: 'Onde comprar', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec e MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 e MINISFORUM AI X1 Pro em detalhe', anchor: 'alternatives-deep-dive' },
       { label: 'Comprar ASUS ou não?', anchor: 'who-should-buy' },
       { label: 'Erros comuns', anchor: 'common-mistakes' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -2098,6 +2484,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'O cálculo de RAM é aritmética de quantização (parâmetros do modelo × bits por peso), não um benchmark — mostra o que cabe, não a velocidade de execução. Os tokens por segundo reais dependem da largura de banda de memória e de quanto do pool compartilhado o sistema operacional aloca para a iGPU, números que nenhum dos dois equipamentos ASUS publicou de forma independente até setembro de 2026.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'Quanta RAM você precisa para LLMs locais?',
+        content:
+          '**Mire pelo menos 64 GB se a IA local for um motivo principal da compra; 16 GB é apenas um mínimo para experimentação leve.** A capacidade de memória, não a pontuação de benchmark da CPU, decide quais tamanhos de modelo um mini PC consegue carregar — o cálculo exato por tamanho de modelo está na tabela acima.',
+        items: [
+          '**16 GB:** cobre modelos de 3B–7B em quantização Q4, embeddings básicos e assistentes pequenos. Não é uma configuração que vale a pena comprar especificamente para IA local — trate como um mínimo para experimentação ocasional em um equipamento comprado por outros motivos.',
+          '**32 GB:** um ponto de entrada razoável para modelos de 7B–14B, geração aumentada por recuperação (RAG) e assistentes de código de agente único. O nível mais baixo que vale a pena comprar deliberadamente para IA local.',
+          '**64 GB:** comporta modelos de 14B–32B em Q4 com folga para um banco de dados RAG, vários serviços em segundo plano e uso normal de desktop ao mesmo tempo. Nos dois equipamentos ASUS deste guia, é a partir deste nível que a IA local deixa de parecer limitada.',
+          '**96–128 GB:** necessário para inferência confortável de classe 70B em Q4, ou para rodar vários modelos e serviços ao mesmo tempo. O NUC 16 Pro só alcança esse nível na configuração DDR5 SO-DIMM, o PN55 tem teto de 96 GB, e tanto o GMKtec EVO-X2 quanto o MINISFORUM AI X1 Pro chegam a 128 GB — veja os trade-offs exatos por SKU da ASUS em "Qual configuração comprar" abaixo.',
+        ],
+        note: 'Esses níveis descrevem a capacidade de RAM necessária para carregar um modelo, não a velocidade de inferência medida. Largura de banda de memória e alocação de memória para a iGPU, não a capacidade isolada, decidem os tokens por segundo — nenhum equipamento deste guia tem benchmark independente publicado sobre isso até setembro de 2026.',
+      },
       configurations: {
         id: 'configurations',
         title: 'Qual configuração comprar?',
@@ -2137,6 +2536,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O NUC 16 Pro da ASUS fecha parte dessa diferença na configuração de 128 GB DDR5, igualando o EVO-X2 e o AI X1 Pro em limite bruto de RAM — mas isso acontece no nível inferior Core Ultra 5/7, não no chip principal X7/X9, e ainda sem a GPU integrada maior do EVO-X2. Se sua única pergunta for "qual mini PC comporta o maior modelo com a melhor GPU", o EVO-X2 continua respondendo de forma mais direta do que qualquer configuração ASUS.',
         ],
         note: 'Evite a ASUS se o throughput bruto de GPU para LLM local for seu único critério de compra — a GPU integrada maior do GMKtec EVO-X2 supera qualquer configuração dos dois equipamentos ASUS exatamente nessa métrica, mesmo com a configuração de 128 GB DDR5 do NUC 16 Pro agora igualando o limite só em RAM.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 e MINISFORUM AI X1 Pro em detalhe',
+        content:
+          '**Esses dois equipamentos são a comparação direta certa contra um NUC 16 Pro totalmente configurado, se a capacidade de LLM local — e não a marca ou a garantia da ASUS — for o fator decisivo.** Nenhum dos dois tem o suporte de canal empresarial da ASUS — pese essa troca contra as especificações abaixo.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'Melhor alternativa de desempenho em LLM local à ASUS',
+            verdict:
+              'AMD Ryzen AI Max+ 395 ("Strix Halo"), GPU integrada Radeon 8060S (40 unidades de computação RDNA 3.5), até 128 GB de memória unificada LPDDR5X soldada, NPU com até 50 TOPS. Uma parte configurável desse pool de 128 GB pode ser alocada como memória endereçável pela GPU, o que permite carregar modelos quantizados maiores do que uma configuração ASUS de 96 GB DDR5. Preço a partir de cerca de US$ 2.199.',
+            pros: [
+              'GPU integrada maior (Radeon 8060S) que os dois equipamentos ASUS — o líder atual em GPU entre mini PCs nesta comparação',
+              'Os 128 GB de memória unificada igualam o nível DDR5 superior do NUC 16 Pro mantendo o chip principal Strix Halo, ausente na configuração ASUS de 128 GB',
+              'Existem análises independentes (veja Fontes) — diferente dos dois equipamentos ASUS, sem benchmark de LLM local de terceiros publicado até setembro de 2026',
+            ],
+            cons: [
+              'Sem suporte de canal empresarial nem via de aquisição no estilo ASUS',
+              'Memória soldada, não expansível após a compra — mesma limitação da configuração LPDDR5x do NUC 16 Pro',
+              'Preço de tabela mais alto entre os equipamentos comparados neste guia',
+            ],
+            affiliateLinks: [
+              { label: 'Ver preço do GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'Melhor alternativa de custo-benefício com RAM alta à ASUS',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, até 128 GB de memória DDR5 SO-DIMM expansível — módulos padrão e substituíveis em vez de chips soldados. O preço "barebone" começa em cerca de US$ 759, ou seja, o comprador fornece a própria RAM e SSD, o que muda o preço efetivo frente a um equipamento ASUS totalmente configurado.',
+            pros: [
+              'Caminho confirmado mais barato para chegar a um teto de 128 GB de RAM nesta comparação',
+              'Memória DDR5 SO-DIMM expansível — diferente da LPDDR5X soldada do GMKtec EVO-X2 ou do nível LPDDR5x soldado do NUC 16 Pro',
+              'Alcança o mesmo teto de 128 GB da configuração DDR5 do NUC 16 Pro a um preço de entrada menor',
+            ],
+            cons: [
+              'Preço inicial "barebone" exclui RAM e armazenamento — some esse custo antes de comparar com um preço ASUS totalmente configurado',
+              'GPU integrada menor que a Radeon 8060S do GMKtec EVO-X2',
+              'Sem suporte de canal empresarial nem via de aquisição no estilo ASUS',
+            ],
+            affiliateLinks: [
+              { label: 'Ver preço do MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'Links de produto, sem relação de afiliação atual. Os preços no Brasil podem variar bastante devido a impostos de importação; confirme o preço atual antes de comprar.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -2229,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Melhor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados em preço, configuração de RAM e capacidade real de IA local — além do posicionamento frente ao GMKtec EVO-X2 e MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2251,7 +2699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -2304,9 +2752,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أفضل كمبيوتر ASUS مصغر للذكاء الاصطناعي المحلي', anchor: 'buying-guide' },
       { label: 'مقارنة المواصفات والأسعار', anchor: 'comparison' },
       { label: 'ما الذي تعمل عليه هذه الأجهزة فعليًا؟', anchor: 'llm-capacity' },
+      { label: 'كم من الذاكرة تحتاج؟', anchor: 'ram-tiers' },
       { label: 'أي إعداد يجب أن تشتري؟', anchor: 'configurations' },
       { label: 'أين تشتري', anchor: 'where-to-buy' },
       { label: 'ASUS مقابل Beelink وGMKtec وMINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2 وMINISFORUM AI X1 Pro بالتفصيل', anchor: 'alternatives-deep-dive' },
       { label: 'هل تشتري ASUS أم لا؟', anchor: 'who-should-buy' },
       { label: 'الأخطاء الشائعة', anchor: 'common-mistakes' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
@@ -2417,6 +2867,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'حساب الذاكرة هو حساب حسابي للتكميم (معاملات النموذج × البتات لكل وزن)، وليس اختبار أداء — فهو يوضح ما يتسع، لا سرعة التشغيل. يعتمد عدد الرموز الفعلي في الثانية على عرض النطاق الترددي للذاكرة وعلى مقدار المجمّع المشترك الذي يخصصه نظام التشغيل لوحدة الرسومات المدمجة، وهي أرقام لم ينشرها أي من جهازي ASUS بشكل مستقل حتى سبتمبر 2026.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: 'كم من الذاكرة تحتاج لتشغيل نماذج LLM المحلية؟',
+        content:
+          '**استهدف 64GB على الأقل إذا كان الذكاء الاصطناعي المحلي سببًا رئيسيًا للشراء؛ اعتبر 16GB مجرد حد أدنى للتجربة الخفيفة.** سعة الذاكرة، وليست درجة اختبار أداء المعالج، هي ما يحدد أحجام النماذج التي يمكن لكمبيوتر مصغر تحميلها — الحساب الدقيق لكل حجم نموذج موجود في الجدول أعلاه.',
+        items: [
+          '**16GB:** يغطي نماذج 3B–7B بتكميم Q4، والتضمينات الأساسية، والمساعدات الصغيرة. ليس إعدادًا يستحق الشراء خصيصًا للذكاء الاصطناعي المحلي — اعتبره حدًا أدنى للتجربة العرضية على جهاز تم شراؤه لأسباب أخرى.',
+          '**32GB:** نقطة بداية معقولة لنماذج 7B–14B، والتوليد المعزز بالاسترجاع (RAG)، ومساعدات البرمجة أحادية الوكيل. أدنى مستوى يستحق الشراء المتعمد للذكاء الاصطناعي المحلي.',
+          '**64GB:** يناسب نماذج 14B–32B بتكميم Q4 مع هامش لقاعدة بيانات RAG وعدة خدمات في الخلفية والاستخدام العادي لسطح المكتب في الوقت نفسه. في كلا جهازي ASUS في هذا الدليل، هذا هو المستوى الذي يتوقف عنده الذكاء الاصطناعي المحلي عن الشعور بالمحدودية.',
+          '**96–128GB:** ضروري للاستدلال المريح من فئة 70B بتكميم Q4، أو لتشغيل عدة نماذج وخدمات في وقت واحد. لا يصل NUC 16 Pro إلى هذا المستوى إلا في إعداد DDR5 SO-DIMM، بينما يتوقف PN55 عند 96GB، ويصل كل من GMKtec EVO-X2 وMINISFORUM AI X1 Pro إلى 128GB — راجع مقايضات طرازات ASUS الدقيقة في "أي إعداد يجب أن تشتري" أدناه.',
+        ],
+        note: 'تصف هذه المستويات سعة الذاكرة اللازمة لتحميل نموذج، وليس سرعة الاستدلال المقاسة فعليًا. عرض النطاق الترددي للذاكرة وتخصيص الذاكرة لوحدة الرسومات المدمجة، وليست السعة وحدها، هما ما يحددان عدد الرموز في الثانية — لا يمتلك أي جهاز في هذا الدليل اختبار أداء مستقلًا منشورًا حول ذلك حتى سبتمبر 2026.',
+      },
       configurations: {
         id: 'configurations',
         title: 'أي إعداد يجب أن تشتري؟',
@@ -2456,6 +2919,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يسدّ NUC 16 Pro من ASUS جزءًا من هذه الفجوة في إعداد 128GB DDR5، ليوازي EVO-X2 وAI X1 Pro في الحد الأقصى الخام للذاكرة — لكن ذلك يحدث على مستوى Core Ultra 5/7 الأدنى، وليس الشريحة الرائدة X7/X9، ولا يزال بدون وحدة الرسومات المدمجة الأكبر في EVO-X2. إذا كان سؤالك الوحيد هو "أي كمبيوتر مصغر يستوعب أكبر نموذج بأفضل وحدة رسومات؟"، فإن EVO-X2 لا يزال يجيب على ذلك بشكل مباشر أكثر من أي إعداد من ASUS.',
         ],
         note: 'تجنّب ASUS إذا كانت إنتاجية وحدة الرسومات الخام للذكاء الاصطناعي المحلي هي معيار الشراء الوحيد لديك — تتفوق وحدة الرسومات المدمجة الأكبر في GMKtec EVO-X2 على أي إعداد من جهازي ASUS في هذا المقياس تحديدًا، حتى لو كان إعداد 128GB DDR5 من NUC 16 Pro يوازي الآن حده في الذاكرة وحدها.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2 وMINISFORUM AI X1 Pro بالتفصيل',
+        content:
+          '**هذان الجهازان هما المقارنة المباشرة الصحيحة مقابل NUC 16 Pro بإعداد كامل، إذا كانت سعة LLM المحلية، لا علامة ASUS التجارية أو ضمانها، هي العامل الحاسم.** لا يتمتع أي منهما بدعم قناة ASUS التجارية — وازن هذه المقايضة مقابل المواصفات أدناه.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'أفضل بديل من حيث أداء LLM المحلي مقارنة بـASUS',
+            verdict:
+              'معالج AMD Ryzen AI Max+ 395 ("Strix Halo")، وحدة رسومات مدمجة Radeon 8060S (40 وحدة حوسبة RDNA 3.5)، حتى 128GB من ذاكرة LPDDR5X الموحدة الملحومة، ووحدة NPU بقدرة تصل إلى 50 TOPS. يمكن تخصيص جزء قابل للتهيئة من مجمّع الـ128GB هذا كذاكرة يمكن لوحدة الرسومات الوصول إليها، وهو ما يتيح تحميل نماذج مكممة أكبر مما تسمح به إعدادات ASUS بذاكرة 96GB DDR5. السعر يبدأ من نحو 2,199 دولارًا.',
+            pros: [
+              'وحدة رسومات مدمجة أكبر (Radeon 8060S) من كلا جهازي ASUS — الرائد الحالي في الرسومات بين أجهزة الكمبيوتر المصغرة في هذه المقارنة',
+              'ذاكرة 128GB الموحدة تضاهي أعلى مستوى DDR5 في NUC 16 Pro مع الاحتفاظ بشريحة Strix Halo الرائدة، وهي غير موجودة في إعداد ASUS بذاكرة 128GB',
+              'توجد مراجعات مستقلة (راجع المصادر) — على عكس جهازي ASUS، اللذين لا يمتلكان اختبار أداء LLM محلي منشورًا من طرف ثالث حتى سبتمبر 2026',
+            ],
+            cons: [
+              'لا يوجد دعم قناة تجارية أو مسار شراء مؤسسي على طراز ASUS',
+              'الذاكرة ملحومة وغير قابلة للترقية بعد الشراء — نفس قيد إعداد LPDDR5x في NUC 16 Pro',
+              'أعلى سعر معلن بين الأجهزة التي تمت مقارنتها في هذا الدليل',
+            ],
+            affiliateLinks: [
+              { label: 'تحقق من سعر GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'أفضل بديل من حيث القيمة مع ذاكرة عالية مقارنة بـASUS',
+            verdict:
+              'معالج AMD Ryzen AI 9 HX 370، حتى 128GB من ذاكرة DDR5 SO-DIMM القابلة للترقية — وحدات قياسية قابلة للاستبدال بدلًا من شرائح ملحومة. يبدأ سعر النسخة "العارية" (barebone) من نحو 759 دولارًا، ما يعني أن المشتري يوفّر ذاكرته وقرص SSD الخاص به، وهو ما يغيّر السعر الفعلي مقارنة بجهاز ASUS بإعداد كامل.',
+            pros: [
+              'أرخص طريق مؤكد للوصول إلى حد 128GB من الذاكرة في هذه المقارنة',
+              'ذاكرة DDR5 SO-DIMM قابلة للترقية — بخلاف LPDDR5X الملحومة في GMKtec EVO-X2 أو مستوى LPDDR5x الملحوم في NUC 16 Pro',
+              'يصل إلى نفس حد 128GB الذي يصل إليه إعداد DDR5 في NUC 16 Pro بسعر بداية أقل',
+            ],
+            cons: [
+              'سعر البداية "العاري" لا يشمل الذاكرة والتخزين — أضف تكلفتهما قبل المقارنة بسعر ASUS بإعداد كامل',
+              'وحدة رسومات مدمجة أصغر من Radeon 8060S في GMKtec EVO-X2',
+              'لا يوجد دعم قناة تجارية أو مسار شراء مؤسسي على طراز ASUS',
+            ],
+            affiliateLinks: [
+              { label: 'تحقق من سعر MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: 'روابط منتجات، ولا توجد علاقة تسويق بالعمولة حاليًا. تتفاوت الأسعار حسب المنطقة والبائع والإعداد؛ تحقق من السعر الحالي قبل الشراء.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -2548,7 +3060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'كمبيوتر ASUS المصغر للذكاء الاصطناعي المحلي: NUC 16 Pro مقابل ExpertCenter PN55 (2026)',
       'description': 'أفضل كمبيوتر ASUS مصغر للذكاء الاصطناعي المحلي 2026: NUC 16 Pro مقابل ExpertCenter PN55، مقارنة من حيث السعر وإعداد الذاكرة والقدرة الفعلية للذكاء الاصطناعي المحلي — مع موقعهما أمام GMKtec EVO-X2 وMINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -2569,7 +3081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-03',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -2622,9 +3134,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '로컬 AI용 최고의 ASUS 미니 PC', anchor: 'buying-guide' },
       { label: '사양 및 가격 비교', anchor: 'comparison' },
       { label: '이 기종들은 실제로 무엇을 돌릴 수 있나', anchor: 'llm-capacity' },
+      { label: 'RAM은 얼마나 필요한가', anchor: 'ram-tiers' },
       { label: '어떤 구성을 사야 할까', anchor: 'configurations' },
       { label: '어디서 사야 할까', anchor: 'where-to-buy' },
       { label: 'ASUS 대 Beelink·GMKtec·MINISFORUM', anchor: 'vs-boutique' },
+      { label: 'GMKtec EVO-X2와 MINISFORUM AI X1 Pro 상세 분석', anchor: 'alternatives-deep-dive' },
       { label: 'ASUS를 사야 할까, 말아야 할까', anchor: 'who-should-buy' },
       { label: '흔한 실수', anchor: 'common-mistakes' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -2735,6 +3249,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'RAM 계산은 양자화 산술(모델 파라미터 수 × 가중치당 비트 수)이며 벤치마크가 아닙니다 — 무엇이 들어가는지를 보여줄 뿐 실행 속도를 보여주지 않습니다. 실제 초당 토큰 수는 메모리 대역폭과 운영체제가 공유 풀 중 얼마를 내장 GPU에 할당하는지에 달려 있으며, 이 수치는 두 ASUS 기종 모두 2026년 9월 기준 독립적으로 공개하지 않았습니다.',
       },
+      ramTiers: {
+        id: 'ram-tiers',
+        title: '로컬 LLM에 RAM이 얼마나 필요한가',
+        content:
+          '**로컬 AI가 구매의 주된 이유라면 최소 64GB를 목표로 하십시오. 16GB는 가벼운 실험용 최소치일 뿐입니다.** 미니 PC가 어떤 모델 크기를 로드할 수 있는지를 결정하는 것은 CPU 벤치마크 점수가 아니라 메모리 용량입니다 — 모델 크기별 정확한 계산은 위 표를 참고하십시오.',
+        items: [
+          '**16GB:** Q4 양자화 기준 3B–7B 모델, 기본 임베딩, 소규모 어시스턴트를 지원합니다. 로컬 AI를 위해 일부러 살 만한 구성은 아니며, 다른 이유로 구입한 기기에서 가끔 실험해보는 최소치로 보십시오.',
+          '**32GB:** 7B–14B 모델, 검색 증강 생성(RAG), 단일 에이전트 코딩 어시스턴트에 적당한 시작점입니다. 로컬 AI를 위해 의도적으로 구매할 가치가 있는 최저 단계입니다.',
+          '**64GB:** RAG 데이터베이스, 여러 백그라운드 서비스, 일반 데스크톱 사용을 동시에 하면서도 Q4 기준 14B–32B 모델을 여유 있게 돌릴 수 있습니다. 이 가이드의 두 ASUS 기종 모두 이 단계부터 로컬 AI가 답답하게 느껴지지 않습니다.',
+          '**96–128GB:** Q4 기준 70B급 추론을 여유 있게 돌리거나 여러 모델·서비스를 동시에 실행하는 데 필요합니다. NUC 16 Pro는 DDR5 SO-DIMM 구성에서만 이 단계에 도달하고, PN55는 96GB가 상한이며, GMKtec EVO-X2와 MINISFORUM AI X1 Pro는 둘 다 128GB에 도달합니다 — ASUS SKU별 정확한 트레이드오프는 아래 "어떤 구성을 사야 할까"를 참고하십시오.',
+        ],
+        note: '이 단계들은 모델을 로드하는 데 필요한 RAM 용량을 설명할 뿐, 실측 추론 속도를 나타내지 않습니다. 초당 토큰 수를 좌우하는 것은 용량 자체가 아니라 메모리 대역폭과 내장 GPU에 대한 메모리 할당이며, 이 가이드의 어떤 기종도 2026년 9월 기준 이에 대한 독립적으로 공개된 벤치마크가 없습니다.',
+      },
       configurations: {
         id: 'configurations',
         title: '어떤 구성을 사야 할까',
@@ -2774,6 +3301,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ASUS의 NUC 16 Pro는 128GB DDR5 구성에서 이 격차의 일부를 메우며 EVO-X2 및 AI X1 Pro와 순수 RAM 상한에서 대등해집니다 — 다만 이는 플래그십 X7/X9가 아닌 하위 Core Ultra 5/7 단계에서이며, EVO-X2의 더 큰 내장 GPU는 여전히 갖추지 못합니다. "어떤 미니 PC가 최고의 GPU로 가장 큰 모델을 담을 수 있는가"가 유일한 질문이라면, EVO-X2가 여전히 어떤 ASUS 구성보다 더 직접적인 답이 됩니다.',
         ],
         note: '로컬 AI의 순수 GPU 처리량이 유일한 구매 기준이라면 ASUS는 피하십시오 — GMKtec EVO-X2의 더 큰 내장 GPU는 이 특정 지표에서 두 ASUS 기종의 어떤 구성보다도 앞서며, NUC 16 Pro의 128GB DDR5 구성이 이제 RAM 자체는 대등해졌다 해도 마찬가지입니다.',
+      },
+      alternativesDeepDive: {
+        id: 'alternatives-deep-dive',
+        title: 'GMKtec EVO-X2와 MINISFORUM AI X1 Pro 상세 분석',
+        content:
+          '**ASUS의 브랜드나 보증이 아니라 로컬 LLM 용량이 결정 요인이라면, 완전 구성된 NUC 16 Pro와 직접 비교해야 할 두 기종이 바로 이들입니다.** 둘 다 ASUS 같은 기업용 지원 채널은 없으므로 아래 사양과 이 트레이드오프를 함께 저울질하십시오.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'GMKtec EVO-X2',
+            tagline: 'ASUS 대비 로컬 LLM 성능 면에서 최선의 대안',
+            verdict:
+              'AMD Ryzen AI Max+ 395("Strix Halo"), Radeon 8060S 내장 GPU(RDNA 3.5 컴퓨트 유닛 40개), 최대 128GB 온보드 LPDDR5X 통합 메모리, 최대 50 TOPS NPU. 이 128GB 풀 중 설정 가능한 일부를 GPU가 접근 가능한 메모리로 할당할 수 있어, 96GB DDR5 ASUS 구성보다 더 큰 양자화 모델을 로드할 수 있습니다. 가격은 약 2,199달러부터입니다.',
+            pros: [
+              '두 ASUS 기종보다 더 큰 내장 GPU(Radeon 8060S) — 이 비교에서 현재 미니 PC 중 GPU 성능 1위',
+              '128GB 통합 메모리로 NUC 16 Pro의 최상위 DDR5 단계와 대등하면서도, 128GB ASUS 구성에는 없는 플래그십 Strix Halo 칩을 유지',
+              '독립 리뷰가 존재함(출처 참고) — 2026년 9월 기준 제3자 로컬 LLM 벤치마크가 공개되지 않은 두 ASUS 기종과 대조적',
+            ],
+            cons: [
+              'ASUS식 기업용 지원 채널이나 조달 경로가 없음',
+              '메모리가 온보드형이라 구매 후 업그레이드 불가 — NUC 16 Pro의 LPDDR5x 구성과 동일한 제약',
+              '이 가이드에서 비교한 기종 중 표시 가격이 가장 높음',
+            ],
+            affiliateLinks: [
+              { label: 'GMKtec EVO-X2 가격 확인 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'MINISFORUM AI X1 Pro',
+            tagline: 'ASUS 대비 고용량 RAM 가성비 면에서 최선의 대안',
+            verdict:
+              'AMD Ryzen AI 9 HX 370, 최대 128GB 업그레이드 가능 DDR5 SO-DIMM 메모리 — 온보드 칩이 아닌 표준 교체형 모듈을 사용합니다. 베어본 가격은 약 759달러부터 시작하며, 이는 구매자가 직접 RAM과 SSD를 준비해야 함을 의미해 완전 구성된 ASUS 기종 대비 실질 가격이 달라집니다.',
+            pros: [
+              '이 비교에서 128GB RAM 상한에 도달하는 가장 저렴한 확인된 경로',
+              '업그레이드 가능한 DDR5 SO-DIMM 메모리 — GMKtec EVO-X2의 온보드 LPDDR5X나 NUC 16 Pro의 온보드 LPDDR5x 단계와 다름',
+              'NUC 16 Pro의 DDR5 구성과 동일한 128GB 상한에 더 낮은 시작 가격으로 도달',
+            ],
+            cons: [
+              '베어본 시작 가격에는 RAM과 스토리지가 포함되지 않음 — 완전 구성된 ASUS 가격과 비교하기 전에 해당 비용을 더해야 함',
+              'GMKtec EVO-X2의 Radeon 8060S보다 작은 내장 GPU',
+              'ASUS식 기업용 지원 채널이나 조달 경로가 없음',
+            ],
+            affiliateLinks: [
+              { label: 'MINISFORUM AI X1 Pro 가격 확인 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+            ],
+          },
+        ],
+        note: '제품 링크이며 현재 제휴 관계는 없습니다. 가격은 지역, 판매처, 구성에 따라 달라집니다. 구매 전 현재 판매가를 확인하십시오.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
@@ -2866,7 +3442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': '로컬 AI용 ASUS 미니 PC: NUC 16 Pro와 ExpertCenter PN55 비교 (2026)',
       'description': '2026년 로컬 AI용 최고의 ASUS 미니 PC: NUC 16 Pro 대 ExpertCenter PN55를 가격, RAM 구성, 실제 로컬 LLM 용량 기준으로 비교 — GMKtec EVO-X2, MINISFORUM AI X1 Pro와의 위치도 함께 설명.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
