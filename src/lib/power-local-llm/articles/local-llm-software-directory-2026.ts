@@ -22,9 +22,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ local-LLM tools across 10 categories — runtimes, desktop apps, web UIs, IDE integrations, terminal tools, RAG, agent frameworks, voice, mobile, image generation. Licences, links & latest versions, updated August 2026. The "what exists" map before you commit to your stack.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Visit Locally Uncensored',
-      tagline: 'Uncensored chat, coding agent, image/video generation, and LoRA training — engineered for stability with unique OS memory handling, fewer crashes, better session continuity, and intelligent thermal monitoring to keep your device reliable.',
+      tagline: 'Uncensored chat, a coding agent, image/video generation, and LoRA training — all in one open-source desktop app (AGPL-3.0), no cloud, no Docker.',
     },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Native macOS/iOS minimal Ollama client', 'License': 'Apache 2.0', 'Stars': '6k'},
           { 'Tool': '[**h2oGPT**](/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Enterprise-feature-heavy desktop and server', 'License': 'Apache 2.0', 'Stars': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Lets local LLM control your computer and execute code', 'License': 'AGPL 3.0', 'Stars': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Chat / code / images / LoRA / thermal-optimized', 'License': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Chat / code / images / video / LoRA, one installer', 'License': 'AGPL-3.0', 'Stars': '1.4k' },
           { 'Tool': '**BoltAI**', 'Link': '[boltai.com](https://boltai.com)', 'Description': 'Native macOS desktop AI client with Ollama support', 'License': 'Proprietary' },
           { 'Tool': '**Draw Things**', 'Link': '[drawthings.ai](https://drawthings.ai)', 'Description': 'Local image generation on macOS and iOS with Stable Diffusion', 'License': 'Free (closed)' },
         ],
@@ -552,9 +552,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ lokale-LLM-Tools in 10 Kategorien — Runtimes, Desktop-Apps, Web-UIs, IDE-Integrationen, Terminal-Tools, RAG, Agent-Frameworks, Sprache, Mobile, Bildgeneration. Lizenzen, Links & aktuelle Versionen, Stand August 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored besuchen',
-      tagline: 'Unzensierte Chat, Coding-Agent, Bild-/Videogenerierung und LoRA-Training — optimiert für Stabilität mit einzigartiger OS-Speicherverwaltung, weniger Abstürze, bessere Sitzungskontinuität und intelligenter Temperaturüberwachung für zuverlässige Performance.',
+      tagline: 'Unzensierter Chat, Coding-Agent, Bild-/Videogenerierung und LoRA-Training — alles in einer quelloffenen Desktop-App (AGPL-3.0), ohne Cloud, ohne Docker.',
     },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Beschreibung': 'Nativer macOS/iOS-Minimal-Client für Ollama', 'Lizenz': 'Apache 2.0', 'Sterne': '6k'},
           { 'Tool': '[**h2oGPT**](/de/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Beschreibung': 'Funktionsreiche Enterprise-Desktop- und Serveranwendung', 'Lizenz': 'Apache 2.0', 'Sterne': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0', 'Sterne': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Beschreibung': 'Chat / Code / Bilder / LoRA / Thermal-optimiert', 'Lizenz': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Beschreibung': 'Chat / Code / Bilder / Video / LoRA, ein Installer', 'Lizenz': 'AGPL-3.0', 'Sterne': '1.4k' },
         ],
         note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ outils LLM locaux en 10 catégories — runtimes, apps bureau, interfaces web, intégrations IDE, outils terminal, RAG, frameworks d\'agents, voix, mobile, génération d\'images. Licences, liens & versions à jour, août 2026. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Visiter Locally Uncensored',
       tagline: 'Chat sans censure, agent de codage, génération d\'images/vidéos et entraînement LoRA — le tout dans une app de bureau',
     },
@@ -1220,9 +1220,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Client Ollama minimal natif macOS/iOS', 'Licence': 'Apache 2.0', 'Étoiles': '6k'},
           { 'Tool': '[**h2oGPT**](/fr/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Application bureau et serveur riche en fonctionnalités enterprise', 'Licence': 'Apache 2.0', 'Étoiles': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0', 'Étoiles': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Chat / Code / Images / LoRA / Optimisé thermique', 'Licence': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Studio de bureau tout-en-un : chat non censuré, agent de code, génération d\'images et de vidéo (FLUX, Wan, HunyuanVideo), et entraînement de LoRA de personnages — un seul installeur, sans Docker ni cloud. Fonctionne comme couche par-dessus Ollama et ComfyUI, avec accès distant depuis un téléphone via QR code. Créé par un développeur indépendant qui se présente sous le nom de David (pseudo GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD)), et qui a lancé le projet après s\'être lassé de jongler entre un terminal Ollama et une douzaine d\'onglets ComfyUI ouverts en parallèle pour chaque tâche — sa description du problème sur [dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda) est devenue le point de départ documenté du projet. Publié sous licence AGPL-3.0 sur [GitHub](https://github.com/PurpleDoubleD/locally-uncensored) (environ 1,4k étoiles), avec des versions quasi hebdomadaires en 2026 (v2.6.7 fin août) et dix-sept cycles de tests manuels par des utilisateurs bêta avant chaque sortie stable, selon les notes de version. Alternative directe à Jan, GPT4All et Open WebUI pour le chat, à ComfyUI pour l\'image/vidéo, et à Backyard AI ou SillyTavern pour le jeu de rôle — la différence est de réunir les quatre dans une seule interface.', 'Licence': 'AGPL-3.0', 'Étoiles': '1.4k' },
         ],
-        note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
+        note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) · Voir aussi le dépôt [Locally Uncensored sur GitHub](https://github.com/PurpleDoubleD/locally-uncensored) et le [guide d\'entraînement de LoRA de personnage](https://locallyuncensored.com/blog/character-lora-training-local.html) publié par ses développeurs.',
         affiliateLinks: [
           {
             url: 'https://msty.app/pricing',
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'ローカルLLMツール160+件を10カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、IDE統合、ターミナルツール、RAG、エージェントフレームワーク、音声、モバイル、画像生成。ライセンス・リンク・最新版付き、2026年8月更新。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored を訪問',
       tagline: '無検閲チャット、コーディングエージェント、画像/動画生成、LoRAトレーニング — すべてデスクトップアプリで',
     },
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '概要': 'ネイティブmacOS/iOS向け最小限のOllamaクライアント', 'ライセンス': 'Apache 2.0', 'スター': '6k'},
           { 'Tool': '[**h2oGPT**](/ja/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '概要': 'エンタープライズ機能が充実したデスクトップ・サーバーアプリ', 'ライセンス': 'Apache 2.0', 'スター': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0', 'スター': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '概要': 'チャット / コード / 画像 / LoRA / 温度最適化', 'ライセンス': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '概要': 'チャット / コード / 画像 / 動画 / LoRA、インストーラー1つで完結', 'ライセンス': 'AGPL-3.0', 'スター': '1.4k' },
         ],
         note: '詳細比較：[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2107,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+款本地LLM工具，10大类别——运行时、桌面应用、Web界面、IDE集成、终端工具、RAG、智能体框架、语音、移动端、图像生成。含许可证、链接与最新版本，2026年8月更新。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: '访问 Locally Uncensored',
       tagline: '无审查聊天、编码助手、图像/视频生成和LoRA训练——一个桌面应用完成所有功能',
     },
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '描述': 'macOS/iOS原生的极简Ollama客户端', '许可证': 'Apache 2.0', '星标': '6k'},
           { 'Tool': '[**h2oGPT**](/zh/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '描述': '企业功能丰富的桌面与服务器方案', '许可证': 'Apache 2.0', '星标': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0', '星标': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '描述': '聊天 / 代码 / 图像 / LoRA / 热优化', '许可证': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '描述': '聊天 / 代码 / 图像 / 视频 / LoRA，单一安装包', '许可证': 'AGPL-3.0', '星标': '1.4k' },
         ],
         note: '深度指南：[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2623,7 +2623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ herramientas LLM local en 10 categorías — runtimes, apps de escritorio, interfaces web, integraciones IDE, herramientas de terminal, RAG, frameworks de agentes, voz, móvil, generación de imágenes. Licencias, enlaces y últimas versiones, agosto de 2026. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Visita Locally Uncensored',
       tagline: 'Chat sin censura, agente de código, generación de imágenes/videos y entrenamiento LoRA — todo en una app de escritorio',
     },
@@ -2767,7 +2767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descripción': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licencia': 'Apache 2.0', 'Estrellas': '6k'},
           { 'Tool': '[**h2oGPT**](/es/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descripción': 'Escritorio y servidor con muchas funciones enterprise', 'Licencia': 'Apache 2.0', 'Estrellas': '12k'},
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descripción': 'Permite que un LLM local controle tu computadora y ejecute código', 'Licencia': 'AGPL 3.0', 'Estrellas': '68.2k'},
-          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descripción': 'Chat / Código / Imágenes / LoRA / Térmico-optimizado', 'Licencia': 'AGPL-3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descripción': 'Chat / Código / Imágenes / Video / LoRA, un solo instalador', 'Licencia': 'AGPL-3.0', 'Estrellas': '1.4k' },
         ],
         note: 'Guía más detallada: [LM Studio vs Jan vs GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3153,7 +3153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ ferramentas LLM local em 10 categorias — runtimes, apps de desktop, interfaces web, integrações IDE, ferramentas de terminal, RAG, frameworks de agentes, voz, mobile, geração de imagens. Licenças, links e versões mais recentes, agosto de 2026. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Visite Locally Uncensored',
       tagline: 'Chat sem censura, agente de codificação, geração de imagens/vídeos e treinamento LoRA — tudo em um aplicativo de desktop',
     },
@@ -3297,7 +3297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descrição': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licença': 'Apache 2.0', 'Estrelas': '6k'},
           { 'Ferramenta': '[**h2oGPT**](/pt/power-local-llm/h2ogpt-review-2026)', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descrição': 'Desktop e servidor com muitos recursos enterprise', 'Licença': 'Apache 2.0', 'Estrelas': '12k'},
           { 'Ferramenta': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descrição': 'Permite que um LLM local controle seu computador e execute código', 'Licença': 'AGPL 3.0', 'Estrelas': '68.2k'},
-          { 'Ferramenta': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descrição': 'Chat / Código / Imagens / LoRA / Térmico-otimizado', 'Licença': 'AGPL-3.0' },
+          { 'Ferramenta': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descrição': 'Chat / Código / Imagens / Vídeo / LoRA, um único instalador', 'Licença': 'AGPL-3.0', 'Estrelas': '1.4k' },
         ],
         note: 'Guia mais detalhado: [LM Studio vs Jan vs GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3683,7 +3683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '160+ أداة للنماذج اللغوية المحلية في 10 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وتكاملات IDE وأدوات الطرفية وRAG وأطر العملاء الذكيين والصوت والمحمول وتوليد الصور. التراخيص والروابط وأحدث الإصدارات، أغسطس 2026. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'زيارة Locally Uncensored',
       tagline: 'دردشة غير مرشحة، وكيل ترميز، وتوليد صور/فيديو وتدريب LoRA — كل شيء في تطبيق سطح المكتب',
     },
@@ -3827,7 +3827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Enchanted**', 'الرابط': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'الوصف': 'عميل Ollama أدنى حجماً أصلي لـmacOS/iOS', 'الترخيص': 'Apache 2.0', 'النجوم': '6k'},
           { 'الأداة': '[**h2oGPT**](/ar/power-local-llm/h2ogpt-review-2026)', 'الرابط': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'الوصف': 'سطح مكتب وخادم مع ميزات مؤسسية كثيرة', 'الترخيص': 'Apache 2.0', 'النجوم': '12k'},
           { 'الأداة': '**Open Interpreter**', 'الرابط': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'الوصف': 'يتيح لنموذج لغوي محلي التحكم في جهازك وتنفيذ الكود', 'الترخيص': 'AGPL 3.0', 'النجوم': '68.2k'},
-          { 'الأداة': '**Locally Uncensored**', 'الرابط': '[locallyuncensored.com](https://locallyuncensored.com)', 'الوصف': 'دردشة / كود / صور / LoRA / مُحسَّن حراري', 'الترخيص': 'AGPL-3.0' },
+          { 'الأداة': '**Locally Uncensored**', 'الرابط': '[locallyuncensored.com](https://locallyuncensored.com)', 'الوصف': 'دردشة / كود / صور / فيديو / LoRA، مُثبِّت واحد', 'الترخيص': 'AGPL-3.0', 'النجوم': '1.4k' },
         ],
         note: 'دليل أكثر تفصيلاً: [LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -4213,7 +4213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '로컬 LLM 도구 160+개를 10개 카테고리로 정리 — 런타임, 데스크톱 앱, 웹 UI, IDE 통합, 터미널 도구, RAG, 에이전트 프레임워크, 음성, 모바일, 이미지 생성. 라이선스·링크·최신 버전 수록, 2026년 8월 업데이트. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
-      url: 'https://lociai.app/',
+      url: 'https://locallyuncensored.com/',
       label: 'Locally Uncensored 방문',
       tagline: '무검열 채팅, 코딩 에이전트, 이미지/비디오 생성, LoRA 학습 — 모든 기능이 데스크톱 앱 하나에',
     },
@@ -4361,7 +4361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Enchanted**', '링크': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '설명': '최소한의 macOS/iOS 네이티브 Ollama 클라이언트', '라이선스': 'Apache 2.0', '스타': '6k'},
           { '도구': '[**h2oGPT**](/ko/power-local-llm/h2ogpt-review-2026)', '링크': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '설명': '많은 엔터프라이즈 기능을 갖춘 데스크톱 및 서버', '라이선스': 'Apache 2.0', '스타': '12k'},
           { '도구': '**Open Interpreter**', '링크': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '설명': '로컬 LLM이 컴퓨터를 제어하고 코드를 실행하도록 허용', '라이선스': 'AGPL 3.0', '스타': '68.2k'},
-          { '도구': '**Locally Uncensored**', '링크': '[locallyuncensored.com](https://locallyuncensored.com)', '설명': '채팅 / 코드 / 이미지 / LoRA / 열최적화', '라이선스': 'AGPL-3.0' },
+          { '도구': '**Locally Uncensored**', '링크': '[locallyuncensored.com](https://locallyuncensored.com)', '설명': '채팅 / 코드 / 이미지 / 비디오 / LoRA, 설치 파일 하나로', '라이선스': 'AGPL-3.0', '스타': '1.4k' },
         ],
         note: '상세 비교 가이드: [LM Studio vs Jan vs GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
