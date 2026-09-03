@@ -250,6 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review-2026) — Nous Research\'s MIT-licensed autonomous agent with persistent memory, a self-improving skill loop, and multi-platform messaging access.',
           '[Do Autonomous Local Agents Actually Work?](/power-local-llm/autonomous-local-agents-actually-work) — a hands-on evaluation of scoped vs. autonomous local agent stacks, including where AutoGPT\'s planning-loop architecture fits.',
+          '[Msty Go Review 2026](/power-local-llm/msty-go-review-2026) — a scoped, sandboxed task-automation agent from the makers of Msty, positioned between a chat client and a fully autonomous agent.',
           '[Continue.dev vs. Cline vs. Aider (Local)](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — scoped, supervised local coding agents as an alternative to unscoped autonomous agents.',
           '[Langflow Review 2026](/power-local-llm/langflow-visual-ai-orchestration-review) — a visual, node-based agent/workflow builder without the Polyform licensing restriction.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',

@@ -112,6 +112,7 @@ import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
 import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
+import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -228,4 +229,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'edge-ai-hardware-for-local-llms':                   a_edge_ai_hardware_for_local_llms,
   'vla-models-robots-local-inference':                 a_vla_models_robots_local_inference,
   'vlm-video-analytics-drones-edge':                   a_vlm_video_analytics_drones_edge,
+  'msty-go-review-2026':                               a_msty_go_review_2026,
 }

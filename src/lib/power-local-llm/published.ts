@@ -180,6 +180,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'edge-ai-hardware-for-local-llms',
   'vla-models-robots-local-inference',
   'vlm-video-analytics-drones-edge',
+  // Msty Go local-first AI task-automation agent review — 2026-09-03
+  'msty-go-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
