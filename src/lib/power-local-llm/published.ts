@@ -146,6 +146,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-llms-customer-support-call-centers-enterprise',
   // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
   'enterprise-chatbot-deployment-helpdesk-hr-bots',
+  // Enterprise/B2B — vector database procurement/deployment — 2026-09-03
+  'enterprise-rag-vector-database-deployment-guide-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

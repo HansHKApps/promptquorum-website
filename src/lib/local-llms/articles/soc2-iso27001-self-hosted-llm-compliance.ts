@@ -315,6 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — check hardware options for a self-hosted, network-segmented inference server',
           '[Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — go deeper on the EU/GDPR cross-border transfer question that sits alongside SOC 2 and ISO 27001 readiness',
           '[Local LLM Licensing Guide for Businesses (2026)](/local-llms/local-llm-commercial-license-guide-business) — the vendor risk section above flags licence review as a control; see the full commercial license breakdown for Llama, Qwen, Mistral, and Gemma',
+          '[Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — apply this SOC 2/ISO 27001 vendor-security framework to a specific procurement decision: evaluating a managed vector database vendor\'s own security posture and DPA before signing',
         ],
       },
       sources: {
@@ -648,6 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enterprise GPU Server Kaufberatung 2026](/de/local-llms/enterprise-gpu-server-buying-guide-2026) — Hardware-Optionen für einen selbst gehosteten, netzwerksegmentierten Inference-Server',
           '[Datenresidenz & souveräne KI: DSGVO-konforme Enterprise-LLM-Bereitstellung](/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — vertiefende Betrachtung der grenzüberschreitenden DSGVO-Übermittlungsfrage neben SOC 2 und ISO 27001',
           '[Lizenzleitfaden für lokale LLMs im Unternehmen (2026)](/de/local-llms/local-llm-commercial-license-guide-business) — die Lizenzprüfung aus dem Abschnitt zum Lieferantenrisiko oben, vertieft für Llama, Qwen, Mistral und Gemma',
+          '[Vektordatenbank für Unternehmen: Self-Hosted vs. Managed Cloud (2026)](/de/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — wenden Sie dieses SOC-2-/ISO-27001-Anbieter-Sicherheitsframework auf eine konkrete Beschaffungsentscheidung an: die Bewertung des Sicherheitsniveaus und DPA eines Managed-Vektordatenbank-Anbieters vor der Unterschrift',
         ],
       },
       sources: {
@@ -969,6 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guide d\'achat serveur GPU entreprise 2026](/fr/local-llms/enterprise-gpu-server-buying-guide-2026) — vérifiez les options matérielles pour un serveur d\'inférence auto-hébergé et segmenté',
           '[Résidence des données et IA souveraine : déploiement de LLM d\'entreprise sous RGPD/UE](/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — approfondissez la question du transfert transfrontalier RGPD aux côtés de SOC 2 et ISO 27001',
           '[Guide des licences LLM locaux pour entreprises (2026)](/fr/local-llms/local-llm-commercial-license-guide-business) — approfondissez la revue de licence mentionnée dans la section risque fournisseur ci-dessus, pour Llama, Qwen, Mistral et Gemma',
+          '[Base de données vectorielle en entreprise : auto-hébergée ou managée (2026)](/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — appliquez ce cadre de sécurité fournisseur SOC 2/ISO 27001 à une décision d\'achat concrète : évaluer la posture de sécurité et le DPA d\'un fournisseur de base de données vectorielle managée avant de signer',
         ],
       },
       sources: {
@@ -1289,6 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[エンタープライズGPUサーバー購入ガイド2026](/ja/local-llms/enterprise-gpu-server-buying-guide-2026) — セルフホストでネットワークセグメント化された推論サーバー向けハードウェア選択肢を確認する',
           '[データレジデンシーと主権AI:EU/GDPR企業向けLLM導入ガイド](/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2・ISO 27001と並ぶGDPR越境移転の論点を深掘りする',
           '[企業向けローカルLLMライセンスガイド(2026)](/ja/local-llms/local-llm-commercial-license-guide-business) — 上記のベンダーリスクの節で触れたライセンス確認を、Llama・Qwen・Mistral・Gemmaについて詳しく解説する',
+          '[エンタープライズRAGベクトルDB導入：セルフホスト vs マネージド(2026)](/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — このSOC 2・ISO 27001ベンダーセキュリティフレームワークを、契約前にマネージドベクトルDBベンダー自身のセキュリティ体制とDPAを評価する具体的な調達判断に適用する',
         ],
       },
       sources: {
@@ -1609,6 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026企业GPU服务器购买指南](/zh/local-llms/enterprise-gpu-server-buying-guide-2026) — 查看用于自托管、网络隔离推理服务器的硬件选项',
           '[数据驻留与主权AI：欧盟/GDPR企业级LLM部署指南](/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 深入了解与SOC 2和ISO 27001并行的GDPR跨境传输问题',
           '[企业本地LLM商用许可证指南(2026)](/zh/local-llms/local-llm-commercial-license-guide-business) — 深入了解上文供应商风险部分提到的许可证审查,涵盖Llama、Qwen、Mistral和Gemma',
+          '[企业级RAG向量数据库部署：自托管 vs 托管云(2026)](/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — 将本文的SOC 2/ISO 27001供应商安全框架应用于一个具体的采购决策：在签约前评估托管向量数据库供应商自身的安全态势和DPA',
         ],
       },
       sources: {
@@ -1929,6 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guía de compra de servidores GPU empresariales 2026](/es/local-llms/enterprise-gpu-server-buying-guide-2026) — revise opciones de hardware para un servidor de inferencia autoalojado y segmentado en red',
           '[Residencia de datos e IA soberana: despliegue empresarial de LLM bajo RGPD/UE](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — profundice en la cuestión de transferencia transfronteriza del RGPD junto a SOC 2 e ISO 27001',
           '[Guía de licencias de LLM locales para empresas (2026)](/es/local-llms/local-llm-commercial-license-guide-business) — profundice en la revisión de licencia mencionada en la sección de riesgo de proveedor, para Llama, Qwen, Mistral y Gemma',
+          '[Base de Datos Vectorial para Empresas: ¿Autoalojada o Gestionada? (2026)](/es/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — aplique este marco de seguridad de proveedores SOC 2/ISO 27001 a una decisión de compra concreta: evaluar la postura de seguridad y el DPA de un proveedor de base de datos vectorial gestionada antes de firmar',
         ],
       },
       sources: {
@@ -2249,6 +2255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Guia de compra de servidor GPU corporativo 2026](/pt/local-llms/enterprise-gpu-server-buying-guide-2026) — verifique opções de hardware para um servidor de inferência auto-hospedado e segmentado na rede',
           '[Residência de dados e IA soberana: implantação empresarial de LLM sob GDPR/UE](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — aprofunde-se na questão de transferência transfronteiriça do GDPR ao lado de SOC 2 e ISO 27001',
           '[Guia de licenças de LLM locais para empresas (2026)](/pt/local-llms/local-llm-commercial-license-guide-business) — aprofunde a revisão de licença mencionada na seção de risco de fornecedor acima, para Llama, Qwen, Mistral e Gemma',
+          '[Banco de Dados Vetorial para Empresas: Self-Hosted ou Gerenciado? (2026)](/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — aplique este framework de segurança de fornecedores SOC 2/ISO 27001 a uma decisão de compra concreta: avaliar a postura de segurança e o DPA de um fornecedor de banco de dados vetorial gerenciado antes de assinar',
         ],
       },
       sources: {
@@ -2569,6 +2576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[دليل شراء خادم GPU للمؤسسات لعام 2026](/ar/local-llms/enterprise-gpu-server-buying-guide-2026) — تحقق من خيارات الأجهزة لخادم استدلال مستضاف ذاتيًا ومجزّأ الشبكة',
           '[إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — تعمّق في مسألة النقل العابر للحدود وفق اللائحة العامة إلى جانب SOC 2 وISO 27001',
           '[دليل تراخيص نماذج اللغة المحلية للشركات (2026)](/ar/local-llms/local-llm-commercial-license-guide-business) — تعمّق في مراجعة الترخيص المذكورة في قسم مخاطر المورد أعلاه، بالنسبة لـLlama وQwen وMistral وGemma',
+          '[نشر قاعدة بيانات المتجهات للمؤسسات: استضافة ذاتية أم مُدارة؟ (2026)](/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — طبّق إطار أمان الموردين هذا الخاص بـSOC 2/ISO 27001 على قرار شراء ملموس: تقييم الوضع الأمني واتفاقية معالجة البيانات لدى مزوّد قاعدة بيانات متجهات مُدارة قبل التوقيع',
         ],
       },
       sources: {
@@ -2889,6 +2897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 엔터프라이즈 GPU 서버 구매 가이드](/ko/local-llms/enterprise-gpu-server-buying-guide-2026) — 셀프호스팅되고 네트워크가 분리된 추론 서버를 위한 하드웨어 옵션 확인',
           '[데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포 가이드](/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2·ISO 27001과 나란히 GDPR 국경 간 이전 문제를 더 깊이 살펴보기',
           '[기업용 로컬 LLM 라이선스 가이드(2026)](/ko/local-llms/local-llm-commercial-license-guide-business) — 위 공급업체 위험 절에서 언급한 라이선스 검토를 Llama·Qwen·Mistral·Gemma에 대해 자세히 다룸',
+          '[기업용 RAG 벡터 데이터베이스 배포: 자체 호스팅 vs 매니지드(2026)](/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — 이 SOC 2/ISO 27001 벤더 보안 프레임워크를 구체적인 조달 결정에 적용: 계약 전 매니지드 벡터 데이터베이스 벤더 자체의 보안 태세와 DPA 평가',
         ],
       },
       sources: {

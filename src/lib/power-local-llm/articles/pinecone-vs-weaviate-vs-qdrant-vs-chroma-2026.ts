@@ -386,6 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG Explained](/prompt-engineering/rag-explained) — what retrieval-augmented generation is and why it needs a vector database in the first place',
           '[Prompt Engineering vs RAG](/prompt-engineering/prompt-engineering-vs-rag-decision) — when better prompts are enough and when you actually need retrieval',
           '[Best RAG Tools for Business Documents (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026) — higher-level RAG tooling that sits on top of a vector database like the ones compared here',
+          '[Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — for teams evaluating these products at enterprise scale: multi-tenant isolation, SLA/security procurement, and Milvus/Zilliz Cloud for billion-vector collections',
         ],
       },
       sources: {
@@ -772,6 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG erklärt](/de/prompt-engineering/rag-explained) — was Retrieval-Augmented Generation ist und warum es eine Vektordatenbank braucht',
           '[Prompt Engineering vs RAG](/de/prompt-engineering/prompt-engineering-vs-rag-decision) — wann bessere Prompts reichen und wann Sie wirklich Retrieval brauchen',
           '[Beste RAG-Tools für Geschäftsdokumente (2026)](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — höherstufige RAG-Tools, die auf einer Vektordatenbank wie den hier verglichenen aufbauen',
+          '[Vektordatenbank für Unternehmen: Self-Hosted vs. Managed Cloud (2026)](/de/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — für Teams, die diese Produkte im Enterprise-Maßstab bewerten: Mandantentrennung, SLA-/Sicherheitsbeschaffung und Milvus/Zilliz Cloud für Milliarden-Vektor-Sammlungen',
         ],
       },
       sources: {
@@ -1125,6 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Le RAG expliqué](/fr/prompt-engineering/rag-explained) — ce qu\'est le retrieval-augmented generation et pourquoi il nécessite une base de données vectorielle',
           '[Prompt engineering vs RAG](/fr/prompt-engineering/prompt-engineering-vs-rag-decision) — quand de meilleurs prompts suffisent et quand vous avez réellement besoin de retrieval',
           '[Meilleurs outils RAG pour documents d\'entreprise (2026)](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — des outils RAG de plus haut niveau qui reposent sur une base de données vectorielle comme celles comparées ici',
+          '[Base de données vectorielle en entreprise : auto-hébergée ou managée (2026)](/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — pour les équipes évaluant ces produits à l\'échelle entreprise : isolation multi-tenant, achat de SLA/sécurité, et Milvus/Zilliz Cloud pour les collections de milliards de vecteurs',
         ],
       },
       sources: {
@@ -1478,6 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG explicado](/es/prompt-engineering/rag-explained) — qué es retrieval-augmented generation y por qué necesita una base de datos vectorial',
           '[Prompt engineering vs RAG](/es/prompt-engineering/prompt-engineering-vs-rag-decision) — cuándo bastan mejores prompts y cuándo realmente necesitas retrieval',
           '[Mejores herramientas RAG para documentos empresariales (2026)](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — herramientas RAG de más alto nivel que se apoyan en una base de datos vectorial como las comparadas aquí',
+          '[Base de Datos Vectorial para Empresas: ¿Autoalojada o Gestionada? (2026)](/es/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — para equipos que evalúan estos productos a escala empresarial: aislamiento multiinquilino, compra de SLA/seguridad, y Milvus/Zilliz Cloud para colecciones de miles de millones de vectores',
         ],
       },
       sources: {
@@ -1831,6 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAGの解説](/ja/prompt-engineering/rag-explained) — retrieval-augmented generationとは何か、なぜベクトルデータベースが必要なのか',
           '[プロンプトエンジニアリング vs RAG](/ja/prompt-engineering/prompt-engineering-vs-rag-decision) — より良いプロンプトで十分な場合と、本当にretrievalが必要な場合',
           '[ビジネス文書向け最良のRAGツール（2026年）](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — ここで比較したようなベクトルデータベースの上に構築される、より高レベルなRAGツール',
+          '[エンタープライズRAGベクトルDB導入：セルフホスト vs マネージド(2026)](/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — これらの製品をエンタープライズ規模で評価するチーム向け：マルチテナント分離、SLA/セキュリティ調達、数十億ベクトル向けのMilvus/Zilliz Cloud',
         ],
       },
       sources: {
@@ -2184,6 +2189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG详解](/zh/prompt-engineering/rag-explained) — 什么是检索增强生成，以及为什么它需要向量数据库',
           '[提示工程 vs RAG](/zh/prompt-engineering/prompt-engineering-vs-rag-decision) — 什么时候更好的提示就够了，什么时候真正需要检索',
           '[面向企业文档的最佳RAG工具（2026）](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 建立在本文所比较的向量数据库之上的更高层级RAG工具',
+          '[企业级RAG向量数据库部署：自托管 vs 托管云(2026)](/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — 面向在企业规模上评估这些产品的团队：多租户隔离、SLA/安全采购，以及面向数十亿向量的Milvus/Zilliz Cloud',
         ],
       },
       sources: {
@@ -2515,6 +2521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG explicado](/pt/prompt-engineering/rag-explained) — o que é retrieval-augmented generation e por que ele precisa de um banco de dados vetorial',
           '[Prompt engineering vs RAG](/pt/prompt-engineering/prompt-engineering-vs-rag-decision) — quando prompts melhores bastam e quando você realmente precisa de retrieval',
           '[Melhores ferramentas RAG para documentos empresariais (2026)](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — ferramentas RAG de nível mais alto que se apoiam em um banco de dados vetorial como os comparados aqui',
+          '[Banco de Dados Vetorial para Empresas: Self-Hosted ou Gerenciado? (2026)](/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — para equipes avaliando esses produtos em escala empresarial: isolamento multi-tenant, compra de SLA/segurança, e Milvus/Zilliz Cloud para coleções de bilhões de vetores',
         ],
       },
       sources: {
@@ -2844,6 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[شرح RAG](/ar/prompt-engineering/rag-explained) — ما هو retrieval-augmented generation ولماذا يحتاج إلى قاعدة بيانات متجهية',
           '[هندسة الأوامر مقابل RAG](/ar/prompt-engineering/prompt-engineering-vs-rag-decision) — متى تكفي أوامر أفضل ومتى تحتاج فعلياً إلى الاسترجاع',
           '[أفضل أدوات RAG لمستندات الأعمال (2026)](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — أدوات RAG ذات مستوى أعلى تعتمد على قاعدة بيانات متجهية مثل تلك المقارنة هنا',
+          '[نشر قاعدة بيانات المتجهات للمؤسسات: استضافة ذاتية أم مُدارة؟ (2026)](/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — للفرق التي تقيّم هذه المنتجات على نطاق المؤسسات: العزل متعدد المستأجرين، شراء اتفاقيات مستوى الخدمة والأمان، وMilvus/Zilliz Cloud لمجموعات مليارات المتجهات',
         ],
       },
       sources: {
@@ -3173,6 +3181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RAG 설명](/ko/prompt-engineering/rag-explained) — retrieval-augmented generation이 무엇이며 왜 벡터 데이터베이스가 필요한지',
           '[프롬프트 엔지니어링 vs RAG](/ko/prompt-engineering/prompt-engineering-vs-rag-decision) — 더 나은 프롬프트로 충분한 경우와 실제로 검색이 필요한 경우',
           '[비즈니스 문서를 위한 최고의 RAG 도구(2026)](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 여기서 비교한 벡터 데이터베이스 위에 구축되는 더 상위 수준의 RAG 도구',
+          '[기업용 RAG 벡터 데이터베이스 배포: 자체 호스팅 vs 매니지드(2026)](/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — 이 제품들을 기업 규모에서 평가하는 팀을 위해: 멀티테넌트 격리, SLA/보안 조달, 수십억 벡터를 위한 Milvus/Zilliz Cloud',
         ],
       },
       sources: {

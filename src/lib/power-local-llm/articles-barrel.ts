@@ -85,6 +85,7 @@ import { article as a_deepseek_vs_qwen_coding_local_2026 } from './articles/deep
 import { article as a_best_workstation_build_local_ai_2026 } from './articles/best-workstation-build-local-ai-2026'
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
 import { article as a_best_rag_tools_for_business_documents_2026 } from './articles/best-rag-tools-for-business-documents-2026'
+import { article as a_enterprise_rag_vector_database_deployment_guide_2026 } from './articles/enterprise-rag-vector-database-deployment-guide-2026'
 import { article as a_wechat_bot_local_llm_personal_assistant_2026 } from './articles/wechat-bot-local-llm-personal-assistant-2026'
 import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
 import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
@@ -166,6 +167,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-workstation-build-local-ai-2026':              a_best_workstation_build_local_ai_2026,
   'best-local-llm-ide-plugins-2026':                   a_best_local_llm_ide_plugins_2026,
   'best-rag-tools-for-business-documents-2026':        a_best_rag_tools_for_business_documents_2026,
+  'enterprise-rag-vector-database-deployment-guide-2026': a_enterprise_rag_vector_database_deployment_guide_2026,
   'wechat-bot-local-llm-personal-assistant-2026':      a_wechat_bot_local_llm_personal_assistant_2026,
   // China Sprint 2026-05-26
   'deepseek-vs-qwen-local-comparison-2026':            a_deepseek_vs_qwen_local_comparison_2026,

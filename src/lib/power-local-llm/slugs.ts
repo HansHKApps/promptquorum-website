@@ -87,6 +87,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-workstation-build-local-ai-2026':        'best-workstation-build-local-ai-2026',
   'best-local-llm-ide-plugins-2026':             'best-local-llm-ide-plugins-2026',
   'best-rag-tools-for-business-documents-2026':  'best-rag-tools-for-business-documents-2026',
+  'enterprise-rag-vector-database-deployment-guide-2026': 'enterprise-rag-vector-database-deployment-guide-2026',
   'wechat-bot-local-llm-personal-assistant-2026': 'wechat-bot-local-llm-personal-assistant-2026',
   'local-ai-behind-firewall-offline-2026':        'local-ai-behind-firewall-offline-2026',
   'wechat-local-llm-integration-2026':            'wechat-local-llm-integration-2026',
