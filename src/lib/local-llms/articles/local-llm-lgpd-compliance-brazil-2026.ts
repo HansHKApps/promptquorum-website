@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'Sources',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). Preliminary study on generative AI — referenced via Future of Privacy Forum analysis, fpf.org',
           'Brazil. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). Official text — planalto.gov.br',
         ],
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'Fontes',
         items: [
-          'FGV Direito Rio, Centro de Tecnologia e Sociedade. "Estudo avalia como plataformas de IA generativa cumprem obrigações legais no tratamento de dados pessoais." Projeto Governança de Plataformas e Regulação de Dados — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Centro de Tecnologia e Sociedade. "Estudo avalia como plataformas de IA generativa cumprem obrigações legais no tratamento de dados pessoais." Projeto Governança de Plataformas e Regulação de Dados — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). Estudo preliminar sobre IA generativa — referenciado via análise do Future of Privacy Forum, fpf.org',
           'Brasil. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). Texto oficial — planalto.gov.br',
         ],
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'Quellen',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). Vorläufige Studie zu generativer KI — referenziert über die Analyse des Future of Privacy Forum, fpf.org',
           'Brasilien. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). Offizieller Text — planalto.gov.br',
         ],
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'Fuentes',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). Estudio preliminar sobre IA generativa — referenciado vía análisis del Future of Privacy Forum, fpf.org',
           'Brasil. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). Texto oficial — planalto.gov.br',
         ],
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'Sources',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). Étude préliminaire sur l\'IA générative — référencée via l\'analyse du Future of Privacy Forum, fpf.org',
           'Brésil. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). Texte officiel — planalto.gov.br',
         ],
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: '出典',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD（Autoridade Nacional de Proteção de Dados）。生成AIに関する予備調査 — Future of Privacy Forumの分析を通じて参照、fpf.org',
           'ブラジル。Lei nº 13.709/2018（Lei Geral de Proteção de Dados Pessoais — LGPD）。公式テキスト — planalto.gov.br',
         ],
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: '来源',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD（Autoridade Nacional de Proteção de Dados）。关于生成式 AI 的初步研究 — 经由 Future of Privacy Forum 的分析引用，fpf.org',
           '巴西。Lei nº 13.709/2018（Lei Geral de Proteção de Dados Pessoais — LGPD）。官方文本 — planalto.gov.br',
         ],
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: 'المصادر',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD (Autoridade Nacional de Proteção de Dados). دراسة أولية حول الذكاء الاصطناعي التوليدي — مُشار إليها عبر تحليل Future of Privacy Forum، fpf.org',
           'البرازيل. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). النص الرسمي — planalto.gov.br',
         ],
@@ -1793,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sources: {
         title: '출처',
         items: [
-          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal',
+          'FGV Direito Rio, Center for Technology and Society. "Study assesses how generative AI platforms fulfill legal obligations in the processing of personal data." Platform Governance and Data Regulations project — [portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal](https://portal.fgv.br/en/noticias/study-assesses-how-generative-ai-platforms-fulfill-legal-obligations-processing-personal)',
           'ANPD(Autoridade Nacional de Proteção de Dados). 생성형 AI에 관한 예비 연구 — Future of Privacy Forum 분석을 통해 참조, fpf.org',
           '브라질. Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD). 공식 텍스트 — planalto.gov.br',
         ],

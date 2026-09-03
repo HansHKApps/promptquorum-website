@@ -164,9 +164,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'sources': {
           title: 'Sources',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 -- HumanEval and code completion benchmarks for Qwen3-Coder at all size tiers.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- Official specifications and code understanding benchmarks for Llama 3.3 70B.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- Chain-of-thought architecture and reasoning benchmark data for DeepSeek-R1.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- HumanEval and code completion benchmarks for Qwen3-Coder at all size tiers.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- Official specifications and code understanding benchmarks for Llama 3.3 70B.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Chain-of-thought architecture and reasoning benchmark data for DeepSeek-R1.',
           ],
         },
       },
@@ -381,9 +381,9 @@ schema: {
         'sources': {
           title: 'Fuentes',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 -- Benchmarks de HumanEval y code completion para Qwen3-Coder en todos los niveles de tamaño.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- Especificaciones oficiales y benchmarks de comprensión de código para Llama 3.3 70B.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- Arquitectura chain-of-thought y datos de benchmarks de razonamiento para DeepSeek-R1.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- Benchmarks de HumanEval y code completion para Qwen3-Coder en todos los niveles de tamaño.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- Especificaciones oficiales y benchmarks de comprensión de código para Llama 3.3 70B.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitectura chain-of-thought y datos de benchmarks de razonamiento para DeepSeek-R1.',
           ],
         },
       },
@@ -598,9 +598,9 @@ schema: {
         'sources': {
           title: 'المصادر',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 -- اختبارات HumanEval وإكمال الكود لـ Qwen3-Coder عبر جميع مستويات الحجم.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- المواصفات الرسمية واختبارات فهم الكود لـ Llama 3.3 70B.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- بنية سلسلة التفكير وبيانات اختبارات الاستدلال لـ DeepSeek-R1.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- اختبارات HumanEval وإكمال الكود لـ Qwen3-Coder عبر جميع مستويات الحجم.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- المواصفات الرسمية واختبارات فهم الكود لـ Llama 3.3 70B.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- بنية سلسلة التفكير وبيانات اختبارات الاستدلال لـ DeepSeek-R1.',
           ],
         },
       },
@@ -814,9 +814,9 @@ schema: {
         'sources': {
           title: 'Quellen',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 -- HumanEval- und Code-Completion-Benchmarks für Qwen3-Coder bei allen Größen-Stufen.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- Offizielle Spezifikationen und Code-Verständnis-Benchmarks für Llama 3.3 70B.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- Chain-of-Thought-Architektur und Reasoning-Benchmark-Daten für DeepSeek-R1.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- HumanEval- und Code-Completion-Benchmarks für Qwen3-Coder bei allen Größen-Stufen.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- Offizielle Spezifikationen und Code-Verständnis-Benchmarks für Llama 3.3 70B.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Chain-of-Thought-Architektur und Reasoning-Benchmark-Daten für DeepSeek-R1.',
           ],
         },
       },
@@ -1039,9 +1039,9 @@ schema: {
         'sources': {
           title: "Sources",
           items: [
-            "**Qwen Team. (2025).** \"Rapport technique Qwen3-Coder.\" https://arxiv.org/abs/2409.12186 -- benchmarks HumanEval code completion Qwen3-Coder tous tiers taille.",
-            "**Meta AI. (2025).** \"Fiche modèle Llama 3.3.\" https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- spécifications officielles benchmarks compréhension code.",
-            "**DeepSeek AI. (2025).** \"Article technique DeepSeek-R1.\" https://arxiv.org/abs/2501.12948 -- architecture chaîne pensée données benchmark raisonnement.",
+            "**Qwen Team. (2025).** \"Rapport technique Qwen3-Coder.\" [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- benchmarks HumanEval code completion Qwen3-Coder tous tiers taille.",
+            "**Meta AI. (2025).** \"Fiche modèle Llama 3.3.\" [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- spécifications officielles benchmarks compréhension code.",
+            "**DeepSeek AI. (2025).** \"Article technique DeepSeek-R1.\" [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- architecture chaîne pensée données benchmark raisonnement.",
           ],
         },
       },
@@ -1322,9 +1322,9 @@ schema: {
         'sources': {
           title: 'Fontes',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 -- Benchmarks de HumanEval e code completion para o Qwen3-Coder em todos os níveis de tamanho.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct -- Especificações oficiais e benchmarks de compreensão de código para o Llama 3.3 70B.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- Arquitetura chain-of-thought e dados de benchmarks de raciocínio para o DeepSeek-R1.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) -- Benchmarks de HumanEval e code completion para o Qwen3-Coder em todos os níveis de tamanho.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) -- Especificações oficiais e benchmarks de compreensão de código para o Llama 3.3 70B.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitetura chain-of-thought e dados de benchmarks de raciocínio para o DeepSeek-R1.',
           ],
         },
       },
@@ -1553,9 +1553,9 @@ schema: {
         'sources': {
           title: '출처',
           items: [
-            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." https://arxiv.org/abs/2409.12186 — 모든 크기 티어에서의 Qwen3-Coder HumanEval 및 코드 완성 벤치마크.',
-            '**Meta AI. (2025).** "Llama 3.3 Model Card." https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct — Llama 3.3 70B의 공식 사양 및 코드 이해 벤치마크.',
-            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 — DeepSeek-R1의 chain-of-thought 아키텍처 및 추론 벤치마크 데이터.',
+            '**Qwen Team. (2025).** "Qwen3-Coder Technical Report." [arxiv.org/abs/2409.12186](https://arxiv.org/abs/2409.12186) — 모든 크기 티어에서의 Qwen3-Coder HumanEval 및 코드 완성 벤치마크.',
+            '**Meta AI. (2025).** "Llama 3.3 Model Card." [huggingface.co/meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — Llama 3.3 70B의 공식 사양 및 코드 이해 벤치마크.',
+            '**DeepSeek AI. (2025).** "DeepSeek-R1 Technical Paper." [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) — DeepSeek-R1의 chain-of-thought 아키텍처 및 추론 벤치마크 데이터.',
           ],
         },
       },

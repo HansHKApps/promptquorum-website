@@ -4392,9 +4392,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '기업 민감 문서를 위한 로컬 RAG', item: 'https://www.promptquorum.com/ko/power-local-llm/local-rag-for-private-business-data' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '기업 민감 문서를 위한 로컬 RAG', item: '[www.promptquorum.com/ko/power-local-llm/local-rag-for-private-business-data](https://www.promptquorum.com/ko/power-local-llm/local-rag-for-private-business-data)' },
       ],
     },
     current_models_mentioned: [],

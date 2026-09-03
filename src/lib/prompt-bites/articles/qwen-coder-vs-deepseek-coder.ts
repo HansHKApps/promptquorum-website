@@ -776,8 +776,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/qwen-coder-vs-deepseek-coder',
-      imageUrl: 'https://www.promptquorum.com/api/og/qwen-coder-vs-deepseek-coder?lang=ko',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/qwen-coder-vs-deepseek-coder](https://www.promptquorum.com/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
+      imageUrl: '[www.promptquorum.com/api/og/qwen-coder-vs-deepseek-coder?lang=ko](https://www.promptquorum.com/api/og/qwen-coder-vs-deepseek-coder?lang=ko)',
     },
     breadcrumbSchema: {
       items: [

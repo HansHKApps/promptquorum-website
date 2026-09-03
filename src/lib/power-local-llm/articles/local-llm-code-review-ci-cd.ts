@@ -1202,7 +1202,7 @@ jobs:
         content:
           '**2026年8月の本番環境推奨セットアップはOllama + Qwen3-Coder 30Bです。** これは柔軟性、オープンソース許可、推論速度、そしてチームサイズ別の経済学のバランスが最も良いです。',
         items: [
-          '**Ollama：** サーバー推論フレームワーク。モデルローディング、量子化、バッチ処理を管理します。セットアップが簡単で、ドキュメント化が良く、GPUメモリ効率が適切です。https://github.com/ollama/ollama',
+          '**Ollama：** サーバー推論フレームワーク。モデルローディング、量子化、バッチ処理を管理します。セットアップが簡単で、ドキュメント化が良く、GPUメモリ効率が適切です。[github.com/ollama/ollama](https://github.com/ollama/ollama)',
           '**Qwen3-Coder 30B：** Alibaba Qwen チームのコーディング専門モデル。Apache 2.0（許可付き）。文脈長256K。一般的なコード品質、エラー検出、およびセキュリティについては、DeepSeek Coder V3に比べて比肩します。HuggingFaceで入手可能。',
           '**カスタムGitHub Action（JavaScript）：** PR diffをフェッチし、Ollama HTTPエンドポイントにPOST、JSON応答を解析し、インラインコメントをポストします。100～200行。ユーザーとの依存関係なし。',
           '**セルフホスト型GitHub ActionsランナーまたはプライベートCI実行者：** ランナーまたはOllamaサーバーへの到達可能性（同じVPC、Tailscale、またはproxy）が必要です。クラウドランナーは機能しません。',
@@ -3432,9 +3432,9 @@ jobs:
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰', item: '[www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd](https://www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd)' },
       ],
     },
   },

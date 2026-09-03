@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      '@id': 'https://www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm',
+      '@id': '[www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm](https://www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm)',
       'url': 'https://www.promptquorum.com/es/local-llms/best-ai-coding-assistant-local-llm',
       'headline': 'Mejor asistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
       'description': 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody—verificado junio 2026.',
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      '@id': 'https://www.promptquorum.com/ar/local-llms/best-ai-coding-assistant-local-llm',
+      '@id': '[www.promptquorum.com/ar/local-llms/best-ai-coding-assistant-local-llm](https://www.promptquorum.com/ar/local-llms/best-ai-coding-assistant-local-llm)',
       'url': 'https://www.promptquorum.com/ar/local-llms/best-ai-coding-assistant-local-llm',
       'headline': 'أفضل مساعد كود بالذكاء الاصطناعي لـ LLM المحلي 2026: Cursor مقابل Continue.dev مقابل Cody',
       'description': 'قارن 5 مساعدي كود بالذكاء الاصطناعي بدعم LLM محلي أصلي: Ollama، LM Studio، الخصوصية، الأسعار. Cursor مقابل Continue.dev مقابل Cody — متحقَّق منه يونيو 2026.',
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      '@id': 'https://www.promptquorum.com/zh/local-llms/best-ai-coding-assistant-local-llm',
+      '@id': '[www.promptquorum.com/zh/local-llms/best-ai-coding-assistant-local-llm](https://www.promptquorum.com/zh/local-llms/best-ai-coding-assistant-local-llm)',
       'url': 'https://www.promptquorum.com/zh/local-llms/best-ai-coding-assistant-local-llm',
       'headline': '5款最佳本地LLM编程助手对比 2026',
       'description': '对比5款支持本地LLM的编程助手。Continue.dev、Cursor、Cody、Tabnine——按隐私、成本、功能选择最佳工具。',
@@ -2920,7 +2920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      '@id': 'https://www.promptquorum.com/ko/local-llms/best-ai-coding-assistant-local-llm',
+      '@id': '[www.promptquorum.com/ko/local-llms/best-ai-coding-assistant-local-llm](https://www.promptquorum.com/ko/local-llms/best-ai-coding-assistant-local-llm)',
       'url': 'https://www.promptquorum.com/ko/local-llms/best-ai-coding-assistant-local-llm',
       'headline': '로컬 LLM용 최고의 AI 코딩 어시스턴트 2026: Cursor vs Continue.dev vs Cody 비교',
       'description': '네이티브 로컬 LLM 지원 AI 코딩 어시스턴트 5종 비교: Ollama, LM Studio, 가격, 프라이버시. Cursor vs Continue.dev vs Cody — 2026년 6월 검증.',

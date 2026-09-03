@@ -1012,9 +1012,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: 'ChatGPT Plus 최고의 오픈소스 대안 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: 'ChatGPT Plus 최고의 오픈소스 대안 2026', item: '[www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus](https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus)' },
       ],
     },
     schema: { '@type': 'TechArticle', headline: 'ChatGPT Plus 최고의 오픈소스 대안 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'ko' },

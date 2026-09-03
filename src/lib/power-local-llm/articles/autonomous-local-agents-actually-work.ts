@@ -1847,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'ローカルAIエージェント6スタック（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT）の正直なテスト。実務タスク5種類で実施。2つは確実に機能、3つは意外に失敗、1つは使用不可能。評決が名明確です。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'ja',
-      image: 'https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png',
+      image: '[www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png](https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png)',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       author: {
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '6个本地AI代理框架的诚实测试（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT），针对5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'zh',
-      image: 'https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png',
+      image: '[www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png](https://www.promptquorum.com/og-images/autonomous-local-agents-actually-work.png)',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       author: {

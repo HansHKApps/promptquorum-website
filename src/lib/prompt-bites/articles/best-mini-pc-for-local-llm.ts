@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-11-18',
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-local-llm',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-local-llm](https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-local-llm)',
     },
     breadcrumbSchema: {
       items: [

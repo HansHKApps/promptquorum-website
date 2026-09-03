@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      canonicalUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-quantization-6gb-vram',
+      canonicalUrl: '[www.promptquorum.com/ko/prompt-bites/best-quantization-6gb-vram](https://www.promptquorum.com/ko/prompt-bites/best-quantization-6gb-vram)',
     },
     breadcrumbSchema: {
       items: [

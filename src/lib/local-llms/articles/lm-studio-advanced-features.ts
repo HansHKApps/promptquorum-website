@@ -239,7 +239,7 @@ schema: {
           id: 'video-walkthrough',
           title: 'Watch: Running Claude Code with LM Studio on Local Hardware',
           content: 'In this community walkthrough, a developer demonstrates running Claude Code with Qwen 3.5 on an RTX 5090, using LM Studio Link to connect a Linux GPU machine to a MacBook — no cloud API keys required. The video covers the full setup and builds a Next.js dashboard from scratch using only local AI inference.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
+          youtubeUrl: '[www.youtube.com/watch?v=3zSANOIBHYw](https://www.youtube.com/watch?v=3zSANOIBHYw)',
         },
         lora: {
           id: 'lora-finetuning',
@@ -1674,7 +1674,7 @@ schema: {
           id: 'video-walkthrough',
           title: 'Ver: Ejecutar Claude Code con LM Studio en hardware local',
           content: 'En este tutorial de la comunidad, un desarrollador demuestra cómo ejecutar Claude Code con Qwen 3.5 en una RTX 5090, usando LM Studio Link para conectar una máquina Linux con GPU a un MacBook, sin necesidad de claves de API en la nube. El video cubre la configuración completa y construye un panel de control en Next.js usando únicamente inferencia local de IA.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
+          youtubeUrl: '[www.youtube.com/watch?v=3zSANOIBHYw](https://www.youtube.com/watch?v=3zSANOIBHYw)',
         },
         lora: {
           id: 'lora-finetuning',
@@ -1996,7 +1996,7 @@ schema: {
           id: 'video-walkthrough',
           title: 'شاهد: تشغيل Claude Code مع LM Studio على أجهزة محلية',
           content: 'في هذا الدليل المجتمعي، يوضح أحد المطورين كيفية تشغيل Claude Code مع Qwen 3.5 على RTX 5090، مستخدمًا LM Studio Link لربط جهاز Linux مزوَّد بـ GPU بجهاز MacBook، دون الحاجة إلى مفاتيح API سحابية. يغطي الفيديو الإعداد الكامل ويبني لوحة تحكم في Next.js باستخدام الاستدلال المحلي للذكاء الاصطناعي فقط.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
+          youtubeUrl: '[www.youtube.com/watch?v=3zSANOIBHYw](https://www.youtube.com/watch?v=3zSANOIBHYw)',
         },
         lora: {
           id: 'lora-finetuning',
@@ -2490,7 +2490,7 @@ schema: {
           id: 'video-walkthrough',
           title: '영상: 로컬 하드웨어에서 LM Studio로 Claude Code 실행하기',
           content: '이 커뮤니티 워크스루에서 한 개발자가 RTX 5090에서 Qwen 3.5를 사용해 Claude Code를 실행하는 방법을 시연합니다. LM Studio Link를 사용하여 Linux GPU 머신을 MacBook에 연결하며, 클라우드 API 키가 전혀 필요하지 않습니다. 이 영상은 전체 설정 과정을 다루며 로컬 AI 추론만을 사용하여 Next.js 대시보드를 처음부터 구축하는 과정을 보여줍니다.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
+          youtubeUrl: '[www.youtube.com/watch?v=3zSANOIBHYw](https://www.youtube.com/watch?v=3zSANOIBHYw)',
         },
         lora: {
           id: 'lora-finetuning',

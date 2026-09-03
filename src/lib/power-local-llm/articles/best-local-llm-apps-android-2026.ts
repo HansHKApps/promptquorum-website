@@ -589,8 +589,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -1204,8 +1204,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -1800,8 +1800,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -2412,8 +2412,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -3081,8 +3081,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -3673,8 +3673,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -4265,8 +4265,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -4861,8 +4861,8 @@ snippetBlocks: [
         name: 'Hans Kuepper',
         url: 'https://www.promptquorum.com/about',
         sameAs: [
-          'https://www.linkedin.com/in/hanskuepper/',
-          'https://x.com/HansKuepperAPPs',
+          '[www.linkedin.com/in/hanskuepper/](https://www.linkedin.com/in/hanskuepper/)',
+          '[x.com/HansKuepperAPPs](https://x.com/HansKuepperAPPs)',
         ],
       },
       publisher: {
@@ -4881,19 +4881,19 @@ snippetBlocks: [
           '@type': 'ListItem',
           position: 1,
           name: '홈',
-          item: 'https://www.promptquorum.com/ko',
+          item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Power Local LLM',
-          item: 'https://www.promptquorum.com/ko/power-local-llm',
+          item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: '2026년 Android용 최고의 로컬 LLM 앱',
-          item: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
+          item: '[www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026](https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026)',
         },
       ],
     },

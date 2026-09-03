@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      canonicalUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-vpn-downloading-ai-models',
+      canonicalUrl: '[www.promptquorum.com/ko/prompt-bites/best-vpn-downloading-ai-models](https://www.promptquorum.com/ko/prompt-bites/best-vpn-downloading-ai-models)',
       'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {

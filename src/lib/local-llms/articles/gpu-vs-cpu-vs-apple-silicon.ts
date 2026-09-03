@@ -2102,10 +2102,10 @@ schema: {
         sources: {
           id: 'sources',
           items: [
-            'NVIDIA GPU仕様 — RTX 50シリーズGPU仕様、VRAM、メモリ帯域幅 https://www.nvidia.com/en-us/geforce/',
-            'Apple Metal for Machine Learning — 統合メモリ最適化 https://developer.apple.com/metal/',
-            'vLLM テンソル並列化ドキュメント — マルチ GPU 推論 https://docs.vllm.ai/',
-            'llama.cpp GitHub — オープンソース推論エンジン https://github.com/ggerganov/llama.cpp',
+            'NVIDIA GPU仕様 — RTX 50シリーズGPU仕様、VRAM、メモリ帯域幅 [www.nvidia.com/en-us/geforce/](https://www.nvidia.com/en-us/geforce/)',
+            'Apple Metal for Machine Learning — 統合メモリ最適化 [developer.apple.com/metal/](https://developer.apple.com/metal/)',
+            'vLLM テンソル並列化ドキュメント — マルチ GPU 推論 [docs.vllm.ai/](https://docs.vllm.ai/)',
+            'llama.cpp GitHub — オープンソース推論エンジン [github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)',
           ],
         },
       },
@@ -2360,10 +2360,10 @@ schema: {
         sources: {
           id: 'sources',
           items: [
-            'NVIDIA GPU 规格——RTX 50 系列 GPU 规格、VRAM、内存带宽 https://www.nvidia.com/en-us/geforce/',
-            'Apple Metal 机器学习——统一内存优化 https://developer.apple.com/metal/',
-            'vLLM 张量并行化文档——多 GPU 推理 https://docs.vllm.ai/',
-            'llama.cpp GitHub——开源推理引擎 https://github.com/ggerganov/llama.cpp',
+            'NVIDIA GPU 规格——RTX 50 系列 GPU 规格、VRAM、内存带宽 [www.nvidia.com/en-us/geforce/](https://www.nvidia.com/en-us/geforce/)',
+            'Apple Metal 机器学习——统一内存优化 [developer.apple.com/metal/](https://developer.apple.com/metal/)',
+            'vLLM 张量并行化文档——多 GPU 推理 [docs.vllm.ai/](https://docs.vllm.ai/)',
+            'llama.cpp GitHub——开源推理引擎 [github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)',
           ],
         },
       },

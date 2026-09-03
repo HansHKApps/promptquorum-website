@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hetzner-deep-dive',
         title: 'Hetzner GPU — Kostenstabilität ohne Überraschungen',
         numberedItems: [
-          'Melden Sie sich bei hetzner.cloud an und navigieren Sie zu GPU Cloud (https://www.hetzner.cloud/de/gpu-cloud/)',
+          'Melden Sie sich bei hetzner.cloud an und navigieren Sie zu GPU Cloud ([www.hetzner.cloud/de/gpu-cloud/](https://www.hetzner.cloud/de/gpu-cloud/))',
           'Wählen Sie RTX 4000 SFF Ada (20GB) oder RTX 6000 Ada (48GB) — monatliche Flat-Rate, keine Stundenbilanzoptionen',
           'Wählen Sie Standort: Falkenstein, Deutschland oder Helsinki, Finnland für EU-Residenz',
           'Rechnungsgruppe (Datenschutzbehörde) — optionaler Name für DSGVO-Audit-Trail',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Scaleway — Das beste H100-Angebot für KI-fokussierte Teams',
         numberedItems: [
           'Melden Sie sich bei console.scaleway.com an',
-          'Gehen Sie zu Elastic Metal → GPU (https://console.scaleway.com/elastic-metal/servers)',
+          'Gehen Sie zu Elastic Metal → GPU ([console.scaleway.com/elastic-metal/servers](https://console.scaleway.com/elastic-metal/servers))',
           'Wählen Sie H100, L40S oder RTX 6000 Ada — Stundenabrechnung mit 1-Stunden Mindestmietdauer',
           'Wählen Sie Standort: Paris (FR), Amsterdam (NL) oder Warschau (PL) — alle EU-DSGVO-konform',
           'Starten Sie sofort — GPU meist innerhalb von 5–10 Minuten verfügbar',
@@ -1800,13 +1800,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Source Verification & Affiliate Disclosure',
         content: 'Alle Preise und Verfügbarkeitsinformationen wurden im Mai 2026 überprüft und sind direkte Zitate von Anbieter-Websites:',
         items: [
-          'Hetzner GPU: https://www.hetzner.cloud/de/gpu-cloud/ (€184/Mo RTX 4000 SFF Ada verifiziert 15. Mai 2026; Affiliate-Programm endet 15. Juni 2026)',
-          'Scaleway: https://www.scaleway.com/pricing/ (H100 €0,50–€2,50/h verifiziert 14. Mai 2026)',
-          'OVHcloud: https://www.ovhcloud.com/en/public-cloud/gpu/ (RTX 6000 Ada €1,45/h verifiziert 13. Mai 2026)',
-          'Nebius: https://nebius.com/services (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
-          'STACKIT: https://www.stackit.cloud/de/ (TISAX-zertifiziert; Custom-Preise auf Anfrage; verifiziert über Datenschutz-Dokumentation 10. Mai 2026)',
-          'IONOS: https://www.ionos.de/server/gpu-server (RTX 4090 €0,60–€1,50/h verifiziert 11. Mai 2026)',
-          'Mistral La Plateforme: https://mistral.ai/products/la-plateforme (Pay-per-Token; verifiziert 16. Mai 2026)',
+          'Hetzner GPU: [www.hetzner.cloud/de/gpu-cloud/](https://www.hetzner.cloud/de/gpu-cloud/) (€184/Mo RTX 4000 SFF Ada verifiziert 15. Mai 2026; Affiliate-Programm endet 15. Juni 2026)',
+          'Scaleway: [www.scaleway.com/pricing/](https://www.scaleway.com/pricing/) (H100 €0,50–€2,50/h verifiziert 14. Mai 2026)',
+          'OVHcloud: [www.ovhcloud.com/en/public-cloud/gpu/](https://www.ovhcloud.com/en/public-cloud/gpu/) (RTX 6000 Ada €1,45/h verifiziert 13. Mai 2026)',
+          'Nebius: [nebius.com/services](https://nebius.com/services) (H100 €1,55–€2,95/h, B200 €5,50/h verifiziert 12. Mai 2026)',
+          'STACKIT: [www.stackit.cloud/de/](https://www.stackit.cloud/de/) (TISAX-zertifiziert; Custom-Preise auf Anfrage; verifiziert über Datenschutz-Dokumentation 10. Mai 2026)',
+          'IONOS: [www.ionos.de/server/gpu-server](https://www.ionos.de/server/gpu-server) (RTX 4090 €0,60–€1,50/h verifiziert 11. Mai 2026)',
+          'Mistral La Plateforme: [mistral.ai/products/la-plateforme](https://mistral.ai/products/la-plateforme) (Pay-per-Token; verifiziert 16. Mai 2026)',
         ],
         linksHeader: 'Weitere Compliance-Ressourcen:',
         links: [
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hetzner-deep-dive',
         title: 'Hetzner GPU — Stabilité des coûts sans surprises',
         numberedItems: [
-          'Connectez-vous à hetzner.cloud et accédez à GPU Cloud (https://www.hetzner.cloud/fr/gpu-cloud/)',
+          'Connectez-vous à hetzner.cloud et accédez à GPU Cloud ([www.hetzner.cloud/fr/gpu-cloud/](https://www.hetzner.cloud/fr/gpu-cloud/))',
           'Choisissez RTX 4000 SFF Ada (20 Go) ou RTX 6000 Ada (48 Go) — tarification forfaitaire mensuelle, pas d\'options de facturation horaire',
           'Choisissez l\'emplacement : Falkenstein, Allemagne ou Helsinki, Finlande pour la résidence UE',
           'Groupe de facturation (autorité de protection des données) — nom optionnel pour le suivi d\'audit RGPD',
@@ -2056,7 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Scaleway — La meilleure offre H100 pour les équipes IA',
         numberedItems: [
           'Connectez-vous à console.scaleway.com',
-          'Allez à Elastic Metal → GPU (https://console.scaleway.com/elastic-metal/servers)',
+          'Allez à Elastic Metal → GPU ([console.scaleway.com/elastic-metal/servers](https://console.scaleway.com/elastic-metal/servers))',
           'Choisissez H100, L40S ou RTX 6000 Ada — facturation horaire avec durée de location minimum d\'1 heure',
           'Choisissez l\'emplacement : Paris (FR), Amsterdam (NL) ou Varsovie (PL) — tous conformes RGPD-UE',
           'Démarrez immédiatement — GPU généralement disponible en 5–10 minutes',
@@ -2416,7 +2416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hetzner-deep-dive',
         title: 'Hetzner GPU——驚きなしのコスト安定性',
         numberedItems: [
-          'hetzner.cloudにログインしてGPU Cloudにアクセス（https://www.hetzner.cloud/ja/gpu-cloud/）',
+          'hetzner.cloudにログインしてGPU Cloudにアクセス（[www.hetzner.cloud/ja/gpu-cloud/](https://www.hetzner.cloud/ja/gpu-cloud/)）',
           'RTX 4000 SFF Ada（20GB）またはRTX 6000 Ada（48GB）を選択——月額定額、時間単位請求オプションなし',
           'ロケーションを選択：EU拠点の場合はFalkenstein、ドイツまたはHelsinki、フィンランド',
           'リソースグループ（データ保護当局）——GDPR監査証跡用のオプション名',
@@ -2442,7 +2442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Scaleway——AI中心チーム向けの最高のH100オファー',
         numberedItems: [
           'console.scaleway.comにログイン',
-          'Elastic Metal → GPU（https://console.scaleway.com/elastic-metal/servers）に移動',
+          'Elastic Metal → GPU（[console.scaleway.com/elastic-metal/servers](https://console.scaleway.com/elastic-metal/servers)）に移動',
           'H100、L40S、またはRTX 6000 Adaを選択——1時間の最小リース期間の時間単位請求',
           'ロケーションを選択：Paris（FR）、Amsterdam（NL）、またはWarsaw（PL）——すべてGDPR EU準拠',
           'すぐに起動——GPUは通常5～10分以内に利用可能',
@@ -2802,7 +2802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hetzner-deep-dive',
         title: 'Hetzner GPU——成本稳定性，无惊喜',
         numberedItems: [
-          '登录hetzner.cloud并访问GPU Cloud（https://www.hetzner.cloud/zh/gpu-cloud/）',
+          '登录hetzner.cloud并访问GPU Cloud（[www.hetzner.cloud/zh/gpu-cloud/](https://www.hetzner.cloud/zh/gpu-cloud/)）',
           '选择RTX 4000 SFF Ada（20GB）或RTX 6000 Ada（48GB）——月度固定价格，无小时计费选项',
           '选择位置：EU数据驻留选择Falkenstein、德国或Helsinki、芬兰',
           '计费组（数据保护机构）——GDPR审计跟踪的可选名称',
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Scaleway——AI中心团队的最佳H100交易',
         numberedItems: [
           '登录console.scaleway.com',
-          '前往Elastic Metal → GPU（https://console.scaleway.com/elastic-metal/servers）',
+          '前往Elastic Metal → GPU（[console.scaleway.com/elastic-metal/servers](https://console.scaleway.com/elastic-metal/servers)）',
           '选择H100、L40S或RTX 6000 Ada——小时计费，最少1小时租期',
           '选择位置：Paris（FR）、Amsterdam（NL）或Warsaw（PL）——所有都符合GDPR EU',
           '立即启动——GPU通常在5–10分钟内可用',

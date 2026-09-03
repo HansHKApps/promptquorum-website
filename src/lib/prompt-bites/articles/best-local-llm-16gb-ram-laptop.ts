@@ -750,18 +750,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop](https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop)',
       breadcrumbs: [
-        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop' },
+        { position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: '[www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop](https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop)' },
       ],
     },
     breadcrumbSchema: {
       items: [
-        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop' },
+        { position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { position: 3, name: '16 GB RAM 노트북 최적 로컬 LLM 2026', item: '[www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop](https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop)' },
       ],
     },
     sections: {

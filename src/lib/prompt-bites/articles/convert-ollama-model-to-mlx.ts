@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Step 1: Check for a Pre-Converted MLX Model',
         content: [
-          'Before converting anything, visit <a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>. The community maintains hundreds of models already converted and quantized for MLX. Search by model name — if it exists there, installing it takes one command and no conversion.',
+          'Before converting anything, visit <a href="[huggingface.co/mlx-community](https://huggingface.co/mlx-community)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>. The community maintains hundreds of models already converted and quantized for MLX. Search by model name — if it exists there, installing it takes one command and no conversion.',
           'If a pre-converted version exists, run the model directly with mlx-lm:',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Schritt 1: Nach einem vorkonvertierten MLX-Modell suchen',
         content: [
-          'Besuchen Sie zunächst <a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>, bevor Sie irgendetwas konvertieren. Die Community pflegt Hunderte von Modellen, die bereits für MLX konvertiert und quantisiert wurden. Suchen Sie nach dem Modellnamen — wenn es dort vorhanden ist, benötigen Sie nur einen Befehl ohne Konvertierung.',
+          'Besuchen Sie zunächst <a href="[huggingface.co/mlx-community](https://huggingface.co/mlx-community)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>, bevor Sie irgendetwas konvertieren. Die Community pflegt Hunderte von Modellen, die bereits für MLX konvertiert und quantisiert wurden. Suchen Sie nach dem Modellnamen — wenn es dort vorhanden ist, benötigen Sie nur einen Befehl ohne Konvertierung.',
           'Wenn eine vorkonvertierte Version existiert, führen Sie das Modell direkt mit mlx-lm aus:',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Étape 1 : Chercher un modèle MLX pré-converti',
         content: [
-          'Avant de convertir quoi que ce soit, visitez <a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'fr\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>. La communauté maintient des centaines de modèles déjà convertis et quantifiés pour MLX. Recherchez par nom de modèle — s\'il existe là-bas, l\'installation ne prend qu\'une commande et aucune conversion.',
+          'Avant de convertir quoi que ce soit, visitez <a href="[huggingface.co/mlx-community](https://huggingface.co/mlx-community)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'fr\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>. La communauté maintient des centaines de modèles déjà convertis et quantifiés pour MLX. Recherchez par nom de modèle — s\'il existe là-bas, l\'installation ne prend qu\'une commande et aucune conversion.',
           'Si une version pré-convertie existe, exécutez le modèle directement avec mlx-lm :',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ステップ1：事前変換済みMLXモデルを確認する',
         content: [
-          '何かを変換する前に、<a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>を訪問してください。このコミュニティは、MLX向けにすでに変換・量子化された数百のモデルを管理しています。モデル名で検索してください — そこに存在すれば、インストールはコマンド1つで変換も不要です。なお、日本語テキスト生成で人気のQwen 3モデルは、mlx-communityで特に多くのMLXバリアントが公開されており、日本のユーザーにとって便利です。',
+          '何かを変換する前に、<a href="[huggingface.co/mlx-community](https://huggingface.co/mlx-community)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>を訪問してください。このコミュニティは、MLX向けにすでに変換・量子化された数百のモデルを管理しています。モデル名で検索してください — そこに存在すれば、インストールはコマンド1つで変換も不要です。なお、日本語テキスト生成で人気のQwen 3モデルは、mlx-communityで特に多くのMLXバリアントが公開されており、日本のユーザーにとって便利です。',
           '事前変換済みバージョンが存在する場合は、mlx-lmで直接モデルを実行してください：',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '第一步：查找预转换的 MLX 模型',
         content: [
-          '在转换任何内容之前，请先访问 <a href="https://huggingface.co/mlx-community" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>。该社区维护了数百个已为 MLX 转换和量化的模型。按模型名称搜索——如果那里已有该模型，安装只需一条命令，无需转换。',
+          '在转换任何内容之前，请先访问 <a href="[huggingface.co/mlx-community](https://huggingface.co/mlx-community)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-community\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">huggingface.co/mlx-community</a>。该社区维护了数百个已为 MLX 转换和量化的模型。按模型名称搜索——如果那里已有该模型，安装只需一条命令，无需转换。',
           '如果预转换版本存在，直接使用 mlx-lm 运行该模型：',
         ],
         codeBlock: 'pip install mlx-lm\nmlx_lm.generate --model mlx-community/Meta-Llama-3-8B-4bit --prompt "Hello"',

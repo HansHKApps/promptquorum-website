@@ -657,18 +657,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram](https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram)',
       breadcrumbs: [
-        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram' },
+        { position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: '[www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram](https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram)' },
       ],
     },
     breadcrumbSchema: {
       items: [
-        { position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: 'https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram' },
+        { position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { position: 3, name: '2 GB RAM으로 RAG 실행 2026', item: '[www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram](https://www.promptquorum.com/ko/prompt-bites/can-you-run-rag-on-2gb-ram)' },
       ],
     },
     sections: {

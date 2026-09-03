@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },
@@ -1727,7 +1727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'خطّاب، أو.، بوتس، ك.، وزهاريا، م. (2024). "DSPy: تصريف نداءات نماذج اللغة التصريحية." arXiv:2310.03714',
           'Valmeekam، ك.، وآخرون (2024). "TextGrad: التفاضل التلقائي عبر النص." arXiv:2406.07496',
-          'Promptfoo (مفتوح المصدر): https://github.com/promptfoo/promptfoo',
+          'Promptfoo (مفتوح المصدر): [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff، س.، وآخرون (2024). "تقرير الـ Prompt: مسح منهجي لتقنيات الـ Prompting." arXiv:2406.06608',
         ],
       },
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
           'Valmeekam, K., et al. (2024). "TextGrad: Automatic Differentiation via Text." arXiv:2406.07496',
-          'Promptfoo GitHub: https://github.com/promptfoo/promptfoo',
+          'Promptfoo GitHub: [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)',
           'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         ],
       },

@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'best-practice',
               label: '🛠️ Best Practice',
-              text: 'Add a dedicated `llms.txt` file to your site root. List your high-value content topics, update frequency, and data sources. This tells AI crawlers exactly what you want indexed for citation. Follow the emerging standard at https://llms.txt.',
+              text: 'Add a dedicated `llms.txt` file to your site root. List your high-value content topics, update frequency, and data sources. This tells AI crawlers exactly what you want indexed for citation. Follow the emerging standard at [llms.txt](https://llms.txt).',
             },
           ],
           items: [
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         headline: 'SEO trifft KI: Wie GEO den alten Spielplan ersetzt',
         description: 'Lerne Generative Engine Optimization (GEO) für ChatGPT, Perplexity und Gemini. Strategien für AI-Such-Traffic, Schema-Markup und Content-Struktur.',
-        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-de.png',
+        image: '[www.promptquorum.com/og-image-seo-meets-ai-de.png](https://www.promptquorum.com/og-image-seo-meets-ai-de.png)',
         datePublished: '2026-03-23',
         dateModified: '2026-08-30',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'fr',
         headline: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
         description: 'Apprenez la Generative Engine Optimization (GEO) pour ChatGPT, Perplexity et Gemini. Stratégies de trafic IA, schéma-markup et structure de contenu.',
-        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-fr.png',
+        image: '[www.promptquorum.com/og-image-seo-meets-ai-fr.png](https://www.promptquorum.com/og-image-seo-meets-ai-fr.png)',
         datePublished: '2026-03-23',
         dateModified: '2026-08-30',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2561,7 +2561,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ja',
         headline: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
         description: 'Generative Engine Optimization（GEO）について学びます：ChatGPT、Perplexity、Gemini、Claude向けのAIトラフィック戦略、スキーママークアップ、コンテンツ構造。',
-        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-ja.png',
+        image: '[www.promptquorum.com/og-image-seo-meets-ai-ja.png](https://www.promptquorum.com/og-image-seo-meets-ai-ja.png)',
         datePublished: '2026-03-23',
         dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -3001,7 +3001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         headline: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
         description: '学习生成式引擎优化（GEO）：ChatGPT、Perplexity、Gemini、Claude的AI流量策略、结构化数据、内容架构。中国企业完整指南。',
-        image: 'https://www.promptquorum.com/og-image-seo-meets-ai-zh.png',
+        image: '[www.promptquorum.com/og-image-seo-meets-ai-zh.png](https://www.promptquorum.com/og-image-seo-meets-ai-zh.png)',
         datePublished: '2026-03-23',
         dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -3647,7 +3647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'best-practice',
               label: '🛠️ Best Practice',
-              text: '사이트 루트에 전용 `llms.txt` 파일을 추가하십시오. 고가치 콘텐츠 주제·업데이트 빈도·데이터 출처를 나열하십시오. 이를 통해 AI 크롤러에게 인용을 원하는 콘텐츠를 정확히 알려줍니다. 새로운 표준은 https://llms.txt에서 확인하십시오.',
+              text: '사이트 루트에 전용 `llms.txt` 파일을 추가하십시오. 고가치 콘텐츠 주제·업데이트 빈도·데이터 출처를 나열하십시오. 이를 통해 AI 크롤러에게 인용을 원하는 콘텐츠를 정확히 알려줍니다. 새로운 표준은 [llms.txt](https://llms.txt)에서 확인하십시오.',
             },
           ],
           items: [

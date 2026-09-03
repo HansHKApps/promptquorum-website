@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/de/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/de/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/de/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/fr/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/fr/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/fr/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ja/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/ja/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/ja/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/zh/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/zh/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/zh/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/es/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/es/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/es/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -2869,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/pt/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/pt/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/pt/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -3298,7 +3298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ar/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/ar/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/ar/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
@@ -3725,7 +3725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ko/balcony-solar/best-balcony-solar-home-battery-us-2026',
+        '@id': '[www.promptquorum.com/ko/balcony-solar/best-balcony-solar-home-battery-us-2026](https://www.promptquorum.com/ko/balcony-solar/best-balcony-solar-home-battery-us-2026)',
       },
     },
     itemListSchema: {
