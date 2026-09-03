@@ -1709,7 +1709,7 @@
         },
         {
           "url": "/images/local-llms-for-coding-workflows-ide-setup-hero-en.webp",
-          "title": "IDE integration setup: Install Ollama (ollama.ai) → Install Continue.dev VS Code extension → Configure localhost:11434 → Select Codestral 22B or Qwen3 8B model → Use Ctrl+Shift+\\ to trigger inline suggestions. 3-step setup complete."
+          "title": "IDE integration setup: Install Ollama ([ollama.ai](https://ollama.ai)) → Install Continue.dev VS Code extension → Configure localhost:11434 → Select Codestral 22B or Qwen3 8B model → Use Ctrl+Shift+\\ to trigger inline suggestions. 3-step setup complete."
         },
         {
           "url": "/images/local-llms-for-coding-workflows-mistakes-hero-en.webp",
@@ -3672,7 +3672,7 @@
       ]
     },
     "best-llm-api-gateway-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
@@ -7886,6 +7886,24 @@
       ],
       "images": []
     },
+    "second-me-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "real-esrgan-ai-image-upscaler-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
@@ -8048,6 +8066,24 @@
       ],
       "images": []
     },
+    "open-interpreter-review": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "edge-ai-hardware-for-local-llms": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
@@ -8088,6 +8124,114 @@
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "msty-go-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "shadow-ai-controls-by-company-size": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "agentic-ai-security-identity-access": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ai-generated-content-ip-risk": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "us-state-ai-employment-laws-compliance": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "enclave-ai-review-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
       "hasSections": true,
       "langs": [
         "en",

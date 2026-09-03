@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developers building multi-model LLM applications',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 min read',
     primaryTerm: 'LLM API gateway',
     targetKeywords: [
@@ -23,18 +23,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'self-hosted LLM proxy',
       'OpenRouter fees',
     ],
-    leadAnswerBlock: '**LiteLLM is the best LLM API gateway for most developers in 2026: the open-source proxy is free, self-hosted, and routes 100+ provider APIs through one OpenAI-compatible interface with no per-request markup. OpenRouter is the better pick when you want 380+ models today with zero infrastructure — it charges roughly 5.5% on Stripe credit purchases instead. Portkey is no longer an independent gateway: Palo Alto Networks completed its acquisition on 29 May 2026 and is folding it into the Prisma AIRS security platform.**',
+    leadAnswerBlock: '**LiteLLM is the best LLM API gateway for most developers in 2026: the open-source proxy is free, self-hosted, and routes 100+ provider APIs through one OpenAI-compatible interface with no per-request markup. OpenRouter is the better pick when you want 380+ models today with zero infrastructure — it charges roughly 5.5% on Stripe credit purchases instead. Portkey is no longer an independent gateway: Palo Alto Networks completed its acquisition on 29 May 2026 and is folding it into the Prisma AIRS security platform. OpenRouter itself is no longer independent either: Stripe reportedly agreed to acquire it in a deal reported at more than $7 billion, announced August 2026.**',
     quickAnswerTop: {
       question: 'What is the best LLM API gateway in 2026?',
-      answer: '**LiteLLM wins for teams that can run a service; OpenRouter wins for teams that cannot.** LiteLLM’s open-source core costs nothing regardless of volume and keeps routing logic and data residency under your control. OpenRouter removes all infrastructure work and charges ~5.5% on Stripe credit purchases (5% via crypto) plus a 5% BYOK fee above its free allowance. Portkey now ships only as the AI gateway inside Palo Alto Networks’ Prisma AIRS platform — evaluate it as an enterprise security purchase, not a lightweight indie tool.',
+      answer: '**LiteLLM wins for teams that can run a service; OpenRouter wins for teams that cannot.** LiteLLM’s open-source core costs nothing regardless of volume and keeps routing logic and data residency under your control. OpenRouter removes all infrastructure work and charges ~5.5% on Stripe credit purchases (5% via crypto) plus a 5% BYOK fee above its free allowance — and is itself now reportedly being acquired by Stripe, in a deal valued at more than $7 billion (announced August 2026). Portkey now ships only as the AI gateway inside Palo Alto Networks’ Prisma AIRS platform — evaluate it as an enterprise security purchase, not a lightweight indie tool.',
       bullets: [
         '**Best overall:** LiteLLM — free, self-hosted, ~57.5k GitHub stars, 100+ provider APIs',
-        '**Best zero-setup:** OpenRouter — 380+ models from one API key, ~5.5% credit-purchase fee',
+        '**Best zero-setup:** OpenRouter — 380+ models from one API key, ~5.5% credit-purchase fee, reportedly being acquired by Stripe',
         '**Enterprise security buy:** Portkey / Prisma AIRS — $49/mo Production tier, now Palo Alto-owned',
         '**Crossover point:** self-hosting wins once 5.5% of your monthly model spend exceeds your proxy hosting bill',
         '⚠️ None of the three has a public affiliate or referral program — every link here is a plain product link',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
@@ -61,6 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**LiteLLM’s open-source proxy is free at any volume** — 100+ provider APIs behind one OpenAI-compatible endpoint, with spend tracking, budgets, and rate limiting in the free tier.',
           'OpenRouter charges no subscription but takes ~5.5% on Stripe credit purchases ($0.80 minimum), 5% via crypto, plus a 5% BYOK fee above $25,000/month (pay-as-you-go) or $200,000/month (enterprise).',
+          'Stripe reportedly agreed to acquire OpenRouter in a deal reported at more than $7 billion (announced August 2026) — no pricing or product changes have been announced yet, but treat it the way you would any newly acquired vendor.',
           'Portkey was acquired by Palo Alto Networks (completed 29 May 2026) and is being folded into Prisma AIRS — treat it as an enterprise security purchase now.',
           'LiteLLM’s GitHub repo carries ~57.5k stars and ~11.0k forks — the clearest public adoption signal of the three.',
           'OpenRouter lists 380+ models and is the fastest path from signup to a working multi-model call.',
@@ -205,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — Best Zero-Setup Gateway',
             tagline: '380+ models from one API key, no server to run',
-            verdict: 'OpenRouter is the fastest path from nothing to a working multi-model application: sign up, take an API key, and call 500+ listed models the same day. There is no subscription — the fee sits on funding the account, at roughly 5.5% on Stripe credit purchases ($0.80 minimum) or 5% via crypto. Its BYOK fee of 5% only applies once monthly BYOK-routed spend passes $25,000 (pay-as-you-go) or $200,000 (enterprise tier), so light users pay nothing extra there. Fallback is automatic but platform-level: when a provider errors, OpenRouter can route to an equivalent model without you configuring the chain.',
+            verdict: 'OpenRouter is the fastest path from nothing to a working multi-model application: sign up, take an API key, and call 500+ listed models the same day. There is no subscription — the fee sits on funding the account, at roughly 5.5% on Stripe credit purchases ($0.80 minimum) or 5% via crypto. Its BYOK fee of 5% only applies once monthly BYOK-routed spend passes $25,000 (pay-as-you-go) or $200,000 (enterprise tier), so light users pay nothing extra there. Fallback is automatic but platform-level: when a provider errors, OpenRouter can route to an equivalent model without you configuring the chain. OpenRouter itself changed hands in 2026: Stripe reportedly agreed to acquire it in a deal reported at more than $7 billion, announced that August. No pricing or API changes have been announced as a result, but the same re-verification caution that applies to Portkey below now applies here too.',
             pros: [
               'No infrastructure at all — an API key is the entire setup',
               '380+ models listed, far more than you would integrate by hand',
@@ -216,6 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'The ~5.5% credit fee compounds and gets expensive at high volume',
               'Rate limiting is global and account-level, not self-configurable',
               'Less control over exactly which provider serves a failed request — a problem under strict data-residency rules',
+              'No longer independent — Stripe reportedly agreed to acquire OpenRouter in 2026, so pricing and roadmap may shift as the deal integrates',
             ],
             affiliateLinks: [
               {
@@ -390,6 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Is LiteLLM really free?', a: 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.' },
             { q: 'Does OpenRouter charge per request?', a: 'Not directly. OpenRouter’s fee is on funding your account: roughly 5.5% on Stripe credit purchases with a $0.80 minimum, or 5% via crypto. A separate 5% BYOK fee applies only once monthly BYOK-routed spend exceeds $25,000 on pay-as-you-go or $200,000 on the enterprise tier.' },
             { q: 'Is Portkey still an independent company?', a: 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the core AI gateway inside its Prisma AIRS security platform, per Palo Alto Networks’ own press release. Treat any pre-May-2026 pricing or roadmap information as potentially stale.' },
+            { q: 'Is OpenRouter still an independent company?', a: 'No. Stripe reportedly agreed to acquire OpenRouter in a deal reported at more than $7 billion, announced in August 2026. As of this writing no pricing, fee, or product changes have been announced as a result of the deal, but — as with Portkey above — treat OpenRouter’s roadmap and terms as subject to change once the acquisition integrates, and re-verify current pricing directly with OpenRouter before budgeting against it.' },
             { q: 'Which gateway supports the most providers?', a: 'OpenRouter lists 380+ models on its own site. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.' },
             { q: 'Can I self-host Portkey?', a: 'Portkey/Prisma AIRS offered private cloud deployment at the Enterprise tier per pre-acquisition pricing pages. Confirm current self-hosting terms directly with Palo Alto Networks, since acquisition integrations frequently change deployment options in the first year.' },
             { q: 'Do any of these three have an affiliate program?', a: 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.' },
@@ -417,6 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'OpenRouter API limits documentation', description: 'Free-tier rate limits and credit-based access rules.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks completes acquisition of Portkey', description: 'Acquisition completion date and Prisma AIRS integration plan.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway on GitHub', description: 'Open-source gateway repository and provider-count claims.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Reporting on the Stripe acquisition of OpenRouter, deal size, and stated rationale.' },
         ],
       },
       relatedReading: {
@@ -434,9 +438,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026',
-      description: 'Comparison of LiteLLM, OpenRouter, and Portkey/Prisma AIRS as LLM API gateways: real pricing, self-hosting options, failover control, and the Palo Alto acquisition that changed Portkey’s category.',
+      description: 'Comparison of LiteLLM, OpenRouter, and Portkey/Prisma AIRS as LLM API gateways: real pricing, self-hosting options, failover control, and the acquisitions — Palo Alto Networks buying Portkey and Stripe agreeing to buy OpenRouter — that changed both hosted vendors’ category.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -493,6 +497,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'Is OpenRouter still an independent company?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Stripe reportedly agreed to acquire OpenRouter in a deal reported at more than $7 billion, announced in August 2026. As of this writing no pricing, fee, or product changes have been announced as a result of the deal, but — as with Portkey above — treat OpenRouter’s roadmap and terms as subject to change once the acquisition integrates, and re-verify current pricing directly with OpenRouter before budgeting against it.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'Which gateway supports the most providers?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -533,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'Best overall — free open-source self-hosted proxy, 100+ provider APIs, no per-request markup' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Best zero-setup gateway — 380+ models from one API key, ~5.5% fee on funded credits' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Best zero-setup gateway — 380+ models from one API key, ~5.5% fee on funded credits; Stripe reportedly agreed to acquire it in August 2026' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'Enterprise security buy — $49/mo Production tier, now part of Palo Alto Networks Prisma AIRS' },
       ],
     },
@@ -550,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Entwicklerinnen und Entwickler, die Multi-Modell-LLM-Anwendungen bauen',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 Min. Lesezeit',
     primaryTerm: 'LLM-API-Gateway',
     targetKeywords: [
@@ -560,18 +572,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'selbst gehosteter LLM-Proxy',
       'OpenRouter Gebühren',
     ],
-    leadAnswerBlock: '**LiteLLM ist 2026 für die meisten Entwicklerteams das beste LLM-API-Gateway: Der Open-Source-Proxy ist kostenlos, selbst gehostet und leitet über 100 Anbieter-APIs über eine einzige OpenAI-kompatible Schnittstelle — ohne Aufschlag pro Anfrage. OpenRouter ist die bessere Wahl, wenn Sie heute über 380 Modelle ohne eigene Infrastruktur nutzen wollen; dafür fallen rund 5,5 % auf Guthabenkäufe per Stripe an. Portkey ist kein eigenständiges Gateway mehr: Palo Alto Networks hat die Übernahme am 29. Mai 2026 abgeschlossen und integriert das Produkt in die Sicherheitsplattform Prisma AIRS.**',
+    leadAnswerBlock: '**LiteLLM ist 2026 für die meisten Entwicklerteams das beste LLM-API-Gateway: Der Open-Source-Proxy ist kostenlos, selbst gehostet und leitet über 100 Anbieter-APIs über eine einzige OpenAI-kompatible Schnittstelle — ohne Aufschlag pro Anfrage. OpenRouter ist die bessere Wahl, wenn Sie heute über 380 Modelle ohne eigene Infrastruktur nutzen wollen; dafür fallen rund 5,5 % auf Guthabenkäufe per Stripe an. Portkey ist kein eigenständiges Gateway mehr: Palo Alto Networks hat die Übernahme am 29. Mai 2026 abgeschlossen und integriert das Produkt in die Sicherheitsplattform Prisma AIRS. Auch OpenRouter selbst ist nicht mehr unabhängig: Stripe hat Berichten zufolge im August 2026 die Übernahme angekündigt, in einer Transaktion, die mit über 7 Milliarden US-Dollar beziffert wurde.**',
     quickAnswerTop: {
       question: 'Was ist 2026 das beste LLM-API-Gateway?',
-      answer: '**LiteLLM gewinnt für Teams, die einen Dienst betreiben können; OpenRouter für Teams, die das nicht können.** LiteLLMs Open-Source-Kern kostet unabhängig vom Volumen nichts und behält Routing-Logik sowie Datenhaltung in Ihrer Kontrolle. OpenRouter nimmt Ihnen die gesamte Infrastrukturarbeit ab und berechnet dafür ca. 5,5 % auf Stripe-Guthabenkäufe (5 % per Krypto) plus 5 % BYOK-Gebühr oberhalb des Freikontingents. Portkey ist nur noch als AI-Gateway innerhalb der Prisma-AIRS-Plattform von Palo Alto Networks erhältlich — bewerten Sie es als Enterprise-Security-Kauf, nicht als schlankes Einzelwerkzeug.',
+      answer: '**LiteLLM gewinnt für Teams, die einen Dienst betreiben können; OpenRouter für Teams, die das nicht können.** LiteLLMs Open-Source-Kern kostet unabhängig vom Volumen nichts und behält Routing-Logik sowie Datenhaltung in Ihrer Kontrolle. OpenRouter nimmt Ihnen die gesamte Infrastrukturarbeit ab und berechnet dafür ca. 5,5 % auf Stripe-Guthabenkäufe (5 % per Krypto) plus 5 % BYOK-Gebühr oberhalb des Freikontingents — und wird selbst Berichten zufolge gerade von Stripe übernommen, in einer im August 2026 gemeldeten Transaktion mit über 7 Milliarden US-Dollar Volumen. Portkey ist nur noch als AI-Gateway innerhalb der Prisma-AIRS-Plattform von Palo Alto Networks erhältlich — bewerten Sie es als Enterprise-Security-Kauf, nicht als schlankes Einzelwerkzeug.',
       bullets: [
         '**Bester Gesamtsieger:** LiteLLM — kostenlos, selbst gehostet, ca. 57,5k GitHub-Sterne, über 100 Anbieter-APIs',
-        '**Ohne Setup am besten:** OpenRouter — über 380 Modelle mit einem API-Schlüssel, ca. 5,5 % Gebühr auf Guthaben',
+        '**Ohne Setup am besten:** OpenRouter — über 380 Modelle mit einem API-Schlüssel, ca. 5,5 % Gebühr auf Guthaben, wird Berichten zufolge gerade von Stripe übernommen',
         '**Enterprise-Security-Kauf:** Portkey / Prisma AIRS — 49 $/Monat Production-Tarif, jetzt Palo Alto',
         '**Der Kipppunkt:** Selbst-Hosting lohnt sich, sobald 5,5 % Ihrer monatlichen Modellkosten Ihre Proxy-Hosting-Rechnung übersteigen',
         '⚠️ Keiner der drei Anbieter hat ein öffentliches Partner- oder Empfehlungsprogramm — alle Links hier sind reine Produktlinks',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'Zusammenfassung', anchor: 'tldr' },
@@ -598,6 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**LiteLLMs Open-Source-Proxy ist bei jedem Volumen kostenlos** — über 100 Anbieter-APIs hinter einem OpenAI-kompatiblen Endpunkt, inklusive Kostenerfassung, Budgets und Rate-Limiting im kostenlosen Tarif.',
           'OpenRouter verlangt kein Abonnement, nimmt aber ca. 5,5 % auf Stripe-Guthabenkäufe (Mindestbetrag 0,80 $), 5 % per Krypto sowie 5 % BYOK-Gebühr oberhalb von 25.000 $/Monat (Pay-as-you-go) bzw. 200.000 $/Monat (Enterprise).',
+          'Stripe hat Berichten zufolge im August 2026 die Übernahme von OpenRouter angekündigt, mit einem berichteten Volumen von über 7 Milliarden US-Dollar — bislang wurden keine Preis- oder Produktänderungen angekündigt, behandeln Sie den Anbieter aber wie jeden neu übernommenen Dienstleister.',
           'Portkey wurde von Palo Alto Networks übernommen (abgeschlossen am 29. Mai 2026) und geht in Prisma AIRS auf — behandeln Sie es jetzt als Enterprise-Security-Kauf.',
           'LiteLLMs GitHub-Repository zählt im August 2026 rund 57,5k Sterne und 11,0k Forks — das klarste öffentliche Verbreitungssignal der drei.',
           'OpenRouter listet über 380 Modelle und ist der schnellste Weg von der Anmeldung zum funktionierenden Multi-Modell-Aufruf.',
@@ -742,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — bestes Gateway ohne Setup',
             tagline: 'Über 380 Modelle mit einem API-Schlüssel, kein eigener Server',
-            verdict: 'OpenRouter ist der schnellste Weg von null zu einer funktionierenden Multi-Modell-Anwendung: anmelden, API-Schlüssel holen, noch am selben Tag über 380 gelistete Modelle aufrufen. Es gibt kein Abonnement — die Gebühr sitzt auf dem Aufladen des Kontos, bei rund 5,5 % auf Stripe-Guthabenkäufe (Mindestbetrag 0,80 $) oder 5 % per Krypto. Die BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen; leichte Nutzung zahlt dort also nichts extra. Das Failover ist automatisch, aber auf Plattformebene: Fällt ein Anbieter aus, kann OpenRouter auf ein gleichwertiges Modell umleiten, ohne dass Sie die Kette konfigurieren.',
+            verdict: 'OpenRouter ist der schnellste Weg von null zu einer funktionierenden Multi-Modell-Anwendung: anmelden, API-Schlüssel holen, noch am selben Tag über 380 gelistete Modelle aufrufen. Es gibt kein Abonnement — die Gebühr sitzt auf dem Aufladen des Kontos, bei rund 5,5 % auf Stripe-Guthabenkäufe (Mindestbetrag 0,80 $) oder 5 % per Krypto. Die BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen; leichte Nutzung zahlt dort also nichts extra. Das Failover ist automatisch, aber auf Plattformebene: Fällt ein Anbieter aus, kann OpenRouter auf ein gleichwertiges Modell umleiten, ohne dass Sie die Kette konfigurieren. OpenRouter selbst hat 2026 den Besitzer gewechselt: Stripe kündigte Berichten zufolge im August die Übernahme an, in einer mit über 7 Milliarden US-Dollar bezifferten Transaktion. Bislang wurden dadurch keine Preis- oder API-Änderungen angekündigt, aber dieselbe Vorsicht bei der Nachprüfung, die weiter unten für Portkey gilt, gilt jetzt auch hier.',
             pros: [
               'Gar keine Infrastruktur — ein API-Schlüssel ist das gesamte Setup',
               'Über 500 gelistete Modelle, weit mehr als Sie von Hand integrieren würden',
@@ -753,6 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Die Gebühr von ca. 5,5 % summiert sich und wird bei hohem Volumen teuer',
               'Rate-Limiting ist global auf Kontoebene und nicht selbst konfigurierbar',
               'Weniger Kontrolle darüber, welcher Anbieter eine fehlgeschlagene Anfrage übernimmt — ein Problem bei strengen Datenresidenz-Vorgaben',
+              'Nicht mehr unabhängig — Stripe hat 2026 Berichten zufolge die Übernahme von OpenRouter angekündigt, Preise und Roadmap können sich mit der Integration ändern',
             ],
             affiliateLinks: [
               {
@@ -927,6 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Ist LiteLLM wirklich kostenlos?', a: 'Der Open-Source-Kern ist kostenlos und selbst gehostet, ohne Lizenzgebühr — so die eigene Preisseite von LiteLLM im August 2026. Es gibt bei keinem Volumen einen Aufschlag pro Anfrage. Der Enterprise-Tarif mit SSO, SCIM, dediziertem Support und Air-Gap-Betrieb wird jährlich nach Anfragevolumen bepreist und enthält eine 30-tägige Testphase.' },
             { q: 'Berechnet OpenRouter eine Gebühr pro Anfrage?', a: 'Nicht direkt. OpenRouters Gebühr fällt beim Aufladen des Kontos an: rund 5,5 % auf Stripe-Guthabenkäufe mit einem Mindestbetrag von 0,80 $ oder 5 % per Krypto. Eine separate BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen.' },
             { q: 'Ist Portkey noch ein unabhängiges Unternehmen?', a: 'Nein. Palo Alto Networks hat die Übernahme von Portkey am 29. Mai 2026 abgeschlossen und integriert es laut eigener Pressemitteilung als zentrales AI-Gateway in die Sicherheitsplattform Prisma AIRS. Behandeln Sie Preis- und Roadmap-Angaben von vor Mai 2026 als potenziell überholt.' },
+            { q: 'Ist OpenRouter noch ein unabhängiges Unternehmen?', a: 'Nein. Stripe hat Berichten zufolge im August 2026 die Übernahme von OpenRouter angekündigt, in einer Transaktion, die mit über 7 Milliarden US-Dollar beziffert wurde. Bislang wurden dadurch keine Preis-, Gebühren- oder Produktänderungen angekündigt — behandeln Sie Roadmap und Konditionen von OpenRouter aber, wie bei Portkey oben, als potenziell im Wandel, sobald die Integration fortschreitet, und lassen Sie sich aktuelle Preise vor einer Budgetplanung direkt bei OpenRouter bestätigen.' },
             { q: 'Welches Gateway unterstützt die meisten Anbieter?', a: 'OpenRouter listet im August 2026 über 380 Modelle auf der eigenen Website. LiteLLMs Dokumentation nennt über 100 Anbieter-Integrationen — eine andere Einheit, da ein Anbieter viele Modelle bereitstellt. Portkeys Gateway-Repository warb zuvor mit über 1.600 LLMs; diese Zahl sollte angesichts der Übernahme neu geprüft werden.' },
             { q: 'Kann ich Portkey selbst hosten?', a: 'Portkey/Prisma AIRS bot laut den Preisseiten vor der Übernahme ein Private-Cloud-Deployment im Enterprise-Tarif an. Lassen Sie sich die aktuellen Bedingungen zum Selbst-Hosting direkt von Palo Alto Networks bestätigen, da Integrationen nach Übernahmen die Deployment-Optionen im ersten Jahr häufig verändern.' },
             { q: 'Hat einer der drei Anbieter ein Partnerprogramm?', a: 'Für LiteLLM, Portkey und OpenRouter war im August 2026 kein öffentlich prüfbares Partner- oder Empfehlungsprogramm auffindbar. Jeder Produktlink auf dieser Seite ist ein einfacher, offengelegter Link, der PromptQuorum nichts einbringt. Sollte sich das ändern, wird diese Seite mit einer Offenlegung angepasst, die den tatsächlichen Programmbedingungen entspricht.' },
@@ -956,6 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'OpenRouter API-Limits (Dokumentation)', description: 'Rate-Limits des kostenlosen Tarifs und Regeln für guthabenbasierten Zugang.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks schließt Portkey-Übernahme ab', description: 'Abschlussdatum der Übernahme und Integrationsplan für Prisma AIRS.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway auf GitHub', description: 'Open-Source-Gateway-Repository und Angaben zur Anbieterzahl.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Berichterstattung zur Stripe-Übernahme von OpenRouter, Transaktionsvolumen und genannter Begründung.' },
         ],
       },
       relatedReading: {
@@ -973,9 +989,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs. OpenRouter vs. Portkey: Bestes LLM-Gateway 2026',
-      description: 'Vergleich von LiteLLM, OpenRouter und Portkey/Prisma AIRS als LLM-API-Gateways: echte Preise, Selbst-Hosting-Optionen, Failover-Kontrolle und die Palo-Alto-Übernahme, die Portkeys Kategorie verändert hat.',
+      description: 'Vergleich von LiteLLM, OpenRouter und Portkey/Prisma AIRS als LLM-API-Gateways: echte Preise, Selbst-Hosting-Optionen, Failover-Kontrolle sowie die Übernahmen — Palo Alto Networks kauft Portkey, Stripe kündigt Berichten zufolge die Übernahme von OpenRouter an —, die die Kategorie beider gehosteten Anbieter verändert haben.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/de/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1028,6 +1044,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Nein. Palo Alto Networks hat die Übernahme von Portkey am 29. Mai 2026 abgeschlossen und integriert es laut eigener Pressemitteilung als zentrales AI-Gateway in die Sicherheitsplattform Prisma AIRS. Behandeln Sie Preis- und Roadmap-Angaben von vor Mai 2026 als potenziell überholt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist OpenRouter noch ein unabhängiges Unternehmen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Stripe hat Berichten zufolge im August 2026 die Übernahme von OpenRouter angekündigt, in einer Transaktion, die mit über 7 Milliarden US-Dollar beziffert wurde. Bislang wurden dadurch keine Preis-, Gebühren- oder Produktänderungen angekündigt — behandeln Sie Roadmap und Konditionen von OpenRouter aber, wie bei Portkey oben, als potenziell im Wandel, sobald die Integration fortschreitet, und lassen Sie sich aktuelle Preise vor einer Budgetplanung direkt bei OpenRouter bestätigen.',
             },
           },
           {
@@ -1088,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'Bester Gesamtsieger — kostenloser, selbst gehosteter Open-Source-Proxy, über 100 Anbieter-APIs, kein Aufschlag pro Anfrage' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Bestes Gateway ohne Setup — über 380 Modelle mit einem API-Schlüssel, ca. 5,5 % Gebühr auf aufgeladenes Guthaben' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Bestes Gateway ohne Setup — über 380 Modelle mit einem API-Schlüssel, ca. 5,5 % Gebühr auf aufgeladenes Guthaben; Stripe kündigte Berichten zufolge im August 2026 die Übernahme an' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'Enterprise-Security-Kauf — 49 $/Monat Production-Tarif, jetzt Teil von Palo Alto Networks Prisma AIRS' },
       ],
     },
@@ -1105,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Desarrolladores que crean aplicaciones LLM multimodelo',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 min de lectura',
     primaryTerm: 'gateway de API LLM',
     targetKeywords: [
@@ -1115,18 +1139,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'proxy LLM autoalojado',
       'comisiones OpenRouter',
     ],
-    leadAnswerBlock: '**LiteLLM es el mejor gateway de API LLM para la mayoría de desarrolladores en 2026: el proxy open source es gratis, autoalojado y enruta más de 100 APIs de proveedores a través de una única interfaz compatible con OpenAI, sin recargo por petición. OpenRouter es la mejor opción si quieres 500+ modelos hoy mismo sin infraestructura: a cambio cobra alrededor del 5.5% sobre las compras de saldo con Stripe. Portkey ya no es un gateway independiente: Palo Alto Networks completó su adquisición el 29 de mayo de 2026 y lo está integrando en la plataforma de seguridad Prisma AIRS.**',
+    leadAnswerBlock: '**LiteLLM es el mejor gateway de API LLM para la mayoría de desarrolladores en 2026: el proxy open source es gratis, autoalojado y enruta más de 100 APIs de proveedores a través de una única interfaz compatible con OpenAI, sin recargo por petición. OpenRouter es la mejor opción si quieres 500+ modelos hoy mismo sin infraestructura: a cambio cobra alrededor del 5.5% sobre las compras de saldo con Stripe. Portkey ya no es un gateway independiente: Palo Alto Networks completó su adquisición el 29 de mayo de 2026 y lo está integrando en la plataforma de seguridad Prisma AIRS. OpenRouter tampoco es ya independiente: Stripe habría acordado adquirirlo en una operación valorada en más de 7,000 millones de dólares, anunciada en agosto de 2026.**',
     quickAnswerTop: {
       question: '¿Cuál es el mejor gateway de API LLM en 2026?',
-      answer: '**LiteLLM gana para equipos que pueden operar un servicio; OpenRouter gana para los que no.** El núcleo open source de LiteLLM no cuesta nada sin importar el volumen y mantiene bajo tu control la lógica de enrutamiento y la residencia de datos. OpenRouter elimina todo el trabajo de infraestructura y cobra ~5.5% sobre compras de saldo con Stripe (5% con cripto) más una comisión BYOK del 5% por encima de su cupo gratuito. Portkey solo se ofrece ya como el gateway de IA dentro de Prisma AIRS de Palo Alto Networks: evalúalo como una compra de seguridad empresarial, no como una herramienta ligera.',
+      answer: '**LiteLLM gana para equipos que pueden operar un servicio; OpenRouter gana para los que no.** El núcleo open source de LiteLLM no cuesta nada sin importar el volumen y mantiene bajo tu control la lógica de enrutamiento y la residencia de datos. OpenRouter elimina todo el trabajo de infraestructura y cobra ~5.5% sobre compras de saldo con Stripe (5% con cripto) más una comisión BYOK del 5% por encima de su cupo gratuito — y a su vez estaría siendo adquirido por Stripe, en una operación valorada en más de 7,000 millones de dólares (anunciada en agosto de 2026). Portkey solo se ofrece ya como el gateway de IA dentro de Prisma AIRS de Palo Alto Networks: evalúalo como una compra de seguridad empresarial, no como una herramienta ligera.',
       bullets: [
         '**Mejor en general:** LiteLLM — gratis, autoalojado, ~57.5k estrellas en GitHub, 100+ APIs de proveedores',
-        '**Mejor sin configuración:** OpenRouter — 500+ modelos con una sola API key, comisión ~5.5% sobre el saldo',
+        '**Mejor sin configuración:** OpenRouter — 500+ modelos con una sola API key, comisión ~5.5% sobre el saldo, en proceso de adquisición por Stripe (según informes)',
         '**Compra de seguridad empresarial:** Portkey / Prisma AIRS — $49/mes en el plan Production, ahora de Palo Alto',
         '**Punto de cruce:** autoalojar gana en cuanto el 5.5% de tu gasto mensual en modelos supera tu factura de hosting del proxy',
         '⚠️ Ninguno de los tres tiene programa público de afiliados o referidos: todos los enlaces aquí son enlaces de producto',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'Puntos clave', anchor: 'tldr' },
@@ -1153,6 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**El proxy open source de LiteLLM es gratis a cualquier volumen**: 100+ APIs de proveedores tras un único endpoint compatible con OpenAI, con seguimiento de gasto, presupuestos y rate limiting incluidos en el plan gratuito.',
           'OpenRouter no cobra suscripción, pero se lleva ~5.5% sobre las compras de saldo con Stripe (mínimo $0.80), 5% con cripto, más una comisión BYOK del 5% por encima de $25,000/mes (pago por uso) o $200,000/mes (empresarial).',
+          'Stripe habría acordado adquirir OpenRouter en una operación valorada en más de 7,000 millones de dólares (anunciada en agosto de 2026): aún no se ha anunciado ningún cambio de precios ni de producto, pero trátalo como tratarías a cualquier proveedor recién adquirido.',
           'Palo Alto Networks adquirió Portkey (operación cerrada el 29 de mayo de 2026) y lo está integrando en Prisma AIRS: trátalo ya como una compra de seguridad empresarial.',
           'El repositorio de LiteLLM en GitHub acumula ~57.5k estrellas y ~11.0k forks en agosto de 2026, la señal pública de adopción más clara de los tres.',
           'OpenRouter lista más de 380 modelos y es el camino más rápido desde el registro hasta una llamada multimodelo funcionando.',
@@ -1297,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — el mejor gateway sin configuración',
             tagline: '500+ modelos con una API key y ningún servidor que mantener',
-            verdict: 'OpenRouter es el camino más rápido desde cero hasta una aplicación multimodelo funcionando: te registras, coges una API key y llamas el mismo día a más de 380 modelos listados. No hay suscripción: la comisión está en cargar la cuenta, en torno al 5.5% sobre compras de saldo con Stripe (mínimo $0.80) o 5% con cripto. Su comisión BYOK del 5% solo se aplica cuando el gasto mensual enrutado por BYOK supera $25,000 (pago por uso) o $200,000 (plan empresarial), así que un uso ligero no paga nada extra ahí. El failover es automático pero a nivel de plataforma: si un proveedor falla, OpenRouter puede enrutar a un modelo equivalente sin que tú configures la cadena.',
+            verdict: 'OpenRouter es el camino más rápido desde cero hasta una aplicación multimodelo funcionando: te registras, coges una API key y llamas el mismo día a más de 380 modelos listados. No hay suscripción: la comisión está en cargar la cuenta, en torno al 5.5% sobre compras de saldo con Stripe (mínimo $0.80) o 5% con cripto. Su comisión BYOK del 5% solo se aplica cuando el gasto mensual enrutado por BYOK supera $25,000 (pago por uso) o $200,000 (plan empresarial), así que un uso ligero no paga nada extra ahí. El failover es automático pero a nivel de plataforma: si un proveedor falla, OpenRouter puede enrutar a un modelo equivalente sin que tú configures la cadena. OpenRouter también habría cambiado de dueño en 2026: Stripe anunció en agosto la adquisición, en una operación valorada en más de 7,000 millones de dólares, aunque ninguna de las dos empresas la ha confirmado oficialmente. Por ahora no se han anunciado cambios de precios ni de API, pero la misma cautela de reverificación que aplica a Portkey más abajo aplica también aquí.',
             pros: [
               'Cero infraestructura: una API key es toda la puesta en marcha',
               'Más de 380 modelos listados, muchos más de los que integrarías a mano',
@@ -1308,6 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'La comisión de ~5.5% se acumula y se vuelve cara con volumen alto',
               'El rate limiting es global y a nivel de cuenta, no configurable por ti',
               'Menos control sobre qué proveedor atiende una petición fallida, un problema con reglas estrictas de residencia de datos',
+              'Ya no es independiente: Stripe habría acordado adquirir OpenRouter en 2026, y los precios y la hoja de ruta pueden cambiar con la integración',
             ],
             affiliateLinks: [
               {
@@ -1482,6 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿LiteLLM es realmente gratis?', a: 'El núcleo open source es gratis y autoalojado, sin coste de licencia, según la propia página de precios de LiteLLM en agosto de 2026. No hay recargo por petición a ningún volumen. El plan Enterprise —SSO, SCIM, soporte dedicado y despliegue aislado de red— tiene precio anual a medida según tu volumen de peticiones e incluye una prueba de 30 días.' },
             { q: '¿OpenRouter cobra por petición?', a: 'No directamente. La comisión de OpenRouter está en cargar la cuenta: en torno al 5.5% sobre compras de saldo con Stripe con un mínimo de $0.80, o 5% con cripto. Una comisión BYOK separada del 5% se aplica solo cuando el gasto mensual enrutado por BYOK supera $25,000 en pago por uso o $200,000 en el plan empresarial.' },
             { q: '¿Portkey sigue siendo una empresa independiente?', a: 'No. Palo Alto Networks completó la adquisición de Portkey el 29 de mayo de 2026 y lo está integrando como el gateway de IA central de su plataforma de seguridad Prisma AIRS, según la nota de prensa de la propia Palo Alto Networks. Trata cualquier información de precios o de hoja de ruta anterior a mayo de 2026 como potencialmente desfasada.' },
+            { q: '¿OpenRouter sigue siendo una empresa independiente?', a: 'No. Stripe habría acordado adquirir OpenRouter en agosto de 2026, en una operación valorada en más de 7,000 millones de dólares. Por ahora no se ha anunciado ningún cambio de precios, comisiones o producto como resultado, pero —igual que con Portkey más arriba— trata la hoja de ruta y las condiciones de OpenRouter como potencialmente cambiantes a medida que avance la integración, y confirma los precios actuales directamente con OpenRouter antes de presupuestar con ellos.' },
             { q: '¿Qué gateway soporta más proveedores?', a: 'OpenRouter lista más de 380 modelos en su propio sitio en agosto de 2026. La documentación de LiteLLM describe más de 100 integraciones de proveedores, que es una unidad distinta, ya que un proveedor expone muchos modelos. El repositorio de Portkey anunciaba antes más de 1,600 LLM, aunque esa cifra debería reverificarse tras la adquisición.' },
             { q: '¿Puedo autoalojar Portkey?', a: 'Portkey/Prisma AIRS ofrecía despliegue en nube privada en el plan Enterprise según las páginas de precios previas a la adquisición. Confirma las condiciones actuales de autoalojamiento directamente con Palo Alto Networks, porque las integraciones tras una adquisición cambian con frecuencia las opciones de despliegue durante el primer año.' },
             { q: '¿Alguno de los tres tiene programa de afiliados?', a: 'En agosto de 2026 no se encontró ningún programa público y verificable de afiliados o referidos para LiteLLM, Portkey ni OpenRouter. Todos los enlaces de producto de esta página son enlaces simples y declarados que no generan ingresos a PromptQuorum. Si eso cambia, actualizaremos la página con una declaración acorde a las condiciones reales del programa.' },
@@ -1509,6 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'Documentación de límites de la API de OpenRouter', description: 'Límites de tasa del plan gratuito y reglas de acceso basado en saldo.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks completa la adquisición de Portkey', description: 'Fecha de cierre de la adquisición y plan de integración en Prisma AIRS.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway en GitHub', description: 'Repositorio open source del gateway y cifras declaradas de proveedores.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Cobertura de la adquisición de OpenRouter por Stripe, valor de la operación y motivos declarados.' },
         ],
       },
       relatedReading: {
@@ -1526,9 +1554,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: mejor gateway LLM 2026',
-      description: 'Comparativa de LiteLLM, OpenRouter y Portkey/Prisma AIRS como gateways de API LLM: precios reales, opciones de autoalojamiento, control del failover y la adquisición de Palo Alto que cambió la categoría de Portkey.',
+      description: 'Comparativa de LiteLLM, OpenRouter y Portkey/Prisma AIRS como gateways de API LLM: precios reales, opciones de autoalojamiento, control del failover y las adquisiciones —Palo Alto Networks compra Portkey, Stripe habría acordado comprar OpenRouter, según informes— que cambiaron la categoría de ambos proveedores alojados.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/es/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1585,6 +1613,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': '¿OpenRouter sigue siendo una empresa independiente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Stripe habría acordado adquirir OpenRouter en agosto de 2026, en una operación valorada en más de 7,000 millones de dólares. Por ahora no se ha anunciado ningún cambio de precios, comisiones o producto como resultado, pero —igual que con Portkey más arriba— trata la hoja de ruta y las condiciones de OpenRouter como potencialmente cambiantes a medida que avance la integración, y confirma los precios actuales directamente con OpenRouter antes de presupuestar con ellos.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '¿Qué gateway soporta más proveedores?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -1625,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'Mejor en general — proxy open source gratuito y autoalojado, 100+ APIs de proveedores, sin recargo por petición' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Mejor gateway sin configuración — 500+ modelos con una API key, comisión ~5.5% sobre el saldo cargado' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Mejor gateway sin configuración — 500+ modelos con una API key, comisión ~5.5% sobre el saldo cargado; Stripe habría acordado adquirirlo en agosto de 2026' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'Compra de seguridad empresarial — plan Production de $49/mes, ahora parte de Prisma AIRS de Palo Alto Networks' },
       ],
     },
@@ -1642,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developpeurs construisant des applications LLM multi-modeles',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 min de lecture',
     primaryTerm: 'passerelle API LLM',
     targetKeywords: [
@@ -1652,18 +1688,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'proxy LLM auto-heberge',
       'frais OpenRouter',
     ],
-    leadAnswerBlock: '**LiteLLM est la meilleure passerelle API LLM pour la plupart des developpeurs en 2026 : le proxy open source est gratuit, auto-heberge et route plus de 100 API de fournisseurs via une seule interface compatible OpenAI, sans majoration par requete. OpenRouter est le meilleur choix si vous voulez plus de 380 modeles des aujourd\'hui sans aucune infrastructure : il preleve environ 5,5 % sur les achats de credit via Stripe. Portkey n\'est plus une passerelle independante : Palo Alto Networks a finalise son acquisition le 29 mai 2026 et l\'integre a la plateforme de securite Prisma AIRS.**',
+    leadAnswerBlock: '**LiteLLM est la meilleure passerelle API LLM pour la plupart des developpeurs en 2026 : le proxy open source est gratuit, auto-heberge et route plus de 100 API de fournisseurs via une seule interface compatible OpenAI, sans majoration par requete. OpenRouter est le meilleur choix si vous voulez plus de 380 modeles des aujourd\'hui sans aucune infrastructure : il preleve environ 5,5 % sur les achats de credit via Stripe. Portkey n\'est plus une passerelle independante : Palo Alto Networks a finalise son acquisition le 29 mai 2026 et l\'integre a la plateforme de securite Prisma AIRS. OpenRouter n\'est lui non plus plus independant : Stripe aurait annonce en aout 2026 son rachat, dans une operation evaluee a plus de 7 milliards de dollars.**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure passerelle API LLM en 2026 ?',
-      answer: '**LiteLLM gagne pour les equipes capables d\'exploiter un service ; OpenRouter pour celles qui ne le peuvent pas.** Le coeur open source de LiteLLM ne coute rien quel que soit le volume et garde la logique de routage et la residence des donnees sous votre controle. OpenRouter supprime tout le travail d\'infrastructure et facture environ 5,5 % sur les achats de credit via Stripe (5 % en crypto), plus des frais BYOK de 5 % au-dela de son quota gratuit. Portkey n\'est plus disponible que comme passerelle IA au sein de Prisma AIRS de Palo Alto Networks : evaluez-le comme un achat de securite d\'entreprise, pas comme un outil leger.',
+      answer: '**LiteLLM gagne pour les equipes capables d\'exploiter un service ; OpenRouter pour celles qui ne le peuvent pas.** Le coeur open source de LiteLLM ne coute rien quel que soit le volume et garde la logique de routage et la residence des donnees sous votre controle. OpenRouter supprime tout le travail d\'infrastructure et facture environ 5,5 % sur les achats de credit via Stripe (5 % en crypto), plus des frais BYOK de 5 % au-dela de son quota gratuit — et serait lui-meme en cours de rachat par Stripe, dans une operation evaluee a plus de 7 milliards de dollars (annoncee en aout 2026, non confirmee officiellement par les deux entreprises). Portkey n\'est plus disponible que comme passerelle IA au sein de Prisma AIRS de Palo Alto Networks : evaluez-le comme un achat de securite d\'entreprise, pas comme un outil leger.',
       bullets: [
         '**Meilleur choix global :** LiteLLM — gratuit, auto-heberge, environ 57,5k etoiles GitHub, plus de 100 API de fournisseurs',
-        '**Meilleur sans configuration :** OpenRouter — plus de 380 modeles avec une seule cle API, frais d\'environ 5,5 % sur le credit',
+        '**Meilleur sans configuration :** OpenRouter — plus de 380 modeles avec une seule cle API, frais d\'environ 5,5 % sur le credit, rachat par Stripe annonce (non confirme)',
         '**Achat securite d\'entreprise :** Portkey / Prisma AIRS — 49 $/mois en Production, desormais Palo Alto',
         '**Point de bascule :** l\'auto-hebergement gagne des que 5,5 % de vos depenses mensuelles en modeles depassent votre facture d\'hebergement du proxy',
         '⚠️ Aucun des trois n\'a de programme d\'affiliation public : tous les liens ci-dessous sont de simples liens produit',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'L\'essentiel', anchor: 'tldr' },
@@ -1690,6 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Le proxy open source de LiteLLM est gratuit quel que soit le volume** — plus de 100 API de fournisseurs derriere un unique point de terminaison compatible OpenAI, avec suivi des depenses, budgets et limitation de debit inclus dans l\'offre gratuite.',
           'OpenRouter ne facture aucun abonnement mais preleve environ 5,5 % sur les achats de credit via Stripe (minimum 0,80 $), 5 % en crypto, plus des frais BYOK de 5 % au-dela de 25 000 $/mois (paiement a l\'usage) ou 200 000 $/mois (entreprise).',
+          'Stripe aurait annonce en aout 2026 le rachat d\'OpenRouter, dans une operation evaluee a plus de 7 milliards de dollars : aucun changement de tarif ni de produit n\'a ete annonce a ce jour, mais traitez ce fournisseur comme n\'importe quel autre venant d\'etre rachete.',
           'Portkey a ete rachete par Palo Alto Networks (operation finalisee le 29 mai 2026) et est integre a Prisma AIRS : traitez-le desormais comme un achat de securite d\'entreprise.',
           'Le depot GitHub de LiteLLM compte environ 57,5k etoiles et 11,0k forks en aout 2026 — le signal d\'adoption publique le plus clair des trois.',
           'OpenRouter liste plus de 380 modeles et constitue le chemin le plus rapide entre l\'inscription et un appel multi-modeles fonctionnel.',
@@ -1834,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — meilleure passerelle sans configuration',
             tagline: 'Plus de 500 modeles avec une cle API, aucun serveur a exploiter',
-            verdict: 'OpenRouter est le chemin le plus rapide entre rien et une application multi-modeles fonctionnelle : inscrivez-vous, prenez une cle API et appelez le jour meme plus de 380 modeles listes. Il n\'y a pas d\'abonnement : la commission porte sur l\'alimentation du compte, soit environ 5,5 % sur les achats de credit via Stripe (minimum 0,80 $) ou 5 % en crypto. Ses frais BYOK de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK (paiement a l\'usage) ou 200 000 $ (offre entreprise) : un usage leger ne paie donc rien de plus. Le failover est automatique mais au niveau plateforme : si un fournisseur echoue, OpenRouter peut router vers un modele equivalent sans que vous configuriez la chaine.',
+            verdict: 'OpenRouter est le chemin le plus rapide entre rien et une application multi-modeles fonctionnelle : inscrivez-vous, prenez une cle API et appelez le jour meme plus de 380 modeles listes. Il n\'y a pas d\'abonnement : la commission porte sur l\'alimentation du compte, soit environ 5,5 % sur les achats de credit via Stripe (minimum 0,80 $) ou 5 % en crypto. Ses frais BYOK de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK (paiement a l\'usage) ou 200 000 $ (offre entreprise) : un usage leger ne paie donc rien de plus. Le failover est automatique mais au niveau plateforme : si un fournisseur echoue, OpenRouter peut router vers un modele equivalent sans que vous configuriez la chaine. OpenRouter aurait lui aussi change de proprietaire en 2026 : Stripe a annonce en aout le rachat, dans une operation evaluee a plus de 7 milliards de dollars, information que ni l\'une ni l\'autre entreprise n\'a confirmee officiellement. Aucun changement de tarif ni d\'API n\'a ete annonce a ce jour, mais la meme prudence de reverification qui s\'applique a Portkey ci-dessous s\'applique desormais ici aussi.',
             pros: [
               'Aucune infrastructure : une cle API constitue toute la mise en place',
               'Plus de 500 modeles listes, bien plus que ce que vous integreriez a la main',
@@ -1845,6 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'La commission d\'environ 5,5 % s\'accumule et devient couteuse a volume eleve',
               'La limitation de debit est globale, au niveau du compte, et non configurable',
               'Moins de controle sur le fournisseur qui traite une requete echouee : un probleme sous des regles strictes de residence des donnees',
+              'Plus independant : Stripe aurait annonce le rachat d\'OpenRouter en 2026, les tarifs et la feuille de route pouvant evoluer avec l\'integration',
             ],
             affiliateLinks: [
               {
@@ -2019,6 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'LiteLLM est-il vraiment gratuit ?', a: 'Le coeur open source est gratuit et auto-heberge, sans cout de licence, d\'apres la page tarifaire de LiteLLM en aout 2026. Il n\'y a aucune majoration par requete, quel que soit le volume. L\'offre Enterprise — SSO, SCIM, support dedie, deploiement isole du reseau — est tarifee annuellement sur devis selon votre volume de requetes et inclut un essai de 30 jours.' },
             { q: 'OpenRouter facture-t-il a la requete ?', a: 'Pas directement. La commission d\'OpenRouter porte sur l\'alimentation du compte : environ 5,5 % sur les achats de credit via Stripe avec un minimum de 0,80 $, ou 5 % en crypto. Des frais BYOK distincts de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK en paiement a l\'usage, ou 200 000 $ sur l\'offre entreprise.' },
             { q: 'Portkey est-il encore une entreprise independante ?', a: 'Non. Palo Alto Networks a finalise l\'acquisition de Portkey le 29 mai 2026 et l\'integre comme passerelle IA centrale de sa plateforme de securite Prisma AIRS, selon le communique de Palo Alto Networks. Considerez toute information tarifaire ou de feuille de route anterieure a mai 2026 comme potentiellement perimee.' },
+            { q: 'OpenRouter est-il encore une entreprise independante ?', a: 'Non. Stripe aurait annonce en aout 2026 le rachat d\'OpenRouter, dans une operation evaluee a plus de 7 milliards de dollars. Aucun changement de tarifs, de commissions ou de produit n\'a ete annonce a ce jour, mais — comme pour Portkey ci-dessus — considerez la feuille de route et les conditions d\'OpenRouter comme susceptibles d\'evoluer avec l\'integration, et faites confirmer les tarifs actuels directement aupres d\'OpenRouter avant de budgeter sur cette base.' },
             { q: 'Quelle passerelle prend en charge le plus de fournisseurs ?', a: 'OpenRouter liste plus de 380 modeles sur son propre site en aout 2026. La documentation de LiteLLM decrit plus de 100 integrations de fournisseurs, ce qui est une unite differente puisqu\'un fournisseur expose plusieurs modeles. Le depot de Portkey annoncait plus de 1 600 LLM, chiffre qu\'il convient de reverifier apres l\'acquisition.' },
             { q: 'Puis-je auto-heberger Portkey ?', a: 'Portkey/Prisma AIRS proposait un deploiement en cloud prive sur l\'offre Enterprise d\'apres les pages tarifaires anterieures a l\'acquisition. Faites confirmer les conditions actuelles d\'auto-hebergement directement par Palo Alto Networks : les integrations post-acquisition modifient souvent les options de deploiement la premiere annee.' },
             { q: 'L\'un de ces trois a-t-il un programme d\'affiliation ?', a: 'Aucun programme d\'affiliation ou de parrainage public et verifiable n\'a ete trouve pour LiteLLM, Portkey ou OpenRouter en aout 2026. Tous les liens produit de cette page sont de simples liens declares qui ne rapportent rien a PromptQuorum. Si cela change, la page sera mise a jour avec une mention conforme aux conditions reelles du programme.' },
@@ -2046,6 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'Documentation des limites de l\'API OpenRouter', description: 'Limites de debit de l\'offre gratuite et regles d\'acces base sur le credit.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks finalise l\'acquisition de Portkey', description: 'Date de finalisation de l\'acquisition et plan d\'integration a Prisma AIRS.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway sur GitHub', description: 'Depot open source de la passerelle et chiffres annonces de fournisseurs.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Couverture du rachat d\'OpenRouter par Stripe, montant de l\'operation et justification annoncee.' },
         ],
       },
       relatedReading: {
@@ -2063,9 +2103,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey : meilleure passerelle LLM 2026',
-      description: 'Comparatif de LiteLLM, OpenRouter et Portkey/Prisma AIRS comme passerelles API LLM : tarifs reels, options d\'auto-hebergement, controle du failover et l\'acquisition par Palo Alto qui a change la categorie de Portkey. Verifie en aout 2026.',
+      description: 'Comparatif de LiteLLM, OpenRouter et Portkey/Prisma AIRS comme passerelles API LLM : tarifs reels, options d\'auto-hebergement, controle du failover et les rachats — Palo Alto Networks acquiert Portkey, Stripe aurait annonce le rachat d\'OpenRouter — qui ont change la categorie des deux fournisseurs heberges. Verifie en aout 2026.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/fr/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2122,6 +2162,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'OpenRouter est-il encore une entreprise independante ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Stripe aurait annonce en aout 2026 le rachat d\'OpenRouter, dans une operation evaluee a plus de 7 milliards de dollars. Aucun changement de tarifs, de commissions ou de produit n\'a ete annonce a ce jour, mais — comme pour Portkey ci-dessus — considerez la feuille de route et les conditions d\'OpenRouter comme susceptibles d\'evoluer avec l\'integration, et faites confirmer les tarifs actuels directement aupres d\'OpenRouter avant de budgeter sur cette base.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'Quelle passerelle prend en charge le plus de fournisseurs ?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -2162,7 +2210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'Meilleur choix global — proxy open source gratuit et auto-heberge, plus de 100 API de fournisseurs, aucune majoration par requete' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Meilleure passerelle sans configuration — plus de 380 modeles avec une cle API, commission d\'environ 5,5 % sur le credit' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Meilleure passerelle sans configuration — plus de 380 modeles avec une cle API, commission d\'environ 5,5 % sur le credit ; rachat par Stripe annonce en aout 2026, non confirme officiellement' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'Achat securite d\'entreprise — offre Production a 49 $/mois, desormais integree a Prisma AIRS de Palo Alto Networks' },
       ],
     },
@@ -2179,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Desenvolvedores que criam aplicações LLM multimodelo',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 min de leitura',
     primaryTerm: 'gateway de API LLM',
     targetKeywords: [
@@ -2189,18 +2237,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'proxy LLM auto-hospedado',
       'taxas OpenRouter',
     ],
-    leadAnswerBlock: '**O LiteLLM é o melhor gateway de API LLM para a maioria dos desenvolvedores em 2026: o proxy open source é gratuito, auto-hospedado e roteia mais de 100 APIs de provedores por uma única interface compatível com OpenAI, sem acréscimo por requisição. O OpenRouter é a melhor escolha se você quer mais de 380 modelos hoje sem nenhuma infraestrutura — em troca, cobra cerca de 5,5% sobre compras de saldo via Stripe. O Portkey não é mais um gateway independente: a Palo Alto Networks concluiu a aquisição em 29 de maio de 2026 e está integrando-o à plataforma de segurança Prisma AIRS.**',
+    leadAnswerBlock: '**O LiteLLM é o melhor gateway de API LLM para a maioria dos desenvolvedores em 2026: o proxy open source é gratuito, auto-hospedado e roteia mais de 100 APIs de provedores por uma única interface compatível com OpenAI, sem acréscimo por requisição. O OpenRouter é a melhor escolha se você quer mais de 380 modelos hoje sem nenhuma infraestrutura — em troca, cobra cerca de 5,5% sobre compras de saldo via Stripe. O Portkey não é mais um gateway independente: a Palo Alto Networks concluiu a aquisição em 29 de maio de 2026 e está integrando-o à plataforma de segurança Prisma AIRS. O próprio OpenRouter também deixou de ser independente: segundo veículos de imprensa, a Stripe anunciou em agosto de 2026 a aquisição, em uma operação avaliada em mais de US$ 7 bilhões, ainda não confirmada oficialmente por nenhuma das duas empresas.**',
     quickAnswerTop: {
       question: 'Qual é o melhor gateway de API LLM em 2026?',
-      answer: '**O LiteLLM vence para times que conseguem operar um serviço; o OpenRouter para os que não conseguem.** O núcleo open source do LiteLLM não custa nada independentemente do volume e mantém a lógica de roteamento e a residência dos dados sob seu controle. O OpenRouter elimina todo o trabalho de infraestrutura e cobra ~5,5% sobre compras de saldo via Stripe (5% em cripto), mais uma taxa BYOK de 5% acima da franquia gratuita. O Portkey só existe hoje como o gateway de IA dentro do Prisma AIRS da Palo Alto Networks — avalie-o como uma compra de segurança corporativa, não como uma ferramenta leve.',
+      answer: '**O LiteLLM vence para times que conseguem operar um serviço; o OpenRouter para os que não conseguem.** O núcleo open source do LiteLLM não custa nada independentemente do volume e mantém a lógica de roteamento e a residência dos dados sob seu controle. O OpenRouter elimina todo o trabalho de infraestrutura e cobra ~5,5% sobre compras de saldo via Stripe (5% em cripto), mais uma taxa BYOK de 5% acima da franquia gratuita — e estaria sendo adquirido pela própria Stripe, segundo veículos de imprensa, em uma operação avaliada em mais de US$ 7 bilhões (anunciada em agosto de 2026). O Portkey só existe hoje como o gateway de IA dentro do Prisma AIRS da Palo Alto Networks — avalie-o como uma compra de segurança corporativa, não como uma ferramenta leve.',
       bullets: [
         '**Melhor no geral:** LiteLLM — gratuito, auto-hospedado, ~53,8 mil estrelas no GitHub, mais de 100 APIs de provedores',
-        '**Melhor sem configuração:** OpenRouter — mais de 380 modelos com uma única API key, taxa de ~5,5% sobre o saldo',
+        '**Melhor sem configuração:** OpenRouter — mais de 380 modelos com uma única API key, taxa de ~5,5% sobre o saldo, aquisição pela Stripe anunciada (não confirmada)',
         '**Compra de segurança corporativa:** Portkey / Prisma AIRS — US$ 49/mês no plano Production, agora da Palo Alto',
         '**Ponto de virada:** auto-hospedar vence assim que 5,5% do seu gasto mensal com modelos superar a conta de hospedagem do proxy',
         '⚠️ Nenhum dos três tem programa público de afiliados — todos os links aqui são links de produto',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'Resumo', anchor: 'tldr' },
@@ -2227,6 +2275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**O proxy open source do LiteLLM é gratuito em qualquer volume** — mais de 100 APIs de provedores atrás de um único endpoint compatível com OpenAI, com controle de gastos, orçamentos e rate limiting já no plano gratuito.',
           'O OpenRouter não cobra assinatura, mas fica com ~5,5% sobre compras de saldo via Stripe (mínimo US$ 0,80), 5% em cripto, mais taxa BYOK de 5% acima de US$ 25.000/mês (pagamento por uso) ou US$ 200.000/mês (corporativo).',
+          'Segundo veículos de imprensa, a Stripe anunciou em agosto de 2026 a aquisição do OpenRouter, em uma operação avaliada em mais de US$ 7 bilhões — nenhuma mudança de preço ou de produto foi anunciada até agora, mas trate o fornecedor como trataria qualquer empresa recém-adquirida.',
           'O Portkey foi adquirido pela Palo Alto Networks (concluída em 29 de maio de 2026) e está sendo integrado ao Prisma AIRS — trate-o agora como compra de segurança corporativa.',
           'O repositório do LiteLLM no GitHub tem ~53,8 mil estrelas e ~9,8 mil forks em agosto de 2026 — o sinal público de adoção mais claro entre os três.',
           'O OpenRouter lista mais de 380 modelos e é o caminho mais rápido entre o cadastro e uma chamada multimodelo funcionando.',
@@ -2371,7 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — melhor gateway sem configuração',
             tagline: 'Mais de 380 modelos com uma API key, nenhum servidor para operar',
-            verdict: 'O OpenRouter é o caminho mais rápido entre o zero e uma aplicação multimodelo funcionando: cadastre-se, pegue uma API key e chame no mesmo dia mais de 380 modelos listados. Não há assinatura — a taxa incide sobre a recarga da conta, em torno de 5,5% sobre compras de saldo via Stripe (mínimo US$ 0,80) ou 5% em cripto. A taxa BYOK de 5% só vale acima de US$ 25.000 de gasto mensal roteado por BYOK (pagamento por uso) ou US$ 200.000 (plano corporativo), então uso leve não paga nada a mais ali. O failover é automático, mas no nível da plataforma: se um provedor falha, o OpenRouter pode rotear para um modelo equivalente sem que você configure a cadeia.',
+            verdict: 'O OpenRouter é o caminho mais rápido entre o zero e uma aplicação multimodelo funcionando: cadastre-se, pegue uma API key e chame no mesmo dia mais de 380 modelos listados. Não há assinatura — a taxa incide sobre a recarga da conta, em torno de 5,5% sobre compras de saldo via Stripe (mínimo US$ 0,80) ou 5% em cripto. A taxa BYOK de 5% só vale acima de US$ 25.000 de gasto mensal roteado por BYOK (pagamento por uso) ou US$ 200.000 (plano corporativo), então uso leve não paga nada a mais ali. O failover é automático, mas no nível da plataforma: se um provedor falha, o OpenRouter pode rotear para um modelo equivalente sem que você configure a cadeia. O próprio OpenRouter teria mudado de dono em 2026: a Stripe anunciou em agosto a aquisição, em uma operação avaliada em mais de US$ 7 bilhões, informação ainda não confirmada oficialmente por nenhuma das duas empresas. Até agora nenhuma mudança de preço ou de API foi anunciada, mas a mesma cautela de reverificação que vale para o Portkey abaixo agora vale aqui também.',
             pros: [
               'Nenhuma infraestrutura — uma API key é toda a configuração',
               'Mais de 380 modelos listados, muito além do que você integraria manualmente',
@@ -2382,6 +2431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'A taxa de ~5,5% se acumula e fica cara em volume alto',
               'O rate limiting é global, no nível da conta, e não configurável por você',
               'Menos controle sobre qual provedor atende uma requisição que falhou — um problema sob regras estritas de residência de dados',
+              'Não é mais independente — a Stripe teria anunciado a aquisição do OpenRouter em 2026, e preços e roadmap podem mudar conforme a integração avança',
             ],
             affiliateLinks: [
               {
@@ -2556,6 +2606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'O LiteLLM é realmente gratuito?', a: 'O núcleo open source é gratuito e auto-hospedado, sem custo de licença, conforme a própria página de preços do LiteLLM em agosto de 2026. Não há acréscimo por requisição em nenhum volume. O plano Enterprise — SSO, SCIM, suporte dedicado e implantação isolada de rede — tem preço anual sob consulta conforme o volume de requisições e inclui teste de 30 dias.' },
             { q: 'O OpenRouter cobra por requisição?', a: 'Não diretamente. A taxa do OpenRouter incide sobre a recarga da conta: cerca de 5,5% sobre compras de saldo via Stripe, com mínimo de US$ 0,80, ou 5% em cripto. Uma taxa BYOK separada de 5% se aplica apenas quando o gasto mensal roteado por BYOK ultrapassa US$ 25.000 no pagamento por uso, ou US$ 200.000 no plano corporativo.' },
             { q: 'O Portkey ainda é uma empresa independente?', a: 'Não. A Palo Alto Networks concluiu a aquisição do Portkey em 29 de maio de 2026 e o está integrando como gateway de IA central da sua plataforma de segurança Prisma AIRS, conforme o comunicado da própria Palo Alto Networks. Trate qualquer informação de preço ou roadmap anterior a maio de 2026 como potencialmente defasada.' },
+            { q: 'O OpenRouter ainda é uma empresa independente?', a: 'Não. Segundo veículos de imprensa, a Stripe anunciou em agosto de 2026 a aquisição do OpenRouter, em uma operação avaliada em mais de US$ 7 bilhões. Até agora nenhuma mudança de preços, taxas ou produto foi anunciada como resultado, mas — assim como no caso do Portkey acima — trate o roadmap e as condições do OpenRouter como potencialmente sujeitos a mudança conforme a integração avança, e confirme os preços atuais diretamente com o OpenRouter antes de orçar com base neles.' },
             { q: 'Qual gateway suporta mais provedores?', a: 'O OpenRouter lista mais de 380 modelos no próprio site em agosto de 2026. A documentação do LiteLLM descreve mais de 100 integrações de provedores — uma unidade diferente, já que um provedor expõe muitos modelos. O repositório do Portkey já anunciou mais de 1.600 LLMs, número que deveria ser reverificado após a aquisição.' },
             { q: 'Posso auto-hospedar o Portkey?', a: 'O Portkey/Prisma AIRS oferecia implantação em nuvem privada no plano Enterprise conforme as páginas de preços anteriores à aquisição. Confirme as condições atuais de auto-hospedagem diretamente com a Palo Alto Networks, já que integrações pós-aquisição costumam mudar as opções de implantação no primeiro ano.' },
             { q: 'Algum dos três tem programa de afiliados?', a: 'Nenhum programa público e verificável de afiliados ou indicação foi encontrado para LiteLLM, Portkey ou OpenRouter em agosto de 2026. Todos os links de produto desta página são links simples e declarados que não rendem nada à PromptQuorum. Se isso mudar, a página será atualizada com uma divulgação compatível com os termos reais do programa.' },
@@ -2583,6 +2634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'Documentação de limites da API do OpenRouter', description: 'Limites de taxa do plano gratuito e regras de acesso baseado em saldo.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks conclui a aquisição do Portkey', description: 'Data de conclusão da aquisição e plano de integração ao Prisma AIRS.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway no GitHub', description: 'Repositório open source do gateway e números declarados de provedores.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Cobertura da aquisição do OpenRouter pela Stripe, valor da operação e motivação declarada.' },
         ],
       },
       relatedReading: {
@@ -2600,9 +2652,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: melhor gateway LLM 2026',
-      description: 'Comparativo de LiteLLM, OpenRouter e Portkey/Prisma AIRS como gateways de API LLM: preços reais, opções de auto-hospedagem, controle de failover e a aquisição pela Palo Alto que mudou a categoria do Portkey.',
+      description: 'Comparativo de LiteLLM, OpenRouter e Portkey/Prisma AIRS como gateways de API LLM: preços reais, opções de auto-hospedagem, controle de failover e as aquisições — Palo Alto Networks compra o Portkey, Stripe teria anunciado a aquisição do OpenRouter, segundo a imprensa — que mudaram a categoria dos dois fornecedores hospedados.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/pt/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -2659,6 +2711,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'O OpenRouter ainda é uma empresa independente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Segundo veículos de imprensa, a Stripe anunciou em agosto de 2026 a aquisição do OpenRouter, em uma operação avaliada em mais de US$ 7 bilhões. Até agora nenhuma mudança de preços, taxas ou produto foi anunciada como resultado, mas — assim como no caso do Portkey acima — trate o roadmap e as condições do OpenRouter como potencialmente sujeitos a mudança conforme a integração avança, e confirme os preços atuais diretamente com o OpenRouter antes de orçar com base neles.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'Qual gateway suporta mais provedores?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -2699,7 +2759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'Melhor no geral — proxy open source gratuito e auto-hospedado, mais de 100 APIs de provedores, sem acréscimo por requisição' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Melhor gateway sem configuração — mais de 380 modelos com uma API key, taxa de ~5,5% sobre o saldo creditado' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'Melhor gateway sem configuração — mais de 380 modelos com uma API key, taxa de ~5,5% sobre o saldo creditado; a Stripe teria anunciado a aquisição em agosto de 2026, ainda não confirmada oficialmente' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'Compra de segurança corporativa — plano Production de US$ 49/mês, agora parte do Prisma AIRS da Palo Alto Networks' },
       ],
     },
@@ -2716,7 +2776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'マルチモデルLLMアプリケーションを構築する開発者',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11分で読める',
     primaryTerm: 'LLM APIゲートウェイ',
     targetKeywords: [
@@ -2726,18 +2786,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'セルフホスト LLMプロキシ',
       'OpenRouter 手数料',
     ],
-    leadAnswerBlock: '**2026年、ほとんどの開発者にとって最適なLLM APIゲートウェイはLiteLLMです。オープンソースのプロキシは無料・セルフホストで、100以上のプロバイダーAPIを単一のOpenAI互換インターフェース経由でルーティングし、リクエストごとの上乗せがありません。インフラを一切用意せず今日から380以上のモデルを使いたい場合はOpenRouterが最適で、その代わりStripeでのクレジット購入に約5.5%がかかります。Portkeyはすでに独立したゲートウェイではありません。Palo Alto Networksが2026年5月29日に買収を完了し、セキュリティ基盤Prisma AIRSへ統合を進めています。**',
+    leadAnswerBlock: '**2026年、ほとんどの開発者にとって最適なLLM APIゲートウェイはLiteLLMです。オープンソースのプロキシは無料・セルフホストで、100以上のプロバイダーAPIを単一のOpenAI互換インターフェース経由でルーティングし、リクエストごとの上乗せがありません。インフラを一切用意せず今日から380以上のモデルを使いたい場合はOpenRouterが最適で、その代わりStripeでのクレジット購入に約5.5%がかかります。Portkeyはすでに独立したゲートウェイではありません。Palo Alto Networksが2026年5月29日に買収を完了し、セキュリティ基盤Prisma AIRSへ統合を進めています。OpenRouter自体もすでに独立していません。Stripeが2026年8月に70億ドル超の規模で買収を発表したと報じられていますが、両社とも公式には確認していません。**',
     quickAnswerTop: {
       question: '2026年に最適なLLM APIゲートウェイはどれですか？',
-      answer: '**サービスを運用できるチームにはLiteLLM、運用できないチームにはOpenRouterが向きます。** LiteLLMのオープンソース中核は利用量にかかわらず無料で、ルーティングロジックとデータ所在地を自社の管理下に保てます。OpenRouterはインフラ作業を完全に不要にする代わり、Stripeでのクレジット購入に約5.5%（暗号資産では5%）、さらに無料枠を超えた分に5%のBYOK手数料を課します。PortkeyはPalo Alto NetworksのPrisma AIRS内のAIゲートウェイとしてのみ提供されており、軽量ツールではなくエンタープライズ・セキュリティ製品として評価してください。',
+      answer: '**サービスを運用できるチームにはLiteLLM、運用できないチームにはOpenRouterが向きます。** LiteLLMのオープンソース中核は利用量にかかわらず無料で、ルーティングロジックとデータ所在地を自社の管理下に保てます。OpenRouterはインフラ作業を完全に不要にする代わり、Stripeでのクレジット購入に約5.5%（暗号資産では5%）、さらに無料枠を超えた分に5%のBYOK手数料を課します。そのOpenRouter自体も、70億ドル超と報じられる規模でStripeに買収される途上にあるとされています（2026年8月に報道されたが未確認）。PortkeyはPalo Alto NetworksのPrisma AIRS内のAIゲートウェイとしてのみ提供されており、軽量ツールではなくエンタープライズ・セキュリティ製品として評価してください。',
       bullets: [
         '**総合最良：** LiteLLM — 無料・セルフホスト、GitHubスター約57.5k、100以上のプロバイダーAPI',
-        '**設定不要で最良：** OpenRouter — APIキー1つで380以上のモデル、クレジットに約5.5%の手数料',
+        '**設定不要で最良：** OpenRouter — APIキー1つで380以上のモデル、クレジットに約5.5%の手数料、Stripeによる買収が報じられている（未確認）',
         '**エンタープライズ・セキュリティ購入：** Portkey / Prisma AIRS — Production版は月額49ドル、現在はPalo Alto傘下',
         '**損益分岐点：** 月間モデル費用の5.5%がプロキシのホスティング費用を上回った時点でセルフホストが有利',
         '⚠️ 3社とも公開されたアフィリエイト／紹介プログラムはありません。本記事のリンクはすべて通常の製品リンクです',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: '要点', anchor: 'tldr' },
@@ -2764,6 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**LiteLLMのオープンソース・プロキシは利用量にかかわらず無料** — 単一のOpenAI互換エンドポイントの背後に100以上のプロバイダーAPIを置き、支出追跡・予算・レート制限まで無料枠に含まれます。',
           'OpenRouterはサブスクリプション不要ですが、Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産で5%、さらに月額25,000ドル（従量課金）または200,000ドル（エンタープライズ）を超える分に5%のBYOK手数料がかかります。',
+          'Stripeは2026年8月、OpenRouterの買収を発表したと報じられています（両社とも公式には確認していません）。規模は70億ドル超と報じられています。今のところ価格や製品面の変更は発表されていませんが、買収されたばかりのベンダーとして扱ってください。',
           'PortkeyはPalo Alto Networksに買収され（2026年5月29日完了）、Prisma AIRSへ統合されています。現在はエンタープライズ・セキュリティ購入として扱ってください。',
           'LiteLLMのGitHubリポジトリは2026年8月時点でスター約57.5k、フォーク約11.0k — 3者の中で最も明確な普及シグナルです。',
           'OpenRouterは380以上のモデルを掲載しており、登録からマルチモデル呼び出しの動作までが最短です。',
@@ -2908,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — 設定不要で最良のゲートウェイ',
             tagline: 'APIキー1つで380以上のモデル、運用するサーバーはゼロ',
-            verdict: 'OpenRouterは、ゼロの状態から動くマルチモデル・アプリケーションまでが最短の経路です。登録してAPIキーを取得すれば、その日のうちに掲載された380以上のモデルを呼び出せます。サブスクリプションはなく、手数料はアカウントへの入金にかかります。Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。5%のBYOK手数料は、BYOK経由の月間支出が25,000ドル（従量課金）または200,000ドル（エンタープライズ）を超えて初めて発生するため、軽い利用では追加費用は生じません。フェイルオーバーは自動ですがプラットフォーム側の処理で、プロバイダーがエラーを返すと、こちらでチェーンを設定しなくても同等モデルへ振り替えられます。',
+            verdict: 'OpenRouterは、ゼロの状態から動くマルチモデル・アプリケーションまでが最短の経路です。登録してAPIキーを取得すれば、その日のうちに掲載された380以上のモデルを呼び出せます。サブスクリプションはなく、手数料はアカウントへの入金にかかります。Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。5%のBYOK手数料は、BYOK経由の月間支出が25,000ドル（従量課金）または200,000ドル（エンタープライズ）を超えて初めて発生するため、軽い利用では追加費用は生じません。フェイルオーバーは自動ですがプラットフォーム側の処理で、プロバイダーがエラーを返すと、こちらでチェーンを設定しなくても同等モデルへ振り替えられます。OpenRouter自体も2026年に資本が変わりました。Stripeが8月に買収を発表し、規模は70億ドル超と報じられています。今のところ価格やAPIの変更は発表されていませんが、下のPortkeyについて述べているのと同じ再確認の慎重さが、いまやここにも当てはまります。',
             pros: [
               'インフラは一切不要 — APIキーがあれば準備は完了',
               '掲載モデルは380以上。手作業で統合できる数をはるかに超える',
@@ -2919,6 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '約5.5%の手数料は積み上がり、利用量が大きいと高くつく',
               'レート制限はアカウント単位でグローバル、利用者側では設定できない',
               '失敗したリクエストをどのプロバイダーが処理するかの制御が弱く、厳格なデータ所在地要件では問題になる',
+              'すでに独立ではない — Stripeが2026年にOpenRouterの買収を発表しており、統合が進むにつれ価格やロードマップが変わる可能性がある',
             ],
             affiliateLinks: [
               {
@@ -3093,6 +3155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'LiteLLMは本当に無料ですか？', a: '2026年8月時点のLiteLLM公式の価格ページによれば、オープンソース中核は無料かつセルフホストで、ライセンス費用はかかりません。どの利用量でもリクエストごとの上乗せはありません。SSO、SCIM、専任サポート、エアギャップ導入を含むEnterpriseは、リクエスト量に応じた年額の個別見積もりで、30日間の試用が付きます。' },
             { q: 'OpenRouterはリクエストごとに課金しますか？', a: '直接には課金しません。OpenRouterの手数料はアカウントへの入金にかかり、Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。別枠の5%のBYOK手数料は、BYOK経由の月間支出が従量課金で25,000ドル、エンタープライズで200,000ドルを超えた場合にのみ適用されます。' },
             { q: 'Portkeyはまだ独立企業ですか？', a: 'いいえ。Palo Alto Networks自身のプレスリリースによれば、同社は2026年5月29日にPortkeyの買収を完了し、セキュリティ基盤Prisma AIRSの中核AIゲートウェイとして統合を進めています。2026年5月より前の価格やロードマップの情報は、古くなっている可能性があるものとして扱ってください。' },
+            { q: 'OpenRouterはまだ独立企業ですか？', a: 'いいえ。Stripeは2026年8月、OpenRouterの買収を発表したと報じられています（両社とも公式には確認していません）。規模は70億ドル超と報じられています。今のところ価格・手数料・製品面での変更は発表されていませんが、上のPortkeyの場合と同様、統合が進むにつれてOpenRouterのロードマップや条件も変わり得るものとして扱い、予算を組む前に最新の価格をOpenRouter自身に直接確認してください。' },
             { q: '最も多くのプロバイダーに対応しているのはどれですか？', a: 'OpenRouterは2026年8月時点で自社サイトに380以上のモデルを掲載しています。LiteLLMのドキュメントは100以上のプロバイダー統合を挙げていますが、1つのプロバイダーが多数のモデルを提供するため、単位が異なります。Portkeyのゲートウェイ・リポジトリは以前1,600以上のLLMを掲げていましたが、買収を踏まえて再確認すべき数字です。' },
             { q: 'Portkeyをセルフホストできますか？', a: '買収前の価格ページによれば、Portkey/Prisma AIRSはEnterpriseプランでプライベートクラウド導入を提供していました。買収後の統合では初年度に導入形態が変わることが多いため、現行のセルフホスト条件はPalo Alto Networksに直接確認してください。' },
             { q: '3社のいずれかにアフィリエイト・プログラムはありますか？', a: '2026年8月時点で、LiteLLM、Portkey、OpenRouterのいずれについても、公開され確認可能なアフィリエイトや紹介プログラムは見つかりませんでした。本ページの製品リンクはすべて、PromptQuorumに収益をもたらさない通常の開示済みリンクです。状況が変われば、実際のプログラム条件に沿った開示を加えて本ページを更新します。' },
@@ -3120,6 +3183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'OpenRouter APIの上限に関するドキュメント', description: '無料枠のレート制限とクレジットベースのアクセス規則。' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto NetworksによるPortkey買収完了の発表', description: '買収完了日とPrisma AIRSへの統合方針。' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'GitHub上のPortkey-AI/gateway', description: 'オープンソースのゲートウェイ・リポジトリとプロバイダー数の記載。' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'StripeによるOpenRouter買収に関する報道。買収規模と表明された狙い。' },
         ],
       },
       relatedReading: {
@@ -3137,9 +3201,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey：最適なLLMゲートウェイ 2026',
-      description: 'LLM APIゲートウェイとしてのLiteLLM、OpenRouter、Portkey/Prisma AIRSの比較。実際の価格、セルフホストの選択肢、フェイルオーバー制御、そしてPortkeyのカテゴリーを変えたPalo Altoによる買収。',
+      description: 'LLM APIゲートウェイとしてのLiteLLM、OpenRouter、Portkey/Prisma AIRSの比較。実際の価格、セルフホストの選択肢、フェイルオーバー制御、そして両ホスト型ベンダーのカテゴリーを変えた買収——Palo Alto NetworksによるPortkey買収と、StripeによるOpenRouter買収の発表。',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/ja/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3196,6 +3260,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'OpenRouterはまだ独立企業ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。Stripeは2026年8月、OpenRouterの買収を発表したと報じられています（両社とも公式には確認していません）。規模は70億ドル超と報じられています。今のところ価格・手数料・製品面での変更は発表されていませんが、上のPortkeyの場合と同様、統合が進むにつれてOpenRouterのロードマップや条件も変わり得るものとして扱い、予算を組む前に最新の価格をOpenRouter自身に直接確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '最も多くのプロバイダーに対応しているのはどれですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -3236,7 +3308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: '総合最良 — 無料でセルフホストのオープンソース・プロキシ、100以上のプロバイダーAPI、リクエストごとの上乗せなし' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '設定不要で最良のゲートウェイ — APIキー1つで380以上のモデル、入金額に約5.5%の手数料' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '設定不要で最良のゲートウェイ — APIキー1つで380以上のモデル、入金額に約5.5%の手数料。2026年8月にStripeによる買収を発表' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'エンタープライズ・セキュリティ購入 — Production版は月額49ドル、現在はPalo Alto NetworksのPrisma AIRSの一部' },
       ],
     },
@@ -3253,7 +3325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '构建多模型LLM应用的开发者',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '阅读约11分钟',
     primaryTerm: 'LLM API网关',
     targetKeywords: [
@@ -3263,18 +3335,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '自托管LLM代理',
       'OpenRouter 手续费',
     ],
-    leadAnswerBlock: '**2026年，对多数开发者而言最佳的LLM API网关是LiteLLM：其开源代理免费、可自托管，通过一个兼容OpenAI的接口路由100多个提供方API，且不对每次请求加价。如果你想今天就用上380多个模型且完全不搭建基础设施，OpenRouter是更好的选择，代价是通过Stripe充值时约收取5.5%。Portkey已不再是独立网关：Palo Alto Networks于2026年5月29日完成收购，正将其并入Prisma AIRS安全平台。**',
+    leadAnswerBlock: '**2026年，对多数开发者而言最佳的LLM API网关是LiteLLM：其开源代理免费、可自托管，通过一个兼容OpenAI的接口路由100多个提供方API，且不对每次请求加价。如果你想今天就用上380多个模型且完全不搭建基础设施，OpenRouter是更好的选择，代价是通过Stripe充值时约收取5.5%。Portkey已不再是独立网关：Palo Alto Networks于2026年5月29日完成收购，正将其并入Prisma AIRS安全平台。OpenRouter自己同样不再独立：据媒体报道，Stripe于2026年8月宣布收购OpenRouter（双方均未正式确认），交易规模据报超过70亿美元。**',
     quickAnswerTop: {
       question: '2026年最佳的LLM API网关是哪一个？',
-      answer: '**能运维一个服务的团队选LiteLLM，不能的选OpenRouter。** LiteLLM的开源核心无论用量多大都不收费，并把路由逻辑与数据驻留留在你自己手中。OpenRouter免去全部基础设施工作，代价是对Stripe充值收取约5.5%（加密货币5%），以及超出免费额度后5%的BYOK费用。Portkey如今只作为Palo Alto Networks旗下Prisma AIRS平台内的AI网关提供——请把它当作企业安全采购来评估，而不是一款轻量工具。',
+      answer: '**能运维一个服务的团队选LiteLLM，不能的选OpenRouter。** LiteLLM的开源核心无论用量多大都不收费，并把路由逻辑与数据驻留留在你自己手中。OpenRouter免去全部基础设施工作，代价是对Stripe充值收取约5.5%（加密货币5%），以及超出免费额度后5%的BYOK费用——据媒体报道，它自己也正被Stripe收购，交易规模据报超过70亿美元（2026年8月报道，双方均未正式确认）。Portkey如今只作为Palo Alto Networks旗下Prisma AIRS平台内的AI网关提供——请把它当作企业安全采购来评估，而不是一款轻量工具。',
       bullets: [
         '**综合最佳：** LiteLLM — 免费、自托管，GitHub约5.75万星，100多个提供方API',
-        '**零配置最佳：** OpenRouter — 一个API密钥即可调用380多个模型，充值约收5.5%',
+        '**零配置最佳：** OpenRouter — 一个API密钥即可调用380多个模型，充值约收5.5%，据报道正被Stripe收购（未正式确认）',
         '**企业安全采购：** Portkey / Prisma AIRS — Production版每月49美元，现属Palo Alto',
         '**盈亏平衡点：** 当每月模型支出的5.5%超过你的代理托管费用时，自托管更划算',
         '⚠️ 三家均无公开的联盟或推荐计划——本文所有链接均为普通产品链接',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: '核心要点', anchor: 'tldr' },
@@ -3301,6 +3373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**LiteLLM的开源代理在任何用量下都免费** — 一个兼容OpenAI的端点背后接入100多个提供方API，支出跟踪、预算和限流都包含在免费版中。',
           'OpenRouter不收订阅费，但对Stripe充值收取约5.5%（最低0.80美元）、加密货币5%，并在每月超过25,000美元（按量付费）或200,000美元（企业版）后收取5%的BYOK费用。',
+          '据媒体报道，Stripe于2026年8月宣布收购OpenRouter（双方均未正式确认），交易规模据报超过70亿美元——目前尚未宣布任何价格或产品变动，但应把它当作一家刚被收购的供应商来看待。',
           'Portkey已被Palo Alto Networks收购（2026年5月29日完成），正并入Prisma AIRS——现在请把它当作企业安全采购。',
           '截至2026年8月，LiteLLM的GitHub仓库约有5.75万星和1.1万个分支，是三者中最清晰的公开采用信号。',
           'OpenRouter列出380多个模型，是从注册到跑通多模型调用最快的路径。',
@@ -3445,7 +3518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — 零配置的最佳网关',
             tagline: '一个API密钥调用380多个模型，无需运维任何服务器',
-            verdict: 'OpenRouter是从零到跑通一个多模型应用最快的路径：注册、拿到API密钥，当天就能调用其列出的380多个模型。这里没有订阅费——费用发生在给账户充值时，通过Stripe购买额度约收5.5%（最低0.80美元），用加密货币则为5%。5%的BYOK费用只有在每月经BYOK路由的支出超过25,000美元（按量付费）或200,000美元（企业版）后才开始计收，因此轻度使用不会产生额外费用。故障转移是自动的，但发生在平台层：某个提供方报错时，OpenRouter可以在你不配置任何链路的情况下转到等效模型。',
+            verdict: 'OpenRouter是从零到跑通一个多模型应用最快的路径：注册、拿到API密钥，当天就能调用其列出的380多个模型。这里没有订阅费——费用发生在给账户充值时，通过Stripe购买额度约收5.5%（最低0.80美元），用加密货币则为5%。5%的BYOK费用只有在每月经BYOK路由的支出超过25,000美元（按量付费）或200,000美元（企业版）后才开始计收，因此轻度使用不会产生额外费用。故障转移是自动的，但发生在平台层：某个提供方报错时，OpenRouter可以在你不配置任何链路的情况下转到等效模型。OpenRouter自己在2026年也据报易主了：据媒体报道，Stripe于8月宣布收购，交易规模据报超过70亿美元，但双方均未正式确认。目前尚未因此宣布任何价格或API变动，但下文对Portkey的那份复核提醒，如今同样适用于OpenRouter。',
             pros: [
               '完全无需基础设施——一个API密钥就是全部准备工作',
               '列出380多个模型，远超你手工能对接的数量',
@@ -3456,6 +3529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '约5.5%的费用会累积，用量大时开销可观',
               '限流是账户级全局设置，用户无法自行配置',
               '对由哪个提供方处理失败请求控制较弱——在严格的数据驻留要求下会成为问题',
+              '不再独立——据报道Stripe已于2026年宣布收购OpenRouter，随着整合推进，价格与路线图可能发生变化',
             ],
             affiliateLinks: [
               {
@@ -3630,6 +3704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'LiteLLM真的免费吗？', a: '根据LiteLLM自家价格页在2026年8月的说明，开源核心免费且可自托管，没有许可费用，任何用量下也不对每次请求加价。Enterprise档位（SSO、SCIM、专属支持、气隙部署）按你的请求量以年度定制报价，并包含30天试用。' },
             { q: 'OpenRouter按请求收费吗？', a: '并非直接按请求收费。OpenRouter的费用发生在给账户充值时：通过Stripe购买额度约收5.5%，最低0.80美元；用加密货币则为5%。另有5%的BYOK费用，仅当每月经BYOK路由的支出在按量付费下超过25,000美元、或在企业版下超过200,000美元时才适用。' },
             { q: 'Portkey还是一家独立公司吗？', a: '不是。根据Palo Alto Networks自己的新闻稿，该公司已于2026年5月29日完成对Portkey的收购，并正将其作为核心AI网关并入Prisma AIRS安全平台。请把2026年5月之前的任何价格或路线图信息视为可能已经过时。' },
+            { q: 'OpenRouter还是一家独立公司吗？', a: '不是。据媒体报道，Stripe于2026年8月宣布收购OpenRouter（双方均未正式确认），交易规模据报超过70亿美元。目前尚未因此宣布任何价格、费率或产品变动，但与上文的Portkey一样，应将OpenRouter的路线图与条款视为可能随整合推进而改变，在据此做预算之前，请直接向OpenRouter确认当前价格。' },
             { q: '哪个网关支持的提供方最多？', a: '截至2026年8月，OpenRouter在自家网站上列出380多个模型。LiteLLM的文档描述了100多个提供方集成——这是不同的计量单位，因为一个提供方会暴露许多模型。Portkey的网关仓库此前曾宣称超过1,600个LLM，但考虑到此次收购，这个数字应当重新核实。' },
             { q: '可以自托管Portkey吗？', a: '根据收购前的价格页，Portkey/Prisma AIRS在Enterprise档位提供私有云部署。请直接向Palo Alto Networks确认当前的自托管条款，因为收购后的整合常常在第一年内改变部署选项。' },
             { q: '这三家有联盟计划吗？', a: '截至2026年8月，未发现LiteLLM、Portkey或OpenRouter有公开且可核查的联盟或推荐计划。本页所有产品链接都是普通的、已声明的链接，不会为PromptQuorum带来任何收益。若情况变化，本页会更新为与实际计划条款一致的披露说明。' },
@@ -3657,6 +3732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'OpenRouter API限制文档', description: '免费档的限流规则与基于额度的访问规则。' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks完成对Portkey的收购', description: '收购完成日期与并入Prisma AIRS的整合计划。' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'GitHub上的Portkey-AI/gateway', description: '开源网关仓库及其宣称的提供方数量。' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: '关于Stripe收购OpenRouter的报道，含交易规模与公开说明的动机。' },
         ],
       },
       relatedReading: {
@@ -3674,9 +3750,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey：2026年最佳LLM网关',
-      description: '把LiteLLM、OpenRouter与Portkey/Prisma AIRS作为LLM API网关进行对比：真实价格、自托管选项、故障转移控制，以及改变了Portkey品类的Palo Alto收购案。',
+      description: '把LiteLLM、OpenRouter与Portkey/Prisma AIRS作为LLM API网关进行对比：真实价格、自托管选项、故障转移控制，以及改变了两家托管厂商品类的收购案——Palo Alto Networks收购Portkey，以及据报道Stripe收购OpenRouter（未正式确认）。',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/zh/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -3733,6 +3809,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'OpenRouter还是一家独立公司吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不是。据媒体报道，Stripe于2026年8月宣布收购OpenRouter（双方均未正式确认），交易规模据报超过70亿美元。目前尚未因此宣布任何价格、费率或产品变动，但与上文的Portkey一样，应将OpenRouter的路线图与条款视为可能随整合推进而改变，在据此做预算之前，请直接向OpenRouter确认当前价格。',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '哪个网关支持的提供方最多？',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -3773,7 +3857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: '综合最佳 — 免费、可自托管的开源代理，100多个提供方API，不按请求加价' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '零配置最佳网关 — 一个API密钥调用380多个模型，充值约收5.5%' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '零配置最佳网关 — 一个API密钥调用380多个模型，充值约收5.5%；据报道Stripe于2026年8月宣布收购（未正式确认）' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: '企业安全采购 — Production版每月49美元，现为Palo Alto Networks Prisma AIRS的一部分' },
       ],
     },
@@ -3790,7 +3874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'المطوّرون الذين يبنون تطبيقات LLM متعددة النماذج',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11 دقائق للقراءة',
     primaryTerm: 'بوابة API لنماذج LLM',
     targetKeywords: [
@@ -3800,18 +3884,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'وكيل LLM ذاتي الاستضافة',
       'رسوم OpenRouter',
     ],
-    leadAnswerBlock: '**‏LiteLLM هو أفضل بوابة API لنماذج LLM لمعظم المطوّرين في 2026: الوكيل مفتوح المصدر مجاني وذاتي الاستضافة، ويوجّه أكثر من 100 واجهة برمجية لمزوّدين عبر واجهة واحدة متوافقة مع OpenAI، دون أي هامش إضافي لكل طلب. أما OpenRouter فهو الخيار الأفضل إن أردت الوصول اليوم إلى أكثر من 380 نموذجاً بلا أي بنية تحتية، مقابل نحو 5.5% على مشتريات الرصيد عبر Stripe. ولم يعد Portkey بوابة مستقلة: أتمّت Palo Alto Networks الاستحواذ عليه في 29 مايو 2026 وتدمجه ضمن منصّة الأمن Prisma AIRS.**',
+    leadAnswerBlock: '**‏LiteLLM هو أفضل بوابة API لنماذج LLM لمعظم المطوّرين في 2026: الوكيل مفتوح المصدر مجاني وذاتي الاستضافة، ويوجّه أكثر من 100 واجهة برمجية لمزوّدين عبر واجهة واحدة متوافقة مع OpenAI، دون أي هامش إضافي لكل طلب. أما OpenRouter فهو الخيار الأفضل إن أردت الوصول اليوم إلى أكثر من 380 نموذجاً بلا أي بنية تحتية، مقابل نحو 5.5% على مشتريات الرصيد عبر Stripe. ولم يعد Portkey بوابة مستقلة: أتمّت Palo Alto Networks الاستحواذ عليه في 29 مايو 2026 وتدمجه ضمن منصّة الأمن Prisma AIRS. ولم يعد OpenRouter نفسه مستقلاً كذلك: أفادت تقارير إعلامية بأن Stripe أعلنت في أغسطس 2026 استحواذها عليه في صفقة قُدِّرت بأكثر من 7 مليارات دولار، لم تؤكّدها أي من الشركتين رسمياً.**',
     quickAnswerTop: {
       question: 'ما أفضل بوابة API لنماذج LLM في 2026؟',
-      answer: '**‏LiteLLM هو الأنسب للفرق القادرة على تشغيل خدمة، وOpenRouter للفرق غير القادرة على ذلك.** لا تكلّف نواة LiteLLM مفتوحة المصدر شيئاً مهما بلغ حجم الاستخدام، وتُبقي منطق التوجيه ومكان بقاء البيانات تحت سيطرتك. ويُلغي OpenRouter عمل البنية التحتية بالكامل مقابل نحو 5.5% على مشتريات الرصيد عبر Stripe (و5% عبر العملات الرقمية)، إضافة إلى رسوم BYOK بنسبة 5% فوق الحد المجاني. ولا يتوفّر Portkey اليوم إلا كبوابة ذكاء اصطناعي داخل منصّة Prisma AIRS التابعة لـPalo Alto Networks، فقيّمه بوصفه شراءً أمنياً مؤسسياً لا أداة خفيفة.',
+      answer: '**‏LiteLLM هو الأنسب للفرق القادرة على تشغيل خدمة، وOpenRouter للفرق غير القادرة على ذلك.** لا تكلّف نواة LiteLLM مفتوحة المصدر شيئاً مهما بلغ حجم الاستخدام، وتُبقي منطق التوجيه ومكان بقاء البيانات تحت سيطرتك. ويُلغي OpenRouter عمل البنية التحتية بالكامل مقابل نحو 5.5% على مشتريات الرصيد عبر Stripe (و5% عبر العملات الرقمية)، إضافة إلى رسوم BYOK بنسبة 5% فوق الحد المجاني — وهو نفسه بصدد استحواذ مُتداوَل من Stripe وفق تقارير إعلامية، في صفقة قُدِّرت بأكثر من 7 مليارات دولار (أُفيد بها في أغسطس 2026، دون تأكيد رسمي). ولا يتوفّر Portkey اليوم إلا كبوابة ذكاء اصطناعي داخل منصّة Prisma AIRS التابعة لـPalo Alto Networks، فقيّمه بوصفه شراءً أمنياً مؤسسياً لا أداة خفيفة.',
       bullets: [
         '**الأفضل إجمالاً:** LiteLLM — مجاني وذاتي الاستضافة، نحو 57.5 ألف نجمة على GitHub، وأكثر من 100 واجهة برمجية لمزوّدين',
-        '**الأفضل بلا إعداد:** OpenRouter — أكثر من 380 نموذجاً بمفتاح API واحد، برسوم نحو 5.5% على الرصيد',
+        '**الأفضل بلا إعداد:** OpenRouter — أكثر من 380 نموذجاً بمفتاح API واحد، برسوم نحو 5.5% على الرصيد، واستحواذ Stripe عليه متداول إعلامياً (غير مؤكَّد)',
         '**شراء أمني مؤسسي:** Portkey / Prisma AIRS — 49 دولاراً شهرياً لخطة Production، وهو الآن ضمن Palo Alto',
         '**نقطة التعادل:** تصبح الاستضافة الذاتية أوفر حين تتجاوز نسبة 5.5% من إنفاقك الشهري على النماذج فاتورة استضافة الوكيل',
         '⚠️ لا يملك أي من الثلاثة برنامج إحالة أو شراكة عامّاً — وكل الروابط هنا روابط منتج عادية',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: 'الخلاصة', anchor: 'tldr' },
@@ -3838,6 +3922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**وكيل LiteLLM مفتوح المصدر مجاني عند أي حجم استخدام** — أكثر من 100 واجهة برمجية لمزوّدين خلف نقطة نهاية واحدة متوافقة مع OpenAI، مع تتبّع الإنفاق والميزانيات وتحديد المعدّل ضمن الخطة المجانية.',
           'لا يفرض OpenRouter اشتراكاً، لكنه يقتطع نحو 5.5% على مشتريات الرصيد عبر Stripe (بحد أدنى 0.80 دولار)، و5% عبر العملات الرقمية، إضافة إلى رسوم BYOK بنسبة 5% فوق 25,000 دولار شهرياً (الدفع حسب الاستخدام) أو 200,000 دولار شهرياً (للمؤسسات).',
+          'أفادت تقارير إعلامية بأن Stripe أعلنت في أغسطس 2026 استحواذها على OpenRouter (لم تؤكّد أي من الشركتين ذلك رسمياً) في صفقة قُدِّرت بأكثر من 7 مليارات دولار — لم يُعلَن حتى الآن عن أي تغيير في الأسعار أو المنتج، لكن تعامل مع المزوّد كما تتعامل مع أي جهة استُحوذ عليها حديثاً.',
           'استحوذت Palo Alto Networks على Portkey (اكتمل في 29 مايو 2026) وتدمجه في Prisma AIRS — تعامل معه الآن بوصفه شراءً أمنياً مؤسسياً.',
           'يضمّ مستودع LiteLLM على GitHub نحو 57.5 ألف نجمة و11 ألف نسخة معدّلة حتى أغسطس 2026 — وهو أوضح مؤشر عام على التبنّي بين الثلاثة.',
           'يعرض OpenRouter أكثر من 380 نموذجاً، وهو أسرع طريق من التسجيل إلى استدعاء متعدد النماذج يعمل فعلياً.',
@@ -3982,7 +4067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — أفضل بوابة بلا إعداد',
             tagline: 'أكثر من 380 نموذجاً بمفتاح API واحد، وبلا أي خادم تشغّله',
-            verdict: 'يمثّل OpenRouter أسرع طريق من الصفر إلى تطبيق متعدد النماذج يعمل فعلياً: سجّل، واحصل على مفتاح API، واستدعِ في اليوم نفسه أكثر من 380 نموذجاً معروضاً. ولا يوجد اشتراك — فالرسم يقع على شحن الحساب، بنحو 5.5% على مشتريات الرصيد عبر Stripe (بحد أدنى 0.80 دولار) أو 5% عبر العملات الرقمية. أما رسم BYOK البالغ 5% فلا يُطبَّق إلا بعد تجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار (الدفع حسب الاستخدام) أو 200,000 دولار (خطة المؤسسات)، أي أن الاستخدام الخفيف لا يدفع شيئاً إضافياً هناك. والتحويل عند الأعطال تلقائي لكنه على مستوى المنصّة: فحين يفشل مزوّد، يستطيع OpenRouter التوجيه إلى نموذج مكافئ دون أن تضبط أنت السلسلة.',
+            verdict: 'يمثّل OpenRouter أسرع طريق من الصفر إلى تطبيق متعدد النماذج يعمل فعلياً: سجّل، واحصل على مفتاح API، واستدعِ في اليوم نفسه أكثر من 380 نموذجاً معروضاً. ولا يوجد اشتراك — فالرسم يقع على شحن الحساب، بنحو 5.5% على مشتريات الرصيد عبر Stripe (بحد أدنى 0.80 دولار) أو 5% عبر العملات الرقمية. أما رسم BYOK البالغ 5% فلا يُطبَّق إلا بعد تجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار (الدفع حسب الاستخدام) أو 200,000 دولار (خطة المؤسسات)، أي أن الاستخدام الخفيف لا يدفع شيئاً إضافياً هناك. والتحويل عند الأعطال تلقائي لكنه على مستوى المنصّة: فحين يفشل مزوّد، يستطيع OpenRouter التوجيه إلى نموذج مكافئ دون أن تضبط أنت السلسلة. وقد تغيّرت ملكية OpenRouter نفسه في 2026 وفق تقارير إعلامية: أفادت التقارير بأن Stripe أعلنت في أغسطس استحواذها عليه في صفقة قُدِّرت بأكثر من 7 مليارات دولار، لم تؤكّدها أي من الشركتين رسمياً. ولم يُعلَن حتى الآن عن أي تغيير في الأسعار أو الواجهة البرمجية، لكن الحذر نفسه في إعادة التحقّق الذي ينطبق على Portkey أدناه صار ينطبق هنا أيضاً.',
             pros: [
               'بلا أي بنية تحتية — مفتاح API واحد هو كل الإعداد',
               'أكثر من 380 نموذجاً معروضاً، وهو أكثر بكثير مما ستدمجه يدوياً',
@@ -3993,6 +4078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'رسم الـ5.5% تقريباً يتراكم ويصبح مكلفاً عند الحجم الكبير',
               'تحديد المعدّل عام على مستوى الحساب وغير قابل للضبط من جانبك',
               'تحكّم أقل بالمزوّد الذي يعالج الطلب الفاشل — وهي مشكلة تحت قواعد صارمة لإقامة البيانات',
+              'لم يعد مستقلاً — أفادت تقارير بأن Stripe أعلنت استحواذها على OpenRouter في 2026، وقد تتغيّر الأسعار وخارطة الطريق مع تقدّم الدمج',
             ],
             affiliateLinks: [
               {
@@ -4167,6 +4253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل LiteLLM مجاني فعلاً؟', a: 'النواة مفتوحة المصدر مجانية وذاتية الاستضافة بلا رسوم ترخيص، وفق صفحة أسعار LiteLLM نفسها في أغسطس 2026. ولا يوجد هامش لكل طلب عند أي حجم. أما خطة المؤسسات — تسجيل الدخول الموحّد وSCIM والدعم المخصّص والنشر المعزول عن الشبكة — فتُسعَّر سنوياً بالطلب بحسب حجم طلباتك وتشمل تجربة لمدة 30 يوماً.' },
             { q: 'هل يفرض OpenRouter رسماً على كل طلب؟', a: 'ليس مباشرةً. فرسم OpenRouter يقع على شحن الحساب: نحو 5.5% على مشتريات الرصيد عبر Stripe بحد أدنى 0.80 دولار، أو 5% عبر العملات الرقمية. أما رسم BYOK المنفصل البالغ 5% فينطبق فقط حين يتجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار في الدفع حسب الاستخدام، أو 200,000 دولار في خطة المؤسسات.' },
             { q: 'هل ما زال Portkey شركة مستقلة؟', a: 'لا. فقد أتمّت Palo Alto Networks الاستحواذ على Portkey في 29 مايو 2026 وتدمجه بوصفه بوابة الذكاء الاصطناعي الأساسية داخل منصّة الأمن Prisma AIRS، وفق البيان الصحفي لـPalo Alto Networks نفسها. وتعامل مع أي معلومات أسعار أو خارطة طريق سابقة لمايو 2026 على أنها قد تكون تجاوزها الزمن.' },
+            { q: 'هل ما زال OpenRouter شركة مستقلة؟', a: 'لا. أفادت تقارير إعلامية بأن Stripe أعلنت في أغسطس 2026 استحواذها على OpenRouter (لم تؤكّد أي من الشركتين ذلك رسمياً) في صفقة قُدِّرت بأكثر من 7 مليارات دولار. ولم يُعلَن حتى الآن عن أي تغيير في الأسعار أو الرسوم أو المنتج نتيجة لذلك، لكن — كما هي الحال مع Portkey أعلاه — تعامل مع خارطة طريق OpenRouter وشروطه على أنها قابلة للتغيّر مع تقدّم الدمج، وتأكّد من الأسعار الحالية مباشرةً لدى OpenRouter قبل بناء ميزانيتك عليها.' },
             { q: 'أي بوابة تدعم أكبر عدد من المزوّدين؟', a: 'يعرض OpenRouter أكثر من 380 نموذجاً على موقعه في أغسطس 2026. وتصف وثائق LiteLLM أكثر من 100 تكامل مع مزوّدين — وهي وحدة قياس مختلفة، إذ يعرض المزوّد الواحد نماذج كثيرة. أما مستودع بوابة Portkey فقد أعلن سابقاً أكثر من 1600 نموذج، وهو رقم ينبغي إعادة التحقّق منه في ضوء الاستحواذ.' },
             { q: 'هل يمكنني استضافة Portkey ذاتياً؟', a: 'كان Portkey/Prisma AIRS يوفّر نشراً على سحابة خاصة في خطة المؤسسات وفق صفحات الأسعار السابقة للاستحواذ. تأكّد من شروط الاستضافة الذاتية الحالية مباشرةً لدى Palo Alto Networks، فعمليات الدمج بعد الاستحواذ كثيراً ما تغيّر خيارات النشر في السنة الأولى.' },
             { q: 'هل لدى أي من الثلاثة برنامج إحالة؟', a: 'لم يُعثر على أي برنامج إحالة أو شراكة عام وقابل للتحقّق لـLiteLLM أو Portkey أو OpenRouter حتى أغسطس 2026. وكل روابط المنتجات في هذه الصفحة روابط عادية معلَنة لا تدرّ على PromptQuorum شيئاً. وإن تغيّر ذلك فستُحدَّث الصفحة بإفصاح يطابق شروط البرنامج الفعلية.' },
@@ -4194,6 +4281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'وثائق حدود واجهة OpenRouter', description: 'حدود المعدّل في الخطة المجانية وقواعد الوصول القائم على الرصيد.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'إتمام Palo Alto Networks الاستحواذ على Portkey', description: 'تاريخ إتمام الاستحواذ وخطة الدمج في Prisma AIRS.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'Portkey-AI/gateway على GitHub', description: 'مستودع البوابة مفتوح المصدر وأرقام المزوّدين المعلَنة.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'تغطية إعلامية لاستحواذ Stripe على OpenRouter، وحجم الصفقة والدوافع المُعلَنة.' },
         ],
       },
       relatedReading: {
@@ -4211,9 +4299,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM مقابل OpenRouter مقابل Portkey: أفضل بوابة LLM 2026',
-      description: 'مقارنة بين LiteLLM وOpenRouter وPortkey/Prisma AIRS بوصفها بوابات API لنماذج LLM: أسعار حقيقية، وخيارات استضافة ذاتية، وتحكّم في التحويل عند الأعطال، والاستحواذ الذي غيّر فئة Portkey. تحقّق: أغسطس 2026.',
+      description: 'مقارنة بين LiteLLM وOpenRouter وPortkey/Prisma AIRS بوصفها بوابات API لنماذج LLM: أسعار حقيقية، وخيارات استضافة ذاتية، وتحكّم في التحويل عند الأعطال، وعمليات الاستحواذ — استحواذ Palo Alto Networks على Portkey، واستحواذ Stripe المتداول إعلامياً على OpenRouter — التي غيّرت فئة كلا المزوّدَين المُستضافَين. تحقّق: أغسطس 2026.',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/ar/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -4270,6 +4358,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'هل ما زال OpenRouter شركة مستقلة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. أفادت تقارير إعلامية بأن Stripe أعلنت في أغسطس 2026 استحواذها على OpenRouter (لم تؤكّد أي من الشركتين ذلك رسمياً) في صفقة قُدِّرت بأكثر من 7 مليارات دولار. ولم يُعلَن حتى الآن عن أي تغيير في الأسعار أو الرسوم أو المنتج نتيجة لذلك، لكن — كما هي الحال مع Portkey أعلاه — تعامل مع خارطة طريق OpenRouter وشروطه على أنها قابلة للتغيّر مع تقدّم الدمج، وتأكّد من الأسعار الحالية مباشرةً لدى OpenRouter قبل بناء ميزانيتك عليها.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'أي بوابة تدعم أكبر عدد من المزوّدين؟',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -4310,7 +4406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: 'الأفضل إجمالاً — وكيل مفتوح المصدر مجاني وذاتي الاستضافة، وأكثر من 100 واجهة برمجية لمزوّدين، وبلا هامش لكل طلب' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'أفضل بوابة بلا إعداد — أكثر من 380 نموذجاً بمفتاح API واحد، ورسوم نحو 5.5% على الرصيد المشحون' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: 'أفضل بوابة بلا إعداد — أكثر من 380 نموذجاً بمفتاح API واحد، ورسوم نحو 5.5% على الرصيد المشحون؛ استحواذ Stripe عليه متداول إعلامياً في أغسطس 2026 (غير مؤكَّد رسمياً)' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: 'شراء أمني مؤسسي — خطة Production بـ49 دولاراً شهرياً، وهو الآن جزء من Prisma AIRS لدى Palo Alto Networks' },
       ],
     },
@@ -4327,7 +4423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '멀티모델 LLM 애플리케이션을 개발하는 개발자',
     affiliateDisclosure: true,
     publishDate: '2026-08-27',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     readTime: '11분 읽기',
     primaryTerm: 'LLM API 게이트웨이',
     targetKeywords: [
@@ -4337,18 +4433,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '셀프 호스팅 LLM 프록시',
       'OpenRouter 수수료',
     ],
-    leadAnswerBlock: '**2026년 대다수 개발자에게 최적의 LLM API 게이트웨이는 LiteLLM입니다. 오픈소스 프록시는 무료이고 셀프 호스팅이 가능하며, 100개가 넘는 공급자 API를 OpenAI 호환 인터페이스 하나로 라우팅하면서 요청당 추가 비용을 붙이지 않습니다. 인프라를 전혀 두지 않고 오늘 바로 380개 이상의 모델을 쓰고 싶다면 OpenRouter가 더 낫고, 대신 Stripe 충전액의 약 5.5%가 부과됩니다. Portkey는 더 이상 독립 게이트웨이가 아닙니다. Palo Alto Networks가 2026년 5월 29일 인수를 완료했고 보안 플랫폼 Prisma AIRS에 통합하고 있습니다.**',
+    leadAnswerBlock: '**2026년 대다수 개발자에게 최적의 LLM API 게이트웨이는 LiteLLM입니다. 오픈소스 프록시는 무료이고 셀프 호스팅이 가능하며, 100개가 넘는 공급자 API를 OpenAI 호환 인터페이스 하나로 라우팅하면서 요청당 추가 비용을 붙이지 않습니다. 인프라를 전혀 두지 않고 오늘 바로 380개 이상의 모델을 쓰고 싶다면 OpenRouter가 더 낫고, 대신 Stripe 충전액의 약 5.5%가 부과됩니다. Portkey는 더 이상 독립 게이트웨이가 아닙니다. Palo Alto Networks가 2026년 5월 29일 인수를 완료했고 보안 플랫폼 Prisma AIRS에 통합하고 있습니다. OpenRouter 역시 더 이상 독립 회사가 아닌 것으로 보입니다. 언론 보도에 따르면 Stripe가 2026년 8월 인수를 발표했고 거래 규모는 70억 달러를 넘는 것으로 알려졌지만, 양사 모두 공식 확인하지 않았습니다.**',
     quickAnswerTop: {
       question: '2026년 최고의 LLM API 게이트웨이는 무엇입니까?',
-      answer: '**서비스를 운영할 수 있는 팀에는 LiteLLM이, 그렇지 못한 팀에는 OpenRouter가 적합합니다.** LiteLLM의 오픈소스 코어는 사용량과 무관하게 비용이 들지 않으며, 라우팅 로직과 데이터 소재지를 여러분의 통제 아래 둡니다. OpenRouter는 인프라 작업을 전부 없애 주는 대신 Stripe 충전액의 약 5.5%(암호화폐는 5%)와 무료 한도를 초과한 부분에 5%의 BYOK 수수료를 부과합니다. Portkey는 이제 Palo Alto Networks의 Prisma AIRS 플랫폼 안에 있는 AI 게이트웨이로만 제공되므로, 가벼운 도구가 아니라 엔터프라이즈 보안 구매로 평가하십시오.',
+      answer: '**서비스를 운영할 수 있는 팀에는 LiteLLM이, 그렇지 못한 팀에는 OpenRouter가 적합합니다.** LiteLLM의 오픈소스 코어는 사용량과 무관하게 비용이 들지 않으며, 라우팅 로직과 데이터 소재지를 여러분의 통제 아래 둡니다. OpenRouter는 인프라 작업을 전부 없애 주는 대신 Stripe 충전액의 약 5.5%(암호화폐는 5%)와 무료 한도를 초과한 부분에 5%의 BYOK 수수료를 부과합니다. 그리고 언론 보도에 따르면 OpenRouter 자신도 Stripe에 인수되는 중이며, 거래 규모는 70억 달러를 넘는 것으로 알려졌습니다(2026년 8월 보도, 공식 확인은 없음). Portkey는 이제 Palo Alto Networks의 Prisma AIRS 플랫폼 안에 있는 AI 게이트웨이로만 제공되므로, 가벼운 도구가 아니라 엔터프라이즈 보안 구매로 평가하십시오.',
       bullets: [
         '**종합 최적:** LiteLLM — 무료, 셀프 호스팅, GitHub 스타 약 5.75만 개, 100개 이상의 공급자 API',
-        '**설정 없이 최적:** OpenRouter — API 키 하나로 380개 이상의 모델, 충전액에 약 5.5% 수수료',
+        '**설정 없이 최적:** OpenRouter — API 키 하나로 380개 이상의 모델, 충전액에 약 5.5% 수수료, Stripe 인수설 보도(미확인)',
         '**엔터프라이즈 보안 구매:** Portkey / Prisma AIRS — Production 요금제 월 49달러, 현재 Palo Alto 소속',
         '**손익분기점:** 월 모델 지출의 5.5%가 프록시 호스팅 비용을 넘어서는 순간부터 셀프 호스팅이 유리',
         '⚠️ 세 곳 모두 공개된 제휴·추천 프로그램이 없습니다. 이 글의 모든 링크는 일반 제품 링크입니다',
       ],
-      updatedDate: '2026-08-27',
+      updatedDate: '2026-09-03',
     },
     toc: [
       { label: '핵심 내용', anchor: 'tldr' },
@@ -4375,6 +4471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**LiteLLM의 오픈소스 프록시는 사용량과 무관하게 무료입니다** — OpenAI 호환 엔드포인트 하나 뒤에 100개 이상의 공급자 API를 두고, 지출 추적·예산·레이트 리밋까지 무료 요금제에 포함됩니다.',
           'OpenRouter는 구독료를 받지 않지만 Stripe 충전액의 약 5.5%(최소 0.80달러), 암호화폐는 5%를 가져가며, 월 25,000달러(종량제) 또는 200,000달러(엔터프라이즈)를 넘는 부분에 5%의 BYOK 수수료가 붙습니다.',
+          '언론 보도에 따르면 Stripe는 2026년 8월 OpenRouter 인수를 발표했으며, 거래 규모는 70억 달러를 넘는 것으로 알려졌지만 양사 모두 공식 확인하지 않았습니다. 지금까지 가격이나 제품 변경은 발표되지 않았지만, 방금 인수된 공급사를 대하듯 다루십시오.',
           'Portkey는 Palo Alto Networks에 인수되었고(2026년 5월 29일 완료) Prisma AIRS에 통합되는 중입니다. 이제는 엔터프라이즈 보안 구매로 다루십시오.',
           'LiteLLM의 GitHub 저장소는 2026년 8월 기준 약 5.75만 개의 스타와 1.1만 개의 포크를 보유하고 있으며, 세 제품 중 가장 명확한 공개 채택 지표입니다.',
           'OpenRouter는 380개 이상의 모델을 제공하며, 가입에서 멀티모델 호출이 실제로 동작하기까지 가장 빠른 경로입니다.',
@@ -4519,7 +4616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             rank: 1,
             name: 'OpenRouter — 설정이 필요 없는 최적의 게이트웨이',
             tagline: 'API 키 하나로 380개 이상의 모델, 운영할 서버는 없음',
-            verdict: 'OpenRouter는 아무것도 없는 상태에서 동작하는 멀티모델 애플리케이션까지 가는 가장 빠른 경로입니다. 가입하고 API 키를 받으면 같은 날 380개 이상의 모델을 호출할 수 있습니다. 구독료는 없고 수수료는 계정 충전에 붙습니다. Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 5%의 BYOK 수수료는 BYOK로 라우팅된 월 지출이 25,000달러(종량제) 또는 200,000달러(엔터프라이즈)를 넘어야 발생하므로, 가벼운 사용에서는 추가 비용이 없습니다. 장애 대응은 자동이지만 플랫폼 차원에서 이뤄집니다. 공급자에 오류가 나면 여러분이 체인을 설정하지 않아도 동등한 모델로 넘길 수 있습니다.',
+            verdict: 'OpenRouter는 아무것도 없는 상태에서 동작하는 멀티모델 애플리케이션까지 가는 가장 빠른 경로입니다. 가입하고 API 키를 받으면 같은 날 380개 이상의 모델을 호출할 수 있습니다. 구독료는 없고 수수료는 계정 충전에 붙습니다. Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 5%의 BYOK 수수료는 BYOK로 라우팅된 월 지출이 25,000달러(종량제) 또는 200,000달러(엔터프라이즈)를 넘어야 발생하므로, 가벼운 사용에서는 추가 비용이 없습니다. 장애 대응은 자동이지만 플랫폼 차원에서 이뤄집니다. 공급자에 오류가 나면 여러분이 체인을 설정하지 않아도 동등한 모델로 넘길 수 있습니다. OpenRouter 역시 2026년 소유권이 바뀐 것으로 보도되었습니다. 언론 보도에 따르면 Stripe가 8월 인수를 발표했고, 거래 규모는 70억 달러를 넘는 것으로 알려졌지만 양사 모두 공식 확인하지 않았습니다. 지금까지 가격이나 API 변경은 발표되지 않았지만, 아래 Portkey에 적용되는 것과 같은 재확인의 신중함이 이제 여기에도 적용됩니다.',
             pros: [
               '인프라가 전혀 필요 없음 — API 키 하나가 준비의 전부',
               '380개 이상의 모델 제공으로, 수작업으로 연동할 수 있는 수를 훨씬 넘어섬',
@@ -4530,6 +4627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '약 5.5%의 수수료가 누적되어 사용량이 크면 부담이 커짐',
               '레이트 리밋이 계정 단위 전역이라 사용자가 직접 설정할 수 없음',
               '실패한 요청을 어느 공급자가 처리하는지에 대한 통제가 약해, 엄격한 데이터 소재지 규정에서는 문제가 됨',
+              '더 이상 독립적이지 않음 — 보도에 따르면 Stripe가 2026년 OpenRouter 인수를 발표했고, 통합이 진행되면서 가격과 로드맵이 바뀔 수 있음',
             ],
             affiliateLinks: [
               {
@@ -4704,6 +4802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'LiteLLM은 정말 무료입니까?', a: '2026년 8월 기준 LiteLLM 자체 가격 페이지에 따르면 오픈소스 코어는 무료이자 셀프 호스팅이며 라이선스 비용이 없습니다. 어떤 사용량에서도 요청당 가산이 없습니다. Enterprise 요금제(SSO, SCIM, 전담 지원, 망 분리 배포)는 요청 규모에 맞춘 연간 맞춤 가격이며 30일 체험이 포함됩니다.' },
             { q: 'OpenRouter는 요청 건당 과금합니까?', a: '직접 과금하지는 않습니다. OpenRouter의 수수료는 계정 충전에 부과되며, Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 별도의 5% BYOK 수수료는 BYOK로 라우팅된 월 지출이 종량제에서 25,000달러, 엔터프라이즈에서 200,000달러를 넘을 때에만 적용됩니다.' },
             { q: 'Portkey는 아직 독립 회사입니까?', a: '아닙니다. Palo Alto Networks 자체 보도자료에 따르면 이 회사는 2026년 5월 29일 Portkey 인수를 완료했으며, 이를 보안 플랫폼 Prisma AIRS의 핵심 AI 게이트웨이로 통합하고 있습니다. 2026년 5월 이전의 가격이나 로드맵 정보는 낡았을 수 있는 것으로 다루십시오.' },
+            { q: 'OpenRouter는 아직 독립 회사입니까?', a: '아닙니다. 언론 보도에 따르면 Stripe는 2026년 8월 OpenRouter 인수를 발표했으며, 거래 규모는 70억 달러를 넘는 것으로 알려졌지만 양사 모두 공식 확인하지 않았습니다. 지금까지 이로 인한 가격·수수료·제품 변경은 발표되지 않았지만, 위의 Portkey와 마찬가지로 통합이 진행되면서 OpenRouter의 로드맵과 조건이 바뀔 수 있다고 보고, 예산을 세우기 전에 현행 가격을 OpenRouter에 직접 확인하십시오.' },
             { q: '가장 많은 공급자를 지원하는 게이트웨이는 무엇입니까?', a: 'OpenRouter는 2026년 8월 기준 자체 사이트에 380개 이상의 모델을 게시하고 있습니다. LiteLLM 문서는 100개 이상의 공급자 연동을 설명하는데, 공급자 하나가 여러 모델을 제공하므로 단위가 다릅니다. Portkey의 게이트웨이 저장소는 이전에 1,600개 이상의 LLM을 표방했으나, 인수를 고려하면 다시 확인해야 할 수치입니다.' },
             { q: 'Portkey를 셀프 호스팅할 수 있습니까?', a: '인수 이전 가격 페이지에 따르면 Portkey/Prisma AIRS는 Enterprise 요금제에서 프라이빗 클라우드 배포를 제공했습니다. 인수 후 통합은 첫해에 배포 옵션을 자주 바꾸므로, 현행 셀프 호스팅 조건은 Palo Alto Networks에 직접 확인하십시오.' },
             { q: '세 곳 중 제휴 프로그램이 있는 곳이 있습니까?', a: '2026년 8월 기준 LiteLLM, Portkey, OpenRouter 어디에서도 공개되고 확인 가능한 제휴나 추천 프로그램을 찾지 못했습니다. 이 페이지의 모든 제품 링크는 PromptQuorum에 아무런 수익도 발생시키지 않는 일반 공개 링크입니다. 상황이 바뀌면 실제 프로그램 조건에 맞는 고지를 담아 이 페이지를 갱신하겠습니다.' },
@@ -4731,6 +4830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://openrouter.ai/docs/api-reference/limits', title: 'OpenRouter API 한도 문서', description: '무료 요금제의 레이트 리밋과 크레딧 기반 접근 규칙.' },
           { url: 'https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents', title: 'Palo Alto Networks의 Portkey 인수 완료', description: '인수 완료일과 Prisma AIRS 통합 계획.' },
           { url: 'https://github.com/portkey-ai/gateway', title: 'GitHub의 Portkey-AI/gateway', description: '오픈소스 게이트웨이 저장소와 공급자 수 주장.' },
+          { url: 'https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html', title: 'Stripe to buy OpenRouter as fintech expands deeper into AI', description: 'Stripe의 OpenRouter 인수에 대한 보도. 거래 규모와 공개된 인수 배경.' },
         ],
       },
       relatedReading: {
@@ -4748,9 +4848,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: 최고의 LLM 게이트웨이 2026',
-      description: 'LLM API 게이트웨이로서 LiteLLM, OpenRouter, Portkey/Prisma AIRS 비교: 실제 가격, 셀프 호스팅 옵션, 장애 대응 통제, 그리고 Portkey의 범주를 바꾼 Palo Alto 인수.',
+      description: 'LLM API 게이트웨이로서 LiteLLM, OpenRouter, Portkey/Prisma AIRS 비교: 실제 가격, 셀프 호스팅 옵션, 장애 대응 통제, 그리고 두 호스팅형 공급사의 범주를 바꾼 인수 — Palo Alto Networks의 Portkey 인수와, 보도된 Stripe의 OpenRouter 인수(미확인).',
       datePublished: '2026-08-27',
-      dateModified: '2026-08-27',
+      dateModified: '2026-09-03',
       url: 'https://www.promptquorum.com/ko/local-llms/best-llm-api-gateway-2026',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -4807,6 +4907,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
+            'name': 'OpenRouter는 아직 독립 회사입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. 언론 보도에 따르면 Stripe는 2026년 8월 OpenRouter 인수를 발표했으며, 거래 규모는 70억 달러를 넘는 것으로 알려졌지만 양사 모두 공식 확인하지 않았습니다. 지금까지 이로 인한 가격·수수료·제품 변경은 발표되지 않았지만, 위의 Portkey와 마찬가지로 통합이 진행되면서 OpenRouter의 로드맵과 조건이 바뀔 수 있다고 보고, 예산을 세우기 전에 현행 가격을 OpenRouter에 직접 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '가장 많은 공급자를 지원하는 게이트웨이는 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -4847,7 +4955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       numberOfItems: 3,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'LiteLLM', description: '종합 최적 — 무료 셀프 호스팅 오픈소스 프록시, 100개 이상의 공급자 API, 요청당 가산 없음' },
-        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '설정이 필요 없는 최적의 게이트웨이 — API 키 하나로 380개 이상의 모델, 충전액에 약 5.5% 수수료' },
+        { '@type': 'ListItem', position: 2, name: 'OpenRouter', description: '설정이 필요 없는 최적의 게이트웨이 — API 키 하나로 380개 이상의 모델, 충전액에 약 5.5% 수수료. Stripe의 2026년 8월 인수설이 보도됨(미확인)' },
         { '@type': 'ListItem', position: 3, name: 'Portkey (Prisma AIRS)', description: '엔터프라이즈 보안 구매 — Production 요금제 월 49달러, 현재 Palo Alto Networks Prisma AIRS의 일부' },
       ],
     },
