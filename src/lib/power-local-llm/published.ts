@@ -187,6 +187,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'agentic-ai-security-identity-access',
   'ai-generated-content-ip-risk',
   'us-state-ai-employment-laws-compliance',
+  // Enclave AI review — 2026-09-03
+  'enclave-ai-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
