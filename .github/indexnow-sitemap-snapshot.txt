@@ -240,6 +240,7 @@ https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide-
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
 https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai-2026
+https://www.promptquorum.com/power-local-llm/autogpt-local-review-2026
 https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work
 https://www.promptquorum.com/power-local-llm/babyagi-review-autonomous-agent
 https://www.promptquorum.com/power-local-llm/backyard-ai-review-local-roleplay-2026

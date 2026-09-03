@@ -11,6 +11,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
+import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId } from '@/lib/sectionAnchor'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
@@ -264,6 +265,12 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: Ent
       {section.component === 'ShadowAiExposureAssessment' && (
         <div className="my-8">
           <ShadowAiExposureAssessment />
+        </div>
+      )}
+
+      {section.component === 'AgentBlastRadiusCalculator' && (
+        <div className="my-8">
+          <AgentBlastRadiusCalculator />
         </div>
       )}
 

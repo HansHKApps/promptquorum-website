@@ -193,6 +193,7 @@ export const article: Partial<Record<Language, EnterpriseAiArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Agentic AI Security: Identity and Access Controls That Work](/enterprise-ai/agentic-ai-security-identity-access) — the IAM controls that matter once a sanctioned deployment becomes an agent with write access.',
           '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — the technical control checklist for a sanctioned internal deployment.',
           '[Local LLMs vs. Cloud APIs](/local-llms/local-llms-vs-cloud-apis) — the underlying trade-offs behind the substitution-layer argument above.',
           '[On-Prem / Air-Gapped Local LLM Deployment](/local-llms/on-prem-air-gapped-local-llm) — what a sanctioned internal deployment actually involves operationally.',
