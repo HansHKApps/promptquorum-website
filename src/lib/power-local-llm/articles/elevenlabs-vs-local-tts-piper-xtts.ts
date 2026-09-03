@@ -6,30 +6,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2: Quality, Cost & Privacy',
-    intro: 'For most creators, YouTubers, and agencies, ElevenLabs wins on speed and convenience. For developers who need offline or embedded TTS, local engines like Piper offer control—but at the cost of setup time and infrastructure. For local voice cloning specifically, XTTS v2 is the interesting option. This guide covers the real trade-offs so you can make the right choice without wasting a week on setup.',
-    metaDescription: 'Compare ElevenLabs vs local TTS (Piper, XTTS v2). See trade-offs in quality, setup, privacy, cost, and offline use. Choose your TTS strategy.',
+    title: 'ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?',
+    seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): Which Is Best?',
+    intro: 'ElevenLabs delivers the easiest path to a polished AI voice. Piper is the lightweight local choice for CPU-only and offline devices. XTTS v2 is the more interesting option when local voice cloning and privacy matter most. If you\'re choosing a TTS system for YouTube, podcasts, voice agents, audiobooks, or commercial content, the decision isn\'t just which voice sounds best — it\'s whether you want a managed cloud service or a local speech stack you operate yourself.',
+    metaDescription: 'ElevenLabs is the fastest path to a polished AI voice; Piper is the free, CPU-friendly local option; XTTS v2 wins for local voice cloning. Full comparison.',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-03',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Content creators, developers, and teams choosing between cloud TTS and self-hosted speech synthesis.',
     primaryTerm: 'ElevenLabs vs local TTS',
     targetKeywords: ['ElevenLabs vs Piper', 'local TTS', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'free TTS', 'voice cloning', 'offline speech synthesis'],
     twitterDescription: 'Should you pay for ElevenLabs or run Piper locally? Compare cloud TTS vs self-hosted speech synthesis.',
-    leadAnswerBlock: '**For a voiceover by tomorrow, start with ElevenLabs (10,000 free credits, no setup required, 5 minutes to first audio).** For offline-only systems, embedded products, or privacy-critical workflows, Piper is the strategic choice for lightweight local TTS—but you\'ll spend 1–2 hours on setup. For local voice cloning specifically, XTTS v2 is the option, at the cost of 1–2 days of setup and a GPU. Most creators should test ElevenLabs first.',
+    leadAnswerBlock: '**For most creators and businesses, ElevenLabs is the best overall choice — a managed voice platform with a free 10,000-credit tier and no local setup.** Piper is the best free/local option for CPU-only and offline devices like Raspberry Pi. XTTS v2 is the best choice specifically for local voice cloning, at the cost of a GPU and substantially more setup work.',
     quickAnswerTop: {
       en: {
         question: 'Should I use ElevenLabs or local TTS?',
-        answer: 'ElevenLabs is a managed cloud platform — fast, polished, and hands-off. You can generate a voiceover in minutes. Local TTS (Piper, XTTS v2) gives you control but requires setup, hardware, and operations responsibility. Best for producers under deadline: ElevenLabs. Best for offline or embedded systems: local TTS.',
+        answer: 'ElevenLabs is a managed cloud platform — fast, polished, and hands-off, with a free tier and pay-as-you-go API pricing. Local TTS (Piper, XTTS v2) gives you offline control but requires setup, hardware, and operations responsibility. Best overall: ElevenLabs. Best for offline/embedded devices: Piper. Best for local voice cloning: XTTS v2.',
         bullets: [
-          'ElevenLabs: $0–$22/month, browser-based, 10k–121k credits/month, commercial-license access on paid plans. Voiceover in minutes.',
-          'Piper: free and MIT-licensed, CPU-friendly, offline-capable. Limited voice selection. Setup time: hours.',
-          'XTTS v2: free, supports voice cloning, requires more setup and GPU. Setup time: 1–2 days.',
-          'For most creators: start with ElevenLabs free tier. Switch to local only if you hit specific constraints.'
+          'ElevenLabs: Free tier (10,000 credits/month), Starter $6/month (30k credits), Creator $22/month (121k credits), Pro $99/month (600k credits), Scale $299/month, Business $990/month. Also offers pay-as-you-go API credits with no subscription.',
+          'ElevenLabs cut self-serve API pricing by up to 55% in May 2026 and introduced pay-as-you-go for developers who don\'t want a monthly plan.',
+          'Piper: free, MIT-licensed engine, CPU-friendly, works offline once installed. Individual voice/model licenses can still differ.',
+          'XTTS v2: free engine, supports voice cloning from a short reference clip, needs more setup and typically a GPU.',
+          'For most creators: test ElevenLabs\' free tier first. Move to local TTS only if you hit a specific offline, privacy, or scale constraint.'
         ],
-        updatedDate: '2026-08'
+        updatedDate: '2026-09'
       }
     },
     snippetBlocks: [
@@ -45,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/elevenlabs-vs-local-tts-hero-en.webp',
     toc: [
       { label: 'Quick Answer', anchor: 'quick-answer' },
-      { label: 'The Short Answer', anchor: 'short-answer' },
+      { label: 'Our Verdict', anchor: 'short-answer' },
       { label: 'Recommended Path for Most', anchor: 'recommended-path' },
       { label: 'At a Glance', anchor: 'at-a-glance' },
       { label: 'The Real Comparison: Service vs. Stack', anchor: 'service-vs-stack' },
@@ -69,7 +70,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         url: 'https://elevenlabs.io/pricing',
         productName: 'ElevenLabs',
-        productCategory: 'Cloud TTS / Voice AI'
+        productCategory: 'Cloud TTS / Voice AI',
+        label: 'Try ElevenLabs Free'
       },
       {
         url: 'https://github.com/rhasspy/piper',
@@ -85,12 +87,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The Piper software repository is MIT licensed, but the licenses and intended use of individual voice datasets/checkpoints can differ. Treat the engine license and the selected voice/model license as separate questions.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide were checked in August 2026 — always confirm current figures on the live pricing page before deciding.'
+        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The Piper software repository is MIT licensed, but the licenses and intended use of individual voice datasets/checkpoints can differ. Treat the engine license and the selected voice/model license as separate questions.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide are checked against the live pricing page at each update — confirm current figures there before deciding, since providers change plans and credit allowances without notice.'
       },
       shortAnswer: {
         id: 'short-answer',
-        title: 'The Short Answer',
-        content: 'Three tools, three different jobs. Pick based on what you actually need, not which one sounds most impressive:',
+        title: 'Our Verdict',
+        content: '🏆 **Best overall:** ElevenLabs — the easiest path to a polished, professional voice with no local setup.\n💰 **Best free/local TTS:** Piper — free, MIT-licensed, CPU-friendly, and offline-capable.\n🔒 **Best for local voice cloning:** XTTS v2 — clones a voice from a short reference clip on hardware you control.\n⚡ **Best for getting a voiceover today:** ElevenLabs.\n🖥️ **Best for Raspberry Pi / CPU-only:** Piper.\n🧑‍💻 **Best for developers who want maximum local control:** XTTS v2.\n\nFor most creators and businesses, start with ElevenLabs. For offline, privacy-sensitive, or embedded applications, look at Piper. For local voice cloning, investigate XTTS v2 and comparable local models.',
         decisionBlock: {
           title: 'Choose your TTS approach',
           cloudIf: [
@@ -107,7 +109,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'For offline/embedded systems: Piper wins.',
             'For local voice cloning: XTTS v2 is the interesting option.'
           ]
-        }
+        },
+        affiliateLinks: [
+          {
+            url: 'https://elevenlabs.io/pricing',
+            productName: 'ElevenLabs',
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'Try ElevenLabs Free'
+          }
+        ]
       },
       recommendedPath: {
         id: 'recommended-path',
@@ -216,7 +226,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'Key Point',
-            text: 'ElevenLabs currently lists a free plan with 10,000 monthly credits. Its listed Starter tier is $6 per month with 30,000 credits, while the Creator tier is listed at $22 per month with 121,000 credits; annual billing changes the effective monthly price. Text-to-speech usage consumes shared credits, and the exact credit cost depends on the selected model and workflow.'
+            text: 'ElevenLabs currently lists: Free ($0, 10,000 credits/month, no commercial license), Starter ($6/month, 30,000 credits, commercial license included), Creator ($22/month, 121,000 credits), Pro ($99/month, 600,000 credits, higher-quality 192kbps audio), Scale ($299/month, 1,800,000 credits), and Business ($990/month, 6,000,000 credits). Enterprise plans use custom pricing. Annual billing lowers the effective monthly price. Text-to-speech usage consumes shared credits, and the exact credit cost depends on the selected model and workflow — confirm current figures on the live pricing page before deciding.'
+          },
+          {
+            type: 'Key Point',
+            text: 'On May 7, 2026, ElevenLabs cut its self-serve API pricing — Text to Speech by up to 55%, Speech to Text by up to 45%, and ElevenAgents by up to 20% — and introduced pay-as-you-go credits for developers who don\'t want a monthly subscription, removing the need for an upfront commitment. Source: [ElevenLabs — We\'ve lowered API & Agents pricing and introduced PAYG](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go).'
           }
         ],
         blockquote: '**Need a voiceover by tomorrow without setup?** Start with ElevenLabs free tier — 10,000 monthly credits, no card required. Test the voice quality with your own content. [Try ElevenLabs for free →](https://elevenlabs.io/pricing)',
@@ -224,7 +238,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'Try ElevenLabs Free'
           }
         ]
       },
@@ -297,16 +312,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'XTTS v2 or Similar Local Cloning Stack': 'Local model/application stack'
           },
           {
-            Dimension: 'Setup time',
-            ElevenLabs: 'Minutes (create account, generate)',
-            Piper: '1–2 hours',
-            'XTTS v2 or Similar Local Cloning Stack': '4–8 hours or more'
+            Dimension: 'Setup',
+            ElevenLabs: 'Create an account and generate — no install',
+            Piper: 'Install software + download a voice model',
+            'XTTS v2 or Similar Local Cloning Stack': 'Install software, download model, prepare a reference voice clip'
           },
           {
             Dimension: 'Time to first voiceover',
-            ElevenLabs: '5 minutes',
-            Piper: '2–3 hours after setup',
-            'XTTS v2 or Similar Local Cloning Stack': '1–2 days after setup'
+            ElevenLabs: 'Same session, no local setup required',
+            Piper: 'After install — Piper describes itself as a fast local neural TTS engine',
+            'XTTS v2 or Similar Local Cloning Stack': 'After install and reference-clip preparation; noticeably more involved than Piper'
           },
           {
             Dimension: 'Internet requirement',
@@ -440,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Scenario: 'One occasional voiceover (for a video this week)',
             'Cloud TTS': 'Simple; use a free tier or small paid plan if needed',
             'Local TTS': 'Setup time can exceed the value of saving usage fees',
-            'Practical answer': 'Cloud is always the right choice'
+            'Practical answer': 'Cloud is typically the right choice here'
           },
           {
             Scenario: 'Weekly creator narration (YouTube, podcasts)',
@@ -512,7 +527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'Try ElevenLabs Free'
           }
         ]
       },
@@ -552,14 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You\'re producing client work under tight deadlines.',
           'You don\'t want to troubleshoot models, dependencies, or audio tooling.'
         ],
-        blockquote: 'If this is you, start with [ElevenLabs\' free tier →](https://elevenlabs.io/pricing) instead — 10,000 monthly credits, no card required.',
-        affiliateLinks: [
-          {
-            url: 'https://elevenlabs.io/pricing',
-            productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
-          }
-        ]
+        blockquote: 'If this is you, start with [ElevenLabs\' free tier →](https://elevenlabs.io/pricing) instead — 10,000 monthly credits, no card required.'
       },
       testingWorkflow: {
         id: 'testing-workflow',
@@ -591,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can Piper replace ElevenLabs?',
-            a: 'Piper can be an alternative when you need local, offline text-to-speech and the available voices meet your quality and language requirements. It is not automatically a feature-for-feature substitute for a managed cloud voice platform with curated voices, hosted tools, and paid-service support. Setup time matters: Piper takes 1–2 hours, ElevenLabs takes 5 minutes.'
+            a: 'Piper can be an alternative when you need local, offline text-to-speech and the available voices meet your quality and language requirements. It is not automatically a feature-for-feature substitute for a managed cloud voice platform with curated voices, hosted tools, and paid-service support. Setup time matters: Piper requires installing software and a voice model first, while ElevenLabs needs only an account.'
           },
           {
             q: 'Is local TTS free for commercial use?',
@@ -650,7 +659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Verdict',
-        content: '**If you need a voiceover this week, start with ElevenLabs.** The free tier (10,000 credits, no card required) eliminates the risk of wasted setup time. For most creators, YouTubers, and marketing teams, this is the right first step. Test the quality, evaluate your monthly volume, and upgrade if you hit the limit.\n\n**Local TTS is the strategic choice only when you have a specific constraint:** offline operation, embedded product, privacy-critical deployment, or such high volume that cloud metered pricing becomes uneconomical.\n\nThe real decision is not "free versus paid." It is whether you would rather spend 5 minutes generating a voiceover, or spend 2–8 hours setting up local infrastructure. For most people, the answer is the 5-minute path.'
+        content: '**If you need a voiceover this week, start with ElevenLabs.** The free tier (10,000 credits, no card required) eliminates the risk of wasted setup time. For most creators, YouTubers, and marketing teams, this is the right first step. Test the quality, evaluate your monthly volume, and upgrade if you hit the limit.\n\n**Local TTS is the strategic choice only when you have a specific constraint:** offline operation, embedded product, privacy-critical deployment, or such high volume that cloud metered pricing becomes uneconomical.\n\nThe real decision is not "free versus paid." It is whether you would rather generate a voiceover in your browser today, or install and operate a local speech stack yourself. For most people arriving here with a practical voiceover problem, the browser path is the right starting point — you can always move to local TTS later if it doesn\'t fit.'
       },
       ctaVerdictBlock: {
         id: 'cta-final',
@@ -666,7 +675,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'Try ElevenLabs Free'
           }
         ]
       },
@@ -683,6 +693,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://elevenlabs.io/affiliates',
             title: 'ElevenLabs Affiliate Program',
             description: 'Official affiliate-program information.'
+          },
+          {
+            url: 'https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go',
+            title: 'ElevenLabs: Lowered API & Agents Pricing, Introduced Pay-As-You-Go',
+            description: 'Official announcement of the May 2026 API price cuts (up to 55% on Text to Speech) and the new pay-as-you-go option.'
           },
           {
             url: 'https://github.com/rhasspy/piper',
@@ -736,10 +751,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning',
-      'description': 'Compare ElevenLabs vs local TTS (Piper, XTTS v2). See trade-offs in quality, setup, privacy, cost, and offline use. Choose your TTS strategy.',
+      'headline': 'ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?',
+      'description': 'ElevenLabs is the fastest path to a polished AI voice; Piper is the free, CPU-friendly local option; XTTS v2 wins for local voice cloning. Full comparison.',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-08-23',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -810,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Can Piper replace ElevenLabs?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Piper can be an alternative when you need local, offline text-to-speech and the available voices meet your quality and language requirements. It is not automatically a feature-for-feature substitute for a managed cloud voice platform with curated voices, hosted tools, and paid-service support. Setup time matters: Piper takes 1–2 hours, ElevenLabs takes 5 minutes.'
+            'text': 'Piper can be an alternative when you need local, offline text-to-speech and the available voices meet your quality and language requirements. It is not automatically a feature-for-feature substitute for a managed cloud voice platform with curated voices, hosted tools, and paid-service support. Setup time matters: Piper requires installing software and a voice model first, while ElevenLabs needs only an account.'
           }
         },
         {
@@ -921,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
-    current_benchmarks_used: ['10,000 monthly credits (ElevenLabs free)', '$6/month (ElevenLabs Starter)', '$22/month (ElevenLabs Creator)']
+    current_benchmarks_used: ['10,000 monthly credits (ElevenLabs Free)', '$6/month, 30,000 credits (ElevenLabs Starter)', '$22/month, 121,000 credits (ElevenLabs Creator)', '$99/month, 600,000 credits (ElevenLabs Pro)', '$299/month, 1,800,000 credits (ElevenLabs Scale)', '$990/month, 6,000,000 credits (ElevenLabs Business)', 'up to 55% API price cut, May 2026 (ElevenLabs)']
   },
   de: {
     freshness_tier: 'semi_annual',
