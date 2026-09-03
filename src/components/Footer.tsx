@@ -143,7 +143,7 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
   // Roots that are path-prefix routed for all non-EN langs (/de/<path>, …).
   // Keep in sync with PATH_LOCALE_CLUSTERS + PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
   const PATH_PREFIX_ROOTS = [
-    'power-local-llm', 'prompt-bites', 'smart-home',
+    'power-local-llm', 'prompt-bites', 'smart-home', 'edge-ai',
     'prompt-engineering', 'local-llms', 'blog', 'frameworks',
     'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy',
   ]
