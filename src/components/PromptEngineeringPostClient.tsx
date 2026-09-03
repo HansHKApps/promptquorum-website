@@ -973,7 +973,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
                 <tr className="border-b-2 border-primary/20">
                   {section.columns.map((col, colIdx) => (
                     <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
-                      {col}
+                      {renderInlineLinks(col, lang)}
                     </th>
                   ))}
                 </tr>
@@ -981,11 +981,14 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
               <tbody>
                 {section.rows.map((row, i) => (
                   <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
-                    {section.columns!.map((col, colIdx) => (
+                    {section.columns!.map((col, colIdx) => {
+                      const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                      return (
                       <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                        {renderInlineLinks(row[col] ?? '—', lang)}
+                        {renderInlineLinks(row[colLabel] ?? row[col] ?? '—', lang)}
                       </td>
-                    ))}
+                      )
+                    })}
                   </tr>
                 ))}
               </tbody>

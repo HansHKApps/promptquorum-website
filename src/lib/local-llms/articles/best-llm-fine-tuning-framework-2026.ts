@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl and MLX-LM are the three local fine-tuning frameworks worth using in 2026, and the lines between them have moved.** Unsloth was once the single-GPU CUDA option and is now the broadest; Axolotl\'s claim is distributed depth rather than merely multi-GPU; MLX-LM is still the leanest on Apple silicon but is no longer the only Mac option. All three are free and open source, and none require sending your training data anywhere.\n\nStar counts and licences were read from the GitHub API on 28 August 2026. Capability claims come from each project\'s own README.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterion', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['Criterion', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterion: 'GitHub stars', Unsloth: '75.0k', Axolotl: '12.4k', 'MLX-LM': '6.8k' },
           { Criterion: 'Licence', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl und MLX-LM sind 2026 die drei lokalen Finetuning-Frameworks, die sich lohnen — und die Grenzen zwischen ihnen haben sich verschoben.** Unsloth war einmal die Einzel-GPU-CUDA-Option und ist heute die breiteste; Axolotls Argument ist die Tiefe im verteilten Training, nicht bloß Multi-GPU; MLX-LM bleibt auf Apple Silicon am schlanksten, ist dort aber nicht mehr die einzige Option. Alle drei sind kostenlos und quelloffen, und bei keinem müssen Ihre Trainingsdaten das Haus verlassen.\n\nSternzahlen und Lizenzen stammen aus der GitHub-API vom 28. August 2026. Die Angaben zu den Fähigkeiten stammen aus der jeweiligen README.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Kriterium', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['Kriterium', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Kriterium: 'GitHub-Sterne', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
           { Kriterium: 'Lizenz', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl y MLX-LM son los tres frameworks locales de fine-tuning que merecen la pena en 2026, y las fronteras entre ellos se han movido.** Unsloth fue en su día la opción CUDA de una sola GPU y hoy es la más amplia; el argumento de Axolotl es la profundidad en entrenamiento distribuido, no el mero multi-GPU; MLX-LM sigue siendo el más ligero en Apple Silicon, pero ya no es la única opción para Mac. Los tres son gratuitos y de código abierto, y ninguno exige que sus datos de entrenamiento salgan de casa.\n\nLas estrellas y las licencias se leyeron de la API de GitHub el 28 de agosto de 2026. Las afirmaciones sobre capacidades proceden del README de cada proyecto.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['Criterio', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterio: 'Estrellas en GitHub', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
           { Criterio: 'Licencia', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -1755,7 +1755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl et MLX-LM sont les trois frameworks locaux de fine-tuning qui valent la peine en 2026, et les frontieres entre eux ont bouge.** Unsloth fut l\'option CUDA mono-GPU et se trouve aujourd\'hui la plus large ; l\'argument d\'Axolotl est la profondeur en entrainement distribue et non le simple multi-GPU ; MLX-LM reste le plus leger sur Apple Silicon mais n\'y est plus la seule option. Les trois sont gratuits et open source, et aucun n\'exige que vos donnees d\'entrainement quittent vos murs.\n\nLes etoiles et les licences ont ete lues via l\'API GitHub le 28 aout 2026. Les affirmations sur les capacites proviennent du README de chaque projet.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critere', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['Critere', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Critere: 'Etoiles GitHub', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
           { Critere: 'Licence', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -2289,7 +2289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl e MLX-LM sao os tres frameworks locais de fine-tuning que valem a pena em 2026, e as fronteiras entre eles se moveram.** O Unsloth ja foi a opcao CUDA de GPU unica e hoje e a mais ampla; o argumento do Axolotl e a profundidade em treino distribuido, nao o mero multi-GPU; o MLX-LM segue o mais enxuto em Apple Silicon, mas nao e mais a unica opcao para Mac. Os tres sao gratuitos e de codigo aberto, e nenhum exige que seus dados de treino saiam de casa.\n\nEstrelas e licencas foram lidas da API do GitHub em 28 de agosto de 2026. As afirmacoes sobre capacidades vem do README de cada projeto.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['Criterio', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterio: 'Estrelas no GitHub', Unsloth: '75,0 mil', Axolotl: '12,4 mil', 'MLX-LM': '6,8 mil' },
           { Criterio: 'Licenca', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**2026年に使う価値のあるローカルのファインチューニング基盤はUnsloth、Axolotl、MLX-LMの3つで、その境界線は動きました。** Unslothはかつて単一GPUのCUDA向けの選択肢でしたが、いまや最も広い対応範囲を持ちます。Axolotlの主張は単なるマルチGPUではなく分散学習の深さです。MLX-LMはApple Silicon上で依然として最も軽量ですが、もはやMacで唯一の選択肢ではありません。3つとも無料かつオープンソースで、いずれも学習データを外部へ出す必要はありません。\n\nスター数とライセンスは2026年8月28日にGitHub APIから取得しました。機能に関する記述は各プロジェクトのREADMEに基づきます。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['評価軸', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['評価軸', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { 評価軸: 'GitHubスター', Unsloth: '7.50万', Axolotl: '1.24万', 'MLX-LM': '0.68万' },
           { 評価軸: 'ライセンス', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -3366,7 +3366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth、Axolotl 与 MLX-LM 是 2026 年值得使用的三个本地微调框架，而它们之间的界线已经移动。** Unsloth 曾是单卡 CUDA 的选项，如今覆盖面最广；Axolotl 的主张是分布式训练的深度，而不只是多卡；MLX-LM 在 Apple Silicon 上仍最轻量，但已不再是 Mac 上的唯一选择。三者都免费开源，而且都不要求你的训练数据离开本地。\n\n星标与许可证读取自 2026 年 8 月 28 日的 GitHub API。能力方面的表述来自各项目自己的 README。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['评估维度', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['评估维度', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { 评估维度: 'GitHub 星标', Unsloth: '7.50 万', Axolotl: '1.24 万', 'MLX-LM': '0.68 万' },
           { 评估维度: '许可证', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -3900,7 +3900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**تُعد Unsloth وAxolotl وMLX-LM أطر العمل المحلية الثلاثة الجديرة بالاستخدام في 2026، وقد تحركت الحدود بينها.** كانت Unsloth ذات يوم خيار المعالج الرسومي الواحد على CUDA وصارت اليوم الأوسع تغطية؛ وحجة Axolotl هي العمق في التدريب الموزّع لا مجرد تعدد المعالجات؛ وتبقى MLX-LM الأخف على Apple Silicon لكنها لم تعد الخيار الوحيد على أجهزة Mac. والثلاثة مجانية ومفتوحة المصدر، ولا يشترط أي منها أن تغادر بيانات تدريبك مكانها.\n\nقُرئت أعداد النجوم والتراخيص من واجهة GitHub البرمجية في 28 أغسطس 2026. أما ما يتعلق بالقدرات فمصدره ملف التعريف الخاص بكل مشروع.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المعيار', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['المعيار', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { المعيار: 'نجوم GitHub', Unsloth: '75.0 ألف', Axolotl: '12.4 ألف', 'MLX-LM': '6.8 ألف' },
           { المعيار: 'الرخصة', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
@@ -4434,7 +4434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Unsloth, Axolotl, MLX-LM은 2026년에 쓸 만한 세 가지 로컬 파인튜닝 프레임워크이며, 그 사이의 경계선은 이동했습니다.** Unsloth는 한때 단일 GPU CUDA용 선택지였지만 지금은 가장 넓은 범위를 지원합니다. Axolotl의 주장은 단순한 멀티 GPU가 아니라 분산 학습의 깊이입니다. MLX-LM은 Apple Silicon에서 여전히 가장 가볍지만 더 이상 Mac의 유일한 선택지는 아닙니다. 셋 다 무료 오픈소스이며, 어느 것도 학습 데이터를 밖으로 내보낼 것을 요구하지 않습니다.\n\n별 수와 라이선스는 2026년 8월 28일 GitHub API에서 읽었습니다. 기능에 관한 서술은 각 프로젝트의 README에서 가져왔습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['평가 항목', 'Unsloth', 'Axolotl', 'MLX-LM'],
+        columns: ['평가 항목', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { '평가 항목': 'GitHub 별', Unsloth: '7만 5천', Axolotl: '1만 2천 4백', 'MLX-LM': '6천 8백' },
           { '평가 항목': '라이선스', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },

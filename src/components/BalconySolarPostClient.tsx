@@ -394,7 +394,7 @@ function renderMarkdownTable(lines: string[], renderLinks: (text: string) => Rea
           <tr className="bg-gray-100">
             {headers.map((header, i) => (
               <th key={i} className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">
-                {header}
+                {renderLinks(header)}
               </th>
             ))}
           </tr>
@@ -639,7 +639,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
               <tr className="border-b-2 border-primary/20">
                 {section.columns.map((col, colIdx) => (
                   <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
-                    {col}
+                    {renderInlineLinks(col, lang)}
                   </th>
                 ))}
               </tr>
@@ -647,11 +647,14 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             <tbody>
               {section.rows.map((row, i) => (
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
-                  {section.columns!.map((col, colIdx) => (
+                  {section.columns!.map((col, colIdx) => {
+                    const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                    return (
                     <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                      {renderInlineLinks(row[col] ?? row[String(colIdx)] ?? '—', lang)}
+                      {renderInlineLinks(row[colLabel] ?? row[col] ?? row[String(colIdx)] ?? '—', lang)}
                     </td>
-                  ))}
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>
