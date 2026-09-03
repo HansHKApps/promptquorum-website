@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Edge AI Silicon for Local LLMs 2026](/local-llms/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
+            '[Edge AI Silicon for Local LLMs 2026](/power-local-llm/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — deep dive into hardware trade-offs for local LLM inference',
             '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — VRAM calculator for every model size and quantization level',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — master Q4_K_M, Q5_K_M, and when to use each',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Silicio de IA de Borde para LLM Locales 2026](/es/local-llms/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
+            '[Silicio de IA de Borde para LLM Locales 2026](/es/power-local-llm/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
             '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — análisis profundo de las ventajas y desventajas de hardware para inferencia local de LLM',
             '[¿Cuánta VRAM necesito?](/es/prompt-bites/how-much-vram-for-local-llm) — calculadora de VRAM para cada tamaño de modelo y nivel de cuantización',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — domina Q4_K_M, Q5_K_M y cuándo usar cada uno',
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/local-llms/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
+            '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/power-local-llm/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
             '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — تحليل معمّق لمزايا وعيوب العتاد للاستدلال المحلي لنماذج LLM',
             '[كم من VRAM أحتاج؟](/ar/prompt-bites/how-much-vram-for-local-llm) — حاسبة VRAM لكل حجم نموذج ومستوى تكميم',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — أتقن Q4_K_M وQ5_K_M ومتى تستخدم كلاً منهما',
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Leituras relacionadas',
           items: [
-            '[Silicio de IA de Borda para LLMs Locais 2026](/pt/local-llms/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
+            '[Silicio de IA de Borda para LLMs Locais 2026](/pt/power-local-llm/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
             '[Melhores LLMs locais para iniciantes 2026](/pt/local-llms/best-beginner-local-llm-models)',
             '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained)',
@@ -1677,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
-            '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/local-llms/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
+            '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/power-local-llm/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
             '[GPU vs CPU vs Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — tiefgreifender Vergleich der Hardware-Kompromisse für lokale LLM-Inferenz',
             '[Wie viel VRAM benötige ich?](/de/prompt-bites/how-much-vram-for-local-llm) — VRAM-Rechner für jede Modellgröße und Quantisierungsstufe',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — beherrschen Sie Q4_K_M, Q5_K_M und wann Sie jede verwenden',
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Lectures Connexes',
           items: [
-            '[Silicium IA embarquee pour LLM locaux 2026](/fr/local-llms/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
+            '[Silicium IA embarquee pour LLM locaux 2026](/fr/power-local-llm/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
             '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — analyse approfondie des compromis matériels pour inférence LLM locale',
             '[Combien de VRAM Ai-je Besoin?](/fr/prompt-bites/how-much-vram-for-local-llm) — calculatrice VRAM pour chaque taille de modèle et niveau de quantisation',
             '[Quantisation LLM Expliquée](/fr/local-llms/llm-quantization-explained) — maîtrisez Q4_K_M, Q5_K_M, et quand utiliser chacun',
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '関連リンク',
           items: [
-            '[エッジAIシリコン ローカルLLM向け 2026](/ja/local-llms/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
+            '[エッジAIシリコン ローカルLLM向け 2026](/ja/power-local-llm/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
             '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — ローカル LLM 推論のハードウェアトレードオフの深掘り',
             '[必要な VRAM は？](/ja/prompt-bites/how-much-vram-for-local-llm) — すべてのモデルサイズおよび量子化レベルの VRAM 計算機',
             '[LLM 量子化の説明](/ja/local-llms/llm-quantization-explained) — Q4_K_M、Q5_K_M をマスターし、各いつ使用するか',
@@ -2640,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/local-llms/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
+            '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/power-local-llm/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
             '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) — 本地 LLM 推理硬件权衡的深入探讨',
             '[我需要多少 VRAM？](/zh/prompt-bites/how-much-vram-for-local-llm) — 每个模型大小和量化级别的 VRAM 计算器',
             '[LLM 量化讲解](/zh/local-llms/llm-quantization-explained) — 掌握 Q4_K_M、Q5_K_M，何时使用每一个',
@@ -2983,7 +2983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/local-llms/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
+            '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/power-local-llm/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
             '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — 로컬 LLM 추론을 위한 하드웨어 트레이드오프 심층 분석',
             '[VRAM이 얼마나 필요합니까?](/ko/prompt-bites/how-much-vram-for-local-llm) — 모든 모델 크기 및 양자화 수준에 대한 VRAM 계산기',
             '[LLM 양자화 해설](/ko/local-llms/llm-quantization-explained) — Q4_K_M, Q5_K_M 마스터하기 및 적절한 사용 시점',

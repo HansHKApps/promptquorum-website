@@ -1203,60 +1203,6 @@
         }
       ]
     },
-    "edge-ai-hardware-for-local-llms": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "vla-models-robots-local-inference": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "vlm-video-analytics-drones-edge": {
-      "dateModified": "2026-09-02",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-02",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
     "vram-calculator-local-llm": {
       "dateModified": "2026-08-28",
       "lastFactChecked": null,
@@ -8088,6 +8034,60 @@
       "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "edge-ai-hardware-for-local-llms": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vla-models-robots-local-inference": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vlm-video-analytics-drones-edge": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
       "hasSections": true,
       "langs": [
         "en",

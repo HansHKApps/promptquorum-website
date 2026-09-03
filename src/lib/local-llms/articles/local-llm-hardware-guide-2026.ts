@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Edge AI Silicon for Local LLMs 2026](/local-llms/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
+            '[Edge AI Silicon for Local LLMs 2026](/power-local-llm/edge-ai-hardware-for-local-llms) -- What actually fits in a shipping product: power budget, thermal design, joules per token, not desktop tokens/sec.',
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Interactive calculator: exact VRAM for any model, quantization, and GPU.',
             '[Laptop vs Desktop for Local LLMs 2026](/local-llms/laptop-vs-desktop-local-llm) -- Performance, cost per tok/sec, and hardware buying guide.',
             '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) -- Compact systems: 64–128GB unified memory, 50 TOPS NPU for 30–70B models.',
@@ -1346,7 +1346,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Silicio de IA de Borde para LLM Locales 2026](/es/local-llms/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
+            '[Silicio de IA de Borde para LLM Locales 2026](/es/power-local-llm/edge-ai-hardware-for-local-llms) -- Que encaja realmente en un producto de fabricacion en serie: presupuesto de potencia, diseno termico, julios por token.',
             '[Calculadora de VRAM para LLM locales](/es/local-llms/vram-calculator-local-llm) -- Calculadora interactiva: VRAM exacta para cualquier modelo, cuantización y GPU.',
             '[Portátil vs escritorio para LLM locales 2026](/es/local-llms/laptop-vs-desktop-local-llm) -- Rendimiento, coste por tok/seg y guía de compra de hardware.',
             '[Mini PC AMD Ryzen AI Max+ (2026)](/es/local-llms/best-amd-mini-pc-local-llm-2026) -- Sistemas compactos: 64–128GB de memoria unificada, NPU de 50 TOPS para modelos de 30–70B.',
@@ -2148,7 +2148,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/local-llms/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
+            '[شرائح الذكاء الاصطناعي الطرفي للنماذج المحلية 2026](/ar/power-local-llm/edge-ai-hardware-for-local-llms) -- ما الذي يناسب فعليا منتجا يشحن بالجملة: ميزانية الطاقة والتصميم الحراري والجول لكل رمز.',
             '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) -- حاسبة تفاعلية: VRAM دقيق لأي نموذج وتكميم وGPU.',
             '[حاسوب محمول مقابل مكتبي لنماذج LLM المحلية 2026](/ar/local-llms/laptop-vs-desktop-local-llm) -- الأداء، التكلفة لكل tok/sec، ودليل شراء العتاد.',
             '[أجهزة AMD Ryzen AI Max+ Mini PC (2026)](/ar/local-llms/best-amd-mini-pc-local-llm-2026) -- أنظمة مدمجة: ذاكرة موحدة 64–128GB، NPU بقدرة 50 TOPS لنماذج 30–70B.',
@@ -2965,7 +2965,7 @@ schema: {
           id: 'related-reading',
           title: 'Leitura Relacionada',
           items: [
-            '[Silicio de IA de Borda para LLMs Locais 2026](/pt/local-llms/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
+            '[Silicio de IA de Borda para LLMs Locais 2026](/pt/power-local-llm/edge-ai-hardware-for-local-llms) -- O que realmente cabe em um produto de serie: orcamento de potencia, projeto termico, joules por token.',
             '[Calculadora de VRAM para LLMs Locais](/pt/local-llms/vram-calculator-local-llm) -- Calculadora interativa: VRAM exata para qualquer modelo, quantização e GPU.',
             '[Laptop vs Desktop para LLMs Locais 2026](/pt/local-llms/laptop-vs-desktop-local-llm) -- Desempenho, custo por tok/sec e guia de compra de hardware.',
             '[Mini PCs AMD Ryzen AI Max+ (2026)](/pt/local-llms/best-amd-mini-pc-local-llm-2026) -- Sistemas compactos: 64–128GB de memória unificada, NPU de 50 TOPS para modelos 30–70B.',
@@ -3775,7 +3775,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterfuehrende Lektuere',
           items: [
-            '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/local-llms/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
+            '[Edge-AI-Hardware fuer lokale LLMs 2026](/de/power-local-llm/edge-ai-hardware-for-local-llms) -- Was wirklich in ein Serienprodukt passt: Leistungsbudget, thermisches Design, Joule pro Token statt Desktop-Tokens/Sek.',
             '[VRAM-Rechner fuer lokale LLMs](/de/local-llms/vram-calculator-local-llm) -- Interaktiver Rechner: exakter VRAM fuer jedes Modell, jede Quantisierung und GPU.',
             '[Laptop vs. Desktop fuer lokale LLMs 2026](/de/local-llms/laptop-vs-desktop-local-llm) -- Leistung, Kosten pro tok/sec und Hardware-Kaufberatung.',
             '[AMD Ryzen AI Max+ Mini-PCs (2026)](/de/local-llms/best-amd-mini-pc-local-llm-2026) -- Kompakte Systeme: 64–128GB Unified Memory, 50 TOPS NPU fuer 30–70B-Modelle.',
@@ -4593,7 +4593,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complementaires',
           items: [
-            '[Silicium IA embarquee pour LLM locaux 2026](/fr/local-llms/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
+            '[Silicium IA embarquee pour LLM locaux 2026](/fr/power-local-llm/edge-ai-hardware-for-local-llms) -- Ce qui tient vraiment dans un produit industrialise : budget de puissance, conception thermique, joules par token.',
             '[Calculateur de VRAM pour LLM locaux](/fr/local-llms/vram-calculator-local-llm) -- Calculateur interactif : VRAM exacte pour tout modele, quantification et GPU.',
             '[Portable vs bureau pour LLM locaux 2026](/fr/local-llms/laptop-vs-desktop-local-llm) -- Performance, cout par tok/sec et guide d\'achat materiel.',
             '[Mini PC AMD Ryzen AI Max+ (2026)](/fr/local-llms/best-amd-mini-pc-local-llm-2026) -- Systemes compacts : 64-128 Go de memoire unifiee, NPU 50 TOPS pour modeles 30-70B.',
@@ -5402,7 +5402,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[エッジAIシリコン ローカルLLM向け 2026](/ja/local-llms/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
+            '[エッジAIシリコン ローカルLLM向け 2026](/ja/power-local-llm/edge-ai-hardware-for-local-llms) -- 出荷製品に実際に収まる構成とは：電力予算、熱設計、トークンあたりのジュール。',
             '[ローカルLLM向けVRAM計算機](/ja/local-llms/vram-calculator-local-llm) -- インタラクティブな計算機：任意のモデル、量子化、GPUの正確なVRAM。',
             '[ローカルLLM向けラップトップ vs デスクトップ 2026](/ja/local-llms/laptop-vs-desktop-local-llm) -- 性能、tok/secあたりのコスト、ハードウェア購入ガイド。',
             '[AMD Ryzen AI Max+ ミニPC（2026）](/ja/local-llms/best-amd-mini-pc-local-llm-2026) -- コンパクトなシステム：64〜128GBユニファイドメモリ、30〜70Bモデル向けの50 TOPS NPU。',
@@ -6212,7 +6212,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/local-llms/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
+            '[面向本地 LLM 的边缘 AI 芯片 2026](/zh/power-local-llm/edge-ai-hardware-for-local-llms) -- 真正适合量产产品的方案：功耗预算、热设计、每 token 焦耳数，而非桌面级 tokens/秒。',
             '[本地LLM显存计算器](/zh/local-llms/vram-calculator-local-llm) -- 交互式计算器：任意模型、量化和 GPU 的精确显存。',
             '[2026年本地LLM笔记本 vs 台式机](/zh/local-llms/laptop-vs-desktop-local-llm) -- 性能、每 tok/sec 成本和硬件购买指南。',
             '[AMD Ryzen AI Max+ 迷你PC（2026）](/zh/local-llms/best-amd-mini-pc-local-llm-2026) -- 紧凑系统：64–128GB 统一内存，50 TOPS NPU，用于 30–70B 模型。',
@@ -7034,7 +7034,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/local-llms/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
+            '[로컬 LLM용 엣지 AI 실리콘 2026](/ko/power-local-llm/edge-ai-hardware-for-local-llms) -- 실제 양산 제품에 들어가는 구성: 전력 예산, 열설계, 토큰당 줄(J).',
             '[로컬 LLM VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) -- 인터랙티브 계산기: 모든 모델, 양자화, GPU에 대한 정확한 VRAM.',
             '[2026년 로컬 LLM 노트북 vs 데스크톱](/ko/local-llms/laptop-vs-desktop-local-llm) -- 성능, tok/sec당 비용, 하드웨어 구매 가이드.',
             '[AMD Ryzen AI Max+ 미니 PC (2026)](/ko/local-llms/best-amd-mini-pc-local-llm-2026) -- 컴팩트 시스템: 64~128GB 통합 메모리, 50 TOPS NPU — 30~70B 모델용.',
