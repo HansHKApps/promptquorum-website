@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 108,
+    "totalCount": 109,
     "capped": true
   },
   "vLLM": {
@@ -580,11 +580,19 @@
         "tier": "about"
       }
     ],
-    "totalCount": 124,
+    "totalCount": 125,
     "capped": true
   },
   "Atomic Chat": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
@@ -594,11 +602,19 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Jan": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -670,21 +686,21 @@
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "GPT4All": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -756,17 +772,9 @@
         "url": "/power-local-llm/h2ogpt-review-2026",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "small-local-llm-models",
-        "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
-        "url": "/local-llms/small-local-llm-models",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "AnythingLLM": {

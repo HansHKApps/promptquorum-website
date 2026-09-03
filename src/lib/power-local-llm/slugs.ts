@@ -150,6 +150,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-hr-software-enterprise-2026':          'best-ai-hr-software-enterprise-2026',
   // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
   'best-ai-marketing-software-enterprise-2026':   'best-ai-marketing-software-enterprise-2026',
+  // Atomic Chat review — 2026-09-03
+  'atomic-chat-review':                           'atomic-chat-review',
   // h2oGPT enterprise review — 2026-09-03
   'h2ogpt-review-2026':                           'h2ogpt-review-2026',
 }
