@@ -228,6 +228,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Official Product Page', description: 'Official capacity and pricing for the AC180 portable power station.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Balcony Solar Sizing, Yield & Payback: What to Expect by Country](/balcony-solar/balcony-solar-sizing-yield-payback) — cross-cluster: the seasonal kWh/day yield figures behind this guide\'s solar-offset math, broken out by country',
+          '[Do You Need a Battery for Balcony Solar?](/balcony-solar/do-you-need-a-battery-balcony-solar) — cross-cluster: the battery-sizing fundamentals behind this guide\'s battery table',
+          '[The 800W Balcony Solar Standard: EU Harmonization Explained (2027)](/balcony-solar/eu-800w-balcony-solar-standard-2027) — cross-cluster: the legal 800W plug-in cap referenced throughout this guide, and which countries share it',
+          '[Best Balcony Solar Batteries (2026): Store Your Surplus Power](/balcony-solar/best-balcony-solar-batteries-2026) — cross-cluster: the full buying guide behind the battery options in this guide\'s sizing table',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -477,6 +487,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — Offizielle Produktseite', description: 'Offizielle Kapazitäts- und Preisangaben für den Hub 2000 und seine Erweiterungsbatterien.' },
           { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — Offizielle Produktseite', description: 'Offizielle Kapazitäts-, Preis- und Erweiterungsangaben für das HomePower 2000 Ultra.' },
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Offizielle Produktseite', description: 'Offizielle Kapazitäts- und Preisangaben für die Powerstation AC180.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Balkonkraftwerk: Dimensionierung, Ertrag und Amortisation im Länderüberblick](/de/balcony-solar/balcony-solar-sizing-yield-payback) — clusterübergreifend: die saisonalen kWh/Tag-Ertragswerte hinter der Solar-Ausgleichsrechnung in diesem Ratgeber, nach Ländern aufgeschlüsselt',
+          '[Brauchen Sie einen Speicher für Balkonsolar?](/de/balcony-solar/do-you-need-a-battery-balcony-solar) — clusterübergreifend: die Grundlagen der Batteriedimensionierung hinter der Batterietabelle in diesem Ratgeber',
+          '[Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)](/de/balcony-solar/eu-800w-balcony-solar-standard-2027) — clusterübergreifend: die gesetzliche 800-Watt-Grenze, auf die dieser Ratgeber durchgehend verweist, und welche Länder sie teilen',
+          '[Die besten Balkonkraftwerk Speicher (2026): Überschuss selbst nutzen statt einspeisen](/de/balcony-solar/best-balcony-solar-batteries-2026) — clusterübergreifend: der vollständige Kaufratgeber zu den Batterien aus der Dimensionierungstabelle dieses Ratgebers',
         ],
       },
     },
@@ -730,6 +750,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Page produit officielle', description: 'Capacité et prix officiels de la station d\'alimentation portable AC180.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Dimensionnement, rendement et amortissement du solaire de balcon : à quoi s\'attendre selon le pays](/fr/balcony-solar/balcony-solar-sizing-yield-payback) — inter-cluster : les chiffres de rendement saisonnier en kWh/jour utilisés dans le calcul de compensation solaire de ce guide, par pays',
+          '[Avez-vous besoin d\'une batterie pour le solaire de balcon ?](/fr/balcony-solar/do-you-need-a-battery-balcony-solar) — inter-cluster : les bases du dimensionnement de batterie derrière le tableau de ce guide',
+          '[La norme des 800 W pour le solaire de balcon : l\'harmonisation européenne expliquée (2027)](/fr/balcony-solar/eu-800w-balcony-solar-standard-2027) — inter-cluster : le plafond légal de 800 W évoqué tout au long de ce guide, et les pays qui le partagent',
+          '[Meilleures batteries solaires de balcon (2026) : stockez votre surplus d\'énergie](/fr/balcony-solar/best-balcony-solar-batteries-2026) — inter-cluster : le guide d\'achat complet derrière les batteries du tableau de dimensionnement de ce guide',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -979,6 +1009,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — 公式製品ページ', description: 'Hub 2000とその拡張バッテリーの公式容量・価格情報。' },
           { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — 公式製品ページ', description: 'HomePower 2000 Ultraの公式容量・価格・拡張仕様。' },
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — 公式製品ページ', description: 'ポータブル電源AC180の公式容量・価格情報。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[バルコニーソーラーのサイジング・発電量・回収期間：国別に見る目安](/ja/balcony-solar/balcony-solar-sizing-yield-payback) — クラスター横断：本ガイドのソーラー相殺計算の根拠となる季節別kWh/日の発電量データを国別に紹介',
+          '[バルコニーソーラーにバッテリーは必要？](/ja/balcony-solar/do-you-need-a-battery-balcony-solar) — クラスター横断：本ガイドのバッテリー表の根拠となるバッテリーサイジングの基礎',
+          '[800W バルコニー太陽光基準：EU調和の解説（2027年）](/ja/balcony-solar/eu-800w-balcony-solar-standard-2027) — クラスター横断：本ガイド全体で参照している法定800Wのプラグイン上限と、それを共有する国々',
+          '[バルコニー太陽光発電用バッテリーおすすめ(2026年):余剰電力を蓄える](/ja/balcony-solar/best-balcony-solar-batteries-2026) — クラスター横断：本ガイドのサイジング表にあるバッテリー選択肢の詳しい購入ガイド',
         ],
       },
     },
@@ -1237,6 +1277,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180——官方产品页面', description: '便携电源AC180的官方容量与价格信息。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[阳台光伏的容量选择、发电量与回本周期：各国预期一览](/zh/balcony-solar/balcony-solar-sizing-yield-payback) — 跨专题:本指南太阳能抵消计算所依据的季节性kWh/日发电量数据,按国家细分',
+          '[阳台光伏需要电池吗？](/zh/balcony-solar/do-you-need-a-battery-balcony-solar) — 跨专题:本指南电池表背后的电池容量选择基础知识',
+          '[800瓦阳台太阳能标准：欧盟统一进程解析（2027年）](/zh/balcony-solar/eu-800w-balcony-solar-standard-2027) — 跨专题:本指南通篇提到的法定800瓦并网逆变器上限,以及采用该上限的国家',
+          '[2026年最佳阳台光伏电池推荐:储存你的多余电力](/zh/balcony-solar/best-balcony-solar-batteries-2026) — 跨专题:本指南容量选择表中电池选项的完整购买指南',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1493,6 +1543,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Página oficial del producto', description: 'Capacidad y precio oficiales de la estación de energía portátil AC180.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Dimensionamiento, rendimiento y amortización de la energía solar de balcón: qué esperar según el país](/es/balcony-solar/balcony-solar-sizing-yield-payback) — entre clústers: las cifras de rendimiento estacional en kWh/día detrás del cálculo de compensación solar de esta guía, desglosadas por país',
+          '[¿Necesitas una batería para la energía solar de balcón?](/es/balcony-solar/do-you-need-a-battery-balcony-solar) — entre clústers: los fundamentos de dimensionamiento de batería detrás de la tabla de baterías de esta guía',
+          '[El estándar de 800 W para energía solar de balcón: la armonización de la UE explicada (2027)](/es/balcony-solar/eu-800w-balcony-solar-standard-2027) — entre clústers: el límite legal de 800 W mencionado en toda esta guía, y qué países lo comparten',
+          '[Las mejores baterías de energía solar para balcón (2026): almacena tu excedente de energía](/es/balcony-solar/best-balcony-solar-batteries-2026) — entre clústers: la guía de compra completa detrás de las opciones de batería de la tabla de dimensionamiento de esta guía',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1742,6 +1802,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — Página oficial do produto', description: 'Capacidade e preço oficiais do Hub 2000 e suas baterias de expansão.' },
           { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — Página oficial do produto', description: 'Capacidade, preço e especificações de expansão oficiais do HomePower 2000 Ultra.' },
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Página oficial do produto', description: 'Capacidade e preço oficiais da estação de energia portátil AC180.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Dimensionamento, rendimento e retorno do investimento em energia solar de varanda: o que esperar por país](/pt/balcony-solar/balcony-solar-sizing-yield-payback) — entre clusters: os números de rendimento sazonal em kWh/dia por trás do cálculo de compensação solar deste guia, detalhados por país',
+          '[Você precisa de uma bateria para energia solar de varanda?](/pt/balcony-solar/do-you-need-a-battery-balcony-solar) — entre clusters: os fundamentos de dimensionamento de bateria por trás da tabela de baterias deste guia',
+          '[O padrão de 800 W para energia solar de varanda: a harmonização da UE explicada (2027)](/pt/balcony-solar/eu-800w-balcony-solar-standard-2027) — entre clusters: o limite legal de 800 W citado ao longo deste guia, e quais países o compartilham',
+          '[As melhores baterias solares de varanda (2026): armazene seu excedente de energia](/pt/balcony-solar/best-balcony-solar-batteries-2026) — entre clusters: o guia de compra completo por trás das opções de bateria na tabela de dimensionamento deste guia',
         ],
       },
     },
@@ -1995,6 +2065,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — الصفحة الرسمية للمنتج', description: 'السعة والسعر الرسميان لمحطة الطاقة المحمولة AC180.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[تحديد حجم الطاقة الشمسية للشرفة، والإنتاجية، ومدة استرداد التكلفة: ما يمكن توقعه حسب الدولة](/ar/balcony-solar/balcony-solar-sizing-yield-payback) — عبر المجموعات: أرقام الإنتاجية الموسمية بالكيلوواط ساعة/يوم التي تستند إليها حسابات موازنة الطاقة الشمسية في هذا الدليل، مفصّلة حسب الدولة',
+          '[هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟](/ar/balcony-solar/do-you-need-a-battery-balcony-solar) — عبر المجموعات: أساسيات تحديد حجم البطارية التي يستند إليها جدول البطاريات في هذا الدليل',
+          '[معيار 800 واط للطاقة الشمسية على الشرفات: شرح التوحيد الأوروبي (2027)](/ar/balcony-solar/eu-800w-balcony-solar-standard-2027) — عبر المجموعات: الحد القانوني البالغ 800 واط المذكور في هذا الدليل، والدول التي تشترك فيه',
+          '[أفضل بطاريات الطاقة الشمسية للشرفة (2026): خزّن فائض الطاقة لديك](/ar/balcony-solar/best-balcony-solar-batteries-2026) — عبر المجموعات: دليل الشراء الكامل لخيارات البطاريات في جدول تحديد الحجم بهذا الدليل',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -2243,6 +2323,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — 공식 제품 페이지', description: 'Hub 2000과 그 확장 배터리의 공식 용량 및 가격 정보.' },
           { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — 공식 제품 페이지', description: 'HomePower 2000 Ultra의 공식 용량, 가격, 확장 사양.' },
           { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — 공식 제품 페이지', description: '휴대용 전원 AC180의 공식 용량 및 가격 정보.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽기',
+        items: [
+          '[발코니 태양광 용량 산정, 발전량, 투자회수 기간: 국가별 예상치](/ko/balcony-solar/balcony-solar-sizing-yield-payback) — 클러스터 간: 이 가이드의 태양광 상쇄 계산에 사용된 국가별 계절 kWh/일 발전량 수치',
+          '[발코니 태양광에 배터리가 필요한가요?](/ko/balcony-solar/do-you-need-a-battery-balcony-solar) — 클러스터 간: 이 가이드의 배터리 표를 뒷받침하는 배터리 용량 산정 기초',
+          '[800W 발코니 태양광 표준: EU 조화 정책 설명 (2027년)](/ko/balcony-solar/eu-800w-balcony-solar-standard-2027) — 클러스터 간: 이 가이드 전체에서 언급하는 법적 800W 플러그인 상한선과 이를 공유하는 국가들',
+          '[2026년 최고의 발코니 태양광 배터리: 남는 전력을 저장하세요](/ko/balcony-solar/best-balcony-solar-batteries-2026) — 클러스터 간: 이 가이드의 용량 산정 표에 나온 배터리 옵션에 대한 전체 구매 가이드',
         ],
       },
     },
