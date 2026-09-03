@@ -237,6 +237,7 @@ https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
 https://www.promptquorum.com/power-local-llm
 https://www.promptquorum.com/power-local-llm/agentic-ai-security-identity-access
 https://www.promptquorum.com/power-local-llm/ai-generated-content-ip-risk
+https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide-2026
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
