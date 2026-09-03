@@ -250,16 +250,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tool Integrations for Writers',
         content:
           '**Ollama exposes an OpenAI-compatible API at localhost that a growing ecosystem of writer-facing tools connects to.** The integrations below represent the most established options as of 2026.',
-        columns: ['Tool', 'Integration', 'Best For'],
+        columns: ['Tool', 'Link', 'Integration', 'Best For'],
         rows: [
-          { 'Tool': 'Obsidian', 'Integration': 'Copilot plugin or Smart Connections plugin → Ollama API. See [Obsidian + Local LLM Plugins](/power-local-llm/local-llm-with-obsidian-2026) for the deeper guide on which Obsidian plugins work best with Ollama.', 'Best For': 'Writers who already use Obsidian for notes + manuscript; seamless same-app generation' },
-          { 'Tool': 'Scrivener', 'Integration': 'External script via Ollama API → paste into document', 'Best For': 'Writers who structure novels in Scrivener; AI drafts pasted into the existing project structure' },
-          { 'Tool': 'VS Code', 'Integration': 'Continue.dev extension → Ollama backend', 'Best For': 'Technical writers and game narrative designers comfortable in a code editor' },
-          { 'Tool': 'SillyTavern', 'Integration': 'OpenAI-compatible API → Ollama', 'Best For': 'Roleplay-style fiction and character-card-driven drafting; persistent character memory' },
+          { 'Tool': 'Obsidian', 'Link': '[obsidian.md](https://obsidian.md)', 'Integration': 'Copilot plugin or Smart Connections plugin → Ollama API. See [Obsidian + Local LLM Plugins](/power-local-llm/local-llm-with-obsidian-2026) for the deeper guide on which Obsidian plugins work best with Ollama.', 'Best For': 'Writers who already use Obsidian for notes + manuscript; seamless same-app generation' },
+          { 'Tool': 'Scrivener', 'Link': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'Integration': 'External script via Ollama API → paste into document', 'Best For': 'Writers who structure novels in Scrivener; AI drafts pasted into the existing project structure' },
+          { 'Tool': 'VS Code', 'Link': '[code.visualstudio.com](https://code.visualstudio.com)', 'Integration': 'Continue.dev extension → Ollama backend', 'Best For': 'Technical writers and game narrative designers comfortable in a code editor' },
+          { 'Tool': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integration': 'OpenAI-compatible API → Ollama', 'Best For': 'Roleplay-style fiction and character-card-driven drafting; persistent character memory' },
           { 'Tool': 'Plain terminal', 'Integration': '`ollama run [model]` or curl to Ollama API', 'Best For': 'Scriptable workflows; writers who want maximum control with minimal UI overhead' },
-          { 'Tool': 'LM Studio', 'Integration': 'Built-in chat UI + local server API', 'Best For': 'Writers who want a GUI model manager without installing Ollama separately' },
-          { 'Tool': 'NovelCrafter', 'Integration': 'Built-in AI integration; supports OpenAI-compatible endpoints (point at Ollama)', 'Best For': 'Writers who want chapter-level AI assistance inside a single novel-focused app; closest to "AI-native novel writing tool" in 2026' },
-          { 'Tool': 'Plottr', 'Integration': 'Manual workflow: structure novels in Plottr, paste scenes/beats into Ollama externally', 'Best For': 'Plot-heavy genre fiction (mystery, thriller, fantasy) where structural plotting is the workflow centerpiece' },
+          { 'Tool': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integration': 'Built-in chat UI + local server API', 'Best For': 'Writers who want a GUI model manager without installing Ollama separately' },
+          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Built-in AI integration; supports OpenAI-compatible endpoints (point at Ollama)', 'Best For': 'Writers who want chapter-level AI assistance inside a single novel-focused app; closest to "AI-native novel writing tool" in 2026' },
+          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manual workflow: structure novels in Plottr, paste scenes/beats into Ollama externally', 'Best For': 'Plot-heavy genre fiction (mystery, thriller, fantasy) where structural plotting is the workflow centerpiece' },
         ],
         callouts: [
           {
@@ -616,16 +616,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Integraciones de herramientas para escritores',
         content:
           '**Ollama expone una API compatible con OpenAI en localhost a la que se conecta un ecosistema creciente de herramientas orientadas a escritores.** Las integraciones a continuación representan las opciones más consolidadas a partir de 2026.',
-        columns: ['Herramienta', 'Integración', 'Ideal para'],
+        columns: ['Herramienta', 'Enlace', 'Integración', 'Ideal para'],
         rows: [
-          { 'Herramienta': 'Obsidian', 'Integración': 'Plugin Copilot o Smart Connections → API de Ollama. Consulta [Obsidian + plugins de LLM local](/es/power-local-llm/local-llm-with-obsidian-2026) para la guía detallada sobre qué plugins de Obsidian funcionan mejor con Ollama.', 'Ideal para': 'Escritores que ya usan Obsidian para notas + manuscrito; generación integrada en la misma app sin cambiar de contexto' },
-          { 'Herramienta': 'Scrivener', 'Integración': 'Script externo mediante API de Ollama → pegar en el documento', 'Ideal para': 'Escritores que estructuran novelas en Scrivener; borradores de IA pegados en la estructura de proyecto existente' },
-          { 'Herramienta': 'VS Code', 'Integración': 'Extensión Continue.dev → backend de Ollama', 'Ideal para': 'Escritores técnicos y diseñadores de narrativas para videojuegos cómodos en un editor de código' },
-          { 'Herramienta': 'SillyTavern', 'Integración': 'API compatible con OpenAI → Ollama', 'Ideal para': 'Ficción de tipo roleplay y redacción guiada por fichas de personajes; memoria persistente de personajes' },
+          { 'Herramienta': 'Obsidian', 'Enlace': '[obsidian.md](https://obsidian.md)', 'Integración': 'Plugin Copilot o Smart Connections → API de Ollama. Consulta [Obsidian + plugins de LLM local](/es/power-local-llm/local-llm-with-obsidian-2026) para la guía detallada sobre qué plugins de Obsidian funcionan mejor con Ollama.', 'Ideal para': 'Escritores que ya usan Obsidian para notas + manuscrito; generación integrada en la misma app sin cambiar de contexto' },
+          { 'Herramienta': 'Scrivener', 'Enlace': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'Integración': 'Script externo mediante API de Ollama → pegar en el documento', 'Ideal para': 'Escritores que estructuran novelas en Scrivener; borradores de IA pegados en la estructura de proyecto existente' },
+          { 'Herramienta': 'VS Code', 'Enlace': '[code.visualstudio.com](https://code.visualstudio.com)', 'Integración': 'Extensión Continue.dev → backend de Ollama', 'Ideal para': 'Escritores técnicos y diseñadores de narrativas para videojuegos cómodos en un editor de código' },
+          { 'Herramienta': 'SillyTavern', 'Enlace': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integración': 'API compatible con OpenAI → Ollama', 'Ideal para': 'Ficción de tipo roleplay y redacción guiada por fichas de personajes; memoria persistente de personajes' },
           { 'Herramienta': 'Terminal pura', 'Integración': '`ollama run [model]` o curl a la API de Ollama', 'Ideal para': 'Flujos de trabajo scriptables; escritores que quieren máximo control con mínima sobrecarga de interfaz' },
-          { 'Herramienta': 'LM Studio', 'Integración': 'Interfaz de chat integrada + API de servidor local', 'Ideal para': 'Escritores que quieren un gestor de modelos con GUI sin instalar Ollama por separado' },
-          { 'Herramienta': 'NovelCrafter', 'Integración': 'Integración de IA incorporada; admite endpoints compatibles con OpenAI (apuntando a Ollama)', 'Ideal para': 'Escritores que quieren asistencia de IA a nivel de capítulo dentro de una única app enfocada en novelas; la más cercana a una "herramienta de escritura de novelas nativa de IA" en 2026' },
-          { 'Herramienta': 'Plottr', 'Integración': 'Flujo de trabajo manual: estructura novelas en Plottr, pega escenas/beats en Ollama externamente', 'Ideal para': 'Ficción de género con mucha trama (misterio, thriller, fantasía) donde el trazado estructural de la trama es el eje del flujo de trabajo' },
+          { 'Herramienta': 'LM Studio', 'Enlace': '[lmstudio.ai](https://lmstudio.ai)', 'Integración': 'Interfaz de chat integrada + API de servidor local', 'Ideal para': 'Escritores que quieren un gestor de modelos con GUI sin instalar Ollama por separado' },
+          { 'Herramienta': 'NovelCrafter', 'Enlace': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integración': 'Integración de IA incorporada; admite endpoints compatibles con OpenAI (apuntando a Ollama)', 'Ideal para': 'Escritores que quieren asistencia de IA a nivel de capítulo dentro de una única app enfocada en novelas; la más cercana a una "herramienta de escritura de novelas nativa de IA" en 2026' },
+          { 'Herramienta': 'Plottr', 'Enlace': '[plottr.com](https://plottr.com)', 'Integración': 'Flujo de trabajo manual: estructura novelas en Plottr, pega escenas/beats en Ollama externamente', 'Ideal para': 'Ficción de género con mucha trama (misterio, thriller, fantasía) donde el trazado estructural de la trama es el eje del flujo de trabajo' },
         ],
         callouts: [
           {
@@ -996,16 +996,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tool-Integrationen für Autoren',
         content:
           '**Ollama stellt eine OpenAI-kompatible API auf localhost bereit, mit der eine wachsende Zahl von autorenseitigen Tools verbindet.** Die folgenden Integrationen stellen die etabliertesten Optionen dar.',
-        columns: ['Tool', 'Integration', 'Ideal für'],
+        columns: ['Tool', 'Link', 'Integration', 'Ideal für'],
         rows: [
-          { 'Tool': 'Obsidian', 'Integration': 'Copilot-Plugin oder Smart Connections-Plugin → Ollama API. Siehe [Obsidian + Lokale LLM-Plugins](/de/power-local-llm/local-llm-with-obsidian-2026) für den ausführlichen Leitfaden.', 'Ideal für': 'Autoren, die Obsidian bereits für Notizen + Manuskript verwenden; nahtlose Generierung in derselben App' },
-          { 'Tool': 'Scrivener', 'Integration': 'Externes Skript über Ollama API → in Dokument einfügen', 'Ideal für': 'Autoren, die Romane in Scrivener strukturieren; KI-Entwürfe in bestehende Projektstruktur einfügen' },
-          { 'Tool': 'VS Code', 'Integration': 'Continue.dev-Erweiterung → Ollama-Backend', 'Ideal für': 'Technische Autoren und Game-Narrative-Designer im Code-Editor' },
-          { 'Tool': 'SillyTavern', 'Integration': 'OpenAI-kompatible API → Ollama', 'Ideal für': 'Roleplay-Fiktion und charakterkarten-gesteuertes Drafting; persistentes Charaktergedächtnis' },
+          { 'Tool': 'Obsidian', 'Link': '[obsidian.md](https://obsidian.md)', 'Integration': 'Copilot-Plugin oder Smart Connections-Plugin → Ollama API. Siehe [Obsidian + Lokale LLM-Plugins](/de/power-local-llm/local-llm-with-obsidian-2026) für den ausführlichen Leitfaden.', 'Ideal für': 'Autoren, die Obsidian bereits für Notizen + Manuskript verwenden; nahtlose Generierung in derselben App' },
+          { 'Tool': 'Scrivener', 'Link': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'Integration': 'Externes Skript über Ollama API → in Dokument einfügen', 'Ideal für': 'Autoren, die Romane in Scrivener strukturieren; KI-Entwürfe in bestehende Projektstruktur einfügen' },
+          { 'Tool': 'VS Code', 'Link': '[code.visualstudio.com](https://code.visualstudio.com)', 'Integration': 'Continue.dev-Erweiterung → Ollama-Backend', 'Ideal für': 'Technische Autoren und Game-Narrative-Designer im Code-Editor' },
+          { 'Tool': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integration': 'OpenAI-kompatible API → Ollama', 'Ideal für': 'Roleplay-Fiktion und charakterkarten-gesteuertes Drafting; persistentes Charaktergedächtnis' },
           { 'Tool': 'Reines Terminal', 'Integration': '`ollama run [model]` oder curl zur Ollama API', 'Ideal für': 'Skriptierbare Workflows; maximale Kontrolle mit minimalem UI-Overhead' },
-          { 'Tool': 'LM Studio', 'Integration': 'Integrierte Chat-Benutzeroberfläche + lokale Server-API', 'Ideal für': 'Autoren, die einen GUI-Modellmanager ohne separaten Ollama-Install wünschen' },
-          { 'Tool': 'NovelCrafter', 'Integration': 'Integrierte KI-Integration; unterstützt OpenAI-kompatible Endpunkte (auf Ollama zeigen)', 'Ideal für': 'Autoren, die kapitelebene KI-Unterstützung in einer einzigen roman-fokussierten App wünschen' },
-          { 'Tool': 'Plottr', 'Integration': 'Manueller Workflow: Romane in Plottr strukturieren, Szenen/Beats extern in Ollama einfügen', 'Ideal für': 'Plot-intensive Genrefiktion (Krimi, Thriller, Fantasy) mit strukturellem Plotten als Workflow-Mittelpunkt' },
+          { 'Tool': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integration': 'Integrierte Chat-Benutzeroberfläche + lokale Server-API', 'Ideal für': 'Autoren, die einen GUI-Modellmanager ohne separaten Ollama-Install wünschen' },
+          { 'Tool': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integration': 'Integrierte KI-Integration; unterstützt OpenAI-kompatible Endpunkte (auf Ollama zeigen)', 'Ideal für': 'Autoren, die kapitelebene KI-Unterstützung in einer einzigen roman-fokussierten App wünschen' },
+          { 'Tool': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integration': 'Manueller Workflow: Romane in Plottr strukturieren, Szenen/Beats extern in Ollama einfügen', 'Ideal für': 'Plot-intensive Genrefiktion (Krimi, Thriller, Fantasy) mit strukturellem Plotten als Workflow-Mittelpunkt' },
         ],
         callouts: [
           {
@@ -1366,16 +1366,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Intégrations d\'outils pour les auteurs',
         content:
           '**Ollama expose une API compatible OpenAI sur localhost qu\'un écosystème croissant d\'outils orientés auteurs connecte.** Les intégrations ci-dessous représentent les options les plus établies.',
-        columns: ['Outil', 'Intégration', 'Idéal pour'],
+        columns: ['Outil', 'Lien', 'Intégration', 'Idéal pour'],
         rows: [
-          { 'Outil': 'Obsidian', 'Intégration': 'Plugin Copilot ou Smart Connections → API Ollama. Voir [Obsidian + Plugins LLM locaux](/fr/power-local-llm/local-llm-with-obsidian-2026) pour le guide approfondi.', 'Idéal pour': 'Auteurs utilisant déjà Obsidian pour les notes + manuscrit ; génération dans la même appli sans changer de contexte' },
-          { 'Outil': 'Scrivener', 'Intégration': 'Script externe via API Ollama → coller dans le document', 'Idéal pour': 'Auteurs structurant leurs romans dans Scrivener ; brouillons IA collés dans la structure de projet existante' },
-          { 'Outil': 'VS Code', 'Intégration': 'Extension Continue.dev → backend Ollama', 'Idéal pour': 'Auteurs techniques et concepteurs de narration de jeux à l\'aise dans un éditeur de code' },
-          { 'Outil': 'SillyTavern', 'Intégration': 'API compatible OpenAI → Ollama', 'Idéal pour': 'Fiction roleplay et rédaction guidée par fiches personnages ; mémoire de personnage persistante' },
+          { 'Outil': 'Obsidian', 'Lien': '[obsidian.md](https://obsidian.md)', 'Intégration': 'Plugin Copilot ou Smart Connections → API Ollama. Voir [Obsidian + Plugins LLM locaux](/fr/power-local-llm/local-llm-with-obsidian-2026) pour le guide approfondi.', 'Idéal pour': 'Auteurs utilisant déjà Obsidian pour les notes + manuscrit ; génération dans la même appli sans changer de contexte' },
+          { 'Outil': 'Scrivener', 'Lien': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'Intégration': 'Script externe via API Ollama → coller dans le document', 'Idéal pour': 'Auteurs structurant leurs romans dans Scrivener ; brouillons IA collés dans la structure de projet existante' },
+          { 'Outil': 'VS Code', 'Lien': '[code.visualstudio.com](https://code.visualstudio.com)', 'Intégration': 'Extension Continue.dev → backend Ollama', 'Idéal pour': 'Auteurs techniques et concepteurs de narration de jeux à l\'aise dans un éditeur de code' },
+          { 'Outil': 'SillyTavern', 'Lien': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Intégration': 'API compatible OpenAI → Ollama', 'Idéal pour': 'Fiction roleplay et rédaction guidée par fiches personnages ; mémoire de personnage persistante' },
           { 'Outil': 'Terminal brut', 'Intégration': '`ollama run [model]` ou curl vers l\'API Ollama', 'Idéal pour': 'Workflows scriptables ; contrôle maximal avec overhead d\'interface minimal' },
-          { 'Outil': 'LM Studio', 'Intégration': 'Interface de chat intégrée + API serveur local', 'Idéal pour': 'Auteurs souhaitant un gestionnaire de modèles GUI sans installer Ollama séparément' },
-          { 'Outil': 'NovelCrafter', 'Intégration': 'Intégration IA intégrée ; supporte les endpoints compatibles OpenAI (pointer vers Ollama)', 'Idéal pour': 'Auteurs souhaitant une assistance IA au niveau chapitre dans une seule app dédiée au roman' },
-          { 'Outil': 'Plottr', 'Intégration': 'Workflow manuel : structurer les romans dans Plottr, coller scènes/beats dans Ollama en externe', 'Idéal pour': 'Fiction de genre à plot dense (polar, thriller, fantasy) où la structure narrative est le cœur du workflow' },
+          { 'Outil': 'LM Studio', 'Lien': '[lmstudio.ai](https://lmstudio.ai)', 'Intégration': 'Interface de chat intégrée + API serveur local', 'Idéal pour': 'Auteurs souhaitant un gestionnaire de modèles GUI sans installer Ollama séparément' },
+          { 'Outil': 'NovelCrafter', 'Lien': '[novelcrafter.com](https://www.novelcrafter.com)', 'Intégration': 'Intégration IA intégrée ; supporte les endpoints compatibles OpenAI (pointer vers Ollama)', 'Idéal pour': 'Auteurs souhaitant une assistance IA au niveau chapitre dans une seule app dédiée au roman' },
+          { 'Outil': 'Plottr', 'Lien': '[plottr.com](https://plottr.com)', 'Intégration': 'Workflow manuel : structurer les romans dans Plottr, coller scènes/beats dans Ollama en externe', 'Idéal pour': 'Fiction de genre à plot dense (polar, thriller, fantasy) où la structure narrative est le cœur du workflow' },
         ],
         callouts: [
           {
@@ -1736,16 +1736,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ライター向けツール統合',
         content:
           '**OllamaはローカルホストでOpenAI互換APIを公開しており、成長しているライター向けツールのエコシステムが接続しています。** 以下の統合は最も確立されたオプションを示します。',
-        columns: ['ツール', '連携方法', '用途'],
+        columns: ['ツール', 'リンク', '連携方法', '用途'],
         rows: [
-          { 'ツール': 'Obsidian', '連携方法': 'CopilotプラグインまたはSmart ConnectionsプラグインでOllama APIに接続。詳細は[Obsidian＋ローカルLLMプラグイン](/ja/power-local-llm/local-llm-with-obsidian-2026)を参照。', '用途': 'ノート＋原稿にObsidianをすでに使っているライター；同じアプリでシームレスに生成' },
-          { 'ツール': 'Scrivener', '連携方法': 'Ollama API経由の外部スクリプト→ドキュメントに貼り付け', '用途': 'Scrivenerで小説を構成するライター；AI草稿を既存のプロジェクト構造に貼り付け' },
-          { 'ツール': 'VS Code', '連携方法': 'Continue.dev拡張機能→Ollamaバックエンド', '用途': 'コードエディタに慣れているテクニカルライターとゲームナラティブデザイナー' },
-          { 'ツール': 'SillyTavern', '連携方法': 'OpenAI互換API→Ollama', '用途': 'ロールプレイ形式のフィクションとキャラクターカード駆動の執筆；永続的なキャラクター記憶' },
+          { 'ツール': 'Obsidian', 'リンク': '[obsidian.md](https://obsidian.md)', '連携方法': 'CopilotプラグインまたはSmart ConnectionsプラグインでOllama APIに接続。詳細は[Obsidian＋ローカルLLMプラグイン](/ja/power-local-llm/local-llm-with-obsidian-2026)を参照。', '用途': 'ノート＋原稿にObsidianをすでに使っているライター；同じアプリでシームレスに生成' },
+          { 'ツール': 'Scrivener', 'リンク': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', '連携方法': 'Ollama API経由の外部スクリプト→ドキュメントに貼り付け', '用途': 'Scrivenerで小説を構成するライター；AI草稿を既存のプロジェクト構造に貼り付け' },
+          { 'ツール': 'VS Code', 'リンク': '[code.visualstudio.com](https://code.visualstudio.com)', '連携方法': 'Continue.dev拡張機能→Ollamaバックエンド', '用途': 'コードエディタに慣れているテクニカルライターとゲームナラティブデザイナー' },
+          { 'ツール': 'SillyTavern', 'リンク': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '連携方法': 'OpenAI互換API→Ollama', '用途': 'ロールプレイ形式のフィクションとキャラクターカード駆動の執筆；永続的なキャラクター記憶' },
           { 'ツール': 'プレーンターミナル', '連携方法': '`ollama run [model]`またはOllama APIへのcurl', '用途': 'スクリプタブルなワークフロー；最小限のUIオーバーヘッドで最大限のコントロール' },
-          { 'ツール': 'LM Studio', '連携方法': '組み込みチャットUI＋ローカルサーバーAPI', '用途': 'Ollamaを別にインストールせずGUIモデルマネージャーを望むライター' },
-          { 'ツール': 'NovelCrafter', '連携方法': '組み込みAI統合；OpenAI互換エンドポイントをサポート（Ollamaに向ける）', '用途': '小説専用アプリで章レベルのAI支援を望むライター' },
-          { 'ツール': 'Plottr', '連携方法': '手動ワークフロー：PlottrでStory構造化、シーン/ビートを外部でOllamaに貼り付け', '用途': '構造的プロッティングがワークフローの中心であるプロット重視のジャンルフィクション' },
+          { 'ツール': 'LM Studio', 'リンク': '[lmstudio.ai](https://lmstudio.ai)', '連携方法': '組み込みチャットUI＋ローカルサーバーAPI', '用途': 'Ollamaを別にインストールせずGUIモデルマネージャーを望むライター' },
+          { 'ツール': 'NovelCrafter', 'リンク': '[novelcrafter.com](https://www.novelcrafter.com)', '連携方法': '組み込みAI統合；OpenAI互換エンドポイントをサポート（Ollamaに向ける）', '用途': '小説専用アプリで章レベルのAI支援を望むライター' },
+          { 'ツール': 'Plottr', 'リンク': '[plottr.com](https://plottr.com)', '連携方法': '手動ワークフロー：PlottrでStory構造化、シーン/ビートを外部でOllamaに貼り付け', '用途': '構造的プロッティングがワークフローの中心であるプロット重視のジャンルフィクション' },
         ],
         callouts: [
           {
@@ -2110,16 +2110,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '作者工具集成',
         content:
           '**Ollama在本地主机上暴露一个OpenAI兼容API，越来越多的面向作者的工具生态系统与之连接。** 以下集成代表截至目前最成熟的选项。',
-        columns: ['工具', '集成方式', '适用场景'],
+        columns: ['工具', '链接', '集成方式', '适用场景'],
         rows: [
-          { '工具': 'Obsidian', '集成方式': 'Copilot插件或Smart Connections插件→Ollama API。详见[Obsidian＋本地LLM插件](/zh/power-local-llm/local-llm-with-obsidian-2026)深度指南。', '适用场景': '已在用Obsidian做笔记＋手稿的作者；在同一应用中无缝生成' },
-          { '工具': 'Scrivener', '集成方式': '通过Ollama API的外部脚本→粘贴到文档', '适用场景': '在Scrivener中结构化小说的作者；AI草稿粘贴到现有项目结构' },
-          { '工具': 'VS Code', '集成方式': 'Continue.dev扩展→Ollama后端', '适用场景': '熟悉代码编辑器的技术写作者和游戏叙事设计师' },
-          { '工具': 'SillyTavern', '集成方式': 'OpenAI兼容API→Ollama', '适用场景': '角色扮演式小说和角色卡驱动的写作；持久化角色记忆' },
+          { '工具': 'Obsidian', '链接': '[obsidian.md](https://obsidian.md)', '集成方式': 'Copilot插件或Smart Connections插件→Ollama API。详见[Obsidian＋本地LLM插件](/zh/power-local-llm/local-llm-with-obsidian-2026)深度指南。', '适用场景': '已在用Obsidian做笔记＋手稿的作者；在同一应用中无缝生成' },
+          { '工具': 'Scrivener', '链接': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', '集成方式': '通过Ollama API的外部脚本→粘贴到文档', '适用场景': '在Scrivener中结构化小说的作者；AI草稿粘贴到现有项目结构' },
+          { '工具': 'VS Code', '链接': '[code.visualstudio.com](https://code.visualstudio.com)', '集成方式': 'Continue.dev扩展→Ollama后端', '适用场景': '熟悉代码编辑器的技术写作者和游戏叙事设计师' },
+          { '工具': 'SillyTavern', '链接': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '集成方式': 'OpenAI兼容API→Ollama', '适用场景': '角色扮演式小说和角色卡驱动的写作；持久化角色记忆' },
           { '工具': '纯终端', '集成方式': '`ollama run [model]`或curl到Ollama API', '适用场景': '可脚本化工作流；希望以最小UI开销获得最大控制权的作者' },
-          { '工具': 'LM Studio', '集成方式': '内置聊天界面＋本地服务器API', '适用场景': '希望有GUI模型管理器而无需单独安装Ollama的作者' },
-          { '工具': 'NovelCrafter', '集成方式': '内置AI集成；支持OpenAI兼容端点（指向Ollama）', '适用场景': '希望在单个小说专用应用中获得章节级AI辅助的作者' },
-          { '工具': 'Plottr', '集成方式': '手动工作流：在Plottr中构建故事结构，外部将场景/节拍粘贴到Ollama', '适用场景': '以结构性情节设计为工作流核心的情节密集型类型小说（悬疑、惊悚、奇幻）' },
+          { '工具': 'LM Studio', '链接': '[lmstudio.ai](https://lmstudio.ai)', '集成方式': '内置聊天界面＋本地服务器API', '适用场景': '希望有GUI模型管理器而无需单独安装Ollama的作者' },
+          { '工具': 'NovelCrafter', '链接': '[novelcrafter.com](https://www.novelcrafter.com)', '集成方式': '内置AI集成；支持OpenAI兼容端点（指向Ollama）', '适用场景': '希望在单个小说专用应用中获得章节级AI辅助的作者' },
+          { '工具': 'Plottr', '链接': '[plottr.com](https://plottr.com)', '集成方式': '手动工作流：在Plottr中构建故事结构，外部将场景/节拍粘贴到Ollama', '适用场景': '以结构性情节设计为工作流核心的情节密集型类型小说（悬疑、惊悚、奇幻）' },
         ],
         callouts: [
           {
@@ -2484,16 +2484,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Integrações de ferramentas para escritores',
         content:
           '**O Ollama expõe uma API compatível com OpenAI em localhost à qual se conecta um ecossistema crescente de ferramentas voltadas para escritores.** As integrações abaixo representam as opções mais consolidadas a partir de 2026.',
-        columns: ['Ferramenta', 'Integração', 'Ideal para'],
+        columns: ['Ferramenta', 'Link', 'Integração', 'Ideal para'],
         rows: [
-          { 'Ferramenta': 'Obsidian', 'Integração': 'Plugin Copilot ou Smart Connections → API do Ollama. Consulte [Obsidian + plugins de LLM local](/pt/power-local-llm/local-llm-with-obsidian-2026) para o guia detalhado sobre quais plugins do Obsidian funcionam melhor com o Ollama.', 'Ideal para': 'Escritores que já usam o Obsidian para notas + manuscrito; geração integrada no mesmo app sem trocar de contexto' },
-          { 'Ferramenta': 'Scrivener', 'Integração': 'Script externo por meio da API do Ollama → colar no documento', 'Ideal para': 'Escritores que estruturam romances no Scrivener; rascunhos de IA colados na estrutura de projeto existente' },
-          { 'Ferramenta': 'VS Code', 'Integração': 'Extensão Continue.dev → backend do Ollama', 'Ideal para': 'Escritores técnicos e designers de narrativas para videogames confortáveis em um editor de código' },
-          { 'Ferramenta': 'SillyTavern', 'Integração': 'API compatível com OpenAI → Ollama', 'Ideal para': 'Ficção do tipo roleplay e redação guiada por fichas de personagens; memória persistente de personagens' },
+          { 'Ferramenta': 'Obsidian', 'Link': '[obsidian.md](https://obsidian.md)', 'Integração': 'Plugin Copilot ou Smart Connections → API do Ollama. Consulte [Obsidian + plugins de LLM local](/pt/power-local-llm/local-llm-with-obsidian-2026) para o guia detalhado sobre quais plugins do Obsidian funcionam melhor com o Ollama.', 'Ideal para': 'Escritores que já usam o Obsidian para notas + manuscrito; geração integrada no mesmo app sem trocar de contexto' },
+          { 'Ferramenta': 'Scrivener', 'Link': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'Integração': 'Script externo por meio da API do Ollama → colar no documento', 'Ideal para': 'Escritores que estruturam romances no Scrivener; rascunhos de IA colados na estrutura de projeto existente' },
+          { 'Ferramenta': 'VS Code', 'Link': '[code.visualstudio.com](https://code.visualstudio.com)', 'Integração': 'Extensão Continue.dev → backend do Ollama', 'Ideal para': 'Escritores técnicos e designers de narrativas para videogames confortáveis em um editor de código' },
+          { 'Ferramenta': 'SillyTavern', 'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'Integração': 'API compatível com OpenAI → Ollama', 'Ideal para': 'Ficção do tipo roleplay e redação guiada por fichas de personagens; memória persistente de personagens' },
           { 'Ferramenta': 'Terminal puro', 'Integração': '`ollama run [model]` ou curl para a API do Ollama', 'Ideal para': 'Fluxos de trabalho scriptáveis; escritores que querem controle máximo com mínima sobrecarga de interface' },
-          { 'Ferramenta': 'LM Studio', 'Integração': 'Interface de chat integrada + API de servidor local', 'Ideal para': 'Escritores que querem um gerenciador de modelos com GUI sem instalar o Ollama separadamente' },
-          { 'Ferramenta': 'NovelCrafter', 'Integração': 'Integração de IA incorporada; suporta endpoints compatíveis com OpenAI (apontando para o Ollama)', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances; a mais próxima de uma "ferramenta de escrita de romances nativa de IA" em 2026' },
-          { 'Ferramenta': 'Plottr', 'Integração': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
+          { 'Ferramenta': 'LM Studio', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Integração': 'Interface de chat integrada + API de servidor local', 'Ideal para': 'Escritores que querem um gerenciador de modelos com GUI sem instalar o Ollama separadamente' },
+          { 'Ferramenta': 'NovelCrafter', 'Link': '[novelcrafter.com](https://www.novelcrafter.com)', 'Integração': 'Integração de IA incorporada; suporta endpoints compatíveis com OpenAI (apontando para o Ollama)', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances; a mais próxima de uma "ferramenta de escrita de romances nativa de IA" em 2026' },
+          { 'Ferramenta': 'Plottr', 'Link': '[plottr.com](https://plottr.com)', 'Integração': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
         ],
         callouts: [
           {
@@ -2863,16 +2863,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تكاملات الأدوات للكتّاب',
         content:
           '**يعرض Ollama واجهة API متوافقة مع OpenAI على localhost تتصل بها مجموعة متنامية من الأدوات الموجهة للكتّاب.** التكاملات أدناه تمثل الخيارات الأكثر رسوخاً.',
-        columns: ['الأداة', 'التكامل', 'الأمثل لـ'],
+        columns: ['الأداة', 'الرابط', 'التكامل', 'الأمثل لـ'],
         rows: [
-          { 'الأداة': 'Obsidian', 'التكامل': 'إضافة Copilot أو Smart Connections → API لـ Ollama. انظر [Obsidian + إضافات النموذج اللغوي المحلي](/ar/power-local-llm/local-llm-with-obsidian-2026) للدليل التفصيلي.', 'الأمثل لـ': 'الكتّاب الذين يستخدمون Obsidian بالفعل للملاحظات + المخطوطة؛ توليد مدمج في نفس التطبيق' },
-          { 'الأداة': 'Scrivener', 'التكامل': 'سكريبت خارجي عبر API لـ Ollama → لصق في الوثيقة', 'الأمثل لـ': 'الكتّاب الذين يهيكلون الروايات في Scrivener؛ مسودات الذكاء الاصطناعي ملصوقة في هيكل المشروع القائم' },
-          { 'الأداة': 'VS Code', 'التكامل': 'إضافة Continue.dev → خلفية Ollama', 'الأمثل لـ': 'الكتّاب التقنيون ومصممو سرد الألعاب المرتاحون لمحرر الكود' },
-          { 'الأداة': 'SillyTavern', 'التكامل': 'API متوافق مع OpenAI → Ollama', 'الأمثل لـ': 'خيال رواية الأدوار والكتابة الموجهة ببطاقات الشخصيات؛ ذاكرة شخصيات دائمة' },
+          { 'الأداة': 'Obsidian', 'الرابط': '[obsidian.md](https://obsidian.md)', 'التكامل': 'إضافة Copilot أو Smart Connections → API لـ Ollama. انظر [Obsidian + إضافات النموذج اللغوي المحلي](/ar/power-local-llm/local-llm-with-obsidian-2026) للدليل التفصيلي.', 'الأمثل لـ': 'الكتّاب الذين يستخدمون Obsidian بالفعل للملاحظات + المخطوطة؛ توليد مدمج في نفس التطبيق' },
+          { 'الأداة': 'Scrivener', 'الرابط': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', 'التكامل': 'سكريبت خارجي عبر API لـ Ollama → لصق في الوثيقة', 'الأمثل لـ': 'الكتّاب الذين يهيكلون الروايات في Scrivener؛ مسودات الذكاء الاصطناعي ملصوقة في هيكل المشروع القائم' },
+          { 'الأداة': 'VS Code', 'الرابط': '[code.visualstudio.com](https://code.visualstudio.com)', 'التكامل': 'إضافة Continue.dev → خلفية Ollama', 'الأمثل لـ': 'الكتّاب التقنيون ومصممو سرد الألعاب المرتاحون لمحرر الكود' },
+          { 'الأداة': 'SillyTavern', 'الرابط': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', 'التكامل': 'API متوافق مع OpenAI → Ollama', 'الأمثل لـ': 'خيال رواية الأدوار والكتابة الموجهة ببطاقات الشخصيات؛ ذاكرة شخصيات دائمة' },
           { 'الأداة': 'الطرفية الخالصة', 'التكامل': '`ollama run [model]` أو curl لـ API لـ Ollama', 'الأمثل لـ': 'سير العمل القابل للبرمجة؛ الكتّاب الذين يريدون أقصى تحكم بأدنى عبء للواجهة' },
-          { 'الأداة': 'LM Studio', 'التكامل': 'واجهة دردشة مدمجة + API خادم محلي', 'الأمثل لـ': 'الكتّاب الذين يريدون مدير نماذج بواجهة رسومية بدون تثبيت Ollama بشكل منفصل' },
-          { 'الأداة': 'NovelCrafter', 'التكامل': 'تكامل ذكاء اصطناعي مدمج؛ يدعم نقاط نهاية متوافقة مع OpenAI (موجَّهة لـ Ollama)', 'الأمثل لـ': 'الكتّاب الذين يريدون مساعدة ذكاء اصطناعي على مستوى الفصول داخل تطبيق واحد متخصص في الروايات' },
-          { 'الأداة': 'Plottr', 'التكامل': 'سير عمل يدوي: هيكل الروايات في Plottr، الصق المشاهد/البيت شيت في Ollama خارجياً', 'الأمثل لـ': 'خيال النوع الأدبي الغني بالحبكة (غموض، إثارة، خيال) حيث رسم الحبكة الهيكلي هو محور سير العمل' },
+          { 'الأداة': 'LM Studio', 'الرابط': '[lmstudio.ai](https://lmstudio.ai)', 'التكامل': 'واجهة دردشة مدمجة + API خادم محلي', 'الأمثل لـ': 'الكتّاب الذين يريدون مدير نماذج بواجهة رسومية بدون تثبيت Ollama بشكل منفصل' },
+          { 'الأداة': 'NovelCrafter', 'الرابط': '[novelcrafter.com](https://www.novelcrafter.com)', 'التكامل': 'تكامل ذكاء اصطناعي مدمج؛ يدعم نقاط نهاية متوافقة مع OpenAI (موجَّهة لـ Ollama)', 'الأمثل لـ': 'الكتّاب الذين يريدون مساعدة ذكاء اصطناعي على مستوى الفصول داخل تطبيق واحد متخصص في الروايات' },
+          { 'الأداة': 'Plottr', 'الرابط': '[plottr.com](https://plottr.com)', 'التكامل': 'سير عمل يدوي: هيكل الروايات في Plottr، الصق المشاهد/البيت شيت في Ollama خارجياً', 'الأمثل لـ': 'خيال النوع الأدبي الغني بالحبكة (غموض، إثارة، خيال) حيث رسم الحبكة الهيكلي هو محور سير العمل' },
         ],
         callouts: [
           {
@@ -3242,16 +3242,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '작가를 위한 도구 통합',
         content:
           '**Ollama는 로컬호스트에서 OpenAI 호환 API를 노출하며, 점점 더 많은 작가 지향 도구들이 이에 연결됩니다.** 아래 통합은 2026년 기준 가장 확립된 옵션을 나타냅니다.',
-        columns: ['도구', '통합 방법', '적합한 경우'],
+        columns: ['도구', '링크', '통합 방법', '적합한 경우'],
         rows: [
-          { '도구': 'Obsidian', '통합 방법': 'Copilot 플러그인 또는 Smart Connections → Ollama API. 어떤 Obsidian 플러그인이 Ollama와 가장 잘 작동하는지에 대한 상세 가이드는 [Obsidian + 로컬 LLM 플러그인](/ko/power-local-llm/local-llm-with-obsidian-2026)을 참조하십시오.', '적합한 경우': '이미 노트 + 원고에 Obsidian을 사용하는 작가; 컨텍스트 전환 없이 동일한 앱에서 통합 생성' },
-          { '도구': 'Scrivener', '통합 방법': 'Ollama API를 통한 외부 스크립트 → 문서에 붙여넣기', '적합한 경우': 'Scrivener에서 소설을 구조화하는 작가; AI 초안을 기존 프로젝트 구조에 붙여넣기' },
-          { '도구': 'VS Code', '통합 방법': 'Continue.dev 확장 → Ollama 백엔드', '적합한 경우': '코드 편집기에 익숙한 기술적 작가와 게임 내러티브 디자이너' },
-          { '도구': 'SillyTavern', '통합 방법': 'OpenAI 호환 API → Ollama', '적합한 경우': '롤플레이 유형 소설 및 인물 카드 기반 집필; 지속적인 인물 기억' },
+          { '도구': 'Obsidian', '링크': '[obsidian.md](https://obsidian.md)', '통합 방법': 'Copilot 플러그인 또는 Smart Connections → Ollama API. 어떤 Obsidian 플러그인이 Ollama와 가장 잘 작동하는지에 대한 상세 가이드는 [Obsidian + 로컬 LLM 플러그인](/ko/power-local-llm/local-llm-with-obsidian-2026)을 참조하십시오.', '적합한 경우': '이미 노트 + 원고에 Obsidian을 사용하는 작가; 컨텍스트 전환 없이 동일한 앱에서 통합 생성' },
+          { '도구': 'Scrivener', '링크': '[literatureandlatte.com/scrivener](https://www.literatureandlatte.com/scrivener)', '통합 방법': 'Ollama API를 통한 외부 스크립트 → 문서에 붙여넣기', '적합한 경우': 'Scrivener에서 소설을 구조화하는 작가; AI 초안을 기존 프로젝트 구조에 붙여넣기' },
+          { '도구': 'VS Code', '링크': '[code.visualstudio.com](https://code.visualstudio.com)', '통합 방법': 'Continue.dev 확장 → Ollama 백엔드', '적합한 경우': '코드 편집기에 익숙한 기술적 작가와 게임 내러티브 디자이너' },
+          { '도구': 'SillyTavern', '링크': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)', '통합 방법': 'OpenAI 호환 API → Ollama', '적합한 경우': '롤플레이 유형 소설 및 인물 카드 기반 집필; 지속적인 인물 기억' },
           { '도구': '순수 터미널', '통합 방법': '`ollama run [model]` 또는 Ollama API에 curl', '적합한 경우': '스크립트 가능한 워크플로; 최소한의 인터페이스 오버헤드로 최대 제어를 원하는 작가' },
-          { '도구': 'LM Studio', '통합 방법': '내장 채팅 인터페이스 + 로컬 서버 API', '적합한 경우': 'Ollama를 별도로 설치하지 않고 GUI 모델 관리자를 원하는 작가' },
-          { '도구': 'NovelCrafter', '통합 방법': '내장 AI 통합; OpenAI 호환 엔드포인트 지원 (Ollama를 가리킴)', '적합한 경우': '단일 소설 중심 앱 내에서 챕터 수준의 AI 지원을 원하는 작가; 2026년 기준 "AI 네이티브 소설 쓰기 도구"에 가장 가까운 것' },
-          { '도구': 'Plottr', '통합 방법': '수동 워크플로: Plottr에서 소설 구조화, 외부적으로 Ollama에 장면/beat 붙여넣기', '적합한 경우': '플롯 집약적 장르 소설(미스터리, 스릴러, 판타지)로 구조적 플롯 매핑이 워크플로의 축인 경우' },
+          { '도구': 'LM Studio', '링크': '[lmstudio.ai](https://lmstudio.ai)', '통합 방법': '내장 채팅 인터페이스 + 로컬 서버 API', '적합한 경우': 'Ollama를 별도로 설치하지 않고 GUI 모델 관리자를 원하는 작가' },
+          { '도구': 'NovelCrafter', '링크': '[novelcrafter.com](https://www.novelcrafter.com)', '통합 방법': '내장 AI 통합; OpenAI 호환 엔드포인트 지원 (Ollama를 가리킴)', '적합한 경우': '단일 소설 중심 앱 내에서 챕터 수준의 AI 지원을 원하는 작가; 2026년 기준 "AI 네이티브 소설 쓰기 도구"에 가장 가까운 것' },
+          { '도구': 'Plottr', '링크': '[plottr.com](https://plottr.com)', '통합 방법': '수동 워크플로: Plottr에서 소설 구조화, 외부적으로 Ollama에 장면/beat 붙여넣기', '적합한 경우': '플롯 집약적 장르 소설(미스터리, 스릴러, 판타지)로 구조적 플롯 매핑이 워크플로의 축인 경우' },
         ],
         callouts: [
           {

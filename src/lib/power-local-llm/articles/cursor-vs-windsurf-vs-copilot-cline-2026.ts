@@ -149,10 +149,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Pricing is an August 2026 snapshot verified against each vendor\'s own pricing page — Cursor, Windsurf, and GitHub Copilot all changed their pricing structure at least once in 2026, so confirm the current rate before subscribing. "Model Access" reflects what each tool lets you choose at the model-selection level, not just what powers autocomplete.',
-        columns: ['Tool', 'Best For', 'Pricing (Aug 2026)', 'Model Access', 'Agent Mode', 'IDE', 'Why Pay?'],
+        columns: ['Tool', 'Link', 'Best For', 'Pricing (Aug 2026)', 'Model Access', 'Agent Mode', 'IDE', 'Why Pay?'],
         rows: [
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Best For': 'Agentic multi-file edits / polish',
             'Pricing (Aug 2026)': 'Free Hobby / $20+/mo Pro–Ultra',
             'Model Access': 'GPT / Claude / Gemini (multi-model)',
@@ -162,6 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Windsurf',
+            'Link': '[devin.ai/desktop](https://devin.ai/desktop)',
             'Best For': 'Cascade agent flow, price now = Cursor',
             'Pricing (Aug 2026)': 'Free / $20/mo Pro / $200/mo Max',
             'Model Access': 'Claude, GPT, SWE-1.5 (multi-model)',
@@ -171,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[GitHub Copilot](https://github.com/features/copilot)',
             'Best For': 'GitHub/Azure-standardized teams',
             'Pricing (Aug 2026)': 'Free / $10 Pro / $39 Pro+ / $100 Max',
             'Model Access': 'GPT, Claude Opus (Pro+/Max), 3rd-party agents',
@@ -180,6 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Best For': 'Bring-your-own-key / local models',
             'Pricing (Aug 2026)': 'Extension free / pay-per-token API',
             'Model Access': 'Any OpenAI-compatible incl. local (Ollama)',
@@ -530,10 +534,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline',
         content:
           'Die Preise sind eine Momentaufnahme von August 2026, verifiziert anhand der jeweiligen Anbieter-Preisseite — Cursor, Windsurf und GitHub Copilot haben ihre Preisstruktur 2026 alle mindestens einmal geändert, prüfen Sie also den aktuellen Preis vor dem Abschluss. „Modellzugriff" zeigt, was jedes Tool auf Modellauswahl-Ebene erlaubt, nicht nur, was die Autovervollständigung antreibt.',
-        columns: ['Tool', 'Am besten für', 'Preis (Aug. 2026)', 'Modellzugriff', 'Agentenmodus', 'IDE', 'Warum zahlen?'],
+        columns: ['Tool', 'Link', 'Am besten für', 'Preis (Aug. 2026)', 'Modellzugriff', 'Agentenmodus', 'IDE', 'Warum zahlen?'],
         rows: [
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Am besten für': 'Agentische Mehrdatei-Änderungen',
             'Preis (Aug. 2026)': 'Kostenlos Hobby / 20+ $/Mo. Pro–Ultra',
             'Modellzugriff': 'GPT / Claude / Gemini (Multi-Modell)',
@@ -543,6 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Windsurf',
+            'Link': '[devin.ai/desktop](https://devin.ai/desktop)',
             'Am besten für': 'Cascade-Ablauf, Preis jetzt = Cursor',
             'Preis (Aug. 2026)': 'Kostenlos / 20 $/Mo. Pro / 200 $/Mo. Max',
             'Modellzugriff': 'Claude, GPT, SWE-1.5 (Multi-Modell)',
@@ -552,6 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[GitHub Copilot](https://github.com/features/copilot)',
             'Am besten für': 'GitHub/Azure-standardisierte Teams',
             'Preis (Aug. 2026)': 'Kostenlos / 10 $ Pro / 39 $ Pro+ / 100 $ Max',
             'Modellzugriff': 'GPT, Claude Opus (Pro+/Max), Drittanbieter-Agenten',
@@ -561,6 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Am besten für': 'Eigener API-Schlüssel / lokale Modelle',
             'Preis (Aug. 2026)': 'Erweiterung kostenlos / API pro Token',
             'Modellzugriff': 'Jedes OpenAI-kompatible, auch lokal (Ollama)',
@@ -881,10 +889,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Les tarifs sont une photographie d\'août 2026 vérifiée sur la page de prix de chaque éditeur — Cursor, Windsurf et GitHub Copilot ont tous changé leur structure tarifaire au moins une fois en 2026, confirmez donc le tarif actuel avant de vous abonner. « Accès aux modèles » reflète ce que chaque outil permet de choisir au niveau sélection de modèle, pas seulement ce qui alimente l\'auto-complétion.',
-        columns: ['Outil', 'Idéal pour', 'Tarif (août 2026)', 'Accès modèles', 'Mode agent', 'IDE', 'Pourquoi payer ?'],
+        columns: ['Outil', 'Lien', 'Idéal pour', 'Tarif (août 2026)', 'Accès modèles', 'Mode agent', 'IDE', 'Pourquoi payer ?'],
         rows: [
           {
             'Outil': 'Cursor',
+            'Lien': '[cursor.com](https://cursor.com)',
             'Idéal pour': 'Édition agentique multi-fichiers',
             'Tarif (août 2026)': 'Hobby gratuit / 20+ $/mois Pro–Ultra',
             'Accès modèles': 'GPT / Claude / Gemini (multi-modèle)',
@@ -894,6 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Windsurf',
+            'Lien': '[devin.ai/desktop](https://devin.ai/desktop)',
             'Idéal pour': 'Flux Cascade, prix désormais = Cursor',
             'Tarif (août 2026)': 'Gratuit / 20 $/mois Pro / 200 $/mois Max',
             'Accès modèles': 'Claude, GPT, SWE-1.5 (multi-modèle)',
@@ -903,6 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'GitHub Copilot',
+            'Lien': '[GitHub Copilot](https://github.com/features/copilot)',
             'Idéal pour': 'Équipes standardisées GitHub/Azure',
             'Tarif (août 2026)': 'Gratuit / 10 $ Pro / 39 $ Pro+ / 100 $ Max',
             'Accès modèles': 'GPT, Claude Opus (Pro+/Max), agents tiers',
@@ -912,6 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Cline',
+            'Lien': '[cline.bot](https://cline.bot)',
             'Idéal pour': 'Clé API personnelle / modèles locaux',
             'Tarif (août 2026)': 'Extension gratuite / API au jeton',
             'Accès modèles': 'Tout compatible OpenAI, dont local (Ollama)',
@@ -1232,10 +1244,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Los precios son una foto de agosto de 2026 verificada en la página oficial de cada proveedor — Cursor, Windsurf y GitHub Copilot cambiaron su estructura de precios al menos una vez en 2026, así que confirma la tarifa actual antes de suscribirte. "Acceso a modelos" refleja qué permite elegir cada herramienta a nivel de selección de modelo, no solo qué impulsa el autocompletado.',
-        columns: ['Herramienta', 'Ideal para', 'Precio (ago. 2026)', 'Acceso a modelos', 'Modo agente', 'IDE', '¿Por qué pagar?'],
+        columns: ['Herramienta', 'Enlace', 'Ideal para', 'Precio (ago. 2026)', 'Acceso a modelos', 'Modo agente', 'IDE', '¿Por qué pagar?'],
         rows: [
           {
             'Herramienta': 'Cursor',
+            'Enlace': '[cursor.com](https://cursor.com)',
             'Ideal para': 'Ediciones agénticas multiarchivo',
             'Precio (ago. 2026)': 'Hobby gratis / 20+ $/mes Pro–Ultra',
             'Acceso a modelos': 'GPT / Claude / Gemini (multimodelo)',
@@ -1245,6 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Windsurf',
+            'Enlace': '[devin.ai/desktop](https://devin.ai/desktop)',
             'Ideal para': 'Flujo Cascade, precio ahora = Cursor',
             'Precio (ago. 2026)': 'Gratis / 20 $/mes Pro / 200 $/mes Max',
             'Acceso a modelos': 'Claude, GPT, SWE-1.5 (multimodelo)',
@@ -1254,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'GitHub Copilot',
+            'Enlace': '[GitHub Copilot](https://github.com/features/copilot)',
             'Ideal para': 'Equipos estandarizados en GitHub/Azure',
             'Precio (ago. 2026)': 'Gratis / 10 $ Pro / 39 $ Pro+ / 100 $ Max',
             'Acceso a modelos': 'GPT, Claude Opus (Pro+/Max), agentes de terceros',
@@ -1263,6 +1278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Cline',
+            'Enlace': '[cline.bot](https://cline.bot)',
             'Ideal para': 'Clave API propia / modelos locales',
             'Precio (ago. 2026)': 'Extensión gratis / API por token',
             'Acceso a modelos': 'Cualquier compatible OpenAI, incl. local (Ollama)',
@@ -1583,10 +1599,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor対Windsurf対GitHub Copilot対Cline',
         content:
           '価格は各社公式価格ページで検証した2026年8月時点のスナップショットです——Cursor、Windsurf、GitHub Copilotはいずれも2026年中に価格体系を少なくとも一度変更しているため、契約前に最新料金を確認してください。「モデルアクセス」は、単なる補完機能の裏側ではなく、各ツールがモデル選択レベルで選べる範囲を示します。',
-        columns: ['ツール', '最適な用途', '価格', 'モデルアクセス', 'エージェントモード', 'IDE', 'なぜ課金？'],
+        columns: ['ツール', 'リンク', '最適な用途', '価格', 'モデルアクセス', 'エージェントモード', 'IDE', 'なぜ課金？'],
         rows: [
           {
             'ツール': 'Cursor',
+            'リンク': '[cursor.com](https://cursor.com)',
             '最適な用途': 'エージェント型の複数ファイル編集',
             '価格': '無料Hobby / 月20ドル+ Pro〜Ultra',
             'モデルアクセス': 'GPT／Claude／Gemini（複数モデル）',
@@ -1596,6 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Windsurf',
+            'リンク': '[devin.ai/desktop](https://devin.ai/desktop)',
             '最適な用途': 'Cascadeの操作感、価格はCursorと同等',
             '価格': '無料 / 月20ドル Pro / 月200ドル Max',
             'モデルアクセス': 'Claude、GPT、SWE-1.5（複数モデル）',
@@ -1605,6 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'GitHub Copilot',
+            'リンク': '[GitHub Copilot](https://github.com/features/copilot)',
             '最適な用途': 'GitHub/Azure標準化チーム',
             '価格': '無料 / 10ドル Pro / 39ドル Pro+ / 100ドル Max',
             'モデルアクセス': 'GPT、Claude Opus（Pro+/Max）、サードパーティエージェント',
@@ -1614,6 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Cline',
+            'リンク': '[cline.bot](https://cline.bot)',
             '最適な用途': '自前APIキー／ローカルモデル',
             '価格': '拡張機能無料 / API従量課金',
             'モデルアクセス': 'OpenAI互換すべて（Ollama等ローカル含む）',
@@ -1934,10 +1954,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor对比Windsurf对比GitHub Copilot对比Cline',
         content:
           '定价为2026年8月快照，已在各厂商官方定价页面核实——Cursor、Windsurf和GitHub Copilot均在2026年内至少调整过一次定价结构，订阅前请务必确认当前价格。"模型访问权限"反映的是各工具在模型选择层面允许你选择的范围，而不仅仅是驱动自动补全的模型。',
-        columns: ['工具', '最适合', '定价（2026年8月）', '模型访问权限', '智能体模式', 'IDE', '为何付费？'],
+        columns: ['工具', '链接', '最适合', '定价（2026年8月）', '模型访问权限', '智能体模式', 'IDE', '为何付费？'],
         rows: [
           {
             '工具': 'Cursor',
+            '链接': '[cursor.com](https://cursor.com)',
             '最适合': '智能体式多文件编辑/打磨',
             '定价（2026年8月）': '免费Hobby / 20+美元/月 Pro–Ultra',
             '模型访问权限': 'GPT / Claude / Gemini（多模型）',
@@ -1947,6 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Windsurf',
+            '链接': '[devin.ai/desktop](https://devin.ai/desktop)',
             '最适合': 'Cascade流程，定价现与Cursor持平',
             '定价（2026年8月）': '免费 / 20美元/月 Pro / 200美元/月 Max',
             '模型访问权限': 'Claude、GPT、SWE-1.5（多模型）',
@@ -1956,6 +1978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'GitHub Copilot',
+            '链接': '[GitHub Copilot](https://github.com/features/copilot)',
             '最适合': 'GitHub/Azure标准化团队',
             '定价（2026年8月）': '免费 / 10美元 Pro / 39美元 Pro+ / 100美元 Max',
             '模型访问权限': 'GPT、Claude Opus（Pro+/Max）、第三方智能体',
@@ -1965,6 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Cline',
+            '链接': '[cline.bot](https://cline.bot)',
             '最适合': '自带API密钥/本地模型',
             '定价（2026年8月）': '扩展免费 / API按令牌付费',
             '模型访问权限': '任意OpenAI兼容接口，含本地（Ollama）',
@@ -2285,10 +2309,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Os preços são um retrato de agosto de 2026 verificado na página oficial de preços de cada fornecedor — Cursor, Windsurf e GitHub Copilot mudaram sua estrutura de preços pelo menos uma vez em 2026, então confirme o valor atual antes de assinar. "Acesso a Modelos" reflete o que cada ferramenta permite escolher no nível de seleção de modelo, não apenas o que alimenta o autocompletar.',
-        columns: ['Ferramenta', 'Melhor Para', 'Preço (ago. 2026)', 'Acesso a Modelos', 'Modo Agente', 'IDE', 'Por Que Pagar?'],
+        columns: ['Ferramenta', 'Link', 'Melhor Para', 'Preço (ago. 2026)', 'Acesso a Modelos', 'Modo Agente', 'IDE', 'Por Que Pagar?'],
         rows: [
           {
             'Ferramenta': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Melhor Para': 'Edições agênticas multi-arquivo',
             'Preço (ago. 2026)': 'Hobby grátis / 20+ $/mês Pro–Ultra',
             'Acesso a Modelos': 'GPT / Claude / Gemini (multi-modelo)',
@@ -2298,6 +2323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Windsurf',
+            'Link': '[devin.ai/desktop](https://devin.ai/desktop)',
             'Melhor Para': 'Fluxo Cascade, preço agora = Cursor',
             'Preço (ago. 2026)': 'Grátis / 20 $/mês Pro / 200 $/mês Max',
             'Acesso a Modelos': 'Claude, GPT, SWE-1.5 (multi-modelo)',
@@ -2307,6 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'GitHub Copilot',
+            'Link': '[GitHub Copilot](https://github.com/features/copilot)',
             'Melhor Para': 'Equipes padronizadas GitHub/Azure',
             'Preço (ago. 2026)': 'Grátis / 10 $ Pro / 39 $ Pro+ / 100 $ Max',
             'Acesso a Modelos': 'GPT, Claude Opus (Pro+/Max), agentes terceirizados',
@@ -2316,6 +2343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Melhor Para': 'Chave de API própria / modelos locais',
             'Preço (ago. 2026)': 'Extensão grátis / API por token',
             'Acesso a Modelos': 'Qualquer compatível com OpenAI, incl. local (Ollama)',
@@ -2636,10 +2664,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline',
         content:
           'التسعير هو لقطة من أغسطس 2026 موثقة على صفحة التسعير الرسمية لكل مزود — غيّرت Cursor وWindsurf وGitHub Copilot جميعها هيكل تسعيرها مرة واحدة على الأقل في 2026، لذا تأكد من السعر الحالي قبل الاشتراك. يعكس "الوصول إلى النماذج" ما تسمح كل أداة باختياره على مستوى اختيار النموذج، وليس فقط ما يشغّل الإكمال التلقائي.',
-        columns: ['الأداة', 'الأفضل لـ', 'السعر (أغسطس 2026)', 'الوصول للنماذج', 'وضع الوكيل', 'بيئة التطوير', 'لماذا تدفع؟'],
+        columns: ['الأداة', 'الرابط', 'الأفضل لـ', 'السعر (أغسطس 2026)', 'الوصول للنماذج', 'وضع الوكيل', 'بيئة التطوير', 'لماذا تدفع؟'],
         rows: [
           {
             'الأداة': 'Cursor',
+            'الرابط': '[cursor.com](https://cursor.com)',
             'الأفضل لـ': 'تعديلات وكيلية متعددة الملفات',
             'السعر (أغسطس 2026)': 'Hobby مجاني / 20+ دولار/الشهر Pro–Ultra',
             'الوصول للنماذج': 'GPT / Claude / Gemini (متعدد النماذج)',
@@ -2649,6 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Windsurf',
+            'الرابط': '[devin.ai/desktop](https://devin.ai/desktop)',
             'الأفضل لـ': 'تدفق Cascade، السعر الآن = Cursor',
             'السعر (أغسطس 2026)': 'مجاني / 20 دولار/الشهر Pro / 200 دولار/الشهر Max',
             'الوصول للنماذج': 'Claude، GPT، SWE-1.5 (متعدد النماذج)',
@@ -2658,6 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'GitHub Copilot',
+            'الرابط': '[GitHub Copilot](https://github.com/features/copilot)',
             'الأفضل لـ': 'فرق موحّدة على GitHub/Azure',
             'السعر (أغسطس 2026)': 'مجاني / 10 دولارات Pro / 39 دولاراً Pro+ / 100 دولار Max',
             'الوصول للنماذج': 'GPT، Claude Opus (Pro+/Max)، وكلاء خارجيون',
@@ -2667,6 +2698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Cline',
+            'الرابط': '[cline.bot](https://cline.bot)',
             'الأفضل لـ': 'مفتاح API خاص / نماذج محلية',
             'السعر (أغسطس 2026)': 'الإضافة مجانية / API بالرمز',
             'الوصول للنماذج': 'أي متوافق مع OpenAI، بما فيها محلي (Ollama)',
@@ -2987,10 +3019,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           '가격은 각 공급업체의 공식 가격 페이지에서 확인한 2026년 8월 시점의 스냅샷입니다 — Cursor, Windsurf, GitHub Copilot 모두 2026년 중 가격 구조를 최소 한 번 변경했으므로 구독 전 현재 요금을 확인하십시오. "모델 접근성"은 단순히 자동 완성을 구동하는 모델이 아니라 각 도구가 모델 선택 수준에서 허용하는 범위를 나타냅니다.',
-        columns: ['도구', '최적 용도', '가격', '모델 접근성', '에이전트 모드', 'IDE', '왜 유료인가?'],
+        columns: ['도구', '링크', '최적 용도', '가격', '모델 접근성', '에이전트 모드', 'IDE', '왜 유료인가?'],
         rows: [
           {
             '도구': 'Cursor',
+            '링크': '[cursor.com](https://cursor.com)',
             '최적 용도': '에이전틱 다중 파일 편집',
             '가격': '무료 Hobby / 월 20달러+ Pro–Ultra',
             '모델 접근성': 'GPT / Claude / Gemini(다중 모델)',
@@ -3000,6 +3033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Windsurf',
+            '링크': '[devin.ai/desktop](https://devin.ai/desktop)',
             '최적 용도': 'Cascade 흐름, 가격은 이제 Cursor와 동일',
             '가격': '무료 / 월 20달러 Pro / 월 200달러 Max',
             '모델 접근성': 'Claude, GPT, SWE-1.5(다중 모델)',
@@ -3009,6 +3043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'GitHub Copilot',
+            '링크': '[GitHub Copilot](https://github.com/features/copilot)',
             '최적 용도': 'GitHub/Azure 표준화 팀',
             '가격': '무료 / 10달러 Pro / 39달러 Pro+ / 100달러 Max',
             '모델 접근성': 'GPT, Claude Opus(Pro+/Max), 서드파티 에이전트',
@@ -3018,6 +3053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Cline',
+            '링크': '[cline.bot](https://cline.bot)',
             '최적 용도': '자체 API 키 / 로컬 모델',
             '가격': '확장 프로그램 무료 / API 토큰당 과금',
             '모델 접근성': 'OpenAI 호환 모델 전체(로컬 Ollama 포함)',

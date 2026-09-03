@@ -518,7 +518,7 @@ function renderMarkdownTable(lines: string[], renderLinks: (text: string) => Rea
           <tr className="bg-gray-100">
             {headers.map((header, i) => (
               <th key={i} className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">
-                {header}
+                {renderLinks(header)}
               </th>
             ))}
           </tr>
@@ -907,10 +907,12 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
           <table className="w-full min-w-[820px] border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-primary/20">
-                {section.columns.map((col, colIdx) => (
+                {section.columns.map((col, colIdx) => {
+                  const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                  return (
                   <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
-                    {col}
-                    {STAR_COLUMN_LABELS.has(col) && (
+                    {renderInlineLinks(col, lang)}
+                    {STAR_COLUMN_LABELS.has(colLabel) && (
                       <span
                         className="ml-1 inline-flex items-center justify-center w-3.5 h-3.5 rounded-full border border-text-secondary/40 text-[9px] font-normal text-text-secondary align-middle cursor-help"
                         title={(POST_UI.githubStarsTooltip?.[lang] ?? POST_UI.githubStarsTooltip?.en)!}
@@ -919,15 +921,17 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                       </span>
                     )}
                   </th>
-                ))}
+                  )
+                })}
               </tr>
             </thead>
             <tbody>
               {section.rows.map((row, i) => (
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
                   {section.columns!.map((col, colIdx) => {
-                    const value = row[col] ?? row[String(colIdx)]
-                    if (!value && STAR_COLUMN_LABELS.has(col)) {
+                    const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                    const value = row[colLabel] ?? row[col] ?? row[String(colIdx)]
+                    if (!value && STAR_COLUMN_LABELS.has(colLabel)) {
                       return (
                         <td key={col} className="p-2 sm:p-3 text-text-secondary" />
                       )

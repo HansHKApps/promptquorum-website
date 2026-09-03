@@ -141,11 +141,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026.',
         content: 'Head-to-head feature and pricing comparison. Prices verified on provider websites June 2026 and updated monthly. Local LLM support ranges from native integration ([Continue.dev](https://Continue.dev)) to vendor-specific configuration (Cursor, Cody) to enterprise-only (Tabnine self-hosted).',
         note: 'All pricing verified directly from official provider websites. Subscribe now to stay in the loop of latest June 2026 updates.',
-        columns: ['Tool', 'Price', 'Local LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
+        columns: ['Tool', 'Link', 'Price', 'Local LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
         tableFormat: true,
         rows: [
           {
             'Tool': 'Continue.dev',
+            'Link': '[continue.dev](https://continue.dev)',
             'Price': 'Free',
             'Local LLM': '✅ Native (Ollama, LM Studio, llama.cpp)',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -155,6 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Price': '$20/mo (Pro)',
             'Local LLM': '✅ Via config (OpenAI endpoint)',
             'IDEs': 'Fork of VS Code',
@@ -164,6 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Sourcegraph Cody',
+            'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Price': '$59/user/mo (enterprise-only)',
             'Local LLM': '✅ Via Ollama config',
             'IDEs': 'VS Code, JetBrains, Neovim',
@@ -173,6 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Tabnine',
+            'Link': '[tabnine.com](https://www.tabnine.com)',
             'Price': '$39/user/mo',
             'Local LLM': '✅ Self-hosted (enterprise)',
             'IDEs': 'VS Code, JetBrains, Sublime, more',
@@ -182,6 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Windsurf (Codeium)',
+            'Link': '[windsurf.com](https://windsurf.com)',
             'Price': 'Free / $15/mo',
             'Local LLM': '✅ Via Ollama (new)',
             'IDEs': 'Windsurf IDE, VS Code',
@@ -191,6 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Price': '$10/mo',
             'Local LLM': '❌ Cloud only',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -200,6 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Codeium (free)',
+            'Link': '[codeium.com](https://codeium.com)',
             'Price': 'Free',
             'Local LLM': '⚠️ Limited',
             'IDEs': 'VS Code, JetBrains, Sublime',
@@ -542,11 +549,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Comparación de asistentes de código IA: Continue.dev (mejor en general, gratis), Cursor ($20/mes, mejor UX), Sourcegraph Cody ($59/usuario/mes, mejor para equipos), Tabnine ($39/mes, mejor privacidad), Windsurf (gratis/$15/mes, alternativa en ascenso). Todos soportan LLMs locales con complejidad de configuración variable. junio 2026.',
         content: 'Comparación directa de funciones y precios. Precios verificados en sitios web de proveedores en junio 2026 y actualizados mensualmente. El soporte LLM local varía desde integración nativa ([Continue.dev](https://Continue.dev)) hasta configuración específica del proveedor (Cursor, Cody) hasta solo enterprise (Tabnine self-hosted). Los precios pueden variar según tu país.',
         note: 'Todos los precios verificados directamente en los sitios web oficiales de los proveedores. Suscríbete para estar al día de las últimas actualizaciones de junio 2026.',
-        columns: ['Herramienta', 'Precio', 'LLM local', 'IDEs', 'Open Source', 'Funciones de equipo', 'Mejor para'],
+        columns: ['Herramienta', 'Enlace', 'Precio', 'LLM local', 'IDEs', 'Open Source', 'Funciones de equipo', 'Mejor para'],
         tableFormat: true,
         rows: [
           {
             'Herramienta': 'Continue.dev',
+            'Enlace': '[continue.dev](https://continue.dev)',
             'Precio': 'Gratis',
             'LLM local': '✅ Nativo (Ollama, LM Studio, llama.cpp)',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -556,6 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Cursor',
+            'Enlace': '[cursor.com](https://cursor.com)',
             'Precio': '$20/mes (Pro)',
             'LLM local': '✅ Vía config (endpoint OpenAI)',
             'IDEs': 'Fork de VS Code',
@@ -565,6 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Sourcegraph Cody',
+            'Enlace': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Precio': '$59/usuario/mes (solo enterprise)',
             'LLM local': '✅ Vía config Ollama',
             'IDEs': 'VS Code, JetBrains, Neovim',
@@ -574,6 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Tabnine',
+            'Enlace': '[tabnine.com](https://www.tabnine.com)',
             'Precio': '$39/usuario/mes',
             'LLM local': '✅ Self-hosted (enterprise)',
             'IDEs': 'VS Code, JetBrains, Sublime, más',
@@ -583,6 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Windsurf (Codeium)',
+            'Enlace': '[windsurf.com](https://windsurf.com)',
             'Precio': 'Gratis / $15/mes',
             'LLM local': '✅ Vía Ollama (nuevo)',
             'IDEs': 'Windsurf IDE, VS Code',
@@ -592,6 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'GitHub Copilot',
+            'Enlace': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Precio': '$10/mes',
             'LLM local': '❌ Solo nube',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -601,6 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Codeium (gratis)',
+            'Enlace': '[codeium.com](https://codeium.com)',
             'Precio': 'Gratis',
             'LLM local': '⚠️ Limitado',
             'IDEs': 'VS Code, JetBrains, Sublime',
@@ -965,11 +979,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'مقارنة مساعدي الكود بالذكاء الاصطناعي: Continue.dev (الأفضل عمومًا، مجاني)، Cursor (20 دولارًا/شهر، أفضل تجربة مستخدم)، Sourcegraph Cody (59 دولارات/مستخدم/شهر، الأفضل للفرق)، Tabnine (39 دولارًا/شهر، أفضل خصوصية)، Windsurf (مجاني/15 دولارًا/شهر، بديل صاعد). كلها تدعم نماذج LLM المحلية بتعقيد إعداد متفاوت. يونيو 2026.',
         content: 'مقارنة مباشرة للميزات والأسعار. الأسعار متحقَّق منها على مواقع المزوّدين في يونيو 2026 وتُحدَّث شهريًا. يتفاوت دعم LLM المحلي من تكامل أصلي ([Continue.dev](https://Continue.dev)) إلى تهيئة خاصة بالمزوّد (Cursor، Cody) إلى للمؤسسات فقط (Tabnine استضافة ذاتية). قد تتفاوت الأسعار حسب بلدك.',
         note: 'كل الأسعار متحقَّق منها مباشرةً على مواقع المزوّدين الرسمية. اشترك لتبقى على اطلاع بأحدث تحديثات يونيو 2026.',
-        columns: ['الأداة', 'السعر', 'LLM محلي', 'بيئات IDE', 'مفتوح المصدر', 'ميزات الفرق', 'الأفضل لـ'],
+        columns: ['الأداة', 'الرابط', 'السعر', 'LLM محلي', 'بيئات IDE', 'مفتوح المصدر', 'ميزات الفرق', 'الأفضل لـ'],
         tableFormat: true,
         rows: [
           {
             'الأداة': 'Continue.dev',
+            'الرابط': '[continue.dev](https://continue.dev)',
             'السعر': 'مجاني',
             'LLM محلي': '✅ أصلي (Ollama، LM Studio، llama.cpp)',
             'بيئات IDE': 'VS Code، JetBrains، Vim',
@@ -979,6 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Cursor',
+            'الرابط': '[cursor.com](https://cursor.com)',
             'السعر': '20 دولارًا/شهر (Pro)',
             'LLM محلي': '✅ عبر التهيئة (واجهة OpenAI)',
             'بيئات IDE': 'فرع من VS Code',
@@ -988,6 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Sourcegraph Cody',
+            'الرابط': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'السعر': '59 دولارًا/مستخدم/شهر (للمؤسسات فقط)',
             'LLM محلي': '✅ عبر تهيئة Ollama',
             'بيئات IDE': 'VS Code، JetBrains، Neovim',
@@ -997,6 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Tabnine',
+            'الرابط': '[tabnine.com](https://www.tabnine.com)',
             'السعر': '39 دولارًا/مستخدم/شهر',
             'LLM محلي': '✅ استضافة ذاتية (للمؤسسات)',
             'بيئات IDE': 'VS Code، JetBrains، Sublime، وأكثر',
@@ -1006,6 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Windsurf (Codeium)',
+            'الرابط': '[windsurf.com](https://windsurf.com)',
             'السعر': 'مجاني / 15 دولارًا/شهر',
             'LLM محلي': '✅ عبر Ollama (جديد)',
             'بيئات IDE': 'Windsurf IDE، VS Code',
@@ -1015,6 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'GitHub Copilot',
+            'الرابط': '[github.com/features/copilot](https://github.com/features/copilot)',
             'السعر': '10 دولارات/شهر',
             'LLM محلي': '❌ سحابي فقط',
             'بيئات IDE': 'VS Code، JetBrains، Vim',
@@ -1024,6 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Codeium (مجاني)',
+            'الرابط': '[codeium.com](https://codeium.com)',
             'السعر': 'مجاني',
             'LLM محلي': '⚠️ محدود',
             'بيئات IDE': 'VS Code، JetBrains، Sublime',
@@ -1385,13 +1406,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tabela comparativa de assistentes de código IA',
         tableFormat: true,
-        columns: ['Ferramenta', 'Preço', 'Suporte LLM local', 'IDEs', 'Melhor para'],
+        columns: ['Ferramenta', 'Link', 'Preço', 'Suporte LLM local', 'IDEs', 'Melhor para'],
         rows: [
-          { 'Ferramenta': 'Continue.dev', 'Preço': 'Gratuito (open source)', 'Suporte LLM local': '⭐⭐⭐⭐⭐ Nativo', 'IDEs': 'VS Code, JetBrains', 'Melhor para': 'Local-first, sem custo' },
-          { 'Ferramenta': 'Cursor', 'Preço': 'US$ 20/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Via endpoint', 'IDEs': 'Cursor (fork VS Code)', 'Melhor para': 'UX refinada, híbrido' },
-          { 'Ferramenta': 'Sourcegraph Cody', 'Preço': 'US$ 9/usuário/mês', 'Suporte LLM local': '⭐⭐⭐ Via Ollama', 'IDEs': 'VS Code, JetBrains, Neovim', 'Melhor para': 'Equipes, contexto de repositório' },
-          { 'Ferramenta': 'Tabnine', 'Preço': 'US$ 12/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Self-hosted', 'IDEs': 'Todos os principais', 'Melhor para': 'Privacidade, LGPD, enterprise' },
-          { 'Ferramenta': 'Windsurf', 'Preço': 'Gratuito / US$ 15/mês', 'Suporte LLM local': '⭐⭐⭐ Recente', 'IDEs': 'Windsurf (fork VS Code)', 'Melhor para': 'Codificação agêntica, iniciantes' },
+          { 'Ferramenta': 'Continue.dev', 'Link': '[continue.dev](https://continue.dev)', 'Preço': 'Gratuito (open source)', 'Suporte LLM local': '⭐⭐⭐⭐⭐ Nativo', 'IDEs': 'VS Code, JetBrains', 'Melhor para': 'Local-first, sem custo' },
+          { 'Ferramenta': 'Cursor', 'Link': '[cursor.com](https://cursor.com)', 'Preço': 'US$ 20/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Via endpoint', 'IDEs': 'Cursor (fork VS Code)', 'Melhor para': 'UX refinada, híbrido' },
+          { 'Ferramenta': 'Sourcegraph Cody', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'Preço': 'US$ 9/usuário/mês', 'Suporte LLM local': '⭐⭐⭐ Via Ollama', 'IDEs': 'VS Code, JetBrains, Neovim', 'Melhor para': 'Equipes, contexto de repositório' },
+          { 'Ferramenta': 'Tabnine', 'Link': '[tabnine.com](https://www.tabnine.com)', 'Preço': 'US$ 12/mês', 'Suporte LLM local': '⭐⭐⭐⭐ Self-hosted', 'IDEs': 'Todos os principais', 'Melhor para': 'Privacidade, LGPD, enterprise' },
+          { 'Ferramenta': 'Windsurf', 'Link': '[windsurf.com](https://windsurf.com)', 'Preço': 'Gratuito / US$ 15/mês', 'Suporte LLM local': '⭐⭐⭐ Recente', 'IDEs': 'Windsurf (fork VS Code)', 'Melhor para': 'Codificação agêntica, iniciantes' },
         ],
       },
       verifiedSources: {
@@ -1703,11 +1724,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'KI-Coding-Assistenten Vergleichstabelle',
         content: 'Head-to-Head-Feature und Preisvergleich. Preise auf Provider-Websites verifiziert Juni 2026 und monatlich aktualisiert. Lokale LLM-Unterstützung reicht von nativer Integration ([Continue.dev](https://Continue.dev)) bis vendor-spezifische Konfiguration erforderlich (Cursor, Cody) bis enterprise-only (Tabnine self-hosted).',
         note: 'Alle Preise direkt von den offiziellen Anbieter-Websites verifiziert. Jetzt abonnieren, um über die neuesten Mai-2026-Updates informiert zu bleiben.',
-        columns: ['Tool', 'Preis', 'Lokale LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
+        columns: ['Tool', 'Link', 'Preis', 'Lokale LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
         tableFormat: true,
         rows: [
           {
             'Tool': 'Continue.dev',
+            'Link': '[continue.dev](https://continue.dev)',
             'Preis': 'Kostenlos',
             'Local LLM': '✅ Native (Ollama, LM Studio, llama.cpp)',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -1717,6 +1739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Preis': '20 €/Mo (Pro)',
             'Local LLM': '✅ Via Config (OpenAI Endpoint)',
             'IDEs': 'VS Code Fork',
@@ -1726,6 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Sourcegraph Cody',
+            'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Preis': '59 €/Benutzer/Mo (nur Enterprise)',
             'Local LLM': '✅ Via Ollama Config',
             'IDEs': 'VS Code, JetBrains, Neovim',
@@ -1735,6 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Tabnine',
+            'Link': '[tabnine.com](https://www.tabnine.com)',
             'Preis': '39 €/Benutzer/Mo',
             'Local LLM': '✅ Self-hosted (enterprise)',
             'IDEs': 'VS Code, JetBrains, Sublime, mehr',
@@ -1744,6 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Windsurf (Codeium)',
+            'Link': '[windsurf.com](https://windsurf.com)',
             'Preis': 'Kostenlos / 15 €/Mo',
             'Local LLM': '✅ Via Ollama (neu)',
             'IDEs': 'Windsurf IDE, VS Code',
@@ -1753,6 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Preis': '10 €/Mo',
             'Local LLM': '❌ Nur Cloud',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -1762,6 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Codeium (kostenlos)',
+            'Link': '[codeium.com](https://codeium.com)',
             'Preis': 'Kostenlos',
             'Local LLM': '⚠️ Begrenzt',
             'IDEs': 'VS Code, JetBrains, Sublime',
@@ -2108,11 +2136,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tableau comparatif des assistants IA de code',
         content: 'Comparaison directe des fonctionnalités et tarification. Les tarifs ont été vérifiés sur les sites des fournisseurs en juin 2026 et sont actualisés mensuellement. Le support LLM local varie de l\'intégration native ([Continue.dev](https://Continue.dev)) à la configuration spécifique au fournisseur (Cursor, Cody) au seul enterprise (Tabnine auto-hébergé).',
         note: 'Tous les tarifs vérifiés directement sur les sites officiels des fournisseurs. Abonnez-vous maintenant pour rester informé des dernières mises à jour de juin 2026.',
-        columns: ['Outil', 'Tarif', 'LLM local', 'IDEs', 'Open Source', 'Fonctionnalités d\'équipe', 'Meilleur pour'],
+        columns: ['Outil', 'Lien', 'Tarif', 'LLM local', 'IDEs', 'Open Source', 'Fonctionnalités d\'équipe', 'Meilleur pour'],
         tableFormat: true,
         rows: [
           {
             'Outil': 'Continue.dev',
+            'Lien': '[continue.dev](https://continue.dev)',
             'Tarif': 'Gratuit',
             'LLM local': '✅ Natif (Ollama, LM Studio, llama.cpp)',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -2122,6 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Cursor',
+            'Lien': '[cursor.com](https://cursor.com)',
             'Tarif': '20 €/mo (Pro)',
             'LLM local': '✅ Via config (endpoint OpenAI)',
             'IDEs': 'Fork VS Code',
@@ -2131,6 +2161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Sourcegraph Cody',
+            'Lien': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Tarif': '59 €/user/mo (enterprise-only)',
             'LLM local': '✅ Via config Ollama',
             'IDEs': 'VS Code, JetBrains, Neovim',
@@ -2140,6 +2171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Tabnine',
+            'Lien': '[tabnine.com](https://www.tabnine.com)',
             'Tarif': '39 €/user/mo',
             'LLM local': '✅ Auto-hébergé (enterprise)',
             'IDEs': 'VS Code, JetBrains, Sublime, plus',
@@ -2149,6 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Windsurf (Codeium)',
+            'Lien': '[windsurf.com](https://windsurf.com)',
             'Tarif': 'Gratuit / 15 €/mo',
             'LLM local': '✅ Via Ollama (nouveau)',
             'IDEs': 'IDE Windsurf, VS Code',
@@ -2158,6 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'GitHub Copilot',
+            'Lien': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Tarif': '10 €/mo',
             'LLM local': '❌ Cloud uniquement',
             'IDEs': 'VS Code, JetBrains, Vim',
@@ -2167,6 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Codeium (gratuit)',
+            'Lien': '[codeium.com](https://codeium.com)',
             'Tarif': 'Gratuit',
             'LLM local': '⚠️ Limité',
             'IDEs': 'VS Code, JetBrains, Sublime',
@@ -2424,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: { id: 'verified-sources', title: 'ソース検証（2026年6月）', content: '**公式ソースから検証された価格:**\n- **Cursor** (¥3,040/月Pro): cursor.com/pricing — 2026-06-21に検証\n- **Continue.dev** (無料): continue.dev — Apache 2.0オープンソース確認、プレミアムティアなし\n- **Sourcegraph Cody** (¥1,400/ユーザー/月): sourcegraph.com/cody/pricing — 2026-06-21に検証\n- **Tabnine** (¥1,800/月Pro): tabnine.com/pricing — 2026-06-21に検証\n- **Windsurf** (無料/¥2,200/月): codeium.com/windsurf/pricing — 2026-06-21に検証\n- **GitHub Copilot** (¥1,500/月): github.com/features/copilot/pricing — 2026-06-21に検証\n\n**ローカルLLM統合テスト環境:**\n- Ollama 0.30.8 (2026年6月現在の最新安定版)\n- Qwen 3 Coder 14B (標準的な中規模コードモデル)\n- Deepseek Coder 33B (より大規模な選択肢)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (代表的なハードウェア)\n\n**次回更新:** 2026年6月。月次再検証スケジュール実施中。' },
       verdictBox: { id: 'verdict-picks', title: '🏆 当社の選択—2026年6月', content: '5つの異なる優先度向けの5つの勝者。', callouts: [{ type: '🥇全体最高：Continue.dev', text: '理由：無料、オープンソース、最高のOllama/LM Studio統合。VS Code/JetBrains対応。活発な開発。ローカルLLMに真に最適。' }, { type: '💎最高のUX：Cursor', text: '理由：¥2,800/月でAIコーディング体験が最も洗練。カスタムOpenAIエンドポイント設定経由のローカルLLM。ほとんどのプロに価値あり。' }, { type: '👥チーム向け最高：Sourcegraph Cody', text: '理由：¥8,260/ユーザー/月（エンタープライズのみ）。コードベース全体コンテキスト。チーム管理/コンプライアンス機能。エンタープライズグレード。' }, { type: '🔒プライバシー最適：Tabnine', text: '理由：¥5,460/ユーザー/月またはセルフホスティング。許容ライセンスのみで訓練。SOC 2 Type 2認証。企業向けプライバシー。' }, { type: '🚀ライジングスター：Windsurf', text: '理由：無料ティア+¥2,100/月Pro。Cascadeワークフロー。ローカルLLM対応2025年後半追加。強い勢い。' }] },
       whyLocalLlmMatters: { id: 'why-local-llm', title: 'AIコーディングアシスタントがローカルLLM対応を必要とする理由', content: 'ほとんどのAIコーディングツール比較は重要な現実を無視しています：コードプライバシー。GitHub Copilot、Cursorのクラウドモード、その他は処理のためにあなたのコードをサードパーティサーバーに送信します。独自のコード、NDA保護された作業、または規制業界では決定的な問題です。\n\nAIコーディングツールにおけるローカルLLM対応を気にする4つの理由：\n\n**プライバシー。** あなたのコードはマシンを離れません。独自アルゴリズム、セキュリティトークン、顧客データ、ビジネスロジックはローカルに留まります。\n\n**コスト。** クラウドAIツール$10–20/月＋トークン制限。ローカルLLMはハードウェア投資後ゼロコスト。\n\n**オフライン作業。** 飛行機、インターネットなし顧客サイト、エアギャップネットワーク。ローカルLLMはどこでも機能。\n\n**レイテンシ。** クラウドは200–500ms追加。ローカルは50–150msで応答。高速フィードバックループが生産性向上。', items: ['独自コードはマシンに留まる', 'ハードウェア投資後マージナルコスト$0', 'オフライン＋エアギャップネットワーク対応', '高速レイテンシ：ローカル50-150ms対クラウド200-500ms', 'トークン制限なし'] },
-      comparisonTableSection: { id: 'comparison-table-main', title: 'AIコーディングアシスタント比較表（2026年6月）', content: 'ヘッド・ツー・ヘッド機能および価格比較。価格はプロバイダーウェブサイトで2026年6月に検証。ローカルLLM対応はネイティブ統合（Continue.dev）からエンタープライズのみまで様々。', columns: ['ツール', '価格', 'ローカルLLM', 'IDE', 'オープンソース', 'チーム機能', '最適な用途'], tableFormat: true, rows: [{ 'ツール': 'Continue.dev', '価格': '無料', 'ローカルLLM': '✅ ネイティブ', 'IDE': 'VS Code、JetBrains、Vim', 'オープンソース': '✅ Apache 2.0', 'チーム機能': '限定的', '最適な用途': 'ローカルファースト' }] },
+      comparisonTableSection: { id: 'comparison-table-main', title: 'AIコーディングアシスタント比較表（2026年6月）', content: 'ヘッド・ツー・ヘッド機能および価格比較。価格はプロバイダーウェブサイトで2026年6月に検証。ローカルLLM対応はネイティブ統合（Continue.dev）からエンタープライズのみまで様々。', columns: ['ツール', 'リンク', '価格', 'ローカルLLM', 'IDE', 'オープンソース', 'チーム機能', '最適な用途'], tableFormat: true, rows: [{ 'ツール': 'Continue.dev', 'リンク': '[continue.dev](https://continue.dev)', '価格': '無料', 'ローカルLLM': '✅ ネイティブ', 'IDE': 'VS Code、JetBrains、Vim', 'オープンソース': '✅ Apache 2.0', 'チーム機能': '限定的', '最適な用途': 'ローカルファースト' }] },
       continueSection: { id: 'continue-dev', title: 'Continue.dev：ローカルLLM開発者向け最適', content: 'Continue.devはローカルLLMをファーストクラス市民として備えたオープンソースAIコードアシスタント。VS Code、JetBrains、Vimで機能。Core価値：Continue.devはOllama、LM Studio、llama.cppをネイティブ統合ターゲットとして扱う。設定は簡単—ローカルエンドポイント指し示して実行。\n\nContinue.devには購読コストなし。創業者チームはアクティブで反応的。コミュニティ成長中。ハードウェア所有しプライバシー重視の開発者向けに明白な最初の選択肢。', items: ['無料かつオープンソース', 'Ollama/LM Studio ネイティブ統合', 'ローカルモデルで完全オフライン', 'マルチIDE対応', 'アクティブな開発', 'ローカル完全なチャット＆コード機能', 'アカウント不要'] },
       cursorSection: { id: 'cursor', title: 'Cursor：最高のオートコンプリート＆UX', content: 'CursorはAIコーディング内蔵VS Code フォーク。Pro ¥2,800/月で最高のオートコンプリート体験提供。Cursorのクラウドモデルは例外的。IDE は敏捷で反応的。セットアップは直感的—競合より設定摩擦少ない。\n\nローカルLLM対応はカスタムOpenAI API設定使用。OllamaエンドポイントをOpenAI互換APIとして指し示し、補完がローカルにルート。機能しますがContinue.devほどシームレスではない。いくつかのCursor機能（Composer等）はクラウドモデル優先。', items: ['¥2,800/月Pro（無料ティア限定）', '最高のオートコンプリート品質', '高速で反応的なIDE', 'ローカルLLM（設定必須）', 'クラウドモデル品質は例外的', 'Composerエージェントモード', 'プロフェッショナルなUX'] },
       codySection: { id: 'cody', title: 'Sourcegraph Cody：チーム向け最高', content: 'Sourcegraph CodyはVS Code/JetBrains拡張（¥8,260/ユーザー/月、エンタープライズのみ）チーム協力焦点。Codyはコードベース全体コンテキストを使用してプロジェクト理解。大規模リファクタリング/マルチファイル変更に強力。チーム向けに管理者制御、監査ログ、コンプライアンス機能あり。\n\nローカルLLM対応はOllama設定経由で利用可能。Codyの設定でOllamaエンドポイント設定、チャット+補完がローカルモデルにルート。機能しますが、Codyはクラウドファースト構築—製品体験はクラウド想定。', items: ['¥8,260/ユーザー/月', 'コードベース全体コンテキスト', 'チーム管理/コンプライアンス機能', '複数IDE対応', '部分的オープンソース', 'Ollama設定経由のローカルLLM', 'GitHub/GitLab チーム向け'] },
@@ -2479,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: { id: 'verified-sources', title: '来源验证（2026年6月）', content: '**官方来源验证的定价：** Cursor（$20/月Pro）、Continue.dev（免费）、Sourcegraph Cody（$59/用户/月）、Tabnine（$39/月Pro）、Windsurf（免费/$15/月）、GitHub Copilot（$10/月）。所有于2026年6月验证。' },
       verdictBox: { id: 'verdict-picks', title: '🏆 我们的选择 — 2026年6月', content: '针对五种不同优先级的五位获胜者。', callouts: [{ type: '🥇 最佳整体：Continue.dev', text: '为什么：免费、开源、一流的Ollama和LM Studio集成。本地LLM真正的最佳选择。' }, { type: '💎 最佳UX：Cursor', text: '为什么：$20/月。对大多数专业开发者值得付费。' }, { type: '👥 团队最佳：Sourcegraph Cody', text: '为什么：$59/用户/月。代码库上下文。企业级质量。' }, { type: '🔒 隐私最优：Tabnine', text: '为什么：$39/月或自托管。SOC 2认证。企业标准。' }, { type: '🚀 冉冉上升者：Windsurf', text: '为什么：免费 + $15/月Pro。强劲势头。' }] },
       whyLocalLlmMatters: { id: 'why-local-llm', title: 'AI编程助手为什么需要本地LLM支持', content: '大多数AI编程工具比较忽视一个关键现实：代码隐私。GitHub Copilot、Cursor云模式和其他工具将代码发送到第三方服务器进行处理。对于专有代码、保密协议保护的工作或受规制行业，这是交易破裂者。\n\n在AI编程工具中关心本地LLM支持有四个原因：\n\n**隐私。** 代码不离开你的机器。专有算法、安全令牌、客户数据和业务逻辑保持本地。不上传到OpenAI、Anthropic或Codeium服务器。\n\n**成本。** 云AI编程工具收费$10–20/月，通常有令牌限制。本地LLM在硬件投资后成本为零。\n\n**离线工作。** 火车、飞机、无互联网的客户现场或意图隔离的网络。云工具变得无用。本地LLM在任何地方工作。\n\n**延迟。** 云往返增加200–500ms。M5 Max或RTX 4090上的本地模型在50–150ms内响应。差异在流状态中很明显——更快的反馈循环提高生产力。', items: ['专有代码保留在你的机器上', '硬件成本摊销后零边际成本', '离线和隔离网络工作', '更快延迟：本地50–150ms对云200–500ms', '无令牌限制或使用限流'] },
-      comparisonTableSection: { id: 'comparison-table-main', title: 'AI编程助手比较表（2026年6月）', content: '正面对比功能和定价。', columns: ['工具', '价格', '本地LLM', 'IDE', '开源', '团队功能'], tableFormat: true, rows: [{ '工具': 'Continue.dev', '价格': '免费', '本地LLM': '✅ 原生', 'IDE': 'VS Code、JetBrains', '开源': '✅ Apache 2.0', '团队功能': '有限' }] },
+      comparisonTableSection: { id: 'comparison-table-main', title: 'AI编程助手比较表（2026年6月）', content: '正面对比功能和定价。', columns: ['工具', '链接', '价格', '本地LLM', 'IDE', '开源', '团队功能'], tableFormat: true, rows: [{ '工具': 'Continue.dev', '链接': '[continue.dev](https://continue.dev)', '价格': '免费', '本地LLM': '✅ 原生', 'IDE': 'VS Code、JetBrains', '开源': '✅ Apache 2.0', '团队功能': '有限' }] },
       continueSection: { id: 'continue-dev', title: 'Continue.dev：本地优先', content: 'Continue.dev是开源，将本地LLM作为一流公民。Ollama、LM Studio、llama.cpp原生支持。\n\n无订阅费用。创始团队活跃。社区增长。对于重视隐私的开发者，这是显而易见的选择。', items: ['免费开源', '原生Ollama支持', '完全离线', '多IDE支持', '活跃开发'] },
       cursorSection: { id: 'cursor', title: 'Cursor：最佳自动完成', content: 'Cursor是VS Code分支，$20/月Pro。提供最精致的自动完成。\n\n本地LLM通过自定义OpenAI API端点。可工作，但不如Continue.dev透明。某些功能更喜欢云。', items: ['$20/月Pro', '最佳自动完成', '快速IDE', '本地支持', '专业体验'] },
       codySection: { id: 'cody', title: 'Sourcegraph Cody：团队工具', content: 'Sourcegraph Cody $59/用户/月。代码库范围上下文。团队管理、审计、合规功能。\n\n本地LLM通过Ollama，但云优先设计。', items: ['$59/用户/月', '代码库上下文', '团队功能', '多IDE', '部分开源'] },
@@ -2613,11 +2648,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'AI 코딩 어시스턴트 비교: Continue.dev (전체 최고, 무료), Cursor ($20/월, 최고 UX), Sourcegraph Cody ($59/사용자/월, 팀 최고), Tabnine ($39/월, 프라이버시 최고), Windsurf (무료/$15/월, 급성장 대안). 모두 다양한 설정 복잡도로 로컬 LLM을 지원합니다. 2026년 6월.',
         content: '기능 및 가격 직접 비교. 가격은 2026년 6월 공급자 공식 웹사이트에서 검증하였으며 매월 업데이트합니다. 로컬 LLM 지원은 네이티브 통합([Continue.dev](https://Continue.dev))에서 벤더별 구성(Cursor, Cody)까지, 엔터프라이즈 전용(Tabnine 셀프 호스팅)까지 다양합니다.',
         note: '모든 가격은 공식 공급자 웹사이트에서 직접 검증하였습니다. 최신 2026년 6월 업데이트를 받으려면 구독하십시오.',
-        columns: ['도구', '가격', '로컬 LLM', 'IDE', '오픈소스', '팀 기능', '최적 대상'],
+        columns: ['도구', '링크', '가격', '로컬 LLM', 'IDE', '오픈소스', '팀 기능', '최적 대상'],
         tableFormat: true,
         rows: [
           {
             '도구': 'Continue.dev',
+            '링크': '[continue.dev](https://continue.dev)',
             '가격': '무료',
             '로컬 LLM': '✅ 네이티브 (Ollama, LM Studio, llama.cpp)',
             'IDE': 'VS Code, JetBrains, Vim',
@@ -2627,6 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Cursor',
+            '링크': '[cursor.com](https://cursor.com)',
             '가격': '$20/월 (Pro)',
             '로컬 LLM': '✅ 구성을 통해 (OpenAI 엔드포인트)',
             'IDE': 'VS Code 포크',
@@ -2636,6 +2673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Sourcegraph Cody',
+            '링크': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             '가격': '$59/사용자/월 (엔터프라이즈 전용)',
             '로컬 LLM': '✅ Ollama 구성으로',
             'IDE': 'VS Code, JetBrains, Neovim',
@@ -2645,6 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Tabnine',
+            '링크': '[tabnine.com](https://www.tabnine.com)',
             '가격': '$39/사용자/월',
             '로컬 LLM': '✅ 셀프 호스팅 (엔터프라이즈)',
             'IDE': 'VS Code, JetBrains, Sublime, 기타',
@@ -2654,6 +2693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Windsurf (Codeium)',
+            '링크': '[windsurf.com](https://windsurf.com)',
             '가격': '무료 / $15/월',
             '로컬 LLM': '✅ Ollama 경유 (신규)',
             'IDE': 'Windsurf IDE, VS Code',
@@ -2663,6 +2703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'GitHub Copilot',
+            '링크': '[github.com/features/copilot](https://github.com/features/copilot)',
             '가격': '$10/월',
             '로컬 LLM': '❌ 클라우드 전용',
             'IDE': 'VS Code, JetBrains, Vim',
@@ -2672,6 +2713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Codeium (무료)',
+            '링크': '[codeium.com](https://codeium.com)',
             '가격': '무료',
             '로컬 LLM': '⚠️ 제한적',
             'IDE': 'VS Code, JetBrains, Sublime',

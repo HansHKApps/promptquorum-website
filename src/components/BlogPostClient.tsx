@@ -102,6 +102,10 @@ const BLOG_UI = {
 // Extracted into its own component so it can own its scroll-overflow-detection
 // hooks per Rules of Hooks — it is rendered inline inside a `.map()` over
 // post.sections in BlogPostClientContent, so hooks cannot live there directly.
+function renderTableMarkdownLinks(text: string) {
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:text-primary/80 underline">$1</a>')
+}
+
 function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<string, string>[] }) {
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -125,20 +129,24 @@ function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<s
               <th
                 key={col}
                 className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}
-              >
-                {col}
-              </th>
+                dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(col) }}
+              />
             ))}
           </tr>
         </thead>
         <tbody>
           {rows.map((row, idx) => (
             <tr key={idx} className="border-b border-text-tertiary hover:bg-primary/5 group">
-              {columns.map((col, colIdx) => (
-                <td key={`${idx}-${col}`} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                  {row[col] || '—'}
-                </td>
-              ))}
+              {columns.map((col, colIdx) => {
+                const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                return (
+                <td
+                  key={`${idx}-${col}`}
+                  className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}
+                  dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(row[colLabel] || row[col] || '—') }}
+                />
+                )
+              })}
             </tr>
           ))}
         </tbody>

@@ -230,10 +230,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. Alternatives',
-        columns: ['App', 'Best for', 'Setup level', 'Model flexibility', 'Source model', 'Key limitation'],
+        columns: ['App', 'Link', 'Best for', 'Setup level', 'Model flexibility', 'Source model', 'Key limitation'],
         rows: [
           {
             'App': 'Backyard AI',
+            'Link': '[backyard.ai](https://backyard.ai)',
             'Best for': 'Low-friction local character chat with a built-in Character Hub',
             'Setup level': 'Minimal (one installer, download a model)',
             'Model flexibility': 'Curated open models + community roleplay fine-tunes',
@@ -242,6 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'SillyTavern',
+            'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'Best for': 'Maximum customization, group chats, prompt-template control',
             'Setup level': 'High (separate backend + frontend)',
             'Model flexibility': 'Any GGUF via koboldcpp/text-generation-webui/Ollama backend',
@@ -250,6 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'Loci AI',
+            'Link': '[lociai.app](https://lociai.app)',
             'Best for': 'Cross-platform general-purpose on-device chat (not roleplay-focused)',
             'Setup level': 'Minimal (download, chat)',
             'Model flexibility': 'Curated library (~10 models); cannot import GGUF',
@@ -258,6 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'RisuAI',
+            'Link': '[risuai.net](https://risuai.net)',
             'Best for': 'Entry-level roleplay UI with lighter setup than SillyTavern',
             'Setup level': 'Medium (web or self-hosted, backend still required)',
             'Model flexibility': 'Any GGUF via a connected backend',
@@ -600,10 +604,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. Alternativen',
-        columns: ['App', 'Am besten für', 'Einrichtungsaufwand', 'Modellflexibilität', 'Quellmodell', 'Wichtigste Einschränkung'],
+        columns: ['App', 'Link', 'Am besten für', 'Einrichtungsaufwand', 'Modellflexibilität', 'Quellmodell', 'Wichtigste Einschränkung'],
         rows: [
           {
             'App': 'Backyard AI',
+            'Link': '[backyard.ai](https://backyard.ai)',
             'Am besten für': 'Unkomplizierter lokaler Charakter-Chat mit integriertem Character Hub',
             'Einrichtungsaufwand': 'Minimal (ein Installer, Modell herunterladen)',
             'Modellflexibilität': 'Kuratierte offene Modelle + Community-Rollenspiel-Fine-Tunes',
@@ -612,6 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'SillyTavern',
+            'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'Am besten für': 'Maximale Anpassung, Gruppenchats, Prompt-Template-Kontrolle',
             'Einrichtungsaufwand': 'Hoch (separates Backend + Frontend)',
             'Modellflexibilität': 'Jede GGUF-Datei über koboldcpp-/text-generation-webui-/Ollama-Backend',
@@ -620,6 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'Loci AI',
+            'Link': '[lociai.app](https://lociai.app)',
             'Am besten für': 'Plattformübergreifender Allzweck-Chat auf dem Gerät (nicht rollenspielfokussiert)',
             'Einrichtungsaufwand': 'Minimal (herunterladen, chatten)',
             'Modellflexibilität': 'Kuratierte Bibliothek (~10 Modelle); kein GGUF-Import',
@@ -628,6 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'RisuAI',
+            'Link': '[risuai.net](https://risuai.net)',
             'Am besten für': 'Einsteigerfreundliche Rollenspiel-UI mit leichterer Einrichtung als SillyTavern',
             'Einrichtungsaufwand': 'Mittel (Web oder Self-Hosting, Backend weiterhin nötig)',
             'Modellflexibilität': 'Jede GGUF-Datei über verbundenes Backend',
@@ -970,10 +978,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. alternativas',
-        columns: ['App', 'Ideal para', 'Nivel de configuración', 'Flexibilidad de modelos', 'Modelo de origen', 'Limitación clave'],
+        columns: ['App', 'Enlace', 'Ideal para', 'Nivel de configuración', 'Flexibilidad de modelos', 'Modelo de origen', 'Limitación clave'],
         rows: [
           {
             'App': 'Backyard AI',
+            'Link': '[backyard.ai](https://backyard.ai)',
             'Ideal para': 'Chat de personajes local sin fricción con Character Hub integrado',
             'Nivel de configuración': 'Mínimo (un instalador, descargar un modelo)',
             'Flexibilidad de modelos': 'Modelos abiertos curados + ajustes finos de roleplay de la comunidad',
@@ -982,6 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'SillyTavern',
+            'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'Ideal para': 'Máxima personalización, chats grupales, control de plantillas de prompt',
             'Nivel de configuración': 'Alto (backend + frontend separados)',
             'Flexibilidad de modelos': 'Cualquier archivo GGUF vía backend koboldcpp/text-generation-webui/Ollama',
@@ -990,6 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'Loci AI',
+            'Link': '[lociai.app](https://lociai.app)',
             'Ideal para': 'Chat de propósito general en el dispositivo multiplataforma (no enfocado en roleplay)',
             'Nivel de configuración': 'Mínimo (descargar, chatear)',
             'Flexibilidad de modelos': 'Biblioteca curada (~10 modelos); no admite importar GGUF',
@@ -998,6 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'RisuAI',
+            'Link': '[risuai.net](https://risuai.net)',
             'Ideal para': 'UI de roleplay de nivel inicial con configuración más ligera que SillyTavern',
             'Nivel de configuración': 'Medio (web o autoalojado, backend sigue siendo necesario)',
             'Flexibilidad de modelos': 'Cualquier archivo GGUF vía un backend conectado',
@@ -1340,10 +1352,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. alternatives',
-        columns: ['App', 'Idéal pour', 'Niveau de configuration', 'Flexibilité des modèles', 'Modèle source', 'Limite principale'],
+        columns: ['App', 'Lien', 'Idéal pour', 'Niveau de configuration', 'Flexibilité des modèles', 'Modèle source', 'Limite principale'],
         rows: [
           {
             'App': 'Backyard AI',
+            'Link': '[backyard.ai](https://backyard.ai)',
             'Idéal pour': 'Chat de personnages local sans friction avec Character Hub intégré',
             'Niveau de configuration': 'Minimal (un installeur, télécharger un modèle)',
             'Flexibilité des modèles': 'Modèles ouverts sélectionnés + fine-tunes de roleplay communautaires',
@@ -1352,6 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'SillyTavern',
+            'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'Idéal pour': 'Personnalisation maximale, chats de groupe, contrôle des templates de prompt',
             'Niveau de configuration': 'Élevé (backend + frontend séparés)',
             'Flexibilité des modèles': 'Tout fichier GGUF via backend koboldcpp/text-generation-webui/Ollama',
@@ -1360,6 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'Loci AI',
+            'Link': '[lociai.app](https://lociai.app)',
             'Idéal pour': 'Chat généraliste sur l\'appareil multiplateforme (non orienté roleplay)',
             'Niveau de configuration': 'Minimal (télécharger, discuter)',
             'Flexibilité des modèles': 'Bibliothèque sélectionnée (~10 modèles) ; pas d\'import GGUF',
@@ -1368,6 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'RisuAI',
+            'Link': '[risuai.net](https://risuai.net)',
             'Idéal pour': 'UI de roleplay pour débutants, configuration plus légère que SillyTavern',
             'Niveau de configuration': 'Moyen (web ou auto-hébergé, backend toujours requis)',
             'Flexibilité des modèles': 'Tout fichier GGUF via un backend connecté',
@@ -1710,10 +1726,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. 代替アプリ',
-        columns: ['アプリ', '最適な用途', 'セットアップの手間', 'モデルの柔軟性', 'ソースモデル', '主な制限'],
+        columns: ['アプリ', 'リンク', '最適な用途', 'セットアップの手間', 'モデルの柔軟性', 'ソースモデル', '主な制限'],
         rows: [
           {
             'アプリ': 'Backyard AI',
+            'リンク': '[backyard.ai](https://backyard.ai)',
             '最適な用途': '内蔵Character Hubを使った手軽なローカルキャラクターチャット',
             'セットアップの手間': '最小限(インストーラー1つ、モデルをダウンロード)',
             'モデルの柔軟性': '厳選されたオープンモデル + コミュニティ製ロールプレイファインチューン',
@@ -1722,6 +1739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'アプリ': 'SillyTavern',
+            'リンク': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             '最適な用途': '最大限のカスタマイズ、グループチャット、プロンプトテンプレート制御',
             'セットアップの手間': '高い(バックエンドとフロントエンドを別々に設定)',
             'モデルの柔軟性': 'koboldcpp/text-generation-webui/Ollamaバックエンド経由で任意のGGUF',
@@ -1730,6 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'アプリ': 'Loci AI',
+            'リンク': '[lociai.app](https://lociai.app)',
             '最適な用途': 'クロスプラットフォームの汎用オンデバイスチャット(ロールプレイ特化ではない)',
             'セットアップの手間': '最小限(ダウンロードしてチャット)',
             'モデルの柔軟性': '厳選ライブラリ(約10モデル)、GGUFインポート不可',
@@ -1738,6 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'アプリ': 'RisuAI',
+            'リンク': '[risuai.net](https://risuai.net)',
             '最適な用途': 'SillyTavernより軽いセットアップの入門向けロールプレイUI',
             'セットアップの手間': '中程度(Webまたはセルフホスト、バックエンドは依然必要)',
             'モデルの柔軟性': '接続したバックエンド経由で任意のGGUF',
@@ -2080,10 +2100,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI与其他替代方案',
-        columns: ['应用', '最适合场景', '配置难度', '模型灵活性', '源代码模式', '主要局限'],
+        columns: ['应用', '链接', '最适合场景', '配置难度', '模型灵活性', '源代码模式', '主要局限'],
         rows: [
           {
             '应用': 'Backyard AI',
+            '链接': '[backyard.ai](https://backyard.ai)',
             '最适合场景': '搭配内置Character Hub的低门槛本地角色聊天',
             '配置难度': '极低(一个安装包,下载模型)',
             '模型灵活性': '精选开源模型 + 社区角色扮演调优模型',
@@ -2092,6 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '应用': 'SillyTavern',
+            '链接': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             '最适合场景': '最大化定制、群聊、提示词模板控制',
             '配置难度': '高(需分别配置后端和前端)',
             '模型灵活性': '通过koboldcpp/text-generation-webui/Ollama后端使用任意GGUF模型',
@@ -2100,6 +2122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '应用': 'Loci AI',
+            '链接': '[lociai.app](https://lociai.app)',
             '最适合场景': '跨平台通用设备端聊天(非角色扮演专注)',
             '配置难度': '极低(下载即可聊天)',
             '模型灵活性': '精选库(约10个模型);不支持导入GGUF',
@@ -2108,6 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '应用': 'RisuAI',
+            '链接': '[risuai.net](https://risuai.net)',
             '最适合场景': '比SillyTavern配置更轻的入门级角色扮演界面',
             '配置难度': '中等(网页或自托管,仍需后端)',
             '模型灵活性': '通过连接的后端使用任意GGUF模型',
@@ -2450,10 +2474,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI vs. alternativas',
-        columns: ['App', 'Melhor para', 'Nível de configuração', 'Flexibilidade de modelos', 'Modelo de origem', 'Limitação principal'],
+        columns: ['App', 'Link', 'Melhor para', 'Nível de configuração', 'Flexibilidade de modelos', 'Modelo de origem', 'Limitação principal'],
         rows: [
           {
             'App': 'Backyard AI',
+            'Link': '[backyard.ai](https://backyard.ai)',
             'Melhor para': 'Chat de personagens local sem fricção com Character Hub integrado',
             'Nível de configuração': 'Mínimo (um instalador, baixar um modelo)',
             'Flexibilidade de modelos': 'Modelos abertos curados + ajustes finos de roleplay da comunidade',
@@ -2462,6 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'SillyTavern',
+            'Link': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'Melhor para': 'Personalização máxima, chats em grupo, controle de templates de prompt',
             'Nível de configuração': 'Alto (backend + frontend separados)',
             'Flexibilidade de modelos': 'Qualquer arquivo GGUF via backend koboldcpp/text-generation-webui/Ollama',
@@ -2470,6 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'Loci AI',
+            'Link': '[lociai.app](https://lociai.app)',
             'Melhor para': 'Chat de propósito geral no dispositivo, multiplataforma (não focado em roleplay)',
             'Nível de configuração': 'Mínimo (baixar, conversar)',
             'Flexibilidade de modelos': 'Biblioteca curada (~10 modelos); não permite importar GGUF',
@@ -2478,6 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': 'RisuAI',
+            'Link': '[risuai.net](https://risuai.net)',
             'Melhor para': 'UI de roleplay para iniciantes com configuração mais leve que o SillyTavern',
             'Nível de configuração': 'Médio (web ou auto-hospedado, backend ainda necessário)',
             'Flexibilidade de modelos': 'Qualquer arquivo GGUF via um backend conectado',
@@ -2820,10 +2848,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI مقابل البدائل',
-        columns: ['التطبيق', 'الأنسب لـ', 'مستوى الإعداد', 'مرونة النماذج', 'نموذج المصدر', 'القيد الرئيسي'],
+        columns: ['التطبيق', 'الرابط', 'الأنسب لـ', 'مستوى الإعداد', 'مرونة النماذج', 'نموذج المصدر', 'القيد الرئيسي'],
         rows: [
           {
             'التطبيق': 'Backyard AI',
+            'الرابط': '[backyard.ai](https://backyard.ai)',
             'الأنسب لـ': 'محادثة شخصيات محلية سلسة مع Character Hub مدمج',
             'مستوى الإعداد': 'ضئيل (مثبّت واحد، تنزيل نموذج)',
             'مرونة النماذج': 'نماذج مفتوحة منسّقة + إصدارات لعب أدوار مضبوطة من المجتمع',
@@ -2832,6 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'التطبيق': 'SillyTavern',
+            'الرابط': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             'الأنسب لـ': 'أقصى تخصيص، محادثات جماعية، تحكم في قوالب الأوامر',
             'مستوى الإعداد': 'عالٍ (خلفية + واجهة أمامية منفصلتان)',
             'مرونة النماذج': 'أي ملف GGUF عبر خلفية koboldcpp/text-generation-webui/Ollama',
@@ -2840,6 +2870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'التطبيق': 'Loci AI',
+            'الرابط': '[lociai.app](https://lociai.app)',
             'الأنسب لـ': 'محادثة عامة على الجهاز عبر منصات متعددة (غير مركّزة على لعب الأدوار)',
             'مستوى الإعداد': 'ضئيل (تنزيل، محادثة)',
             'مرونة النماذج': 'مكتبة منسّقة (~10 نماذج)؛ لا استيراد GGUF',
@@ -2848,6 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'التطبيق': 'RisuAI',
+            'الرابط': '[risuai.net](https://risuai.net)',
             'الأنسب لـ': 'واجهة لعب أدوار للمبتدئين بإعداد أخف من SillyTavern',
             'مستوى الإعداد': 'متوسط (ويب أو استضافة ذاتية، الخلفية لا تزال مطلوبة)',
             'مرونة النماذج': 'أي ملف GGUF عبر خلفية متصلة',
@@ -3190,10 +3222,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Backyard AI 대 대안',
-        columns: ['앱', '최적 용도', '설정 난이도', '모델 유연성', '소스 모델', '주요 한계'],
+        columns: ['앱', '링크', '최적 용도', '설정 난이도', '모델 유연성', '소스 모델', '주요 한계'],
         rows: [
           {
             '앱': 'Backyard AI',
+            '링크': '[backyard.ai](https://backyard.ai)',
             '최적 용도': '내장 Character Hub를 갖춘 손쉬운 로컬 캐릭터 채팅',
             '설정 난이도': '최소(설치 파일 하나, 모델 다운로드)',
             '모델 유연성': '선별된 오픈 모델 + 커뮤니티 롤플레이 파인튜닝 모델',
@@ -3202,6 +3235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '앱': 'SillyTavern',
+            '링크': '[github.com/SillyTavern/SillyTavern](https://github.com/SillyTavern/SillyTavern)',
             '최적 용도': '최대한의 커스터마이징, 그룹 채팅, 프롬프트 템플릿 제어',
             '설정 난이도': '높음(백엔드 + 프런트엔드 별도 구성)',
             '모델 유연성': 'koboldcpp/text-generation-webui/Ollama 백엔드를 통한 모든 GGUF 파일',
@@ -3210,6 +3244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '앱': 'Loci AI',
+            '링크': '[lociai.app](https://lociai.app)',
             '최적 용도': '크로스 플랫폼 범용 온디바이스 채팅(롤플레이 특화 아님)',
             '설정 난이도': '최소(다운로드 후 채팅)',
             '모델 유연성': '선별 라이브러리(약 10개 모델), GGUF 가져오기 불가',
@@ -3218,6 +3253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '앱': 'RisuAI',
+            '링크': '[risuai.net](https://risuai.net)',
             '최적 용도': 'SillyTavern보다 가벼운 설정의 입문용 롤플레이 UI',
             '설정 난이도': '중간(웹 또는 셀프 호스팅, 여전히 백엔드 필요)',
             '모델 유연성': '연결된 백엔드를 통한 모든 GGUF 파일',

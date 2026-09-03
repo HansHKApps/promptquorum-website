@@ -232,20 +232,19 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
         <thead>
           <tr className="border-b border-primary/20">
             {columns.map((col) => (
-              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary">
-                {col}
-              </th>
+              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(col) }} />
             ))}
           </tr>
         </thead>
         <tbody>
           {rows.map((row, i) => (
             <tr key={i} className="border-b border-primary/10">
-              {columns.map((col) => (
-                <td key={col} className="py-2 pr-4 text-text-secondary align-top">
-                  {row[col] ?? ''}
-                </td>
-              ))}
+              {columns.map((col) => {
+                const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+                return (
+                <td key={col} className="py-2 pr-4 text-text-secondary align-top" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(row[colLabel] ?? row[col] ?? '') }} />
+                )
+              })}
             </tr>
           ))}
         </tbody>

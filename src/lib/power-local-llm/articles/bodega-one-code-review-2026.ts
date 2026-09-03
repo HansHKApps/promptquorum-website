@@ -221,10 +221,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline, and Aider',
-        columns: ['Tool', 'Form factor', 'Model choice', 'Local-first design', 'Key difference'],
+        columns: ['Tool', 'Link', 'Form factor', 'Model choice', 'Local-first design', 'Key difference'],
         rows: [
           {
             'Tool': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://bodegaone.ai)',
             'Form factor': 'Standalone desktop IDE (editor + chat + agent in one app)',
             'Model choice': 'BYOLLM: 10+ presets, local and cloud',
             'Local-first design': 'Built around local providers, with an optional air-gap mode',
@@ -232,6 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Continue.dev',
+            'Link': '[docs.continue.dev](https://docs.continue.dev)',
             'Form factor': 'Open-source extension for VS Code and JetBrains IDEs',
             'Model choice': 'Configurable to local (Ollama, LM Studio) or cloud providers',
             'Local-first design': 'Depends entirely on the configured provider; no dedicated air-gap feature',
@@ -239,6 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Form factor': 'Open-source autonomous-agent extension for VS Code',
             'Model choice': 'Configurable to local or cloud providers via API-compatible endpoints',
             'Local-first design': 'Depends on the configured provider',
@@ -246,6 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Aider',
+            'Link': '[aider.chat](https://aider.chat)',
             'Form factor': 'Open-source, terminal-based AI pair-programming tool',
             'Model choice': 'Configurable to local or cloud providers via API-compatible endpoints',
             'Local-first design': 'Depends on the configured provider; no GUI editor of its own',
@@ -578,10 +582,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline und Aider',
-        columns: ['Tool', 'Formfaktor', 'Modellwahl', 'Lokal-first-Design', 'Wesentlicher Unterschied'],
+        columns: ['Tool', 'Link', 'Formfaktor', 'Modellwahl', 'Lokal-first-Design', 'Wesentlicher Unterschied'],
         rows: [
           {
             'Tool': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://bodegaone.ai)',
             'Formfaktor': 'Eigenständige Desktop-IDE (Editor + Chat + Agent in einer App)',
             'Modellwahl': 'BYOLLM: 10+ Presets, lokal und Cloud',
             'Lokal-first-Design': 'Ausgerichtet auf lokale Anbieter, mit optionalem Air-Gap-Modus',
@@ -589,6 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Continue.dev',
+            'Link': '[docs.continue.dev](https://docs.continue.dev)',
             'Formfaktor': 'Open-Source-Erweiterung für VS Code und JetBrains-IDEs',
             'Modellwahl': 'Konfigurierbar auf lokale (Ollama, LM Studio) oder Cloud-Anbieter',
             'Lokal-first-Design': 'Hängt vollständig vom konfigurierten Anbieter ab; keine dedizierte Air-Gap-Funktion',
@@ -596,6 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Formfaktor': 'Open-Source-Erweiterung für autonome Agenten in VS Code',
             'Modellwahl': 'Konfigurierbar auf lokale oder Cloud-Anbieter über API-kompatible Endpunkte',
             'Lokal-first-Design': 'Hängt vom konfigurierten Anbieter ab',
@@ -603,6 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Aider',
+            'Link': '[aider.chat](https://aider.chat)',
             'Formfaktor': 'Open-Source-Terminal-Tool für KI-Pair-Programming',
             'Modellwahl': 'Konfigurierbar auf lokale oder Cloud-Anbieter über API-kompatible Endpunkte',
             'Lokal-first-Design': 'Hängt vom konfigurierten Anbieter ab; keine eigene grafische Editor-Oberfläche',
@@ -935,10 +943,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline et Aider',
-        columns: ['Outil', 'Format', 'Choix du modèle', 'Conception local-first', 'Différence clé'],
+        columns: ['Outil', 'Lien', 'Format', 'Choix du modèle', 'Conception local-first', 'Différence clé'],
         rows: [
           {
             'Outil': 'Bodega One Code',
+            'Lien': '[bodegaone.ai](https://bodegaone.ai)',
             'Format': 'IDE de bureau autonome (éditeur + chat + agent dans une seule application)',
             'Choix du modèle': 'BYOLLM : 10+ préréglages, local et cloud',
             'Conception local-first': 'Construit autour de fournisseurs locaux, avec un mode air-gap optionnel',
@@ -946,6 +955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Continue.dev',
+            'Lien': '[docs.continue.dev](https://docs.continue.dev)',
             'Format': 'Extension open source pour VS Code et les IDE JetBrains',
             'Choix du modèle': 'Configurable sur des fournisseurs locaux (Ollama, LM Studio) ou cloud',
             'Conception local-first': 'Dépend entièrement du fournisseur configuré ; pas de fonctionnalité air-gap dédiée',
@@ -953,6 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Cline',
+            'Lien': '[cline.bot](https://cline.bot)',
             'Format': 'Extension open source pour agent autonome dans VS Code',
             'Choix du modèle': 'Configurable sur des fournisseurs locaux ou cloud via des points d\'accès compatibles API',
             'Conception local-first': 'Dépend du fournisseur configuré',
@@ -960,6 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Aider',
+            'Lien': '[aider.chat](https://aider.chat)',
             'Format': 'Outil open source de programmation en binôme avec l\'IA, en terminal',
             'Choix du modèle': 'Configurable sur des fournisseurs locaux ou cloud via des points d\'accès compatibles API',
             'Conception local-first': 'Dépend du fournisseur configuré ; pas d\'éditeur graphique propre',
@@ -1292,10 +1304,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline y Aider',
-        columns: ['Herramienta', 'Formato', 'Elección de modelo', 'Diseño local-first', 'Diferencia clave'],
+        columns: ['Herramienta', 'Enlace', 'Formato', 'Elección de modelo', 'Diseño local-first', 'Diferencia clave'],
         rows: [
           {
             'Herramienta': 'Bodega One Code',
+            'Enlace': '[bodegaone.ai](https://bodegaone.ai)',
             'Formato': 'IDE de escritorio independiente (editor + chat + agente en una app)',
             'Elección de modelo': 'BYOLLM: 10+ perfiles, locales y en la nube',
             'Diseño local-first': 'Construido en torno a proveedores locales, con modo air-gap opcional',
@@ -1303,6 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Continue.dev',
+            'Enlace': '[docs.continue.dev](https://docs.continue.dev)',
             'Formato': 'Extensión de código abierto para VS Code e IDE de JetBrains',
             'Elección de modelo': 'Configurable a proveedores locales (Ollama, LM Studio) o en la nube',
             'Diseño local-first': 'Depende por completo del proveedor configurado; sin función air-gap dedicada',
@@ -1310,6 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Cline',
+            'Enlace': '[cline.bot](https://cline.bot)',
             'Formato': 'Extensión de código abierto para agente autónomo en VS Code',
             'Elección de modelo': 'Configurable a proveedores locales o en la nube mediante endpoints compatibles con la API',
             'Diseño local-first': 'Depende del proveedor configurado',
@@ -1317,6 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Aider',
+            'Enlace': '[aider.chat](https://aider.chat)',
             'Formato': 'Herramienta de código abierto de programación en pareja con IA, en terminal',
             'Elección de modelo': 'Configurable a proveedores locales o en la nube mediante endpoints compatibles con la API',
             'Diseño local-first': 'Depende del proveedor configurado; sin editor gráfico propio',
@@ -1649,10 +1665,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline e Aider',
-        columns: ['Ferramenta', 'Formato', 'Escolha de modelo', 'Design local-first', 'Diferença principal'],
+        columns: ['Ferramenta', 'Link', 'Formato', 'Escolha de modelo', 'Design local-first', 'Diferença principal'],
         rows: [
           {
             'Ferramenta': 'Bodega One Code',
+            'Link': '[bodegaone.ai](https://bodegaone.ai)',
             'Formato': 'IDE de desktop independente (editor + chat + agente em um app)',
             'Escolha de modelo': 'BYOLLM: 10+ perfis, locais e em nuvem',
             'Design local-first': 'Construída em torno de provedores locais, com modo air-gap opcional',
@@ -1660,6 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Continue.dev',
+            'Link': '[docs.continue.dev](https://docs.continue.dev)',
             'Formato': 'Extensão de código aberto para VS Code e IDEs JetBrains',
             'Escolha de modelo': 'Configurável para provedores locais (Ollama, LM Studio) ou em nuvem',
             'Design local-first': 'Depende inteiramente do provedor configurado; sem recurso air-gap dedicado',
@@ -1667,6 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Cline',
+            'Link': '[cline.bot](https://cline.bot)',
             'Formato': 'Extensão de código aberto para agente autônomo no VS Code',
             'Escolha de modelo': 'Configurável para provedores locais ou em nuvem via endpoints compatíveis com API',
             'Design local-first': 'Depende do provedor configurado',
@@ -1674,6 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Aider',
+            'Link': '[aider.chat](https://aider.chat)',
             'Formato': 'Ferramenta de código aberto de programação em dupla com IA, baseada em terminal',
             'Escolha de modelo': 'Configurável para provedores locais ou em nuvem via endpoints compatíveis com API',
             'Design local-first': 'Depende do provedor configurado; sem editor gráfico próprio',
@@ -2006,10 +2026,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev、Cline、Aider',
-        columns: ['ツール', '形態', 'モデル選択', 'ローカルファースト設計', '主な違い'],
+        columns: ['ツール', 'リンク', '形態', 'モデル選択', 'ローカルファースト設計', '主な違い'],
         rows: [
           {
             'ツール': 'Bodega One Code',
+            'リンク': '[bodegaone.ai](https://bodegaone.ai)',
             '形態': '独立したデスクトップIDE（エディタ+チャット+エージェントを1つのアプリに）',
             'モデル選択': 'BYOLLM：10以上のプリセット、ローカルとクラウド',
             'ローカルファースト設計': 'ローカルプロバイダーを中心に構築、エアギャップモードをオプションで提供',
@@ -2017,6 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Continue.dev',
+            'リンク': '[docs.continue.dev](https://docs.continue.dev)',
             '形態': 'VS CodeおよびJetBrains IDE向けのオープンソース拡張機能',
             'モデル選択': 'ローカル（Ollama、LM Studio）またはクラウドプロバイダーに設定可能',
             'ローカルファースト設計': '設定したプロバイダーに完全に依存。専用のエアギャップ機能はない',
@@ -2024,6 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Cline',
+            'リンク': '[cline.bot](https://cline.bot)',
             '形態': 'VS Code向けの自律エージェント用オープンソース拡張機能',
             'モデル選択': 'API互換エンドポイント経由でローカルまたはクラウドプロバイダーに設定可能',
             'ローカルファースト設計': '設定したプロバイダーに依存',
@@ -2031,6 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Aider',
+            'リンク': '[aider.chat](https://aider.chat)',
             '形態': 'ターミナルベースのオープンソースAIペアプログラミングツール',
             'モデル選択': 'API互換エンドポイント経由でローカルまたはクラウドプロバイダーに設定可能',
             'ローカルファースト設計': '設定したプロバイダーに依存。独自のGUIエディタはない',
@@ -2363,10 +2387,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code 对比 Continue.dev、Cline 和 Aider',
-        columns: ['工具', '形态', '模型选择', '本地优先设计', '关键差异'],
+        columns: ['工具', '链接', '形态', '模型选择', '本地优先设计', '关键差异'],
         rows: [
           {
             '工具': 'Bodega One Code',
+            '链接': '[bodegaone.ai](https://bodegaone.ai)',
             '形态': '独立桌面IDE（编辑器+聊天+代理集于一个应用）',
             '模型选择': 'BYOLLM：10多种预设，本地与云端',
             '本地优先设计': '围绕本地提供商构建，并提供可选气隙模式',
@@ -2374,6 +2399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Continue.dev',
+            '链接': '[docs.continue.dev](https://docs.continue.dev)',
             '形态': '面向VS Code和JetBrains IDE的开源扩展',
             '模型选择': '可配置为本地（Ollama、LM Studio）或云端提供商',
             '本地优先设计': '完全取决于所配置的提供商；没有专门的气隙功能',
@@ -2381,6 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Cline',
+            '链接': '[cline.bot](https://cline.bot)',
             '形态': '面向VS Code内自主代理的开源扩展',
             '模型选择': '可通过兼容API的端点配置为本地或云端提供商',
             '本地优先设计': '取决于所配置的提供商',
@@ -2388,6 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Aider',
+            '链接': '[aider.chat](https://aider.chat)',
             '形态': '基于终端的开源AI结对编程工具',
             '模型选择': '可通过兼容API的端点配置为本地或云端提供商',
             '本地优先设计': '取决于所配置的提供商；没有自带的图形化编辑器',
@@ -2720,10 +2748,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code مقابل Continue.dev وCline وAider',
-        columns: ['الأداة', 'الشكل', 'اختيار النموذج', 'التصميم المحلي أولاً', 'الفرق الرئيسي'],
+        columns: ['الأداة', 'الرابط', 'الشكل', 'اختيار النموذج', 'التصميم المحلي أولاً', 'الفرق الرئيسي'],
         rows: [
           {
             'الأداة': 'Bodega One Code',
+            'الرابط': '[bodegaone.ai](https://bodegaone.ai)',
             'الشكل': 'بيئة تطوير سطح مكتب مستقلة (محرر + محادثة + وكيل في تطبيق واحد)',
             'اختيار النموذج': 'BYOLLM: أكثر من 10 إعدادات، محلية وسحابية',
             'التصميم المحلي أولاً': 'مبنية حول مزودين محليين، مع وضع عزل شبكي اختياري',
@@ -2731,6 +2760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Continue.dev',
+            'الرابط': '[docs.continue.dev](https://docs.continue.dev)',
             'الشكل': 'إضافة مفتوحة المصدر لـVS Code وبيئات JetBrains',
             'اختيار النموذج': 'قابلة للإعداد لمزودين محليين (Ollama وLM Studio) أو سحابيين',
             'التصميم المحلي أولاً': 'تعتمد كليًا على المزود المُعدّ؛ لا ميزة عزل شبكي مخصصة',
@@ -2738,6 +2768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Cline',
+            'الرابط': '[cline.bot](https://cline.bot)',
             'الشكل': 'إضافة مفتوحة المصدر لوكيل مستقل داخل VS Code',
             'اختيار النموذج': 'قابلة للإعداد لمزودين محليين أو سحابيين عبر نقاط نهاية متوافقة مع واجهة البرمجة',
             'التصميم المحلي أولاً': 'يعتمد على المزود المُعدّ',
@@ -2745,6 +2776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Aider',
+            'الرابط': '[aider.chat](https://aider.chat)',
             'الشكل': 'أداة برمجة زوجية بالذكاء الاصطناعي مفتوحة المصدر تعمل عبر الطرفية',
             'اختيار النموذج': 'قابلة للإعداد لمزودين محليين أو سحابيين عبر نقاط نهاية متوافقة مع واجهة البرمجة',
             'التصميم المحلي أولاً': 'يعتمد على المزود المُعدّ؛ بدون محرر رسومي خاص بها',
@@ -3077,10 +3109,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-alternatives',
         itemHeadings: true,
         title: 'Bodega One Code vs. Continue.dev, Cline, Aider',
-        columns: ['도구', '형태', '모델 선택', '로컬 우선 설계', '핵심 차이'],
+        columns: ['도구', '링크', '형태', '모델 선택', '로컬 우선 설계', '핵심 차이'],
         rows: [
           {
             '도구': 'Bodega One Code',
+            '링크': '[bodegaone.ai](https://bodegaone.ai)',
             '형태': '독립형 데스크톱 IDE(에디터+채팅+에이전트를 하나의 앱에)',
             '모델 선택': 'BYOLLM: 10개 이상 사전 설정, 로컬 및 클라우드',
             '로컬 우선 설계': '로컬 제공업체를 중심으로 구축되었으며 선택적 에어갭 모드 제공',
@@ -3088,6 +3121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Continue.dev',
+            '링크': '[docs.continue.dev](https://docs.continue.dev)',
             '형태': 'VS Code 및 JetBrains IDE용 오픈소스 확장 프로그램',
             '모델 선택': '로컬(Ollama, LM Studio) 또는 클라우드 제공업체로 설정 가능',
             '로컬 우선 설계': '전적으로 설정된 제공업체에 의존하며 전용 에어갭 기능은 없음',
@@ -3095,6 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Cline',
+            '링크': '[cline.bot](https://cline.bot)',
             '형태': 'VS Code 내 자율 에이전트용 오픈소스 확장 프로그램',
             '모델 선택': 'API 호환 엔드포인트를 통해 로컬 또는 클라우드 제공업체로 설정 가능',
             '로컬 우선 설계': '설정된 제공업체에 의존',
@@ -3102,6 +3137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Aider',
+            '링크': '[aider.chat](https://aider.chat)',
             '형태': '터미널 기반의 오픈소스 AI 페어 프로그래밍 도구',
             '모델 선택': 'API 호환 엔드포인트를 통해 로컬 또는 클라우드 제공업체로 설정 가능',
             '로컬 우선 설계': '설정된 제공업체에 의존하며 자체 GUI 에디터는 없음',
