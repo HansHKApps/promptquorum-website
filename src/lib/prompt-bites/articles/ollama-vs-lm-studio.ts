@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama wins for developers: it has no GUI overhead, integrates with Python and JavaScript apps via its OpenAI-compatible REST API, and runs headless on Linux servers.</strong> LM Studio wins for beginners: its built-in model store lets you download and run a model in under three minutes without touching a terminal.',
           'Both tools use llama.cpp under the hood, so the model itself runs identically. The choice is workflow: command line vs visual interface. The table below maps five practical dimensions to the tool that handles each better.',
         ],
-        columns: ['Feature', 'Ollama', 'LM Studio'],
+        columns: ['Feature', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Feature': 'Install method', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUI installer' },
           { 'Feature': 'Chat interface', 'Ollama': 'None (API only)', 'LM Studio': 'Built-in' },
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama punktet für Entwickler: kein GUI-Overhead, Integration mit Python- und JavaScript-Apps über die OpenAI-kompatible REST-API, und läuft headless auf Linux-Servern.</strong> LM Studio punktet für Einsteiger: der integrierte Modell-Store ermöglicht das Herunterladen und Ausführen eines Modells in unter drei Minuten, ohne ein Terminal zu berühren.',
           'Beide Tools verwenden llama.cpp unter der Haube, sodass das Modell selbst identisch läuft. Die Wahl ist eine Workflow-Frage: Befehlszeile vs. visuelle Oberfläche. Die folgende Tabelle ordnet fünf praktische Dimensionen dem Tool zu, das jede davon besser handhabt.',
         ],
-        columns: ['Funktion', 'Ollama', 'LM Studio'],
+        columns: ['Funktion', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Funktion': 'Installationsmethode', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUI-Installer' },
           { 'Funktion': 'Chat-Oberfläche', 'Ollama': 'Keine (nur API)', 'LM Studio': 'Integriert' },
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama excelle pour les développeurs : aucune surcharge GUI, intégration avec les applications Python et JavaScript via son API REST compatible OpenAI, et fonctionne sans interface sur des serveurs Linux.</strong> LM Studio excelle pour les débutants : son magasin de modèles intégré permet de télécharger et d\'exécuter un modèle en moins de trois minutes sans toucher à un terminal.',
           'Les deux outils utilisent llama.cpp sous le capot, donc le modèle lui-même s\'exécute de manière identique. Le choix est une question de flux de travail : ligne de commande vs interface visuelle. Le tableau ci-dessous associe cinq dimensions pratiques à l\'outil qui gère chacune le mieux.',
         ],
-        columns: ['Fonctionnalité', 'Ollama', 'LM Studio'],
+        columns: ['Fonctionnalité', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Fonctionnalité': 'Méthode d\'installation', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'Installateur graphique' },
           { 'Fonctionnalité': 'Interface de chat', 'Ollama': 'Aucune (API uniquement)', 'LM Studio': 'Intégrée' },
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollamaはデベロッパーに優れています：GUIのオーバーヘッドがなく、OpenAI互換のREST APIでPythonおよびJavaScriptアプリと統合でき、Linuxサーバーでヘッドレス動作します。</strong> LM Studioは初心者に優れています：内蔵モデルストアにより、ターミナルを触らずに3分以内でモデルのダウンロードと実行が可能です。',
           '両方のツールはllama.cppを使用しているため、モデル自体は同一に動作します。選択はワークフローの問題です：コマンドラインか視覚的インターフェースか。以下の表は、5つの実践的な次元をそれぞれをより得意とするツールに対応させています。',
         ],
-        columns: ['機能', 'Ollama', 'LM Studio'],
+        columns: ['機能', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '機能': 'インストール方法', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUIインストーラー' },
           { '機能': 'チャットインターフェース', 'Ollama': 'なし（APIのみ）', 'LM Studio': '内蔵' },
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama 在开发者场景中胜出：无 GUI 开销，通过 OpenAI 兼容的 REST API 与 Python 和 JavaScript 应用集成，并可在 Linux 服务器上无头运行。</strong> LM Studio 在初学者场景中胜出：内置模型商店让您无需接触终端，即可在三分钟内下载并运行模型。',
           '两款工具底层均使用 llama.cpp，因此模型本身的运行方式完全相同。选择取决于工作流：命令行还是可视化界面。下表将五个实际维度分别映射到更擅长处理各项的工具。',
         ],
-        columns: ['功能', 'Ollama', 'LM Studio'],
+        columns: ['功能', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '功能': '安装方式', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': '图形界面安装程序' },
           { '功能': '聊天界面', 'Ollama': '无（仅 API）', 'LM Studio': '内置' },
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama se destaca para desenvolvedores: sem overhead de GUI, integra com aplicativos Python e JavaScript via sua API REST compatível com OpenAI, e executa headless em servidores Linux.</strong> LM Studio se destaca para iniciantes: sua loja de modelos integrada permite baixar e executar um modelo em menos de três minutos sem tocar no terminal.',
           'Ambas as ferramentas usam llama.cpp por baixo dos panos, portanto o modelo em si executa de forma idêntica. A escolha é de fluxo de trabalho: linha de comando vs interface visual. A tabela abaixo mapeia cinco dimensões práticas à ferramenta que cada uma maneja melhor.',
         ],
-        columns: ['Característica', 'Ollama', 'LM Studio'],
+        columns: ['Característica', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Característica': 'Método de instalação', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'Instalador GUI' },
           { 'Característica': 'Interface de chat', 'Ollama': 'Nenhuma (apenas API)', 'LM Studio': 'Integrada' },
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama destaca para desarrolladores: sin sobrecarga de GUI, se integra con aplicaciones Python y JavaScript a través de su API REST compatible con OpenAI, y se ejecuta sin interfaz en servidores Linux.</strong> LM Studio destaca para principiantes: su tienda integrada de modelos te permite descargar y ejecutar un modelo en menos de tres minutos sin tocar la terminal.',
           'Ambas herramientas usan llama.cpp bajo el capó, por lo que el modelo en sí se ejecuta de forma idéntica. La elección es cuestión de flujo de trabajo: línea de comandos vs interfaz visual. La siguiente tabla asigna cinco dimensiones prácticas a la herramienta que maneja cada una mejor.',
         ],
-        columns: ['Característica', 'Ollama', 'LM Studio'],
+        columns: ['Característica', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Característica': 'Método de instalación', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'Instalador GUI' },
           { 'Característica': 'Interfaz de chat', 'Ollama': 'Ninguna (solo API)', 'LM Studio': 'Integrada' },
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>يتميز Ollama للمطورين: بدون تحميل زائد من الواجهة الرسومية، ويتكامل مع تطبيقات Python و JavaScript عبر واجهته البرمجية REST المتوافقة مع OpenAI، ويعمل بدون واجهة على خوادم Linux.</strong> يتميز LM Studio للمبتدئين: تتيح متجر النماذج المدمج تنزيل نموذج وتشغيله في أقل من ثلاث دقائق دون لمس الطرفية.',
           'كلتا الأداتين تستخدمان llama.cpp تحت الغطاء؛ لذا يعمل النموذج بطريقة متطابقة. الاختيار يتعلق بسير العمل: سطر الأوامر مقابل الواجهة المرئية. يوضح الجدول التالي خمسة أبعاد عملية مع الأداة الأفضل في كل منها.',
         ],
-        columns: ['الميزة', 'Ollama', 'LM Studio'],
+        columns: ['الميزة', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'الميزة': 'طريقة التثبيت', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'مثبّت رسومي' },
           { 'الميزة': 'واجهة الدردشة', 'Ollama': 'لا توجد (واجهة برمجية فقط)', 'LM Studio': 'مدمجة' },
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Ollama는 개발자에게 탁월합니다: GUI 오버헤드 없이 OpenAI 호환 REST API를 통해 Python 및 JavaScript 애플리케이션과 통합되며, Linux 서버에서 헤드리스로 실행됩니다.</strong> LM Studio는 초보자에게 탁월합니다: 내장 모델 스토어를 통해 터미널을 전혀 사용하지 않고 3분 이내에 모델을 다운로드하고 실행할 수 있습니다.',
           '두 도구 모두 내부적으로 llama.cpp를 사용하므로 모델 자체는 동일하게 실행됩니다. 선택은 워크플로우의 문제입니다: 커맨드 라인 vs 시각적 인터페이스. 다음 표는 각 도구가 더 잘 처리하는 다섯 가지 실용적인 측면을 정리한 것입니다.',
         ],
-        columns: ['기능', 'Ollama', 'LM Studio'],
+        columns: ['기능', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '기능': '설치 방법', 'Ollama': 'CLI (`brew install ollama`)', 'LM Studio': 'GUI 설치 프로그램' },
           { '기능': '채팅 인터페이스', 'Ollama': '없음 (API만 제공)', 'LM Studio': '내장' },

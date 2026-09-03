@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**Use this table to match a VPN to your primary use case.**',
-        columns: ['Feature', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['Feature', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': 'Obfuscation feature', '1': 'Obfuscated Servers → NordWhisper', '2': 'Lightway protocol', '3': 'NoBorders mode' },
           { '0': 'Platform support', '1': 'Desktop, mobile, Linux, routers', '2': 'Desktop, mobile, Linux, routers', '3': 'Desktop, mobile, unlimited devices' },
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs. ExpressVPN vs. Surfshark',
         content: '**Nutzen Sie diese Tabelle, um ein VPN Ihrem primären Anwendungsfall zuzuordnen.**',
-        columns: ['Funktion', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['Funktion', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': 'Verschleierungsfunktion', '1': 'Obfuscated Servers → NordWhisper', '2': 'Lightway-Protokoll', '3': 'NoBorders-Modus' },
           { '0': 'Plattformunterstützung', '1': 'Desktop, mobil, Linux, Router', '2': 'Desktop, mobil, Linux, Router', '3': 'Desktop, mobil, unbegrenzte Geräte' },
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**Utilisez ce tableau pour associer un VPN à votre usage principal.**',
-        columns: ['Fonctionnalité', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['Fonctionnalité', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': "Fonction d'obfuscation", '1': 'Serveurs obfusqués → NordWhisper', '2': 'Protocole Lightway', '3': 'Mode NoBorders' },
           { '0': 'Plateformes', '1': 'Desktop, mobile, Linux, routeurs', '2': 'Desktop, mobile, Linux, routeurs', '3': 'Desktop, mobile, illimité' },
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**この表を使って、主な用途に合ったVPNを選んでください。**',
-        columns: ['機能', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['機能', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': '難読化機能', '1': '難読化サーバー → NordWhisper', '2': 'Lightwayプロトコル', '3': 'NoBordersモード' },
           { '0': '対応プラットフォーム', '1': 'デスクトップ、モバイル、Linux、ルーター', '2': 'デスクトップ、モバイル、Linux、ルーター', '3': 'デスクトップ、モバイル、無制限デバイス' },
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**使用下表将VPN与你的主要使用场景相匹配。**',
-        columns: ['功能', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['功能', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': '混淆功能', '1': '混淆服务器 → NordWhisper', '2': 'Lightway协议', '3': 'NoBorders模式' },
           { '0': '平台支持', '1': '桌面、移动、Linux、路由器', '2': '桌面、移动、Linux、路由器', '3': '桌面、移动、无限设备' },
@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**Use esta tabela para combinar uma VPN com seu principal caso de uso.**',
-        columns: ['Recurso', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['Recurso', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': 'Recurso de ofuscação', '1': 'Servidores Ofuscados → NordWhisper', '2': 'Protocolo Lightway', '3': 'Modo NoBorders' },
           { '0': 'Suporte a plataformas', '1': 'Desktop, mobile, Linux, roteadores', '2': 'Desktop, mobile, Linux, roteadores', '3': 'Desktop, mobile, dispositivos ilimitados' },
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**Usa esta tabla para hacer coincidir una VPN con tu caso de uso principal.**',
-        columns: ['Función', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['Función', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': 'Función de ofuscación', '1': 'Servidores Obfuscados → NordWhisper', '2': 'Protocolo Lightway', '3': 'Modo NoBorders' },
           { '0': 'Soporte de plataformas', '1': 'Escritorio, móvil, Linux, routers', '2': 'Escritorio, móvil, Linux, routers', '3': 'Escritorio, móvil, dispositivos ilimitados' },
@@ -1707,7 +1707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN مقابل ExpressVPN مقابل Surfshark',
         content: '**استخدم هذا الجدول لمطابقة VPN مع حالة استخدامك الأساسية.**',
-        columns: ['الميزة', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['الميزة', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': 'ميزة التعتيم', '1': 'خوادم معتمة ← NordWhisper', '2': 'بروتوكول Lightway', '3': 'وضع NoBorders' },
           { '0': 'دعم المنصات', '1': 'سطح مكتب، جوال، Linux، راوترات', '2': 'سطح مكتب، جوال، Linux، راوترات', '3': 'سطح مكتب، جوال، أجهزة غير محدودة' },
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'NordVPN vs ExpressVPN vs Surfshark',
         content: '**이 표를 사용하여 주된 사용 목적에 맞는 VPN을 선택하십시오.**',
-        columns: ['기능', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        columns: ['기능', '[NordVPN](https://nordvpn.com)', '[ExpressVPN](https://www.expressvpn.com)', '[Surfshark](https://surfshark.com)'],
         rows: [
           { '0': '난독화 기능', '1': 'Obfuscated Servers → NordWhisper', '2': 'Lightway 프로토콜', '3': 'NoBorders 모드' },
           { '0': '플랫폼 지원', '1': '데스크톱, 모바일, 리눅스, 라우터', '2': '데스크톱, 모바일, 리눅스, 라우터', '3': '데스크톱, 모바일, 무제한 기기' },

@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit vs Greptile vs Qodo: Full Comparison',
         content: '**No single tool wins every column: CodeRabbit takes breadth, Greptile takes depth of context, Qodo takes deployment flexibility.** Prices and programme details were verified against each vendor\'s own pricing page on 28 August 2026 — recheck if this page has been live more than 90 days.',
         tableFormat: true,
-        columns: ['Factor', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Factor', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Factor: 'Best for', CodeRabbit: 'Broadest platform support, predictable billing', Greptile: 'Cross-file and whole-repo context', Qodo: 'Enterprise self-hosting and BYOK' },
           { Factor: 'Entry price', CodeRabbit: '$24/user/mo (Pro, annual)', Greptile: 'Free (50 credits/mo); $30/seat/mo Pro', Qodo: '$30/mo prepaid credits, up to 30 users' },
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Does Each Tool Actually Cost?',
         content: '**CodeRabbit charges per seat; Greptile and Qodo charge per review through credits.** That single difference decides more budgets than any feature. The table below prices a realistic scenario: a twelve-engineer team where six people merge regularly, running roughly 120 reviews a month.',
         tableFormat: true,
-        columns: ['Scenario', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Scenario', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Scenario: 'Model', CodeRabbit: 'Per seat', Greptile: 'Per seat + credits', Qodo: 'Prepaid credits' },
           { Scenario: '6 active reviewers', CodeRabbit: '$144/mo (6 x $24)', Greptile: '$180/mo (6 x $30)', Qodo: '$30/mo base' },
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit vs. Greptile vs. Qodo: der vollständige Vergleich',
         content: '**Kein Tool gewinnt in jeder Spalte: CodeRabbit holt die Breite, Greptile die Kontexttiefe, Qodo die Flexibilität beim Deployment.** Preise und Programmdetails wurden am 28. August 2026 auf den Preisseiten der Anbieter geprüft — prüfen Sie erneut, wenn diese Seite länger als 90 Tage online ist.',
         tableFormat: true,
-        columns: ['Kriterium', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Kriterium', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Kriterium: 'Am besten für', CodeRabbit: 'Breiteste Plattformunterstützung, planbare Kosten', Greptile: 'Datei- und repoübergreifender Kontext', Qodo: 'Enterprise-Selbstbetrieb und BYOK' },
           { Kriterium: 'Einstiegspreis', CodeRabbit: '24 $/Nutzer/Monat (Pro, jährlich)', Greptile: 'Gratis (50 Credits/Monat); Pro 30 $/Platz/Monat', Qodo: '30 $/Monat auf Guthabenbasis, bis 30 Nutzer' },
@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was kostet jedes Tool wirklich?',
         content: '**CodeRabbit rechnet pro Platz ab, Greptile und Qodo pro Review über Credits.** Dieser eine Unterschied entscheidet mehr Budgets als jedes Feature. Die Tabelle rechnet ein realistisches Szenario durch: ein Team aus zwölf Entwicklern, von denen sechs regelmäßig mergen, mit rund 120 Reviews pro Monat.',
         tableFormat: true,
-        columns: ['Szenario', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Szenario', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Szenario: 'Modell', CodeRabbit: 'Pro Platz', Greptile: 'Pro Platz + Credits', Qodo: 'Vorausbezahlte Credits' },
           { Szenario: '6 aktive Reviewer', CodeRabbit: '144 $/Monat (6 × 24 $)', Greptile: '180 $/Monat (6 × 30 $)', Qodo: '30 $/Monat Grundpreis' },
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit vs Greptile vs Qodo: comparativa completa',
         content: '**Ninguna herramienta gana en todas las columnas: CodeRabbit se lleva la amplitud, Greptile la profundidad de contexto y Qodo la flexibilidad de despliegue.** Precios y detalles de programa verificados en las páginas de cada proveedor el 28 de agosto de 2026; vuelve a comprobarlos si esta página lleva más de 90 días publicada.',
         tableFormat: true,
-        columns: ['Factor', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Factor', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Factor: 'Mejor para', CodeRabbit: 'Mayor soporte de plataformas, facturación previsible', Greptile: 'Contexto entre archivos y de todo el repo', Qodo: 'Autoalojamiento empresarial y BYOK' },
           { Factor: 'Precio de entrada', CodeRabbit: '24 $/usuario/mes (Pro, anual)', Greptile: 'Gratis (50 créditos/mes); Pro 30 $/puesto/mes', Qodo: '30 $/mes en créditos, hasta 30 usuarios' },
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuánto cuesta realmente cada herramienta?',
         content: '**CodeRabbit cobra por puesto; Greptile y Qodo cobran por revisión mediante créditos.** Esa única diferencia decide más presupuestos que cualquier funcionalidad. La tabla calcula un escenario realista: un equipo de doce ingenieros donde seis hacen merge con regularidad, con unas 120 revisiones al mes.',
         tableFormat: true,
-        columns: ['Escenario', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Escenario', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Escenario: 'Modelo', CodeRabbit: 'Por puesto', Greptile: 'Por puesto + créditos', Qodo: 'Créditos prepago' },
           { Escenario: '6 revisores activos', CodeRabbit: '144 $/mes (6 × 24 $)', Greptile: '180 $/mes (6 × 30 $)', Qodo: '30 $/mes base' },
@@ -1659,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit vs Greptile vs Qodo : le comparatif complet',
         content: '**Aucun outil ne gagne dans toutes les colonnes : CodeRabbit prend la couverture, Greptile la profondeur de contexte, Qodo la souplesse de deploiement.** Tarifs et details des programmes verifies sur les pages officielles de chaque editeur le 28 aout 2026 — verifiez a nouveau si cette page est en ligne depuis plus de 90 jours.',
         tableFormat: true,
-        columns: ['Critere', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Critere', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Critere: 'Ideal pour', CodeRabbit: 'Couverture de plateformes la plus large, cout previsible', Greptile: 'Contexte inter-fichiers et depot entier', Qodo: 'Auto-hebergement entreprise et BYOK' },
           { Critere: 'Prix d\'entree', CodeRabbit: '24 $/utilisateur/mois (Pro, annuel)', Greptile: 'Gratuit (50 credits/mois) ; Pro 30 $/poste/mois', Qodo: '30 $/mois en credits, jusqu\'a 30 utilisateurs' },
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Combien coute reellement chaque outil ?',
         content: '**CodeRabbit facture au poste ; Greptile et Qodo facturent a la revue via des credits.** Cette seule difference decide plus de budgets que n\'importe quelle fonctionnalite. Le tableau chiffre un scenario realiste : une equipe de douze ingenieurs dont six fusionnent regulierement, pour environ 120 revues par mois.',
         tableFormat: true,
-        columns: ['Scenario', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Scenario', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Scenario: 'Modele', CodeRabbit: 'Au poste', Greptile: 'Au poste + credits', Qodo: 'Credits prepayes' },
           { Scenario: '6 relecteurs actifs', CodeRabbit: '144 $/mois (6 × 24 $)', Greptile: '180 $/mois (6 × 30 $)', Qodo: '30 $/mois de base' },
@@ -2176,7 +2176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit vs Greptile vs Qodo: o comparativo completo',
         content: '**Nenhuma ferramenta vence em todas as colunas: o CodeRabbit leva a cobertura, o Greptile a profundidade de contexto, o Qodo a flexibilidade de implantacao.** Precos e detalhes de programas verificados nas paginas oficiais de cada fornecedor em 28 de agosto de 2026 — confira de novo se esta pagina estiver no ar ha mais de 90 dias.',
         tableFormat: true,
-        columns: ['Criterio', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Criterio', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Criterio: 'Ideal para', CodeRabbit: 'Cobertura mais ampla de plataformas, custo previsivel', Greptile: 'Contexto entre arquivos e repositorio inteiro', Qodo: 'Auto-hospedagem corporativa e BYOK' },
           { Criterio: 'Preco inicial', CodeRabbit: 'US$ 24/usuario/mes (Pro, anual)', Greptile: 'Gratuito (50 creditos/mes); Pro US$ 30/assento/mes', Qodo: 'US$ 30/mes em creditos, ate 30 usuarios' },
@@ -2300,7 +2300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quanto cada ferramenta realmente custa?',
         content: '**O CodeRabbit cobra por assento; Greptile e Qodo cobram por revisao via creditos.** Essa diferenca sozinha decide mais orcamentos do que qualquer recurso. A tabela usa um cenario realista: um time de doze engenheiros em que seis fazem merge regularmente, cerca de 120 revisoes por mes.',
         tableFormat: true,
-        columns: ['Cenario', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['Cenario', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { Cenario: 'Modelo', CodeRabbit: 'Por assento', Greptile: 'Por assento + creditos', Qodo: 'Creditos pre-pagos' },
           { Cenario: '6 revisores ativos', CodeRabbit: 'US$ 144/mes (6 × 24)', Greptile: 'US$ 180/mes (6 × 30)', Qodo: 'US$ 30/mes de base' },
@@ -2693,7 +2693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit・Greptile・Qodoの完全比較',
         content: '**すべての列で勝つ製品はありません。カバレッジはCodeRabbit、コンテキストの深さはGreptile、導入形態の柔軟性はQodoです。** 価格とプログラムの詳細は2026年8月28日に各社の公式ページで確認しています。このページの公開から90日以上経っている場合は再確認してください。',
         tableFormat: true,
-        columns: ['評価軸', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['評価軸', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { 評価軸: '向いている用途', CodeRabbit: '最も広いプラットフォーム対応と予測可能なコスト', Greptile: 'ファイル間・リポジトリ全体のコンテキスト', Qodo: 'エンタープライズの自社運用とBYOK' },
           { 評価軸: '開始価格', CodeRabbit: '月24ドル／ユーザー（Pro、年払い）', Greptile: '無料（月50クレジット）、Proは月30ドル／シート', Qodo: '30ユーザーまで月30ドルのクレジット' },
@@ -2817,7 +2817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '実際のコストはいくらか',
         content: '**CodeRabbitはシート課金、GreptileとQodoはクレジットによるレビュー単位の課金です。** この違いだけで、どの機能よりも多くの予算が決まります。以下の表は現実的なシナリオを数値化したものです。12人のエンジニアのうち6人が定期的にマージし、月およそ120件のレビューが発生する場合です。',
         tableFormat: true,
-        columns: ['シナリオ', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['シナリオ', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { シナリオ: '課金モデル', CodeRabbit: 'シート単位', Greptile: 'シート＋クレジット', Qodo: '前払いクレジット' },
           { シナリオ: 'アクティブなレビューアー6名', CodeRabbit: '月144ドル（6×24ドル）', Greptile: '月180ドル（6×30ドル）', Qodo: '基本料 月30ドル' },
@@ -3210,7 +3210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit、Greptile 与 Qodo 完整对比',
         content: '**没有哪个工具在所有维度上都胜出：CodeRabbit 赢在覆盖面，Greptile 赢在上下文深度，Qodo 赢在部署灵活性。** 价格与计划细节于 2026 年 8 月 28 日在各厂商官方页面核实——若本页上线已超过 90 天，请重新核对。',
         tableFormat: true,
-        columns: ['评估维度', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['评估维度', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { 评估维度: '最适合', CodeRabbit: '最广的平台覆盖与可预测成本', Greptile: '跨文件与整仓上下文', Qodo: '企业自托管与 BYOK' },
           { 评估维度: '起步价格', CodeRabbit: '每用户每月 24 美元（Pro，年付）', Greptile: '免费（每月 50 额度）；Pro 每席位每月 30 美元', Qodo: '每月 30 美元额度，30 用户以内' },
@@ -3334,7 +3334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '每种工具实际花费多少',
         content: '**CodeRabbit 按席位计费；Greptile 与 Qodo 通过额度按次审查计费。** 仅这一项差异决定的预算，就多过任何单一功能。下表量化了一个现实场景：十二人工程团队中有六人经常合并代码，每月约 120 次审查。',
         tableFormat: true,
-        columns: ['场景', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['场景', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { 场景: '计费模式', CodeRabbit: '按席位', Greptile: '按席位＋额度', Qodo: '预付额度' },
           { 场景: '6 名活跃审查者', CodeRabbit: '每月 144 美元（6×24）', Greptile: '每月 180 美元（6×30）', Qodo: '每月 30 美元基础费' },
@@ -3736,7 +3736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مقارنة كاملة بين CodeRabbit وGreptile وQodo',
         content: '**لا أداة تفوز في كل الأعمدة: CodeRabbit تكسب التغطية، وGreptile تكسب عمق السياق، وQodo تكسب مرونة النشر.** جرى التحقق من الأسعار وتفاصيل البرامج على الصفحات الرسمية لكل مورّد في 28 أغسطس 2026 — راجعها مجددًا إن مرّ على نشر هذه الصفحة أكثر من 90 يومًا.',
         tableFormat: true,
-        columns: ['المعيار', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['المعيار', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { المعيار: 'الأنسب لـ', CodeRabbit: 'أوسع تغطية للمنصات وتكلفة يمكن توقعها', Greptile: 'السياق عبر الملفات والمستودع الكامل', Qodo: 'الاستضافة الذاتية للمؤسسات والمفتاح الخاص' },
           { المعيار: 'سعر البداية', CodeRabbit: '24 دولارًا للمستخدم شهريًا (Pro، سنويًا)', Greptile: 'مجانًا (50 رصيدًا شهريًا)؛ Pro بـ30 دولارًا للمقعد', Qodo: '30 دولارًا شهريًا أرصدةً، حتى 30 مستخدمًا' },
@@ -3860,7 +3860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كم تكلّف كل أداة فعليًا؟',
         content: '**تفوتر CodeRabbit لكل مقعد؛ وتفوتر Greptile وQodo لكل مراجعة عبر الأرصدة.** هذا الفارق وحده يحسم من الميزانيات أكثر مما تحسمه أي ميزة. والجدول يحسب سيناريو واقعيًا: فريق من اثني عشر مهندسًا يدمج ستة منهم بانتظام، بنحو 120 مراجعة شهريًا.',
         tableFormat: true,
-        columns: ['السيناريو', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['السيناريو', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { السيناريو: 'نموذج الفوترة', CodeRabbit: 'لكل مقعد', Greptile: 'لكل مقعد + أرصدة', Qodo: 'أرصدة مدفوعة مقدمًا' },
           { السيناريو: 'ستة مراجعين نشطين', CodeRabbit: '144 دولارًا شهريًا (6 × 24)', Greptile: '180 دولارًا شهريًا (6 × 30)', Qodo: '30 دولارًا شهريًا رسوم أساسية' },
@@ -4235,7 +4235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CodeRabbit·Greptile·Qodo 전체 비교',
         content: '**모든 항목에서 이기는 제품은 없습니다. 지원 범위는 CodeRabbit, 컨텍스트 깊이는 Greptile, 배포 유연성은 Qodo입니다.** 가격과 프로그램 세부 사항은 2026년 8월 28일 각 벤더 공식 페이지에서 확인했습니다. 이 페이지가 공개된 지 90일이 넘었다면 다시 확인하세요.',
         tableFormat: true,
-        columns: ['평가 항목', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['평가 항목', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { '평가 항목': '적합한 경우', CodeRabbit: '가장 넓은 플랫폼 지원과 예측 가능한 비용', Greptile: '파일 간·저장소 전체 컨텍스트', Qodo: '엔터프라이즈 자체 호스팅과 BYOK' },
           { '평가 항목': '시작 가격', CodeRabbit: '사용자당 월 24달러(Pro, 연간)', Greptile: '무료(월 50크레딧), Pro는 좌석당 월 30달러', Qodo: '30명까지 월 30달러 크레딧' },
@@ -4359,7 +4359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '실제 비용은 얼마인가',
         content: '**CodeRabbit은 좌석 단위로, Greptile과 Qodo는 크레딧을 통해 리뷰 단위로 과금합니다.** 이 차이 하나가 어떤 기능보다도 많은 예산을 좌우합니다. 아래 표는 현실적인 시나리오를 수치화한 것입니다. 엔지니어 열두 명 중 여섯 명이 정기적으로 머지하며 월 약 120건의 리뷰가 발생하는 경우입니다.',
         tableFormat: true,
-        columns: ['시나리오', 'CodeRabbit', 'Greptile', 'Qodo'],
+        columns: ['시나리오', '[CodeRabbit](https://www.coderabbit.ai)', '[Greptile](https://www.greptile.com)', '[Qodo](https://www.qodo.ai)'],
         rows: [
           { 시나리오: '과금 모델', CodeRabbit: '좌석 단위', Greptile: '좌석 + 크레딧', Qodo: '선불 크레딧' },
           { 시나리오: '활성 리뷰어 6명', CodeRabbit: '월 144달러(6 × 24)', Greptile: '월 180달러(6 × 30)', Qodo: '기본료 월 30달러' },

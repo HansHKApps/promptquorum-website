@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**All three do LLM-as-judge, custom scorers and dataset regression testing, so the comparison is about hosting model, cost structure and eligibility.** Pricing was read from each vendor\'s own page on 28 August 2026, and repository figures from the GitHub API the same day.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterion', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Criterion', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Criterion: 'Model', Braintrust: 'Hosted platform with UI', Weave: 'Hosted, part of W&B', Promptfoo: 'CLI and library you run' },
           { Criterion: 'Licence', Braintrust: 'Commercial', Weave: 'Apache-2.0 SDK, hosted service', Promptfoo: 'MIT' },
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cost scales with data volume and judge-model spend, not seats — which is why unlimited users on the free tiers is more useful than it first sounds.** The table below prices a mid-size workload of roughly 50,000 eval scores a month.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Scenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Scenario', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Scenario: 'Free tier limit', Braintrust: '10,000 scores, 1 GB, 14-day retention', Weave: '1 GB/mo ingestion, unlimited seats', Promptfoo: 'No limit' },
           { Scenario: 'Paid tier', Braintrust: 'Pro $249/mo', Weave: 'From $60/mo', Promptfoo: 'None needed' },
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Alle drei beherrschen LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests; der Vergleich dreht sich also um Betriebsmodell, Kostenstruktur und Zugangsvoraussetzungen.** Die Preise stammen von den Seiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Kriterium', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Kriterium', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Kriterium: 'Modell', Braintrust: 'Gehostete Plattform mit Oberfläche', Weave: 'Gehostet, Teil von W&B', Promptfoo: 'CLI und Bibliothek im Eigenbetrieb' },
           { Kriterium: 'Lizenz', Braintrust: 'Kommerziell', Weave: 'Apache-2.0-SDK, gehosteter Dienst', Promptfoo: 'MIT' },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Die Kosten skalieren mit Datenmenge und Ausgaben für das bewertende Modell, nicht mit Plätzen — weshalb unbegrenzte Nutzende in den kostenlosen Stufen nützlicher sind, als es zunächst klingt.** Die Tabelle kalkuliert eine mittlere Last von rund 50.000 Evaluations-Scores im Monat.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Szenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Szenario', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Szenario: 'Grenze der kostenlosen Stufe', Braintrust: '10.000 Scores, 1 GB, 14 Tage', Weave: '1 GB/Monat, unbegrenzte Plätze', Promptfoo: 'Keine Grenze' },
           { Szenario: 'Bezahlte Stufe', Braintrust: 'Pro 249 $/Monat', Weave: 'Ab 60 $/Monat', Promptfoo: 'Nicht nötig' },
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Las tres hacen LLM como juez, evaluadores propios y pruebas de regresión sobre conjuntos de datos, así que la comparación va de modelo de alojamiento, estructura de costes y elegibilidad.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio de la API de GitHub ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Criterio', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Criterio: 'Modelo', Braintrust: 'Plataforma alojada con interfaz', Weave: 'Alojada, parte de W&B', Promptfoo: 'CLI y biblioteca que usted ejecuta' },
           { Criterio: 'Licencia', Braintrust: 'Comercial', Weave: 'SDK Apache-2.0, servicio alojado', Promptfoo: 'MIT' },
@@ -1293,7 +1293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**El coste escala con el volumen de datos y el gasto del modelo juez, no con las plazas, y por eso los usuarios ilimitados de los niveles gratuitos son más útiles de lo que parece.** La tabla calcula una carga mediana de unas 50.000 puntuaciones de evaluación al mes.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Escenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Escenario', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Escenario: 'Límite del nivel gratuito', Braintrust: '10.000 puntuaciones, 1 GB, 14 días', Weave: '1 GB/mes de ingesta, plazas ilimitadas', Promptfoo: 'Sin límite' },
           { Escenario: 'Nivel de pago', Braintrust: 'Pro 249 $/mes', Weave: 'Desde 60 $/mes', Promptfoo: 'No hace falta' },
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Les trois font du LLM comme juge, des scoreurs personnalises et des tests de regression sur jeux de donnees : la comparaison porte donc sur le mode d\'hebergement, la structure de couts et l\'eligibilite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots via l\'API GitHub le meme jour.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critere', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Critere', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Critere: 'Modele', Braintrust: 'Plateforme hebergee avec interface', Weave: 'Hebergee, partie de W&B', Promptfoo: 'CLI et bibliotheque que vous executez' },
           { Critere: 'Licence', Braintrust: 'Commerciale', Weave: 'SDK Apache-2.0, service heberge', Promptfoo: 'MIT' },
@@ -1810,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Le cout evolue avec le volume de donnees et la depense du modele juge, pas avec les sieges — d\'ou l\'interet, plus grand qu\'il n\'y parait, des utilisateurs illimites dans les offres gratuites.** Le tableau chiffre une charge moyenne d\'environ 50 000 scores d\'evaluation par mois.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Scenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Scenario', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Scenario: 'Limite de l\'offre gratuite', Braintrust: '10 000 scores, 1 Go, 14 jours', Weave: '1 Go/mois d\'ingestion, sieges illimites', Promptfoo: 'Aucune limite' },
           { Scenario: 'Offre payante', Braintrust: 'Pro 249 $/mois', Weave: 'Des 60 $/mois', Promptfoo: 'Aucune necessaire' },
@@ -2189,7 +2189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**As tres fazem LLM como juiz, avaliadores proprios e testes de regressao sobre conjuntos de dados, entao a comparacao e sobre modelo de hospedagem, estrutura de custo e elegibilidade.** Os precos foram lidos nas paginas de cada fornecedor em 28 de agosto de 2026, e os numeros de repositorio na API do GitHub no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Criterio', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Criterio: 'Modelo', Braintrust: 'Plataforma hospedada com interface', Weave: 'Hospedada, parte do W&B', Promptfoo: 'CLI e biblioteca que voce executa' },
           { Criterio: 'Licenca', Braintrust: 'Comercial', Weave: 'SDK Apache-2.0, servico hospedado', Promptfoo: 'MIT' },
@@ -2327,7 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**O custo escala com volume de dados e gasto do modelo juiz, nao com assentos — e por isso usuarios ilimitados nos niveis gratuitos sao mais uteis do que parece a principio.** A tabela calcula uma carga media de cerca de 50.000 pontuacoes de avaliacao por mes.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Cenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['Cenario', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { Cenario: 'Limite do nivel gratuito', Braintrust: '10.000 pontuacoes, 1 GB, 14 dias', Weave: '1 GB/mes de ingestao, assentos ilimitados', Promptfoo: 'Sem limite' },
           { Cenario: 'Nivel pago', Braintrust: 'Pro US$ 249/mes', Weave: 'A partir de US$ 60/mes', Promptfoo: 'Nao e necessario' },
@@ -2706,7 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えているため、比較の軸はホスティング方式、費用構造、利用条件になります。** 料金は2026年8月28日に各社の料金ページから、リポジトリの数値は同日にGitHub APIから取得しました。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['評価軸', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['評価軸', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { 評価軸: '形態', Braintrust: '画面付きのホスト型基盤', Weave: 'ホスト型、W&Bの一部', Promptfoo: '自分で動かすCLIとライブラリ' },
           { 評価軸: 'ライセンス', Braintrust: '商用', Weave: 'SDKはApache-2.0、サービスはホスト型', Promptfoo: 'MIT' },
@@ -2844,7 +2844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**費用は席数ではなくデータ量と採点用モデルの支出で増えます。だからこそ無料枠のユーザー数無制限は、見た目以上に効いてきます。** 下表は月およそ5万スコアという中規模の負荷で試算しています。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['シナリオ', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['シナリオ', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { シナリオ: '無料枠の上限', Braintrust: '1万スコア、1GB、保持14日', Weave: '取り込み月1GB、席数無制限', Promptfoo: '上限なし' },
           { シナリオ: '有料の枠', Braintrust: 'Pro 月249ドル', Weave: '月60ドルから', Promptfoo: '不要' },
@@ -3214,7 +3214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**三者都支持「大模型作为评判者」、自定义评分器和基于数据集的回归测试，因此比较的重点是托管方式、成本结构与资格限制。** 价格于 2026 年 8 月 28 日读取自各厂商自己的页面，仓库数据同日取自 GitHub API。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['评估维度', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['评估维度', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { 评估维度: '形态', Braintrust: '带界面的托管平台', Weave: '托管，隶属 W&B', Promptfoo: '由你运行的 CLI 与库' },
           { 评估维度: '许可证', Braintrust: '商业', Weave: 'SDK 为 Apache-2.0，服务为托管', Promptfoo: 'MIT' },
@@ -3352,7 +3352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**成本随数据量与评判模型支出增长，而不是随席位增长——这也是免费档「不限用户」比乍看之下更有用的原因。** 下表按每月约 5 万次评估评分的中等负载测算。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['场景', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['场景', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { 场景: '免费档上限', Braintrust: '1 万次评分、1 GB、14 天', Weave: '每月 1 GB 摄入、席位不限', Promptfoo: '无上限' },
           { 场景: '付费档', Braintrust: 'Pro 每月 249 美元', Weave: '每月 60 美元起', Promptfoo: '无需付费' },
@@ -3731,7 +3731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**الثلاثة تدعم استخدام نموذج لغوي كحكم ومقيّمات مخصصة واختبارات انحدار قائمة على مجموعات بيانات، لذا تدور المقارنة حول نمط الاستضافة وبنية التكلفة وشروط الأهلية.** قُرئت الأسعار من صفحات المزوّدين في 28 أغسطس 2026، وأرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المعيار', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['المعيار', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { المعيار: 'الشكل', Braintrust: 'منصة مستضافة بواجهة', Weave: 'مستضافة، جزء من W&B', Promptfoo: 'واجهة سطر أوامر ومكتبة تشغّلها بنفسك' },
           { المعيار: 'الرخصة', Braintrust: 'تجارية', Weave: 'حزمة التطوير Apache-2.0، والخدمة مستضافة', Promptfoo: 'MIT' },
@@ -3869,7 +3869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**تتصاعد الكلفة مع حجم البيانات وإنفاق نموذج الحكم لا مع عدد المقاعد، ولهذا فإن المستخدمين غير المحدودين في الباقات المجانية أنفع مما يبدو للوهلة الأولى.** ويسعّر الجدول أدناه حِملًا متوسطًا يقارب 50 ألف تقييم شهريًا.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['السيناريو', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['السيناريو', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { السيناريو: 'حد الباقة المجانية', Braintrust: '10 آلاف تقييم، 1 غيغابايت، 14 يومًا', Weave: 'استيعاب 1 غيغابايت شهريًا، مقاعد غير محدودة', Promptfoo: 'بلا حد' },
           { السيناريو: 'الباقة المدفوعة', Braintrust: 'Pro بـ249 دولارًا شهريًا', Weave: 'من 60 دولارًا شهريًا', Promptfoo: 'غير لازمة' },
@@ -4248,7 +4248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**셋 다 LLM 심판, 사용자 정의 채점기, 데이터셋 기반 회귀 테스트를 지원하므로 비교의 축은 호스팅 방식, 비용 구조, 자격 요건입니다.** 가격은 2026년 8월 28일 각 업체 페이지에서, 저장소 수치는 같은 날 GitHub API에서 읽었습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['평가 항목', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['평가 항목', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { '평가 항목': '형태', Braintrust: '화면이 있는 호스팅 플랫폼', Weave: '호스팅형, W&B의 일부', Promptfoo: '직접 실행하는 CLI와 라이브러리' },
           { '평가 항목': '라이선스', Braintrust: '상용', Weave: 'SDK는 Apache-2.0, 서비스는 호스팅형', Promptfoo: 'MIT' },
@@ -4386,7 +4386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**비용은 좌석이 아니라 데이터 양과 심판 모델 지출에 따라 늘어납니다. 그래서 무료 등급의 무제한 사용자가 처음 보이는 것보다 훨씬 유용합니다.** 아래 표는 월 약 5만 건 평가 채점이라는 중간 규모 작업을 기준으로 계산했습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['시나리오', 'Braintrust', 'Weave', 'Promptfoo'],
+        columns: ['시나리오', '[Braintrust](https://www.braintrust.dev)', '[Weave](https://wandb.ai/site/weave)', '[Promptfoo](https://www.promptfoo.dev)'],
         rows: [
           { 시나리오: '무료 등급 한도', Braintrust: '1만 건 채점, 1GB, 14일', Weave: '월 1GB 수집, 좌석 무제한', Promptfoo: '한도 없음' },
           { 시나리오: '유료 등급', Braintrust: 'Pro 월 249달러', Weave: '월 60달러부터', Promptfoo: '필요 없음' },

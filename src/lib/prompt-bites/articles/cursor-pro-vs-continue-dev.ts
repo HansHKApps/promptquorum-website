@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev was acquired by Cursor on June 18, 2026 and shipped its final v2.0.0 release — no future development.</strong> The table below compares Cursor Pro with the frozen Continue.dev and Cline, the recommended open-source replacement. Pricing.',
         ],
-        columns: ['Feature', 'Cursor Pro', 'Continue.dev (frozen)', 'Cline (replacement)'],
+        columns: ['Feature', '[Cursor Pro](https://cursor.com)', '[Continue.dev (frozen)](https://continue.dev)', '[Cline (replacement)](https://cline.bot)'],
         rows: [
           {
             'Feature': 'Status',
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev wurde am 18. Juni 2026 von Cursor übernommen — finales Release v2.0.0, kein weiterer Betrieb.</strong> Die Tabelle vergleicht Cursor Pro mit dem eingefrorenen Continue.dev und Cline als empfohlenem Open-Source-Ersatz. Preise Stand Juli 2026.',
         ],
-        columns: ['Merkmal', 'Cursor Pro', 'Continue.dev (eingestellt)', 'Cline (Ersatz)'],
+        columns: ['Merkmal', '[Cursor Pro](https://cursor.com)', '[Continue.dev (eingestellt)](https://continue.dev)', '[Cline (Ersatz)](https://cline.bot)'],
         rows: [
           { 'Merkmal': 'Status', 'Cursor Pro': 'Aktiv', 'Continue.dev (eingestellt)': 'Eingestellt (v2.0.0 final)', 'Cline (Ersatz)': 'Aktiv, Open Source' },
           { 'Merkmal': 'Preis', 'Cursor Pro': '20 €/Monat (16 € jährlich)', 'Continue.dev (eingestellt)': 'War kostenlos — jetzt eingefroren', 'Cline (Ersatz)': 'Kostenlos BYOK; ClinePass 9,99 $/Monat' },
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev a été racheté par Cursor le 18 juin 2026 et a publié sa version finale v2.0.0 — aucun développement futur.</strong> Le tableau compare Cursor Pro avec Continue.dev figé et Cline, le remplaçant recommandé. Tarifs juillet 2026.',
         ],
-        columns: ['Fonctionnalité', 'Cursor Pro', 'Continue.dev (arrêté)', 'Cline (remplaçant)'],
+        columns: ['Fonctionnalité', '[Cursor Pro](https://cursor.com)', '[Continue.dev (arrêté)](https://continue.dev)', '[Cline (remplaçant)](https://cline.bot)'],
         rows: [
           { 'Fonctionnalité': 'Statut', 'Cursor Pro': 'Actif', 'Continue.dev (arrêté)': 'Arrêté (v2.0.0 final)', 'Cline (remplaçant)': 'Actif, open source' },
           { 'Fonctionnalité': 'Prix', 'Cursor Pro': '20 €/mois (16 € annuel)', 'Continue.dev (arrêté)': 'Était gratuit — figé', 'Cline (remplaçant)': 'Gratuit BYOK ; ClinePass 9,99 $/mois' },
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.devは2026年6月18日にCursorに買収され最終版v2.0.0をリリース — 今後の開発なし。</strong>表はCursor Pro、凍結されたContinue.dev、推奨OSS代替のClineを比較。価格は2026年7月時点。',
         ],
-        columns: ['機能', 'Cursor Pro', 'Continue.dev（終了）', 'Cline（代替）'],
+        columns: ['機能', '[Cursor Pro](https://cursor.com)', '[Continue.dev（終了）](https://continue.dev)', '[Cline（代替）](https://cline.bot)'],
         rows: [
           { '機能': 'ステータス', 'Cursor Pro': 'アクティブ', 'Continue.dev（終了）': '終了（v2.0.0 最終）', 'Cline（代替）': 'アクティブ・OSS' },
           { '機能': '価格', 'Cursor Pro': '~¥3,000/月（年払い¥2,400）', 'Continue.dev（終了）': '無料だったが凍結', 'Cline（代替）': '無料BYOK；ClinePass $9.99/月' },
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev已于2026年6月18日被Cursor收购，发布最终版v2.0.0后停止开发。</strong>下表对比Cursor Pro、已冻结的Continue.dev和推荐替代方案Cline。价格为2026年7月数据。',
         ],
-        columns: ['功能', 'Cursor Pro', 'Continue.dev（已关闭）', 'Cline（替代方案）'],
+        columns: ['功能', '[Cursor Pro](https://cursor.com)', '[Continue.dev（已关闭）](https://continue.dev)', '[Cline（替代方案）](https://cline.bot)'],
         rows: [
           { '功能': '状态', 'Cursor Pro': '在运营', 'Continue.dev（已关闭）': '已停止（v2.0.0最终版）', 'Cline（替代方案）': '在运营·开源' },
           { '功能': '价格', 'Cursor Pro': '$20/月（年付$16）', 'Continue.dev（已关闭）': '曾免费，现已冻结', 'Cline（替代方案）': '免费BYOK；ClinePass $9.99/月' },
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev foi adquirido pela Cursor em 18 de junho de 2026 e publicou sua versão final v2.0.0 — nenhum desenvolvimento futuro.</strong> A tabela compara o Cursor Pro com o Continue.dev congelado e o Cline, o substituto recomendado. Preços de julho de 2026.',
         ],
-        columns: ['Característica', 'Cursor Pro', 'Continue.dev (encerrado)', 'Cline (substituto)'],
+        columns: ['Característica', '[Cursor Pro](https://cursor.com)', '[Continue.dev (encerrado)](https://continue.dev)', '[Cline (substituto)](https://cline.bot)'],
         rows: [
           {
             'Característica': 'Status',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev fue adquirido por Cursor el 18 de junio de 2026 y publicó su versión final v2.0.0 — ningún desarrollo futuro.</strong> La tabla compara Cursor Pro con Continue.dev congelado y Cline, el sustituto recomendado. Precios de julio de 2026.',
         ],
-        columns: ['Característica', 'Cursor Pro', 'Continue.dev (cerrado)', 'Cline (sustituto)'],
+        columns: ['Característica', '[Cursor Pro](https://cursor.com)', '[Continue.dev (cerrado)](https://continue.dev)', '[Cline (sustituto)](https://cline.bot)'],
         rows: [
           {
             'Característica': 'Estado',
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>استُحوذ على Continue.dev من Cursor في 18 يونيو 2026 ونشر إصداره النهائي v2.0.0 — لا تطوير مستقبلي.</strong> يقارن الجدول Cursor Pro مع Continue.dev المجمَّد وCline البديل الموصى به. الأسعار حتى يوليو 2026.',
         ],
-        columns: ['الخاصية', 'Cursor Pro', 'Continue.dev (مغلق)', 'Cline (البديل)'],
+        columns: ['الخاصية', '[Cursor Pro](https://cursor.com)', '[Continue.dev (مغلق)](https://continue.dev)', '[Cline (البديل)](https://cline.bot)'],
         rows: [
           {
             'الخاصية': 'الحالة',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Continue.dev는 2026년 6월 18일 Cursor에 인수되어 최종 버전 v2.0.0을 배포하고 개발을 종료했습니다.</strong> 아래 표는 Cursor Pro, 동결된 Continue.dev, 추천 대안 Cline을 비교합니다. 가격 기준: 2026년 7월.',
         ],
-        columns: ['기능', 'Cursor Pro', 'Continue.dev(종료)', 'Cline(대안)'],
+        columns: ['기능', '[Cursor Pro](https://cursor.com)', '[Continue.dev(종료)](https://continue.dev)', '[Cline(대안)](https://cline.bot)'],
         rows: [
           {
             '기능': '상태',

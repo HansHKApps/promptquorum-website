@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Each tool optimises a different point in the stack rather than competing feature for feature.** Prices were read from each vendor\'s own pricing page on 28 August 2026, and repository figures from the GitHub API the same day.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterion', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Criterion', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Criterion: 'Model', Langfuse: 'SDK tracer', LangSmith: 'SDK tracer', Helicone: 'Proxy', PromptLayer: 'SDK and REST logging' },
           { Criterion: 'GitHub stars', Langfuse: '33.9k', LangSmith: 'Not open source', Helicone: '6.1k', PromptLayer: '0.8k (client lib)' },
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**All four bill on a hybrid model — a seat or platform fee plus metered usage beyond an included quota — so two teams on the same tier can get very different invoices.** Volume drives the bill more than headcount does, with LangSmith the clearest example.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Tier', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Tier', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Tier: 'Free', Langfuse: 'Hobby: 50,000 units, 2 users', LangSmith: 'Developer: 5,000 traces, 1 seat', Helicone: 'Hobby: 10,000 requests', PromptLayer: 'Free: 2,500 requests, 5 users' },
           { Tier: 'Free retention', Langfuse: '30 days data access', LangSmith: 'Not stated on pricing page', Helicone: '7 days', PromptLayer: 'Not stated on pricing page' },
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Jedes Werkzeug optimiert eine andere Stelle im Stack, statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Kriterium', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Kriterium', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Kriterium: 'Ansatz', Langfuse: 'SDK-Tracer', LangSmith: 'SDK-Tracer', Helicone: 'Proxy', PromptLayer: 'SDK- und REST-Logging' },
           { Kriterium: 'GitHub-Sterne', Langfuse: '33,9k', LangSmith: 'Nicht quelloffen', Helicone: '6,1k', PromptLayer: '0,8k (Client-Bibliothek)' },
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Alle vier rechnen hybrid ab — eine Platz- oder Plattformgebühr plus gemessene Nutzung über einem enthaltenen Kontingent —, sodass zwei Teams auf derselben Stufe sehr unterschiedliche Rechnungen bekommen können.** Das Volumen treibt die Rechnung stärker als die Kopfzahl, wofür LangSmith das deutlichste Beispiel ist.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Stufe', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Stufe', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Stufe: 'Kostenlos', Langfuse: 'Hobby: 50.000 Einheiten, 2 Nutzende', LangSmith: 'Developer: 5.000 Traces, 1 Platz', Helicone: 'Hobby: 10.000 Anfragen', PromptLayer: 'Free: 2.500 Anfragen, 5 Nutzende' },
           { Stufe: 'Aufbewahrung kostenlos', Langfuse: '30 Tage Datenzugriff', LangSmith: 'Auf der Preisseite nicht genannt', Helicone: '7 Tage', PromptLayer: 'Auf der Preisseite nicht genannt' },
@@ -1303,7 +1303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cada herramienta optimiza un punto distinto del stack en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio de la API de GitHub ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Criterio', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Criterio: 'Enfoque', Langfuse: 'Trazador SDK', LangSmith: 'Trazador SDK', Helicone: 'Proxy', PromptLayer: 'Registro por SDK y REST' },
           { Criterio: 'Estrellas en GitHub', Langfuse: '33,9k', LangSmith: 'No es código abierto', Helicone: '6,1k', PromptLayer: '0,8k (biblioteca cliente)' },
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Las cuatro facturan con un modelo híbrido — una cuota por puesto o plataforma más consumo medido por encima de una cuota incluida — así que dos equipos en el mismo nivel pueden recibir facturas muy distintas.** El volumen manda más que la plantilla, y LangSmith es el ejemplo más claro.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Nivel', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Nivel', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Nivel: 'Gratuito', Langfuse: 'Hobby: 50.000 unidades, 2 usuarios', LangSmith: 'Developer: 5.000 trazas, 1 puesto', Helicone: 'Hobby: 10.000 peticiones', PromptLayer: 'Free: 2.500 peticiones, 5 usuarios' },
           { Nivel: 'Retención gratuita', Langfuse: '30 días de acceso a datos', LangSmith: 'No indicado en la página de precios', Helicone: '7 días', PromptLayer: 'No indicado en la página de precios' },
@@ -1881,7 +1881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Chaque outil optimise un point different de la pile plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots via l API GitHub le meme jour.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critere', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Critere', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Critere: 'Approche', Langfuse: 'Traceur SDK', LangSmith: 'Traceur SDK', Helicone: 'Proxy', PromptLayer: 'Journalisation SDK et REST' },
           { Critere: 'Etoiles GitHub', Langfuse: '33,9k', LangSmith: 'Non open source', Helicone: '6,1k', PromptLayer: '0,8k (bibliotheque cliente)' },
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Les quatre facturent selon un modele hybride — un abonnement par siege ou par plateforme plus une consommation mesuree au-dela d un quota inclus — de sorte que deux equipes sur le meme niveau peuvent recevoir des factures tres differentes.** Le volume pese plus que l effectif, et LangSmith en est l exemple le plus net.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Niveau', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Niveau', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Niveau: 'Gratuit', Langfuse: 'Hobby : 50 000 unites, 2 utilisateurs', LangSmith: 'Developer : 5 000 traces, 1 siege', Helicone: 'Hobby : 10 000 requetes', PromptLayer: 'Free : 2 500 requetes, 5 utilisateurs' },
           { Niveau: 'Retention gratuite', Langfuse: '30 jours d acces aux donnees', LangSmith: 'Non precise sur la page tarifaire', Helicone: '7 jours', PromptLayer: 'Non precise sur la page tarifaire' },
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cada ferramenta otimiza um ponto diferente da stack em vez de competir recurso a recurso.** Os preços foram lidos nas páginas dos fornecedores em 28 de agosto de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critério', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Critério', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Critério: 'Abordagem', Langfuse: 'Rastreador SDK', LangSmith: 'Rastreador SDK', Helicone: 'Proxy', PromptLayer: 'Registro via SDK e REST' },
           { Critério: 'Estrelas no GitHub', Langfuse: '33,9 mil', LangSmith: 'Não é código aberto', Helicone: '6,1 mil', PromptLayer: '0,8 mil (biblioteca cliente)' },
@@ -2643,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Os quatro cobram em modelo híbrido — uma taxa por assento ou plataforma mais consumo medido acima de uma cota inclusa — de modo que duas equipes no mesmo nível podem receber faturas bem diferentes.** O volume pesa mais que o número de pessoas, e o LangSmith é o exemplo mais claro.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Nível', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['Nível', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { Nível: 'Gratuito', Langfuse: 'Hobby: 50 mil unidades, 2 usuários', LangSmith: 'Developer: 5 mil traces, 1 assento', Helicone: 'Hobby: 10 mil requisições', PromptLayer: 'Free: 2.500 requisições, 5 usuários' },
           { Nível: 'Retenção gratuita', Langfuse: '30 dias de acesso aos dados', LangSmith: 'Não informado na página de preços', Helicone: '7 dias', PromptLayer: 'Não informado na página de preços' },
@@ -3037,7 +3037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**4製品は機能を正面から競うのではなく、スタックのそれぞれ異なる地点を最適化しています。** 料金は2026年8月28日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['項目', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['項目', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 項目: '方式', Langfuse: 'SDKトレーサー', LangSmith: 'SDKトレーサー', Helicone: 'プロキシ', PromptLayer: 'SDKとRESTのログ' },
           { 項目: 'GitHubスター', Langfuse: '33,900件', LangSmith: 'オープンソースではない', Helicone: '6,100件', PromptLayer: '800件（クライアント）' },
@@ -3221,7 +3221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**4製品とも、席数またはプラットフォームの基本料に、含有枠を超えた計測分を足すハイブリッド課金です。そのため同じプランでもチームによって請求額は大きく変わります。** 人数より使用量が効き、LangSmithが最も分かりやすい例です。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['段階', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['段階', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 段階: '無料', Langfuse: 'Hobby：5万ユニット、2ユーザー', LangSmith: 'Developer：5,000トレース、1席', Helicone: 'Hobby：1万リクエスト', PromptLayer: 'Free：2,500リクエスト、5ユーザー' },
           { 段階: '無料枠の保持', Langfuse: 'データ参照30日間', LangSmith: '料金ページに記載なし', Helicone: '7日間', PromptLayer: '料金ページに記載なし' },
@@ -3615,7 +3615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**四者优化的是技术栈上不同的位置，而不是逐项功能对拼。** 价格于 2026 年 8 月 28 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['维度', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['维度', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 维度: '方式', Langfuse: 'SDK 追踪器', LangSmith: 'SDK 追踪器', Helicone: '代理', PromptLayer: 'SDK 与 REST 日志' },
           { 维度: 'GitHub 星标', Langfuse: '3.39 万', LangSmith: '非开源', Helicone: '6100', PromptLayer: '800（客户端库）' },
@@ -3799,7 +3799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**四者都采用混合计费——一笔席位费或平台费，加上超出包含额度后的计量用量——因此同一层级下的两个团队，账单可能相差很大。** 决定账单的是用量而非人数，LangSmith 是最清楚的例子。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['层级', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['层级', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 层级: '免费', Langfuse: 'Hobby：5 万单元，2 用户', LangSmith: 'Developer：5000 追踪，1 席位', Helicone: 'Hobby：1 万次请求', PromptLayer: 'Free：2500 次请求，5 用户' },
           { 层级: '免费层保留', Langfuse: '30 天数据可查', LangSmith: '定价页未说明', Helicone: '7 天', PromptLayer: '定价页未说明' },
@@ -4193,7 +4193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**كل أداة تُحسّن نقطة مختلفة في المنظومة بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات المزوّدين في 28 أغسطس 2026، وأُخذت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المعيار', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['المعيار', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { المعيار: 'الأسلوب', Langfuse: 'متتبّع حزمة تطوير', LangSmith: 'متتبّع حزمة تطوير', Helicone: 'وكيل', PromptLayer: 'تسجيل عبر حزمة وREST' },
           { المعيار: 'نجوم GitHub', Langfuse: '33.9 ألف', LangSmith: 'ليس مفتوح المصدر', Helicone: '6.1 ألف', PromptLayer: '0.8 ألف (مكتبة عميل)' },
@@ -4377,7 +4377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**تعتمد الأربعة جميعًا فوترة هجينة — رسم للمقعد أو للمنصة إضافة إلى استهلاك مقيس فوق حصة مضمّنة — لذا قد يتلقى فريقان على المستوى نفسه فاتورتين مختلفتين جدًا.** الحجم هو المحرّك أكثر من عدد الأشخاص، وLangSmith أوضح مثال.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المستوى', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['المستوى', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { المستوى: 'المجاني', Langfuse: 'Hobby: 50 ألف وحدة، مستخدمان', LangSmith: 'Developer: 5000 تتبّع، مقعد', Helicone: 'Hobby: 10 آلاف طلب', PromptLayer: 'Free: 2500 طلب، 5 مستخدمين' },
           { المستوى: 'احتفاظ المجاني', Langfuse: '30 يومًا للوصول إلى البيانات', LangSmith: 'غير مذكور في صفحة الأسعار', Helicone: '7 أيام', PromptLayer: 'غير مذكور في صفحة الأسعار' },
@@ -4771,7 +4771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**네 도구는 기능을 정면으로 겨루기보다 스택의 서로 다른 지점을 최적화합니다.** 가격은 2026년 8월 28일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['항목', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['항목', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 항목: '방식', Langfuse: 'SDK 트레이서', LangSmith: 'SDK 트레이서', Helicone: '프록시', PromptLayer: 'SDK·REST 로깅' },
           { 항목: 'GitHub 스타', Langfuse: '3만 3,900', LangSmith: '오픈소스 아님', Helicone: '6,100', PromptLayer: '800(클라이언트)' },
@@ -4955,7 +4955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**넷 모두 좌석 또는 플랫폼 기본료에 포함 한도를 넘는 계측 사용량을 더하는 혼합 과금이라, 같은 등급의 두 팀이 매우 다른 청구서를 받을 수 있습니다.** 인원수보다 사용량이 청구액을 좌우하며, LangSmith가 가장 뚜렷한 예입니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['등급', 'Langfuse', 'LangSmith', 'Helicone', 'PromptLayer'],
+        columns: ['등급', '[Langfuse](https://langfuse.com)', '[LangSmith](https://smith.langchain.com)', '[Helicone](https://www.helicone.ai)', '[PromptLayer](https://www.promptlayer.com)'],
         rows: [
           { 등급: '무료', Langfuse: 'Hobby: 5만 유닛, 2사용자', LangSmith: 'Developer: 5,000 트레이스, 1좌석', Helicone: 'Hobby: 1만 요청', PromptLayer: 'Free: 2,500요청, 5사용자' },
           { 등급: '무료 등급 보존', Langfuse: '데이터 조회 30일', LangSmith: '요금 페이지에 없음', Helicone: '7일', PromptLayer: '요금 페이지에 없음' },

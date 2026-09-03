@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Both are actively maintained, production-grade serving engines — the differences below are about where each design puts its weight, not about one being unfinished.',
         ],
-        columns: ['Feature', 'vLLM', 'SGLang'],
+        columns: ['Feature', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'Feature': 'Core cache technique', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (prefix tree)' },
           { 'Feature': 'Best at', 'vLLM': 'High-throughput, independent requests', 'SGLang': 'Shared-prefix and multi-turn' },
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Beide sind aktiv gepflegte, produktionsreife Serving-Engines — die folgenden Unterschiede betreffen den Design-Schwerpunkt, nicht den Reifegrad.',
         ],
-        columns: ['Merkmal', 'vLLM', 'SGLang'],
+        columns: ['Merkmal', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'Merkmal': 'Kern-Cache-Technik', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (Präfixbaum)' },
           { 'Merkmal': 'Stärke bei', 'vLLM': 'Hoher Durchsatz, unabhängige Anfragen', 'SGLang': 'Geteiltes Präfix und Mehrfachdialog' },
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Les deux sont des moteurs de serving activement maintenus et de qualité production — les différences ci-dessous concernent l’accent mis par chaque conception, pas la maturité.',
         ],
-        columns: ['Caractéristique', 'vLLM', 'SGLang'],
+        columns: ['Caractéristique', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'Caractéristique': 'Technique de cache principale', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (arbre de préfixes)' },
           { 'Caractéristique': 'Excelle sur', 'vLLM': 'Fort débit, requêtes indépendantes', 'SGLang': 'Préfixe partagé et multi-tours' },
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'どちらも活発にメンテナンスされている本番品質のサービングエンジンです。以下の違いは設計の重点の差であり、成熟度の差ではありません。',
         ],
-        columns: ['項目', 'vLLM', 'SGLang'],
+        columns: ['項目', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { '項目': 'コアキャッシュ技術', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention（プレフィックスツリー）' },
           { '項目': '得意分野', 'vLLM': '高スループット、独立リクエスト', 'SGLang': '共有プレフィックスとマルチターン' },
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '两者都是持续维护、生产级质量的服务引擎——下面的差异体现的是各自设计的侧重点，而不是成熟度的差距。',
         ],
-        columns: ['特性', 'vLLM', 'SGLang'],
+        columns: ['特性', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { '特性': '核心缓存技术', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention（前缀树）' },
           { '特性': '最擅长', 'vLLM': '高吞吐量、独立请求', 'SGLang': '共享前缀与多轮对话' },
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Ambos son motores de serving mantenidos activamente y de calidad de producción — las diferencias siguientes reflejan dónde pone el peso cada diseño, no cuál está menos terminado.',
         ],
-        columns: ['Característica', 'vLLM', 'SGLang'],
+        columns: ['Característica', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'Característica': 'Técnica de caché principal', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (árbol de prefijos)' },
           { 'Característica': 'Mejor en', 'vLLM': 'Alto rendimiento, solicitudes independientes', 'SGLang': 'Prefijo compartido y multi-turno' },
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Ambos são engines de serving mantidos ativamente e prontos para produção — as diferenças abaixo mostram onde cada design coloca seu peso, não qual é menos acabado.',
         ],
-        columns: ['Recurso', 'vLLM', 'SGLang'],
+        columns: ['Recurso', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'Recurso': 'Técnica de cache principal', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (árvore de prefixos)' },
           { 'Recurso': 'Melhor em', 'vLLM': 'Alto throughput, requisições independentes', 'SGLang': 'Prefixo compartilhado e multi-turno' },
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'كلاهما محركا خدمة يُصانان بنشاط وجاهزان للإنتاج — الفروقات أدناه تعكس أين يضع كل تصميم ثقله، وليس أيهما أقل اكتمالًا.',
         ],
-        columns: ['الميزة', 'vLLM', 'SGLang'],
+        columns: ['الميزة', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { 'الميزة': 'تقنية التخزين المؤقت', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention (شجرة بادئات)' },
           { 'الميزة': 'الأفضل في', 'vLLM': 'إنتاجية عالية، طلبات مستقلة', 'SGLang': 'بادئة مشتركة ومحادثات متعددة' },
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '두 엔진 모두 활발히 유지 관리되는 프로덕션급 서빙 엔진입니다. 아래 차이는 각 설계가 어디에 무게를 두는지를 보여줄 뿐, 어느 쪽이 미완성이라는 뜻이 아닙니다.',
         ],
-        columns: ['특성', 'vLLM', 'SGLang'],
+        columns: ['특성', '[vLLM](https://github.com/vllm-project/vllm)', '[SGLang](https://github.com/sgl-project/sglang)'],
         rows: [
           { '특성': '핵심 캐시 기법', 'vLLM': 'PagedAttention', 'SGLang': 'RadixAttention(프리픽스 트리)' },
           { '특성': '강점', 'vLLM': '높은 처리량, 독립적 요청', 'SGLang': '공유 프리픽스와 멀티턴' },
