@@ -21,6 +21,10 @@ import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { AffiliateLink } from '@/components/AffiliateLink'
 import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
+import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
+import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
+import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
+import { StateAiLawApplicabilityChecker } from '@/components/StateAiLawApplicabilityChecker'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
@@ -720,6 +724,26 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {section.component === 'VramCalculator' && (
         <div className="my-8">
           <VramCalculator />
+        </div>
+      )}
+      {section.component === 'ShadowAiExposureAssessment' && (
+        <div className="my-8">
+          <ShadowAiExposureAssessment />
+        </div>
+      )}
+      {section.component === 'AgentBlastRadiusCalculator' && (
+        <div className="my-8">
+          <AgentBlastRadiusCalculator />
+        </div>
+      )}
+      {section.component === 'IpRiskTriageMatrix' && (
+        <div className="my-8">
+          <IpRiskTriageMatrix />
+        </div>
+      )}
+      {section.component === 'StateAiLawApplicabilityChecker' && (
+        <div className="my-8">
+          <StateAiLawApplicabilityChecker />
         </div>
       )}
 
