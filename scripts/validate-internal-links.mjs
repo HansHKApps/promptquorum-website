@@ -37,6 +37,7 @@ const CLUSTER_SLUGFILES = {
   'prompt-engineering': 'src/lib/prompt-engineering/slugs.ts',
   'power-local-llm': 'src/lib/power-local-llm/slugs.ts',
   'prompt-bites': 'src/lib/prompt-bites/slugs.ts',
+  'enterprise-ai': 'src/lib/enterprise-ai/slugs.ts',
   'smart-home': 'src/lib/smart-home/slugs.ts',
   'balcony-solar': 'src/lib/balcony-solar/slugs.ts',
   'blog': 'src/lib/blogSlugs.ts',

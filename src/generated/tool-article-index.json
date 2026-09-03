@@ -2,6 +2,14 @@
   "Ollama": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llms-customer-support-call-centers-enterprise",
         "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "khoj-ai-second-brain-review",
-        "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
-        "url": "/power-local-llm/khoj-ai-second-brain-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 197,
+    "totalCount": 198,
     "capped": true
   },
   "llama.cpp": {
@@ -469,6 +469,14 @@
     "articles": [
       {
         "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -538,17 +546,9 @@
         "url": "/local-llms/best-local-llm-frontends",
         "dateModified": "2026-08-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-security-privacy-checklist",
-        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
-        "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-08-31",
-        "tier": "about"
       }
     ],
-    "totalCount": 121,
+    "totalCount": 122,
     "capped": true
   },
   "Atomic Chat": {
@@ -740,6 +740,14 @@
   "AnythingLLM": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
         "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
@@ -810,21 +818,21 @@
         "url": "/power-local-llm/local-ai-app-with-built-in-rag",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-rag-on-your-pdfs-step-by-step",
-        "title": "Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)",
-        "url": "/power-local-llm/local-rag-on-your-pdfs-step-by-step",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "Msty": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
@@ -842,7 +850,37 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
+    "capped": false
+  },
+  "Cherry Studio": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-08-31",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "ollama-vs-lm-studio",
+        "title": "Ollama vs LM Studio 2026: CLI vs GUI — Speed, API, Privacy & Setup Compared",
+        "url": "/local-llms/ollama-vs-lm-studio",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "Backyard AI": {
@@ -948,6 +986,14 @@
   "Open WebUI": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
         "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
@@ -1018,17 +1064,9 @@
         "url": "/local-llms/ollama-vs-lm-studio",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.33.1 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 51,
+    "totalCount": 52,
     "capped": true
   },
   "LibreChat": {
@@ -1237,6 +1275,14 @@
     "articles": [
       {
         "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -1244,7 +1290,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Big-AGI": {
@@ -1256,9 +1302,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "NextChat": {
@@ -1270,9 +1324,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Page Assist": {
@@ -1284,9 +1346,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Chatbox": {
@@ -1298,9 +1368,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Continue.dev": {

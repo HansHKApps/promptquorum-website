@@ -884,6 +884,24 @@
         }
       ]
     },
+    "cherry-studio-ai-desktop-client-2026": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "lobechat-bigagi-nextchat-pageassist-chatbox-compared": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
