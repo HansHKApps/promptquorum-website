@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: "Cherry Studio doesn't run its own AI models. It's a chat window that can talk to almost any AI service you already have an account with, plus any local model already running on your machine, without forcing you to switch apps to compare answers or switch providers." },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) is a free, open-source desktop app licensed under AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) is a free, open-source desktop app licensed under AGPL 3.0.',
           'It connects to dozens of AI providers (OpenAI, Anthropic, Google Gemini, DeepSeek, and more) plus local runtimes (Ollama, LM Studio) from one interface.',
           'A built-in Knowledge Base feature adds retrieval-augmented generation (RAG) over your own PDFs, Word documents, and web pages.',
           'MCP (Model Context Protocol) support lets connected models call external tools through a standard server interface.',
@@ -224,8 +224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          'Cherry Studio official site and documentation — cherry-ai.com',
-          'Cherry Studio source code and license (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Cherry Studio official site and documentation — [cherry-ai.com](https://cherry-ai.com)',
+          'Cherry Studio source code and license (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Model Context Protocol specification — modelcontextprotocol.io',
         ],
       },
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio betreibt keine eigenen KI-Modelle. Es ist ein Chat-Fenster, das mit fast jedem KI-Dienst sprechen kann, für den Sie bereits ein Konto haben, plus jedem lokalen Modell, das bereits auf Ihrem Rechner läuft -- ohne dass Sie die App wechseln müssen, um Antworten zu vergleichen oder Anbieter zu wechseln.' },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) ist eine kostenlose Open-Source-Desktop-App unter der Lizenz AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) ist eine kostenlose Open-Source-Desktop-App unter der Lizenz AGPL 3.0.',
           'Sie verbindet dutzende KI-Anbieter (OpenAI, Anthropic, Google Gemini, DeepSeek und mehr) plus lokale Laufzeitumgebungen (Ollama, LM Studio) in einer Oberfläche.',
           'Eine eingebaute Wissensdatenbank-Funktion fügt Retrieval-Augmented Generation (RAG) über Ihre eigenen PDFs, Word-Dokumente und Webseiten hinzu.',
           'Die MCP-Unterstützung (Model Context Protocol) erlaubt verbundenen Modellen, externe Tools über eine standardisierte Server-Schnittstelle aufzurufen.',
@@ -450,8 +450,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          'Offizielle Cherry-Studio-Website und Dokumentation — cherry-ai.com',
-          'Cherry-Studio-Quellcode und Lizenz (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Offizielle Cherry-Studio-Website und Dokumentation — [cherry-ai.com](https://cherry-ai.com)',
+          'Cherry-Studio-Quellcode und Lizenz (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Model-Context-Protocol-Spezifikation — modelcontextprotocol.io',
         ],
       },
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio no ejecuta sus propios modelos de IA. Es una ventana de chat que puede hablar con casi cualquier servicio de IA con el que ya tengas cuenta, además de cualquier modelo local que ya esté corriendo en tu equipo, sin obligarte a cambiar de app para comparar respuestas o cambiar de proveedor.' },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) es una app de escritorio gratuita y de código abierto con licencia AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) es una app de escritorio gratuita y de código abierto con licencia AGPL 3.0.',
           'Conecta con decenas de proveedores de IA (OpenAI, Anthropic, Google Gemini, DeepSeek y más) además de runtimes locales (Ollama, LM Studio) desde una sola interfaz.',
           'Una función de Base de Conocimiento integrada añade generación aumentada por recuperación (RAG) sobre tus propios PDFs, documentos Word y páginas web.',
           'El soporte MCP (Model Context Protocol) permite a los modelos conectados llamar a herramientas externas mediante una interfaz de servidor estándar.',
@@ -676,8 +676,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          'Sitio oficial y documentación de Cherry Studio — cherry-ai.com',
-          'Código fuente y licencia de Cherry Studio (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Sitio oficial y documentación de Cherry Studio — [cherry-ai.com](https://cherry-ai.com)',
+          'Código fuente y licencia de Cherry Studio (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Especificación del Model Context Protocol — modelcontextprotocol.io',
         ],
       },
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio n\'exécute pas ses propres modèles d\'IA. C\'est une fenêtre de chat capable de dialoguer avec presque tout service d\'IA pour lequel vous avez déjà un compte, ainsi qu\'avec tout modèle local déjà en cours d\'exécution sur votre machine, sans vous obliger à changer d\'application pour comparer des réponses ou changer de fournisseur.' },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) est une application de bureau gratuite et open source, sous licence AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) est une application de bureau gratuite et open source, sous licence AGPL 3.0.',
           'Elle connecte des dizaines de fournisseurs d\'IA (OpenAI, Anthropic, Google Gemini, DeepSeek et plus) ainsi que des runtimes locaux (Ollama, LM Studio) depuis une seule interface.',
           'Une fonction Base de Connaissances intégrée ajoute de la génération augmentée par récupération (RAG) sur vos propres PDF, documents Word et pages web.',
           'Le support MCP (Model Context Protocol) permet aux modèles connectés d\'appeler des outils externes via une interface serveur standard.',
@@ -902,8 +902,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          'Site officiel et documentation de Cherry Studio — cherry-ai.com',
-          'Code source et licence de Cherry Studio (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Site officiel et documentation de Cherry Studio — [cherry-ai.com](https://cherry-ai.com)',
+          'Code source et licence de Cherry Studio (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Spécification du Model Context Protocol — modelcontextprotocol.io',
         ],
       },
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio自体は独自のAIモデルを実行しません。すでにアカウントを持つほぼすべてのAIサービスや、すでにマシン上で動いているローカルモデルと話せるチャット画面で、回答を比較したりプロバイダーを切り替えたりするためにアプリを変える必要がありません。' },
         ],
         items: [
-          'Cherry Studio(cherry-ai.com)は、AGPL 3.0ライセンスの無料オープンソースデスクトップアプリです。',
+          'Cherry Studio([cherry-ai.com](https://cherry-ai.com))は、AGPL 3.0ライセンスの無料オープンソースデスクトップアプリです。',
           '数十のAIプロバイダー(OpenAI、Anthropic、Google Gemini、DeepSeekなど)とローカルランタイム(Ollama、LM Studio)を1つのインターフェースから接続できます。',
           '組み込みのナレッジベース機能により、自分のPDF、Word文書、Webページに対する検索拡張生成(RAG)が可能です。',
           'MCP(Model Context Protocol)対応により、接続済みモデルが標準サーバーインターフェース経由で外部ツールを呼び出せます。',
@@ -1128,8 +1128,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         items: [
-          'Cherry Studio公式サイトとドキュメント — cherry-ai.com',
-          'Cherry Studioのソースコードとライセンス(AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Cherry Studio公式サイトとドキュメント — [cherry-ai.com](https://cherry-ai.com)',
+          'Cherry Studioのソースコードとライセンス(AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Model Context Protocol仕様 — modelcontextprotocol.io',
         ],
       },
@@ -1223,7 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio本身不运行AI模型。它是一个聊天窗口,能对接你已经拥有账号的几乎任何AI服务,以及已经在你机器上运行的任何本地模型,不需要为了比较回答或切换提供商而更换应用。' },
         ],
         items: [
-          'Cherry Studio(cherry-ai.com)是一款采用AGPL 3.0许可证的免费开源桌面应用。',
+          'Cherry Studio([cherry-ai.com](https://cherry-ai.com))是一款采用AGPL 3.0许可证的免费开源桌面应用。',
           '它在一个界面中连接数十家AI提供商(OpenAI、Anthropic、Google Gemini、DeepSeek等)以及本地运行环境(Ollama、LM Studio)。',
           '内置的知识库功能为你自己的PDF、Word文档和网页添加了检索增强生成(RAG)能力。',
           'MCP(Model Context Protocol)支持让已连接的模型通过标准服务器接口调用外部工具。',
@@ -1354,8 +1354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         items: [
-          'Cherry Studio官方网站与文档 — cherry-ai.com',
-          'Cherry Studio源代码与许可证(AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Cherry Studio官方网站与文档 — [cherry-ai.com](https://cherry-ai.com)',
+          'Cherry Studio源代码与许可证(AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Model Context Protocol规范 — modelcontextprotocol.io',
         ],
       },
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'O Cherry Studio não roda seus próprios modelos de IA. É uma janela de chat que conversa com quase qualquer serviço de IA que você já tenha conta, além de qualquer modelo local que já esteja rodando na sua máquina, sem obrigar você a trocar de app para comparar respostas ou trocar de provedor.' },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) é um app de desktop gratuito e de código aberto sob licença AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) é um app de desktop gratuito e de código aberto sob licença AGPL 3.0.',
           'Ele conecta dezenas de provedores de IA (OpenAI, Anthropic, Google Gemini, DeepSeek e mais) além de runtimes locais (Ollama, LM Studio) em uma única interface.',
           'Um recurso integrado de Base de Conhecimento adiciona geração aumentada por recuperação (RAG) sobre seus próprios PDFs, documentos Word e páginas web.',
           'O suporte a MCP (Model Context Protocol) permite que modelos conectados chamem ferramentas externas por meio de uma interface de servidor padrão.',
@@ -1580,8 +1580,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          'Site oficial e documentação do Cherry Studio — cherry-ai.com',
-          'Código-fonte e licença do Cherry Studio (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Site oficial e documentação do Cherry Studio — [cherry-ai.com](https://cherry-ai.com)',
+          'Código-fonte e licença do Cherry Studio (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Especificação do Model Context Protocol — modelcontextprotocol.io',
         ],
       },
@@ -1675,7 +1675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'لا يشغّل Cherry Studio نماذج ذكاء اصطناعي خاصة به. إنه نافذة محادثة يمكنها التحدث إلى شبه أي خدمة ذكاء اصطناعي لديك حساب فيها بالفعل، بالإضافة إلى أي نموذج محلي يعمل بالفعل على جهازك، دون إجبارك على تبديل التطبيقات لمقارنة الإجابات أو تغيير المزود.' },
         ],
         items: [
-          'Cherry Studio (cherry-ai.com) تطبيق سطح مكتب مجاني ومفتوح المصدر مرخّص بموجب AGPL 3.0.',
+          'Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) تطبيق سطح مكتب مجاني ومفتوح المصدر مرخّص بموجب AGPL 3.0.',
           'يربط عشرات مزودي الذكاء الاصطناعي (OpenAI، Anthropic، Google Gemini، DeepSeek والمزيد) بالإضافة إلى بيئات تشغيل محلية (Ollama، LM Studio) من واجهة واحدة.',
           'تضيف ميزة قاعدة المعرفة المدمجة التوليد المعزز بالاسترجاع (RAG) فوق ملفات PDF ومستندات Word وصفحات الويب الخاصة بك.',
           'يتيح دعم MCP (Model Context Protocol) للنماذج المتصلة استدعاء أدوات خارجية عبر واجهة خادم موحدة.',
@@ -1806,8 +1806,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          'موقع Cherry Studio الرسمي والوثائق — cherry-ai.com',
-          'الشيفرة المصدرية والترخيص لـ Cherry Studio (AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'موقع Cherry Studio الرسمي والوثائق — [cherry-ai.com](https://cherry-ai.com)',
+          'الشيفرة المصدرية والترخيص لـ Cherry Studio (AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'مواصفة Model Context Protocol — modelcontextprotocol.io',
         ],
       },
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Cherry Studio는 자체 AI 모델을 실행하지 않습니다. 이미 계정을 가진 거의 모든 AI 서비스, 그리고 이미 기기에서 실행 중인 로컬 모델과 대화할 수 있는 채팅 창으로, 답변을 비교하거나 제공업체를 바꾸기 위해 앱을 전환할 필요가 없습니다.' },
         ],
         items: [
-          'Cherry Studio(cherry-ai.com)는 AGPL 3.0 라이선스의 무료 오픈소스 데스크톱 앱입니다.',
+          'Cherry Studio([cherry-ai.com](https://cherry-ai.com))는 AGPL 3.0 라이선스의 무료 오픈소스 데스크톱 앱입니다.',
           '수십 개의 AI 제공업체(OpenAI, Anthropic, Google Gemini, DeepSeek 등)와 로컬 런타임(Ollama, LM Studio)을 하나의 인터페이스에서 연결합니다.',
           '내장된 지식 베이스 기능은 사용자의 PDF, Word 문서, 웹페이지에 대한 검색 증강 생성(RAG)을 추가합니다.',
           'MCP(Model Context Protocol) 지원으로 연결된 모델이 표준 서버 인터페이스를 통해 외부 도구를 호출할 수 있습니다.',
@@ -2032,8 +2032,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          'Cherry Studio 공식 사이트 및 문서 — cherry-ai.com',
-          'Cherry Studio 소스 코드 및 라이선스(AGPL 3.0) — github.com/CherryHQ/cherry-studio',
+          'Cherry Studio 공식 사이트 및 문서 — [cherry-ai.com](https://cherry-ai.com)',
+          'Cherry Studio 소스 코드 및 라이선스(AGPL 3.0) — [github.com/CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)',
           'Model Context Protocol 사양 — modelcontextprotocol.io',
         ],
       },
