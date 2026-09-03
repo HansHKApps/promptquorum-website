@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Welche Konfiguration sollten Sie kaufen?',
         content:
-          '**GMKtec verkauft den G3 Plus als Barebone oder vorkonfiguriert mit 8 GB/256 GB oder 16 GB/512 GB–1 TB — eine 32-GB-SKU ab Werk gibt es nicht; das ist ein selbst durchgeführtes Upgrade.** Die Preise unten wurden am 25. August 2026 direkt gegen GMKtecs EU-Shop (de.gmktec.com) und unabhängige Preisvergleiche (geizhals.de) geprüft — bestätigen Sie vor dem Kauf immer den aktuellen Live-Preis.',
+          '**GMKtec verkauft den G3 Plus als Barebone oder vorkonfiguriert mit 8 GB/256 GB oder 16 GB/512 GB–1 TB — eine 32-GB-SKU ab Werk gibt es nicht; das ist ein selbst durchgeführtes Upgrade.** Die Preise unten wurden am 25. August 2026 direkt gegen GMKtecs EU-Shop ([de.gmktec.com](https://de.gmktec.com)) und unabhängige Preisvergleiche (geizhals.de) geprüft — bestätigen Sie vor dem Kauf immer den aktuellen Live-Preis.',
         columns: ['Konfiguration', 'Ca. Preis (Aug. 2026)', 'Am besten für'],
         rows: [
           { Konfiguration: 'Barebone (ohne RAM/SSD/OS)', 'Ca. Preis (Aug. 2026)': '~160 €', 'Am besten für': 'Nur bei vorhandenem DDR4-SO-DIMM + NVMe-SSD — sonst bessere Preis-Leistung bei vorkonfigurierten SKUs' },

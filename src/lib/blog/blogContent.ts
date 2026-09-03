@@ -5392,7 +5392,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Best for:** Creative writing, brainstorming, quick answers, content generation, rapid prototyping, general-purpose everyday tasks where speed matters.',
           ],
           items: [
-            'Free tier: Limited usage (ChatGPT.com)',
+            'Free tier: Limited usage ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: $20/month — priority access, Advanced Voice Mode, GPT-5.6 access',
             'ChatGPT Pro: $200/month — highest usage limits, priority access to the newest models',
             'API: ~$5/1M input tokens, ~$15/1M output tokens (GPT-5.6)',
@@ -5408,7 +5408,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Best for:** Technical analysis, code review, logical reasoning, document analysis, research, complex problem-solving — any task where accuracy outweighs speed.',
           ],
           items: [
-            'Free tier: Limited daily usage (Claude.ai)',
+            'Free tier: Limited daily usage ([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro: $20/month — higher usage limits',
             'API: $5/1M input tokens, $25/1M output tokens (Opus 5)',
             'Enterprise: Custom pricing with SLA',
@@ -5423,7 +5423,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Best for:** Image analysis, video understanding, tasks requiring real-time web data, Google Workspace integration, cost-conscious API users, very long-document processing.',
           ],
           items: [
-            'Free tier: Available (Gemini.google.com)',
+            'Free tier: Available ([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium: $20/month — Gemini Advanced + Google services bundle',
             'API: ~$3.5/1M input tokens, ~$10.5/1M output tokens (Gemini 3.1 Pro)',
             'Enterprise: Custom pricing with dedicated support',
@@ -5769,7 +5769,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**الأفضل لـ:** الكتابة الإبداعية والعصف الذهني والإجابات السريعة وتوليد المحتوى والنمذجة السريعة والمهام اليومية العامة حيث تكون السرعة مهمة.',
           ],
           items: [
-            'الخطة المجانية: استخدام محدود (ChatGPT.com)',
+            'الخطة المجانية: استخدام محدود ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: 20$ شهريًا — وصول ذو أولوية، ووضع الصوت المتقدم، والوصول إلى GPT-5.6',
             'ChatGPT Pro: 200$ شهريًا — أعلى حدود استخدام، ووصول ذو أولوية لأحدث النماذج',
             'API: نحو 5$ لكل مليون رمز إدخال، ونحو 15$ لكل مليون رمز إخراج (GPT-5.6)',
@@ -5785,7 +5785,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**الأفضل لـ:** التحليل التقني ومراجعة الشيفرة والاستدلال المنطقي وتحليل المستندات والبحث وحل المشكلات المعقدة — أي مهمة تتقدّم فيها الدقة على السرعة.',
           ],
           items: [
-            'الخطة المجانية: استخدام يومي محدود (Claude.ai)',
+            'الخطة المجانية: استخدام يومي محدود ([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro: 20$ شهريًا — حدود استخدام أعلى',
             'API: نحو 5$ لكل مليون رمز إدخال، ونحو 25$ لكل مليون رمز إخراج (Opus 5)',
             'المؤسسات: تسعير مخصص مع اتفاقية مستوى خدمة',
@@ -5800,7 +5800,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**الأفضل لـ:** تحليل الصور وفهم الفيديو والمهام التي تتطلب بيانات ويب آنية والتكامل مع Google Workspace ومستخدمي الـAPI المهتمين بالتكلفة ومعالجة المستندات الطويلة جدًا.',
           ],
           items: [
-            'الخطة المجانية: متوفرة (Gemini.google.com)',
+            'الخطة المجانية: متوفرة ([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium: 20$ شهريًا — Gemini Advanced مع حزمة خدمات Google',
             'API: نحو 3.5$ لكل مليون رمز إدخال، ونحو 10.5$ لكل مليون رمز إخراج (Gemini 3.1 Pro)',
             'المؤسسات: تسعير مخصص مع دعم مخصص',
@@ -6165,7 +6165,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Optimal für:** Kreatives Schreiben, Brainstorming, schnelle Antworten, Content-Erstellung, Rapid Prototyping und allgemeine Alltagsaufgaben, bei denen Geschwindigkeit zählt.',
           ],
           items: [
-            'Kostenloser Tarif: Begrenzte Nutzung (ChatGPT.com)',
+            'Kostenloser Tarif: Begrenzte Nutzung ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: ca. 20 $/Monat — Vorrangzugang, Advanced Voice Mode, Zugang zu GPT-5.6',
             'ChatGPT Pro: ca. 200 $/Monat — höchste Nutzungslimits, Vorrangzugang zu den neuesten Modellen',
             'API: ca. 5 $/1 Mio. Input-Tokens, ca. 15 $/1 Mio. Output-Tokens (GPT-5.6)',
@@ -6181,7 +6181,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Optimal für:** Technische Analysen, Code-Review, logisches Reasoning, Dokumentenanalyse, Recherche und komplexe Problemlösungen — kurz: alle Aufgaben, bei denen Genauigkeit wichtiger ist als Geschwindigkeit.',
           ],
           items: [
-            'Kostenloser Tarif: Begrenzte tägliche Nutzung (Claude.ai)',
+            'Kostenloser Tarif: Begrenzte tägliche Nutzung ([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro: ca. 20 $/Monat — höhere Nutzungslimits',
             'API: ca. 5 $/1 Mio. Input-Tokens, ca. 25 $/1 Mio. Output-Tokens (Opus 5)',
             'Enterprise: Individuelle Preisgestaltung mit SLA',
@@ -6196,7 +6196,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Optimal für:** Bildanalyse, Videoanalyse, Aufgaben mit Echtzeitwebdaten, Google-Workspace-Integration, kostenoptimierte API-Nutzer und die Verarbeitung sehr langer Dokumente.',
           ],
           items: [
-            'Kostenloser Tarif: Verfügbar (Gemini.google.com)',
+            'Kostenloser Tarif: Verfügbar ([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium: ca. 20 $/Monat — Gemini Advanced + Google-Dienste-Bundle',
             'API: ca. 3,50 $/1 Mio. Input-Tokens, ca. 10,50 $/1 Mio. Output-Tokens (Gemini 3.1 Pro)',
             'Enterprise: Individuelle Preisgestaltung mit dediziertem Support',
@@ -6560,7 +6560,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Idéal pour :** Écriture créative, brainstorming, réponses rapides, génération de contenu, prototypage rapide et tâches quotidiennes où la vitesse prime.',
           ],
           items: [
-            'Offre gratuite : Usage limité (ChatGPT.com)',
+            'Offre gratuite : Usage limité ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus : ~20 $/mois — accès prioritaire, Advanced Voice Mode, accès GPT-5.6',
             'ChatGPT Pro : ~200 $/mois — limites d\'usage les plus élevées, accès prioritaire aux derniers modèles',
             'API : ~5 $/1M tokens en entrée, ~15 $/1M en sortie (GPT-5.6)',
@@ -6576,7 +6576,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Idéal pour :** Analyse technique, revue de code, raisonnement logique, analyse documentaire, recherche et résolution de problèmes complexes — toute tâche où la précision prime sur la vitesse.',
           ],
           items: [
-            'Offre gratuite : Usage quotidien limité (Claude.ai)',
+            'Offre gratuite : Usage quotidien limité ([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro : ~20 $/mois — limites d\'usage plus élevées',
             'API : ~5 $/1M tokens en entrée, ~25 $/1M en sortie (Opus 5)',
             'Enterprise : Tarification personnalisée avec SLA',
@@ -6591,7 +6591,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Idéal pour :** Analyse d\'images, compréhension vidéo, tâches nécessitant des données web en temps réel, intégration Google Workspace, utilisateurs API soucieux des coûts, traitement de très longs documents.',
           ],
           items: [
-            'Offre gratuite : Disponible (Gemini.google.com)',
+            'Offre gratuite : Disponible ([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium : ~20 $/mois — Gemini Advanced + services Google',
             'API : ~3,5 $/1M tokens en entrée, ~10,5 $/1M en sortie (Gemini 3.1 Pro)',
             'Enterprise : Tarification personnalisée avec support dédié',
@@ -7809,7 +7809,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Mejor para:** Escritura creativa, lluvia de ideas, respuestas rápidas, generación de contenido, prototipado rápido, tareas generales donde importa la velocidad.',
           ],
           items: [
-            'Nivel gratuito: Uso limitado (ChatGPT.com)',
+            'Nivel gratuito: Uso limitado ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: $20/mes — acceso prioritario, Modo de Voz Avanzado, acceso GPT-5.6',
             'ChatGPT Pro: $200/mes — los límites de uso más altos, acceso prioritario a los modelos más nuevos',
             'API: ~$5/1M tokens entrada, ~$15/1M tokens salida (GPT-5.6)',
@@ -7825,7 +7825,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Mejor para:** Análisis técnico, revisión de código, razonamiento lógico, análisis de documentos, investigación, resolución de problemas complejos — cualquier tarea donde la precisión supera la velocidad.',
           ],
           items: [
-            'Nivel gratuito: Acceso limitado (Claude.ai)',
+            'Nivel gratuito: Acceso limitado ([Claude.ai](https://Claude.ai))',
             'Claude Pro: $20/mes — límites de uso más altos',
             'API: ~$5/1M tokens entrada, ~$25/1M tokens salida (Opus 5)',
             'Empresa: DPAs personalizados, modelos dedicados',
@@ -7840,7 +7840,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Mejor para:** Tareas multimodales, análisis de imágenes, procesamiento de video, análisis de documentos visuales, búsqueda web integrada, presupuesto consciente.',
           ],
           items: [
-            'Nivel gratuito: Uso limitado (Gemini.google.com)',
+            'Nivel gratuito: Uso limitado ([Gemini.google.com](https://Gemini.google.com))',
             'Gemini Advanced: $20/mes — límites más altos',
             'API: ~$3.5/1M tokens entrada, ~$10.5/1M tokens salida (Gemini 3.1 Pro)',
             'Empresa: Acceso API con SLAs',
@@ -8161,7 +8161,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Ideal para:** Escrita criativa, brainstorming, respostas rápidas, geração de conteúdo, prototipagem rápida, tarefas cotidianas de uso geral onde a velocidade importa.',
           ],
           items: [
-            'Plano gratuito: Uso limitado (ChatGPT.com)',
+            'Plano gratuito: Uso limitado ([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: ~$20/mês — acesso prioritário, Advanced Voice Mode, acesso ao GPT-5.6',
             'ChatGPT Pro: ~$200/mês — os limites de uso mais altos, acesso prioritário aos modelos mais novos',
             'API: ~$5/1M tokens de entrada, ~$15/1M tokens de saída (GPT-5.6)',
@@ -8177,7 +8177,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Ideal para:** Análise técnica, revisão de código, raciocínio lógico, análise de documentos, pesquisa, resolução de problemas complexos — qualquer tarefa onde precisão supera velocidade.',
           ],
           items: [
-            'Plano gratuito: Uso diário limitado (Claude.ai)',
+            'Plano gratuito: Uso diário limitado ([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro: ~$20/mês — limites de uso mais altos',
             'API: ~$5/1M tokens de entrada, ~$25/1M tokens de saída (Opus 5)',
             'Enterprise: Preços personalizados com SLA',
@@ -8192,7 +8192,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**Ideal para:** Análise de imagens, compreensão de vídeo, tarefas que requerem dados da web em tempo real, integração com o Google Workspace, usuários de API conscientes de custos, processamento de documentos muito longos.',
           ],
           items: [
-            'Plano gratuito: Disponível (Gemini.google.com)',
+            'Plano gratuito: Disponível ([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium: ~$20/mês — Gemini Advanced + pacote de serviços Google',
             'API: ~$3,50/1M tokens de entrada, ~$10,50/1M tokens de saída (Gemini 3.1 Pro)',
             'Enterprise: Preços personalizados com suporte dedicado',
@@ -8519,7 +8519,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**적합한 경우:** 창의적 글쓰기, 브레인스토밍, 빠른 응답, 콘텐츠 생성, 빠른 프로토타이핑, 속도가 중요한 일상적인 범용 작업.',
           ],
           items: [
-            '무료 플랜: 사용 제한(ChatGPT.com)',
+            '무료 플랜: 사용 제한([ChatGPT.com](https://ChatGPT.com))',
             'ChatGPT Plus: ~$20/월 — 우선 접근, 고급 음성 모드, GPT-5.6 접근',
             'ChatGPT Pro: ~$200/월 — 가장 높은 사용 한도, 최신 모델에 대한 우선 접근',
             'API: GPT-5.6 입력 1M 토큰당 ~$5, 출력 1M 토큰당 ~$15',
@@ -8535,7 +8535,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**적합한 경우:** 기술 분석, 코드 리뷰, 논리적 추론, 문서 분석, 연구, 복잡한 문제 해결—속도보다 정밀도가 중요한 모든 작업.',
           ],
           items: [
-            '무료 플랜: 일일 제한 사용(Claude.ai)',
+            '무료 플랜: 일일 제한 사용([Claude.ai](https://Claude.ai))',
             'Claude.ai Pro: ~$20/월 — 더 높은 사용 한도',
             'API: Opus 5 입력 1M 토큰당 ~$15, 출력 1M 토큰당 ~$75',
             '기업: SLA가 포함된 맞춤 가격',
@@ -8550,7 +8550,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '**적합한 경우:** 이미지 분석, 비디오 이해, 실시간 웹 데이터가 필요한 작업, Google Workspace 통합, 비용을 의식하는 API 사용자, 매우 긴 문서 처리.',
           ],
           items: [
-            '무료 플랜: 제공(Gemini.google.com)',
+            '무료 플랜: 제공([Gemini.google.com](https://Gemini.google.com))',
             'Google One AI Premium: ~$20/월 — Gemini Advanced + Google 서비스 번들',
             'API: Gemini 3.1 Pro 입력 1M 토큰당 ~$3.50, 출력 1M 토큰당 ~$10.50',
             '기업: 전용 지원이 있는 맞춤 가격',
@@ -20231,9 +20231,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Group 4: Prompt Libraries & Community Platforms',
           content: 'Prompt libraries and marketplaces provide ready-made prompts and community-tested templates.',
           items: [
-            'PromptBase (promptbase.com): Marketplace for professionally tested prompts, usually priced $4—5+ each, with a no-code app builder for creating mini-applications.',
-            'AIPRM (aiprm.com): Adds a community prompt library directly inside ChatGPT via browser extension, using a freemium model.',
-            'FlowGPT (flowgpt.com): Community platform for discovering, sharing, and testing prompts, also with freemium access.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): Marketplace for professionally tested prompts, usually priced $4—5+ each, with a no-code app builder for creating mini-applications.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): Adds a community prompt library directly inside ChatGPT via browser extension, using a freemium model.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): Community platform for discovering, sharing, and testing prompts, also with freemium access.',
           ],
         },
         group5: {
@@ -20241,14 +20241,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'Open-source frameworks enable developers to build automated prompt optimization pipelines.',
           items: [
             'DSPy (Stanford NLP): Turns prompt engineering into a programmatic process. Developers declare input/output signatures and quality objectives. DSPy optimizers (MIPROv2, GEPA) automatically search over prompt variants to maximize performance on a dataset. Benchmarks show smaller models with DSPy can match or beat GPT-3.5 setups. Apache 2.0 license.',
-            'DSPyLab (dspylab.com): Wraps DSPy in a no-code web UI. Generates up to 5 prompt variants using different temperatures, evaluates them with LLM-as-Judge, and selects the best automatically. Pricing: $5 free credits on signup; $20 in credits per month on base plan.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): Wraps DSPy in a no-code web UI. Generates up to 5 prompt variants using different temperatures, evaluates them with LLM-as-Judge, and selects the best automatically. Pricing: $5 free credits on signup; $20 in credits per month on base plan.',
           ],
         },
         group6: {
           title: 'Group 6: Multi-Model Comparison Platforms',
           content: 'Multi-model comparison platforms allow users to run the same prompt across multiple AI models simultaneously to compare quality, cost, and speed.',
           items: [
-            'Prompts.ai (prompts.ai): AI orchestration platform consolidating access to 35+ large language models — including GPT-5.6, Claude, LLaMA, Gemini — into a single interface. Side-by-side performance comparison runs the same prompt on multiple models simultaneously, enabling data-driven model selection. Uses a pay-as-you-go TOKN credit system. Claims 98% cost reduction versus maintaining multiple subscriptions.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): AI orchestration platform consolidating access to 35+ large language models — including GPT-5.6, Claude, LLaMA, Gemini — into a single interface. Side-by-side performance comparison runs the same prompt on multiple models simultaneously, enabling data-driven model selection. Uses a pay-as-you-go TOKN credit system. Claims 98% cost reduction versus maintaining multiple subscriptions.',
           ],
         },
         comparativeTable: {
@@ -20484,9 +20484,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'المجموعة 4: مكتبات الـ Prompt والمنصات المجتمعية',
           content: 'توفّر مكتبات وأسواق الـ Prompt نماذج جاهزة وقوالب مختبَرة من المجتمع.',
           items: [
-            'PromptBase (promptbase.com): سوق لـ Prompt مختبَرة احترافياً، بسعر يبدأ عادةً من 4—5$ لكل واحدة، مع منشئ تطبيقات بلا كود لإنشاء تطبيقات مصغّرة.',
-            'AIPRM (aiprm.com): تضيف مكتبة Prompt مجتمعية مباشرةً داخل ChatGPT عبر إضافة للمتصفّح، باستخدام نموذج freemium.',
-            'FlowGPT (flowgpt.com): منصة مجتمعية لاكتشاف الـ Prompt ومشاركتها واختبارها، أيضاً بوصول freemium.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): سوق لـ Prompt مختبَرة احترافياً، بسعر يبدأ عادةً من 4—5$ لكل واحدة، مع منشئ تطبيقات بلا كود لإنشاء تطبيقات مصغّرة.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): تضيف مكتبة Prompt مجتمعية مباشرةً داخل ChatGPT عبر إضافة للمتصفّح، باستخدام نموذج freemium.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): منصة مجتمعية لاكتشاف الـ Prompt ومشاركتها واختبارها، أيضاً بوصول freemium.',
           ],
         },
         group5: {
@@ -20494,14 +20494,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'تُمكّن أطر العمل مفتوحة المصدر المطوّرين من بناء سلاسل معالجة آلية لتحسين الـ Prompt.',
           items: [
             'DSPy (Stanford NLP): تحوّل هندسة الـ Prompt إلى عملية برمجية. يعلن المطوّرون توقيعات الإدخال/الإخراج وأهداف الجودة. تبحث أدوات تحسين DSPy (MIPROv2، GEPA) تلقائياً عبر نسخ الـ Prompt لتعظيم الأداء على مجموعة بيانات. تُظهر المقاييس أن النماذج الأصغر مع DSPy يمكن أن تضاهي إعدادات GPT-3.5 أو تتفوّق عليها. ترخيص Apache 2.0.',
-            'DSPyLab (dspylab.com): تغلّف DSPy في واجهة ويب بلا كود. تولّد حتى 5 نسخ من الـ Prompt باستخدام درجات حرارة مختلفة، وتقيّمها بأسلوب LLM-as-Judge، وتختار الأفضل تلقائياً. التسعير: 5$ رصيد مجاني عند التسجيل؛ 20$ رصيداً شهرياً في الخطة الأساسية.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): تغلّف DSPy في واجهة ويب بلا كود. تولّد حتى 5 نسخ من الـ Prompt باستخدام درجات حرارة مختلفة، وتقيّمها بأسلوب LLM-as-Judge، وتختار الأفضل تلقائياً. التسعير: 5$ رصيد مجاني عند التسجيل؛ 20$ رصيداً شهرياً في الخطة الأساسية.',
           ],
         },
         group6: {
           title: 'المجموعة 6: منصات مقارنة النماذج المتعددة',
           content: 'تتيح منصات مقارنة النماذج المتعددة للمستخدمين تشغيل الـ Prompt نفسه عبر عدّة نماذج ذكاء اصطناعي في آنٍ واحد لمقارنة الجودة والتكلفة والسرعة.',
           items: [
-            'Prompts.ai (prompts.ai): منصة تنسيق ذكاء اصطناعي تجمع الوصول إلى أكثر من 35 نموذجاً لغوياً كبيراً — بما في ذلك GPT-5.6 وClaude وLLaMA وGemini — في واجهة واحدة. تجري مقارنة الأداء جنباً إلى جنب بتشغيل الـ Prompt نفسه على عدّة نماذج في آنٍ واحد، ما يتيح اختيار النموذج بناءً على البيانات. تستخدم نظام رصيد TOKN بالدفع حسب الاستخدام. تدّعي خفضاً في التكلفة بنسبة 98% مقارنةً بالاحتفاظ باشتراكات متعدّدة.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): منصة تنسيق ذكاء اصطناعي تجمع الوصول إلى أكثر من 35 نموذجاً لغوياً كبيراً — بما في ذلك GPT-5.6 وClaude وLLaMA وGemini — في واجهة واحدة. تجري مقارنة الأداء جنباً إلى جنب بتشغيل الـ Prompt نفسه على عدّة نماذج في آنٍ واحد، ما يتيح اختيار النموذج بناءً على البيانات. تستخدم نظام رصيد TOKN بالدفع حسب الاستخدام. تدّعي خفضاً في التكلفة بنسبة 98% مقارنةً بالاحتفاظ باشتراكات متعدّدة.',
           ],
         },
         comparativeTable: {
@@ -20737,9 +20737,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Gruppe 4: Prompt-Bibliotheken & Community-Plattformen',
           content: 'Prompt-Bibliotheken und Marktplätze stellen fertige Prompts und community-getestete Templates bereit.',
           items: [
-            'PromptBase (promptbase.com): Marktplatz für professionell getestete Prompts, meist zu $4—5+ pro Stück, mit einem No-Code-App-Builder für Mini-Anwendungen.',
-            'AIPRM (aiprm.com): Fügt eine Community-Prompt-Bibliothek direkt in ChatGPT per Browser-Extension ein, mit Freemium-Modell.',
-            'FlowGPT (flowgpt.com): Community-Plattform zum Entdecken, Teilen und Testen von Prompts, ebenfalls mit Freemium-Zugang.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): Marktplatz für professionell getestete Prompts, meist zu $4—5+ pro Stück, mit einem No-Code-App-Builder für Mini-Anwendungen.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): Fügt eine Community-Prompt-Bibliothek direkt in ChatGPT per Browser-Extension ein, mit Freemium-Modell.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): Community-Plattform zum Entdecken, Teilen und Testen von Prompts, ebenfalls mit Freemium-Zugang.',
           ],
         },
         group5: {
@@ -20747,14 +20747,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'Open-Source-Frameworks ermöglichen Entwicklern den Aufbau automatisierter Prompt-Optimierungspipelines.',
           items: [
             'DSPy (Stanford NLP): Macht Prompt-Engineering zu einem programmatischen Prozess. Entwickler deklarieren Ein-/Ausgabesignaturen und Qualitätsziele. DSPy-Optimierer (MIPROv2, GEPA) durchsuchen automatisch Prompt-Varianten, um die Leistung auf einem Datensatz zu maximieren. Benchmarks zeigen, dass kleinere Modelle mit DSPy GPT-3.5-Setups erreichen oder übertreffen können. Apache-2.0-Lizenz.',
-            'DSPyLab (dspylab.com): Verpackt DSPy in eine No-Code-Web-UI. Generiert bis zu 5 Prompt-Varianten mit unterschiedlichen Temperaturen, bewertet sie mit LLM-as-Judge und wählt automatisch die beste aus. Preise: $5 Startguthaben; $20 Guthaben/Monat im Basisplan.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): Verpackt DSPy in eine No-Code-Web-UI. Generiert bis zu 5 Prompt-Varianten mit unterschiedlichen Temperaturen, bewertet sie mit LLM-as-Judge und wählt automatisch die beste aus. Preise: $5 Startguthaben; $20 Guthaben/Monat im Basisplan.',
           ],
         },
         group6: {
           title: 'Gruppe 6: Multi-Modell-Vergleichsplattformen',
           content: 'Multi-Modell-Vergleichsplattformen ermöglichen es Nutzern, denselben Prompt gleichzeitig über mehrere KI-Modelle laufen zu lassen, um Qualität, Kosten und Geschwindigkeit zu vergleichen.',
           items: [
-            'Prompts.ai (prompts.ai): KI-Orchestrierungsplattform, die den Zugriff auf 35+ Large Language Models — darunter GPT-5.6, Claude, LLaMA, Gemini — in einer einzigen Oberfläche konsolidiert. Side-by-side-Leistungsvergleich führt denselben Prompt auf mehreren Modellen gleichzeitig aus und ermöglicht so datengesteuerte Modellauswahl. Verwendet ein Pay-as-you-go-TOKN-Creditsystem. Behauptet 98 % Kosteneinsparung gegenüber mehreren Abonnements.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): KI-Orchestrierungsplattform, die den Zugriff auf 35+ Large Language Models — darunter GPT-5.6, Claude, LLaMA, Gemini — in einer einzigen Oberfläche konsolidiert. Side-by-side-Leistungsvergleich führt denselben Prompt auf mehreren Modellen gleichzeitig aus und ermöglicht so datengesteuerte Modellauswahl. Verwendet ein Pay-as-you-go-TOKN-Creditsystem. Behauptet 98 % Kosteneinsparung gegenüber mehreren Abonnements.',
           ],
         },
         comparativeTable: {
@@ -20990,9 +20990,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Grupo 4: Librerías y Plataformas Comunitarias de Prompts',
           content: 'Las librerías y mercados de prompts ofrecen prompts prediseñados y plantillas probadas por la comunidad.',
           items: [
-            'PromptBase (promptbase.com): Mercado de prompts probados profesionalmente, generalmente con precios de $4—5+ cada uno, con un creador de aplicaciones sin código para crear miniaplicaciones.',
-            'AIPRM (aiprm.com): Añade una librería comunitaria de prompts directamente dentro de ChatGPT a través de una extensión de navegador, con un modelo freemium.',
-            'FlowGPT (flowgpt.com): Plataforma comunitaria para descubrir, compartir y probar prompts, también con acceso freemium.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): Mercado de prompts probados profesionalmente, generalmente con precios de $4—5+ cada uno, con un creador de aplicaciones sin código para crear miniaplicaciones.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): Añade una librería comunitaria de prompts directamente dentro de ChatGPT a través de una extensión de navegador, con un modelo freemium.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): Plataforma comunitaria para descubrir, compartir y probar prompts, también con acceso freemium.',
           ],
         },
         group5: {
@@ -21000,14 +21000,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'Los frameworks open source permiten a los desarrolladores construir pipelines automatizados de optimización de prompts.',
           items: [
             'DSPy (Stanford NLP): Convierte la ingeniería de prompts en un proceso programático. Los desarrolladores declaran firmas de entrada/salida y objetivos de calidad. Los optimizadores de DSPy (MIPROv2, GEPA) buscan automáticamente entre variantes de prompts para maximizar el rendimiento en un conjunto de datos. Los benchmarks muestran que modelos más pequeños con DSPy pueden igualar o superar configuraciones de GPT-3.5. Licencia Apache 2.0.',
-            'DSPyLab (dspylab.com): Envuelve DSPy en una interfaz web sin código. Genera hasta 5 variantes de prompts usando diferentes temperaturas, las evalúa con LLM-as-Judge, y selecciona automáticamente la mejor. Precios: $5 en créditos gratis al registrarse; $20 en créditos por mes en el plan base.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): Envuelve DSPy en una interfaz web sin código. Genera hasta 5 variantes de prompts usando diferentes temperaturas, las evalúa con LLM-as-Judge, y selecciona automáticamente la mejor. Precios: $5 en créditos gratis al registrarse; $20 en créditos por mes en el plan base.',
           ],
         },
         group6: {
           title: 'Grupo 6: Plataformas de Comparación Multi-Modelo',
           content: 'Las plataformas de comparación multi-modelo permiten a los usuarios ejecutar el mismo prompt en múltiples modelos de IA simultáneamente para comparar calidad, coste y velocidad.',
           items: [
-            'Prompts.ai (prompts.ai): Plataforma de orquestación de IA que consolida el acceso a más de 35 modelos de lenguaje grandes — incluyendo GPT-5.6, Claude, LLaMA, Gemini — en una sola interfaz. La comparación de rendimiento lado a lado ejecuta el mismo prompt en múltiples modelos simultáneamente, permitiendo una selección de modelo basada en datos. Usa un sistema de créditos de pago por uso llamado TOKN. Afirma una reducción de costes del 98% frente a mantener múltiples suscripciones.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): Plataforma de orquestación de IA que consolida el acceso a más de 35 modelos de lenguaje grandes — incluyendo GPT-5.6, Claude, LLaMA, Gemini — en una sola interfaz. La comparación de rendimiento lado a lado ejecuta el mismo prompt en múltiples modelos simultáneamente, permitiendo una selección de modelo basada en datos. Usa un sistema de créditos de pago por uso llamado TOKN. Afirma una reducción de costes del 98% frente a mantener múltiples suscripciones.',
           ],
         },
         comparativeTable: {
@@ -21243,9 +21243,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Groupe 4 : Bibliothèques de prompts et plateformes communautaires',
           content: 'Les bibliothèques et places de marché de prompts proposent des prompts prêts à l\'emploi et des modèles testés par la communauté.',
           items: [
-            'PromptBase (promptbase.com) : Place de marché de prompts testés professionnellement, généralement à $4—5+ pièce, avec un constructeur d\'applications sans code.',
-            'AIPRM (aiprm.com) : Ajoute une bibliothèque de prompts communautaire directement dans ChatGPT via une extension de navigateur, avec modèle freemium.',
-            'FlowGPT (flowgpt.com) : Plateforme communautaire pour découvrir, partager et tester des prompts, également avec accès freemium.',
+            'PromptBase ([promptbase.com](https://promptbase.com)) : Place de marché de prompts testés professionnellement, généralement à $4—5+ pièce, avec un constructeur d\'applications sans code.',
+            'AIPRM ([aiprm.com](https://aiprm.com)) : Ajoute une bibliothèque de prompts communautaire directement dans ChatGPT via une extension de navigateur, avec modèle freemium.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)) : Plateforme communautaire pour découvrir, partager et tester des prompts, également avec accès freemium.',
           ],
         },
         group5: {
@@ -21253,14 +21253,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'Les frameworks open source permettent aux développeurs de créer des pipelines d\'optimisation automatisée de prompts.',
           items: [
             'DSPy (Stanford NLP) : Transforme l\'ingénierie de prompts en processus programmatique. Les développeurs déclarent des signatures d\'entrée/sortie et des objectifs de qualité. Les optimiseurs DSPy (MIPROv2, GEPA) recherchent automatiquement les variantes de prompts pour maximiser les performances sur un jeu de données. Les benchmarks montrent que les petits modèles avec DSPy peuvent égaler ou surpasser les configurations GPT-3.5. Licence Apache 2.0.',
-            'DSPyLab (dspylab.com) : Enveloppe DSPy dans une interface web sans code. Génère jusqu\'à 5 variantes de prompts avec différentes températures, les évalue avec LLM-as-Judge et sélectionne automatiquement la meilleure. Tarifs : 5$ de crédits à l\'inscription ; 20$ de crédits par mois sur le plan de base.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)) : Enveloppe DSPy dans une interface web sans code. Génère jusqu\'à 5 variantes de prompts avec différentes températures, les évalue avec LLM-as-Judge et sélectionne automatiquement la meilleure. Tarifs : 5$ de crédits à l\'inscription ; 20$ de crédits par mois sur le plan de base.',
           ],
         },
         group6: {
           title: 'Groupe 6 : Plateformes de comparaison multi-modèles',
           content: 'Les plateformes de comparaison multi-modèles permettent aux utilisateurs d\'exécuter le même prompt sur plusieurs modèles IA simultanément pour comparer qualité, coût et vitesse.',
           items: [
-            'Prompts.ai (prompts.ai) : Plateforme d\'orchestration IA consolidant l\'accès à 35+ grands modèles de langage — dont GPT-5.6, Claude, LLaMA, Gemini — dans une seule interface. La comparaison de performances côte à côte exécute le même prompt sur plusieurs modèles simultanément, permettant une sélection de modèles basée sur les données. Utilise un système de crédits TOKN à la demande. Revendique 98 % de réduction des coûts par rapport à plusieurs abonnements.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)) : Plateforme d\'orchestration IA consolidant l\'accès à 35+ grands modèles de langage — dont GPT-5.6, Claude, LLaMA, Gemini — dans une seule interface. La comparaison de performances côte à côte exécute le même prompt sur plusieurs modèles simultanément, permettant une sélection de modèles basée sur les données. Utilise un système de crédits TOKN à la demande. Revendique 98 % de réduction des coûts par rapport à plusieurs abonnements.',
           ],
         },
         comparativeTable: {
@@ -22002,9 +22002,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Grupo 4: Bibliotecas de Prompts e Plataformas Comunitárias',
           content: 'As bibliotecas e marketplaces de prompts fornecem prompts prontos para uso e modelos testados pela comunidade.',
           items: [
-            'PromptBase (promptbase.com): Marketplace de prompts testados profissionalmente, geralmente a $4-5+ cada, com um construtor de aplicativos sem código para criar mini-aplicações.',
-            'AIPRM (aiprm.com): Adiciona uma biblioteca de prompts comunitária diretamente dentro do ChatGPT via extensão do navegador, usando modelo freemium.',
-            'FlowGPT (flowgpt.com): Plataforma comunitária para descobrir, compartilhar e testar prompts, também com acesso freemium.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): Marketplace de prompts testados profissionalmente, geralmente a $4-5+ cada, com um construtor de aplicativos sem código para criar mini-aplicações.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): Adiciona uma biblioteca de prompts comunitária diretamente dentro do ChatGPT via extensão do navegador, usando modelo freemium.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): Plataforma comunitária para descobrir, compartilhar e testar prompts, também com acesso freemium.',
           ],
         },
         group5: {
@@ -22012,14 +22012,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: 'Os frameworks de código aberto permitem que desenvolvedores criem pipelines automatizados de otimização de prompts.',
           items: [
             'DSPy (Stanford NLP): Transforma a engenharia de prompts em um processo programático. Os desenvolvedores declaram assinaturas de entrada/saída e objetivos de qualidade. Os otimizadores DSPy (MIPROv2, GEPA) pesquisam automaticamente variantes de prompt para maximizar o desempenho em um conjunto de dados. Benchmarks mostram que modelos menores com DSPy podem igualar ou superar configurações GPT-3.5. Licença Apache 2.0.',
-            'DSPyLab (dspylab.com): Envolve o DSPy em uma interface web sem código. Gera até 5 variantes de prompt usando diferentes temperaturas, avalia-as com LLM-as-Judge e seleciona automaticamente a melhor. Preços: $5 de créditos gratuitos no cadastro; $20 em créditos por mês no plano base.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): Envolve o DSPy em uma interface web sem código. Gera até 5 variantes de prompt usando diferentes temperaturas, avalia-as com LLM-as-Judge e seleciona automaticamente a melhor. Preços: $5 de créditos gratuitos no cadastro; $20 em créditos por mês no plano base.',
           ],
         },
         group6: {
           title: 'Grupo 6: Plataformas de Comparação Multi-Modelo',
           content: 'As plataformas de comparação multi-modelo permitem que os usuários executem o mesmo prompt em múltiplos modelos de IA simultaneamente para comparar qualidade, custo e velocidade.',
           items: [
-            'Prompts.ai (prompts.ai): Plataforma de orquestração de IA que consolida o acesso a 35+ modelos de linguagem de grande porte — incluindo GPT-5.6, Claude, LLaMA, Gemini — em uma única interface. A comparação de desempenho lado a lado executa o mesmo prompt em múltiplos modelos simultaneamente, permitindo a seleção de modelos orientada por dados. Usa um sistema de crédito TOKN de pagamento por uso. Afirma 98% de redução de custos em comparação com a manutenção de múltiplas assinaturas.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): Plataforma de orquestração de IA que consolida o acesso a 35+ modelos de linguagem de grande porte — incluindo GPT-5.6, Claude, LLaMA, Gemini — em uma única interface. A comparação de desempenho lado a lado executa o mesmo prompt em múltiplos modelos simultaneamente, permitindo a seleção de modelos orientada por dados. Usa um sistema de crédito TOKN de pagamento por uso. Afirma 98% de redução de custos em comparação com a manutenção de múltiplas assinaturas.',
           ],
         },
         comparativeTable: {
@@ -22255,9 +22255,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '그룹 4: 프롬프트 라이브러리 및 커뮤니티 플랫폼',
           content: '프롬프트 라이브러리와 마켓플레이스는 기성 프롬프트와 커뮤니티 검증 템플릿을 제공합니다.',
           items: [
-            'PromptBase (promptbase.com): 전문적으로 검증된 프롬프트 마켓플레이스로, 일반적으로 개당 $4~5 이상이며 미니 애플리케이션 제작을 위한 노코드 앱 빌더를 포함합니다.',
-            'AIPRM (aiprm.com): 브라우저 확장 프로그램을 통해 ChatGPT 내에 커뮤니티 프롬프트 라이브러리를 직접 추가하며, 프리미엄 모델을 사용합니다.',
-            'FlowGPT (flowgpt.com): 프롬프트를 발견하고, 공유하고, 테스트하기 위한 커뮤니티 플랫폼으로, 프리미엄 접근도 가능합니다.',
+            'PromptBase ([promptbase.com](https://promptbase.com)): 전문적으로 검증된 프롬프트 마켓플레이스로, 일반적으로 개당 $4~5 이상이며 미니 애플리케이션 제작을 위한 노코드 앱 빌더를 포함합니다.',
+            'AIPRM ([aiprm.com](https://aiprm.com)): 브라우저 확장 프로그램을 통해 ChatGPT 내에 커뮤니티 프롬프트 라이브러리를 직접 추가하며, 프리미엄 모델을 사용합니다.',
+            'FlowGPT ([flowgpt.com](https://flowgpt.com)): 프롬프트를 발견하고, 공유하고, 테스트하기 위한 커뮤니티 플랫폼으로, 프리미엄 접근도 가능합니다.',
           ],
         },
         group5: {
@@ -22265,14 +22265,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: '오픈소스 프레임워크를 통해 개발자는 자동화된 프롬프트 최적화 파이프라인을 구축할 수 있습니다.',
           items: [
             'DSPy (Stanford NLP): 프롬프트 엔지니어링을 프로그래밍 방식의 프로세스로 전환합니다. 개발자가 입출력 시그니처와 품질 목표를 선언하면 DSPy 최적화기(MIPROv2, GEPA)가 데이터셋의 성능을 최대화하기 위해 프롬프트 변형을 자동으로 탐색합니다. 벤치마크에 따르면 DSPy를 활용한 소형 모델이 GPT-3.5 설정과 동등하거나 더 나은 성능을 보일 수 있습니다. Apache 2.0 라이선스.',
-            'DSPyLab (dspylab.com): DSPy를 노코드 웹 UI로 래핑합니다. 다양한 온도 설정으로 최대 5가지 프롬프트 변형을 생성하고 LLM-as-Judge로 평가한 후 자동으로 최선의 것을 선택합니다. 가격: 가입 시 $5 크레딧; 기본 플랜에서 월 $20 크레딧.',
+            'DSPyLab ([dspylab.com](https://dspylab.com)): DSPy를 노코드 웹 UI로 래핑합니다. 다양한 온도 설정으로 최대 5가지 프롬프트 변형을 생성하고 LLM-as-Judge로 평가한 후 자동으로 최선의 것을 선택합니다. 가격: 가입 시 $5 크레딧; 기본 플랜에서 월 $20 크레딧.',
           ],
         },
         group6: {
           title: '그룹 6: 멀티 모델 비교 플랫폼',
           content: '멀티 모델 비교 플랫폼은 사용자가 동일한 프롬프트를 여러 AI 모델에서 동시에 실행하여 품질, 비용, 속도를 비교할 수 있게 합니다.',
           items: [
-            'Prompts.ai (prompts.ai): GPT-5.6, Claude, LLaMA, Gemini를 포함한 35개 이상의 대형 언어 모델에 대한 접근을 단일 인터페이스로 통합하는 AI 오케스트레이션 플랫폼입니다. 나란히 성능 비교 기능으로 동일한 프롬프트를 여러 모델에서 동시에 실행하여 데이터 기반 모델 선택을 가능하게 합니다. 종량제 TOKN 크레딧 시스템을 사용합니다. 다수의 구독 유지 대비 98% 비용 절감을 주장합니다.',
+            'Prompts.ai ([prompts.ai](https://prompts.ai)): GPT-5.6, Claude, LLaMA, Gemini를 포함한 35개 이상의 대형 언어 모델에 대한 접근을 단일 인터페이스로 통합하는 AI 오케스트레이션 플랫폼입니다. 나란히 성능 비교 기능으로 동일한 프롬프트를 여러 모델에서 동시에 실행하여 데이터 기반 모델 선택을 가능하게 합니다. 종량제 TOKN 크레딧 시스템을 사용합니다. 다수의 구독 유지 대비 98% 비용 절감을 주장합니다.',
           ],
         },
         comparativeTable: {

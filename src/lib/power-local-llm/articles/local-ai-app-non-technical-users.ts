@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should a non-technical person install first?',
-        answer: 'The easiest local AI app for non-technical users is **Jan** (jan.ai) — one-click install, no command line, built-in model library. **LM Studio** is the second choice if you want more model control without coding.',
+        answer: 'The easiest local AI app for non-technical users is **Jan** ([jan.ai](https://jan.ai)) — one-click install, no command line, built-in model library. **LM Studio** is the second choice if you want more model control without coding.',
         bullets: [
           '(1) Download Jan from jan.ai, (2) Click \'Download Model\' → select Phi-4-mini, (3) Start chatting. No terminal required.',
           'Jan — best for privacy-conscious beginners; zero telemetry; fully open source.',
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       {
         type: 'plain-terms',
-        text: 'Jan (jan.ai) is the best starting point: install like any app, pick a model from the built-in library, start chatting. No command line, no Python, no configuration.',
+        text: 'Jan ([jan.ai](https://jan.ai)) is the best starting point: install like any app, pick a model from the built-in library, start chatting. No command line, no Python, no configuration.',
       },
     ],
     sections: {

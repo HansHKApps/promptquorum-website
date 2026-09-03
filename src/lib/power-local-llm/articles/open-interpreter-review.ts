@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is Open Interpreter still open-source, and what license does it use now?',
-        answer: 'Yes. Open Interpreter (github.com/openinterpreter/openinterpreter) is Apache 2.0 licensed as of this review, a change from its original AGPL 3.0 license. The project was rewritten in Rust as a fork of OpenAI\'s open-source Codex, positioned as a coding agent for open models like Kimi K3, DeepSeek, Qwen, and GLM/Z.AI.',
+        answer: 'Yes. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) is Apache 2.0 licensed as of this review, a change from its original AGPL 3.0 license. The project was rewritten in Rust as a fork of OpenAI\'s open-source Codex, positioned as a coding agent for open models like Kimi K3, DeepSeek, Qwen, and GLM/Z.AI.',
         bullets: [
           'License: Apache 2.0 (confirmed via GitHub API and the repo LICENSE file) — changed from AGPL 3.0',
           '68,227 stars, 5,871 forks, 10 open issues, last pushed 2026-08-20',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Open Interpreter noch Open Source, und welche Lizenz gilt jetzt?',
-        answer: 'Ja. Open Interpreter (github.com/openinterpreter/openinterpreter) ist zum Zeitpunkt dieses Tests unter Apache 2.0 lizenziert — eine Änderung gegenüber der ursprünglichen AGPL-3.0-Lizenz. Das Projekt wurde in Rust als Fork von OpenAIs Open-Source-Codex neu geschrieben und positioniert sich als Coding-Agent für offene Modelle wie Kimi K3, DeepSeek, Qwen und GLM/Z.AI.',
+        answer: 'Ja. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) ist zum Zeitpunkt dieses Tests unter Apache 2.0 lizenziert — eine Änderung gegenüber der ursprünglichen AGPL-3.0-Lizenz. Das Projekt wurde in Rust als Fork von OpenAIs Open-Source-Codex neu geschrieben und positioniert sich als Coding-Agent für offene Modelle wie Kimi K3, DeepSeek, Qwen und GLM/Z.AI.',
         bullets: [
           'Lizenz: Apache 2.0 (bestätigt über die GitHub-API und die LICENSE-Datei im Repository) — geändert von AGPL 3.0',
           '68.227 Sterne, 5.871 Forks, 10 offene Issues, letzter Push am 2026-08-20',
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Open Interpreter est-il toujours open source, et quelle licence utilise-t-il maintenant ?',
-        answer: 'Oui. Open Interpreter (github.com/openinterpreter/openinterpreter) est sous licence Apache 2.0 au moment de cette revue, un changement par rapport à sa licence AGPL 3.0 d\'origine. Le projet a été réécrit en Rust en tant que fork du Codex open source d\'OpenAI, positionné comme agent de codage pour des modèles ouverts comme Kimi K3, DeepSeek, Qwen et GLM/Z.AI.',
+        answer: 'Oui. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) est sous licence Apache 2.0 au moment de cette revue, un changement par rapport à sa licence AGPL 3.0 d\'origine. Le projet a été réécrit en Rust en tant que fork du Codex open source d\'OpenAI, positionné comme agent de codage pour des modèles ouverts comme Kimi K3, DeepSeek, Qwen et GLM/Z.AI.',
         bullets: [
           'Licence : Apache 2.0 (confirmée via l\'API GitHub et le fichier LICENSE du dépôt) — changée depuis AGPL 3.0',
           '68 227 étoiles, 5 871 forks, 10 issues ouvertes, dernier push le 2026-08-20',
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Open Interpreter sigue siendo de código abierto, y qué licencia usa ahora?',
-        answer: 'Sí. Open Interpreter (github.com/openinterpreter/openinterpreter) está bajo licencia Apache 2.0 al momento de esta reseña, un cambio respecto a su licencia AGPL 3.0 original. El proyecto se reescribió en Rust como bifurcación del Codex de código abierto de OpenAI, posicionado como agente de código para modelos abiertos como Kimi K3, DeepSeek, Qwen y GLM/Z.AI.',
+        answer: 'Sí. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) está bajo licencia Apache 2.0 al momento de esta reseña, un cambio respecto a su licencia AGPL 3.0 original. El proyecto se reescribió en Rust como bifurcación del Codex de código abierto de OpenAI, posicionado como agente de código para modelos abiertos como Kimi K3, DeepSeek, Qwen y GLM/Z.AI.',
         bullets: [
           'Licencia: Apache 2.0 (confirmada vía la API de GitHub y el archivo LICENSE del repositorio) — cambiada desde AGPL 3.0',
           '68.227 estrellas, 5.871 forks, 10 issues abiertos, último push el 2026-08-20',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O Open Interpreter ainda é código aberto, e qual licença ele usa agora?',
-        answer: 'Sim. O Open Interpreter (github.com/openinterpreter/openinterpreter) está sob licença Apache 2.0 no momento desta análise, uma mudança em relação à licença AGPL 3.0 original. O projeto foi reescrito em Rust como um fork do Codex de código aberto da OpenAI, posicionado como agente de código para modelos abertos como Kimi K3, DeepSeek, Qwen e GLM/Z.AI.',
+        answer: 'Sim. O Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) está sob licença Apache 2.0 no momento desta análise, uma mudança em relação à licença AGPL 3.0 original. O projeto foi reescrito em Rust como um fork do Codex de código aberto da OpenAI, posicionado como agente de código para modelos abertos como Kimi K3, DeepSeek, Qwen e GLM/Z.AI.',
         bullets: [
           'Licença: Apache 2.0 (confirmada via API do GitHub e o arquivo LICENSE do repositório) — mudou de AGPL 3.0',
           '68.227 estrelas, 5.871 forks, 10 issues abertas, último push em 2026-08-20',
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'Open Interpreterは今もオープンソースですか、現在のライセンスは何ですか?',
-        answer: 'はい。Open Interpreter(github.com/openinterpreter/openinterpreter)は本レビュー時点でApache 2.0ライセンスであり、元のAGPL 3.0ライセンスからの変更です。プロジェクトはOpenAIのオープンソースCodexのフォークとしてRustで書き直され、Kimi K3、DeepSeek、Qwen、GLM/Z.AIなどのオープンモデル向けコーディングエージェントとして位置づけられています。',
+        answer: 'はい。Open Interpreter([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter))は本レビュー時点でApache 2.0ライセンスであり、元のAGPL 3.0ライセンスからの変更です。プロジェクトはOpenAIのオープンソースCodexのフォークとしてRustで書き直され、Kimi K3、DeepSeek、Qwen、GLM/Z.AIなどのオープンモデル向けコーディングエージェントとして位置づけられています。',
         bullets: [
           'ライセンス:Apache 2.0(GitHub APIとリポジトリのLICENSEファイルで確認済み)——AGPL 3.0から変更',
           'スター68,227、フォーク5,871、オープンissue10件、最終プッシュ2026-08-20',
@@ -1736,7 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل Open Interpreter لا يزال مفتوح المصدر، وما الترخيص المستخدم الآن؟',
-        answer: 'نعم. يخضع Open Interpreter (github.com/openinterpreter/openinterpreter) لترخيص Apache 2.0 وقت كتابة هذه المراجعة، وهو تغيير عن ترخيصه الأصلي AGPL 3.0. أُعيدت كتابة المشروع بلغة Rust كاشتقاق من Codex مفتوح المصدر الخاص بـOpenAI، ويوضع كعميل برمجة للنماذج المفتوحة مثل Kimi K3 وDeepSeek وQwen وGLM/Z.AI.',
+        answer: 'نعم. يخضع Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) لترخيص Apache 2.0 وقت كتابة هذه المراجعة، وهو تغيير عن ترخيصه الأصلي AGPL 3.0. أُعيدت كتابة المشروع بلغة Rust كاشتقاق من Codex مفتوح المصدر الخاص بـOpenAI، ويوضع كعميل برمجة للنماذج المفتوحة مثل Kimi K3 وDeepSeek وQwen وGLM/Z.AI.',
         bullets: [
           'الترخيص: Apache 2.0 (مؤكَّد عبر واجهة برمجة تطبيقات GitHub وملف LICENSE في المستودع) — تغيّر عن AGPL 3.0',
           '68,227 نجمة، 5,871 فرعًا (forks)، 10 مشكلات مفتوحة، آخر دفع (push) في 2026-08-20',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Open Interpreter는 여전히 오픈소스인가요, 지금은 어떤 라이선스를 사용하나요?',
-        answer: '네. Open Interpreter(github.com/openinterpreter/openinterpreter)는 이 리뷰 시점 기준 Apache 2.0 라이선스이며, 원래의 AGPL 3.0 라이선스에서 변경된 것입니다. 이 프로젝트는 OpenAI의 오픈소스 Codex를 포크한 형태로 Rust로 다시 작성되었으며, Kimi K3, DeepSeek, Qwen, GLM/Z.AI 같은 오픈 모델을 위한 코딩 에이전트로 자리매김하고 있습니다.',
+        answer: '네. Open Interpreter([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter))는 이 리뷰 시점 기준 Apache 2.0 라이선스이며, 원래의 AGPL 3.0 라이선스에서 변경된 것입니다. 이 프로젝트는 OpenAI의 오픈소스 Codex를 포크한 형태로 Rust로 다시 작성되었으며, Kimi K3, DeepSeek, Qwen, GLM/Z.AI 같은 오픈 모델을 위한 코딩 에이전트로 자리매김하고 있습니다.',
         bullets: [
           '라이선스: Apache 2.0(GitHub API와 저장소 LICENSE 파일로 확인) — AGPL 3.0에서 변경',
           '스타 68,227개, 포크 5,871개, 열린 이슈 10건, 최종 푸시 2026-08-20',

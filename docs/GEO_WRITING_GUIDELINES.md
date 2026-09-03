@@ -2846,6 +2846,39 @@ quickAnswerTop: {
 
 ---
 
+### Rule 44: Every URL Mentioned in Body Text Must Be a Clickable Link (Mandatory)
+
+**If a domain, URL, or `site.com`-style reference appears anywhere in reader-facing prose, it must be a markdown link — never bare text.** A reader cannot tap or click a plain-text domain name; it reads as a link but does nothing, which is a broken affordance, not a stylistic choice.
+
+**Wrong:**
+- ❌ "Cherry Studio (cherry-ai.com) is a free, open-source desktop app."
+- ❌ "See msty.ai/go for details."
+- ❌ "Available at github.com/mindverse/Second-Me."
+
+**Correct:**
+- ✅ "Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) is a free, open-source desktop app."
+- ✅ "See [msty.ai/go](https://msty.ai/go) for details."
+- ✅ "Available at [github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)."
+
+**Applies to every field that renders as reader-facing text**: `content`, `items`, `bullets`, `faqs[].a`, `note`, `callouts[].text`, `snippetBlocks[].text`, table `rows` cells, `relatedReading` items (these are typically already links — check them too), and any other prose field. It does **not** apply to `Link` columns in directory-style tables (`local-llm-software-directory-2026.ts` and similar) that already use the `[label](url)` pattern by design, or to raw URLs inside JSON-LD/schema objects, `url:` fields, or code examples — those are machine-readable, not reader-facing prose.
+
+**Internal links**: use a relative path, not the full domain — `[Best GPUs 2026](/local-llms/best-gpus-local-llm)`, not `[Best GPUs 2026](https://promptquorum.com/local-llms/best-gpus-local-llm)`.
+
+**External links**: use the full `https://` URL as the link target, with the visible label kept short — the bare domain or `domain.com/path` a reader would recognize, not the full URL string as the label:
+- ✅ `[cherry-ai.com](https://cherry-ai.com)`
+- ❌ `[https://cherry-ai.com](https://cherry-ai.com)` (redundant, harder to scan)
+
+**Why this matters:** A bare domain name in prose looks identical to a link at a glance — readers try to tap it and nothing happens. This was found live on `cherry-studio-ai-desktop-client-2026.ts`'s TL;DR ("Cherry Studio (cherry-ai.com)") and is very likely present across many older articles written before this rule existed.
+
+#### Compliance Checklist
+
+- `[ ]` No bare `domain.com`, `domain.com/path`, or `www.domain.com` string appears in any reader-facing prose field
+- `[ ]` Every such reference is wrapped as `[label](https://full-url)`
+- `[ ]` Internal links use relative paths (`/cluster/slug`), not the full domain
+- `[ ]` External link labels are short (bare domain or `domain.com/path`), not the full URL repeated as the label
+
+---
+
 ## Freshness Tier Classification (Mandatory for All Articles)
 
 Every article on PromptQuorum must be classified into **exactly one** of three freshness tiers. This classification determines how often content is updated, whether it appears in search results for year-specific queries, and how long it remains authoritative.

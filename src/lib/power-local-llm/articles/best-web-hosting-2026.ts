@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LWS](https://www.lws.fr/) — vérifié directement sur lws.fr, 30/08/2026 : 1,49€/mois d\'appel (1ère année), 3,99€/mois au renouvellement.',
           '[Infomaniak](https://www.infomaniak.com/) — vérifié directement sur infomaniak.com, 30/08/2026 : 10,91 CHF/mois en tarif catalogue standard, essai gratuit 30 jours, pas de saut au renouvellement.',
           '[Hostinger](https://www.hostinger.com/) — vérifié directement sur hostinger.com, 30/08/2026 : 2,99$/mois d\'appel (prépaiement 48 mois, 143,52$ à l\'avance), 10,99$/mois au renouvellement.',
-          'OVHcloud (ovhcloud.com) — mentionné à titre éditorial en tant que marque d\'hébergement française la plus reconnue ; aucun programme d\'affiliation confirmé ouvert au marché français au 30/08/2026 (seul un programme CJ pour le marché américain existe).',
+          'OVHcloud ([ovhcloud.com](https://ovhcloud.com)) — mentionné à titre éditorial en tant que marque d\'hébergement française la plus reconnue ; aucun programme d\'affiliation confirmé ouvert au marché français au 30/08/2026 (seul un programme CJ pour le marché américain existe).',
         ],
       },
       faq: {

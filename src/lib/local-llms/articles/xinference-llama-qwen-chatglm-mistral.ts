@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIs: {
         id: 'what-is-xinference',
         title: 'What Xinference Is and How It Works',
-        content: 'Xinference (github.com/xorbitsai/inference) is an open-source LLM and multimodal model serving framework built by Xorbits. It started as an enterprise inference platform for distributed clusters and was open-sourced in 2023. The core idea: you register a model by name, Xinference downloads the weights, selects the right backend, and exposes a REST API. You never touch model loading code directly.',
+        content: 'Xinference ([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference)) is an open-source LLM and multimodal model serving framework built by Xorbits. It started as an enterprise inference platform for distributed clusters and was open-sourced in 2023. The core idea: you register a model by name, Xinference downloads the weights, selects the right backend, and exposes a REST API. You never touch model loading code directly.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference is an open-source inference server that natively supports Llama 3, Qwen 3, ChatGLM4, Mistral, and 30+ other model families through a single OpenAI-compatible API.' },
           { type: 'plain-terms', text: 'Think of Xinference as a switchboard for local AI models. You tell it which model to load by name, it downloads and starts it, and your app talks to it the same way it would talk to the OpenAI API — no code changes needed.' },
@@ -502,7 +502,7 @@ print(embedding.data[0].embedding[:5])`,
       whatIs: {
         id: 'what-is-xinference',
         title: 'Qué es Xinference y cómo funciona',
-        content: 'Xinference (github.com/xorbitsai/inference) es un framework de código abierto para servir modelos LLM y multimodales, desarrollado por Xorbits. Comenzó como una plataforma de inferencia empresarial para clústeres distribuidos y fue publicado como código abierto en 2023. La idea central: registras un modelo por nombre, Xinference descarga los pesos, selecciona el backend adecuado y expone una API REST. Nunca tienes que tocar el código de carga de modelos directamente.',
+        content: 'Xinference ([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference)) es un framework de código abierto para servir modelos LLM y multimodales, desarrollado por Xorbits. Comenzó como una plataforma de inferencia empresarial para clústeres distribuidos y fue publicado como código abierto en 2023. La idea central: registras un modelo por nombre, Xinference descarga los pesos, selecciona el backend adecuado y expone una API REST. Nunca tienes que tocar el código de carga de modelos directamente.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference es un servidor de inferencia de código abierto que soporta de forma nativa Llama 3, Qwen 3, ChatGLM4, Mistral y más de 30 familias de modelos a través de una única API compatible con OpenAI.' },
           { type: 'plain-terms', text: 'Piensa en Xinference como una centralita para modelos de IA locales. Le dices qué modelo cargar por nombre, lo descarga y lo inicia, y tu aplicación se comunica con él de la misma forma que con la API de OpenAI — sin cambios de código.' },
@@ -932,7 +932,7 @@ print(embedding.data[0].embedding[:5])`,
       whatIs: {
         id: 'what-is-xinference',
         title: 'ما هو Xinference وكيف يعمل',
-        content: 'Xinference (github.com/xorbitsai/inference) هو إطار مفتوح المصدر لتقديم نماذج LLM والنماذج متعددة الوسائط، طوّرته Xorbits. بدأ كمنصة استدلال مؤسسية للعناقيد الموزّعة ونُشر كمصدر مفتوح في 2023. الفكرة الأساسية: تسجّل نموذجًا بالاسم، فينزّل Xinference الأوزان، ويختار الخلفية المناسبة، ويعرض واجهة REST API. لا تضطر أبدًا إلى لمس شيفرة تحميل النموذج مباشرة.',
+        content: 'Xinference ([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference)) هو إطار مفتوح المصدر لتقديم نماذج LLM والنماذج متعددة الوسائط، طوّرته Xorbits. بدأ كمنصة استدلال مؤسسية للعناقيد الموزّعة ونُشر كمصدر مفتوح في 2023. الفكرة الأساسية: تسجّل نموذجًا بالاسم، فينزّل Xinference الأوزان، ويختار الخلفية المناسبة، ويعرض واجهة REST API. لا تضطر أبدًا إلى لمس شيفرة تحميل النموذج مباشرة.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference هو خادم استدلال مفتوح المصدر يدعم أصليًا Llama 3 وQwen 3 وChatGLM4 وMistral وأكثر من 30 عائلة نماذج عبر واجهة API واحدة متوافقة مع OpenAI.' },
           { type: 'plain-terms', text: 'فكّر في Xinference كلوحة تحكم لنماذج الذكاء الاصطناعي المحلية. تخبره بأي نموذج يحمّل بالاسم، فيُنزّله ويبدأه، ويتواصل تطبيقك معه بالطريقة نفسها التي يتواصل بها مع واجهة API الخاصة بـ OpenAI — بلا تغييرات في الشيفرة.' },
@@ -1477,7 +1477,7 @@ print(embedding.data[0].embedding[:5])`,
       whatIs: {
         id: 'what-is-xinference',
         title: 'Was Xinference ist und wie es funktioniert',
-        content: 'Xinference (github.com/xorbitsai/inference) ist ein Open-Source-Framework für LLM- und multimodale Modellbereitstellung von Xorbits. Es wurde als Enterprise-Inferenzplattform für verteilte Cluster entwickelt und 2023 als Open Source veröffentlicht. Kernidee: Du registrierst ein Modell nach Name, Xinference lädt die Gewichte herunter, wählt das richtige Backend und stellt eine REST-API bereit.',
+        content: 'Xinference ([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference)) ist ein Open-Source-Framework für LLM- und multimodale Modellbereitstellung von Xorbits. Es wurde als Enterprise-Inferenzplattform für verteilte Cluster entwickelt und 2023 als Open Source veröffentlicht. Kernidee: Du registrierst ein Modell nach Name, Xinference lädt die Gewichte herunter, wählt das richtige Backend und stellt eine REST-API bereit.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference ist ein Open-Source-Inferenz-Server, der Llama 3, Qwen 3, ChatGLM4, Mistral und über 30 weitere Modellfamilien nativ über eine einzige OpenAI-kompatible API unterstützt.' },
           { type: 'plain-terms', text: 'Stell dir Xinference als eine Vermittlungsstelle für lokale KI-Modelle vor. Du sagst ihr, welches Modell geladen werden soll, sie lädt es herunter und startet es — deine App kommuniziert damit wie mit der OpenAI-API, ohne Code-Änderungen.' },
@@ -1924,7 +1924,7 @@ print(embedding.data[0].embedding[:5])`,
       whatIs: {
         id: 'what-is-xinference',
         title: 'Ce qu\'est Xinference et comment il fonctionne',
-        content: 'Xinference (github.com/xorbitsai/inference) est un framework open source de service de modèles LLM développé par Xorbits, open-sourcé en 2023. L\'idée centrale : vous enregistrez un modèle par nom, Xinference télécharge les poids, sélectionne le bon backend et expose une API REST. Vous ne touchez jamais directement au code de chargement de modèle. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles (juridique, médical, financier).',
+        content: 'Xinference ([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference)) est un framework open source de service de modèles LLM développé par Xorbits, open-sourcé en 2023. L\'idée centrale : vous enregistrez un modèle par nom, Xinference télécharge les poids, sélectionne le bon backend et expose une API REST. Vous ne touchez jamais directement au code de chargement de modèle. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles (juridique, médical, financier).',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference est un serveur d\'inférence open source qui supporte nativement Llama 3, Qwen 3, ChatGLM4, Mistral et plus de 30 autres familles via une API compatible OpenAI.' },
           { type: 'plain-terms', text: 'Imaginez Xinference comme un standard téléphonique pour les modèles d\'IA locaux. Vous indiquez le nom du modèle, il le télécharge et le démarre, et votre application lui parle comme à l\'API OpenAI — sans modification de code.' },
@@ -3219,7 +3219,7 @@ print(embedding.data[0].embedding[:5])`,
       whatIs: {
         id: 'what-is-xinference',
         title: 'Xinference란 무엇이며 어떻게 작동합니까',
-        content: 'Xinference(github.com/xorbitsai/inference)는 Xorbits가 개발한 오픈소스 LLM 및 멀티모달 모델 서빙 프레임워크입니다. 분산 클러스터용 엔터프라이즈 추론 플랫폼으로 시작하여 2023년에 오픈소스로 공개되었습니다. 핵심 개념은 다음과 같습니다. 모델 이름으로 등록하면 Xinference가 가중치를 다운로드하고 적절한 백엔드를 선택하여 REST API를 노출합니다. 모델 로딩 코드를 직접 다룰 필요가 없습니다.',
+        content: 'Xinference([github.com/xorbitsai/inference](https://github.com/xorbitsai/inference))는 Xorbits가 개발한 오픈소스 LLM 및 멀티모달 모델 서빙 프레임워크입니다. 분산 클러스터용 엔터프라이즈 추론 플랫폼으로 시작하여 2023년에 오픈소스로 공개되었습니다. 핵심 개념은 다음과 같습니다. 모델 이름으로 등록하면 Xinference가 가중치를 다운로드하고 적절한 백엔드를 선택하여 REST API를 노출합니다. 모델 로딩 코드를 직접 다룰 필요가 없습니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Xinference는 Llama 3, Qwen 3, ChatGLM4, Mistral 및 30개 이상의 모델 패밀리를 단일 OpenAI 호환 API로 기본 지원하는 오픈소스 추론 서버입니다.' },
           { type: 'plain-terms', text: 'Xinference를 로컬 AI 모델용 교환기라고 생각하십시오. 로드할 모델을 이름으로 지정하면 다운로드하여 시작하고, 앱은 OpenAI API와 동일한 방식으로 통신합니다. 코드 변경이 필요하지 않습니다.' },

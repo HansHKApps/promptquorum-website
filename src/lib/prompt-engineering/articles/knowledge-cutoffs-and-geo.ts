@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Model / Product': 'GPT-5.6 (ChatGPT)', 'Search Layer': 'Bing', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Default on for ChatGPT Plus/Pro; off for raw API calls' },
           { 'Model / Product': 'Gemini 3.1 Pro', 'Search Layer': 'Google Search', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Google Grounding API available for Vertex AI developers' },
-          { 'Model / Product': 'Grok 4.6 (X.com)', 'Search Layer': 'X (Twitter)', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Web Search / X Search are opt-in server-side tools via the API; the consumer app searches by default' },
+          { 'Model / Product': 'Grok 4.6 ([X.com](https://X.com))', 'Search Layer': 'X (Twitter)', 'Search Trigger': 'Automatic — model decides', 'Notes': 'Web Search / X Search are opt-in server-side tools via the API; the consumer app searches by default' },
           { 'Model / Product': 'Perplexity', 'Search Layer': 'Multi-source web', 'Search Trigger': 'Always — every query', 'Notes': 'Search-first by design; cites sources' },
           { 'Model / Product': 'Claude (Anthropic)', 'Search Layer': 'Brave / Web (tool)', 'Search Trigger': 'Developer opt-in only', 'Notes': 'Not on by default; requires API tool configuration' },
           { 'Model / Product': 'DeepSeek (cloud)', 'Search Layer': 'None', 'Search Trigger': 'N/A', 'Notes': 'No search layer; cutoff is hard limit' },
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI System': 'ChatGPT (paid)', 'Post-Cutoff Behavior': 'Searches Bing automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Ask it to cite sources; cross-check key claims' },
           { 'AI System': 'Gemini (paid)', 'Post-Cutoff Behavior': 'Searches Google automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Enable grounding; review cited URLs' },
-          { 'AI System': 'Grok (X.com)', 'Post-Cutoff Behavior': 'Searches X posts automatically', 'Reliability for Current Info': 'Good for social trends; uneven for facts', 'How to Improve': 'Use DeepSearch for deeper web coverage' },
+          { 'AI System': 'Grok ([X.com](https://X.com))', 'Post-Cutoff Behavior': 'Searches X posts automatically', 'Reliability for Current Info': 'Good for social trends; uneven for facts', 'How to Improve': 'Use DeepSearch for deeper web coverage' },
           { 'AI System': 'Claude (free/pro)', 'Post-Cutoff Behavior': 'Uses training data only by default', 'Reliability for Current Info': 'Moderate — May 2026 reliable cutoff', 'How to Improve': 'Paste current text into context; API users can enable search tool' },
           { 'AI System': 'Perplexity', 'Post-Cutoff Behavior': 'Always searches web first', 'Reliability for Current Info': 'High — search-native product', 'How to Improve': 'Already cites sources by design' },
           { 'AI System': 'Any local LLM', 'Post-Cutoff Behavior': 'Uses training data only — no override', 'Reliability for Current Info': 'Very low for post-cutoff topics', 'How to Improve': 'Build RAG pipeline; paste context manually' },
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { '모델 / 제품': 'GPT-5.6 (ChatGPT)', '검색 레이어': 'Bing', '검색 트리거': '자동 — 모델이 결정', '참고': 'ChatGPT Plus/Pro에서 기본 켜짐; 원시 API 호출에서는 꺼짐' },
           { '모델 / 제품': 'Gemini 3.1 Pro', '검색 레이어': 'Google 검색', '검색 트리거': '자동 — 모델이 결정', '참고': 'Vertex AI 개발자를 위한 Google Grounding API 제공' },
-          { '모델 / 제품': 'Grok 4.6 (X.com)', '검색 레이어': 'X (Twitter)', '검색 트리거': '자동 — 모델이 결정', '참고': 'API는 Web Search/X Search를 명시적으로 활성화해야 하는 선택적 도구; 소비자용 앱은 기본 검색' },
+          { '모델 / 제품': 'Grok 4.6 ([X.com](https://X.com))', '검색 레이어': 'X (Twitter)', '검색 트리거': '자동 — 모델이 결정', '참고': 'API는 Web Search/X Search를 명시적으로 활성화해야 하는 선택적 도구; 소비자용 앱은 기본 검색' },
           { '모델 / 제품': 'Perplexity', '검색 레이어': '멀티소스 웹', '검색 트리거': '항상 — 모든 쿼리', '참고': '설계상 검색 우선; 출처 인용' },
           { '모델 / 제품': 'Claude (Anthropic)', '검색 레이어': 'Brave / 웹 (도구)', '검색 트리거': '개발자 옵트인만', '참고': '기본 꺼짐; API 도구 구성 필요' },
           { '모델 / 제품': 'DeepSeek (클라우드)', '검색 레이어': '없음', '검색 트리거': '해당 없음', '참고': '검색 레이어 없음; 마감 날짜가 경성 한계' },
@@ -714,7 +714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI 시스템': 'ChatGPT (유료)', '마감 후 동작': '자동으로 Bing 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '출처 인용 요청; 주요 주장 교차 확인' },
           { 'AI 시스템': 'Gemini (유료)', '마감 후 동작': '자동으로 Google 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '그라운딩 활성화; 인용된 URL 검토' },
-          { 'AI 시스템': 'Grok (X.com)', '마감 후 동작': '자동으로 X 게시물 검색', '현재 정보 신뢰도': '소셜 트렌드에 좋음; 사실은 고르지 않음', '개선 방법': '더 깊은 웹 커버리지를 위해 DeepSearch 사용' },
+          { 'AI 시스템': 'Grok ([X.com](https://X.com))', '마감 후 동작': '자동으로 X 게시물 검색', '현재 정보 신뢰도': '소셜 트렌드에 좋음; 사실은 고르지 않음', '개선 방법': '더 깊은 웹 커버리지를 위해 DeepSearch 사용' },
           { 'AI 시스템': 'Claude (무료/프로)', '마감 후 동작': '기본적으로 학습 데이터만 사용', '현재 정보 신뢰도': '중간 — 2026년 5월 신뢰할 수 있는 마감', '개선 방법': '현재 텍스트를 컨텍스트에 붙여넣기; API 사용자는 검색 도구 활성화 가능' },
           { 'AI 시스템': 'Perplexity', '마감 후 동작': '항상 먼저 웹 검색', '현재 정보 신뢰도': '높음 — 검색 네이티브 제품', '개선 방법': '설계상 이미 출처 인용' },
           { 'AI 시스템': '모든 로컬 LLM', '마감 후 동작': '학습 데이터만 사용 — 재정의 없음', '현재 정보 신뢰도': '마감 후 주제에서 매우 낮음', '개선 방법': 'RAG 파이프라인 구축; 수동으로 컨텍스트 붙여넣기' },
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Modelo / Produto': 'GPT-5.6 (ChatGPT)', 'Camada de busca': 'Bing', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'Ativado por padrão no ChatGPT Plus/Pro; desativado em chamadas brutas de API' },
           { 'Modelo / Produto': 'Gemini 3.1 Pro', 'Camada de busca': 'Google Search', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'Google Grounding API disponível para desenvolvedores no Vertex AI' },
-          { 'Modelo / Produto': 'Grok 4.6 (X.com)', 'Camada de busca': 'X (Twitter)', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'A API exige ativação explícita de Web Search/X Search; o app para consumidores busca por padrão' },
+          { 'Modelo / Produto': 'Grok 4.6 ([X.com](https://X.com))', 'Camada de busca': 'X (Twitter)', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'A API exige ativação explícita de Web Search/X Search; o app para consumidores busca por padrão' },
           { 'Modelo / Produto': 'Perplexity', 'Camada de busca': 'Web multi-fonte', 'Gatilho de busca': 'Sempre — em cada consulta', 'Observação': 'Busca-first por design; cita fontes' },
           { 'Modelo / Produto': 'Claude (Anthropic)', 'Camada de busca': 'Brave / web (ferramenta)', 'Gatilho de busca': 'Opt-in de desenvolvedor apenas', 'Observação': 'Desativado por padrão; requer configuração de ferramentas na API' },
           { 'Modelo / Produto': 'DeepSeek (nuvem)', 'Camada de busca': 'Nenhuma', 'Gatilho de busca': 'N/A', 'Observação': 'Sem camada de busca; data de corte é limite rígido' },
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Sistema de IA': 'ChatGPT (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Bing', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Peça citações de fontes; verifique afirmações principais' },
           { 'Sistema de IA': 'Gemini (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Google', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Ative grounding; revise URLs citadas' },
-          { 'Sistema de IA': 'Grok (X.com)', 'Comportamento pós-corte': 'Busca automaticamente posts do X', 'Confiabilidade de informações atuais': 'Bom para tendências sociais; irregular para fatos', 'Como melhorar': 'Use DeepSearch para cobertura web mais ampla' },
+          { 'Sistema de IA': 'Grok ([X.com](https://X.com))', 'Comportamento pós-corte': 'Busca automaticamente posts do X', 'Confiabilidade de informações atuais': 'Bom para tendências sociais; irregular para fatos', 'Como melhorar': 'Use DeepSearch para cobertura web mais ampla' },
           { 'Sistema de IA': 'Claude (gratuito/pro)', 'Comportamento pós-corte': 'Usa apenas dados de treinamento por padrão', 'Confiabilidade de informações atuais': 'Média — corte confiável em maio 2026', 'Como melhorar': 'Cole texto atual no contexto; usuários de API podem ativar ferramenta de busca' },
           { 'Sistema de IA': 'Perplexity', 'Comportamento pós-corte': 'Sempre busca na web primeiro', 'Confiabilidade de informações atuais': 'Alta — produto nativo de busca', 'Como melhorar': 'Já cita fontes por design' },
           { 'Sistema de IA': 'Todos os LLMs locais', 'Comportamento pós-corte': 'Apenas dados de treinamento — sem substituição', 'Confiabilidade de informações atuais': 'Muito baixa para tópicos pós-corte', 'Como melhorar': 'Construa pipeline RAG; cole contexto manualmente' },
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'モデル / 製品': 'GPT-5.6 (ChatGPT)', '検索レイヤー': 'Bing', '検索トリガー': '自動 — モデルが判断', '備考': 'ChatGPT Plus/Proではデフォルトオン；生のAPI呼び出しではオフ' },
           { 'モデル / 製品': 'Gemini 3.1 Pro', '検索レイヤー': 'Google検索', '検索トリガー': '自動 — モデルが判断', '備考': 'Vertex AI開発者向けのGoogle Grounding APIが利用可能' },
-          { 'モデル / 製品': 'Grok 4.6 (X.com)', '検索レイヤー': 'X (Twitter)', '検索トリガー': '自動 — モデルが判断', '備考': 'APIではWeb Search/X Searchの明示的な有効化が必要；コンシューマー向けアプリはデフォルトで検索' },
+          { 'モデル / 製品': 'Grok 4.6 ([X.com](https://X.com))', '検索レイヤー': 'X (Twitter)', '検索トリガー': '自動 — モデルが判断', '備考': 'APIではWeb Search/X Searchの明示的な有効化が必要；コンシューマー向けアプリはデフォルトで検索' },
           { 'モデル / 製品': 'Perplexity', '検索レイヤー': 'マルチソースウェブ', '検索トリガー': '常時 — すべてのクエリ', '備考': '設計上、検索ファースト；ソースを引用' },
           { 'モデル / 製品': 'Claude (Anthropic)', '検索レイヤー': 'Brave / ウェブ（ツール）', '検索トリガー': '開発者オプトインのみ', '備考': 'デフォルトはオフ；APIツール設定が必要' },
           { 'モデル / 製品': 'DeepSeek（クラウド）', '検索レイヤー': 'なし', '検索トリガー': 'N/A', '備考': '検索レイヤーなし；カットオフがハード制限' },
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AIシステム': 'ChatGPT（有料）', 'カットオフ後の動作': '自動でBingを検索', '現在情報の信頼性': '事実は高い；ニュアンスは低い', '改善方法': 'ソースの引用を求める；重要な主張をクロスチェック' },
           { 'AIシステム': 'Gemini（有料）', 'カットオフ後の動作': '自動でGoogle検索', '現在情報の信頼性': '事実は高い；ニュアンスは低い', '改善方法': 'グラウンディングを有効にする；引用URLを確認' },
-          { 'AIシステム': 'Grok (X.com)', 'カットオフ後の動作': '自動でXの投稿を検索', '現在情報の信頼性': 'ソーシャルトレンドには良い；事実はムラがある', '改善方法': 'より深いウェブカバレッジにはDeepSearchを使用' },
+          { 'AIシステム': 'Grok ([X.com](https://X.com))', 'カットオフ後の動作': '自動でXの投稿を検索', '現在情報の信頼性': 'ソーシャルトレンドには良い；事実はムラがある', '改善方法': 'より深いウェブカバレッジにはDeepSearchを使用' },
           { 'AIシステム': 'Claude（無料/プロ）', 'カットオフ後の動作': 'デフォルトでは学習データのみ使用', '現在情報の信頼性': '中程度 — 2026年5月の信頼性の高いカットオフ', '改善方法': '現在のテキストをコンテキストに貼り付ける；APIユーザーは検索ツールを有効化可能' },
           { 'AIシステム': 'Perplexity', 'カットオフ後の動作': '常にまずウェブを検索', '現在情報の信頼性': '高い — 検索ネイティブ製品', '改善方法': 'すでに設計上ソースを引用している' },
           { 'AIシステム': 'すべてのローカルLLM', 'カットオフ後の動作': '学習データのみ使用 — 上書き不可', '現在情報の信頼性': 'カットオフ後のトピックでは非常に低い', '改善方法': 'RAGパイプラインを構築；手動でコンテキストを貼り付ける' },
@@ -1786,7 +1786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'النموذج / المنتج': 'GPT-5.6 (ChatGPT)', 'طبقة البحث': 'Bing', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'مفعّل افتراضيًا في ChatGPT Plus/Pro؛ مطفأ في API المباشر' },
           { 'النموذج / المنتج': 'Gemini 3.1 Pro', 'طبقة البحث': 'Google Search', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'Google Grounding API للمطورين' },
-          { 'النموذج / المنتج': 'Grok 4.6 (X.com)', 'طبقة البحث': 'X (Twitter)', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'واجهة البرمجة تتطلب تفعيلًا صريحًا لأدوات Web Search/X Search؛ تطبيق المستهلكين يبحث افتراضيًا' },
+          { 'النموذج / المنتج': 'Grok 4.6 ([X.com](https://X.com))', 'طبقة البحث': 'X (Twitter)', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'واجهة البرمجة تتطلب تفعيلًا صريحًا لأدوات Web Search/X Search؛ تطبيق المستهلكين يبحث افتراضيًا' },
           { 'النموذج / المنتج': 'Perplexity', 'طبقة البحث': 'ويب متعدد المصادر', 'محفّز البحث': 'دائمًا — في كل استعلام', 'ملاحظة': 'بحث-أولًا بالتصميم؛ يستشهد بالمصادر' },
           { 'النموذج / المنتج': 'Claude (Anthropic)', 'طبقة البحث': 'Brave / ويب (أداة)', 'محفّز البحث': 'اختياري للمطور فقط', 'ملاحظة': 'مطفأ افتراضيًا؛ يتطلب تكوين أدوات API' },
           { 'النموذج / المنتج': 'DeepSeek (سحابة)', 'طبقة البحث': 'لا شيء', 'محفّز البحث': 'لا ينطبق', 'ملاحظة': 'بلا طبقة بحث؛ تاريخ الانقطاع حد صلب' },
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'نظام الذكاء الاصطناعي': 'ChatGPT (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Bing', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'اطلب استشهادات بالمصادر؛ تحقق من الادعاءات الرئيسية' },
           { 'نظام الذكاء الاصطناعي': 'Gemini (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Google', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'فعّل التأريض؛ راجع روابط URL المستشهد بها' },
-          { 'نظام الذكاء الاصطناعي': 'Grok (X.com)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في منشورات X', 'موثوقية المعلومات الحالية': 'جيد للاتجاهات الاجتماعية؛ غير منتظم للحقائق', 'كيفية التحسين': 'استخدم DeepSearch لتغطية أوسع' },
+          { 'نظام الذكاء الاصطناعي': 'Grok ([X.com](https://X.com))', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في منشورات X', 'موثوقية المعلومات الحالية': 'جيد للاتجاهات الاجتماعية؛ غير منتظم للحقائق', 'كيفية التحسين': 'استخدم DeepSearch لتغطية أوسع' },
           { 'نظام الذكاء الاصطناعي': 'Claude (مجاني/برو)', 'السلوك بعد الانقطاع': 'يستخدم بيانات التدريب فقط افتراضيًا', 'موثوقية المعلومات الحالية': 'متوسط — انقطاع موثوق مايو 2026', 'كيفية التحسين': 'الصق النص الحالي في السياق' },
           { 'نظام الذكاء الاصطناعي': 'Perplexity', 'السلوك بعد الانقطاع': 'يبحث على الويب دائمًا أولًا', 'موثوقية المعلومات الحالية': 'عالية — منتج بحث أصيل', 'كيفية التحسين': 'يستشهد بالمصادر بالتصميم بالفعل' },
           { 'نظام الذكاء الاصطناعي': 'جميع نماذج LLM المحلية', 'السلوك بعد الانقطاع': 'بيانات تدريب فقط — بلا تجاوز', 'موثوقية المعلومات الحالية': 'منخفضة جدًا للمواضيع بعد الانقطاع', 'كيفية التحسين': 'ابنِ خط أنابيب RAG؛ الصق السياق يدويًا' },
@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Modèle / Produit': 'GPT-5.6 (ChatGPT)', 'Couche de recherche': 'Bing', 'Déclencheur': 'Automatique — le modèle décide', 'Notes': 'Activé par défaut pour ChatGPT Plus/Pro ; désactivé pour les appels API bruts' },
           { 'Modèle / Produit': 'Gemini 3.1 Pro', 'Couche de recherche': 'Google Search', 'Déclencheur': 'Automatique — le modèle décide', 'Notes': 'API Google Grounding disponible pour les développeurs Vertex AI' },
-          { 'Modèle / Produit': 'Grok 4.6 (X.com)', 'Couche de recherche': 'X (Twitter)', 'Déclencheur': 'Automatique — le modèle décide', 'Notes': 'L\'API exige une activation explicite de Web Search/X Search ; l\'app grand public recherche par défaut' },
+          { 'Modèle / Produit': 'Grok 4.6 ([X.com](https://X.com))', 'Couche de recherche': 'X (Twitter)', 'Déclencheur': 'Automatique — le modèle décide', 'Notes': 'L\'API exige une activation explicite de Web Search/X Search ; l\'app grand public recherche par défaut' },
           { 'Modèle / Produit': 'Perplexity', 'Couche de recherche': 'Web multi-sources', 'Déclencheur': 'Toujours — chaque requête', 'Notes': 'Conçu recherche en premier ; cite les sources' },
           { 'Modèle / Produit': 'Claude (Anthropic)', 'Couche de recherche': 'Brave / Web (outil)', 'Déclencheur': 'Opt-in développeur uniquement', 'Notes': 'Désactivé par défaut ; nécessite une configuration d\'outil API' },
           { 'Modèle / Produit': 'DeepSeek (cloud)', 'Couche de recherche': 'Aucune', 'Déclencheur': 'S/O', 'Notes': 'Pas de couche de recherche ; la coupure est une limite ferme' },
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Système IA': 'ChatGPT (payant)', 'Comportement post-coupure': 'Recherche sur Bing automatiquement', 'Fiabilité pour l\'info actuelle': 'Élevée pour les faits ; moindre pour les nuances', 'Comment améliorer': 'Demandez-lui de citer ses sources ; vérifiez les affirmations clés' },
           { 'Système IA': 'Gemini (payant)', 'Comportement post-coupure': 'Recherche sur Google automatiquement', 'Fiabilité pour l\'info actuelle': 'Élevée pour les faits ; moindre pour les nuances', 'Comment améliorer': 'Activez le grounding ; vérifiez les URL citées' },
-          { 'Système IA': 'Grok (X.com)', 'Comportement post-coupure': 'Recherche les posts X automatiquement', 'Fiabilité pour l\'info actuelle': 'Bonne pour les tendances sociales ; inégale pour les faits', 'Comment améliorer': 'Utilisez DeepSearch pour une couverture web plus large' },
+          { 'Système IA': 'Grok ([X.com](https://X.com))', 'Comportement post-coupure': 'Recherche les posts X automatiquement', 'Fiabilité pour l\'info actuelle': 'Bonne pour les tendances sociales ; inégale pour les faits', 'Comment améliorer': 'Utilisez DeepSearch pour une couverture web plus large' },
           { 'Système IA': 'Claude (gratuit/pro)', 'Comportement post-coupure': 'Utilise uniquement les données d\'entraînement par défaut', 'Fiabilité pour l\'info actuelle': 'Modérée — coupure fiable de mai 2026', 'Comment améliorer': 'Collez le texte actuel dans le contexte ; les utilisateurs API peuvent activer l\'outil de recherche' },
           { 'Système IA': 'Perplexity', 'Comportement post-coupure': 'Recherche toujours le web en premier', 'Fiabilité pour l\'info actuelle': 'Élevée — produit natif de la recherche', 'Comment améliorer': 'Cite déjà les sources par conception' },
           { 'Système IA': 'Tout LLM local', 'Comportement post-coupure': 'Utilise uniquement les données d\'entraînement — pas de remplacement', 'Fiabilité pour l\'info actuelle': 'Très faible pour les sujets post-coupure', 'Comment améliorer': 'Construisez un pipeline RAG ; collez le contexte manuellement' },
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Modell / Produkt': 'GPT-5.6 (ChatGPT)', 'Suchlayer': 'Bing', 'Auslöser': 'Automatisch — Modell entscheidet', 'Hinweise': 'Standardmäßig für ChatGPT Plus/Pro; deaktiviert für rohe API-Aufrufe' },
           { 'Modell / Produkt': 'Gemini 3.1 Pro', 'Suchlayer': 'Google Suche', 'Auslöser': 'Automatisch — Modell entscheidet', 'Hinweise': 'Google Grounding API für Vertex AI-Entwickler verfügbar' },
-          { 'Modell / Produkt': 'Grok 4.6 (X.com)', 'Suchlayer': 'X (Twitter)', 'Auslöser': 'Automatisch — Modell entscheidet', 'Hinweise': 'Die API verlangt explizite Aktivierung von Web Search/X Search; die Verbraucher-App sucht standardmäßig' },
+          { 'Modell / Produkt': 'Grok 4.6 ([X.com](https://X.com))', 'Suchlayer': 'X (Twitter)', 'Auslöser': 'Automatisch — Modell entscheidet', 'Hinweise': 'Die API verlangt explizite Aktivierung von Web Search/X Search; die Verbraucher-App sucht standardmäßig' },
           { 'Modell / Produkt': 'Perplexity', 'Suchlayer': 'Multi-Source-Web', 'Auslöser': 'Immer — jede Anfrage', 'Hinweise': 'Suche-first per Design; zitiert Quellen' },
           { 'Modell / Produkt': 'Claude (Anthropic)', 'Suchlayer': 'Brave / Web (Tool)', 'Auslöser': 'Nur Entwickler-Opt-in', 'Hinweise': 'Standardmäßig deaktiviert; erfordert API-Tool-Konfiguration' },
           { 'Modell / Produkt': 'DeepSeek (Cloud)', 'Suchlayer': 'Keine', 'Auslöser': 'Nicht zutreffend', 'Hinweise': 'Keine Suchschicht; Cutoff ist harte Grenze' },
@@ -2683,7 +2683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'KI-System': 'ChatGPT (bezahlt)', 'Verhalten nach Cutoff': 'Durchsucht automatisch Bing', 'Zuverlässigkeit für aktuelle Infos': 'Hoch für Fakten; geringer für Nuancen', 'Wie verbessern': 'Auffordern, Quellen zu nennen; wichtige Behauptungen gegenchecken' },
           { 'KI-System': 'Gemini (bezahlt)', 'Verhalten nach Cutoff': 'Durchsucht automatisch Google', 'Zuverlässigkeit für aktuelle Infos': 'Hoch für Fakten; geringer für Nuancen', 'Wie verbessern': 'Grounding aktivieren; zitierte URLs prüfen' },
-          { 'KI-System': 'Grok (X.com)', 'Verhalten nach Cutoff': 'Durchsucht automatisch X-Posts', 'Zuverlässigkeit für aktuelle Infos': 'Gut für soziale Trends; ungleichmäßig für Fakten', 'Wie verbessern': 'DeepSearch für tiefere Web-Abdeckung nutzen' },
+          { 'KI-System': 'Grok ([X.com](https://X.com))', 'Verhalten nach Cutoff': 'Durchsucht automatisch X-Posts', 'Zuverlässigkeit für aktuelle Infos': 'Gut für soziale Trends; ungleichmäßig für Fakten', 'Wie verbessern': 'DeepSearch für tiefere Web-Abdeckung nutzen' },
           { 'KI-System': 'Claude (kostenlos/pro)', 'Verhalten nach Cutoff': 'Nutzt standardmäßig nur Trainingsdaten', 'Zuverlässigkeit für aktuelle Infos': 'Mittel — zuverlässiger Cutoff May 2026', 'Wie verbessern': 'Aktuellen Text in den Kontext einfügen; API-Nutzer können Such-Tool aktivieren' },
           { 'KI-System': 'Perplexity', 'Verhalten nach Cutoff': 'Durchsucht immer zuerst das Web', 'Zuverlässigkeit für aktuelle Infos': 'Hoch — suchbasiertes Produkt', 'Wie verbessern': 'Zitiert bereits standardmäßig Quellen' },
           { 'KI-System': 'Jeder lokale LLM', 'Verhalten nach Cutoff': 'Nutzt nur Trainingsdaten — keine Überschreibung', 'Zuverlässigkeit für aktuelle Infos': 'Sehr gering für Themen nach dem Cutoff', 'Wie verbessern': 'RAG-Pipeline aufbauen; Kontext manuell einfügen' },
@@ -2987,7 +2987,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { '模型/产品': 'GPT-5.6 (ChatGPT)', '搜索层': 'Bing', '触发条件': '自动 — 模型自行决定', '备注': 'ChatGPT Plus/Pro默认开启；原始API调用默认关闭' },
           { '模型/产品': 'Gemini 3.1 Pro', '搜索层': 'Google搜索', '触发条件': '自动 — 模型自行决定', '备注': 'Vertex AI开发者可使用Google Grounding API' },
-          { '模型/产品': 'Grok 4.6 (X.com)', '搜索层': 'X (Twitter)', '触发条件': '自动 — 模型自行决定', '备注': 'API 需显式启用 Web Search/X Search；消费级应用默认搜索' },
+          { '模型/产品': 'Grok 4.6 ([X.com](https://X.com))', '搜索层': 'X (Twitter)', '触发条件': '自动 — 模型自行决定', '备注': 'API 需显式启用 Web Search/X Search；消费级应用默认搜索' },
           { '模型/产品': 'Perplexity', '搜索层': '多源网络', '触发条件': '始终 — 每次查询', '备注': '设计即以搜索为先；引用来源' },
           { '模型/产品': 'Claude (Anthropic)', '搜索层': 'Brave/网络（工具）', '触发条件': '仅限开发者主动开启', '备注': '默认关闭；需通过API工具配置' },
           { '模型/产品': 'DeepSeek（云端）', '搜索层': '无', '触发条件': '不适用', '备注': '无搜索层；截止日期为硬性限制' },
@@ -3084,7 +3084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI系统': 'ChatGPT（付费）', '截止后行为': '自动搜索Bing', '当前信息可靠性': '事实层面较高；细微之处较低', '改善方法': '要求引用来源；交叉核实关键主张' },
           { 'AI系统': 'Gemini（付费）', '截止后行为': '自动搜索Google', '当前信息可靠性': '事实层面较高；细微之处较低', '改善方法': '开启接地功能；审阅引用的URL' },
-          { 'AI系统': 'Grok (X.com)', '截止后行为': '自动搜索X帖子', '当前信息可靠性': '社交趋势方面较好；事实层面参差不齐', '改善方法': '使用DeepSearch获取更广泛的网络覆盖' },
+          { 'AI系统': 'Grok ([X.com](https://X.com))', '截止后行为': '自动搜索X帖子', '当前信息可靠性': '社交趋势方面较好；事实层面参差不齐', '改善方法': '使用DeepSearch获取更广泛的网络覆盖' },
           { 'AI系统': 'Claude（免费/专业版）', '截止后行为': '默认仅使用训练数据', '当前信息可靠性': '中等 — 可靠截止日期为2026年5月', '改善方法': '将当前文本粘贴到上下文中；API用户可开启搜索工具' },
           { 'AI系统': 'Perplexity', '截止后行为': '始终优先搜索网络', '当前信息可靠性': '较高 — 原生搜索产品', '改善方法': '设计上已自动引用来源' },
           { 'AI系统': '任何本地LLM', '截止后行为': '仅使用训练数据 — 无法覆盖', '当前信息可靠性': '截止后话题极低', '改善方法': '构建RAG管道；手动粘贴上下文' },
@@ -3388,7 +3388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Modelo / Producto': 'GPT-5.6 (ChatGPT)', 'Capa de búsqueda': 'Bing', 'Disparador': 'Automático — el modelo decide', 'Notas': 'Activado por defecto para ChatGPT Plus/Pro; desactivado para llamadas API directas' },
           { 'Modelo / Producto': 'Gemini 3.1 Pro', 'Capa de búsqueda': 'Google Search', 'Disparador': 'Automático — el modelo decide', 'Notas': 'API Google Grounding disponible para desarrolladores Vertex AI' },
-          { 'Modelo / Producto': 'Grok 4.6 (X.com)', 'Capa de búsqueda': 'X (Twitter)', 'Disparador': 'Automático — el modelo decide', 'Notas': 'La API exige activación explícita de Web Search/X Search; la app para consumidores busca por defecto' },
+          { 'Modelo / Producto': 'Grok 4.6 ([X.com](https://X.com))', 'Capa de búsqueda': 'X (Twitter)', 'Disparador': 'Automático — el modelo decide', 'Notas': 'La API exige activación explícita de Web Search/X Search; la app para consumidores busca por defecto' },
           { 'Modelo / Producto': 'Perplexity', 'Capa de búsqueda': 'Web multi-fuente', 'Disparador': 'Siempre — cada consulta', 'Notas': 'Diseñado búsqueda primero; cita fuentes' },
           { 'Modelo / Producto': 'Claude (Anthropic)', 'Capa de búsqueda': 'Brave / Web (herramienta)', 'Disparador': 'Solo opt-in del desarrollador', 'Notas': 'No activo por defecto; requiere configuración de herramienta API' },
           { 'Modelo / Producto': 'DeepSeek (nube)', 'Capa de búsqueda': 'Ninguna', 'Disparador': 'N/A', 'Notas': 'Sin capa de búsqueda; el corte es límite firme' },
@@ -3485,7 +3485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Sistema IA': 'ChatGPT (pago)', 'Comportamiento post-corte': 'Busca en Bing automáticamente', 'Fiabilidad para info actual': 'Alta para hechos; menor para matices', 'Cómo mejorar': 'Pide que cite fuentes; verifica afirmaciones clave' },
           { 'Sistema IA': 'Gemini (pago)', 'Comportamiento post-corte': 'Busca en Google automáticamente', 'Fiabilidad para info actual': 'Alta para hechos; menor para matices', 'Cómo mejorar': 'Activa grounding; revisa URLs citadas' },
-          { 'Sistema IA': 'Grok (X.com)', 'Comportamiento post-corte': 'Busca posts de X automáticamente', 'Fiabilidad para info actual': 'Buena para tendencias sociales; desigual para hechos', 'Cómo mejorar': 'Usa DeepSearch para mayor cobertura web' },
+          { 'Sistema IA': 'Grok ([X.com](https://X.com))', 'Comportamiento post-corte': 'Busca posts de X automáticamente', 'Fiabilidad para info actual': 'Buena para tendencias sociales; desigual para hechos', 'Cómo mejorar': 'Usa DeepSearch para mayor cobertura web' },
           { 'Sistema IA': 'Claude (gratis/pro)', 'Comportamiento post-corte': 'Usa solo datos de entrenamiento por defecto', 'Fiabilidad para info actual': 'Moderada — corte fiable enero 2026', 'Cómo mejorar': 'Pega texto actual en contexto; usuarios API pueden activar herramienta de búsqueda' },
           { 'Sistema IA': 'Perplexity', 'Comportamiento post-corte': 'Siempre busca en web primero', 'Fiabilidad para info actual': 'Alta — producto nativo de búsqueda', 'Cómo mejorar': 'Ya cita fuentes por diseño' },
           { 'Sistema IA': 'Cualquier LLM local', 'Comportamiento post-corte': 'Usa solo datos de entrenamiento — sin anulación', 'Fiabilidad para info actual': 'Muy baja para temas post-corte', 'Cómo mejorar': 'Construye pipeline RAG; pega contexto manualmente' },

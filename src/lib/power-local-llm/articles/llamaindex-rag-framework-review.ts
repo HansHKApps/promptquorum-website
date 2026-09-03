@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is LlamaIndex free to use?',
-        answer: 'Yes. The core LlamaIndex framework (github.com/run-llama/llama_index) is free and open-source under the MIT license — you install it with pip and self-host it against your own LLM and vector database at no cost to LlamaIndex. LlamaCloud, a separate hosted platform for automated document parsing and extraction, charges usage-based credits on top of the free framework.',
+        answer: 'Yes. The core LlamaIndex framework ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) is free and open-source under the MIT license — you install it with pip and self-host it against your own LLM and vector database at no cost to LlamaIndex. LlamaCloud, a separate hosted platform for automated document parsing and extraction, charges usage-based credits on top of the free framework.',
         bullets: [
           'License: MIT (permissive, free for commercial use)',
           'Install: pip install llama-index',
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'What Is LlamaIndex?',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) is an open-source, MIT-licensed Python framework for building applications that connect large language models to your own data. It is a data framework first: the library is organized around ingesting documents, structuring them for retrieval, and answering questions over them — not around general-purpose agent orchestration.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) is an open-source, MIT-licensed Python framework for building applications that connect large language models to your own data. It is a data framework first: the library is organized around ingesting documents, structuring them for retrieval, and answering questions over them — not around general-purpose agent orchestration.',
         items: [
           'Data connectors: SimpleDirectoryReader for local files, plus 300+ community and first-party integrations on LlamaHub for PDFs, APIs, SQL databases, and other sources',
           'Indices: structures that organize ingested data for LLM retrieval — VectorStoreIndex (embeddings-based semantic search) is the most common',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist LlamaIndex kostenlos nutzbar?',
-        answer: 'Ja. Das Kern-Framework von LlamaIndex (github.com/run-llama/llama_index) ist quelloffen und kostenlos unter der MIT-Lizenz — Sie installieren es per pip und hosten es selbst gegen Ihr eigenes LLM und Ihre eigene Vektordatenbank, ohne Kosten für LlamaIndex. LlamaCloud, eine separate gehostete Plattform für automatisierte Dokumentenverarbeitung und -extraktion, berechnet nutzungsbasierte Credits zusätzlich zum kostenlosen Framework.',
+        answer: 'Ja. Das Kern-Framework von LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) ist quelloffen und kostenlos unter der MIT-Lizenz — Sie installieren es per pip und hosten es selbst gegen Ihr eigenes LLM und Ihre eigene Vektordatenbank, ohne Kosten für LlamaIndex. LlamaCloud, eine separate gehostete Plattform für automatisierte Dokumentenverarbeitung und -extraktion, berechnet nutzungsbasierte Credits zusätzlich zum kostenlosen Framework.',
         bullets: [
           'Lizenz: MIT (permissiv, kostenlos für kommerzielle Nutzung)',
           'Installation: pip install llama-index',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'Was ist LlamaIndex?',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) ist ein quelloffenes, MIT-lizenziertes Python-Framework zum Bau von Anwendungen, die große Sprachmodelle mit eigenen Daten verbinden. Es ist in erster Linie ein Daten-Framework: Die Bibliothek ist um das Einlesen von Dokumenten, ihre Strukturierung für das Retrieval und die Beantwortung von Fragen darüber organisiert — nicht um allgemeine Agenten-Orchestrierung.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) ist ein quelloffenes, MIT-lizenziertes Python-Framework zum Bau von Anwendungen, die große Sprachmodelle mit eigenen Daten verbinden. Es ist in erster Linie ein Daten-Framework: Die Bibliothek ist um das Einlesen von Dokumenten, ihre Strukturierung für das Retrieval und die Beantwortung von Fragen darüber organisiert — nicht um allgemeine Agenten-Orchestrierung.',
         items: [
           'Datenconnector: SimpleDirectoryReader für lokale Dateien, plus über 300 Community- und First-Party-Integrationen auf LlamaHub für PDFs, APIs, SQL-Datenbanken und andere Quellen',
           'Indizes: Strukturen, die eingelesene Daten für das LLM-Retrieval organisieren — VectorStoreIndex (embedding-basierte semantische Suche) ist die gängigste',
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'LlamaIndex est-il gratuit ?',
-        answer: 'Oui. Le framework principal de LlamaIndex (github.com/run-llama/llama_index) est open source et gratuit sous licence MIT — vous l\'installez avec pip et l\'auto-hébergez avec votre propre LLM et votre propre base vectorielle, sans coût pour LlamaIndex. LlamaCloud, une plateforme hébergée distincte pour l\'extraction et l\'analyse automatisée de documents, facture des crédits à l\'usage en plus du framework gratuit.',
+        answer: 'Oui. Le framework principal de LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) est open source et gratuit sous licence MIT — vous l\'installez avec pip et l\'auto-hébergez avec votre propre LLM et votre propre base vectorielle, sans coût pour LlamaIndex. LlamaCloud, une plateforme hébergée distincte pour l\'extraction et l\'analyse automatisée de documents, facture des crédits à l\'usage en plus du framework gratuit.',
         bullets: [
           'Licence : MIT (permissive, gratuite pour un usage commercial)',
           'Installation : pip install llama-index',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'Qu\'est-ce que LlamaIndex ?',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) est un framework Python open source, sous licence MIT, pour construire des applications qui connectent les grands modèles de langage à vos propres données. C\'est d\'abord un framework de données : la bibliothèque est organisée autour de l\'ingestion de documents, de leur structuration pour la recherche, et de la réponse aux questions posées à leur sujet — pas autour d\'une orchestration d\'agents généraliste.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) est un framework Python open source, sous licence MIT, pour construire des applications qui connectent les grands modèles de langage à vos propres données. C\'est d\'abord un framework de données : la bibliothèque est organisée autour de l\'ingestion de documents, de leur structuration pour la recherche, et de la réponse aux questions posées à leur sujet — pas autour d\'une orchestration d\'agents généraliste.',
         items: [
           'Connecteurs de données : SimpleDirectoryReader pour les fichiers locaux, plus 300+ intégrations communautaires et officielles sur LlamaHub pour les PDF, API, bases SQL et autres sources',
           'Index : structures qui organisent les données ingérées pour la recherche par un LLM — VectorStoreIndex (recherche sémantique par embeddings) est le plus courant',
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿LlamaIndex es gratuito?',
-        answer: 'Sí. El framework principal de LlamaIndex (github.com/run-llama/llama_index) es de código abierto y gratuito bajo licencia MIT — se instala con pip y se autoaloja con tu propio LLM y tu propia base de datos vectorial, sin coste para LlamaIndex. LlamaCloud, una plataforma alojada aparte para el análisis y la extracción automatizada de documentos, cobra créditos por uso además del framework gratuito.',
+        answer: 'Sí. El framework principal de LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) es de código abierto y gratuito bajo licencia MIT — se instala con pip y se autoaloja con tu propio LLM y tu propia base de datos vectorial, sin coste para LlamaIndex. LlamaCloud, una plataforma alojada aparte para el análisis y la extracción automatizada de documentos, cobra créditos por uso además del framework gratuito.',
         bullets: [
           'Licencia: MIT (permisiva, gratuita para uso comercial)',
           'Instalación: pip install llama-index',
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: '¿Qué es LlamaIndex?',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) es un framework Python de código abierto, con licencia MIT, para construir aplicaciones que conectan grandes modelos de lenguaje con tus propios datos. Es ante todo un framework de datos: la biblioteca está organizada en torno a la ingesta de documentos, su estructuración para la recuperación y la respuesta a preguntas sobre ellos — no en torno a la orquestación general de agentes.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) es un framework Python de código abierto, con licencia MIT, para construir aplicaciones que conectan grandes modelos de lenguaje con tus propios datos. Es ante todo un framework de datos: la biblioteca está organizada en torno a la ingesta de documentos, su estructuración para la recuperación y la respuesta a preguntas sobre ellos — no en torno a la orquestación general de agentes.',
         items: [
           'Conectores de datos: SimpleDirectoryReader para archivos locales, más de 300 integraciones de la comunidad y propias en LlamaHub para PDF, API, bases de datos SQL y otras fuentes',
           'Índices: estructuras que organizan los datos ingeridos para la recuperación por un LLM — VectorStoreIndex (búsqueda semántica basada en embeddings) es el más común',
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O LlamaIndex é gratuito?',
-        answer: 'Sim. O framework principal do LlamaIndex (github.com/run-llama/llama_index) é de código aberto e gratuito sob a licença MIT — você o instala com pip e hospeda por conta própria com seu próprio LLM e banco de dados vetorial, sem custo para o LlamaIndex. O LlamaCloud, uma plataforma hospedada separada para análise e extração automatizada de documentos, cobra créditos por uso além do framework gratuito.',
+        answer: 'Sim. O framework principal do LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) é de código aberto e gratuito sob a licença MIT — você o instala com pip e hospeda por conta própria com seu próprio LLM e banco de dados vetorial, sem custo para o LlamaIndex. O LlamaCloud, uma plataforma hospedada separada para análise e extração automatizada de documentos, cobra créditos por uso além do framework gratuito.',
         bullets: [
           'Licença: MIT (permissiva, gratuita para uso comercial)',
           'Instalação: pip install llama-index',
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'O que é o LlamaIndex?',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) é um framework Python de código aberto, com licença MIT, para construir aplicações que conectam grandes modelos de linguagem aos seus próprios dados. É antes de tudo um framework de dados: a biblioteca é organizada em torno da ingestão de documentos, sua estruturação para recuperação e a resposta a perguntas sobre eles — não em torno da orquestração geral de agentes.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) é um framework Python de código aberto, com licença MIT, para construir aplicações que conectam grandes modelos de linguagem aos seus próprios dados. É antes de tudo um framework de dados: a biblioteca é organizada em torno da ingestão de documentos, sua estruturação para recuperação e a resposta a perguntas sobre eles — não em torno da orquestração geral de agentes.',
         items: [
           'Conectores de dados: SimpleDirectoryReader para arquivos locais, além de mais de 300 integrações da comunidade e próprias no LlamaHub para PDFs, APIs, bancos SQL e outras fontes',
           'Índices: estruturas que organizam os dados ingeridos para recuperação por um LLM — VectorStoreIndex (busca semântica baseada em embeddings) é o mais comum',
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل LlamaIndex مجاني للاستخدام؟',
-        answer: 'نعم. إطار عمل LlamaIndex الأساسي (github.com/run-llama/llama_index) مفتوح المصدر ومجاني بموجب رخصة MIT — تُثبّته عبر pip وتستضيفه ذاتيًا مقابل نموذج اللغة وقاعدة البيانات المتجهية الخاصين بك، دون أي تكلفة لـ LlamaIndex. أما LlamaCloud، وهي منصة مستضافة منفصلة لتحليل المستندات واستخلاصها تلقائيًا، فتفرض رسوم اعتمادات حسب الاستخدام إضافة إلى الإطار المجاني.',
+        answer: 'نعم. إطار عمل LlamaIndex الأساسي ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) مفتوح المصدر ومجاني بموجب رخصة MIT — تُثبّته عبر pip وتستضيفه ذاتيًا مقابل نموذج اللغة وقاعدة البيانات المتجهية الخاصين بك، دون أي تكلفة لـ LlamaIndex. أما LlamaCloud، وهي منصة مستضافة منفصلة لتحليل المستندات واستخلاصها تلقائيًا، فتفرض رسوم اعتمادات حسب الاستخدام إضافة إلى الإطار المجاني.',
         bullets: [
           'الرخصة: MIT (تصريحية، مجانية للاستخدام التجاري)',
           'التثبيت: pip install llama-index',
@@ -1950,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'ما هو LlamaIndex؟',
-        content: 'LlamaIndex (github.com/run-llama/llama_index) إطار عمل Python مفتوح المصدر برخصة MIT لبناء تطبيقات تربط نماذج اللغة الكبيرة ببياناتك الخاصة. إنه في الأساس إطار عمل بيانات: المكتبة منظمة حول استيعاب المستندات، وهيكلتها للاسترجاع، والإجابة عن الأسئلة المتعلقة بها — وليس حول تنسيق وكلاء عام الغرض.',
+        content: 'LlamaIndex ([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)) إطار عمل Python مفتوح المصدر برخصة MIT لبناء تطبيقات تربط نماذج اللغة الكبيرة ببياناتك الخاصة. إنه في الأساس إطار عمل بيانات: المكتبة منظمة حول استيعاب المستندات، وهيكلتها للاسترجاع، والإجابة عن الأسئلة المتعلقة بها — وليس حول تنسيق وكلاء عام الغرض.',
         items: [
           'موصلات البيانات: SimpleDirectoryReader للملفات المحلية، بالإضافة إلى أكثر من 300 تكامل من المجتمع ومن الشركة نفسها على LlamaHub لملفات PDF وواجهات API وقواعد بيانات SQL ومصادر أخرى',
           'الفهارس (Indices): بُنى تنظّم البيانات المستوعبة لاسترجاعها بواسطة LLM — أشيعها VectorStoreIndex (بحث دلالي قائم على التضمينات)',
@@ -2167,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'LlamaIndex는 무료로 사용할 수 있습니까?',
-        answer: '예. LlamaIndex의 핵심 프레임워크(github.com/run-llama/llama_index)는 MIT 라이선스로 오픈소스이며 무료입니다. pip로 설치해 직접 LLM과 벡터 데이터베이스를 이용해 셀프 호스팅할 수 있으며, LlamaIndex 측에 지불하는 비용은 없습니다. 문서를 자동으로 분석·추출하는 별도의 호스팅 플랫폼인 LlamaCloud는 무료 프레임워크에 더해 사용량 기반 크레딧을 청구합니다.',
+        answer: '예. LlamaIndex의 핵심 프레임워크([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index))는 MIT 라이선스로 오픈소스이며 무료입니다. pip로 설치해 직접 LLM과 벡터 데이터베이스를 이용해 셀프 호스팅할 수 있으며, LlamaIndex 측에 지불하는 비용은 없습니다. 문서를 자동으로 분석·추출하는 별도의 호스팅 플랫폼인 LlamaCloud는 무료 프레임워크에 더해 사용량 기반 크레딧을 청구합니다.',
         bullets: [
           '라이선스: MIT(허용적, 상업적 사용도 무료)',
           '설치: pip install llama-index',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-llamaindex',
         title: 'LlamaIndex란 무엇입니까?',
-        content: 'LlamaIndex(github.com/run-llama/llama_index)는 대규모 언어 모델을 사용자 자신의 데이터에 연결하는 애플리케이션을 구축하기 위한, MIT 라이선스의 오픈소스 Python 프레임워크입니다. 무엇보다 먼저 데이터 프레임워크입니다: 이 라이브러리는 문서 수집, 검색을 위한 구조화, 그리고 그에 관한 질문에 답하는 것을 중심으로 구성되어 있으며, 범용 에이전트 오케스트레이션을 중심으로 하지 않습니다.',
+        content: 'LlamaIndex([github.com/run-llama/llama_index](https://github.com/run-llama/llama_index))는 대규모 언어 모델을 사용자 자신의 데이터에 연결하는 애플리케이션을 구축하기 위한, MIT 라이선스의 오픈소스 Python 프레임워크입니다. 무엇보다 먼저 데이터 프레임워크입니다: 이 라이브러리는 문서 수집, 검색을 위한 구조화, 그리고 그에 관한 질문에 답하는 것을 중심으로 구성되어 있으며, 범용 에이전트 오케스트레이션을 중심으로 하지 않습니다.',
         items: [
           '데이터 커넥터: 로컬 파일용 SimpleDirectoryReader와, PDF·API·SQL 데이터베이스 등 다양한 소스를 위한 LlamaHub의 300개 이상의 커뮤니티·자체 통합',
           '인덱스: LLM 검색을 위해 수집된 데이터를 조직하는 구조체 — 임베딩 기반 시맨틱 검색을 수행하는 VectorStoreIndex가 가장 일반적',

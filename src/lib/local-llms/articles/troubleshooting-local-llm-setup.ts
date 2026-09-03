@@ -231,7 +231,7 @@ sections: {
         },
         moreTroubleshooting: {
           title: 'Where to Find More Help',
-          content: 'For hardware-specific issues on laptops (thermal throttling, battery drain), see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For security and privacy configuration questions, see [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist). The Ollama GitHub issues page (github.com/ollama/ollama/issues) and r/LocalLLaMA subreddit are the most active community resources for model-specific bugs.',
+          content: 'For hardware-specific issues on laptops (thermal throttling, battery drain), see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For security and privacy configuration questions, see [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist). The Ollama GitHub issues page ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) and r/LocalLLaMA subreddit are the most active community resources for model-specific bugs.',
         },
         commonMistakes: {
           title: 'Common Mistakes in Local LLM Troubleshooting',
@@ -574,7 +574,7 @@ schema: {
         },
         moreTroubleshooting: {
           title: 'Dónde encontrar más ayuda',
-          content: 'Para problemas específicos de hardware en portátiles (limitación térmica, consumo de batería), consulta [Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop). Para preguntas de configuración de seguridad y privacidad, consulta [Lista de verificación de seguridad y privacidad de LLM local](/es/local-llms/local-llm-security-privacy-checklist). La página de issues de Ollama en GitHub (github.com/ollama/ollama/issues) y el subreddit r/LocalLLaMA son los recursos de comunidad más activos para bugs específicos de modelos.',
+          content: 'Para problemas específicos de hardware en portátiles (limitación térmica, consumo de batería), consulta [Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop). Para preguntas de configuración de seguridad y privacidad, consulta [Lista de verificación de seguridad y privacidad de LLM local](/es/local-llms/local-llm-security-privacy-checklist). La página de issues de Ollama en GitHub ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) y el subreddit r/LocalLLaMA son los recursos de comunidad más activos para bugs específicos de modelos.',
         },
         commonMistakes: {
           title: 'Errores comunes en la resolución de problemas de LLM local',
@@ -917,7 +917,7 @@ schema: {
         },
         moreTroubleshooting: {
           title: 'أين تجد مزيدًا من المساعدة',
-          content: 'للمشكلات الخاصة بعتاد الحواسيب المحمولة (الخنق الحراري، واستهلاك البطارية)، راجع [كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop). لأسئلة إعداد الأمان والخصوصية، راجع [قائمة تحقق أمان وخصوصية LLM المحلي](/ar/local-llms/local-llm-security-privacy-checklist). صفحة مشكلات Ollama على GitHub (github.com/ollama/ollama/issues) ومنتدى r/LocalLLaMA الفرعي هما أكثر موارد المجتمع نشاطًا للأخطاء الخاصة بالنماذج.',
+          content: 'للمشكلات الخاصة بعتاد الحواسيب المحمولة (الخنق الحراري، واستهلاك البطارية)، راجع [كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop). لأسئلة إعداد الأمان والخصوصية، راجع [قائمة تحقق أمان وخصوصية LLM المحلي](/ar/local-llms/local-llm-security-privacy-checklist). صفحة مشكلات Ollama على GitHub ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) ومنتدى r/LocalLLaMA الفرعي هما أكثر موارد المجتمع نشاطًا للأخطاء الخاصة بالنماذج.',
         },
         commonMistakes: {
           title: 'أخطاء شائعة في استكشاف أخطاء LLM المحلي وإصلاحها',
@@ -1262,7 +1262,7 @@ schema: {
         },
         moreTroubleshooting: {
           title: 'Onde encontrar mais ajuda',
-          content: 'Para problemas específicos de hardware em notebooks (throttling térmico, consumo de bateria), veja [Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop). Para dúvidas de configuração de segurança e privacidade, veja a [Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist). A página de issues do Ollama no GitHub (github.com/ollama/ollama/issues) e o subreddit r/LocalLLaMA são os recursos de comunidade mais ativos para bugs específicos de modelos.',
+          content: 'Para problemas específicos de hardware em notebooks (throttling térmico, consumo de bateria), veja [Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop). Para dúvidas de configuração de segurança e privacidade, veja a [Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist). A página de issues do Ollama no GitHub ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) e o subreddit r/LocalLLaMA são os recursos de comunidade mais ativos para bugs específicos de modelos.',
         },
         commonMistakes: {
           title: 'Erros comuns na solução de problemas de LLM local',
@@ -1690,7 +1690,7 @@ schema: {
     },
     moreTroubleshooting: {
       title: 'Wo finde ich mehr Hilfe',
-      content: 'Für Hardware-spezifische Probleme auf Laptops (thermische Drosselung, Batterieabfluss), siehe [Wie führen Sie lokale LLMs auf einem Laptop aus](/de/local-llms/local-llm-on-laptop). Für Sicherheits- und Datenschutz-Konfigurationsfragen, siehe die [Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist). Die Ollama GitHub-Issues-Seite (github.com/ollama/ollama/issues) und das r/LocalLLaMA-Subreddit sind die aktivsten Community-Ressourcen für modellspezifische Bugs.',
+      content: 'Für Hardware-spezifische Probleme auf Laptops (thermische Drosselung, Batterieabfluss), siehe [Wie führen Sie lokale LLMs auf einem Laptop aus](/de/local-llms/local-llm-on-laptop). Für Sicherheits- und Datenschutz-Konfigurationsfragen, siehe die [Lokale LLM-Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist). Die Ollama GitHub-Issues-Seite ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) und das r/LocalLLaMA-Subreddit sind die aktivsten Community-Ressourcen für modellspezifische Bugs.',
     },
     commonMistakes: {
       title: 'Häufige Fehler bei der Fehlersuche lokaler LLMs',
@@ -2032,7 +2032,7 @@ schema: {
         },
         moreTroubleshooting: {
           title: 'Où trouver plus d\'aide',
-          content: 'Pour les problèmes spécifiques au matériel sur les ordinateurs portables (étranglement thermique, drainage de la batterie), voir [Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop). Pour les questions de configuration de sécurité et de confidentialité, voir [Liste de contrôle sécurité et confidentialité LLM local](/fr/local-llms/local-llm-security-privacy-checklist). La page des problèmes GitHub d\'Ollama (github.com/ollama/ollama/issues) et le subreddit r/LocalLLaMA sont les ressources communautaires les plus actives pour les bugs spécifiques aux modèles.',
+          content: 'Pour les problèmes spécifiques au matériel sur les ordinateurs portables (étranglement thermique, drainage de la batterie), voir [Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop). Pour les questions de configuration de sécurité et de confidentialité, voir [Liste de contrôle sécurité et confidentialité LLM local](/fr/local-llms/local-llm-security-privacy-checklist). La page des problèmes GitHub d\'Ollama ([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues)) et le subreddit r/LocalLLaMA sont les ressources communautaires les plus actives pour les bugs spécifiques aux modèles.',
         },
         commonMistakes: {
           title: 'Erreurs courantes dans le dépannage LLM local',
@@ -3102,7 +3102,7 @@ schema: {
         },
         moreTroubleshooting: {
           title: '추가 도움 받는 곳',
-          content: '노트북의 하드웨어 특화 문제(열 제한, 배터리 소모)는 [노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop)를 참고하십시오. 보안 및 개인 정보 설정 질문은 [로컬 LLM 보안 및 개인 정보 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist)를 참고하십시오. Ollama GitHub 이슈 페이지(github.com/ollama/ollama/issues)와 r/LocalLLaMA 서브레딧은 모델별 버그에 대한 가장 활발한 커뮤니티 자원입니다.',
+          content: '노트북의 하드웨어 특화 문제(열 제한, 배터리 소모)는 [노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop)를 참고하십시오. 보안 및 개인 정보 설정 질문은 [로컬 LLM 보안 및 개인 정보 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist)를 참고하십시오. Ollama GitHub 이슈 페이지([github.com/ollama/ollama/issues](https://github.com/ollama/ollama/issues))와 r/LocalLLaMA 서브레딧은 모델별 버그에 대한 가장 활발한 커뮤니티 자원입니다.',
         },
         commonMistakes: {
           title: '로컬 LLM 문제 해결의 흔한 실수',

@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Source Verification',
-        content: 'Pricing checked: RunPod (runpod.io), Vast.ai (vast.ai), Lambda Labs (lambdalabs.com). Last checked: July 15, 2026. Re-verified monthly. This page is maintained as a canonical reference.',
+        content: 'Pricing checked: RunPod ([runpod.io](https://runpod.io)), Vast.ai ([vast.ai](https://vast.ai)), Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). Last checked: July 15, 2026. Re-verified monthly. This page is maintained as a canonical reference.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick-Start: Rent Your First GPU in 10 Minutes',
         content: 'Follow this step-by-step guide to get a GPU running on any platform.',
         numberedItems: [
-          'Sign up with email + credit card (RunPod) or GitHub (Vast.ai)',
+          'Sign up with email + credit card (RunPod) or GitHub ([Vast.ai](https://Vast.ai))',
           'Select a GPU type and region (filter by availability and price)',
           'Choose the OS image (Ubuntu 22.04 + CUDA is standard)',
           'Set disk size (50 GB minimum for most ML workloads)',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'How to Rent Your First Cloud GPU in 10 Minutes',
       description: 'Step-by-step guide to signing up and running your first GPU instance on any cloud provider.',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'Sign up', text: 'Create account with email and credit card (RunPod) or GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 1, name: 'Sign up', text: 'Create account with email and credit card (RunPod) or GitHub ([Vast.ai](https://Vast.ai))' },
         { '@type': 'HowToStep', position: 2, name: 'Select GPU', text: 'Choose GPU type (RTX 4090, RTX 5090, A100, H100) and region based on availability and price' },
         { '@type': 'HowToStep', position: 3, name: 'Choose image', text: 'Select OS (Ubuntu 22.04 with CUDA is standard)' },
         { '@type': 'HowToStep', position: 4, name: 'Set storage', text: 'Configure disk size (50 GB minimum recommended)' },
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Verificación de Fuentes',
-        content: 'Precios comprobados: RunPod (runpod.io), Vast.ai (vast.ai), Lambda Labs (lambdalabs.com). Última comprobación: 29 de agosto de 2026. Reverificado mensualmente. Esta página se mantiene como referencia canónica.',
+        content: 'Precios comprobados: RunPod ([runpod.io](https://runpod.io)), Vast.ai ([vast.ai](https://vast.ai)), Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). Última comprobación: 29 de agosto de 2026. Reverificado mensualmente. Esta página se mantiene como referencia canónica.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -1161,7 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Inicio Rápido: Alquila tu Primera GPU en 10 Minutos',
         content: 'Sigue esta guía paso a paso para poner en marcha una GPU en cualquier plataforma.',
         numberedItems: [
-          'Regístrate con email y tarjeta de crédito (RunPod) o GitHub (Vast.ai)',
+          'Regístrate con email y tarjeta de crédito (RunPod) o GitHub ([Vast.ai](https://Vast.ai))',
           'Selecciona un tipo de GPU y región (filtra por disponibilidad y precio)',
           'Elige la imagen de SO (Ubuntu 22.04 + CUDA es lo estándar)',
           'Configura el tamaño del disco (mínimo 50 GB para la mayoría de cargas de ML)',
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Guía paso a paso para registrarse y ejecutar tu primera instancia de GPU en cualquier proveedor de nube.',
       inLanguage: 'es',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'Regístrate', text: 'Crea una cuenta con email y tarjeta de crédito (RunPod) o GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 1, name: 'Regístrate', text: 'Crea una cuenta con email y tarjeta de crédito (RunPod) o GitHub ([Vast.ai](https://Vast.ai))' },
         { '@type': 'HowToStep', position: 2, name: 'Selecciona GPU', text: 'Elige el tipo de GPU (RTX 4090, A100, H100) y la región según disponibilidad y precio' },
         { '@type': 'HowToStep', position: 3, name: 'Elige imagen', text: 'Selecciona el SO (Ubuntu 22.04 con CUDA es lo estándar)' },
         { '@type': 'HowToStep', position: 4, name: 'Configura almacenamiento', text: 'Configura el tamaño del disco (mínimo 50 GB recomendado)' },
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'التحقق من المصادر',
-        content: 'أسعار مفحوصة: RunPod (runpod.io)، Vast.ai (vast.ai)، Lambda Labs (lambdalabs.com). آخر فحص: 29 أغسطس 2026. يُعاد التحقق شهرياً. تُدار هذه الصفحة كمرجع رئيسي.',
+        content: 'أسعار مفحوصة: RunPod ([runpod.io](https://runpod.io))، Vast.ai ([vast.ai](https://vast.ai))، Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). آخر فحص: 29 أغسطس 2026. يُعاد التحقق شهرياً. تُدار هذه الصفحة كمرجع رئيسي.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'بداية سريعة: استأجر أول GPU لك في 10 دقائق',
         content: 'اتبع هذا الدليل خطوة بخطوة لتشغيل GPU على أي منصة.',
         numberedItems: [
-          'سجّل بالبريد وبطاقة ائتمان (RunPod) أو GitHub (Vast.ai)',
+          'سجّل بالبريد وبطاقة ائتمان (RunPod) أو GitHub ([Vast.ai](https://Vast.ai))',
           'اختر نوع GPU ومنطقة (رشّح حسب التوافر والسعر)',
           'اختر صورة نظام التشغيل (Ubuntu 22.04 + CUDA هي المعيار)',
           'اضبط حجم القرص (50 GB كحد أدنى لمعظم أعباء ML)',
@@ -2098,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'دليل خطوة بخطوة للتسجيل وتشغيل أول نسخة GPU لك لدى أي مزود سحابي.',
       inLanguage: 'ar',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'سجّل', text: 'أنشئ حساباً بالبريد وبطاقة ائتمان (RunPod) أو GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 1, name: 'سجّل', text: 'أنشئ حساباً بالبريد وبطاقة ائتمان (RunPod) أو GitHub ([Vast.ai](https://Vast.ai))' },
         { '@type': 'HowToStep', position: 2, name: 'اختر GPU', text: 'اختر نوع GPU (RTX 4090، A100، H100) والمنطقة حسب التوافر والسعر' },
         { '@type': 'HowToStep', position: 3, name: 'اختر الصورة', text: 'اختر نظام التشغيل (Ubuntu 22.04 مع CUDA هو المعيار)' },
         { '@type': 'HowToStep', position: 4, name: 'اضبط التخزين', text: 'اضبط حجم القرص (50 GB كحد أدنى موصى به)' },
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Guia passo a passo para se cadastrar e executar sua primeira instância de GPU em qualquer provedor de nuvem.',
       inLanguage: 'pt-BR',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'Cadastre-se', text: 'Crie uma conta com e-mail e cartão de crédito (RunPod) ou GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 1, name: 'Cadastre-se', text: 'Crie uma conta com e-mail e cartão de crédito (RunPod) ou GitHub ([Vast.ai](https://Vast.ai))' },
         { '@type': 'HowToStep', position: 2, name: 'Selecione a GPU', text: 'Escolha o tipo de GPU (RTX 4090, RTX 5090, A100, H100) e a região conforme disponibilidade e preço' },
         { '@type': 'HowToStep', position: 3, name: 'Escolha a imagem', text: 'Selecione o sistema operacional (Ubuntu 22.04 com CUDA é o padrão)' },
         { '@type': 'HowToStep', position: 4, name: 'Configure o armazenamento', text: 'Configure o tamanho do disco (mínimo recomendado de 50 GB)' },
@@ -2611,7 +2611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Quellenbestätigung',
-        content: 'Preisgestaltung geprüft: RunPod (runpod.io), Vast.ai (vast.ai), Lambda Labs (lambdalabs.com). Zuletzt geprüft: 29. August 2026. Monatlich erneut verifiziert. Diese Seite wird als kanonische Referenz gepflegt.',
+        content: 'Preisgestaltung geprüft: RunPod ([runpod.io](https://runpod.io)), Vast.ai ([vast.ai](https://vast.ai)), Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). Zuletzt geprüft: 29. August 2026. Monatlich erneut verifiziert. Diese Seite wird als kanonische Referenz gepflegt.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -2912,7 +2912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Schnellstart: Mieten Sie Ihre erste GPU in 10 Minuten',
         content: 'Folgen Sie dieser Schritt-für-Schritt-Anleitung, um auf jeder Plattform eine GPU zum Laufen zu bringen.',
         numberedItems: [
-          'Registrieren Sie sich mit E-Mail + Kreditkarte (RunPod) oder GitHub (Vast.ai)',
+          'Registrieren Sie sich mit E-Mail + Kreditkarte (RunPod) oder GitHub ([Vast.ai](https://Vast.ai))',
           'Wählen Sie einen GPU-Typ und eine Region (nach Verfügbarkeit und Preis filtern)',
           'Wählen Sie das Betriebssystem-Image (Ubuntu 22.04 + CUDA ist Standard)',
           'Legen Sie die Festplattengröße fest (mindestens 50 GB für die meisten ML-Workloads)',
@@ -2973,7 +2973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'Erste Cloud-GPU in 10 Minuten mieten',
       description: 'Schritt-für-Schritt-Anleitung zur Registrierung und zum Ausführen der ersten GPU-Instanz bei einem beliebigen Cloud-Anbieter.',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'Anmelden', text: 'Konto mit E-Mail und Kreditkarte (RunPod) oder GitHub (Vast.ai) erstellen' },
+        { '@type': 'HowToStep', position: 1, name: 'Anmelden', text: 'Konto mit E-Mail und Kreditkarte (RunPod) oder GitHub ([Vast.ai](https://Vast.ai)) erstellen' },
         { '@type': 'HowToStep', position: 2, name: 'GPU wählen', text: 'GPU-Typ (RTX 4090, A100, H100) und Region basierend auf Verfügbarkeit und Preis auswählen' },
         { '@type': 'HowToStep', position: 3, name: 'Image wählen', text: 'Betriebssystem wählen (Ubuntu 22.04 mit CUDA ist Standard)' },
         { '@type': 'HowToStep', position: 4, name: 'Speicher konfigurieren', text: 'Festplattengröße konfigurieren (mindestens 50 GB empfohlen)' },
@@ -3091,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Vérification des sources',
-        content: 'Tarification vérifiée : RunPod (runpod.io), Vast.ai (vast.ai), Lambda Labs (lambdalabs.com). Dernière vérification : 29 août 2026. Revérifiée mensuellement. Cette page est maintenue comme référence canonique.',
+        content: 'Tarification vérifiée : RunPod ([runpod.io](https://runpod.io)), Vast.ai ([vast.ai](https://vast.ai)), Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). Dernière vérification : 29 août 2026. Revérifiée mensuellement. Cette page est maintenue comme référence canonique.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -3365,7 +3365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'Louer votre première GPU cloud en 10 minutes',
       description: 'Guide étape par étape pour s\'inscrire et exécuter votre première instance GPU sur n\'importe quel fournisseur cloud.',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'Inscription', text: 'Créer un compte avec email et carte de crédit (RunPod) ou GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 1, name: 'Inscription', text: 'Créer un compte avec email et carte de crédit (RunPod) ou GitHub ([Vast.ai](https://Vast.ai))' },
         { '@type': 'HowToStep', position: 2, name: 'Choisir GPU', text: 'Choisir type GPU (RTX 4090, A100, H100) et région en fonction de la disponibilité et du prix' },
         { '@type': 'HowToStep', position: 3, name: 'Choisir image', text: 'Sélectionner OS (Ubuntu 22.04 avec CUDA est standard)' },
         { '@type': 'HowToStep', position: 4, name: 'Configurer stockage', text: 'Configurer taille du disque (minimum 50 GB recommandé)' },
@@ -3483,7 +3483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'ソース検証',
-        content: '価格を確認: RunPod (runpod.io)、Vast.ai (vast.ai)、Lambda Labs (lambdalabs.com)。最終確認: 2026年8月29日。毎月再確認。このページは標準リファレンスとして管理されています。',
+        content: '価格を確認: RunPod ([runpod.io](https://runpod.io))、Vast.ai ([vast.ai](https://vast.ai))、Lambda Labs ([lambdalabs.com](https://lambdalabs.com))。最終確認: 2026年8月29日。毎月再確認。このページは標準リファレンスとして管理されています。',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -3757,7 +3757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: '最初のクラウドGPUを10分でレンタル',
       description: 'クラウドプロバイダーで最初のGPUインスタンスにサインアップして実行するためのステップバイステップガイド。',
       step: [
-        { '@type': 'HowToStep', position: 1, name: 'サインアップ', text: 'メールとクレジットカード(RunPod)またはGitHub(Vast.ai)でアカウント作成' },
+        { '@type': 'HowToStep', position: 1, name: 'サインアップ', text: 'メールとクレジットカード(RunPod)またはGitHub([Vast.ai](https://Vast.ai))でアカウント作成' },
         { '@type': 'HowToStep', position: 2, name: 'GPUを選択', text: 'GPUタイプ(RTX 4090、A100、H100)と可用性価格に基づいてリージョンを選択' },
         { '@type': 'HowToStep', position: 3, name: 'イメージを選択', text: 'OS選択(Ubuntu 22.04 with CUDA が標準)' },
         { '@type': 'HowToStep', position: 4, name: 'ストレージを設定', text: 'ディスクサイズを設定(最小50 GB推奨)' },
@@ -3875,7 +3875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: '来源验证',
-        content: '验证价格:RunPod (runpod.io)、Vast.ai (vast.ai)、Lambda Labs (lambdalabs.com)。最后核实:2026年8月29日。每月重新核实。本页作为权威参考维护。',
+        content: '验证价格:RunPod ([runpod.io](https://runpod.io))、Vast.ai ([vast.ai](https://vast.ai))、Lambda Labs ([lambdalabs.com](https://lambdalabs.com))。最后核实:2026年8月29日。每月重新核实。本页作为权威参考维护。',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -4149,7 +4149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: '在10分钟内租赁第一个云GPU',
       description: '在任何云提供商上注册和运行第一个GPU实例的分步指南。',
       step: [
-        { '@type': 'HowToStep', position: 1, name: '注册', text: '使用电子邮件和信用卡(RunPod)或GitHub(Vast.ai)创建帐户' },
+        { '@type': 'HowToStep', position: 1, name: '注册', text: '使用电子邮件和信用卡(RunPod)或GitHub([Vast.ai](https://Vast.ai))创建帐户' },
         { '@type': 'HowToStep', position: 2, name: '选择GPU', text: '根据可用性和价格选择GPU类型(RTX 4090、A100、H100)和区域' },
         { '@type': 'HowToStep', position: 3, name: '选择镜像', text: '选择操作系统(Ubuntu 22.04 with CUDA是标准)' },
         { '@type': 'HowToStep', position: 4, name: '设置存储', text: '配置磁盘大小(建议最少50 GB)' },
@@ -4272,7 +4272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     verifiedSources: {
       id: 'verified-sources',
       title: '출처 검증',
-      content: '가격 검증 출처: RunPod (runpod.io), Vast.ai (vast.ai), Lambda Labs (lambdalabs.com). 최종 확인일: 2026년 8월 29일. 매월 재확인. 이 페이지는 표준 참고 자료로 유지 관리됩니다.',
+      content: '가격 검증 출처: RunPod ([runpod.io](https://runpod.io)), Vast.ai ([vast.ai](https://vast.ai)), Lambda Labs ([lambdalabs.com](https://lambdalabs.com)). 최종 확인일: 2026년 8월 29일. 매월 재확인. 이 페이지는 표준 참고 자료로 유지 관리됩니다.',
     },
     verdictBox: {
       id: 'verdict-picks',
@@ -4572,7 +4572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: '빠른 시작: 10분 안에 첫 번째 GPU 렌탈하기',
       content: '모든 플랫폼에서 GPU를 실행하기 위한 단계별 가이드입니다.',
       numberedItems: [
-        '이메일 + 신용카드(RunPod) 또는 GitHub(Vast.ai)로 가입',
+        '이메일 + 신용카드(RunPod) 또는 GitHub([Vast.ai](https://Vast.ai))로 가입',
         'GPU 유형 및 리전 선택 (가용성 및 가격 기준으로 필터링)',
         'OS 이미지 선택 (Ubuntu 22.04 + CUDA가 표준)',
         '디스크 크기 설정 (대부분의 ML 워크로드에 최소 50 GB)',

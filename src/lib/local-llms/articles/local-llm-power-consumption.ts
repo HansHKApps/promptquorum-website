@@ -2195,7 +2195,7 @@ schema: {
           title: '情報源',
           items: [
             'NVIDIA RTX 5090 & 4090 仕様データシート',
-            'Apple M5 Max エネルギー効率テスト (Apple.com)',
+            'Apple M5 Max エネルギー効率テスト ([Apple.com](https://Apple.com))',
             '日本2026年電力料金 (TEPCO、関電、東電)',
           ],
         },

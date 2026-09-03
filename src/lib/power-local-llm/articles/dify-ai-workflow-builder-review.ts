@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify self-hosted',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify is a free, source-available LLMOps platform (github.com/langgenius/dify) for building AI workflows, RAG pipelines, and agents through one visual interface — but its license is a modified Apache 2.0 that bars operating it as a multi-tenant SaaS product without written permission from LangGenius, the company behind it.',
+    leadAnswerBlock: 'Dify is a free, source-available LLMOps platform ([github.com/langgenius/dify](https://github.com/langgenius/dify)) for building AI workflows, RAG pipelines, and agents through one visual interface — but its license is a modified Apache 2.0 that bars operating it as a multi-tenant SaaS product without written permission from LangGenius, the company behind it.',
     quickAnswerTop: {
       en: {
         question: 'What is Dify used for?',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify self-hosted',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify ist eine kostenlose, quelloffene LLMOps-Plattform (github.com/langgenius/dify) zum Erstellen von KI-Workflows, RAG-Pipelines und Agenten über eine einzige visuelle Oberfläche — aber die Lizenz ist ein modifiziertes Apache 2.0, das den Betrieb als Multi-Tenant-SaaS ohne schriftliche Genehmigung von LangGenius, dem Unternehmen dahinter, untersagt.',
+    leadAnswerBlock: 'Dify ist eine kostenlose, quelloffene LLMOps-Plattform ([github.com/langgenius/dify](https://github.com/langgenius/dify)) zum Erstellen von KI-Workflows, RAG-Pipelines und Agenten über eine einzige visuelle Oberfläche — aber die Lizenz ist ein modifiziertes Apache 2.0, das den Betrieb als Multi-Tenant-SaaS ohne schriftliche Genehmigung von LangGenius, dem Unternehmen dahinter, untersagt.',
     quickAnswerTop: {
       de: {
         question: 'Wofür wird Dify verwendet?',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify auto-hébergé',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify est une plateforme LLMOps gratuite et open source (github.com/langgenius/dify) pour créer des workflows IA, des pipelines RAG et des agents via une seule interface visuelle — mais sa licence est une Apache 2.0 modifiée qui interdit d\'en faire un service SaaS multi-tenant sans autorisation écrite de LangGenius, l\'entreprise derrière le projet.',
+    leadAnswerBlock: 'Dify est une plateforme LLMOps gratuite et open source ([github.com/langgenius/dify](https://github.com/langgenius/dify)) pour créer des workflows IA, des pipelines RAG et des agents via une seule interface visuelle — mais sa licence est une Apache 2.0 modifiée qui interdit d\'en faire un service SaaS multi-tenant sans autorisation écrite de LangGenius, l\'entreprise derrière le projet.',
     quickAnswerTop: {
       fr: {
         question: 'À quoi sert Dify ?',
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify autoalojado',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify es una plataforma LLMOps gratuita y de código abierto (github.com/langgenius/dify) para construir workflows de IA, pipelines de RAG y agentes desde una sola interfaz visual — pero su licencia es una Apache 2.0 modificada que prohíbe operarla como SaaS multiusuario sin autorización escrita de LangGenius, la empresa detrás del proyecto.',
+    leadAnswerBlock: 'Dify es una plataforma LLMOps gratuita y de código abierto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para construir workflows de IA, pipelines de RAG y agentes desde una sola interfaz visual — pero su licencia es una Apache 2.0 modificada que prohíbe operarla como SaaS multiusuario sin autorización escrita de LangGenius, la empresa detrás del proyecto.',
     quickAnswerTop: {
       es: {
         question: '¿Para qué se usa Dify?',
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify auto-hospedado',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'O Dify é uma plataforma LLMOps gratuita e de código aberto (github.com/langgenius/dify) para criar workflows de IA, pipelines de RAG e agentes em uma única interface visual — mas sua licença é uma Apache 2.0 modificada que proíbe operá-la como SaaS multiusuário sem autorização por escrito da LangGenius, a empresa por trás do projeto.',
+    leadAnswerBlock: 'O Dify é uma plataforma LLMOps gratuita e de código aberto ([github.com/langgenius/dify](https://github.com/langgenius/dify)) para criar workflows de IA, pipelines de RAG e agentes em uma única interface visual — mas sua licença é uma Apache 2.0 modificada que proíbe operá-la como SaaS multiusuário sem autorização por escrito da LangGenius, a empresa por trás do projeto.',
     quickAnswerTop: {
       pt: {
         question: 'Para que serve o Dify?',
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify self-hosted',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify منصة LLMOps مجانية ومفتوحة المصدر (github.com/langgenius/dify) لبناء سير عمل الذكاء الاصطناعي وخطوط RAG والوكلاء عبر واجهة مرئية واحدة — لكن رخصتها هي Apache 2.0 معدّلة تمنع تشغيلها كخدمة SaaS متعددة المستأجرين دون إذن كتابي من LangGenius، الشركة التي تقف خلف المشروع.',
+    leadAnswerBlock: 'Dify منصة LLMOps مجانية ومفتوحة المصدر ([github.com/langgenius/dify](https://github.com/langgenius/dify)) لبناء سير عمل الذكاء الاصطناعي وخطوط RAG والوكلاء عبر واجهة مرئية واحدة — لكن رخصتها هي Apache 2.0 معدّلة تمنع تشغيلها كخدمة SaaS متعددة المستأجرين دون إذن كتابي من LangGenius، الشركة التي تقف خلف المشروع.',
     quickAnswerTop: {
       ar: {
         question: 'ما الذي تُستخدم من أجله Dify؟',
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Dify 셀프 호스팅',
       'Dify RAG',
     ],
-    leadAnswerBlock: 'Dify(github.com/langgenius/dify)는 하나의 비주얼 인터페이스로 AI 워크플로, RAG 파이프라인, 에이전트를 구축할 수 있는 무료 오픈소스 LLMOps 플랫폼입니다. 다만 라이선스는 수정된 Apache 2.0으로, 개발사인 LangGenius의 서면 승인 없이 멀티테넌트 SaaS로 운영하는 것을 금지합니다.',
+    leadAnswerBlock: 'Dify([github.com/langgenius/dify](https://github.com/langgenius/dify))는 하나의 비주얼 인터페이스로 AI 워크플로, RAG 파이프라인, 에이전트를 구축할 수 있는 무료 오픈소스 LLMOps 플랫폼입니다. 다만 라이선스는 수정된 Apache 2.0으로, 개발사인 LangGenius의 서면 승인 없이 멀티테넌트 SaaS로 운영하는 것을 금지합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Dify는 무엇에 사용됩니까?',

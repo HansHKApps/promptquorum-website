@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-en.webp',
     // Verified 2026-07-16 directly against nvidia.com's own product page for the Jetson Orin Nano
     // Super Developer Kit (price and specs), Ollama's official Jetson documentation
-    // (jetson-ai-lab.com/tutorials/ollama) for LLM support, and Frigate's own GitHub discussion #13081
+    // ([jetson-ai-lab.com/tutorials/ollama](https://jetson-ai-lab.com/tutorials/ollama)) for LLM support, and Frigate's own GitHub discussion #13081
     // for the hardware-acceleration friction note. This article stays informational — no affiliateLinks —
     // per scope: only the 6 named Buyer's-Guide slugs carry affiliate links, not every article that
     // mentions a specific product.

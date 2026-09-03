@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Inline completions: Ctrl+Shift+\\\\ (VS Code) or Cmd+Shift+\\\\ (Mac) triggers local LLM suggestion.',
           ],
           image: '/images/local-llms-for-coding-workflows-ide-setup-hero-en.webp',
-          imageCaption: 'IDE integration setup: Install Ollama (ollama.ai) → Install Continue.dev VS Code extension → Configure localhost:11434 → Select Codestral 22B or Qwen3 8B model → Use Ctrl+Shift+\\ to trigger inline suggestions. 3-step setup complete.',
+          imageCaption: 'IDE integration setup: Install Ollama ([ollama.ai](https://ollama.ai)) → Install Continue.dev VS Code extension → Configure localhost:11434 → Select Codestral 22B or Qwen3 8B model → Use Ctrl+Shift+\\ to trigger inline suggestions. 3-step setup complete.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1459,7 +1459,7 @@ schema: {
             'Autocompletado en línea: Ctrl+Shift+\\\\ (VS Code) o Cmd+Shift+\\\\ (Mac) activa la sugerencia del LLM local.',
           ],
           image: '/images/local-llms-for-coding-workflows-ide-setup-hero-es.webp',
-          imageCaption: 'Configuración de integración con IDE: instala Ollama (ollama.ai) → instala la extensión Continue.dev para VS Code → configura localhost:11434 → selecciona el modelo Codestral 22B o Qwen3 8B → usa Ctrl+Shift+\\ para activar sugerencias en línea. Configuración completa en 3 pasos.',
+          imageCaption: 'Configuración de integración con IDE: instala Ollama ([ollama.ai](https://ollama.ai)) → instala la extensión Continue.dev para VS Code → configura localhost:11434 → selecciona el modelo Codestral 22B o Qwen3 8B → usa Ctrl+Shift+\\ para activar sugerencias en línea. Configuración completa en 3 pasos.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1727,7 +1727,7 @@ schema: {
             'الإكمال التلقائي المضمّن: Ctrl+Shift+\\\\ (VS Code) أو Cmd+Shift+\\\\ (Mac) يُفعّل اقتراح LLM المحلي.',
           ],
           image: '/images/local-llms-for-coding-workflows-ide-setup-hero-ar.webp',
-          imageCaption: 'إعداد التكامل مع IDE: ثبّت Ollama (ollama.ai) → ثبّت إضافة Continue.dev لـVS Code → اضبط localhost:11434 → اختر نموذج Codestral 22B أو Qwen3 8B → استخدم Ctrl+Shift+\\ لتفعيل الاقتراحات المضمّنة. إعداد كامل في 3 خطوات.',
+          imageCaption: 'إعداد التكامل مع IDE: ثبّت Ollama ([ollama.ai](https://ollama.ai)) → ثبّت إضافة Continue.dev لـVS Code → اضبط localhost:11434 → اختر نموذج Codestral 22B أو Qwen3 8B → استخدم Ctrl+Shift+\\ لتفعيل الاقتراحات المضمّنة. إعداد كامل في 3 خطوات.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -2090,7 +2090,7 @@ schema: {
             '인라인 완성: Ctrl+Shift+\\\\ (VS Code) 또는 Cmd+Shift+\\\\ (Mac)으로 로컬 LLM 제안을 트리거합니다.',
           ],
           image: '/images/local-llms-for-coding-workflows-ide-setup-hero-ko.webp',
-          imageCaption: 'IDE 연동 설정: Ollama(ollama.ai) 설치 → Continue.dev VS Code 확장 설치 → localhost:11434 설정 → Qwen3-Coder 7B 모델 선택 → Ctrl+Shift+\\로 인라인 제안 트리거. 3단계 설정 완료.',
+          imageCaption: 'IDE 연동 설정: Ollama([ollama.ai](https://ollama.ai)) 설치 → Continue.dev VS Code 확장 설치 → localhost:11434 설정 → Qwen3-Coder 7B 모델 선택 → Ctrl+Shift+\\로 인라인 제안 트리거. 3단계 설정 완료.',
         },
         commonMistakes: {
           id: 'common-mistakes',

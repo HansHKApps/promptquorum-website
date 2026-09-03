@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-en.webp',
     title: 'Radar Presence Sensing: Room Occupancy Without a Camera (2026)',
     seoTitle: 'Radar Presence Sensing, No Camera (2026)',
-    // Verified 2026-07-16 against Aqara's own spec page (us.aqara.com/pages/product-specs/presence-sensor-fp-2),
+    // Verified 2026-07-16 against Aqara's own spec page ([us.aqara.com/pages/product-specs/presence-sensor-fp-2](https://us.aqara.com/pages/product-specs/presence-sensor-fp-2)),
     // major US retailer listings (Amazon, Best Buy, Home Depot) for the Aqara FP2, and SmartHomeScene's
     // mmWave sensor module roundup + ESPHome's own LD2410 component docs for the Hi-Link LD2410/LD2410C/LD2450
     // DIY chips. Exact retail price fluctuates by retailer/promo — the range below is a checked snapshot, not

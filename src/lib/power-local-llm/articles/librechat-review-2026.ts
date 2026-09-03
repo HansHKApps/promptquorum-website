@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat self-hosted',
       'LibreChat Docker setup',
     ],
-    leadAnswerBlock: 'LibreChat (github.com/danny-avila/LibreChat) is a free, open-source, MIT-licensed chat platform you self-host with Docker — it connects to proprietary AI providers and, through its custom-endpoint feature, to any OpenAI-API-compatible local inference server such as Ollama, LocalAI, text-generation-webui, LM Studio, or vLLM, so it can run entirely on local models with no API cost and no data leaving your infrastructure.',
+    leadAnswerBlock: 'LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) is a free, open-source, MIT-licensed chat platform you self-host with Docker — it connects to proprietary AI providers and, through its custom-endpoint feature, to any OpenAI-API-compatible local inference server such as Ollama, LocalAI, text-generation-webui, LM Studio, or vLLM, so it can run entirely on local models with no API cost and no data leaving your infrastructure.',
     quickAnswerTop: {
       en: {
         question: 'What is LibreChat used for?',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat self-hosted',
       'LibreChat Docker Setup',
     ],
-    leadAnswerBlock: 'LibreChat (github.com/danny-avila/LibreChat) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Plattform, die Sie selbst mit Docker hosten — sie verbindet sich mit proprietären KI-Anbietern und, über ihre Custom-Endpoints-Funktion, mit jedem OpenAI-API-kompatiblen lokalen Inferenzserver wie Ollama, LocalAI, text-generation-webui, LM Studio oder vLLM. Dadurch kann sie vollständig auf lokalen Modellen laufen — ohne API-Kosten und ohne dass Daten Ihre Infrastruktur verlassen.',
+    leadAnswerBlock: 'LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Plattform, die Sie selbst mit Docker hosten — sie verbindet sich mit proprietären KI-Anbietern und, über ihre Custom-Endpoints-Funktion, mit jedem OpenAI-API-kompatiblen lokalen Inferenzserver wie Ollama, LocalAI, text-generation-webui, LM Studio oder vLLM. Dadurch kann sie vollständig auf lokalen Modellen laufen — ohne API-Kosten und ohne dass Daten Ihre Infrastruktur verlassen.',
     quickAnswerTop: {
       de: {
         question: 'Wofür wird LibreChat verwendet?',
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat auto-hébergé',
       'installation Docker LibreChat',
     ],
-    leadAnswerBlock: 'LibreChat (github.com/danny-avila/LibreChat) est une plateforme de chat gratuite, open source et sous licence MIT que vous auto-hébergez avec Docker — elle se connecte à des fournisseurs IA propriétaires et, via sa fonctionnalité de points de terminaison personnalisés, à tout serveur d\'inférence local compatible avec l\'API OpenAI comme Ollama, LocalAI, text-generation-webui, LM Studio ou vLLM, afin de fonctionner entièrement sur des modèles locaux sans coût d\'API et sans que les données quittent votre infrastructure.',
+    leadAnswerBlock: 'LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) est une plateforme de chat gratuite, open source et sous licence MIT que vous auto-hébergez avec Docker — elle se connecte à des fournisseurs IA propriétaires et, via sa fonctionnalité de points de terminaison personnalisés, à tout serveur d\'inférence local compatible avec l\'API OpenAI comme Ollama, LocalAI, text-generation-webui, LM Studio ou vLLM, afin de fonctionner entièrement sur des modèles locaux sans coût d\'API et sans que les données quittent votre infrastructure.',
     quickAnswerTop: {
       fr: {
         question: 'À quoi sert LibreChat ?',
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat autoalojado',
       'instalación LibreChat Docker',
     ],
-    leadAnswerBlock: 'LibreChat (github.com/danny-avila/LibreChat) es una plataforma de chat gratuita, de código abierto y con licencia MIT que se autoaloja con Docker: se conecta a proveedores de IA propietarios y, mediante su función de endpoints personalizados, a cualquier servidor de inferencia local compatible con la API de OpenAI, como Ollama, LocalAI, text-generation-webui, LM Studio o vLLM, por lo que puede funcionar por completo con modelos locales, sin coste de API y sin que los datos salgan de tu infraestructura.',
+    leadAnswerBlock: 'LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) es una plataforma de chat gratuita, de código abierto y con licencia MIT que se autoaloja con Docker: se conecta a proveedores de IA propietarios y, mediante su función de endpoints personalizados, a cualquier servidor de inferencia local compatible con la API de OpenAI, como Ollama, LocalAI, text-generation-webui, LM Studio o vLLM, por lo que puede funcionar por completo con modelos locales, sin coste de API y sin que los datos salgan de tu infraestructura.',
     quickAnswerTop: {
       es: {
         question: '¿Para qué se usa LibreChat?',
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat auto-hospedado',
       'instalação LibreChat Docker',
     ],
-    leadAnswerBlock: 'O LibreChat (github.com/danny-avila/LibreChat) é uma plataforma de chat gratuita, de código aberto e com licença MIT que você auto-hospeda com Docker — ele se conecta a provedores de IA proprietários e, por meio do recurso de endpoints personalizados, a qualquer servidor de inferência local compatível com a API da OpenAI, como Ollama, LocalAI, text-generation-webui, LM Studio ou vLLM, podendo assim rodar totalmente com modelos locais, sem custo de API e sem que os dados saiam da sua infraestrutura.',
+    leadAnswerBlock: 'O LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) é uma plataforma de chat gratuita, de código aberto e com licença MIT que você auto-hospeda com Docker — ele se conecta a provedores de IA proprietários e, por meio do recurso de endpoints personalizados, a qualquer servidor de inferência local compatível com a API da OpenAI, como Ollama, LocalAI, text-generation-webui, LM Studio ou vLLM, podendo assim rodar totalmente com modelos locais, sem custo de API e sem que os dados saiam da sua infraestrutura.',
     quickAnswerTop: {
       pt: {
         question: 'Para que serve o LibreChat?',
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat استضافة ذاتية',
       'تثبيت LibreChat Docker',
     ],
-    leadAnswerBlock: 'LibreChat (github.com/danny-avila/LibreChat) منصة دردشة مجانية ومفتوحة المصدر بترخيص MIT تستضيفها بنفسك عبر Docker — تتصل بمزوّدي ذكاء اصطناعي مملوكين، وعبر ميزة نقاط النهاية المخصّصة (custom endpoints) تتصل أيضاً بأي خادم استدلال محلي متوافق مع واجهة OpenAI API مثل Ollama أو LocalAI أو text-generation-webui أو LM Studio أو vLLM، فتعمل بالكامل على نماذج محلية بلا تكلفة API وبلا خروج بيانات من بنيتك التحتية.',
+    leadAnswerBlock: 'LibreChat ([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)) منصة دردشة مجانية ومفتوحة المصدر بترخيص MIT تستضيفها بنفسك عبر Docker — تتصل بمزوّدي ذكاء اصطناعي مملوكين، وعبر ميزة نقاط النهاية المخصّصة (custom endpoints) تتصل أيضاً بأي خادم استدلال محلي متوافق مع واجهة OpenAI API مثل Ollama أو LocalAI أو text-generation-webui أو LM Studio أو vLLM، فتعمل بالكامل على نماذج محلية بلا تكلفة API وبلا خروج بيانات من بنيتك التحتية.',
     quickAnswerTop: {
       ar: {
         question: 'ما استخدام LibreChat؟',
@@ -2195,7 +2195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LibreChat 셀프호스팅',
       'LibreChat Docker 설치',
     ],
-    leadAnswerBlock: 'LibreChat(github.com/danny-avila/LibreChat)는 Docker로 직접 호스팅하는 무료 오픈소스 MIT 라이선스 채팅 플랫폼입니다. 독점 AI 프로바이더에 연결할 수 있을 뿐 아니라, 커스텀 엔드포인트 기능을 통해 Ollama, LocalAI, text-generation-webui, LM Studio, vLLM 등 OpenAI API와 호환되는 로컬 추론 서버에도 연결할 수 있어, API 비용 없이 데이터가 인프라 밖으로 나가지 않는 완전한 로컬 모델 기반 운영이 가능합니다.',
+    leadAnswerBlock: 'LibreChat([github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat))는 Docker로 직접 호스팅하는 무료 오픈소스 MIT 라이선스 채팅 플랫폼입니다. 독점 AI 프로바이더에 연결할 수 있을 뿐 아니라, 커스텀 엔드포인트 기능을 통해 Ollama, LocalAI, text-generation-webui, LM Studio, vLLM 등 OpenAI API와 호환되는 로컬 추론 서버에도 연결할 수 있어, API 비용 없이 데이터가 인프라 밖으로 나가지 않는 완전한 로컬 모델 기반 운영이 가능합니다.',
     quickAnswerTop: {
       ko: {
         question: 'LibreChat는 무엇에 사용됩니까?',

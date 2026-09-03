@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is DeepSeek R1 the same as the DeepSeek API?',
-            a: 'No. DeepSeek R1 refers to the open-weight model released on Hugging Face under Apache 2.0. The DeepSeek API (api.deepseek.com) is a separate cloud service with servers in China. The GDPR risk applies to the API, not to the weights. Running R1 locally via Ollama (<code>ollama run deepseek-r1:7b</code>) has no transfer risk.',
+            a: 'No. DeepSeek R1 refers to the open-weight model released on Hugging Face under Apache 2.0. The DeepSeek API ([api.deepseek.com](https://api.deepseek.com)) is a separate cloud service with servers in China. The GDPR risk applies to the API, not to the weights. Running R1 locally via Ollama (<code>ollama run deepseek-r1:7b</code>) has no transfer risk.',
           },
           {
             q: 'What is the PIPL and why does it matter for GDPR?',
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'DeepSeek R1 é a mesma coisa que a API do DeepSeek?',
-            a: 'Não. DeepSeek R1 se refere ao modelo de código aberto lançado no Hugging Face sob Apache 2.0. A API do DeepSeek (api.deepseek.com) é um serviço em nuvem separado com servidores na China. O risco para o RGPD aplica-se à API, não aos pesos. Executar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) não implica nenhum risco de transferência.',
+            a: 'Não. DeepSeek R1 se refere ao modelo de código aberto lançado no Hugging Face sob Apache 2.0. A API do DeepSeek ([api.deepseek.com](https://api.deepseek.com)) é um serviço em nuvem separado com servidores na China. O risco para o RGPD aplica-se à API, não aos pesos. Executar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) não implica nenhum risco de transferência.',
           },
           {
             q: 'O que é a PIPL e por que importa para o RGPD?',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿DeepSeek R1 es lo mismo que la API de DeepSeek?',
-            a: 'No. DeepSeek R1 se refiere al modelo de código abierto publicado en Hugging Face bajo Apache 2.0. La API de DeepSeek (api.deepseek.com) es un servicio en la nube separado con servidores en China. El riesgo para el RGPD aplica a la API, no a los pesos. Ejecutar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) no implica ningún riesgo de transferencia.',
+            a: 'No. DeepSeek R1 se refiere al modelo de código abierto publicado en Hugging Face bajo Apache 2.0. La API de DeepSeek ([api.deepseek.com](https://api.deepseek.com)) es un servicio en la nube separado con servidores en China. El riesgo para el RGPD aplica a la API, no a los pesos. Ejecutar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) no implica ningún riesgo de transferencia.',
           },
           {
             q: '¿Qué es la PIPL y por qué importa para el RGPD?',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل DeepSeek R1 هو نفسه واجهة DeepSeek البرمجية؟',
-            a: 'لا. DeepSeek R1 يشير إلى النموذج مفتوح الأوزان المُطرح على Hugging Face بموجب Apache 2.0. واجهة DeepSeek البرمجية (api.deepseek.com) خدمة سحابية منفصلة بخوادم في الصين. خطر GDPR ينطبق على الواجهة البرمجية لا على الأوزان. تشغيل R1 محلياً عبر Ollama (<code>ollama run deepseek-r1:7b</code>) لا ينطوي على أي خطر نقل.',
+            a: 'لا. DeepSeek R1 يشير إلى النموذج مفتوح الأوزان المُطرح على Hugging Face بموجب Apache 2.0. واجهة DeepSeek البرمجية ([api.deepseek.com](https://api.deepseek.com)) خدمة سحابية منفصلة بخوادم في الصين. خطر GDPR ينطبق على الواجهة البرمجية لا على الأوزان. تشغيل R1 محلياً عبر Ollama (<code>ollama run deepseek-r1:7b</code>) لا ينطوي على أي خطر نقل.',
           },
           {
             q: 'ما هو PIPL ولماذا يهم في GDPR؟',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'DeepSeek R1은 DeepSeek API와 동일합니까?',
-            a: '아닙니다. DeepSeek R1은 Apache 2.0 라이선스로 Hugging Face에 배포된 오픈 가중치 모델을 가리킵니다. DeepSeek API(api.deepseek.com)는 중국에 서버를 둔 별도의 클라우드 서비스입니다. GDPR 위험은 API에 적용되며 가중치에는 해당되지 않습니다. Ollama를 통해 R1을 로컬에서 실행(<code>ollama run deepseek-r1:7b</code>)하면 이전 위험이 전혀 없습니다.',
+            a: '아닙니다. DeepSeek R1은 Apache 2.0 라이선스로 Hugging Face에 배포된 오픈 가중치 모델을 가리킵니다. DeepSeek API([api.deepseek.com](https://api.deepseek.com))는 중국에 서버를 둔 별도의 클라우드 서비스입니다. GDPR 위험은 API에 적용되며 가중치에는 해당되지 않습니다. Ollama를 통해 R1을 로컬에서 실행(<code>ollama run deepseek-r1:7b</code>)하면 이전 위험이 전혀 없습니다.',
           },
           {
             q: 'PIPL이란 무엇이며 GDPR에서 왜 중요합니까?',

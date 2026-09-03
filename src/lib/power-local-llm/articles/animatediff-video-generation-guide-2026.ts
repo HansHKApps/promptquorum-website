@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff Guide 2026: Animate Any Stable Diffusion Model',
     seoTitle: 'AnimateDiff 2026: Free Local AI Video From SD Models',
     intro:
-      'AnimateDiff (github.com/guoyww/AnimateDiff) is an open-source motion module that adds animation capability to existing Stable Diffusion checkpoints without retraining the base model. Instead of a standalone video model, it is a plug-in component: pair it with a Stable Diffusion 1.5 or SDXL checkpoint you already use, and the motion module injects temporal (frame-to-frame) coherence so the same style, character, or art direction that model already produces as a still image comes out as a short animated clip. It runs entirely on your own GPU through ComfyUI or the AUTOMATIC1111 WebUI, at no cost, and the project is Apache 2.0 licensed — with one caveat worth knowing before you plan any commercial use, covered in the license section below.',
+      'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) is an open-source motion module that adds animation capability to existing Stable Diffusion checkpoints without retraining the base model. Instead of a standalone video model, it is a plug-in component: pair it with a Stable Diffusion 1.5 or SDXL checkpoint you already use, and the motion module injects temporal (frame-to-frame) coherence so the same style, character, or art direction that model already produces as a still image comes out as a short animated clip. It runs entirely on your own GPU through ComfyUI or the AUTOMATIC1111 WebUI, at no cost, and the project is Apache 2.0 licensed — with one caveat worth knowing before you plan any commercial use, covered in the license section below.',
     metaDescription:
       'AnimateDiff turns Stable Diffusion checkpoints into video with no retraining. ComfyUI and A1111 setup, VRAM needs, motion LoRAs, and license fine print.',
     twitterDescription:
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Think of it as a plug-in you attach to a Stable Diffusion model you already use — the model still draws in its usual style, but AnimateDiff adds the frame-to-frame motion so the output is a short clip instead of a still image.' },
         ],
         items: [
-          'AnimateDiff (github.com/guoyww/AnimateDiff) is a plug-and-play motion module for Stable Diffusion 1.5 and SDXL checkpoints — no fine-tuning of the base model required.',
+          'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) is a plug-and-play motion module for Stable Diffusion 1.5 and SDXL checkpoints — no fine-tuning of the base model required.',
           'It is used almost entirely through two community integrations: ComfyUI-AnimateDiff-Evolved (maintained by Kosinkadink) and the AUTOMATIC1111 sd-webui-animatediff extension (maintained by continue-revolution).',
           'SD1.5-based AnimateDiff typically runs on 8-12 GB VRAM for basic text-to-video; SDXL support (mm_sdxl_v10_beta) needs roughly 13 GB+ per the official repo.',
           'The default motion module output is a 16-frame clip, about 2 seconds — longer clips use a community sliding-window technique that trades some temporal consistency at window boundaries.',
@@ -296,11 +296,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How do I install AnimateDiff in ComfyUI?',
-            a: 'Install the community-maintained ComfyUI-AnimateDiff-Evolved node (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) via ComfyUI Manager or by cloning it into your custom_nodes folder, then download a motion module checkpoint (v3_sd15_mm.ckpt for SD1.5 or mm_sdxl_v10_beta.ckpt for SDXL) into that node\'s models folder before building a text-to-video workflow.',
+            a: 'Install the community-maintained ComfyUI-AnimateDiff-Evolved node ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) via ComfyUI Manager or by cloning it into your custom_nodes folder, then download a motion module checkpoint (v3_sd15_mm.ckpt for SD1.5 or mm_sdxl_v10_beta.ckpt for SDXL) into that node\'s models folder before building a text-to-video workflow.',
           },
           {
             q: 'Does AnimateDiff work with AUTOMATIC1111?',
-            a: 'Yes, via the community-maintained sd-webui-animatediff extension (github.com/continue-revolution/sd-webui-animatediff), installed through the WebUI\'s Extensions tab. It adds an AnimateDiff panel under the standard txt2img tab.',
+            a: 'Yes, via the community-maintained sd-webui-animatediff extension ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff)), installed through the WebUI\'s Extensions tab. It adds an AnimateDiff panel under the standard txt2img tab.',
           },
           {
             q: 'How much VRAM does AnimateDiff need?',
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff 2026: Stable-Diffusion-Modelle animieren, Kosten & VRAM',
     seoTitle: 'AnimateDiff 2026: Kostenlose lokale KI-Videoanimation',
     intro:
-      'AnimateDiff (github.com/guoyww/AnimateDiff) ist ein Open-Source-Motion-Modul, das vorhandene Stable-Diffusion-Checkpoints animationsfähig macht, ohne das Basismodell neu zu trainieren. Statt eines eigenständigen Video-Modells handelt es sich um eine Plug-in-Komponente: Sie kombinieren es mit einem bereits genutzten Stable-Diffusion-1.5- oder SDXL-Checkpoint, und das Motion-Modul fügt die zeitliche Kohärenz zwischen den Frames hinzu — derselbe Stil, dieselbe Figur, dieselbe künstlerische Ausrichtung, die dieses Modell bereits als Einzelbild liefert, wird zu einem kurzen animierten Clip. Es läuft vollständig auf der eigenen GPU über ComfyUI oder die AUTOMATIC1111 WebUI, kostenlos, und das Projekt steht unter Apache-2.0-Lizenz — mit einem Vorbehalt, den Sie vor jeder kommerziellen Nutzung kennen sollten (siehe Lizenzabschnitt unten).',
+      'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) ist ein Open-Source-Motion-Modul, das vorhandene Stable-Diffusion-Checkpoints animationsfähig macht, ohne das Basismodell neu zu trainieren. Statt eines eigenständigen Video-Modells handelt es sich um eine Plug-in-Komponente: Sie kombinieren es mit einem bereits genutzten Stable-Diffusion-1.5- oder SDXL-Checkpoint, und das Motion-Modul fügt die zeitliche Kohärenz zwischen den Frames hinzu — derselbe Stil, dieselbe Figur, dieselbe künstlerische Ausrichtung, die dieses Modell bereits als Einzelbild liefert, wird zu einem kurzen animierten Clip. Es läuft vollständig auf der eigenen GPU über ComfyUI oder die AUTOMATIC1111 WebUI, kostenlos, und das Projekt steht unter Apache-2.0-Lizenz — mit einem Vorbehalt, den Sie vor jeder kommerziellen Nutzung kennen sollten (siehe Lizenzabschnitt unten).',
     metaDescription:
       'AnimateDiff macht aus Stable-Diffusion-Checkpoints Videos, ohne Neu-Training. ComfyUI- & A1111-Setup, VRAM-Bedarf, Motion-LoRAs und die Lizenz-Feinheiten im Detail.',
     twitterDescription:
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Stellen Sie es sich als Plug-in vor, das Sie an ein bereits genutztes Stable-Diffusion-Modell anhängen — das Modell zeichnet weiterhin in seinem gewohnten Stil, aber AnimateDiff fügt die Bewegung zwischen den Frames hinzu, sodass ein kurzer Clip statt eines Einzelbilds entsteht.' },
         ],
         items: [
-          'AnimateDiff (github.com/guoyww/AnimateDiff) ist ein Plug-and-Play-Motion-Modul für Stable-Diffusion-1.5- und SDXL-Checkpoints — kein Fine-Tuning des Basismodells nötig.',
+          'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) ist ein Plug-and-Play-Motion-Modul für Stable-Diffusion-1.5- und SDXL-Checkpoints — kein Fine-Tuning des Basismodells nötig.',
           'Genutzt wird es fast ausschließlich über zwei Community-Integrationen: ComfyUI-AnimateDiff-Evolved (gepflegt von Kosinkadink) und die AUTOMATIC1111-Erweiterung sd-webui-animatediff (gepflegt von continue-revolution).',
           'SD1.5-basiertes AnimateDiff läuft typischerweise mit 8-12 GB VRAM für einfaches Text-zu-Video; SDXL-Unterstützung (mm_sdxl_v10_beta) braucht laut offiziellem Repo rund 13 GB+.',
           'Die Standardausgabe des Motion-Moduls ist ein 16-Frame-Clip, etwa 2 Sekunden — längere Clips nutzen eine Community-Sliding-Window-Technik, die an den Fenstergrenzen etwas zeitliche Konsistenz kostet.',
@@ -659,11 +659,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie installiere ich AnimateDiff in ComfyUI?',
-            a: 'Installieren Sie den community-gepflegten Node ComfyUI-AnimateDiff-Evolved (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) über den ComfyUI Manager oder durch Klonen in Ihren custom_nodes-Ordner, laden Sie dann einen Motion-Modul-Checkpoint (v3_sd15_mm.ckpt für SD1.5 oder mm_sdxl_v10_beta.ckpt für SDXL) in den Modell-Ordner dieses Nodes, bevor Sie einen Text-zu-Video-Workflow aufbauen.',
+            a: 'Installieren Sie den community-gepflegten Node ComfyUI-AnimateDiff-Evolved ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) über den ComfyUI Manager oder durch Klonen in Ihren custom_nodes-Ordner, laden Sie dann einen Motion-Modul-Checkpoint (v3_sd15_mm.ckpt für SD1.5 oder mm_sdxl_v10_beta.ckpt für SDXL) in den Modell-Ordner dieses Nodes, bevor Sie einen Text-zu-Video-Workflow aufbauen.',
           },
           {
             q: 'Funktioniert AnimateDiff mit AUTOMATIC1111?',
-            a: 'Ja, über die community-gepflegte Erweiterung sd-webui-animatediff (github.com/continue-revolution/sd-webui-animatediff), installiert über den Extensions-Tab der WebUI. Sie fügt ein AnimateDiff-Panel unter dem Standard-txt2img-Tab hinzu.',
+            a: 'Ja, über die community-gepflegte Erweiterung sd-webui-animatediff ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff)), installiert über den Extensions-Tab der WebUI. Sie fügt ein AnimateDiff-Panel unter dem Standard-txt2img-Tab hinzu.',
           },
           {
             q: 'Wie viel VRAM benötigt AnimateDiff?',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff : animer un modèle Stable Diffusion (guide 2026)',
     seoTitle: 'AnimateDiff 2026 : génération vidéo IA locale gratuite',
     intro:
-      'AnimateDiff (github.com/guoyww/AnimateDiff) est un module de mouvement open source qui ajoute une capacité d\'animation à un checkpoint Stable Diffusion existant, sans réentraîner le modèle de base. Plutôt qu\'un modèle vidéo autonome, il s\'agit d\'un composant enfichable : vous l\'associez à un checkpoint Stable Diffusion 1.5 ou SDXL que vous utilisez déjà, et le module de mouvement ajoute la cohérence temporelle (d\'une image à l\'autre) afin que le même style, personnage ou direction artistique que ce modèle produit déjà en image fixe ressorte sous forme de court clip animé. Il tourne entièrement sur votre propre GPU via ComfyUI ou l\'interface AUTOMATIC1111, gratuitement, et le projet est sous licence Apache 2.0 — avec une nuance à connaître avant toute utilisation commerciale, détaillée dans la section sur la licence ci-dessous.',
+      'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) est un module de mouvement open source qui ajoute une capacité d\'animation à un checkpoint Stable Diffusion existant, sans réentraîner le modèle de base. Plutôt qu\'un modèle vidéo autonome, il s\'agit d\'un composant enfichable : vous l\'associez à un checkpoint Stable Diffusion 1.5 ou SDXL que vous utilisez déjà, et le module de mouvement ajoute la cohérence temporelle (d\'une image à l\'autre) afin que le même style, personnage ou direction artistique que ce modèle produit déjà en image fixe ressorte sous forme de court clip animé. Il tourne entièrement sur votre propre GPU via ComfyUI ou l\'interface AUTOMATIC1111, gratuitement, et le projet est sous licence Apache 2.0 — avec une nuance à connaître avant toute utilisation commerciale, détaillée dans la section sur la licence ci-dessous.',
     metaDescription:
       'AnimateDiff transforme des checkpoints Stable Diffusion en vidéo, sans réentraînement. Installation ComfyUI/A1111, besoins VRAM, motion LoRAs et licence en détail.',
     twitterDescription:
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Voyez-le comme un module que vous greffez sur un modèle Stable Diffusion déjà utilisé — le modèle continue de dessiner dans son style habituel, mais AnimateDiff ajoute le mouvement d\'une image à l\'autre pour obtenir un court clip au lieu d\'une image fixe.' },
         ],
         items: [
-          'AnimateDiff (github.com/guoyww/AnimateDiff) est un module de mouvement plug-and-play pour les checkpoints Stable Diffusion 1.5 et SDXL — aucun fine-tuning du modèle de base nécessaire.',
+          'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) est un module de mouvement plug-and-play pour les checkpoints Stable Diffusion 1.5 et SDXL — aucun fine-tuning du modèle de base nécessaire.',
           'Il est utilisé presque exclusivement via deux intégrations communautaires : ComfyUI-AnimateDiff-Evolved (maintenu par Kosinkadink) et l\'extension AUTOMATIC1111 sd-webui-animatediff (maintenue par continue-revolution).',
           'AnimateDiff basé sur SD1.5 tourne généralement avec 8-12 Go de VRAM pour du texte-vers-vidéo basique ; le support SDXL (mm_sdxl_v10_beta) demande environ 13 Go+ selon le dépôt officiel.',
           'La sortie par défaut du module de mouvement est un clip de 16 images, environ 2 secondes — les clips plus longs utilisent une technique communautaire de fenêtre glissante, qui coûte un peu de cohérence temporelle aux limites des fenêtres.',
@@ -1022,11 +1022,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment installer AnimateDiff dans ComfyUI ?',
-            a: 'Installez le nœud communautaire ComfyUI-AnimateDiff-Evolved (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) via ComfyUI Manager ou en le clonant dans votre dossier custom_nodes, puis téléchargez un checkpoint de module de mouvement (v3_sd15_mm.ckpt pour SD1.5 ou mm_sdxl_v10_beta.ckpt pour SDXL) dans le dossier de modèles de ce nœud avant de construire un workflow texte-vers-vidéo.',
+            a: 'Installez le nœud communautaire ComfyUI-AnimateDiff-Evolved ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) via ComfyUI Manager ou en le clonant dans votre dossier custom_nodes, puis téléchargez un checkpoint de module de mouvement (v3_sd15_mm.ckpt pour SD1.5 ou mm_sdxl_v10_beta.ckpt pour SDXL) dans le dossier de modèles de ce nœud avant de construire un workflow texte-vers-vidéo.',
           },
           {
             q: 'AnimateDiff fonctionne-t-il avec AUTOMATIC1111 ?',
-            a: 'Oui, via l\'extension communautaire sd-webui-animatediff (github.com/continue-revolution/sd-webui-animatediff), installée via l\'onglet Extensions de la WebUI. Elle ajoute un panneau AnimateDiff sous l\'onglet txt2img standard.',
+            a: 'Oui, via l\'extension communautaire sd-webui-animatediff ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff)), installée via l\'onglet Extensions de la WebUI. Elle ajoute un panneau AnimateDiff sous l\'onglet txt2img standard.',
           },
           {
             q: 'De combien de VRAM AnimateDiff a-t-il besoin ?',
@@ -1820,7 +1820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff 2026: anima cualquier modelo Stable Diffusion',
     seoTitle: 'AnimateDiff 2026: video IA local gratis desde modelos SD',
     intro:
-      'AnimateDiff (github.com/guoyww/AnimateDiff) es un módulo de movimiento de código abierto que añade capacidad de animación a checkpoints de Stable Diffusion existentes sin reentrenar el modelo base. En lugar de un modelo de video independiente, es un componente conectable: lo combinas con un checkpoint de Stable Diffusion 1.5 o SDXL que ya usas, y el módulo de movimiento inyecta coherencia temporal (de fotograma a fotograma) para que el mismo estilo, personaje o dirección artística que ese modelo ya produce como imagen fija salga como un breve clip animado. Funciona enteramente en tu propia GPU a través de ComfyUI o la WebUI de AUTOMATIC1111, sin costo, y el proyecto tiene licencia Apache 2.0 — con una salvedad que conviene conocer antes de planear cualquier uso comercial, cubierta en la sección de licencia más abajo.',
+      'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) es un módulo de movimiento de código abierto que añade capacidad de animación a checkpoints de Stable Diffusion existentes sin reentrenar el modelo base. En lugar de un modelo de video independiente, es un componente conectable: lo combinas con un checkpoint de Stable Diffusion 1.5 o SDXL que ya usas, y el módulo de movimiento inyecta coherencia temporal (de fotograma a fotograma) para que el mismo estilo, personaje o dirección artística que ese modelo ya produce como imagen fija salga como un breve clip animado. Funciona enteramente en tu propia GPU a través de ComfyUI o la WebUI de AUTOMATIC1111, sin costo, y el proyecto tiene licencia Apache 2.0 — con una salvedad que conviene conocer antes de planear cualquier uso comercial, cubierta en la sección de licencia más abajo.',
     metaDescription:
       'AnimateDiff convierte checkpoints de Stable Diffusion en video sin reentrenar. Instalación en ComfyUI y A1111, VRAM necesaria, motion LoRAs y la letra pequeña de la licencia.',
     twitterDescription:
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Piénsalo como un complemento que conectas a un modelo de Stable Diffusion que ya usas — el modelo sigue dibujando en su estilo habitual, pero AnimateDiff añade el movimiento de un fotograma a otro para que la salida sea un clip corto en vez de una imagen fija.' },
         ],
         items: [
-          'AnimateDiff (github.com/guoyww/AnimateDiff) es un módulo de movimiento plug-and-play para checkpoints de Stable Diffusion 1.5 y SDXL — no requiere ajuste fino del modelo base.',
+          'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) es un módulo de movimiento plug-and-play para checkpoints de Stable Diffusion 1.5 y SDXL — no requiere ajuste fino del modelo base.',
           'Se usa casi exclusivamente a través de dos integraciones comunitarias: ComfyUI-AnimateDiff-Evolved (mantenido por Kosinkadink) y la extensión de AUTOMATIC1111 sd-webui-animatediff (mantenida por continue-revolution).',
           'AnimateDiff basado en SD1.5 suele funcionar con 8-12 GB de VRAM para texto a video básico; el soporte de SDXL (mm_sdxl_v10_beta) necesita aproximadamente 13 GB o más según el repositorio oficial.',
           'La salida por defecto del módulo de movimiento es un clip de 16 fotogramas, unos 2 segundos — los clips más largos usan una técnica comunitaria de ventana deslizante que sacrifica algo de coherencia temporal en los límites de cada ventana.',
@@ -2111,11 +2111,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cómo instalo AnimateDiff en ComfyUI?',
-            a: 'Instala el nodo comunitario ComfyUI-AnimateDiff-Evolved (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) vía ComfyUI Manager o clonándolo en tu carpeta custom_nodes, luego descarga un checkpoint de módulo de movimiento (v3_sd15_mm.ckpt para SD1.5 o mm_sdxl_v10_beta.ckpt para SDXL) en la carpeta de modelos de ese nodo antes de construir un workflow texto a video.',
+            a: 'Instala el nodo comunitario ComfyUI-AnimateDiff-Evolved ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) vía ComfyUI Manager o clonándolo en tu carpeta custom_nodes, luego descarga un checkpoint de módulo de movimiento (v3_sd15_mm.ckpt para SD1.5 o mm_sdxl_v10_beta.ckpt para SDXL) en la carpeta de modelos de ese nodo antes de construir un workflow texto a video.',
           },
           {
             q: '¿Funciona AnimateDiff con AUTOMATIC1111?',
-            a: 'Sí, mediante la extensión comunitaria sd-webui-animatediff (github.com/continue-revolution/sd-webui-animatediff), instalada a través de la pestaña Extensions de la WebUI. Añade un panel AnimateDiff bajo la pestaña txt2img estándar.',
+            a: 'Sí, mediante la extensión comunitaria sd-webui-animatediff ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff)), instalada a través de la pestaña Extensions de la WebUI. Añade un panel AnimateDiff bajo la pestaña txt2img estándar.',
           },
           {
             q: '¿Cuánta VRAM necesita AnimateDiff?',
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff 2026: anime qualquer modelo Stable Diffusion',
     seoTitle: 'AnimateDiff 2026: vídeo IA local grátis a partir do SD',
     intro:
-      'O AnimateDiff (github.com/guoyww/AnimateDiff) é um módulo de movimento de código aberto que adiciona capacidade de animação a checkpoints existentes do Stable Diffusion, sem retreinar o modelo base. Em vez de um modelo de vídeo independente, é um componente plugável: você o combina com um checkpoint do Stable Diffusion 1.5 ou SDXL que já usa, e o módulo de movimento injeta coerência temporal (quadro a quadro) para que o mesmo estilo, personagem ou direção artística que aquele modelo já produz em imagem estática saia como um clipe animado curto. Ele roda inteiramente na sua própria GPU via ComfyUI ou na WebUI do AUTOMATIC1111, sem custo, e o projeto tem licença Apache 2.0 — com uma ressalva importante antes de qualquer uso comercial, detalhada na seção de licença abaixo.',
+      'O AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) é um módulo de movimento de código aberto que adiciona capacidade de animação a checkpoints existentes do Stable Diffusion, sem retreinar o modelo base. Em vez de um modelo de vídeo independente, é um componente plugável: você o combina com um checkpoint do Stable Diffusion 1.5 ou SDXL que já usa, e o módulo de movimento injeta coerência temporal (quadro a quadro) para que o mesmo estilo, personagem ou direção artística que aquele modelo já produz em imagem estática saia como um clipe animado curto. Ele roda inteiramente na sua própria GPU via ComfyUI ou na WebUI do AUTOMATIC1111, sem custo, e o projeto tem licença Apache 2.0 — com uma ressalva importante antes de qualquer uso comercial, detalhada na seção de licença abaixo.',
     metaDescription:
       'O AnimateDiff transforma checkpoints do Stable Diffusion em vídeo sem retreinar. Instalação no ComfyUI e A1111, VRAM necessária, motion LoRAs e detalhes da licença.',
     twitterDescription:
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Pense nele como um plugin que você conecta a um modelo do Stable Diffusion que já usa — o modelo continua desenhando no seu estilo habitual, mas o AnimateDiff adiciona o movimento entre os quadros, gerando um clipe curto em vez de uma imagem estática.' },
         ],
         items: [
-          'O AnimateDiff (github.com/guoyww/AnimateDiff) é um módulo de movimento plug-and-play para checkpoints do Stable Diffusion 1.5 e SDXL — não exige fine-tuning do modelo base.',
+          'O AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) é um módulo de movimento plug-and-play para checkpoints do Stable Diffusion 1.5 e SDXL — não exige fine-tuning do modelo base.',
           'É usado quase exclusivamente por meio de duas integrações mantidas pela comunidade: ComfyUI-AnimateDiff-Evolved (mantido por Kosinkadink) e a extensão sd-webui-animatediff do AUTOMATIC1111 (mantida por continue-revolution).',
           'O AnimateDiff baseado em SD1.5 costuma rodar com 8-12 GB de VRAM para texto-em-vídeo básico; o suporte a SDXL (mm_sdxl_v10_beta) precisa de cerca de 13 GB ou mais, segundo o repositório oficial.',
           'A saída padrão do módulo de movimento é um clipe de 16 quadros, cerca de 2 segundos — clipes mais longos usam uma técnica comunitária de janela deslizante, que custa um pouco de coerência temporal nas bordas das janelas.',
@@ -2474,11 +2474,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Como instalo o AnimateDiff no ComfyUI?',
-            a: 'Instale o nó mantido pela comunidade ComfyUI-AnimateDiff-Evolved (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) via ComfyUI Manager ou clonando-o na sua pasta custom_nodes, depois baixe um checkpoint de módulo de movimento (v3_sd15_mm.ckpt para SD1.5 ou mm_sdxl_v10_beta.ckpt para SDXL) na pasta de modelos desse nó antes de construir um workflow texto-em-vídeo.',
+            a: 'Instale o nó mantido pela comunidade ComfyUI-AnimateDiff-Evolved ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) via ComfyUI Manager ou clonando-o na sua pasta custom_nodes, depois baixe um checkpoint de módulo de movimento (v3_sd15_mm.ckpt para SD1.5 ou mm_sdxl_v10_beta.ckpt para SDXL) na pasta de modelos desse nó antes de construir um workflow texto-em-vídeo.',
           },
           {
             q: 'O AnimateDiff funciona com o AUTOMATIC1111?',
-            a: 'Sim, via a extensão mantida pela comunidade sd-webui-animatediff (github.com/continue-revolution/sd-webui-animatediff), instalada pela aba Extensions da WebUI. Ela adiciona um painel AnimateDiff sob a aba txt2img padrão.',
+            a: 'Sim, via a extensão mantida pela comunidade sd-webui-animatediff ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff)), instalada pela aba Extensions da WebUI. Ela adiciona um painel AnimateDiff sob a aba txt2img padrão.',
           },
           {
             q: 'Quanta VRAM o AnimateDiff precisa?',
@@ -2546,7 +2546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'دليل AnimateDiff 2026: حرّك أي نموذج Stable Diffusion',
     seoTitle: 'AnimateDiff 2026: توليد فيديو محلي مجاني بالذكاء الاصطناعي',
     intro:
-      'AnimateDiff (github.com/guoyww/AnimateDiff) هو وحدة حركة مفتوحة المصدر تضيف قدرة على التحريك إلى نقاط فحص Stable Diffusion الموجودة بالفعل، دون إعادة تدريب النموذج الأساسي. بدلاً من كونه نموذج فيديو مستقلاً، فهو مكوّن إضافي يُركَّب: تجمعه مع نقطة فحص Stable Diffusion 1.5 أو SDXL تستخدمها بالفعل، وتضيف وحدة الحركة اتساقاً زمنياً (بين الإطارات) بحيث يخرج نفس الأسلوب أو الشخصية أو التوجه الفني الذي ينتجه ذلك النموذج بالفعل كصورة ثابتة في صورة مقطع متحرك قصير. يعمل بالكامل على وحدة معالجة الرسومات الخاصة بك عبر ComfyUI أو واجهة AUTOMATIC1111، مجاناً، والمشروع مرخّص بموجب Apache 2.0 — مع تحفظ واحد يستحق المعرفة قبل التخطيط لأي استخدام تجاري، موضح في قسم الترخيص أدناه.',
+      'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) هو وحدة حركة مفتوحة المصدر تضيف قدرة على التحريك إلى نقاط فحص Stable Diffusion الموجودة بالفعل، دون إعادة تدريب النموذج الأساسي. بدلاً من كونه نموذج فيديو مستقلاً، فهو مكوّن إضافي يُركَّب: تجمعه مع نقطة فحص Stable Diffusion 1.5 أو SDXL تستخدمها بالفعل، وتضيف وحدة الحركة اتساقاً زمنياً (بين الإطارات) بحيث يخرج نفس الأسلوب أو الشخصية أو التوجه الفني الذي ينتجه ذلك النموذج بالفعل كصورة ثابتة في صورة مقطع متحرك قصير. يعمل بالكامل على وحدة معالجة الرسومات الخاصة بك عبر ComfyUI أو واجهة AUTOMATIC1111، مجاناً، والمشروع مرخّص بموجب Apache 2.0 — مع تحفظ واحد يستحق المعرفة قبل التخطيط لأي استخدام تجاري، موضح في قسم الترخيص أدناه.',
     metaDescription:
       'يحوّل AnimateDiff نقاط فحص Stable Diffusion إلى فيديو دون إعادة تدريب. إعداد ComfyUI وA1111، متطلبات VRAM، motion LoRAs، وتفاصيل الترخيص.',
     twitterDescription:
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'تخيّلها كإضافة تُركّبها على نموذج Stable Diffusion تستخدمه بالفعل — يستمر النموذج في الرسم بأسلوبه المعتاد، لكن AnimateDiff يضيف الحركة بين الإطارات لتخرج النتيجة كمقطع قصير بدلاً من صورة ثابتة.' },
         ],
         items: [
-          'AnimateDiff (github.com/guoyww/AnimateDiff) وحدة حركة جاهزة للتشغيل الفوري لنقاط فحص Stable Diffusion 1.5 وSDXL — لا حاجة لضبط دقيق للنموذج الأساسي.',
+          'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) وحدة حركة جاهزة للتشغيل الفوري لنقاط فحص Stable Diffusion 1.5 وSDXL — لا حاجة لضبط دقيق للنموذج الأساسي.',
           'يُستخدم حصرياً تقريباً عبر تكاملين يصونهما المجتمع: ComfyUI-AnimateDiff-Evolved (يصونه Kosinkadink) وامتداد AUTOMATIC1111 المسمى sd-webui-animatediff (يصونه continue-revolution).',
           'يعمل AnimateDiff المعتمد على SD1.5 عادة بـ 8-12 جيجابايت VRAM لتوليد نص إلى فيديو أساسي؛ يحتاج دعم SDXL (mm_sdxl_v10_beta) نحو 13 جيجابايت أو أكثر وفقاً للمستودع الرسمي.',
           'المخرج الافتراضي لوحدة الحركة هو مقطع من 16 إطاراً، نحو ثانيتين — تستخدم المقاطع الأطول تقنية نافذة منزلقة يطوّرها المجتمع، تكلف بعض الاتساق الزمني عند حدود النوافذ.',
@@ -2837,11 +2837,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كيف أثبّت AnimateDiff في ComfyUI؟',
-            a: 'ثبّت عقدة ComfyUI-AnimateDiff-Evolved التي يصونها المجتمع (github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved) عبر ComfyUI Manager أو باستنساخها في مجلد custom_nodes الخاص بك، ثم نزّل نقطة فحص لوحدة الحركة (v3_sd15_mm.ckpt لـ SD1.5 أو mm_sdxl_v10_beta.ckpt لـ SDXL) إلى مجلد النماذج الخاص بتلك العقدة قبل بناء سير عمل من نص إلى فيديو.',
+            a: 'ثبّت عقدة ComfyUI-AnimateDiff-Evolved التي يصونها المجتمع ([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)) عبر ComfyUI Manager أو باستنساخها في مجلد custom_nodes الخاص بك، ثم نزّل نقطة فحص لوحدة الحركة (v3_sd15_mm.ckpt لـ SD1.5 أو mm_sdxl_v10_beta.ckpt لـ SDXL) إلى مجلد النماذج الخاص بتلك العقدة قبل بناء سير عمل من نص إلى فيديو.',
           },
           {
             q: 'هل يعمل AnimateDiff مع AUTOMATIC1111؟',
-            a: 'نعم، عبر امتداد sd-webui-animatediff الذي يصونه المجتمع (github.com/continue-revolution/sd-webui-animatediff)، ويُثبَّت من تبويب Extensions في الواجهة. يضيف لوحة AnimateDiff ضمن تبويب txt2img القياسي.',
+            a: 'نعم، عبر امتداد sd-webui-animatediff الذي يصونه المجتمع ([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff))، ويُثبَّت من تبويب Extensions في الواجهة. يضيف لوحة AnimateDiff ضمن تبويب txt2img القياسي.',
           },
           {
             q: 'كم من VRAM يحتاج AnimateDiff؟',
@@ -2909,7 +2909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AnimateDiff 2026 가이드: Stable Diffusion 모델 애니메이션화',
     seoTitle: 'AnimateDiff 2026: 무료 로컬 AI 영상 생성 가이드',
     intro:
-      'AnimateDiff(github.com/guoyww/AnimateDiff)는 기존 Stable Diffusion 체크포인트에 애니메이션 기능을 추가하는 오픈소스 모션 모듈로, 기본 모델을 재학습할 필요가 없습니다. 독립된 영상 모델이 아니라 플러그인 형태의 구성 요소로 작동합니다. 이미 사용 중인 Stable Diffusion 1.5 또는 SDXL 체크포인트와 결합하면, 모션 모듈이 프레임 간 시간적 일관성을 더해 해당 모델이 정지 이미지로 이미 만들어내는 것과 동일한 스타일, 캐릭터, 아트 방향을 짧은 애니메이션 클립으로 출력합니다. ComfyUI나 AUTOMATIC1111 WebUI를 통해 자신의 GPU에서 완전히 무료로 실행되며, 프로젝트는 Apache 2.0 라이선스를 따릅니다 — 다만 상업적 활용을 계획하기 전에 알아둘 만한 한 가지 유의사항이 있으며, 아래 라이선스 섹션에서 다룹니다.',
+      'AnimateDiff([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff))는 기존 Stable Diffusion 체크포인트에 애니메이션 기능을 추가하는 오픈소스 모션 모듈로, 기본 모델을 재학습할 필요가 없습니다. 독립된 영상 모델이 아니라 플러그인 형태의 구성 요소로 작동합니다. 이미 사용 중인 Stable Diffusion 1.5 또는 SDXL 체크포인트와 결합하면, 모션 모듈이 프레임 간 시간적 일관성을 더해 해당 모델이 정지 이미지로 이미 만들어내는 것과 동일한 스타일, 캐릭터, 아트 방향을 짧은 애니메이션 클립으로 출력합니다. ComfyUI나 AUTOMATIC1111 WebUI를 통해 자신의 GPU에서 완전히 무료로 실행되며, 프로젝트는 Apache 2.0 라이선스를 따릅니다 — 다만 상업적 활용을 계획하기 전에 알아둘 만한 한 가지 유의사항이 있으며, 아래 라이선스 섹션에서 다룹니다.',
     metaDescription:
       'AnimateDiff는 재학습 없이 Stable Diffusion 체크포인트를 영상으로 바꿉니다. ComfyUI·A1111 설치, VRAM 요구사항, motion LoRA, 라이선스 세부사항까지 정리했습니다.',
     twitterDescription:
@@ -3000,7 +3000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '이미 사용 중인 Stable Diffusion 모델에 연결하는 플러그인이라고 생각하면 됩니다 — 모델은 여전히 익숙한 스타일로 그림을 그리지만, AnimateDiff가 프레임 간 움직임을 더해 정지 이미지 대신 짧은 클립이 출력됩니다.' },
         ],
         items: [
-          'AnimateDiff(github.com/guoyww/AnimateDiff)는 Stable Diffusion 1.5와 SDXL 체크포인트용 플러그 앤 플레이 모션 모듈입니다 — 기본 모델의 파인튜닝이 필요 없습니다.',
+          'AnimateDiff([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff))는 Stable Diffusion 1.5와 SDXL 체크포인트용 플러그 앤 플레이 모션 모듈입니다 — 기본 모델의 파인튜닝이 필요 없습니다.',
           '거의 전적으로 두 가지 커뮤니티 통합을 통해 사용됩니다: ComfyUI-AnimateDiff-Evolved(Kosinkadink 유지 관리)와 AUTOMATIC1111 확장인 sd-webui-animatediff(continue-revolution 유지 관리).',
           'SD1.5 기반 AnimateDiff는 일반적으로 기본 텍스트-투-비디오에 8-12GB VRAM으로 실행됩니다. 공식 저장소에 따르면 SDXL 지원(mm_sdxl_v10_beta)은 약 13GB 이상이 필요합니다.',
           '모션 모듈의 기본 출력은 16프레임 클립(약 2초)입니다 — 더 긴 클립은 커뮤니티의 슬라이딩 윈도우 기법을 사용하며, 윈도우 경계에서 시간적 일관성을 다소 희생합니다.',
@@ -3200,11 +3200,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ComfyUI에서 AnimateDiff는 어떻게 설치하나요?',
-            a: 'ComfyUI Manager를 통해 커뮤니티가 유지 관리하는 ComfyUI-AnimateDiff-Evolved 노드(github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved)를 설치하거나 custom_nodes 폴더에 클론한 뒤, 텍스트-투-비디오 워크플로를 구성하기 전에 모션 모듈 체크포인트(SD1.5용 v3_sd15_mm.ckpt 또는 SDXL용 mm_sdxl_v10_beta.ckpt)를 해당 노드의 models 폴더에 다운로드하세요.',
+            a: 'ComfyUI Manager를 통해 커뮤니티가 유지 관리하는 ComfyUI-AnimateDiff-Evolved 노드([github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved))를 설치하거나 custom_nodes 폴더에 클론한 뒤, 텍스트-투-비디오 워크플로를 구성하기 전에 모션 모듈 체크포인트(SD1.5용 v3_sd15_mm.ckpt 또는 SDXL용 mm_sdxl_v10_beta.ckpt)를 해당 노드의 models 폴더에 다운로드하세요.',
           },
           {
             q: 'AnimateDiff는 AUTOMATIC1111에서도 작동하나요?',
-            a: '네, 커뮤니티가 유지 관리하는 sd-webui-animatediff 확장(github.com/continue-revolution/sd-webui-animatediff)을 통해 WebUI의 Extensions 탭에서 설치합니다. 표준 txt2img 탭 아래에 AnimateDiff 패널이 추가됩니다.',
+            a: '네, 커뮤니티가 유지 관리하는 sd-webui-animatediff 확장([github.com/continue-revolution/sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff))을 통해 WebUI의 Extensions 탭에서 설치합니다. 표준 txt2img 탭 아래에 AnimateDiff 패널이 추가됩니다.',
           },
           {
             q: 'AnimateDiff에는 VRAM이 얼마나 필요한가요?',

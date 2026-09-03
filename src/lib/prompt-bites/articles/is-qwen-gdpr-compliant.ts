@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is Alibaba Cloud GDPR compliant?',
-            a: 'Alibaba Cloud offers GDPR-compliant configurations for EU-resident data (Frankfurt region). If you use the Alibaba Cloud EU region with SCCs in place, the GDPR transfer risk is reduced to the same level as AWS or Azure. However, the Qwen API (api.qwen.ai) is a separate product — verify which infrastructure region processes your requests before drawing this conclusion.',
+            a: 'Alibaba Cloud offers GDPR-compliant configurations for EU-resident data (Frankfurt region). If you use the Alibaba Cloud EU region with SCCs in place, the GDPR transfer risk is reduced to the same level as AWS or Azure. However, the Qwen API ([api.qwen.ai](https://api.qwen.ai)) is a separate product — verify which infrastructure region processes your requests before drawing this conclusion.',
           },
           {
             q: 'Which Qwen model is best for GDPR-sensitive workflows?',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ist Alibaba Cloud DSGVO-konform?',
-            a: 'Alibaba Cloud bietet DSGVO-konforme Konfigurationen für EU-ansässige Daten (Region Frankfurt). Wenn Sie die EU-Region von Alibaba Cloud mit aktivierten SCC verwenden, ist das DSGVO-Transferrisiko auf dasselbe Niveau wie AWS oder Azure reduziert. Die Qwen-API (api.qwen.ai) ist jedoch ein separates Produkt — überprüfen Sie, welche Infrastrukturregion Ihre Anfragen verarbeitet.',
+            a: 'Alibaba Cloud bietet DSGVO-konforme Konfigurationen für EU-ansässige Daten (Region Frankfurt). Wenn Sie die EU-Region von Alibaba Cloud mit aktivierten SCC verwenden, ist das DSGVO-Transferrisiko auf dasselbe Niveau wie AWS oder Azure reduziert. Die Qwen-API ([api.qwen.ai](https://api.qwen.ai)) ist jedoch ein separates Produkt — überprüfen Sie, welche Infrastrukturregion Ihre Anfragen verarbeitet.',
           },
           {
             q: 'Welches Qwen-Modell ist am besten für DSGVO-sensible Workflows?',
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Alibaba Cloud est-il conforme au RGPD ?',
-            a: 'Alibaba Cloud propose des configurations conformes au RGPD pour les données résidant dans l\'UE (région Francfort). Si vous utilisez la région UE d\'Alibaba Cloud avec des CCT en place, le risque de transfert RGPD est réduit au même niveau qu\'AWS ou Azure. Cependant, l\'API Qwen (api.qwen.ai) est un produit distinct — vérifiez quelle région d\'infrastructure traite vos requêtes.',
+            a: 'Alibaba Cloud propose des configurations conformes au RGPD pour les données résidant dans l\'UE (région Francfort). Si vous utilisez la région UE d\'Alibaba Cloud avec des CCT en place, le risque de transfert RGPD est réduit au même niveau qu\'AWS ou Azure. Cependant, l\'API Qwen ([api.qwen.ai](https://api.qwen.ai)) est un produit distinct — vérifiez quelle région d\'infrastructure traite vos requêtes.',
           },
           {
             q: 'Quel modèle Qwen est le mieux adapté aux flux de travail sensibles sous RGPD ?',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'A Alibaba Cloud é compatível com o RGPD?',
-            a: 'A Alibaba Cloud oferece configurações compatíveis com o RGPD para dados residentes na UE (região de Frankfurt). Se você usar a região UE da Alibaba Cloud com CCT em vigor, o risco de transferência RGPD é reduzido ao mesmo nível que AWS ou Azure. No entanto, a API do Qwen (api.qwen.ai) é um produto separado — verifique qual região de infraestrutura processa suas solicitações antes de tirar essa conclusão.',
+            a: 'A Alibaba Cloud oferece configurações compatíveis com o RGPD para dados residentes na UE (região de Frankfurt). Se você usar a região UE da Alibaba Cloud com CCT em vigor, o risco de transferência RGPD é reduzido ao mesmo nível que AWS ou Azure. No entanto, a API do Qwen ([api.qwen.ai](https://api.qwen.ai)) é um produto separado — verifique qual região de infraestrutura processa suas solicitações antes de tirar essa conclusão.',
           },
           {
             q: 'Qual modelo Qwen é mais adequado para fluxos de trabalho sensíveis sob o RGPD?',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es Alibaba Cloud compatible con el RGPD?',
-            a: 'Alibaba Cloud ofrece configuraciones compatibles con el RGPD para datos residentes en la UE (región de Frankfurt). Si usas la región UE de Alibaba Cloud con CCT en vigor, el riesgo de transferencia RGPD se reduce al mismo nivel que AWS o Azure. Sin embargo, la API de Qwen (api.qwen.ai) es un producto aparte: verifica qué región de infraestructura procesa tus solicitudes antes de llegar a esta conclusión.',
+            a: 'Alibaba Cloud ofrece configuraciones compatibles con el RGPD para datos residentes en la UE (región de Frankfurt). Si usas la región UE de Alibaba Cloud con CCT en vigor, el riesgo de transferencia RGPD se reduce al mismo nivel que AWS o Azure. Sin embargo, la API de Qwen ([api.qwen.ai](https://api.qwen.ai)) es un producto aparte: verifica qué región de infraestructura procesa tus solicitudes antes de llegar a esta conclusión.',
           },
           {
             q: '¿Qué modelo de Qwen es el más adecuado para flujos de trabajo sensibles bajo el RGPD?',
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل Alibaba Cloud متوافق مع GDPR؟',
-            a: 'Alibaba Cloud يوفر إعدادات متوافقة مع GDPR للبيانات المقيمة في الاتحاد الأوروبي (منطقة فرانكفورت). إذا استخدمت منطقة الاتحاد الأوروبي من Alibaba Cloud مع SCCs سارية، ينخفض خطر نقل GDPR إلى نفس مستوى AWS أو Azure. غير أن واجهة Qwen البرمجية (api.qwen.ai) منتج منفصل: تحقق من منطقة البنية التحتية التي تعالج طلباتك قبل التوصل إلى هذا الاستنتاج.',
+            a: 'Alibaba Cloud يوفر إعدادات متوافقة مع GDPR للبيانات المقيمة في الاتحاد الأوروبي (منطقة فرانكفورت). إذا استخدمت منطقة الاتحاد الأوروبي من Alibaba Cloud مع SCCs سارية، ينخفض خطر نقل GDPR إلى نفس مستوى AWS أو Azure. غير أن واجهة Qwen البرمجية ([api.qwen.ai](https://api.qwen.ai)) منتج منفصل: تحقق من منطقة البنية التحتية التي تعالج طلباتك قبل التوصل إلى هذا الاستنتاج.',
           },
           {
             q: 'ما هو نموذج Qwen الأنسب لسير العمل الحساسة وفق GDPR؟',
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Alibaba Cloud는 GDPR을 준수합니까?',
-            a: 'Alibaba Cloud는 EU 거주 데이터에 대해 GDPR 준수 구성을 제공합니다(프랑크푸르트 리전). SCCs가 있는 Alibaba Cloud EU 리전을 사용하면 GDPR 이전 위험이 AWS 또는 Azure와 동일한 수준으로 감소합니다. 그러나 Qwen API(api.qwen.ai)는 별도 제품입니다. 이 결론에 도달하기 전에 요청을 처리하는 인프라 리전을 확인하십시오.',
+            a: 'Alibaba Cloud는 EU 거주 데이터에 대해 GDPR 준수 구성을 제공합니다(프랑크푸르트 리전). SCCs가 있는 Alibaba Cloud EU 리전을 사용하면 GDPR 이전 위험이 AWS 또는 Azure와 동일한 수준으로 감소합니다. 그러나 Qwen API([api.qwen.ai](https://api.qwen.ai))는 별도 제품입니다. 이 결론에 도달하기 전에 요청을 처리하는 인프라 리전을 확인하십시오.',
           },
           {
             q: 'GDPR 민감 워크플로우에 가장 적합한 Qwen 모델은 무엇입니까?',

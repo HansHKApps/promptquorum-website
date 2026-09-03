@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'What Is Real-ESRGAN?',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) is an open-source, Apache 2.0-licensed AI super-resolution model that takes a low-resolution or degraded image as input and outputs a larger, sharper version. It was developed by researchers at Tencent ARC Lab and published as "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" at the 2021 ICCV Workshops. Unlike simple interpolation (bicubic or Lanczos resizing), it uses a trained neural network to reconstruct plausible detail — texture, edges, and fine structure — rather than just stretching existing pixels.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) is an open-source, Apache 2.0-licensed AI super-resolution model that takes a low-resolution or degraded image as input and outputs a larger, sharper version. It was developed by researchers at Tencent ARC Lab and published as "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" at the 2021 ICCV Workshops. Unlike simple interpolation (bicubic or Lanczos resizing), it uses a trained neural network to reconstruct plausible detail — texture, edges, and fine structure — rather than just stretching existing pixels.',
         items: [
           'Upscaling: enlarges images by 2x or 4x while adding AI-reconstructed detail instead of blurring',
           'Restoration: removes JPEG compression artifacts, noise, and blur from real-world degraded photos, not just clean downsampled test images',
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'Was ist Real-ESRGAN?',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) ist ein quelloffenes, Apache-2.0-lizenziertes KI-Super-Resolution-Modell, das ein niedrig aufgelöstes oder beschädigtes Bild als Eingabe nimmt und eine größere, schärfere Version ausgibt. Es wurde von Forschern des Tencent ARC Lab entwickelt und als „Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" auf den ICCV Workshops 2021 veröffentlicht. Anders als einfache Interpolation (bikubisches oder Lanczos-Resizing) nutzt es ein trainiertes neuronales Netz, um plausible Details — Textur, Kanten und feine Strukturen — zu rekonstruieren, statt vorhandene Pixel nur zu strecken.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) ist ein quelloffenes, Apache-2.0-lizenziertes KI-Super-Resolution-Modell, das ein niedrig aufgelöstes oder beschädigtes Bild als Eingabe nimmt und eine größere, schärfere Version ausgibt. Es wurde von Forschern des Tencent ARC Lab entwickelt und als „Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" auf den ICCV Workshops 2021 veröffentlicht. Anders als einfache Interpolation (bikubisches oder Lanczos-Resizing) nutzt es ein trainiertes neuronales Netz, um plausible Details — Textur, Kanten und feine Strukturen — zu rekonstruieren, statt vorhandene Pixel nur zu strecken.',
         items: [
           'Hochskalieren: vergrößert Bilder um das 2- oder 4-Fache und fügt KI-rekonstruierte Details hinzu, statt sie zu verwischen',
           'Restaurierung: entfernt JPEG-Kompressionsartefakte, Rauschen und Unschärfe aus real beschädigten Fotos, nicht nur aus sauberen, künstlich verkleinerten Testbildern',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'Qu\'est-ce que Real-ESRGAN ?',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) est un modèle de super-résolution IA open source, sous licence Apache 2.0, qui prend une image basse résolution ou dégradée en entrée et produit une version plus grande et plus nette. Il a été développé par des chercheurs du Tencent ARC Lab et publié sous le titre « Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data » lors des ICCV Workshops 2021. Contrairement à une simple interpolation (redimensionnement bicubique ou Lanczos), il utilise un réseau de neurones entraîné pour reconstruire des détails plausibles — texture, contours et structure fine — plutôt que de simplement étirer les pixels existants.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) est un modèle de super-résolution IA open source, sous licence Apache 2.0, qui prend une image basse résolution ou dégradée en entrée et produit une version plus grande et plus nette. Il a été développé par des chercheurs du Tencent ARC Lab et publié sous le titre « Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data » lors des ICCV Workshops 2021. Contrairement à une simple interpolation (redimensionnement bicubique ou Lanczos), il utilise un réseau de neurones entraîné pour reconstruire des détails plausibles — texture, contours et structure fine — plutôt que de simplement étirer les pixels existants.',
         items: [
           'Agrandissement : agrandit les images de 2x ou 4x en ajoutant des détails reconstruits par IA plutôt qu\'en floutant',
           'Restauration : supprime les artefacts de compression JPEG, le bruit et le flou des photos réellement dégradées, pas seulement des images de test propres et sous-échantillonnées',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: '¿Qué es Real-ESRGAN?',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) es un modelo de superresolución con IA de código abierto, con licencia Apache 2.0, que toma una imagen de baja resolución o degradada como entrada y genera una versión más grande y nítida. Fue desarrollado por investigadores de Tencent ARC Lab y publicado como "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" en los ICCV Workshops de 2021. A diferencia de la simple interpolación (redimensionado bicúbico o Lanczos), usa una red neuronal entrenada para reconstruir detalles plausibles — textura, bordes y estructura fina — en lugar de simplemente estirar los píxeles existentes.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) es un modelo de superresolución con IA de código abierto, con licencia Apache 2.0, que toma una imagen de baja resolución o degradada como entrada y genera una versión más grande y nítida. Fue desarrollado por investigadores de Tencent ARC Lab y publicado como "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" en los ICCV Workshops de 2021. A diferencia de la simple interpolación (redimensionado bicúbico o Lanczos), usa una red neuronal entrenada para reconstruir detalles plausibles — textura, bordes y estructura fina — en lugar de simplemente estirar los píxeles existentes.',
         items: [
           'Ampliación: agranda imágenes 2x o 4x añadiendo detalle reconstruido por IA en lugar de difuminar',
           'Restauración: elimina artefactos de compresión JPEG, ruido y desenfoque de fotos degradadas reales, no solo de imágenes de prueba limpias y submuestreadas',
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'O que é o Real-ESRGAN?',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) é um modelo de super-resolução com IA de código aberto, sob licença Apache 2.0, que recebe uma imagem de baixa resolução ou degradada como entrada e gera uma versão maior e mais nítida. Foi desenvolvido por pesquisadores do Tencent ARC Lab e publicado como "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" nos ICCV Workshops de 2021. Diferente de uma simples interpolação (redimensionamento bicúbico ou Lanczos), ele usa uma rede neural treinada para reconstruir detalhes plausíveis — textura, bordas e estrutura fina — em vez de apenas esticar pixels existentes.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) é um modelo de super-resolução com IA de código aberto, sob licença Apache 2.0, que recebe uma imagem de baixa resolução ou degradada como entrada e gera uma versão maior e mais nítida. Foi desenvolvido por pesquisadores do Tencent ARC Lab e publicado como "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" nos ICCV Workshops de 2021. Diferente de uma simples interpolação (redimensionamento bicúbico ou Lanczos), ele usa uma rede neural treinada para reconstruir detalhes plausíveis — textura, bordas e estrutura fina — em vez de apenas esticar pixels existentes.',
         items: [
           'Ampliação: aumenta imagens em 2x ou 4x adicionando detalhe reconstruído por IA em vez de borrar',
           'Restauração: remove artefatos de compressão JPEG, ruído e desfoque de fotos realmente degradadas, não apenas de imagens de teste limpas e reduzidas',
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'ما هي Real-ESRGAN؟',
-        content: 'Real-ESRGAN (github.com/xinntao/Real-ESRGAN) نموذج تكبير دقة بالذكاء الاصطناعي مفتوح المصدر، مرخّص بموجب Apache 2.0، يأخذ صورة منخفضة الدقة أو متدهورة كمدخل وينتج نسخة أكبر وأوضح. طوّره باحثون من Tencent ARC Lab ونُشر بعنوان "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" في ورش عمل ICCV لعام 2021. وخلافاً للاستيفاء البسيط (تغيير الحجم ثنائي التكعيب أو Lanczos)، يستخدم شبكة عصبية مدرّبة لإعادة بناء تفاصيل معقولة — نسيج وحواف وبنية دقيقة — بدلاً من مجرد تمديد البكسلات الموجودة.',
+        content: 'Real-ESRGAN ([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)) نموذج تكبير دقة بالذكاء الاصطناعي مفتوح المصدر، مرخّص بموجب Apache 2.0، يأخذ صورة منخفضة الدقة أو متدهورة كمدخل وينتج نسخة أكبر وأوضح. طوّره باحثون من Tencent ARC Lab ونُشر بعنوان "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data" في ورش عمل ICCV لعام 2021. وخلافاً للاستيفاء البسيط (تغيير الحجم ثنائي التكعيب أو Lanczos)، يستخدم شبكة عصبية مدرّبة لإعادة بناء تفاصيل معقولة — نسيج وحواف وبنية دقيقة — بدلاً من مجرد تمديد البكسلات الموجودة.',
         items: [
           'التكبير: يُكبّر الصور بمقدار 2x أو 4x مع إضافة تفاصيل معاد بناؤها بالذكاء الاصطناعي بدلاً من التمويه',
           'الترميم: يزيل تشوهات ضغط JPEG والضوضاء والضبابية من صور واقعية متدهورة، وليس فقط من صور اختبار نظيفة مُصغّرة',
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-real-esrgan',
         title: 'Real-ESRGAN이란 무엇인가요?',
-        content: 'Real-ESRGAN(github.com/xinntao/Real-ESRGAN)은 저해상도 또는 손상된 이미지를 입력으로 받아 더 크고 선명한 버전을 출력하는, Apache 2.0 라이선스의 오픈소스 AI 초해상도 모델입니다. Tencent ARC Lab 연구진이 개발했으며 2021년 ICCV Workshops에서 "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data"라는 제목으로 발표되었습니다. 단순 보간(bicubic 또는 Lanczos 리사이징)과 달리, 기존 픽셀을 단순히 늘리는 대신 학습된 신경망을 사용해 질감, 가장자리, 미세 구조 같은 그럴듯한 디테일을 재구성합니다.',
+        content: 'Real-ESRGAN([github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN))은 저해상도 또는 손상된 이미지를 입력으로 받아 더 크고 선명한 버전을 출력하는, Apache 2.0 라이선스의 오픈소스 AI 초해상도 모델입니다. Tencent ARC Lab 연구진이 개발했으며 2021년 ICCV Workshops에서 "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data"라는 제목으로 발표되었습니다. 단순 보간(bicubic 또는 Lanczos 리사이징)과 달리, 기존 픽셀을 단순히 늘리는 대신 학습된 신경망을 사용해 질감, 가장자리, 미세 구조 같은 그럴듯한 디테일을 재구성합니다.',
         items: [
           '업스케일링: 흐리게 만드는 대신 AI가 재구성한 디테일을 추가하며 이미지를 2배 또는 4배 확대',
           '복원: 깨끗하게 다운샘플링된 테스트 이미지뿐 아니라 실제로 손상된 사진에서 JPEG 압축 아티팩트, 노이즈, 블러를 제거',

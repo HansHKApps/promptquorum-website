@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is Hermes Agent free and can it run fully offline?',
-        answer: 'Yes to both, with a condition on offline: the software itself is MIT-licensed and free (github.com/NousResearch/hermes-agent). It runs fully offline only when pointed at a local model via Ollama or Hugging Face — using OpenRouter as the model backend requires an internet connection and OpenRouter API costs.',
+        answer: 'Yes to both, with a condition on offline: the software itself is MIT-licensed and free ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). It runs fully offline only when pointed at a local model via Ollama or Hugging Face — using OpenRouter as the model backend requires an internet connection and OpenRouter API costs.',
         bullets: [
           'MIT license, confirmed in the repo LICENSE file',
           'Local backend: Hermes 4.3 via Ollama or Hugging Face',
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'It is a program you run on your own server that acts like a personal assistant: it remembers past conversations, writes and refines little reusable routines ("skills") as it works, and you can message it the same way you\'d message a person — over Telegram or Discord, not just in a terminal window.' },
         ],
         items: [
-          'Built by Nous Research, released February 2026, MIT license (github.com/NousResearch/hermes-agent)',
+          'Built by Nous Research, released February 2026, MIT license ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'Two model paths: local Hermes 4.3 via Ollama/Hugging Face, or 200+ models via OpenRouter (Claude, GPT-4, Gemini, Qwen, DeepSeek all confirmed compatible)',
           'Self-improving skill loop: the agent creates and refines its own skills from experience rather than relying only on a fixed tool set',
           'Persistent long-term memory across sessions, not just a single conversation window',
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is Hermes Agent?', a: 'Hermes Agent is an open-source, self-hostable autonomous personal AI agent built by Nous Research, released in February 2026 under the MIT license (github.com/NousResearch/hermes-agent). It combines a self-improving skill loop, persistent long-term memory, and access from a terminal or messaging platforms.' },
+          { q: 'What is Hermes Agent?', a: 'Hermes Agent is an open-source, self-hostable autonomous personal AI agent built by Nous Research, released in February 2026 under the MIT license ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). It combines a self-improving skill loop, persistent long-term memory, and access from a terminal or messaging platforms.' },
           { q: 'Is Hermes Agent free?', a: 'The software itself is free and MIT-licensed. Running it may still incur costs depending on your setup: server/VPS or GPU cluster hosting costs, and OpenRouter API costs if you use the hosted-model backend instead of a fully local one.' },
           { q: 'Does Hermes Agent work with Ollama?', a: 'Yes. Hermes Agent supports running Nous Research\'s Hermes 4.3 model locally through Ollama, as well as through Hugging Face, as an alternative to using OpenRouter\'s hosted models.' },
           { q: 'Can Hermes Agent use models other than Hermes 4.3?', a: 'Yes. Through OpenRouter, Hermes Agent can run against more than 200 models, including confirmed-compatible options like Claude, GPT-4, Gemini, Qwen, and DeepSeek, in addition to its default local Hermes 4.3 backend.' },
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Hermes Agent kostenlos und läuft er komplett offline?',
-        answer: 'Beides trifft zu, mit einer Einschränkung beim Offline-Betrieb: Die Software selbst ist MIT-lizenziert und kostenlos (github.com/NousResearch/hermes-agent). Vollständig offline läuft sie nur, wenn sie über Ollama oder Hugging Face auf ein lokales Modell zeigt — die Nutzung von OpenRouter als Modell-Backend erfordert eine Internetverbindung und OpenRouter-API-Kosten.',
+        answer: 'Beides trifft zu, mit einer Einschränkung beim Offline-Betrieb: Die Software selbst ist MIT-lizenziert und kostenlos ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Vollständig offline läuft sie nur, wenn sie über Ollama oder Hugging Face auf ein lokales Modell zeigt — die Nutzung von OpenRouter als Modell-Backend erfordert eine Internetverbindung und OpenRouter-API-Kosten.',
         bullets: [
           'MIT-Lizenz, bestätigt in der LICENSE-Datei des Repos',
           'Lokales Backend: Hermes 4.3 über Ollama oder Hugging Face',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Es ist ein Programm, das auf dem eigenen Server läuft und wie ein persönlicher Assistent agiert: Es merkt sich frühere Gespräche, schreibt und verfeinert bei der Arbeit eigene wiederverwendbare Routinen ("Skills"), und man kann es genauso ansprechen wie eine Person — über Telegram oder Discord, nicht nur im Terminalfenster.' },
         ],
         items: [
-          'Von Nous Research entwickelt, veröffentlicht im Februar 2026, MIT-Lizenz (github.com/NousResearch/hermes-agent)',
+          'Von Nous Research entwickelt, veröffentlicht im Februar 2026, MIT-Lizenz ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'Zwei Modellpfade: lokales Hermes 4.3 über Ollama/Hugging Face, oder 200+ Modelle über OpenRouter (Claude, GPT-4, Gemini, Qwen, DeepSeek bestätigt kompatibel)',
           'Selbstverbessernde Skill-Loop: Der Agent erstellt und verfeinert eigene Skills aus Erfahrung, statt sich nur auf einen festen Werkzeugsatz zu verlassen',
           'Persistentes Langzeitgedächtnis über Sitzungen hinweg, nicht nur innerhalb eines einzelnen Gesprächsfensters',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was ist Hermes Agent?', a: 'Hermes Agent ist ein Open-Source, selbst hostbarer autonomer persönlicher KI-Agent von Nous Research, veröffentlicht im Februar 2026 unter der MIT-Lizenz (github.com/NousResearch/hermes-agent). Er kombiniert eine selbstverbessernde Skill-Loop, persistentes Langzeitgedächtnis und Zugriff über Terminal oder Messaging-Plattformen.' },
+          { q: 'Was ist Hermes Agent?', a: 'Hermes Agent ist ein Open-Source, selbst hostbarer autonomer persönlicher KI-Agent von Nous Research, veröffentlicht im Februar 2026 unter der MIT-Lizenz ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Er kombiniert eine selbstverbessernde Skill-Loop, persistentes Langzeitgedächtnis und Zugriff über Terminal oder Messaging-Plattformen.' },
           { q: 'Ist Hermes Agent kostenlos?', a: 'Die Software selbst ist kostenlos und MIT-lizenziert. Der Betrieb kann je nach Setup dennoch Kosten verursachen: Server-/VPS- oder GPU-Cluster-Hostingkosten sowie OpenRouter-API-Kosten, falls das gehostete Modell-Backend statt eines vollständig lokalen genutzt wird.' },
           { q: 'Funktioniert Hermes Agent mit Ollama?', a: 'Ja. Hermes Agent unterstützt den lokalen Betrieb von Nous Researchs Modell Hermes 4.3 über Ollama sowie über Hugging Face, als Alternative zur Nutzung der gehosteten Modelle von OpenRouter.' },
           { q: 'Kann Hermes Agent auch andere Modelle als Hermes 4.3 nutzen?', a: 'Ja. Über OpenRouter kann Hermes Agent gegen mehr als 200 Modelle laufen, darunter bestätigt kompatible Optionen wie Claude, GPT-4, Gemini, Qwen und DeepSeek, zusätzlich zum lokalen Standard-Backend Hermes 4.3.' },
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Hermes Agent est-il gratuit et peut-il fonctionner entièrement hors ligne ?',
-        answer: 'Oui aux deux, avec une condition pour le hors ligne : le logiciel lui-même est sous licence MIT et gratuit (github.com/NousResearch/hermes-agent). Il ne fonctionne entièrement hors ligne que s\'il est configuré avec un modèle local via Ollama ou Hugging Face — utiliser OpenRouter comme backend nécessite une connexion internet et engendre les coûts d\'API d\'OpenRouter.',
+        answer: 'Oui aux deux, avec une condition pour le hors ligne : le logiciel lui-même est sous licence MIT et gratuit ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Il ne fonctionne entièrement hors ligne que s\'il est configuré avec un modèle local via Ollama ou Hugging Face — utiliser OpenRouter comme backend nécessite une connexion internet et engendre les coûts d\'API d\'OpenRouter.',
         bullets: [
           'Licence MIT, confirmée dans le fichier LICENSE du dépôt',
           'Backend local : Hermes 4.3 via Ollama ou Hugging Face',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'C\'est un programme que vous faites tourner sur votre propre serveur et qui agit comme un assistant personnel : il se souvient des conversations passées, écrit et affine ses propres routines réutilisables (« compétences ») au fil du travail, et vous pouvez lui écrire comme à une personne — sur Telegram ou Discord, pas seulement dans un terminal.' },
         ],
         items: [
-          'Créé par Nous Research, sorti en février 2026, licence MIT (github.com/NousResearch/hermes-agent)',
+          'Créé par Nous Research, sorti en février 2026, licence MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'Deux backends de modèle : Hermes 4.3 en local via Ollama/Hugging Face, ou 200+ modèles via OpenRouter (Claude, GPT-4, Gemini, Qwen, DeepSeek confirmés compatibles)',
           'Boucle de compétences auto-améliorante : l\'agent crée et affine ses propres compétences à partir de l\'expérience, au lieu de s\'appuyer uniquement sur un jeu d\'outils fixe',
           'Mémoire à long terme persistante entre les sessions, pas seulement au sein d\'une seule fenêtre de conversation',
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Qu\'est-ce que Hermes Agent ?', a: 'Hermes Agent est un agent IA personnel autonome open source et auto-hébergeable créé par Nous Research, sorti en février 2026 sous licence MIT (github.com/NousResearch/hermes-agent). Il combine une boucle de compétences auto-améliorante, une mémoire à long terme persistante et un accès depuis un terminal ou des plateformes de messagerie.' },
+          { q: 'Qu\'est-ce que Hermes Agent ?', a: 'Hermes Agent est un agent IA personnel autonome open source et auto-hébergeable créé par Nous Research, sorti en février 2026 sous licence MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Il combine une boucle de compétences auto-améliorante, une mémoire à long terme persistante et un accès depuis un terminal ou des plateformes de messagerie.' },
           { q: 'Hermes Agent est-il gratuit ?', a: 'Le logiciel lui-même est gratuit et sous licence MIT. Son exploitation peut néanmoins engendrer des coûts selon la configuration : hébergement serveur/VPS ou cluster GPU, et coûts d\'API OpenRouter si vous utilisez le backend de modèles hébergés plutôt qu\'une configuration entièrement locale.' },
           { q: 'Hermes Agent fonctionne-t-il avec Ollama ?', a: 'Oui. Hermes Agent prend en charge l\'exécution locale du modèle Hermes 4.3 de Nous Research via Ollama, ainsi que via Hugging Face, comme alternative à l\'utilisation des modèles hébergés d\'OpenRouter.' },
           { q: 'Hermes Agent peut-il utiliser d\'autres modèles que Hermes 4.3 ?', a: 'Oui. Via OpenRouter, Hermes Agent peut fonctionner avec plus de 200 modèles, y compris des options confirmées compatibles comme Claude, GPT-4, Gemini, Qwen et DeepSeek, en plus de son backend local par défaut Hermes 4.3.' },
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Hermes Agent es gratuito y puede funcionar totalmente sin conexión?',
-        answer: 'Sí a ambas, con una condición para lo offline: el software en sí es gratuito y de licencia MIT (github.com/NousResearch/hermes-agent). Funciona totalmente sin conexión solo si se configura con un modelo local vía Ollama o Hugging Face — usar OpenRouter como backend requiere conexión a internet y conlleva los costes de API de OpenRouter.',
+        answer: 'Sí a ambas, con una condición para lo offline: el software en sí es gratuito y de licencia MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Funciona totalmente sin conexión solo si se configura con un modelo local vía Ollama o Hugging Face — usar OpenRouter como backend requiere conexión a internet y conlleva los costes de API de OpenRouter.',
         bullets: [
           'Licencia MIT, confirmada en el archivo LICENSE del repositorio',
           'Backend local: Hermes 4.3 vía Ollama o Hugging Face',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Es un programa que ejecutas en tu propio servidor y que actúa como un asistente personal: recuerda conversaciones pasadas, escribe y refina sus propias rutinas reutilizables ("habilidades") a medida que trabaja, y puedes escribirle igual que a una persona — por Telegram o Discord, no solo en una ventana de terminal.' },
         ],
         items: [
-          'Creado por Nous Research, lanzado en febrero de 2026, licencia MIT (github.com/NousResearch/hermes-agent)',
+          'Creado por Nous Research, lanzado en febrero de 2026, licencia MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'Dos vías de modelo: Hermes 4.3 local vía Ollama/Hugging Face, o 200+ modelos vía OpenRouter (Claude, GPT-4, Gemini, Qwen y DeepSeek confirmados como compatibles)',
           'Bucle de habilidades autosuperador: el agente crea y refina sus propias habilidades a partir de la experiencia, en lugar de depender solo de un conjunto de herramientas fijo',
           'Memoria persistente a largo plazo entre sesiones, no solo dentro de una única ventana de conversación',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué es Hermes Agent?', a: 'Hermes Agent es un agente de IA personal autónomo de código abierto y autoalojable creado por Nous Research, lanzado en febrero de 2026 bajo licencia MIT (github.com/NousResearch/hermes-agent). Combina un bucle de habilidades autosuperador, memoria persistente a largo plazo y acceso desde una terminal o plataformas de mensajería.' },
+          { q: '¿Qué es Hermes Agent?', a: 'Hermes Agent es un agente de IA personal autónomo de código abierto y autoalojable creado por Nous Research, lanzado en febrero de 2026 bajo licencia MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Combina un bucle de habilidades autosuperador, memoria persistente a largo plazo y acceso desde una terminal o plataformas de mensajería.' },
           { q: '¿Hermes Agent es gratuito?', a: 'El software en sí es gratuito y de licencia MIT. Ejecutarlo puede conllevar costes según tu configuración: hosting de servidor/VPS o clúster de GPU, y costes de API de OpenRouter si usas el backend de modelos alojados en lugar de uno totalmente local.' },
           { q: '¿Hermes Agent funciona con Ollama?', a: 'Sí. Hermes Agent admite ejecutar el modelo Hermes 4.3 de Nous Research en local a través de Ollama, así como a través de Hugging Face, como alternativa al uso de los modelos alojados de OpenRouter.' },
           { q: '¿Puede Hermes Agent usar modelos distintos de Hermes 4.3?', a: 'Sí. A través de OpenRouter, Hermes Agent puede funcionar con más de 200 modelos, incluyendo opciones confirmadas como compatibles como Claude, GPT-4, Gemini, Qwen y DeepSeek, además de su backend local por defecto Hermes 4.3.' },
@@ -1092,7 +1092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O Hermes Agent é gratuito e pode rodar totalmente offline?',
-        answer: 'Sim para ambos, com uma condição para o offline: o software em si é gratuito e licenciado sob MIT (github.com/NousResearch/hermes-agent). Ele roda totalmente offline apenas quando configurado com um modelo local via Ollama ou Hugging Face — usar o OpenRouter como backend exige conexão com a internet e gera custos de API do OpenRouter.',
+        answer: 'Sim para ambos, com uma condição para o offline: o software em si é gratuito e licenciado sob MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Ele roda totalmente offline apenas quando configurado com um modelo local via Ollama ou Hugging Face — usar o OpenRouter como backend exige conexão com a internet e gera custos de API do OpenRouter.',
         bullets: [
           'Licença MIT, confirmada no arquivo LICENSE do repositório',
           'Backend local: Hermes 4.3 via Ollama ou Hugging Face',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'É um programa que você roda no próprio servidor e que age como um assistente pessoal: ele lembra de conversas passadas, escreve e refina suas próprias rotinas reutilizáveis ("habilidades") conforme trabalha, e você pode mandar mensagem para ele como manda para uma pessoa — pelo Telegram ou Discord, não só em uma janela de terminal.' },
         ],
         items: [
-          'Criado pela Nous Research, lançado em fevereiro de 2026, licença MIT (github.com/NousResearch/hermes-agent)',
+          'Criado pela Nous Research, lançado em fevereiro de 2026, licença MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'Dois caminhos de modelo: Hermes 4.3 local via Ollama/Hugging Face, ou 200+ modelos via OpenRouter (Claude, GPT-4, Gemini, Qwen e DeepSeek confirmados como compatíveis)',
           'Loop de habilidades autoaperfeiçoável: o agente cria e refina suas próprias habilidades a partir da experiência, em vez de depender apenas de um conjunto fixo de ferramentas',
           'Memória persistente de longo prazo entre sessões, não apenas dentro de uma única janela de conversa',
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O que é o Hermes Agent?', a: 'Hermes Agent é um agente de IA pessoal autônomo de código aberto e auto-hospedável criado pela Nous Research, lançado em fevereiro de 2026 sob licença MIT (github.com/NousResearch/hermes-agent). Ele combina um loop de habilidades autoaperfeiçoável, memória persistente de longo prazo e acesso por terminal ou plataformas de mensagens.' },
+          { q: 'O que é o Hermes Agent?', a: 'Hermes Agent é um agente de IA pessoal autônomo de código aberto e auto-hospedável criado pela Nous Research, lançado em fevereiro de 2026 sob licença MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Ele combina um loop de habilidades autoaperfeiçoável, memória persistente de longo prazo e acesso por terminal ou plataformas de mensagens.' },
           { q: 'O Hermes Agent é gratuito?', a: 'O software em si é gratuito e licenciado sob MIT. Rodá-lo ainda pode gerar custos dependendo da sua configuração: hospedagem de servidor/VPS ou cluster de GPU, e custos de API do OpenRouter caso você use o backend de modelos hospedados em vez de um totalmente local.' },
           { q: 'O Hermes Agent funciona com Ollama?', a: 'Sim. O Hermes Agent suporta rodar o modelo Hermes 4.3 da Nous Research localmente via Ollama, assim como via Hugging Face, como alternativa ao uso dos modelos hospedados do OpenRouter.' },
           { q: 'O Hermes Agent pode usar modelos além do Hermes 4.3?', a: 'Sim. Através do OpenRouter, o Hermes Agent pode rodar com mais de 200 modelos, incluindo opções confirmadas como compatíveis como Claude, GPT-4, Gemini, Qwen e DeepSeek, além do backend local padrão Hermes 4.3.' },
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل Hermes Agent مجاني وهل يعمل بلا اتصال بالإنترنت بالكامل؟',
-        answer: 'نعم لكليهما، مع شرط للعمل دون اتصال: البرنامج نفسه مرخّص بموجب MIT ومجاني (github.com/NousResearch/hermes-agent). يعمل بلا اتصال بالكامل فقط عند ضبطه على نموذج محلي عبر Ollama أو Hugging Face — استخدام OpenRouter كخلفية يتطلب اتصالًا بالإنترنت ويترتب عليه تكاليف واجهة برمجة تطبيقات OpenRouter.',
+        answer: 'نعم لكليهما، مع شرط للعمل دون اتصال: البرنامج نفسه مرخّص بموجب MIT ومجاني ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). يعمل بلا اتصال بالكامل فقط عند ضبطه على نموذج محلي عبر Ollama أو Hugging Face — استخدام OpenRouter كخلفية يتطلب اتصالًا بالإنترنت ويترتب عليه تكاليف واجهة برمجة تطبيقات OpenRouter.',
         bullets: [
           'ترخيص MIT، مؤكَّد في ملف LICENSE بالمستودع',
           'الخلفية المحلية: Hermes 4.3 عبر Ollama أو Hugging Face',
@@ -1925,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'إنه برنامج تشغّله على خادمك الخاص ويتصرف كمساعد شخصي: يتذكر المحادثات السابقة، ويكتب ويحسّن روتينات قابلة لإعادة الاستخدام خاصة به ("مهارات") أثناء العمل، ويمكنك مراسلته تمامًا كما تراسل شخصًا — عبر Telegram أو Discord، لا داخل نافذة طرفية فقط.' },
         ],
         items: [
-          'من تطوير Nous Research، صدر في فبراير 2026، ترخيص MIT (github.com/NousResearch/hermes-agent)',
+          'من تطوير Nous Research، صدر في فبراير 2026، ترخيص MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           'مساران للنموذج: Hermes 4.3 محليًا عبر Ollama/Hugging Face، أو أكثر من 200 نموذج عبر OpenRouter (تأكدت التوافقية مع Claude وGPT-4 وGemini وQwen وDeepSeek)',
           'حلقة مهارات ذاتية التحسين: يُنشئ الوكيل مهاراته ويحسّنها من واقع الخبرة بدلًا من الاعتماد فقط على مجموعة أدوات ثابتة',
           'ذاكرة طويلة المدى دائمة عبر الجلسات، لا تقتصر على نافذة محادثة واحدة',
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو Hermes Agent؟', a: 'Hermes Agent وكيل ذكاء اصطناعي شخصي مستقل مفتوح المصدر وقابل للاستضافة الذاتية من تطوير Nous Research، صدر في فبراير 2026 بموجب ترخيص MIT (github.com/NousResearch/hermes-agent). يجمع بين حلقة مهارات ذاتية التحسين وذاكرة طويلة المدى دائمة والوصول من الطرفية أو منصات المراسلة.' },
+          { q: 'ما هو Hermes Agent؟', a: 'Hermes Agent وكيل ذكاء اصطناعي شخصي مستقل مفتوح المصدر وقابل للاستضافة الذاتية من تطوير Nous Research، صدر في فبراير 2026 بموجب ترخيص MIT ([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). يجمع بين حلقة مهارات ذاتية التحسين وذاكرة طويلة المدى دائمة والوصول من الطرفية أو منصات المراسلة.' },
           { q: 'هل Hermes Agent مجاني؟', a: 'البرنامج نفسه مجاني ومرخّص بموجب MIT. قد يظل تشغيله يترتب عليه تكاليف حسب إعدادك: تكاليف استضافة خادم/VPS أو عنقود GPU، وتكاليف واجهة برمجة تطبيقات OpenRouter إذا استخدمت خلفية النماذج المستضافة بدلًا من إعداد محلي بالكامل.' },
           { q: 'هل يعمل Hermes Agent مع Ollama؟', a: 'نعم. يدعم Hermes Agent تشغيل نموذج Hermes 4.3 الخاص بـ Nous Research محليًا عبر Ollama، وكذلك عبر Hugging Face، كبديل لاستخدام نماذج OpenRouter المستضافة.' },
           { q: 'هل يمكن لـ Hermes Agent استخدام نماذج غير Hermes 4.3؟', a: 'نعم. عبر OpenRouter، يمكن لـ Hermes Agent العمل مع أكثر من 200 نموذج، بما يشمل خيارات مؤكَّدة التوافقية مثل Claude وGPT-4 وGemini وQwen وDeepSeek، إلى جانب خلفيته المحلية الافتراضية Hermes 4.3.' },
@@ -2156,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Hermes Agent는 무료이며 완전히 오프라인으로 작동할 수 있나요?',
-        answer: '둘 다 그렇다. 다만 오프라인 작동에는 조건이 있다: 소프트웨어 자체는 MIT 라이선스로 무료다(github.com/NousResearch/hermes-agent). Ollama나 Hugging Face를 통한 로컬 모델로 설정한 경우에만 완전히 오프라인으로 작동하며, OpenRouter를 백엔드로 사용하려면 인터넷 연결과 OpenRouter API 비용이 필요하다.',
+        answer: '둘 다 그렇다. 다만 오프라인 작동에는 조건이 있다: 소프트웨어 자체는 MIT 라이선스로 무료다([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). Ollama나 Hugging Face를 통한 로컬 모델로 설정한 경우에만 완전히 오프라인으로 작동하며, OpenRouter를 백엔드로 사용하려면 인터넷 연결과 OpenRouter API 비용이 필요하다.',
         bullets: [
           '리포지토리 LICENSE 파일에서 확인된 MIT 라이선스',
           '로컬 백엔드: Ollama 또는 Hugging Face를 통한 Hermes 4.3',
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '자신의 서버에서 실행하는 프로그램으로, 개인 비서처럼 작동한다. 과거 대화를 기억하고, 작업하면서 재사용 가능한 자체 루틴("스킬")을 직접 작성하고 다듬으며, 사람에게 메시지를 보내듯 Telegram이나 Discord로 말을 걸 수 있다 — 터미널 창에만 국한되지 않는다.' },
         ],
         items: [
-          'Nous Research가 개발, 2026년 2월 출시, MIT 라이선스(github.com/NousResearch/hermes-agent)',
+          'Nous Research가 개발, 2026년 2월 출시, MIT 라이선스([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent))',
           '두 가지 모델 경로: Ollama/Hugging Face를 통한 로컬 Hermes 4.3, 또는 OpenRouter를 통한 200개 이상 모델(Claude, GPT-4, Gemini, Qwen, DeepSeek 호환 확인됨)',
           '자기개선형 스킬 루프: 고정된 도구 세트에만 의존하지 않고 경험을 통해 자체 스킬을 만들고 다듬는다',
           '세션 간 유지되는 영구적인 장기 메모리, 단일 대화 창에만 국한되지 않음',
@@ -2363,7 +2363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Hermes Agent란 무엇인가요?', a: 'Hermes Agent는 Nous Research가 만든 오픈소스이자 셀프 호스팅 가능한 자율형 개인 AI 에이전트로, 2026년 2월 MIT 라이선스로 출시되었다(github.com/NousResearch/hermes-agent). 자기개선형 스킬 루프, 영구적인 장기 메모리, 그리고 터미널이나 메시징 플랫폼을 통한 접근을 결합한다.' },
+          { q: 'Hermes Agent란 무엇인가요?', a: 'Hermes Agent는 Nous Research가 만든 오픈소스이자 셀프 호스팅 가능한 자율형 개인 AI 에이전트로, 2026년 2월 MIT 라이선스로 출시되었다([github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)). 자기개선형 스킬 루프, 영구적인 장기 메모리, 그리고 터미널이나 메시징 플랫폼을 통한 접근을 결합한다.' },
           { q: 'Hermes Agent는 무료인가요?', a: '소프트웨어 자체는 무료이며 MIT 라이선스다. 다만 설정에 따라 운영 비용이 발생할 수 있다: 서버/VPS 또는 GPU 클러스터 호스팅 비용, 그리고 완전 로컬 대신 호스팅 모델 백엔드를 사용하는 경우 OpenRouter API 비용이다.' },
           { q: 'Hermes Agent는 Ollama와 함께 작동하나요?', a: '그렇다. Hermes Agent는 OpenRouter의 호스팅 모델을 사용하는 대신, Ollama뿐 아니라 Hugging Face를 통해서도 Nous Research의 Hermes 4.3 모델을 로컬에서 실행하는 것을 지원한다.' },
           { q: 'Hermes Agent는 Hermes 4.3 외의 모델도 사용할 수 있나요?', a: '그렇다. OpenRouter를 통해 Hermes Agent는 기본 로컬 백엔드인 Hermes 4.3 외에도 Claude, GPT-4, Gemini, Qwen, DeepSeek처럼 호환이 확인된 옵션을 포함해 200개 이상의 모델로 작동할 수 있다.' },
