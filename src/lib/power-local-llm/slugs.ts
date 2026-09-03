@@ -136,6 +136,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Real-ESRGAN review 2026-09-02
   'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
+  // LibreChat review 2026-09-03
+  'librechat-review-2026':                        'librechat-review-2026',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',

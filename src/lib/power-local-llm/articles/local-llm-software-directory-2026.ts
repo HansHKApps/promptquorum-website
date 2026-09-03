@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. Desktop GUI Apps',
         itemHeadings: true,
         content:
-          '**Desktop apps wrap a runtime in a chat interface and a model browser.** They are where most non-technical users start because there is no terminal step — download, click, chat. LM Studio, Jan, and GPT4All hold the bulk of the user base in 2026; AnythingLLM doubles as a desktop app and a RAG layer; Open Interpreter is the outlier that lets a local model drive your computer. New entries include Locally Uncensored (uncensored roleplay focus), BoltAI (macOS-native), and Draw Things (image generation on desktop).',
+          '**Desktop apps wrap a runtime in a chat interface and a model browser.** They are where most non-technical users start because there is no terminal step — download, click, chat. LM Studio, Jan, and GPT4All hold the bulk of the user base in 2026; AnythingLLM doubles as a desktop app and a RAG layer; Open Interpreter is the outlier — a Rust-based coding agent forked from OpenAI\'s Codex, built for open models rather than one hosted API. New entries include Locally Uncensored (uncensored roleplay focus), BoltAI (macOS-native), and Draw Things (image generation on desktop).',
         columns: ['Tool', 'Link', 'Description', 'License', 'Stars'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Most polished GUI, built-in HuggingFace model browser, server mode', 'License': 'Free (closed)' },
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Description': 'Browser sidebar AI for Chrome and Firefox', 'License': 'MIT', 'Stars': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Description': 'Cross-platform desktop and web client', 'License': 'GPLv3' },
         ],
-        note: 'Deeper guide: [SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'Deeper guide: [SillyTavern vs Agnai vs RisuAI](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). LibreChat review: [LibreChat Review 2026](/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Are any of these commercial-licensed (not free for commercial use)?',
-            a: 'A handful: LM Studio, Msty, Backyard AI, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
+            a: 'A handful: LM Studio, Msty, Backyard AI, Layla, and Cursor are closed-source — generally free to use but not redistributable, and commercial terms vary. Private LLM is paid. AGPL-licensed tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) are free for any use including commercial, but the AGPL terms require source disclosure if you modify and host them publicly. Apache 2.0 and MIT projects (the majority) are usable in any context including commercial without attribution constraints beyond the licence text.',
           },
           {
             q: 'Which tools support Apple Silicon (M-series chips) natively?',
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. Desktop-GUI-Anwendungen',
         itemHeadings: true,
         content:
-          '**Desktop-Apps kapseln eine Laufzeitumgebung in einer Chat-Oberfläche und einem Modell-Browser.** Hier steigen die meisten nicht-technischen Anwenderinnen und Anwender ein, weil kein Terminal-Schritt nötig ist — herunterladen, klicken, chatten. LM Studio, Jan und GPT4All halten 2026 den Großteil der Nutzerbasis; AnythingLLM fungiert gleichzeitig als Desktop-App und RAG-Schicht; Open Interpreter ist der Sonderfall, der einem lokalen Modell erlaubt, Ihren Computer zu steuern.',
+          '**Desktop-Apps kapseln eine Laufzeitumgebung in einer Chat-Oberfläche und einem Modell-Browser.** Hier steigen die meisten nicht-technischen Anwenderinnen und Anwender ein, weil kein Terminal-Schritt nötig ist — herunterladen, klicken, chatten. LM Studio, Jan und GPT4All halten 2026 den Großteil der Nutzerbasis; AnythingLLM fungiert gleichzeitig als Desktop-App und RAG-Schicht; Open Interpreter ist der Sonderfall — ein Rust-basierter Coding-Agent, abgeleitet von OpenAIs Codex, gebaut für offene Modelle statt für eine einzelne gehostete API.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz', 'Sterne'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Beschreibung': 'Ausgereifteste GUI, integrierter HuggingFace-Modell-Browser, Server-Modus', 'Lizenz': 'Kostenlos (proprietär)' },
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Beschreibung': 'Browser-Sidebar-KI für Chrome und Firefox', 'Lizenz': 'MIT', 'Sterne': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Beschreibung': 'Plattformübergreifender Desktop- und Web-Client', 'Lizenz': 'GPLv3' },
         ],
-        note: 'Vertiefender Vergleich: [SillyTavern vs Agnai vs RisuAI](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'Vertiefender Vergleich: [SillyTavern vs Agnai vs RisuAI](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). LibreChat-Test: [LibreChat im Test 2026](/de/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind einige dieser Tools kommerziell lizenziert (nicht frei für kommerzielle Nutzung)?',
-            a: 'Eine Handvoll: LM Studio, Msty, Backyard AI, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
+            a: 'Eine Handvoll: LM Studio, Msty, Backyard AI, Layla und Cursor sind proprietär — in der Regel kostenlos nutzbar, aber nicht weiterverteilbar; kommerzielle Konditionen variieren je Anbieter. Private LLM ist kostenpflichtig. AGPL-lizenzierte Tools (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sind für jeden Zweck einschließlich kommerzieller Nutzung frei, die AGPL-Bedingungen verlangen jedoch Quelloffenlegung, wenn Sie sie modifiziert öffentlich hosten. Apache-2.0- und MIT-Projekte (die Mehrheit) sind in jedem Kontext einschließlich kommerzieller Nutzung ohne wesentliche Auflagen verwendbar.',
           },
           {
             q: 'Welche Tools unterstützen Apple Silicon (M-Serie) nativ?',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. Applications de bureau (GUI)',
         itemHeadings: true,
         content:
-          '**Les applications bureau encapsulent un runtime dans une interface de chat et un navigateur de modèles.** C\'est le point d\'entrée pour la plupart des utilisateurs non techniques — télécharger, cliquer, discuter. LM Studio, Jan et GPT4All détiennent l\'essentiel de la base utilisateurs en 2026 ; AnythingLLM fait office d\'application bureau et de couche RAG ; Open Interpreter est le cas particulier qui permet à un modèle local de piloter votre ordinateur.',
+          '**Les applications bureau encapsulent un runtime dans une interface de chat et un navigateur de modèles.** C\'est le point d\'entrée pour la plupart des utilisateurs non techniques — télécharger, cliquer, discuter. LM Studio, Jan et GPT4All détiennent l\'essentiel de la base utilisateurs en 2026 ; AnythingLLM fait office d\'application bureau et de couche RAG ; Open Interpreter est le cas particulier — un agent de codage en Rust dérivé du Codex d\'OpenAI, conçu pour des modèles ouverts plutôt que pour une seule API hébergée.',
         columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Interface la plus aboutie, navigateur HuggingFace intégré, mode serveur', 'Licence': 'Gratuit (propriétaire)' },
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Description': 'IA en barre latérale navigateur pour Chrome et Firefox', 'Licence': 'MIT', 'Étoiles': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Description': 'Client bureau et web multiplateforme', 'Licence': 'GPLv3' },
         ],
-        note: 'Comparatif approfondi : [SillyTavern vs Agnai vs RisuAI](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'Comparatif approfondi : [SillyTavern vs Agnai vs RisuAI](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). Avis LibreChat : [LibreChat : avis 2026](/fr/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Certains de ces outils sont-ils sous licence commerciale (non libres pour un usage commercial) ?',
-            a: 'Quelques-uns : LM Studio, Msty, Backyard AI, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
+            a: 'Quelques-uns : LM Studio, Msty, Backyard AI, Layla et Cursor sont propriétaires — généralement gratuits à l\'usage mais non redistribuables, et les conditions commerciales varient. Private LLM est payant. Les outils sous licence AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) sont libres pour tout usage y compris commercial, mais les conditions AGPL exigent la divulgation du code source si vous les modifiez et les hébergez publiquement. Les projets Apache 2.0 et MIT (la majorité) sont utilisables dans tout contexte sans contraintes significatives.',
           },
           {
             q: 'Quels outils supportent Apple Silicon (puces M) nativement ?',
@@ -1706,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. デスクトップGUIアプリ',
         itemHeadings: true,
         content:
-          '**デスクトップアプリはランタイムをチャットインターフェースとモデルブラウザでラップします。** ターミナル操作不要でダウンロード・クリック・チャットができるため、ほとんどの非技術系ユーザーの出発点です。LM Studio、Jan、GPT4Allが2026年の大半のユーザーベースを占めています。AnythingLLMはデスクトップアプリとRAG層を兼ねています。Open Interpreterはローカルモデルがコンピュータを操作できる特殊なケースです。',
+          '**デスクトップアプリはランタイムをチャットインターフェースとモデルブラウザでラップします。** ターミナル操作不要でダウンロード・クリック・チャットができるため、ほとんどの非技術系ユーザーの出発点です。LM Studio、Jan、GPT4Allが2026年の大半のユーザーベースを占めています。AnythingLLMはデスクトップアプリとRAG層を兼ねています。Open Interpreterは特殊なケースで、OpenAIのCodexから派生したRustベースのコーディングエージェントであり、単一のホスト型APIではなくオープンモデル向けに作られています。',
         columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '概要': '最も洗練されたGUI。HuggingFaceモデルブラウザ内蔵、サーバーモード対応', 'ライセンス': '無料（プロプライエタリ）' },
@@ -1758,7 +1758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', '概要': 'ChromeとFirefox向けブラウザサイドバーAI', 'ライセンス': 'MIT', 'スター': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', '概要': 'クロスプラットフォームのデスクトップ・Webクライアント', 'ライセンス': 'GPLv3' },
         ],
-        note: '詳細比較：[SillyTavern vs Agnai vs RisuAI](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: '詳細比較：[SillyTavern vs Agnai vs RisuAI](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)。LibreChatレビュー：[LibreChatレビュー2026](/ja/power-local-llm/librechat-review-2026)。',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -2012,7 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '商用ライセンス（商用利用不可）のツールはありますか？',
-            a: '一部あります：LM Studio、Msty、Backyard AI、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
+            a: '一部あります：LM Studio、Msty、Backyard AI、Layla、Cursorはプロプライエタリ — 通常は無料使用可能ですが再配布不可で、商用条件はベンダーによって異なります。Private LLMは有料です。AGPLライセンスのツール（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）は商用を含むあらゆる目的に無料ですが、変更して公開ホスティングする場合はソースコードの開示が必要です。Apache 2.0とMITプロジェクト（大多数）は商用を含むあらゆる場面で実質的な制約なく使用できます。',
           },
           {
             q: 'Apple Silicon（Mシリーズ）をネイティブサポートするツールはどれですか？',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. 桌面图形界面应用',
         itemHeadings: true,
         content:
-          '**桌面应用将运行时封装成聊天界面和模型浏览器。**它们是大多数非技术用户的起点，因为无需命令行操作——下载、点击、开始聊天。LM Studio、Jan和GPT4All在2026年占据了大部分用户群体；AnythingLLM兼具桌面应用和RAG层的双重功能；Open Interpreter是个特例，它允许本地模型直接操控用户的电脑并执行代码。',
+          '**桌面应用将运行时封装成聊天界面和模型浏览器。**它们是大多数非技术用户的起点，因为无需命令行操作——下载、点击、开始聊天。LM Studio、Jan和GPT4All在2026年占据了大部分用户群体；AnythingLLM兼具桌面应用和RAG层的双重功能；Open Interpreter是个特例——它是从OpenAI的Codex分叉而来的Rust编码代理，面向开源模型打造，而非单一托管API。',
         columns: ['Tool', 'Link', '描述', '许可证', '星标'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '描述': '最精良的GUI，内置HuggingFace模型浏览器，支持服务器模式', '许可证': '免费（闭源）' },
@@ -2269,7 +2269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', '描述': 'Chrome和Firefox的浏览器侧边栏AI', '许可证': 'MIT', '星标': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', '描述': '跨平台桌面与Web客户端', '许可证': 'GPLv3' },
         ],
-        note: '深度指南：[SillyTavern vs Agnai vs RisuAI](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: '深度指南：[SillyTavern vs Agnai vs RisuAI](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)。LibreChat 评测：[LibreChat 2026评测](/zh/power-local-llm/librechat-review-2026)。',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '这些工具中是否有商业许可限制？',
-            a: '部分工具有限制：LM Studio、Msty、Backyard AI、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Open Interpreter、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
+            a: '部分工具有限制：LM Studio、Msty、Backyard AI、Layla和Cursor是闭源软件——通常免费使用但不可再分发，商业条款各异。Private LLM需付费。AGPL许可工具（Jan、KoboldCpp、text-generation-webui、SillyTavern、Khoj、Copilot for Obsidian）可用于任何用途包括商业用途，但AGPL条款要求在公开托管修改版本时披露源代码。Apache 2.0和MIT项目（占多数）在任何场景下均可使用，无需超出许可证文本范围的归因要求。',
           },
           {
             q: '哪些工具原生支持Apple Silicon（M系列芯片）？',
@@ -2728,7 +2728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. Aplicaciones de escritorio (GUI)',
         itemHeadings: true,
         content:
-          '**Las apps de escritorio envuelven un runtime en una interfaz de chat y un explorador de modelos.** Son donde la mayoría de los usuarios no técnicos comienzan porque no hay paso de terminal — descargar, hacer clic, chatear. LM Studio, Jan y GPT4All tienen la mayor parte de la base de usuarios en 2026; AnythingLLM también funciona como app de escritorio y capa RAG; Open Interpreter es el caso especial que permite a un modelo local controlar tu computadora.',
+          '**Las apps de escritorio envuelven un runtime en una interfaz de chat y un explorador de modelos.** Son donde la mayoría de los usuarios no técnicos comienzan porque no hay paso de terminal — descargar, hacer clic, chatear. LM Studio, Jan y GPT4All tienen la mayor parte de la base de usuarios en 2026; AnythingLLM también funciona como app de escritorio y capa RAG; Open Interpreter es el caso especial — un agente de código en Rust derivado del Codex de OpenAI, construido para modelos abiertos en lugar de una sola API alojada.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Descripción': 'La GUI más pulida, explorador de modelos de HuggingFace integrado, modo servidor', 'Licencia': 'Gratuito (cerrado)' },
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Descripción': 'IA en barra lateral del navegador para Chrome y Firefox', 'Licencia': 'MIT', 'Estrellas': '8.2k'},
           { 'Tool': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Descripción': 'Cliente multiplataforma de escritorio y web', 'Licencia': 'GPLv3' },
         ],
-        note: 'Guía más detallada: [SillyTavern vs Agnai vs RisuAI](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'Guía más detallada: [SillyTavern vs Agnai vs RisuAI](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). Reseña de LibreChat: [LibreChat 2026](/es/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Alguna de estas herramientas tiene licencia comercial (no gratuita para uso comercial)?',
-            a: 'Algunas: LM Studio, Msty, Backyard AI, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
+            a: 'Algunas: LM Studio, Msty, Backyard AI, Layla y Cursor son de código cerrado — generalmente gratuitas para usar pero no redistribuibles, y los términos comerciales varían. Private LLM es de pago. Las herramientas con licencia AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) son gratuitas para cualquier uso incluyendo comercial, pero los términos AGPL requieren divulgar el código fuente si las modificas y las alojas públicamente. Los proyectos Apache 2.0 y MIT (la mayoría) son utilizables en cualquier contexto incluyendo comercial sin restricciones de atribución más allá del texto de la licencia.',
           },
           {
             q: '¿Qué herramientas soportan Apple Silicon (chips de la serie M) de forma nativa?',
@@ -3305,7 +3305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Page Assist**', 'Link': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'Descrição': 'IA na barra lateral do navegador para Chrome e Firefox', 'Licença': 'MIT', 'Estrelas': '8.2k'},
           { 'Ferramenta': '**Chatbox**', 'Link': '[chatboxai.app](https://chatboxai.app)', 'Descrição': 'Cliente multiplataforma de desktop e web', 'Licença': 'GPLv3' },
         ],
-        note: 'Guia mais detalhado: [SillyTavern vs Agnai vs RisuAI](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'Guia mais detalhado: [SillyTavern vs Agnai vs RisuAI](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). Análise do LibreChat: [LibreChat 2026](/pt/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -3560,7 +3560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Alguma dessas ferramentas tem licença comercial (não gratuita para uso comercial)?',
-            a: 'Algumas: LM Studio, Msty, Backyard AI, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
+            a: 'Algumas: LM Studio, Msty, Backyard AI, Layla e Cursor são de código fechado — geralmente gratuitas para usar mas não redistribuíveis, e os termos comerciais variam. Private LLM é pago. As ferramentas com licença AGPL (Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian) são gratuitas para qualquer uso incluindo comercial, mas os termos AGPL exigem divulgar o código-fonte se você as modificar e hospedar publicamente. Os projetos Apache 2.0 e MIT (a maioria) são utilizáveis em qualquer contexto incluindo comercial sem restrições de atribuição além do texto da licença.',
           },
           {
             q: 'Quais ferramentas suportam Apple Silicon (chips da série M) nativamente?',
@@ -3830,7 +3830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Page Assist**', 'الرابط': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', 'الوصف': 'ذكاء اصطناعي في شريط جانبي للمتصفح لـChrome وFirefox', 'الترخيص': 'MIT', 'النجوم': '8.2k'},
           { 'الأداة': '**Chatbox**', 'الرابط': '[chatboxai.app](https://chatboxai.app)', 'الوصف': 'عميل متعدد المنصات لسطح المكتب والويب', 'الترخيص': 'GPLv3' },
         ],
-        note: 'دليل أكثر تفصيلاً: [SillyTavern مقابل Agnai مقابل RisuAI](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: 'دليل أكثر تفصيلاً: [SillyTavern مقابل Agnai مقابل RisuAI](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). مراجعة LibreChat: [مراجعة LibreChat 2026](/ar/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -4084,7 +4084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أي من هذه الأدوات مرخصة تجارياً (غير مجانية للاستخدام التجاري)؟',
-            a: 'بعضها: LM Studio وMsty وBackyard AI وLayla وCursor هي مغلقة المصدر — مجانية للاستخدام عموماً لكن غير قابلة لإعادة التوزيع. Private LLM مدفوعة. الأدوات برخصة AGPL (Jan وKoboldCpp وtext-generation-webui وSillyTavern وKhoj وOpen Interpreter وCopilot for Obsidian) مجانية لأي استخدام بما فيه التجاري، لكن شروط AGPL تتطلب الكشف عن الكود المصدري إذا عدَّلتها واستضفتها علناً.',
+            a: 'بعضها: LM Studio وMsty وBackyard AI وLayla وCursor هي مغلقة المصدر — مجانية للاستخدام عموماً لكن غير قابلة لإعادة التوزيع. Private LLM مدفوعة. الأدوات برخصة AGPL (Jan وKoboldCpp وtext-generation-webui وSillyTavern وKhoj وCopilot for Obsidian) مجانية لأي استخدام بما فيه التجاري، لكن شروط AGPL تتطلب الكشف عن الكود المصدري إذا عدَّلتها واستضفتها علناً.',
           },
           {
             q: 'ما الأدوات التي تدعم Apple Silicon (رقائق سلسلة M) بشكل أصلي؟',
@@ -4307,7 +4307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2. 데스크톱 앱 (GUI)',
         itemHeadings: true,
         content:
-          '**데스크톱 앱은 런타임을 채팅 인터페이스와 모델 탐색기로 감쌉니다.** 터미널 단계가 없기 때문에 대부분의 비기술적 사용자가 시작하는 곳입니다 — 다운로드, 클릭, 채팅. LM Studio, Jan, GPT4All이 2026년 사용자 기반의 대부분을 차지합니다. AnythingLLM은 데스크톱 앱이자 RAG 레이어로도 기능하며, Open Interpreter는 로컬 모델이 컴퓨터를 제어하도록 허용하는 특수한 경우입니다.',
+          '**데스크톱 앱은 런타임을 채팅 인터페이스와 모델 탐색기로 감쌉니다.** 터미널 단계가 없기 때문에 대부분의 비기술적 사용자가 시작하는 곳입니다 — 다운로드, 클릭, 채팅. LM Studio, Jan, GPT4All이 2026년 사용자 기반의 대부분을 차지합니다. AnythingLLM은 데스크톱 앱이자 RAG 레이어로도 기능하며, Open Interpreter는 특수한 경우로, OpenAI의 Codex에서 파생된 Rust 기반 코딩 에이전트이며 단일 호스팅 API가 아니라 오픈 모델을 위해 만들어졌습니다.',
         columns: ['도구', '링크', '설명', '라이선스', '스타'],
         rows: [
           { '도구': '**LM Studio**', '링크': '[lmstudio.ai](https://lmstudio.ai)', '설명': '가장 세련된 GUI, HuggingFace 모델 탐색기 내장, 서버 모드', '라이선스': '무료(비공개)' },
@@ -4359,7 +4359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Page Assist**', '링크': '[github.com/n4ze3m/page-assist](https://github.com/n4ze3m/page-assist)', '설명': 'Chrome 및 Firefox용 브라우저 사이드바 AI', '라이선스': 'MIT', '스타': '8.2k'},
           { '도구': '**Chatbox**', '링크': '[chatboxai.app](https://chatboxai.app)', '설명': '크로스플랫폼 데스크톱 및 웹 클라이언트', '라이선스': 'GPLv3' },
         ],
-        note: '상세 비교 가이드: [SillyTavern vs Agnai vs RisuAI](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
+        note: '상세 비교 가이드: [SillyTavern vs Agnai vs RisuAI](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay). LibreChat 리뷰: [LibreChat 리뷰 2026](/ko/power-local-llm/librechat-review-2026).',
       },
       ideEditors: {
         id: 'ide-editors',
@@ -4613,7 +4613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 도구 중 일부는 상업적 라이선스(상업적 사용에 무료가 아닌)가 있습니까?',
-            a: '일부 있습니다: LM Studio, Msty, Backyard AI, Layla, Cursor는 비공개 소스 — 일반적으로 사용하기 무료이지만 재배포할 수 없으며 상업적 약관은 다릅니다. Private LLM은 유료입니다. AGPL 라이선스 도구(Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Open Interpreter, Copilot for Obsidian)는 상업적 사용을 포함한 모든 사용에 무료이지만 AGPL 약관은 수정하여 공개적으로 호스팅할 경우 소스 코드 공개를 요구합니다. Apache 2.0 및 MIT 프로젝트(대부분)는 라이선스 텍스트 이상의 귀속 제한 없이 상업적 맥락을 포함한 모든 맥락에서 사용 가능합니다.',
+            a: '일부 있습니다: LM Studio, Msty, Backyard AI, Layla, Cursor는 비공개 소스 — 일반적으로 사용하기 무료이지만 재배포할 수 없으며 상업적 약관은 다릅니다. Private LLM은 유료입니다. AGPL 라이선스 도구(Jan, KoboldCpp, text-generation-webui, SillyTavern, Khoj, Copilot for Obsidian)는 상업적 사용을 포함한 모든 사용에 무료이지만 AGPL 약관은 수정하여 공개적으로 호스팅할 경우 소스 코드 공개를 요구합니다. Apache 2.0 및 MIT 프로젝트(대부분)는 라이선스 텍스트 이상의 귀속 제한 없이 상업적 맥락을 포함한 모든 맥락에서 사용 가능합니다.',
           },
           {
             q: '네이티브로 Apple Silicon(M 시리즈 칩)을 지원하는 도구는 무엇입니까?',

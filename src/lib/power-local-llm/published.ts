@@ -162,6 +162,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autogpt-local-review-2026',
   // h2oGPT enterprise review — 2026-09-03
   'h2ogpt-review-2026',
+  // LibreChat review — 2026-09-03
+  'librechat-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

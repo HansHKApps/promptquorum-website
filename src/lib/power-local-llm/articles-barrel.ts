@@ -99,6 +99,7 @@ import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
+import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
 import { article as a_quivr_self_hosted_knowledge_assistant_review } from './articles/quivr-self-hosted-knowledge-assistant-review'
 import { article as a_ragflow_document_understanding_rag_review } from './articles/ragflow-document-understanding-rag-review'
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
@@ -207,4 +208,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-ai-marketing-software-enterprise-2026':     a_best_ai_marketing_software_enterprise_2026,
   // AutoGPT classic-vs-Platform review — 2026-09-02
   'autogpt-local-review-2026':                         a_autogpt_local_review_2026,
+  // LibreChat review — 2026-09-03
+  'librechat-review-2026':                             a_librechat_review_2026,
 }
