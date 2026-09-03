@@ -32,7 +32,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit wins on:** setup time (minutes, not an afternoon), review quality on complex diffs, and zero maintenance burden',
         '**Minimum viable local setup:** Qwen3-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + a git pre-commit or CI hook',
         '**CodeRabbit starting price:** $24/developer/month (Essentials, billed annually), free forever on public repositories, 14-day trial',
-        '**Zero-commission test passed:** CodeRabbit stays the honest pick for "wants it working today" even with no affiliate relationship — PromptQuorum earns nothing from the link on this page',
       ],
       updatedDate: '2026-09-01',
     },
@@ -83,7 +82,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Honest limitation:** local coding models still trail frontier cloud models on complex, multi-file diff review — treat local as "good enough for most PRs," not a like-for-like swap.',
           '**CodeRabbit pricing (verified 2026-09-01):** Essentials $24/dev/month, Team $48, Advanced $72 (all annual billing), Enterprise custom with self-hosting; free forever on public repositories, 14-day trial on every paid tier.',
           '**Cost model is really effort vs. money:** local is free software running on hardware you may already own but costs you setup and maintenance time; CodeRabbit costs a monthly fee but is working inside five minutes.',
-          '**Zero-commission check:** CodeRabbit remains the honest recommendation for "small team, wants it working today" even with no affiliate relationship on this page.',
         ],
       },
       bestChoice: {
@@ -129,7 +127,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Fewer than 5 PRs a week → **neither** — human review is still fast enough at that volume',
           ],
         },
-        note: 'This is the affiliate-specific version of the same decision framework used across the site: name the real trade-off, don\'t force a winner where the honest answer is "it depends."',
       },
       problem: {
         id: 'problem',
@@ -251,11 +248,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Four reader profiles cover most people asking this question — match yours and skip the rest.**',
         items: [
           '**Personal or open-source repos, privacy-conscious, already has local-LLM hardware** → Local. You already own the GPU, the stakes of a missed bug are low, and there is no reason to send public or personal code to a third party. Use Qwen3-Coder 32B + PR-Agent.',
-          '**Startup or small team, wants it working today** → CodeRabbit. Setup time beats subscription cost at this stage — install the app, get review comments on the next PR, move on. This holds even with zero commission paid on the link: CodeRabbit is the honest pick here regardless of any affiliate relationship.',
+          '**Startup or small team, wants it working today** → CodeRabbit. Setup time beats subscription cost at this stage — install the app, get review comments on the next PR, move on.',
           '**Regulated industry, cannot send code off-prem** → Local, or CodeRabbit Enterprise\'s self-hosted tier if budget and procurement allow a vendor relationship. Do not default to "no vendor offers this" — CodeRabbit does have a self-hosted Enterprise option; it is a custom-priced sales conversation, not a self-serve plan, so weigh that against building the DIY stack yourself.',
           '**Large team, complex diffs, quality-critical** → CodeRabbit (or Greptile/Qodo, depending on platform and deployment needs — see the [three-way cloud comparison](/local-llms/best-ai-code-review-tools-2026)). This is the profile where the local route\'s honest limitation on multi-file, architectural review matters most.',
         ],
-        note: 'The "privacy-conscious, has hardware already" profile stays local unconditionally in this recommendation — CodeRabbit is not pushed onto that reader even though it is the monetized link on this page.',
+        note: 'The "privacy-conscious, has hardware already" profile stays local unconditionally in this recommendation — CodeRabbit is not pushed onto that reader.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -305,7 +302,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Run both if** you want privacy on the first pass and frontier-model quality on the pass that matters most — next step: wire the local model into a pre-commit hook for private, instant feedback, and let CodeRabbit handle the authoritative PR review.',
           '**If unsure,** start with CodeRabbit\'s free public-repo tier or 14-day trial to see real output on your own code, then decide whether the gap to a local setup is worth closing for your specific privacy or cost constraints.',
         ],
-        note: 'The CodeRabbit link on this page is a plain, disclosed product link with no affiliate relationship — PromptQuorum earns nothing from it. It is recommended here because it is the honest answer for the reader profiles it is recommended to, not because of any commercial arrangement.',
       },
       sources: {
         id: 'sources',
@@ -470,7 +466,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit gewinnt bei:** Einrichtungszeit (Minuten statt eines Nachmittags), Review-Qualität bei komplexen Diffs und null Wartungsaufwand',
         '**Minimal funktionsfähiges lokales Setup:** Qwen3-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, selbst gehostet) + ein Git-Pre-Commit- oder CI-Hook',
         '**CodeRabbit-Einstiegspreis:** 24 $/Entwickler/Monat (Essentials, jährlich abgerechnet), auf öffentlichen Repositories für immer kostenlos, 14-tägige Testphase',
-        '**Null-Provisions-Test bestanden:** CodeRabbit bleibt die ehrliche Wahl für alle, die es „heute funktionieren haben wollen" — auch ohne Affiliate-Beziehung verdient PromptQuorum an diesem Link nichts',
       ],
       updatedDate: '2026-09-01',
     },
@@ -521,7 +516,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ehrliche Einschränkung:** Lokale Coding-Modelle liegen bei komplexer Multi-Datei-Diff-Review weiterhin hinter Frontier-Cloud-Modellen zurück — behandeln Sie lokal als „gut genug für die meisten PRs", nicht als gleichwertigen Ersatz.',
           '**CodeRabbit-Preise (verifiziert am 01.09.2026):** Essentials 24 $/Entwickler/Monat, Team 48 $, Advanced 72 $ (alle jährlich abgerechnet), Enterprise mit individuellem Preis und Self-Hosting; auf öffentlichen Repositories für immer kostenlos, 14-tägige Testphase in jeder bezahlten Stufe.',
           '**Das Kostenmodell ist eigentlich Aufwand gegen Geld:** Lokal ist kostenlose Software, die auf Hardware läuft, die Sie vielleicht schon besitzen, kostet Sie aber Einrichtungs- und Wartungszeit; CodeRabbit kostet eine monatliche Gebühr, läuft aber innerhalb von fünf Minuten.',
-          '**Null-Provisions-Check:** CodeRabbit bleibt die ehrliche Empfehlung für „kleines Team, will es heute laufen haben" — auch ohne Affiliate-Beziehung auf dieser Seite.',
         ],
       },
       bestChoice: {
@@ -567,7 +561,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Weniger als 5 PRs pro Woche → **keins von beidem** — menschliche Review ist bei diesem Volumen noch schnell genug',
           ],
         },
-        note: 'Dies ist die affiliate-spezifische Version desselben Entscheidungsrahmens, der auf der ganzen Website verwendet wird: den echten Kompromiss benennen, keinen Gewinner erzwingen, wo die ehrliche Antwort „kommt darauf an" lautet.',
       },
       problem: {
         id: 'problem',
@@ -689,11 +682,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Vier Leserprofile decken die meisten Menschen ab, die sich diese Frage stellen — finden Sie Ihres und überspringen Sie den Rest.**',
         items: [
           '**Private oder Open-Source-Repos, datenschutzbewusst, hat bereits lokale-LLM-Hardware** → Lokal. Sie besitzen die GPU bereits, das Risiko eines übersehenen Bugs ist gering, und es gibt keinen Grund, öffentlichen oder privaten Code an Dritte zu senden. Nutzen Sie Qwen3-Coder 32B + PR-Agent.',
-          '**Startup oder kleines Team, will es heute laufen haben** → CodeRabbit. Die Einrichtungszeit schlägt in diesem Stadium die Abo-Kosten — App installieren, Review-Kommentare zum nächsten PR erhalten, weitermachen. Das gilt auch bei null gezahlter Provision auf den Link: CodeRabbit ist hier die ehrliche Wahl, unabhängig von jeder Affiliate-Beziehung.',
+          '**Startup oder kleines Team, will es heute laufen haben** → CodeRabbit. Die Einrichtungszeit schlägt in diesem Stadium die Abo-Kosten — App installieren, Review-Kommentare zum nächsten PR erhalten, weitermachen.',
           '**Regulierte Branche, darf Code nicht extern senden** → Lokal, oder CodeRabbit Enterprises selbst gehostete Stufe, wenn Budget und Beschaffung eine Anbieterbeziehung erlauben. Gehen Sie nicht davon aus, dass „kein Anbieter das anbietet" — CodeRabbit hat tatsächlich eine selbst gehostete Enterprise-Option; es ist ein Vertriebsgespräch mit individuellem Preis, kein Self-Service-Plan, wägen Sie das also gegen den Aufbau des DIY-Stacks selbst ab.',
           '**Großes Team, komplexe Diffs, qualitätskritisch** → CodeRabbit (oder Greptile/Qodo, je nach Plattform und Deployment-Bedarf — siehe den [Dreiervergleich in der Cloud](/de/local-llms/best-ai-code-review-tools-2026)). Das ist das Profil, bei dem die ehrliche Einschränkung des lokalen Wegs bei Multi-Datei-, architektonischer Review am meisten zählt.',
         ],
-        note: 'Das Profil „datenschutzbewusst, hat bereits Hardware" bleibt in dieser Empfehlung bedingungslos bei lokal — CodeRabbit wird dieser Leserschaft nicht aufgedrängt, obwohl es der monetarisierte Link auf dieser Seite ist.',
+        note: 'Das Profil „datenschutzbewusst, hat bereits Hardware" bleibt in dieser Empfehlung bedingungslos bei lokal — CodeRabbit wird dieser Leserschaft nicht aufgedrängt.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -745,7 +738,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nutzen Sie beides, wenn** Sie beim ersten Durchgang Datenschutz wollen und bei dem Durchgang, der am meisten zählt, Frontier-Modell-Qualität — nächster Schritt: das lokale Modell an einen Pre-Commit-Hook für privates, sofortiges Feedback anbinden und CodeRabbit die maßgebliche PR-Review übernehmen lassen.',
           '**Im Zweifel** starten Sie mit CodeRabbits kostenloser Öffentlich-Repo-Stufe oder der 14-tägigen Testphase, um echte Ergebnisse an eigenem Code zu sehen, und entscheiden dann, ob sich die Lücke zu einem lokalen Setup für Ihre konkreten Datenschutz- oder Kostenbeschränkungen zu schließen lohnt.',
         ],
-        note: 'Der CodeRabbit-Link auf dieser Seite ist ein einfacher, offengelegter Produktlink ohne Affiliate-Beziehung — PromptQuorum verdient daran nichts. Er wird hier empfohlen, weil er die ehrliche Antwort für die Leserprofile ist, denen er empfohlen wird, nicht wegen einer kommerziellen Vereinbarung.',
       },
       sources: {
         id: 'sources',
@@ -926,7 +918,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit gana en:** tiempo de configuración (minutos, no una tarde), calidad de revisión en diffs complejos, y cero carga de mantenimiento',
         '**Montaje local mínimo viable:** Qwen3-Coder 32B (20 GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, autoalojado) + un hook de pre-commit de git o de CI',
         '**Precio inicial de CodeRabbit:** 24 $/desarrollador/mes (Essentials, facturación anual), gratis para siempre en repositorios públicos, prueba de 14 días',
-        '**Prueba de comisión cero superada:** CodeRabbit sigue siendo la elección honesta para quien "quiere tenerlo funcionando hoy", incluso sin relación de afiliación — PromptQuorum no gana nada con el enlace de esta página',
       ],
       updatedDate: '2026-09-01',
     },
@@ -977,7 +968,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Limitación honesta:** los modelos de código locales todavía van por detrás de los modelos de frontera en la nube en revisión de diffs complejos con varios archivos — trata lo local como "suficientemente bueno para la mayoría de PRs", no como un reemplazo equivalente.',
           '**Precios de CodeRabbit (verificados el 2026-09-01):** Essentials 24 $/dev/mes, Team 48 $, Advanced 72 $ (todos con facturación anual), Enterprise con precio personalizado y opción autoalojada; gratis para siempre en repositorios públicos, prueba de 14 días en cada nivel de pago.',
           '**El modelo de costo es en realidad esfuerzo contra dinero:** lo local es software gratuito que corre en hardware que quizá ya tengas, pero te cuesta tiempo de configuración y mantenimiento; CodeRabbit cuesta una cuota mensual pero funciona en menos de cinco minutos.',
-          '**Comprobación de comisión cero:** CodeRabbit sigue siendo la recomendación honesta para "equipo pequeño, quiere tenerlo funcionando hoy", incluso sin relación de afiliación en esta página.',
         ],
       },
       bestChoice: {
@@ -1023,7 +1013,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Menos de 5 PRs a la semana → **ninguno de los dos** — la revisión humana sigue siendo suficientemente rápida a ese volumen',
           ],
         },
-        note: 'Esta es la versión específica de afiliados del mismo marco de decisión que se usa en todo el sitio: nombra el compromiso real, no fuerces un ganador cuando la respuesta honesta es "depende".',
       },
       problem: {
         id: 'problem',
@@ -1145,11 +1134,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cuatro perfiles de lector cubren a la mayoría de quienes se hacen esta pregunta — encuentra el tuyo y sáltate el resto.**',
         items: [
           '**Repos personales o de código abierto, consciente de la privacidad, ya tiene hardware para LLM local** → Local. Ya tienes la GPU, el riesgo de un error pasado por alto es bajo, y no hay razón para enviar código público o personal a un tercero. Usa Qwen3-Coder 32B + PR-Agent.',
-          '**Startup o equipo pequeño, quiere tenerlo funcionando hoy** → CodeRabbit. El tiempo de configuración pesa más que el costo de la suscripción en esta etapa — instala la app, recibe comentarios de revisión en el próximo PR, sigue adelante. Esto se mantiene incluso con cero comisión pagada por el enlace: CodeRabbit es la elección honesta aquí, sin importar ninguna relación de afiliación.',
+          '**Startup o equipo pequeño, quiere tenerlo funcionando hoy** → CodeRabbit. El tiempo de configuración pesa más que el costo de la suscripción en esta etapa — instala la app, recibe comentarios de revisión en el próximo PR, sigue adelante.',
           '**Industria regulada, no puede enviar código fuera de sus instalaciones** → Local, o el nivel autoalojado de CodeRabbit Enterprise si el presupuesto y las compras permiten una relación con un proveedor. No des por hecho que "ningún proveedor ofrece esto" — CodeRabbit sí tiene una opción Enterprise autoalojada; es una conversación de ventas con precio personalizado, no un plan de autoservicio, así que sopesa eso frente a construir el stack DIY tú mismo.',
           '**Equipo grande, diffs complejos, calidad crítica** → CodeRabbit (o Greptile/Qodo, según la plataforma y las necesidades de despliegue — consulta la [comparación en la nube a tres bandas](/es/local-llms/best-ai-code-review-tools-2026)). Este es el perfil donde más importa la limitación honesta de la vía local en revisión arquitectónica multi-archivo.',
         ],
-        note: 'El perfil "consciente de la privacidad, ya tiene el hardware" se queda con lo local sin condiciones en esta recomendación — no se le empuja a ese lector hacia CodeRabbit, aunque sea el enlace monetizado de esta página.',
+        note: 'El perfil "consciente de la privacidad, ya tiene el hardware" se queda con lo local sin condiciones en esta recomendación — no se le empuja a ese lector hacia CodeRabbit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1199,7 +1188,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Usa ambos si** quieres privacidad en la primera pasada y calidad de modelo de frontera en la pasada que más importa — siguiente paso: conecta el modelo local a un hook de pre-commit para feedback privado e instantáneo, y deja que CodeRabbit se encargue de la revisión autorizada del PR.',
           '**Si no estás seguro,** empieza con el nivel gratuito de CodeRabbit para repos públicos o la prueba de 14 días para ver resultados reales en tu propio código, y luego decide si vale la pena cerrar la brecha hacia un montaje local para tus restricciones específicas de privacidad o costo.',
         ],
-        note: 'El enlace a CodeRabbit en esta página es un enlace de producto simple y declarado, sin relación de afiliación — PromptQuorum no gana nada con él. Se recomienda aquí porque es la respuesta honesta para los perfiles de lector a los que se recomienda, no por ningún acuerdo comercial.',
       },
       sources: {
         id: 'sources',
@@ -1364,7 +1352,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit l\'emporte sur :** le temps de configuration (des minutes, pas une après-midi), la qualité de revue sur les diffs complexes, et une charge de maintenance nulle',
         '**Montage local minimal viable :** Qwen3-Coder 32B (20 Go de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, auto-hébergé) + un hook git pre-commit ou CI',
         '**Prix d\'entrée de CodeRabbit :** 24 $/développeur/mois (Essentials, facturation annuelle), gratuit à vie sur les dépôts publics, essai de 14 jours',
-        '**Test de commission zéro réussi :** CodeRabbit reste le choix honnête pour qui « veut que ça marche aujourd\'hui », même sans relation d\'affiliation — PromptQuorum ne gagne rien sur le lien de cette page',
       ],
       updatedDate: '2026-09-01',
     },
@@ -1415,7 +1402,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Limite honnête :** les modèles de code locaux restent en retrait face aux modèles cloud de pointe sur la revue de diffs complexes multi-fichiers — considérez le local comme « suffisant pour la plupart des PR », pas comme un remplacement équivalent.',
           '**Tarifs CodeRabbit (vérifiés le 2026-09-01) :** Essentials 24 $/dev/mois, Team 48 $, Advanced 72 $ (tous en facturation annuelle), Enterprise à prix personnalisé avec option auto-hébergée ; gratuit à vie sur les dépôts publics, essai de 14 jours sur chaque palier payant.',
           '**Le modèle de coût est en réalité effort contre argent :** le local est un logiciel gratuit tournant sur du matériel que vous possédez peut-être déjà, mais vous coûte du temps de configuration et de maintenance ; CodeRabbit coûte un abonnement mensuel mais fonctionne en moins de cinq minutes.',
-          '**Vérification commission zéro :** CodeRabbit reste la recommandation honnête pour « petite équipe, veut que ça marche aujourd\'hui », même sans relation d\'affiliation sur cette page.',
         ],
       },
       bestChoice: {
@@ -1461,7 +1447,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Moins de 5 PR par semaine → **ni l\'un ni l\'autre** — la revue humaine reste assez rapide à ce volume',
           ],
         },
-        note: 'C\'est la version spécifique à l\'affiliation du même cadre de décision utilisé sur tout le site : nommer l\'arbitrage réel, sans forcer un gagnant quand la réponse honnête est « ça dépend ».',
       },
       problem: {
         id: 'problem',
@@ -1583,11 +1568,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Quatre profils de lecteurs couvrent la plupart des personnes qui se posent cette question — trouvez le vôtre et sautez le reste.**',
         items: [
           '**Dépôts personnels ou open source, soucieux de confidentialité, dispose déjà du matériel LLM local** → Local. Vous possédez déjà le GPU, l\'enjeu d\'un bug manqué est faible, et rien ne justifie d\'envoyer du code public ou personnel à un tiers. Utilisez Qwen3-Coder 32B + PR-Agent.',
-          '**Startup ou petite équipe, veut que ça marche aujourd\'hui** → CodeRabbit. Le temps de configuration l\'emporte sur le coût d\'abonnement à ce stade — installez l\'app, obtenez des commentaires de revue sur la prochaine PR, passez à autre chose. Cela tient même avec zéro commission versée sur le lien : CodeRabbit est le choix honnête ici, indépendamment de toute relation d\'affiliation.',
+          '**Startup ou petite équipe, veut que ça marche aujourd\'hui** → CodeRabbit. Le temps de configuration l\'emporte sur le coût d\'abonnement à ce stade — installez l\'app, obtenez des commentaires de revue sur la prochaine PR, passez à autre chose.',
           '**Secteur réglementé, ne peut pas envoyer le code hors site** → Local, ou le palier auto-hébergé de CodeRabbit Enterprise si le budget et les achats permettent une relation fournisseur. Ne présumez pas qu\'« aucun fournisseur ne propose cela » — CodeRabbit a bien une option Enterprise auto-hébergée ; c\'est une conversation commerciale à prix personnalisé, pas un plan en libre-service, donc pesez cela face à la construction vous-même de la pile DIY.',
           '**Grande équipe, diffs complexes, qualité critique** → CodeRabbit (ou Greptile/Qodo, selon la plateforme et les besoins de déploiement — voir le [comparatif cloud à trois](/fr/local-llms/best-ai-code-review-tools-2026)). C\'est le profil où la limite honnête de la voie locale sur la revue architecturale multi-fichiers compte le plus.',
         ],
-        note: 'Le profil « soucieux de confidentialité, dispose déjà du matériel » reste sans condition du côté local dans cette recommandation — CodeRabbit ne lui est pas poussé, même s\'il s\'agit du lien monétisé de cette page.',
+        note: 'Le profil « soucieux de confidentialité, dispose déjà du matériel » reste sans condition du côté local dans cette recommandation — CodeRabbit ne lui est pas poussé.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1637,7 +1622,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Utilisez les deux si** vous voulez la confidentialité sur la première passe et la qualité d\'un modèle de pointe sur la passe qui compte le plus — étape suivante : connectez le modèle local à un hook pre-commit pour un retour privé et instantané, et laissez CodeRabbit assurer la revue de PR faisant autorité.',
           '**En cas de doute,** commencez par le palier gratuit de CodeRabbit pour dépôts publics ou l\'essai de 14 jours pour voir un résultat réel sur votre propre code, puis décidez si l\'écart avec un montage local vaut la peine d\'être comblé pour vos contraintes spécifiques de confidentialité ou de coût.',
         ],
-        note: 'Le lien CodeRabbit sur cette page est un simple lien produit déclaré, sans relation d\'affiliation — PromptQuorum n\'en tire aucun revenu. Il est recommandé ici parce que c\'est la réponse honnête pour les profils de lecteurs auxquels il est recommandé, pas en raison d\'un accord commercial.',
       },
       sources: {
         id: 'sources',
@@ -1802,7 +1786,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbitが勝る点：** 構築時間（半日ではなく数分）、複雑な差分でのレビュー品質、メンテナンス負荷ゼロ',
         '**最小構成のローカル環境：** Qwen3-Coder 32B（20GB VRAM/RAM、Apache 2.0）+ PR-Agent（Apache 2.0、自社運用）+ git pre-commitまたはCIフック',
         '**CodeRabbitの開始価格：** 月24ドル/開発者（Essentials、年払い）、パブリックリポジトリは永久無料、14日間トライアル',
-        '**ゼロコミッションテスト合格：** アフィリエイト関係がなくても「今日から動かしたい」人への正直な推奨はCodeRabbitのままです——本ページのリンクからPromptQuorumは一切収益を得ていません',
       ],
       updatedDate: '2026-09-01',
     },
@@ -1853,7 +1836,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**正直な限界：** ローカルのコーディングモデルは、複雑なマルチファイル差分のレビューでは依然としてフロンティアのクラウドモデルに及びません。ローカルは「ほとんどのPRには十分」であって、同等の置き換えではないと捉えてください。',
           '**CodeRabbitの料金（2026年9月1日確認）：** Essentials 月24ドル/開発者、Team 48ドル、Advanced 72ドル（いずれも年払い）、Enterpriseは自社運用込みの個別見積もり。パブリックリポジトリは永久無料、有料プランはすべて14日間トライアル付き。',
           '**コストモデルの本質は手間対お金です。** ローカルはすでに持っているかもしれないハードウェア上で動く無料ソフトウェアですが、構築とメンテナンスの時間がかかります。CodeRabbitは月額料金がかかりますが、5分以内に動き始めます。',
-          '**ゼロコミッションチェック：** アフィリエイト関係がなくても、「小規模チーム、今日から動かしたい」への正直な推奨はCodeRabbitのままです。',
         ],
       },
       bestChoice: {
@@ -1899,7 +1881,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '週5件未満のPR → **どちらも不要**——この量なら人間によるレビューで十分速い',
           ],
         },
-        note: 'これはサイト全体で使われている同じ判断フレームワークのアフィリエイト版です。実際のトレードオフを名指しし、正直な答えが「場合による」であるところに勝者を無理に作りません。',
       },
       problem: {
         id: 'problem',
@@ -2021,11 +2002,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**この質問をする人の大半は、次の4つの読者プロファイルのどれかに当てはまります——自分に近いものを見つけて、残りは読み飛ばしてください。**',
         items: [
           '**個人またはオープンソースのリポジトリ、プライバシー重視、すでにローカルLLM用ハードウェアを持っている** → ローカル。GPUはすでに手元にあり、見逃したバグの被害は小さく、公開コードや個人コードをサードパーティへ送る理由はありません。Qwen3-Coder 32B + PR-Agentを使ってください。',
-          '**スタートアップまたは小規模チーム、今日から動かしたい** → CodeRabbit。この段階では構築時間のほうが購読コストより重要です——アプリをインストールし、次のPRでレビューコメントを受け取り、前へ進んでください。これはリンクのコミッションがゼロでも成り立ちます。アフィリエイト関係の有無にかかわらず、CodeRabbitがここでの正直な選択です。',
+          '**スタートアップまたは小規模チーム、今日から動かしたい** → CodeRabbit。この段階では構築時間のほうが購読コストより重要です——アプリをインストールし、次のPRでレビューコメントを受け取り、前へ進んでください。',
           '**規制業界、コードをオンプレミスの外へ出せない** → ローカル、または予算と調達がベンダー関係を許すならCodeRabbit Enterpriseの自社運用プラン。「どのベンダーもこれを提供していない」と決めつけないでください——CodeRabbitには実際に自社運用のEnterpriseオプションがあります。個別見積もりの営業対応であってセルフサービスプランではないため、DIYスタックを自分で構築する場合と比較検討してください。',
           '**大規模チーム、複雑な差分、品質が最優先** → CodeRabbit（またはプラットフォームや展開要件次第でGreptile/Qodo——[3社のクラウド比較](/ja/local-llms/best-ai-code-review-tools-2026)を参照）。ローカルの道の正直な限界であるマルチファイル・アーキテクチャレビューが最も効いてくるプロファイルです。',
         ],
-        note: '「プライバシー重視、すでにハードウェアを持っている」プロファイルは、この推奨では無条件にローカル側です——本ページの収益化されたリンクであっても、この読者にCodeRabbitを押し付けることはありません。',
+        note: '「プライバシー重視、すでにハードウェアを持っている」プロファイルは、この推奨では無条件にローカル側です——この読者にCodeRabbitを押し付けることはありません。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2075,7 +2056,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**両方を使うべき場合：** 最初のパスではプライバシーを、最も重要なパスではフロンティアモデルの品質を求める場合——次の一手：ローカルモデルをpre-commitフックに接続して即座のプライベートなフィードバックを得て、PRの本番レビューはCodeRabbitに任せてください。',
           '**迷ったら、** まずCodeRabbitのパブリックリポジトリ向け無料プランか14日間トライアルで、自分のコードに対する実際の出力を確認してから、自分固有のプライバシーやコストの制約に照らして、ローカル構成へ移る差を埋める価値があるか判断してください。',
         ],
-        note: '本ページのCodeRabbitリンクは、アフィリエイト関係のない、開示済みの単純な製品リンクです——PromptQuorumはここから一切収益を得ていません。ここで推薦しているのは、商業的な取り決めがあるからではなく、推薦対象の読者プロファイルにとって正直な答えだからです。',
       },
       sources: {
         id: 'sources',
@@ -2240,7 +2220,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit 的优势：** 搭建时间（几分钟而非一个下午）、复杂差异上的审查质量，以及零维护负担',
         '**最小可用本地配置：** Qwen3-Coder 32B（20 GB VRAM/RAM，Apache 2.0）+ PR-Agent（Apache 2.0，自托管）+ 一个 git pre-commit 或 CI 钩子',
         '**CodeRabbit 起价：** 每位开发者每月 24 美元（Essentials，按年付费），公开仓库永久免费，14 天试用',
-        '**通过零佣金测试：** 即使没有任何联盟合作关系，对于「今天就想用上」的读者，CodeRabbit 依然是诚实的选择——PromptQuorum 不会从本页的链接中获得任何收益',
       ],
       updatedDate: '2026-09-01',
     },
@@ -2291,7 +2270,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**诚实地说：** 在复杂的多文件差异审查上，本地编程模型仍落后于前沿云端模型——把本地方案当作「对多数 PR 来说够用」，而不是等价替代品。',
           '**CodeRabbit 定价（2026 年 9 月 1 日核实）：** Essentials 每位开发者每月 24 美元，Team 48 美元，Advanced 72 美元（均为按年付费），Enterprise 定制报价并支持自托管；公开仓库永久免费，每个付费层级均提供 14 天试用。',
           '**成本模型本质上是精力与金钱的权衡：** 本地方案是运行在你可能已经拥有的硬件上的免费软件，但要付出搭建和维护的时间；CodeRabbit 收取月费，但五分钟内就能用起来。',
-          '**零佣金检验：** 即使本页没有任何联盟合作关系，对于「小团队、今天就想用上」的场景，CodeRabbit 依然是诚实的推荐。',
         ],
       },
       bestChoice: {
@@ -2337,7 +2315,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '每周少于 5 个 PR → **两者都不需要**——这个量级下人工审查已经足够快',
           ],
         },
-        note: '这是本站通用决策框架的联盟版本：说清真实的权衡，而不是在诚实答案是「视情况而定」的地方硬造一个赢家。',
       },
       problem: {
         id: 'problem',
@@ -2459,11 +2436,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**四种读者画像覆盖了大多数问这个问题的人——找到符合你的那一种，其余可以跳过。**',
         items: [
           '**个人或开源仓库、重视隐私、已经有本地 LLM 硬件** → 本地方案。你已经拥有 GPU，漏掉一个 bug 的代价很低，也没有理由把公开或个人代码发送给第三方。使用 Qwen3-Coder 32B + PR-Agent。',
-          '**初创公司或小团队，今天就想用上** → CodeRabbit。在这个阶段，搭建时间比订阅费更重要——安装应用，在下一个 PR 上获得审查评论，然后继续前进。即使这个链接没有任何佣金，这个结论依然成立：无论是否存在联盟合作关系，CodeRabbit 都是这里诚实的选择。',
+          '**初创公司或小团队，今天就想用上** → CodeRabbit。在这个阶段，搭建时间比订阅费更重要——安装应用，在下一个 PR 上获得审查评论，然后继续前进。',
           '**受监管行业，代码不能离开本地环境** → 本地方案，或者如果预算和采购流程允许建立厂商关系，可以选 CodeRabbit Enterprise 的自托管层级。不要默认「没有厂商提供这个」——CodeRabbit 确实有自托管的 Enterprise 选项；它是需要与销售沟通的定制报价，而不是自助方案，所以要把它和自己搭建 DIY 技术栈做权衡。',
           '**大型团队、复杂差异、质量至关重要** → CodeRabbit（或 Greptile/Qodo，取决于平台和部署需求——参见[三者云端对比](/zh/local-llms/best-ai-code-review-tools-2026)）。对于这类画像，本地路线在多文件、架构性审查上的诚实局限影响最大。',
         ],
-        note: '在这份推荐中，「重视隐私、已经有硬件」的画像无条件停留在本地方案——即使 CodeRabbit 是本页的变现链接，也不会被强推给这类读者。',
+        note: '在这份推荐中，「重视隐私、已经有硬件」的画像无条件停留在本地方案——不会被强推给这类读者。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2513,7 +2490,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**两者都用，如果** 第一轮反馈你想要隐私保护，而最重要的那一轮你想要前沿模型的质量——下一步：把本地模型接入 pre-commit 钩子，获得即时、私密的反馈，再把 PR 的正式审查交给 CodeRabbit。',
           '**如果拿不准，** 先从 CodeRabbit 的公开仓库免费层级或 14 天试用开始，在自己的代码上看看真实的输出效果，再根据你具体的隐私或成本约束，判断是否值得为切换到本地方案而弥合这个差距。',
         ],
-        note: '本页的 CodeRabbit 链接是一个普通的、已披露的产品链接，不存在任何联盟合作关系——PromptQuorum 不会从中获得任何收益。在这里推荐它，是因为对于被推荐的读者画像来说这是诚实的答案，而不是出于任何商业安排。',
       },
       sources: {
         id: 'sources',
@@ -2678,7 +2654,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**O CodeRabbit ganha em:** tempo de configuração (minutos, não uma tarde), qualidade de revisão em diffs complexos e zero carga de manutenção',
         '**Setup local mínimo viável:** Qwen3-Coder 32B (20GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + um hook de pre-commit do git ou de CI',
         '**Preço inicial do CodeRabbit:** $24/desenvolvedor/mês (Essentials, faturamento anual), gratuito para sempre em repositórios públicos, teste de 14 dias',
-        '**Teste de comissão zero superado:** o CodeRabbit continua sendo a escolha honesta para quem "quer funcionando hoje", mesmo sem relação de afiliação — a PromptQuorum não ganha nada com o link desta página',
       ],
       updatedDate: '2026-09-01',
     },
@@ -2729,7 +2704,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Limitação honesta:** modelos de código locais ainda ficam atrás dos modelos de fronteira na nuvem na revisão de diffs complexos com vários arquivos — trate o local como "bom o suficiente para a maioria dos PRs", não como substituto equivalente.',
           '**Preços do CodeRabbit (verificados em 2026-09-01):** Essentials $24/dev/mês, Team $48, Advanced $72 (todos com faturamento anual), Enterprise com preço personalizado e opção self-hosted; gratuito para sempre em repositórios públicos, teste de 14 dias em cada nível pago.',
           '**O modelo de custo é, na verdade, esforço contra dinheiro:** o local é software gratuito rodando em hardware que você talvez já tenha, mas custa tempo de configuração e manutenção; o CodeRabbit custa uma mensalidade mas funciona em menos de cinco minutos.',
-          '**Checagem de comissão zero:** o CodeRabbit continua sendo a recomendação honesta para "equipe pequena, quer funcionando hoje", mesmo sem relação de afiliação nesta página.',
         ],
       },
       bestChoice: {
@@ -2775,7 +2749,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Menos de 5 PRs por semana → **nenhum dos dois** — revisão humana ainda é rápida o suficiente nesse volume',
           ],
         },
-        note: 'Esta é a versão específica de afiliados do mesmo framework de decisão usado em todo o site: nomeie a troca real, não force um vencedor quando a resposta honesta é "depende".',
       },
       problem: {
         id: 'problem',
@@ -2897,11 +2870,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Quatro perfis de leitor cobrem a maioria de quem se faz essa pergunta — encontre o seu e pule o resto.**',
         items: [
           '**Repos pessoais ou open source, consciente de privacidade, já tem hardware para LLM local** → Local. Você já tem a GPU, o risco de um bug não detectado é baixo, e não há motivo para enviar código público ou pessoal a um terceiro. Use Qwen3-Coder 32B + PR-Agent.',
-          '**Startup ou equipe pequena, quer funcionando hoje** → CodeRabbit. O tempo de configuração pesa mais do que o custo da assinatura nesta fase — instale o app, receba comentários de revisão no próximo PR, siga em frente. Isso se mantém mesmo com zero comissão paga pelo link: o CodeRabbit é a escolha honesta aqui, independente de qualquer relação de afiliação.',
+          '**Startup ou equipe pequena, quer funcionando hoje** → CodeRabbit. O tempo de configuração pesa mais do que o custo da assinatura nesta fase — instale o app, receba comentários de revisão no próximo PR, siga em frente.',
           '**Setor regulamentado, não pode enviar código para fora das instalações** → Local, ou o nível self-hosted do CodeRabbit Enterprise se orçamento e compras permitirem uma relação com fornecedor. Não presuma que "nenhum fornecedor oferece isso" — o CodeRabbit tem sim uma opção Enterprise self-hosted; é uma conversa de vendas com preço personalizado, não um plano de autoatendimento, então pese isso contra construir o stack DIY você mesmo.',
           '**Equipe grande, diffs complexos, qualidade crítica** → CodeRabbit (ou Greptile/Qodo, dependendo da plataforma e das necessidades de implantação — veja a [comparação completa em nuvem entre os três](/pt/local-llms/best-ai-code-review-tools-2026)). Este é o perfil em que a limitação honesta do caminho local em revisão arquitetural multi-arquivo mais importa.',
         ],
-        note: 'O perfil "consciente de privacidade, já tem o hardware" fica com o local sem ressalvas nesta recomendação — esse leitor não é empurrado para o CodeRabbit, mesmo sendo o link monetizado desta página.',
+        note: 'O perfil "consciente de privacidade, já tem o hardware" fica com o local sem ressalvas nesta recomendação — esse leitor não é empurrado para o CodeRabbit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2951,7 +2924,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Rode os dois se** você quer privacidade na primeira passada e qualidade de modelo de fronteira na passada que mais importa — próximo passo: conecte o modelo local a um hook de pre-commit para feedback privado e instantâneo, e deixe o CodeRabbit cuidar da revisão autorizada do PR.',
           '**Se não tem certeza,** comece com o nível gratuito do CodeRabbit para repos públicos ou o teste de 14 dias para ver resultados reais no seu próprio código, e depois decida se vale a pena fechar a lacuna para um setup local dadas suas restrições específicas de privacidade ou custo.',
         ],
-        note: 'O link para o CodeRabbit nesta página é um link de produto simples e declarado, sem relação de afiliação — a PromptQuorum não ganha nada com ele. É recomendado aqui porque é a resposta honesta para os perfis de leitor a quem é recomendado, não por nenhum acordo comercial.',
       },
       sources: {
         id: 'sources',
@@ -3116,7 +3088,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**يتفوق CodeRabbit في:** وقت الإعداد (دقائق وليس بعد ظهر كاملًا)، جودة المراجعة في الفروقات المعقدة، وانعدام عبء الصيانة',
         '**الإعداد المحلي الأدنى القابل للتطبيق:** Qwen3-Coder 32B (20 جيجابايت VRAM/RAM، رخصة Apache 2.0) + PR-Agent (Apache 2.0، ذاتي الاستضافة) + hook من نوع pre-commit في git أو CI',
         '**سعر CodeRabbit المبدئي:** 24 دولارًا لكل مطور شهريًا (Essentials، فوترة سنوية)، مجاني إلى الأبد في المستودعات العامة، تجربة 14 يومًا',
-        '**اجتياز اختبار العمولة الصفرية:** يظل CodeRabbit الخيار الصادق لمن "يريده يعمل اليوم"، حتى بدون أي علاقة تسويق بالعمولة — لا تربح PromptQuorum شيئًا من رابط هذه الصفحة',
       ],
       updatedDate: '2026-09-01',
     },
@@ -3167,7 +3138,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**قيد صادق:** لا تزال نماذج الكود المحلية متأخرة عن النماذج المتطورة السحابية في مراجعة الفروقات المعقدة متعددة الملفات — عامل المحلي كـ"جيد بما يكفي لمعظم طلبات السحب"، وليس كبديل مكافئ.',
           '**أسعار CodeRabbit (تم التحقق منها في 2026-09-01):** Essentials بـ24 دولارًا لكل مطور شهريًا، Team بـ48 دولارًا، Advanced بـ72 دولارًا (كلها بفوترة سنوية)، Enterprise بسعر مخصص مع خيار الاستضافة الذاتية؛ مجاني إلى الأبد في المستودعات العامة، تجربة 14 يومًا في كل مستوى مدفوع.',
           '**نموذج التكلفة هو في الواقع جهد مقابل مال:** المحلي برنامج مجاني يعمل على عتاد قد تملكه بالفعل، لكنه يكلفك وقت إعداد وصيانة؛ يكلف CodeRabbit رسومًا شهرية لكنه يعمل خلال أقل من خمس دقائق.',
-          '**فحص العمولة الصفرية:** يظل CodeRabbit التوصية الصادقة لـ"فريق صغير يريده يعمل اليوم"، حتى بدون أي علاقة تسويق بالعمولة في هذه الصفحة.',
         ],
       },
       bestChoice: {
@@ -3213,7 +3183,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'أقل من 5 طلبات سحب أسبوعيًا ← **لا هذا ولا ذاك** — المراجعة البشرية لا تزال سريعة بما يكفي بهذا الحجم',
           ],
         },
-        note: 'هذه هي النسخة الخاصة بالتسويق بالعمولة من نفس إطار القرار المستخدم في جميع أنحاء الموقع: سمّ المقايضة الحقيقية، ولا تفرض فائزًا عندما تكون الإجابة الصادقة "يعتمد".',
       },
       problem: {
         id: 'problem',
@@ -3335,11 +3304,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**أربعة ملامح قارئ تغطي معظم من يطرح هذا السؤال — ابحث عن ملفك وتخطَّ الباقي.**',
         items: [
           '**مستودعات شخصية أو مفتوحة المصدر، مهتم بالخصوصية، يملك بالفعل عتاد LLM محلي** ← المحلي. لديك بالفعل بطاقة الرسومات، ومخاطر تفويت خطأ منخفضة، ولا سبب لإرسال كود عام أو شخصي إلى طرف ثالث. استخدم Qwen3-Coder 32B + PR-Agent.',
-          '**شركة ناشئة أو فريق صغير، يريده يعمل اليوم** ← CodeRabbit. وقت الإعداد يرجّح أكثر من تكلفة الاشتراك في هذه المرحلة — ثبّت التطبيق، احصل على تعليقات مراجعة في طلب السحب التالي، تابع. ينطبق هذا حتى مع عمولة صفرية مدفوعة من الرابط: CodeRabbit هو الخيار الصادق هنا، بصرف النظر عن أي علاقة تسويق بالعمولة.',
+          '**شركة ناشئة أو فريق صغير، يريده يعمل اليوم** ← CodeRabbit. وقت الإعداد يرجّح أكثر من تكلفة الاشتراك في هذه المرحلة — ثبّت التطبيق، احصل على تعليقات مراجعة في طلب السحب التالي، تابع.',
           '**قطاع منظّم، لا يمكنه إرسال الكود خارج منشآته** ← المحلي، أو مستوى CodeRabbit Enterprise ذاتي الاستضافة إذا سمحت الميزانية والمشتريات بعلاقة مع مزوّد. لا تفترض أن "لا يوجد مزوّد يقدّم هذا" — يمتلك CodeRabbit بالفعل خيار Enterprise ذاتي الاستضافة؛ إنه محادثة مبيعات بسعر مخصص، وليس خطة ذاتية الخدمة، فوازن ذلك مقابل بناء حزمة DIY بنفسك.',
           '**فريق كبير، فروقات معقدة، جودة حرجة** ← CodeRabbit (أو Greptile/Qodo، حسب المنصة واحتياجات النشر — راجع [المقارنة السحابية الثلاثية الكاملة](/ar/local-llms/best-ai-code-review-tools-2026)). هذا هو الملف الذي يهم فيه أكثر القيد الصادق للمسار المحلي في المراجعة المعمارية متعددة الملفات.',
         ],
-        note: 'ملف "مهتم بالخصوصية، يملك العتاد بالفعل" يبقى مع المحلي دون تحفظات في هذه التوصية — لا يُدفَع هذا القارئ نحو CodeRabbit، رغم أنه الرابط المربح لهذه الصفحة.',
+        note: 'ملف "مهتم بالخصوصية، يملك العتاد بالفعل" يبقى مع المحلي دون تحفظات في هذه التوصية — لا يُدفَع هذا القارئ نحو CodeRabbit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3389,7 +3358,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**استخدم كليهما إذا** أردت الخصوصية في التمريرة الأولى وجودة نموذج متطور في التمريرة الأكثر أهمية — الخطوة التالية: اربط النموذج المحلي بـhook من نوع pre-commit للحصول على تعليقات خاصة وفورية، ودع CodeRabbit يتولى المراجعة الرسمية لطلب السحب.',
           '**إذا لم تكن متأكدًا،** ابدأ بمستوى CodeRabbit المجاني للمستودعات العامة أو تجربة الـ14 يومًا لرؤية نتائج حقيقية على كودك الخاص، ثم قرّر ما إذا كان يستحق سد الفجوة نحو إعداد محلي وفق قيودك المحددة من الخصوصية أو التكلفة.',
         ],
-        note: 'رابط CodeRabbit في هذه الصفحة هو رابط منتج بسيط ومُصرَّح به، دون أي علاقة تسويق بالعمولة — لا تربح PromptQuorum شيئًا منه. يوصى به هنا لأنه الإجابة الصادقة لملامح القراء الذين يُوصى لهم به، وليس بسبب أي اتفاق تجاري.',
       },
       sources: {
         id: 'sources',
@@ -3554,7 +3522,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**CodeRabbit이 앞서는 부분:** 설정 시간(반나절이 아니라 몇 분), 복잡한 diff에서의 리뷰 품질, 유지보수 부담 제로',
         '**최소 실행 가능한 로컬 구성:** Qwen3-Coder 32B(20GB VRAM/RAM, Apache 2.0) + PR-Agent(Apache 2.0, 셀프 호스팅) + git pre-commit hook 또는 CI hook',
         '**CodeRabbit 시작 가격:** 개발자당 월 $24(Essentials, 연간 결제), 퍼블릭 저장소 영구 무료, 14일 체험',
-        '**제로 커미션 테스트 통과:** 어떤 제휴 관계가 없어도 "오늘 바로 작동시키고 싶은" 사용자에게는 CodeRabbit이 여전히 정직한 선택입니다 — PromptQuorum은 이 페이지의 링크로 아무것도 얻지 않습니다',
       ],
       updatedDate: '2026-09-01',
     },
@@ -3605,7 +3572,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**정직한 한계:** 로컬 코드 모델은 여러 파일에 걸친 복잡한 diff 리뷰에서 여전히 클라우드 프론티어 모델에 뒤처집니다 — 로컬을 동등한 대체재가 아니라 "대부분의 PR에 충분히 좋은" 수준으로 대하십시오.',
           '**CodeRabbit 가격(2026-09-01 기준 확인):** Essentials 개발자당 월 $24, Team $48, Advanced $72(모두 연간 결제), Enterprise는 맞춤 가격이며 셀프 호스팅 옵션 제공. 퍼블릭 저장소는 영구 무료, 모든 유료 등급에서 14일 체험 제공.',
           '**비용 모델은 사실상 돈 대 노력의 문제입니다:** 로컬은 이미 있을지 모를 하드웨어에서 실행되는 무료 소프트웨어이지만 설정과 유지보수에 시간이 듭니다. CodeRabbit은 월 구독료가 들지만 5분 이내로 작동합니다.',
-          '**제로 커미션 점검:** 이 페이지에 어떤 제휴 관계가 없어도 "작은 팀, 오늘 바로 작동시키고 싶다"는 경우에는 CodeRabbit이 여전히 정직한 추천입니다.',
         ],
       },
       bestChoice: {
@@ -3651,7 +3617,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '주당 PR 5건 미만 → **둘 다 필요 없음** — 이 정도 물량에서는 사람이 직접 리뷰해도 충분히 빠릅니다',
           ],
         },
-        note: '이것은 사이트 전체에서 사용하는 동일한 의사결정 프레임워크의 제휴 마케팅 특화 버전입니다: 실제 트레이드오프를 명시하고, 정직한 답이 "상황에 따라 다르다"일 때 억지로 승자를 정하지 마십시오.',
       },
       problem: {
         id: 'problem',
@@ -3773,11 +3738,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**네 가지 독자 유형이 이 질문을 던지는 대부분의 사람을 아우릅니다 — 본인에게 해당하는 유형을 찾고 나머지는 건너뛰십시오.**',
         items: [
           '**개인 또는 오픈소스 저장소, 프라이버시를 중시함, 이미 로컬 LLM 하드웨어 보유** → 로컬. 이미 GPU가 있고, 버그를 놓칠 위험이 낮으며, 공개 코드나 개인 코드를 제3자에게 보낼 이유가 없습니다. Qwen3-Coder 32B + PR-Agent를 사용하십시오.',
-          '**스타트업 또는 소규모 팀, 오늘 바로 작동시키고 싶음** → CodeRabbit. 이 단계에서는 설정 시간이 구독 비용보다 더 큰 비중을 차지합니다 — 앱을 설치하고, 다음 PR에서 리뷰 코멘트를 받고, 계속 진행하십시오. 이는 링크에서 지급되는 커미션이 전혀 없어도 마찬가지입니다: 어떤 제휴 관계와도 무관하게 CodeRabbit이 여기서는 정직한 선택입니다.',
+          '**스타트업 또는 소규모 팀, 오늘 바로 작동시키고 싶음** → CodeRabbit. 이 단계에서는 설정 시간이 구독 비용보다 더 큰 비중을 차지합니다 — 앱을 설치하고, 다음 PR에서 리뷰 코멘트를 받고, 계속 진행하십시오.',
           '**규제 산업, 시설 밖으로 코드를 보낼 수 없음** → 로컬, 또는 예산과 구매 절차가 공급업체와의 관계를 허용한다면 CodeRabbit Enterprise의 셀프 호스팅 등급. "어떤 공급업체도 이를 제공하지 않는다"고 가정하지 마십시오 — CodeRabbit은 실제로 셀프 호스팅 Enterprise 옵션을 갖고 있습니다. 이는 자율 가입형 플랜이 아니라 맞춤 가격의 영업 상담이므로, DIY 스택을 직접 구축하는 것과 비교해 저울질하십시오.',
           '**대규모 팀, 복잡한 diff, 품질이 핵심** → CodeRabbit(또는 플랫폼과 배포 요구 사항에 따라 Greptile/Qodo — [완전한 3자 클라우드 비교](/ko/local-llms/best-ai-code-review-tools-2026) 참고). 다중 파일 아키텍처 리뷰에서 로컬 경로의 정직한 한계가 가장 중요해지는 유형이 바로 이것입니다.',
         ],
-        note: '"프라이버시를 중시하며 이미 하드웨어를 보유한" 유형은 이 추천에서 아무런 유보 없이 로컬에 머무릅니다 — 이 페이지의 수익화된 링크임에도 불구하고 그 독자를 CodeRabbit 쪽으로 밀어붙이지 않습니다.',
+        note: '"프라이버시를 중시하며 이미 하드웨어를 보유한" 유형은 이 추천에서 아무런 유보 없이 로컬에 머무릅니다 — 그 독자를 CodeRabbit 쪽으로 밀어붙이지 않습니다.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3827,7 +3792,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**둘 다 사용하십시오, 만약** 첫 번째 패스에서는 프라이버시를, 가장 중요한 패스에서는 프론티어 모델 수준의 품질을 원한다면 — 다음 단계: 로컬 모델을 pre-commit hook에 연결해 프라이빗하고 즉각적인 피드백을 받고, 공식 PR 리뷰는 CodeRabbit이 맡도록 하십시오.',
           '**확신이 서지 않는다면,** 퍼블릭 저장소용 CodeRabbit 무료 등급이나 14일 체험으로 시작해 본인 코드에서 실제 결과를 확인한 다음, 본인의 프라이버시나 비용 제약을 고려해 로컬 구성으로의 격차를 메울 가치가 있는지 판단하십시오.',
         ],
-        note: '이 페이지의 CodeRabbit 링크는 제휴 관계가 전혀 없는 단순하고 명시된 제품 링크입니다 — PromptQuorum은 이로부터 아무것도 얻지 않습니다. 여기서 추천되는 이유는 상업적 계약 때문이 아니라, 추천 대상 독자 유형에게 정직한 답이기 때문입니다.',
       },
       sources: {
         id: 'sources',
