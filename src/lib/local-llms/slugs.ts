@@ -46,9 +46,6 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Hardware & Performance
   'local-llm-hardware-guide-2026':        'local-llm-hardware-guide-2026',
-  'edge-ai-hardware-for-local-llms':      'edge-ai-hardware-for-local-llms',
-  'vla-models-robots-local-inference':    'vla-models-robots-local-inference',
-  'vlm-video-analytics-drones-edge':      'vlm-video-analytics-drones-edge',
   'vram-calculator-local-llm':            'vram-calculator-local-llm',
   'gpu-vs-cpu-vs-apple-silicon':          'gpu-vs-cpu-vs-apple-silicon',
   'apple-silicon-vs-nvidia-gpu-local-llm': 'apple-silicon-vs-nvidia-gpu-local-llm',

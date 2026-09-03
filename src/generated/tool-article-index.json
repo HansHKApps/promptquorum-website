@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 109,
+    "totalCount": 110,
     "capped": true
   },
   "vLLM": {
@@ -306,10 +306,10 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
+        "cluster": "power-local-llm",
         "slug": "vla-models-robots-local-inference",
         "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
-        "url": "/local-llms/vla-models-robots-local-inference",
+        "url": "/power-local-llm/vla-models-robots-local-inference",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
@@ -3096,10 +3096,10 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
+        "cluster": "power-local-llm",
         "slug": "vlm-video-analytics-drones-edge",
         "title": "VLMs in Cameras and on Drones 2026: On-Device Video Understanding",
-        "url": "/local-llms/vlm-video-analytics-drones-edge",
+        "url": "/power-local-llm/vlm-video-analytics-drones-edge",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -3144,10 +3144,10 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
+        "cluster": "power-local-llm",
         "slug": "vla-models-robots-local-inference",
         "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
-        "url": "/local-llms/vla-models-robots-local-inference",
+        "url": "/power-local-llm/vla-models-robots-local-inference",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
