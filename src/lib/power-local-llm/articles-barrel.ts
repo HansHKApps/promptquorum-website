@@ -103,6 +103,7 @@ import { article as a_ragflow_document_understanding_rag_review } from './articl
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
 import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
+import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -205,4 +206,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-ai-marketing-software-enterprise-2026':     a_best_ai_marketing_software_enterprise_2026,
   // AutoGPT classic-vs-Platform review — 2026-09-02
   'autogpt-local-review-2026':                         a_autogpt_local_review_2026,
+  // Atomic Chat review — 2026-09-03
+  'atomic-chat-review':                                a_atomic_chat_review,
 }
