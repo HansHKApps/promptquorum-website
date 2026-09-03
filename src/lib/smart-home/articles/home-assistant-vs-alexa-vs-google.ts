@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Comparison',
         content:
           '**Home Assistant leads on privacy, local control, and AI; Alexa and Google lead on ease and voice breadth.** Use the table to match a platform to your priority.',
-        columns: ['Criterion', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['Criterion', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'Criterion': 'Privacy', 'Home Assistant': 'Best (local)', 'Amazon Alexa': 'Cloud data', 'Google Home': 'Cloud data' },
           { 'Criterion': 'Local control', 'Home Assistant': 'Full', 'Amazon Alexa': 'Limited', 'Google Home': 'Limited' },
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المقارنة',
         content:
           '**يتصدر Home Assistant على صعيد الخصوصية والتحكم المحلي والذكاء الاصطناعي؛ ويتصدر Alexa وGoogle على صعيد السهولة واتساع الصوت.** استخدم الجدول لمطابقة المنصة مع أولويتك.',
-        columns: ['المعيار', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['المعيار', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'المعيار': 'الخصوصية', 'Home Assistant': 'الأفضل (محلي)', 'Amazon Alexa': 'بيانات سحابية', 'Google Home': 'بيانات سحابية' },
           { 'المعيار': 'التحكم المحلي', 'Home Assistant': 'كامل', 'Amazon Alexa': 'محدود', 'Google Home': 'محدود' },
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Der Vergleich',
         content:
           '**Home Assistant führt bei Datenschutz, lokaler Steuerung und KI; Alexa und Google führen bei Einfachheit und Sprachbreite.** Nutzen Sie die Tabelle, um eine Plattform Ihrer Priorität zuzuordnen.',
-        columns: ['Kriterium', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['Kriterium', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'Kriterium': 'Datenschutz', 'Home Assistant': 'Am besten (lokal)', 'Amazon Alexa': 'Cloud-Daten', 'Google Home': 'Cloud-Daten' },
           { 'Kriterium': 'Lokale Steuerung', 'Home Assistant': 'Vollständig', 'Amazon Alexa': 'Begrenzt', 'Google Home': 'Begrenzt' },
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparación',
         content:
           '**Home Assistant lidera en privacidad, control local e IA; Alexa y Google lideran en facilidad y amplitud de voz.** Usa la tabla para asignar una plataforma a tu prioridad.',
-        columns: ['Criterio', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['Criterio', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'Criterio': 'Privacidad', 'Home Assistant': 'La mejor (local)', 'Amazon Alexa': 'Datos en la nube', 'Google Home': 'Datos en la nube' },
           { 'Criterio': 'Control local', 'Home Assistant': 'Completo', 'Amazon Alexa': 'Limitado', 'Google Home': 'Limitado' },
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '비교',
         content:
           '**Home Assistant는 개인정보 보호, 로컬 제어, AI에서 앞서고, Alexa와 Google은 편의성과 음성 범위에서 앞섭니다.** 테이블을 사용하여 플랫폼을 우선 순위에 맞추십시오.',
-        columns: ['기준', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['기준', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { '기준': '개인정보 보호', 'Home Assistant': '최고(로컬)', 'Amazon Alexa': '클라우드 데이터', 'Google Home': '클라우드 데이터' },
           { '기준': '로컬 제어', 'Home Assistant': '완전', 'Amazon Alexa': '제한적', 'Google Home': '제한적' },
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparaison',
         content:
           '**Home Assistant mène sur la confidentialité, le contrôle local et l\'IA ; Alexa et Google mènent sur la facilité et l\'étendue vocale.** Utilisez le tableau pour associer une plateforme à votre priorité.',
-        columns: ['Critère', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['Critère', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'Critère': 'Confidentialité', 'Home Assistant': 'La meilleure (locale)', 'Amazon Alexa': 'Données cloud', 'Google Home': 'Données cloud' },
           { 'Critère': 'Contrôle local', 'Home Assistant': 'Complet', 'Amazon Alexa': 'Limité', 'Google Home': 'Limité' },
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '比較',
         content:
           '**Home Assistant はプライバシー・ローカル制御・AI で先行し；Alexa と Google は手軽さと音声の幅で先行します。** 表で自分の優先事項にプラットフォームを対応づけましょう。',
-        columns: ['基準', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['基準', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { '基準': 'プライバシー', 'Home Assistant': '最良（ローカル）', 'Amazon Alexa': 'クラウドデータ', 'Google Home': 'クラウドデータ' },
           { '基準': 'ローカル制御', 'Home Assistant': '完全', 'Amazon Alexa': '限定的', 'Google Home': '限定的' },
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A comparação',
         content:
           '**O Home Assistant lidera em privacidade, controle local e IA; Alexa e Google lideram em facilidade e amplitude de voz.** Use a tabela para associar uma plataforma à sua prioridade.',
-        columns: ['Critério', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['Critério', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { 'Critério': 'Privacidade', 'Home Assistant': 'A melhor (local)', 'Amazon Alexa': 'Dados na nuvem', 'Google Home': 'Dados na nuvem' },
           { 'Critério': 'Controle local', 'Home Assistant': 'Completo', 'Amazon Alexa': 'Limitado', 'Google Home': 'Limitado' },
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '对比',
         content:
           '**Home Assistant 在隐私、本地控制和 AI 上领先；Alexa 和 Google 在易用和语音广度上领先。** 用下表把平台对应到你的优先事项。',
-        columns: ['标准', 'Home Assistant', 'Amazon Alexa', 'Google Home'],
+        columns: ['标准', '[Home Assistant](https://www.home-assistant.io)', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)'],
         rows: [
           { '标准': '隐私', 'Home Assistant': '最佳（本地）', 'Amazon Alexa': '云端数据', 'Google Home': '云端数据' },
           { '标准': '本地控制', 'Home Assistant': '完整', 'Amazon Alexa': '有限', 'Google Home': '有限' },

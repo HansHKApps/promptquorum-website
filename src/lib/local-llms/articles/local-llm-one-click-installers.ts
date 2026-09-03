@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Telemetry', 'Ollama': 'Opt-out available', 'LM Studio': 'Anonymous analytics', 'Jan AI': 'None', 'GPT4All': 'Opt-in only' },
             { 'Factor': 'Open source', 'Ollama': 'Yes (MIT)', 'LM Studio': 'No', 'Jan AI': 'Yes (MIT)', 'GPT4All': 'Yes (MIT)' },
           ],
-          columns: ['Factor', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['Factor', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -569,7 +569,7 @@ schema: {
             { 'Factor': 'Telemetría', 'Ollama': 'Desactivación disponible', 'LM Studio': 'Analítica anónima', 'Jan AI': 'Ninguna', 'GPT4All': 'Solo opt-in' },
             { 'Factor': 'Código abierto', 'Ollama': 'Sí (MIT)', 'LM Studio': 'No', 'Jan AI': 'Sí (MIT)', 'GPT4All': 'Sí (MIT)' },
           ],
-          columns: ['Factor', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['Factor', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -864,7 +864,7 @@ schema: {
             { 'العامل': 'القياس عن بُعد', 'Ollama': 'إلغاء متاح', 'LM Studio': 'تحليلات مجهولة', 'Jan AI': 'لا يوجد', 'GPT4All': 'بالاشتراك فقط' },
             { 'العامل': 'مفتوح المصدر', 'Ollama': 'نعم (MIT)', 'LM Studio': 'لا', 'Jan AI': 'نعم (MIT)', 'GPT4All': 'نعم (MIT)' },
           ],
-          columns: ['العامل', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['العامل', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -1252,7 +1252,7 @@ schema: {
             { 'Merkmal': 'Telemetrie', 'Ollama': 'Keine erfasst', 'LM Studio': 'Anonyme Analytik', 'Jan AI': 'Keine', 'GPT4All': 'Opt-in nur' },
             { 'Merkmal': 'Open Source', 'Ollama': 'Ja (MIT)', 'LM Studio': 'Nein', 'Jan AI': 'Ja (MIT)', 'GPT4All': 'Ja (MIT)' },
           ],
-          columns: ['Merkmal', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['Merkmal', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -1669,7 +1669,7 @@ schema: {
             { 'Critère': 'Télémétrie', 'Ollama': 'Aucune collectée', 'LM Studio': 'Analytique anonyme', 'Jan AI': 'Aucune', 'GPT4All': 'Opt-in seulement' },
             { 'Critère': 'Open source', 'Ollama': 'Oui (MIT)', 'LM Studio': 'Non', 'Jan AI': 'Oui (MIT)', 'GPT4All': 'Oui (MIT)' },
           ],
-          columns: ['Critère', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['Critère', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -2085,7 +2085,7 @@ schema: {
             { '比較項目': 'テレメトリ', 'Ollama': '収集なし', 'LM Studio': '匿名分析', 'Jan AI': 'なし', 'GPT4All': 'オプトインのみ' },
             { '比較項目': 'オープンソース', 'Ollama': 'はい（MIT）', 'LM Studio': 'いいえ', 'Jan AI': 'はい（MIT）', 'GPT4All': 'はい（MIT）' },
           ],
-          columns: ['比較項目', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['比較項目', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -2519,7 +2519,7 @@ schema: {
             { '对比项': '遥测', 'Ollama': '未收集', 'LM Studio': '匿名分析', 'Jan AI': '无', 'GPT4All': '仅选择加入' },
             { '对比项': '开源', 'Ollama': '是（MIT）', 'LM Studio': '否', 'Jan AI': '是（MIT）', 'GPT4All': '是（MIT）' },
           ],
-          columns: ['对比项', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['对比项', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',
@@ -3011,7 +3011,7 @@ schema: {
             { 'Factor': '텔레메트리', 'Ollama': '옵트아웃 가능', 'LM Studio': '익명 분석', 'Jan AI': '없음', 'GPT4All': '옵트인만 가능' },
             { 'Factor': '오픈 소스', 'Ollama': '예 (MIT)', 'LM Studio': '아니오', 'Jan AI': '예 (MIT)', 'GPT4All': '예 (MIT)' },
           ],
-          columns: ['Factor', 'Ollama', 'LM Studio', 'Jan AI', 'GPT4All'],
+          columns: ['Factor', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)', '[Jan AI](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         },
         llamaCpp: {
           id: 'raw-llama-cpp',

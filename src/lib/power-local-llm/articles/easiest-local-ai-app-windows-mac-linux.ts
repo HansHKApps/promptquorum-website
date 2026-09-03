@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'If you just want to start a local AI chat as quickly as possible: download LM Studio, open it, click Discover, type "Phi-4 Mini", download the model (~2.7 GB), click Chat, and start talking. That\'s the full setup. No terminal, no Python, no account. If LM Studio feels like too many options, try GPT4All — it has one window and a short list of pre-selected models.',
           },
         ],
-        columns: ['Feature', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['Feature', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'Feature': 'Setup time (first run)', 'LM Studio': '~8 minutes', 'Jan': '~10 minutes', 'GPT4All': '~5 minutes' },
           { 'Feature': 'Model library', 'LM Studio': 'Full Hugging Face GGUF + MLX search (~50,000+ models)', 'Jan': 'Curated + Hugging Face search', 'GPT4All': 'Curated list (~20 models, dated)' },
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wenn Sie so schnell wie möglich einen lokalen AI-Chat starten möchten: Laden Sie LM Studio herunter, öffnen Sie es, klicken Sie auf Discover, tippen Sie „Phi-4 Mini" ein, laden Sie das Modell herunter (~2,7 GB), klicken Sie auf Chat und legen Sie los. Das ist die komplette Einrichtung. Kein Terminal, kein Python, kein Konto. Wenn LM Studio zu viele Optionen hat, probieren Sie GPT4All — ein Fenster und eine kurze Liste vorausgewählter Modelle.',
           },
         ],
-        columns: ['Funktion', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['Funktion', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'Funktion': 'Installationszeit (erste Ausführung)', 'LM Studio': '~8 Minuten', 'Jan': '~10 Minuten', 'GPT4All': '~5 Minuten' },
           { 'Funktion': 'Modellbibliothek', 'LM Studio': 'Vollständige Hugging Face GGUF- + MLX-Suche (~50.000+ Modelle)', 'Jan': 'Kuratiert + Hugging Face-Suche', 'GPT4All': 'Kuratierte Liste (~20 Modelle, veraltet)' },
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Les trois options comparées',
         content:
           'Quelle est la meilleure application pour vous ? Cela dépend de votre système d\'exploitation, de votre matériel et de ce que vous valorisez — vitesse, interface utilisateur ou facilité d\'installation.',
-        columns: ['Critère', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['Critère', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'Critère': 'Idéal pour', 'LM Studio': 'Vitesse et flexibilité', 'Jan': 'Open-source et contrôle', 'GPT4All': 'Débutants absolus' },
           { 'Critère': 'Facilité d\'installation', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '3つのオプションを比較',
         content:
           '「どのアプリが最適？」はOS、ハードウェア、優先順位 — 速度、UI、またはインストール容易さ — に依存。3つすべてが複数モデルをダウンロード、切り替え可能。',
-        columns: ['基準', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['基準', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { '基準': '最適用途', 'LM Studio': '速度と柔軟性', 'Jan': 'オープンソースと制御', 'GPT4All': '完全初心者' },
           { '基準': 'インストール容易さ', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '3个应用对比',
         content:
           '哪个应用最适合你？取决于你的操作系统、硬件和重视什么 — 速度、UI或安装容易性。三者都允许下载多个模型并在它们之间切换。',
-        columns: ['标准', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['标准', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { '标准': '最适用', 'LM Studio': '速度和灵活性', 'Jan': '开源和控制', 'GPT4All': '完全初学者' },
           { '标准': '安装容易', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
@@ -2172,7 +2172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Si solo quieres iniciar un chat de IA local lo más rápido posible: descarga LM Studio, ábrelo, haz clic en Discover, escribe "Phi-4 Mini", descarga el modelo (~2,7 GB), haz clic en Chat y empieza a hablar. Esa es la configuración completa. Sin terminal, sin Python, sin cuenta. Si LM Studio te parece que tiene demasiadas opciones, prueba GPT4All — tiene una ventana y una lista corta de modelos preseleccionados.',
           },
         ],
-        columns: ['Característica', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['Característica', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'Característica': 'Tiempo de configuración (primera ejecución)', 'LM Studio': '~8 minutos', 'Jan': '~10 minutos', 'GPT4All': '~5 minutos' },
           { 'Característica': 'Biblioteca de modelos', 'LM Studio': 'Búsqueda GGUF + MLX completa de Hugging Face (~50.000+ modelos)', 'Jan': 'Seleccionados + búsqueda en Hugging Face', 'GPT4All': 'Lista seleccionada (~20 modelos, desactualizada)' },
@@ -2561,7 +2561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Se você só quer iniciar um chat de IA local o mais rápido possível: baixe o LM Studio, abra-o, clique em Discover, digite "Phi-4 Mini", baixe o modelo (~2,7 GB), clique em Chat e comece a conversar. Essa é a configuração completa. Sem terminal, sem Python, sem conta. Se o LM Studio parecer ter opções demais, experimente o GPT4All — ele tem uma janela e uma lista curta de modelos pré-selecionados.',
           },
         ],
-        columns: ['Recurso', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['Recurso', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'Recurso': 'Tempo de configuração (primeira execução)', 'LM Studio': '~8 minutos', 'Jan': '~10 minutos', 'GPT4All': '~5 minutos' },
           { 'Recurso': 'Biblioteca de modelos', 'LM Studio': 'Busca GGUF + MLX completa do Hugging Face (~50.000+ modelos)', 'Jan': 'Selecionados + busca no Hugging Face', 'GPT4All': 'Lista selecionada (~20 modelos, desatualizada)' },
@@ -2950,7 +2950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'إذا كنت تريد فقط بدء دردشة ذكاء اصطناعي محلية بأسرع وقت: نزّل تطبيق LM Studio، وافتحه، وانقر على Discover، واكتب "Phi-4 Mini"، ونزّل النموذج (حوالي 2.7 جيجابايت)، وانقر على Chat وابدأ الحديث. هذا هو الإعداد الكامل. بلا طرفية، بلا Python، بلا حساب. إذا بدا تطبيق LM Studio يحتوي على خيارات كثيرة جداً، جرّب GPT4All — له نافذة واحدة وقائمة قصيرة من النماذج المُحددة مسبقاً.',
           },
         ],
-        columns: ['الميزة', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['الميزة', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { 'الميزة': 'وقت الإعداد (التشغيل الأول)', 'LM Studio': '~8 دقائق', 'Jan': '~10 دقائق', 'GPT4All': '~5 دقائق' },
           { 'الميزة': 'مكتبة النماذج', 'LM Studio': 'بحث GGUF وMLX كامل في Hugging Face (أكثر من 50,000 نموذج)', 'Jan': 'نماذج منتقاة + بحث في Hugging Face', 'GPT4All': 'قائمة منتقاة (~20 نموذجاً، قديمة)' },
@@ -3339,7 +3339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '로컬 AI 채팅을 최대한 빠르게 시작하고 싶다면: LM Studio를 다운로드하고, 열고, Discover를 클릭하고, "Phi-4 Mini"를 입력하고, 모델을 다운로드(~2.7 GB)하고, Chat을 클릭하고 대화를 시작하십시오. 그것이 전체 설정입니다. 터미널, Python, 계정이 필요 없습니다. LM Studio에 옵션이 너무 많다고 느껴진다면 GPT4All을 시도하십시오 — 단일 창과 미리 선택된 짧은 모델 목록을 제공합니다.',
           },
         ],
-        columns: ['기능', 'LM Studio', 'Jan', 'GPT4All'],
+        columns: ['기능', '[LM Studio](https://lmstudio.ai)', '[Jan](https://jan.ai)', '[GPT4All](https://github.com/nomic-ai/gpt4all)'],
         rows: [
           { '기능': '설정 시간 (첫 실행)', 'LM Studio': '~8분', 'Jan': '~10분', 'GPT4All': '~5분' },
           { '기능': '모델 라이브러리', 'LM Studio': 'Hugging Face 전체 GGUF + MLX 검색 (~50,000+ 모델)', 'Jan': '선별된 모델 + Hugging Face 검색', 'GPT4All': '선별된 목록 (~20 모델, 오래됨)' },

@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**The three tools differ on every dimension that matters for team adoption: who uses them, how they integrate, what they cost, and what problems they solve.**',
         ],
-        columns: ['Feature', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['Feature', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             'Feature': 'Primary use case',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             'Kriterium': 'Primärer Anwendungsfall',
             'Was gemessen wird': 'Das zentrale Workflow-Problem, das das Tool löst',
-            'Warum es wichtig ist': 'Diese Tools lösen unterschiedliche Probleme — das falsche Tool zu kaufen verschwendet Budget und Einrichtungszeit',
+            'Warum es wichtig ist': 'Diese Tools lösen unterschiedliche Probleme — das falsche kostet Budget und Einrichtungszeit',
           },
           {
             'Kriterium': 'Integrationsmethode',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Die drei Tools unterscheiden sich in jeder Dimension, die für die Team-Einführung relevant ist: wer sie nutzt, wie sie integriert werden, was sie kosten und welche Probleme sie lösen.**',
         ],
-        columns: ['Merkmal', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['Merkmal', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             'Merkmal': 'Primärer Anwendungsfall',
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             'Criterio': 'Caso de uso principal',
             'Qué mide': 'El problema central del flujo de trabajo que resuelve la herramienta',
-            'Por qué importa': 'Estas herramientas resuelven problemas distintos — comprar la incorrecta desperdicia presupuesto y tiempo de configuración',
+            'Por qué importa': 'Estas herramientas resuelven problemas distintos — la incorrecta desperdicia presupuesto y tiempo',
           },
           {
             'Criterio': 'Método de integración',
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             'Criterio': 'Precios',
             'Qué mide': 'Límites del tier gratuito y costes iniciales de planes de pago',
-            'Por qué importa': 'Previsibilidad presupuestaria para equipos pequeños; los tiers gratuitos determinan cuándo se necesita actualizar a pago',
+            'Por qué importa': 'Previsibilidad presupuestaria para equipos pequeños; el tier gratuito marca cuándo pagar',
           },
         ],
       },
@@ -1022,7 +1022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Las tres herramientas difieren en cada dimensión que importa para la adopción del equipo: quién las usa, cómo se integran, cuánto cuestan y qué problemas resuelven.**',
         ],
-        columns: ['Característica', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['Característica', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             'Característica': 'Caso de uso principal',
@@ -1438,7 +1438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**تختلف الأدوات الثلاث في كل بُعد يهم لتبنّي الفريق: من يستخدمها، وكيف تتكامل، وكم تكلّف، وما المشاكل التي تحلها.**',
         ],
-        columns: ['الميزة', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['الميزة', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             'Característica': 'حالة الاستخدام الرئيسية',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Critério': 'Método de integração', 'O que mede': 'SDK wrapper, biblioteca Python ou interface web', 'Por que importa': 'Determina quem na equipe pode usá-la e quanta configuração é necessária' },
           { 'Critério': 'Suporte a provedor LLM', 'O que mede': 'Quais modelos e APIs são suportados nativamente', 'Por que importa': 'Equipes que trocam de provedor ou usam múltiplos modelos precisam de suporte amplo' },
           { 'Critério': 'Observabilidade', 'O que mede': 'Se a ferramenta registra, rastreia custos e mostra erros em produção', 'Por que importa': 'Depuração em produção e controle de custos requerem visibilidade em tempo real das chamadas LLM' },
-          { 'Critério': 'Preços', 'O que mede': 'Limites do nível gratuito e custos iniciais de planos pagos', 'Por que importa': 'Previsibilidade orçamentária para equipes pequenas; os níveis gratuitos determinam quando é necessário atualizar' },
+          { 'Critério': 'Preços', 'O que mede': 'Limites do nível gratuito e custos iniciais de planos pagos', 'Por que importa': 'Previsibilidade orçamentária para equipes pequenas; o nível gratuito indica quando pagar' },
         ],
       },
       promptlayer: {
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**As três ferramentas diferem em cada dimensão que importa para a adoção da equipe: quem as usa, como se integram, quanto custam e quais problemas resolvem.**',
         ],
-        columns: ['Característica', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['Característica', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           { 'Característica': 'Caso de uso principal', 'PromptLayer': 'Observabilidade em produção', 'Mirascope': 'Desenvolvimento de apps Python', 'PromptPerfect': 'Reescrita de prompts' },
           { 'Característica': 'Método de integração', 'PromptLayer': 'SDK wrapper (Python, Node.js)', 'Mirascope': 'Biblioteca Python', 'PromptPerfect': 'Interface web + API' },
@@ -2075,7 +2075,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             'Critère': 'Tarification',
             'Ce qui est mesuré': 'Limites du plan gratuit et coût de départ des plans payants',
-            'Pourquoi c\'est important': 'Prévisibilité budgétaire pour les petites équipes ; les plans gratuits déterminent le moment de la mise à niveau',
+            'Pourquoi c\'est important': 'Prévisibilité budgétaire pour les petites équipes ; le plan gratuit indique quand payer',
           },
         ],
       },
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Les trois outils diffèrent sur chaque dimension pertinente pour l\'adoption par une équipe : qui les utilise, comment ils s\'intègrent, ce qu\'ils coûtent et quels problèmes ils résolvent.**',
         ],
-        columns: ['Caractéristique', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['Caractéristique', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             'Caractéristique': 'Cas d\'usage principal',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**3つのツールはチーム導入の観点で重要なあらゆる軸で異なります：誰が使うか、どう統合するか、いくらかかるか、どの問題を解決するか。**',
         ],
-        columns: ['特徴', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['特徴', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             '特徴': '主要ユースケース',
@@ -2973,7 +2973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**三款工具在团队采用的每个关键维度上都存在差异：使用者、集成方式、成本以及解决的问题。**',
         ],
-        columns: ['特征', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['特征', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             '特征': '主要用途',
@@ -3377,7 +3377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**세 가지 도구는 팀 도입에 중요한 모든 차원에서 차이가 있습니다: 사용자, 통합 방법, 비용, 해결하는 문제.**',
         ],
-        columns: ['기능', 'PromptLayer', 'Mirascope', 'PromptPerfect'],
+        columns: ['기능', '[PromptLayer](https://www.promptlayer.com)', '[Mirascope](https://mirascope.com)', '[PromptPerfect](https://promptperfect.jina.ai)'],
         rows: [
           {
             '기능': '주요 사용 사례',

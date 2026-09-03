@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Three free tools, the same local model, three completely different workflows. Continue.dev feels like Copilot — tab to accept suggestions inside your editor. Cline feels like a junior developer you supervise — it plans and edits across files while you approve each step. Aider feels like pair-programming in the terminal — you talk, it commits. Try the one that matches how you already work.',
           },
         ],
-        columns: ['Feature', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['Feature', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'Feature': 'Primary surface',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Drei kostenlose Tools, dasselbe lokale Modell, drei völlig verschiedene Workflows. Continue.dev fühlt sich wie Copilot an — Tab zum Akzeptieren von Vorschlägen in Ihrem Editor. Cline fühlt sich wie ein Junior-Entwickler an, den Sie überwachen — es plant und bearbeitet dateienübergreifend, während Sie jeden Schritt genehmigen. Aider fühlt sich wie Pair-Programming im Terminal an — Sie sprechen, es committed. Probieren Sie denjenigen aus, der zu Ihrer aktuellen Arbeitsweise passt.',
           },
         ],
-        columns: ['Funktion', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['Funktion', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'Funktion': 'Primäre Oberfläche',
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Trois outils gratuits, le même modèle local, trois flux de travail complètement différents. Continue.dev se sent comme Copilot — appuyez sur Tab pour accepter les suggestions dans votre éditeur. Cline se sent comme un développeur junior que vous supervisez — il planifie et édite entre les fichiers pendant que vous approuvez chaque étape. Aider se sent comme faire la paire dans le terminal — vous parlez, il commite. Essayez celui qui correspond à la façon dont vous travaillez déjà.",
           },
         ],
-        columns: ['Fonctionnalité', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['Fonctionnalité', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'Fonctionnalité': 'Surface primaire',
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '3 つの無料ツール、同じローカルモデル、3 つのまったく異なるワークフロー。Continue.dev は Copilot のように感じます。エディタで提案を受け入れるには Tab キー。Cline は監督する後輩開発者のように感じます。各ステップを承認しながら計画と編集を行います。Aider はターミナルでペアプログラミングのように感じます。話すとコミットします。既存の作業方法に合うものを試してください。',
           },
         ],
-        columns: ['機能', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['機能', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             '機能': 'プライマリサーフェス',
@@ -2135,7 +2135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '三个免费工具，相同的本地模型，三个完全不同的工作流。Continue.dev 感觉像 Copilot — 在您的编辑器中按 Tab 接受建议。Cline 感觉像一个您监督的初级开发者 — 在您批准每个步骤时跨文件计划和编辑。Aider 感觉像在终端中进行对工作 — 您说话，它提交。尝试与您已有的工作方式相匹配的那个。',
           },
         ],
-        columns: ['功能', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['功能', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             '功能': '主要表面',
@@ -2636,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Tres herramientas gratuitas, el mismo modelo local, tres flujos de trabajo completamente distintos. Continue.dev se siente como Copilot — Tab para aceptar sugerencias dentro de tu editor. Cline se siente como un desarrollador junior que supervisas — planifica y edita entre archivos mientras apruebas cada paso. Aider se siente como programación en pareja en el terminal — tú hablas, él hace commit. Prueba el que coincida con cómo ya trabajas.',
           },
         ],
-        columns: ['Característica', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['Característica', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'Característica': 'Superficie principal',
@@ -3151,7 +3151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Três ferramentas gratuitas, o mesmo modelo local, três fluxos de trabalho completamente distintos. O Continue.dev parece o Copilot — Tab para aceitar sugestões dentro do seu editor. O Cline parece um desenvolvedor júnior que você supervisiona — ele planeja e edita entre arquivos enquanto você aprova cada etapa. O Aider parece programação em par no terminal — você fala, ele faz commit. Experimente o que combina com como você já trabalha.',
           },
         ],
-        columns: ['Característica', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['Característica', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'Característica': 'Superfície principal',
@@ -3666,7 +3666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ثلاث أدوات مجانية، نفس النموذج المحلي، ثلاثة سير عمل مختلفة تماماً. يشعرك Continue.dev بـCopilot — Tab لقبول الاقتراحات داخل محررك. يشعرك Cline بمطور مبتدئ تشرف عليه — يخطط ويحرر بين الملفات بينما توافق كل خطوة. يشعرك Aider بالبرمجة الثنائية في الطرفية — تتحدث وهو يودّع. جرّب ما يتطابق مع طريقة عملك الحالية.',
           },
         ],
-        columns: ['الميزة', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['الميزة', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             'الميزة': 'السطح الرئيسي',
@@ -4181,7 +4181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '세 가지 무료 도구, 동일한 로컬 모델, 세 가지 완전히 다른 워크플로우. Continue.dev는 Copilot처럼 느껴집니다 — Tab을 눌러 편집기 내 제안을 수락합니다. Cline은 감독하는 주니어 개발자처럼 느껴집니다 — 각 단계를 승인하는 동안 파일 간에 계획하고 편집합니다. Aider는 터미널에서의 페어 프로그래밍처럼 느껴집니다 — 대화하면 커밋합니다. 이미 작업하는 방식과 일치하는 것을 시도해 보십시오.',
           },
         ],
-        columns: ['기능', 'Continue.dev', 'Cline', 'Aider'],
+        columns: ['기능', '[Continue.dev](https://continue.dev)', '[Cline](https://cline.bot)', '[Aider](https://aider.chat)'],
         rows: [
           {
             '기능': '주요 인터페이스',

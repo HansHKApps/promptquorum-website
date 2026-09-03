@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**No framework wins across the board: LangGraph takes control, CrewAI takes speed, Microsoft Agent Framework takes the Azure stack, n8n takes accessibility.** Star counts, licences and activity were read from the GitHub API on 28 August 2026; prices come from each vendor\'s own pricing page the same day.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterion', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['Criterion', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { Criterion: 'GitHub stars', LangGraph: '40.6k', CrewAI: '57.7k', 'MS Agent Framework': '13.2k', n8n: '202.7k' },
           { Criterion: 'Licence', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Kein Framework gewinnt auf ganzer Linie: LangGraph nimmt die Kontrolle, CrewAI das Tempo, Microsoft Agent Framework den Azure-Stack, n8n die Zugänglichkeit.** Sternzahlen, Lizenzen und Aktivität stammen aus der GitHub-API vom 28. August 2026; die Preise von den Preisseiten der Anbieter vom selben Tag.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Kriterium', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['Kriterium', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { Kriterium: 'GitHub-Sterne', LangGraph: '40,6k', CrewAI: '57,7k', 'MS Agent Framework': '13,2k', n8n: '202,7k' },
           { Kriterium: 'Lizenz', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Ningún framework gana en todo: LangGraph se lleva el control, CrewAI la velocidad, Microsoft Agent Framework el stack de Azure y n8n la accesibilidad.** Las estrellas, licencias y actividad se leyeron de la API de GitHub el 28 de agosto de 2026; los precios, de las páginas de cada proveedor ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['Criterio', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { Criterio: 'Estrellas en GitHub', LangGraph: '40,6k', CrewAI: '57,7k', 'MS Agent Framework': '13,2k', n8n: '202,7k' },
           { Criterio: 'Licencia', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -2012,7 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Aucun framework ne gagne partout : LangGraph prend le controle, CrewAI la vitesse, Microsoft Agent Framework la pile Azure, n8n l\'accessibilite.** Etoiles, licences et activite ont ete relevees via l\'API GitHub le 28 aout 2026 ; les tarifs proviennent des pages officielles des editeurs le meme jour.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critere', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['Critere', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { Critere: 'Etoiles GitHub', LangGraph: '40,6k', CrewAI: '57,7k', 'MS Agent Framework': '13,2k', n8n: '202,7k' },
           { Critere: 'Licence', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -2635,7 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Nenhum framework vence em tudo: LangGraph leva o controle, CrewAI a velocidade, Microsoft Agent Framework a pilha Azure e n8n a acessibilidade.** Estrelas, licencas e atividade foram lidas da API do GitHub em 28 de agosto de 2026; os precos vieram das paginas oficiais de cada fornecedor no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['Criterio', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { Criterio: 'Estrelas no GitHub', LangGraph: '40,6 mil', CrewAI: '57,7 mil', 'MS Agent Framework': '13,2 mil', n8n: '202,7 mil' },
           { Criterio: 'Licenca', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -3183,7 +3183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**すべてで勝つ基盤はありません。制御はLangGraph、速さはCrewAI、AzureスタックはMicrosoft Agent Framework、間口の広さはn8nです。** スター数・ライセンス・活動状況は2026年8月28日にGitHub APIから、料金は同日に各社の公式料金ページから取得しました。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['評価軸', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['評価軸', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { 評価軸: 'GitHubスター', LangGraph: '4.06万', CrewAI: '5.77万', 'MS Agent Framework': '1.32万', n8n: '20.27万' },
           { 評価軸: 'ライセンス', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -3800,7 +3800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**没有哪个框架全面胜出：LangGraph 赢在控制力，CrewAI 赢在速度，Microsoft Agent Framework 赢在 Azure 生态，n8n 赢在门槛。** 星标、许可证与活跃度于 2026 年 8 月 28 日读取自 GitHub API；价格取自同日各厂商自己的定价页。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['评估维度', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['评估维度', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { 评估维度: 'GitHub 星标', LangGraph: '4.06 万', CrewAI: '5.77 万', 'MS Agent Framework': '1.32 万', n8n: '20.27 万' },
           { 评估维度: '许可证', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -4423,7 +4423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**لا إطار يفوز في كل شيء: LangGraph يأخذ التحكم، وCrewAI السرعة، وMicrosoft Agent Framework حزمة Azure، وn8n سهولة الوصول.** قُرئت النجوم والتراخيص ومؤشرات النشاط من واجهة GitHub البرمجية في 28 أغسطس 2026، والأسعار من صفحات المزوّدين الرسمية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المعيار', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['المعيار', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { المعيار: 'نجوم GitHub', LangGraph: '40.6 ألف', CrewAI: '57.7 ألف', 'MS Agent Framework': '13.2 ألف', n8n: '202.7 ألف' },
           { المعيار: 'الرخصة', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },
@@ -4968,7 +4968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**모든 항목에서 이기는 프레임워크는 없습니다. 통제력은 LangGraph, 속도는 CrewAI, Azure 스택은 Microsoft Agent Framework, 접근성은 n8n입니다.** 별 개수와 라이선스, 활동 상태는 2026년 8월 28일 GitHub API에서, 가격은 같은 날 각 업체의 공식 가격 페이지에서 확인했습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['평가 항목', 'LangGraph', 'CrewAI', 'MS Agent Framework', 'n8n'],
+        columns: ['평가 항목', '[LangGraph](https://github.com/langchain-ai/langgraph)', '[CrewAI](https://www.crewai.com)', '[MS Agent Framework](https://github.com/microsoft/agent-framework)', '[n8n](https://n8n.io)'],
         rows: [
           { '평가 항목': 'GitHub 별', LangGraph: '4.06만', CrewAI: '5.77만', 'MS Agent Framework': '1.32만', n8n: '20.27만' },
           { '평가 항목': '라이선스', LangGraph: 'MIT', CrewAI: 'MIT', 'MS Agent Framework': 'MIT', n8n: 'Sustainable Use' },

@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: What Is the Difference?',
         content: '**Msty Go and Msty are two different products from the same company, not two names for the same app.** Msty ([msty.app](https://msty.app)) is the original desktop chat client — a conversational interface for talking to local or cloud models. Msty Go is a newer, more agentic product built specifically for autonomous, multi-step task automation rather than chat.',
-        columns: ['Aspect', 'Msty', 'Msty Go'],
+        columns: ['Aspect', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'Aspect': 'Product type', 'Msty': 'Desktop chat client', 'Msty Go': 'Task-automation agent' },
           { 'Aspect': 'Primary interaction', 'Msty': 'Conversational, turn-by-turn chat', 'Msty Go': 'Goal-driven autonomous task execution' },
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: Was ist der Unterschied?',
         content: '**Msty Go und Msty sind zwei verschiedene Produkte desselben Unternehmens, nicht zwei Namen für dieselbe App.** Msty ([msty.app](https://msty.app)) ist der ursprüngliche Desktop-Chat-Client — eine Gesprächsoberfläche für lokale oder Cloud-Modelle. Msty Go ist ein neueres, agentischeres Produkt, das speziell für autonome, mehrstufige Aufgabenautomatisierung statt Chat gebaut wurde.',
-        columns: ['Aspekt', 'Msty', 'Msty Go'],
+        columns: ['Aspekt', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'Aspekt': 'Produkttyp', 'Msty': 'Desktop-Chat-Client', 'Msty Go': 'Aufgabenautomatisierungs-Agent' },
           { 'Aspekt': 'Primäre Interaktion', 'Msty': 'Dialogbasierter Chat', 'Msty Go': 'Zielgetriebene autonome Ausführung' },
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty : quelle différence ?',
         content: '**Msty Go et Msty sont deux produits différents de la même entreprise, pas deux noms pour la même application.** Msty ([msty.app](https://msty.app)) est le client de chat de bureau d\'origine — une interface conversationnelle pour dialoguer avec des modèles locaux ou cloud. Msty Go est un produit plus récent et plus agentique, conçu spécifiquement pour l\'automatisation de tâches autonomes multi-étapes plutôt que pour le chat.',
-        columns: ['Aspect', 'Msty', 'Msty Go'],
+        columns: ['Aspect', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'Aspect': 'Type de produit', 'Msty': 'Client de chat de bureau', 'Msty Go': 'Agent d\'automatisation de tâches' },
           { 'Aspect': 'Interaction principale', 'Msty': 'Chat conversationnel', 'Msty Go': 'Exécution autonome pilotée par objectif' },
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go対Msty：違いは何ですか',
         content: '**Msty GoとMstyは同じ会社の2つの異なる製品であり、同じアプリの2つの名前ではありません。** Msty（msty.app）は元々のデスクトップチャットクライアントで、ローカルまたはクラウドモデルと対話するための会話型インターフェースです。Msty Goは、チャットではなく自律的でマルチステップのタスク自動化のために特別に作られた、より新しくエージェント色の強い製品です。',
-        columns: ['項目', 'Msty', 'Msty Go'],
+        columns: ['項目', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { '項目': '製品タイプ', 'Msty': 'デスクトップチャットクライアント', 'Msty Go': 'タスク自動化エージェント' },
           { '項目': '主な操作方法', 'Msty': '対話型のターンベースチャット', 'Msty Go': '目標駆動型の自律タスク実行' },
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go对比Msty：有什么区别？',
         content: '**Msty Go和Msty是同一家公司的两款不同产品,而不是同一款应用的两个名字。** Msty（msty.app）是最初的桌面聊天客户端——用于与本地或云端模型对话的会话界面。Msty Go则是一款更新、更具代理性的产品,专为自主的多步骤任务自动化而设计,而非聊天。',
-        columns: ['方面', 'Msty', 'Msty Go'],
+        columns: ['方面', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { '方面': '产品类型', 'Msty': '桌面聊天客户端', 'Msty Go': '任务自动化代理' },
           { '方面': '主要交互方式', 'Msty': '对话式、逐轮聊天', 'Msty Go': '目标驱动的自主任务执行' },
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: ¿cuál es la diferencia?',
         content: '**Msty Go y Msty son dos productos diferentes de la misma empresa, no dos nombres para la misma app.** Msty ([msty.app](https://msty.app)) es el cliente de chat de escritorio original: una interfaz conversacional para hablar con modelos locales o en la nube. Msty Go es un producto más reciente y más agéntico, creado específicamente para la automatización autónoma de tareas de varios pasos en lugar de para el chat.',
-        columns: ['Aspecto', 'Msty', 'Msty Go'],
+        columns: ['Aspecto', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'Aspecto': 'Tipo de producto', 'Msty': 'Cliente de chat de escritorio', 'Msty Go': 'Agente de automatización de tareas' },
           { 'Aspecto': 'Interacción principal', 'Msty': 'Chat conversacional por turnos', 'Msty Go': 'Ejecución autónoma orientada a objetivos' },
@@ -1631,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go vs. Msty: qual é a diferença?',
         content: '**O Msty Go e o Msty são dois produtos diferentes da mesma empresa, não dois nomes para o mesmo app.** O Msty ([msty.app](https://msty.app)) é o cliente de chat para desktop original — uma interface conversacional para falar com modelos locais ou na nuvem. O Msty Go é um produto mais recente e mais agêntico, criado especificamente para automação de tarefas autônomas de várias etapas, em vez de chat.',
-        columns: ['Aspecto', 'Msty', 'Msty Go'],
+        columns: ['Aspecto', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'Aspecto': 'Tipo de produto', 'Msty': 'Cliente de chat para desktop', 'Msty Go': 'Agente de automação de tarefas' },
           { 'Aspecto': 'Interação principal', 'Msty': 'Chat conversacional por turnos', 'Msty Go': 'Execução autônoma orientada a objetivos' },
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go مقابل Msty: ما الفرق؟',
         content: '**Msty Go وMsty منتجان مختلفان من نفس الشركة، وليسا اسمين لنفس التطبيق.** Msty ([msty.app](https://msty.app)) هو عميل المحادثة الأصلي لسطح المكتب — واجهة حوارية للتواصل مع نماذج محلية أو سحابية. أما Msty Go فهو منتج أحدث وأكثر اعتمادًا على الوكلاء، صُمم خصيصًا لأتمتة المهام المستقلة متعددة الخطوات بدلًا من المحادثة.',
-        columns: ['الجانب', 'Msty', 'Msty Go'],
+        columns: ['الجانب', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { 'الجانب': 'نوع المنتج', 'Msty': 'عميل محادثة لسطح المكتب', 'Msty Go': 'وكيل أتمتة مهام' },
           { 'الجانب': 'التفاعل الأساسي', 'Msty': 'محادثة حوارية بالتناوب', 'Msty Go': 'تنفيذ مستقل موجّه نحو الهدف' },
@@ -2143,7 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'msty-go-vs-msty',
         title: 'Msty Go 대 Msty: 차이점은 무엇입니까?',
         content: '**Msty Go와 Msty는 같은 회사의 서로 다른 두 제품이며, 같은 앱의 두 가지 이름이 아닙니다.** Msty([msty.app](https://msty.app))는 원래의 데스크톱 채팅 클라이언트로, 로컬 또는 클라우드 모델과 대화하기 위한 대화형 인터페이스입니다. Msty Go는 채팅이 아니라 자율적인 다단계 작업 자동화를 위해 특별히 만들어진, 더 최신이고 에이전트적인 제품입니다.',
-        columns: ['항목', 'Msty', 'Msty Go'],
+        columns: ['항목', '[Msty](https://msty.ai)', '[Msty Go](https://msty.ai)'],
         rows: [
           { '항목': '제품 유형', 'Msty': '데스크톱 채팅 클라이언트', 'Msty Go': '작업 자동화 에이전트' },
           { '항목': '주요 상호작용', 'Msty': '대화형, 턴 기반 채팅', 'Msty Go': '목표 중심의 자율 작업 실행' },

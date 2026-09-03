@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Each of these optimises a different constraint — footprint, operational simplicity, retrieval quality, or time-to-first-query — rather than competing feature for feature.** Pricing was read from each vendor pricing page on 28 August 2026, and repository figures come from the GitHub API the same day.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterion', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['Criterion', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { Criterion: 'GitHub stars', Qdrant: '34,242', Pinecone: 'Not open source', Weaviate: '16,758', Chroma: '29,174' },
           { Criterion: 'License', Qdrant: 'Apache-2.0', Pinecone: 'Proprietary', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Jede dieser Engines optimiert eine andere Beschränkung — Ressourcenbedarf, Betriebseinfachheit, Trefferqualität oder Zeit bis zur ersten Abfrage — statt Funktion gegen Funktion anzutreten.** Die Preise stammen von den Preisseiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Kriterium', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['Kriterium', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { Kriterium: 'GitHub-Sterne', Qdrant: '34.242', Pinecone: 'Nicht quelloffen', Weaviate: '16.758', Chroma: '29.174' },
           { Kriterium: 'Lizenz', Qdrant: 'Apache-2.0', Pinecone: 'Proprietär', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cada uno optimiza una restricción distinta —consumo, simplicidad operativa, calidad de recuperación o tiempo hasta la primera consulta— en lugar de competir función por función.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio proceden de la API de GitHub ese mismo día.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Criterio', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['Criterio', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { Criterio: 'Estrellas en GitHub', Qdrant: '34.242', Pinecone: 'No es código abierto', Weaviate: '16.758', Chroma: '29.174' },
           { Criterio: 'Licencia', Qdrant: 'Apache-2.0', Pinecone: 'Propietaria', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -1897,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Chacun optimise une contrainte differente — empreinte, simplicite d exploitation, qualite de recherche ou delai avant la premiere requete — plutot que de rivaliser fonctionnalite par fonctionnalite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots proviennent de l API GitHub le meme jour.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critere', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['Critere', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { Critere: 'Etoiles GitHub', Qdrant: '34 242', Pinecone: 'Non open source', Weaviate: '16 758', Chroma: '29 174' },
           { Critere: 'Licence', Qdrant: 'Apache-2.0', Pinecone: 'Proprietaire', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -2485,7 +2485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cada um otimiza uma restrição diferente — consumo, simplicidade operacional, qualidade da recuperação ou tempo até a primeira consulta — em vez de competir recurso a recurso.** Os preços foram lidos nas páginas de cada fornecedor em 28 de agosto de 2026, e os números dos repositórios vieram da API do GitHub no mesmo dia.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Critério', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['Critério', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { Critério: 'Estrelas no GitHub', Qdrant: '34.242', Pinecone: 'Não é código aberto', Weaviate: '16.758', Chroma: '29.174' },
           { Critério: 'Licença', Qdrant: 'Apache-2.0', Pinecone: 'Proprietária', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -3050,7 +3050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**4製品は機能を正面から競うのではなく、リソース消費、運用の簡単さ、取得の質、最初のクエリまでの速さという別々の制約を最適化しています。** 料金は2026年8月28日に各社の料金ページで確認し、リポジトリの数値は同日にGitHub APIから取得しました。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['項目', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['項目', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { 項目: 'GitHubスター', Qdrant: '34,242', Pinecone: 'オープンソースではない', Weaviate: '16,758', Chroma: '29,174' },
           { 項目: 'ライセンス', Qdrant: 'Apache-2.0', Pinecone: 'プロプライエタリ', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -3638,7 +3638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**四者优化的是不同的约束——资源占用、运维简单度、检索质量或首次查询的时间——而不是逐项功能对拼。** 价格于 2026 年 8 月 28 日从各厂商定价页读取，仓库数据同日取自 GitHub API。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['维度', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['维度', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { 维度: 'GitHub 星标', Qdrant: '34,242', Pinecone: '非开源', Weaviate: '16,758', Chroma: '29,174' },
           { 维度: '许可证', Qdrant: 'Apache-2.0', Pinecone: '专有', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -4226,7 +4226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**كل واحد منها يُحسّن قيدًا مختلفًا — الاستهلاك، أو بساطة التشغيل، أو جودة الاسترجاع، أو الزمن حتى أول استعلام — بدل التنافس ميزةً بميزة.** قُرئت الأسعار من صفحات كل مزوّد في 28 أغسطس 2026، وجاءت أرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['المعيار', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['المعيار', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { المعيار: 'نجوم GitHub', Qdrant: '34,242', Pinecone: 'ليس مفتوح المصدر', Weaviate: '16,758', Chroma: '29,174' },
           { المعيار: 'الرخصة', Qdrant: 'Apache-2.0', Pinecone: 'مغلقة المصدر', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },
@@ -4791,7 +4791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**넷은 기능을 정면으로 겨루기보다 리소스 사용량, 운영의 단순함, 검색 품질, 첫 질의까지의 시간이라는 서로 다른 제약을 최적화합니다.** 가격은 2026년 8월 28일 각 사 요금 페이지에서 확인했고, 저장소 수치는 같은 날 GitHub API에서 가져왔습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['항목', 'Qdrant', 'Pinecone', 'Weaviate', 'Chroma'],
+        columns: ['항목', '[Qdrant](https://qdrant.tech)', '[Pinecone](https://www.pinecone.io)', '[Weaviate](https://weaviate.io)', '[Chroma](https://www.trychroma.com)'],
         rows: [
           { 항목: 'GitHub 스타', Qdrant: '34,242', Pinecone: '오픈소스 아님', Weaviate: '16,758', Chroma: '29,174' },
           { 항목: '라이선스', Qdrant: 'Apache-2.0', Pinecone: '독점', Weaviate: 'BSD-3-Clause', Chroma: 'Apache-2.0' },

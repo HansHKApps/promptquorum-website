@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Head-to-Head Comparison',
         tableFormat: true,
-        columns: ['Feature', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Feature', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Feature': 'Setup time', 'Ollama': '2 min', 'MLX': '5 min', 'llama.cpp': '10 min' },
           { 'Feature': 'Metal GPU', 'Ollama': 'Automatic', 'MLX': 'Native', 'llama.cpp': 'Supported' },
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks: Same Model, Three Frameworks, M5 Pro 64GB',
         tableFormat: true,
-        columns: ['Model', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['Model', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Model': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'Model': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'Memory Usage: Same Model, Three Frameworks (M5 Pro 64GB)',
         tableFormat: true,
-        columns: ['Model', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['Model', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Model': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 GB', 'MLX RAM': '4.8 GB', 'llama.cpp RAM': '5.0 GB' },
           { 'Model': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -395,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Direktvergleich',
         tableFormat: true,
-        columns: ['Eigenschaft', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Eigenschaft', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Eigenschaft': 'Setup-Zeit', 'Ollama': '2 Min.', 'MLX': '5 Min.', 'llama.cpp': '10 Min.' },
           { 'Eigenschaft': 'Metal GPU', 'Ollama': 'Automatisch', 'MLX': 'Nativ', 'llama.cpp': 'Unterstützt' },
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks: Gleiches Modell, drei Frameworks, M5 Pro 64 GB',
         tableFormat: true,
-        columns: ['Modell', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['Modell', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modell': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'Modell': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'Speichernutzung: Gleiches Modell, drei Frameworks (M5 Pro 64 GB)',
         tableFormat: true,
-        columns: ['Modell', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['Modell', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modell': 'Llama 3.1 8B Q4', 'Ollama RAM': '5,2 GB', 'MLX RAM': '4,8 GB', 'llama.cpp RAM': '5,0 GB' },
           { 'Modell': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison directe',
         tableFormat: true,
-        columns: ['Fonctionnalité', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Fonctionnalité', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Fonctionnalité': "Temps d'installation", 'Ollama': '2 min', 'MLX': '5 min', 'llama.cpp': '10 min' },
           { 'Fonctionnalité': 'Metal GPU', 'Ollama': 'Automatique', 'MLX': 'Natif', 'llama.cpp': 'Supporté' },
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks : même modèle, trois frameworks, M5 Pro 64 Go',
         tableFormat: true,
-        columns: ['Modèle', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['Modèle', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modèle': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'Modèle': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'Utilisation mémoire : même modèle, trois frameworks (M5 Pro 64 Go)',
         tableFormat: true,
-        columns: ['Modèle', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['Modèle', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modèle': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 Go', 'MLX RAM': '4.8 Go', 'llama.cpp RAM': '5.0 Go' },
           { 'Modèle': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 Go', 'MLX RAM': '41 Go', 'llama.cpp RAM': '42 Go' },
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '直接比較',
         tableFormat: true,
-        columns: ['機能', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['機能', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '機能': 'セットアップ時間', 'Ollama': '2分', 'MLX': '5分', 'llama.cpp': '10分' },
           { '機能': 'Metal GPU', 'Ollama': '自動', 'MLX': 'ネイティブ', 'llama.cpp': 'サポート済み' },
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'ベンチマーク：同一モデル、3フレームワーク、M5 Pro 64GB',
         tableFormat: true,
-        columns: ['モデル', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['モデル', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'モデル': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'モデル': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'メモリ使用量：同一モデル、3フレームワーク（M5 Pro 64GB）',
         tableFormat: true,
-        columns: ['モデル', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['モデル', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'モデル': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 GB', 'MLX RAM': '4.8 GB', 'llama.cpp RAM': '5.0 GB' },
           { 'モデル': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '直接对比',
         tableFormat: true,
-        columns: ['功能', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['功能', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '功能': '安装时间', 'Ollama': '2分钟', 'MLX': '5分钟', 'llama.cpp': '10分钟' },
           { '功能': 'Metal GPU', 'Ollama': '自动', 'MLX': '原生', 'llama.cpp': '支持' },
@@ -1486,7 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: '基准测试：相同模型，三个框架，M5 Pro 64GB',
         tableFormat: true,
-        columns: ['模型', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['模型', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '模型': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { '模型': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: '内存使用：相同模型，三个框架（M5 Pro 64GB）',
         tableFormat: true,
-        columns: ['模型', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['模型', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '模型': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 GB', 'MLX RAM': '4.8 GB', 'llama.cpp RAM': '5.0 GB' },
           { '模型': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparativa directa',
         tableFormat: true,
-        columns: ['Característica', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Característica', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Característica': 'Tiempo de configuración', 'Ollama': '2 min', 'MLX': '5 min', 'llama.cpp': '10 min' },
           { 'Característica': 'Metal GPU', 'Ollama': 'Automático', 'MLX': 'Nativo', 'llama.cpp': 'Compatible' },
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'Benchmarks: mismo modelo, tres frameworks, M5 Pro 64 GB',
         tableFormat: true,
-        columns: ['Modelo', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['Modelo', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modelo': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'Modelo': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'Uso de memoria: mismo modelo, tres frameworks (M5 Pro 64 GB)',
         tableFormat: true,
-        columns: ['Modelo', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['Modelo', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modelo': 'Llama 3.1 8B Q4', 'Ollama RAM': '5,2 GB', 'MLX RAM': '4,8 GB', 'llama.cpp RAM': '5,0 GB' },
           { 'Modelo': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'مقارنة مباشرة',
         tableFormat: true,
-        columns: ['الخاصية', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['الخاصية', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'الخاصية': 'وقت الإعداد', 'Ollama': '2 دقيقة', 'MLX': '5 دقائق', 'llama.cpp': '10 دقائق' },
           { 'الخاصية': 'Metal GPU', 'Ollama': 'تلقائي', 'MLX': 'أصلي', 'llama.cpp': 'مدعوم' },
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: 'اختبارات الأداء: نفس النموذج، ثلاثة أطر عمل، M5 Pro 64 GB',
         tableFormat: true,
-        columns: ['النموذج', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['النموذج', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'النموذج': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { 'النموذج': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -2128,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: 'استخدام الذاكرة: نفس النموذج، ثلاثة أطر عمل (M5 Pro 64 GB)',
         tableFormat: true,
-        columns: ['النموذج', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['النموذج', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'النموذج': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 GB', 'MLX RAM': '4.8 GB', 'llama.cpp RAM': '5.0 GB' },
           { 'النموذج': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
@@ -2296,7 +2296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comparativo direto: Ollama vs MLX vs llama.cpp',
-        columns: ['Recurso', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Recurso', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Recurso': 'Tempo de instalação', 'Ollama': '2 min (GUI)', 'MLX': '5 min (pip)', 'llama.cpp': '10 min (compilação)' },
           { 'Recurso': 'Velocidade no Apple Silicon', 'Ollama': 'Base', 'MLX': '+15–25%', 'llama.cpp': '+5–10%' },
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks e uso de memória no M5 Pro 64GB',
-        columns: ['Modelo', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['Modelo', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { 'Modelo': 'Llama 3.1 8B Q4', 'Ollama': '48–52 tok/s', 'MLX': '58–62 tok/s', 'llama.cpp': '50–55 tok/s' },
           { 'Modelo': 'Llama 3.3 70B Q4', 'Ollama': '8–10 tok/s', 'MLX': '11–13 tok/s', 'llama.cpp': '9–11 tok/s' },
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '1:1 비교',
         tableFormat: true,
-        columns: ['기능', 'Ollama', 'MLX', 'llama.cpp'],
+        columns: ['기능', '[Ollama](https://ollama.com)', '[MLX](https://github.com/ml-explore/mlx)', '[llama.cpp](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '기능': '설치 시간', 'Ollama': '2분', 'MLX': '5분', 'llama.cpp': '10분' },
           { '기능': 'Metal GPU', 'Ollama': '자동', 'MLX': '네이티브', 'llama.cpp': '지원됨' },
@@ -2643,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmarks',
         title: '벤치마크: 동일 모델, 세 프레임워크, M5 Pro 64GB',
         tableFormat: true,
-        columns: ['모델', 'Ollama tok/s', 'MLX tok/s', 'llama.cpp tok/s'],
+        columns: ['모델', '[Ollama tok/s](https://ollama.com)', '[MLX tok/s](https://github.com/ml-explore/mlx)', '[llama.cpp tok/s](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '모델': 'Llama 3.1 8B Q4', 'Ollama tok/s': '48', 'MLX tok/s': '62', 'llama.cpp tok/s': '52' },
           { '모델': 'Llama 3.1 8B Q8', 'Ollama tok/s': '38', 'MLX tok/s': '48', 'llama.cpp tok/s': '40' },
@@ -2659,7 +2659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-usage',
         title: '메모리 사용량: 동일 모델, 세 프레임워크 (M5 Pro 64GB)',
         tableFormat: true,
-        columns: ['모델', 'Ollama RAM', 'MLX RAM', 'llama.cpp RAM'],
+        columns: ['모델', '[Ollama RAM](https://ollama.com)', '[MLX RAM](https://github.com/ml-explore/mlx)', '[llama.cpp RAM](https://github.com/ggerganov/llama.cpp)'],
         rows: [
           { '모델': 'Llama 3.1 8B Q4', 'Ollama RAM': '5.2 GB', 'MLX RAM': '4.8 GB', 'llama.cpp RAM': '5.0 GB' },
           { '모델': 'Llama 3.3 70B Q4', 'Ollama RAM': '43 GB', 'MLX RAM': '41 GB', 'llama.cpp RAM': '42 GB' },
