@@ -151,10 +151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Every AI coding tool needs a model to think with. Some can use a model running on your own computer, so your code never leaves the building. Others only use the vendor\'s cloud model, which means your code is uploaded. Decide which of those you need before comparing anything else.',
           },
         ],
-        columns: ['Tool', 'Local LLM', 'Price', 'Open source', 'IDEs', 'Best for'],
+        columns: ['Tool', 'Link', 'Local LLM', 'Price', 'Open source', 'IDEs', 'Best for'],
         rows: [
           {
             'Tool': 'Continue.dev',
+            'Link': '[continue.dev](https://continue.dev)',
             'Local LLM': 'Native — Ollama, LM Studio, llama.cpp',
             'Price': 'Free',
             'Open source': 'Yes — Apache 2.0',
@@ -163,6 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Local LLM': 'Via custom OpenAI-compatible endpoint',
             'Price': '~$20/month (Pro)',
             'Open source': 'No — closed',
@@ -171,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Local LLM': 'No — cloud only',
             'Price': '~$10/month',
             'Open source': 'No — closed',
@@ -179,6 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Sourcegraph Cody',
+            'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Local LLM': 'Via Ollama configuration',
             'Price': '~$9/user/month standard; enterprise tier costs more',
             'Open source': 'Partial — CLI open, IDE extensions closed',
@@ -613,10 +617,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Jedes KI-Coding-Tool braucht ein Modell, mit dem es denkt. Manche können ein Modell nutzen, das auf Ihrem eigenen Rechner läuft, sodass Ihr Code das Haus nie verlässt. Andere nutzen nur das Cloud-Modell des Anbieters, was bedeutet, dass Ihr Code hochgeladen wird. Entscheiden Sie, welches davon Sie brauchen, bevor Sie irgendetwas anderes vergleichen.',
           },
         ],
-        columns: ['Tool', 'Lokales LLM', 'Preis', 'Quelloffen', 'IDEs', 'Am besten für'],
+        columns: ['Tool', 'Link', 'Lokales LLM', 'Preis', 'Quelloffen', 'IDEs', 'Am besten für'],
         rows: [
           {
             'Tool': 'Continue.dev',
+            'Link': '[continue.dev](https://continue.dev)',
             'Lokales LLM': 'Nativ — Ollama, LM Studio, llama.cpp',
             'Preis': 'Kostenlos',
             'Quelloffen': 'Ja — Apache 2.0',
@@ -625,6 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'Lokales LLM': 'Über benutzerdefinierten OpenAI-kompatiblen Endpunkt',
             'Preis': '~20 $/Monat (Pro)',
             'Quelloffen': 'Nein — closed',
@@ -633,6 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'GitHub Copilot',
+            'Link': '[github.com/features/copilot](https://github.com/features/copilot)',
             'Lokales LLM': 'Nein — reine Cloud',
             'Preis': '~10 $/Monat',
             'Quelloffen': 'Nein — closed',
@@ -641,6 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': 'Sourcegraph Cody',
+            'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'Lokales LLM': 'Über Ollama-Konfiguration',
             'Preis': '~9 $/Nutzer/Monat Standard; Enterprise-Stufe kostet mehr',
             'Quelloffen': 'Teilweise — CLI offen, IDE-Erweiterungen closed',
@@ -1075,10 +1083,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Chaque outil de codage IA a besoin d'un modèle pour réfléchir. Certains peuvent utiliser un modèle tournant sur votre propre ordinateur, donc votre code ne quitte jamais les lieux. D'autres n'utilisent que le modèle cloud de l'éditeur, ce qui signifie que votre code est téléversé. Décidez de ce dont vous avez besoin avant de comparer quoi que ce soit d'autre.",
           },
         ],
-        columns: ['Outil', 'LLM local', 'Prix', 'Open source', 'IDE', 'Idéal pour'],
+        columns: ['Outil', 'Lien', 'LLM local', 'Prix', 'Open source', 'IDE', 'Idéal pour'],
         rows: [
           {
             'Outil': 'Continue.dev',
+            'Lien': '[continue.dev](https://continue.dev)',
             'LLM local': 'Natif — Ollama, LM Studio, llama.cpp',
             'Prix': 'Gratuit',
             'Open source': 'Oui — Apache 2.0',
@@ -1087,6 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Cursor',
+            'Lien': '[cursor.com](https://cursor.com)',
             'LLM local': 'Via point de terminaison personnalisé compatible OpenAI',
             'Prix': '~20 $/mois (Pro)',
             'Open source': 'Non — fermé',
@@ -1095,6 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'GitHub Copilot',
+            'Lien': '[github.com/features/copilot](https://github.com/features/copilot)',
             'LLM local': 'Non — uniquement cloud',
             'Prix': '~10 $/mois',
             'Open source': 'Non — fermé',
@@ -1103,6 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Outil': 'Sourcegraph Cody',
+            'Lien': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'LLM local': "Via configuration d'Ollama",
             'Prix': '~9 $/utilisateur/mois en standard ; le palier entreprise coûte plus cher',
             'Open source': 'Partiel — CLI ouvert, extensions IDE fermées',
@@ -1536,10 +1548,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'すべてのAIコーディングツールは、考えるためのモデルを必要とします。一部のツールは自分のコンピュータで動作するモデルを使えるため、コードが建物の外に出ません。他のツールはベンダーのクラウドモデルのみを使うため、コードがアップロードされます。他のものを比較する前に、どちらが必要かを決めてください。',
           },
         ],
-        columns: ['ツール', 'ローカルLLM', '価格', 'オープンソース', 'IDE', '最適な用途'],
+        columns: ['ツール', 'リンク', 'ローカルLLM', '価格', 'オープンソース', 'IDE', '最適な用途'],
         rows: [
           {
             'ツール': 'Continue.dev',
+            'リンク': '[continue.dev](https://continue.dev)',
             'ローカルLLM': 'ネイティブ — Ollama、LM Studio、llama.cpp',
             '価格': '無料',
             'オープンソース': 'はい — Apache 2.0',
@@ -1548,6 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Cursor',
+            'リンク': '[cursor.com](https://cursor.com)',
             'ローカルLLM': 'カスタムのOpenAI互換エンドポイント経由',
             '価格': '約$20/month (Pro)',
             'オープンソース': 'いいえ — クローズド',
@@ -1556,6 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'GitHub Copilot',
+            'リンク': '[github.com/features/copilot](https://github.com/features/copilot)',
             'ローカルLLM': 'なし — クラウド専用',
             '価格': '約$10/month',
             'オープンソース': 'いいえ — クローズド',
@@ -1564,6 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ツール': 'Sourcegraph Cody',
+            'リンク': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'ローカルLLM': 'Ollama設定経由',
             '価格': '標準で約$9/user/month。エンタープライズティアはさらに高い',
             'オープンソース': '一部 — CLIはオープン、IDE拡張機能はクローズド',
@@ -1997,10 +2013,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '每款 AI 编程工具都需要一个用来思考的模型。有些可以使用运行在你自己电脑上的模型，因此你的代码永不离开本地。其他的只使用厂商的云端模型，这意味着你的代码会被上传。在比较其他任何东西之前，先决定你需要哪一种。',
           },
         ],
-        columns: ['工具', '本地 LLM', '价格', '开源', 'IDE', '最适合'],
+        columns: ['工具', '链接', '本地 LLM', '价格', '开源', 'IDE', '最适合'],
         rows: [
           {
             '工具': 'Continue.dev',
+            '链接': '[continue.dev](https://continue.dev)',
             '本地 LLM': '原生——Ollama、LM Studio、llama.cpp',
             '价格': '免费',
             '开源': '是——Apache 2.0',
@@ -2009,6 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Cursor',
+            '链接': '[cursor.com](https://cursor.com)',
             '本地 LLM': '通过自定义的 OpenAI 兼容端点',
             '价格': '约 $20/month（Pro）',
             '开源': '否——闭源',
@@ -2017,6 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'GitHub Copilot',
+            '链接': '[github.com/features/copilot](https://github.com/features/copilot)',
             '本地 LLM': '否——仅限云端',
             '价格': '约 $10/month',
             '开源': '否——闭源',
@@ -2025,6 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '工具': 'Sourcegraph Cody',
+            '链接': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             '本地 LLM': '通过 Ollama 配置',
             '价格': '标准版约 $9/user/month；企业版费用更高',
             '开源': '部分——CLI 开源，IDE 扩展闭源',
@@ -2458,10 +2478,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda herramienta de programación con IA necesita un modelo con el que pensar. Algunas pueden usar un modelo que se ejecuta en tu propio equipo, de modo que tu código nunca sale del edificio. Otras solo usan el modelo en la nube del proveedor, lo que significa que tu código se sube. Decide cuál de las dos necesitas antes de comparar cualquier otra cosa.',
           },
         ],
-        columns: ['Herramienta', 'LLM local', 'Precio', 'Código abierto', 'IDEs', 'Ideal para'],
+        columns: ['Herramienta', 'Enlace', 'LLM local', 'Precio', 'Código abierto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Herramienta': 'Continue.dev',
+            'Enlace': '[continue.dev](https://continue.dev)',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
             'Precio': 'Gratuito',
             'Código abierto': 'Sí — Apache 2.0',
@@ -2470,6 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Cursor',
+            'Enlace': '[cursor.com](https://cursor.com)',
             'LLM local': 'Vía endpoint personalizado compatible con OpenAI',
             'Precio': '~$20/mes (Pro)',
             'Código abierto': 'No — código cerrado',
@@ -2478,6 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'GitHub Copilot',
+            'Enlace': '[github.com/features/copilot](https://github.com/features/copilot)',
             'LLM local': 'No — solo nube',
             'Precio': '~$10/mes',
             'Código abierto': 'No — código cerrado',
@@ -2486,6 +2509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Herramienta': 'Sourcegraph Cody',
+            'Enlace': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'LLM local': 'Vía configuración de Ollama',
             'Precio': '~$9/usuario/mes estándar; el plan empresarial cuesta más',
             'Código abierto': 'Parcial — CLI abierto, extensiones IDE cerradas',
@@ -2932,10 +2956,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda ferramenta de programação com IA precisa de um modelo com o qual pensar. Algumas conseguem usar um modelo que roda no seu próprio equipamento, de modo que o seu código nunca sai do prédio. Outras só usam o modelo na nuvem do fornecedor, o que significa que o seu código é enviado. Decida qual das duas você precisa antes de comparar qualquer outra coisa.',
           },
         ],
-        columns: ['Ferramenta', 'LLM local', 'Preço', 'Código aberto', 'IDEs', 'Ideal para'],
+        columns: ['Ferramenta', 'Link', 'LLM local', 'Preço', 'Código aberto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Ferramenta': 'Continue.dev',
+            'Link': '[continue.dev](https://continue.dev)',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
             'Preço': 'Gratuito',
             'Código aberto': 'Sim — Apache 2.0',
@@ -2944,6 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Cursor',
+            'Link': '[cursor.com](https://cursor.com)',
             'LLM local': 'Via endpoint personalizado compatível com OpenAI',
             'Preço': '~US$ 20/mês (Pro)',
             'Código aberto': 'Não — código fechado',
@@ -2952,6 +2978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'GitHub Copilot',
+            'Link': '[github.com/features/copilot](https://github.com/features/copilot)',
             'LLM local': 'Não — somente nuvem',
             'Preço': '~US$ 10/mês',
             'Código aberto': 'Não — código fechado',
@@ -2960,6 +2987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ferramenta': 'Sourcegraph Cody',
+            'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'LLM local': 'Via configuração de Ollama',
             'Preço': '~US$ 9/usuário/mês padrão; o plano empresarial custa mais',
             'Código aberto': 'Parcial — CLI aberto, extensões de IDE fechadas',
@@ -3406,10 +3434,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'كل أداة برمجة بالذكاء الاصطناعي تحتاج إلى نموذج للتفكير. بعضها يستطيع استخدام نموذج يعمل على جهازك الخاص، مما يعني أن كودك لا يغادر المبنى. وبعضها يستخدم فقط النموذج السحابي للمورّد، مما يعني إرسال كودك. قرر أيهما تحتاج قبل مقارنة أي شيء آخر.',
           },
         ],
-        columns: ['الأداة', 'النموذج المحلي', 'السعر (يوليو 2026)', 'مفتوح المصدر', 'بيئات التطوير', 'الأنسب لـ'],
+        columns: ['الأداة', 'الرابط', 'النموذج المحلي', 'السعر (يوليو 2026)', 'مفتوح المصدر', 'بيئات التطوير', 'الأنسب لـ'],
         rows: [
           {
             'الأداة': 'Continue.dev',
+            'الرابط': '[continue.dev](https://continue.dev)',
             'النموذج المحلي': 'أصلي — Ollama وLM Studio وllama.cpp',
             'السعر (يوليو 2026)': 'مجاني',
             'مفتوح المصدر': 'نعم — Apache 2.0',
@@ -3418,6 +3447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Cursor',
+            'الرابط': '[cursor.com](https://cursor.com)',
             'النموذج المحلي': 'عبر نقطة نهاية مخصصة متوافقة مع OpenAI',
             'السعر (يوليو 2026)': 'نحو 20 دولاراً/الشهر (مميز)',
             'مفتوح المصدر': 'لا — مغلق المصدر',
@@ -3426,6 +3456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'GitHub Copilot',
+            'الرابط': '[github.com/features/copilot](https://github.com/features/copilot)',
             'النموذج المحلي': 'لا — سحابي حصراً',
             'السعر (يوليو 2026)': 'نحو 10 دولارات/الشهر',
             'مفتوح المصدر': 'لا — مغلق المصدر',
@@ -3434,6 +3465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الأداة': 'Sourcegraph Cody',
+            'الرابط': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             'النموذج المحلي': 'عبر إعداد Ollama',
             'السعر (يوليو 2026)': 'نحو 9 دولارات/مستخدم/الشهر معياري؛ الخطة المؤسسية أعلى',
             'مفتوح المصدر': 'جزئي — CLI مفتوح، وإضافات IDE مغلقة',
@@ -3880,10 +3912,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '모든 AI 코딩 도구에는 생각할 모델이 필요합니다. 일부는 자신의 컴퓨터에서 실행되는 모델을 사용할 수 있어 코드가 건물 밖으로 나가지 않습니다. 다른 것들은 공급업체의 클라우드 모델만 사용하므로 코드가 전송됩니다. 다른 것을 비교하기 전에 어느 쪽이 필요한지 결정하십시오.',
           },
         ],
-        columns: ['도구', '로컬 LLM', '가격', '오픈소스', 'IDE', '적합 대상'],
+        columns: ['도구', '링크', '로컬 LLM', '가격', '오픈소스', 'IDE', '적합 대상'],
         rows: [
           {
             '도구': 'Continue.dev',
+            '링크': '[continue.dev](https://continue.dev)',
             '로컬 LLM': '네이티브 — Ollama, LM Studio, llama.cpp',
             '가격': '무료',
             '오픈소스': '예 — Apache 2.0',
@@ -3892,6 +3925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Cursor',
+            '링크': '[cursor.com](https://cursor.com)',
             '로컬 LLM': 'OpenAI 호환 맞춤형 엔드포인트를 통해',
             '가격': '월 약 $20 (Pro)',
             '오픈소스': '아니요 — 소스 비공개',
@@ -3900,6 +3934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'GitHub Copilot',
+            '링크': '[github.com/features/copilot](https://github.com/features/copilot)',
             '로컬 LLM': '아니요 — 클라우드 전용',
             '가격': '월 약 $10',
             '오픈소스': '아니요 — 소스 비공개',
@@ -3908,6 +3943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '도구': 'Sourcegraph Cody',
+            '링크': '[sourcegraph.com/cody](https://sourcegraph.com/cody)',
             '로컬 LLM': 'Ollama 설정을 통해',
             '가격': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
             '오픈소스': '부분 — CLI 오픈소스, IDE 확장 소스 비공개',

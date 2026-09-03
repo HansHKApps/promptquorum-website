@@ -366,12 +366,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Every orchestration library here is free; you pay for managed hosting, tracing and governance, never for the agent logic itself.** That means the real budget question is which managed layer you will end up needing, and it is usually smaller than your model token spend either way.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Tool', 'Free tier', 'Paid entry', 'What the money buys'],
+        columns: ['Tool', 'Link', 'Free tier', 'Paid entry', 'What the money buys'],
         rows: [
-          { Tool: 'LangGraph', 'Free tier': 'Library free; LangSmith Developer $0, 5k traces/mo', 'Paid entry': 'Plus $39/seat/mo, 10k traces', 'What the money buys': 'Tracing, deployment, one small serverless deployment' },
-          { Tool: 'CrewAI', 'Free tier': 'Library free; cloud Basic free, 50 executions/mo', 'Paid entry': 'Enterprise, custom only', 'What the money buys': 'SSO, RBAC, PII redaction, deployment options' },
-          { Tool: 'MS Agent Framework', 'Free tier': 'Fully free, MIT', 'Paid entry': 'No first-party paid tier', 'What the money buys': 'Nothing — you pay Azure for infrastructure instead' },
-          { Tool: 'n8n', 'Free tier': 'Self-hosted Community Edition free', 'Paid entry': '20 euros/mo Starter, billed annually', 'What the money buys': 'Hosted execution: 2,500/mo Starter, 40,000 Business' },
+          { Tool: 'LangGraph', Link: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'Free tier': 'Library free; LangSmith Developer $0, 5k traces/mo', 'Paid entry': 'Plus $39/seat/mo, 10k traces', 'What the money buys': 'Tracing, deployment, one small serverless deployment' },
+          { Tool: 'CrewAI', Link: '[crewai.com](https://crewai.com)', 'Free tier': 'Library free; cloud Basic free, 50 executions/mo', 'Paid entry': 'Enterprise, custom only', 'What the money buys': 'SSO, RBAC, PII redaction, deployment options' },
+          { Tool: 'MS Agent Framework', Link: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'Free tier': 'Fully free, MIT', 'Paid entry': 'No first-party paid tier', 'What the money buys': 'Nothing — you pay Azure for infrastructure instead' },
+          { Tool: 'n8n', Link: '[n8n.io](https://n8n.io)', 'Free tier': 'Self-hosted Community Edition free', 'Paid entry': '20 euros/mo Starter, billed annually', 'What the money buys': 'Hosted execution: 2,500/mo Starter, 40,000 Business' },
         ],
         callouts: [
           {
@@ -983,12 +983,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Jede Orchestrierungsbibliothek hier ist kostenlos; bezahlt werden verwaltetes Hosting, Tracing und Governance, nie die Agentenlogik selbst.** Die eigentliche Budgetfrage lautet daher, welche verwaltete Ebene Sie am Ende brauchen — und die ist meist kleiner als Ihre Ausgaben für Modell-Token.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Werkzeug', 'Kostenlose Stufe', 'Bezahlter Einstieg', 'Wofür das Geld steht'],
+        columns: ['Werkzeug', 'Link', 'Kostenlose Stufe', 'Bezahlter Einstieg', 'Wofür das Geld steht'],
         rows: [
-          { Werkzeug: 'LangGraph', 'Kostenlose Stufe': 'Bibliothek kostenlos; LangSmith Developer 0 $, 5k Traces/Monat', 'Bezahlter Einstieg': 'Plus 39 $/Platz/Monat, 10k Traces', 'Wofür das Geld steht': 'Tracing, Deployment, ein kleines Serverless-Deployment' },
-          { Werkzeug: 'CrewAI', 'Kostenlose Stufe': 'Bibliothek kostenlos; Cloud Basic kostenlos, 50 Ausführungen/Monat', 'Bezahlter Einstieg': 'Enterprise, nur individuell', 'Wofür das Geld steht': 'SSO, RBAC, PII-Schwärzung, Deployment-Optionen' },
-          { Werkzeug: 'MS Agent Framework', 'Kostenlose Stufe': 'Vollständig kostenlos, MIT', 'Bezahlter Einstieg': 'Keine eigene Bezahlstufe', 'Wofür das Geld steht': 'Nichts — Sie zahlen stattdessen Azure für Infrastruktur' },
-          { Werkzeug: 'n8n', 'Kostenlose Stufe': 'Selbst gehostete Community Edition kostenlos', 'Bezahlter Einstieg': '20 Euro/Monat Starter, jährlich abgerechnet', 'Wofür das Geld steht': 'Gehostete Ausführungen: 2.500/Monat Starter, 40.000 Business' },
+          { Werkzeug: 'LangGraph', Link: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'Kostenlose Stufe': 'Bibliothek kostenlos; LangSmith Developer 0 $, 5k Traces/Monat', 'Bezahlter Einstieg': 'Plus 39 $/Platz/Monat, 10k Traces', 'Wofür das Geld steht': 'Tracing, Deployment, ein kleines Serverless-Deployment' },
+          { Werkzeug: 'CrewAI', Link: '[crewai.com](https://crewai.com)', 'Kostenlose Stufe': 'Bibliothek kostenlos; Cloud Basic kostenlos, 50 Ausführungen/Monat', 'Bezahlter Einstieg': 'Enterprise, nur individuell', 'Wofür das Geld steht': 'SSO, RBAC, PII-Schwärzung, Deployment-Optionen' },
+          { Werkzeug: 'MS Agent Framework', Link: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'Kostenlose Stufe': 'Vollständig kostenlos, MIT', 'Bezahlter Einstieg': 'Keine eigene Bezahlstufe', 'Wofür das Geld steht': 'Nichts — Sie zahlen stattdessen Azure für Infrastruktur' },
+          { Werkzeug: 'n8n', Link: '[n8n.io](https://n8n.io)', 'Kostenlose Stufe': 'Selbst gehostete Community Edition kostenlos', 'Bezahlter Einstieg': '20 Euro/Monat Starter, jährlich abgerechnet', 'Wofür das Geld steht': 'Gehostete Ausführungen: 2.500/Monat Starter, 40.000 Business' },
         ],
         callouts: [
           {
@@ -1627,12 +1627,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Todas las bibliotecas de orquestación aquí son gratuitas; se paga por alojamiento gestionado, trazas y gobernanza, nunca por la lógica del agente.** La verdadera pregunta presupuestaria es qué capa gestionada acabará necesitando, y suele ser menor que su gasto en tokens.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Herramienta', 'Nivel gratuito', 'Entrada de pago', 'Qué compra el dinero'],
+        columns: ['Herramienta', 'Enlace', 'Nivel gratuito', 'Entrada de pago', 'Qué compra el dinero'],
         rows: [
-          { Herramienta: 'LangGraph', 'Nivel gratuito': 'Biblioteca gratis; LangSmith Developer 0 $, 5k trazas/mes', 'Entrada de pago': 'Plus 39 $/puesto/mes, 10k trazas', 'Qué compra el dinero': 'Trazas, despliegue y un despliegue serverless pequeño' },
-          { Herramienta: 'CrewAI', 'Nivel gratuito': 'Biblioteca gratis; Basic en la nube gratis, 50 ejecuciones/mes', 'Entrada de pago': 'Enterprise, solo personalizado', 'Qué compra el dinero': 'SSO, RBAC, redacción de PII y opciones de despliegue' },
-          { Herramienta: 'MS Agent Framework', 'Nivel gratuito': 'Totalmente gratuito, MIT', 'Entrada de pago': 'Sin nivel de pago propio', 'Qué compra el dinero': 'Nada: se paga a Azure por la infraestructura' },
-          { Herramienta: 'n8n', 'Nivel gratuito': 'Community Edition autoalojada gratis', 'Entrada de pago': '20 euros/mes Starter, facturación anual', 'Qué compra el dinero': 'Ejecuciones alojadas: 2.500/mes Starter, 40.000 Business' },
+          { Herramienta: 'LangGraph', Enlace: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'Nivel gratuito': 'Biblioteca gratis; LangSmith Developer 0 $, 5k trazas/mes', 'Entrada de pago': 'Plus 39 $/puesto/mes, 10k trazas', 'Qué compra el dinero': 'Trazas, despliegue y un despliegue serverless pequeño' },
+          { Herramienta: 'CrewAI', Enlace: '[crewai.com](https://crewai.com)', 'Nivel gratuito': 'Biblioteca gratis; Basic en la nube gratis, 50 ejecuciones/mes', 'Entrada de pago': 'Enterprise, solo personalizado', 'Qué compra el dinero': 'SSO, RBAC, redacción de PII y opciones de despliegue' },
+          { Herramienta: 'MS Agent Framework', Enlace: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'Nivel gratuito': 'Totalmente gratuito, MIT', 'Entrada de pago': 'Sin nivel de pago propio', 'Qué compra el dinero': 'Nada: se paga a Azure por la infraestructura' },
+          { Herramienta: 'n8n', Enlace: '[n8n.io](https://n8n.io)', 'Nivel gratuito': 'Community Edition autoalojada gratis', 'Entrada de pago': '20 euros/mes Starter, facturación anual', 'Qué compra el dinero': 'Ejecuciones alojadas: 2.500/mes Starter, 40.000 Business' },
         ],
         callouts: [
           {
@@ -2253,12 +2253,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Toutes les bibliotheques d\'orchestration presentees ici sont gratuites ; vous payez l\'hebergement gere, le tracage et la gouvernance, jamais la logique de l\'agent.** La vraie question budgetaire est donc de savoir quelle couche geree vous finirez par utiliser, et elle reste generalement inferieure a votre depense en jetons.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Outil', 'Offre gratuite', 'Entree payante', 'Ce que l\'argent achete'],
+        columns: ['Outil', 'Lien', 'Offre gratuite', 'Entree payante', 'Ce que l\'argent achete'],
         rows: [
-          { Outil: 'LangGraph', 'Offre gratuite': 'Bibliotheque gratuite ; LangSmith Developer 0 $, 5k traces/mois', 'Entree payante': 'Plus 39 $/siege/mois, 10k traces', 'Ce que l\'argent achete': 'Tracage, deploiement, un petit deploiement serverless' },
-          { Outil: 'CrewAI', 'Offre gratuite': 'Bibliotheque gratuite ; Basic cloud gratuit, 50 executions/mois', 'Entree payante': 'Enterprise, sur devis uniquement', 'Ce que l\'argent achete': 'SSO, RBAC, masquage des donnees personnelles, options de deploiement' },
-          { Outil: 'MS Agent Framework', 'Offre gratuite': 'Entierement gratuit, MIT', 'Entree payante': 'Pas d\'offre payante propre', 'Ce que l\'argent achete': 'Rien : vous payez Azure pour l\'infrastructure' },
-          { Outil: 'n8n', 'Offre gratuite': 'Community Edition auto-hebergee gratuite', 'Entree payante': '20 euros/mois Starter, facturation annuelle', 'Ce que l\'argent achete': 'Executions hebergees : 2 500/mois Starter, 40 000 Business' },
+          { Outil: 'LangGraph', Lien: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'Offre gratuite': 'Bibliotheque gratuite ; LangSmith Developer 0 $, 5k traces/mois', 'Entree payante': 'Plus 39 $/siege/mois, 10k traces', 'Ce que l\'argent achete': 'Tracage, deploiement, un petit deploiement serverless' },
+          { Outil: 'CrewAI', Lien: '[crewai.com](https://crewai.com)', 'Offre gratuite': 'Bibliotheque gratuite ; Basic cloud gratuit, 50 executions/mois', 'Entree payante': 'Enterprise, sur devis uniquement', 'Ce que l\'argent achete': 'SSO, RBAC, masquage des donnees personnelles, options de deploiement' },
+          { Outil: 'MS Agent Framework', Lien: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'Offre gratuite': 'Entierement gratuit, MIT', 'Entree payante': 'Pas d\'offre payante propre', 'Ce que l\'argent achete': 'Rien : vous payez Azure pour l\'infrastructure' },
+          { Outil: 'n8n', Lien: '[n8n.io](https://n8n.io)', 'Offre gratuite': 'Community Edition auto-hebergee gratuite', 'Entree payante': '20 euros/mois Starter, facturation annuelle', 'Ce que l\'argent achete': 'Executions hebergees : 2 500/mois Starter, 40 000 Business' },
         ],
         callouts: [
           {
@@ -2807,12 +2807,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Toda biblioteca de orquestracao aqui e gratuita; voce paga por hospedagem gerenciada, rastreamento e governanca, nunca pela logica do agente.** A verdadeira pergunta orcamentaria e qual camada gerenciada voce acabara precisando, e ela costuma ser menor que seu gasto com tokens.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['Ferramenta', 'Nivel gratuito', 'Entrada paga', 'O que o dinheiro compra'],
+        columns: ['Ferramenta', 'Link', 'Nivel gratuito', 'Entrada paga', 'O que o dinheiro compra'],
         rows: [
-          { Ferramenta: 'LangGraph', 'Nivel gratuito': 'Biblioteca gratuita; LangSmith Developer US$ 0, 5 mil tracos/mes', 'Entrada paga': 'Plus US$ 39/assento/mes, 10 mil tracos', 'O que o dinheiro compra': 'Rastreamento, implantacao e uma implantacao serverless pequena' },
-          { Ferramenta: 'CrewAI', 'Nivel gratuito': 'Biblioteca gratuita; Basic na nuvem gratuito, 50 execucoes/mes', 'Entrada paga': 'Enterprise, apenas sob medida', 'O que o dinheiro compra': 'SSO, RBAC, ocultacao de dados pessoais e opcoes de implantacao' },
-          { Ferramenta: 'MS Agent Framework', 'Nivel gratuito': 'Totalmente gratuito, MIT', 'Entrada paga': 'Sem camada paga propria', 'O que o dinheiro compra': 'Nada: voce paga a Azure pela infraestrutura' },
-          { Ferramenta: 'n8n', 'Nivel gratuito': 'Community Edition auto-hospedada gratuita', 'Entrada paga': '20 euros/mes Starter, cobranca anual', 'O que o dinheiro compra': 'Execucoes hospedadas: 2.500/mes Starter, 40.000 Business' },
+          { Ferramenta: 'LangGraph', Link: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'Nivel gratuito': 'Biblioteca gratuita; LangSmith Developer US$ 0, 5 mil tracos/mes', 'Entrada paga': 'Plus US$ 39/assento/mes, 10 mil tracos', 'O que o dinheiro compra': 'Rastreamento, implantacao e uma implantacao serverless pequena' },
+          { Ferramenta: 'CrewAI', Link: '[crewai.com](https://crewai.com)', 'Nivel gratuito': 'Biblioteca gratuita; Basic na nuvem gratuito, 50 execucoes/mes', 'Entrada paga': 'Enterprise, apenas sob medida', 'O que o dinheiro compra': 'SSO, RBAC, ocultacao de dados pessoais e opcoes de implantacao' },
+          { Ferramenta: 'MS Agent Framework', Link: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'Nivel gratuito': 'Totalmente gratuito, MIT', 'Entrada paga': 'Sem camada paga propria', 'O que o dinheiro compra': 'Nada: voce paga a Azure pela infraestrutura' },
+          { Ferramenta: 'n8n', Link: '[n8n.io](https://n8n.io)', 'Nivel gratuito': 'Community Edition auto-hospedada gratuita', 'Entrada paga': '20 euros/mes Starter, cobranca anual', 'O que o dinheiro compra': 'Execucoes hospedadas: 2.500/mes Starter, 40.000 Business' },
         ],
         callouts: [
           {
@@ -3424,12 +3424,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**ここに挙げたオーケストレーションのライブラリはすべて無料です。支払うのはマネージドなホスティング、トレース、ガバナンスであって、エージェントのロジックそのものではありません。** つまり本当の予算上の問いは、結局どのマネージド層が必要になるかであり、それはたいていモデルのトークン費用より小さく収まります。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['ツール', '無料枠', '有料の入り口', '対価として得られるもの'],
+        columns: ['ツール', 'リンク', '無料枠', '有料の入り口', '対価として得られるもの'],
         rows: [
-          { ツール: 'LangGraph', 無料枠: 'ライブラリ無料、LangSmith Developer 0ドル、月5千トレース', '有料の入り口': 'Plus 1席月39ドル、1万トレース', 対価として得られるもの: 'トレース、デプロイ、小規模なサーバーレスデプロイ1件' },
-          { ツール: 'CrewAI', 無料枠: 'ライブラリ無料、クラウドBasic無料、月50実行', '有料の入り口': 'Enterpriseのみ、個別見積', 対価として得られるもの: 'SSO、RBAC、個人情報のマスキング、デプロイの選択肢' },
-          { ツール: 'MS Agent Framework', 無料枠: '完全に無料、MIT', '有料の入り口': '自社の有料層なし', 対価として得られるもの: 'なし。代わりにインフラ費用をAzureに支払う' },
-          { ツール: 'n8n', 無料枠: '自社運用のCommunity Editionが無料', '有料の入り口': 'Starter月20ユーロ、年払い', 対価として得られるもの: 'ホスト実行：Starter月2,500回、Business 40,000回' },
+          { ツール: 'LangGraph', リンク: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 無料枠: 'ライブラリ無料、LangSmith Developer 0ドル、月5千トレース', '有料の入り口': 'Plus 1席月39ドル、1万トレース', 対価として得られるもの: 'トレース、デプロイ、小規模なサーバーレスデプロイ1件' },
+          { ツール: 'CrewAI', リンク: '[crewai.com](https://crewai.com)', 無料枠: 'ライブラリ無料、クラウドBasic無料、月50実行', '有料の入り口': 'Enterpriseのみ、個別見積', 対価として得られるもの: 'SSO、RBAC、個人情報のマスキング、デプロイの選択肢' },
+          { ツール: 'MS Agent Framework', リンク: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 無料枠: '完全に無料、MIT', '有料の入り口': '自社の有料層なし', 対価として得られるもの: 'なし。代わりにインフラ費用をAzureに支払う' },
+          { ツール: 'n8n', リンク: '[n8n.io](https://n8n.io)', 無料枠: '自社運用のCommunity Editionが無料', '有料の入り口': 'Starter月20ユーロ、年払い', 対価として得られるもの: 'ホスト実行：Starter月2,500回、Business 40,000回' },
         ],
         callouts: [
           {
@@ -4041,12 +4041,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**这里每一个编排库都是免费的；你付费购买的是托管、追踪与治理，而从来不是智能体逻辑本身。** 因此真正的预算问题是你最终会需要哪一层托管服务，而它通常仍小于你的模型 token 支出。',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['工具', '免费层', '付费入门', '这笔钱买到什么'],
+        columns: ['工具', '链接', '免费层', '付费入门', '这笔钱买到什么'],
         rows: [
-          { 工具: 'LangGraph', 免费层: '库免费；LangSmith Developer 0 美元，每月 5 千条追踪', 付费入门: 'Plus 每席位每月 39 美元，1 万条追踪', 这笔钱买到什么: '追踪、部署，以及一个小型无服务器部署' },
-          { 工具: 'CrewAI', 免费层: '库免费；云端 Basic 免费，每月 50 次执行', 付费入门: 'Enterprise，仅定制', 这笔钱买到什么: 'SSO、RBAC、个人信息脱敏与部署选项' },
-          { 工具: 'MS Agent Framework', 免费层: '完全免费，MIT', 付费入门: '无自有付费层', 这笔钱买到什么: '什么也不买——你转而向 Azure 支付基础设施费用' },
-          { 工具: 'n8n', 免费层: '自托管 Community Edition 免费', 付费入门: 'Starter 每月 20 欧元，按年付费', 这笔钱买到什么: '托管执行：Starter 每月 2,500 次，Business 40,000 次' },
+          { 工具: 'LangGraph', 链接: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 免费层: '库免费；LangSmith Developer 0 美元，每月 5 千条追踪', 付费入门: 'Plus 每席位每月 39 美元，1 万条追踪', 这笔钱买到什么: '追踪、部署，以及一个小型无服务器部署' },
+          { 工具: 'CrewAI', 链接: '[crewai.com](https://crewai.com)', 免费层: '库免费；云端 Basic 免费，每月 50 次执行', 付费入门: 'Enterprise，仅定制', 这笔钱买到什么: 'SSO、RBAC、个人信息脱敏与部署选项' },
+          { 工具: 'MS Agent Framework', 链接: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 免费层: '完全免费，MIT', 付费入门: '无自有付费层', 这笔钱买到什么: '什么也不买——你转而向 Azure 支付基础设施费用' },
+          { 工具: 'n8n', 链接: '[n8n.io](https://n8n.io)', 免费层: '自托管 Community Edition 免费', 付费入门: 'Starter 每月 20 欧元，按年付费', 这笔钱买到什么: '托管执行：Starter 每月 2,500 次，Business 40,000 次' },
         ],
         callouts: [
           {
@@ -4595,12 +4595,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**كل مكتبة تنسيق هنا مجانية؛ وأنت تدفع مقابل الاستضافة المُدارة والتتبّع والحوكمة، لا مقابل منطق الوكيل نفسه.** ومن ثمّ فالسؤال الميزاني الحقيقي هو أي طبقة مُدارة ستحتاجها في النهاية، وهي عادةً أصغر من إنفاقك على رموز النموذج.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['الأداة', 'الباقة المجانية', 'مدخل الدفع', 'ما تشتريه بالمال'],
+        columns: ['الأداة', 'الرابط', 'الباقة المجانية', 'مدخل الدفع', 'ما تشتريه بالمال'],
         rows: [
-          { الأداة: 'LangGraph', 'الباقة المجانية': 'المكتبة مجانية، وLangSmith Developer بصفر دولار، 5 آلاف أثر شهريًا', 'مدخل الدفع': 'Plus بـ39 دولارًا للمقعد شهريًا، 10 آلاف أثر', 'ما تشتريه بالمال': 'التتبّع والنشر ونشر واحد صغير بلا خادم' },
-          { الأداة: 'CrewAI', 'الباقة المجانية': 'المكتبة مجانية، وBasic السحابية مجانية، 50 تنفيذًا شهريًا', 'مدخل الدفع': 'Enterprise بسعر مخصص فقط', 'ما تشتريه بالمال': 'الدخول الموحّد والتحكم بالأدوار وإخفاء البيانات الشخصية وخيارات النشر' },
-          { الأداة: 'MS Agent Framework', 'الباقة المجانية': 'مجاني بالكامل، MIT', 'مدخل الدفع': 'لا توجد باقة مدفوعة خاصة', 'ما تشتريه بالمال': 'لا شيء — تدفع لـAzure مقابل البنية التحتية بدلًا من ذلك' },
-          { الأداة: 'n8n', 'الباقة المجانية': 'نسخة Community Edition ذاتية الاستضافة مجانية', 'مدخل الدفع': 'Starter بـ20 يورو شهريًا، فوترة سنوية', 'ما تشتريه بالمال': 'تنفيذات مستضافة: 2500 شهريًا في Starter و40 ألفًا في Business' },
+          { الأداة: 'LangGraph', الرابط: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', 'الباقة المجانية': 'المكتبة مجانية، وLangSmith Developer بصفر دولار، 5 آلاف أثر شهريًا', 'مدخل الدفع': 'Plus بـ39 دولارًا للمقعد شهريًا، 10 آلاف أثر', 'ما تشتريه بالمال': 'التتبّع والنشر ونشر واحد صغير بلا خادم' },
+          { الأداة: 'CrewAI', الرابط: '[crewai.com](https://crewai.com)', 'الباقة المجانية': 'المكتبة مجانية، وBasic السحابية مجانية، 50 تنفيذًا شهريًا', 'مدخل الدفع': 'Enterprise بسعر مخصص فقط', 'ما تشتريه بالمال': 'الدخول الموحّد والتحكم بالأدوار وإخفاء البيانات الشخصية وخيارات النشر' },
+          { الأداة: 'MS Agent Framework', الرابط: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', 'الباقة المجانية': 'مجاني بالكامل، MIT', 'مدخل الدفع': 'لا توجد باقة مدفوعة خاصة', 'ما تشتريه بالمال': 'لا شيء — تدفع لـAzure مقابل البنية التحتية بدلًا من ذلك' },
+          { الأداة: 'n8n', الرابط: '[n8n.io](https://n8n.io)', 'الباقة المجانية': 'نسخة Community Edition ذاتية الاستضافة مجانية', 'مدخل الدفع': 'Starter بـ20 يورو شهريًا، فوترة سنوية', 'ما تشتريه بالمال': 'تنفيذات مستضافة: 2500 شهريًا في Starter و40 ألفًا في Business' },
         ],
         callouts: [
           {
@@ -5140,12 +5140,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**여기 모든 오케스트레이션 라이브러리는 무료입니다. 돈을 내는 대상은 관리형 호스팅과 추적, 거버넌스이지 에이전트 로직 자체가 아닙니다.** 따라서 진짜 예산 문제는 결국 어떤 관리형 계층이 필요해지느냐이며, 그것은 대개 모델 토큰 지출보다 적습니다.',
         tableFormat: true,
         itemHeadings: true,
-        columns: ['도구', '무료 등급', '유료 진입', '돈으로 얻는 것'],
+        columns: ['도구', '링크', '무료 등급', '유료 진입', '돈으로 얻는 것'],
         rows: [
-          { 도구: 'LangGraph', '무료 등급': '라이브러리 무료, LangSmith Developer 0달러, 월 5천 트레이스', '유료 진입': 'Plus 좌석당 월 39달러, 1만 트레이스', '돈으로 얻는 것': '추적, 배포, 소규모 서버리스 배포 1건' },
-          { 도구: 'CrewAI', '무료 등급': '라이브러리 무료, 클라우드 Basic 무료, 월 50회 실행', '유료 진입': 'Enterprise, 맞춤 견적만', '돈으로 얻는 것': 'SSO, RBAC, 개인정보 마스킹, 배포 옵션' },
-          { 도구: 'MS Agent Framework', '무료 등급': '완전 무료, MIT', '유료 진입': '자체 유료 계층 없음', '돈으로 얻는 것': '없음 — 대신 인프라 비용을 Azure에 지불' },
-          { 도구: 'n8n', '무료 등급': '자체 호스팅 Community Edition 무료', '유료 진입': 'Starter 월 20유로, 연간 결제', '돈으로 얻는 것': '호스팅 실행: Starter 월 2,500회, Business 4만 회' },
+          { 도구: 'LangGraph', 링크: '[langchain.com/langgraph](https://www.langchain.com/langgraph)', '무료 등급': '라이브러리 무료, LangSmith Developer 0달러, 월 5천 트레이스', '유료 진입': 'Plus 좌석당 월 39달러, 1만 트레이스', '돈으로 얻는 것': '추적, 배포, 소규모 서버리스 배포 1건' },
+          { 도구: 'CrewAI', 링크: '[crewai.com](https://crewai.com)', '무료 등급': '라이브러리 무료, 클라우드 Basic 무료, 월 50회 실행', '유료 진입': 'Enterprise, 맞춤 견적만', '돈으로 얻는 것': 'SSO, RBAC, 개인정보 마스킹, 배포 옵션' },
+          { 도구: 'MS Agent Framework', 링크: '[github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)', '무료 등급': '완전 무료, MIT', '유료 진입': '자체 유료 계층 없음', '돈으로 얻는 것': '없음 — 대신 인프라 비용을 Azure에 지불' },
+          { 도구: 'n8n', 링크: '[n8n.io](https://n8n.io)', '무료 등급': '자체 호스팅 Community Edition 무료', '유료 진입': 'Starter 월 20유로, 연간 결제', '돈으로 얻는 것': '호스팅 실행: Starter 월 2,500회, Business 4만 회' },
         ],
         callouts: [
           {

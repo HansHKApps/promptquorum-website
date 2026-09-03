@@ -217,10 +217,11 @@ tests:
         content: [
           '**No single tool excels on all five criteria. Braintrust leads on evaluation depth; Vellum leads on production traffic splitting; Promptfoo leads on free CI/CD; PromptHub leads on simplicity.**',
         ],
-        columns: ['Tool', 'Primary Use', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
+        columns: ['Tool', 'Link', 'Primary Use', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
         rows: [
           {
             Tool: 'Braintrust',
+            Link: '[braintrust.dev](https://braintrust.dev)',
             'Primary Use': 'Output evaluation',
             Collaboration: '✅ Roles + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -229,6 +230,7 @@ tests:
           },
           {
             Tool: 'PromptHub',
+            Link: '[prompthub.us](https://www.prompthub.us)',
             'Primary Use': 'Version control',
             Collaboration: '✅ Team workspace',
             'CI/CD': '✗ None',
@@ -237,6 +239,7 @@ tests:
           },
           {
             Tool: 'Vellum',
+            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
             'Primary Use': 'Production A/B',
             Collaboration: '✅ PR reviews',
             'CI/CD': '✓ Webhooks',
@@ -245,6 +248,7 @@ tests:
           },
           {
             Tool: 'Promptfoo',
+            Link: '[promptfoo.dev](https://promptfoo.dev)',
             'Primary Use': 'CI/CD testing',
             Collaboration: 'Git-based',
             'CI/CD': '✅ GitHub Actions',
@@ -253,6 +257,7 @@ tests:
           },
           {
             Tool: 'PromptQuorum',
+            Link: '[promptquorum.com](https://www.promptquorum.com)',
             'Primary Use': 'Cross-model comparison',
             Collaboration: '✓ Shared workspace',
             'CI/CD': '✗ None',
@@ -411,7 +416,7 @@ tests:
         items: [
           '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — official documentation; basis for Loop agent, MCP integration, SOC 2 certification, and $249/month Pro plan pricing (restructured March 2026)',
           '[PromptHub — Prompt Version Control](https://prompthub.ai) — product homepage; basis for version control, web UI, and $50–200/month pricing claims',
-          '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — product overview and pricing page; basis for traffic splitting, approval workflow, and $200–500/month claims',
+          '[Vellum — LLM Deployment and A/B Testing](https://docs.vellum.ai) — product overview and pricing page; basis for traffic splitting, approval workflow, and $200–500/month claims',
           '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub repository and documentation; basis for MIT license, YAML config, and GitHub Actions integration claims',
           '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — multi-model comparison tool; basis for 25+ model dispatch and cross-model comparison claims',
           '[Confident AI](https://confident.ai) — Emerging evaluation platform offering 50+ built-in metrics at $19.99–49.99/seat/month',
@@ -666,10 +671,11 @@ tests:
       'comparison-table': {
         title: 'Head-to-Head: Alle 4 Tools im Vergleich',
         content: ['Zusammenfassung aller 5 Tools auf den Kriterien aus Abschnitt 2:'],
-        columns: ['Tool', 'Primäre Nutzung', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
+        columns: ['Tool', 'Link', 'Primäre Nutzung', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
         rows: [
           {
             'Tool': 'Braintrust',
+            'Link': '[braintrust.dev](https://braintrust.dev)',
             'Primäre Nutzung': 'Evaluierung + Experimente',
             'Zusammenarbeit': '✓ Workspace freigeben',
             'CI/CD': '✓ API + MCP',
@@ -678,6 +684,7 @@ tests:
           },
           {
             'Tool': 'PromptHub',
+            'Link': '[prompthub.us](https://www.prompthub.us)',
             'Primäre Nutzung': 'Versionskontrolle',
             'Zusammenarbeit': '✓ Web-UI Kollab',
             'CI/CD': '✗ Keine',
@@ -686,6 +693,7 @@ tests:
           },
           {
             'Tool': 'Vellum',
+            'Link': '[docs.vellum.ai](https://docs.vellum.ai)',
             'Primäre Nutzung': 'Production A/B-Tests',
             'Zusammenarbeit': '✓ Workspace-Zugriff',
             'CI/CD': '✗ Keine',
@@ -694,6 +702,7 @@ tests:
           },
           {
             'Tool': 'Promptfoo',
+            'Link': '[promptfoo.dev](https://promptfoo.dev)',
             'Primäre Nutzung': 'CI/CD Regressions',
             'Zusammenarbeit': '✗ Keine (lokal)',
             'CI/CD': '✓ GitHub Actions',
@@ -702,6 +711,7 @@ tests:
           },
           {
             'Tool': 'PromptQuorum',
+            'Link': '[promptquorum.com](https://www.promptquorum.com)',
             'Primäre Nutzung': 'Modellvergleich',
             'Zusammenarbeit': '✓ Gemeinsamer Workspace',
             'CI/CD': '✗ Keine',
@@ -841,7 +851,7 @@ tests:
         items: [
           '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — Offizielle Dokumentation; Basis für Loop-Agent, MCP-Integration, SOC 2-Zertifizierung und €249/Mo Pro-Plan-Preisgestaltung (Umstrukturierung März 2026)',
           '[PromptHub — Prompt Version Control](https://prompthub.ai) — Produkt-Homepage; Basis für Versionskontrolle, Web-UI und 50–200 €/Mo Preisgestaltung-Ansprüche',
-          '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — Produkt-Übersicht und Preisgestaltungs-Seite; Basis für Traffic-Splitting, Approval-Workflow und 200–500 €/Mo Ansprüche',
+          '[Vellum — LLM Deployment and A/B Testing](https://docs.vellum.ai) — Produkt-Übersicht und Preisgestaltungs-Seite; Basis für Traffic-Splitting, Approval-Workflow und 200–500 €/Mo Ansprüche',
           '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub-Repository und Dokumentation; Basis für MIT-Lizenz, YAML-Config und GitHub-Actions-Integration Ansprüche',
           '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — Multi-Modell-Vergleich-Tool; Basis für 25+ Modell-Verteilung und Cross-Modell-Vergleich Ansprüche',
           '[Confident AI](https://confident.ai) — Emerging Evaluierungsplattform mit 50+ integrierten Metriken für €19,99–49,99/Benutzer/Monat',
@@ -1098,10 +1108,11 @@ tests:
         content: [
           '**Ninguna herramienta destaca en los cinco criterios. Braintrust lidera en profundidad de evaluación; Vellum lidera en división de tráfico en producción; Promptfoo lidera en CI/CD gratuito; PromptHub lidera en simplicidad.**',
         ],
-        columns: ['Herramienta', 'Uso principal', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
+        columns: ['Herramienta', 'Enlace', 'Uso principal', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
         rows: [
           {
             Herramienta: 'Braintrust',
+            Enlace: '[braintrust.dev](https://braintrust.dev)',
             'Uso principal': 'Evaluación de output',
             Colaboración: '✅ Roles + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -1110,6 +1121,7 @@ tests:
           },
           {
             Herramienta: 'PromptHub',
+            Enlace: '[prompthub.us](https://www.prompthub.us)',
             'Uso principal': 'Control de versiones',
             Colaboración: '✅ Workspace de equipo',
             'CI/CD': '✗ Ninguno',
@@ -1118,6 +1130,7 @@ tests:
           },
           {
             Herramienta: 'Vellum',
+            Enlace: '[docs.vellum.ai](https://docs.vellum.ai)',
             'Uso principal': 'A/B en producción',
             Colaboración: '✅ Revisiones PR',
             'CI/CD': '✓ Webhooks',
@@ -1126,6 +1139,7 @@ tests:
           },
           {
             Herramienta: 'Promptfoo',
+            Enlace: '[promptfoo.dev](https://promptfoo.dev)',
             'Uso principal': 'Testing CI/CD',
             Colaboración: 'Basado en Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1134,6 +1148,7 @@ tests:
           },
           {
             Herramienta: 'PromptQuorum',
+            Enlace: '[promptquorum.com](https://www.promptquorum.com)',
             'Uso principal': 'Comparación multi-modelo',
             Colaboración: '✓ Workspace compartido',
             'CI/CD': '✗ Ninguno',
@@ -1292,7 +1307,7 @@ tests:
         items: [
           '[Braintrust — Plataforma de Evaluación de IA](https://braintrust.dev) — documentación oficial; base para las afirmaciones sobre el agente Loop, integración MCP, certificación SOC 2 y precios del plan Pro a $249/mes (reestructurado marzo 2026)',
           '[PromptHub — Control de Versiones de Prompts](https://prompthub.ai) — homepage del producto; base para las afirmaciones de control de versiones, interfaz web y precios $50–200/mes',
-          '[Vellum — Despliegue y A/B Testing de LLM](https://www.vellum.ai) — descripción general del producto y página de precios; base para las afirmaciones de división de tráfico, flujo de aprobación y precios $200–500/mes',
+          '[Vellum — Despliegue y A/B Testing de LLM](https://docs.vellum.ai) — descripción general del producto y página de precios; base para las afirmaciones de división de tráfico, flujo de aprobación y precios $200–500/mes',
           '[Promptfoo — Testing de Prompts Open-Source](https://www.promptfoo.dev) — repositorio GitHub y documentación; base para las afirmaciones de licencia MIT, configuración YAML e integración GitHub Actions',
           '[PromptQuorum — Despacho Multi-Modelo](https://promptquorum.com) — herramienta de comparación multi-modelo; base para las afirmaciones de despacho a 25+ modelos y comparación multi-modelo',
           '[Confident AI](https://confident.ai) — Plataforma de evaluación emergente con 50+ métricas integradas a $19.99–49.99/seat/mes',
@@ -1552,10 +1567,11 @@ tests:
         content: [
           '**Nenhuma ferramenta se destaca nos cinco critérios. Braintrust lidera em profundidade de avaliação; Vellum lidera em divisão de tráfego em produção; Promptfoo lidera em CI/CD gratuito; PromptHub lidera em simplicidade.**',
         ],
-        columns: ['Ferramenta', 'Uso principal', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
+        columns: ['Ferramenta', 'Link', 'Uso principal', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
         rows: [
           {
             Ferramenta: 'Braintrust',
+            Link: '[braintrust.dev](https://braintrust.dev)',
             'Uso principal': 'Avaliação de saída',
             Colaboração: '✅ Funções + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -1564,6 +1580,7 @@ tests:
           },
           {
             Ferramenta: 'PromptHub',
+            Link: '[prompthub.us](https://www.prompthub.us)',
             'Uso principal': 'Controle de versões',
             Colaboração: '✅ Workspace de equipe',
             'CI/CD': '✗ Nenhum',
@@ -1572,6 +1589,7 @@ tests:
           },
           {
             Ferramenta: 'Vellum',
+            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
             'Uso principal': 'A/B em produção',
             Colaboração: '✅ Revisões PR',
             'CI/CD': '✓ Webhooks',
@@ -1580,6 +1598,7 @@ tests:
           },
           {
             Ferramenta: 'Promptfoo',
+            Link: '[promptfoo.dev](https://promptfoo.dev)',
             'Uso principal': 'Testes CI/CD',
             Colaboração: 'Baseado em Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1588,6 +1607,7 @@ tests:
           },
           {
             Ferramenta: 'PromptQuorum',
+            Link: '[promptquorum.com](https://www.promptquorum.com)',
             'Uso principal': 'Comparação multi-modelo',
             Colaboração: '✓ Workspace compartilhado',
             'CI/CD': '✗ Nenhum',
@@ -1746,7 +1766,7 @@ tests:
         items: [
           '[Braintrust — Plataforma de Avaliação de IA](https://braintrust.dev) — documentação oficial; base para as afirmações sobre o agente Loop, integração MCP, certificação SOC 2 e preços do plano Pro a $249/mês (reestruturado em março de 2026)',
           '[PromptHub — Controle de Versões de Prompts](https://prompthub.ai) — homepage do produto; base para as afirmações de controle de versões, interface web e preços $50–200/mês',
-          '[Vellum — Implantação e A/B Testing de LLM](https://www.vellum.ai) — visão geral do produto e página de preços; base para as afirmações de divisão de tráfego, fluxo de aprovação e preços $200–500/mês',
+          '[Vellum — Implantação e A/B Testing de LLM](https://docs.vellum.ai) — visão geral do produto e página de preços; base para as afirmações de divisão de tráfego, fluxo de aprovação e preços $200–500/mês',
           '[Promptfoo — Testes de Prompts Open-Source](https://www.promptfoo.dev) — repositório GitHub e documentação; base para as afirmações de licença MIT, configuração YAML e integração GitHub Actions',
           '[PromptQuorum — Despacho Multi-Modelo](https://promptquorum.com) — ferramenta de comparação multi-modelo; base para as afirmações de despacho para 25+ modelos e comparação multi-modelo',
           '[Confident AI](https://confident.ai) — Plataforma de avaliação emergente com 50+ métricas integradas a $19,99–49,99/seat/mês',
@@ -1974,10 +1994,11 @@ tests:
       'comparison-table': {
         title: 'Face à face : Tous les 4 outils comparés',
         content: ['Synthèse cinq outils sur critères section 2 :'],
-        columns: ['Outil', 'Usage primaire', 'Collaboration', 'CI/CD', 'Prix', 'Meilleur pour'],
+        columns: ['Outil', 'Lien', 'Usage primaire', 'Collaboration', 'CI/CD', 'Prix', 'Meilleur pour'],
         rows: [
           {
             'Outil': 'Braintrust',
+            'Lien': '[braintrust.dev](https://braintrust.dev)',
             'Usage primaire': 'Évaluation + production',
             'Collaboration': '✓ Workspace partage',
             'CI/CD': '✓ Loop agent, MCP',
@@ -1986,6 +2007,7 @@ tests:
           },
           {
             'Outil': 'PromptHub',
+            'Lien': '[prompthub.us](https://www.prompthub.us)',
             'Usage primaire': 'Versioning',
             'Collaboration': '✓ Web UI collab',
             'CI/CD': '✗ Aucun',
@@ -1994,6 +2016,7 @@ tests:
           },
           {
             'Outil': 'Vellum',
+            'Lien': '[docs.vellum.ai](https://docs.vellum.ai)',
             'Usage primaire': 'A/B tests production',
             'Collaboration': '✓ Workspace access',
             'CI/CD': '✗ Aucun',
@@ -2002,6 +2025,7 @@ tests:
           },
           {
             'Outil': 'Promptfoo',
+            'Lien': '[promptfoo.dev](https://promptfoo.dev)',
             'Usage primaire': 'Régression CI/CD',
             'Collaboration': '✗ Aucun (local)',
             'CI/CD': '✓ GitHub Actions',
@@ -2010,6 +2034,7 @@ tests:
           },
           {
             'Outil': 'PromptQuorum',
+            'Lien': '[promptquorum.com](https://www.promptquorum.com)',
             'Usage primaire': 'Comparaison modèles',
             'Collaboration': '✓ Workspace partagé',
             'CI/CD': '✗ Aucun',
@@ -2141,7 +2166,7 @@ tests:
         items: [
           '[Braintrust — AI Evaluation Platform](https://braintrust.dev) — Documentation officielle ; base scoring-fonction, agent Loop, intégration MCP, certification SOC 2, claims tier gratuit (1M spans, 10K scores) et plan Pro à €249/mois (restructuré mars 2026)',
           '[PromptHub — Prompt Version Control](https://prompthub.ai) — Page produit ; base versioning, Web UI, claims tarification 50–200 €/mois',
-          '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — Aperçu produit et page tarification ; base traffic-splitting, workflow approbation, claims 200–500 €/mois',
+          '[Vellum — LLM Deployment and A/B Testing](https://docs.vellum.ai) — Aperçu produit et page tarification ; base traffic-splitting, workflow approbation, claims 200–500 €/mois',
           '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — Repository GitHub et documentation ; base licence MIT, config YAML, intégration GitHub Actions claims',
           '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — Multi-modèles comparaison tool ; base 25+ dispatching modèles et cross-modèle comparaison claims',
           '[Confident AI — LLM Evaluation](https://confident.ai) — Émergent alternative évaluation 2026 ; fine-grained evals LLM-driven',
@@ -2220,14 +2245,14 @@ tests:
       'promptfoo': { title: 'Promptfoo：無料オープンソース CI/CD テスト', content: ['**何：** ローカルプロンプトテストと CI/CD 統合用のオープンソースフレームワーク。YAML/JSON でテストケース（プロンプト + 期待される結果）を記述し、ローカルで実行し、回帰レポートを取得。GitHub Actions ネイティブ。', '**強み：** 無料（MIT）でオープンソース。ローカル — クラウドなし、認証なし。YAML 設定はシンプル。GitHub Actions 優れています。コミュニティ大きい。', '**弱み：** 本番トラフィック分割またはバージョン管理には不向き。回帰テストツール、デプロイメントツールではない。本番 A/B テストには Vellum と組み合わせる必要があります。自動評価は限定的。'] },
       'promptfoo-yaml': { title: 'Promptfoo YAML の例', codeBlock: `providers:\n  - openai:gpt-5.6\n\ntests:\n  - description: "クエリを分類"\n    vars:\n      question: "これはバグレポートですか？"\n      context: "ユーザーが認証エラーについて文句を言っています。"\n    assert:\n      - type: "contains"\n        value: "Bug"\n      - type: "cost"\n        threshold: 0.01\n\n  - description: "ハルシネーション回避"\n    vars:\n      input: "xyz の 5 つの機能をリストアップしてください。"\n    assert:\n      - type: "not-contains"\n        value: "ツールは X をサポート" # ドキュメントにない\n`, codeLanguage: 'yaml' },
       'promptquorum': { title: 'PromptQuorum：最適化前のモデル比較', content: ['**特定の LLM プロバイダーについて Braintrust、Vellum、PromptHub、Promptfoo に決める前に、PromptQuorum を使用してプロンプトを 25+ モデルに同時に送信し、どれが最高のパフォーマンスを発揮するかを確認してください — モデルに依存しない最初のステップ。** 無料ティア利用可能。', '上記の 4 つのツール（それぞれ 1 つのモデルを最適化）とは異なり、PromptQuorum は「どのモデルが適切か？」という質問に 1 パスで答えます。PromptQuorum で最適なモデルを発見した後、詳細評価には Braintrust、本番 A/B テストには Vellum、CI/CD 回帰防止には Promptfoo にルーティングします。'], items: ['GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama と LM Studio 経由のローカルモデルを含む 25+ モデル', 'TRACE、CO-STAR、CRAFT など 9 つの組み込みプロンプトフレームワーク', 'コンセンサススコアリング付きの並べて表示される応答比較', 'モデルあたりのトークン数 — コミットする前にコスト差を確認', '無料ティア — エンジニアリングセットアップは不要'] },
-      'comparison-table': { title: '直接対決：すべての 4 つのツールを比較', content: ['セクション 2 の基準に基づくすべての 5 つのツールの要約：'], columns: ['ツール', 'プライマリ使用法', 'コラボレーション', 'CI/CD', '価格', 'に最適'], rows: [{ 'ツール': 'Braintrust', 'プライマリ使用法': '評価 + 実験', 'コラボレーション': '✓ ワークスペース共有', 'CI/CD': '✓ API + MCP', '価格': '無料 / Pro $249', 'に最適': '詳細評価' }, { 'ツール': 'PromptHub', 'プライマリ使用法': 'バージョン管理', 'コラボレーション': '✓ Web UI コラボ', 'CI/CD': '✗ なし', '価格': '月 50～200€', 'に最適': 'チーム協力' }, { 'ツール': 'Vellum', 'プライマリ使用法': '本番 A/B テスト', 'コラボレーション': '✓ ワークスペース アクセス', 'CI/CD': '✗ なし', '価格': '月 200～500€', 'に最適': 'ライブトラフィック テスト' }, { 'ツール': 'Promptfoo', 'プライマリ使用法': 'CI/CD 回帰', 'コラボレーション': '✗ なし（ローカル）', 'CI/CD': '✓ GitHub Actions', '価格': '無料（OSS）', 'に最適': '予算志向' }, { 'ツール': 'PromptQuorum', 'プライマリ使用法': 'モデル比較', 'コラボレーション': '✓ 共有ワークスペース', 'CI/CD': '✗ なし', '価格': '無料 + クレジット', 'に最適': 'モデル選択' }] },
+      'comparison-table': { title: '直接対決：すべての 4 つのツールを比較', content: ['セクション 2 の基準に基づくすべての 5 つのツールの要約：'], columns: ['ツール', 'リンク', 'プライマリ使用法', 'コラボレーション', 'CI/CD', '価格', 'に最適'], rows: [{ 'ツール': 'Braintrust', 'リンク': '[braintrust.dev](https://braintrust.dev)', 'プライマリ使用法': '評価 + 実験', 'コラボレーション': '✓ ワークスペース共有', 'CI/CD': '✓ API + MCP', '価格': '無料 / Pro $249', 'に最適': '詳細評価' }, { 'ツール': 'PromptHub', 'リンク': '[prompthub.us](https://www.prompthub.us)', 'プライマリ使用法': 'バージョン管理', 'コラボレーション': '✓ Web UI コラボ', 'CI/CD': '✗ なし', '価格': '月 50～200€', 'に最適': 'チーム協力' }, { 'ツール': 'Vellum', 'リンク': '[docs.vellum.ai](https://docs.vellum.ai)', 'プライマリ使用法': '本番 A/B テスト', 'コラボレーション': '✓ ワークスペース アクセス', 'CI/CD': '✗ なし', '価格': '月 200～500€', 'に最適': 'ライブトラフィック テスト' }, { 'ツール': 'Promptfoo', 'リンク': '[promptfoo.dev](https://promptfoo.dev)', 'プライマリ使用法': 'CI/CD 回帰', 'コラボレーション': '✗ なし（ローカル）', 'CI/CD': '✓ GitHub Actions', '価格': '無料（OSS）', 'に最適': '予算志向' }, { 'ツール': 'PromptQuorum', 'リンク': '[promptquorum.com](https://www.promptquorum.com)', 'プライマリ使用法': 'モデル比較', 'コラボレーション': '✓ 共有ワークスペース', 'CI/CD': '✗ なし', '価格': '無料 + クレジット', 'に最適': 'モデル選択' }] },
       'which-tool': { title: 'チームタイプ別のツール選定', content: ['答えはワークフローによります。5 つの一般的なシナリオ：'], numberedItems: [{ title: '回帰を回避したいだけ', whyItMatters: 'Promptfoo。無料、ローカル、GitHub Actions ネイティブ。小さなチームのためにすべてが必要です。' }, { title: 'ライブ A/B テスト付き本番システムを構築中', whyItMatters: 'Vellum + PromptQuorum。PromptQuorum で最高のモデルを最初に見つけ、次に Vellum でトラフィック分割とフィードバックループ。' }, { title: '大きなプロンプトライブラリとバージョン管理が必要', whyItMatters: 'PromptHub。使いやすく、安価で、チーム協力向け。CI/CD に Promptfoo と組み合わせ。' }, { title: 'カスタムメトリクスでの詳細評価が必要', whyItMatters: 'Braintrust。ダッシュボードと自動評価は無敵。高額ですが、データ科学チームの価値があります。' }, { title: 'どのモデルまたはフレームワークを使用するか不確実', whyItMatters: 'PromptQuorum 最初。25+ モデルとフレームワーク全体で比較。次に上記のツールでデプロイ。' }] },
       'common-mistakes': { title: 'よくあるエラー', mistakes: [{ mistake: '4 つのツールをすべてまとめて購入', problem: '月 700€ 以上かかり、冗長。Braintrust と Vellum を完全に使用しません。', fix: 'ワークフローに適した 2 つのツールを選択。ほとんどのチームが必要：Braintrust + Vellum または Promptfoo + PromptHub。' }, { mistake: '評価で開始、デプロイメント忘却', problem: 'Braintrust は最高のプロンプトを表示しますが、手動でアプリにコピー。「デプロイ」ボタンなし。', fix: 'Braintrust を Vellum と組み合わせるか、手動デプロイ。評価なしのデプロイメント 無意味。' }, { mistake: 'Promptfoo ローカルのみで使用', problem: 'ローカルテストは優れていますが、本番レイテンシ、コスト、実際のエラーは表示されません。', fix: 'Promptfoo を CI/CD 回帰テストに使用し、Vellum またはカスタムインフラで本番にデプロイ。' }, { mistake: 'プロンプト最適化前にモデル選択', problem: 'Claude Opus で開始できますが、GPT-5.6 がより良い可能性があります — テストするまで知りません。', fix: 'PromptQuorum で最初に複数モデルを比較。次に Braintrust または Promptfoo で最高のモデルに最適化。' }] },
       'how-to-choose': { title: 'これら 4 つのツール間での選択方法', numberedItems: ['チームの 3 つの主な課題をリストアップ：(a) 評価、(b) バージョン管理、(c) 本番デプロイメント。', '各課題に対して最高のツール：(a) Braintrust、(b) PromptHub、(c) Vellum。', '課題が「どのモデルかわかりません」の場合は、PromptQuorum で開始。', '課題が「予算がない」の場合は、CI/CD に Promptfoo、バージョン管理に PromptHub を選択。', '2 つ以上のツールを購入しないでください。4 つのツールはいつも多すぎます。', '90 日間のコスト ベースラインを計画し、どのツールが最高の ROI かを評価します。'] },
       'japanese-context': { title: '日本ユーザーのための活用ポイント', content: ['日本の組織にとって、プロンプト管理ツール選択時の追加検討事項があります。', '**METI AI ガバナンスと企業デプロイメント：** 日本企業が METI（経済産業省）の AI ガバナンスフレームワーク 2024 に準拠する場合、Braintrust と Vellum はエンタープライズ向け選択肢。Promptfoo はローカルで実行でき、METI 準拠性が簡単。', '**データレジデンシー（データ主権）：** 機密情報を処理する場合（顧客データ、内部情報）、ローカルツール（Promptfoo をサーバーで実行）がデータ主権要件を満たすのは簡単。クラウドツール（Braintrust、Vellum）は明示的なセキュリティ認定が必要です。', '**推奨事項：** 日本チームの場合：まず PromptQuorum（無料）モデル選択、次に Promptfoo（無料、ローカル）CI/CD 回帰、PromptHub（安価）バージョン管理。このコンボは月 200€ 未満で METI フレームワーク準拠。本番スケール到達時のみ Braintrust または Vellum に移行。'] },
       'faq': { title: 'よくある質問', faqs: [{ q: 'Braintrust と PromptHub の主な違いは？', a: 'Braintrust は評価と実験向け。PromptHub はバージョン管理向け。Braintrust は「どのプロンプトが最良か」に答え、PromptHub は「以前使用したバージョンは」に答えます。両者を組み合わせ可能。' }, { q: 'Promptfoo は本当に無料？', a: 'はい、Promptfoo はオープンソース（MIT）で完全無料。ローカルまたは独自サーバーで実行。唯一のコスト：OpenAI、Anthropic などへの API 呼び出し。' }, { q: 'Braintrust または Vellum を選択すべき？', a: 'Braintrust は評価向け（どのプロンプトが最良かわかりません）。Vellum は本番向け（どのトラフィック分割が最良かわかりません）。異なる — 両者一緒が理想的。' }, { q: 'Vellum は Braintrust より高額？', a: 'Braintrust Pro は $249/月（無料ティアも利用可能：100万トレーススパン + 1万スコア）。Vellum Starter は $200/月、Growth は $500/月。Pro レベルでは Braintrust は Vellum Starter よりやや高額ですが、大幅に多い評価キャパシティを含みます。どちらも無料または低コストの入口があります。Promptfoo は無料、PromptHub は $50〜200/月。' }, { q: 'Promptfoo を GitHub Actions に統合？', a: '`.github/workflows/test.yml` ファイルを作成し、`npx promptfoo eval` を呼び出し。Promptfoo は YAML テスト読み込み、実行、回帰表示。Actions は自動的に各プッシュで起動。' }, { q: 'PromptHub が Braintrust を置き換えられる？', a: 'いいえ。PromptHub はバージョン保存。Braintrust は品質評価。PromptHub はどのバージョンが最高かを測定できません。組み合わせ可能。' }, { q: 'Vellum はプロンプト管理プラットフォームと同じ？', a: 'いいえ、Vellum は本番デプロイメントツール、バージョン管理ではない。プロンプト保存のみ？PromptHub 使用。ライブトラフィック A/B テスト？Vellum。' }, { q: '2026年、これら 4 つのツール以外の選択肢は？', a: 'はい。プロンプト評価市場は 2025〜2026 年にかけて大きく拡大しました。Confident AI は 50 以上の組み込み評価メトリクスを $19.99〜49.99/シート/月で提供し、Braintrust よりトレーシングコストが低い（$1/GB 対 $3/GB）。Galileo AI は Luna-2 評価モデルによるランタイムガードレールを提供（$100+/月）。Arize Phoenix は無料のオープンソース LLM 可観測性プラットフォームです。ほとんどのチームにとって、この比較の 4 ツールと Confident AI を合わせれば実用上のニーズをすべてカバーできます。' }] },
       'related-reading': { title: '関連資料', items: ['[Best Prompt Engineering Tools 2026](/ja/prompt-engineering/best-prompt-engineering-tools-2026) — Braintrust、PromptHub、Vellum、Promptfoo を含むすべてのプロンプトツールの広範なランキングと 20+ その他', '[Best Prompt Optimization Tools for Teams](/ja/prompt-engineering/best-prompt-optimization-tools-for-teams) — DSPy、Helicone、OpenAI Evals を含むチーム最適化', '[How to Evaluate Prompt Quality](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — プロンプト評価のメトリクスとフレームワーク', '[Prompt Evaluation Metrics](/ja/prompt-engineering/prompt-evaluation-metrics) — 精度、レイテンシ、コスト、関連性、カスタムメトリクスの詳細'] },
-      'sources': { title: 'ソース', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 公式ドキュメント；Loop エージェント、MCP 統合、SOC 2 認証、無料ティア（100万スパン、1万スコア）と Pro プラン $249/月（2026年3月に再編）の根拠', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 製品ホームページ；バージョン管理、Web UI、月 50～200€ 価格設定要求の基礎', '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — 製品概要と価格設定ページ；トラフィック分割、承認ワークフロー、月 200～500€ 要求の基礎', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub リポジトリとドキュメント；MIT ライセンス、YAML 設定、GitHub Actions 統合要求の基礎', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — マルチモデル比較ツール；25+ モデルディスパッチと cross-モデル比較要求の基礎'] },
+      'sources': { title: 'ソース', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 公式ドキュメント；Loop エージェント、MCP 統合、SOC 2 認証、無料ティア（100万スパン、1万スコア）と Pro プラン $249/月（2026年3月に再編）の根拠', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 製品ホームページ；バージョン管理、Web UI、月 50～200€ 価格設定要求の基礎', '[Vellum — LLM Deployment and A/B Testing](https://docs.vellum.ai) — 製品概要と価格設定ページ；トラフィック分割、承認ワークフロー、月 200～500€ 要求の基礎', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub リポジトリとドキュメント；MIT ライセンス、YAML 設定、GitHub Actions 統合要求の基礎', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — マルチモデル比較ツール；25+ モデルディスパッチと cross-モデル比較要求の基礎'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026', description: 'ブレイントラスト（評価プラットフォーム、無料ティア + Pro $249/月）、ベルム（本番A/Bテスト）、PromptHub（バージョン管理）、Promptfoo（オープンソースCI/CD）の4つを5つの軸で比較。日本企業向けMETI対応。', datePublished: '2026-04-10', dateModified: '2026-08-27', author: { '@type': 'Organization', 'name': 'PromptQuorum' }, publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, url: 'https://www.promptquorum.com/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', inLanguage: 'ja', about: [{ '@type': 'Thing', 'name': 'Braintrust' }, { '@type': 'Thing', 'name': 'PromptHub' }, { '@type': 'Thing', 'name': 'Vellum' }, { '@type': 'Thing', 'name': 'Promptfoo' }, { '@type': 'Thing', 'name': 'PromptQuorum' }, { '@type': 'Thing', 'name': 'LLM 評価' }], speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
     itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'プロンプト管理ツール（比較）', inLanguage: 'ja', url: 'https://www.promptquorum.com/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: '協調スコアリング、自律反復のための Loop エージェント、MCP-IDE 統合を備えた AI 評価プラットフォーム。無料ティア利用可（100万スパン、1万スコア）；Pro $249/月。出力品質を測定するチームに最適。' }, { '@type': 'ListItem', position: 2, name: 'PromptHub', description: 'チーム協力付きプロンプトバージョン管理' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: 'ライブトラフィック分割付き本番 A/B テスト' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 統合付きオープンソース回帰テスト' }, { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: 'モデル選択用 25+ モデル cross-比較' }] },
@@ -2265,14 +2290,14 @@ tests:
       'promptfoo': { title: 'Promptfoo：免费开源 CI/CD 测试', content: ['**什么：** 本地提示词测试和 CI/CD 集成的开源框架。用 YAML/JSON 编写测试用例（提示词 + 预期结果），本地运行，获取回归报告。GitHub Actions 原生。', '**优势：** 免费（MIT）开源。本地——无云、无认证。YAML 配置简单。GitHub Actions 优秀。社区大。', '**劣势：** 不适合生产流量分割或版本管理。回归测试工具，不是部署工具。生产 A/B 测试需与 Vellum 结合。自动评估限制。'] },
       'promptfoo-yaml': { title: 'Promptfoo YAML 示例', codeBlock: `providers:\n  - openai:gpt-5.6\n\ntests:\n  - description: "分类查询"\n    vars:\n      question: "这是 bug 报告吗？"\n      context: "用户抱怨认证错误。"\n    assert:\n      - type: "contains"\n        value: "Bug"\n      - type: "cost"\n        threshold: 0.01\n\n  - description: "避免幻觉"\n    vars:\n      input: "列出 xyz 的 5 个功能。"\n    assert:\n      - type: "not-contains"\n        value: "工具支持 X" # 文档中不存在\n`, codeLanguage: 'yaml' },
       'promptquorum': { title: 'PromptQuorum：优化前的模型比较', content: ['**在为特定 LLM 提供商确定 Braintrust、Vellum、PromptHub 或 Promptfoo 之前，使用 PromptQuorum 将提示词同时分发到 25+ 模型，看哪个表现最好——首个与模型无关的步骤。** 免费层可用。', '与上述 4 个工具（各优化一个模型）不同，PromptQuorum 在一次运行中回答"哪个模型适合？"。在 PromptQuorum 发现最优模型后，路由到 Braintrust 进行深层评估、Vellum 进行生产 A/B 测试或 Promptfoo 进行 CI/CD 回归防止。'], items: ['包括 GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 的 25+ 模型，和通过 Ollama、LM Studio 的本地模型', '9 个内置提示词框架——TRACE、CO-STAR、CRAFT 等', '包含共识评分的并排响应比较', '按模型的令牌计数——提交前查看成本差异', '免费层——无需工程设置'] },
-      'comparison-table': { title: '直接对比：所有 4 个工具比较', content: ['第 2 节标准下所有 5 个工具摘要：'], columns: ['工具', '主要用途', '协作', 'CI/CD', '定价', '最适合'], rows: [{ '工具': 'Braintrust', '主要用途': '评估 + 实验', '协作': '✓ 工作区共享', 'CI/CD': '✓ API + MCP', '定价': '免费 / Pro $249', '最适合': '详细评估' }, { '工具': 'PromptHub', '主要用途': '版本控制', '协作': '✓ Web UI 协作', 'CI/CD': '✗ 无', '定价': '$50-200/月', '最适合': '团队协作' }, { '工具': 'Vellum', '主要用途': '生产 A/B 测试', '协作': '✓ 工作区访问', 'CI/CD': '✗ 无', '定价': '$200-500/月', '最适合': '实时流量测试' }, { '工具': 'Promptfoo', '主要用途': 'CI/CD 回归', '协作': '✗ 无（本地）', 'CI/CD': '✓ GitHub Actions', '定价': '免费（OSS）', '最适合': '预算友好' }, { '工具': 'PromptQuorum', '主要用途': '模型比较', '协作': '✓ 共享工作区', 'CI/CD': '✗ 无', '定价': '免费 + 额度', '最适合': '模型选择' }] },
+      'comparison-table': { title: '直接对比：所有 4 个工具比较', content: ['第 2 节标准下所有 5 个工具摘要：'], columns: ['工具', '链接', '主要用途', '协作', 'CI/CD', '定价', '最适合'], rows: [{ '工具': 'Braintrust', '链接': '[braintrust.dev](https://braintrust.dev)', '主要用途': '评估 + 实验', '协作': '✓ 工作区共享', 'CI/CD': '✓ API + MCP', '定价': '免费 / Pro $249', '最适合': '详细评估' }, { '工具': 'PromptHub', '链接': '[prompthub.us](https://www.prompthub.us)', '主要用途': '版本控制', '协作': '✓ Web UI 协作', 'CI/CD': '✗ 无', '定价': '$50-200/月', '最适合': '团队协作' }, { '工具': 'Vellum', '链接': '[docs.vellum.ai](https://docs.vellum.ai)', '主要用途': '生产 A/B 测试', '协作': '✓ 工作区访问', 'CI/CD': '✗ 无', '定价': '$200-500/月', '最适合': '实时流量测试' }, { '工具': 'Promptfoo', '链接': '[promptfoo.dev](https://promptfoo.dev)', '主要用途': 'CI/CD 回归', '协作': '✗ 无（本地）', 'CI/CD': '✓ GitHub Actions', '定价': '免费（OSS）', '最适合': '预算友好' }, { '工具': 'PromptQuorum', '链接': '[promptquorum.com](https://www.promptquorum.com)', '主要用途': '模型比较', '协作': '✓ 共享工作区', 'CI/CD': '✗ 无', '定价': '免费 + 额度', '最适合': '模型选择' }] },
       'which-tool': { title: '按团队类型选择工具', content: ['答案取决于工作流。5 个常见场景：'], numberedItems: [{ title: '只想避免回归', whyItMatters: 'Promptfoo。免费、本地、GitHub Actions 原生。小团队所需全部。' }, { title: '构建具有实时 A/B 测试的生产系统', whyItMatters: 'Vellum + PromptQuorum。PromptQuorum 先找最优模型，然后 Vellum 流量分割和反馈循环。' }, { title: '有大提示词库，需版本控制', whyItMatters: 'PromptHub。易用、便宜、为团队协作设计。与 Promptfoo 结合做 CI/CD。' }, { title: '需自定义指标的深度评估', whyItMatters: 'Braintrust。仪表板和自动评估无可匹敌。昂贵但值得数据科学团队。' }, { title: '不确定用哪个模型或框架', whyItMatters: 'PromptQuorum 先。在 25+ 模型和框架间比较。后用上述工具部署。' }] },
       'common-mistakes': { title: '常见错误', mistakes: [{ mistake: '同时购买全部 4 个工具', problem: '花费 $700+/月，重复。不会充分使用 Braintrust 和 Vellum。', fix: '选择适合工作流的 2 个工具。大多数团队需：Braintrust + Vellum 或 Promptfoo + PromptHub。' }, { mistake: '从评估开始，忽视部署', problem: 'Braintrust 显示最优提示词但需手动复制到应用。无"部署"按钮。', fix: '将 Braintrust 与 Vellum 结合或手动部署。无部署的评估无意义。' }, { mistake: '仅本地使用 Promptfoo', problem: '本地测试很好，但看不到生产延迟、成本或真实错误。', fix: '用 Promptfoo 做 CI/CD 回归测试，用 Vellum 或自有基础设施部署生产。' }, { mistake: '提示词优化前选模型', problem: '可以从 Claude Opus 开始，但 GPT-5.6 可能更优——测试前不知道。', fix: 'PromptQuorum 先多模型比较。后用 Braintrust 或 Promptfoo 为最优模型优化。' }] },
       'how-to-choose': { title: '如何在这 4 个工具之间选择', numberedItems: ['列出团队的 3 个主要难题：(a) 评估、(b) 版本控制、(c) 生产部署。', '每个难题选最优工具：(a) Braintrust、(b) PromptHub、(c) Vellum。', '难题是"不知道哪个模型"？PromptQuorum 开始。', '难题是"没预算"？CI/CD 选 Promptfoo、版本控制选 PromptHub。', '不超过 2 个工具。4 个工具总是太多。', '规划 90 天成本基线，评估哪个工具最优 ROI。'] },
       'china-context': { title: '中国企业应用方案', content: ['中国组织选择提示词管理工具时，有额外考虑。', '**数据安全法和企业合规：** 中国企业遵守 2021 年《数据安全法》时，Braintrust 和 Vellum 是企业级选项。Promptfoo 本地运行，合规更简单。', '**数据驻地（数据主权）：** 处理敏感信息（客户数据、内部信息）时，本地工具（Promptfoo 在服务器上运行）更容易满足数据主权需求。云工具（Braintrust、Vellum）需明确安全认证。', '**推荐方案：** 中国团队：先 PromptQuorum（免费）选模型，后 Promptfoo（免费、本地）CI/CD 回归，PromptHub（便宜）版本控制。此组合 $200/月以下且符合数据安全法。仅生产规模达到时才迁移到 Braintrust 或 Vellum。'] },
       'faq': { title: '常见问题', faqs: [{ q: 'Braintrust 和 PromptHub 主要区别？', a: 'Braintrust 用于评估和实验。PromptHub 用于版本控制。Braintrust 回答"哪个提示词最优？"PromptHub 回答"之前用的版本是？"可结合使用。' }, { q: 'Promptfoo 真的免费？', a: '是的，Promptfoo 开源（MIT）完全免费。本地或自有服务器运行。唯一成本：OpenAI、Anthropic 等 API 调用。' }, { q: '应选 Braintrust 还是 Vellum？', a: 'Braintrust 用于评估（不知哪个提示词最优）。Vellum 用于生产（不知哪个流量分割最优）。不同的——两个结合最优。' }, { q: 'Vellum 比 Braintrust 贵多少？', a: 'Braintrust Pro 为 $249/月（也提供免费层：100 万条追踪 + 1 万次评分）。Vellum Starter $200/月，Growth $500/月。在 Pro 级别，Braintrust 比 Vellum Starter 略贵，但包含明显更多的评估容量。两者都有免费或低成本入门方案。Promptfoo 免费；PromptHub $50-200/月。' }, { q: 'Promptfoo 怎样与 GitHub Actions 集成？', a: '创建 `.github/workflows/test.yml` 文件，调用 `npx promptfoo eval`。Promptfoo 读 YAML 测试、运行、显示回归。Actions 自动在每次推送触发。' }, { q: 'PromptHub 能替代 Braintrust？', a: '不能。PromptHub 保存版本。Braintrust 评估质量。PromptHub 无法测量哪个版本最优。可结合使用。' }, { q: 'Vellum 与提示词管理平台相同？', a: '不是，Vellum 是生产部署工具，不是版本控制。只想存提示词？PromptHub。实时流量 A/B 测试？Vellum。' }, { q: '2026 年除这 4 款工具外还有其他选择吗？', a: '有。提示词评估市场在 2025-2026 年显著扩张。Confident AI 以 $19.99-49.99/席位/月提供 50 多项内置评估指标，追踪成本低于 Braintrust（$1/GB 对比 $3/GB）。Galileo AI 通过其 Luna-2 评估模型提供运行时防护（$100+/月）。Arize Phoenix 是一款免费的开源 LLM 可观测性平台。对大多数团队而言，本文比较的四款工具加上 Confident AI 就能覆盖所有实际需求。' }] },
       'related-reading': { title: '延伸阅读', items: ['[Best Prompt Engineering Tools 2026](/zh/prompt-engineering/best-prompt-engineering-tools-2026) — 包括 Braintrust、PromptHub、Vellum、Promptfoo 和 20+ 其他的所有提示词工具广泛排名', '[Best Prompt Optimization Tools for Teams](/zh/prompt-engineering/best-prompt-optimization-tools-for-teams) — 包括 DSPy、Helicone、OpenAI Evals 的团队优化', '[How to Evaluate Prompt Quality](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 提示词评估的指标和框架', '[Prompt Evaluation Metrics](/zh/prompt-engineering/prompt-evaluation-metrics) — 准确性、延迟、成本、关联性、自定义指标的深入讲解'] },
-      'sources': { title: '来源', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 官方文档；Loop 代理、MCP 集成、SOC 2 认证、免费层（100万条追踪、1万次评分）及 Pro 计划 $249/月（2026年3月重组）声明基础', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 产品首页；版本控制、Web UI、$50-200/月 定价声明基础', '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — 产品概览和定价页；流量分割、批准工作流、$200-500/月 声明基础', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub 仓库和文档；MIT 许可、YAML 配置、GitHub Actions 集成声明基础', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — 多模型比较工具；25+ 模型分发和跨模型比较声明基础'] },
+      'sources': { title: '来源', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 官方文档；Loop 代理、MCP 集成、SOC 2 认证、免费层（100万条追踪、1万次评分）及 Pro 计划 $249/月（2026年3月重组）声明基础', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 产品首页；版本控制、Web UI、$50-200/月 定价声明基础', '[Vellum — LLM Deployment and A/B Testing](https://docs.vellum.ai) — 产品概览和定价页；流量分割、批准工作流、$200-500/月 声明基础', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub 仓库和文档；MIT 许可、YAML 配置、GitHub Actions 集成声明基础', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — 多模型比较工具；25+ 模型分发和跨模型比较声明基础'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026', description: '4款提示词管理工具对比：Braintrust评估（免费层 + Pro $249/月）、Vellum A/B测试、PromptHub版本管理、Promptfoo开源CI/CD。含中国企业《数据安全法》合规指南。', datePublished: '2026-04-10', dateModified: '2026-08-27', author: { '@type': 'Organization', 'name': 'PromptQuorum' }, publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, url: 'https://www.promptquorum.com/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', inLanguage: 'zh', about: [{ '@type': 'Thing', 'name': 'Braintrust' }, { '@type': 'Thing', 'name': 'PromptHub' }, { '@type': 'Thing', 'name': 'Vellum' }, { '@type': 'Thing', 'name': 'Promptfoo' }, { '@type': 'Thing', 'name': 'PromptQuorum' }, { '@type': 'Thing', 'name': 'LLM 评估' }], speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
     itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: '提示词管理工具（比较）', inLanguage: 'zh', url: 'https://www.promptquorum.com/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Braintrust', description: '具备协作评分、自主迭代 Loop 代理与 MCP-IDE 集成的 AI 评估平台。提供免费层（100万条追踪、1万次评分）；Pro $249/月。最适合衡量输出质量的团队。' }, { '@type': 'ListItem', position: 2, name: 'PromptHub', description: '团队协作的提示词版本控制' }, { '@type': 'ListItem', position: 3, name: 'Vellum', description: '实时流量分割的生产 A/B 测试' }, { '@type': 'ListItem', position: 4, name: 'Promptfoo', description: 'GitHub Actions 集成的开源回归测试' }, { '@type': 'ListItem', position: 5, name: 'PromptQuorum', description: '模型选择的 25+ 模型跨模型比较' }] },
@@ -2488,10 +2513,11 @@ tests:
         content: [
           '**لا توجد أداة واحدة تتفوق في المعايير الخمسة. Braintrust تتصدر في عمق التقييم؛ Vellum تتصدر في توزيع الحركة في الإنتاج؛ Promptfoo تتصدر في CI/CD المجاني؛ PromptHub تتصدر في البساطة.**',
         ],
-        columns: ['الأداة', 'الاستخدام الرئيسي', 'التعاون', 'CI/CD', 'الأسعار', 'مثالية لـ'],
+        columns: ['الأداة', 'الرابط', 'الاستخدام الرئيسي', 'التعاون', 'CI/CD', 'الأسعار', 'مثالية لـ'],
         rows: [
           {
             'الأداة': 'Braintrust',
+            'الرابط': '[braintrust.dev](https://braintrust.dev)',
             'الاستخدام الرئيسي': 'تقييم المخرجات',
             'التعاون': '✅ أدوار + لوحات معلومات',
             'CI/CD': '✓ API + MCP',
@@ -2500,6 +2526,7 @@ tests:
           },
           {
             'الأداة': 'PromptHub',
+            'الرابط': '[prompthub.us](https://www.prompthub.us)',
             'الاستخدام الرئيسي': 'التحكم في الإصدارات',
             'التعاون': '✅ مساحة عمل الفريق',
             'CI/CD': '✗ لا يوجد',
@@ -2508,6 +2535,7 @@ tests:
           },
           {
             'الأداة': 'Vellum',
+            'الرابط': '[docs.vellum.ai](https://docs.vellum.ai)',
             'الاستخدام الرئيسي': 'A/B في الإنتاج',
             'التعاون': '✅ مراجعات PR',
             'CI/CD': '✓ Webhooks',
@@ -2516,6 +2544,7 @@ tests:
           },
           {
             'الأداة': 'Promptfoo',
+            'الرابط': '[promptfoo.dev](https://promptfoo.dev)',
             'الاستخدام الرئيسي': 'اختبار CI/CD',
             'التعاون': 'مبني على Git',
             'CI/CD': '✅ GitHub Actions',
@@ -2524,6 +2553,7 @@ tests:
           },
           {
             'الأداة': 'PromptQuorum',
+            'الرابط': '[promptquorum.com](https://www.promptquorum.com)',
             'الاستخدام الرئيسي': 'مقارنة متعددة النماذج',
             'التعاون': '✓ مساحة عمل مشتركة',
             'CI/CD': '✗ لا يوجد',
@@ -2682,7 +2712,7 @@ tests:
         items: [
           '[Braintrust — منصة تقييم الذكاء الاصطناعي](https://braintrust.dev) — الوثائق الرسمية؛ أساس ادعاءات وكيل Loop وتكامل MCP وشهادة SOC 2 وأسعار الخطة Pro بـ $249/شهر (أُعيد هيكلتها مارس 2026)',
           '[PromptHub — التحكم في إصدارات الـ Prompts](https://prompthub.ai) — الصفحة الرئيسية للمنتج؛ أساس ادعاءات التحكم في الإصدارات وواجهة الويب والأسعار $50–200/شهر',
-          '[Vellum — نشر LLM واختبار A/B](https://www.vellum.ai) — نظرة عامة على المنتج وصفحة الأسعار؛ أساس ادعاءات توزيع الحركة وتدفق الموافقة والأسعار $200–500/شهر',
+          '[Vellum — نشر LLM واختبار A/B](https://docs.vellum.ai) — نظرة عامة على المنتج وصفحة الأسعار؛ أساس ادعاءات توزيع الحركة وتدفق الموافقة والأسعار $200–500/شهر',
           '[Promptfoo — اختبار الـ Prompts مفتوح المصدر](https://www.promptfoo.dev) — مستودع GitHub والوثائق؛ أساس ادعاءات رخصة MIT وإعدادات YAML وتكامل GitHub Actions',
           '[PromptQuorum — إرسال متعدد النماذج](https://promptquorum.com) — أداة مقارنة متعددة النماذج؛ أساس ادعاءات الإرسال لـ 25+ نموذج والمقارنة متعددة النماذج',
           '[Confident AI](https://confident.ai) — منصة تقييم ناشئة مع 50+ مقياس مدمج بـ $19.99–49.99/مقعد/شهر',
@@ -2933,10 +2963,11 @@ tests:
         content: [
           '**어떤 도구도 5가지 기준 모두에서 탁월하지 않습니다. Braintrust는 평가 심층 기능에서, Vellum은 프로덕션 트래픽 분배에서, Promptfoo는 무료 CI/CD에서, PromptHub는 단순성에서 선두를 달립니다.**',
         ],
-        columns: ['도구', '주요 용도', '협업', 'CI/CD', '가격', '이상적인 대상'],
+        columns: ['도구', '링크', '주요 용도', '협업', 'CI/CD', '가격', '이상적인 대상'],
         rows: [
           {
             '도구': 'Braintrust',
+            '링크': '[braintrust.dev](https://braintrust.dev)',
             '주요 용도': '출력 평가',
             '협업': '✅ 역할 + 대시보드',
             'CI/CD': '✓ API + MCP',
@@ -2945,6 +2976,7 @@ tests:
           },
           {
             '도구': 'PromptHub',
+            '링크': '[prompthub.us](https://www.prompthub.us)',
             '주요 용도': '버전 관리',
             '협업': '✅ 팀 워크스페이스',
             'CI/CD': '✗ 없음',
@@ -2953,6 +2985,7 @@ tests:
           },
           {
             '도구': 'Vellum',
+            '링크': '[docs.vellum.ai](https://docs.vellum.ai)',
             '주요 용도': '프로덕션 A/B',
             '협업': '✅ PR 검토',
             'CI/CD': '✓ 웹훅',
@@ -2961,6 +2994,7 @@ tests:
           },
           {
             '도구': 'Promptfoo',
+            '링크': '[promptfoo.dev](https://promptfoo.dev)',
             '주요 용도': 'CI/CD 테스트',
             '협업': 'Git 기반',
             'CI/CD': '✅ GitHub Actions',
@@ -2969,6 +3003,7 @@ tests:
           },
           {
             '도구': 'PromptQuorum',
+            '링크': '[promptquorum.com](https://www.promptquorum.com)',
             '주요 용도': '멀티 모델 비교',
             '협업': '✓ 공유 워크스페이스',
             'CI/CD': '✗ 없음',
@@ -3127,7 +3162,7 @@ tests:
         items: [
           '[Braintrust — AI 평가 플랫폼](https://braintrust.dev) — 공식 문서; Loop 에이전트, MCP 통합, SOC 2 인증 및 $249/월 Pro 플랜 가격 주장의 기초(2026년 3월 개편)',
           '[PromptHub — 프롬프트 버전 관리](https://prompthub.ai) — 제품 홈페이지; 버전 관리, 웹 인터페이스 및 $50–200/월 가격 주장의 기초',
-          '[Vellum — LLM 배포 및 A/B 테스트](https://www.vellum.ai) — 제품 개요 및 가격 페이지; 트래픽 분배, 승인 워크플로우 및 $200–500/월 가격 주장의 기초',
+          '[Vellum — LLM 배포 및 A/B 테스트](https://docs.vellum.ai) — 제품 개요 및 가격 페이지; 트래픽 분배, 승인 워크플로우 및 $200–500/월 가격 주장의 기초',
           '[Promptfoo — 오픈소스 프롬프트 테스트](https://www.promptfoo.dev) — GitHub 저장소 및 문서; MIT 라이선스, YAML 구성 및 GitHub Actions 통합 주장의 기초',
           '[PromptQuorum — 멀티 모델 디스패치](https://promptquorum.com) — 멀티 모델 비교 도구; 25개 이상의 모델 디스패치 및 멀티 모델 비교 주장의 기초',
           '[Confident AI](https://confident.ai) — seat당 $19.99–49.99/월에 50개 이상의 내장 메트릭을 갖춘 신흥 평가 플랫폼',
