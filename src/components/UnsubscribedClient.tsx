@@ -42,7 +42,7 @@ export function UnsubscribedClient({ lang, status }: { lang: Lang; status: Statu
   const homeHref = lang === 'en' ? '/' : `/${lang}`
 
   return (
-    <main id="main" className="min-h-screen flex items-center justify-center bg-white px-4 py-16">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 py-16">
       <div className="max-w-lg w-full text-center space-y-6">
         <h1 className="text-3xl font-bold text-gray-900">{msg.title}</h1>
         <p className="text-base text-gray-600 leading-relaxed">{msg.body}</p>
@@ -53,6 +53,6 @@ export function UnsubscribedClient({ lang, status }: { lang: Lang; status: Statu
           {c.home}
         </a>
       </div>
-    </main>
+    </div>
   )
 }

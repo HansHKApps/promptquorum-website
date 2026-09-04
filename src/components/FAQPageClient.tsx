@@ -114,7 +114,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
   const t = (T[lang as keyof typeof T] ?? T.en)!
 
   return (
-    <main className="min-h-screen bg-white pt-20 pb-20">
+    <div className="min-h-screen bg-white pt-20 pb-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">{t.h1}</h1>
@@ -189,7 +189,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
 
