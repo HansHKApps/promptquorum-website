@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'chatbox',
   name: 'Chatbox',
-  layer: 'webui',
+  categories: ['general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'external',
-  license: 'GPLv3',
+  license: 'GPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 41637,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'chatboxai.app',

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'logseq-copilot',
   name: 'logseq-copilot',
-  layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'OpenAI API', 'Google Gemini API'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 317,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs'],
   url: 'github.com/logancyang/logseq-copilot',

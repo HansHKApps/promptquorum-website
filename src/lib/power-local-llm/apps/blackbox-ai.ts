@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'blackbox-ai',
   name: 'Blackbox AI (CLI)',
-  layer: 'cli',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code', 'chat'],
   url: 'blackbox.ai/cli', // corrected 2026-09-04: github.com/Blackboxai/blackbox 404s; product is closed-source, no public repo

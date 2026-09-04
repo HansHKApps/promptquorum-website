@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'animatediff',
   name: 'AnimateDiff',
-  layer: 'image',
+  categories: ['video-generation', 'image-generation'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 12200,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
   url: 'github.com/guoyww/AnimateDiff',

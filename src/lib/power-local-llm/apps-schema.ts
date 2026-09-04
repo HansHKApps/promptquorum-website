@@ -10,33 +10,21 @@
 // reviewed. See the bottom of this file for the field-by-field mapping notes.
 
 import type { Language } from '@/lib/blog/blogContent'
-import type { LayerKey, OSKey, ToolRecord } from './apps/types'
+import type { OSKey, ToolRecord } from './apps/types'
+import { CATEGORY_GROUP_LABEL, CATEGORY_SUB_GROUP, type CategoryGroupKey } from './apps/categories'
 
-// One ItemList per `layer` category — this mirrors the *granularity* of the
-// current page-helpers.tsx behaviour (one ItemList per article *section*),
-// since each section in the old article corresponds 1:1 to a tool layer
-// (e.g. "Coding Assistants" section ≈ layer 'ide'/'cli'). Grouping by
-// `layer` reproduces that section-shaped structure from the new data model
-// without depending on the article's own section list.
-const LAYER_LABELS: Record<LayerKey, Partial<Record<Language, string>>> = {
-  runtime: { en: 'Local LLM Runtimes' },
-  desktop: { en: 'Desktop Chat Apps' },
-  webui: { en: 'Web UIs' },
-  ide: { en: 'IDE Integrations' },
-  cli: { en: 'Command-Line Tools' },
-  rag: { en: 'RAG & Document Chat' },
-  agent: { en: 'AI Agents & Frameworks' },
-  stt: { en: 'Speech-to-Text' },
-  tts: { en: 'Text-to-Speech' },
-  vision: { en: 'Vision & Multimodal' },
-  mobile: { en: 'Mobile & Edge' },
-  tools: { en: 'Productivity Tools' },
-  image: { en: 'Image Generation' },
-}
-
-function layerLabel(layer: LayerKey, lang: Language): string {
-  const labels = LAYER_LABELS[layer]
-  return labels[lang] ?? labels.en ?? layer
+// One ItemList per top-level category group — this mirrors the *granularity*
+// of the current page-helpers.tsx behaviour (one ItemList per article
+// *section*), since each section in the old article corresponds roughly to
+// one of the 7 taxonomy groups (e.g. "Coding Assistants" section ≈ group
+// 'code-development'). Grouping by a tool's PRIMARY category's group
+// reproduces that section-shaped structure from the new data model without
+// depending on the article's own section list.
+function groupLabel(group: CategoryGroupKey, lang: Language): string {
+  // CATEGORY_GROUP_LABEL is English-only today; fall back to it for every
+  // locale until per-language labels are added.
+  void lang
+  return CATEGORY_GROUP_LABEL[group]
 }
 
 const OS_LABELS: Record<OSKey, string> = {
@@ -55,7 +43,7 @@ function buildSoftwareApplication(tool: ToolRecord, lang: Language): Record<stri
     '@type': 'SoftwareApplication',
     '@id': `https://promptquorum.com/power-local-llm/local-llm-software-directory-2026#software-${tool.slug}`,
     name: tool.name,
-    applicationCategory: layerLabel(tool.layer, lang),
+    applicationCategory: groupLabel(CATEGORY_SUB_GROUP[tool.categories[0]], lang),
   }
 
   // url: field is stored as a bare domain/path ("ollama.com"), no scheme —
@@ -120,17 +108,18 @@ function buildSoftwareApplication(tool: ToolRecord, lang: Language): Record<stri
  * produces from markdown rows. Pure function — no JSX, no side effects.
  */
 export function buildLocalAiAppsItemListSchema(apps: ToolRecord[], lang: Language): object[] {
-  const byLayer = new Map<LayerKey, ToolRecord[]>()
+  const byGroup = new Map<CategoryGroupKey, ToolRecord[]>()
   for (const tool of apps) {
-    const group = byLayer.get(tool.layer)
-    if (group) group.push(tool)
-    else byLayer.set(tool.layer, [tool])
+    const group = CATEGORY_SUB_GROUP[tool.categories[0]]
+    const existing = byGroup.get(group)
+    if (existing) existing.push(tool)
+    else byGroup.set(group, [tool])
   }
 
-  return Array.from(byLayer.entries()).map(([layer, tools]) => ({
+  return Array.from(byGroup.entries()).map(([group, tools]) => ({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: layerLabel(layer, lang),
+    name: groupLabel(group, lang),
     itemListElement: tools.map((tool, i) => ({
       '@type': 'ListItem',
       position: i + 1,

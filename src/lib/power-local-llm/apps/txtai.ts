@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'txtai',
   name: 'txtai',
-  layer: 'rag',
+  categories: ['rag-frameworks', 'embeddings-indexing'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['llama.cpp'],
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 12900,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'docs'],
   url: 'github.com/neuml/txtai',

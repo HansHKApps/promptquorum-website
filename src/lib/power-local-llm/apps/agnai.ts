@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'agnai',
   name: 'Agnai',
-  layer: 'tools',
+  categories: ['roleplay-companions'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
-  worksWith: null,
+  worksWith: ['KoboldAI'],
   engine: 'external',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 776,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'agnai.chat',

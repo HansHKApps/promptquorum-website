@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dspy',
   name: 'DsPy',
-  layer: 'agent',
+  categories: ['prompt-tooling-evals', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'SGLang'],
   engine: 'library',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 37700,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build'],
   url: 'github.com/stanfordnlp/dspy',

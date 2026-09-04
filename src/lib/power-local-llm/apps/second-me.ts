@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'second-me',
   name: 'Second Me',
-  layer: 'tools',
+  categories: ['fine-tuning-lora', 'personal-assistants'],
+  interfaces: ['web', 'library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 16000,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build'],
   url: 'github.com/mindverse/Second-Me',

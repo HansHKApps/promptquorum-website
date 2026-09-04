@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'jarvis',
   name: 'Jarvis',
-  layer: 'desktop',
+  categories: ['realtime-voice-agents', 'personal-assistants'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Free (open source)',
+  license: 'Open source',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['audio', 'chat'],
   url: 'jarvis-mac.lovable.app',

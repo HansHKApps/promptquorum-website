@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'khoj',
   name: 'Khoj',
-  layer: 'rag',
+  categories: ['document-pdf-chat', 'personal-assistants'],
+  interfaces: ['web', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'OpenAI API'],
   engine: 'both',
   license: 'AGPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 37068,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs', 'chat'],
   url: 'khoj.dev',

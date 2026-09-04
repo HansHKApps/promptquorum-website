@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'letta',
   name: 'Letta (formerly MemGPT)',
-  layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'vLLM', 'OpenAI API', 'Anthropic API'],
   engine: 'library',
   license: 'Apache 2.0',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 24617,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent'],
   url: 'letta.com',

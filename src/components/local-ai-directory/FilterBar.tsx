@@ -11,13 +11,15 @@ import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from './icons'
 import { cn } from '@/lib/utils'
 import type { FilterOptionCount, FilterState } from './types'
+import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 
 const GROUP_LABELS: Record<keyof FilterState, string> = {
   locality: 'Runs',
   engine: 'How it runs models',
   worksWith: 'Works with',
   platforms: 'Platform',
-  layer: 'Layer',
+  category: 'Category',
+  interface: 'Interface',
   price: 'Price',
 }
 
@@ -26,11 +28,8 @@ const VALUE_LABELS: Partial<Record<keyof FilterState, Record<string, string>>> =
   engine: { builtin: 'Built-in engine', external: 'Needs external engine', both: 'Either', library: 'Library / SDK' },
   price: { free: 'Free', freemium: 'Freemium', paid: 'Paid' },
   platforms: { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' },
-  layer: {
-    runtime: 'Runtime', desktop: 'Desktop app', webui: 'Web UI', ide: 'IDE plugin', cli: 'CLI',
-    rag: 'RAG', agent: 'Agent', stt: 'Speech-to-text', tts: 'Text-to-speech', vision: 'Vision',
-    mobile: 'Mobile', tools: 'Tools', image: 'Image generation',
-  },
+  category: CATEGORY_SUB_LABEL,
+  interface: INTERFACE_LABEL,
 }
 
 export const FILTER_GROUP_LABELS = GROUP_LABELS
@@ -40,7 +39,7 @@ export function filterOptionLabel(group: keyof FilterState, value: string): stri
   return VALUE_LABELS[group]?.[value] ?? value
 }
 
-const GROUPS: (keyof FilterState)[] = ['locality', 'engine', 'worksWith', 'platforms', 'layer', 'price']
+const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
 
 function FilterGroup({
   group,
@@ -111,7 +110,7 @@ export function FilterBar({
   return (
     <div
       id="local-ai-filter-panel"
-      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-5 border-t border-primary/10 pt-4 mt-3"
+      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-5 border-t border-primary/10 pt-4 mt-3"
     >
       {GROUPS.map((group) => (
         <FilterGroup

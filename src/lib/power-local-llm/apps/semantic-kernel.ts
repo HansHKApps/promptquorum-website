@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'semantic-kernel',
   name: 'Semantic Kernel',
-  layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],
   engine: 'library',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 28528,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build'],
   url: 'learn.microsoft.com/semantic-kernel',

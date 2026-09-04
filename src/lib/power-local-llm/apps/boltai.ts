@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'boltai',
   name: 'BoltAI',
-  layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio'],
   engine: 'both',
-  license: 'Proprietary',
+  license: 'Closed source',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'boltai.com',

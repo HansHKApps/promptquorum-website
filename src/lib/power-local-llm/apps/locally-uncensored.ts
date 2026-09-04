@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'locally-uncensored',
   name: 'Locally Uncensored',
-  layer: 'desktop',
+  categories: ['general-chat-clients', 'image-generation', 'agent-frameworks'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['win'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'builtin',
-  license: 'AGPL-3.0',
+  license: 'AGPL 3.0',
   price: 'paid',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 1400,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'code', 'image'],
   url: 'locallyuncensored.com',

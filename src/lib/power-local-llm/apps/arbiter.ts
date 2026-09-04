@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'arbiter',
   name: 'Arbiter',
-  layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios'],
-  worksWith: null,
+  worksWith: ['LM Studio', 'Ollama'],
   engine: 'both',
-  license: 'Free (closed)',
+  license: 'Closed source',
   price: 'paid',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['phone', 'chat'],
   url: 'apps.apple.com/app/arbiter-local-ai-chat/id6747954532',

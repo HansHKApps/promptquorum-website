@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'text-generator',
   name: 'Text Generator',
-  layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'KoboldCpp', 'LocalAI'],
   engine: 'external',
   license: 'MIT',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 2000,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs'],
   url: 'github.com/nhaouari/obsidian-textgenerator-plugin',

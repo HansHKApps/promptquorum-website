@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tensorrt-llm',
   name: 'TensorRT-LLM',
-  layer: 'runtime',
+  categories: ['inference-engines'],
+  interfaces: ['cli', 'library'],
   locality: 'local',
   platforms: ['win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 14500,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/NVIDIA/TensorRT-LLM',

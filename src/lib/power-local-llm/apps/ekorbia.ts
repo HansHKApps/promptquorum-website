@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ekorbia',
   name: 'Ekorbia',
-  layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],
-  worksWith: null,
+  worksWith: ['Ollama', 'OpenAI API'],
   engine: 'builtin',
   license: 'MIT',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'ekorbia.com',

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'openhands',
   name: 'OpenHands',
-  layer: 'ide',
+  categories: ['code-assistants-ide-plugins', 'agent-frameworks'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['LM Studio', 'Ollama', 'vLLM', 'SGLang'],
   engine: 'external',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 86000,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code', 'agent'],
   url: 'github.com/All-Hands-AI/OpenHands',

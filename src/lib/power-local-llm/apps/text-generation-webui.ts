@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'text-generation-webui',
   name: 'text-generation-webui',
-  layer: 'webui',
+  categories: ['inference-engines'],
+  interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 47600,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/oobabooga/text-generation-webui',

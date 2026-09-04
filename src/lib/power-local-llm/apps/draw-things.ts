@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'draw-things',
   name: 'Draw Things',
-  layer: 'desktop',
+  categories: ['image-generation'],
+  interfaces: ['desktop', 'mobile'],
   locality: 'local',
   platforms: ['mac', 'ios'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Free (closed)',
+  license: 'Closed source',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image', 'phone'],
   url: 'drawthings.ai',

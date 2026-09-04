@@ -6,7 +6,7 @@
 // -right panel is Dialog.Content with directional Tailwind transitions.
 
 import * as Dialog from '@radix-ui/react-dialog'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
@@ -14,6 +14,8 @@ import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon } from './icons'
+import { FILTER_VALUE_LABELS } from './FilterBar'
+import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 
@@ -38,6 +40,70 @@ function joinOrUnknown(values: string[] | null): ReactNode {
   return values.join(', ')
 }
 
+/** Renders the reader-facing label for an enum value, never the raw key ("rag", "external"). */
+function labelFor(group: keyof typeof FILTER_VALUE_LABELS, value: string | null): ReactNode {
+  if (!value || value === 'TODO') return null
+  return FILTER_VALUE_LABELS[group]?.[value] ?? value
+}
+
+function labelList(group: keyof typeof FILTER_VALUE_LABELS, values: string[] | null): ReactNode {
+  if (!values || values.length === 0) return null
+  return values.map((v) => FILTER_VALUE_LABELS[group]?.[v] ?? v).join(', ')
+}
+
+function FounderClaimBox({ appName }: { appName: string }) {
+  const [expanded, setExpanded] = useState(false)
+  return (
+    <div className="rounded-xl border border-dashed border-primary/25 bg-primary/[0.03] p-4">
+      <p className="text-sm text-text-secondary italic">
+        Claim this entry — if you build or maintain {appName}, email hello@promptquorum.com to add a founder statement.
+      </p>
+      <button
+        type="button"
+        onClick={() => setExpanded((v) => !v)}
+        aria-expanded={expanded}
+        className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+      >
+        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-primary text-[11px] leading-none">
+          {expanded ? '–' : '+'}
+        </span>
+        {expanded ? 'Hide details' : 'Why claim it'}
+      </button>
+      {expanded && (
+        <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-primary/10 pt-3">
+          <p>
+            <span className="font-semibold text-text-primary">Get the "Verified" badge.</span> Claimed entries carry
+            a visible marker showing the details on this page were confirmed by the people who actually build{' '}
+            {appName}, not just pulled from a repository.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Correct the record.</span> Flag wrong specs, outdated
+            benchmarks, or missing features directly to us, and they get fixed in the article — before the next
+            reader sees them.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Add your own statement.</span> A short founder note —
+            why you built it, what it's best at, where it falls short — runs next to the editorial review, in your
+            own words.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Free, ongoing visibility.</span> No cost, no ad spend.
+            Everyone who compares {appName} against alternatives on this site sees your correction and your
+            statement.
+          </p>
+          <p className="pt-1">
+            Email{' '}
+            <a href="mailto:hello@promptquorum.com" className="text-primary hover:underline">
+              hello@promptquorum.com
+            </a>{' '}
+            — put {appName} in the subject line.
+          </p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function ToolDrawer({
   app,
   allApps,
@@ -56,7 +122,7 @@ export function ToolDrawer({
   const open = app != null
 
   const alternatives = app
-    ? allApps.filter((a) => a.slug !== app.slug && a.layer === app.layer).slice(0, 6)
+    ? allApps.filter((a) => a.slug !== app.slug && a.categories.some((c) => app.categories.includes(c))).slice(0, 6)
     : []
 
   return (
@@ -84,9 +150,11 @@ export function ToolDrawer({
               </Dialog.Description>
 
               <div className="flex flex-wrap items-center gap-2 mb-5">
-                <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-slate-50 text-slate-600 border-slate-200">
-                  {STATUS_LABEL[app.status]}
-                </span>
+                {app.status !== 'listed' && (
+                  <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-emerald-50 text-emerald-700 border-emerald-200">
+                    {STATUS_LABEL[app.status]}
+                  </span>
+                )}
                 {app.stars != null && (
                   <span className="inline-flex items-center gap-1 text-xs text-text-secondary">
                     <StarIcon className="h-3.5 w-3.5 text-amber-400" />
@@ -108,16 +176,17 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
-                  <DetailRow label="Runs" value={app.locality === 'TODO' ? null : app.locality} />
-                  <DetailRow label="Engine" value={app.engine === 'TODO' ? null : app.engine} />
-                  <DetailRow label="Price" value={app.price === 'TODO' ? null : app.price} />
-                  <DetailRow label="License" value={app.license} />
-                  <DetailRow label="Platforms" value={joinOrUnknown(app.platforms)} />
+                  <DetailRow label="Category" value={app.categories.map((c) => CATEGORY_SUB_LABEL[c]).join(', ')} />
+                  <DetailRow label="Interface" value={app.interfaces.map((i) => INTERFACE_LABEL[i]).join(', ')} />
+                  <DetailRow label="Runs" value={labelFor('locality', app.locality)} />
+                  <DetailRow label="Engine" value={labelFor('engine', app.engine)} />
+                  <DetailRow label="Price" value={labelFor('price', app.price)} />
+                  <DetailRow label="License" value={app.license === 'TODO' ? null : app.license} />
+                  <DetailRow label="Platforms" value={labelList('platforms', app.platforms)} />
                   <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
-                  <DetailRow label="Layer" value={app.layer} />
                   <DetailRow
                     label="Hardware"
-                    value={computeHardwareDisplay(app.hardware, machine).known ? <HardwareBlock hardware={app.hardware} machine={machine} compact /> : null}
+                    value={computeHardwareDisplay(app.hardware, machine, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact /> : null}
                   />
                   <DetailRow label="Added" value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow label="Last verified" value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />
@@ -134,9 +203,7 @@ export function ToolDrawer({
                     <p><span className="font-semibold text-text-primary">Limits:</span> {app.founder.limits}</p>
                   </div>
                 ) : (
-                  <p className="text-sm text-text-secondary italic">
-                    Claim this entry — if you build or maintain {app.name}, email hello@promptquorum.com to add a founder statement.
-                  </p>
+                  <FounderClaimBox key={app.slug} appName={app.name} />
                 )}
               </section>
 
