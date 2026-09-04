@@ -207,6 +207,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'jarvis-mac-review',
   'locally-ai-review',
   'arbiter-local-ai-chat-review',
+
+  // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
+  'chatty-mini-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 213,
+    "totalCount": 214,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 114,
+    "totalCount": 115,
     "capped": true
   },
   "vLLM": {
@@ -3521,6 +3521,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
         "url": "/power-local-llm/locally-ai-review",
@@ -3550,21 +3558,21 @@
         "url": "/power-local-llm/voice-assistant-local-mobile-offline",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "PocketPal AI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
@@ -3636,18 +3644,10 @@
         "url": "/power-local-llm/voice-assistant-local-mobile-offline",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "multilingual-local-llms",
-        "title": "Multilingual Local LLMs: Best Models for Non-English Languages in 2026",
-        "url": "/local-llms/multilingual-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Private LLM": {
     "articles": [
@@ -3656,6 +3656,14 @@
         "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
+        "dateModified": "2026-09-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -3722,18 +3730,10 @@
         "url": "/local-llms/mobile-local-llms",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-07-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "LLM Farm": {
     "articles": [
@@ -3817,6 +3817,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -3856,7 +3864,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Maid": {
@@ -3868,6 +3876,14 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-08-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -3902,7 +3918,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Enclave AI": {
@@ -3969,6 +3985,84 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "Loci AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-ai-review",
+        "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
+        "url": "/power-local-llm/locally-ai-review",
+        "dateModified": "2026-09-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-08-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "arbiter-local-ai-chat-review",
+        "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bobe-review",
+        "title": "BoBe Review 2026: Free Local AI Assistant for Mac",
+        "url": "/power-local-llm/bobe-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "jarvis-mac-review",
+        "title": "Jarvis (Mac) Review 2026: Offline Voice AI for macOS",
+        "url": "/power-local-llm/jarvis-mac-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "osaurus-ai-review",
+        "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
+        "url": "/power-local-llm/osaurus-ai-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "voice-ai-writers-cloud-vs-local",
+        "title": "Best AI Writing Tools for Writers in 2026: Cloud vs. Local, Cost, Privacy & Productivity",
+        "url": "/power-local-llm/voice-ai-writers-cloud-vs-local",
+        "dateModified": "2026-08-22",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 9,
     "capped": false
   },
   "Stable Diffusion": {
