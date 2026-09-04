@@ -172,4 +172,25 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'edge-ai-hardware-for-local-llms':              'edge-ai-hardware-for-local-llms',
   'vla-models-robots-local-inference':            'vla-models-robots-local-inference',
   'vlm-video-analytics-drones-edge':              'vlm-video-analytics-drones-edge',
+
+  // Aori review — 2026-09-04
+  'aori-ai-personal-agent-review':                'aori-ai-personal-agent-review',
+  // RAPR AI review — 2026-09-04
+  'rapr-ai-review-2026':                          'rapr-ai-review-2026',
+  // Open Felix review — 2026-09-04
+  'open-felix-review-2026':                       'open-felix-review-2026',
+  // BoBe review — 2026-09-04
+  'bobe-review-2026':                             'bobe-review-2026',
+  // Osaurus review — 2026-09-04
+  'osaurus-ai-review-2026':                       'osaurus-ai-review-2026',
+  // Hanoki review — 2026-09-04
+  'hanoki-review-2026':                           'hanoki-review-2026',
+  // Voxa review — 2026-09-04
+  'voxa-review-2026':                             'voxa-review-2026',
+  // Jarvis (Mac) review — 2026-09-04
+  'jarvis-mac-review-2026':                       'jarvis-mac-review-2026',
+  // Locally AI review — 2026-09-04
+  'locally-ai-review-2026':                       'locally-ai-review-2026',
+  // Arbiter review — 2026-09-04
+  'arbiter-local-ai-chat-review-2026':            'arbiter-local-ai-chat-review-2026',
 }
