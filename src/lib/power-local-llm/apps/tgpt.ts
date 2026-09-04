@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'tgpt',
   name: 'tgpt',
   layer: 'cli',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'GPL 3.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 3300,
   addedDate: null, // TODO: not derivable from source article

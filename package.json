@@ -33,7 +33,8 @@
     "indexnow": "node scripts/indexnow-direct.mjs",
     "freshness": "node scripts/freshness.mjs",
     "deploy:now": "bash scripts/deploy-now.sh",
-    "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs"
+    "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs",
+    "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",

@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'styletts-2',
   name: 'StyleTTS 2',
   layer: 'tts',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'library',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 6300,
   addedDate: null, // TODO: not derivable from source article

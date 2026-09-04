@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'bmo-chatbot',
   name: 'BMO Chatbot',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 532,
   addedDate: null, // TODO: not derivable from source article

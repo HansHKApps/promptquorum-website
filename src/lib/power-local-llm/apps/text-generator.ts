@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'text-generator',
   name: 'Text Generator',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT',
-  price: 'TODO',
+  price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 2000,
   addedDate: null, // TODO: not derivable from source article

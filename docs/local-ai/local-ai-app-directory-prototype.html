@@ -1,0 +1,549 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local AI App Directory</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --surface-2:#e9edf3; --line:#d5dbe5; --line-strong:#b7c0cf;
+  --ink:#141a24; --ink-2:#4a5568; --ink-3:#7b8798;
+  --accent:#2451d6; --accent-ink:#ffffff; --accent-soft:#e3e9fb;
+  --local:#1f8a4c; --local-soft:#dff3e6; --hybrid:#b26a00; --hybrid-soft:#fdeccc; --cloud:#b3261e; --cloud-soft:#fbdedb;
+  --meter:#cfd6e2; --shadow:0 1px 2px rgba(20,26,36,.06),0 8px 24px rgba(20,26,36,.08);
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1219; --surface:#161c26; --surface-2:#1f2733; --line:#2a3442; --line-strong:#3a4758;
+    --ink:#e8edf4; --ink-2:#aab6c6; --ink-3:#74829a;
+    --accent:#7d9cff; --accent-ink:#0b1020; --accent-soft:#1e2a4d;
+    --local:#4ccf82; --local-soft:#143a25; --hybrid:#f0b350; --hybrid-soft:#3d2c0c; --cloud:#ff7b72; --cloud-soft:#43201c;
+    --meter:#2a3442; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1219; --surface:#161c26; --surface-2:#1f2733; --line:#2a3442; --line-strong:#3a4758;
+  --ink:#e8edf4; --ink-2:#aab6c6; --ink-3:#74829a;
+  --accent:#7d9cff; --accent-ink:#0b1020; --accent-soft:#1e2a4d;
+  --local:#4ccf82; --local-soft:#143a25; --hybrid:#f0b350; --hybrid-soft:#3d2c0c; --cloud:#ff7b72; --cloud-soft:#43201c;
+  --meter:#2a3442; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:14px;line-height:1.5}
+h1,h2,h3{font-family:"Manrope","IBM Plex Sans",system-ui,sans-serif;margin:0;text-wrap:balance}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.wrap{max-width:1280px;margin:0 auto;padding:28px 24px 64px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+h1{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-top:6px}
+.sub{color:var(--ink-2);max-width:60ch;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,auto);gap:22px}
+.stat{text-align:right}
+.stat b{display:block;font-family:"Manrope";font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.stat span{font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em}
+.stat.local b{color:var(--local)}.stat.hybrid b{color:var(--hybrid)}.stat.cloud b{color:var(--cloud)}
+
+.want{margin:20px 0 10px}
+.want .eyebrow{margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:500;font-size:13px}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+.layout{display:block;margin-top:16px}
+.fbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.fpanel{display:none;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px 22px;padding:14px 0 4px}
+.fpanel.open{display:grid}
+.fgroup h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:6px}
+.fgroup label{display:flex;align-items:center;gap:8px;padding:2px 0;cursor:pointer;color:var(--ink-2);font-size:13px}
+.fgroup label:hover{color:var(--ink)}
+.fgroup input{accent-color:var(--accent)}
+.fgroup .cnt{margin-left:auto;font-size:11px;color:var(--ink-3)}
+.active-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.active-chips .chip{padding:3px 9px;font-size:12px}
+.fbtn{background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:8px 12px;cursor:pointer;font-weight:500}
+.fbtn[aria-expanded="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.more{display:flex;justify-content:center;margin:18px 0 6px}
+.more .btn{padding:10px 22px}
+.article{max-width:760px;margin:48px auto 0}
+.article h2{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:36px 0 12px}
+.article p,.article li{color:var(--ink-2);font-size:15px;line-height:1.6}
+.article table{font-size:13px}
+.article td,.article th{padding:8px 10px}
+.article th{cursor:default}
+.qa{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.qa dt{font-weight:600;white-space:nowrap}.qa dd{margin:0;color:var(--ink-2)}
+details{border-top:1px solid var(--line);padding:10px 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+details summary::after{content:"+";color:var(--ink-3)}details[open] summary::after{content:"−"}
+.pagehead{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.meta{font-size:12px;color:var(--ink-3);display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.loc-dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.reset{background:none;border:1px solid var(--line-strong);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12px}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:8px 12px}
+.search input{border:0;background:transparent;flex:1;font:inherit;color:var(--ink);outline:none}
+.search kbd{font-family:"IBM Plex Mono";font-size:11px;color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+select{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:8px 10px;font:inherit}
+.count{color:var(--ink-3);font-size:13px}
+.viewbtn{background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:7px 10px;cursor:pointer}
+.viewbtn[aria-pressed="true"]{background:var(--surface-2)}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:1180px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.card .head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.card h2{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.card .layer{font-size:12px;color:var(--ink-3);margin-top:2px}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:600;white-space:nowrap}
+.badge.local{background:var(--local-soft);color:var(--local)}
+.badge.hybrid{background:var(--hybrid-soft);color:var(--hybrid)}
+.badge.cloud{background:var(--cloud-soft);color:var(--cloud)}
+.badge.status{background:var(--surface-2);color:var(--ink-2)}
+.badge.status.verified{background:var(--accent-soft);color:var(--accent)}
+.badge.status.tested{background:var(--accent);color:var(--accent-ink)}
+.desc{color:var(--ink-2);margin:0;font-size:13px}
+.engine{font-size:12px;color:var(--ink-2);display:flex;align-items:center;gap:8px}
+.eng{font-family:"IBM Plex Mono";font-size:11px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:1px 6px}
+.works{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-family:"IBM Plex Mono";font-size:11px;border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:var(--ink-2)}
+.tag.dim{opacity:.45;border-style:dashed}
+.hw{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hw.one{grid-template-columns:1fr}
+.meter{font-size:11px;color:var(--ink-3)}
+.meter b{display:block;font-family:"IBM Plex Mono";font-weight:500;color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
+.bar{height:4px;background:var(--meter);border-radius:2px;margin-top:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:10px;font-size:12px;color:var(--ink-3);margin-top:auto}
+.foot .os{display:flex;gap:6px}
+.foot .os span{font-family:"IBM Plex Mono";font-size:11px}
+.stars{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums}
+.arts{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;color:var(--accent)}
+.artlist{list-style:none;margin:0;padding:0;font-size:13px}
+.artlist li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.artlist li:last-child{border:0}
+.artlist .d{font-family:"IBM Plex Mono";font-size:11px;color:var(--ink-3);white-space:nowrap}
+.artlist h4{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:10px 0 4px;font-weight:600}
+.cta{display:flex;gap:8px}
+.cta .btn{flex:1;text-align:center;padding:8px 12px}
+.btn.ghost{background:transparent}
+
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.tablewrap{overflow-x:auto;border-radius:var(--radius)}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
+th.active{color:var(--accent)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:13px}
+tr.row{cursor:pointer}tr.row:hover td{background:var(--surface-2)}
+td.num{font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums;text-align:right}
+
+.empty{grid-column:1/-1;padding:40px;text-align:center;color:var(--ink-3);border:1px dashed var(--line-strong);border-radius:var(--radius)}
+
+.disclaimer{margin-top:28px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink-2);font-size:12px;max-width:none}
+.disclaimer b{color:var(--ink)}
+
+/* drawer */
+.overlay{position:fixed;inset:0;background:rgba(10,14,20,.45);display:none;z-index:20}
+.overlay.open{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(560px,100%);background:var(--surface);border-left:1px solid var(--line);box-shadow:var(--shadow);transform:translateX(100%);transition:transform .22s ease;z-index:21;overflow-y:auto;padding:24px}
+.drawer.open{transform:none}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}.card{transition:none}}
+.drawer .close{position:absolute;top:14px;right:14px;background:var(--surface-2);border:0;border-radius:6px;width:30px;height:30px;cursor:pointer}
+.drawer h2{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-top:6px}
+.drawer .links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.btn{border:1px solid var(--line-strong);background:var(--surface);border-radius:7px;padding:7px 12px;font-size:13px;font-weight:500;text-decoration:none;color:var(--ink)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+section.sec{border-top:1px solid var(--line);padding:16px 0}
+section.sec h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.kv{display:grid;grid-template-columns:130px 1fr;gap:6px 12px;font-size:13px}
+.kv dt{color:var(--ink-3)}.kv dd{margin:0}
+.slot{border:1px dashed var(--line-strong);border-radius:8px;padding:12px 14px;color:var(--ink-3);font-size:13px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.slot a{white-space:nowrap}
+.founder{background:var(--surface-2);border-radius:8px;padding:12px 14px;font-size:13px}
+.founder .who{font-size:11px;color:var(--ink-3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.founder p{margin:0 0 8px}
+.review{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-size:13px}
+.scores{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:12px;margin-top:8px}
+.scores .bar{margin:6px 0 0}
+.changelog{font-size:12px;color:var(--ink-2)}
+.changelog li{margin-bottom:4px}
+.note{font-size:12px;color:var(--ink-3);margin-top:6px}
+
+@media (max-width:860px){
+  .wrap{padding:16px 14px 48px}
+  h1{font-size:26px}
+  .pagehead{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(4,1fr);gap:10px}
+  .stat{text-align:left}.stat b{font-size:20px}
+  .toolbar .search{flex:1 1 100%}
+  .toolbar select{flex:1}
+  .want .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .want .chip{flex:0 0 auto}
+  .article h2{font-size:20px}
+  .drawer{width:100%}
+}
+</style>
+
+<div class="wrap">
+<header class="pagehead">
+  <div>
+    <div class="eyebrow">PromptQuorum · Power Local LLM · Overview &amp; reference</div>
+    <h1>Local AI App Directory</h1>
+    <p class="sub">Apps, runtimes and frameworks for running AI on your own hardware. Filter by what you want to do, what you already run, and what your machine can carry.</p>
+    <div class="meta"><span>Last updated 2026-09-03</span><span>Reviewed every 6 months · next November 2026</span><span>By Hans Kuepper</span></div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="want">
+  <div class="eyebrow">I want to…</div>
+  <div class="chips" id="wantChips"></div>
+</div>
+
+<div class="layout">
+  <main>
+    <div class="fbar">
+    <div class="toolbar" style="margin:0">
+      <button class="fbtn" id="ftoggle" aria-expanded="false" aria-controls="filters">Filters</button>
+      <div class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search apps, e.g. GGUF, iPhone, RAG…" aria-label="Search apps"><kbd>⌘K</kbd></div>
+      <select id="machine" aria-label="My machine" title="Changes how memory requirements are shown">
+        <option value="dgpu">My machine: discrete GPU (RAM + VRAM)</option>
+        <option value="apple">My machine: Apple Silicon (unified memory)</option>
+        <option value="cpu">My machine: CPU only</option>
+      </select>
+      <select id="sort" aria-label="Sort by">
+        <option value="stars">Sort: GitHub stars</option>
+        <option value="name">Sort: Name A→Z</option>
+        <option value="added">Sort: Newest added</option>
+        <option value="ram">Sort: Lowest RAM first</option>
+        <option value="status">Sort: Verification status</option>
+      </select>
+      <button class="viewbtn" id="vCards" aria-pressed="true">Cards</button>
+      <button class="viewbtn" id="vTable" aria-pressed="false">Table</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="fpanel" id="filters"></div>
+    <div class="active-chips" id="active"></div>
+    </div>
+    <div class="grid" id="grid" style="margin-top:14px"></div>
+    <div class="more" id="more"></div>
+    <div class="tablewrap" id="tablewrap" hidden></div>
+    <section class="article">
+      <h2>Quick answer</h2>
+      <dl class="qa">
+        <dt>Runtime</dt><dd>Ollama for ~95% of readers; llama.cpp underneath most tools; vLLM for multi-user serving.</dd>
+        <dt>Chat</dt><dd>LM Studio (best GUI), Jan (privacy-first) or Open WebUI (browser-based self-host).</dd>
+        <dt>IDE coding</dt><dd>Continue.dev for autocomplete and chat; Cline for autonomous edits.</dd>
+        <dt>Terminal</dt><dd>Aider for git-native diffs; aichat for command generation.</dd>
+        <dt>Documents</dt><dd>AnythingLLM (easiest), PrivateGPT (offline-leaning), Open WebUI (built-in RAG).</dd>
+        <dt>Agents</dt><dd>LangChain, CrewAI or Hermes Agent for multi-step workflows.</dd>
+        <dt>Voice</dt><dd>Whisper.cpp + Piper TTS, fully local.</dd>
+        <dt>Images</dt><dd>Stable Diffusion with ComfyUI or Invoke AI.</dd>
+        <dt>Mobile</dt><dd>PocketPal AI or MLC Chat on Android; Enclave, Locally AI or Enchanted on iOS.</dd>
+      </dl>
+
+      <h2>Common real-world stacks</h2>
+      <p>Pick the closest goal and copy the stack. Hardware floor is what it actually runs on.</p>
+      <div class="tablewrap"><table><thead><tr><th>Goal</th><th>Stack</th><th>Hardware floor</th></tr></thead><tbody>
+        <tr><td>Just chat casually</td><td>LM Studio standalone</td><td class="mono">16 GB RAM, no GPU</td></tr>
+        <tr><td>Best balance for power users</td><td>Ollama + Open WebUI</td><td class="mono">16 GB RAM, optional GPU</td></tr>
+        <tr><td>Document chat</td><td>Ollama + AnythingLLM</td><td class="mono">16 GB RAM, optional GPU</td></tr>
+        <tr><td>Coding</td><td>Ollama + Continue.dev</td><td class="mono">16 GB RAM + GPU recommended</td></tr>
+        <tr><td>Privacy-first business</td><td>Ollama + Open WebUI + PrivateGPT</td><td class="mono">32 GB RAM + 12 GB VRAM</td></tr>
+        <tr><td>Mobile / on-the-go</td><td>MLC Chat or PocketPal AI</td><td class="mono">iPhone 13+ / Pixel 7+</td></tr>
+        <tr><td>Apple Silicon</td><td>Ollama (MLX backend) or LM Studio</td><td class="mono">M2–M5, 16+ GB unified</td></tr>
+        <tr><td>Multi-user team</td><td>vLLM + Open WebUI</td><td class="mono">32+ GB RAM + multi-GPU</td></tr>
+        <tr><td>Image generation</td><td>Stable Diffusion + ComfyUI or Invoke AI</td><td class="mono">6+ GB VRAM</td></tr>
+        <tr><td>Voice assistant</td><td>Ollama + Whisper.cpp + Piper TTS</td><td class="mono">8 GB RAM, CPU-only possible</td></tr>
+      </tbody></table></div>
+
+      <h2>How the layers fit together</h2>
+      <p>Pick a runtime first — it decides what is possible. Everything above it is optional: a desktop app or web UI for chat, an IDE plugin for code, a RAG system for documents, an agent framework when one-shot calls stop being enough, image generation when you need visual output. Licence matters for commercial use: MIT and Apache 2.0 dominate; AGPL appears on a handful of UIs.</p>
+
+      <h2>How this directory stays current</h2>
+      <p>Reviewed every six months and patched between reviews. Inclusion: actively maintained (commits in the last 90 days), a verifiable licence or clear commercial-use statement, and either meaningful user share or a layer that would otherwise be empty. Projects inactive for two release cycles are removed. Founders can claim or correct their entry from the entry itself.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details><summary>What is the difference between a runtime and a desktop app?</summary><p>A runtime (Ollama, llama.cpp, vLLM) loads model weights and serves an API. A desktop app is a chat UI that calls a runtime — some bundle one (LM Studio embeds llama.cpp), others need one installed (Open WebUI calls Ollama). The "How it runs models" filter above encodes exactly this.</p></details>
+      <details><summary>Can I use several tools at the same time?</summary><p>Yes — most stacks combine 2–4 tools against one Ollama instance: Open WebUI for chat, AnythingLLM for documents, Continue.dev for coding.</p></details>
+      <details><summary>Which tools support Apple Silicon natively?</summary><p>Ollama, llama.cpp, MLX-LM, LM Studio, Jan, GPT4All, Enchanted and most Electron/Tauri apps use the Metal backend. vLLM, TensorRT-LLM and ExLlamaV2 are NVIDIA-focused. Set "My machine: Apple Silicon" above to see unified-memory requirements.</p></details>
+      <details><summary>Do all tools support GGUF?</summary><p>GGUF is native to llama.cpp and everything that wraps it. vLLM and TensorRT-LLM use their own formats; MLX-LM uses MLX-converted weights. Use the "Works with — GGUF" filter.</p></details>
+      <details><summary>Which tools are best with no coding experience?</summary><p>GPT4All (simplest install), LM Studio (most features without a terminal), Jan (most privacy-conscious), AnythingLLM (easiest document chat).</p></details>
+      <p class="note">Slide deck and PDF reference card: <a href="#" onclick="return false">download</a> · Sources: llama.cpp repository, Ollama library, LM Studio and Open WebUI documentation, Hugging Face Hub, awesome-local-llm.</p>
+    </section>
+
+    <div class="disclaimer" id="disc">
+      <b>About this data.</b> Entries are compiled with automated, AI-assisted research from official websites, repositories and other public online sources. Automated research can misread or mix up technical details — model support, hardware requirements, licensing, pricing, local-versus-cloud processing — so individual fields may be wrong, incomplete or outdated. PromptQuorum has not tested this software unless the "PromptQuorum-tested" badge and a test date are shown. Founder information is supplied by the developer and is not independently verified. PromptQuorum has no commercial relationship with the listed projects unless explicitly marked. Found a mistake? Email <a href="mailto:hello@promptquorum.com?subject=[Correction]">hello@promptquorum.com</a> with the subject "[Correction] app-name". <span class="note">Prototype note: the records below are sample data to demonstrate the layout and sorting; star counts, hardware figures and the two filled founder/review examples are illustrative, not verified.</span>
+    </div>
+  </main>
+</div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle"></div>
+
+<script>
+const LAYERS={runtime:"Runtime & inference",desktop:"Desktop app",webui:"Web UI",ide:"IDE & code editor",cli:"Terminal & CLI",rag:"RAG & documents",agent:"Agent framework",stt:"Speech-to-text",tts:"Text-to-speech",vision:"Multimodal & vision",mobile:"Mobile & edge",tools:"Specialized tools",image:"Image generation"};
+const USES={chat:"💬 Chat privately",code:"🧑‍💻 Code locally",agent:"🤖 Run an agent",docs:"📄 Chat with documents",image:"🎨 Generate images",audio:"🎙️ Transcribe or speak",phone:"📱 AI on my phone",build:"🧠 Build an AI workflow",serve:"☁️ Serve models"};
+const WW=["Ollama","LM Studio","llama.cpp","MLX","vLLM","OpenAI API","GGUF","Cloud"];
+const ENGINE={builtin:"Own engine",external:"Connects to Ollama / LM Studio / server",both:"Bundled engine + external",library:"Library / SDK"};
+const ENGINE_LONG={builtin:"Own engine — bundles its own runtime, nothing else to install",external:"Client — connects to Ollama, LM Studio or any OpenAI-compatible server you already run",both:"Bundled engine, and can also connect to an external server",library:"Library / SDK — integrated into your own code, model backend of your choice"};
+const ENG={ollama:"builtin","llama-cpp":"builtin",vllm:"builtin",localai:"builtin","mlc-llm":"builtin","mlx-lm":"builtin",koboldcpp:"builtin",llamafile:"builtin","lm-studio":"builtin",jan:"builtin",gpt4all:"builtin",anythingllm:"both",msty:"both","cherry-studio":"external","atomic-chat":"builtin",enchanted:"external","draw-things":"builtin","open-webui":"external",librechat:"external","text-gen-webui":"builtin",sillytavern:"external",lobechat:"external","page-assist":"external",continue:"external",cline:"external",tabby:"builtin",twinny:"external",aider:"external",aichat:"external",privategpt:"both",khoj:"both",dify:"external",flowise:"external",ragflow:"external",langchain:"library",crewai:"library",letta:"library","hermes-agent":"external","whisper-cpp":"builtin",piper:"builtin",pocketpal:"builtin",comfyui:"builtin",upscayl:"builtin","ai-edge-gallery":"builtin"};
+const OS={mac:"macOS",win:"Windows",linux:"Linux",ios:"iOS",android:"Android",web:"Web"};
+// slug,name,layer,locality,platforms,worksWith,license,pricing,ram,vram,cpuOnly,stars,added,status,uses,url,desc
+const T=[
+["ollama","Ollama","runtime","local","mac win linux","Ollama llama.cpp OpenAI GGUF","MIT","free",8,0,1,142000,"2023-07","tested","chat serve code","ollama.com","One-command install, OpenAI-compatible API, huge model library."],
+["llama-cpp","llama.cpp","runtime","local","mac win linux","llama.cpp GGUF OpenAI","MIT","free",4,0,1,85000,"2023-03","listed","serve chat","github.com/ggml-org/llama.cpp","Reference C/C++ inference engine behind most local tooling."],
+["vllm","vLLM","runtime","local","linux","vLLM OpenAI","Apache 2.0","free",32,16,0,52000,"2023-06","listed","serve","vllm.ai","High-throughput GPU serving with paged attention."],
+["localai","LocalAI","runtime","local","mac win linux","OpenAI GGUF llama.cpp","MIT","free",8,0,1,34000,"2023-04","listed","serve chat image audio","localai.io","Drop-in OpenAI API replacement running many model types."],
+["mlc-llm","MLC LLM","runtime","local","mac win linux ios android","MLX","Apache 2.0","free",6,0,1,21000,"2023-05","listed","phone serve","mlc.ai","Compiler-based runtime targeting phones, browsers and GPUs."],
+["mlx-lm","MLX-LM","runtime","local","mac","MLX","MIT","free",16,0,1,19000,"2023-12","listed","serve chat","github.com/ml-explore/mlx-lm","Apple-silicon native inference with MLX."],
+["koboldcpp","KoboldCpp","runtime","local","win linux mac","llama.cpp GGUF OpenAI","AGPL 3.0","free",8,0,1,8500,"2023-04","listed","chat serve","github.com/LostRuins/koboldcpp","Single-binary llama.cpp fork with a built-in UI."],
+["llamafile","Llamafile","runtime","local","mac win linux","llama.cpp GGUF","Apache 2.0","free",8,0,1,23000,"2023-11","listed","chat serve","github.com/Mozilla-Ocho/llamafile","Model plus runtime in one executable file."],
+["lm-studio","LM Studio","desktop","hybrid","mac win linux","LM Studio llama.cpp MLX GGUF OpenAI","Proprietary","free",16,0,1,0,"2023-05","verified","chat serve docs","lmstudio.ai","Polished desktop app for discovering, downloading and running models."],
+["jan","Jan","desktop","hybrid","mac win linux","llama.cpp GGUF OpenAI Cloud","AGPL 3.0","free",8,0,1,30000,"2023-09","listed","chat","jan.ai","Open-source ChatGPT-style desktop app with optional cloud models."],
+["gpt4all","GPT4All","desktop","local","mac win linux","llama.cpp GGUF","MIT","free",8,0,1,73000,"2023-03","listed","chat docs","gpt4all.io","Beginner-friendly desktop chat with local document search."],
+["anythingllm","AnythingLLM","desktop","hybrid","mac win linux web","Ollama LM Studio OpenAI Cloud","MIT","freemium",8,0,1,42000,"2023-06","listed","docs agent chat","anythingllm.com","All-in-one RAG workspace with agents and multi-user mode."],
+["msty","Msty","desktop","hybrid","mac win linux","Ollama OpenAI GGUF Cloud","Proprietary","freemium",8,0,1,0,"2024-01","listed","chat docs","msty.app","Desktop chat with split-view model comparison and knowledge stacks."],
+["cherry-studio","Cherry Studio","desktop","hybrid","mac win linux","Ollama LM Studio OpenAI Cloud","AGPL 3.0","free",8,0,1,29000,"2024-06","listed","chat docs","cherry-ai.com","Multi-provider desktop client with assistants and MCP support."],
+["atomic-chat","Atomic Chat","mobile","local","ios android","GGUF","Proprietary","paid",0,0,1,0,"2026-05","verified","phone chat","atomicchat.app","On-device mobile assistant running local models."],
+["enchanted","Enchanted","desktop","local","mac ios","Ollama","MIT","free",8,0,1,5400,"2023-11","listed","chat phone","github.com/gluonfield/enchanted","Native Apple client for Ollama servers."],
+["draw-things","Draw Things","image","local","mac ios","","Proprietary","free",8,0,1,0,"2022-11","listed","image phone","drawthings.ai","On-device Stable Diffusion for Mac and iPhone."],
+["open-webui","Open WebUI","webui","hybrid","web linux mac win","Ollama OpenAI Cloud","BSD-3","free",8,0,1,105000,"2023-10","listed","chat docs serve","openwebui.com","Self-hosted ChatGPT-like frontend with RAG, users and pipelines."],
+["librechat","LibreChat","webui","hybrid","web","Ollama OpenAI Cloud","MIT","free",8,0,1,28000,"2023-03","listed","chat agent","librechat.ai","Multi-provider chat UI with agents and plugins."],
+["text-gen-webui","text-generation-webui","webui","local","win linux mac","llama.cpp GGUF OpenAI","AGPL 3.0","free",16,8,1,44000,"2023-01","listed","chat serve","github.com/oobabooga/text-generation-webui","Gradio UI supporting many backends and loaders."],
+["sillytavern","SillyTavern","webui","hybrid","web","Ollama OpenAI Cloud","AGPL 3.0","free",4,0,1,17000,"2023-02","listed","chat","sillytavern.app","Character-focused frontend for roleplay and chat."],
+["lobechat","LobeChat","webui","hybrid","web","Ollama OpenAI Cloud","Apache 2.0","freemium",4,0,1,65000,"2023-05","listed","chat agent","lobehub.com","Modern chat framework with plugin and agent marketplace."],
+["page-assist","Page Assist","webui","local","web","Ollama OpenAI","MIT","free",8,0,1,7000,"2024-02","listed","chat docs","github.com/n4ze3m/page-assist","Browser extension sidebar that talks to your local models."],
+["continue","Continue.dev","ide","hybrid","mac win linux","Ollama LM Studio OpenAI Cloud","Apache 2.0","free",16,0,1,28000,"2023-07","listed","code","continue.dev","VS Code and JetBrains autocomplete and chat with local models."],
+["cline","Cline","ide","hybrid","mac win linux","Ollama LM Studio OpenAI Cloud","Apache 2.0","free",16,0,1,50000,"2024-07","listed","code agent","cline.bot","Agentic coding in VS Code that can run commands and edit files."],
+["tabby","Tabby","ide","local","mac win linux","OpenAI","Apache 2.0","free",8,6,0,31000,"2023-04","listed","code serve","tabby.tabbyml.com","Self-hosted code completion server."],
+["twinny","Twinny","ide","local","mac win linux","Ollama LM Studio OpenAI","MIT","free",8,0,1,3500,"2023-12","listed","code","twinny.dev","Lightweight VS Code copilot for local models."],
+["aider","Aider","cli","hybrid","mac win linux","Ollama OpenAI Cloud","Apache 2.0","free",8,0,1,38000,"2023-05","listed","code agent","aider.chat","Pair-programming in the terminal with git-aware edits."],
+["aichat","aichat","cli","hybrid","mac win linux","Ollama OpenAI Cloud","MIT","free",4,0,1,7500,"2023-03","listed","chat code","github.com/sigoden/aichat","All-in-one LLM CLI with shell assistant and RAG."],
+["privategpt","PrivateGPT","rag","local","mac win linux","Ollama llama.cpp OpenAI","Apache 2.0","free",16,0,1,56000,"2023-05","listed","docs","privategpt.dev","Fully private document Q&A pipeline."],
+["khoj","Khoj","rag","hybrid","mac win linux web","Ollama OpenAI Cloud","AGPL 3.0","freemium",8,0,1,31000,"2023-07","listed","docs agent","khoj.dev","Personal AI over your notes, files and calendar."],
+["dify","Dify","rag","hybrid","web linux","Ollama OpenAI Cloud","Apache 2.0 (mod.)","freemium",16,0,1,110000,"2023-05","listed","build agent docs","dify.ai","Visual LLM app builder with RAG pipelines and agents."],
+["flowise","Flowise","rag","hybrid","web","Ollama OpenAI Cloud","Apache 2.0","freemium",8,0,1,42000,"2023-04","listed","build agent","flowiseai.com","Drag-and-drop builder for LLM flows."],
+["ragflow","RAGFlow","rag","hybrid","linux","Ollama OpenAI Cloud","Apache 2.0","free",16,0,1,60000,"2024-04","listed","docs","ragflow.io","Deep document understanding RAG engine."],
+["langchain","LangChain","agent","hybrid","mac win linux","Ollama OpenAI Cloud","MIT","free",4,0,1,115000,"2022-10","listed","build agent","langchain.com","General-purpose LLM application framework."],
+["crewai","CrewAI","agent","hybrid","mac win linux","Ollama OpenAI Cloud","MIT","freemium",4,0,1,36000,"2023-11","listed","agent build","crewai.com","Role-based multi-agent orchestration."],
+["letta","Letta","agent","hybrid","mac win linux","Ollama OpenAI Cloud","Apache 2.0","freemium",8,0,1,18000,"2023-10","listed","agent","letta.com","Stateful agents with long-term memory."],
+["hermes-agent","Hermes Agent","agent","hybrid","mac linux","Ollama OpenAI Cloud","Apache 2.0","free",16,0,1,1200,"2026-08","listed","agent build","hermes-agent.dev","Autonomous local agent framework (new this month)."],
+["whisper-cpp","whisper.cpp","stt","local","mac win linux ios android","GGUF","MIT","free",4,0,1,42000,"2022-09","listed","audio phone","github.com/ggml-org/whisper.cpp","Fast on-device speech recognition."],
+["piper","Piper","tts","local","linux mac win","","MIT","free",2,0,1,9500,"2023-03","listed","audio","github.com/rhasspy/piper","Fast neural text-to-speech for low-power devices."],
+["pocketpal","PocketPal AI","mobile","local","ios android","GGUF llama.cpp","MIT","free",0,0,1,6000,"2024-08","listed","phone chat","github.com/a-ghorbani/pocketpal-ai","Run small GGUF models entirely on your phone."],
+["comfyui","ComfyUI","image","local","win linux mac","","GPL 3.0","free",16,8,0,90000,"2023-01","listed","image build","comfy.org","Node-based diffusion workflows."],
+["upscayl","Upscayl","image","local","mac win linux","","AGPL 3.0","free",8,4,0,38000,"2022-09","listed","image","upscayl.org","Free AI image upscaler."],
+["ai-edge-gallery","Google AI Edge Gallery","mobile","local","android ios","","Apache 2.0","free",0,0,1,9000,"2025-05","listed","phone chat","github.com/google-ai-edge/gallery","Google's on-device model showcase app."]
+].map(r=>({slug:r[0],name:r[1],layer:r[2],loc:r[3],os:r[4].split(" ").filter(Boolean),ww:r[5].split(" ").map(s=>s==="OpenAI"?"OpenAI API":s).filter(Boolean),license:r[6],price:r[7],ram:r[8],vram:r[9],cpu:!!r[10],stars:r[11],added:r[12],status:r[13],uses:r[14].split(" "),url:r[15],desc:r[16]}));
+// normalise worksWith names
+T.forEach(t=>{t.engine=ENG[t.slug]||"external";t.ww=[...new Set(t.ww.map(w=>w==="LM"?"LM Studio":w).filter(w=>WW.includes(w)))];});
+
+const FOUNDER={
+ "lm-studio":{who:"Founder information — provided by the LM Studio team, 2026-08-20. Not independently verified.",why:"We built LM Studio because running a model locally should feel like installing any other app: download, click, chat.",best:"Model discovery and one-click GGUF/MLX downloads; a local server that speaks the OpenAI API.",limits:"Closed source; the desktop app is free but the SDK and enterprise use have separate terms."},
+ "atomic-chat":{who:"Founder information — provided by the developer, 2026-08-28. Not independently verified.",why:"Phones are powerful enough now; we wanted a private assistant that never leaves the device.",best:"Fully offline chat on iPhone and Android with downloadable small models.",limits:"Device dependent — older phones with under 6 GB RAM struggle with anything above 3B parameters."}
+};
+const REVIEW={ollama:{date:"2026-07-14",ver:"0.12",hw:"RTX 5070 · Qwen3-8B Q4",text:"Installed in under a minute on all three OSes. The OpenAI-compatible endpoint worked with every client we tried. Memory management improved in 0.12; concurrent requests no longer thrash VRAM.",scores:{"Ease of install":10,"Local capability":10,"Privacy":10,"Hardware efficiency":8,"Features":8,"Documentation":9}}};
+// PromptQuorum articles — tier 1 "about", tier 2 "also mentioned in" (from the existing association logic). Sample entries; real build reads the association records.
+const ARTICLES={
+ ollama:{about:[["Ollama vs llama.cpp vs vLLM: which runtime for which job","2026-08-12"],["Ollama 0.12 on RTX 5070: what changed","2026-07-14"]],mentioned:[["Best local coding models 2026","2026-08-30"],["AnythingLLM vs PrivateGPT vs Open WebUI for RAG","2026-06-20"],["Local AI on iPhone: the apps that actually run offline","2026-05-18"]],more:181},
+ "llama-cpp":{about:[["Ollama vs llama.cpp vs vLLM: which runtime for which job","2026-08-12"]],mentioned:[["Best local coding models 2026","2026-08-30"]],more:64},
+ "mlc-llm":{about:[["MLC LLM vs Ollama: mobile-first vs desktop-first","2026-06-03"],["Local AI on iPhone: the apps that actually run offline","2026-05-18"]],mentioned:[["Ollama vs llama.cpp vs vLLM: which runtime for which job","2026-08-12"]],more:0},
+ continue:{about:[["Continue.dev vs Cline vs Aider: local coding assistants compared","2026-07-28"]],mentioned:[["Best local coding models 2026","2026-08-30"]],more:0},
+ cline:{about:[["Continue.dev vs Cline vs Aider: local coding assistants compared","2026-07-28"]],mentioned:[],more:0},
+ aider:{about:[["Continue.dev vs Cline vs Aider: local coding assistants compared","2026-07-28"]],mentioned:[],more:0},
+ anythingllm:{about:[["AnythingLLM vs PrivateGPT vs Open WebUI for RAG","2026-06-20"]],mentioned:[],more:3},
+ privategpt:{about:[["AnythingLLM vs PrivateGPT vs Open WebUI for RAG","2026-06-20"]],mentioned:[],more:0},
+ "open-webui":{about:[["AnythingLLM vs PrivateGPT vs Open WebUI for RAG","2026-06-20"]],mentioned:[["Ollama vs llama.cpp vs vLLM: which runtime for which job","2026-08-12"]],more:12},
+ vllm:{about:[["Ollama vs llama.cpp vs vLLM: which runtime for which job","2026-08-12"]],mentioned:[],more:5}
+};
+const artCount=t=>{const a=ARTICLES[t.slug];return a?a.about.length+a.mentioned.length+(a.more||0):0};
+const CHANGES={ollama:["2026-07-14 · pqReview added · editorial","2026-06-02 · worksWith +GGUF · user report"],"lm-studio":["2026-08-20 · founder notes added · founder","2026-08-20 · dataLocality local → hybrid · founder"]};
+
+const PAGE=24;
+const state={shown:PAGE,machine:/Mac|iPhone|iPad/.test(navigator.platform||"")?"apple":"dgpu",q:"",sort:"stars",want:null,engine:new Set(),layer:new Set(),os:new Set(),loc:new Set(),ww:new Set(),price:new Set(),view:"cards",tsort:{key:"stars",dir:-1}};
+const STATUS={listed:"Listed",verified:"Founder-verified",tested:"PromptQuorum-tested"};
+const ORDER={tested:0,verified:1,listed:2};
+const fmt=n=>n?n>=1000?(n/1000).toFixed(n>=10000?0:1)+"k":n:"—";
+
+function filtered(){
+  const q=state.q.toLowerCase();
+  let r=T.filter(t=>
+    (!state.want||t.uses.includes(state.want))&&
+    (!state.layer.size||state.layer.has(t.layer))&&
+    (!state.engine.size||state.engine.has(t.engine))&&
+    (!state.os.size||t.os.some(o=>state.os.has(o)))&&
+    (!state.loc.size||state.loc.has(t.loc))&&
+    (!state.ww.size||[...state.ww].every(w=>t.ww.includes(w)))&&
+    (!state.price.size||state.price.has(t.price))&&
+    (!q||[t.name,t.desc,t.license,LAYERS[t.layer],ENGINE[t.engine],...t.ww,...t.os.map(o=>OS[o])].join(" ").toLowerCase().includes(q))
+  );
+  const s=state.view==="table"?state.tsort:{key:state.sort,dir:state.sort==="name"||state.sort==="ram"?1:-1};
+  const key=s.key;
+  r.sort((a,b)=>{
+    let va,vb;
+    if(key==="name"){va=a.name.toLowerCase();vb=b.name.toLowerCase();return va<vb?-s.dir:va>vb?s.dir:0}
+    if(key==="status"){va=ORDER[a.status];vb=ORDER[b.status];return (va-vb)*(s.dir===-1?1:-1)||b.stars-a.stars}
+    if(key==="added"){return a.added<b.added?s.dir: a.added>b.added?-s.dir:0}
+    if(key==="ram"){return (a.ram-b.ram)*s.dir||b.stars-a.stars}
+    if(key==="vram"){return (a.vram-b.vram)*s.dir||b.stars-a.stars}
+    if(key==="loc"){const o={local:0,hybrid:1,cloud:2};return (o[a.loc]-o[b.loc])*s.dir}
+    if(key==="engine"){const o={builtin:0,both:1,external:2,library:3};return (o[a.engine]-o[b.engine])*s.dir}
+    return (b.stars-a.stars)*(s.dir===-1?1:-1);
+  });
+  return r;
+}
+
+function renderStats(){
+  const c={local:0,hybrid:0,cloud:0};T.forEach(t=>c[t.loc]++);
+  document.getElementById("stats").innerHTML=`
+   <div class="stat"><b class="mono">${T.length}</b><span>apps</span></div>
+   <div class="stat local"><b class="mono">${c.local}</b><span>pure local</span></div>
+   <div class="stat hybrid"><b class="mono">${c.hybrid}</b><span>hybrid</span></div>
+   <div class="stat cloud"><b class="mono">${c.cloud}</b><span>cloud</span></div>`;
+}
+function renderChips(){
+  const el=document.getElementById("wantChips");
+  el.innerHTML=Object.entries(USES).map(([k,v])=>`<button class="chip" data-use="${k}" aria-pressed="${state.want===k}">${v}</button>`).join("");
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{state.want=state.want===b.dataset.use?null:b.dataset.use;state.shown=PAGE;renderChips();render();});
+}
+function group(title,name,items,labelFn){
+  const set=state[name];
+  return `<div class="fgroup"><h3>${title}</h3>${items.map(([k,lab,cnt])=>`<label><input type="checkbox" data-g="${name}" value="${k}" ${set.has(k)?"checked":""}>${labelFn?labelFn(k,lab):lab}<span class="cnt mono">${cnt}</span></label>`).join("")}</div>`;
+}
+function renderFilters(){
+  const cnt=(fn)=>T.filter(fn).length;
+  const el=document.getElementById("filters");
+  el.innerHTML=
+   group("Runs","loc",[["local","100% local",cnt(t=>t.loc==="local")],["hybrid","Hybrid — optional cloud",cnt(t=>t.loc==="hybrid")],["cloud","Cloud required",cnt(t=>t.loc==="cloud")]],(k,l)=>`<span class="loc-dot" style="background:var(--${k})"></span>${l}`)+
+   group("How it runs models","engine",Object.entries(ENGINE).map(([k,v])=>[k,v,cnt(t=>t.engine===k)]))+
+   group("Works with","ww",["Ollama","LM Studio","llama.cpp","MLX","vLLM","OpenAI API","GGUF","Cloud"].map(w=>[w,w,cnt(t=>t.ww.includes(w))]))+
+   group("Platform","os",Object.entries(OS).map(([k,v])=>[k,v,cnt(t=>t.os.includes(k))]))+
+   group("Layer","layer",Object.entries(LAYERS).map(([k,v])=>[k,v,cnt(t=>t.layer===k)]))+
+   group("Price","price",[["free","Free",cnt(t=>t.price==="free")],["freemium","Freemium",cnt(t=>t.price==="freemium")],["paid","Paid",cnt(t=>t.price==="paid")]])+
+   `<button class="reset" id="reset">Clear all filters</button>`;
+  el.querySelectorAll("input").forEach(i=>i.onchange=()=>{const s=state[i.dataset.g];i.checked?s.add(i.value):s.delete(i.value);state.shown=PAGE;render();});
+  document.getElementById("reset").onclick=()=>{["layer","os","loc","ww","price","engine"].forEach(k=>state[k].clear());state.want=null;state.q="";document.getElementById("q").value="";state.shown=PAGE;renderChips();renderFilters();render();};
+}
+const LABEL={loc:{local:"100% local",hybrid:"Hybrid",cloud:"Cloud"},ww:w=>w,os:k=>OS[k],layer:k=>LAYERS[k],price:k=>k,engine:k=>ENGINE[k]};
+function renderActive(){
+  const el=document.getElementById("active");const out=[];
+  if(state.want)out.push(`<button class="chip" data-clear="want">${USES[state.want]} ×</button>`);
+  ["loc","engine","ww","os","layer","price"].forEach(g=>state[g].forEach(v=>{const f=LABEL[g];out.push(`<button class="chip" data-clear="${g}" data-v="${v}">${typeof f==="function"?f(v):f[v]} ×</button>`)}));
+  el.innerHTML=out.join("");
+  el.querySelectorAll("[data-clear]").forEach(b=>b.onclick=()=>{if(b.dataset.clear==="want")state.want=null;else state[b.dataset.clear].delete(b.dataset.v);state.shown=PAGE;renderChips();renderFilters();render();});
+}
+function locBadge(t){return `<span class="badge ${t.loc}"><span class="loc-dot" style="background:currentColor"></span>${{local:"100% local",hybrid:"Hybrid",cloud:"Cloud"}[t.loc]}</span>`}
+const SHORT={listed:"Listed",verified:"✓ Founder-verified",tested:"✓ PQ-tested"};
+function statusBadge(t,short){return `<span class="badge status ${t.status}">${short?SHORT[t.status]:(t.status==="listed"?"":"✓ ")+STATUS[t.status]}</span>`}
+function meter(label,val,max,unit){
+  const has=val>0; return `<div class="meter">${label}<b>${has?val+" "+unit:(label.startsWith("RAM")&&val===0?"device dependent":"not required")}</b><div class="bar"><i style="width:${has?Math.min(100,val/max*100):0}%"></i></div></div>`;
+}
+// Apple Silicon: CPU and GPU share one pool; macOS lets the GPU use roughly 65–75% of it by default.
+// Rule of thumb used here: unified_min = max(RAM min, VRAM min ÷ 0.7) — an assumption, not a measured value.
+function unifiedMin(t){return Math.max(t.ram, t.vram?Math.ceil(t.vram/0.7):0)}
+function hwBlock(t){
+  if(state.machine==="apple"){const u=unifiedMin(t);return `<div class="hw one">${meter("Unified memory min",u,64,"GB")}</div>`}
+  if(state.machine==="cpu"){return `<div class="hw">${meter("RAM min",t.ram,64,"GB")}<div class="meter">GPU<b>${t.cpu?"not needed — CPU inference":"required — will not run"}</b><div class="bar"><i style="width:0"></i></div></div></div>`}
+  return `<div class="hw">${meter("RAM min",t.ram,64,"GB")}${meter("VRAM min",t.vram,24,"GB")}</div>`;
+}
+function card(t){
+  return `<article class="card" data-slug="${t.slug}" tabindex="0" role="button">
+   <div class="head"><div><h2>${t.name}</h2><div class="layer">${LAYERS[t.layer]}</div></div>${locBadge(t)}</div>
+   <p class="desc">${t.desc}</p>
+   <div class="engine"><span class="eng">${t.engine==="builtin"?"⬢":t.engine==="external"?"→":t.engine==="both"?"⬢→":"{ }"}</span>${ENGINE[t.engine]}</div>
+   <div class="works">${t.ww.length?t.ww.map(w=>`<span class="tag">${w}</span>`).join(""):`<span class="tag dim">compatibility not yet recorded</span>`}</div>
+   ${hwBlock(t)}
+   <div class="foot"><div class="os">${t.os.map(o=>`<span>${OS[o]}</span>`).join("")}</div><div style="display:flex;gap:8px;align-items:center">${statusBadge(t,true)}<span class="stars">★ ${fmt(t.stars)}</span><span class="arts" title="PromptQuorum articles">📄 ${artCount(t)}</span></div></div>
+   <div class="cta"><a class="btn primary" href="https://${t.url}" target="_blank" rel="noopener" data-ext>${/github\.com/.test(t.url)?"GitHub ↗":"Get it ↗"}</a><button class="btn ghost" type="button">Details</button></div>
+  </article>`;
+}
+function table(rows){
+  const cols=[["name","App"],["layer","Layer"],["loc","Runs"],["engine","Engine"],["ww","Works with"],["ram","RAM min"],["vram","VRAM min"],["license","License"],["price","Price"],["status","Status"],["stars","★ Stars"],["added","Added"]];
+  const sortable=new Set(["name","loc","engine","ram","vram","status","stars","added"]);
+  return `<table><thead><tr>${cols.map(([k,l])=>`<th data-k="${k}" class="${sortable.has(k)?"sortable":""} ${state.tsort.key===k?"active":""}">${l}${state.tsort.key===k?(state.tsort.dir===1?" ↑":" ↓"):""}</th>`).join("")}</tr></thead><tbody>
+  ${rows.map(t=>`<tr class="row" data-slug="${t.slug}"><td><b>${t.name}</b></td><td>${LAYERS[t.layer]}</td><td>${locBadge(t)}</td><td>${ENGINE[t.engine]}</td><td>${t.ww.map(w=>`<span class="tag">${w}</span>`).join(" ")||"—"}</td><td class="num">${t.ram?t.ram+" GB":"—"}</td><td class="num">${t.vram?t.vram+" GB":"—"}</td><td>${t.license}</td><td>${t.price}</td><td>${statusBadge(t)}</td><td class="num">${fmt(t.stars)}</td><td class="mono">${t.added}</td></tr>`).join("")}
+  </tbody></table>`;
+}
+function render(){
+  const all=filtered();const rows=state.view==="cards"?all.slice(0,state.shown):all;
+  renderActive();
+  document.getElementById("count").textContent=`${all.length} of ${T.length} apps`;
+  const more=document.getElementById("more");
+  more.innerHTML=(state.view==="cards"&&all.length>state.shown)?`<button class="btn" id="moreBtn">Show ${Math.min(PAGE,all.length-state.shown)} more · ${all.length-state.shown} remaining</button>`:"";
+  if(more.firstChild)document.getElementById("moreBtn").onclick=()=>{state.shown+=PAGE;render();};
+  const grid=document.getElementById("grid"),tw=document.getElementById("tablewrap");
+  if(state.view==="cards"){grid.hidden=false;tw.hidden=true;grid.innerHTML=rows.length?rows.map(card).join(""):`<div class="empty">No app matches these filters yet. That gap is itself information — <a href="mailto:hello@promptquorum.com?subject=[Submit] local AI app">tell us what should be here</a>.</div>`;
+    grid.querySelectorAll("[data-ext]").forEach(a=>a.onclick=e=>e.stopPropagation());
+    grid.querySelectorAll(".card").forEach(c=>{c.onclick=()=>openDrawer(c.dataset.slug);c.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDrawer(c.dataset.slug)}}});}
+  else{grid.hidden=true;tw.hidden=false;tw.innerHTML=table(rows);
+    tw.querySelectorAll("th.sortable").forEach(th=>th.onclick=()=>{const k=th.dataset.k;state.tsort=state.tsort.key===k?{key:k,dir:-state.tsort.dir}:{key:k,dir:k==="name"||k==="ram"||k==="vram"||k==="loc"||k==="engine"?1:-1};render();});
+    tw.querySelectorAll("tr.row").forEach(r=>r.onclick=()=>openDrawer(r.dataset.slug));}
+}
+function openDrawer(slug){
+  const t=T.find(x=>x.slug===slug),f=FOUNDER[slug],r=REVIEW[slug],ch=CHANGES[slug]||[];
+  const mail=(k)=>`mailto:hello@promptquorum.com?subject=[${k}] ${slug}`;
+  const alts=T.filter(x=>x.layer===t.layer&&x.slug!==slug).slice(0,4);
+  document.getElementById("drawer").innerHTML=`
+   <button class="close" id="dClose" aria-label="Close">×</button>
+   <div class="eyebrow">${LAYERS[t.layer]}</div>
+   <h2 id="dTitle">${t.name}</h2>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">${locBadge(t)}${statusBadge(t)}<span class="badge status">${t.license}</span><span class="badge status">${t.price}</span></div>
+   <p class="desc" style="margin-top:12px;font-size:14px">${t.desc}</p>
+   <div class="links"><a class="btn primary" href="https://${t.url}" target="_blank" rel="noopener">${/github\.com/.test(t.url)?"GitHub ↗":"Official site ↗"}</a>${t.os.map(o=>`<a class="btn" href="https://${t.url}" target="_blank" rel="noopener" title="Download for ${OS[o]} (opens the official page; per-platform links come from the downloadLinks field)">⤓ ${OS[o]}</a>`).join("")}</div>
+
+   <section class="sec"><h3>App card</h3><dl class="kv">
+     <dt>Runs</dt><dd>${{local:"100% local — no internet required",hybrid:"Hybrid — local by default, optional cloud models",cloud:"Cloud required"}[t.loc]}</dd>
+     <dt>Model engine</dt><dd>${ENGINE_LONG[t.engine]}</dd>
+     <dt>Works with</dt><dd>${t.ww.length?t.ww.map(w=>`<span class="tag">${w}</span>`).join(" "):`<span class="note">Compatibility not yet recorded — <a href="${mail("Correction")}">founders: correct this entry</a></span>`}</dd>
+     <dt>Hardware</dt><dd class="mono">${t.ram?`RAM ≥ ${t.ram} GB`:"RAM: device dependent"} · ${t.vram?`VRAM ≥ ${t.vram} GB`:"GPU optional"} · ${t.cpu?"CPU-only possible":"GPU required"}<br><span class="note">Apple Silicon (unified memory): ≥ ${unifiedMin(t)||"—"} GB total — rule of thumb, GPU can address ~70% of the pool</span></dd>
+     <dt>Open source</dt><dd>${/Proprietary/.test(t.license)?"No":"Yes — "+t.license}</dd>
+     <dt>GitHub stars</dt><dd class="mono">${t.stars?t.stars.toLocaleString("en-US"):"— (closed source)"}</dd>
+     <dt>Added</dt><dd class="mono">${t.added}</dd>
+     <dt>Last updated</dt><dd class="mono">2026-09-02 · <a href="${mail("Correction")}">Report an error</a></dd>
+   </dl></section>
+
+   <section class="sec"><h3>From the founder ${f?"":`<a href="${mail("Claim")}">Claim this entry</a>`}</h3>
+     ${f?`<div class="founder"><div class="who">${f.who}</div><p><b>Why we built it.</b> ${f.why}</p><p><b>Best at.</b> ${f.best}</p><p style="margin:0"><b>Limitations.</b> ${f.limits}</p></div>`
+        :`<div class="slot"><span>No founder information yet. Are you the founder? Tell readers why you built it, what it does best, and its limits.</span><a href="${mail("Claim")}">Claim →</a></div>`}
+   </section>
+
+   <section class="sec"><h3>PromptQuorum review</h3>
+     ${r?`<div class="review"><div class="note" style="margin:0 0 6px">Tested ${r.date} · version ${r.ver} · ${r.hw}</div>${r.text}<div class="scores">${Object.entries(r.scores).map(([k,v])=>`<span>${k}</span><span class="mono">${v}/10</span><div class="bar" style="grid-column:1/-1"><i style="width:${v*10}%"></i></div>`).join("")}</div></div>`
+        :`<div class="slot"><span>Not yet reviewed by PromptQuorum.</span><span class="note">Reviews are added selectively after hands-on testing.</span></div>`}
+   </section>
+
+   <section class="sec"><h3>PromptQuorum articles ${(()=>{const a=ARTICLES[slug];return a?`<span class="mono" style="font-weight:400">${artCount(t)} total</span>`:""})()}</h3>
+     ${(()=>{const a=ARTICLES[slug];if(!a)return `<div class="slot"><span>No PromptQuorum articles yet.</span></div>`;
+       const li=x=>`<li><a href="#" onclick="return false">${x[0]}</a><span class="d">${x[1]}</span></li>`;
+       return `<div class="artlist">${a.about.length?`<h4>Articles about ${t.name}</h4><ul class="artlist">${a.about.map(li).join("")}</ul>`:""}${a.mentioned.length?`<h4>Also mentioned in</h4><ul class="artlist">${a.mentioned.map(li).join("")}</ul>`:""}${a.more?`<div class="note">+${a.more} more · <a href="#" onclick="return false">view all</a></div>`:""}</div>`})()}
+   </section>
+
+   <section class="sec"><h3>Alternatives</h3><div class="works">${alts.map(a=>`<button class="chip" data-alt="${a.slug}">${a.name}</button>`).join("")}</div></section>
+
+   <section class="sec"><h3>Changelog</h3>${ch.length?`<ul class="changelog">${ch.map(c=>`<li class="mono">${c}</li>`).join("")}</ul>`:`<div class="note">No changes recorded.</div>`}</section>
+
+   <section class="sec"><p class="note" style="margin:0">This entry was compiled with automated, AI-assisted research from online sources. It may contain errors, be incomplete or outdated. Nothing here is independently verified unless marked "PromptQuorum-tested". Founder information is provided by the developer and reflects their claims. <a href="${mail("Correction")}">Report an error</a></p></section>`;
+  document.getElementById("overlay").classList.add("open");document.getElementById("drawer").classList.add("open");
+  document.getElementById("dClose").onclick=closeDrawer;
+  document.querySelectorAll("[data-alt]").forEach(b=>b.onclick=()=>openDrawer(b.dataset.alt));
+  document.getElementById("dClose").focus();
+}
+function closeDrawer(){document.getElementById("overlay").classList.remove("open");document.getElementById("drawer").classList.remove("open");}
+document.getElementById("overlay").onclick=closeDrawer;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer();if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();document.getElementById("q").focus();}});
+document.getElementById("q").oninput=e=>{state.q=e.target.value;render();};
+document.getElementById("machine").value=state.machine;document.getElementById("machine").onchange=e=>{state.machine=e.target.value;render();};
+document.getElementById("sort").onchange=e=>{state.sort=e.target.value;render();};
+document.getElementById("vCards").onclick=()=>{state.view="cards";document.getElementById("vCards").setAttribute("aria-pressed","true");document.getElementById("vTable").setAttribute("aria-pressed","false");render();};
+document.getElementById("vTable").onclick=()=>{state.view="table";document.getElementById("vTable").setAttribute("aria-pressed","true");document.getElementById("vCards").setAttribute("aria-pressed","false");render();};
+document.getElementById("ftoggle").onclick=()=>{const b=document.getElementById("ftoggle"),p=document.getElementById("filters");const o=b.getAttribute("aria-expanded")!=="true";b.setAttribute("aria-expanded",o);p.classList.toggle("open",o);};
+document.getElementById("q").addEventListener("input",()=>{state.shown=PAGE;});
+renderStats();renderChips();renderFilters();render();
+</script>
+</head><body></body></html>

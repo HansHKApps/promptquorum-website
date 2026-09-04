@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'open-felix',
   name: 'Open Felix',
   layer: 'desktop',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'both',
   license: 'Apache 2.0',
-  price: 'TODO',
+  price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

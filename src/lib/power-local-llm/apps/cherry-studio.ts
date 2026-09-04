@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'cherry-studio',
   name: 'Cherry Studio',
   layer: 'desktop',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'AGPL 3.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

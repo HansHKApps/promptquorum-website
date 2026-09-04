@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'llamafile',
   name: 'Llamafile',
   layer: 'runtime',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'Apache 2.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 25900,
   addedDate: null, // TODO: not derivable from source article

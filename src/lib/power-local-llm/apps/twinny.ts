@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'twinny',
   name: 'Twinny',
   layer: 'ide',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 3600,
   addedDate: null, // TODO: not derivable from source article

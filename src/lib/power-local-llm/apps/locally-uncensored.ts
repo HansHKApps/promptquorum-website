@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'locally-uncensored',
   name: 'Locally Uncensored',
   layer: 'desktop',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['win'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'AGPL-3.0',
-  price: 'TODO',
+  price: 'paid',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 1400,
   addedDate: null, // TODO: not derivable from source article

@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'coqui-tts',
   name: 'Coqui TTS',
   layer: 'tts',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'library',
   license: 'MPL 2.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 2300,
   addedDate: null, // TODO: not derivable from source article

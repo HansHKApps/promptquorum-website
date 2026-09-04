@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'page-assist',
   name: 'Page Assist',
   layer: 'webui',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['web'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 8200,
   addedDate: null, // TODO: not derivable from source article

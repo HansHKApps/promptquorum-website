@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'babyagi',
   name: 'BabyAGI',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'library',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 22400,
   addedDate: null, // TODO: not derivable from source article

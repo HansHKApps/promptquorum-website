@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'llm-farm',
   name: 'LLM Farm',
   layer: 'mobile',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['ios'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 2100,
   addedDate: null, // TODO: not derivable from source article
