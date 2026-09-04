@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'use-cases',
         title: 'What AI Images Are Actually Good For',
         content:
-          'Before picking a door, know what you\'re walking through it for. The realistic use-case map:\n\n- **Content sites and blogs:** hero images, article illustrations, social preview cards.\n- **YouTube and social:** thumbnails, channel art, post graphics, ad creatives — including fast A/B variants.\n- **E-commerce and marketing:** product mockups, lifestyle scenes, seasonal variants of the same shot.\n- **Work materials:** presentation visuals, pitch-deck graphics, concept mockups.\n- **Creative projects:** book covers, concept art, mood boards, print-on-demand designs.\n- **Editing, not just creating:** with Qwen-Image-Edit or FLUX Kontext — swap backgrounds, remove objects, restyle product photos, fix text in graphics.\n\nTwo honest limits: AI images still struggle with exact brand consistency across large batches (local LoRAs help; cloud tools are catching up), and anything requiring real people, real products, or factual accuracy needs photography, not generation.\n\nOnce a checkpoint and LoRA combination is working well for stills, [AnimateDiff](/power-local-llm/animatediff-video-generation-guide-2026) can turn that same visual style into a short animated loop without retraining anything — a lighter-weight path than a full native video model for stylized motion.',
+          'Before picking a door, know what you\'re walking through it for. The realistic use-case map:\n\n- **Content sites and blogs:** hero images, article illustrations, social preview cards.\n- **YouTube and social:** thumbnails, channel art, post graphics, ad creatives — including fast A/B variants.\n- **E-commerce and marketing:** product mockups, lifestyle scenes, seasonal variants of the same shot.\n- **Work materials:** presentation visuals, pitch-deck graphics, concept mockups.\n- **Creative projects:** book covers, concept art, mood boards, print-on-demand designs.\n- **Editing, not just creating:** with Qwen-Image-Edit or FLUX Kontext — swap backgrounds, remove objects, restyle product photos, fix text in graphics.\n\nTwo honest limits: AI images still struggle with exact brand consistency across large batches (local LoRAs help; cloud tools are catching up), and anything requiring real people, real products, or factual accuracy needs photography, not generation.\n\nOnce a checkpoint and LoRA combination is working well for stills, [AnimateDiff](/power-local-llm/animatediff-video-generation-guide) can turn that same visual style into a short animated loop without retraining anything — a lighter-weight path than a full native video model for stylized motion.',
       },
       cloudDoor: {
         id: 'cloud-door',
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide-2026) — a single-tool deep dive for turning the checkpoint you pick here into a short animated clip.',
+          '[AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide) — a single-tool deep dive for turning the checkpoint you pick here into a short animated clip.',
           '[Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud) — the companion piece, same structure, for video instead of images.',
           '[VRAM Calculator for Local Models](/local-llms/vram-calculator-local-llm) — exact VRAM requirements per model and quantization.',
           '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) — charts across model sizes from 7B to 70B.',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'مقالات ذات صلة',
         items: [
-          '[دليل AnimateDiff 2026: حرّك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide-2026) — دليل متعمق لأداة واحدة لتحويل نقطة الفحص التي تختارها هنا إلى مقطع متحرك قصير.',
+          '[دليل AnimateDiff 2026: حرّك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide) — دليل متعمق لأداة واحدة لتحويل نقطة الفحص التي تختارها هنا إلى مقطع متحرك قصير.',
           '[توليد الفيديو بالذكاء الاصطناعي محلياً مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud) — المقال المرافق، بنفس البنية، للفيديو بدلاً من الصور.',
           '[حاسبة VRAM للنماذج المحلية](/ar/local-llms/vram-calculator-local-llm) — متطلبات VRAM الدقيقة لكل نموذج ومستوى ضغط.',
           '[ما مقدار VRAM الذي تحتاجه؟](/ar/local-llms/how-much-vram-local-llm) — جداول تغطي أحجام النماذج من 7 إلى 70 مليار معامل.',
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[AnimateDiff 2026: Stable-Diffusion-Modelle animieren, Kosten & VRAM](/de/power-local-llm/animatediff-video-generation-guide-2026) – Deep-Dive zu einem einzelnen Tool, das den hier gewählten Checkpoint in einen kurzen animierten Clip verwandelt.',
+          '[AnimateDiff 2026: Stable-Diffusion-Modelle animieren, Kosten & VRAM](/de/power-local-llm/animatediff-video-generation-guide) – Deep-Dive zu einem einzelnen Tool, das den hier gewählten Checkpoint in einen kurzen animierten Clip verwandelt.',
           '[Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud) — der begleitende Artikel, gleicher Aufbau, für Video statt Bilder.',
           '[VRAM-Rechner für lokale Modelle](/de/local-llms/vram-calculator-local-llm) — exakte VRAM-Anforderungen pro Modell und Quantisierung.',
           '[Wie viel VRAM brauchen Sie?](/de/local-llms/how-much-vram-local-llm) — Übersichten über Modellgrößen von 7B bis 70B.',
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[AnimateDiff 2026: anima cualquier modelo Stable Diffusion](/es/power-local-llm/animatediff-video-generation-guide-2026) — análisis a fondo de una sola herramienta para convertir el checkpoint elegido aquí en un breve clip animado.',
+          '[AnimateDiff 2026: anima cualquier modelo Stable Diffusion](/es/power-local-llm/animatediff-video-generation-guide) — análisis a fondo de una sola herramienta para convertir el checkpoint elegido aquí en un breve clip animado.',
           '[Generación de vídeo con IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud) — el artículo complementario, misma estructura, para vídeo en lugar de imágenes.',
           '[Calculadora de VRAM para modelos locales](/es/local-llms/vram-calculator-local-llm) — requisitos exactos de VRAM por modelo y cuantización.',
           '[¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm) — tablas comparativas entre tamaños de modelo de 7B a 70B.',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[AnimateDiff : animer un modèle Stable Diffusion (guide 2026)](/fr/power-local-llm/animatediff-video-generation-guide-2026) — analyse approfondie d’un outil unique pour transformer le checkpoint choisi ici en un court clip animé.',
+          '[AnimateDiff : animer un modèle Stable Diffusion (guide 2026)](/fr/power-local-llm/animatediff-video-generation-guide) — analyse approfondie d’un outil unique pour transformer le checkpoint choisi ici en un court clip animé.',
           '[Génération vidéo IA locale vs cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud) — l’article compagnon, même structure, pour la vidéo plutôt que l’image.',
           '[Calculateur de VRAM pour modèles locaux](/fr/local-llms/vram-calculator-local-llm) — besoins exacts en VRAM par modèle et quantification.',
           '[Combien de VRAM vous faut-il ?](/fr/local-llms/how-much-vram-local-llm) — graphiques par taille de modèle, de 7B à 70B.',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[AnimateDiffでStable Diffusionを動画化：2026年ガイド](/ja/power-local-llm/animatediff-video-generation-guide-2026) — ここで選んだチェックポイントを短い動画クリップに変える単体ツールの詳細ガイド。',
+          '[AnimateDiffでStable Diffusionを動画化：2026年ガイド](/ja/power-local-llm/animatediff-video-generation-guide) — ここで選んだチェックポイントを短い動画クリップに変える単体ツールの詳細ガイド。',
           '[ローカルAI動画生成 対 クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud) — 画像ではなく動画を対象にした、同じ構成の姉妹記事。',
           '[ローカルモデル向けVRAM計算ツール](/ja/local-llms/vram-calculator-local-llm) — モデルと量子化ごとの正確なVRAM要件。',
           '[必要なVRAMはどれくらい?](/ja/local-llms/how-much-vram-local-llm) — 7Bから70Bまでのモデルサイズ別グラフ。',
@@ -2270,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 콘텐츠',
         items: [
-          '[AnimateDiff 2026 가이드: Stable Diffusion 모델 애니메이션화](/ko/power-local-llm/animatediff-video-generation-guide-2026) — 여기서 선택한 체크포인트를 짧은 애니메이션 클립으로 바꾸는 단일 도구 심층 가이드입니다.',
+          '[AnimateDiff 2026 가이드: Stable Diffusion 모델 애니메이션화](/ko/power-local-llm/animatediff-video-generation-guide) — 여기서 선택한 체크포인트를 짧은 애니메이션 클립으로 바꾸는 단일 도구 심층 가이드입니다.',
           '[로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud) — 이미지 대신 영상을 다루는, 동일한 구조의 짝을 이루는 글입니다.',
           '[로컬 모델용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — 모델과 양자화 방식별 정확한 VRAM 요구사항.',
           '[VRAM은 얼마나 필요할까요?](/ko/local-llms/how-much-vram-local-llm) — 70억~700억 파라미터 모델 크기별 차트.',
@@ -2594,7 +2594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[AnimateDiff 2026: anime qualquer modelo Stable Diffusion](/pt/power-local-llm/animatediff-video-generation-guide-2026) — aprofundamento em uma única ferramenta para transformar o checkpoint escolhido aqui em um clipe animado curto.',
+          '[AnimateDiff 2026: anime qualquer modelo Stable Diffusion](/pt/power-local-llm/animatediff-video-generation-guide) — aprofundamento em uma única ferramenta para transformar o checkpoint escolhido aqui em um clipe animado curto.',
           '[Geração Local de Vídeo com IA vs. Nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud) — o artigo complementar, mesma estrutura, para vídeo em vez de imagens.',
           '[Calculadora de VRAM para Modelos Locais](/pt/local-llms/vram-calculator-local-llm) — requisitos exatos de VRAM por modelo e quantização.',
           '[Quanta VRAM Você Precisa?](/pt/local-llms/how-much-vram-local-llm) — gráficos entre tamanhos de modelo de 7B a 70B.',
@@ -2918,7 +2918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[AnimateDiff 2026指南：让Stable Diffusion模型动起来](/zh/power-local-llm/animatediff-video-generation-guide-2026)——单一工具深度指南,将这里选择的检查点变成一段简短的动画片段。',
+          '[AnimateDiff 2026指南：让Stable Diffusion模型动起来](/zh/power-local-llm/animatediff-video-generation-guide)——单一工具深度指南,将这里选择的检查点变成一段简短的动画片段。',
           '[本地AI视频生成对比云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)——姊妹篇,结构相同,主题换成视频而非图像。',
           '[本地模型显存计算器](/zh/local-llms/vram-calculator-local-llm)——每个模型及量化版本的确切显存需求。',
           '[需要多少显存?](/zh/local-llms/how-much-vram-local-llm)——从70亿到700亿参数各模型规模的对照图表。',

@@ -69,7 +69,7 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   // Tools & Platforms — Block 2: Comparisons
   'braintrust-vs-prompthub-vs-vellum-vs-promptfoo': 'braintrust-vs-prompthub-vs-vellum',
   'promptlayer-vs-mirascope-vs-promptperfect': 'promptlayer-vs-mirascope-vs-promptperfect',
-  'langsmith-vs-helicone-vs-langfuse-2026': 'langsmith-vs-helicone-vs-langfuse',
+  'langsmith-vs-helicone-vs-langfuse': 'langsmith-vs-helicone-vs-langfuse',
   'prompt-engineering-vs-fine-tuning': 'prompt-engineering-vs-fine-tuning',
   'prompt-engineering-vs-rag-decision': 'prompt-engineering-vs-rag',
   'manual-vs-automated-prompt-optimization': 'manual-vs-automated-prompt-optimization',

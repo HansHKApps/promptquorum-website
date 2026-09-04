@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Enterprise LLM Inference Servers 2026](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- Comparing vLLM, TGI, and NVIDIA NIM for multi-GPU, multi-tenant serving instead of a single machine.',
+            '[Enterprise LLM Inference Servers 2026](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- Comparing vLLM, TGI, and NVIDIA NIM for multi-GPU, multi-tenant serving instead of a single machine.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Setup the most popular llama.cpp wrapper.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Both use inference engines; compare their UIs.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- vLLM and Ollama both expose OpenAI-compatible APIs.',
@@ -610,7 +610,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Servidores de inferencia LLM empresarial 2026](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI y NVIDIA NIM para servicio multi-GPU y multiusuario, no para una sola máquina.',
+            '[Servidores de inferencia LLM empresarial 2026](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- vLLM, TGI y NVIDIA NIM para servicio multi-GPU y multiusuario, no para una sola máquina.',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Configura el envoltorio de llama.cpp más popular.',
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) -- Ambos usan motores de inferencia; compara sus UIs.',
             '[API local LLM compatible con OpenAI](/es/local-llms/local-llm-openai-compatible-api) -- vLLM y Ollama exponen ambos APIs compatibles con OpenAI.',
@@ -980,7 +980,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[خوادم استدلال LLM للمؤسسات 2026](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- مقارنة vLLM وTGI وNVIDIA NIM للخدمة متعددة وحدات المعالجة الرسومية والمستأجرين، لا لجهاز واحد.',
+            '[خوادم استدلال LLM للمؤسسات 2026](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- مقارنة vLLM وTGI وNVIDIA NIM للخدمة متعددة وحدات المعالجة الرسومية والمستأجرين، لا لجهاز واحد.',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- إعداد أشهر غلاف لـ llama.cpp.',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- كلاهما يستخدم محركات استدلال؛ قارن واجهتيهما.',
             '[واجهة API لـ LLM محلي متوافقة مع OpenAI](/ar/local-llms/local-llm-openai-compatible-api) -- يعرض vLLM وOllama كلاهما واجهات API متوافقة مع OpenAI.',
@@ -1303,7 +1303,7 @@ schema: {
           id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
-            '[Servidores de inferência LLM para empresas 2026](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI e NVIDIA NIM para serving multi-GPU e multiusuário, não para uma única máquina.',
+            '[Servidores de inferência LLM para empresas 2026](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- vLLM, TGI e NVIDIA NIM para serving multi-GPU e multiusuário, não para uma única máquina.',
           ],
         },
       },
@@ -1552,7 +1552,7 @@ schema: {
         id: 'related-reading',
         title: 'Weiterführendes Material',
         items: [
-          '[Enterprise-LLM-Inferenzserver 2026](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI und NVIDIA NIM für Multi-GPU-Mehrnutzer-Serving statt einer einzelnen Maschine.',
+          '[Enterprise-LLM-Inferenzserver 2026](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- vLLM, TGI und NVIDIA NIM für Multi-GPU-Mehrnutzer-Serving statt einer einzelnen Maschine.',
           '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- Setup des beliebtesten llama.cpp-Wrappers.',
           '[Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio) -- Beide verwenden Inference-Engines; vergleichen Sie ihre UIs.',
           '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) -- vLLM und Ollama stellen beide OpenAI-kompatible APIs bereit.',
@@ -1833,7 +1833,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Serveurs d\'inférence LLM en entreprise 2026](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI et NVIDIA NIM pour un serving multi-GPU et multi-utilisateurs, pas pour une seule machine.',
+            '[Serveurs d\'inférence LLM en entreprise 2026](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- vLLM, TGI et NVIDIA NIM pour un serving multi-GPU et multi-utilisateurs, pas pour une seule machine.',
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Configurez le wrapper llama.cpp le plus populaire.',
             '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) -- Les deux utilisent des moteurs d\'inférence ; comparez leurs UIs.',
             '[API locale LLM compatible OpenAI](/fr/local-llms/local-llm-openai-compatible-api) -- vLLM et Ollama exposent tous deux des APIs compatibles OpenAI.',
@@ -2195,7 +2195,7 @@ schema: {
           id: 'related-reading',
           title: '関連リソース',
           items: [
-            '[エンタープライズLLM推論サーバー2026](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- 単一マシンではなく、マルチGPU・マルチユーザー向けサービングとしてvLLM・TGI・NVIDIA NIMを比較。',
+            '[エンタープライズLLM推論サーバー2026](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- 単一マシンではなく、マルチGPU・マルチユーザー向けサービングとしてvLLM・TGI・NVIDIA NIMを比較。',
             '[Ollama をインストール方法](/ja/local-llms/how-to-install-ollama) -- 最も人気のある llama.cpp ラッパーをセットアップ。',
             '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) -- 両者が推論エンジン使用；UI を比較。',
             '[ローカル LLM OpenAI 互換 API](/ja/local-llms/local-llm-openai-compatible-api) -- vLLM と Ollama は両者が OpenAI 互換 API を露出。',
@@ -2557,7 +2557,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[企业级LLM推理服务器2026](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- 从多GPU、多用户服务的角度比较vLLM、TGI和NVIDIA NIM,而非单机场景。',
+            '[企业级LLM推理服务器2026](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- 从多GPU、多用户服务的角度比较vLLM、TGI和NVIDIA NIM,而非单机场景。',
             '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) -- 设置最流行的 llama.cpp 包装器。',
             '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) -- 两者都使用推理引擎；比较其 UI。',
             '[本地 LLM OpenAI 兼容 API](/zh/local-llms/local-llm-openai-compatible-api) -- vLLM 和 Ollama 都暴露 OpenAI 兼容 API。',
@@ -2927,7 +2927,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[엔터프라이즈 LLM 추론 서버 2026](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- 단일 머신이 아닌 멀티 GPU, 다중 사용자 서빙 관점에서 vLLM, TGI, NVIDIA NIM을 비교합니다.',
+            '[엔터프라이즈 LLM 추론 서버 2026](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) -- 단일 머신이 아닌 멀티 GPU, 다중 사용자 서빙 관점에서 vLLM, TGI, NVIDIA NIM을 비교합니다.',
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 가장 인기 있는 llama.cpp 래퍼를 설정하십시오.',
             '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 두 도구 모두 추론 엔진을 사용합니다. UI를 비교하십시오.',
             '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- vLLM과 Ollama 모두 OpenAI 호환 API를 제공합니다.',

@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — broader model authority covering all hardware tiers, not just mobile.',
           '[Build a Local Voice Assistant on Your Phone: Whisper + Local LLM](/power-local-llm/voice-assistant-local-mobile-offline) — extends these apps with offline voice input/output.',
           '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) — desktop alternative for users who want a more capable home machine to remote-connect to.',
-          '[Enclave AI Review 2026](/power-local-llm/enclave-ai-review-2026) — a closer look at Enclave AI, an on-device AI assistant app for iPhone, iPad, and Mac with document interaction and Siri/Shortcuts automation.',
+          '[Enclave AI Review 2026](/power-local-llm/enclave-ai-review) — a closer look at Enclave AI, an on-device AI assistant app for iPhone, iPad, and Mac with document interaction and Siri/Shortcuts automation.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — directory of every local-LLM tool worth knowing across all platforms.',
           '[Melhores Apps LLM Local para iPhone 2026 (Português)](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — versão em português deste guia',
         ],

@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Reading',
         items: [
-          '[LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)](/prompt-engineering/langsmith-vs-helicone-vs-langfuse-2026) — production tracing and cost monitoring, once a prompt ships',
+          '[LangSmith vs Helicone vs Langfuse vs PromptLayer (2026)](/prompt-engineering/langsmith-vs-helicone-vs-langfuse) — production tracing and cost monitoring, once a prompt ships',
           '[Best Prompt Engineering Tools 2026: Ranked by Use Case](/prompt-engineering/best-prompt-engineering-tools-2026)',
           '[Best Prompt Optimization Tools for Teams 2026](/prompt-engineering/best-prompt-optimization-tools-for-teams)',
           '[Best Prompt Testing & Evaluation Tools 2026](/prompt-engineering/best-prompt-testing-evaluation-tools)',

@@ -34,7 +34,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'replace-github-copilot-with-local-llm',
   'local-llm-code-review-ci-cd',
   // Bodega One Code review — 2026-09-03
-  'bodega-one-code-review-2026',
+  'bodega-one-code-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -51,7 +51,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'uncensored-local-llm-creative-writing-ethics',
 
   // Backyard AI review — 2026-09-02
-  'backyard-ai-review-local-roleplay-2026',
+  'backyard-ai-review-local-roleplay',
 
   // Cat 6 — Mobile & Edge LLMs (6)
   'best-local-llm-apps-iphone-2026',
@@ -107,8 +107,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ai-courses-certifications-2026',
   'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026',
-  'cursor-vs-windsurf-vs-copilot-cline-2026',
-  'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026',
+  'cursor-vs-windsurf-vs-copilot-cline',
+  'pinecone-vs-weaviate-vs-qdrant-vs-chroma',
 
   // DeepSeek Series 2026-06-19
   'deepseek-r1-vs-distills-explained-2026',
@@ -119,14 +119,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-image-generation-vs-cloud',
 
   // AnimateDiff guide — 2026-09-02
-  'animatediff-video-generation-guide-2026',
+  'animatediff-video-generation-guide',
 
   // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
-  'best-web-hosting-2026',
+  'best-web-hosting',
 
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
-  'asus-mini-pc-local-ai-2026',
-  'local-llm-electricity-cost-balcony-solar-2026',
+  'asus-mini-pc-local-ai',
+  'local-llm-electricity-cost-balcony-solar',
 
   // Flowise shutdown coverage — 2026-09-02
   'flowise-ai-visual-workflow-builder-review',
@@ -135,7 +135,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'haystack-deepset-rag-framework-review',
 
   // Enterprise/B2B infrastructure — 2026-09-02
-  'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
+  'enterprise-llm-inference-servers-vllm-tgi-nim',
   // Dify LLMOps platform review — 2026-09-02
   'dify-ai-workflow-builder-review',
   // Langflow review — 2026-09-02
@@ -152,28 +152,28 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'khoj-ai-second-brain-review',
   'real-esrgan-ai-image-upscaler-review',
   // Second Me review — 2026-09-03
-  'second-me-review-2026',
+  'second-me-review',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise',
   // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
   'enterprise-chatbot-deployment-helpdesk-hr-bots',
   // Enterprise/B2B — AI-powered HR software for enterprises — 2026-09-03
-  'best-ai-hr-software-enterprise-2026',
+  'best-ai-hr-software-enterprise',
   // Enterprise/B2B — vector database procurement/deployment — 2026-09-03
-  'enterprise-rag-vector-database-deployment-guide-2026',
+  'enterprise-rag-vector-database-deployment-guide',
   // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
-  'best-ai-marketing-software-enterprise-2026',
+  'best-ai-marketing-software-enterprise',
   // AutoGPT classic-vs-Platform review — 2026-09-02
-  'autogpt-local-review-2026',
+  'autogpt-local-review',
   // Atomic Chat review — 2026-09-03
   'atomic-chat-review',
   // h2oGPT enterprise review — 2026-09-03
-  'h2ogpt-review-2026',
+  'h2ogpt-review',
   // LibreChat review — 2026-09-03
-  'librechat-review-2026',
+  'librechat-review',
   // Hermes Agent (Nous Research) self-hosted agent review — 2026-09-03
-  'hermes-agent-review-2026',
+  'hermes-agent-review',
   // Open Interpreter Rust/Codex-fork review — 2026-09-03
   'open-interpreter-review',
 
@@ -185,14 +185,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'vla-models-robots-local-inference',
   'vlm-video-analytics-drones-edge',
   // Msty Go local-first AI task-automation agent review — 2026-09-03
-  'msty-go-review-2026',
+  'msty-go-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
   'ai-generated-content-ip-risk',
   'us-state-ai-employment-laws-compliance',
   // Enclave AI review — 2026-09-03
-  'enclave-ai-review-2026',
+  'enclave-ai-review',
 
   // Aori, RAPR AI, Open Felix, BoBe (Local AI Agents & Tool Use), Osaurus,
   // Hanoki (Easiest Desktop Apps), Voxa, Jarvis Mac (Voice/Speech/Multimodal),

@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Best AI-Powered HR Software for Enterprises 2026](/power-local-llm/best-ai-hr-software-enterprise-2026) — compares mainstream AI-HR platforms against self-hosted options for resume screening, sentiment analysis, and performance-review drafting.',
+          '[Best AI-Powered HR Software for Enterprises 2026](/power-local-llm/best-ai-hr-software-enterprise) — compares mainstream AI-HR platforms against self-hosted options for resume screening, sentiment analysis, and performance-review drafting.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — which self-hosted platforms suit each compliance posture, with notes on telemetry and licensing.',
           '[Local AI Agents for Business Workflows and EU Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — adjacent compliance topic when retrieval feeds automated workflow steps rather than a human reader.',
           '[Local LLM Email and Calendar Automation](/power-local-llm/local-llm-email-and-calendar-automation) — adjacent business automation patterns where the same control set applies.',
@@ -1240,7 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Beste KI-HR-Software für Unternehmen 2026](/de/power-local-llm/best-ai-hr-software-enterprise-2026) — vergleicht marktführende KI-HR-Plattformen mit selbst gehosteten Optionen für Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
+          '[Beste KI-HR-Software für Unternehmen 2026](/de/power-local-llm/best-ai-hr-software-enterprise) — vergleicht marktführende KI-HR-Plattformen mit selbst gehosteten Optionen für Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI: Bestes lokales RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — welche selbst gehosteten Plattformen welcher Compliance-Posture entsprechen, mit Hinweisen zu Telemetrie und Lizenzierung.',
           '[Lokale KI-Agenten für Geschäftsabläufe und EU-Compliance](/de/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — angrenzendes Compliance-Thema, wenn Retrieval automatisierte Workflow-Schritte speist statt eines menschlichen Lesers.',
           '[Lokale LLM-E-Mail- und Kalender-Automatisierung](/de/power-local-llm/local-llm-email-and-calendar-automation) — angrenzende Geschäftsautomatisierungsmuster, in denen das gleiche Kontrollset gilt.',
@@ -1860,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Meilleurs logiciels RH IA pour entreprises 2026](/fr/power-local-llm/best-ai-hr-software-enterprise-2026) — compare les plateformes RH IA leaders aux options auto-hébergées pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
+          '[Meilleurs logiciels RH IA pour entreprises 2026](/fr/power-local-llm/best-ai-hr-software-enterprise) — compare les plateformes RH IA leaders aux options auto-hébergées pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI : meilleur RAG local](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — quelles plateformes auto-hébergées pour quelle posture conformité, avec notes télémétrie et licence.',
           '[Agents IA locaux pour workflows métier et conformité EU](/fr/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — sujet adjacent quand la recherche alimente des étapes de workflow automatisées plutôt qu\'un lecteur humain.',
           "[Automatisation e-mail et calendrier par LLM local](/fr/power-local-llm/local-llm-email-and-calendar-automation) — schémas d'automatisation métier où le même jeu de contrôles s'applique.",
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[企業向けAI人事ソフト2026](/ja/power-local-llm/best-ai-hr-software-enterprise-2026) —— 大手AI人事プラットフォームとセルフホスト型の選択肢を、履歴書スクリーニング・感情分析・考課下書きの観点で比較します。',
+          '[企業向けAI人事ソフト2026](/ja/power-local-llm/best-ai-hr-software-enterprise) —— 大手AI人事プラットフォームとセルフホスト型の選択肢を、履歴書スクリーニング・感情分析・考課下書きの観点で比較します。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI：最良のローカルRAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — どのセルフホストプラットフォームがどのコンプライアンスpostureに合うか、テレメトリとライセンスに関する注釈付き。',
           '[業務ワークフローとEUコンプライアンスのためのローカルAIエージェント](/ja/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — retrievalが人間の読者ではなく自動化ワークフローステップを供給するときの隣接コンプライアンス話題。',
           '[ローカルLLMでのメール・カレンダー自動化](/ja/power-local-llm/local-llm-email-and-calendar-automation) — 同じ統制セットが適用される隣接業務自動化パターン。',
@@ -3115,7 +3115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026年企业AI人力资源软件推荐](/zh/power-local-llm/best-ai-hr-software-enterprise-2026) —— 对比主流AI人力资源平台与自托管方案，涵盖简历筛选、情绪分析与绩效评语起草。',
+          '[2026年企业AI人力资源软件推荐](/zh/power-local-llm/best-ai-hr-software-enterprise) —— 对比主流AI人力资源平台与自托管方案，涵盖简历筛选、情绪分析与绩效评语起草。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI：最佳本地 RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 不同自托管平台对应不同合规姿态，附遥测与许可注释。',
           '[面向业务流程与欧盟合规的本地 AI 智能体](/zh/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — 当检索喂给自动化工作流而非人类读者时的合规话题。',
           '[本地 LLM 邮件与日历自动化](/zh/power-local-llm/local-llm-email-and-calendar-automation) — 同一控制集适用的相邻业务自动化模式。',
@@ -3733,7 +3733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejor software de RR. HH. con IA para empresas 2026](/es/power-local-llm/best-ai-hr-software-enterprise-2026) — compara las plataformas líderes de RR. HH. con IA frente a opciones autoalojadas para filtrado de CV, análisis de clima y redacción de evaluaciones.',
+          '[Mejor software de RR. HH. con IA para empresas 2026](/es/power-local-llm/best-ai-hr-software-enterprise) — compara las plataformas líderes de RR. HH. con IA frente a opciones autoalojadas para filtrado de CV, análisis de clima y redacción de evaluaciones.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: el mejor RAG local](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — qué plataformas autoalojadas se adaptan a cada postura de cumplimiento, con notas sobre telemetría y licencias.',
           '[Agentes de IA locales para flujos de trabajo empresariales y cumplimiento en la UE](/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — tema de cumplimiento adyacente cuando la recuperación alimenta pasos de flujo de trabajo automatizados en lugar de un lector humano.',
           '[Automatización local de correo electrónico y calendario con LLM](/es/power-local-llm/local-llm-email-and-calendar-automation) — patrones de automatización empresarial adyacentes donde se aplica el mismo conjunto de controles.',
@@ -4364,7 +4364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[2026년 기업용 AI 인사 소프트웨어 추천](/ko/power-local-llm/best-ai-hr-software-enterprise-2026) — 주요 AI 인사 플랫폼과 자체 호스팅 옵션을 이력서 심사, 감정 분석, 인사고과 초안 작성 기준으로 비교합니다.',
+          '[2026년 기업용 AI 인사 소프트웨어 추천](/ko/power-local-llm/best-ai-hr-software-enterprise) — 주요 AI 인사 플랫폼과 자체 호스팅 옵션을 이력서 심사, 감정 분석, 인사고과 초안 작성 기준으로 비교합니다.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: 최고의 로컬 RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 각 컴플라이언스 자세에 맞는 자체 호스팅 플랫폼, 텔레메트리 및 라이선스 참고 사항 포함.',
           '[비즈니스 워크플로우 및 EU 컴플라이언스를 위한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — 검색이 인간 독자 대신 자동화된 워크플로우 단계를 지원할 때의 인접 컴플라이언스 주제.',
           '[LLM으로 로컬 이메일 및 캘린더 자동화](/ko/power-local-llm/local-llm-email-and-calendar-automation) — 동일한 제어 항목 세트가 적용되는 인접 비즈니스 자동화 패턴.',
@@ -5006,7 +5006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Melhor software de RH com IA para empresas 2026](/pt/power-local-llm/best-ai-hr-software-enterprise-2026) — compara plataformas líderes de RH com IA com opções auto-hospedadas para triagem de currículos, análise de sentimento e redação de avaliações.',
+          '[Melhor software de RH com IA para empresas 2026](/pt/power-local-llm/best-ai-hr-software-enterprise) — compara plataformas líderes de RH com IA com opções auto-hospedadas para triagem de currículos, análise de sentimento e redação de avaliações.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: o melhor RAG local](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — quais plataformas auto-hospedadas se adaptam a cada postura de conformidade, com notas sobre telemetria e licenças.',
           '[Agentes de IA locais para fluxos de trabalho empresariais e conformidade na UE](/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — tema de conformidade adjacente quando a recuperação alimenta etapas de fluxo de trabalho automatizadas em vez de um leitor humano.',
           '[Automação local de e-mail e calendário com LLM](/pt/power-local-llm/local-llm-email-and-calendar-automation) — padrões de automação empresarial adjacentes onde se aplica o mesmo conjunto de controles.',
@@ -5637,7 +5637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-hr-software-enterprise-2026) — يقارن المنصات الرائدة بخيارات مستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
+          '[أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-hr-software-enterprise) — يقارن المنصات الرائدة بخيارات مستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — أي المنصات ذاتية الاستضافة تناسب كل وضع امتثال، مع ملاحظات عن القياس عن بُعد والتراخيص.',
           '[وكلاء ذكاء اصطناعي محليون لسير العمل المؤسسي والامتثال في الاتحاد الأوروبي](/ar/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — موضوع امتثال مجاور عندما يغذّي الاسترجاع خطوات سير عمل آلية بدلًا من قارئ بشري.',
           '[أتمتة البريد الإلكتروني والتقويم محليًا بـ LLM](/ar/power-local-llm/local-llm-email-and-calendar-automation) — أنماط أتمتة مؤسسية مجاورة تنطبق عليها مجموعة الضوابط نفسها.',

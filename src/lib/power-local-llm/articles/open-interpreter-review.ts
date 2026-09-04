@@ -238,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[AutoGPT Review 2026: Classic Agent vs. Hosted Platform](/power-local-llm/autogpt-local-review-2026) — the MIT-licensed classic agent from Open Interpreter\'s original "give an LLM agency over your machine" era.',
+          '[AutoGPT Review 2026: Classic Agent vs. Hosted Platform](/power-local-llm/autogpt-local-review) — the MIT-licensed classic agent from Open Interpreter\'s original "give an LLM agency over your machine" era.',
           '[BabyAGI in 2026: What the First AI Agent Became](/power-local-llm/babyagi-review-autonomous-agent) — a maintenance-status review of another 2023-era autonomous-agent pioneer.',
           '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — scoped, IDE- and terminal-based coding agents as an alternative to Open Interpreter.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[AutoGPT Review 2026: Classic-Agent vs. gehostete Platform](/de/power-local-llm/autogpt-local-review-2026) — der MIT-lizenzierte Classic-Agent aus Open Interpreters ursprünglicher „LLM erhält Handlungsmacht über Ihren Rechner"-Ära.',
+          '[AutoGPT Review 2026: Classic-Agent vs. gehostete Platform](/de/power-local-llm/autogpt-local-review) — der MIT-lizenzierte Classic-Agent aus Open Interpreters ursprünglicher „LLM erhält Handlungsmacht über Ihren Rechner"-Ära.',
           '[BabyAGI 2026: Was aus dem ersten KI-Agenten wurde](/de/power-local-llm/babyagi-review-autonomous-agent) — ein Pflegestatus-Test eines weiteren autonomen Agenten-Pioniers aus 2023.',
           '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — gebundene, IDE- und terminalbasierte Coding-Agenten als Alternative zu Open Interpreter.',
           '[Local-LLM-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[AutoGPT Review 2026 : agent classique vs. plateforme hébergée](/fr/power-local-llm/autogpt-local-review-2026) — l\'agent classique sous licence MIT issu de l\'ère d\'origine d\'Open Interpreter, « donner à un LLM le contrôle de votre machine ».',
+          '[AutoGPT Review 2026 : agent classique vs. plateforme hébergée](/fr/power-local-llm/autogpt-local-review) — l\'agent classique sous licence MIT issu de l\'ère d\'origine d\'Open Interpreter, « donner à un LLM le contrôle de votre machine ».',
           '[BabyAGI en 2026 : ce qu\'est devenu le premier agent IA](/fr/power-local-llm/babyagi-review-autonomous-agent) — un état des lieux de maintenance d\'un autre pionnier des agents autonomes de 2023.',
           '[Continue.dev vs Cline vs Aider : meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — des agents de codage bornés, IDE et terminal, comme alternative à Open Interpreter.',
           '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[AutoGPT Review 2026: agente clásico vs. plataforma alojada](/es/power-local-llm/autogpt-local-review-2026) — el agente clásico bajo licencia MIT de la era original de Open Interpreter, "dar a un LLM agencia sobre tu máquina".',
+          '[AutoGPT Review 2026: agente clásico vs. plataforma alojada](/es/power-local-llm/autogpt-local-review) — el agente clásico bajo licencia MIT de la era original de Open Interpreter, "dar a un LLM agencia sobre tu máquina".',
           '[BabyAGI en 2026: en qué se convirtió el primer agente de IA](/es/power-local-llm/babyagi-review-autonomous-agent) — una reseña del estado de mantenimiento de otro pionero de agentes autónomos de 2023.',
           '[Continue.dev vs Cline vs Aider: mejor agente de código local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — agentes de código acotados, de IDE y terminal, como alternativa a Open Interpreter.',
           '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[AutoGPT Review 2026: agente clássico vs. plataforma hospedada](/pt/power-local-llm/autogpt-local-review-2026) — o agente clássico sob licença MIT da era original do Open Interpreter, "dar a um LLM controle sobre sua máquina".',
+          '[AutoGPT Review 2026: agente clássico vs. plataforma hospedada](/pt/power-local-llm/autogpt-local-review) — o agente clássico sob licença MIT da era original do Open Interpreter, "dar a um LLM controle sobre sua máquina".',
           '[BabyAGI em 2026: o que aconteceu com o primeiro agente de IA](/pt/power-local-llm/babyagi-review-autonomous-agent) — uma análise do status de manutenção de outro pioneiro de agentes autônomos de 2023.',
           '[Continue.dev vs Cline vs Aider: melhor agente de código local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — agentes de código restritos, de IDE e terminal, como alternativa ao Open Interpreter.',
           '[Diretório de software LLM local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[AutoGPTレビュー2026:Classicエージェント対ホスト型プラットフォーム](/ja/power-local-llm/autogpt-local-review-2026) — Open Interpreterの元の「LLMに自分のマシンへの権限を与える」時代からのMITライセンスClassicエージェント。',
+          '[AutoGPTレビュー2026:Classicエージェント対ホスト型プラットフォーム](/ja/power-local-llm/autogpt-local-review) — Open Interpreterの元の「LLMに自分のマシンへの権限を与える」時代からのMITライセンスClassicエージェント。',
           '[BabyAGI 2026年版:最初のAIエージェントはどうなったか](/ja/power-local-llm/babyagi-review-autonomous-agent) — 2023年当時の別の自律エージェントの先駆けについてのメンテナンス状況レビュー。',
           '[Continue.dev対Cline対Aider:2026年ベストなローカルコーディングエージェント](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Open Interpreterの代替となる、範囲を限定したIDE・ターミナルベースのコーディングエージェント。',
           '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの全カタログ。',
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[AutoGPT 2026款评测：经典代理与托管平台对比](/zh/power-local-llm/autogpt-local-review-2026) — 来自Open Interpreter最初"让LLM掌控你的电脑"时代的MIT许可证经典代理。',
+          '[AutoGPT 2026款评测：经典代理与托管平台对比](/zh/power-local-llm/autogpt-local-review) — 来自Open Interpreter最初"让LLM掌控你的电脑"时代的MIT许可证经典代理。',
           '[BabyAGI 2026：第一款AI代理如今变成了什么](/zh/power-local-llm/babyagi-review-autonomous-agent) — 对2023年另一位自主代理先驱的维护状态评测。',
           '[Continue.dev对比Cline对比Aider：2026年最佳本地编码代理](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 限定范围、基于IDE和终端的编码代理，可作为Open Interpreter的替代方案。',
           '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录。',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة AutoGPT 2026: العميل الكلاسيكي مقابل المنصة المستضافة](/ar/power-local-llm/autogpt-local-review-2026) — العميل الكلاسيكي المرخّص بموجب MIT من عصر Open Interpreter الأصلي "امنح نموذج لغوي صلاحية التحكّم بجهازك".',
+          '[مراجعة AutoGPT 2026: العميل الكلاسيكي مقابل المنصة المستضافة](/ar/power-local-llm/autogpt-local-review) — العميل الكلاسيكي المرخّص بموجب MIT من عصر Open Interpreter الأصلي "امنح نموذج لغوي صلاحية التحكّم بجهازك".',
           '[BabyAGI في 2026: ماذا أصبح أول عميل ذكاء اصطناعي](/ar/power-local-llm/babyagi-review-autonomous-agent) — مراجعة لحالة صيانة رائد آخر من عملاء 2023 المستقلة.',
           '[Continue.dev مقابل Cline مقابل Aider: أفضل عميل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — عملاء برمجة محدودو النطاق قائمون على بيئة التطوير والطرفية، كبديل لـOpen Interpreter.',
           '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
@@ -2190,7 +2190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[AutoGPT 리뷰 2026: 클래식 에이전트 대 호스팅 플랫폼](/ko/power-local-llm/autogpt-local-review-2026) — Open Interpreter의 원래 "LLM에 사용자 컴퓨터에 대한 권한을 부여한다" 시대에서 나온 MIT 라이선스 클래식 에이전트.',
+          '[AutoGPT 리뷰 2026: 클래식 에이전트 대 호스팅 플랫폼](/ko/power-local-llm/autogpt-local-review) — Open Interpreter의 원래 "LLM에 사용자 컴퓨터에 대한 권한을 부여한다" 시대에서 나온 MIT 라이선스 클래식 에이전트.',
           '[BabyAGI 2026: 최초의 AI 에이전트는 어떻게 되었나](/ko/power-local-llm/babyagi-review-autonomous-agent) — 2023년의 또 다른 자율 에이전트 선구자에 대한 유지보수 상태 리뷰.',
           '[Continue.dev 대 Cline 대 Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — Open Interpreter의 대안이 되는, 범위가 한정된 IDE 및 터미널 기반 코딩 에이전트.',
           '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
