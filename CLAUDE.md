@@ -322,6 +322,21 @@ and **fails the build**. Deliberate exceptions go in
 matches full month names only — `Jan` is a product this site covers (Jan AI),
 not January.
 
+## No Year or Month in Slugs / URLs (HARD RULE — never again)
+
+**A slug/URL must never contain a year or a month, in any cluster, for any freshness tier — including `annual`.** No exceptions, no "just this once."
+
+**Why:** A year baked into the URL (`/power-local-llm/locally-ai-review-2026`) turns the page into a liability at every year boundary — it either goes stale in the URL forever, or someone has to rename the slug, update every internal link across 9 languages, add a 301 redirect, and hope nothing external (backlinks, GSC history, cached SERPs) breaks. This is not hypothetical: it recurred on `locally-ai-review-2026` (published 2026-09-04) despite the freshness-tier system already existing specifically to keep years out of URLs. A URL is permanent infrastructure; a year is not — never combine them.
+
+**The year belongs in the title and in `specific_year` / `next_refresh_due`, never in the slug:**
+- ❌ slug `locally-ai-review-2026` — ✅ slug `locally-ai-review`, title "Locally AI Review (2026): …"
+- ❌ slug `2026-gpu-price-rankings` — ✅ slug `gpu-price-rankings`, title "2026 GPU Price Rankings"
+- ❌ slug `best-llms-january-2026` — ✅ slug `best-llms`, title "Best LLMs 2026" (and see the month rule above — month stays out of the title too)
+
+This applies identically to `local-llms`, `prompt-engineering`, `power-local-llm`, `prompt-bites`, `smart-home`, `balcony-solar`, `enterprise-ai`, and blog slugs. When a page is genuinely about a one-time dated event and the slug feels incomplete without a year, keep the year in the title/schema and let the "Last updated" badge and `specific_year` field carry the freshness signal — the same reasoning as the month rule above.
+
+**Enforcement:** `scripts/validate-freshness-tier.mjs` fails the build if any article's slug (derived from the filename, or the `slugs.ts` key) contains a 4-digit year or a full month name. There is no allowlist for this one — if you think a page needs it, that's a sign the freshness tier or the URL naming is wrong, not that the rule needs an exception. Raise it instead of routing around the gate.
+
 ## Freshness Tier (MANDATORY before writing any new article)
 
 Before writing or substantially editing any article, ask:
@@ -332,7 +347,7 @@ Before writing or substantially editing any article, ask:
    - **evergreen**: Timeless concept, no year/model/hardware refs. Examples: "What is prompt engineering?", "How does an LLM work?", "Guide to fine-tuning fundamentals", **"Prompt review workflow for teams"**, **"Guide to CI/CD gates for LLMs"**. → Add `freshness_tier: 'evergreen'`
      - **Note:** A workflow/process/checklist article is evergreen even if it mentions specific tools (GitHub Actions, GPT-4o, Braintrust) as *illustrative examples*. Reserve `semi_annual` for articles whose PRIMARY subject is a specific versioned model, hardware spec, or ranked list with a year in the title.
    - **semi_annual**: Specific models, hardware, pricing, or "best-of" recommendations with year in title. Examples: "Best Llama 3.2 Models 2026", "RTX 4090 Performance Benchmark 2026", "Top Open-Source LLMs in 2026". → Add `freshness_tier: 'semi_annual'` + set `next_refresh_due` to 6 months from publish date
-   - **annual**: Year-specific event, ranking, or timeline with year in slug URL. Examples: "/2026-ai-model-releases/", "/2026-gpu-price-rankings/". → Add `freshness_tier: 'annual'` + set `specific_year: 2026`
+   - **annual**: Year-specific event, ranking, or timeline. The year goes in the **title** and `specific_year` field only — **never in the slug/URL** (see "No Year or Month in Slugs / URLs" below). Examples: title "2026 AI Model Releases", slug `/ai-model-releases/`; title "2026 GPU Price Rankings", slug `/gpu-price-rankings/`. → Add `freshness_tier: 'annual'` + set `specific_year: 2026`
 
 3. **If 2 tiers apply → SPLIT into multiple pages.** Example: "GPT-4 vs Llama 3.2 (models) + How to Fine-Tune (concept)" → write as two separate articles.
 
@@ -349,7 +364,8 @@ Before writing or substantially editing any article, ask:
    - All new articles (publishDate ≥ 2026-04-21) must have `freshness_tier` set
    - `evergreen` articles must NOT contain year references, specific models, or benchmarks
    - `semi_annual` articles must have year in title and `next_refresh_due` set
-   - `annual` articles must have year in slug and `specific_year` set
+   - `annual` articles must have `specific_year` set (year in title, never in the slug)
+   - **No article slug, in any tier, may contain a year or a month** (see "No Year or Month in Slugs / URLs" above)
 
 ### Pre-commit Enforcement (Evergreen Article Validation)
 
