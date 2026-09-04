@@ -11,6 +11,7 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
+import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon } from './icons'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
@@ -33,7 +34,7 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
 }
 
 function joinOrUnknown(values: string[] | null): ReactNode {
-  if (!values || values.length === 0) return <span className="italic text-text-secondary/70">Not yet researched</span>
+  if (!values || values.length === 0) return null
   return values.join(', ')
 }
 
@@ -107,14 +108,17 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
-                  <DetailRow label="Runs" value={app.locality === 'TODO' ? <span className="italic text-text-secondary/70">Not yet researched</span> : app.locality} />
-                  <DetailRow label="Engine" value={app.engine === 'TODO' ? <span className="italic text-text-secondary/70">Not yet researched</span> : app.engine} />
-                  <DetailRow label="Price" value={app.price === 'TODO' ? <span className="italic text-text-secondary/70">Not yet researched</span> : app.price} />
+                  <DetailRow label="Runs" value={app.locality === 'TODO' ? null : app.locality} />
+                  <DetailRow label="Engine" value={app.engine === 'TODO' ? null : app.engine} />
+                  <DetailRow label="Price" value={app.price === 'TODO' ? null : app.price} />
                   <DetailRow label="License" value={app.license} />
                   <DetailRow label="Platforms" value={joinOrUnknown(app.platforms)} />
                   <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
                   <DetailRow label="Layer" value={app.layer} />
-                  <DetailRow label="Hardware" value={<HardwareBlock hardware={app.hardware} machine={machine} compact />} />
+                  <DetailRow
+                    label="Hardware"
+                    value={computeHardwareDisplay(app.hardware, machine).known ? <HardwareBlock hardware={app.hardware} machine={machine} compact /> : null}
+                  />
                   <DetailRow label="Added" value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow label="Last verified" value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />
                 </dl>
@@ -137,17 +141,15 @@ export function ToolDrawer({
               </section>
 
               {/* PromptQuorum review */}
-              <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">PromptQuorum review</h3>
-                {app.pqReview ? (
+              {app.pqReview && (
+                <section className="mb-5">
+                  <h3 className="text-sm font-bold text-text-primary mb-2">PromptQuorum review</h3>
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.pqReview.text[lang] ?? app.pqReview.text.en ?? ''}</p>
                     <p className="text-xs text-text-secondary/80">Tested {formatDisplayDate(app.pqReview.date, lang)} on {app.pqReview.hw}</p>
                   </div>
-                ) : (
-                  <p className="text-sm text-text-secondary italic">Not yet reviewed by PromptQuorum.</p>
-                )}
-              </section>
+                </section>
+              )}
 
               {/* PromptQuorum articles */}
               <section className="mb-5">
