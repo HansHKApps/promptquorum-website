@@ -6,7 +6,7 @@
 // -right panel is Dialog.Content with directional Tailwind transitions.
 
 import * as Dialog from '@radix-ui/react-dialog'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
@@ -36,6 +36,59 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
 function joinOrUnknown(values: string[] | null): ReactNode {
   if (!values || values.length === 0) return null
   return values.join(', ')
+}
+
+function FounderClaimBox({ appName }: { appName: string }) {
+  const [expanded, setExpanded] = useState(false)
+  return (
+    <div className="rounded-xl border border-dashed border-primary/25 bg-primary/[0.03] p-4">
+      <p className="text-sm text-text-secondary italic">
+        Claim this entry — if you build or maintain {appName}, email hello@promptquorum.com to add a founder statement.
+      </p>
+      <button
+        type="button"
+        onClick={() => setExpanded((v) => !v)}
+        aria-expanded={expanded}
+        className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+      >
+        <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-primary text-[11px] leading-none">
+          {expanded ? '–' : '+'}
+        </span>
+        {expanded ? 'Hide details' : 'Why claim it'}
+      </button>
+      {expanded && (
+        <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-primary/10 pt-3">
+          <p>
+            <span className="font-semibold text-text-primary">Get the "Verified" badge.</span> Claimed entries carry
+            a visible marker showing the details on this page were confirmed by the people who actually build{' '}
+            {appName}, not just pulled from a repository.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Correct the record.</span> Flag wrong specs, outdated
+            benchmarks, or missing features directly to us, and they get fixed in the article — before the next
+            reader sees them.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Add your own statement.</span> A short founder note —
+            why you built it, what it's best at, where it falls short — runs next to the editorial review, in your
+            own words.
+          </p>
+          <p>
+            <span className="font-semibold text-text-primary">Free, ongoing visibility.</span> No cost, no ad spend.
+            Everyone who compares {appName} against alternatives on this site sees your correction and your
+            statement.
+          </p>
+          <p className="pt-1">
+            Email{' '}
+            <a href="mailto:hello@promptquorum.com" className="text-primary hover:underline">
+              hello@promptquorum.com
+            </a>{' '}
+            — put {appName} in the subject line.
+          </p>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export function ToolDrawer({
@@ -134,9 +187,7 @@ export function ToolDrawer({
                     <p><span className="font-semibold text-text-primary">Limits:</span> {app.founder.limits}</p>
                   </div>
                 ) : (
-                  <p className="text-sm text-text-secondary italic">
-                    Claim this entry — if you build or maintain {app.name}, email hello@promptquorum.com to add a founder statement.
-                  </p>
+                  <FounderClaimBox key={app.slug} appName={app.name} />
                 )}
               </section>
 
