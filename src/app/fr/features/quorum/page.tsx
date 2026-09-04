@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function FrQuorumPage() {
   return (
-    <main className="min-h-screen pt-20 pb-16">
+    <div className="min-h-screen pt-20 pb-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <QuorumShowcase />
 
@@ -61,6 +61,6 @@ export default function FrQuorumPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
