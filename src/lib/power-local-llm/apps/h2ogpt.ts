@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 12000,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/h2oai/h2ogpt',
   tagline: {
     en: 'Enterprise-feature-heavy desktop and server',

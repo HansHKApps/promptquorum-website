@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 4600,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/turboderp-org/exllamav2',
   tagline: {
     en: 'Fast quantized inference optimized for RTX GPUs',

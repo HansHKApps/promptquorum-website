@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 8900,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/ml-explore/mlx-examples',
   tagline: {
     en: 'Apple Silicon-native runtime by Apple research',
