@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 10400,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'github.com/sigoden/aichat',
   tagline: {
     en: 'Terminal AI chat supporting multiple local backends',

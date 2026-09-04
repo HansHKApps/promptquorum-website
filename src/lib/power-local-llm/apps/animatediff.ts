@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 12200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'github.com/guoyww/AnimateDiff',
   tagline: {
     en: 'Video generation from Stable Diffusion text prompts — no releases, push 2024 (2+ yrs)',

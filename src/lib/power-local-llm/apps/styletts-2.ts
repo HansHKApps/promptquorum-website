@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 6300,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio'],
   url: 'github.com/yl4579/StyleTTS2',
   tagline: {
     en: 'High-quality natural-sounding TTS with style control',

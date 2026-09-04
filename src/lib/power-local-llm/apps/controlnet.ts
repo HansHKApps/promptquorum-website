@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 34100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'github.com/lllyasviel/ControlNet',
   tagline: {
     en: 'Precise control over image generation with spatial guidance — no releases, push 2024 (2+ yrs)',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'agent', 'docs'],
   url: 'dify.ai',
   tagline: {
     en: 'AI workflow builder with RAG and agent support',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 28100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'invoke.ai',
   tagline: {
     en: 'Professional-grade image generation with intuitive UI — active, release 1wk ago',

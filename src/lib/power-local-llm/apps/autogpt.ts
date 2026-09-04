@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 187100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent'],
   url: 'github.com/Significant-Gravitas/AutoGPT',
   tagline: {
     en: 'Classic CLI agent, Ollama via API base URL',

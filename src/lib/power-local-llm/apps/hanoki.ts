@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'hanoki.app',
   tagline: {
     en: 'macOS branching chat, local via Ollama or cloud APIs',

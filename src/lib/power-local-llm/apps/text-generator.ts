@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 2000,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/nhaouari/obsidian-textgenerator-plugin',
   tagline: {
     en: 'Obsidian content generation plugin',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 22400,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent'],
   url: 'github.com/yoheinakajima/babyagi',
   tagline: {
     en: 'Lightweight autonomous agent',

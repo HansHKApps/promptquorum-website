@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 12300,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'github.com/TheR1D/shell_gpt',
   tagline: {
     en: 'CLI tool for shell command generation and chat',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'huggingface.co/HuggingFaceM4/idefics',
   tagline: {
     en: 'Open-source multimodal model for vision and language',

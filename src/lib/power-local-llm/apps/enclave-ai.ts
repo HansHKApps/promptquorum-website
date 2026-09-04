@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'enclaveai.app',
   tagline: {
     en: 'iPhone/iPad/Mac local AI assistant, fully offline',

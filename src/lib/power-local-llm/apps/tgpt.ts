@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 3300,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'github.com/aandrew-me/tgpt',
   tagline: {
     en: 'Terminal wrapper for local LLM chat',

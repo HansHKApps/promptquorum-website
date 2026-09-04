@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'langflow.org',
   tagline: {
     en: 'Visual AI orchestration with RAG components',

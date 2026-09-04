@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'prevolut.uk',
   tagline: {
     en: 'Native Ollama and LM Studio mobile client',

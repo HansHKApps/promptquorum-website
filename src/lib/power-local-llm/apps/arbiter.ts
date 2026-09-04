@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'apps.apple.com/app/arbiter-local-ai-chat/id6747954532',
   tagline: {
     en: 'iOS on-device chat models, or LAN to LM Studio/Ollama',

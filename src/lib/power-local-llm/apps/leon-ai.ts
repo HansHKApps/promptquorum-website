@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 17500,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent', 'build'],
   url: 'github.com/leon-ai/leon',
   tagline: {
     en: 'Open-source personal AI assistant framework',

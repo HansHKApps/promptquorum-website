@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'docs'],
   url: 'haystack.deepset.ai',
   tagline: {
     en: 'Search and RAG framework by deepset',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 86000,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code', 'agent'],
   url: 'github.com/All-Hands-AI/OpenHands',
   tagline: {
     en: 'AI software engineer agent (formerly OpenDevin)',

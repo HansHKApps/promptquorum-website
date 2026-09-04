@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code', 'chat'],
   url: 'github.com/Blackboxai/blackbox',
   tagline: {
     en: 'Terminal code generation and chat from your shell',

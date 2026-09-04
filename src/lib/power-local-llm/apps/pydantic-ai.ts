@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'ai.pydantic.dev',
   tagline: {
     en: 'Type-safe agent framework built on Pydantic',

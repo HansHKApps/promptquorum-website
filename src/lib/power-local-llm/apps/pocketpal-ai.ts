@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 8200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'github.com/a-ghorbani/pocketpal-ai',
   tagline: {
     en: 'Free iOS and Android local LLM client',

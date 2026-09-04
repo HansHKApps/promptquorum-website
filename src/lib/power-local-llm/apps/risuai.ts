@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 1600,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat', 'phone'],
   url: 'github.com/kwaroran/RisuAI',
   tagline: {
     en: 'Mobile-friendly roleplay frontend',

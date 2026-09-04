@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat', 'agent'],
   url: 'atomic.chat',
   tagline: {
     en: 'Offline desktop and mobile chat app with one-click local agents',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'cherry-ai.com',
   tagline: {
     en: 'Multi-provider desktop AI with extensive customization',

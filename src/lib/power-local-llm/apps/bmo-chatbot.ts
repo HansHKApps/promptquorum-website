@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 532,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/longy2k/obsidian-bmo-chatbot',
   tagline: {
     en: 'Obsidian chatbot with local LLM',

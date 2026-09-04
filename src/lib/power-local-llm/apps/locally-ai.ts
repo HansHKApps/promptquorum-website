@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'www.locallyai.app',
   tagline: {
     en: 'Runs open models on-device on iPhone/iPad/Mac via MLX',

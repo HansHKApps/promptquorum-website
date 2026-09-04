@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/logancyang/logseq-copilot',
   tagline: {
     en: 'Logseq plugin for local and cloud LLM chat, same author as Obsidian Copilot',

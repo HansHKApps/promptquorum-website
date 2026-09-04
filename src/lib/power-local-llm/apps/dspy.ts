@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 37700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'github.com/stanfordnlp/dspy',
   tagline: {
     en: 'Declarative self-improving programs with language models',

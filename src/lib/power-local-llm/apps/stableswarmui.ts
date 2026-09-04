@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 4900,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'github.com/Stability-AI/StableSwarmUI',
   tagline: {
     en: 'Official Stability AI UI with multi-model support — no release since 2024 (2+ yrs)',

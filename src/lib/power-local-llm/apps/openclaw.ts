@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'agent'],
   url: 'github.com/OpenClaw-AILabs/OpenClaw',
   tagline: {
     en: 'Orchestration framework for agent workflows',

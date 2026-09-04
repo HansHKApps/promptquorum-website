@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'github.com/ysnows/devhat',
   tagline: {
     en: 'Dev tools CLI with local LLM integration',

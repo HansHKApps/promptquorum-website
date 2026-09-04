@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 12900,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'docs'],
   url: 'github.com/neuml/txtai',
   tagline: {
     en: 'Embedded vector + LLM database in one library',

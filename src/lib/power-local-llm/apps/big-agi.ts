@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 7100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'github.com/enricoros/big-AGI',
   tagline: {
     en: 'Advanced multi-provider frontend with personas',

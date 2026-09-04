@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image', 'phone'],
   url: 'drawthings.ai',
   tagline: {
     en: 'Local image generation on macOS and iOS with Stable Diffusion',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 55100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code', 'agent'],
   url: 'github.com/AntonOsika/gpt-engineer',
   tagline: {
     en: 'Autonomous code generation and full project building',

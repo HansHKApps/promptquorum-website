@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'www.bodegaone.ai',
   tagline: {
     en: 'Local-first AI coding IDE, BYOLLM via Ollama/LM Studio',

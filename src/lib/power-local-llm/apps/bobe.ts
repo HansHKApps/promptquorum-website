@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'www.bobebot.com',
   tagline: {
     en: 'Free local AI desktop assistant for Mac, on-device',

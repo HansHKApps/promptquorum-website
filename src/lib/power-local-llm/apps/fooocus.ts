@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 52700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'github.com/lllyasviel/Fooocus',
   tagline: {
     en: 'Streamlined Stable Diffusion UI, simple setup — no release since 2024 (2+ yrs)',

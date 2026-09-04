@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 5400,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/brianpetro/obsidian-smart-connections',
   tagline: {
     en: 'Obsidian semantic search and chat plugin',

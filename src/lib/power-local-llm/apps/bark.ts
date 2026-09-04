@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 39300,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio'],
   url: 'github.com/suno-ai/bark',
   tagline: {
     en: 'Generative text-to-speech with sound effects and music',

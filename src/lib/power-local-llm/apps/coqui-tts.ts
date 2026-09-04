@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 2300,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio'],
   url: 'github.com/idiap/coqui-ai-TTS',
   tagline: {
     en: 'Open-source voice synthesis with multiple model architectures',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 2700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'github.com/Mobile-Artificial-Intelligence/maid',
   tagline: {
     en: 'Open-source Flutter mobile LLM app',

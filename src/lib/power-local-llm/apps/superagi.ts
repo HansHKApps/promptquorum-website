@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 17700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'agent'],
   url: 'github.com/TransformerOptimus/SuperAGI',
   tagline: {
     en: 'Open-source autonomous agent framework with tool integration',

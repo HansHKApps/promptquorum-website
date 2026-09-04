@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 68200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent', 'code'],
   url: 'github.com/OpenInterpreter/open-interpreter',
   tagline: {
     en: 'Lets local LLM control your computer and execute code',
