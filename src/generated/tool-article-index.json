@@ -3987,6 +3987,84 @@
     "totalCount": 1,
     "capped": false
   },
+  "Loci AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-ai-review",
+        "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
+        "url": "/power-local-llm/locally-ai-review",
+        "dateModified": "2026-09-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-08-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "arbiter-local-ai-chat-review",
+        "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "bobe-review",
+        "title": "BoBe Review 2026: Free Local AI Assistant for Mac",
+        "url": "/power-local-llm/bobe-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chatty-mini-review",
+        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
+        "url": "/power-local-llm/chatty-mini-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "jarvis-mac-review",
+        "title": "Jarvis (Mac) Review 2026: Offline Voice AI for macOS",
+        "url": "/power-local-llm/jarvis-mac-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "osaurus-ai-review",
+        "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
+        "url": "/power-local-llm/osaurus-ai-review",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "voice-ai-writers-cloud-vs-local",
+        "title": "Best AI Writing Tools for Writers in 2026: Cloud vs. Local, Cost, Privacy & Productivity",
+        "url": "/power-local-llm/voice-ai-writers-cloud-vs-local",
+        "dateModified": "2026-08-22",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 9,
+    "capped": false
+  },
   "Stable Diffusion": {
     "articles": [
       {
