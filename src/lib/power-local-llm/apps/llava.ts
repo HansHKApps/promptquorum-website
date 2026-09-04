@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'Apache 2.0',
   price: 'TODO',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: null,
+  stars: 25014,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
   uses: ['image'],

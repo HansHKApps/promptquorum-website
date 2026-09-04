@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'BSD 3-Clause',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: null,
+  stars: 150909,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
   uses: ['chat'],
