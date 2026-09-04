@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent'],
   url: 'openfelix.com',
   tagline: {
     en: 'macOS agent, local on Apple Silicon or escalates to cloud',

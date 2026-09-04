@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 25200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio'],
   url: 'github.com/SYSTRAN/faster-whisper',
   tagline: {
     en: 'Fast Whisper transcription via CTranslate2 quantization',

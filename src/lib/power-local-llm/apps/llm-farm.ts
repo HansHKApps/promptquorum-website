@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 2100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'github.com/guinmoon/LLMFarm',
   tagline: {
     en: 'iOS local LLM with model browser',

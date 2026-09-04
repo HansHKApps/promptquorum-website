@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 17700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'agent'],
   url: 'github.com/camel-ai/camel',
   tagline: {
     en: 'Communicative agents for multi-agent collaboration',

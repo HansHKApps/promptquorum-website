@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 39500,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/QuivrHQ/quivr',
   tagline: {
     en: 'Self-hosted personal knowledge assistant',

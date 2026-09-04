@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build', 'agent'],
   url: 'langchain-ai.github.io/langgraph',
   tagline: {
     en: 'Stateful graph-based agent workflows',

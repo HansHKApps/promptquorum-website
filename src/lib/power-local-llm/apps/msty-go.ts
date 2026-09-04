@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent'],
   url: 'msty.ai/go',
   tagline: {
     en: 'Autonomous multi-step task agent, local or cloud models',

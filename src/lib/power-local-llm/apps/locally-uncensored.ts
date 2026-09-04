@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 1400,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat', 'code', 'image'],
   url: 'locallyuncensored.com',
   tagline: {
     en: 'Chat / code / images / video / LoRA, one installer',

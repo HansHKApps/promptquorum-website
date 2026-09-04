@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 706,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'github.com/trypear/pearai-app',
   tagline: {
     en: 'Open-source AI code editor with local model support',

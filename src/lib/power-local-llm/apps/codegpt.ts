@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'codegpt.co',
   tagline: {
     en: 'IDE integrations across multiple editors',

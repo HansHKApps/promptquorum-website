@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 36700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'github.com/xinntao/Real-ESRGAN',
   tagline: {
     en: 'AI upscaler for high-quality image enlargement — no release since 2022 (4+ yrs)',

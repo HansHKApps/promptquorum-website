@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'codeium.com/windsurf',
   tagline: {
     en: 'AI-first IDE with local model integration',

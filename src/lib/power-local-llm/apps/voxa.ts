@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio', 'chat'],
   url: 'askvoxa.dev',
   tagline: {
     en: 'Local-first desktop voice assistant, optional cloud voice',

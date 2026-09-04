@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['image'],
   url: 'ollama.com',
   tagline: {
     en: 'Local image generation through compatible models in Ollama',

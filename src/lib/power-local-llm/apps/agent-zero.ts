@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 19100,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent', 'code'],
   url: 'github.com/agent0ai/agent-zero',
   tagline: {
     en: 'Minimal autonomous agent with coding ability',

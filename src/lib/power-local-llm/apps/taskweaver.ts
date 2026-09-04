@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 6200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent', 'code', 'build'],
   url: 'github.com/microsoft/TaskWeaver',
   tagline: {
     en: 'Microsoft code-first agent for task planning',

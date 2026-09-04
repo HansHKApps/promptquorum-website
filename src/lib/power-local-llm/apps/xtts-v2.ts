@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio'],
   url: 'huggingface.co/coqui/XTTS-v2',
   tagline: {
     en: 'Voice cloning from short audio samples with multilingual support',

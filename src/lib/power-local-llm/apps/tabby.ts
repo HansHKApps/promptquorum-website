@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'tabby.tabbyml.com',
   tagline: {
     en: 'Self-hosted GitHub Copilot alternative',

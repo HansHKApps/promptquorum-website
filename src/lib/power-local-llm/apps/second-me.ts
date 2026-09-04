@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 16000,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'github.com/mindverse/Second-Me',
   tagline: {
     en: 'Train a personalized AI self on your own data',

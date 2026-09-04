@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 70200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['agent', 'code', 'build'],
   url: 'github.com/geekan/MetaGPT',
   tagline: {
     en: 'Multi-agent software company simulation',

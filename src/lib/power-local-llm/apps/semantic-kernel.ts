@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'learn.microsoft.com/semantic-kernel',
   tagline: {
     en: 'Microsoft enterprise orchestration SDK in C#/Python/Java',

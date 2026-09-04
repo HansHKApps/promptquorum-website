@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 7400,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['phone', 'chat'],
   url: 'github.com/rikkahub/rikkahub',
   tagline: {
     en: 'Open-source Android local AI',

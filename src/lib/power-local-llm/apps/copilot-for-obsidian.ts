@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 7700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['docs'],
   url: 'github.com/logancyang/obsidian-copilot',
   tagline: {
     en: 'Obsidian local LLM chat plugin',

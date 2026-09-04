@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 88700,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'github.com/ChatGPTNextWeb/NextChat',
   tagline: {
     en: 'Lightweight web chat, simple deployment',

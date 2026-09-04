@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['audio', 'chat'],
   url: 'jarvis-mac.lovable.app',
   tagline: {
     en: 'macOS voice assistant, fully offline (Llama, Whisper, Kokoro)',

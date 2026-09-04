@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['build'],
   url: 'flowiseai.com',
   tagline: {
     en: 'Visual LangChain workflow builder',

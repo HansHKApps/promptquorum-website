@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 8200,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'github.com/n4ze3m/page-assist',
   tagline: {
     en: 'Browser sidebar AI for Chrome and Firefox',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat'],
   url: 'osaurus.ai',
   tagline: {
     en: 'Native macOS app, local models via Ollama/MLX/LM Studio',

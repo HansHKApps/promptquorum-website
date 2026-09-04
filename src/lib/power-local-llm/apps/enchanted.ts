@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 6000,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['chat', 'phone'],
   url: 'github.com/AugustDev/enchanted',
   tagline: {
     en: 'Native macOS/iOS minimal Ollama client',

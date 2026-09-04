@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 3600,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['code'],
   url: 'github.com/twinnydotdev/twinny',
   tagline: {
     en: 'Free Copilot alternative for VS Code',
