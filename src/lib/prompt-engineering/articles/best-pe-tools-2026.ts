@@ -235,15 +235,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'side-by-side-comparison',
           title: 'How Do These 7 Tools Compare? Side-by-Side Feature Breakdown',
           content: '**Here is the full feature breakdown across all seven tools:**',
-          columns: ['Tool', 'Link', 'Multi-Model', 'Evaluation', 'Testing', 'Versioning', 'Production', 'Pricing'],
+          columns: ['Tool', 'Multi-Model', 'Evaluation', 'Testing', 'Versioning', 'Production', 'Pricing'],
           rows: [
-            { Tool: 'PromptQuorum', Link: '[promptquorum.com](https://www.promptquorum.com)', 'Multi-Model': 'Excellent', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'No', Pricing: 'Free + credits' },
-            { Tool: 'Braintrust', Link: '[braintrust.dev](https://braintrust.dev)', 'Multi-Model': 'Basic', Evaluation: 'Excellent', Testing: 'Basic', Versioning: 'No', Production: 'Basic', Pricing: 'Free / $249/mo' },
-            { Tool: 'Confident AI', Link: '[confident-ai.com](https://www.confident-ai.com)', 'Multi-Model': 'No', Evaluation: 'Excellent', Testing: 'Excellent', Versioning: 'Basic', Production: 'No', Pricing: '$200/mo' },
-            { Tool: 'Vellum', Link: '[docs.vellum.ai](https://docs.vellum.ai)', 'Multi-Model': 'Basic', Evaluation: 'No', Testing: 'Basic', Versioning: 'Yes', Production: 'Excellent', Pricing: 'Free / from $50/mo' },
-            { Tool: 'Promptfoo', Link: '[promptfoo.dev](https://promptfoo.dev)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Excellent', Versioning: 'Via Git', Production: 'CI/CD only', Pricing: 'Free' },
-            { Tool: 'PromptHub', Link: '[prompthub.us](https://www.prompthub.us)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'Excellent', Production: 'No', Pricing: 'Free / $20/user/mo' },
-            { Tool: 'LangSmith', Link: '[smith.langchain.com](https://smith.langchain.com)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'Tracing only', Pricing: 'Free / $39/seat/mo' }
+            { Tool: '[PromptQuorum](https://www.promptquorum.com)', 'Multi-Model': 'Excellent', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'No', Pricing: 'Free + credits' },
+            { Tool: '[Braintrust](https://braintrust.dev)', 'Multi-Model': 'Basic', Evaluation: 'Excellent', Testing: 'Basic', Versioning: 'No', Production: 'Basic', Pricing: 'Free / $249/mo' },
+            { Tool: '[Confident AI](https://www.confident-ai.com)', 'Multi-Model': 'No', Evaluation: 'Excellent', Testing: 'Excellent', Versioning: 'Basic', Production: 'No', Pricing: '$200/mo' },
+            { Tool: '[Vellum](https://docs.vellum.ai)', 'Multi-Model': 'Basic', Evaluation: 'No', Testing: 'Basic', Versioning: 'Yes', Production: 'Excellent', Pricing: 'Free / from $50/mo' },
+            { Tool: '[Promptfoo](https://promptfoo.dev)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'Excellent', Versioning: 'Via Git', Production: 'CI/CD only', Pricing: 'Free' },
+            { Tool: '[PromptHub](https://www.prompthub.us)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'Excellent', Production: 'No', Pricing: 'Free / $20/user/mo' },
+            { Tool: '[LangSmith](https://smith.langchain.com)', 'Multi-Model': 'No', Evaluation: 'No', Testing: 'No', Versioning: 'No', Production: 'Tracing only', Pricing: 'Free / $39/seat/mo' }
           ]
         },
         decision: {
@@ -517,15 +517,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: 'Direkter Vergleich',
       content: '**Diese Vergleichstabelle zeigt, wie die sieben Tools auf Dimensionen wie Speed, Evaluierungs-Fähigkeiten, Versionierung, Produktions-Monitoring, Preis unterscheiden:**',
-      columns: ['Tool', 'Link', 'Speed', 'Evaluierung', 'Versionierung', 'Produktions-Monitoring', 'Preis'],
+      columns: ['Tool', 'Speed', 'Evaluierung', 'Versionierung', 'Produktions-Monitoring', 'Preis'],
       rows: [
-        { 'Tool': 'PromptQuorum', 'Link': '[promptquorum.com](https://www.promptquorum.com)', 'Speed': '✓ Schnell (Parallel)', 'Evaluierung': '✓ Modell-Vergleich', 'Versionierung': '✓ Eingebaut', 'Produktions-Monitoring': '✓ Dispatch-Metriken', 'Preis': 'Varies' },
-        { 'Tool': 'Braintrust', 'Link': '[braintrust.dev](https://braintrust.dev)', 'Speed': '⊙ Langsam (Evaluation)', 'Evaluierung': '✓✓ Spezialist (LLM+Human)', 'Versionierung': '⊙ Teilweise', 'Produktions-Monitoring': 'Basic', 'Preis': 'Kostenlos / 249 $/Monat' },
-        { 'Tool': 'Confident AI', 'Link': '[confident-ai.com](https://www.confident-ai.com)', 'Speed': '✓ Schnell', 'Evaluierung': '✓✓ Hervorragend (50+ Metriken)', 'Versionierung': 'Basis', 'Produktions-Monitoring': 'Nein', 'Preis': '200 $/Monat' },
-        { 'Tool': 'Vellum', 'Link': '[docs.vellum.ai](https://docs.vellum.ai)', 'Speed': '✓ Schnell', 'Evaluierung': '⊙ Grundlagen', 'Versionierung': '✓ Eingebaut', 'Produktions-Monitoring': '✓✓ Spezialist', 'Preis': 'Kostenlos / ab 50 $/Monat' },
-        { 'Tool': 'Promptfoo', 'Link': '[promptfoo.dev](https://promptfoo.dev)', 'Speed': '✓ Schnell', 'Evaluierung': '⊙ Binary (Pass/Fail)', 'Versionierung': '✓ Git-basiert', 'Produktions-Monitoring': '✗ Nicht vorhanden', 'Preis': 'Kostenlos (Open-Source)' },
-        { 'Tool': 'PromptHub', 'Link': '[prompthub.us](https://www.prompthub.us)', 'Speed': '✓ Schnell', 'Evaluierung': '✗ Nicht vorhanden', 'Versionierung': '✓✓ Spezialist', 'Produktions-Monitoring': '✗ Nicht vorhanden', 'Preis': 'Kostenlos / 20 $/Nutzer/Monat' },
-        { 'Tool': 'LangSmith', 'Link': '[smith.langchain.com](https://smith.langchain.com)', 'Speed': '✓ Schnell', 'Evaluierung': '✗ Nicht vorhanden', 'Versionierung': '✗ Nicht vorhanden', 'Produktions-Monitoring': '✓ LangChain-fokussiert', 'Preis': 'Kostenlos / 39 $/Seat/Monat' }
+        { 'Tool': '[PromptQuorum](https://www.promptquorum.com)', 'Speed': '✓ Schnell (Parallel)', 'Evaluierung': '✓ Modell-Vergleich', 'Versionierung': '✓ Eingebaut', 'Produktions-Monitoring': '✓ Dispatch-Metriken', 'Preis': 'Varies' },
+        { 'Tool': '[Braintrust](https://braintrust.dev)', 'Speed': '⊙ Langsam (Evaluation)', 'Evaluierung': '✓✓ Spezialist (LLM+Human)', 'Versionierung': '⊙ Teilweise', 'Produktions-Monitoring': 'Basic', 'Preis': 'Kostenlos / 249 $/Monat' },
+        { 'Tool': '[Confident AI](https://www.confident-ai.com)', 'Speed': '✓ Schnell', 'Evaluierung': '✓✓ Hervorragend (50+ Metriken)', 'Versionierung': 'Basis', 'Produktions-Monitoring': 'Nein', 'Preis': '200 $/Monat' },
+        { 'Tool': '[Vellum](https://docs.vellum.ai)', 'Speed': '✓ Schnell', 'Evaluierung': '⊙ Grundlagen', 'Versionierung': '✓ Eingebaut', 'Produktions-Monitoring': '✓✓ Spezialist', 'Preis': 'Kostenlos / ab 50 $/Monat' },
+        { 'Tool': '[Promptfoo](https://promptfoo.dev)', 'Speed': '✓ Schnell', 'Evaluierung': '⊙ Binary (Pass/Fail)', 'Versionierung': '✓ Git-basiert', 'Produktions-Monitoring': '✗ Nicht vorhanden', 'Preis': 'Kostenlos (Open-Source)' },
+        { 'Tool': '[PromptHub](https://www.prompthub.us)', 'Speed': '✓ Schnell', 'Evaluierung': '✗ Nicht vorhanden', 'Versionierung': '✓✓ Spezialist', 'Produktions-Monitoring': '✗ Nicht vorhanden', 'Preis': 'Kostenlos / 20 $/Nutzer/Monat' },
+        { 'Tool': '[LangSmith](https://smith.langchain.com)', 'Speed': '✓ Schnell', 'Evaluierung': '✗ Nicht vorhanden', 'Versionierung': '✗ Nicht vorhanden', 'Produktions-Monitoring': '✓ LangChain-fokussiert', 'Preis': 'Kostenlos / 39 $/Seat/Monat' }
       ],
       image: '/images/best-pe-tools-2026-comparison-table-de.svg',
       imageCaption: 'Vergleich der 7 Prompt-Engineering-Tools (August 2026): PromptQuorum Multi-Modell-Dispatch, Braintrust Evaluierung (kostenlos / 249 $/Monat), Confident AI Evaluierung (200 $/Monat), Vellum Produktionsbereitstellung (kostenlos / ab 50 $/Monat), Promptfoo Tests (kostenlos), PromptHub Versionierung (kostenlos / 20 $/Nutzer/Monat), LangSmith Tracing (kostenlos / 39 $/Seat/Monat).'
@@ -943,15 +943,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: '¿Cómo se comparan estas 7 herramientas? Desglose de características lado a lado',
       content: '**A agosto de 2026, este es el desglose completo de características en las siete herramientas:**',
-      columns: ['Herramienta', 'Enlace', 'Multi-Modelo', 'Evaluación', 'Testing', 'Versionado', 'Producción', 'Precios'],
+      columns: ['Herramienta', 'Multi-Modelo', 'Evaluación', 'Testing', 'Versionado', 'Producción', 'Precios'],
       rows: [
-        { Herramienta: 'PromptQuorum', Enlace: '[promptquorum.com](https://www.promptquorum.com)', 'Multi-Modelo': 'Excelente', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'No', Precios: 'Gratis + créditos' },
-        { Herramienta: 'Braintrust', Enlace: '[braintrust.dev](https://braintrust.dev)', 'Multi-Modelo': 'Básico', Evaluación: 'Excelente', Testing: 'Básico', Versionado: 'No', Producción: 'Básico', Precios: 'Gratis / $249/mes' },
-        { Herramienta: 'Confident AI', Enlace: '[confident-ai.com](https://www.confident-ai.com)', 'Multi-Modelo': 'No', Evaluación: 'Excelente', Testing: 'Excelente', Versionado: 'Básico', Producción: 'No', Precios: '$200/mes' },
-        { Herramienta: 'Vellum', Enlace: '[docs.vellum.ai](https://docs.vellum.ai)', 'Multi-Modelo': 'Básico', Evaluación: 'No', Testing: 'Básico', Versionado: 'Sí', Producción: 'Excelente', Precios: 'Gratis / desde $50/mes' },
-        { Herramienta: 'Promptfoo', Enlace: '[promptfoo.dev](https://promptfoo.dev)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'Excelente', Versionado: 'Vía Git', Producción: 'Solo CI/CD', Precios: 'Gratis' },
-        { Herramienta: 'PromptHub', Enlace: '[prompthub.us](https://www.prompthub.us)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'Excelente', Producción: 'No', Precios: 'Gratis / $20/usuario/mes' },
-        { Herramienta: 'LangSmith', Enlace: '[smith.langchain.com](https://smith.langchain.com)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'Solo tracing', Precios: 'Gratis / $39/seat/mes' }
+        { Herramienta: '[PromptQuorum](https://www.promptquorum.com)', 'Multi-Modelo': 'Excelente', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'No', Precios: 'Gratis + créditos' },
+        { Herramienta: '[Braintrust](https://braintrust.dev)', 'Multi-Modelo': 'Básico', Evaluación: 'Excelente', Testing: 'Básico', Versionado: 'No', Producción: 'Básico', Precios: 'Gratis / $249/mes' },
+        { Herramienta: '[Confident AI](https://www.confident-ai.com)', 'Multi-Modelo': 'No', Evaluación: 'Excelente', Testing: 'Excelente', Versionado: 'Básico', Producción: 'No', Precios: '$200/mes' },
+        { Herramienta: '[Vellum](https://docs.vellum.ai)', 'Multi-Modelo': 'Básico', Evaluación: 'No', Testing: 'Básico', Versionado: 'Sí', Producción: 'Excelente', Precios: 'Gratis / desde $50/mes' },
+        { Herramienta: '[Promptfoo](https://promptfoo.dev)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'Excelente', Versionado: 'Vía Git', Producción: 'Solo CI/CD', Precios: 'Gratis' },
+        { Herramienta: '[PromptHub](https://www.prompthub.us)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'Excelente', Producción: 'No', Precios: 'Gratis / $20/usuario/mes' },
+        { Herramienta: '[LangSmith](https://smith.langchain.com)', 'Multi-Modelo': 'No', Evaluación: 'No', Testing: 'No', Versionado: 'No', Producción: 'Solo tracing', Precios: 'Gratis / $39/seat/mes' }
       ]
     },
     decision: {
@@ -1292,15 +1292,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: 'كيف تُقارَن هذه الأدوات السبع؟ تفصيل الميزات جنبًا إلى جنب',
       content: '**اعتبارًا من أغسطس 2026، هذا هو التفصيل الكامل للميزات في الأدوات السبع:**',
-      columns: ['الأداة', 'الرابط', 'متعدد النماذج', 'التقييم', 'الاختبار', 'الإصدارات', 'الإنتاج', 'الأسعار'],
+      columns: ['الأداة', 'متعدد النماذج', 'التقييم', 'الاختبار', 'الإصدارات', 'الإنتاج', 'الأسعار'],
       rows: [
-        { 'الأداة': 'PromptQuorum', 'الرابط': '[promptquorum.com](https://www.promptquorum.com)', 'متعدد النماذج': 'ممتاز', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'لا', 'الإنتاج': 'لا', 'الأسعار': 'مجاني + أرصدة' },
-        { 'الأداة': 'Braintrust', 'الرابط': '[braintrust.dev](https://braintrust.dev)', 'متعدد النماذج': 'أساسي', 'التقييم': 'ممتاز', 'الاختبار': 'أساسي', 'الإصدارات': 'لا', 'الإنتاج': 'أساسي', 'الأسعار': 'مجاني / 249 دولارًا/شهر' },
-        { 'الأداة': 'Confident AI', 'الرابط': '[confident-ai.com](https://www.confident-ai.com)', 'متعدد النماذج': 'لا', 'التقييم': 'ممتاز', 'الاختبار': 'ممتاز', 'الإصدارات': 'أساسي', 'الإنتاج': 'لا', 'الأسعار': '200 دولار/شهر' },
-        { 'الأداة': 'Vellum', 'الرابط': '[docs.vellum.ai](https://docs.vellum.ai)', 'متعدد النماذج': 'أساسي', 'التقييم': 'لا', 'الاختبار': 'أساسي', 'الإصدارات': 'نعم', 'الإنتاج': 'ممتاز', 'الأسعار': 'مجاني / من 50 دولارًا/شهر' },
-        { 'الأداة': 'Promptfoo', 'الرابط': '[promptfoo.dev](https://promptfoo.dev)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'ممتاز', 'الإصدارات': 'عبر Git', 'الإنتاج': 'CI/CD فقط', 'الأسعار': 'مجاني' },
-        { 'الأداة': 'PromptHub', 'الرابط': '[prompthub.us](https://www.prompthub.us)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'ممتاز', 'الإنتاج': 'لا', 'الأسعار': 'مجاني / 20 دولارًا/مستخدم/شهر' },
-        { 'الأداة': 'LangSmith', 'الرابط': '[smith.langchain.com](https://smith.langchain.com)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'لا', 'الإنتاج': 'تتبع فقط', 'الأسعار': 'مجاني / 39 دولارًا/مقعد/شهر' }
+        { 'الأداة': '[PromptQuorum](https://www.promptquorum.com)', 'متعدد النماذج': 'ممتاز', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'لا', 'الإنتاج': 'لا', 'الأسعار': 'مجاني + أرصدة' },
+        { 'الأداة': '[Braintrust](https://braintrust.dev)', 'متعدد النماذج': 'أساسي', 'التقييم': 'ممتاز', 'الاختبار': 'أساسي', 'الإصدارات': 'لا', 'الإنتاج': 'أساسي', 'الأسعار': 'مجاني / 249 دولارًا/شهر' },
+        { 'الأداة': '[Confident AI](https://www.confident-ai.com)', 'متعدد النماذج': 'لا', 'التقييم': 'ممتاز', 'الاختبار': 'ممتاز', 'الإصدارات': 'أساسي', 'الإنتاج': 'لا', 'الأسعار': '200 دولار/شهر' },
+        { 'الأداة': '[Vellum](https://docs.vellum.ai)', 'متعدد النماذج': 'أساسي', 'التقييم': 'لا', 'الاختبار': 'أساسي', 'الإصدارات': 'نعم', 'الإنتاج': 'ممتاز', 'الأسعار': 'مجاني / من 50 دولارًا/شهر' },
+        { 'الأداة': '[Promptfoo](https://promptfoo.dev)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'ممتاز', 'الإصدارات': 'عبر Git', 'الإنتاج': 'CI/CD فقط', 'الأسعار': 'مجاني' },
+        { 'الأداة': '[PromptHub](https://www.prompthub.us)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'ممتاز', 'الإنتاج': 'لا', 'الأسعار': 'مجاني / 20 دولارًا/مستخدم/شهر' },
+        { 'الأداة': '[LangSmith](https://smith.langchain.com)', 'متعدد النماذج': 'لا', 'التقييم': 'لا', 'الاختبار': 'لا', 'الإصدارات': 'لا', 'الإنتاج': 'تتبع فقط', 'الأسعار': 'مجاني / 39 دولارًا/مقعد/شهر' }
       ]
     },
     decision: {
@@ -1711,15 +1711,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: 'Como essas 7 ferramentas se comparam? Detalhamento de recursos lado a lado',
       content: '**Em agosto de 2026, este é o detalhamento completo de recursos nas sete ferramentas:**',
-      columns: ['Ferramenta', 'Link', 'Multi-Modelo', 'Avaliação', 'Testes', 'Versionamento', 'Produção', 'Preços'],
+      columns: ['Ferramenta', 'Multi-Modelo', 'Avaliação', 'Testes', 'Versionamento', 'Produção', 'Preços'],
       rows: [
-        { Ferramenta: 'PromptQuorum', Link: '[promptquorum.com](https://www.promptquorum.com)', 'Multi-Modelo': 'Excelente', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Não', Produção: 'Não', Preços: 'Gratuito + créditos' },
-        { Ferramenta: 'Braintrust', Link: '[braintrust.dev](https://braintrust.dev)', 'Multi-Modelo': 'Básico', Avaliação: 'Excelente', Testes: 'Básico', Versionamento: 'Não', Produção: 'Básico', Preços: 'Gratuito / $249/mês' },
-        { Ferramenta: 'Confident AI', Link: '[confident-ai.com](https://www.confident-ai.com)', 'Multi-Modelo': 'Não', Avaliação: 'Excelente', Testes: 'Excelente', Versionamento: 'Básico', Produção: 'Não', Preços: '$200/mês' },
-        { Ferramenta: 'Vellum', Link: '[docs.vellum.ai](https://docs.vellum.ai)', 'Multi-Modelo': 'Básico', Avaliação: 'Não', Testes: 'Básico', Versionamento: 'Sim', Produção: 'Excelente', Preços: 'Gratuito / a partir de $50/mês' },
-        { Ferramenta: 'Promptfoo', Link: '[promptfoo.dev](https://promptfoo.dev)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Excelente', Versionamento: 'Via Git', Produção: 'Apenas CI/CD', Preços: 'Gratuito' },
-        { Ferramenta: 'PromptHub', Link: '[prompthub.us](https://www.prompthub.us)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Excelente', Produção: 'Não', Preços: 'Gratuito / $20/usuário/mês' },
-        { Ferramenta: 'LangSmith', Link: '[smith.langchain.com](https://smith.langchain.com)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Não', Produção: 'Apenas tracing', Preços: 'Gratuito / $39/seat/mês' }
+        { Ferramenta: '[PromptQuorum](https://www.promptquorum.com)', 'Multi-Modelo': 'Excelente', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Não', Produção: 'Não', Preços: 'Gratuito + créditos' },
+        { Ferramenta: '[Braintrust](https://braintrust.dev)', 'Multi-Modelo': 'Básico', Avaliação: 'Excelente', Testes: 'Básico', Versionamento: 'Não', Produção: 'Básico', Preços: 'Gratuito / $249/mês' },
+        { Ferramenta: '[Confident AI](https://www.confident-ai.com)', 'Multi-Modelo': 'Não', Avaliação: 'Excelente', Testes: 'Excelente', Versionamento: 'Básico', Produção: 'Não', Preços: '$200/mês' },
+        { Ferramenta: '[Vellum](https://docs.vellum.ai)', 'Multi-Modelo': 'Básico', Avaliação: 'Não', Testes: 'Básico', Versionamento: 'Sim', Produção: 'Excelente', Preços: 'Gratuito / a partir de $50/mês' },
+        { Ferramenta: '[Promptfoo](https://promptfoo.dev)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Excelente', Versionamento: 'Via Git', Produção: 'Apenas CI/CD', Preços: 'Gratuito' },
+        { Ferramenta: '[PromptHub](https://www.prompthub.us)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Excelente', Produção: 'Não', Preços: 'Gratuito / $20/usuário/mês' },
+        { Ferramenta: '[LangSmith](https://smith.langchain.com)', 'Multi-Modelo': 'Não', Avaliação: 'Não', Testes: 'Não', Versionamento: 'Não', Produção: 'Apenas tracing', Preços: 'Gratuito / $39/seat/mês' }
       ]
     },
     decision: {
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     prompthub: { id: 'prompthub-versioning', title: 'PromptHub : Versioning style Git', content: '**PromptHub est Git pour les prompts.** Comme le code, le versioning doit commencer le jour 1 — pas seulement quand une régression force la main. PromptHub offre versioning, branches, merges, collaboration. Modifiez, testez en branche, collectez du feedback, mergez. Cela empêche les équipes d\'écraser accidentellement un prompt ancien et facilite le rollback si une modification casse la production.', items: ['**Versioning :** Chaque changement comme un commit code', '**Branches & merges :** Testez avant production', '**Accès équipe :** Prompts partagés avec workflows d\'approbation', 'Tarifs : Gratuit (prompts publics) ; Pro 12 $/mois (solo, prompts privés) ; Team 20 $/utilisateur/mois'] },
     langsmith: { id: 'langsmith-tracing', title: 'LangSmith : Tracing pour LangChain', content: '**LangSmith est l\'observabilité dédiée aux systèmes LangChain (chains, agents, RAG).** Il enregistre chaque étape (retrieval, transformation, appel LLM, parsing), visualise l\'historique d\'exécution et permet de déboguer chaque étape. Si vous n\'utilisez pas LangChain, LangSmith ne s\'applique pas. Mais pour les chains ou agents, LangSmith est essentiel pour voir où ils échouent.', items: ['**Chain tracing :** Visualise chaque étape d\'une chaîne LangChain', '**Débogage :** Voit exactement quelle étape échoue et pourquoi', '**Gratuit :** Tracing basique gratuit, features avancées optionnelles', 'Tarifs : Developer 0 $/siège/mois (5 000 traces/mois) ; Plus 39 $/siège/mois ; Enterprise sur devis'] },
     confidentAI: { id: 'confident-ai-evaluation', title: 'Qu\'est-ce que Confident AI ? Évaluation automatisée et red teaming LLM', content: '**Confident AI (plateforme basée sur le framework open-source DeepEval) est la principale alternative à Braintrust pour l\'évaluation automatisée.** Là où Braintrust mise sur le feedback humain et l\'accumulation de datasets, Confident AI met l\'accent sur des métriques prédéfinies : 50+ scorers intégrés (factualité, pertinence, hallucination, toxicité, G-Eval, etc.) sans configuration manuelle requise. Utilisé par Panasonic, Amazon et BCG. Tracing à 1 $/Go-mois (vs 3 $/Go en plan Pro Braintrust).', items: ['50+ métriques d\'évaluation prêtes à l\'emploi — aucune configuration de scorer requise', 'Simulation multi-tours et tests de pipeline HTTP de bout en bout', 'Red teaming intégré : OWASP Top 10 pour LLM, alignement NIST AI RMF, détection de jailbreak', 'Tarifs : Gratuit (5 exécutions de test/semaine, 2 sièges) ; Starter 200 $/mois (sièges illimités) ; Team 2 000 $/mois ; Enterprise sur devis', 'Acquis par OpenAI (mars 2026) ; reste gratuit, open-source et auto-hébergé'] },
-    comparison: { id: 'side-by-side-comparison', title: 'Comparaison directe', content: '**Ce tableau montre comment les sept outils se comparent sur rapidité, évaluation, versioning, monitoring, tarifs :**', columns: ['Outil', 'Lien', 'Rapidité', 'Évaluation', 'Versioning', 'Monitoring production', 'Tarifs'], rows: [{ 'Outil': 'PromptQuorum', 'Lien': '[promptquorum.com](https://www.promptquorum.com)', 'Rapidité': '✓ Rapide (Parallèle)', 'Évaluation': '✓ Comparaison modèles', 'Versioning': '✓ Intégré', 'Monitoring production': '✓ Métriques dispatch', 'Tarifs': 'Varies' }, { 'Outil': 'Braintrust', 'Lien': '[braintrust.dev](https://braintrust.dev)', 'Rapidité': '⊙ Lent (Éval)', 'Évaluation': '✓✓ Spécialiste (LLM+Humain)', 'Versioning': '⊙ Partiel', 'Monitoring production': '⊙ Basique', 'Tarifs': 'Gratuit / 249 $/mois' }, { 'Outil': 'Confident AI', 'Lien': '[confident-ai.com](https://www.confident-ai.com)', 'Rapidité': '✓ Rapide', 'Évaluation': '✓✓ Excellent (50+ métriques)', 'Versioning': 'Basique', 'Monitoring production': '✗ Absent', 'Tarifs': '200 $/mois' }, { 'Outil': 'Vellum', 'Lien': '[docs.vellum.ai](https://docs.vellum.ai)', 'Rapidité': '✓ Rapide', 'Évaluation': '⊙ Basique', 'Versioning': '✓ Intégré', 'Monitoring production': '✓✓ Spécialiste', 'Tarifs': 'Gratuit / à partir de 50 $/mois' }, { 'Outil': 'Promptfoo', 'Lien': '[promptfoo.dev](https://promptfoo.dev)', 'Rapidité': '✓ Rapide', 'Évaluation': '⊙ Binaire (Oui/Non)', 'Versioning': '✓ Git-based', 'Monitoring production': '✗ Absent', 'Tarifs': 'Gratuit (Open-Source)' }, { 'Outil': 'PromptHub', 'Lien': '[prompthub.us](https://www.prompthub.us)', 'Rapidité': '✓ Rapide', 'Évaluation': '✗ Absent', 'Versioning': '✓✓ Spécialiste', 'Monitoring production': '✗ Absent', 'Tarifs': 'Gratuit / 20 $/utilisateur/mois' }, { 'Outil': 'LangSmith', 'Lien': '[smith.langchain.com](https://smith.langchain.com)', 'Rapidité': '✓ Rapide', 'Évaluation': '✗ Absent', 'Versioning': '✗ Absent', 'Monitoring production': '✓ Fokus LangChain', 'Tarifs': 'Gratuit / 39 $/siège/mois' }], image: '/images/best-pe-tools-2026-comparison-table-fr.svg', imageCaption: 'Comparaison des 7 outils de prompt engineering (août 2026) : PromptQuorum dispatch multi-modèle, Braintrust évaluation (gratuit / 249 $/mois), Confident AI évaluation (200 $/mois), Vellum production (gratuit / à partir de 50 $/mois), Promptfoo tests (gratuit), PromptHub versioning (gratuit / 20 $/utilisateur/mois), LangSmith tracing (gratuit / 39 $/siège/mois).' },
+    comparison: { id: 'side-by-side-comparison', title: 'Comparaison directe', content: '**Ce tableau montre comment les sept outils se comparent sur rapidité, évaluation, versioning, monitoring, tarifs :**', columns: ['Outil', 'Rapidité', 'Évaluation', 'Versioning', 'Monitoring production', 'Tarifs'], rows: [{ 'Outil': '[PromptQuorum](https://www.promptquorum.com)', 'Rapidité': '✓ Rapide (Parallèle)', 'Évaluation': '✓ Comparaison modèles', 'Versioning': '✓ Intégré', 'Monitoring production': '✓ Métriques dispatch', 'Tarifs': 'Varies' }, { 'Outil': '[Braintrust](https://braintrust.dev)', 'Rapidité': '⊙ Lent (Éval)', 'Évaluation': '✓✓ Spécialiste (LLM+Humain)', 'Versioning': '⊙ Partiel', 'Monitoring production': '⊙ Basique', 'Tarifs': 'Gratuit / 249 $/mois' }, { 'Outil': '[Confident AI](https://www.confident-ai.com)', 'Rapidité': '✓ Rapide', 'Évaluation': '✓✓ Excellent (50+ métriques)', 'Versioning': 'Basique', 'Monitoring production': '✗ Absent', 'Tarifs': '200 $/mois' }, { 'Outil': '[Vellum](https://docs.vellum.ai)', 'Rapidité': '✓ Rapide', 'Évaluation': '⊙ Basique', 'Versioning': '✓ Intégré', 'Monitoring production': '✓✓ Spécialiste', 'Tarifs': 'Gratuit / à partir de 50 $/mois' }, { 'Outil': '[Promptfoo](https://promptfoo.dev)', 'Rapidité': '✓ Rapide', 'Évaluation': '⊙ Binaire (Oui/Non)', 'Versioning': '✓ Git-based', 'Monitoring production': '✗ Absent', 'Tarifs': 'Gratuit (Open-Source)' }, { 'Outil': '[PromptHub](https://www.prompthub.us)', 'Rapidité': '✓ Rapide', 'Évaluation': '✗ Absent', 'Versioning': '✓✓ Spécialiste', 'Monitoring production': '✗ Absent', 'Tarifs': 'Gratuit / 20 $/utilisateur/mois' }, { 'Outil': '[LangSmith](https://smith.langchain.com)', 'Rapidité': '✓ Rapide', 'Évaluation': '✗ Absent', 'Versioning': '✗ Absent', 'Monitoring production': '✓ Fokus LangChain', 'Tarifs': 'Gratuit / 39 $/siège/mois' }], image: '/images/best-pe-tools-2026-comparison-table-fr.svg', imageCaption: 'Comparaison des 7 outils de prompt engineering (août 2026) : PromptQuorum dispatch multi-modèle, Braintrust évaluation (gratuit / 249 $/mois), Confident AI évaluation (200 $/mois), Vellum production (gratuit / à partir de 50 $/mois), Promptfoo tests (gratuit), PromptHub versioning (gratuit / 20 $/utilisateur/mois), LangSmith tracing (gratuit / 39 $/siège/mois).' },
     decision: { id: 'how-to-choose', title: 'Choix par cas d\'usage', content: '**L\'appairage dépend de votre taille d\'équipe, étape et budget :**', items: ['**Startups (1–3 devs) :** PromptQuorum (gratuit) + Promptfoo (gratuit) + PromptHub (plus tard). Pas besoin d\'évaluation ou monitoring encore.', '**Croissance (3–10 devs) :** Ajoutez Vellum quand votre prompt entre en production. Braintrust ensuite.', '**Production + LangChain :** Braintrust + LangSmith + PromptHub. LangSmith essentiel pour les chains.', '**Enterprise :** PromptHub (gouvernance) + Braintrust (qualité) + Vellum (monitoring). PromptQuorum pour tester les modèles avant évaluation.', '**Règle :** Commencez gratuit avec PromptQuorum. Puis Promptfoo en CI/CD. Puis versioning. Puis évaluation. Ne prioriez pas le monitoring tant que vous n\'avez pas de stratégie de test.'], image: '/images/best-pe-tools-2026-decision-guide-fr.svg', imageCaption: 'Recommandations par type d\'équipe : startups avec Promptfoo + PromptHub; équipes production plus Vellum; équipes LangChain plus LangSmith; entreprises PromptHub + Braintrust + Vellum pour la gouvernance.' },
     howToStack: { id: 'how-to-build-stack', title: 'Construire votre stack d\'outils', numberedItems: ['**Identifiez votre goulot.** Où perdez-vous du temps ou argent ? Tests ? Évaluation ? Versioning ? Monitoring ? Commencez là.', '**Lancez-vous avec PromptQuorum gratuit.** Comparez les modèles avant écrire des suites de tests. Économise des mois.', '**Ajoutez les tests Promptfoo en CI/CD.** Automatisez les régressions. Tout gratuit, local.', '**Ajoutez le versioning tôt.** Traitez chaque prompt comme du code : review, merge, rollback. PromptHub ou Vellum.', '**Évaluation seulement si critique.** Braintrust pour noter les dimensions. Seulement si vos tests ne trouvent pas les régressions.', '**Monitoring en dernier.** Vellum ou LangSmith. Seulement quand vous savez ce à monitorer.'] },
     commonMistakes: { id: 'common-mistakes', title: 'Erreurs courantes', mistakes: [{ mistake: 'Acheter les cinq outils parce qu\'ils semblent utiles', problem: 'Braintrust et Promptfoo se chevauchent — les deux créent des workflows dupliqués et gaspillent le budget.', fix: 'Commencez avec Promptfoo (gratuit) pour CI/CD. Braintrust seulement si vous avez besoin d\'évaluations humaines avec datasets.' }, { mistake: 'Sauter les tests CI/CD et passer directement aux evals production', problem: 'Les evals manuelles manquent les cas limites. Les erreurs production coûtent cher.', fix: 'Mettez Promptfoo en CI/CD d\'abord — attrape les changements cassants. Braintrust pour mesurer la qualité offline.' }, { mistake: 'Ne pas ajouter le versioning avant qu\'une régression ne force', problem: 'Sans versioning, vous ne savez pas quel changement a causé la régression ni comment revenir à une bonne version.', fix: 'Ajoutez PromptHub ou Vellum dès le jour 1. Traitez chaque changement comme un commit : review avant merge.' }, { mistake: 'Utiliser l\'observabilité générique (Datadog, New Relic) pour monitorer les prompts IA', problem: 'Les outils génériques voient latence et erreurs mais pas le texte du prompt, les réponses ou les coûts — les signaux pour déboguer.', fix: 'Utilisez Vellum ou LangSmith. Tous deux enregistrent le pair prompt–réponse complet avec coûts.' }], image: '/images/best-pe-tools-2026-common-mistakes-fr.svg', imageCaption: '4 erreurs courantes : acheter tous les outils, sauter les tests CI/CD, oublier le versioning, utiliser Datadog au lieu de Vellum ou LangSmith.' },
@@ -2138,15 +2138,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: 'これら7つのツールはどう比較されますか？並列Feature内訳',
       content: '**2026年8月時点で、すべての7つのツール完全Feature内訳：**',
-      columns: ['ツール', 'リンク', 'マルチモデル', '評価', 'テスト', 'バージョン管理', '本番環境', '価格設定'],
+      columns: ['ツール', 'マルチモデル', '評価', 'テスト', 'バージョン管理', '本番環境', '価格設定'],
       rows: [
-        { ツール: 'PromptQuorum', リンク: '[promptquorum.com](https://www.promptquorum.com)', 'マルチモデル': '優秀', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': 'いいえ', '本番環境': 'いいえ', '価格設定': '無料 + クレジット' },
-        { ツール: 'Braintrust', リンク: '[braintrust.dev](https://braintrust.dev)', 'マルチモデル': '基本', '評価': '優秀', 'テスト': '基本', 'バージョン管理': 'いいえ', '本番環境': 'いいえ', '価格設定': '無料 / $249/月' },
-        { ツール: 'Confident AI', リンク: '[confident-ai.com](https://www.confident-ai.com)', 'マルチモデル': 'なし', '評価': '優秀', 'テスト': '優秀', 'バージョン管理': '基本', '本番環境': 'なし', '価格設定': '$200/月' },
-        { ツール: 'Vellum', リンク: '[docs.vellum.ai](https://docs.vellum.ai)', 'マルチモデル': '基本', '評価': 'いいえ', 'テスト': '基本', 'バージョン管理': 'はい', '本番環境': '優秀', '価格設定': '無料 / $50/月〜' },
-        { ツール: 'Promptfoo', リンク: '[promptfoo.dev](https://promptfoo.dev)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': '優秀', 'バージョン管理': 'Git経由', '本番環境': 'CI/CDのみ', '価格設定': '無料' },
-        { ツール: 'PromptHub', リンク: '[prompthub.us](https://www.prompthub.us)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': '優秀', '本番環境': 'いいえ', '価格設定': '無料 / $20/ユーザー/月' },
-        { ツール: 'LangSmith', リンク: '[smith.langchain.com](https://smith.langchain.com)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': 'いいえ', '本番環境': 'トレーシングのみ', '価格設定': '無料 / $39/シート/月' }
+        { ツール: '[PromptQuorum](https://www.promptquorum.com)', 'マルチモデル': '優秀', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': 'いいえ', '本番環境': 'いいえ', '価格設定': '無料 + クレジット' },
+        { ツール: '[Braintrust](https://braintrust.dev)', 'マルチモデル': '基本', '評価': '優秀', 'テスト': '基本', 'バージョン管理': 'いいえ', '本番環境': 'いいえ', '価格設定': '無料 / $249/月' },
+        { ツール: '[Confident AI](https://www.confident-ai.com)', 'マルチモデル': 'なし', '評価': '優秀', 'テスト': '優秀', 'バージョン管理': '基本', '本番環境': 'なし', '価格設定': '$200/月' },
+        { ツール: '[Vellum](https://docs.vellum.ai)', 'マルチモデル': '基本', '評価': 'いいえ', 'テスト': '基本', 'バージョン管理': 'はい', '本番環境': '優秀', '価格設定': '無料 / $50/月〜' },
+        { ツール: '[Promptfoo](https://promptfoo.dev)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': '優秀', 'バージョン管理': 'Git経由', '本番環境': 'CI/CDのみ', '価格設定': '無料' },
+        { ツール: '[PromptHub](https://www.prompthub.us)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': '優秀', '本番環境': 'いいえ', '価格設定': '無料 / $20/ユーザー/月' },
+        { ツール: '[LangSmith](https://smith.langchain.com)', 'マルチモデル': 'いいえ', '評価': 'いいえ', 'テスト': 'いいえ', 'バージョン管理': 'いいえ', '本番環境': 'トレーシングのみ', '価格設定': '無料 / $39/シート/月' }
       ],
       image: '/images/best-pe-tools-2026-comparison-table-en.svg',
       imageCaption: '7つのPrompt Engineeringツール Feature比較（2026年7月）：PromptQuorumマルチモデルディスパッチ（無料）、Braintrust評価（$249/月）、Confident AI評価（$200/月〜）、Vellum本番環境（無料/$50/月〜）、Promptfooテスト（無料）、PromptHubバージョン管理（$50～300/月）、LangSmithトレーシング（無料層）。'
@@ -2481,15 +2481,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: '这7款工具如何对比？并排功能对比',
       content: '**截至2026年8月，所有7款工具的完整功能对比：**',
-      columns: ['工具', '链接', '多模型', '评估', '测试', '版本管理', '生产部署', '价格'],
+      columns: ['工具', '多模型', '评估', '测试', '版本管理', '生产部署', '价格'],
       rows: [
-        { 工具: 'PromptQuorum', 链接: '[promptquorum.com](https://www.promptquorum.com)', 多模型: '优秀', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '否', 价格: '免费+积分' },
-        { 工具: 'Braintrust', 链接: '[braintrust.dev](https://braintrust.dev)', 多模型: '基础', 评估: '优秀', 测试: '基础', 版本管理: '否', 生产部署: '否', 价格: '免费 / $249/月' },
-        { 工具: 'Confident AI', 链接: '[confident-ai.com](https://www.confident-ai.com)', 多模型: '否', 评估: '优秀', 测试: '优秀', 版本管理: '基础', 生产部署: '否', 价格: '$200/月' },
-        { 工具: 'Vellum', 链接: '[docs.vellum.ai](https://docs.vellum.ai)', 多模型: '基础', 评估: '否', 测试: '基础', 版本管理: '是', 生产部署: '优秀', 价格: '免费 / 从$50/月起' },
-        { 工具: 'Promptfoo', 链接: '[promptfoo.dev](https://promptfoo.dev)', 多模型: '否', 评估: '否', 测试: '优秀', 版本管理: '经由Git', 生产部署: '仅CI/CD', 价格: '免费' },
-        { 工具: 'PromptHub', 链接: '[prompthub.us](https://www.prompthub.us)', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '优秀', 生产部署: '否', 价格: '免费 / $20/用户/月' },
-        { 工具: 'LangSmith', 链接: '[smith.langchain.com](https://smith.langchain.com)', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '追踪仅', 价格: '免费 / $39/席位/月' }
+        { 工具: '[PromptQuorum](https://www.promptquorum.com)', 多模型: '优秀', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '否', 价格: '免费+积分' },
+        { 工具: '[Braintrust](https://braintrust.dev)', 多模型: '基础', 评估: '优秀', 测试: '基础', 版本管理: '否', 生产部署: '否', 价格: '免费 / $249/月' },
+        { 工具: '[Confident AI](https://www.confident-ai.com)', 多模型: '否', 评估: '优秀', 测试: '优秀', 版本管理: '基础', 生产部署: '否', 价格: '$200/月' },
+        { 工具: '[Vellum](https://docs.vellum.ai)', 多模型: '基础', 评估: '否', 测试: '基础', 版本管理: '是', 生产部署: '优秀', 价格: '免费 / 从$50/月起' },
+        { 工具: '[Promptfoo](https://promptfoo.dev)', 多模型: '否', 评估: '否', 测试: '优秀', 版本管理: '经由Git', 生产部署: '仅CI/CD', 价格: '免费' },
+        { 工具: '[PromptHub](https://www.prompthub.us)', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '优秀', 生产部署: '否', 价格: '免费 / $20/用户/月' },
+        { 工具: '[LangSmith](https://smith.langchain.com)', 多模型: '否', 评估: '否', 测试: '否', 版本管理: '否', 生产部署: '追踪仅', 价格: '免费 / $39/席位/月' }
       ],
       image: '/images/best-pe-tools-2026-comparison-table-en.svg',
       imageCaption: '7款提示词工程工具功能对比（2026年7月）：PromptQuorum多模型分发（免费）、Braintrust评估（$249/月起）、Confident AI评估（$200/月起）、Vellum生产部署（免费/从$50起）、Promptfoo测试（免费，已被OpenAI收购）、PromptHub版本管理（免费/$20/用户/月）、LangSmith追踪（免费层）。'
@@ -2822,15 +2822,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'side-by-side-comparison',
       title: '7가지 도구는 어떻게 비교됩니까? 나란히 기능 분석',
       content: '**2026년 8월 기준, 7가지 도구의 전체 기능 분석은 다음과 같습니다:**',
-      columns: ['도구', '링크', '멀티모델', '평가', '테스팅', '버전 관리', '프로덕션', '가격'],
+      columns: ['도구', '멀티모델', '평가', '테스팅', '버전 관리', '프로덕션', '가격'],
       rows: [
-        { '도구': 'PromptQuorum', '링크': '[promptquorum.com](https://www.promptquorum.com)', '멀티모델': '우수', '평가': '아니오', '테스팅': '아니오', '버전 관리': '아니오', '프로덕션': '아니오', '가격': '무료 + 크레딧' },
-        { '도구': 'Braintrust', '링크': '[braintrust.dev](https://braintrust.dev)', '멀티모델': '기본', '평가': '우수', '테스팅': '기본', '버전 관리': '아니오', '프로덕션': '기본', '가격': '무료 / 월 $249' },
-        { '도구': 'Confident AI', '링크': '[confident-ai.com](https://www.confident-ai.com)', '멀티모델': '아니오', '평가': '우수', '테스팅': '우수', '버전 관리': '기본', '프로덕션': '아니오', '가격': '월 $200' },
-        { '도구': 'Vellum', '링크': '[docs.vellum.ai](https://docs.vellum.ai)', '멀티모델': '기본', '평가': '아니오', '테스팅': '기본', '버전 관리': '예', '프로덕션': '우수', '가격': '무료 / 월 $50~' },
-        { '도구': 'Promptfoo', '링크': '[promptfoo.dev](https://promptfoo.dev)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '우수', '버전 관리': 'Git 사용', '프로덕션': 'CI/CD만', '가격': '무료' },
-        { '도구': 'PromptHub', '링크': '[prompthub.us](https://www.prompthub.us)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '아니오', '버전 관리': '우수', '프로덕션': '아니오', '가격': '무료 / 사용자당 월 $20' },
-        { '도구': 'LangSmith', '링크': '[smith.langchain.com](https://smith.langchain.com)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '아니오', '버전 관리': '아니오', '프로덕션': '트레이싱만', '가격': '무료 / 시트당 월 $39' }
+        { '도구': '[PromptQuorum](https://www.promptquorum.com)', '멀티모델': '우수', '평가': '아니오', '테스팅': '아니오', '버전 관리': '아니오', '프로덕션': '아니오', '가격': '무료 + 크레딧' },
+        { '도구': '[Braintrust](https://braintrust.dev)', '멀티모델': '기본', '평가': '우수', '테스팅': '기본', '버전 관리': '아니오', '프로덕션': '기본', '가격': '무료 / 월 $249' },
+        { '도구': '[Confident AI](https://www.confident-ai.com)', '멀티모델': '아니오', '평가': '우수', '테스팅': '우수', '버전 관리': '기본', '프로덕션': '아니오', '가격': '월 $200' },
+        { '도구': '[Vellum](https://docs.vellum.ai)', '멀티모델': '기본', '평가': '아니오', '테스팅': '기본', '버전 관리': '예', '프로덕션': '우수', '가격': '무료 / 월 $50~' },
+        { '도구': '[Promptfoo](https://promptfoo.dev)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '우수', '버전 관리': 'Git 사용', '프로덕션': 'CI/CD만', '가격': '무료' },
+        { '도구': '[PromptHub](https://www.prompthub.us)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '아니오', '버전 관리': '우수', '프로덕션': '아니오', '가격': '무료 / 사용자당 월 $20' },
+        { '도구': '[LangSmith](https://smith.langchain.com)', '멀티모델': '아니오', '평가': '아니오', '테스팅': '아니오', '버전 관리': '아니오', '프로덕션': '트레이싱만', '가격': '무료 / 시트당 월 $39' }
       ]
     },
     decision: {

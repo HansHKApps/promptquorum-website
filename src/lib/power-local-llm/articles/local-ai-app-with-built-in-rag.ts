@@ -95,11 +95,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do AnythingLLM, LM Studio, and Jan + Documents Compare in 2026?',
         content:
           'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a Windows 11 desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM). Identical document set: a 412-page research paper PDF, a 38-page contract DOCX, a 1,047-page technical manual PDF, plus 25 markdown notes (≈ 600 KB total). Each app paired with Llama 3.1 8B Q4_K_M as the chat model.',
-        columns: ['App', 'Link', 'File formats', 'Max practical size', 'Embedding model', 'Citations', 'Verdict'],
+        columns: ['App', 'File formats', 'Max practical size', 'Embedding model', 'Citations', 'Verdict'],
         rows: [
           {
-            'App': 'AnythingLLM',
-            'Link': '[anythingllm.com](https://anythingllm.com)',
+            'App': '[AnythingLLM](https://anythingllm.com)',
             'File formats': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, websites, audio (Whisper)',
             'Max practical size': '~5,000 docs / ~50,000 pages',
             'Embedding model': 'Built-in (Native), or swap to Ollama / OpenAI / LM Studio',
@@ -107,8 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Most capable — pick first for libraries',
           },
           {
-            'App': 'LM Studio',
-            'Link': '[lmstudio.ai](https://lmstudio.ai)',
+            'App': '[LM Studio](https://lmstudio.ai)',
             'File formats': 'PDF, DOCX, TXT, MD',
             'Max practical size': '~30 docs per chat / ~3,000 pages',
             'Embedding model': 'nomic-embed-text v1.5 (bundled, not swappable)',
@@ -116,8 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Lowest friction — pick for ad-hoc Q&A',
           },
           {
-            'App': 'Jan + Documents',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan + Documents](https://jan.ai)',
             'File formats': 'PDF, DOCX, TXT, MD',
             'Max practical size': '~200 docs / ~10,000 pages',
             'Embedding model': 'all-MiniLM-L6-v2 (bundled, swappable via extension)',
@@ -604,11 +601,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie vergleichen sich AnythingLLM, LM Studio und Jan + Dokumente 2026?',
         content:
           'Getestet auf Apple M5 MacBook Pro (16 GB unified memory) und einem Windows-11-Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemram). Identischer Dokumentsatz: ein 412-Seiten-Research-Paper PDF, ein 38-Seiten-Vertrag DOCX, ein 1.047-Seiten-technisches Handbuch PDF, plus 25 Markdown-Notizen (≈ 600 KB Gesamt). Jede App mit Llama 3.1 8B Q4_K_M als Chat-Modell gepaart.',
-        columns: ['App', 'Link', 'Dateiformate', 'Max. praktische Größe', 'Embedding-Modell', 'Zitate', 'Verdict'],
+        columns: ['App', 'Dateiformate', 'Max. praktische Größe', 'Embedding-Modell', 'Zitate', 'Verdict'],
         rows: [
           {
-            'App': 'AnythingLLM',
-            'Link': '[anythingllm.com](https://anythingllm.com)',
+            'App': '[AnythingLLM](https://anythingllm.com)',
             'Dateiformate': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, Websites, Audio (Whisper)',
             'Max. praktische Größe': '~5.000 Dokumente / ~50.000 Seiten',
             'Embedding-Modell': 'Integriert (Native) oder Austausch mit Ollama / OpenAI / LM Studio',
@@ -616,8 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Am leistungsfähigsten — wählen Sie zuerst für Bibliotheken',
           },
           {
-            'App': 'LM Studio',
-            'Link': '[lmstudio.ai](https://lmstudio.ai)',
+            'App': '[LM Studio](https://lmstudio.ai)',
             'Dateiformate': 'PDF, DOCX, TXT, MD',
             'Max. praktische Größe': '~30 Dokumente pro Chat / ~3.000 Seiten',
             'Embedding-Modell': 'nomic-embed-text v1.5 (gebündelt, nicht austauschbar)',
@@ -625,8 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Niedrigste Reibung — wählen Sie für Ad-hoc-Q&A',
           },
           {
-            'App': 'Jan + Dokumente',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan + Dokumente](https://jan.ai)',
             'Dateiformate': 'PDF, DOCX, TXT, MD',
             'Max. praktische Größe': '~200 Dokumente / ~10.000 Seiten',
             'Embedding-Modell': 'all-MiniLM-L6-v2 (gebündelt, austauschbar über Erweiterung)',
@@ -1121,11 +1115,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparaison : AnythingLLM, LM Studio et Jan + Documents 2026',
         content:
           'Testé sur MacBook Pro M5 (16 GB mémoire) et Windows 11 avec RTX 4070. Ensemble de documents identique : PDF recherche (412 pages), contrat DOCX (38 pages), manuel technique PDF (1 047 pages), 25 notes markdown. Chaque app avec Llama 3.1 8B Q4_K_M.',
-        columns: ['App', 'Lien', 'Formats', 'Taille max', 'Embedding', 'Citations', 'Verdict'],
+        columns: ['App', 'Formats', 'Taille max', 'Embedding', 'Citations', 'Verdict'],
         rows: [
           {
-            'App': 'AnythingLLM',
-            'Lien': '[anythingllm.com](https://anythingllm.com)',
+            'App': '[AnythingLLM](https://anythingllm.com)',
             'Formats': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sites web, audio (Whisper)',
             'Taille max': '~5 000 docs / ~50 000 pages',
             'Embedding': 'Intégré ou swap Ollama/OpenAI/LM Studio',
@@ -1133,8 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Plus puissant — choisir en premier',
           },
           {
-            'App': 'LM Studio',
-            'Lien': '[lmstudio.ai](https://lmstudio.ai)',
+            'App': '[LM Studio](https://lmstudio.ai)',
             'Formats': 'PDF, DOCX, TXT, MD',
             'Taille max': '~30 docs par chat / ~3 000 pages',
             'Embedding': 'nomic-embed-text v1.5 (bundlé, non-interchangeable)',
@@ -1142,8 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Plus simple — idéal pour Q&A ponctuels',
           },
           {
-            'App': 'Jan + Documents',
-            'Lien': '[jan.ai](https://jan.ai)',
+            'App': '[Jan + Documents](https://jan.ai)',
             'Formats': 'PDF, DOCX, TXT, MD',
             'Taille max': '~200 docs / ~10 000 pages',
             'Embedding': 'all-MiniLM-L6-v2 (bundlé, interchangeable)',
@@ -1630,11 +1621,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AnythingLLM、LM Studio、Jan + ドキュメント 2026年比較',
         content:
           'Apple M5 MacBook Pro（16GB統合メモリ）および NVIDIA RTX 4070（12GB VRAM、32GB システムRAM）Windows 11デスクトップでテスト。ドキュメント同一セット：412ページリサーチPDF、38ページ契約DOCX、1,047ページ技術マニュアルPDF、25 markdown ノート（計600KB）。各アプリは Llama 3.1 8B Q4_K_M チャットモデル。',
-        columns: ['アプリ', 'リンク', 'ファイル形式', '実用的な最大サイズ', '埋め込みモデル', '引用', '判定'],
+        columns: ['アプリ', 'ファイル形式', '実用的な最大サイズ', '埋め込みモデル', '引用', '判定'],
         rows: [
           {
-            'アプリ': 'AnythingLLM',
-            'リンク': '[anythingllm.com](https://anythingllm.com)',
+            'アプリ': '[AnythingLLM](https://anythingllm.com)',
             'ファイル形式': 'PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、ウェブサイト、音声（Whisper）',
             '実用的な最大サイズ': '~5,000文書 / ~50,000ページ',
             '埋め込みモデル': '内蔵（Native）またはOllama / OpenAI / LM Studio に交換',
@@ -1642,8 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '判定': '最も高機能 — ライブラリには最初に選択',
           },
           {
-            'アプリ': 'LM Studio',
-            'リンク': '[lmstudio.ai](https://lmstudio.ai)',
+            'アプリ': '[LM Studio](https://lmstudio.ai)',
             'ファイル形式': 'PDF、DOCX、TXT、MD',
             '実用的な最大サイズ': '~30文書（チャット単位） / ~3,000ページ',
             '埋め込みモデル': 'nomic-embed-text v1.5（バンドル、交換不可）',
@@ -1651,8 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '判定': '最も簡単 — アドホックQ&A向け',
           },
           {
-            'アプリ': 'Jan + ドキュメント',
-            'リンク': '[jan.ai](https://jan.ai)',
+            'アプリ': '[Jan + ドキュメント](https://jan.ai)',
             'ファイル形式': 'PDF、DOCX、TXT、MD',
             '実用的な最大サイズ': '~200文書 / ~10,000ページ',
             '埋め込みモデル': 'all-MiniLM-L6-v2（バンドル、拡張を通じて交換可能）',
@@ -2143,11 +2131,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AnythingLLM、LM Studio和Jan + 文档 2026年对比',
         content:
           '在Apple M5 MacBook Pro（16GB统一内存）和Windows 11配NVIDIA RTX 4070（12GB VRAM、32GB系统RAM）上测试。相同文档集：412页研究论文PDF、38页合同DOCX、1,047页技术手册PDF、25个markdown笔记（总共600KB）。每个应用配Llama 3.1 8B Q4_K_M聊天模型。',
-        columns: ['应用', '链接', '文件格式', '最大实际大小', '嵌入模型', '引用', '结论'],
+        columns: ['应用', '文件格式', '最大实际大小', '嵌入模型', '引用', '结论'],
         rows: [
           {
-            '应用': 'AnythingLLM',
-            '链接': '[anythingllm.com](https://anythingllm.com)',
+            '应用': '[AnythingLLM](https://anythingllm.com)',
             '文件格式': 'PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、网站、音频（Whisper）',
             '最大实际大小': '~5,000文档 / ~50,000页',
             '嵌入模型': '内置或交换到Ollama / OpenAI / LM Studio',
@@ -2155,8 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '结论': '功能最强 — 优先选择库',
           },
           {
-            '应用': 'LM Studio',
-            '链接': '[lmstudio.ai](https://lmstudio.ai)',
+            '应用': '[LM Studio](https://lmstudio.ai)',
             '文件格式': 'PDF、DOCX、TXT、MD',
             '最大实际大小': '~30文档/聊天 / ~3,000页',
             '嵌入模型': 'nomic-embed-text v1.5（捆绑、不可互换）',
@@ -2164,8 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '结论': '最简单 — 临时Q&A选择',
           },
           {
-            '应用': 'Jan + 文档',
-            '链接': '[jan.ai](https://jan.ai)',
+            '应用': '[Jan + 文档](https://jan.ai)',
             '文件格式': 'PDF、DOCX、TXT、MD',
             '最大实际大小': '~200文档 / ~10,000页',
             '嵌入模型': 'all-MiniLM-L6-v2（捆绑、通过扩展可互换）',
@@ -2674,11 +2659,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cómo se comparan AnythingLLM, LM Studio y Jan + Documentos en 2026?',
         content:
           'Probado en Apple M5 MacBook Pro (16 GB de memoria unificada) y un equipo de escritorio Windows 11 con NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema). Conjunto de documentos idéntico: un PDF de investigación de 412 páginas, un contrato DOCX de 38 páginas, un manual técnico PDF de 1.047 páginas y 25 notas markdown (≈ 600 KB en total). Cada app emparejada con Llama 3.1 8B Q4_K_M como modelo de chat.',
-        columns: ['App', 'Enlace', 'Formatos', 'Tamaño máx. práctico', 'Modelo de embedding', 'Citas', 'Veredicto'],
+        columns: ['App', 'Formatos', 'Tamaño máx. práctico', 'Modelo de embedding', 'Citas', 'Veredicto'],
         rows: [
           {
-            'App': 'AnythingLLM',
-            'Enlace': '[anythingllm.com](https://anythingllm.com)',
+            'App': '[AnythingLLM](https://anythingllm.com)',
             'Formatos': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sitios web, audio (Whisper)',
             'Tamaño máx. práctico': '~5.000 docs / ~50.000 páginas',
             'Modelo de embedding': 'Integrado (Native) o intercambia con Ollama / OpenAI / LM Studio',
@@ -2686,8 +2670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'La más completa — elige primero para bibliotecas',
           },
           {
-            'App': 'LM Studio',
-            'Enlace': '[lmstudio.ai](https://lmstudio.ai)',
+            'App': '[LM Studio](https://lmstudio.ai)',
             'Formatos': 'PDF, DOCX, TXT, MD',
             'Tamaño máx. práctico': '~30 docs por chat / ~3.000 páginas',
             'Modelo de embedding': 'nomic-embed-text v1.5 (incluido, no intercambiable)',
@@ -2695,8 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'La menos fricción — elige para Q&A puntual',
           },
           {
-            'App': 'Jan + Documentos',
-            'Enlace': '[jan.ai](https://jan.ai)',
+            'App': '[Jan + Documentos](https://jan.ai)',
             'Formatos': 'PDF, DOCX, TXT, MD',
             'Tamaño máx. práctico': '~200 docs / ~10.000 páginas',
             'Modelo de embedding': 'all-MiniLM-L6-v2 (incluido, intercambiable vía extensión)',
@@ -3201,11 +3183,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como AnythingLLM, LM Studio e Jan + Documentos se comparam em 2026?',
         content:
           'Testado em Apple M5 MacBook Pro (16 GB de memória unificada) e um desktop Windows 11 com NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema). Conjunto de documentos idêntico: um PDF de pesquisa de 412 páginas, um contrato DOCX de 38 páginas, um manual técnico PDF de 1.047 páginas e 25 notas markdown (≈ 600 KB no total). Cada app combinado com Llama 3.1 8B Q4_K_M como modelo de chat.',
-        columns: ['App', 'Link', 'Formatos', 'Tamanho máx. prático', 'Modelo de embedding', 'Citações', 'Veredicto'],
+        columns: ['App', 'Formatos', 'Tamanho máx. prático', 'Modelo de embedding', 'Citações', 'Veredicto'],
         rows: [
           {
-            'App': 'AnythingLLM',
-            'Link': '[anythingllm.com](https://anythingllm.com)',
+            'App': '[AnythingLLM](https://anythingllm.com)',
             'Formatos': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sites, áudio (Whisper)',
             'Tamanho máx. prático': '~5.000 docs / ~50.000 páginas',
             'Modelo de embedding': 'Integrado (Native) ou troque por Ollama / OpenAI / LM Studio',
@@ -3213,8 +3194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'O mais completo — escolha primeiro para bibliotecas',
           },
           {
-            'App': 'LM Studio',
-            'Link': '[lmstudio.ai](https://lmstudio.ai)',
+            'App': '[LM Studio](https://lmstudio.ai)',
             'Formatos': 'PDF, DOCX, TXT, MD',
             'Tamanho máx. prático': '~30 docs por chat / ~3.000 páginas',
             'Modelo de embedding': 'nomic-embed-text v1.5 (incluído, não intercambiável)',
@@ -3222,8 +3202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'O menor atrito — escolha para Q&A pontual',
           },
           {
-            'App': 'Jan + Documentos',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan + Documentos](https://jan.ai)',
             'Formatos': 'PDF, DOCX, TXT, MD',
             'Tamanho máx. prático': '~200 docs / ~10.000 páginas',
             'Modelo de embedding': 'all-MiniLM-L6-v2 (incluído, intercambiável via extensão)',
@@ -3729,11 +3708,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتقاطع AnythingLLM وLM Studio وJan + المستندات في 2026؟',
         content:
           'مُختبَر على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب Windows 11 مع NVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM). مجموعة مستندات متطابقة: PDF بحثي 412 صفحة، DOCX عقد 38 صفحة، دليل تقني PDF 1047 صفحة، و25 ملاحظة markdown. كل تطبيق مُقرَن مع Llama 3.1 8B Q4_K_M كنموذج دردشة.',
-        columns: ['التطبيق', 'الرابط', 'الصيغ', 'الحجم الأقصى العملي', 'نموذج التضمين', 'الاستشهادات', 'الحكم'],
+        columns: ['التطبيق', 'الصيغ', 'الحجم الأقصى العملي', 'نموذج التضمين', 'الاستشهادات', 'الحكم'],
         rows: [
           {
-            'التطبيق': 'AnythingLLM',
-            'الرابط': '[anythingllm.com](https://anythingllm.com)',
+            'التطبيق': '[AnythingLLM](https://anythingllm.com)',
             'الصيغ': 'PDF وDOCX وTXT وMD وEPUB وHTML وCSV وJSON والمواقع والصوت (Whisper)',
             'الحجم الأقصى العملي': '~5000 مستند / ~50000 صفحة',
             'نموذج التضمين': 'مدمج (Native) أو استبدل بـOllama / OpenAI / LM Studio',
@@ -3741,8 +3719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'الأشمل — اختره أولاً للمكتبات',
           },
           {
-            'التطبيق': 'LM Studio',
-            'الرابط': '[lmstudio.ai](https://lmstudio.ai)',
+            'التطبيق': '[LM Studio](https://lmstudio.ai)',
             'الصيغ': 'PDF وDOCX وTXT وMD',
             'الحجم الأقصى العملي': '~30 مستند لكل محادثة / ~3000 صفحة',
             'نموذج التضمين': 'nomic-embed-text v1.5 (مُضمَّن، غير قابل للتبديل)',
@@ -3750,8 +3727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'الأقل احتكاكاً — اختره للأسئلة الطارئة',
           },
           {
-            'التطبيق': 'Jan + المستندات',
-            'الرابط': '[jan.ai](https://jan.ai)',
+            'التطبيق': '[Jan + المستندات](https://jan.ai)',
             'الصيغ': 'PDF وDOCX وTXT وMD',
             'الحجم الأقصى العملي': '~200 مستند / ~10000 صفحة',
             'نموذج التضمين': 'all-MiniLM-L6-v2 (مُضمَّن، قابل للتبديل عبر الإضافة)',
@@ -4230,11 +4206,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AnythingLLM, LM Studio, Jan + 문서는 2026년에 어떻게 비교됩니까?',
         content:
           'Apple M5 MacBook Pro(16GB 통합 메모리)와 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM)이 탑재된 Windows 11 데스크톱에서 테스트했습니다. 동일한 문서 세트: 412페이지 연구 PDF, 38페이지 계약 DOCX, 1,047페이지 기술 매뉴얼 PDF, 25개의 마크다운 메모(총 약 600KB). 각 앱은 채팅 모델로 Llama 3.1 8B Q4_K_M과 쌍을 이루었습니다.',
-        columns: ['앱', '링크', '형식', '실용적 최대 크기', '임베딩 모델', '인용', '평가'],
+        columns: ['앱', '형식', '실용적 최대 크기', '임베딩 모델', '인용', '평가'],
         rows: [
           {
-            '앱': 'AnythingLLM',
-            '링크': '[anythingllm.com](https://anythingllm.com)',
+            '앱': '[AnythingLLM](https://anythingllm.com)',
             '형식': 'PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, 웹사이트, 오디오(Whisper)',
             '실용적 최대 크기': '~5,000개 문서 / ~50,000페이지',
             '임베딩 모델': '내장(Native) 또는 Ollama / OpenAI / LM Studio로 교체 가능',
@@ -4242,8 +4217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '평가': '가장 완전함 — 라이브러리에 먼저 선택',
           },
           {
-            '앱': 'LM Studio',
-            '링크': '[lmstudio.ai](https://lmstudio.ai)',
+            '앱': '[LM Studio](https://lmstudio.ai)',
             '형식': 'PDF, DOCX, TXT, MD',
             '실용적 최대 크기': '채팅당 ~30개 문서 / ~3,000페이지',
             '임베딩 모델': 'nomic-embed-text v1.5(내장, 교체 불가)',
@@ -4251,8 +4225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '평가': '마찰 최소 — 즉석 Q&A에 선택',
           },
           {
-            '앱': 'Jan + 문서',
-            '링크': '[jan.ai](https://jan.ai)',
+            '앱': '[Jan + 문서](https://jan.ai)',
             '형식': 'PDF, DOCX, TXT, MD',
             '실용적 최대 크기': '~200개 문서 / ~10,000페이지',
             '임베딩 모델': 'all-MiniLM-L6-v2(내장, 확장을 통해 교체 가능)',

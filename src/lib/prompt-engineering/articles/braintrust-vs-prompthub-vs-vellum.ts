@@ -217,11 +217,10 @@ tests:
         content: [
           '**No single tool excels on all five criteria. Braintrust leads on evaluation depth; Vellum leads on production traffic splitting; Promptfoo leads on free CI/CD; PromptHub leads on simplicity.**',
         ],
-        columns: ['Tool', 'Link', 'Primary Use', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
+        columns: ['Tool', 'Primary Use', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
         rows: [
           {
-            Tool: 'Braintrust',
-            Link: '[braintrust.dev](https://braintrust.dev)',
+            Tool: '[Braintrust](https://braintrust.dev)',
             'Primary Use': 'Output evaluation',
             Collaboration: '✅ Roles + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -229,8 +228,7 @@ tests:
             'Best For': 'Quality-focused teams',
           },
           {
-            Tool: 'PromptHub',
-            Link: '[prompthub.us](https://www.prompthub.us)',
+            Tool: '[PromptHub](https://www.prompthub.us)',
             'Primary Use': 'Version control',
             Collaboration: '✅ Team workspace',
             'CI/CD': '✗ None',
@@ -238,8 +236,7 @@ tests:
             'Best For': 'Content teams',
           },
           {
-            Tool: 'Vellum',
-            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Tool: '[Vellum](https://docs.vellum.ai)',
             'Primary Use': 'Production A/B',
             Collaboration: '✅ PR reviews',
             'CI/CD': '✓ Webhooks',
@@ -247,8 +244,7 @@ tests:
             'Best For': 'Live features',
           },
           {
-            Tool: 'Promptfoo',
-            Link: '[promptfoo.dev](https://promptfoo.dev)',
+            Tool: '[Promptfoo](https://promptfoo.dev)',
             'Primary Use': 'CI/CD testing',
             Collaboration: 'Git-based',
             'CI/CD': '✅ GitHub Actions',
@@ -256,8 +252,7 @@ tests:
             'Best For': 'DevOps teams',
           },
           {
-            Tool: 'PromptQuorum',
-            Link: '[promptquorum.com](https://www.promptquorum.com)',
+            Tool: '[PromptQuorum](https://www.promptquorum.com)',
             'Primary Use': 'Cross-model comparison',
             Collaboration: '✓ Shared workspace',
             'CI/CD': '✗ None',
@@ -671,11 +666,10 @@ tests:
       'comparison-table': {
         title: 'Head-to-Head: Alle 4 Tools im Vergleich',
         content: ['Zusammenfassung aller 5 Tools auf den Kriterien aus Abschnitt 2:'],
-        columns: ['Tool', 'Link', 'Primäre Nutzung', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
+        columns: ['Tool', 'Primäre Nutzung', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
         rows: [
           {
-            'Tool': 'Braintrust',
-            'Link': '[braintrust.dev](https://braintrust.dev)',
+            'Tool': '[Braintrust](https://braintrust.dev)',
             'Primäre Nutzung': 'Evaluierung + Experimente',
             'Zusammenarbeit': '✓ Workspace freigeben',
             'CI/CD': '✓ API + MCP',
@@ -683,8 +677,7 @@ tests:
             'Am besten für': 'Detaillierte Bewertung',
           },
           {
-            'Tool': 'PromptHub',
-            'Link': '[prompthub.us](https://www.prompthub.us)',
+            'Tool': '[PromptHub](https://www.prompthub.us)',
             'Primäre Nutzung': 'Versionskontrolle',
             'Zusammenarbeit': '✓ Web-UI Kollab',
             'CI/CD': '✗ Keine',
@@ -692,8 +685,7 @@ tests:
             'Am besten für': 'Team-Zusammenarbeit',
           },
           {
-            'Tool': 'Vellum',
-            'Link': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'Tool': '[Vellum](https://docs.vellum.ai)',
             'Primäre Nutzung': 'Production A/B-Tests',
             'Zusammenarbeit': '✓ Workspace-Zugriff',
             'CI/CD': '✗ Keine',
@@ -701,8 +693,7 @@ tests:
             'Am besten für': 'Live-Traffic-Tests',
           },
           {
-            'Tool': 'Promptfoo',
-            'Link': '[promptfoo.dev](https://promptfoo.dev)',
+            'Tool': '[Promptfoo](https://promptfoo.dev)',
             'Primäre Nutzung': 'CI/CD Regressions',
             'Zusammenarbeit': '✗ Keine (lokal)',
             'CI/CD': '✓ GitHub Actions',
@@ -710,8 +701,7 @@ tests:
             'Am besten für': 'Budget-bewusst',
           },
           {
-            'Tool': 'PromptQuorum',
-            'Link': '[promptquorum.com](https://www.promptquorum.com)',
+            'Tool': '[PromptQuorum](https://www.promptquorum.com)',
             'Primäre Nutzung': 'Modellvergleich',
             'Zusammenarbeit': '✓ Gemeinsamer Workspace',
             'CI/CD': '✗ Keine',
@@ -1108,11 +1098,10 @@ tests:
         content: [
           '**Ninguna herramienta destaca en los cinco criterios. Braintrust lidera en profundidad de evaluación; Vellum lidera en división de tráfico en producción; Promptfoo lidera en CI/CD gratuito; PromptHub lidera en simplicidad.**',
         ],
-        columns: ['Herramienta', 'Enlace', 'Uso principal', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
+        columns: ['Herramienta', 'Uso principal', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
         rows: [
           {
-            Herramienta: 'Braintrust',
-            Enlace: '[braintrust.dev](https://braintrust.dev)',
+            Herramienta: '[Braintrust](https://braintrust.dev)',
             'Uso principal': 'Evaluación de output',
             Colaboración: '✅ Roles + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -1120,8 +1109,7 @@ tests:
             'Ideal para': 'Equipos centrados en calidad',
           },
           {
-            Herramienta: 'PromptHub',
-            Enlace: '[prompthub.us](https://www.prompthub.us)',
+            Herramienta: '[PromptHub](https://www.prompthub.us)',
             'Uso principal': 'Control de versiones',
             Colaboración: '✅ Workspace de equipo',
             'CI/CD': '✗ Ninguno',
@@ -1129,8 +1117,7 @@ tests:
             'Ideal para': 'Equipos de contenido',
           },
           {
-            Herramienta: 'Vellum',
-            Enlace: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Herramienta: '[Vellum](https://docs.vellum.ai)',
             'Uso principal': 'A/B en producción',
             Colaboración: '✅ Revisiones PR',
             'CI/CD': '✓ Webhooks',
@@ -1138,8 +1125,7 @@ tests:
             'Ideal para': 'Features en vivo',
           },
           {
-            Herramienta: 'Promptfoo',
-            Enlace: '[promptfoo.dev](https://promptfoo.dev)',
+            Herramienta: '[Promptfoo](https://promptfoo.dev)',
             'Uso principal': 'Testing CI/CD',
             Colaboración: 'Basado en Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1147,8 +1133,7 @@ tests:
             'Ideal para': 'Equipos DevOps',
           },
           {
-            Herramienta: 'PromptQuorum',
-            Enlace: '[promptquorum.com](https://www.promptquorum.com)',
+            Herramienta: '[PromptQuorum](https://www.promptquorum.com)',
             'Uso principal': 'Comparación multi-modelo',
             Colaboración: '✓ Workspace compartido',
             'CI/CD': '✗ Ninguno',
@@ -1567,11 +1552,10 @@ tests:
         content: [
           '**Nenhuma ferramenta se destaca nos cinco critérios. Braintrust lidera em profundidade de avaliação; Vellum lidera em divisão de tráfego em produção; Promptfoo lidera em CI/CD gratuito; PromptHub lidera em simplicidade.**',
         ],
-        columns: ['Ferramenta', 'Link', 'Uso principal', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
+        columns: ['Ferramenta', 'Uso principal', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
         rows: [
           {
-            Ferramenta: 'Braintrust',
-            Link: '[braintrust.dev](https://braintrust.dev)',
+            Ferramenta: '[Braintrust](https://braintrust.dev)',
             'Uso principal': 'Avaliação de saída',
             Colaboração: '✅ Funções + dashboards',
             'CI/CD': '✓ API + MCP',
@@ -1579,8 +1563,7 @@ tests:
             'Ideal para': 'Equipes focadas em qualidade',
           },
           {
-            Ferramenta: 'PromptHub',
-            Link: '[prompthub.us](https://www.prompthub.us)',
+            Ferramenta: '[PromptHub](https://www.prompthub.us)',
             'Uso principal': 'Controle de versões',
             Colaboração: '✅ Workspace de equipe',
             'CI/CD': '✗ Nenhum',
@@ -1588,8 +1571,7 @@ tests:
             'Ideal para': 'Equipes de conteúdo',
           },
           {
-            Ferramenta: 'Vellum',
-            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Ferramenta: '[Vellum](https://docs.vellum.ai)',
             'Uso principal': 'A/B em produção',
             Colaboração: '✅ Revisões PR',
             'CI/CD': '✓ Webhooks',
@@ -1597,8 +1579,7 @@ tests:
             'Ideal para': 'Recursos ao vivo',
           },
           {
-            Ferramenta: 'Promptfoo',
-            Link: '[promptfoo.dev](https://promptfoo.dev)',
+            Ferramenta: '[Promptfoo](https://promptfoo.dev)',
             'Uso principal': 'Testes CI/CD',
             Colaboração: 'Baseado em Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1606,8 +1587,7 @@ tests:
             'Ideal para': 'Equipes DevOps',
           },
           {
-            Ferramenta: 'PromptQuorum',
-            Link: '[promptquorum.com](https://www.promptquorum.com)',
+            Ferramenta: '[PromptQuorum](https://www.promptquorum.com)',
             'Uso principal': 'Comparação multi-modelo',
             Colaboração: '✓ Workspace compartilhado',
             'CI/CD': '✗ Nenhum',
@@ -1994,11 +1974,10 @@ tests:
       'comparison-table': {
         title: 'Face à face : Tous les 4 outils comparés',
         content: ['Synthèse cinq outils sur critères section 2 :'],
-        columns: ['Outil', 'Lien', 'Usage primaire', 'Collaboration', 'CI/CD', 'Prix', 'Meilleur pour'],
+        columns: ['Outil', 'Usage primaire', 'Collaboration', 'CI/CD', 'Prix', 'Meilleur pour'],
         rows: [
           {
-            'Outil': 'Braintrust',
-            'Lien': '[braintrust.dev](https://braintrust.dev)',
+            'Outil': '[Braintrust](https://braintrust.dev)',
             'Usage primaire': 'Évaluation + production',
             'Collaboration': '✓ Workspace partage',
             'CI/CD': '✓ Loop agent, MCP',
@@ -2006,8 +1985,7 @@ tests:
             'Meilleur pour': 'Évaluation + production',
           },
           {
-            'Outil': 'PromptHub',
-            'Lien': '[prompthub.us](https://www.prompthub.us)',
+            'Outil': '[PromptHub](https://www.prompthub.us)',
             'Usage primaire': 'Versioning',
             'Collaboration': '✓ Web UI collab',
             'CI/CD': '✗ Aucun',
@@ -2015,8 +1993,7 @@ tests:
             'Meilleur pour': 'Collab équipe',
           },
           {
-            'Outil': 'Vellum',
-            'Lien': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'Outil': '[Vellum](https://docs.vellum.ai)',
             'Usage primaire': 'A/B tests production',
             'Collaboration': '✓ Workspace access',
             'CI/CD': '✗ Aucun',
@@ -2024,8 +2001,7 @@ tests:
             'Meilleur pour': 'Tests trafic live',
           },
           {
-            'Outil': 'Promptfoo',
-            'Lien': '[promptfoo.dev](https://promptfoo.dev)',
+            'Outil': '[Promptfoo](https://promptfoo.dev)',
             'Usage primaire': 'Régression CI/CD',
             'Collaboration': '✗ Aucun (local)',
             'CI/CD': '✓ GitHub Actions',
@@ -2033,8 +2009,7 @@ tests:
             'Meilleur pour': 'Budget-conscious',
           },
           {
-            'Outil': 'PromptQuorum',
-            'Lien': '[promptquorum.com](https://www.promptquorum.com)',
+            'Outil': '[PromptQuorum](https://www.promptquorum.com)',
             'Usage primaire': 'Comparaison modèles',
             'Collaboration': '✓ Workspace partagé',
             'CI/CD': '✗ Aucun',
@@ -2245,7 +2220,7 @@ tests:
       'promptfoo': { title: 'Promptfoo：無料オープンソース CI/CD テスト', content: ['**何：** ローカルプロンプトテストと CI/CD 統合用のオープンソースフレームワーク。YAML/JSON でテストケース（プロンプト + 期待される結果）を記述し、ローカルで実行し、回帰レポートを取得。GitHub Actions ネイティブ。', '**強み：** 無料（MIT）でオープンソース。ローカル — クラウドなし、認証なし。YAML 設定はシンプル。GitHub Actions 優れています。コミュニティ大きい。', '**弱み：** 本番トラフィック分割またはバージョン管理には不向き。回帰テストツール、デプロイメントツールではない。本番 A/B テストには Vellum と組み合わせる必要があります。自動評価は限定的。'] },
       'promptfoo-yaml': { title: 'Promptfoo YAML の例', codeBlock: `providers:\n  - openai:gpt-5.6\n\ntests:\n  - description: "クエリを分類"\n    vars:\n      question: "これはバグレポートですか？"\n      context: "ユーザーが認証エラーについて文句を言っています。"\n    assert:\n      - type: "contains"\n        value: "Bug"\n      - type: "cost"\n        threshold: 0.01\n\n  - description: "ハルシネーション回避"\n    vars:\n      input: "xyz の 5 つの機能をリストアップしてください。"\n    assert:\n      - type: "not-contains"\n        value: "ツールは X をサポート" # ドキュメントにない\n`, codeLanguage: 'yaml' },
       'promptquorum': { title: 'PromptQuorum：最適化前のモデル比較', content: ['**特定の LLM プロバイダーについて Braintrust、Vellum、PromptHub、Promptfoo に決める前に、PromptQuorum を使用してプロンプトを 25+ モデルに同時に送信し、どれが最高のパフォーマンスを発揮するかを確認してください — モデルに依存しない最初のステップ。** 無料ティア利用可能。', '上記の 4 つのツール（それぞれ 1 つのモデルを最適化）とは異なり、PromptQuorum は「どのモデルが適切か？」という質問に 1 パスで答えます。PromptQuorum で最適なモデルを発見した後、詳細評価には Braintrust、本番 A/B テストには Vellum、CI/CD 回帰防止には Promptfoo にルーティングします。'], items: ['GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama と LM Studio 経由のローカルモデルを含む 25+ モデル', 'TRACE、CO-STAR、CRAFT など 9 つの組み込みプロンプトフレームワーク', 'コンセンサススコアリング付きの並べて表示される応答比較', 'モデルあたりのトークン数 — コミットする前にコスト差を確認', '無料ティア — エンジニアリングセットアップは不要'] },
-      'comparison-table': { title: '直接対決：すべての 4 つのツールを比較', content: ['セクション 2 の基準に基づくすべての 5 つのツールの要約：'], columns: ['ツール', 'リンク', 'プライマリ使用法', 'コラボレーション', 'CI/CD', '価格', 'に最適'], rows: [{ 'ツール': 'Braintrust', 'リンク': '[braintrust.dev](https://braintrust.dev)', 'プライマリ使用法': '評価 + 実験', 'コラボレーション': '✓ ワークスペース共有', 'CI/CD': '✓ API + MCP', '価格': '無料 / Pro $249', 'に最適': '詳細評価' }, { 'ツール': 'PromptHub', 'リンク': '[prompthub.us](https://www.prompthub.us)', 'プライマリ使用法': 'バージョン管理', 'コラボレーション': '✓ Web UI コラボ', 'CI/CD': '✗ なし', '価格': '月 50～200€', 'に最適': 'チーム協力' }, { 'ツール': 'Vellum', 'リンク': '[docs.vellum.ai](https://docs.vellum.ai)', 'プライマリ使用法': '本番 A/B テスト', 'コラボレーション': '✓ ワークスペース アクセス', 'CI/CD': '✗ なし', '価格': '月 200～500€', 'に最適': 'ライブトラフィック テスト' }, { 'ツール': 'Promptfoo', 'リンク': '[promptfoo.dev](https://promptfoo.dev)', 'プライマリ使用法': 'CI/CD 回帰', 'コラボレーション': '✗ なし（ローカル）', 'CI/CD': '✓ GitHub Actions', '価格': '無料（OSS）', 'に最適': '予算志向' }, { 'ツール': 'PromptQuorum', 'リンク': '[promptquorum.com](https://www.promptquorum.com)', 'プライマリ使用法': 'モデル比較', 'コラボレーション': '✓ 共有ワークスペース', 'CI/CD': '✗ なし', '価格': '無料 + クレジット', 'に最適': 'モデル選択' }] },
+      'comparison-table': { title: '直接対決：すべての 4 つのツールを比較', content: ['セクション 2 の基準に基づくすべての 5 つのツールの要約：'], columns: ['ツール', 'プライマリ使用法', 'コラボレーション', 'CI/CD', '価格', 'に最適'], rows: [{ 'ツール': '[Braintrust](https://braintrust.dev)', 'プライマリ使用法': '評価 + 実験', 'コラボレーション': '✓ ワークスペース共有', 'CI/CD': '✓ API + MCP', '価格': '無料 / Pro $249', 'に最適': '詳細評価' }, { 'ツール': '[PromptHub](https://www.prompthub.us)', 'プライマリ使用法': 'バージョン管理', 'コラボレーション': '✓ Web UI コラボ', 'CI/CD': '✗ なし', '価格': '月 50～200€', 'に最適': 'チーム協力' }, { 'ツール': '[Vellum](https://docs.vellum.ai)', 'プライマリ使用法': '本番 A/B テスト', 'コラボレーション': '✓ ワークスペース アクセス', 'CI/CD': '✗ なし', '価格': '月 200～500€', 'に最適': 'ライブトラフィック テスト' }, { 'ツール': '[Promptfoo](https://promptfoo.dev)', 'プライマリ使用法': 'CI/CD 回帰', 'コラボレーション': '✗ なし（ローカル）', 'CI/CD': '✓ GitHub Actions', '価格': '無料（OSS）', 'に最適': '予算志向' }, { 'ツール': '[PromptQuorum](https://www.promptquorum.com)', 'プライマリ使用法': 'モデル比較', 'コラボレーション': '✓ 共有ワークスペース', 'CI/CD': '✗ なし', '価格': '無料 + クレジット', 'に最適': 'モデル選択' }] },
       'which-tool': { title: 'チームタイプ別のツール選定', content: ['答えはワークフローによります。5 つの一般的なシナリオ：'], numberedItems: [{ title: '回帰を回避したいだけ', whyItMatters: 'Promptfoo。無料、ローカル、GitHub Actions ネイティブ。小さなチームのためにすべてが必要です。' }, { title: 'ライブ A/B テスト付き本番システムを構築中', whyItMatters: 'Vellum + PromptQuorum。PromptQuorum で最高のモデルを最初に見つけ、次に Vellum でトラフィック分割とフィードバックループ。' }, { title: '大きなプロンプトライブラリとバージョン管理が必要', whyItMatters: 'PromptHub。使いやすく、安価で、チーム協力向け。CI/CD に Promptfoo と組み合わせ。' }, { title: 'カスタムメトリクスでの詳細評価が必要', whyItMatters: 'Braintrust。ダッシュボードと自動評価は無敵。高額ですが、データ科学チームの価値があります。' }, { title: 'どのモデルまたはフレームワークを使用するか不確実', whyItMatters: 'PromptQuorum 最初。25+ モデルとフレームワーク全体で比較。次に上記のツールでデプロイ。' }] },
       'common-mistakes': { title: 'よくあるエラー', mistakes: [{ mistake: '4 つのツールをすべてまとめて購入', problem: '月 700€ 以上かかり、冗長。Braintrust と Vellum を完全に使用しません。', fix: 'ワークフローに適した 2 つのツールを選択。ほとんどのチームが必要：Braintrust + Vellum または Promptfoo + PromptHub。' }, { mistake: '評価で開始、デプロイメント忘却', problem: 'Braintrust は最高のプロンプトを表示しますが、手動でアプリにコピー。「デプロイ」ボタンなし。', fix: 'Braintrust を Vellum と組み合わせるか、手動デプロイ。評価なしのデプロイメント 無意味。' }, { mistake: 'Promptfoo ローカルのみで使用', problem: 'ローカルテストは優れていますが、本番レイテンシ、コスト、実際のエラーは表示されません。', fix: 'Promptfoo を CI/CD 回帰テストに使用し、Vellum またはカスタムインフラで本番にデプロイ。' }, { mistake: 'プロンプト最適化前にモデル選択', problem: 'Claude Opus で開始できますが、GPT-5.6 がより良い可能性があります — テストするまで知りません。', fix: 'PromptQuorum で最初に複数モデルを比較。次に Braintrust または Promptfoo で最高のモデルに最適化。' }] },
       'how-to-choose': { title: 'これら 4 つのツール間での選択方法', numberedItems: ['チームの 3 つの主な課題をリストアップ：(a) 評価、(b) バージョン管理、(c) 本番デプロイメント。', '各課題に対して最高のツール：(a) Braintrust、(b) PromptHub、(c) Vellum。', '課題が「どのモデルかわかりません」の場合は、PromptQuorum で開始。', '課題が「予算がない」の場合は、CI/CD に Promptfoo、バージョン管理に PromptHub を選択。', '2 つ以上のツールを購入しないでください。4 つのツールはいつも多すぎます。', '90 日間のコスト ベースラインを計画し、どのツールが最高の ROI かを評価します。'] },
@@ -2290,7 +2265,7 @@ tests:
       'promptfoo': { title: 'Promptfoo：免费开源 CI/CD 测试', content: ['**什么：** 本地提示词测试和 CI/CD 集成的开源框架。用 YAML/JSON 编写测试用例（提示词 + 预期结果），本地运行，获取回归报告。GitHub Actions 原生。', '**优势：** 免费（MIT）开源。本地——无云、无认证。YAML 配置简单。GitHub Actions 优秀。社区大。', '**劣势：** 不适合生产流量分割或版本管理。回归测试工具，不是部署工具。生产 A/B 测试需与 Vellum 结合。自动评估限制。'] },
       'promptfoo-yaml': { title: 'Promptfoo YAML 示例', codeBlock: `providers:\n  - openai:gpt-5.6\n\ntests:\n  - description: "分类查询"\n    vars:\n      question: "这是 bug 报告吗？"\n      context: "用户抱怨认证错误。"\n    assert:\n      - type: "contains"\n        value: "Bug"\n      - type: "cost"\n        threshold: 0.01\n\n  - description: "避免幻觉"\n    vars:\n      input: "列出 xyz 的 5 个功能。"\n    assert:\n      - type: "not-contains"\n        value: "工具支持 X" # 文档中不存在\n`, codeLanguage: 'yaml' },
       'promptquorum': { title: 'PromptQuorum：优化前的模型比较', content: ['**在为特定 LLM 提供商确定 Braintrust、Vellum、PromptHub 或 Promptfoo 之前，使用 PromptQuorum 将提示词同时分发到 25+ 模型，看哪个表现最好——首个与模型无关的步骤。** 免费层可用。', '与上述 4 个工具（各优化一个模型）不同，PromptQuorum 在一次运行中回答"哪个模型适合？"。在 PromptQuorum 发现最优模型后，路由到 Braintrust 进行深层评估、Vellum 进行生产 A/B 测试或 Promptfoo 进行 CI/CD 回归防止。'], items: ['包括 GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 的 25+ 模型，和通过 Ollama、LM Studio 的本地模型', '9 个内置提示词框架——TRACE、CO-STAR、CRAFT 等', '包含共识评分的并排响应比较', '按模型的令牌计数——提交前查看成本差异', '免费层——无需工程设置'] },
-      'comparison-table': { title: '直接对比：所有 4 个工具比较', content: ['第 2 节标准下所有 5 个工具摘要：'], columns: ['工具', '链接', '主要用途', '协作', 'CI/CD', '定价', '最适合'], rows: [{ '工具': 'Braintrust', '链接': '[braintrust.dev](https://braintrust.dev)', '主要用途': '评估 + 实验', '协作': '✓ 工作区共享', 'CI/CD': '✓ API + MCP', '定价': '免费 / Pro $249', '最适合': '详细评估' }, { '工具': 'PromptHub', '链接': '[prompthub.us](https://www.prompthub.us)', '主要用途': '版本控制', '协作': '✓ Web UI 协作', 'CI/CD': '✗ 无', '定价': '$50-200/月', '最适合': '团队协作' }, { '工具': 'Vellum', '链接': '[docs.vellum.ai](https://docs.vellum.ai)', '主要用途': '生产 A/B 测试', '协作': '✓ 工作区访问', 'CI/CD': '✗ 无', '定价': '$200-500/月', '最适合': '实时流量测试' }, { '工具': 'Promptfoo', '链接': '[promptfoo.dev](https://promptfoo.dev)', '主要用途': 'CI/CD 回归', '协作': '✗ 无（本地）', 'CI/CD': '✓ GitHub Actions', '定价': '免费（OSS）', '最适合': '预算友好' }, { '工具': 'PromptQuorum', '链接': '[promptquorum.com](https://www.promptquorum.com)', '主要用途': '模型比较', '协作': '✓ 共享工作区', 'CI/CD': '✗ 无', '定价': '免费 + 额度', '最适合': '模型选择' }] },
+      'comparison-table': { title: '直接对比：所有 4 个工具比较', content: ['第 2 节标准下所有 5 个工具摘要：'], columns: ['工具', '主要用途', '协作', 'CI/CD', '定价', '最适合'], rows: [{ '工具': '[Braintrust](https://braintrust.dev)', '主要用途': '评估 + 实验', '协作': '✓ 工作区共享', 'CI/CD': '✓ API + MCP', '定价': '免费 / Pro $249', '最适合': '详细评估' }, { '工具': '[PromptHub](https://www.prompthub.us)', '主要用途': '版本控制', '协作': '✓ Web UI 协作', 'CI/CD': '✗ 无', '定价': '$50-200/月', '最适合': '团队协作' }, { '工具': '[Vellum](https://docs.vellum.ai)', '主要用途': '生产 A/B 测试', '协作': '✓ 工作区访问', 'CI/CD': '✗ 无', '定价': '$200-500/月', '最适合': '实时流量测试' }, { '工具': '[Promptfoo](https://promptfoo.dev)', '主要用途': 'CI/CD 回归', '协作': '✗ 无（本地）', 'CI/CD': '✓ GitHub Actions', '定价': '免费（OSS）', '最适合': '预算友好' }, { '工具': '[PromptQuorum](https://www.promptquorum.com)', '主要用途': '模型比较', '协作': '✓ 共享工作区', 'CI/CD': '✗ 无', '定价': '免费 + 额度', '最适合': '模型选择' }] },
       'which-tool': { title: '按团队类型选择工具', content: ['答案取决于工作流。5 个常见场景：'], numberedItems: [{ title: '只想避免回归', whyItMatters: 'Promptfoo。免费、本地、GitHub Actions 原生。小团队所需全部。' }, { title: '构建具有实时 A/B 测试的生产系统', whyItMatters: 'Vellum + PromptQuorum。PromptQuorum 先找最优模型，然后 Vellum 流量分割和反馈循环。' }, { title: '有大提示词库，需版本控制', whyItMatters: 'PromptHub。易用、便宜、为团队协作设计。与 Promptfoo 结合做 CI/CD。' }, { title: '需自定义指标的深度评估', whyItMatters: 'Braintrust。仪表板和自动评估无可匹敌。昂贵但值得数据科学团队。' }, { title: '不确定用哪个模型或框架', whyItMatters: 'PromptQuorum 先。在 25+ 模型和框架间比较。后用上述工具部署。' }] },
       'common-mistakes': { title: '常见错误', mistakes: [{ mistake: '同时购买全部 4 个工具', problem: '花费 $700+/月，重复。不会充分使用 Braintrust 和 Vellum。', fix: '选择适合工作流的 2 个工具。大多数团队需：Braintrust + Vellum 或 Promptfoo + PromptHub。' }, { mistake: '从评估开始，忽视部署', problem: 'Braintrust 显示最优提示词但需手动复制到应用。无"部署"按钮。', fix: '将 Braintrust 与 Vellum 结合或手动部署。无部署的评估无意义。' }, { mistake: '仅本地使用 Promptfoo', problem: '本地测试很好，但看不到生产延迟、成本或真实错误。', fix: '用 Promptfoo 做 CI/CD 回归测试，用 Vellum 或自有基础设施部署生产。' }, { mistake: '提示词优化前选模型', problem: '可以从 Claude Opus 开始，但 GPT-5.6 可能更优——测试前不知道。', fix: 'PromptQuorum 先多模型比较。后用 Braintrust 或 Promptfoo 为最优模型优化。' }] },
       'how-to-choose': { title: '如何在这 4 个工具之间选择', numberedItems: ['列出团队的 3 个主要难题：(a) 评估、(b) 版本控制、(c) 生产部署。', '每个难题选最优工具：(a) Braintrust、(b) PromptHub、(c) Vellum。', '难题是"不知道哪个模型"？PromptQuorum 开始。', '难题是"没预算"？CI/CD 选 Promptfoo、版本控制选 PromptHub。', '不超过 2 个工具。4 个工具总是太多。', '规划 90 天成本基线，评估哪个工具最优 ROI。'] },
@@ -2513,11 +2488,10 @@ tests:
         content: [
           '**لا توجد أداة واحدة تتفوق في المعايير الخمسة. Braintrust تتصدر في عمق التقييم؛ Vellum تتصدر في توزيع الحركة في الإنتاج؛ Promptfoo تتصدر في CI/CD المجاني؛ PromptHub تتصدر في البساطة.**',
         ],
-        columns: ['الأداة', 'الرابط', 'الاستخدام الرئيسي', 'التعاون', 'CI/CD', 'الأسعار', 'مثالية لـ'],
+        columns: ['الأداة', 'الاستخدام الرئيسي', 'التعاون', 'CI/CD', 'الأسعار', 'مثالية لـ'],
         rows: [
           {
-            'الأداة': 'Braintrust',
-            'الرابط': '[braintrust.dev](https://braintrust.dev)',
+            'الأداة': '[Braintrust](https://braintrust.dev)',
             'الاستخدام الرئيسي': 'تقييم المخرجات',
             'التعاون': '✅ أدوار + لوحات معلومات',
             'CI/CD': '✓ API + MCP',
@@ -2525,8 +2499,7 @@ tests:
             'مثالية لـ': 'الفرق المركّزة على الجودة',
           },
           {
-            'الأداة': 'PromptHub',
-            'الرابط': '[prompthub.us](https://www.prompthub.us)',
+            'الأداة': '[PromptHub](https://www.prompthub.us)',
             'الاستخدام الرئيسي': 'التحكم في الإصدارات',
             'التعاون': '✅ مساحة عمل الفريق',
             'CI/CD': '✗ لا يوجد',
@@ -2534,8 +2507,7 @@ tests:
             'مثالية لـ': 'فرق المحتوى',
           },
           {
-            'الأداة': 'Vellum',
-            'الرابط': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'الأداة': '[Vellum](https://docs.vellum.ai)',
             'الاستخدام الرئيسي': 'A/B في الإنتاج',
             'التعاون': '✅ مراجعات PR',
             'CI/CD': '✓ Webhooks',
@@ -2543,8 +2515,7 @@ tests:
             'مثالية لـ': 'الميزات الحية',
           },
           {
-            'الأداة': 'Promptfoo',
-            'الرابط': '[promptfoo.dev](https://promptfoo.dev)',
+            'الأداة': '[Promptfoo](https://promptfoo.dev)',
             'الاستخدام الرئيسي': 'اختبار CI/CD',
             'التعاون': 'مبني على Git',
             'CI/CD': '✅ GitHub Actions',
@@ -2552,8 +2523,7 @@ tests:
             'مثالية لـ': 'فرق DevOps',
           },
           {
-            'الأداة': 'PromptQuorum',
-            'الرابط': '[promptquorum.com](https://www.promptquorum.com)',
+            'الأداة': '[PromptQuorum](https://www.promptquorum.com)',
             'الاستخدام الرئيسي': 'مقارنة متعددة النماذج',
             'التعاون': '✓ مساحة عمل مشتركة',
             'CI/CD': '✗ لا يوجد',
@@ -2963,11 +2933,10 @@ tests:
         content: [
           '**어떤 도구도 5가지 기준 모두에서 탁월하지 않습니다. Braintrust는 평가 심층 기능에서, Vellum은 프로덕션 트래픽 분배에서, Promptfoo는 무료 CI/CD에서, PromptHub는 단순성에서 선두를 달립니다.**',
         ],
-        columns: ['도구', '링크', '주요 용도', '협업', 'CI/CD', '가격', '이상적인 대상'],
+        columns: ['도구', '주요 용도', '협업', 'CI/CD', '가격', '이상적인 대상'],
         rows: [
           {
-            '도구': 'Braintrust',
-            '링크': '[braintrust.dev](https://braintrust.dev)',
+            '도구': '[Braintrust](https://braintrust.dev)',
             '주요 용도': '출력 평가',
             '협업': '✅ 역할 + 대시보드',
             'CI/CD': '✓ API + MCP',
@@ -2975,8 +2944,7 @@ tests:
             '이상적인 대상': '품질 중심 팀',
           },
           {
-            '도구': 'PromptHub',
-            '링크': '[prompthub.us](https://www.prompthub.us)',
+            '도구': '[PromptHub](https://www.prompthub.us)',
             '주요 용도': '버전 관리',
             '협업': '✅ 팀 워크스페이스',
             'CI/CD': '✗ 없음',
@@ -2984,8 +2952,7 @@ tests:
             '이상적인 대상': '콘텐츠 팀',
           },
           {
-            '도구': 'Vellum',
-            '링크': '[docs.vellum.ai](https://docs.vellum.ai)',
+            '도구': '[Vellum](https://docs.vellum.ai)',
             '주요 용도': '프로덕션 A/B',
             '협업': '✅ PR 검토',
             'CI/CD': '✓ 웹훅',
@@ -2993,8 +2960,7 @@ tests:
             '이상적인 대상': '실시간 기능 팀',
           },
           {
-            '도구': 'Promptfoo',
-            '링크': '[promptfoo.dev](https://promptfoo.dev)',
+            '도구': '[Promptfoo](https://promptfoo.dev)',
             '주요 용도': 'CI/CD 테스트',
             '협업': 'Git 기반',
             'CI/CD': '✅ GitHub Actions',
@@ -3002,8 +2968,7 @@ tests:
             '이상적인 대상': 'DevOps 팀',
           },
           {
-            '도구': 'PromptQuorum',
-            '링크': '[promptquorum.com](https://www.promptquorum.com)',
+            '도구': '[PromptQuorum](https://www.promptquorum.com)',
             '주요 용도': '멀티 모델 비교',
             '협업': '✓ 공유 워크스페이스',
             'CI/CD': '✗ 없음',

@@ -229,15 +229,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Side-by-Side Comparison',
-        columns: ['Tool', 'Link', 'Best For', 'Schema Format', 'Language', 'Local Models', 'Licence', 'Learning Curve'],
+        columns: ['Tool', 'Best For', 'Schema Format', 'Language', 'Local Models', 'Licence', 'Learning Curve'],
         rows: [
-          { 'Tool': 'Instructor', 'Link': '[python.useinstructor.com](https://python.useinstructor.com)', 'Best For': 'Python APIs + retries', 'Schema Format': 'Pydantic models', 'Language': 'Python, TS, Ruby, Go, Elixir, Rust', 'Local Models': 'Yes (Ollama, vLLM)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
-          { 'Tool': 'Outlines', 'Link': '[dottxt.ai](https://dottxt.ai)', 'Best For': 'Local model deployment', 'Schema Format': 'Pydantic, JSON Schema, regex, CFG', 'Language': 'Python', 'Local Models': 'Yes (native)', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Medium' },
-          { 'Tool': 'Pydantic AI', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Best For': 'Type-safe agents', 'Schema Format': 'Pydantic models', 'Language': 'Python', 'Local Models': 'Yes (Ollama)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
-          { 'Tool': 'BAML', 'Link': '[boundaryml.com](https://boundaryml.com)', 'Best For': 'Polyglot teams, flaky models', 'Schema Format': '.baml class files', 'Language': 'Python, TS + 6 via OpenAPI', 'Local Models': 'Yes (OpenAI-compatible)', 'Licence': 'Apache 2.0, paid observability', 'Learning Curve': 'Medium' },
-          { 'Tool': 'LangChain', 'Link': '[langchain.com](https://langchain.com)', 'Best For': 'Chains + agents', 'Schema Format': 'Tool definitions', 'Language': 'Python, JS', 'Local Models': 'Yes', 'Licence': 'MIT, free', 'Learning Curve': 'Medium' },
-          { 'Tool': 'Marvin', 'Link': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'Best For': 'Fast extract + classify', 'Schema Format': 'Type hints', 'Language': 'Python', 'Local Models': 'Yes', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Very low' },
-          { 'Tool': 'PromptQuorum', 'Link': '[promptquorum.com](https://www.promptquorum.com)', 'Best For': 'Multi-model testing', 'Schema Format': 'API-agnostic', 'Language': 'API-first', 'Local Models': 'Via OpenAI proxy', 'Licence': 'Free tier + enterprise', 'Learning Curve': 'Low' }
+          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Best For': 'Python APIs + retries', 'Schema Format': 'Pydantic models', 'Language': 'Python, TS, Ruby, Go, Elixir, Rust', 'Local Models': 'Yes (Ollama, vLLM)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
+          { 'Tool': '[Outlines](https://dottxt.ai)', 'Best For': 'Local model deployment', 'Schema Format': 'Pydantic, JSON Schema, regex, CFG', 'Language': 'Python', 'Local Models': 'Yes (native)', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Medium' },
+          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Best For': 'Type-safe agents', 'Schema Format': 'Pydantic models', 'Language': 'Python', 'Local Models': 'Yes (Ollama)', 'Licence': 'MIT, free', 'Learning Curve': 'Low' },
+          { 'Tool': '[BAML](https://boundaryml.com)', 'Best For': 'Polyglot teams, flaky models', 'Schema Format': '.baml class files', 'Language': 'Python, TS + 6 via OpenAPI', 'Local Models': 'Yes (OpenAI-compatible)', 'Licence': 'Apache 2.0, paid observability', 'Learning Curve': 'Medium' },
+          { 'Tool': '[LangChain](https://langchain.com)', 'Best For': 'Chains + agents', 'Schema Format': 'Tool definitions', 'Language': 'Python, JS', 'Local Models': 'Yes', 'Licence': 'MIT, free', 'Learning Curve': 'Medium' },
+          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Best For': 'Fast extract + classify', 'Schema Format': 'Type hints', 'Language': 'Python', 'Local Models': 'Yes', 'Licence': 'Apache 2.0, free', 'Learning Curve': 'Very low' },
+          { 'Tool': '[PromptQuorum](https://www.promptquorum.com)', 'Best For': 'Multi-model testing', 'Schema Format': 'API-agnostic', 'Language': 'API-first', 'Local Models': 'Via OpenAI proxy', 'Licence': 'Free tier + enterprise', 'Learning Curve': 'Low' }
         ]
       },
       decision: {
@@ -602,15 +602,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Direkter Vergleich',
-        columns: ['Tool', 'Link', 'Beste Verwendung', 'Schema-Format', 'Sprache', 'Lokale Modelle', 'Lizenz', 'Lernkurve'],
+        columns: ['Tool', 'Beste Verwendung', 'Schema-Format', 'Sprache', 'Lokale Modelle', 'Lizenz', 'Lernkurve'],
         rows: [
-          { 'Tool': 'Instructor', 'Link': '[python.useinstructor.com](https://python.useinstructor.com)', 'Beste Verwendung': 'Python-APIs + Retries', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python, TS, Ruby, Go, Elixir, Rust', 'Lokale Modelle': 'Ja (Ollama, vLLM)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
-          { 'Tool': 'Outlines', 'Link': '[dottxt.ai](https://dottxt.ai)', 'Beste Verwendung': 'Lokale Modell-Bereitstellung', 'Schema-Format': 'Pydantic, JSON Schema, Regex, CFG', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (nativ)', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Mittel' },
-          { 'Tool': 'Pydantic AI', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Beste Verwendung': 'Typsichere Agents', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (Ollama)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
-          { 'Tool': 'BAML', 'Link': '[boundaryml.com](https://boundaryml.com)', 'Beste Verwendung': 'Polyglotte Teams, fehleranfällige Modelle', 'Schema-Format': '.baml-Klassendateien', 'Sprache': 'Python, TS + 6 via OpenAPI', 'Lokale Modelle': 'Ja (OpenAI-kompatibel)', 'Lizenz': 'Apache 2.0, Observability kostenpflichtig', 'Lernkurve': 'Mittel' },
-          { 'Tool': 'LangChain', 'Link': '[langchain.com](https://langchain.com)', 'Beste Verwendung': 'Chains + Agents', 'Schema-Format': 'Tool-Definitionen', 'Sprache': 'Python, JS', 'Lokale Modelle': 'Ja', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Mittel' },
-          { 'Tool': 'Marvin', 'Link': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'Beste Verwendung': 'Schnelles extract + classify', 'Schema-Format': 'Type Hints', 'Sprache': 'Python', 'Lokale Modelle': 'Ja', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Sehr niedrig' },
-          { 'Tool': 'PromptQuorum', 'Link': '[promptquorum.com](https://www.promptquorum.com)', 'Beste Verwendung': 'Multi-Modell-Tests', 'Schema-Format': 'API-agnostisch', 'Sprache': 'API-first', 'Lokale Modelle': 'Via OpenAI-Proxy', 'Lizenz': 'Kostenloses Tier + Enterprise', 'Lernkurve': 'Niedrig' }
+          { 'Tool': '[Instructor](https://python.useinstructor.com)', 'Beste Verwendung': 'Python-APIs + Retries', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python, TS, Ruby, Go, Elixir, Rust', 'Lokale Modelle': 'Ja (Ollama, vLLM)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
+          { 'Tool': '[Outlines](https://dottxt.ai)', 'Beste Verwendung': 'Lokale Modell-Bereitstellung', 'Schema-Format': 'Pydantic, JSON Schema, Regex, CFG', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (nativ)', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Mittel' },
+          { 'Tool': '[Pydantic AI](https://ai.pydantic.dev)', 'Beste Verwendung': 'Typsichere Agents', 'Schema-Format': 'Pydantic-Modelle', 'Sprache': 'Python', 'Lokale Modelle': 'Ja (Ollama)', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Niedrig' },
+          { 'Tool': '[BAML](https://boundaryml.com)', 'Beste Verwendung': 'Polyglotte Teams, fehleranfällige Modelle', 'Schema-Format': '.baml-Klassendateien', 'Sprache': 'Python, TS + 6 via OpenAPI', 'Lokale Modelle': 'Ja (OpenAI-kompatibel)', 'Lizenz': 'Apache 2.0, Observability kostenpflichtig', 'Lernkurve': 'Mittel' },
+          { 'Tool': '[LangChain](https://langchain.com)', 'Beste Verwendung': 'Chains + Agents', 'Schema-Format': 'Tool-Definitionen', 'Sprache': 'Python, JS', 'Lokale Modelle': 'Ja', 'Lizenz': 'MIT, kostenlos', 'Lernkurve': 'Mittel' },
+          { 'Tool': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Beste Verwendung': 'Schnelles extract + classify', 'Schema-Format': 'Type Hints', 'Sprache': 'Python', 'Lokale Modelle': 'Ja', 'Lizenz': 'Apache 2.0, kostenlos', 'Lernkurve': 'Sehr niedrig' },
+          { 'Tool': '[PromptQuorum](https://www.promptquorum.com)', 'Beste Verwendung': 'Multi-Modell-Tests', 'Schema-Format': 'API-agnostisch', 'Sprache': 'API-first', 'Lokale Modelle': 'Via OpenAI-Proxy', 'Lizenz': 'Kostenloses Tier + Enterprise', 'Lernkurve': 'Niedrig' }
         ]
       },
       decision: {
@@ -994,15 +994,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Comparativa lado a lado',
-        columns: ['Herramienta', 'Enlace', 'Ideal para', 'Formato de esquema', 'Lenguaje', 'Modelos locales', 'Licencia', 'Curva de aprendizaje'],
+        columns: ['Herramienta', 'Ideal para', 'Formato de esquema', 'Lenguaje', 'Modelos locales', 'Licencia', 'Curva de aprendizaje'],
         rows: [
-          { 'Herramienta': 'Instructor', 'Enlace': '[python.useinstructor.com](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + reintentos', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locales': 'Sí (Ollama, vLLM)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
-          { 'Herramienta': 'Outlines', 'Enlace': '[dottxt.ai](https://dottxt.ai)', 'Ideal para': 'Despliegue de modelos locales', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (nativo)', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': 'Pydantic AI', 'Enlace': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (Ollama)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
-          { 'Herramienta': 'BAML', 'Enlace': '[boundaryml.com](https://boundaryml.com)', 'Ideal para': 'Equipos políglotas, modelos poco fiables', 'Formato de esquema': 'Archivos de clase .baml', 'Lenguaje': 'Python, TS + 6 vía OpenAPI', 'Modelos locales': 'Sí (compatible con OpenAI)', 'Licencia': 'Apache 2.0, observabilidad de pago', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': 'LangChain', 'Enlace': '[langchain.com](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definiciones de herramienta', 'Lenguaje': 'Python, JS', 'Modelos locales': 'Sí', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Media' },
-          { 'Herramienta': 'Marvin', 'Enlace': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract y classify rápidos', 'Formato de esquema': 'Hints de tipo', 'Lenguaje': 'Python', 'Modelos locales': 'Sí', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Muy baja' },
-          { 'Herramienta': 'PromptQuorum', 'Enlace': '[promptquorum.com](https://www.promptquorum.com)', 'Ideal para': 'Testing multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Lenguaje': 'API-first', 'Modelos locales': 'Vía proxy OpenAI', 'Licencia': 'Tier gratuito + enterprise', 'Curva de aprendizaje': 'Baja' }
+          { 'Herramienta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + reintentos', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locales': 'Sí (Ollama, vLLM)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
+          { 'Herramienta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Despliegue de modelos locales', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (nativo)', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Media' },
+          { 'Herramienta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Lenguaje': 'Python', 'Modelos locales': 'Sí (Ollama)', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Baja' },
+          { 'Herramienta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Equipos políglotas, modelos poco fiables', 'Formato de esquema': 'Archivos de clase .baml', 'Lenguaje': 'Python, TS + 6 vía OpenAPI', 'Modelos locales': 'Sí (compatible con OpenAI)', 'Licencia': 'Apache 2.0, observabilidad de pago', 'Curva de aprendizaje': 'Media' },
+          { 'Herramienta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definiciones de herramienta', 'Lenguaje': 'Python, JS', 'Modelos locales': 'Sí', 'Licencia': 'MIT, gratis', 'Curva de aprendizaje': 'Media' },
+          { 'Herramienta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract y classify rápidos', 'Formato de esquema': 'Hints de tipo', 'Lenguaje': 'Python', 'Modelos locales': 'Sí', 'Licencia': 'Apache 2.0, gratis', 'Curva de aprendizaje': 'Muy baja' },
+          { 'Herramienta': '[PromptQuorum](https://www.promptquorum.com)', 'Ideal para': 'Testing multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Lenguaje': 'API-first', 'Modelos locales': 'Vía proxy OpenAI', 'Licencia': 'Tier gratuito + enterprise', 'Curva de aprendizaje': 'Baja' }
         ]
       },
       decision: {
@@ -1367,15 +1367,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Comparativo lado a lado',
-        columns: ['Ferramenta', 'Link', 'Ideal para', 'Formato de esquema', 'Linguagem', 'Modelos locais', 'Licença', 'Curva de aprendizado'],
+        columns: ['Ferramenta', 'Ideal para', 'Formato de esquema', 'Linguagem', 'Modelos locais', 'Licença', 'Curva de aprendizado'],
         rows: [
-          { 'Ferramenta': 'Instructor', 'Link': '[python.useinstructor.com](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + tentativas', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locais': 'Sim (Ollama, vLLM)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
-          { 'Ferramenta': 'Outlines', 'Link': '[dottxt.ai](https://dottxt.ai)', 'Ideal para': 'Implantação de modelos locais', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Linguagem': 'Python', 'Modelos locais': 'Sim (nativo)', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': 'Pydantic AI', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python', 'Modelos locais': 'Sim (Ollama)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
-          { 'Ferramenta': 'BAML', 'Link': '[boundaryml.com](https://boundaryml.com)', 'Ideal para': 'Times poliglotas, modelos instáveis', 'Formato de esquema': 'Arquivos de classe .baml', 'Linguagem': 'Python, TS + 6 via OpenAPI', 'Modelos locais': 'Sim (compatível com OpenAI)', 'Licença': 'Apache 2.0, observabilidade paga', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': 'LangChain', 'Link': '[langchain.com](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definições de ferramenta', 'Linguagem': 'Python, JS', 'Modelos locais': 'Sim', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Média' },
-          { 'Ferramenta': 'Marvin', 'Link': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract e classify rápidos', 'Formato de esquema': 'Type hints', 'Linguagem': 'Python', 'Modelos locais': 'Sim', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Muito baixa' },
-          { 'Ferramenta': 'PromptQuorum', 'Link': '[promptquorum.com](https://www.promptquorum.com)', 'Ideal para': 'Testes multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Linguagem': 'API-first', 'Modelos locais': 'Via proxy OpenAI', 'Licença': 'Tier gratuito + enterprise', 'Curva de aprendizado': 'Baixa' }
+          { 'Ferramenta': '[Instructor](https://python.useinstructor.com)', 'Ideal para': 'APIs Python + tentativas', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modelos locais': 'Sim (Ollama, vLLM)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
+          { 'Ferramenta': '[Outlines](https://dottxt.ai)', 'Ideal para': 'Implantação de modelos locais', 'Formato de esquema': 'Pydantic, JSON Schema, regex, CFG', 'Linguagem': 'Python', 'Modelos locais': 'Sim (nativo)', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Média' },
+          { 'Ferramenta': '[Pydantic AI](https://ai.pydantic.dev)', 'Ideal para': 'Agentes type-safe', 'Formato de esquema': 'Modelos Pydantic', 'Linguagem': 'Python', 'Modelos locais': 'Sim (Ollama)', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Baixa' },
+          { 'Ferramenta': '[BAML](https://boundaryml.com)', 'Ideal para': 'Times poliglotas, modelos instáveis', 'Formato de esquema': 'Arquivos de classe .baml', 'Linguagem': 'Python, TS + 6 via OpenAPI', 'Modelos locais': 'Sim (compatível com OpenAI)', 'Licença': 'Apache 2.0, observabilidade paga', 'Curva de aprendizado': 'Média' },
+          { 'Ferramenta': '[LangChain](https://langchain.com)', 'Ideal para': 'Chains + agentes', 'Formato de esquema': 'Definições de ferramenta', 'Linguagem': 'Python, JS', 'Modelos locais': 'Sim', 'Licença': 'MIT, gratuito', 'Curva de aprendizado': 'Média' },
+          { 'Ferramenta': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Ideal para': 'Extract e classify rápidos', 'Formato de esquema': 'Type hints', 'Linguagem': 'Python', 'Modelos locais': 'Sim', 'Licença': 'Apache 2.0, gratuito', 'Curva de aprendizado': 'Muito baixa' },
+          { 'Ferramenta': '[PromptQuorum](https://www.promptquorum.com)', 'Ideal para': 'Testes multi-modelo', 'Formato de esquema': 'API-agnóstico', 'Linguagem': 'API-first', 'Modelos locais': 'Via proxy OpenAI', 'Licença': 'Tier gratuito + enterprise', 'Curva de aprendizado': 'Baixa' }
         ]
       },
       decision: {
@@ -1741,15 +1741,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'Comparaison côte à côte',
-        columns: ['Outil', 'Lien', 'Meilleur usage', 'Format de schéma', 'Langage', 'Modèles locaux', 'Licence', "Courbe d'apprentissage"],
+        columns: ['Outil', 'Meilleur usage', 'Format de schéma', 'Langage', 'Modèles locaux', 'Licence'],
         rows: [
-          { 'Outil': 'Instructor', 'Lien': '[python.useinstructor.com](https://python.useinstructor.com)', 'Meilleur usage': 'APIs Python + retries', 'Format de schéma': 'Modèles Pydantic', 'Langage': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modèles locaux': 'Oui (Ollama, vLLM)', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Faible' },
-          { 'Outil': 'Outlines', 'Lien': '[dottxt.ai](https://dottxt.ai)', 'Meilleur usage': 'Déploiement local', 'Format de schéma': 'Pydantic, JSON Schema, regex, CFG', 'Langage': 'Python', 'Modèles locaux': 'Oui (natif)', 'Licence': 'Apache 2.0, gratuit', "Courbe d'apprentissage": 'Moyenne' },
-          { 'Outil': 'Pydantic AI', 'Lien': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Meilleur usage': 'Agents type-safe', 'Format de schéma': 'Modèles Pydantic', 'Langage': 'Python', 'Modèles locaux': 'Oui (Ollama)', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Faible' },
-          { 'Outil': 'BAML', 'Lien': '[boundaryml.com](https://boundaryml.com)', 'Meilleur usage': 'Équipes polyglottes, modèles instables', 'Format de schéma': 'Fichiers de classe .baml', 'Langage': 'Python, TS + 6 via OpenAPI', 'Modèles locaux': 'Oui (compatible OpenAI)', 'Licence': 'Apache 2.0, observabilité payante', "Courbe d'apprentissage": 'Moyenne' },
-          { 'Outil': 'LangChain', 'Lien': '[langchain.com](https://langchain.com)', 'Meilleur usage': 'Chaînes + agents', 'Format de schéma': "Définitions d'outils", 'Langage': 'Python, JS', 'Modèles locaux': 'Oui', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Moyenne' },
-          { 'Outil': 'Marvin', 'Lien': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'Meilleur usage': 'Extract et classify rapides', 'Format de schéma': 'Indices de type', 'Langage': 'Python', 'Modèles locaux': 'Oui', 'Licence': 'Apache 2.0, gratuit', "Courbe d'apprentissage": 'Très faible' },
-          { 'Outil': 'PromptQuorum', 'Lien': '[promptquorum.com](https://www.promptquorum.com)', 'Meilleur usage': 'Tests multi-modèles', 'Format de schéma': 'Agnostique API', 'Langage': 'API-first', 'Modèles locaux': 'Via proxy OpenAI', 'Licence': 'Niveau gratuit + entreprise', "Courbe d'apprentissage": 'Faible' }
+          { 'Outil': '[Instructor](https://python.useinstructor.com)', 'Meilleur usage': 'APIs Python + retries', 'Format de schéma': 'Modèles Pydantic', 'Langage': 'Python, TS, Ruby, Go, Elixir, Rust', 'Modèles locaux': 'Oui (Ollama, vLLM)', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Faible' },
+          { 'Outil': '[Outlines](https://dottxt.ai)', 'Meilleur usage': 'Déploiement local', 'Format de schéma': 'Pydantic, JSON Schema, regex, CFG', 'Langage': 'Python', 'Modèles locaux': 'Oui (natif)', 'Licence': 'Apache 2.0, gratuit', "Courbe d'apprentissage": 'Moyenne' },
+          { 'Outil': '[Pydantic AI](https://ai.pydantic.dev)', 'Meilleur usage': 'Agents type-safe', 'Format de schéma': 'Modèles Pydantic', 'Langage': 'Python', 'Modèles locaux': 'Oui (Ollama)', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Faible' },
+          { 'Outil': '[BAML](https://boundaryml.com)', 'Meilleur usage': 'Équipes polyglottes, modèles instables', 'Format de schéma': 'Fichiers de classe .baml', 'Langage': 'Python, TS + 6 via OpenAPI', 'Modèles locaux': 'Oui (compatible OpenAI)', 'Licence': 'Apache 2.0, observabilité payante', "Courbe d'apprentissage": 'Moyenne' },
+          { 'Outil': '[LangChain](https://langchain.com)', 'Meilleur usage': 'Chaînes + agents', 'Format de schéma': "Définitions d'outils", 'Langage': 'Python, JS', 'Modèles locaux': 'Oui', 'Licence': 'MIT, gratuit', "Courbe d'apprentissage": 'Moyenne' },
+          { 'Outil': '[Marvin](https://github.com/PrefectHQ/marvin)', 'Meilleur usage': 'Extract et classify rapides', 'Format de schéma': 'Indices de type', 'Langage': 'Python', 'Modèles locaux': 'Oui', 'Licence': 'Apache 2.0, gratuit', "Courbe d'apprentissage": 'Très faible' },
+          { 'Outil': '[PromptQuorum](https://www.promptquorum.com)', 'Meilleur usage': 'Tests multi-modèles', 'Format de schéma': 'Agnostique API', 'Langage': 'API-first', 'Modèles locaux': 'Via proxy OpenAI', 'Licence': 'Niveau gratuit + entreprise', "Courbe d'apprentissage": 'Faible' }
         ]
       },
       decision: {
@@ -2130,15 +2130,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '並列比較',
-        columns: ['ツール', 'リンク', '最適用途', 'スキーマ形式', '言語', 'ローカルモデル', 'ライセンス', '学習コスト'],
+        columns: ['ツール', '最適用途', 'スキーマ形式', '言語', 'ローカルモデル', 'ライセンス', '学習コスト'],
         rows: [
-          { 'ツール': 'Instructor', 'リンク': '[python.useinstructor.com](https://python.useinstructor.com)', '最適用途': 'Python API + リトライ', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python, TS, Ruby, Go, Elixir, Rust', 'ローカルモデル': 'あり（Ollama、vLLM）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
-          { 'ツール': 'Outlines', 'リンク': '[dottxt.ai](https://dottxt.ai)', '最適用途': 'ローカルモデルデプロイ', 'スキーマ形式': 'Pydantic, JSON Schema, 正規表現, CFG', '言語': 'Python', 'ローカルモデル': 'あり（ネイティブ）', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '中' },
-          { 'ツール': 'Pydantic AI', 'リンク': '[ai.pydantic.dev](https://ai.pydantic.dev)', '最適用途': '型安全エージェント', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python', 'ローカルモデル': 'あり（Ollama）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
-          { 'ツール': 'BAML', 'リンク': '[boundaryml.com](https://boundaryml.com)', '最適用途': '多言語チーム、出力が不安定なモデル', 'スキーマ形式': '.bamlクラスファイル', '言語': 'Python, TS + OpenAPI経由で6言語', 'ローカルモデル': 'あり（OpenAI互換）', 'ライセンス': 'Apache 2.0、可観測性は有料', '学習コスト': '中' },
-          { 'ツール': 'LangChain', 'リンク': '[langchain.com](https://langchain.com)', '最適用途': 'チェーン + エージェント', 'スキーマ形式': 'ツール定義', '言語': 'Python, JS', 'ローカルモデル': 'あり', 'ライセンス': 'MIT、無料', '学習コスト': '中' },
-          { 'ツール': 'Marvin', 'リンク': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', '最適用途': '高速なextractとclassify', 'スキーマ形式': '型ヒント', '言語': 'Python', 'ローカルモデル': 'あり', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '非常に低' },
-          { 'ツール': 'PromptQuorum', 'リンク': '[promptquorum.com](https://www.promptquorum.com)', '最適用途': 'マルチモデルテスト', 'スキーマ形式': 'API非依存', '言語': 'APIファースト', 'ローカルモデル': 'OpenAIプロキシ経由', 'ライセンス': '無料ティア + エンタープライズ', '学習コスト': '低' }
+          { 'ツール': '[Instructor](https://python.useinstructor.com)', '最適用途': 'Python API + リトライ', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python, TS, Ruby, Go, Elixir, Rust', 'ローカルモデル': 'あり（Ollama、vLLM）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
+          { 'ツール': '[Outlines](https://dottxt.ai)', '最適用途': 'ローカルモデルデプロイ', 'スキーマ形式': 'Pydantic, JSON Schema, 正規表現, CFG', '言語': 'Python', 'ローカルモデル': 'あり（ネイティブ）', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '中' },
+          { 'ツール': '[Pydantic AI](https://ai.pydantic.dev)', '最適用途': '型安全エージェント', 'スキーマ形式': 'Pydanticモデル', '言語': 'Python', 'ローカルモデル': 'あり（Ollama）', 'ライセンス': 'MIT、無料', '学習コスト': '低' },
+          { 'ツール': '[BAML](https://boundaryml.com)', '最適用途': '多言語チーム、出力が不安定なモデル', 'スキーマ形式': '.bamlクラスファイル', '言語': 'Python, TS + OpenAPI経由で6言語', 'ローカルモデル': 'あり（OpenAI互換）', 'ライセンス': 'Apache 2.0、可観測性は有料', '学習コスト': '中' },
+          { 'ツール': '[LangChain](https://langchain.com)', '最適用途': 'チェーン + エージェント', 'スキーマ形式': 'ツール定義', '言語': 'Python, JS', 'ローカルモデル': 'あり', 'ライセンス': 'MIT、無料', '学習コスト': '中' },
+          { 'ツール': '[Marvin](https://github.com/PrefectHQ/marvin)', '最適用途': '高速なextractとclassify', 'スキーマ形式': '型ヒント', '言語': 'Python', 'ローカルモデル': 'あり', 'ライセンス': 'Apache 2.0、無料', '学習コスト': '非常に低' },
+          { 'ツール': '[PromptQuorum](https://www.promptquorum.com)', '最適用途': 'マルチモデルテスト', 'スキーマ形式': 'API非依存', '言語': 'APIファースト', 'ローカルモデル': 'OpenAIプロキシ経由', 'ライセンス': '無料ティア + エンタープライズ', '学習コスト': '低' }
         ]
       },
       decision: {
@@ -2527,15 +2527,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '并排对比',
-        columns: ['工具', '链接', '最佳用途', '模式格式', '语言', '本地模型', '许可证', '学习曲线'],
+        columns: ['工具', '最佳用途', '模式格式', '语言', '本地模型', '许可证', '学习曲线'],
         rows: [
-          { '工具': 'Instructor', '链接': '[python.useinstructor.com](https://python.useinstructor.com)', '最佳用途': 'Python API + 重试', '模式格式': 'Pydantic模型', '语言': 'Python, TS, Ruby, Go, Elixir, Rust', '本地模型': '支持（Ollama、vLLM）', '许可证': 'MIT，免费', '学习曲线': '低' },
-          { '工具': 'Outlines', '链接': '[dottxt.ai](https://dottxt.ai)', '最佳用途': '本地模型部署', '模式格式': 'Pydantic、JSON Schema、正则、CFG', '语言': 'Python', '本地模型': '支持（原生）', '许可证': 'Apache 2.0，免费', '学习曲线': '中' },
-          { '工具': 'Pydantic AI', '链接': '[ai.pydantic.dev](https://ai.pydantic.dev)', '最佳用途': '类型安全Agent', '模式格式': 'Pydantic模型', '语言': 'Python', '本地模型': '支持（Ollama）', '许可证': 'MIT，免费', '学习曲线': '低' },
-          { '工具': 'BAML', '链接': '[boundaryml.com](https://boundaryml.com)', '最佳用途': '多语言团队、输出不稳定的模型', '模式格式': '.baml类文件', '语言': 'Python、TS，另有6种经OpenAPI', '本地模型': '支持（OpenAI兼容）', '许可证': 'Apache 2.0，可观测性付费', '学习曲线': '中' },
-          { '工具': 'LangChain', '链接': '[langchain.com](https://langchain.com)', '最佳用途': '链 + Agent', '模式格式': '工具定义', '语言': 'Python、JS', '本地模型': '支持', '许可证': 'MIT，免费', '学习曲线': '中' },
-          { '工具': 'Marvin', '链接': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', '最佳用途': '快速extract与classify', '模式格式': '类型提示', '语言': 'Python', '本地模型': '支持', '许可证': 'Apache 2.0，免费', '学习曲线': '非常低' },
-          { '工具': 'PromptQuorum', '链接': '[promptquorum.com](https://www.promptquorum.com)', '最佳用途': '多模型测试', '模式格式': 'API无关', '语言': 'API优先', '本地模型': '通过OpenAI代理', '许可证': '免费层 + 企业版', '学习曲线': '低' }
+          { '工具': '[Instructor](https://python.useinstructor.com)', '最佳用途': 'Python API + 重试', '模式格式': 'Pydantic模型', '语言': 'Python, TS, Ruby, Go, Elixir, Rust', '本地模型': '支持（Ollama、vLLM）', '许可证': 'MIT，免费', '学习曲线': '低' },
+          { '工具': '[Outlines](https://dottxt.ai)', '最佳用途': '本地模型部署', '模式格式': 'Pydantic、JSON Schema、正则、CFG', '语言': 'Python', '本地模型': '支持（原生）', '许可证': 'Apache 2.0，免费', '学习曲线': '中' },
+          { '工具': '[Pydantic AI](https://ai.pydantic.dev)', '最佳用途': '类型安全Agent', '模式格式': 'Pydantic模型', '语言': 'Python', '本地模型': '支持（Ollama）', '许可证': 'MIT，免费', '学习曲线': '低' },
+          { '工具': '[BAML](https://boundaryml.com)', '最佳用途': '多语言团队、输出不稳定的模型', '模式格式': '.baml类文件', '语言': 'Python、TS，另有6种经OpenAPI', '本地模型': '支持（OpenAI兼容）', '许可证': 'Apache 2.0，可观测性付费', '学习曲线': '中' },
+          { '工具': '[LangChain](https://langchain.com)', '最佳用途': '链 + Agent', '模式格式': '工具定义', '语言': 'Python、JS', '本地模型': '支持', '许可证': 'MIT，免费', '学习曲线': '中' },
+          { '工具': '[Marvin](https://github.com/PrefectHQ/marvin)', '最佳用途': '快速extract与classify', '模式格式': '类型提示', '语言': 'Python', '本地模型': '支持', '许可证': 'Apache 2.0，免费', '学习曲线': '非常低' },
+          { '工具': '[PromptQuorum](https://www.promptquorum.com)', '最佳用途': '多模型测试', '模式格式': 'API无关', '语言': 'API优先', '本地模型': '通过OpenAI代理', '许可证': '免费层 + 企业版', '学习曲线': '低' }
         ]
       },
       decision: {
@@ -2921,15 +2921,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: 'مقارنة جانبية',
-        columns: ['الأداة', 'الرابط', 'الأنسب لـ', 'صيغة المخطط', 'اللغة', 'النماذج المحلية', 'الترخيص', 'منحنى التعلم'],
+        columns: ['الأداة', 'الأنسب لـ', 'صيغة المخطط', 'اللغة', 'النماذج المحلية', 'الترخيص', 'منحنى التعلم'],
         rows: [
-          { 'الأداة': 'Instructor', 'الرابط': '[python.useinstructor.com](https://python.useinstructor.com)', 'الأنسب لـ': 'APIs Python + إعادة المحاولات', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python, TS, Ruby, Go, Elixir, Rust', 'النماذج المحلية': 'نعم (Ollama, vLLM)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
-          { 'الأداة': 'Outlines', 'الرابط': '[dottxt.ai](https://dottxt.ai)', 'الأنسب لـ': 'نشر النماذج المحلية', 'صيغة المخطط': 'Pydantic, JSON Schema, regex, CFG', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (أصلي)', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': 'Pydantic AI', 'الرابط': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'الأنسب لـ': 'وكلاء آمنة من حيث الأنواع', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (Ollama)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
-          { 'الأداة': 'BAML', 'الرابط': '[boundaryml.com](https://boundaryml.com)', 'الأنسب لـ': 'الفرق متعددة اللغات والنماذج غير المستقرة', 'صيغة المخطط': 'ملفات صنف .baml', 'اللغة': 'Python, TS + 6 عبر OpenAPI', 'النماذج المحلية': 'نعم (متوافق مع OpenAI)', 'الترخيص': 'Apache 2.0، المراقبة مدفوعة', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': 'LangChain', 'الرابط': '[langchain.com](https://langchain.com)', 'الأنسب لـ': 'Chains + وكلاء', 'صيغة المخطط': 'تعريفات الأدوات', 'اللغة': 'Python, JS', 'النماذج المحلية': 'نعم', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'متوسط' },
-          { 'الأداة': 'Marvin', 'الرابط': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', 'الأنسب لـ': 'extract و classify سريعان', 'صيغة المخطط': 'تلميحات الأنواع', 'اللغة': 'Python', 'النماذج المحلية': 'نعم', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'منخفض جداً' },
-          { 'الأداة': 'PromptQuorum', 'الرابط': '[promptquorum.com](https://www.promptquorum.com)', 'الأنسب لـ': 'اختبار متعدد النماذج', 'صيغة المخطط': 'API-agnostic', 'اللغة': 'API-first', 'النماذج المحلية': 'عبر وكيل OpenAI', 'الترخيص': 'طبقة مجانية + enterprise', 'منحنى التعلم': 'منخفض' }
+          { 'الأداة': '[Instructor](https://python.useinstructor.com)', 'الأنسب لـ': 'APIs Python + إعادة المحاولات', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python, TS, Ruby, Go, Elixir, Rust', 'النماذج المحلية': 'نعم (Ollama, vLLM)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
+          { 'الأداة': '[Outlines](https://dottxt.ai)', 'الأنسب لـ': 'نشر النماذج المحلية', 'صيغة المخطط': 'Pydantic, JSON Schema, regex, CFG', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (أصلي)', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'متوسط' },
+          { 'الأداة': '[Pydantic AI](https://ai.pydantic.dev)', 'الأنسب لـ': 'وكلاء آمنة من حيث الأنواع', 'صيغة المخطط': 'نماذج Pydantic', 'اللغة': 'Python', 'النماذج المحلية': 'نعم (Ollama)', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'منخفض' },
+          { 'الأداة': '[BAML](https://boundaryml.com)', 'الأنسب لـ': 'الفرق متعددة اللغات والنماذج غير المستقرة', 'صيغة المخطط': 'ملفات صنف .baml', 'اللغة': 'Python, TS + 6 عبر OpenAPI', 'النماذج المحلية': 'نعم (متوافق مع OpenAI)', 'الترخيص': 'Apache 2.0، المراقبة مدفوعة', 'منحنى التعلم': 'متوسط' },
+          { 'الأداة': '[LangChain](https://langchain.com)', 'الأنسب لـ': 'Chains + وكلاء', 'صيغة المخطط': 'تعريفات الأدوات', 'اللغة': 'Python, JS', 'النماذج المحلية': 'نعم', 'الترخيص': 'MIT، مجاني', 'منحنى التعلم': 'متوسط' },
+          { 'الأداة': '[Marvin](https://github.com/PrefectHQ/marvin)', 'الأنسب لـ': 'extract و classify سريعان', 'صيغة المخطط': 'تلميحات الأنواع', 'اللغة': 'Python', 'النماذج المحلية': 'نعم', 'الترخيص': 'Apache 2.0، مجاني', 'منحنى التعلم': 'منخفض جداً' },
+          { 'الأداة': '[PromptQuorum](https://www.promptquorum.com)', 'الأنسب لـ': 'اختبار متعدد النماذج', 'صيغة المخطط': 'API-agnostic', 'اللغة': 'API-first', 'النماذج المحلية': 'عبر وكيل OpenAI', 'الترخيص': 'طبقة مجانية + enterprise', 'منحنى التعلم': 'منخفض' }
         ]
       },
       decision: {
@@ -3293,15 +3293,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'side-by-side-comparison',
         title: '나란히 비교',
-        columns: ['도구', '링크', '이상적인 사용 사례', '스키마 형식', '언어', '로컬 모델', '라이선스', '학습 곡선'],
+        columns: ['도구', '이상적인 사용 사례', '스키마 형식', '언어', '로컬 모델', '라이선스', '학습 곡선'],
         rows: [
-          { '도구': 'Instructor', '링크': '[python.useinstructor.com](https://python.useinstructor.com)', '이상적인 사용 사례': 'Python API + 재시도', '스키마 형식': 'Pydantic 모델', '언어': 'Python, TS, Ruby, Go, Elixir, Rust', '로컬 모델': '예 (Ollama, vLLM)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
-          { '도구': 'Outlines', '링크': '[dottxt.ai](https://dottxt.ai)', '이상적인 사용 사례': '로컬 모델 배포', '스키마 형식': 'Pydantic, JSON Schema, regex, CFG', '언어': 'Python', '로컬 모델': '예 (네이티브)', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '중간' },
-          { '도구': 'Pydantic AI', '링크': '[ai.pydantic.dev](https://ai.pydantic.dev)', '이상적인 사용 사례': 'type-safe 에이전트', '스키마 형식': 'Pydantic 모델', '언어': 'Python', '로컬 모델': '예 (Ollama)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
-          { '도구': 'BAML', '링크': '[boundaryml.com](https://boundaryml.com)', '이상적인 사용 사례': '다국어 팀, 출력이 불안정한 모델', '스키마 형식': '.baml 클래스 파일', '언어': 'Python, TS + OpenAPI로 6개', '로컬 모델': '예 (OpenAI 호환)', '라이선스': 'Apache 2.0, 관측 기능 유료', '학습 곡선': '중간' },
-          { '도구': 'LangChain', '링크': '[langchain.com](https://langchain.com)', '이상적인 사용 사례': 'chains + 에이전트', '스키마 형식': '도구 정의', '언어': 'Python, JS', '로컬 모델': '예', '라이선스': 'MIT, 무료', '학습 곡선': '중간' },
-          { '도구': 'Marvin', '링크': '[github.com/PrefectHQ/marvin](https://github.com/PrefectHQ/marvin)', '이상적인 사용 사례': '빠른 extract와 classify', '스키마 형식': '타입 힌트', '언어': 'Python', '로컬 모델': '예', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '매우 낮음' },
-          { '도구': 'PromptQuorum', '링크': '[promptquorum.com](https://www.promptquorum.com)', '이상적인 사용 사례': '멀티 모델 테스트', '스키마 형식': 'API 불가지론적', '언어': 'API-first', '로컬 모델': 'OpenAI 프록시를 통해', '라이선스': '무료 티어 + 엔터프라이즈', '학습 곡선': '낮음' }
+          { '도구': '[Instructor](https://python.useinstructor.com)', '이상적인 사용 사례': 'Python API + 재시도', '스키마 형식': 'Pydantic 모델', '언어': 'Python, TS, Ruby, Go, Elixir, Rust', '로컬 모델': '예 (Ollama, vLLM)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
+          { '도구': '[Outlines](https://dottxt.ai)', '이상적인 사용 사례': '로컬 모델 배포', '스키마 형식': 'Pydantic, JSON Schema, regex, CFG', '언어': 'Python', '로컬 모델': '예 (네이티브)', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '중간' },
+          { '도구': '[Pydantic AI](https://ai.pydantic.dev)', '이상적인 사용 사례': 'type-safe 에이전트', '스키마 형식': 'Pydantic 모델', '언어': 'Python', '로컬 모델': '예 (Ollama)', '라이선스': 'MIT, 무료', '학습 곡선': '낮음' },
+          { '도구': '[BAML](https://boundaryml.com)', '이상적인 사용 사례': '다국어 팀, 출력이 불안정한 모델', '스키마 형식': '.baml 클래스 파일', '언어': 'Python, TS + OpenAPI로 6개', '로컬 모델': '예 (OpenAI 호환)', '라이선스': 'Apache 2.0, 관측 기능 유료', '학습 곡선': '중간' },
+          { '도구': '[LangChain](https://langchain.com)', '이상적인 사용 사례': 'chains + 에이전트', '스키마 형식': '도구 정의', '언어': 'Python, JS', '로컬 모델': '예', '라이선스': 'MIT, 무료', '학습 곡선': '중간' },
+          { '도구': '[Marvin](https://github.com/PrefectHQ/marvin)', '이상적인 사용 사례': '빠른 extract와 classify', '스키마 형식': '타입 힌트', '언어': 'Python', '로컬 모델': '예', '라이선스': 'Apache 2.0, 무료', '학습 곡선': '매우 낮음' },
+          { '도구': '[PromptQuorum](https://www.promptquorum.com)', '이상적인 사용 사례': '멀티 모델 테스트', '스키마 형식': 'API 불가지론적', '언어': 'API-first', '로컬 모델': 'OpenAI 프록시를 통해', '라이선스': '무료 티어 + 엔터프라이즈', '학습 곡선': '낮음' }
         ]
       },
       decision: {
