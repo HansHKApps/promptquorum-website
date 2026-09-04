@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'superagi',
   name: 'SuperAGI',
-  layer: 'agent',
+  categories: ['agent-frameworks'],
+  interfaces: ['web', 'library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 17700,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent'],
   url: 'github.com/TransformerOptimus/SuperAGI',

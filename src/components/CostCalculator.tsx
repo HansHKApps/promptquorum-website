@@ -510,8 +510,9 @@ export function CostCalculator() {
     <div className="space-y-6 bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-lg border border-slate-200">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1" title={t.hoursHelp}>{t.hoursLabel}</label>
+          <label htmlFor="cost-calc-hours" className="block text-sm font-semibold text-slate-700 mb-1" title={t.hoursHelp}>{t.hoursLabel}</label>
           <input
+            id="cost-calc-hours"
             type="number"
             min={0}
             value={hoursPerMonth}
@@ -522,8 +523,9 @@ export function CostCalculator() {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1" title={t.cloudRateHelp}>{t.cloudRateLabel}</label>
+          <label htmlFor="cost-calc-cloud-rate" className="block text-sm font-semibold text-slate-700 mb-1" title={t.cloudRateHelp}>{t.cloudRateLabel}</label>
           <input
+            id="cost-calc-cloud-rate"
             type="number"
             min={0}
             step={0.01}
@@ -535,8 +537,9 @@ export function CostCalculator() {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1" title={t.hardwareHelp}>{t.hardwareLabel}</label>
+          <label htmlFor="cost-calc-hardware" className="block text-sm font-semibold text-slate-700 mb-1" title={t.hardwareHelp}>{t.hardwareLabel}</label>
           <input
+            id="cost-calc-hardware"
             type="number"
             min={0}
             value={hardwarePrice}
@@ -547,7 +550,7 @@ export function CostCalculator() {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1" title={t.electricityHelp}>{t.electricityLabel}</label>
+          <label htmlFor="cost-calc-electricity" className="block text-sm font-semibold text-slate-700 mb-1" title={t.electricityHelp}>{t.electricityLabel}</label>
           <div className="flex flex-wrap gap-1.5 mb-2">
             {t.electricityPresets.map((p) => (
               <button
@@ -565,6 +568,7 @@ export function CostCalculator() {
             ))}
           </div>
           <input
+            id="cost-calc-electricity"
             type="number"
             min={0}
             step={0.01}
@@ -575,8 +579,9 @@ export function CostCalculator() {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1">{t.drawLabel}</label>
+          <label htmlFor="cost-calc-draw" className="block text-sm font-semibold text-slate-700 mb-1">{t.drawLabel}</label>
           <input
+            id="cost-calc-draw"
             type="number"
             min={0}
             value={powerDrawW}
@@ -586,8 +591,9 @@ export function CostCalculator() {
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-1" title={t.resaleHelp}>{t.resaleLabel}</label>
+          <label htmlFor="cost-calc-resale" className="block text-sm font-semibold text-slate-700 mb-1" title={t.resaleHelp}>{t.resaleLabel}</label>
           <input
+            id="cost-calc-resale"
             type="number"
             min={0}
             value={resaleValue}

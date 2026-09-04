@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'sillytavern',
   name: 'SillyTavern',
-  layer: 'webui',
+  categories: ['roleplay-companions', 'general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['KoboldCpp', 'Ollama', 'llama.cpp', 'text-generation-webui', 'LM Studio'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 33000,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'github.com/SillyTavern/SillyTavern',

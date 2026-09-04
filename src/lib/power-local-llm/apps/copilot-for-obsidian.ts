@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'copilot-for-obsidian',
   name: 'Copilot for Obsidian',
-  layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 7700,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs'],
   url: 'github.com/logancyang/obsidian-copilot',

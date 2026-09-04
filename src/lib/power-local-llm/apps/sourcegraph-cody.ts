@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'sourcegraph-cody',
   name: 'Sourcegraph Cody',
-  layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code'],
   url: 'sourcegraph.com/cody',

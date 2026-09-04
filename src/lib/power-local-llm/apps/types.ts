@@ -20,21 +20,7 @@
 // reviewed by a human (per the plan's verification gate).
 
 import type { Language } from '@/lib/blog/blogContent'
-
-export type LayerKey =
-  | 'runtime'
-  | 'desktop'
-  | 'webui'
-  | 'ide'
-  | 'cli'
-  | 'rag'
-  | 'agent'
-  | 'stt'
-  | 'tts'
-  | 'vision'
-  | 'mobile'
-  | 'tools'
-  | 'image'
+import type { CategorySubKey, InterfaceKey } from './categories'
 
 export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'android' | 'web'
 
@@ -85,7 +71,8 @@ export interface ToolRecordChangelogEntry {
 export interface ToolRecord {
   slug: string
   name: string
-  layer: LayerKey
+  categories: CategorySubKey[] // first entry is primary; multi-assign — see ./categories.ts
+  interfaces: InterfaceKey[] // how a user actually installs/runs the tool
   locality: LocalityKey | 'TODO'
   platforms: OSKey[] | null // null = not yet researched
   worksWith: string[] | null // null = not yet researched

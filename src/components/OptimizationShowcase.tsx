@@ -405,8 +405,9 @@ export function OptimizationShowcase({ lang = 'en' }: OptimizationShowcaseProps)
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">{t.optimizedPrompt}</h3>
             <div className="flex flex-col gap-1">
-              <label className="text-xs font-semibold text-gray-600 uppercase tracking-wide">{t.versionHistory}</label>
+              <label htmlFor="optimization-version-history" className="text-xs font-semibold text-gray-600 uppercase tracking-wide">{t.versionHistory}</label>
               <select
+                id="optimization-version-history"
                 value={selectedVersion}
                 onChange={(e) => setSelectedVersion(e.target.value)}
                 className="px-3 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 text-sm hover:border-purple-600 transition-colors cursor-pointer"

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dify',
   name: 'Dify',
-  layer: 'rag',
+  categories: ['workflow-node-builders', 'rag-frameworks', 'agent-frameworks'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'OpenAI API'],
   engine: 'external',
   license: 'Modified Apache 2.0',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 154429,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent', 'docs'],
   url: 'dify.ai',

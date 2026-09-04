@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'bobe',
   name: 'BoBe',
-  layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Free (open source)',
+  license: 'Open source',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'www.bobebot.com',

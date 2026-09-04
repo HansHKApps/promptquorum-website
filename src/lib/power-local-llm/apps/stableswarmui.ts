@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'stableswarmui',
   name: 'StableSwarmUI',
-  layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 4900,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
   url: 'github.com/Stability-AI/StableSwarmUI',

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tabby',
   name: 'Tabby',
-  layer: 'ide',
+  categories: ['code-assistants-ide-plugins', 'api-servers'],
+  interfaces: ['cli', 'plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'vLLM', 'OpenAI API'],
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 33858,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code'],
   url: 'tabby.tabbyml.com',

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'codegpt',
   name: 'CodeGPT',
-  layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
   license: 'MIT',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code'],
   url: 'codegpt.co',

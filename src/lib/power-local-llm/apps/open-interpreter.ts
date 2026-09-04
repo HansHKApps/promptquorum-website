@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'open-interpreter',
   name: 'Open Interpreter',
-  layer: 'desktop',
+  categories: ['agent-frameworks', 'autonomous-agents'],
+  interfaces: ['cli', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 68200,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent', 'code'],
   url: 'github.com/OpenInterpreter/open-interpreter',

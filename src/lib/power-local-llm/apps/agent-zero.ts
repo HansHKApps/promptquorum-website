@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'agent-zero',
   name: 'Agent Zero',
-  layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp'],
   engine: 'external',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 19100,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent', 'code'],
   url: 'github.com/agent0ai/agent-zero',

@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'smart-connections',
   name: 'Smart Connections',
-  layer: 'tools',
+  categories: ['notes-integrations', 'local-search'],
+  interfaces: ['plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 5400,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs'],
   url: 'github.com/brianpetro/obsidian-smart-connections',

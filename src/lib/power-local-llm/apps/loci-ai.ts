@@ -7,12 +7,13 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'loci-ai',
   name: 'Loci AI',
-  layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android', 'mac', 'win'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'both',
-  license: 'Free (closed)',
+  license: 'Closed source',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,

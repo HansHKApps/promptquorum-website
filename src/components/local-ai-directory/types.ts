@@ -23,7 +23,8 @@ export interface FilterState {
   engine: Set<string>
   worksWith: Set<string>
   platforms: Set<string>
-  layer: Set<string>
+  category: Set<string>
+  interface: Set<string>
   price: Set<string>
 }
 
@@ -33,7 +34,8 @@ export function emptyFilterState(): FilterState {
     engine: new Set(),
     worksWith: new Set(),
     platforms: new Set(),
-    layer: new Set(),
+    category: new Set(),
+    interface: new Set(),
     price: new Set(),
   }
 }

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'hermes-agent',
   name: 'Hermes Agent',
-  layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'vLLM', 'llama.cpp'],
   engine: 'external',
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent'],
   url: 'hermes-agent.org',

@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'h2ogpt',
   name: 'h2oGPT',
-  layer: 'desktop',
+  categories: ['document-pdf-chat', 'api-servers'],
+  interfaces: ['desktop', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['Ollama', 'llama.cpp', 'GPT4All', 'OpenAI API'],
   engine: 'both',
   license: 'Apache 2.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 12000,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/h2oai/h2ogpt',

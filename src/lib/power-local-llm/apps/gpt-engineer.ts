@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'gpt-engineer',
   name: 'GPT Engineer',
-  layer: 'agent',
+  categories: ['autonomous-agents', 'code-assistants-ide-plugins'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 55100,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code', 'agent'],
   url: 'github.com/AntonOsika/gpt-engineer',

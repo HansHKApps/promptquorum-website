@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'msty-go',
   name: 'Msty Go',
-  layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'llama.cpp'],
   engine: 'both',
-  license: 'Free (closed)',
+  license: 'Closed source',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent'],
   url: 'msty.ai/go',

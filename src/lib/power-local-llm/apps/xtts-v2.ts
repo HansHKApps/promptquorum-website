@@ -8,7 +8,8 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'xtts-v2',
   name: 'XTTS v2',
-  layer: 'tts',
+  categories: ['voice-cloning', 'text-to-speech'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -17,7 +18,7 @@ export const app: ToolRecord = {
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['audio'],
   url: 'huggingface.co/coqui/XTTS-v2',

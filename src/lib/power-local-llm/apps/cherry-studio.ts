@@ -8,16 +8,17 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'cherry-studio',
   name: 'Cherry Studio',
-  layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 51430,
-  addedDate: null, // TODO: not derivable from source article
+  addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
   url: 'cherry-ai.com',

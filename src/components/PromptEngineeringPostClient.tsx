@@ -1457,6 +1457,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           <div className="mb-8">
             <input
               type="search"
+              aria-label="Search terms"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search terms..."

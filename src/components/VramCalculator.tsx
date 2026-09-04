@@ -475,9 +475,9 @@ export function VramCalculator() {
 
   const required = parseFloat(calculations.withSafety);
 
-  const LabelWithInfo = ({ tooltipKey }: { tooltipKey: string }) => (
+  const LabelWithInfo = ({ tooltipKey, htmlFor }: { tooltipKey: string; htmlFor: string }) => (
     <div className="flex items-center gap-1">
-      <label className="text-sm font-semibold text-slate-700">{t.tooltips[tooltipKey]?.title ?? tooltipKey}</label>
+      <label htmlFor={htmlFor} className="text-sm font-semibold text-slate-700">{t.tooltips[tooltipKey]?.title ?? tooltipKey}</label>
       <button
         type="button"
         onClick={(e) => {
@@ -521,7 +521,7 @@ export function VramCalculator() {
         {/* Model Size */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo tooltipKey="modelSize" />
+            <LabelWithInfo tooltipKey="modelSize" htmlFor="vram-calc-model-size" />
           </div>
           {activeTooltip === 'modelSize' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg max-w-xs text-xs">
@@ -531,6 +531,7 @@ export function VramCalculator() {
             </div>
           )}
           <select
+            id="vram-calc-model-size"
             value={modelSize}
             onChange={(e) => setModelSize(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -544,7 +545,7 @@ export function VramCalculator() {
         {/* Quantization */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo tooltipKey="quantization" />
+            <LabelWithInfo tooltipKey="quantization" htmlFor="vram-calc-quantization" />
           </div>
           {activeTooltip === 'quantization' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
@@ -554,6 +555,7 @@ export function VramCalculator() {
             </div>
           )}
           <select
+            id="vram-calc-quantization"
             value={quantization}
             onChange={(e) => setQuantization(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -567,7 +569,7 @@ export function VramCalculator() {
         {/* Context Length */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo tooltipKey="context" />
+            <LabelWithInfo tooltipKey="context" htmlFor="vram-calc-context" />
           </div>
           {activeTooltip === 'context' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
@@ -577,6 +579,7 @@ export function VramCalculator() {
             </div>
           )}
           <select
+            id="vram-calc-context"
             value={contextLength}
             onChange={(e) => setContextLength(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -590,7 +593,7 @@ export function VramCalculator() {
         {/* Batch Size */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo tooltipKey="batchSize" />
+            <LabelWithInfo tooltipKey="batchSize" htmlFor="vram-calc-batch-size" />
           </div>
           {activeTooltip === 'batchSize' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
@@ -600,6 +603,7 @@ export function VramCalculator() {
             </div>
           )}
           <select
+            id="vram-calc-batch-size"
             value={batchSize}
             onChange={(e) => setBatchSize(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -613,7 +617,7 @@ export function VramCalculator() {
         {/* Use Case */}
         <div className="relative">
           <div className="block mb-2">
-            <LabelWithInfo tooltipKey="useCase" />
+            <LabelWithInfo tooltipKey="useCase" htmlFor="vram-calc-use-case" />
           </div>
           {activeTooltip === 'useCase' && (
             <div className="absolute top-12 left-0 z-50 bg-slate-900 text-white p-3 rounded-lg shadow-lg w-64 text-xs">
@@ -623,6 +627,7 @@ export function VramCalculator() {
             </div>
           )}
           <select
+            id="vram-calc-use-case"
             value={useCase}
             onChange={(e) => setUseCase(e.target.value)}
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
