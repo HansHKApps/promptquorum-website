@@ -1,0 +1,36 @@
+// Local AI App Directory — RAGFlow (layer: rag)
+// Migrated from local-llm-software-directory-2026.ts (Phase 1 data migration).
+// Plan: see-the-directory-page-virtual-cocke.md
+// DRAFT — enrichment fields ('TODO'/null) are unverified and pending human review.
+
+import type { ToolRecord } from './types'
+
+export const app: ToolRecord = {
+  slug: 'ragflow',
+  name: 'RAGFlow',
+  layer: 'rag',
+  locality: 'TODO',
+  platforms: null,
+  worksWith: null,
+  engine: 'TODO',
+  license: 'Apache 2.0',
+  price: 'TODO',
+  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  stars: null,
+  addedDate: null, // TODO: not derivable from source article
+  status: 'listed',
+  uses: null,
+  url: 'ragflow.io',
+  tagline: {
+    en: 'Deep document understanding for RAG with citation extraction',
+    de: 'Tiefes Dokumentenverständnis für RAG mit Zitat-Extraktion',
+    fr: 'Compréhension approfondie des documents pour le RAG avec extraction de citations',
+    ja: '引用抽出付きの深いドキュメント理解RAG',
+    zh: '深度文档理解RAG，支持引用提取',
+    es: 'Comprensión profunda de documentos para RAG con extracción de citas',
+    pt: 'Compreensão profunda de documentos para RAG com extração de citações',
+    ar: 'فهم عميق للمستندات لـRAG مع استخراج اقتباسات',
+    ko: '인용 추출 기능이 있는 문서 심층 이해 RAG',
+  },
+  lastVerifiedDate: null, // TODO: not derivable from source article
+}

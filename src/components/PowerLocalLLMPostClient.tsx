@@ -46,6 +46,15 @@ interface Props {
   /** Locales this article exists in. Passed explicitly because `articleData` is
    *  narrowed to the rendered locale (see src/lib/narrowArticleData.ts). */
   availableLangs?: string[]
+  /**
+   * Slug-specific escape hatch used ONLY by `local-llm-software-directory-2026`
+   * (see page-helpers.tsx `buildArticlePageElement`) to swap the 13 tool-listing
+   * sections for the interactive `DirectoryClient` hub while keeping every other
+   * section (key-takeaways, how-current, sources, faq, related-reading) rendering
+   * through the normal `SectionBlock` path below, unchanged. Undefined for every
+   * other article, so this prop never alters any other article's output.
+   */
+  directorySlot?: { sectionKeys: string[]; element: React.ReactNode }
 }
 
 // Section header translations
@@ -1155,7 +1164,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1369,12 +1378,23 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs }: P
 
         {/* Sections */}
         <article className="key-takeaways-container">
-          {Object.entries(article.sections).map(([key, section]) => {
-            const sectionId = slugifySectionId(section, key)
-            return (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
-            )
-          })}
+          {(() => {
+            let directorySlotRendered = false
+            return Object.entries(article.sections).map(([key, section]) => {
+              const sectionId = slugifySectionId(section, key)
+              if (directorySlot?.sectionKeys.includes(key)) {
+                // Render the swapped-in element (e.g. DirectoryClient) exactly once,
+                // at the position of the first matched section key; every other
+                // section in the group is skipped so it isn't duplicated below.
+                if (directorySlotRendered) return null
+                directorySlotRendered = true
+                return <div key={key}>{directorySlot.element}</div>
+              }
+              return (
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
+              )
+            })
+          })()}
         </article>
 
         {/* Marketing CTA suppressed cluster-wide until /power-local-llm launches publicly. */}

@@ -4,6 +4,7 @@ import { SUPPORTED_LANGS } from '@/components/search/search-utils'
 import { peContent } from '@/lib/prompt-engineering/articles-barrel'
 import { llmContent } from '@/lib/local-llms/articles-barrel'
 import { powerLLMContent } from '@/lib/power-local-llm/articles-barrel'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { balconySolarContent } from '@/lib/balcony-solar/articles-barrel'
 import { smartHomeContent } from '@/lib/smart-home/articles-barrel'
@@ -19,6 +20,8 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { POWER_LLM_PUBLISHED_SLUGS } from '@/lib/power-local-llm/published'
 import { BALCONY_SOLAR_PUBLISHED_SLUGS } from '@/lib/balcony-solar/published'
 import { SMART_HOME_PUBLISHED_SLUGS } from '@/lib/smart-home/published'
+
+const DIRECTORY_ARTICLE_SLUG = 'local-llm-software-directory-2026'
 
 function invertMap(map: Record<string, string>): Record<string, string> {
   const result: Record<string, string> = {}
@@ -113,6 +116,39 @@ export function buildAllSearchEntries(): SearchEntry[] {
         url: articleUrl('power-local-llm', slug, lang),
         lang,
       })
+    }
+  }
+
+  // ── Local AI App Directory tools ──────────────────────────────────────
+  // One SearchEntry per tool in localAiApps (129 tools, apps-barrel.ts),
+  // per locale the directory article (local-llm-software-directory-2026)
+  // is actually translated into. There is no separate tool page yet, and
+  // neither DirectoryClient.tsx nor ToolDrawer.tsx currently reads a URL
+  // param or hash to auto-open a tool's drawer (checked directly — no
+  // useSearchParams/hash handling in either file), so these entries link to
+  // the bare directory URL for that locale rather than inventing a dead
+  // deep link. Follow-up: once the client reads e.g. `?tool=<slug>`, switch
+  // these to a real deep link into the drawer.
+  const directoryLangMap = powerLLMContent[DIRECTORY_ARTICLE_SLUG] as
+    | Record<string, { tagline?: unknown }>
+    | undefined
+  if (directoryLangMap && POWER_LLM_PUBLISHED_SLUGS.has(DIRECTORY_ARTICLE_SLUG)) {
+    for (const tool of localAiApps) {
+      for (const lang of SUPPORTED_LANGS) {
+        if (!directoryLangMap[lang]) continue
+        entries.push({
+          id: `tool-${lang}-${tool.slug}`,
+          articleKey: `tool-${tool.slug}`,
+          title: tool.name,
+          description: tool.tagline[lang] ?? tool.tagline.en ?? '',
+          section: tool.layer,
+          hub: 'power-local-llm',
+          level: '',
+          tags: tool.uses ?? [],
+          url: articleUrl('power-local-llm', DIRECTORY_ARTICLE_SLUG, lang),
+          lang,
+        })
+      }
     }
   }
 

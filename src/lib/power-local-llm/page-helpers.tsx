@@ -21,8 +21,39 @@ const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { narrowArticleData } from '@/lib/narrowArticleData'
+import { DirectoryClient } from '@/components/local-ai-directory/DirectoryClient'
+import { localAiApps } from './apps-barrel'
+import { buildLocalAiAppsItemListSchema } from './apps-schema'
 
 const BASE = 'https://www.promptquorum.com'
+
+// Slug of the interactive Local AI App Directory (Phase 3 of
+// /Users/hanskuepper/.claude/plans/see-the-directory-page-virtual-cocke.md,
+// Decision 1: "replace in place"). Every special case below is guarded by
+// this constant so no other power-local-llm article's rendering or JSON-LD
+// changes.
+const LOCAL_AI_DIRECTORY_SLUG = 'local-llm-software-directory-2026'
+
+// The 13 tool-listing sections in local-llm-software-directory-2026.ts whose
+// table rendering is swapped for the interactive DirectoryClient hub. Every
+// other section key in that article (tldr/key-takeaways, stacks, howCurrent,
+// sources, faq, relatedReading) keeps rendering through the normal
+// PowerLocalLLMPostClient/SectionBlock path.
+const LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS = [
+  'runtimes',
+  'desktopApps',
+  'webUis',
+  'ideEditors',
+  'terminalTools',
+  'ragSystems',
+  'agentFrameworks',
+  'speechToText',
+  'textToSpeech',
+  'multimodalVision',
+  'mobileEdge',
+  'imageGeneration',
+  'specialized',
+]
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
@@ -326,27 +357,40 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
         }
       : null)
 
+  const isLocalAiDirectory = slug === LOCAL_AI_DIRECTORY_SLUG
+
   const mdUrlRe = /\[.*?\]\((https?:\/\/[^)]+)\)/
-  const itemListSchemas = Object.values(article.sections)
-    .filter((s) => s.rows && s.rows.length > 0 && s.columns?.includes('Link'))
-    .map((s) => ({
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: s.title ?? article.title,
-      itemListElement: s.rows!.map((row, i) => {
-        const urlMatch = (row['Link'] ?? '').match(mdUrlRe)
-        return {
-          '@type': 'ListItem',
-          position: i + 1,
-          item: {
-            '@type': 'SoftwareApplication',
-            name: (row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
-            ...(urlMatch && { url: urlMatch[1] }),
-            description: row['Description'] ?? '',
-          },
-        }
-      }),
-    }))
+  const itemListSchemas = isLocalAiDirectory
+    ? buildLocalAiAppsItemListSchema(localAiApps, lang)
+    : Object.values(article.sections)
+        .filter((s) => s.rows && s.rows.length > 0 && s.columns?.includes('Link'))
+        .map((s) => ({
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: s.title ?? article.title,
+          itemListElement: s.rows!.map((row, i) => {
+            const urlMatch = (row['Link'] ?? '').match(mdUrlRe)
+            return {
+              '@type': 'ListItem',
+              position: i + 1,
+              item: {
+                '@type': 'SoftwareApplication',
+                name: (row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
+                ...(urlMatch && { url: urlMatch[1] }),
+                description: row['Description'] ?? '',
+              },
+            }
+          }),
+        }))
+
+  // Local AI App Directory (Phase 3, plan Decision 1 "replace in place"):
+  // swap only the 13 tool-listing sections for the interactive DirectoryClient
+  // hub; everything else (LangLinksBar, header, intro, key-takeaways,
+  // how-current, sources, faq, related-reading) still renders through the
+  // normal PowerLocalLLMPostClient path, unchanged.
+  const directorySlot = isLocalAiDirectory
+    ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} /> }
+    : undefined
 
   return (
     <>
@@ -361,7 +405,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

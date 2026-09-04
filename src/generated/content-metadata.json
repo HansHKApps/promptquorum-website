@@ -6522,6 +6522,24 @@
         }
       ]
     },
+    "ai-tool-licenses-explained": {
+      "dateModified": "2026-09-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "local-llm-with-obsidian-2026": {
       "dateModified": "2026-08-30",
       "lastFactChecked": null,
@@ -7279,7 +7297,7 @@
       ]
     },
     "cursor-vs-windsurf-vs-copilot-cline-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
@@ -7666,7 +7684,7 @@
       "images": []
     },
     "best-web-hosting-2026": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,

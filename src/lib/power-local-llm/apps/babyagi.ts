@@ -1,0 +1,36 @@
+// Local AI App Directory — BabyAGI (layer: tools)
+// Migrated from local-llm-software-directory-2026.ts (Phase 1 data migration).
+// Plan: see-the-directory-page-virtual-cocke.md
+// DRAFT — enrichment fields ('TODO'/null) are unverified and pending human review.
+
+import type { ToolRecord } from './types'
+
+export const app: ToolRecord = {
+  slug: 'babyagi',
+  name: 'BabyAGI',
+  layer: 'tools',
+  locality: 'TODO',
+  platforms: null,
+  worksWith: null,
+  engine: 'TODO',
+  license: 'MIT',
+  price: 'TODO',
+  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  stars: 22400,
+  addedDate: null, // TODO: not derivable from source article
+  status: 'listed',
+  uses: null,
+  url: 'github.com/yoheinakajima/babyagi',
+  tagline: {
+    en: 'Lightweight autonomous agent',
+    de: 'Schlanker autonomer Agent',
+    fr: 'Agent autonome léger',
+    ja: '軽量自律エージェント',
+    zh: '轻量级自主智能体',
+    es: 'Agente autónomo ligero',
+    pt: 'Agente autônomo leve',
+    ar: 'عميل مستقل خفيف الوزن',
+    ko: '경량 자율 에이전트',
+  },
+  lastVerifiedDate: null, // TODO: not derivable from source article
+}

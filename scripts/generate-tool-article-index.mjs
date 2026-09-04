@@ -1,14 +1,17 @@
 #!/usr/bin/env node
-// Generates src/generated/tool-article-index.json — maps each tool listed in
-// the Local LLM Software Directory (src/lib/power-local-llm/articles/
-// local-llm-software-directory-2026.ts) to the site's own local-llms /
-// power-local-llm articles that discuss it, sorted by importance. Powers the
-// "Articles about {tool}" collapsible block on the directory page
-// (PowerLocalLLMPostClient.tsx, itemHeadings render path).
+// Generates src/generated/tool-article-index.json — maps each tool in the
+// Local AI App Directory (src/lib/power-local-llm/apps-barrel.ts, one
+// ToolRecord per tool) to the site's own local-llms / power-local-llm
+// articles that discuss it, sorted by importance. Powers the "Articles about
+// {tool}" collapsible block on the directory page (PowerLocalLLMPostClient.tsx,
+// itemHeadings render path via ArticlesBlock.tsx).
 //
-// Tool list: read live from the directory article's EN sections (columns[0]
-// === 'Tool') — never hardcoded, so it stays in sync as the directory is
-// edited.
+// Tool list: read live from apps-barrel.ts's `localAiApps` (name + slug per
+// tool) — never hardcoded, so it stays in sync as the directory's structured
+// data is edited. (Formerly scanned local-llm-software-directory-2026.ts's
+// markdown table rows directly; that article's rows are now stale relative
+// to the real tool roster in apps-barrel.ts, so the source of tool names
+// changed — the matching/tiering logic below is unchanged.)
 //
 // Matching: a case-insensitive whole-word/phrase scan of each candidate
 // article file's raw source text (all locale blocks, not just EN) against
@@ -107,26 +110,28 @@ function classifyTier(pattern, en) {
 }
 
 async function main() {
-  // ── 1. Tool list, read live from the directory article's EN sections ──
-  const { powerLLMContent } = await jiti.import('@/lib/power-local-llm/articles-barrel')
-  const directoryEn = powerLLMContent[DIRECTORY_SLUG]?.en
-  if (!directoryEn) {
-    throw new Error(`Could not load EN content for ${DIRECTORY_SLUG} from the power-local-llm barrel`)
+  // ── 1. Tool list, read live from apps-barrel.ts's localAiApps ──
+  const { localAiApps } = await jiti.import('@/lib/power-local-llm/apps-barrel')
+  if (!Array.isArray(localAiApps) || localAiApps.length === 0) {
+    throw new Error('Could not load localAiApps from apps-barrel.ts')
   }
 
   const toolNames = []
   const seen = new Set()
-  for (const section of Object.values(directoryEn.sections ?? {})) {
-    if (!section?.itemHeadings || !section.rows || !section.columns) continue
-    if (section.columns[0] !== 'Tool') continue
-    for (const row of section.rows) {
-      const name = (row['Tool'] ?? '').replace(/\*\*/g, '').trim()
-      if (!name || seen.has(name)) continue
-      seen.add(name)
-      toolNames.push(name)
-    }
+  for (const tool of localAiApps) {
+    const name = (tool.name ?? '').trim()
+    if (!name || seen.has(name)) continue
+    seen.add(name)
+    toolNames.push(name)
   }
   console.log(`Found ${toolNames.length} unique tools in the directory.`)
+
+  // Directory article content, still needed as a candidate article (matching
+  // step below scans every local-llms/power-local-llm article, including it).
+  const { powerLLMContent } = await jiti.import('@/lib/power-local-llm/articles-barrel')
+  if (!powerLLMContent[DIRECTORY_SLUG]?.en) {
+    throw new Error(`Could not load EN content for ${DIRECTORY_SLUG} from the power-local-llm barrel`)
+  }
 
   const ambiguous = toolNames.filter(isAmbiguous)
   if (ambiguous.length) {

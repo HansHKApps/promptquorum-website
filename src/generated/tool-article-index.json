@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
+        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
+        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "h2ogpt-review-2026",
         "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
         "url": "/power-local-llm/h2ogpt-review-2026",
@@ -72,17 +80,9 @@
         "url": "/local-llms/fastest-local-llms-low-end-pcs",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 205,
+    "totalCount": 206,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 112,
+    "totalCount": 114,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 78,
+    "totalCount": 79,
     "capped": true
   },
   "LocalAI": {
@@ -419,6 +419,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-tool-licenses-explained",
+        "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
+        "url": "/power-local-llm/ai-tool-licenses-explained",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -442,7 +450,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Llamafile": {
@@ -533,6 +541,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
+        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
+        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "rtx-3090-local-llm-buy-or-rent",
         "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
@@ -576,14 +592,6 @@
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
       }
@@ -696,7 +704,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "GPT4All": {
@@ -1047,6 +1055,36 @@
     "totalCount": 7,
     "capped": false
   },
+  "h2oGPT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
   "Open Interpreter": {
     "articles": [
       {
@@ -1059,6 +1097,28 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "Jarvis": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-08-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "build-local-voice-assistant-2026",
+        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
+        "url": "/power-local-llm/build-local-voice-assistant-2026",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
     "capped": false
   },
   "Open WebUI": {
@@ -1197,6 +1257,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-tool-licenses-explained",
+        "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
+        "url": "/power-local-llm/ai-tool-licenses-explained",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -1258,17 +1326,9 @@
         "url": "/local-llms/best-local-rag-tools",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "double-local-llm-speed",
-        "title": "How to Double Local LLM Speed: Optimization Techniques",
-        "url": "/local-llms/double-local-llm-speed",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "SillyTavern": {
@@ -1338,23 +1398,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "ai-tool-licenses-explained",
+        "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
+        "url": "/power-local-llm/ai-tool-licenses-explained",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-stack-use-case",
         "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
         "url": "/local-llms/best-local-llm-stack-use-case",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "ollama-vs-lm-studio",
-        "title": "Ollama vs LM Studio 2026: CLI vs GUI — Speed, API, Privacy & Setup Compared",
-        "url": "/local-llms/ollama-vs-lm-studio",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "LobeChat": {
@@ -1479,17 +1539,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-09-01",
+        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
+        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
+        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
       },
@@ -1565,6 +1625,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
+        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
+        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "autogpt-local-review-2026",
         "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review-2026",
@@ -1576,14 +1644,6 @@
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
       },
@@ -1646,7 +1706,7 @@
         "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
         "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
         "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
-        "dateModified": "2026-09-01",
+        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -1724,7 +1784,7 @@
         "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
         "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
         "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
-        "dateModified": "2026-09-01",
+        "dateModified": "2026-09-03",
         "tier": "mentioned"
       }
     ],
@@ -1815,6 +1875,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
+        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
+        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-ide-plugins-2026",
         "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
@@ -1830,7 +1898,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Aider": {
@@ -2125,6 +2193,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-tool-licenses-explained",
+        "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
+        "url": "/power-local-llm/ai-tool-licenses-explained",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -2154,17 +2230,9 @@
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamaindex-rag-framework-review",
-        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
-        "url": "/power-local-llm/llamaindex-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Flowise": {
@@ -2866,7 +2934,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning",
+        "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
@@ -2944,7 +3012,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning",
+        "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
@@ -3022,7 +3090,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning",
+        "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
@@ -3068,7 +3136,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning",
+        "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
@@ -3098,7 +3166,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning",
+        "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-09-03",
         "tier": "about"
@@ -3663,6 +3731,28 @@
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-09-01",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Locally AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-iphone-2026",
+        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
+        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enclave-ai-review-2026",
+        "title": "Enclave AI Review 2026: On-Device AI for iPhone, iPad, Mac",
+        "url": "/power-local-llm/enclave-ai-review-2026",
+        "dateModified": "2026-09-03",
         "tier": "mentioned"
       }
     ],
