@@ -10,8 +10,13 @@
  * Rules:
  * - evergreen: no year/model/hardware refs, no benchmarks
  * - semi_annual: must have year in title/seoTitle, next_refresh_due
- * - annual: must have year in slug/URL, specific_year
+ * - annual: must have specific_year; year goes in the title, NEVER in the slug
  * - monthly: tightest tier, no structural requirements — just set the value
+ * - ALL tiers: slug must never contain a year or a month (see NO_SLUG_DATE
+ *   check below) — a year in a URL is a 301 liability at every year
+ *   boundary. Recurred 2026-09-04 on 'locally-ai-review-2026' despite this
+ *   tier system existing specifically to keep dates out of URLs; this check
+ *   makes it a hard build failure instead of a convention.
  *
  * 2026-07-02: rewritten to walk individual article files (the split-file/barrel
  * architecture every cluster actually uses) instead of 2 hardcoded monolithic
@@ -31,6 +36,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 const STRICT_FROM_DATE = '2026-04-21'; // Pages on/after this date require freshness_tier
+
+// The no-date-in-slug rule (see CLAUDE.md "No Year or Month in Slugs / URLs")
+// is enforced going forward only. Hundreds of pre-existing slugs across every
+// cluster already carry a year (e.g. 'best-local-llms-2026',
+// 'local-ai-trend-2027-...') — a URL that's live, indexed, and linked
+// externally. Making this a hard fail retroactively would break the build
+// for the entire site over a backlog that needs its own dedicated 301
+// project, not a surprise gate. New pages get no grace period.
+const SLUG_DATE_RULE_FROM = '2026-09-05';
 const ERRORS = [];
 const WARNINGS = [];
 
@@ -224,8 +238,35 @@ function extractFromMonolithicFile(filePath) {
   return articles;
 }
 
+// A year or a full month name anywhere in the slug. Slugs are kebab-case
+// English, so this is a much simpler check than the month-drift validator's
+// (no locale variants needed) — but "jan" is still excluded as an
+// abbreviation collision with the Jan AI product.
+const SLUG_YEAR = /(?:^|-)(19|20)\d{2}(?:-|$)/;
+const SLUG_MONTH = /(?:^|-)(january|february|march|april|may|june|july|august|september|october|november|december)(?:-|$)/;
+
+function validateSlugHasNoDate(article) {
+  const hasYear = SLUG_YEAR.test(article.slug);
+  const hasMonth = SLUG_MONTH.test(article.slug);
+  if (!hasYear && !hasMonth) return;
+
+  const what = hasYear && hasMonth ? 'a year and a month' : hasYear ? 'a year' : 'a month name';
+  const message =
+    `[${article.type.toUpperCase()}] ${article.slug}: Slug contains ${what}. ` +
+    `URLs must never carry a year or month (see CLAUDE.md "No Year or Month in Slugs / URLs") — ` +
+    `move it to the title/specific_year and rename the slug.`;
+
+  if (article.publishDate >= SLUG_DATE_RULE_FROM) {
+    ERRORS.push(message);
+  } else {
+    WARNINGS.push(message + ' (pre-existing page, grandfathered — not blocking, but fix when this page is next touched)');
+  }
+}
+
 function validateArticle(article) {
   const isNewPage = article.publishDate >= STRICT_FROM_DATE;
+
+  validateSlugHasNoDate(article);
 
   // ─── Check 1: freshness_tier must exist on new pages ───
   if (isNewPage && !article.freshnessTier) {
