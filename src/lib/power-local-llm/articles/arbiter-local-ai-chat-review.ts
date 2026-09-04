@@ -1,5 +1,5 @@
 // Arbiter Local AI Chat Review: Private Offline AI for iPhone
-// Slug: arbiter-local-ai-chat-review-2026
+// Slug: arbiter-local-ai-chat-review
 // Companion to: loci-ai-review-offline-local-ai, best-local-llm-apps-iphone-2026
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-en.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-en.webp',
     title: 'Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone',
     seoTitle: 'Arbiter AI Review 2026: Private Offline iPhone Chat',
     intro:
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'What Arbiter Is',
         content: [
-          'Arbiter is a privacy-first offline AI assistant for iPhone, developed by Jordan Stone and listed on the App Store as "Arbiter - Local AI Chat" (id6747954532), with a vendor site at askarbiter.ai. The app is free to download, with optional in-app purchases, and is listed in the Productivity category.',
+          'Arbiter is a privacy-first offline AI assistant for iPhone, developed by Jordan Stone and listed on the App Store as "Arbiter - Local AI Chat" (id6747954532), with a vendor site at [askarbiter.ai](https://www.askarbiter.ai/). The app is free to download, with optional in-app purchases, and is listed in the Productivity category.',
           'The core design choice is that Arbiter does not require an account and does not rely on Arbiter\'s own servers to process your conversations: it either runs a model directly on your iPhone, or connects to a model running on hardware you control (your own PC or Mac). The developer\'s stated position is that conversations never leave the device — either your phone, or the desktop machine you connect it to.',
           'Model support centers on lightweight open-source families: Gemma, Llama, DeepSeek, Qwen, and Mistral. These are the same model families used across most local-LLM apps and tools, which means the practical ceiling on quality is set by how large a model your iPhone (or connected desktop) can run, not by a proprietary Arbiter-only model.',
         ],
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Connect to a more powerful desktop model** — if on-device model quality is not enough for a task, Arbiter can connect to models running on your own PC or Mac through tools like LM Studio or Ollama, or through the separate "Arbiter for Mac" companion app. Inference happens on the desktop machine you control; the phone acts as the interface. This avoids the trade-off of either being limited to what a phone can run, or sending your prompts to a cloud API.',
           '**Document summaries** — you can upload documents on your device and have Arbiter generate summaries and pull out key insights, without uploading the file to a cloud service first.',
         ],
-        note: 'Exact minimum iOS version, per-model download sizes, and the full list of supported open-source model variants are not published in detail by the developer. Verify current specifics on the App Store listing or askarbiter.ai before relying on a specific model for a specific device. Last verified against the App Store listing on 2026-09-04.',
+        note: 'Exact minimum iOS version, per-model download sizes, and the full list of supported open-source model variants are not published in detail by the developer. Verify current specifics on the App Store listing or [askarbiter.ai](https://www.askarbiter.ai/) before relying on a specific model for a specific device. Last verified against the App Store listing on 2026-09-04.',
       },
       features: {
         id: 'features',
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'en',
-      'url': 'https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter is a free iPhone app for private, on-device AI chat, developed by Jordan Stone. It runs open-source models (Gemma, Llama, DeepSeek, Qwen, Mistral) locally, or connects to bigger models on your own PC or Mac via LM Studio, Ollama, or Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-de.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-de.webp',
     title: 'Arbiter Local AI Chat im Test (2026): Private KI offline auf dem iPhone',
     seoTitle: 'Arbiter AI im Test 2026: Private Offline-KI fürs iPhone',
     intro:
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'Was Arbiter ist',
         content: [
-          'Arbiter ist ein auf Privatsphäre ausgerichteter Offline-KI-Assistent fürs iPhone, entwickelt von Jordan Stone und im App Store als „Arbiter - Local AI Chat" (id6747954532) gelistet, mit einer Anbieter-Website unter askarbiter.ai. Die App steht kostenlos zum Download bereit, mit optionalen In-App-Käufen, und ist in der Kategorie Produktivität gelistet.',
+          'Arbiter ist ein auf Privatsphäre ausgerichteter Offline-KI-Assistent fürs iPhone, entwickelt von Jordan Stone und im App Store als „Arbiter - Local AI Chat" (id6747954532) gelistet, mit einer Anbieter-Website unter [askarbiter.ai](https://www.askarbiter.ai/). Die App steht kostenlos zum Download bereit, mit optionalen In-App-Käufen, und ist in der Kategorie Produktivität gelistet.',
           'Die zentrale Design-Entscheidung besteht darin, dass Arbiter kein Konto voraussetzt und nicht auf eigene Server zurückgreift, um Ihre Unterhaltungen zu verarbeiten: Die App führt entweder ein Modell direkt auf Ihrem iPhone aus, oder sie verbindet sich mit einem Modell, das auf Hardware läuft, die Sie selbst kontrollieren (Ihrem eigenen PC oder Mac). Die vom Entwickler angegebene Position lautet, dass Unterhaltungen niemals das Gerät verlassen – weder Ihr Telefon noch den Desktop-Rechner, mit dem Sie sich verbinden.',
           'Die Modellunterstützung konzentriert sich auf leichtgewichtige Open-Source-Familien: Gemma, Llama, DeepSeek, Qwen und Mistral. Dies sind dieselben Modellfamilien, die in den meisten Local-LLM-Apps und -Tools zum Einsatz kommen, was bedeutet, dass die praktische Qualitätsobergrenze davon abhängt, wie groß ein Modell ist, das Ihr iPhone (oder der verbundene Desktop-Rechner) ausführen kann – nicht von einem proprietären, ausschließlich für Arbiter bestimmten Modell.',
         ],
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Verbindung zu einem leistungsstärkeren Desktop-Modell** — Reicht die Qualität eines On-Device-Modells für eine Aufgabe nicht aus, kann sich Arbiter über Tools wie LM Studio oder Ollama, oder über die separate Begleit-App „Arbiter for Mac", mit Modellen verbinden, die auf Ihrem eigenen PC oder Mac laufen. Die Inferenz findet auf dem von Ihnen kontrollierten Desktop-Rechner statt; das Telefon dient als Bedienoberfläche. So entfällt der Kompromiss, entweder auf das beschränkt zu sein, was ein Telefon leisten kann, oder Ihre Prompts an eine Cloud-API zu senden.',
           '**Dokumentenzusammenfassungen** — Sie können Dokumente auf Ihrem Gerät hochladen und sich von Arbiter Zusammenfassungen sowie zentrale Erkenntnisse erstellen lassen, ohne die Datei zuvor an einen Cloud-Dienst zu übermitteln.',
         ],
-        note: 'Die genaue minimale iOS-Version, modellspezifische Downloadgrößen und die vollständige Liste unterstützter Open-Source-Modellvarianten werden vom Entwickler nicht im Detail veröffentlicht. Prüfen Sie die aktuellen Angaben im App-Store-Eintrag oder auf askarbiter.ai, bevor Sie sich für ein bestimmtes Gerät auf ein bestimmtes Modell verlassen. Zuletzt gegen den App-Store-Eintrag geprüft am 2026-09-04.',
+        note: 'Die genaue minimale iOS-Version, modellspezifische Downloadgrößen und die vollständige Liste unterstützter Open-Source-Modellvarianten werden vom Entwickler nicht im Detail veröffentlicht. Prüfen Sie die aktuellen Angaben im App-Store-Eintrag oder auf [askarbiter.ai](https://www.askarbiter.ai/), bevor Sie sich für ein bestimmtes Gerät auf ein bestimmtes Modell verlassen. Zuletzt gegen den App-Store-Eintrag geprüft am 2026-09-04.',
       },
       features: {
         id: 'features',
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'de',
-      'url': 'https://www.promptquorum.com/de/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/de/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter ist eine kostenlose iPhone-App für privaten, On-Device-KI-Chat, entwickelt von Jordan Stone. Die App führt Open-Source-Modelle (Gemma, Llama, DeepSeek, Qwen, Mistral) lokal aus oder verbindet sich mit größeren Modellen auf Ihrem eigenen PC oder Mac über LM Studio, Ollama oder Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/de/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/de/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-fr.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-fr.webp',
     title: 'Avis Arbiter Local AI Chat (2026) : IA hors ligne privée pour iPhone',
     seoTitle: 'Avis Arbiter AI 2026 : chat IA privé sur iPhone',
     intro:
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'Qu\'est-ce qu\'Arbiter',
         content: [
-          'Arbiter est un assistant IA hors ligne axé sur la confidentialité pour iPhone, développé par Jordan Stone et référencé sur l\'App Store sous le nom « Arbiter - Local AI Chat » (id6747954532), avec un site éditeur sur askarbiter.ai. L\'application est gratuite au téléchargement, avec des achats intégrés facultatifs, et classée dans la catégorie Productivité.',
+          'Arbiter est un assistant IA hors ligne axé sur la confidentialité pour iPhone, développé par Jordan Stone et référencé sur l\'App Store sous le nom « Arbiter - Local AI Chat » (id6747954532), avec un site éditeur sur [askarbiter.ai](https://www.askarbiter.ai/). L\'application est gratuite au téléchargement, avec des achats intégrés facultatifs, et classée dans la catégorie Productivité.',
           'Le choix de conception central est qu\'Arbiter ne nécessite pas de compte et ne s\'appuie pas sur ses propres serveurs pour traiter vos conversations : elle exécute soit un modèle directement sur votre iPhone, soit se connecte à un modèle exécuté sur du matériel que vous contrôlez (votre propre PC ou Mac). Selon l\'éditeur, les conversations ne quittent jamais l\'appareil — que ce soit votre téléphone ou l\'ordinateur auquel vous vous connectez.',
           'La prise en charge des modèles repose sur des familles open source légères : Gemma, Llama, DeepSeek, Qwen et Mistral. Ce sont les mêmes familles de modèles utilisées par la plupart des applications et outils d\'IA locale, ce qui signifie que le plafond de qualité pratique dépend de la taille de modèle que votre iPhone (ou l\'ordinateur connecté) peut exécuter, et non d\'un modèle propriétaire exclusif à Arbiter.',
         ],
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Connexion à un modèle plus puissant sur ordinateur** — si la qualité des modèles embarqués ne suffit pas pour une tâche, Arbiter peut se connecter à des modèles exécutés sur votre propre PC ou Mac via des outils comme LM Studio ou Ollama, ou via l\'application compagnon distincte « Arbiter for Mac ». L\'inférence a lieu sur l\'ordinateur que vous contrôlez ; le téléphone sert d\'interface. Cela évite de devoir choisir entre les limites d\'un téléphone et l\'envoi de vos prompts à une API cloud.',
           '**Résumés de documents** — vous pouvez téléverser des documents sur votre appareil et demander à Arbiter d\'en générer des résumés et d\'en extraire les points clés, sans envoyer le fichier vers un service cloud au préalable.',
         ],
-        note: 'La version iOS minimale exacte, la taille de téléchargement de chaque modèle, et la liste complète des variantes de modèles open source pris en charge ne sont pas publiées en détail par l\'éditeur. Vérifiez les informations actuelles sur la fiche App Store ou sur askarbiter.ai avant de vous fier à un modèle précis pour un appareil précis. Dernière vérification par rapport à la fiche App Store le 2026-09-04.',
+        note: 'La version iOS minimale exacte, la taille de téléchargement de chaque modèle, et la liste complète des variantes de modèles open source pris en charge ne sont pas publiées en détail par l\'éditeur. Vérifiez les informations actuelles sur la fiche App Store ou sur [askarbiter.ai](https://www.askarbiter.ai/) avant de vous fier à un modèle précis pour un appareil précis. Dernière vérification par rapport à la fiche App Store le 2026-09-04.',
       },
       features: {
         id: 'features',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'fr',
-      'url': 'https://www.promptquorum.com/fr/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter est une application iPhone gratuite pour un chat IA privé sur l\'appareil, développée par Jordan Stone. Elle exécute des modèles open source (Gemma, Llama, DeepSeek, Qwen, Mistral) localement, ou se connecte à des modèles plus puissants sur votre propre PC ou Mac via LM Studio, Ollama, ou Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/fr/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/fr/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-es.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-es.webp',
     title: 'Reseña de Arbiter Local AI Chat (2026): IA privada sin conexión para iPhone',
     seoTitle: 'Reseña Arbiter IA 2026: Chat Privado Offline iPhone',
     intro:
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'Qué es Arbiter',
         content: [
-          'Arbiter es un asistente de IA offline centrado en la privacidad para iPhone, desarrollado por Jordan Stone y listado en la App Store como "Arbiter - Local AI Chat" (id6747954532), con un sitio del proveedor en askarbiter.ai. La app es gratuita para descargar, con compras opcionales dentro de la app, y aparece en la categoría Productividad.',
+          'Arbiter es un asistente de IA offline centrado en la privacidad para iPhone, desarrollado por Jordan Stone y listado en la App Store como "Arbiter - Local AI Chat" (id6747954532), con un sitio del proveedor en [askarbiter.ai](https://www.askarbiter.ai/). La app es gratuita para descargar, con compras opcionales dentro de la app, y aparece en la categoría Productividad.',
           'La decisión de diseño central es que Arbiter no requiere una cuenta y no depende de servidores propios de Arbiter para procesar tus conversaciones: o bien ejecuta un modelo directamente en tu iPhone, o se conecta a un modelo que corre en hardware que tú controlas (tu propia PC o Mac). La postura declarada por el desarrollador es que las conversaciones nunca salen del dispositivo, ya sea tu teléfono o el equipo de escritorio al que te conectes.',
           'El soporte de modelos se centra en familias ligeras de código abierto: Gemma, Llama, DeepSeek, Qwen y Mistral. Son las mismas familias de modelos usadas en la mayoría de apps y herramientas de LLM local, lo que significa que el techo práctico de calidad lo marca el tamaño de modelo que tu iPhone (o el equipo de escritorio conectado) puede ejecutar, no un modelo propietario exclusivo de Arbiter.',
         ],
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Conectarse a un modelo de escritorio más potente** — si la calidad del modelo en el dispositivo no basta para una tarea, Arbiter puede conectarse a modelos que corren en tu propia PC o Mac mediante herramientas como LM Studio u Ollama, o mediante la app complementaria independiente "Arbiter for Mac". La inferencia ocurre en el equipo de escritorio que tú controlas; el teléfono actúa como interfaz. Esto evita la disyuntiva entre limitarte a lo que un teléfono puede ejecutar o enviar tus prompts a una API en la nube.',
           '**Resúmenes de documentos** — puedes subir documentos en tu dispositivo y hacer que Arbiter genere resúmenes y extraiga puntos clave, sin subir primero el archivo a un servicio en la nube.',
         ],
-        note: 'La versión mínima exacta de iOS, el tamaño de descarga por modelo, y la lista completa de variantes de modelos de código abierto soportadas no están publicadas en detalle por el desarrollador. Verifica los detalles actuales en la ficha de la App Store o en askarbiter.ai antes de confiar en un modelo específico para un dispositivo específico. Última verificación frente a la ficha de la App Store el 2026-09-04.',
+        note: 'La versión mínima exacta de iOS, el tamaño de descarga por modelo, y la lista completa de variantes de modelos de código abierto soportadas no están publicadas en detalle por el desarrollador. Verifica los detalles actuales en la ficha de la App Store o en [askarbiter.ai](https://www.askarbiter.ai/) antes de confiar en un modelo específico para un dispositivo específico. Última verificación frente a la ficha de la App Store el 2026-09-04.',
       },
       features: {
         id: 'features',
@@ -1460,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'es',
-      'url': 'https://www.promptquorum.com/es/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter es una app gratuita para iPhone de chat de IA privado en el dispositivo, desarrollada por Jordan Stone. Ejecuta modelos de código abierto (Gemma, Llama, DeepSeek, Qwen, Mistral) localmente, o se conecta a modelos más grandes en tu propia PC o Mac mediante LM Studio, Ollama, o Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/es/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/es/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -1484,7 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-pt.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-pt.webp',
     title: 'Análise do Arbiter Local AI Chat (2026): IA Offline Privada para iPhone',
     seoTitle: 'Arbiter AI: Análise 2026 do Chat Offline Privado no iPhone',
     intro:
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'O Que É o Arbiter',
         content: [
-          'O Arbiter é um assistente de IA offline focado em privacidade para iPhone, desenvolvido por Jordan Stone e listado na App Store como "Arbiter - Local AI Chat" (id6747954532), com um site oficial em askarbiter.ai. O app é gratuito para baixar, com compras opcionais dentro do app, e está listado na categoria Produtividade.',
+          'O Arbiter é um assistente de IA offline focado em privacidade para iPhone, desenvolvido por Jordan Stone e listado na App Store como "Arbiter - Local AI Chat" (id6747954532), com um site oficial em [askarbiter.ai](https://www.askarbiter.ai/). O app é gratuito para baixar, com compras opcionais dentro do app, e está listado na categoria Produtividade.',
           'A escolha central de design é que o Arbiter não exige uma conta e não depende de servidores próprios do Arbiter para processar suas conversas: ele roda um modelo diretamente no seu iPhone, ou se conecta a um modelo rodando em hardware que você controla (seu próprio PC ou Mac). A posição declarada pelo desenvolvedor é que as conversas nunca saem do dispositivo — seja o seu telefone, seja o computador desktop ao qual você o conecta.',
           'O suporte a modelos se concentra em famílias leves de código aberto: Gemma, Llama, DeepSeek, Qwen e Mistral. Essas são as mesmas famílias de modelos usadas na maioria dos apps e ferramentas de LLM local, o que significa que o teto prático de qualidade é definido pelo tamanho do modelo que o seu iPhone (ou desktop conectado) consegue rodar, não por um modelo proprietário exclusivo do Arbiter.',
         ],
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Conectar-se a um modelo de desktop mais potente** — se a qualidade do modelo no dispositivo não for suficiente para uma tarefa, o Arbiter pode se conectar a modelos rodando no seu próprio PC ou Mac por meio de ferramentas como LM Studio ou Ollama, ou por meio do complemento separado "Arbiter for Mac". A inferência acontece na máquina desktop que você controla; o telefone atua como interface. Isso evita o dilema de ficar limitado ao que um telefone consegue rodar ou enviar seus prompts para uma API em nuvem.',
           '**Resumos de documentos** — você pode enviar documentos no seu dispositivo e fazer o Arbiter gerar resumos e extrair os principais insights, sem enviar o arquivo primeiro para um serviço em nuvem.',
         ],
-        note: 'A versão mínima exata do iOS, os tamanhos de download por modelo e a lista completa de variantes de modelos de código aberto suportadas não são publicados em detalhe pelo desenvolvedor. Verifique as especificações atuais na listagem da App Store ou em askarbiter.ai antes de contar com um modelo específico para um dispositivo específico. Última verificação em relação à listagem da App Store em 04/09/2026.',
+        note: 'A versão mínima exata do iOS, os tamanhos de download por modelo e a lista completa de variantes de modelos de código aberto suportadas não são publicados em detalhe pelo desenvolvedor. Verifique as especificações atuais na listagem da App Store ou em [askarbiter.ai](https://www.askarbiter.ai/) antes de contar com um modelo específico para um dispositivo específico. Última verificação em relação à listagem da App Store em 04/09/2026.',
       },
       features: {
         id: 'features',
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'pt-BR',
-      'url': 'https://www.promptquorum.com/pt/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'O Arbiter é um app gratuito para iPhone de chat de IA privado e no dispositivo, desenvolvido por Jordan Stone. Ele roda modelos de código aberto (Gemma, Llama, DeepSeek, Qwen, Mistral) localmente, ou se conecta a modelos maiores no seu próprio PC ou Mac via LM Studio, Ollama, ou Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/pt/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/pt/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -1850,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-ja.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-ja.webp',
     title: 'Arbiter Local AI Chatレビュー(2026年):iPhone向けプライベートオフラインAI',
     seoTitle: 'Arbiterレビュー2026:iPhone向けプライベートオフラインAIチャット',
     intro:
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'ja',
-      'url': 'https://www.promptquorum.com/ja/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiterは、Jordan Stone氏が開発した、プライベートなオンデバイスAIチャットのための無料iPhoneアプリです。オープンソースモデル(Gemma、Llama、DeepSeek、Qwen、Mistral)をローカルで実行するか、LM Studio、Ollama、Arbiter for Mac経由で自分のPCやMac上のより大きなモデルに接続します。',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ja/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/ja/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-zh.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-zh.webp',
     title: 'Arbiter Local AI Chat 评测（2026）：iPhone 隐私离线 AI 应用',
     seoTitle: 'Arbiter AI 评测 2026：iPhone 隐私离线聊天应用',
     intro:
@@ -2296,7 +2296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'Arbiter 是什么',
         content: [
-          'Arbiter 是一款专注隐私的 iPhone 离线 AI 助手，由 Jordan Stone 开发，在 App Store 上以"Arbiter - Local AI Chat"（id6747954532）上架，官网为 askarbiter.ai。应用可免费下载，附带可选的应用内购买，分类为效率工具。',
+          'Arbiter 是一款专注隐私的 iPhone 离线 AI 助手，由 Jordan Stone 开发，在 App Store 上以"Arbiter - Local AI Chat"（id6747954532）上架，官网为 [askarbiter.ai](https://www.askarbiter.ai/)。应用可免费下载，附带可选的应用内购买，分类为效率工具。',
           '其核心设计理念是：Arbiter 既不要求账号，也不依赖 Arbiter 自己的服务器来处理你的对话——它要么直接在你的 iPhone 上运行模型，要么连接运行在你自己控制的硬件（你的电脑或 Mac）上的模型。开发者的表述是：对话内容不会离开设备——无论是你的手机，还是你连接的那台电脑。',
           '模型支持以轻量级开源系列为核心：Gemma、Llama、DeepSeek、Qwen 和 Mistral。这些模型系列在大多数本地大模型应用和工具中都有使用，这意味着实际的能力上限取决于你的 iPhone（或所连接的电脑）能运行多大的模型，而不是取决于某个 Arbiter 专有模型。',
         ],
@@ -2324,7 +2324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**连接更强大的桌面端模型** —— 如果设备端模型能力不足以完成某项任务，Arbiter 可以通过 LM Studio 或 Ollama 等工具，连接运行在你自己电脑或 Mac 上的模型，也可以通过独立的"Arbiter for Mac"配套应用连接。推理过程发生在你自己控制的电脑上，手机只作为交互界面。这样就避免了要么只能使用手机能运行的模型，要么必须把提示词发送给云端 API 的取舍。',
           '**文档摘要** —— 你可以在设备上上传文档，让 Arbiter 生成摘要并提取关键信息，而无需先把文件上传到云服务。',
         ],
-        note: '开发者未详细公开确切的最低 iOS 版本要求、各模型的下载体积，以及所支持的开源模型变体完整列表。在依赖特定模型运行于特定设备之前，请在 App Store 页面或 askarbiter.ai 上核实当前的具体信息。本文信息最后核实于 2026-09-04 的 App Store 页面。',
+        note: '开发者未详细公开确切的最低 iOS 版本要求、各模型的下载体积，以及所支持的开源模型变体完整列表。在依赖特定模型运行于特定设备之前，请在 App Store 页面或 [askarbiter.ai](https://www.askarbiter.ai/) 上核实当前的具体信息。本文信息最后核实于 2026-09-04 的 App Store 页面。',
       },
       features: {
         id: 'features',
@@ -2556,7 +2556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'zh',
-      'url': 'https://www.promptquorum.com/zh/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter 是一款免费的 iPhone 设备端私密 AI 聊天应用，由 Jordan Stone 开发。它可以本地运行开源模型（Gemma、Llama、DeepSeek、Qwen、Mistral），也可以通过 LM Studio、Ollama 或 Arbiter for Mac 连接自己电脑或 Mac 上的更强模型。',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -2570,7 +2570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/zh/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/zh/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -2580,7 +2580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-ar.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-ar.webp',
     title: 'مراجعة Arbiter Local AI Chat (2026): ذكاء اصطناعي خاص وغير متصل بالإنترنت لآيفون',
     seoTitle: 'مراجعة Arbiter 2026: دردشة AI خاصة وغير متصلة لآيفون',
     intro:
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-arbiter',
         title: 'ما هو Arbiter',
         content: [
-          'Arbiter مساعد ذكاء اصطناعي غير متصل بالإنترنت يضع الخصوصية أولاً لآيفون، طوّره Jordan Stone، ومُدرج في App Store باسم "Arbiter - Local AI Chat" (id6747954532)، مع موقع رسمي على askarbiter.ai. التطبيق مجاني للتنزيل، مع مشتريات اختيارية داخل التطبيق، ومُدرج في فئة الإنتاجية (Productivity).',
+          'Arbiter مساعد ذكاء اصطناعي غير متصل بالإنترنت يضع الخصوصية أولاً لآيفون، طوّره Jordan Stone، ومُدرج في App Store باسم "Arbiter - Local AI Chat" (id6747954532)، مع موقع رسمي على [askarbiter.ai](https://www.askarbiter.ai/). التطبيق مجاني للتنزيل، مع مشتريات اختيارية داخل التطبيق، ومُدرج في فئة الإنتاجية (Productivity).',
           'الخيار التصميمي الأساسي هو أن Arbiter لا يتطلب حساباً ولا يعتمد على خوادم Arbiter الخاصة لمعالجة محادثاتك: فهو إما يشغّل نموذجاً مباشرة على آيفون، أو يتصل بنموذج يعمل على جهاز تتحكم فيه أنت (جهاز الكمبيوتر أو Mac الخاص بك). موقف المطوّر المعلن هو أن المحادثات لا تغادر الجهاز أبداً — سواء كان هاتفك أو جهاز سطح المكتب الذي تتصل به.',
           'يتمحور دعم النماذج حول عائلات مفتوحة المصدر خفيفة الوزن: Gemma وLlama وDeepSeek وQwen وMistral. وهذه هي نفس عائلات النماذج المستخدمة في معظم تطبيقات وأدوات LLM المحلية، ما يعني أن السقف العملي للجودة تحدده قدرة آيفون (أو جهاز سطح المكتب المتصل) على تشغيل نموذج كبير، وليس نموذجاً حصرياً خاصاً بـArbiter.',
         ],
@@ -2689,7 +2689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاتصال بنموذج أقوى على سطح المكتب** — إذا لم تكن جودة النموذج على الجهاز كافية لمهمة ما، يمكن لـArbiter الاتصال بنماذج تعمل على جهاز الكمبيوتر أو Mac الخاص بك عبر أدوات مثل LM Studio أو Ollama، أو عبر تطبيق "Arbiter for Mac" المرافق المنفصل. يحدث الاستدلال على جهاز سطح المكتب الذي تتحكم فيه؛ ويعمل الهاتف كواجهة. وهذا يتجنب المفاضلة بين الاقتصار على ما يمكن للهاتف تشغيله أو إرسال طلباتك إلى واجهة برمجة تطبيقات سحابية.',
           '**تلخيص المستندات** — يمكنك رفع مستندات على جهازك وجعل Arbiter يولّد ملخصات ويستخرج رؤى رئيسية، دون رفع الملف إلى خدمة سحابية أولاً.',
         ],
-        note: 'لا ينشر المطوّر بالتفصيل الحد الأدنى الدقيق لإصدار iOS، أو أحجام تنزيل كل نموذج، أو القائمة الكاملة لمتغيرات النماذج مفتوحة المصدر المدعومة. تحقق من التفاصيل الحالية عبر صفحة App Store أو askarbiter.ai قبل الاعتماد على نموذج محدد لجهاز محدد. آخر تحقق من قائمة App Store كان بتاريخ 2026-09-04.',
+        note: 'لا ينشر المطوّر بالتفصيل الحد الأدنى الدقيق لإصدار iOS، أو أحجام تنزيل كل نموذج، أو القائمة الكاملة لمتغيرات النماذج مفتوحة المصدر المدعومة. تحقق من التفاصيل الحالية عبر صفحة App Store أو [askarbiter.ai](https://www.askarbiter.ai/) قبل الاعتماد على نموذج محدد لجهاز محدد. آخر تحقق من قائمة App Store كان بتاريخ 2026-09-04.',
       },
       features: {
         id: 'features',
@@ -2921,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'ar',
-      'url': 'https://www.promptquorum.com/ar/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/ar/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter تطبيق مجاني لآيفون للدردشة الخاصة بالذكاء الاصطناعي على الجهاز، طوّره Jordan Stone. يشغّل نماذج مفتوحة المصدر (Gemma وLlama وDeepSeek وQwen وMistral) محلياً، أو يتصل بنماذج أكبر على جهاز الكمبيوتر أو Mac الخاص بك عبر LM Studio أو Ollama أو Arbiter for Mac.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -2935,7 +2935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ar/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/ar/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },
@@ -2945,7 +2945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/arbiter-local-ai-chat-review-2026-hero-ko.webp',
+    heroImage: '/images/arbiter-local-ai-chat-review-hero-ko.webp',
     title: 'Arbiter Local AI Chat 리뷰 (2026): 아이폰용 프라이빗 오프라인 AI',
     seoTitle: 'Arbiter AI 리뷰 2026: 프라이빗 오프라인 아이폰 채팅',
     intro:
@@ -3286,7 +3286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       'inLanguage': 'ko',
-      'url': 'https://www.promptquorum.com/ko/power-local-llm/arbiter-local-ai-chat-review-2026',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/arbiter-local-ai-chat-review',
       'articleBody': 'Arbiter는 Jordan Stone이 개발한, 프라이빗 온디바이스 AI 채팅을 위한 무료 아이폰 앱입니다. 오픈소스 모델(Gemma, Llama, DeepSeek, Qwen, Mistral)을 로컬로 실행하거나, LM Studio, Ollama, Arbiter for Mac을 통해 본인 소유의 PC나 Mac에 있는 더 큰 모델에 연결합니다.',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       'educationalLevel': 'Beginner',
@@ -3300,7 +3300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ko/power-local-llm/arbiter-local-ai-chat-review-2026',
+        '@id': 'https://www.promptquorum.com/ko/power-local-llm/arbiter-local-ai-chat-review',
       },
     },
   },

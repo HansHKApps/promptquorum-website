@@ -4,7 +4,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-en.webp',
+    heroImage: '/images/open-felix-review-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'License', content: 'Apache 2.0 — a permissive open-source license. You can inspect the source, self-host it, modify it, and use it commercially, provided you keep the required license and copyright notices in place.' },
           { title: 'Cost', content: 'Free.' },
         ],
-        note: 'Apache 2.0 is a common choice for developer tools because it is permissive (commercial use and modification are allowed) while still requiring attribution. It does not, by itself, guarantee ongoing maintenance, support, or that a hosted/paid tier will never be introduced later — check openfelix.com for the current terms before relying on that assumption.',
+        note: 'Apache 2.0 is a common choice for developer tools because it is permissive (commercial use and modification are allowed) while still requiring attribution. It does not, by itself, guarantee ongoing maintenance, support, or that a hosted/paid tier will never be introduced later — check [openfelix.com](https://openfelix.com/) for the current terms before relying on that assumption.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'The product\'s own site, describing the local-by-default Qwen/MLX design, cloud escalation options, feature set (voice/text hotkey, screen vision, code execution, YouTube summaries, cron scheduling, notifications), platform requirements, license, and the OpenClaw skills ecosystem.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'The product\'s own site, describing the local-by-default Qwen/MLX design, cloud escalation options, feature set (voice/text hotkey, screen vision, code execution, YouTube summaries, cron scheduling, notifications), platform requirements, license, and the OpenClaw skills ecosystem.' },
         ],
       },
       relatedReading: {
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-de.webp',
+    heroImage: '/images/open-felix-review-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Lizenz', content: 'Apache 2.0 — eine freizügige Open-Source-Lizenz. Sie können den Quellcode einsehen, selbst hosten, verändern und kommerziell nutzen, solange die vorgeschriebenen Lizenz- und Urheberrechtshinweise erhalten bleiben.' },
           { title: 'Kosten', content: 'Kostenlos.' },
         ],
-        note: 'Apache 2.0 ist eine gängige Wahl für Entwickler-Tools, da sie freizügig ist (kommerzielle Nutzung und Veränderung sind erlaubt), aber weiterhin eine Namensnennung verlangt. Sie garantiert für sich genommen keine laufende Wartung, keinen Support und nicht, dass nie ein kostenpflichtiges/gehostetes Angebot eingeführt wird — prüfen Sie die aktuellen Bedingungen auf openfelix.com, bevor Sie sich darauf verlassen.',
+        note: 'Apache 2.0 ist eine gängige Wahl für Entwickler-Tools, da sie freizügig ist (kommerzielle Nutzung und Veränderung sind erlaubt), aber weiterhin eine Namensnennung verlangt. Sie garantiert für sich genommen keine laufende Wartung, keinen Support und nicht, dass nie ein kostenpflichtiges/gehostetes Angebot eingeführt wird — prüfen Sie die aktuellen Bedingungen auf [openfelix.com](https://openfelix.com/), bevor Sie sich darauf verlassen.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'Die eigene Website des Produkts, die das lokal-first Qwen/MLX-Design, Cloud-Eskalationsoptionen, den Funktionsumfang (Sprach-/Text-Hotkey, Bildschirm-Erkennung, Code-Ausführung, YouTube-Zusammenfassungen, Cron-Planung, Benachrichtigungen), Plattformanforderungen, Lizenz und das OpenClaw-Skill-Ökosystem beschreibt.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'Die eigene Website des Produkts, die das lokal-first Qwen/MLX-Design, Cloud-Eskalationsoptionen, den Funktionsumfang (Sprach-/Text-Hotkey, Bildschirm-Erkennung, Code-Ausführung, YouTube-Zusammenfassungen, Cron-Planung, Benachrichtigungen), Plattformanforderungen, Lizenz und das OpenClaw-Skill-Ökosystem beschreibt.' },
         ],
       },
       relatedReading: {
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-fr.webp',
+    heroImage: '/images/open-felix-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Licence', content: 'Apache 2.0 — une licence open source permissive. Vous pouvez consulter le code source, l\'auto-héberger, le modifier et l\'utiliser commercialement, à condition de conserver les mentions de licence et de copyright requises.' },
           { title: 'Coût', content: 'Gratuit.' },
         ],
-        note: 'Apache 2.0 est un choix courant pour les outils développeurs car elle est permissive (usage commercial et modification autorisés) tout en exigeant une attribution. Elle ne garantit pas, à elle seule, une maintenance continue, un support, ni qu\'une offre payante/hébergée ne sera jamais introduite — vérifiez les conditions actuelles sur openfelix.com avant de vous y fier.',
+        note: 'Apache 2.0 est un choix courant pour les outils développeurs car elle est permissive (usage commercial et modification autorisés) tout en exigeant une attribution. Elle ne garantit pas, à elle seule, une maintenance continue, un support, ni qu\'une offre payante/hébergée ne sera jamais introduite — vérifiez les conditions actuelles sur [openfelix.com](https://openfelix.com/) avant de vous y fier.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'Le site officiel du produit, décrivant la conception local par défaut Qwen/MLX, les options d\'escalade cloud, l\'ensemble des fonctionnalités (raccourci voix/texte, vision d\'écran, exécution de code, résumés YouTube, planification cron, notifications), la configuration requise, la licence et l\'écosystème de compétences OpenClaw.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'Le site officiel du produit, décrivant la conception local par défaut Qwen/MLX, les options d\'escalade cloud, l\'ensemble des fonctionnalités (raccourci voix/texte, vision d\'écran, exécution de code, résumés YouTube, planification cron, notifications), la configuration requise, la licence et l\'écosystème de compétences OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-es.webp',
+    heroImage: '/images/open-felix-review-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Licencia', content: 'Apache 2.0 — una licencia de código abierto permisiva. Puedes inspeccionar el código fuente, autohospedarlo, modificarlo y usarlo comercialmente, siempre que conserves los avisos de licencia y copyright requeridos.' },
           { title: 'Costo', content: 'Gratis.' },
         ],
-        note: 'Apache 2.0 es una elección común para herramientas de desarrollo porque es permisiva (el uso comercial y la modificación están permitidos) a la vez que exige atribución. Por sí sola no garantiza mantenimiento continuo, soporte, ni que nunca se introduzca un nivel de pago u hospedado — revisa los términos actuales en openfelix.com antes de basarte en esa suposición.',
+        note: 'Apache 2.0 es una elección común para herramientas de desarrollo porque es permisiva (el uso comercial y la modificación están permitidos) a la vez que exige atribución. Por sí sola no garantiza mantenimiento continuo, soporte, ni que nunca se introduzca un nivel de pago u hospedado — revisa los términos actuales en [openfelix.com](https://openfelix.com/) antes de basarte en esa suposición.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'El sitio oficial del producto, que describe el diseño local por defecto Qwen/MLX, las opciones de escalado a la nube, el conjunto de funciones (atajo de voz/texto, visión de pantalla, ejecución de código, resúmenes de YouTube, programación cron, notificaciones), requisitos de plataforma, licencia y el ecosistema de skills OpenClaw.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'El sitio oficial del producto, que describe el diseño local por defecto Qwen/MLX, las opciones de escalado a la nube, el conjunto de funciones (atajo de voz/texto, visión de pantalla, ejecución de código, resúmenes de YouTube, programación cron, notificaciones), requisitos de plataforma, licencia y el ecosistema de skills OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-pt.webp',
+    heroImage: '/images/open-felix-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Licença', content: 'Apache 2.0 — uma licença de código aberto permissiva. Você pode inspecionar o código-fonte, hospedá-lo por conta própria, modificá-lo e usá-lo comercialmente, desde que mantenha os avisos de licença e direitos autorais exigidos.' },
           { title: 'Custo', content: 'Gratuito.' },
         ],
-        note: 'Apache 2.0 é uma escolha comum para ferramentas de desenvolvedores porque é permissiva (uso comercial e modificação são permitidos), mas ainda exige atribuição. Por si só, ela não garante manutenção contínua, suporte, nem que um nível pago/hospedado nunca será introduzido — confira os termos atuais em openfelix.com antes de contar com essa suposição.',
+        note: 'Apache 2.0 é uma escolha comum para ferramentas de desenvolvedores porque é permissiva (uso comercial e modificação são permitidos), mas ainda exige atribuição. Por si só, ela não garante manutenção contínua, suporte, nem que um nível pago/hospedado nunca será introduzido — confira os termos atuais em [openfelix.com](https://openfelix.com/) antes de contar com essa suposição.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'O site oficial do produto, descrevendo o design local por padrão com Qwen/MLX, as opções de escalonamento para a nuvem, o conjunto de recursos (atalho de voz/texto, visão de tela, execução de código, resumos de YouTube, agendamento cron, notificações), requisitos de plataforma, licença e o ecossistema de skills OpenClaw.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'O site oficial do produto, descrevendo o design local por padrão com Qwen/MLX, as opções de escalonamento para a nuvem, o conjunto de recursos (atalho de voz/texto, visão de tela, execução de código, resumos de YouTube, agendamento cron, notificações), requisitos de plataforma, licença e o ecossistema de skills OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-ja.webp',
+    heroImage: '/images/open-felix-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'ローカルファーストなQwen/MLX設計、クラウドエスカレーションのオプション、機能セット（音声/テキストホットキー、画面認識、コード実行、YouTube要約、cronスケジューリング、通知）、プラットフォーム要件、ライセンス、OpenClawスキルエコシステムを説明する製品公式サイト。' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'ローカルファーストなQwen/MLX設計、クラウドエスカレーションのオプション、機能セット（音声/テキストホットキー、画面認識、コード実行、YouTube要約、cronスケジューリング、通知）、プラットフォーム要件、ライセンス、OpenClawスキルエコシステムを説明する製品公式サイト。' },
         ],
       },
       relatedReading: {
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-zh.webp',
+    heroImage: '/images/open-felix-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: '产品官方网站，介绍了本地优先的Qwen/MLX设计、云端升级选项、功能集（语音/文本快捷键、屏幕识别、代码执行、YouTube总结、cron定时、通知）、平台要求、许可证以及OpenClaw技能生态系统。' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: '产品官方网站，介绍了本地优先的Qwen/MLX设计、云端升级选项、功能集（语音/文本快捷键、屏幕识别、代码执行、YouTube总结、cron定时、通知）、平台要求、许可证以及OpenClaw技能生态系统。' },
         ],
       },
       relatedReading: {
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-ar.webp',
+    heroImage: '/images/open-felix-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'الترخيص', content: 'Apache 2.0 — ترخيص مفتوح المصدر متساهل. يمكنك فحص الكود المصدري، واستضافته ذاتيًا، وتعديله، واستخدامه تجاريًا، طالما حافظت على إشعارات الترخيص وحقوق النشر المطلوبة.' },
           { title: 'التكلفة', content: 'مجاني.' },
         ],
-        note: 'يُعد Apache 2.0 خيارًا شائعًا لأدوات المطورين لأنه متساهل (الاستخدام التجاري والتعديل مسموحان) بينما لا يزال يتطلب نسب العمل إلى المصدر. لا يضمن بحد ذاته صيانة مستمرة أو دعمًا، ولا أنه لن يتم إطلاق مستوى مدفوع أو مُستضاف لاحقًا — راجع الشروط الحالية على openfelix.com قبل الاعتماد على هذا الافتراض.',
+        note: 'يُعد Apache 2.0 خيارًا شائعًا لأدوات المطورين لأنه متساهل (الاستخدام التجاري والتعديل مسموحان) بينما لا يزال يتطلب نسب العمل إلى المصدر. لا يضمن بحد ذاته صيانة مستمرة أو دعمًا، ولا أنه لن يتم إطلاق مستوى مدفوع أو مُستضاف لاحقًا — راجع الشروط الحالية على [openfelix.com](https://openfelix.com/) قبل الاعتماد على هذا الافتراض.',
       },
       whoShouldUse: {
         id: 'who-should-try',
@@ -1659,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'موقع المنتج الرسمي، الذي يصف تصميم Qwen/MLX المحلي بشكل افتراضي، وخيارات التصعيد السحابي، ومجموعة الميزات (اختصار الصوت/النص، رؤية الشاشة، تنفيذ التعليمات البرمجية، تلخيص YouTube، جدولة cron، الإشعارات)، ومتطلبات المنصة، والترخيص، ونظام مهارات OpenClaw.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'موقع المنتج الرسمي، الذي يصف تصميم Qwen/MLX المحلي بشكل افتراضي، وخيارات التصعيد السحابي، ومجموعة الميزات (اختصار الصوت/النص، رؤية الشاشة، تنفيذ التعليمات البرمجية، تلخيص YouTube، جدولة cron، الإشعارات)، ومتطلبات المنصة، والترخيص، ونظام مهارات OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/open-felix-review-2026-hero-ko.webp',
+    heroImage: '/images/open-felix-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1868,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://openfelix.com/', title: 'Open Felix', description: '로컬 우선 Qwen/MLX 설계, 클라우드 확장 옵션, 기능 세트(음성/텍스트 단축키, 화면 인식, 코드 실행, YouTube 요약, cron 예약, 알림), 플랫폼 요구 사항, 라이선스, OpenClaw 스킬 생태계를 설명하는 제품 공식 웹사이트.' },
+          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: '로컬 우선 Qwen/MLX 설계, 클라우드 확장 옵션, 기능 세트(음성/텍스트 단축키, 화면 인식, 코드 실행, YouTube 요약, cron 예약, 알림), 플랫폼 요구 사항, 라이선스, OpenClaw 스킬 생태계를 설명하는 제품 공식 웹사이트.' },
         ],
       },
       relatedReading: {

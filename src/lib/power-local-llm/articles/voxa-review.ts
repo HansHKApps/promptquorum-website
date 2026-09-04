@@ -4,7 +4,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-en.webp',
+    heroImage: '/images/voxa-review-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa voice assistant',
       'Voxa AI orb',
       'Voxa local voice assistant',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa is an open-source, MIT-licensed desktop voice assistant (Tauri v2) that runs as a floating, always-on-top orb — tap it to start a realtime voice conversation.** It is not exclusively local: it can use cloud realtime voice models (Gemini Live or OpenAI Realtime) or a self-hosted local daemon you configure yourself, and it saves notes as plain Markdown files on your own machine.',
     quickAnswerTop: {
@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Voxa official site', description: 'Product overview, platform availability, and setup information for Voxa, the source for the facts in this review.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa official site', description: 'Product overview, platform availability, and setup information for Voxa, the source for the facts in this review.' },
         ],
       },
       relatedReading: {
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-de.webp',
+    heroImage: '/images/voxa-review-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa Sprachassistent',
       'Voxa AI Orb',
       'Voxa lokaler Sprachassistent',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa ist ein Open-Source, MIT-lizenzierter Desktop-Sprachassistent (Tauri v2), der als schwebender, immer im Vordergrund bleibender Orb läuft — antippen, um ein Echtzeit-Sprachgespräch zu starten.** Er ist nicht ausschließlich lokal: Er kann Cloud-Echtzeit-Sprachmodelle (Gemini Live oder OpenAI Realtime) oder einen selbst gehosteten lokalen Daemon nutzen, und er speichert Notizen als reine Markdown-Dateien auf dem eigenen Rechner.',
     quickAnswerTop: {
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Voxa offizielle Website', description: 'Produktübersicht, Plattformverfügbarkeit und Einrichtungsinformationen für Voxa, die Quelle für die Fakten in diesem Review.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa offizielle Website', description: 'Produktübersicht, Plattformverfügbarkeit und Einrichtungsinformationen für Voxa, die Quelle für die Fakten in diesem Review.' },
         ],
       },
       relatedReading: {
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-fr.webp',
+    heroImage: '/images/voxa-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa assistant vocal',
       'Voxa orbe IA',
       'Voxa assistant vocal local',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa est un assistant vocal de bureau open source sous licence MIT (Tauri v2) qui se présente sous forme d\'orbe flottant, toujours au premier plan — le toucher pour démarrer une conversation vocale en temps réel.** Il n\'est pas exclusivement local : il peut utiliser des modèles vocaux temps réel cloud (Gemini Live ou OpenAI Realtime) ou un démon local auto-hébergé que vous configurez vous-même, et il enregistre les notes sous forme de fichiers Markdown en clair sur votre propre machine.',
     quickAnswerTop: {
@@ -652,7 +652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Site officiel de Voxa', description: 'Présentation du produit, disponibilité par plateforme et informations de configuration pour Voxa, source des faits de cet avis.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Site officiel de Voxa', description: 'Présentation du produit, disponibilité par plateforme et informations de configuration pour Voxa, source des faits de cet avis.' },
         ],
       },
       relatedReading: {
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-es.webp',
+    heroImage: '/images/voxa-review-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa asistente de voz',
       'Voxa orbe IA',
       'Voxa asistente de voz local',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa es un asistente de voz de escritorio de código abierto bajo licencia MIT (Tauri v2) que funciona como un orbe flotante, siempre visible — tócalo para iniciar una conversación de voz en tiempo real.** No es exclusivamente local: puede usar modelos de voz en tiempo real en la nube (Gemini Live u OpenAI Realtime) o un daemon local autoalojado que configuras tú mismo, y guarda notas como archivos Markdown planos en tu propio equipo.',
     quickAnswerTop: {
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Sitio oficial de Voxa', description: 'Descripción del producto, disponibilidad por plataforma e información de configuración de Voxa, la fuente de los datos de esta reseña.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Sitio oficial de Voxa', description: 'Descripción del producto, disponibilidad por plataforma e información de configuración de Voxa, la fuente de los datos de esta reseña.' },
         ],
       },
       relatedReading: {
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-pt.webp',
+    heroImage: '/images/voxa-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa assistente de voz',
       'Voxa orbe de IA',
       'Voxa assistente de voz local',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**O Voxa é um assistente de voz de desktop de código aberto sob licença MIT (Tauri v2) que funciona como um orbe flutuante, sempre visível — toque nele para iniciar uma conversa de voz em tempo real.** Ele não é exclusivamente local: pode usar modelos de voz em tempo real na nuvem (Gemini Live ou OpenAI Realtime) ou um daemon local auto-hospedado que você mesmo configura, e salva notas como arquivos Markdown simples no seu próprio computador.',
     quickAnswerTop: {
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Site oficial do Voxa', description: 'Visão geral do produto, disponibilidade por plataforma e informações de configuração do Voxa, a fonte dos fatos desta análise.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Site oficial do Voxa', description: 'Visão geral do produto, disponibilidade por plataforma e informações de configuração do Voxa, a fonte dos fatos desta análise.' },
         ],
       },
       relatedReading: {
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-ja.webp',
+    heroImage: '/images/voxa-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa 音声アシスタント',
       'Voxa AIオーブ',
       'Voxa ローカル音声アシスタント',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxaは、フローティングの常時最前面表示オーブとして動作する、MITライセンスのオープンソースデスクトップ音声アシスタント（Tauri v2）です。タップするとリアルタイム音声会話が始まります。** 完全にローカルというわけではなく、クラウドのリアルタイム音声モデル（Gemini LiveまたはOpenAI Realtime）か、自分で設定するセルフホスト型のローカルデーモンを使用でき、メモは自分のマシン上にプレーンなMarkdownファイルとして保存されます。',
     quickAnswerTop: {
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Voxa公式サイト', description: 'この記事のファクトの出典であるVoxaの製品概要、プラットフォーム対応状況、セットアップ情報。' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa公式サイト', description: 'この記事のファクトの出典であるVoxaの製品概要、プラットフォーム対応状況、セットアップ情報。' },
         ],
       },
       relatedReading: {
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-zh.webp',
+    heroImage: '/images/voxa-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa 语音助手',
       'Voxa AI悬浮球',
       'Voxa 本地语音助手',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa是一款MIT许可的开源桌面语音助手（基于Tauri v2构建），以浮动、始终置顶的悬浮球形式运行——点击即可开始实时语音对话。** 它并非完全本地运行：既可以使用云端实时语音模型（Gemini Live或OpenAI Realtime），也可以使用用户自行配置的自托管本地守护进程，并将笔记以纯Markdown文件形式保存在用户自己的机器上。',
     quickAnswerTop: {
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Voxa官方网站', description: 'Voxa的产品概览、平台可用性和安装信息，本评测中事实内容的来源。' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa官方网站', description: 'Voxa的产品概览、平台可用性和安装信息，本评测中事实内容的来源。' },
         ],
       },
       relatedReading: {
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-ar.webp',
+    heroImage: '/images/voxa-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa مساعد صوتي',
       'Voxa AI orb',
       'Voxa مساعد صوتي محلي',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa مساعد صوتي مفتوح المصدر لسطح المكتب برخصة MIT (مبني على Tauri v2) يعمل ككرة عائمة تظل دائماً في المقدمة — انقر عليها لبدء محادثة صوتية فورية.** وهو ليس محلياً حصرياً: يمكنه استخدام نماذج صوتية سحابية فورية (Gemini Live أو OpenAI Realtime) أو خدمة خلفية محلية ذاتية الاستضافة يقوم المستخدم بتهيئتها بنفسه، ويحفظ الملاحظات كملفات Markdown نصية بسيطة على جهاز المستخدم الخاص.',
     quickAnswerTop: {
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'الموقع الرسمي لـ Voxa', description: 'نظرة عامة على المنتج، وتوافر المنصات، ومعلومات الإعداد الخاصة بـ Voxa، وهي مصدر الحقائق الواردة في هذه المراجعة.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'الموقع الرسمي لـ Voxa', description: 'نظرة عامة على المنتج، وتوافر المنصات، ومعلومات الإعداد الخاصة بـ Voxa، وهي مصدر الحقائق الواردة في هذه المراجعة.' },
         ],
       },
       relatedReading: {
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voxa-review-2026-hero-ko.webp',
+    heroImage: '/images/voxa-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Voxa 음성 어시스턴트',
       'Voxa AI 오브',
       'Voxa 로컬 음성 어시스턴트',
-      'askvoxa.dev',
+      '[askvoxa.dev](https://askvoxa.dev/)',
     ],
     leadAnswerBlock: '**Voxa는 항상 최상단에 표시되는 플로팅 오브 형태로 작동하는 MIT 라이선스 오픈소스 데스크톱 음성 어시스턴트(Tauri v2 기반)입니다. 탭하면 실시간 음성 대화가 시작됩니다.** 완전히 로컬로만 작동하지는 않습니다. 클라우드 실시간 음성 모델(Gemini Live 또는 OpenAI Realtime)이나 사용자가 직접 설정하는 셀프 호스팅 로컬 데몬을 사용할 수 있으며, 메모는 순수 Markdown 파일로 사용자 자신의 기기에 저장됩니다.',
     quickAnswerTop: {
@@ -1984,7 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://askvoxa.dev/', title: 'Voxa 공식 사이트', description: '이 리뷰에 담긴 사실의 출처인 Voxa의 제품 개요, 플랫폼 지원 현황, 설정 정보.' },
+          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa 공식 사이트', description: '이 리뷰에 담긴 사실의 출처인 Voxa의 제품 개요, 플랫폼 지원 현황, 설정 정보.' },
         ],
       },
       relatedReading: {
