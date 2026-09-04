@@ -149,9 +149,11 @@ export function ToolDrawer({
               </Dialog.Description>
 
               <div className="flex flex-wrap items-center gap-2 mb-5">
-                <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-slate-50 text-slate-600 border-slate-200">
-                  {STATUS_LABEL[app.status]}
-                </span>
+                {app.status !== 'listed' && (
+                  <span className="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-emerald-50 text-emerald-700 border-emerald-200">
+                    {STATUS_LABEL[app.status]}
+                  </span>
+                )}
                 {app.stars != null && (
                   <span className="inline-flex items-center gap-1 text-xs text-text-secondary">
                     <StarIcon className="h-3.5 w-3.5 text-amber-400" />
@@ -182,7 +184,7 @@ export function ToolDrawer({
                   <DetailRow label="Layer" value={labelFor('layer', app.layer)} />
                   <DetailRow
                     label="Hardware"
-                    value={computeHardwareDisplay(app.hardware, machine).known ? <HardwareBlock hardware={app.hardware} machine={machine} compact /> : null}
+                    value={computeHardwareDisplay(app.hardware, machine, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact /> : null}
                   />
                   <DetailRow label="Added" value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow label="Last verified" value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />

@@ -3,7 +3,7 @@
 // Phase 3 of /Users/hanskuepper/.claude/plans/see-the-directory-page-virtual-cocke.md.
 
 import type { MachineType } from './types'
-import type { ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
+import type { EngineKey, ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
 
 const STORAGE_KEY = 'pq-directory-machine'
 
@@ -53,10 +53,50 @@ export interface HardwareDisplay {
 }
 
 /**
+ * What a tool demands when it carries no measured `hardware` record.
+ *
+ * A tool's memory cost is not a property of the tool — it is a property of
+ * whatever holds the model weights. So the answer is derivable from `engine`
+ * without inventing a per-tool number:
+ *   external -> a client only; the engine it connects to pays the cost
+ *   library  -> an SDK; the model the developer loads pays the cost
+ *   builtin  -> the tool itself loads weights, so a real floor exists, set by
+ *               model size (~8 GB system RAM for the common 7-8B 4-bit case)
+ */
+function derivedFromEngine(engine: EngineKey | 'TODO' | undefined): HardwareDisplay | null {
+  switch (engine) {
+    case 'external':
+      return {
+        known: true,
+        headline: 'Set by your engine',
+        detail: 'This is a client — Ollama, LM Studio or your server holds the model',
+        cpuFriendly: true,
+      }
+    case 'library':
+      return {
+        known: true,
+        headline: 'Set by the model you load',
+        detail: 'The library itself is lightweight',
+        cpuFriendly: true,
+      }
+    case 'builtin':
+    case 'both':
+      return {
+        known: true,
+        headline: '≈8 GB RAM for a 7B model',
+        detail: 'Loads models itself — scales with model size and quantisation',
+        cpuFriendly: true,
+      }
+    default:
+      return null
+  }
+}
+
+/**
  * Computes what to show for a tool's hardware requirement given the viewer's
- * selected machine type. `hardware` is null for the ~129 tools not yet
- * researched — callers must handle `known: false` (e.g. render "Not yet
- * researched" rather than a fabricated number).
+ * selected machine type. When a tool has no measured `hardware` record, falls
+ * back to what its `engine` implies (see derivedFromEngine) rather than
+ * rendering a blank row or a fabricated number.
  *
  * Apple Silicon uses unified memory, so a VRAM requirement is converted to an
  * approximate unified-memory floor: unifiedMin = max(ramGb, ceil(vramGb / 0.7))
@@ -65,10 +105,11 @@ export interface HardwareDisplay {
  */
 export function computeHardwareDisplay(
   hardware: ToolRecordHardware | null,
-  machine: MachineType
+  machine: MachineType,
+  engine?: EngineKey | 'TODO'
 ): HardwareDisplay {
   if (!hardware) {
-    return { known: false, headline: null, detail: null, cpuFriendly: false }
+    return derivedFromEngine(engine) ?? { known: false, headline: null, detail: null, cpuFriendly: false }
   }
 
   const { ramGb, vramGb, cpuOnly } = hardware
@@ -126,9 +167,19 @@ export function computeHardwareDisplay(
 }
 
 /** Numeric sort key for the hardware column: lower is "runs on less". Nulls sort last. */
-export function hardwareSortValue(hardware: ToolRecordHardware | null, machine: MachineType): number | null {
-  const display = computeHardwareDisplay(hardware, machine)
-  if (!hardware) return null
+export function hardwareSortValue(
+  hardware: ToolRecordHardware | null,
+  machine: MachineType,
+  engine?: EngineKey | 'TODO'
+): number | null {
+  const display = computeHardwareDisplay(hardware, machine, engine)
+  if (!hardware) {
+    // Clients and libraries add no memory cost of their own; bundled engines
+    // carry the ~8 GB floor of the model they load.
+    if (engine === 'external' || engine === 'library') return 0
+    if (engine === 'builtin' || engine === 'both') return 8
+    return null
+  }
   if (machine === 'apple') {
     const vramFloor = hardware.vramGb != null ? Math.ceil(hardware.vramGb / 0.7) : 0
     const unifiedMin = Math.max(hardware.ramGb ?? 0, vramFloor)

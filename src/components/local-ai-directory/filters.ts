@@ -140,7 +140,7 @@ export function sortTools(apps: ToolRecord[], key: SortKey, dir: SortDir, machin
       case 'added':
         return sign * nullsLast(a.addedDate, b.addedDate, (x, y) => x.localeCompare(y))
       case 'ram':
-        return sign * nullsLast(hardwareSortValue(a.hardware, machine), hardwareSortValue(b.hardware, machine), (x, y) => x - y)
+        return sign * nullsLast(hardwareSortValue(a.hardware, machine, a.engine), hardwareSortValue(b.hardware, machine, b.engine), (x, y) => x - y)
       case 'status': {
         const order: Record<string, number> = { tested: 0, verified: 1, listed: 2 }
         return sign * ((order[a.status] ?? 99) - (order[b.status] ?? 99))

@@ -78,7 +78,7 @@ export function ToolTable({
                 )}
               </td>
               <td className="p-2 sm:p-3 text-text-secondary">
-                <HardwareBlock hardware={app.hardware} machine={machine} compact />
+                <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact />
               </td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
