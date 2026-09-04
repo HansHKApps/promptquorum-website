@@ -30,7 +30,7 @@ import { emptyFilterState, type FilterState, type MachineType, type SortDir, typ
 import { cn } from '@/lib/utils'
 
 const MACHINE_LABEL: Record<MachineType, string> = {
-  dgpu: 'Discrete GPU',
+  dgpu: 'Graphics Card',
   apple: 'Apple Silicon',
   cpu: 'CPU only',
 }
