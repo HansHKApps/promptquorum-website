@@ -1,5 +1,5 @@
 // Locally AI Review: Private Offline LLMs on iPhone, iPad and Mac
-// Slug: locally-ai-review-2026
+// Slug: locally-ai-review
 // Companion to: loci-ai-review-offline-local-ai, best-local-llm-apps-iphone-2026
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-en.webp',
+    heroImage: '/images/locally-ai-review-hero-en.webp',
     title: 'Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac',
     seoTitle: 'Locally AI Review 2026: Offline LLMs on Apple Devices',
     intro:
@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visit Locally AI official site →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visit Locally AI official site →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-de.webp',
+    heroImage: '/images/locally-ai-review-hero-de.webp',
     title: 'Locally AI Review (2026): Private Offline-LLMs auf iPhone, iPad und Mac',
     seoTitle: 'Locally AI Review 2026: Offline-LLMs auf Apple-Geräten',
     intro:
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Zur offiziellen Locally AI-Website →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Zur offiziellen Locally AI-Website →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI Review',
     targetKeywords: [
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-fr.webp',
+    heroImage: '/images/locally-ai-review-hero-fr.webp',
     title: 'Locally AI Review (2026) : LLM privés hors ligne sur iPhone, iPad et Mac',
     seoTitle: 'Locally AI Review 2026 : LLM hors ligne sur appareils Apple',
     intro:
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visiter le site officiel de Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visiter le site officiel de Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-es.webp',
+    heroImage: '/images/locally-ai-review-hero-es.webp',
     title: 'Locally AI Review (2026): LLM privados sin conexión en iPhone, iPad y Mac',
     seoTitle: 'Locally AI Review 2026: LLM sin conexión en dispositivos Apple',
     intro:
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar el sitio oficial de Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visitar el sitio oficial de Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -1216,7 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-pt.webp',
+    heroImage: '/images/locally-ai-review-hero-pt.webp',
     title: 'Locally AI Review (2026): LLMs privados offline no iPhone, iPad e Mac',
     seoTitle: 'Locally AI Review 2026: LLMs offline em dispositivos Apple',
     intro:
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar o site oficial do Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visitar o site oficial do Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-ja.webp',
+    heroImage: '/images/locally-ai-review-hero-ja.webp',
     title: 'Locally AIレビュー(2026):iPhone・iPad・Macで動くプライベートなオフラインLLM',
     seoTitle: 'Locally AIレビュー2026:AppleデバイスのオフラインLLM',
     intro:
@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Locally AI公式サイトを見る →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Locally AI公式サイトを見る →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AIレビュー',
     targetKeywords: [
@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-zh.webp',
+    heroImage: '/images/locally-ai-review-hero-zh.webp',
     title: 'Locally AI评测(2026):在iPhone、iPad和Mac上运行私密离线LLM',
     seoTitle: 'Locally AI评测2026:Apple设备上的离线LLM',
     intro:
@@ -1833,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: '访问Locally AI官网 →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: '访问Locally AI官网 →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI评测',
     targetKeywords: [
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-ar.webp',
+    heroImage: '/images/locally-ai-review-hero-ar.webp',
     title: 'مراجعة Locally AI (2026): نماذج لغوية خاصة تعمل دون اتصال على iPhone وiPad وMac',
     seoTitle: 'مراجعة Locally AI 2026: نماذج لغوية دون اتصال على أجهزة Apple',
     intro:
@@ -2134,7 +2134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'زيارة موقع Locally AI الرسمي ←', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'زيارة موقع Locally AI الرسمي ←', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'مراجعة Locally AI',
     targetKeywords: [
@@ -2420,7 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-04',
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/locally-ai-review-2026-hero-ko.webp',
+    heroImage: '/images/locally-ai-review-hero-ko.webp',
     title: 'Locally AI 리뷰(2026): iPhone·iPad·Mac에서 쓰는 프라이빗 오프라인 LLM',
     seoTitle: 'Locally AI 리뷰 2026: Apple 기기용 오프라인 LLM',
     intro:
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Locally AI 공식 사이트 방문 →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Locally AI 공식 사이트 방문 →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI 리뷰',
     targetKeywords: [

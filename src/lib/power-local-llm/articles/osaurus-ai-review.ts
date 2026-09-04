@@ -4,7 +4,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-en.webp',
+    heroImage: '/images/osaurus-ai-review-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'free on-device AI app Mac',
       'Osaurus vs LM Studio',
       'native Apple Silicon AI app',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus is a free, open-source (MIT-licensed) native Swift app for Apple Silicon Macs running macOS 15.5 or later that runs open-source AI models entirely on-device — the vendor states nothing leaves your Mac by default. It works with Ollama, MLX, and LM Studio backends, includes agent-building features (file reading, tool execution, autonomous task management, shared memory across models), and can optionally connect to cloud providers (OpenAI, Anthropic, Google Gemini) if you choose to configure one. It requires no account, subscription, or usage caps.',
     quickAnswerTop: {
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Native Swift app built specifically for Apple Silicon, not a cross-platform Electron wrapper',
         ],
         callouts: [
-          { type: 'note', text: 'This review is based on Osaurus\'s official site (osaurus.ai) and public product information, not independent hands-on benchmarking. Specific speed or accuracy numbers are not included because they have not been independently measured for this article.' },
+          { type: 'note', text: 'This review is based on Osaurus\'s official site ([osaurus.ai](https://osaurus.ai/)) and public product information, not independent hands-on benchmarking. Specific speed or accuracy numbers are not included because they have not been independently measured for this article.' },
         ],
       },
       pricing: {
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — Official Site', description: 'Product page listing platform requirements, supported backends, agent features, and privacy claims for Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Official Site', description: 'Product page listing platform requirements, supported backends, agent features, and privacy claims for Osaurus.' },
         ],
       },
       relatedReading: {
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-de.webp',
+    heroImage: '/images/osaurus-ai-review-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'kostenlose On-Device-KI-App Mac',
       'Osaurus vs LM Studio',
       'native Apple-Silicon-KI-App',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus ist eine kostenlose, quelloffene (MIT-lizenzierte) native Swift-App für Apple-Silicon-Macs unter macOS 15.5 oder neuer, die Open-Source-KI-Modelle vollständig auf dem Gerät ausführt — der Hersteller erklärt, dass standardmäßig nichts Ihren Mac verlässt. Sie funktioniert mit den Backends Ollama, MLX und LM Studio, enthält Agenten-Funktionen (Dateizugriff, Tool-Ausführung, autonomes Aufgabenmanagement, geteilter Speicher über mehrere Modelle hinweg) und kann optional mit Cloud-Anbietern (OpenAI, Anthropic, Google Gemini) verbunden werden, wenn Sie dies einrichten. Es ist kein Konto, Abonnement oder Nutzungslimit erforderlich.',
     quickAnswerTop: {
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Native Swift-App speziell für Apple Silicon, kein plattformübergreifender Electron-Wrapper',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf der offiziellen Website von Osaurus (osaurus.ai) und öffentlichen Produktinformationen, nicht auf unabhängigen praktischen Benchmarks. Konkrete Geschwindigkeits- oder Genauigkeitswerte sind nicht enthalten, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
+          { type: 'note', text: 'Dieser Test basiert auf der offiziellen Website von Osaurus ([osaurus.ai](https://osaurus.ai/)) und öffentlichen Produktinformationen, nicht auf unabhängigen praktischen Benchmarks. Konkrete Geschwindigkeits- oder Genauigkeitswerte sind nicht enthalten, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
         ],
       },
       pricing: {
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — Offizielle Website', description: 'Produktseite mit Plattformanforderungen, unterstützten Backends, Agenten-Funktionen und Datenschutzangaben zu Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Offizielle Website', description: 'Produktseite mit Plattformanforderungen, unterstützten Backends, Agenten-Funktionen und Datenschutzangaben zu Osaurus.' },
         ],
       },
       relatedReading: {
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-fr.webp',
+    heroImage: '/images/osaurus-ai-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application IA locale gratuite Mac',
       'Osaurus vs LM Studio',
       'application IA native Apple Silicon',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus est une application Swift native gratuite et open source (licence MIT) pour Mac Apple Silicon sous macOS 15.5 ou version ultérieure, qui exécute des modèles d\'IA open source entièrement sur l\'appareil — l\'éditeur indique que rien ne quitte votre Mac par défaut. Elle fonctionne avec les backends Ollama, MLX et LM Studio, inclut des fonctionnalités d\'agent (lecture de fichiers, exécution d\'outils, gestion autonome des tâches, mémoire partagée entre modèles) et peut se connecter en option à des fournisseurs cloud (OpenAI, Anthropic, Google Gemini) si vous le configurez. Aucun compte, abonnement ni quota d\'usage n\'est requis.',
     quickAnswerTop: {
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Application Swift native conçue spécifiquement pour Apple Silicon, et non un wrapper Electron multiplateforme',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis s\'appuie sur le site officiel d\'Osaurus (osaurus.ai) et des informations produit publiques, pas sur des tests indépendants pratiques. Aucun chiffre précis de vitesse ou de précision n\'est inclus car aucun n\'a été mesuré indépendamment pour cet article.' },
+          { type: 'note', text: 'Cet avis s\'appuie sur le site officiel d\'Osaurus ([osaurus.ai](https://osaurus.ai/)) et des informations produit publiques, pas sur des tests indépendants pratiques. Aucun chiffre précis de vitesse ou de précision n\'est inclus car aucun n\'a été mesuré indépendamment pour cet article.' },
         ],
       },
       pricing: {
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — Site officiel', description: 'Page produit répertoriant les prérequis de plateforme, les backends pris en charge, les fonctionnalités d\'agent et les déclarations de confidentialité d\'Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Site officiel', description: 'Page produit répertoriant les prérequis de plateforme, les backends pris en charge, les fonctionnalités d\'agent et les déclarations de confidentialité d\'Osaurus.' },
         ],
       },
       relatedReading: {
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-ja.webp',
+    heroImage: '/images/osaurus-ai-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '無料 オンデバイスAIアプリ Mac',
       'Osaurus vs LM Studio',
       'ネイティブ Apple Silicon AIアプリ',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'OsaurusはmacOS 15.5以降のApple SiliconのMac向けの無料でオープンソース（MITライセンス）のネイティブSwiftアプリで、オープンソースAIモデルを完全にオンデバイスで実行します——開発元は、デフォルトでは何もMacの外に出ないとしています。Ollama、MLX、LM Studioのバックエンドに対応し、エージェント機能（ファイル読み取り、ツール実行、自律的なタスク管理、複数モデル間での共有メモリ）を含み、設定すればOpenAI、Anthropic、Google Geminiなどのクラウドプロバイダーにもオプションで接続できます。アカウント、サブスクリプション、利用上限は不要です。',
     quickAnswerTop: {
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apple Silicon専用に作られたネイティブSwiftアプリで、クロスプラットフォームのElectronラッパーではない',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューはOsaurusの公式サイト（osaurus.ai）と公開されている製品情報に基づいており、独自の実機ベンチマークではありません。具体的な速度や精度の数値は、この記事のために独自に測定していないため含まれていません。' },
+          { type: 'note', text: 'このレビューはOsaurusの公式サイト（[osaurus.ai](https://osaurus.ai/)）と公開されている製品情報に基づいており、独自の実機ベンチマークではありません。具体的な速度や精度の数値は、この記事のために独自に測定していないため含まれていません。' },
         ],
       },
       pricing: {
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — 公式サイト', description: 'Osaurusのプラットフォーム要件、対応バックエンド、エージェント機能、プライバシーに関する主張を掲載した製品ページ。' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 公式サイト', description: 'Osaurusのプラットフォーム要件、対応バックエンド、エージェント機能、プライバシーに関する主張を掲載した製品ページ。' },
         ],
       },
       relatedReading: {
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-zh.webp',
+    heroImage: '/images/osaurus-ai-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '免费本地AI应用 Mac',
       'Osaurus vs LM Studio',
       '原生 Apple Silicon AI 应用',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus 是一款面向 macOS 15.5 及以上版本 Apple Silicon Mac 的免费开源（MIT 许可）原生 Swift 应用，可完全在设备本地运行开源 AI 模型——厂商表示默认情况下没有任何数据离开你的 Mac。它支持 Ollama、MLX 和 LM Studio 后端，包含智能体功能（文件读取、工具执行、自主任务管理、跨模型共享记忆），如果你选择配置，也可以选配连接 OpenAI、Anthropic、Google Gemini 等云服务商。无需账户、订阅或使用上限。',
     quickAnswerTop: {
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '专为 Apple Silicon 打造的原生 Swift 应用，而非跨平台的 Electron 封装应用',
         ],
         callouts: [
-          { type: 'note', text: '本评测基于 Osaurus 官方网站（osaurus.ai）和公开的产品信息，并非独立的实机基准测试。文中未包含具体的速度或准确性数据，因为本文未对其进行独立测量。' },
+          { type: 'note', text: '本评测基于 Osaurus 官方网站（[osaurus.ai](https://osaurus.ai/)）和公开的产品信息，并非独立的实机基准测试。文中未包含具体的速度或准确性数据，因为本文未对其进行独立测量。' },
         ],
       },
       pricing: {
@@ -1463,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — 官方网站', description: '列出 Osaurus 平台要求、支持的后端、智能体功能和隐私声明的产品页面。' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 官方网站', description: '列出 Osaurus 平台要求、支持的后端、智能体功能和隐私声明的产品页面。' },
         ],
       },
       relatedReading: {
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-es.webp',
+    heroImage: '/images/osaurus-ai-review-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app IA local gratis Mac',
       'Osaurus vs LM Studio',
       'app IA nativa Apple Silicon',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus es una app nativa en Swift, gratuita y de código abierto (licencia MIT) para Mac con Apple Silicon con macOS 15.5 o posterior, que ejecuta modelos de IA de código abierto totalmente en el dispositivo — el proveedor indica que nada sale de tu Mac por defecto. Funciona con los backends Ollama, MLX y LM Studio, incluye funciones para construir agentes (lectura de archivos, ejecución de herramientas, gestión autónoma de tareas, memoria compartida entre modelos) y puede conectarse opcionalmente a proveedores cloud (OpenAI, Anthropic, Google Gemini) si lo configuras. No requiere cuenta, suscripción ni límites de uso.',
     quickAnswerTop: {
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'App nativa en Swift creada específicamente para Apple Silicon, no un wrapper multiplataforma tipo Electron',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña se basa en el sitio oficial de Osaurus (osaurus.ai) e información pública del producto, no en pruebas prácticas independientes. No se incluyen cifras concretas de velocidad o precisión porque no se han medido de forma independiente para este artículo.' },
+          { type: 'note', text: 'Esta reseña se basa en el sitio oficial de Osaurus ([osaurus.ai](https://osaurus.ai/)) e información pública del producto, no en pruebas prácticas independientes. No se incluyen cifras concretas de velocidad o precisión porque no se han medido de forma independiente para este artículo.' },
         ],
       },
       pricing: {
@@ -1758,7 +1758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — Sitio oficial', description: 'Página de producto con los requisitos de plataforma, backends compatibles, funciones de agente y afirmaciones de privacidad de Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Sitio oficial', description: 'Página de producto con los requisitos de plataforma, backends compatibles, funciones de agente y afirmaciones de privacidad de Osaurus.' },
         ],
       },
       relatedReading: {
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-pt.webp',
+    heroImage: '/images/osaurus-ai-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app IA local gratuito Mac',
       'Osaurus vs LM Studio',
       'app IA nativo Apple Silicon',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'O Osaurus é um app nativo em Swift, gratuito e de código aberto (licença MIT) para Macs com Apple Silicon rodando macOS 15.5 ou posterior, que executa modelos de IA de código aberto totalmente no dispositivo — o fornecedor afirma que nada sai do seu Mac por padrão. Ele funciona com os backends Ollama, MLX e LM Studio, inclui recursos de construção de agentes (leitura de arquivos, execução de ferramentas, gerenciamento autônomo de tarefas, memória compartilhada entre modelos) e pode se conectar opcionalmente a provedores de nuvem (OpenAI, Anthropic, Google Gemini) se você configurar isso. Não exige conta, assinatura ou limites de uso.',
     quickAnswerTop: {
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'App nativo em Swift criado especificamente para Apple Silicon, não um wrapper multiplataforma tipo Electron',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é baseada no site oficial do Osaurus (osaurus.ai) e em informações públicas do produto, não em testes práticos independentes. Números específicos de velocidade ou precisão não são incluídos porque não foram medidos de forma independente para este artigo.' },
+          { type: 'note', text: 'Esta análise é baseada no site oficial do Osaurus ([osaurus.ai](https://osaurus.ai/)) e em informações públicas do produto, não em testes práticos independentes. Números específicos de velocidade ou precisão não são incluídos porque não foram medidos de forma independente para este artigo.' },
         ],
       },
       pricing: {
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — Site oficial', description: 'Página do produto com requisitos de plataforma, backends suportados, recursos de agente e declarações de privacidade do Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Site oficial', description: 'Página do produto com requisitos de plataforma, backends suportados, recursos de agente e declarações de privacidade do Osaurus.' },
         ],
       },
       relatedReading: {
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-ar.webp',
+    heroImage: '/images/osaurus-ai-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -2090,7 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق ذكاء اصطناعي محلي مجاني Mac',
       'Osaurus مقابل LM Studio',
       'تطبيق ذكاء اصطناعي أصلي Apple Silicon',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus هو تطبيق Swift أصلي مجاني ومفتوح المصدر (مرخّص بموجب MIT) لأجهزة Mac التي تعمل بمعالج Apple Silicon تحت macOS 15.5 أو أحدث، يشغّل نماذج الذكاء الاصطناعي مفتوحة المصدر بالكامل على الجهاز — وتذكر الشركة المصنّعة أن لا شيء يغادر جهاز Mac الخاص بك افتراضيًا. يعمل مع خلفيات Ollama وMLX وLM Studio، ويتضمن ميزات بناء الوكلاء (قراءة الملفات، تنفيذ الأدوات، إدارة المهام المستقلة، الذاكرة المشتركة بين النماذج)، ويمكنه الاتصال اختياريًا بمزودي سحابة (OpenAI وAnthropic وGoogle Gemini) إذا قمت بإعداد ذلك. لا يتطلب حسابًا أو اشتراكًا أو حدود استخدام.',
     quickAnswerTop: {
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تطبيق Swift أصلي مصمم خصيصًا لـ Apple Silicon، وليس غلاف Electron متعدد المنصات',
         ],
         callouts: [
-          { type: 'note', text: 'تستند هذه المراجعة إلى الموقع الرسمي لـ Osaurus (osaurus.ai) ومعلومات المنتج العامة، وليست اختبارًا عمليًا مستقلاً. لا يتضمن هذا المقال أرقام سرعة أو دقة محددة لأنها لم تُقَس بشكل مستقل لهذا المقال.' },
+          { type: 'note', text: 'تستند هذه المراجعة إلى الموقع الرسمي لـ Osaurus ([osaurus.ai](https://osaurus.ai/)) ومعلومات المنتج العامة، وليست اختبارًا عمليًا مستقلاً. لا يتضمن هذا المقال أرقام سرعة أو دقة محددة لأنها لم تُقَس بشكل مستقل لهذا المقال.' },
         ],
       },
       pricing: {
@@ -2348,7 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — الموقع الرسمي', description: 'صفحة المنتج التي تسرد متطلبات المنصة، والخلفيات المدعومة، وميزات الوكيل، وإقرارات الخصوصية لـ Osaurus.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — الموقع الرسمي', description: 'صفحة المنتج التي تسرد متطلبات المنصة، والخلفيات المدعومة، وميزات الوكيل، وإقرارات الخصوصية لـ Osaurus.' },
         ],
       },
       relatedReading: {
@@ -2366,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/osaurus-ai-review-2026-hero-ko.webp',
+    heroImage: '/images/osaurus-ai-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '무료 온디바이스 AI 앱 Mac',
       'Osaurus vs LM Studio',
       '네이티브 Apple Silicon AI 앱',
-      'osaurus.ai',
+      '[osaurus.ai](https://osaurus.ai/)',
     ],
     leadAnswerBlock: 'Osaurus는 macOS 15.5 이상을 실행하는 Apple Silicon Mac용 무료 오픈소스(MIT 라이선스) 네이티브 Swift 앱으로, 오픈소스 AI 모델을 완전히 온디바이스에서 실행합니다 — 제조사는 기본적으로 어떤 데이터도 Mac을 벗어나지 않는다고 밝히고 있습니다. Ollama, MLX, LM Studio 백엔드와 작동하며, 에이전트 구축 기능(파일 읽기, 도구 실행, 자율적인 작업 관리, 여러 모델 간 공유 메모리)을 포함하고, 설정하면 OpenAI, Anthropic, Google Gemini 등 클라우드 제공업체에도 선택적으로 연결할 수 있습니다. 계정, 구독, 사용 한도가 필요하지 않습니다.',
     quickAnswerTop: {
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apple Silicon 전용으로 제작된 네이티브 Swift 앱으로, 크로스플랫폼 Electron 래퍼가 아님',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 Osaurus 공식 웹사이트(osaurus.ai)와 공개된 제품 정보를 기반으로 하며, 독자적인 실사용 벤치마크가 아닙니다. 이 기사에서 독립적으로 측정하지 않았기 때문에 구체적인 속도나 정확도 수치는 포함되어 있지 않습니다.' },
+          { type: 'note', text: '이 리뷰는 Osaurus 공식 웹사이트([osaurus.ai](https://osaurus.ai/))와 공개된 제품 정보를 기반으로 하며, 독자적인 실사용 벤치마크가 아닙니다. 이 기사에서 독립적으로 측정하지 않았기 때문에 구체적인 속도나 정확도 수치는 포함되어 있지 않습니다.' },
         ],
       },
       pricing: {
@@ -2643,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://osaurus.ai', title: 'Osaurus — 공식 웹사이트', description: 'Osaurus의 플랫폼 요구 사항, 지원 백엔드, 에이전트 기능, 개인정보 보호 주장을 나열한 제품 페이지.' },
+          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 공식 웹사이트', description: 'Osaurus의 플랫폼 요구 사항, 지원 백엔드, 에이전트 기능, 개인정보 보호 주장을 나열한 제품 페이지.' },
         ],
       },
       relatedReading: {

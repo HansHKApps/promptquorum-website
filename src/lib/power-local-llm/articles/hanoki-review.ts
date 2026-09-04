@@ -4,7 +4,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-en.webp',
+    heroImage: '/images/hanoki-review-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'branching AI chat app',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki is a macOS desktop chat app built around a branching conversation interface, letting you fork any AI reply into alternative response paths and organize chats into nested, pinnable folders. It is a hybrid app, not a local-only one: Hanoki can run models locally through your own running Ollama instance, or use cloud models like Claude and GPT-4 through API keys you supply and pay for yourself. Chats and settings are stored in a local SQLite file on your device rather than on Hanoki\'s own servers, and no account is required to use the app.',
     quickAnswerTop: {
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: 'What Is Hanoki?',
-        content: '**Hanoki is a desktop chat application for macOS built around a branching conversation interface, designed to work with any AI model rather than being tied to a single provider.** Published at hanoki.app, it lets you fork a conversation at any point to try an alternative prompt or response, then keeps both branches accessible instead of overwriting the original thread.',
+        content: '**Hanoki is a desktop chat application for macOS built around a branching conversation interface, designed to work with any AI model rather than being tied to a single provider.** Published at [hanoki.app](https://hanoki.app/), it lets you fork a conversation at any point to try an alternative prompt or response, then keeps both branches accessible instead of overwriting the original thread.',
         items: [
           'Branching/forking: create alternative response paths from any point in a conversation instead of only editing and resending a message',
           'Nested folders: organize chats hierarchically rather than in one flat list',
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Do You Set Up Hanoki?',
         content: 'Getting Hanoki running takes a handful of steps, and the path differs depending on whether you want cloud models, local models, or both.',
         numberedItems: [
-          'Download Hanoki for macOS from hanoki.app and install it.',
+          'Download Hanoki for macOS from [hanoki.app](https://hanoki.app/) and install it.',
           'Open the app and decide whether you want cloud models, local models via Ollama, or both.',
           'For cloud models: obtain an API key from the provider you want to use (for example Anthropic for Claude, or OpenAI for GPT-4) and add it in Hanoki\'s settings — usage is billed to you directly by that provider.',
           'For local models: install Ollama separately, start it, and download a model through Ollama before pointing Hanoki at your running Ollama instance.',
@@ -198,10 +198,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Not a one-click local AI app: local inference requires separately installing, running, and maintaining Ollama',
           'Cloud model use requires your own paid API keys from providers like Anthropic or OpenAI — Hanoki does not include free or bundled cloud usage',
           'macOS only today; Windows and Linux support is stated by developers as codebase-supported but not confirmed shipped',
-          'No independently verified pricing information for this review — check hanoki.app directly for current terms',
+          'No independently verified pricing information for this review — check [hanoki.app](https://hanoki.app/) directly for current terms',
           'No independent security audit of local SQLite storage or the app\'s network behavior was available for this review',
         ],
-        note: 'If any of these gaps are decision-critical, verify current platform availability, pricing, and API-key requirements directly at hanoki.app before adopting Hanoki for your workflow.',
+        note: 'If any of these gaps are decision-critical, verify current platform availability, pricing, and API-key requirements directly at [hanoki.app](https://hanoki.app/) before adopting Hanoki for your workflow.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is Hanoki?', a: 'Hanoki is a macOS desktop chat app built around a branching conversation interface — you can fork any AI reply into an alternative path, organize chats into nested folders, and pin the branches that matter.' },
-          { q: 'Is Hanoki free?', a: 'This review does not have independently verified current pricing for Hanoki. Check hanoki.app directly for up-to-date pricing before deciding.' },
+          { q: 'Is Hanoki free?', a: 'This review does not have independently verified current pricing for Hanoki. Check [hanoki.app](https://hanoki.app/) directly for up-to-date pricing before deciding.' },
           { q: 'Is Hanoki a local AI app?', a: 'Hanoki is a hybrid app, not a local-only one. It defaults to cloud models via your own API keys; local inference is available only if you separately install and run Ollama.' },
           { q: 'Does Hanoki work with Ollama?', a: 'Yes. Point Hanoki at a running Ollama instance on your machine to use local models instead of, or alongside, cloud models.' },
           { q: 'What cloud models does Hanoki support?', a: 'Hanoki is designed to work with any cloud model you can access via your own API key, including models like Claude (Anthropic) and GPT-4 (OpenAI).' },
@@ -233,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — Official Site', description: 'Product page for Hanoki, describing its branching conversation interface, model support, local storage, and platform availability.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Official Site', description: 'Product page for Hanoki, describing its branching conversation interface, model support, local storage, and platform availability.' },
         ],
       },
       relatedReading: {
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki Review: Branching AI Chat App for Mac (2026)',
       description: 'Hanoki is a hybrid branching AI chat app for Mac — cloud models via your own API keys or local models via Ollama. Chats stored locally in SQLite.',
-      url: 'https://promptquorum.com/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/power-local-llm/hanoki-review',
       inLanguage: 'en',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -267,12 +267,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Local LLM chat apps' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/power-local-llm/hanoki-review' },
     },
   },
   de: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-de.webp',
+    heroImage: '/images/hanoki-review-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'verzweigte KI-Chat-App',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki ist eine macOS-Desktop-Chat-App, die um eine verzweigte Gesprächsoberfläche herum aufgebaut ist: Sie können jede KI-Antwort in alternative Antwortpfade verzweigen und Chats in verschachtelten, anheftbaren Ordnern organisieren. Hanoki ist eine Hybrid-App, keine rein lokale App: Sie kann Modelle lokal über eine eigene laufende Ollama-Instanz ausführen oder Cloud-Modelle wie Claude und GPT-4 über API-Schlüssel nutzen, die Sie selbst bereitstellen und bezahlen. Chats und Einstellungen werden in einer lokalen SQLite-Datei auf Ihrem Gerät gespeichert, nicht auf Hanokis eigenen Servern, und es ist kein Konto zur Nutzung der App erforderlich.',
     quickAnswerTop: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: 'Was ist Hanoki?',
-        content: '**Hanoki ist eine Desktop-Chat-Anwendung für macOS, die um eine verzweigte Gesprächsoberfläche herum aufgebaut ist und mit jedem KI-Modell funktionieren soll, statt an einen einzigen Anbieter gebunden zu sein.** Veröffentlicht unter hanoki.app, lässt sie Sie an jedem Punkt eines Gesprächs verzweigen, um einen alternativen Prompt oder eine alternative Antwort auszuprobieren, und behält dabei beide Zweige zugänglich, statt den ursprünglichen Verlauf zu überschreiben.',
+        content: '**Hanoki ist eine Desktop-Chat-Anwendung für macOS, die um eine verzweigte Gesprächsoberfläche herum aufgebaut ist und mit jedem KI-Modell funktionieren soll, statt an einen einzigen Anbieter gebunden zu sein.** Veröffentlicht unter [hanoki.app](https://hanoki.app/), lässt sie Sie an jedem Punkt eines Gesprächs verzweigen, um einen alternativen Prompt oder eine alternative Antwort auszuprobieren, und behält dabei beide Zweige zugänglich, statt den ursprünglichen Verlauf zu überschreiben.',
         items: [
           'Verzweigung/Forking: Erstellen Sie alternative Antwortpfade an jedem Punkt eines Gesprächs, statt eine Nachricht nur zu bearbeiten und erneut zu senden',
           'Verschachtelte Ordner: Organisieren Sie Chats hierarchisch statt in einer einzigen flachen Liste',
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie richten Sie Hanoki ein?',
         content: 'Hanoki zum Laufen zu bringen erfordert einige Schritte, und der Weg unterscheidet sich je nachdem, ob Sie Cloud-Modelle, lokale Modelle oder beides möchten.',
         numberedItems: [
-          'Laden Sie Hanoki für macOS von hanoki.app herunter und installieren Sie es.',
+          'Laden Sie Hanoki für macOS von [hanoki.app](https://hanoki.app/) herunter und installieren Sie es.',
           'Öffnen Sie die App und entscheiden Sie, ob Sie Cloud-Modelle, lokale Modelle über Ollama oder beides nutzen möchten.',
           'Für Cloud-Modelle: Besorgen Sie sich einen API-Schlüssel vom gewünschten Anbieter (zum Beispiel Anthropic für Claude oder OpenAI für GPT-4) und tragen Sie ihn in Hanokis Einstellungen ein — die Nutzung wird Ihnen direkt von diesem Anbieter berechnet.',
           'Für lokale Modelle: Installieren Sie Ollama separat, starten Sie es, und laden Sie ein Modell über Ollama herunter, bevor Sie Hanoki auf Ihre laufende Ollama-Instanz verweisen.',
@@ -466,10 +466,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Keine Ein-Klick-lokale-KI-App: Lokale Inferenz erfordert die separate Installation, den Betrieb und die Wartung von Ollama',
           'Cloud-Modellnutzung erfordert eigene bezahlte API-Schlüssel von Anbietern wie Anthropic oder OpenAI — Hanoki enthält keine kostenlose oder mitgelieferte Cloud-Nutzung',
           'Derzeit nur für macOS; Windows- und Linux-Unterstützung wird von den Entwicklern als codebasisseitig unterstützt, aber nicht als bestätigt verfügbar angegeben',
-          'Für diese Bewertung liegen keine unabhängig verifizierten Preisinformationen vor — prüfen Sie aktuelle Konditionen direkt auf hanoki.app',
+          'Für diese Bewertung liegen keine unabhängig verifizierten Preisinformationen vor — prüfen Sie aktuelle Konditionen direkt auf [hanoki.app](https://hanoki.app/)',
           'Für diese Bewertung lag kein unabhängiges Sicherheitsaudit der lokalen SQLite-Speicherung oder des Netzwerkverhaltens der App vor',
         ],
-        note: 'Wenn eine dieser Lücken für Ihre Entscheidung wichtig ist, prüfen Sie die aktuelle Plattformverfügbarkeit, die Preise und die API-Schlüssel-Anforderungen direkt auf hanoki.app, bevor Sie Hanoki für Ihren Workflow einsetzen.',
+        note: 'Wenn eine dieser Lücken für Ihre Entscheidung wichtig ist, prüfen Sie die aktuelle Plattformverfügbarkeit, die Preise und die API-Schlüssel-Anforderungen direkt auf [hanoki.app](https://hanoki.app/), bevor Sie Hanoki für Ihren Workflow einsetzen.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist Hanoki?', a: 'Hanoki ist eine macOS-Desktop-Chat-App, die um eine verzweigte Gesprächsoberfläche herum aufgebaut ist — Sie können jede KI-Antwort in einen alternativen Pfad verzweigen, Chats in verschachtelten Ordnern organisieren und wichtige Zweige anheften.' },
-          { q: 'Ist Hanoki kostenlos?', a: 'Für diese Bewertung liegen keine unabhängig verifizierten aktuellen Preisangaben für Hanoki vor. Prüfen Sie aktuelle Preise direkt auf hanoki.app, bevor Sie sich entscheiden.' },
+          { q: 'Ist Hanoki kostenlos?', a: 'Für diese Bewertung liegen keine unabhängig verifizierten aktuellen Preisangaben für Hanoki vor. Prüfen Sie aktuelle Preise direkt auf [hanoki.app](https://hanoki.app/), bevor Sie sich entscheiden.' },
           { q: 'Ist Hanoki eine lokale KI-App?', a: 'Hanoki ist eine Hybrid-App, keine rein lokale App. Standardmäßig nutzt sie Cloud-Modelle über Ihre eigenen API-Schlüssel; lokale Inferenz ist nur verfügbar, wenn Sie selbst Ollama installieren und ausführen.' },
           { q: 'Funktioniert Hanoki mit Ollama?', a: 'Ja. Verweisen Sie Hanoki auf eine laufende Ollama-Instanz auf Ihrem Rechner, um lokale Modelle statt oder zusätzlich zu Cloud-Modellen zu nutzen.' },
           { q: 'Welche Cloud-Modelle unterstützt Hanoki?', a: 'Hanoki ist so konzipiert, dass es mit jedem Cloud-Modell funktioniert, auf das Sie über Ihren eigenen API-Schlüssel zugreifen können, einschließlich Modellen wie Claude (Anthropic) und GPT-4 (OpenAI).' },
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — Offizielle Website', description: 'Produktseite für Hanoki mit Beschreibung der verzweigten Gesprächsoberfläche, Modellunterstützung, lokaler Speicherung und Plattformverfügbarkeit.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Offizielle Website', description: 'Produktseite für Hanoki mit Beschreibung der verzweigten Gesprächsoberfläche, Modellunterstützung, lokaler Speicherung und Plattformverfügbarkeit.' },
         ],
       },
       relatedReading: {
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki im Test: Verzweigte KI-Chat-App für Mac (2026)',
       description: 'Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Chats werden lokal in SQLite gespeichert.',
-      url: 'https://promptquorum.com/de/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/de/power-local-llm/hanoki-review',
       inLanguage: 'de',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -537,12 +537,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Lokale LLM-Chat-Apps' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/de/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/de/power-local-llm/hanoki-review' },
     },
   },
   fr: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-fr.webp',
+    heroImage: '/images/hanoki-review-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application de chat IA à embranchements',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki est une application de chat pour macOS construite autour d\'une interface de conversation à embranchements, permettant de dériver toute réponse IA vers des chemins de réponse alternatifs et d\'organiser les discussions en dossiers imbriqués et épinglables. C\'est une application hybride, pas exclusivement locale : Hanoki peut exécuter des modèles localement via votre propre instance Ollama en cours d\'exécution, ou utiliser des modèles cloud comme Claude et GPT-4 via des clés API que vous fournissez et payez vous-même. Les discussions et paramètres sont stockés dans un fichier SQLite local sur votre appareil plutôt que sur les serveurs de Hanoki, et aucun compte n\'est requis pour utiliser l\'application.',
     quickAnswerTop: {
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: 'Qu\'est-ce que Hanoki ?',
-        content: '**Hanoki est une application de chat pour macOS construite autour d\'une interface de conversation à embranchements, conçue pour fonctionner avec n\'importe quel modèle IA plutôt que d\'être liée à un seul fournisseur.** Publiée sur hanoki.app, elle permet de dériver une conversation à tout moment pour tester un autre prompt ou une autre réponse, tout en gardant les deux branches accessibles au lieu d\'écraser le fil original.',
+        content: '**Hanoki est une application de chat pour macOS construite autour d\'une interface de conversation à embranchements, conçue pour fonctionner avec n\'importe quel modèle IA plutôt que d\'être liée à un seul fournisseur.** Publiée sur [hanoki.app](https://hanoki.app/), elle permet de dériver une conversation à tout moment pour tester un autre prompt ou une autre réponse, tout en gardant les deux branches accessibles au lieu d\'écraser le fil original.',
         items: [
           'Embranchement/dérivation : créez des chemins de réponse alternatifs à tout point d\'une conversation, au lieu de simplement modifier et renvoyer un message',
           'Dossiers imbriqués : organisez vos discussions de façon hiérarchique plutôt qu\'en une seule liste plate',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment configurer Hanoki ?',
         content: 'Faire fonctionner Hanoki nécessite quelques étapes, et le chemin diffère selon que vous voulez des modèles cloud, des modèles locaux, ou les deux.',
         numberedItems: [
-          'Téléchargez Hanoki pour macOS depuis hanoki.app et installez-le.',
+          'Téléchargez Hanoki pour macOS depuis [hanoki.app](https://hanoki.app/) et installez-le.',
           'Ouvrez l\'application et décidez si vous voulez des modèles cloud, des modèles locaux via Ollama, ou les deux.',
           'Pour les modèles cloud : obtenez une clé API du fournisseur souhaité (par exemple Anthropic pour Claude, ou OpenAI pour GPT-4) et ajoutez-la dans les paramètres de Hanoki — l\'utilisation vous sera facturée directement par ce fournisseur.',
           'Pour les modèles locaux : installez Ollama séparément, démarrez-le, et téléchargez un modèle via Ollama avant de pointer Hanoki vers votre instance Ollama en cours d\'exécution.',
@@ -736,10 +736,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ce n\'est pas une application d\'IA locale en un clic : l\'inférence locale nécessite d\'installer, d\'exécuter et de maintenir Ollama séparément',
           'L\'utilisation de modèles cloud nécessite vos propres clés API payantes de fournisseurs comme Anthropic ou OpenAI — Hanoki n\'inclut pas d\'usage cloud gratuit ou intégré',
           'macOS uniquement aujourd\'hui ; le support Windows et Linux est indiqué par les développeurs comme pris en charge par la base de code, mais non confirmé comme publié',
-          'Aucune information tarifaire vérifiée de façon indépendante pour ce test — consultez hanoki.app directement pour les conditions actuelles',
+          'Aucune information tarifaire vérifiée de façon indépendante pour ce test — consultez [hanoki.app](https://hanoki.app/) directement pour les conditions actuelles',
           'Aucun audit de sécurité indépendant du stockage SQLite local ni du comportement réseau de l\'application n\'était disponible pour ce test',
         ],
-        note: 'Si l\'une de ces lacunes est déterminante pour votre décision, vérifiez la disponibilité actuelle des plateformes, les tarifs et les exigences en matière de clés API directement sur hanoki.app avant d\'adopter Hanoki pour votre flux de travail.',
+        note: 'Si l\'une de ces lacunes est déterminante pour votre décision, vérifiez la disponibilité actuelle des plateformes, les tarifs et les exigences en matière de clés API directement sur [hanoki.app](https://hanoki.app/) avant d\'adopter Hanoki pour votre flux de travail.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qu\'est-ce que Hanoki ?', a: 'Hanoki est une application de chat macOS construite autour d\'une interface de conversation à embranchements — vous pouvez dériver n\'importe quelle réponse IA vers un chemin alternatif, organiser vos discussions en dossiers imbriqués et épingler les branches importantes.' },
-          { q: 'Hanoki est-elle gratuite ?', a: 'Ce test ne dispose pas d\'informations tarifaires actuelles vérifiées de façon indépendante pour Hanoki. Consultez hanoki.app directement pour les tarifs à jour avant de décider.' },
+          { q: 'Hanoki est-elle gratuite ?', a: 'Ce test ne dispose pas d\'informations tarifaires actuelles vérifiées de façon indépendante pour Hanoki. Consultez [hanoki.app](https://hanoki.app/) directement pour les tarifs à jour avant de décider.' },
           { q: 'Hanoki est-elle une application d\'IA locale ?', a: 'Hanoki est une application hybride, pas exclusivement locale. Elle utilise par défaut des modèles cloud via vos propres clés API ; l\'inférence locale n\'est disponible que si vous installez et exécutez Ollama vous-même.' },
           { q: 'Hanoki fonctionne-t-elle avec Ollama ?', a: 'Oui. Pointez Hanoki vers une instance Ollama en cours d\'exécution sur votre machine pour utiliser des modèles locaux à la place, ou en complément, des modèles cloud.' },
           { q: 'Quels modèles cloud Hanoki prend-elle en charge ?', a: 'Hanoki est conçue pour fonctionner avec n\'importe quel modèle cloud accessible via votre propre clé API, y compris des modèles comme Claude (Anthropic) et GPT-4 (OpenAI).' },
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — Site officiel', description: 'Page produit de Hanoki décrivant son interface de conversation à embranchements, la prise en charge des modèles, le stockage local et la disponibilité des plateformes.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Site officiel', description: 'Page produit de Hanoki décrivant son interface de conversation à embranchements, la prise en charge des modèles, le stockage local et la disponibilité des plateformes.' },
         ],
       },
       relatedReading: {
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki : chat IA à embranchements pour Mac (test 2026)',
       description: 'Hanoki est une app de chat IA hybride à embranchements pour Mac — modèles cloud via vos propres clés API ou modèles locaux via Ollama. Discussions stockées localement en SQLite.',
-      url: 'https://promptquorum.com/fr/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/fr/power-local-llm/hanoki-review',
       inLanguage: 'fr',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -805,12 +805,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Applications de chat LLM local' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/fr/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/fr/power-local-llm/hanoki-review' },
     },
   },
   es: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-es.webp',
+    heroImage: '/images/hanoki-review-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat IA con ramificaciones',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki es una app de chat de escritorio para macOS construida alrededor de una interfaz de conversación con ramificaciones, que te permite bifurcar cualquier respuesta de la IA en rutas de respuesta alternativas y organizar tus chats en carpetas anidadas y fijables. Es una app híbrida, no exclusivamente local: Hanoki puede ejecutar modelos localmente a través de tu propia instancia de Ollama en ejecución, o usar modelos en la nube como Claude y GPT-4 mediante claves API que tú mismo proporcionas y pagas. Los chats y ajustes se guardan en un archivo SQLite local en tu dispositivo en lugar de en los servidores de Hanoki, y no se requiere cuenta para usar la app.',
     quickAnswerTop: {
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: '¿Qué es Hanoki?',
-        content: '**Hanoki es una aplicación de chat de escritorio para macOS construida alrededor de una interfaz de conversación con ramificaciones, diseñada para funcionar con cualquier modelo de IA en lugar de estar atada a un solo proveedor.** Publicada en hanoki.app, te permite bifurcar una conversación en cualquier punto para probar un prompt o respuesta alternativos, manteniendo ambas ramas accesibles en lugar de sobrescribir el hilo original.',
+        content: '**Hanoki es una aplicación de chat de escritorio para macOS construida alrededor de una interfaz de conversación con ramificaciones, diseñada para funcionar con cualquier modelo de IA en lugar de estar atada a un solo proveedor.** Publicada en [hanoki.app](https://hanoki.app/), te permite bifurcar una conversación en cualquier punto para probar un prompt o respuesta alternativos, manteniendo ambas ramas accesibles en lugar de sobrescribir el hilo original.',
         items: [
           'Bifurcación/ramificación: crea rutas de respuesta alternativas en cualquier punto de una conversación, en lugar de solo editar y reenviar un mensaje',
           'Carpetas anidadas: organiza los chats de forma jerárquica en lugar de en una sola lista plana',
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cómo configuras Hanoki?',
         content: 'Poner Hanoki en marcha lleva unos pocos pasos, y el camino difiere según si quieres modelos en la nube, modelos locales, o ambos.',
         numberedItems: [
-          'Descarga Hanoki para macOS desde hanoki.app e instálalo.',
+          'Descarga Hanoki para macOS desde [hanoki.app](https://hanoki.app/) e instálalo.',
           'Abre la app y decide si quieres modelos en la nube, modelos locales vía Ollama, o ambos.',
           'Para modelos en la nube: consigue una clave API del proveedor que quieras usar (por ejemplo Anthropic para Claude, u OpenAI para GPT-4) y añádela en los ajustes de Hanoki — el uso te lo facturará directamente ese proveedor.',
           'Para modelos locales: instala Ollama por separado, inícialo, y descarga un modelo a través de Ollama antes de apuntar Hanoki hacia tu instancia de Ollama en ejecución.',
@@ -1004,10 +1004,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No es una app de IA local en un clic: la inferencia local requiere instalar, ejecutar y mantener Ollama por separado',
           'El uso de modelos en la nube requiere tus propias claves API de pago de proveedores como Anthropic u OpenAI — Hanoki no incluye uso gratuito o incluido en la nube',
           'Solo macOS por ahora; los desarrolladores afirman que el soporte para Windows y Linux está en el código base, pero no está confirmado como publicado',
-          'No hay información de precios verificada de forma independiente para esta reseña — consulta hanoki.app directamente para conocer las condiciones actuales',
+          'No hay información de precios verificada de forma independiente para esta reseña — consulta [hanoki.app](https://hanoki.app/) directamente para conocer las condiciones actuales',
           'No había disponible un auditoría de seguridad independiente del almacenamiento SQLite local ni del comportamiento de red de la app para esta reseña',
         ],
-        note: 'Si alguna de estas carencias es decisiva para ti, verifica la disponibilidad actual de plataformas, los precios y los requisitos de claves API directamente en hanoki.app antes de adoptar Hanoki para tu flujo de trabajo.',
+        note: 'Si alguna de estas carencias es decisiva para ti, verifica la disponibilidad actual de plataformas, los precios y los requisitos de claves API directamente en [hanoki.app](https://hanoki.app/) antes de adoptar Hanoki para tu flujo de trabajo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1024,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es Hanoki?', a: 'Hanoki es una app de chat de escritorio para macOS construida alrededor de una interfaz de conversación con ramificaciones — puedes bifurcar cualquier respuesta de IA en una ruta alternativa, organizar tus chats en carpetas anidadas y fijar las ramas importantes.' },
-          { q: '¿Hanoki es gratuita?', a: 'Esta reseña no cuenta con información de precios actual verificada de forma independiente para Hanoki. Consulta hanoki.app directamente para conocer los precios vigentes antes de decidir.' },
+          { q: '¿Hanoki es gratuita?', a: 'Esta reseña no cuenta con información de precios actual verificada de forma independiente para Hanoki. Consulta [hanoki.app](https://hanoki.app/) directamente para conocer los precios vigentes antes de decidir.' },
           { q: '¿Hanoki es una app de IA local?', a: 'Hanoki es una app híbrida, no exclusivamente local. Por defecto usa modelos en la nube mediante tus propias claves API; la inferencia local solo está disponible si instalas y ejecutas Ollama por tu cuenta.' },
           { q: '¿Hanoki funciona con Ollama?', a: 'Sí. Apunta Hanoki hacia una instancia de Ollama en ejecución en tu equipo para usar modelos locales en lugar de, o junto con, modelos en la nube.' },
           { q: '¿Qué modelos en la nube admite Hanoki?', a: 'Hanoki está diseñada para funcionar con cualquier modelo en la nube al que puedas acceder mediante tu propia clave API, incluyendo modelos como Claude (Anthropic) y GPT-4 (OpenAI).' },
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — Sitio oficial', description: 'Página de producto de Hanoki que describe su interfaz de conversación con ramificaciones, el soporte de modelos, el almacenamiento local y la disponibilidad de plataformas.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Sitio oficial', description: 'Página de producto de Hanoki que describe su interfaz de conversación con ramificaciones, el soporte de modelos, el almacenamiento local y la disponibilidad de plataformas.' },
         ],
       },
       relatedReading: {
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki: reseña de la app de chat IA con ramificaciones para Mac (2026)',
       description: 'Hanoki es una app híbrida de chat IA con ramificaciones para Mac: modelos en la nube con tus propias claves API o modelos locales vía Ollama. Chats guardados localmente en SQLite.',
-      url: 'https://promptquorum.com/es/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/es/power-local-llm/hanoki-review',
       inLanguage: 'es',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -1073,12 +1073,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Apps de chat LLM local' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/es/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/es/power-local-llm/hanoki-review' },
     },
   },
   pt: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-pt.webp',
+    heroImage: '/images/hanoki-review-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat IA com ramificações',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki é um app de chat para macOS construído em torno de uma interface de conversa com ramificações, permitindo bifurcar qualquer resposta da IA em caminhos alternativos e organizar seus chats em pastas aninhadas e fixáveis. É um app híbrido, não exclusivamente local: o Hanoki pode rodar modelos localmente por meio da sua própria instância do Ollama em execução, ou usar modelos em nuvem como Claude e GPT-4 por meio de chaves de API que você mesmo fornece e paga. Chats e configurações são armazenados em um arquivo SQLite local no seu dispositivo, não nos servidores do Hanoki, e não é preciso criar conta para usar o app.',
     quickAnswerTop: {
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: 'O que é o Hanoki?',
-        content: '**O Hanoki é um aplicativo de chat para macOS construído em torno de uma interface de conversa com ramificações, projetado para funcionar com qualquer modelo de IA em vez de estar preso a um único provedor.** Publicado em hanoki.app, ele permite bifurcar uma conversa em qualquer ponto para testar um prompt ou resposta alternativos, mantendo ambas as ramificações acessíveis em vez de sobrescrever a conversa original.',
+        content: '**O Hanoki é um aplicativo de chat para macOS construído em torno de uma interface de conversa com ramificações, projetado para funcionar com qualquer modelo de IA em vez de estar preso a um único provedor.** Publicado em [hanoki.app](https://hanoki.app/), ele permite bifurcar uma conversa em qualquer ponto para testar um prompt ou resposta alternativos, mantendo ambas as ramificações acessíveis em vez de sobrescrever a conversa original.',
         items: [
           'Bifurcação/ramificação: crie caminhos de resposta alternativos em qualquer ponto de uma conversa, em vez de apenas editar e reenviar uma mensagem',
           'Pastas aninhadas: organize os chats hierarquicamente em vez de em uma única lista simples',
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como configurar o Hanoki?',
         content: 'Colocar o Hanoki para funcionar leva alguns passos, e o caminho muda dependendo se você quer modelos em nuvem, modelos locais, ou ambos.',
         numberedItems: [
-          'Baixe o Hanoki para macOS em hanoki.app e instale-o.',
+          'Baixe o Hanoki para macOS em [hanoki.app](https://hanoki.app/) e instale-o.',
           'Abra o app e decida se você quer modelos em nuvem, modelos locais via Ollama, ou ambos.',
           'Para modelos em nuvem: consiga uma chave de API do provedor desejado (por exemplo, Anthropic para Claude, ou OpenAI para GPT-4) e adicione-a nas configurações do Hanoki — o uso será cobrado diretamente por esse provedor.',
           'Para modelos locais: instale o Ollama separadamente, inicie-o, e baixe um modelo pelo Ollama antes de apontar o Hanoki para sua instância do Ollama em execução.',
@@ -1272,10 +1272,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não é um app de IA local em um clique: a inferência local exige instalar, rodar e manter o Ollama separadamente',
           'O uso de modelos em nuvem exige suas próprias chaves de API pagas de provedores como Anthropic ou OpenAI — o Hanoki não inclui uso gratuito ou embutido na nuvem',
           'Somente macOS por enquanto; o suporte a Windows e Linux é declarado pelos desenvolvedores como suportado no código-fonte, mas não confirmado como lançado',
-          'Nenhuma informação de preço verificada de forma independente para esta análise — consulte hanoki.app diretamente para condições atuais',
+          'Nenhuma informação de preço verificada de forma independente para esta análise — consulte [hanoki.app](https://hanoki.app/) diretamente para condições atuais',
           'Nenhuma auditoria de segurança independente do armazenamento SQLite local ou do comportamento de rede do app estava disponível para esta análise',
         ],
-        note: 'Se alguma dessas lacunas for decisiva para você, verifique a disponibilidade atual de plataformas, os preços e os requisitos de chave de API diretamente em hanoki.app antes de adotar o Hanoki no seu fluxo de trabalho.',
+        note: 'Se alguma dessas lacunas for decisiva para você, verifique a disponibilidade atual de plataformas, os preços e os requisitos de chave de API diretamente em [hanoki.app](https://hanoki.app/) antes de adotar o Hanoki no seu fluxo de trabalho.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1292,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é o Hanoki?', a: 'O Hanoki é um app de chat para macOS construído em torno de uma interface de conversa com ramificações — você pode bifurcar qualquer resposta da IA em um caminho alternativo, organizar seus chats em pastas aninhadas e fixar as ramificações importantes.' },
-          { q: 'O Hanoki é gratuito?', a: 'Esta análise não tem informação de preço atual verificada de forma independente para o Hanoki. Consulte hanoki.app diretamente para preços atualizados antes de decidir.' },
+          { q: 'O Hanoki é gratuito?', a: 'Esta análise não tem informação de preço atual verificada de forma independente para o Hanoki. Consulte [hanoki.app](https://hanoki.app/) diretamente para preços atualizados antes de decidir.' },
           { q: 'O Hanoki é um app de IA local?', a: 'O Hanoki é um app híbrido, não exclusivamente local. Por padrão usa modelos em nuvem via suas próprias chaves de API; a inferência local só está disponível se você instalar e rodar o Ollama por conta própria.' },
           { q: 'O Hanoki funciona com o Ollama?', a: 'Sim. Aponte o Hanoki para uma instância do Ollama em execução no seu computador para usar modelos locais em vez de, ou junto com, modelos em nuvem.' },
           { q: 'Quais modelos em nuvem o Hanoki suporta?', a: 'O Hanoki é projetado para funcionar com qualquer modelo em nuvem que você consiga acessar com sua própria chave de API, incluindo modelos como Claude (Anthropic) e GPT-4 (OpenAI).' },
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — Site oficial', description: 'Página do produto Hanoki descrevendo sua interface de conversa com ramificações, suporte a modelos, armazenamento local e disponibilidade de plataformas.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Site oficial', description: 'Página do produto Hanoki descrevendo sua interface de conversa com ramificações, suporte a modelos, armazenamento local e disponibilidade de plataformas.' },
         ],
       },
       relatedReading: {
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki: análise do app de chat IA com ramificações para Mac (2026)',
       description: 'Hanoki é um app híbrido de chat IA com ramificações para Mac — modelos em nuvem com suas próprias chaves de API ou modelos locais via Ollama. Chats salvos localmente em SQLite.',
-      url: 'https://promptquorum.com/pt/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/pt/power-local-llm/hanoki-review',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -1341,12 +1341,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Apps de chat LLM local' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/pt/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/pt/power-local-llm/hanoki-review' },
     },
   },
   ja: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-ja.webp',
+    heroImage: '/images/hanoki-review-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '分岐型AIチャットアプリ',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanokiは、分岐型の会話インターフェースを中心に構築されたmacOSデスクトップチャットアプリで、AIの返信を任意の地点でフォークして別の応答パスを試し、チャットをネスト構造かつピン留め可能なフォルダーで整理できます。ローカル専用アプリではなくハイブリッドアプリです。Hanokiは自分で起動したOllamaインスタンス経由でモデルをローカル実行するか、自分で用意して支払うAPIキー経由でClaudeやGPT-4などのクラウドモデルを利用できます。チャットと設定はHanoki自社のサーバーではなく、デバイス上のローカルSQLiteファイルに保存され、アプリの利用にアカウントは不要です。',
     quickAnswerTop: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — 公式サイト', description: '分岐型会話インターフェース、対応モデル、ローカル保存、対応プラットフォームについて説明するHanokiの製品ページ。' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 公式サイト', description: '分岐型会話インターフェース、対応モデル、ローカル保存、対応プラットフォームについて説明するHanokiの製品ページ。' },
         ],
       },
       relatedReading: {
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanokiレビュー:分岐型AIチャットアプリ(Mac向け・2026)',
       description: 'Hanokiは、Mac向けのハイブリッド型分岐AIチャットアプリ。自分のAPIキーでクラウドモデル、またはOllamaでローカルモデルを利用可能。チャットはSQLiteでローカル保存。',
-      url: 'https://promptquorum.com/ja/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/ja/power-local-llm/hanoki-review',
       inLanguage: 'ja',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -1609,12 +1609,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'ローカルLLMチャットアプリ' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ja/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ja/power-local-llm/hanoki-review' },
     },
   },
   zh: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-zh.webp',
+    heroImage: '/images/hanoki-review-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '分支式AI聊天应用',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki是一款围绕分支式对话界面构建的macOS桌面聊天应用,可将任意AI回复分叉为替代回复路径,并将聊天整理进可置顶的嵌套文件夹。它是一款混合型应用,而非纯本地应用:Hanoki既可以通过你自己运行的Ollama实例在本地运行模型,也可以通过你自己提供并付费的API密钥使用Claude、GPT-4等云端模型。聊天记录和设置保存在设备本地的SQLite文件中,而非Hanoki自己的服务器上,使用该应用无需账号。',
     quickAnswerTop: {
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — 官方网站', description: 'Hanoki的产品页面,介绍其分支式对话界面、模型支持、本地存储和平台支持情况。' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 官方网站', description: 'Hanoki的产品页面,介绍其分支式对话界面、模型支持、本地存储和平台支持情况。' },
         ],
       },
       relatedReading: {
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki评测:面向Mac的分支式AI聊天应用(2026)',
       description: 'Hanoki是面向Mac的混合型分支式AI聊天应用——用自己的API密钥调用云端模型,或通过Ollama运行本地模型。聊天记录以SQLite本地保存。',
-      url: 'https://promptquorum.com/zh/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/zh/power-local-llm/hanoki-review',
       inLanguage: 'zh',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -1877,12 +1877,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: '本地LLM聊天应用' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/zh/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/zh/power-local-llm/hanoki-review' },
     },
   },
   ar: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-ar.webp',
+    heroImage: '/images/hanoki-review-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق دردشة ذكاء اصطناعي متفرع',
       'Hanoki Ollama',
       'Hanoki مقابل Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki هو تطبيق دردشة لسطح مكتب macOS مبني حول واجهة محادثة متفرعة، يتيح لك تفريع أي رد من الذكاء الاصطناعي إلى مسارات استجابة بديلة وتنظيم محادثاتك في مجلدات متداخلة وقابلة للتثبيت. إنه تطبيق هجين وليس محليًا حصريًا: يمكن لـ Hanoki تشغيل النماذج محليًا عبر نسخة Ollama التي تشغّلها بنفسك، أو استخدام نماذج سحابية مثل Claude وGPT-4 عبر مفاتيح API توفرها وتدفع ثمنها بنفسك. تُخزَّن المحادثات والإعدادات في ملف SQLite محلي على جهازك بدلاً من خوادم Hanoki الخاصة، ولا يتطلب استخدام التطبيق حسابًا.',
     quickAnswerTop: {
@@ -1971,7 +1971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-hanoki',
         title: 'ما هو Hanoki؟',
-        content: '**Hanoki هو تطبيق دردشة لسطح مكتب macOS مبني حول واجهة محادثة متفرعة، مصمم للعمل مع أي نموذج ذكاء اصطناعي بدلاً من الارتباط بمزود واحد.** منشور على hanoki.app، يتيح لك التفرع من محادثة عند أي نقطة لتجربة موجّه أو رد بديل، مع إبقاء كلا الفرعين متاحين بدلاً من الكتابة فوق المسار الأصلي.',
+        content: '**Hanoki هو تطبيق دردشة لسطح مكتب macOS مبني حول واجهة محادثة متفرعة، مصمم للعمل مع أي نموذج ذكاء اصطناعي بدلاً من الارتباط بمزود واحد.** منشور على [hanoki.app](https://hanoki.app/)، يتيح لك التفرع من محادثة عند أي نقطة لتجربة موجّه أو رد بديل، مع إبقاء كلا الفرعين متاحين بدلاً من الكتابة فوق المسار الأصلي.',
         items: [
           'التفرع/الفورك: إنشاء مسارات استجابة بديلة عند أي نقطة في المحادثة، بدلاً من مجرد تعديل رسالة وإعادة إرسالها',
           'مجلدات متداخلة: تنظيم المحادثات هرميًا بدلاً من قائمة مسطحة واحدة',
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تُعِدّ Hanoki؟',
         content: 'يتطلب تشغيل Hanoki بضع خطوات، ويختلف المسار حسب ما إذا كنت تريد نماذج سحابية أو محلية أو كليهما.',
         numberedItems: [
-          'نزّل Hanoki لنظام macOS من hanoki.app وثبّته.',
+          'نزّل Hanoki لنظام macOS من [hanoki.app](https://hanoki.app/) وثبّته.',
           'افتح التطبيق وقرر ما إذا كنت تريد نماذج سحابية، أو نماذج محلية عبر Ollama، أو كليهما.',
           'للنماذج السحابية: احصل على مفتاح API من المزود الذي تريد استخدامه (مثلاً Anthropic لـ Claude، أو OpenAI لـ GPT-4) وأضفه في إعدادات Hanoki — سيُفوتَر الاستخدام إليك مباشرة من قِبل ذلك المزود.',
           'للنماذج المحلية: ثبّت Ollama بشكل منفصل، شغّله، ونزّل نموذجًا عبر Ollama قبل توجيه Hanoki إلى نسخة Ollama العاملة لديك.',
@@ -2076,10 +2076,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ليس تطبيق ذكاء اصطناعي محلي بنقرة واحدة: يتطلب الاستدلال المحلي تثبيت Ollama وتشغيله وصيانته بشكل منفصل',
           'يتطلب استخدام النماذج السحابية مفاتيح API مدفوعة خاصة بك من مزودين مثل Anthropic أو OpenAI — لا يتضمن Hanoki استخدامًا سحابيًا مجانيًا أو مدمجًا',
           'macOS فقط حاليًا؛ يذكر المطورون أن دعم Windows وLinux مدعوم على مستوى قاعدة الشيفرة لكنه غير مؤكد كمتوفر',
-          'لا تتوفر معلومات تسعير تم التحقق منها بشكل مستقل لهذه المراجعة — تحقق من الشروط الحالية مباشرة على hanoki.app',
+          'لا تتوفر معلومات تسعير تم التحقق منها بشكل مستقل لهذه المراجعة — تحقق من الشروط الحالية مباشرة على [hanoki.app](https://hanoki.app/)',
           'لم يتوفر تدقيق أمني مستقل للتخزين المحلي بـ SQLite أو سلوك التطبيق على الشبكة لهذه المراجعة',
         ],
-        note: 'إذا كانت أي من هذه الفجوات حاسمة لقرارك، تحقق من توفر المنصات الحالي والأسعار ومتطلبات مفتاح API مباشرة على hanoki.app قبل اعتماد Hanoki في سير عملك.',
+        note: 'إذا كانت أي من هذه الفجوات حاسمة لقرارك، تحقق من توفر المنصات الحالي والأسعار ومتطلبات مفتاح API مباشرة على [hanoki.app](https://hanoki.app/) قبل اعتماد Hanoki في سير عملك.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو Hanoki؟', a: 'Hanoki تطبيق دردشة لسطح مكتب macOS مبني حول واجهة محادثة متفرعة — يمكنك تفريع أي رد من الذكاء الاصطناعي إلى مسار بديل، وتنظيم محادثاتك في مجلدات متداخلة، وتثبيت الفروع المهمة.' },
-          { q: 'هل Hanoki مجاني؟', a: 'لا تتوفر لدى هذه المراجعة معلومات تسعير حالية تم التحقق منها بشكل مستقل لـ Hanoki. تحقق من الأسعار الحالية مباشرة على hanoki.app قبل اتخاذ قرارك.' },
+          { q: 'هل Hanoki مجاني؟', a: 'لا تتوفر لدى هذه المراجعة معلومات تسعير حالية تم التحقق منها بشكل مستقل لـ Hanoki. تحقق من الأسعار الحالية مباشرة على [hanoki.app](https://hanoki.app/) قبل اتخاذ قرارك.' },
           { q: 'هل Hanoki تطبيق ذكاء اصطناعي محلي؟', a: 'Hanoki تطبيق هجين وليس محليًا حصريًا. يستخدم افتراضيًا نماذج سحابية عبر مفاتيح API الخاصة بك؛ الاستدلال المحلي متاح فقط إذا قمت بتثبيت وتشغيل Ollama بنفسك.' },
           { q: 'هل يعمل Hanoki مع Ollama؟', a: 'نعم. وجّه Hanoki إلى نسخة Ollama تعمل على جهازك لاستخدام النماذج المحلية بدلاً من النماذج السحابية أو إلى جانبها.' },
           { q: 'ما النماذج السحابية التي يدعمها Hanoki؟', a: 'صُمم Hanoki للعمل مع أي نموذج سحابي يمكنك الوصول إليه عبر مفتاح API الخاص بك، بما في ذلك نماذج مثل Claude (‏Anthropic) وGPT-4 (‏OpenAI).' },
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — الموقع الرسمي', description: 'صفحة منتج Hanoki التي تصف واجهة المحادثة المتفرعة ودعم النماذج والتخزين المحلي وتوفر المنصات.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — الموقع الرسمي', description: 'صفحة منتج Hanoki التي تصف واجهة المحادثة المتفرعة ودعم النماذج والتخزين المحلي وتوفر المنصات.' },
         ],
       },
       relatedReading: {
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مراجعة Hanoki: تطبيق دردشة ذكاء اصطناعي متفرع لـ Mac (2026)',
       description: 'Hanoki تطبيق دردشة ذكاء اصطناعي هجين ومتفرع لـ Mac — نماذج سحابية عبر مفاتيح API الخاصة بك أو نماذج محلية عبر Ollama. المحادثات تُخزَّن محليًا في SQLite.',
-      url: 'https://promptquorum.com/ar/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/ar/power-local-llm/hanoki-review',
       inLanguage: 'ar',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -2145,12 +2145,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'تطبيقات دردشة LLM المحلية' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ar/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ar/power-local-llm/hanoki-review' },
     },
   },
   ko: {
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/hanoki-review-2026-hero-ko.webp',
+    heroImage: '/images/hanoki-review-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-04',
     publishDate: '2026-09-04',
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '분기형 AI 채팅 앱',
       'Hanoki Ollama',
       'Hanoki vs Atomic Chat',
-      'hanoki.app',
+      '[hanoki.app](https://hanoki.app/)',
     ],
     leadAnswerBlock: 'Hanoki는 분기형 대화 인터페이스를 중심으로 구축된 macOS 데스크톱 채팅 앱으로, AI 답변을 대안 응답 경로로 포크하고 채팅을 중첩되고 고정 가능한 폴더로 정리할 수 있습니다. 로컬 전용 앱이 아니라 하이브리드 앱입니다. Hanoki는 직접 실행한 Ollama 인스턴스를 통해 모델을 로컬로 실행하거나, 직접 제공하고 비용을 지불하는 API 키를 통해 Claude나 GPT-4 같은 클라우드 모델을 사용할 수 있습니다. 채팅과 설정은 Hanoki 자체 서버가 아닌 사용자 기기의 로컬 SQLite 파일에 저장되며, 앱 사용에 계정이 필요하지 않습니다.',
     quickAnswerTop: {
@@ -2379,7 +2379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://hanoki.app', title: 'Hanoki — 공식 사이트', description: '분기형 대화 인터페이스, 모델 지원, 로컬 저장, 지원 플랫폼을 설명하는 Hanoki 제품 페이지.' },
+          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 공식 사이트', description: '분기형 대화 인터페이스, 모델 지원, 로컬 저장, 지원 플랫폼을 설명하는 Hanoki 제품 페이지.' },
         ],
       },
       relatedReading: {
@@ -2398,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Hanoki 리뷰: Mac용 분기형 AI 채팅 앱 (2026)',
       description: 'Hanoki는 Mac용 하이브리드 분기형 AI 채팅 앱입니다. 자신의 API 키로 클라우드 모델을, 또는 Ollama로 로컬 모델을 사용할 수 있으며 채팅은 SQLite에 로컬 저장됩니다.',
-      url: 'https://promptquorum.com/ko/power-local-llm/hanoki-review-2026',
+      url: 'https://promptquorum.com/ko/power-local-llm/hanoki-review',
       inLanguage: 'ko',
       datePublished: '2026-09-04',
       dateModified: '2026-09-04',
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: '로컬 LLM 채팅 앱' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ko/power-local-llm/hanoki-review-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ko/power-local-llm/hanoki-review' },
     },
   },
 }

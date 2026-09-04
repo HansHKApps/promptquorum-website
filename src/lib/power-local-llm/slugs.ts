@@ -176,21 +176,21 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Aori review — 2026-09-04
   'aori-ai-personal-agent-review':                'aori-ai-personal-agent-review',
   // RAPR AI review — 2026-09-04
-  'rapr-ai-review-2026':                          'rapr-ai-review-2026',
+  'rapr-ai-review':                          'rapr-ai-review',
   // Open Felix review — 2026-09-04
-  'open-felix-review-2026':                       'open-felix-review-2026',
+  'open-felix-review':                       'open-felix-review',
   // BoBe review — 2026-09-04
-  'bobe-review-2026':                             'bobe-review-2026',
+  'bobe-review':                             'bobe-review',
   // Osaurus review — 2026-09-04
-  'osaurus-ai-review-2026':                       'osaurus-ai-review-2026',
+  'osaurus-ai-review':                       'osaurus-ai-review',
   // Hanoki review — 2026-09-04
-  'hanoki-review-2026':                           'hanoki-review-2026',
+  'hanoki-review':                           'hanoki-review',
   // Voxa review — 2026-09-04
-  'voxa-review-2026':                             'voxa-review-2026',
+  'voxa-review':                             'voxa-review',
   // Jarvis (Mac) review — 2026-09-04
-  'jarvis-mac-review-2026':                       'jarvis-mac-review-2026',
+  'jarvis-mac-review':                       'jarvis-mac-review',
   // Locally AI review — 2026-09-04
-  'locally-ai-review-2026':                       'locally-ai-review-2026',
+  'locally-ai-review':                       'locally-ai-review',
   // Arbiter review — 2026-09-04
-  'arbiter-local-ai-chat-review-2026':            'arbiter-local-ai-chat-review-2026',
+  'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
 }

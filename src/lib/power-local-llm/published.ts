@@ -198,15 +198,15 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Hanoki (Easiest Desktop Apps), Voxa, Jarvis Mac (Voice/Speech/Multimodal),
   // Locally AI, Arbiter (Mobile & Edge LLMs) reviews — 2026-09-04
   'aori-ai-personal-agent-review',
-  'rapr-ai-review-2026',
-  'open-felix-review-2026',
-  'bobe-review-2026',
-  'osaurus-ai-review-2026',
-  'hanoki-review-2026',
-  'voxa-review-2026',
-  'jarvis-mac-review-2026',
-  'locally-ai-review-2026',
-  'arbiter-local-ai-chat-review-2026',
+  'rapr-ai-review',
+  'open-felix-review',
+  'bobe-review',
+  'osaurus-ai-review',
+  'hanoki-review',
+  'voxa-review',
+  'jarvis-mac-review',
+  'locally-ai-review',
+  'arbiter-local-ai-chat-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
