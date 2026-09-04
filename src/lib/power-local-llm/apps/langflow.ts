@@ -20,7 +20,7 @@ export const app: ToolRecord = {
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
   uses: ['build'],
-  url: 'langflow.org',
+  url: 'www.langflow.org', // corrected 2026-09-04: apex langflow.org does not resolve, www does
   tagline: {
     en: 'Visual AI orchestration with RAG components',
     de: 'Visuelle KI-Orchestrierung mit RAG-Komponenten',

@@ -67,7 +67,6 @@ import { app as app_shellgpt } from './apps/shellgpt'
 import { app as app_aichat } from './apps/aichat'
 import { app as app_tgpt } from './apps/tgpt'
 import { app as app_blackbox_ai } from './apps/blackbox-ai'
-import { app as app_devhat } from './apps/devhat'
 import { app as app_privategpt } from './apps/privategpt'
 import { app as app_quivr } from './apps/quivr'
 import { app as app_khoj } from './apps/khoj'
@@ -199,7 +198,6 @@ export const localAiApps: ToolRecord[] = [
   app_aichat,
   app_tgpt,
   app_blackbox_ai,
-  app_devhat,
   app_privategpt,
   app_quivr,
   app_khoj,

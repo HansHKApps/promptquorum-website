@@ -13,24 +13,24 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
   engine: 'external',
-  license: 'AGPL 3.0',
+  license: 'GPL 3.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 317,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
   uses: ['docs'],
-  url: 'github.com/logancyang/logseq-copilot',
+  url: 'github.com/eindex/logseq-copilot', // corrected 2026-09-04: logancyang/logseq-copilot 404s; the real repo is EINDEX/logseq-copilot (317 stars, matches)
   tagline: {
-    en: 'Logseq plugin for local and cloud LLM chat, same author as Obsidian Copilot',
-    de: 'Logseq-Plugin für lokalen und Cloud-LLM-Chat, gleicher Autor wie Obsidian Copilot',
-    fr: 'Plugin Logseq pour chat LLM local et cloud, même auteur qu\'Obsidian Copilot',
-    ja: 'LogseqのローカルとクラウドLLMチャットプラグイン（Obsidian Copilotと同作者）',
-    zh: '支持本地和云端LLM聊天的Logseq插件，与Obsidian Copilot同一作者',
-    es: 'Plugin de Logseq para chat LLM local y en la nube, mismo autor que Obsidian Copilot',
-    pt: 'Plugin do Logseq para chat LLM local e na nuvem',
-    ar: 'إضافة Logseq لدردشة نماذج لغوية محلية وسحابية، نفس مؤلف Obsidian Copilot',
-    ko: 'Logseq용 로컬 및 클라우드 LLM 채팅 플러그인(Obsidian Copilot과 동일 작성자)',
+    en: 'Browser extension that surfaces your Logseq notes next to search and LLM chat',
+    de: 'Browser-Erweiterung, die Ihre Logseq-Notizen neben Suche und LLM-Chat anzeigt',
+    fr: 'Extension de navigateur qui affiche vos notes Logseq à côté de la recherche et du chat LLM',
+    ja: 'Logseqのノートを検索やLLMチャットの隣に表示するブラウザ拡張機能',
+    zh: '在搜索和LLM聊天旁显示Logseq笔记的浏览器扩展',
+    es: 'Extensión de navegador que muestra tus notas de Logseq junto a la búsqueda y el chat LLM',
+    pt: 'Extensão de navegador que mostra suas notas do Logseq ao lado da busca e do chat LLM',
+    ar: 'إضافة متصفح تعرض ملاحظات Logseq بجانب البحث ودردشة النماذج اللغوية',
+    ko: '검색과 LLM 채팅 옆에 Logseq 노트를 보여주는 브라우저 확장 프로그램',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

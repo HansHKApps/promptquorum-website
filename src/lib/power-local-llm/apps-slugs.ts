@@ -63,7 +63,6 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'aichat':                                  'aichat',
   'tgpt':                                    'tgpt',
   'blackbox-ai':                             'blackbox-ai',
-  'devhat':                                  'devhat',
   'privategpt':                              'privategpt',
   'quivr':                                   'quivr',
   'khoj':                                    'khoj',
