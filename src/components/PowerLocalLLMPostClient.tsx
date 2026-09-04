@@ -1388,7 +1388,14 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
                 // section in the group is skipped so it isn't duplicated below.
                 if (directorySlotRendered) return null
                 directorySlotRendered = true
-                return <div key={key}>{directorySlot.element}</div>
+                // Break out of the max-w-3xl prose wrapper: the directory's
+                // sidebar + table layout needs full viewport width, not the
+                // narrow column sized for article text.
+                return (
+                  <div key={key} className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+                    {directorySlot.element}
+                  </div>
+                )
               }
               return (
                 <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
