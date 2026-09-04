@@ -170,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'Running Frigate in a Proxmox LXC container is unsupported. Passing a Coral or iGPU through an LXC appears to work and then fails in ways nobody can debug for you. Use a VM.' },
           { type: 'practice', text: 'If you want one box for Frigate, Home Assistant, and a local LLM, size it from the LLM side first — see the [mini PC picks for Home Assistant plus local AI](/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: "Sizing the recording drive by hand from camera count, bitrate, and retention time is tedious — EncajaKit's free [CCTV storage calculator](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) does the math for you (the tool itself is in Spanish only)." },
         ],
       },
       cameras: {
@@ -719,6 +720,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Der Betrieb von Frigate in einem Proxmox-LXC-Container wird nicht unterstützt. Das Durchreichen einer Coral oder iGPU scheint zunächst zu funktionieren und scheitert dann auf eine Weise, die niemand für Sie diagnostizieren kann. Verwenden Sie eine VM.' },
           { type: 'practice', text: 'Wenn ein Rechner Frigate, Home Assistant und ein lokales LLM tragen soll, dimensionieren Sie ihn zuerst nach dem LLM — siehe [die Mini-PC-Empfehlungen für Home Assistant und lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: 'Die Aufzeichnungsplatte anhand von Kameraanzahl, Bitrate und Aufbewahrungsdauer von Hand zu dimensionieren ist mühsam — der kostenlose [CCTV-Speicherrechner von EncajaKit](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) übernimmt das für Sie (das Tool selbst ist nur auf Spanisch verfügbar).' },
         ],
       },
       cameras: {
@@ -1272,6 +1274,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Exécuter Frigate dans un conteneur LXC Proxmox n\'est pas pris en charge. Le passage d\'un Coral ou d\'un iGPU semble fonctionner puis échoue d\'une manière que personne ne pourra diagnostiquer pour vous. Utilisez une machine virtuelle.' },
           { type: 'practice', text: 'Si une seule machine doit héberger Frigate, Home Assistant et un LLM local, dimensionnez-la d\'abord pour le LLM — consultez [la sélection de mini-PC pour Home Assistant et l\'IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: "Dimensionner le disque d'enregistrement à la main à partir du nombre de caméras, du débit et de la durée de conservation est fastidieux — le [calculateur de stockage CCTV gratuit d'EncajaKit](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) fait le calcul pour vous (l'outil lui-même n'est disponible qu'en espagnol)." },
         ],
       },
       cameras: {
@@ -1821,6 +1824,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Proxmox の LXC コンテナでの Frigate 運用は非対応です。Coral や iGPU のパススルーは一見動作したあと、誰にも切り分けできない形で壊れます。仮想マシンを使ってください。' },
           { type: 'practice', text: 'Frigate・Home Assistant・ローカル LLM を 1 台にまとめたい場合は、まず LLM 側から必要スペックを決めてください — [Home Assistant とローカル AI 向けミニ PC 選び](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照。' },
+          { type: 'tip', text: 'カメラ台数・ビットレート・保存期間から録画用ディスク容量を手計算するのは手間がかかります。EncajaKit の無料[CCTVストレージ計算ツール](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/)が代わりに計算してくれます(ツール自体はスペイン語のみ対応です)。' },
         ],
       },
       cameras: {
@@ -2370,6 +2374,7 @@ cameras:
         callouts: [
           { type: 'warning', text: '在 Proxmox LXC 容器中运行 Frigate 不受支持。把 Coral 或核显直通进 LXC 看似可行，随后会以无人能替你排查的方式失败。请使用虚拟机。' },
           { type: 'practice', text: '如果想用一台机器同时承载 Frigate、Home Assistant 和本地 LLM，请先按 LLM 的需求定型号——参见[适合 Home Assistant 与本地 AI 的小主机推荐](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。' },
+          { type: 'tip', text: '凭摄像头数量、码率和保留时长手动估算录像盘容量很麻烦——EncajaKit 的免费[CCTV 存储计算器](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/)可以帮你算出来(该工具本身仅提供西班牙语版本)。' },
         ],
       },
       cameras: {
@@ -2919,6 +2924,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Ejecutar Frigate en un contenedor LXC de Proxmox no está soportado. Pasar un Coral o una iGPU parece funcionar y luego falla de un modo que nadie podrá diagnosticar por ti. Usa una máquina virtual.' },
           { type: 'practice', text: 'Si quieres un solo equipo para Frigate, Home Assistant y un LLM local, dimensiónalo primero por el LLM: consulta [los mini PC recomendados para Home Assistant e IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: 'Calcular a mano el disco de grabación según el número de cámaras, el bitrate y el tiempo de retención es tedioso — la [calculadora de almacenamiento CCTV de EncajaKit](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) hace esa cuenta por ti.' },
         ],
       },
       cameras: {
@@ -3468,6 +3474,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Rodar o Frigate em um contêiner LXC do Proxmox não é suportado. Repassar um Coral ou uma iGPU parece funcionar e depois falha de um jeito que ninguém vai conseguir diagnosticar por você. Use uma máquina virtual.' },
           { type: 'practice', text: 'Se quiser uma única máquina para Frigate, Home Assistant e um LLM local, dimensione primeiro pelo LLM — veja [as indicações de mini PC para Home Assistant e IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: 'Calcular manualmente o disco de gravação a partir do número de câmeras, bitrate e tempo de retenção é trabalhoso — a [calculadora de armazenamento CCTV gratuita da EncajaKit](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) faz essa conta por você (a ferramenta em si está disponível apenas em espanhol).' },
         ],
       },
       cameras: {
@@ -4017,6 +4024,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'تشغيل Frigate داخل حاوية LXC على Proxmox غير مدعوم. تمرير وحدة Coral أو iGPU يبدو ناجحًا في البداية ثم يتعطل بطريقة لا يستطيع أحد تشخيصها نيابةً عنك. استخدم جهازًا افتراضيًا.' },
           { type: 'practice', text: 'إن أردت جهازًا واحدًا يجمع Frigate و Home Assistant ونموذج LLM محلي، فحدّد المواصفات انطلاقًا من متطلبات النموذج أولًا — راجع [ترشيحات أجهزة Mini PC لـ Home Assistant والذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).' },
+          { type: 'tip', text: 'حساب سعة قرص التسجيل يدويًا بناءً على عدد الكاميرات ومعدل البت ومدة الاحتفاظ أمر مرهق — [حاسبة تخزين كاميرات المراقبة المجانية من EncajaKit](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/) تقوم بذلك نيابة عنك (الأداة نفسها متاحة باللغة الإسبانية فقط).' },
         ],
       },
       cameras: {
@@ -4566,6 +4574,7 @@ cameras:
         callouts: [
           { type: 'warning', text: 'Proxmox LXC 컨테이너에서 Frigate를 운용하는 것은 지원되지 않습니다. Coral이나 내장 GPU 패스스루는 처음에는 되는 듯하다가, 아무도 대신 진단해 줄 수 없는 방식으로 고장 납니다. 가상 머신을 쓰십시오.' },
           { type: 'practice', text: 'Frigate와 Home Assistant, 로컬 LLM을 한 대에 담고 싶다면 LLM 쪽 요구 사항부터 기준으로 삼아 사양을 정하십시오 — [Home Assistant와 로컬 AI를 위한 미니 PC 추천](/ko/smart-home/best-mini-pc-home-assistant-local-ai)을 참고하십시오.' },
+          { type: 'tip', text: '카메라 대수, 비트레이트, 보관 기간을 기준으로 녹화용 디스크 용량을 직접 계산하는 것은 번거롭습니다. EncajaKit의 무료 [CCTV 저장 공간 계산기](https://encajakit.com/herramientas/calculadora-almacenamiento-cctv/)가 대신 계산해 줍니다(도구 자체는 스페인어로만 제공됩니다).' },
         ],
       },
       cameras: {
