@@ -217,6 +217,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'All prices above are annual-billing rates as of August 2026 — paying month-to-month costs more (invideo\'s own FAQ cites Plus $20, Max $100, Generative $200, Elite $1,000 per month). Check invideo\'s live pricing page before relying on any figure here; plans and prices change.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Try invideo\'s Free Version →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -559,6 +562,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'جميع الأسعار أعلاه هي أسعار الفوترة السنوية حتى أغسطس 2026 — الدفع الشهري أعلى تكلفة (تذكر الأسئلة الشائعة الرسمية لـ invideo أن Plus بـ 20 دولارًا، وMax بـ 100 دولار، وGenerative بـ 200 دولار، وElite بـ 1,000 دولار شهريًا). راجع صفحة أسعار invideo الحية قبل الاعتماد على أي رقم هنا؛ الخطط والأسعار تتغير.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'جرّب النسخة المجانية من invideo ←' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -901,6 +907,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'Alle oben genannten Preise sind Jahresabrechnungstarife, Stand August 2026 – monatliche Zahlung kostet mehr (invideos eigene FAQ nennt Plus 20 $, Max 100 $, Generative 200 $, Elite 1.000 $ pro Monat). Prüfen Sie invideos aktuelle Preisseite, bevor Sie sich auf eine Zahl hier verlassen; Pläne und Preise ändern sich.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Invideos kostenlose Version testen →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -1251,6 +1260,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'Todos los precios anteriores son tarifas de facturación anual a agosto de 2026 — pagar mes a mes cuesta más (el propio FAQ de invideo cita Plus $20, Max $100, Generative $200, Elite $1,000 al mes). Consulta la página de precios en vivo de invideo antes de confiar en cualquier cifra aquí; los planes y precios cambian.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Prueba la versión gratuita de invideo →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -1593,6 +1605,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'Tous les prix ci-dessus sont des tarifs en facturation annuelle en date d\'août 2026 — le paiement mensuel coûte plus cher (la propre FAQ d\'invideo cite Plus à 20 $, Max à 100 $, Generative à 200 $, Elite à 1 000 $ par mois). Consultez la page tarifs en direct d\'invideo avant de vous fier à un chiffre ici ; les offres et prix changent.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Essayer la version gratuite d\'invideo →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -1935,6 +1950,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           '上記の価格はすべて2026年8月時点の年間契約レートです。月払いの場合はさらに高くなります（invideo自身のFAQによると、Plus $20、Max $100、Generative $200、Elite $1,000／月）。プランと価格は変更されるため、依存する前に必ずinvideoの最新の料金ページを確認してください。',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'invideoの無料版を試す →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -2277,6 +2295,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           '위 가격은 모두 2026년 8월 기준 연간 결제 요율입니다 — 월별 결제는 더 비쌉니다(invideo 자체 FAQ는 Plus $20, Max $100, Generative $200, Elite $1,000의 월별 요금을 명시합니다). 이 수치를 그대로 신뢰하기보다 invideo의 실시간 요금제 페이지를 확인하십시오. 플랜과 가격은 변경될 수 있습니다.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'invideo 무료 버전 사용해보기 →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -2619,6 +2640,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           'Todos os preços acima são taxas de cobrança anual em agosto de 2026 — pagar mês a mês custa mais (o próprio FAQ do invideo cita Plus $20, Max $100, Generative $200, Elite $1.000 por mês). Confira a página de preços ao vivo do invideo antes de confiar em qualquer número aqui; planos e preços mudam.',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: 'Experimente a versão gratuita do invideo →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
@@ -2961,6 +2985,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note:
           '以上所有价格均为截至 2026 年 8 月的按年计费价——按月付费的成本更高(invideo 自己的 FAQ 显示 Plus 为每月 20 美元、Max 为 100 美元、Generative 为 200 美元、Elite 为 1,000 美元)。在依赖此处任何数字之前,请查看 invideo 的实时定价页面;套餐和价格会变动。',
+        affiliateLinks: [
+          { url: 'https://invideo.io/pricing/', productName: 'invideo', productCategory: 'video-generation', label: '试用 invideo 免费版 →' },
+        ],
       },
       decisionGuide: {
         id: 'decision-guide',
