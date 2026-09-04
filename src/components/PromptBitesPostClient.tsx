@@ -232,7 +232,7 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
         <thead>
           <tr className="border-b border-primary/20">
             {columns.map((col) => (
-              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(col) }} />
+              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary break-words min-w-[150px]" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(col) }} />
             ))}
           </tr>
         </thead>
@@ -242,7 +242,7 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
               {columns.map((col) => {
                 const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
                 return (
-                <td key={col} className="py-2 pr-4 text-text-secondary align-top" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(row[colLabel] ?? row[col] ?? '') }} />
+                <td key={col} className="py-2 pr-4 text-text-secondary align-top break-words max-w-xs sm:max-w-none" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(row[colLabel] ?? row[col] ?? '') }} />
                 )
               })}
             </tr>

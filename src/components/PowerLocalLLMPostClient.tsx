@@ -527,7 +527,7 @@ function renderMarkdownTable(lines: string[], renderLinks: (text: string) => Rea
         <thead>
           <tr className="bg-gray-100">
             {headers.map((header, i) => (
-              <th key={i} className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">
+              <th key={i} className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary break-words min-w-[150px] sm:min-w-auto">
                 {renderLinks(header)}
               </th>
             ))}
@@ -537,7 +537,7 @@ function renderMarkdownTable(lines: string[], renderLinks: (text: string) => Rea
           {dataRows.map((row, i) => (
             <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
               {row.map((cell, j) => (
-                <td key={j} className="border border-gray-300 px-4 py-2 text-text-secondary">
+                <td key={j} className="border border-gray-300 px-4 py-2 text-text-secondary break-words max-w-xs sm:max-w-none">
                   {renderLinks(cell)}
                 </td>
               ))}
@@ -914,14 +914,14 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {/* Table */}
       {!section.itemHeadings && section.rows && section.columns && (
         <div className="relative overflow-x-auto my-6" ref={tableScrollRef}>
-          <table className="w-full min-w-[820px] border-collapse text-sm">
+          <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-primary/20">
                 {section.columns.map((col, colIdx) => {
                   const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
                   return (
-                  <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
-                    {renderInlineLinks(col, lang)}
+                  <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10 min-w-max' : ' min-w-[150px] sm:min-w-auto'}`}>
+                    <div className="break-words">{renderInlineLinks(col, lang)}</div>
                     {STAR_COLUMN_LABELS.has(colLabel) && (
                       <span
                         className="ml-1 inline-flex items-center justify-center w-3.5 h-3.5 rounded-full border border-text-secondary/40 text-[9px] font-normal text-text-secondary align-middle cursor-help"
@@ -947,7 +947,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                       )
                     }
                     return (
-                      <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap' : 'p-2 sm:p-3 text-text-secondary'}>
+                      <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary min-w-max' : 'p-2 sm:p-3 text-text-secondary break-words max-w-xs sm:max-w-none'}>
                         {renderInlineLinks(value ?? '—', lang)}
                       </td>
                     )

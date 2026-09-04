@@ -128,7 +128,7 @@ function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<s
             {columns.map((col, colIdx) => (
               <th
                 key={col}
-                className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}
+                className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 break-words${colIdx === 0 ? ' sticky left-0 z-10 min-w-max' : ' min-w-[150px] sm:min-w-auto'}`}
                 dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(col) }}
               />
             ))}
@@ -142,7 +142,7 @@ function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<s
                 return (
                 <td
                   key={`${idx}-${col}`}
-                  className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}
+                  className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary min-w-max' : 'p-2 sm:p-3 text-text-secondary break-words max-w-xs sm:max-w-none'}
                   dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(row[colLabel] || row[col] || '—') }}
                 />
                 )
