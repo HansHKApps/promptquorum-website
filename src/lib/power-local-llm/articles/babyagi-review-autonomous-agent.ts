@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review-2026) — a current, actively maintained MIT-licensed autonomous agent with persistent memory and a self-improving skill loop, for readers who need a working alternative to BabyAGI\'s historical architecture.',
+          '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review) — a current, actively maintained MIT-licensed autonomous agent with persistent memory and a self-improving skill loop, for readers who need a working alternative to BabyAGI\'s historical architecture.',
           '[Local AI Agents in 2026: What Actually Works (And What Still Fails)](/power-local-llm/autonomous-local-agents-actually-work) — a tested comparison of local agent stacks, for readers who need a working local-model setup rather than a historical reference like BabyAGI.',
           '[Langflow Review 2026: The IBM-Owned Alternative to Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — an actively maintained, corporate-backed visual agent/RAG builder for comparison.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including BabyAGI\'s entry in the specialized-tools table.',

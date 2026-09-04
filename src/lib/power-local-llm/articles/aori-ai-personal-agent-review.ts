@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Hermes Agent Review: Local Autonomous AI Agent](/power-local-llm/hermes-agent-review-2026) — a comparable local-first agent app reviewed on this site.',
+          '[Hermes Agent Review: Local Autonomous AI Agent](/power-local-llm/hermes-agent-review) — a comparable local-first agent app reviewed on this site.',
           '[BabyAGI Review: Autonomous Local Agent](/power-local-llm/babyagi-review-autonomous-agent) — another autonomous agent framework covered here.',
           '[Run a Local LLM with Obsidian](/power-local-llm/local-llm-with-obsidian-2026) — connecting local models to your Obsidian vault, the same integration path Aori supports.',
           '[Replace Grammarly and Notion AI with Local Models](/power-local-llm/replace-grammarly-notion-ai-with-local) — using local AI alongside a Notion workspace.',
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Hermes Agent: وكيل ذكاء اصطناعي محلي مستقل](/ar/power-local-llm/hermes-agent-review-2026) — مراجعة وكيل محلي أولاً مشابه على هذا الموقع.',
+          '[مراجعة Hermes Agent: وكيل ذكاء اصطناعي محلي مستقل](/ar/power-local-llm/hermes-agent-review) — مراجعة وكيل محلي أولاً مشابه على هذا الموقع.',
           '[مراجعة BabyAGI: وكيل محلي مستقل](/ar/power-local-llm/babyagi-review-autonomous-agent) — إطار عمل وكيل مستقل آخر تمت تغطيته هنا.',
           '[تشغيل نموذج LLM محلي مع Obsidian](/ar/power-local-llm/local-llm-with-obsidian-2026) — ربط النماذج المحلية بمخزن Obsidian الخاص بك، وهو نفس مسار التكامل الذي يدعمه Aori.',
           '[استبدال Grammarly و Notion AI بنماذج محلية](/ar/power-local-llm/replace-grammarly-notion-ai-with-local) — استخدام ذكاء اصطناعي محلي إلى جانب مساحة عمل Notion.',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Hermes-Agent-Test: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review-2026) — ein vergleichbarer local-first Agent, getestet auf dieser Website.',
+          '[Hermes-Agent-Test: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review) — ein vergleichbarer local-first Agent, getestet auf dieser Website.',
           '[BabyAGI-Test: Autonomer lokaler Agent](/de/power-local-llm/babyagi-review-autonomous-agent) — ein weiteres autonomes Agenten-Framework auf dieser Website.',
           '[Ein lokales LLM mit Obsidian betreiben](/de/power-local-llm/local-llm-with-obsidian-2026) — lokale Modelle mit Ihrem Obsidian-Vault verbinden, derselbe Integrationsweg, den Aori unterstützt.',
           '[Grammarly und Notion AI durch lokale Modelle ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — lokale KI neben einem Notion-Workspace nutzen.',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de Hermes Agent: agente de IA local autónomo](/es/power-local-llm/hermes-agent-review-2026) — una reseña comparable de un agente local-first en este sitio.',
+          '[Reseña de Hermes Agent: agente de IA local autónomo](/es/power-local-llm/hermes-agent-review) — una reseña comparable de un agente local-first en este sitio.',
           '[Reseña de BabyAGI: agente local autónomo](/es/power-local-llm/babyagi-review-autonomous-agent) — otro framework de agente autónomo cubierto aquí.',
           '[Ejecutar un LLM local con Obsidian](/es/power-local-llm/local-llm-with-obsidian-2026) — cómo conectar modelos locales a tu vault de Obsidian, la misma vía de integración que admite Aori.',
           '[Reemplazar Grammarly y Notion AI con modelos locales](/es/power-local-llm/replace-grammarly-notion-ai-with-local) — usar IA local junto a un espacio de trabajo de Notion.',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Avis Hermes Agent : agent IA local autonome](/fr/power-local-llm/hermes-agent-review-2026) — un avis sur un agent local-first comparable sur ce site.',
+          '[Avis Hermes Agent : agent IA local autonome](/fr/power-local-llm/hermes-agent-review) — un avis sur un agent local-first comparable sur ce site.',
           '[Avis BabyAGI : agent local autonome](/fr/power-local-llm/babyagi-review-autonomous-agent) — un autre framework d\'agent autonome couvert ici.',
           '[Faire tourner un LLM local avec Obsidian](/fr/power-local-llm/local-llm-with-obsidian-2026) — connecter des modèles locaux à votre coffre Obsidian, la même voie d\'intégration qu\'Aori prend en charge.',
           '[Remplacer Grammarly et Notion AI par des modèles locaux](/fr/power-local-llm/replace-grammarly-notion-ai-with-local) — utiliser une IA locale aux côtés d\'un espace Notion.',
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Hermes Agentレビュー:ローカル自律型AIエージェント](/ja/power-local-llm/hermes-agent-review-2026) — 本サイトで扱う比較可能なローカルファーストエージェントのレビュー。',
+          '[Hermes Agentレビュー:ローカル自律型AIエージェント](/ja/power-local-llm/hermes-agent-review) — 本サイトで扱う比較可能なローカルファーストエージェントのレビュー。',
           '[BabyAGIレビュー:自律型ローカルエージェント](/ja/power-local-llm/babyagi-review-autonomous-agent) — 本サイトで扱う別の自律型エージェントフレームワーク。',
           '[Obsidianでローカルモデルを実行する](/ja/power-local-llm/local-llm-with-obsidian-2026) — Aoriが対応するのと同じ連携経路で、ローカルモデルをObsidianのvaultに接続する方法。',
           '[GrammarlyとNotion AIをローカルモデルで置き換える](/ja/power-local-llm/replace-grammarly-notion-ai-with-local) — Notionのワークスペースと合わせてローカルAIを使う方法。',
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Hermes Agent 리뷰: 로컬 자율 AI 에이전트](/ko/power-local-llm/hermes-agent-review-2026) — 이 사이트에서 다룬 비교 가능한 로컬 퍼스트 에이전트 리뷰.',
+          '[Hermes Agent 리뷰: 로컬 자율 AI 에이전트](/ko/power-local-llm/hermes-agent-review) — 이 사이트에서 다룬 비교 가능한 로컬 퍼스트 에이전트 리뷰.',
           '[BabyAGI 리뷰: 자율 로컬 에이전트](/ko/power-local-llm/babyagi-review-autonomous-agent) — 이 사이트에서 다룬 또 다른 자율 에이전트 프레임워크.',
           '[Obsidian과 함께 로컬 LLM 실행하기](/ko/power-local-llm/local-llm-with-obsidian-2026) — Aori가 지원하는 것과 동일한 연동 방식으로 로컬 모델을 Obsidian 볼트에 연결하는 방법.',
           '[Grammarly와 Notion AI를 로컬 모델로 대체하기](/ko/power-local-llm/replace-grammarly-notion-ai-with-local) — Notion 워크스페이스와 함께 로컬 AI를 사용하는 방법.',
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Avaliação do Hermes Agent: agente de IA local autônomo](/pt/power-local-llm/hermes-agent-review-2026) — uma avaliação comparável de um agente local-first neste site.',
+          '[Avaliação do Hermes Agent: agente de IA local autônomo](/pt/power-local-llm/hermes-agent-review) — uma avaliação comparável de um agente local-first neste site.',
           '[Avaliação do BabyAGI: agente local autônomo](/pt/power-local-llm/babyagi-review-autonomous-agent) — outro framework de agente autônomo coberto aqui.',
           '[Rodar um LLM local com o Obsidian](/pt/power-local-llm/local-llm-with-obsidian-2026) — conectando modelos locais ao seu vault do Obsidian, o mesmo caminho de integração que o Aori suporta.',
           '[Substituir o Grammarly e o Notion AI por modelos locais](/pt/power-local-llm/replace-grammarly-notion-ai-with-local) — usando IA local junto de um workspace do Notion.',
@@ -2391,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Hermes Agent 评测:本地自主 AI 代理](/zh/power-local-llm/hermes-agent-review-2026) —— 本站上一款可比较的本地优先代理评测。',
+          '[Hermes Agent 评测:本地自主 AI 代理](/zh/power-local-llm/hermes-agent-review) —— 本站上一款可比较的本地优先代理评测。',
           '[BabyAGI 评测:自主本地代理](/zh/power-local-llm/babyagi-review-autonomous-agent) —— 本站介绍的另一款自主代理框架。',
           '[结合 Obsidian 运行本地 LLM](/zh/power-local-llm/local-llm-with-obsidian-2026) —— 将本地模型连接到你的 Obsidian 知识库,与 Aori 支持的集成方式相同。',
           '[用本地模型替代 Grammarly 和 Notion AI](/zh/power-local-llm/replace-grammarly-notion-ai-with-local) —— 在 Notion 工作区中搭配使用本地 AI。',

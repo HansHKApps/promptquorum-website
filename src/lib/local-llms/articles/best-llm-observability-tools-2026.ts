@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'What LLM observability actually is',
-        content: '**LLM observability captures and stores traces of your model calls — prompts, completions, latency, token usage and cost — so you can debug failures, spot quality regressions and watch spend in production.** It is ordinary application observability extended to behaviour that is non-deterministic, where the same input can produce a different output and "it broke" often means "the output got worse", not "it threw".\n\nThat is a different job from evaluation. Observability watches what your system does after it ships; evaluation tells you whether a change is safe to ship in the first place. Many teams run both, and several of these tools do both, but the questions are distinct. For the pre-release half, see [the best LLM evaluation tools](/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**LLM observability captures and stores traces of your model calls — prompts, completions, latency, token usage and cost — so you can debug failures, spot quality regressions and watch spend in production.** It is ordinary application observability extended to behaviour that is non-deterministic, where the same input can produce a different output and "it broke" often means "the output got worse", not "it threw".\n\nThat is a different job from evaluation. Observability watches what your system does after it ships; evaluation tells you whether a change is safe to ship in the first place. Many teams run both, and several of these tools do both, but the questions are distinct. For the pre-release half, see [the best LLM evaluation tools](/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the difference between observability and evaluation?',
-            a: 'Observability watches live traffic after release and tells you what the system is doing now. Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Several of these tools do both, but the questions are distinct — see [the best LLM evaluation tools](/local-llms/best-llm-evaluation-tools-2026) for the pre-release half.',
+            a: 'Observability watches live traffic after release and tells you what the system is doing now. Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Several of these tools do both, but the questions are distinct — see [the best LLM evaluation tools](/local-llms/best-llm-evaluation-tools) for the pre-release half.',
           },
         ],
       },
@@ -486,9 +486,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related reading',
         items: [
-          '[Best LLM evaluation tools](/local-llms/best-llm-evaluation-tools-2026) — the pre-release half of the same problem',
-          '[Best LLM API gateway](/local-llms/best-llm-api-gateway-2026) — routing the calls these tools observe, often where cost control actually happens',
-          '[Best AI agent framework](/local-llms/best-ai-agent-framework-2026) — the agents whose reasoning steps SDK tracers capture',
+          '[Best LLM evaluation tools](/local-llms/best-llm-evaluation-tools) — the pre-release half of the same problem',
+          '[Best LLM API gateway](/local-llms/best-llm-api-gateway) — routing the calls these tools observe, often where cost control actually happens',
+          '[Best AI agent framework](/local-llms/best-ai-agent-framework) — the agents whose reasoning steps SDK tracers capture',
           '[Prompt evaluation metrics](/prompt-engineering/prompt-evaluation-metrics) — what to measure once traces are flowing',
           '[Enterprise compliance with local LLMs](/local-llms/enterprise-compliance-local-llms) — the procurement context behind self-hosting a trace store',
           '[SOC 2 & ISO 27001 readiness for self-hosted LLM deployments](/local-llms/soc2-iso27001-self-hosted-llm-compliance) — the audit-log requirements an observability stack needs to support',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compares Langfuse, LangSmith, Helicone and PromptLayer for LLM observability, with verified pricing, licences, retention windows, the ClickHouse acquisition and the Enterprise self-hosting feature gate.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/local-llms/best-llm-observability-tools',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'Was LLM-Observability tatsächlich ist',
-        content: '**LLM-Observability erfasst und speichert Traces Ihrer Modellaufrufe — Prompts, Antworten, Latenz, Token-Verbrauch und Kosten —, damit Sie Fehler analysieren, Qualitätsverschlechterungen erkennen und Ausgaben im Betrieb beobachten können.** Es ist gewöhnliche Anwendungs-Observability, erweitert auf nichtdeterministisches Verhalten, bei dem dieselbe Eingabe unterschiedliche Ausgaben erzeugt und „es ist kaputt" oft „die Ausgabe wurde schlechter" heißt, nicht „es hat eine Exception geworfen".\n\nDas ist eine andere Aufgabe als Evaluation. Observability beobachtet, was Ihr System nach dem Release tut; Evaluation sagt Ihnen vorher, ob eine Änderung ausgeliefert werden darf. Viele Teams machen beides, und mehrere dieser Werkzeuge können beides, doch die Fragen sind verschieden. Zur Hälfte vor dem Release siehe [die besten LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**LLM-Observability erfasst und speichert Traces Ihrer Modellaufrufe — Prompts, Antworten, Latenz, Token-Verbrauch und Kosten —, damit Sie Fehler analysieren, Qualitätsverschlechterungen erkennen und Ausgaben im Betrieb beobachten können.** Es ist gewöhnliche Anwendungs-Observability, erweitert auf nichtdeterministisches Verhalten, bei dem dieselbe Eingabe unterschiedliche Ausgaben erzeugt und „es ist kaputt" oft „die Ausgabe wurde schlechter" heißt, nicht „es hat eine Exception geworfen".\n\nDas ist eine andere Aufgabe als Evaluation. Observability beobachtet, was Ihr System nach dem Release tut; Evaluation sagt Ihnen vorher, ob eine Änderung ausgeliefert werden darf. Viele Teams machen beides, und mehrere dieser Werkzeuge können beides, doch die Fragen sind verschieden. Zur Hälfte vor dem Release siehe [die besten LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen Observability und Evaluation?',
-            a: 'Observability beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Evaluation lässt vor dem Ausliefern einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Mehrere dieser Werkzeuge können beides, doch die Fragen unterscheiden sich — siehe [die besten LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools-2026) für die Hälfte vor dem Release.',
+            a: 'Observability beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Evaluation lässt vor dem Ausliefern einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Mehrere dieser Werkzeuge können beides, doch die Fragen unterscheiden sich — siehe [die besten LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools) für die Hälfte vor dem Release.',
           },
           {
             q: 'Ist DSGVO-konforme Observability mit einem US-Anbieter möglich?',
@@ -1072,9 +1072,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Beste LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools-2026) — die Hälfte desselben Problems vor dem Release',
-          '[Bestes LLM-API-Gateway](/de/local-llms/best-llm-api-gateway-2026) — die Aufrufe steuern, die diese Werkzeuge beobachten, oft der eigentliche Hebel bei den Kosten',
-          '[Bestes KI-Agenten-Framework](/de/local-llms/best-ai-agent-framework-2026) — die Agenten, deren Denkschritte SDK-Tracer erfassen',
+          '[Beste LLM-Evaluationstools](/de/local-llms/best-llm-evaluation-tools) — die Hälfte desselben Problems vor dem Release',
+          '[Bestes LLM-API-Gateway](/de/local-llms/best-llm-api-gateway) — die Aufrufe steuern, die diese Werkzeuge beobachten, oft der eigentliche Hebel bei den Kosten',
+          '[Bestes KI-Agenten-Framework](/de/local-llms/best-ai-agent-framework) — die Agenten, deren Denkschritte SDK-Tracer erfassen',
           '[Metriken zur Prompt-Bewertung](/de/prompt-engineering/prompt-evaluation-metrics) — was zu messen ist, sobald Traces fließen',
           '[Unternehmens-Compliance mit lokalen LLMs](/de/local-llms/enterprise-compliance-local-llms) — der Beschaffungskontext hinter einem selbst betriebenen Trace-Speicher',
           '[SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs](/de/local-llms/soc2-iso27001-self-hosted-llm-compliance) — die Audit-Log-Anforderungen, die ein Observability-Stack unterstützen muss',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Vergleicht Langfuse, LangSmith, Helicone und PromptLayer zur LLM-Observability, mit geprüften Preisen, Lizenzen, Aufbewahrungsfristen, der ClickHouse-Übernahme und der Enterprise-Schranke beim Selbstbetrieb.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/de/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/de/local-llms/best-llm-observability-tools',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'Qué es realmente la observabilidad de LLM',
-        content: '**La observabilidad de LLM captura y almacena trazas de sus llamadas al modelo — prompts, respuestas, latencia, uso de tokens y coste — para que pueda depurar fallos, detectar regresiones de calidad y vigilar el gasto en producción.** Es la observabilidad de aplicaciones de siempre extendida a un comportamiento no determinista, donde la misma entrada puede producir una salida distinta y «se ha roto» suele significar «la salida ha empeorado», no «ha lanzado una excepción».\n\nEso es un trabajo distinto de la evaluación. La observabilidad vigila qué hace su sistema después de publicarlo; la evaluación le dice si un cambio es seguro de publicar. Muchos equipos hacen ambas, y varias de estas herramientas cubren las dos, pero las preguntas son distintas. Para la mitad previa al lanzamiento, véase [las mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**La observabilidad de LLM captura y almacena trazas de sus llamadas al modelo — prompts, respuestas, latencia, uso de tokens y coste — para que pueda depurar fallos, detectar regresiones de calidad y vigilar el gasto en producción.** Es la observabilidad de aplicaciones de siempre extendida a un comportamiento no determinista, donde la misma entrada puede producir una salida distinta y «se ha roto» suele significar «la salida ha empeorado», no «ha lanzado una excepción».\n\nEso es un trabajo distinto de la evaluación. La observabilidad vigila qué hace su sistema después de publicarlo; la evaluación le dice si un cambio es seguro de publicar. Muchos equipos hacen ambas, y varias de estas herramientas cubren las dos, pero las preguntas son distintas. Para la mitad previa al lanzamiento, véase [las mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1615,7 +1615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué diferencia hay entre observabilidad y evaluación?',
-            a: 'La observabilidad vigila el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. Varias de estas herramientas hacen ambas, pero las preguntas son distintas — véase [las mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools-2026) para la mitad previa al lanzamiento.',
+            a: 'La observabilidad vigila el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. Varias de estas herramientas hacen ambas, pero las preguntas son distintas — véase [las mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools) para la mitad previa al lanzamiento.',
           },
         ],
       },
@@ -1650,9 +1650,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools-2026) — la mitad previa al lanzamiento del mismo problema',
-          '[Mejor gateway de API para LLM](/es/local-llms/best-llm-api-gateway-2026) — enrutar las llamadas que estas herramientas observan, donde suele estar el control real del coste',
-          '[Mejor framework de agentes de IA](/es/local-llms/best-ai-agent-framework-2026) — los agentes cuyos pasos de razonamiento capturan los trazadores SDK',
+          '[Mejores herramientas de evaluación de LLM](/es/local-llms/best-llm-evaluation-tools) — la mitad previa al lanzamiento del mismo problema',
+          '[Mejor gateway de API para LLM](/es/local-llms/best-llm-api-gateway) — enrutar las llamadas que estas herramientas observan, donde suele estar el control real del coste',
+          '[Mejor framework de agentes de IA](/es/local-llms/best-ai-agent-framework) — los agentes cuyos pasos de razonamiento capturan los trazadores SDK',
           '[Métricas de evaluación de prompts](/es/prompt-engineering/prompt-evaluation-metrics) — qué medir una vez que fluyen las trazas',
           '[Cumplimiento empresarial con LLM locales](/es/local-llms/enterprise-compliance-local-llms) — el contexto de compras tras autoalojar un almacén de trazas',
           '[Preparación SOC 2 e ISO 27001 para LLMs autoalojados](/es/local-llms/soc2-iso27001-self-hosted-llm-compliance) — los requisitos de registro de auditoría que un stack de observabilidad debe soportar',
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compara Langfuse, LangSmith, Helicone y PromptLayer para observabilidad de LLM, con precios, licencias y ventanas de retención verificados, la adquisición por ClickHouse y el muro de funciones de Enterprise en el autoalojamiento.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/es/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/es/local-llms/best-llm-observability-tools',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'Ce qu est reellement l observabilite LLM',
-        content: '**L observabilite LLM capte et stocke les traces de vos appels de modele — prompts, reponses, latence, consommation de tokens et cout — afin que vous puissiez deboguer les echecs, reperer les regressions de qualite et surveiller la depense en production.** C est l observabilite applicative habituelle etendue a un comportement non deterministe, ou une meme entree peut produire une sortie differente et ou « c est casse » signifie souvent « la sortie s est degradee », pas « une exception a ete levee ».\n\nC est un travail distinct de l evaluation. L observabilite surveille ce que fait votre systeme apres la mise en ligne ; l evaluation vous dit si un changement peut etre livre. Beaucoup d equipes font les deux, et plusieurs de ces outils couvrent les deux, mais les questions different. Pour la moitie amont, voyez [les meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**L observabilite LLM capte et stocke les traces de vos appels de modele — prompts, reponses, latence, consommation de tokens et cout — afin que vous puissiez deboguer les echecs, reperer les regressions de qualite et surveiller la depense en production.** C est l observabilite applicative habituelle etendue a un comportement non deterministe, ou une meme entree peut produire une sortie differente et ou « c est casse » signifie souvent « la sortie s est degradee », pas « une exception a ete levee ».\n\nC est un travail distinct de l evaluation. L observabilite surveille ce que fait votre systeme apres la mise en ligne ; l evaluation vous dit si un changement peut etre livre. Beaucoup d equipes font les deux, et plusieurs de ces outils couvrent les deux, mais les questions different. Pour la moitie amont, voyez [les meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2193,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle difference entre observabilite et evaluation ?',
-            a: 'L observabilite surveille le trafic reel apres la mise en ligne et vous dit ce que le systeme fait maintenant. L evaluation execute un jeu de donnees fixe avant la livraison et vous dit si un changement a ameliore ou degrade la qualite. Plusieurs de ces outils font les deux, mais les questions different — voyez [les meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools-2026) pour la moitie amont.',
+            a: 'L observabilite surveille le trafic reel apres la mise en ligne et vous dit ce que le systeme fait maintenant. L evaluation execute un jeu de donnees fixe avant la livraison et vous dit si un changement a ameliore ou degrade la qualite. Plusieurs de ces outils font les deux, mais les questions different — voyez [les meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools) pour la moitie amont.',
           },
         ],
       },
@@ -2228,9 +2228,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complementaires',
         items: [
-          '[Meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools-2026) — la moitie amont du meme probleme',
-          '[Meilleure passerelle d API LLM](/fr/local-llms/best-llm-api-gateway-2026) — router les appels que ces outils observent, souvent le vrai levier sur les couts',
-          '[Meilleur framework d agents IA](/fr/local-llms/best-ai-agent-framework-2026) — les agents dont les traceurs SDK captent les etapes de raisonnement',
+          '[Meilleurs outils d evaluation LLM](/fr/local-llms/best-llm-evaluation-tools) — la moitie amont du meme probleme',
+          '[Meilleure passerelle d API LLM](/fr/local-llms/best-llm-api-gateway) — router les appels que ces outils observent, souvent le vrai levier sur les couts',
+          '[Meilleur framework d agents IA](/fr/local-llms/best-ai-agent-framework) — les agents dont les traceurs SDK captent les etapes de raisonnement',
           '[Metriques d evaluation des prompts](/fr/prompt-engineering/prompt-evaluation-metrics) — quoi mesurer une fois que les traces circulent',
           '[Conformite en entreprise avec des LLM locaux](/fr/local-llms/enterprise-compliance-local-llms) — le contexte achats derriere un magasin de traces auto-heberge',
           '[SOC 2 et ISO 27001 : preparer un deploiement de LLM auto-heberge](/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance) — les exigences de journalisation d audit qu une stack d observabilite doit supporter',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compare Langfuse, LangSmith, Helicone et PromptLayer pour l observabilite LLM, avec tarifs, licences et fenetres de retention verifies, le rachat par ClickHouse et le mur de fonctionnalites Enterprise en auto-hebergement. Verifie en aout 2026.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/fr/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/fr/local-llms/best-llm-observability-tools',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'O que é de fato observabilidade de LLM',
-        content: '**Observabilidade de LLM captura e armazena traces das suas chamadas ao modelo — prompts, respostas, latência, uso de tokens e custo — para que você possa depurar falhas, detectar regressões de qualidade e acompanhar o gasto em produção.** É a observabilidade de aplicações de sempre, estendida a um comportamento não determinístico em que a mesma entrada pode produzir saídas diferentes e "quebrou" costuma significar "a saída piorou", não "lançou uma exceção".\n\nEssa é uma tarefa distinta de avaliação. A observabilidade acompanha o que seu sistema faz depois do lançamento; a avaliação diz se uma mudança pode ir ao ar. Muitas equipes fazem as duas, e várias dessas ferramentas cobrem ambas, mas as perguntas são diferentes. Para a metade anterior ao lançamento, veja [as melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**Observabilidade de LLM captura e armazena traces das suas chamadas ao modelo — prompts, respostas, latência, uso de tokens e custo — para que você possa depurar falhas, detectar regressões de qualidade e acompanhar o gasto em produção.** É a observabilidade de aplicações de sempre, estendida a um comportamento não determinístico em que a mesma entrada pode produzir saídas diferentes e "quebrou" costuma significar "a saída piorou", não "lançou uma exceção".\n\nEssa é uma tarefa distinta de avaliação. A observabilidade acompanha o que seu sistema faz depois do lançamento; a avaliação diz se uma mudança pode ir ao ar. Muitas equipes fazem as duas, e várias dessas ferramentas cobrem ambas, mas as perguntas são diferentes. Para a metade anterior ao lançamento, veja [as melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2771,7 +2771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual a diferença entre observabilidade e avaliação?',
-            a: 'A observabilidade acompanha o tráfego real depois do lançamento e diz o que o sistema está fazendo agora. A avaliação executa um conjunto de dados fixo antes de publicar e diz se uma mudança melhorou ou piorou a qualidade. Várias dessas ferramentas fazem as duas coisas, mas as perguntas diferem — veja [as melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools-2026) para a metade anterior ao lançamento.',
+            a: 'A observabilidade acompanha o tráfego real depois do lançamento e diz o que o sistema está fazendo agora. A avaliação executa um conjunto de dados fixo antes de publicar e diz se uma mudança melhorou ou piorou a qualidade. Várias dessas ferramentas fazem as duas coisas, mas as perguntas diferem — veja [as melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools) para a metade anterior ao lançamento.',
           },
         ],
       },
@@ -2806,9 +2806,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools-2026) — a metade anterior ao lançamento do mesmo problema',
-          '[Melhor gateway de API para LLM](/pt/local-llms/best-llm-api-gateway-2026) — rotear as chamadas que essas ferramentas observam, muitas vezes a alavanca real de custo',
-          '[Melhor framework de agentes de IA](/pt/local-llms/best-ai-agent-framework-2026) — os agentes cujos passos de raciocínio os rastreadores de SDK capturam',
+          '[Melhores ferramentas de avaliação de LLM](/pt/local-llms/best-llm-evaluation-tools) — a metade anterior ao lançamento do mesmo problema',
+          '[Melhor gateway de API para LLM](/pt/local-llms/best-llm-api-gateway) — rotear as chamadas que essas ferramentas observam, muitas vezes a alavanca real de custo',
+          '[Melhor framework de agentes de IA](/pt/local-llms/best-ai-agent-framework) — os agentes cujos passos de raciocínio os rastreadores de SDK capturam',
           '[Métricas de avaliação de prompts](/pt/prompt-engineering/prompt-evaluation-metrics) — o que medir depois que os traces começam a fluir',
           '[Conformidade corporativa com LLMs locais](/pt/local-llms/enterprise-compliance-local-llms) — o contexto de compras por trás de um repositório de traces auto-hospedado',
           '[SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados](/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance) — os requisitos de log de auditoria que um stack de observabilidade precisa suportar',
@@ -2821,7 +2821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compara Langfuse, LangSmith, Helicone e PromptLayer para observabilidade de LLM, com preços, licenças e janelas de retenção verificados, a aquisição pela ClickHouse e o muro de recursos do Enterprise na auto-hospedagem.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/pt/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/best-llm-observability-tools',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -3018,7 +3018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'LLMオブザーバビリティとは何か',
-        content: '**LLMオブザーバビリティは、モデル呼び出しのトレース（プロンプト、応答、レイテンシ、トークン使用量、コスト）を取得して保存し、障害のデバッグ、品質劣化の検知、本番での支出の把握を可能にするものです。** 通常のアプリケーションのオブザーバビリティを、同じ入力が異なる出力を生む非決定的な挙動へ拡張したものであり、ここでの「壊れた」は多くの場合「例外が投げられた」ではなく「出力の質が落ちた」を意味します。\n\nこれは評価とは別の仕事です。オブザーバビリティはリリース後にシステムが何をしているかを見張り、評価は変更を出してよいかを事前に教えます。両方を行うチームは多く、これらのツールのいくつかは両方に対応しますが、問いが違います。リリース前の半分については[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools-2026)をご覧ください。',
+        content: '**LLMオブザーバビリティは、モデル呼び出しのトレース（プロンプト、応答、レイテンシ、トークン使用量、コスト）を取得して保存し、障害のデバッグ、品質劣化の検知、本番での支出の把握を可能にするものです。** 通常のアプリケーションのオブザーバビリティを、同じ入力が異なる出力を生む非決定的な挙動へ拡張したものであり、ここでの「壊れた」は多くの場合「例外が投げられた」ではなく「出力の質が落ちた」を意味します。\n\nこれは評価とは別の仕事です。オブザーバビリティはリリース後にシステムが何をしているかを見張り、評価は変更を出してよいかを事前に教えます。両方を行うチームは多く、これらのツールのいくつかは両方に対応しますが、問いが違います。リリース前の半分については[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools)をご覧ください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3349,7 +3349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'オブザーバビリティと評価の違いは何ですか？',
-            a: 'オブザーバビリティはリリース後の実トラフィックを見張り、システムが今何をしているかを教えます。評価は出荷前に固定のデータセットを流し、変更が品質を上げたか下げたかを教えます。これらのツールのいくつかは両方に対応しますが、問いが違います。リリース前の半分については[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools-2026)をご覧ください。',
+            a: 'オブザーバビリティはリリース後の実トラフィックを見張り、システムが今何をしているかを教えます。評価は出荷前に固定のデータセットを流し、変更が品質を上げたか下げたかを教えます。これらのツールのいくつかは両方に対応しますが、問いが違います。リリース前の半分については[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools)をご覧ください。',
           },
         ],
       },
@@ -3384,9 +3384,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools-2026) — 同じ問題のリリース前の半分',
-          '[最適なLLM APIゲートウェイ](/ja/local-llms/best-llm-api-gateway-2026) — これらのツールが観測する呼び出しの経路制御。コストの本当の効き所',
-          '[最適なAIエージェントフレームワーク](/ja/local-llms/best-ai-agent-framework-2026) — SDKトレーサーが推論ステップを捉える対象のエージェント',
+          '[最適なLLM評価ツール](/ja/local-llms/best-llm-evaluation-tools) — 同じ問題のリリース前の半分',
+          '[最適なLLM APIゲートウェイ](/ja/local-llms/best-llm-api-gateway) — これらのツールが観測する呼び出しの経路制御。コストの本当の効き所',
+          '[最適なAIエージェントフレームワーク](/ja/local-llms/best-ai-agent-framework) — SDKトレーサーが推論ステップを捉える対象のエージェント',
           '[プロンプト評価の指標](/ja/prompt-engineering/prompt-evaluation-metrics) — トレースが流れ始めたら何を測るか',
           '[ローカルLLMにおける企業コンプライアンス](/ja/local-llms/enterprise-compliance-local-llms) — トレース保管庫を自己ホストする背景にある調達の文脈',
           '[セルフホストLLMのSOC 2・ISO 27001監査対応ガイド](/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance) — オブザーバビリティスタックが満たすべき監査ログ要件',
@@ -3399,7 +3399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LLMオブザーバビリティ向けにLangfuse、LangSmith、Helicone、PromptLayerを比較。確認済みの料金、ライセンス、保持期間に加え、ClickHouseによる買収と自己ホストにおけるEnterpriseの機能の壁を扱います。2026年8月時点で確認。',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/ja/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/ja/local-llms/best-llm-observability-tools',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -3596,7 +3596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'LLM 可观测性到底是什么',
-        content: '**LLM 可观测性会捕获并存储模型调用的追踪数据——提示词、响应、时延、令牌用量与成本——好让你排查故障、发现质量回退，并在生产中盯住花销。** 它就是常规的应用可观测性，只是延伸到了非确定性行为：相同输入可能产生不同输出，而「坏了」往往意味着「输出变差了」，而不是「抛了异常」。\n\n这与评估是两件事。可观测性盯的是系统上线之后在做什么；评估告诉你某个改动能不能发布。很多团队两者都做，这些工具中也有几个两边都能覆盖，但问题本身不同。上线前的那一半，见[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools-2026)。',
+        content: '**LLM 可观测性会捕获并存储模型调用的追踪数据——提示词、响应、时延、令牌用量与成本——好让你排查故障、发现质量回退，并在生产中盯住花销。** 它就是常规的应用可观测性，只是延伸到了非确定性行为：相同输入可能产生不同输出，而「坏了」往往意味着「输出变差了」，而不是「抛了异常」。\n\n这与评估是两件事。可观测性盯的是系统上线之后在做什么；评估告诉你某个改动能不能发布。很多团队两者都做，这些工具中也有几个两边都能覆盖，但问题本身不同。上线前的那一半，见[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools)。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3927,7 +3927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '可观测性与评估有什么区别？',
-            a: '可观测性盯的是上线之后的真实流量，告诉你系统此刻在做什么。评估在发布前跑一套固定数据集，告诉你某个改动让质量变好还是变差。这些工具中有几个两者都做，但问题本身不同——上线前的那一半，见[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools-2026)。',
+            a: '可观测性盯的是上线之后的真实流量，告诉你系统此刻在做什么。评估在发布前跑一套固定数据集，告诉你某个改动让质量变好还是变差。这些工具中有几个两者都做，但问题本身不同——上线前的那一半，见[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools)。',
           },
         ],
       },
@@ -3962,9 +3962,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools-2026)——同一问题上线前的那一半',
-          '[最佳 LLM API 网关](/zh/local-llms/best-llm-api-gateway-2026)——为这些工具所观测的调用做路由，往往才是成本的真正抓手',
-          '[最佳 AI 智能体框架](/zh/local-llms/best-ai-agent-framework-2026)——SDK 追踪器所捕获推理步骤的那些智能体',
+          '[最佳 LLM 评估工具](/zh/local-llms/best-llm-evaluation-tools)——同一问题上线前的那一半',
+          '[最佳 LLM API 网关](/zh/local-llms/best-llm-api-gateway)——为这些工具所观测的调用做路由，往往才是成本的真正抓手',
+          '[最佳 AI 智能体框架](/zh/local-llms/best-ai-agent-framework)——SDK 追踪器所捕获推理步骤的那些智能体',
           '[提示词评估指标](/zh/prompt-engineering/prompt-evaluation-metrics)——追踪开始流动之后该衡量什么',
           '[本地 LLM 的企业合规](/zh/local-llms/enterprise-compliance-local-llms)——自托管追踪存储背后的采购背景',
           '[自托管LLM部署的SOC 2与ISO 27001审计准备指南](/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance)——可观测性技术栈需要支持的审计日志要求',
@@ -3977,7 +3977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '对比 Langfuse、LangSmith、Helicone 与 PromptLayer 的 LLM 可观测性能力，包含核实过的价格、许可证与保留窗口，以及 ClickHouse 收购和自托管中的 Enterprise 功能墙。',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/zh/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/zh/local-llms/best-llm-observability-tools',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -4174,7 +4174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'ما مراقبة نماذج اللغة الكبيرة فعليًا',
-        content: '**مراقبة نماذج اللغة الكبيرة تلتقط وتخزّن تتبّعات نداءات النموذج — المطالبات والاستجابات وزمن الاستجابة واستهلاك الرموز والتكلفة — لتتمكن من تصحيح الأعطال ورصد تراجع الجودة ومتابعة الإنفاق في الإنتاج.** إنها مراقبة التطبيقات المعتادة نفسها، ممتدة إلى سلوك غير حتمي قد ينتج فيه المدخل نفسه مخرجًا مختلفًا، وحيث «تعطّل» تعني غالبًا «تراجع المخرَج» لا «رُمي استثناء».\n\nوهذا عمل مختلف عن التقييم. المراقبة تراقب ما يفعله نظامك بعد الإطلاق؛ أما التقييم فيخبرك ما إذا كان تغيير ما صالحًا للنشر. كثير من الفرق يقوم بالأمرين، وعدة أدوات هنا تغطيهما، لكن الأسئلة مختلفة. للشق السابق للإطلاق، انظر [أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools-2026).',
+        content: '**مراقبة نماذج اللغة الكبيرة تلتقط وتخزّن تتبّعات نداءات النموذج — المطالبات والاستجابات وزمن الاستجابة واستهلاك الرموز والتكلفة — لتتمكن من تصحيح الأعطال ورصد تراجع الجودة ومتابعة الإنفاق في الإنتاج.** إنها مراقبة التطبيقات المعتادة نفسها، ممتدة إلى سلوك غير حتمي قد ينتج فيه المدخل نفسه مخرجًا مختلفًا، وحيث «تعطّل» تعني غالبًا «تراجع المخرَج» لا «رُمي استثناء».\n\nوهذا عمل مختلف عن التقييم. المراقبة تراقب ما يفعله نظامك بعد الإطلاق؛ أما التقييم فيخبرك ما إذا كان تغيير ما صالحًا للنشر. كثير من الفرق يقوم بالأمرين، وعدة أدوات هنا تغطيهما، لكن الأسئلة مختلفة. للشق السابق للإطلاق، انظر [أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4505,7 +4505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما الفرق بين المراقبة والتقييم؟',
-            a: 'المراقبة تراقب الحركة الحقيقية بعد الإطلاق وتخبرك بما يفعله النظام الآن. أما التقييم فيشغّل مجموعة بيانات ثابتة قبل النشر ويخبرك ما إذا كان تغيير ما قد حسّن الجودة أو أضرّ بها. وعدة أدوات هنا تقوم بالأمرين، لكن الأسئلة مختلفة — انظر [أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools-2026) للشق السابق للإطلاق.',
+            a: 'المراقبة تراقب الحركة الحقيقية بعد الإطلاق وتخبرك بما يفعله النظام الآن. أما التقييم فيشغّل مجموعة بيانات ثابتة قبل النشر ويخبرك ما إذا كان تغيير ما قد حسّن الجودة أو أضرّ بها. وعدة أدوات هنا تقوم بالأمرين، لكن الأسئلة مختلفة — انظر [أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools) للشق السابق للإطلاق.',
           },
         ],
       },
@@ -4540,9 +4540,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools-2026) — الشق السابق للإطلاق من المشكلة نفسها',
-          '[أفضل بوابة واجهات برمجية لنماذج اللغة الكبيرة](/ar/local-llms/best-llm-api-gateway-2026) — توجيه النداءات التي تراقبها هذه الأدوات، وغالبًا ما يكون المفتاح الحقيقي للتكلفة',
-          '[أفضل إطار لوكلاء الذكاء الاصطناعي](/ar/local-llms/best-ai-agent-framework-2026) — الوكلاء الذين تلتقط متتبّعات حزم التطوير خطوات استدلالهم',
+          '[أفضل أدوات تقييم نماذج اللغة الكبيرة](/ar/local-llms/best-llm-evaluation-tools) — الشق السابق للإطلاق من المشكلة نفسها',
+          '[أفضل بوابة واجهات برمجية لنماذج اللغة الكبيرة](/ar/local-llms/best-llm-api-gateway) — توجيه النداءات التي تراقبها هذه الأدوات، وغالبًا ما يكون المفتاح الحقيقي للتكلفة',
+          '[أفضل إطار لوكلاء الذكاء الاصطناعي](/ar/local-llms/best-ai-agent-framework) — الوكلاء الذين تلتقط متتبّعات حزم التطوير خطوات استدلالهم',
           '[مقاييس تقييم المطالبات](/ar/prompt-engineering/prompt-evaluation-metrics) — ما الذي تقيسه بعد أن تبدأ التتبّعات بالتدفق',
           '[امتثال المؤسسات مع نماذج اللغة المحلية](/ar/local-llms/enterprise-compliance-local-llms) — سياق المشتريات وراء استضافة مخزن تتبّعات ذاتيًا',
           '[الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا](/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance) — متطلبات سجل التدقيق التي يجب أن تدعمها بنية المراقبة',
@@ -4555,7 +4555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'مقارنة بين Langfuse وLangSmith وHelicone وPromptLayer لمراقبة نماذج اللغة الكبيرة، مع أسعار ورخص ومدد احتفاظ جرى التحقق منها، إضافة إلى استحواذ ClickHouse وجدار ميزات Enterprise في الاستضافة الذاتية. جرى.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/ar/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/ar/local-llms/best-llm-observability-tools',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -4752,7 +4752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whatIsObservability: {
         id: 'what-is-observability',
         title: 'LLM 옵저버빌리티란 무엇인가',
-        content: '**LLM 옵저버빌리티는 모델 호출의 트레이스(프롬프트, 응답, 지연 시간, 토큰 사용량, 비용)를 수집하고 저장해, 장애를 디버깅하고 품질 저하를 포착하며 프로덕션의 지출을 지켜볼 수 있게 하는 것입니다.** 같은 입력이 다른 출력을 낼 수 있는 비결정적 동작으로 확장된, 평범한 애플리케이션 옵저버빌리티입니다. 여기서 "망가졌다"는 대개 "예외가 났다"가 아니라 "출력이 나빠졌다"를 뜻합니다.\n\n이는 평가와는 다른 일입니다. 옵저버빌리티는 배포 이후 시스템이 무엇을 하는지 지켜보고, 평가는 어떤 변경을 내보내도 되는지 알려줍니다. 둘 다 하는 팀이 많고 이 도구들 중 몇몇은 양쪽을 다루지만, 묻는 질문이 다릅니다. 배포 이전의 절반은 [최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools-2026)를 참고하세요.',
+        content: '**LLM 옵저버빌리티는 모델 호출의 트레이스(프롬프트, 응답, 지연 시간, 토큰 사용량, 비용)를 수집하고 저장해, 장애를 디버깅하고 품질 저하를 포착하며 프로덕션의 지출을 지켜볼 수 있게 하는 것입니다.** 같은 입력이 다른 출력을 낼 수 있는 비결정적 동작으로 확장된, 평범한 애플리케이션 옵저버빌리티입니다. 여기서 "망가졌다"는 대개 "예외가 났다"가 아니라 "출력이 나빠졌다"를 뜻합니다.\n\n이는 평가와는 다른 일입니다. 옵저버빌리티는 배포 이후 시스템이 무엇을 하는지 지켜보고, 평가는 어떤 변경을 내보내도 되는지 알려줍니다. 둘 다 하는 팀이 많고 이 도구들 중 몇몇은 양쪽을 다루지만, 묻는 질문이 다릅니다. 배포 이전의 절반은 [최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools)를 참고하세요.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5083,7 +5083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '옵저버빌리티와 평가는 무엇이 다른가요?',
-            a: '옵저버빌리티는 배포 이후의 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 평가는 출시 전에 고정된 데이터셋을 돌려 어떤 변경이 품질을 높였는지 낮췄는지 알려줍니다. 이 도구들 중 몇몇은 양쪽을 다루지만 묻는 질문이 다릅니다. 배포 이전의 절반은 [최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools-2026)를 참고하세요.',
+            a: '옵저버빌리티는 배포 이후의 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 평가는 출시 전에 고정된 데이터셋을 돌려 어떤 변경이 품질을 높였는지 낮췄는지 알려줍니다. 이 도구들 중 몇몇은 양쪽을 다루지만 묻는 질문이 다릅니다. 배포 이전의 절반은 [최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools)를 참고하세요.',
           },
         ],
       },
@@ -5118,9 +5118,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '함께 읽기',
         items: [
-          '[최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools-2026) — 같은 문제의 배포 이전 절반',
-          '[최고의 LLM API 게이트웨이](/ko/local-llms/best-llm-api-gateway-2026) — 이 도구들이 관측하는 호출의 라우팅. 비용을 실제로 좌우하는 지점인 경우가 많음',
-          '[최고의 AI 에이전트 프레임워크](/ko/local-llms/best-ai-agent-framework-2026) — SDK 트레이서가 추론 단계를 포착하는 대상 에이전트',
+          '[최고의 LLM 평가 도구](/ko/local-llms/best-llm-evaluation-tools) — 같은 문제의 배포 이전 절반',
+          '[최고의 LLM API 게이트웨이](/ko/local-llms/best-llm-api-gateway) — 이 도구들이 관측하는 호출의 라우팅. 비용을 실제로 좌우하는 지점인 경우가 많음',
+          '[최고의 AI 에이전트 프레임워크](/ko/local-llms/best-ai-agent-framework) — SDK 트레이서가 추론 단계를 포착하는 대상 에이전트',
           '[프롬프트 평가 지표](/ko/prompt-engineering/prompt-evaluation-metrics) — 트레이스가 흐르기 시작한 뒤 무엇을 측정할 것인가',
           '[로컬 LLM의 기업 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms) — 트레이스 저장소를 자체 호스팅하는 배경의 구매 맥락',
           '[셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드](/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance) — 관측 가능성 스택이 뒷받침해야 할 감사 로그 요건',
@@ -5133,7 +5133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LLM 옵저버빌리티를 위한 Langfuse, LangSmith, Helicone, PromptLayer 비교. 확인된 가격과 라이선스, 보존 기간에 더해 ClickHouse 인수와 자체 호스팅의 Enterprise 기능 장벽을 다룹니다.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
-      url: 'https://www.promptquorum.com/ko/local-llms/best-llm-observability-tools-2026',
+      url: 'https://www.promptquorum.com/ko/local-llms/best-llm-observability-tools',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

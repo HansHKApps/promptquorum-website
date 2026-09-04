@@ -9,7 +9,7 @@ export function HardwareBlock({ hardware, machine, compact = false }: { hardware
   const display = computeHardwareDisplay(hardware, machine)
 
   if (!display.known) {
-    return <span className="text-text-secondary/70 italic">Not yet researched</span>
+    return null
   }
 
   if (compact) {

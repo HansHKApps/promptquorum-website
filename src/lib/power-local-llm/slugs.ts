@@ -29,19 +29,19 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-coding-llm-without-internet':           'local-coding-llm-without-internet',
   'local-llm-code-review-ci-cd':                 'local-llm-code-review-ci-cd',
   // Bodega One Code review — 2026-09-03
-  'bodega-one-code-review-2026':                 'bodega-one-code-review-2026',
+  'bodega-one-code-review':                 'bodega-one-code-review-2026',
 
   // Category 4 — Local AI Agents & Tool Use
   'local-ai-agents-with-mcp-2026':               'local-ai-agents-with-mcp-2026',
   'best-local-models-tool-calling-2026':         'best-local-models-tool-calling-2026',
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
-  'autogpt-local-review-2026':                   'autogpt-local-review-2026',
+  'autogpt-local-review':                   'autogpt-local-review-2026',
   'open-interpreter-review':                     'open-interpreter-review',
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
-  'hermes-agent-review-2026':                    'hermes-agent-review-2026',
-  'msty-go-review-2026':                         'msty-go-review-2026',
+  'hermes-agent-review':                    'hermes-agent-review-2026',
+  'msty-go-review':                         'msty-go-review-2026',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -49,7 +49,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-prompts-for-fiction-writers':       'local-llm-prompts-for-fiction-writers',
   'uncensored-local-llm-creative-writing-ethics':'uncensored-local-llm-creative-writing-ethics',
   'local-llm-screenwriting-and-novel-drafting':  'local-llm-screenwriting-and-novel-drafting',
-  'backyard-ai-review-local-roleplay-2026':      'backyard-ai-review-local-roleplay-2026',
+  'backyard-ai-review-local-roleplay':      'backyard-ai-review-local-roleplay-2026',
 
   // Category 6 — Mobile & Edge LLMs
   'best-local-llm-apps-iphone-2026':             'best-local-llm-apps-iphone-2026',
@@ -67,14 +67,14 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
 
   // Enterprise/B2B infrastructure — 2026-09-02
-  'enterprise-llm-inference-servers-vllm-tgi-nim-2026': 'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
+  'enterprise-llm-inference-servers-vllm-tgi-nim': 'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
 
   // Category 10 — Hardware Buying Guides
   'best-gpu-buying-guide-local-llm-2026':        'best-gpu-buying-guide-local-llm-2026',
   'rtx-3090-local-llm-buy-or-rent':              'rtx-3090-local-llm-buy-or-rent',
   'best-mac-for-local-ai-2026':                  'best-mac-for-local-ai-2026',
-  'asus-mini-pc-local-ai-2026':                  'asus-mini-pc-local-ai-2026',
-  'local-llm-electricity-cost-balcony-solar-2026': 'local-llm-electricity-cost-balcony-solar-2026',
+  'asus-mini-pc-local-ai':                  'asus-mini-pc-local-ai-2026',
+  'local-llm-electricity-cost-balcony-solar': 'local-llm-electricity-cost-balcony-solar-2026',
   'cloud-gpu-rental-guide-2026':                 'cloud-gpu-rental-guide-2026',
   'local-ai-workstation-build-guide-2026':       'local-ai-workstation-build-guide-2026',
   'best-vpn-ai-privacy-local-llm-2026':          'best-vpn-ai-privacy-local-llm-2026',
@@ -85,8 +85,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-courses-certifications-2026':         'best-ai-courses-certifications-2026',
   'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':     'apple-mlx-vs-nvidia-cuda-local-llm-2026',
-  'cursor-vs-windsurf-vs-copilot-cline-2026':    'cursor-vs-windsurf-vs-copilot-cline-2026',
-  'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026': 'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026',
+  'cursor-vs-windsurf-vs-copilot-cline':    'cursor-vs-windsurf-vs-copilot-cline-2026',
+  'pinecone-vs-weaviate-vs-qdrant-vs-chroma': 'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026',
 
   // Commercial Sprint 2026-05-26 — 6 new revenue pages
   'qwen-local-deployment-complete-guide-2026':   'qwen-local-deployment-complete-guide-2026',
@@ -96,7 +96,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-workstation-build-local-ai-2026':        'best-workstation-build-local-ai-2026',
   'best-local-llm-ide-plugins-2026':             'best-local-llm-ide-plugins-2026',
   'best-rag-tools-for-business-documents-2026':  'best-rag-tools-for-business-documents-2026',
-  'enterprise-rag-vector-database-deployment-guide-2026': 'enterprise-rag-vector-database-deployment-guide-2026',
+  'enterprise-rag-vector-database-deployment-guide': 'enterprise-rag-vector-database-deployment-guide-2026',
   'wechat-bot-local-llm-personal-assistant-2026': 'wechat-bot-local-llm-personal-assistant-2026',
   'local-ai-behind-firewall-offline-2026':        'local-ai-behind-firewall-offline-2026',
   'wechat-local-llm-integration-2026':            'wechat-local-llm-integration-2026',
@@ -116,10 +116,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':           'local-ai-video-generation-vs-cloud',
   'local-ai-image-generation-vs-cloud':           'local-ai-image-generation-vs-cloud',
-  'animatediff-video-generation-guide-2026':      'animatediff-video-generation-guide-2026',
+  'animatediff-video-generation-guide':      'animatediff-video-generation-guide-2026',
 
   // Hosting Guides 2026-08-30
-  'best-web-hosting-2026':                        'best-web-hosting-2026',
+  'best-web-hosting':                        'best-web-hosting-2026',
 
   // Flowise shutdown coverage 2026-09-02
   'flowise-ai-visual-workflow-builder-review':    'flowise-ai-visual-workflow-builder-review',
@@ -142,20 +142,20 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Khoj review 2026-09-02
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Second Me review 2026-09-03
-  'second-me-review-2026':                        'second-me-review-2026',
+  'second-me-review':                        'second-me-review-2026',
   // Real-ESRGAN review 2026-09-02
   'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
   // LibreChat review 2026-09-03
-  'librechat-review-2026':                        'librechat-review-2026',
+  'librechat-review':                        'librechat-review-2026',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',
   // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
   'enterprise-chatbot-deployment-helpdesk-hr-bots': 'enterprise-chatbot-deployment-helpdesk-hr-bots',
   // Enterprise/B2B — AI-powered HR software for enterprises — 2026-09-03
-  'best-ai-hr-software-enterprise-2026':          'best-ai-hr-software-enterprise-2026',
+  'best-ai-hr-software-enterprise':          'best-ai-hr-software-enterprise-2026',
   // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
-  'best-ai-marketing-software-enterprise-2026':   'best-ai-marketing-software-enterprise-2026',
+  'best-ai-marketing-software-enterprise':   'best-ai-marketing-software-enterprise-2026',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':           'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access':          'agentic-ai-security-identity-access',
@@ -164,9 +164,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Atomic Chat review — 2026-09-03
   'atomic-chat-review':                           'atomic-chat-review',
   // h2oGPT enterprise review — 2026-09-03
-  'h2ogpt-review-2026':                           'h2ogpt-review-2026',
+  'h2ogpt-review':                           'h2ogpt-review-2026',
   // Enclave AI review — 2026-09-03
-  'enclave-ai-review-2026':                       'enclave-ai-review-2026',
+  'enclave-ai-review':                       'enclave-ai-review-2026',
 
   // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster
   'edge-ai-hardware-for-local-llms':              'edge-ai-hardware-for-local-llms',

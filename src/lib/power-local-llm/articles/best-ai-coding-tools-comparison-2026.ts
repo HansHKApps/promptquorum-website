@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Pick a local LLM for coding work](/local-llms/best-local-llms-for-coding) — which models, including Qwen3 Coder, are strongest for code generation.',
           '[Set up your first local LLM with Ollama](/local-llms/run-first-local-llm) — the step-by-step Ollama install that Continue.dev connects to.',
           '[Choose a GPU for running local coding models](/local-llms/best-gpus-for-local-llms) — VRAM requirements for the 7B, 14B, and 33B coding models referenced here.',
-          '[Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs Copilot vs Cline](/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026) -- a separate comparison focused on agent mode and pricing, covering Windsurf and Cline instead of Continue.dev and Cody.',
+          '[Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs Copilot vs Cline](/power-local-llm/cursor-vs-windsurf-vs-copilot-cline) -- a separate comparison focused on agent mode and pricing, covering Windsurf and Cline instead of Continue.dev and Cody.',
           '[Best Affiliate Tools for AI Developers: Earn While You Build (2026)](/power-local-llm/best-affiliate-tools-ai-developers-2026) -- earn passive income by recommending AI tools your readers already need',
         ],
       },
