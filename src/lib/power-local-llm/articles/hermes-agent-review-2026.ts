@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[AutoGPT Review 2026](/power-local-llm/autogpt-local-review-2026) — a look at the other major MIT-licensed autonomous agent project, its classic CLI agent vs. hosted platform split.',
+          '[AutoGPT Review 2026](/power-local-llm/autogpt-local-review) — a look at the other major MIT-licensed autonomous agent project, its classic CLI agent vs. hosted platform split.',
           '[Do Autonomous Local Agents Actually Work?](/power-local-llm/autonomous-local-agents-actually-work) — a hands-on evaluation of scoped vs. autonomous local agent stacks.',
           '[BabyAGI Review: Autonomous Agent](/power-local-llm/babyagi-review-autonomous-agent) — another early autonomous-agent architecture, for comparison.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[AutoGPT Review 2026](/de/power-local-llm/autogpt-local-review-2026) — ein Blick auf das andere große MIT-lizenzierte autonome Agent-Projekt und seine Aufteilung in klassischen CLI-Agenten und gehostete Plattform.',
+          '[AutoGPT Review 2026](/de/power-local-llm/autogpt-local-review) — ein Blick auf das andere große MIT-lizenzierte autonome Agent-Projekt und seine Aufteilung in klassischen CLI-Agenten und gehostete Plattform.',
           '[Funktionieren autonome lokale Agenten wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — eine praktische Bewertung eng umrissener vs. autonomer lokaler Agent-Stacks.',
           '[BabyAGI Review: Autonomer Agent](/de/power-local-llm/babyagi-review-autonomous-agent) — eine weitere frühe autonome Agent-Architektur zum Vergleich.',
           '[Local LLM Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Avis AutoGPT 2026](/fr/power-local-llm/autogpt-local-review-2026) — un regard sur l\'autre grand projet d\'agent autonome sous licence MIT, sa scission entre agent CLI classique et plateforme hébergée.',
+          '[Avis AutoGPT 2026](/fr/power-local-llm/autogpt-local-review) — un regard sur l\'autre grand projet d\'agent autonome sous licence MIT, sa scission entre agent CLI classique et plateforme hébergée.',
           '[Les agents locaux autonomes fonctionnent-ils vraiment ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — une évaluation pratique des stacks d\'agents locaux circonscrits vs. autonomes.',
           '[Avis BabyAGI : agent autonome](/fr/power-local-llm/babyagi-review-autonomous-agent) — une autre architecture d\'agent autonome précoce, à titre de comparaison.',
           '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de AutoGPT 2026](/es/power-local-llm/autogpt-local-review-2026) — un vistazo al otro gran proyecto de agente autónomo con licencia MIT, su división entre agente CLI clásico y plataforma alojada.',
+          '[Reseña de AutoGPT 2026](/es/power-local-llm/autogpt-local-review) — un vistazo al otro gran proyecto de agente autónomo con licencia MIT, su división entre agente CLI clásico y plataforma alojada.',
           '[¿Funcionan realmente los agentes locales autónomos?](/es/power-local-llm/autonomous-local-agents-actually-work) — una evaluación práctica de stacks de agentes locales acotados frente a autónomos.',
           '[Reseña de BabyAGI: agente autónomo](/es/power-local-llm/babyagi-review-autonomous-agent) — otra arquitectura temprana de agente autónomo, a modo de comparación.',
           '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do AutoGPT 2026](/pt/power-local-llm/autogpt-local-review-2026) — um olhar sobre o outro grande projeto de agente autônomo licenciado sob MIT, sua divisão entre agente CLI clássico e plataforma hospedada.',
+          '[Análise do AutoGPT 2026](/pt/power-local-llm/autogpt-local-review) — um olhar sobre o outro grande projeto de agente autônomo licenciado sob MIT, sua divisão entre agente CLI clássico e plataforma hospedada.',
           '[Agentes locais autônomos realmente funcionam?](/pt/power-local-llm/autonomous-local-agents-actually-work) — uma avaliação prática de stacks de agentes locais delimitados vs. autônomos.',
           '[Análise do BabyAGI: agente autônomo](/pt/power-local-llm/babyagi-review-autonomous-agent) — outra arquitetura inicial de agente autônomo, para comparação.',
           '[Diretório de software LLM local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[AutoGPTレビュー2026](/ja/power-local-llm/autogpt-local-review-2026) — もう1つの主要なMITライセンスの自律型エージェントプロジェクトについて、classic CLIエージェントとホスト型プラットフォームの分裂を解説。',
+          '[AutoGPTレビュー2026](/ja/power-local-llm/autogpt-local-review) — もう1つの主要なMITライセンスの自律型エージェントプロジェクトについて、classic CLIエージェントとホスト型プラットフォームの分裂を解説。',
           '[自律型ローカルエージェントは実際に機能するのか？](/ja/power-local-llm/autonomous-local-agents-actually-work) — 範囲限定型と自律型のローカルエージェントスタックを実際に比較評価。',
           '[BabyAGIレビュー：自律型エージェント](/ja/power-local-llm/babyagi-review-autonomous-agent) — 比較対象として、初期の別の自律型エージェントアーキテクチャを解説。',
           '[Local LLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの全カタログ。',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[AutoGPT评测2026](/zh/power-local-llm/autogpt-local-review-2026) — 回顾另一个主要的MIT许可自主代理项目，及其经典CLI代理与托管平台的分裂。',
+          '[AutoGPT评测2026](/zh/power-local-llm/autogpt-local-review) — 回顾另一个主要的MIT许可自主代理项目，及其经典CLI代理与托管平台的分裂。',
           '[自主本地代理真的有效吗？](/zh/power-local-llm/autonomous-local-agents-actually-work) — 对范围明确型与自主型本地代理技术栈的实测评估。',
           '[BabyAGI评测：自主代理](/zh/power-local-llm/babyagi-review-autonomous-agent) — 另一种早期的自主代理架构，供对比参考。',
           '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录。',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة AutoGPT 2026](/ar/power-local-llm/autogpt-local-review-2026) — نظرة على مشروع الوكيل المستقل الرئيسي الآخر المرخّص بموجب MIT، وانقسامه بين وكيل CLI كلاسيكي ومنصة مستضافة.',
+          '[مراجعة AutoGPT 2026](/ar/power-local-llm/autogpt-local-review) — نظرة على مشروع الوكيل المستقل الرئيسي الآخر المرخّص بموجب MIT، وانقسامه بين وكيل CLI كلاسيكي ومنصة مستضافة.',
           '[هل تعمل الوكلاء المحلية المستقلة فعليًا؟](/ar/power-local-llm/autonomous-local-agents-actually-work) — تقييم عملي لحزم الوكلاء المحلية محدودة النطاق مقابل المستقلة.',
           '[مراجعة BabyAGI: وكيل مستقل](/ar/power-local-llm/babyagi-review-autonomous-agent) — بنية أخرى مبكرة لوكيل مستقل، للمقارنة.',
           '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[AutoGPT 리뷰 2026](/ko/power-local-llm/autogpt-local-review-2026) — MIT 라이선스의 또 다른 주요 자율형 에이전트 프로젝트와, 클래식 CLI 에이전트와 호스팅 플랫폼으로의 분화를 살펴본다.',
+          '[AutoGPT 리뷰 2026](/ko/power-local-llm/autogpt-local-review) — MIT 라이선스의 또 다른 주요 자율형 에이전트 프로젝트와, 클래식 CLI 에이전트와 호스팅 플랫폼으로의 분화를 살펴본다.',
           '[자율형 로컬 에이전트는 실제로 작동하는가?](/ko/power-local-llm/autonomous-local-agents-actually-work) — 범위 한정형 에이전트와 자율형 로컬 에이전트 스택을 직접 비교 평가한 글.',
           '[BabyAGI 리뷰: 자율형 에이전트](/ko/power-local-llm/babyagi-review-autonomous-agent) — 비교를 위한 또 다른 초기 자율형 에이전트 아키텍처.',
           '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',

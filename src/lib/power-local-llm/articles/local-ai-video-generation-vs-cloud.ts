@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'diy-reality',
         title: 'What Running Local Video Generation Actually Involves',
         content:
-          'With local models, you are not installing a video tool — you are assembling a pipeline.\n\n**The generation setup.** ComfyUI is node-based: you build, or import and debug, a workflow graph of loaders, samplers, and decoders. Expect CUDA version mismatches, PyTorch pins, and the occasional `flash_attn` install error before your first frame renders.\n\n**The prompting.** Video models need structured prompts — shot type, camera movement, lighting, subject action — not one-liners. There is no built-in prompt helper and no system-prompt layer; you write the full structure yourself. Our guides on [system prompts vs. user prompts](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) and [prompt engineering for local models](/local-llms/prompt-engineering-for-local-models) cover fundamentals that transfer directly to video prompting.\n\n**Everything around the clip.** Local models output raw, silent (LTX excepted) clips of 5–20 seconds. Script, voiceover, music, stock footage, subtitles, and editing are each separate tools you choose, install, and wire together yourself.\n\nIf your goal is a short, style-matched motion loop from an SD1.5/SDXL checkpoint you already use — rather than a native video model — [AnimateDiff](/power-local-llm/animatediff-video-generation-guide-2026) is a lighter-weight, checkpoint-based alternative worth comparing before assembling a full native-video pipeline.',
+          'With local models, you are not installing a video tool — you are assembling a pipeline.\n\n**The generation setup.** ComfyUI is node-based: you build, or import and debug, a workflow graph of loaders, samplers, and decoders. Expect CUDA version mismatches, PyTorch pins, and the occasional `flash_attn` install error before your first frame renders.\n\n**The prompting.** Video models need structured prompts — shot type, camera movement, lighting, subject action — not one-liners. There is no built-in prompt helper and no system-prompt layer; you write the full structure yourself. Our guides on [system prompts vs. user prompts](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) and [prompt engineering for local models](/local-llms/prompt-engineering-for-local-models) cover fundamentals that transfer directly to video prompting.\n\n**Everything around the clip.** Local models output raw, silent (LTX excepted) clips of 5–20 seconds. Script, voiceover, music, stock footage, subtitles, and editing are each separate tools you choose, install, and wire together yourself.\n\nIf your goal is a short, style-matched motion loop from an SD1.5/SDXL checkpoint you already use — rather than a native video model — [AnimateDiff](/power-local-llm/animatediff-video-generation-guide) is a lighter-weight, checkpoint-based alternative worth comparing before assembling a full native-video pipeline.',
         promptExamples: [
           { label: 'Weak (one-liner)', text: 'A dog on a beach' },
           { label: 'Structured (what video models need)', text: 'Golden retriever sprinting along a wet shoreline at golden hour, low tracking shot following from the side, shallow depth of field, warm backlight, gentle slow motion, cinematic 24fps' },
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide-2026) — a single-tool deep dive for animating your existing SD1.5/SDXL checkpoints and LoRAs, distinct from the native video models compared here.',
+          '[AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide) — a single-tool deep dive for animating your existing SD1.5/SDXL checkpoints and LoRAs, distinct from the native video models compared here.',
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — the companion piece, same structure, for images instead of video.',
           '[VRAM Calculator for Local Models](/local-llms/vram-calculator-local-llm) — exact VRAM requirements per model and quantization.',
           '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) — charts across model sizes from 7B to 70B.',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل AnimateDiff 2026: حرّك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide-2026) — دليل متعمق لأداة واحدة لتحريك نقاط فحص وLoRAs الخاصة بـ SD1.5/SDXL الموجودة لديك، مختلف عن نماذج الفيديو الأصلية المقارنة هنا.',
+          '[دليل AnimateDiff 2026: حرّك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide) — دليل متعمق لأداة واحدة لتحريك نقاط فحص وLoRAs الخاصة بـ SD1.5/SDXL الموجودة لديك، مختلف عن نماذج الفيديو الأصلية المقارنة هنا.',
           '[توليد الصور المحلي بالذكاء الاصطناعي مقابل السحابي](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — المقال المكمّل، بالبنية نفسها، للصور بدلًا من الفيديو.',
           '[حاسبة VRAM للنماذج المحلية](/ar/local-llms/vram-calculator-local-llm) — متطلبات VRAM الدقيقة لكل نموذج وتكميم.',
           '[كم تحتاج من VRAM؟](/ar/local-llms/how-much-vram-local-llm) — جداول عبر أحجام النماذج من 7B إلى 70B.',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Themen',
         items: [
-          '[AnimateDiff 2026: Stable-Diffusion-Modelle animieren, Kosten & VRAM](/de/power-local-llm/animatediff-video-generation-guide-2026) – Deep-Dive zu einem einzelnen Tool für die Animation vorhandener SD1.5/SDXL-Checkpoints und LoRAs, anders als die hier verglichenen nativen Video-Modelle.',
+          '[AnimateDiff 2026: Stable-Diffusion-Modelle animieren, Kosten & VRAM](/de/power-local-llm/animatediff-video-generation-guide) – Deep-Dive zu einem einzelnen Tool für die Animation vorhandener SD1.5/SDXL-Checkpoints und LoRAs, anders als die hier verglichenen nativen Video-Modelle.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) – das begleitende Stück, gleiche Struktur, für Bilder statt Video.',
           '[VRAM-Rechner für lokale Modelle](/de/local-llms/vram-calculator-local-llm) – exakte VRAM-Anforderungen pro Modell und Quantisierung.',
           '[Wie viel VRAM brauchen Sie?](/de/local-llms/how-much-vram-local-llm) – Übersichten über Modellgrößen von 7B bis 70B.',
@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[AnimateDiff 2026: anima cualquier modelo Stable Diffusion](/es/power-local-llm/animatediff-video-generation-guide-2026) — análisis a fondo de una sola herramienta para animar tus checkpoints y LoRA SD1.5/SDXL existentes, distinta de los modelos de video nativos comparados aquí.',
+          '[AnimateDiff 2026: anima cualquier modelo Stable Diffusion](/es/power-local-llm/animatediff-video-generation-guide) — análisis a fondo de una sola herramienta para animar tus checkpoints y LoRA SD1.5/SDXL existentes, distinta de los modelos de video nativos comparados aquí.',
           '[Generación de imágenes con IA local vs. la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — la pieza complementaria, misma estructura, para imágenes en lugar de video.',
           '[Calculadora de VRAM para modelos locales](/es/local-llms/vram-calculator-local-llm) — requisitos exactos de VRAM por modelo y cuantización.',
           '[¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm) — tablas comparativas entre tamaños de modelo, de 7B a 70B.',
@@ -1726,7 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[AnimateDiff : animer un modèle Stable Diffusion (guide 2026)](/fr/power-local-llm/animatediff-video-generation-guide-2026) — analyse approfondie d\'un outil unique pour animer vos checkpoints et LoRA SD1.5/SDXL existants, distinct des modèles vidéo natifs comparés ici.',
+          '[AnimateDiff : animer un modèle Stable Diffusion (guide 2026)](/fr/power-local-llm/animatediff-video-generation-guide) — analyse approfondie d\'un outil unique pour animer vos checkpoints et LoRA SD1.5/SDXL existants, distinct des modèles vidéo natifs comparés ici.',
           '[Génération d\'images IA locale vs cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — l\'article compagnon, même structure, pour les images plutôt que la vidéo.',
           '[Calculateur de VRAM pour modèles locaux](/fr/local-llms/vram-calculator-local-llm) — besoins exacts en VRAM par modèle et quantification.',
           '[De combien de VRAM avez-vous besoin ?](/fr/local-llms/how-much-vram-local-llm) — tableaux par taille de modèle, de 7B à 70B.',
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[AnimateDiffでStable Diffusionを動画化：2026年ガイド](/ja/power-local-llm/animatediff-video-generation-guide-2026) — 既存のSD1.5/SDXLチェックポイントやLoRAをアニメーション化する単体ツールの詳細ガイド。ここで比較しているネイティブ動画モデルとは異なるアプローチ。',
+          '[AnimateDiffでStable Diffusionを動画化：2026年ガイド](/ja/power-local-llm/animatediff-video-generation-guide) — 既存のSD1.5/SDXLチェックポイントやLoRAをアニメーション化する単体ツールの詳細ガイド。ここで比較しているネイティブ動画モデルとは異なるアプローチ。',
           '[Local AI Image Generation vs. Cloud](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — 動画ではなく画像を対象にした、同じ構成の姉妹記事。',
           '[VRAM Calculator for Local Models](/ja/local-llms/vram-calculator-local-llm) — モデルと量子化ごとの正確なVRAM要件。',
           '[How Much VRAM Do You Need?](/ja/local-llms/how-much-vram-local-llm) — 7Bから70Bまでのモデルサイズ別の一覧表。',
@@ -2416,7 +2416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[AnimateDiff 2026 가이드: Stable Diffusion 모델 애니메이션화](/ko/power-local-llm/animatediff-video-generation-guide-2026) — 기존 SD1.5/SDXL 체크포인트와 LoRA를 애니메이션화하는 단일 도구 심층 가이드로, 여기서 비교한 네이티브 영상 모델과는 다른 접근입니다.',
+          '[AnimateDiff 2026 가이드: Stable Diffusion 모델 애니메이션화](/ko/power-local-llm/animatediff-video-generation-guide) — 기존 SD1.5/SDXL 체크포인트와 LoRA를 애니메이션화하는 단일 도구 심층 가이드로, 여기서 비교한 네이티브 영상 모델과는 다른 접근입니다.',
           '[로컬 AI 이미지 생성 vs. 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — 동일한 구조로 비디오 대신 이미지를 다루는 자매 글입니다.',
           '[로컬 모델용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — 모델과 양자화 방식별 정확한 VRAM 요구사항.',
           '[필요한 VRAM은 얼마인가?](/ko/local-llms/how-much-vram-local-llm) — 7B부터 70B까지 모델 크기별 도표.',
@@ -2761,7 +2761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[AnimateDiff 2026: anime qualquer modelo Stable Diffusion](/pt/power-local-llm/animatediff-video-generation-guide-2026) — aprofundamento em uma única ferramenta para animar seus checkpoints e LoRAs SD1.5/SDXL existentes, diferente dos modelos de vídeo nativos comparados aqui.',
+          '[AnimateDiff 2026: anime qualquer modelo Stable Diffusion](/pt/power-local-llm/animatediff-video-generation-guide) — aprofundamento em uma única ferramenta para animar seus checkpoints e LoRAs SD1.5/SDXL existentes, diferente dos modelos de vídeo nativos comparados aqui.',
           '[Geração de Imagem IA Local vs. Nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — a peça complementar, mesma estrutura, para imagens em vez de vídeo.',
           '[Calculadora de VRAM para Modelos Locais](/pt/local-llms/vram-calculator-local-llm) — requisitos exatos de VRAM por modelo e quantização.',
           '[Quanto de VRAM Você Precisa?](/pt/local-llms/how-much-vram-local-llm) — gráficos entre tamanhos de modelo de 7B a 70B.',
@@ -3106,7 +3106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[AnimateDiff 2026指南：让Stable Diffusion模型动起来](/zh/power-local-llm/animatediff-video-generation-guide-2026)——针对单一工具的深度指南,用于为现有SD1.5/SDXL检查点和LoRA添加动画,与本文比较的原生视频模型不同。',
+          '[AnimateDiff 2026指南：让Stable Diffusion模型动起来](/zh/power-local-llm/animatediff-video-generation-guide)——针对单一工具的深度指南,用于为现有SD1.5/SDXL检查点和LoRA添加动画,与本文比较的原生视频模型不同。',
           '[本地 AI 图像生成 vs 云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud)——姊妹篇,结构相同,主题是图像而非视频。',
           '[本地模型显存计算器](/zh/local-llms/vram-calculator-local-llm)——每个模型和量化方式的确切显存要求。',
           '[你需要多少显存?](/zh/local-llms/how-much-vram-local-llm)——涵盖 7B 到 70B 模型规模的图表。',

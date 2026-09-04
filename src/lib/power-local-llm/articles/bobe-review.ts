@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
-          '[Msty Go Review 2026](/power-local-llm/msty-go-review-2026) — another local-first AI agent app, with a more detailed public feature set to compare against.',
+          '[Msty Go Review 2026](/power-local-llm/msty-go-review) — another local-first AI agent app, with a more detailed public feature set to compare against.',
           '[Loci AI Review: Offline Local AI](/power-local-llm/loci-ai-review-offline-local-ai) — a cross-platform local AI assistant, including a Mac release, for comparison.',
         ],
       },
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
-          '[Msty Go Review 2026](/de/power-local-llm/msty-go-review-2026) — eine weitere lokal-first KI-Agenten-App mit einem detaillierteren öffentlichen Funktionsumfang zum Vergleich.',
+          '[Msty Go Review 2026](/de/power-local-llm/msty-go-review) — eine weitere lokal-first KI-Agenten-App mit einem detaillierteren öffentlichen Funktionsumfang zum Vergleich.',
           '[Loci AI Review: Offline Local AI](/de/power-local-llm/loci-ai-review-offline-local-ai) — ein plattformübergreifender lokaler KI-Assistent, inklusive Mac-Version, zum Vergleich.',
         ],
       },
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'À lire aussi',
         items: [
           '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
-          '[Msty Go Review 2026](/fr/power-local-llm/msty-go-review-2026) — une autre application d\'agent IA local-first, avec un ensemble de fonctionnalités publiques plus détaillé à titre de comparaison.',
+          '[Msty Go Review 2026](/fr/power-local-llm/msty-go-review) — une autre application d\'agent IA local-first, avec un ensemble de fonctionnalités publiques plus détaillé à titre de comparaison.',
           '[Loci AI Review: Offline Local AI](/fr/power-local-llm/loci-ai-review-offline-local-ai) — un assistant IA local multiplateforme, avec une version Mac, à titre de comparaison.',
         ],
       },
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属するローカルAIツールの総合カタログ。',
-          '[Msty Go Review 2026](/ja/power-local-llm/msty-go-review-2026) — より詳細な公開機能セットを持つ、別のローカルファーストAIエージェントアプリとの比較。',
+          '[Msty Go Review 2026](/ja/power-local-llm/msty-go-review) — より詳細な公開機能セットを持つ、別のローカルファーストAIエージェントアプリとの比較。',
           '[Loci AI Review: Offline Local AI](/ja/power-local-llm/loci-ai-review-offline-local-ai) — Mac版も含むクロスプラットフォームのローカルAIアシスタントとの比較。',
         ],
       },
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的完整本地AI工具目录。',
-          '[Msty Go Review 2026](/zh/power-local-llm/msty-go-review-2026) — 另一款本地优先的AI代理应用，公开功能信息更详细，可供对比。',
+          '[Msty Go Review 2026](/zh/power-local-llm/msty-go-review) — 另一款本地优先的AI代理应用，公开功能信息更详细，可供对比。',
           '[Loci AI Review: Offline Local AI](/zh/power-local-llm/loci-ai-review-offline-local-ai) — 一款跨平台本地AI助手（含Mac版），可供对比。',
         ],
       },
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
-          '[Msty Go Review 2026](/es/power-local-llm/msty-go-review-2026) — otra app de agente de IA local-first, con un conjunto de funciones públicas más detallado para comparar.',
+          '[Msty Go Review 2026](/es/power-local-llm/msty-go-review) — otra app de agente de IA local-first, con un conjunto de funciones públicas más detallado para comparar.',
           '[Loci AI Review: Offline Local AI](/es/power-local-llm/loci-ai-review-offline-local-ai) — un asistente de IA local multiplataforma, con versión para Mac, para comparar.',
         ],
       },
@@ -1291,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
-          '[Msty Go Review 2026](/pt/power-local-llm/msty-go-review-2026) — outro app de agente de IA local-first, com um conjunto de recursos públicos mais detalhado para comparação.',
+          '[Msty Go Review 2026](/pt/power-local-llm/msty-go-review) — outro app de agente de IA local-first, com um conjunto de recursos públicos mais detalhado para comparação.',
           '[Loci AI Review: Offline Local AI](/pt/power-local-llm/loci-ai-review-offline-local-ai) — um assistente de IA local multiplataforma, com versão para Mac, para comparação.',
         ],
       },
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
-          '[Msty Go Review 2026](/ar/power-local-llm/msty-go-review-2026) — تطبيق وكيل ذكاء اصطناعي محلي آخر، بمجموعة ميزات عامة أكثر تفصيلًا للمقارنة.',
+          '[Msty Go Review 2026](/ar/power-local-llm/msty-go-review) — تطبيق وكيل ذكاء اصطناعي محلي آخر، بمجموعة ميزات عامة أكثر تفصيلًا للمقارنة.',
           '[Loci AI Review: Offline Local AI](/ar/power-local-llm/loci-ai-review-offline-local-ai) — مساعد ذكاء اصطناعي محلي متعدد المنصات، يشمل إصدارًا لـ Mac، للمقارنة.',
         ],
       },
@@ -1661,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 글',
         items: [
           '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
-          '[Msty Go Review 2026](/ko/power-local-llm/msty-go-review-2026) — 더 상세한 공개 기능을 갖춘 또 다른 로컬 우선 AI 에이전트 앱, 비교용.',
+          '[Msty Go Review 2026](/ko/power-local-llm/msty-go-review) — 더 상세한 공개 기능을 갖춘 또 다른 로컬 우선 AI 에이전트 앱, 비교용.',
           '[Loci AI Review: Offline Local AI](/ko/power-local-llm/loci-ai-review-offline-local-ai) — Mac 버전을 포함한 크로스플랫폼 로컬 AI 어시스턴트, 비교용.',
         ],
       },

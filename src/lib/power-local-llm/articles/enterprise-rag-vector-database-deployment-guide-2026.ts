@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Vendor': 'Milvus / Zilliz Cloud', 'Deployment': 'Self-hosted (Apache 2.0) or Zilliz Cloud (managed)', 'Enterprise-relevant strength': 'Purpose-built for billion-vector scale, GPU indexing' },
         ],
         callouts: [
-          { type: 'note', text: 'For a feature-by-feature comparison of Pinecone, Weaviate, Qdrant, and Chroma aimed at developers choosing for a single RAG application, see [Pinecone vs Weaviate vs Qdrant vs Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). This section covers only the enterprise-relevant deployment and scale angle each vendor adds on top of that.' },
+          { type: 'note', text: 'For a feature-by-feature comparison of Pinecone, Weaviate, Qdrant, and Chroma aimed at developers choosing for a single RAG application, see [Pinecone vs Weaviate vs Qdrant vs Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). This section covers only the enterprise-relevant deployment and scale angle each vendor adds on top of that.' },
         ],
       },
       whoShouldUse: {
@@ -255,8 +255,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment', description: 'The GDPR cross-border transfer and data-residency requirements this article\'s vendor evaluation sits inside.' },
           { url: '/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments', description: 'What these compliance frameworks actually require, and how self-hosting shifts that audit burden onto your own organization.' },
-          { url: '/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'The feature-by-feature comparison for developers choosing a vector database for a single RAG application.' },
-          { url: '/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'Enterprise LLM Inference Servers: vLLM vs TGI vs NIM', description: 'The inference-serving layer that typically sits alongside an enterprise vector database in a production RAG pipeline.' },
+          { url: '/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'The feature-by-feature comparison for developers choosing a vector database for a single RAG application.' },
+          { url: '/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'Enterprise LLM Inference Servers: vLLM vs TGI vs NIM', description: 'The inference-serving layer that typically sits alongside an enterprise vector database in a production RAG pipeline.' },
           { url: '/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'Best RAG Tools for Business Documents', description: 'The application-layer RAG tooling that queries the vector database this guide covers.' },
         ],
       },
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'en',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Anbieter': 'Milvus / Zilliz Cloud', 'Deployment': 'Self-Hosted (Apache 2.0) oder Zilliz Cloud (Managed)', 'Enterprise-relevante Stärke': 'Für Milliarden-Vektor-Skala konzipiert, GPU-Indexierung' },
         ],
         callouts: [
-          { type: 'note', text: 'Für einen Feature-für-Feature-Vergleich von Pinecone, Weaviate, Qdrant und Chroma für Entwickler, die für eine einzelne RAG-Anwendung wählen, siehe [Pinecone vs Weaviate vs Qdrant vs Chroma](/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). Dieser Abschnitt behandelt nur den Enterprise-relevanten Deployment- und Skalierungsaspekt, den jeder Anbieter zusätzlich bietet.' },
+          { type: 'note', text: 'Für einen Feature-für-Feature-Vergleich von Pinecone, Weaviate, Qdrant und Chroma für Entwickler, die für eine einzelne RAG-Anwendung wählen, siehe [Pinecone vs Weaviate vs Qdrant vs Chroma](/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Dieser Abschnitt behandelt nur den Enterprise-relevanten Deployment- und Skalierungsaspekt, den jeder Anbieter zusätzlich bietet.' },
         ],
       },
       whoShouldUse: {
@@ -524,8 +524,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment', description: 'Die DSGVO-Anforderungen zu grenzüberschreitendem Datentransfer und Data Residency, in die die Anbieterbewertung dieses Artikels eingebettet ist.' },
           { url: '/de/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'SOC 2 & ISO 27001 Readiness für Self-Hosted LLM Deployments', description: 'Was diese Compliance-Rahmenwerke tatsächlich verlangen und wie Self-Hosting diese Prüflast auf das eigene Unternehmen verlagert.' },
-          { url: '/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'Der Feature-für-Feature-Vergleich für Entwickler, die eine Vektordatenbank für eine einzelne RAG-Anwendung wählen.' },
-          { url: '/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'Enterprise LLM Inference Servers: vLLM vs TGI vs NIM', description: 'Die Inference-Serving-Schicht, die in einer produktiven Enterprise-RAG-Pipeline typischerweise neben der Vektordatenbank steht.' },
+          { url: '/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'Der Feature-für-Feature-Vergleich für Entwickler, die eine Vektordatenbank für eine einzelne RAG-Anwendung wählen.' },
+          { url: '/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'Enterprise LLM Inference Servers: vLLM vs TGI vs NIM', description: 'Die Inference-Serving-Schicht, die in einer produktiven Enterprise-RAG-Pipeline typischerweise neben der Vektordatenbank steht.' },
           { url: '/de/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'Beste RAG-Tools für Unternehmensdokumente', description: 'Die Anwendungsschicht, die die in diesem Leitfaden behandelte Vektordatenbank abfragt.' },
         ],
       },
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/de/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/de/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'de',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/de/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/de/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fournisseur': 'Milvus / Zilliz Cloud', 'Déploiement': 'Auto-hébergé (Apache 2.0) ou Zilliz Cloud (managé)', 'Force pertinente entreprise': 'Conçu pour l\'échelle du milliard de vecteurs, indexation GPU' },
         ],
         callouts: [
-          { type: 'note', text: 'Pour une comparaison fonctionnalité par fonctionnalité de Pinecone, Weaviate, Qdrant et Chroma destinée aux développeurs choisissant pour une seule application RAG, voir [Pinecone vs Weaviate vs Qdrant vs Chroma](/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). Cette section couvre uniquement l\'angle déploiement et échelle pertinent pour l\'entreprise que chaque fournisseur ajoute en plus.' },
+          { type: 'note', text: 'Pour une comparaison fonctionnalité par fonctionnalité de Pinecone, Weaviate, Qdrant et Chroma destinée aux développeurs choisissant pour une seule application RAG, voir [Pinecone vs Weaviate vs Qdrant vs Chroma](/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Cette section couvre uniquement l\'angle déploiement et échelle pertinent pour l\'entreprise que chaque fournisseur ajoute en plus.' },
         ],
       },
       whoShouldUse: {
@@ -793,8 +793,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'Résidence des données et IA souveraine : déploiement LLM entreprise UE/RGPD', description: 'Les exigences RGPD de transfert transfrontalier et de résidence des données dans lesquelles s\'inscrit l\'évaluation fournisseur de cet article.' },
           { url: '/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'Préparation SOC 2 et ISO 27001 pour les déploiements LLM auto-hébergés', description: 'Ce que ces référentiels de conformité exigent réellement, et comment l\'auto-hébergement transfère cette charge d\'audit vers votre propre organisation.' },
-          { url: '/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'La comparaison fonctionnalité par fonctionnalité pour les développeurs choisissant une base de données vectorielle pour une seule application RAG.' },
-          { url: '/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'Serveurs d\'inférence LLM entreprise : vLLM vs TGI vs NIM', description: 'La couche de service d\'inférence qui se trouve typiquement aux côtés d\'une base de données vectorielle entreprise dans un pipeline RAG de production.' },
+          { url: '/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'La comparaison fonctionnalité par fonctionnalité pour les développeurs choisissant une base de données vectorielle pour une seule application RAG.' },
+          { url: '/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'Serveurs d\'inférence LLM entreprise : vLLM vs TGI vs NIM', description: 'La couche de service d\'inférence qui se trouve typiquement aux côtés d\'une base de données vectorielle entreprise dans un pipeline RAG de production.' },
           { url: '/fr/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'Meilleurs outils RAG pour documents d\'entreprise', description: 'La couche applicative qui interroge la base de données vectorielle couverte par ce guide.' },
         ],
       },
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'fr',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Proveedor': 'Milvus / Zilliz Cloud', 'Despliegue': 'Autoalojado (Apache 2.0) o Zilliz Cloud (gestionado)', 'Fortaleza relevante para empresas': 'Diseñado para escala de miles de millones, indexación GPU' },
         ],
         callouts: [
-          { type: 'note', text: 'Para una comparación funcionalidad por funcionalidad de Pinecone, Weaviate, Qdrant y Chroma dirigida a desarrolladores que eligen para una sola aplicación RAG, vea [Pinecone vs Weaviate vs Qdrant vs Chroma](/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). Esta sección cubre solo el ángulo de despliegue y escala relevante para empresas que cada proveedor añade además.' },
+          { type: 'note', text: 'Para una comparación funcionalidad por funcionalidad de Pinecone, Weaviate, Qdrant y Chroma dirigida a desarrolladores que eligen para una sola aplicación RAG, vea [Pinecone vs Weaviate vs Qdrant vs Chroma](/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Esta sección cubre solo el ángulo de despliegue y escala relevante para empresas que cada proveedor añade además.' },
         ],
       },
       whoShouldUse: {
@@ -1062,8 +1062,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'Residencia de Datos e IA Soberana: Despliegue de LLM Empresarial UE/RGPD', description: 'Los requisitos del RGPD sobre transferencias transfronterizas y residencia de datos en los que se apoya la evaluación de proveedores de este artículo.' },
           { url: '/es/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'Preparación SOC 2 e ISO 27001 para Despliegues de LLM Autoalojados', description: 'Lo que estos marcos de cumplimiento realmente exigen, y cómo autoalojar traslada esa carga de auditoría a su propia organización.' },
-          { url: '/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'La comparación funcionalidad por funcionalidad para desarrolladores que eligen una base de datos vectorial para una sola aplicación RAG.' },
-          { url: '/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'Servidores de Inferencia LLM Empresariales: vLLM vs TGI vs NIM', description: 'La capa de servicio de inferencia que suele situarse junto a una base de datos vectorial empresarial en un pipeline RAG de producción.' },
+          { url: '/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'La comparación funcionalidad por funcionalidad para desarrolladores que eligen una base de datos vectorial para una sola aplicación RAG.' },
+          { url: '/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'Servidores de Inferencia LLM Empresariales: vLLM vs TGI vs NIM', description: 'La capa de servicio de inferencia que suele situarse junto a una base de datos vectorial empresarial en un pipeline RAG de producción.' },
           { url: '/es/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'Mejores Herramientas RAG para Documentos Empresariales', description: 'La capa de aplicación que consulta la base de datos vectorial cubierta por esta guía.' },
         ],
       },
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/es/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'es',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/es/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/es/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Fornecedor': 'Milvus / Zilliz Cloud', 'Implantação': 'Self-hosted (Apache 2.0) ou Zilliz Cloud (gerenciado)', 'Força relevante para empresas': 'Feito para escala de bilhões, indexação por GPU' },
         ],
         callouts: [
-          { type: 'note', text: 'Para uma comparação funcionalidade por funcionalidade de Pinecone, Weaviate, Qdrant e Chroma voltada a desenvolvedores escolhendo para uma única aplicação RAG, veja [Pinecone vs Weaviate vs Qdrant vs Chroma](/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). Esta seção cobre apenas o ângulo de implantação e escala relevante para empresas que cada fornecedor adiciona.' },
+          { type: 'note', text: 'Para uma comparação funcionalidade por funcionalidade de Pinecone, Weaviate, Qdrant e Chroma voltada a desenvolvedores escolhendo para uma única aplicação RAG, veja [Pinecone vs Weaviate vs Qdrant vs Chroma](/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). Esta seção cobre apenas o ângulo de implantação e escala relevante para empresas que cada fornecedor adiciona.' },
         ],
       },
       whoShouldUse: {
@@ -1331,8 +1331,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'Residência de Dados e IA Soberana: Implantação de LLM Empresarial UE/GDPR', description: 'As exigências de transferência transfronteiriça e residência de dados do GDPR nas quais a avaliação de fornecedores deste artigo se apoia.' },
           { url: '/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'Prontidão SOC 2 e ISO 27001 para Implantações de LLM Self-Hosted', description: 'O que esses frameworks de compliance realmente exigem, e como hospedar internamente transfere esse ônus de auditoria para sua própria organização.' },
-          { url: '/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'A comparação funcionalidade por funcionalidade para desenvolvedores escolhendo um banco de dados vetorial para uma única aplicação RAG.' },
-          { url: '/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'Servidores de Inferência LLM Empresariais: vLLM vs TGI vs NIM', description: 'A camada de serving de inferência que tipicamente fica ao lado de um banco de dados vetorial empresarial num pipeline RAG de produção.' },
+          { url: '/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'A comparação funcionalidade por funcionalidade para desenvolvedores escolhendo um banco de dados vetorial para uma única aplicação RAG.' },
+          { url: '/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'Servidores de Inferência LLM Empresariais: vLLM vs TGI vs NIM', description: 'A camada de serving de inferência que tipicamente fica ao lado de um banco de dados vetorial empresarial num pipeline RAG de produção.' },
           { url: '/pt/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'Melhores Ferramentas RAG para Documentos Empresariais', description: 'A camada de aplicação que consulta o banco de dados vetorial coberto por este guia.' },
         ],
       },
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'pt-BR',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ベンダー': 'Milvus / Zilliz Cloud', '導入形態': 'セルフホスト（Apache 2.0）またはZilliz Cloud（マネージド）', 'エンタープライズ関連の強み': '数十億ベクトル規模向け、GPUインデックス' },
         ],
         callouts: [
-          { type: 'note', text: '単一のRAGアプリケーション向けに選ぶ開発者向けのPinecone、Weaviate、Qdrant、Chromaの機能比較は[Pinecone vs Weaviate vs Qdrant vs Chroma](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)を参照。本セクションでは各ベンダーが追加で提供するエンタープライズ関連の導入・規模の観点のみを扱う。' },
+          { type: 'note', text: '単一のRAGアプリケーション向けに選ぶ開発者向けのPinecone、Weaviate、Qdrant、Chromaの機能比較は[Pinecone vs Weaviate vs Qdrant vs Chroma](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)を参照。本セクションでは各ベンダーが追加で提供するエンタープライズ関連の導入・規模の観点のみを扱う。' },
         ],
       },
       whoShouldUse: {
@@ -1600,8 +1600,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'データレジデンシーとソブリンAI：EU/GDPRエンタープライズLLM導入', description: '本記事のベンダー評価が前提とするGDPR越境移転とデータレジデンシー要件。' },
           { url: '/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'セルフホストLLM導入向けSOC 2 & ISO 27001対応', description: 'これらのコンプライアンスフレームワークが実際に要求する内容と、セルフホストがその監査負担を自組織に移す仕組み。' },
-          { url: '/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '単一のRAGアプリケーション向けにベクトルデータベースを選ぶ開発者向けの機能ごとの比較。' },
-          { url: '/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'エンタープライズLLM推論サーバー：vLLM vs TGI vs NIM', description: '本番のエンタープライズRAGパイプラインでベクトルDBと並んで配置される推論サービング層。' },
+          { url: '/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '単一のRAGアプリケーション向けにベクトルデータベースを選ぶ開発者向けの機能ごとの比較。' },
+          { url: '/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'エンタープライズLLM推論サーバー：vLLM vs TGI vs NIM', description: '本番のエンタープライズRAGパイプラインでベクトルDBと並んで配置される推論サービング層。' },
           { url: '/ja/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'ビジネス文書向け最良のRAGツール', description: '本ガイドが扱うベクトルDBに問い合わせるアプリケーション層。' },
         ],
       },
@@ -1615,7 +1615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'ja',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -1631,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -1819,7 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '供应商': 'Milvus / Zilliz Cloud', '部署方式': '自托管（Apache 2.0）或Zilliz Cloud（托管）', '企业相关优势': '专为数十亿向量规模、GPU索引设计' },
         ],
         callouts: [
-          { type: 'note', text: '如需查看面向为单一RAG应用选型的开发者的Pinecone、Weaviate、Qdrant与Chroma逐功能对比，参见[Pinecone vs Weaviate vs Qdrant vs Chroma](/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)。本节仅涵盖每家供应商额外提供的企业相关部署与规模视角。' },
+          { type: 'note', text: '如需查看面向为单一RAG应用选型的开发者的Pinecone、Weaviate、Qdrant与Chroma逐功能对比，参见[Pinecone vs Weaviate vs Qdrant vs Chroma](/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)。本节仅涵盖每家供应商额外提供的企业相关部署与规模视角。' },
         ],
       },
       whoShouldUse: {
@@ -1869,8 +1869,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: '数据驻留与主权AI：欧盟/GDPR企业级LLM部署', description: '本文供应商评估所依托的GDPR跨境传输和数据驻留要求。' },
           { url: '/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: '面向自托管LLM部署的SOC 2与ISO 27001就绪指南', description: '这些合规框架实际要求什么，以及自托管如何将审计负担转移到自身组织。' },
-          { url: '/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '面向为单一RAG应用选择向量数据库的开发者的逐功能对比。' },
-          { url: '/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: '企业级LLM推理服务器：vLLM vs TGI vs NIM', description: '在生产级企业RAG管道中通常与向量数据库并列部署的推理服务层。' },
+          { url: '/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '面向为单一RAG应用选择向量数据库的开发者的逐功能对比。' },
+          { url: '/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: '企业级LLM推理服务器：vLLM vs TGI vs NIM', description: '在生产级企业RAG管道中通常与向量数据库并列部署的推理服务层。' },
           { url: '/zh/power-local-llm/best-rag-tools-for-business-documents-2026', title: '面向企业文档的最佳RAG工具', description: '查询本指南所涵盖向量数据库的应用层。' },
         ],
       },
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'zh',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -2088,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المزوّد': 'Milvus / Zilliz Cloud', 'النشر': 'استضافة ذاتية (Apache 2.0) أو Zilliz Cloud (مُدارة)', 'الميزة ذات الصلة بالمؤسسات': 'مصمم لمقياس مليارات المتجهات، فهرسة بوحدة معالجة الرسومات' },
         ],
         callouts: [
-          { type: 'note', text: 'للاطلاع على مقارنة تفصيلية بين الميزات لكل من Pinecone وWeaviate وQdrant وChroma موجهة للمطورين الذين يختارون لتطبيق RAG واحد، راجع [Pinecone vs Weaviate vs Qdrant vs Chroma](/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026). يغطي هذا القسم فقط زاوية النشر والمقياس ذات الصلة بالمؤسسات التي يضيفها كل مزوّد فوق ذلك.' },
+          { type: 'note', text: 'للاطلاع على مقارنة تفصيلية بين الميزات لكل من Pinecone وWeaviate وQdrant وChroma موجهة للمطورين الذين يختارون لتطبيق RAG واحد، راجع [Pinecone vs Weaviate vs Qdrant vs Chroma](/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma). يغطي هذا القسم فقط زاوية النشر والمقياس ذات الصلة بالمؤسسات التي يضيفها كل مزوّد فوق ذلك.' },
         ],
       },
       whoShouldUse: {
@@ -2138,8 +2138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: 'إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي في الاتحاد الأوروبي وGDPR', description: 'متطلبات GDPR الخاصة بنقل البيانات عبر الحدود وإقامة البيانات التي يستند إليها تقييم الموردين في هذا المقال.' },
           { url: '/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: 'الاستعداد لـ SOC 2 وISO 27001 لعمليات نشر LLM المُستضافة ذاتيًا', description: 'ما تتطلبه هذه الأطر التنظيمية فعليًا، وكيف تنقل الاستضافة الذاتية عبء التدقيق إلى مؤسستك.' },
-          { url: '/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'المقارنة التفصيلية للميزات الموجهة للمطورين الذين يختارون قاعدة بيانات متجهات لتطبيق RAG واحد.' },
-          { url: '/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: 'خوادم استدلال LLM المؤسسية: vLLM مقابل TGI مقابل NIM', description: 'طبقة خدمة الاستدلال التي تتواجد عادةً إلى جانب قاعدة بيانات متجهات مؤسسية في مسار RAG إنتاجي.' },
+          { url: '/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: 'المقارنة التفصيلية للميزات الموجهة للمطورين الذين يختارون قاعدة بيانات متجهات لتطبيق RAG واحد.' },
+          { url: '/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: 'خوادم استدلال LLM المؤسسية: vLLM مقابل TGI مقابل NIM', description: 'طبقة خدمة الاستدلال التي تتواجد عادةً إلى جانب قاعدة بيانات متجهات مؤسسية في مسار RAG إنتاجي.' },
           { url: '/ar/power-local-llm/best-rag-tools-for-business-documents-2026', title: 'أفضل أدوات RAG لمستندات الأعمال', description: 'طبقة التطبيق التي تستعلم قاعدة بيانات المتجهات التي يغطيها هذا الدليل.' },
         ],
       },
@@ -2153,7 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'ar',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '벤더': 'Milvus / Zilliz Cloud', '배포 방식': '자체 호스팅(Apache 2.0) 또는 Zilliz Cloud(매니지드)', '기업 관련 강점': '수십억 벡터 규모, GPU 인덱싱용으로 설계됨' },
         ],
         callouts: [
-          { type: 'note', text: '단일 RAG 애플리케이션을 위해 선택하는 개발자를 위한 Pinecone, Weaviate, Qdrant, Chroma의 기능별 비교는 [Pinecone vs Weaviate vs Qdrant vs Chroma](/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)를 참조하십시오. 이 섹션은 각 벤더가 추가로 제공하는 기업 관련 배포 및 규모 측면만 다룹니다.' },
+          { type: 'note', text: '단일 RAG 애플리케이션을 위해 선택하는 개발자를 위한 Pinecone, Weaviate, Qdrant, Chroma의 기능별 비교는 [Pinecone vs Weaviate vs Qdrant vs Chroma](/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma)를 참조하십시오. 이 섹션은 각 벤더가 추가로 제공하는 기업 관련 배포 및 규모 측면만 다룹니다.' },
         ],
       },
       whoShouldUse: {
@@ -2407,8 +2407,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise', title: '데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포', description: '이 글의 벤더 평가가 근거로 삼는 GDPR 국경 간 이전 및 데이터 레지던시 요건.' },
           { url: '/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance', title: '자체 호스팅 LLM 배포를 위한 SOC 2 & ISO 27001 준비', description: '이러한 컴플라이언스 프레임워크가 실제로 요구하는 것과 자체 호스팅이 그 감사 부담을 자사로 이전시키는 방식.' },
-          { url: '/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '단일 RAG 애플리케이션을 위해 벡터 데이터베이스를 선택하는 개발자를 위한 기능별 비교.' },
-          { url: '/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026', title: '기업용 LLM 추론 서버: vLLM vs TGI vs NIM', description: '프로덕션 기업용 RAG 파이프라인에서 벡터 데이터베이스와 나란히 위치하는 추론 서빙 계층.' },
+          { url: '/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma', title: 'Pinecone vs Weaviate vs Qdrant vs Chroma', description: '단일 RAG 애플리케이션을 위해 벡터 데이터베이스를 선택하는 개발자를 위한 기능별 비교.' },
+          { url: '/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim', title: '기업용 LLM 추론 서버: vLLM vs TGI vs NIM', description: '프로덕션 기업용 RAG 파이프라인에서 벡터 데이터베이스와 나란히 위치하는 추론 서빙 계층.' },
           { url: '/ko/power-local-llm/best-rag-tools-for-business-documents-2026', title: '비즈니스 문서를 위한 최고의 RAG 도구', description: '이 가이드가 다루는 벡터 데이터베이스를 조회하는 애플리케이션 계층.' },
         ],
       },
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-03',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide',
       inLanguage: 'ko',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
@@ -2438,7 +2438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Qdrant' },
       ],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.promptquorum.com/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide' },
     },
   },
 }

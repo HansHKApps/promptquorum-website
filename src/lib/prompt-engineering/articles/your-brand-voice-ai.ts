@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[Persona Prompting: How to Give AI a Voice and Personality](/prompt-engineering/persona-prompting) — directly related technique for consistent character and tone',
-            '[Best AI-Powered Marketing Software for Enterprises 2026](/power-local-llm/best-ai-marketing-software-enterprise-2026) — the enterprise procurement decision (mainstream platforms vs. self-hosted) that this single-technique guide feeds into',
+            '[Best AI-Powered Marketing Software for Enterprises 2026](/power-local-llm/best-ai-marketing-software-enterprise) — the enterprise procurement decision (mainstream platforms vs. self-hosted) that this single-technique guide feeds into',
             '[Negative Prompting: Off-Tone Examples and Banned Phrases](/prompt-engineering/negative-prompting) — the "what to avoid" side of brand voice training',
             '[Build a Prompt Library for Your Team](/prompt-engineering/build-a-prompt-library) — storing and sharing reusable brand voice instruction blocks',
             '[Control the Output: Style, Format, and Length](/prompt-engineering/control-the-output) — how to enforce output style and formatting rules',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Weiterführendes Lesen',
           items: [
             '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering)',
-            '[Beste KI-Marketing-Software für Unternehmen 2026](/de/power-local-llm/best-ai-marketing-software-enterprise-2026) — die Beschaffungsentscheidung auf Unternehmensebene (etablierte Plattformen vs. Self-Hosting), auf die dieser Leitfaden zu einer einzelnen Technik einzahlt',
+            '[Beste KI-Marketing-Software für Unternehmen 2026](/de/power-local-llm/best-ai-marketing-software-enterprise) — die Beschaffungsentscheidung auf Unternehmensebene (etablierte Plattformen vs. Self-Hosting), auf die dieser Leitfaden zu einer einzelnen Technik einzahlt',
             '[Erstellen Sie eine Prompt-Bibliothek](/de/prompt-engineering/build-a-prompt-library)',
             '[So evaluieren Sie Prompt-Qualität](/de/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[Prompt Chaining: Multi-Step Workflows](/de/prompt-engineering/prompt-chaining)',
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectura relacionada',
           items: [
             '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering)',
-            '[Mejor software de marketing con IA para empresas 2026](/es/power-local-llm/best-ai-marketing-software-enterprise-2026) — la decisión de compra a nivel empresarial (plataformas habituales frente a autoalojamiento) a la que alimenta esta guía de una sola técnica',
+            '[Mejor software de marketing con IA para empresas 2026](/es/power-local-llm/best-ai-marketing-software-enterprise) — la decisión de compra a nivel empresarial (plataformas habituales frente a autoalojamiento) a la que alimenta esta guía de una sola técnica',
             '[Construye una Biblioteca de Prompts](/es/prompt-engineering/build-a-prompt-library)',
             '[Cómo Evaluar la Calidad de los Prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[Encadenamiento de Prompts: Flujos de Trabajo Multi-Paso](/es/prompt-engineering/prompt-chaining)',
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'قراءة ذات صلة',
           items: [
             '[ما هي هندسة الطلبات؟](/ar/prompt-engineering/what-is-prompt-engineering)',
-            '[أفضل برامج التسويق بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-marketing-software-enterprise-2026) — قرار الشراء على مستوى المؤسسة (المنصات الشائعة مقابل الاستضافة الذاتية) الذي يغذّيه هذا الدليل المخصص لتقنية واحدة',
+            '[أفضل برامج التسويق بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-marketing-software-enterprise) — قرار الشراء على مستوى المؤسسة (المنصات الشائعة مقابل الاستضافة الذاتية) الذي يغذّيه هذا الدليل المخصص لتقنية واحدة',
             '[بناء مكتبة طلبات](/ar/prompt-engineering/build-a-prompt-library)',
             '[كيف تُقيّم جودة الطلبات](/ar/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[تسلسل الطلبات: مسارات العمل متعددة الخطوات](/ar/prompt-engineering/prompt-chaining)',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leitura relacionada',
           items: [
             '[O que é Prompt Engineering?](/pt/prompt-engineering/what-is-prompt-engineering)',
-            '[Melhor software de marketing com IA para empresas 2026](/pt/power-local-llm/best-ai-marketing-software-enterprise-2026) — a decisão de compra em nível corporativo (plataformas conhecidas versus autogerenciamento) que este guia de técnica única alimenta',
+            '[Melhor software de marketing com IA para empresas 2026](/pt/power-local-llm/best-ai-marketing-software-enterprise) — a decisão de compra em nível corporativo (plataformas conhecidas versus autogerenciamento) que este guia de técnica única alimenta',
             '[Construa uma Biblioteca de Prompts](/pt/prompt-engineering/build-a-prompt-library)',
             '[Encadeamento de Prompts: Fluxos de Trabalho em Múltiplas Etapas](/pt/prompt-engineering/prompt-chaining)',
             '[Prompting Negativo: Diga à IA o que evitar](/pt/prompt-engineering/negative-prompting)',
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectures connexes',
           items: [
             '[Qu\'est-ce que l\'ingénierie des prompts?](/fr/prompt-engineering/what-is-prompt-engineering)',
-            '[Meilleurs logiciels marketing IA pour entreprises 2026](/fr/power-local-llm/best-ai-marketing-software-enterprise-2026) — la décision d\'achat au niveau entreprise (plateformes courantes contre auto-hébergement) que ce guide dédié à une seule technique alimente',
+            '[Meilleurs logiciels marketing IA pour entreprises 2026](/fr/power-local-llm/best-ai-marketing-software-enterprise) — la décision d\'achat au niveau entreprise (plateformes courantes contre auto-hébergement) que ce guide dédié à une seule technique alimente',
             '[Créez une bibliothèque de prompts](/fr/prompt-engineering/build-a-prompt-library)',
             '[Évaluez la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[Prompt Chaining : Workflows multi-étapes](/fr/prompt-engineering/prompt-chaining)',
@@ -2680,7 +2680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '関連資料',
           items: [
             '[プロンプトエンジニアリング とは?](/ja/prompt-engineering/what-is-prompt-engineering)',
-            '[企業向けAIマーケティングソフト2026年比較](/ja/power-local-llm/best-ai-marketing-software-enterprise-2026) —— この単一技術ガイドが供給する企業レベルの調達判断(主流プラットフォーム対セルフホスト)。',
+            '[企業向けAIマーケティングソフト2026年比較](/ja/power-local-llm/best-ai-marketing-software-enterprise) —— この単一技術ガイドが供給する企業レベルの調達判断(主流プラットフォーム対セルフホスト)。',
             '[プロンプトライブラリを作成](/ja/prompt-engineering/build-a-prompt-library)',
             '[プロンプト品質を評価](/ja/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[プロンプトチェーニング：マルチステップワークフロー](/ja/prompt-engineering/prompt-chaining)',
@@ -3017,7 +3017,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '相关阅读',
           items: [
             '[什么是提示工程?](/zh/prompt-engineering/what-is-prompt-engineering)',
-            '[2026年企业级AI营销软件最佳选择](/zh/power-local-llm/best-ai-marketing-software-enterprise-2026) —— 本单一技巧指南所服务的企业级采购决策(主流平台对比自托管)。',
+            '[2026年企业级AI营销软件最佳选择](/zh/power-local-llm/best-ai-marketing-software-enterprise) —— 本单一技巧指南所服务的企业级采购决策(主流平台对比自托管)。',
             '[构建提示库](/zh/prompt-engineering/build-a-prompt-library)',
             '[如何评估提示质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)',
             '[提示链接：多步工作流](/zh/prompt-engineering/prompt-chaining)',
@@ -3361,7 +3361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '관련 읽을거리',
           items: [
             '[페르소나 프롬프팅: AI에게 목소리와 개성 부여하기](/ko/prompt-engineering/persona-prompting) — 일관된 캐릭터와 톤을 위한 직접 관련 기법',
-            '[2026년 기업용 AI 마케팅 소프트웨어 최적 비교](/ko/power-local-llm/best-ai-marketing-software-enterprise-2026) — 이 단일 기법 가이드가 뒷받침하는 기업 차원의 구매 결정(주요 플랫폼 대 셀프 호스팅)',
+            '[2026년 기업용 AI 마케팅 소프트웨어 최적 비교](/ko/power-local-llm/best-ai-marketing-software-enterprise) — 이 단일 기법 가이드가 뒷받침하는 기업 차원의 구매 결정(주요 플랫폼 대 셀프 호스팅)',
             '[네거티브 프롬프팅: 오프톤 예시와 금지 문구](/ko/prompt-engineering/negative-prompting) — 브랜드 보이스 훈련의 "피해야 할 것" 측면',
             '[팀을 위한 프롬프트 라이브러리 구축](/ko/prompt-engineering/build-a-prompt-library) — 재사용 가능한 브랜드 보이스 지침 블록 저장 및 공유',
             '[출력 제어: 스타일, 포맷, 길이](/ko/prompt-engineering/control-the-output) — 출력 스타일 및 포맷 규칙 적용 방법',

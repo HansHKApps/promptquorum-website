@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[DSGVO-konforme Cloud-GPU-Anbieter in der EU vergleichen](/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
           '[Cloud-GPU-Miete allgemein vergleichen](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai nach Stundenpreis, Verfügbarkeit und Einrichtungszeit.',
-          '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/power-local-llm/best-web-hosting-2026) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
+          '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/power-local-llm/best-web-hosting) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
         ],
       },
     },
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures Complémentaires',
         items: [
           '[Comparer la location de GPU cloud pour l\'inférence IA](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs et Vast.ai sur le tarif horaire, la disponibilité et le temps de mise en place, un produit différent de l\'hébergement web.',
-          '[Voir la page mondiale des prix d\'hébergement vérifiés](/power-local-llm/best-web-hosting-2026) — l\'équivalent mondial de cette page pour le marché français.',
+          '[Voir la page mondiale des prix d\'hébergement vérifiés](/power-local-llm/best-web-hosting) — l\'équivalent mondial de cette page pour le marché français.',
         ],
       },
     },

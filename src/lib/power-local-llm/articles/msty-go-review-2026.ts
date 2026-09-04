@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including Msty ([msty.app](https://msty.app)) listed as a separate chat product.',
-          '[AutoGPT Review 2026](/power-local-llm/autogpt-local-review-2026) — another autonomous task agent, comparing a classic MIT-licensed CLI agent against a hosted platform.',
+          '[AutoGPT Review 2026](/power-local-llm/autogpt-local-review) — another autonomous task agent, comparing a classic MIT-licensed CLI agent against a hosted platform.',
           '[Do Autonomous Local Agents Actually Work?](/power-local-llm/autonomous-local-agents-actually-work) — a hands-on evaluation of scoped vs. autonomous local agent stacks.',
           '[Best Local Models for Tool Calling 2026](/power-local-llm/best-local-models-tool-calling-2026) — for readers who want to run Msty Go against a local model backend.',
         ],
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Msty ([msty.app](https://msty.app)) als separatem Chat-Produkt.',
-          '[AutoGPT Review 2026](/de/power-local-llm/autogpt-local-review-2026) — ein weiterer autonomer Aufgaben-Agent, der einen klassischen MIT-lizenzierten CLI-Agenten mit einer gehosteten Plattform vergleicht.',
+          '[AutoGPT Review 2026](/de/power-local-llm/autogpt-local-review) — ein weiterer autonomer Aufgaben-Agent, der einen klassischen MIT-lizenzierten CLI-Agenten mit einer gehosteten Plattform vergleicht.',
           '[Funktionieren autonome lokale Agenten wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — eine praktische Bewertung von begrenzten vs. autonomen lokalen Agenten-Stacks.',
           '[Beste lokale Modelle für Tool-Aufrufe 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — für Leser, die Msty Go mit einem lokalen Modell-Backend betreiben möchten.',
         ],
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant Msty ([msty.app](https://msty.app)) listé comme un produit de chat distinct.',
-          '[Avis AutoGPT 2026](/fr/power-local-llm/autogpt-local-review-2026) — un autre agent de tâches autonome, comparant un agent CLI classique sous licence MIT à une plateforme hébergée.',
+          '[Avis AutoGPT 2026](/fr/power-local-llm/autogpt-local-review) — un autre agent de tâches autonome, comparant un agent CLI classique sous licence MIT à une plateforme hébergée.',
           '[Les agents locaux autonomes fonctionnent-ils vraiment ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — une évaluation pratique des architectures d\'agents locaux limités vs. autonomes.',
           '[Meilleurs modèles locaux pour l\'appel d\'outils 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — pour les lecteurs qui veulent utiliser Msty Go avec un moteur de modèle local.',
         ],
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属する、ローカルAIツールの全カタログ。別のチャット製品として掲載されているMsty（msty.app）を含みます。',
-          '[AutoGPTレビュー2026](/ja/power-local-llm/autogpt-local-review-2026) — もう一つの自律型タスクエージェント。MITライセンスの古典的なCLIエージェントとホスト型プラットフォームを比較しています。',
+          '[AutoGPTレビュー2026](/ja/power-local-llm/autogpt-local-review) — もう一つの自律型タスクエージェント。MITライセンスの古典的なCLIエージェントとホスト型プラットフォームを比較しています。',
           '[自律型ローカルエージェントは本当に機能するのか](/ja/power-local-llm/autonomous-local-agents-actually-work) — スコープ限定型と自律型のローカルエージェントスタックを実践的に評価した記事。',
           '[ツール呼び出しに最適なローカルモデル2026](/ja/power-local-llm/best-local-models-tool-calling-2026) — Msty Goをローカルモデルバックエンドで動かしたい読者向け。',
         ],
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录,其中Msty（msty.app）作为独立的聊天产品被单独列出。',
-          '[AutoGPT评测2026](/zh/power-local-llm/autogpt-local-review-2026) — 另一款自主任务代理,将经典的MIT许可CLI代理与托管平台进行对比。',
+          '[AutoGPT评测2026](/zh/power-local-llm/autogpt-local-review) — 另一款自主任务代理,将经典的MIT许可CLI代理与托管平台进行对比。',
           '[自主本地代理真的有效吗？](/zh/power-local-llm/autonomous-local-agents-actually-work) — 对限定范围与自主本地代理架构的实测评估。',
           '[最适合工具调用的本地模型2026](/zh/power-local-llm/best-local-models-tool-calling-2026) — 面向想要用本地模型后端运行Msty Go的读者。',
         ],
@@ -1531,7 +1531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo Msty ([msty.app](https://msty.app)) listado como un producto de chat aparte.',
-          '[AutoGPT Review 2026](/es/power-local-llm/autogpt-local-review-2026) — otro agente de tareas autónomo, comparando un agente clásico de CLI con licencia MIT frente a una plataforma alojada.',
+          '[AutoGPT Review 2026](/es/power-local-llm/autogpt-local-review) — otro agente de tareas autónomo, comparando un agente clásico de CLI con licencia MIT frente a una plataforma alojada.',
           '[¿Realmente funcionan los agentes locales autónomos?](/es/power-local-llm/autonomous-local-agents-actually-work) — una evaluación práctica de stacks de agentes locales limitados frente a autónomos.',
           '[Mejores modelos locales para llamadas a herramientas 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — para lectores que quieren ejecutar Msty Go contra un backend de modelo local.',
         ],
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo o Msty ([msty.app](https://msty.app)) listado como um produto de chat separado.',
-          '[Review do AutoGPT 2026](/pt/power-local-llm/autogpt-local-review-2026) — outro agente de tarefas autônomo, comparando um agente clássico de CLI licenciado em MIT com uma plataforma hospedada.',
+          '[Review do AutoGPT 2026](/pt/power-local-llm/autogpt-local-review) — outro agente de tarefas autônomo, comparando um agente clássico de CLI licenciado em MIT com uma plataforma hospedada.',
           '[Os agentes locais autônomos realmente funcionam?](/pt/power-local-llm/autonomous-local-agents-actually-work) — uma avaliação prática de stacks de agentes locais limitados vs. autônomos.',
           '[Melhores modelos locais para chamada de ferramentas 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — para leitores que querem rodar o Msty Go com um backend de modelo local.',
         ],
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات نماذج اللغة المحلية الكبيرة لعام 2026](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك Msty ([msty.app](https://msty.app)) المُدرج كمنتج محادثة منفصل.',
-          '[مراجعة AutoGPT لعام 2026](/ar/power-local-llm/autogpt-local-review-2026) — وكيل مهام مستقل آخر، يقارن وكيل سطر أوامر كلاسيكيًا مرخصًا بموجب MIT بمنصة مستضافة.',
+          '[مراجعة AutoGPT لعام 2026](/ar/power-local-llm/autogpt-local-review) — وكيل مهام مستقل آخر، يقارن وكيل سطر أوامر كلاسيكيًا مرخصًا بموجب MIT بمنصة مستضافة.',
           '[هل تعمل الوكلاء المحلية المستقلة فعلًا؟](/ar/power-local-llm/autonomous-local-agents-actually-work) — تقييم عملي لأنظمة الوكلاء المحلية محددة النطاق مقابل المستقلة.',
           '[أفضل النماذج المحلية لاستدعاء الأدوات لعام 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — للقراء الراغبين في تشغيل Msty Go مع محرك نموذج محلي.',
         ],
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 아티클',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 이 아티클이 속한 로컬 AI 도구의 전체 카탈로그로, 별도의 채팅 제품으로 등재된 Msty([msty.app](https://msty.app))를 포함합니다.',
-          '[AutoGPT 리뷰 2026](/ko/power-local-llm/autogpt-local-review-2026) — 또 다른 자율 작업 에이전트로, MIT 라이선스의 클래식 CLI 에이전트를 호스팅형 플랫폼과 비교합니다.',
+          '[AutoGPT 리뷰 2026](/ko/power-local-llm/autogpt-local-review) — 또 다른 자율 작업 에이전트로, MIT 라이선스의 클래식 CLI 에이전트를 호스팅형 플랫폼과 비교합니다.',
           '[자율 로컬 에이전트는 실제로 작동하는가?](/ko/power-local-llm/autonomous-local-agents-actually-work) — 범위 제한형 대 자율형 로컬 에이전트 스택에 대한 실전 평가입니다.',
           '[도구 호출을 위한 최고의 로컬 모델 2026](/ko/power-local-llm/best-local-models-tool-calling-2026) — Msty Go를 로컬 모델 백엔드와 함께 실행하고 싶은 독자를 위한 것입니다.',
         ],

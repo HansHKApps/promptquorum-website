@@ -370,7 +370,7 @@ schema: {
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Step-by-step setup guide for Ollama on macOS, Windows, and Linux.',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) -- Complete LM Studio installation and first-model setup.',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) -- Guide to Open WebUI, Enchanted UI, and other chat interfaces for Ollama.',
-            '[Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client-2026) -- Multi-provider desktop client that connects to both Ollama and LM Studio.',
+            '[Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client) -- Multi-provider desktop client that connects to both Ollama and LM Studio.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How to connect Python, Node.js, and JavaScript apps to your local model.',
             '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) -- Integrate Ollama with your code editor for in-editor completions.',
             '[Prompt Engineering for Local LLMs](/local-llms/prompt-engineering-for-local-models) -- Optimize prompts for models running through either tool.',

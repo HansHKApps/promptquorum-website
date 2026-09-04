@@ -11,41 +11,41 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review-2026",
+        "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review-2026",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review-2026",
+        "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review-2026",
+        "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review-2026",
+        "slug": "osaurus-ai-review",
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review-2026",
+        "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "rapr-ai-review-2026",
+        "slug": "rapr-ai-review",
         "title": "RAPR AI Review (2026): Local Desktop Command Center for Ollama, Claude and Gemini",
-        "url": "/power-local-llm/rapr-ai-review-2026",
+        "url": "/power-local-llm/rapr-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -517,17 +517,17 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review-2026",
+        "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review-2026",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review-2026",
+        "slug": "osaurus-ai-review",
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review-2026",
+        "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -603,9 +603,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review-2026",
+        "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review-2026",
+        "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -627,9 +627,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review-2026",
+        "slug": "osaurus-ai-review",
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review-2026",
+        "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       }
@@ -641,17 +641,17 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review-2026",
+        "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review-2026",
+        "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review-2026",
+        "slug": "osaurus-ai-review",
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review-2026",
+        "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -799,9 +799,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review-2026",
+        "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review-2026",
+        "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       }
@@ -923,17 +923,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "bobe-review-2026",
+        "slug": "bobe-review",
         "title": "BoBe Review 2026: Free Local AI Assistant for Mac",
-        "url": "/power-local-llm/bobe-review-2026",
+        "url": "/power-local-llm/bobe-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "open-felix-review-2026",
+        "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review-2026",
+        "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -1135,9 +1135,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review-2026",
+        "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review-2026",
+        "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }
@@ -1149,9 +1149,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "open-felix-review-2026",
+        "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review-2026",
+        "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }
@@ -1163,9 +1163,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review-2026",
+        "slug": "osaurus-ai-review",
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review-2026",
+        "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }
@@ -1177,9 +1177,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "bobe-review-2026",
+        "slug": "bobe-review",
         "title": "BoBe Review 2026: Free Local AI Assistant for Mac",
-        "url": "/power-local-llm/bobe-review-2026",
+        "url": "/power-local-llm/bobe-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }
@@ -1191,9 +1191,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "voxa-review-2026",
+        "slug": "voxa-review",
         "title": "Voxa Review 2026: Private Voice Assistant Orb for Desktop",
-        "url": "/power-local-llm/voxa-review-2026",
+        "url": "/power-local-llm/voxa-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }
@@ -1205,9 +1205,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "jarvis-mac-review-2026",
+        "slug": "jarvis-mac-review",
         "title": "Jarvis (Mac) Review 2026: Offline Voice AI for macOS",
-        "url": "/power-local-llm/jarvis-mac-review-2026",
+        "url": "/power-local-llm/jarvis-mac-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -2071,9 +2071,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "open-felix-review-2026",
+        "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review-2026",
+        "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -2929,9 +2929,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "open-felix-review-2026",
+        "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review-2026",
+        "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -3005,17 +3005,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "bobe-review-2026",
+        "slug": "bobe-review",
         "title": "BoBe Review 2026: Free Local AI Assistant for Mac",
-        "url": "/power-local-llm/bobe-review-2026",
+        "url": "/power-local-llm/bobe-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "open-felix-review-2026",
+        "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review-2026",
+        "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -3323,9 +3323,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "jarvis-mac-review-2026",
+        "slug": "jarvis-mac-review",
         "title": "Jarvis (Mac) Review 2026: Offline Voice AI for macOS",
-        "url": "/power-local-llm/jarvis-mac-review-2026",
+        "url": "/power-local-llm/jarvis-mac-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -3521,9 +3521,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -3607,17 +3607,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review-2026",
+        "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review-2026",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -3653,17 +3653,17 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review-2026",
+        "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review-2026",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -3763,9 +3763,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
       },
@@ -3931,9 +3931,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review-2026",
+        "slug": "locally-ai-review",
         "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review-2026",
+        "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       },
@@ -3961,9 +3961,9 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review-2026",
+        "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review-2026",
+        "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
       }

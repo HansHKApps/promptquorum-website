@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'What Hardware Should You Buy If You Decide to Go On-Prem?',
         content: [
-          '**If the utilization math points to buying, the hardware decision itself is a separate question this article does not re-litigate.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670, and Supermicro SYS-821GE-TNHR are the four vendors that field 8-GPU H100/H200 SXM5 rack platforms in the $200,000-$400,000+ range — see our [enterprise GPU server buying guide](/local-llms/enterprise-gpu-server-buying-guide-2026) for vendor-by-vendor specs, cooling requirements, and networking fabric decisions.',
+          '**If the utilization math points to buying, the hardware decision itself is a separate question this article does not re-litigate.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670, and Supermicro SYS-821GE-TNHR are the four vendors that field 8-GPU H100/H200 SXM5 rack platforms in the $200,000-$400,000+ range — see our [enterprise GPU server buying guide](/local-llms/enterprise-gpu-server-buying-guide) for vendor-by-vendor specs, cooling requirements, and networking fabric decisions.',
           'That guide covers the "which server" question in depth; this article\'s job is answering "should you buy a server at all" — read both before finalizing a budget.',
         ],
       },
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — the "which server" decision, once the TCO model here points to buying.',
+          '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide) — the "which server" decision, once the TCO model here points to buying.',
           '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — the business case for keeping AI workloads on infrastructure you control.',
           '[Scaling Local LLMs for Enterprise](/local-llms/scaling-local-llms-enterprise) — orchestration and redundancy across multiple GPU nodes once hardware is in place.',
           '[Data Residency and Sovereign AI for EU/GDPR Enterprises](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — the compliance-driven case for on-prem or region-locked cloud.',
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'Welche Hardware kaufen, wenn die Entscheidung für On-Prem fällt?',
         content: [
-          '**Zeigt die Auslastungsrechnung auf Kauf, ist die konkrete Hardware-Frage ein eigenes Thema, das dieser Artikel nicht neu aufrollt.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 und Supermicro SYS-821GE-TNHR sind die vier Anbieter mit 8-GPU-H100/H200-SXM5-Rack-Plattformen im Bereich 200.000-400.000+ USD — Spezifikationen, Kühlanforderungen und Netzwerk-Fabric-Entscheidungen pro Anbieter im [Enterprise-GPU-Server-Kaufratgeber](/local-llms/enterprise-gpu-server-buying-guide-2026).',
+          '**Zeigt die Auslastungsrechnung auf Kauf, ist die konkrete Hardware-Frage ein eigenes Thema, das dieser Artikel nicht neu aufrollt.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 und Supermicro SYS-821GE-TNHR sind die vier Anbieter mit 8-GPU-H100/H200-SXM5-Rack-Plattformen im Bereich 200.000-400.000+ USD — Spezifikationen, Kühlanforderungen und Netzwerk-Fabric-Entscheidungen pro Anbieter im [Enterprise-GPU-Server-Kaufratgeber](/local-llms/enterprise-gpu-server-buying-guide).',
           'Dieser Ratgeber behandelt die Frage "welcher Server" im Detail; dieser Artikel beantwortet "ob überhaupt ein Server gekauft werden sollte" — beide vor der Budgetfestlegung lesen.',
         ],
       },
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Enterprise-GPU-Server-Kaufratgeber 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — die "welcher Server"-Entscheidung, sobald das TCO-Modell hier auf Kauf hindeutet.',
+          '[Enterprise-GPU-Server-Kaufratgeber 2026](/local-llms/enterprise-gpu-server-buying-guide) — die "welcher Server"-Entscheidung, sobald das TCO-Modell hier auf Kauf hindeutet.',
           '[Warum Unternehmen lokale LLMs nutzen](/local-llms/why-enterprises-use-local-llms) — der Business Case für KI-Workloads auf selbst kontrollierter Infrastruktur.',
           '[Lokale LLMs für Unternehmen skalieren](/local-llms/scaling-local-llms-enterprise) — Orchestrierung und Redundanz über mehrere GPU-Nodes, sobald die Hardware steht.',
           '[Datenresidenz und souveräne KI für EU/DSGVO-Unternehmen](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — der Compliance-getriebene Fall für On-Prem oder regionsgebundene Cloud.',
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'Quel matériel acheter si vous optez pour l\'on-prem ?',
         content: [
-          '**Si le calcul d\'utilisation penche vers l\'achat, le choix du matériel lui-même est une question distincte que cet article ne rouvre pas.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 et Supermicro SYS-821GE-TNHR sont les quatre fournisseurs proposant des plateformes rack 8-GPU H100/H200 SXM5 dans la fourchette 200 000-400 000+ USD — voir notre [guide d\'achat de serveurs GPU d\'entreprise](/local-llms/enterprise-gpu-server-buying-guide-2026) pour les spécifications, besoins de refroidissement et choix de réseau par fournisseur.',
+          '**Si le calcul d\'utilisation penche vers l\'achat, le choix du matériel lui-même est une question distincte que cet article ne rouvre pas.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 et Supermicro SYS-821GE-TNHR sont les quatre fournisseurs proposant des plateformes rack 8-GPU H100/H200 SXM5 dans la fourchette 200 000-400 000+ USD — voir notre [guide d\'achat de serveurs GPU d\'entreprise](/local-llms/enterprise-gpu-server-buying-guide) pour les spécifications, besoins de refroidissement et choix de réseau par fournisseur.',
           'Ce guide traite en détail la question "quel serveur" ; cet article répond à "faut-il acheter un serveur" — lisez les deux avant de finaliser un budget.',
         ],
       },
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Guide d\'achat de serveurs GPU d\'entreprise 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — la décision "quel serveur", une fois que le modèle TCO ici pointe vers l\'achat.',
+          '[Guide d\'achat de serveurs GPU d\'entreprise 2026](/local-llms/enterprise-gpu-server-buying-guide) — la décision "quel serveur", une fois que le modèle TCO ici pointe vers l\'achat.',
           '[Pourquoi les entreprises utilisent des LLM locaux](/local-llms/why-enterprises-use-local-llms) — l\'argumentaire business pour garder les charges IA sur une infrastructure maîtrisée.',
           '[Faire évoluer les LLM locaux pour l\'entreprise](/local-llms/scaling-local-llms-enterprise) — orchestration et redondance sur plusieurs nœuds GPU une fois le matériel en place.',
           '[Résidence des données et IA souveraine pour les entreprises UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — le cas contraint par la conformité pour l\'on-prem ou le cloud à région verrouillée.',
@@ -1350,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'オンプレ購入を選んだ場合、どのハードウェアを買うべきか？',
         content: [
-          '**稼働率計算が購入を示す場合、具体的なハードウェア選定は本記事が改めて論じない別の論点である。** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)、Lenovo ThinkSystem SR675 V3、HPE Cray XD670、Supermicro SYS-821GE-TNHRの4社が約20万-40万+米ドルの8GPU H100/H200 SXM5ラックプラットフォームを提供している——ベンダー別の仕様、冷却要件、ネットワークファブリックの選択は[エンタープライズGPUサーバー購入ガイド](/local-llms/enterprise-gpu-server-buying-guide-2026)を参照。',
+          '**稼働率計算が購入を示す場合、具体的なハードウェア選定は本記事が改めて論じない別の論点である。** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)、Lenovo ThinkSystem SR675 V3、HPE Cray XD670、Supermicro SYS-821GE-TNHRの4社が約20万-40万+米ドルの8GPU H100/H200 SXM5ラックプラットフォームを提供している——ベンダー別の仕様、冷却要件、ネットワークファブリックの選択は[エンタープライズGPUサーバー購入ガイド](/local-llms/enterprise-gpu-server-buying-guide)を参照。',
           'そちらのガイドは「どのサーバーか」を詳しく扱っており、本記事は「そもそもサーバーを買うべきか」に答えるもの——予算を確定する前に両方を読むこと。',
         ],
       },
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[エンタープライズGPUサーバー購入ガイド 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — 本記事のTCOモデルが購入を示した後の「どのサーバーか」という判断。',
+          '[エンタープライズGPUサーバー購入ガイド 2026](/local-llms/enterprise-gpu-server-buying-guide) — 本記事のTCOモデルが購入を示した後の「どのサーバーか」という判断。',
           '[企業がローカルLLMを使う理由](/local-llms/why-enterprises-use-local-llms) — 自社管理インフラでAIワークロードを維持するビジネスケース。',
           '[エンタープライズ向けローカルLLMのスケーリング](/local-llms/scaling-local-llms-enterprise) — ハードウェア導入後の複数GPUノードにわたるオーケストレーションと冗長性。',
           '[EU/GDPR企業向けデータレジデンシーとソブリンAI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — オンプレまたはリージョン固定クラウドを選ぶコンプライアンス駆動のケース。',
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: '如果决定走本地部署,应该买什么硬件？',
         content: [
-          '**如果利用率测算指向购买,具体的硬件选型是本文不再重复展开的另一个问题。** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)、联想ThinkSystem SR675 V3、HPE Cray XD670和Supermicro SYS-821GE-TNHR是提供8卡H100/H200 SXM5机架平台的四家厂商,价格区间约为20万-40万+美元——各厂商的具体规格、散热要求和网络架构选择,参见[企业GPU服务器采购指南](/local-llms/enterprise-gpu-server-buying-guide-2026)。',
+          '**如果利用率测算指向购买,具体的硬件选型是本文不再重复展开的另一个问题。** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)、联想ThinkSystem SR675 V3、HPE Cray XD670和Supermicro SYS-821GE-TNHR是提供8卡H100/H200 SXM5机架平台的四家厂商,价格区间约为20万-40万+美元——各厂商的具体规格、散热要求和网络架构选择,参见[企业GPU服务器采购指南](/local-llms/enterprise-gpu-server-buying-guide)。',
           '该指南详细讨论"选哪台服务器";本文回答的是"是否应该买服务器"——确定预算前建议两篇都读。',
         ],
       },
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[企业GPU服务器采购指南 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — 当本文的TCO模型指向购买后,"选哪台服务器"的决策。',
+          '[企业GPU服务器采购指南 2026](/local-llms/enterprise-gpu-server-buying-guide) — 当本文的TCO模型指向购买后,"选哪台服务器"的决策。',
           '[企业为何使用本地LLM](/local-llms/why-enterprises-use-local-llms) — 在自主可控基础设施上保留AI工作负载的业务理由。',
           '[面向企业的本地LLM扩展](/local-llms/scaling-local-llms-enterprise) — 硬件到位后跨多个GPU节点的编排与冗余。',
           '[面向欧盟/GDPR企业的数据驻留与主权AI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 选择本地部署或区域锁定云端的合规驱动理由。',
@@ -2044,7 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: '¿Qué hardware comprar si decides ir on-prem?',
         content: [
-          '**Si la matemática de utilización apunta a comprar, la decisión de hardware en sí es una cuestión aparte que este artículo no vuelve a tratar.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 y Supermicro SYS-821GE-TNHR son los cuatro proveedores que ofrecen plataformas de rack 8-GPU H100/H200 SXM5 en el rango de 200.000-400.000+ USD — consulta nuestra [guía de compra de servidores GPU empresariales](/local-llms/enterprise-gpu-server-buying-guide-2026) para especificaciones por proveedor, requisitos de refrigeración y decisiones de red.',
+          '**Si la matemática de utilización apunta a comprar, la decisión de hardware en sí es una cuestión aparte que este artículo no vuelve a tratar.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 y Supermicro SYS-821GE-TNHR son los cuatro proveedores que ofrecen plataformas de rack 8-GPU H100/H200 SXM5 en el rango de 200.000-400.000+ USD — consulta nuestra [guía de compra de servidores GPU empresariales](/local-llms/enterprise-gpu-server-buying-guide) para especificaciones por proveedor, requisitos de refrigeración y decisiones de red.',
           'Esa guía trata en profundidad la pregunta de "qué servidor"; este artículo responde a "si deberías comprar un servidor" — lee ambos antes de cerrar un presupuesto.',
         ],
       },
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Guía de compra de servidores GPU empresariales 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — la decisión de "qué servidor" una vez que el modelo de TCO aquí apunta a comprar.',
+          '[Guía de compra de servidores GPU empresariales 2026](/local-llms/enterprise-gpu-server-buying-guide) — la decisión de "qué servidor" una vez que el modelo de TCO aquí apunta a comprar.',
           '[Por qué las empresas usan LLM locales](/local-llms/why-enterprises-use-local-llms) — el caso de negocio para mantener las cargas de IA en infraestructura que controlas.',
           '[Escalar LLM locales para la empresa](/local-llms/scaling-local-llms-enterprise) — orquestación y redundancia entre múltiples nodos GPU una vez que el hardware está listo.',
           '[Residencia de datos e IA soberana para empresas UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — el caso impulsado por cumplimiento para on-prem o nube con bloqueo regional.',
@@ -2391,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'Qual hardware comprar se você decidir ir de on-prem?',
         content: [
-          '**Se a conta de utilização apontar para a compra, a decisão de hardware em si é uma questão à parte que este artigo não retoma.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 e Supermicro SYS-821GE-TNHR são os quatro fornecedores que oferecem plataformas rack 8-GPU H100/H200 SXM5 na faixa de 200.000-400.000+ USD — veja nosso [guia de compra de servidores GPU empresariais](/local-llms/enterprise-gpu-server-buying-guide-2026) para especificações por fornecedor, requisitos de refrigeração e decisões de rede.',
+          '**Se a conta de utilização apontar para a compra, a decisão de hardware em si é uma questão à parte que este artigo não retoma.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670 e Supermicro SYS-821GE-TNHR são os quatro fornecedores que oferecem plataformas rack 8-GPU H100/H200 SXM5 na faixa de 200.000-400.000+ USD — veja nosso [guia de compra de servidores GPU empresariais](/local-llms/enterprise-gpu-server-buying-guide) para especificações por fornecedor, requisitos de refrigeração e decisões de rede.',
           'Aquele guia trata em profundidade a questão de "qual servidor"; este artigo responde "se você deveria comprar um servidor" — leia os dois antes de fechar um orçamento.',
         ],
       },
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Guia de compra de servidores GPU empresariais 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — a decisão de "qual servidor", assim que o modelo de TCO aqui apontar para a compra.',
+          '[Guia de compra de servidores GPU empresariais 2026](/local-llms/enterprise-gpu-server-buying-guide) — a decisão de "qual servidor", assim que o modelo de TCO aqui apontar para a compra.',
           '[Por que empresas usam LLMs locais](/local-llms/why-enterprises-use-local-llms) — o argumento de negócio para manter cargas de IA em infraestrutura sob seu controle.',
           '[Escalando LLMs locais para a empresa](/local-llms/scaling-local-llms-enterprise) — orquestração e redundância entre múltiplos nós GPU depois que o hardware está pronto.',
           '[Residência de dados e IA soberana para empresas UE/RGPD](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — o caso orientado a conformidade para on-prem ou nuvem com trava regional.',
@@ -2738,7 +2738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: 'ما الأجهزة التي يجب شراؤها إذا قررت الاتجاه المحلي؟',
         content: [
-          '**إذا أشارت حسابات الاستخدام إلى الشراء، فإن اختيار الأجهزة نفسه مسألة منفصلة لا يعيد هذا المقال طرحها.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) وLenovo ThinkSystem SR675 V3 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR هي الموردون الأربعة الذين يقدمون منصات رف بثماني وحدات H100/H200 SXM5 في نطاق 200,000-400,000+ دولار — راجع [دليل شراء خوادم GPU للمؤسسات](/local-llms/enterprise-gpu-server-buying-guide-2026) للمواصفات لكل مورّد ومتطلبات التبريد وقرارات شبكة الربط.',
+          '**إذا أشارت حسابات الاستخدام إلى الشراء، فإن اختيار الأجهزة نفسه مسألة منفصلة لا يعيد هذا المقال طرحها.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) وLenovo ThinkSystem SR675 V3 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR هي الموردون الأربعة الذين يقدمون منصات رف بثماني وحدات H100/H200 SXM5 في نطاق 200,000-400,000+ دولار — راجع [دليل شراء خوادم GPU للمؤسسات](/local-llms/enterprise-gpu-server-buying-guide) للمواصفات لكل مورّد ومتطلبات التبريد وقرارات شبكة الربط.',
           'يتناول ذلك الدليل سؤال "أي خادم" بالتفصيل؛ أما هذا المقال فيجيب عن "هل يجب شراء خادم أصلًا" — اقرأ الاثنين قبل تثبيت الميزانية.',
         ],
       },
@@ -2838,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل شراء خوادم GPU للمؤسسات 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — قرار "أي خادم"، بمجرد أن يشير نموذج التكلفة الإجمالية هنا إلى الشراء.',
+          '[دليل شراء خوادم GPU للمؤسسات 2026](/local-llms/enterprise-gpu-server-buying-guide) — قرار "أي خادم"، بمجرد أن يشير نموذج التكلفة الإجمالية هنا إلى الشراء.',
           '[لماذا تستخدم المؤسسات نماذج LLM المحلية](/local-llms/why-enterprises-use-local-llms) — الجدوى التجارية للإبقاء على أعباء عمل الذكاء الاصطناعي على بنية تحتية تتحكم بها.',
           '[توسيع نماذج LLM المحلية للمؤسسات](/local-llms/scaling-local-llms-enterprise) — التنسيق والتكرار عبر عقد GPU متعددة بعد جاهزية الأجهزة.',
           '[إقامة البيانات والذكاء الاصطناعي السيادي لمؤسسات الاتحاد الأوروبي/اللائحة العامة لحماية البيانات](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — الحالة المدفوعة بالامتثال للنشر المحلي أو السحابي المقيّد بمنطقة.',
@@ -3085,7 +3085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'on-prem-options',
         title: '온프레미스로 결정했다면 어떤 하드웨어를 구매해야 하나요?',
         content: [
-          '**가동률 계산이 구매를 가리킨다면, 구체적인 하드웨어 선택은 이 글에서 다시 다루지 않는 별도의 주제입니다.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670, Supermicro SYS-821GE-TNHR는 약 20만-40만+ 달러 범위의 8-GPU H100/H200 SXM5 랙 플랫폼을 제공하는 네 개 벤더입니다 — 벤더별 사양, 냉각 요구사항, 네트워크 패브릭 선택은 [기업용 GPU 서버 구매 가이드](/local-llms/enterprise-gpu-server-buying-guide-2026)를 참고하세요.',
+          '**가동률 계산이 구매를 가리킨다면, 구체적인 하드웨어 선택은 이 글에서 다시 다루지 않는 별도의 주제입니다.** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680), Lenovo ThinkSystem SR675 V3, HPE Cray XD670, Supermicro SYS-821GE-TNHR는 약 20만-40만+ 달러 범위의 8-GPU H100/H200 SXM5 랙 플랫폼을 제공하는 네 개 벤더입니다 — 벤더별 사양, 냉각 요구사항, 네트워크 패브릭 선택은 [기업용 GPU 서버 구매 가이드](/local-llms/enterprise-gpu-server-buying-guide)를 참고하세요.',
           '해당 가이드는 "어떤 서버를 살 것인가"를 자세히 다루며, 이 글은 "애초에 서버를 사야 하는가"에 답합니다 — 예산을 확정하기 전에 두 글을 모두 읽어보세요.',
         ],
       },
@@ -3185,7 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 콘텐츠',
         items: [
-          '[기업용 GPU 서버 구매 가이드 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — 이 글의 TCO 모델이 구매를 가리킨 이후 "어떤 서버를 살 것인가"에 대한 결정.',
+          '[기업용 GPU 서버 구매 가이드 2026](/local-llms/enterprise-gpu-server-buying-guide) — 이 글의 TCO 모델이 구매를 가리킨 이후 "어떤 서버를 살 것인가"에 대한 결정.',
           '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) — AI 워크로드를 자체 통제 인프라에 유지하는 비즈니스 근거.',
           '[기업용 로컬 LLM 확장](/local-llms/scaling-local-llms-enterprise) — 하드웨어가 준비된 이후 여러 GPU 노드에 걸친 오케스트레이션과 이중화.',
           '[EU/GDPR 기업을 위한 데이터 거주지 및 소버린 AI](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 온프레미스 또는 리전 고정 클라우드를 선택하는 컴플라이언스 주도 사례.',
