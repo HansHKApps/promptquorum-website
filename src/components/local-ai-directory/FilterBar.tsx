@@ -1,10 +1,11 @@
 'use client'
 
-// Left sidebar filter groups: checkboxes with live counts, one group per
-// FilterState key. Options are computed by ./filters.ts (countsForGroup),
-// which already excludes tools where the field is `null`/`'TODO'` — a group
-// with zero countable options renders its "not yet catalogued" empty state
-// instead of an empty checkbox list.
+// Collapsible top filter panel — replaces the old left sidebar (audit item
+// #2: "Widget was dropped into the article template instead of getting its
+// own full-width container"). Hidden by default; the toolbar's "Filters"
+// button toggles `open`. One fieldset per FilterState key, laid out as an
+// auto-fit grid so it wraps into columns on wide viewports and stacks on
+// narrow ones without a separate breakpoint per column count.
 
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from './icons'
@@ -32,9 +33,14 @@ const VALUE_LABELS: Partial<Record<keyof FilterState, Record<string, string>>> =
   },
 }
 
-function optionLabel(group: keyof FilterState, value: string): string {
+export const FILTER_GROUP_LABELS = GROUP_LABELS
+export const FILTER_VALUE_LABELS = VALUE_LABELS
+
+export function filterOptionLabel(group: keyof FilterState, value: string): string {
   return VALUE_LABELS[group]?.[value] ?? value
 }
+
+const GROUPS: (keyof FilterState)[] = ['locality', 'engine', 'worksWith', 'platforms', 'layer', 'price']
 
 function FilterGroup({
   group,
@@ -48,7 +54,7 @@ function FilterGroup({
   onToggle: (group: keyof FilterState, value: string) => void
 }) {
   return (
-    <fieldset className="border-t border-primary/10 pt-4 first:border-t-0 first:pt-0">
+    <fieldset>
       <legend className="text-xs font-bold uppercase tracking-wide text-text-primary mb-2.5">{GROUP_LABELS[group]}</legend>
       {options.length === 0 ? (
         <p className="text-xs text-text-secondary/70 italic">Not yet catalogued for these tools</p>
@@ -73,7 +79,7 @@ function FilterGroup({
                   </Checkbox.Indicator>
                 </Checkbox.Root>
                 <label htmlFor={id} className="flex flex-1 cursor-pointer items-center justify-between text-sm text-text-secondary">
-                  <span>{optionLabel(group, value)}</span>
+                  <span>{filterOptionLabel(group, value)}</span>
                   <span className="text-xs text-text-secondary/70">{count}</span>
                 </label>
               </li>
@@ -85,32 +91,29 @@ function FilterGroup({
   )
 }
 
-export function FilterSidebar({
+export function FilterBar({
+  open,
   countsByGroup,
   filters,
   onToggle,
   onClearAll,
   hasActiveFilters,
 }: {
+  open: boolean
   countsByGroup: Record<keyof FilterState, FilterOptionCount[]>
   filters: FilterState
   onToggle: (group: keyof FilterState, value: string) => void
   onClearAll: () => void
   hasActiveFilters: boolean
 }) {
-  const groups: (keyof FilterState)[] = ['locality', 'engine', 'worksWith', 'platforms', 'layer', 'price']
+  if (!open) return null
 
   return (
-    <aside className="w-full lg:w-64 shrink-0 space-y-4">
-      <div className="flex items-center justify-between">
-        <h2 className="text-sm font-bold text-text-primary">Filters</h2>
-        {hasActiveFilters && (
-          <button type="button" onClick={onClearAll} className="text-xs text-primary hover:underline">
-            Clear all
-          </button>
-        )}
-      </div>
-      {groups.map((group) => (
+    <div
+      id="local-ai-filter-panel"
+      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-5 border-t border-primary/10 pt-4 mt-3"
+    >
+      {GROUPS.map((group) => (
         <FilterGroup
           key={group}
           group={group}
@@ -119,6 +122,13 @@ export function FilterSidebar({
           onToggle={onToggle}
         />
       ))}
-    </aside>
+      {hasActiveFilters && (
+        <div className="col-span-full">
+          <button type="button" onClick={onClearAll} className="text-xs font-medium text-primary hover:underline">
+            Clear all filters
+          </button>
+        </div>
+      )}
+    </div>
   )
 }
