@@ -29,6 +29,7 @@ import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalcula
 import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
 import { StateAiLawApplicabilityChecker } from '@/components/StateAiLawApplicabilityChecker'
 import { QuickAnswer } from '@/components/QuickAnswer'
+import { DataDisclaimer } from '@/components/DataDisclaimer'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
@@ -1179,6 +1180,14 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
   const renderLinks = (text: string) =>
     renderInlineLinks(text, lang, slug)
 
+  // Local AI App Directory page redesign (docs/local-ai/page-redesign-v2.md
+  // §4 step 2): `directorySlot` is only ever passed for
+  // local-llm-software-directory-2026 (see page-helpers.tsx), so its
+  // presence is this page's identity check. Everything gated on
+  // `isDirectoryPage` below is scoped to that one slug — no other
+  // power-local-llm article's layout changes.
+  const isDirectoryPage = !!directorySlot
+
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
@@ -1235,6 +1244,16 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Local AI App Directory: the interactive hub renders full-bleed
+            directly under the header/intro, ahead of every other content
+            block — the audit's "directory is the page" fix (page-redesign-v2.md
+            §1 items #1-#2). */}
+        {isDirectoryPage && directorySlot && (
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+            {directorySlot.element}
+          </div>
         )}
 
         {/* Affiliate disclosure — neutral third-party-link notice */}
@@ -1307,8 +1326,10 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           </section>
         )}
 
-        {/* Presentation / Gamma slide deck */}
-        {(article as any).gammaEmbedUrl && (
+        {/* Presentation / Gamma slide deck — suppressed on the directory page:
+            a 14-slide carousel above the fold was audit item #9. A single
+            reference-card link renders near the FAQ instead (see below). */}
+        {!isDirectoryPage && (article as any).gammaEmbedUrl && (
           <div className="mt-6 pt-8 border-t border-primary/20">
             <h2 className="text-2xl font-bold text-text-primary mb-2">
               {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI["en"]?.heading}: {article.title}
@@ -1360,8 +1381,11 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           </figure>
         )}
 
-        {/* Table of Contents */}
-        {(article as any).toc && (
+        {/* Table of Contents — dropped on the directory page: the Layer
+            filter in the hub above replaces it (audit item #8), and its
+            anchors pointed at tool-listing sections that no longer render
+            as their own headings once DirectoryClient took over. */}
+        {!isDirectoryPage && (article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).tableOfContents}</p>
             <ol className="space-y-1">
@@ -1379,23 +1403,34 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
         {/* Sections */}
         <article className="key-takeaways-container">
           {(() => {
-            let directorySlotRendered = false
-            return Object.entries(article.sections).map(([key, section]) => {
+            // Directory page reorder (page-redesign-v2.md §2): Quick answer
+            // (already rendered above) → Real-world stacks → How the layers
+            // fit (the old "Key Takeaways" tldr section, folded in here
+            // instead of duplicating the Quick answer box near the top) →
+            // How current → Sources → FAQ → Related reading. Every other
+            // power-local-llm article keeps the article's own natural
+            // section order.
+            const DIRECTORY_SECTION_ORDER = ['stacks', 'tldr', 'howCurrent', 'sources', 'faq', 'relatedReading']
+            const entries = Object.entries(article.sections)
+            const orderedEntries = isDirectoryPage
+              ? [...entries].sort((a, b) => {
+                  const ia = DIRECTORY_SECTION_ORDER.indexOf(a[0])
+                  const ib = DIRECTORY_SECTION_ORDER.indexOf(b[0])
+                  if (ia === -1 && ib === -1) return 0
+                  if (ia === -1) return 1
+                  if (ib === -1) return -1
+                  return ia - ib
+                })
+              : entries
+
+            return orderedEntries.map(([key, section]) => {
               const sectionId = slugifySectionId(section, key)
               if (directorySlot?.sectionKeys.includes(key)) {
-                // Render the swapped-in element (e.g. DirectoryClient) exactly once,
-                // at the position of the first matched section key; every other
-                // section in the group is skipped so it isn't duplicated below.
-                if (directorySlotRendered) return null
-                directorySlotRendered = true
-                // Break out of the max-w-3xl prose wrapper: the directory's
-                // sidebar + table layout needs full viewport width, not the
-                // narrow column sized for article text.
-                return (
-                  <div key={key} className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-                    {directorySlot.element}
-                  </div>
-                )
+                // The interactive hub already rendered once, full-bleed,
+                // right under the header (see isDirectoryPage block above).
+                // These 13 tool-listing section keys still exist in the
+                // article data but must not render a second time here.
+                return null
               }
               return (
                 <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
@@ -1403,6 +1438,32 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
             })
           })()}
         </article>
+
+        {/* Slide deck / PDF reference card — replaces the above-the-fold
+            carousel (audit item #9) with the single download link the
+            prototype uses instead. */}
+        {isDirectoryPage && (article as any).gammaEmbedUrl && (
+          <p className="text-sm text-text-secondary mt-8">
+            {(PRESENTATION_UI[lang] ?? PRESENTATION_UI["en"])?.description}{' '}
+            <a
+              href={`${(article as any).gammaEmbedUrl}?lang=${lang}&print=1`}
+              className="text-primary underline font-medium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {(PRESENTATION_UI[lang] ?? PRESENTATION_UI["en"])?.savePdf}
+            </a>
+          </p>
+        )}
+
+        {/* Data disclaimer — moved here from inside DirectoryClient so it
+            renders once, at the end of the page, instead of mid-directory
+            (page-redesign-v2.md §2's final "data disclaimer" block). */}
+        {isDirectoryPage && (
+          <div className="mt-8">
+            <DataDisclaimer lang={lang} />
+          </div>
+        )}
 
         {/* Marketing CTA suppressed cluster-wide until /power-local-llm launches publicly. */}
 

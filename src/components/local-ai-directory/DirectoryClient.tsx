@@ -22,7 +22,6 @@ import { FilterSidebar } from './FilterSidebar'
 import { ToolCard } from './ToolCard'
 import { ToolTable } from './ToolTable'
 import { ToolDrawer } from './ToolDrawer'
-import { DataDisclaimer } from '@/components/DataDisclaimer'
 import { SearchIcon, GridIcon, TableIcon, CloseIcon } from './icons'
 import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools } from './filters'
 import { detectDefaultMachine, readStoredMachine, writeStoredMachine } from './hardware'
@@ -234,10 +233,6 @@ export function DirectoryClient({ apps, lang }: Props) {
               />
             )
           )}
-
-          <div className="mt-8">
-            <DataDisclaimer lang={lang} />
-          </div>
         </div>
       </div>
 
