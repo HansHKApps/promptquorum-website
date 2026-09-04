@@ -193,6 +193,20 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'us-state-ai-employment-laws-compliance',
   // Enclave AI review — 2026-09-03
   'enclave-ai-review-2026',
+
+  // Aori, RAPR AI, Open Felix, BoBe (Local AI Agents & Tool Use), Osaurus,
+  // Hanoki (Easiest Desktop Apps), Voxa, Jarvis Mac (Voice/Speech/Multimodal),
+  // Locally AI, Arbiter (Mobile & Edge LLMs) reviews — 2026-09-04
+  'aori-ai-personal-agent-review',
+  'rapr-ai-review-2026',
+  'open-felix-review-2026',
+  'bobe-review-2026',
+  'osaurus-ai-review-2026',
+  'hanoki-review-2026',
+  'voxa-review-2026',
+  'jarvis-mac-review-2026',
+  'locally-ai-review-2026',
+  'arbiter-local-ai-chat-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
