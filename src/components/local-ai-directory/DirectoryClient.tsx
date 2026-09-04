@@ -152,7 +152,7 @@ export function DirectoryClient({ apps, lang }: Props) {
       {/* Sticky top filter bar — replaces the old left sidebar (audit item
           #2). Collapsible panel + active-filter chips underneath. */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 border-b border-primary/10">
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col min-[560px]:flex-row min-[560px]:flex-wrap gap-3">
           <button
             type="button"
             onClick={() => setFiltersOpen((o) => !o)}
@@ -166,7 +166,7 @@ export function DirectoryClient({ apps, lang }: Props) {
             Filters {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
           </button>
 
-          <div className="relative flex-1">
+          <div className="relative flex-1 min-w-[200px]">
             <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-secondary/60" />
             <input
               type="text"
@@ -275,7 +275,11 @@ export function DirectoryClient({ apps, lang }: Props) {
               <p className="text-sm text-text-secondary italic py-10 text-center">No tools match these filters.</p>
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {/* Breakpoints match page-redesign-v2.md §2 exactly (1180/860/560px),
+                    not Tailwind's default scale (1024/768/640) — arbitrary
+                    min-width variants so 4/3/2/1 columns land at the audited
+                    widths instead of a close-but-different default. */}
+                <div className="grid grid-cols-1 min-[560px]:grid-cols-2 min-[860px]:grid-cols-3 min-[1180px]:grid-cols-4 gap-4">
                   {visibleRows.map((app) => (
                     <ToolCard key={app.slug} app={app} lang={lang} machine={machine} onOpen={setOpenSlug} />
                   ))}
