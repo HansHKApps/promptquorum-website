@@ -21,7 +21,7 @@ const COPY: Partial<Record<Language, DisclaimerCopy>> = {
     heading: 'About this data',
     body: [
       'This directory is compiled with AI-assisted research from public sources (project READMEs, official sites, GitHub repositories). It is not exhaustive and may contain errors — hardware requirements, pricing, and platform support change frequently and some fields have not been independently verified yet.',
-      'A "Listed" status means the tool is included but not independently reviewed by PromptQuorum. A "Verified" status means core facts (license, platforms, pricing) have been manually checked. A "PromptQuorum-tested" badge is only shown for tools PromptQuorum has actually installed and run — most entries do not have this badge yet.',
+      'Most entries carry no status badge: they are listed from public sources but not independently reviewed. A "Verified" badge means core facts (license, platforms, pricing) have been manually checked. A "PromptQuorum-tested" badge is only shown for tools PromptQuorum has actually installed and run — most entries do not have this badge yet.',
     ],
     testedBadgeNote: 'The "PromptQuorum-tested" badge is reserved for tools we have personally installed and run — an untested tool never carries it, regardless of popularity or stars.',
     correctionNote: 'Spotted something wrong? Email hello@promptquorum.com and we will correct it.',
