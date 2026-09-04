@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'llamafile',
   name: 'Llamafile',
   layer: 'runtime',
+  categories: ['inference-engines'],
+  interfaces: ['cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

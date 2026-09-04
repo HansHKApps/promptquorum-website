@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'piper-tts',
   name: 'Piper TTS',
   layer: 'tts',
+  categories: ['text-to-speech'],
+  interfaces: ['cli', 'library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

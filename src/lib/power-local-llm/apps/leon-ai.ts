@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'leon-ai',
   name: 'Leon AI',
   layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

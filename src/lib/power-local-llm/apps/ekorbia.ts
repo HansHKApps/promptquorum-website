@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'ekorbia',
   name: 'Ekorbia',
   layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],
   worksWith: ['Ollama', 'OpenAI API'],

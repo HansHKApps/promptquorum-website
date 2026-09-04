@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'bmo-chatbot',
   name: 'BMO Chatbot',
   layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'LocalAI'],

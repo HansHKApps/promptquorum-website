@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'styletts-2',
   name: 'StyleTTS 2',
   layer: 'tts',
+  categories: ['text-to-speech'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

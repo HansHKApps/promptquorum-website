@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'llava',
   name: 'LLaVA',
   layer: 'vision',
+  categories: ['vision-ocr'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

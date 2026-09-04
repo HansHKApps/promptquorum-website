@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'comfyui',
   name: 'ComfyUI',
   layer: 'image',
+  categories: ['workflow-node-builders', 'image-generation'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'big-agi',
   name: 'Big-AGI',
   layer: 'webui',
+  categories: ['general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['Ollama', 'LM Studio', 'LocalAI'],

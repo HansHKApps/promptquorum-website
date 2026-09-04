@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'autogpt',
   name: 'AutoGPT (classic, local)',
   layer: 'tools',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

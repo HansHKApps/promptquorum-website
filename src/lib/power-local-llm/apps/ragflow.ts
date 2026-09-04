@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'ragflow',
   name: 'RAGFlow',
   layer: 'rag',
+  categories: ['document-pdf-chat'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['linux'],
   worksWith: ['Ollama', 'vLLM', 'LM Studio', 'Xinference', 'LocalAI'],

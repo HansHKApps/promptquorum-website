@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'librechat',
   name: 'LibreChat',
   layer: 'webui',
+  categories: ['general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['Ollama', 'OpenAI API', 'Anthropic API', 'OpenRouter'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'arbiter',
   name: 'Arbiter',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios'],
   worksWith: ['LM Studio', 'Ollama'],

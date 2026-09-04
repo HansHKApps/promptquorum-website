@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'enchanted',
   name: 'Enchanted',
   layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop', 'mobile'],
   locality: 'local',
   platforms: ['mac', 'ios'],
   worksWith: ['Ollama'],

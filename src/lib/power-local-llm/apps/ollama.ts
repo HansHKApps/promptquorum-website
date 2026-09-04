@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'ollama',
   name: 'Ollama',
   layer: 'runtime',
+  categories: ['inference-engines', 'runtimes-managers'],
+  interfaces: ['cli', 'desktop'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

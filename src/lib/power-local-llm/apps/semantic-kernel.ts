@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'semantic-kernel',
   name: 'Semantic Kernel',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],

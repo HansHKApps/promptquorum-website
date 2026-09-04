@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'pearai',
   name: 'PearAI',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'LocalAI'],

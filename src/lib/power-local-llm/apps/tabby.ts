@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'tabby',
   name: 'Tabby',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins', 'api-servers'],
+  interfaces: ['cli', 'plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'vLLM', 'OpenAI API'],

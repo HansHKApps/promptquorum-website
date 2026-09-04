@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'boltai',
   name: 'BoltAI',
   layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac'],
   worksWith: ['Ollama', 'LM Studio'],

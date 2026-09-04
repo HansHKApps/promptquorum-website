@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'smart-connections',
   name: 'Smart Connections',
   layer: 'tools',
+  categories: ['notes-integrations', 'local-search'],
+  interfaces: ['plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

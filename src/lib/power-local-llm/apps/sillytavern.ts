@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'sillytavern',
   name: 'SillyTavern',
   layer: 'webui',
+  categories: ['roleplay-companions', 'general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['KoboldCpp', 'Ollama', 'llama.cpp', 'text-generation-webui', 'LM Studio'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'page-assist',
   name: 'Page Assist',
   layer: 'webui',
+  categories: ['general-chat-clients'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['web'],
   worksWith: ['Ollama', 'OpenAI API', 'LM Studio'],

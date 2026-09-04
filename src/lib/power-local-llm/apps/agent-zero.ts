@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'agent-zero',
   name: 'Agent Zero',
   layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'flowise',
   name: 'Flowise',
   layer: 'rag',
+  categories: ['rag-frameworks', 'workflow-node-builders'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['Ollama', 'LocalAI'],

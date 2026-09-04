@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'llama-cpp',
   name: 'llama.cpp',
   layer: 'runtime',
+  categories: ['inference-engines', 'api-servers'],
+  interfaces: ['cli', 'library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

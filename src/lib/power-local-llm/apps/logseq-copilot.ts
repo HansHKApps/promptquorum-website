@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'logseq-copilot',
   name: 'logseq-copilot',
   layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API', 'Google Gemini API'],

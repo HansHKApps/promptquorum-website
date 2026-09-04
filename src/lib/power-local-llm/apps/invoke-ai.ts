@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'invoke-ai',
   name: 'Invoke AI',
   layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

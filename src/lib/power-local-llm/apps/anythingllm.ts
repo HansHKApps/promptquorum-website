@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'anythingllm',
   name: 'AnythingLLM',
   layer: 'desktop',
+  categories: ['document-pdf-chat', 'general-chat-clients'],
+  interfaces: ['desktop', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],

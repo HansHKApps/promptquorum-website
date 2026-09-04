@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'stable-diffusion',
   name: 'Stable Diffusion',
   layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

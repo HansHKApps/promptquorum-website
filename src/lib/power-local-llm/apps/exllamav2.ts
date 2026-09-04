@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'exllamav2',
   name: 'ExLlamaV2',
   layer: 'runtime',
+  categories: ['inference-engines'],
+  interfaces: ['cli', 'library'],
   locality: 'local',
   platforms: ['win', 'linux'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'devhat',
   name: 'Devhat',
   layer: 'cli',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

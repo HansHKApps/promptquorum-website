@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'mlc-llm',
   name: 'MLC LLM',
   layer: 'runtime',
+  categories: ['inference-engines'],
+  interfaces: ['library', 'mobile'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux', 'ios', 'android'],
   worksWith: null,

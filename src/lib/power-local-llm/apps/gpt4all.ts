@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'gpt4all',
   name: 'GPT4All',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'runtimes-managers'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'OpenAI API'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'dall-e-3-local-ollama-vision',
   name: 'DALL-E 3 Local (via Ollama Vision)',
   layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],

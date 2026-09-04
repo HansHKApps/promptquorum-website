@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'aichat',
   name: 'aichat',
   layer: 'cli',
+  categories: ['general-chat-clients'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'OpenAI API'],

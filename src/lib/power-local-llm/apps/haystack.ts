@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'haystack',
   name: 'Haystack',
   layer: 'rag',
+  categories: ['rag-frameworks'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'llama.cpp', 'OpenAI API'],

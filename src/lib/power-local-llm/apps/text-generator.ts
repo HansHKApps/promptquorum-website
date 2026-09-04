@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'text-generator',
   name: 'Text Generator',
   layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'KoboldCpp', 'LocalAI'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'ollama-vision-models',
   name: 'Ollama vision models',
   layer: 'vision',
+  categories: ['vision-ocr'],
+  interfaces: ['cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],

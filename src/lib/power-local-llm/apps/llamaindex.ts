@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'llamaindex',
   name: 'LlamaIndex',
   layer: 'rag',
+  categories: ['rag-frameworks'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'llama.cpp', 'LM Studio', 'vLLM', 'LocalAI'],

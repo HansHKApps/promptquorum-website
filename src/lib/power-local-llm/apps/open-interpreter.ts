@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'open-interpreter',
   name: 'Open Interpreter',
   layer: 'desktop',
+  categories: ['agent-frameworks', 'autonomous-agents'],
+  interfaces: ['cli', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],

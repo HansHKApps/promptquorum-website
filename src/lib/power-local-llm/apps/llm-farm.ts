@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'llm-farm',
   name: 'LLM Farm',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios'],
   worksWith: null,

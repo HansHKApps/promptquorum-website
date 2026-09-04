@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'locally-uncensored',
   name: 'Locally Uncensored',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'image-generation', 'agent-frameworks'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['win'],
   worksWith: ['Ollama'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'automatic1111-webui',
   name: 'AUTOMATIC1111 WebUI',
   layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

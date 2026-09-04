@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'bodega-one-code',
   name: 'Bodega One Code',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'LocalAI', 'KoboldCpp'],

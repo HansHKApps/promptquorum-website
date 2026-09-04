@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'continue-dev',
   name: 'Continue.dev',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],

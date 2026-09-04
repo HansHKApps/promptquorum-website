@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'khoj',
   name: 'Khoj',
   layer: 'rag',
+  categories: ['document-pdf-chat', 'personal-assistants'],
+  interfaces: ['web', 'desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'OpenAI API'],

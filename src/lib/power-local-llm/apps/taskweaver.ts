@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'taskweaver',
   name: 'TaskWeaver',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'metagpt',
   name: 'MetaGPT',
   layer: 'tools',
+  categories: ['agent-frameworks', 'autonomous-agents'],
+  interfaces: ['library', 'cli'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],

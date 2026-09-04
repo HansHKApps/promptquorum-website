@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'pocketpal-ai',
   name: 'PocketPal AI',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'rikkahub',
   name: 'RikkaHub',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['android'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'cursor',
   name: 'Cursor (local mode)',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'fooocus',
   name: 'Fooocus',
   layer: 'image',
+  categories: ['image-generation'],
+  interfaces: ['web'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

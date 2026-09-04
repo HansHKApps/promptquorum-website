@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'layla',
   name: 'Layla',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['android'],
   worksWith: ['LM Studio', 'Ollama', 'vLLM', 'OpenAI API'],

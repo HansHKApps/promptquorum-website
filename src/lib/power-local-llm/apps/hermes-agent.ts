@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'hermes-agent',
   name: 'Hermes Agent',
   layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['cli'],
   locality: 'hybrid',
   platforms: ['mac', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'vLLM', 'llama.cpp'],

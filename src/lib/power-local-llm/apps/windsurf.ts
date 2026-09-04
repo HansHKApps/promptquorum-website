@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'windsurf',
   name: 'Windsurf',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

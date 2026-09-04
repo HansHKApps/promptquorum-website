@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'openhands',
   name: 'OpenHands',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins', 'agent-frameworks'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['LM Studio', 'Ollama', 'vLLM', 'SGLang'],

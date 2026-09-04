@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'msty-go',
   name: 'Msty Go',
   layer: 'agent',
+  categories: ['autonomous-agents'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'llama.cpp'],

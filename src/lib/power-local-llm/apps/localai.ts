@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'localai',
   name: 'LocalAI',
   layer: 'runtime',
+  categories: ['api-servers', 'inference-engines'],
+  interfaces: ['cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

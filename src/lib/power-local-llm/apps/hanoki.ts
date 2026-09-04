@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'hanoki',
   name: 'Hanoki',
   layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac'],
   worksWith: ['Ollama', 'OpenAI API', 'Anthropic API', 'Google Gemini API', 'OpenRouter'],

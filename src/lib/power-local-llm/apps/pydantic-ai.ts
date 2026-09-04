@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'pydantic-ai',
   name: 'Pydantic AI',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'LM Studio', 'llama.cpp'],

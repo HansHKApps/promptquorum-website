@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'langchain',
   name: 'LangChain',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'llama.cpp', 'vLLM', 'LM Studio'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'jan',
   name: 'Jan',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'runtimes-managers'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'LocalAI', 'OpenAI API', 'Anthropic API'],

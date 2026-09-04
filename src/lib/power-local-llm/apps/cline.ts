@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'cline',
   name: 'Cline',
   layer: 'ide',
+  categories: ['code-assistants-ide-plugins', 'agent-frameworks'],
+  interfaces: ['plugin'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],

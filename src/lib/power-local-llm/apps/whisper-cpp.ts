@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'whisper-cpp',
   name: 'Whisper.cpp',
   layer: 'stt',
+  categories: ['speech-to-text'],
+  interfaces: ['library', 'cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

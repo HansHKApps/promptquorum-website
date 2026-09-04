@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'superagi',
   name: 'SuperAGI',
   layer: 'agent',
+  categories: ['agent-frameworks'],
+  interfaces: ['web', 'library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: null,

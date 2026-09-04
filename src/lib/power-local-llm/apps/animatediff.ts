@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'animatediff',
   name: 'AnimateDiff',
   layer: 'image',
+  categories: ['video-generation', 'image-generation'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

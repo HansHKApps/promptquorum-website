@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'h2ogpt',
   name: 'h2oGPT',
   layer: 'desktop',
+  categories: ['document-pdf-chat', 'api-servers'],
+  interfaces: ['desktop', 'web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'llama.cpp', 'GPT4All', 'OpenAI API'],

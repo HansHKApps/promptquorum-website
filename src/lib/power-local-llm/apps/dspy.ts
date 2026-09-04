@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'dspy',
   name: 'DsPy',
   layer: 'agent',
+  categories: ['prompt-tooling-evals', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'SGLang'],

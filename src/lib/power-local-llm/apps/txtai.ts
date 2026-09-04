@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'txtai',
   name: 'txtai',
   layer: 'rag',
+  categories: ['rag-frameworks', 'embeddings-indexing'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['llama.cpp'],

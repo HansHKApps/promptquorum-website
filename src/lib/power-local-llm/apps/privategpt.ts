@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'privategpt',
   name: 'PrivateGPT',
   layer: 'rag',
+  categories: ['document-pdf-chat'],
+  interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'llama.cpp'],

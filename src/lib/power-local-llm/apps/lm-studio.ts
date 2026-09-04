@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'lm-studio',
   name: 'LM Studio',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'runtimes-managers', 'api-servers'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

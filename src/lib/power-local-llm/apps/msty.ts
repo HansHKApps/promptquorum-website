@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'msty',
   name: 'Msty',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'runtimes-managers'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'OpenAI API'],

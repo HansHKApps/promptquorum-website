@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'open-felix',
   name: 'Open Felix',
   layer: 'desktop',
+  categories: ['autonomous-agents'],
+  interfaces: ['desktop'],
   locality: 'hybrid',
   platforms: ['mac'],
   worksWith: null,

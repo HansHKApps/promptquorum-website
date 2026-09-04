@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'quivr',
   name: 'Quivr',
   layer: 'rag',
+  categories: ['document-pdf-chat'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['Ollama'],

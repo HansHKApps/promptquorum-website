@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'autogen',
   name: 'AutoGen',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],

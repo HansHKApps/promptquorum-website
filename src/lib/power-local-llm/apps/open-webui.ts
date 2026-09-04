@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'open-webui',
   name: 'Open WebUI',
   layer: 'webui',
+  categories: ['general-chat-clients'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
   worksWith: ['Ollama', 'OpenAI API'],

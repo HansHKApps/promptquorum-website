@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'letta',
   name: 'Letta (formerly MemGPT)',
   layer: 'agent',
+  categories: ['agent-frameworks', 'sdks-libraries'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'OpenAI API', 'Anthropic API'],

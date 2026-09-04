@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'backyard-ai',
   name: 'Backyard AI',
   layer: 'desktop',
+  categories: ['roleplay-companions'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac', 'win'],
   worksWith: null,

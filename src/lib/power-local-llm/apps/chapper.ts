@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'chapper',
   name: 'Chapper',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android'],
   worksWith: ['LM Studio', 'OpenAI API'],

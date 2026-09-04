@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'xtts-v2',
   name: 'XTTS v2',
   layer: 'tts',
+  categories: ['voice-cloning', 'text-to-speech'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'text-generation-webui',
   name: 'text-generation-webui',
   layer: 'webui',
+  categories: ['inference-engines'],
+  interfaces: ['web', 'cli'],
   locality: 'local',
   platforms: ['win', 'linux', 'mac'],
   worksWith: null,

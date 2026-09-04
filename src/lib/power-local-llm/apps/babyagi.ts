@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'babyagi',
   name: 'BabyAGI',
   layer: 'tools',
+  categories: ['autonomous-agents'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

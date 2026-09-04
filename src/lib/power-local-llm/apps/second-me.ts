@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'second-me',
   name: 'Second Me',
   layer: 'tools',
+  categories: ['fine-tuning-lora', 'personal-assistants'],
+  interfaces: ['web', 'library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'atomic-chat',
   name: 'Atomic Chat',
   layer: 'desktop',
+  categories: ['general-chat-clients', 'agent-frameworks'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android'],
   worksWith: null,

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'bark',
   name: 'Bark',
   layer: 'tts',
+  categories: ['text-to-speech'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

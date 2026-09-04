@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'risuai',
   name: 'RisuAI',
   layer: 'tools',
+  categories: ['roleplay-companions'],
+  interfaces: ['web', 'mobile'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['text-generation-webui', 'OpenAI API', 'OpenRouter'],

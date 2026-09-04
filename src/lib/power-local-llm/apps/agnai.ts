@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'agnai',
   name: 'Agnai',
   layer: 'tools',
+  categories: ['roleplay-companions'],
+  interfaces: ['web'],
   locality: 'hybrid',
   platforms: ['web'],
   worksWith: ['KoboldAI'],

@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'faster-whisper',
   name: 'faster-whisper',
   layer: 'stt',
+  categories: ['speech-to-text'],
+  interfaces: ['library'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,

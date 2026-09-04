@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'crewai',
   name: 'CrewAI',
   layer: 'agent',
+  categories: ['agent-frameworks'],
+  interfaces: ['library'],
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],

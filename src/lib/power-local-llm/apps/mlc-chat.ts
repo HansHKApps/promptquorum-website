@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'mlc-chat',
   name: 'MLC Chat',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android'],
   worksWith: null,

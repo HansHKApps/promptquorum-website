@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'locally-ai',
   name: 'Locally AI',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'mac'],
   worksWith: null,

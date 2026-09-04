@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'bobe',
   name: 'BoBe',
   layer: 'desktop',
+  categories: ['general-chat-clients'],
+  interfaces: ['desktop'],
   locality: 'local',
   platforms: ['mac'],
   worksWith: null,

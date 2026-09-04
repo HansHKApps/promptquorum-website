@@ -8,6 +8,8 @@ export const app: ToolRecord = {
   slug: 'loci-ai',
   name: 'Loci AI',
   layer: 'mobile',
+  categories: ['general-chat-clients'],
+  interfaces: ['mobile'],
   locality: 'local',
   platforms: ['ios', 'android', 'mac', 'win'],
   worksWith: ['Ollama'],

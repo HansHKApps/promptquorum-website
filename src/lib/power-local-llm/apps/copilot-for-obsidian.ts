@@ -9,6 +9,8 @@ export const app: ToolRecord = {
   slug: 'copilot-for-obsidian',
   name: 'Copilot for Obsidian',
   layer: 'tools',
+  categories: ['notes-integrations'],
+  interfaces: ['plugin'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],
