@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 11600,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/LostRuins/koboldcpp',
   tagline: {
     en: 'Lightweight llama.cpp wrapper with built-in UI',

@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: ['chat'],
+  uses: ['chat', 'serve'],
   url: 'lmstudio.ai',
   tagline: {
     en: 'Most polished GUI, built-in HuggingFace model browser, server mode',

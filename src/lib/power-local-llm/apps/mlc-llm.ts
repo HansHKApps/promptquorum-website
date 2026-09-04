@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: null,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'mlc.ai/mlc-llm',
   tagline: {
     en: 'Mobile and edge device deployment runtime',

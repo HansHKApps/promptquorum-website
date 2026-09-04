@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 47600,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/oobabooga/text-generation-webui',
   tagline: {
     en: 'Power-user UI with extensive plugin ecosystem',

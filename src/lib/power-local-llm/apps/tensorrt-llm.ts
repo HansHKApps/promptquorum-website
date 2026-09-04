@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 14500,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/NVIDIA/TensorRT-LLM',
   tagline: {
     en: 'NVIDIA-optimized inference for enterprise GPU rigs',

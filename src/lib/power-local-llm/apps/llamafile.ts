@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   stars: 25900,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
-  uses: null,
+  uses: ['serve'],
   url: 'github.com/Mozilla-Ocho/llamafile',
   tagline: {
     en: 'Single-file portable LLM execution by Mozilla',
