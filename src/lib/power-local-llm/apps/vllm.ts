@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'vllm',
   name: 'vLLM',
-  layer: 'runtime',
   categories: ['inference-engines', 'api-servers'],
   interfaces: ['cli', 'library'],
   locality: 'local',

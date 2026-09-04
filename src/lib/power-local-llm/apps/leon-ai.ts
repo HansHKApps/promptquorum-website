@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'leon-ai',
   name: 'Leon AI',
-  layer: 'agent',
   categories: ['autonomous-agents'],
   interfaces: ['cli'],
   locality: 'hybrid',

@@ -1,5 +1,5 @@
 // Card-view tile for one tool — the single fixed card format from
-// page-redesign-v2.md §3: layer-accented header, name + locality badge,
+// page-redesign-v2.md §3: category-accented header, name + locality badge,
 // tagline, engine + price pills, works-with tags, hardware, platform chips,
 // stars, license, and the two links that matter (our review, and the tool
 // itself). Every card has the same structure so the grid never looks ragged
@@ -7,28 +7,22 @@
 
 import Link from 'next/link'
 import type { Language } from '@/lib/blog/blogContent'
-import type { LayerKey, ToolRecord } from '@/lib/power-local-llm/apps/types'
+import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon } from './icons'
-import { FILTER_VALUE_LABELS } from './FilterBar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 
-/** Per-layer accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
-const LAYER_ACCENT: Record<LayerKey, { bar: string; chip: string; avatar: string }> = {
-  runtime: { bar: 'bg-violet-500', chip: 'bg-violet-50 text-violet-700', avatar: 'bg-violet-100 text-violet-700' },
-  desktop: { bar: 'bg-blue-500', chip: 'bg-blue-50 text-blue-700', avatar: 'bg-blue-100 text-blue-700' },
-  webui: { bar: 'bg-cyan-500', chip: 'bg-cyan-50 text-cyan-700', avatar: 'bg-cyan-100 text-cyan-700' },
-  ide: { bar: 'bg-indigo-500', chip: 'bg-indigo-50 text-indigo-700', avatar: 'bg-indigo-100 text-indigo-700' },
-  cli: { bar: 'bg-slate-500', chip: 'bg-slate-100 text-slate-700', avatar: 'bg-slate-200 text-slate-700' },
-  rag: { bar: 'bg-teal-500', chip: 'bg-teal-50 text-teal-700', avatar: 'bg-teal-100 text-teal-700' },
-  agent: { bar: 'bg-purple-500', chip: 'bg-purple-50 text-purple-700', avatar: 'bg-purple-100 text-purple-700' },
-  stt: { bar: 'bg-pink-500', chip: 'bg-pink-50 text-pink-700', avatar: 'bg-pink-100 text-pink-700' },
-  tts: { bar: 'bg-rose-500', chip: 'bg-rose-50 text-rose-700', avatar: 'bg-rose-100 text-rose-700' },
-  vision: { bar: 'bg-orange-500', chip: 'bg-orange-50 text-orange-700', avatar: 'bg-orange-100 text-orange-700' },
-  mobile: { bar: 'bg-sky-500', chip: 'bg-sky-50 text-sky-700', avatar: 'bg-sky-100 text-sky-700' },
-  tools: { bar: 'bg-gray-400', chip: 'bg-gray-100 text-gray-700', avatar: 'bg-gray-200 text-gray-700' },
-  image: { bar: 'bg-fuchsia-500', chip: 'bg-fuchsia-50 text-fuchsia-700', avatar: 'bg-fuchsia-100 text-fuchsia-700' },
+/** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
+const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
+  'run-serve': { bar: 'bg-violet-500', chip: 'bg-violet-50 text-violet-700', avatar: 'bg-violet-100 text-violet-700' },
+  'chat-assistants': { bar: 'bg-blue-500', chip: 'bg-blue-50 text-blue-700', avatar: 'bg-blue-100 text-blue-700' },
+  'code-development': { bar: 'bg-indigo-500', chip: 'bg-indigo-50 text-indigo-700', avatar: 'bg-indigo-100 text-indigo-700' },
+  'knowledge-retrieval': { bar: 'bg-teal-500', chip: 'bg-teal-50 text-teal-700', avatar: 'bg-teal-100 text-teal-700' },
+  'voice-audio': { bar: 'bg-rose-500', chip: 'bg-rose-50 text-rose-700', avatar: 'bg-rose-100 text-rose-700' },
+  'images-video': { bar: 'bg-fuchsia-500', chip: 'bg-fuchsia-50 text-fuchsia-700', avatar: 'bg-fuchsia-100 text-fuchsia-700' },
+  'train-operate': { bar: 'bg-amber-500', chip: 'bg-amber-50 text-amber-700', avatar: 'bg-amber-100 text-amber-700' },
 }
 
 const LOCALITY_LABEL: Record<'local' | 'hybrid' | 'cloud', string> = {
@@ -105,8 +99,9 @@ export function ToolCard({
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
   const review = reviewUrl(app.name)
-  const accent = LAYER_ACCENT[app.layer] ?? LAYER_ACCENT.tools
-  const layerLabel = FILTER_VALUE_LABELS.layer?.[app.layer] ?? app.layer
+  const primaryCategory = app.categories[0]
+  const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
+  const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory]
 
   const stop = (e: React.MouseEvent) => e.stopPropagation()
 
@@ -136,7 +131,7 @@ export function ToolCard({
           <div className="min-w-0 flex-1">
             <h3 className="text-base font-bold text-text-primary leading-snug">{app.name}</h3>
             <span className={`inline-block mt-1 rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${accent.chip}`}>
-              {layerLabel}
+              {categoryLabel}
             </span>
           </div>
           {locality && (
@@ -180,6 +175,11 @@ export function ToolCard({
 
         <div className="mt-auto space-y-2.5">
           <div className="flex flex-wrap gap-1">
+            {app.interfaces.map((i) => (
+              <span key={i} className="rounded-md bg-primary/5 border border-primary/10 px-1.5 py-0.5 text-[11px] font-medium text-primary">
+                {INTERFACE_LABEL[i]}
+              </span>
+            ))}
             {app.platforms?.map((p) => (
               <span key={p} className="rounded-md bg-gray-50 border border-gray-200 px-1.5 py-0.5 text-[11px] font-medium text-text-secondary">
                 {PLATFORM_LABEL[p] ?? p}

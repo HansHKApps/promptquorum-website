@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'real-esrgan',
   name: 'Real-ESRGAN',
-  layer: 'image',
   categories: ['editing-upscaling'],
   interfaces: ['cli'],
   locality: 'local',

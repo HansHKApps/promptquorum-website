@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'haystack',
   name: 'Haystack',
-  layer: 'rag',
   categories: ['rag-frameworks'],
   interfaces: ['library'],
   locality: 'hybrid',

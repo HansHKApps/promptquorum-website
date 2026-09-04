@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ragflow',
   name: 'RAGFlow',
-  layer: 'rag',
   categories: ['document-pdf-chat'],
   interfaces: ['web'],
   locality: 'hybrid',

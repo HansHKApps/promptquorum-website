@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'private-llm',
   name: 'Private LLM',
-  layer: 'mobile',
   categories: ['general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'local',

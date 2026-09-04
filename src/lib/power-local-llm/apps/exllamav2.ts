@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'exllamav2',
   name: 'ExLlamaV2',
-  layer: 'runtime',
   categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
   locality: 'local',

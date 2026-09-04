@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'copilot-for-obsidian',
   name: 'Copilot for Obsidian',
-  layer: 'tools',
   categories: ['notes-integrations'],
   interfaces: ['plugin'],
   locality: 'local',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'voxa',
   name: 'Voxa',
-  layer: 'desktop',
   categories: ['realtime-voice-agents', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'hybrid',

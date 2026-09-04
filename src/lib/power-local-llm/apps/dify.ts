@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dify',
   name: 'Dify',
-  layer: 'rag',
   categories: ['workflow-node-builders', 'rag-frameworks', 'agent-frameworks'],
   interfaces: ['web'],
   locality: 'hybrid',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'autogen',
   name: 'AutoGen',
-  layer: 'agent',
   categories: ['agent-frameworks', 'sdks-libraries'],
   interfaces: ['library'],
   locality: 'hybrid',

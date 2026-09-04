@@ -24,7 +24,8 @@ function fieldForGroup(app: ToolRecord, group: keyof FilterState): string | stri
     case 'engine': return app.engine
     case 'worksWith': return app.worksWith
     case 'platforms': return app.platforms
-    case 'layer': return app.layer
+    case 'category': return app.categories
+    case 'interface': return app.interfaces
     case 'price': return app.price
   }
 }

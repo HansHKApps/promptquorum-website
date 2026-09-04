@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'codegpt',
   name: 'CodeGPT',
-  layer: 'ide',
   categories: ['code-assistants-ide-plugins'],
   interfaces: ['plugin'],
   locality: 'hybrid',

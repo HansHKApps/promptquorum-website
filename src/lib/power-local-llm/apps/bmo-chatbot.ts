@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'bmo-chatbot',
   name: 'BMO Chatbot',
-  layer: 'tools',
   categories: ['notes-integrations'],
   interfaces: ['plugin'],
   locality: 'local',

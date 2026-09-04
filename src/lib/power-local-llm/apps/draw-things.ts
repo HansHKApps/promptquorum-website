@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'draw-things',
   name: 'Draw Things',
-  layer: 'desktop',
   categories: ['image-generation'],
   interfaces: ['desktop', 'mobile'],
   locality: 'local',

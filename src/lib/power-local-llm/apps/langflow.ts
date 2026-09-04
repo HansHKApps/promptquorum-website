@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'langflow',
   name: 'Langflow',
-  layer: 'rag',
   categories: ['workflow-node-builders', 'rag-frameworks'],
   interfaces: ['web'],
   locality: 'hybrid',

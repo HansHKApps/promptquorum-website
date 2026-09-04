@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'coqui-tts',
   name: 'Coqui TTS',
-  layer: 'tts',
   categories: ['text-to-speech'],
   interfaces: ['library'],
   locality: 'local',

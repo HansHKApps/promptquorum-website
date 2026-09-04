@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'superagi',
   name: 'SuperAGI',
-  layer: 'agent',
   categories: ['agent-frameworks'],
   interfaces: ['web', 'library'],
   locality: 'hybrid',

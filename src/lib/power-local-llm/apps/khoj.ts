@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'khoj',
   name: 'Khoj',
-  layer: 'rag',
   categories: ['document-pdf-chat', 'personal-assistants'],
   interfaces: ['web', 'desktop'],
   locality: 'hybrid',

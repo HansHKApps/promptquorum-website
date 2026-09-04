@@ -141,7 +141,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
           articleKey: `tool-${tool.slug}`,
           title: tool.name,
           description: tool.tagline[lang] ?? tool.tagline.en ?? '',
-          section: tool.layer,
+          section: tool.categories[0],
           hub: 'power-local-llm',
           level: '',
           tags: tool.uses ?? [],

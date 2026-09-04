@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'sillytavern',
   name: 'SillyTavern',
-  layer: 'webui',
   categories: ['roleplay-companions', 'general-chat-clients'],
   interfaces: ['web'],
   locality: 'hybrid',

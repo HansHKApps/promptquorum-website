@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'joplin-ai',
   name: 'Joplin AI',
-  layer: 'tools',
   categories: ['notes-integrations'],
   interfaces: ['plugin'],
   locality: 'hybrid',

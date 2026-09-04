@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'localai',
   name: 'LocalAI',
-  layer: 'runtime',
   categories: ['api-servers', 'inference-engines'],
   interfaces: ['cli'],
   locality: 'local',

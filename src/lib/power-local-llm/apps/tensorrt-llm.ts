@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tensorrt-llm',
   name: 'TensorRT-LLM',
-  layer: 'runtime',
   categories: ['inference-engines'],
   interfaces: ['cli', 'library'],
   locality: 'local',

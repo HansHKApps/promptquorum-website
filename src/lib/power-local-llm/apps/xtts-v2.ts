@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'xtts-v2',
   name: 'XTTS v2',
-  layer: 'tts',
   categories: ['voice-cloning', 'text-to-speech'],
   interfaces: ['library'],
   locality: 'local',

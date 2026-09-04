@@ -15,6 +15,7 @@ import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
+import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 
@@ -121,7 +122,7 @@ export function ToolDrawer({
   const open = app != null
 
   const alternatives = app
-    ? allApps.filter((a) => a.slug !== app.slug && a.layer === app.layer).slice(0, 6)
+    ? allApps.filter((a) => a.slug !== app.slug && a.categories.some((c) => app.categories.includes(c))).slice(0, 6)
     : []
 
   return (
@@ -175,13 +176,14 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
+                  <DetailRow label="Category" value={app.categories.map((c) => CATEGORY_SUB_LABEL[c]).join(', ')} />
+                  <DetailRow label="Interface" value={app.interfaces.map((i) => INTERFACE_LABEL[i]).join(', ')} />
                   <DetailRow label="Runs" value={labelFor('locality', app.locality)} />
                   <DetailRow label="Engine" value={labelFor('engine', app.engine)} />
                   <DetailRow label="Price" value={labelFor('price', app.price)} />
                   <DetailRow label="License" value={app.license === 'TODO' ? null : app.license} />
                   <DetailRow label="Platforms" value={labelList('platforms', app.platforms)} />
                   <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
-                  <DetailRow label="Layer" value={labelFor('layer', app.layer)} />
                   <DetailRow
                     label="Hardware"
                     value={computeHardwareDisplay(app.hardware, machine, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact /> : null}

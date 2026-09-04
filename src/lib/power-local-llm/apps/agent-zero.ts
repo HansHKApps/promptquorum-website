@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'agent-zero',
   name: 'Agent Zero',
-  layer: 'agent',
   categories: ['autonomous-agents'],
   interfaces: ['cli', 'web'],
   locality: 'hybrid',

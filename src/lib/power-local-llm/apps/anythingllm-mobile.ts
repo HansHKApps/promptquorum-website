@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'anythingllm-mobile',
   name: 'AnythingLLM Mobile',
-  layer: 'mobile',
   categories: ['document-pdf-chat', 'general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'local',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tgpt',
   name: 'tgpt',
-  layer: 'cli',
   categories: ['general-chat-clients'],
   interfaces: ['cli'],
   locality: 'hybrid',

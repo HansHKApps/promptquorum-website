@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'smart-connections',
   name: 'Smart Connections',
-  layer: 'tools',
   categories: ['notes-integrations', 'local-search'],
   interfaces: ['plugin'],
   locality: 'local',

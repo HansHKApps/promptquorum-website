@@ -6,6 +6,7 @@
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { StarIcon } from './icons'
 import type { MachineType, SortDir, SortKey } from './types'
@@ -55,6 +56,7 @@ export function ToolTable({
                 </th>
               )
             })}
+            <th className="text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap">Category</th>
           </tr>
         </thead>
         <tbody>
@@ -84,6 +86,7 @@ export function ToolTable({
                 {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
               </td>
               <td className="p-2 sm:p-3 text-text-secondary capitalize">{app.status}</td>
+              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]]}</td>
             </tr>
           ))}
         </tbody>

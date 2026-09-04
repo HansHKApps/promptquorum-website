@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'msty',
   name: 'Msty',
-  layer: 'desktop',
   categories: ['general-chat-clients', 'runtimes-managers'],
   interfaces: ['desktop'],
   locality: 'hybrid',

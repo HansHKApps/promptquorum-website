@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'camel',
   name: 'CAMEL',
-  layer: 'agent',
   categories: ['agent-frameworks', 'sdks-libraries'],
   interfaces: ['library'],
   locality: 'hybrid',

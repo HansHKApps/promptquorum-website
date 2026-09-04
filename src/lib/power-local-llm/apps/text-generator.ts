@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'text-generator',
   name: 'Text Generator',
-  layer: 'tools',
   categories: ['notes-integrations'],
   interfaces: ['plugin'],
   locality: 'hybrid',

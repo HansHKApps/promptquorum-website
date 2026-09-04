@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'arbiter',
   name: 'Arbiter',
-  layer: 'mobile',
   categories: ['general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'local',

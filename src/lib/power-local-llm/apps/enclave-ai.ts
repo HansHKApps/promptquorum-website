@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'enclave-ai',
   name: 'Enclave AI',
-  layer: 'mobile',
   categories: ['general-chat-clients'],
   interfaces: ['mobile'],
   locality: 'local',

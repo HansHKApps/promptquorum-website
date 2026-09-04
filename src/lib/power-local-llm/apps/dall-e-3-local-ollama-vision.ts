@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dall-e-3-local-ollama-vision',
   name: 'DALL-E 3 Local (via Ollama Vision)',
-  layer: 'image',
   categories: ['image-generation'],
   interfaces: ['cli'],
   locality: 'local',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'koboldcpp',
   name: 'KoboldCpp',
-  layer: 'runtime',
   categories: ['inference-engines', 'general-chat-clients'],
   interfaces: ['cli', 'web'],
   locality: 'local',

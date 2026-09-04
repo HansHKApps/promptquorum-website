@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'ollama',
   name: 'Ollama',
-  layer: 'runtime',
   categories: ['inference-engines', 'runtimes-managers'],
   interfaces: ['cli', 'desktop'],
   locality: 'local',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'windsurf',
   name: 'Windsurf',
-  layer: 'ide',
   categories: ['code-assistants-ide-plugins'],
   interfaces: ['desktop'],
   locality: 'hybrid',

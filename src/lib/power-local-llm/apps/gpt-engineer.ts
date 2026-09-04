@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'gpt-engineer',
   name: 'GPT Engineer',
-  layer: 'agent',
   categories: ['autonomous-agents', 'code-assistants-ide-plugins'],
   interfaces: ['cli'],
   locality: 'hybrid',

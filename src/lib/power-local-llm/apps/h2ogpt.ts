@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'h2ogpt',
   name: 'h2oGPT',
-  layer: 'desktop',
   categories: ['document-pdf-chat', 'api-servers'],
   interfaces: ['desktop', 'web'],
   locality: 'hybrid',

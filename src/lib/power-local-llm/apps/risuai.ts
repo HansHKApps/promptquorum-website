@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'risuai',
   name: 'RisuAI',
-  layer: 'tools',
   categories: ['roleplay-companions'],
   interfaces: ['web', 'mobile'],
   locality: 'hybrid',

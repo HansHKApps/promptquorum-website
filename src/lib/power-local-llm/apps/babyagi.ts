@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'babyagi',
   name: 'BabyAGI',
-  layer: 'tools',
   categories: ['autonomous-agents'],
   interfaces: ['library'],
   locality: 'hybrid',

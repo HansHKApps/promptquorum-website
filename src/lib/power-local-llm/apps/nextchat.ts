@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'nextchat',
   name: 'NextChat',
-  layer: 'webui',
   categories: ['general-chat-clients'],
   interfaces: ['web'],
   locality: 'hybrid',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'stableswarmui',
   name: 'StableSwarmUI',
-  layer: 'image',
   categories: ['image-generation'],
   interfaces: ['web'],
   locality: 'local',

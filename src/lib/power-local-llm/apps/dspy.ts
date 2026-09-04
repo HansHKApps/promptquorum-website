@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'dspy',
   name: 'DsPy',
-  layer: 'agent',
   categories: ['prompt-tooling-evals', 'sdks-libraries'],
   interfaces: ['library'],
   locality: 'hybrid',

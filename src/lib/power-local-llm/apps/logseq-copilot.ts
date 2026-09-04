@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'logseq-copilot',
   name: 'logseq-copilot',
-  layer: 'tools',
   categories: ['notes-integrations'],
   interfaces: ['plugin'],
   locality: 'hybrid',

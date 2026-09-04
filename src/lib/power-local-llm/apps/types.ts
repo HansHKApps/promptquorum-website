@@ -22,21 +22,6 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { CategorySubKey, InterfaceKey } from './categories'
 
-export type LayerKey =
-  | 'runtime'
-  | 'desktop'
-  | 'webui'
-  | 'ide'
-  | 'cli'
-  | 'rag'
-  | 'agent'
-  | 'stt'
-  | 'tts'
-  | 'vision'
-  | 'mobile'
-  | 'tools'
-  | 'image'
-
 export type OSKey = 'mac' | 'win' | 'linux' | 'ios' | 'android' | 'web'
 
 export type UseCaseKey =
@@ -86,12 +71,8 @@ export interface ToolRecordChangelogEntry {
 export interface ToolRecord {
   slug: string
   name: string
-  layer: LayerKey // TODO(taxonomy migration): drop once every consumer reads `categories`/`interfaces` instead
-  // TODO(taxonomy migration): optional only during the migration window while all 130 records are being
-  // classified in parallel — tighten to required (`categories: CategorySubKey[]`) once every file has it,
-  // per this file's own stated pattern for staged data migrations (see header comment).
-  categories?: CategorySubKey[] // first entry is primary; multi-assign — see ./categories.ts
-  interfaces?: InterfaceKey[] | null // null = not yet classified
+  categories: CategorySubKey[] // first entry is primary; multi-assign — see ./categories.ts
+  interfaces: InterfaceKey[] // how a user actually installs/runs the tool
   locality: LocalityKey | 'TODO'
   platforms: OSKey[] | null // null = not yet researched
   worksWith: string[] | null // null = not yet researched

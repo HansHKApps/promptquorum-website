@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'msty-go',
   name: 'Msty Go',
-  layer: 'agent',
   categories: ['autonomous-agents'],
   interfaces: ['desktop'],
   locality: 'hybrid',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'idefics',
   name: 'Idefics',
-  layer: 'vision',
   categories: ['vision-ocr'],
   interfaces: ['library'],
   locality: 'local',

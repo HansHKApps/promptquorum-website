@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'sourcegraph-cody',
   name: 'Sourcegraph Cody',
-  layer: 'ide',
   categories: ['code-assistants-ide-plugins'],
   interfaces: ['plugin'],
   locality: 'hybrid',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'open-interpreter',
   name: 'Open Interpreter',
-  layer: 'desktop',
   categories: ['agent-frameworks', 'autonomous-agents'],
   interfaces: ['cli', 'desktop'],
   locality: 'hybrid',

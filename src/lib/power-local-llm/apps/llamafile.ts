@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'llamafile',
   name: 'Llamafile',
-  layer: 'runtime',
   categories: ['inference-engines'],
   interfaces: ['cli'],
   locality: 'local',

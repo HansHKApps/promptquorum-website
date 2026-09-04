@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'mlc-llm',
   name: 'MLC LLM',
-  layer: 'runtime',
   categories: ['inference-engines'],
   interfaces: ['library', 'mobile'],
   locality: 'local',

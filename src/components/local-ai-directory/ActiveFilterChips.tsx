@@ -8,7 +8,7 @@ import { CloseIcon } from './icons'
 import { filterOptionLabel } from './FilterBar'
 import type { FilterState } from './types'
 
-const GROUP_ORDER: (keyof FilterState)[] = ['locality', 'engine', 'worksWith', 'platforms', 'layer', 'price']
+const GROUP_ORDER: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
 const WANT_LABELS: Record<string, string> = {
   chat: 'Chat', code: 'Code', agent: 'Run agents', docs: 'Chat with docs', image: 'Generate images',
   audio: 'Voice / audio', phone: 'Use on my phone', build: 'Build my own app', serve: 'Serve a model',

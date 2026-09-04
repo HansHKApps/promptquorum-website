@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'cherry-studio',
   name: 'Cherry Studio',
-  layer: 'desktop',
   categories: ['general-chat-clients'],
   interfaces: ['desktop'],
   locality: 'hybrid',

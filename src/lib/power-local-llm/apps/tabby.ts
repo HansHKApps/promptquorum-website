@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'tabby',
   name: 'Tabby',
-  layer: 'ide',
   categories: ['code-assistants-ide-plugins', 'api-servers'],
   interfaces: ['cli', 'plugin'],
   locality: 'local',

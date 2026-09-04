@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'flowise',
   name: 'Flowise',
-  layer: 'rag',
   categories: ['rag-frameworks', 'workflow-node-builders'],
   interfaces: ['web'],
   locality: 'hybrid',

@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'controlnet',
   name: 'ControlNet',
-  layer: 'image',
   categories: ['image-generation'],
   interfaces: ['library'],
   locality: 'local',

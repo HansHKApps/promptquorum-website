@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'sglang',
   name: 'SGLang',
-  layer: 'runtime',
   categories: ['inference-engines', 'api-servers'],
   interfaces: ['cli', 'library'],
   locality: 'local',

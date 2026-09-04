@@ -8,7 +8,6 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'cline',
   name: 'Cline',
-  layer: 'ide',
   categories: ['code-assistants-ide-plugins', 'agent-frameworks'],
   interfaces: ['plugin'],
   locality: 'hybrid',
