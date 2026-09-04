@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'nextchat',
   name: 'NextChat',
   layer: 'webui',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['web'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 88700,
   addedDate: null, // TODO: not derivable from source article

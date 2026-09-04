@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'enclave-ai',
   name: 'Enclave AI',
   layer: 'mobile',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['ios'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'Free (closed)',
-  price: 'TODO',
+  price: 'paid',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

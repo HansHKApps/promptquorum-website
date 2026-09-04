@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'ragflow',
   name: 'RAGFlow',
   layer: 'rag',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'Apache 2.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

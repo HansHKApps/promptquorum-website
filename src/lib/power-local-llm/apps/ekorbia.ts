@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'ekorbia',
   name: 'Ekorbia',
   layer: 'desktop',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'MIT',
-  price: 'TODO',
+  price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

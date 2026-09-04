@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'autogpt',
   name: 'AutoGPT (classic, local)',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'hybrid',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'MIT (classic)',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 187100,
   addedDate: null, // TODO: not derivable from source article

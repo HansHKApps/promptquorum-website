@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'real-esrgan',
   name: 'Real-ESRGAN',
   layer: 'image',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['win', 'linux', 'mac'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'Apache 2.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 36700,
   addedDate: null, // TODO: not derivable from source article

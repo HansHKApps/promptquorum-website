@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'smart-connections',
   name: 'Smart Connections',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'GPL 3.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 5400,
   addedDate: null, // TODO: not derivable from source article

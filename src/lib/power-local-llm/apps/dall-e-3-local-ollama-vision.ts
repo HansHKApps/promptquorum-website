@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'dall-e-3-local-ollama-vision',
   name: 'DALL-E 3 Local (via Ollama Vision)',
   layer: 'image',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'external',
   license: 'TODO',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article

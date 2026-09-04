@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'second-me',
   name: 'Second Me',
   layer: 'tools',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac', 'win', 'linux'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'both',
   license: 'Apache 2.0',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 16000,
   addedDate: null, // TODO: not derivable from source article

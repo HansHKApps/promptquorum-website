@@ -9,12 +9,12 @@ export const app: ToolRecord = {
   slug: 'jarvis',
   name: 'Jarvis',
   layer: 'desktop',
-  locality: 'TODO',
-  platforms: null,
+  locality: 'local',
+  platforms: ['mac'],
   worksWith: null,
-  engine: 'TODO',
+  engine: 'builtin',
   license: 'Free (open source)',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: null, // TODO: not derivable from source article
