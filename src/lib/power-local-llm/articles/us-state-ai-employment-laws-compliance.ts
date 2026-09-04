@@ -81,6 +81,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'US AI employment law is a state-by-state and city-by-city patchwork — at least five jurisdictions have AI-specific hiring/employment obligations as of September 2026, each with its own scope, size threshold, and effective date.' },
           { type: 'plain-terms', text: 'There is no single "AI hiring law" for the whole US. Whether you have any obligation depends on which states you actually employ people in and what the AI tool actually does — screening resumes and ranking candidates is regulated much more heavily than a tool that just drafts a job posting.' },
         ],
+        callouts: [
+          { type: 'warning', text: 'Not legal advice: this article is general orientation on state AI employment law, not a substitute for advice from a qualified employment attorney licensed in your state — confirm applicability to your specific hiring decisions before relying on it. The state-law information here reflects the law as of September 3, 2026; state AI employment law changes fast enough that some of the specifics below could already be out of date by the time you read this — verify current requirements before making a compliance decision.' },
+        ],
       },
       checker: {
         id: 'applicability-checker',
@@ -258,6 +261,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'US-KI-Arbeitsrecht ist ein Flickenteppich aus bundesstaatlichen und städtischen Regelungen — Stand September 2026 haben mindestens fünf Rechtsräume KI-spezifische Einstellungs-/Beschäftigungspflichten, jeweils mit eigenem Geltungsbereich, Schwellenwert und Stichtag.' },
           { type: 'plain-terms', text: 'Es gibt kein einziges „KI-Recruiting-Gesetz" für die gesamten USA. Ob eine Pflicht besteht, hängt davon ab, in welchen Bundesstaaten Sie tatsächlich Mitarbeitende beschäftigen und was das KI-Tool konkret tut — Lebenslauf-Screening und Bewerber-Ranking sind deutlich strenger reguliert als ein Tool, das nur eine Stellenanzeige entwirft.' },
+        ],
+        callouts: [
+          { type: 'warning', text: 'Kein Rechtsrat: Dieser Artikel bietet eine allgemeine Orientierung zum US-Bundesstaaten-KI-Arbeitsrecht und ersetzt keine Beratung durch eine im jeweiligen Bundesstaat zugelassene Fachanwaltschaft für Arbeitsrecht — prüfen Sie die Anwendbarkeit auf Ihre konkreten Einstellungsentscheidungen, bevor Sie sich darauf verlassen. Die hier genannten Informationen zum Bundesstaatenrecht spiegeln den Stand vom 3. September 2026 wider; US-KI-Arbeitsrecht ändert sich so schnell, dass einzelne Angaben unten möglicherweise bereits veraltet sind, wenn Sie dies lesen — bestätigen Sie die aktuell geltenden Anforderungen, bevor Sie eine Compliance-Entscheidung treffen.' },
         ],
       },
       checker: {
@@ -441,6 +447,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'Le droit américain de l\'IA en emploi est un patchwork État par État et ville par ville — au moins cinq juridictions imposent des obligations spécifiques à l\'IA en recrutement/emploi en septembre 2026, chacune avec sa propre portée, son seuil de taille et sa date d\'entrée en vigueur.' },
           { type: 'plain-terms', text: 'Il n\'existe pas de « loi IA recrutement » unique pour tous les États-Unis. Le fait d\'avoir une obligation dépend des États où vous employez réellement du personnel et de ce que l\'outil d\'IA fait concrètement — présélectionner des CV et classer des candidats est bien plus réglementé qu\'un outil qui rédige simplement une offre d\'emploi.' },
         ],
+        callouts: [
+          { type: 'warning', text: 'Ceci n\'est pas un conseil juridique : cet article offre une orientation générale sur le droit d\'État américain de l\'IA en emploi et ne remplace pas l\'avis d\'un avocat en droit du travail habilité dans l\'État concerné — vérifiez l\'applicabilité à vos décisions de recrutement précises avant de vous y fier. Les informations sur le droit d\'État présentées ici reflètent l\'état du droit au 3 septembre 2026 ; le droit américain de l\'IA en emploi évolue assez vite pour que certains détails ci-dessous soient déjà obsolètes au moment où vous lisez ceci — vérifiez les exigences actuelles avant de prendre une décision de conformité.' },
+        ],
       },
       checker: {
         id: 'applicability-checker',
@@ -620,6 +629,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'La ley de IA en el empleo en EE. UU. es un mosaico estado por estado y ciudad por ciudad — al menos cinco jurisdicciones tienen obligaciones específicas de IA en contratación/empleo a septiembre de 2026, cada una con su propio alcance, umbral de tamaño y fecha de vigencia.' },
           { type: 'plain-terms', text: 'No existe una única "ley de IA en contratación" para todo EE. UU. Que tengas alguna obligación depende de en qué estados realmente empleas personal y qué hace realmente la herramienta de IA — seleccionar currículums y clasificar candidatos está mucho más regulado que una herramienta que solo redacta una oferta de empleo.' },
+        ],
+        callouts: [
+          { type: 'warning', text: 'Esto no es asesoría legal: este artículo ofrece una orientación general sobre la ley estatal de IA en el empleo en EE. UU. y no sustituye el asesoramiento de un abogado laboral habilitado en tu estado — confirma la aplicabilidad a tus decisiones de contratación concretas antes de basarte en él. La información sobre leyes estatales aquí refleja el estado del derecho al 3 de septiembre de 2026; la ley estatal de IA en el empleo de EE. UU. cambia lo bastante rápido como para que algunos detalles de abajo ya estén desactualizados cuando lo leas — verifica los requisitos vigentes antes de tomar una decisión de cumplimiento.' },
         ],
       },
       checker: {
@@ -801,6 +813,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'A lei de IA no emprego dos EUA é um mosaico estado por estado e cidade por cidade — pelo menos cinco jurisdições têm obrigações específicas de IA em contratação/emprego em setembro de 2026, cada uma com seu próprio escopo, limiar de tamanho e data de vigência.' },
           { type: 'plain-terms', text: 'Não existe uma única "lei de IA na contratação" para todos os EUA. Ter alguma obrigação depende de em quais estados você realmente emprega pessoas e do que a ferramenta de IA realmente faz — triar currículos e ranquear candidatos é muito mais regulado do que uma ferramenta que apenas redige uma vaga de emprego.' },
         ],
+        callouts: [
+          { type: 'warning', text: 'Isto não é aconselhamento jurídico: este artigo oferece uma orientação geral sobre a lei estadual de IA no emprego nos EUA e não substitui o aconselhamento de um advogado trabalhista licenciado no seu estado — confirme a aplicabilidade às suas decisões concretas de contratação antes de se basear nele. As informações sobre leis estaduais aqui refletem o estado do direito em 3 de setembro de 2026; a lei estadual de IA no emprego dos EUA muda rápido o suficiente para que alguns detalhes abaixo já possam estar desatualizados quando você ler isto — verifique os requisitos vigentes antes de tomar uma decisão de conformidade.' },
+        ],
       },
       checker: {
         id: 'applicability-checker',
@@ -981,6 +996,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: '美国AI雇佣法是一幅按州、按市划分的拼图——截至2026年9月，至少五个司法辖区拥有AI雇佣专项义务，各自适用范围、规模门槛和生效日期不同。' },
           { type: 'plain-terms', text: '美国并不存在一部适用于全国的统一"AI招聘法"。您是否负有义务，取决于您实际在哪些州雇用员工，以及AI工具实际做什么——筛选简历并对候选人排名，比一个只用于起草招聘广告的工具受到严格得多的监管。' },
         ],
+        callouts: [
+          { type: 'warning', text: '本文不构成法律意见：本文对美国州级AI雇佣法提供一般性指引，不能替代在您所在州获得执业资格的劳动法律师提供的建议——在依赖本文前，请先确认其是否适用于您的具体招聘决定。文中的州法信息反映截至2026年9月3日的法律状态；美国州级AI雇佣法变化很快，您阅读本文时，下文部分细节可能已经过时——在做出合规决定前，请核实当前适用的要求。' },
+        ],
       },
       checker: {
         id: 'applicability-checker',
@@ -1160,6 +1178,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: '米国のAI雇用法は州ごと、市ごとのパッチワークであり、2026年9月時点で少なくとも5つの法域がAI固有の採用・雇用義務を課しており、それぞれ適用範囲・規模閾値・施行日が異なる。' },
           { type: 'plain-terms', text: '米国全体に適用される単一の「AI採用法」は存在しない。義務があるかどうかは、実際にどの州で従業員を雇用しているか、そしてAIツールが実際に何をするかによって決まる——履歴書をスクリーニングして候補者をランク付けすることは、求人票を作成するだけのツールよりもはるかに厳しく規制されている。' },
+        ],
+        callouts: [
+          { type: 'warning', text: '本記事は法的助言ではありません：本記事は米国の州別AI雇用法に関する一般的な情報提供であり、該当する州で資格を持つ労働法弁護士の助言に代わるものではありません——依拠する前に、自社の具体的な採用上の意思決定への適用可能性を確認してください。本記事に記載する州法の情報は2026年9月3日時点の法状況を反映したものです。米国の州別AI雇用法は変化が速く、本記事をお読みになる時点で一部の詳細がすでに古くなっている可能性があります——コンプライアンス上の判断を下す前に、最新の要件を確認してください。' },
         ],
       },
       checker: {
@@ -1342,6 +1363,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: '미국의 AI 고용법은 주별, 시별 패치워크이며, 2026년 9월 기준으로 최소 5개 관할권이 AI 관련 채용/고용 의무를 부과하고 있고, 각각 고유한 범위, 규모 기준, 시행일을 가진다.' },
           { type: 'plain-terms', text: '미국 전체에 적용되는 단일한 "AI 채용법"은 존재하지 않는다. 어떤 의무가 있는지는 실제로 직원을 고용하는 주와 AI 도구가 실제로 무엇을 하는지에 따라 달라진다 — 이력서를 심사하고 후보자 순위를 매기는 것은 단순히 채용 공고를 작성하는 도구보다 훨씬 더 엄격하게 규제된다.' },
         ],
+        callouts: [
+          { type: 'warning', text: '이 글은 법률 자문이 아닙니다: 이 글은 미국 주별 AI 고용법에 대한 일반적인 안내를 제공하며, 해당 주에서 자격을 갖춘 노동법 변호사의 자문을 대체하지 않습니다 — 이 글에 의존하기 전에 자사의 구체적인 채용 결정에 대한 적용 가능성을 확인하십시오. 여기에 담긴 주법 정보는 2026년 9월 3일 기준 법 현황을 반영합니다. 미국 주별 AI 고용법은 빠르게 변화하므로, 이 글을 읽는 시점에는 아래 일부 세부 사항이 이미 낡은 정보가 되었을 수 있습니다 — 컴플라이언스 결정을 내리기 전에 현재 적용되는 요건을 확인하십시오.' },
+        ],
       },
       checker: {
         id: 'applicability-checker',
@@ -1522,6 +1546,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'قانون الذكاء الاصطناعي للتوظيف في الولايات المتحدة فسيفساء ولاية بولاية ومدينة بمدينة — تفرض خمس ولايات قضائية على الأقل التزامات خاصة بالذكاء الاصطناعي في التوظيف/العمل اعتبارًا من سبتمبر 2026، لكل منها نطاقها وعتبة حجمها وتاريخ نفاذها الخاص.' },
           { type: 'plain-terms', text: 'لا يوجد "قانون واحد لتوظيف الذكاء الاصطناعي" لكل الولايات المتحدة. يعتمد وجود أي التزام على الولايات التي توظّف فيها فعليًا وما تفعله أداة الذكاء الاصطناعي فعليًا — فرز السير الذاتية وترتيب المرشحين مُنظَّم بشكل أشد بكثير من أداة تكتفي بصياغة إعلان وظيفي.' },
+        ],
+        callouts: [
+          { type: 'warning', text: 'هذا ليس استشارة قانونية: يقدّم هذا المقال توجيهًا عامًا حول قانون الذكاء الاصطناعي للتوظيف على مستوى الولايات الأمريكية، ولا يحل محل استشارة محامٍ متخصص في قانون العمل ومرخّص في ولايتك — تحقّق من انطباقه على قرارات التوظيف المحددة لديك قبل الاعتماد عليه. تعكس معلومات القانون الولائي هنا وضع القانون اعتبارًا من 3 سبتمبر 2026؛ يتغيّر قانون الذكاء الاصطناعي للتوظيف على مستوى الولايات الأمريكية بسرعة كافية بحيث قد تكون بعض التفاصيل أدناه قديمة بالفعل عند قراءتك لهذا المقال — تحقّق من المتطلبات السارية حاليًا قبل اتخاذ قرار امتثال.' },
         ],
       },
       checker: {
