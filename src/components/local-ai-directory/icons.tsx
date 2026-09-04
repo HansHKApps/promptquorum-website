@@ -63,3 +63,35 @@ export function TableIcon({ className }: { className?: string }) {
     </svg>
   )
 }
+
+export function CpuIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="6" y="6" width="12" height="12" rx="1.5" />
+      <rect x="9" y="9" width="6" height="6" />
+      <line x1="6" y1="2" x2="6" y2="5" /><line x1="10" y1="2" x2="10" y2="5" /><line x1="14" y1="2" x2="14" y2="5" /><line x1="18" y1="2" x2="18" y2="5" />
+      <line x1="6" y1="19" x2="6" y2="22" /><line x1="10" y1="19" x2="10" y2="22" /><line x1="14" y1="19" x2="14" y2="22" /><line x1="18" y1="19" x2="18" y2="22" />
+      <line x1="2" y1="6" x2="5" y2="6" /><line x1="2" y1="10" x2="5" y2="10" /><line x1="2" y1="14" x2="5" y2="14" /><line x1="2" y1="18" x2="5" y2="18" />
+      <line x1="19" y1="6" x2="22" y2="6" /><line x1="19" y1="10" x2="22" y2="10" /><line x1="19" y1="14" x2="22" y2="14" /><line x1="19" y1="18" x2="22" y2="18" />
+    </svg>
+  )
+}
+
+export function PlugIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M9 2v5" /><path d="M15 2v5" />
+      <path d="M6 7h12v4a6 6 0 0 1-6 6 6 6 0 0 1-6-6V7Z" />
+      <path d="M12 17v5" />
+    </svg>
+  )
+}
+
+export function TagIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M12.59 2.59 20 10v.01L10.01 20 2.59 12.59A2 2 0 0 1 2 11.17V4a2 2 0 0 1 2-2h7.17a2 2 0 0 1 1.42.59Z" />
+      <circle cx="7.5" cy="7.5" r="1.25" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}

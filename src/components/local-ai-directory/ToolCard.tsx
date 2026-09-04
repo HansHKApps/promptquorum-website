@@ -1,31 +1,18 @@
 // Card-view tile for one tool — the single fixed card format from
-// page-redesign-v2.md §3: name + locality badge, layer, tagline, engine
-// line, works-with tags, hardware meters, platforms, status badge, stars,
+// page-redesign-v2.md §3: name + locality badge, layer, tagline, engine +
+// price pills, works-with tags, hardware meters, platform chips, stars,
 // article count, Get it ↗ / Details. Every card has the same structure so
 // the grid never looks ragged (audit item #4/#5: two competing card
 // formats, most fields missing).
 
-import type { ReactNode } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
-import { StarIcon } from './icons'
+import { StarIcon, CpuIcon, PlugIcon, TagIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
-
-const STATUS_LABEL: Record<ToolRecord['status'], string> = {
-  listed: 'Listed',
-  verified: 'Verified',
-  tested: 'PromptQuorum-tested',
-}
-
-const STATUS_BADGE: Record<ToolRecord['status'], string> = {
-  listed: 'bg-slate-50 text-slate-600 border-slate-200',
-  verified: 'bg-blue-50 text-blue-700 border-blue-200',
-  tested: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-}
 
 const LOCALITY_LABEL: Record<'local' | 'hybrid' | 'cloud', string> = {
   local: '100% local',
@@ -39,11 +26,32 @@ const LOCALITY_BADGE: Record<'local' | 'hybrid' | 'cloud', string> = {
   cloud: 'bg-slate-50 text-slate-600 border-slate-200',
 }
 
+// Short badge text — differs from the longer FilterBar labels, which read
+// fine in a checkbox list but wrap awkwardly inside a pill.
 const ENGINE_LABEL: Record<'builtin' | 'external' | 'both' | 'library', string> = {
-  builtin: 'Own engine',
-  external: 'Connects to Ollama / LM Studio / server',
-  both: 'Bundled engine + external',
+  builtin: 'Runs its own engine',
+  external: 'Needs Ollama/LM Studio',
+  both: 'Own engine + external',
   library: 'Library / SDK',
+}
+
+const ENGINE_BADGE: Record<'builtin' | 'external' | 'both' | 'library', string> = {
+  builtin: 'bg-violet-50 text-violet-700 border-violet-200',
+  external: 'bg-sky-50 text-sky-700 border-sky-200',
+  both: 'bg-violet-50 text-violet-700 border-violet-200',
+  library: 'bg-slate-50 text-slate-600 border-slate-200',
+}
+
+const PRICE_LABEL: Record<'free' | 'freemium' | 'paid', string> = {
+  free: 'Free',
+  freemium: 'Free + paid tier',
+  paid: 'Paid',
+}
+
+const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
+  free: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+  freemium: 'bg-amber-50 text-amber-700 border-amber-200',
+  paid: 'bg-rose-50 text-rose-700 border-rose-200',
 }
 
 const PLATFORM_LABEL: Record<string, string> = {
@@ -69,6 +77,7 @@ export function ToolCard({
   const tagline = app.tagline[lang] ?? app.tagline.en ?? ''
   const locality = app.locality !== 'TODO' ? app.locality : null
   const engine = app.engine !== 'TODO' ? app.engine : null
+  const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
 
   return (
@@ -98,8 +107,21 @@ export function ToolCard({
 
       <p className="text-sm text-text-secondary leading-relaxed line-clamp-2 mb-3">{tagline}</p>
 
-      {engine && (
-        <p className="text-xs text-text-secondary mb-2.5">{ENGINE_LABEL[engine]}</p>
+      {(engine || price) && (
+        <div className="flex flex-wrap gap-1.5 mb-2.5">
+          {engine && (
+            <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${ENGINE_BADGE[engine]}`}>
+              {engine === 'external' ? <PlugIcon className="h-3 w-3" /> : <CpuIcon className="h-3 w-3" />}
+              {ENGINE_LABEL[engine]}
+            </span>
+          )}
+          {price && (
+            <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${PRICE_BADGE[price]}`}>
+              <TagIcon className="h-3 w-3" />
+              {PRICE_LABEL[price]}
+            </span>
+          )}
+        </div>
       )}
 
       <div className="flex flex-wrap gap-1.5 mb-2.5">
@@ -119,15 +141,14 @@ export function ToolCard({
       </div>
 
       <div className="mt-auto space-y-2.5">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 text-[11px] text-text-secondary">
-            {app.platforms && app.platforms.length > 0
-              ? app.platforms.map((p) => <span key={p}>{PLATFORM_LABEL[p] ?? p}</span>).reduce((acc, el, i) => (i === 0 ? [el] : [...acc, <span key={`sep-${i}`}>·</span>, el]), [] as ReactNode[])
-              : <span className="text-text-secondary/50">platforms not yet recorded</span>}
-          </div>
-          <span className={`inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border ${STATUS_BADGE[app.status]}`}>
-            {STATUS_LABEL[app.status]}
-          </span>
+        <div className="flex flex-wrap gap-1">
+          {app.platforms && app.platforms.length > 0
+            ? app.platforms.map((p) => (
+                <span key={p} className="rounded-md bg-gray-50 border border-gray-200 px-1.5 py-0.5 text-[11px] font-medium text-text-secondary">
+                  {PLATFORM_LABEL[p] ?? p}
+                </span>
+              ))
+            : <span className="text-[11px] text-text-secondary/50">platforms not yet recorded</span>}
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-text-secondary">
