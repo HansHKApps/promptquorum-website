@@ -16,11 +16,11 @@ export const app: ToolRecord = {
   license: 'Apache 2.0',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: null,
+  stars: 388845,
   addedDate: null, // TODO: not derivable from source article
   status: 'listed',
   uses: ['build', 'agent'],
-  url: 'github.com/OpenClaw-AILabs/OpenClaw',
+  url: 'github.com/openclaw/openclaw', // corrected 2026-09-04: github.com/OpenClaw-AILabs/OpenClaw 404s, wrong org
   tagline: {
     en: 'Orchestration framework for agent workflows',
     de: 'Orchestrierungs-Framework für Agenten-Workflows',
