@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'desktop',
   locality: 'local',
   platforms: ['win'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'paid',

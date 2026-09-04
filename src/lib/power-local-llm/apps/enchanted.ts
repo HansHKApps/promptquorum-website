@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'desktop',
   locality: 'local',
   platforms: ['mac', 'ios'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',

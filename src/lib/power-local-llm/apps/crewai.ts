@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'agent',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'OpenAI API'],
   engine: 'library',
   license: 'MIT',
   price: 'free',

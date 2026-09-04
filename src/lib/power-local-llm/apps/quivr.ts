@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'rag',
   locality: 'hybrid',
   platforms: ['web'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',

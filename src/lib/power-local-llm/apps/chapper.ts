@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'mobile',
   locality: 'local',
   platforms: ['ios', 'android'],
-  worksWith: null,
+  worksWith: ['LM Studio', 'OpenAI API'],
   engine: 'external',
   license: 'Free',
   price: 'free',

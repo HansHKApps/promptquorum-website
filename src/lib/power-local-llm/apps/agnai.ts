@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'tools',
   locality: 'hybrid',
   platforms: ['web'],
-  worksWith: null,
+  worksWith: ['KoboldAI'],
   engine: 'external',
   license: 'MIT',
   price: 'free',

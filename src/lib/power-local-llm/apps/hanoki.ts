@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'desktop',
   locality: 'hybrid',
   platforms: ['mac'],
-  worksWith: null,
+  worksWith: ['Ollama', 'OpenAI API', 'Anthropic API', 'Google Gemini API', 'OpenRouter'],
   engine: 'both',
   license: 'MIT',
   price: 'freemium',

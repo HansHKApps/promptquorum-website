@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'mobile',
   locality: 'local',
   platforms: ['android'],
-  worksWith: null,
+  worksWith: ['LM Studio', 'Ollama', 'vLLM', 'OpenAI API'],
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',

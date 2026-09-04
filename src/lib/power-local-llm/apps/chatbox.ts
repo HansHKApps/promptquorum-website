@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'webui',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'external',
   license: 'GPL 3.0',
   price: 'free',

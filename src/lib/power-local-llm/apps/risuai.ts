@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'tools',
   locality: 'hybrid',
   platforms: ['web'],
-  worksWith: null,
+  worksWith: ['text-generation-webui', 'OpenAI API', 'OpenRouter'],
   engine: 'external',
   license: 'GPL 3.0',
   price: 'free',

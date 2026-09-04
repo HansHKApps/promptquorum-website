@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'tools',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'OpenAI API', 'Google Gemini API'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',

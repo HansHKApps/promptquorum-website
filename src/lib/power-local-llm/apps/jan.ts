@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'desktop',
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'vLLM', 'LocalAI', 'OpenAI API', 'Anthropic API'],
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'free',

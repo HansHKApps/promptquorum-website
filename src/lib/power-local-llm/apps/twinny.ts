@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'ide',
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'text-generation-webui'],
   engine: 'external',
   license: 'MIT',
   price: 'free',

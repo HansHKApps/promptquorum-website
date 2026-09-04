@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'tools',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio', 'llama.cpp', 'KoboldCpp', 'LocalAI'],
   engine: 'external',
   license: 'MIT',
   price: 'freemium',

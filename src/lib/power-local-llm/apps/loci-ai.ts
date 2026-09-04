@@ -10,7 +10,7 @@ export const app: ToolRecord = {
   layer: 'mobile',
   locality: 'local',
   platforms: ['ios', 'android', 'mac', 'win'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'both',
   license: 'Closed source',
   price: 'free',

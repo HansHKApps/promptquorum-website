@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'webui',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux', 'web'],
-  worksWith: null,
+  worksWith: ['KoboldCpp', 'Ollama', 'llama.cpp', 'text-generation-webui', 'LM Studio'],
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',

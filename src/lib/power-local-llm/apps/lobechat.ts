@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'webui',
   locality: 'hybrid',
   platforms: ['web'],
-  worksWith: null,
+  worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
   license: 'MIT',
   price: 'freemium',

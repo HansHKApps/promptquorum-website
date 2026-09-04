@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'agent',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama'],
   engine: 'library',
   license: 'CC-BY-4.0 / MIT',
   price: 'free',

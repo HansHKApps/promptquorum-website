@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'mobile',
   locality: 'local',
   platforms: ['ios'],
-  worksWith: null,
+  worksWith: ['LM Studio', 'Ollama'],
   engine: 'both',
   license: 'Closed source',
   price: 'paid',

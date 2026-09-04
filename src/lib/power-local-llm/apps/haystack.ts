@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   layer: 'rag',
   locality: 'hybrid',
   platforms: ['mac', 'win', 'linux'],
-  worksWith: null,
+  worksWith: ['Ollama', 'llama.cpp', 'OpenAI API'],
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
