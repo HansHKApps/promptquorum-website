@@ -174,6 +174,14 @@ function hasItemHeadings(sectionText) {
   return /itemHeadings:\s*true/.test(sectionText);
 }
 
+// Column labels that only ever exist as a "link to the thing named in
+// column 1" column — i.e. the redundant App+Link pattern from rule 7 of
+// CLAUDE.md's Comparison Tables section. Any table pairing one of these
+// with an identifier-like first column should fold the URL into the first
+// column as a markdown link instead of spending a whole column on it.
+const LINK_ONLY_COLUMN_LABELS = new Set(['Link', 'Lien', 'Enlace', 'リンク', '链接', 'الرابط', '링크']);
+const MAX_COLUMNS = 5;
+
 function validateFile(absPath, errors, { headerLimit, cellLimit }) {
   const file = path.relative(process.cwd(), absPath);
   const content = fs.readFileSync(absPath, 'utf-8');
@@ -197,6 +205,19 @@ function validateFile(absPath, errors, { headerLimit, cellLimit }) {
         errors.push({ file, line: startLine, kind: 'cell', text: cell, len, limit: cellLimit });
       }
     }
+
+    // Rule 7: a redundant identifier+Link column pair wastes a whole column
+    // and pushes everything after it further right, which can push the most
+    // important comparison column off-screen on a normal desktop viewport
+    // even when every individual cell is within budget (see
+    // hanoki-review-2026.ts, fixed 2026-09-04). Deliberately narrow: only
+    // flags the specific App+Link redundancy, not column count in general —
+    // plenty of legitimate data tables elsewhere (GPU pricing grids, battery
+    // spec sheets) genuinely need 6-9 columns and aren't this bug.
+    // Informational only, in both modes — never blocks a commit.
+    if (columns.some(c => LINK_ONLY_COLUMN_LABELS.has(c))) {
+      errors.push({ file, line: startLine, kind: 'link-column', text: columns.join(', '), len: columns.length, limit: MAX_COLUMNS });
+    }
   }
 }
 
@@ -216,6 +237,13 @@ function getStagedArticleFiles() {
   }
 }
 
+const SOFT_KINDS = new Set(['link-column', 'too-many-columns']);
+
+function formatFinding(e) {
+  const unit = SOFT_KINDS.has(e.kind) ? 'cols' : 'chars';
+  return `  ${e.file}:${e.line}  [${e.kind}, ${e.len}/${e.limit} ${unit}]  "${e.text.slice(0, 70)}${e.text.length > 70 ? '…' : ''}"`;
+}
+
 function printReport(errors, limitLabel) {
   console.error('');
   console.error('✗ Table cell length validation FAILED');
@@ -227,11 +255,21 @@ function printReport(errors, limitLabel) {
   console.error('  (tradeOffs/platforms/vsAlternatives) for the pattern.');
   console.error('');
   for (const e of errors.slice(0, 40)) {
-    console.error(`  ${e.file}:${e.line}  [${e.kind}, ${e.len}/${e.limit} chars]  "${e.text.slice(0, 70)}${e.text.length > 70 ? '…' : ''}"`);
+    console.error(formatFinding(e));
   }
   if (errors.length > 40) console.error(`  … and ${errors.length - 40} more`);
   console.error('');
   console.error(`  ${errors.length} violation(s) across ${new Set(errors.map(e => e.file)).size} file(s)`);
+}
+
+function printSoftFindings(errors) {
+  if (errors.length === 0) return;
+  console.log('');
+  console.log(`ℹ ${errors.length} column-design finding(s) (informational, never blocks — CLAUDE.md Comparison Tables rule 7):`);
+  for (const e of errors.slice(0, 40)) {
+    console.log(formatFinding(e));
+  }
+  if (errors.length > 40) console.log(`  … and ${errors.length - 40} more`);
 }
 
 function main() {
@@ -241,13 +279,17 @@ function main() {
       console.log('✓ Table cell length check: no staged article files to check');
       process.exit(0);
     }
-    const errors = [];
-    for (const f of files) validateFile(f, errors, { headerLimit: HARD_FAIL_HEADER_LEN, cellLimit: HARD_FAIL_CELL_LEN });
-    if (errors.length === 0) {
+    const allErrors = [];
+    for (const f of files) validateFile(f, allErrors, { headerLimit: HARD_FAIL_HEADER_LEN, cellLimit: HARD_FAIL_CELL_LEN });
+    const hardErrors = allErrors.filter(e => !SOFT_KINDS.has(e.kind));
+    const softErrors = allErrors.filter(e => SOFT_KINDS.has(e.kind));
+    if (hardErrors.length === 0) {
       console.log(`✓ Table cell length check passed (${files.length} staged article file(s))`);
+      printSoftFindings(softErrors);
       process.exit(0);
     }
-    printReport(errors, `  Blocking only clearly-broken content: headers >${HARD_FAIL_HEADER_LEN} chars, cells >${HARD_FAIL_CELL_LEN} chars.`);
+    printReport(hardErrors, `  Blocking only clearly-broken content: headers >${HARD_FAIL_HEADER_LEN} chars, cells >${HARD_FAIL_CELL_LEN} chars.`);
+    printSoftFindings(softErrors);
     process.exit(1);
   }
 
@@ -269,14 +311,20 @@ function main() {
     summary.push(`${cluster}: ${files.length}`);
   }
 
-  if (errors.length === 0) {
+  const lengthErrors = errors.filter(e => !SOFT_KINDS.has(e.kind));
+  const columnErrors = errors.filter(e => SOFT_KINDS.has(e.kind));
+
+  if (lengthErrors.length === 0 && columnErrors.length === 0) {
     console.log(`✓ Table cell length audit: 0 violations (${totalFiles} articles — ${summary.join(', ')})`);
     process.exit(0);
   }
 
-  console.log('');
-  console.log(`ℹ Table cell length audit (informational, not a build gate): ${errors.length} violation(s) across ${new Set(errors.map(e => e.file)).size} file(s), against the <=${MAX_HEADER_LEN}/<=${MAX_CELL_LEN} guideline.`);
-  console.log(`  Pre-commit only blocks new/edited content over ${HARD_FAIL_HEADER_LEN}/${HARD_FAIL_CELL_LEN} chars (full-sentence cells) — run with --staged to see that gate.`);
+  if (lengthErrors.length > 0) {
+    console.log('');
+    console.log(`ℹ Table cell length audit (informational, not a build gate): ${lengthErrors.length} violation(s) across ${new Set(lengthErrors.map(e => e.file)).size} file(s), against the <=${MAX_HEADER_LEN}/<=${MAX_CELL_LEN} guideline.`);
+    console.log(`  Pre-commit only blocks new/edited content over ${HARD_FAIL_HEADER_LEN}/${HARD_FAIL_CELL_LEN} chars (full-sentence cells) — run with --staged to see that gate.`);
+  }
+  printSoftFindings(columnErrors);
   process.exit(0);
 }
 
