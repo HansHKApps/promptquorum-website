@@ -267,13 +267,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cost Comparison',
         content:
           '**Replacing both tools eliminates $20–40/month in subscription costs.** The local LLM setup is free for software; the only ongoing cost is electricity.',
-        columns: ['Tool', 'Link', 'Monthly Cost', 'Annual Cost', 'Notes'],
+        columns: ['Tool', 'Monthly Cost', 'Annual Cost', 'Notes'],
         rows: [
-          { 'Tool': 'Grammarly Free', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Monthly Cost': '$0', 'Annual Cost': '$0', 'Notes': 'Limited to basic grammar; no style or tone features' },
-          { 'Tool': 'Grammarly Premium', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Monthly Cost': '$12–30/mo', 'Annual Cost': '$144–360/yr', 'Notes': 'Full grammar + style + tone; browser extension' },
-          { 'Tool': 'Notion AI', 'Link': '[notion.com/product/ai](https://www.notion.com/product/ai)', 'Monthly Cost': '$8–10/user/mo', 'Annual Cost': '$96–120/yr', 'Notes': 'Add-on to existing Notion subscription' },
-          { 'Tool': 'Ollama (local LLM)', 'Link': '[ollama.com](https://ollama.com)', 'Monthly Cost': '$0', 'Annual Cost': '$0', 'Notes': 'Free and open-source; electricity ~$1–5/month depending on usage' },
-          { 'Tool': 'Obsidian (Notion replacement)', 'Link': '[obsidian.md](https://obsidian.md)', 'Monthly Cost': '$0 (personal)', 'Annual Cost': '$0', 'Notes': 'Free for personal; $50/yr for commercial use' },
+          { 'Tool': '[Grammarly Free](https://www.grammarly.com)', 'Monthly Cost': '$0', 'Annual Cost': '$0', 'Notes': 'Limited to basic grammar; no style or tone features' },
+          { 'Tool': '[Grammarly Premium](https://www.grammarly.com)', 'Monthly Cost': '$12–30/mo', 'Annual Cost': '$144–360/yr', 'Notes': 'Full grammar + style + tone; browser extension' },
+          { 'Tool': '[Notion AI](https://www.notion.com/product/ai)', 'Monthly Cost': '$8–10/user/mo', 'Annual Cost': '$96–120/yr', 'Notes': 'Add-on to existing Notion subscription' },
+          { 'Tool': '[Ollama (local LLM)](https://ollama.com)', 'Monthly Cost': '$0', 'Annual Cost': '$0', 'Notes': 'Free and open-source; electricity ~$1–5/month depending on usage' },
+          { 'Tool': '[Obsidian (Notion replacement)](https://obsidian.md)', 'Monthly Cost': '$0 (personal)', 'Annual Cost': '$0', 'Notes': 'Free for personal; $50/yr for commercial use' },
         ],
         callouts: [
           {
@@ -621,13 +621,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativa de costes',
         content:
           '**Reemplazar ambas herramientas elimina $20–40/mes en costes de suscripción.** La configuración del LLM local es gratuita en software; el único coste continuo es la electricidad.',
-        columns: ['Herramienta', 'Enlace', 'Coste mensual', 'Coste anual', 'Notas'],
+        columns: ['Herramienta', 'Coste mensual', 'Coste anual', 'Notas'],
         rows: [
-          { 'Herramienta': 'Grammarly Free', 'Enlace': '[grammarly.com](https://www.grammarly.com)', 'Coste mensual': '$0', 'Coste anual': '$0', 'Notas': 'Limitado a gramática básica; sin funciones de estilo o tono' },
-          { 'Herramienta': 'Grammarly Premium', 'Enlace': '[grammarly.com](https://www.grammarly.com)', 'Coste mensual': '$12–30/mes', 'Coste anual': '$144–360/año', 'Notas': 'Gramática + estilo + tono completos; extensión de navegador' },
-          { 'Herramienta': 'Notion AI', 'Enlace': '[notion.com/product/ai](https://www.notion.com/product/ai)', 'Coste mensual': '$8–10/usuario/mes', 'Coste anual': '$96–120/año', 'Notas': 'Complemento a la suscripción existente de Notion' },
-          { 'Herramienta': 'Ollama (LLM local)', 'Enlace': '[ollama.com](https://ollama.com)', 'Coste mensual': '$0', 'Coste anual': '$0', 'Notas': 'Gratuito y de código abierto; electricidad ~$1–5/mes según uso' },
-          { 'Herramienta': 'Obsidian (reemplazo de Notion)', 'Enlace': '[obsidian.md](https://obsidian.md)', 'Coste mensual': '$0 (personal)', 'Coste anual': '$0', 'Notas': 'Gratuito para uso personal; $50/año para uso comercial' },
+          { 'Herramienta': '[Grammarly Free](https://www.grammarly.com)', 'Coste mensual': '$0', 'Coste anual': '$0', 'Notas': 'Limitado a gramática básica; sin funciones de estilo o tono' },
+          { 'Herramienta': '[Grammarly Premium](https://www.grammarly.com)', 'Coste mensual': '$12–30/mes', 'Coste anual': '$144–360/año', 'Notas': 'Gramática + estilo + tono completos; extensión de navegador' },
+          { 'Herramienta': '[Notion AI](https://www.notion.com/product/ai)', 'Coste mensual': '$8–10/usuario/mes', 'Coste anual': '$96–120/año', 'Notas': 'Complemento a la suscripción existente de Notion' },
+          { 'Herramienta': '[Ollama (LLM local)](https://ollama.com)', 'Coste mensual': '$0', 'Coste anual': '$0', 'Notas': 'Gratuito y de código abierto; electricidad ~$1–5/mes según uso' },
+          { 'Herramienta': '[Obsidian (reemplazo de Notion)](https://obsidian.md)', 'Coste mensual': '$0 (personal)', 'Coste anual': '$0', 'Notas': 'Gratuito para uso personal; $50/año para uso comercial' },
         ],
         callouts: [
           {
@@ -988,13 +988,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativo de custos',
         content:
           '**Substituir ambas as ferramentas elimina $20–40/mês em custos de assinatura.** A configuração do LLM local é gratuita em software; o único custo contínuo é a eletricidade.',
-        columns: ['Ferramenta', 'Link', 'Custo mensal', 'Custo anual', 'Notas'],
+        columns: ['Ferramenta', 'Custo mensal', 'Custo anual', 'Notas'],
         rows: [
-          { 'Ferramenta': 'Grammarly Free', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Custo mensal': '$0', 'Custo anual': '$0', 'Notas': 'Limitado à gramática básica; sem recursos de estilo ou tom' },
-          { 'Ferramenta': 'Grammarly Premium', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Custo mensal': '$12–30/mês', 'Custo anual': '$144–360/ano', 'Notas': 'Gramática + estilo + tom completos; extensão de navegador' },
-          { 'Ferramenta': 'Notion AI', 'Link': '[notion.com/product/ai](https://www.notion.com/product/ai)', 'Custo mensal': '$8–10/usuário/mês', 'Custo anual': '$96–120/ano', 'Notas': 'Complemento à assinatura existente do Notion' },
-          { 'Ferramenta': 'Ollama (LLM local)', 'Link': '[ollama.com](https://ollama.com)', 'Custo mensal': '$0', 'Custo anual': '$0', 'Notas': 'Gratuito e de código aberto; eletricidade ~$1–5/mês conforme uso' },
-          { 'Ferramenta': 'Obsidian (substituição do Notion)', 'Link': '[obsidian.md](https://obsidian.md)', 'Custo mensal': '$0 (pessoal)', 'Custo anual': '$0', 'Notas': 'Gratuito para uso pessoal; $50/ano para uso comercial' },
+          { 'Ferramenta': '[Grammarly Free](https://www.grammarly.com)', 'Custo mensal': '$0', 'Custo anual': '$0', 'Notas': 'Limitado à gramática básica; sem recursos de estilo ou tom' },
+          { 'Ferramenta': '[Grammarly Premium](https://www.grammarly.com)', 'Custo mensal': '$12–30/mês', 'Custo anual': '$144–360/ano', 'Notas': 'Gramática + estilo + tom completos; extensão de navegador' },
+          { 'Ferramenta': '[Notion AI](https://www.notion.com/product/ai)', 'Custo mensal': '$8–10/usuário/mês', 'Custo anual': '$96–120/ano', 'Notas': 'Complemento à assinatura existente do Notion' },
+          { 'Ferramenta': '[Ollama (LLM local)](https://ollama.com)', 'Custo mensal': '$0', 'Custo anual': '$0', 'Notas': 'Gratuito e de código aberto; eletricidade ~$1–5/mês conforme uso' },
+          { 'Ferramenta': '[Obsidian (substituição do Notion)](https://obsidian.md)', 'Custo mensal': '$0 (pessoal)', 'Custo anual': '$0', 'Notas': 'Gratuito para uso pessoal; $50/ano para uso comercial' },
         ],
         callouts: [
           {
@@ -1355,13 +1355,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kostenvergleich',
         content:
           '**Wer beide Tools ersetzt, spart 20–40 €/Monat an Abo-Gebühren.** Die lokale LLM-Einrichtung ist softwareseitig kostenlos; laufende Kosten entstehen nur durch Strom.',
-        columns: ['Tool', 'Link', 'Monatlich', 'Jährlich', 'Hinweise'],
+        columns: ['Tool', 'Monatlich', 'Jährlich', 'Hinweise'],
         rows: [
-          { 'Tool': 'Grammarly Free', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Nur Basis-Grammatik; keine Stil- oder Tonfunktionen' },
-          { 'Tool': 'Grammarly Premium', 'Link': '[grammarly.com](https://www.grammarly.com)', 'Monatlich': '12–30 €/Monat', 'Jährlich': '144–360 €/Jahr', 'Hinweise': 'Volle Grammatik + Stil + Ton; Browser-Erweiterung' },
-          { 'Tool': 'Notion AI', 'Link': '[notion.com/product/ai](https://www.notion.com/product/ai)', 'Monatlich': '8–10 €/Nutzer/Monat', 'Jährlich': '96–120 €/Jahr', 'Hinweise': 'Aufpreis zum bestehenden Notion-Abo' },
-          { 'Tool': 'Ollama (lokales LLM)', 'Link': '[ollama.com](https://ollama.com)', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Frei und Open Source; Strom ca. 1–5 €/Monat je nach Nutzung' },
-          { 'Tool': 'Obsidian (Notion-Ersatz)', 'Link': '[obsidian.md](https://obsidian.md)', 'Monatlich': '0 € (privat)', 'Jährlich': '0 €', 'Hinweise': 'Privat kostenlos; 50 €/Jahr für gewerbliche Nutzung' },
+          { 'Tool': '[Grammarly Free](https://www.grammarly.com)', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Nur Basis-Grammatik; keine Stil- oder Tonfunktionen' },
+          { 'Tool': '[Grammarly Premium](https://www.grammarly.com)', 'Monatlich': '12–30 €/Monat', 'Jährlich': '144–360 €/Jahr', 'Hinweise': 'Volle Grammatik + Stil + Ton; Browser-Erweiterung' },
+          { 'Tool': '[Notion AI](https://www.notion.com/product/ai)', 'Monatlich': '8–10 €/Nutzer/Monat', 'Jährlich': '96–120 €/Jahr', 'Hinweise': 'Aufpreis zum bestehenden Notion-Abo' },
+          { 'Tool': '[Ollama (lokales LLM)](https://ollama.com)', 'Monatlich': '0 €', 'Jährlich': '0 €', 'Hinweise': 'Frei und Open Source; Strom ca. 1–5 €/Monat je nach Nutzung' },
+          { 'Tool': '[Obsidian (Notion-Ersatz)](https://obsidian.md)', 'Monatlich': '0 € (privat)', 'Jährlich': '0 €', 'Hinweise': 'Privat kostenlos; 50 €/Jahr für gewerbliche Nutzung' },
         ],
         callouts: [
           {
@@ -1717,13 +1717,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparatif des coûts',
         content:
           '**Remplacer les deux outils élimine 20 à 40 €/mois d\'abonnement.** La mise en place du LLM local est gratuite côté logiciel ; le seul coût récurrent est l\'électricité.',
-        columns: ['Outil', 'Lien', 'Mensuel', 'Annuel', 'Notes'],
+        columns: ['Outil', 'Mensuel', 'Annuel', 'Notes'],
         rows: [
-          { 'Outil': 'Grammarly Free', 'Lien': '[grammarly.com](https://www.grammarly.com)', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Limité à la grammaire de base ; pas de style ni de ton' },
-          { 'Outil': 'Grammarly Premium', 'Lien': '[grammarly.com](https://www.grammarly.com)', 'Mensuel': '12 à 30 €/mois', 'Annuel': '144 à 360 €/an', 'Notes': 'Grammaire + style + ton ; extension navigateur' },
-          { 'Outil': 'Notion AI', 'Lien': '[notion.com/product/ai](https://www.notion.com/product/ai)', 'Mensuel': '8 à 10 €/utilisateur/mois', 'Annuel': '96 à 120 €/an', 'Notes': 'Add-on à l\'abonnement Notion existant' },
-          { 'Outil': 'Ollama (LLM local)', 'Lien': '[ollama.com](https://ollama.com)', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Gratuit et open source ; électricité env. 1 à 5 €/mois selon usage' },
-          { 'Outil': 'Obsidian (remplacement Notion)', 'Lien': '[obsidian.md](https://obsidian.md)', 'Mensuel': '0 € (perso)', 'Annuel': '0 €', 'Notes': 'Gratuit en personnel ; 50 €/an en usage commercial' },
+          { 'Outil': '[Grammarly Free](https://www.grammarly.com)', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Limité à la grammaire de base ; pas de style ni de ton' },
+          { 'Outil': '[Grammarly Premium](https://www.grammarly.com)', 'Mensuel': '12 à 30 €/mois', 'Annuel': '144 à 360 €/an', 'Notes': 'Grammaire + style + ton ; extension navigateur' },
+          { 'Outil': '[Notion AI](https://www.notion.com/product/ai)', 'Mensuel': '8 à 10 €/utilisateur/mois', 'Annuel': '96 à 120 €/an', 'Notes': 'Add-on à l\'abonnement Notion existant' },
+          { 'Outil': '[Ollama (LLM local)](https://ollama.com)', 'Mensuel': '0 €', 'Annuel': '0 €', 'Notes': 'Gratuit et open source ; électricité env. 1 à 5 €/mois selon usage' },
+          { 'Outil': '[Obsidian (remplacement Notion)](https://obsidian.md)', 'Mensuel': '0 € (perso)', 'Annuel': '0 €', 'Notes': 'Gratuit en personnel ; 50 €/an en usage commercial' },
         ],
         callouts: [
           {
@@ -2072,13 +2072,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'コスト比較',
         content:
           '**両ツールを置き換えると、月額約¥3,000〜6,000のサブスク費用を削減できます。** ローカルLLMのソフトウェア費用は無料で、継続コストは電気代のみです。',
-        columns: ['ツール', 'リンク', '月額', '年額', '備考'],
+        columns: ['ツール', '月額', '年額', '備考'],
         rows: [
-          { 'ツール': 'Grammarly Free', 'リンク': '[grammarly.com](https://www.grammarly.com)', '月額': '¥0', '年額': '¥0', '備考': '基本文法のみ、スタイル・トーン機能なし' },
-          { 'ツール': 'Grammarly Premium', 'リンク': '[grammarly.com](https://www.grammarly.com)', '月額': '約¥1,800–4,500/月', '年額': '約¥21,600–54,000/年', '備考': '文法・スタイル・トーン全部、ブラウザ拡張あり' },
-          { 'ツール': 'Notion AI', 'リンク': '[notion.com/product/ai](https://www.notion.com/product/ai)', '月額': '約¥1,200–1,500/ユーザー/月', '年額': '約¥14,400–18,000/年', '備考': '既存Notionサブスクへの追加課金' },
-          { 'ツール': 'Ollama（ローカルLLM）', 'リンク': '[ollama.com](https://ollama.com)', '月額': '¥0', '年額': '¥0', '備考': '無料・オープンソース、利用量により電気代約¥150–750/月' },
-          { 'ツール': 'Obsidian（Notion代替）', 'リンク': '[obsidian.md](https://obsidian.md)', '月額': '¥0（個人）', '年額': '¥0', '備考': '個人利用は無料、商用利用は約¥7,500/年' },
+          { 'ツール': '[Grammarly Free](https://www.grammarly.com)', '月額': '¥0', '年額': '¥0', '備考': '基本文法のみ、スタイル・トーン機能なし' },
+          { 'ツール': '[Grammarly Premium](https://www.grammarly.com)', '月額': '約¥1,800–4,500/月', '年額': '約¥21,600–54,000/年', '備考': '文法・スタイル・トーン全部、ブラウザ拡張あり' },
+          { 'ツール': '[Notion AI](https://www.notion.com/product/ai)', '月額': '約¥1,200–1,500/ユーザー/月', '年額': '約¥14,400–18,000/年', '備考': '既存Notionサブスクへの追加課金' },
+          { 'ツール': '[Ollama（ローカルLLM）](https://ollama.com)', '月額': '¥0', '年額': '¥0', '備考': '無料・オープンソース、利用量により電気代約¥150–750/月' },
+          { 'ツール': '[Obsidian（Notion代替）](https://obsidian.md)', '月額': '¥0（個人）', '年額': '¥0', '備考': '個人利用は無料、商用利用は約¥7,500/年' },
         ],
         callouts: [
           {
@@ -2428,13 +2428,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '成本对比',
         content:
           '**替换两款工具可节省 $20–40/月的订阅费用。** 本地 LLM 部署的软件成本为零，唯一持续成本是电费。',
-        columns: ['工具', '链接', '月费', '年费', '备注'],
+        columns: ['工具', '月费', '年费', '备注'],
         rows: [
-          { '工具': 'Grammarly Free', '链接': '[grammarly.com](https://www.grammarly.com)', '月费': '$0', '年费': '$0', '备注': '仅基础语法，无文风/语气功能' },
-          { '工具': 'Grammarly Premium', '链接': '[grammarly.com](https://www.grammarly.com)', '月费': '$12–30/月', '年费': '$144–360/年', '备注': '语法+文风+语气全开；含浏览器扩展' },
-          { '工具': 'Notion AI', '链接': '[notion.com/product/ai](https://www.notion.com/product/ai)', '月费': '$8–10/用户/月', '年费': '$96–120/年', '备注': '叠加在已有 Notion 订阅上' },
-          { '工具': 'Ollama（本地 LLM）', '链接': '[ollama.com](https://ollama.com)', '月费': '$0', '年费': '$0', '备注': '免费开源；按使用量电费约 $1–5/月' },
-          { '工具': 'Obsidian（替代 Notion）', '链接': '[obsidian.md](https://obsidian.md)', '月费': '$0（个人）', '年费': '$0', '备注': '个人免费；商业使用 $50/年' },
+          { '工具': '[Grammarly Free](https://www.grammarly.com)', '月费': '$0', '年费': '$0', '备注': '仅基础语法，无文风/语气功能' },
+          { '工具': '[Grammarly Premium](https://www.grammarly.com)', '月费': '$12–30/月', '年费': '$144–360/年', '备注': '语法+文风+语气全开；含浏览器扩展' },
+          { '工具': '[Notion AI](https://www.notion.com/product/ai)', '月费': '$8–10/用户/月', '年费': '$96–120/年', '备注': '叠加在已有 Notion 订阅上' },
+          { '工具': '[Ollama（本地 LLM）](https://ollama.com)', '月费': '$0', '年费': '$0', '备注': '免费开源；按使用量电费约 $1–5/月' },
+          { '工具': '[Obsidian（替代 Notion）](https://obsidian.md)', '月费': '$0（个人）', '年费': '$0', '备注': '个人免费；商业使用 $50/年' },
         ],
         callouts: [
           {
@@ -3089,13 +3089,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '비용 비교',
         content:
           '**두 도구를 모두 대체하면 월 $20–40의 구독 비용이 절감됩니다.** 로컬 LLM 설정은 소프트웨어 측면에서 무료이며, 유일한 지속 비용은 전기입니다.',
-        columns: ['도구', '링크', '월 비용', '연 비용', '참고'],
+        columns: ['도구', '월 비용', '연 비용', '참고'],
         rows: [
-          { '도구': 'Grammarly Free', '링크': '[grammarly.com](https://www.grammarly.com)', '월 비용': '$0', '연 비용': '$0', '참고': '기본 문법으로 제한; 문체나 어조 기능 없음' },
-          { '도구': 'Grammarly Premium', '링크': '[grammarly.com](https://www.grammarly.com)', '월 비용': '$12–30/월', '연 비용': '$144–360/년', '참고': '전체 문법 + 문체 + 어조; 브라우저 확장' },
-          { '도구': 'Notion AI', '링크': '[notion.com/product/ai](https://www.notion.com/product/ai)', '월 비용': '$8–10/사용자/월', '연 비용': '$96–120/년', '참고': '기존 Notion 구독에 추가' },
-          { '도구': 'Ollama(로컬 LLM)', '링크': '[ollama.com](https://ollama.com)', '월 비용': '$0', '연 비용': '$0', '참고': '무료 오픈소스; 전기 사용량에 따라 월 ~$1–5' },
-          { '도구': 'Obsidian(Notion 대체)', '링크': '[obsidian.md](https://obsidian.md)', '월 비용': '$0(개인)', '연 비용': '$0', '참고': '개인 사용 무료; 상업적 사용 연 $50' },
+          { '도구': '[Grammarly Free](https://www.grammarly.com)', '월 비용': '$0', '연 비용': '$0', '참고': '기본 문법으로 제한; 문체나 어조 기능 없음' },
+          { '도구': '[Grammarly Premium](https://www.grammarly.com)', '월 비용': '$12–30/월', '연 비용': '$144–360/년', '참고': '전체 문법 + 문체 + 어조; 브라우저 확장' },
+          { '도구': '[Notion AI](https://www.notion.com/product/ai)', '월 비용': '$8–10/사용자/월', '연 비용': '$96–120/년', '참고': '기존 Notion 구독에 추가' },
+          { '도구': '[Ollama(로컬 LLM)](https://ollama.com)', '월 비용': '$0', '연 비용': '$0', '참고': '무료 오픈소스; 전기 사용량에 따라 월 ~$1–5' },
+          { '도구': '[Obsidian(Notion 대체)](https://obsidian.md)', '월 비용': '$0(개인)', '연 비용': '$0', '참고': '개인 사용 무료; 상업적 사용 연 $50' },
         ],
         callouts: [
           {

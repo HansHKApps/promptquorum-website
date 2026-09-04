@@ -203,11 +203,10 @@ tests:
         content: [
           '**No single tool excels on all five criteria. Braintrust leads on evaluation depth; Vellum leads on production A/B testing; Promptfoo leads on CI/CD integration; DSPy leads on automated optimization.**',
         ],
-        columns: ['Tool', 'Link', 'A/B Testing', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
+        columns: ['Tool', 'A/B Testing', 'Collaboration', 'CI/CD', 'Pricing', 'Best For'],
         rows: [
           {
-            Tool: 'Braintrust',
-            Link: '[braintrust.dev](https://braintrust.dev)',
+            Tool: '[Braintrust](https://braintrust.dev)',
             'A/B Testing': '✅ Experiments',
             Collaboration: '✅ Roles + dashboards',
             'CI/CD': '✓ API',
@@ -215,8 +214,7 @@ tests:
             'Best For': 'Eval-driven teams',
           },
           {
-            Tool: 'DSPy',
-            Link: '[dspy.ai](https://dspy.ai)',
+            Tool: '[DSPy](https://dspy.ai)',
             'A/B Testing': '✅ Automated',
             Collaboration: 'Git-based',
             'CI/CD': '✅ Native',
@@ -224,8 +222,7 @@ tests:
             'Best For': 'Engineering-heavy teams',
           },
           {
-            Tool: 'PromptPerfect',
-            Link: '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            Tool: '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B Testing': '⚠️ Variants only',
             Collaboration: '✓ Team plan',
             'CI/CD': '✗ None',
@@ -233,8 +230,7 @@ tests:
             'Best For': 'Non-engineering users',
           },
           {
-            Tool: 'Vellum',
-            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Tool: '[Vellum](https://docs.vellum.ai)',
             'A/B Testing': '✅ Traffic split',
             Collaboration: '✅ PR reviews',
             'CI/CD': '✓ Webhooks',
@@ -242,8 +238,7 @@ tests:
             'Best For': 'Production deployments',
           },
           {
-            Tool: 'Promptfoo',
-            Link: '[promptfoo.dev](https://promptfoo.dev)',
+            Tool: '[Promptfoo](https://promptfoo.dev)',
             'A/B Testing': '✅ Multi-model',
             Collaboration: 'Git-based',
             'CI/CD': '✅ GitHub Actions',
@@ -251,8 +246,7 @@ tests:
             'Best For': 'CI/CD focused teams',
           },
           {
-            Tool: 'Helicone',
-            Link: '[helicone.ai](https://www.helicone.ai)',
+            Tool: '[Helicone](https://www.helicone.ai)',
             'A/B Testing': '✓ Experiments',
             Collaboration: '✅ Shared dashboard',
             'CI/CD': '✓ API',
@@ -260,8 +254,7 @@ tests:
             'Best For': 'Cost-conscious teams',
           },
           {
-            Tool: 'PromptQuorum',
-            Link: '[promptquorum.com](https://www.promptquorum.com)',
+            Tool: '[PromptQuorum](https://www.promptquorum.com)',
             'A/B Testing': '✅ Multi-model',
             Collaboration: '✓ Shared workspace',
             'CI/CD': '✗ No CI/CD',
@@ -714,11 +707,10 @@ tests:
         content: [
           '**Kein einzelnes Tool ist in allen fünf Kriterien führend. Braintrust führt bei Bewertungstiefe; Vellum führt bei Produktions-A/B-Tests; Promptfoo führt bei CI/CD-Integration; DSPy führt bei automatisierter Optimierung.**',
         ],
-        columns: ['Tool', 'Link', 'A/B-Tests', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
+        columns: ['Tool', 'A/B-Tests', 'Zusammenarbeit', 'CI/CD', 'Preisgestaltung', 'Am besten für'],
         rows: [
           {
-            'Tool': 'Braintrust',
-            'Link': '[braintrust.dev](https://braintrust.dev)',
+            'Tool': '[Braintrust](https://braintrust.dev)',
             'A/B-Tests': '✅ Experimente',
             'Zusammenarbeit': '✅ Rollen + Dashboards',
             'CI/CD': '✓ API',
@@ -726,8 +718,7 @@ tests:
             'Am besten für': 'Bewertungsgesteuerte Teams',
           },
           {
-            'Tool': 'DSPy',
-            'Link': '[dspy.ai](https://dspy.ai)',
+            'Tool': '[DSPy](https://dspy.ai)',
             'A/B-Tests': '✅ Automatisiert',
             'Zusammenarbeit': 'Git-basiert',
             'CI/CD': '✅ Nativ',
@@ -735,8 +726,7 @@ tests:
             'Am besten für': 'Engineering-schwere Teams',
           },
           {
-            'Tool': 'PromptPerfect',
-            'Link': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            'Tool': '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B-Tests': '⚠ Nur Varianten',
             'Zusammenarbeit': '✓ Team-Plan',
             'CI/CD': '✗ Keine',
@@ -744,8 +734,7 @@ tests:
             'Am besten für': 'Non-Engineering-Benutzer',
           },
           {
-            'Tool': 'Vellum',
-            'Link': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'Tool': '[Vellum](https://docs.vellum.ai)',
             'A/B-Tests': '✅ Traffic-Split',
             'Zusammenarbeit': '✅ PR-Reviews',
             'CI/CD': '✓ Webhooks',
@@ -753,8 +742,7 @@ tests:
             'Am besten für': 'Produktions-Bereitstellungen',
           },
           {
-            'Tool': 'Promptfoo',
-            'Link': '[promptfoo.dev](https://promptfoo.dev)',
+            'Tool': '[Promptfoo](https://promptfoo.dev)',
             'A/B-Tests': '✅ Multi-Modell',
             'Zusammenarbeit': 'Git-basiert',
             'CI/CD': '✅ GitHub Actions',
@@ -762,8 +750,7 @@ tests:
             'Am besten für': 'CI/CD-fokussierte Teams',
           },
           {
-            'Tool': 'Helicone',
-            'Link': '[helicone.ai](https://www.helicone.ai)',
+            'Tool': '[Helicone](https://www.helicone.ai)',
             'A/B-Tests': '✓ Experimente',
             'Zusammenarbeit': '✅ Gemeinsames Dashboard',
             'CI/CD': '✓ API',
@@ -771,8 +758,7 @@ tests:
             'Am besten für': 'Kostenbewusste Teams',
           },
           {
-            'Tool': 'PromptQuorum',
-            'Link': '[promptquorum.com](https://www.promptquorum.com)',
+            'Tool': '[PromptQuorum](https://www.promptquorum.com)',
             'A/B-Tests': '✅ Multi-Modell',
             'Zusammenarbeit': '✓ Gemeinsamer Workspace',
             'CI/CD': '✗ Keine',
@@ -1149,11 +1135,10 @@ tests:
         content: [
           '**Ninguna herramienta destaca en los cinco criterios. Braintrust lidera en profundidad de evaluación; Vellum lidera en A/B testing en producción; Promptfoo lidera en integración CI/CD; DSPy lidera en optimización automatizada.**',
         ],
-        columns: ['Herramienta', 'Enlace', 'A/B Testing', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
+        columns: ['Herramienta', 'A/B Testing', 'Colaboración', 'CI/CD', 'Precios', 'Ideal para'],
         rows: [
           {
-            Herramienta: 'Braintrust',
-            Enlace: '[braintrust.dev](https://braintrust.dev)',
+            Herramienta: '[Braintrust](https://braintrust.dev)',
             'A/B Testing': '✅ Experimentos',
             Colaboración: '✅ Roles + dashboards',
             'CI/CD': '✓ API',
@@ -1161,8 +1146,7 @@ tests:
             'Ideal para': 'Equipos orientados a eval',
           },
           {
-            Herramienta: 'DSPy',
-            Enlace: '[dspy.ai](https://dspy.ai)',
+            Herramienta: '[DSPy](https://dspy.ai)',
             'A/B Testing': '✅ Automatizado',
             Colaboración: 'Basado en Git',
             'CI/CD': '✅ Nativo',
@@ -1170,8 +1154,7 @@ tests:
             'Ideal para': 'Equipos muy técnicos',
           },
           {
-            Herramienta: 'PromptPerfect',
-            Enlace: '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            Herramienta: '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B Testing': '⚠️ Solo variantes',
             Colaboración: '✓ Plan Team',
             'CI/CD': '✗ Ninguna',
@@ -1179,8 +1162,7 @@ tests:
             'Ideal para': 'Usuarios no técnicos',
           },
           {
-            Herramienta: 'Vellum',
-            Enlace: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Herramienta: '[Vellum](https://docs.vellum.ai)',
             'A/B Testing': '✅ División de tráfico',
             Colaboración: '✅ Revisiones PR',
             'CI/CD': '✓ Webhooks',
@@ -1188,8 +1170,7 @@ tests:
             'Ideal para': 'Despliegues en producción',
           },
           {
-            Herramienta: 'Promptfoo',
-            Enlace: '[promptfoo.dev](https://promptfoo.dev)',
+            Herramienta: '[Promptfoo](https://promptfoo.dev)',
             'A/B Testing': '✅ Multi-modelo',
             Colaboración: 'Basado en Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1197,8 +1178,7 @@ tests:
             'Ideal para': 'Equipos centrados en CI/CD',
           },
           {
-            Herramienta: 'Helicone',
-            Enlace: '[helicone.ai](https://www.helicone.ai)',
+            Herramienta: '[Helicone](https://www.helicone.ai)',
             'A/B Testing': '✓ Experimentos',
             Colaboración: '✅ Dashboard compartido',
             'CI/CD': '✓ API',
@@ -1206,8 +1186,7 @@ tests:
             'Ideal para': 'Equipos conscientes del coste',
           },
           {
-            Herramienta: 'PromptQuorum',
-            Enlace: '[promptquorum.com](https://www.promptquorum.com)',
+            Herramienta: '[PromptQuorum](https://www.promptquorum.com)',
             'A/B Testing': '✅ Multi-modelo',
             Colaboración: '✓ Workspace compartido',
             'CI/CD': '✗ Sin CI/CD',
@@ -1635,11 +1614,10 @@ tests:
         content: [
           '**Nenhuma ferramenta se destaca nos cinco critérios. Braintrust lidera em profundidade de avaliação; Vellum lidera em A/B testing em produção; Promptfoo lidera em integração CI/CD; DSPy lidera em otimização automatizada.**',
         ],
-        columns: ['Ferramenta', 'Link', 'A/B Testing', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
+        columns: ['Ferramenta', 'A/B Testing', 'Colaboração', 'CI/CD', 'Preços', 'Ideal para'],
         rows: [
           {
-            Ferramenta: 'Braintrust',
-            Link: '[braintrust.dev](https://braintrust.dev)',
+            Ferramenta: '[Braintrust](https://braintrust.dev)',
             'A/B Testing': '✅ Experimentos',
             Colaboração: '✅ Funções + dashboards',
             'CI/CD': '✓ API',
@@ -1647,8 +1625,7 @@ tests:
             'Ideal para': 'Equipes orientadas a avaliação',
           },
           {
-            Ferramenta: 'DSPy',
-            Link: '[dspy.ai](https://dspy.ai)',
+            Ferramenta: '[DSPy](https://dspy.ai)',
             'A/B Testing': '✅ Automatizado',
             Colaboração: 'Baseado em Git',
             'CI/CD': '✅ Nativo',
@@ -1656,8 +1633,7 @@ tests:
             'Ideal para': 'Equipes altamente técnicas',
           },
           {
-            Ferramenta: 'PromptPerfect',
-            Link: '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            Ferramenta: '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B Testing': '⚠️ Apenas variantes',
             Colaboração: '✓ Plano Team',
             'CI/CD': '✗ Nenhuma',
@@ -1665,8 +1641,7 @@ tests:
             'Ideal para': 'Usuários não técnicos',
           },
           {
-            Ferramenta: 'Vellum',
-            Link: '[docs.vellum.ai](https://docs.vellum.ai)',
+            Ferramenta: '[Vellum](https://docs.vellum.ai)',
             'A/B Testing': '✅ Divisão de tráfego',
             Colaboração: '✅ Revisões PR',
             'CI/CD': '✓ Webhooks',
@@ -1674,8 +1649,7 @@ tests:
             'Ideal para': 'Implantações em produção',
           },
           {
-            Ferramenta: 'Promptfoo',
-            Link: '[promptfoo.dev](https://promptfoo.dev)',
+            Ferramenta: '[Promptfoo](https://promptfoo.dev)',
             'A/B Testing': '✅ Multi-modelo',
             Colaboração: 'Baseado em Git',
             'CI/CD': '✅ GitHub Actions',
@@ -1683,8 +1657,7 @@ tests:
             'Ideal para': 'Equipes focadas em CI/CD',
           },
           {
-            Ferramenta: 'Helicone',
-            Link: '[helicone.ai](https://www.helicone.ai)',
+            Ferramenta: '[Helicone](https://www.helicone.ai)',
             'A/B Testing': '✓ Experimentos',
             Colaboração: '✅ Dashboard compartilhado',
             'CI/CD': '✓ API',
@@ -1692,8 +1665,7 @@ tests:
             'Ideal para': 'Equipes conscientes de custos',
           },
           {
-            Ferramenta: 'PromptQuorum',
-            Link: '[promptquorum.com](https://www.promptquorum.com)',
+            Ferramenta: '[PromptQuorum](https://www.promptquorum.com)',
             'A/B Testing': '✅ Multi-modelo',
             Colaboração: '✓ Workspace compartilhado',
             'CI/CD': '✗ Sem CI/CD',
@@ -2107,11 +2079,10 @@ tests:
         content: [
           '**Aucun outil simple n\'excelle tous cinq critères. Braintrust excelle profondeur évaluation; Vellum excelle test A/B production; Promptfoo excelle intégration CI/CD; DSPy excelle optimisation automatisée.**',
         ],
-        columns: ['Outil', 'Lien', 'Test A/B', 'Collaboration', 'CI/CD', 'Tarification', 'Optimal pour'],
+        columns: ['Outil', 'Test A/B', 'Collaboration', 'CI/CD', 'Tarification', 'Optimal pour'],
         rows: [
           {
-            'Outil': 'Braintrust',
-            'Lien': '[braintrust.dev](https://braintrust.dev)',
+            'Outil': '[Braintrust](https://braintrust.dev)',
             'Test A/B': '✅ Expériences',
             'Collaboration': '✅ Rôles + dashboards',
             'CI/CD': '✓ API',
@@ -2119,8 +2090,7 @@ tests:
             'Optimal pour': 'Équipes orientées évaluation',
           },
           {
-            'Outil': 'DSPy',
-            'Lien': '[dspy.ai](https://dspy.ai)',
+            'Outil': '[DSPy](https://dspy.ai)',
             'Test A/B': '✅ Automatisé',
             'Collaboration': 'Basé Git',
             'CI/CD': '✅ Natif',
@@ -2128,8 +2098,7 @@ tests:
             'Optimal pour': 'Équipes ingénierie-lourde',
           },
           {
-            'Outil': 'PromptPerfect',
-            'Lien': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            'Outil': '[PromptPerfect](https://promptperfect.jina.ai)',
             'Test A/B': '⚠ Variantes seulement',
             'Collaboration': '✓ Plan équipe',
             'CI/CD': '✗ Aucun',
@@ -2137,8 +2106,7 @@ tests:
             'Optimal pour': 'Utilisateurs non-ingénierie',
           },
           {
-            'Outil': 'Vellum',
-            'Lien': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'Outil': '[Vellum](https://docs.vellum.ai)',
             'Test A/B': '✅ Split traffic',
             'Collaboration': '✅ Révisions PR',
             'CI/CD': '✓ Webhooks',
@@ -2146,8 +2114,7 @@ tests:
             'Optimal pour': 'Déploiements production',
           },
           {
-            'Outil': 'Promptfoo',
-            'Lien': '[promptfoo.dev](https://promptfoo.dev)',
+            'Outil': '[Promptfoo](https://promptfoo.dev)',
             'Test A/B': '✅ Multi-modèle',
             'Collaboration': 'Basé Git',
             'CI/CD': '✅ GitHub Actions',
@@ -2155,8 +2122,7 @@ tests:
             'Optimal pour': 'Équipes focus CI/CD',
           },
           {
-            'Outil': 'Helicone',
-            'Lien': '[helicone.ai](https://www.helicone.ai)',
+            'Outil': '[Helicone](https://www.helicone.ai)',
             'Test A/B': '✓ Expériences',
             'Collaboration': '✅ Dashboard partagé',
             'CI/CD': '✓ API',
@@ -2164,8 +2130,7 @@ tests:
             'Optimal pour': 'Équipes conscious-coûts',
           },
           {
-            'Outil': 'PromptQuorum',
-            'Lien': '[promptquorum.com](https://www.promptquorum.com)',
+            'Outil': '[PromptQuorum](https://www.promptquorum.com)',
             'Test A/B': '✅ Multi-modèle',
             'Collaboration': '✓ Workspace partagé',
             'CI/CD': '✗ Aucun',
@@ -2511,11 +2476,10 @@ tests:
         content: [
           '**単一ツール5つ基準すべて秀でず。Braintrust評価深さ秀で; Vellum本番A/Bテスト秀で; Promptfoo CI/CD統合秀で; DSPy自動最適化秀で。**',
         ],
-        columns: ['ツール', 'リンク', 'A/Bテスト', 'コラボレーション', 'CI/CD', '料金', '最適チーム'],
+        columns: ['ツール', 'A/Bテスト', 'コラボレーション', 'CI/CD', '料金', '最適チーム'],
         rows: [
           {
-            'ツール': 'Braintrust',
-            'リンク': '[braintrust.dev](https://braintrust.dev)',
+            'ツール': '[Braintrust](https://braintrust.dev)',
             'A/Bテスト': '✅ 実験',
             'コラボレーション': '✅ 役割 + ダッシュボード',
             'CI/CD': '✓ API',
@@ -2523,8 +2487,7 @@ tests:
             '最適チーム': '評価駆動チーム',
           },
           {
-            'ツール': 'DSPy',
-            'リンク': '[dspy.ai](https://dspy.ai)',
+            'ツール': '[DSPy](https://dspy.ai)',
             'A/Bテスト': '✅ 自動',
             'コラボレーション': 'Git基盤',
             'CI/CD': '✅ ネイティブ',
@@ -2532,8 +2495,7 @@ tests:
             '最適チーム': 'エンジニア集約チーム',
           },
           {
-            'ツール': 'PromptPerfect',
-            'リンク': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            'ツール': '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/Bテスト': '⚠ バリアント只',
             'コラボレーション': '✓ チームプラン',
             'CI/CD': '✗ 無し',
@@ -2541,8 +2503,7 @@ tests:
             '最適チーム': '非エンジニアユーザー',
           },
           {
-            'ツール': 'Vellum',
-            'リンク': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'ツール': '[Vellum](https://docs.vellum.ai)',
             'A/Bテスト': '✅ トラフィック分割',
             'コラボレーション': '✅ PRレビュー',
             'CI/CD': '✓ ウェブフック',
@@ -2550,8 +2511,7 @@ tests:
             '最適チーム': '本番デプロイ',
           },
           {
-            'ツール': 'Promptfoo',
-            'リンク': '[promptfoo.dev](https://promptfoo.dev)',
+            'ツール': '[Promptfoo](https://promptfoo.dev)',
             'A/Bテスト': '✅ マルチモデル',
             'コラボレーション': 'Git基盤',
             'CI/CD': '✅ GitHubActions',
@@ -2559,8 +2519,7 @@ tests:
             '最適チーム': 'CI/CDフォーカスチーム',
           },
           {
-            'ツール': 'Helicone',
-            'リンク': '[helicone.ai](https://www.helicone.ai)',
+            'ツール': '[Helicone](https://www.helicone.ai)',
             'A/Bテスト': '✓ 実験',
             'コラボレーション': '✅ 共有ダッシュボード',
             'CI/CD': '✓ API',
@@ -2568,8 +2527,7 @@ tests:
             '最適チーム': 'コスト意識チーム',
           },
           {
-            'ツール': 'PromptQuorum',
-            'リンク': '[promptquorum.com](https://www.promptquorum.com)',
+            'ツール': '[PromptQuorum](https://www.promptquorum.com)',
             'A/Bテスト': '✅ マルチモデル',
             'コラボレーション': '✓ 共有ワークスペース',
             'CI/CD': '✗ 無し',
@@ -2929,11 +2887,10 @@ tests:
         content: [
           '**没有单一工具在全部五个标准上表现优异。Braintrust领先评估深度；Vellum领先生产A/B测试；Promptfoo领先CI/CD集成；DSPy领先自动化优化。**',
         ],
-        columns: ['工具', '链接', 'A/B测试', '协作', 'CI/CD', '价格', '最适合'],
+        columns: ['工具', 'A/B测试', '协作', 'CI/CD', '价格', '最适合'],
         rows: [
           {
-            '工具': 'Braintrust',
-            '链接': '[braintrust.dev](https://braintrust.dev)',
+            '工具': '[Braintrust](https://braintrust.dev)',
             'A/B测试': '✅ 实验',
             '协作': '✅ 角色+仪表板',
             'CI/CD': '✓ API',
@@ -2941,8 +2898,7 @@ tests:
             '最适合': '评估驱动团队',
           },
           {
-            '工具': 'DSPy',
-            '链接': '[dspy.ai](https://dspy.ai)',
+            '工具': '[DSPy](https://dspy.ai)',
             'A/B测试': '✅ 自动化',
             '协作': 'Git基础',
             'CI/CD': '✅ 原生',
@@ -2950,8 +2906,7 @@ tests:
             '最适合': '工程密集团队',
           },
           {
-            '工具': 'PromptPerfect',
-            '链接': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            '工具': '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B测试': '⚠️ 变体仅',
             '协作': '✓ 团队计划',
             'CI/CD': '✗ 无',
@@ -2959,8 +2914,7 @@ tests:
             '最适合': '非工程用户',
           },
           {
-            '工具': 'Vellum',
-            '链接': '[docs.vellum.ai](https://docs.vellum.ai)',
+            '工具': '[Vellum](https://docs.vellum.ai)',
             'A/B测试': '✅ 流量分割',
             '协作': '✅ PR审查',
             'CI/CD': '✓ Webhooks',
@@ -2968,8 +2922,7 @@ tests:
             '最适合': '生产部署',
           },
           {
-            '工具': 'Promptfoo',
-            '链接': '[promptfoo.dev](https://promptfoo.dev)',
+            '工具': '[Promptfoo](https://promptfoo.dev)',
             'A/B测试': '✅ 多模型',
             '协作': 'Git基础',
             'CI/CD': '✅ GitHub Actions',
@@ -2977,8 +2930,7 @@ tests:
             '最适合': 'CI/CD聚焦团队',
           },
           {
-            '工具': 'Helicone',
-            '链接': '[helicone.ai](https://www.helicone.ai)',
+            '工具': '[Helicone](https://www.helicone.ai)',
             'A/B测试': '✓ 实验',
             '协作': '✅ 共享仪表板',
             'CI/CD': '✓ API',
@@ -2986,8 +2938,7 @@ tests:
             '最适合': '成本意识团队',
           },
           {
-            '工具': 'PromptQuorum',
-            '链接': '[promptquorum.com](https://www.promptquorum.com)',
+            '工具': '[PromptQuorum](https://www.promptquorum.com)',
             'A/B测试': '✅ 多模型',
             '协作': '✓ 共享工作区',
             'CI/CD': '✗ 无CI/CD',
@@ -3422,11 +3373,10 @@ tests:
         content: [
           '**لا توجد أداة واحدة تتفوق على المعايير الخمسة. Braintrust يقود في عمق التقييم؛ Vellum يقود في اختبار A/B في الإنتاج؛ Promptfoo يقود في تكامل CI/CD؛ DSPy يقود في التحسين الآلي.**',
         ],
-        columns: ['الأداة', 'الرابط', 'اختبار A/B', 'التعاون', 'CI/CD', 'الأسعار', 'مثالي لـ'],
+        columns: ['الأداة', 'اختبار A/B', 'التعاون', 'CI/CD', 'الأسعار', 'مثالي لـ'],
         rows: [
           {
-            'الأداة': 'Braintrust',
-            'الرابط': '[braintrust.dev](https://braintrust.dev)',
+            'الأداة': '[Braintrust](https://braintrust.dev)',
             'اختبار A/B': '✅ تجارب',
             'التعاون': '✅ أدوار + لوحات',
             'CI/CD': '✓ API',
@@ -3434,8 +3384,7 @@ tests:
             'مثالي لـ': 'الفرق المتمحورة حول التقييم',
           },
           {
-            'الأداة': 'DSPy',
-            'الرابط': '[dspy.ai](https://dspy.ai)',
+            'الأداة': '[DSPy](https://dspy.ai)',
             'اختبار A/B': '✅ آلي',
             'التعاون': 'مبني على Git',
             'CI/CD': '✅ أصيل',
@@ -3443,8 +3392,7 @@ tests:
             'مثالي لـ': 'الفرق التقنية العالية',
           },
           {
-            'الأداة': 'PromptPerfect',
-            'الرابط': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            'الأداة': '[PromptPerfect](https://promptperfect.jina.ai)',
             'اختبار A/B': '⚠️ متغيرات فقط',
             'التعاون': '✓ خطة Team',
             'CI/CD': '✗ لا يوجد',
@@ -3452,8 +3400,7 @@ tests:
             'مثالي لـ': 'المستخدمون غير التقنيين',
           },
           {
-            'الأداة': 'Vellum',
-            'الرابط': '[docs.vellum.ai](https://docs.vellum.ai)',
+            'الأداة': '[Vellum](https://docs.vellum.ai)',
             'اختبار A/B': '✅ تقسيم الحركة',
             'التعاون': '✅ مراجعات PR',
             'CI/CD': '✓ Webhooks',
@@ -3461,8 +3408,7 @@ tests:
             'مثالي لـ': 'نشريات الإنتاج',
           },
           {
-            'الأداة': 'Promptfoo',
-            'الرابط': '[promptfoo.dev](https://promptfoo.dev)',
+            'الأداة': '[Promptfoo](https://promptfoo.dev)',
             'اختبار A/B': '✅ متعدد النماذج',
             'التعاون': 'مبني على Git',
             'CI/CD': '✅ GitHub Actions',
@@ -3470,8 +3416,7 @@ tests:
             'مثالي لـ': 'الفرق المتمحورة حول CI/CD',
           },
           {
-            'الأداة': 'Helicone',
-            'الرابط': '[helicone.ai](https://www.helicone.ai)',
+            'الأداة': '[Helicone](https://www.helicone.ai)',
             'اختبار A/B': '✓ تجارب',
             'التعاون': '✅ لوحة مشتركة',
             'CI/CD': '✓ API',
@@ -3479,8 +3424,7 @@ tests:
             'مثالي لـ': 'الفرق الواعية بالتكاليف',
           },
           {
-            'الأداة': 'PromptQuorum',
-            'الرابط': '[promptquorum.com](https://www.promptquorum.com)',
+            'الأداة': '[PromptQuorum](https://www.promptquorum.com)',
             'اختبار A/B': '✅ متعدد النماذج',
             'التعاون': '✓ Workspace مشترك',
             'CI/CD': '✗ لا CI/CD',
@@ -3906,11 +3850,10 @@ tests:
         content: [
           '**다섯 가지 기준 모두에서 뛰어난 도구는 없습니다. Braintrust는 평가 깊이에서, Vellum은 프로덕션 A/B 테스트에서, Promptfoo는 CI/CD 통합에서, DSPy는 자동화된 최적화에서 앞서 있습니다.**',
         ],
-        columns: ['도구', '링크', 'A/B 테스트', '협업', 'CI/CD', '가격', '최적 대상'],
+        columns: ['도구', 'A/B 테스트', '협업', 'CI/CD', '가격', '최적 대상'],
         rows: [
           {
-            '도구': 'Braintrust',
-            '링크': '[braintrust.dev](https://braintrust.dev)',
+            '도구': '[Braintrust](https://braintrust.dev)',
             'A/B 테스트': '✅ 실험',
             '협업': '✅ 역할 + 대시보드',
             'CI/CD': '✓ API',
@@ -3918,8 +3861,7 @@ tests:
             '최적 대상': '평가 중심 팀',
           },
           {
-            '도구': 'DSPy',
-            '링크': '[dspy.ai](https://dspy.ai)',
+            '도구': '[DSPy](https://dspy.ai)',
             'A/B 테스트': '✅ 자동화',
             '협업': 'Git 기반',
             'CI/CD': '✅ 네이티브',
@@ -3927,8 +3869,7 @@ tests:
             '최적 대상': '고도 기술 팀',
           },
           {
-            '도구': 'PromptPerfect',
-            '링크': '[promptperfect.jina.ai](https://promptperfect.jina.ai)',
+            '도구': '[PromptPerfect](https://promptperfect.jina.ai)',
             'A/B 테스트': '⚠️ 변형만',
             '협업': '✓ Team 플랜',
             'CI/CD': '✗ 없음',
@@ -3936,8 +3877,7 @@ tests:
             '최적 대상': '비기술 사용자',
           },
           {
-            '도구': 'Vellum',
-            '링크': '[docs.vellum.ai](https://docs.vellum.ai)',
+            '도구': '[Vellum](https://docs.vellum.ai)',
             'A/B 테스트': '✅ 트래픽 분할',
             '협업': '✅ PR 검토',
             'CI/CD': '✓ 웹훅',
@@ -3945,8 +3885,7 @@ tests:
             '최적 대상': '프로덕션 배포',
           },
           {
-            '도구': 'Promptfoo',
-            '링크': '[promptfoo.dev](https://promptfoo.dev)',
+            '도구': '[Promptfoo](https://promptfoo.dev)',
             'A/B 테스트': '✅ 다중 모델',
             '협업': 'Git 기반',
             'CI/CD': '✅ GitHub Actions',
@@ -3954,8 +3893,7 @@ tests:
             '최적 대상': 'CI/CD 중심 팀',
           },
           {
-            '도구': 'Helicone',
-            '링크': '[helicone.ai](https://www.helicone.ai)',
+            '도구': '[Helicone](https://www.helicone.ai)',
             'A/B 테스트': '✓ 실험',
             '협업': '✅ 공유 대시보드',
             'CI/CD': '✓ API',
@@ -3963,8 +3901,7 @@ tests:
             '최적 대상': '비용 의식적인 팀',
           },
           {
-            '도구': 'PromptQuorum',
-            '링크': '[promptquorum.com](https://www.promptquorum.com)',
+            '도구': '[PromptQuorum](https://www.promptquorum.com)',
             'A/B 테스트': '✅ 다중 모델',
             '협업': '✓ 공유 워크스페이스',
             'CI/CD': '✗ CI/CD 없음',

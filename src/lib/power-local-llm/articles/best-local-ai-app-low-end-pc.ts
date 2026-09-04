@@ -107,11 +107,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple M1 8 GB consistently outperforms 8 GB x86 laptops across all four apps in this table. If you have access to an Apple Silicon Mac, it is the best low-RAM hardware for local AI — the unified memory architecture gives the model access to the full 8 GB without the OS overhead penalty that Windows and Linux laptops face.',
           },
         ],
-        columns: ['App', 'Link', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
+        columns: ['App', 'Min RAM', 'Best model (8GB constraint)', 'Tokens/sec (CPU-only)', 'Heat', 'Verdict'],
         rows: [
           {
-            'App': 'Ollama',
-            'Link': '[ollama.com](https://ollama.com)',
+            'App': '[Ollama](https://ollama.com)',
             'Min RAM': '6 GB',
             'Best model (8GB constraint)': 'Phi-4 Mini Q4_K_M',
             'Tokens/sec (CPU-only)': '4–14 tok/s',
@@ -119,8 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Best balance — pick first',
           },
           {
-            'App': 'Jan',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan](https://jan.ai)',
             'Min RAM': '6 GB',
             'Best model (8GB constraint)': 'Gemma 4 E2B Q4_K_M',
             'Tokens/sec (CPU-only)': '3–11 tok/s',
@@ -128,8 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Best GUI — no-terminal pick',
           },
           {
-            'App': 'llama.cpp',
-            'Link': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)',
+            'App': '[llama.cpp](https://github.com/ggml-org/llama.cpp)',
             'Min RAM': '4 GB',
             'Best model (8GB constraint)': 'SmolLM 2 1.7B Q4_K_M',
             'Tokens/sec (CPU-only)': '5–18 tok/s',
@@ -137,8 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Fastest if you compile',
           },
           {
-            'App': 'GPT4All',
-            'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)',
+            'App': '[GPT4All](https://nomic.ai/gpt4all)',
             'Min RAM': '4 GB',
             'Best model (8GB constraint)': 'Llama 3.2 1B Q4_0',
             'Tokens/sec (CPU-only)': '3–10 tok/s',
@@ -617,11 +613,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple M1 8 GB übertrifft 8-GB-x86-Laptops konsistent in allen vier Apps dieser Tabelle. Wenn Sie Zugang zu einem Apple-Silicon-Mac haben, ist es die beste Hardware mit wenig RAM für lokale KI — die Unified-Memory-Architektur gibt dem Modell Zugriff auf die vollen 8 GB ohne den OS-Overhead, den Windows- und Linux-Laptops haben.',
           },
         ],
-        columns: ['App', 'Link', 'Min. RAM', 'Bestes Modell (8-GB-Beschränkung)', 'Tokens/Sek. (CPU-only)', 'Wärme', 'Verdikt'],
+        columns: ['App', 'Min. RAM', 'Bestes Modell (8-GB-Beschränkung)', 'Tokens/Sek. (CPU-only)', 'Wärme', 'Verdikt'],
         rows: [
           {
-            'App': 'Ollama',
-            'Link': '[ollama.com](https://ollama.com)',
+            'App': '[Ollama](https://ollama.com)',
             'Min. RAM': '6 GB',
             'Bestes Modell (8-GB-Beschränkung)': 'Phi-4 Mini Q4_K_M',
             'Tokens/Sek. (CPU-only)': '4–14 Tok/Sek.',
@@ -629,8 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdikt': 'Beste Balance — zuerst wählen',
           },
           {
-            'App': 'Jan',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan](https://jan.ai)',
             'Min. RAM': '6 GB',
             'Bestes Modell (8-GB-Beschränkung)': 'Gemma 4 E2B Q4_K_M',
             'Tokens/Sek. (CPU-only)': '3–11 Tok/Sek.',
@@ -638,8 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdikt': 'Bestes GUI — terminalfreie Wahl',
           },
           {
-            'App': 'llama.cpp',
-            'Link': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)',
+            'App': '[llama.cpp](https://github.com/ggml-org/llama.cpp)',
             'Min. RAM': '4 GB',
             'Bestes Modell (8-GB-Beschränkung)': 'SmolLM 2 1.7B Q4_K_M',
             'Tokens/Sek. (CPU-only)': '5–18 Tok/Sek.',
@@ -647,8 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdikt': 'Am schnellsten bei eigener Kompilierung',
           },
           {
-            'App': 'GPT4All',
-            'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)',
+            'App': '[GPT4All](https://nomic.ai/gpt4all)',
             'Min. RAM': '4 GB',
             'Bestes Modell (8-GB-Beschränkung)': 'Llama 3.2 1B Q4_0',
             'Tokens/Sek. (CPU-only)': '3–10 Tok/Sek.',
@@ -1006,12 +998,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'note', text: 'Apple M1 8 Go surpasse régulièrement les portables x86 8 Go dans les quatre apps de ce tableau. Si vous avez accès à un Mac Apple Silicon, c\'est le meilleur matériel à faible RAM pour l\'IA locale — l\'architecture à mémoire unifiée donne au modèle l\'accès aux 8 Go complets sans la pénalité d\'overhead OS que subissent les portables Windows et Linux.' },
         ],
-        columns: ['Application', 'Lien', 'RAM min.', 'Meilleur modèle (contrainte 8 Go)', 'Tokens/s (CPU seul)', 'Chaleur', 'Verdict'],
+        columns: ['Application', 'RAM min.', 'Meilleur modèle (contrainte 8 Go)', 'Tokens/s (CPU seul)', 'Chaleur', 'Verdict'],
         rows: [
-          { 'Application': 'Ollama', 'Lien': '[ollama.com](https://ollama.com)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Phi-4 Mini Q4_K_M', 'Tokens/s (CPU seul)': '4–14 t/s', 'Chaleur': 'Faible', 'Verdict': 'Meilleur équilibre — à choisir en premier' },
-          { 'Application': 'Jan', 'Lien': '[jan.ai](https://jan.ai)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Gemma 4 E2B Q4_K_M', 'Tokens/s (CPU seul)': '3–11 t/s', 'Chaleur': 'Moyenne', 'Verdict': 'Meilleure GUI — choix sans terminal' },
-          { 'Application': 'llama.cpp', 'Lien': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'SmolLM 2 1.7B Q4_K_M', 'Tokens/s (CPU seul)': '5–18 t/s', 'Chaleur': 'Faible', 'Verdict': 'Plus rapide si vous compilez' },
-          { 'Application': 'GPT4All', 'Lien': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'Llama 3.2 1B Q4_0', 'Tokens/s (CPU seul)': '3–10 t/s', 'Chaleur': 'Faible', 'Verdict': 'Repli — aucune version depuis févr. 2025' },
+          { 'Application': '[Ollama](https://ollama.com)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Phi-4 Mini Q4_K_M', 'Tokens/s (CPU seul)': '4–14 t/s', 'Chaleur': 'Faible', 'Verdict': 'Meilleur équilibre — à choisir en premier' },
+          { 'Application': '[Jan](https://jan.ai)', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Gemma 4 E2B Q4_K_M', 'Tokens/s (CPU seul)': '3–11 t/s', 'Chaleur': 'Moyenne', 'Verdict': 'Meilleure GUI — choix sans terminal' },
+          { 'Application': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'SmolLM 2 1.7B Q4_K_M', 'Tokens/s (CPU seul)': '5–18 t/s', 'Chaleur': 'Faible', 'Verdict': 'Plus rapide si vous compilez' },
+          { 'Application': '[GPT4All](https://nomic.ai/gpt4all)', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'Llama 3.2 1B Q4_0', 'Tokens/s (CPU seul)': '3–10 t/s', 'Chaleur': 'Faible', 'Verdict': 'Repli — aucune version depuis févr. 2025' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
         imageCaption:
@@ -1285,12 +1277,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'note', text: 'Apple M1 8GBは、この表内のすべての4アプリで8GB x86ノートPCを一貫して上回ります。Apple Silicon Macが利用可能であれば、それは低RAMハードウェアでローカルAIを動かす最良の選択肢です — ユニファイドメモリアーキテクチャによって、Windows / Linuxノートが抱えるOSオーバーヘッドのペナルティなしに、モデルが8GBフルにアクセスできます。' },
         ],
-        columns: ['アプリ', 'リンク', '最低RAM', 'ベストモデル（8GB制約）', 'tok/秒（CPU専用）', '発熱', '評価'],
+        columns: ['アプリ', '最低RAM', 'ベストモデル（8GB制約）', 'tok/秒（CPU専用）', '発熱', '評価'],
         rows: [
-          { 'アプリ': 'Ollama', 'リンク': '[ollama.com](https://ollama.com)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Phi-4 Mini Q4_K_M', 'tok/秒（CPU専用）': '4〜14 tok/秒', '発熱': '低', '評価': 'バランス最良 — 最初に選ぶべき' },
-          { 'アプリ': 'Jan', 'リンク': '[jan.ai](https://jan.ai)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Gemma 4 E2B Q4_K_M', 'tok/秒（CPU専用）': '3〜11 tok/秒', '発熱': '中', '評価': '最良のGUI — ターミナル不要の選択肢' },
-          { 'アプリ': 'llama.cpp', 'リンク': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'SmolLM 2 1.7B Q4_K_M', 'tok/秒（CPU専用）': '5〜18 tok/秒', '発熱': '低', '評価': 'コンパイルできるなら最速' },
-          { 'アプリ': 'GPT4All', 'リンク': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'Llama 3.2 1B Q4_0', 'tok/秒（CPU専用）': '3〜10 tok/秒', '発熱': '低', '評価': '代替 — 2025年2月以降リリースなし' },
+          { 'アプリ': '[Ollama](https://ollama.com)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Phi-4 Mini Q4_K_M', 'tok/秒（CPU専用）': '4〜14 tok/秒', '発熱': '低', '評価': 'バランス最良 — 最初に選ぶべき' },
+          { 'アプリ': '[Jan](https://jan.ai)', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Gemma 4 E2B Q4_K_M', 'tok/秒（CPU専用）': '3〜11 tok/秒', '発熱': '中', '評価': '最良のGUI — ターミナル不要の選択肢' },
+          { 'アプリ': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'SmolLM 2 1.7B Q4_K_M', 'tok/秒（CPU専用）': '5〜18 tok/秒', '発熱': '低', '評価': 'コンパイルできるなら最速' },
+          { 'アプリ': '[GPT4All](https://nomic.ai/gpt4all)', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'Llama 3.2 1B Q4_0', 'tok/秒（CPU専用）': '3〜10 tok/秒', '発熱': '低', '評価': '代替 — 2025年2月以降リリースなし' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
         imageCaption:
@@ -1568,12 +1560,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'note', text: 'Apple M1 8GB在本表所有4个应用中始终优于8GB x86笔记本。如果可以使用Apple Silicon Mac，它是低内存本地AI硬件的最佳选择 — 统一内存架构使模型可访问完整8GB，没有Windows和Linux笔记本面临的OS开销负担。' },
         ],
-        columns: ['应用', '链接', '最低内存', '最佳模型（8GB限制）', 'tokens/秒（CPU专用）', '发热', '评判'],
+        columns: ['应用', '最低内存', '最佳模型（8GB限制）', 'tokens/秒（CPU专用）', '发热', '评判'],
         rows: [
-          { '应用': 'Ollama', '链接': '[ollama.com](https://ollama.com)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Phi-4 Mini Q4_K_M', 'tokens/秒（CPU专用）': '4–14 tok/s', '发热': '低', '评判': '最佳平衡 — 优先选择' },
-          { '应用': 'Jan', '链接': '[jan.ai](https://jan.ai)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Gemma 4 E2B Q4_K_M', 'tokens/秒（CPU专用）': '3–11 tok/s', '发热': '中', '评判': '最佳GUI — 无终端首选' },
-          { '应用': 'llama.cpp', '链接': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'SmolLM 2 1.7B Q4_K_M', 'tokens/秒（CPU专用）': '5–18 tok/s', '发热': '低', '评判': '能编译则最快' },
-          { '应用': 'GPT4All', '链接': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'Llama 3.2 1B Q4_0', 'tokens/秒（CPU专用）': '3–10 tok/s', '发热': '低', '评判': '备选 — 自2025年2月起无新版本' },
+          { '应用': '[Ollama](https://ollama.com)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Phi-4 Mini Q4_K_M', 'tokens/秒（CPU专用）': '4–14 tok/s', '发热': '低', '评判': '最佳平衡 — 优先选择' },
+          { '应用': '[Jan](https://jan.ai)', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Gemma 4 E2B Q4_K_M', 'tokens/秒（CPU专用）': '3–11 tok/s', '发热': '中', '评判': '最佳GUI — 无终端首选' },
+          { '应用': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'SmolLM 2 1.7B Q4_K_M', 'tokens/秒（CPU专用）': '5–18 tok/s', '发热': '低', '评判': '能编译则最快' },
+          { '应用': '[GPT4All](https://nomic.ai/gpt4all)', '最低内存': '4 GB', '最佳模型（8GB限制）': 'Llama 3.2 1B Q4_0', 'tokens/秒（CPU专用）': '3–10 tok/s', '发热': '低', '评判': '备选 — 自2025年2月起无新版本' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
         imageCaption:
@@ -1873,11 +1865,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El Apple M1 con 8 GB supera sistemáticamente a los portátiles x86 con 8 GB en las cuatro apps de esta tabla. Si tienes acceso a un Mac con Apple Silicon, es el mejor hardware de bajo RAM para IA local — la arquitectura de memoria unificada permite al modelo acceder a los 8 GB completos sin la penalización de overhead del SO que sufren los portátiles con Windows y Linux.',
           },
         ],
-        columns: ['App', 'Enlace', 'RAM mín.', 'Mejor modelo (límite 8 GB)', 'Tokens/s (solo CPU)', 'Calor', 'Veredicto'],
+        columns: ['App', 'RAM mín.', 'Mejor modelo (límite 8 GB)', 'Tokens/s (solo CPU)', 'Calor', 'Veredicto'],
         rows: [
           {
-            'App': 'Ollama',
-            'Enlace': '[ollama.com](https://ollama.com)',
+            'App': '[Ollama](https://ollama.com)',
             'RAM mín.': '6 GB',
             'Mejor modelo (límite 8 GB)': 'Phi-4 Mini Q4_K_M',
             'Tokens/s (solo CPU)': '4–14 tok/s',
@@ -1885,8 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'Mejor equilibrio — primera opción',
           },
           {
-            'App': 'Jan',
-            'Enlace': '[jan.ai](https://jan.ai)',
+            'App': '[Jan](https://jan.ai)',
             'RAM mín.': '6 GB',
             'Mejor modelo (límite 8 GB)': 'Gemma 4 E2B Q4_K_M',
             'Tokens/s (solo CPU)': '3–11 tok/s',
@@ -1894,8 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'Mejor GUI — opción sin terminal',
           },
           {
-            'App': 'llama.cpp',
-            'Enlace': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)',
+            'App': '[llama.cpp](https://github.com/ggml-org/llama.cpp)',
             'RAM mín.': '4 GB',
             'Mejor modelo (límite 8 GB)': 'SmolLM 2 1.7B Q4_K_M',
             'Tokens/s (solo CPU)': '5–18 tok/s',
@@ -1903,8 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'La más rápida si compilas',
           },
           {
-            'App': 'GPT4All',
-            'Enlace': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)',
+            'App': '[GPT4All](https://nomic.ai/gpt4all)',
             'RAM mín.': '4 GB',
             'Mejor modelo (límite 8 GB)': 'Llama 3.2 1B Q4_0',
             'Tokens/s (solo CPU)': '3–10 tok/s',
@@ -2366,11 +2354,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O Apple M1 com 8 GB supera consistentemente os notebooks x86 de 8 GB nos quatro apps desta tabela. Se você tem acesso a um Mac com Apple Silicon, é o melhor hardware de baixa RAM para IA local — a arquitetura de memória unificada dá ao modelo acesso aos 8 GB completos sem a penalidade de overhead do SO que os notebooks com Windows e Linux enfrentam.',
           },
         ],
-        columns: ['App', 'Link', 'RAM mín.', 'Melhor modelo (limite 8 GB)', 'Tokens/s (só CPU)', 'Calor', 'Veredicto'],
+        columns: ['App', 'RAM mín.', 'Melhor modelo (limite 8 GB)', 'Tokens/s (só CPU)', 'Calor', 'Veredicto'],
         rows: [
           {
-            'App': 'Ollama',
-            'Link': '[ollama.com](https://ollama.com)',
+            'App': '[Ollama](https://ollama.com)',
             'RAM mín.': '6 GB',
             'Melhor modelo (limite 8 GB)': 'Phi-4 Mini Q4_K_M',
             'Tokens/s (só CPU)': '4–14 tok/s',
@@ -2378,8 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'Melhor equilíbrio — primeira escolha',
           },
           {
-            'App': 'Jan',
-            'Link': '[jan.ai](https://jan.ai)',
+            'App': '[Jan](https://jan.ai)',
             'RAM mín.': '6 GB',
             'Melhor modelo (limite 8 GB)': 'Gemma 4 E2B Q4_K_M',
             'Tokens/s (só CPU)': '3–11 tok/s',
@@ -2387,8 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'Melhor GUI — opção sem terminal',
           },
           {
-            'App': 'llama.cpp',
-            'Link': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)',
+            'App': '[llama.cpp](https://github.com/ggml-org/llama.cpp)',
             'RAM mín.': '4 GB',
             'Melhor modelo (limite 8 GB)': 'SmolLM 2 1.7B Q4_K_M',
             'Tokens/s (só CPU)': '5–18 tok/s',
@@ -2396,8 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'O mais rápido se você compilar',
           },
           {
-            'App': 'GPT4All',
-            'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)',
+            'App': '[GPT4All](https://nomic.ai/gpt4all)',
             'RAM mín.': '4 GB',
             'Melhor modelo (limite 8 GB)': 'Llama 3.2 1B Q4_0',
             'Tokens/s (só CPU)': '3–10 tok/s',
@@ -2859,11 +2843,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'يتفوق Apple M1 بـ8 GB باستمرار على أجهزة اللابتوب x86 بـ8 GB في التطبيقات الأربعة في هذا الجدول. إذا كان بإمكانك الوصول إلى Mac بـApple Silicon، فهو أفضل أجهزة ذاكرة منخفضة للذكاء الاصطناعي المحلي — بنية الذاكرة الموحدة تمنح النموذج وصولاً إلى 8 GB كاملة بدون عقوبة overhead من نظام التشغيل التي تواجهها أجهزة Windows وLinux.',
           },
         ],
-        columns: ['التطبيق', 'الرابط', 'الحد الأدنى للـRAM', 'أفضل نموذج (حد 8 GB)', 'الرموز/ثانية (CPU فقط)', 'الحرارة', 'الحكم'],
+        columns: ['التطبيق', 'الحد الأدنى للـRAM', 'أفضل نموذج (حد 8 GB)', 'الرموز/ثانية (CPU فقط)', 'الحرارة', 'الحكم'],
         rows: [
           {
-            'التطبيق': 'Ollama',
-            'الرابط': '[ollama.com](https://ollama.com)',
+            'التطبيق': '[Ollama](https://ollama.com)',
             'الحد الأدنى للـRAM': '6 GB',
             'أفضل نموذج (حد 8 GB)': 'Phi-4 Mini Q4_K_M',
             'الرموز/ثانية (CPU فقط)': '4-14 رمز/ثانية',
@@ -2871,8 +2854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'أفضل توازن — الاختيار الأول',
           },
           {
-            'التطبيق': 'Jan',
-            'الرابط': '[jan.ai](https://jan.ai)',
+            'التطبيق': '[Jan](https://jan.ai)',
             'الحد الأدنى للـRAM': '6 GB',
             'أفضل نموذج (حد 8 GB)': 'Gemma 4 E2B Q4_K_M',
             'الرموز/ثانية (CPU فقط)': '3-11 رمز/ثانية',
@@ -2880,8 +2862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'أفضل واجهة رسومية — خيار بلا طرفية',
           },
           {
-            'التطبيق': 'llama.cpp',
-            'الرابط': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)',
+            'التطبيق': '[llama.cpp](https://github.com/ggml-org/llama.cpp)',
             'الحد الأدنى للـRAM': '4 GB',
             'أفضل نموذج (حد 8 GB)': 'SmolLM 2 1.7B Q4_K_M',
             'الرموز/ثانية (CPU فقط)': '5-18 رمز/ثانية',
@@ -2889,8 +2870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'الأسرع إذا جمّعت',
           },
           {
-            'التطبيق': 'GPT4All',
-            'الرابط': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)',
+            'التطبيق': '[GPT4All](https://nomic.ai/gpt4all)',
             'الحد الأدنى للـRAM': '4 GB',
             'أفضل نموذج (حد 8 GB)': 'Llama 3.2 1B Q4_0',
             'الرموز/ثانية (CPU فقط)': '3-10 رمز/ثانية',
@@ -3327,12 +3307,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '저사양 8 GB RAM PC: Ollama를 설치하고 `ollama pull phi4-mini`와 `ollama run phi4-mini`를 실행하세요. CPU에 따라 4~14 토큰/초가 나옵니다. 터미널 없는 대안은 Jan을 일반 앱처럼 설치하고 8 GB에 맞는 모델로 필터링하세요.' },
         ],
         callouts: [{ type: 'note', text: 'Apple M1 8 GB는 통합 메모리 아키텍처 덕분에 모든 앱에서 x86 8 GB 노트북보다 일관되게 성능이 뛰어납니다.' }],
-        columns: ['앱', '링크', '최소 RAM', '최적 모델 (8 GB 한도)', '토큰/초 (CPU 전용)', '발열', '평가'],
+        columns: ['앱', '최소 RAM', '최적 모델 (8 GB 한도)', '토큰/초 (CPU 전용)', '발열', '평가'],
         rows: [
-          { '앱': 'Ollama', '링크': '[ollama.com](https://ollama.com)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Phi-4 Mini Q4_K_M', '토큰/초 (CPU 전용)': '4~14 토큰/초', '발열': '낮음', '평가': '최고 균형 — 1순위 선택' },
-          { '앱': 'Jan', '링크': '[jan.ai](https://jan.ai)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Gemma 4 E2B Q4_K_M', '토큰/초 (CPU 전용)': '3~11 토큰/초', '발열': '보통', '평가': '최고의 GUI — 터미널 없는 선택' },
-          { '앱': 'llama.cpp', '링크': '[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'SmolLM 2 1.7B Q4_K_M', '토큰/초 (CPU 전용)': '5~18 토큰/초', '발열': '낮음', '평가': '빌드하면 가장 빠름' },
-          { '앱': 'GPT4All', '링크': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'Llama 3.2 1B Q4_0', '토큰/초 (CPU 전용)': '3~10 토큰/초', '발열': '낮음', '평가': '대안 — 2025년 2월 이후 릴리스 없음' },
+          { '앱': '[Ollama](https://ollama.com)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Phi-4 Mini Q4_K_M', '토큰/초 (CPU 전용)': '4~14 토큰/초', '발열': '낮음', '평가': '최고 균형 — 1순위 선택' },
+          { '앱': '[Jan](https://jan.ai)', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Gemma 4 E2B Q4_K_M', '토큰/초 (CPU 전용)': '3~11 토큰/초', '발열': '보통', '평가': '최고의 GUI — 터미널 없는 선택' },
+          { '앱': '[llama.cpp](https://github.com/ggml-org/llama.cpp)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'SmolLM 2 1.7B Q4_K_M', '토큰/초 (CPU 전용)': '5~18 토큰/초', '발열': '낮음', '평가': '빌드하면 가장 빠름' },
+          { '앱': '[GPT4All](https://nomic.ai/gpt4all)', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'Llama 3.2 1B Q4_0', '토큰/초 (CPU 전용)': '3~10 토큰/초', '발열': '낮음', '평가': '대안 — 2025년 2월 이후 릴리스 없음' },
         ],
         image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
         imageCaption:
