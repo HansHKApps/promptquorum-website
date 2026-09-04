@@ -13,7 +13,7 @@ export const app: ToolRecord = {
   platforms: ['ios', 'mac'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Proprietary',
+  license: 'Closed source',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,

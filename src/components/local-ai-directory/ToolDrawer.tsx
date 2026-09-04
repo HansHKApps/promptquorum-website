@@ -164,7 +164,7 @@ export function ToolDrawer({
                   <DetailRow label="Runs" value={app.locality === 'TODO' ? null : app.locality} />
                   <DetailRow label="Engine" value={app.engine === 'TODO' ? null : app.engine} />
                   <DetailRow label="Price" value={app.price === 'TODO' ? null : app.price} />
-                  <DetailRow label="License" value={app.license} />
+                  <DetailRow label="License" value={app.license === 'TODO' ? null : app.license} />
                   <DetailRow label="Platforms" value={joinOrUnknown(app.platforms)} />
                   <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
                   <DetailRow label="Layer" value={app.layer} />

@@ -165,7 +165,9 @@ export function ToolCard({
               </span>
             )}
           </div>
-          {app.license && <span className="rounded bg-gray-50 border border-gray-200 px-1.5 py-0.5">{app.license}</span>}
+          {app.license && app.license !== 'TODO' && (
+            <span className="rounded bg-gray-50 border border-gray-200 px-1.5 py-0.5">{app.license}</span>
+          )}
         </div>
 
         {app.addedDate && (

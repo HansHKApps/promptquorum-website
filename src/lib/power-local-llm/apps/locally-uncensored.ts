@@ -13,7 +13,7 @@ export const app: ToolRecord = {
   platforms: ['win'],
   worksWith: null,
   engine: 'builtin',
-  license: 'AGPL-3.0',
+  license: 'AGPL 3.0',
   price: 'paid',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 1400,
