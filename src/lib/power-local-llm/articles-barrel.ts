@@ -5,6 +5,16 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
+import { article as a_aori_ai_personal_agent_review } from './articles/aori-ai-personal-agent-review'
+import { article as a_rapr_ai_review_2026 } from './articles/rapr-ai-review-2026'
+import { article as a_open_felix_review_2026 } from './articles/open-felix-review-2026'
+import { article as a_bobe_review_2026 } from './articles/bobe-review-2026'
+import { article as a_osaurus_ai_review_2026 } from './articles/osaurus-ai-review-2026'
+import { article as a_hanoki_review_2026 } from './articles/hanoki-review-2026'
+import { article as a_voxa_review_2026 } from './articles/voxa-review-2026'
+import { article as a_jarvis_mac_review_2026 } from './articles/jarvis-mac-review-2026'
+import { article as a_locally_ai_review_2026 } from './articles/locally-ai-review-2026'
+import { article as a_arbiter_local_ai_chat_review_2026 } from './articles/arbiter-local-ai-chat-review-2026'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
@@ -246,4 +256,16 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'us-state-ai-employment-laws-compliance':            a_us_state_ai_employment_laws_compliance,
   // Enclave AI review — 2026-09-03
   'enclave-ai-review-2026':                            a_enclave_ai_review_2026,
+  // Aori, RAPR AI, Open Felix, BoBe, Osaurus, Hanoki, Voxa, Jarvis (Mac),
+  // Locally AI, Arbiter reviews — 2026-09-04
+  'aori-ai-personal-agent-review':                     a_aori_ai_personal_agent_review,
+  'rapr-ai-review-2026':                                a_rapr_ai_review_2026,
+  'open-felix-review-2026':                             a_open_felix_review_2026,
+  'bobe-review-2026':                                   a_bobe_review_2026,
+  'osaurus-ai-review-2026':                             a_osaurus_ai_review_2026,
+  'hanoki-review-2026':                                 a_hanoki_review_2026,
+  'voxa-review-2026':                                   a_voxa_review_2026,
+  'jarvis-mac-review-2026':                             a_jarvis_mac_review_2026,
+  'locally-ai-review-2026':                             a_locally_ai_review_2026,
+  'arbiter-local-ai-chat-review-2026':                  a_arbiter_local_ai_chat_review_2026,
 }

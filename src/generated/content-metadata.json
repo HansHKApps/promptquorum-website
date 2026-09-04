@@ -8263,6 +8263,186 @@
         "ko"
       ],
       "images": []
+    },
+    "aori-ai-personal-agent-review": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "rapr-ai-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "open-felix-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "bobe-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "osaurus-ai-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hanoki-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "voxa-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "jarvis-mac-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "locally-ai-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "arbiter-local-ai-chat-review-2026": {
+      "dateModified": "2026-09-04",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {
