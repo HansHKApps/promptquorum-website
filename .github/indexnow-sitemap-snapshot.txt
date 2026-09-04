@@ -276,6 +276,7 @@ https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
+https://www.promptquorum.com/power-local-llm/chatty-mini-review
 https://www.promptquorum.com/power-local-llm/cloud-gpu-rental-guide-2026
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
 https://www.promptquorum.com/power-local-llm/cursor-vs-windsurf-vs-copilot-cline
