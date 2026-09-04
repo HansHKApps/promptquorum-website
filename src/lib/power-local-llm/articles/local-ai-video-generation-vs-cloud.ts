@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ar.webp',
     title: 'Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار بـ 17 دولارًا',
     seoTitle: 'الفيديو السحابي مقابل المحلي بالذكاء الاصطناعي 2026: invideo مقابل Wan 2.2 وLTX-2',
     intro:
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-de.webp',
     title: 'Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere kostet 17 $',
     seoTitle: 'Cloud vs. lokale KI-Videos 2026: invideo vs. Wan 2.2 & LTX-2',
     intro:
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-es.webp',
     title: 'Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra Cuesta $17',
     seoTitle: 'IA de Video en la Nube vs Local 2026: invideo vs Wan 2.2 y LTX-2',
     intro:
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-fr.webp',
     title: 'Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l\'autre coûte 17 $',
     seoTitle: 'Vidéo IA cloud vs locale 2026 : invideo vs Wan 2.2 & LTX-2',
     intro:
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ja.webp',
     title: 'Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は$17',
     seoTitle: 'クラウドvsローカルAI動画2026：invideo vs Wan 2.2＆LTX-2',
     intro:
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-ko.webp',
     title: 'Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 $17',
     seoTitle: '클라우드 vs 로컬 AI 비디오 2026: invideo vs Wan 2.2 & LTX-2',
     intro:
@@ -2436,7 +2436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-pt.webp',
     title: 'Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra Custa $17',
     seoTitle: 'IA de Vídeo na Nuvem vs Local 2026: invideo vs Wan 2.2 e LTX-2',
     intro:
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-video-generation-vs-cloud-hero-zh.webp',
     title: 'Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个 17 美元',
     seoTitle: '云端 vs 本地 AI 视频 2026：invideo 对比 Wan 2.2 与 LTX-2',
     intro:
