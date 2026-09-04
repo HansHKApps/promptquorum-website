@@ -14,6 +14,7 @@ import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon } from './icons'
+import { FILTER_VALUE_LABELS } from './FilterBar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 
@@ -36,6 +37,17 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
 function joinOrUnknown(values: string[] | null): ReactNode {
   if (!values || values.length === 0) return null
   return values.join(', ')
+}
+
+/** Renders the reader-facing label for an enum value, never the raw key ("rag", "external"). */
+function labelFor(group: keyof typeof FILTER_VALUE_LABELS, value: string | null): ReactNode {
+  if (!value || value === 'TODO') return null
+  return FILTER_VALUE_LABELS[group]?.[value] ?? value
+}
+
+function labelList(group: keyof typeof FILTER_VALUE_LABELS, values: string[] | null): ReactNode {
+  if (!values || values.length === 0) return null
+  return values.map((v) => FILTER_VALUE_LABELS[group]?.[v] ?? v).join(', ')
 }
 
 function FounderClaimBox({ appName }: { appName: string }) {
@@ -161,13 +173,13 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
-                  <DetailRow label="Runs" value={app.locality === 'TODO' ? null : app.locality} />
-                  <DetailRow label="Engine" value={app.engine === 'TODO' ? null : app.engine} />
-                  <DetailRow label="Price" value={app.price === 'TODO' ? null : app.price} />
+                  <DetailRow label="Runs" value={labelFor('locality', app.locality)} />
+                  <DetailRow label="Engine" value={labelFor('engine', app.engine)} />
+                  <DetailRow label="Price" value={labelFor('price', app.price)} />
                   <DetailRow label="License" value={app.license === 'TODO' ? null : app.license} />
-                  <DetailRow label="Platforms" value={joinOrUnknown(app.platforms)} />
+                  <DetailRow label="Platforms" value={labelList('platforms', app.platforms)} />
                   <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
-                  <DetailRow label="Layer" value={app.layer} />
+                  <DetailRow label="Layer" value={labelFor('layer', app.layer)} />
                   <DetailRow
                     label="Hardware"
                     value={computeHardwareDisplay(app.hardware, machine).known ? <HardwareBlock hardware={app.hardware} machine={machine} compact /> : null}
