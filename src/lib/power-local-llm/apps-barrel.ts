@@ -117,6 +117,7 @@ import { app as app_anythingllm_mobile } from './apps/anythingllm-mobile'
 import { app as app_enclave_ai } from './apps/enclave-ai'
 import { app as app_locally_ai } from './apps/locally-ai'
 import { app as app_arbiter } from './apps/arbiter'
+import { app as app_loci_ai } from './apps/loci-ai'
 import { app as app_stable_diffusion } from './apps/stable-diffusion'
 import { app as app_comfyui } from './apps/comfyui'
 import { app as app_automatic1111_webui } from './apps/automatic1111-webui'
@@ -248,6 +249,7 @@ export const localAiApps: ToolRecord[] = [
   app_enclave_ai,
   app_locally_ai,
   app_arbiter,
+  app_loci_ai,
   app_stable_diffusion,
   app_comfyui,
   app_automatic1111_webui,
