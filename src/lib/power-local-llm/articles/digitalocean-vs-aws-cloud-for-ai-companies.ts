@@ -407,6 +407,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Companies already invested in AWS, or that need its broader ecosystem: managed-AI services, multi-region deployment, or enterprise compliance certifications.',
         avoidIf: 'You are a small team that only needs raw GPU access — AWS\'s IAM/VPC setup and console complexity add real onboarding time DigitalOcean does not require.',
         costNote: 'On-demand P5 pricing ($6.88/GPU-hr) is roughly double DigitalOcean\'s — the premium buys AWS\'s breadth of services, not faster or better GPUs.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'Check AWS pricing',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -416,6 +425,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Companies running large-scale, multi-node AI training that benefits from dense 8-GPU nodes, Kubernetes-native orchestration, and zero egress fees.',
         avoidIf: 'You need a single GPU, a general-purpose cloud (storage, databases, web hosting alongside compute), or a smaller/cheaper entry point — CoreWeave is not general-purpose.',
         costNote: 'The 8-GPU-node-only model means CoreWeave is priced for scale — a team needing 1-2 GPUs pays for 8 regardless, which is the opposite trade-off from DigitalOcean or RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'Check CoreWeave pricing',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -443,6 +461,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'ML researchers and teams running serious training workloads who want a GPU-first platform with preconfigured environments and zero egress fees.',
         avoidIf: 'You need a small, flexible single-GPU entry point — Lambda\'s SXM tier is 8-GPU-only, the same trade-off as CoreWeave.',
         costNote: 'The reported $35B Anthropic deal (terms undisclosed) is a scale signal, not a guaranteed price advantage for a small buyer — Lambda\'s published self-serve rates are what a smaller AI company will actually pay.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Check Lambda pricing',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -452,6 +479,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Teams evaluating TPUs as a GPU alternative, or already standardized on Vertex AI, BigQuery, or the Gemini ecosystem.',
         avoidIf: 'You have no interest in TPUs and only need GPUs — Google Cloud\'s on-demand GPU rate is higher than DigitalOcean\'s, RunPod\'s, or AWS\'s.',
         costNote: 'Reported on-demand rates for the A3 series vary more widely by source and commitment level than most providers here — verify the current rate for your specific region and machine type before budgeting.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Check Google Cloud pricing',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -461,6 +497,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Companies whose product depends on the Azure OpenAI Service, or existing Microsoft enterprise customers consolidating procurement onto one vendor.',
         avoidIf: 'You have no Azure OpenAI Service or Microsoft-ecosystem dependency — the per-GPU rate is the highest on this page with no compensating advantage for a GPU-only workload.',
         costNote: 'At the full 8-GPU node level, Azure\'s roughly $98/hr price is close to AWS and Google Cloud — the higher per-GPU headline matters most for teams renting single or partial GPUs, not full nodes.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Check Microsoft Azure pricing',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -470,6 +515,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Companies running large training clusters where flat, predictable per-GPU pricing, low egress, and RDMA networking matter more than a broad managed-AI service catalog — and companies already on Oracle\'s database/enterprise stack.',
         avoidIf: 'You need Oracle\'s specific managed-AI catalog breadth, or want the widest possible instance/region catalog — OCI\'s catalog is narrower than AWS\'s or Google Cloud\'s.',
         costNote: 'The 10 TB free egress allowance is 100x the 100 GB free tier on AWS, Azure, and Google Cloud — verify the current allowance before budgeting, since free tiers are one of the more frequently adjusted terms across all hyperscalers.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Check Oracle Cloud Infrastructure pricing',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -1057,6 +1111,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Unternehmen, die bereits in AWS investiert sind oder dessen breiteres Ökosystem brauchen: verwaltete KI-Dienste, Multi-Region-Deployment oder Enterprise-Compliance-Zertifizierungen.',
         avoidIf: 'Sie ein kleines Team sind, das nur rohen GPU-Zugang braucht — AWS\' IAM/VPC-Setup und Konsolen-Komplexität kosten echte Einarbeitungszeit, die DigitalOcean nicht verlangt.',
         costNote: 'Die On-Demand-P5-Preise ($6,88/GPU-Std.) sind etwa doppelt so hoch wie bei DigitalOcean — der Aufpreis kauft die Breite der AWS-Dienste, nicht schnellere oder bessere GPUs.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'AWS-Preise prüfen',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -1066,6 +1129,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Unternehmen mit groß angelegtem, Multi-Node-KI-Training, das von dichten 8-GPU-Knoten, Kubernetes-nativer Orchestrierung und null Egress-Gebühren profitiert.',
         avoidIf: 'Sie eine einzelne GPU, eine Allzweck-Cloud (Speicher, Datenbanken, Webhosting neben Rechenleistung) oder einen kleineren/günstigeren Einstiegspunkt brauchen — CoreWeave ist nicht allzweckfähig.',
         costNote: 'Das reine 8-GPU-Knoten-Modell bedeutet: CoreWeave ist für Skalierung bepreist — ein Team mit Bedarf an 1-2 GPUs zahlt trotzdem für 8, der Gegenentwurf zu DigitalOcean oder RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'CoreWeave-Preise prüfen',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -1093,6 +1165,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'ML-Forscher und Teams mit ernsthaften Trainings-Workloads, die eine GPU-first-Plattform mit vorkonfigurierten Umgebungen und null Egress-Gebühren wollen.',
         avoidIf: 'Sie einen kleinen, flexiblen Einzel-GPU-Einstieg brauchen — Lambdas SXM-Stufe ist nur-8-GPU, derselbe Trade-off wie bei CoreWeave.',
         costNote: 'Der gemeldete $35-Mrd.-Anthropic-Deal (Bedingungen unbekannt) ist ein Maßstabssignal, kein garantierter Preisvorteil für einen kleinen Käufer — Lambdas veröffentlichte Self-Service-Preise sind das, was ein kleineres KI-Unternehmen tatsächlich zahlt.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Lambda-Preise prüfen',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -1102,6 +1183,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Teams, die TPUs als GPU-Alternative evaluieren oder bereits auf Vertex AI, BigQuery oder dem Gemini-Ökosystem standardisiert sind.',
         avoidIf: 'Sie kein Interesse an TPUs haben und nur GPUs brauchen — Google Clouds On-Demand-GPU-Rate ist höher als bei DigitalOcean, RunPod oder AWS.',
         costNote: 'Berichtete On-Demand-Raten für die A3-Serie variieren stärker nach Quelle und Verpflichtungsgrad als bei den meisten Anbietern hier — prüfen Sie die aktuelle Rate für Ihre spezifische Region und Maschinentyp vor der Budgetierung.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Google Cloud-Preise prüfen',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -1111,6 +1201,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Unternehmen, deren Produkt vom Azure OpenAI Service abhängt, oder bestehende Microsoft-Enterprise-Kunden, die die Beschaffung auf einen Anbieter konsolidieren.',
         avoidIf: 'Sie keine Abhängigkeit vom Azure OpenAI Service oder Microsoft-Ökosystem haben — die Pro-GPU-Rate ist die höchste auf dieser Seite ohne ausgleichenden Vorteil für eine reine GPU-Workload.',
         costNote: 'Auf Ebene des vollen 8-GPU-Knotens liegt Azures Preis von rund $98/Std. nahe an AWS und Google Cloud — der höhere Pro-GPU-Listenpreis zählt vor allem für Teams, die einzelne oder Teil-GPUs mieten, nicht ganze Knoten.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Microsoft Azure-Preise prüfen',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -1120,6 +1219,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Unternehmen mit großen Trainingsclustern, bei denen pauschale, planbare Pro-GPU-Preise, niedriger Egress und RDMA-Networking wichtiger sind als ein breiter verwalteter KI-Dienstkatalog — und Unternehmen, die bereits auf Oracles Datenbank-/Enterprise-Stack sind.',
         avoidIf: 'Sie Oracles spezifische Breite an verwalteten KI-Diensten brauchen oder den breitestmöglichen Instanz-/Regionskatalog wollen — OCIs Katalog ist schmaler als der von AWS oder Google Cloud.',
         costNote: 'Das freie Egress-Kontingent von 10 TB ist 100-mal so hoch wie das 100-GB-Freikontingent bei AWS, Azure und Google Cloud — prüfen Sie das aktuelle Kontingent vor der Budgetierung, da Freikontingente zu den häufiger angepassten Bedingungen aller Hyperscaler gehören.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Oracle Cloud Infrastructure-Preise prüfen',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -1707,6 +1815,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Entreprises déjà investies dans AWS, ou ayant besoin de son écosystème plus large : services IA gérés, déploiement multi-régions, ou certifications de conformité entreprise.',
         avoidIf: 'Vous êtes une petite équipe n\'ayant besoin que d\'un accès GPU brut — la configuration IAM/VPC et la complexité de la console d\'AWS ajoutent un temps d\'intégration réel que DigitalOcean n\'exige pas.',
         costNote: 'Le tarif P5 à la demande ($6,88/h par GPU) est environ le double de la tarification à la demande de DigitalOcean — le surcoût achète l\'étendue des services d\'AWS, pas des GPU plus rapides ou meilleurs.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'Vérifier les prix AWS',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -1716,6 +1833,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Entreprises menant un entraînement IA multi-nœuds à grande échelle qui bénéficient de nœuds denses à 8 GPU, d\'une orchestration Kubernetes native et de zéro frais d\'egress.',
         avoidIf: 'Vous avez besoin d\'un seul GPU, d\'un cloud généraliste (stockage, bases de données, hébergement web en plus du calcul), ou d\'un point d\'entrée plus petit/moins cher — CoreWeave n\'est pas généraliste.',
         costNote: 'Le modèle exclusivement en nœud de 8 GPU signifie que CoreWeave est tarifé pour l\'échelle — une équipe ayant besoin de 1-2 GPU paie quand même pour 8, l\'arbitrage inverse de DigitalOcean ou RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'Vérifier les prix CoreWeave',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -1743,6 +1869,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Chercheurs ML et équipes menant des charges d\'entraînement sérieuses qui veulent une plateforme GPU-first avec environnements préconfigurés et zéro frais d\'egress.',
         avoidIf: 'Vous avez besoin d\'un point d\'entrée GPU unique, petit et flexible — le niveau SXM de Lambda est exclusivement en 8 GPU, le même arbitrage que CoreWeave.',
         costNote: 'L\'accord rapporté à $35 Md avec Anthropic (conditions non divulguées) est un signal d\'échelle, pas un avantage de prix garanti pour un petit acheteur — les tarifs libre-service publiés de Lambda sont ce qu\'une entreprise IA plus petite paiera réellement.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Vérifier les prix Lambda',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -1752,6 +1887,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Équipes évaluant les TPU comme alternative aux GPU, ou déjà standardisées sur Vertex AI, BigQuery, ou l\'écosystème Gemini.',
         avoidIf: 'Vous n\'avez aucun intérêt pour les TPU et n\'avez besoin que de GPU — le tarif GPU à la demande de Google Cloud est plus élevé que celui de DigitalOcean, RunPod ou AWS.',
         costNote: 'Les tarifs à la demande rapportés pour la série A3 varient plus largement selon la source et le niveau d\'engagement que la plupart des fournisseurs ici — vérifiez le tarif actuel pour votre région et type de machine avant de budgétiser.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Vérifier les prix Google Cloud',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -1761,6 +1905,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Entreprises dont le produit dépend de l\'Azure OpenAI Service, ou clientes entreprise Microsoft existantes consolidant leurs achats sur un seul fournisseur.',
         avoidIf: 'Vous n\'avez aucune dépendance à l\'Azure OpenAI Service ou à l\'écosystème Microsoft — le tarif par GPU est le plus élevé de cette page sans avantage compensatoire pour une charge purement GPU.',
         costNote: 'Au niveau du nœud complet de 8 GPU, le prix d\'Azure d\'environ $98/h est proche d\'AWS et Google Cloud — le tarif affiché par GPU plus élevé compte surtout pour les équipes louant des GPU isolés ou partiels, pas des nœuds entiers.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Vérifier les prix Microsoft Azure',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -1770,6 +1923,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Entreprises gérant de grands clusters d\'entraînement où le prix fixe par GPU, l\'egress bas et le réseau RDMA comptent plus qu\'un large catalogue de services IA gérés — et entreprises déjà sur la pile base de données/entreprise d\'Oracle.',
         avoidIf: 'Vous avez besoin de l\'ampleur du catalogue IA géré spécifique d\'Oracle, ou voulez le catalogue d\'instances/régions le plus large possible — le catalogue d\'OCI est plus étroit que celui d\'AWS ou de Google Cloud.',
         costNote: 'Le quota d\'egress gratuit de 10 To est 100 fois supérieur au palier gratuit de 100 Go chez AWS, Azure et Google Cloud — vérifiez le quota actuel avant de budgétiser, car les paliers gratuits comptent parmi les conditions les plus fréquemment ajustées de tous les hyperscalers.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Vérifier les prix Oracle Cloud Infrastructure',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -2357,6 +2519,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas ya invertidas en AWS, o que necesitan su ecosistema más amplio: servicios de IA gestionados, despliegue multi-región, o certificaciones de cumplimiento empresarial.',
         avoidIf: 'Es un equipo pequeño que solo necesita acceso GPU bruto — la configuración IAM/VPC y la complejidad de la consola de AWS añaden tiempo real de incorporación que DigitalOcean no exige.',
         costNote: 'El precio P5 bajo demanda ($6.88/h por GPU) es aproximadamente el doble de la tarifa bajo demanda de DigitalOcean — el sobreprecio paga la amplitud de servicios de AWS, no GPU más rápidas o mejores.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'Consultar precios de AWS',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -2366,6 +2537,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas con entrenamiento de IA multi-nodo a gran escala que se benefician de nodos densos de 8 GPU, orquestación nativa de Kubernetes y cero tarifas de egress.',
         avoidIf: 'Necesita una sola GPU, una nube de propósito general (almacenamiento, bases de datos, hosting web además de cómputo), o un punto de entrada más pequeño/barato — CoreWeave no es de propósito general.',
         costNote: 'El modelo exclusivo de nodo de 8 GPU significa que CoreWeave está fijado en precio para la escala — un equipo que necesita 1-2 GPU igualmente paga por 8, el trade-off opuesto a DigitalOcean o RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'Consultar precios de CoreWeave',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -2393,6 +2573,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Investigadores de ML y equipos con cargas de entrenamiento serias que quieren una plataforma GPU-first con entornos preconfigurados y cero tarifas de egress.',
         avoidIf: 'Necesita un punto de entrada de una sola GPU pequeño y flexible — el nivel SXM de Lambda es solo de 8 GPU, el mismo trade-off que CoreWeave.',
         costNote: 'El acuerdo reportado de $35 mil millones con Anthropic (condiciones no divulgadas) es una señal de escala, no una ventaja de precio garantizada para un comprador pequeño — las tarifas de autoservicio publicadas de Lambda son lo que una empresa de IA más pequeña realmente pagará.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Consultar precios de Lambda',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -2402,6 +2591,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Equipos que evalúan TPU como alternativa a GPU, o ya estandarizados en Vertex AI, BigQuery, o el ecosistema Gemini.',
         avoidIf: 'No tiene interés en TPU y solo necesita GPU — la tarifa de GPU bajo demanda de Google Cloud es más alta que la de DigitalOcean, RunPod o AWS.',
         costNote: 'Las tarifas bajo demanda reportadas para la serie A3 varían más ampliamente según la fuente y el nivel de compromiso que la mayoría de los proveedores aquí — verifique la tarifa actual para su región y tipo de máquina antes de presupuestar.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Consultar precios de Google Cloud',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -2411,6 +2609,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas cuyo producto depende del Azure OpenAI Service, o clientes empresariales de Microsoft existentes que consolidan sus compras en un solo proveedor.',
         avoidIf: 'No tiene dependencia del Azure OpenAI Service ni del ecosistema Microsoft — la tarifa por GPU es la más alta de esta página sin ventaja compensatoria para una carga puramente GPU.',
         costNote: 'A nivel de nodo completo de 8 GPU, el precio de Azure de aproximadamente $98/h está cerca de AWS y Google Cloud — la tarifa de lista por GPU más alta importa sobre todo a equipos que alquilan GPU sueltas o parciales, no nodos completos.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Consultar precios de Microsoft Azure',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -2420,6 +2627,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas con grandes clústeres de entrenamiento donde el precio fijo por GPU, el egress bajo y la red RDMA importan más que un amplio catálogo de IA gestionado — y empresas ya en el stack de bases de datos/empresarial de Oracle.',
         avoidIf: 'Necesita la amplitud específica del catálogo de IA gestionado de Oracle, o quiere el catálogo de instancias/regiones más amplio posible — el catálogo de OCI es más limitado que el de AWS o Google Cloud.',
         costNote: 'La cuota de egress gratis de 10 TB es 100 veces mayor que el nivel gratuito de 100 GB en AWS, Azure y Google Cloud — verifique la cuota actual antes de presupuestar, ya que los niveles gratuitos son una de las condiciones que más se ajustan entre todos los hyperscalers.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Consultar precios de Oracle Cloud Infrastructure',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -3007,6 +3223,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas já investidas na AWS, ou que precisam de seu ecossistema mais amplo: serviços de IA gerenciados, implantação multi-região, ou certificações de conformidade empresarial.',
         avoidIf: 'Você é uma equipe pequena que só precisa de acesso GPU bruto — a configuração IAM/VPC e a complexidade do console da AWS somam tempo real de integração que o DigitalOcean não exige.',
         costNote: 'O preço P5 sob demanda ($6,88/h por GPU) é cerca do dobro da tarifa sob demanda do DigitalOcean — o valor extra paga a amplitude dos serviços da AWS, não GPUs mais rápidas ou melhores.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'Ver preços da AWS',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -3016,6 +3241,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas com treinamento de IA multi-nó em grande escala que se beneficiam de nós densos de 8 GPUs, orquestração nativa do Kubernetes e zero taxas de egress.',
         avoidIf: 'Você precisa de uma única GPU, uma nuvem de propósito geral (armazenamento, bancos de dados, hospedagem web além de computação), ou um ponto de entrada menor/mais barato — a CoreWeave não é de propósito geral.',
         costNote: 'O modelo exclusivo de nó de 8 GPUs significa que a CoreWeave tem preço para escala — uma equipe que precisa de 1-2 GPUs paga mesmo assim por 8, o trade-off oposto do DigitalOcean ou RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'Ver preços da CoreWeave',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -3043,6 +3277,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Pesquisadores de ML e equipes com cargas de treinamento sérias que querem uma plataforma GPU-first com ambientes pré-configurados e zero taxas de egress.',
         avoidIf: 'Você precisa de um ponto de entrada pequeno e flexível de uma única GPU — o nível SXM da Lambda é só de 8 GPUs, o mesmo trade-off da CoreWeave.',
         costNote: 'O acordo reportado de $35 bi com a Anthropic (condições não divulgadas) é um sinal de escala, não uma vantagem de preço garantida para um comprador pequeno — as tarifas de autoatendimento publicadas pela Lambda são o que uma empresa de IA menor realmente vai pagar.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Ver preços da Lambda',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -3052,6 +3295,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Equipes avaliando TPUs como alternativa a GPUs, ou já padronizadas no Vertex AI, BigQuery, ou no ecossistema Gemini.',
         avoidIf: 'Você não tem interesse em TPUs e só precisa de GPUs — a tarifa de GPU sob demanda do Google Cloud é mais alta que a do DigitalOcean, RunPod ou AWS.',
         costNote: 'As tarifas sob demanda relatadas para a série A3 variam mais amplamente por fonte e nível de compromisso do que a maioria dos provedores aqui — verifique a tarifa atual para sua região e tipo de máquina antes de orçar.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Ver preços da Google Cloud',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -3061,6 +3313,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas cujo produto depende do Azure OpenAI Service, ou clientes empresariais Microsoft existentes consolidando compras em um único fornecedor.',
         avoidIf: 'Você não tem dependência do Azure OpenAI Service ou do ecossistema Microsoft — a tarifa por GPU é a mais alta desta página sem vantagem compensatória para uma carga puramente GPU.',
         costNote: 'No nível de nó completo de 8 GPUs, o preço da Azure de cerca de $98/h fica próximo de AWS e Google Cloud — a tarifa de tabela por GPU mais alta importa principalmente para equipes que alugam GPUs isoladas ou parciais, não nós completos.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Ver preços da Microsoft Azure',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -3070,6 +3331,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Empresas com grandes clusters de treinamento onde preço fixo por GPU, egress baixo e rede RDMA importam mais do que um amplo catálogo de IA gerenciado — e empresas já na pilha de banco de dados/empresarial da Oracle.',
         avoidIf: 'Você precisa da amplitude específica do catálogo de IA gerenciado da Oracle, ou quer o catálogo de instâncias/regiões mais amplo possível — o catálogo da OCI é mais restrito que o da AWS ou do Google Cloud.',
         costNote: 'A cota de egress grátis de 10 TB é 100 vezes maior que o nível grátis de 100 GB na AWS, Azure e Google Cloud — verifique a cota atual antes de orçar, já que níveis grátis estão entre as condições mais frequentemente ajustadas de todos os hyperscalers.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Ver preços da Oracle Cloud Infrastructure',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -3657,6 +3927,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'すでにAWSに投資している、あるいはより広いエコシステム——マネージドAIサービス、マルチリージョンデプロイ、エンタープライズコンプライアンス認証——を必要とする企業。',
         avoidIf: '生のGPUアクセスのみが必要な小規模チームの場合——AWSのIAM/VPC設定とコンソールの複雑さは、DigitalOceanが要求しない実際のオンボーディング時間を追加します。',
         costNote: 'オンデマンドP5価格（GPUあたり$6.88/時）はDigitalOceanのオンデマンドレートのおよそ2倍です——その上乗せ分はより速い、あるいはより良いGPUではなく、AWSのサービスの幅を買っています。',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'AWSの価格を確認',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -3666,6 +3945,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '密な8GPUノード、Kubernetesネイティブなオーケストレーション、egress料金ゼロの恩恵を受ける、大規模でマルチノードのAI学習を行う企業。',
         avoidIf: '単一のGPU、汎用クラウド（計算に加えてストレージ、データベース、Webホスティング）、またはより小さく安い入門点が必要な場合——CoreWeaveは汎用ではありません。',
         costNote: '8GPUノード限定モデルは、CoreWeaveが規模向けに価格設定されていることを意味します——1〜2基のGPUが必要なチームでも8基分を支払うことになり、DigitalOceanやRunPodとは正反対のトレードオフです。',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'CoreWeaveの価格を確認',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -3693,6 +3981,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '事前設定された環境とegress料金ゼロを備えたGPU-firstプラットフォームを求める、本格的な学習ワークロードを行うML研究者とチーム。',
         avoidIf: '小規模で柔軟な単一GPUの入門点が必要な場合——LambdaのSXM階層はCoreWeaveと同じトレードオフで8GPU限定です。',
         costNote: '報道された$350億のAnthropic契約（条件不明）は規模の兆候であり、小規模な購入者に対する保証された価格優位性ではありません——Lambdaが公開しているセルフサービス価格こそが、より小規模なAI企業が実際に支払う金額です。',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Lambdaの価格を確認',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -3702,6 +3999,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'GPUの代替としてTPUを評価している、またはすでにVertex AI、BigQuery、Geminiエコシステムに標準化しているチーム。',
         avoidIf: 'TPUに興味がなく、GPUのみが必要な場合——Google CloudのオンデマンドGPUレートはDigitalOcean、RunPod、AWSより高いです。',
         costNote: 'A3シリーズの報告されているオンデマンドレートは、ここにあるほとんどのプロバイダーよりも出典やコミットメントレベルによって幅広く変動します——予算を組む前に、自社の特定のリージョンとマシンタイプの現在のレートを確認してください。',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Google Cloudの価格を確認',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -3711,6 +4017,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '製品がAzure OpenAI Serviceに依存している企業、または調達を1社に統合しようとしている既存のMicrosoftエンタープライズ顧客。',
         avoidIf: 'Azure OpenAI ServiceやMicrosoftエコシステムへの依存がない場合——GPUあたりのレートはこのページで最も高く、純粋なGPUワークロードに対する見返りの利点がありません。',
         costNote: 'フル8GPUノードのレベルでは、Azureの約$98/時の価格はAWSやGoogle Cloudに近い水準です——GPUあたりの高い表示価格が重要になるのは、ノード全体ではなく単一または部分的なGPUをレンタルするチームにとってです。',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Microsoft Azureの価格を確認',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -3720,6 +4035,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '一律のGPUあたり価格、低いegress、RDMAネットワーキングが、幅広いマネージドAIサービスカタログよりも重要な、大規模な学習クラスタを運用する企業、およびすでにOracleのデータベース/エンタープライズスタック上にある企業。',
         avoidIf: 'Oracle特有のマネージドAIカタログの幅が必要な場合、または可能な限り幅広いインスタンス/リージョンのカタログが欲しい場合——OCIのカタログはAWSやGoogle Cloudより狭いです。',
         costNote: '10TBの無料egress枠は、AWS、Azure、Google Cloudの100GB無料枠の100倍です——無料枠はすべてのハイパースケーラーの中で最も頻繁に調整される条件の1つであるため、予算を組む前に現在の枠を確認してください。',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Oracle Cloud Infrastructureの価格を確認',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -4307,6 +4631,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '已经投入 AWS 的公司，或需要其更广泛生态系统的公司：托管 AI 服务、多区域部署，或企业合规认证。',
         avoidIf: '你是只需要原始 GPU 访问的小团队——AWS 的 IAM/VPC 配置和控制台复杂度会增加 DigitalOcean 不需要的实际上手时间。',
         costNote: '按需 P5 价格（每 GPU $6.88/小时）大约是 DigitalOcean 按需价格的两倍——这部分溢价买的是 AWS 服务的广度，而不是更快或更好的 GPU。',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: '查看 AWS 价格',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -4316,6 +4649,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '受益于密集 8 GPU 节点、Kubernetes 原生编排和零 egress 费用的大规模多节点 AI 训练公司。',
         avoidIf: '你需要单块 GPU、通用云服务（除计算外还有存储、数据库、网站托管），或更小/更便宜的入门点——CoreWeave 不是通用型的。',
         costNote: '仅提供 8 GPU 节点的模式意味着 CoreWeave 是为规模定价的——只需要 1-2 块 GPU 的团队仍要为 8 块付费，这与 DigitalOcean 或 RunPod 的权衡正好相反。',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: '查看 CoreWeave 价格',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -4343,6 +4685,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '希望获得具有预配置环境和零 egress 费用的 GPU 优先平台的 ML 研究人员和运行严肃训练负载的团队。',
         avoidIf: '你需要小型、灵活的单 GPU 入门点——Lambda 的 SXM 层级仅限 8 GPU，与 CoreWeave 面临同样的权衡。',
         costNote: '据报道的 350 亿美元 Anthropic 协议（条款未披露）是一个规模信号，而不是对小买家保证的价格优势——Lambda 公开的自助服务价格才是较小 AI 公司实际会支付的价格。',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: '查看 Lambda 价格',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -4352,6 +4703,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '正在评估 TPU 作为 GPU 替代方案，或已在 Vertex AI、BigQuery 或 Gemini 生态系统上标准化的团队。',
         avoidIf: '你对 TPU 没有兴趣，只需要 GPU——Google Cloud 的按需 GPU 价格高于 DigitalOcean、RunPod 或 AWS 的按需价格。',
         costNote: 'A3 系列的按需价格报告因来源和承诺程度不同而波动范围比这里大多数服务商更大——在做预算前，请核实你所在具体地区和机型的当前价格。',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: '查看 Google Cloud 价格',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -4361,6 +4721,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '产品依赖 Azure OpenAI Service 的公司，或正在将采购整合到单一供应商的现有 Microsoft 企业客户。',
         avoidIf: '你没有对 Azure OpenAI Service 或 Microsoft 生态的依赖——其每 GPU 价格是本页最高的，而对纯 GPU 负载没有任何补偿性优势。',
         costNote: '在完整 8 GPU 节点层面，Azure 约 $98/小时 的价格与 AWS 和 Google Cloud 接近——更高的标价每 GPU 价格，主要影响的是租用单个或部分 GPU 而非整个节点的团队。',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: '查看 Microsoft Azure 价格',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -4370,6 +4739,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '运行大型训练集群、统一每 GPU 价格、低 egress 费用和 RDMA 网络比广泛的托管 AI 服务目录更重要的公司，以及已经在 Oracle 数据库/企业技术栈上的公司。',
         avoidIf: '你需要 Oracle 特有的托管 AI 目录广度，或者想要尽可能广泛的实例/地区目录——OCI 的目录比 AWS 或 Google Cloud 更窄。',
         costNote: '10 TB 的免费 egress 额度是 AWS、Azure 和 Google Cloud 100 GB 免费额度的 100 倍——免费额度是所有超大规模云服务商中调整最频繁的条款之一，做预算前请核实当前额度。',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: '查看 Oracle Cloud Infrastructure 价格',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -4957,6 +5335,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'الشركات المستثمرة بالفعل في AWS، أو التي تحتاج إلى منظومتها الأوسع: خدمات ذكاء اصطناعي مُدارة، نشر متعدد المناطق، أو شهادات امتثال مؤسسي.',
         avoidIf: 'أنتم فريق صغير يحتاج فقط إلى وصول GPU خام — يضيف إعداد IAM/VPC وتعقيد لوحة تحكم AWS وقت إعداد فعلي لا تتطلبه DigitalOcean.',
         costNote: 'سعر P5 عند الطلب ($6.88/ساعة لكل GPU) هو تقريباً ضعف سعر الطلب لدى DigitalOcean — تشتري الزيادة اتساع خدمات AWS، لا وحدات GPU أسرع أو أفضل.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'التحقق من أسعار AWS',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -4966,6 +5353,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'الشركات التي تُجري تدريباً موزعاً وعلى نطاق واسع للذكاء الاصطناعي وتستفيد من عُقد كثيفة بـ8 وحدات GPU وتنسيق Kubernetes أصلي ورسوم egress صفرية.',
         avoidIf: 'تحتاجون إلى وحدة GPU واحدة، أو سحابة عامة الأغراض (تخزين، قواعد بيانات، استضافة ويب إلى جانب الحوسبة)، أو نقطة دخول أصغر/أرخص — CoreWeave ليست عامة الأغراض.',
         costNote: 'يعني نموذج العقدة بـ8 وحدات GPU حصراً أن CoreWeave مُسعّرة للحجم الكبير — الفريق الذي يحتاج إلى 1-2 وحدة GPU يدفع مع ذلك ثمن 8، وهو المقايضة المعاكسة لـDigitalOcean أو RunPod.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'التحقق من أسعار CoreWeave',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -4993,6 +5389,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'باحثو تعلم الآلة والفرق التي تُجري أحمال تدريب جادة وتريد منصة GPU-first ببيئات مُعدة مسبقاً ورسوم egress صفرية.',
         avoidIf: 'تحتاجون إلى نقطة دخول صغيرة ومرنة بوحدة GPU واحدة — مستوى SXM من Lambda مقتصر على 8 وحدات GPU، نفس المقايضة كما في CoreWeave.',
         costNote: 'صفقة Anthropic المُبلَّغ عنها بقيمة $35 مليار (شروط غير معلنة) هي إشارة حجم، لا ميزة سعرية مضمونة لمشترٍ صغير — أسعار الخدمة الذاتية المنشورة من Lambda هي ما ستدفعه فعلياً شركة ذكاء اصطناعي أصغر.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'التحقق من أسعار Lambda',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -5002,6 +5407,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'الفرق التي تقيّم TPU كبديل لـGPU، أو الموحدة بالفعل على Vertex AI أو BigQuery أو منظومة Gemini.',
         avoidIf: 'ليس لديكم اهتمام بـTPU وتحتاجون فقط إلى وحدات GPU — سعر GPU عند الطلب لدى Google Cloud أعلى من سعر الطلب لدى DigitalOcean أو RunPod أو AWS.',
         costNote: 'تتفاوت الأسعار المُبلَّغ عنها عند الطلب لسلسلة A3 بشكل أوسع حسب المصدر ومستوى الالتزام مقارنة بمعظم المزودين هنا — تحققوا من السعر الحالي لمنطقتكم ونوع الجهاز المحدد قبل وضع الميزانية.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'التحقق من أسعار Google Cloud',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -5011,6 +5425,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'الشركات التي يعتمد منتجها على Azure OpenAI Service، أو عملاء Microsoft المؤسسيون الحاليون الذين يوحّدون مشترياتهم على مزود واحد.',
         avoidIf: 'ليس لديكم اعتماد على Azure OpenAI Service أو منظومة Microsoft — سعر GPU هو الأعلى في هذه الصفحة دون ميزة تعويضية لحمل عمل يعتمد على GPU فقط.',
         costNote: 'على مستوى العقدة الكاملة بـ8 وحدات GPU، يقترب سعر Azure البالغ حوالي $98/ساعة من AWS وGoogle Cloud — يهم السعر المعلن الأعلى لكل GPU بشكل أساسي الفرق التي تؤجر وحدات GPU منفردة أو جزئية، لا عُقداً كاملة.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'التحقق من أسعار Microsoft Azure',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -5020,6 +5443,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'الشركات التي تدير مجموعات تدريب كبيرة حيث يهم السعر الثابت لكل GPU وانخفاض egress وشبكة RDMA أكثر من كتالوج خدمات ذكاء اصطناعي مُدار واسع — والشركات القائمة بالفعل على حزمة قواعد بيانات/مؤسسة Oracle.',
         avoidIf: 'تحتاجون إلى اتساع كتالوج Oracle المُدار الخاص بالذكاء الاصطناعي، أو تريدون أوسع كتالوج ممكن للمثيلات/المناطق — كتالوج OCI أضيق من كتالوج AWS أو Google Cloud.',
         costNote: 'حصة egress المجانية البالغة 10 تيرابايت تعادل 100 ضعف الحد المجاني البالغ 100 جيجابايت لدى AWS وAzure وGoogle Cloud — تحققوا من الحصة الحالية قبل وضع الميزانية، إذ تُعد الحدود المجانية من أكثر الشروط تعديلاً بين جميع منصات hyperscaler.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'التحقق من أسعار Oracle Cloud Infrastructure',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
@@ -5607,6 +6039,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '이미 AWS에 투자한 기업, 또는 더 넓은 생태계가 필요한 기업: 관리형 AI 서비스, 다중 지역 배포, 또는 엔터프라이즈 규정 준수 인증.',
         avoidIf: '순수 GPU 접근만 필요한 소규모 팀인 경우 — AWS의 IAM/VPC 설정과 콘솔 복잡성은 DigitalOcean이 요구하지 않는 실제 온보딩 시간을 추가합니다.',
         costNote: '온디맨드 P5 가격(GPU당 시간당 $6.88)은 DigitalOcean의 온디맨드 요금의 약 두 배입니다 — 이 추가 비용은 더 빠르거나 더 나은 GPU가 아니라 AWS 서비스의 폭을 구매하는 것입니다.',
+        affiliateLinks: [
+          {
+            url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+            productName: 'AWS EC2 P5 (H100)',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.88/GPU-hr on-demand',
+            label: 'AWS 가격 확인',
+          },
+        ],
       },
       coreweave: {
         id: 'coreweave',
@@ -5616,6 +6057,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '고밀도 8-GPU 노드, Kubernetes 네이티브 오케스트레이션, 제로 egress 요금의 혜택을 받는 대규모 다중 노드 AI 학습을 수행하는 기업.',
         avoidIf: '단일 GPU, 범용 클라우드(컴퓨팅 외에 스토리지, 데이터베이스, 웹 호스팅), 또는 더 작고 저렴한 진입점이 필요한 경우 — CoreWeave는 범용이 아닙니다.',
         costNote: '8-GPU 노드 전용 모델은 CoreWeave가 규모에 맞춰 가격이 책정되어 있음을 의미합니다 — 1-2개의 GPU가 필요한 팀도 8개 전체 비용을 지불하며, 이는 DigitalOcean이나 RunPod와 정반대의 트레이드오프입니다.',
+        affiliateLinks: [
+          {
+            url: 'https://www.coreweave.com/',
+            productName: 'CoreWeave GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '6.16/GPU-hr (8-GPU node)',
+            label: 'CoreWeave 가격 확인',
+          },
+        ],
       },
       runpod: {
         id: 'runpod',
@@ -5643,6 +6093,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '사전 구성된 환경과 제로 egress 요금을 갖춘 GPU 우선 플랫폼을 원하는 ML 연구자와 진지한 학습 워크로드를 운영하는 팀.',
         avoidIf: '작고 유연한 단일 GPU 진입점이 필요한 경우 — Lambda의 SXM 등급은 CoreWeave와 동일한 트레이드오프로 8-GPU 전용입니다.',
         costNote: '보도된 350억 달러 규모의 Anthropic 계약(조건 비공개)은 규모의 신호일 뿐, 소규모 구매자에게 보장된 가격 우위가 아닙니다 — Lambda가 공개한 셀프서비스 요금이 더 작은 AI 기업이 실제로 지불할 금액입니다.',
+        affiliateLinks: [
+          {
+            url: 'https://lambda.ai/',
+            productName: 'Lambda GPU Cloud',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.29-4.29/hr (H100)',
+            label: 'Lambda 가격 확인',
+          },
+        ],
       },
       googleCloud: {
         id: 'google-cloud',
@@ -5652,6 +6111,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'GPU 대안으로 TPU를 평가 중이거나, 이미 Vertex AI, BigQuery, Gemini 생태계로 표준화된 팀.',
         avoidIf: 'TPU에 관심이 없고 GPU만 필요한 경우 — Google Cloud의 온디맨드 GPU 요금은 DigitalOcean, RunPod, AWS의 온디맨드 요금보다 높습니다.',
         costNote: 'A3 시리즈에 대해 보고된 온디맨드 요금은 이곳 대부분의 제공업체보다 출처와 약정 수준에 따라 더 폭넓게 달라집니다 — 예산을 세우기 전에 해당 지역과 머신 유형의 현재 요금을 확인하십시오.',
+        affiliateLinks: [
+          {
+            url: 'https://cloud.google.com/compute/docs/gpus',
+            productName: 'Google Cloud GPU (A3 series)',
+            productCategory: 'cloud-gpu',
+            priceRange: '9-11.50/GPU-hr',
+            label: 'Google Cloud 가격 확인',
+          },
+        ],
       },
       microsoftAzure: {
         id: 'microsoft-azure',
@@ -5661,6 +6129,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '제품이 Azure OpenAI Service에 의존하는 기업, 또는 조달을 하나의 공급업체로 통합하려는 기존 Microsoft 엔터프라이즈 고객.',
         avoidIf: 'Azure OpenAI Service나 Microsoft 생태계에 대한 의존성이 없는 경우 — GPU당 요금이 이 페이지에서 가장 높으면서도 순수 GPU 워크로드에 대한 보상적 이점이 없습니다.',
         costNote: '완전한 8-GPU 노드 수준에서는 Azure의 약 시간당 $98 가격이 AWS 및 Google Cloud와 근접합니다 — GPU당 더 높은 표시 가격은 노드 전체가 아니라 단일 또는 부분 GPU를 대여하는 팀에게 주로 중요합니다.',
+        affiliateLinks: [
+          {
+            url: 'https://azure.microsoft.com/en-us/products/virtual-machines/hpc',
+            productName: 'Azure ND H100 v5',
+            productCategory: 'cloud-gpu',
+            priceRange: '11-13/GPU-hr',
+            label: 'Microsoft Azure 가격 확인',
+          },
+        ],
       },
       oracleCloud: {
         id: 'oracle-cloud',
@@ -5670,6 +6147,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '고정된 GPU당 가격, 낮은 egress, RDMA 네트워킹이 폭넓은 관리형 AI 서비스 카탈로그보다 더 중요한 대규모 학습 클러스터를 운영하는 기업, 그리고 이미 Oracle의 데이터베이스/엔터프라이즈 스택에 있는 기업.',
         avoidIf: 'Oracle 고유의 관리형 AI 카탈로그의 폭이 필요하거나, 가능한 한 넓은 인스턴스/지역 카탈로그를 원하는 경우 — OCI의 카탈로그는 AWS나 Google Cloud보다 좁습니다.',
         costNote: '10TB 무료 egress 한도는 AWS, Azure, Google Cloud의 100GB 무료 등급보다 100배 큽니다 — 무료 등급은 모든 하이퍼스케일러 중 가장 자주 조정되는 조건 중 하나이므로 예산을 세우기 전에 현재 한도를 확인하십시오.',
+        affiliateLinks: [
+          {
+            url: 'https://www.oracle.com/cloud/compute/gpu/',
+            productName: 'Oracle Cloud Infrastructure GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '10/hr flat',
+            label: 'Oracle Cloud Infrastructure 가격 확인',
+          },
+        ],
       },
       headToHead: {
         id: 'head-to-head',
