@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-cpp-review",
         "title": "llama.cpp Review 2026: The Engine Behind Ollama and LM Studio",
         "url": "/power-local-llm/llama-cpp-review",
@@ -30,6 +38,14 @@
         "slug": "msty-review",
         "title": "Msty Review 2026: Local + Cloud Chat in One Desktop App",
         "url": "/power-local-llm/msty-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "osaurus-ai-review",
-        "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
-        "url": "/power-local-llm/osaurus-ai-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rapr-ai-review",
-        "title": "RAPR AI Review (2026): Local Desktop Command Center for Ollama, Claude and Gemini",
-        "url": "/power-local-llm/rapr-ai-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
       }
     ],
-    "totalCount": 223,
+    "totalCount": 227,
     "capped": true
   },
   "llama.cpp": {
@@ -108,6 +108,14 @@
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "second-me-review-2026",
-        "title": "Second Me Review 2026: Train Your Own Personal AI Locally",
-        "url": "/power-local-llm/second-me-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 122,
+    "totalCount": 126,
     "capped": true
   },
   "vLLM": {
@@ -178,6 +178,14 @@
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -244,17 +252,9 @@
         "url": "/local-llms/local-ai-code-review-vs-coderabbit-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-vs-sillytavern",
-        "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
-        "url": "/local-llms/open-webui-vs-sillytavern",
-        "dateModified": "2026-08-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 81,
+    "totalCount": 82,
     "capped": true
   },
   "LocalAI": {
@@ -266,6 +266,14 @@
         "url": "/power-local-llm/bodega-one-code-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -292,7 +300,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "TensorRT-LLM": {
@@ -597,6 +605,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-cpp-review",
         "title": "llama.cpp Review 2026: The Engine Behind Ollama and LM Studio",
         "url": "/power-local-llm/llama-cpp-review",
@@ -608,6 +624,14 @@
         "slug": "msty-review",
         "title": "Msty Review 2026: Local + Cloud Chat in One Desktop App",
         "url": "/power-local-llm/msty-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -634,25 +658,9 @@
         "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "asus-mini-pc-local-ai-2026",
-        "title": "ASUS Mini PC for Local AI: NUC 16 Pro vs. ExpertCenter PN55 (2026)",
-        "url": "/power-local-llm/asus-mini-pc-local-ai-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "bodega-one-code-review-2026",
-        "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
-        "url": "/power-local-llm/bodega-one-code-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 136,
+    "totalCount": 139,
     "capped": true
   },
   "Atomic Chat": {
@@ -776,7 +784,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 36,
+    "totalCount": 38,
     "capped": true
   },
   "GPT4All": {
@@ -862,7 +870,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "AnythingLLM": {
@@ -948,7 +956,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "Msty": {
@@ -1432,7 +1440,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 59,
+    "totalCount": 60,
     "capped": true
   },
   "LibreChat": {
@@ -3381,6 +3389,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "faster-whisper-review",
+        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
+        "url": "/power-local-llm/faster-whisper-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "whisper-cpp-review",
         "title": "Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++",
         "url": "/power-local-llm/whisper-cpp-review",
@@ -3450,21 +3466,21 @@
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-personal-knowledge-base-2026",
-        "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
-        "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "faster-whisper": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "faster-whisper-review",
+        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
+        "url": "/power-local-llm/faster-whisper-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "whisper-cpp-review",
@@ -3538,16 +3554,16 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Piper TTS": {
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "whisper-cpp-review",
-        "title": "Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++",
-        "url": "/power-local-llm/whisper-cpp-review",
+        "slug": "faster-whisper-review",
+        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
+        "url": "/power-local-llm/faster-whisper-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -3593,6 +3609,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "whisper-cpp-review",
+        "title": "Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++",
+        "url": "/power-local-llm/whisper-cpp-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "elevenlabs-vs-local-tts-piper-xtts",
         "title": "ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?",
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
@@ -3614,18 +3638,10 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-08-26",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mac-mini-m5-local-ai-server",
-        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-        "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-08-26",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Coqui TTS": {
     "articles": [
@@ -3883,6 +3899,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chatty-mini-review",
         "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
         "url": "/power-local-llm/chatty-mini-review",
@@ -3912,21 +3936,29 @@
         "url": "/local-llms/galaxy-vs-iphone-on-device-ai-2026",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "voice-assistant-local-mobile-offline",
-        "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
-        "url": "/power-local-llm/voice-assistant-local-mobile-offline",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "PocketPal AI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "chatty-mini-review",
@@ -3990,29 +4022,29 @@
         "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enclave-ai-review-2026",
-        "title": "Enclave AI Review 2026: On-Device AI for iPhone, iPad, Mac",
-        "url": "/power-local-llm/enclave-ai-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "voice-assistant-local-mobile-offline",
-        "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
-        "url": "/power-local-llm/voice-assistant-local-mobile-offline",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 13,
     "capped": true
   },
   "Private LLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "arbiter-local-ai-chat-review",
@@ -4076,25 +4108,9 @@
         "url": "/power-local-llm/local-llm-with-obsidian-2026",
         "dateModified": "2026-08-30",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "voice-assistant-local-mobile-offline",
-        "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
-        "url": "/power-local-llm/voice-assistant-local-mobile-offline",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mobile-local-llms",
-        "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
-        "url": "/local-llms/mobile-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 13,
     "capped": true
   },
   "LLM Farm": {
@@ -4122,6 +4138,22 @@
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-07-14",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -4156,7 +4188,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 9,
     "capped": false
   },
   "Layla": {
@@ -4176,6 +4208,22 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-08-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -4226,11 +4274,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 10,
     "capped": false
   },
   "Maid": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
@@ -4238,6 +4294,14 @@
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-08-24",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -4280,7 +4344,43 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 8,
+    "capped": false
+  },
+  "RikkaHub": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "AnythingLLM Mobile": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Enclave AI": {
@@ -4295,6 +4395,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -4302,7 +4418,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 4,
     "capped": false
   },
   "Locally AI": {
@@ -4317,11 +4433,27 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -4332,7 +4464,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 5,
     "capped": false
   },
   "Arbiter": {
@@ -4344,9 +4476,25 @@
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-llm-review",
+        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/private-llm-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Loci AI": {
@@ -4366,6 +4514,14 @@
         "url": "/power-local-llm/locally-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocketpal-ai-review",
+        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
+        "url": "/power-local-llm/pocketpal-ai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -4424,7 +4580,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Stable Diffusion": {
@@ -4434,6 +4590,14 @@
         "slug": "text-generation-webui-review",
         "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
         "url": "/local-llms/text-generation-webui-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-review",
+        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
+        "url": "/power-local-llm/stable-diffusion-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -4500,21 +4664,21 @@
         "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
         "dateModified": "2026-06-15",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "librechat-review-2026",
-        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
-        "url": "/power-local-llm/librechat-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "ComfyUI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-review",
+        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
+        "url": "/power-local-llm/stable-diffusion-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
@@ -4564,7 +4728,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "AUTOMATIC1111 WebUI": {
@@ -4589,8 +4753,30 @@
     "totalCount": 2,
     "capped": false
   },
+  "Fooocus": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-review",
+        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
+        "url": "/power-local-llm/stable-diffusion-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "ControlNet": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-review",
+        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
+        "url": "/power-local-llm/stable-diffusion-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
@@ -4616,7 +4802,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Real-ESRGAN": {
@@ -4628,9 +4814,17 @@
         "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-review",
+        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
+        "url": "/power-local-llm/stable-diffusion-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "AnimateDiff": {
@@ -4665,6 +4859,14 @@
   },
   "Smart Connections": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
@@ -4706,13 +4908,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Copilot for Obsidian": {
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
         "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
         "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
@@ -4736,13 +4946,21 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Text Generator": {
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-obsidian-2026",
         "title": "Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)",
         "url": "/power-local-llm/local-llm-with-obsidian-2026",
@@ -4766,11 +4984,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "logseq-copilot": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
@@ -4778,13 +5004,29 @@
         "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
         "dateModified": "2026-08-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-obsidian-2026",
+        "title": "Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)",
+        "url": "/power-local-llm/local-llm-with-obsidian-2026",
+        "dateModified": "2026-08-30",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "BMO Chatbot": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-llm-with-obsidian-2026",
@@ -4802,7 +5044,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Joplin AI": {

@@ -261,6 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — for users who outgrow built-in RAG.',
           '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup](/power-local-llm/local-ai-agents-with-mcp-2026) — next step after chat apps.',
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model recommendations to load into any of these apps.',
+          '[llama.cpp Explained: The Engine Powering Ollama (2026)](/power-local-llm/llama-cpp-explained) — the inference engine Ollama runs on most platforms, for readers who want to skip the wrapper app entirely.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — pick the right hardware before picking the app.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
           '[LM Studio vs Jan vs GPT4All 2026 (Português)](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — versão em português deste guia',

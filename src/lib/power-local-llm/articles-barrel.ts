@@ -23,6 +23,10 @@ import { article as a_windsurf_review } from './articles/windsurf-review'
 import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
 import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
+import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
+import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
+import { article as a_private_llm_review } from './articles/private-llm-review'
+import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
@@ -72,6 +76,7 @@ import { article as a_local_llm_software_directory_2026 } from './articles/local
 import { article as a_ai_tool_licenses_explained } from './articles/ai-tool-licenses-explained'
 import { article as a_local_llm_with_obsidian_2026 } from './articles/local-llm-with-obsidian-2026'
 import { article as a_local_llm_with_logseq_and_joplin } from './articles/local-llm-with-logseq-and-joplin'
+import { article as a_obsidian_logseq_ai_plugins } from './articles/obsidian-logseq-ai-plugins'
 import { article as a_local_llm_personal_knowledge_base_2026 } from './articles/local-llm-personal-knowledge-base-2026'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
@@ -141,6 +146,7 @@ import { article as a_open_interpreter_review } from './articles/open-interprete
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
+import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -180,6 +186,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ai-tool-licenses-explained':              a_ai_tool_licenses_explained,
   'local-llm-with-obsidian-2026':           a_local_llm_with_obsidian_2026,
   'local-llm-with-logseq-and-joplin':       a_local_llm_with_logseq_and_joplin,
+  'obsidian-logseq-ai-plugins':             a_obsidian_logseq_ai_plugins,
   'local-llm-personal-knowledge-base-2026': a_local_llm_personal_knowledge_base_2026,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
@@ -289,6 +296,12 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'cline-review':                                  a_cline_review,
   'pearai-review':                                 a_pearai_review,
   'whisper-cpp-review':                            a_whisper_cpp_review,
+  'faster-whisper-review':                         a_faster_whisper_review,
+  'pocketpal-ai-review':                           a_pocketpal_ai_review,
+  'private-llm-review':                            a_private_llm_review,
+  // Stable Diffusion review — 2026-09-05
+  'stable-diffusion-review':                        a_stable_diffusion_review,
+  'llama-cpp-explained':                           a_llama_cpp_explained,
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                              a_llama_cpp_review,
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
