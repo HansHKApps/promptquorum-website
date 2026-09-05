@@ -43,6 +43,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
   'hermes-agent-review':                    'hermes-agent-review-2026',
   'msty-go-review':                         'msty-go-review-2026',
+  'msty-review':                             'msty-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -135,6 +136,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'dify-ai-workflow-builder-review':              'dify-ai-workflow-builder-review',
   // Langflow review — 2026-09-02
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
+  // LangChain review — agent frameworks series, article 1 of 14 — 2026-09-05
+  'langchain-review':                             'langchain-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -199,4 +202,11 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review':                     'continue-dev-review',
+  'cline-review':                            'cline-review',
+  'pearai-review':                           'pearai-review',
+  'whisper-cpp-review':                      'whisper-cpp-review',
+  // Runtimes & Engines — 2026-09-05
+  'llama-cpp-review':                        'llama-cpp-review',
 }

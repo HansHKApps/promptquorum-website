@@ -262,6 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — the general-purpose framework most often compared against LlamaIndex, covering chains, agents, and LangGraph.',
           '[Flowise Review: Visual LangChain Workflow Builder](/power-local-llm/flowise-ai-visual-workflow-builder-review) — the no-code alternative to LlamaIndex, for readers who want a visual canvas instead of Python.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools beyond code-first frameworks.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',

@@ -35,6 +35,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-code-review-ci-cd',
   // Bodega One Code review — 2026-09-03
   'bodega-one-code-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review',
+  'cline-review',
+  'pearai-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -144,6 +148,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'dify-ai-workflow-builder-review',
   // Langflow review — 2026-09-02
   'langflow-visual-ai-orchestration-review',
+  // Agent frameworks series — LangChain review (article 1 of 14) — 2026-09-05
+  'langchain-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -193,6 +199,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'vlm-video-analytics-drones-edge',
   // Msty Go local-first AI task-automation agent review — 2026-09-03
   'msty-go-review',
+  'msty-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
@@ -217,6 +224,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
+  'whisper-cpp-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
