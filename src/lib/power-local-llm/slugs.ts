@@ -202,6 +202,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review':                     'continue-dev-review',
+  'cline-review':                            'cline-review',
+  'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
@@ -212,4 +216,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
   'llama-cpp-explained':                     'llama-cpp-explained',
+
+  // Runtimes & Engines — 2026-09-05
+  'llama-cpp-review':                        'llama-cpp-review',
 }
