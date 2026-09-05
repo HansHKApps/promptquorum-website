@@ -130,6 +130,7 @@ import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
 import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
+import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -245,6 +246,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'bodega-one-code-review-2026':                       a_bodega_one_code_review_2026,
   // Open Interpreter Rust/Codex-fork review — 2026-09-03
   'open-interpreter-review':                           a_open_interpreter_review,
+  'openclaw-review':                                   a_openclaw_review,
   // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster
   'edge-ai-hardware-for-local-llms':                   a_edge_ai_hardware_for_local_llms,
   'vla-models-robots-local-inference':                 a_vla_models_robots_local_inference,

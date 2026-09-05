@@ -14,10 +14,10 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama'],
   engine: 'library',
-  license: 'Apache 2.0',
+  license: 'MIT', // corrected 2026-09-05: GitHub API reports license.spdx_id NOASSERTION, but the repo's actual LICENSE file is MIT (OpenClaw Foundation, 2026)
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: 388845,
+  stars: 388916, // re-verified 2026-09-05
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['build', 'agent'],
@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار عمل لتنسيق سير عمل الوكلاء',
     ko: '에이전트 워크플로를 위한 오케스트레이션 프레임워크',
   },
+  reviewSlug: 'openclaw-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

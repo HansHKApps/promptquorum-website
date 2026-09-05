@@ -179,6 +179,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Open Interpreter Rust/Codex-fork review — 2026-09-03
   'open-interpreter-review',
 
+  // OpenClaw agent gateway review — 2026-09-05
+  'openclaw-review',
+
   // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster.
   // Published (not left in the default-closed state new power-local-llm slugs get)
   // because they were live and indexed under /local-llms/ during the brief interim
