@@ -64,6 +64,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 7 — Productivity & Knowledge Tools
   'local-llm-with-obsidian-2026':                'local-llm-with-obsidian-2026',
   'local-llm-with-logseq-and-joplin':            'local-llm-with-logseq-and-joplin',
+  // AI plugins for Obsidian and Logseq — evergreen feature comparison — 2026-09-05
+  'obsidian-logseq-ai-plugins':                  'obsidian-logseq-ai-plugins',
   'local-llm-personal-knowledge-base-2026':      'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation':     'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
@@ -204,4 +206,22 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review':                     'continue-dev-review',
+  'cline-review':                            'cline-review',
+  'pearai-review':                           'pearai-review',
+  'whisper-cpp-review':                      'whisper-cpp-review',
+  'faster-whisper-review':                   'faster-whisper-review',
+  // PocketPal AI review — 2026-09-05
+  'pocketpal-ai-review':                     'pocketpal-ai-review',
+  // Private LLM review — 2026-09-05
+  'private-llm-review':                      'private-llm-review',
+  // Stable Diffusion review — 2026-09-05
+  'stable-diffusion-review':                 'stable-diffusion-review',
+
+  // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
+  'llama-cpp-explained':                     'llama-cpp-explained',
+
+  // Runtimes & Engines — 2026-09-05
+  'llama-cpp-review':                        'llama-cpp-review',
 }

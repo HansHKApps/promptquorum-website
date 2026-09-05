@@ -35,6 +35,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-code-review-ci-cd',
   // Bodega One Code review — 2026-09-03
   'bodega-one-code-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review',
+  'cline-review',
+  'pearai-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -64,6 +68,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 7 — Productivity & Knowledge Tools (5)
   'local-llm-with-obsidian-2026',
   'local-llm-with-logseq-and-joplin',
+  // AI plugins for Obsidian and Logseq — evergreen feature comparison — 2026-09-05
+  'obsidian-logseq-ai-plugins',
   'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local',
@@ -222,6 +228,20 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
+  'whisper-cpp-review',
+  'faster-whisper-review',
+
+  // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
+  'pocketpal-ai-review',
+
+  // Private LLM review (Mobile & Edge LLMs) — 2026-09-05
+  'private-llm-review',
+
+  // Stable Diffusion review (Image & Video Generation) — 2026-09-05
+  'stable-diffusion-review',
+
+  // llama.cpp explainer — 2026-09-05
+  'llama-cpp-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

@@ -311,9 +311,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration](/power-local-llm/local-whisper-stt-comparison-2026) — the side-by-side comparison for readers deciding between whisper.cpp and faster-whisper.',
-          '[faster-whisper Review](/power-local-llm/faster-whisper-review) — the CTranslate2-based alternative, reviewed in the same depth.',
+          'faster-whisper Review — the CTranslate2-based alternative, reviewed in the same depth.',
           '[Build a Fully Offline Voice Assistant in 2026](/power-local-llm/build-local-voice-assistant-2026) — connect whisper.cpp to a local LLM and Piper TTS into a complete voice pipeline.',
-          '[Piper TTS Review](/power-local-llm/piper-tts-review) — the local text-to-speech counterpart, for turning generated text back into speech offline.',
+          'Piper TTS Review — the local text-to-speech counterpart, for turning generated text back into speech offline.',
           '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-AI tools across categories.',
         ],
       },
@@ -656,9 +656,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung](/power-local-llm/local-whisper-stt-comparison-2026) — der direkte Vergleich für alle, die sich zwischen whisper.cpp und faster-whisper entscheiden müssen.',
-          '[faster-whisper im Test](/power-local-llm/faster-whisper-review) — die CTranslate2-basierte Alternative, im selben Detailgrad getestet.',
+          'faster-whisper im Test — die CTranslate2-basierte Alternative, im selben Detailgrad getestet.',
           '[Einen vollständig offline Sprachassistenten bauen 2026](/power-local-llm/build-local-voice-assistant-2026) — whisper.cpp mit einem lokalen LLM und Piper TTS zu einer vollständigen Sprachpipeline verbinden.',
-          '[Piper TTS im Test](/power-local-llm/piper-tts-review) — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
+          'Piper TTS im Test — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
           '[Das vollständige Local-LLM-Software-Verzeichnis](/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler KI-Werkzeuge über alle Kategorien hinweg.',
         ],
       },
@@ -1001,9 +1001,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Whisper.cpp vs faster-whisper 2026 : benchmarks STT locaux, installation et accélération GPU](/power-local-llm/local-whisper-stt-comparison-2026) — le comparatif direct pour les lecteurs indécis entre whisper.cpp et faster-whisper.',
-          '[Avis faster-whisper](/power-local-llm/faster-whisper-review) — l\'alternative basée sur CTranslate2, examinée avec le même niveau de détail.',
+          'Avis faster-whisper — l\'alternative basée sur CTranslate2, examinée avec le même niveau de détail.',
           '[Construire un assistant vocal entièrement hors ligne en 2026](/power-local-llm/build-local-voice-assistant-2026) — connecter whisper.cpp à un LLM local et à Piper TTS pour un pipeline vocal complet.',
-          '[Avis Piper TTS](/power-local-llm/piper-tts-review) — le pendant local de la synthèse vocale, pour retransformer un texte généré en parole hors ligne.',
+          'Avis Piper TTS — le pendant local de la synthèse vocale, pour retransformer un texte généré en parole hors ligne.',
           '[L\'annuaire complet des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — un annuaire plus large des outils d\'IA locale toutes catégories confondues.',
         ],
       },
@@ -1346,9 +1346,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalación y aceleración por GPU](/power-local-llm/local-whisper-stt-comparison-2026) — el comparativo directo para quien tenga que elegir entre whisper.cpp y faster-whisper.',
-          '[Análisis de faster-whisper](/power-local-llm/faster-whisper-review) — la alternativa basada en CTranslate2, analizada con el mismo nivel de detalle.',
+          'Análisis de faster-whisper — la alternativa basada en CTranslate2, analizada con el mismo nivel de detalle.',
           '[Construir un asistente de voz totalmente sin conexión en 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar whisper.cpp con un LLM local y Piper TTS en un pipeline de voz completo.',
-          '[Análisis de Piper TTS](/power-local-llm/piper-tts-review) — el equivalente local de síntesis de voz, para convertir texto generado de nuevo en voz sin conexión.',
+          'Análisis de Piper TTS — el equivalente local de síntesis de voz, para convertir texto generado de nuevo en voz sin conexión.',
           '[El directorio completo de software de LLM local](/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de IA local en todas las categorías.',
         ],
       },
@@ -1691,9 +1691,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[whisper.cpp対faster-whisper 2026:ローカルSTTベンチマーク、セットアップ、GPUアクセラレーション](/power-local-llm/local-whisper-stt-comparison-2026) ー whisper.cppとfaster-whisperの選択で迷う読者向けの直接比較。',
-          '[faster-whisperレビュー](/power-local-llm/faster-whisper-review) ー CTranslate2ベースの代替ツールを同じ深さでレビュー。',
+          'faster-whisperレビュー ー CTranslate2ベースの代替ツールを同じ深さでレビュー。',
           '[2026年に完全オフラインの音声アシスタントを構築する](/power-local-llm/build-local-voice-assistant-2026) ー whisper.cppをローカルLLMとPiper TTSに接続し、完全な音声パイプラインを構築。',
-          '[Piper TTSレビュー](/power-local-llm/piper-tts-review) ー 生成したテキストをオフラインで音声に戻す、ローカルの音声合成版。',
+          'Piper TTSレビュー ー 生成したテキストをオフラインで音声に戻す、ローカルの音声合成版。',
           '[ローカルLLMソフトウェア完全ディレクトリ](/power-local-llm/local-llm-software-directory) ー あらゆるカテゴリのローカルAIツールを網羅した、より広範なディレクトリ。',
         ],
       },
@@ -2037,9 +2037,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalação e aceleração por GPU](/power-local-llm/local-whisper-stt-comparison-2026) — o comparativo direto para quem precisa escolher entre whisper.cpp e faster-whisper.',
-          '[Análise do faster-whisper](/power-local-llm/faster-whisper-review) — a alternativa baseada em CTranslate2, analisada com o mesmo nível de detalhe.',
+          'Análise do faster-whisper — a alternativa baseada em CTranslate2, analisada com o mesmo nível de detalhe.',
           '[Construir um assistente de voz totalmente offline em 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar o whisper.cpp a um LLM local e ao Piper TTS em um pipeline de voz completo.',
-          '[Análise do Piper TTS](/power-local-llm/piper-tts-review) — o equivalente local de síntese de voz, para transformar texto gerado de volta em voz offline.',
+          'Análise do Piper TTS — o equivalente local de síntese de voz, para transformar texto gerado de volta em voz offline.',
           '[O diretório completo de software de LLM local](/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de IA local em todas as categorias.',
         ],
       },
@@ -2382,9 +2382,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[whisper.cpp مقابل faster-whisper 2026: قياسات أداء STT محلية، والإعداد، وتسريع المعالج الرسومي](/power-local-llm/local-whisper-stt-comparison-2026) — المقارنة المباشرة لمن يحتار بين whisper.cpp وfaster-whisper.',
-          '[مراجعة faster-whisper](/power-local-llm/faster-whisper-review) — البديل المعتمد على CTranslate2، بنفس مستوى التفصيل.',
+          'مراجعة faster-whisper — البديل المعتمد على CTranslate2، بنفس مستوى التفصيل.',
           '[بناء مساعد صوتي بلا اتصال بالكامل عام 2026](/power-local-llm/build-local-voice-assistant-2026) — ربط whisper.cpp بنموذج لغة محلي وPiper TTS في خط معالجة صوتي كامل.',
-          '[مراجعة Piper TTS](/power-local-llm/piper-tts-review) — النظير المحلي لتحويل النص إلى كلام، لتحويل النص المُولَّد مرة أخرى إلى صوت بلا اتصال.',
+          'مراجعة Piper TTS — النظير المحلي لتحويل النص إلى كلام، لتحويل النص المُولَّد مرة أخرى إلى صوت بلا اتصال.',
           '[الدليل الكامل لبرمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات الذكاء الاصطناعي المحلية عبر جميع الفئات.',
         ],
       },
@@ -2419,6 +2419,697 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/ar/power-local-llm' },
         { '@type': 'ListItem', position: 3, name: 'مراجعة whisper.cpp (2026)', item: 'https://promptquorum.com/ar/power-local-llm/whisper-cpp-review' },
+      ],
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/whisper-cpp-review-hero-zh.webp',
+    title: 'whisper.cpp评测(2026):纯C/C++本地语音识别',
+    seoTitle: 'whisper.cpp评测2026:C/C++本地STT',
+    intro:
+      'whisper.cpp是OpenAI语音识别模型Whisper的C/C++重新实现,由Georgi Gerganov开发,目前由[GitHub上的ggml-org组织](https://github.com/ggml-org/whisper.cpp)维护。它完全在设备本地将语音转换为文本,无需调用云端API,可在从Raspberry Pi到Apple Silicon Mac,再到NVIDIA GPU服务器的各类硬件上运行。本评测涵盖其发展历史、安装与运行方法、真实命令行示例、MIT许可证与成本(免费),以及它不适合的场景——并附上PromptQuorum与faster-whisper直接对比测评的链接,供需要在两者之间做选择的读者参考。',
+    metaDescription:
+      'whisper.cpp评测:采用MIT许可证的OpenAI Whisper C/C++移植版,用于本地语音识别。历史、安装步骤、真实CLI命令、许可证,以及何时应选择faster-whisper。',
+    twitterDescription:
+      'whisper.cpp评测2026:Georgi Gerganov为OpenAI Whisper打造的C/C++移植版,实现本地离线语音识别。历史、安装、真实命令、MIT许可证与真实局限。',
+    audience:
+      '希望在没有Python运行时或云端API的情况下实现本地设备端语音识别的开发者与自托管用户——从Raspberry Pi项目到Apple Silicon与NVIDIA GPU流水线。',
+    readTime: '阅读约11分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'whisper.cpp 评测',
+    targetKeywords: [
+      'whisper.cpp 评测',
+      'whisper.cpp',
+      'whisper cpp 安装',
+      'whisper cpp 配置',
+      'ggerganov whisper',
+      '本地语音识别 c++',
+      '离线whisper转录',
+      'whisper cpp 许可证',
+    ],
+    current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
+    current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU', 'Raspberry Pi'],
+    leadAnswerBlock:
+      '**whisper.cpp是一款免费的、采用MIT许可证的C/C++重新实现,基于OpenAI的语音识别模型Whisper,由Georgi Gerganov开发,完全在设备本地运行转录,不依赖Python。** 它支持CPU(带AVX2/NEON优化)、Apple Metal与Core ML、NVIDIA CUDA、Vulkan及多种其他后端,使其成为少数能够在从Raspberry Pi到Apple Silicon Mac再到CUDA服务器上无需修改即可运行的语音转文本工具之一。若需在真实硬件上与faster-whisper进行直接性能对比,请参阅PromptQuorum的[whisper.cpp对比faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026)。',
+    quickAnswerTop: {
+      zh: {
+        question: 'whisper.cpp是什么?值得用它做本地语音识别吗?',
+        answer:
+          '如果你想要不安装Python或CUDA就实现离线设备端语音识别,或者你的目标平台是Raspberry Pi、iOS、Android或WebAssembly——这些场景下纯C/C++二进制文件比Python技术栈更容易部署——那么whisper.cpp值得使用。它免费(MIT许可证)、持续积极维护,并使用与OpenAI原始发布相同的Whisper模型权重,因此在相同模型规模下,转录精度与原始Whisper一致。如果你的主要目标是运行Python流水线的NVIDIA GPU服务器,则应选择faster-whisper——它的CTranslate2后端在该场景下更快。',
+        bullets: [
+          '由Georgi Gerganov开发,2022年首次发布,作为OpenAI Whisper的C/C++移植版;目前由GitHub上的ggml-org组织维护。',
+          '采用MIT许可证,免费,无付费套餐,无需账户。',
+          '可在CPU、Apple Metal/Core ML、NVIDIA CUDA、Vulkan、OpenVINO等平台上运行——无需Python运行时。',
+          '最新稳定版本:v1.9.3(2026年8月20日),根据项目GitHub发布页面信息。',
+          '最适合场景:嵌入式设备、Apple Silicon,以及任何单一自包含二进制文件优于Python环境的部署场景。',
+        ],
+        updatedDate: '2026-09-05',
+      },
+    },
+    toc: [
+      { label: '快速解答', anchor: 'quick-answer' },
+      { label: '历史:whisper.cpp的开发者与初衷', anchor: 'history' },
+      { label: 'whisper.cpp实际能做什么', anchor: 'what-it-does' },
+      { label: '安装并运行whisper.cpp:分步指南', anchor: 'install-walkthrough' },
+      { label: '真实使用示例', anchor: 'usage-examples' },
+      { label: '许可证与成本', anchor: 'license-cost' },
+      { label: 'whisper.cpp不适合的场景', anchor: 'limitations' },
+      { label: 'whisper.cpp的替代方案', anchor: 'alternatives' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '结论', anchor: 'verdict' },
+      { label: '资料来源', anchor: 'sources' },
+      { label: '相关阅读', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '核心要点',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'whisper.cpp是一款免费、采用MIT许可证的C/C++移植版,基于OpenAI的语音识别模型Whisper,由Georgi Gerganov开发,通过CPU、Apple Metal、NVIDIA CUDA等多种后端在设备本地完全转录音频,无需Python。',
+          },
+          {
+            type: 'plain-terms',
+            text: '它在你自己的电脑或设备上把说话内容转换成文字,而不是发送到云端API——你下载一个编译好的二进制文件或自行编译,输入音频文件或实时麦克风流,它就会免费返回转录结果,使用的正是OpenAI训练过的模型。',
+          },
+        ],
+        items: [
+          '由Georgi Gerganov于2022年开发;目前由GitHub上的ggml-org组织维护。',
+          'MIT许可证——可免费使用、修改和分发,包括商业用途。',
+          '支持CPU、Apple Metal/Core ML、NVIDIA CUDA、Vulkan、OpenVINO、AMD ROCm及Ascend NPU等后端。',
+          '无需Python运行时——以编译好的C/C++二进制文件形式发布,并提供可选的Python绑定。',
+          '通过其流式传输示例支持实时麦克风转录,同时也支持文件批量转录。',
+          '最新稳定版本:v1.9.3,于2026年8月20日发布。',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '本评测聚焦whisper.cpp作为独立工具的方方面面:历史、安装、真实命令、许可证以及真实局限。若需在Apple Silicon和NVIDIA GPU上与faster-whisper进行直接性能对比,请参阅[whisper.cpp对比faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026)。',
+          },
+        ],
+      },
+      history: {
+        id: 'history',
+        title: '历史:whisper.cpp的开发者与初衷',
+        content: [
+          '**OpenAI于2022年9月发布了其语音识别模型Whisper**,这是一个基于大量多语言音频数据训练的开放权重模型,以Python包(`openai-whisper`)形式分发,依赖PyTorch,若追求良好性能则还需要支持CUDA的GPU。',
+          '**Georgi Gerganov在此后不久,同样在2022年,将该模型移植为纯C/C++**,项目位于[ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)仓库。Gerganov同时也是支撑whisper.cpp数学运算与量化的ggml张量库的创建者,后来他因llama.cpp而广为人知——这是用于本地运行大语言模型的同类C/C++移植版。两个项目共享相同的ggml基础和相同的设计目标:让通常需要Python和GPU的模型在普通硬件上运行。',
+          '**其动机是可移植性和资源效率,而不仅仅是速度。** Whisper原始的Python/PyTorch实现在配备优秀GPU的工作站上运行起来很简单,但要部署到Raspberry Pi、iOS应用、WebAssembly页面或没有Python解释器的嵌入式Linux板上则相当笨重。whisper.cpp完全去除了对PyTorch和Python的依赖,编译为一个小型二进制文件,并加入量化支持,让更小的模型变体能够装进几百兆字节的内存中。',
+          '**该项目早已远远超越了一个人的业余项目。** 如今它拥有数百名贡献者,已被打包进Debian,并为Core ML(Apple神经网络引擎)、CUDA、Vulkan、OpenVINO等在2022年原始版本中并不存在的后端提供官方支持。但它始终是Whisper的*运行环境*——它不训练或微调自己的模型,每次转录仍然使用OpenAI针对给定模型规模(从tiny到large-v3)发布的相同权重,只是转换成了该项目自己的GGML格式。',
+        ],
+        faqs: [
+          {
+            q: 'whisper.cpp是谁开发的?',
+            a: 'Georgi Gerganov开发了whisper.cpp,并于2022年首次将其作为OpenAI Whisper模型的C/C++移植版发布。Gerganov同时也创建了它所依赖的ggml张量库,后来又开发了用于本地运行大语言模型的同类移植项目llama.cpp。',
+          },
+        ],
+      },
+      whatItDoes: {
+        id: 'what-it-does',
+        title: 'whisper.cpp实际能做什么',
+        content: [
+          'whisper.cpp接收音频输入——一个文件(WAV,以及通过可选的FFmpeg解码支持的其他格式)或实时麦克风流——并生成文本转录,可选择附带每段时间戳以及英语翻译。为此,它会加载一个Whisper模型(已转换为该项目的GGML权重格式),并通过ggml张量库完全在本地机器上执行推理。',
+        ],
+        items: [
+          '**批量转录。** 将`whisper-cli`二进制文件指向一个音频文件即可获得转录结果,支持纯文本、SRT/VTT字幕、JSON或CSV格式输出。',
+          '**实时流式传输。** `whisper-stream`示例可捕获实时麦克风音频并持续转录,适用于语音助手或实时字幕场景。',
+          '**多语言转录与翻译。** 底层Whisper模型经过多种语言训练;whisper.cpp可以根据传入的参数,以原始语言转录或直接翻译成英语。',
+          '**硬件加速推理。** 在Apple Silicon上,whisper.cpp可以将模型导出为Core ML格式以利用Apple神经网络引擎;在NVIDIA硬件上使用CUDA;在其他GPU上可以使用Vulkan或OpenVINO。在仅有CPU的机器上,使用AVX2(x86)或NEON(ARM)向量指令。',
+          '**量化。** 模型可以被量化(例如量化为4位或5位的GGML格式),以少量精度损失换取显著更低的内存占用和更快的推理速度——这与llama.cpp用于大语言模型的技术相同。',
+        ],
+        note: 'whisper.cpp是一个运行环境,而不是模型。给定模型规模(tiny、base、small、medium、large-v3)的转录精度由OpenAI最初的训练决定,而非whisper.cpp——该项目的作用是高效运行该模型,无需Python或沉重的GPU技术栈。',
+      },
+      installWalkthrough: {
+        id: 'install-walkthrough',
+        title: '安装并运行whisper.cpp:分步指南',
+        content: '本指南使用项目自身README中记载的命令,从源码构建whisper.cpp并运行首次转录。',
+        numberedItems: [
+          {
+            title: '克隆仓库。',
+            whyItMatters: '运行`git clone https://github.com/ggml-org/whisper.cpp.git`,然后运行`cd whisper.cpp`。这会拉取完整的C/C++源码树,包括CMake构建文件和模型下载脚本。',
+          },
+          {
+            title: '下载模型。',
+            whyItMatters: '运行`sh ./models/download-ggml-model.sh base.en`以获取GGML格式的英语专用base模型。根据你想要的精度与速度取舍,将`base.en`替换为`tiny`、`small`、`medium`或`large-v3`,或去掉`.en`后缀以获取多语言模型。',
+          },
+          {
+            title: '构建项目。',
+            whyItMatters: '运行`cmake -B build`,然后运行`cmake --build build -j --config Release`。这会将CLI二进制文件(`whisper-cli`、`whisper-stream`等)编译到`build/bin/`目录中。此步骤无需安装Python。',
+          },
+          {
+            title: '转录示例文件。',
+            whyItMatters: '使用仓库自带的示例音频文件运行`./build/bin/whisper-cli -f samples/jfk.wav`。这可以确认构建是否端到端正常工作,并在终端中输出转录结果。',
+          },
+          {
+            title: '转录你自己的音频。',
+            whyItMatters: '将示例路径替换为你自己的WAV文件:`./build/bin/whisper-cli -m models/ggml-base.en.bin -f your-audio.wav`。添加`-osrt`可同时写出`.srt`字幕文件,或添加`-oj`以输出JSON格式。',
+          },
+          {
+            title: '(可选)启用GPU加速。',
+            whyItMatters: '在Apple Silicon上,只要使用macOS默认CMake参数构建,Metal加速就会自动启用。在NVIDIA机器上,在`cmake -B build`步骤中添加`-DGGML_CUDA=ON`(需要已安装CUDA工具包)以启用CUDA支持进行构建。',
+          },
+          {
+            title: '(可选)尝试实时转录。',
+            whyItMatters: '构建流式传输示例并运行`./build/bin/whisper-stream -m models/ggml-base.en.bin`,以持续转录实时麦克风音频,而非固定文件。',
+          },
+        ],
+      },
+      usageExamples: {
+        id: 'usage-examples',
+        title: '真实使用示例',
+        content: [
+          '除了上面的基础安装指南外,以下是`whisper-cli`二进制文件在真实场景中的常见调用方式。',
+        ],
+        codeBlock: `# 将音频文件转录为纯文本(默认输出)
+./build/bin/whisper-cli -m models/ggml-base.en.bin -f interview.wav
+
+# 使用更大、更精确的模型进行转录并输出SRT字幕
+./build/bin/whisper-cli -m models/ggml-large-v3.bin -f lecture.wav -osrt
+
+# 将非英语语音直接翻译为英文文本
+./build/bin/whisper-cli -m models/ggml-medium.bin -f french-audio.wav -tr
+
+# 指定特定GPU(多GPU机器)
+./build/bin/whisper-cli -m models/ggml-large-v3.bin -f audio.wav -g 0
+
+# 从默认麦克风进行实时转录
+./build/bin/whisper-stream -m models/ggml-base.en.bin -t 8`,
+        codeLanguage: 'bash',
+        note: '这里展示的参数(`-m`模型路径、`-f`输入文件、`-osrt`SRT输出、`-tr`翻译为英语、`-g`/`--gpu-device`选择GPU、`-t`线程数)记录在项目的`--help`输出和README中。由于CLI选项可能在不同版本之间发生变化,请始终运行`./build/bin/whisper-cli --help`以确认你所安装版本的当前参数集。',
+        items: [
+          '**pywhispercpp** 为whisper.cpp提供Python绑定,适合希望利用Metal/CUDA加速、但更倾向于从Python代码调用而非逐个文件调用CLI二进制文件的团队。',
+          '**whisper.cpp还附带一个小型本地HTTP服务器示例**(`whisper-server`),适合希望通过HTTP发送音频而非逐个文件调用CLI的团队——便于在不依赖Python的情况下将whisper.cpp集成到现有服务中。',
+        ],
+      },
+      licenseCost: {
+        id: 'license-cost',
+        title: '许可证与成本',
+        content: [
+          '**whisper.cpp采用MIT许可证。** [官方仓库](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE)中的许可证文件允许免费使用、修改和分发,包括用于闭源和商业产品,无需支付版税,除保留许可证声明外无需其他署名要求。',
+          '**whisper.cpp本身没有付费套餐、订阅或许可费用。** 唯一的实际成本是你运行它所用的硬件(如果选择托管,则是云端虚拟机成本),以及如果在其上构建产品所投入的开发时间。没有用量计费,没有API密钥,也不存在供应商锁定。',
+          '**底层Whisper模型权重也由OpenAI单独以MIT许可证发布**,因此运行环境(whisper.cpp)和它所加载的模型权重,均采用对商业使用宽松的许可证。',
+        ],
+        faqs: [
+          {
+            q: 'whisper.cpp能否免费用于商业用途?',
+            a: '可以。whisper.cpp采用MIT许可证,它所使用的Whisper模型权重同样由OpenAI以MIT许可证发布。两者都允许免费进行商业使用、修改和分发。',
+          },
+        ],
+      },
+      limitations: {
+        id: 'limitations',
+        title: 'whisper.cpp不适合的场景',
+        content: [
+          'whisper.cpp是一个转录运行环境,而不是完整的对话式AI或说话人分离产品。在以下情况下它不是合适的工具:',
+        ],
+        items: [
+          '**说话人分离("谁说了什么")。** whisper.cpp会转录说了什么,但不会原生分离或标注多人录音中的不同说话人。说话人分离需要单独的模型或流水线(例如将whisper.cpp的转录结果与说话人分离工具结合)叠加在其之上。',
+          '**大规模场景下低于100毫秒的流式延迟。** 内置的`whisper-stream`示例适用于单台机器上的单个实时麦克风,但whisper.cpp并非专门为大量并发用户构建、可水平扩展的实时语音识别服务,而专用的实时语音API正是为此设计的。',
+          '**面向非技术用户的零配置体验。** whisper.cpp是一个命令行工具,大多数用户需要从源码构建或获取编译好的二进制文件——它没有面向非开发者的成熟图形化安装程序或应用商店上架。想要一键式转录应用的用户,应该寻找基于whisper.cpp构建的图形化应用程序,或托管式转录服务。',
+          '**在以Python为主的流水线中榨取NVIDIA GPU的最后一点吞吐量。** 在最大规模的模型和NVIDIA硬件上,[PromptQuorum的测评](/power-local-llm/local-whisper-stt-comparison-2026)发现faster-whisper的CTranslate2后端比whisper.cpp的CUDA路径更快、更省显存——如果你的部署已经是运行在NVIDIA GPU上的Python服务,faster-whisper通常是更合适的选择。',
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'whisper.cpp的替代方案',
+        itemHeadings: true,
+        columns: ['工具', '最适合', '许可证'],
+        rows: [
+          {
+            '工具': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
+            '最适合': 'NVIDIA GPU上的Python流水线——CTranslate2后端,吞吐量约为原始Whisper的4倍',
+            '许可证': 'MIT',
+          },
+          {
+            '工具': '[WhisperX](https://github.com/m-bain/whisperX)',
+            '最适合': '需要在Whisper转录基础上获得词级时间戳和说话人分离',
+            '许可证': 'BSD-2-Clause',
+          },
+          {
+            '工具': '[OpenAI Whisper API](https://platform.openai.com/docs/guides/speech-to-text)',
+            '最适合': '相较于自托管,更偏好按使用付费的托管云端API的团队',
+            '许可证': '专有(付费API)',
+          },
+          {
+            '工具': '[Vosk](https://alphacephei.com/vosk/)',
+            '最适合': '资源非常有限的离线设备,需要小体积胜过Whisper级别精度',
+            '许可证': 'Apache-2.0',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: 'whisper.cpp是什么?',
+            a: 'whisper.cpp是一款免费的、采用MIT许可证的C/C++重新实现,基于OpenAI的语音识别模型Whisper,由Georgi Gerganov开发,可在无需Python运行时的情况下本地执行转录。',
+          },
+          {
+            q: 'whisper.cpp免费吗?',
+            a: '是的。whisper.cpp采用MIT许可证,没有付费套餐、订阅或使用费用。它所使用的Whisper模型权重同样由OpenAI以MIT许可证授权。',
+          },
+          {
+            q: '运行whisper.cpp需要GPU吗?',
+            a: '不需要。whisper.cpp使用AVX2(x86)或NEON(ARM)优化在CPU上运行,较小的模型(tiny、base)在仅有CPU的硬件上(包括Raspberry Pi)也能轻松实现实时运行。GPU(Apple Metal、NVIDIA CUDA或Vulkan)可以加速像large-v3这样更大的模型,但并非必需。',
+          },
+          {
+            q: 'whisper.cpp支持实时转录吗?',
+            a: '支持,通过`whisper-stream`示例,可以捕获实时麦克风音频并持续转录。延迟取决于模型规模和硬件——在快速CPU或GPU上运行的较小模型最接近实时。',
+          },
+          {
+            q: 'whisper.cpp和faster-whisper有什么区别?',
+            a: 'whisper.cpp是不依赖Python的纯C/C++实现,专为在CPU、Apple Metal、CUDA和嵌入式设备之间的可移植性而构建。faster-whisper是基于CTranslate2的Python库,主要针对Python流水线中的NVIDIA GPU吞吐量进行优化。有关各平台的具体数据,请参阅PromptQuorum的[详细对比评测](/power-local-llm/local-whisper-stt-comparison-2026)。',
+          },
+          {
+            q: 'whisper.cpp能在Raspberry Pi上运行吗?',
+            a: '可以。得益于whisper.cpp的ARM NEON优化,tiny和base模型可以在Raspberry Pi 5的CPU上实时运行,因为该项目没有任何需要安装的Python或CUDA依赖。',
+          },
+          {
+            q: 'whisper.cpp会把音频翻译成英语吗?',
+            a: '会。向`whisper-cli`传递`-tr`(翻译)参数,可以转录非英语语音并直接翻译成英文文本,利用的是多语言Whisper模型内置的翻译能力。',
+          },
+          {
+            q: '目前是谁在维护whisper.cpp?',
+            a: '该项目由GitHub上的ggml-org组织维护,该组织由最初的创建者Georgi Gerganov创立,并有数百名社区开发者贡献代码。它仍在积极发布新版本,v1.9.3已于2026年8月20日发布。',
+          },
+          {
+            q: 'whisper.cpp能否分离一段录音中的不同说话人?',
+            a: '并非原生支持。whisper.cpp会将语音转录为文本,但本身不执行说话人分离。若要实现"谁说了什么",请将其与专用的说话人分离工具结合使用,或使用WhisperX,它在Whisper转录基础上增加了说话人分离功能。',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '结论',
+        content:
+          'whisper.cpp恰好实现了它的初衷:让能够编译C/C++的任何设备都能运行OpenAI的Whisper语音识别模型,而无需Python、CUDA或沉重的运行环境。这种可移植性——从Raspberry Pi到Apple Silicon Mac,再到支持Vulkan的GPU都能无需修改地运行——在本地离线转录领域几乎没有可与之媲美的免费替代品,而MIT许可证也让在其基础上构建商业产品变得安全可靠。它免费、维护良好,并使用与原始Whisper相同的模型权重,因此在给定模型规模下的精度与OpenAI发布的版本一致。它并非最强选择的场景,是以Python为主、仅依赖NVIDIA GPU、追求最大吞吐量的流水线——正如PromptQuorum的[直接对比评测](/power-local-llm/local-whisper-stt-comparison-2026)所记录的那样,faster-whisper的CTranslate2后端在这种场景下更胜一筹。对于其他所有情况——面向嵌入式硬件、Apple Silicon、跨平台应用的开发者,或任何想要单一自包含二进制文件而非Python环境的人——whisper.cpp都是一个经过充分验证、零成本的起点。',
+      },
+      sources: {
+        id: 'sources',
+        title: '资料来源',
+        items: [
+          '[GitHub上的whisper.cpp](https://github.com/ggml-org/whisper.cpp) ——官方仓库:README、安装说明、许可证和版本历史。',
+          '[whisper.cpp发布记录](https://github.com/ggml-org/whisper.cpp/releases) ——版本历史,包括v1.9.3(2026年8月20日)。',
+          '[whisper.cpp许可证](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE) ——MIT许可证文本。',
+          '[OpenAI Whisper发布公告](https://openai.com/index/whisper/) ——Whisper模型2022年的原始发布。',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[whisper.cpp对比faster-whisper 2026:本地STT基准测试、安装与GPU加速](/power-local-llm/local-whisper-stt-comparison-2026) ——为需要在whisper.cpp和faster-whisper之间做选择的读者提供的直接对比。',
+          'faster-whisper评测 ——基于CTranslate2的替代方案,采用同等深度评测。',
+          '[2026年构建完全离线的语音助手](/power-local-llm/build-local-voice-assistant-2026) ——将whisper.cpp与本地大语言模型和Piper TTS连接成完整的语音流水线。',
+          'Piper TTS评测 ——本地文本转语音的对应工具,用于将生成的文本离线转换回语音。',
+          '[本地大语言模型软件完整目录](/power-local-llm/local-llm-software-directory) ——覆盖所有分类的更广泛本地AI工具目录。',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'whisper.cpp评测(2026):纯C/C++本地语音识别',
+      description:
+        'whisper.cpp评测:采用MIT许可证的OpenAI Whisper C/C++移植版,用于本地语音识别。历史、安装步骤、真实CLI命令、许可证,以及何时应选择faster-whisper。',
+      url: 'https://promptquorum.com/zh/power-local-llm/whisper-cpp-review',
+      inLanguage: 'zh',
+      datePublished: '2026-09-05',
+      dateModified: '2026-09-05',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      educationalLevel: 'Intermediate',
+      proficiencyLevel: 'Intermediate',
+      audience: { '@type': 'Audience', audienceType: '正在评估本地离线语音识别工具的开发者' },
+      about: [
+        { '@type': 'Thing', name: 'whisper.cpp' },
+        { '@type': 'Thing', name: 'OpenAI Whisper' },
+        { '@type': 'Thing', name: '语音识别' },
+        { '@type': 'Thing', name: 'Local LLM' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/zh/power-local-llm/whisper-cpp-review' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: 'https://promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/zh/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'whisper.cpp评测(2026)', item: 'https://promptquorum.com/zh/power-local-llm/whisper-cpp-review' },
+      ],
+    },
+  },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/whisper-cpp-review-hero-ko.webp',
+    title: 'whisper.cpp 리뷰(2026): 순수 C/C++로 구현한 로컬 음성 인식',
+    seoTitle: 'whisper.cpp 리뷰 2026: C/C++ 로컬 STT',
+    intro:
+      'whisper.cpp는 OpenAI의 음성 인식 모델 Whisper를 C/C++로 재구현한 프로젝트로, Georgi Gerganov가 개발했으며 현재는 [GitHub의 ggml-org 조직](https://github.com/ggml-org/whisper.cpp)에서 관리하고 있습니다. 클라우드 API를 호출하지 않고 기기 내에서 완전히 음성을 텍스트로 변환하며, Raspberry Pi부터 Apple Silicon Mac, NVIDIA GPU 서버에 이르기까지 다양한 하드웨어에서 동작합니다. 이 리뷰에서는 개발 역사, 설치 및 실행 방법, 실제 명령줄 예시, MIT 라이선스와 비용(무료), 그리고 적합하지 않은 용도까지 다루며, faster-whisper와의 선택을 고민하는 독자를 위해 PromptQuorum의 직접 비교 벤치마크 링크도 함께 제공합니다.',
+    metaDescription:
+      'whisper.cpp 리뷰: OpenAI Whisper를 MIT 라이선스로 C/C++ 포팅한 로컬 음성 인식 도구. 역사, 설치 단계, 실제 CLI 명령어, 라이선스, faster-whisper를 선택해야 할 때를 정리했습니다.',
+    twitterDescription:
+      'whisper.cpp 리뷰 2026: Georgi Gerganov가 만든 OpenAI Whisper의 C/C++ 포팅 버전으로 로컬·오프라인 음성 인식을 구현합니다. 역사, 설치, 실제 명령어, MIT 라이선스, 솔직한 한계를 정리했습니다.',
+    audience:
+      'Python 런타임이나 클라우드 API 없이 기기 내 음성 인식을 원하는 개발자와 셀프 호스팅 사용자 — Raspberry Pi 프로젝트부터 Apple Silicon 및 NVIDIA GPU 파이프라인까지.',
+    readTime: '11분 읽기',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'whisper.cpp 리뷰',
+    targetKeywords: [
+      'whisper.cpp 리뷰',
+      'whisper.cpp',
+      'whisper cpp 설치',
+      'whisper cpp 설정',
+      'ggerganov whisper',
+      '로컬 음성 인식 c++',
+      '오프라인 whisper 전사',
+      'whisper cpp 라이선스',
+    ],
+    current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny'],
+    current_hardware_mentioned: ['Apple Silicon', 'NVIDIA GPU', 'Raspberry Pi'],
+    leadAnswerBlock:
+      '**whisper.cpp는 Georgi Gerganov가 개발한 무료 MIT 라이선스 C/C++ 재구현체로, OpenAI의 음성 인식 모델 Whisper를 기반으로 하며 Python에 의존하지 않고 기기 내에서 완전히 전사를 실행합니다.** CPU(AVX2/NEON 최적화 포함), Apple Metal 및 Core ML, NVIDIA CUDA, Vulkan 등 여러 백엔드를 지원하여, Raspberry Pi부터 Apple Silicon Mac, CUDA 서버까지 수정 없이 동작하는 몇 안 되는 STT 도구 중 하나입니다. 실제 하드웨어에서 faster-whisper와 직접 비교한 벤치마크는 PromptQuorum의 [whisper.cpp 대 faster-whisper 비교](/power-local-llm/local-whisper-stt-comparison-2026)에서 확인할 수 있습니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'whisper.cpp란 무엇이며, 로컬 음성 인식에 사용할 가치가 있습니까?',
+        answer:
+          'Python이나 CUDA를 설치하지 않고 오프라인·기기 내 음성 인식을 원하거나, Raspberry Pi, iOS, Android, WebAssembly처럼 순수 C/C++ 바이너리가 Python 스택보다 배포하기 쉬운 플랫폼을 대상으로 한다면 whisper.cpp는 사용할 가치가 있습니다. 무료(MIT 라이선스)이며 활발히 유지보수되고 있고, OpenAI의 원본 공개 버전과 동일한 Whisper 모델 가중치를 사용하므로 동일한 모델 크기에서 전사 정확도는 원본 Whisper와 동일합니다. 주된 대상이 Python 파이프라인을 실행하는 NVIDIA GPU 서버라면 faster-whisper를 선택하십시오 — 해당 환경에서는 CTranslate2 백엔드가 더 빠릅니다.',
+        bullets: [
+          'Georgi Gerganov가 개발했으며, 2022년 OpenAI Whisper의 C/C++ 포팅 버전으로 처음 공개됨. 현재는 GitHub의 ggml-org 조직에서 관리.',
+          'MIT 라이선스, 무료, 유료 등급 없음, 계정 필요 없음.',
+          'CPU, Apple Metal/Core ML, NVIDIA CUDA, Vulkan, OpenVINO 등에서 동작 — Python 런타임 불필요.',
+          '최신 안정 버전: v1.9.3(2026년 8월 20일), 프로젝트의 GitHub 릴리스 페이지 기준.',
+          '가장 적합한 용도: 임베디드 기기, Apple Silicon, 그리고 Python 환경보다 단일 독립 실행형 바이너리가 나은 모든 배포 환경.',
+        ],
+        updatedDate: '2026-09-05',
+      },
+    },
+    toc: [
+      { label: '빠른 답변', anchor: 'quick-answer' },
+      { label: '역사: whisper.cpp를 누가, 왜 만들었는가', anchor: 'history' },
+      { label: 'whisper.cpp가 실제로 하는 일', anchor: 'what-it-does' },
+      { label: 'whisper.cpp 설치 및 실행: 단계별 가이드', anchor: 'install-walkthrough' },
+      { label: '실제 사용 예시', anchor: 'usage-examples' },
+      { label: '라이선스와 비용', anchor: 'license-cost' },
+      { label: 'whisper.cpp가 적합하지 않은 용도', anchor: 'limitations' },
+      { label: 'whisper.cpp의 대안', anchor: 'alternatives' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '결론', anchor: 'verdict' },
+      { label: '출처', anchor: 'sources' },
+      { label: '관련 글', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '핵심 내용',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'whisper.cpp는 Georgi Gerganov가 개발한 무료 MIT 라이선스 C/C++ 포팅 버전으로, OpenAI의 음성 인식 모델 Whisper를 기반으로 하며 CPU, Apple Metal, NVIDIA CUDA 등 다양한 백엔드를 통해 Python 없이 기기 내에서 완전히 오디오를 전사합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '클라우드 API로 전송하는 대신 자신의 컴퓨터나 기기에서 음성을 텍스트로 변환하는 도구입니다. 컴파일된 바이너리를 내려받거나 직접 빌드한 뒤, 오디오 파일이나 실시간 마이크 스트림을 입력하면 OpenAI가 학습시킨 것과 동일한 모델을 사용해 무료로 전사 결과를 돌려줍니다.',
+          },
+        ],
+        items: [
+          '2022년 Georgi Gerganov가 개발; 현재는 GitHub의 ggml-org 조직에서 관리.',
+          'MIT 라이선스 — 상업적 사용을 포함해 무료로 사용, 수정, 재배포 가능.',
+          'CPU, Apple Metal/Core ML, NVIDIA CUDA, Vulkan, OpenVINO, AMD ROCm, Ascend NPU 백엔드에서 동작.',
+          'Python 런타임이 필요 없음 — 컴파일된 C/C++ 바이너리로 제공되며, Python 바인딩은 선택 사항.',
+          '스트리밍 예제를 통해 실시간 마이크 전사를 지원하며, 파일 일괄 전사도 지원.',
+          '최신 안정 버전: v1.9.3, 2026년 8월 20일 공개.',
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: '이 리뷰는 whisper.cpp를 독립 도구로서 다루며 역사, 설치, 실제 명령어, 라이선스, 솔직한 한계에 초점을 맞춥니다. Apple Silicon 및 NVIDIA GPU에서 faster-whisper와 직접 비교한 벤치마크는 [whisper.cpp 대 faster-whisper 비교](/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
+          },
+        ],
+      },
+      history: {
+        id: 'history',
+        title: '역사: whisper.cpp를 누가, 왜 만들었는가',
+        content: [
+          '**OpenAI는 2022년 9월 음성 인식 모델 Whisper를 공개했습니다.** 대량의 다국어 오디오 데이터로 학습된 오픈 웨이트 모델로, PyTorch에 의존하고 좋은 성능을 위해서는 CUDA 지원 GPU가 필요한 Python 패키지(`openai-whisper`)로 배포되었습니다.',
+          '**Georgi Gerganov는 그 직후, 역시 2022년에 이 모델을 순수 C/C++로 포팅했습니다.** 저장소는 [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)입니다. Gerganov는 whisper.cpp의 연산과 양자화를 뒷받침하는 ggml 텐서 라이브러리의 개발자이기도 하며, 이후에는 대규모 언어 모델을 로컬에서 실행하기 위한 동등한 C/C++ 포팅인 llama.cpp로 널리 알려졌습니다 — 두 프로젝트는 같은 ggml 기반과, 원래는 Python과 GPU가 필요한 모델을 평범한 하드웨어에서 실행한다는 동일한 설계 목표를 공유합니다.',
+          '**개발 동기는 속도뿐 아니라 이식성과 자원 효율성이었습니다.** Whisper의 원본 Python/PyTorch 구현은 좋은 GPU를 갖춘 워크스테이션에서는 실행하기 쉽지만, Raspberry Pi, iOS 앱, WebAssembly 페이지, Python 인터프리터가 없는 임베디드 Linux 보드에 배포하기에는 무겁습니다. whisper.cpp는 PyTorch와 Python 의존성을 완전히 제거하고 작은 바이너리로 컴파일되며, 더 작은 모델 변형이 수백 메가바이트의 RAM에 들어갈 수 있도록 양자화 지원을 추가합니다.',
+          '**이 프로젝트는 한 사람이 만든 사이드 프로젝트 수준을 훨씬 넘어섰습니다.** 현재는 수백 명의 기여자를 두고 있으며, Debian용으로 패키징되어 있고, 2022년 원본 공개 당시에는 존재하지 않았던 Core ML(Apple Neural Engine), CUDA, Vulkan, OpenVINO 등 여러 백엔드를 공식 지원합니다. 그럼에도 whisper.cpp는 여전히 Whisper의 *실행 환경*입니다 — 자체 모델을 학습하거나 미세 조정하지 않으며, 모든 전사는 여전히 주어진 모델 크기(tiny부터 large-v3까지)에 대해 OpenAI가 공개한 동일한 가중치를, 프로젝트 고유의 GGML 형식으로 변환해 사용합니다.',
+        ],
+        faqs: [
+          {
+            q: 'whisper.cpp는 누가 만들었습니까?',
+            a: 'Georgi Gerganov가 whisper.cpp를 개발했으며, 2022년 OpenAI Whisper 모델의 C/C++ 포팅 버전으로 처음 공개했습니다. Gerganov는 whisper.cpp가 구동되는 ggml 텐서 라이브러리도 만들었으며, 이후 대규모 언어 모델을 로컬에서 실행하기 위한 동등한 포팅인 llama.cpp도 개발했습니다.',
+          },
+        ],
+      },
+      whatItDoes: {
+        id: 'what-it-does',
+        title: 'whisper.cpp가 실제로 하는 일',
+        content: [
+          'whisper.cpp는 오디오 입력(WAV 파일, 그리고 선택적 FFmpeg 디코딩을 통한 다른 형식, 또는 실시간 마이크 스트림)을 받아 텍스트 전사 결과를 생성하며, 선택적으로 구간별 타임스탬프와 영어 번역도 함께 제공합니다. 이를 위해 Whisper 모델(프로젝트 고유의 GGML 가중치 형식으로 변환됨)을 불러와 ggml 텐서 라이브러리를 통해 로컬 머신에서 완전히 추론을 수행합니다.',
+        ],
+        items: [
+          '**일괄 전사.** `whisper-cli` 바이너리를 오디오 파일에 지정하면 전사 결과를 얻을 수 있으며, 일반 텍스트, SRT/VTT 자막, JSON, CSV 출력 옵션을 제공합니다.',
+          '**실시간 스트리밍.** `whisper-stream` 예제는 실시간 마이크 오디오를 캡처하여 지속적으로 전사하며, 음성 비서나 실시간 자막에 유용합니다.',
+          '**다국어 전사 및 번역.** 기반 Whisper 모델은 여러 언어로 학습되었으며, whisper.cpp는 전달된 플래그에 따라 원문 언어로 전사하거나 직접 영어로 번역할 수 있습니다.',
+          '**하드웨어 가속 추론.** Apple Silicon에서는 whisper.cpp가 모델을 Core ML 형식으로 내보내 Apple Neural Engine을 활용할 수 있습니다. NVIDIA 하드웨어에서는 CUDA를 사용하며, 다른 GPU에서는 Vulkan이나 OpenVINO를 사용할 수 있습니다. CPU 전용 머신에서는 AVX2(x86) 또는 NEON(ARM) 벡터 명령어를 사용합니다.',
+          '**양자화.** 모델은 (예를 들어 4비트나 5비트 GGML 형식으로) 양자화되어, 약간의 정확도를 희생하는 대신 메모리 사용량을 크게 줄이고 추론 속도를 높일 수 있습니다 — llama.cpp가 LLM에 사용하는 것과 동일한 기법입니다.',
+        ],
+        note: 'whisper.cpp는 실행 환경이지 모델이 아닙니다. 주어진 모델 크기(tiny, base, small, medium, large-v3)의 전사 정확도는 whisper.cpp가 아니라 OpenAI의 원본 학습에 의해 결정됩니다 — 이 프로젝트의 역할은 Python이나 무거운 GPU 스택 없이 해당 모델을 효율적으로 실행하는 것입니다.',
+      },
+      installWalkthrough: {
+        id: 'install-walkthrough',
+        title: 'whisper.cpp 설치 및 실행: 단계별 가이드',
+        content: '이 가이드는 프로젝트 자체 README에 문서화된 명령어를 사용하여 소스에서 whisper.cpp를 빌드하고 첫 전사를 실행합니다.',
+        numberedItems: [
+          {
+            title: '저장소를 클론합니다.',
+            whyItMatters: '`git clone https://github.com/ggml-org/whisper.cpp.git`을 실행한 뒤 `cd whisper.cpp`를 실행합니다. 이렇게 하면 CMake 빌드 파일과 모델 다운로드 스크립트를 포함한 전체 C/C++ 소스 트리를 내려받습니다.',
+          },
+          {
+            title: '모델을 다운로드합니다.',
+            whyItMatters: '`sh ./models/download-ggml-model.sh base.en`을 실행하여 GGML 형식의 영어 전용 base 모델을 가져옵니다. 원하는 정확도와 속도의 균형에 따라 `base.en`을 `tiny`, `small`, `medium`, `large-v3`로 바꾸거나, 다국어 모델을 위해 `.en` 접미사를 제거하십시오.',
+          },
+          {
+            title: '프로젝트를 빌드합니다.',
+            whyItMatters: '`cmake -B build`를 실행한 뒤 `cmake --build build -j --config Release`를 실행합니다. 이렇게 하면 CLI 바이너리(`whisper-cli`, `whisper-stream` 등)가 `build/bin/` 디렉터리에 컴파일됩니다. 이 단계에는 Python 설치가 필요하지 않습니다.',
+          },
+          {
+            title: '예제 파일을 전사합니다.',
+            whyItMatters: '저장소에 포함된 예제 오디오 파일로 `./build/bin/whisper-cli -f samples/jfk.wav`를 실행합니다. 이를 통해 빌드가 처음부터 끝까지 정상 작동하는지 확인하고, 터미널에 전사 결과가 출력됩니다.',
+          },
+          {
+            title: '자신의 오디오를 전사합니다.',
+            whyItMatters: '예제 경로를 자신의 WAV 파일로 바꿉니다: `./build/bin/whisper-cli -m models/ggml-base.en.bin -f your-audio.wav`. `.srt` 자막 파일도 함께 작성하려면 `-osrt`를, JSON 출력을 원하면 `-oj`를 추가하십시오.',
+          },
+          {
+            title: '(선택) GPU 가속을 활성화합니다.',
+            whyItMatters: 'Apple Silicon에서는 macOS에서 기본 CMake 옵션으로 빌드하면 Metal 가속이 자동으로 사용됩니다. NVIDIA 머신에서는 CUDA 지원으로 빌드하기 위해 `cmake -B build` 단계에 `-DGGML_CUDA=ON`을 추가하십시오(CUDA 툴킷 설치 필요).',
+          },
+          {
+            title: '(선택) 실시간 전사를 시도합니다.',
+            whyItMatters: '스트리밍 예제를 빌드하고 `./build/bin/whisper-stream -m models/ggml-base.en.bin`을 실행하여 고정된 파일 대신 실시간 마이크 오디오를 지속적으로 전사합니다.',
+          },
+        ],
+      },
+      usageExamples: {
+        id: 'usage-examples',
+        title: '실제 사용 예시',
+        content: [
+          '위의 기본 설치 가이드 외에, 다음은 실제로 자주 사용되는 `whisper-cli` 바이너리 호출 예시입니다.',
+        ],
+        codeBlock: `# 오디오 파일을 일반 텍스트로 전사(기본 출력)
+./build/bin/whisper-cli -m models/ggml-base.en.bin -f interview.wav
+
+# 더 크고 정확한 모델을 사용해 전사하고 SRT 자막을 출력
+./build/bin/whisper-cli -m models/ggml-large-v3.bin -f lecture.wav -osrt
+
+# 비영어권 음성을 영어 텍스트로 직접 번역
+./build/bin/whisper-cli -m models/ggml-medium.bin -f french-audio.wav -tr
+
+# 특정 GPU 선택(다중 GPU 머신)
+./build/bin/whisper-cli -m models/ggml-large-v3.bin -f audio.wav -g 0
+
+# 기본 마이크로부터 실시간 전사
+./build/bin/whisper-stream -m models/ggml-base.en.bin -t 8`,
+        codeLanguage: 'bash',
+        note: '여기에 표시된 플래그(`-m` 모델 경로, `-f` 입력 파일, `-osrt` SRT 출력, `-tr` 영어 번역, `-g`/`--gpu-device` GPU 선택, `-t` 스레드 수)는 프로젝트의 `--help` 출력과 README에 문서화되어 있습니다. CLI 옵션은 버전에 따라 달라질 수 있으므로, 설치한 버전의 현재 플래그 세트를 확인하려면 항상 `./build/bin/whisper-cli --help`를 실행하십시오.',
+        items: [
+          '**pywhispercpp**는 whisper.cpp의 Python 바인딩을 제공하여, Metal/CUDA 가속을 활용하면서도 파일마다 CLI 바이너리를 호출하는 대신 Python 코드에서 호출하려는 팀에 적합합니다.',
+          '**whisper.cpp에는 작은 로컬 HTTP 서버 예제**(`whisper-server`)도 포함되어 있어, 파일마다 CLI를 호출하는 대신 HTTP를 통해 오디오를 전송하려는 팀에 유용합니다 — Python 의존성 없이 기존 서비스에 whisper.cpp를 통합하는 데 도움이 됩니다.',
+        ],
+      },
+      licenseCost: {
+        id: 'license-cost',
+        title: '라이선스와 비용',
+        content: [
+          '**whisper.cpp는 MIT 라이선스로 배포됩니다.** [공식 저장소](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE)의 라이선스 파일은 클로즈드 소스 및 상업 제품을 포함해 무료로 사용, 수정, 재배포하는 것을 허용하며, 로열티가 없고 라이선스 고지를 유지하는 것 외에 별도의 저작권 표시 의무도 없습니다.',
+          '**whisper.cpp 자체에는 유료 등급, 구독, 라이선스 비용이 전혀 없습니다.** 실제 비용은 실행할 하드웨어(또는 호스팅을 선택할 경우 클라우드 VM)와, 그 위에 제품을 구축할 경우 자신의 개발 시간뿐입니다. 사용량 측정, API 키, 벤더 종속도 없습니다.',
+          '**기반이 되는 Whisper 모델 가중치 또한 OpenAI가 별도로 MIT 라이선스로 공개했으므로**, 실행 환경(whisper.cpp)과 그것이 불러오는 모델 가중치 모두 상업적 사용에 대해 관대한 라이선스를 갖습니다.',
+        ],
+        faqs: [
+          {
+            q: 'whisper.cpp는 상업적으로 무료로 사용할 수 있습니까?',
+            a: '네. whisper.cpp는 MIT 라이선스이며, 사용하는 Whisper 모델 가중치도 OpenAI에 의해 MIT 라이선스로 공개되어 있습니다. 둘 다 비용 없이 상업적 사용, 수정, 재배포를 허용합니다.',
+          },
+        ],
+      },
+      limitations: {
+        id: 'limitations',
+        title: 'whisper.cpp가 적합하지 않은 용도',
+        content: [
+          'whisper.cpp는 전사 실행 환경이지, 완전한 대화형 AI나 화자 분리 제품이 아닙니다. 다음과 같은 상황에서는 적합한 도구가 아닙니다.',
+        ],
+        items: [
+          '**화자 분리("누가 무엇을 말했는가").** whisper.cpp는 말한 내용을 전사하지만, 여러 사람이 등장하는 녹음에서 서로 다른 화자를 기본적으로 분리하거나 표시하지 않습니다. 화자 분리를 위해서는 (예를 들어 whisper.cpp의 전사 결과를 화자 분리 도구와 결합하는 등) 별도의 모델이나 파이프라인을 추가로 얹어야 합니다.',
+          '**대규모 환경에서 100밀리초 미만의 스트리밍 지연.** 내장된 `whisper-stream` 예제는 한 대의 머신에서 하나의 실시간 마이크에는 잘 작동하지만, whisper.cpp는 다수의 동시 사용자를 위해 전용 실시간 음성 API가 설계되는 것과 같은, 특별히 설계되어 수평적으로 확장되는 실시간 음성 인식 서비스는 아닙니다.',
+          '**비기술 사용자를 위한 제로 설정.** whisper.cpp는 대부분의 사용자가 소스에서 빌드하거나 컴파일된 바이너리로 받는 명령줄 도구입니다 — 비개발자를 위한 정교한 그래픽 설치 프로그램이나 앱스토어 등록이 없습니다. 원클릭 전사 앱을 원하는 사용자는 대신 whisper.cpp 기반의 그래픽 애플리케이션이나 호스팅형 전사 서비스를 찾아야 합니다.',
+          '**Python 우선 파이프라인에서 NVIDIA GPU의 마지막 성능까지 뽑아내는 것.** 가장 큰 모델과 NVIDIA 하드웨어에서, [PromptQuorum의 벤치마크](/power-local-llm/local-whisper-stt-comparison-2026)는 faster-whisper의 CTranslate2 백엔드가 whisper.cpp의 CUDA 경로보다 더 빠르고 VRAM을 덜 사용한다는 것을 확인했습니다 — 배포 환경이 이미 NVIDIA GPU 위의 Python 서비스라면, faster-whisper가 보통 더 나은 선택입니다.',
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'whisper.cpp의 대안',
+        itemHeadings: true,
+        columns: ['도구', '가장 적합한 경우', '라이선스'],
+        rows: [
+          {
+            '도구': '[faster-whisper](https://github.com/SYSTRAN/faster-whisper)',
+            '가장 적합한 경우': 'NVIDIA GPU 위의 Python 파이프라인 — CTranslate2 백엔드, 원본 Whisper 대비 약 4배의 처리량',
+            '라이선스': 'MIT',
+          },
+          {
+            '도구': '[WhisperX](https://github.com/m-bain/whisperX)',
+            '가장 적합한 경우': 'Whisper 전사 결과에 더해 단어 단위 타임스탬프와 화자 분리가 필요할 때',
+            '라이선스': 'BSD-2-Clause',
+          },
+          {
+            '도구': '[OpenAI Whisper API](https://platform.openai.com/docs/guides/speech-to-text)',
+            '가장 적합한 경우': '셀프 호스팅보다 사용량 기반 요금의 관리형 클라우드 API를 선호하는 팀',
+            '라이선스': '독점(유료 API)',
+          },
+          {
+            '도구': '[Vosk](https://alphacephei.com/vosk/)',
+            '가장 적합한 경우': 'Whisper 수준의 정확도보다 작은 용량이 중요한, 자원이 매우 제한적인 오프라인 기기',
+            '라이선스': 'Apache-2.0',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'whisper.cpp란 무엇입니까?',
+            a: 'whisper.cpp는 Georgi Gerganov가 개발한 무료 MIT 라이선스 C/C++ 재구현체로, OpenAI의 음성 인식 모델 Whisper를 기반으로 하며 Python 런타임 없이 로컬에서 전사를 실행합니다.',
+          },
+          {
+            q: 'whisper.cpp는 무료입니까?',
+            a: '네. whisper.cpp는 MIT 라이선스이며, 유료 등급, 구독, 사용료가 없습니다. 사용하는 Whisper 모델 가중치도 OpenAI에 의해 MIT 라이선스로 공개되어 있습니다.',
+          },
+          {
+            q: 'whisper.cpp를 실행하는 데 GPU가 필요합니까?',
+            a: '아니요. whisper.cpp는 AVX2(x86) 또는 NEON(ARM) 최적화를 사용해 CPU에서 동작하며, tiny나 base 같은 작은 모델은 Raspberry Pi를 포함한 CPU 전용 하드웨어에서도 실시간으로 무리 없이 동작합니다. GPU(Apple Metal, NVIDIA CUDA, Vulkan)는 large-v3 같은 더 큰 모델을 가속하지만 필수는 아닙니다.',
+          },
+          {
+            q: 'whisper.cpp는 실시간 전사를 지원합니까?',
+            a: '네, `whisper-stream` 예제를 통해 실시간 마이크 오디오를 캡처하여 지속적으로 전사할 수 있습니다. 지연 시간은 모델 크기와 하드웨어에 따라 다르며, 빠른 CPU나 GPU에서 실행되는 작은 모델일수록 실시간에 가장 가깝습니다.',
+          },
+          {
+            q: 'whisper.cpp와 faster-whisper의 차이는 무엇입니까?',
+            a: 'whisper.cpp는 Python 의존성이 없는 순수 C/C++ 구현으로, CPU, Apple Metal, CUDA, 임베디드 기기 간 이식성을 위해 만들어졌습니다. faster-whisper는 CTranslate2를 기반으로 한 Python 라이브러리로, Python 파이프라인 내에서 NVIDIA GPU 처리량을 최적화하는 데 주로 초점을 맞춥니다. 플랫폼별 구체적인 수치는 PromptQuorum의 [상세 비교](/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
+          },
+          {
+            q: 'whisper.cpp는 Raspberry Pi에서 실행할 수 있습니까?',
+            a: '네. whisper.cpp의 ARM NEON 최적화 덕분에 tiny와 base 모델은 Raspberry Pi 5의 CPU에서 실시간으로 동작합니다. 이 프로젝트는 설치해야 할 Python이나 CUDA 의존성이 전혀 없기 때문입니다.',
+          },
+          {
+            q: 'whisper.cpp는 오디오를 영어로 번역합니까?',
+            a: '네. `whisper-cli`에 `-tr`(번역) 플래그를 전달하면 비영어권 음성을 전사하고, 다국어 Whisper 모델에 내장된 번역 기능을 사용해 곧바로 영어 텍스트로 번역합니다.',
+          },
+          {
+            q: 'whisper.cpp는 현재 누가 관리합니까?',
+            a: '이 프로젝트는 원래 개발자인 Georgi Gerganov가 설립한 GitHub의 ggml-org 조직에서 관리하며, 수백 명의 커뮤니티 개발자가 기여하고 있습니다. 여전히 활발히 배포되고 있으며, v1.9.3이 2026년 8월 20일에 공개되었습니다.',
+          },
+          {
+            q: 'whisper.cpp는 녹음 속 서로 다른 화자를 분리합니까?',
+            a: '기본적으로는 분리하지 않습니다. whisper.cpp는 음성을 텍스트로 전사하지만 자체적으로 화자 분리를 수행하지는 않습니다. "누가 무엇을 말했는가"가 필요하다면 전용 화자 분리 도구와 결합하거나, Whisper 전사 결과 위에 화자 분리를 추가하는 WhisperX를 사용하십시오.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '결론',
+        content:
+          'whisper.cpp는 목표한 바를 정확히 달성했습니다. Python, CUDA, 무거운 런타임 없이도 C/C++를 컴파일할 수 있는 모든 기기에 OpenAI의 Whisper 음성 인식 모델을 가져다주는 것입니다. Raspberry Pi부터 Apple Silicon Mac, Vulkan 지원 GPU까지 수정 없이 동작하는 이 이식성은 로컬·오프라인 전사 분야에서 가까운 무료 대안을 찾기 어려우며, MIT 라이선스 덕분에 상업 제품에 안전하게 기반으로 삼을 수 있습니다. 무료이고 잘 유지보수되며, 원본 Whisper와 동일한 모델 가중치를 사용하므로 주어진 모델 크기에서의 정확도는 OpenAI가 공개한 것과 일치합니다. 가장 강력한 선택이 아닌 경우는 최대 처리량을 추구하는 Python 우선, NVIDIA GPU 전용 파이프라인인데, 이 경우 PromptQuorum의 [직접 비교](/power-local-llm/local-whisper-stt-comparison-2026)가 보여주듯 faster-whisper의 CTranslate2 백엔드가 우세합니다. 그 외 모든 경우 — 임베디드 하드웨어, Apple Silicon, 크로스 플랫폼 앱을 대상으로 하는 개발자, 또는 Python 환경 대신 단일 독립 실행형 바이너리를 원하는 누구에게나 — whisper.cpp는 충분히 검증되고 비용이 들지 않는 좋은 출발점입니다.',
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[GitHub의 whisper.cpp](https://github.com/ggml-org/whisper.cpp) — 공식 저장소: README, 설치 안내, 라이선스, 릴리스 이력.',
+          '[whisper.cpp 릴리스](https://github.com/ggml-org/whisper.cpp/releases) — v1.9.3(2026년 8월 20일)을 포함한 버전 이력.',
+          '[whisper.cpp 라이선스](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE) — MIT 라이선스 전문.',
+          '[OpenAI Whisper 발표](https://openai.com/index/whisper/) — 2022년 Whisper 모델의 최초 공개.',
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 글',
+        items: [
+          '[whisper.cpp 대 faster-whisper 2026: 로컬 STT 벤치마크, 설치, GPU 가속](/power-local-llm/local-whisper-stt-comparison-2026) — whisper.cpp와 faster-whisper 사이에서 고민하는 독자를 위한 직접 비교.',
+          'faster-whisper 리뷰 — CTranslate2 기반 대안을 동일한 깊이로 리뷰.',
+          '[2026년 완전 오프라인 음성 비서 구축하기](/power-local-llm/build-local-voice-assistant-2026) — whisper.cpp를 로컬 LLM 및 Piper TTS와 연결해 완전한 음성 파이프라인 구축.',
+          'Piper TTS 리뷰 — 생성된 텍스트를 오프라인에서 다시 음성으로 변환하는, 로컬 음성 합성 짝꿍 도구.',
+          '[로컬 LLM 소프트웨어 전체 디렉터리](/power-local-llm/local-llm-software-directory) — 모든 카테고리를 아우르는 더 넓은 로컬 AI 도구 디렉터리.',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'whisper.cpp 리뷰(2026): 순수 C/C++로 구현한 로컬 음성 인식',
+      description:
+        'whisper.cpp 리뷰: OpenAI Whisper를 MIT 라이선스로 C/C++ 포팅한 로컬 음성 인식 도구. 역사, 설치 단계, 실제 CLI 명령어, 라이선스, faster-whisper를 선택해야 할 때를 정리했습니다.',
+      url: 'https://promptquorum.com/ko/power-local-llm/whisper-cpp-review',
+      inLanguage: 'ko',
+      datePublished: '2026-09-05',
+      dateModified: '2026-09-05',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      educationalLevel: 'Intermediate',
+      proficiencyLevel: 'Intermediate',
+      audience: { '@type': 'Audience', audienceType: '로컬·오프라인 음성 인식 도구를 검토하는 개발자' },
+      about: [
+        { '@type': 'Thing', name: 'whisper.cpp' },
+        { '@type': 'Thing', name: 'OpenAI Whisper' },
+        { '@type': 'Thing', name: '음성 인식' },
+        { '@type': 'Thing', name: 'Local LLM' },
+      ],
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://promptquorum.com/ko/power-local-llm/whisper-cpp-review' },
+    },
+    breadcrumbSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://promptquorum.com' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/ko/power-local-llm' },
+        { '@type': 'ListItem', position: 3, name: 'whisper.cpp 리뷰(2026)', item: 'https://promptquorum.com/ko/power-local-llm/whisper-cpp-review' },
       ],
     },
   },
