@@ -7949,6 +7949,24 @@
       ],
       "images": []
     },
+    "langgraph-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "llamaindex-rag-framework-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
