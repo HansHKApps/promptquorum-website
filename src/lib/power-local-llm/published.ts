@@ -215,6 +215,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
+
+  // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
+  'pocketpal-ai-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
