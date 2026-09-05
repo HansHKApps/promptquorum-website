@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'سطح مكتب وخادم مع ميزات مؤسسية كثيرة',
     ko: '많은 엔터프라이즈 기능을 갖춘 데스크톱 및 서버',
   },
+  reviewSlug: 'h2ogpt-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

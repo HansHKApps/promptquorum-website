@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 79,
+    "totalCount": 78,
     "capped": true
   },
   "LocalAI": {
@@ -603,18 +603,18 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "hanoki-review",
-        "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
         "url": "/power-local-llm/atomic-chat-review",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hanoki-review",
+        "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
+        "url": "/power-local-llm/hanoki-review",
+        "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
@@ -1321,17 +1321,17 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "h2ogpt-review-2026",
-        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
-        "url": "/power-local-llm/h2ogpt-review-2026",
+        "slug": "librechat-review-2026",
+        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
+        "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "librechat-review-2026",
-        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
-        "url": "/power-local-llm/librechat-review-2026",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
       },
@@ -2473,6 +2473,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
@@ -2492,14 +2500,6 @@
         "slug": "haystack-deepset-rag-framework-review",
         "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamaindex-rag-framework-review",
-        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
-        "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -3991,18 +3991,18 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "locally-ai-review",
-        "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
         "dateModified": "2026-08-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-ai-review",
+        "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
+        "url": "/power-local-llm/locally-ai-review",
+        "dateModified": "2026-09-04",
         "tier": "about"
       },
       {
@@ -4685,6 +4685,106 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "goose": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-business-workflows-eu-compliance",
+        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
+        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp-2026",
+        "title": "Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026",
+        "url": "/power-local-llm/local-ai-agents-with-mcp-2026",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
+  "n8n": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "best-ai-agent-framework-2026",
+        "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
+        "url": "/local-llms/best-ai-agent-framework-2026",
+        "dateModified": "2026-08-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-business-workflows-eu-compliance",
+        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
+        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-email-and-calendar-automation",
+        "title": "Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)",
+        "url": "/power-local-llm/local-llm-email-and-calendar-automation",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "replace-zapier-with-local-ai-agents",
+        "title": "Replace Zapier With Local AI Agents: 5 Workflows That Save $30/Month (2026)",
+        "url": "/power-local-llm/replace-zapier-with-local-ai-agents",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-personal-knowledge-base-2026",
+        "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
+        "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 8,
     "capped": false
   }
 }

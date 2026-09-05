@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'دردشة متفرعة لـmacOS، محلية عبر Ollama أو واجهات سحابية',
     ko: 'macOS 분기형 채팅, Ollama로 로컬 실행 또는 클라우드 API',
   },
+  reviewSlug: 'hanoki-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

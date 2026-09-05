@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل لـmacOS، محلي على Apple Silicon أو ينتقل إلى السحابة',
     ko: 'macOS 에이전트, Apple Silicon에서 로컬 실행 또는 클라우드로 전환',
   },
+  reviewSlug: 'open-felix-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

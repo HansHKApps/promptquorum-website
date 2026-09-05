@@ -97,7 +97,6 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-gpu-buying-guide-local-llm-2026',
   'rtx-3090-local-llm-buy-or-rent',
   'best-mac-for-local-ai-2026',
-  'cloud-gpu-rental-guide-2026',
   'local-ai-workstation-build-guide-2026',
   'best-vpn-ai-privacy-local-llm-2026',
   'best-nas-storage-local-ai-models-2026',

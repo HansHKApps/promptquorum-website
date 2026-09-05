@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'ذكاء اصطناعي متعدد المزودين لسطح المكتب مع تخصيص واسع',
     ko: '광범위한 커스터마이징을 갖춘 멀티 제공자 데스크톱 AI',
   },
+  reviewSlug: 'cherry-studio-ai-desktop-client-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'دردشة محلية على iOS أو اتصال عبر الشبكة المحلية بـLM Studio/Ollama',
     ko: 'iOS 온디바이스 채팅 모델, 또는 LAN으로 LM Studio/Ollama 연결',
   },
+  reviewSlug: 'arbiter-local-ai-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل مهام مستقل متعدد الخطوات، محلي أو سحابي',
     ko: '자율 다단계 작업 에이전트, 로컬 또는 클라우드',
   },
+  reviewSlug: 'msty-go-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'فهم عميق للمستندات لـRAG مع استخراج اقتباسات',
     ko: '인용 추출 기능이 있는 문서 심층 이해 RAG',
   },
+  reviewSlug: 'ragflow-document-understanding-rag-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

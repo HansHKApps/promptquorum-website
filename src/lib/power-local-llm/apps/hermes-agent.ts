@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل ذكاء اصطناعي شخصي يحسّن نفسه، بذاكرة دائمة',
     ko: '스스로 발전하는 개인 AI 에이전트, 지속적인 기억',
   },
+  reviewSlug: 'hermes-agent-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'قاعدة بيانات متجهات + نموذج لغوي مدمجان في مكتبة واحدة',
     ko: '단일 라이브러리에 통합된 벡터 데이터베이스 + LLM',
   },
+  reviewSlug: 'txtai-embedded-vector-database-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

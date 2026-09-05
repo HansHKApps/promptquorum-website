@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساعد صوتي لـmacOS، يعمل بلا اتصال بالكامل (Llama وWhisper وKokoro)',
     ko: 'macOS 음성 어시스턴트, 완전 오프라인(Llama, Whisper, Kokoro)',
   },
+  reviewSlug: 'jarvis-mac-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

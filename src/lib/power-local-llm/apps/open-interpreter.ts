@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'يتيح لنموذج لغوي محلي التحكم في جهازك وتنفيذ الكود',
     ko: '로컬 LLM이 컴퓨터를 제어하고 코드를 실행하도록 허용',
   },
+  reviewSlug: 'open-interpreter-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

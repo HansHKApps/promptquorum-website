@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل سطح مكتب لدردشة الشخصيات ولعب الأدوار',
     ko: '캐릭터 채팅 및 롤플레이용 데스크톱 클라이언트',
   },
+  reviewSlug: 'backyard-ai-review-local-roleplay-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

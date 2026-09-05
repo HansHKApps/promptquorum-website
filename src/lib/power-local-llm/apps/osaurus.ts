@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق macOS أصلي، نماذج محلية عبر Ollama/MLX/LM Studio',
     ko: '네이티브 macOS 앱, Ollama/MLX/LM Studio를 통한 로컬 모델',
   },
+  reviewSlug: 'osaurus-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

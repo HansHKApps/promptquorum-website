@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'درّب نسخة ذكاء اصطناعي شخصية باستخدام بياناتك الخاصة',
     ko: '자신의 데이터로 개인화된 AI 자아 학습',
   },
+  reviewSlug: 'second-me-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

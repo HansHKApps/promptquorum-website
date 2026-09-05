@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار RAG / مكتبة Python — أساس للتطوير المخصص',
     ko: 'RAG 프레임워크 / Python 라이브러리 — 맞춤형 개발의 기반',
   },
+  reviewSlug: 'llamaindex-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساعد ذكاء اصطناعي محلي لأجهزة iPhone/iPad/Mac، يعمل بلا اتصال بالكامل',
     ko: 'iPhone/iPad/Mac용 로컬 AI 어시스턴트, 완전 오프라인',
   },
+  reviewSlug: 'enclave-ai-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

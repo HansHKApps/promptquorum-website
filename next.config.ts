@@ -89,6 +89,20 @@ const nextConfig: NextConfig = {
         destination: '/image-license',
         permanent: true,
       },
+      // Cloud provider guide consolidation (2026-09-05): the RunPod/Lambda/Vast.ai
+      // rental-marketplace guide was folded into the broader 8-provider
+      // DigitalOcean/AWS/CoreWeave/RunPod/Lambda/GCP/Azure/OCI comparison, to avoid
+      // duplicating RunPod/Lambda coverage across two pages.
+      {
+        source: '/power-local-llm/cloud-gpu-rental-guide-2026',
+        destination: '/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/cloud-gpu-rental-guide-2026',
+        destination: '/:lang/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies',
+        permanent: true,
+      },
       // Web hosting consolidation (2026-08-31): eight per-country slugs were
       // merged into the single multi-language page /power-local-llm/best-web-hosting-2026,
       // where each locale block is its own native local edition.

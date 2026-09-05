@@ -94,6 +94,13 @@ export interface ToolRecord {
   // stops on its own — no separate cleanup step needed. The review/article itself
   // stays independent PromptQuorum editorial content either way.
   founderReviewedDate?: string
+  // Slug (in the local-llms or power-local-llm cluster) of the article that is
+  // ABOUT this tool specifically — a dedicated review, not a comparison or a
+  // passing mention. When set, generate-tool-article-index.mjs pins that article
+  // to position 1 in the tool's "PromptQuorum articles" list regardless of its
+  // dateModified, so a newer unrelated article can never outrank a tool's own
+  // review. Leave unset until that dedicated article exists.
+  reviewSlug?: string
   pqReview?: ToolRecordReview
   changelog?: ToolRecordChangelogEntry[]
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified

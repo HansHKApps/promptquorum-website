@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساعد صوتي لسطح المكتب محلي أولاً، مع صوت سحابي اختياري',
     ko: '로컬 우선 데스크톱 음성 어시스턴트, 클라우드 음성 선택 가능',
   },
+  reviewSlug: 'voxa-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

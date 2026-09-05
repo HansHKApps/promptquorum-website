@@ -32,6 +32,13 @@
 // totalCount/capped so the UI can render a "+N more" affordance instead of
 // silently truncating or dumping the full list.
 //
+// reviewSlug pin: pure recency sort has one failure mode — a newer article
+// that only discusses a tool in passing outranks that tool's own dedicated
+// review. If the tool's ToolRecord sets `reviewSlug`, that article is pinned
+// to position 1 regardless of date. Set `reviewSlug` on a tool once its own
+// review exists; a mismatch (slug set but not found among its matches) is a
+// build-time warning, not a failure.
+//
 // Usage:
 //   node scripts/generate-tool-article-index.mjs          # write the file
 //   node scripts/generate-tool-article-index.mjs --check  # fail if stale
@@ -117,12 +124,14 @@ async function main() {
   }
 
   const toolNames = []
+  const reviewSlugByName = new Map() // tool name -> its own dedicated-review article slug, if set
   const seen = new Set()
   for (const tool of localAiApps) {
     const name = (tool.name ?? '').trim()
     if (!name || seen.has(name)) continue
     seen.add(name)
     toolNames.push(name)
+    if (tool.reviewSlug) reviewSlugByName.set(name, tool.reviewSlug)
   }
   console.log(`Found ${toolNames.length} unique tools in the directory.`)
 
@@ -184,6 +193,9 @@ async function main() {
   }
 
   // ── 4. Sort (most recent first) + cap: Tier 1 first, Tier 2 fills the rest ──
+  // Exception: if the tool has a `reviewSlug` (its own dedicated review), that
+  // article is pinned to position 1 ahead of the recency sort — a newer article
+  // that merely discusses the tool must never outrank the tool's own review.
   const byRecency = (a, b) => (b.dateModified ?? '').localeCompare(a.dateModified ?? '')
 
   const result = {}
@@ -191,8 +203,20 @@ async function main() {
     const about = list.filter((a) => a.tier === 'about').sort(byRecency)
     const mentioned = list.filter((a) => a.tier === 'mentioned').sort(byRecency)
 
-    const totalCount = about.length + mentioned.length
-    const articles = [...about, ...mentioned].slice(0, MAX_VISIBLE)
+    const reviewSlug = reviewSlugByName.get(toolName)
+    let ordered = [...about, ...mentioned]
+    if (reviewSlug) {
+      const pinIndex = ordered.findIndex((a) => a.slug === reviewSlug)
+      if (pinIndex > 0) {
+        const [pinned] = ordered.splice(pinIndex, 1)
+        ordered.unshift(pinned)
+      } else if (pinIndex === -1) {
+        console.warn(`⚠️  ${toolName}: reviewSlug '${reviewSlug}' set but no matching article found in its index entry — check the slug.`)
+      }
+    }
+
+    const totalCount = ordered.length
+    const articles = ordered.slice(0, MAX_VISIBLE)
     result[toolName] = {
       articles,
       totalCount,

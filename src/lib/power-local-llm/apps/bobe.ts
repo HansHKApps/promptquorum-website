@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساعد ذكاء اصطناعي محلي مجاني لـMac، يعمل على الجهاز',
     ko: '무료 Mac 로컬 AI 데스크톱 어시스턴트, 온디바이스',
   },
+  reviewSlug: 'bobe-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

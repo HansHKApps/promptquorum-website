@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'يشغّل نماذج مفتوحة على الجهاز على iPhone/iPad/Mac عبر MLX',
     ko: 'iPhone/iPad/Mac에서 MLX로 오픈 모델을 온디바이스 실행',
   },
+  reviewSlug: 'locally-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

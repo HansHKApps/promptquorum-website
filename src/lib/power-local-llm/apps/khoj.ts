@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'دماغ ذكاء اصطناعي ثانٍ شخصي، متزامن مع Obsidian وNotion',
     ko: 'Obsidian 및 Notion과 동기화되는 개인 AI 제2의 뇌',
   },
+  reviewSlug: 'khoj-ai-second-brain-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

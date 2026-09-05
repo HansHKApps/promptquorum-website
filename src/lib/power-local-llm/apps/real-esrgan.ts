@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مُكبِّر صور بالذكاء الاصطناعي لتحسين جودة الصور — لا إصدار منذ 2022 (4 أعوام+)',
     ko: '고품질 이미지 확대를 위한 AI 업스케일러 — 2022년 이후 릴리스 없음(4년 이상)',
   },
+  reviewSlug: 'real-esrgan-ai-image-upscaler-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

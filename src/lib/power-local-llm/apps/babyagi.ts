@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل مستقل خفيف الوزن',
     ko: '경량 자율 에이전트',
   },
+  reviewSlug: 'babyagi-review-autonomous-agent', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

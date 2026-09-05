@@ -134,6 +134,30 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'agnai':                                   'agnai',
   'risuai':                                  'risuai',
   'second-me':                               'second-me',
+
+  // Section A + B additions from apps-to-add.md — approved 2026-09-05
+  'goose':                                   'goose',
+  'zed':                                     'zed',
+  'lemonade':                                'lemonade',
+  'foundry-local':                           'foundry-local',
+  'amd-gaia':                                'amd-gaia',
+  'atomic-agent':                            'atomic-agent',
+  'dograh':                                  'dograh',
+  'kilo-code':                               'kilo-code',
+  'opencode':                                'opencode',
+  'maxkb':                                   'maxkb',
+  'runanywhere':                             'runanywhere',
+  'nvidia-g-assist':                         'nvidia-g-assist',
+  'hyperlink-nexa':                          'hyperlink-nexa',
+  'github-copilot-cli-local':                'github-copilot-cli-local',
+  'atomic-bot':                              'atomic-bot',
+  'odysseus':                                'odysseus',
+  'exo':                                     'exo',
+  'gpustack':                                'gpustack',
+  'onyx':                                    'onyx',
+  'phoneclaw':                               'phoneclaw',
+  'ypipe':                                   'ypipe',
+  'n8n':                                     'n8n',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

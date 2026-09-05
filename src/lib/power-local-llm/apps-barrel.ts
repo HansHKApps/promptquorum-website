@@ -140,6 +140,30 @@ import { app as app_agnai } from './apps/agnai'
 import { app as app_risuai } from './apps/risuai'
 import { app as app_second_me } from './apps/second-me'
 
+// Section A + B additions from apps-to-add.md — approved 2026-09-05
+import { app as app_goose } from './apps/goose'
+import { app as app_zed } from './apps/zed'
+import { app as app_lemonade } from './apps/lemonade'
+import { app as app_foundry_local } from './apps/foundry-local'
+import { app as app_amd_gaia } from './apps/amd-gaia'
+import { app as app_atomic_agent } from './apps/atomic-agent'
+import { app as app_dograh } from './apps/dograh'
+import { app as app_kilo_code } from './apps/kilo-code'
+import { app as app_opencode } from './apps/opencode'
+import { app as app_maxkb } from './apps/maxkb'
+import { app as app_runanywhere } from './apps/runanywhere'
+import { app as app_nvidia_g_assist } from './apps/nvidia-g-assist'
+import { app as app_hyperlink_nexa } from './apps/hyperlink-nexa'
+import { app as app_github_copilot_cli_local } from './apps/github-copilot-cli-local'
+import { app as app_atomic_bot } from './apps/atomic-bot'
+import { app as app_odysseus } from './apps/odysseus'
+import { app as app_exo } from './apps/exo'
+import { app as app_gpustack } from './apps/gpustack'
+import { app as app_onyx } from './apps/onyx'
+import { app as app_phoneclaw } from './apps/phoneclaw'
+import { app as app_ypipe } from './apps/ypipe'
+import { app as app_n8n } from './apps/n8n'
+
 export const localAiApps: ToolRecord[] = [
   app_ollama,
   app_llama_cpp,
@@ -270,4 +294,26 @@ export const localAiApps: ToolRecord[] = [
   app_agnai,
   app_risuai,
   app_second_me,
+  app_goose,
+  app_zed,
+  app_lemonade,
+  app_foundry_local,
+  app_amd_gaia,
+  app_atomic_agent,
+  app_dograh,
+  app_kilo_code,
+  app_opencode,
+  app_maxkb,
+  app_runanywhere,
+  app_nvidia_g_assist,
+  app_hyperlink_nexa,
+  app_github_copilot_cli_local,
+  app_atomic_bot,
+  app_odysseus,
+  app_exo,
+  app_gpustack,
+  app_onyx,
+  app_phoneclaw,
+  app_ypipe,
+  app_n8n,
 ]

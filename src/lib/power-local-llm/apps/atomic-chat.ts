@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق دردشة يعمل دون اتصال للحاسوب والهاتف مع تشغيل وكلاء محليين بنقرة واحدة',
     ko: '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행',
   },
+  reviewSlug: 'atomic-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

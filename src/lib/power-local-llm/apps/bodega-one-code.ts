@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'بيئة تطوير محلية بالذكاء الاصطناعي، BYOLLM عبر Ollama/LM Studio',
     ko: '로컬 우선 AI 코딩 IDE, Ollama/LM Studio 지원 BYOLLM',
   },
+  reviewSlug: 'bodega-one-code-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
