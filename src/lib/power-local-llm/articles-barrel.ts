@@ -17,6 +17,9 @@ import { article as a_locally_ai_review } from './articles/locally-ai-review'
 import { article as a_arbiter_local_ai_chat_review } from './articles/arbiter-local-ai-chat-review'
 import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
+import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
+import { article as a_private_llm_review } from './articles/private-llm-review'
+import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
@@ -278,4 +281,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'arbiter-local-ai-chat-review':                  a_arbiter_local_ai_chat_review,
   'chatty-mini-review':                            a_chatty_mini_review,
   'whisper-cpp-review':                            a_whisper_cpp_review,
+  'pocketpal-ai-review':                           a_pocketpal_ai_review,
+  'private-llm-review':                            a_private_llm_review,
+  // Stable Diffusion review — 2026-09-05
+  'stable-diffusion-review':                        a_stable_diffusion_review,
 }
