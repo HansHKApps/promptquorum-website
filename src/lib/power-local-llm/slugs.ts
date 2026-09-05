@@ -197,4 +197,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review':                     'continue-dev-review',
+  'cline-review':                            'cline-review',
+  'pearai-review':                           'pearai-review',
 }

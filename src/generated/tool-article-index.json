@@ -82,11 +82,19 @@
         "tier": "about"
       }
     ],
-    "totalCount": 215,
+    "totalCount": 217,
     "capped": true
   },
   "llama.cpp": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -158,17 +166,9 @@
         "url": "/local-llms/local-llm-pc-build-2000",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 115,
+    "totalCount": 116,
     "capped": true
   },
   "vLLM": {
@@ -517,6 +517,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
@@ -586,17 +594,9 @@
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-pc-build-1000",
-        "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
-        "url": "/local-llms/local-llm-pc-build-1000",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 129,
+    "totalCount": 131,
     "capped": true
   },
   "Atomic Chat": {
@@ -604,9 +604,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -641,6 +641,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
         "url": "/power-local-llm/hanoki-review",
@@ -653,14 +661,6 @@
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
         "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -728,9 +728,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -892,7 +892,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Msty": {
@@ -1649,6 +1649,30 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-review",
+        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
+        "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pearai-review",
+        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
+        "url": "/power-local-llm/pearai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -1702,37 +1726,45 @@
         "url": "/local-llms/best-local-llm-stack-use-case",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-with-vscode-cursor",
-        "title": "Local LLMs With VS Code and Cursor: Setup and Best Practices",
-        "url": "/local-llms/local-llms-with-vscode-cursor",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 41,
     "capped": true
   },
   "Cline": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-review",
+        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
+        "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pearai-review",
+        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
+        "url": "/power-local-llm/pearai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -1780,45 +1812,51 @@
         "url": "/local-llms/local-llm-openai-compatible-api",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-coding-models-2026",
-        "title": "Best Local Coding Models in 2026: Qwen3-Coder vs DeepSeek vs Codestral",
-        "url": "/power-local-llm/best-local-coding-models-2026",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "continue-dev-vs-cline-vs-aider-local",
-        "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
-        "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
-        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-08-27",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 29,
     "capped": true
+  },
+  "PearAI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pearai-review",
+        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
+        "url": "/power-local-llm/pearai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-review",
+        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
+        "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
   },
   "Windsurf": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-review",
+        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
+        "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
@@ -1834,6 +1872,22 @@
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
         "dateModified": "2026-08-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pearai-review",
+        "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
+        "url": "/power-local-llm/pearai-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -1876,7 +1930,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 10,
     "capped": false
   },
   "Sourcegraph Cody": {
@@ -1943,6 +1997,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-interpreter-review",
         "title": "Open Interpreter Review 2026: Same Name, Rust Core, New License",
         "url": "/power-local-llm/open-interpreter-review",
@@ -1950,7 +2012,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Cursor (local mode)": {
@@ -2023,6 +2085,22 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-review",
+        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
+        "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -2084,25 +2162,9 @@
         "url": "/power-local-llm/openclaw-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "open-felix-review",
-        "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
-        "url": "/power-local-llm/open-felix-review",
-        "dateModified": "2026-09-04",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-hr-software-enterprise-2026",
-        "title": "Best AI-Powered HR Software for Enterprises 2026: Privacy-First Options Compared",
-        "url": "/power-local-llm/best-ai-hr-software-enterprise-2026",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 35,
     "capped": true
   },
   "PrivateGPT": {
@@ -4707,6 +4769,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -4738,7 +4808,85 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "Zed": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Agent": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Kilo Code": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cline-review",
+        "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
+        "url": "/power-local-llm/cline-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "OpenCode": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Bot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Onyx": {
