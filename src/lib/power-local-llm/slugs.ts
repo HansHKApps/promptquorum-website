@@ -140,6 +140,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
   // LangChain review — agent frameworks series, article 1 of 14 — 2026-09-05
   'langchain-review':                             'langchain-review',
+  // AutoGen review — agent frameworks series, article 2 of 14 — 2026-09-05
+  'autogen-review':                               'autogen-review',
+  // CrewAI review — agent frameworks series, article 3 of 14 — 2026-09-05
+  'crewai-review':                                'crewai-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -209,6 +213,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'cline-review':                            'cline-review',
   'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
+  'faster-whisper-review':                   'faster-whisper-review',
+  'piper-tts-review':                        'piper-tts-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05
@@ -221,4 +227,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                        'llama-cpp-review',
+  // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
+  'windsurf-review':                         'windsurf-review',
+  'sourcegraph-cody-review':                 'sourcegraph-cody-review',
+  'tabby-review':                            'tabby-review',
 }

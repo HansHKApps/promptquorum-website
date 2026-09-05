@@ -39,6 +39,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'continue-dev-review',
   'cline-review',
   'pearai-review',
+  'windsurf-review',
+  'sourcegraph-cody-review',
+  'tabby-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -154,6 +157,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'langflow-visual-ai-orchestration-review',
   // Agent frameworks series — LangChain review (article 1 of 14) — 2026-09-05
   'langchain-review',
+  // Agent frameworks series — AutoGen review (article 2 of 14) — 2026-09-05
+  'autogen-review',
+  // Agent frameworks series — CrewAI review (article 3 of 14) — 2026-09-05
+  'crewai-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -229,6 +236,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
   'whisper-cpp-review',
+  'faster-whisper-review',
+  'piper-tts-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',

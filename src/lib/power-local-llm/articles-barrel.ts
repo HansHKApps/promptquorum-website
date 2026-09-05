@@ -19,7 +19,12 @@ import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
 import { article as a_continue_dev_review } from './articles/continue-dev-review'
 import { article as a_cline_review } from './articles/cline-review'
 import { article as a_pearai_review } from './articles/pearai-review'
+import { article as a_windsurf_review } from './articles/windsurf-review'
+import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
+import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
+import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
+import { article as a_piper_tts_review } from './articles/piper-tts-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -128,6 +133,8 @@ import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
 import { article as a_langchain_review } from './articles/langchain-review'
+import { article as a_autogen_review } from './articles/autogen-review'
+import { article as a_crewai_review } from './articles/crewai-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -241,6 +248,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
   'langchain-review':                                  a_langchain_review,
+  'autogen-review':                                    a_autogen_review,
+  'crewai-review':                                     a_crewai_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
@@ -294,6 +303,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'cline-review':                                  a_cline_review,
   'pearai-review':                                 a_pearai_review,
   'whisper-cpp-review':                            a_whisper_cpp_review,
+  'faster-whisper-review':                         a_faster_whisper_review,
+  'piper-tts-review':                               a_piper_tts_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
@@ -301,4 +312,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llama-cpp-explained':                           a_llama_cpp_explained,
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                              a_llama_cpp_review,
+  // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
+  'windsurf-review':                               a_windsurf_review,
+  'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
+  'tabby-review':                                  a_tabby_review,
 }
