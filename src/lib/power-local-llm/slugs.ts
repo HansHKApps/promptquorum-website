@@ -207,6 +207,16 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'cline-review':                            'cline-review',
   'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
+  // PocketPal AI review — 2026-09-05
+  'pocketpal-ai-review':                     'pocketpal-ai-review',
+  // Private LLM review — 2026-09-05
+  'private-llm-review':                      'private-llm-review',
+  // Stable Diffusion review — 2026-09-05
+  'stable-diffusion-review':                 'stable-diffusion-review',
+
+  // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
+  'llama-cpp-explained':                     'llama-cpp-explained',
+
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                        'llama-cpp-review',
 }
