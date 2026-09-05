@@ -6567,6 +6567,24 @@
         }
       ]
     },
+    "obsidian-logseq-ai-plugins": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "local-llm-personal-knowledge-base-2026": {
       "dateModified": "2026-08-29",
       "lastFactChecked": null,

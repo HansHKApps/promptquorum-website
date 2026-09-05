@@ -64,6 +64,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 7 — Productivity & Knowledge Tools
   'local-llm-with-obsidian-2026':                'local-llm-with-obsidian-2026',
   'local-llm-with-logseq-and-joplin':            'local-llm-with-logseq-and-joplin',
+  // AI plugins for Obsidian and Logseq — evergreen feature comparison — 2026-09-05
+  'obsidian-logseq-ai-plugins':                  'obsidian-logseq-ai-plugins',
   'local-llm-personal-knowledge-base-2026':      'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation':     'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
