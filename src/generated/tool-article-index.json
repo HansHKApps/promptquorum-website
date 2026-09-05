@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 214,
+    "totalCount": 215,
     "capped": true
   },
   "llama.cpp": {
@@ -720,7 +720,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "GPT4All": {
@@ -1126,9 +1126,17 @@
         "url": "/power-local-llm/open-interpreter-review",
         "dateModified": "2026-09-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Hanoki": {
@@ -2071,6 +2079,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
         "url": "/power-local-llm/open-felix-review",
@@ -2084,17 +2100,9 @@
         "url": "/power-local-llm/best-ai-hr-software-enterprise-2026",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "open-interpreter-review",
-        "title": "Open Interpreter Review 2026: Same Name, Rust Core, New License",
-        "url": "/power-local-llm/open-interpreter-review",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
   },
   "PrivateGPT": {
@@ -2929,6 +2937,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-felix-review",
         "title": "Open Felix Review 2026: A Local-First Mac AI Agent",
         "url": "/power-local-llm/open-felix-review",
@@ -2944,7 +2960,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Hermes Agent": {
@@ -4712,9 +4728,31 @@
         "url": "/power-local-llm/local-ai-agents-with-mcp-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
+    "capped": false
+  },
+  "Onyx": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "n8n": {
@@ -4753,6 +4791,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
@@ -4784,7 +4830,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   }
 }
