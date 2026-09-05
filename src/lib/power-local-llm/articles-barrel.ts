@@ -65,6 +65,7 @@ import { article as a_local_llm_software_directory_2026 } from './articles/local
 import { article as a_ai_tool_licenses_explained } from './articles/ai-tool-licenses-explained'
 import { article as a_local_llm_with_obsidian_2026 } from './articles/local-llm-with-obsidian-2026'
 import { article as a_local_llm_with_logseq_and_joplin } from './articles/local-llm-with-logseq-and-joplin'
+import { article as a_obsidian_logseq_ai_plugins } from './articles/obsidian-logseq-ai-plugins'
 import { article as a_local_llm_personal_knowledge_base_2026 } from './articles/local-llm-personal-knowledge-base-2026'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
@@ -170,6 +171,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ai-tool-licenses-explained':              a_ai_tool_licenses_explained,
   'local-llm-with-obsidian-2026':           a_local_llm_with_obsidian_2026,
   'local-llm-with-logseq-and-joplin':       a_local_llm_with_logseq_and_joplin,
+  'obsidian-logseq-ai-plugins':             a_obsidian_logseq_ai_plugins,
   'local-llm-personal-knowledge-base-2026': a_local_llm_personal_knowledge_base_2026,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,

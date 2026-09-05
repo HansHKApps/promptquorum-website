@@ -3,6 +3,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aori-ai-personal-agent-review",
         "title": "Aori AI Review (2026): Local-First Personal Agent for Desktop and Mobile",
         "url": "/power-local-llm/aori-ai-personal-agent-review",
@@ -72,21 +80,21 @@
         "url": "/power-local-llm/asus-mini-pc-local-ai-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llms-customer-support-call-centers-enterprise",
-        "title": "Best Local LLM Solutions for Enterprise Customer Support & Call Centers (2026)",
-        "url": "/power-local-llm/best-local-llms-customer-support-call-centers-enterprise",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 215,
+    "totalCount": 216,
     "capped": true
   },
   "llama.cpp": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -156,14 +164,6 @@
         "slug": "local-llm-pc-build-2000",
         "title": "Local LLM PC Build for $2,000 (2026): Dual-GPU 32GB VRAM Parts List",
         "url": "/local-llms/local-llm-pc-build-2000",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
       }
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -292,7 +300,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "TensorRT-LLM": {
@@ -517,6 +525,22 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
@@ -578,25 +602,9 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI in 2026: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-pc-build-1000",
-        "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
-        "url": "/local-llms/local-llm-pc-build-1000",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 129,
+    "totalCount": 130,
     "capped": true
   },
   "Atomic Chat": {
@@ -604,9 +612,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -641,6 +649,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
         "url": "/power-local-llm/hanoki-review",
@@ -653,14 +669,6 @@
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
         "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -728,9 +736,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -892,7 +900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Msty": {
@@ -1735,6 +1743,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -1804,17 +1820,9 @@
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "Windsurf": {
@@ -1943,6 +1951,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-interpreter-review",
         "title": "Open Interpreter Review 2026: Same Name, Rust Core, New License",
         "url": "/power-local-llm/open-interpreter-review",
@@ -1950,7 +1966,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Cursor (local mode)": {
@@ -4321,6 +4337,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
         "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
         "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
@@ -4360,13 +4384,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Copilot for Obsidian": {
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
         "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
         "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
@@ -4390,13 +4422,21 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Text Generator": {
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-with-obsidian-2026",
         "title": "Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)",
         "url": "/power-local-llm/local-llm-with-obsidian-2026",
@@ -4420,11 +4460,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "logseq-copilot": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-llm-with-logseq-and-joplin",
@@ -4432,13 +4480,29 @@
         "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
         "dateModified": "2026-08-30",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-obsidian-2026",
+        "title": "Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)",
+        "url": "/power-local-llm/local-llm-with-obsidian-2026",
+        "dateModified": "2026-08-30",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "BMO Chatbot": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "obsidian-logseq-ai-plugins",
+        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
+        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-llm-with-obsidian-2026",
@@ -4456,7 +4520,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Joplin AI": {
@@ -4707,6 +4771,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -4738,7 +4810,77 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "Zed": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Agent": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Kilo Code": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenCode": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Bot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Onyx": {

@@ -5750,33 +5750,6 @@
       ],
       "images": []
     },
-    "cloud-gpu-rental-guide-2026": {
-      "dateModified": "2026-07-01",
-      "lastFactChecked": null,
-      "publishDate": "2026-05-22",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": [
-        {
-          "url": "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-en.webp",
-          "title": "RunPod vs Lambda Labs vs Vast.ai -- July 2026 pricing snapshot"
-        },
-        {
-          "url": "/images/cloud-gpu-rental-guide-2026-which-provider-hero-en.webp",
-          "title": "Which Cloud GPU Provider? -- Pick by reliability need, then budget"
-        }
-      ]
-    },
     "local-ai-workstation-build-guide-2026": {
       "dateModified": "2026-07-01",
       "lastFactChecked": null,
@@ -6484,7 +6457,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6502,7 +6475,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 10 layers of a local LLM stack: 160+ actively-maintained projects spanning runtimes (Ollama, llama.cpp, vLLM), desktop apps (LM Studio, Jan, GPT4All), web UIs, IDE editors, terminal tools, RAG systems, agent frameworks, speech/audio, mobile clients, specialized productivity tools, and image generation (Stable Diffusion, ComfyUI)."
+          "title": "The 7 categories of a local LLM stack: 130 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Continue.dev, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -6593,6 +6566,24 @@
           "title": "Notion AI ships note content to OpenAI Cloud (US) on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device."
         }
       ]
+    },
+    "obsidian-logseq-ai-plugins": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "local-llm-personal-knowledge-base-2026": {
       "dateModified": "2026-08-29",
@@ -7701,6 +7692,24 @@
       ],
       "images": []
     },
+    "digitalocean-vs-aws-cloud-for-ai-companies": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "flowise-ai-visual-workflow-builder-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
@@ -8031,7 +8040,7 @@
       "images": []
     },
     "atomic-chat-review": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -8088,6 +8097,24 @@
       "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openclaw-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
       "hasSections": true,
       "langs": [
         "en",

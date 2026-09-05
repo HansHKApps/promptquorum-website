@@ -64,6 +64,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 7 — Productivity & Knowledge Tools (5)
   'local-llm-with-obsidian-2026',
   'local-llm-with-logseq-and-joplin',
+  // AI plugins for Obsidian and Logseq — evergreen feature comparison — 2026-09-05
+  'obsidian-logseq-ai-plugins',
   'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local',
