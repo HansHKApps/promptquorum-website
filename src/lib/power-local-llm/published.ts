@@ -144,6 +144,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'langflow-visual-ai-orchestration-review',
   // Agent frameworks series — LangChain review (article 1 of 14) — 2026-09-05
   'langchain-review',
+  // Agent frameworks series — AutoGen review (article 2 of 14) — 2026-09-05
+  'autogen-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

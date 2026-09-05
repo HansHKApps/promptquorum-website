@@ -136,6 +136,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
   // LangChain review — agent frameworks series, article 1 of 14 — 2026-09-05
   'langchain-review':                             'langchain-review',
+  // AutoGen review — agent frameworks series, article 2 of 14 — 2026-09-05
+  'autogen-review':                               'autogen-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
