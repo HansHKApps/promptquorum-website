@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 160+ Tools to Run AI on Your Own Hardware (2026)',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. Terminal & CLI Tools',
         itemHeadings: true,
         content:
-          '**Terminal and CLI tools connect a local LLM to your shell and command-line workflows.** Aider is the most mature option for git-native code editing at the terminal; ShellGPT, aichat, and tgpt wrap local LLMs for command generation and chat; Blackbox AI and Devhat extend the pattern. All work against OpenAI-compatible APIs — point them at Ollama running locally.',
+          '**Terminal and CLI tools connect a local LLM to your shell and command-line workflows.** Aider is the most mature option for git-native code editing at the terminal; ShellGPT, aichat, and tgpt wrap local LLMs for command generation and chat; Blackbox AI extends the pattern. All work against OpenAI-compatible APIs — point them at Ollama running locally.',
         columns: ['Tool', 'Link', 'Description', 'License', 'Stars'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Description': 'Terminal pair programmer with multi-file git-native diffs', 'License': 'Apache 2.0' },
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige lokale LLM Software-Verzeichnis: 160+ Tools für KI auf eigener Hardware (2026)',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. Terminal- & CLI-Tools',
         itemHeadings: true,
         content:
-          '**Terminal- und CLI-Tools verbinden ein lokales LLM mit Ihrer Shell und Kommandozeilen-Workflows.** Aider ist die ausgereifteste Option für git-natives Code-Editing im Terminal; ShellGPT, aichat und tgpt kapseln lokale LLMs für Befehlsgenerierung und Chat; Blackbox AI und Devhat erweitern das Muster. Alle funktionieren mit OpenAI-kompatiblen APIs — richten Sie sie auf ein lokal laufendes Ollama.',
+          '**Terminal- und CLI-Tools verbinden ein lokales LLM mit Ihrer Shell und Kommandozeilen-Workflows.** Aider ist die ausgereifteste Option für git-natives Code-Editing im Terminal; ShellGPT, aichat und tgpt kapseln lokale LLMs für Befehlsgenerierung und Chat; Blackbox AI erweitert das Muster. Alle funktionieren mit OpenAI-kompatiblen APIs — richten Sie sie auf ein lokal laufendes Ollama.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz', 'Sterne'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Beschreibung': 'Terminal-Pair-Programmer mit Multi-Datei-git-nativen Diffs', 'Lizenz': 'Apache 2.0' },
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels LLM locaux : 160+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. Outils terminal & CLI',
         itemHeadings: true,
         content:
-          '**Les outils terminal et CLI connectent un LLM local à votre shell et à vos workflows en ligne de commande.** Aider est l\'option la plus mature pour l\'édition de code native git en terminal ; ShellGPT, aichat et tgpt encapsulent des LLM locaux pour la génération de commandes et le chat ; Blackbox AI et Devhat prolongent ce modèle. Tous fonctionnent avec des API compatibles OpenAI — pointez-les vers Ollama en local.',
+          '**Les outils terminal et CLI connectent un LLM local à votre shell et à vos workflows en ligne de commande.** Aider est l\'option la plus mature pour l\'édition de code native git en terminal ; ShellGPT, aichat et tgpt encapsulent des LLM locaux pour la génération de commandes et le chat ; Blackbox AI prolonge ce modèle. Tous fonctionnent avec des API compatibles OpenAI — pointez-les vers Ollama en local.',
         columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Description': 'Pair-programmeur en terminal avec diffs multi-fichiers natifs git', 'Licence': 'Apache 2.0' },
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす160+のツール（2026年版）',
@@ -1855,7 +1855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. ターミナル & CLIツール',
         itemHeadings: true,
         content:
-          '**ターミナル・CLIツールは、ローカルLLMをシェルとコマンドライン作業に接続します。** Aiderはターミナルでのgitネイティブなコード編集における最も成熟した選択肢です。ShellGPT、aichat、tgptはコマンド生成とチャット用にローカルLLMをラップします。Blackbox AIとDevhatが同じパターンを拡張します。すべてOpenAI互換APIで動作します — ローカルで動くOllamaを指定してください。',
+          '**ターミナル・CLIツールは、ローカルLLMをシェルとコマンドライン作業に接続します。** Aiderはターミナルでのgitネイティブなコード編集における最も成熟した選択肢です。ShellGPT、aichat、tgptはコマンド生成とチャット用にローカルLLMをラップします。Blackbox AIが同じパターンを拡張します。すべてOpenAI互換APIで動作します — ローカルで動くOllamaを指定してください。',
         columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '概要': 'マルチファイルのgitネイティブなdiff編集対応のターミナルペアプログラマー', 'ライセンス': 'Apache 2.0' },
@@ -2146,7 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地LLM软件完整目录：160+款工具，在自有硬件上运行AI（2026）',
@@ -2384,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. 终端与CLI工具',
         itemHeadings: true,
         content:
-          '**终端与CLI工具将本地LLM接入您的Shell和命令行工作流。**Aider是终端git原生代码编辑最成熟的选择；ShellGPT、aichat和tgpt封装本地LLM用于命令生成和聊天；Blackbox AI和Devhat延续了同样的模式。均可与OpenAI兼容API配合使用——指向本地运行的Ollama即可。',
+          '**终端与CLI工具将本地LLM接入您的Shell和命令行工作流。**Aider是终端git原生代码编辑最成熟的选择；ShellGPT、aichat和tgpt封装本地LLM用于命令生成和聊天；Blackbox AI延续了同样的模式。均可与OpenAI兼容API配合使用——指向本地运行的Ollama即可。',
         columns: ['Tool', 'Link', '描述', '许可证', '星标'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '描述': '支持多文件git原生diff的终端结对编程工具', '许可证': 'Apache 2.0' },
@@ -2675,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software LLM local: 160+ herramientas para ejecutar IA en tu propio hardware (2026)',
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. Herramientas de terminal y CLI',
         itemHeadings: true,
         content:
-          '**Las herramientas de terminal y CLI conectan un LLM local a tu shell y a tus flujos de trabajo de línea de comandos.** Aider es la opción más madura para edición de código nativa de git en terminal; ShellGPT, aichat y tgpt envuelven LLMs locales para generación de comandos y chat; Blackbox AI y Devhat extienden el patrón. Todos funcionan con APIs compatibles con OpenAI — apúntalos a Ollama corriendo localmente.',
+          '**Las herramientas de terminal y CLI conectan un LLM local a tu shell y a tus flujos de trabajo de línea de comandos.** Aider es la opción más madura para edición de código nativa de git en terminal; ShellGPT, aichat y tgpt envuelven LLMs locales para generación de comandos y chat; Blackbox AI extiende el patrón. Todos funcionan con APIs compatibles con OpenAI — apúntalos a Ollama corriendo localmente.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
         rows: [
           { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descripción': 'Pair programmer en terminal con diffs multifichero nativos de git', 'Licencia': 'Apache 2.0' },
@@ -3208,7 +3208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-09-04',
+      dateModified: '2026-09-05',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3218,7 +3218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software LLM local: 160+ ferramentas para executar IA no seu próprio hardware (2026)',
@@ -3456,7 +3456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. Ferramentas de terminal e CLI',
         itemHeadings: true,
         content:
-          '**As ferramentas de terminal e CLI conectam um LLM local ao seu shell e fluxos de trabalho de linha de comando.** O Aider é a opção mais madura para edição de código nativa de git no terminal; ShellGPT, aichat e tgpt envolvem LLMs locais para geração de comandos e chat; Blackbox AI e Devhat estendem o padrão. Todos funcionam com APIs compatíveis com OpenAI — aponte-os para o Ollama rodando localmente.',
+          '**As ferramentas de terminal e CLI conectam um LLM local ao seu shell e fluxos de trabalho de linha de comando.** O Aider é a opção mais madura para edição de código nativa de git no terminal; ShellGPT, aichat e tgpt envolvem LLMs locais para geração de comandos e chat; Blackbox AI estende o padrão. Todos funcionam com APIs compatíveis com OpenAI — aponte-os para o Ollama rodando localmente.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
         rows: [
           { 'Ferramenta': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descrição': 'Pair programmer de terminal com diffs multi-arquivo nativos de git', 'Licença': 'Apache 2.0' },
@@ -3752,7 +3752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-09-04',
+      dateModified: '2026-09-05',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3761,7 +3761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 160+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
@@ -3999,7 +3999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. أدوات الطرفية وCLI',
         itemHeadings: true,
         content:
-          '**تربط أدوات الطرفية وCLI نموذجاً لغوياً محلياً بصدفتك (shell) وسير عمل سطر الأوامر.** Aider هو الخيار الأنضج لتحرير الكود المتوافق أصلياً مع git في الطرفية؛ ShellGPT وaichat وtgpt تُغلِّف النماذج اللغوية المحلية لتوليد الأوامر والدردشة؛ Blackbox AI وDevhat يوسِّعان النمط نفسه. تعمل جميعها مع APIs متوافقة مع OpenAI — وجِّهها إلى Ollama العامل محلياً.',
+          '**تربط أدوات الطرفية وCLI نموذجاً لغوياً محلياً بصدفتك (shell) وسير عمل سطر الأوامر.** Aider هو الخيار الأنضج لتحرير الكود المتوافق أصلياً مع git في الطرفية؛ ShellGPT وaichat وtgpt تُغلِّف النماذج اللغوية المحلية لتوليد الأوامر والدردشة؛ Blackbox AI يوسِّع النمط نفسه. تعمل جميعها مع APIs متوافقة مع OpenAI — وجِّهها إلى Ollama العامل محلياً.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
         rows: [
           { 'الأداة': '**Aider**', 'الرابط': '[aider.chat](https://aider.chat)', 'الوصف': 'مبرمج مزدوج في الطرفية مع فروقات متعددة الملفات متوافقة أصلياً مع git', 'الترخيص': 'Apache 2.0' },
@@ -4294,7 +4294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-09-04',
+      dateModified: '2026-09-05',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4303,7 +4303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-09-04',
+    dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     slug: 'local-llm-software-directory-2026',
@@ -4546,7 +4546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4b. 터미널 및 CLI 도구',
         itemHeadings: true,
         content:
-          '**터미널 및 CLI 도구는 로컬 LLM을 셸과 명령줄 워크플로에 연결합니다.** Aider는 터미널에서 git 네이티브 코드 편집을 위한 가장 성숙한 옵션입니다. ShellGPT, aichat, tgpt는 로컬 LLM을 명령어 생성 및 채팅용으로 감쌉니다. Blackbox AI와 Devhat이 이 패턴을 확장합니다. 모두 OpenAI 호환 API에서 작동합니다 — 로컬에서 실행 중인 Ollama를 가리키십시오.',
+          '**터미널 및 CLI 도구는 로컬 LLM을 셸과 명령줄 워크플로에 연결합니다.** Aider는 터미널에서 git 네이티브 코드 편집을 위한 가장 성숙한 옵션입니다. ShellGPT, aichat, tgpt는 로컬 LLM을 명령어 생성 및 채팅용으로 감쌉니다. Blackbox AI가 이 패턴을 확장합니다. 모두 OpenAI 호환 API에서 작동합니다 — 로컬에서 실행 중인 Ollama를 가리키십시오.',
         columns: ['도구', '링크', '설명', '라이선스', '스타'],
         rows: [
           { '도구': '**Aider**', '링크': '[aider.chat](https://aider.chat)', '설명': '멀티파일 git 네이티브 diff를 갖춘 터미널 페어 프로그래머', '라이선스': 'Apache 2.0' },
@@ -4841,7 +4841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-09-04',
+      dateModified: '2026-09-05',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
