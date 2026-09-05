@@ -113,6 +113,7 @@ import { article as a_best_rag_tools_for_business_documents_2026 } from './artic
 import { article as a_enterprise_rag_vector_database_deployment_guide_2026 } from './articles/enterprise-rag-vector-database-deployment-guide-2026'
 import { article as a_wechat_bot_local_llm_personal_assistant_2026 } from './articles/wechat-bot-local-llm-personal-assistant-2026'
 import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
+import { article as a_digitalocean_vs_aws_cloud_for_ai_companies } from './articles/digitalocean-vs-aws-cloud-for-ai-companies'
 import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
 import { article as a_haystack_deepset_rag_framework_review } from './articles/haystack-deepset-rag-framework-review'
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
@@ -218,6 +219,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-ai-image-generation-vs-cloud':                a_local_ai_image_generation_vs_cloud,
   'animatediff-video-generation-guide-2026':           a_animatediff_video_generation_guide_2026,
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
+  'digitalocean-vs-aws-cloud-for-ai-companies':         a_digitalocean_vs_aws_cloud_for_ai_companies,
   'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
   'enterprise-llm-inference-servers-vllm-tgi-nim-2026': a_enterprise_llm_inference_servers_vllm_tgi_nim_2026,

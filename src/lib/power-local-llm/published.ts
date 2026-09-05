@@ -124,6 +124,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
   'best-web-hosting',
 
+  // AI cloud provider comparison (DigitalOcean vs AWS vs GCP vs Azure vs OCI) — 2026-09-05
+  'digitalocean-vs-aws-cloud-for-ai-companies',
+
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
   'asus-mini-pc-local-ai',
   'local-llm-electricity-cost-balcony-solar',
