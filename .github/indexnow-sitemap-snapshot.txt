@@ -297,6 +297,7 @@ https://www.promptquorum.com/power-local-llm/enclave-ai-review
 https://www.promptquorum.com/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots
 https://www.promptquorum.com/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim
 https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide
+https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review
 https://www.promptquorum.com/power-local-llm/hanoki-review
@@ -346,6 +347,7 @@ https://www.promptquorum.com/power-local-llm/openclaw-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/pearai-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
+https://www.promptquorum.com/power-local-llm/piper-tts-review
 https://www.promptquorum.com/power-local-llm/pocketpal-ai-review
 https://www.promptquorum.com/power-local-llm/private-llm-review
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
@@ -361,7 +363,9 @@ https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/second-me-review
 https://www.promptquorum.com/power-local-llm/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
+https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review
+https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
@@ -373,6 +377,7 @@ https://www.promptquorum.com/power-local-llm/voxa-review
 https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026
 https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026
 https://www.promptquorum.com/power-local-llm/whisper-cpp-review
+https://www.promptquorum.com/power-local-llm/windsurf-review
 https://www.promptquorum.com/privacy
 https://www.promptquorum.com/prompt-bites
 https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates

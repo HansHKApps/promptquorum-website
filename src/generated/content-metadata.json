@@ -7085,6 +7085,24 @@
         }
       ]
     },
+    "metagpt-agnai-risuai-explained": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "uncensored-local-llm-creative-writing-ethics": {
       "dateModified": "2026-08-24",
       "lastFactChecked": null,
@@ -7216,7 +7234,7 @@
         },
         {
           "url": "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-en.webp",
-          "title": "Piper, Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not."
+          "title": "Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not."
         }
       ]
     },
@@ -8705,6 +8723,24 @@
       ],
       "images": []
     },
+    "piper-tts-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "pocketpal-ai-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -8832,6 +8868,60 @@
       "images": []
     },
     "tabby-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "codegpt-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openhands-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "cursor-local-mode-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",

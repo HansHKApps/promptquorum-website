@@ -19,6 +19,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "codegpt-review",
+        "title": "CodeGPT Review: The 2.4M-Install VS Code AI Agent Extension",
+        "url": "/power-local-llm/codegpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cursor-local-mode-review",
+        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
+        "url": "/power-local-llm/cursor-local-mode-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-cpp-explained",
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
@@ -64,25 +80,9 @@
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hanoki-review",
-        "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
-        "url": "/power-local-llm/hanoki-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-ai-review",
-        "title": "Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac",
-        "url": "/power-local-llm/locally-ai-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
       }
     ],
-    "totalCount": 228,
+    "totalCount": 231,
     "capped": true
   },
   "llama.cpp": {
@@ -605,6 +605,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "codegpt-review",
+        "title": "CodeGPT Review: The 2.4M-Install VS Code AI Agent Extension",
+        "url": "/power-local-llm/codegpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-cpp-explained",
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
@@ -650,17 +658,9 @@
         "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 139,
+    "totalCount": 141,
     "capped": true
   },
   "Atomic Chat": {
@@ -1666,7 +1666,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "LobeChat": {
@@ -1847,6 +1847,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-local-mode-review",
+        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
+        "url": "/power-local-llm/cursor-local-mode-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pearai-review",
         "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
         "url": "/power-local-llm/pearai-review",
@@ -1900,17 +1908,9 @@
         "url": "/local-llms/best-local-llm-frontends",
         "dateModified": "2026-08-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-08-30",
-        "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 47,
     "capped": true
   },
   "Cline": {
@@ -1936,6 +1936,14 @@
         "slug": "continue-dev-review",
         "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
         "url": "/power-local-llm/continue-dev-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cursor-local-mode-review",
+        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
+        "url": "/power-local-llm/cursor-local-mode-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -1986,17 +1994,9 @@
         "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 35,
     "capped": true
   },
   "PearAI": {
@@ -2019,6 +2019,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "codegpt-review",
+        "title": "CodeGPT Review: The 2.4M-Install VS Code AI Agent Extension",
+        "url": "/power-local-llm/codegpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-review",
         "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
         "url": "/power-local-llm/continue-dev-review",
@@ -2034,7 +2042,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Windsurf": {
@@ -2081,6 +2089,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "codegpt-review",
+        "title": "CodeGPT Review: The 2.4M-Install VS Code AI Agent Extension",
+        "url": "/power-local-llm/codegpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cursor-local-mode-review",
+        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
+        "url": "/power-local-llm/cursor-local-mode-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pearai-review",
         "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
         "url": "/power-local-llm/pearai-review",
@@ -2102,25 +2126,9 @@
         "url": "/local-llms/local-llms-with-vscode-cursor",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-code-review",
-        "title": "Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM",
-        "url": "/local-llms/best-local-llms-code-review",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 14,
     "capped": true
   },
   "Sourcegraph Cody": {
@@ -2173,6 +2181,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "cursor-local-mode-review",
+        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
+        "url": "/power-local-llm/cursor-local-mode-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tabby-review",
         "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
         "url": "/power-local-llm/tabby-review",
@@ -2212,7 +2228,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
+    "capped": false
+  },
+  "CodeGPT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "codegpt-review",
+        "title": "CodeGPT Review: The 2.4M-Install VS Code AI Agent Extension",
+        "url": "/power-local-llm/codegpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "OpenHands": {
@@ -2227,6 +2257,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openhands-review",
+        "title": "OpenHands Review: The Open-Source Answer to Devin",
+        "url": "/power-local-llm/openhands-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-interpreter-review",
         "title": "Open Interpreter Review 2026: Same Name, Rust Core, New License",
         "url": "/power-local-llm/open-interpreter-review",
@@ -2234,11 +2272,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Cursor (local mode)": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openhands-review",
+        "title": "OpenHands Review: The Open-Source Answer to Devin",
+        "url": "/power-local-llm/openhands-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
@@ -2248,7 +2294,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Twinny": {
@@ -2386,7 +2432,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 36,
+    "totalCount": 37,
     "capped": true
   },
   "PrivateGPT": {
@@ -5231,18 +5277,50 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "autonomous-local-agents-actually-work",
         "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogen-review",
+        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/autogen-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 4,
     "capped": false
   },
   "Agnai": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
@@ -5293,6 +5371,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogen-review",
+        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/autogen-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -5306,18 +5392,10 @@
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-07-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-screenwriting-and-novel-drafting",
-        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "RisuAI": {
     "articles": [
@@ -5331,6 +5409,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
@@ -5363,6 +5449,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogen-review",
+        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/autogen-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "librechat-review-2026",
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
@@ -5384,18 +5478,10 @@
         "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
         "dateModified": "2026-07-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-screenwriting-and-novel-drafting",
-        "title": "Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)",
-        "url": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Second Me": {
     "articles": [

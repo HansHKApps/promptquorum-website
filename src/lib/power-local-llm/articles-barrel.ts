@@ -22,6 +22,9 @@ import { article as a_pearai_review } from './articles/pearai-review'
 import { article as a_windsurf_review } from './articles/windsurf-review'
 import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
 import { article as a_tabby_review } from './articles/tabby-review'
+import { article as a_codegpt_review } from './articles/codegpt-review'
+import { article as a_openhands_review } from './articles/openhands-review'
+import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -92,6 +95,7 @@ import { article as a_local_llm_email_and_calendar_automation } from './articles
 import { article as a_local_llm_prompts_for_fiction_writers } from './articles/local-llm-prompts-for-fiction-writers'
 import { article as a_local_llm_screenwriting_and_novel_drafting } from './articles/local-llm-screenwriting-and-novel-drafting'
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
+import { article as a_metagpt_agnai_risuai_explained } from './articles/metagpt-agnai-risuai-explained'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
 import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison-2026'
@@ -207,6 +211,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-prompts-for-fiction-writers':       a_local_llm_prompts_for_fiction_writers,
   'local-llm-screenwriting-and-novel-drafting':  a_local_llm_screenwriting_and_novel_drafting,
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
+  'metagpt-agnai-risuai-explained':              a_metagpt_agnai_risuai_explained,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
   'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
   'local-whisper-stt-comparison-2026':                 a_local_whisper_stt_comparison_2026,
@@ -316,4 +321,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'windsurf-review':                               a_windsurf_review,
   'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
   'tabby-review':                                  a_tabby_review,
+  // CodeGPT, OpenHands, Cursor (local mode) reviews — 2026-09-05
+  'codegpt-review':                                a_codegpt_review,
+  'openhands-review':                              a_openhands_review,
+  'cursor-local-mode-review':                       a_cursor_local_mode_review,
 }

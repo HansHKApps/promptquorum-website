@@ -48,6 +48,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
   'sillytavern-vs-agnai-vs-risuai-roleplay':     'sillytavern-vs-agnai-vs-risuai-roleplay',
+  // Clarifies MetaGPT (multi-agent dev framework) vs Agnai/RisuAI (roleplay chat) — 2026-09-05
+  'metagpt-agnai-risuai-explained':              'metagpt-agnai-risuai-explained',
   'local-llm-prompts-for-fiction-writers':       'local-llm-prompts-for-fiction-writers',
   'uncensored-local-llm-creative-writing-ethics':'uncensored-local-llm-creative-writing-ethics',
   'local-llm-screenwriting-and-novel-drafting':  'local-llm-screenwriting-and-novel-drafting',
@@ -231,4 +233,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'windsurf-review':                         'windsurf-review',
   'sourcegraph-cody-review':                 'sourcegraph-cody-review',
   'tabby-review':                            'tabby-review',
+  // CodeGPT, OpenHands, Cursor (local mode) reviews — 2026-09-05
+  'codegpt-review':                          'codegpt-review',
+  'openhands-review':                        'openhands-review',
+  'cursor-local-mode-review':                'cursor-local-mode-review',
 }
