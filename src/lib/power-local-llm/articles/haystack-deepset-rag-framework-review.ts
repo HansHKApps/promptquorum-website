@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools including framework and app options.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — no-code RAG apps compared, for teams that want a UI instead of a Python framework.',
         ],
       },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools, einschließlich Framework- und App-Optionen.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — No-Code-RAG-Apps im Vergleich, für Teams, die statt eines Python-Frameworks eine Oberfläche wollen.',
         ],
       },
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'À lire aussi',
         items: [
           '[Meilleurs outils RAG pour documents d\'entreprise](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — un guide d\'achat pour les outils de chat documentaire RAG, frameworks et applications inclus.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif d\'applications RAG no-code, pour les équipes qui préfèrent une interface à un framework Python.',
         ],
       },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — una guía de compra de herramientas RAG de chat documental, incluidas opciones de framework y de app.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de apps RAG no-code, para equipos que prefieren una interfaz a un framework Python.',
         ],
       },
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Melhores ferramentas RAG para documentos corporativos](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — um guia de compra de ferramentas RAG de chat com documentos, incluindo opções de framework e de app.',
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparação de apps RAG no-code, para equipes que preferem uma interface a um framework Python.',
         ],
       },
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ビジネス文書向けの最良のRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — フレームワークとアプリの両選択肢を含む、文書チャット向けRAGツールの購入ガイド。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI(RAG比較)](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — Pythonフレームワークの代わりにUIが欲しいチーム向けの、ノーコードRAGアプリ比較。',
         ],
       },
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[面向企业文档的最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 涵盖框架与应用两类选项的文档对话RAG工具购买指南。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
           '[AnythingLLM 对比 PrivateGPT 对比 Open WebUI(RAG)](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 面向想要界面而非Python框架的团队的无代码RAG应用对比。',
         ],
       },
@@ -1990,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — دليل شراء لأدوات RAG للدردشة مع المستندات، يشمل خيارات إطار العمل والتطبيقات.',
-          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـRAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة تطبيقات RAG بلا شيفرة، للفِرق التي تفضّل واجهة على إطار عمل Python.',
         ],
       },
@@ -2239,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 프레임워크와 앱 옵션을 모두 포함한 문서 채팅 RAG 도구 구매 가이드.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — Python 프레임워크 대신 UI를 원하는 팀을 위한 노코드 RAG 앱 비교.',
         ],
       },

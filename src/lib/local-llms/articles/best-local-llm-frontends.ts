@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client) -- Free multi-provider desktop client with built-in knowledge bases and MCP support.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How to use the API directly from code.',
             '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) -- Setup Continue.dev and VS Code integrations.',
-            '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, licence, and link.',
+            '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, licence, and link.',
             '[Melhores Interfaces para LLMs Locais (Português)](/pt/local-llms/best-local-llm-frontends) — versão em português deste guia',
           ],
         },

@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — actively maintained, deployable self-hosted RAG platforms compared.',
           '[Chat With 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — a document-chat setup that ships a working interface, unlike Quivr\'s current library-only form.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — aktiv gepflegte, bereitstellbare selbst gehostete RAG-Plattformen im Vergleich.',
           '[Mit 1.000 PDFs lokal chatten](/de/power-local-llm/chat-with-1000-pdfs-locally) — ein Dokumenten-Chat-Setup mit funktionierender Oberfläche, anders als die aktuelle reine Bibliotheksform von Quivr.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif de plateformes RAG auto-hébergées, déployables et activement maintenues.',
           '[Chatter avec 1 000 PDF en local](/fr/power-local-llm/chat-with-1000-pdfs-locally) — une configuration de chat documentaire livrant une interface fonctionnelle, contrairement à la forme actuelle, bibliothèque seule, de Quivr.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel cet article appartient.',
+          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel cet article appartient.',
         ],
       },
     },
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de plataformas RAG autoalojadas, desplegables y activamente mantenidas.',
           '[Chatea con 1000 PDF en local](/es/power-local-llm/chat-with-1000-pdfs-locally) — una configuración de chat documental que incluye una interfaz funcional, a diferencia de la forma actual, solo librería, de Quivr.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparação de plataformas RAG self-hosted, implantáveis e ativamente mantidas.',
           '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — uma configuração de chat de documentos que entrega uma interface funcional, diferente da forma atual, só biblioteca, do Quivr.',
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1368,7 +1368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI — RAGの比較](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 現在も活発にメンテナンスされているデプロイ可能なセルフホスト型RAGプラットフォームの比較。',
           '[1,000件のPDFとローカルでチャットする方法](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 現在はライブラリのみのQuivrと異なり、動作するインターフェースを備えた文書チャット構成。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI：RAG 对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 对比目前仍活跃维护、可部署的自托管 RAG 平台。',
           '[本地与 1000 份 PDF 对话](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 一套提供可用界面的文档聊天方案，与目前仅剩库形态的 Quivr 不同。',
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地 AI 工具完整目录。',
+          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录。',
         ],
       },
     },
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة منصات RAG مُستضافة ذاتيًا وقابلة للنشر ومُصانة بنشاط.',
           '[الدردشة مع 1000 ملف PDF محليًا](/ar/power-local-llm/chat-with-1000-pdfs-locally) — إعداد دردشة مستندات يقدّم واجهة عاملة، بخلاف شكل Quivr الحالي المقتصر على المكتبة.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2049,7 +2049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 활발히 유지관리되는, 배포 가능한 셀프 호스팅 RAG 플랫폼 비교.',
           '[로컬에서 PDF 1,000개와 대화하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — Quivr의 현재 라이브러리 전용 형태와 달리 작동하는 인터페이스를 제공하는 문서 채팅 구성.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },

@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down](/power-local-llm/flowise-ai-visual-workflow-builder-review) — why Flowise stopped being a safe default, and what changed for its self-hosted users.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — actively maintained RAG tools compared for self-hosted use.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools beyond Langflow.',
           '[BabyAGI in 2026: What the First AI Agent Became](/power-local-llm/babyagi-review-autonomous-agent) — an older, solo-maintained agent project for comparison against Langflow\'s corporate-backed active development.',
         ],
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise Test 2026: Visueller LangChain-Workflow-Builder wird eingestellt](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — warum Flowise keine sichere Standardwahl mehr ist und was sich für Self-Hosting-Nutzer geändert hat.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — aktiv gepflegte RAG-Tools für Self-Hosting im Vergleich.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits von Langflow.',
           '[BabyAGI 2026: Vom viralen Skript zum Function-Framework](/de/power-local-llm/babyagi-review-autonomous-agent) — ein älteres, allein gepflegtes Agenten-Projekt zum Vergleich mit Langflows konzerngestützter aktiver Entwicklung.',
         ],
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise en 2026 : le constructeur visuel LangChain met la clé sous la porte](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review) — pourquoi Flowise n\'est plus un choix par défaut sûr, et ce qui a changé pour ses utilisateurs auto-hébergés.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif d\'outils RAG activement maintenus pour l\'auto-hébergement.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
+          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
           '[Meilleurs outils RAG pour documents d\'entreprise](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — un guide d\'achat d\'outils RAG de dialogue documentaire au-delà de Langflow.',
           '[BabyAGI en 2026 : du script viral au framework de fonctions](/fr/power-local-llm/babyagi-review-autonomous-agent) — un projet d\'agent plus ancien, maintenu par une seule personne, à comparer au développement actif et soutenu par une entreprise de Langflow.',
         ],
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowiseレビュー2026：ビジュアルLangChainワークフロービルダーが終了へ](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review) — Flowiseが安全な選択肢ではなくなった理由と、セルフホストユーザーにとって何が変わったか。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — セルフホスト向けに活発に保守されているRAGツールを比較。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。',
           '[ビジネス文書向けRAGツールベスト](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — Langflow以外のドキュメントチャットRAGツールを選ぶためのガイド。',
           '[BabyAGI 2026：バイラルスクリプトから関数フレームワークへ](/ja/power-local-llm/babyagi-review-autonomous-agent) — Langflowの企業支援による活発な開発と比較するための、個人メンテナンスの古いエージェントプロジェクト。',
         ],
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise 2026评测：可视化LangChain工作流构建工具即将停止维护](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review) — 为什么Flowise不再是安全的默认选择，以及这对自托管用户意味着什么。',
           '[AnythingLLM对比PrivateGPT对比Open WebUI的RAG方案](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 对比适合自托管的活跃维护RAG工具。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的完整本地AI工具目录。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录。',
           '[面向企业文档的最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — Langflow之外的文档对话式RAG工具选购指南。',
           '[BabyAGI 2026：从爆红脚本到函数框架](/zh/power-local-llm/babyagi-review-autonomous-agent) — 一个更早期、由个人维护的智能体项目，可与Langflow由企业支持的积极开发形成对比。',
         ],
@@ -1497,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Flowise 2026: el constructor visual de LangChain deja de funcionar](/es/power-local-llm/flowise-ai-visual-workflow-builder-review) — por qué Flowise dejó de ser una opción segura por defecto y qué cambió para sus usuarios autoalojados.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de herramientas RAG activamente mantenidas para uso autoalojado.',
-          '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — una guía de compra de herramientas RAG de chat con documentos más allá de Langflow.',
           '[BabyAGI en 2026: del script viral al framework de funciones](/es/power-local-llm/babyagi-review-autonomous-agent) — un proyecto de agente más antiguo, mantenido por una sola persona, para comparar con el desarrollo activo y respaldado por una empresa de Langflow.',
         ],
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Flowise 2026: o construtor visual do LangChain está encerrando](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review) — por que o Flowise deixou de ser uma escolha padrão segura, e o que mudou para os usuários de self-host.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparação de ferramentas RAG ativamente mantidas para uso self-hosted.',
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[Melhores ferramentas RAG para documentos empresariais](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — um guia de compra de ferramentas RAG de chat com documentos além do Langflow.',
           '[BabyAGI em 2026: do script viral ao framework de funções](/pt/power-local-llm/babyagi-review-autonomous-agent) — um projeto de agente mais antigo, mantido por uma única pessoa, para comparar com o desenvolvimento ativo e apoiado por empresa do Langflow.',
         ],
@@ -1997,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Flowise 2026: أداة LangChain البصرية تتوقف](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review) — لماذا لم تعد Flowise خيارًا افتراضيًا آمنًا، وما الذي تغيّر لمستخدمي الاستضافة الذاتية.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لتقنية RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة بين أدوات RAG المصانة بنشاط للاستضافة الذاتية.',
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
           '[أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — دليل شراء لأدوات RAG لمحادثة المستندات بخلاف Langflow.',
           '[BabyAGI في 2026: من نص برمجي منتشر إلى إطار وظائف](/ar/power-local-llm/babyagi-review-autonomous-agent) — مشروع عميل أقدم يديره شخص واحد، للمقارنة مع التطوير النشط المدعوم من شركة في Langflow.',
         ],
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise 리뷰 2026: 비주얼 LangChain 워크플로우 빌더 서비스 종료](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review) — Flowise가 더 이상 안전한 기본 선택지가 아닌 이유와 셀프호스팅 사용자에게 달라진 점.',
           '[AnythingLLM 대 PrivateGPT 대 Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 셀프호스팅용으로 활발히 유지보수되는 RAG 도구 비교.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[비즈니스 문서용 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — Langflow 외 문서 채팅형 RAG 도구 구매 가이드.',
           '[BabyAGI 2026: 바이럴 스크립트에서 함수 프레임워크로](/ko/power-local-llm/babyagi-review-autonomous-agent) — Langflow의 기업 지원 하에 이루어지는 활발한 개발과 비교할 수 있는, 1인이 관리하는 더 오래된 에이전트 프로젝트.',
         ],

@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Local LLM with Logseq and Joplin](/power-local-llm/local-llm-with-logseq-and-joplin) — self-hosted AI note-taking setups beyond Khoj.',
           '[Chat with 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — document-scale RAG setups for large personal or business archives.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools beyond personal note-taking.',
           '[Second Me Review 2026](/power-local-llm/second-me-review) — an open-source project for training a personalized AI on your own data, a different approach to the "personal AI" idea than Khoj\'s document-chat model.',
         ],
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lokales LLM mit Logseq und Joplin](/de/power-local-llm/local-llm-with-logseq-and-joplin) — selbst gehostete KI-Notiz-Setups jenseits von Khoj.',
           '[Mit 1.000 PDFs lokal chatten](/de/power-local-llm/chat-with-1000-pdfs-locally) — dokumentenintensive RAG-Setups für große persönliche oder geschäftliche Archive.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits persönlicher Notizverwaltung.',
           '[Second Me Test 2026](/de/power-local-llm/second-me-review) — ein Open-Source-Projekt zum Trainieren einer personalisierten KI aus den eigenen Daten, ein anderer Ansatz für die Idee der „persönlichen KI" als Khojs Dokument-Chat-Modell.',
         ],
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LLM local avec Logseq et Joplin](/fr/power-local-llm/local-llm-with-logseq-and-joplin) — configurations de prise de notes IA autohébergées au-delà de Khoj.',
           '[Discuter avec 1 000 PDF en local](/fr/power-local-llm/chat-with-1000-pdfs-locally) — configurations RAG à grande échelle pour de larges archives personnelles ou professionnelles.',
-          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
           '[Meilleurs outils RAG pour documents professionnels](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — un guide d\'achat pour les outils RAG de chat documentaire au-delà de la prise de notes personnelle.',
           '[Avis Second Me 2026](/fr/power-local-llm/second-me-review) — un projet open-source pour entraîner une IA personnalisée sur ses propres données, une approche différente de l\'« IA personnelle » que le modèle de chat documentaire de Khoj.',
         ],
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LLM local con Logseq y Joplin](/es/power-local-llm/local-llm-with-logseq-and-joplin) — configuraciones de toma de notas con IA autoalojada más allá de Khoj.',
           '[Chatea con 1.000 PDF en local](/es/power-local-llm/chat-with-1000-pdfs-locally) — configuraciones RAG a gran escala para archivos personales o empresariales extensos.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — una guía de compra de herramientas RAG de chat documental más allá de la toma de notas personal.',
           '[Reseña de Second Me 2026](/es/power-local-llm/second-me-review) — un proyecto de código abierto para entrenar una IA personalizada con tus propios datos, un enfoque distinto de la "IA personal" al modelo de chat documental de Khoj.',
         ],
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LLM local com Logseq e Joplin](/pt/power-local-llm/local-llm-with-logseq-and-joplin) — configurações de anotações com IA self-hosted além do Khoj.',
           '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — configurações de RAG em escala documental para grandes arquivos pessoais ou empresariais.',
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[Melhores ferramentas de RAG para documentos empresariais](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — um guia de compra de ferramentas RAG de chat com documentos além das anotações pessoais.',
           '[Análise do Second Me 2026](/pt/power-local-llm/second-me-review) — um projeto de código aberto para treinar uma IA personalizada com seus próprios dados, uma abordagem diferente da "IA pessoal" em relação ao modelo de chat com documentos do Khoj.',
         ],
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LogseqとJoplinでのローカルLLM](/ja/power-local-llm/local-llm-with-logseq-and-joplin) — Khoj以外のセルフホスト型AIノートアプリ構成。',
           '[1,000件のPDFをローカルでチャット](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 大規模な個人・業務アーカイブ向けのドキュメント規模RAG構成。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
           '[ビジネス文書向けベストRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — 個人ノート以外のドキュメントチャットRAGツール選定ガイド。',
           '[Second Meレビュー2026](/ja/power-local-llm/second-me-review) — 自分自身のデータからパーソナライズされたAIを訓練するオープンソースプロジェクト。Khojのドキュメントチャット型とは異なる「パーソナルAI」へのアプローチ。',
         ],
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[在Logseq和Joplin中使用本地LLM](/zh/power-local-llm/local-llm-with-logseq-and-joplin) — Khoj之外的自托管AI笔记方案。',
           '[本地与1000份PDF对话](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 面向大型个人或业务档案的文档级RAG方案。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
           '[面向商业文档的最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 个人笔记之外的文档聊天RAG工具购买指南。',
           '[Second Me 评测 2026](/zh/power-local-llm/second-me-review) — 一个基于自己数据训练个性化AI的开源项目,与Khoj的文档聊天模式相比,是"个人AI"理念的另一种实现方式。',
         ],
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[نموذج لغوي محلي مع Logseq وJoplin](/ar/power-local-llm/local-llm-with-logseq-and-joplin) — إعدادات تدوين ملاحظات بالذكاء الاصطناعي مستضافة ذاتيًا غير Khoj.',
           '[الدردشة مع 1000 ملف PDF محليًا](/ar/power-local-llm/chat-with-1000-pdfs-locally) — إعدادات RAG على نطاق المستندات للأرشيفات الشخصية أو التجارية الكبيرة.',
-          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
           '[أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — دليل شراء لأدوات RAG لدردشة المستندات يتجاوز تدوين الملاحظات الشخصية.',
           '[مراجعة Second Me لعام 2026](/ar/power-local-llm/second-me-review) — مشروع مفتوح المصدر لتدريب ذكاء اصطناعي شخصي على بياناتك الخاصة، نهج مختلف لفكرة "الذكاء الاصطناعي الشخصي" عن نموذج دردشة المستندات في Khoj.',
         ],
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Logseq와 Joplin으로 로컬 LLM 사용하기](/ko/power-local-llm/local-llm-with-logseq-and-joplin) — Khoj 외의 셀프 호스팅 AI 노트 작성 구성.',
           '[로컬에서 PDF 1,000개와 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 대규모 개인 또는 업무 아카이브를 위한 문서 규모 RAG 구성.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 개인 노트 작성을 넘어선 문서 채팅 RAG 도구 구매 가이드.',
           '[Second Me 리뷰 2026](/ko/power-local-llm/second-me-review) — 자신의 데이터로 개인화된 AI를 훈련하는 오픈소스 프로젝트로, Khoj의 문서 채팅 모델과는 다른 "개인 AI" 접근 방식.',
         ],

@@ -41,7 +41,7 @@ function buildSoftwareApplication(tool: ToolRecord, lang: Language): Record<stri
 
   const item: Record<string, unknown> = {
     '@type': 'SoftwareApplication',
-    '@id': `https://promptquorum.com/power-local-llm/local-llm-software-directory-2026#software-${tool.slug}`,
+    '@id': `https://promptquorum.com/power-local-llm/local-llm-software-directory#software-${tool.slug}`,
     name: tool.name,
     applicationCategory: groupLabel(CATEGORY_SUB_GROUP[tool.categories[0]], lang),
   }

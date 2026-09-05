@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Setup guide for the local model server most of these frontends connect to.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of the two most popular local model runtimes.',
           '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How the OpenAI-compatible endpoint that most of these apps use actually works.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, license, and link.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, license, and link.',
         ],
       },
       sources: {
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama installieren](/local-llms/how-to-install-ollama) -- Einrichtungsanleitung für den lokalen Modellserver, mit dem sich die meisten dieser Frontends verbinden.',
           '[Ollama vs. LM Studio](/local-llms/ollama-vs-lm-studio) -- Vergleich der zwei beliebtesten lokalen Modell-Laufzeitumgebungen.',
           '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api) -- Wie der OpenAI-kompatible Endpunkt funktioniert, den die meisten dieser Apps nutzen.',
-          '[Lokales-LLM-Software-Verzeichnis](/power-local-llm/local-llm-software-directory-2026) -- 88 Tools aus Laufzeitumgebungen, Desktop-Apps, RAG, Coding und Agenten, jeweils mit Beschreibung, Lizenz und Link.',
+          '[Lokales-LLM-Software-Verzeichnis](/power-local-llm/local-llm-software-directory) -- 88 Tools aus Laufzeitumgebungen, Desktop-Apps, RAG, Coding und Agenten, jeweils mit Beschreibung, Lizenz und Link.',
         ],
       },
       sources: {
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Comment installer Ollama](/local-llms/how-to-install-ollama) -- Guide d\'installation du serveur de modèle local auquel se connectent la plupart de ces frontends.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparatif des deux moteurs de modèle local les plus populaires.',
           '[API compatible OpenAI pour LLM local](/local-llms/local-llm-openai-compatible-api) -- Comment fonctionne le point de terminaison compatible OpenAI utilisé par la plupart de ces applications.',
-          '[Répertoire de logiciels LLM local](/power-local-llm/local-llm-software-directory-2026) -- 88 outils couvrant moteurs, applications desktop, RAG, code et agents, chacun avec description, licence et lien.',
+          '[Répertoire de logiciels LLM local](/power-local-llm/local-llm-software-directory) -- 88 outils couvrant moteurs, applications desktop, RAG, code et agents, chacun avec description, licence et lien.',
         ],
       },
       sources: {
@@ -972,7 +972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollamaのインストール方法](/local-llms/how-to-install-ollama) -- これらのフロントエンドの多くが接続するローカルモデルサーバーのセットアップガイド。',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 最も人気のある2つのローカルモデル実行環境の比較。',
           '[ローカルLLM OpenAI互換API](/local-llms/local-llm-openai-compatible-api) -- これらのアプリの多くが使用するOpenAI互換エンドポイントの仕組み。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory-2026) -- 実行環境、デスクトップアプリ、RAG、コーディング、エージェントにまたがる88のツールを、説明・ライセンス・リンク付きで紹介。',
+          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) -- 実行環境、デスクトップアプリ、RAG、コーディング、エージェントにまたがる88のツールを、説明・ライセンス・リンク付きで紹介。',
         ],
       },
       sources: {
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[如何安装 Ollama](/local-llms/how-to-install-ollama) -- 这些前端中大多数所连接的本地模型服务器的安装指南。',
           '[Ollama 对比 LM Studio](/local-llms/ollama-vs-lm-studio) -- 两款最受欢迎的本地模型运行环境对比。',
           '[本地 LLM OpenAI 兼容 API](/local-llms/local-llm-openai-compatible-api) -- 这些应用中大多数所使用的 OpenAI 兼容端点的工作原理。',
-          '[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory-2026) -- 涵盖运行环境、桌面应用、RAG、编码和智能体的 88 款工具,均附有说明、许可证和链接。',
+          '[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) -- 涵盖运行环境、桌面应用、RAG、编码和智能体的 88 款工具,均附有说明、许可证和链接。',
         ],
       },
       sources: {
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cómo instalar Ollama](/local-llms/how-to-install-ollama) -- Guía de instalación del servidor de modelo local al que se conectan la mayoría de estos frontends.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparativa de los dos motores de modelo local más populares.',
           '[API compatible con OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api) -- Cómo funciona el endpoint compatible con OpenAI que usan la mayoría de estas apps.',
-          '[Directorio de software de LLM local](/power-local-llm/local-llm-software-directory-2026) -- 88 herramientas entre motores, apps de escritorio, RAG, código y agentes, cada una con descripción, licencia y enlace.',
+          '[Directorio de software de LLM local](/power-local-llm/local-llm-software-directory) -- 88 herramientas entre motores, apps de escritorio, RAG, código y agentes, cada una con descripción, licencia y enlace.',
         ],
       },
       sources: {
@@ -1716,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Como instalar o Ollama](/local-llms/how-to-install-ollama) -- Guia de instalação do servidor de modelo local ao qual a maioria desses frontends se conecta.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparativo dos dois ambientes de execução de modelo local mais populares.',
           '[API compatível com OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api) -- Como funciona o endpoint compatível com OpenAI usado pela maioria desses apps.',
-          '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory-2026) -- 88 ferramentas entre ambientes de execução, apps de desktop, RAG, código e agentes, cada uma com descrição, licença e link.',
+          '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) -- 88 ferramentas entre ambientes de execução, apps de desktop, RAG, código e agentes, cada uma com descrição, licença e link.',
         ],
       },
       sources: {
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[كيفية تثبيت Ollama](/local-llms/how-to-install-ollama) -- دليل إعداد خادم النموذج المحلي الذي تتصل به معظم هذه الواجهات.',
           '[Ollama مقابل LM Studio](/local-llms/ollama-vs-lm-studio) -- مقارنة بين أشهر بيئتي تشغيل نماذج محلية.',
           '[واجهة برمجة LLM المحلية المتوافقة مع OpenAI](/local-llms/local-llm-openai-compatible-api) -- كيف تعمل نقطة النهاية المتوافقة مع OpenAI التي تستخدمها معظم هذه التطبيقات.',
-          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory-2026) -- 88 أداة عبر بيئات التشغيل وتطبيقات سطح المكتب وRAG والبرمجة والوكلاء، كل منها مع وصف وترخيص ورابط.',
+          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) -- 88 أداة عبر بيئات التشغيل وتطبيقات سطح المكتب وRAG والبرمجة والوكلاء، كل منها مع وصف وترخيص ورابط.',
         ],
       },
       sources: {
@@ -2212,7 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 이 프론트엔드 대부분이 연결하는 로컬 모델 서버 설치 가이드.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 가장 인기 있는 두 로컬 모델 실행 환경 비교.',
           '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 이 앱들 대부분이 사용하는 OpenAI 호환 엔드포인트의 작동 방식.',
-          '[로컬 LLM 소프트웨어 디렉토리](/power-local-llm/local-llm-software-directory-2026) -- 실행 환경, 데스크톱 앱, RAG, 코딩, 에이전트에 걸친 88개 도구를 설명, 라이선스, 링크와 함께 소개.',
+          '[로컬 LLM 소프트웨어 디렉토리](/power-local-llm/local-llm-software-directory) -- 실행 환경, 데스크톱 앱, RAG, 코딩, 에이전트에 걸친 88개 도구를 설명, 라이선스, 링크와 함께 소개.',
         ],
       },
       sources: {

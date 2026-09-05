@@ -1,5 +1,5 @@
 // Power Local LLM — The Complete Local LLM Software Directory: 130 Tools to Run AI on Your Own Hardware (2026)
-// Slug: local-llm-software-directory-2026
+// Slug: local-llm-software-directory (URL) — content key / filename stays -2026, see CLAUDE.md "No Year or Month in Slugs"
 // All 9 locales: en, de, fr, es, ja, zh, ko, pt, ar
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best RAG Tools for Business Documents (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM, PrivateGPT, LlamaIndex: enterprise document Q&A stacks.',
           '[Build a Local Voice Assistant (2026)](/power-local-llm/voice-assistant-local-mobile-offline) — Whisper.cpp + Piper TTS + Ollama for fully-offline speech systems.',
           '[txtai Review 2026: The Embedded Vector Database That Skips the Server](/power-local-llm/txtai-embedded-vector-database-review) — a single Python package alternative to running a vector database plus a separate RAG framework.',
-          '[Diretório de Software LLM Local 2026 (Português)](/pt/power-local-llm/local-llm-software-directory-2026) — versão em português deste guia',
+          '[Diretório de Software LLM Local 2026 (Português)](/pt/power-local-llm/local-llm-software-directory) — versão em português deste guia',
           '[Best Affiliate Tools for AI Developers: Earn While You Build (2026)](/power-local-llm/best-affiliate-tools-ai-developers-2026) -- earn passive income by recommending AI tools your readers already need',
           '[Flowise Review: Visual LangChain Builder Is Shutting Down](/power-local-llm/flowise-ai-visual-workflow-builder-review) — what the shutdown means if you are evaluating Flowise for RAG or agent prototyping.',
           '[Haystack Review: deepset\'s RAG Framework vs. LangChain and LlamaIndex](/power-local-llm/haystack-deepset-rag-framework-review) — a code-first Python framework with explicit Pipeline/Component architecture, for production search and RAG.',
@@ -3199,7 +3199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'El directorio completo de software LLM local: 160+ herramientas para ejecutar IA en tu propio hardware (2026)',
       description: 'Directorio actualizado de 2026 con 160+ herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz, generación de imágenes y frameworks de agentes. Licencias, enlaces y últimas versiones.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-09-05',
@@ -3743,7 +3743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O diretório completo de software LLM local: 160+ ferramentas para executar IA no seu próprio hardware (2026)',
       description: 'Diretório atualizado de 2026 com 160+ ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz, geração de imagens e frameworks de agentes. Licenças, links e versões mais recentes.',
-      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-09-05',
@@ -4285,7 +4285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 160+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
       description: 'دليل محدَّث لعام 2026 يضم 160+ أداة لتشغيل النماذج اللغوية محلياً: Ollama وLM Studio وGPT4All وJan.ai إضافة للمحمول وRAG والصوت وتوليد الصور وأطر العملاء. التراخيص والروابط وأحدث الإصدارات. محدَّث في أغسطس 2026.',
-      url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory-2026',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
       dateModified: '2026-09-05',
@@ -4300,7 +4300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-05',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    slug: 'local-llm-software-directory-2026',
+    slug: 'local-llm-software-directory',
     title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 160+ 도구 (2026)',
     seoTitle: '로컬 LLM 도구 2026: 160+ 앱 10가지 카테고리 (Ollama~이미지 생성)',
     affiliateDisclosure: true,
@@ -4832,7 +4832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 160+개 도구 (2026)',
       description: '로컬 LLM 실행 도구 160+개를 정리한 2026년 업데이트판 디렉토리: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 이미지 생성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함.',
-      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory-2026',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
       dateModified: '2026-09-05',

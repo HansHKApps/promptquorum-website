@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Khoj Review 2026](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted AI second brain that chats with and searches your notes and Notion workspace.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
           '[Chat with 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — document-scale RAG setups for large personal or business archives.',
         ],
       },
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Khoj Review 2026](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehostetes KI-Second-Brain, das mit Ihren Notizen und Ihrem Notion-Workspace chattet und diese durchsucht.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[Chat mit 1.000 PDFs lokal](/de/power-local-llm/chat-with-1000-pdfs-locally) — dokumentenskalierte RAG-Setups für große persönliche oder geschäftliche Archive.',
         ],
       },
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'À lire aussi',
         items: [
           '[Khoj Review 2026](/fr/power-local-llm/khoj-ai-second-brain-review) — un second cerveau IA autohébergé qui discute avec vos notes et votre espace Notion et les recherche.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
           '[Discuter avec 1 000 PDF en local](/fr/power-local-llm/chat-with-1000-pdfs-locally) — configurations RAG à l\'échelle documentaire pour de grandes archives personnelles ou professionnelles.',
         ],
       },
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Khojレビュー2026](/ja/power-local-llm/khoj-ai-second-brain-review) — 自分のメモやNotionワークスペースとチャット・検索するセルフホスト型AIセカンドブレイン。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全なカタログ。',
           '[1,000件のPDFをローカルでチャット](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 大規模な個人・業務向けアーカイブ向けのドキュメント規模のRAGセットアップ。',
         ],
       },
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Khoj评测2026](/zh/power-local-llm/khoj-ai-second-brain-review) — 一个自托管的AI第二大脑，可与你的笔记和Notion工作区聊天并搜索。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
           '[本地与1000份PDF聊天](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 面向大型个人或企业档案的文档级RAG方案。',
         ],
       },
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Khoj Review 2026](/es/power-local-llm/khoj-ai-second-brain-review) — un segundo cerebro de IA autoalojado que chatea y busca en tus notas y tu espacio de trabajo de Notion.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[Chatea con 1.000 PDFs en local](/es/power-local-llm/chat-with-1000-pdfs-locally) — configuraciones RAG a escala documental para grandes archivos personales o empresariales.',
         ],
       },
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Khoj Review 2026](/pt/power-local-llm/khoj-ai-second-brain-review) — um segundo cérebro de IA self-hosted que conversa e busca em suas notas e no seu workspace do Notion.',
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — configurações de RAG em escala documental para grandes arquivos pessoais ou empresariais.',
         ],
       },
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة Khoj لعام 2026](/ar/power-local-llm/khoj-ai-second-brain-review) — دماغ ثانٍ للذكاء الاصطناعي مستضاف ذاتيًا يدردش مع ملاحظاتك ومساحة عمل Notion الخاصة بك ويبحث فيها.',
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
           '[الدردشة مع 1,000 ملف PDF محليًا](/ar/power-local-llm/chat-with-1000-pdfs-locally) — إعدادات RAG بحجم المستندات للأرشيفات الشخصية أو التجارية الكبيرة.',
         ],
       },
@@ -1994,7 +1994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Khoj 리뷰 2026](/ko/power-local-llm/khoj-ai-second-brain-review) — 노트와 Notion 워크스페이스와 채팅하고 검색하는 셀프 호스팅 AI 세컨드 브레인.',
-          '[로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026) — 본 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory) — 본 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
           '[1,000개의 PDF와 로컬로 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 대규모 개인 또는 업무용 아카이브를 위한 문서 규모의 RAG 설정.',
         ],
       },

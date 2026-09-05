@@ -32,7 +32,7 @@ const BASE = 'https://www.promptquorum.com'
 // Decision 1: "replace in place"). Every special case below is guarded by
 // this constant so no other power-local-llm article's rendering or JSON-LD
 // changes.
-const LOCAL_AI_DIRECTORY_SLUG = 'local-llm-software-directory-2026'
+const LOCAL_AI_DIRECTORY_SLUG = 'local-llm-software-directory'
 
 // The 13 tool-listing sections in local-llm-software-directory-2026.ts whose
 // table rendering is swapped for the interactive DirectoryClient hub. Every
@@ -703,7 +703,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-slate-50 text-slate-700 border-slate-200',
     colorDot: 'bg-slate-400',
     slugs: [
-      'local-llm-software-directory-2026',
+      'local-llm-software-directory',
       'apple-mlx-vs-nvidia-cuda-local-llm-2026',
       'deepseek-vs-qwen-local-comparison-2026',
     ],
@@ -1856,7 +1856,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
               <p className="text-sm text-text-secondary max-w-xl">{labels.directoryBody}</p>
             </div>
             <Link
-              href={powerLLMArticlePath(lang, 'local-llm-software-directory-2026')}
+              href={powerLLMArticlePath(lang, 'local-llm-software-directory')}
               className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
             >
               {labels.directoryCta}

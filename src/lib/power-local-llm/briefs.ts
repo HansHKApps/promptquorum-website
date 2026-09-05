@@ -726,7 +726,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
-      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory reference for app listings' },
+      { url: '/power-local-llm/local-llm-software-directory', reasoning: 'directory reference for app listings' },
     ],
     structure: {
       label: 'iPhone app comparison table (4-col mobile-friendly)',
@@ -770,7 +770,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
-      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory reference for app listings' },
+      { url: '/power-local-llm/local-llm-software-directory', reasoning: 'directory reference for app listings' },
     ],
     structure: {
       label: 'Android app comparison table (4-col mobile-friendly)',
@@ -907,7 +907,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for plugin configuration' },
-      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory listing for Obsidian plugins' },
+      { url: '/power-local-llm/local-llm-software-directory', reasoning: 'directory listing for Obsidian plugins' },
     ],
     structure: {
       label: 'Plugin comparison table (5-col)',
@@ -952,7 +952,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority for plugin configuration' },
-      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory listing for Logseq and Joplin AI tools' },
+      { url: '/power-local-llm/local-llm-software-directory', reasoning: 'directory listing for Logseq and Joplin AI tools' },
     ],
     structure: {
       label: 'Tool comparison table (5-col)',
@@ -1037,7 +1037,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/local-llms/best-local-llms-2026', reasoning: 'model authority' },
-      { url: '/power-local-llm/local-llm-software-directory-2026', reasoning: 'directory for Whisper.cpp and Piper TTS entries' },
+      { url: '/power-local-llm/local-llm-software-directory', reasoning: 'directory for Whisper.cpp and Piper TTS entries' },
     ],
     structure: {
       label: 'Voice assistant stack comparison (4-col mobile-friendly)',

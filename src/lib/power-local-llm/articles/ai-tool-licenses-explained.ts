@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary',
     seoTitle: 'AI & Open-Source Licenses Explained (MIT, GPL, AGPL)',
     intro:
-      'Every local-LLM tool, RAG framework, and AI coding assistant reviewed on this site ships under a license — MIT, Apache-2.0, AGPL-3.0, a source-available license, or a closed "free" desktop app — and that license decides more about whether you can actually use the tool than any feature comparison does. This guide explains the license families you will encounter across open-source software and AI models: what each one permits and requires, where it came from, who it is built for, and the specific things to check before you deploy a tool under it, whether that is a hobby project, a startup product, an internal enterprise system, or a client deployment you plan to resell. It is a taxonomy, not a lookup table — it will not tell you which license a specific reviewed tool uses (see the individual review or the [software directory](/power-local-llm/local-llm-software-directory-2026) for that), but it explains what that license actually means once you know it.',
+      'Every local-LLM tool, RAG framework, and AI coding assistant reviewed on this site ships under a license — MIT, Apache-2.0, AGPL-3.0, a source-available license, or a closed "free" desktop app — and that license decides more about whether you can actually use the tool than any feature comparison does. This guide explains the license families you will encounter across open-source software and AI models: what each one permits and requires, where it came from, who it is built for, and the specific things to check before you deploy a tool under it, whether that is a hobby project, a startup product, an internal enterprise system, or a client deployment you plan to resell. It is a taxonomy, not a lookup table — it will not tell you which license a specific reviewed tool uses (see the individual review or the [software directory](/power-local-llm/local-llm-software-directory) for that), but it explains what that license actually means once you know it.',
     metaDescription:
       'Open-source and AI-tool license types explained: permissive, copyleft, AGPL, source-available, and AI-model licenses — what to check before deploying any tool.',
     twitterDescription:
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — 160+ local LLM tools with the license listed for each entry.',
+          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — 160+ local LLM tools with the license listed for each entry.',
           '[Dify AI Workflow Builder Review](/power-local-llm/dify-ai-workflow-builder-review) — a platform review that names its license; use this guide to understand what that license means for your deployment.',
           '[AI-Generated Content and IP Risk](/power-local-llm/ai-generated-content-ip-risk) — the intellectual-property questions that sit alongside licensing when you deploy AI-generated output commercially.',
           '[Agentic AI Security: Identity & Access](/power-local-llm/agentic-ai-security-identity-access) — security and governance considerations for self-hosted AI deployments, a companion concern to license compliance.',
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'KI- und Open-Source-Softwarelizenzen erklärt: MIT vs. Apache vs. GPL vs. AGPL vs. proprietär',
     seoTitle: 'KI- & Open-Source-Lizenzen erklärt (MIT, GPL, AGPL)',
     intro:
-      'Jedes lokale LLM-Tool, RAG-Framework und jeder KI-Coding-Assistent, der auf dieser Seite besprochen wird, läuft unter einer Lizenz — MIT, Apache-2.0, AGPL-3.0, eine Source-Available-Lizenz oder eine geschlossene "kostenlose" Desktop-App — und diese Lizenz entscheidet mehr darüber, ob Sie das Tool tatsächlich einsetzen dürfen, als jeder Funktionsvergleich. Dieser Leitfaden erklärt die Lizenzfamilien, denen Sie bei Open-Source-Software und KI-Modellen begegnen: was jede erlaubt und verlangt, woher sie stammt, für wen sie gedacht ist, und was Sie konkret prüfen müssen, bevor Sie ein Tool damit einsetzen — ob als Hobbyprojekt, Startup-Produkt, internes Unternehmenssystem oder Kundenprojekt, das Sie weiterverkaufen. Es ist eine Taxonomie, keine Nachschlagetabelle — welche Lizenz ein bestimmtes besprochenes Tool nutzt, steht in der jeweiligen Review oder im [Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026); hier erfahren Sie, was diese Lizenz tatsächlich bedeutet, sobald Sie sie kennen.',
+      'Jedes lokale LLM-Tool, RAG-Framework und jeder KI-Coding-Assistent, der auf dieser Seite besprochen wird, läuft unter einer Lizenz — MIT, Apache-2.0, AGPL-3.0, eine Source-Available-Lizenz oder eine geschlossene "kostenlose" Desktop-App — und diese Lizenz entscheidet mehr darüber, ob Sie das Tool tatsächlich einsetzen dürfen, als jeder Funktionsvergleich. Dieser Leitfaden erklärt die Lizenzfamilien, denen Sie bei Open-Source-Software und KI-Modellen begegnen: was jede erlaubt und verlangt, woher sie stammt, für wen sie gedacht ist, und was Sie konkret prüfen müssen, bevor Sie ein Tool damit einsetzen — ob als Hobbyprojekt, Startup-Produkt, internes Unternehmenssystem oder Kundenprojekt, das Sie weiterverkaufen. Es ist eine Taxonomie, keine Nachschlagetabelle — welche Lizenz ein bestimmtes besprochenes Tool nutzt, steht in der jeweiligen Review oder im [Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory); hier erfahren Sie, was diese Lizenz tatsächlich bedeutet, sobald Sie sie kennen.',
     metaDescription:
       'Open-Source- und KI-Tool-Lizenzen erklärt: permissiv, Copyleft, AGPL, Source-Available und KI-Modell-Lizenzen — was Sie vor dem Einsatz jedes Tools prüfen sollten.',
     twitterDescription:
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Das vollständige Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — über 160 lokale LLM-Tools mit der jeweiligen Lizenz.',
+          '[Das vollständige Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — über 160 lokale LLM-Tools mit der jeweiligen Lizenz.',
           '[Dify AI Workflow Builder Review](/de/power-local-llm/dify-ai-workflow-builder-review) — eine Review, die die Lizenz nennt; nutzen Sie diesen Leitfaden, um zu verstehen, was diese Lizenz für Ihren Einsatz bedeutet.',
           '[KI-generierte Inhalte und IP-Risiko](/de/power-local-llm/ai-generated-content-ip-risk) — die urheberrechtlichen Fragen, die neben der Lizenzierung stehen, wenn Sie KI-generierte Ausgaben kommerziell einsetzen.',
           '[Agentic-AI-Sicherheit: Identität & Zugriff](/de/power-local-llm/agentic-ai-security-identity-access) — Sicherheits- und Governance-Aspekte für selbst gehostete KI-Einsätze, ein Begleitthema zur Lizenz-Compliance.',
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Licences logicielles IA et open source expliquées : MIT vs Apache vs GPL vs AGPL vs propriétaire',
     seoTitle: 'Licences IA & open source expliquées (MIT, GPL, AGPL)',
     intro:
-      'Chaque outil de LLM local, framework RAG et assistant de codage IA présenté sur ce site est distribué sous une licence — MIT, Apache-2.0, AGPL-3.0, une licence source-available, ou une application de bureau "gratuite" fermée — et cette licence détermine bien plus si vous pouvez réellement utiliser l\'outil qu\'un comparatif de fonctionnalités. Ce guide explique les familles de licences que vous rencontrerez dans les logiciels open source et les modèles d\'IA : ce que chacune permet et exige, d\'où elle vient, à qui elle s\'adresse, et ce qu\'il faut vérifier avant de déployer un outil sous cette licence — pour un projet personnel, un produit de startup, un système d\'entreprise interne ou un déploiement client que vous revendez. Il s\'agit d\'une taxonomie, pas d\'un tableau de correspondance — il ne vous dira pas quelle licence utilise tel outil déjà passé en revue (voir la review concernée ou le [répertoire logiciel](/fr/power-local-llm/local-llm-software-directory-2026) pour cela), mais il explique ce que cette licence signifie réellement une fois que vous la connaissez.',
+      'Chaque outil de LLM local, framework RAG et assistant de codage IA présenté sur ce site est distribué sous une licence — MIT, Apache-2.0, AGPL-3.0, une licence source-available, ou une application de bureau "gratuite" fermée — et cette licence détermine bien plus si vous pouvez réellement utiliser l\'outil qu\'un comparatif de fonctionnalités. Ce guide explique les familles de licences que vous rencontrerez dans les logiciels open source et les modèles d\'IA : ce que chacune permet et exige, d\'où elle vient, à qui elle s\'adresse, et ce qu\'il faut vérifier avant de déployer un outil sous cette licence — pour un projet personnel, un produit de startup, un système d\'entreprise interne ou un déploiement client que vous revendez. Il s\'agit d\'une taxonomie, pas d\'un tableau de correspondance — il ne vous dira pas quelle licence utilise tel outil déjà passé en revue (voir la review concernée ou le [répertoire logiciel](/fr/power-local-llm/local-llm-software-directory) pour cela), mais il explique ce que cette licence signifie réellement une fois que vous la connaissez.',
     metaDescription:
       'Licences open source et IA expliquées : permissive, copyleft, AGPL, source-available et licences de modèles IA — ce qu\'il faut vérifier avant de déployer un outil.',
     twitterDescription:
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — plus de 160 outils de LLM local avec la licence de chaque entrée.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — plus de 160 outils de LLM local avec la licence de chaque entrée.',
           '[Review de Dify AI Workflow Builder](/fr/power-local-llm/dify-ai-workflow-builder-review) — une review qui nomme sa licence ; utilisez ce guide pour comprendre ce qu\'elle signifie pour votre déploiement.',
           '[Contenu généré par IA et risque de propriété intellectuelle](/fr/power-local-llm/ai-generated-content-ip-risk) — les questions de propriété intellectuelle qui accompagnent la licence lorsque vous exploitez commercialement des sorties générées par IA.',
           '[Sécurité de l\'IA agentique : identité et accès](/fr/power-local-llm/agentic-ai-security-identity-access) — considérations de sécurité et de gouvernance pour les déploiements d\'IA auto-hébergés, un enjeu complémentaire à la conformité des licences.',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Licencias de software de IA y open source explicadas: MIT vs Apache vs GPL vs AGPL vs propietaria',
     seoTitle: 'Licencias de IA y open source explicadas (MIT, GPL, AGPL)',
     intro:
-      'Cada herramienta de LLM local, framework RAG y asistente de codificación con IA reseñado en este sitio se distribuye bajo una licencia — MIT, Apache-2.0, AGPL-3.0, una licencia source-available o una app de escritorio "gratuita" cerrada — y esa licencia determina si realmente puedes usar la herramienta mucho más que cualquier comparación de funciones. Esta guía explica las familias de licencias que encontrarás en software open source y modelos de IA: qué permite y exige cada una, de dónde viene, para quién está pensada, y qué revisar concretamente antes de desplegar una herramienta bajo ella, ya sea un proyecto personal, un producto de startup, un sistema interno empresarial o un despliegue para un cliente que revendes. Es una taxonomía, no una tabla de referencia: no te dirá qué licencia usa una herramienta reseñada en particular (para eso, consulta la reseña o el [directorio de software](/es/power-local-llm/local-llm-software-directory-2026)), pero sí explica qué significa realmente esa licencia una vez que la conoces.',
+      'Cada herramienta de LLM local, framework RAG y asistente de codificación con IA reseñado en este sitio se distribuye bajo una licencia — MIT, Apache-2.0, AGPL-3.0, una licencia source-available o una app de escritorio "gratuita" cerrada — y esa licencia determina si realmente puedes usar la herramienta mucho más que cualquier comparación de funciones. Esta guía explica las familias de licencias que encontrarás en software open source y modelos de IA: qué permite y exige cada una, de dónde viene, para quién está pensada, y qué revisar concretamente antes de desplegar una herramienta bajo ella, ya sea un proyecto personal, un producto de startup, un sistema interno empresarial o un despliegue para un cliente que revendes. Es una taxonomía, no una tabla de referencia: no te dirá qué licencia usa una herramienta reseñada en particular (para eso, consulta la reseña o el [directorio de software](/es/power-local-llm/local-llm-software-directory)), pero sí explica qué significa realmente esa licencia una vez que la conoces.',
     metaDescription:
       'Licencias de software open source y de IA explicadas: permisivas, copyleft, AGPL, source-available y licencias de modelos de IA — qué revisar antes de usar cualquier herramienta.',
     twitterDescription:
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[El directorio completo de software de LLM local](/es/power-local-llm/local-llm-software-directory-2026) — más de 160 herramientas de LLM local con la licencia de cada entrada.',
+          '[El directorio completo de software de LLM local](/es/power-local-llm/local-llm-software-directory) — más de 160 herramientas de LLM local con la licencia de cada entrada.',
           '[Reseña de Dify AI Workflow Builder](/es/power-local-llm/dify-ai-workflow-builder-review) — una reseña que nombra su licencia; usa esta guía para entender qué significa esa licencia para tu despliegue.',
           '[Contenido generado por IA y riesgo de propiedad intelectual](/es/power-local-llm/ai-generated-content-ip-risk) — las cuestiones de propiedad intelectual que acompañan a la licencia cuando despliegas comercialmente salidas generadas por IA.',
           '[Seguridad de la IA agéntica: identidad y acceso](/es/power-local-llm/agentic-ai-security-identity-access) — consideraciones de seguridad y gobernanza para despliegues de IA autohospedados, un aspecto complementario al cumplimiento de licencias.',
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Licenças de software de IA e open source explicadas: MIT vs Apache vs GPL vs AGPL vs proprietária',
     seoTitle: 'Licenças de IA e open source explicadas (MIT, GPL, AGPL)',
     intro:
-      'Toda ferramenta de LLM local, framework de RAG e assistente de codificação com IA analisado neste site é distribuído sob uma licença — MIT, Apache-2.0, AGPL-3.0, uma licença source-available ou um app de desktop "gratuito" fechado — e essa licença determina se você realmente pode usar a ferramenta muito mais do que qualquer comparação de recursos. Este guia explica as famílias de licenças que você vai encontrar em software open source e modelos de IA: o que cada uma permite e exige, de onde ela veio, para quem ela foi pensada, e o que verificar especificamente antes de implantar uma ferramenta sob ela — seja um projeto pessoal, um produto de startup, um sistema interno corporativo ou uma entrega para cliente que você revende. É uma taxonomia, não uma tabela de consulta — não vai dizer qual licença uma ferramenta específica já analisada usa (veja a resenha individual ou o [diretório de software](/pt/power-local-llm/local-llm-software-directory-2026) para isso), mas explica o que essa licença realmente significa assim que você a identifica.',
+      'Toda ferramenta de LLM local, framework de RAG e assistente de codificação com IA analisado neste site é distribuído sob uma licença — MIT, Apache-2.0, AGPL-3.0, uma licença source-available ou um app de desktop "gratuito" fechado — e essa licença determina se você realmente pode usar a ferramenta muito mais do que qualquer comparação de recursos. Este guia explica as famílias de licenças que você vai encontrar em software open source e modelos de IA: o que cada uma permite e exige, de onde ela veio, para quem ela foi pensada, e o que verificar especificamente antes de implantar uma ferramenta sob ela — seja um projeto pessoal, um produto de startup, um sistema interno corporativo ou uma entrega para cliente que você revende. É uma taxonomia, não uma tabela de consulta — não vai dizer qual licença uma ferramenta específica já analisada usa (veja a resenha individual ou o [diretório de software](/pt/power-local-llm/local-llm-software-directory) para isso), mas explica o que essa licença realmente significa assim que você a identifica.',
     metaDescription:
       'Licenças de software open source e de IA explicadas: permissiva, copyleft, AGPL, source-available e licenças de modelos de IA — o que verificar antes de usar qualquer ferramenta.',
     twitterDescription:
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — mais de 160 ferramentas de LLM local com a licença listada em cada entrada.',
+          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — mais de 160 ferramentas de LLM local com a licença listada em cada entrada.',
           '[Análise do Dify AI Workflow Builder](/pt/power-local-llm/dify-ai-workflow-builder-review) — uma análise que nomeia sua licença; use este guia para entender o que essa licença significa para sua implantação.',
           '[Conteúdo gerado por IA e risco de propriedade intelectual](/pt/power-local-llm/ai-generated-content-ip-risk) — as questões de propriedade intelectual que acompanham o licenciamento quando você implanta comercialmente saídas geradas por IA.',
           '[Segurança de IA agêntica: identidade e acesso](/pt/power-local-llm/agentic-ai-security-identity-access) — considerações de segurança e governança para implantações de IA autoalojadas, uma preocupação complementar à conformidade de licenças.',
@@ -1760,7 +1760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AI・オープンソースソフトウェアライセンス完全解説：MIT・Apache・GPL・AGPL・プロプライエタリの違い',
     seoTitle: 'AI・OSSライセンス解説（MIT・GPL・AGPL）',
     intro:
-      'このサイトでレビューしているローカルLLMツール、RAGフレームワーク、AIコーディングアシスタントはすべて、MIT・Apache-2.0・AGPL-3.0・source-availableライセンス・クローズドな「無料」デスクトップアプリのいずれかのライセンスで配布されています。そのライセンスは、機能比較よりもはるかに大きく「実際にそのツールを使えるかどうか」を左右します。本ガイドでは、オープンソースソフトウェアとAIモデルで出会うライセンスファミリーを解説します — それぞれが何を許可し何を要求するか、由来、想定される対象者、そして趣味プロジェクト・スタートアップ製品・社内システム・再販するクライアント案件のどれであっても導入前に確認すべき具体的なポイントです。これは分類ガイドであり個別ツールの一覧表ではありません — 特定のレビュー済みツールがどのライセンスかは各レビューまたは[ソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026)を参照してください。本記事は、そのライセンス名が分かった後で「実際に何を意味するのか」を説明します。',
+      'このサイトでレビューしているローカルLLMツール、RAGフレームワーク、AIコーディングアシスタントはすべて、MIT・Apache-2.0・AGPL-3.0・source-availableライセンス・クローズドな「無料」デスクトップアプリのいずれかのライセンスで配布されています。そのライセンスは、機能比較よりもはるかに大きく「実際にそのツールを使えるかどうか」を左右します。本ガイドでは、オープンソースソフトウェアとAIモデルで出会うライセンスファミリーを解説します — それぞれが何を許可し何を要求するか、由来、想定される対象者、そして趣味プロジェクト・スタートアップ製品・社内システム・再販するクライアント案件のどれであっても導入前に確認すべき具体的なポイントです。これは分類ガイドであり個別ツールの一覧表ではありません — 特定のレビュー済みツールがどのライセンスかは各レビューまたは[ソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。本記事は、そのライセンス名が分かった後で「実際に何を意味するのか」を説明します。',
     metaDescription:
       'オープンソース・AIツールライセンス解説：permissive、copyleft、AGPL、source-available、AIモデルライセンス — ツール導入前に確認すべきポイント。',
     twitterDescription:
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 160以上のローカルLLMツールと、各項目に記載されたライセンス。',
+          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 160以上のローカルLLMツールと、各項目に記載されたライセンス。',
           '[Dify AI Workflow Builderレビュー](/ja/power-local-llm/dify-ai-workflow-builder-review) — ライセンスを明記したレビュー。そのライセンスが自分の導入案件にとって何を意味するか、本ガイドで理解できます。',
           '[AI生成コンテンツとIPリスク](/ja/power-local-llm/ai-generated-content-ip-risk) — AI生成出力を商用利用する際にライセンスと並んで検討すべき知的財産権の論点。',
           '[エージェンティックAIのセキュリティ：ID・アクセス管理](/ja/power-local-llm/agentic-ai-security-identity-access) — 自己ホスティングAI導入におけるセキュリティ・ガバナンスの検討事項。ライセンスコンプライアンスと並ぶ論点。',
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AI与开源软件许可证详解：MIT vs Apache vs GPL vs AGPL vs 专有许可证',
     seoTitle: 'AI与开源许可证详解（MIT、GPL、AGPL）',
     intro:
-      '本站评测过的每一款本地LLM工具、RAG框架和AI编程助手都在某种许可证下发布——MIT、Apache-2.0、AGPL-3.0、source-available许可证，或封闭的"免费"桌面应用——而这份许可证对你能否真正使用该工具的影响,远大于任何功能对比。本指南解释你会在开源软件和AI模型中遇到的许可证族群:每种许可证允许什么、要求什么、起源于何处、面向哪类用户,以及在个人项目、创业产品、企业内部系统或转售给客户的部署之前具体需要检查什么。这是一份分类指南,不是逐个工具的许可证对照表——它不会告诉你某个具体评测工具用的是哪种许可证(那部分请查看对应评测或[软件目录](/zh/power-local-llm/local-llm-software-directory-2026)),但一旦你知道某个许可证的名字,本文会解释它到底意味着什么。',
+      '本站评测过的每一款本地LLM工具、RAG框架和AI编程助手都在某种许可证下发布——MIT、Apache-2.0、AGPL-3.0、source-available许可证，或封闭的"免费"桌面应用——而这份许可证对你能否真正使用该工具的影响,远大于任何功能对比。本指南解释你会在开源软件和AI模型中遇到的许可证族群:每种许可证允许什么、要求什么、起源于何处、面向哪类用户,以及在个人项目、创业产品、企业内部系统或转售给客户的部署之前具体需要检查什么。这是一份分类指南,不是逐个工具的许可证对照表——它不会告诉你某个具体评测工具用的是哪种许可证(那部分请查看对应评测或[软件目录](/zh/power-local-llm/local-llm-software-directory)),但一旦你知道某个许可证的名字,本文会解释它到底意味着什么。',
     metaDescription:
       '开源与AI工具许可证详解:permissive、copyleft、AGPL、source-available和AI模型许可证——部署任何工具前应检查的要点。',
     twitterDescription:
@@ -2420,7 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 160多款本地LLM工具,每个条目均标注许可证。',
+          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 160多款本地LLM工具,每个条目均标注许可证。',
           '[Dify AI工作流构建器评测](/zh/power-local-llm/dify-ai-workflow-builder-review) — 一篇明确标注许可证的评测;结合本指南理解该许可证对你的部署意味着什么。',
           '[AI生成内容与知识产权风险](/zh/power-local-llm/ai-generated-content-ip-risk) — 在商业化部署AI生成输出时,与许可证问题并存的知识产权问题。',
           '[代理式AI安全:身份与访问控制](/zh/power-local-llm/agentic-ai-security-identity-access) — 自托管AI部署的安全与治理考量,是与许可证合规并行的关注点。',
@@ -2466,7 +2466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'شرح تراخيص برمجيات الذكاء الاصطناعي ومفتوحة المصدر: MIT مقابل Apache مقابل GPL مقابل AGPL مقابل الترخيص الملكي',
     seoTitle: 'شرح تراخيص الذكاء الاصطناعي ومفتوحة المصدر (MIT، GPL، AGPL)',
     intro:
-      'كل أداة LLM محلية وإطار عمل RAG ومساعد برمجة بالذكاء الاصطناعي تمت مراجعته على هذا الموقع يُوزَّع بموجب ترخيص ما — MIT أو Apache-2.0 أو AGPL-3.0 أو ترخيص source-available أو تطبيق سطح مكتب "مجاني" مغلق المصدر — وهذا الترخيص يحدد ما إذا كان بإمكانك فعلاً استخدام الأداة أكثر بكثير من أي مقارنة ميزات. يشرح هذا الدليل عائلات التراخيص التي ستواجهها في البرمجيات مفتوحة المصدر ونماذج الذكاء الاصطناعي: ما يسمح به كل ترخيص وما يتطلبه، ومن أين نشأ، ولمن هو موجَّه، وما الذي يجب التحقق منه تحديداً قبل نشر أداة بموجبه — سواء كان مشروعاً شخصياً أو منتج شركة ناشئة أو نظاماً داخلياً في مؤسسة أو نشراً لعميل تعيد بيعه. هذا تصنيف عام وليس جدول بحث لكل أداة — لن يخبرك بالترخيص الذي تستخدمه أداة معينة تمت مراجعتها (راجع المراجعة الفردية أو [دليل البرمجيات](/ar/power-local-llm/local-llm-software-directory-2026) لذلك)، لكنه يشرح ما يعنيه ذلك الترخيص فعلياً بمجرد معرفته.',
+      'كل أداة LLM محلية وإطار عمل RAG ومساعد برمجة بالذكاء الاصطناعي تمت مراجعته على هذا الموقع يُوزَّع بموجب ترخيص ما — MIT أو Apache-2.0 أو AGPL-3.0 أو ترخيص source-available أو تطبيق سطح مكتب "مجاني" مغلق المصدر — وهذا الترخيص يحدد ما إذا كان بإمكانك فعلاً استخدام الأداة أكثر بكثير من أي مقارنة ميزات. يشرح هذا الدليل عائلات التراخيص التي ستواجهها في البرمجيات مفتوحة المصدر ونماذج الذكاء الاصطناعي: ما يسمح به كل ترخيص وما يتطلبه، ومن أين نشأ، ولمن هو موجَّه، وما الذي يجب التحقق منه تحديداً قبل نشر أداة بموجبه — سواء كان مشروعاً شخصياً أو منتج شركة ناشئة أو نظاماً داخلياً في مؤسسة أو نشراً لعميل تعيد بيعه. هذا تصنيف عام وليس جدول بحث لكل أداة — لن يخبرك بالترخيص الذي تستخدمه أداة معينة تمت مراجعتها (راجع المراجعة الفردية أو [دليل البرمجيات](/ar/power-local-llm/local-llm-software-directory) لذلك)، لكنه يشرح ما يعنيه ذلك الترخيص فعلياً بمجرد معرفته.',
     metaDescription:
       'شرح أنواع تراخيص البرمجيات مفتوحة المصدر وأدوات الذكاء الاصطناعي: permissive وcopyleft وAGPL وsource-available وتراخيص نماذج الذكاء الاصطناعي — ما يجب التحقق منه قبل نشر أي أداة.',
     twitterDescription:
@@ -2773,7 +2773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — أكثر من 160 أداة LLM محلية مع الترخيص المذكور لكل عنصر.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — أكثر من 160 أداة LLM محلية مع الترخيص المذكور لكل عنصر.',
           '[مراجعة Dify AI Workflow Builder](/ar/power-local-llm/dify-ai-workflow-builder-review) — مراجعة تذكر ترخيصها؛ استخدم هذا الدليل لفهم ما يعنيه ذلك الترخيص لنشرك.',
           '[المحتوى المولَّد بالذكاء الاصطناعي ومخاطر الملكية الفكرية](/ar/power-local-llm/ai-generated-content-ip-risk) — مسائل الملكية الفكرية المصاحبة للترخيص عند نشرك مخرجات مولَّدة بالذكاء الاصطناعي تجارياً.',
           '[أمن الذكاء الاصطناعي الوكيلي: الهوية والوصول](/ar/power-local-llm/agentic-ai-security-identity-access) — اعتبارات الأمن والحوكمة لعمليات نشر الذكاء الاصطناعي المستضافة ذاتياً، مسألة مصاحبة للامتثال للترخيص.',
@@ -2814,7 +2814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'AI 및 오픈소스 소프트웨어 라이선스 완벽 해설: MIT vs Apache vs GPL vs AGPL vs 독점 라이선스',
     seoTitle: 'AI·오픈소스 라이선스 해설 (MIT, GPL, AGPL)',
     intro:
-      '이 사이트에서 리뷰한 모든 로컬 LLM 도구, RAG 프레임워크, AI 코딩 어시스턴트는 MIT, Apache-2.0, AGPL-3.0, source-available 라이선스, 혹은 폐쇄형 "무료" 데스크톱 앱 중 하나의 라이선스로 배포됩니다. 이 라이선스는 기능 비교보다 훨씬 더 크게 "실제로 그 도구를 사용할 수 있는지"를 좌우합니다. 본 가이드는 오픈소스 소프트웨어와 AI 모델에서 마주치게 되는 라이선스 계열을 설명합니다 — 각각 무엇을 허용하고 무엇을 요구하는지, 어디서 유래했는지, 누구를 위한 것인지, 그리고 취미 프로젝트든 스타트업 제품이든 사내 시스템이든 재판매하는 클라이언트 배포든 도구를 도입하기 전에 구체적으로 확인해야 할 사항입니다. 이는 분류 체계이지 개별 도구별 라이선스 조회표가 아닙니다 — 특정 리뷰 대상 도구가 어떤 라이선스를 쓰는지는 해당 리뷰나 [소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026)를 참고하시고, 본 문서는 그 라이선스 이름을 알게 된 후 실제로 무엇을 의미하는지 설명합니다.',
+      '이 사이트에서 리뷰한 모든 로컬 LLM 도구, RAG 프레임워크, AI 코딩 어시스턴트는 MIT, Apache-2.0, AGPL-3.0, source-available 라이선스, 혹은 폐쇄형 "무료" 데스크톱 앱 중 하나의 라이선스로 배포됩니다. 이 라이선스는 기능 비교보다 훨씬 더 크게 "실제로 그 도구를 사용할 수 있는지"를 좌우합니다. 본 가이드는 오픈소스 소프트웨어와 AI 모델에서 마주치게 되는 라이선스 계열을 설명합니다 — 각각 무엇을 허용하고 무엇을 요구하는지, 어디서 유래했는지, 누구를 위한 것인지, 그리고 취미 프로젝트든 스타트업 제품이든 사내 시스템이든 재판매하는 클라이언트 배포든 도구를 도입하기 전에 구체적으로 확인해야 할 사항입니다. 이는 분류 체계이지 개별 도구별 라이선스 조회표가 아닙니다 — 특정 리뷰 대상 도구가 어떤 라이선스를 쓰는지는 해당 리뷰나 [소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하시고, 본 문서는 그 라이선스 이름을 알게 된 후 실제로 무엇을 의미하는지 설명합니다.',
     metaDescription:
       '오픈소스 및 AI 도구 라이선스 해설: permissive, copyleft, AGPL, source-available, AI 모델 라이선스 — 도구 도입 전 확인해야 할 사항.',
     twitterDescription:
@@ -3121,7 +3121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 완전 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 항목마다 라이선스가 명시된 160개 이상의 로컬 LLM 도구.',
+          '[로컬 LLM 소프트웨어 완전 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 항목마다 라이선스가 명시된 160개 이상의 로컬 LLM 도구.',
           '[Dify AI Workflow Builder 리뷰](/ko/power-local-llm/dify-ai-workflow-builder-review) — 라이선스를 명시한 리뷰. 이 가이드를 통해 그 라이선스가 귀하의 배포에 어떤 의미인지 이해할 수 있습니다.',
           '[AI 생성 콘텐츠와 지식재산권 위험](/ko/power-local-llm/ai-generated-content-ip-risk) — AI 생성 결과물을 상업적으로 배포할 때 라이선스와 함께 고려해야 할 지식재산권 문제.',
           '[에이전틱 AI 보안: 아이덴티티와 접근 관리](/ko/power-local-llm/agentic-ai-security-identity-access) — 자체 호스팅 AI 배포의 보안 및 거버넌스 고려사항, 라이선스 준수와 함께 검토해야 할 사항.',

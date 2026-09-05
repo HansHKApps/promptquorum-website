@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — how RAGFlow compares to AnythingLLM, PrivateGPT, Open WebUI, Dify, and LlamaIndex by buyer profile.',
           '[Chat With 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — scaling local document Q&A past a small test collection.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — wie RAGFlow im Vergleich zu AnythingLLM, PrivateGPT, Open WebUI, Dify und LlamaIndex nach Käuferprofil abschneidet.',
           '[Chat mit 1.000 PDFs lokal](/de/power-local-llm/chat-with-1000-pdfs-locally) — lokales Dokumenten-Q&A über eine kleine Testsammlung hinaus skalieren.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Meilleurs outils RAG pour documents professionnels](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — comment RAGFlow se compare à AnythingLLM, PrivateGPT, Open WebUI, Dify et LlamaIndex selon le profil d\'acheteur.',
           '[Discuter avec 1 000 PDF en local](/fr/power-local-llm/chat-with-1000-pdfs-locally) — faire passer le Q&A documentaire local d\'une petite collection de test à grande échelle.',
-          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — cómo se compara RAGFlow con AnythingLLM, PrivateGPT, Open WebUI, Dify y LlamaIndex según el perfil de comprador.',
           '[Chatea con 1.000 PDFs en local](/es/power-local-llm/chat-with-1000-pdfs-locally) — escalar el Q&A documental local más allá de una pequeña colección de prueba.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[ビジネス文書向けベストRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — 購入者プロファイル別に見るRAGFlowとAnythingLLM、PrivateGPT、Open WebUI、Dify、LlamaIndexの比較。',
           '[1,000件のPDFをローカルでチャット](/ja/power-local-llm/chat-with-1000-pdfs-locally) — 小規模なテストコレクションを超えてローカル文書Q&Aをスケールさせる方法。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[面向商业文档的最佳 RAG 工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 按买家画像比较 RAGFlow 与 AnythingLLM、PrivateGPT、Open WebUI、Dify、LlamaIndex。',
           '[本地与 1000 份 PDF 对话](/zh/power-local-llm/chat-with-1000-pdfs-locally) — 将本地文档问答从小型测试集扩展到大规模场景。',
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地 AI 工具完整目录。',
+          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录。',
         ],
       },
     },
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Melhores ferramentas RAG para documentos corporativos](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — como o RAGFlow se compara ao AnythingLLM, PrivateGPT, Open WebUI, Dify e LlamaIndex por perfil de comprador.',
           '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — escalando o Q&A de documentos local além de uma pequena coleção de teste.',
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[أفضل أدوات RAG للمستندات المؤسسية](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — كيف يقارَن RAGFlow بـAnythingLLM وPrivateGPT وOpen WebUI وDify وLlamaIndex حسب ملف المشتري.',
           '[محادثة 1000 ملف PDF محليًا](/ar/power-local-llm/chat-with-1000-pdfs-locally) — توسيع نطاق أسئلة وأجوبة المستندات المحلية إلى ما بعد مجموعة اختبار صغيرة.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 구매자 프로필별로 RAGFlow와 AnythingLLM, PrivateGPT, Open WebUI, Dify, LlamaIndex 비교.',
           '[로컬에서 PDF 1,000개와 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 작은 테스트 컬렉션을 넘어 로컬 문서 질의응답을 확장하는 방법.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

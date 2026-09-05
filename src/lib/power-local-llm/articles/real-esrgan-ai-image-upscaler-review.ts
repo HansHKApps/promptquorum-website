@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — running the generation side (Stable Diffusion, ComfyUI) locally, not just upscaling.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including the Image Generation & Visual AI layer.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including the Image Generation & Visual AI layer.',
           '[Best NAS Storage for Local AI Models (2026)](/power-local-llm/best-nas-storage-local-ai-models-2026) — where to store the original and upscaled image files at scale.',
         ],
       },
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — die Generierungsseite (Stable Diffusion, ComfyUI) lokal betreiben, nicht nur Hochskalieren.',
-          '[Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Schicht Bildgenerierung & visuelle KI.',
+          '[Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Schicht Bildgenerierung & visuelle KI.',
           '[Beste NAS-Speicher für lokale KI-Modelle (2026)](/de/power-local-llm/best-nas-storage-local-ai-models-2026) — wo die Original- und hochskalierten Bilddateien in großem Umfang gespeichert werden.',
         ],
       },
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Génération d\'images IA locale vs cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — exécuter la génération (Stable Diffusion, ComfyUI) localement, pas seulement l\'agrandissement.',
-          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la couche Génération d\'images & IA visuelle.',
+          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la couche Génération d\'images & IA visuelle.',
           '[Meilleur stockage NAS pour modèles IA locaux (2026)](/fr/power-local-llm/best-nas-storage-local-ai-models-2026) — où stocker les fichiers image originaux et agrandis à grande échelle.',
         ],
       },
@@ -932,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Generación de imágenes con IA local vs. nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — ejecutar la generación (Stable Diffusion, ComfyUI) en local, no solo la ampliación.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la capa de Generación de imágenes e IA visual.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la capa de Generación de imágenes e IA visual.',
           '[Mejor almacenamiento NAS para modelos de IA local (2026)](/es/power-local-llm/best-nas-storage-local-ai-models-2026) — dónde almacenar los archivos de imagen originales y ampliados a gran escala.',
         ],
       },
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Geração de imagens com IA local vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — rodar a geração (Stable Diffusion, ComfyUI) localmente, não apenas a ampliação.',
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a camada de Geração de imagens e IA visual.',
+          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a camada de Geração de imagens e IA visual.',
           '[Melhor armazenamento NAS para modelos de IA local (2026)](/pt/power-local-llm/best-nas-storage-local-ai-models-2026) — onde armazenar os arquivos de imagem originais e ampliados em grande escala.',
         ],
       },
@@ -1400,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルAI画像生成 vs. クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — アップスケーリングだけでなく、生成側（Stable Diffusion、ComfyUI）をローカルで実行する方法。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属する、画像生成・ビジュアルAI層を含むローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、画像生成・ビジュアルAI層を含むローカルAIツールの完全カタログ。',
           '[ローカルAIモデル向けベストNASストレージ（2026年）](/ja/power-local-llm/best-nas-storage-local-ai-models-2026) — 元画像とアップスケール後の画像ファイルを大規模に保存する場所。',
         ],
       },
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud) — 在本地运行生成端（Stable Diffusion、ComfyUI），而不仅仅是放大。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地AI工具完整目录，包括图像生成与视觉AI层。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括图像生成与视觉AI层。',
           '[本地AI模型最佳NAS存储（2026年）](/zh/power-local-llm/best-nas-storage-local-ai-models-2026) — 在何处大规模存储原始及放大后的图像文件。',
         ],
       },
@@ -1868,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابة](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — تشغيل جانب التوليد (Stable Diffusion، ComfyUI) محلياً، وليس التكبير فقط.',
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك طبقة توليد الصور والذكاء الاصطناعي البصري.',
+          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك طبقة توليد الصور والذكاء الاصطناعي البصري.',
           '[أفضل تخزين NAS لنماذج الذكاء الاصطناعي المحلية (2026)](/ar/power-local-llm/best-nas-storage-local-ai-models-2026) — أين تُخزَّن ملفات الصور الأصلية والمكبَّرة على نطاق واسع.',
         ],
       },
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[로컬 AI 이미지 생성 vs. 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — 업스케일링뿐 아니라 생성 단계(Stable Diffusion, ComfyUI)를 로컬에서 실행하는 방법.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한, 이미지 생성 및 비주얼 AI 레이어를 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한, 이미지 생성 및 비주얼 AI 레이어를 포함한 로컬 AI 도구 전체 카탈로그.',
           '[로컬 AI 모델을 위한 최고의 NAS 스토리지(2026)](/ko/power-local-llm/best-nas-storage-local-ai-models-2026) — 원본 및 업스케일된 이미지 파일을 대규모로 저장할 위치.',
         ],
       },

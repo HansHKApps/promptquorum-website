@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Hermes Agent Review 2026](/power-local-llm/hermes-agent-review) — a current, actively maintained MIT-licensed autonomous agent with persistent memory and a self-improving skill loop, for readers who need a working alternative to BabyAGI\'s historical architecture.',
           '[Local AI Agents in 2026: What Actually Works (And What Still Fails)](/power-local-llm/autonomous-local-agents-actually-work) — a tested comparison of local agent stacks, for readers who need a working local-model setup rather than a historical reference like BabyAGI.',
           '[Langflow Review 2026: The IBM-Owned Alternative to Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — an actively maintained, corporate-backed visual agent/RAG builder for comparison.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to, including BabyAGI\'s entry in the specialized-tools table.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including BabyAGI\'s entry in the specialized-tools table.',
         ],
       },
     },
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lokale KI-Agenten 2026: Was wirklich funktioniert (und was noch scheitert)](/de/power-local-llm/autonomous-local-agents-actually-work) — ein getesteter Vergleich lokaler Agenten-Stacks für Leser, die ein funktionierendes lokales Setup brauchen statt einer historischen Referenz wie BabyAGI.',
           '[Langflow Test 2026: Visueller LangChain-Builder unter IBM](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein aktiv gepflegter, konzerngestützter visueller Agenten-/RAG-Builder zum Vergleich.',
-          '[Local LLM Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des BabyAGI-Eintrags in der Tabelle spezialisierter Tools.',
+          '[Local LLM Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des BabyAGI-Eintrags in der Tabelle spezialisierter Tools.',
         ],
       },
     },
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Agents IA locaux en 2026 : ce qui fonctionne vraiment (et ce qui échoue encore)](/fr/power-local-llm/autonomous-local-agents-actually-work) — une comparaison testée de stacks d\'agents locaux, pour les lecteurs ayant besoin d\'une configuration locale fonctionnelle plutôt que d\'une référence historique comme BabyAGI.',
           '[Avis Langflow 2026 : l\'alternative à Flowise détenue par IBM](/fr/power-local-llm/langflow-visual-ai-orchestration-review) — un constructeur visuel d\'agents/RAG activement maintenu et soutenu par une entreprise, pour comparaison.',
-          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée BabyAGI dans le tableau des outils spécialisés.',
+          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée BabyAGI dans le tableau des outils spécialisés.',
         ],
       },
     },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[2026年のローカルAIエージェント：実際に機能するもの（と失敗し続けるもの）](/power-local-llm/autonomous-local-agents-actually-work) — BabyAGIのような歴史的リファレンスではなく、実際に動くローカルセットアップが必要な読者向けの、検証済みローカルエージェントスタック比較。',
           '[Langflowレビュー2026：IBM傘下のFlowise代替](/power-local-llm/langflow-visual-ai-orchestration-review) — 比較対象として、積極的にメンテナンスされ企業に支えられたビジュアルエージェント/RAGビルダー。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory-2026) — 専門ツールの表にあるBabyAGIの項目を含む、この記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — 専門ツールの表にあるBabyAGIの項目を含む、この記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[2026年本地AI智能体：哪些真正有效（哪些仍然失败）](/power-local-llm/autonomous-local-agents-actually-work) — 经过实测的本地智能体方案对比，适合需要真正可用的本地方案、而非像BabyAGI这样历史参考的读者。',
           '[Langflow评测2026：IBM旗下的Flowise替代方案](/power-local-llm/langflow-visual-ai-orchestration-review) — 一个积极维护、有企业背景支持的可视化智能体/RAG构建工具，供对比参考。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory-2026) — 本文所属的完整本地AI工具目录，包含专业工具表格中的BabyAGI条目。',
+          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含专业工具表格中的BabyAGI条目。',
         ],
       },
     },
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Agentes de IA locales en 2026: qué funciona de verdad (y qué sigue fallando)](/es/power-local-llm/autonomous-local-agents-actually-work) — una comparación probada de stacks de agentes locales, para lectores que necesitan una configuración local funcional en lugar de una referencia histórica como BabyAGI.',
           '[Reseña de Langflow 2026: la alternativa a Flowise propiedad de IBM](/es/power-local-llm/langflow-visual-ai-orchestration-review) — un constructor visual de agentes/RAG activamente mantenido y con respaldo corporativo, para comparar.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de BabyAGI en la tabla de herramientas especializadas.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de BabyAGI en la tabla de herramientas especializadas.',
         ],
       },
     },
@@ -1738,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)](/pt/power-local-llm/autonomous-local-agents-actually-work) — uma comparação testada de stacks de agentes locais, para leitores que precisam de uma configuração local funcional em vez de uma referência histórica como o BabyAGI.',
           '[Análise do Langflow 2026: a alternativa ao Flowise controlada pela IBM](/pt/power-local-llm/langflow-visual-ai-orchestration-review) — um construtor visual de agentes/RAG ativamente mantido e com respaldo corporativo, para comparação.',
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do BabyAGI na tabela de ferramentas especializadas.',
+          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do BabyAGI na tabela de ferramentas especializadas.',
         ],
       },
     },
@@ -1986,7 +1986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[عملاء الذكاء الاصطناعي المحليون في 2026: ما الذي يعمل فعليًا (وما الذي ما زال يفشل)](/power-local-llm/autonomous-local-agents-actually-work) — مقارنة مُختبرة لحزم العملاء المحليين، للقراء الذين يحتاجون إعدادًا محليًا فعّالًا بدلًا من مرجع تاريخي مثل BabyAGI.',
           '[مراجعة Langflow 2026: البديل المملوك لـ IBM عن Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — أداة بناء مرئية للعملاء/RAG مدعومة بنشاط ومؤسسيًا، للمقارنة.',
-          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory-2026) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال BabyAGI في جدول الأدوات المتخصصة.',
+          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال BabyAGI في جدول الأدوات المتخصصة.',
         ],
       },
     },
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[2026년 로컬 AI 에이전트: 실제로 작동하는 것(그리고 여전히 실패하는 것)](/power-local-llm/autonomous-local-agents-actually-work) — BabyAGI 같은 역사적 참고자료가 아니라 실제로 작동하는 로컬 설정이 필요한 독자를 위한, 검증된 로컬 에이전트 스택 비교.',
           '[Langflow 리뷰 2026: IBM 소유의 Flowise 대안](/power-local-llm/langflow-visual-ai-orchestration-review) — 비교를 위한, 적극적으로 유지보수되고 기업의 지원을 받는 비주얼 에이전트/RAG 빌더.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory-2026) — 전문 도구 표의 BabyAGI 항목을 포함해, 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 전문 도구 표의 BabyAGI 항목을 포함해, 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

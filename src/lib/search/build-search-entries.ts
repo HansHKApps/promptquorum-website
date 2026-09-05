@@ -21,7 +21,10 @@ import { POWER_LLM_PUBLISHED_SLUGS } from '@/lib/power-local-llm/published'
 import { BALCONY_SOLAR_PUBLISHED_SLUGS } from '@/lib/balcony-solar/published'
 import { SMART_HOME_PUBLISHED_SLUGS } from '@/lib/smart-home/published'
 
-const DIRECTORY_ARTICLE_SLUG = 'local-llm-software-directory-2026'
+// Content key stays '-2026' (matches articles-barrel.ts / the article file's own
+// filename, unchanged); the URL slug dropped it per the "no year in slugs" rule.
+const DIRECTORY_CONTENT_KEY = 'local-llm-software-directory-2026'
+const DIRECTORY_ARTICLE_SLUG = 'local-llm-software-directory'
 
 function invertMap(map: Record<string, string>): Record<string, string> {
   const result: Record<string, string> = {}
@@ -121,7 +124,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
 
   // ── Local AI App Directory tools ──────────────────────────────────────
   // One SearchEntry per tool in localAiApps (129 tools, apps-barrel.ts),
-  // per locale the directory article (local-llm-software-directory-2026)
+  // per locale the directory article (local-llm-software-directory)
   // is actually translated into. There is no separate tool page yet, and
   // neither DirectoryClient.tsx nor ToolDrawer.tsx currently reads a URL
   // param or hash to auto-open a tool's drawer (checked directly — no
@@ -129,7 +132,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
   // the bare directory URL for that locale rather than inventing a dead
   // deep link. Follow-up: once the client reads e.g. `?tool=<slug>`, switch
   // these to a real deep link into the drawer.
-  const directoryLangMap = powerLLMContent[DIRECTORY_ARTICLE_SLUG] as
+  const directoryLangMap = powerLLMContent[DIRECTORY_CONTENT_KEY] as
     | Record<string, { tagline?: unknown }>
     | undefined
   if (directoryLangMap && POWER_LLM_PUBLISHED_SLUGS.has(DIRECTORY_ARTICLE_SLUG)) {
