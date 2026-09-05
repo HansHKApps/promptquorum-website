@@ -134,6 +134,21 @@ export function GooglePreferredSourcesCard() {
     }
 
     timerRef.current = setTimeout(() => {
+      // Re-check the cap right before showing — the localStorage read above ran when
+      // this timer was armed, up to 30s ago. Another tab (e.g. several article links
+      // middle-clicked from one search results page) can have shown the card and
+      // written the cap keys in the meantime; without re-checking here, this tab
+      // would show a second time in the same 14-day window.
+      if (sessionShownFallback) return
+      try {
+        const until = localStorage.getItem(DISMISS_KEY)
+        if (until && Date.now() < parseInt(until, 10)) return
+        const shownUntil = localStorage.getItem(SHOWN_KEY)
+        if (shownUntil && Date.now() < parseInt(shownUntil, 10)) return
+      } catch {
+        return
+      }
+
       // Never stack on the push opt-in banner — one interruptive prompt at a time.
       if (!claimPromptSlot(SLOT_ID)) return
       setMountedVisible(true)
