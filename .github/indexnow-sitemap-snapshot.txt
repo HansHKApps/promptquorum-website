@@ -318,7 +318,7 @@ https://www.promptquorum.com/power-local-llm/local-llm-email-and-calendar-automa
 https://www.promptquorum.com/power-local-llm/local-llm-personal-knowledge-base-2026
 https://www.promptquorum.com/power-local-llm/local-llm-prompts-for-fiction-writers
 https://www.promptquorum.com/power-local-llm/local-llm-screenwriting-and-novel-drafting
-https://www.promptquorum.com/power-local-llm/local-llm-software-directory-2026
+https://www.promptquorum.com/power-local-llm/local-llm-software-directory
 https://www.promptquorum.com/power-local-llm/local-llm-with-logseq-and-joplin
 https://www.promptquorum.com/power-local-llm/local-llm-with-obsidian-2026
 https://www.promptquorum.com/power-local-llm/local-multimodal-pipeline-voice-vision-text
