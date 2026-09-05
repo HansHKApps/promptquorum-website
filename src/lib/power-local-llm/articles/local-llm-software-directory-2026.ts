@@ -1,4 +1,4 @@
-// Power Local LLM — The Complete Local LLM Software Directory: 160+ Tools to Run AI on Your Own Hardware (2026)
+// Power Local LLM — The Complete Local LLM Software Directory: 130 Tools to Run AI on Your Own Hardware (2026)
 // Slug: local-llm-software-directory-2026
 // All 9 locales: en, de, fr, es, ja, zh, ko, pt, ar
 
@@ -10,17 +10,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
     dateModified: '2026-09-05',
-    next_refresh_due: '2026-11-07',
+    next_refresh_due: '2026-10-05',
     theme: 'Overview & Reference',
-    title: 'The Complete Local LLM Software Directory: 160+ Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Local LLM Tools 2026: 160+ Apps Compared by 10 Categories',
+    title: 'The Complete Local LLM Software Directory: 130 Tools to Run AI on Your Own Hardware (2026)',
+    seoTitle: 'Local LLM Tools 2026: 130 Apps Compared by 7 Categories',
     affiliateDisclosure: true,
     intro:
-      'This is an updated 2026 directory of 160+ local LLM tools, apps, frameworks, and deployment software — last updated August 2026. The local-LLM ecosystem in 2026 spans ten distinct layers, from inference runtimes through image generation, and picking the right tool at each layer is essential to building a stack that solves your problem without bloat. The directory catalogues 160+ actively-maintained projects across ten layers — runtimes, desktop apps, web UIs, IDE integrations, terminal tools, RAG systems, agent frameworks, speech/audio, mobile clients, specialized productivity plugins, and image generation — with the description, licence, and primary URL for each. Whether you are picking local LLM tools, deployment tools for multi-user serving, frameworks for building agents, or vision systems, use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
+      'This is an updated 2026 directory of 130 local LLM tools, apps, frameworks, and deployment software. The local-LLM ecosystem in 2026 spans seven categories, from running and serving models through images and video, and picking the right tool in each category is essential to building a stack that solves your problem without bloat. The directory catalogues 130 actively-maintained projects across seven categories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, and Train & Operate — with the description, licence, and primary URL for each. A tool can belong to more than one category (LM Studio is both a chat client and an inference runtime), and every entry also shows how you actually use it — desktop app, web app, CLI, editor plugin, mobile app, or library. Whether you are picking local LLM tools, deployment tools for multi-user serving, frameworks for building agents, or vision systems, use the filters below as the "what exists" map before you commit to a stack.',
     metaDescription:
-      'Updated 2026 directory of 160+ local LLM tools across 10 categories — runtimes, desktop apps, web UIs, coding tools, RAG, agents, voice, mobile, plugins, image generation. Updated August 2026.',
+      'Updated 2026 directory of 130 local LLM tools across 7 categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate.',
     twitterDescription:
-      '160+ local-LLM tools across 10 categories — runtimes, desktop apps, web UIs, IDE integrations, terminal tools, RAG, agent frameworks, voice, mobile, image generation. Licences, links & latest versions, updated August 2026. The "what exists" map before you commit to your stack.',
+      '130 local-LLM tools across 7 categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate. Licences, links & primary URLs. The "what exists" map before you commit to your stack.',
     advertiserHighlight: {
       url: 'https://locallyuncensored.com/',
       label: 'Visit Locally Uncensored',
@@ -42,12 +42,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai software ecosystem',
     ],
     leadAnswerBlock:
-      '**This updated 2026 directory (last updated August 2026) maps 160+ local LLM tools, deployment tools, frameworks, and visual AI systems across ten layers.** The local-LLM ecosystem in 2026 spans ten distinct layers. Runtimes (Ollama, llama.cpp, vLLM) move tokens through the model; desktop apps (LM Studio, Jan, GPT4All) wrap a runtime in a chat UI; web UIs (Open WebUI, LibreChat) do the same in a browser; IDE integrations (Continue.dev, PearAI, Windsurf) plug local models into your code editor; terminal tools (Aider, ShellGPT, aichat) handle command-line workflows; RAG systems (AnythingLLM, PrivateGPT) point it at your documents; agent frameworks (LangChain, CrewAI, LangGraph, SuperAGI) chain calls into multi-step workflows; voice and audio stacks (Whisper.cpp, Piper, XTTS) extend it beyond text; mobile clients (MLC Chat, PocketPal AI) put it on a phone; specialized productivity plugins (Obsidian, Logseq, AutoGPT) embed it in tools you already use; and image generation systems (Stable Diffusion, ComfyUI, Invoke AI) handle visual AI tasks. Pick a runtime first (Ollama for almost everyone), then add one or two layers above. The directory below lists every project worth knowing in each layer along with its licence, so you can plan a stack that is open-source end-to-end if that matters to you.**',
+      '**This updated 2026 directory maps 130 local LLM tools, deployment tools, frameworks, and visual AI systems across seven categories.** Run & Serve (Ollama, llama.cpp, vLLM) moves tokens through the model; Chat & Assistants (LM Studio, Jan, GPT4All, Open WebUI, LibreChat) wraps a runtime in a chat UI, desktop or browser; Code & Development (Continue.dev, PearAI, Windsurf, Aider, ShellGPT, LangChain, CrewAI, SuperAGI) covers IDE integrations, terminal tools, and agent frameworks; Knowledge & Retrieval (AnythingLLM, PrivateGPT, LlamaIndex) points a model at your documents; Voice & Audio (Whisper.cpp, Piper, XTTS) extends it beyond text; Images & Video (Stable Diffusion, ComfyUI, Invoke AI) handles visual generation; and Train & Operate covers fine-tuning and evaluation. Many tools span more than one category and can run as more than one interface — the filters below let you narrow by both. Pick a runtime first (Ollama for almost everyone), then add one or two categories above. The directory lists every project worth knowing with its licence, so you can plan a stack that is open-source end-to-end if that matters to you.**',
     quickAnswerTop: {
       en: {
         question: 'What are the best local LLM tools to run AI on my own hardware in 2026?',
         answer:
-          'Start with a runtime — Ollama is the fastest path for almost everyone, llama.cpp if you want the lowest-level control, vLLM if you need to serve multiple users. Layer a desktop app (LM Studio, Jan, GPT4All) or web UI (Open WebUI, LibreChat) on top for chat. Add a coding harness (Continue.dev, PearAI, Cline, Aider) if you want autocomplete and chat in your editor or terminal. Add a RAG system (AnythingLLM, PrivateGPT, Open WebUI built-in RAG) if you want to chat with your own documents. Add an agent framework (LangChain, CrewAI, SuperAGI) if you need multi-step orchestration. Beyond that the catalogue covers voice/audio, mobile clients, Obsidian/Logseq integrations, and image generation. The full directory below lists 160+ projects with licences and primary URLs.',
+          'Start with a runtime — Ollama is the fastest path for almost everyone, llama.cpp if you want the lowest-level control, vLLM if you need to serve multiple users. Add a desktop app (LM Studio, Jan, GPT4All) or web UI (Open WebUI, LibreChat) on top for chat. Add a coding harness (Continue.dev, PearAI, Cline, Aider) if you want autocomplete and chat in your editor or terminal. Add a RAG system (AnythingLLM, PrivateGPT, Open WebUI built-in RAG) if you want to chat with your own documents. Add an agent framework (LangChain, CrewAI, SuperAGI) if you need multi-step orchestration. Beyond that the catalogue covers voice/audio, mobile clients, Obsidian/Logseq integrations, and image generation. The full directory below lists 130 projects with licences and primary URLs.',
         bullets: [
           'Pick a runtime first — Ollama (easiest), llama.cpp (foundational), or vLLM (multi-user serving) cover 95% of use cases.',
           'Add a chat surface — LM Studio (best GUI), Jan (privacy-first), or Open WebUI (browser-based, popular self-host).',
@@ -65,19 +65,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
-      { label: '1. Runtimes & Inference Engines', anchor: '#runtimes' },
-      { label: '2. Desktop GUI Apps', anchor: '#desktop-apps' },
-      { label: '3. Web UIs & Browser Frontends', anchor: '#web-uis' },
-      { label: '4a. IDE & Code Editors', anchor: '#ide-editors' },
-      { label: '4b. Terminal & CLI Tools', anchor: '#terminal-tools' },
-      { label: '5. RAG & Document Chat Systems', anchor: '#rag-systems' },
-      { label: '6. Agent Frameworks & Orchestration', anchor: '#agent-frameworks' },
-      { label: '7a. Speech-to-Text (STT)', anchor: '#speech-to-text' },
-      { label: '7b. Text-to-Speech (TTS)', anchor: '#text-to-speech' },
-      { label: '7c. Multimodal & Vision', anchor: '#multimodal-vision' },
-      { label: '8. Mobile & Edge Clients', anchor: '#mobile-edge' },
-      { label: '9. Specialized & Productivity Tools', anchor: '#specialized' },
-      { label: '10. Image Generation & Visual AI', anchor: '#image-generation' },
+      { label: '1. Run & Serve', anchor: '#run-serve' },
+      { label: '2. Chat & Assistants', anchor: '#chat-assistants' },
+      { label: '3. Code & Development', anchor: '#code-development' },
+      { label: '4. Knowledge & Retrieval', anchor: '#knowledge-retrieval' },
+      { label: '5. Voice & Audio', anchor: '#voice-audio' },
+      { label: '6. Images & Video', anchor: '#images-video' },
+      { label: '7. Train & Operate', anchor: '#train-operate' },
       { label: 'Common Real-World Stacks', anchor: '#stacks' },
       { label: 'How This Directory Stays Current', anchor: '#how-current' },
       { label: 'Sources', anchor: '#sources' },
@@ -91,14 +85,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Ten layers, 160+ projects, one map.** Runtimes, desktop apps, web UIs, IDE integrations, terminal tools, RAG systems, agent frameworks, speech/audio/vision, mobile clients, specialized productivity plugins, and image generation — almost every popular project in 2026 fits in exactly one layer.',
+          '**Seven categories, 130 projects, one map.** Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, and Train & Operate — most popular projects in 2026 fit in one primary category, and many span more than one.',
           '**Pick a runtime first.** Ollama is the right default for ~95% of readers; llama.cpp is the foundational engine underneath most other tools; vLLM is the production-serving pick for multi-user setups.',
-          '**Most layers above the runtime are optional.** A desktop app OR a web UI is enough for chat. Add IDE integration only when you want code assistance; add terminal tools only when you want CLI workflows; add a RAG system only when you want to chat with your own documents; add an agent framework only when one-shot calls stop being enough; add image generation only when you need visual output.',
+          '**Most categories above Run & Serve are optional.** A desktop app OR a web UI is enough for chat. Add a code assistant or CLI tool only when you want code help; add a RAG system only when you want to chat with your own documents; add an agent framework only when one-shot calls stop being enough; add Images & Video only when you need visual output.',
           '**Licence matters for commercial use.** MIT and Apache 2.0 dominate the ecosystem. AGPL appears on a handful of UIs (text-generation-webui, KoboldCpp, Jan, SillyTavern) — fine for personal use, more deliberate for commercial deployments. The "License" column below names every one explicitly; see [AI & open-source software licenses explained](/power-local-llm/ai-tool-licenses-explained) for what MIT, Apache-2.0, AGPL-3.0, and the other license types below actually require.',
           '**Multi-tool stacks are normal.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion is a single-machine setup that covers chat, RAG, coding, and image generation without compromise. The "Common Real-World Stacks" table below names the recipes that actually work in 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-en.svg',
-        imageCaption: 'The 10 layers of a local LLM stack: 160+ actively-maintained projects spanning runtimes (Ollama, llama.cpp, vLLM), desktop apps (LM Studio, Jan, GPT4All), web UIs, IDE editors, terminal tools, RAG systems, agent frameworks, speech/audio, mobile clients, specialized productivity tools, and image generation (Stable Diffusion, ComfyUI).',
+        imageCaption: 'The 7 categories of a local LLM stack: 130 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Continue.dev, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate.',
       },
       runtimes: {
         id: 'runtimes',
@@ -433,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stacks',
         title: 'Common Real-World Stacks',
         content:
-          '**For readers who do not want to read ten categories, pick the closest stack and copy it.** Each row pairs a real goal with a tested combination and the hardware floor it actually runs on.',
+          '**For readers who do not want to read all seven categories, pick the closest stack and copy it.** Each row pairs a real goal with a tested combination and the hardware floor it actually runs on.',
         columns: ['Goal', 'Stack', 'Hardware floor'],
         rows: [
           { 'Goal': 'Just chat casually', 'Stack': 'LM Studio standalone', 'Hardware floor': '16 GB RAM, no GPU' },
@@ -455,7 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'How This Directory Stays Current',
         content:
-          '**This directory is reviewed every six months and patched between reviews — last updated August 2026, next scheduled refresh November 2026.** The August 2026 expansion added 72+ new tools across all tiers, split voice/multimodal into three focused layers (STT, TTS, vision), split coding assistants into IDE integrations (4a) and terminal tools (4b), and added an entirely new image generation tier. All links and licenses were reverified; new entries (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI, and others) were validated for active maintenance. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a layer that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
+          '**This directory is reviewed every six months and patched between reviews.** Recent expansions added dozens of new tools across every category, split voice/multimodal into three focused categories (speech-to-text, text-to-speech, vision), split coding assistants into IDE integrations and terminal tools, and added an entirely new Images & Video category. All links and licenses were reverified; new entries (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI, and others) were validated for active maintenance. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a category that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
       },
       sources: {
         id: 'sources',
@@ -511,11 +505,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How often does this directory get updated?',
-            a: 'Every six months — last updated August 2026, the next scheduled refresh is November 2026. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories or layers (like the August 2026 image generation tier addition) are added during scheduled refreshes to keep the structure stable. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
+            a: 'Every six months, with mid-cycle patches in between. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories (like the Images & Video category) are added during scheduled refreshes to keep the structure stable. See the "Last updated" date at the top of this page for the most recent refresh. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
           },
           {
             q: 'Can I do image generation locally without cloud calls?',
-            a: 'Yes — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI, and others in Tier 10 run entirely on local hardware. Stable Diffusion needs 6+ GB VRAM (RTX 3060, RTX 4060, or equivalent); Fooocus and other optimized UIs can run on cards with 4-6 GB. Real-ESRGAN upscales generated images; ControlNet adds spatial control (edges, poses, depth maps); AnimateDiff generates video from text. All run without sending data to external servers.',
+            a: 'Yes — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI, and others in the Images & Video category run entirely on local hardware. Stable Diffusion needs 6+ GB VRAM (RTX 3060, RTX 4060, or equivalent); Fooocus and other optimized UIs can run on cards with 4-6 GB. Real-ESRGAN upscales generated images; ControlNet adds spatial control (edges, poses, depth maps); AnimateDiff generates video from text. All run without sending data to external servers.',
           },
         ],
       },
@@ -524,9 +518,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Quivr Review: Is the Open-Source "Second Brain" Still Alive?](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — a maintenance-status check on the Quivr RAG library — no main-branch commits since mid-2025.',
-          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm) — runtime layer, head-to-head.',
+          '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm) — runtime comparison, head-to-head.',
           '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — desktop GUI showdown.',
-          '[AnythingLLM vs PrivateGPT vs Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG layer comparison.',
+          '[AnythingLLM vs PrivateGPT vs Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG comparison.',
           '[LlamaIndex Review: Code-First RAG Framework](/power-local-llm/llamaindex-rag-framework-review) — for developers who want to write Python instead of using a visual RAG tool.',
           '[RAGFlow: Deep Document Understanding & Citations](/power-local-llm/ragflow-document-understanding-rag-review) — full review of RAGFlow\'s layout-aware parsing and traceable citations.',
           '[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — IDE and terminal coding comparison.',
@@ -534,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Real-ESRGAN Review: Free, Local AI Image Upscaler](/power-local-llm/real-esrgan-ai-image-upscaler-review) — the Apache 2.0 upscaler behind Upscayl and ComfyUI\'s upscale nodes, with exact install steps.',
           '[Local AI Agents With MCP](/power-local-llm/local-ai-agents-with-mcp-2026) — protocol that turns the runtimes above into agents.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — mobile clients in depth.',
-          '[Power Local LLM Hub](/power-local-llm) — full guide library across all 10 layers.',
+          '[Power Local LLM Hub](/power-local-llm) — full guide library across all 7 categories.',
           '[Best Local LLM IDE Plugins (2026)](/power-local-llm/best-local-llm-ide-plugins-2026) — Continue.dev, Cline, PearAI, Windsurf: setup and local model configuration.',
           '[Best RAG Tools for Business Documents (2026)](/power-local-llm/best-rag-tools-for-business-documents-2026) — AnythingLLM, PrivateGPT, LlamaIndex: enterprise document Q&A stacks.',
           '[Build a Local Voice Assistant (2026)](/power-local-llm/voice-assistant-local-mobile-offline) — Whisper.cpp + Piper TTS + Ollama for fully-offline speech systems.',
