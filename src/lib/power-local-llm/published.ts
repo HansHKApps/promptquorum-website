@@ -39,6 +39,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'continue-dev-review',
   'cline-review',
   'pearai-review',
+  'windsurf-review',
+  'sourcegraph-cody-review',
+  'tabby-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -230,6 +233,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'chatty-mini-review',
   'whisper-cpp-review',
   'faster-whisper-review',
+  'piper-tts-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
