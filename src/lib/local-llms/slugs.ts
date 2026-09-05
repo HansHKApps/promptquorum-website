@@ -34,6 +34,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'ollama-vs-lm-studio':                  'ollama-vs-lm-studio',
   'best-local-llm-frontends':             'best-local-llm-frontends',
   'cherry-studio-ai-desktop-client': 'cherry-studio-ai-desktop-client-2026',
+  'open-webui-review':                     'open-webui-review',
   'lobechat-bigagi-nextchat-pageassist-chatbox-compared': 'lobechat-bigagi-nextchat-pageassist-chatbox-compared',
   'text-generation-webui-vs-vllm-vs-llamacpp': 'text-generation-webui-vs-vllm-vs-llamacpp',
   'local-llm-openai-compatible-api':      'local-llm-openai-compatible-api',
