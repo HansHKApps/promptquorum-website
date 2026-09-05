@@ -142,6 +142,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'autogen-review':                               'autogen-review',
   // CrewAI review — agent frameworks series, article 3 of 14 — 2026-09-05
   'crewai-review':                                'crewai-review',
+  // LangGraph review — agent frameworks series, article 5 of 14 — 2026-09-05
+  'langgraph-review':                             'langgraph-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
