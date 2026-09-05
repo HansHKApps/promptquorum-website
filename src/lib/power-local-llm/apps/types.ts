@@ -87,6 +87,13 @@ export interface ToolRecord {
   url: string | null // domain only, no scheme, e.g. "ollama.com" or "github.com/ggml-org/llama.cpp"
   tagline: Partial<Record<Language, string>>
   founder?: ToolRecordFounder
+  // ISO 8601 date the founder/maintainer reviewed THIS entry's technical specs and
+  // description for accuracy. Distinct from `founder` (a founder-authored quote) —
+  // this is a fact-check credit, not a statement. Self-expiring: the UI shows the
+  // "Founder-reviewed" badge for FOUNDER_STAR_VALID_DAYS (365) after this date, then
+  // stops on its own — no separate cleanup step needed. The review/article itself
+  // stays independent PromptQuorum editorial content either way.
+  founderReviewedDate?: string
   pqReview?: ToolRecordReview
   changelog?: ToolRecordChangelogEntry[]
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified
