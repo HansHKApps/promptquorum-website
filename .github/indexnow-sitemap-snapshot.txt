@@ -277,7 +277,6 @@ https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/chatty-mini-review
-https://www.promptquorum.com/power-local-llm/cloud-gpu-rental-guide-2026
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
 https://www.promptquorum.com/power-local-llm/cursor-vs-windsurf-vs-copilot-cline
 https://www.promptquorum.com/power-local-llm/deepseek-offline-china-self-hosted-2026
@@ -334,6 +333,7 @@ https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
+https://www.promptquorum.com/power-local-llm/openclaw-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
