@@ -19,6 +19,9 @@ import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
 import { article as a_continue_dev_review } from './articles/continue-dev-review'
 import { article as a_cline_review } from './articles/cline-review'
 import { article as a_pearai_review } from './articles/pearai-review'
+import { article as a_windsurf_review } from './articles/windsurf-review'
+import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
+import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -303,4 +306,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llama-cpp-explained':                           a_llama_cpp_explained,
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                              a_llama_cpp_review,
+  // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
+  'windsurf-review':                               a_windsurf_review,
+  'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
+  'tabby-review':                                  a_tabby_review,
 }
