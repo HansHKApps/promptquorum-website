@@ -23,7 +23,7 @@ function navHref(path: string, lang: string) {
 }
 
 function getImagePath(basePath: string, lang: string): string {
-  const supportedLangs = ['es', 'de', 'fr', 'ja', 'zh', 'pt']
+  const supportedLangs = ['es', 'pt']
   if (!supportedLangs.includes(lang)) return basePath
   const dotIndex = basePath.lastIndexOf('.')
   return basePath.slice(0, dotIndex) + `-${lang}` + basePath.slice(dotIndex)
