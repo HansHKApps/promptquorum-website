@@ -3,7 +3,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -810,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
@@ -2155,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
-    theme: 'Runtimes & Inference Engines',
+    theme: 'Overview & Reference',
     heroImage: '/images/llama-cpp-explained-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
