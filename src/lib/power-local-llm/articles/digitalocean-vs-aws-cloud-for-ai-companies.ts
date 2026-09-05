@@ -3283,4 +3283,2604 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Overview & Reference',
+    title: 'DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業に最適なクラウド',
+    seoTitle: 'DigitalOcean vs. AWS vs. CoreWeave vs. RunPod 2026',
+    intro:
+      '最も安いGPUが必ずしも最も安いAIインフラとは限りません。AI企業がクラウドを選ぶ際は、GPU価格だけでなく、GPUの入手性、推論か学習かというワークロードの性質、ネットワーク、ストレージ、データ転送料金、デプロイの複雑さ、スケーラビリティ、エンタープライズサービス、サポートを天秤にかける必要があります。この記事では、この市場の実態を反映する8社を比較します：最も一般的な出発点である[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)と[AWS](https://aws.amazon.com/ec2/instance-types/p5/)、GPU特化型の競合である[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/)、[Lambda](https://lambda.ai/)、そしてエンタープライズ代替としての[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)、[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)です。結論を先に言うと、ほとんどの小規模・成長中のAI企業にはDigitalOceanが最良の出発点であり、エンタープライズ規模やサービスカタログが重要になった時点でAWSが正しいデフォルトとなり、残る6社はそれぞれ以下で詳述する明確な理由で勝っています。',
+    metaDescription:
+      'DigitalOcean、AWS、CoreWeave、RunPod、Lambda、Google Cloud、Azure、Oracle Cloudという8大AIクラウドプロバイダーを、GPU価格・可用性・ワークロード適合性で比較。2026-09-05時点で検証。',
+    twitterDescription:
+      'DigitalOcean H100：$3.39/時。RunPod：$2.89/時。CoreWeave：$6.16/時（egress無料）。Lambdaは先ごろAnthropicと$350億の契約を締結。8つのクラウドがAI企業に実際にいくらかかるか。',
+    affiliateDisclosure: true,
+    audience:
+      'モデルの学習や提供のためにクラウドプラットフォームを選ぶAI企業の創業者やエンジニアリングリーダーで、一般的なWebホスティング比較ではなく、価格・可用性・ワークロード適合性でハイパースケーラーとGPU特化型クラウドを比較したい方。',
+    readTime: '15分で読める',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI企業に最適なクラウド',
+    targetKeywords: [
+      'ai企業に最適なクラウド 2026',
+      'digitalocean vs aws vs coreweave vs runpod',
+      '最も安いクラウドgpu 2026',
+      'coreweave vs aws vs lambda',
+      'runpod vs digitalocean',
+    ],
+    leadAnswerBlock:
+      '**小規模または成長中のAI企業には、[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)が最良の出発点です——最もシンプルなコンソールと、オンデマンドで$3.39-4.41/時からの競争力あるH100価格です。幅広いサービスカタログを備えたエンタープライズ規模のAIには、[AWS](https://aws.amazon.com/ec2/instance-types/p5/)がオンデマンドGPUあたり$6.88/時のハイパースケーラー比較の基準です。[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/)、[Lambda](https://lambda.ai/)はGPU特化型クラウドで、それぞれ大規模学習、安価な実験、ML研究向けに価格調査する価値があります。[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)、[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)はエンタープライズ代替で、それぞれTPU、Azure OpenAI Service、最も平坦な価格経済性という具体的な理由で正当化されます。8社の中に単一の勝者はありません——チーム規模とワークロードにプロバイダーを合わせてください、単に最低の表示価格だけではなく。** このページのすべての価格は米ドル建てのままです。クラウドGPU計算は8社すべてで世界中一律にUSDで請求されるためです。',
+    affiliateLinks: [
+      {
+        url: 'https://www.digitalocean.com/products/gpu-droplets',
+        productName: 'DigitalOcean GPU Droplets',
+        productCategory: 'cloud-gpu',
+        priceRange: '3.39-4.41/hr (H100)',
+        label: 'DigitalOcean GPU Dropletの価格を確認',
+      },
+      {
+        url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+        productName: 'AWS EC2 P5 (H100)',
+        productCategory: 'cloud-gpu',
+        priceRange: '6.88/GPU-hr on-demand',
+        label: 'AWS EC2 P5の価格を確認',
+      },
+    ],
+    quickAnswerTop: {
+      ja: {
+        question: 'AI企業にとって最も良いクラウドプロバイダーはどこですか？',
+        answer:
+          '小規模または成長中のAI企業には、DigitalOceanが最良の出発点です——最も安いオンデマンドH100アクセス（$3.39-4.41/時）と最もシンプルなコンソールです。エンタープライズ規模、幅広いマネージドAIサービスカタログ（Bedrock、SageMaker）、マルチリージョンコンプライアンスが必要になった時点でAWSが正しい選択となります。CoreWeave、RunPod、Lambdaはハイパースケーラーより価格を下回るGPU特化型クラウドで、通常egress料金を請求しません——RunPodは安価な実験向け、CoreWeaveは大規模学習インフラ向け、Lambdaは（Anthropicとの報道された$350億の契約が示すように）ML研究および本格的な本番規模向けです。Google Cloud、Microsoft Azure、Oracle Cloud InfrastructureはそれぞれTPUアクセス、Azure OpenAI Service、最も平坦なエンタープライズGPU価格構造で分野を締めくくります。',
+        bullets: [
+          'DigitalOcean H100：オンデマンド$3.39-4.41/時——小規模AIチームに最適',
+          'AWS EC2 P5（H100）：オンデマンドGPUあたり$6.88/時——最良のエンタープライズエコシステム',
+          'CoreWeave H100：GPUあたり$6.16/時（8GPUノードのみ）、egress無料——大規模学習に最適',
+          'RunPod H100：$2.89/時から（Secure Cloud）、egress無料——最良のコストパフォーマンス',
+          'Lambda H100：$3.29/時から、egress無料——ML研究に最適；Anthropicとの報道された$350億の契約（2026年8月）',
+          'Google Cloud、Azure、Oracle Cloud：TPU、Azure OpenAI Service、定額料金経済性のためのエンタープライズ代替',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'AI企業にとってどのクラウドが最適か', anchor: '#introduction' },
+      { label: 'クイックアンサー：8社を比較', anchor: '#quick-answer' },
+      { label: '企業タイプ別のおすすめ', anchor: '#picks-by-type' },
+      { label: 'マスター比較表', anchor: '#master-comparison' },
+      { label: 'GPU価格：AI計算の実際のコスト', anchor: '#gpu-pricing-economics' },
+      { label: 'DigitalOcean：小規模AI企業に最適', anchor: '#digitalocean' },
+      { label: 'AWS：最良のエンタープライズAIクラウド', anchor: '#aws' },
+      { label: 'CoreWeave：大規模AIに最適', anchor: '#coreweave' },
+      { label: 'RunPod：最良のコストパフォーマンスGPUクラウド', anchor: '#runpod' },
+      { label: 'Lambda：ML研究者に最適', anchor: '#lambda' },
+      { label: 'Google Cloud：TPUに最適', anchor: '#google-cloud' },
+      { label: 'Microsoft Azure：Microsoft中心のAIに最適', anchor: '#microsoft-azure' },
+      { label: 'Oracle Cloud Infrastructure：過小評価された選択肢', anchor: '#oracle-cloud' },
+      { label: 'DigitalOcean vs. 他の7社', anchor: '#head-to-head' },
+      { label: '決定を変え得る隠れたコスト', anchor: '#hidden-costs' },
+      { label: '学習 vs. 推論：異なるベストプロバイダー', anchor: '#training-vs-inference' },
+      { label: '実際にどれだけのクラウドGPUが必要か', anchor: '#how-much-gpu' },
+      { label: 'レンタル vs. 購入：自社ハードウェアを持つべき時', anchor: '#rent-vs-buy' },
+      { label: '最終ランキング', anchor: '#final-ranking' },
+      { label: '最終結論と意思決定ツリー', anchor: '#final-verdict' },
+      { label: '出典', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)は小規模AI企業にとって最良の出発点です**——オンデマンドH100が$3.39-4.41/時、8社中最もシンプルなコンソール。',
+          '**[AWS](https://aws.amazon.com/ec2/instance-types/p5/)はハイパースケーラー比較の基準です**——オンデマンドGPUあたり$6.88/時で、最も幅広いマネージドAIサービスとコンプライアンスの厚みを買います。',
+          '**[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/)、[Lambda](https://lambda.ai/)はいずれもegress料金を請求しません**——ここにあるすべてのハイパースケーラーが$0.087-0.12/GBを請求するのに対する実際のコスト優位性です。',
+          '**Lambdaは報道によればAnthropicと$350億のクラウド契約を締結しました（Reuters/Bloomberg、2026年8月31日）**——GPU特化型クラウドはもはや趣味レベルではありません。',
+          '**[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)、[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)はそれぞれ具体的な理由で勝っています**——TPU、Azure OpenAI Service、最も平坦なエンタープライズGPU経済性であり、生の価格ではありません。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**総合的に最も安いオンデマンドH100：** RunPod Community CloudとDigitalOcean、設定によりどちらも約$3.39-3.99/時から。',
+          '**最も安いegress：** CoreWeave、RunPod、Lambdaはすべて出力データ転送を$0で提供——ここにあるすべてのハイパースケーラーは100GB無料枠の後$0.087-0.12/GBを請求します。',
+          '**開示された最大の単一契約：** LambdaのAnthropicとの報道された$350億のクラウド契約（Reuters、2026年8月31日）。',
+          '**8GPUノードのみで販売される唯一のGPU：** CoreWeaveのH100/H200とLambdaのSXMインスタンス——必要な数が少なくても8基分を支払います。',
+          '**最も平坦なエンタープライズ価格：** Oracle Cloud Infrastructure、地域に関係なくGPUあたり一律$10/時。',
+        ],
+      },
+      introduction: {
+        id: 'introduction',
+        title: 'AI企業にとってどのクラウドが最適か',
+        content:
+          '最も安いGPUが必ずしも最も安いAIインフラとは限りません。時間あたりの価格を比較する前に、AI企業は以下を天秤にかける必要があります：GPU価格、GPUの入手性（必要な時に実際にH100を手に入れられるか）、ワークロードが学習か推論か、ネットワーク品質、ストレージコスト、データ転送（egress）料金、デプロイの複雑さ、スケーラビリティ、エンタープライズサービス、サポート品質です。即答すると：シンプルさと予測可能なコストを求める小規模チームには[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)、価格よりエンタープライズ規模が重要になったら[AWS](https://aws.amazon.com/ec2/instance-types/p5/)、egress料金ゼロでGPU特化型の経済性を求めるなら[CoreWeave](https://www.coreweave.com/)/[RunPod](https://www.runpod.io/)/[Lambda](https://lambda.ai/)、そしてそれぞれ具体的なエンタープライズ理由がある[Google Cloud](https://cloud.google.com/compute/docs/gpus)/[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)/[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)です。このページの残りは、その答えの裏付けとなる証拠を詳しく見ていきます。',
+      },
+      quickAnswer: {
+        id: 'quick-answer',
+        title: 'クイックアンサー：AI企業に最適なクラウドプロバイダー',
+        content:
+          '8社、8つの異なる役割。この表はスピード版です——下のセクションで各プロバイダーを深掘りします。',
+        columns: ['プロバイダー', '最適な用途', '主な利点', '主な弱点'],
+        rows: [
+          {
+            プロバイダー: '[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)',
+            '最適な用途': 'スタートアップと小規模AIチーム',
+            '主な利点': 'シンプルさ + 競争力あるGPU価格',
+            '主な弱点': '小規模なエコシステム',
+          },
+          {
+            プロバイダー: '[AWS](https://aws.amazon.com/ec2/instance-types/p5/)',
+            '最適な用途': 'エンタープライズAI',
+            '主な利点': '巨大なエコシステム',
+            '主な弱点': '複雑さ／コスト',
+          },
+          {
+            プロバイダー: '[CoreWeave](https://www.coreweave.com/)',
+            '最適な用途': '大規模AI',
+            '主な利点': 'GPUインフラと規模',
+            '主な弱点': '汎用性が低い',
+          },
+          {
+            プロバイダー: '[RunPod](https://www.runpod.io/)',
+            '最適な用途': '開発者と推論',
+            '主な利点': '価格／柔軟性',
+            '主な弱点': 'エンタープライズ志向が弱い',
+          },
+          {
+            プロバイダー: '[Lambda](https://lambda.ai/)',
+            '最適な用途': 'ML研究者',
+            '主な利点': 'GPUに特化したプラットフォーム',
+            '主な弱点': '小規模なエコシステム',
+          },
+          {
+            プロバイダー: '[Google Cloud](https://cloud.google.com/compute/docs/gpus)',
+            '最適な用途': 'AI/TPUワークロード',
+            '主な利点': 'TPU + AIエコシステム',
+            '主な弱点': '複雑さ',
+          },
+          {
+            プロバイダー: '[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)',
+            '最適な用途': 'エンタープライズ／Microsoft',
+            '主な利点': 'Azure + OpenAIエコシステム',
+            '主な弱点': '複雑さ',
+          },
+          {
+            プロバイダー: '[Oracle Cloud (OCI)](https://www.oracle.com/cloud/compute/gpu/)',
+            '最適な用途': 'コストに敏感なエンタープライズAI',
+            '主な利点': '競争力あるインフラ経済性',
+            '主な弱点': '小規模な開発者エコシステム',
+          },
+        ],
+      },
+      picksByType: {
+        id: 'picks-by-type',
+        title: '企業タイプ別のおすすめ',
+        content:
+          'これはこのページの編集の核心です：DigitalOceanはすべてのカテゴリで勝つわけではなく、その必要もありません——このページのほとんどの読者にとって重要な1つで勝っています。',
+        items: [
+          '**小規模AIスタートアップに最適：** [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)——最も安いオンデマンドH100、エンタープライズ営業プロセス不要。',
+          '**安価なGPU実験に最適：** [RunPod](https://www.runpod.io/)——Secure Cloudが$2.89/時から、Community Cloudはさらに安価、egress料金ゼロ。',
+          '**大規模AI学習に最適：** [CoreWeave](https://www.coreweave.com/)——InfiniBandクラスのネットワーキングを備えたGPU特化型8GPU HGXノード。',
+          '**ML研究者に最適：** [Lambda](https://lambda.ai/)——GPU-firstプラットフォーム、事前設定されたML環境、現在はAnthropicとの報道された$350億の契約を後ろ盾に。',
+          '**最良のエンタープライズクラウド：** [AWS](https://aws.amazon.com/ec2/instance-types/p5/)——最も幅広いマネージドAIカタログとコンプライアンス。',
+          '**Google/TPUワークロードに最適：** [Google Cloud](https://cloud.google.com/compute/docs/gpus)——このページでTPUを提供する唯一のプロバイダー。',
+          '**Microsoft/OpenAIワークロードに最適：** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)——Azure OpenAI Serviceへのアクセス。',
+          '**大規模エンタープライズ計算の最良の代替：** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)——定額価格、最も安いハイパースケーラーegress。',
+        ],
+      },
+      masterComparison: {
+        id: 'master-comparison',
+        title: 'マスター比較表',
+        content:
+          '意図的にスキャンしやすく保っています——各プロバイダーの完全な詳細は、プロバイダー列からリンクされた下の各セクションにあります。',
+        columns: ['プロバイダー', 'GPUフォーカス', 'H100価格', 'スポット／予約', 'マルチGPU', 'データ転送', '最適な利用ケース'],
+        rows: [
+          {
+            プロバイダー: '[DigitalOcean](#digitalocean)',
+            'GPUフォーカス': '一般的なAI、小規模チーム',
+            'H100価格': '$3.39-4.41/時',
+            'スポット／予約': '12ヶ月予約 ~$2.50/時',
+            'マルチGPU': 'あり、Droplet単位',
+            'データ転送': '500GiB+無料、その後$0.01/GiB',
+            '最適な利用ケース': 'スタートアップ、シンプルさ',
+          },
+          {
+            プロバイダー: '[AWS](#aws)',
+            'GPUフォーカス': '一般的なエンタープライズAI',
+            'H100価格': 'GPUあたり$6.88/時',
+            'スポット／予約': 'Capacity Blocks $4.72-5.19/時；スポット -60-70%',
+            'マルチGPU': 'あり、ノードあたり最大8基',
+            'データ転送': '100GB無料、その後$0.09/GB',
+            '最適な利用ケース': 'エンタープライズ、幅広いサービス',
+          },
+          {
+            プロバイダー: '[CoreWeave](#coreweave)',
+            'GPUフォーカス': '大規模学習',
+            'H100価格': 'GPUあたり$6.16/時（8GPUノードのみ）',
+            'スポット／予約': 'スポット -40-60%；予約 -60%',
+            'マルチGPU': '8GPU HGXノードのみ',
+            'データ転送': '無料',
+            '最適な利用ケース': '大規模学習クラスタ',
+          },
+          {
+            プロバイダー: '[RunPod](#runpod)',
+            'GPUフォーカス': '柔軟な開発／推論',
+            'H100価格': '$2.89/時から（Secure Cloud）',
+            'スポット／予約': 'スポット -50-80%',
+            'マルチGPU': 'あり、Pod単位',
+            'データ転送': '無料',
+            '最適な利用ケース': '実験、推論',
+          },
+          {
+            プロバイダー: '[Lambda](#lambda)',
+            'GPUフォーカス': 'ML研究',
+            'H100価格': '$3.29-4.29/時',
+            'スポット／予約': '予約割引あり',
+            'マルチGPU': 'SXMは8GPUノードのみ',
+            'データ転送': '無料',
+            '最適な利用ケース': '研究、本番学習',
+          },
+          {
+            プロバイダー: '[Google Cloud](#google-cloud)',
+            'GPUフォーカス': 'GPU + TPU',
+            'H100価格': 'GPUあたり$9-11.50/時',
+            'スポット／予約': 'コミット利用割引',
+            'マルチGPU': 'あり、ノードあたり最大8基',
+            'データ転送': '100GB無料、その後$0.12/GB',
+            '最適な利用ケース': 'TPU/MLネイティブワークロード',
+          },
+          {
+            プロバイダー: '[Microsoft Azure](#microsoft-azure)',
+            'GPUフォーカス': 'エンタープライズ + OpenAI',
+            'H100価格': 'GPUあたり$11-13/時',
+            'スポット／予約': '予約インスタンス',
+            'マルチGPU': 'あり、ノードあたり最大8基',
+            'データ転送': '100GB無料、その後$0.087/GB',
+            '最適な利用ケース': 'Azure OpenAI Serviceへのアクセス',
+          },
+          {
+            プロバイダー: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            'GPUフォーカス': '定額エンタープライズ',
+            'H100価格': '一律$10/時',
+            'スポット／予約': 'Universal Credits（大量利用）',
+            'マルチGPU': '8GPUベアメタルノード',
+            'データ転送': '10TB無料、その後$0.0085/GB',
+            '最適な利用ケース': '最も安い生のエンタープライズ計算',
+          },
+        ],
+      },
+      gpuPricingEconomics: {
+        id: 'gpu-pricing-economics',
+        title: 'GPU価格：AI計算は実際にいくらかかるか',
+        content:
+          '時間あたりの価格だけでは実際の判断材料になりません。**すべての価格を課金モデルごとにラベル付けしてください——オンデマンド、スポット、予約、マーケットプレイス/Community Cloudは同じ数字ではありません**、混同すると誤った比較になります。以下の表は、各プロバイダーの最も安い確認済みオンデマンド単一GPU H100レートを、100時間、1,000時間、730時間（おおよそ1ヶ月間の連続使用）に拡大し、単一時間ではなく実際の予算に合った規模で差を可視化します。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '730時間（おおよそ1ヶ月間の連続使用）では、オンデマンドH100のコストはRunPodの約$2,110からMicrosoft Azureの$8,000超まで幅があります——プロバイダー選択だけによる4倍の差です。',
+          },
+          {
+            type: 'plain-terms',
+            text: '単一の時間あたりの数字は、コストがどう積み上がるかを覆い隠します——「1日$5」のサブスクリプションが、年間$1,825の合計を見るまでは些細に聞こえるのと同じです。現実的な利用期間にレートを拡大することが、実際に予算判断に役立ちます。',
+          },
+        ],
+        columns: ['プロバイダー', '1時間あたり', '100時間あたり', '1,000時間あたり', '730時間あたり（約1ヶ月）'],
+        rows: [
+          {
+            プロバイダー: '[RunPod](#runpod)（Secure Cloud）',
+            '1時間あたり': '$2.89',
+            '100時間あたり': '$289',
+            '1,000時間あたり': '$2,890',
+            '730時間あたり（約1ヶ月）': '$2,110',
+          },
+          {
+            プロバイダー: '[DigitalOcean](#digitalocean)',
+            '1時間あたり': '$3.39',
+            '100時間あたり': '$339',
+            '1,000時間あたり': '$3,390',
+            '730時間あたり（約1ヶ月）': '$2,475',
+          },
+          {
+            プロバイダー: '[Lambda](#lambda)',
+            '1時間あたり': '$3.29',
+            '100時間あたり': '$329',
+            '1,000時間あたり': '$3,290',
+            '730時間あたり（約1ヶ月）': '$2,402',
+          },
+          {
+            プロバイダー: '[CoreWeave](#coreweave)',
+            '1時間あたり': '$6.16',
+            '100時間あたり': '$616',
+            '1,000時間あたり': '$6,160',
+            '730時間あたり（約1ヶ月）': '$4,497',
+          },
+          {
+            プロバイダー: '[AWS](#aws)',
+            '1時間あたり': '$6.88',
+            '100時間あたり': '$688',
+            '1,000時間あたり': '$6,880',
+            '730時間あたり（約1ヶ月）': '$5,022',
+          },
+          {
+            プロバイダー: '[Google Cloud](#google-cloud)',
+            '1時間あたり': '$9.00（下限）',
+            '100時間あたり': '$900',
+            '1,000時間あたり': '$9,000',
+            '730時間あたり（約1ヶ月）': '$6,570',
+          },
+          {
+            プロバイダー: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            '1時間あたり': '$10.00（一律）',
+            '100時間あたり': '$1,000',
+            '1,000時間あたり': '$10,000',
+            '730時間あたり（約1ヶ月）': '$7,300',
+          },
+          {
+            プロバイダー: '[Microsoft Azure](#microsoft-azure)',
+            '1時間あたり': '$11.00（下限）',
+            '100時間あたり': '$1,100',
+            '1,000時間あたり': '$11,000',
+            '730時間あたり（約1ヶ月）': '$8,030',
+          },
+        ],
+      },
+      digitalocean: {
+        id: 'digitalocean',
+        title: 'DigitalOceanは小規模AI企業に最適なクラウドか？',
+        content:
+          '**[GPU Droplets](https://www.digitalocean.com/products/gpu-droplets)はオンデマンドで$3.39-4.41/時からH100アクセスを提供し**、12ヶ月の予約でレートは約$2.50/時まで下がります。課金は60秒の最低利用時間を伴う秒単位です。デプロイは標準的なDropletコンソールを通じて行われ——最初のワークロード実行前のIAM/VPC設定の負担はありません。ストレージとネットワークは、DigitalOceanの通常のDropletsと同じシンプルでバンドルされたモデルに従います（プランに応じて500GiB+の無料アウトバウンド転送、その後$0.01/GiB）。推論では、単一または複数GPUのDropletがDigitalOceanの標準ネットワーク経由で直接モデルを提供します。ファインチューニングでは、同じDropletsが別の製品階層なしで機能します。より大規模な学習実行については、DigitalOceanはCoreWeaveやAWSに匹敵する密な8GPUベアメタルノードを公開していないため、一定の規模を超えると正しい選択ではありません。',
+        items: [
+          '**DigitalOceanを使うべき人：** エンタープライズ営業プロセスや複雑なIAM設定なしに迅速なH100アクセスを求め、予測可能でバンドルされた価格を重視する2〜10人のAIチーム。',
+          '**DigitalOceanを使うべきではない人：** 密なマルチノード学習クラスタを運用する、TPUを必要とする、または大規模なマネージドAIサービスカタログ（Bedrock的なホスト型モデル、エンタープライズコンプライアンス認証）を必要とするチーム——DigitalOceanはこれらのいずれにおいても競争力がありません。',
+        ],
+        bestFor: '迅速なH100アクセス、予測可能な価格、エンタープライズ営業プロセス不要を求める小規模AIチーム。',
+        avoidIf: '密なマルチノード学習クラスタ、TPU、または大規模なマネージドAIサービスカタログが必要な場合。',
+        costNote: '結論：シンプルさと予測可能なインフラコストを、ハイパースケーラーカタログの幅よりも優先する多くの小規模・成長中のAI企業にとって最良の選択です。',
+        affiliateLinks: [
+          {
+            url: 'https://www.digitalocean.com/products/gpu-droplets',
+            productName: 'DigitalOcean GPU Droplets',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.39-4.41/hr (H100)',
+            label: 'DigitalOcean GPU Dropletの価格を確認',
+          },
+        ],
+      },
+      aws: {
+        id: 'aws',
+        title: 'AWSは最良のエンタープライズAIクラウドか？',
+        content:
+          '**AWSはこのページのハイパースケーラー比較の基準です——安いからではなく、上乗せ分が買うものゆえです。** [EC2 P5](https://aws.amazon.com/ec2/instance-types/p5/)インスタンス（p5.48xlarge、8x H100）はオンデマンドで$55.04/時——GPUあたり$6.88/時——で、前払いの[Capacity Blocks](https://aws.amazon.com/ec2/capacityblocks/)はこれをGPUあたり$4.72-5.19/時まで下げ、Spot価格は中断を許容できるワークロードでオンデマンドより60-70%安くなることがあります。生の計算力を超えて：ホストされた基盤モデル向けの[Bedrock](https://aws.amazon.com/bedrock/)、学習パイプライン向けの[SageMaker](https://aws.amazon.com/sagemaker/)、AWSのグローバルなリージョンネットワーク、そしてこのページのどのプロバイダーよりも充実したコンプライアンス認証（HIPAA、FedRAMPなど）です。これは価格の議論ではなく、「GPU以外に何が必要か」という議論です。',
+        bestFor: 'すでにAWSに投資している、あるいはより広いエコシステム——マネージドAIサービス、マルチリージョンデプロイ、エンタープライズコンプライアンス認証——を必要とする企業。',
+        avoidIf: '生のGPUアクセスのみが必要な小規模チームの場合——AWSのIAM/VPC設定とコンソールの複雑さは、DigitalOceanが要求しない実際のオンボーディング時間を追加します。',
+        costNote: 'オンデマンドP5価格（GPUあたり$6.88/時）はDigitalOceanのオンデマンドレートのおよそ2倍です——その上乗せ分はより速い、あるいはより良いGPUではなく、AWSのサービスの幅を買っています。',
+      },
+      coreweave: {
+        id: 'coreweave',
+        title: 'CoreWeaveは大規模AIに最適な選択肢か？',
+        content:
+          '**CoreWeaveはDigitalOceanとは根本的に異なる製品です——汎用コンピューティングではなく、大規模AIインフラ向けに構築されたGPU特化型クラウドです。** [CoreWeave](https://www.coreweave.com/)はH100とH200を8GPU HGXノードとしてのみ販売しています：H100ノードが$49.24/時（GPUあたり$6.16/時）、H200が$50.44/時（GPUあたり$6.31/時）——単一GPUをセルフサービスでプロビジョニングする方法はありません。Spot価格はオンデマンドより約40-60%安く、予約/コミット利用では最大60%の割引が受けられます。各ノードは128 vCPU、2,048GBのシステムRAM、61.44TBのローカルストレージをバンドルし、Kubernetesネイティブなオーケストレーションと分散マルチノード学習向けの高スループットネットワーキングを中心に構築されています——そしてCoreWeaveはデータ転送/egress料金を一切請求しません。これはこのページのどのハイパースケーラーに対しても意味のある優位性です。CoreWeaveは、一般的なクラウド事業の副次的な選択肢としてではなく、AI研究所からの大規模なインフラ投資を背景に、大手AIクラウドの議論に確固たる地位を築いています。',
+        bestFor: '密な8GPUノード、Kubernetesネイティブなオーケストレーション、egress料金ゼロの恩恵を受ける、大規模でマルチノードのAI学習を行う企業。',
+        avoidIf: '単一のGPU、汎用クラウド（計算に加えてストレージ、データベース、Webホスティング）、またはより小さく安い入門点が必要な場合——CoreWeaveは汎用ではありません。',
+        costNote: '8GPUノード限定モデルは、CoreWeaveが規模向けに価格設定されていることを意味します——1〜2基のGPUが必要なチームでも8基分を支払うことになり、DigitalOceanやRunPodとは正反対のトレードオフです。',
+      },
+      runpod: {
+        id: 'runpod',
+        title: 'RunPodは最良のコストパフォーマンスGPUクラウドか？',
+        content:
+          '**RunPodはこのページで最も価格競争力のあるメインストリームGPUクラウドであり、価格に敏感なAI開発者にとってDigitalOceanの最も直接的な競合です。** [RunPod](https://www.runpod.io/)は2つの階層に分かれます：安定した稼働率保証を持つ**Secure Cloud**（RTX 4090 $0.69/時、A100 SXM $1.49/時、H100 PCIe $2.89/時、H100 NVL $3.19/時、H200 $4.39/時、B200 $5.89/時）と、稼働率の一貫性は劣るがさらに割安なピアマーケットプレイスである**Community Cloud**（RTX 4090 $0.34/時、A100 80GB $1.39/時、H100 PCIe $2.89/時）です。RunPodはまた、アクティブな実行秒単位で課金する**サーバーレス**階層も運用しており（GPUによって$0.58-9.98/時、H100は$4.55/時）、リクエスト間でゼロにスケールする推論ワークロード向けに特化して構築されています。Spotインスタンスは中断を許容できるジョブでオンデマンドより50-80%安く、CoreWeaveやLambdaと同様、RunPodはegress料金を請求しません。',
+        bestFor: '価格に敏感で、変動する稼働率を許容でき、ゼロにスケールするサーバーレス課金を求める開発者と推論ワークロード。',
+        avoidIf: '厳格なエンタープライズ稼働率SLAや幅広いマネージドAIサービスカタログが必要な場合——RunPodはAWSやAzureほどエンタープライズ志向ではありません。',
+        costNote: 'RunPodはDigitalOceanの推奨をより信頼できるものにします、その逆ではありません：DigitalOceanはシンプルさとコンソールの磨き上げで勝り、RunPodはそれを望む開発者にとっての生の価格と柔軟性で勝ります。',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-5.89/hr (Community/Secure Cloud)',
+            label: 'RunPodの価格を確認して登録',
+          },
+        ],
+      },
+      lambda: {
+        id: 'lambda',
+        title: 'LambdaはML研究者に最良のGPUクラウドか？',
+        content:
+          '**Lambdaは研究者と学習ワークロード向けに事前設定されたML環境を中心に構築されたGPU-firstプラットフォームです——そしてもはや小さなGPUレンタル会社ではありません。** [Lambda](https://lambda.ai/)はH100を$3.29/時（PCIe）から$4.29/時（SXM）まで、A100を$1.99/時（40GB）から$2.79/時（80GB）まで提供しています。CoreWeaveと同様、SXMインスタンスは8GPU構成でのみ販売されるため、2〜4基のGPUが必要な場合でも8基分を支払うことになります。Lambdaはegress料金を請求しません。このプラットフォームは第一に研究と学習向けに構築されています：プリインストールされたMLフレームワーク、マルチGPUクラスタ、そして気軽な実験よりも本格的な学習実行に向けたサポートです。**ReutersとBloombergは2026年8月31日、Anthropicが報道によれば$350億相当のクラウドコンピューティング契約をLambdaと締結したと報じました**。これは、Nueces郡でHut 8のデータセンタープロジェクトを通じて稼働するNvidia GPU容量（約350メガワット）に紐づいています——正確なGPU数、契約期間、そしてAnthropic、Lambda、Nvidia、Hut 8間の義務の分担は、報道では開示されていません。この規模は、GPU特化型クラウドが今や研究者の副業プロジェクトだけでなく本格的な本番ワークロードを巡って競争していることの最も明確な兆候です。',
+        bestFor: '事前設定された環境とegress料金ゼロを備えたGPU-firstプラットフォームを求める、本格的な学習ワークロードを行うML研究者とチーム。',
+        avoidIf: '小規模で柔軟な単一GPUの入門点が必要な場合——LambdaのSXM階層はCoreWeaveと同じトレードオフで8GPU限定です。',
+        costNote: '報道された$350億のAnthropic契約（条件不明）は規模の兆候であり、小規模な購入者に対する保証された価格優位性ではありません——Lambdaが公開しているセルフサービス価格こそが、より小規模なAI企業が実際に支払う金額です。',
+      },
+      googleCloud: {
+        id: 'google-cloud',
+        title: 'Google CloudはTPUとGoogleのAIスタックに最適な選択肢か？',
+        content:
+          'Google Cloudのポイントは「Googleにはgpuがある」ことではありません——このページのすべてのプロバイダーがGPUを持っています。**Google Cloudは、AIワークロードが実際にGoogleのアクセラレータとAIプラットフォーム——TPU——から恩恵を受ける時に特に興味深いものになります。** [Google Cloud](https://cloud.google.com/compute/docs/gpus)は、独自のH100インスタンス（A3シリーズ、a3-highgpu-8g、オンデマンドで約$80-90/時——GPUあたり$9-11.50/時——持続的なワークロードにはコミット利用割引あり）に加え、GPUの代替としてTPUを提供するこのページ唯一のプロバイダーです。TPUを超えて、差別化要因はMLパイプライン向けの[Vertex AI](https://cloud.google.com/vertex-ai)、Googleのネットワークバックボーン、すでにそこにデータを保存しているチーム向けのBigQuery/データエコシステム、そしてGoogle自身のモデルの上に構築するチーム向けのGeminiモデルエコシステムです。',
+        bestFor: 'GPUの代替としてTPUを評価している、またはすでにVertex AI、BigQuery、Geminiエコシステムに標準化しているチーム。',
+        avoidIf: 'TPUに興味がなく、GPUのみが必要な場合——Google CloudのオンデマンドGPUレートはDigitalOcean、RunPod、AWSより高いです。',
+        costNote: 'A3シリーズの報告されているオンデマンドレートは、ここにあるほとんどのプロバイダーよりも出典やコミットメントレベルによって幅広く変動します——予算を組む前に、自社の特定のリージョンとマシンタイプの現在のレートを確認してください。',
+      },
+      microsoftAzure: {
+        id: 'microsoft-azure',
+        title: 'Microsoft AzureはMicrosoft中心のAIに最適な選択肢か？',
+        content:
+          '**Azureはこのページで最も高いGPUあたりオンデマンド価格を持ちますが、それでも意味を持ちうる具体的な理由が1つあります——生のGPU価格が最も低いわけではないとしても、それは[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)です。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)インスタンスはオンデマンドで約GPUあたり$11-13/時で、フル8GPUノードは約$98/時と、GPUあたりの表示価格が高いにもかかわらずノードレベルではAWSやGoogle Cloudと同水準です。OpenAIアクセスを超えて、Azureの主張はエンタープライズID（Active Directory）、Microsoft 365統合、既存のエンタープライズ調達関係、そしてすでにオンプレミスでMicrosoftスタックのワークロードを運用している企業向けのハイブリッドインフラに支えられています。',
+        bestFor: '製品がAzure OpenAI Serviceに依存している企業、または調達を1社に統合しようとしている既存のMicrosoftエンタープライズ顧客。',
+        avoidIf: 'Azure OpenAI ServiceやMicrosoftエコシステムへの依存がない場合——GPUあたりのレートはこのページで最も高く、純粋なGPUワークロードに対する見返りの利点がありません。',
+        costNote: 'フル8GPUノードのレベルでは、Azureの約$98/時の価格はAWSやGoogle Cloudに近い水準です——GPUあたりの高い表示価格が重要になるのは、ノード全体ではなく単一または部分的なGPUをレンタルするチームにとってです。',
+      },
+      oracleCloud: {
+        id: 'oracle-cloud',
+        title: 'Oracle Cloud Infrastructureは過小評価されたAIクラウドか？',
+        content:
+          '**Oracle Cloud Infrastructureは、大規模なAIワークロードにおけるインフラ経済性を非常に重視する企業にとって真剣な選択肢であり、この比較に本当に異なる視点を与える、より予測しづらい選択です。** [OCI](https://www.oracle.com/cloud/compute/gpu/)はリージョン間で価格差のない、全リージョン一律のGPUあたり$10/時のオンデマンドH100料金を請求します——8x H100ベアメタルノード（BM.GPU.H100.8）は$80/時で、AWS、Azure、Google Cloudの約$98/時のノード価格を大幅に下回ります。OCIはまた、egress料金が発生する前に月間10TBの無料アウトバウンド転送を含んでいます——他のどのハイパースケーラーよりも安いegress（AWS/Azure/Google Cloudの100GBに対して）——そしてマルチノード学習向けのRDMAクラスタネットワーキングを提供します。計算を超えて、エンタープライズデータベースワークロード（Oracle Database、データウェアハウジング）におけるOCIの伝統的な強みは、すでにOracle系のエンタープライズシステムを運用し、同じプラットフォーム上にAIインフラを求める企業にとって特別な魅力を与えます。OracleのUniversal Creditsプログラムは、より大きな年間コミットメントに対して交渉によるボリューム割引を提供しますが、割引率は標準的な表として公開されていません。',
+        bestFor: '一律のGPUあたり価格、低いegress、RDMAネットワーキングが、幅広いマネージドAIサービスカタログよりも重要な、大規模な学習クラスタを運用する企業、およびすでにOracleのデータベース/エンタープライズスタック上にある企業。',
+        avoidIf: 'Oracle特有のマネージドAIカタログの幅が必要な場合、または可能な限り幅広いインスタンス/リージョンのカタログが欲しい場合——OCIのカタログはAWSやGoogle Cloudより狭いです。',
+        costNote: '10TBの無料egress枠は、AWS、Azure、Google Cloudの100GB無料枠の100倍です——無料枠はすべてのハイパースケーラーの中で最も頻繁に調整される条件の1つであるため、予算を組む前に現在の枠を確認してください。',
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'DigitalOcean vs. 他の7社：一対一の意思決定',
+        content:
+          '8つの1行の意思決定ルール。それぞれが具体的な「DigitalOcean vs. X」という問いに直接答えます。',
+        subsections: [
+          {
+            title: 'DigitalOcean vs. AWS',
+            text: 'エンタープライズ営業プロセスなしにH100アクセスを求める小規模チームならDigitalOceanを選んでください。Bedrock、SageMaker、マルチリージョンデプロイ、または特定のコンプライアンス認証が必要ならAWSを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. CoreWeave',
+            text: '1〜2基のGPUと、計算に加えて汎用クラウドサービスが必要ならDigitalOceanを選んでください。密な8GPUノードとegress料金ゼロがCoreWeaveの小さな入門階層の欠如を上回る規模で学習しているならCoreWeaveを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. RunPod',
+            text: 'コンソールの磨き上げと予測可能なバンドル価格が、時間あたりレートの最後の数セントを削ることより重要ならDigitalOceanを選んでください。最も低いメインストリームのオンデマンドレート、ゼロにスケールするサーバーレス課金、egress料金ゼロを求め、Community Cloudの変動する稼働率を許容できるならRunPodを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. Lambda',
+            text: '柔軟な単一または少数GPUのセットアップが必要ならDigitalOceanを選んでください。ワークロードが学習中心で、事前設定されたML環境を備えたGPU特化型プラットフォームから恩恵を受けるならLambdaを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. Google Cloud',
+            text: 'TPUに興味がなく、より安い価格でGPUのみが必要ならDigitalOceanを選んでください。ワークロードが具体的にTPUから恩恵を受ける、またはすでにVertex AIに標準化されているならGoogle Cloudを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. Azure',
+            text: 'Microsoftへの依存がない純粋なGPUワークロードにはDigitalOceanを選んでください。製品がAzure OpenAI Serviceに依存している、またはMicrosoftのエンタープライズ調達を統合しているならAzureを選んでください。',
+          },
+          {
+            title: 'DigitalOcean vs. Oracle Cloud',
+            text: '小規模チームの最初のGPUワークロードにはDigitalOceanを選んでください。OCIの定額価格と10TBの無料egressがDigitalOceanのシンプルさの利点を上回り始める、大規模で持続的な学習ワークロードを運用しているならOracle Cloud Infrastructureを選んでください。',
+          },
+        ],
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: '決定を変え得る隠れたコスト',
+        content:
+          '**最も低いGPU時間あたりレートが、必ずしもAIアプリケーションを運用する最も低い総コストとは限りません。** 表示価格だけを根拠にプロバイダーに決める前に、これらすべての項目を確認してください。',
+        items: [
+          '**データ転送（egress）：** このページで最大の隠れたコスト——CoreWeave、RunPod、Lambdaはすべて$0を請求します；AWS、Azure、Google Cloudは100GB無料枠の後$0.087-0.12/GBを請求します；DigitalOceanとOracle Cloudはより大きなバンドル/無料枠を持つ中間に位置します。',
+          '**ストレージと永続ボリューム：** ここにあるすべてのプロバイダーで計算とは別に課金されます——GPUレートだけでなく、GB月あたりのレートを確認してください。',
+          '**スナップショットとバックアップ：** GPUインスタンスが停止していても、アクティブなストレージと同じレートで課金されることがよくあります。',
+          '**アイドル状態のGPU：** このページの各プロバイダーは、有用な作業をしているかどうかに関わらず、実行中（DigitalOceanの場合は電源オン）のインスタンスに課金します。',
+          '**最小課金単位：** RunPodとDigitalOceanでは秒単位ですが、真の秒単位の粒度を前提とする前に、各プロバイダーの最低課金額を確認してください。',
+          '**ネットワーク（egress以外）：** マルチGPU/マルチノード学習のノード間帯域幅は、規模が大きくなるとGPU価格自体よりも重要になることがあります——これはまさにCoreWeaveとOCIのRDMAネットワーキングの主張が指すものです。',
+          '**地域的な可用性：** 宣伝されているオンデマンドレートは、すべての地域で利用できるとは限らず、GPU在庫は必要な時にちょうど利用できないこともあります。',
+          '**予約/コミット利用の義務：** 公開されている最も安いレートは、多くの場合1〜3年の契約に縛られています——他のプロバイダーのオンデマンドレートと比較する前に、期間を読んでください。',
+          '**サポート：** エンタープライズグレードのサポート（AWS、Azure、Google Cloud）は、より高いレートに織り込まれています；GPU特化型（RunPod、Lambda）は、入門階層でコミュニティ/チケットサポートに依存することが多くなります。',
+          '**エンジニアリング時間：** ハイパースケーラーでのIAM/VPC設定、Kubernetesオーケストレーション、マルチリージョンデプロイの複雑さは、請求書に決して現れなくても実際のコストです。',
+        ],
+      },
+      trainingVsInference: {
+        id: 'training-vs-inference',
+        title: '学習 vs. 推論：最良のプロバイダーは異なる',
+        content:
+          'ワークロードがモデルを学習させるものか、提供するものかによって、正しいプロバイダーは変わります——この分割を事前に確認せずに、両方に単一のプロバイダーを選ばないでください。',
+        items: [
+          '**学習に最適：** [CoreWeave](#coreweave)、[AWS](#aws)、[Google Cloud](#google-cloud)、[Lambda](#lambda)——持続的で分散した実行のために構築された密なマルチGPUノードとネットワーキング。',
+          '**推論に最適：** [DigitalOcean](#digitalocean)、[RunPod](#runpod)、[CoreWeave](#coreweave)——変動するリクエスト量に合わせた柔軟な単一/少数GPUサイズ（DigitalOcean、RunPod）またはサーバーレスでゼロにスケール（RunPod）。',
+          '**実験に最適：** [RunPod](#runpod)、[DigitalOcean](#digitalocean)——最も安い入門点、最速の登録、エンタープライズプロセス不要。',
+          '**エンタープライズ本番に最適：** [AWS](#aws)、[Azure](#microsoft-azure)、[Google Cloud](#google-cloud)——本番デプロイがいずれ必要とするコンプライアンス認証、SLA、マネージドAIサービス。',
+          '**巨大な分散ワークロードに最適：** [CoreWeave](#coreweave)、[AWS](#aws)、[Google Cloud](#google-cloud)、[Oracle Cloud Infrastructure](#oracle-cloud)——マルチノードスケール向けの密なノードアーキテクチャとRDMA/InfiniBandクラスのネットワーキング。',
+        ],
+      },
+      howMuchGpu: {
+        id: 'how-much-gpu',
+        title: '実際にどれだけのクラウドGPUが必要か',
+        content:
+          '2026-09-05時点でこのページの各階層の最も安い確認済みオンデマンドレートを使用した、予算感覚をつかむための大まかなシナリオです——クラウドGPUレートは頻繁に変わるため、確約する前に現在の価格を確認してください。',
+        columns: ['シナリオ', 'GPU数', '目安の月額コスト（730時間）'],
+        rows: [
+          {
+            シナリオ: '小規模AIスタートアップ（軽い推論）',
+            'GPU数': '1基',
+            '目安の月額コスト（730時間）': '~$2,110-2,475（RunPod/DigitalOcean H100）',
+          },
+          {
+            シナリオ: '成長中の推論事業',
+            'GPU数': '1〜4基',
+            '目安の月額コスト（730時間）': 'プロバイダーと基数により~$2,110-9,900',
+          },
+          {
+            シナリオ: 'ファインチューニング',
+            'GPU数': '1〜8基',
+            '目安の月額コスト（730時間）': 'プロバイダーと基数により~$2,110-19,800',
+          },
+          {
+            シナリオ: '大規模モデル学習',
+            'GPU数': '8基以上',
+            '目安の月額コスト（730時間）': '~$18,000-40,000+（8GPUノードプロバイダー：CoreWeave、Lambda、AWS）',
+          },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '1GPUの推論ワークロードは最も安いプロバイダーで月額約$2,100-2,500かかり、8基以上のGPU学習ワークロードはプロバイダーにより月額$18,000-40,000+かかります——時間あたりレートを比較する前に、GPU数に予算を合わせてください。',
+          },
+        ],
+      },
+      rentVsBuy: {
+        id: 'rent-vs-buy',
+        title: '購入ではなくGPUをレンタルすべき時は？',
+        content:
+          'レンタルと所有は異なる問題を解決します——単独で見てどちらが安く聞こえるかではなく、ワークロードが実際にどれだけ一貫して稼働するかに選択を合わせてください。',
+        items: [
+          '**レンタルすべき時：** 需要が予測不能な場合、まだ実験段階の場合、GPUが一時的にしか必要ない場合、資本購入なしで最新ハードウェアが必要な場合、または物理インフラを管理したくない場合。',
+          '**購入すべき時：** 利用率が一貫して高い場合、ワークロードが予測可能で安定している場合、GPUをほぼ24時間365日稼働させる場合、データ所在地要件がクラウドストレージを排除する場合、またはすでにハードウェアをホストするインフラを持っている場合。',
+          'この決定の購入側について——自社GPUでモデルを実行するための部品リスト、実際のコスト、ハードウェアの選択肢——は[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026)と[ローカルAIワークステーション構築ガイド](/power-local-llm/local-ai-workstation-build-guide-2026)をご覧ください。',
+        ],
+      },
+      finalRanking: {
+        id: 'final-ranking',
+        title: '最終ランキング',
+        content:
+          '単純な1〜8のリストではありません——各プロバイダーは実際に勝っている具体的な役割で評価されており、あらゆる軸で直接対決しない8社を評価するより擁護しやすい方法です。',
+        items: [
+          '**小規模AI企業にとって総合的に最良：** [DigitalOcean](#digitalocean)',
+          '**最良のGPUコストパフォーマンス：** [RunPod](#runpod)',
+          '**大規模AIインフラで最良：** [CoreWeave](#coreweave)',
+          '**研究志向で最良のGPUクラウド：** [Lambda](#lambda)',
+          '**最良のエンタープライズエコシステム：** [AWS](#aws)',
+          '**最良のTPU/Google AIエコシステム：** [Google Cloud](#google-cloud)',
+          '**最良のMicrosoft AIエコシステム：** [Microsoft Azure](#microsoft-azure)',
+          '**最良のエンタープライズ代替：** [Oracle Cloud Infrastructure](#oracle-cloud)',
+        ],
+      },
+      finalVerdict: {
+        id: 'final-verdict',
+        title: '最終結論：あなたのAI企業はどのクラウドを選ぶべきか',
+        content:
+          '単一の普遍的な答えではなく、意思決定ツリーです：小規模スタートアップなら**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)**から始めてください。代わりにGPU実験と可能な限り低いレートが優先事項なら**[RunPod](https://www.runpod.io/)**へ進んでください。大規模学習に移行するなら**[CoreWeave](https://www.coreweave.com/)**（ワークロードが研究中心なら[Lambda](https://lambda.ai/)）へ進んでください。エンタープライズインフラ——コンプライアンス、マネージドAIカタログ、または特定のエコシステム依存——が決定要因なら、すでにいるエコシステムに応じて**[AWS](https://aws.amazon.com/ec2/instance-types/p5/)**、**[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)**、または**[Google Cloud](https://cloud.google.com/compute/docs/gpus)**へ進んでください。大規模でコストに敏感なエンタープライズインフラが優先事項なら**[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)**へ進んでください。このページのほとんどの読者——他のどこかにすでに引っ張られる特定のエンタープライズ依存を持たない、小規模または成長中のAI企業——にとって、[DigitalOceanのGPU Droplets](https://www.digitalocean.com/products/gpu-droplets)が正しい出発点です。',
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          '[DigitalOcean GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) — H100オンデマンド価格$3.39-4.41/時、12ヶ月予約レート約$2.50/時から、2026-09-05にウェブ検索で確認。',
+          '[AWS EC2 P5インスタンスタイプ](https://aws.amazon.com/ec2/instance-types/p5/) — p5.48xlarge オンデマンド$55.04/時（GPUあたり$6.88/時）、Capacity Blocks GPUあたり$4.72-5.19/時、2026-09-05にウェブ検索で確認。',
+          '[CoreWeave GPU価格](https://www.coreweave.com/pricing) — H100 8GPUノード$49.24/時（GPUあたり$6.16/時）、H200ノード$50.44/時、スポット -40-60%、2026-09-05にウェブ検索で確認。',
+          '[RunPod価格](https://www.runpod.io/pricing) — Secure Cloud H100 PCIe $2.89/時、Community Cloud RTX 4090 $0.34/時、サーバーレスH100 $4.55/時、2026-09-05にウェブ検索で確認。',
+          '[Lambda GPU Cloud価格](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/時、H100 SXM $4.29/時、A100 40GB $1.99/時、A100 80GB $2.79/時、2026-09-05にウェブ検索で確認。',
+          '[Reuters/Bloomberg：Anthropic-Lambdaの$350億クラウド契約](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 2026-08-31に報道、条件（GPU数、契約期間）は非開示。',
+          '[Google Cloud GPU価格](https://cloud.google.com/compute/docs/gpus) — A3シリーズ（a3-highgpu-8g）オンデマンド約$80-90/時（GPUあたり$9-11.50/時）、2026-09-05にウェブ検索で確認。',
+          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 オンデマンドGPUあたり約$11-13/時、フル8GPUノード約$98/時、2026-09-05にウェブ検索で確認。',
+          '[Oracle Cloud Infrastructure GPU計算](https://www.oracle.com/cloud/compute/gpu/) — オンデマンドH100 GPUあたり一律$10/時、BM.GPU.H100.8ノード$80/時、10TB無料egressその後$0.0085/GB、2026-09-05にウェブ検索で確認。',
+          'CoreWeave、RunPod、Lambdaのegress料金ゼロ方針 — 2026-09-05にウェブ検索でプロバイダーの価格ページおよび第三者の比較情報源と照合して確認。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'DigitalOceanはAI企業にとって良いですか？',
+            a: 'はい、特に小規模で成長中のAIチームにとってです。DigitalOcean GPU Dropletsはオンデマンドで$3.39-4.41/時からH100アクセスを提供し——このページの中でも最も安い部類に入ります——最もシンプルなコンソールとエンタープライズ営業プロセスなしを備えています。密なマルチノード学習、TPUワークロード、または大規模なマネージドAIサービスカタログを必要とするチームには正しい選択ではありません。',
+          },
+          {
+            q: 'AI向けにDigitalOceanはAWSより安いですか？',
+            a: 'はい、生のオンデマンドH100アクセスに関しては——DigitalOceanは$3.39-4.41/時からで、AWSのオンデマンドGPUあたり$6.88/時のおよそ半分の価格です。より広いマネージドAIサービスカタログ、マルチリージョンデプロイ、または特定のコンプライアンス認証が必要になった時点でAWSがより良い選択になります。',
+          },
+          {
+            q: 'RunPodはDigitalOceanより安いですか？',
+            a: 'RunPodのSecure Cloud H100レート（$2.89/時）は、DigitalOceanのオンデマンドレート（$3.39-4.41/時）よりわずかに安く、RunPodはDigitalOceanのバンドル+超過料金モデルに対してegress料金も請求しません。DigitalOceanの利点は、コンソールのシンプルさと、RunPodのより安いCommunity Cloud階層よりも一貫した稼働率です。',
+          },
+          {
+            q: 'CoreWeaveはAWSより安いですか？',
+            a: 'GPUあたりで見ると、CoreWeaveのH100レート（GPUあたり$6.16/時）はAWS（GPUあたり$6.88/時）に近いですが、CoreWeaveは100GB無料枠後にAWSが請求する$0.09/GBに対してegress料金を請求しません——データ転送量の多いワークロードでは、GPUレートが同程度でもCoreWeaveの方が総コストで大幅に安くなることがあります。ただし、CoreWeaveはGPUを8GPUノード単位でのみ販売しているため、小規模なワークロードは部分ノードでこの低いGPUあたりレートを利用できません。',
+          },
+          {
+            q: '最も安いクラウドGPUは何ですか？',
+            a: 'ここで比較した8社の中では、RunPodのCommunity CloudとSecure Cloud階層、そしてDigitalOceanのオンデマンドH100レートが最も安いメインストリームの選択肢で、どちらもH100で$2.89-4.41/時の範囲です。RunPod、CoreWeave、Lambdaもegress料金を請求しないため、時間あたりのGPUレートがハイパースケーラーと同程度であっても、データ転送量の多いワークロードの総コストをさらに下げます。',
+          },
+          {
+            q: 'AI推論に最適なクラウドはどれですか？',
+            a: 'DigitalOcean、RunPod、CoreWeaveです。DigitalOceanとRunPodは、典型的な推論リクエスト量に合わせた柔軟で低コストの単一/少数GPUサイズを提供します。RunPodのサーバーレス階層は特に秒単位で課金し、リクエスト間でゼロにスケールするため、固定の時間単位レンタルよりも変動する推論トラフィックに適しています。',
+          },
+          {
+            q: 'LLM学習に最適なクラウドはどれですか？',
+            a: 'CoreWeave、AWS、Google Cloud、Lambdaです。この4社は、推論志向のプロバイダーが最適化する柔軟な単一GPUサイズではなく、密なマルチGPUノードアーキテクチャ（CoreWeaveとLambdaのSXM階層では最低8GPU）と、持続的で分散した学習実行向けに構築されたネットワーキングを提供します。',
+          },
+          {
+            q: 'AIスタートアップに最適なクラウドはどれですか？',
+            a: 'ほとんどの小規模AIスタートアップにはDigitalOceanです——最も安いオンデマンドH100アクセスと最もシンプルなオンボーディングです。絶対的な最低レートとサーバーレス課金がコンソールの磨き上げと一貫した稼働率より重要な場合、RunPodが次に比較すべき選択肢です。',
+          },
+          {
+            q: 'AIワークロードにAWSの上乗せ分は見合いますか？',
+            a: 'AWSのマネージドAIサービスカタログ（Bedrock、SageMaker）、マルチリージョンデプロイ、またはGPU特化型クラウドが提供しない特定のコンプライアンス認証（HIPAA、FedRAMP）を必要とする企業には特に見合います。これらの具体的なニーズがなければ、DigitalOceanに対するおよそ2倍のGPUあたりの上乗せは、純粋なGPUワークロードに対する見返りの利点がありません。',
+          },
+          {
+            q: 'AIスタートアップはハイパースケーラーとGPU特化型クラウドのどちらを使うべきですか？',
+            a: 'GPU特化型クラウド（DigitalOcean、RunPod、CoreWeave、Lambda）は通常、小規模AIスタートアップにとってより良い出発点です——より安いGPUアクセス、よりシンプルなオンボーディング、そして（特にCoreWeave、RunPod、Lambdaでは）egress料金ゼロです。特定のマネージドAIサービス、コンプライアンス認証、またはマルチリージョンのエンタープライズインフラが必要になった時点でハイパースケーラー（AWS、Azure、Google Cloud）に移行してください——デフォルトとしてではありません。',
+          },
+          {
+            q: 'AI用GPUは購入とレンタルのどちらが安いですか？',
+            a: 'それは利用率次第です。レンタルは、予測不能な需要、実験、一時的な必要性、または資本購入なしで最新ハードウェアを求める場合に安くなります。購入は、利用率が一貫して高くGPUがほぼ24時間365日稼働する時点で安くなります——この比較の自社ハードウェア側については、[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026)をご覧ください。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 完全なクラウドプラットフォームの上に構築するのではなく、自社ハードウェアを所有するための部品と価格。',
+          '[ローカルAIワークステーション構築ガイド](/power-local-llm/local-ai-workstation-build-guide-2026) — ローカルAIマシンの完全な構築ガイド。このページのすべてのプロバイダーに対する購入代替案。',
+          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — AI/GPUクラウド計算ではなく、Webサイトホスティングのための別の比較。',
+        ],
+      },
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Overview & Reference',
+    title: 'DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司最佳云服务',
+    seoTitle: 'DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod 2026',
+    intro:
+      '最便宜的 GPU 未必是最便宜的 AI 基础设施。AI 公司选择云服务时，需要权衡 GPU 价格、GPU 可用性、负载是训练还是推理、网络、存储、数据传输费用、部署复杂度、可扩展性、企业服务和支持——而不仅仅是定价页面上的小时费率。本文比较了能够反映这一市场真实格局的 8 家服务商：最常见的两个起点[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)和[AWS](https://aws.amazon.com/ec2/instance-types/p5/)，GPU 专业化竞争者[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/)和[Lambda](https://lambda.ai/)，以及企业替代方案[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)和[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)。简短的答案是：对大多数小型和成长中的 AI 公司来说，DigitalOcean 是最佳起点；一旦企业规模或其服务目录变得更重要，AWS 就是正确的默认选择；其余六家各自因下文详述的具体原因而胜出。',
+    metaDescription:
+      '对比 8 家领先的 AI 云服务商——DigitalOcean、AWS、CoreWeave、RunPod、Lambda、Google Cloud、Azure、Oracle Cloud——从 GPU 价格、可用性和负载适配性出发，核实于 2026-09-05。',
+    twitterDescription:
+      'DigitalOcean H100：$3.39/小时。RunPod：$2.89/小时。CoreWeave：$6.16/小时（egress 免费）。Lambda 刚与 Anthropic 签下 350 亿美元协议。这是 8 家云服务商对 AI 公司的真实成本。',
+    affiliateDisclosure: true,
+    audience:
+      '正在为训练或部署模型选择云平台的 AI 公司创始人和技术负责人，希望按价格、可用性和负载适配性比较超大规模云服务商与 GPU 专业化云服务商，而不是泛泛的网站托管对比。',
+    readTime: '阅读约15分钟',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 公司最佳云服务',
+    targetKeywords: [
+      'ai公司最佳云服务 2026',
+      'digitalocean 对比 aws 对比 coreweave 对比 runpod',
+      '最便宜的云gpu 2026',
+      'coreweave 对比 aws 对比 lambda',
+      'runpod 对比 digitalocean',
+    ],
+    leadAnswerBlock:
+      '**对于小型或成长中的 AI 公司，[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) 是最佳起点——最简单的控制台和有竞争力的 H100 价格，按需起价 $3.39-4.41/小时。对于拥有广泛服务目录的企业级 AI，[AWS](https://aws.amazon.com/ec2/instance-types/p5/) 是超大规模云服务商中的基准，按需每 GPU $6.88/小时。[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/) 和 [Lambda](https://lambda.ai/) 是 GPU 专业化云服务商，分别值得为大规模训练、低成本实验和 ML 研究进行报价比较。[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 和 [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) 是企业替代方案，各自都有一个具体的理由：TPU、Azure OpenAI Service，或最平稳的价格经济性。8 家之间没有唯一的赢家——请根据团队规模和负载匹配服务商，而不只是最低的标价。** 本页所有价格均保持美元计价，因为八家服务商的云 GPU 算力在全球范围内统一以美元计费。',
+    affiliateLinks: [
+      {
+        url: 'https://www.digitalocean.com/products/gpu-droplets',
+        productName: 'DigitalOcean GPU Droplets',
+        productCategory: 'cloud-gpu',
+        priceRange: '3.39-4.41/hr (H100)',
+        label: '查看 DigitalOcean GPU Droplets 价格',
+      },
+      {
+        url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+        productName: 'AWS EC2 P5 (H100)',
+        productCategory: 'cloud-gpu',
+        priceRange: '6.88/GPU-hr on-demand',
+        label: '查看 AWS EC2 P5 价格',
+      },
+    ],
+    quickAnswerTop: {
+      zh: {
+        question: '哪家云服务商最适合 AI 公司？',
+        answer:
+          '对于小型或成长中的 AI 公司，DigitalOcean 是最佳起点——最便宜的按需 H100 访问（$3.39-4.41/小时）加最简单的控制台。一旦需要企业规模、广泛的托管 AI 服务目录（Bedrock、SageMaker）或多区域合规，AWS 就是正确选择。CoreWeave、RunPod 和 Lambda 是价格低于超大规模云服务商、通常不收取 egress 费用的 GPU 专业化云服务商——RunPod 适合低成本实验，CoreWeave 适合大规模训练基础设施，Lambda 适合 ML 研究（并且随着与 Anthropic 报道中的 350 亿美元协议，也适合严肃的生产规模）。Google Cloud、Microsoft Azure 和 Oracle Cloud Infrastructure 分别为 TPU 访问、Azure OpenAI Service 和最平稳的企业级 GPU 定价补齐了这个版图。',
+        bullets: [
+          'DigitalOcean H100：按需 $3.39-4.41/小时——最适合小型 AI 团队',
+          'AWS EC2 P5 (H100)：按需每 GPU $6.88/小时——最佳企业生态系统',
+          'CoreWeave H100：每 GPU $6.16/小时（仅限 8 GPU 节点），egress 免费——最适合大规模训练',
+          'RunPod H100：Secure Cloud 起价 $2.89/小时，egress 免费——最佳性价比',
+          'Lambda H100：起价 $3.29/小时，egress 免费——最适合 ML 研究；与 Anthropic 报道中的 350 亿美元协议（2026 年 8 月）',
+          'Google Cloud、Azure、Oracle Cloud：分别为 TPU、Azure OpenAI Service 和统一定价经济性提供的企业替代方案',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '哪家云最适合 AI 公司？', anchor: '#introduction' },
+      { label: '快速回答：8 家服务商对比', anchor: '#quick-answer' },
+      { label: '按公司类型推荐', anchor: '#picks-by-type' },
+      { label: '主对比表', anchor: '#master-comparison' },
+      { label: 'GPU 价格：AI 算力实际花费多少', anchor: '#gpu-pricing-economics' },
+      { label: 'DigitalOcean：最适合小型 AI 公司', anchor: '#digitalocean' },
+      { label: 'AWS：最佳企业级 AI 云', anchor: '#aws' },
+      { label: 'CoreWeave：最适合大规模 AI', anchor: '#coreweave' },
+      { label: 'RunPod：最佳性价比 GPU 云', anchor: '#runpod' },
+      { label: 'Lambda：最适合 ML 研究人员', anchor: '#lambda' },
+      { label: 'Google Cloud：最适合 TPU', anchor: '#google-cloud' },
+      { label: 'Microsoft Azure：最适合以 Microsoft 为中心的 AI', anchor: '#microsoft-azure' },
+      { label: 'Oracle Cloud Infrastructure：被低估的选项', anchor: '#oracle-cloud' },
+      { label: 'DigitalOcean 对比其余 7 家', anchor: '#head-to-head' },
+      { label: '可能改变决策的隐藏成本', anchor: '#hidden-costs' },
+      { label: '训练 对比 推理：最佳服务商各不相同', anchor: '#training-vs-inference' },
+      { label: '你到底需要多少云 GPU？', anchor: '#how-much-gpu' },
+      { label: '租用 对比 购买：何时该拥有自己的硬件', anchor: '#rent-vs-buy' },
+      { label: '最终排名', anchor: '#final-ranking' },
+      { label: '最终结论与决策树', anchor: '#final-verdict' },
+      { label: '资料来源', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '延伸阅读', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) 是小型 AI 公司的最佳起点**——按需 H100 $3.39-4.41/小时，八家中最简单的控制台。',
+          '**[AWS](https://aws.amazon.com/ec2/instance-types/p5/) 是超大规模云服务商的基准**——按需每 GPU $6.88/小时，买到的是最广泛的托管 AI 服务和合规储备。',
+          '**[CoreWeave](https://www.coreweave.com/)、[RunPod](https://www.runpod.io/) 和 [Lambda](https://lambda.ai/) 均不收取 egress 费用**——相对于这里每家收取 $0.087-0.12/GB 的超大规模云服务商，这是实实在在的成本优势。',
+          '**Lambda 据报道已与 Anthropic 签署一份 350 亿美元的云协议（Reuters/Bloomberg，2026-08-31）**——GPU 专业化云服务商已不再是业余级别。',
+          '**[Google Cloud](https://cloud.google.com/compute/docs/gpus)、[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 和 [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) 各自因具体理由取胜**——分别是 TPU、Azure OpenAI Service 和最平稳的企业级 GPU 经济性，而非纯粹的价格。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '快速概览',
+        items: [
+          '**总体最便宜的按需 H100：** RunPod Community Cloud 和 DigitalOcean，视配置而定均约 $3.39-3.99/小时起。',
+          '**最便宜的 egress：** CoreWeave、RunPod 和 Lambda 对外传数据全部收取 $0——这里的每家超大规模云服务商在 100 GB 免费额度后都收取 $0.087-0.12/GB。',
+          '**已披露的最大单笔协议：** Lambda 与 Anthropic 之间据报道达 350 亿美元的云计算协议（Reuters，2026-08-31）。',
+          '**唯一只以 8 GPU 节点出售的 GPU：** CoreWeave 的 H100/H200 和 Lambda 的 SXM 实例——即使只需要更少数量，也要为全部 8 块付费。',
+          '**最平稳的企业定价：** Oracle Cloud Infrastructure，不分地区每 GPU 统一 $10/小时。',
+        ],
+      },
+      introduction: {
+        id: 'introduction',
+        title: '哪家云最适合 AI 公司？',
+        content:
+          '最便宜的 GPU 未必是最便宜的 AI 基础设施。在比较小时费率之前，AI 公司需要权衡：GPU 价格、GPU 可用性（在需要时是否真能拿到 H100）、负载是训练还是推理、网络质量、存储成本、数据传输（egress）费用、部署复杂度、可扩展性、企业服务和支持质量。立即给出答案：想要简单和可预测成本的小团队选[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)；企业规模比价格更重要时选[AWS](https://aws.amazon.com/ec2/instance-types/p5/)；想要零 egress 费用的 GPU 专业化经济性选[CoreWeave](https://www.coreweave.com/)/[RunPod](https://www.runpod.io/)/[Lambda](https://lambda.ai/)；以及各自因一个具体企业理由而选的[Google Cloud](https://cloud.google.com/compute/docs/gpus)/[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)/[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)。本页其余部分将展开这一答案背后的证据。',
+      },
+      quickAnswer: {
+        id: 'quick-answer',
+        title: '快速回答：AI 公司最佳云服务商',
+        content:
+          '八家服务商，八种不同的任务。此表是快速版——下面的各节会深入介绍每家服务商。',
+        columns: ['服务商', '最适合', '主要优势', '主要弱点'],
+        rows: [
+          {
+            服务商: '[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)',
+            '最适合': '创业公司和小型 AI 团队',
+            '主要优势': '简单性 + 具竞争力的 GPU 价格',
+            '主要弱点': '生态系统较小',
+          },
+          {
+            服务商: '[AWS](https://aws.amazon.com/ec2/instance-types/p5/)',
+            '最适合': '企业级 AI',
+            '主要优势': '庞大的生态系统',
+            '主要弱点': '复杂度 / 成本',
+          },
+          {
+            服务商: '[CoreWeave](https://www.coreweave.com/)',
+            '最适合': '大规模 AI',
+            '主要优势': 'GPU 基础设施与规模',
+            '主要弱点': '通用性较弱',
+          },
+          {
+            服务商: '[RunPod](https://www.runpod.io/)',
+            '最适合': '开发者与推理',
+            '主要优势': '价格 / 灵活性',
+            '主要弱点': '企业导向较弱',
+          },
+          {
+            服务商: '[Lambda](https://lambda.ai/)',
+            '最适合': 'ML 研究人员',
+            '主要优势': '以 GPU 为核心的平台',
+            '主要弱点': '生态系统较小',
+          },
+          {
+            服务商: '[Google Cloud](https://cloud.google.com/compute/docs/gpus)',
+            '最适合': 'AI/TPU 负载',
+            '主要优势': 'TPU + AI 生态系统',
+            '主要弱点': '复杂度',
+          },
+          {
+            服务商: '[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)',
+            '最适合': '企业 / Microsoft',
+            '主要优势': 'Azure + OpenAI 生态系统',
+            '主要弱点': '复杂度',
+          },
+          {
+            服务商: '[Oracle Cloud (OCI)](https://www.oracle.com/cloud/compute/gpu/)',
+            '最适合': '成本敏感型企业 AI',
+            '主要优势': '有竞争力的基础设施经济性',
+            '主要弱点': '开发者生态系统较小',
+          },
+        ],
+      },
+      picksByType: {
+        id: 'picks-by-type',
+        title: '按 AI 公司类型的推荐',
+        content:
+          '这是本页的编辑核心：DigitalOcean 并非每个类别都胜出，也不需要——它胜出的正是对本页大多数读者而言最重要的那一类。',
+        items: [
+          '**最适合小型 AI 创业公司：** [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)——最便宜的按需 H100，无需企业销售流程。',
+          '**最适合低成本 GPU 实验：** [RunPod](https://www.runpod.io/)——Secure Cloud 起价 $2.89/小时，Community Cloud 更便宜，零 egress 费用。',
+          '**最适合大规模 AI 训练：** [CoreWeave](https://www.coreweave.com/)——具备 InfiniBand 级网络的 GPU 专业化 8 GPU HGX 节点。',
+          '**最适合 ML 研究人员：** [Lambda](https://lambda.ai/)——GPU 优先平台，预配置 ML 环境，如今背后是与 Anthropic 报道中的 350 亿美元协议。',
+          '**最佳企业云：** [AWS](https://aws.amazon.com/ec2/instance-types/p5/)——最广泛的托管 AI 目录和合规储备。',
+          '**最适合 Google/TPU 负载：** [Google Cloud](https://cloud.google.com/compute/docs/gpus)——本页唯一提供 TPU 的服务商。',
+          '**最适合 Microsoft/OpenAI 负载：** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)——可接入 Azure OpenAI Service。',
+          '**大规模企业算力的最佳替代方案：** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)——固定价格，超大规模云服务商中最便宜的 egress。',
+        ],
+      },
+      masterComparison: {
+        id: 'master-comparison',
+        title: '主对比表',
+        content:
+          '刻意保持易读——每家服务商的完整细节都在下方各自的小节中，从"服务商"一列点击进入。',
+        columns: ['服务商', 'GPU 定位', 'H100 价格', 'Spot / 预留', '多 GPU', '数据传输', '最佳使用场景'],
+        rows: [
+          {
+            服务商: '[DigitalOcean](#digitalocean)',
+            'GPU 定位': '通用 AI，小型团队',
+            'H100 价格': '$3.39-4.41/小时',
+            'Spot / 预留': '预留12个月 ~$2.50/小时',
+            '多 GPU': '支持，按 Droplet',
+            '数据传输': '500GiB+免费，之后$0.01/GiB',
+            '最佳使用场景': '创业公司，简单性',
+          },
+          {
+            服务商: '[AWS](#aws)',
+            'GPU 定位': '通用企业级 AI',
+            'H100 价格': '每GPU $6.88/小时',
+            'Spot / 预留': 'Capacity Blocks $4.72-5.19/小时；Spot -60-70%',
+            '多 GPU': '支持，每节点最多8块',
+            '数据传输': '100GB免费，之后$0.09/GB',
+            '最佳使用场景': '企业，广泛服务',
+          },
+          {
+            服务商: '[CoreWeave](#coreweave)',
+            'GPU 定位': '大规模训练',
+            'H100 价格': '每GPU $6.16/小时（仅8 GPU节点）',
+            'Spot / 预留': 'Spot -40-60%；预留 -60%',
+            '多 GPU': '仅8 GPU HGX节点',
+            '数据传输': '免费',
+            '最佳使用场景': '大型训练集群',
+          },
+          {
+            服务商: '[RunPod](#runpod)',
+            'GPU 定位': '灵活的开发/推理',
+            'H100 价格': '起价$2.89/小时（Secure Cloud）',
+            'Spot / 预留': 'Spot -50-80%',
+            '多 GPU': '支持，按Pod',
+            '数据传输': '免费',
+            '最佳使用场景': '实验，推理',
+          },
+          {
+            服务商: '[Lambda](#lambda)',
+            'GPU 定位': 'ML研究',
+            'H100 价格': '$3.29-4.29/小时',
+            'Spot / 预留': '可享预留折扣',
+            '多 GPU': 'SXM仅限8 GPU节点',
+            '数据传输': '免费',
+            '最佳使用场景': '研究，生产训练',
+          },
+          {
+            服务商: '[Google Cloud](#google-cloud)',
+            'GPU 定位': 'GPU + TPU',
+            'H100 价格': '每GPU $9-11.50/小时',
+            'Spot / 预留': '承诺使用折扣',
+            '多 GPU': '支持，每节点最多8块',
+            '数据传输': '100GB免费，之后$0.12/GB',
+            '最佳使用场景': 'TPU/ML原生负载',
+          },
+          {
+            服务商: '[Microsoft Azure](#microsoft-azure)',
+            'GPU 定位': '企业 + OpenAI',
+            'H100 价格': '每GPU $11-13/小时',
+            'Spot / 预留': '预留实例',
+            '多 GPU': '支持，每节点最多8块',
+            '数据传输': '100GB免费，之后$0.087/GB',
+            '最佳使用场景': '接入Azure OpenAI Service',
+          },
+          {
+            服务商: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            'GPU 定位': '固定价格企业方案',
+            'H100 价格': '统一$10/小时',
+            'Spot / 预留': 'Universal Credits（大批量）',
+            '多 GPU': '8 GPU裸金属节点',
+            '数据传输': '10TB免费，之后$0.0085/GB',
+            '最佳使用场景': '最便宜的原始企业算力',
+          },
+        ],
+      },
+      gpuPricingEconomics: {
+        id: 'gpu-pricing-economics',
+        title: 'GPU 价格：AI 算力实际花费多少？',
+        content:
+          '单独的小时费率掩盖了真正的决策。**按计费模式标注每个价格——按需、Spot、预留或市场/Community Cloud 不是同一个数字**，混在一起比较会产生错误结论。下表将各服务商已确认的最低按需单 GPU H100 费率外推到 100 小时、1,000 小时和 730 小时（大约相当于一个月的连续使用），以便在贴近实际预算的规模上看清差距，而不是只看一个小时的数字。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '在 730 小时（大约一个月的连续使用）下，按需 H100 的成本从 RunPod 的约 $2,110 到 Microsoft Azure 的超过 $8,000 不等——完全由服务商选择造成的 4 倍差距。',
+          },
+          {
+            type: 'plain-terms',
+            text: '单独一个小时的数字掩盖了成本如何累积——就像"每天 $5"的订阅听起来微不足道，直到看到每年 $1,825 的总额。把费率外推到一个现实的使用周期，才能真正指导预算决策。',
+          },
+        ],
+        columns: ['服务商', '每小时', '每100小时', '每1,000小时', '每730小时（约1个月）'],
+        rows: [
+          {
+            服务商: '[RunPod](#runpod)（Secure Cloud）',
+            '每小时': '$2.89',
+            '每100小时': '$289',
+            '每1,000小时': '$2,890',
+            '每730小时（约1个月）': '$2,110',
+          },
+          {
+            服务商: '[DigitalOcean](#digitalocean)',
+            '每小时': '$3.39',
+            '每100小时': '$339',
+            '每1,000小时': '$3,390',
+            '每730小时（约1个月）': '$2,475',
+          },
+          {
+            服务商: '[Lambda](#lambda)',
+            '每小时': '$3.29',
+            '每100小时': '$329',
+            '每1,000小时': '$3,290',
+            '每730小时（约1个月）': '$2,402',
+          },
+          {
+            服务商: '[CoreWeave](#coreweave)',
+            '每小时': '$6.16',
+            '每100小时': '$616',
+            '每1,000小时': '$6,160',
+            '每730小时（约1个月）': '$4,497',
+          },
+          {
+            服务商: '[AWS](#aws)',
+            '每小时': '$6.88',
+            '每100小时': '$688',
+            '每1,000小时': '$6,880',
+            '每730小时（约1个月）': '$5,022',
+          },
+          {
+            服务商: '[Google Cloud](#google-cloud)',
+            '每小时': '$9.00（区间下限）',
+            '每100小时': '$900',
+            '每1,000小时': '$9,000',
+            '每730小时（约1个月）': '$6,570',
+          },
+          {
+            服务商: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            '每小时': '$10.00 统一',
+            '每100小时': '$1,000',
+            '每1,000小时': '$10,000',
+            '每730小时（约1个月）': '$7,300',
+          },
+          {
+            服务商: '[Microsoft Azure](#microsoft-azure)',
+            '每小时': '$11.00（区间下限）',
+            '每100小时': '$1,100',
+            '每1,000小时': '$11,000',
+            '每730小时（约1个月）': '$8,030',
+          },
+        ],
+      },
+      digitalocean: {
+        id: 'digitalocean',
+        title: 'DigitalOcean 是小型 AI 公司的最佳云服务吗？',
+        content:
+          '**[GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) 按需提供 H100 访问，起价 $3.39-4.41/小时**，12 个月预留可将价格降至约 $2.50/小时。计费按秒进行，最低 60 秒。部署通过标准的 Droplet 控制台完成——首次运行工作负载前没有 IAM/VPC 配置负担。存储和网络遵循与 DigitalOcean 常规 Droplet 相同的简单打包模式（根据套餐提供 500 GiB+ 的免费出站传输，之后 $0.01/GiB）。对于推理，单 GPU 或多 GPU 的 Droplet 可通过 DigitalOcean 的标准网络直接为模型提供服务；对于微调，同样的 Droplet 无需单独产品层级即可使用；对于更大规模的训练，DigitalOcean 没有公布可与 CoreWeave 或 AWS 相媲美的密集 8 GPU 裸金属节点，因此超过某个规模后它就不是正确选择了。',
+        items: [
+          '**谁应该使用 DigitalOcean：** 一个 2-10 人的 AI 团队，希望快速获得 H100 访问、不经过企业销售流程或复杂 IAM 配置，并重视可预测的打包价格。',
+          '**谁不应该使用 DigitalOcean：** 运行密集多节点训练集群、需要 TPU，或需要大型托管 AI 服务目录（类似 Bedrock 的托管模型、企业合规认证）的团队——DigitalOcean 在这些方面都没有竞争力。',
+        ],
+        bestFor: '希望快速获得 H100 访问、拥有可预测价格且无需企业销售流程的小型 AI 团队。',
+        avoidIf: '你需要密集的多节点训练集群、TPU，或大型托管 AI 服务目录。',
+        costNote: '结论：对许多重视简单性和可预测基础设施成本、超过超大规模云服务商目录广度的小型和成长中 AI 公司而言，这是最佳选择。',
+        affiliateLinks: [
+          {
+            url: 'https://www.digitalocean.com/products/gpu-droplets',
+            productName: 'DigitalOcean GPU Droplets',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.39-4.41/hr (H100)',
+            label: '查看 DigitalOcean GPU Droplets 价格',
+          },
+        ],
+      },
+      aws: {
+        id: 'aws',
+        title: 'AWS 是最佳企业级 AI 云吗？',
+        content:
+          '**AWS 是本页超大规模云服务商中的基准——不是因为便宜，而是因为溢价所买到的东西。** [EC2 P5](https://aws.amazon.com/ec2/instance-types/p5/) 实例（p5.48xlarge，8x H100）按需为 $55.04/小时——每 GPU $6.88/小时——而预付的 [Capacity Blocks](https://aws.amazon.com/ec2/capacityblocks/) 可将其降至每 GPU $4.72-5.19/小时，对可容忍中断的工作负载，Spot 价格可比按需低 60-70%。除了原始算力之外：面向托管基础模型的 [Bedrock](https://aws.amazon.com/bedrock/)、面向训练流水线的 [SageMaker](https://aws.amazon.com/sagemaker/)、AWS 遍布全球的区域网络，以及本页所有服务商中最全面的合规认证（HIPAA、FedRAMP 等）。这不是一个价格论证——而是一个"除了 GPU 你还需要什么"的论证。',
+        bestFor: '已经投入 AWS 的公司，或需要其更广泛生态系统的公司：托管 AI 服务、多区域部署，或企业合规认证。',
+        avoidIf: '你是只需要原始 GPU 访问的小团队——AWS 的 IAM/VPC 配置和控制台复杂度会增加 DigitalOcean 不需要的实际上手时间。',
+        costNote: '按需 P5 价格（每 GPU $6.88/小时）大约是 DigitalOcean 按需价格的两倍——这部分溢价买的是 AWS 服务的广度，而不是更快或更好的 GPU。',
+      },
+      coreweave: {
+        id: 'coreweave',
+        title: 'CoreWeave 是大规模 AI 的最佳选择吗？',
+        content:
+          '**CoreWeave 与 DigitalOcean 是根本不同的产品——一个为大规模 AI 基础设施而生的 GPU 专业化云，而非通用计算。** [CoreWeave](https://www.coreweave.com/) 仅以 8 GPU HGX 节点形式出售 H100 和 H200：H100 节点为 $49.24/小时（每 GPU $6.16/小时），H200 节点为 $50.44/小时（每 GPU $6.31/小时）——没有自助方式来配置单块 GPU。Spot 价格比按需低约 40-60%，预留/承诺使用最多可享受 60% 的折扣。每个节点集成 128 个 vCPU、2,048 GB 系统内存和 61.44 TB 本地存储，围绕 Kubernetes 原生编排和面向分布式多节点训练的高吞吐网络构建——并且 CoreWeave 不收取任何数据传输/egress 费用，这是相对本页任何超大规模云服务商的一个显著优势。CoreWeave 凭借来自 AI 实验室的大型基础设施承诺，已牢牢跻身主要 AI 云的行列，而不是作为通用云业务的次要选项。',
+        bestFor: '受益于密集 8 GPU 节点、Kubernetes 原生编排和零 egress 费用的大规模多节点 AI 训练公司。',
+        avoidIf: '你需要单块 GPU、通用云服务（除计算外还有存储、数据库、网站托管），或更小/更便宜的入门点——CoreWeave 不是通用型的。',
+        costNote: '仅提供 8 GPU 节点的模式意味着 CoreWeave 是为规模定价的——只需要 1-2 块 GPU 的团队仍要为 8 块付费，这与 DigitalOcean 或 RunPod 的权衡正好相反。',
+      },
+      runpod: {
+        id: 'runpod',
+        title: 'RunPod 是最佳性价比 GPU 云吗？',
+        content:
+          '**RunPod 是本页价格最具竞争力的主流 GPU 云，也是对价格敏感的 AI 开发者最直接的 DigitalOcean 竞争对手。** [RunPod](https://www.runpod.io/) 分为两个层级：具有稳定可用性保证的 **Secure Cloud**（RTX 4090 $0.69/小时、A100 SXM $1.49/小时、H100 PCIe $2.89/小时、H100 NVL $3.19/小时、H200 $4.39/小时、B200 $5.89/小时），以及可用性一致性较弱、价格更低的对等市场 **Community Cloud**（RTX 4090 $0.34/小时、A100 80GB $1.39/小时、H100 PCIe $2.89/小时）。RunPod 还运营一个按实际执行秒数计费的 **serverless** 层级（根据 GPU 不同为 $0.58-9.98/小时，H100 为 $4.55/小时），专为在请求之间缩容至零的推理负载而设计。对可容忍中断的任务，Spot 实例比按需低 50-80%，并且——与 CoreWeave 和 Lambda 一样——RunPod 不收取 egress 费用。',
+        bestFor: '对价格敏感、能容忍可用性波动，或希望使用缩容至零的 serverless 计费的开发者和推理负载。',
+        avoidIf: '你需要严格的企业级可用性 SLA 或广泛的托管 AI 服务目录——RunPod 不像 AWS 或 Azure 那样以企业为导向。',
+        costNote: 'RunPod 让 DigitalOcean 的推荐更可信而非更弱：DigitalOcean 在简单性和控制台打磨上取胜，RunPod 在原始价格和灵活性上为想要这些的开发者取胜。',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-5.89/hr (Community/Secure Cloud)',
+            label: '查看 RunPod 价格并注册',
+          },
+        ],
+      },
+      lambda: {
+        id: 'lambda',
+        title: 'Lambda 是 ML 研究人员的最佳 GPU 云吗？',
+        content:
+          '**Lambda 是一个以预配置 ML 环境为核心、面向研究人员和训练负载构建的 GPU 优先平台——它早已不只是一家小型 GPU 租赁公司。** [Lambda](https://lambda.ai/) 的 H100 定价从 $3.29/小时（PCIe）到 $4.29/小时（SXM），A100 从 $1.99/小时（40GB）到 $2.79/小时（80GB）；与 CoreWeave 一样，其 SXM 实例仅以 8 GPU 配置出售，因此 2-4 块 GPU 的需求仍要为全部 8 块付费。Lambda 不收取 egress 费用。该平台首先是为研究和训练而构建：预装 ML 框架、多 GPU 集群，以及更偏向严肃训练运行而非随意实验的支持。**路透社和彭博社于 2026-08-31 报道，Anthropic 与 Lambda 签署了一份据报道价值 350 亿美元的云计算协议**，与通过得克萨斯州努埃塞斯县一个 Hut 8 数据中心项目（覆盖约 350 兆瓦）上线的英伟达 GPU 算力相关联——报道中未披露确切的 GPU 数量、合同期限，以及 Anthropic、Lambda、英伟达和 Hut 8 之间义务如何分摊。这一规模是 GPU 专业化云服务商如今在争夺严肃生产负载、而不仅仅是研究人员副业项目的最清晰信号。',
+        bestFor: '希望获得具有预配置环境和零 egress 费用的 GPU 优先平台的 ML 研究人员和运行严肃训练负载的团队。',
+        avoidIf: '你需要小型、灵活的单 GPU 入门点——Lambda 的 SXM 层级仅限 8 GPU，与 CoreWeave 面临同样的权衡。',
+        costNote: '据报道的 350 亿美元 Anthropic 协议（条款未披露）是一个规模信号，而不是对小买家保证的价格优势——Lambda 公开的自助服务价格才是较小 AI 公司实际会支付的价格。',
+      },
+      googleCloud: {
+        id: 'google-cloud',
+        title: 'Google Cloud 是 TPU 和 Google AI 技术栈的最佳选择吗？',
+        content:
+          'Google Cloud 的重点不在于"Google 有 GPU"——本页每家服务商都有 GPU。**当 AI 负载真正能从 Google 的加速器和 AI 平台——TPU——中受益时，Google Cloud 就变得特别有吸引力。** [Google Cloud](https://cloud.google.com/compute/docs/gpus) 是本页唯一在自有 H100 实例（A3 系列，a3-highgpu-8g，按需约 $80-90/小时——每 GPU $9-11.50/小时——持续负载可享承诺使用折扣）之外，还提供 TPU 作为 GPU 替代方案的服务商。除了 TPU，其差异化因素还包括面向 ML 流水线的 [Vertex AI](https://cloud.google.com/vertex-ai)、Google 的网络骨干、已在此存储数据的团队所依赖的 BigQuery 数据生态系统，以及基于 Google 自有模型构建的团队所依赖的 Gemini 模型生态系统。',
+        bestFor: '正在评估 TPU 作为 GPU 替代方案，或已在 Vertex AI、BigQuery 或 Gemini 生态系统上标准化的团队。',
+        avoidIf: '你对 TPU 没有兴趣，只需要 GPU——Google Cloud 的按需 GPU 价格高于 DigitalOcean、RunPod 或 AWS 的按需价格。',
+        costNote: 'A3 系列的按需价格报告因来源和承诺程度不同而波动范围比这里大多数服务商更大——在做预算前，请核实你所在具体地区和机型的当前价格。',
+      },
+      microsoftAzure: {
+        id: 'microsoft-azure',
+        title: 'Microsoft Azure 是以 Microsoft 为中心的 AI 的最佳选择吗？',
+        content:
+          '**Azure 拥有本页最高的按需每 GPU 价格，但即便其原始 GPU 价格不是最低的，它仍可能因一个具体理由而值得选择：[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)。** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 实例按需每 GPU 约 $11-13/小时——完整 8 GPU 节点约为 $98/小时，尽管标价的每 GPU 价格更高，但在节点层面与 AWS 和 Google Cloud 相当。除了 OpenAI 访问之外，Azure 的优势还在于企业身份认证（Active Directory）、Microsoft 365 集成、现有企业采购关系，以及面向已经在本地运行 Microsoft 技术栈负载的企业的混合基础设施。',
+        bestFor: '产品依赖 Azure OpenAI Service 的公司，或正在将采购整合到单一供应商的现有 Microsoft 企业客户。',
+        avoidIf: '你没有对 Azure OpenAI Service 或 Microsoft 生态的依赖——其每 GPU 价格是本页最高的，而对纯 GPU 负载没有任何补偿性优势。',
+        costNote: '在完整 8 GPU 节点层面，Azure 约 $98/小时 的价格与 AWS 和 Google Cloud 接近——更高的标价每 GPU 价格，主要影响的是租用单个或部分 GPU 而非整个节点的团队。',
+      },
+      oracleCloud: {
+        id: 'oracle-cloud',
+        title: 'Oracle Cloud Infrastructure 是被低估的 AI 云吗？',
+        content:
+          '**Oracle Cloud Infrastructure 对于非常在意大型 AI 负载基础设施经济性的公司来说是一个严肃的选项——这个不太符合预期的选择为本对比带来了真正不同的视角。** [OCI](https://www.oracle.com/cloud/compute/gpu/) 在所有地区对按需 H100 统一收取每 GPU $10/小时——不存在按地区变化的价格差异——而 8x H100 裸金属节点（BM.GPU.H100.8）为 $80/小时，明显低于 AWS、Azure 和 Google Cloud 约 $98/小时的节点价格。OCI 每月还包含 10 TB 的免费出站流量（超出后才收取 egress 费用）——这是这里所有超大规模云服务商中最便宜的 egress（相比 AWS/Azure/Google Cloud 的 100 GB）——并为多节点训练提供 RDMA 集群网络。除了算力之外，OCI 在企业数据库负载（Oracle Database、数据仓库）方面的传统优势，对已经运行 Oracle 相关企业系统、希望在同一平台上部署 AI 基础设施的公司具有特别吸引力。Oracle 的 Universal Credits 计划为更大规模的年度承诺提供协商性的批量折扣，但折扣比例并未以标准表格公开。',
+        bestFor: '运行大型训练集群、统一每 GPU 价格、低 egress 费用和 RDMA 网络比广泛的托管 AI 服务目录更重要的公司，以及已经在 Oracle 数据库/企业技术栈上的公司。',
+        avoidIf: '你需要 Oracle 特有的托管 AI 目录广度，或者想要尽可能广泛的实例/地区目录——OCI 的目录比 AWS 或 Google Cloud 更窄。',
+        costNote: '10 TB 的免费 egress 额度是 AWS、Azure 和 Google Cloud 100 GB 免费额度的 100 倍——免费额度是所有超大规模云服务商中调整最频繁的条款之一，做预算前请核实当前额度。',
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'DigitalOcean 对比其余 7 家：正面决策对比',
+        content:
+          '八条一句话决策规则，每条都直接回答一个具体的"DigitalOcean 对比 X"问题。',
+        subsections: [
+          {
+            title: 'DigitalOcean 对比 AWS',
+            text: '如果你是想在没有企业销售流程的情况下获得 H100 访问的小团队，选择 DigitalOcean。如果你需要 Bedrock、SageMaker、多区域部署，或特定合规认证，选择 AWS。',
+          },
+          {
+            title: 'DigitalOcean 对比 CoreWeave',
+            text: '如果你需要 1-2 块 GPU 以及计算之外的通用云服务，选择 DigitalOcean。如果你正在以密集 8 GPU 节点和零 egress 费用足以抵消 CoreWeave 缺乏小型入门层级的规模进行训练，选择 CoreWeave。',
+          },
+          {
+            title: 'DigitalOcean 对比 RunPod',
+            text: '如果控制台打磨和可预测的打包价格比在小时费率上省下最后几美分更重要，选择 DigitalOcean。如果你想要最低的主流按需费率、缩容至零的 serverless 计费或零 egress 费用，并能容忍 Community Cloud 的可用性波动，选择 RunPod。',
+          },
+          {
+            title: 'DigitalOcean 对比 Lambda',
+            text: '如果你需要灵活的单个或少量 GPU 配置，选择 DigitalOcean。如果你的负载以训练为主，并能从具有预配置 ML 环境的 GPU 专业化平台中受益，选择 Lambda。',
+          },
+          {
+            title: 'DigitalOcean 对比 Google Cloud',
+            text: '如果你对 TPU 没有兴趣，只想以更低价格获得 GPU，选择 DigitalOcean。如果你的负载确实能从 TPU 中受益，或你已经在 Vertex AI 上标准化，选择 Google Cloud。',
+          },
+          {
+            title: 'DigitalOcean 对比 Azure',
+            text: '对于没有 Microsoft 依赖的纯 GPU 负载，选择 DigitalOcean。如果你的产品依赖 Azure OpenAI Service，或你正在整合 Microsoft 企业采购，选择 Azure。',
+          },
+          {
+            title: 'DigitalOcean 对比 Oracle Cloud',
+            text: '对于小团队的第一个 GPU 负载，选择 DigitalOcean。当你运行大型、持续的训练负载，且 OCI 的统一价格和 10 TB 免费 egress 开始超过 DigitalOcean 的简单性优势时，选择 Oracle Cloud Infrastructure。',
+          },
+        ],
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: '可能改变决策的隐藏成本',
+        content:
+          '**最低的 GPU 小时费率未必是运行 AI 应用的最低总成本。** 在仅凭标价决定服务商之前，请检查以下每一项。',
+        items: [
+          '**数据传输（egress）：** 本页最大的隐藏成本——CoreWeave、RunPod 和 Lambda 收取 $0；AWS、Azure 和 Google Cloud 在 100 GB 免费额度后收取 $0.087-0.12/GB；DigitalOcean 和 Oracle Cloud 处于中间水平，拥有更大的打包/免费额度。',
+          '**存储和持久卷：** 这里每家服务商都与计算分开计费——请查看每 GB-月的费率，而不仅仅是 GPU 费率。',
+          '**快照和备份：** 即使 GPU 实例已停止，也常常按与活跃存储相同的费率计费。',
+          '**闲置 GPU：** 本页每家服务商都会对运行中（在 DigitalOcean 上则是已开机）的实例收费，无论它是否在做有用的工作。',
+          '**最小计费单位：** RunPod 和 DigitalOcean 按秒计费，但在假设真正的按秒粒度之前，请检查每家服务商的最低计费门槛。',
+          '**网络（egress 之外）：** 多 GPU/多节点训练的节点间带宽，在规模化时可能比 GPU 价格本身更重要——这正是 CoreWeave 和 OCI 所宣传的 RDMA 网络的意义所在。',
+          '**区域可用性：** 宣传的按需费率可能并非在每个地区都可用，或者恰好在你需要时 GPU 库存不可用。',
+          '**预留/承诺使用义务：** 公开的最便宜费率往往被锁定在 1-3 年的承诺之内——在与其他服务商的按需费率比较之前，请先阅读期限条款。',
+          '**支持：** 企业级支持（AWS、Azure、Google Cloud）已计入更高的费率；GPU 专业化服务商（RunPod、Lambda）在入门层级往往更多依赖社区/工单支持。',
+          '**工程时间：** 超大规模云服务商上的 IAM/VPC 配置、Kubernetes 编排或多区域部署复杂度是真实成本，即使它从未出现在账单上。',
+        ],
+      },
+      trainingVsInference: {
+        id: 'training-vs-inference',
+        title: '训练 对比 推理：最佳服务商各不相同',
+        content:
+          '正确的服务商取决于负载是训练模型还是提供服务——在没有先检查这一区分之前，不要为两者都选择同一家服务商。',
+        items: [
+          '**最适合训练：** [CoreWeave](#coreweave)、[AWS](#aws)、[Google Cloud](#google-cloud)、[Lambda](#lambda)——为持续、分布式运行而构建的密集多 GPU 节点和网络。',
+          '**最适合推理：** [DigitalOcean](#digitalocean)、[RunPod](#runpod)、[CoreWeave](#coreweave)——灵活的单个/少量 GPU 规模（DigitalOcean、RunPod）或缩容至零的 serverless（RunPod），匹配可变的请求量。',
+          '**最适合实验：** [RunPod](#runpod)、[DigitalOcean](#digitalocean)——最便宜的入门点，最快的注册，无需企业流程。',
+          '**最适合企业级生产：** [AWS](#aws)、[Azure](#microsoft-azure)、[Google Cloud](#google-cloud)——生产部署最终需要的合规认证、SLA 和托管 AI 服务。',
+          '**最适合超大规模分布式负载：** [CoreWeave](#coreweave)、[AWS](#aws)、[Google Cloud](#google-cloud)、[Oracle Cloud Infrastructure](#oracle-cloud)——面向多节点规模的密集节点架构和 RDMA/InfiniBand 级网络。',
+        ],
+      },
+      howMuchGpu: {
+        id: 'how-much-gpu',
+        title: '你到底需要多少云 GPU？',
+        content:
+          '基于本页各层级截至 2026-09-05 已确认的最低按需费率估算预算的粗略场景——由于云 GPU 费率经常变动，做出承诺前请核实当前价格。',
+        columns: ['场景', 'GPU 数量', '示例月度成本（730小时）'],
+        rows: [
+          {
+            场景: '小型 AI 创业公司（轻度推理）',
+            'GPU 数量': '1 块',
+            '示例月度成本（730小时）': '~$2,110-2,475（RunPod/DigitalOcean H100）',
+          },
+          {
+            场景: '成长中的推理业务',
+            'GPU 数量': '1-4 块',
+            '示例月度成本（730小时）': '~$2,110-9,900，视服务商和数量而定',
+          },
+          {
+            场景: '微调',
+            'GPU 数量': '1-8 块',
+            '示例月度成本（730小时）': '~$2,110-19,800，视服务商和数量而定',
+          },
+          {
+            场景: '大模型训练',
+            'GPU 数量': '8 块以上',
+            '示例月度成本（730小时）': '~$18,000-40,000+（8 GPU 节点服务商：CoreWeave、Lambda、AWS）',
+          },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '在最便宜的服务商上，1 块 GPU 的推理负载每月大约花费 $2,100-2,500，而 8 块以上 GPU 的训练负载每月花费 $18,000-40,000+（视服务商而定）——在比较小时费率之前，先按 GPU 数量估算预算。',
+          },
+        ],
+      },
+      rentVsBuy: {
+        id: 'rent-vs-buy',
+        title: '什么时候应该租用 GPU 而不是购买？',
+        content:
+          '租用和拥有解决的是不同的问题——将选择与负载实际运行的持续程度相匹配，而不是单看哪个听起来更便宜。',
+        items: [
+          '**租用适用于：** 需求不可预测、仍在实验阶段、只是临时需要 GPU、需要最新硬件但不想做资本支出，或不想管理物理基础设施。',
+          '**购买适用于：** 利用率持续较高、负载可预测且稳定、GPU 接近 24/7 运行、数据驻留要求排除了云存储，或你已经具备托管硬件的基础设施。',
+          '关于这一决策的购买一侧——在自有 GPU 上运行模型的零件清单、真实成本和硬件选项——请参见[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026)和[本地 AI 工作站搭建指南](/power-local-llm/local-ai-workstation-build-guide-2026)。',
+        ],
+      },
+      finalRanking: {
+        id: 'final-ranking',
+        title: '最终排名',
+        content:
+          '不是简单的 1 到 8 的名单——每家服务商都是按其真正胜出的具体任务来排名，这是对 8 家并非在每个维度都直接对抗的服务商进行排名的更站得住脚的方式。',
+        items: [
+          '**小型 AI 公司的总体最佳选择：** [DigitalOcean](#digitalocean)',
+          '**最佳 GPU 性价比：** [RunPod](#runpod)',
+          '**最佳大规模 AI 基础设施：** [CoreWeave](#coreweave)',
+          '**最佳研究导向 GPU 云：** [Lambda](#lambda)',
+          '**最佳企业生态系统：** [AWS](#aws)',
+          '**最佳 TPU/Google AI 生态系统：** [Google Cloud](#google-cloud)',
+          '**最佳 Microsoft AI 生态系统：** [Microsoft Azure](#microsoft-azure)',
+          '**最佳企业替代方案：** [Oracle Cloud Infrastructure](#oracle-cloud)',
+        ],
+      },
+      finalVerdict: {
+        id: 'final-verdict',
+        title: '最终结论：你的 AI 公司应该选择哪家云？',
+        content:
+          '这是一棵决策树，而非单一的通用答案：如果你是小型创业公司，从 **[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)** 开始。如果 GPU 实验和尽可能低的费率才是优先事项，转向 **[RunPod](https://www.runpod.io/)**。如果你正转向大规模训练，转向 **[CoreWeave](https://www.coreweave.com/)**（如果你的负载以研究为主，则转向 [Lambda](https://lambda.ai/)）。如果企业基础设施——合规、托管 AI 目录，或特定的生态系统依赖——是决定性因素，根据你已经身处的生态系统，转向 **[AWS](https://aws.amazon.com/ec2/instance-types/p5/)**、**[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)** 或 **[Google Cloud](https://cloud.google.com/compute/docs/gpus)**。如果大规模的成本敏感型企业基础设施是优先事项，转向 **[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)**。对本页大多数读者——一家没有已被其他方向牵引的特定企业依赖的小型或成长中 AI 公司——而言，[DigitalOcean 的 GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) 是正确的起点。',
+      },
+      sources: {
+        id: 'sources',
+        title: '资料来源',
+        items: [
+          '[DigitalOcean GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) — 按需 H100 价格 $3.39-4.41/小时，12 个月预留价格约 $2.50/小时起，于 2026-09-05 通过网络搜索核实。',
+          '[AWS EC2 P5 实例类型](https://aws.amazon.com/ec2/instance-types/p5/) — p5.48xlarge 按需 $55.04/小时（每 GPU $6.88/小时），Capacity Blocks 每 GPU $4.72-5.19/小时，于 2026-09-05 通过网络搜索核实。',
+          '[CoreWeave GPU 价格](https://www.coreweave.com/pricing) — H100 8 GPU 节点 $49.24/小时（每 GPU $6.16/小时），H200 节点 $50.44/小时，spot -40-60%，于 2026-09-05 通过网络搜索核实。',
+          '[RunPod 价格](https://www.runpod.io/pricing) — Secure Cloud H100 PCIe $2.89/小时，Community Cloud RTX 4090 $0.34/小时，serverless H100 $4.55/小时，于 2026-09-05 通过网络搜索核实。',
+          '[Lambda GPU Cloud 价格](https://lambda.ai/service/gpu-cloud) — H100 PCIe $3.29/小时，H100 SXM $4.29/小时，A100 40GB $1.99/小时，A100 80GB $2.79/小时，于 2026-09-05 通过网络搜索核实。',
+          '[路透社/彭博社：Anthropic-Lambda 350 亿美元云协议](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 报道于 2026-08-31，条款（GPU 数量、合同期限）未披露。',
+          '[Google Cloud GPU 价格](https://cloud.google.com/compute/docs/gpus) — A3 系列（a3-highgpu-8g）按需约 $80-90/小时（每 GPU $9-11.50/小时），于 2026-09-05 通过网络搜索核实。',
+          '[Microsoft Azure HPC/GPU 虚拟机](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 按需每 GPU 约 $11-13/小时，完整 8 GPU 节点约 $98/小时，于 2026-09-05 通过网络搜索核实。',
+          '[Oracle Cloud Infrastructure GPU 计算](https://www.oracle.com/cloud/compute/gpu/) — 按需 H100 每 GPU 统一 $10/小时，BM.GPU.H100.8 节点 $80/小时，10 TB 免费 egress 之后 $0.0085/GB，于 2026-09-05 通过网络搜索核实。',
+          'CoreWeave、RunPod 和 Lambda 的零 egress 费用政策 — 于 2026-09-05 通过网络搜索对照服务商定价页面和第三方比较来源核实。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: 'DigitalOcean 适合 AI 公司吗？',
+            a: '是的，特别是对小型和成长中的 AI 团队而言。DigitalOcean GPU Droplets 按需提供 H100 访问，起价 $3.39-4.41/小时——是本页最便宜的之一——控制台最简单，且无需企业销售流程。它不适合密集多节点训练、TPU 负载，或需要大型托管 AI 服务目录的团队。',
+          },
+          {
+            q: '对 AI 来说，DigitalOcean 比 AWS 便宜吗？',
+            a: '是的，对纯粹的按需 H100 访问而言——DigitalOcean 起价 $3.39-4.41/小时，而 AWS 按需为每 GPU $6.88/小时，大约是一半的价格。一旦需要更广泛的托管 AI 服务目录、多区域部署，或特定合规认证，AWS 就会成为更好的选择。',
+          },
+          {
+            q: 'RunPod 比 DigitalOcean 便宜吗？',
+            a: 'RunPod Secure Cloud 的 H100 费率（$2.89/小时）略低于 DigitalOcean 的按需费率（$3.39-4.41/小时），而且 RunPod 相对 DigitalOcean 的打包加超额模式也不收取 egress 费用。DigitalOcean 的优势在于控制台的简单性，以及比 RunPod 更便宜的 Community Cloud 层级更稳定的可用性。',
+          },
+          {
+            q: 'CoreWeave 比 AWS 便宜吗？',
+            a: '按每 GPU 计算，CoreWeave 的 H100 费率（每 GPU $6.16/小时）接近 AWS（每 GPU $6.88/小时），但 CoreWeave 不收取 egress 费用，而 AWS 在 100 GB 免费额度后收取 $0.09/GB——对于数据传输密集型负载，即使 GPU 费率相近，CoreWeave 的总成本也可能明显更低。不过，CoreWeave 只以 8 GPU 节点为单位出售 GPU，因此小型负载无法在部分节点上享受这一更低的每 GPU 费率。',
+          },
+          {
+            q: '最便宜的云 GPU 是什么？',
+            a: '在这里比较的 8 家服务商中，RunPod 的 Community Cloud 和 Secure Cloud 层级，以及 DigitalOcean 的按需 H100 费率，是最便宜的主流选项，两者对于 H100 都在 $2.89-4.41/小时的区间内。RunPod、CoreWeave 和 Lambda 也不收取 egress 费用，这进一步降低了数据传输密集型负载的总成本，即便每小时的 GPU 费率与超大规模云服务商相近。',
+          },
+          {
+            q: '哪家云最适合 AI 推理？',
+            a: 'DigitalOcean、RunPod 和 CoreWeave。DigitalOcean 和 RunPod 提供灵活、低成本的单个/少量 GPU 规模，适合典型的推理请求量；RunPod 的 serverless 层级专门按秒计费，并在请求之间缩容至零，比固定的按小时租用更适合可变的推理流量。',
+          },
+          {
+            q: '哪家云最适合 LLM 训练？',
+            a: 'CoreWeave、AWS、Google Cloud 和 Lambda。这四家提供密集的多 GPU 节点架构（CoreWeave 和 Lambda 的 SXM 层级最少 8 块 GPU）以及为持续、分布式训练运行而构建的网络，而不是推理导向服务商所优化的灵活单 GPU 规模。',
+          },
+          {
+            q: '哪家云最适合 AI 创业公司？',
+            a: '对大多数小型 AI 创业公司来说是 DigitalOcean——最便宜的按需 H100 访问，加上最简单的接入流程。如果绝对最低的费率和 serverless 计费比控制台打磨和稳定的可用性更重要，RunPod 是接下来值得比较的选项。',
+          },
+          {
+            q: 'AWS 的额外成本对 AI 负载来说值得吗？',
+            a: '对于需要 AWS 托管 AI 服务目录（Bedrock、SageMaker）、多区域部署，或 GPU 专业化云服务商无法提供的特定合规认证（HIPAA、FedRAMP）的公司来说，值得。没有这些具体需求之一，相对 DigitalOcean 大约 2 倍的每 GPU 溢价，对纯 GPU 负载没有任何补偿性优势。',
+          },
+          {
+            q: 'AI 创业公司应该使用超大规模云还是 GPU 专业化云？',
+            a: 'GPU 专业化云（DigitalOcean、RunPod、CoreWeave、Lambda）通常是小型 AI 创业公司更好的起点——更便宜的 GPU 访问、更简单的接入流程，以及（特别是 CoreWeave、RunPod 和 Lambda）零 egress 费用。当你需要其特定的托管 AI 服务、合规认证，或多区域企业基础设施时，再迁移到超大规模云（AWS、Azure、Google Cloud）——而不是默认就用。',
+          },
+          {
+            q: '购买还是租用 AI GPU 更便宜？',
+            a: '这取决于利用率。对于不可预测的需求、实验、临时需求，或想要最新硬件但不想做资本支出的情况，租用更便宜。一旦利用率持续较高、GPU 接近 24/7 运行，购买就会变得更便宜——关于这一比较中自有硬件的一侧，请参见[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 拥有自有硬件而非租用云 GPU 的零件和价格。',
+          '[本地 AI 工作站搭建指南](/power-local-llm/local-ai-workstation-build-guide-2026) — 本地 AI 主机的完整搭建指南，是本页所有服务商的购买替代方案。',
+          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — 一篇独立的网站托管对比文章，而非 AI/GPU 云算力对比。',
+        ],
+      },
+    },
+  },
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Overview & Reference',
+    title: 'DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: أفضل سحابة لشركات الذكاء الاصطناعي في 2026',
+    seoTitle: 'DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod 2026',
+    intro:
+      'أرخص وحدة GPU ليست بالضرورة أرخص بنية تحتية للذكاء الاصطناعي. يجب على شركة الذكاء الاصطناعي التي تختار سحابة أن توازن بين سعر GPU وتوافره، وما إذا كان الحمل تدريباً أم استدلالاً، والشبكة والتخزين ورسوم نقل البيانات وتعقيد النشر وقابلية التوسع وخدمات المؤسسات والدعم — لا سعر الساعة المعلن فقط على صفحة الأسعار. تقارن هذه الصفحة 8 مزودين يعكسون الواقع الفعلي لهذا السوق: [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) و[AWS](https://aws.amazon.com/ec2/instance-types/p5/) كأكثر نقطتي انطلاق شيوعاً، و[CoreWeave](https://www.coreweave.com/) و[RunPod](https://www.runpod.io/) و[Lambda](https://lambda.ai/) كمنافسين متخصصين في GPU، و[Google Cloud](https://cloud.google.com/compute/docs/gpus) و[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) و[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) كبدائل مؤسسية. الإجابة المختصرة: DigitalOcean هي أفضل نقطة انطلاق لمعظم شركات الذكاء الاصطناعي الصغيرة والنامية، وAWS هي الخيار الافتراضي الصحيح عندما يصبح حجم المؤسسة أو كتالوج خدماتها أكثر أهمية، بينما تفوز الشركات الست الأخرى كل واحدة لسبب محدد مفصّل أدناه.',
+    metaDescription:
+      'مقارنة 8 مزودي سحابة رائدين للذكاء الاصطناعي — DigitalOcean وAWS وCoreWeave وRunPod وLambda وGoogle Cloud وAzure وOracle Cloud — من حيث سعر GPU والتوافر وملاءمة الحمل، تم التحقق بتاريخ 2026-09-05.',
+    twitterDescription:
+      'DigitalOcean H100: $3.39/ساعة. RunPod: $2.89/ساعة. CoreWeave: $6.16/ساعة (egress مجاني). وقّعت Lambda للتو صفقة بقيمة $35 مليار مع Anthropic. إليك ما تكلفه 8 سحابات فعلياً لشركة ذكاء اصطناعي.',
+    affiliateDisclosure: true,
+    audience:
+      'المؤسسون والقادة التقنيون في شركات الذكاء الاصطناعي الذين يختارون منصة سحابية لتدريب أو تشغيل النماذج، ويقارنون بين منصات hyperscaler والسحابات المتخصصة في GPU من حيث السعر والتوافر وملاءمة الحمل بدلاً من مقارنة استضافة ويب عامة.',
+    readTime: '15 دقيقة للقراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'أفضل سحابة لشركات الذكاء الاصطناعي',
+    targetKeywords: [
+      'أفضل سحابة لشركات الذكاء الاصطناعي 2026',
+      'digitalocean مقابل aws مقابل coreweave مقابل runpod',
+      'أرخص gpu سحابي 2026',
+      'coreweave مقابل aws مقابل lambda',
+      'runpod مقابل digitalocean',
+    ],
+    leadAnswerBlock:
+      '**لشركة ذكاء اصطناعي صغيرة أو نامية، تُعد [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) أفضل نقطة انطلاق — أبسط لوحة تحكم وأسعار H100 تنافسية بدءاً من $3.39-4.41/ساعة عند الطلب. أما للذكاء الاصطناعي على نطاق المؤسسات مع كتالوج خدمات واسع، فإن [AWS](https://aws.amazon.com/ec2/instance-types/p5/) هي المرجع بين منصات hyperscaler بسعر $6.88/ساعة لكل GPU عند الطلب. تستحق [CoreWeave](https://www.coreweave.com/) و[RunPod](https://www.runpod.io/) و[Lambda](https://lambda.ai/) — وهي سحابات متخصصة في GPU — النظر فيها للتدريب على نطاق واسع، والتجريب الرخيص، وأبحاث تعلم الآلة على التوالي. أما [Google Cloud](https://cloud.google.com/compute/docs/gpus) و[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) و[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) فهي بدائل مؤسسية، كل منها مبرر بسبب محدد: TPU، أو Azure OpenAI Service، أو الاقتصاد السعري الأكثر استقراراً. لا يوجد فائز واحد بين الثمانية — طابقوا المزود مع حجم فريقكم وطبيعة الحمل، لا مع أدنى سعر معلن فقط.** تبقى جميع الأسعار في هذه الصفحة بالدولار الأمريكي، لأن حوسبة GPU السحابية تُفوتر بالدولار بشكل موحد عالمياً لدى المزودين الثمانية.',
+    affiliateLinks: [
+      {
+        url: 'https://www.digitalocean.com/products/gpu-droplets',
+        productName: 'DigitalOcean GPU Droplets',
+        productCategory: 'cloud-gpu',
+        priceRange: '3.39-4.41/hr (H100)',
+        label: 'التحقق من أسعار DigitalOcean GPU Droplets',
+      },
+      {
+        url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+        productName: 'AWS EC2 P5 (H100)',
+        productCategory: 'cloud-gpu',
+        priceRange: '6.88/GPU-hr on-demand',
+        label: 'التحقق من أسعار AWS EC2 P5',
+      },
+    ],
+    quickAnswerTop: {
+      ar: {
+        question: 'أي مزود سحابي هو الأفضل لشركة ذكاء اصطناعي؟',
+        answer:
+          'DigitalOcean هي أفضل نقطة انطلاق لشركة ذكاء اصطناعي صغيرة أو نامية — أرخص وصول H100 عند الطلب ($3.39-4.41/ساعة) مع أبسط لوحة تحكم. تصبح AWS الخيار الصحيح عندما يكون حجم المؤسسة، أو كتالوج خدمات ذكاء اصطناعي مُدار واسع (Bedrock وSageMaker)، أو الامتثال متعدد المناطق مطلوباً. تُعد CoreWeave وRunPod وLambda سحابات متخصصة في GPU تقل أسعارها عن منصات hyperscaler ولا تفرض عادةً رسوم egress — RunPod للتجريب الرخيص، وCoreWeave للبنية التحتية التدريبية على نطاق واسع، وLambda لأبحاث تعلم الآلة (ومع صفقة مُبلَّغ عنها بقيمة $35 مليار مع Anthropic، لنطاق إنتاج جاد أيضاً). تكمل Google Cloud وMicrosoft Azure وOracle Cloud Infrastructure الصورة للوصول إلى TPU، وAzure OpenAI Service، وأكثر بنية تسعير GPU مؤسسية استقراراً على التوالي.',
+        bullets: [
+          'DigitalOcean H100: $3.39-4.41/ساعة عند الطلب — الأفضل لفرق الذكاء الاصطناعي الصغيرة',
+          'AWS EC2 P5 (H100): $6.88/ساعة لكل GPU عند الطلب — أفضل نظام بيئي مؤسسي',
+          'CoreWeave H100: $6.16/ساعة لكل GPU (عقد 8 وحدات GPU فقط)، egress مجاني — الأفضل للتدريب على نطاق واسع',
+          'RunPod H100: من $2.89/ساعة (Secure Cloud)، egress مجاني — أفضل قيمة مقابل السعر',
+          'Lambda H100: من $3.29/ساعة، egress مجاني — الأفضل لأبحاث تعلم الآلة؛ صفقة مُبلَّغ عنها بقيمة $35 مليار مع Anthropic (أغسطس 2026)',
+          'Google Cloud وAzure وOracle Cloud: بدائل مؤسسية لـTPU وAzure OpenAI Service واقتصاد السعر الثابت',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'أي سحابة هي الأفضل لشركة ذكاء اصطناعي؟', anchor: '#introduction' },
+      { label: 'إجابة سريعة: مقارنة 8 مزودين', anchor: '#quick-answer' },
+      { label: 'اختياراتنا حسب نوع الشركة', anchor: '#picks-by-type' },
+      { label: 'جدول المقارنة الرئيسي', anchor: '#master-comparison' },
+      { label: 'أسعار GPU: التكلفة الفعلية لحوسبة الذكاء الاصطناعي', anchor: '#gpu-pricing-economics' },
+      { label: 'DigitalOcean: الأفضل لشركات الذكاء الاصطناعي الصغيرة', anchor: '#digitalocean' },
+      { label: 'AWS: أفضل سحابة ذكاء اصطناعي مؤسسية', anchor: '#aws' },
+      { label: 'CoreWeave: الأفضل للذكاء الاصطناعي على نطاق واسع', anchor: '#coreweave' },
+      { label: 'RunPod: أفضل سحابة GPU من حيث القيمة', anchor: '#runpod' },
+      { label: 'Lambda: الأفضل لباحثي تعلم الآلة', anchor: '#lambda' },
+      { label: 'Google Cloud: الأفضل لـTPU', anchor: '#google-cloud' },
+      { label: 'Microsoft Azure: الأفضل للذكاء الاصطناعي المتمحور حول Microsoft', anchor: '#microsoft-azure' },
+      { label: 'Oracle Cloud Infrastructure: الخيار غير المقدّر بما يكفي', anchor: '#oracle-cloud' },
+      { label: 'DigitalOcean مقابل السبعة الآخرين', anchor: '#head-to-head' },
+      { label: 'التكاليف الخفية التي قد تغيّر القرار', anchor: '#hidden-costs' },
+      { label: 'التدريب مقابل الاستدلال: أفضل مزود مختلف', anchor: '#training-vs-inference' },
+      { label: 'كم من GPU السحابي تحتاجون فعلياً؟', anchor: '#how-much-gpu' },
+      { label: 'الاستئجار مقابل الشراء: متى تمتلكون أجهزتكم الخاصة', anchor: '#rent-vs-buy' },
+      { label: 'الترتيب النهائي', anchor: '#final-ranking' },
+      { label: 'الخلاصة النهائية وشجرة القرار', anchor: '#final-verdict' },
+      { label: 'المصادر', anchor: '#sources' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**تُعد [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) أفضل نقطة انطلاق لشركة ذكاء اصطناعي صغيرة** — $3.39-4.41/ساعة عند الطلب لـH100، أبسط لوحة تحكم بين الثمانية.',
+          '**تُعد [AWS](https://aws.amazon.com/ec2/instance-types/p5/) المرجع بين منصات hyperscaler** — $6.88/ساعة لكل GPU عند الطلب، تشتري أوسع كتالوج لخدمات الذكاء الاصطناعي المُدارة وأعمق قاعدة امتثال.',
+          '**لا تفرض [CoreWeave](https://www.coreweave.com/) و[RunPod](https://www.runpod.io/) و[Lambda](https://lambda.ai/) أي رسوم egress** — ميزة تكلفة حقيقية مقارنة بكل منصة hyperscaler هنا، التي تفرض $0.087-0.12/جيجابايت.',
+          '**وقّعت Lambda صفقة سحابية مُبلَّغ عنها بقيمة $35 مليار مع Anthropic (رويترز/بلومبرغ، 2026-08-31)** — لم تعد السحابات المتخصصة في GPU مستوى هواة بعد الآن.',
+          '**تفوز [Google Cloud](https://cloud.google.com/compute/docs/gpus) و[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) و[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) كل منها لسبب محدد** — TPU وAzure OpenAI Service وأكثر اقتصاد GPU مؤسسي استقراراً على التوالي، لا السعر الخام.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'حقائق سريعة',
+        items: [
+          '**أرخص H100 عند الطلب إجمالاً:** RunPod Community Cloud وDigitalOcean، كلاهما من حوالي $3.39-3.99/ساعة حسب الإعداد.',
+          '**أرخص egress:** تفرض CoreWeave وRunPod وLambda جميعها $0 على نقل البيانات الصادر — يفرض كل منصة hyperscaler هنا $0.087-0.12/جيجابايت بعد حد مجاني قدره 100 جيجابايت.',
+          '**أكبر صفقة فردية مُعلَنة:** صفقة Lambda السحابية المُبلَّغ عنها بقيمة $35 مليار مع Anthropic (رويترز، 2026-08-31).',
+          '**GPU الوحيدة التي تُباع حصراً في عُقد بـ8 وحدات:** H100/H200 من CoreWeave ومثيلات SXM من Lambda — تدفعون ثمن 8 وحدات GPU حتى لو احتجتم إلى أقل.',
+          '**أكثر تسعير مؤسسي استقراراً:** Oracle Cloud Infrastructure، $10/ساعة لكل GPU ثابت بغض النظر عن المنطقة.',
+        ],
+      },
+      introduction: {
+        id: 'introduction',
+        title: 'أي سحابة هي الأفضل لشركة ذكاء اصطناعي؟',
+        content:
+          'أرخص وحدة GPU ليست بالضرورة أرخص بنية تحتية للذكاء الاصطناعي. قبل مقارنة أسعار الساعة، يجب على شركة الذكاء الاصطناعي أن توازن بين: سعر GPU، وتوافر GPU (هل يمكن فعلاً الحصول على H100 عند الحاجة إليه)، وما إذا كان الحمل تدريباً أم استدلالاً، وجودة الشبكة، وتكلفة التخزين، ورسوم نقل البيانات (egress)، وتعقيد النشر، وقابلية التوسع، وخدمات المؤسسات، وجودة الدعم. الإجابة الفورية: [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) لفريق صغير يريد البساطة وتكلفة يمكن التنبؤ بها، و[AWS](https://aws.amazon.com/ec2/instance-types/p5/) عندما يهم حجم المؤسسة أكثر من السعر، و[CoreWeave](https://www.coreweave.com/)/[RunPod](https://www.runpod.io/)/[Lambda](https://lambda.ai/) لاقتصاد GPU متخصص برسوم egress صفرية، و[Google Cloud](https://cloud.google.com/compute/docs/gpus)/[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)/[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) لسبب مؤسسي محدد لكل منها. تتناول بقية هذه الصفحة الأدلة الداعمة لهذه الإجابة.',
+      },
+      quickAnswer: {
+        id: 'quick-answer',
+        title: 'إجابة سريعة: أفضل مزودي السحابة لشركات الذكاء الاصطناعي',
+        content:
+          'ثمانية مزودين، ثماني مهام مختلفة. هذا الجدول هو النسخة السريعة — تتعمق الأقسام أدناه في كل مزود.',
+        columns: ['المزود', 'الأنسب لـ', 'الميزة الرئيسية', 'نقطة الضعف الرئيسية'],
+        rows: [
+          {
+            المزود: '[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)',
+            'الأنسب لـ': 'الشركات الناشئة وفرق الذكاء الاصطناعي الصغيرة',
+            'الميزة الرئيسية': 'البساطة + أسعار GPU تنافسية',
+            'نقطة الضعف الرئيسية': 'نظام بيئي أصغر',
+          },
+          {
+            المزود: '[AWS](https://aws.amazon.com/ec2/instance-types/p5/)',
+            'الأنسب لـ': 'الذكاء الاصطناعي المؤسسي',
+            'الميزة الرئيسية': 'نظام بيئي ضخم',
+            'نقطة الضعف الرئيسية': 'التعقيد / التكلفة',
+          },
+          {
+            المزود: '[CoreWeave](https://www.coreweave.com/)',
+            'الأنسب لـ': 'الذكاء الاصطناعي على نطاق واسع',
+            'الميزة الرئيسية': 'بنية تحتية وحجم GPU',
+            'نقطة الضعف الرئيسية': 'أقل عمومية',
+          },
+          {
+            المزود: '[RunPod](https://www.runpod.io/)',
+            'الأنسب لـ': 'المطورون والاستدلال',
+            'الميزة الرئيسية': 'السعر / المرونة',
+            'نقطة الضعف الرئيسية': 'أقل توجهاً نحو المؤسسات',
+          },
+          {
+            المزود: '[Lambda](https://lambda.ai/)',
+            'الأنسب لـ': 'باحثو تعلم الآلة',
+            'الميزة الرئيسية': 'منصة تركز على GPU',
+            'نقطة الضعف الرئيسية': 'نظام بيئي أصغر',
+          },
+          {
+            المزود: '[Google Cloud](https://cloud.google.com/compute/docs/gpus)',
+            'الأنسب لـ': 'أحمال الذكاء الاصطناعي/TPU',
+            'الميزة الرئيسية': 'TPU + نظام بيئي للذكاء الاصطناعي',
+            'نقطة الضعف الرئيسية': 'التعقيد',
+          },
+          {
+            المزود: '[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)',
+            'الأنسب لـ': 'المؤسسات / Microsoft',
+            'الميزة الرئيسية': 'نظام بيئي Azure + OpenAI',
+            'نقطة الضعف الرئيسية': 'التعقيد',
+          },
+          {
+            المزود: '[Oracle Cloud (OCI)](https://www.oracle.com/cloud/compute/gpu/)',
+            'الأنسب لـ': 'الذكاء الاصطناعي المؤسسي الحساس للتكلفة',
+            'الميزة الرئيسية': 'اقتصاد بنية تحتية تنافسي',
+            'نقطة الضعف الرئيسية': 'نظام بيئي أصغر للمطورين',
+          },
+        ],
+      },
+      picksByType: {
+        id: 'picks-by-type',
+        title: 'اختياراتنا حسب نوع شركة الذكاء الاصطناعي',
+        content:
+          'هذا هو الجوهر التحريري لهذه الصفحة: لا تفوز DigitalOcean بكل فئة، ولا تحتاج إلى ذلك — إنها تفوز بالفئة التي تهم معظم قراء هذه الصفحة.',
+        items: [
+          '**الأفضل لشركة ذكاء اصطناعي ناشئة صغيرة:** [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) — أرخص H100 عند الطلب، دون عملية مبيعات مؤسسية.',
+          '**الأفضل للتجريب الرخيص بـGPU:** [RunPod](https://www.runpod.io/) — Secure Cloud من $2.89/ساعة، Community Cloud أرخص من ذلك، رسوم egress صفرية.',
+          '**الأفضل لتدريب الذكاء الاصطناعي على نطاق واسع:** [CoreWeave](https://www.coreweave.com/) — عُقد HGX متخصصة بـ8 وحدات GPU مع شبكة من فئة InfiniBand.',
+          '**الأفضل لباحثي تعلم الآلة:** [Lambda](https://lambda.ai/) — منصة GPU-first، بيئات ML مُعدة مسبقاً، تدعمها الآن صفقة مُبلَّغ عنها بقيمة $35 مليار مع Anthropic.',
+          '**أفضل سحابة مؤسسية:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — أوسع كتالوج ذكاء اصطناعي مُدار وأعمق امتثال.',
+          '**الأفضل لأحمال Google/TPU:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — المزود الوحيد في هذه الصفحة الذي يوفر TPU.',
+          '**الأفضل لأحمال Microsoft/OpenAI:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — الوصول إلى Azure OpenAI Service.',
+          '**أفضل بديل لحوسبة المؤسسات الكبيرة:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — أسعار ثابتة، أرخص egress بين منصات hyperscaler.',
+        ],
+      },
+      masterComparison: {
+        id: 'master-comparison',
+        title: 'جدول المقارنة الرئيسي',
+        content:
+          'أُبقي عمداً سهل القراءة بلمحة — التفاصيل الكاملة لكل مزود موجودة في قسمه الخاص أدناه، مرتبطة من عمود المزود.',
+        columns: ['المزود', 'تركيز GPU', 'سعر H100', 'سبوت / محجوز', 'متعدد GPU', 'نقل البيانات', 'أفضل حالة استخدام'],
+        rows: [
+          {
+            المزود: '[DigitalOcean](#digitalocean)',
+            'تركيز GPU': 'ذكاء اصطناعي عام، فرق صغيرة',
+            'سعر H100': '$3.39-4.41/ساعة',
+            'سبوت / محجوز': 'محجوز 12 شهراً ~$2.50/ساعة',
+            'متعدد GPU': 'نعم، لكل Droplet',
+            'نقل البيانات': '500 جيجابايت+ مجاني، ثم $0.01/جيجابايت',
+            'أفضل حالة استخدام': 'شركات ناشئة، بساطة',
+          },
+          {
+            المزود: '[AWS](#aws)',
+            'تركيز GPU': 'ذكاء اصطناعي مؤسسي عام',
+            'سعر H100': '$6.88/ساعة لكل GPU',
+            'سبوت / محجوز': 'Capacity Blocks $4.72-5.19/ساعة؛ سبوت -60-70%',
+            'متعدد GPU': 'نعم، حتى 8 وحدات/عقدة',
+            'نقل البيانات': '100 جيجابايت مجاني، ثم $0.09/جيجابايت',
+            'أفضل حالة استخدام': 'مؤسسات، خدمات واسعة',
+          },
+          {
+            المزود: '[CoreWeave](#coreweave)',
+            'تركيز GPU': 'تدريب على نطاق واسع',
+            'سعر H100': '$6.16/ساعة لكل GPU (عقدة 8 وحدات فقط)',
+            'سبوت / محجوز': 'سبوت -40-60%؛ محجوز -60%',
+            'متعدد GPU': 'عُقد HGX بـ8 وحدات فقط',
+            'نقل البيانات': 'مجاني',
+            'أفضل حالة استخدام': 'مجموعات تدريب كبيرة',
+          },
+          {
+            المزود: '[RunPod](#runpod)',
+            'تركيز GPU': 'تطوير/استدلال مرن',
+            'سعر H100': 'من $2.89/ساعة (Secure Cloud)',
+            'سبوت / محجوز': 'سبوت -50-80%',
+            'متعدد GPU': 'نعم، لكل Pod',
+            'نقل البيانات': 'مجاني',
+            'أفضل حالة استخدام': 'تجريب، استدلال',
+          },
+          {
+            المزود: '[Lambda](#lambda)',
+            'تركيز GPU': 'أبحاث تعلم الآلة',
+            'سعر H100': '$3.29-4.29/ساعة',
+            'سبوت / محجوز': 'خصومات محجوزة متاحة',
+            'متعدد GPU': 'SXM فقط في عُقد 8 وحدات',
+            'نقل البيانات': 'مجاني',
+            'أفضل حالة استخدام': 'أبحاث، تدريب إنتاجي',
+          },
+          {
+            المزود: '[Google Cloud](#google-cloud)',
+            'تركيز GPU': 'GPU + TPU',
+            'سعر H100': '$9-11.50/ساعة لكل GPU',
+            'سبوت / محجوز': 'خصومات الاستخدام الملتزم',
+            'متعدد GPU': 'نعم، حتى 8 وحدات/عقدة',
+            'نقل البيانات': '100 جيجابايت مجاني، ثم $0.12/جيجابايت',
+            'أفضل حالة استخدام': 'أحمال TPU/ML أصلية',
+          },
+          {
+            المزود: '[Microsoft Azure](#microsoft-azure)',
+            'تركيز GPU': 'مؤسسات + OpenAI',
+            'سعر H100': '$11-13/ساعة لكل GPU',
+            'سبوت / محجوز': 'مثيلات محجوزة',
+            'متعدد GPU': 'نعم، حتى 8 وحدات/عقدة',
+            'نقل البيانات': '100 جيجابايت مجاني، ثم $0.087/جيجابايت',
+            'أفضل حالة استخدام': 'الوصول إلى Azure OpenAI Service',
+          },
+          {
+            المزود: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            'تركيز GPU': 'مؤسسات بسعر ثابت',
+            'سعر H100': '$10/ساعة ثابت',
+            'سبوت / محجوز': 'Universal Credits (بالحجم)',
+            'متعدد GPU': 'عُقد bare-metal بـ8 وحدات',
+            'نقل البيانات': '10 تيرابايت مجاني، ثم $0.0085/جيجابايت',
+            'أفضل حالة استخدام': 'أرخص حوسبة مؤسسية خام',
+          },
+        ],
+      },
+      gpuPricingEconomics: {
+        id: 'gpu-pricing-economics',
+        title: 'أسعار GPU: كم تكلف حوسبة الذكاء الاصطناعي فعلياً؟',
+        content:
+          'السعر بالساعة وحده يخفي القرار الحقيقي. **صنّفوا كل سعر حسب نموذج الفوترة — عند الطلب، سبوت، محجوز، أو سوق/Community Cloud ليست نفس الرقم**، ومزجها ينتج مقارنة خاطئة. يمدّد الجدول أدناه أدنى سعر عند الطلب موثّق لكل مزود لوحدة GPU H100 واحدة إلى 100 ساعة و1,000 ساعة و730 ساعة (حوالي شهر واحد من الاستخدام المستمر)، لجعل الفارق مرئياً على مقياس يتناسب مع ميزانية حقيقية بدلاً من ساعة واحدة.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'عند 730 ساعة (حوالي شهر واحد من الاستخدام المستمر)، تتراوح تكلفة H100 عند الطلب من حوالي $2,110 لدى RunPod إلى أكثر من $8,000 لدى Microsoft Azure — فارق بمقدار 4 أضعاف ناتج بالكامل عن اختيار المزود.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'رقم ساعة واحدة يخفي كيف تتراكم التكلفة — تماماً كما يبدو اشتراك "$5/يوم" تافهاً حتى تشاهد المجموع السنوي البالغ $1,825. تمديد السعر إلى نافذة استخدام واقعية هو ما يُفيد فعلياً قرار الميزانية.',
+          },
+        ],
+        columns: ['المزود', 'لكل ساعة', 'لكل 100 ساعة', 'لكل 1,000 ساعة', 'لكل 730 ساعة (~شهر واحد)'],
+        rows: [
+          {
+            المزود: '[RunPod](#runpod) (Secure Cloud)',
+            'لكل ساعة': '$2.89',
+            'لكل 100 ساعة': '$289',
+            'لكل 1,000 ساعة': '$2,890',
+            'لكل 730 ساعة (~شهر واحد)': '$2,110',
+          },
+          {
+            المزود: '[DigitalOcean](#digitalocean)',
+            'لكل ساعة': '$3.39',
+            'لكل 100 ساعة': '$339',
+            'لكل 1,000 ساعة': '$3,390',
+            'لكل 730 ساعة (~شهر واحد)': '$2,475',
+          },
+          {
+            المزود: '[Lambda](#lambda)',
+            'لكل ساعة': '$3.29',
+            'لكل 100 ساعة': '$329',
+            'لكل 1,000 ساعة': '$3,290',
+            'لكل 730 ساعة (~شهر واحد)': '$2,402',
+          },
+          {
+            المزود: '[CoreWeave](#coreweave)',
+            'لكل ساعة': '$6.16',
+            'لكل 100 ساعة': '$616',
+            'لكل 1,000 ساعة': '$6,160',
+            'لكل 730 ساعة (~شهر واحد)': '$4,497',
+          },
+          {
+            المزود: '[AWS](#aws)',
+            'لكل ساعة': '$6.88',
+            'لكل 100 ساعة': '$688',
+            'لكل 1,000 ساعة': '$6,880',
+            'لكل 730 ساعة (~شهر واحد)': '$5,022',
+          },
+          {
+            المزود: '[Google Cloud](#google-cloud)',
+            'لكل ساعة': '$9.00 (الحد الأدنى)',
+            'لكل 100 ساعة': '$900',
+            'لكل 1,000 ساعة': '$9,000',
+            'لكل 730 ساعة (~شهر واحد)': '$6,570',
+          },
+          {
+            المزود: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            'لكل ساعة': '$10.00 ثابت',
+            'لكل 100 ساعة': '$1,000',
+            'لكل 1,000 ساعة': '$10,000',
+            'لكل 730 ساعة (~شهر واحد)': '$7,300',
+          },
+          {
+            المزود: '[Microsoft Azure](#microsoft-azure)',
+            'لكل ساعة': '$11.00 (الحد الأدنى)',
+            'لكل 100 ساعة': '$1,100',
+            'لكل 1,000 ساعة': '$11,000',
+            'لكل 730 ساعة (~شهر واحد)': '$8,030',
+          },
+        ],
+      },
+      digitalocean: {
+        id: 'digitalocean',
+        title: 'هل DigitalOcean أفضل سحابة لشركات الذكاء الاصطناعي الصغيرة؟',
+        content:
+          '**تُسعّر [GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) الوصول إلى H100 بدءاً من $3.39-4.41/ساعة عند الطلب**، مع خفض الحجز لمدة 12 شهراً السعر إلى حوالي $2.50/ساعة. تتم الفوترة بالثانية بحد أدنى 60 ثانية. يمر النشر عبر لوحة تحكم Droplet قياسية — دون عبء إعداد IAM/VPC قبل تشغيل أول حمل عمل. يتبع التخزين والشبكة نفس النموذج البسيط والمجمّع الذي تتبعه Droplets العادية لدى DigitalOcean (500 جيجابايت+ من النقل الصادر المجاني حسب الخطة، ثم $0.01/جيجابايت). للاستدلال، تخدم Droplet بوحدة GPU واحدة أو متعددة نموذجاً مباشرة عبر شبكة DigitalOcean القياسية؛ للضبط الدقيق، تعمل نفس الـDroplets دون مستوى منتج منفصل؛ أما للتدريبات الأكبر، فلا تنشر DigitalOcean عقدة bare-metal كثيفة بـ8 وحدات GPU قابلة للمقارنة مع CoreWeave أو AWS، لذا فهي ليست الخيار الصحيح بعد نطاق معين.',
+        items: [
+          '**من يجب أن يستخدم DigitalOcean:** فريق ذكاء اصطناعي من 2-10 أشخاص يريد وصولاً سريعاً إلى H100، دون عملية مبيعات مؤسسية أو إعداد IAM معقد، ويقدّر الأسعار القابلة للتنبؤ والمجمّعة.',
+          '**من لا يجب أن يستخدم DigitalOcean:** الفرق التي تشغّل مجموعات تدريب كثيفة متعددة العقد، أو تحتاج إلى TPU، أو تتطلب كتالوج خدمات ذكاء اصطناعي مُدار كبير (نماذج مستضافة على غرار Bedrock، شهادات امتثال مؤسسي) — لا تنافس DigitalOcean في أي من هذه الجوانب.',
+        ],
+        bestFor: 'فرق ذكاء اصطناعي صغيرة تريد وصولاً سريعاً إلى H100، وأسعاراً قابلة للتنبؤ، ودون عملية مبيعات مؤسسية.',
+        avoidIf: 'تحتاجون إلى مجموعات تدريب كثيفة متعددة العقد، أو TPU، أو كتالوج خدمات ذكاء اصطناعي مُدار كبير.',
+        costNote: 'الخلاصة: أفضل خيار للعديد من شركات الذكاء الاصطناعي الصغيرة والنامية التي تُعطي الأولوية للبساطة وتكاليف بنية تحتية قابلة للتنبؤ على اتساع كتالوج hyperscaler.',
+        affiliateLinks: [
+          {
+            url: 'https://www.digitalocean.com/products/gpu-droplets',
+            productName: 'DigitalOcean GPU Droplets',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.39-4.41/hr (H100)',
+            label: 'التحقق من أسعار DigitalOcean GPU Droplets',
+          },
+        ],
+      },
+      aws: {
+        id: 'aws',
+        title: 'هل AWS أفضل سحابة ذكاء اصطناعي مؤسسية؟',
+        content:
+          '**AWS هي المرجع بين منصات hyperscaler في هذه الصفحة — ليس لأنها رخيصة، بل بسبب ما يشتريه الفارق في السعر.** تكلف مثيلات [EC2 P5](https://aws.amazon.com/ec2/instance-types/p5/) (p5.48xlarge، 8x H100) مبلغ $55.04/ساعة عند الطلب — أي $6.88/ساعة لكل GPU — بينما تخفض [Capacity Blocks](https://aws.amazon.com/ec2/capacityblocks/) المدفوعة مسبقاً ذلك إلى $4.72-5.19/ساعة لكل GPU، ويمكن أن يكون سعر Spot أقل بنسبة 60-70% من سعر الطلب للأحمال التي تتحمل الانقطاع. وبخلاف الحوسبة الخام: [Bedrock](https://aws.amazon.com/bedrock/) للنماذج الأساسية المستضافة، و[SageMaker](https://aws.amazon.com/sagemaker/) لخطوط أنابيب التدريب، وشبكة AWS العالمية من المناطق، وأوسع مجموعة من شهادات الامتثال (HIPAA وFedRAMP وغيرها) بين جميع مزودي هذه الصفحة. هذه ليست حجة سعرية — بل حجة "ماذا تحتاجون أيضاً بخلاف GPU".',
+        bestFor: 'الشركات المستثمرة بالفعل في AWS، أو التي تحتاج إلى منظومتها الأوسع: خدمات ذكاء اصطناعي مُدارة، نشر متعدد المناطق، أو شهادات امتثال مؤسسي.',
+        avoidIf: 'أنتم فريق صغير يحتاج فقط إلى وصول GPU خام — يضيف إعداد IAM/VPC وتعقيد لوحة تحكم AWS وقت إعداد فعلي لا تتطلبه DigitalOcean.',
+        costNote: 'سعر P5 عند الطلب ($6.88/ساعة لكل GPU) هو تقريباً ضعف سعر الطلب لدى DigitalOcean — تشتري الزيادة اتساع خدمات AWS، لا وحدات GPU أسرع أو أفضل.',
+      },
+      coreweave: {
+        id: 'coreweave',
+        title: 'هل CoreWeave هي الخيار الأفضل للذكاء الاصطناعي على نطاق واسع؟',
+        content:
+          '**CoreWeave منتج مختلف جوهرياً عن DigitalOcean — سحابة متخصصة في GPU مصممة للبنية التحتية للذكاء الاصطناعي على نطاق واسع، لا للحوسبة العامة.** تبيع [CoreWeave](https://www.coreweave.com/) وحدتي H100 وH200 حصراً كعُقد HGX بـ8 وحدات GPU: $49.24/ساعة لعقدة H100 ($6.16/ساعة لكل GPU) و$50.44/ساعة لعقدة H200 ($6.31/ساعة لكل GPU) — لا توجد طريقة ذاتية الخدمة لتوفير وحدة GPU واحدة. يقل سعر Spot بحوالي 40-60% عن سعر الطلب، ويحصل الاستخدام المحجوز/الملتزم على خصم يصل إلى 60%. تجمّع كل عقدة 128 وحدة معالجة افتراضية و2,048 جيجابايت من ذاكرة النظام و61.44 تيرابايت من التخزين المحلي، مبنية حول تنسيق Kubernetes الأصلي وشبكة عالية الإنتاجية للتدريب الموزع متعدد العقد — ولا تفرض CoreWeave أي رسوم لنقل البيانات/egress، وهي ميزة مهمة مقارنة بأي منصة hyperscaler في هذه الصفحة. تقدمت CoreWeave بثبات إلى صميم النقاش حول سحابات الذكاء الاصطناعي الكبرى بفضل التزامات بنية تحتية كبيرة من مختبرات الذكاء الاصطناعي، لا كخيار ثانوي لأعمال سحابية عامة.',
+        bestFor: 'الشركات التي تُجري تدريباً موزعاً وعلى نطاق واسع للذكاء الاصطناعي وتستفيد من عُقد كثيفة بـ8 وحدات GPU وتنسيق Kubernetes أصلي ورسوم egress صفرية.',
+        avoidIf: 'تحتاجون إلى وحدة GPU واحدة، أو سحابة عامة الأغراض (تخزين، قواعد بيانات، استضافة ويب إلى جانب الحوسبة)، أو نقطة دخول أصغر/أرخص — CoreWeave ليست عامة الأغراض.',
+        costNote: 'يعني نموذج العقدة بـ8 وحدات GPU حصراً أن CoreWeave مُسعّرة للحجم الكبير — الفريق الذي يحتاج إلى 1-2 وحدة GPU يدفع مع ذلك ثمن 8، وهو المقايضة المعاكسة لـDigitalOcean أو RunPod.',
+      },
+      runpod: {
+        id: 'runpod',
+        title: 'هل RunPod أفضل سحابة GPU من حيث القيمة؟',
+        content:
+          '**تُعد RunPod أكثر سحابة GPU تنافسية في السعر في هذه الصفحة، وأقرب منافس مباشر لـDigitalOcean لمطور ذكاء اصطناعي حساس للسعر.** تنقسم [RunPod](https://www.runpod.io/) إلى مستويين: **Secure Cloud** (RTX 4090 بسعر $0.69/ساعة، A100 SXM بسعر $1.49/ساعة، H100 PCIe بسعر $2.89/ساعة، H100 NVL بسعر $3.19/ساعة، H200 بسعر $4.39/ساعة، B200 بسعر $5.89/ساعة) مع ضمان توافر مستقر، و**Community Cloud** (RTX 4090 بسعر $0.34/ساعة، A100 80 جيجابايت بسعر $1.39/ساعة، H100 PCIe بسعر $2.89/ساعة) — سوق نظير بخصم إضافي وتوافر أقل اتساقاً. تدير RunPod أيضاً مستوى **serverless** يُفوتر بالثانية من التنفيذ النشط ($0.58-9.98/ساعة حسب GPU، H100 بسعر $4.55/ساعة)، مصمم خصيصاً لأحمال الاستدلال التي تتقلص إلى صفر بين الطلبات. تعمل مثيلات Spot بسعر أقل بـ50-80% من سعر الطلب للمهام التي تتحمل الانقطاع، و — مثل CoreWeave وLambda — لا تفرض RunPod رسوم egress.',
+        bestFor: 'المطورون وأحمال الاستدلال الحساسة للسعر، والتي تتحمل توافراً متغيراً، أو تريد فوترة serverless تتقلص إلى صفر.',
+        avoidIf: 'تحتاجون إلى اتفاقية مستوى خدمة (SLA) صارمة للتوافر المؤسسي أو كتالوج خدمات ذكاء اصطناعي مُدار واسع — RunPod ليست موجهة نحو المؤسسات مثل AWS أو Azure.',
+        costNote: 'تجعل RunPod توصية DigitalOcean أكثر مصداقية، لا أقل: تفوز DigitalOcean بالبساطة وصقل لوحة التحكم، بينما تفوز RunPod بالسعر الخام والمرونة للمطورين الذين يريدون ذلك تحديداً.',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-5.89/hr (Community/Secure Cloud)',
+            label: 'التحقق من أسعار RunPod والتسجيل',
+          },
+        ],
+      },
+      lambda: {
+        id: 'lambda',
+        title: 'هل Lambda أفضل سحابة GPU لباحثي تعلم الآلة؟',
+        content:
+          '**Lambda منصة GPU-first مبنية حول بيئات ML مُعدة مسبقاً للباحثين وأحمال التدريب — ولم تعد مجرد شركة صغيرة لتأجير GPU.** تُسعّر [Lambda](https://lambda.ai/) وحدة H100 من $3.29/ساعة (PCIe) إلى $4.29/ساعة (SXM)، ووحدة A100 من $1.99/ساعة (40 جيجابايت) إلى $2.79/ساعة (80 جيجابايت)؛ وكما هو الحال في CoreWeave، تُباع مثيلات SXM فقط في تكوينات بـ8 وحدات GPU، لذا فإن حاجة بـ2-4 وحدات GPU تدفع مع ذلك ثمن الـ8. لا تفرض Lambda رسوم egress. المنصة مبنية أولاً للبحث والتدريب: أطر عمل ML مثبتة مسبقاً، مجموعات متعددة GPU، ودعم موجه نحو عمليات التدريب الجادة أكثر من التجريب العرضي. **ذكرت رويترز وبلومبرغ في 2026-08-31 أن Anthropic وقّعت اتفاقية حوسبة سحابية مع Lambda بقيمة مُبلَّغ عنها تبلغ $35 مليار**، مرتبطة بسعة GPU من Nvidia تدخل حيز التشغيل عبر مشروع مركز بيانات لـHut 8 في مقاطعة Nueces يغطي حوالي 350 ميغاواط — لم يُكشف في التغطية عن العدد الدقيق لوحدات GPU، ومدة العقد، وكيفية توزيع الالتزامات بين Anthropic وLambda وNvidia وHut 8. هذا الحجم هو أوضح إشارة إلى أن السحابات المتخصصة في GPU تتنافس الآن على أحمال إنتاج جادة، لا مجرد مشاريع جانبية للباحثين.',
+        bestFor: 'باحثو تعلم الآلة والفرق التي تُجري أحمال تدريب جادة وتريد منصة GPU-first ببيئات مُعدة مسبقاً ورسوم egress صفرية.',
+        avoidIf: 'تحتاجون إلى نقطة دخول صغيرة ومرنة بوحدة GPU واحدة — مستوى SXM من Lambda مقتصر على 8 وحدات GPU، نفس المقايضة كما في CoreWeave.',
+        costNote: 'صفقة Anthropic المُبلَّغ عنها بقيمة $35 مليار (شروط غير معلنة) هي إشارة حجم، لا ميزة سعرية مضمونة لمشترٍ صغير — أسعار الخدمة الذاتية المنشورة من Lambda هي ما ستدفعه فعلياً شركة ذكاء اصطناعي أصغر.',
+      },
+      googleCloud: {
+        id: 'google-cloud',
+        title: 'هل Google Cloud هي الخيار الأفضل لـTPU وحزمة الذكاء الاصطناعي من Google؟',
+        content:
+          'الفكرة وراء Google Cloud ليست "لدى Google وحدات GPU" — كل مزود في هذه الصفحة لديه وحدات GPU. **تصبح Google Cloud مثيرة للاهتمام بشكل خاص عندما يستفيد حمل الذكاء الاصطناعي فعلياً من مسرّعات ومنصة الذكاء الاصطناعي من Google: وحدات TPU.** [Google Cloud](https://cloud.google.com/compute/docs/gpus) هي المزود الوحيد في هذه الصفحة الذي يوفر TPU كبديل لـGPU إلى جانب مثيلات H100 الخاصة به (سلسلة A3، a3-highgpu-8g، حوالي $80-90/ساعة عند الطلب — $9-11.50/ساعة لكل GPU — مع خصومات للاستخدام الملتزم للأحمال المستدامة). وبخلاف TPU، تشمل عوامل التمييز [Vertex AI](https://cloud.google.com/vertex-ai) لخط أنابيب ML، وشبكة Google الأساسية، ومنظومة بيانات BigQuery للفرق التي تخزّن بياناتها هناك بالفعل، ومنظومة نماذج Gemini للفرق التي تبني على نماذج Google الخاصة.',
+        bestFor: 'الفرق التي تقيّم TPU كبديل لـGPU، أو الموحدة بالفعل على Vertex AI أو BigQuery أو منظومة Gemini.',
+        avoidIf: 'ليس لديكم اهتمام بـTPU وتحتاجون فقط إلى وحدات GPU — سعر GPU عند الطلب لدى Google Cloud أعلى من سعر الطلب لدى DigitalOcean أو RunPod أو AWS.',
+        costNote: 'تتفاوت الأسعار المُبلَّغ عنها عند الطلب لسلسلة A3 بشكل أوسع حسب المصدر ومستوى الالتزام مقارنة بمعظم المزودين هنا — تحققوا من السعر الحالي لمنطقتكم ونوع الجهاز المحدد قبل وضع الميزانية.',
+      },
+      microsoftAzure: {
+        id: 'microsoft-azure',
+        title: 'هل Microsoft Azure هي الخيار الأفضل للذكاء الاصطناعي المتمحور حول Microsoft؟',
+        content:
+          '**تمتلك Azure أعلى سعر عند الطلب لكل GPU في هذه الصفحة، ومع ذلك يمكن أن يكون منطقياً — رغم أن سعر GPU الخام ليس الأقل — لسبب محدد: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).** تُسعّر مثيلات [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) حوالي $11-13/ساعة لكل GPU عند الطلب — وتكلف عقدة كاملة بـ8 وحدات GPU حوالي $98/ساعة، بما يتماشى مع AWS وGoogle Cloud على مستوى العقدة رغم ارتفاع السعر المعلن لكل GPU. وبخلاف الوصول إلى OpenAI، تستند حجة Azure إلى الهوية المؤسسية (Active Directory)، وتكامل Microsoft 365، وعلاقات الشراء المؤسسية القائمة، والبنية التحتية الهجينة للشركات التي تشغّل بالفعل أحمال حزمة Microsoft محلياً.',
+        bestFor: 'الشركات التي يعتمد منتجها على Azure OpenAI Service، أو عملاء Microsoft المؤسسيون الحاليون الذين يوحّدون مشترياتهم على مزود واحد.',
+        avoidIf: 'ليس لديكم اعتماد على Azure OpenAI Service أو منظومة Microsoft — سعر GPU هو الأعلى في هذه الصفحة دون ميزة تعويضية لحمل عمل يعتمد على GPU فقط.',
+        costNote: 'على مستوى العقدة الكاملة بـ8 وحدات GPU، يقترب سعر Azure البالغ حوالي $98/ساعة من AWS وGoogle Cloud — يهم السعر المعلن الأعلى لكل GPU بشكل أساسي الفرق التي تؤجر وحدات GPU منفردة أو جزئية، لا عُقداً كاملة.',
+      },
+      oracleCloud: {
+        id: 'oracle-cloud',
+        title: 'هل Oracle Cloud Infrastructure هي سحابة الذكاء الاصطناعي غير المقدّرة بما يكفي؟',
+        content:
+          '**تُعد Oracle Cloud Infrastructure خياراً جاداً للشركات المهتمة كثيراً باقتصاد البنية التحتية في أحمال الذكاء الاصطناعي الكبيرة — خيار أقل قابلية للتنبؤ يمنح هذه المقارنة زاوية مختلفة فعلاً.** تفرض [OCI](https://www.oracle.com/cloud/compute/gpu/) سعراً ثابتاً قدره $10/ساعة لكل GPU لـH100 عند الطلب في جميع المناطق — دون أي تفاوت سعري حسب المنطقة — وتكلف عقدة bare-metal بـ8x H100 (BM.GPU.H100.8) مبلغ $80/ساعة، أقل بكثير من سعر العقدة البالغ حوالي $98/ساعة لدى AWS وAzure وGoogle Cloud. كما تشمل OCI 10 تيرابايت من النقل الصادر المجاني شهرياً قبل تطبيق رسوم egress — أرخص egress بين أي منصة hyperscaler هنا (مقابل 100 جيجابايت لدى AWS/Azure/Google Cloud) — وتوفر شبكة عناقيد RDMA للتدريب متعدد العقد. وبخلاف الحوسبة، تمنح قوة OCI التقليدية في أحمال قواعد البيانات المؤسسية (Oracle Database، مستودعات البيانات) جاذبية خاصة للشركات التي تشغّل بالفعل أنظمة مؤسسية قريبة من Oracle وتريد بنية تحتية للذكاء الاصطناعي على نفس المنصة. يوفر برنامج Universal Credits من Oracle خصومات حجم متفاوض عليها للالتزامات السنوية الأكبر، رغم أن معدلات الخصم غير منشورة في جدول موحد.',
+        bestFor: 'الشركات التي تدير مجموعات تدريب كبيرة حيث يهم السعر الثابت لكل GPU وانخفاض egress وشبكة RDMA أكثر من كتالوج خدمات ذكاء اصطناعي مُدار واسع — والشركات القائمة بالفعل على حزمة قواعد بيانات/مؤسسة Oracle.',
+        avoidIf: 'تحتاجون إلى اتساع كتالوج Oracle المُدار الخاص بالذكاء الاصطناعي، أو تريدون أوسع كتالوج ممكن للمثيلات/المناطق — كتالوج OCI أضيق من كتالوج AWS أو Google Cloud.',
+        costNote: 'حصة egress المجانية البالغة 10 تيرابايت تعادل 100 ضعف الحد المجاني البالغ 100 جيجابايت لدى AWS وAzure وGoogle Cloud — تحققوا من الحصة الحالية قبل وضع الميزانية، إذ تُعد الحدود المجانية من أكثر الشروط تعديلاً بين جميع منصات hyperscaler.',
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'DigitalOcean مقابل السبعة الآخرين: قرارات مباشرة',
+        content:
+          'ثماني قواعد قرار في سطر واحد، كل منها تجيب مباشرة على سؤال محدد "DigitalOcean مقابل X".',
+        subsections: [
+          {
+            title: 'DigitalOcean مقابل AWS',
+            text: 'اختاروا DigitalOcean إذا كنتم فريقاً صغيراً يريد وصولاً إلى H100 دون عملية مبيعات مؤسسية. اختاروا AWS إذا احتجتم إلى Bedrock وSageMaker والنشر متعدد المناطق أو شهادات امتثال محددة.',
+          },
+          {
+            title: 'DigitalOcean مقابل CoreWeave',
+            text: 'اختاروا DigitalOcean إذا احتجتم إلى 1-2 وحدة GPU وخدمات سحابية عامة الأغراض إلى جانب الحوسبة. اختاروا CoreWeave إذا كنتم تدربون على نطاق تفوق فيه العُقد الكثيفة بـ8 وحدات GPU ورسوم egress الصفرية غياب مستوى دخول صغير لدى CoreWeave.',
+          },
+          {
+            title: 'DigitalOcean مقابل RunPod',
+            text: 'اختاروا DigitalOcean إذا كان صقل لوحة التحكم والأسعار المجمّعة القابلة للتنبؤ أهم من توفير آخر بضعة سنتات في السعر بالساعة. اختاروا RunPod إذا أردتم أدنى سعر عند الطلب في السوق العام، أو فوترة serverless تتقلص إلى صفر، أو رسوم egress صفرية، وتستطيعون تحمل توافر Community Cloud المتغير.',
+          },
+          {
+            title: 'DigitalOcean مقابل Lambda',
+            text: 'اختاروا DigitalOcean إذا احتجتم إلى إعداد مرن بوحدة أو عدد قليل من وحدات GPU. اختاروا Lambda إذا كان حملكم يركز أولاً على التدريب ويستفيد من منصة متخصصة في GPU ببيئات ML مُعدة مسبقاً.',
+          },
+          {
+            title: 'DigitalOcean مقابل Google Cloud',
+            text: 'اختاروا DigitalOcean إذا لم يكن لديكم اهتمام بـTPU وتحتاجون فقط إلى وحدات GPU بسعر أقل. اختاروا Google Cloud إذا كان حملكم يستفيد تحديداً من TPU أو كنتم موحّدين بالفعل على Vertex AI.',
+          },
+          {
+            title: 'DigitalOcean مقابل Azure',
+            text: 'اختاروا DigitalOcean لأحمال تعتمد على GPU فقط دون اعتماد على Microsoft. اختاروا Azure إذا كان منتجكم يعتمد على Azure OpenAI Service أو كنتم توحّدون مشترياتكم المؤسسية مع Microsoft.',
+          },
+          {
+            title: 'DigitalOcean مقابل Oracle Cloud',
+            text: 'اختاروا DigitalOcean لأول حمل GPU لفريق صغير. اختاروا Oracle Cloud Infrastructure بمجرد أن تشغّلوا أحمال تدريب كبيرة ومستدامة يبدأ فيها السعر الثابت وحصة egress المجانية البالغة 10 تيرابايت من OCI بتجاوز ميزة بساطة DigitalOcean.',
+          },
+        ],
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: 'التكاليف الخفية التي قد تغيّر القرار',
+        content:
+          '**أدنى سعر GPU بالساعة ليس بالضرورة أدنى تكلفة إجمالية لتشغيل تطبيق ذكاء اصطناعي.** تحققوا من كل نقطة من هذه النقاط قبل الالتزام بمزود بناءً على السعر المعلن فقط.',
+        items: [
+          '**نقل البيانات (egress):** أكبر تكلفة خفية في هذه الصفحة — تفرض CoreWeave وRunPod وLambda مبلغ $0؛ وتفرض AWS وAzure وGoogle Cloud مبلغ $0.087-0.12/جيجابايت بعد حد مجاني قدره 100 جيجابايت؛ تقع DigitalOcean وOracle Cloud في المنتصف بحصص مجمّعة/مجانية أكبر.',
+          '**التخزين والأحجام الدائمة:** تُفوتر بشكل منفصل عن الحوسبة لدى كل مزود هنا — تحققوا من السعر لكل جيجابايت-شهر، لا سعر GPU فقط.',
+          '**اللقطات والنسخ الاحتياطية:** غالباً ما تُفوتر بنفس سعر التخزين النشط حتى عندما تكون وحدة GPU متوقفة.',
+          '**وحدات GPU الخاملة:** يفرض كل مزود في هذه الصفحة رسوماً على مثيل قيد التشغيل (أو مُشغّل، في حالة DigitalOcean) سواء كان يؤدي عملاً مفيداً أم لا.',
+          '**حدود الفوترة الدنيا:** بالثانية لدى RunPod وDigitalOcean، لكن تحققوا من الحد الأدنى للرسوم لدى كل مزود قبل افتراض دقة فعلية بالثانية.',
+          '**الشبكة (بخلاف egress):** يمكن أن يكون عرض النطاق الترددي بين العُقد للتدريب متعدد GPU/متعدد العقد أهم من سعر GPU نفسه عند التوسع — وهذا بالضبط ما تدور حوله ادعاءات شبكة RDMA لدى CoreWeave وOCI.',
+          '**التوافر الإقليمي:** قد لا يكون السعر المعلن عند الطلب متاحاً في كل منطقة، أو قد لا يتوفر مخزون GPU ببساطة في اللحظة التي تحتاجونه فيها.',
+          '**التزامات الحجز/الاستخدام الملتزم:** غالباً ما يكون أرخص سعر منشور مقيداً بالتزام لمدة 1-3 سنوات — اقرؤوا المدة قبل مقارنته بسعر الطلب لدى مزود آخر.',
+          '**الدعم:** الدعم من فئة المؤسسات (AWS وAzure وGoogle Cloud) مُدرج بالفعل ضمن السعر الأعلى؛ يعتمد متخصصو GPU (RunPod وLambda) غالباً أكثر على دعم المجتمع/التذاكر في المستوى الأولي.',
+          '**وقت الهندسة:** إعداد IAM/VPC، وتنسيق Kubernetes، أو تعقيد النشر متعدد المناطق لدى منصة hyperscaler هو تكلفة حقيقية حتى لو لم تظهر أبداً في فاتورة.',
+        ],
+      },
+      trainingVsInference: {
+        id: 'training-vs-inference',
+        title: 'التدريب مقابل الاستدلال: أفضل مزود مختلف',
+        content:
+          'يتغير المزود الصحيح حسب ما إذا كان الحمل يدرّب نموذجاً أم يخدمه — لا تختاروا مزوداً واحداً لكليهما دون مراجعة هذا التقسيم أولاً.',
+        items: [
+          '**الأفضل للتدريب:** [CoreWeave](#coreweave) و[AWS](#aws) و[Google Cloud](#google-cloud) و[Lambda](#lambda) — عُقد كثيفة متعددة GPU وشبكة مصممة للتشغيلات المستدامة والموزعة.',
+          '**الأفضل للاستدلال:** [DigitalOcean](#digitalocean) و[RunPod](#runpod) و[CoreWeave](#coreweave) — حجم مرن بوحدة واحدة/عدد قليل من GPU (DigitalOcean وRunPod) أو serverless يتقلص إلى صفر (RunPod)، يتناسب مع حجم طلبات متغير.',
+          '**الأفضل للتجريب:** [RunPod](#runpod) و[DigitalOcean](#digitalocean) — أرخص نقطة دخول، أسرع تسجيل، دون عملية مؤسسية.',
+          '**الأفضل للإنتاج المؤسسي:** [AWS](#aws) و[Azure](#microsoft-azure) و[Google Cloud](#google-cloud) — شهادات امتثال، واتفاقيات مستوى خدمة، وخدمات ذكاء اصطناعي مُدارة يحتاجها النشر الإنتاجي في نهاية المطاف.',
+          '**الأفضل للأحمال الموزعة الضخمة:** [CoreWeave](#coreweave) و[AWS](#aws) و[Google Cloud](#google-cloud) و[Oracle Cloud Infrastructure](#oracle-cloud) — بنى عُقد كثيفة وشبكة من فئة RDMA/InfiniBand للتوسع متعدد العقد.',
+        ],
+      },
+      howMuchGpu: {
+        id: 'how-much-gpu',
+        title: 'كم من GPU السحابي تحتاجون فعلياً؟',
+        content:
+          'سيناريوهات تقريبية لتقدير الميزانية، باستخدام أدنى سعر عند الطلب موثّق لكل مستوى في هذه الصفحة اعتباراً من 2026-09-05 — تحققوا من الأسعار الحالية قبل الالتزام، إذ تتغير أسعار GPU السحابية كثيراً.',
+        columns: ['السيناريو', 'عدد وحدات GPU', 'التكلفة الشهرية التوضيحية (730 ساعة)'],
+        rows: [
+          {
+            السيناريو: 'شركة ذكاء اصطناعي ناشئة صغيرة (استدلال خفيف)',
+            'عدد وحدات GPU': 'وحدة واحدة',
+            'التكلفة الشهرية التوضيحية (730 ساعة)': '~$2,110-2,475 (RunPod/DigitalOcean H100)',
+          },
+          {
+            السيناريو: 'نشاط استدلال نامٍ',
+            'عدد وحدات GPU': '1-4 وحدات',
+            'التكلفة الشهرية التوضيحية (730 ساعة)': '~$2,110-9,900 حسب المزود والعدد',
+          },
+          {
+            السيناريو: 'الضبط الدقيق',
+            'عدد وحدات GPU': '1-8 وحدات',
+            'التكلفة الشهرية التوضيحية (730 ساعة)': '~$2,110-19,800 حسب المزود والعدد',
+          },
+          {
+            السيناريو: 'تدريب نموذج كبير',
+            'عدد وحدات GPU': '8+ وحدات',
+            'التكلفة الشهرية التوضيحية (730 ساعة)': '~$18,000-40,000+ (مزودو عقدة 8 وحدات GPU: CoreWeave وLambda وAWS)',
+          },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'يكلف حمل استدلال بوحدة GPU واحدة حوالي $2,100-2,500/شهرياً لدى أرخص المزودين، بينما يكلف حمل تدريب بـ8+ وحدات GPU مبلغ $18,000-40,000+/شهرياً حسب المزود — قدّروا الميزانية حسب عدد وحدات GPU قبل مقارنة الأسعار بالساعة.',
+          },
+        ],
+      },
+      rentVsBuy: {
+        id: 'rent-vs-buy',
+        title: 'متى يجب استئجار وحدات GPU بدلاً من شرائها؟',
+        content:
+          'يحل الاستئجار والامتلاك مشكلتين مختلفتين — طابقوا الاختيار مع مدى ثبات تشغيل الحمل فعلياً، لا مع ما يبدو أرخص بمعزل عن السياق.',
+        items: [
+          '**استأجروا عندما:** يكون الطلب غير قابل للتنبؤ، ما زلتم تجرّبون، تحتاجون إلى وحدات GPU مؤقتاً فقط، تحتاجون إلى أحدث الأجهزة دون شراء رأسمالي، أو لا تريدون إدارة بنية تحتية فعلية.',
+          '**اشتروا عندما:** يكون الاستخدام مرتفعاً باستمرار، الحمل قابل للتنبؤ ومستقر، تشغّلون وحدات GPU على مدار الساعة تقريباً، تستبعد متطلبات إقامة البيانات التخزين السحابي، أو لديكم بالفعل البنية التحتية لاستضافة الأجهزة.',
+          'للجانب الخاص بالشراء من هذا القرار — قوائم القطع، والتكاليف الحقيقية، وخيارات الأجهزة لتشغيل النماذج على وحدات GPU مملوكة — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) و[دليل بناء محطة عمل ذكاء اصطناعي محلية](/power-local-llm/local-ai-workstation-build-guide-2026).',
+        ],
+      },
+      finalRanking: {
+        id: 'final-ranking',
+        title: 'الترتيب النهائي',
+        content:
+          'ليست قائمة بسيطة من 1 إلى 8 — كل مزود مُصنَّف حسب المهمة المحددة التي يفوز بها فعلياً، وهي الطريقة الأكثر قابلية للدفاع عنها لترتيب 8 مزودين لا يتنافسون مباشرة على كل محور.',
+        items: [
+          '**الأفضل إجمالاً لشركات الذكاء الاصطناعي الصغيرة:** [DigitalOcean](#digitalocean)',
+          '**أفضل قيمة GPU مقابل السعر:** [RunPod](#runpod)',
+          '**أفضل بنية تحتية للذكاء الاصطناعي على نطاق واسع:** [CoreWeave](#coreweave)',
+          '**أفضل سحابة GPU موجهة للبحث:** [Lambda](#lambda)',
+          '**أفضل منظومة مؤسسية:** [AWS](#aws)',
+          '**أفضل منظومة TPU/ذكاء اصطناعي من Google:** [Google Cloud](#google-cloud)',
+          '**أفضل منظومة ذكاء اصطناعي من Microsoft:** [Microsoft Azure](#microsoft-azure)',
+          '**أفضل بديل مؤسسي:** [Oracle Cloud Infrastructure](#oracle-cloud)',
+        ],
+      },
+      finalVerdict: {
+        id: 'final-verdict',
+        title: 'الخلاصة النهائية: أي سحابة يجب أن تختارها شركتكم للذكاء الاصطناعي؟',
+        content:
+          'شجرة قرار، لا إجابة عالمية واحدة: ابدؤوا بـ**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)** إذا كنتم شركة ناشئة صغيرة. إذا كانت الأولوية بدلاً من ذلك للتجريب بـGPU وأدنى سعر ممكن، انتقلوا إلى **[RunPod](https://www.runpod.io/)**. إذا كنتم تنتقلون إلى التدريب على نطاق واسع، انتقلوا إلى **[CoreWeave](https://www.coreweave.com/)** (أو [Lambda](https://lambda.ai/) إذا كان حملكم يركز أولاً على البحث). إذا كانت البنية التحتية المؤسسية — الامتثال، أو كتالوج ذكاء اصطناعي مُدار، أو اعتماد محدد على منظومة معينة — هي العامل الحاسم، انتقلوا إلى **[AWS](https://aws.amazon.com/ec2/instance-types/p5/)** أو **[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)** أو **[Google Cloud](https://cloud.google.com/compute/docs/gpus)** حسب المنظومة التي أنتم فيها بالفعل. إذا كانت الأولوية للبنية التحتية المؤسسية الحساسة للتكلفة على نطاق واسع، انتقلوا إلى **[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)**. بالنسبة لمعظم قراء هذه الصفحة — شركة ذكاء اصطناعي صغيرة أو نامية دون اعتماد مؤسسي محدد يجذبها بالفعل إلى مكان آخر — تُعد [GPU Droplets من DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) نقطة الانطلاق الصحيحة.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          '[DigitalOcean GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) — أسعار H100 عند الطلب $3.39-4.41/ساعة، سعر حجز 12 شهراً من ~$2.50/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أنواع مثيلات AWS EC2 P5](https://aws.amazon.com/ec2/instance-types/p5/) — p5.48xlarge بسعر $55.04/ساعة عند الطلب ($6.88/ساعة لكل GPU)، Capacity Blocks بسعر $4.72-5.19/ساعة لكل GPU، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أسعار GPU من CoreWeave](https://www.coreweave.com/pricing) — عقدة H100 بـ8 وحدات GPU بسعر $49.24/ساعة ($6.16/ساعة لكل GPU)، عقدة H200 بسعر $50.44/ساعة، سبوت -40-60%، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أسعار RunPod](https://www.runpod.io/pricing) — Secure Cloud H100 PCIe بسعر $2.89/ساعة، Community Cloud RTX 4090 بسعر $0.34/ساعة، serverless H100 بسعر $4.55/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أسعار Lambda GPU Cloud](https://lambda.ai/service/gpu-cloud) — H100 PCIe بسعر $3.29/ساعة، H100 SXM بسعر $4.29/ساعة، A100 40 جيجابايت بسعر $1.99/ساعة، A100 80 جيجابايت بسعر $2.79/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[رويترز/بلومبرغ: صفقة Anthropic-Lambda السحابية بقيمة $35 مليار](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — مُبلَّغ عنها بتاريخ 2026-08-31، الشروط (عدد وحدات GPU، مدة العقد) غير معلنة.',
+          '[أسعار GPU من Google Cloud](https://cloud.google.com/compute/docs/gpus) — سلسلة A3 (a3-highgpu-8g) حوالي $80-90/ساعة عند الطلب ($9-11.50/ساعة لكل GPU)، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[أجهزة HPC/GPU الافتراضية من Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 حوالي $11-13/ساعة لكل GPU عند الطلب، عقدة كاملة بـ8 وحدات GPU حوالي $98/ساعة، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          '[حوسبة GPU من Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — سعر ثابت $10/ساعة لكل GPU لـH100 عند الطلب، عقدة BM.GPU.H100.8 بسعر $80/ساعة، 10 تيرابايت egress مجاني ثم $0.0085/GB، تم التحقق عبر بحث الويب بتاريخ 2026-09-05.',
+          'سياسة رسوم egress الصفرية لدى CoreWeave وRunPod وLambda — تم التحقق عبر بحث الويب بتاريخ 2026-09-05 مقابل صفحات تسعير المزودين ومصادر مقارنة من طرف ثالث.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'هل DigitalOcean جيدة لشركات الذكاء الاصطناعي؟',
+            a: 'نعم، خصوصاً للفرق الصغيرة والنامية في مجال الذكاء الاصطناعي. تُسعّر DigitalOcean GPU Droplets الوصول إلى H100 بدءاً من $3.39-4.41/ساعة عند الطلب — من بين الأرخص في هذه الصفحة — مع أبسط لوحة تحكم ودون عملية مبيعات مؤسسية. ليست الخيار الصحيح للتدريب الكثيف متعدد العقد، أو أحمال TPU، أو الفرق التي تحتاج إلى كتالوج خدمات ذكاء اصطناعي مُدار كبير.',
+          },
+          {
+            q: 'هل DigitalOcean أرخص من AWS للذكاء الاصطناعي؟',
+            a: 'نعم، بالنسبة للوصول الخام إلى H100 عند الطلب — تُسعّر DigitalOcean بدءاً من $3.39-4.41/ساعة مقابل $6.88/ساعة لكل GPU لدى AWS عند الطلب، أي نصف السعر تقريباً. تصبح AWS الخيار الأفضل عندما يحتاج الأمر إلى كتالوج خدمات ذكاء اصطناعي مُدار أوسع، أو نشر متعدد المناطق، أو شهادات امتثال محددة.',
+          },
+          {
+            q: 'هل RunPod أرخص من DigitalOcean؟',
+            a: 'سعر H100 لدى RunPod Secure Cloud ($2.89/ساعة) أرخص قليلاً من سعر الطلب لدى DigitalOcean ($3.39-4.41/ساعة)، كما لا تفرض RunPod رسوم egress مقابل نموذج DigitalOcean المجمّع مع رسوم تجاوز. تكمن ميزة DigitalOcean في بساطة لوحة التحكم وتوافر أكثر اتساقاً من مستوى Community Cloud الأرخص لدى RunPod.',
+          },
+          {
+            q: 'هل CoreWeave أرخص من AWS؟',
+            a: 'لكل GPU، يقترب سعر H100 لدى CoreWeave ($6.16/ساعة لكل GPU) من سعر AWS ($6.88/ساعة لكل GPU)، لكن CoreWeave لا تفرض رسوم egress مقابل $0.09/جيجابايت لدى AWS بعد حد مجاني قدره 100 جيجابايت — بالنسبة لحمل كثيف في نقل البيانات، يمكن أن تكون CoreWeave أرخص بشكل ملموس في التكلفة الإجمالية حتى مع سعر GPU مماثل. مع ذلك، لا تبيع CoreWeave وحدات GPU إلا في حزم عُقد بـ8 وحدات، لذا لا يستفيد الحمل الصغير من هذا السعر الأقل لكل GPU على عقدة جزئية.',
+          },
+          {
+            q: 'ما هي أرخص GPU سحابية؟',
+            a: 'من بين المزودين الثمانية المقارَنين هنا، تُعد مستويات Community Cloud وSecure Cloud لدى RunPod وسعر H100 عند الطلب لدى DigitalOcean أرخص الخيارات السائدة، وكلاهما ضمن نطاق $2.89-4.41/ساعة لوحدة H100. كما لا تفرض RunPod وCoreWeave وLambda رسوم egress، ما يخفض التكلفة الإجمالية أكثر للأحمال الكثيفة في نقل البيانات حتى عندما يكون سعر GPU بالساعة مماثلاً لمزود hyperscaler.',
+          },
+          {
+            q: 'أي سحابة هي الأفضل للاستدلال بالذكاء الاصطناعي؟',
+            a: 'DigitalOcean وRunPod وCoreWeave. تقدم DigitalOcean وRunPod حجماً مرناً ومنخفض التكلفة بوحدة واحدة/عدد قليل من GPU يتناسب مع حجم طلبات الاستدلال النموذجي؛ يُفوتر مستوى serverless لدى RunPod بالثانية تحديداً ويتقلص إلى صفر بين الطلبات، وهو ما يتناسب بشكل أفضل مع حركة استدلال متغيرة من الإيجار الثابت بالساعة.',
+          },
+          {
+            q: 'أي سحابة هي الأفضل لتدريب النماذج اللغوية الكبيرة؟',
+            a: 'CoreWeave وAWS وGoogle Cloud وLambda. تقدم هذه الأربعة بنى عُقد كثيفة متعددة GPU (8 وحدات GPU كحد أدنى لدى CoreWeave ومستوى SXM من Lambda) وشبكة مصممة للتشغيلات التدريبية المستدامة والموزعة، بدلاً من الحجم المرن بوحدة GPU واحدة الذي يحسّنه مزودو الاستدلال.',
+          },
+          {
+            q: 'أي سحابة هي الأفضل لشركات الذكاء الاصطناعي الناشئة؟',
+            a: 'DigitalOcean لمعظم الشركات الناشئة الصغيرة في مجال الذكاء الاصطناعي — أرخص وصول H100 عند الطلب مع أبسط عملية انضمام. RunPod هو الخيار التالي للمقارنة إذا كان أدنى سعر مطلق وفوترة serverless أهم من صقل لوحة التحكم والتوافر المتسق.',
+          },
+          {
+            q: 'هل يستحق الفارق السعري لـAWS العناء بالنسبة لأحمال الذكاء الاصطناعي؟',
+            a: 'يستحق العناء تحديداً للشركات التي تحتاج إلى كتالوج خدمات الذكاء الاصطناعي المُدارة لدى AWS (Bedrock وSageMaker)، أو النشر متعدد المناطق، أو شهادة امتثال محددة (HIPAA وFedRAMP) لا تقدمها سحابة متخصصة في GPU. دون أحد هذه الاحتياجات المحددة، لا يقدم الفارق السعري لكل GPU البالغ حوالي ضعفين مقارنة بـDigitalOcean أي ميزة تعويضية لحمل عمل يعتمد على GPU فقط.',
+          },
+          {
+            q: 'هل يجب على شركة ذكاء اصطناعي ناشئة استخدام منصة hyperscaler أم سحابة متخصصة في GPU؟',
+            a: 'عادةً ما تكون السحابة المتخصصة في GPU (DigitalOcean وRunPod وCoreWeave وLambda) نقطة الانطلاق الأفضل لشركة ذكاء اصطناعي ناشئة صغيرة — وصول أرخص إلى GPU، وانضمام أبسط، و(تحديداً لدى CoreWeave وRunPod وLambda) رسوم egress صفرية. انتقلوا إلى منصة hyperscaler (AWS أو Azure أو Google Cloud) بمجرد أن تحتاجوا إلى خدماتها المُدارة المحددة للذكاء الاصطناعي، أو شهادات الامتثال، أو البنية التحتية المؤسسية متعددة المناطق — لا كخيار افتراضي.',
+          },
+          {
+            q: 'هل شراء GPU للذكاء الاصطناعي أرخص من استئجارها؟',
+            a: 'يعتمد ذلك على الاستخدام. الاستئجار أرخص للطلب غير القابل للتنبؤ، والتجريب، والحاجة المؤقتة، أو الرغبة في أحدث الأجهزة دون شراء رأسمالي. يصبح الشراء أرخص بمجرد أن يكون الاستخدام مرتفعاً باستمرار وتعمل GPU على مدار الساعة تقريباً — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) للجانب الخاص بالأجهزة المملوكة من هذه المقارنة.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — قطع وأسعار لامتلاك أجهزتكم الخاصة بدلاً من استئجار GPU سحابية.',
+          '[دليل بناء محطة عمل ذكاء اصطناعي محلية](/power-local-llm/local-ai-workstation-build-guide-2026) — دليل بناء كامل لجهاز ذكاء اصطناعي محلي، البديل الشرائي لكل مزود في هذه الصفحة.',
+          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — مقارنة منفصلة لاستضافة المواقع، وليست لحوسبة الذكاء الاصطناعي/GPU السحابية.',
+        ],
+      },
+    },
+  },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-05',
+    dateModified: '2026-09-05',
+    next_refresh_due: '2027-03-05',
+    theme: 'Overview & Reference',
+    title: 'DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업을 위한 최고의 클라우드',
+    seoTitle: 'DigitalOcean 대 AWS 대 CoreWeave 대 RunPod 2026',
+    intro:
+      '가장 저렴한 GPU가 반드시 가장 저렴한 AI 인프라인 것은 아닙니다. 클라우드를 선택하는 AI 기업은 GPU 가격뿐 아니라 GPU 가용성, 워크로드가 학습인지 추론인지, 네트워크, 스토리지, 데이터 전송 요금, 배포 복잡도, 확장성, 엔터프라이즈 서비스, 지원까지 저울질해야 합니다 — 가격 페이지의 시간당 요금만 볼 것이 아닙니다. 이 가이드는 이 시장의 실제 구도를 반영하는 8개 제공업체를 비교합니다: 가장 흔한 두 출발점인 [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)과 [AWS](https://aws.amazon.com/ec2/instance-types/p5/), GPU 전문 경쟁사인 [CoreWeave](https://www.coreweave.com/), [RunPod](https://www.runpod.io/), [Lambda](https://lambda.ai/), 그리고 엔터프라이즈 대안인 [Google Cloud](https://cloud.google.com/compute/docs/gpus), [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc), [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)입니다. 짧게 답하자면: 대부분의 소규모·성장 중인 AI 기업에는 DigitalOcean이 최고의 출발점이며, 엔터프라이즈 규모나 서비스 카탈로그가 더 중요해지는 시점에는 AWS가 올바른 기본 선택이 되고, 나머지 여섯 곳은 각각 아래에서 자세히 설명하는 구체적인 이유로 우위를 점합니다.',
+    metaDescription:
+      'DigitalOcean, AWS, CoreWeave, RunPod, Lambda, Google Cloud, Azure, Oracle Cloud라는 8대 AI 클라우드 제공업체를 GPU 가격, 가용성, 워크로드 적합성 기준으로 비교했습니다. 2026-09-05 기준으로 검증했습니다.',
+    twitterDescription:
+      'DigitalOcean H100: 시간당 $3.39. RunPod: 시간당 $2.89. CoreWeave: 시간당 $6.16(egress 무료). Lambda는 최근 Anthropic과 350억 달러 규모의 계약을 체결했습니다. 8개 클라우드가 AI 기업에 실제로 부과하는 비용입니다.',
+    affiliateDisclosure: true,
+    audience:
+      '모델 학습이나 서비스를 위한 클라우드 플랫폼을 선택하는 AI 기업의 창업자와 기술 리더로, 일반적인 웹 호스팅 비교가 아니라 가격, 가용성, 워크로드 적합성 기준으로 하이퍼스케일러와 GPU 전문 클라우드를 비교하고 싶은 분들.',
+    readTime: '15분 읽기',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 기업을 위한 최고의 클라우드',
+    targetKeywords: [
+      'ai 기업을 위한 최고의 클라우드 2026',
+      'digitalocean 대 aws 대 coreweave 대 runpod',
+      '가장 저렴한 클라우드 gpu 2026',
+      'coreweave 대 aws 대 lambda',
+      'runpod 대 digitalocean',
+    ],
+    leadAnswerBlock:
+      '**소규모 또는 성장 중인 AI 기업에게는 [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)이 최고의 출발점입니다 — 가장 간단한 콘솔과 온디맨드 시간당 $3.39-4.41부터 시작하는 경쟁력 있는 H100 가격입니다. 폭넓은 서비스 카탈로그를 갖춘 엔터프라이즈 규모 AI에는 [AWS](https://aws.amazon.com/ec2/instance-types/p5/)가 GPU당 온디맨드 시간당 $6.88로 하이퍼스케일러 중 기준입니다. [CoreWeave](https://www.coreweave.com/), [RunPod](https://www.runpod.io/), [Lambda](https://lambda.ai/)는 GPU 전문 클라우드로, 각각 대규모 학습, 저비용 실험, ML 연구를 위해 가격을 알아볼 가치가 있습니다. [Google Cloud](https://cloud.google.com/compute/docs/gpus), [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc), [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)는 엔터프라이즈 대안으로, 각각 TPU, Azure OpenAI Service, 또는 가장 안정적인 가격 경제성이라는 구체적인 이유로 정당화됩니다. 8곳 중 단일 승자는 없습니다 — 최저 정가만이 아니라 팀 규모와 워크로드에 제공업체를 맞추십시오.** 이 페이지의 모든 가격은 미국 달러로 유지됩니다. 클라우드 GPU 컴퓨팅은 여덟 개 제공업체 모두 전 세계적으로 균일하게 USD로 청구되기 때문입니다.',
+    affiliateLinks: [
+      {
+        url: 'https://www.digitalocean.com/products/gpu-droplets',
+        productName: 'DigitalOcean GPU Droplets',
+        productCategory: 'cloud-gpu',
+        priceRange: '3.39-4.41/hr (H100)',
+        label: 'DigitalOcean GPU Droplets 가격 확인',
+      },
+      {
+        url: 'https://aws.amazon.com/ec2/instance-types/p5/',
+        productName: 'AWS EC2 P5 (H100)',
+        productCategory: 'cloud-gpu',
+        priceRange: '6.88/GPU-hr on-demand',
+        label: 'AWS EC2 P5 가격 확인',
+      },
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: 'AI 기업에 가장 좋은 클라우드 제공업체는 어디인가요?',
+        answer:
+          '소규모 또는 성장 중인 AI 기업에는 DigitalOcean이 최고의 출발점입니다 — 가장 저렴한 온디맨드 H100 접근(시간당 $3.39-4.41)과 가장 간단한 콘솔입니다. 엔터프라이즈 규모, 폭넓은 관리형 AI 서비스 카탈로그(Bedrock, SageMaker), 또는 다중 지역 규정 준수가 필요해지면 AWS가 올바른 선택이 됩니다. CoreWeave, RunPod, Lambda는 하이퍼스케일러보다 저렴하고 일반적으로 egress 요금을 청구하지 않는 GPU 전문 클라우드입니다 — RunPod는 저비용 실험에, CoreWeave는 대규모 학습 인프라에, Lambda는 ML 연구에 적합하며(그리고 Anthropic과의 보도된 350억 달러 계약이 보여주듯 진지한 프로덕션 규모에도 적합합니다). Google Cloud, Microsoft Azure, Oracle Cloud Infrastructure는 각각 TPU 접근, Azure OpenAI Service, 가장 안정적인 엔터프라이즈 GPU 가격 구조로 이 구도를 완성합니다.',
+        bullets: [
+          'DigitalOcean H100: 온디맨드 시간당 $3.39-4.41 — 소규모 AI 팀에 최적',
+          'AWS EC2 P5 (H100): GPU당 온디맨드 시간당 $6.88 — 최고의 엔터프라이즈 생태계',
+          'CoreWeave H100: GPU당 시간당 $6.16(8-GPU 노드만), egress 무료 — 대규모 학습에 최적',
+          'RunPod H100: 시간당 $2.89부터(Secure Cloud), egress 무료 — 최고의 가성비',
+          'Lambda H100: 시간당 $3.29부터, egress 무료 — ML 연구에 최적; Anthropic과 보도된 350억 달러 계약(2026년 8월)',
+          'Google Cloud, Azure, Oracle Cloud: TPU, Azure OpenAI Service, 고정 요금 경제성을 위한 엔터프라이즈 대안',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'AI 기업에 가장 좋은 클라우드는 어디인가요?', anchor: '#introduction' },
+      { label: '빠른 답변: 8개 제공업체 비교', anchor: '#quick-answer' },
+      { label: 'AI 기업 유형별 추천', anchor: '#picks-by-type' },
+      { label: '마스터 비교표', anchor: '#master-comparison' },
+      { label: 'GPU 가격: AI 컴퓨팅이 실제로 얼마나 드는가', anchor: '#gpu-pricing-economics' },
+      { label: 'DigitalOcean: 소규모 AI 기업에 최적', anchor: '#digitalocean' },
+      { label: 'AWS: 최고의 엔터프라이즈 AI 클라우드', anchor: '#aws' },
+      { label: 'CoreWeave: 대규모 AI에 최적', anchor: '#coreweave' },
+      { label: 'RunPod: 최고의 가성비 GPU 클라우드', anchor: '#runpod' },
+      { label: 'Lambda: ML 연구자에게 최적', anchor: '#lambda' },
+      { label: 'Google Cloud: TPU에 최적', anchor: '#google-cloud' },
+      { label: 'Microsoft Azure: Microsoft 중심 AI에 최적', anchor: '#microsoft-azure' },
+      { label: 'Oracle Cloud Infrastructure: 저평가된 선택지', anchor: '#oracle-cloud' },
+      { label: 'DigitalOcean 대 나머지 7곳', anchor: '#head-to-head' },
+      { label: '결정을 바꿀 수 있는 숨겨진 비용', anchor: '#hidden-costs' },
+      { label: '학습 대 추론: 최적의 제공업체가 다릅니다', anchor: '#training-vs-inference' },
+      { label: '실제로 얼마나 많은 클라우드 GPU가 필요한가요?', anchor: '#how-much-gpu' },
+      { label: '대여 대 구매: 자체 하드웨어를 보유해야 할 때', anchor: '#rent-vs-buy' },
+      { label: '최종 순위', anchor: '#final-ranking' },
+      { label: '최종 결론과 의사결정 트리', anchor: '#final-verdict' },
+      { label: '출처', anchor: '#sources' },
+      { label: 'FAQ', anchor: '#faq' },
+      { label: '관련 읽을거리', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '**[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)은 소규모 AI 기업에 최고의 출발점입니다** — 온디맨드 H100 시간당 $3.39-4.41, 8곳 중 가장 간단한 콘솔.',
+          '**[AWS](https://aws.amazon.com/ec2/instance-types/p5/)는 하이퍼스케일러 중 기준입니다** — GPU당 온디맨드 시간당 $6.88로, 가장 폭넓은 관리형 AI 서비스와 규정 준수 역량을 삽니다.',
+          '**[CoreWeave](https://www.coreweave.com/), [RunPod](https://www.runpod.io/), [Lambda](https://lambda.ai/) 모두 egress 요금을 청구하지 않습니다** — 여기 있는 모든 하이퍼스케일러가 GB당 $0.087-0.12를 청구하는 것에 비해 실질적인 비용 우위입니다.',
+          '**Lambda는 Anthropic과 보도된 350억 달러 규모의 클라우드 계약을 체결했습니다(Reuters/Bloomberg, 2026-08-31)** — GPU 전문 클라우드는 더 이상 아마추어 수준이 아닙니다.',
+          '**[Google Cloud](https://cloud.google.com/compute/docs/gpus), [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc), [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)는 각각 구체적인 이유로 우위를 점합니다** — 순수 가격이 아니라 각각 TPU, Azure OpenAI Service, 가장 안정적인 엔터프라이즈 GPU 경제성입니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '빠른 사실 확인',
+        items: [
+          '**전반적으로 가장 저렴한 온디맨드 H100:** RunPod Community Cloud와 DigitalOcean, 구성에 따라 둘 다 시간당 약 $3.39-3.99부터.',
+          '**가장 저렴한 egress:** CoreWeave, RunPod, Lambda 모두 아웃바운드 데이터 전송에 $0을 청구합니다 — 여기 있는 모든 하이퍼스케일러는 100GB 무료 등급 이후 GB당 $0.087-0.12를 청구합니다.',
+          '**공개된 최대 단일 계약:** Lambda와 Anthropic 간 보도된 350억 달러 규모의 클라우드 계약(Reuters, 2026-08-31).',
+          '**8-GPU 노드로만 판매되는 유일한 GPU:** CoreWeave의 H100/H200과 Lambda의 SXM 인스턴스 — 더 적게 필요해도 8개 전체 비용을 지불합니다.',
+          '**가장 안정적인 엔터프라이즈 가격:** Oracle Cloud Infrastructure, 지역과 무관하게 GPU당 시간당 $10 고정.',
+        ],
+      },
+      introduction: {
+        id: 'introduction',
+        title: 'AI 기업에 가장 좋은 클라우드는 어디인가요?',
+        content:
+          '가장 저렴한 GPU가 반드시 가장 저렴한 AI 인프라인 것은 아닙니다. 시간당 요금을 비교하기 전에 AI 기업은 다음을 저울질해야 합니다: GPU 가격, GPU 가용성(필요할 때 실제로 H100을 구할 수 있는지), 워크로드가 학습인지 추론인지, 네트워크 품질, 스토리지 비용, 데이터 전송(egress) 요금, 배포 복잡도, 확장성, 엔터프라이즈 서비스, 지원 품질입니다. 즉답하자면: 단순함과 예측 가능한 비용을 원하는 소규모 팀에는 [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets), 엔터프라이즈 규모가 가격보다 중요해지면 [AWS](https://aws.amazon.com/ec2/instance-types/p5/), egress 요금 없는 GPU 전문 경제성을 원하면 [CoreWeave](https://www.coreweave.com/)/[RunPod](https://www.runpod.io/)/[Lambda](https://lambda.ai/), 그리고 각각 하나의 구체적인 엔터프라이즈 이유가 있는 [Google Cloud](https://cloud.google.com/compute/docs/gpus)/[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)/[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)입니다. 이 페이지의 나머지 부분에서는 이 답변 뒤에 있는 근거를 자세히 다룹니다.',
+      },
+      quickAnswer: {
+        id: 'quick-answer',
+        title: '빠른 답변: AI 기업을 위한 최고의 클라우드 제공업체',
+        content:
+          '여덟 제공업체, 여덟 가지 다른 역할. 이 표는 빠른 버전입니다 — 아래 섹션에서 각 제공업체를 자세히 다룹니다.',
+        columns: ['제공업체', '적합한 대상', '주요 장점', '주요 약점'],
+        rows: [
+          {
+            제공업체: '[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)',
+            '적합한 대상': '스타트업 및 소규모 AI 팀',
+            '주요 장점': '단순함 + 경쟁력 있는 GPU 가격',
+            '주요 약점': '더 작은 생태계',
+          },
+          {
+            제공업체: '[AWS](https://aws.amazon.com/ec2/instance-types/p5/)',
+            '적합한 대상': '엔터프라이즈 AI',
+            '주요 장점': '방대한 생태계',
+            '주요 약점': '복잡성 / 비용',
+          },
+          {
+            제공업체: '[CoreWeave](https://www.coreweave.com/)',
+            '적합한 대상': '대규모 AI',
+            '주요 장점': 'GPU 인프라 및 규모',
+            '주요 약점': '범용성 부족',
+          },
+          {
+            제공업체: '[RunPod](https://www.runpod.io/)',
+            '적합한 대상': '개발자 및 추론',
+            '주요 장점': '가격 / 유연성',
+            '주요 약점': '엔터프라이즈 지향성 부족',
+          },
+          {
+            제공업체: '[Lambda](https://lambda.ai/)',
+            '적합한 대상': 'ML 연구자',
+            '주요 장점': 'GPU 중심 플랫폼',
+            '주요 약점': '더 작은 생태계',
+          },
+          {
+            제공업체: '[Google Cloud](https://cloud.google.com/compute/docs/gpus)',
+            '적합한 대상': 'AI/TPU 워크로드',
+            '주요 장점': 'TPU + AI 생태계',
+            '주요 약점': '복잡성',
+          },
+          {
+            제공업체: '[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)',
+            '적합한 대상': '엔터프라이즈 / Microsoft',
+            '주요 장점': 'Azure + OpenAI 생태계',
+            '주요 약점': '복잡성',
+          },
+          {
+            제공업체: '[Oracle Cloud (OCI)](https://www.oracle.com/cloud/compute/gpu/)',
+            '적합한 대상': '비용에 민감한 엔터프라이즈 AI',
+            '주요 장점': '경쟁력 있는 인프라 경제성',
+            '주요 약점': '더 작은 개발자 생태계',
+          },
+        ],
+      },
+      picksByType: {
+        id: 'picks-by-type',
+        title: 'AI 기업 유형별 추천',
+        content:
+          '이것이 이 페이지의 편집상 핵심입니다: DigitalOcean은 모든 카테고리에서 이기지 않으며, 그럴 필요도 없습니다 — 이 페이지 대부분의 독자에게 중요한 카테고리에서 이기고 있습니다.',
+        items: [
+          '**소규모 AI 스타트업에 최적:** [DigitalOcean](https://www.digitalocean.com/products/gpu-droplets) — 가장 저렴한 온디맨드 H100, 엔터프라이즈 영업 절차 불필요.',
+          '**저비용 GPU 실험에 최적:** [RunPod](https://www.runpod.io/) — Secure Cloud 시간당 $2.89부터, Community Cloud는 더 저렴, egress 요금 없음.',
+          '**대규모 AI 학습에 최적:** [CoreWeave](https://www.coreweave.com/) — InfiniBand급 네트워킹을 갖춘 GPU 전문 8-GPU HGX 노드.',
+          '**ML 연구자에게 최적:** [Lambda](https://lambda.ai/) — GPU 우선 플랫폼, 사전 구성된 ML 환경, 이제 Anthropic과 보도된 350억 달러 계약을 뒷받침으로.',
+          '**최고의 엔터프라이즈 클라우드:** [AWS](https://aws.amazon.com/ec2/instance-types/p5/) — 가장 폭넓은 관리형 AI 카탈로그와 규정 준수 역량.',
+          '**Google/TPU 워크로드에 최적:** [Google Cloud](https://cloud.google.com/compute/docs/gpus) — 이 페이지에서 TPU를 제공하는 유일한 제공업체.',
+          '**Microsoft/OpenAI 워크로드에 최적:** [Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — Azure OpenAI Service 접근.',
+          '**대규모 엔터프라이즈 컴퓨팅의 최고 대안:** [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/) — 고정 가격, 하이퍼스케일러 중 가장 저렴한 egress.',
+        ],
+      },
+      masterComparison: {
+        id: 'master-comparison',
+        title: '마스터 비교표',
+        content:
+          '일부러 한눈에 훑어볼 수 있게 유지했습니다 — 각 제공업체의 전체 세부 정보는 제공업체 열에서 링크되는 아래의 해당 섹션에 있습니다.',
+        columns: ['제공업체', 'GPU 초점', 'H100 가격', 'Spot / 예약', '멀티 GPU', '데이터 전송', '최적의 사용 사례'],
+        rows: [
+          {
+            제공업체: '[DigitalOcean](#digitalocean)',
+            'GPU 초점': '일반 AI, 소규모 팀',
+            'H100 가격': '시간당 $3.39-4.41',
+            'Spot / 예약': '12개월 예약 시간당 ~$2.50',
+            '멀티 GPU': '가능, Droplet별',
+            '데이터 전송': '500GiB+ 무료, 이후 GiB당 $0.01',
+            '최적의 사용 사례': '스타트업, 단순함',
+          },
+          {
+            제공업체: '[AWS](#aws)',
+            'GPU 초점': '일반 엔터프라이즈 AI',
+            'H100 가격': 'GPU당 시간당 $6.88',
+            'Spot / 예약': 'Capacity Blocks 시간당 $4.72-5.19; Spot -60-70%',
+            '멀티 GPU': '가능, 노드당 최대 8개',
+            '데이터 전송': '100GB 무료, 이후 GB당 $0.09',
+            '최적의 사용 사례': '엔터프라이즈, 폭넓은 서비스',
+          },
+          {
+            제공업체: '[CoreWeave](#coreweave)',
+            'GPU 초점': '대규모 학습',
+            'H100 가격': 'GPU당 시간당 $6.16(8-GPU 노드만)',
+            'Spot / 예약': 'Spot -40-60%; 예약 -60%',
+            '멀티 GPU': '8-GPU HGX 노드만',
+            '데이터 전송': '무료',
+            '최적의 사용 사례': '대형 학습 클러스터',
+          },
+          {
+            제공업체: '[RunPod](#runpod)',
+            'GPU 초점': '유연한 개발/추론',
+            'H100 가격': '시간당 $2.89부터(Secure Cloud)',
+            'Spot / 예약': 'Spot -50-80%',
+            '멀티 GPU': '가능, Pod별',
+            '데이터 전송': '무료',
+            '최적의 사용 사례': '실험, 추론',
+          },
+          {
+            제공업체: '[Lambda](#lambda)',
+            'GPU 초점': 'ML 연구',
+            'H100 가격': '시간당 $3.29-4.29',
+            'Spot / 예약': '예약 할인 가능',
+            '멀티 GPU': 'SXM은 8-GPU 노드만',
+            '데이터 전송': '무료',
+            '최적의 사용 사례': '연구, 프로덕션 학습',
+          },
+          {
+            제공업체: '[Google Cloud](#google-cloud)',
+            'GPU 초점': 'GPU + TPU',
+            'H100 가격': 'GPU당 시간당 $9-11.50',
+            'Spot / 예약': '약정 사용 할인',
+            '멀티 GPU': '가능, 노드당 최대 8개',
+            '데이터 전송': '100GB 무료, 이후 GB당 $0.12',
+            '최적의 사용 사례': 'TPU/ML 네이티브 워크로드',
+          },
+          {
+            제공업체: '[Microsoft Azure](#microsoft-azure)',
+            'GPU 초점': '엔터프라이즈 + OpenAI',
+            'H100 가격': 'GPU당 시간당 $11-13',
+            'Spot / 예약': '예약 인스턴스',
+            '멀티 GPU': '가능, 노드당 최대 8개',
+            '데이터 전송': '100GB 무료, 이후 GB당 $0.087',
+            '최적의 사용 사례': 'Azure OpenAI Service 접근',
+          },
+          {
+            제공업체: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            'GPU 초점': '고정 요금 엔터프라이즈',
+            'H100 가격': '시간당 $10 고정',
+            'Spot / 예약': 'Universal Credits(대량)',
+            '멀티 GPU': '8-GPU 베어메탈 노드',
+            '데이터 전송': '10TB 무료, 이후 GB당 $0.0085',
+            '최적의 사용 사례': '가장 저렴한 원시 엔터프라이즈 컴퓨팅',
+          },
+        ],
+      },
+      gpuPricingEconomics: {
+        id: 'gpu-pricing-economics',
+        title: 'GPU 가격: AI 컴퓨팅은 실제로 얼마나 드는가?',
+        content:
+          '시간당 요금만으로는 실제 결정을 알 수 없습니다. **모든 가격을 청구 모델별로 표시하십시오 — 온디맨드, spot, 예약, 마켓플레이스/Community Cloud는 같은 숫자가 아닙니다**, 이를 혼동하면 잘못된 비교가 나옵니다. 아래 표는 각 제공업체의 확인된 최저 온디맨드 단일 GPU H100 요금을 100시간, 1,000시간, 730시간(대략 한 달간의 연속 사용)으로 확장하여, 단일 시간이 아니라 실제 예산에 맞는 규모에서 차이를 볼 수 있게 합니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '730시간(대략 한 달간의 연속 사용) 기준으로 온디맨드 H100 비용은 RunPod의 약 $2,110부터 Microsoft Azure의 $8,000 이상까지 다양합니다 — 전적으로 제공업체 선택에 의한 4배 차이입니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '단일 시간당 숫자는 비용이 어떻게 누적되는지를 가립니다 — "하루 $5" 구독이 연간 총액 $1,825를 보기 전까지는 사소하게 들리는 것과 같습니다. 요금을 현실적인 사용 기간으로 확장하는 것이 실제로 예산 결정에 도움이 됩니다.',
+          },
+        ],
+        columns: ['제공업체', '시간당', '100시간당', '1,000시간당', '730시간당(~1개월)'],
+        rows: [
+          {
+            제공업체: '[RunPod](#runpod)(Secure Cloud)',
+            '시간당': '$2.89',
+            '100시간당': '$289',
+            '1,000시간당': '$2,890',
+            '730시간당(~1개월)': '$2,110',
+          },
+          {
+            제공업체: '[DigitalOcean](#digitalocean)',
+            '시간당': '$3.39',
+            '100시간당': '$339',
+            '1,000시간당': '$3,390',
+            '730시간당(~1개월)': '$2,475',
+          },
+          {
+            제공업체: '[Lambda](#lambda)',
+            '시간당': '$3.29',
+            '100시간당': '$329',
+            '1,000시간당': '$3,290',
+            '730시간당(~1개월)': '$2,402',
+          },
+          {
+            제공업체: '[CoreWeave](#coreweave)',
+            '시간당': '$6.16',
+            '100시간당': '$616',
+            '1,000시간당': '$6,160',
+            '730시간당(~1개월)': '$4,497',
+          },
+          {
+            제공업체: '[AWS](#aws)',
+            '시간당': '$6.88',
+            '100시간당': '$688',
+            '1,000시간당': '$6,880',
+            '730시간당(~1개월)': '$5,022',
+          },
+          {
+            제공업체: '[Google Cloud](#google-cloud)',
+            '시간당': '$9.00(하단)',
+            '100시간당': '$900',
+            '1,000시간당': '$9,000',
+            '730시간당(~1개월)': '$6,570',
+          },
+          {
+            제공업체: '[Oracle Cloud (OCI)](#oracle-cloud)',
+            '시간당': '$10.00 고정',
+            '100시간당': '$1,000',
+            '1,000시간당': '$10,000',
+            '730시간당(~1개월)': '$7,300',
+          },
+          {
+            제공업체: '[Microsoft Azure](#microsoft-azure)',
+            '시간당': '$11.00(하단)',
+            '100시간당': '$1,100',
+            '1,000시간당': '$11,000',
+            '730시간당(~1개월)': '$8,030',
+          },
+        ],
+      },
+      digitalocean: {
+        id: 'digitalocean',
+        title: 'DigitalOcean은 소규모 AI 기업에 최고의 클라우드인가요?',
+        content:
+          '**[GPU Droplets](https://www.digitalocean.com/products/gpu-droplets)는 온디맨드 시간당 $3.39-4.41부터 H100 접근을 제공하며**, 12개월 예약 시 요금이 시간당 약 $2.50까지 내려갑니다. 청구는 초 단위로, 최소 60초입니다. 배포는 표준 Droplet 콘솔을 통해 이루어집니다 — 첫 워크로드 실행 전에 IAM/VPC 설정 부담이 전혀 없습니다. 스토리지와 네트워크는 DigitalOcean의 일반 Droplet과 동일한 단순하고 번들화된 모델을 따릅니다(플랜에 따라 500GiB+ 무료 아웃바운드 전송, 이후 GiB당 $0.01). 추론의 경우, 단일 또는 다중 GPU Droplet이 DigitalOcean의 표준 네트워크를 통해 모델을 직접 서비스합니다. 파인튜닝의 경우, 동일한 Droplet이 별도의 제품 등급 없이 작동합니다. 더 큰 학습 실행의 경우, DigitalOcean은 CoreWeave나 AWS에 필적하는 고밀도 8-GPU 베어메탈 노드를 공개하지 않으므로, 특정 규모를 넘어서면 올바른 선택이 아닙니다.',
+        items: [
+          '**DigitalOcean을 사용해야 하는 경우:** 엔터프라이즈 영업 절차나 복잡한 IAM 설정 없이 빠른 H100 접근을 원하고, 예측 가능하고 번들화된 가격을 중시하는 2-10인 규모의 AI 팀.',
+          '**DigitalOcean을 사용하지 말아야 하는 경우:** 고밀도 다중 노드 학습 클러스터를 운영하거나, TPU가 필요하거나, 대규모 관리형 AI 서비스 카탈로그(Bedrock 유형의 호스팅 모델, 엔터프라이즈 규정 준수 인증)가 필요한 팀 — DigitalOcean은 이 중 어느 것도 경쟁력이 없습니다.',
+        ],
+        bestFor: '빠른 H100 접근, 예측 가능한 가격, 엔터프라이즈 영업 절차 불필요를 원하는 소규모 AI 팀.',
+        avoidIf: '고밀도 다중 노드 학습 클러스터, TPU, 또는 대규모 관리형 AI 서비스 카탈로그가 필요한 경우.',
+        costNote: '결론: 하이퍼스케일러 카탈로그의 폭보다 단순함과 예측 가능한 인프라 비용을 우선시하는 많은 소규모·성장 중인 AI 기업에게 최고의 선택입니다.',
+        affiliateLinks: [
+          {
+            url: 'https://www.digitalocean.com/products/gpu-droplets',
+            productName: 'DigitalOcean GPU Droplets',
+            productCategory: 'cloud-gpu',
+            priceRange: '3.39-4.41/hr (H100)',
+            label: 'DigitalOcean GPU Droplets 가격 확인',
+          },
+        ],
+      },
+      aws: {
+        id: 'aws',
+        title: 'AWS는 최고의 엔터프라이즈 AI 클라우드인가요?',
+        content:
+          '**AWS는 이 페이지에서 하이퍼스케일러 중 기준입니다 — 저렴해서가 아니라 그 추가 비용이 사는 것 때문입니다.** [EC2 P5](https://aws.amazon.com/ec2/instance-types/p5/) 인스턴스(p5.48xlarge, 8x H100)는 온디맨드 시간당 $55.04 — GPU당 $6.88 — 이며, 선불 [Capacity Blocks](https://aws.amazon.com/ec2/capacityblocks/)는 이를 GPU당 시간당 $4.72-5.19로 낮추고, 중단을 허용하는 워크로드의 경우 Spot 가격이 온디맨드보다 60-70% 저렴할 수 있습니다. 순수 컴퓨팅을 넘어: 호스팅된 파운데이션 모델을 위한 [Bedrock](https://aws.amazon.com/bedrock/), 학습 파이프라인을 위한 [SageMaker](https://aws.amazon.com/sagemaker/), AWS의 글로벌 지역 네트워크, 그리고 이 페이지의 어떤 제공업체보다 폭넓은 규정 준수 인증(HIPAA, FedRAMP 등)입니다. 이것은 가격 논쟁이 아니라 "GPU 외에 무엇이 더 필요한가"라는 논쟁입니다.',
+        bestFor: '이미 AWS에 투자한 기업, 또는 더 넓은 생태계가 필요한 기업: 관리형 AI 서비스, 다중 지역 배포, 또는 엔터프라이즈 규정 준수 인증.',
+        avoidIf: '순수 GPU 접근만 필요한 소규모 팀인 경우 — AWS의 IAM/VPC 설정과 콘솔 복잡성은 DigitalOcean이 요구하지 않는 실제 온보딩 시간을 추가합니다.',
+        costNote: '온디맨드 P5 가격(GPU당 시간당 $6.88)은 DigitalOcean의 온디맨드 요금의 약 두 배입니다 — 이 추가 비용은 더 빠르거나 더 나은 GPU가 아니라 AWS 서비스의 폭을 구매하는 것입니다.',
+      },
+      coreweave: {
+        id: 'coreweave',
+        title: 'CoreWeave는 대규모 AI에 최고의 선택인가요?',
+        content:
+          '**CoreWeave는 DigitalOcean과 근본적으로 다른 제품입니다 — 범용 컴퓨팅이 아니라 대규모 AI 인프라를 위해 구축된 GPU 전문 클라우드입니다.** [CoreWeave](https://www.coreweave.com/)는 H100과 H200을 오직 8-GPU HGX 노드로만 판매합니다: H100 노드는 시간당 $49.24(GPU당 $6.16), H200 노드는 시간당 $50.44(GPU당 $6.31) — 단일 GPU를 셀프서비스로 프로비저닝하는 방법은 없습니다. Spot 가격은 온디맨드보다 약 40-60% 저렴하며, 예약/약정 사용은 최대 60% 할인을 받습니다. 각 노드는 128개의 vCPU, 2,048GB의 시스템 RAM, 61.44TB의 로컬 스토리지를 통합하며, Kubernetes 네이티브 오케스트레이션과 분산 다중 노드 학습을 위한 고처리량 네트워킹을 중심으로 구축되었습니다 — 그리고 CoreWeave는 데이터 전송/egress 요금을 전혀 청구하지 않습니다. 이는 이 페이지의 어떤 하이퍼스케일러와 비교해도 상당한 이점입니다. CoreWeave는 AI 연구소로부터의 대규모 인프라 투자를 바탕으로 대형 AI 클라우드 논의에 확고히 자리 잡았으며, 일반 클라우드 사업의 부차적인 옵션으로서가 아닙니다.',
+        bestFor: '고밀도 8-GPU 노드, Kubernetes 네이티브 오케스트레이션, 제로 egress 요금의 혜택을 받는 대규모 다중 노드 AI 학습을 수행하는 기업.',
+        avoidIf: '단일 GPU, 범용 클라우드(컴퓨팅 외에 스토리지, 데이터베이스, 웹 호스팅), 또는 더 작고 저렴한 진입점이 필요한 경우 — CoreWeave는 범용이 아닙니다.',
+        costNote: '8-GPU 노드 전용 모델은 CoreWeave가 규모에 맞춰 가격이 책정되어 있음을 의미합니다 — 1-2개의 GPU가 필요한 팀도 8개 전체 비용을 지불하며, 이는 DigitalOcean이나 RunPod와 정반대의 트레이드오프입니다.',
+      },
+      runpod: {
+        id: 'runpod',
+        title: 'RunPod는 최고의 가성비 GPU 클라우드인가요?',
+        content:
+          '**RunPod는 이 페이지에서 가격 경쟁력이 가장 높은 주류 GPU 클라우드이며, 가격에 민감한 AI 개발자에게 DigitalOcean의 가장 직접적인 경쟁자입니다.** [RunPod](https://www.runpod.io/)는 두 등급으로 나뉩니다: 안정적인 가동 시간 보장을 갖춘 **Secure Cloud**(RTX 4090 시간당 $0.69, A100 SXM 시간당 $1.49, H100 PCIe 시간당 $2.89, H100 NVL 시간당 $3.19, H200 시간당 $4.39, B200 시간당 $5.89), 그리고 가동 시간 일관성은 다소 떨어지지만 추가 할인이 있는 피어 마켓플레이스 **Community Cloud**(RTX 4090 시간당 $0.34, A100 80GB 시간당 $1.39, H100 PCIe 시간당 $2.89)입니다. RunPod는 또한 활성 실행 초당 청구되는 **serverless** 등급도 운영합니다(GPU에 따라 시간당 $0.58-9.98, H100은 시간당 $4.55), 요청 사이에 0으로 스케일링되는 추론 워크로드를 위해 특별히 설계되었습니다. Spot 인스턴스는 중단을 허용하는 작업에 대해 온디맨드보다 50-80% 저렴하며, CoreWeave와 Lambda처럼 RunPod도 egress 요금을 청구하지 않습니다.',
+        bestFor: '가격에 민감하고, 가변적인 가동 시간을 허용하거나, 0으로 스케일링되는 serverless 청구를 원하는 개발자와 추론 워크로드.',
+        avoidIf: '엄격한 엔터프라이즈 가동 시간 SLA나 폭넓은 관리형 AI 서비스 카탈로그가 필요한 경우 — RunPod는 AWS나 Azure만큼 엔터프라이즈 지향적이지 않습니다.',
+        costNote: 'RunPod는 DigitalOcean 추천을 덜 신뢰할 수 있게 만드는 것이 아니라 더 신뢰할 수 있게 만듭니다: DigitalOcean은 단순함과 콘솔의 완성도에서 이기고, RunPod는 그것을 원하는 개발자를 위한 원시 가격과 유연성에서 이깁니다.',
+        affiliateLinks: [
+          {
+            url: 'https://www.runpod.io/',
+            productName: 'RunPod cloud GPU',
+            productCategory: 'cloud-gpu',
+            priceRange: '0.34-5.89/hr (Community/Secure Cloud)',
+            label: 'RunPod 가격 확인 및 가입',
+          },
+        ],
+      },
+      lambda: {
+        id: 'lambda',
+        title: 'Lambda는 ML 연구자에게 최고의 GPU 클라우드인가요?',
+        content:
+          '**Lambda는 연구자와 학습 워크로드를 위한 사전 구성된 ML 환경을 중심으로 구축된 GPU 우선 플랫폼입니다 — 그리고 더 이상 단순한 소규모 GPU 대여 회사가 아닙니다.** [Lambda](https://lambda.ai/)는 H100을 시간당 $3.29(PCIe)에서 $4.29(SXM)까지, A100을 시간당 $1.99(40GB)에서 $2.79(80GB)까지 청구합니다. CoreWeave와 마찬가지로 SXM 인스턴스는 8-GPU 구성으로만 판매되므로, 2-4개의 GPU가 필요해도 8개 전체 비용을 지불합니다. Lambda는 egress 요금을 청구하지 않습니다. 이 플랫폼은 우선적으로 연구와 학습을 위해 구축되었습니다: 사전 설치된 ML 프레임워크, 다중 GPU 클러스터, 그리고 가벼운 실험보다는 진지한 학습 실행을 지향하는 지원입니다. **Reuters와 Bloomberg는 2026-08-31에 Anthropic이 Lambda와 보도된 가치 350억 달러 규모의 클라우드 컴퓨팅 계약을 체결했다고 보도했습니다**, 이는 누에세스 카운티의 Hut 8 데이터센터 프로젝트(약 350메가와트 규모)를 통해 가동되는 엔비디아 GPU 용량과 연관되어 있습니다 — 정확한 GPU 수량, 계약 기간, 그리고 Anthropic, Lambda, 엔비디아, Hut 8 간의 의무 분담 방식은 보도에서 공개되지 않았습니다. 이 규모는 GPU 전문 클라우드가 이제 연구자의 부업 프로젝트뿐 아니라 진지한 프로덕션 워크로드를 두고 경쟁한다는 가장 명확한 신호입니다.',
+        bestFor: '사전 구성된 환경과 제로 egress 요금을 갖춘 GPU 우선 플랫폼을 원하는 ML 연구자와 진지한 학습 워크로드를 운영하는 팀.',
+        avoidIf: '작고 유연한 단일 GPU 진입점이 필요한 경우 — Lambda의 SXM 등급은 CoreWeave와 동일한 트레이드오프로 8-GPU 전용입니다.',
+        costNote: '보도된 350억 달러 규모의 Anthropic 계약(조건 비공개)은 규모의 신호일 뿐, 소규모 구매자에게 보장된 가격 우위가 아닙니다 — Lambda가 공개한 셀프서비스 요금이 더 작은 AI 기업이 실제로 지불할 금액입니다.',
+      },
+      googleCloud: {
+        id: 'google-cloud',
+        title: 'Google Cloud는 TPU와 Google의 AI 스택에 최고의 선택인가요?',
+        content:
+          'Google Cloud의 요점은 "Google에 GPU가 있다"는 것이 아닙니다 — 이 페이지의 모든 제공업체에 GPU가 있습니다. **Google Cloud는 AI 워크로드가 실제로 Google의 가속기와 AI 플랫폼, 즉 TPU의 혜택을 받을 때 특히 흥미로워집니다.** [Google Cloud](https://cloud.google.com/compute/docs/gpus)는 자체 H100 인스턴스(A3 시리즈, a3-highgpu-8g, 온디맨드로 약 시간당 $80-90 — GPU당 $9-11.50 — 지속적인 워크로드에 대한 약정 사용 할인 포함)와 더불어 GPU 대안으로 TPU를 제공하는 이 페이지의 유일한 제공업체입니다. TPU를 넘어, 차별화 요소로는 ML 파이프라인을 위한 [Vertex AI](https://cloud.google.com/vertex-ai), Google의 네트워크 백본, 이미 그곳에 데이터를 저장하는 팀을 위한 BigQuery 데이터 생태계, 그리고 Google 자체 모델 위에 구축하는 팀을 위한 Gemini 모델 생태계가 있습니다.',
+        bestFor: 'GPU 대안으로 TPU를 평가 중이거나, 이미 Vertex AI, BigQuery, Gemini 생태계로 표준화된 팀.',
+        avoidIf: 'TPU에 관심이 없고 GPU만 필요한 경우 — Google Cloud의 온디맨드 GPU 요금은 DigitalOcean, RunPod, AWS의 온디맨드 요금보다 높습니다.',
+        costNote: 'A3 시리즈에 대해 보고된 온디맨드 요금은 이곳 대부분의 제공업체보다 출처와 약정 수준에 따라 더 폭넓게 달라집니다 — 예산을 세우기 전에 해당 지역과 머신 유형의 현재 요금을 확인하십시오.',
+      },
+      microsoftAzure: {
+        id: 'microsoft-azure',
+        title: 'Microsoft Azure는 Microsoft 중심 AI에 최고의 선택인가요?',
+        content:
+          '**Azure는 이 페이지에서 가장 높은 GPU당 온디맨드 가격을 가지고 있지만, 원시 GPU 가격이 가장 낮지 않더라도 여전히 타당할 수 있는 구체적인 이유가 하나 있습니다: [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)입니다.** [ND H100 v5](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) 인스턴스는 온디맨드로 GPU당 약 시간당 $11-13이며, 완전한 8-GPU 노드는 약 시간당 $98로, GPU당 표시 가격이 더 높음에도 불구하고 노드 수준에서는 AWS 및 Google Cloud와 비슷합니다. OpenAI 접근을 넘어, Azure의 논리는 엔터프라이즈 아이덴티티(Active Directory), Microsoft 365 통합, 기존 엔터프라이즈 조달 관계, 그리고 이미 온프레미스로 Microsoft 스택 워크로드를 실행 중인 기업을 위한 하이브리드 인프라에 의존합니다.',
+        bestFor: '제품이 Azure OpenAI Service에 의존하는 기업, 또는 조달을 하나의 공급업체로 통합하려는 기존 Microsoft 엔터프라이즈 고객.',
+        avoidIf: 'Azure OpenAI Service나 Microsoft 생태계에 대한 의존성이 없는 경우 — GPU당 요금이 이 페이지에서 가장 높으면서도 순수 GPU 워크로드에 대한 보상적 이점이 없습니다.',
+        costNote: '완전한 8-GPU 노드 수준에서는 Azure의 약 시간당 $98 가격이 AWS 및 Google Cloud와 근접합니다 — GPU당 더 높은 표시 가격은 노드 전체가 아니라 단일 또는 부분 GPU를 대여하는 팀에게 주로 중요합니다.',
+      },
+      oracleCloud: {
+        id: 'oracle-cloud',
+        title: 'Oracle Cloud Infrastructure는 저평가된 AI 클라우드인가요?',
+        content:
+          '**Oracle Cloud Infrastructure는 대규모 AI 워크로드에서 인프라 경제성을 매우 중시하는 기업에게 진지한 선택지입니다 — 이 비교에 진정으로 다른 관점을 제공하는, 다소 예측하기 어려운 선택입니다.** [OCI](https://www.oracle.com/cloud/compute/gpu/)는 모든 지역에서 온디맨드 H100에 대해 GPU당 시간당 $10 고정 요금을 청구합니다 — 지역별 가격 차이가 없습니다 — 그리고 8x H100 베어메탈 노드(BM.GPU.H100.8)는 시간당 $80로, AWS, Azure, Google Cloud의 약 시간당 $98 노드 가격보다 상당히 낮습니다. OCI는 또한 egress 요금이 적용되기 전 월 10TB의 무료 아웃바운드 전송을 포함하며, 이는 여기 있는 어떤 하이퍼스케일러보다도 저렴한 egress입니다(AWS/Azure/Google Cloud의 100GB와 비교). 그리고 다중 노드 학습을 위한 RDMA 클러스터 네트워킹을 제공합니다. 컴퓨팅을 넘어, 엔터프라이즈 데이터베이스 워크로드(Oracle Database, 데이터 웨어하우징)에서 OCI의 전통적인 강점은 이미 Oracle 인접 엔터프라이즈 시스템을 운영 중이며 동일한 플랫폼에서 AI 인프라를 원하는 기업에게 특별한 매력을 제공합니다. Oracle의 Universal Credits 프로그램은 더 큰 연간 약정에 대해 협상된 대량 할인을 제공하지만, 할인율은 표준 표로 공개되어 있지 않습니다.',
+        bestFor: '고정된 GPU당 가격, 낮은 egress, RDMA 네트워킹이 폭넓은 관리형 AI 서비스 카탈로그보다 더 중요한 대규모 학습 클러스터를 운영하는 기업, 그리고 이미 Oracle의 데이터베이스/엔터프라이즈 스택에 있는 기업.',
+        avoidIf: 'Oracle 고유의 관리형 AI 카탈로그의 폭이 필요하거나, 가능한 한 넓은 인스턴스/지역 카탈로그를 원하는 경우 — OCI의 카탈로그는 AWS나 Google Cloud보다 좁습니다.',
+        costNote: '10TB 무료 egress 한도는 AWS, Azure, Google Cloud의 100GB 무료 등급보다 100배 큽니다 — 무료 등급은 모든 하이퍼스케일러 중 가장 자주 조정되는 조건 중 하나이므로 예산을 세우기 전에 현재 한도를 확인하십시오.',
+      },
+      headToHead: {
+        id: 'head-to-head',
+        title: 'DigitalOcean 대 나머지 7곳: 정면 대결 결정',
+        content:
+          '각각 구체적인 "DigitalOcean 대 X" 질문에 직접 답하는 여덟 개의 한 줄 결정 규칙입니다.',
+        subsections: [
+          {
+            title: 'DigitalOcean 대 AWS',
+            text: '엔터프라이즈 영업 절차 없이 H100 접근을 원하는 소규모 팀이라면 DigitalOcean을 선택하십시오. Bedrock, SageMaker, 다중 지역 배포, 또는 특정 규정 준수 인증이 필요하다면 AWS를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 CoreWeave',
+            text: '1-2개의 GPU와 컴퓨팅 외에 범용 클라우드 서비스가 필요하다면 DigitalOcean을 선택하십시오. 고밀도 8-GPU 노드와 제로 egress 요금이 CoreWeave의 소규모 진입 등급 부재를 상쇄하는 규모로 학습 중이라면 CoreWeave를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 RunPod',
+            text: '콘솔의 완성도와 예측 가능한 번들 가격이 시간당 요금에서 마지막 몇 센트를 아끼는 것보다 중요하다면 DigitalOcean을 선택하십시오. 가장 낮은 주류 온디맨드 요금, 0으로 스케일링되는 serverless 청구, 또는 제로 egress 요금을 원하고 Community Cloud의 가변적인 가동 시간을 허용할 수 있다면 RunPod를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 Lambda',
+            text: '유연한 단일 또는 소수 GPU 구성이 필요하다면 DigitalOcean을 선택하십시오. 워크로드가 주로 학습이며 사전 구성된 ML 환경을 갖춘 GPU 전문 플랫폼의 혜택을 받는다면 Lambda를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 Google Cloud',
+            text: 'TPU에 관심이 없고 더 낮은 가격으로 GPU만 필요하다면 DigitalOcean을 선택하십시오. 워크로드가 특별히 TPU의 혜택을 받거나 이미 Vertex AI로 표준화되어 있다면 Google Cloud를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 Azure',
+            text: 'Microsoft 의존성이 없는 순수 GPU 워크로드에는 DigitalOcean을 선택하십시오. 제품이 Azure OpenAI Service에 의존하거나 Microsoft 엔터프라이즈 조달을 통합하는 중이라면 Azure를 선택하십시오.',
+          },
+          {
+            title: 'DigitalOcean 대 Oracle Cloud',
+            text: '소규모 팀의 첫 GPU 워크로드에는 DigitalOcean을 선택하십시오. OCI의 고정 가격과 10TB 무료 egress가 DigitalOcean의 단순함 우위를 넘어서기 시작하는 대규모, 지속적인 학습 워크로드를 운영 중이라면 Oracle Cloud Infrastructure를 선택하십시오.',
+          },
+        ],
+      },
+      hiddenCosts: {
+        id: 'hidden-costs',
+        title: '결정을 바꿀 수 있는 숨겨진 비용',
+        content:
+          '**가장 낮은 GPU 시간당 요금이 반드시 AI 애플리케이션을 운영하는 가장 낮은 총비용은 아닙니다.** 표시 요금만으로 제공업체에 전념하기 전에 다음 각 항목을 확인하십시오.',
+        items: [
+          '**데이터 전송(egress):** 이 페이지에서 가장 큰 숨겨진 비용 — CoreWeave, RunPod, Lambda는 모두 $0을 청구합니다; AWS, Azure, Google Cloud는 100GB 무료 등급 이후 GB당 $0.087-0.12를 청구합니다; DigitalOcean과 Oracle Cloud는 더 큰 번들/무료 한도로 중간 정도입니다.',
+          '**스토리지 및 영구 볼륨:** 여기 있는 모든 제공업체에서 컴퓨팅과 별도로 청구됩니다 — GPU 요금뿐 아니라 GB-월당 요금도 확인하십시오.',
+          '**스냅샷 및 백업:** GPU 인스턴스가 중지된 경우에도 종종 활성 스토리지와 동일한 요금으로 청구됩니다.',
+          '**유휴 GPU:** 이 페이지의 모든 제공업체는 유용한 작업을 하고 있는지 여부와 관계없이 실행 중인(DigitalOcean의 경우 전원이 켜진) 인스턴스에 요금을 부과합니다.',
+          '**최소 청구 단위:** RunPod와 DigitalOcean은 초 단위이지만, 실제 초 단위 세분화를 가정하기 전에 각 제공업체의 최소 청구 하한선을 확인하십시오.',
+          '**네트워크(egress 외):** 다중 GPU/다중 노드 학습을 위한 노드 간 대역폭은 규모가 커질수록 GPU 가격 자체보다 더 중요할 수 있습니다 — 이것이 바로 CoreWeave와 OCI의 RDMA 네트워킹 주장이 다루는 것입니다.',
+          '**지역 가용성:** 광고된 온디맨드 요금이 모든 지역에서 제공되지 않을 수 있으며, GPU 재고가 필요한 바로 그 순간에 단순히 이용 불가능할 수 있습니다.',
+          '**예약/약정 사용 의무:** 공개된 가장 저렴한 요금은 종종 1-3년 약정에 묶여 있습니다 — 다른 제공업체의 온디맨드 요금과 비교하기 전에 기간을 확인하십시오.',
+          '**지원:** 엔터프라이즈급 지원(AWS, Azure, Google Cloud)은 더 높은 요금에 이미 반영되어 있습니다; GPU 전문업체(RunPod, Lambda)는 진입 등급에서 커뮤니티/티켓 지원에 더 많이 의존하는 경향이 있습니다.',
+          '**엔지니어링 시간:** 하이퍼스케일러에서의 IAM/VPC 설정, Kubernetes 오케스트레이션, 또는 다중 지역 배포 복잡성은 청구서에 절대 나타나지 않더라도 실제 비용입니다.',
+        ],
+      },
+      trainingVsInference: {
+        id: 'training-vs-inference',
+        title: '학습 대 추론: 최적의 제공업체가 다릅니다',
+        content:
+          '올바른 제공업체는 워크로드가 모델을 학습시키는지 서비스하는지에 따라 달라집니다 — 이 구분을 먼저 확인하지 않고 두 경우 모두에 단일 제공업체를 선택하지 마십시오.',
+        items: [
+          '**학습에 최적:** [CoreWeave](#coreweave), [AWS](#aws), [Google Cloud](#google-cloud), [Lambda](#lambda) — 지속적이고 분산된 실행을 위해 구축된 고밀도 다중 GPU 노드와 네트워크.',
+          '**추론에 최적:** [DigitalOcean](#digitalocean), [RunPod](#runpod), [CoreWeave](#coreweave) — 가변적인 요청량에 맞는 유연한 단일/소수 GPU 규모(DigitalOcean, RunPod) 또는 0으로 스케일링되는 serverless(RunPod).',
+          '**실험에 최적:** [RunPod](#runpod), [DigitalOcean](#digitalocean) — 가장 저렴한 진입점, 가장 빠른 가입, 엔터프라이즈 절차 불필요.',
+          '**엔터프라이즈 프로덕션에 최적:** [AWS](#aws), [Azure](#microsoft-azure), [Google Cloud](#google-cloud) — 프로덕션 배포가 결국 필요로 하는 규정 준수 인증, SLA, 관리형 AI 서비스.',
+          '**거대한 분산 워크로드에 최적:** [CoreWeave](#coreweave), [AWS](#aws), [Google Cloud](#google-cloud), [Oracle Cloud Infrastructure](#oracle-cloud) — 다중 노드 규모를 위한 고밀도 노드 아키텍처와 RDMA/InfiniBand급 네트워킹.',
+        ],
+      },
+      howMuchGpu: {
+        id: 'how-much-gpu',
+        title: '실제로 얼마나 많은 클라우드 GPU가 필요한가요?',
+        content:
+          '2026-09-05 기준 이 페이지의 각 등급에서 확인된 최저 온디맨드 요금을 사용한 대략적인 예산 산정 시나리오입니다 — 클라우드 GPU 요금은 자주 변동되므로 확정하기 전에 현재 가격을 확인하십시오.',
+        columns: ['시나리오', 'GPU 수', '예시 월별 비용(730시간)'],
+        rows: [
+          {
+            시나리오: '소규모 AI 스타트업(가벼운 추론)',
+            'GPU 수': '1개',
+            '예시 월별 비용(730시간)': '~$2,110-2,475(RunPod/DigitalOcean H100)',
+          },
+          {
+            시나리오: '성장 중인 추론 비즈니스',
+            'GPU 수': '1-4개',
+            '예시 월별 비용(730시간)': '제공업체와 수량에 따라 ~$2,110-9,900',
+          },
+          {
+            시나리오: '파인튜닝',
+            'GPU 수': '1-8개',
+            '예시 월별 비용(730시간)': '제공업체와 수량에 따라 ~$2,110-19,800',
+          },
+          {
+            시나리오: '대형 모델 학습',
+            'GPU 수': '8개 이상',
+            '예시 월별 비용(730시간)': '~$18,000-40,000+(8-GPU 노드 제공업체: CoreWeave, Lambda, AWS)',
+          },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '1-GPU 추론 워크로드는 가장 저렴한 제공업체에서 월 약 $2,100-2,500이 들며, 8개 이상의 GPU 학습 워크로드는 제공업체에 따라 월 $18,000-40,000+가 듭니다 — 시간당 요금을 비교하기 전에 GPU 수에 맞춰 예산을 산정하십시오.',
+          },
+        ],
+      },
+      rentVsBuy: {
+        id: 'rent-vs-buy',
+        title: 'GPU를 구매하는 대신 언제 대여해야 하나요?',
+        content:
+          '대여와 소유는 서로 다른 문제를 해결합니다 — 단독으로 봤을 때 무엇이 더 저렴하게 들리는지가 아니라, 워크로드가 실제로 얼마나 지속적으로 실행되는지에 선택을 맞추십시오.',
+        items: [
+          '**대여해야 할 때:** 수요가 예측 불가능하거나, 아직 실험 중이거나, GPU가 일시적으로만 필요하거나, 자본 지출 없이 최신 하드웨어가 필요하거나, 물리적 인프라를 관리하고 싶지 않은 경우.',
+          '**구매해야 할 때:** 이용률이 지속적으로 높거나, 워크로드가 예측 가능하고 안정적이거나, GPU를 거의 24/7 운영하거나, 데이터 거주 요구 사항이 클라우드 스토리지를 배제하거나, 이미 하드웨어를 호스팅할 인프라를 갖추고 있는 경우.',
+          '이 결정의 구매 측면 — 자체 GPU에서 모델을 실행하기 위한 부품 목록, 실제 비용, 하드웨어 옵션 — 은 [로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026)와 [로컬 AI 워크스테이션 조립 가이드](/power-local-llm/local-ai-workstation-build-guide-2026)를 참고하십시오.',
+        ],
+      },
+      finalRanking: {
+        id: 'final-ranking',
+        title: '최종 순위',
+        content:
+          '단순한 1위부터 8위까지의 목록이 아닙니다 — 각 제공업체는 실제로 승리하는 구체적인 임무를 기준으로 순위가 매겨져 있으며, 모든 축에서 직접 경쟁하지 않는 8개 제공업체를 순위 매기는 더 방어 가능한 방법입니다.',
+        items: [
+          '**소규모 AI 기업을 위한 전체 최고:** [DigitalOcean](#digitalocean)',
+          '**최고의 GPU 가성비:** [RunPod](#runpod)',
+          '**최고의 대규모 AI 인프라:** [CoreWeave](#coreweave)',
+          '**최고의 연구 중심 GPU 클라우드:** [Lambda](#lambda)',
+          '**최고의 엔터프라이즈 생태계:** [AWS](#aws)',
+          '**최고의 TPU/Google AI 생태계:** [Google Cloud](#google-cloud)',
+          '**최고의 Microsoft AI 생태계:** [Microsoft Azure](#microsoft-azure)',
+          '**최고의 엔터프라이즈 대안:** [Oracle Cloud Infrastructure](#oracle-cloud)',
+        ],
+      },
+      finalVerdict: {
+        id: 'final-verdict',
+        title: '최종 결론: 당신의 AI 기업은 어떤 클라우드를 선택해야 하나요?',
+        content:
+          '단일한 보편적 답이 아니라 의사결정 트리입니다: 소규모 스타트업이라면 **[DigitalOcean](https://www.digitalocean.com/products/gpu-droplets)**으로 시작하십시오. 대신 GPU 실험과 가능한 가장 낮은 요금이 우선이라면 **[RunPod](https://www.runpod.io/)**로 이동하십시오. 대규모 학습으로 전환 중이라면 **[CoreWeave](https://www.coreweave.com/)**로 이동하십시오(워크로드가 주로 연구 중심이라면 [Lambda](https://lambda.ai/)). 엔터프라이즈 인프라 — 규정 준수, 관리형 AI 카탈로그, 또는 특정 생태계 의존성 — 이 결정 요인이라면, 이미 속한 생태계에 따라 **[AWS](https://aws.amazon.com/ec2/instance-types/p5/)**, **[Microsoft Azure](https://azure.microsoft.com/en-us/products/virtual-machines/hpc)**, 또는 **[Google Cloud](https://cloud.google.com/compute/docs/gpus)**로 이동하십시오. 대규모의 비용에 민감한 엔터프라이즈 인프라가 우선이라면 **[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/gpu/)**로 이동하십시오. 이 페이지 대부분의 독자 — 이미 다른 방향으로 이끄는 특정 엔터프라이즈 의존성이 없는 소규모 또는 성장 중인 AI 기업 — 에게는 [DigitalOcean의 GPU Droplets](https://www.digitalocean.com/products/gpu-droplets)가 올바른 출발점입니다.',
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          '[DigitalOcean GPU Droplets](https://www.digitalocean.com/products/gpu-droplets) — 온디맨드 H100 가격 시간당 $3.39-4.41, 12개월 예약 요금 시간당 약 $2.50부터, 2026-09-05 웹 검색으로 확인.',
+          '[AWS EC2 P5 인스턴스 유형](https://aws.amazon.com/ec2/instance-types/p5/) — p5.48xlarge 온디맨드 시간당 $55.04(GPU당 $6.88), Capacity Blocks GPU당 시간당 $4.72-5.19, 2026-09-05 웹 검색으로 확인.',
+          '[CoreWeave GPU 가격](https://www.coreweave.com/pricing) — H100 8-GPU 노드 시간당 $49.24(GPU당 $6.16), H200 노드 시간당 $50.44, spot -40-60%, 2026-09-05 웹 검색으로 확인.',
+          '[RunPod 가격](https://www.runpod.io/pricing) — Secure Cloud H100 PCIe 시간당 $2.89, Community Cloud RTX 4090 시간당 $0.34, serverless H100 시간당 $4.55, 2026-09-05 웹 검색으로 확인.',
+          '[Lambda GPU Cloud 가격](https://lambda.ai/service/gpu-cloud) — H100 PCIe 시간당 $3.29, H100 SXM 시간당 $4.29, A100 40GB 시간당 $1.99, A100 80GB 시간당 $2.79, 2026-09-05 웹 검색으로 확인.',
+          '[Reuters/Bloomberg: Anthropic-Lambda 350억 달러 클라우드 계약](https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda) — 2026-08-31 보도, 조건(GPU 수량, 계약 기간) 비공개.',
+          '[Google Cloud GPU 가격](https://cloud.google.com/compute/docs/gpus) — A3 시리즈(a3-highgpu-8g) 온디맨드 약 시간당 $80-90(GPU당 $9-11.50), 2026-09-05 웹 검색으로 확인.',
+          '[Microsoft Azure HPC/GPU VM](https://azure.microsoft.com/en-us/products/virtual-machines/hpc) — ND H100 v5 온디맨드 GPU당 약 시간당 $11-13, 완전한 8-GPU 노드 약 시간당 $98, 2026-09-05 웹 검색으로 확인.',
+          '[Oracle Cloud Infrastructure GPU 컴퓨팅](https://www.oracle.com/cloud/compute/gpu/) — 온디맨드 H100 GPU당 시간당 $10 고정, BM.GPU.H100.8 노드 시간당 $80, 10TB 무료 egress 이후 $0.0085/GB, 2026-09-05 웹 검색으로 확인.',
+          'CoreWeave, RunPod, Lambda의 제로 egress 요금 정책 — 2026-09-05 웹 검색으로 제공업체 가격 페이지 및 제3자 비교 출처 대조 확인.',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'DigitalOcean은 AI 기업에게 좋은가요?',
+            a: '네, 특히 소규모이고 성장 중인 AI 팀에게 그렇습니다. DigitalOcean GPU Droplets는 온디맨드 시간당 $3.39-4.41부터 H100 접근을 제공하며 — 이 페이지에서 가장 저렴한 축에 속합니다 — 가장 간단한 콘솔과 엔터프라이즈 영업 절차 불필요를 갖추고 있습니다. 고밀도 다중 노드 학습, TPU 워크로드, 또는 대규모 관리형 AI 서비스 카탈로그가 필요한 팀에게는 올바른 선택이 아닙니다.',
+          },
+          {
+            q: 'AI 기준으로 DigitalOcean이 AWS보다 저렴한가요?',
+            a: '네, 순수 온디맨드 H100 접근 기준으로는 그렇습니다 — DigitalOcean은 시간당 $3.39-4.41부터 시작하는 반면 AWS는 온디맨드 GPU당 시간당 $6.88로, 대략 절반 가격입니다. 더 넓은 관리형 AI 서비스 카탈로그, 다중 지역 배포, 또는 특정 규정 준수 인증이 필요해지면 AWS가 더 나은 선택이 됩니다.',
+          },
+          {
+            q: 'RunPod가 DigitalOcean보다 저렴한가요?',
+            a: 'RunPod Secure Cloud의 H100 요금(시간당 $2.89)은 DigitalOcean의 온디맨드 요금(시간당 $3.39-4.41)보다 약간 저렴하며, RunPod는 DigitalOcean의 번들+초과 모델과 달리 egress 요금도 청구하지 않습니다. DigitalOcean의 장점은 콘솔의 단순함과 RunPod의 더 저렴한 Community Cloud 등급보다 더 일관된 가동 시간입니다.',
+          },
+          {
+            q: 'CoreWeave가 AWS보다 저렴한가요?',
+            a: 'GPU당으로는 CoreWeave의 H100 요금(GPU당 시간당 $6.16)이 AWS(GPU당 시간당 $6.88)에 근접하지만, CoreWeave는 AWS가 100GB 무료 등급 이후 청구하는 GB당 $0.09와 달리 egress 요금을 청구하지 않습니다 — 데이터 전송이 많은 워크로드의 경우, GPU 요금이 비슷하더라도 CoreWeave가 총비용에서 상당히 저렴할 수 있습니다. 다만 CoreWeave는 GPU를 8-GPU 노드 단위로만 판매하므로, 소규모 워크로드는 부분 노드에서 이 더 낮은 GPU당 요금을 이용할 수 없습니다.',
+          },
+          {
+            q: '가장 저렴한 클라우드 GPU는 무엇인가요?',
+            a: '여기서 비교한 8개 제공업체 중, RunPod의 Community Cloud 및 Secure Cloud 등급과 DigitalOcean의 온디맨드 H100 요금이 가장 저렴한 주류 옵션이며, 둘 다 H100 기준 시간당 $2.89-4.41 범위에 있습니다. RunPod, CoreWeave, Lambda도 egress 요금을 청구하지 않아, 시간당 GPU 요금이 하이퍼스케일러와 비슷하더라도 데이터 전송이 많은 워크로드의 총비용을 더욱 낮춥니다.',
+          },
+          {
+            q: 'AI 추론에 가장 좋은 클라우드는 어디인가요?',
+            a: 'DigitalOcean, RunPod, CoreWeave입니다. DigitalOcean과 RunPod는 일반적인 추론 요청량에 맞는 유연하고 저비용의 단일/소수 GPU 규모를 제공합니다. RunPod의 serverless 등급은 특히 초당으로 청구되고 요청 사이에 0으로 스케일링되어, 고정된 시간당 대여보다 가변적인 추론 트래픽에 더 적합합니다.',
+          },
+          {
+            q: 'LLM 학습에 가장 좋은 클라우드는 어디인가요?',
+            a: 'CoreWeave, AWS, Google Cloud, Lambda입니다. 이 네 곳은 추론 지향 제공업체가 최적화하는 유연한 단일 GPU 규모 대신, 고밀도 다중 GPU 노드 아키텍처(CoreWeave와 Lambda의 SXM 등급은 최소 8개 GPU)와 지속적이고 분산된 학습 실행을 위해 구축된 네트워크를 제공합니다.',
+          },
+          {
+            q: 'AI 스타트업에 가장 좋은 클라우드는 어디인가요?',
+            a: '대부분의 소규모 AI 스타트업에는 DigitalOcean입니다 — 가장 저렴한 온디맨드 H100 접근과 가장 간단한 온보딩입니다. 절대적으로 가장 낮은 요금과 serverless 청구가 콘솔의 완성도와 일관된 가동 시간보다 중요하다면 RunPod가 다음으로 비교할 옵션입니다.',
+          },
+          {
+            q: 'AI 워크로드에 AWS의 추가 비용이 그만한 가치가 있나요?',
+            a: 'AWS의 관리형 AI 서비스 카탈로그(Bedrock, SageMaker), 다중 지역 배포, 또는 GPU 전문 클라우드가 제공하지 않는 특정 규정 준수 인증(HIPAA, FedRAMP)이 필요한 기업에게는 특히 그만한 가치가 있습니다. 이러한 구체적인 필요가 없다면, DigitalOcean 대비 약 2배의 GPU당 추가 비용은 순수 GPU 워크로드에 대한 보상적 이점이 없습니다.',
+          },
+          {
+            q: 'AI 스타트업은 하이퍼스케일러와 GPU 전문 클라우드 중 무엇을 사용해야 하나요?',
+            a: 'GPU 전문 클라우드(DigitalOcean, RunPod, CoreWeave, Lambda)가 일반적으로 소규모 AI 스타트업에게 더 나은 출발점입니다 — 더 저렴한 GPU 접근, 더 간단한 온보딩, 그리고 (특히 CoreWeave, RunPod, Lambda에서는) 제로 egress 요금입니다. 특정 관리형 AI 서비스, 규정 준수 인증, 또는 다중 지역 엔터프라이즈 인프라가 필요해지면 하이퍼스케일러(AWS, Azure, Google Cloud)로 이동하십시오 — 기본값으로서가 아니라요.',
+          },
+          {
+            q: 'AI GPU는 구매와 대여 중 어느 쪽이 더 저렴한가요?',
+            a: '이용률에 따라 다릅니다. 대여는 예측 불가능한 수요, 실험, 일시적 필요, 또는 자본 지출 없이 최신 하드웨어를 원하는 경우에 더 저렴합니다. 이용률이 지속적으로 높고 GPU가 거의 24/7 운영될 때 구매가 더 저렴해집니다 — 이 비교의 자체 하드웨어 측면에 대해서는 [로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하십시오.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 클라우드 GPU를 대여하는 대신 자체 하드웨어를 소유하기 위한 부품과 가격.',
+          '[로컬 AI 워크스테이션 조립 가이드](/power-local-llm/local-ai-workstation-build-guide-2026) — 로컬 AI 머신을 위한 완전한 조립 가이드, 이 페이지의 모든 제공업체에 대한 구매 대안.',
+          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — AI/GPU 클라우드 컴퓨팅이 아니라 웹사이트 호스팅을 위한 별도의 비교입니다.',
+        ],
+      },
+    },
+  },
 }
