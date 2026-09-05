@@ -268,6 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — the general-purpose framework most often compared against AutoGen, including its LangGraph agent runtime.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where multi-agent frameworks fit.',
+          '[MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For](/power-local-llm/metagpt-agnai-risuai-explained) — clears up the difference between MetaGPT (a role-based multi-agent framework in the same category as AutoGen) and two unrelated AI roleplay chat tools it often gets confused with.',
         ],
       },
     },

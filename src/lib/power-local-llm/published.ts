@@ -52,6 +52,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-prompts-for-fiction-writers',
   'local-llm-screenwriting-and-novel-drafting',
   'sillytavern-vs-agnai-vs-risuai-roleplay',
+  // Bridges Cat 5 (Creative Writing/roleplay: Agnai, RisuAI) and Cat 4 (Agents &
+  // Tool Use: MetaGPT) - a clarification piece, not a roleplay guide, placed here
+  // next to its closest topical neighbor - 2026-09-05
+  'metagpt-agnai-risuai-explained',
   'uncensored-local-llm-creative-writing-ethics',
 
   // Backyard AI review — 2026-09-02
