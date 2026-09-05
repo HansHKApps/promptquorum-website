@@ -248,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — the code-first framework underneath many custom builds, for teams weighing more control against Dify\'s visual/backend platform.',
+          '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a code-first, role-based multi-agent framework for teams that want programmatic control over agent crews rather than Dify\'s visual workflow builder.',
           '[Enterprise Chatbot Deployment: Internal Helpdesk & HR Bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — the internal-facing deployment pattern for IT helpdesk and HR bots built on Dify, with the access-control layer this use case needs.',
           '[Flowise Review: Visual Workflow Builder](/power-local-llm/flowise-ai-visual-workflow-builder-review) — a lighter-weight visual builder compared against Dify\'s all-in-one platform.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG-focused tools if you don\'t need Dify\'s full workflow/agent scope.',

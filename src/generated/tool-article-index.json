@@ -1666,7 +1666,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "LobeChat": {
@@ -1855,22 +1855,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tabby-review",
-        "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
-        "url": "/power-local-llm/tabby-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -1908,9 +1892,25 @@
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
         "dateModified": "2026-08-30",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-coding",
+        "title": "Best Local LLMs for Coding 2026: Kimi K2.6 vs Qwen vs Devstral",
+        "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-08-30",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-stack-use-case",
+        "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
+        "url": "/local-llms/best-local-llm-stack-use-case",
+        "dateModified": "2026-08-29",
+        "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 41,
     "capped": true
   },
   "Cline": {
@@ -1949,22 +1949,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tabby-review",
-        "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
-        "url": "/power-local-llm/tabby-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -1994,9 +1978,25 @@
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-08-29",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-openai-compatible-api",
+        "title": "LM Studio & Ollama OpenAI-Compatible API Documentation: Python, Node.js, Aider, Cline & Roo Code (2026)",
+        "url": "/local-llms/local-llm-openai-compatible-api",
+        "dateModified": "2026-08-28",
+        "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 29,
     "capped": true
   },
   "PearAI": {
@@ -2024,17 +2024,9 @@
         "url": "/power-local-llm/continue-dev-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "windsurf-review",
-        "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
-        "url": "/power-local-llm/windsurf-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 3,
     "capped": false
   },
   "Windsurf": {
@@ -2044,14 +2036,6 @@
         "slug": "continue-dev-review",
         "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
         "url": "/power-local-llm/continue-dev-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "windsurf-review",
-        "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
-        "url": "/power-local-llm/windsurf-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -2088,14 +2072,6 @@
         "tier": "mentioned"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
         "cluster": "local-llms",
         "slug": "local-llms-with-vscode-cursor",
         "title": "Local LLMs With VS Code and Cursor: Setup and Best Practices",
@@ -2118,29 +2094,29 @@
         "url": "/local-llms/best-local-llms-code-review",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llms-for-coding-workflows",
+        "title": "Local LLMs for Coding Workflows 2026: Generation, Review, Testing",
+        "url": "/local-llms/local-llms-for-coding-workflows",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-ide-plugins-2026",
+        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
+        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
+        "dateModified": "2026-08-25",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
-    "capped": true
+    "totalCount": 10,
+    "capped": false
   },
   "Sourcegraph Cody": {
     "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tabby-review",
-        "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
-        "url": "/power-local-llm/tabby-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
       {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
@@ -2166,19 +2142,11 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 3,
     "capped": false
   },
   "Tabby": {
     "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "tabby-review",
-        "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
-        "url": "/power-local-llm/tabby-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
       {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-ide-plugins-2026",
@@ -2186,14 +2154,6 @@
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
         "dateModified": "2026-08-25",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -2212,7 +2172,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 3,
     "capped": false
   },
   "OpenHands": {
@@ -3389,14 +3349,6 @@
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "faster-whisper-review",
-        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
-        "url": "/power-local-llm/faster-whisper-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "whisper-cpp-review",
         "title": "Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++",
         "url": "/power-local-llm/whisper-cpp-review",
@@ -3466,21 +3418,21 @@
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-personal-knowledge-base-2026",
+        "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
+        "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 14,
     "capped": true
   },
   "faster-whisper": {
     "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "faster-whisper-review",
-        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
-        "url": "/power-local-llm/faster-whisper-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
       {
         "cluster": "power-local-llm",
         "slug": "whisper-cpp-review",
@@ -3554,19 +3506,11 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
+    "totalCount": 9,
     "capped": false
   },
   "Piper TTS": {
     "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "faster-whisper-review",
-        "title": "faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text",
-        "url": "/power-local-llm/faster-whisper-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
       {
         "cluster": "power-local-llm",
         "slug": "voice-assistant-local-mobile-offline",
@@ -3638,10 +3582,18 @@
         "url": "/local-llms/apple-silicon-local-llm-guide-2026",
         "dateModified": "2026-08-26",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mac-mini-m5-local-ai-server",
+        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
+        "url": "/local-llms/mac-mini-m5-local-ai-server",
+        "dateModified": "2026-08-26",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
-    "capped": true
+    "totalCount": 10,
+    "capped": false
   },
   "Coqui TTS": {
     "articles": [
@@ -5119,18 +5071,42 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "autonomous-local-agents-actually-work",
         "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Agnai": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
@@ -5204,7 +5180,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "RisuAI": {
@@ -5219,6 +5195,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "metagpt-agnai-risuai-explained",
+        "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
+        "url": "/power-local-llm/metagpt-agnai-risuai-explained",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
@@ -5282,7 +5266,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Second Me": {

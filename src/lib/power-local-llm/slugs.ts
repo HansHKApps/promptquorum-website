@@ -48,6 +48,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
   'sillytavern-vs-agnai-vs-risuai-roleplay':     'sillytavern-vs-agnai-vs-risuai-roleplay',
+  // Clarifies MetaGPT (multi-agent dev framework) vs Agnai/RisuAI (roleplay chat) — 2026-09-05
+  'metagpt-agnai-risuai-explained':              'metagpt-agnai-risuai-explained',
   'local-llm-prompts-for-fiction-writers':       'local-llm-prompts-for-fiction-writers',
   'uncensored-local-llm-creative-writing-ethics':'uncensored-local-llm-creative-writing-ethics',
   'local-llm-screenwriting-and-novel-drafting':  'local-llm-screenwriting-and-novel-drafting',
@@ -138,6 +140,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
   // LangChain review — agent frameworks series, article 1 of 14 — 2026-09-05
   'langchain-review':                             'langchain-review',
+  // AutoGen review — agent frameworks series, article 2 of 14 — 2026-09-05
+  'autogen-review':                               'autogen-review',
+  // CrewAI review — agent frameworks series, article 3 of 14 — 2026-09-05
+  'crewai-review':                                'crewai-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

@@ -7085,6 +7085,24 @@
         }
       ]
     },
+    "metagpt-agnai-risuai-explained": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "uncensored-local-llm-creative-writing-ethics": {
       "dateModified": "2026-08-24",
       "lastFactChecked": null,
@@ -7878,6 +7896,42 @@
       "images": []
     },
     "langchain-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "autogen-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "crewai-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",

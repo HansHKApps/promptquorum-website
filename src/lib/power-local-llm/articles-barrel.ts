@@ -92,6 +92,7 @@ import { article as a_local_llm_email_and_calendar_automation } from './articles
 import { article as a_local_llm_prompts_for_fiction_writers } from './articles/local-llm-prompts-for-fiction-writers'
 import { article as a_local_llm_screenwriting_and_novel_drafting } from './articles/local-llm-screenwriting-and-novel-drafting'
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
+import { article as a_metagpt_agnai_risuai_explained } from './articles/metagpt-agnai-risuai-explained'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
 import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison-2026'
@@ -132,6 +133,8 @@ import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
 import { article as a_langchain_review } from './articles/langchain-review'
+import { article as a_autogen_review } from './articles/autogen-review'
+import { article as a_crewai_review } from './articles/crewai-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -204,6 +207,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-prompts-for-fiction-writers':       a_local_llm_prompts_for_fiction_writers,
   'local-llm-screenwriting-and-novel-drafting':  a_local_llm_screenwriting_and_novel_drafting,
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
+  'metagpt-agnai-risuai-explained':              a_metagpt_agnai_risuai_explained,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
   'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
   'local-whisper-stt-comparison-2026':                 a_local_whisper_stt_comparison_2026,
@@ -244,6 +248,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
   'langchain-review':                                  a_langchain_review,
+  'autogen-review':                                    a_autogen_review,
+  'crewai-review':                                     a_crewai_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
