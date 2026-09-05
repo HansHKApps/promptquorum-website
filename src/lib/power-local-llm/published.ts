@@ -218,6 +218,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
+
+  // Private LLM review (Mobile & Edge LLMs) — 2026-09-05
+  'private-llm-review',
+
+  // Stable Diffusion review (Image & Video Generation) — 2026-09-05
+  'stable-diffusion-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
