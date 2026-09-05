@@ -232,4 +232,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'windsurf-review':                         'windsurf-review',
   'sourcegraph-cody-review':                 'sourcegraph-cody-review',
   'tabby-review':                            'tabby-review',
+  // CodeGPT, OpenHands, Cursor (local mode) reviews — 2026-09-05
+  'codegpt-review':                          'codegpt-review',
+  'openhands-review':                        'openhands-review',
+  'cursor-local-mode-review':                'cursor-local-mode-review',
 }

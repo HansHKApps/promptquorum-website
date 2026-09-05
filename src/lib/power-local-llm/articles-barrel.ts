@@ -22,6 +22,9 @@ import { article as a_pearai_review } from './articles/pearai-review'
 import { article as a_windsurf_review } from './articles/windsurf-review'
 import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
 import { article as a_tabby_review } from './articles/tabby-review'
+import { article as a_codegpt_review } from './articles/codegpt-review'
+import { article as a_openhands_review } from './articles/openhands-review'
+import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -318,4 +321,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'windsurf-review':                               a_windsurf_review,
   'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
   'tabby-review':                                  a_tabby_review,
+  // CodeGPT, OpenHands, Cursor (local mode) reviews — 2026-09-05
+  'codegpt-review':                                a_codegpt_review,
+  'openhands-review':                              a_openhands_review,
+  'cursor-local-mode-review':                       a_cursor_local_mode_review,
 }
