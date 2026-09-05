@@ -34,6 +34,7 @@ import { article as a_best_local_llm_frontends } from "./articles/best-local-llm
 import { article as a_cherry_studio_ai_desktop_client_2026 } from "./articles/cherry-studio-ai-desktop-client-2026";
 import { article as a_open_webui_review } from "./articles/open-webui-review";
 import { article as a_text_generation_webui_review } from "./articles/text-generation-webui-review";
+import { article as a_sillytavern_review } from "./articles/sillytavern-review";
 import { article as a_lobechat_bigagi_nextchat_pageassist_chatbox_compared } from "./articles/lobechat-bigagi-nextchat-pageassist-chatbox-compared";
 import { article as a_text_generation_webui_vs_vllm_vs_llamacpp } from "./articles/text-generation-webui-vs-vllm-vs-llamacpp";
 import { article as a_local_llm_openai_compatible_api } from "./articles/local-llm-openai-compatible-api";
@@ -197,6 +198,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "cherry-studio-ai-desktop-client-2026": a_cherry_studio_ai_desktop_client_2026,
   "open-webui-review": a_open_webui_review,
   "text-generation-webui-review": a_text_generation_webui_review,
+  "sillytavern-review": a_sillytavern_review,
   "lobechat-bigagi-nextchat-pageassist-chatbox-compared": a_lobechat_bigagi_nextchat_pageassist_chatbox_compared,
   "text-generation-webui-vs-vllm-vs-llamacpp": a_text_generation_webui_vs_vllm_vs_llamacpp,
   "local-llm-openai-compatible-api": a_local_llm_openai_compatible_api,
