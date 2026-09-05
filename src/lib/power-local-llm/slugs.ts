@@ -201,4 +201,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
+  // Runtimes & Engines — 2026-09-05
+  'llama-cpp-review':                        'llama-cpp-review',
 }
