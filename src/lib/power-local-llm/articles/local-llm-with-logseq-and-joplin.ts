@@ -429,6 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Obsidian + Local LLM: 5 Plugins That Turn Your Vault Into a Second Brain (2026)](/power-local-llm/local-llm-with-obsidian-2026) — sister article for Obsidian users; the power-user alternative these readers are typically choosing against.',
+          '[AI Note-Taking Plugins for Obsidian and Logseq, Compared](/power-local-llm/obsidian-logseq-ai-plugins) — a feature-by-feature look at logseq-copilot alongside four Obsidian-side AI plugins, framed around what each is actually built for.',
           '[Local LLM Personal Knowledge Base 2026](/power-local-llm/local-llm-personal-knowledge-base-2026) — broader PKB architecture that Logseq and Joplin feed into; covers the RAG layer, capture pipelines, and 10K+ item workflows.',
           '[Replace Grammarly and Notion AI With a Local LLM (2026)](/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS replacement guide focused specifically on the Notion AI exit path.',
           '[Replace Zapier With Local AI Agents: 5 Workflows That Save /Month (2026)](/power-local-llm/replace-zapier-with-local-ai-agents) — adjacent productivity-stack replacement for readers consolidating SaaS dependencies.',

@@ -201,6 +201,7 @@ https://www.promptquorum.com/local-llms/ollama-command-guide
 https://www.promptquorum.com/local-llms/ollama-on-mac-apple-silicon-setup-2026
 https://www.promptquorum.com/local-llms/ollama-vs-lm-studio
 https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm
+https://www.promptquorum.com/local-llms/open-webui-review
 https://www.promptquorum.com/local-llms/open-webui-vs-sillytavern
 https://www.promptquorum.com/local-llms/private-local-ai-for-business
 https://www.promptquorum.com/local-llms/private-local-llm-sensitive-data
@@ -222,8 +223,10 @@ https://www.promptquorum.com/local-llms/running-70b-models-apple-silicon-m5-max
 https://www.promptquorum.com/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026
 https://www.promptquorum.com/local-llms/scaling-local-llms-enterprise
 https://www.promptquorum.com/local-llms/secure-offline-local-llm-workflow
+https://www.promptquorum.com/local-llms/sillytavern-review
 https://www.promptquorum.com/local-llms/small-local-llm-models
 https://www.promptquorum.com/local-llms/soc2-iso27001-self-hosted-llm-compliance
+https://www.promptquorum.com/local-llms/text-generation-webui-review
 https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp
 https://www.promptquorum.com/local-llms/top-open-source-models-ollama
 https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup
@@ -277,6 +280,8 @@ https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/chatty-mini-review
+https://www.promptquorum.com/power-local-llm/cline-review
+https://www.promptquorum.com/power-local-llm/continue-dev-review
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
 https://www.promptquorum.com/power-local-llm/cursor-vs-windsurf-vs-copilot-cline
 https://www.promptquorum.com/power-local-llm/deepseek-offline-china-self-hosted-2026
@@ -299,8 +304,10 @@ https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-revi
 https://www.promptquorum.com/power-local-llm/hermes-agent-review
 https://www.promptquorum.com/power-local-llm/jarvis-mac-review
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
+https://www.promptquorum.com/power-local-llm/langchain-review
 https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
 https://www.promptquorum.com/power-local-llm/librechat-review
+https://www.promptquorum.com/power-local-llm/llama-cpp-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
@@ -331,11 +338,16 @@ https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
+https://www.promptquorum.com/power-local-llm/msty-review
+https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
 https://www.promptquorum.com/power-local-llm/openclaw-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
+https://www.promptquorum.com/power-local-llm/pearai-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
+https://www.promptquorum.com/power-local-llm/pocketpal-ai-review
+https://www.promptquorum.com/power-local-llm/private-llm-review
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
 https://www.promptquorum.com/power-local-llm/ragflow-document-understanding-rag-review
@@ -349,6 +361,7 @@ https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/second-me-review
 https://www.promptquorum.com/power-local-llm/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
+https://www.promptquorum.com/power-local-llm/stable-diffusion-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
@@ -359,6 +372,7 @@ https://www.promptquorum.com/power-local-llm/voice-assistant-local-mobile-offlin
 https://www.promptquorum.com/power-local-llm/voxa-review
 https://www.promptquorum.com/power-local-llm/wechat-bot-local-llm-personal-assistant-2026
 https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026
+https://www.promptquorum.com/power-local-llm/whisper-cpp-review
 https://www.promptquorum.com/privacy
 https://www.promptquorum.com/prompt-bites
 https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates

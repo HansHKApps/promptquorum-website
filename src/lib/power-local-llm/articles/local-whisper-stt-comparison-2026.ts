@@ -622,7 +622,7 @@ curl -L -o ggml-base.bin \\
         title: 'Related Reading',
         items: [
           '[Whisper.cpp Review (2026)](/power-local-llm/whisper-cpp-review) — a deep dive on whisper.cpp alone: history, install walkthrough, real CLI commands, license, and when to pick faster-whisper instead.',
-          '[faster-whisper Review](/power-local-llm/faster-whisper-review) — the CTranslate2-based counterpart, reviewed in the same depth.',
+          'faster-whisper Review — the CTranslate2-based counterpart, reviewed in the same depth.',
           '[Local TTS and Voice Cloning 2026: Piper vs Coqui vs XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — The TTS companion: turn transcribed text back into speech, offline.',
           '[Build a Fully Offline Voice Assistant in 2026](/power-local-llm/build-local-voice-assistant-2026) — Connect Whisper STT to a local LLM and Piper TTS into a complete voice pipeline.',
           '[Local Multimodal AI Pipeline 2026](/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Add vision models alongside STT and TTS for a full multimodal local stack.',
