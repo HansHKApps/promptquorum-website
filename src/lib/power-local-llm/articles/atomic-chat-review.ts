@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'No cost, no subscription tier, no rate limits on local usage',
           'No account or sign-up required to use the app locally',
-          'Official site: [atomic.chat](https://atomic.chat) — part of the wider Atomic ecosystem (Atomic Wallet, Atomic Mail, Sigma Browser)',
+          'Official site: [atomic.chat](https://atomic.chat) — part of the wider Atomic ecosystem (Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser)',
           'Open-source codebase (Apache 2.0), originally forked from Jan by Menlo Research',
           'Runs fully offline once a model is downloaded; optional cloud providers require their own API keys',
         ],
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'What Is Atomic Chat?',
-        content: 'Atomic Chat is a free, open-source local AI app and inference engine published at [atomic.chat](https://atomic.chat), positioned by its GitHub repository as a "local AI app and inference engine for agents" rather than a plain chat window. The core question worth answering before comparing it to LM Studio, Jan, or GPT4All is what it combines that those apps usually keep separate: local model execution across five platforms, mobile support, agent integrations, a local OpenAI-compatible API for developers, and optional cloud models in one application. It is part of the wider Atomic ecosystem, which also includes Atomic Wallet (cryptocurrency), Atomic Mail, and Sigma Browser — a family of privacy-oriented products from the same vendor.',
+        content: 'Atomic Chat is a free, open-source local AI app and inference engine published at [atomic.chat](https://atomic.chat), positioned by its GitHub repository as a "local AI app and inference engine for agents" rather than a plain chat window. The core question worth answering before comparing it to LM Studio, Jan, or GPT4All is what it combines that those apps usually keep separate: local model execution across five platforms, mobile support, agent integrations, a local OpenAI-compatible API for developers, and optional cloud models in one application. It is part of the wider Atomic ecosystem, which also includes Atomic Wallet (cryptocurrency), Atomic Mail, Atomic VPN, Atomic Bot (a one-click AI agent runner), and Sigma Browser — a family of privacy-oriented products from the same vendor.',
         items: [
           'Local AI chat and agent workflows that run directly on your device, not a remote server, with no cloud provider required',
           'Built-in model browser that connects to Hugging Face and lists over 1,000 downloadable models',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is Atomic Chat open-source?', a: 'Yes, Atomic Chat is licensed under Apache 2.0 and its source is published on GitHub. It began as a fork of Jan by Menlo Research before developing its own inference engine, agent, and API direction.' },
           { q: 'What is TurboQuant in Atomic Chat?', a: 'TurboQuant is Atomic Chat\'s inference optimization built on a fork of llama.cpp. The official site claims up to 8x faster attention and 6x lower memory usage compared to standard 32-bit models on H100 GPUs, while the GitHub repository documents an implementation-specific KV-cache reduction of roughly 4.3x. Both are vendor-published figures, not independently verified benchmarks on consumer hardware.' },
           { q: 'Is Atomic Chat a fork of Jan?', a: 'Yes. Atomic Chat\'s GitHub repository states that it began as a fork of Jan by Menlo Research, an established open-source local-AI application, before developing its own TurboQuant inference engine, agent integrations, and local API.' },
-          { q: 'Is Atomic Chat related to Atomic Wallet?', a: 'Yes. Atomic Chat is part of the broader Atomic ecosystem from the same vendor, which also includes Atomic Wallet (cryptocurrency), Atomic Mail, and Sigma Browser.' },
+          { q: 'Is Atomic Chat related to Atomic Wallet?', a: 'Yes. Atomic Chat is part of the broader Atomic ecosystem from the same vendor, which also includes Atomic Wallet (cryptocurrency), Atomic Mail, Atomic VPN, Atomic Bot, and Sigma Browser.' },
         ],
       },
       sources: {
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'بدون تكلفة، بدون مستوى اشتراك، بدون حدود استخدام للاستخدام المحلي',
           'لا حاجة لحساب أو تسجيل لاستخدام التطبيق محليًا',
-          'الموقع الرسمي: [atomic.chat](https://atomic.chat) — جزء من منظومة Atomic الأوسع (Atomic Wallet وAtomic Mail وSigma Browser)',
+          'الموقع الرسمي: [atomic.chat](https://atomic.chat) — جزء من منظومة Atomic الأوسع (Atomic Wallet وAtomic Mail وAtomic VPN وAtomic Bot وSigma Browser)',
           'قاعدة برمجية مفتوحة المصدر (Apache 2.0)، وهي أصلاً فرع (fork) من Jan التابع لـ Menlo Research',
           'يعمل بشكل كامل دون اتصال بالإنترنت بعد تنزيل النموذج؛ مزودو السحابة الاختياريون يتطلبون مفاتيح API خاصة بهم',
         ],
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'ما هو Atomic Chat؟',
-        content: 'Atomic Chat هو تطبيق دردشة ذكاء اصطناعي محلي ومحرك استدلال مجاني ومفتوح المصدر، منشور على [atomic.chat](https://atomic.chat)، ويصفه مستودعه على GitHub بأنه "تطبيق ذكاء اصطناعي محلي ومحرك استدلال للوكلاء" وليس مجرد نافذة دردشة عادية. السؤال الأساسي الذي يستحق الإجابة قبل مقارنته بـ LM Studio أو Jan أو GPT4All هو ما الذي يجمعه هذا التطبيق وتُبقيه تلك التطبيقات عادةً منفصلاً: تشغيل النماذج محليًا عبر خمس منصات، دعم الجوال، تكاملات الوكلاء، واجهة برمجية محلية متوافقة مع OpenAI للمطورين، ونماذج سحابية اختيارية، كل ذلك في تطبيق واحد. وهو جزء من منظومة Atomic الأوسع، التي تضم أيضًا Atomic Wallet (عملات رقمية) وAtomic Mail وSigma Browser — عائلة من المنتجات الموجهة نحو الخصوصية من نفس الشركة المصنّعة.',
+        content: 'Atomic Chat هو تطبيق دردشة ذكاء اصطناعي محلي ومحرك استدلال مجاني ومفتوح المصدر، منشور على [atomic.chat](https://atomic.chat)، ويصفه مستودعه على GitHub بأنه "تطبيق ذكاء اصطناعي محلي ومحرك استدلال للوكلاء" وليس مجرد نافذة دردشة عادية. السؤال الأساسي الذي يستحق الإجابة قبل مقارنته بـ LM Studio أو Jan أو GPT4All هو ما الذي يجمعه هذا التطبيق وتُبقيه تلك التطبيقات عادةً منفصلاً: تشغيل النماذج محليًا عبر خمس منصات، دعم الجوال، تكاملات الوكلاء، واجهة برمجية محلية متوافقة مع OpenAI للمطورين، ونماذج سحابية اختيارية، كل ذلك في تطبيق واحد. وهو جزء من منظومة Atomic الأوسع، التي تضم أيضًا Atomic Wallet (عملات رقمية) وAtomic Mail وAtomic VPN وAtomic Bot وSigma Browser — عائلة من المنتجات الموجهة نحو الخصوصية من نفس الشركة المصنّعة.',
         items: [
           'دردشة ذكاء اصطناعي محلية وسير عمل للوكلاء يعملان مباشرة على جهازك، وليس على خادم بعيد، دون الحاجة إلى مزود سحابي',
           'متصفح نماذج مدمج يتصل بـ Hugging Face ويعرض أكثر من 1,000 نموذج قابل للتنزيل',
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل Atomic Chat مفتوح المصدر؟', a: 'نعم، يُرخَّص Atomic Chat بموجب Apache 2.0 ومصدره منشور على GitHub. بدأ كفرع من Jan التابع لـ Menlo Research قبل أن يطوّر اتجاهه الخاص في محرك الاستدلال والوكلاء والواجهة البرمجية.' },
           { q: 'ما هو TurboQuant في Atomic Chat؟', a: 'TurboQuant هو تحسين استدلال في Atomic Chat مبني على فرع من llama.cpp. يزعم الموقع الرسمي سرعة انتباه أعلى تصل إلى 8 أضعاف واستهلاك ذاكرة أقل بمقدار 6 أضعاف مقارنة بالنماذج القياسية 32-بت على معالجات H100 الرسومية، بينما يوثّق مستودع GitHub تقليصًا خاصًا بالتنفيذ لذاكرة KV cache بنحو 4.3 أضعاف. كلا الرقمين صادران عن الشركة المصنّعة وليسا معياري أداء مستقلين على أجهزة المستهلكين.' },
           { q: 'هل Atomic Chat فرع (fork) من Jan؟', a: 'نعم. يذكر مستودع Atomic Chat على GitHub أنه بدأ كفرع من Jan التابع لـ Menlo Research، وهو تطبيق ذكاء اصطناعي محلي مفتوح المصدر راسخ، قبل أن يطوّر محرك استدلال TurboQuant الخاص به وتكاملات الوكلاء والواجهة البرمجية المحلية.' },
-          { q: 'هل Atomic Chat مرتبط بـ Atomic Wallet؟', a: 'نعم. Atomic Chat جزء من منظومة Atomic الأوسع من نفس الشركة المصنّعة، التي تضم أيضًا Atomic Wallet (عملات رقمية) وAtomic Mail وSigma Browser.' },
+          { q: 'هل Atomic Chat مرتبط بـ Atomic Wallet؟', a: 'نعم. Atomic Chat جزء من منظومة Atomic الأوسع من نفس الشركة المصنّعة، التي تضم أيضًا Atomic Wallet (عملات رقمية) وAtomic Mail وAtomic VPN وAtomic Bot وSigma Browser.' },
         ],
       },
       sources: {
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Keine Kosten, keine Abo-Stufe, keine Nutzungslimits bei lokaler Nutzung',
           'Kein Konto oder Anmeldung zur lokalen Nutzung der App erforderlich',
-          'Offizielle Website: [atomic.chat](https://atomic.chat) — Teil des breiteren Atomic-Ökosystems (Atomic Wallet, Atomic Mail, Sigma Browser)',
+          'Offizielle Website: [atomic.chat](https://atomic.chat) — Teil des breiteren Atomic-Ökosystems (Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser)',
           'Quelloffene Codebasis (Apache 2.0), ursprünglich als Fork von Jan von Menlo Research entstanden',
           'Läuft nach dem Modell-Download vollständig offline; optionale Cloud-Anbieter benötigen eigene API-Schlüssel',
         ],
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'Was ist Atomic Chat?',
-        content: 'Atomic Chat ist eine kostenlose, quelloffene lokale KI-App und Inferenz-Engine, veröffentlicht unter [atomic.chat](https://atomic.chat), die vom GitHub-Repository als „lokale KI-App und Inferenz-Engine für Agenten" positioniert wird und nicht als einfaches Chatfenster. Die entscheidende Frage vor einem Vergleich mit LM Studio, Jan oder GPT4All ist, was Atomic Chat kombiniert, was diese Apps normalerweise getrennt halten: lokale Modellausführung über fünf Plattformen, mobile Unterstützung, Agenten-Integrationen, eine lokale OpenAI-kompatible API für Entwicklerinnen und Entwickler sowie optionale Cloud-Modelle in einer einzigen Anwendung. Sie gehört zum breiteren Atomic-Ökosystem, das auch Atomic Wallet (Kryptowährung), Atomic Mail und Sigma Browser umfasst — eine Familie datenschutzorientierter Produkte desselben Herstellers.',
+        content: 'Atomic Chat ist eine kostenlose, quelloffene lokale KI-App und Inferenz-Engine, veröffentlicht unter [atomic.chat](https://atomic.chat), die vom GitHub-Repository als „lokale KI-App und Inferenz-Engine für Agenten" positioniert wird und nicht als einfaches Chatfenster. Die entscheidende Frage vor einem Vergleich mit LM Studio, Jan oder GPT4All ist, was Atomic Chat kombiniert, was diese Apps normalerweise getrennt halten: lokale Modellausführung über fünf Plattformen, mobile Unterstützung, Agenten-Integrationen, eine lokale OpenAI-kompatible API für Entwicklerinnen und Entwickler sowie optionale Cloud-Modelle in einer einzigen Anwendung. Sie gehört zum breiteren Atomic-Ökosystem, das auch Atomic Wallet (Kryptowährung), Atomic Mail, Atomic VPN, Atomic Bot und Sigma Browser umfasst — eine Familie datenschutzorientierter Produkte desselben Herstellers.',
         items: [
           'Lokaler KI-Chat und Agenten-Workflows, die direkt auf dem eigenen Gerät laufen, nicht auf einem entfernten Server, ohne dass ein Cloud-Anbieter erforderlich ist',
           'Integrierter Modell-Browser, der sich mit Hugging Face verbindet und über 1.000 herunterladbare Modelle auflistet',
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist Atomic Chat quelloffen?', a: 'Ja, Atomic Chat steht unter der Apache-2.0-Lizenz, und der Quellcode ist auf GitHub veröffentlicht. Es begann als Fork von Jan von Menlo Research, bevor eine eigene Richtung bei Inferenz-Engine, Agent und API entwickelt wurde.' },
           { q: 'Was ist TurboQuant in Atomic Chat?', a: 'TurboQuant ist die Inferenzoptimierung von Atomic Chat, basierend auf einem Fork von llama.cpp. Die offizielle Website nennt bis zu 8x schnellere Attention und 6x geringeren Speicherverbrauch im Vergleich zu Standard-32-Bit-Modellen auf H100-GPUs, während das GitHub-Repository eine implementierungsspezifische KV-Cache-Reduktion von etwa 4,3x dokumentiert. Beides sind vom Hersteller veröffentlichte Zahlen, keine unabhängig verifizierten Benchmarks auf Consumer-Hardware.' },
           { q: 'Ist Atomic Chat ein Fork von Jan?', a: 'Ja. Das GitHub-Repository von Atomic Chat gibt an, dass es als Fork von Jan von Menlo Research begann, einer etablierten quelloffenen lokalen KI-Anwendung, bevor eine eigene TurboQuant-Inferenz-Engine, Agenten-Integrationen und lokale API entwickelt wurden.' },
-          { q: 'Steht Atomic Chat mit Atomic Wallet in Verbindung?', a: 'Ja. Atomic Chat gehört zum breiteren Atomic-Ökosystem desselben Herstellers, zu dem auch Atomic Wallet (Kryptowährung), Atomic Mail und Sigma Browser zählen.' },
+          { q: 'Steht Atomic Chat mit Atomic Wallet in Verbindung?', a: 'Ja. Atomic Chat gehört zum breiteren Atomic-Ökosystem desselben Herstellers, zu dem auch Atomic Wallet (Kryptowährung), Atomic Mail, Atomic VPN, Atomic Bot und Sigma Browser zählen.' },
         ],
       },
       sources: {
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Sin coste, sin nivel de suscripción, sin límites de uso local',
           'No se requiere cuenta ni registro para usar la app localmente',
-          'Sitio oficial: [atomic.chat](https://atomic.chat) — parte del ecosistema Atomic más amplio (Atomic Wallet, Atomic Mail, Sigma Browser)',
+          'Sitio oficial: [atomic.chat](https://atomic.chat) — parte del ecosistema Atomic más amplio (Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser)',
           'Código base de código abierto (Apache 2.0), originalmente derivado de Jan por Menlo Research',
           'Funciona completamente sin conexión una vez descargado un modelo; los proveedores en la nube opcionales requieren su propia clave de API',
         ],
@@ -1238,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: '¿Qué es Atomic Chat?',
-        content: 'Atomic Chat es una app de IA local y motor de inferencia gratuito y de código abierto publicado en [atomic.chat](https://atomic.chat), presentado por su repositorio de GitHub como una "app de IA local y motor de inferencia para agentes" en lugar de una simple ventana de chat. La pregunta que vale la pena responder antes de compararla con LM Studio, Jan o GPT4All es qué combina que esas apps suelen mantener por separado: ejecución de modelos locales en cinco plataformas, soporte móvil, integraciones de agentes, una API local compatible con OpenAI para desarrolladores y modelos en la nube opcionales, todo en una sola aplicación. Forma parte del ecosistema Atomic más amplio, que también incluye Atomic Wallet (criptomonedas), Atomic Mail y Sigma Browser: una familia de productos orientados a la privacidad del mismo fabricante.',
+        content: 'Atomic Chat es una app de IA local y motor de inferencia gratuito y de código abierto publicado en [atomic.chat](https://atomic.chat), presentado por su repositorio de GitHub como una "app de IA local y motor de inferencia para agentes" en lugar de una simple ventana de chat. La pregunta que vale la pena responder antes de compararla con LM Studio, Jan o GPT4All es qué combina que esas apps suelen mantener por separado: ejecución de modelos locales en cinco plataformas, soporte móvil, integraciones de agentes, una API local compatible con OpenAI para desarrolladores y modelos en la nube opcionales, todo en una sola aplicación. Forma parte del ecosistema Atomic más amplio, que también incluye Atomic Wallet (criptomonedas), Atomic Mail, Atomic VPN, Atomic Bot y Sigma Browser: una familia de productos orientados a la privacidad del mismo fabricante.',
         items: [
           'Chat con IA local y flujos de trabajo con agentes que se ejecutan directamente en tu dispositivo, no en un servidor remoto, sin necesitar un proveedor en la nube',
           'Explorador de modelos integrado que se conecta a Hugging Face y lista más de 1.000 modelos descargables',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Atomic Chat es de código abierto?', a: 'Sí, Atomic Chat está licenciada bajo Apache 2.0 y su código fuente se publica en GitHub. Comenzó como una versión derivada de Jan por Menlo Research antes de desarrollar su propia dirección en inferencia, agentes y API.' },
           { q: '¿Qué es TurboQuant en Atomic Chat?', a: 'TurboQuant es la optimización de inferencia de Atomic Chat, construida sobre una versión derivada de llama.cpp. El sitio oficial afirma hasta 8 veces más velocidad de atención y 6 veces menos uso de memoria frente a modelos estándar de 32 bits en GPU H100, mientras que el repositorio de GitHub documenta una reducción de caché KV específica de la implementación de aproximadamente 4,3 veces. Ambas son cifras publicadas por el fabricante, no benchmarks verificados de forma independiente en hardware de consumo.' },
           { q: '¿Atomic Chat es una versión derivada de Jan?', a: 'Sí. El repositorio de GitHub de Atomic Chat indica que comenzó como una versión derivada de Jan creada por Menlo Research, una aplicación de IA local de código abierto ya establecida, antes de desarrollar su propio motor de inferencia TurboQuant, sus integraciones de agentes y su API local.' },
-          { q: '¿Atomic Chat está relacionado con Atomic Wallet?', a: 'Sí. Atomic Chat forma parte del ecosistema Atomic más amplio del mismo fabricante, que también incluye Atomic Wallet (criptomonedas), Atomic Mail y Sigma Browser.' },
+          { q: '¿Atomic Chat está relacionado con Atomic Wallet?', a: 'Sí. Atomic Chat forma parte del ecosistema Atomic más amplio del mismo fabricante, que también incluye Atomic Wallet (criptomonedas), Atomic Mail, Atomic VPN, Atomic Bot y Sigma Browser.' },
         ],
       },
       sources: {
@@ -1553,7 +1553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Aucun coût, aucun palier d\'abonnement, aucune limite d\'usage en local',
           'Aucun compte ni inscription requis pour utiliser l\'application en local',
-          'Site officiel : [atomic.chat](https://atomic.chat) — fait partie de l\'écosystème Atomic plus large (Atomic Wallet, Atomic Mail, Sigma Browser)',
+          'Site officiel : [atomic.chat](https://atomic.chat) — fait partie de l\'écosystème Atomic plus large (Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser)',
           'Base de code open source (Apache 2.0), à l\'origine un fork de Jan par Menlo Research',
           'Fonctionne entièrement hors ligne une fois un modèle téléchargé ; les fournisseurs cloud optionnels nécessitent leurs propres clés API',
         ],
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'Qu\'est-ce qu\'Atomic Chat ?',
-        content: 'Atomic Chat est une application d\'IA locale et un moteur d\'inférence gratuit et open source, publié sur [atomic.chat](https://atomic.chat), présenté par son dépôt GitHub comme une « application d\'IA locale et un moteur d\'inférence pour agents » plutôt qu\'une simple fenêtre de chat. La question qui mérite d\'être posée avant de la comparer à LM Studio, Jan ou GPT4All est ce qu\'elle combine que ces applications gardent généralement séparé : exécution de modèles locaux sur cinq plateformes, prise en charge mobile, intégrations d\'agents, une API locale compatible OpenAI pour les développeurs, et des modèles cloud optionnels, le tout dans une seule application. Elle fait partie de l\'écosystème Atomic plus large, qui comprend aussi Atomic Wallet (cryptomonnaie), Atomic Mail et Sigma Browser — une famille de produits orientés confidentialité du même éditeur.',
+        content: 'Atomic Chat est une application d\'IA locale et un moteur d\'inférence gratuit et open source, publié sur [atomic.chat](https://atomic.chat), présenté par son dépôt GitHub comme une « application d\'IA locale et un moteur d\'inférence pour agents » plutôt qu\'une simple fenêtre de chat. La question qui mérite d\'être posée avant de la comparer à LM Studio, Jan ou GPT4All est ce qu\'elle combine que ces applications gardent généralement séparé : exécution de modèles locaux sur cinq plateformes, prise en charge mobile, intégrations d\'agents, une API locale compatible OpenAI pour les développeurs, et des modèles cloud optionnels, le tout dans une seule application. Elle fait partie de l\'écosystème Atomic plus large, qui comprend aussi Atomic Wallet (cryptomonnaie), Atomic Mail, Atomic VPN, Atomic Bot et Sigma Browser — une famille de produits orientés confidentialité du même éditeur.',
         items: [
           'Chat IA local et flux de travail d\'agents qui s\'exécutent directement sur votre appareil, et non sur un serveur distant, sans fournisseur cloud requis',
           'Navigateur de modèles intégré connecté à Hugging Face, listant plus de 1 000 modèles téléchargeables',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atomic Chat est-elle open source ?', a: 'Oui, Atomic Chat est distribuée sous licence Apache 2.0 et son code source est publié sur GitHub. Elle a débuté comme un fork de Jan par Menlo Research avant de développer sa propre orientation en matière de moteur d\'inférence, d\'agents et d\'API.' },
           { q: 'Qu\'est-ce que TurboQuant dans Atomic Chat ?', a: 'TurboQuant est l\'optimisation d\'inférence d\'Atomic Chat, construite sur un fork de llama.cpp. Le site officiel affirme jusqu\'à 8x plus de rapidité d\'attention et 6x moins de mémoire utilisée par rapport aux modèles standard en 32 bits sur des GPU H100, tandis que le dépôt GitHub documente une réduction du cache KV propre à l\'implémentation d\'environ 4,3x. Les deux sont des chiffres publiés par l\'éditeur, non vérifiés de manière indépendante sur du matériel grand public.' },
           { q: 'Atomic Chat est-elle un fork de Jan ?', a: 'Oui. Le dépôt GitHub d\'Atomic Chat indique qu\'elle a débuté comme un fork de Jan par Menlo Research, une application d\'IA locale open source établie, avant de développer son propre moteur d\'inférence TurboQuant, ses intégrations d\'agents et son API locale.' },
-          { q: 'Atomic Chat est-elle liée à Atomic Wallet ?', a: 'Oui. Atomic Chat fait partie de l\'écosystème Atomic plus large du même éditeur, qui comprend aussi Atomic Wallet (cryptomonnaie), Atomic Mail et Sigma Browser.' },
+          { q: 'Atomic Chat est-elle liée à Atomic Wallet ?', a: 'Oui. Atomic Chat fait partie de l\'écosystème Atomic plus large du même éditeur, qui comprend aussi Atomic Wallet (cryptomonnaie), Atomic Mail, Atomic VPN, Atomic Bot et Sigma Browser.' },
         ],
       },
       sources: {
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '費用ゼロ、サブスクリプション階層なし、ローカル利用に制限なし',
           'アプリのローカル利用にアカウントや登録は不要',
-          '公式サイト：[atomic.chat](https://atomic.chat) — Atomic Wallet、Atomic Mail、Sigma Browserを含むより広いAtomicエコシステムの一部',
+          '公式サイト：[atomic.chat](https://atomic.chat) — Atomic Wallet、Atomic Mail、Atomic VPN、Atomic Bot、Sigma Browserを含むより広いAtomicエコシステムの一部',
           'オープンソースのコードベース（Apache 2.0）で、Menlo Researchによる[Jan](https://jan.ai)のフォークが起源',
           'モデルをダウンロードすれば完全にオフラインで動作。オプションのクラウドプロバイダーはそれぞれ独自のAPIキーが必要',
         ],
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'Atomic Chatとは何ですか',
-        content: 'Atomic Chatは、[atomic.chat](https://atomic.chat)で公開されている無料・オープンソースのローカルAIアプリおよび推論エンジンで、GitHubリポジトリでは単なるチャットウィンドウではなく「エージェント向けのローカルAIアプリおよび推論エンジン」と位置付けられています。LM Studio、Jan、GPT4Allと比較する前にまず答えるべき問いは、これらのアプリが通常分けて提供しているものを、Atomic Chatが1つのアプリケーションでどう組み合わせているかです — 5つのプラットフォームにまたがるローカルモデル実行、モバイル対応、エージェント連携、開発者向けのローカルOpenAI互換API、そしてオプションのクラウドモデルです。同社はより広いAtomicエコシステムの一部でもあり、Atomic Wallet（暗号資産）、Atomic Mail、Sigma Browserなど、同じベンダーによるプライバシー志向の製品群も含まれます。',
+        content: 'Atomic Chatは、[atomic.chat](https://atomic.chat)で公開されている無料・オープンソースのローカルAIアプリおよび推論エンジンで、GitHubリポジトリでは単なるチャットウィンドウではなく「エージェント向けのローカルAIアプリおよび推論エンジン」と位置付けられています。LM Studio、Jan、GPT4Allと比較する前にまず答えるべき問いは、これらのアプリが通常分けて提供しているものを、Atomic Chatが1つのアプリケーションでどう組み合わせているかです — 5つのプラットフォームにまたがるローカルモデル実行、モバイル対応、エージェント連携、開発者向けのローカルOpenAI互換API、そしてオプションのクラウドモデルです。同社はより広いAtomicエコシステムの一部でもあり、Atomic Wallet（暗号資産）、Atomic Mail、Atomic VPN、Atomic Bot、Sigma Browserなど、同じベンダーによるプライバシー志向の製品群も含まれます。',
         items: [
           'クラウドプロバイダーを必要とせず、リモートサーバーではなくデバイス上で直接実行されるローカルAIチャットとエージェントワークフロー',
           'Hugging Faceに接続し、1,000以上のダウンロード可能なモデルを一覧表示する内蔵モデルブラウザ',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atomic Chatはオープンソースですか。', a: 'はい、Atomic ChatはApache 2.0の下でライセンスされ、ソースコードはGitHubで公開されています。Menlo ResearchによるJanのフォークとして始まり、その後独自の推論エンジン、エージェント、API展開を進めてきました。' },
           { q: 'Atomic ChatのTurboQuantとは何ですか。', a: 'TurboQuantは、llama.cppのフォークを基盤としたAtomic Chatの推論最適化機能です。公式サイトはH100 GPU上で標準的な32ビットモデルと比較して最大8倍高速なアテンションと6倍低いメモリ使用量を主張する一方、GitHubリポジトリは実装固有のKVキャッシュ削減率を約4.3倍と文書化しています。いずれもベンダーが公開した数値であり、コンシューマー向けハードウェアで独立して検証されたベンチマークではありません。' },
           { q: 'Atomic ChatはJanのフォークですか。', a: 'はい。Atomic ChatのGitHubリポジトリは、確立されたオープンソースのローカルAIアプリケーションであるMenlo ResearchによるJanのフォークとして始まり、その後独自のTurboQuant推論エンジン、エージェント連携、ローカルAPIを発展させてきたと記載しています。' },
-          { q: 'Atomic ChatはAtomic Walletと関係がありますか。', a: 'はい。Atomic Chatは同じベンダーによるより広いAtomicエコシステムの一部であり、Atomic Wallet（暗号資産）、Atomic Mail、Sigma Browserも含まれます。' },
+          { q: 'Atomic ChatはAtomic Walletと関係がありますか。', a: 'はい。Atomic Chatは同じベンダーによるより広いAtomicエコシステムの一部であり、Atomic Wallet（暗号資産）、Atomic Mail、Atomic VPN、Atomic Bot、Sigma Browserも含まれます。' },
         ],
       },
       sources: {
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Sem custo, sem nível de assinatura, sem limites de uso local',
           'Nenhuma conta ou cadastro necessário para usar o app localmente',
-          'Site oficial: [atomic.chat](https://atomic.chat) — parte do ecossistema Atomic mais amplo (Atomic Wallet, Atomic Mail, Sigma Browser)',
+          'Site oficial: [atomic.chat](https://atomic.chat) — parte do ecossistema Atomic mais amplo (Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser)',
           'Base de código aberta (Apache 2.0), originalmente derivada (fork) do Jan, feito pela Menlo Research',
           'Funciona totalmente offline depois que um modelo é baixado; provedores de nuvem opcionais exigem suas próprias chaves de API',
         ],
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'O que é o Atomic Chat?',
-        content: 'O Atomic Chat é um app de IA local e mecanismo de inferência gratuito e de código aberto, publicado em [atomic.chat](https://atomic.chat), posicionado pelo seu repositório no GitHub como um "app de IA local e mecanismo de inferência para agentes", e não apenas uma janela de chat simples. A pergunta que vale a pena responder antes de comparar com LM Studio, Jan ou GPT4All é o que ele combina que esses apps normalmente mantêm separado: execução de modelos locais em cinco plataformas, suporte móvel, integrações de agentes, uma API local compatível com OpenAI para desenvolvedores e modelos em nuvem opcionais, tudo em um único aplicativo. Ele faz parte do ecossistema Atomic mais amplo, que também inclui o Atomic Wallet (criptomoedas), o Atomic Mail e o Sigma Browser — uma família de produtos voltados para privacidade do mesmo fabricante.',
+        content: 'O Atomic Chat é um app de IA local e mecanismo de inferência gratuito e de código aberto, publicado em [atomic.chat](https://atomic.chat), posicionado pelo seu repositório no GitHub como um "app de IA local e mecanismo de inferência para agentes", e não apenas uma janela de chat simples. A pergunta que vale a pena responder antes de comparar com LM Studio, Jan ou GPT4All é o que ele combina que esses apps normalmente mantêm separado: execução de modelos locais em cinco plataformas, suporte móvel, integrações de agentes, uma API local compatível com OpenAI para desenvolvedores e modelos em nuvem opcionais, tudo em um único aplicativo. Ele faz parte do ecossistema Atomic mais amplo, que também inclui o Atomic Wallet (criptomoedas), o Atomic Mail, o Atomic VPN, o Atomic Bot e o Sigma Browser — uma família de produtos voltados para privacidade do mesmo fabricante.',
         items: [
           'Chat com IA local e fluxos de trabalho de agentes que rodam diretamente no seu dispositivo, não em um servidor remoto, sem exigir um provedor de nuvem',
           'Navegador de modelos integrado que se conecta ao Hugging Face e lista mais de 1.000 modelos disponíveis para download',
@@ -2638,7 +2638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Atomic Chat é de código aberto?', a: 'Sim, o Atomic Chat é licenciado sob Apache 2.0 e seu código-fonte é publicado no GitHub. Ele começou como um fork do Jan, feito pela Menlo Research, antes de desenvolver sua própria direção de mecanismo de inferência, agentes e API.' },
           { q: 'O que é o TurboQuant no Atomic Chat?', a: 'TurboQuant é a otimização de inferência do Atomic Chat, construída sobre um fork do llama.cpp. O site oficial afirma até 8x mais rapidez na atenção e 6x menos uso de memória em comparação com modelos padrão de 32 bits em GPUs H100, enquanto o repositório no GitHub documenta uma redução específica de implementação do cache KV de aproximadamente 4,3x. Ambos são números publicados pelo fabricante, não benchmarks verificados de forma independente em hardware de consumo.' },
           { q: 'O Atomic Chat é um fork do Jan?', a: 'Sim. O repositório do Atomic Chat no GitHub declara que ele começou como um fork do Jan, feito pela Menlo Research, um app de IA local de código aberto já estabelecido, antes de desenvolver seu próprio mecanismo de inferência TurboQuant, integrações de agentes e API local.' },
-          { q: 'O Atomic Chat é relacionado ao Atomic Wallet?', a: 'Sim. O Atomic Chat faz parte do ecossistema Atomic mais amplo do mesmo fabricante, que também inclui o Atomic Wallet (criptomoedas), o Atomic Mail e o Sigma Browser.' },
+          { q: 'O Atomic Chat é relacionado ao Atomic Wallet?', a: 'Sim. O Atomic Chat faz parte do ecossistema Atomic mais amplo do mesmo fabricante, que também inclui o Atomic Wallet (criptomoedas), o Atomic Mail, o Atomic VPN, o Atomic Bot e o Sigma Browser.' },
         ],
       },
       sources: {
@@ -2693,7 +2693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '无费用、无订阅等级、本地使用无速率限制',
           '本地使用该应用无需账户或注册',
-          '官方网站：[atomic.chat](https://atomic.chat)——隶属于更广泛的 Atomic 生态系统（Atomic Wallet、Atomic Mail、Sigma Browser）',
+          '官方网站：[atomic.chat](https://atomic.chat)——隶属于更广泛的 Atomic 生态系统（Atomic Wallet、Atomic Mail、Atomic VPN、Atomic Bot、Sigma Browser）',
           '代码库开源（Apache 2.0），最初由 Menlo Research 从 Jan 分叉而来',
           '模型下载完成后可完全离线运行；可选的云端服务商需要各自的 API 密钥',
         ],
@@ -2758,7 +2758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'Atomic Chat 是什么？',
-        content: 'Atomic Chat 是一款免费开源本地 AI 应用和推理引擎，发布于 [atomic.chat](https://atomic.chat)，其 GitHub 仓库将其定位为「面向智能体的本地 AI 应用和推理引擎」，而不只是一个简单的聊天窗口。在把它与 LM Studio、Jan 或 GPT4All 比较之前，值得先弄清楚的核心问题是：这些应用通常各自分开的功能，Atomic Chat 把哪些整合到了一起——跨越五个平台的本地模型运行、移动端支持、智能体集成、面向开发者的本地 OpenAI 兼容 API，以及可选的云端模型，全部集中在一个应用里。它隶属于更广泛的 Atomic 生态系统，该生态系统还包括 Atomic Wallet（加密货币）、Atomic Mail 和 Sigma Browser——来自同一厂商的一系列注重隐私的产品。',
+        content: 'Atomic Chat 是一款免费开源本地 AI 应用和推理引擎，发布于 [atomic.chat](https://atomic.chat)，其 GitHub 仓库将其定位为「面向智能体的本地 AI 应用和推理引擎」，而不只是一个简单的聊天窗口。在把它与 LM Studio、Jan 或 GPT4All 比较之前，值得先弄清楚的核心问题是：这些应用通常各自分开的功能，Atomic Chat 把哪些整合到了一起——跨越五个平台的本地模型运行、移动端支持、智能体集成、面向开发者的本地 OpenAI 兼容 API，以及可选的云端模型，全部集中在一个应用里。它隶属于更广泛的 Atomic 生态系统，该生态系统还包括 Atomic Wallet（加密货币）、Atomic Mail、Atomic VPN、Atomic Bot 和 Sigma Browser——来自同一厂商的一系列注重隐私的产品。',
         items: [
           '本地 AI 聊天和智能体工作流程，直接在你的设备上运行，而非远程服务器，不需要任何云服务商',
           '内置模型浏览器，连接 Hugging Face 并列出 1,000 多个可下载的模型',
@@ -3018,7 +3018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atomic Chat 是开源的吗？', a: '是的，Atomic Chat 以 Apache 2.0 许可发布，源代码发布在 GitHub 上。它最初是 Menlo Research 对 Jan 的一个分叉，之后开发出了自己的推理引擎、智能体和 API 方向。' },
           { q: 'Atomic Chat 中的 TurboQuant 是什么？', a: 'TurboQuant 是 Atomic Chat 基于 llama.cpp 分支构建的推理优化功能。官方网站宣称，与 H100 GPU 上的标准 32 位模型相比，速度提升至多 8 倍、内存占用降低 6 倍，而 GitHub 仓库记录的是约 4.3 倍的实现层面 KV 缓存缩减。两者都是厂商发布的数字，并非针对消费级硬件的独立验证基准测试。' },
           { q: 'Atomic Chat 是 Jan 的一个分叉吗？', a: '是的。Atomic Chat 的 GitHub 仓库说明它最初是 Menlo Research 对 Jan（一款成熟的开源本地 AI 应用）的分叉，之后开发出了自己的 TurboQuant 推理引擎、智能体集成和本地 API。' },
-          { q: 'Atomic Chat 与 Atomic Wallet 有关系吗？', a: '是的。Atomic Chat 隶属于同一厂商更广泛的 Atomic 生态系统，该生态系统还包括 Atomic Wallet（加密货币）、Atomic Mail 和 Sigma Browser。' },
+          { q: 'Atomic Chat 与 Atomic Wallet 有关系吗？', a: '是的。Atomic Chat 隶属于同一厂商更广泛的 Atomic 生态系统，该生态系统还包括 Atomic Wallet（加密货币）、Atomic Mail、Atomic VPN、Atomic Bot 和 Sigma Browser。' },
         ],
       },
       sources: {
@@ -3073,7 +3073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '비용 없음, 구독 등급 없음, 로컬 사용에 제한 없음',
           '앱을 로컬로 사용하는 데 계정이나 가입이 필요하지 않음',
-          '공식 사이트: [atomic.chat](https://atomic.chat) — Atomic Wallet, Atomic Mail, Sigma Browser를 포함한 더 넓은 Atomic 생태계의 일부',
+          '공식 사이트: [atomic.chat](https://atomic.chat) — Atomic Wallet, Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser를 포함한 더 넓은 Atomic 생태계의 일부',
           'Menlo Research의 Jan에서 포크되어 시작된 오픈소스 코드베이스(Apache 2.0)',
           '모델을 다운로드하면 완전히 오프라인으로 작동하며, 선택적 클라우드 제공업체는 자체 API 키가 필요',
         ],
@@ -3138,7 +3138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-atomic-chat',
         title: 'Atomic Chat이란 무엇인가요?',
-        content: 'Atomic Chat은 [atomic.chat](https://atomic.chat)에서 공개된 무료 오픈소스 로컬 AI 앱이자 추론 엔진으로, GitHub 저장소에서는 단순한 채팅창이 아니라 "에이전트를 위한 로컬 AI 앱이자 추론 엔진"으로 소개하고 있습니다. LM Studio, Jan, GPT4All과 비교하기 전에 먼저 답해야 할 질문은 이 앱이 보통 별개로 취급되는 요소들을 어떻게 하나로 결합했는가입니다 — 다섯 개 플랫폼에 걸친 로컬 모델 실행, 모바일 지원, 에이전트 연동, 개발자를 위한 로컬 OpenAI 호환 API, 그리고 선택적 클라우드 모델을 하나의 애플리케이션에 담은 것입니다. Atomic Chat은 더 넓은 Atomic 생태계의 일부이며, 같은 제작사가 만든 프라이버시 지향 제품군인 Atomic Wallet(암호화폐), Atomic Mail, Sigma Browser도 포함됩니다.',
+        content: 'Atomic Chat은 [atomic.chat](https://atomic.chat)에서 공개된 무료 오픈소스 로컬 AI 앱이자 추론 엔진으로, GitHub 저장소에서는 단순한 채팅창이 아니라 "에이전트를 위한 로컬 AI 앱이자 추론 엔진"으로 소개하고 있습니다. LM Studio, Jan, GPT4All과 비교하기 전에 먼저 답해야 할 질문은 이 앱이 보통 별개로 취급되는 요소들을 어떻게 하나로 결합했는가입니다 — 다섯 개 플랫폼에 걸친 로컬 모델 실행, 모바일 지원, 에이전트 연동, 개발자를 위한 로컬 OpenAI 호환 API, 그리고 선택적 클라우드 모델을 하나의 애플리케이션에 담은 것입니다. Atomic Chat은 더 넓은 Atomic 생태계의 일부이며, 같은 제작사가 만든 프라이버시 지향 제품군인 Atomic Wallet(암호화폐), Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser도 포함됩니다.',
         items: [
           '원격 서버가 아니라 사용자의 기기에서 직접 실행되며 클라우드 제공업체가 필요 없는 로컬 AI 채팅 및 에이전트 워크플로',
           'Hugging Face에 연결되어 1,000개 이상의 다운로드 가능한 모델을 나열하는 내장 모델 브라우저',
@@ -3398,7 +3398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atomic Chat은 오픈소스인가요?', a: '네, Atomic Chat은 Apache 2.0 라이선스이며 소스가 GitHub에 공개되어 있습니다. Menlo Research의 Jan을 포크한 데서 시작해 이후 자체적인 추론 엔진, 에이전트, API 방향으로 발전했습니다.' },
           { q: 'Atomic Chat의 TurboQuant는 무엇인가요?', a: 'TurboQuant는 llama.cpp 포크를 기반으로 한 Atomic Chat의 추론 최적화 기능입니다. 공식 사이트는 H100 GPU에서 표준 32비트 모델 대비 최대 8배 빠른 어텐션과 6배 낮은 메모리 사용량을 주장하는 반면, GitHub 저장소는 구현 특유의 KV 캐시 감소율을 약 4.3배로 문서화합니다. 둘 다 제작사가 공개한 수치이며, 소비자 하드웨어에서 독립적으로 검증된 벤치마크가 아닙니다.' },
           { q: 'Atomic Chat은 Jan의 포크인가요?', a: '네. Atomic Chat의 GitHub 저장소에 따르면 이 앱은 확립된 오픈소스 로컬 AI 애플리케이션인 Jan을 Menlo Research가 포크한 데서 시작되었으며, 이후 자체적인 TurboQuant 추론 엔진, 에이전트 연동, 로컬 API를 개발했습니다.' },
-          { q: 'Atomic Chat은 Atomic Wallet과 관련이 있나요?', a: '네. Atomic Chat은 같은 제작사의 더 넓은 Atomic 생태계에 속하며, 여기에는 Atomic Wallet(암호화폐), Atomic Mail, Sigma Browser도 포함됩니다.' },
+          { q: 'Atomic Chat은 Atomic Wallet과 관련이 있나요?', a: '네. Atomic Chat은 같은 제작사의 더 넓은 Atomic 생태계에 속하며, 여기에는 Atomic Wallet(암호화폐), Atomic Mail, Atomic VPN, Atomic Bot, Sigma Browser도 포함됩니다.' },
         ],
       },
       sources: {
