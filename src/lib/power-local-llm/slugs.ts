@@ -208,6 +208,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
   'faster-whisper-review':                   'faster-whisper-review',
+  'piper-tts-review':                        'piper-tts-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05

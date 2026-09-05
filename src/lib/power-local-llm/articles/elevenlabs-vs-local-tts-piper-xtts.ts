@@ -744,6 +744,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/local-llms/best-gpus-for-local-llms',
             title: 'Best GPUs for Local AI',
             description: 'Hardware guide for local AI workloads, including TTS/voice use cases.'
+          },
+          {
+            url: '/power-local-llm/piper-tts-review',
+            title: 'Piper TTS Review',
+            description: 'A deep dive on Piper alone: history, install walkthrough, real usage examples, license, and when to pick XTTS v2 instead.'
           }
         ]
       }

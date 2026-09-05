@@ -737,6 +737,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '[Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) — Mobile voice assistant using iOS system TTS or Piper.',
           '[Best Budget GPUs for Local LLM](/local-llms/best-budget-gpus-local-llm) — GPU selection for running XTTS v2, F5-TTS, Bark, or StyleTTS 2 inference.',
           '[Best AI Text-to-Speech for Content Creators](/prompt-bites/best-ai-text-to-speech-for-content-creators) — Piper vs Coqui XTTS vs ElevenLabs Local: voice quality and latency comparison.',
+          '[Piper TTS Review](/power-local-llm/piper-tts-review) — a deep dive on Piper alone: history, install walkthrough, real usage examples, license, and when to pick XTTS v2 instead.',
         ],
       },
     },
