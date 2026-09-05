@@ -219,6 +219,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
   'whisper-cpp-review',
+  'faster-whisper-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
