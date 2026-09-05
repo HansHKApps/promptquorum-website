@@ -209,4 +209,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'private-llm-review':                      'private-llm-review',
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                 'stable-diffusion-review',
+
+  // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
+  'llama-cpp-explained':                     'llama-cpp-explained',
 }

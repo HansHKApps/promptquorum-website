@@ -139,6 +139,7 @@ import { article as a_open_interpreter_review } from './articles/open-interprete
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
+import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -287,4 +288,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                        a_stable_diffusion_review,
+  'llama-cpp-explained':                           a_llama_cpp_explained,
 }

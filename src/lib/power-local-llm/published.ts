@@ -230,6 +230,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Stable Diffusion review (Image & Video Generation) — 2026-09-05
   'stable-diffusion-review',
+
+  // llama.cpp explainer — 2026-09-05
+  'llama-cpp-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
