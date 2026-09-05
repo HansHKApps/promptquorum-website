@@ -8579,6 +8579,60 @@
       ],
       "images": []
     },
+    "continue-dev-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "cline-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pearai-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "whisper-cpp-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -8652,6 +8706,24 @@
       "images": []
     },
     "llama-cpp-explained": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llama-cpp-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
