@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Local LLM Tools 2026: 130 Apps Compared by 7 Categories',
     affiliateDisclosure: true,
     intro:
-      'This is an updated 2026 directory of 130 local LLM tools, apps, frameworks, and deployment software. The local-LLM ecosystem in 2026 spans seven categories, from running and serving models through images and video, and picking the right tool in each category is essential to building a stack that solves your problem without bloat. The directory catalogues 130 actively-maintained projects across seven categories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, and Train & Operate — with the description, licence, and primary URL for each. A tool can belong to more than one category (LM Studio is both a chat client and an inference runtime), and every entry also shows how you actually use it — desktop app, web app, CLI, editor plugin, mobile app, or library. Whether you are picking local LLM tools, deployment tools for multi-user serving, frameworks for building agents, or vision systems, use the filters below as the "what exists" map before you commit to a stack.',
+      '130 local LLM tools across 7 categories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, and Train & Operate. Filter, search, and compare below.',
     metaDescription:
       'Updated 2026 directory of 130 local LLM tools across 7 categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate.',
     twitterDescription:
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai software ecosystem',
     ],
     leadAnswerBlock:
-      '**This updated 2026 directory maps 130 local LLM tools, deployment tools, frameworks, and visual AI systems across seven categories.** Run & Serve (Ollama, llama.cpp, vLLM) moves tokens through the model; Chat & Assistants (LM Studio, Jan, GPT4All, Open WebUI, LibreChat) wraps a runtime in a chat UI, desktop or browser; Code & Development (Continue.dev, PearAI, Windsurf, Aider, ShellGPT, LangChain, CrewAI, SuperAGI) covers IDE integrations, terminal tools, and agent frameworks; Knowledge & Retrieval (AnythingLLM, PrivateGPT, LlamaIndex) points a model at your documents; Voice & Audio (Whisper.cpp, Piper, XTTS) extends it beyond text; Images & Video (Stable Diffusion, ComfyUI, Invoke AI) handles visual generation; and Train & Operate covers fine-tuning and evaluation. Many tools span more than one category and can run as more than one interface — the filters below let you narrow by both. Pick a runtime first (Ollama for almost everyone), then add one or two categories above. The directory lists every project worth knowing with its licence, so you can plan a stack that is open-source end-to-end if that matters to you.**',
+      '**130 local LLM tools across 7 categories, each with its licence, price, and primary URL.** Use the filters below to find the right one for your stack.',
     quickAnswerTop: {
       en: {
         question: 'What are the best local LLM tools to run AI on my own hardware in 2026?',

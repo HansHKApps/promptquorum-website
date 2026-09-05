@@ -16,6 +16,7 @@ import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 
@@ -148,6 +149,17 @@ export function ToolDrawer({
               <Dialog.Description className="text-sm text-text-secondary mb-4">
                 {app.tagline[lang] ?? app.tagline.en ?? ''}
               </Dialog.Description>
+
+              {isFounderStarActive(app.founderReviewedDate) && (
+                <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
+                  <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-amber-500" />
+                  <p className="text-xs text-amber-900">
+                    <span className="font-bold uppercase tracking-wide">Founder-reviewed.</span>{' '}
+                    {app.name}&rsquo;s founder reviewed this entry&rsquo;s technical specs and description for accuracy.
+                    The review itself remains independent PromptQuorum editorial content.
+                  </p>
+                </div>
+              )}
 
               <div className="flex flex-wrap items-center gap-2 mb-5">
                 {app.status !== 'listed' && (

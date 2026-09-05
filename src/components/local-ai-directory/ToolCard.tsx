@@ -11,6 +11,7 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon } from './icons'
+import { isFounderStarActive } from './founderStar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 
@@ -134,11 +135,22 @@ export function ToolCard({
               {categoryLabel}
             </span>
           </div>
-          {locality && (
-            <span className={`shrink-0 inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border ${LOCALITY_BADGE[locality]}`}>
-              {LOCALITY_LABEL[locality]}
-            </span>
-          )}
+          <div className="shrink-0 flex flex-col items-end gap-1">
+            {isFounderStarActive(app.founderReviewedDate) && (
+              <span
+                className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-amber-50 text-amber-800 border-amber-300"
+                title="The founder reviewed this entry's technical specs and description for accuracy"
+              >
+                <StarIcon className="h-2.5 w-2.5" />
+                Founder-reviewed
+              </span>
+            )}
+            {locality && (
+              <span className={`inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border ${LOCALITY_BADGE[locality]}`}>
+                {LOCALITY_LABEL[locality]}
+              </span>
+            )}
+          </div>
         </div>
 
         <p className="text-sm text-text-secondary leading-relaxed line-clamp-2 mb-3">{tagline}</p>
