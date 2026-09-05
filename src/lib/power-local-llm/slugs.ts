@@ -197,4 +197,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'arbiter-local-ai-chat-review':            'arbiter-local-ai-chat-review',
   // Chatty-mini review — 2026-09-04
   'chatty-mini-review':                      'chatty-mini-review',
+
+  // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
+  'llama-cpp-explained':                     'llama-cpp-explained',
 }

@@ -132,6 +132,7 @@ import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-r
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
+import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -272,4 +273,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'locally-ai-review':                             a_locally_ai_review,
   'arbiter-local-ai-chat-review':                  a_arbiter_local_ai_chat_review,
   'chatty-mini-review':                            a_chatty_mini_review,
+  'llama-cpp-explained':                           a_llama_cpp_explained,
 }

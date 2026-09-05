@@ -215,6 +215,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
+
+  // llama.cpp explainer — 2026-09-05
+  'llama-cpp-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
