@@ -18,6 +18,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { StatsBar } from './StatsBar'
 import { WantChips } from './WantChips'
+import { SubcategoryChips } from './SubcategoryChips'
 import { FilterBar } from './FilterBar'
 import { ActiveFilterChips } from './ActiveFilterChips'
 import { ToolCard } from './ToolCard'
@@ -108,6 +109,11 @@ export function DirectoryClient({ apps, lang }: Props) {
     resetPaging()
   }
 
+  const clearCategoryFilters = () => {
+    setFilters((prev) => ({ ...prev, category: new Set() }))
+    resetPaging()
+  }
+
   const toggleFilter = (group: keyof FilterState, value: string) => {
     setFilters((prev) => {
       const next = new Set(prev[group])
@@ -147,6 +153,14 @@ export function DirectoryClient({ apps, lang }: Props) {
       <div className="space-y-4 mb-6">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} />
         <WantChips counts={wantCounts} selected={want} onSelect={handleWant} />
+        {want && (
+          <SubcategoryChips
+            counts={countsByGroup.category}
+            selected={filters.category}
+            onToggle={(value) => toggleFilter('category', value)}
+            onClear={clearCategoryFilters}
+          />
+        )}
       </div>
 
       {/* Sticky top filter bar — replaces the old left sidebar (audit item
