@@ -146,6 +146,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'langchain-review',
   // Agent frameworks series — AutoGen review (article 2 of 14) — 2026-09-05
   'autogen-review',
+  // Agent frameworks series — CrewAI review (article 3 of 14) — 2026-09-05
+  'crewai-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
