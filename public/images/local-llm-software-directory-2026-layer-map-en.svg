@@ -1,68 +1,50 @@
-<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .tier { fill: #f5f5f5; stroke: #333; stroke-width: 2; }
       .tier-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
       .tier-desc { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
       .tier-new { fill: #e8f5e9; stroke: #4caf50; stroke-width: 2; }
-      .split { stroke-dasharray: 5,5; }
     </style>
   </defs>
-  
+
   <!-- Title -->
-  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">10 Layers of Local LLM Software (160+ Tools)</text>
-  
-  <!-- Tier 1: Runtimes -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">7 Categories of Local LLM Software (130 Tools)</text>
+
+  <!-- Category 1: Run & Serve -->
   <rect x="50" y="60" width="900" height="40" class="tier"/>
-  <text x="60" y="85" class="tier-title">1. Runtimes (11 tools)</text>
-  <text x="550" y="85" class="tier-desc">Ollama, llama.cpp, vLLM, TensorRT-LLM, MLX-LM...</text>
-  
-  <!-- Tier 2: Desktop Apps -->
+  <text x="60" y="85" class="tier-title">1. Run &amp; Serve (12 tools)</text>
+  <text x="550" y="85" class="tier-desc">Ollama, llama.cpp, vLLM, LocalAI, TensorRT-LLM...</text>
+
+  <!-- Category 2: Chat & Assistants -->
   <rect x="50" y="110" width="900" height="40" class="tier"/>
-  <text x="60" y="135" class="tier-title">2. Desktop Apps (14 tools)</text>
-  <text x="550" y="135" class="tier-desc">LM Studio, Jan, GPT4All, Locally Uncensored, Draw Things...</text>
-  
-  <!-- Tier 3: Web UIs -->
+  <text x="60" y="135" class="tier-title">2. Chat &amp; Assistants (38 tools)</text>
+  <text x="550" y="135" class="tier-desc">LM Studio, Jan, GPT4All, Open WebUI, LibreChat, SillyTavern...</text>
+
+  <!-- Category 3: Code & Development -->
   <rect x="50" y="160" width="900" height="40" class="tier"/>
-  <text x="60" y="185" class="tier-title">3. Web UIs (9 tools)</text>
-  <text x="550" y="185" class="tier-desc">Open WebUI, LibreChat, Gradio...</text>
-  
-  <!-- Tier 4a & 4b: Coding (split) -->
-  <rect x="50" y="210" width="430" height="40" class="tier"/>
-  <text x="60" y="235" class="tier-title">4a. IDE Assistants (11)</text>
-  <rect x="490" y="210" width="460" height="40" class="tier"/>
-  <text x="500" y="235" class="tier-title">4b. Terminal Tools (6)</text>
-  
-  <!-- Tier 5: RAG -->
+  <text x="60" y="185" class="tier-title">3. Code &amp; Development (40 tools)</text>
+  <text x="550" y="185" class="tier-desc">Continue.dev, Cline, Aider, LangChain, CrewAI, SuperAGI...</text>
+
+  <!-- Category 4: Knowledge & Retrieval -->
+  <rect x="50" y="210" width="900" height="40" class="tier"/>
+  <text x="60" y="235" class="tier-title">4. Knowledge &amp; Retrieval (17 tools)</text>
+  <text x="550" y="235" class="tier-desc">AnythingLLM, PrivateGPT, LlamaIndex, Haystack, Quivr...</text>
+
+  <!-- Category 5: Voice & Audio -->
   <rect x="50" y="260" width="900" height="40" class="tier"/>
-  <text x="60" y="285" class="tier-title">5. RAG Systems (11 tools)</text>
-  <text x="550" y="285" class="tier-desc">AnythingLLM, PrivateGPT, Quivr...</text>
-  
-  <!-- Tier 6: Agents -->
+  <text x="60" y="285" class="tier-title">5. Voice &amp; Audio (9 tools)</text>
+  <text x="550" y="285" class="tier-desc">Whisper.cpp, faster-whisper, Piper, Coqui TTS, XTTS v2...</text>
+
+  <!-- Category 6: Images & Video -->
   <rect x="50" y="310" width="900" height="40" class="tier"/>
-  <text x="60" y="335" class="tier-title">6. Agent Frameworks (16 tools)</text>
-  <text x="550" y="335" class="tier-desc">LangChain, CrewAI, SuperAGI, Letta...</text>
-  
-  <!-- Tier 7a, 7b, 7c: Voice/Audio/Multimodal (split) -->
-  <rect x="50" y="360" width="280" height="40" class="tier"/>
-  <text x="60" y="385" class="tier-title">7a. Speech (2)</text>
-  <rect x="340" y="360" width="310" height="40" class="tier"/>
-  <text x="350" y="385" class="tier-title">7b. TTS (5)</text>
-  <rect x="660" y="360" width="290" height="40" class="tier"/>
-  <text x="670" y="385" class="tier-title">7c. Vision (3)</text>
-  
-  <!-- Tier 8: Mobile -->
-  <rect x="50" y="410" width="900" height="40" class="tier"/>
-  <text x="60" y="435" class="tier-title">8. Mobile &amp; Edge (10 tools)</text>
-  <text x="550" y="435" class="tier-desc">MLC Chat, Loci, PocketPal AI...</text>
-  
-  <!-- Tier 9: Specialized -->
-  <rect x="50" y="460" width="900" height="40" class="tier"/>
-  <text x="60" y="485" class="tier-title">9. Specialized Tools (11 tools)</text>
-  <text x="550" y="485" class="tier-desc">Obsidian, Logseq, AutoGPT, MetaGPT...</text>
-  
-  <!-- Tier 10: Image Generation (NEW) -->
-  <rect x="50" y="510" width="900" height="40" class="tier-new"/>
-  <text x="60" y="535" class="tier-title" fill="#2e7d32">10. Image Generation (10 tools) ★ NEW</text>
-  <text x="550" y="535" class="tier-desc">Stable Diffusion, ComfyUI, AUTOMATIC1111, Invoke AI...</text>
-<text x="992" y="595" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
+  <text x="60" y="335" class="tier-title">6. Images &amp; Video (13 tools)</text>
+  <text x="550" y="335" class="tier-desc">Stable Diffusion, ComfyUI, AUTOMATIC1111, Invoke AI...</text>
+
+  <!-- Category 7: Train & Operate (emerging) -->
+  <rect x="50" y="360" width="900" height="40" class="tier-new"/>
+  <text x="60" y="385" class="tier-title" fill="#2e7d32">7. Train &amp; Operate (1 tool) ★ EMERGING</text>
+  <text x="550" y="385" class="tier-desc">Fine-tuning, datasets, evaluation, observability — early coverage</text>
+
+  <text x="500" y="425" font-family="Arial, sans-serif" font-size="12" fill="#888" text-anchor="middle">Many tools span more than one category — counts show each tool's primary category.</text>
+<text x="992" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
