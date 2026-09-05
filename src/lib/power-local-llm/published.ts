@@ -238,6 +238,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'whisper-cpp-review',
   'faster-whisper-review',
   'piper-tts-review',
+  'coqui-tts-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
