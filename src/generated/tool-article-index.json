@@ -82,11 +82,19 @@
         "tier": "about"
       }
     ],
-    "totalCount": 215,
+    "totalCount": 216,
     "capped": true
   },
   "llama.cpp": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
@@ -158,17 +166,9 @@
         "url": "/local-llms/local-llm-pc-build-2000",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 115,
+    "totalCount": 116,
     "capped": true
   },
   "vLLM": {
@@ -517,6 +517,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "arbiter-local-ai-chat-review",
         "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
@@ -586,14 +594,6 @@
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-pc-build-1000",
-        "title": "Local LLM PC Build Under $1,000 (2026): Full Parts List and Performance",
-        "url": "/local-llms/local-llm-pc-build-1000",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
     "totalCount": 129,
@@ -604,9 +604,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -641,6 +641,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hanoki-review",
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
         "url": "/power-local-llm/hanoki-review",
@@ -653,14 +661,6 @@
         "title": "Osaurus Review: Free On-Device AI App for Mac (2026)",
         "url": "/power-local-llm/osaurus-ai-review",
         "dateModified": "2026-09-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -728,9 +728,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Free Local AI Chat App (2026)",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -892,7 +892,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Msty": {
@@ -1735,6 +1735,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "bodega-one-code-review-2026",
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
@@ -1804,17 +1812,9 @@
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "Windsurf": {
@@ -1943,6 +1943,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "open-interpreter-review",
         "title": "Open Interpreter Review 2026: Same Name, Rust Core, New License",
         "url": "/power-local-llm/open-interpreter-review",
@@ -1950,7 +1958,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Cursor (local mode)": {
@@ -2311,6 +2319,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-tool-licenses-explained",
         "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
         "url": "/power-local-llm/ai-tool-licenses-explained",
@@ -2340,17 +2356,9 @@
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langflow-visual-ai-orchestration-review",
-        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
-        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Flowise": {
@@ -2443,6 +2451,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI in 2026: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
@@ -2474,7 +2490,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "LlamaIndex": {
@@ -2485,6 +2501,14 @@
         "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
         "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
         "tier": "about"
       },
       {
@@ -2550,21 +2574,21 @@
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chat-with-1000-pdfs-locally",
-        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
-        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 25,
     "capped": true
   },
   "Haystack": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "haystack-deepset-rag-framework-review",
@@ -2614,7 +2638,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "RAGFlow": {
@@ -2679,6 +2703,14 @@
   },
   "LangChain": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "dify-ai-workflow-builder-review",
@@ -2750,17 +2782,9 @@
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
-        "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "CrewAI": {
@@ -2780,6 +2804,14 @@
         "url": "/local-llms/best-ai-agent-framework-2026",
         "dateModified": "2026-08-28",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -2806,7 +2838,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "AutoGen": {
@@ -2829,6 +2861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
         "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
@@ -2844,11 +2884,41 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "Semantic Kernel": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "LangGraph": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "langchain-review",
+        "title": "LangChain Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "best-local-llm-stack-use-case",
@@ -2912,25 +2982,9 @@
         "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "babyagi-review-autonomous-agent",
-        "title": "BabyAGI in 2026: What the First AI Agent Became",
-        "url": "/power-local-llm/babyagi-review-autonomous-agent",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 17,
     "capped": true
   },
   "OpenClaw": {
@@ -4707,6 +4761,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -4738,7 +4800,77 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "Zed": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Agent": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Kilo Code": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "OpenCode": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Atomic Bot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Onyx": {

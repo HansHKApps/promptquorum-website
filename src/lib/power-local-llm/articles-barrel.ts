@@ -16,6 +16,7 @@ import { article as a_jarvis_mac_review } from './articles/jarvis-mac-review'
 import { article as a_locally_ai_review } from './articles/locally-ai-review'
 import { article as a_arbiter_local_ai_chat_review } from './articles/arbiter-local-ai-chat-review'
 import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
+import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
@@ -118,6 +119,7 @@ import { article as a_haystack_deepset_rag_framework_review } from './articles/h
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
+import { article as a_langchain_review } from './articles/langchain-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -132,6 +134,7 @@ import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-r
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
+import { article as a_msty_review } from './articles/msty-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -225,6 +228,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'dify-ai-workflow-builder-review':                   a_dify_ai_workflow_builder_review,
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
+  'langchain-review':                                  a_langchain_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
@@ -252,6 +256,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'vla-models-robots-local-inference':                 a_vla_models_robots_local_inference,
   'vlm-video-analytics-drones-edge':                   a_vlm_video_analytics_drones_edge,
   'msty-go-review-2026':                               a_msty_go_review_2026,
+  'msty-review':                                       a_msty_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -272,4 +277,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'locally-ai-review':                             a_locally_ai_review,
   'arbiter-local-ai-chat-review':                  a_arbiter_local_ai_chat_review,
   'chatty-mini-review':                            a_chatty_mini_review,
+  'whisper-cpp-review':                            a_whisper_cpp_review,
 }
