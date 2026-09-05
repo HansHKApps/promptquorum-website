@@ -43,6 +43,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
   'hermes-agent-review':                    'hermes-agent-review-2026',
   'msty-go-review':                         'msty-go-review-2026',
+  'msty-review':                             'msty-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
