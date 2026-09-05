@@ -118,6 +118,7 @@ import { article as a_haystack_deepset_rag_framework_review } from './articles/h
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
+import { article as a_langchain_review } from './articles/langchain-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -225,6 +226,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'dify-ai-workflow-builder-review':                   a_dify_ai_workflow_builder_review,
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
+  'langchain-review':                                  a_langchain_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
