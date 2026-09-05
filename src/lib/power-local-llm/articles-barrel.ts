@@ -133,6 +133,7 @@ import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-r
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
+import { article as a_msty_review } from './articles/msty-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -254,6 +255,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'vla-models-robots-local-inference':                 a_vla_models_robots_local_inference,
   'vlm-video-analytics-drones-edge':                   a_vlm_video_analytics_drones_edge,
   'msty-go-review-2026':                               a_msty_go_review_2026,
+  'msty-review':                                       a_msty_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,

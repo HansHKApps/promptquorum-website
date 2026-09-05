@@ -193,6 +193,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'vlm-video-analytics-drones-edge',
   // Msty Go local-first AI task-automation agent review — 2026-09-03
   'msty-go-review',
+  'msty-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
