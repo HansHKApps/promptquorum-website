@@ -284,6 +284,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // ComfyUI review (Image & Video Generation) — 2026-09-06
   'comfyui-review',
+
+  // RikkaHub review (Mobile & Edge LLMs) — 2026-09-06
+  'rikkahub-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
