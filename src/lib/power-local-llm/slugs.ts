@@ -240,4 +240,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'chapper-review':                          'chapper-review',
   // ControlNet review — 2026-09-06
   'controlnet-review':                       'controlnet-review',
+  // Maid review — 2026-09-06
+  'maid-review':                              'maid-review',
 }

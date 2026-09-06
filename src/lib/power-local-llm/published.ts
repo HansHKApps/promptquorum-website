@@ -260,6 +260,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // ControlNet review (Image & Video Generation) — 2026-09-06
   'controlnet-review',
+
+  // Maid review (Mobile & Edge LLMs) — 2026-09-06
+  'maid-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
