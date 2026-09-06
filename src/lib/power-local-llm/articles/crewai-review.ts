@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Skip CrewAI for a single API call to one model, or for an agent that needs a fully custom execution graph with cycles and conditional branches CrewAI's built-in processes don't model well.** A few concrete situations where a different tool wins.",
         items: [
           "A chatbot that only ever sends one prompt and returns the raw response — call the provider's SDK directly instead of adding a multi-agent framework layer",
-          'A project that needs explicit, arbitrary graph-based control flow — cycles, conditional edges, or fine-grained state checkpoints — a graph-first framework such as [LangChain](/power-local-llm/langchain-review)\'s LangGraph is built specifically for that level of control',
+          'A project that needs explicit, arbitrary graph-based control flow — cycles, conditional edges, or fine-grained state checkpoints — a graph-first framework such as [LangChain](/power-local-llm/langchain-review)\'s [LangGraph](/power-local-llm/langgraph-review) is built specifically for that level of control',
           'A project whose primary job is document indexing and retrieval-quality tuning, not multi-agent collaboration — [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) or [Haystack](/power-local-llm/haystack-deepset-rag-framework-review) specialize in that',
           'A team that wants to avoid CrewAI, Inc.\'s more opinionated Agent/Task/Crew structure and prefers assembling agent behavior from lower-level primitives instead',
           'Use CrewAI instead when the task genuinely benefits from being split across multiple agents with distinct roles, working sequentially or under a manager agent',
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Verzichten Sie auf CrewAI für einen einzelnen API-Aufruf an ein Modell oder für einen Agenten, der einen vollständig individuellen Ausführungsgraphen mit Zyklen und bedingten Verzweigungen benötigt, den die eingebauten Prozesse von CrewAI nur schlecht abbilden.** Einige konkrete Situationen, in denen ein anderes Werkzeug besser passt.",
         items: [
           "Ein Chatbot, der nur einen Prompt sendet und die rohe Antwort zurückgibt — rufen Sie stattdessen direkt das SDK des Anbieters auf, statt eine Multi-Agenten-Framework-Ebene hinzuzufügen",
-          'Ein Projekt, das expliziten, beliebigen graphbasierten Kontrollfluss braucht — Zyklen, bedingte Kanten oder feingranulare State-Checkpoints — ein graph-first-Framework wie LangGraph von [LangChain](/de/power-local-llm/langchain-review) ist speziell für diese Kontrollebene gebaut',
+          'Ein Projekt, das expliziten, beliebigen graphbasierten Kontrollfluss braucht — Zyklen, bedingte Kanten oder feingranulare State-Checkpoints — ein graph-first-Framework wie [LangGraph](/de/power-local-llm/langgraph-review) von [LangChain](/de/power-local-llm/langchain-review) ist speziell für diese Kontrollebene gebaut',
           'Ein Projekt, dessen Hauptaufgabe Dokumentenindexierung und Retrieval-Qualitätsoptimierung ist, nicht Multi-Agenten-Zusammenarbeit — [LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review) oder [Haystack](/de/power-local-llm/haystack-deepset-rag-framework-review) sind darauf spezialisiert',
           'Ein Team, das die opinionated Agent/Task/Crew-Struktur von CrewAI, Inc. vermeiden und Agentenverhalten stattdessen aus niedrigschwelligeren Primitiven zusammensetzen möchte',
           'Nutzen Sie CrewAI stattdessen, wenn die Aufgabe tatsächlich davon profitiert, auf mehrere Agenten mit unterschiedlichen Rollen aufgeteilt zu werden, die sequenziell oder unter einem Manager-Agenten arbeiten',
@@ -714,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Évitez CrewAI pour un seul appel API à un modèle, ou pour un agent qui a besoin d'un graphe d'exécution entièrement personnalisé avec des cycles et des branchements conditionnels que les processus intégrés de CrewAI modélisent mal.** Quelques situations concrètes où un autre outil est préférable.",
         items: [
           "Un chatbot qui ne fait qu'envoyer un prompt et renvoyer la réponse brute — appelez directement le SDK du fournisseur plutôt que d'ajouter une couche de framework multi-agents",
-          "Un projet qui nécessite un flux de contrôle explicite et arbitraire basé sur un graphe — cycles, arêtes conditionnelles ou points de contrôle d'état granulaires — un framework orienté graphe comme LangGraph de [LangChain](/fr/power-local-llm/langchain-review) est spécifiquement conçu pour ce niveau de contrôle",
+          "Un projet qui nécessite un flux de contrôle explicite et arbitraire basé sur un graphe — cycles, arêtes conditionnelles ou points de contrôle d'état granulaires — un framework orienté graphe comme [LangGraph](/fr/power-local-llm/langgraph-review) de [LangChain](/fr/power-local-llm/langchain-review) est spécifiquement conçu pour ce niveau de contrôle",
           "Un projet dont la tâche principale est l'indexation de documents et l'optimisation de la qualité de récupération, et non la collaboration multi-agents — [LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) ou [Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review) sont spécialisés dans ce domaine",
           "Une équipe qui veut éviter la structure Agent/Task/Crew opinionated de CrewAI, Inc. et préfère assembler le comportement des agents à partir de primitives de plus bas niveau",
           "Utilisez plutôt CrewAI lorsque la tâche bénéficie réellement d'être répartie entre plusieurs agents ayant des rôles distincts, travaillant séquentiellement ou sous un agent manager",
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**単一モデルへの単発API呼び出し、あるいはCrewAIの組み込みプロセスではうまくモデル化できないサイクルや条件分岐を含む完全カスタムな実行グラフが必要なエージェントには、CrewAIを避けるべき。** 他のツールの方が適している具体的な状況をいくつか挙げる。",
         items: [
           "1つのプロンプトを送信して生の応答を返すだけのチャットボット — マルチエージェントフレームワーク層を追加せず、プロバイダーのSDKを直接呼び出す方がよい",
-          "明示的で任意のグラフベースの制御フロー — サイクル、条件付きエッジ、細かい状態チェックポイント — が必要なプロジェクトには、[LangChain](/ja/power-local-llm/langchain-review)のLangGraphのようなグラフファーストのフレームワークがまさにそのレベルの制御向けに構築されている",
+          "明示的で任意のグラフベースの制御フロー — サイクル、条件付きエッジ、細かい状態チェックポイント — が必要なプロジェクトには、[LangChain](/ja/power-local-llm/langchain-review)の[LangGraph](/ja/power-local-llm/langgraph-review)のようなグラフファーストのフレームワークがまさにそのレベルの制御向けに構築されている",
           "主な仕事がドキュメントのインデックス化と検索品質のチューニングであり、マルチエージェント連携ではないプロジェクトには、[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)や[Haystack](/ja/power-local-llm/haystack-deepset-rag-framework-review)が特化している",
           "CrewAI, Incのオピニオンが強いAgent/Task/Crew構造を避け、よりローレベルなプリミティブからエージェントの挙動を組み立てたいチーム",
           "タスクが役割の異なる複数のエージェントに分割され、順次あるいはマネージャーエージェントの下で作業することで本当に恩恵を受ける場合は、代わりにCrewAIを使うとよい",
@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**如果只是对单一模型进行一次API调用,或者智能体需要一个包含循环和条件分支、CrewAI内置流程难以很好建模的完全自定义执行图,应避免使用CrewAI。** 以下是一些其他工具更合适的具体情形。",
         items: [
           "一个只发送一条提示词并返回原始响应的聊天机器人——应直接调用提供商的SDK,而不是额外增加一层多智能体框架",
-          "需要显式、任意图结构控制流——循环、条件边或细粒度状态检查点——的项目,像[LangChain](/zh/power-local-llm/langchain-review)的LangGraph这样以图为核心的框架正是为这种控制级别而构建的",
+          "需要显式、任意图结构控制流——循环、条件边或细粒度状态检查点——的项目,像[LangChain](/zh/power-local-llm/langchain-review)的[LangGraph](/zh/power-local-llm/langgraph-review)这样以图为核心的框架正是为这种控制级别而构建的",
           "主要工作是文档索引和检索质量调优、而非多智能体协作的项目,[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)或[Haystack](/zh/power-local-llm/haystack-deepset-rag-framework-review)在这方面更专业",
           "希望避开CrewAI, Inc.那种较为固化的Agent/Task/Crew结构、更倾向于用更底层的基础组件来组装智能体行为的团队",
           "当任务确实能从拆分给多个具有不同角色的智能体、按顺序或在管理者智能体统筹下工作中受益时,应改用CrewAI",
@@ -1506,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evite CrewAI para una única llamada API a un modelo, o para un agente que necesite un grafo de ejecución completamente personalizado con ciclos y ramificaciones condicionales que los procesos integrados de CrewAI modelan mal.** Algunas situaciones concretas donde otra herramienta gana.",
         items: [
           'Un chatbot que solo envía un prompt y devuelve la respuesta cruda — llame directamente al SDK del proveedor en lugar de añadir una capa de framework multiagente',
-          'Un proyecto que necesita un flujo de control explícito y arbitrario basado en grafos — ciclos, aristas condicionales o puntos de control de estado granulares — un framework orientado a grafos como LangGraph de [LangChain](/es/power-local-llm/langchain-review) está construido específicamente para ese nivel de control',
+          'Un proyecto que necesita un flujo de control explícito y arbitrario basado en grafos — ciclos, aristas condicionales o puntos de control de estado granulares — un framework orientado a grafos como [LangGraph](/es/power-local-llm/langgraph-review) de [LangChain](/es/power-local-llm/langchain-review) está construido específicamente para ese nivel de control',
           'Un proyecto cuya tarea principal es la indexación de documentos y el ajuste de la calidad de recuperación, no la colaboración multiagente — [LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) o [Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review) se especializan en ello',
           'Un equipo que quiere evitar la estructura opinada Agent/Task/Crew de CrewAI, Inc. y prefiere ensamblar el comportamiento de los agentes a partir de primitivas de más bajo nivel',
           'Use CrewAI en cambio cuando la tarea realmente se beneficia de dividirse entre varios agentes con roles distintos, trabajando de forma secuencial o bajo un agente manager',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evite o CrewAI para uma única chamada de API a um modelo, ou para um agente que precise de um grafo de execução totalmente personalizado com ciclos e ramificações condicionais que os processos embutidos do CrewAI modelam mal.** Algumas situações concretas em que outra ferramenta se sai melhor.",
         items: [
           'Um chatbot que apenas envia um prompt e retorna a resposta bruta — chame diretamente o SDK do provedor em vez de adicionar uma camada de framework multiagente',
-          'Um projeto que precisa de fluxo de controle explícito e arbitrário baseado em grafos — ciclos, arestas condicionais ou checkpoints de estado granulares — um framework orientado a grafos como o LangGraph do [LangChain](/pt/power-local-llm/langchain-review) é construído especificamente para esse nível de controle',
+          'Um projeto que precisa de fluxo de controle explícito e arbitrário baseado em grafos — ciclos, arestas condicionais ou checkpoints de estado granulares — um framework orientado a grafos como o [LangGraph](/pt/power-local-llm/langgraph-review) do [LangChain](/pt/power-local-llm/langchain-review) é construído especificamente para esse nível de controle',
           'Um projeto cuja tarefa principal é indexação de documentos e ajuste de qualidade de recuperação, não colaboração multiagente — [LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) ou [Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review) são especializados nisso',
           'Uma equipe que quer evitar a estrutura opinativa Agent/Task/Crew da CrewAI, Inc. e prefere montar o comportamento dos agentes a partir de primitivas de nível mais baixo',
           'Use o CrewAI, ao contrário, quando a tarefa realmente se beneficia de ser dividida entre vários agentes com papéis distintos, trabalhando sequencialmente ou sob um agente gerente',
@@ -2034,7 +2034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**تجنّب CrewAI لاستدعاء API واحد إلى نموذج واحد، أو لوكيل يحتاج إلى مخطط تنفيذ مخصص بالكامل يتضمن حلقات وتفرعات شرطية لا تنمذجها عمليات CrewAI المدمجة جيدًا.** بعض الحالات الملموسة التي تكون فيها أداة أخرى أفضل.",
         items: [
           "روبوت محادثة يرسل أمرًا توجيهيًا واحدًا فقط ويعيد الاستجابة الخام — استدعِ SDK المزود مباشرة بدلًا من إضافة طبقة إطار عمل متعدد الوكلاء",
-          "مشروع يحتاج إلى تدفق تحكم صريح وتعسفي قائم على المخططات — حلقات، حواف شرطية، أو نقاط تفتيش حالة دقيقة — إطار عمل مخططي أولًا مثل LangGraph من [LangChain](/ar/power-local-llm/langchain-review) مبني خصيصًا لهذا المستوى من التحكم",
+          "مشروع يحتاج إلى تدفق تحكم صريح وتعسفي قائم على المخططات — حلقات، حواف شرطية، أو نقاط تفتيش حالة دقيقة — إطار عمل مخططي أولًا مثل [LangGraph](/ar/power-local-llm/langgraph-review) من [LangChain](/ar/power-local-llm/langchain-review) مبني خصيصًا لهذا المستوى من التحكم",
           "مشروع مهمته الأساسية فهرسة المستندات وضبط جودة الاسترجاع، وليس التعاون متعدد الوكلاء — يتخصص [LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) أو [Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review) في ذلك",
           "فريق يريد تجنّب بنية Agent/Task/Crew مُحدَّدة المعالم الخاصة بـCrewAI, Inc. ويفضّل تجميع سلوك الوكلاء من عناصر بدائية أدنى مستوى",
           "استخدم CrewAI بدلًا من ذلك عندما تستفيد المهمة فعلًا من تقسيمها بين عدة وكلاء بأدوار متمايزة، يعملون بالتسلسل أو تحت إشراف وكيل مدير",
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**단일 모델에 대한 한 번의 API 호출이거나, CrewAI의 내장 프로세스로는 잘 모델링되지 않는 순환과 조건부 분기를 가진 완전히 커스텀한 실행 그래프가 필요한 에이전트에는 CrewAI를 피하세요.** 다른 도구가 더 나은 몇 가지 구체적인 상황입니다.",
         items: [
           "하나의 프롬프트만 보내고 원시 응답을 그대로 반환하는 챗봇 — 멀티 에이전트 프레임워크 계층을 추가하는 대신 제공업체의 SDK를 직접 호출하세요",
-          "명시적이고 임의적인 그래프 기반 제어 흐름 — 순환, 조건부 엣지, 세밀한 상태 체크포인트 — 이 필요한 프로젝트에는 [LangChain](/ko/power-local-llm/langchain-review)의 LangGraph 같은 그래프 중심 프레임워크가 바로 그 수준의 제어를 위해 만들어졌습니다",
+          "명시적이고 임의적인 그래프 기반 제어 흐름 — 순환, 조건부 엣지, 세밀한 상태 체크포인트 — 이 필요한 프로젝트에는 [LangChain](/ko/power-local-llm/langchain-review)의 [LangGraph](/ko/power-local-llm/langgraph-review) 같은 그래프 중심 프레임워크가 바로 그 수준의 제어를 위해 만들어졌습니다",
           "주요 작업이 멀티 에이전트 협업이 아니라 문서 색인화와 검색 품질 튜닝인 프로젝트에는 [LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review)나 [Haystack](/ko/power-local-llm/haystack-deepset-rag-framework-review)이 특화되어 있습니다",
           "CrewAI, Inc.의 견해가 뚜렷한 Agent/Task/Crew 구조를 피하고 더 저수준의 프리미티브로부터 에이전트 동작을 직접 조립하고 싶은 팀",
           "작업이 실제로 서로 다른 역할을 가진 여러 에이전트로 나뉘어 순차적으로, 또는 매니저 에이전트 아래에서 작업함으로써 이득을 볼 때는 대신 CrewAI를 사용하세요",
