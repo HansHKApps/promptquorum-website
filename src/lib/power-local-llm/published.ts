@@ -269,6 +269,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // vLLM explainer — 2026-09-06
   'vllm-explained',
+  // LocalAI explainer — 2026-09-06
+  'localai-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
