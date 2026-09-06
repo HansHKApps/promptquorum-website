@@ -1689,14 +1689,15 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
 }
 
 function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko' }) {
+  const contentKey = POWER_LLM_SLUG_TO_KEY[slug] ?? slug
   const hasContent =
-    !!powerLLMContent[slug]?.['en'] &&
-    Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
+    !!powerLLMContent[contentKey]?.['en'] &&
+    Object.keys(powerLLMContent[contentKey]?.['en']?.sections ?? {}).length > 0
   const brief = POWER_LLM_BRIEFS[slug]
   const linkable = hasContent || !!brief
   const title =
-    powerLLMContent[slug]?.[lang]?.title ??
-    powerLLMContent[slug]?.['en']?.title ??
+    powerLLMContent[contentKey]?.[lang]?.title ??
+    powerLLMContent[contentKey]?.['en']?.title ??
     brief?.title ?? slugToTitle(slug)
 
   if (!linkable) {
@@ -1711,8 +1712,8 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
     )
   }
 
-  const publishDate = powerLLMContent[slug]?.['en']?.publishDate
-  const dateModified = powerLLMContent[slug]?.['en']?.dateModified
+  const publishDate = powerLLMContent[contentKey]?.['en']?.publishDate
+  const dateModified = powerLLMContent[contentKey]?.['en']?.dateModified
   const showNew = isNewArticle(publishDate)
   const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
 
@@ -1797,7 +1798,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
         '@type': 'ListItem',
         position: i + 1,
         url: `${BASE}${powerLLMArticlePath(lang, slug)}`,
-        name: powerLLMContent[slug]?.[lang]?.title ?? powerLLMContent[slug]?.['en']?.title ?? slugToTitle(slug),
+        name: powerLLMContent[POWER_LLM_SLUG_TO_KEY[slug] ?? slug]?.[lang]?.title ?? powerLLMContent[POWER_LLM_SLUG_TO_KEY[slug] ?? slug]?.['en']?.title ?? slugToTitle(slug),
       })),
     },
   }
