@@ -266,6 +266,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // llama.cpp explainer — 2026-09-05
   'llama-cpp-explained',
+
+  // vLLM explainer — 2026-09-06
+  'vllm-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
