@@ -232,6 +232,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'llama-cpp-explained':                     'llama-cpp-explained',
   // vLLM explainer (Runtimes & Inference Engines) — 2026-09-06
   'vllm-explained':                          'vllm-explained',
+  'koboldcpp-review':                        'koboldcpp-review',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
