@@ -234,7 +234,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'vllm-explained':                          'vllm-explained',
 
   // Runtimes & Engines — 2026-09-05
-  'llama-cpp-review':                        'llama-cpp-review',
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                         'windsurf-review',
   'sourcegraph-cody-review':                 'sourcegraph-cody-review',

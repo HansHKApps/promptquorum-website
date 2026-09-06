@@ -166,7 +166,6 @@ import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
-import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -333,7 +332,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llama-cpp-explained':                           a_llama_cpp_explained,
   'vllm-explained':                                a_vllm_explained,
   // Runtimes & Engines — 2026-09-05
-  'llama-cpp-review':                              a_llama_cpp_review,
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                               a_windsurf_review,
   'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
