@@ -242,4 +242,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'controlnet-review':                       'controlnet-review',
   // Maid review — 2026-09-06
   'maid-review':                              'maid-review',
+  // SwarmUI (formerly StableSwarmUI) review — 2026-09-06
+  'stableswarmui-review':                    'stableswarmui-review',
 }
