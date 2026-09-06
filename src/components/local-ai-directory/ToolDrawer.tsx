@@ -13,7 +13,7 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
-import { CloseIcon, StarIcon } from './icons'
+import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
@@ -121,10 +121,55 @@ export function ToolDrawer({
   onOpenSlug: (slug: string) => void
 }) {
   const open = app != null
+  const [copied, setCopied] = useState(false)
 
   const alternatives = app
     ? allApps.filter((a) => a.slug !== app.slug && a.categories.some((c) => app.categories.includes(c))).slice(0, 6)
     : []
+
+  async function handleCopy() {
+    if (!app) return
+    const rows: [string, ReactNode][] = [
+      ['Category', app.categories.map((c) => CATEGORY_SUB_LABEL[c]).join(', ')],
+      ['Interface', app.interfaces.map((i) => INTERFACE_LABEL[i]).join(', ')],
+      ['Runs', labelFor('locality', app.locality)],
+      ['Engine', labelFor('engine', app.engine)],
+      ['Price', labelFor('price', app.price)],
+      ['License', app.license === 'TODO' ? null : app.license],
+      ['Platforms', labelList('platforms', app.platforms)],
+      ['Works with', joinOrUnknown(app.worksWith)],
+      ['Added', app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
+      ['Last verified', app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
+    ]
+
+    const lines = [
+      app.name,
+      app.tagline[lang] ?? app.tagline.en ?? '',
+      app.url ? (app.url.startsWith('http') ? app.url : `https://${app.url}`) : null,
+      '',
+      ...rows
+        .filter(([, value]) => value != null && value !== '')
+        .map(([label, value]) => `${label}: ${value}`),
+    ]
+
+    if (app.founder) {
+      lines.push('', 'From the founder:', app.founder.why, `Best for: ${app.founder.best}`, `Limits: ${app.founder.limits}`)
+    }
+
+    if (app.pqReview) {
+      lines.push('', 'PromptQuorum review:', app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
+    }
+
+    const text = lines.filter((l) => l != null).join('\n')
+
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Clipboard API can throw in insecure contexts or without permission — silently no-op.
+    }
+  }
 
   return (
     <Dialog.Root open={open} onOpenChange={(next) => { if (!next) onClose() }}>
@@ -139,11 +184,31 @@ export function ToolDrawer({
             <div className="p-6">
               <div className="flex items-start justify-between gap-3 mb-1">
                 <Dialog.Title className="text-xl font-bold text-text-primary">{app.name}</Dialog.Title>
-                <Dialog.Close asChild>
-                  <button type="button" aria-label="Close" className="shrink-0 rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
-                    <CloseIcon className="h-4 w-4" />
+                <div className="flex items-center gap-1 shrink-0">
+                  <button
+                    type="button"
+                    onClick={handleCopy}
+                    aria-label="Copy entry details"
+                    className="inline-flex items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium text-text-secondary hover:bg-gray-100"
+                  >
+                    {copied ? (
+                      <>
+                        <CheckIcon className="h-3.5 w-3.5 text-emerald-600" />
+                        <span className="text-emerald-600">Copied</span>
+                      </>
+                    ) : (
+                      <>
+                        <CopyIcon className="h-3.5 w-3.5" />
+                        <span>Copy</span>
+                      </>
+                    )}
                   </button>
-                </Dialog.Close>
+                  <Dialog.Close asChild>
+                    <button type="button" aria-label="Close" className="rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
+                      <CloseIcon className="h-4 w-4" />
+                    </button>
+                  </Dialog.Close>
+                </div>
               </div>
 
               <Dialog.Description className="text-sm text-text-secondary mb-4">
