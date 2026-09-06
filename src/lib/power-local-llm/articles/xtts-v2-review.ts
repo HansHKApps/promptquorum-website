@@ -210,7 +210,7 @@ for chunk in tts.tts_stream(
             'License': 'MPL-2.0 (toolkit only)',
           },
           {
-            'Tool': 'Bark',
+            'Tool': '[Bark](/power-local-llm/bark-tts-review)',
             'Best fit': 'Expressive, non-speech audio — laughter, sighs, ambient sound',
             'License': 'MIT',
           },
@@ -264,7 +264,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Verdict',
         content:
-          'XTTS v2 remains one of the highest-quality local voice-cloning models available in 2026, and the combination of a 6-second cloning requirement, 17-language cross-lingual support, and sub-200ms streaming latency is genuinely capable for personal, research, and prototyping use. The decision that actually matters for most readers is the license: the Coqui Public Model License is unambiguously non-commercial, and with Coqui AI having shut down in December 2023, there is no confirmed active pathway to a commercial license today. If your use case is personal, academic, or a non-commercial prototype, XTTS v2 is a strong, well-documented choice. If you need commercial voice cloning, verify licensing terms independently before you build on it, or pair this review with PromptQuorum\'s coverage of [Piper](/power-local-llm/piper-tts-review) and Bark for permissively licensed alternatives, or the [ElevenLabs comparison](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) for a managed commercial option.',
+          'XTTS v2 remains one of the highest-quality local voice-cloning models available in 2026, and the combination of a 6-second cloning requirement, 17-language cross-lingual support, and sub-200ms streaming latency is genuinely capable for personal, research, and prototyping use. The decision that actually matters for most readers is the license: the Coqui Public Model License is unambiguously non-commercial, and with Coqui AI having shut down in December 2023, there is no confirmed active pathway to a commercial license today. If your use case is personal, academic, or a non-commercial prototype, XTTS v2 is a strong, well-documented choice. If you need commercial voice cloning, verify licensing terms independently before you build on it, or pair this review with PromptQuorum\'s coverage of [Piper](/power-local-llm/piper-tts-review) and [Bark](/power-local-llm/bark-tts-review) for permissively licensed alternatives, or the [ElevenLabs comparison](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) for a managed commercial option.',
       },
       sources: {
         id: 'sources',
@@ -285,7 +285,7 @@ for chunk in tts.tts_stream(
           '[Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — the licensing deep dive across all major local TTS engines.',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — the cloud-vs-local comparison for readers deciding whether to self-host.',
           '[Piper TTS Review](/power-local-llm/piper-tts-review) — the fast, permissively licensed, CPU-only local TTS alternative.',
-          'Bark TTS Review — the expressive, non-speech-audio local TTS model, reviewed in the same depth.',
+          '[Bark TTS Review](/power-local-llm/bark-tts-review) — the expressive, non-speech-audio local TTS model, reviewed in the same depth.',
         ],
       },
     },
@@ -525,7 +525,7 @@ for chunk in tts.tts_stream(
             'Lizenz': 'MPL-2.0 (nur Toolkit)',
           },
           {
-            'Tool': 'Bark',
+            'Tool': '[Bark](/power-local-llm/bark-tts-review)',
             'Am besten für': 'Ausdrucksstarkes, nicht-sprachliches Audio — Lachen, Seufzer, Umgebungsgeräusche',
             'Lizenz': 'MIT',
           },
@@ -579,7 +579,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Fazit',
         content:
-          'XTTS v2 bleibt eines der qualitativ hochwertigsten lokal verfügbaren Voice-Cloning-Modelle im Jahr 2026, und die Kombination aus einer 6-Sekunden-Cloning-Anforderung, 17-sprachiger sprachübergreifender Unterstützung und Streaming-Latenz unter 200 ms ist für private Nutzung, Forschung und Prototyping wirklich leistungsfähig. Die Entscheidung, die für die meisten Leser tatsächlich zählt, ist die Lizenz: Die Coqui Public Model License ist eindeutig nicht-kommerziell, und da Coqui AI im Dezember 2023 geschlossen hat, gibt es heute keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz. Wenn Ihr Anwendungsfall privat, akademisch oder ein nicht-kommerzieller Prototyp ist, ist XTTS v2 eine starke, gut dokumentierte Wahl. Wenn Sie kommerzielles Voice-Cloning benötigen, bestätigen Sie die Lizenzbedingungen unabhängig, bevor Sie darauf aufbauen, oder kombinieren Sie diesen Test mit PromptQuorums Abdeckung von [Piper](/power-local-llm/piper-tts-review) und Bark für freizügig lizenzierte Alternativen oder dem [ElevenLabs-Vergleich](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Option.',
+          'XTTS v2 bleibt eines der qualitativ hochwertigsten lokal verfügbaren Voice-Cloning-Modelle im Jahr 2026, und die Kombination aus einer 6-Sekunden-Cloning-Anforderung, 17-sprachiger sprachübergreifender Unterstützung und Streaming-Latenz unter 200 ms ist für private Nutzung, Forschung und Prototyping wirklich leistungsfähig. Die Entscheidung, die für die meisten Leser tatsächlich zählt, ist die Lizenz: Die Coqui Public Model License ist eindeutig nicht-kommerziell, und da Coqui AI im Dezember 2023 geschlossen hat, gibt es heute keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz. Wenn Ihr Anwendungsfall privat, akademisch oder ein nicht-kommerzieller Prototyp ist, ist XTTS v2 eine starke, gut dokumentierte Wahl. Wenn Sie kommerzielles Voice-Cloning benötigen, bestätigen Sie die Lizenzbedingungen unabhängig, bevor Sie darauf aufbauen, oder kombinieren Sie diesen Test mit PromptQuorums Abdeckung von [Piper](/power-local-llm/piper-tts-review) und [Bark](/power-local-llm/bark-tts-review) für freizügig lizenzierte Alternativen oder dem [ElevenLabs-Vergleich](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Option.',
       },
       sources: {
         id: 'sources',
@@ -600,7 +600,7 @@ for chunk in tts.tts_stream(
           '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der Lizenz-Deep-Dive über alle wichtigen lokalen TTS-Engines.',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für Leser, die zwischen Self-Hosting entscheiden.',
           '[Piper-TTS-Test](/power-local-llm/piper-tts-review) — die schnelle, freizügig lizenzierte, reine-CPU-lokale-TTS-Alternative.',
-          'Bark-TTS-Test — das ausdrucksstarke, nicht-sprachliche lokale TTS-Modell, in derselben Tiefe getestet.',
+          '[Bark-TTS-Test](/power-local-llm/bark-tts-review) — das ausdrucksstarke, nicht-sprachliche lokale TTS-Modell, in derselben Tiefe getestet.',
         ],
       },
     },
@@ -840,7 +840,7 @@ for chunk in tts.tts_stream(
             'Licence': 'MPL-2.0 (kit uniquement)',
           },
           {
-            'Outil': 'Bark',
+            'Outil': '[Bark](/power-local-llm/bark-tts-review)',
             'Meilleur usage': 'Audio non vocal expressif — rires, soupirs, sons ambiants',
             'Licence': 'MIT',
           },
@@ -894,7 +894,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Verdict',
         content:
-          'XTTS v2 reste l\'un des modèles de clonage vocal locaux de la plus haute qualité disponibles en 2026, et la combinaison d\'une exigence de clonage de 6 secondes, d\'une prise en charge translingue en 17 langues et d\'une latence de streaming inférieure à 200 ms est réellement performante pour un usage personnel, de recherche et de prototypage. La décision qui compte réellement pour la plupart des lecteurs est la licence : la Coqui Public Model License est sans ambiguïté non commerciale, et avec la fermeture de Coqui AI en décembre 2023, il n\'existe aujourd\'hui aucune voie active confirmée vers une licence commerciale. Si votre cas d\'usage est personnel, académique ou un prototype non commercial, XTTS v2 est un choix solide et bien documenté. Si vous avez besoin de clonage vocal commercial, vérifiez les conditions de licence de manière indépendante avant de construire dessus, ou combinez cet avis avec la couverture par PromptQuorum de [Piper](/power-local-llm/piper-tts-review) et Bark pour des alternatives sous licence permissive, ou la [comparaison ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) pour une option commerciale gérée.',
+          'XTTS v2 reste l\'un des modèles de clonage vocal locaux de la plus haute qualité disponibles en 2026, et la combinaison d\'une exigence de clonage de 6 secondes, d\'une prise en charge translingue en 17 langues et d\'une latence de streaming inférieure à 200 ms est réellement performante pour un usage personnel, de recherche et de prototypage. La décision qui compte réellement pour la plupart des lecteurs est la licence : la Coqui Public Model License est sans ambiguïté non commerciale, et avec la fermeture de Coqui AI en décembre 2023, il n\'existe aujourd\'hui aucune voie active confirmée vers une licence commerciale. Si votre cas d\'usage est personnel, académique ou un prototype non commercial, XTTS v2 est un choix solide et bien documenté. Si vous avez besoin de clonage vocal commercial, vérifiez les conditions de licence de manière indépendante avant de construire dessus, ou combinez cet avis avec la couverture par PromptQuorum de [Piper](/power-local-llm/piper-tts-review) et [Bark](/power-local-llm/bark-tts-review) pour des alternatives sous licence permissive, ou la [comparaison ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) pour une option commerciale gérée.',
       },
       sources: {
         id: 'sources',
@@ -915,7 +915,7 @@ for chunk in tts.tts_stream(
           '[Licences TTS locales et clonage vocal : Piper, XTTS v2, F5-TTS et Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — l\'analyse approfondie des licences pour tous les principaux moteurs TTS locaux.',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparaison cloud contre local pour les lecteurs hésitant à s\'auto-héberger.',
           '[Avis Piper TTS](/power-local-llm/piper-tts-review) — l\'alternative TTS locale rapide, sous licence permissive, CPU seul.',
-          'Avis Bark TTS — le modèle TTS local audio expressif et non vocal, testé avec la même profondeur.',
+          '[Avis Bark TTS](/power-local-llm/bark-tts-review) — le modèle TTS local audio expressif et non vocal, testé avec la même profondeur.',
         ],
       },
     },
@@ -1155,7 +1155,7 @@ for chunk in tts.tts_stream(
             'Licencia': 'MPL-2.0 (solo el kit)',
           },
           {
-            'Herramienta': 'Bark',
+            'Herramienta': '[Bark](/power-local-llm/bark-tts-review)',
             'Mejor para': 'Audio expresivo, no verbal — risas, suspiros, sonido ambiental',
             'Licencia': 'MIT',
           },
@@ -1209,7 +1209,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'XTTS v2 sigue siendo uno de los modelos de clonación de voz local de mayor calidad disponibles en 2026, y la combinación de un requisito de clonación de 6 segundos, compatibilidad entre 17 idiomas y latencia de streaming inferior a 200 ms es genuinamente capaz para uso personal, investigación y prototipado. La decisión que realmente importa para la mayoría de los lectores es la licencia: la Coqui Public Model License es inequívocamente no comercial, y como Coqui AI cerró en diciembre de 2023, hoy no existe una vía confirmada y activa hacia una licencia comercial. Si tu caso de uso es personal, académico o un prototipo no comercial, XTTS v2 es una opción sólida y bien documentada. Si necesitas clonación de voz comercial, verifica los términos de licencia de forma independiente antes de construir sobre él, o combina este análisis con la cobertura de [Piper](/power-local-llm/piper-tts-review) y Bark de PromptQuorum para alternativas con licencia permisiva, o la [comparación con ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) para una opción comercial gestionada.',
+          'XTTS v2 sigue siendo uno de los modelos de clonación de voz local de mayor calidad disponibles en 2026, y la combinación de un requisito de clonación de 6 segundos, compatibilidad entre 17 idiomas y latencia de streaming inferior a 200 ms es genuinamente capaz para uso personal, investigación y prototipado. La decisión que realmente importa para la mayoría de los lectores es la licencia: la Coqui Public Model License es inequívocamente no comercial, y como Coqui AI cerró en diciembre de 2023, hoy no existe una vía confirmada y activa hacia una licencia comercial. Si tu caso de uso es personal, académico o un prototipo no comercial, XTTS v2 es una opción sólida y bien documentada. Si necesitas clonación de voz comercial, verifica los términos de licencia de forma independiente antes de construir sobre él, o combina este análisis con la cobertura de [Piper](/power-local-llm/piper-tts-review) y [Bark](/power-local-llm/bark-tts-review) de PromptQuorum para alternativas con licencia permisiva, o la [comparación con ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) para una opción comercial gestionada.',
       },
       sources: {
         id: 'sources',
@@ -1230,7 +1230,7 @@ for chunk in tts.tts_stream(
           '[Licencias de TTS local y clonación de voz: Piper, XTTS v2, F5-TTS y Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — el análisis a fondo de licencias entre los principales motores TTS locales.',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparación entre la nube y lo local para lectores que deciden si autoalojar.',
           '[Análisis de Piper TTS](/power-local-llm/piper-tts-review) — la alternativa de TTS local rápida, con licencia permisiva y solo CPU.',
-          'Análisis de Bark TTS — el modelo de TTS local expresivo y no verbal, analizado con la misma profundidad.',
+          '[Análisis de Bark TTS](/power-local-llm/bark-tts-review) — el modelo de TTS local expresivo y no verbal, analizado con la misma profundidad.',
         ],
       },
     },
@@ -1470,7 +1470,7 @@ for chunk in tts.tts_stream(
             'ライセンス': 'MPL-2.0(ツールキットのみ)',
           },
           {
-            'ツール': 'Bark',
+            'ツール': '[Bark](/power-local-llm/bark-tts-review)',
             '最適な用途': '表現力豊かな非音声オーディオ — 笑い声、ため息、環境音',
             'ライセンス': 'MIT',
           },
@@ -1524,7 +1524,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: '結論',
         content:
-          'XTTS v2は2026年時点でも利用可能な、最高品質のローカルボイスクローニングモデルの一つであり続けています。6秒でのクローニング要件、17言語にわたる言語横断サポート、200ミリ秒未満のストリーミングレイテンシの組み合わせは、個人利用、研究、プロトタイピングにおいて本当に実力があります。ほとんどの読者にとって実際に重要な判断はライセンスです。Coqui Public Model Licenseは紛れもなく非商用であり、Coqui AIが2023年12月に閉鎖したため、今日確認済みで有効な商用ライセンスへの道筋はありません。ユースケースが個人利用、学術利用、または非商用のプロトタイプであれば、XTTS v2は強力で十分に文書化された選択肢です。商用のボイスクローニングが必要な場合は、構築を始める前にライセンス条件を独自に確認するか、寛容なライセンスの代替案としてPromptQuorumの[Piper](/power-local-llm/piper-tts-review)やBarkのレビュー、あるいはマネージドな商用オプションとして[ElevenLabsとの比較](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)を併せて参照してください。',
+          'XTTS v2は2026年時点でも利用可能な、最高品質のローカルボイスクローニングモデルの一つであり続けています。6秒でのクローニング要件、17言語にわたる言語横断サポート、200ミリ秒未満のストリーミングレイテンシの組み合わせは、個人利用、研究、プロトタイピングにおいて本当に実力があります。ほとんどの読者にとって実際に重要な判断はライセンスです。Coqui Public Model Licenseは紛れもなく非商用であり、Coqui AIが2023年12月に閉鎖したため、今日確認済みで有効な商用ライセンスへの道筋はありません。ユースケースが個人利用、学術利用、または非商用のプロトタイプであれば、XTTS v2は強力で十分に文書化された選択肢です。商用のボイスクローニングが必要な場合は、構築を始める前にライセンス条件を独自に確認するか、寛容なライセンスの代替案としてPromptQuorumの[Piper](/power-local-llm/piper-tts-review)や[Bark](/power-local-llm/bark-tts-review)のレビュー、あるいはマネージドな商用オプションとして[ElevenLabsとの比較](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)を併せて参照してください。',
       },
       sources: {
         id: 'sources',
@@ -1545,7 +1545,7 @@ for chunk in tts.tts_stream(
           '[ローカルTTSとボイスクローニングのライセンス:Piper、XTTS v2、F5-TTS、Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 主要なローカルTTSエンジン全体のライセンス詳細解説。',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — セルフホストするかどうかを検討する読者向けの、クラウドとローカルの比較。',
           '[Piper TTSレビュー](/power-local-llm/piper-tts-review) — 高速で寛容なライセンスの、CPUのみのローカルTTS代替案。',
-          'Bark TTSレビュー — 表現力豊かな非音声オーディオのローカルTTSモデルを、同じ深さでレビュー。',
+          '[Bark TTSレビュー](/power-local-llm/bark-tts-review) — 表現力豊かな非音声オーディオのローカルTTSモデルを、同じ深さでレビュー。',
         ],
       },
     },
@@ -1785,7 +1785,7 @@ for chunk in tts.tts_stream(
             'Licença': 'MPL-2.0 (apenas o kit)',
           },
           {
-            'Ferramenta': 'Bark',
+            'Ferramenta': '[Bark](/power-local-llm/bark-tts-review)',
             'Melhor uso': 'Áudio expressivo, não verbal — risadas, suspiros, som ambiente',
             'Licença': 'MIT',
           },
@@ -1839,7 +1839,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O XTTS v2 continua sendo um dos modelos de clonagem de voz local de maior qualidade disponíveis em 2026, e a combinação de um requisito de clonagem de 6 segundos, suporte a clonagem entre 17 idiomas e latência de streaming abaixo de 200ms é genuinamente capaz para uso pessoal, pesquisa e prototipagem. A decisão que realmente importa para a maioria dos leitores é a licença: a Coqui Public Model License é inequivocamente não comercial, e como a Coqui AI encerrou suas atividades em dezembro de 2023, não há hoje um caminho confirmado e ativo para uma licença comercial. Se o seu caso de uso é pessoal, acadêmico ou um protótipo não comercial, o XTTS v2 é uma escolha sólida e bem documentada. Se você precisa de clonagem de voz comercial, verifique os termos de licenciamento de forma independente antes de construir sobre ele, ou combine esta análise com a cobertura da PromptQuorum sobre [Piper](/power-local-llm/piper-tts-review) e Bark para alternativas com licença permissiva, ou a [comparação com o ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) para uma opção comercial gerenciada.',
+          'O XTTS v2 continua sendo um dos modelos de clonagem de voz local de maior qualidade disponíveis em 2026, e a combinação de um requisito de clonagem de 6 segundos, suporte a clonagem entre 17 idiomas e latência de streaming abaixo de 200ms é genuinamente capaz para uso pessoal, pesquisa e prototipagem. A decisão que realmente importa para a maioria dos leitores é a licença: a Coqui Public Model License é inequivocamente não comercial, e como a Coqui AI encerrou suas atividades em dezembro de 2023, não há hoje um caminho confirmado e ativo para uma licença comercial. Se o seu caso de uso é pessoal, acadêmico ou um protótipo não comercial, o XTTS v2 é uma escolha sólida e bem documentada. Se você precisa de clonagem de voz comercial, verifique os termos de licenciamento de forma independente antes de construir sobre ele, ou combine esta análise com a cobertura da PromptQuorum sobre [Piper](/power-local-llm/piper-tts-review) e [Bark](/power-local-llm/bark-tts-review) para alternativas com licença permissiva, ou a [comparação com o ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) para uma opção comercial gerenciada.',
       },
       sources: {
         id: 'sources',
@@ -1860,7 +1860,7 @@ for chunk in tts.tts_stream(
           '[Licenças de TTS local e clonagem de voz: Piper, XTTS v2, F5-TTS e Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — a análise aprofundada de licenças entre os principais motores de TTS locais.',
           '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — a comparação entre nuvem e local para leitores decidindo se devem auto-hospedar.',
           '[Análise do Piper TTS](/power-local-llm/piper-tts-review) — a alternativa de TTS local rápida, com licença permissiva e apenas CPU.',
-          'Análise do Bark TTS — o modelo de TTS local expressivo e não verbal, analisado com a mesma profundidade.',
+          '[Análise do Bark TTS](/power-local-llm/bark-tts-review) — o modelo de TTS local expressivo e não verbal, analisado com a mesma profundidade.',
         ],
       },
     },
@@ -2100,7 +2100,7 @@ for chunk in tts.tts_stream(
             'الرخصة': 'MPL-2.0 (الأدوات فقط)',
           },
           {
-            'الأداة': 'Bark',
+            'الأداة': '[Bark](/power-local-llm/bark-tts-review)',
             'الأنسب لـ': 'صوت تعبيري غير كلامي — ضحك، تنهدات، صوت محيطي',
             'الرخصة': 'MIT',
           },
@@ -2154,7 +2154,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          'يظل XTTS v2 واحدًا من أعلى نماذج الاستنساخ الصوتي المحلي جودة المتاحة في 2026، والجمع بين متطلب استنساخ مدته 6 ثوانٍ ودعم 17 لغة عبر الاستنساخ المتعدد اللغات وزمن استجابة بث أقل من 200 مللي ثانية قدرات حقيقية للاستخدام الشخصي والبحثي والنماذج الأولية. القرار الذي يهم معظم القراء فعليًا هو الرخصة: رخصة Coqui Public Model License غير تجارية بشكل لا لبس فيه، ولأن Coqui AI أغلقت في ديسمبر 2023، لا يوجد اليوم مسار مؤكد ونشط للحصول على رخصة تجارية. إذا كان استخدامك شخصيًا أو أكاديميًا أو نموذجًا أوليًا غير تجاري، فإن XTTS v2 خيار قوي وموثّق جيدًا. إذا كنت بحاجة إلى استنساخ صوتي تجاري، تحقق من شروط الترخيص بشكل مستقل قبل البناء عليه، أو اجمع بين هذه المراجعة وتغطية PromptQuorum لـ[Piper](/power-local-llm/piper-tts-review) وBark كبدائل ذات رخصة متساهلة، أو [مقارنة ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) كخيار تجاري مُدار.',
+          'يظل XTTS v2 واحدًا من أعلى نماذج الاستنساخ الصوتي المحلي جودة المتاحة في 2026، والجمع بين متطلب استنساخ مدته 6 ثوانٍ ودعم 17 لغة عبر الاستنساخ المتعدد اللغات وزمن استجابة بث أقل من 200 مللي ثانية قدرات حقيقية للاستخدام الشخصي والبحثي والنماذج الأولية. القرار الذي يهم معظم القراء فعليًا هو الرخصة: رخصة Coqui Public Model License غير تجارية بشكل لا لبس فيه، ولأن Coqui AI أغلقت في ديسمبر 2023، لا يوجد اليوم مسار مؤكد ونشط للحصول على رخصة تجارية. إذا كان استخدامك شخصيًا أو أكاديميًا أو نموذجًا أوليًا غير تجاري، فإن XTTS v2 خيار قوي وموثّق جيدًا. إذا كنت بحاجة إلى استنساخ صوتي تجاري، تحقق من شروط الترخيص بشكل مستقل قبل البناء عليه، أو اجمع بين هذه المراجعة وتغطية PromptQuorum لـ[Piper](/power-local-llm/piper-tts-review) و[Bark](/power-local-llm/bark-tts-review) كبدائل ذات رخصة متساهلة، أو [مقارنة ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) كخيار تجاري مُدار.',
       },
       sources: {
         id: 'sources',
@@ -2175,7 +2175,7 @@ for chunk in tts.tts_stream(
           '[رخص TTS المحلي والاستنساخ الصوتي: Piper وXTTS v2 وF5-TTS وCoqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — التحليل المعمّق للرخص بين محركات TTS المحلية الرئيسية.',
           '[ElevenLabs مقابل Piper مقابل XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — مقارنة السحابة مقابل المحلي للقراء الذين يقررون ما إذا كانوا سيستضيفون ذاتيًا.',
           '[مراجعة Piper TTS](/power-local-llm/piper-tts-review) — بديل TTS محلي سريع، برخصة متساهلة، ويعمل على CPU فقط.',
-          'مراجعة Bark TTS — نموذج TTS محلي تعبيري وغير كلامي، تمت مراجعته بنفس العمق.',
+          '[مراجعة Bark TTS](/power-local-llm/bark-tts-review) — نموذج TTS محلي تعبيري وغير كلامي، تمت مراجعته بنفس العمق.',
         ],
       },
     },
@@ -2415,7 +2415,7 @@ for chunk in tts.tts_stream(
             '许可证': 'MPL-2.0(仅工具包)',
           },
           {
-            '工具': 'Bark',
+            '工具': '[Bark](/power-local-llm/bark-tts-review)',
             '最适合场景': '富有表现力的非语音音频——笑声、叹息、环境音',
             '许可证': 'MIT',
           },
@@ -2469,7 +2469,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: '结论',
         content:
-          'XTTS v2 在 2026 年仍然是可用的最高质量本地声音克隆模型之一,6 秒克隆要求、17 种语言的跨语言支持,以及低于 200 毫秒的流式传输延迟三者的结合,对于个人、研究和原型开发用途而言确实具有实用能力。对大多数读者来说真正重要的决定因素是许可证:Coqui Public Model License 毫无疑问是非商业性质的,而且由于 Coqui AI 已在 2023 年 12 月关闭,如今没有确认存在的、有效的商业许可途径。如果你的用例是个人、学术或非商业原型,XTTS v2 是一个稳健且文档完善的选择。如果你需要商业声音克隆,请在基于它构建之前独立核实许可条款,或者结合 PromptQuorum 对 [Piper](/power-local-llm/piper-tts-review) 和 Bark 等宽松许可替代方案的报道,或查看[与 ElevenLabs 的比较](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)以了解托管商业选项。',
+          'XTTS v2 在 2026 年仍然是可用的最高质量本地声音克隆模型之一,6 秒克隆要求、17 种语言的跨语言支持,以及低于 200 毫秒的流式传输延迟三者的结合,对于个人、研究和原型开发用途而言确实具有实用能力。对大多数读者来说真正重要的决定因素是许可证:Coqui Public Model License 毫无疑问是非商业性质的,而且由于 Coqui AI 已在 2023 年 12 月关闭,如今没有确认存在的、有效的商业许可途径。如果你的用例是个人、学术或非商业原型,XTTS v2 是一个稳健且文档完善的选择。如果你需要商业声音克隆,请在基于它构建之前独立核实许可条款,或者结合 PromptQuorum 对 [Piper](/power-local-llm/piper-tts-review) 和 [Bark](/power-local-llm/bark-tts-review) 等宽松许可替代方案的报道,或查看[与 ElevenLabs 的比较](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)以了解托管商业选项。',
       },
       sources: {
         id: 'sources',
@@ -2490,7 +2490,7 @@ for chunk in tts.tts_stream(
           '[本地 TTS 与声音克隆许可证:Piper、XTTS v2、F5-TTS 和 Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)——主要本地 TTS 引擎间的许可证深度解析。',
           '[ElevenLabs 对比 Piper 对比 XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)——为决定是否自托管的读者提供的云端与本地对比。',
           '[Piper TTS 评测](/power-local-llm/piper-tts-review)——快速、许可宽松、仅需 CPU 的本地 TTS 替代方案。',
-          'Bark TTS 评测——表现力丰富的非语音本地 TTS 模型,同等深度的评测。',
+          '[Bark TTS 评测](/power-local-llm/bark-tts-review)——表现力丰富的非语音本地 TTS 模型,同等深度的评测。',
         ],
       },
     },
@@ -2730,7 +2730,7 @@ for chunk in tts.tts_stream(
             '라이선스': 'MPL-2.0(툴킷에만 적용)',
           },
           {
-            '도구': 'Bark',
+            '도구': '[Bark](/power-local-llm/bark-tts-review)',
             '최적 용도': '표현력이 풍부한 비언어 오디오 — 웃음, 한숨, 주변 소리',
             '라이선스': 'MIT',
           },
@@ -2784,7 +2784,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: '결론',
         content:
-          'XTTS v2는 2026년 기준으로도 이용 가능한 가장 높은 품질의 로컬 음성 클로닝 모델 중 하나로 남아 있으며, 6초 클로닝 요구 조건, 17개 언어에 걸친 언어 간 지원, 200밀리초 미만의 스트리밍 지연 시간의 조합은 개인, 연구, 프로토타이핑 용도로 진정으로 뛰어난 성능을 보여줍니다. 대부분의 독자에게 실제로 중요한 결정 요소는 라이선스입니다. Coqui Public Model License는 명백히 비상업용이며, Coqui AI가 2023년 12월에 폐업했기 때문에 오늘날 확인되고 활성화된 상업용 라이선스 경로는 존재하지 않습니다. 사용 목적이 개인, 학술, 또는 비상업용 프로토타입이라면 XTTS v2는 강력하고 문서화가 잘 된 선택지입니다. 상업용 음성 클로닝이 필요하다면, 그 위에 무언가를 구축하기 전에 독립적으로 라이선스 조건을 확인하거나, 관대한 라이선스의 대안으로 PromptQuorum의 [Piper](/power-local-llm/piper-tts-review)와 Bark 리뷰, 또는 관리형 상업용 옵션으로 [ElevenLabs 비교](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 함께 참고하세요.',
+          'XTTS v2는 2026년 기준으로도 이용 가능한 가장 높은 품질의 로컬 음성 클로닝 모델 중 하나로 남아 있으며, 6초 클로닝 요구 조건, 17개 언어에 걸친 언어 간 지원, 200밀리초 미만의 스트리밍 지연 시간의 조합은 개인, 연구, 프로토타이핑 용도로 진정으로 뛰어난 성능을 보여줍니다. 대부분의 독자에게 실제로 중요한 결정 요소는 라이선스입니다. Coqui Public Model License는 명백히 비상업용이며, Coqui AI가 2023년 12월에 폐업했기 때문에 오늘날 확인되고 활성화된 상업용 라이선스 경로는 존재하지 않습니다. 사용 목적이 개인, 학술, 또는 비상업용 프로토타입이라면 XTTS v2는 강력하고 문서화가 잘 된 선택지입니다. 상업용 음성 클로닝이 필요하다면, 그 위에 무언가를 구축하기 전에 독립적으로 라이선스 조건을 확인하거나, 관대한 라이선스의 대안으로 PromptQuorum의 [Piper](/power-local-llm/piper-tts-review)와 [Bark](/power-local-llm/bark-tts-review) 리뷰, 또는 관리형 상업용 옵션으로 [ElevenLabs 비교](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 함께 참고하세요.',
       },
       sources: {
         id: 'sources',
@@ -2805,7 +2805,7 @@ for chunk in tts.tts_stream(
           '[로컬 TTS 및 음성 클로닝 라이선스: Piper, XTTS v2, F5-TTS, Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 주요 로컬 TTS 엔진 전반의 라이선스 심층 분석.',
           '[ElevenLabs 대 Piper 대 XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 자체 호스팅 여부를 결정하려는 독자를 위한 클라우드 대 로컬 비교.',
           '[Piper TTS 리뷰](/power-local-llm/piper-tts-review) — 빠르고, 관대한 라이선스의, CPU 전용 로컬 TTS 대안.',
-          'Bark TTS 리뷰 — 표현력이 풍부한 비언어 오디오 로컬 TTS 모델로, 동일한 깊이로 리뷰되었습니다.',
+          '[Bark TTS 리뷰](/power-local-llm/bark-tts-review) — 표현력이 풍부한 비언어 오디오 로컬 TTS 모델로, 동일한 깊이로 리뷰되었습니다.',
         ],
       },
     },
