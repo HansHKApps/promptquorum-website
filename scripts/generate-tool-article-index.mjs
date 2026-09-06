@@ -14,11 +14,16 @@
 // changed — the matching/tiering logic below is unchanged.)
 //
 // Matching: a case-insensitive whole-word/phrase scan of each candidate
-// article file's raw source text (all locale blocks, not just EN) against
-// each tool name. Cheap and sufficient here — tool names are proper nouns
-// kept in Latin script across locales, so cross-locale false positives are
-// unlikely. Ambiguous short/common-word tool names (e.g. "Jan") are printed
-// as warnings for manual spot-check, not blocked.
+// article's parsed title/seoTitle/section-titles/body text (all locale
+// blocks, not just EN) against each tool name. Cheap and sufficient here —
+// tool names are proper nouns kept in Latin script across locales, so
+// cross-locale false positives are unlikely. Ambiguous short/common-word
+// tool names (e.g. "Jan") are printed as warnings for manual spot-check, not
+// blocked. `sources`/`relatedReading` footer sections are excluded from the
+// scan entirely — those are outbound citation links to *other* articles
+// ("see the full Loci AI Review"), not content about the tool, and scanning
+// them caused a citation-heavy article to get misattributed to an unrelated
+// tool it merely links to (e.g. "Locally AI Review" surfacing under "Loci AI").
 //
 // Tiering: each match is classified against the article's EN content —
 // Tier 1 ("about") if the tool name appears in the title/seoTitle, in a
@@ -72,6 +77,14 @@ function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+// Footer/citation sections: outbound cross-links to other articles ("see the
+// full Loci AI Review here"), not content that discusses the tool itself.
+// Excluded from matching entirely — otherwise a review of App A that merely
+// links to App B's review gets App B's article misattributed as "about App A"
+// (happened with "Locally AI Review" surfacing under the unrelated "Loci AI"
+// tool entry, since its sources/relatedReading footer cites "Loci AI Review").
+const CITATION_SECTION_KEYS = new Set(['sources', 'relatedReading'])
+
 function isAmbiguous(name) {
   if (name.length < 5) return true
   const words = name.toLowerCase().split(/\s+/)
@@ -85,15 +98,33 @@ function enUrl(cluster, slug) {
 // Flatten an EN article's prose into plain-text blocks (section body content
 // and list items) so tier classification can scan sentences without caring
 // about the section shape (string vs string[] vs items[]).
-function collectTextBlocks(en) {
+function collectTextBlocks(localeBlock) {
   const blocks = []
-  for (const section of Object.values(en.sections ?? {})) {
-    if (!section) continue
+  for (const [key, section] of Object.entries(localeBlock.sections ?? {})) {
+    if (!section || CITATION_SECTION_KEYS.has(key)) continue
     if (typeof section.content === 'string') blocks.push(section.content)
     else if (Array.isArray(section.content)) blocks.push(...section.content.filter((c) => typeof c === 'string'))
     if (Array.isArray(section.items)) blocks.push(...section.items.filter((i) => typeof i === 'string'))
   }
   return blocks
+}
+
+// Matchable text for the coarse scan: title/seoTitle + non-citation section
+// titles/content/items, across every locale block the article has (not just
+// EN — tool names are Latin-script proper nouns kept as-is across locales).
+function collectMatchableText(allLocaleBlocks) {
+  const parts = []
+  for (const localeBlock of Object.values(allLocaleBlocks ?? {})) {
+    if (!localeBlock) continue
+    if (localeBlock.title) parts.push(localeBlock.title)
+    if (localeBlock.seoTitle) parts.push(localeBlock.seoTitle)
+    for (const [key, section] of Object.entries(localeBlock.sections ?? {})) {
+      if (!section || CITATION_SECTION_KEYS.has(key)) continue
+      if (section.title) parts.push(section.title)
+    }
+    parts.push(...collectTextBlocks(localeBlock))
+  }
+  return parts.join('\n')
 }
 
 // Tier 1 ("about") if the tool is in the title/heading, or gets >=2
@@ -168,7 +199,7 @@ async function main() {
         slug,
         title: en.title ?? slug,
         dateModified: en.dateModified ?? en.publishDate ?? null,
-        rawText: fs.readFileSync(path.join(dirPath, file), 'utf-8'),
+        matchableText: collectMatchableText(contentMap[slug]),
         en,
       })
     }
@@ -180,7 +211,7 @@ async function main() {
   for (const toolName of toolNames) {
     const pattern = new RegExp(`(?<![A-Za-z0-9])${escapeRegex(toolName)}(?![A-Za-z0-9])`, 'i')
     const matches = candidates
-      .filter((c) => pattern.test(c.rawText))
+      .filter((c) => pattern.test(c.matchableText))
       .map((c) => ({
         cluster: c.cluster,
         slug: c.slug,
