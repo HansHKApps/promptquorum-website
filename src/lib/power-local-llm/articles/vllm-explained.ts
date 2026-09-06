@@ -290,6 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the CPU/GPU-friendly engine several single-user local-AI tools build on, contrasted with vLLM\'s production-serving focus.',
+          '[LocalAI Explained](/power-local-llm/localai-explained) — a self-hosted, OpenAI-API-compatible server that adds multi-modal endpoints (image, audio, embeddings) on top of backends like llama.cpp.',
           '[Enterprise LLM Inference Servers: vLLM, TGI, and NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — a deeper, deployment-focused comparison of vLLM against TGI and NVIDIA NIM.',
           '[llama.cpp vs. Ollama vs. vLLM: Speed, Batching & GPU Benchmarks](/local-llms/llamacpp-vs-ollama-vs-vllm) — a dedicated throughput and setup-complexity comparison across the same three engines.',
           '[Choose a GPU for on-prem inference hardware](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU tiers to consider if you are sizing hardware to run vLLM yourself.',
@@ -586,6 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[llama.cpp erklärt](/power-local-llm/llama-cpp-explained) — die CPU-/GPU-freundliche Engine, auf der mehrere Einzelnutzer-KI-Tools aufbauen, im Kontrast zu vLLMs Produktions-Serving-Fokus.',
+          '[LocalAI erklärt](/de/power-local-llm/localai-explained) — ein selbst gehosteter, OpenAI-API-kompatibler Server, der Backends wie llama.cpp um multimodale Endpunkte (Bild, Audio, Embeddings) erweitert.',
           '[Enterprise-LLM-Inferenz-Server: vLLM, TGI und NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer, deployment-fokussierter Vergleich von vLLM mit TGI und NVIDIA NIM.',
           '[llama.cpp vs. Ollama vs. vLLM: Geschwindigkeit, Batching & GPU-Benchmarks](/local-llms/llamacpp-vs-ollama-vs-vllm) — ein eigener Durchsatz- und Setup-Komplexitätsvergleich über dieselben drei Engines.',
           '[GPU für On-Prem-Inferenz-Hardware wählen](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Klassen, wenn Sie Hardware für den eigenen vLLM-Betrieb dimensionieren.',
