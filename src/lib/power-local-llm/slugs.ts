@@ -45,6 +45,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'msty-go-review':                         'msty-go-review-2026',
   'msty-review':                             'msty-review',
   'enchanted-review':                        'enchanted-review',
+  'boltai-review':                           'boltai-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -231,9 +232,13 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
   'llama-cpp-explained':                     'llama-cpp-explained',
+  // vLLM explainer (Runtimes & Inference Engines) — 2026-09-06
+  'vllm-explained':                          'vllm-explained',
+  'koboldcpp-review':                        'koboldcpp-review',
+  // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
+  'localai-explained':                       'localai-explained',
 
   // Runtimes & Engines — 2026-09-05
-  'llama-cpp-review':                        'llama-cpp-review',
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                         'windsurf-review',
   'sourcegraph-cody-review':                 'sourcegraph-cody-review',
@@ -242,6 +247,30 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'codegpt-review':                          'codegpt-review',
   'openhands-review':                        'openhands-review',
   'cursor-local-mode-review':                'cursor-local-mode-review',
+  // Chapper review — 2026-09-06
+  'chapper-review':                          'chapper-review',
+  // ControlNet review — 2026-09-06
+  'controlnet-review':                       'controlnet-review',
+  // Maid review — 2026-09-06
+  'maid-review':                              'maid-review',
+  // SwarmUI (formerly StableSwarmUI) review — 2026-09-06
+  'stableswarmui-review':                    'stableswarmui-review',
+  // Fooocus review — 2026-09-06
+  'fooocus-review':                          'fooocus-review',
+  // InvokeAI review — 2026-09-06
+  'invokeai-review':                         'invokeai-review',
+  // AUTOMATIC1111 WebUI review — 2026-09-06
+  'automatic1111-review':                    'automatic1111-review',
+  // LLM Farm review — 2026-09-06
+  'llm-farm-review':                         'llm-farm-review',
+  // Layla review — 2026-09-06
+  'layla-review':                            'layla-review',
+  // ComfyUI review — 2026-09-06
+  'comfyui-review':                          'comfyui-review',
+  // RikkaHub review — 2026-09-06
+  'rikkahub-review':                         'rikkahub-review',
+  // AnythingLLM Mobile review — 2026-09-06
+  'anythingllm-mobile-review':                'anythingllm-mobile-review',
   // Twinny, Aider, shell-gpt reviews — 2026-09-06
   'twinny-review':                           'twinny-review',
   'aider-review':                            'aider-review',

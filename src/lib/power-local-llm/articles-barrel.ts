@@ -25,6 +25,18 @@ import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_codegpt_review } from './articles/codegpt-review'
 import { article as a_openhands_review } from './articles/openhands-review'
 import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
+import { article as a_chapper_review } from './articles/chapper-review'
+import { article as a_controlnet_review } from './articles/controlnet-review'
+import { article as a_maid_review } from './articles/maid-review'
+import { article as a_stableswarmui_review } from './articles/stableswarmui-review'
+import { article as a_fooocus_review } from './articles/fooocus-review'
+import { article as a_invokeai_review } from './articles/invokeai-review'
+import { article as a_automatic1111_review } from './articles/automatic1111-review'
+import { article as a_llm_farm_review } from './articles/llm-farm-review'
+import { article as a_layla_review } from './articles/layla-review'
+import { article as a_comfyui_review } from './articles/comfyui-review'
+import { article as a_rikkahub_review } from './articles/rikkahub-review'
+import { article as a_anythingllm_mobile_review } from './articles/anythingllm-mobile-review'
 import { article as a_twinny_review } from './articles/twinny-review'
 import { article as a_aider_review } from './articles/aider-review'
 import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
@@ -166,8 +178,11 @@ import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
+import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
-import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
+import { article as a_vllm_explained } from './articles/vllm-explained'
+import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
+import { article as a_localai_explained } from './articles/localai-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -296,6 +311,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'msty-go-review-2026':                               a_msty_go_review_2026,
   'msty-review':                                       a_msty_review,
   'enchanted-review':                                  a_enchanted_review,
+  'boltai-review':                                     a_boltai_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -332,8 +348,10 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                        a_stable_diffusion_review,
   'llama-cpp-explained':                           a_llama_cpp_explained,
+  'vllm-explained':                                a_vllm_explained,
+  'koboldcpp-review':                              a_koboldcpp_review,
+  'localai-explained':                             a_localai_explained,
   // Runtimes & Engines — 2026-09-05
-  'llama-cpp-review':                              a_llama_cpp_review,
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                               a_windsurf_review,
   'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
@@ -342,6 +360,30 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'codegpt-review':                                a_codegpt_review,
   'openhands-review':                              a_openhands_review,
   'cursor-local-mode-review':                       a_cursor_local_mode_review,
+  // Chapper review — 2026-09-06
+  'chapper-review':                                a_chapper_review,
+  // ControlNet review — 2026-09-06
+  'controlnet-review':                             a_controlnet_review,
+  // Maid review — 2026-09-06
+  'maid-review':                                   a_maid_review,
+  // SwarmUI (formerly StableSwarmUI) review — 2026-09-06
+  'stableswarmui-review':                          a_stableswarmui_review,
+  // Fooocus review — 2026-09-06
+  'fooocus-review':                                a_fooocus_review,
+  // InvokeAI review — 2026-09-06
+  'invokeai-review':                               a_invokeai_review,
+  // AUTOMATIC1111 WebUI review — 2026-09-06
+  'automatic1111-review':                          a_automatic1111_review,
+  // LLM Farm review — 2026-09-06
+  'llm-farm-review':                               a_llm_farm_review,
+  // Layla review — 2026-09-06
+  'layla-review':                                  a_layla_review,
+  // ComfyUI review — 2026-09-06
+  'comfyui-review':                                a_comfyui_review,
+  // RikkaHub review — 2026-09-06
+  'rikkahub-review':                               a_rikkahub_review,
+  // AnythingLLM Mobile review — 2026-09-06
+  'anythingllm-mobile-review':                      a_anythingllm_mobile_review,
   // Twinny, Aider, shell-gpt reviews — 2026-09-06
   'twinny-review':                                  a_twinny_review,
   'aider-review':                                   a_aider_review,

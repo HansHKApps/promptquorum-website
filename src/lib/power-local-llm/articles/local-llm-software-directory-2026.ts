@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'Description': 'iOS local AI chat with on-device models or connection to LM Studio, Ollama, or Arbiter for Mac', 'License': 'Freemium' },
           { 'Tool': '[**Chatty-mini**](/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'Description': 'Runs GGUF models offline on Android, portrait-first, from indie developer Fractal Media Infrastructure', 'License': 'Free (unconfirmed)' },
         ],
-        note: 'Deeper guide: [Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'Deeper guide: [Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026). Loci was hands-on tested for this directory in August 2026 — see the [Loci AI review](/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/de/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'Beschreibung': 'Lokaler KI-Chat für iOS mit On-Device-Modellen oder Verbindung zu LM Studio, Ollama oder Arbiter for Mac', 'Lizenz': 'Freemium' },
           { 'Tool': '[**Chatty-mini**](/de/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'Beschreibung': 'Führt GGUF-Modelle offline auf Android aus, hochformatorientiert, vom unabhängigen Entwickler Fractal Media Infrastructure', 'Lizenz': 'Kostenlos (unbestätigt)' },
         ],
-        note: 'Vertiefender Artikel: [Die besten lokalen LLM-Apps für iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'Vertiefender Artikel: [Die besten lokalen LLM-Apps für iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026). Loci wurde für dieses Verzeichnis im August 2026 praktisch getestet — siehe die [Loci-KI-Rezension](/de/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/fr/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'Description': 'Chat IA local iOS avec modèles sur l\'appareil ou connexion à LM Studio, Ollama ou Arbiter for Mac', 'Licence': 'Freemium' },
           { 'Tool': '[**Chatty-mini**](/fr/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'Description': 'Exécute des modèles GGUF hors ligne sur Android, orientée portrait, par le développeur indépendant Fractal Media Infrastructure', 'Licence': 'Gratuit (non confirmé)' },
         ],
-        note: 'Article approfondi : [Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'Article approfondi : [Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026). Loci a été testé en conditions réelles pour ce répertoire en août 2026 — voir l\'[avis sur Loci AI](/fr/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/ja/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', '概要': 'iOS向けローカルAIチャット。オンデバイスモデル、またはLM Studio・Ollama・Arbiter for Macに接続可能', 'ライセンス': 'フリーミアム' },
           { 'Tool': '[**Chatty-mini**](/ja/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', '概要': 'AndroidでGGUFモデルをオフライン実行、縦向き設計、独立開発元Fractal Media Infrastructureによる', 'ライセンス': '無料(未確認)' },
         ],
-        note: '詳細記事：[2026年のiPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: '詳細記事：[2026年のiPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。Lociはこのディレクトリのために2026年8月に実機テストされました — 詳しくは[Loci AIレビュー](/ja/power-local-llm/loci-ai-review-offline-local-ai)をご覧ください。',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -2501,7 +2501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/zh/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', '描述': 'iOS本地AI聊天，支持设备端模型，或连接LM Studio、Ollama或Arbiter for Mac', '许可证': '免费增值' },
           { 'Tool': '[**Chatty-mini**](/zh/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', '描述': '在 Android 上离线运行 GGUF 模型，竖屏设计，由独立开发者 Fractal Media Infrastructure 打造', '许可证': '免费(未确认)' },
         ],
-        note: '深度指南：[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: '深度指南：[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。Loci已于2026年8月为本目录进行了实机测试——详见[Loci AI评测](/zh/power-local-llm/loci-ai-review-offline-local-ai)。',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -3030,7 +3030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[**Arbiter**](/es/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'Descripción': 'Chat de IA local para iOS con modelos en el dispositivo o conexión a LM Studio, Ollama o Arbiter for Mac', 'Licencia': 'Freemium' },
           { 'Tool': '[**Chatty-mini**](/es/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'Descripción': 'Ejecuta modelos GGUF offline en Android, orientada a modo vertical, del desarrollador independiente Fractal Media Infrastructure', 'Licencia': 'Gratuito (sin confirmar)' },
         ],
-        note: 'Guía más detallada: [Las mejores apps LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'Guía más detallada: [Las mejores apps LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026). Loci fue probado de forma práctica para este directorio en agosto de 2026 — consulta la [reseña de Loci AI](/es/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -3573,7 +3573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '[**Arbiter**](/pt/power-local-llm/arbiter-local-ai-chat-review)', 'Link': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'Descrição': 'Chat de IA local para iOS com modelos no dispositivo ou conexão com LM Studio, Ollama ou Arbiter for Mac', 'Licença': 'Freemium' },
           { 'Ferramenta': '[**Chatty-mini**](/pt/power-local-llm/chatty-mini-review)', 'Link': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'Descrição': 'Executa modelos GGUF offline no Android, voltado para modo retrato, do desenvolvedor independente Fractal Media Infrastructure', 'Licença': 'Grátis (não confirmado)' },
         ],
-        note: 'Guia mais detalhado: [Os melhores apps LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'Guia mais detalhado: [Os melhores apps LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026). O Loci foi testado na prática para este diretório em agosto de 2026 — veja a [análise do Loci AI](/pt/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -4116,7 +4116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '[**Arbiter**](/ar/power-local-llm/arbiter-local-ai-chat-review)', 'الرابط': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', 'الوصف': 'دردشة ذكاء اصطناعي محلية لـiOS مع نماذج على الجهاز أو اتصال بـLM Studio أو Ollama أو Arbiter for Mac', 'الترخيص': 'فريميوم' },
           { 'الأداة': '[**Chatty-mini**](/ar/power-local-llm/chatty-mini-review)', 'الرابط': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', 'الوصف': 'يشغّل نماذج GGUF دون اتصال على Android، مصمم للعرض العمودي، من المطوّر المستقل Fractal Media Infrastructure', 'الترخيص': 'مجاني (غير مؤكد)' },
         ],
-        note: 'دليل أكثر تفصيلاً: [أفضل تطبيقات النماذج اللغوية المحلية لـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: 'دليل أكثر تفصيلاً: [أفضل تطبيقات النماذج اللغوية المحلية لـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026). تم اختبار Loci عمليًا لهذا الدليل في أغسطس 2026 — راجع [مراجعة Loci AI](/ar/power-local-llm/loci-ai-review-offline-local-ai).',
       },
       imageGeneration: {
         id: 'image-generation',
@@ -4662,7 +4662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '[**Arbiter**](/ko/power-local-llm/arbiter-local-ai-chat-review)', '링크': '[App Store](https://apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532)', '설명': '온디바이스 모델 또는 LM Studio, Ollama, Arbiter for Mac 연결을 지원하는 iOS 로컬 AI 채팅', '라이선스': 'Freemium' },
           { '도구': '[**Chatty-mini**](/ko/power-local-llm/chatty-mini-review)', '링크': '[play.google.com](https://play.google.com/store/apps/details?id=io.instance001.chatmini)', '설명': 'Android에서 GGUF 모델을 오프라인으로 실행, 세로 화면 중심 설계, 독립 개발사 Fractal Media Infrastructure 제작', '라이선스': '무료(미확인)' },
         ],
-        note: '상세 비교 가이드: [2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026)',
+        note: '상세 비교 가이드: [2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026). Loci는 이 디렉터리를 위해 2026년 8월에 실제 기기로 테스트되었습니다 — 자세한 내용은 [Loci AI 리뷰](/ko/power-local-llm/loci-ai-review-offline-local-ai)를 참고하세요.',
       },
       imageGeneration: {
         id: 'image-generation',

@@ -224,6 +224,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'msty-go-review',
   'msty-review',
   'enchanted-review',
+  'boltai-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
@@ -267,6 +268,47 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // llama.cpp explainer — 2026-09-05
   'llama-cpp-explained',
+
+  // Chapper review (Mobile & Edge LLMs) — 2026-09-06
+  'chapper-review',
+
+  // ControlNet review (Image & Video Generation) — 2026-09-06
+  'controlnet-review',
+
+  // Maid review (Mobile & Edge LLMs) — 2026-09-06
+  'maid-review',
+
+  // SwarmUI (formerly StableSwarmUI) review (Image & Video Generation) — 2026-09-06
+  'stableswarmui-review',
+
+  // Fooocus review (Image & Video Generation) — 2026-09-06
+  'fooocus-review',
+
+  // InvokeAI review (Image & Video Generation) — 2026-09-06
+  'invokeai-review',
+
+  // AUTOMATIC1111 WebUI review (Image & Video Generation) — 2026-09-06
+  'automatic1111-review',
+
+  // LLM Farm review (Mobile & Edge LLMs) — 2026-09-06
+  'llm-farm-review',
+
+  // Layla review (Mobile & Edge LLMs) — 2026-09-06
+  'layla-review',
+
+  // ComfyUI review (Image & Video Generation) — 2026-09-06
+  'comfyui-review',
+
+  // RikkaHub review (Mobile & Edge LLMs) — 2026-09-06
+  'rikkahub-review',
+
+  // AnythingLLM Mobile review (Mobile & Edge LLMs) — 2026-09-06
+  'anythingllm-mobile-review',
+
+  // vLLM explainer — 2026-09-06
+  'vllm-explained',
+  // LocalAI explainer — 2026-09-06
+  'localai-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
