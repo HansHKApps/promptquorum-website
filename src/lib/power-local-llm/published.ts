@@ -48,6 +48,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'twinny-review',
   'aider-review',
   'shell-gpt-review',
+  'aichat-review',
+  'tgpt-review',
+  'blackbox-ai-cli-review',
+  'privategpt-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',

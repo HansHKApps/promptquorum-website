@@ -9046,6 +9046,78 @@
         "ko"
       ],
       "images": []
+    },
+    "aichat-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tgpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "blackbox-ai-cli-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "privategpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {

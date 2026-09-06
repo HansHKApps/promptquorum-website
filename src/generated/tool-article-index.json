@@ -2,6 +2,22 @@
   "Ollama": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "aichat-review",
+        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
+        "url": "/power-local-llm/aichat-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
@@ -64,29 +80,21 @@
         "url": "/power-local-llm/msty-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "obsidian-logseq-ai-plugins",
-        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
-        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "twinny-review",
-        "title": "Twinny Review: Archived by Its Maker, Still Open Source",
-        "url": "/power-local-llm/twinny-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 234,
+    "totalCount": 236,
     "capped": true
   },
   "llama.cpp": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "open-webui-review",
@@ -158,21 +166,21 @@
         "url": "/power-local-llm/h2ogpt-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 128,
+    "totalCount": 129,
     "capped": true
   },
   "vLLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "open-webui-review",
@@ -244,17 +252,9 @@
         "url": "/local-llms/best-amd-gpus-local-llm",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-ai-code-review-vs-coderabbit-2026",
-        "title": "Local AI Code Review vs. CodeRabbit: Is DIY Worth It?",
-        "url": "/local-llms/local-ai-code-review-vs-coderabbit-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 82,
+    "totalCount": 83,
     "capped": true
   },
   "LocalAI": {
@@ -580,6 +580,14 @@
   "LM Studio": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "sillytavern-review",
         "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
@@ -650,17 +658,9 @@
         "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review",
-        "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
       }
     ],
-    "totalCount": 143,
+    "totalCount": 144,
     "capped": true
   },
   "Atomic Chat": {
@@ -956,7 +956,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "Msty": {
@@ -1464,7 +1464,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 61,
+    "totalCount": 62,
     "capped": true
   },
   "LibreChat": {
@@ -2020,7 +2020,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "PearAI": {
@@ -2297,6 +2297,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aichat-review",
+        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
+        "url": "/power-local-llm/aichat-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blackbox-ai-cli-review",
+        "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
+        "url": "/power-local-llm/blackbox-ai-cli-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aider-review",
         "title": "Aider Review: AI Pair Programming From Your Terminal",
         "url": "/power-local-llm/aider-review",
@@ -2320,11 +2336,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 7,
     "capped": false
   },
   "Cursor (local mode)": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "blackbox-ai-cli-review",
+        "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
+        "url": "/power-local-llm/blackbox-ai-cli-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "openhands-review",
@@ -2342,7 +2366,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Twinny": {
@@ -2407,6 +2431,14 @@
   },
   "Aider": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "blackbox-ai-cli-review",
+        "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
+        "url": "/power-local-llm/blackbox-ai-cli-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "aider-review",
@@ -2478,35 +2510,29 @@
         "url": "/power-local-llm/local-coding-llm-without-internet",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-ide-plugins-2026",
-        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
-        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
-        "dateModified": "2026-08-25",
-        "tier": "about"
       }
     ],
-    "totalCount": 39,
+    "totalCount": 42,
     "capped": true
   },
   "aichat": {
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "shell-gpt-review",
-        "title": "shell-gpt (sgpt) Review: AI Shell Commands, One Keystroke Away",
-        "url": "/power-local-llm/shell-gpt-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      }
-    ],
-    "totalCount": 1,
-    "capped": false
-  },
-  "tgpt": {
-    "articles": [
+        "slug": "aichat-review",
+        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
+        "url": "/power-local-llm/aichat-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "shell-gpt-review",
@@ -2516,11 +2542,49 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
+    "capped": false
+  },
+  "tgpt": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aichat-review",
+        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
+        "url": "/power-local-llm/aichat-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "shell-gpt-review",
+        "title": "shell-gpt (sgpt) Review: AI Shell Commands, One Keystroke Away",
+        "url": "/power-local-llm/shell-gpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "PrivateGPT": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "msty-review",
@@ -2592,17 +2656,9 @@
         "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "Quivr": {
@@ -2655,6 +2711,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "privategpt-review",
+        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
+        "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "second-me-review-2026",
         "title": "Second Me Review 2026: Train Your Own Personal AI Locally",
         "url": "/power-local-llm/second-me-review-2026",
@@ -2678,7 +2742,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Dify": {
@@ -2998,7 +3062,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "Haystack": {
@@ -5753,6 +5817,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -5760,11 +5832,35 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "GitHub Copilot CLI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aichat-review",
+        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
+        "url": "/power-local-llm/aichat-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blackbox-ai-cli-review",
+        "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
+        "url": "/power-local-llm/blackbox-ai-cli-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tgpt-review",
+        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
+        "url": "/power-local-llm/tgpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "aider-review",
@@ -5782,7 +5878,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 5,
     "capped": false
   },
   "Atomic Bot": {
