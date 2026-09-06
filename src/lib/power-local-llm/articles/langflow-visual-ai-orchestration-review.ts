@@ -243,6 +243,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — a deeper look at the underlying framework Langflow builds a visual canvas on top of, including LangGraph and LangSmith pricing.',
+          '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a code-first, role-based multi-agent framework for readers who want to write agent crews directly instead of using Langflow\'s visual canvas.',
           '[Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down](/power-local-llm/flowise-ai-visual-workflow-builder-review) — why Flowise stopped being a safe default, and what changed for its self-hosted users.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — actively maintained RAG tools compared for self-hosted use.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',

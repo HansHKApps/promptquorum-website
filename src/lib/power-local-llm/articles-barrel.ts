@@ -16,6 +16,22 @@ import { article as a_jarvis_mac_review } from './articles/jarvis-mac-review'
 import { article as a_locally_ai_review } from './articles/locally-ai-review'
 import { article as a_arbiter_local_ai_chat_review } from './articles/arbiter-local-ai-chat-review'
 import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
+import { article as a_continue_dev_review } from './articles/continue-dev-review'
+import { article as a_cline_review } from './articles/cline-review'
+import { article as a_pearai_review } from './articles/pearai-review'
+import { article as a_windsurf_review } from './articles/windsurf-review'
+import { article as a_sourcegraph_cody_review } from './articles/sourcegraph-cody-review'
+import { article as a_tabby_review } from './articles/tabby-review'
+import { article as a_codegpt_review } from './articles/codegpt-review'
+import { article as a_openhands_review } from './articles/openhands-review'
+import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
+import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
+import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
+import { article as a_piper_tts_review } from './articles/piper-tts-review'
+import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
+import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
+import { article as a_private_llm_review } from './articles/private-llm-review'
+import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
@@ -65,6 +81,7 @@ import { article as a_local_llm_software_directory_2026 } from './articles/local
 import { article as a_ai_tool_licenses_explained } from './articles/ai-tool-licenses-explained'
 import { article as a_local_llm_with_obsidian_2026 } from './articles/local-llm-with-obsidian-2026'
 import { article as a_local_llm_with_logseq_and_joplin } from './articles/local-llm-with-logseq-and-joplin'
+import { article as a_obsidian_logseq_ai_plugins } from './articles/obsidian-logseq-ai-plugins'
 import { article as a_local_llm_personal_knowledge_base_2026 } from './articles/local-llm-personal-knowledge-base-2026'
 import { article as a_local_rag_for_private_business_data } from './articles/local-rag-for-private-business-data'
 import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/local-rag-on-your-pdfs-step-by-step'
@@ -79,6 +96,7 @@ import { article as a_local_llm_email_and_calendar_automation } from './articles
 import { article as a_local_llm_prompts_for_fiction_writers } from './articles/local-llm-prompts-for-fiction-writers'
 import { article as a_local_llm_screenwriting_and_novel_drafting } from './articles/local-llm-screenwriting-and-novel-drafting'
 import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles/sillytavern-vs-agnai-vs-risuai-roleplay'
+import { article as a_metagpt_agnai_risuai_explained } from './articles/metagpt-agnai-risuai-explained'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
 import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison-2026'
@@ -118,6 +136,9 @@ import { article as a_haystack_deepset_rag_framework_review } from './articles/h
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
+import { article as a_langchain_review } from './articles/langchain-review'
+import { article as a_autogen_review } from './articles/autogen-review'
+import { article as a_crewai_review } from './articles/crewai-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -134,6 +155,8 @@ import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
+import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
+import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -172,6 +195,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ai-tool-licenses-explained':              a_ai_tool_licenses_explained,
   'local-llm-with-obsidian-2026':           a_local_llm_with_obsidian_2026,
   'local-llm-with-logseq-and-joplin':       a_local_llm_with_logseq_and_joplin,
+  'obsidian-logseq-ai-plugins':             a_obsidian_logseq_ai_plugins,
   'local-llm-personal-knowledge-base-2026': a_local_llm_personal_knowledge_base_2026,
   'local-rag-for-private-business-data':    a_local_rag_for_private_business_data,
   'local-rag-on-your-pdfs-step-by-step':    a_local_rag_on_your_pdfs_step_by_step,
@@ -188,6 +212,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-prompts-for-fiction-writers':       a_local_llm_prompts_for_fiction_writers,
   'local-llm-screenwriting-and-novel-drafting':  a_local_llm_screenwriting_and_novel_drafting,
   'sillytavern-vs-agnai-vs-risuai-roleplay':     a_sillytavern_vs_agnai_vs_risuai_roleplay,
+  'metagpt-agnai-risuai-explained':              a_metagpt_agnai_risuai_explained,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
   'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
   'local-whisper-stt-comparison-2026':                 a_local_whisper_stt_comparison_2026,
@@ -227,6 +252,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'dify-ai-workflow-builder-review':                   a_dify_ai_workflow_builder_review,
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
+  'langchain-review':                                  a_langchain_review,
+  'autogen-review':                                    a_autogen_review,
+  'crewai-review':                                     a_crewai_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
@@ -276,4 +304,27 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'locally-ai-review':                             a_locally_ai_review,
   'arbiter-local-ai-chat-review':                  a_arbiter_local_ai_chat_review,
   'chatty-mini-review':                            a_chatty_mini_review,
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review':                           a_continue_dev_review,
+  'cline-review':                                  a_cline_review,
+  'pearai-review':                                 a_pearai_review,
+  'whisper-cpp-review':                            a_whisper_cpp_review,
+  'faster-whisper-review':                         a_faster_whisper_review,
+  'piper-tts-review':                               a_piper_tts_review,
+  'coqui-tts-review':                               a_coqui_tts_review,
+  'pocketpal-ai-review':                           a_pocketpal_ai_review,
+  'private-llm-review':                            a_private_llm_review,
+  // Stable Diffusion review — 2026-09-05
+  'stable-diffusion-review':                        a_stable_diffusion_review,
+  'llama-cpp-explained':                           a_llama_cpp_explained,
+  // Runtimes & Engines — 2026-09-05
+  'llama-cpp-review':                              a_llama_cpp_review,
+  // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
+  'windsurf-review':                               a_windsurf_review,
+  'sourcegraph-cody-review':                       a_sourcegraph_cody_review,
+  'tabby-review':                                  a_tabby_review,
+  // CodeGPT, OpenHands, Cursor (local mode) reviews — 2026-09-05
+  'codegpt-review':                                a_codegpt_review,
+  'openhands-review':                              a_openhands_review,
+  'cursor-local-mode-review':                       a_cursor_local_mode_review,
 }

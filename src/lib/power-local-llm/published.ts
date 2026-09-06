@@ -35,6 +35,16 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-code-review-ci-cd',
   // Bodega One Code review — 2026-09-03
   'bodega-one-code-review',
+  // Continue.dev, Cline, PearAI reviews — 2026-09-05
+  'continue-dev-review',
+  'cline-review',
+  'pearai-review',
+  'windsurf-review',
+  'sourcegraph-cody-review',
+  'tabby-review',
+  'codegpt-review',
+  'openhands-review',
+  'cursor-local-mode-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -48,6 +58,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-prompts-for-fiction-writers',
   'local-llm-screenwriting-and-novel-drafting',
   'sillytavern-vs-agnai-vs-risuai-roleplay',
+  // Bridges Cat 5 (Creative Writing/roleplay: Agnai, RisuAI) and Cat 4 (Agents &
+  // Tool Use: MetaGPT) - a clarification piece, not a roleplay guide, placed here
+  // next to its closest topical neighbor - 2026-09-05
+  'metagpt-agnai-risuai-explained',
   'uncensored-local-llm-creative-writing-ethics',
 
   // Backyard AI review — 2026-09-02
@@ -64,6 +78,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 7 — Productivity & Knowledge Tools (5)
   'local-llm-with-obsidian-2026',
   'local-llm-with-logseq-and-joplin',
+  // AI plugins for Obsidian and Logseq — evergreen feature comparison — 2026-09-05
+  'obsidian-logseq-ai-plugins',
   'local-llm-personal-knowledge-base-2026',
   'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local',
@@ -142,6 +158,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'dify-ai-workflow-builder-review',
   // Langflow review — 2026-09-02
   'langflow-visual-ai-orchestration-review',
+  // Agent frameworks series — LangChain review (article 1 of 14) — 2026-09-05
+  'langchain-review',
+  // Agent frameworks series — AutoGen review (article 2 of 14) — 2026-09-05
+  'autogen-review',
+  // Agent frameworks series — CrewAI review (article 3 of 14) — 2026-09-05
+  'crewai-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -217,6 +239,22 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chatty-mini review (Mobile & Edge LLMs) — 2026-09-04
   'chatty-mini-review',
+  'whisper-cpp-review',
+  'faster-whisper-review',
+  'piper-tts-review',
+  'coqui-tts-review',
+
+  // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
+  'pocketpal-ai-review',
+
+  // Private LLM review (Mobile & Edge LLMs) — 2026-09-05
+  'private-llm-review',
+
+  // Stable Diffusion review (Image & Video Generation) — 2026-09-05
+  'stable-diffusion-review',
+
+  // llama.cpp explainer — 2026-09-05
+  'llama-cpp-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

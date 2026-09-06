@@ -721,6 +721,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         links: [
           {
+            url: '/power-local-llm/coqui-tts-review',
+            title: 'Coqui TTS Review',
+            description: 'A dedicated review of the Coqui TTS toolkit, including its maintenance status after Coqui AI shut down.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Deep dive into open-source TTS licensing and model deployment.'
@@ -744,6 +749,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/local-llms/best-gpus-for-local-llms',
             title: 'Best GPUs for Local AI',
             description: 'Hardware guide for local AI workloads, including TTS/voice use cases.'
+          },
+          {
+            url: '/power-local-llm/piper-tts-review',
+            title: 'Piper TTS Review',
+            description: 'A deep dive on Piper alone: history, install walkthrough, real usage examples, license, and when to pick XTTS v2 instead.'
           }
         ]
       }
@@ -1658,6 +1668,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         links: [
+          {
+            url: '/de/power-local-llm/coqui-tts-review',
+            title: 'Coqui TTS im Test',
+            description: 'Ein dedizierter Test des Coqui-TTS-Toolkits, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.'
+          },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Lokale TTS- & Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui',
@@ -2597,6 +2612,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         links: [
           {
+            url: '/fr/power-local-llm/coqui-tts-review',
+            title: 'Avis Coqui TTS',
+            description: 'Un avis dédié au kit Coqui TTS, y compris son statut de maintenance depuis la fermeture de Coqui AI.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licences TTS local & clonage vocal : Piper, XTTS v2, F5-TTS et Coqui',
             description: 'Analyse approfondie des licences TTS open source et du déploiement de modèles.'
@@ -3532,6 +3552,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         links: [
           {
+            url: '/zh/power-local-llm/coqui-tts-review',
+            title: 'Coqui TTS评测',
+            description: 'Coqui TTS工具包的专门评测,包括Coqui AI关闭后的维护状态。'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '本地TTS与声音克隆许可：Piper、XTTS v2、F5-TTS与Coqui',
             description: '深入解析开源TTS许可和模型部署。'
@@ -4466,6 +4491,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         links: [
+          {
+            url: '/ja/power-local-llm/coqui-tts-review',
+            title: 'Coqui TTSレビュー',
+            description: 'Coqui TTSツールキットの専用レビュー。Coqui AI閉鎖後の保守状況も解説。'
+          },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'ローカルTTSと音声クローンのライセンス:Piper、XTTS v2、F5-TTS、Coqui',
@@ -5405,6 +5435,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         links: [
           {
+            url: '/es/power-local-llm/coqui-tts-review',
+            title: 'Análisis de Coqui TTS',
+            description: 'Un análisis dedicado del kit Coqui TTS, incluido su estado de mantenimiento tras el cierre de Coqui AI.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licencias de TTS local y clonación de voz: Piper, XTTS v2, F5-TTS y Coqui',
             description: 'Análisis en profundidad de las licencias de TTS de código abierto y el despliegue de modelos.'
@@ -6342,6 +6377,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leitura Relacionada',
         links: [
           {
+            url: '/pt/power-local-llm/coqui-tts-review',
+            title: 'Análise do Coqui TTS',
+            description: 'Uma análise dedicada ao kit Coqui TTS, incluindo seu status de manutenção após o fechamento da Coqui AI.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Aprofundamento no licenciamento de TTS de código aberto e implantação de modelos.'
@@ -7277,6 +7317,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         links: [
           {
+            url: '/ko/power-local-llm/coqui-tts-review',
+            title: 'Coqui TTS 리뷰',
+            description: 'Coqui TTS 툴킷에 대한 전용 리뷰로, Coqui AI 폐쇄 이후의 관리 상태도 포함합니다.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '로컬 TTS 및 음성 복제 라이선스: Piper, XTTS v2, F5-TTS, Coqui',
             description: '오픈소스 TTS 라이선스와 모델 배포에 대한 심층 분석.'
@@ -8209,6 +8254,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         links: [
+          {
+            url: '/ar/power-local-llm/coqui-tts-review',
+            title: 'مراجعة Coqui TTS',
+            description: 'مراجعة مخصصة لمجموعة أدوات Coqui TTS، بما في ذلك حالة صيانتها بعد إغلاق Coqui AI.'
+          },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'تراخيص TTS واستنساخ الصوت المحلي: Piper و XTTS v2 و F5-TTS و Coqui',

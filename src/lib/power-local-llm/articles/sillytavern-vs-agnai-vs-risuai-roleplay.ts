@@ -416,6 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Prompts for Fiction Writers](/power-local-llm/local-llm-prompts-for-fiction-writers) — ready-to-use system-prompt templates for character-driven fiction; works across SillyTavern, Agnai, and RisuAI.',
           '[Best Mobile LLM Models in 2026](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — model recommendations optimised for iOS and Android; pairs well with RisuAI\'s mobile apps.',
           '[SillyTavern Chinese Roleplay Setup](/prompt-bites/sillytavern-chinese-roleplay-setup) — Qwen3 + SillyTavern: character card config for Chinese-language roleplay.',
+          '[MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For](/power-local-llm/metagpt-agnai-risuai-explained) — if you found Agnai or RisuAI on a "best open-source AI agents" list alongside MetaGPT and want to know whether you actually want a roleplay frontend or a software-development agent framework, read this first.',
         ],
       },
     },

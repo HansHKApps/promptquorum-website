@@ -523,6 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Compare building a PC against renting cloud GPUs](/power-local-llm/cloud-gpu-rental-guide-2026) — when renting beats owning hardware for occasional compute.',
           '[Work out the VRAM each model size needs before you build](/local-llms/how-much-vram-local-llm) — the complete VRAM-by-model-size method behind the tier choices here.',
           '[Consider a Mac as an alternative to a PC build](/power-local-llm/best-mac-for-local-ai-2026) — when unified-memory Apple Silicon beats a discrete-GPU PC for local AI.',
+          '[Understand the inference engine your build will actually run](/power-local-llm/llama-cpp-explained) — llama.cpp, GGUF, and the hardware backends (CUDA, ROCm, Vulkan) this workstation needs to use.',
         ],
       },
     },

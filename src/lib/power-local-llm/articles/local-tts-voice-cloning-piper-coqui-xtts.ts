@@ -16,12 +16,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'Official Coqui XTTS v2 License (CPML): Commercial Use 2026',
     intro:
-      'Can you use a local text-to-speech engine in a commercial product? It depends entirely on the license, and the licenses differ sharply. Piper, Bark, and StyleTTS 2 ship under MIT, Kokoro and Tortoise under Apache 2.0 — all four free for commercial use. The Coqui TTS toolkit is MPL 2.0 (commercial with conditions). But the two most popular voice-cloning models are restricted: XTTS v2 uses the Coqui Public Model License (CPML, non-commercial), and F5-TTS uses CC-BY-NC-4.0 (non-commercial). This guide gives the exact license for each engine, a clear "can I use this commercially?" answer per engine, the COQUI_TOS_AGREED environment variable for accepting the CPML non-interactively in Docker and CI, and a head-to-head comparison across quality, speed, VRAM, and voice cloning — so you can pick the right engine without sending audio to the cloud and without a license surprise in production. (Licenses verified June 2026; this is factual reference, not legal advice — read each license yourself before commercial use.)',
+      'Can you use a local text-to-speech engine in a commercial product? It depends entirely on the license, and the licenses differ sharply. Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 ship under MIT, Kokoro and Tortoise under Apache 2.0 — all four free for commercial use. The Coqui TTS toolkit is MPL 2.0 (commercial with conditions). But the two most popular voice-cloning models are restricted: XTTS v2 uses the Coqui Public Model License (CPML, non-commercial), and F5-TTS uses CC-BY-NC-4.0 (non-commercial). This guide gives the exact license for each engine, a clear "can I use this commercially?" answer per engine, the COQUI_TOS_AGREED environment variable for accepting the CPML non-interactively in Docker and CI, and a head-to-head comparison across quality, speed, VRAM, and voice cloning — so you can pick the right engine without sending audio to the cloud and without a license surprise in production. (Licenses verified June 2026; this is factual reference, not legal advice — read each license yourself before commercial use.)',
     metaDescription:
-      'Official CPML license text for XTTS v2 (non-commercial), linked from Hugging Face. Piper=MIT, F5-TTS=CC-BY-NC. Full license table, VRAM comparison.',
+      'Official CPML license text for XTTS v2 (non-commercial), linked from Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Full license table, VRAM comparison.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-en.webp',
     twitterDescription:
-      'Local TTS licenses 2026: XTTS v2 (CPML, non-commercial), F5-TTS (CC-BY-NC), Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0). Plus COQUI_TOS_AGREED for Docker/CI. All fully offline.',
+      'Local TTS licenses 2026: XTTS v2 (CPML, non-commercial), F5-TTS (CC-BY-NC), Piper (GPL-3.0-or-later since 2025, not MIT)/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0). Plus COQUI_TOS_AGREED for Docker/CI. All fully offline.',
     audience:
       'Developers, makers, content creators, and privacy-focused users who want offline text-to-speech and voice cloning without cloud API costs or data exposure.',
     readTime: '14 min read',
@@ -72,18 +72,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RTX 4070',
     ],
     leadAnswerBlock:
-      '**For commercial use, choose a local TTS engine with a permissive license: Piper, Bark, and StyleTTS 2 are MIT; Kokoro and Tortoise are Apache 2.0 — all free for commercial products.** The Coqui TTS toolkit is MPL 2.0 (commercial allowed if you disclose changes to the toolkit source). The two best-known voice-cloning models are the catch: **XTTS v2 is non-commercial under the Coqui Public Model License (CPML)** and **F5-TTS is non-commercial under CC-BY-NC-4.0** — both prohibit commercial use without a separate agreement, and because Coqui Inc shut down in January 2024 there is currently no one to sell an XTTS v2 commercial license, so treat it as non-commercial only. On capability: Piper is fastest on CPU (real-time on a Raspberry Pi 5, no GPU); XTTS v2 is the best-quality voice clone (6 seconds of reference audio → 17 languages, 4–6 GB VRAM); F5-TTS clones from ~3 seconds with faster flow-matching inference; Bark uniquely generates laughter, sighs, and ambient sound; StyleTTS 2 has the most natural English narration (no cloning); Tortoise is very high quality but extremely slow. This is factual reference, not legal advice — verify each license yourself before commercial deployment.',
+      '**For commercial use, choose a local TTS engine with a permissive license: Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 are MIT; Kokoro and Tortoise are Apache 2.0 — all free for commercial products.** The Coqui TTS toolkit is MPL 2.0 (commercial allowed if you disclose changes to the toolkit source). The two best-known voice-cloning models are the catch: **XTTS v2 is non-commercial under the Coqui Public Model License (CPML)** and **F5-TTS is non-commercial under CC-BY-NC-4.0** — both prohibit commercial use without a separate agreement, and because Coqui Inc shut down in January 2024 there is currently no one to sell an XTTS v2 commercial license, so treat it as non-commercial only. On capability: Piper is fastest on CPU (real-time on a Raspberry Pi 5, no GPU); XTTS v2 is the best-quality voice clone (6 seconds of reference audio → 17 languages, 4–6 GB VRAM); F5-TTS clones from ~3 seconds with faster flow-matching inference; Bark uniquely generates laughter, sighs, and ambient sound; StyleTTS 2 has the most natural English narration (no cloning); Tortoise is very high quality but extremely slow. This is factual reference, not legal advice — verify each license yourself before commercial deployment.',
     quickAnswerTop: {
       en: {
         question: 'Which local TTS engines can I use commercially in 2026?',
         answer:
-          'For commercial use, pick a permissively licensed engine: Piper, Bark, and StyleTTS 2 (MIT) and Kokoro and Tortoise (Apache 2.0) are all free for commercial products; the Coqui TTS toolkit (MPL 2.0) is commercial with source-disclosure conditions. The two most popular voice-cloning models are NOT free for commercial use: XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) are both non-commercial. On capability, Piper is fastest on CPU, XTTS v2 has the best cloning quality (needs 4–6 GB VRAM), and F5-TTS clones from ~3 seconds with faster inference. This is factual reference, not legal advice.',
+          'For commercial use, pick a permissively licensed engine: Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 (MIT) and Kokoro and Tortoise (Apache 2.0) are all free for commercial products; the Coqui TTS toolkit (MPL 2.0) is commercial with source-disclosure conditions. The two most popular voice-cloning models are NOT free for commercial use: XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) are both non-commercial. On capability, Piper is fastest on CPU, XTTS v2 has the best cloning quality (needs 4–6 GB VRAM), and F5-TTS clones from ~3 seconds with faster inference. This is factual reference, not legal advice.',
         bullets: [
-          'Free for commercial use → Piper (MIT), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Coqui TTS toolkit (MPL 2.0): commercial OK with source-disclosure conditions.',
+          'Free for commercial use → Piper (GPL-3.0-or-later), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Coqui TTS toolkit (MPL 2.0): commercial OK with source-disclosure conditions.',
           'NOT free for commercial use → XTTS v2 (CPML, non-commercial) and F5-TTS (CC-BY-NC-4.0, non-commercial). Both need a separate agreement; XTTS v2 has no seller since Coqui shut down (Jan 2024).',
           'Best cloning quality → XTTS v2. 6 sec of audio → 17-language clone, 4–6 GB VRAM. License: CPML (non-commercial). Accept the CPML non-interactively in Docker/CI with COQUI_TOS_AGREED=1.',
           'Zero-shot cloning, faster + newer arch → F5-TTS. ~3 seconds of audio, flow-matching, CC-BY-NC-4.0 (non-commercial).',
-          'Speed on CPU / Raspberry Pi → Piper (MIT). Kokoro (Apache 2.0) is a higher-quality CPU alternative.',
+          'Speed on CPU / Raspberry Pi → Piper (GPL-3.0-or-later). Kokoro (Apache 2.0) is a higher-quality CPU alternative.',
           'Best English narration → StyleTTS 2 (MIT). Highest-quality offline cloning that is commercial-friendly → Tortoise (Apache 2.0), but very slow (minutes per sentence).',
           'Creative audio (laughter, music, ambient) → Bark (MIT). Slow and generative.',
           'All engines are 100% offline — no API keys, no audio data sent to the cloud.',
@@ -117,13 +117,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper is the correct choice for speed and embedded use.** It runs entirely on CPU, produces real-time speech on a Raspberry Pi 5, and supports 20+ languages via downloadable voice packs. No GPU, no Python complexity, MIT license.',
+          '**Piper is the correct choice for speed and embedded use.** It runs entirely on CPU, produces real-time speech on a Raspberry Pi 5, and supports 20+ languages via downloadable voice packs. No GPU, no Python complexity, GPL-3.0-or-later license (changed from MIT in a 2025 relicense).',
           '**XTTS v2 is the best local voice cloning option in 2026 — but it is non-commercial.** Give it 6 seconds of reference audio and it clones the voice in 17 languages (4–6 GB GPU VRAM). The CPML license is non-commercial, and since Coqui shut down (Jan 2024) no commercial license is on sale — treat XTTS v2 as non-commercial only. Accept the CPML non-interactively in Docker/CI with `COQUI_TOS_AGREED=1`.',
           '**F5-TTS is the fastest-growing alternative for zero-shot voice cloning.** It uses a flow-matching architecture instead of GPT, clones a voice from ~3 seconds of reference audio, and achieves quality competitive with XTTS v2 at faster inference speeds. License: CC-BY-NC-4.0 (non-commercial).',
           '**Coqui TTS is the most flexible open-source TTS toolkit.** It supports multiple backends (Tacotron2, VITS, XTTS), voice cloning, and 20+ languages under an MPL 2.0 license. Note: the Coqui company shut down in January 2024; the project is now community-maintained.',
           '**Bark is the only local TTS that generates non-speech audio.** It can produce laughter, coughing, sighs, music snippets, and ambient sound effects alongside speech — useful for creative audio, podcast production, and interactive fiction. Its outputs are slow and non-deterministic.',
           '**StyleTTS 2 achieves the highest mean opinion score (MOS) of any open-source English TTS engine.** Its diffusion-based style transfer produces near-human naturalness on English narration. It is English-only and does not support voice cloning.',
-          '**License decides commercial use — and the split is clean.** Free for commercial products: Piper, Bark, StyleTTS 2 (MIT) and Kokoro, Tortoise (Apache 2.0). Commercial with conditions: Coqui TTS toolkit (MPL 2.0, disclose toolkit modifications). Non-commercial only: XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) — both need a separate agreement. For commercial voice cloning, use Tortoise (Apache 2.0) or the Coqui toolkit on a VITS backend (MPL 2.0). Factual reference, not legal advice.',
+          '**License decides commercial use — and the split is clean.** Free for commercial products: Piper (GPL-3.0-or-later since 2025, not MIT), Bark, StyleTTS 2 (MIT) and Kokoro, Tortoise (Apache 2.0). Commercial with conditions: Coqui TTS toolkit (MPL 2.0, disclose toolkit modifications). Non-commercial only: XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) — both need a separate agreement. For commercial voice cloning, use Tortoise (Apache 2.0) or the Coqui toolkit on a VITS backend (MPL 2.0). Factual reference, not legal advice.',
           '**None of these match commercial TTS quality at scale.** ElevenLabs, Google Text-to-Speech, and Azure TTS still outperform local engines on consistency, naturalness, and latency across all use cases. Local TTS is the right choice when privacy, cost, or offline operation matters more than absolute quality.',
         ],
       },
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Most flexible open-source toolkit:** Coqui TTS — supports VITS, Tacotron2, XTTS backends, 20+ language models.',
           '**Only generative audio (non-speech sounds):** Bark — laughter, sighs, music, ambient. Slowest of all.',
           '**Best English narration quality:** StyleTTS 2 — diffusion-based style transfer, near-human MOS on LJSpeech benchmark.',
-          '**Free for commercial use:** Piper, Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); Coqui TTS toolkit (MPL 2.0, with conditions). **Non-commercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
+          '**Free for commercial use:** Piper (GPL-3.0-or-later since 2025, not MIT), Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); Coqui TTS toolkit (MPL 2.0, with conditions). **Non-commercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
           '**XTTS v2 voices and languages:** No fixed voice list — you supply a 6-second reference clip and it clones that voice. Built-in speaker presets ship with the model, and it generates in 17 languages: en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**XTTS v2 VRAM:** ~2 GB model weights; 4 GB minimum to run, 4–6 GB recommended for real-time inference.',
           '**Accept the CPML in CI/Docker:** `export COQUI_TOS_AGREED=1` — no interactive prompt needed.',
@@ -445,11 +445,11 @@ tts.tts_to_file(
         content:
           'License is the single most important factor for production use, and it splits these engines cleanly into two groups. Permissively licensed engines (MIT, Apache 2.0) are free to ship in a commercial product. Restricted engines (CPML, CC-BY-NC-4.0) are non-commercial — using them in a paid product, SaaS, ad-supported content, or client work requires a separate agreement. The table below gives the exact license and a direct "can I use this commercially?" answer for each engine.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-en.webp',
-          imageCaption: 'Piper, Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not.',
+          imageCaption: 'Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not.',
 snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'For local TTS in a commercial product, Piper, Bark, and StyleTTS 2 (MIT), Kokoro and Tortoise (Apache 2.0), and the Coqui TTS toolkit on a VITS/Tacotron2 backend (MPL 2.0) are all allowed; XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) are non-commercial.',
+            text: 'For local TTS in a commercial product, Piper (GPL-3.0-or-later since 2025, not MIT), Bark, and StyleTTS 2 (MIT), Kokoro and Tortoise (Apache 2.0), and the Coqui TTS toolkit on a VITS/Tacotron2 backend (MPL 2.0) are all allowed; XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) are non-commercial.',
           },
           {
             type: 'plain-terms',
@@ -460,9 +460,9 @@ snippetBlocks: [
         rows: [
           {
             'Tool': '[Piper](https://github.com/rhasspy/piper)',
-            'License': 'MIT',
-            'Commercial OK?': 'Yes — no restrictions',
-            'Key Condition': 'Include MIT notice; check per-voice model license',
+            'License': 'GPL-3.0',
+            'Commercial OK?': 'Yes — with conditions',
+            'Key Condition': 'Disclose source of modifications to Piper itself (2025 relicense from MIT)',
           },
           {
             'Tool': '[Kokoro](https://github.com/hexgrad/kokoro)',
@@ -626,7 +626,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Need creative audio with non-speech sounds?** → Bark. No other local engine produces laughter, sighs, or music natively.',
           '**Need the best English narration quality?** → StyleTTS 2. It outperforms all others on naturalness for English audiobook-style speech.',
           '**Need multilingual support?** → XTTS v2 (17 languages, cross-lingual cloning), Coqui (20+ languages), Piper (20+ language packs).',
-          '**Need a permissive commercial license?** → Piper, Bark, StyleTTS 2 (MIT), Kokoro, Tortoise (Apache 2.0), or the Coqui toolkit on VITS (MPL 2.0). Avoid XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) for commercial use — both are non-commercial without a separate agreement.',
+          '**Need a permissive commercial license?** → Piper (GPL-3.0-or-later since 2025, not MIT), Bark, StyleTTS 2 (MIT), Kokoro, Tortoise (Apache 2.0), or the Coqui toolkit on VITS (MPL 2.0). Avoid XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) for commercial use — both are non-commercial without a separate agreement.',
           '**Need commercial voice cloning (permissive license)?** → Tortoise (Apache 2.0) for highest quality if you can tolerate minutes-per-sentence generation, or the Coqui TTS toolkit on a VITS backend (MPL 2.0) for faster cloning. XTTS v2 and F5-TTS are higher quality but non-commercial.',
           '**Need voice control via text description?** → Parler-TTS. Describe the voice you want ("a calm elderly man speaking slowly") and it generates matching speech. Novel approach — no reference audio needed, no voice cloning. Useful when you need a specific voice character without a sample. [GitHub](https://github.com/huggingface/parler-tts)',
           '**Building a voice assistant pipeline?** → Piper for low-latency TTS output (see /power-local-llm/build-local-voice-assistant-2026).',
@@ -642,7 +642,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Is F5-TTS commercially usable?',
-            a: 'No. F5-TTS is released under CC-BY-NC-4.0 (Creative Commons Attribution Non-Commercial 4.0), which prohibits any commercial use. You cannot use F5-TTS in a paid product, SaaS tool, ad-supported application, or client project. For non-commercial voice cloning — personal projects, academic research, open-source demos — F5-TTS is freely usable with attribution. For commercial voice cloning, use Piper TTS (MIT) or Kokoro TTS (Apache 2.0) for synthesis, or Tortoise TTS (Apache 2.0) for slower but commercial-friendly cloning.',
+            a: 'No. F5-TTS is released under CC-BY-NC-4.0 (Creative Commons Attribution Non-Commercial 4.0), which prohibits any commercial use. You cannot use F5-TTS in a paid product, SaaS tool, ad-supported application, or client project. For non-commercial voice cloning — personal projects, academic research, open-source demos — F5-TTS is freely usable with attribution. For commercial voice cloning, use Piper TTS (GPL-3.0-or-later) or Kokoro TTS (Apache 2.0) for synthesis, or Tortoise TTS (Apache 2.0) for slower but commercial-friendly cloning.',
           },
           {
             q: 'How much reference audio do I need for voice cloning with XTTS v2?',
@@ -650,7 +650,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Can I use Piper TTS in a commercial product?',
-            a: 'Yes. Piper is licensed under MIT, which permits unlimited commercial use. You must include the MIT license notice in your product. The voice models (ONNX files) may have separate licenses per voice — check the individual voice model\'s license on the Piper voices repository before deploying.',
+            a: 'Yes, with conditions. Since a 2025 relicense, the actively maintained Piper repository is licensed under GPL-3.0-or-later (not MIT, which was the original, now-archived repository\'s license). You can use Piper commercially, but GPL-3.0 requires releasing the source of any modifications you distribute to Piper\'s own code under the same license; using it unmodified as an external tool is generally fine. The voice models (ONNX files) may have separate licenses per voice — check the individual voice model\'s license on the Piper voices repository before deploying.',
           },
           {
             q: 'Is Coqui TTS still maintained after the company shut down?',
@@ -690,19 +690,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — which lightweight CPU TTS should I use?',
-            a: 'Both run fast on CPU with no GPU and both are permissively licensed (Piper is MIT, Kokoro is Apache 2.0), so either is safe for commercial use. Choose Piper when you need the lowest latency and the widest language coverage (20+ language voice packs, real-time on a Raspberry Pi 5) — it is the standard for embedded and smart-home voice. Choose Kokoro (an 82M-parameter model built on the StyleTTS 2 architecture) when you want higher naturalness than Piper and can accept slightly more compute; its English quality is closer to the heavier GPU engines. For a Raspberry Pi or always-on assistant, Piper; for a desktop/server read-aloud where quality matters more than milliseconds, Kokoro.',
+            a: 'Both run fast on CPU with no GPU and both are permissively licensed (Piper is GPL-3.0-or-later since a 2025 relicense, Kokoro is Apache 2.0), so either is safe for commercial use. Choose Piper when you need the lowest latency and the widest language coverage (20+ language voice packs, real-time on a Raspberry Pi 5) — it is the standard for embedded and smart-home voice. Choose Kokoro (an 82M-parameter model built on the StyleTTS 2 architecture) when you want higher naturalness than Piper and can accept slightly more compute; its English quality is closer to the heavier GPU engines. For a Raspberry Pi or always-on assistant, Piper; for a desktop/server read-aloud where quality matters more than milliseconds, Kokoro.',
           },
           {
             q: 'Does XTTS v2 support Lithuanian?',
-            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Lithuanian is not on that list, and there is no official roadmap for adding it. For Lithuanian text-to-speech, Piper (MIT) has a Lithuanian voice pack in its voices repository — check the Piper voices listing on Hugging Face for current availability, since coverage there is community-contributed and changes over time.',
+            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Lithuanian is not on that list, and there is no official roadmap for adding it. For Lithuanian text-to-speech, Piper (GPL-3.0-or-later) has a Lithuanian voice pack in its voices repository — check the Piper voices listing on Hugging Face for current availability, since coverage there is community-contributed and changes over time.',
           },
           {
             q: 'Does XTTS v2 support Kazakh?',
-            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Kazakh is not on that list, and there is no official roadmap for adding it. For Kazakh text-to-speech, check the Piper (MIT) voices repository on Hugging Face for current community-contributed coverage — availability changes over time.',
+            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Kazakh is not on that list, and there is no official roadmap for adding it. For Kazakh text-to-speech, check the Piper (GPL-3.0-or-later) voices repository on Hugging Face for current community-contributed coverage — availability changes over time.',
           },
           {
             q: 'Does XTTS v2 support Ukrainian?',
-            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Ukrainian is not on that list, and there is no official roadmap for adding it. For Ukrainian text-to-speech, check the Piper (MIT) voices repository on Hugging Face for current community-contributed coverage — availability changes over time.',
+            a: 'No. XTTS v2 supports exactly 17 languages: English, Spanish, French, German, Italian, Portuguese, Polish, Turkish, Russian, Dutch, Czech, Arabic, Chinese (zh-cn), Japanese, Hungarian, Korean, and Hindi. Ukrainian is not on that list, and there is no official roadmap for adding it. For Ukrainian text-to-speech, check the Piper (GPL-3.0-or-later) voices repository on Hugging Face for current community-contributed coverage — availability changes over time.',
           },
           {
             q: 'Is Coqui STT the same as Coqui TTS or XTTS v2?',
@@ -731,12 +731,14 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Coqui TTS Review](/power-local-llm/coqui-tts-review) — a dedicated review of the Coqui TTS toolkit covered in this guide, including its maintenance status after Coqui AI shut down.',
           '[Build a Fully Offline Voice Assistant in 2026](/power-local-llm/build-local-voice-assistant-2026) — Use Piper or Coqui TTS as the output layer of a complete Whisper + LLM + TTS pipeline.',
           '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) — The input side of a voice pipeline: STT to complement TTS.',
           '[Local Multimodal AI Pipeline 2026](/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integrate TTS as the voice output layer of a full multimodal stack.',
           '[Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) — Mobile voice assistant using iOS system TTS or Piper.',
           '[Best Budget GPUs for Local LLM](/local-llms/best-budget-gpus-local-llm) — GPU selection for running XTTS v2, F5-TTS, Bark, or StyleTTS 2 inference.',
           '[Best AI Text-to-Speech for Content Creators](/prompt-bites/best-ai-text-to-speech-for-content-creators) — Piper vs Coqui XTTS vs ElevenLabs Local: voice quality and latency comparison.',
+          '[Piper TTS Review](/power-local-llm/piper-tts-review) — a deep dive on Piper alone: history, install walkthrough, real usage examples, license, and when to pick XTTS v2 instead.',
         ],
       },
     },
@@ -752,12 +754,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'Lokale TTS- und Voice-Cloning-Lizenzen 2026: Welche Engines erlauben kommerzielle Nutzung (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'Offizielle XTTS v2 Lizenz (CPML): Kommerzielle Nutzung 2026',
     intro:
-      'Dürfen Sie eine lokale Text-to-Speech-Engine in einem kommerziellen Produkt einsetzen? Das hängt vollständig von der Lizenz ab, und die Lizenzen unterscheiden sich erheblich. Piper, Bark und StyleTTS 2 erscheinen unter MIT, Kokoro und Tortoise unter Apache 2.0 — alle vier kostenlos für die kommerzielle Nutzung. Das Coqui-TTS-Toolkit steht unter MPL 2.0 (kommerziell mit Bedingungen). Doch die beiden beliebtesten Voice-Cloning-Modelle sind eingeschränkt: XTTS v2 nutzt die Coqui Public Model License (CPML, nicht-kommerziell), und F5-TTS nutzt CC-BY-NC-4.0 (nicht-kommerziell). Dieser Leitfaden nennt die exakte Lizenz jeder Engine, eine klare Antwort auf „Darf ich das kommerziell nutzen?" pro Engine, die Umgebungsvariable COQUI_TOS_AGREED zum nicht-interaktiven Akzeptieren der CPML in Docker und CI sowie einen direkten Vergleich nach Qualität, Geschwindigkeit, VRAM und Voice-Cloning — damit Sie die richtige Engine wählen können, ohne Audio in die Cloud zu senden und ohne Lizenz-Überraschung in der Produktion. (Lizenzen geprüft im Juni 2026; dies ist eine sachliche Referenz, keine Rechtsberatung — lesen Sie jede Lizenz selbst, bevor Sie sie kommerziell nutzen.)',
+      'Dürfen Sie eine lokale Text-to-Speech-Engine in einem kommerziellen Produkt einsetzen? Das hängt vollständig von der Lizenz ab, und die Lizenzen unterscheiden sich erheblich. Piper (seit 2025 GPL-3.0-or-later, nicht MIT), Bark und StyleTTS 2 erscheinen unter MIT, Kokoro und Tortoise unter Apache 2.0 — alle vier kostenlos für die kommerzielle Nutzung. Das Coqui-TTS-Toolkit steht unter MPL 2.0 (kommerziell mit Bedingungen). Doch die beiden beliebtesten Voice-Cloning-Modelle sind eingeschränkt: XTTS v2 nutzt die Coqui Public Model License (CPML, nicht-kommerziell), und F5-TTS nutzt CC-BY-NC-4.0 (nicht-kommerziell). Dieser Leitfaden nennt die exakte Lizenz jeder Engine, eine klare Antwort auf „Darf ich das kommerziell nutzen?" pro Engine, die Umgebungsvariable COQUI_TOS_AGREED zum nicht-interaktiven Akzeptieren der CPML in Docker und CI sowie einen direkten Vergleich nach Qualität, Geschwindigkeit, VRAM und Voice-Cloning — damit Sie die richtige Engine wählen können, ohne Audio in die Cloud zu senden und ohne Lizenz-Überraschung in der Produktion. (Lizenzen geprüft im Juni 2026; dies ist eine sachliche Referenz, keine Rechtsberatung — lesen Sie jede Lizenz selbst, bevor Sie sie kommerziell nutzen.)',
     metaDescription:
-      'Offizieller CPML-Lizenztext für XTTS v2 (nicht kommerziell), verlinkt von Hugging Face. Piper=MIT, F5-TTS=CC-BY-NC. Lizenztabelle, VRAM-Vergleich.',
+      'Offizieller CPML-Lizenztext für XTTS v2 (nicht kommerziell), verlinkt von Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Lizenztabelle, VRAM-Vergleich.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-de.webp',
     twitterDescription:
-      'Lokale TTS-Lizenzen 2026: Welche Voice-Cloning-Engines erlauben kommerzielle Nutzung? Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML nicht-kommerziell), F5-TTS (CC-BY-NC). Plus die COQUI_TOS_AGREED-Variable. Alles offline.',
+      'Lokale TTS-Lizenzen 2026: Welche Voice-Cloning-Engines erlauben kommerzielle Nutzung? Piper (seit 2025 GPL-3.0-or-later, nicht MIT)/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML nicht-kommerziell), F5-TTS (CC-BY-NC). Plus die COQUI_TOS_AGREED-Variable. Alles offline.',
     readTime: '16 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     sections: {
@@ -765,13 +767,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper ist die beste Wahl für Geschwindigkeit und Embedded-Anwendungen.** Es läuft vollständig auf der CPU, erzeugt Echtzeit-Sprache auf einem Raspberry Pi 5 und unterstützt 20+ Sprachen über herunterladbare Voice-Packs. Keine GPU, keine Python-Komplexität, MIT-Lizenz.',
+          '**Piper ist die beste Wahl für Geschwindigkeit und Embedded-Anwendungen.** Es läuft vollständig auf der CPU, erzeugt Echtzeit-Sprache auf einem Raspberry Pi 5 und unterstützt 20+ Sprachen über herunterladbare Voice-Packs. Keine GPU, keine Python-Komplexität, GPL-3.0-or-later-Lizenz (seit einer Relizenzierung 2025, zuvor MIT).',
           '**XTTS v2 ist die beste lokale Voice-Cloning-Option 2026 — aber nicht-kommerziell.** Geben Sie 6 Sekunden Referenzaudio ein und es klont die Stimme in 17 Sprachen (4–6 GB GPU-VRAM). Die CPML-Lizenz ist nicht-kommerziell, und seit Coqui geschlossen hat (Januar 2024) ist keine kommerzielle Lizenz mehr im Verkauf — behandeln Sie XTTS v2 als ausschließlich nicht-kommerziell. Akzeptieren Sie die CPML nicht-interaktiv in Docker/CI mit `COQUI_TOS_AGREED=1`.',
           '**F5-TTS ist die schnell wachsende Alternative für Zero-Shot-Voice-Cloning.** Es verwendet eine Flow-Matching-Architektur anstelle von GPT, klont eine Stimme aus ~3 Sekunden Referenzaudio und erzielt Qualität vergleichbar mit XTTS v2 bei schnellerem Inferenzen. Lizenz: CC-BY-NC-4.0 (nur nicht-kommerziell).',
           '**Coqui TTS ist das flexibelste Open-Source-TTS-Toolkit.** Es unterstützt mehrere Backends (Tacotron2, VITS, XTTS), Voice-Cloning und 20+ Sprachen unter MPL 2.0-Lizenz. Hinweis: Das Coqui-Unternehmen wurde im Januar 2024 geschlossen; das Projekt wird nun von der Community gepflegt.',
           '**Bark ist die einzige lokale TTS, die nicht-sprachliche Audio generiert.** Es kann Lachen, Husten, Seufzer, Musikschnipsel und Umgebungsgeräusche neben Sprache erzeugen — nützlich für kreative Audioinhalte, Podcast-Produktion und interaktive Fiktion. Die Ausgaben sind langsam und nicht-deterministisch.',
           '**StyleTTS 2 erreicht die höchsten MOS-Werte (Mean Opinion Score) aller Open-Source-englischen TTS-Engines.** Sein diffusionsbasiertes Style-Transfer erzeugt fast-menschliche Natürlichkeit bei englischen Narrationen. Es unterstützt nur Englisch und hat kein Voice-Cloning.',
-          '**Die Lizenz entscheidet über die kommerzielle Nutzung — und die Trennung ist klar.** Kostenlos für kommerzielle Produkte: Piper, Bark, StyleTTS 2 (MIT) sowie Kokoro, Tortoise (Apache 2.0). Kommerziell mit Bedingungen: Coqui-TTS-Toolkit (MPL 2.0, Toolkit-Änderungen offenlegen). Nur nicht-kommerziell: XTTS v2 (CPML) und F5-TTS (CC-BY-NC-4.0) — beide benötigen eine separate Vereinbarung. Für kommerzielles Voice-Cloning verwenden Sie Tortoise (Apache 2.0) oder das Coqui-Toolkit auf einem VITS-Backend (MPL 2.0). Sachliche Referenz, keine Rechtsberatung.',
+          '**Die Lizenz entscheidet über die kommerzielle Nutzung — und die Trennung ist klar.** Kostenlos für kommerzielle Produkte: Piper (seit 2025 GPL-3.0-or-later, nicht MIT), Bark, StyleTTS 2 (MIT) sowie Kokoro, Tortoise (Apache 2.0). Kommerziell mit Bedingungen: Coqui-TTS-Toolkit (MPL 2.0, Toolkit-Änderungen offenlegen). Nur nicht-kommerziell: XTTS v2 (CPML) und F5-TTS (CC-BY-NC-4.0) — beide benötigen eine separate Vereinbarung. Für kommerzielles Voice-Cloning verwenden Sie Tortoise (Apache 2.0) oder das Coqui-Toolkit auf einem VITS-Backend (MPL 2.0). Sachliche Referenz, keine Rechtsberatung.',
           '**Keine entsprechen kommerzieller TTS-Qualität im großen Maßstab.** ElevenLabs, Google Text-to-Speech und Azure TTS übertreffen lokale Engines immer noch bei Konsistenz, Natürlichkeit und Latenz. Lokale TTS ist die richtige Wahl, wenn Datenschutz, Kosten oder Offline-Betrieb wichtiger ist als absolute Qualität.',
         ],
       },
@@ -785,7 +787,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Flexibelstes Open-Source-Toolkit:** Coqui TTS — unterstützt VITS, Tacotron2, XTTS-Backends, 20+ Sprachmodelle.',
           '**Einziges generatives Audio (Nicht-Sprach-Klänge):** Bark — Lachen, Seufzer, Musik, Umgebungsgeräusche. Langsamstes von allen.',
           '**Beste englische Narrations-Qualität:** StyleTTS 2 — diffusionsbasiertes Style-Transfer, nahezu menschlicher MOS auf dem LJSpeech-Benchmark.',
-          '**Kostenlos für kommerzielle Nutzung:** Piper, Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); Coqui-TTS-Toolkit (MPL 2.0, mit Bedingungen). **Nicht-kommerziell:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
+          '**Kostenlos für kommerzielle Nutzung:** Piper (seit 2025 GPL-3.0-or-later, nicht MIT), Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); Coqui-TTS-Toolkit (MPL 2.0, mit Bedingungen). **Nicht-kommerziell:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
           '**XTTS v2 Stimmen und Sprachen:** Keine feste Stimmenliste — Sie liefern einen 6-Sekunden-Referenzclip, und es klont diese Stimme. Eingebaute Speaker-Presets werden mit dem Modell ausgeliefert, und es generiert in 17 Sprachen: en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**XTTS v2 VRAM:** ~2 GB Modellgewichte; 4 GB Minimum zum Betrieb, 4–6 GB empfohlen für Echtzeit-Inferenz.',
           '**CPML in CI/Docker akzeptieren:** `export COQUI_TOS_AGREED=1` — keine interaktive Eingabeaufforderung nötig.',
@@ -818,7 +820,7 @@ snippetBlocks: [
         note: 'MOS (Mean Opinion Score) auf einer Skala von 1–5, wobei 5 nicht von menschlicher Sprache zu unterscheiden ist. Werte sind näherungsweise und basieren auf veröffentlichten Benchmarks oder Community-Evaluierungen. MOS variiert erheblich je nach Testsatz und Zuhörerpool. Menschlicher Referenz-MOS: ~4,5.',
         columns: ['Tool', 'Qualität', 'Geschwindigkeit', 'Voice-Cloning', 'Mehrsprachig', 'VRAM', 'Lizenz', 'MOS (Englisch)'],
         rows: [
-          { 'Tool': '[Piper](https://github.com/rhasspy/piper)', 'Qualität': 'Gut', 'Geschwindigkeit': 'Sehr schnell (CPU)', 'Voice-Cloning': 'Nein', 'Mehrsprachig': 'Ja (20+ Sprachen)', 'VRAM': 'Nur CPU', 'Lizenz': 'MIT', 'MOS (Englisch)': '~3,5' },
+          { 'Tool': '[Piper](https://github.com/rhasspy/piper)', 'Qualität': 'Gut', 'Geschwindigkeit': 'Sehr schnell (CPU)', 'Voice-Cloning': 'Nein', 'Mehrsprachig': 'Ja (20+ Sprachen)', 'VRAM': 'Nur CPU', 'Lizenz': 'GPL-3.0', 'MOS (Englisch)': '~3,5' },
           { 'Tool': '[Kokoro](https://github.com/hexgrad/kokoro)', 'Qualität': 'Sehr gut', 'Geschwindigkeit': 'Schnell (CPU)', 'Voice-Cloning': 'Nein', 'Mehrsprachig': 'Englisch + wachsend', 'VRAM': 'CPU / 1–2 GB', 'Lizenz': 'Apache 2.0', 'MOS (Englisch)': '~4,0' },
           { 'Tool': '[Coqui TTS](https://github.com/coqui-ai/TTS)', 'Qualität': 'Sehr gut', 'Geschwindigkeit': 'Mittel', 'Voice-Cloning': 'Ja', 'Mehrsprachig': 'Ja (20+ Sprachen)', 'VRAM': '2–4 GB', 'Lizenz': 'MPL 2.0', 'MOS (Englisch)': '~3,8' },
           { 'Tool': '[XTTS v2](https://huggingface.co/coqui/XTTS-v2)', 'Qualität': 'Ausgezeichnet', 'Geschwindigkeit': 'Langsam', 'Voice-Cloning': 'Ja (beste)', 'Mehrsprachig': 'Ja (17 Sprachen)', 'VRAM': '4–6 GB', 'Lizenz': 'CPML (nicht-kommerziell)', 'MOS (Englisch)': '~4,1' },
@@ -951,14 +953,14 @@ snippetBlocks: [
         title: 'Lizenzen & kommerzielle Nutzung — Darf ich diese TTS-Engine kommerziell nutzen?',
         content: 'Die Lizenz ist der wichtigste Einzelfaktor für den Produktionseinsatz, und sie teilt diese Engines klar in zwei Gruppen. Freizügig lizenzierte Engines (MIT, Apache 2.0) dürfen frei in einem kommerziellen Produkt ausgeliefert werden. Eingeschränkte Engines (CPML, CC-BY-NC-4.0) sind nicht-kommerziell — ihre Nutzung in einem kostenpflichtigen Produkt, SaaS, werbefinanzierten Inhalten oder Auftragsarbeit erfordert eine separate Vereinbarung. Die Tabelle unten nennt die exakte Lizenz und eine direkte Antwort auf „Darf ich das kommerziell nutzen?" für jede Engine.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-de.webp',
-          imageCaption: 'Piper, Bark und StyleTTS 2 sind MIT-lizenziert für kommerzielle Nutzung; XTTS v2 (CPML) und F5-TTS (CC-BY-NC) nicht.',
+          imageCaption: 'Piper (seit 2025 GPL-3.0-or-later, nicht MIT), Bark und StyleTTS 2 sind MIT-lizenziert für kommerzielle Nutzung; XTTS v2 (CPML) und F5-TTS (CC-BY-NC) nicht.',
 snippetBlocks: [
-          { type: 'one-sentence', text: 'Für lokales TTS in einem kommerziellen Produkt sind Piper, Bark und StyleTTS 2 (MIT), Kokoro und Tortoise (Apache 2.0) sowie das Coqui-TTS-Toolkit auf einem VITS-/Tacotron2-Backend (MPL 2.0) alle erlaubt; XTTS v2 (CPML) und F5-TTS (CC-BY-NC-4.0) sind nicht-kommerziell.' },
+          { type: 'one-sentence', text: 'Für lokales TTS in einem kommerziellen Produkt sind Piper (seit 2025 GPL-3.0-or-later, nicht MIT), Bark und StyleTTS 2 (MIT), Kokoro und Tortoise (Apache 2.0) sowie das Coqui-TTS-Toolkit auf einem VITS-/Tacotron2-Backend (MPL 2.0) alle erlaubt; XTTS v2 (CPML) und F5-TTS (CC-BY-NC-4.0) sind nicht-kommerziell.' },
           { type: 'plain-terms', text: 'Die beiden beliebtesten Voice-Cloning-Modelle — XTTS v2 und F5-TTS — dürfen ohne separate Lizenz nicht kommerziell genutzt werden. Für kommerzielles Voice-Cloning sind Tortoise (Apache 2.0) oder das Coqui-Toolkit auf einem VITS-Backend (MPL 2.0) die sicheren Optionen.' },
         ],
         columns: ['Tool', 'Lizenz', 'Kommerziell erlaubt?', 'Hauptbedingung'],
         rows: [
-          { 'Tool': '[Piper](https://github.com/rhasspy/piper)', 'Lizenz': 'MIT', 'Kommerziell erlaubt?': 'Ja — keine Einschränkungen', 'Hauptbedingung': 'MIT-Hinweis angeben; Lizenz je Voice-Modell prüfen' },
+          { 'Tool': '[Piper](https://github.com/rhasspy/piper)', 'Lizenz': 'GPL-3.0', 'Kommerziell erlaubt?': 'Ja — mit Bedingungen', 'Hauptbedingung': 'Quelle von Änderungen an Piper offenlegen (2025 von MIT relizenziert)' },
           { 'Tool': '[Kokoro](https://github.com/hexgrad/kokoro)', 'Lizenz': 'Apache 2.0', 'Kommerziell erlaubt?': 'Ja — keine Einschränkungen', 'Hauptbedingung': 'Apache 2.0-Hinweis angeben' },
           { 'Tool': '[Coqui TTS (Toolkit)](https://github.com/coqui-ai/TTS)', 'Lizenz': 'MPL 2.0', 'Kommerziell erlaubt?': 'Ja — mit Bedingungen', 'Hauptbedingung': 'Quelle aller Änderungen an den Toolkit-Dateien offenlegen' },
           { 'Tool': '[XTTS v2 (Modell)](https://huggingface.co/coqui/XTTS-v2)', 'Lizenz': 'CPML', 'Kommerziell erlaubt?': 'Nein — nicht-kommerziell', 'Hauptbedingung': 'Kommerziell braucht eine Vereinbarung; seit Coqui-Schließung (Jan. 2024) keine im Verkauf' },
@@ -1062,7 +1064,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Kreatives Audio mit Nicht-Sprach-Klängen benötigt?** → Bark. Keine andere lokale Engine erzeugt nativ Lachen, Seufzer oder Musik.',
           '**Beste englische Narrations-Qualität benötigt?** → StyleTTS 2.',
           '**Mehrsprachige Unterstützung benötigt?** → XTTS v2 (17 Sprachen), Coqui (20+), Piper (20+ Packs).',
-          '**Vollständig kommerzielle MIT-Lizenz benötigt?** → Piper, Bark oder StyleTTS 2.',
+          '**Vollständig kommerzielle, permissive Lizenz benötigt?** → Bark oder StyleTTS 2 (beide MIT). Piper ist seit 2025 GPL-3.0-or-later (Copyleft, nicht mehr MIT) — siehe Lizenz und Kosten.',
           '**Sprach-Assistenten-Pipeline aufbauen?** → Piper für Niedrig-Latenz-TTS-Ausgabe.',
         ],
       },
@@ -1076,7 +1078,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kann ich Piper TTS in einem kommerziellen Produkt verwenden?',
-            a: 'Ja. Piper ist unter der MIT-Lizenz lizenziert, die unbegrenzte kommerzielle Nutzung gestattet. Sie müssen die MIT-Lizenznotiz in Ihrem Produkt angeben. Die Voice-Modelle (ONNX-Dateien) können separate Lizenzen pro Voice haben.',
+            a: 'Ja, mit Bedingungen. Seit einer Relizenzierung 2025 steht das aktiv gepflegte Piper-Repository unter GPL-3.0-or-later (nicht MIT, das war die Lizenz des ursprünglichen, inzwischen archivierten Repositorys). Piper ist kommerziell nutzbar, doch GPL-3.0 verlangt, den Quellcode eigener Änderungen an Piper selbst bei einer Weitergabe unter derselben Lizenz offenzulegen; die unveränderte Nutzung als externes Tool ist in der Regel unkritisch. Die Voice-Modelle (ONNX-Dateien) können separate Lizenzen pro Voice haben.',
           },
           {
             q: 'Muss ich bei der Verwendung von lokalen TTS-Engines die DSGVO beachten?',
@@ -1100,19 +1102,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — welches Leichtgewichts-CPU-TTS sollte ich verwenden?',
-            a: 'Beide laufen schnell auf der CPU ohne GPU, und beide sind freizügig lizenziert (Piper ist MIT, Kokoro ist Apache 2.0), sodass beide für die kommerzielle Nutzung sicher sind. Wählen Sie Piper, wenn Sie die niedrigste Latenz und die breiteste Sprachabdeckung benötigen (20+ Sprach-Voice-Packs, Echtzeit auf einem Raspberry Pi 5) — es ist der Standard für Embedded- und Smart-Home-Sprache. Wählen Sie Kokoro (ein 82M-Parameter-Modell auf Basis der StyleTTS-2-Architektur), wenn Sie höhere Natürlichkeit als Piper wollen und etwas mehr Rechenaufwand akzeptieren können; seine englische Qualität liegt näher an den schwereren GPU-Engines. Für einen Raspberry Pi oder einen immer-aktiven Assistenten: Piper; für ein Desktop-/Server-Vorlesen, bei dem Qualität wichtiger ist als Millisekunden: Kokoro.',
+            a: 'Beide laufen schnell auf der CPU ohne GPU, und beide sind freizügig lizenziert (Piper ist seit einer Relizenzierung 2025 GPL-3.0-or-later, Kokoro ist Apache 2.0), sodass beide für die kommerzielle Nutzung sicher sind. Wählen Sie Piper, wenn Sie die niedrigste Latenz und die breiteste Sprachabdeckung benötigen (20+ Sprach-Voice-Packs, Echtzeit auf einem Raspberry Pi 5) — es ist der Standard für Embedded- und Smart-Home-Sprache. Wählen Sie Kokoro (ein 82M-Parameter-Modell auf Basis der StyleTTS-2-Architektur), wenn Sie höhere Natürlichkeit als Piper wollen und etwas mehr Rechenaufwand akzeptieren können; seine englische Qualität liegt näher an den schwereren GPU-Engines. Für einen Raspberry Pi oder einen immer-aktiven Assistenten: Piper; für ein Desktop-/Server-Vorlesen, bei dem Qualität wichtiger ist als Millisekunden: Kokoro.',
           },
           {
             q: 'Unterstützt XTTS v2 Litauisch?',
-            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Litauisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für litauische Sprachsynthese bietet Piper (MIT) ein litauisches Voice-Pack im Voices-Repository — prüfen Sie die aktuelle Verfügbarkeit in der Piper-Voices-Liste auf Hugging Face, da die Abdeckung dort community-basiert ist und sich ändert.',
+            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Litauisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für litauische Sprachsynthese bietet Piper (GPL-3.0-or-later) ein litauisches Voice-Pack im Voices-Repository — prüfen Sie die aktuelle Verfügbarkeit in der Piper-Voices-Liste auf Hugging Face, da die Abdeckung dort community-basiert ist und sich ändert.',
           },
           {
             q: 'Unterstützt XTTS v2 Kasachisch?',
-            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Kasachisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für kasachische Sprachsynthese prüfen Sie das Piper (MIT) Voices-Repository auf Hugging Face für aktuelle, community-basierte Abdeckung — die Verfügbarkeit ändert sich mit der Zeit.',
+            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Kasachisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für kasachische Sprachsynthese prüfen Sie das Piper (GPL-3.0-or-later) Voices-Repository auf Hugging Face für aktuelle, community-basierte Abdeckung — die Verfügbarkeit ändert sich mit der Zeit.',
           },
           {
             q: 'Unterstützt XTTS v2 Ukrainisch?',
-            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Ukrainisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für ukrainische Sprachsynthese prüfen Sie das Piper (MIT) Voices-Repository auf Hugging Face für aktuelle, community-basierte Abdeckung — die Verfügbarkeit ändert sich mit der Zeit.',
+            a: 'Nein. XTTS v2 unterstützt genau 17 Sprachen: Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Polnisch, Türkisch, Russisch, Niederländisch, Tschechisch, Arabisch, Chinesisch (zh-cn), Japanisch, Ungarisch, Koreanisch und Hindi. Ukrainisch steht nicht auf dieser Liste, und es gibt keine offizielle Roadmap dafür. Für ukrainische Sprachsynthese prüfen Sie das Piper (GPL-3.0-or-later) Voices-Repository auf Hugging Face für aktuelle, community-basierte Abdeckung — die Verfügbarkeit ändert sich mit der Zeit.',
           },
           {
             q: 'Ist Coqui STT dasselbe wie Coqui TTS oder XTTS v2?',
@@ -1151,6 +1153,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[Coqui TTS im Test](/de/power-local-llm/coqui-tts-review) — ein dedizierter Test des in diesem Leitfaden behandelten Coqui-TTS-Toolkits, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.',
           '[Vollständig offlinetem Sprach-Assistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — Verwenden Sie Piper oder Coqui TTS als Ausgabeschicht einer vollständigen Whisper + LLM + TTS-Pipeline.',
           '[Lokale Sprache-zu-Text 2026: Whisper.cpp vs faster-whisper](/de/power-local-llm/local-whisper-stt-comparison-2026) — Die Eingabeseite einer Sprach-Pipeline.',
           '[Lokale multimodale KI-Pipeline 2026](/de/power-local-llm/local-multimodal-pipeline-voice-vision-text) — TTS als Sprach-Ausgabeschicht eines vollständigen multimodalen Stacks integrieren.',
@@ -1171,12 +1174,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'Licences TTS local et clonage vocal 2026 : quels moteurs autorisent l\'usage commercial (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'Licence officielle XTTS v2 (CPML) : usage commercial 2026',
     intro:
-      'Peut-on utiliser un moteur de synthèse vocale locale dans un produit commercial ? Tout dépend de la licence, et les licences diffèrent fortement. Piper, Bark et StyleTTS 2 sont publiés sous MIT, Kokoro et Tortoise sous Apache 2.0 — les quatre sont libres pour l\'usage commercial. Le toolkit Coqui TTS est sous MPL 2.0 (commercial sous conditions). Mais les deux modèles de clonage vocal les plus populaires sont restreints : XTTS v2 utilise la Coqui Public Model License (CPML, non commerciale) et F5-TTS utilise CC-BY-NC-4.0 (non commerciale). Ce guide donne la licence exacte de chaque moteur, une réponse claire « puis-je l\'utiliser commercialement ? » par moteur, la variable d\'environnement COQUI_TOS_AGREED pour accepter la CPML de manière non interactive dans Docker et CI, et une comparaison directe sur la qualité, la vitesse, la VRAM et le clonage vocal — afin de choisir le bon moteur sans envoyer d\'audio dans le cloud et sans mauvaise surprise de licence en production. (Licences vérifiées en juin 2026 ; ceci est une référence factuelle, pas un conseil juridique — lisez chaque licence vous-même avant tout usage commercial.)',
+      'Peut-on utiliser un moteur de synthèse vocale locale dans un produit commercial ? Tout dépend de la licence, et les licences diffèrent fortement. Piper (GPL-3.0-or-later depuis 2025, plus MIT), Bark et StyleTTS 2 sont publiés sous MIT, Kokoro et Tortoise sous Apache 2.0 — les quatre sont libres pour l\'usage commercial. Le toolkit Coqui TTS est sous MPL 2.0 (commercial sous conditions). Mais les deux modèles de clonage vocal les plus populaires sont restreints : XTTS v2 utilise la Coqui Public Model License (CPML, non commerciale) et F5-TTS utilise CC-BY-NC-4.0 (non commerciale). Ce guide donne la licence exacte de chaque moteur, une réponse claire « puis-je l\'utiliser commercialement ? » par moteur, la variable d\'environnement COQUI_TOS_AGREED pour accepter la CPML de manière non interactive dans Docker et CI, et une comparaison directe sur la qualité, la vitesse, la VRAM et le clonage vocal — afin de choisir le bon moteur sans envoyer d\'audio dans le cloud et sans mauvaise surprise de licence en production. (Licences vérifiées en juin 2026 ; ceci est une référence factuelle, pas un conseil juridique — lisez chaque licence vous-même avant tout usage commercial.)',
     metaDescription:
-      'Texte officiel de la licence CPML pour XTTS v2 (non commerciale), lié depuis Hugging Face. Piper=MIT, F5-TTS=CC-BY-NC. Tableau des licences, comparatif VRAM.',
+      'Texte officiel de la licence CPML pour XTTS v2 (non commerciale), lié depuis Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tableau des licences, comparatif VRAM.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-fr.webp',
     twitterDescription:
-      'Licences TTS local 2026 : quels moteurs de clonage vocal autorisent l\'usage commercial ? Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML non commerciale), F5-TTS (CC-BY-NC). Plus la variable COQUI_TOS_AGREED. Tout hors ligne.',
+      'Licences TTS local 2026 : quels moteurs de clonage vocal autorisent l\'usage commercial ? Piper (GPL-3.0-or-later depuis 2025, plus MIT)/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML non commerciale), F5-TTS (CC-BY-NC). Plus la variable COQUI_TOS_AGREED. Tout hors ligne.',
     readTime: '14 min de lecture',
     educationalLevel: 'Intermediate',
     sections: {
@@ -1184,13 +1187,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper est le meilleur choix pour la vitesse et les applications embarquées.** Il s\'exécute entièrement sur CPU, produit la parole en temps réel sur un Raspberry Pi 5 et supporte 20+ langues via des packs de voix téléchargeables. Pas de GPU, pas de complexité Python, licence MIT.',
+          '**Piper est le meilleur choix pour la vitesse et les applications embarquées.** Il s\'exécute entièrement sur CPU, produit la parole en temps réel sur un Raspberry Pi 5 et supporte 20+ langues via des packs de voix téléchargeables. Pas de GPU, pas de complexité Python, licence GPL-3.0-or-later (depuis une relicence en 2025, auparavant MIT).',
           '**XTTS v2 est la meilleure option de clonage vocal local en 2026 — mais elle est non commerciale.** Donnez-lui 6 secondes d\'audio de référence et il clone la voix dans 17 langues (4–6 GB de VRAM GPU). La licence CPML est non commerciale, et depuis la fermeture de Coqui (janvier 2024) aucune licence commerciale n\'est en vente — considérez XTTS v2 comme non commercial uniquement. Acceptez la CPML de manière non interactive dans Docker/CI avec `COQUI_TOS_AGREED=1`.',
           '**F5-TTS est l\'alternative en pleine croissance pour le clonage vocal zéro-shot.** Il utilise une architecture flow-matching au lieu de GPT, clone une voix à partir de ~3 secondes d\'audio de référence et atteint une qualité comparable à XTTS v2 avec une inférence plus rapide. Licence : CC-BY-NC-4.0 (non commerciale).',
           '**Coqui TTS est le toolkit TTS open-source le plus flexible.** Il supporte plusieurs backends (Tacotron2, VITS, XTTS), le clonage vocal et 20+ langues sous licence MPL 2.0. Remarque : l\'entreprise Coqui a fermé en janvier 2024 ; le projet est maintenant maintenu par la communauté.',
           '**Bark est le seul TTS local qui génère de l\'audio non-vocal.** Il peut produire du rire, de la toux, des soupirs, des extraits musicaux et des bruits ambiants aux côtés de la parole — utile pour l\'audio créatif, la production de podcasts et la fiction interactive. Ses sorties sont lentes et non déterministes.',
           '**StyleTTS 2 atteint les scores MOS (Mean Opinion Score) les plus élevés de tous les moteurs TTS anglais open-source.** Son transfert de style basé sur la diffusion produit une naturalité quasi-humaine pour la narration en anglais. Anglais uniquement et sans clonage vocal.',
-          '**La licence décide de l\'usage commercial — et la répartition est nette.** Libres pour les produits commerciaux : Piper, Bark, StyleTTS 2 (MIT) et Kokoro, Tortoise (Apache 2.0). Commercial sous conditions : toolkit Coqui TTS (MPL 2.0, divulguer les modifications du toolkit). Non commercial uniquement : XTTS v2 (CPML) et F5-TTS (CC-BY-NC-4.0) — les deux nécessitent un accord séparé. Pour le clonage vocal commercial, utilisez Tortoise (Apache 2.0) ou le toolkit Coqui sur un backend VITS (MPL 2.0). Référence factuelle, pas un conseil juridique.',
+          '**La licence décide de l\'usage commercial — et la répartition est nette.** Libres pour les produits commerciaux : Piper (GPL-3.0-or-later depuis 2025, plus MIT), Bark, StyleTTS 2 (MIT) et Kokoro, Tortoise (Apache 2.0). Commercial sous conditions : toolkit Coqui TTS (MPL 2.0, divulguer les modifications du toolkit). Non commercial uniquement : XTTS v2 (CPML) et F5-TTS (CC-BY-NC-4.0) — les deux nécessitent un accord séparé. Pour le clonage vocal commercial, utilisez Tortoise (Apache 2.0) ou le toolkit Coqui sur un backend VITS (MPL 2.0). Référence factuelle, pas un conseil juridique.',
           '**Aucun ne correspond à la qualité TTS commerciale à grande échelle.** ElevenLabs, Google Text-to-Speech et Azure TTS surpassent toujours les moteurs locaux en cohérence, naturalité et latence. Le TTS local est le bon choix quand la confidentialité, le coût ou l\'opération hors ligne importent plus que la qualité absolue.',
         ],
       },
@@ -1204,7 +1207,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Toolkit open-source le plus flexible :** Coqui TTS — supporte les backends VITS, Tacotron2, XTTS, 20+ modèles de langues.',
           '**Seul audio génératif (sons non vocaux) :** Bark — rires, soupirs, musique, ambiance. Le plus lent de tous.',
           '**Meilleure qualité de narration anglaise :** StyleTTS 2 — transfert de style basé sur la diffusion, MOS quasi-humain sur le benchmark LJSpeech.',
-          '**Libres pour l\'usage commercial :** Piper, Bark, StyleTTS 2 (MIT) ; Kokoro, Tortoise (Apache 2.0) ; toolkit Coqui TTS (MPL 2.0, sous conditions). **Non commercial :** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
+          '**Libres pour l\'usage commercial :** Piper (GPL-3.0-or-later depuis 2025, plus MIT), Bark, StyleTTS 2 (MIT) ; Kokoro, Tortoise (Apache 2.0) ; toolkit Coqui TTS (MPL 2.0, sous conditions). **Non commercial :** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
           '**Voix et langues XTTS v2 :** pas de liste de voix fixe — vous fournissez un extrait de référence de 6 secondes et il clone cette voix. Des préréglages de locuteurs intégrés sont livrés avec le modèle, et il génère dans 17 langues : en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**VRAM XTTS v2 :** ~2 Go de poids de modèle ; 4 Go minimum pour fonctionner, 4–6 Go recommandés pour une inférence en temps réel.',
           '**Accepter la CPML en CI/Docker :** `export COQUI_TOS_AGREED=1` — pas d\'invite interactive nécessaire.',
@@ -1237,7 +1240,7 @@ snippetBlocks: [
         note: 'MOS (Mean Opinion Score) sur une échelle de 1 à 5 où 5 est indiscernable de la parole humaine. Les scores sont approximatifs et basés sur des benchmarks publiés ou des évaluations communautaires. Le MOS varie significativement selon la phrase de test et le groupe d\'auditeurs. MOS de référence humaine : ~4,5.',
         columns: ['Outil', 'Qualité', 'Vitesse', 'Clonage vocal', 'Multilingue', 'VRAM', 'Licence', 'MOS (anglais)'],
         rows: [
-          { 'Outil': '[Piper](https://github.com/rhasspy/piper)', 'Qualité': 'Bon', 'Vitesse': 'Très rapide (CPU)', 'Clonage vocal': 'Non', 'Multilingue': 'Oui (20+ langues)', 'VRAM': 'CPU uniquement', 'Licence': 'MIT', 'MOS (anglais)': '~3,5' },
+          { 'Outil': '[Piper](https://github.com/rhasspy/piper)', 'Qualité': 'Bon', 'Vitesse': 'Très rapide (CPU)', 'Clonage vocal': 'Non', 'Multilingue': 'Oui (20+ langues)', 'VRAM': 'CPU uniquement', 'Licence': 'GPL-3.0', 'MOS (anglais)': '~3,5' },
           { 'Outil': '[Kokoro](https://github.com/hexgrad/kokoro)', 'Qualité': 'Très bon', 'Vitesse': 'Rapide (CPU)', 'Clonage vocal': 'Non', 'Multilingue': 'Anglais + en expansion', 'VRAM': 'CPU / 1–2 Go', 'Licence': 'Apache 2.0', 'MOS (anglais)': '~4,0' },
           { 'Outil': '[Coqui TTS](https://github.com/coqui-ai/TTS)', 'Qualité': 'Très bon', 'Vitesse': 'Moyen', 'Clonage vocal': 'Oui', 'Multilingue': 'Oui (20+ langues)', 'VRAM': '2–4 Go', 'Licence': 'MPL 2.0', 'MOS (anglais)': '~3,8' },
           { 'Outil': '[XTTS v2](https://huggingface.co/coqui/XTTS-v2)', 'Qualité': 'Excellent', 'Vitesse': 'Lent', 'Clonage vocal': 'Oui (meilleur)', 'Multilingue': 'Oui (17 langues)', 'VRAM': '4–6 Go', 'Licence': 'CPML (non commercial)', 'MOS (anglais)': '~4,1' },
@@ -1370,14 +1373,14 @@ snippetBlocks: [
         title: 'Licences et usage commercial — puis-je utiliser ce moteur TTS commercialement ?',
         content: 'La licence est le facteur le plus important pour l\'usage en production, et elle répartit nettement ces moteurs en deux groupes. Les moteurs sous licence permissive (MIT, Apache 2.0) sont libres d\'être intégrés dans un produit commercial. Les moteurs restreints (CPML, CC-BY-NC-4.0) sont non commerciaux — les utiliser dans un produit payant, un SaaS, du contenu financé par la publicité ou du travail client nécessite un accord séparé. Le tableau ci-dessous donne la licence exacte et une réponse directe « puis-je l\'utiliser commercialement ? » pour chaque moteur.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-fr.webp',
-          imageCaption: 'Piper, Bark et StyleTTS 2 sont sous licence MIT pour un usage commercial ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC) non.',
+          imageCaption: 'Piper (GPL-3.0-or-later depuis 2025, plus MIT), Bark et StyleTTS 2 sont sous licence MIT pour un usage commercial ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC) non.',
 snippetBlocks: [
-          { type: 'one-sentence', text: 'Pour un TTS local dans un produit commercial, Piper, Bark et StyleTTS 2 (MIT), Kokoro et Tortoise (Apache 2.0), et le toolkit Coqui TTS sur un backend VITS/Tacotron2 (MPL 2.0) sont tous autorisés ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC-4.0) sont non commerciaux.' },
+          { type: 'one-sentence', text: 'Pour un TTS local dans un produit commercial, Piper (GPL-3.0-or-later depuis 2025, plus MIT), Bark et StyleTTS 2 (MIT), Kokoro et Tortoise (Apache 2.0), et le toolkit Coqui TTS sur un backend VITS/Tacotron2 (MPL 2.0) sont tous autorisés ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC-4.0) sont non commerciaux.' },
           { type: 'plain-terms', text: 'Les deux modèles de clonage vocal les plus populaires — XTTS v2 et F5-TTS — ne peuvent pas être utilisés commercialement sans licence séparée. Pour le clonage vocal commercial, Tortoise (Apache 2.0) ou le toolkit Coqui sur un backend VITS (MPL 2.0) sont les choix sûrs.' },
         ],
         columns: ['Outil', 'Licence', 'Commercial autorisé?', 'Condition principale'],
         rows: [
-          { 'Outil': '[Piper](https://github.com/rhasspy/piper)', 'Licence': 'MIT', 'Commercial autorisé?': 'Oui — aucune restriction', 'Condition principale': 'Inclure la notice MIT ; vérifier la licence du modèle par voix' },
+          { 'Outil': '[Piper](https://github.com/rhasspy/piper)', 'Licence': 'GPL-3.0', 'Commercial autorisé?': 'Oui — sous conditions', 'Condition principale': 'Divulguer la source des modifications de Piper (relicence depuis MIT en 2025)' },
           { 'Outil': '[Kokoro](https://github.com/hexgrad/kokoro)', 'Licence': 'Apache 2.0', 'Commercial autorisé?': 'Oui — aucune restriction', 'Condition principale': 'Inclure la notice Apache 2.0' },
           { 'Outil': '[Coqui TTS (toolkit)](https://github.com/coqui-ai/TTS)', 'Licence': 'MPL 2.0', 'Commercial autorisé?': 'Oui — avec conditions', 'Condition principale': 'Divulguer la source de toute modification des fichiers du toolkit' },
           { 'Outil': '[XTTS v2 (modèle)](https://huggingface.co/coqui/XTTS-v2)', 'Licence': 'CPML', 'Commercial autorisé?': 'Non — non commercial', 'Condition principale': 'Le commercial nécessite un accord ; aucun en vente depuis la fermeture de Coqui (janvier 2024)' },
@@ -1481,7 +1484,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Besoin d\'audio créatif avec des sons non vocaux ?** → Bark. Aucun autre moteur local ne produit nativement des rires, soupirs ou musique.',
           '**Besoin de la meilleure qualité de narration anglaise ?** → StyleTTS 2.',
           '**Besoin de support multilingue ?** → XTTS v2 (17 langues), Coqui (20+), Piper (20+ packs).',
-          '**Besoin d\'une licence MIT entièrement commerciale ?** → Piper, Bark ou StyleTTS 2.',
+          '**Besoin d\'une licence permissive entièrement commerciale ?** → Bark ou StyleTTS 2 (toutes deux MIT). Piper est en GPL-3.0-or-later depuis 2025 (copyleft, plus MIT) — voir Licence et coût.',
           '**Construction d\'un pipeline d\'assistant vocal ?** → Piper pour une sortie TTS à faible latence.',
         ],
       },
@@ -1495,7 +1498,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Puis-je utiliser Piper TTS dans un produit commercial?',
-            a: 'Oui. Piper est licencié sous MIT, qui permet l\'utilisation commerciale illimitée. Vous devez inclure la notice de licence MIT dans votre produit. Les modèles de voix (fichiers ONNX) peuvent avoir des licences séparées par voix.',
+            a: 'Oui, sous conditions. Depuis une relicence en 2025, le dépôt Piper activement maintenu est sous licence GPL-3.0-or-later (et non plus MIT, la licence du dépôt d\'origine désormais archivé). Piper reste utilisable commercialement, mais la GPL-3.0 exige de divulguer le code source de vos propres modifications à Piper si vous les redistribuez sous la même licence ; l\'utiliser tel quel comme outil externe pose généralement moins de contraintes. Les modèles de voix (fichiers ONNX) peuvent avoir des licences séparées par voix.',
           },
           {
             q: 'Quel moteur TTS local a le meilleur support multilingue?',
@@ -1519,19 +1522,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — quel TTS CPU léger choisir?',
-            a: 'Les deux fonctionnent rapidement sur CPU sans GPU et tous deux sont sous licence permissive (Piper est MIT, Kokoro est Apache 2.0), donc l\'un ou l\'autre est sûr pour l\'usage commercial. Choisissez Piper quand vous avez besoin de la latence la plus faible et de la couverture linguistique la plus large (20+ packs de voix, temps réel sur un Raspberry Pi 5) — c\'est la référence pour la voix embarquée et la maison connectée. Choisissez Kokoro (un modèle de 82M de paramètres bâti sur l\'architecture StyleTTS 2) quand vous voulez une plus grande naturalité que Piper et pouvez accepter un peu plus de calcul ; sa qualité en anglais est plus proche des moteurs GPU plus lourds. Pour un Raspberry Pi ou un assistant toujours actif, Piper ; pour une lecture à voix haute sur poste de travail/serveur où la qualité importe plus que les millisecondes, Kokoro.',
+            a: 'Les deux fonctionnent rapidement sur CPU sans GPU et tous deux sont sous licence permissive (Piper est en GPL-3.0-or-later depuis une relicence en 2025, Kokoro est Apache 2.0), donc l\'un ou l\'autre est sûr pour l\'usage commercial. Choisissez Piper quand vous avez besoin de la latence la plus faible et de la couverture linguistique la plus large (20+ packs de voix, temps réel sur un Raspberry Pi 5) — c\'est la référence pour la voix embarquée et la maison connectée. Choisissez Kokoro (un modèle de 82M de paramètres bâti sur l\'architecture StyleTTS 2) quand vous voulez une plus grande naturalité que Piper et pouvez accepter un peu plus de calcul ; sa qualité en anglais est plus proche des moteurs GPU plus lourds. Pour un Raspberry Pi ou un assistant toujours actif, Piper ; pour une lecture à voix haute sur poste de travail/serveur où la qualité importe plus que les millisecondes, Kokoro.',
           },
           {
             q: 'XTTS v2 prend-il en charge le lituanien ?',
-            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. Le lituanien ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en lituanien, Piper (MIT) propose un pack de voix lituanien dans son dépôt de voix — vérifiez la liste des voix Piper sur Hugging Face pour la disponibilité actuelle, car la couverture y est contribuée par la communauté et évolue.',
+            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. Le lituanien ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en lituanien, Piper (GPL-3.0-or-later) propose un pack de voix lituanien dans son dépôt de voix — vérifiez la liste des voix Piper sur Hugging Face pour la disponibilité actuelle, car la couverture y est contribuée par la communauté et évolue.',
           },
           {
             q: 'XTTS v2 prend-il en charge le kazakh ?',
-            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. Le kazakh ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en kazakh, consultez le dépôt de voix Piper (MIT) sur Hugging Face pour la couverture communautaire actuelle — la disponibilité évolue avec le temps.',
+            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. Le kazakh ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en kazakh, consultez le dépôt de voix Piper (GPL-3.0-or-later) sur Hugging Face pour la couverture communautaire actuelle — la disponibilité évolue avec le temps.',
           },
           {
             q: 'XTTS v2 prend-il en charge l\'ukrainien ?',
-            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. L\'ukrainien ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en ukrainien, consultez le dépôt de voix Piper (MIT) sur Hugging Face pour la couverture communautaire actuelle — la disponibilité évolue avec le temps.',
+            a: 'Non. XTTS v2 prend en charge exactement 17 langues : anglais, espagnol, français, allemand, italien, portugais, polonais, turc, russe, néerlandais, tchèque, arabe, chinois (zh-cn), japonais, hongrois, coréen et hindi. L\'ukrainien ne figure pas sur cette liste, et aucune feuille de route officielle ne prévoit de l\'ajouter. Pour la synthèse vocale en ukrainien, consultez le dépôt de voix Piper (GPL-3.0-or-later) sur Hugging Face pour la couverture communautaire actuelle — la disponibilité évolue avec le temps.',
           },
           {
             q: 'Coqui STT est-il la même chose que Coqui TTS ou XTTS v2 ?',
@@ -1555,6 +1558,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
+          '[Avis Coqui TTS](/fr/power-local-llm/coqui-tts-review) — un avis dédié au kit Coqui TTS couvert dans ce guide, y compris son statut de maintenance depuis la fermeture de Coqui AI.',
           '[Construire un assistant vocal entièrement hors ligne en 2026](/fr/power-local-llm/build-local-voice-assistant-2026) — Utilisez Piper ou Coqui TTS comme couche de sortie d\'un pipeline complet Whisper + LLM + TTS.',
           '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026) — Le côté entrée d\'un pipeline vocal.',
           '[Pipeline IA multimodale locale 2026](/fr/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Intégrer le TTS comme couche de sortie vocale d\'une pile multimodale complète.',
@@ -1575,12 +1579,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'ローカルTTSとボイスクローニングのライセンス2026：商用利用できるエンジンは？（Piper、XTTS v2、F5-TTS、Coqui）',
     seoTitle: 'XTTS v2公式ライセンス(CPML)：商用利用2026',
     intro:
-      'ローカルの音声合成エンジンを商用製品で使えるかどうかは、すべてライセンス次第であり、各エンジンのライセンスは大きく異なります。Piper、Bark、StyleTTS 2はMIT、KokoroとTortoiseはApache 2.0で提供され、いずれも商用利用が無料です。Coqui TTSツールキットはMPL 2.0（条件付きで商用可）です。しかし最も人気のある2つのボイスクローニングモデルは制限されています：XTTS v2はCoqui Public Model License（CPML、非商用）、F5-TTSはCC-BY-NC-4.0（非商用）を採用しています。このガイドでは、各エンジンの正確なライセンス、エンジンごとの「商用利用できるか？」への明確な回答、DockerやCIでCPMLを非対話的に承諾するための環境変数COQUI_TOS_AGREED、そして品質・速度・VRAM・ボイスクローニングにわたる比較を示します。音声をクラウドに送ることなく、本番環境でライセンスの落とし穴に陥ることなく、適切なエンジンを選べます。（ライセンスは2026年6月に検証済み。これは事実に基づく参考情報であり、法的助言ではありません。商用利用の前に必ず各ライセンスをご自身で確認してください。）',
+      'ローカルの音声合成エンジンを商用製品で使えるかどうかは、すべてライセンス次第であり、各エンジンのライセンスは大きく異なります。Piper（2025年以降GPL-3.0-or-later、MITではない）、Bark、StyleTTS 2はMIT、KokoroとTortoiseはApache 2.0で提供され、いずれも商用利用が無料です。Coqui TTSツールキットはMPL 2.0（条件付きで商用可）です。しかし最も人気のある2つのボイスクローニングモデルは制限されています：XTTS v2はCoqui Public Model License（CPML、非商用）、F5-TTSはCC-BY-NC-4.0（非商用）を採用しています。このガイドでは、各エンジンの正確なライセンス、エンジンごとの「商用利用できるか？」への明確な回答、DockerやCIでCPMLを非対話的に承諾するための環境変数COQUI_TOS_AGREED、そして品質・速度・VRAM・ボイスクローニングにわたる比較を示します。音声をクラウドに送ることなく、本番環境でライセンスの落とし穴に陥ることなく、適切なエンジンを選べます。（ライセンスは2026年6月に検証済み。これは事実に基づく参考情報であり、法的助言ではありません。商用利用の前に必ず各ライセンスをご自身で確認してください。）',
     metaDescription:
-      'XTTS v2の公式CPMLライセンス全文（非商用)、Hugging Faceへのリンク付き。Piper=MIT、F5-TTS=CC-BY-NC。ライセンス表とVRAM比較。2026年版。',
+      'XTTS v2の公式CPMLライセンス全文（非商用)、Hugging Faceへのリンク付き。Piper=GPL-3.0-or-later、F5-TTS=CC-BY-NC。ライセンス表とVRAM比較。2026年版。',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ja.webp',
     twitterDescription:
-      'ローカルTTSライセンス2026：どのボイスクローニングエンジンが商用利用できるか？Piper/Bark/StyleTTS 2（MIT）、Kokoro/Tortoise（Apache 2.0）、XTTS v2（CPML非商用）、F5-TTS（CC-BY-NC）。COQUI_TOS_AGREED環境変数も解説。すべてオフライン。',
+      'ローカルTTSライセンス2026：どのボイスクローニングエンジンが商用利用できるか？Piper（2025年以降GPL-3.0-or-later、MITではない）/Bark/StyleTTS 2（MIT）、Kokoro/Tortoise（Apache 2.0）、XTTS v2（CPML非商用）、F5-TTS（CC-BY-NC）。COQUI_TOS_AGREED環境変数も解説。すべてオフライン。',
     readTime: '16分で読める',
     educationalLevel: 'Intermediate',
     sections: {
@@ -1588,13 +1592,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piperは速度と組み込みアプリケーションの最良の選択です。** CPUのみで実行され、Raspberry Pi 5でリアルタイム音声を生成し、20+言語をダウンロード可能なボイスパックでサポートしています。GPU なし、Python の複雑性なし、MIT ライセンス。',
+          '**Piperは速度と組み込みアプリケーションの最良の選択です。** CPUのみで実行され、Raspberry Pi 5でリアルタイム音声を生成し、20+言語をダウンロード可能なボイスパックでサポートしています。GPU なし、Python の複雑性なし、GPL-3.0-or-laterライセンス（2025年にMITから再ライセンス）。',
           '**XTTS v2は2026年のローカルボイスクローニングの最良の選択ですが、非商用です。** 6秒の参照オーディオを与えると、17言語でボイスをクローンします（4–6 GB GPU VRAM）。CPMLライセンスは非商用であり、Coquiが閉鎖（2024年1月）して以降は商用ライセンスが販売されていないため、XTTS v2は非商用専用として扱ってください。DockerやCIでは`COQUI_TOS_AGREED=1`でCPMLを非対話的に承諾できます。',
           '**F5-TTSはゼロショットボイスクローニング向けの急速に成長している代替案です。** GPTの代わりにフローマッチングアーキテクチャを使用し、~3秒の参照オーディオからボイスをクローンし、より高速なインファレンスでXTTS v2に匹敵する品質を実現します。ライセンス：CC-BY-NC-4.0（非商用のみ）。',
           '**Coqui TTSはもっとも柔軟なオープンソースTTSツールキットです。** 複数のバックエンド（Tacotron2、VITS、XTTS）、ボイスクローニング、20+言語をMPL 2.0ライセンスでサポートしています。注：Coqui社は2024年1月に閉鎖されました。プロジェクトはコミュニティによって維持されています。',
           '**Barkは非言語オーディオを生成する唯一のローカルTTSです。** 笑い、咳、ため息、音楽スニペット、周囲音を音声と共に生成できます — クリエイティブオーディオ、ポッドキャスト制作、インタラクティブフィクションに有用です。',
           '**StyleTTS 2はすべてのオープンソース英語TTSエンジンの最高MOS（Mean Opinion Score）スコアを達成します。** 拡散ベースのスタイルトランスファーは英語ナレーションで準人間的な自然さを生成します。英語のみをサポートし、ボイスクローニングはありません。',
-          '**ライセンスが商用利用を決め、その線引きは明確です。** 商用製品に無料：Piper、Bark、StyleTTS 2（MIT）とKokoro、Tortoise（Apache 2.0）。条件付きで商用可：Coqui TTSツールキット（MPL 2.0、ツールキットの変更を開示）。非商用のみ：XTTS v2（CPML）とF5-TTS（CC-BY-NC-4.0） — いずれも別途の契約が必要です。商用のボイスクローニングにはTortoise（Apache 2.0）またはVITSバックエンドのCoquiツールキット（MPL 2.0）を使用してください。事実に基づく参考情報であり、法的助言ではありません。',
+          '**ライセンスが商用利用を決め、その線引きは明確です。** 商用製品に無料：Piper（2025年以降GPL-3.0-or-later、MITではない）、Bark、StyleTTS 2（MIT）とKokoro、Tortoise（Apache 2.0）。条件付きで商用可：Coqui TTSツールキット（MPL 2.0、ツールキットの変更を開示）。非商用のみ：XTTS v2（CPML）とF5-TTS（CC-BY-NC-4.0） — いずれも別途の契約が必要です。商用のボイスクローニングにはTortoise（Apache 2.0）またはVITSバックエンドのCoquiツールキット（MPL 2.0）を使用してください。事実に基づく参考情報であり、法的助言ではありません。',
           '**どれも大規模な商用TTS品質には相当しません。** ElevenLabs、Google Text-to-Speech、Azure Speech はまだ一貫性、自然さ、レイテンシーですべてのローカルエンジンを上回ります。プライバシー、コスト、またはオフライン運用が絶対品質より重要な場合は、ローカル TTS が正しい選択です。',
         ],
       },
@@ -1608,7 +1612,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**最も柔軟なオープンソースツールキット：** Coqui TTS — VITS、Tacotron2、XTTSバックエンドをサポート、20+言語モデル。',
           '**唯一の生成的オーディオ（非音声サウンド）：** Bark — 笑い声、ため息、音楽、環境音。最も遅い。',
           '**最高の英語ナレーション品質：** StyleTTS 2 — 拡散ベースのスタイル転送、LJSpeechベンチマークで人間に近いMOS。',
-          '**商用利用が無料：** Piper、Bark、StyleTTS 2（MIT）；Kokoro、Tortoise（Apache 2.0）；Coqui TTSツールキット（MPL 2.0、条件あり）。**非商用：** XTTS v2（CPML）、F5-TTS（CC-BY-NC-4.0）。',
+          '**商用利用が無料：** Piper（2025年以降GPL-3.0-or-later、MITではない）、Bark、StyleTTS 2（MIT）；Kokoro、Tortoise（Apache 2.0）；Coqui TTSツールキット（MPL 2.0、条件あり）。**非商用：** XTTS v2（CPML）、F5-TTS（CC-BY-NC-4.0）。',
           '**XTTS v2の音声と言語：** 固定の音声リストはありません — 6秒の参照クリップを与えると、その音声をクローンします。モデルには組み込みの話者プリセットが同梱されており、17言語で生成します：en、es、fr、de、it、pt、pl、tr、ru、nl、cs、ar、zh-cn、ja、hu、ko、hi。',
           '**XTTS v2のVRAM：** モデル重みは~2 GB；実行には最低4 GB、リアルタイム推論には4〜6 GB推奨。',
           '**CI/DockerでCPMLを承諾：** `export COQUI_TOS_AGREED=1` — 対話的なプロンプトは不要。',
@@ -1641,7 +1645,7 @@ snippetBlocks: [
         note: 'MOS（平均意見スコア）は1〜5のスケールで、5は人間の音声と区別がつかない。スコアは概算であり、公開されたベンチマークまたはコミュニティ評価に基づいています。MOSはテスト文と聴衆によって大きく異なります。人間参照MOS：約4.5。',
         columns: ['ツール', '品質', '速度', 'ボイスクローニング', '多言語', 'VRAM', 'ライセンス', 'MOS（英語）'],
         rows: [
-          { 'ツール': '[Piper](https://github.com/rhasspy/piper)', '品質': '良い', '速度': '非常に速い（CPU）', 'ボイスクローニング': 'なし', '多言語': 'あり（20+言語）', 'VRAM': 'CPUのみ', 'ライセンス': 'MIT', 'MOS（英語）': '~3.5' },
+          { 'ツール': '[Piper](https://github.com/rhasspy/piper)', '品質': '良い', '速度': '非常に速い（CPU）', 'ボイスクローニング': 'なし', '多言語': 'あり（20+言語）', 'VRAM': 'CPUのみ', 'ライセンス': 'GPL-3.0', 'MOS（英語）': '~3.5' },
           { 'ツール': '[Kokoro](https://github.com/hexgrad/kokoro)', '品質': '非常に良い', '速度': '速い（CPU）', 'ボイスクローニング': 'なし', '多言語': '英語 + 拡張中', 'VRAM': 'CPU / 1〜2 GB', 'ライセンス': 'Apache 2.0', 'MOS（英語）': '~4.0' },
           { 'ツール': '[Coqui TTS](https://github.com/coqui-ai/TTS)', '品質': '非常に良い', '速度': '中程度', 'ボイスクローニング': 'あり', '多言語': 'あり（20+言語）', 'VRAM': '2〜4 GB', 'ライセンス': 'MPL 2.0', 'MOS（英語）': '~3.8' },
           { 'ツール': '[XTTS v2](https://huggingface.co/coqui/XTTS-v2)', '品質': '優秀', '速度': '遅い', 'ボイスクローニング': 'あり（最高）', '多言語': 'あり（17言語）', 'VRAM': '4〜6 GB', 'ライセンス': 'CPML（非商用）', 'MOS（英語）': '~4.1' },
@@ -1774,14 +1778,14 @@ snippetBlocks: [
         title: 'ライセンスと商用利用 — このTTSエンジンを商用利用できるか？',
         content: 'ライセンスは本番利用において最も重要な要素であり、これらのエンジンを明確に2つのグループに分けます。寛容なライセンス（MIT、Apache 2.0）のエンジンは商用製品に自由に組み込めます。制限付きのエンジン（CPML、CC-BY-NC-4.0）は非商用であり、有料製品、SaaS、広告付きコンテンツ、クライアント業務で使うには別途の契約が必要です。下の表は各エンジンの正確なライセンスと「商用利用できるか？」への直接的な回答を示します。',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ja.webp',
-          imageCaption: 'Piper、Bark、StyleTTS 2は商用利用可能なMITライセンス;XTTS v2(CPML)とF5-TTS(CC-BY-NC)は非商用のみです。',
+          imageCaption: 'Piper（2025年以降GPL-3.0-or-later、MITではない）、Bark、StyleTTS 2は商用利用可能なMITライセンス;XTTS v2(CPML)とF5-TTS(CC-BY-NC)は非商用のみです。',
 snippetBlocks: [
-          { type: 'one-sentence', text: '商用製品でのローカルTTSには、Piper、Bark、StyleTTS 2（MIT）、KokoroとTortoise（Apache 2.0）、およびVITS/Tacotron2バックエンドのCoqui TTSツールキット（MPL 2.0）がいずれも許可されます；XTTS v2（CPML）とF5-TTS（CC-BY-NC-4.0）は非商用です。' },
+          { type: 'one-sentence', text: '商用製品でのローカルTTSには、Piper（2025年以降GPL-3.0-or-later、MITではない）、Bark、StyleTTS 2（MIT）、KokoroとTortoise（Apache 2.0）、およびVITS/Tacotron2バックエンドのCoqui TTSツールキット（MPL 2.0）がいずれも許可されます；XTTS v2（CPML）とF5-TTS（CC-BY-NC-4.0）は非商用です。' },
           { type: 'plain-terms', text: '最も人気のある2つのボイスクローニングモデル — XTTS v2とF5-TTS — は別途のライセンスなしに商用利用できません。商用のボイスクローニングには、Tortoise（Apache 2.0）またはVITSバックエンドのCoquiツールキット（MPL 2.0）が安全な選択です。' },
         ],
         columns: ['ツール', 'ライセンス', '商用利用可?', '主な条件'],
         rows: [
-          { 'ツール': '[Piper](https://github.com/rhasspy/piper)', 'ライセンス': 'MIT', '商用利用可?': 'はい — 制限なし', '主な条件': 'MIT表示を含める；音声ごとのモデルライセンスを確認' },
+          { 'ツール': '[Piper](https://github.com/rhasspy/piper)', 'ライセンス': 'GPL-3.0', '商用利用可?': 'はい — 条件付き', '主な条件': 'Piper自体への変更のソースを開示（2025年にMITから再ライセンス）' },
           { 'ツール': '[Kokoro](https://github.com/hexgrad/kokoro)', 'ライセンス': 'Apache 2.0', '商用利用可?': 'はい — 制限なし', '主な条件': 'Apache 2.0表示を含める' },
           { 'ツール': '[Coqui TTS（ツールキット）](https://github.com/coqui-ai/TTS)', 'ライセンス': 'MPL 2.0', '商用利用可?': 'はい — 条件あり', '主な条件': 'ツールキットファイルへの変更のソースを開示' },
           { 'ツール': '[XTTS v2（モデル）](https://huggingface.co/coqui/XTTS-v2)', 'ライセンス': 'CPML', '商用利用可?': 'いいえ — 非商用', '主な条件': '商用には契約が必要；Coqui閉鎖（2024年1月）以降は販売なし' },
@@ -1927,15 +1931,15 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'XTTS v2はリトアニア語に対応していますか？',
-            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。リトアニア語はこのリストに含まれておらず、追加の公式ロードマップもありません。リトアニア語の音声合成にはPiper（MIT）のボイスリポジトリにリトアニア語ボイスパックがあります — 対応状況はコミュニティ提供で変動するため、Hugging FaceのPiperボイス一覧で最新の有無を確認してください。',
+            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。リトアニア語はこのリストに含まれておらず、追加の公式ロードマップもありません。リトアニア語の音声合成にはPiper（GPL-3.0-or-later）のボイスリポジトリにリトアニア語ボイスパックがあります — 対応状況はコミュニティ提供で変動するため、Hugging FaceのPiperボイス一覧で最新の有無を確認してください。',
           },
           {
             q: 'XTTS v2はカザフ語に対応していますか？',
-            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。カザフ語はこのリストに含まれておらず、追加の公式ロードマップもありません。カザフ語の音声合成にはHugging FaceのPiper（MIT）ボイスリポジトリでコミュニティ提供の対応状況を確認してください — 対応状況は変動します。',
+            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。カザフ語はこのリストに含まれておらず、追加の公式ロードマップもありません。カザフ語の音声合成にはHugging FaceのPiper（GPL-3.0-or-later）ボイスリポジトリでコミュニティ提供の対応状況を確認してください — 対応状況は変動します。',
           },
           {
             q: 'XTTS v2はウクライナ語に対応していますか？',
-            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。ウクライナ語はこのリストに含まれておらず、追加の公式ロードマップもありません。ウクライナ語の音声合成にはHugging FaceのPiper（MIT）ボイスリポジトリでコミュニティ提供の対応状況を確認してください — 対応状況は変動します。',
+            a: 'いいえ。XTTS v2が対応するのは正確に17言語です：英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ポーランド語、トルコ語、ロシア語、オランダ語、チェコ語、アラビア語、中国語（zh-cn）、日本語、ハンガリー語、韓国語、ヒンディー語。ウクライナ語はこのリストに含まれておらず、追加の公式ロードマップもありません。ウクライナ語の音声合成にはHugging FaceのPiper（GPL-3.0-or-later）ボイスリポジトリでコミュニティ提供の対応状況を確認してください — 対応状況は変動します。',
           },
           {
             q: 'Coqui STTはCoqui TTSやXTTS v2と同じものですか？',
@@ -1974,6 +1978,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Coqui TTSレビュー](/ja/power-local-llm/coqui-tts-review) — 本ガイドで扱うCoqui TTSツールキットの専用レビュー。Coqui AI閉鎖後の保守状況も解説。',
           '[2026年の完全オフライン音声アシスタント構築](/ja/power-local-llm/build-local-voice-assistant-2026) — PiperまたはCoqui TTSをWhisper + LLM + TTSパイプラインの出力レイヤーとして使用。',
           '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison-2026) — 音声パイプラインの入力側。',
           '[ローカルマルチモーダルAIパイプライン2026](/ja/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 完全なマルチモーダルスタックの音声出力レイヤーとしてTTSを統合。',
@@ -1994,12 +1999,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: '本地TTS与声音克隆许可证2026：哪些引擎允许商业使用（Piper、XTTS v2、F5-TTS、Coqui）',
     seoTitle: 'XTTS v2官方许可证(CPML)：商用指南2026',
     intro:
-      '本地文字转语音引擎能否用于商业产品？这完全取决于许可证，而各引擎的许可证差异很大。Piper、Bark和StyleTTS 2采用MIT许可证，Kokoro和Tortoise采用Apache 2.0 — 四者均可免费商用。Coqui TTS工具包为MPL 2.0（商用有条件）。但两款最受欢迎的声音克隆模型受限：XTTS v2采用Coqui Public Model License（CPML，非商用），F5-TTS采用CC-BY-NC-4.0（非商用）。本指南给出每款引擎的确切许可证、明确的「能否商用？」答案、用于在Docker和CI中非交互式接受CPML的`COQUI_TOS_AGREED`环境变量，以及质量、速度、VRAM和声音克隆的逐项对比 — 让你无需将音频发送到云端、也不会在生产环境中遇到许可证意外，即可选对引擎。（许可证已于2026年6月核实；本文为事实参考，非法律意见 — 商用前请自行阅读各许可证。）',
+      '本地文字转语音引擎能否用于商业产品？这完全取决于许可证，而各引擎的许可证差异很大。Piper（自2025年起为GPL-3.0-or-later，而非MIT）、Bark和StyleTTS 2采用MIT许可证，Kokoro和Tortoise采用Apache 2.0 — 四者均可免费商用。Coqui TTS工具包为MPL 2.0（商用有条件）。但两款最受欢迎的声音克隆模型受限：XTTS v2采用Coqui Public Model License（CPML，非商用），F5-TTS采用CC-BY-NC-4.0（非商用）。本指南给出每款引擎的确切许可证、明确的「能否商用？」答案、用于在Docker和CI中非交互式接受CPML的`COQUI_TOS_AGREED`环境变量，以及质量、速度、VRAM和声音克隆的逐项对比 — 让你无需将音频发送到云端、也不会在生产环境中遇到许可证意外，即可选对引擎。（许可证已于2026年6月核实；本文为事实参考，非法律意见 — 商用前请自行阅读各许可证。）',
     metaDescription:
-      'XTTS v2的官方CPML许可证全文（非商业），链接自Hugging Face。Piper=MIT，F5-TTS=CC-BY-NC。含许可证对照表与VRAM对比。2026版。',
+      'XTTS v2的官方CPML许可证全文（非商业），链接自Hugging Face。Piper=GPL-3.0-or-later，F5-TTS=CC-BY-NC。含许可证对照表与VRAM对比。2026版。',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-zh.webp',
     twitterDescription:
-      '2026年本地TTS许可证：哪些声音克隆引擎允许商用？Piper/Bark/StyleTTS 2（MIT）、Kokoro/Tortoise（Apache 2.0）、XTTS v2（CPML非商用）、F5-TTS（CC-BY-NC）。外加COQUI_TOS_AGREED环境变量。全部离线。',
+      '2026年本地TTS许可证：哪些声音克隆引擎允许商用？Piper（自2025年起为GPL-3.0-or-later，而非MIT）/Bark/StyleTTS 2（MIT）、Kokoro/Tortoise（Apache 2.0）、XTTS v2（CPML非商用）、F5-TTS（CC-BY-NC）。外加COQUI_TOS_AGREED环境变量。全部离线。',
     readTime: '阅读约16分钟',
     educationalLevel: 'Intermediate',
     sections: {
@@ -2007,13 +2012,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper是速度和嵌入式应用的最佳选择。** 完全在CPU上运行，在Raspberry Pi 5上生成实时语音，通过可下载的语音包支持20+种语言。无GPU、无Python复杂性、MIT许可证。',
+          '**Piper是速度和嵌入式应用的最佳选择。** 完全在CPU上运行，在Raspberry Pi 5上生成实时语音，通过可下载的语音包支持20+种语言。无GPU、无Python复杂性、GPL-3.0-or-later许可证（2025年由MIT重新授权）。',
           '**XTTS v2是2026年本地声音克隆的最佳选择 — 但它是非商用的。** 输入6秒参考音频，它就能在17种语言中克隆声音（4–6 GB GPU VRAM）。CPML许可证为非商用，且自Coqui于2024年1月关闭后已无商业许可证可售 — 请将XTTS v2视为仅限非商用。在Docker/CI中用`COQUI_TOS_AGREED=1`非交互式接受CPML。',
           '**F5-TTS是零样本声音克隆领域快速增长的替代方案。** 它采用流匹配架构而非GPT，从~3秒参考音频克隆声音，实现与XTTS v2相当的质量但推理速度更快。许可证：CC-BY-NC-4.0（仅非商业）。',
           '**Coqui TTS是最灵活的开源TTS工具包。** 它支持多个后端（Tacotron2、VITS、XTTS）、声音克隆和20+种语言，采用MPL 2.0许可证。注：Coqui公司于2024年1月关闭；该项目现由社区维护。',
           '**Bark是唯一生成非语音音频的本地TTS。** 它可以在语音旁边生成笑声、咳嗽、叹气、音乐片段和环境声——适用于创意音频、播客制作和交互式小说。',
           '**StyleTTS 2达到所有开源英文TTS引擎中最高的MOS（平均意见得分）。** 其基于扩散的风格转移为英文叙述产生接近人类的自然效果。仅支持英文，无声音克隆。',
-          '**许可证决定商业使用 — 且界限清晰。** 可免费商用：Piper、Bark、StyleTTS 2（MIT）以及Kokoro、Tortoise（Apache 2.0）。商用有条件：Coqui TTS工具包（MPL 2.0，须披露对工具包的修改）。仅限非商用：XTTS v2（CPML）和F5-TTS（CC-BY-NC-4.0） — 两者均需单独协议。商业声音克隆请用Tortoise（Apache 2.0）或基于VITS后端的Coqui工具包（MPL 2.0）。本文为事实参考，非法律意见。',
+          '**许可证决定商业使用 — 且界限清晰。** 可免费商用：Piper（自2025年起为GPL-3.0-or-later，而非MIT）、Bark、StyleTTS 2（MIT）以及Kokoro、Tortoise（Apache 2.0）。商用有条件：Coqui TTS工具包（MPL 2.0，须披露对工具包的修改）。仅限非商用：XTTS v2（CPML）和F5-TTS（CC-BY-NC-4.0） — 两者均需单独协议。商业声音克隆请用Tortoise（Apache 2.0）或基于VITS后端的Coqui工具包（MPL 2.0）。本文为事实参考，非法律意见。',
           '**都无法与大规模商业TTS质量相媲美。** ElevenLabs、Google Text-to-Speech和Azure Speech在一致性、自然度和延迟方面仍然超过所有本地引擎。当隐私、成本或离线操作比绝对质量更重要时，本地TTS是正确选择。',
         ],
       },
@@ -2027,7 +2032,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**最灵活的开源工具包：** Coqui TTS — 支持VITS、Tacotron2、XTTS后端，20+语言模型。',
           '**唯一的生成式音频（非语音声音）：** Bark — 笑声、叹气、音乐、环境声。所有引擎中最慢。',
           '**最佳英语朗读质量：** StyleTTS 2 — 基于扩散的风格转移，在LJSpeech基准测试中接近人类MOS。',
-          '**可免费商用：** Piper、Bark、StyleTTS 2（MIT）；Kokoro、Tortoise（Apache 2.0）；Coqui TTS工具包（MPL 2.0，有条件）。**非商用：** XTTS v2（CPML）、F5-TTS（CC-BY-NC-4.0）。',
+          '**可免费商用：** Piper（自2025年起为GPL-3.0-or-later，而非MIT）、Bark、StyleTTS 2（MIT）；Kokoro、Tortoise（Apache 2.0）；Coqui TTS工具包（MPL 2.0，有条件）。**非商用：** XTTS v2（CPML）、F5-TTS（CC-BY-NC-4.0）。',
           '**XTTS v2的声音与语言：** 无固定声音列表 — 你提供一段6秒参考音频，它便克隆该声音。模型附带内置说话人预设，并能生成17种语言：en、es、fr、de、it、pt、pl、tr、ru、nl、cs、ar、zh-cn、ja、hu、ko、hi。',
           '**XTTS v2 VRAM：** 模型权重约2 GB；运行最低4 GB，实时推理推荐4–6 GB。',
           '**在CI/Docker中接受CPML：** `export COQUI_TOS_AGREED=1` — 无需交互式提示。',
@@ -2060,7 +2065,7 @@ snippetBlocks: [
         note: 'MOS（平均意见得分）在1〜5的量表上，5表示与人类语音无法区分。分数是近似值，基于已发布的基准测试或社区评估。MOS因测试句子和听众群体而有显著差异。人类参考MOS：约4.5。',
         columns: ['工具', '质量', '速度', '声音克隆', '多语言', 'VRAM', '许可证', 'MOS（英语）'],
         rows: [
-          { '工具': '[Piper](https://github.com/rhasspy/piper)', '质量': '良好', '速度': '非常快（CPU）', '声音克隆': '否', '多语言': '是（20+语言）', 'VRAM': '仅CPU', '许可证': 'MIT', 'MOS（英语）': '~3.5' },
+          { '工具': '[Piper](https://github.com/rhasspy/piper)', '质量': '良好', '速度': '非常快（CPU）', '声音克隆': '否', '多语言': '是（20+语言）', 'VRAM': '仅CPU', '许可证': 'GPL-3.0', 'MOS（英语）': '~3.5' },
           { '工具': '[Kokoro](https://github.com/hexgrad/kokoro)', '质量': '很好', '速度': '快（CPU）', '声音克隆': '否', '多语言': '英语 + 扩展中', 'VRAM': 'CPU / 1〜2 GB', '许可证': 'Apache 2.0', 'MOS（英语）': '~4.0' },
           { '工具': '[Coqui TTS](https://github.com/coqui-ai/TTS)', '质量': '很好', '速度': '中等', '声音克隆': '是', '多语言': '是（20+语言）', 'VRAM': '2〜4 GB', '许可证': 'MPL 2.0', 'MOS（英语）': '~3.8' },
           { '工具': '[XTTS v2](https://huggingface.co/coqui/XTTS-v2)', '质量': '优秀', '速度': '慢', '声音克隆': '是（最佳）', '多语言': '是（17种语言）', 'VRAM': '4〜6 GB', '许可证': 'CPML（非商用）', 'MOS（英语）': '~4.1' },
@@ -2194,14 +2199,14 @@ snippetBlocks: [
         title: '许可证与商业使用 — 我能商用这款TTS引擎吗？',
         content: '许可证是生产使用中最重要的单一因素，它把这些引擎清晰地分成两类。宽松许可证的引擎（MIT、Apache 2.0）可以自由地装入商业产品发布。受限引擎（CPML、CC-BY-NC-4.0）为非商用 — 将其用于付费产品、SaaS、广告支持内容或客户工作需要单独的协议。下表给出每款引擎的确切许可证及直接的「我能商用吗？」答案。',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-zh.webp',
-          imageCaption: 'Piper、Bark和StyleTTS 2采用MIT许可,可商用;XTTS v2(CPML)和F5-TTS(CC-BY-NC)则不可商用。',
+          imageCaption: 'Piper（自2025年起为GPL-3.0-or-later，而非MIT）、Bark和StyleTTS 2采用MIT许可,可商用;XTTS v2(CPML)和F5-TTS(CC-BY-NC)则不可商用。',
 snippetBlocks: [
-          { type: 'one-sentence', text: '在商业产品中使用本地TTS：Piper、Bark、StyleTTS 2（MIT）、Kokoro和Tortoise（Apache 2.0），以及基于VITS/Tacotron2后端的Coqui TTS工具包（MPL 2.0）均被允许；XTTS v2（CPML）和F5-TTS（CC-BY-NC-4.0）为非商用。' },
+          { type: 'one-sentence', text: '在商业产品中使用本地TTS：Piper（自2025年起为GPL-3.0-or-later，而非MIT）、Bark、StyleTTS 2（MIT）、Kokoro和Tortoise（Apache 2.0），以及基于VITS/Tacotron2后端的Coqui TTS工具包（MPL 2.0）均被允许；XTTS v2（CPML）和F5-TTS（CC-BY-NC-4.0）为非商用。' },
           { type: 'plain-terms', text: '两款最受欢迎的声音克隆模型 — XTTS v2和F5-TTS — 未经单独许可证不能商用。商业声音克隆请选择Tortoise（Apache 2.0）或基于VITS后端的Coqui工具包（MPL 2.0）。' },
         ],
         columns: ['工具', '许可证', '商业使用？', '主要条件'],
         rows: [
-          { '工具': '[Piper](https://github.com/rhasspy/piper)', '许可证': 'MIT', '商业使用？': '是 — 无限制', '主要条件': '包含MIT声明；检查每个语音模型的许可证' },
+          { '工具': '[Piper](https://github.com/rhasspy/piper)', '许可证': 'GPL-3.0', '商业使用？': '是 — 有条件', '主要条件': '公开对Piper自身的修改源代码（2025年由MIT重新授权）' },
           { '工具': '[Kokoro](https://github.com/hexgrad/kokoro)', '许可证': 'Apache 2.0', '商业使用？': '是 — 无限制', '主要条件': '包含Apache 2.0声明' },
           { '工具': '[Coqui TTS（工具包）](https://github.com/coqui-ai/TTS)', '许可证': 'MPL 2.0', '商业使用？': '是 — 有条件', '主要条件': '披露对工具包文件的任何修改的源代码' },
           { '工具': '[XTTS v2（模型）](https://huggingface.co/coqui/XTTS-v2)', '许可证': 'CPML', '商业使用？': '否 — 非商用', '主要条件': '商用需协议；自Coqui关闭（2024年1月）后无协议可售' },
@@ -2305,7 +2310,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**需要带有非语音声音的创意音频？** → Bark。没有其他本地引擎能原生产生笑声、叹息或音乐。',
           '**需要最佳英语朗读质量？** → StyleTTS 2。',
           '**需要多语言支持？** → XTTS v2（17种语言），Coqui（20+），Piper（20+语音包）。',
-          '**需要完全商业化的MIT许可证？** → Piper、Bark或StyleTTS 2。',
+          '**需要完全商业化的宽松许可证？** → Bark或StyleTTS 2（均为MIT）。Piper自2025年起为GPL-3.0-or-later（Copyleft，不再是MIT）——见许可证与成本。',
           '**构建语音助手管道？** → 使用Piper实现低延迟TTS输出。',
         ],
       },
@@ -2319,7 +2324,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: '我可以在商业产品中使用Piper TTS吗？',
-            a: '可以。Piper在MIT许可证下授权，允许无限制的商业使用。您必须在产品中包含MIT许可证声明。语音模型（ONNX文件）可能具有单个语音的单独许可证。',
+            a: '可以，但有条件。自2025年重新授权后，目前积极维护的Piper仓库采用GPL-3.0-or-later许可证（不再是MIT——MIT是现已存档的原始仓库的许可证）。Piper仍可用于商业用途，但GPL-3.0要求：如果你分发对Piper自身代码的修改，必须以相同许可证公开其源代码；未经修改、作为外部工具调用通常限制较少。语音模型（ONNX文件）可能具有单个语音的单独许可证。',
           },
           {
             q: '哪个本地TTS引擎具有最佳的多语言支持？',
@@ -2343,19 +2348,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro与Piper — 该用哪款轻量级CPU TTS？',
-            a: '两者都在CPU上无需GPU快速运行，且都采用宽松许可证（Piper为MIT，Kokoro为Apache 2.0），因此都可安全商用。当你需要最低延迟和最广的语言覆盖（20+种语言语音包，在Raspberry Pi 5上实时）时选Piper — 它是嵌入式和智能家居语音的标准。当你想要比Piper更高的自然度、且能接受略多的算力时选Kokoro（一个基于StyleTTS 2架构构建的82M参数模型）；其英语质量更接近较重的GPU引擎。Raspberry Pi或常驻助手用Piper；质量比毫秒更重要的桌面/服务器朗读用Kokoro。',
+            a: '两者都在CPU上无需GPU快速运行，且都采用宽松许可证（Piper自2025年重新授权后为GPL-3.0-or-later，Kokoro为Apache 2.0），因此都可安全商用。当你需要最低延迟和最广的语言覆盖（20+种语言语音包，在Raspberry Pi 5上实时）时选Piper — 它是嵌入式和智能家居语音的标准。当你想要比Piper更高的自然度、且能接受略多的算力时选Kokoro（一个基于StyleTTS 2架构构建的82M参数模型）；其英语质量更接近较重的GPU引擎。Raspberry Pi或常驻助手用Piper；质量比毫秒更重要的桌面/服务器朗读用Kokoro。',
           },
           {
             q: 'XTTS v2支持立陶宛语吗？',
-            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。立陶宛语不在此列表中，目前也没有官方计划添加它。若需要立陶宛语文本转语音，Piper（MIT）的语音仓库中提供立陶宛语语音包——由于该仓库内容由社区贡献且会变化，请在Hugging Face上的Piper语音列表中查看当前可用情况。',
+            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。立陶宛语不在此列表中，目前也没有官方计划添加它。若需要立陶宛语文本转语音，Piper（GPL-3.0-or-later）的语音仓库中提供立陶宛语语音包——由于该仓库内容由社区贡献且会变化，请在Hugging Face上的Piper语音列表中查看当前可用情况。',
           },
           {
             q: 'XTTS v2支持哈萨克语吗？',
-            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。哈萨克语不在此列表中，目前也没有官方计划添加它。若需要哈萨克语文本转语音，请在Hugging Face上的Piper（MIT）语音仓库查看社区贡献的当前覆盖情况——可用性会随时间变化。',
+            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。哈萨克语不在此列表中，目前也没有官方计划添加它。若需要哈萨克语文本转语音，请在Hugging Face上的Piper（GPL-3.0-or-later）语音仓库查看社区贡献的当前覆盖情况——可用性会随时间变化。',
           },
           {
             q: 'XTTS v2支持乌克兰语吗？',
-            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。乌克兰语不在此列表中，目前也没有官方计划添加它。若需要乌克兰语文本转语音，请在Hugging Face上的Piper（MIT）语音仓库查看社区贡献的当前覆盖情况——可用性会随时间变化。',
+            a: '不支持。XTTS v2恰好支持17种语言：英语、西班牙语、法语、德语、意大利语、葡萄牙语、波兰语、土耳其语、俄语、荷兰语、捷克语、阿拉伯语、中文（zh-cn）、日语、匈牙利语、韩语和印地语。乌克兰语不在此列表中，目前也没有官方计划添加它。若需要乌克兰语文本转语音，请在Hugging Face上的Piper（GPL-3.0-or-later）语音仓库查看社区贡献的当前覆盖情况——可用性会随时间变化。',
           },
           {
             q: 'Coqui STT与Coqui TTS或XTTS v2是同一个项目吗？',
@@ -2394,6 +2399,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Coqui TTS评测](/zh/power-local-llm/coqui-tts-review) — 本指南中提到的Coqui TTS工具包的专门评测,包括Coqui AI关闭后的维护状态。',
           '[2026年构建完全离线语音助手](/zh/power-local-llm/build-local-voice-assistant-2026) — 将Piper或Coqui TTS用作完整Whisper + LLM + TTS管道的输出层。',
           '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 语音管道的输入侧。',
           '[本地多模态AI管道2026](/zh/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 将TTS集成为完整多模态栈的语音输出层。',
@@ -2414,12 +2420,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'Licencias de TTS local y clonación de voz 2026: qué motores permiten uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'Licencia oficial Coqui XTTS v2 (CPML): uso comercial 2026',
     intro:
-      '¿Puedes usar un motor de síntesis de voz local en un producto comercial? Depende por completo de la licencia, y las licencias difieren marcadamente. Piper, Bark y StyleTTS 2 se distribuyen bajo MIT, Kokoro y Tortoise bajo Apache 2.0 — los cuatro libres para uso comercial. El kit de herramientas Coqui TTS es MPL 2.0 (comercial con condiciones). Pero los dos modelos de clonación de voz más populares están restringidos: XTTS v2 usa la Coqui Public Model License (CPML, no comercial) y F5-TTS usa CC-BY-NC-4.0 (no comercial). Esta guía da la licencia exacta de cada motor, una respuesta clara a "¿puedo usar esto comercialmente?" por motor, la variable de entorno COQUI_TOS_AGREED para aceptar la CPML de forma no interactiva en Docker y CI, y una comparación directa en calidad, velocidad, VRAM y clonación de voz — para que elijas el motor correcto sin enviar audio a la nube y sin una sorpresa de licencia en producción. (Licencias verificadas en junio de 2026; esto es referencia factual, no asesoramiento legal — lee cada licencia tú mismo antes del uso comercial.)',
+      '¿Puedes usar un motor de síntesis de voz local en un producto comercial? Depende por completo de la licencia, y las licencias difieren marcadamente. Piper (GPL-3.0-or-later desde 2025, no MIT), Bark y StyleTTS 2 se distribuyen bajo MIT, Kokoro y Tortoise bajo Apache 2.0 — los cuatro libres para uso comercial. El kit de herramientas Coqui TTS es MPL 2.0 (comercial con condiciones). Pero los dos modelos de clonación de voz más populares están restringidos: XTTS v2 usa la Coqui Public Model License (CPML, no comercial) y F5-TTS usa CC-BY-NC-4.0 (no comercial). Esta guía da la licencia exacta de cada motor, una respuesta clara a "¿puedo usar esto comercialmente?" por motor, la variable de entorno COQUI_TOS_AGREED para aceptar la CPML de forma no interactiva en Docker y CI, y una comparación directa en calidad, velocidad, VRAM y clonación de voz — para que elijas el motor correcto sin enviar audio a la nube y sin una sorpresa de licencia en producción. (Licencias verificadas en junio de 2026; esto es referencia factual, no asesoramiento legal — lee cada licencia tú mismo antes del uso comercial.)',
     metaDescription:
-      'Texto oficial de la licencia CPML de XTTS v2 (no comercial), enlazado desde Hugging Face. Piper=MIT, F5-TTS=CC-BY-NC. Tabla de licencias, comparativa VRAM.',
+      'Texto oficial de la licencia CPML de XTTS v2 (no comercial), enlazado desde Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tabla de licencias, comparativa VRAM.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-es.webp',
     twitterDescription:
-      'Licencias TTS local 2026: ¿qué motores de clonación de voz permiten uso comercial? Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML no comercial), F5-TTS (CC-BY-NC). Más la variable COQUI_TOS_AGREED. Todo offline.',
+      'Licencias TTS local 2026: ¿qué motores de clonación de voz permiten uso comercial? Piper (GPL-3.0-or-later desde 2025, no MIT)/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML no comercial), F5-TTS (CC-BY-NC). Más la variable COQUI_TOS_AGREED. Todo offline.',
     audience:
       'Desarrolladores, creadores, creadores de contenido y usuarios centrados en la privacidad que quieren síntesis de voz y clonación de voz sin costos de API en la nube ni exposición de datos.',
     readTime: '14 min de lectura',
@@ -2460,18 +2466,18 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       'RTX 4070',
     ],
     leadAnswerBlock:
-      '**Para uso comercial, elige un motor TTS local con licencia permisiva: Piper, Bark y StyleTTS 2 son MIT; Kokoro y Tortoise son Apache 2.0 — todos libres para productos comerciales.** El kit de herramientas Coqui TTS es MPL 2.0 (comercial permitido si divulgas los cambios al código fuente del kit). El detalle está en los dos modelos de clonación de voz más conocidos: **XTTS v2 es no comercial bajo la Coqui Public Model License (CPML)** y **F5-TTS es no comercial bajo CC-BY-NC-4.0** — ambos prohíben el uso comercial sin un acuerdo separado, y como Coqui Inc cerró en enero de 2024 actualmente no hay nadie que venda una licencia comercial de XTTS v2, así que trátalo como solo no comercial. En cuanto a capacidad: Piper es el más rápido en CPU (tiempo real en una Raspberry Pi 5, sin GPU); XTTS v2 es el clon de voz de mayor calidad (6 segundos de audio de referencia → 17 idiomas, 4–6 GB de VRAM); F5-TTS clona a partir de ~3 segundos con inferencia de flow-matching más rápida; Bark genera de forma única risas, suspiros y sonido ambiental; StyleTTS 2 tiene la narración en inglés más natural (sin clonación); Tortoise es de muy alta calidad pero extremadamente lento. Esto es referencia factual, no asesoramiento legal — verifica cada licencia tú mismo antes de un despliegue comercial.',
+      '**Para uso comercial, elige un motor TTS local con licencia permisiva: Piper (GPL-3.0-or-later desde 2025, no MIT), Bark y StyleTTS 2 son MIT; Kokoro y Tortoise son Apache 2.0 — todos libres para productos comerciales.** El kit de herramientas Coqui TTS es MPL 2.0 (comercial permitido si divulgas los cambios al código fuente del kit). El detalle está en los dos modelos de clonación de voz más conocidos: **XTTS v2 es no comercial bajo la Coqui Public Model License (CPML)** y **F5-TTS es no comercial bajo CC-BY-NC-4.0** — ambos prohíben el uso comercial sin un acuerdo separado, y como Coqui Inc cerró en enero de 2024 actualmente no hay nadie que venda una licencia comercial de XTTS v2, así que trátalo como solo no comercial. En cuanto a capacidad: Piper es el más rápido en CPU (tiempo real en una Raspberry Pi 5, sin GPU); XTTS v2 es el clon de voz de mayor calidad (6 segundos de audio de referencia → 17 idiomas, 4–6 GB de VRAM); F5-TTS clona a partir de ~3 segundos con inferencia de flow-matching más rápida; Bark genera de forma única risas, suspiros y sonido ambiental; StyleTTS 2 tiene la narración en inglés más natural (sin clonación); Tortoise es de muy alta calidad pero extremadamente lento. Esto es referencia factual, no asesoramiento legal — verifica cada licencia tú mismo antes de un despliegue comercial.',
     quickAnswerTop: {
       es: {
         question: '¿Qué motores TTS locales puedo usar comercialmente en 2026?',
         answer:
-          'Para uso comercial, elige un motor con licencia permisiva: Piper, Bark y StyleTTS 2 (MIT) y Kokoro y Tortoise (Apache 2.0) son todos libres para productos comerciales; el kit de herramientas Coqui TTS (MPL 2.0) es comercial con condiciones de divulgación de código fuente. Los dos modelos de clonación de voz más populares NO son libres para uso comercial: XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) son ambos no comerciales. En cuanto a capacidad, Piper es el más rápido en CPU, XTTS v2 tiene la mejor calidad de clonación (necesita 4–6 GB de VRAM) y F5-TTS clona a partir de ~3 segundos con inferencia más rápida. Esto es referencia factual, no asesoramiento legal.',
+          'Para uso comercial, elige un motor con licencia permisiva: Piper (GPL-3.0-or-later desde 2025, no MIT), Bark y StyleTTS 2 (MIT) y Kokoro y Tortoise (Apache 2.0) son todos libres para productos comerciales; el kit de herramientas Coqui TTS (MPL 2.0) es comercial con condiciones de divulgación de código fuente. Los dos modelos de clonación de voz más populares NO son libres para uso comercial: XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) son ambos no comerciales. En cuanto a capacidad, Piper es el más rápido en CPU, XTTS v2 tiene la mejor calidad de clonación (necesita 4–6 GB de VRAM) y F5-TTS clona a partir de ~3 segundos con inferencia más rápida. Esto es referencia factual, no asesoramiento legal.',
         bullets: [
-          'Libre para uso comercial → Piper (MIT), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Kit Coqui TTS (MPL 2.0): comercial OK con condiciones de divulgación de código fuente.',
+          'Libre para uso comercial → Piper (GPL-3.0-or-later), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Kit Coqui TTS (MPL 2.0): comercial OK con condiciones de divulgación de código fuente.',
           'NO libre para uso comercial → XTTS v2 (CPML, no comercial) y F5-TTS (CC-BY-NC-4.0, no comercial). Ambos necesitan un acuerdo separado; XTTS v2 no tiene vendedor desde que Coqui cerró (enero de 2024).',
           'Mejor calidad de clonación → XTTS v2. 6 segundos de audio → clon en 17 idiomas, 4–6 GB de VRAM. Licencia: CPML (no comercial). Acepta la CPML de forma no interactiva en Docker/CI con COQUI_TOS_AGREED=1.',
           'Clonación zero-shot, más rápida + arquitectura más nueva → F5-TTS. ~3 segundos de audio, flow-matching, CC-BY-NC-4.0 (no comercial).',
-          'Velocidad en CPU / Raspberry Pi → Piper (MIT). Kokoro (Apache 2.0) es una alternativa en CPU de mayor calidad.',
+          'Velocidad en CPU / Raspberry Pi → Piper (GPL-3.0-or-later). Kokoro (Apache 2.0) es una alternativa en CPU de mayor calidad.',
           'Mejor narración en inglés → StyleTTS 2 (MIT). La clonación offline de mayor calidad que es apta para uso comercial → Tortoise (Apache 2.0), pero muy lento (minutos por frase).',
           'Audio creativo (risas, música, ambiente) → Bark (MIT). Lento y generativo.',
           'Todos los motores son 100% offline — sin claves API, sin datos de audio enviados a la nube.',
@@ -2505,13 +2511,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper es la elección correcta para velocidad y uso embebido.** Funciona completamente en CPU, produce voz en tiempo real en una Raspberry Pi 5 y admite más de 20 idiomas mediante paquetes de voz descargables. Sin GPU, sin complejidad en Python, licencia MIT.',
+          '**Piper es la elección correcta para velocidad y uso embebido.** Funciona completamente en CPU, produce voz en tiempo real en una Raspberry Pi 5 y admite más de 20 idiomas mediante paquetes de voz descargables. Sin GPU, sin complejidad en Python, licencia GPL-3.0-or-later (desde una relicencia de 2025, antes MIT).',
           '**XTTS v2 es la mejor opción de clonación de voz local en 2026 — pero es no comercial.** Dale 6 segundos de audio de referencia y clona la voz en 17 idiomas (4–6 GB de VRAM en GPU). La licencia CPML es no comercial, y desde que Coqui cerró (enero de 2024) no hay ninguna licencia comercial a la venta — trata XTTS v2 como solo no comercial. Acepta la CPML de forma no interactiva en Docker/CI con `COQUI_TOS_AGREED=1`.',
           '**F5-TTS es la alternativa de crecimiento más rápido para clonación de voz zero-shot.** Usa una arquitectura de flow-matching en lugar de GPT, clona una voz a partir de ~3 segundos de audio de referencia y logra calidad competitiva con XTTS v2 a velocidades de inferencia más rápidas. Licencia: CC-BY-NC-4.0 (no comercial).',
           '**Coqui TTS es el kit de herramientas TTS open source más flexible.** Admite múltiples backends (Tacotron2, VITS, XTTS), clonación de voz y más de 20 idiomas bajo licencia MPL 2.0. Nota: la empresa Coqui cerró en enero de 2024; el proyecto ahora lo mantiene la comunidad.',
           '**Bark es el único TTS local que genera audio no hablado.** Puede producir risas, tos, suspiros, fragmentos musicales y efectos de sonido ambientales junto al habla — útil para audio creativo, producción de podcasts y ficción interactiva. Sus salidas son lentas y no deterministas.',
           '**StyleTTS 2 logra las puntuaciones MOS (mean opinion score) más altas de cualquier motor TTS en inglés open source.** Su transferencia de estilo basada en difusión produce naturalidad casi humana en narración en inglés. Solo admite inglés y no tiene clonación de voz.',
-          '**La licencia decide el uso comercial — y la división es clara.** Libre para productos comerciales: Piper, Bark, StyleTTS 2 (MIT) y Kokoro, Tortoise (Apache 2.0). Comercial con condiciones: kit de herramientas Coqui TTS (MPL 2.0, divulga las modificaciones del kit). Solo no comercial: XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) — ambos necesitan un acuerdo separado. Para clonación de voz comercial, usa Tortoise (Apache 2.0) o el kit Coqui sobre un backend VITS (MPL 2.0). Referencia factual, no asesoramiento legal.',
+          '**La licencia decide el uso comercial — y la división es clara.** Libre para productos comerciales: Piper (GPL-3.0-or-later desde 2025, no MIT), Bark, StyleTTS 2 (MIT) y Kokoro, Tortoise (Apache 2.0). Comercial con condiciones: kit de herramientas Coqui TTS (MPL 2.0, divulga las modificaciones del kit). Solo no comercial: XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) — ambos necesitan un acuerdo separado. Para clonación de voz comercial, usa Tortoise (Apache 2.0) o el kit Coqui sobre un backend VITS (MPL 2.0). Referencia factual, no asesoramiento legal.',
           '**Ninguno iguala la calidad de un TTS comercial a escala.** ElevenLabs, Google Text-to-Speech y Azure TTS aún superan a los motores locales en consistencia, naturalidad y latencia en todos los casos de uso. El TTS local es la elección correcta cuando la privacidad, el costo o la operación offline importan más que la calidad absoluta.',
         ],
       },
@@ -2525,7 +2531,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Kit de herramientas open source más flexible:** Coqui TTS — admite backends VITS, Tacotron2, XTTS, más de 20 modelos de idioma.',
           '**Único audio generativo (sonidos no hablados):** Bark — risas, suspiros, música, ambiente. El más lento de todos.',
           '**Mejor calidad de narración en inglés:** StyleTTS 2 — transferencia de estilo basada en difusión, MOS casi humano en el benchmark LJSpeech.',
-          '**Libre para uso comercial:** Piper, Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); kit de herramientas Coqui TTS (MPL 2.0, con condiciones). **No comercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
+          '**Libre para uso comercial:** Piper (GPL-3.0-or-later desde 2025, no MIT), Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); kit de herramientas Coqui TTS (MPL 2.0, con condiciones). **No comercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
           '**Voces e idiomas de XTTS v2:** Sin lista fija de voces — proporcionas un clip de referencia de 6 segundos y clona esa voz. El modelo incluye preajustes de hablante integrados, y genera en 17 idiomas: en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**VRAM de XTTS v2:** ~2 GB de pesos del modelo; 4 GB mínimo para ejecutar, 4–6 GB recomendados para inferencia en tiempo real.',
           '**Aceptar la CPML en CI/Docker:** `export COQUI_TOS_AGREED=1` — sin prompt interactivo necesario.',
@@ -2832,11 +2838,11 @@ tts.tts_to_file(
         content:
           'La licencia es el factor más importante para el uso en producción, y divide estos motores limpiamente en dos grupos. Los motores con licencia permisiva (MIT, Apache 2.0) son libres de distribuir en un producto comercial. Los motores restringidos (CPML, CC-BY-NC-4.0) son no comerciales — usarlos en un producto de pago, SaaS, contenido con publicidad o trabajo para clientes requiere un acuerdo separado. La tabla siguiente da la licencia exacta y una respuesta directa a "¿puedo usar esto comercialmente?" para cada motor.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-es.webp',
-          imageCaption: 'Piper, Bark y StyleTTS 2 tienen licencia MIT para uso comercial; XTTS v2 (CPML) y F5-TTS (CC-BY-NC) no la tienen.',
+          imageCaption: 'Piper (GPL-3.0-or-later desde 2025, no MIT), Bark y StyleTTS 2 tienen licencia MIT para uso comercial; XTTS v2 (CPML) y F5-TTS (CC-BY-NC) no la tienen.',
 snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para TTS local en un producto comercial, Piper, Bark y StyleTTS 2 (MIT), Kokoro y Tortoise (Apache 2.0), y el kit de herramientas Coqui TTS sobre un backend VITS/Tacotron2 (MPL 2.0) están todos permitidos; XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) son no comerciales.',
+            text: 'Para TTS local en un producto comercial, Piper (GPL-3.0-or-later desde 2025, no MIT), Bark y StyleTTS 2 (MIT), Kokoro y Tortoise (Apache 2.0), y el kit de herramientas Coqui TTS sobre un backend VITS/Tacotron2 (MPL 2.0) están todos permitidos; XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) son no comerciales.',
           },
           {
             type: 'plain-terms',
@@ -2847,9 +2853,9 @@ snippetBlocks: [
         rows: [
           {
             'Herramienta': '[Piper](https://github.com/rhasspy/piper)',
-            'Licencia': 'MIT',
-            '¿Comercial?': 'Sí — sin restricciones',
-            'Condición principal': 'Incluir aviso MIT; revisar la licencia del modelo de cada voz',
+            'Licencia': 'GPL-3.0',
+            '¿Comercial?': 'Sí — con condiciones',
+            'Condición principal': 'Divulgar el código fuente de las modificaciones a Piper (relicencia de MIT en 2025)',
           },
           {
             'Herramienta': '[Kokoro](https://github.com/hexgrad/kokoro)',
@@ -3013,7 +3019,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**¿Necesitas audio creativo con sonidos no hablados?** → Bark. Ningún otro motor local produce risas, suspiros o música de forma nativa.',
           '**¿Necesitas la mejor calidad de narración en inglés?** → StyleTTS 2. Supera a todos los demás en naturalidad para habla estilo audiolibro en inglés.',
           '**¿Necesitas soporte multilingüe?** → XTTS v2 (17 idiomas, clonación multilingüe), Coqui (20+ idiomas), Piper (20+ paquetes de idioma).',
-          '**¿Necesitas una licencia MIT completamente comercial?** → Piper, Bark o StyleTTS 2. Evita XTTS v2 para uso comercial sin revisar el CPML. F5-TTS (CC-BY-NC-4.0) también prohíbe el uso comercial sin acuerdo separado.',
+          '**¿Necesitas una licencia permisiva completamente comercial?** → Bark o StyleTTS 2 (ambas MIT). Piper es GPL-3.0-or-later desde 2025 (copyleft, ya no MIT) — revisa Licencia y coste. Evita XTTS v2 para uso comercial sin revisar el CPML. F5-TTS (CC-BY-NC-4.0) también prohíbe el uso comercial sin acuerdo separado.',
           '**¿Necesitas control de voz mediante descripción de texto?** → Parler-TTS. Describe la voz que quieres ("un hombre mayor tranquilo hablando despacio") y genera habla con esas características. Sin audio de referencia necesario. [GitHub](https://github.com/huggingface/parler-tts)',
           '**¿Construyendo un pipeline de asistente de voz?** → Piper para salida TTS de baja latencia (ver /es/power-local-llm/build-local-voice-assistant-2026).',
         ],
@@ -3028,7 +3034,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: '¿Puedo usar Piper TTS en un producto comercial?',
-            a: 'Sí. Piper está licenciado bajo MIT, que permite uso comercial ilimitado. Debes incluir el aviso de licencia MIT en tu producto. Los modelos de voz (archivos ONNX) pueden tener licencias separadas por voz — revisa la licencia de cada modelo de voz en el repositorio de Piper voices antes de desplegar.',
+            a: 'Sí, con condiciones. Desde una relicencia en 2025, el repositorio de Piper activamente mantenido está bajo GPL-3.0-or-later (ya no MIT, la licencia del repositorio original ahora archivado). Piper sigue siendo usable comercialmente, pero GPL-3.0 exige divulgar el código fuente de tus propias modificaciones a Piper si las distribuyes bajo la misma licencia; usarlo sin modificar como herramienta externa suele ser menos restrictivo. Los modelos de voz (archivos ONNX) pueden tener licencias separadas por voz — revisa la licencia de cada modelo de voz en el repositorio de Piper voices antes de desplegar.',
           },
           {
             q: '¿Coqui TTS sigue mantenido después de que la empresa cerró?',
@@ -3068,19 +3074,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — ¿qué TTS ligero en CPU debo usar?',
-            a: 'Ambos funcionan rápido en CPU sin GPU y ambos tienen licencias permisivas (Piper es MIT, Kokoro es Apache 2.0), así que cualquiera es seguro para uso comercial. Elige Piper cuando necesites la latencia más baja y la mayor cobertura de idiomas (más de 20 paquetes de voz por idioma, tiempo real en una Raspberry Pi 5) — es el estándar para voz embebida y de smart home. Elige Kokoro (un modelo de 82M de parámetros construido sobre la arquitectura StyleTTS 2) cuando quieras mayor naturalidad que Piper y puedas aceptar un poco más de cómputo; su calidad en inglés se acerca a la de los motores más pesados con GPU. Para una Raspberry Pi o un asistente siempre activo, Piper; para una lectura en voz alta en escritorio/servidor donde la calidad importa más que los milisegundos, Kokoro.',
+            a: 'Ambos funcionan rápido en CPU sin GPU y ambos tienen licencias permisivas (Piper es GPL-3.0-or-later desde una relicencia de 2025, Kokoro es Apache 2.0), así que cualquiera es seguro para uso comercial. Elige Piper cuando necesites la latencia más baja y la mayor cobertura de idiomas (más de 20 paquetes de voz por idioma, tiempo real en una Raspberry Pi 5) — es el estándar para voz embebida y de smart home. Elige Kokoro (un modelo de 82M de parámetros construido sobre la arquitectura StyleTTS 2) cuando quieras mayor naturalidad que Piper y puedas aceptar un poco más de cómputo; su calidad en inglés se acerca a la de los motores más pesados con GPU. Para una Raspberry Pi o un asistente siempre activo, Piper; para una lectura en voz alta en escritorio/servidor donde la calidad importa más que los milisegundos, Kokoro.',
           },
           {
             q: '¿XTTS v2 admite el lituano?',
-            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El lituano no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en lituano, Piper (MIT) tiene un paquete de voz en lituano en su repositorio de voces — consulta el listado de voces de Piper en Hugging Face para ver la disponibilidad actual, ya que la cobertura allí depende de contribuciones de la comunidad y cambia con el tiempo.',
+            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El lituano no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en lituano, Piper (GPL-3.0-or-later) tiene un paquete de voz en lituano en su repositorio de voces — consulta el listado de voces de Piper en Hugging Face para ver la disponibilidad actual, ya que la cobertura allí depende de contribuciones de la comunidad y cambia con el tiempo.',
           },
           {
             q: '¿XTTS v2 admite el kazajo?',
-            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El kazajo no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en kazajo, consulta el repositorio de voces de Piper (MIT) en Hugging Face para ver la cobertura comunitaria actual — la disponibilidad cambia con el tiempo.',
+            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El kazajo no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en kazajo, consulta el repositorio de voces de Piper (GPL-3.0-or-later) en Hugging Face para ver la cobertura comunitaria actual — la disponibilidad cambia con el tiempo.',
           },
           {
             q: '¿XTTS v2 admite el ucraniano?',
-            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El ucraniano no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en ucraniano, consulta el repositorio de voces de Piper (MIT) en Hugging Face para ver la cobertura comunitaria actual — la disponibilidad cambia con el tiempo.',
+            a: 'No. XTTS v2 admite exactamente 17 idiomas: inglés, español, francés, alemán, italiano, portugués, polaco, turco, ruso, neerlandés, checo, árabe, chino (zh-cn), japonés, húngaro, coreano e hindi. El ucraniano no está en esa lista y no hay una hoja de ruta oficial para añadirlo. Para texto a voz en ucraniano, consulta el repositorio de voces de Piper (GPL-3.0-or-later) en Hugging Face para ver la cobertura comunitaria actual — la disponibilidad cambia con el tiempo.',
           },
           {
             q: '¿Coqui STT es lo mismo que Coqui TTS o XTTS v2?',
@@ -3109,6 +3115,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
+          '[Análisis de Coqui TTS](/es/power-local-llm/coqui-tts-review) — un análisis dedicado del kit Coqui TTS cubierto en esta guía, incluido su estado de mantenimiento tras el cierre de Coqui AI.',
           '[Construye un asistente de voz completamente offline en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — Usa Piper o Coqui TTS como capa de salida de un pipeline completo de Whisper + LLM + TTS.',
           '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026) — El lado de entrada de un pipeline de voz: STT para complementar el TTS.',
           '[Pipeline de IA multimodal local 2026](/es/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integra el TTS como capa de salida de voz de un stack multimodal completo.',
@@ -3122,7 +3129,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
        '@context': 'https://schema.org',
        '@type': 'TechArticle',
        headline: 'Licencias de TTS local y clonación de voz 2026: qué motores permiten uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
-       description: '¿Qué motores TTS locales permiten uso comercial? Licencias de Piper (MIT), XTTS v2 (CPML), F5-TTS (CC-BY-NC) y Coqui, más la variable COQUI_TOS_AGREED. Guía 2026.',
+       description: '¿Qué motores TTS locales permiten uso comercial? Licencias de Piper (GPL-3.0-or-later), XTTS v2 (CPML), F5-TTS (CC-BY-NC) y Coqui, más la variable COQUI_TOS_AGREED. Guía 2026.',
        url: 'https://www.promptquorum.com/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
        inLanguage: 'es',
        datePublished: '2026-05-24',
@@ -3141,10 +3148,10 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     theme: 'Voice, Speech & Multimodal',
     title: '로컬 TTS 및 음성 복제 라이선스 2026: 상업적 사용이 가능한 엔진 (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'XTTS v2 공식 라이선스(CPML): 상업적 이용 2026',
-    intro: '로컬 음성 합성 엔진을 상업용 제품에 사용할 수 있을까요? 그것은 전적으로 라이선스에 달려 있으며, 라이선스는 엔진마다 크게 다릅니다. Piper, Bark, StyleTTS 2는 MIT, Kokoro와 Tortoise는 Apache 2.0으로 배포되며 — 이 네 가지 모두 상업적 사용이 무료입니다. Coqui TTS 툴킷은 MPL 2.0(조건부 상업적 사용)입니다. 하지만 가장 인기 있는 두 음성 복제 모델은 제한적입니다. XTTS v2는 Coqui Public Model License(CPML, 비상업용)를 사용하고, F5-TTS는 CC-BY-NC-4.0(비상업용)을 사용합니다. 이 가이드는 각 엔진의 정확한 라이선스, 엔진별 "상업적으로 사용할 수 있는가?"에 대한 명확한 답변, Docker 및 CI에서 CPML을 비대화형으로 수락하기 위한 COQUI_TOS_AGREED 환경 변수, 그리고 품질, 속도, VRAM, 음성 복제 전반의 직접 비교를 제공합니다 — 따라서 오디오를 클라우드로 보내지 않고도, 그리고 프로덕션에서 라이선스 문제에 놀라지 않고도 올바른 엔진을 선택할 수 있습니다. (라이선스는 2026년 6월에 확인했습니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다 — 상업적 사용 전에 각 라이선스를 직접 읽으십시오.)',
-    metaDescription: 'XTTS v2의 공식 CPML 라이선스 전문(비상업용), Hugging Face 링크 포함. Piper=MIT, F5-TTS=CC-BY-NC. 라이선스 표와 VRAM 비교.',
+    intro: '로컬 음성 합성 엔진을 상업용 제품에 사용할 수 있을까요? 그것은 전적으로 라이선스에 달려 있으며, 라이선스는 엔진마다 크게 다릅니다. Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2는 MIT, Kokoro와 Tortoise는 Apache 2.0으로 배포되며 — 이 네 가지 모두 상업적 사용이 무료입니다. Coqui TTS 툴킷은 MPL 2.0(조건부 상업적 사용)입니다. 하지만 가장 인기 있는 두 음성 복제 모델은 제한적입니다. XTTS v2는 Coqui Public Model License(CPML, 비상업용)를 사용하고, F5-TTS는 CC-BY-NC-4.0(비상업용)을 사용합니다. 이 가이드는 각 엔진의 정확한 라이선스, 엔진별 "상업적으로 사용할 수 있는가?"에 대한 명확한 답변, Docker 및 CI에서 CPML을 비대화형으로 수락하기 위한 COQUI_TOS_AGREED 환경 변수, 그리고 품질, 속도, VRAM, 음성 복제 전반의 직접 비교를 제공합니다 — 따라서 오디오를 클라우드로 보내지 않고도, 그리고 프로덕션에서 라이선스 문제에 놀라지 않고도 올바른 엔진을 선택할 수 있습니다. (라이선스는 2026년 6월에 확인했습니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다 — 상업적 사용 전에 각 라이선스를 직접 읽으십시오.)',
+    metaDescription: 'XTTS v2의 공식 CPML 라이선스 전문(비상업용), Hugging Face 링크 포함. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. 라이선스 표와 VRAM 비교.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ko.webp',
-    twitterDescription: '로컬 TTS 라이선스 2026: 상업적 사용이 가능한 음성 복제 엔진은? Piper/Bark/StyleTTS 2(MIT), Kokoro/Tortoise(Apache 2.0), XTTS v2(CPML 비상업용), F5-TTS(CC-BY-NC). COQUI_TOS_AGREED 환경 변수 포함. 모두 오프라인.',
+    twitterDescription: '로컬 TTS 라이선스 2026: 상업적 사용이 가능한 음성 복제 엔진은? Piper(2025년부터 GPL-3.0-or-later, MIT 아님)/Bark/StyleTTS 2(MIT), Kokoro/Tortoise(Apache 2.0), XTTS v2(CPML 비상업용), F5-TTS(CC-BY-NC). COQUI_TOS_AGREED 환경 변수 포함. 모두 오프라인.',
     audience: '클라우드 API 비용이나 데이터 노출 없이 음성 합성 및 음성 복제를 원하는 개발자, 크리에이터, 콘텐츠 제작자 및 프라이버시 중심 사용자.',
     readTime: '14분 분량',
     educationalLevel: 'Intermediate',
@@ -3152,17 +3159,17 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     targetKeywords: ['로컬 TTS 2026', '최고의 로컬 TTS', '로컬 음성 복제', 'piper vs coqui', 'XTTS v2 음성 복제', 'F5-TTS 음성 복제', 'F5-TTS 로컬', '오프라인 음성 복제', 'bark TTS', 'StyleTTS 2', 'piper TTS 설정', 'coqui TTS 오프라인'],
     current_models_mentioned: ['Piper TTS', 'Coqui TTS', 'XTTS v2', 'F5-TTS', 'Bark', 'StyleTTS 2', 'Kokoro TTS', 'Tortoise TTS'],
     current_hardware_mentioned: ['CPU (x86/ARM)', 'Raspberry Pi', '2–4 GB GPU', '3–5 GB GPU', '4–6 GB GPU', '4–8 GB GPU', 'Apple M5 Pro', 'RTX 4070'],
-    leadAnswerBlock: '**상업적 사용에는 허용적 라이선스를 가진 로컬 TTS 엔진을 선택하십시오. Piper, Bark, StyleTTS 2는 MIT이고, Kokoro와 Tortoise는 Apache 2.0입니다 — 모두 상업용 제품에 무료입니다.** Coqui TTS 툴킷은 MPL 2.0(툴킷 소스에 대한 수정 사항을 공개하면 상업적 사용 허용)입니다. 가장 잘 알려진 두 음성 복제 모델이 함정입니다. **XTTS v2는 Coqui Public Model License(CPML)에 따라 비상업용**이고 **F5-TTS는 CC-BY-NC-4.0에 따라 비상업용**입니다 — 둘 다 별도 계약 없이는 상업적 사용이 금지되며, Coqui Inc가 2024년 1월에 문을 닫았기 때문에 현재 XTTS v2 상업용 라이선스를 판매할 곳이 없으므로 비상업용으로만 취급하십시오. 기능 측면에서: Piper는 CPU에서 가장 빠르며(Raspberry Pi 5에서 실시간, GPU 불필요), XTTS v2는 최고 품질의 음성 복제(6초의 참조 오디오 → 17개 언어, 4~6 GB VRAM)이고, F5-TTS는 ~3초에서 더 빠른 flow-matching 추론으로 복제하며, Bark는 웃음, 한숨, 환경음을 독특하게 생성하고, StyleTTS 2는 가장 자연스러운 영어 내레이션(복제 없음)을 가지며, Tortoise는 매우 높은 품질이지만 극도로 느립니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다 — 상업적 배포 전에 각 라이선스를 직접 확인하십시오.',
+    leadAnswerBlock: '**상업적 사용에는 허용적 라이선스를 가진 로컬 TTS 엔진을 선택하십시오. Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2는 MIT이고, Kokoro와 Tortoise는 Apache 2.0입니다 — 모두 상업용 제품에 무료입니다.** Coqui TTS 툴킷은 MPL 2.0(툴킷 소스에 대한 수정 사항을 공개하면 상업적 사용 허용)입니다. 가장 잘 알려진 두 음성 복제 모델이 함정입니다. **XTTS v2는 Coqui Public Model License(CPML)에 따라 비상업용**이고 **F5-TTS는 CC-BY-NC-4.0에 따라 비상업용**입니다 — 둘 다 별도 계약 없이는 상업적 사용이 금지되며, Coqui Inc가 2024년 1월에 문을 닫았기 때문에 현재 XTTS v2 상업용 라이선스를 판매할 곳이 없으므로 비상업용으로만 취급하십시오. 기능 측면에서: Piper는 CPU에서 가장 빠르며(Raspberry Pi 5에서 실시간, GPU 불필요), XTTS v2는 최고 품질의 음성 복제(6초의 참조 오디오 → 17개 언어, 4~6 GB VRAM)이고, F5-TTS는 ~3초에서 더 빠른 flow-matching 추론으로 복제하며, Bark는 웃음, 한숨, 환경음을 독특하게 생성하고, StyleTTS 2는 가장 자연스러운 영어 내레이션(복제 없음)을 가지며, Tortoise는 매우 높은 품질이지만 극도로 느립니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다 — 상업적 배포 전에 각 라이선스를 직접 확인하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년에 어떤 로컬 TTS 엔진을 상업적으로 사용할 수 있습니까?',
-        answer: '상업적 사용에는 허용적 라이선스의 엔진을 선택하십시오. Piper, Bark, StyleTTS 2(MIT)와 Kokoro, Tortoise(Apache 2.0)는 모두 상업용 제품에 무료입니다. Coqui TTS 툴킷(MPL 2.0)은 소스 공개 조건으로 상업적 사용이 가능합니다. 가장 인기 있는 두 음성 복제 모델은 상업적 사용이 무료가 아닙니다. XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0)는 둘 다 비상업용입니다. 기능 측면에서 Piper는 CPU에서 가장 빠르고, XTTS v2는 최고의 복제 품질을 가지며(4~6 GB VRAM 필요), F5-TTS는 더 빠른 추론으로 ~3초에서 복제합니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다.',
+        answer: '상업적 사용에는 허용적 라이선스의 엔진을 선택하십시오. Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2(MIT)와 Kokoro, Tortoise(Apache 2.0)는 모두 상업용 제품에 무료입니다. Coqui TTS 툴킷(MPL 2.0)은 소스 공개 조건으로 상업적 사용이 가능합니다. 가장 인기 있는 두 음성 복제 모델은 상업적 사용이 무료가 아닙니다. XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0)는 둘 다 비상업용입니다. 기능 측면에서 Piper는 CPU에서 가장 빠르고, XTTS v2는 최고의 복제 품질을 가지며(4~6 GB VRAM 필요), F5-TTS는 더 빠른 추론으로 ~3초에서 복제합니다. 이는 사실 참고 자료이며 법률 자문이 아닙니다.',
         bullets: [
-          '상업적 사용 무료 → Piper(MIT), Bark(MIT), StyleTTS 2(MIT), Kokoro(Apache 2.0), Tortoise(Apache 2.0). Coqui TTS 툴킷(MPL 2.0): 소스 공개 조건으로 상업적 사용 가능.',
+          '상업적 사용 무료 → Piper(GPL-3.0-or-later), Bark(MIT), StyleTTS 2(MIT), Kokoro(Apache 2.0), Tortoise(Apache 2.0). Coqui TTS 툴킷(MPL 2.0): 소스 공개 조건으로 상업적 사용 가능.',
           '상업적 사용 불가 → XTTS v2(CPML, 비상업용)와 F5-TTS(CC-BY-NC-4.0, 비상업용). 둘 다 별도 계약 필요. XTTS v2는 Coqui가 문을 닫은(2024년 1월) 후 판매처가 없습니다.',
           '최고의 복제 품질 → XTTS v2. 6초의 오디오 → 17개 언어로 복제, 4~6 GB VRAM. 라이선스: CPML(비상업용). Docker/CI에서 COQUI_TOS_AGREED=1로 CPML을 비대화형으로 수락합니다.',
           'Zero-shot 복제, 더 빠르고 새로운 아키텍처 → F5-TTS. ~3초의 오디오, flow-matching, CC-BY-NC-4.0(비상업용).',
-          'CPU / Raspberry Pi에서의 속도 → Piper(MIT). Kokoro(Apache 2.0)는 더 높은 품질의 CPU 대안입니다.',
+          'CPU / Raspberry Pi에서의 속도 → Piper(GPL-3.0-or-later). Kokoro(Apache 2.0)는 더 높은 품질의 CPU 대안입니다.',
           '최고의 영어 내레이션 → StyleTTS 2(MIT). 상업적으로 친화적인 최고 품질의 오프라인 복제 → Tortoise(Apache 2.0), 단 매우 느림(문장당 수 분).',
           '창의적 오디오(웃음, 음악, 환경음) → Bark(MIT). 느리고 생성적.',
           '모든 엔진은 100% 오프라인 — API 키 불필요, 오디오 데이터가 클라우드로 전송되지 않습니다.',
@@ -3196,13 +3203,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper는 속도와 임베디드 사용에 올바른 선택입니다.** 완전히 CPU에서 동작하며, Raspberry Pi 5에서 실시간으로 음성을 생성하고 다운로드 가능한 음성 패키지를 통해 20개 이상의 언어를 지원합니다. MIT 라이선스.',
+          '**Piper는 속도와 임베디드 사용에 올바른 선택입니다.** 완전히 CPU에서 동작하며, Raspberry Pi 5에서 실시간으로 음성을 생성하고 다운로드 가능한 음성 패키지를 통해 20개 이상의 언어를 지원합니다. GPL-3.0-or-later 라이선스(2025년에 MIT에서 재라이선스).',
           '**XTTS v2는 2026년 최고의 로컬 음성 복제 옵션입니다 — 하지만 비상업용입니다.** 6초의 참조 오디오로 17개 언어에서 음성을 복제합니다(GPU 4~6 GB VRAM). CPML 라이선스는 비상업용이며, Coqui가 문을 닫은(2024년 1월) 이후 상업용 라이선스를 판매하지 않으므로 — XTTS v2를 비상업용으로만 취급하십시오. Docker/CI에서 `COQUI_TOS_AGREED=1`로 CPML을 비대화형으로 수락합니다.',
           '**F5-TTS는 zero-shot 음성 복제에서 가장 빠르게 성장하는 대안입니다.** GPT 대신 flow-matching 아키텍처를 사용하며, ~3초의 참조 오디오로 음성을 복제하고, 더 빠른 추론 속도로 XTTS v2와 경쟁적인 품질을 달성합니다. 라이선스: CC-BY-NC-4.0(비상업용).',
           '**Coqui TTS는 가장 유연한 오픈소스 TTS 툴킷입니다.** MPL 2.0 라이선스 하에 다양한 백엔드(Tacotron2, VITS, XTTS), 음성 복제, 20개 이상의 언어를 지원합니다. 참고: Coqui 회사는 2024년 1월에 문을 닫았으며, 프로젝트는 현재 커뮤니티에서 유지 관리합니다.',
           '**Bark는 비음성 오디오를 생성하는 유일한 로컬 TTS입니다.** 음성과 함께 웃음, 기침, 한숨, 음악 조각, 환경 음향 효과를 생성할 수 있습니다 — 창의적 오디오, 팟캐스트 제작, 인터랙티브 픽션에 유용합니다. 출력이 느리고 비결정적입니다.',
           '**StyleTTS 2는 오픈소스 영어 TTS 엔진 중 가장 높은 MOS를 달성합니다.** 확산 기반 스타일 전달이 영어 내레이션에서 거의 인간에 가까운 자연스러움을 생성합니다. 영어 전용이며 음성 복제를 지원하지 않습니다.',
-          '**라이선스가 상업적 사용을 결정하며 — 구분은 명확합니다.** 상업용 제품에 무료: Piper, Bark, StyleTTS 2(MIT)와 Kokoro, Tortoise(Apache 2.0). 조건부 상업적: Coqui TTS 툴킷(MPL 2.0, 툴킷 수정 사항 공개). 비상업용만: XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0) — 둘 다 별도 계약 필요. 상업적 음성 복제에는 Tortoise(Apache 2.0) 또는 VITS 백엔드의 Coqui 툴킷(MPL 2.0)을 사용하십시오. 사실 참고 자료이며 법률 자문이 아닙니다.',
+          '**라이선스가 상업적 사용을 결정하며 — 구분은 명확합니다.** 상업용 제품에 무료: Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2(MIT)와 Kokoro, Tortoise(Apache 2.0). 조건부 상업적: Coqui TTS 툴킷(MPL 2.0, 툴킷 수정 사항 공개). 비상업용만: XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0) — 둘 다 별도 계약 필요. 상업적 음성 복제에는 Tortoise(Apache 2.0) 또는 VITS 백엔드의 Coqui 툴킷(MPL 2.0)을 사용하십시오. 사실 참고 자료이며 법률 자문이 아닙니다.',
           '**어떤 엔진도 대규모 상업적 TTS의 품질과 동등하지 않습니다.** ElevenLabs, Google TTS, Azure TTS는 여전히 로컬 엔진을 능가합니다. 로컬 TTS는 프라이버시, 비용, 오프라인 운영이 중요할 때 올바른 선택입니다.',
         ],
       },
@@ -3216,7 +3223,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**가장 유연한 오픈소스 툴킷:** Coqui TTS — VITS, Tacotron2, XTTS 백엔드 지원, 20개 이상의 언어 모델.',
           '**유일한 생성적 오디오:** Bark — 웃음, 한숨, 음악, 환경음. 모든 엔진 중 가장 느림.',
           '**최고의 영어 내레이션 품질:** StyleTTS 2 — 확산 기반 스타일 전달, LJSpeech 벤치마크에서 거의 인간에 가까운 MOS.',
-          '**상업적 사용 무료:** Piper, Bark, StyleTTS 2(MIT); Kokoro, Tortoise(Apache 2.0); Coqui TTS 툴킷(MPL 2.0, 조건부). **비상업용:** XTTS v2(CPML), F5-TTS(CC-BY-NC-4.0).',
+          '**상업적 사용 무료:** Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2(MIT); Kokoro, Tortoise(Apache 2.0); Coqui TTS 툴킷(MPL 2.0, 조건부). **비상업용:** XTTS v2(CPML), F5-TTS(CC-BY-NC-4.0).',
           '**XTTS v2 음성 및 언어:** 고정된 음성 목록이 없습니다 — 6초의 참조 클립을 제공하면 그 음성을 복제합니다. 모델에는 내장 화자 프리셋이 함께 제공되며, 17개 언어로 생성합니다: en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**XTTS v2 VRAM:** 모델 가중치 ~2 GB; 실행에 최소 4 GB, 실시간 추론에 4~6 GB 권장.',
           '**CI/Docker에서 CPML 수락:** `export COQUI_TOS_AGREED=1` — 대화형 프롬프트가 필요 없습니다.',
@@ -3255,7 +3262,7 @@ snippetBlocks: [
         note: 'MOS(mean opinion score)는 1~5 척도로 5가 인간 음성과 구별할 수 없음을 의미합니다. 점수는 근사치이며 공개된 벤치마크 또는 커뮤니티 평가를 기반으로 합니다. 인간 참조 MOS: ~4.5.',
         columns: ['도구', '품질', '속도', '음성 복제', '다국어', 'VRAM', '라이선스', 'MOS(영어)'],
         rows: [
-          { '도구': '[Piper](https://github.com/rhasspy/piper)', '품질': '좋음', '속도': '매우 빠름(CPU)', '음성 복제': '없음', '다국어': '예(20개+ 언어)', 'VRAM': 'CPU 전용', '라이선스': 'MIT', 'MOS(영어)': '~3.5' },
+          { '도구': '[Piper](https://github.com/rhasspy/piper)', '품질': '좋음', '속도': '매우 빠름(CPU)', '음성 복제': '없음', '다국어': '예(20개+ 언어)', 'VRAM': 'CPU 전용', '라이선스': 'GPL-3.0', 'MOS(영어)': '~3.5' },
           { '도구': '[Kokoro](https://github.com/hexgrad/kokoro)', '품질': '매우 좋음', '속도': '빠름(CPU)', '음성 복제': '없음', '다국어': '영어 + 확장 중', 'VRAM': 'CPU / 1~2 GB', '라이선스': 'Apache 2.0', 'MOS(영어)': '~4.0' },
           { '도구': '[Coqui TTS](https://github.com/coqui-ai/TTS)', '품질': '매우 좋음', '속도': '보통', '음성 복제': '있음', '다국어': '예(20개+ 언어)', 'VRAM': '2~4 GB', '라이선스': 'MPL 2.0', 'MOS(영어)': '~3.8' },
           { '도구': '[XTTS v2](https://huggingface.co/coqui/XTTS-v2)', '품질': '우수', '속도': '느림', '음성 복제': '있음(최고)', '다국어': '예(17개 언어)', 'VRAM': '4~6 GB', '라이선스': 'CPML(비상업용)', 'MOS(영어)': '~4.1' },
@@ -3383,11 +3390,11 @@ snippetBlocks: [
         title: '라이선스 및 상업적 사용 — 이 TTS 엔진을 상업적으로 사용할 수 있습니까?',
         content: '라이선스는 프로덕션 사용에서 가장 중요한 단일 요소이며, 이 엔진들을 명확하게 두 그룹으로 나눕니다. 허용적 라이선스 엔진(MIT, Apache 2.0)은 상업용 제품에 무료로 출시할 수 있습니다. 제한된 엔진(CPML, CC-BY-NC-4.0)은 비상업용입니다 — 유료 제품, SaaS, 광고 지원 콘텐츠 또는 클라이언트 작업에 사용하려면 별도 계약이 필요합니다. 아래 표는 각 엔진의 정확한 라이선스와 "상업적으로 사용할 수 있는가?"에 대한 직접적인 답변을 제공합니다.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ko.webp',
-          imageCaption: 'Piper, Bark, StyleTTS 2는 상업적 사용이 가능한 MIT 라이선스이며, XTTS v2(CPML)와 F5-TTS(CC-BY-NC)는 그렇지 않습니다.',
+          imageCaption: 'Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2는 상업적 사용이 가능한 MIT 라이선스이며, XTTS v2(CPML)와 F5-TTS(CC-BY-NC)는 그렇지 않습니다.',
 snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '상업용 제품의 로컬 TTS의 경우 Piper, Bark, StyleTTS 2(MIT), Kokoro와 Tortoise(Apache 2.0), 그리고 VITS/Tacotron2 백엔드의 Coqui TTS 툴킷(MPL 2.0)이 모두 허용됩니다. XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0)는 비상업용입니다.',
+            text: '상업용 제품의 로컬 TTS의 경우 Piper(2025년부터 GPL-3.0-or-later, MIT 아님), Bark, StyleTTS 2(MIT), Kokoro와 Tortoise(Apache 2.0), 그리고 VITS/Tacotron2 백엔드의 Coqui TTS 툴킷(MPL 2.0)이 모두 허용됩니다. XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0)는 비상업용입니다.',
           },
           {
             type: 'plain-terms',
@@ -3396,7 +3403,7 @@ snippetBlocks: [
         ],
         columns: ['도구', '라이선스', '상업적 가능?', '주요 조건'],
         rows: [
-          { '도구': '[Piper](https://github.com/rhasspy/piper)', '라이선스': 'MIT', '상업적 가능?': '예 — 제한 없음', '주요 조건': 'MIT 고지 포함; 음성별 모델 라이선스 확인' },
+          { '도구': '[Piper](https://github.com/rhasspy/piper)', '라이선스': 'GPL-3.0', '상업적 가능?': '예 — 조건부', '주요 조건': 'Piper 자체 수정 사항의 소스 코드 공개(2025년 MIT에서 재라이선스)' },
           { '도구': '[Kokoro](https://github.com/hexgrad/kokoro)', '라이선스': 'Apache 2.0', '상업적 가능?': '예 — 제한 없음', '주요 조건': 'Apache 2.0 고지 포함' },
           { '도구': '[Coqui TTS (툴킷)](https://github.com/coqui-ai/TTS)', '라이선스': 'MPL 2.0', '상업적 가능?': '예 — 조건 있음', '주요 조건': '툴킷 파일에 대한 수정 사항의 소스 공개' },
           { '도구': '[XTTS v2 (모델)](https://huggingface.co/coqui/XTTS-v2)', '라이선스': 'CPML', '상업적 가능?': '아니오 — 비상업용', '주요 조건': '상업용에는 계약 필요; Coqui가 문을 닫은(2024년 1월) 이후 판매처 없음' },
@@ -3511,7 +3518,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**비음성 사운드가 있는 창의적 오디오가 필요합니까?** → Bark.',
           '**최고의 영어 내레이션 품질이 필요합니까?** → StyleTTS 2.',
           '**다국어 지원이 필요합니까?** → XTTS v2(17개 언어, 다국어 복제), Coqui(20개+ 언어), Piper(20개+ 언어 패키지).',
-          '**완전히 상업적인 MIT 라이선스가 필요합니까?** → Piper, Bark 또는 StyleTTS 2.',
+          '**완전히 상업적인 허용적 라이선스가 필요합니까?** → Bark 또는 StyleTTS 2(둘 다 MIT). Piper는 2025년부터 GPL-3.0-or-later(카피레프트, 더 이상 MIT 아님)입니다 — 라이선스 및 비용 섹션 참고.',
           '**음성 어시스턴트 파이프라인을 구축 중입니까?** → 낮은 지연 시간 TTS 출력을 위해 Piper를 사용하십시오(/ko/power-local-llm/build-local-voice-assistant-2026 참조).',
         ],
       },
@@ -3525,7 +3532,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Piper TTS를 상업적 제품에 사용할 수 있습니까?',
-            a: '예. Piper는 MIT 라이선스로 제한 없는 상업적 사용이 허용됩니다. 음성 모델(ONNX 파일)은 음성별로 별도 라이선스가 있을 수 있으므로 배포 전 확인하십시오.',
+            a: '예, 조건부로 가능합니다. 2025년 재라이선스 이후 실제로 관리되는 Piper 저장소는 GPL-3.0-or-later 라이선스입니다(더 이상 MIT가 아니며, MIT는 지금은 보관 처리된 원래 저장소의 라이선스였습니다). 상업적으로 사용할 수 있지만, GPL-3.0은 Piper 자체에 대한 수정 사항을 배포할 경우 동일한 라이선스로 소스를 공개할 것을 요구합니다. 수정 없이 외부 도구로 사용하는 경우에는 대체로 문제가 적습니다. 음성 모델(ONNX 파일)은 음성별로 별도 라이선스가 있을 수 있으므로 배포 전 확인하십시오.',
           },
           {
             q: '회사가 문을 닫은 후에도 Coqui TTS가 유지 관리됩니까?',
@@ -3565,19 +3572,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — 어떤 경량 CPU TTS를 사용해야 합니까?',
-            a: '둘 다 GPU 없이 CPU에서 빠르게 동작하며 둘 다 허용적 라이선스(Piper는 MIT, Kokoro는 Apache 2.0)이므로 어느 쪽이든 상업적 사용이 안전합니다. 가장 낮은 지연 시간과 가장 넓은 언어 범위가 필요한 경우(20개 이상의 언어 패키지, Raspberry Pi 5에서 실시간) Piper를 선택하십시오 — 임베디드 및 스마트홈 음성의 표준입니다. Piper보다 더 자연스러운 음질을 원하고 약간 더 많은 연산을 허용할 수 있다면 Kokoro(StyleTTS 2 아키텍처 기반의 8200만 파라미터 모델)를 선택하십시오. 영어 품질이 더 무거운 GPU 엔진에 가깝습니다. Raspberry Pi 또는 항상 켜진 어시스턴트에는 Piper, 밀리초보다 품질이 더 중요한 데스크톱/서버 낭독에는 Kokoro를 사용하십시오.',
+            a: '둘 다 GPU 없이 CPU에서 빠르게 동작하며 둘 다 허용적 라이선스(Piper는 2025년 재라이선스 이후 GPL-3.0-or-later, Kokoro는 Apache 2.0)이므로 어느 쪽이든 상업적 사용이 안전합니다. 가장 낮은 지연 시간과 가장 넓은 언어 범위가 필요한 경우(20개 이상의 언어 패키지, Raspberry Pi 5에서 실시간) Piper를 선택하십시오 — 임베디드 및 스마트홈 음성의 표준입니다. Piper보다 더 자연스러운 음질을 원하고 약간 더 많은 연산을 허용할 수 있다면 Kokoro(StyleTTS 2 아키텍처 기반의 8200만 파라미터 모델)를 선택하십시오. 영어 품질이 더 무거운 GPU 엔진에 가깝습니다. Raspberry Pi 또는 항상 켜진 어시스턴트에는 Piper, 밀리초보다 품질이 더 중요한 데스크톱/서버 낭독에는 Kokoro를 사용하십시오.',
           },
           {
             q: 'XTTS v2는 리투아니아어를 지원합니까?',
-            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 리투아니아어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 리투아니아어 음성 합성이 필요하다면 Piper(MIT)의 음성 저장소에 리투아니아어 음성 팩이 있습니다 — 해당 저장소는 커뮤니티 기여로 운영되어 상황이 바뀌므로 Hugging Face의 Piper 음성 목록에서 현재 가용성을 확인하십시오.',
+            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 리투아니아어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 리투아니아어 음성 합성이 필요하다면 Piper(GPL-3.0-or-later)의 음성 저장소에 리투아니아어 음성 팩이 있습니다 — 해당 저장소는 커뮤니티 기여로 운영되어 상황이 바뀌므로 Hugging Face의 Piper 음성 목록에서 현재 가용성을 확인하십시오.',
           },
           {
             q: 'XTTS v2는 카자흐어를 지원합니까?',
-            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 카자흐어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 카자흐어 음성 합성이 필요하다면 Hugging Face의 Piper(MIT) 음성 저장소에서 커뮤니티 기여 기반의 현재 지원 현황을 확인하십시오 — 가용성은 시간에 따라 변합니다.',
+            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 카자흐어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 카자흐어 음성 합성이 필요하다면 Hugging Face의 Piper(GPL-3.0-or-later) 음성 저장소에서 커뮤니티 기여 기반의 현재 지원 현황을 확인하십시오 — 가용성은 시간에 따라 변합니다.',
           },
           {
             q: 'XTTS v2는 우크라이나어를 지원합니까?',
-            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 우크라이나어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 우크라이나어 음성 합성이 필요하다면 Hugging Face의 Piper(MIT) 음성 저장소에서 커뮤니티 기여 기반의 현재 지원 현황을 확인하십시오 — 가용성은 시간에 따라 변합니다.',
+            a: '아니요. XTTS v2는 정확히 17개 언어를 지원합니다: 영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 폴란드어, 터키어, 러시아어, 네덜란드어, 체코어, 아랍어, 중국어(zh-cn), 일본어, 헝가리어, 한국어, 힌디어. 우크라이나어는 이 목록에 없으며 추가에 대한 공식 로드맵도 없습니다. 우크라이나어 음성 합성이 필요하다면 Hugging Face의 Piper(GPL-3.0-or-later) 음성 저장소에서 커뮤니티 기여 기반의 현재 지원 현황을 확인하십시오 — 가용성은 시간에 따라 변합니다.',
           },
           {
             q: 'Coqui STT는 Coqui TTS 또는 XTTS v2와 같은 것입니까?',
@@ -3606,6 +3613,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[Coqui TTS 리뷰](/ko/power-local-llm/coqui-tts-review) — 이 가이드에서 다룬 Coqui TTS 툴킷에 대한 전용 리뷰로, Coqui AI 폐쇄 이후의 관리 상태도 포함합니다.',
           '[2026년 완전 오프라인 음성 어시스턴트 구축](/ko/power-local-llm/build-local-voice-assistant-2026) — 완전한 Whisper + LLM + TTS 파이프라인의 출력 레이어로 Piper 또는 Coqui TTS를 사용합니다.',
           '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — 음성 파이프라인의 입력 측면: TTS를 보완하는 STT.',
           '[로컬 멀티모달 AI 파이프라인 2026](/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 완전한 멀티모달 스택의 음성 출력 레이어로 TTS를 통합합니다.',
@@ -3619,7 +3627,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '로컬 TTS 및 음성 복제 라이선스 2026: 상업적 사용이 가능한 엔진 (Piper, XTTS v2, F5-TTS, Coqui)',
-      description: '상업적 사용이 가능한 로컬 TTS 엔진은? Piper(MIT), XTTS v2(CPML), F5-TTS(CC-BY-NC), Coqui(MPL 2.0)의 정확한 라이선스와 COQUI_TOS_AGREED 환경 변수, 음성 복제 비교. 2026 가이드.',
+      description: '상업적 사용이 가능한 로컬 TTS 엔진은? Piper(GPL-3.0-or-later), XTTS v2(CPML), F5-TTS(CC-BY-NC), Coqui(MPL 2.0)의 정확한 라이선스와 COQUI_TOS_AGREED 환경 변수, 음성 복제 비교. 2026 가이드.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
       inLanguage: 'ko',
       datePublished: '2026-05-14',
@@ -3648,12 +3656,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'Licenças de TTS local e clonagem de voz 2026: quais motores permitem uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
     seoTitle: 'Licença oficial Coqui XTTS v2 (CPML): uso comercial 2026',
     intro:
-      'Você pode usar um motor de síntese de voz local em um produto comercial? Depende inteiramente da licença, e as licenças diferem bastante. Piper, Bark e StyleTTS 2 são distribuídos sob MIT, Kokoro e Tortoise sob Apache 2.0 — os quatro livres para uso comercial. O kit de ferramentas Coqui TTS é MPL 2.0 (comercial com condições). Mas os dois modelos de clonagem de voz mais populares são restritos: XTTS v2 usa a Coqui Public Model License (CPML, não comercial) e F5-TTS usa CC-BY-NC-4.0 (não comercial). Este guia dá a licença exata de cada motor, uma resposta clara de "posso usar isto comercialmente?" por motor, a variável de ambiente COQUI_TOS_AGREED para aceitar a CPML de forma não interativa em Docker e CI, e uma comparação direta em qualidade, velocidade, VRAM e clonagem de voz — para você escolher o motor certo sem enviar áudio para a nuvem e sem surpresas de licença em produção. (Licenças verificadas em junho de 2026; isto é referência factual, não aconselhamento jurídico — leia cada licença você mesmo antes do uso comercial.)',
+      'Você pode usar um motor de síntese de voz local em um produto comercial? Depende inteiramente da licença, e as licenças diferem bastante. Piper (GPL-3.0-or-later desde 2025, não MIT), Bark e StyleTTS 2 são distribuídos sob MIT, Kokoro e Tortoise sob Apache 2.0 — os quatro livres para uso comercial. O kit de ferramentas Coqui TTS é MPL 2.0 (comercial com condições). Mas os dois modelos de clonagem de voz mais populares são restritos: XTTS v2 usa a Coqui Public Model License (CPML, não comercial) e F5-TTS usa CC-BY-NC-4.0 (não comercial). Este guia dá a licença exata de cada motor, uma resposta clara de "posso usar isto comercialmente?" por motor, a variável de ambiente COQUI_TOS_AGREED para aceitar a CPML de forma não interativa em Docker e CI, e uma comparação direta em qualidade, velocidade, VRAM e clonagem de voz — para você escolher o motor certo sem enviar áudio para a nuvem e sem surpresas de licença em produção. (Licenças verificadas em junho de 2026; isto é referência factual, não aconselhamento jurídico — leia cada licença você mesmo antes do uso comercial.)',
     metaDescription:
-      'Texto oficial da licença CPML do XTTS v2 (não comercial), vinculado do Hugging Face. Piper=MIT, F5-TTS=CC-BY-NC. Tabela de licenças, comparação VRAM.',
+      'Texto oficial da licença CPML do XTTS v2 (não comercial), vinculado do Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tabela de licenças, comparação VRAM.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-pt.webp',
     twitterDescription:
-      'Licenças de TTS local 2026: quais motores de clonagem de voz permitem uso comercial? Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML não comercial), F5-TTS (CC-BY-NC). Mais a variável COQUI_TOS_AGREED. Tudo offline.',
+      'Licenças de TTS local 2026: quais motores de clonagem de voz permitem uso comercial? Piper (GPL-3.0-or-later desde 2025, não MIT)/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML não comercial), F5-TTS (CC-BY-NC). Mais a variável COQUI_TOS_AGREED. Tudo offline.',
     audience:
       'Desenvolvedores, criadores, produtores de conteúdo e usuários focados em privacidade que desejam síntese e clonagem de voz sem custos de API em nuvem nem exposição de dados.',
     readTime: '14 min de leitura',
@@ -3694,18 +3702,18 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       'RTX 4070',
     ],
     leadAnswerBlock:
-      '**Para uso comercial, escolha um motor TTS local com licença permissiva: Piper, Bark e StyleTTS 2 são MIT; Kokoro e Tortoise são Apache 2.0 — todos livres para produtos comerciais.** O kit de ferramentas Coqui TTS é MPL 2.0 (comercial permitido se você divulgar as alterações feitas no código-fonte do kit). Os dois modelos de clonagem de voz mais conhecidos são a pegadinha: **XTTS v2 é não comercial sob a Coqui Public Model License (CPML)** e **F5-TTS é não comercial sob CC-BY-NC-4.0** — ambos proíbem uso comercial sem um acordo separado, e como a Coqui Inc fechou em janeiro de 2024 atualmente não há ninguém para vender uma licença comercial do XTTS v2, então trate-o apenas como não comercial. Sobre capacidade: Piper é o mais rápido em CPU (tempo real em uma Raspberry Pi 5, sem GPU); XTTS v2 é a melhor clonagem de voz (6 segundos de áudio de referência → 17 idiomas, 4–6 GB de VRAM); F5-TTS clona a partir de ~3 segundos com inferência de flow-matching mais rápida; Bark gera de forma única risadas, suspiros e sons ambientes; StyleTTS 2 tem a narração em inglês mais natural (sem clonagem); Tortoise é de qualidade muito alta, mas extremamente lento. Isto é referência factual, não aconselhamento jurídico — verifique cada licença você mesmo antes da implantação comercial.',
+      '**Para uso comercial, escolha um motor TTS local com licença permissiva: Piper (GPL-3.0-or-later desde 2025, não MIT), Bark e StyleTTS 2 são MIT; Kokoro e Tortoise são Apache 2.0 — todos livres para produtos comerciais.** O kit de ferramentas Coqui TTS é MPL 2.0 (comercial permitido se você divulgar as alterações feitas no código-fonte do kit). Os dois modelos de clonagem de voz mais conhecidos são a pegadinha: **XTTS v2 é não comercial sob a Coqui Public Model License (CPML)** e **F5-TTS é não comercial sob CC-BY-NC-4.0** — ambos proíbem uso comercial sem um acordo separado, e como a Coqui Inc fechou em janeiro de 2024 atualmente não há ninguém para vender uma licença comercial do XTTS v2, então trate-o apenas como não comercial. Sobre capacidade: Piper é o mais rápido em CPU (tempo real em uma Raspberry Pi 5, sem GPU); XTTS v2 é a melhor clonagem de voz (6 segundos de áudio de referência → 17 idiomas, 4–6 GB de VRAM); F5-TTS clona a partir de ~3 segundos com inferência de flow-matching mais rápida; Bark gera de forma única risadas, suspiros e sons ambientes; StyleTTS 2 tem a narração em inglês mais natural (sem clonagem); Tortoise é de qualidade muito alta, mas extremamente lento. Isto é referência factual, não aconselhamento jurídico — verifique cada licença você mesmo antes da implantação comercial.',
     quickAnswerTop: {
       pt: {
         question: 'Quais motores TTS locais posso usar comercialmente em 2026?',
         answer:
-          'Para uso comercial, escolha um motor com licença permissiva: Piper, Bark e StyleTTS 2 (MIT) e Kokoro e Tortoise (Apache 2.0) são todos livres para produtos comerciais; o kit de ferramentas Coqui TTS (MPL 2.0) é comercial com condições de divulgação de código-fonte. Os dois modelos de clonagem de voz mais populares NÃO são livres para uso comercial: XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) são ambos não comerciais. Sobre capacidade, Piper é o mais rápido em CPU, XTTS v2 tem a melhor qualidade de clonagem (precisa de 4–6 GB de VRAM) e F5-TTS clona a partir de ~3 segundos com inferência mais rápida. Isto é referência factual, não aconselhamento jurídico.',
+          'Para uso comercial, escolha um motor com licença permissiva: Piper (GPL-3.0-or-later desde 2025, não MIT), Bark e StyleTTS 2 (MIT) e Kokoro e Tortoise (Apache 2.0) são todos livres para produtos comerciais; o kit de ferramentas Coqui TTS (MPL 2.0) é comercial com condições de divulgação de código-fonte. Os dois modelos de clonagem de voz mais populares NÃO são livres para uso comercial: XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) são ambos não comerciais. Sobre capacidade, Piper é o mais rápido em CPU, XTTS v2 tem a melhor qualidade de clonagem (precisa de 4–6 GB de VRAM) e F5-TTS clona a partir de ~3 segundos com inferência mais rápida. Isto é referência factual, não aconselhamento jurídico.',
         bullets: [
-          'Livre para uso comercial → Piper (MIT), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Kit Coqui TTS (MPL 2.0): comercial OK com condições de divulgação de código-fonte.',
+          'Livre para uso comercial → Piper (GPL-3.0-or-later), Bark (MIT), StyleTTS 2 (MIT), Kokoro (Apache 2.0), Tortoise (Apache 2.0). Kit Coqui TTS (MPL 2.0): comercial OK com condições de divulgação de código-fonte.',
           'NÃO livre para uso comercial → XTTS v2 (CPML, não comercial) e F5-TTS (CC-BY-NC-4.0, não comercial). Ambos precisam de acordo separado; XTTS v2 não tem vendedor desde que a Coqui fechou (janeiro de 2024).',
           'Melhor qualidade de clonagem → XTTS v2. 6 seg de áudio → clone em 17 idiomas, 4–6 GB de VRAM. Licença: CPML (não comercial). Aceite a CPML de forma não interativa em Docker/CI com COQUI_TOS_AGREED=1.',
           'Clonagem zero-shot, mais rápida + arquitetura mais nova → F5-TTS. ~3 segundos de áudio, flow-matching, CC-BY-NC-4.0 (não comercial).',
-          'Velocidade em CPU / Raspberry Pi → Piper (MIT). Kokoro (Apache 2.0) é uma alternativa em CPU de maior qualidade.',
+          'Velocidade em CPU / Raspberry Pi → Piper (GPL-3.0-or-later). Kokoro (Apache 2.0) é uma alternativa em CPU de maior qualidade.',
           'Melhor narração em inglês → StyleTTS 2 (MIT). Clonagem offline de maior qualidade que é compatível com uso comercial → Tortoise (Apache 2.0), mas muito lento (minutos por frase).',
           'Áudio criativo (risadas, música, ambiente) → Bark (MIT). Lento e generativo.',
           'Todos os motores são 100% offline — sem chaves de API, sem dados de áudio enviados para a nuvem.',
@@ -3739,13 +3747,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper é a escolha certa para velocidade e uso embarcado.** Funciona completamente em CPU, produz voz em tempo real em uma Raspberry Pi 5 e suporta mais de 20 idiomas por pacotes de voz baixáveis. Sem GPU, sem complexidade em Python, licença MIT.',
+          '**Piper é a escolha certa para velocidade e uso embarcado.** Funciona completamente em CPU, produz voz em tempo real em uma Raspberry Pi 5 e suporta mais de 20 idiomas por pacotes de voz baixáveis. Sem GPU, sem complexidade em Python, licença GPL-3.0-or-later (desde um relicenciamento em 2025, antes MIT).',
           '**XTTS v2 é a melhor opção de clonagem de voz local em 2026 — mas é não comercial.** Com 6 segundos de áudio de referência clona a voz em 17 idiomas (4–6 GB de VRAM em GPU). A licença CPML é não comercial e, desde que a Coqui fechou (janeiro de 2024), não há licença comercial à venda — trate o XTTS v2 apenas como não comercial. Aceite a CPML de forma não interativa em Docker/CI com `COQUI_TOS_AGREED=1`.',
           '**F5-TTS é a alternativa de crescimento mais rápido para clonagem de voz zero-shot.** Usa uma arquitetura de flow-matching em vez de GPT, clona uma voz a partir de ~3 segundos de áudio de referência e atinge qualidade competitiva com XTTS v2 a velocidades de inferência mais rápidas. Licença: CC-BY-NC-4.0 (não comercial).',
           '**Coqui TTS é o kit de ferramentas TTS open source mais flexível.** Suporta múltiplos backends (Tacotron2, VITS, XTTS), clonagem de voz e mais de 20 idiomas sob licença MPL 2.0. Nota: a empresa Coqui fechou em janeiro de 2024; o projeto agora é mantido pela comunidade.',
           '**Bark é o único TTS local que gera áudio não falado.** Pode produzir risadas, tosse, suspiros, trechos musicais e efeitos sonoros ambientes junto à fala — útil para áudio criativo, produção de podcasts e ficção interativa. Suas saídas são lentas e não determinísticas.',
           '**StyleTTS 2 alcança as pontuações MOS (mean opinion score) mais altas de qualquer motor TTS em inglês open source.** Sua transferência de estilo baseada em difusão produz naturalidade quase humana em narração em inglês. Suporta somente inglês e não possui clonagem de voz.',
-          '**A licença decide o uso comercial — e a divisão é clara.** Livres para produtos comerciais: Piper, Bark, StyleTTS 2 (MIT) e Kokoro, Tortoise (Apache 2.0). Comercial com condições: kit Coqui TTS (MPL 2.0, divulgar modificações do kit). Apenas não comercial: XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) — ambos precisam de acordo separado. Para clonagem de voz comercial, use Tortoise (Apache 2.0) ou o kit Coqui sobre um backend VITS (MPL 2.0). Referência factual, não aconselhamento jurídico.',
+          '**A licença decide o uso comercial — e a divisão é clara.** Livres para produtos comerciais: Piper (GPL-3.0-or-later desde 2025, não MIT), Bark, StyleTTS 2 (MIT) e Kokoro, Tortoise (Apache 2.0). Comercial com condições: kit Coqui TTS (MPL 2.0, divulgar modificações do kit). Apenas não comercial: XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) — ambos precisam de acordo separado. Para clonagem de voz comercial, use Tortoise (Apache 2.0) ou o kit Coqui sobre um backend VITS (MPL 2.0). Referência factual, não aconselhamento jurídico.',
           '**Nenhum iguala a qualidade de um TTS comercial em escala.** ElevenLabs, Google Text-to-Speech e Azure TTS ainda superam os motores locais em consistência, naturalidade e latência em todos os casos de uso. O TTS local é a escolha certa quando privacidade, custo ou operação offline importam mais que qualidade absoluta.',
         ],
       },
@@ -3759,7 +3767,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Kit de ferramentas open source mais flexível:** Coqui TTS — suporta backends VITS, Tacotron2, XTTS, mais de 20 modelos de idioma.',
           '**Único áudio generativo (sons não falados):** Bark — risadas, suspiros, música, ambiente. O mais lento de todos.',
           '**Melhor qualidade de narração em inglês:** StyleTTS 2 — transferência de estilo baseada em difusão, MOS quase humano no benchmark LJSpeech.',
-          '**Livres para uso comercial:** Piper, Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); kit Coqui TTS (MPL 2.0, com condições). **Não comercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
+          '**Livres para uso comercial:** Piper (GPL-3.0-or-later desde 2025, não MIT), Bark, StyleTTS 2 (MIT); Kokoro, Tortoise (Apache 2.0); kit Coqui TTS (MPL 2.0, com condições). **Não comercial:** XTTS v2 (CPML), F5-TTS (CC-BY-NC-4.0).',
           '**Vozes e idiomas do XTTS v2:** Não há lista fixa de vozes — você fornece um clipe de referência de 6 segundos e ele clona aquela voz. Presets de falantes embutidos vêm com o modelo, e ele gera em 17 idiomas: en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko, hi.',
           '**VRAM do XTTS v2:** ~2 GB de pesos do modelo; 4 GB no mínimo para rodar, 4–6 GB recomendados para inferência em tempo real.',
           '**Aceite a CPML em CI/Docker:** `export COQUI_TOS_AGREED=1` — sem necessidade de prompt interativo.',
@@ -4065,11 +4073,11 @@ tts.tts_to_file(
         content:
           'A licença é o fator mais importante para uso em produção, e ela divide estes motores claramente em dois grupos. Motores com licença permissiva (MIT, Apache 2.0) são livres para incluir em um produto comercial. Motores restritos (CPML, CC-BY-NC-4.0) são não comerciais — usá-los em um produto pago, SaaS, conteúdo monetizado por anúncios ou trabalho para clientes requer um acordo separado. A tabela abaixo dá a licença exata e uma resposta direta de "posso usar isto comercialmente?" para cada motor.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-pt.webp',
-          imageCaption: 'Piper, Bark e StyleTTS 2 têm licença MIT para uso comercial; XTTS v2 (CPML) e F5-TTS (CC-BY-NC) não têm.',
+          imageCaption: 'Piper (GPL-3.0-or-later desde 2025, não MIT), Bark e StyleTTS 2 têm licença MIT para uso comercial; XTTS v2 (CPML) e F5-TTS (CC-BY-NC) não têm.',
 snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Para TTS local em um produto comercial, Piper, Bark e StyleTTS 2 (MIT), Kokoro e Tortoise (Apache 2.0) e o kit Coqui TTS sobre um backend VITS/Tacotron2 (MPL 2.0) são todos permitidos; XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) são não comerciais.',
+            text: 'Para TTS local em um produto comercial, Piper (GPL-3.0-or-later desde 2025, não MIT), Bark e StyleTTS 2 (MIT), Kokoro e Tortoise (Apache 2.0) e o kit Coqui TTS sobre um backend VITS/Tacotron2 (MPL 2.0) são todos permitidos; XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) são não comerciais.',
           },
           {
             type: 'plain-terms',
@@ -4080,9 +4088,9 @@ snippetBlocks: [
         rows: [
           {
             'Ferramenta': '[Piper](https://github.com/rhasspy/piper)',
-            'Licença': 'MIT',
-            'Comercial?': 'Sim — sem restrições',
-            'Condição principal': 'Incluir aviso MIT; verificar a licença do modelo por voz',
+            'Licença': 'GPL-3.0',
+            'Comercial?': 'Sim — com condições',
+            'Condição principal': 'Divulgar o código-fonte de modificações no Piper (relicenciamento de MIT em 2025)',
           },
           {
             'Ferramenta': '[Kokoro](https://github.com/hexgrad/kokoro)',
@@ -4246,7 +4254,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**Precisa de áudio criativo com sons não falados?** → Bark.',
           '**Precisa da melhor qualidade de narração em inglês?** → StyleTTS 2.',
           '**Precisa de suporte multilíngue?** → XTTS v2 (17 idiomas, clonagem multilíngue), Coqui (20+ idiomas), Piper (20+ pacotes de idioma).',
-          '**Precisa de uma licença MIT totalmente comercial?** → Piper, Bark ou StyleTTS 2.',
+          '**Precisa de uma licença permissiva totalmente comercial?** → Bark ou StyleTTS 2 (ambas MIT). O Piper é GPL-3.0-or-later desde 2025 (copyleft, não mais MIT) — veja Licença e custo.',
           '**Construindo um pipeline de assistente de voz?** → Piper para saída TTS de baixa latência (veja /pt/power-local-llm/build-local-voice-assistant-2026).',
         ],
       },
@@ -4260,7 +4268,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Posso usar Piper TTS em um produto comercial?',
-            a: 'Sim. Piper está licenciado sob MIT, que permite uso comercial ilimitado. Você deve incluir o aviso de licença MIT no seu produto. Os modelos de voz (arquivos ONNX) podem ter licenças separadas por voz.',
+            a: 'Sim, com condições. Desde um relicenciamento em 2025, o repositório do Piper ativamente mantido está sob GPL-3.0-or-later (não mais MIT, a licença do repositório original agora arquivado). O Piper continua utilizável comercialmente, mas a GPL-3.0 exige divulgar o código-fonte de modificações que você faça ao próprio Piper caso as distribua sob a mesma licença; usá-lo sem modificações como ferramenta externa costuma ser menos restritivo. Os modelos de voz (arquivos ONNX) podem ter licenças separadas por voz.',
           },
           {
             q: 'Coqui TTS ainda é mantido após o fechamento da empresa?',
@@ -4300,19 +4308,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro vs Piper — qual TTS leve em CPU devo usar?',
-            a: 'Ambos rodam rápido em CPU sem GPU e ambos têm licença permissiva (Piper é MIT, Kokoro é Apache 2.0), então qualquer um é seguro para uso comercial. Escolha o Piper quando precisar da menor latência e da maior cobertura de idiomas (20+ pacotes de voz por idioma, tempo real em uma Raspberry Pi 5) — é o padrão para voz embarcada e de casa inteligente. Escolha o Kokoro (um modelo de 82M de parâmetros construído sobre a arquitetura StyleTTS 2) quando quiser maior naturalidade que o Piper e puder aceitar um pouco mais de processamento; sua qualidade em inglês é mais próxima dos motores mais pesados de GPU. Para uma Raspberry Pi ou assistente sempre ativo, Piper; para leitura em voz alta em desktop/servidor onde a qualidade importa mais que milissegundos, Kokoro.',
+            a: 'Ambos rodam rápido em CPU sem GPU e ambos têm licença permissiva (Piper é GPL-3.0-or-later desde um relicenciamento em 2025, Kokoro é Apache 2.0), então qualquer um é seguro para uso comercial. Escolha o Piper quando precisar da menor latência e da maior cobertura de idiomas (20+ pacotes de voz por idioma, tempo real em uma Raspberry Pi 5) — é o padrão para voz embarcada e de casa inteligente. Escolha o Kokoro (um modelo de 82M de parâmetros construído sobre a arquitetura StyleTTS 2) quando quiser maior naturalidade que o Piper e puder aceitar um pouco mais de processamento; sua qualidade em inglês é mais próxima dos motores mais pesados de GPU. Para uma Raspberry Pi ou assistente sempre ativo, Piper; para leitura em voz alta em desktop/servidor onde a qualidade importa mais que milissegundos, Kokoro.',
           },
           {
             q: 'O XTTS v2 suporta lituano?',
-            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O lituano não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em lituano, o Piper (MIT) tem um pacote de voz em lituano em seu repositório de vozes — verifique a listagem de vozes do Piper no Hugging Face para disponibilidade atual, já que a cobertura ali é contribuída pela comunidade e muda ao longo do tempo.',
+            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O lituano não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em lituano, o Piper (GPL-3.0-or-later) tem um pacote de voz em lituano em seu repositório de vozes — verifique a listagem de vozes do Piper no Hugging Face para disponibilidade atual, já que a cobertura ali é contribuída pela comunidade e muda ao longo do tempo.',
           },
           {
             q: 'O XTTS v2 suporta cazaque?',
-            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O cazaque não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em cazaque, verifique o repositório de vozes do Piper (MIT) no Hugging Face para a cobertura atual contribuída pela comunidade — a disponibilidade muda ao longo do tempo.',
+            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O cazaque não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em cazaque, verifique o repositório de vozes do Piper (GPL-3.0-or-later) no Hugging Face para a cobertura atual contribuída pela comunidade — a disponibilidade muda ao longo do tempo.',
           },
           {
             q: 'O XTTS v2 suporta ucraniano?',
-            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O ucraniano não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em ucraniano, verifique o repositório de vozes do Piper (MIT) no Hugging Face para a cobertura atual contribuída pela comunidade — a disponibilidade muda ao longo do tempo.',
+            a: 'Não. O XTTS v2 suporta exatamente 17 idiomas: inglês, espanhol, francês, alemão, italiano, português, polonês, turco, russo, holandês, tcheco, árabe, chinês (zh-cn), japonês, húngaro, coreano e hindi. O ucraniano não está nessa lista, e não há um roadmap oficial para adicioná-lo. Para texto em fala em ucraniano, verifique o repositório de vozes do Piper (GPL-3.0-or-later) no Hugging Face para a cobertura atual contribuída pela comunidade — a disponibilidade muda ao longo do tempo.',
           },
           {
             q: 'O Coqui STT é o mesmo que o Coqui TTS ou o XTTS v2?',
@@ -4341,6 +4349,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[Análise do Coqui TTS](/pt/power-local-llm/coqui-tts-review) — uma análise dedicada ao kit Coqui TTS abordado neste guia, incluindo seu status de manutenção após o fechamento da Coqui AI.',
           '[Construa um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — Use Piper ou Coqui TTS como camada de saída de um pipeline completo de Whisper + LLM + TTS.',
           '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — O lado de entrada de um pipeline de voz: STT para complementar o TTS.',
           '[Pipeline de IA multimodal local 2026](/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integre o TTS como camada de saída de voz de um stack multimodal completo.',
@@ -4354,7 +4363,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Licenças de TTS local e clonagem de voz 2026: quais motores permitem uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
-      description: 'Quais motores TTS locais permitem uso comercial? Licenças de Piper (MIT), XTTS v2 (CPML), F5-TTS (CC-BY-NC) e Coqui, mais a variável COQUI_TOS_AGREED. Guia 2026.',
+      description: 'Quais motores TTS locais permitem uso comercial? Licenças de Piper (GPL-3.0-or-later), XTTS v2 (CPML), F5-TTS (CC-BY-NC) e Coqui, mais a variável COQUI_TOS_AGREED. Guia 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
       inLanguage: 'pt',
       datePublished: '2026-05-14',
@@ -4374,12 +4383,12 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
     title: 'تراخيص ⁨TTS⁩ المحلي واستنساخ الصوت ⁨2026⁩: أي المحركات تسمح بالاستخدام التجاري (⁨Piper⁩ و⁨XTTS v2⁩ و⁨F5-TTS⁩ و⁨Coqui⁩)',
     seoTitle: 'ترخيص ⁨XTTS v2⁩ الرسمي (⁨CPML⁩): الاستخدام التجاري ⁨2026⁩',
     intro:
-      'هل يمكنك استخدام محرك تحويل نص إلى كلام محلي في منتج تجاري؟ الأمر يعتمد كليًا على الترخيص، والتراخيص تختلف بشكل حاد. Piper وBark وStyleTTS 2 تصدر تحت MIT، وKokoro وTortoise تحت Apache 2.0 — وكلها الأربعة مجانية للاستخدام التجاري. مجموعة أدوات Coqui TTS تحت MPL 2.0 (تجاري بشروط). لكن أشهر نموذجين لاستنساخ الصوت مقيّدان: XTTS v2 يستخدم Coqui Public Model License (CPML، غير تجاري)، وF5-TTS يستخدم CC-BY-NC-4.0 (غير تجاري). يقدم هذا الدليل الترخيص الدقيق لكل محرك، وإجابة واضحة عن سؤال "هل يمكنني استخدامه تجاريًا؟" لكل محرك، ومتغير البيئة COQUI_TOS_AGREED لقبول CPML بشكل غير تفاعلي في Docker وCI، ومقارنة مباشرة عبر الجودة والسرعة وVRAM واستنساخ الصوت — لتختار المحرك الصحيح دون إرسال صوت إلى السحابة ودون مفاجأة ترخيص في الإنتاج. (تم التحقق من التراخيص في يونيو 2026؛ هذا مرجع وقائعي وليس استشارة قانونية — اقرأ كل ترخيص بنفسك قبل الاستخدام التجاري.)',
+      'هل يمكنك استخدام محرك تحويل نص إلى كلام محلي في منتج تجاري؟ الأمر يعتمد كليًا على الترخيص، والتراخيص تختلف بشكل حاد. Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 تصدر تحت MIT، وKokoro وTortoise تحت Apache 2.0 — وكلها الأربعة مجانية للاستخدام التجاري. مجموعة أدوات Coqui TTS تحت MPL 2.0 (تجاري بشروط). لكن أشهر نموذجين لاستنساخ الصوت مقيّدان: XTTS v2 يستخدم Coqui Public Model License (CPML، غير تجاري)، وF5-TTS يستخدم CC-BY-NC-4.0 (غير تجاري). يقدم هذا الدليل الترخيص الدقيق لكل محرك، وإجابة واضحة عن سؤال "هل يمكنني استخدامه تجاريًا؟" لكل محرك، ومتغير البيئة COQUI_TOS_AGREED لقبول CPML بشكل غير تفاعلي في Docker وCI، ومقارنة مباشرة عبر الجودة والسرعة وVRAM واستنساخ الصوت — لتختار المحرك الصحيح دون إرسال صوت إلى السحابة ودون مفاجأة ترخيص في الإنتاج. (تم التحقق من التراخيص في يونيو 2026؛ هذا مرجع وقائعي وليس استشارة قانونية — اقرأ كل ترخيص بنفسك قبل الاستخدام التجاري.)',
     metaDescription:
-      'نص ترخيص ⁨CPML⁩ الرسمي لـ ⁨XTTS v2⁩ (غير تجاري)، من ⁨Hugging Face⁩. ⁨Piper⁩=⁨MIT⁩، ⁨F5-TTS⁩=⁨CC-BY-NC⁩. جدول التراخيص ومقارنة ⁨VRAM⁩.',
+      'نص ترخيص ⁨CPML⁩ الرسمي لـ ⁨XTTS v2⁩ (غير تجاري)، من ⁨Hugging Face⁩. ⁨Piper⁩=⁨GPL-3.0-or-later⁩، ⁨F5-TTS⁩=⁨CC-BY-NC⁩. جدول التراخيص ومقارنة ⁨VRAM⁩.',
     heroImage: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ar.webp',
     twitterDescription:
-      'تراخيص TTS المحلي 2026: أي محركات استنساخ الصوت تسمح بالاستخدام التجاري؟ Piper/Bark/StyleTTS 2 (MIT)، وKokoro/Tortoise (Apache 2.0)، وXTTS v2 (CPML غير تجاري)، وF5-TTS (CC-BY-NC). بالإضافة إلى متغير COQUI_TOS_AGREED. كل شيء دون اتصال.',
+      'تراخيص TTS المحلي 2026: أي محركات استنساخ الصوت تسمح بالاستخدام التجاري؟ Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT)/Bark/StyleTTS 2 (MIT)، وKokoro/Tortoise (Apache 2.0)، وXTTS v2 (CPML غير تجاري)، وF5-TTS (CC-BY-NC). بالإضافة إلى متغير COQUI_TOS_AGREED. كل شيء دون اتصال.',
     audience:
       'المطورون والمبدعون ومنتجو المحتوى والمستخدمون المهتمون بالخصوصية الذين يريدون تحويل النص إلى كلام واستنساخ الصوت دون اتصال ودون تكاليف API السحابية أو تعرض البيانات.',
     readTime: '14 دقيقة للقراءة',
@@ -4420,18 +4429,18 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       'RTX 4070',
     ],
     leadAnswerBlock:
-      '**للاستخدام التجاري، اختر محرك TTS محلي بترخيص متساهل: Piper وBark وStyleTTS 2 تحت MIT؛ وKokoro وTortoise تحت Apache 2.0 — وكلها مجانية للمنتجات التجارية.** مجموعة أدوات Coqui TTS تحت MPL 2.0 (مسموح تجاريًا إذا أفصحت عن تعديلاتك على مصدر مجموعة الأدوات). المشكلة في أشهر نموذجين لاستنساخ الصوت: **XTTS v2 غير تجاري تحت Coqui Public Model License (CPML)** و**F5-TTS غير تجاري تحت CC-BY-NC-4.0** — كلاهما يحظر الاستخدام التجاري دون اتفاقية منفصلة، ولأن Coqui Inc أغلقت في يناير 2024 فلا يوجد حاليًا من يبيع ترخيصًا تجاريًا لـXTTS v2، فتعامل معه على أنه غير تجاري فقط. أما من حيث القدرة: Piper هو الأسرع على المعالج (وقت فعلي على Raspberry Pi 5، بلا GPU)؛ XTTS v2 هو أفضل استنساخ صوت جودةً (6 ثوانٍ من الصوت المرجعي ← 17 لغة، 4–6 غيغابايت VRAM)؛ F5-TTS يستنسخ من ~3 ثوانٍ باستدلال flow-matching أسرع؛ Bark يولّد بشكل فريد الضحك والتنهدات والصوت المحيطي؛ StyleTTS 2 يمتلك أكثر سرد إنجليزي طبيعية (بلا استنساخ)؛ Tortoise جودته عالية جدًا لكنه بطيء للغاية. هذا مرجع وقائعي وليس استشارة قانونية — تحقق من كل ترخيص بنفسك قبل النشر التجاري.',
+      '**للاستخدام التجاري، اختر محرك TTS محلي بترخيص متساهل: Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 تحت MIT؛ وKokoro وTortoise تحت Apache 2.0 — وكلها مجانية للمنتجات التجارية.** مجموعة أدوات Coqui TTS تحت MPL 2.0 (مسموح تجاريًا إذا أفصحت عن تعديلاتك على مصدر مجموعة الأدوات). المشكلة في أشهر نموذجين لاستنساخ الصوت: **XTTS v2 غير تجاري تحت Coqui Public Model License (CPML)** و**F5-TTS غير تجاري تحت CC-BY-NC-4.0** — كلاهما يحظر الاستخدام التجاري دون اتفاقية منفصلة، ولأن Coqui Inc أغلقت في يناير 2024 فلا يوجد حاليًا من يبيع ترخيصًا تجاريًا لـXTTS v2، فتعامل معه على أنه غير تجاري فقط. أما من حيث القدرة: Piper هو الأسرع على المعالج (وقت فعلي على Raspberry Pi 5، بلا GPU)؛ XTTS v2 هو أفضل استنساخ صوت جودةً (6 ثوانٍ من الصوت المرجعي ← 17 لغة، 4–6 غيغابايت VRAM)؛ F5-TTS يستنسخ من ~3 ثوانٍ باستدلال flow-matching أسرع؛ Bark يولّد بشكل فريد الضحك والتنهدات والصوت المحيطي؛ StyleTTS 2 يمتلك أكثر سرد إنجليزي طبيعية (بلا استنساخ)؛ Tortoise جودته عالية جدًا لكنه بطيء للغاية. هذا مرجع وقائعي وليس استشارة قانونية — تحقق من كل ترخيص بنفسك قبل النشر التجاري.',
     quickAnswerTop: {
       ar: {
         question: 'أي محركات TTS المحلية يمكنني استخدامها تجاريًا في 2026؟',
         answer:
-          'للاستخدام التجاري، اختر محركًا بترخيص متساهل: Piper وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0) كلها مجانية للمنتجات التجارية؛ ومجموعة أدوات Coqui TTS (MPL 2.0) تجارية بشروط الإفصاح عن المصدر. أما أشهر نموذجين لاستنساخ الصوت فليسا مجانيين للاستخدام التجاري: XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) كلاهما غير تجاري. من حيث القدرة، Piper هو الأسرع على المعالج، وXTTS v2 يمتلك أفضل جودة استنساخ (يحتاج 4–6 غيغابايت VRAM)، وF5-TTS يستنسخ من ~3 ثوانٍ باستدلال أسرع. هذا مرجع وقائعي وليس استشارة قانونية.',
+          'للاستخدام التجاري، اختر محركًا بترخيص متساهل: Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0) كلها مجانية للمنتجات التجارية؛ ومجموعة أدوات Coqui TTS (MPL 2.0) تجارية بشروط الإفصاح عن المصدر. أما أشهر نموذجين لاستنساخ الصوت فليسا مجانيين للاستخدام التجاري: XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) كلاهما غير تجاري. من حيث القدرة، Piper هو الأسرع على المعالج، وXTTS v2 يمتلك أفضل جودة استنساخ (يحتاج 4–6 غيغابايت VRAM)، وF5-TTS يستنسخ من ~3 ثوانٍ باستدلال أسرع. هذا مرجع وقائعي وليس استشارة قانونية.',
         bullets: [
-          'مجاني للاستخدام التجاري ← Piper (MIT) وBark (MIT) وStyleTTS 2 (MIT) وKokoro (Apache 2.0) وTortoise (Apache 2.0). مجموعة أدوات Coqui TTS (MPL 2.0): تجاري بشروط الإفصاح عن المصدر.',
+          'مجاني للاستخدام التجاري ← Piper (GPL-3.0-or-later) وBark (MIT) وStyleTTS 2 (MIT) وKokoro (Apache 2.0) وTortoise (Apache 2.0). مجموعة أدوات Coqui TTS (MPL 2.0): تجاري بشروط الإفصاح عن المصدر.',
           'ليس مجانيًا للاستخدام التجاري ← XTTS v2 (CPML، غير تجاري) وF5-TTS (CC-BY-NC-4.0، غير تجاري). كلاهما يحتاج اتفاقية منفصلة؛ XTTS v2 بلا بائع منذ إغلاق Coqui (يناير 2024).',
           'أفضل جودة استنساخ ← XTTS v2. 6 ثوانٍ صوت ← استنساخ بـ17 لغة، 4–6 غيغابايت VRAM. الترخيص: CPML (غير تجاري). اقبل CPML بشكل غير تفاعلي في Docker/CI بـCOQUI_TOS_AGREED=1.',
           'استنساخ zero-shot أسرع ومعمارية أحدث ← F5-TTS. ~3 ثوانٍ من الصوت، flow-matching، CC-BY-NC-4.0 (غير تجاري).',
-          'السرعة على CPU / Raspberry Pi ← Piper (MIT). Kokoro (Apache 2.0) بديل CPU أعلى جودة.',
+          'السرعة على CPU / Raspberry Pi ← Piper (GPL-3.0-or-later). Kokoro (Apache 2.0) بديل CPU أعلى جودة.',
           'أفضل سرد إنجليزي ← StyleTTS 2 (MIT). أعلى جودة استنساخ دون اتصال ومتوافقة تجاريًا ← Tortoise (Apache 2.0)، لكنه بطيء جدًا (دقائق لكل جملة).',
           'صوت إبداعي (ضحك وموسيقى ومحيط) ← Bark (MIT). بطيء وتوليدي.',
           'جميع المحركات 100% دون اتصال — بلا مفاتيح API، بلا بيانات صوتية مرسلة إلى السحابة.',
@@ -4465,13 +4474,13 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Piper هو الاختيار الصحيح للسرعة والاستخدام المُدمج.** يعمل كليًا على المعالج، ينتج صوتًا في الوقت الفعلي على Raspberry Pi 5، ويدعم أكثر من 20 لغة عبر حزم الأصوات القابلة للتحميل. بلا GPU، بلا تعقيد Python، ترخيص MIT.',
+          '**Piper هو الاختيار الصحيح للسرعة والاستخدام المُدمج.** يعمل كليًا على المعالج، ينتج صوتًا في الوقت الفعلي على Raspberry Pi 5، ويدعم أكثر من 20 لغة عبر حزم الأصوات القابلة للتحميل. بلا GPU، بلا تعقيد Python، ترخيص GPL-3.0-or-later (بعد إعادة ترخيص عام 2025، وكان MIT سابقًا).',
           '**XTTS v2 هو أفضل خيار لاستنساخ الصوت محليًا في 2026 — لكنه غير تجاري.** بـ6 ثوانٍ من الصوت المرجعي يستنسخ الصوت بـ17 لغة (4–6 غيغابايت VRAM في GPU). ترخيص CPML غير تجاري، ومنذ إغلاق Coqui (يناير 2024) لا يوجد ترخيص تجاري معروض للبيع — فتعامل مع XTTS v2 على أنه غير تجاري فقط. اقبل CPML بشكل غير تفاعلي في Docker/CI بـ`COQUI_TOS_AGREED=1`.',
           '**F5-TTS هو البديل الأسرع نموًا لاستنساخ الصوت zero-shot.** يستخدم معمارية flow-matching بدلًا من GPT، يستنسخ صوتًا من ~3 ثوانٍ من الصوت المرجعي، ويحقق جودة تنافسية مع XTTS v2 بسرعات استدلال أسرع. الترخيص: CC-BY-NC-4.0 (غير تجاري).',
           '**Coqui TTS هو مجموعة أدوات TTS مفتوحة المصدر الأكثر مرونة.** يدعم backends متعددة (Tacotron2، VITS، XTTS) واستنساخ الصوت وأكثر من 20 لغة تحت ترخيص MPL 2.0. ملاحظة: أغلقت شركة Coqui في يناير 2024؛ والمشروع الآن يحتفظ به المجتمع.',
           '**Bark هو TTS المحلي الوحيد الذي يولّد صوتًا غير منطوق.** يمكنه إنتاج الضحك والسعال والتنهدات والمقاطع الموسيقية ومؤثرات الصوت المحيطي.',
           '**StyleTTS 2 يحقق أعلى درجات MOS من أي محرك TTS إنجليزي مفتوح المصدر.** نقل الأسلوب القائم على الانتشار ينتج طبيعية شبه بشرية في السرد الإنجليزي. إنجليزية فقط، بلا استنساخ صوت.',
-          '**الترخيص يحدد الاستخدام التجاري — والتقسيم واضح.** مجاني للمنتجات التجارية: Piper وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0). تجاري بشروط: مجموعة أدوات Coqui TTS (MPL 2.0، الإفصاح عن تعديلات مجموعة الأدوات). غير تجاري فقط: XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) — كلاهما يحتاج اتفاقية منفصلة. لاستنساخ الصوت تجاريًا، استخدم Tortoise (Apache 2.0) أو مجموعة أدوات Coqui على backend VITS (MPL 2.0). مرجع وقائعي وليس استشارة قانونية.',
+          '**الترخيص يحدد الاستخدام التجاري — والتقسيم واضح.** مجاني للمنتجات التجارية: Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0). تجاري بشروط: مجموعة أدوات Coqui TTS (MPL 2.0، الإفصاح عن تعديلات مجموعة الأدوات). غير تجاري فقط: XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) — كلاهما يحتاج اتفاقية منفصلة. لاستنساخ الصوت تجاريًا، استخدم Tortoise (Apache 2.0) أو مجموعة أدوات Coqui على backend VITS (MPL 2.0). مرجع وقائعي وليس استشارة قانونية.',
           '**لا يضاهي أيٌّ منها جودة TTS التجاري على نطاق واسع.** ElevenLabs وGoogle TTS وAzure TTS لا تزال تتفوق على المحركات المحلية. TTS المحلي هو الخيار الصحيح عندما تكون الخصوصية أو التكلفة أو التشغيل دون اتصال أهم من الجودة المطلقة.',
         ],
       },
@@ -4485,7 +4494,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**أكثر مجموعة أدوات مفتوحة المصدر مرونة:** Coqui TTS — يدعم backends VITS وTacotron2 وXTTS وأكثر من 20 نموذج لغة.',
           '**الصوت الإبداعي الوحيد (أصوات غير منطوقة):** Bark — ضحك وتنهدات وموسيقى وأصوات محيطية. الأبطأ من الجميع.',
           '**أفضل جودة سرد إنجليزي:** StyleTTS 2 — نقل أسلوب قائم على الانتشار، MOS شبه بشري على معيار LJSpeech.',
-          '**مجاني للاستخدام التجاري:** Piper وBark وStyleTTS 2 (MIT)؛ Kokoro وTortoise (Apache 2.0)؛ مجموعة أدوات Coqui TTS (MPL 2.0، بشروط). **غير تجاري:** XTTS v2 (CPML)، F5-TTS (CC-BY-NC-4.0).',
+          '**مجاني للاستخدام التجاري:** Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 (MIT)؛ Kokoro وTortoise (Apache 2.0)؛ مجموعة أدوات Coqui TTS (MPL 2.0، بشروط). **غير تجاري:** XTTS v2 (CPML)، F5-TTS (CC-BY-NC-4.0).',
           '**أصوات XTTS v2 ولغاته:** لا قائمة أصوات ثابتة — تزوّده بمقطع مرجعي مدته 6 ثوانٍ فيستنسخ ذلك الصوت. تأتي إعدادات متحدثين مدمجة مع النموذج، ويولّد بـ17 لغة: en، es، fr، de، it، pt، pl، tr، ru، nl، cs، ar، zh-cn، ja، hu، ko، hi.',
           '**VRAM لـXTTS v2:** أوزان النموذج ~2 غيغابايت؛ 4 غيغابايت كحد أدنى للتشغيل، 4–6 غيغابايت موصى بها للاستدلال في الوقت الفعلي.',
           '**قبول CPML في CI/Docker:** `export COQUI_TOS_AGREED=1` — بلا مطالبة تفاعلية.',
@@ -4790,11 +4799,11 @@ tts.tts_to_file(
         content:
           'الترخيص هو العامل الأهم منفردًا للاستخدام في الإنتاج، وهو يقسّم هذه المحركات بوضوح إلى مجموعتين. المحركات ذات التراخيص المتساهلة (MIT، Apache 2.0) حرة الشحن في منتج تجاري. أما المحركات المقيّدة (CPML، CC-BY-NC-4.0) فهي غير تجارية — استخدامها في منتج مدفوع أو SaaS أو محتوى مدعوم بالإعلانات أو عمل للعملاء يتطلب اتفاقية منفصلة. يقدم الجدول أدناه الترخيص الدقيق وإجابة مباشرة عن "هل يمكنني استخدامه تجاريًا؟" لكل محرك.',
                   image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ar.webp',
-          imageCaption: 'Piper وBark وStyleTTS 2 مرخصة بموجب MIT للاستخدام التجاري؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC) فليسا كذلك.',
+          imageCaption: 'Piper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 مرخصة بموجب MIT للاستخدام التجاري؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC) فليسا كذلك.',
 snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'لاستخدام TTS محلي في منتج تجاري، يُسمح بـPiper وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0) ومجموعة أدوات Coqui TTS على backend VITS/Tacotron2 (MPL 2.0)؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) فهما غير تجاريين.',
+            text: 'لاستخدام TTS محلي في منتج تجاري، يُسمح بـPiper (بترخيص GPL-3.0-or-later منذ 2025، وليس MIT) وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0) ومجموعة أدوات Coqui TTS على backend VITS/Tacotron2 (MPL 2.0)؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) فهما غير تجاريين.',
           },
           {
             type: 'plain-terms',
@@ -4805,9 +4814,9 @@ snippetBlocks: [
         rows: [
           {
             'الأداة': '[Piper](https://github.com/rhasspy/piper)',
-            'الترخيص': 'MIT',
-            'تجاري؟': 'نعم — بلا قيود',
-            'الشرط الرئيسي': 'تضمين إشعار MIT؛ تحقق من ترخيص نموذج كل صوت',
+            'الترخيص': 'GPL-3.0',
+            'تجاري؟': 'نعم — بشروط',
+            'الشرط الرئيسي': 'الإفصاح عن مصدر أي تعديلات على Piper نفسه (أُعيد ترخيصه من MIT عام 2025)',
           },
           {
             'الأداة': '[Kokoro](https://github.com/hexgrad/kokoro)',
@@ -4971,7 +4980,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           '**تحتاج صوتًا إبداعيًا بأصوات غير منطوقة؟** ← Bark.',
           '**تحتاج أفضل جودة سرد إنجليزي؟** ← StyleTTS 2.',
           '**تحتاج دعمًا متعدد اللغات؟** ← XTTS v2 (17 لغة، استنساخ متعدد اللغات)، Coqui (20+ لغة)، Piper (20+ حزمة لغة).',
-          '**تحتاج ترخيص MIT تجاريًا كليًا؟** ← Piper أو Bark أو StyleTTS 2.',
+          '**تحتاج ترخيصًا تساهليًا تجاريًا كليًا؟** ← Bark أو StyleTTS 2 (كلاهما MIT). Piper أصبح بموجب GPL-3.0-or-later منذ 2025 (كوبي-ليفت، وليس MIT بعد الآن) — راجع الترخيص والتكلفة.',
           '**تبني خط أنابيب مساعد صوتي؟** ← Piper لمخرج TTS منخفض زمن الاستجابة (انظر /ar/power-local-llm/build-local-voice-assistant-2026).',
         ],
       },
@@ -4985,7 +4994,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'هل يمكنني استخدام Piper TTS في منتج تجاري؟',
-            a: 'نعم. Piper مرخّص تحت MIT الذي يسمح بالاستخدام التجاري غير المحدود. يجب تضمين إشعار ترخيص MIT في منتجك. نماذج الأصوات (ملفات ONNX) قد تحمل تراخيص منفصلة لكل صوت.',
+            a: 'نعم، بشروط. منذ إعادة ترخيص عام 2025، أصبح مستودع Piper الذي يُصان فعليًا مرخصًا بموجب GPL-3.0-or-later (وليس MIT، وهو ترخيص المستودع الأصلي المؤرشف الآن). لا يزال بالإمكان استخدام Piper تجاريًا، لكن رخصة GPL-3.0 تشترط الإفصاح عن مصدر أي تعديلات تُجريها على Piper نفسه إذا وزّعتها بنفس الترخيص؛ استخدامه دون تعديل كأداة خارجية أقل تقييدًا عادةً. نماذج الأصوات (ملفات ONNX) قد تحمل تراخيص منفصلة لكل صوت.',
           },
           {
             q: 'هل Coqui TTS لا يزال مُصانًا بعد إغلاق الشركة؟',
@@ -5025,19 +5034,19 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
           },
           {
             q: 'Kokoro مقابل Piper — أي محرك TTS خفيف على CPU يجب أن أستخدم؟',
-            a: 'كلاهما يعمل بسرعة على CPU بلا GPU وكلاهما مرخّص بتساهل (Piper تحت MIT، Kokoro تحت Apache 2.0)، فأيٌّ منهما آمن للاستخدام التجاري. اختر Piper عندما تحتاج أقل زمن استجابة وأوسع تغطية لغوية (20+ حزمة صوت لغوية، وقت فعلي على Raspberry Pi 5) — فهو المعيار للصوت المُدمج والمنزل الذكي. اختر Kokoro (نموذج بـ82 مليون معامل مبني على معمارية StyleTTS 2) عندما تريد طبيعية أعلى من Piper وتقبل حوسبة أكثر قليلًا؛ جودته الإنجليزية أقرب إلى محركات GPU الأثقل. لـRaspberry Pi أو مساعد دائم التشغيل، Piper؛ ولقراءة صوتية على سطح مكتب/خادم حيث تهم الجودة أكثر من الميلي ثوانٍ، Kokoro.',
+            a: 'كلاهما يعمل بسرعة على CPU بلا GPU وكلاهما مرخّص بتساهل (Piper بموجب GPL-3.0-or-later منذ إعادة ترخيص 2025، وKokoro بموجب Apache 2.0)، فأيٌّ منهما آمن للاستخدام التجاري. اختر Piper عندما تحتاج أقل زمن استجابة وأوسع تغطية لغوية (20+ حزمة صوت لغوية، وقت فعلي على Raspberry Pi 5) — فهو المعيار للصوت المُدمج والمنزل الذكي. اختر Kokoro (نموذج بـ82 مليون معامل مبني على معمارية StyleTTS 2) عندما تريد طبيعية أعلى من Piper وتقبل حوسبة أكثر قليلًا؛ جودته الإنجليزية أقرب إلى محركات GPU الأثقل. لـRaspberry Pi أو مساعد دائم التشغيل، Piper؛ ولقراءة صوتية على سطح مكتب/خادم حيث تهم الجودة أكثر من الميلي ثوانٍ، Kokoro.',
           },
           {
             q: 'هل يدعم XTTS v2 اللغة الليتوانية؟',
-            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الليتوانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الليتواني إلى كلام، يوفر Piper (MIT) حزمة صوت ليتوانية في مستودع أصواته — تحقق من قائمة أصوات Piper على Hugging Face لمعرفة التوفر الحالي، لأن التغطية هناك تعتمد على مساهمات المجتمع وتتغير مع الوقت.',
+            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الليتوانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الليتواني إلى كلام، يوفر Piper (GPL-3.0-or-later) حزمة صوت ليتوانية في مستودع أصواته — تحقق من قائمة أصوات Piper على Hugging Face لمعرفة التوفر الحالي، لأن التغطية هناك تعتمد على مساهمات المجتمع وتتغير مع الوقت.',
           },
           {
             q: 'هل يدعم XTTS v2 اللغة الكازاخستانية؟',
-            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الكازاخستانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الكازاخستاني إلى كلام، تحقق من مستودع أصوات Piper (MIT) على Hugging Face لمعرفة التغطية المجتمعية الحالية — يتغير التوفر مع الوقت.',
+            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الكازاخستانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الكازاخستاني إلى كلام، تحقق من مستودع أصوات Piper (GPL-3.0-or-later) على Hugging Face لمعرفة التغطية المجتمعية الحالية — يتغير التوفر مع الوقت.',
           },
           {
             q: 'هل يدعم XTTS v2 اللغة الأوكرانية؟',
-            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الأوكرانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الأوكراني إلى كلام، تحقق من مستودع أصوات Piper (MIT) على Hugging Face لمعرفة التغطية المجتمعية الحالية — يتغير التوفر مع الوقت.',
+            a: 'لا. يدعم XTTS v2 بالضبط 17 لغة: الإنجليزية والإسبانية والفرنسية والألمانية والإيطالية والبرتغالية والبولندية والتركية والروسية والهولندية والتشيكية والعربية والصينية (zh-cn) واليابانية والمجرية والكورية والهندية. الأوكرانية ليست ضمن هذه القائمة، ولا توجد خطة رسمية لإضافتها. لتحويل النص الأوكراني إلى كلام، تحقق من مستودع أصوات Piper (GPL-3.0-or-later) على Hugging Face لمعرفة التغطية المجتمعية الحالية — يتغير التوفر مع الوقت.',
           },
           {
             q: 'هل Coqui STT هو نفسه Coqui TTS أو XTTS v2؟',
@@ -5066,6 +5075,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[مراجعة Coqui TTS](/ar/power-local-llm/coqui-tts-review) — مراجعة مخصصة لمجموعة أدوات Coqui TTS التي يتناولها هذا الدليل، بما في ذلك حالة صيانتها بعد إغلاق Coqui AI.',
           '[بناء مساعد صوتي دون اتصال كليًا في 2026](/ar/power-local-llm/build-local-voice-assistant-2026) — استخدم Piper أو Coqui TTS كطبقة مخرجات في خط أنابيب كامل من Whisper + LLM + TTS.',
           '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026) — جانب الإدخال في خط أنابيب الصوت: STT لتكملة TTS.',
           '[خط أنابيب الذكاء الاصطناعي متعدد الوسائط المحلي 2026](/ar/power-local-llm/local-multimodal-pipeline-voice-vision-text) — ادمج TTS كطبقة مخرجات صوتية في مجموعة متعددة الوسائط كاملة.',
@@ -5079,7 +5089,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'تراخيص TTS المحلي واستنساخ الصوت 2026: أي المحركات تسمح بالاستخدام التجاري (Piper وXTTS v2 وF5-TTS وCoqui)',
-      description: 'أي محركات TTS المحلية تسمح بالاستخدام التجاري؟ التراخيص الدقيقة لـPiper (MIT) وXTTS v2 (CPML) وF5-TTS (CC-BY-NC) وCoqui وKokoro وTortoise — بالإضافة إلى متغير COQUI_TOS_AGREED ومقارنة استنساخ الصوت. دليل 2026.',
+      description: 'أي محركات TTS المحلية تسمح بالاستخدام التجاري؟ التراخيص الدقيقة لـPiper (GPL-3.0-or-later) وXTTS v2 (CPML) وF5-TTS (CC-BY-NC) وCoqui وKokoro وTortoise — بالإضافة إلى متغير COQUI_TOS_AGREED ومقارنة استنساخ الصوت. دليل 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
       inLanguage: 'ar',
       datePublished: '2026-05-14',
