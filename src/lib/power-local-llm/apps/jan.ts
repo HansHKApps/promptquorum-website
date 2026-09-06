@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'LocalAI', 'OpenAI API', 'Anthropic API'],
   engine: 'builtin',
-  license: 'AGPL 3.0',
+  license: 'Apache 2.0 (variant)',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 44331,
