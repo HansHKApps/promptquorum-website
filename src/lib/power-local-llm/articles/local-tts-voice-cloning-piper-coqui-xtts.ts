@@ -732,6 +732,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Related Reading',
         items: [
           '[Coqui TTS Review](/power-local-llm/coqui-tts-review) — a dedicated review of the Coqui TTS toolkit covered in this guide, including its maintenance status after Coqui AI shut down.',
+          '[XTTS v2 Review](/power-local-llm/xtts-v2-review) — a dedicated review of the XTTS v2 model itself, including real usage commands and its non-commercial CPML license.',
           '[Build a Fully Offline Voice Assistant in 2026](/power-local-llm/build-local-voice-assistant-2026) — Use Piper or Coqui TTS as the output layer of a complete Whisper + LLM + TTS pipeline.',
           '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) — The input side of a voice pipeline: STT to complement TTS.',
           '[Local Multimodal AI Pipeline 2026](/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integrate TTS as the voice output layer of a full multimodal stack.',
@@ -1154,6 +1155,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Weiterführende Lektüre',
         items: [
           '[Coqui TTS im Test](/de/power-local-llm/coqui-tts-review) — ein dedizierter Test des in diesem Leitfaden behandelten Coqui-TTS-Toolkits, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.',
+          '[XTTS v2 im Test](/de/power-local-llm/xtts-v2-review) — ein dedizierter Test des XTTS-v2-Modells selbst, mit echten Nutzungsbefehlen und seiner nicht-kommerziellen CPML-Lizenz.',
           '[Vollständig offlinetem Sprach-Assistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — Verwenden Sie Piper oder Coqui TTS als Ausgabeschicht einer vollständigen Whisper + LLM + TTS-Pipeline.',
           '[Lokale Sprache-zu-Text 2026: Whisper.cpp vs faster-whisper](/de/power-local-llm/local-whisper-stt-comparison-2026) — Die Eingabeseite einer Sprach-Pipeline.',
           '[Lokale multimodale KI-Pipeline 2026](/de/power-local-llm/local-multimodal-pipeline-voice-vision-text) — TTS als Sprach-Ausgabeschicht eines vollständigen multimodalen Stacks integrieren.',
@@ -1559,6 +1561,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Lecture complémentaire',
         items: [
           '[Avis Coqui TTS](/fr/power-local-llm/coqui-tts-review) — un avis dédié au kit Coqui TTS couvert dans ce guide, y compris son statut de maintenance depuis la fermeture de Coqui AI.',
+          '[XTTS v2 : avis](/fr/power-local-llm/xtts-v2-review) — un avis dédié au modèle XTTS v2 lui-même, avec des commandes d\'utilisation réelles et sa licence CPML non commerciale.',
           '[Construire un assistant vocal entièrement hors ligne en 2026](/fr/power-local-llm/build-local-voice-assistant-2026) — Utilisez Piper ou Coqui TTS comme couche de sortie d\'un pipeline complet Whisper + LLM + TTS.',
           '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026) — Le côté entrée d\'un pipeline vocal.',
           '[Pipeline IA multimodale locale 2026](/fr/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Intégrer le TTS comme couche de sortie vocale d\'une pile multimodale complète.',
@@ -1979,6 +1982,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: '関連記事',
         items: [
           '[Coqui TTSレビュー](/ja/power-local-llm/coqui-tts-review) — 本ガイドで扱うCoqui TTSツールキットの専用レビュー。Coqui AI閉鎖後の保守状況も解説。',
+          '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review) — XTTS v2モデル自体の専用レビュー。実際の使用コマンドと非商用CPMLライセンスを解説。',
           '[2026年の完全オフライン音声アシスタント構築](/ja/power-local-llm/build-local-voice-assistant-2026) — PiperまたはCoqui TTSをWhisper + LLM + TTSパイプラインの出力レイヤーとして使用。',
           '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison-2026) — 音声パイプラインの入力側。',
           '[ローカルマルチモーダルAIパイプライン2026](/ja/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 完全なマルチモーダルスタックの音声出力レイヤーとしてTTSを統合。',
@@ -2400,6 +2404,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: '相关阅读',
         items: [
           '[Coqui TTS评测](/zh/power-local-llm/coqui-tts-review) — 本指南中提到的Coqui TTS工具包的专门评测,包括Coqui AI关闭后的维护状态。',
+          '[XTTS v2评测](/zh/power-local-llm/xtts-v2-review) — XTTS v2模型本身的专门评测,包括真实使用命令及其非商业性质的CPML许可证。',
           '[2026年构建完全离线语音助手](/zh/power-local-llm/build-local-voice-assistant-2026) — 将Piper或Coqui TTS用作完整Whisper + LLM + TTS管道的输出层。',
           '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 语音管道的输入侧。',
           '[本地多模态AI管道2026](/zh/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 将TTS集成为完整多模态栈的语音输出层。',
@@ -3116,6 +3121,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Lectura relacionada',
         items: [
           '[Análisis de Coqui TTS](/es/power-local-llm/coqui-tts-review) — un análisis dedicado del kit Coqui TTS cubierto en esta guía, incluido su estado de mantenimiento tras el cierre de Coqui AI.',
+          '[Análisis de XTTS v2](/es/power-local-llm/xtts-v2-review) — un análisis dedicado del propio modelo XTTS v2, con comandos de uso reales y su licencia CPML no comercial.',
           '[Construye un asistente de voz completamente offline en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — Usa Piper o Coqui TTS como capa de salida de un pipeline completo de Whisper + LLM + TTS.',
           '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026) — El lado de entrada de un pipeline de voz: STT para complementar el TTS.',
           '[Pipeline de IA multimodal local 2026](/es/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integra el TTS como capa de salida de voz de un stack multimodal completo.',
@@ -3614,6 +3620,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: '관련 읽을거리',
         items: [
           '[Coqui TTS 리뷰](/ko/power-local-llm/coqui-tts-review) — 이 가이드에서 다룬 Coqui TTS 툴킷에 대한 전용 리뷰로, Coqui AI 폐쇄 이후의 관리 상태도 포함합니다.',
+          '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review) — XTTS v2 모델 자체에 대한 전용 리뷰로, 실제 사용 명령어와 비상업용 CPML 라이선스를 다룹니다.',
           '[2026년 완전 오프라인 음성 어시스턴트 구축](/ko/power-local-llm/build-local-voice-assistant-2026) — 완전한 Whisper + LLM + TTS 파이프라인의 출력 레이어로 Piper 또는 Coqui TTS를 사용합니다.',
           '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — 음성 파이프라인의 입력 측면: TTS를 보완하는 STT.',
           '[로컬 멀티모달 AI 파이프라인 2026](/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 완전한 멀티모달 스택의 음성 출력 레이어로 TTS를 통합합니다.',
@@ -4350,6 +4357,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Leitura relacionada',
         items: [
           '[Análise do Coqui TTS](/pt/power-local-llm/coqui-tts-review) — uma análise dedicada ao kit Coqui TTS abordado neste guia, incluindo seu status de manutenção após o fechamento da Coqui AI.',
+          '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) — uma análise dedicada ao próprio modelo XTTS v2, com comandos de uso reais e sua licença CPML não comercial.',
           '[Construa um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — Use Piper ou Coqui TTS como camada de saída de um pipeline completo de Whisper + LLM + TTS.',
           '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — O lado de entrada de um pipeline de voz: STT para complementar o TTS.',
           '[Pipeline de IA multimodal local 2026](/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Integre o TTS como camada de saída de voz de um stack multimodal completo.',
@@ -5076,6 +5084,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'قراءة ذات صلة',
         items: [
           '[مراجعة Coqui TTS](/ar/power-local-llm/coqui-tts-review) — مراجعة مخصصة لمجموعة أدوات Coqui TTS التي يتناولها هذا الدليل، بما في ذلك حالة صيانتها بعد إغلاق Coqui AI.',
+          '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) — مراجعة مخصصة لنموذج XTTS v2 نفسه، مع أوامر استخدام حقيقية ورخصته CPML غير التجارية.',
           '[بناء مساعد صوتي دون اتصال كليًا في 2026](/ar/power-local-llm/build-local-voice-assistant-2026) — استخدم Piper أو Coqui TTS كطبقة مخرجات في خط أنابيب كامل من Whisper + LLM + TTS.',
           '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026) — جانب الإدخال في خط أنابيب الصوت: STT لتكملة TTS.',
           '[خط أنابيب الذكاء الاصطناعي متعدد الوسائط المحلي 2026](/ar/power-local-llm/local-multimodal-pipeline-voice-vision-text) — ادمج TTS كطبقة مخرجات صوتية في مجموعة متعددة الوسائط كاملة.',

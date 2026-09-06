@@ -29,6 +29,7 @@ import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
 import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
+import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -310,6 +311,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'faster-whisper-review':                         a_faster_whisper_review,
   'piper-tts-review':                               a_piper_tts_review,
   'coqui-tts-review':                               a_coqui_tts_review,
+  'xtts-v2-review':                                 a_xtts_v2_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
