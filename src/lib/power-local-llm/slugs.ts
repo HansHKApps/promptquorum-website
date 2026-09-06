@@ -254,4 +254,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'llm-farm-review':                         'llm-farm-review',
   // Layla review — 2026-09-06
   'layla-review':                            'layla-review',
+  // ComfyUI review — 2026-09-06
+  'comfyui-review':                          'comfyui-review',
 }

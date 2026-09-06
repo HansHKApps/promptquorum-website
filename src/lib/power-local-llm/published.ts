@@ -281,6 +281,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Layla review (Mobile & Edge LLMs) — 2026-09-06
   'layla-review',
+
+  // ComfyUI review (Image & Video Generation) — 2026-09-06
+  'comfyui-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
