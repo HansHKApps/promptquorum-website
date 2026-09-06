@@ -250,4 +250,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'invokeai-review':                         'invokeai-review',
   // AUTOMATIC1111 WebUI review — 2026-09-06
   'automatic1111-review':                    'automatic1111-review',
+  // LLM Farm review — 2026-09-06
+  'llm-farm-review':                         'llm-farm-review',
 }

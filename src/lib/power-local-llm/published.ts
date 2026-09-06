@@ -275,6 +275,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // AUTOMATIC1111 WebUI review (Image & Video Generation) — 2026-09-06
   'automatic1111-review',
+
+  // LLM Farm review (Mobile & Edge LLMs) — 2026-09-06
+  'llm-farm-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
