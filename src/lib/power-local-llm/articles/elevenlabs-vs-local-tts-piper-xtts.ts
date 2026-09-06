@@ -736,6 +736,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'A dedicated review of Suno\'s MIT-licensed generative audio model, which adds laughter and other non-speech sounds but does not support voice cloning.'
           },
           {
+            url: '/power-local-llm/styletts-2-review',
+            title: 'StyleTTS 2 Review',
+            description: 'A dedicated review of Columbia University\'s MIT-licensed, style-diffusion speech model, including its README-level disclosure condition and maintenance status.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Deep dive into open-source TTS licensing and model deployment.'
@@ -1694,6 +1699,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Ein dedizierter Test von Sunos MIT-lizenziertem generativem Audio-Modell, das Lachen und andere nicht-sprachliche Laute hinzufügt, aber kein Voice-Cloning unterstützt.'
           },
           {
+            url: '/de/power-local-llm/styletts-2-review',
+            title: 'StyleTTS 2 im Test',
+            description: 'Ein dedizierter Test von Columbia Universitys MIT-lizenziertem, Style-Diffusion-Sprachmodell, einschließlich seiner README-Offenlegungsbedingung und seines Wartungsstatus.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Lokale TTS- & Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui',
             description: 'Tiefer Einblick in Open-Source-TTS-Lizenzierung und Modellbereitstellung.'
@@ -2647,6 +2657,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Un avis dédié au modèle audio génératif sous licence MIT de Suno, qui ajoute le rire et d\'autres sons non verbaux mais ne prend pas en charge le clonage vocal.'
           },
           {
+            url: '/fr/power-local-llm/styletts-2-review',
+            title: 'Avis StyleTTS 2',
+            description: 'Un avis dédié au modèle vocal à diffusion de style de l\'université Columbia, sous licence MIT, incluant sa condition de divulgation du README et son statut de maintenance.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licences TTS local & clonage vocal : Piper, XTTS v2, F5-TTS et Coqui',
             description: 'Analyse approfondie des licences TTS open source et du déploiement de modèles.'
@@ -3597,6 +3612,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Suno的MIT许可生成式音频模型的专门评测,可添加笑声等非语音声音,但不支持声音克隆。'
           },
           {
+            url: '/zh/power-local-llm/styletts-2-review',
+            title: 'StyleTTS 2评测',
+            description: '哥伦比亚大学MIT许可的风格扩散语音模型专门评测,包括其README级披露条件及维护状态。'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '本地TTS与声音克隆许可：Piper、XTTS v2、F5-TTS与Coqui',
             description: '深入解析开源TTS许可和模型部署。'
@@ -4545,6 +4565,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/ja/power-local-llm/bark-tts-review',
             title: 'Barkレビュー',
             description: '笑い声などの非音声サウンドを追加できるがボイスクローニングには対応していない、SunoのMITライセンス生成音声モデルの専用レビュー。'
+          },
+          {
+            url: '/ja/power-local-llm/styletts-2-review',
+            title: 'StyleTTS 2レビュー',
+            description: 'コロンビア大学のMITライセンス、スタイル拡散音声モデルの専用レビュー。READMEの開示条件とメンテナンス状況を解説。'
           },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
@@ -5500,6 +5525,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Un análisis dedicado del modelo de audio generativo con licencia MIT de Suno, que añade risas y otros sonidos no verbales pero no admite clonación de voz.'
           },
           {
+            url: '/es/power-local-llm/styletts-2-review',
+            title: 'Análisis de StyleTTS 2',
+            description: 'Un análisis dedicado del modelo de voz por difusión de estilo de la Universidad de Columbia, con licencia MIT, incluida su condición de divulgación del README y su estado de mantenimiento.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licencias de TTS local y clonación de voz: Piper, XTTS v2, F5-TTS y Coqui',
             description: 'Análisis en profundidad de las licencias de TTS de código abierto y el despliegue de modelos.'
@@ -6452,6 +6482,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Uma análise dedicada ao modelo de áudio generativo com licença MIT da Suno, que adiciona risadas e outros sons não verbais, mas não suporta clonagem de voz.'
           },
           {
+            url: '/pt/power-local-llm/styletts-2-review',
+            title: 'Análise do StyleTTS 2',
+            description: 'Uma análise dedicada ao modelo de voz por difusão de estilo da Universidade Columbia, com licença MIT, incluindo sua condição de divulgação do README e status de manutenção.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Aprofundamento no licenciamento de TTS de código aberto e implantação de modelos.'
@@ -7402,6 +7437,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '웃음 등 비언어적 소리를 추가할 수 있지만 음성 클로닝은 지원하지 않는, Suno의 MIT 라이선스 생성형 오디오 모델에 대한 전용 리뷰입니다.'
           },
           {
+            url: '/ko/power-local-llm/styletts-2-review',
+            title: 'StyleTTS 2 리뷰',
+            description: '컬럼비아 대학교의 MIT 라이선스 스타일 확산 음성 모델에 대한 전용 리뷰로, README 수준의 공개 조건과 유지보수 상태를 다룹니다.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '로컬 TTS 및 음성 복제 라이선스: Piper, XTTS v2, F5-TTS, Coqui',
             description: '오픈소스 TTS 라이선스와 모델 배포에 대한 심층 분석.'
@@ -8348,6 +8388,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/ar/power-local-llm/bark-tts-review',
             title: 'مراجعة Bark',
             description: 'مراجعة مخصصة لنموذج Suno الصوتي التوليدي المرخّص بموجب MIT، الذي يضيف الضحك وأصواتًا غير كلامية أخرى لكنه لا يدعم استنساخ الصوت.'
+          },
+          {
+            url: '/ar/power-local-llm/styletts-2-review',
+            title: 'مراجعة StyleTTS 2',
+            description: 'مراجعة مخصصة لنموذج الصوت القائم على انتشار الأسلوب من جامعة كولومبيا، المرخّص بموجب MIT، بما في ذلك شرط الإفصاح على مستوى README وحالة الصيانة.'
           },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',

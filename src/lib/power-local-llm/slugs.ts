@@ -221,6 +221,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',
   'bark-tts-review':                         'bark-tts-review',
+  'styletts-2-review':                       'styletts-2-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05
