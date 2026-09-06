@@ -237,4 +237,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'codegpt-review':                          'codegpt-review',
   'openhands-review':                        'openhands-review',
   'cursor-local-mode-review':                'cursor-local-mode-review',
+  // Twinny, Aider, shell-gpt reviews — 2026-09-06
+  'twinny-review':                           'twinny-review',
+  'aider-review':                            'aider-review',
+  'shell-gpt-review':                        'shell-gpt-review',
 }

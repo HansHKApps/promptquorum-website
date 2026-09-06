@@ -25,6 +25,9 @@ import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_codegpt_review } from './articles/codegpt-review'
 import { article as a_openhands_review } from './articles/openhands-review'
 import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
+import { article as a_twinny_review } from './articles/twinny-review'
+import { article as a_aider_review } from './articles/aider-review'
+import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -327,4 +330,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'codegpt-review':                                a_codegpt_review,
   'openhands-review':                              a_openhands_review,
   'cursor-local-mode-review':                       a_cursor_local_mode_review,
+  // Twinny, Aider, shell-gpt reviews — 2026-09-06
+  'twinny-review':                                  a_twinny_review,
+  'aider-review':                                   a_aider_review,
+  'shell-gpt-review':                               a_shell_gpt_review,
 }

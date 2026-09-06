@@ -45,6 +45,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'codegpt-review',
   'openhands-review',
   'cursor-local-mode-review',
+  'twinny-review',
+  'aider-review',
+  'shell-gpt-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
