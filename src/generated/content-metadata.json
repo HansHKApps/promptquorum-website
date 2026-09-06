@@ -409,7 +409,7 @@
       ]
     },
     "best-local-llms-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -8795,6 +8795,42 @@
       ],
       "images": []
     },
+    "xtts-v2-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "bark-tts-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "pocketpal-ai-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -8867,10 +8903,46 @@
       ],
       "images": []
     },
-    "llama-cpp-review": {
-      "dateModified": "2026-09-05",
+    "vllm-explained": {
+      "dateModified": "2026-09-06",
       "lastFactChecked": null,
-      "publishDate": "2026-09-05",
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "koboldcpp-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "localai-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
       "hasSections": true,
       "langs": [
         "en",
@@ -9102,6 +9174,186 @@
       "images": []
     },
     "privategpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "chapper-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "controlnet-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "maid-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "stableswarmui-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "fooocus-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "invokeai-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "automatic1111-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llm-farm-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "layla-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "comfyui-review": {
       "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
