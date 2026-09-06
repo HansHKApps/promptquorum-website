@@ -33,6 +33,7 @@ import { article as a_fooocus_review } from './articles/fooocus-review'
 import { article as a_invokeai_review } from './articles/invokeai-review'
 import { article as a_automatic1111_review } from './articles/automatic1111-review'
 import { article as a_llm_farm_review } from './articles/llm-farm-review'
+import { article as a_layla_review } from './articles/layla-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -349,4 +350,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'automatic1111-review':                          a_automatic1111_review,
   // LLM Farm review — 2026-09-06
   'llm-farm-review':                               a_llm_farm_review,
+  // Layla review — 2026-09-06
+  'layla-review':                                  a_layla_review,
 }

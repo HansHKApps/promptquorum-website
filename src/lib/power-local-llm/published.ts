@@ -278,6 +278,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // LLM Farm review (Mobile & Edge LLMs) — 2026-09-06
   'llm-farm-review',
+
+  // Layla review (Mobile & Edge LLMs) — 2026-09-06
+  'layla-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
