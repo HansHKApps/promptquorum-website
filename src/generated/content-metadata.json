@@ -8381,6 +8381,24 @@
       ],
       "images": []
     },
+    "boltai-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "shadow-ai-controls-by-company-size": {
       "dateModified": "2026-09-04",
       "lastFactChecked": null,
@@ -8831,6 +8849,24 @@
       ],
       "images": []
     },
+    "styletts-2-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "pocketpal-ai-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -8922,6 +8958,24 @@
       "images": []
     },
     "koboldcpp-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlc-llm-explained": {
       "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
@@ -9051,132 +9105,6 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "twinny-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "aider-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "shell-gpt-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "aichat-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "tgpt-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "blackbox-ai-cli-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "privategpt-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
       "hasSections": true,
       "langs": [
         "en",
@@ -9354,6 +9282,168 @@
       "images": []
     },
     "comfyui-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "rikkahub-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "anythingllm-mobile-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "twinny-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "aider-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "shell-gpt-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "aichat-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tgpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "blackbox-ai-cli-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "privategpt-review": {
       "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",

@@ -19,6 +19,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -59,30 +67,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "sillytavern-review",
-        "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
-        "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 205,
+    "totalCount": 207,
     "capped": true
   },
   "llama.cpp": {
@@ -137,9 +137,25 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlc-llm-explained",
+        "title": "MLC LLM Explained 2026: Compile Once, Run on Phones and Browsers",
+        "url": "/power-local-llm/mlc-llm-explained",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "privategpt-review",
         "title": "PrivateGPT Review: It's Not a Chat App Anymore",
         "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -150,25 +166,9 @@
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-review",
-        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
-        "url": "/local-llms/text-generation-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 105,
+    "totalCount": 108,
     "capped": true
   },
   "vLLM": {
@@ -353,6 +353,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "mlc-llm-explained",
+        "title": "MLC LLM Explained 2026: Compile Once, Run on Phones and Browsers",
+        "url": "/power-local-llm/mlc-llm-explained",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -376,7 +384,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "SGLang": {
@@ -549,6 +557,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -568,6 +584,14 @@
         "slug": "privategpt-review",
         "title": "PrivateGPT Review: It's Not a Chat App Anymore",
         "url": "/power-local-llm/privategpt-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -610,25 +634,9 @@
         "url": "/power-local-llm/codegpt-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enchanted-review",
-        "title": "Enchanted Review 2026: Native macOS/iOS Ollama Client",
-        "url": "/power-local-llm/enchanted-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-cpp-explained",
-        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
-        "url": "/power-local-llm/llama-cpp-explained",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 101,
+    "totalCount": 103,
     "capped": true
   },
   "Atomic Chat": {
@@ -744,7 +752,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "GPT4All": {
@@ -830,11 +838,19 @@
         "tier": "about"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "AnythingLLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "open-webui-review",
@@ -906,17 +922,9 @@
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-with-built-in-rag",
-        "title": "Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)",
-        "url": "/power-local-llm/local-ai-app-with-built-in-rag",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 20,
     "capped": true
   },
   "Msty": {
@@ -962,6 +970,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
@@ -970,7 +986,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Cherry Studio": {
@@ -1037,6 +1053,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "enchanted-review",
         "title": "Enchanted Review 2026: Native macOS/iOS Ollama Client",
         "url": "/power-local-llm/enchanted-review",
@@ -1100,7 +1124,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "h2oGPT": {
@@ -1135,6 +1159,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "enchanted-review",
         "title": "Enchanted Review 2026: Native macOS/iOS Ollama Client",
         "url": "/power-local-llm/enchanted-review",
@@ -1150,7 +1182,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Hanoki": {
@@ -1256,6 +1288,14 @@
   "Open WebUI": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
@@ -1326,17 +1366,9 @@
         "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-rag-tools",
-        "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
-        "url": "/local-llms/best-local-rag-tools",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 36,
+    "totalCount": 38,
     "capped": true
   },
   "LibreChat": {
@@ -1547,14 +1579,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "ai-tool-licenses-explained",
-        "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
-        "url": "/power-local-llm/ai-tool-licenses-explained",
-        "dateModified": "2026-09-03",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
+        "dateModified": "2026-09-06",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "LobeChat": {
@@ -1633,6 +1665,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "msty-review",
         "title": "Msty Review 2026: Local + Cloud Chat in One Desktop App",
         "url": "/power-local-llm/msty-review",
@@ -1640,7 +1680,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Continue.dev": {
@@ -2229,6 +2269,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "privategpt-review",
         "title": "PrivateGPT Review: It's Not a Chat App Anymore",
         "url": "/power-local-llm/privategpt-review",
@@ -2258,6 +2306,14 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "boltai-review",
+        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
+        "url": "/power-local-llm/boltai-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -2292,7 +2348,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 10,
     "capped": false
   },
   "Quivr": {
@@ -3072,23 +3128,23 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-personal-knowledge-base-2026",
-        "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
-        "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "faster-whisper": {
@@ -3127,6 +3183,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -3142,7 +3206,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Piper TTS": {
@@ -3243,6 +3307,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -3250,7 +3322,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "XTTS v2": {
@@ -3260,6 +3332,14 @@
         "slug": "bark-tts-review",
         "title": "Bark TTS Review (2026): Suno's MIT-Licensed Model for Laughter, Sighs, and Speech",
         "url": "/power-local-llm/bark-tts-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -3304,7 +3384,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Bark": {
@@ -3314,6 +3394,14 @@
         "slug": "bark-tts-review",
         "title": "Bark TTS Review (2026): Suno's MIT-Licensed Model for Laughter, Sighs, and Speech",
         "url": "/power-local-llm/bark-tts-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -3334,11 +3422,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "StyleTTS 2": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "styletts-2-review",
+        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
+        "url": "/power-local-llm/styletts-2-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-tts-voice-cloning-piper-coqui-xtts",
@@ -3348,7 +3444,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "LLaVA": {
@@ -3503,6 +3599,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -3530,6 +3634,14 @@
         "slug": "maid-review",
         "title": "Maid Review (2026): Open-Source Local LLM Chat App for Android",
         "url": "/power-local-llm/maid-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -3564,29 +3676,21 @@
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mobile-local-llms",
-        "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
-        "url": "/local-llms/mobile-local-llms",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-08-24",
-        "tier": "about"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 16,
     "capped": true
   },
   "Private LLM": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "chapper-review",
@@ -3616,6 +3720,14 @@
         "slug": "maid-review",
         "title": "Maid Review (2026): Open-Source Local LLM Chat App for Android",
         "url": "/power-local-llm/maid-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -3650,25 +3762,9 @@
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
         "dateModified": "2026-08-22",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pocketpal-ai-review",
-        "title": "PocketPal AI Review (2026): Free, Open-Source On-Device Chat",
-        "url": "/power-local-llm/pocketpal-ai-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "arbiter-local-ai-chat-review",
-        "title": "Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone",
-        "url": "/power-local-llm/arbiter-local-ai-chat-review",
-        "dateModified": "2026-09-04",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 14,
     "capped": true
   },
   "LLM Farm": {
@@ -3835,6 +3931,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -3858,11 +3962,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "AnythingLLM Mobile": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-mobile-review",
+        "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
+        "url": "/power-local-llm/anythingllm-mobile-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "chapper-review",
@@ -3872,7 +3984,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Enclave AI": {
@@ -3892,9 +4004,17 @@
         "url": "/power-local-llm/maid-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rikkahub-review",
+        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
+        "url": "/power-local-llm/rikkahub-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Locally AI": {
