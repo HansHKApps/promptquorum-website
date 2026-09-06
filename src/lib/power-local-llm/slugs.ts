@@ -44,6 +44,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'hermes-agent-review':                    'hermes-agent-review-2026',
   'msty-go-review':                         'msty-go-review-2026',
   'msty-review':                             'msty-review',
+  'enchanted-review':                        'enchanted-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -237,4 +238,13 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'codegpt-review':                          'codegpt-review',
   'openhands-review':                        'openhands-review',
   'cursor-local-mode-review':                'cursor-local-mode-review',
+  // Twinny, Aider, shell-gpt reviews — 2026-09-06
+  'twinny-review':                           'twinny-review',
+  'aider-review':                            'aider-review',
+  'shell-gpt-review':                        'shell-gpt-review',
+  // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
+  'aichat-review':                           'aichat-review',
+  'tgpt-review':                             'tgpt-review',
+  'blackbox-ai-cli-review':                  'blackbox-ai-cli-review',
+  'privategpt-review':                       'privategpt-review',
 }

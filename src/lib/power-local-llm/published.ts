@@ -45,6 +45,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'codegpt-review',
   'openhands-review',
   'cursor-local-mode-review',
+  'twinny-review',
+  'aider-review',
+  'shell-gpt-review',
+  'aichat-review',
+  'tgpt-review',
+  'blackbox-ai-cli-review',
+  'privategpt-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -214,6 +221,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Msty Go local-first AI task-automation agent review — 2026-09-03
   'msty-go-review',
   'msty-review',
+  'enchanted-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',

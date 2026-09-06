@@ -25,6 +25,13 @@ import { article as a_tabby_review } from './articles/tabby-review'
 import { article as a_codegpt_review } from './articles/codegpt-review'
 import { article as a_openhands_review } from './articles/openhands-review'
 import { article as a_cursor_local_mode_review } from './articles/cursor-local-mode-review'
+import { article as a_twinny_review } from './articles/twinny-review'
+import { article as a_aider_review } from './articles/aider-review'
+import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
+import { article as a_aichat_review } from './articles/aichat-review'
+import { article as a_tgpt_review } from './articles/tgpt-review'
+import { article as a_blackbox_ai_cli_review } from './articles/blackbox-ai-cli-review'
+import { article as a_privategpt_review } from './articles/privategpt-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -155,6 +162,7 @@ import { article as a_open_interpreter_review } from './articles/open-interprete
 import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
+import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
 
@@ -283,6 +291,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'vlm-video-analytics-drones-edge':                   a_vlm_video_analytics_drones_edge,
   'msty-go-review-2026':                               a_msty_go_review_2026,
   'msty-review':                                       a_msty_review,
+  'enchanted-review':                                  a_enchanted_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -327,4 +336,13 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'codegpt-review':                                a_codegpt_review,
   'openhands-review':                              a_openhands_review,
   'cursor-local-mode-review':                       a_cursor_local_mode_review,
+  // Twinny, Aider, shell-gpt reviews — 2026-09-06
+  'twinny-review':                                  a_twinny_review,
+  'aider-review':                                   a_aider_review,
+  'shell-gpt-review':                               a_shell_gpt_review,
+  // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
+  'aichat-review':                                  a_aichat_review,
+  'tgpt-review':                                    a_tgpt_review,
+  'blackbox-ai-cli-review':                         a_blackbox_ai_cli_review,
+  'privategpt-review':                              a_privategpt_review,
 }
