@@ -2873,6 +2873,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "babyagi-review-autonomous-agent",
         "title": "BabyAGI in 2026: What the First AI Agent Became",
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
@@ -2904,7 +2912,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "LlamaIndex": {
@@ -3128,7 +3136,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "about"
@@ -3146,6 +3154,14 @@
         "slug": "langchain-review",
         "title": "LangChain Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -3196,17 +3212,9 @@
         "url": "/local-llms/best-llm-observability-tools-2026",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-rag-tools",
-        "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
-        "url": "/local-llms/best-local-rag-tools",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "CrewAI": {
@@ -3216,6 +3224,14 @@
         "slug": "crewai-review",
         "title": "CrewAI Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/crewai-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -3238,7 +3254,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
@@ -3282,17 +3298,9 @@
         "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-stack-use-case",
-        "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
-        "url": "/local-llms/best-local-llm-stack-use-case",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "AutoGen": {
@@ -3300,8 +3308,16 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -3354,7 +3370,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Semantic Kernel": {
@@ -3362,7 +3378,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "about"
@@ -3382,9 +3398,17 @@
         "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LangGraph": {
@@ -3392,7 +3416,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "about"
@@ -3402,6 +3426,14 @@
         "slug": "langchain-review",
         "title": "LangChain Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langgraph-review",
+        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/langgraph-review",
         "dateModified": "2026-09-05",
         "tier": "about"
       },
@@ -3460,17 +3492,9 @@
         "url": "/local-llms/local-vs-cloud-agents",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "prompt-engineering-for-local-models",
-        "title": "Prompt Engineering for Local LLMs 2026: CoT & Few-Shot",
-        "url": "/local-llms/prompt-engineering-for-local-models",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "OpenClaw": {
@@ -5418,7 +5442,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
@@ -5496,7 +5520,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
@@ -5574,7 +5598,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Features, Pricing, Alternatives",
+        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
