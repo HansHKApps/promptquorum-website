@@ -50,6 +50,8 @@ import { article as a_piper_tts_review } from './articles/piper-tts-review'
 import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
+import { article as a_styletts_2_review } from './articles/styletts-2-review'
+import { article as a_llava_review } from './articles/llava-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -182,7 +184,9 @@ import { article as a_jan_review } from './articles/jan-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
+import { article as a_mlc_llm_explained } from './articles/mlc-llm-explained'
 import { article as a_localai_explained } from './articles/localai-explained'
+import { article as a_tensorrt_llm_explained } from './articles/tensorrt-llm-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -343,6 +347,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'coqui-tts-review':                               a_coqui_tts_review,
   'xtts-v2-review':                                 a_xtts_v2_review,
   'bark-tts-review':                                a_bark_tts_review,
+  'styletts-2-review':                             a_styletts_2_review,
+  'llava-review':                                  a_llava_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
@@ -350,7 +356,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llama-cpp-explained':                           a_llama_cpp_explained,
   'vllm-explained':                                a_vllm_explained,
   'koboldcpp-review':                              a_koboldcpp_review,
+  'mlc-llm-explained':                             a_mlc_llm_explained,
   'localai-explained':                             a_localai_explained,
+  'tensorrt-llm-explained':                        a_tensorrt_llm_explained,
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                               a_windsurf_review,

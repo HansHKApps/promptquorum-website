@@ -256,6 +256,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'coqui-tts-review',
   'xtts-v2-review',
   'bark-tts-review',
+  'styletts-2-review',
+  'llava-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
@@ -269,6 +271,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // llama.cpp explainer — 2026-09-05
   'llama-cpp-explained',
 
+  // TensorRT-LLM explainer — 2026-09-06
+  'tensorrt-llm-explained',
   // Chapper review (Mobile & Edge LLMs) — 2026-09-06
   'chapper-review',
 
