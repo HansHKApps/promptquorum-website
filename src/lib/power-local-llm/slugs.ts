@@ -218,6 +218,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'piper-tts-review':                        'piper-tts-review',
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',
+  'bark-tts-review':                         'bark-tts-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05
