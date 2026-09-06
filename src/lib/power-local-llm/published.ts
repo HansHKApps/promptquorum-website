@@ -45,6 +45,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'codegpt-review',
   'openhands-review',
   'cursor-local-mode-review',
+  'twinny-review',
+  'aider-review',
+  'shell-gpt-review',
+  'aichat-review',
+  'tgpt-review',
+  'blackbox-ai-cli-review',
+  'privategpt-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -164,6 +171,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autogen-review',
   // Agent frameworks series — CrewAI review (article 3 of 14) — 2026-09-05
   'crewai-review',
+  // Agent frameworks series — LangGraph review (article 5 of 14) — 2026-09-05
+  'langgraph-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -244,6 +253,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'faster-whisper-review',
   'piper-tts-review',
   'coqui-tts-review',
+  'xtts-v2-review',
+  'bark-tts-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
@@ -256,6 +267,47 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // llama.cpp explainer — 2026-09-05
   'llama-cpp-explained',
+
+  // Chapper review (Mobile & Edge LLMs) — 2026-09-06
+  'chapper-review',
+
+  // ControlNet review (Image & Video Generation) — 2026-09-06
+  'controlnet-review',
+
+  // Maid review (Mobile & Edge LLMs) — 2026-09-06
+  'maid-review',
+
+  // SwarmUI (formerly StableSwarmUI) review (Image & Video Generation) — 2026-09-06
+  'stableswarmui-review',
+
+  // Fooocus review (Image & Video Generation) — 2026-09-06
+  'fooocus-review',
+
+  // InvokeAI review (Image & Video Generation) — 2026-09-06
+  'invokeai-review',
+
+  // AUTOMATIC1111 WebUI review (Image & Video Generation) — 2026-09-06
+  'automatic1111-review',
+
+  // LLM Farm review (Mobile & Edge LLMs) — 2026-09-06
+  'llm-farm-review',
+
+  // Layla review (Mobile & Edge LLMs) — 2026-09-06
+  'layla-review',
+
+  // ComfyUI review (Image & Video Generation) — 2026-09-06
+  'comfyui-review',
+
+  // RikkaHub review (Mobile & Edge LLMs) — 2026-09-06
+  'rikkahub-review',
+
+  // AnythingLLM Mobile review (Mobile & Edge LLMs) — 2026-09-06
+  'anythingllm-mobile-review',
+
+  // vLLM explainer — 2026-09-06
+  'vllm-explained',
+  // LocalAI explainer — 2026-09-06
+  'localai-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

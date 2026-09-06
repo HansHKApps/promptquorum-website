@@ -726,6 +726,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'A dedicated review of the Coqui TTS toolkit, including its maintenance status after Coqui AI shut down.'
           },
           {
+            url: '/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2 Review',
+            description: 'A dedicated review of the XTTS v2 model itself, including real usage commands and its non-commercial CPML license.'
+          },
+          {
+            url: '/power-local-llm/bark-tts-review',
+            title: 'Bark Review',
+            description: 'A dedicated review of Suno\'s MIT-licensed generative audio model, which adds laughter and other non-speech sounds but does not support voice cloning.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Deep dive into open-source TTS licensing and model deployment.'
@@ -1674,6 +1684,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Ein dedizierter Test des Coqui-TTS-Toolkits, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.'
           },
           {
+            url: '/de/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2 im Test',
+            description: 'Ein dedizierter Test des XTTS-v2-Modells selbst, mit echten Nutzungsbefehlen und seiner nicht-kommerziellen CPML-Lizenz.'
+          },
+          {
+            url: '/de/power-local-llm/bark-tts-review',
+            title: 'Bark im Test',
+            description: 'Ein dedizierter Test von Sunos MIT-lizenziertem generativem Audio-Modell, das Lachen und andere nicht-sprachliche Laute hinzufügt, aber kein Voice-Cloning unterstützt.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Lokale TTS- & Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui',
             description: 'Tiefer Einblick in Open-Source-TTS-Lizenzierung und Modellbereitstellung.'
@@ -2617,6 +2637,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Un avis dédié au kit Coqui TTS, y compris son statut de maintenance depuis la fermeture de Coqui AI.'
           },
           {
+            url: '/fr/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2 : avis',
+            description: 'Un avis dédié au modèle XTTS v2 lui-même, avec des commandes d\'utilisation réelles et sa licence CPML non commerciale.'
+          },
+          {
+            url: '/fr/power-local-llm/bark-tts-review',
+            title: 'Avis Bark',
+            description: 'Un avis dédié au modèle audio génératif sous licence MIT de Suno, qui ajoute le rire et d\'autres sons non verbaux mais ne prend pas en charge le clonage vocal.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licences TTS local & clonage vocal : Piper, XTTS v2, F5-TTS et Coqui',
             description: 'Analyse approfondie des licences TTS open source et du déploiement de modèles.'
@@ -3557,6 +3587,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Coqui TTS工具包的专门评测,包括Coqui AI关闭后的维护状态。'
           },
           {
+            url: '/zh/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2评测',
+            description: 'XTTS v2模型本身的专门评测,包括真实使用命令及其非商业性质的CPML许可证。'
+          },
+          {
+            url: '/zh/power-local-llm/bark-tts-review',
+            title: 'Bark评测',
+            description: 'Suno的MIT许可生成式音频模型的专门评测,可添加笑声等非语音声音,但不支持声音克隆。'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '本地TTS与声音克隆许可：Piper、XTTS v2、F5-TTS与Coqui',
             description: '深入解析开源TTS许可和模型部署。'
@@ -4495,6 +4535,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/ja/power-local-llm/coqui-tts-review',
             title: 'Coqui TTSレビュー',
             description: 'Coqui TTSツールキットの専用レビュー。Coqui AI閉鎖後の保守状況も解説。'
+          },
+          {
+            url: '/ja/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2レビュー',
+            description: 'XTTS v2モデル自体の専用レビュー。実際の使用コマンドと非商用CPMLライセンスを解説。'
+          },
+          {
+            url: '/ja/power-local-llm/bark-tts-review',
+            title: 'Barkレビュー',
+            description: '笑い声などの非音声サウンドを追加できるがボイスクローニングには対応していない、SunoのMITライセンス生成音声モデルの専用レビュー。'
           },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
@@ -5440,6 +5490,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Un análisis dedicado del kit Coqui TTS, incluido su estado de mantenimiento tras el cierre de Coqui AI.'
           },
           {
+            url: '/es/power-local-llm/xtts-v2-review',
+            title: 'Análisis de XTTS v2',
+            description: 'Un análisis dedicado del propio modelo XTTS v2, con comandos de uso reales y su licencia CPML no comercial.'
+          },
+          {
+            url: '/es/power-local-llm/bark-tts-review',
+            title: 'Análisis de Bark',
+            description: 'Un análisis dedicado del modelo de audio generativo con licencia MIT de Suno, que añade risas y otros sonidos no verbales pero no admite clonación de voz.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Licencias de TTS local y clonación de voz: Piper, XTTS v2, F5-TTS y Coqui',
             description: 'Análisis en profundidad de las licencias de TTS de código abierto y el despliegue de modelos.'
@@ -6382,6 +6442,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Uma análise dedicada ao kit Coqui TTS, incluindo seu status de manutenção após o fechamento da Coqui AI.'
           },
           {
+            url: '/pt/power-local-llm/xtts-v2-review',
+            title: 'Análise do XTTS v2',
+            description: 'Uma análise dedicada ao próprio modelo XTTS v2, com comandos de uso reais e sua licença CPML não comercial.'
+          },
+          {
+            url: '/pt/power-local-llm/bark-tts-review',
+            title: 'Análise do Bark',
+            description: 'Uma análise dedicada ao modelo de áudio generativo com licença MIT da Suno, que adiciona risadas e outros sons não verbais, mas não suporta clonagem de voz.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: 'Local TTS & Voice Cloning Licenses: Piper, XTTS v2, F5-TTS and Coqui',
             description: 'Aprofundamento no licenciamento de TTS de código aberto e implantação de modelos.'
@@ -7322,6 +7392,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Coqui TTS 툴킷에 대한 전용 리뷰로, Coqui AI 폐쇄 이후의 관리 상태도 포함합니다.'
           },
           {
+            url: '/ko/power-local-llm/xtts-v2-review',
+            title: 'XTTS v2 리뷰',
+            description: 'XTTS v2 모델 자체에 대한 전용 리뷰로, 실제 사용 명령어와 비상업용 CPML 라이선스를 다룹니다.'
+          },
+          {
+            url: '/ko/power-local-llm/bark-tts-review',
+            title: 'Bark 리뷰',
+            description: '웃음 등 비언어적 소리를 추가할 수 있지만 음성 클로닝은 지원하지 않는, Suno의 MIT 라이선스 생성형 오디오 모델에 대한 전용 리뷰입니다.'
+          },
+          {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
             title: '로컬 TTS 및 음성 복제 라이선스: Piper, XTTS v2, F5-TTS, Coqui',
             description: '오픈소스 TTS 라이선스와 모델 배포에 대한 심층 분석.'
@@ -8258,6 +8338,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: '/ar/power-local-llm/coqui-tts-review',
             title: 'مراجعة Coqui TTS',
             description: 'مراجعة مخصصة لمجموعة أدوات Coqui TTS، بما في ذلك حالة صيانتها بعد إغلاق Coqui AI.'
+          },
+          {
+            url: '/ar/power-local-llm/xtts-v2-review',
+            title: 'مراجعة XTTS v2',
+            description: 'مراجعة مخصصة لنموذج XTTS v2 نفسه، مع أوامر استخدام حقيقية ورخصته CPML غير التجارية.'
+          },
+          {
+            url: '/ar/power-local-llm/bark-tts-review',
+            title: 'مراجعة Bark',
+            description: 'مراجعة مخصصة لنموذج Suno الصوتي التوليدي المرخّص بموجب MIT، الذي يضيف الضحك وأصواتًا غير كلامية أخرى لكنه لا يدعم استنساخ الصوت.'
           },
           {
             url: '/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts',
