@@ -45,6 +45,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'codegpt-review',
   'openhands-review',
   'cursor-local-mode-review',
+  'twinny-review',
+  'aider-review',
+  'shell-gpt-review',
+  'aichat-review',
+  'tgpt-review',
+  'blackbox-ai-cli-review',
+  'privategpt-review',
 
   // Cat 4 — Agents & Automation
   'local-ai-agents-with-mcp-2026',
@@ -164,6 +171,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autogen-review',
   // Agent frameworks series — CrewAI review (article 3 of 14) — 2026-09-05
   'crewai-review',
+  // Agent frameworks series — LangGraph review (article 5 of 14) — 2026-09-05
+  'langgraph-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -214,6 +223,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Msty Go local-first AI task-automation agent review — 2026-09-03
   'msty-go-review',
   'msty-review',
+  'enchanted-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
@@ -242,6 +252,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'faster-whisper-review',
   'piper-tts-review',
   'coqui-tts-review',
+  'xtts-v2-review',
+  'bark-tts-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
@@ -290,6 +302,11 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // AnythingLLM Mobile review (Mobile & Edge LLMs) — 2026-09-06
   'anythingllm-mobile-review',
+
+  // vLLM explainer — 2026-09-06
+  'vllm-explained',
+  // LocalAI explainer — 2026-09-06
+  'localai-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

@@ -263,6 +263,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[vLLM Explained](/power-local-llm/vllm-explained) — the production-serving engine built around PagedAttention and continuous batching, for high-concurrency GPU deployment rather than single-user local use.',
+          '[LocalAI Explained](/power-local-llm/localai-explained) — a self-hosted, OpenAI-API-compatible server that wraps llama.cpp and other backends to add multi-modal endpoints (image, audio, embeddings) on top.',
           '[llama.cpp vs. Ollama vs. vLLM: Speed, Batching & GPU Benchmarks](/local-llms/llamacpp-vs-ollama-vs-vllm) — a dedicated throughput and setup-complexity comparison across the same three engines.',
           '[Enterprise LLM Inference Servers: vLLM, TGI, and NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — a deeper look at production-grade serving engines that compete with llama.cpp for high-throughput workloads.',
           '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — how graphical desktop apps compare to running an engine like llama.cpp directly.',
@@ -532,6 +534,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die auf PagedAttention und Continuous Batching aufgebaute Produktions-Serving-Engine für hochparallele GPU-Deployments statt Einzelnutzer-Betrieb.',
+          '[LocalAI erklärt](/de/power-local-llm/localai-explained) — ein selbst gehosteter, OpenAI-API-kompatibler Server, der llama.cpp und andere Backends um multimodale Endpunkte (Bild, Audio, Embeddings) erweitert.',
           '[llama.cpp vs. Ollama vs. vLLM: Geschwindigkeit, Batching & GPU-Benchmarks](/de/local-llms/llamacpp-vs-ollama-vs-vllm) — ein eigener Durchsatz- und Setup-Komplexitätsvergleich derselben drei Engines.',
           '[Enterprise-LLM-Inferenz-Server: vLLM, TGI und NIM](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer Blick auf produktionsreife Serving-Engines, die mit llama.cpp bei Hochdurchsatz-Workloads konkurrieren.',
           '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wie grafische Desktop-Apps im Vergleich zur direkten Nutzung einer Engine wie llama.cpp abschneiden.',

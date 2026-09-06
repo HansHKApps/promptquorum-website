@@ -25,10 +25,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Developers and technical teams evaluating multi-agent orchestration frameworks for LLM applications',
     primaryTerm: 'AutoGen',
-    title: 'AutoGen Review 2026: Features, Pricing, Alternatives',
-    seoTitle: 'AutoGen Review 2026: Multi-Agent Framework Status & Pricing',
-    intro: "AutoGen is an open-source, Python multi-agent framework originally built by Microsoft Research for LLM applications that coordinate multiple conversational agents — including agents that write and execute code. Since its August 2023 research paper, the project has split three ways: Microsoft's own AutoGen repository has been in maintenance mode since October 2025, its intended successor is the GA'd Microsoft Agent Framework, and a community-led fork called AG2 continues active development under the original authors after they left Microsoft.",
-    metaDescription: "AutoGen is Microsoft Research's open-source multi-agent framework, now in maintenance mode. Verified history, the AG2 fork, Microsoft Agent Framework succession, code examples, and pricing.",
+    title: 'AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork',
+    seoTitle: 'AutoGen Review 2026: Legacy Status & the AG2 Fork',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: "AutoGen is an open-source, Python multi-agent framework originally built by Microsoft Research for LLM applications that coordinate multiple conversational agents — including agents that write and execute code. Since its August 2023 research paper, the project has split three ways: Microsoft's own AutoGen repository has been in maintenance mode since October 2025, its intended successor is the GA'd Microsoft Agent Framework, and a community-led fork called AG2 continues active development under the original authors after they left Microsoft. This review focuses specifically on the original AutoGen project and its community-led continuation, AG2 — the Microsoft Agent Framework, the official successor, is a separate, actively developed platform with its own history and roadmap.",
+    metaDescription: "AutoGen, Microsoft's original multi-agent framework, has been in maintenance mode since October 2025. This review covers legacy AutoGen and its AG2 fork.",
     readTime: '12 min read',
     targetKeywords: [
       'AutoGen review',
@@ -182,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Avoid AutoGen if',
             list: [
-              'You are starting a new production project — Microsoft itself recommends new users start with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/) instead, since AutoGen receives no new features',
+              'You are starting a new production project — avoid legacy AutoGen and start with Microsoft\'s actively supported successor, the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), instead',
               'You want active, fast-moving open-source development from the framework\'s original authors — that continues at [AG2](https://github.com/ag2ai/ag2), not at microsoft/autogen',
               'You need enterprise support, long-term API stability guarantees, or Azure-native hosting — Microsoft Agent Framework is the supported path for that, not maintenance-mode AutoGen',
               'You need a role-based, opinionated "crew" abstraction rather than free-form agent conversation — [CrewAI](/power-local-llm/crewai-review) is built specifically around that pattern',
@@ -195,10 +196,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'When Should You NOT Use AutoGen?',
         content: "**Skip AutoGen for any new production project as of this review — it is in maintenance mode, and both Microsoft and the original authors have moved active development elsewhere.** A few concrete situations where a different tool wins.",
         items: [
-          "A new project with no existing AutoGen code — start with the Microsoft Agent Framework (Microsoft's stated successor) or AG2 (the actively developed community fork) instead",
+          "A new project with no existing AutoGen code — avoid legacy AutoGen and start with the Microsoft Agent Framework (Microsoft's actively supported successor) or AG2 (the actively developed community fork) instead",
           'A team that needs Microsoft enterprise support commitments or long-term API stability guarantees on a Microsoft-maintained product — Microsoft Agent Framework carries those, AutoGen does not',
           "A team that wants fast-moving open-source feature development — that happens at AG2 now, led by AutoGen's original authors, not at microsoft/autogen",
-          'A project that wants a structured, role-based agent abstraction out of the box rather than assembling conversation patterns manually — [CrewAI](/power-local-llm/crewai-review) or [LangGraph](/power-local-llm/langchain-review) fit that better',
+          'A project that wants a structured, role-based agent abstraction out of the box rather than assembling conversation patterns manually — [CrewAI](/power-local-llm/crewai-review) or [LangGraph](/power-local-llm/langgraph-review) fit that better',
           'Use AutoGen only when you are maintaining an existing AutoGen application and a migration has not yet been scoped',
         ],
         note: "This is not a criticism of AutoGen's original design — the conversation-driven, code-execution multi-agent pattern it introduced influenced the whole category. It reflects Microsoft's own October 2025 maintenance-mode announcement and its explicit redirection of new users to the Microsoft Agent Framework, not an editorial judgment about code quality.",
@@ -284,10 +285,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler und technische Teams, die Multi-Agenten-Orchestrierungs-Frameworks für LLM-Anwendungen bewerten',
     primaryTerm: 'AutoGen',
-    title: 'AutoGen im Test 2026: Funktionen, Preise, Alternativen',
-    seoTitle: 'AutoGen im Test 2026: Status des Multi-Agenten-Frameworks & Preise',
-    intro: "AutoGen ist ein quelloffenes Python-Framework für Multi-Agenten-LLM-Anwendungen, ursprünglich von Microsoft Research entwickelt, um mehrere konversationelle Agenten zu koordinieren — einschließlich Agenten, die Code schreiben und ausführen. Seit dem Forschungspapier vom August 2023 hat sich das Projekt in drei Richtungen aufgespalten: Microsofts eigenes AutoGen-Repository befindet sich seit Oktober 2025 im Wartungsmodus, sein vorgesehener Nachfolger ist das allgemein verfügbare Microsoft Agent Framework, und ein community-geführter Fork namens AG2 wird von den ursprünglichen Autoren nach ihrem Weggang von Microsoft aktiv weiterentwickelt.",
-    metaDescription: "AutoGen ist das quelloffene Multi-Agenten-Framework von Microsoft Research, inzwischen im Wartungsmodus. Geprüfte Geschichte, der AG2-Fork, die Nachfolge durch das Microsoft Agent Framework, Codebeispiele und Preise.",
+    title: 'AutoGen im Test 2026: Wartungsmodus-Status & AG2-Fork',
+    seoTitle: 'AutoGen im Test 2026: Legacy-Status & der AG2-Fork',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: "AutoGen ist ein quelloffenes Python-Framework für Multi-Agenten-LLM-Anwendungen, ursprünglich von Microsoft Research entwickelt, um mehrere konversationelle Agenten zu koordinieren — einschließlich Agenten, die Code schreiben und ausführen. Seit dem Forschungspapier vom August 2023 hat sich das Projekt in drei Richtungen aufgespalten: Microsofts eigenes AutoGen-Repository befindet sich seit Oktober 2025 im Wartungsmodus, sein vorgesehener Nachfolger ist das allgemein verfügbare Microsoft Agent Framework, und ein community-geführter Fork namens AG2 wird von den ursprünglichen Autoren nach ihrem Weggang von Microsoft aktiv weiterentwickelt. Diese Bewertung konzentriert sich gezielt auf das ursprüngliche AutoGen-Projekt und seine von der Community weitergeführte Fortsetzung AG2 — das Microsoft Agent Framework, der offizielle Nachfolger, ist eine eigenständige, aktiv weiterentwickelte Plattform mit eigener Geschichte und Roadmap.",
+    metaDescription: "AutoGen, Microsofts ursprüngliches Multi-Agenten-Framework, befindet sich seit Oktober 2025 im Wartungsmodus. Diese Bewertung behandelt das Legacy-AutoGen-Projekt und seinen AG2-Fork.",
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
       'AutoGen Test',
@@ -441,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'AutoGen meiden, wenn',
             list: [
-              'Sie ein neues Produktionsprojekt starten — Microsoft selbst empfiehlt neuen Nutzern den Start mit dem [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), da AutoGen keine neuen Funktionen mehr erhält',
+              'Sie ein neues Produktionsprojekt starten — meiden Sie das Legacy-AutoGen und starten Sie stattdessen mit Microsofts aktiv unterstütztem Nachfolger, dem [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)',
               'Sie aktive, schnelle Open-Source-Entwicklung von den ursprünglichen Autoren des Frameworks wollen — die findet bei [AG2](https://github.com/ag2ai/ag2) statt, nicht bei microsoft/autogen',
               'Sie Enterprise-Support, langfristige API-Stabilitätszusagen oder Azure-natives Hosting brauchen — dafür ist das Microsoft Agent Framework der unterstützte Weg, nicht das im Wartungsmodus befindliche AutoGen',
               'Sie eine rollenbasierte, vorgegebene "Crew"-Abstraktion statt freiformiger Agenten-Konversation brauchen — [CrewAI](/de/power-local-llm/crewai-review) ist gezielt auf dieses Muster ausgerichtet',
@@ -454,10 +456,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wann sollten Sie AutoGen NICHT verwenden?',
         content: "**Verzichten Sie zum Zeitpunkt dieser Bewertung bei jedem neuen Produktionsprojekt auf AutoGen — es ist im Wartungsmodus, und sowohl Microsoft als auch die ursprünglichen Autoren haben die aktive Entwicklung anderswohin verlagert.** Einige konkrete Situationen, in denen ein anderes Tool die bessere Wahl ist.",
         items: [
-          'Ein neues Projekt ohne bestehenden AutoGen-Code — starten Sie stattdessen mit dem Microsoft Agent Framework (Microsofts erklärtem Nachfolger) oder AG2 (dem aktiv entwickelten Community-Fork)',
+          'Ein neues Projekt ohne bestehenden AutoGen-Code — meiden Sie das Legacy-AutoGen und starten Sie stattdessen mit dem Microsoft Agent Framework (Microsofts aktiv unterstütztem Nachfolger) oder AG2 (dem aktiv entwickelten Community-Fork)',
           'Ein Team, das Microsofts Enterprise-Support-Zusagen oder langfristige API-Stabilitätsgarantien für ein von Microsoft gepflegtes Produkt braucht — das Microsoft Agent Framework bietet das, AutoGen nicht',
           'Ein Team, das schnelle Open-Source-Feature-Entwicklung will — die findet inzwischen bei AG2 statt, geführt von AutoGens ursprünglichen Autoren, nicht bei microsoft/autogen',
-          'Ein Projekt, das eine strukturierte, rollenbasierte Agenten-Abstraktion von Haus aus will statt Konversationsmuster manuell zusammenzubauen — [CrewAI](/de/power-local-llm/crewai-review) oder [LangGraph](/de/power-local-llm/langchain-review) passen dafür besser',
+          'Ein Projekt, das eine strukturierte, rollenbasierte Agenten-Abstraktion von Haus aus will statt Konversationsmuster manuell zusammenzubauen — [CrewAI](/de/power-local-llm/crewai-review) oder [LangGraph](/de/power-local-llm/langgraph-review) passen dafür besser',
           'Nutzen Sie AutoGen nur, wenn Sie eine bestehende AutoGen-Anwendung pflegen und eine Migration noch nicht geplant ist',
         ],
         note: "Das ist keine Kritik am ursprünglichen Design von AutoGen — das konversationsgetriebene, code-ausführende Multi-Agenten-Muster, das es einführte, hat die gesamte Kategorie beeinflusst. Es spiegelt Microsofts eigene Ankündigung des Wartungsmodus vom Oktober 2025 und die ausdrückliche Umleitung neuer Nutzer zum Microsoft Agent Framework wider, nicht ein redaktionelles Urteil über die Codequalität.",
@@ -542,10 +544,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: "Développeurs et équipes techniques évaluant des frameworks d'orchestration multi-agents pour applications LLM",
     primaryTerm: 'AutoGen',
-    title: 'AutoGen 2026 : fonctionnalités, tarifs, alternatives',
-    seoTitle: 'AutoGen 2026 : statut du framework multi-agents et tarifs',
-    intro: "AutoGen est un framework Python open source pour applications multi-agents, développé à l'origine par Microsoft Research pour des applications LLM où plusieurs agents conversationnels coordonnent leurs actions — y compris des agents capables d'écrire et d'exécuter du code. Depuis son article de recherche d'août 2023, le projet s'est scindé en trois : le dépôt AutoGen de Microsoft est en mode maintenance depuis octobre 2025, son successeur désigné est le Microsoft Agent Framework, désormais en disponibilité générale, et un fork communautaire appelé AG2 poursuit un développement actif sous la direction des auteurs originaux après leur départ de Microsoft.",
-    metaDescription: "AutoGen est le framework multi-agents open source de Microsoft Research, désormais en mode maintenance. Historique vérifié, fork AG2, succession du Microsoft Agent Framework, exemples de code et tarifs.",
+    title: 'AutoGen 2026 : mode maintenance et fork AG2',
+    seoTitle: 'AutoGen 2026 : projet historique et fork AG2',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: "AutoGen est un framework Python open source pour applications multi-agents, développé à l'origine par Microsoft Research pour des applications LLM où plusieurs agents conversationnels coordonnent leurs actions — y compris des agents capables d'écrire et d'exécuter du code. Depuis son article de recherche d'août 2023, le projet s'est scindé en trois : le dépôt AutoGen de Microsoft est en mode maintenance depuis octobre 2025, son successeur désigné est le Microsoft Agent Framework, désormais en disponibilité générale, et un fork communautaire appelé AG2 poursuit un développement actif sous la direction des auteurs originaux après leur départ de Microsoft. Cet avis porte spécifiquement sur le projet AutoGen original et sa continuation communautaire, AG2 — le Microsoft Agent Framework, successeur officiel, est une plateforme distincte et activement développée, avec sa propre histoire et sa propre feuille de route.",
+    metaDescription: "AutoGen, framework multi-agents originel de Microsoft, est en mode maintenance depuis octobre 2025. Cet avis couvre le projet AutoGen historique et son fork AG2.",
     readTime: '12 min de lecture',
     targetKeywords: [
       'avis AutoGen',
@@ -699,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez AutoGen si',
             list: [
-              "Vous démarrez un nouveau projet en production — Microsoft lui-même recommande aux nouveaux utilisateurs de démarrer avec le [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), AutoGen ne recevant aucune nouvelle fonctionnalité",
+              "Vous démarrez un nouveau projet en production — évitez l'AutoGen historique et démarrez plutôt avec le successeur activement soutenu par Microsoft, le [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)",
               "Vous voulez un développement open source actif et rapide de la part des auteurs originaux du framework — cela continue chez [AG2](https://github.com/ag2ai/ag2), pas chez microsoft/autogen",
               "Vous avez besoin d'un support entreprise, de garanties de stabilité d'API à long terme, ou d'un hébergement natif Azure — le Microsoft Agent Framework est la voie supportée pour cela, pas AutoGen en mode maintenance",
               "Vous avez besoin d'une abstraction de « crew » basée sur des rôles et normative plutôt que d'une conversation d'agents libre — [CrewAI](/fr/power-local-llm/crewai-review) est construit spécifiquement autour de ce modèle",
@@ -712,10 +715,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quand ne devriez-vous PAS utiliser AutoGen ?',
         content: "**Évitez AutoGen pour tout nouveau projet en production au moment de cet avis — il est en mode maintenance, et Microsoft comme les auteurs originaux ont déplacé leur développement actif ailleurs.** Quelques situations concrètes où un autre outil est préférable.",
         items: [
-          "Un nouveau projet sans code AutoGen existant — démarrez plutôt avec le Microsoft Agent Framework (successeur désigné par Microsoft) ou AG2 (le fork communautaire activement développé)",
+          "Un nouveau projet sans code AutoGen existant — évitez l'AutoGen historique et démarrez plutôt avec le Microsoft Agent Framework (le successeur activement soutenu par Microsoft) ou AG2 (le fork communautaire activement développé)",
           "Une équipe ayant besoin d'engagements de support entreprise Microsoft ou de garanties de stabilité d'API à long terme sur un produit maintenu par Microsoft — le Microsoft Agent Framework les offre, pas AutoGen",
           "Une équipe qui veut un développement de fonctionnalités open source rapide — cela se passe désormais chez AG2, mené par les auteurs originaux d'AutoGen, pas chez microsoft/autogen",
-          "Un projet qui veut une abstraction d'agents structurée et basée sur des rôles prête à l'emploi plutôt que d'assembler manuellement des schémas de conversation — [CrewAI](/fr/power-local-llm/crewai-review) ou [LangGraph](/fr/power-local-llm/langchain-review) conviennent mieux",
+          "Un projet qui veut une abstraction d'agents structurée et basée sur des rôles prête à l'emploi plutôt que d'assembler manuellement des schémas de conversation — [CrewAI](/fr/power-local-llm/crewai-review) ou [LangGraph](/fr/power-local-llm/langgraph-review) conviennent mieux",
           "N'utilisez AutoGen que si vous maintenez une application AutoGen existante et qu'une migration n'a pas encore été planifiée",
         ],
         note: "Ceci n'est pas une critique de la conception originale d'AutoGen — le modèle de conversation multi-agents avec exécution de code qu'il a introduit a influencé toute la catégorie. Cela reflète l'annonce d'octobre 2025 de Microsoft plaçant le projet en mode maintenance et sa redirection explicite des nouveaux utilisateurs vers le Microsoft Agent Framework, pas un jugement éditorial sur la qualité du code.",
@@ -800,10 +803,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'LLMアプリケーション向けのマルチエージェント・オーケストレーションフレームワークを評価する開発者・技術チーム',
     primaryTerm: 'AutoGen',
-    title: 'AutoGenレビュー2026：機能・料金・代替ツール',
-    seoTitle: 'AutoGenレビュー2026：マルチエージェントフレームワークの現状と料金',
-    intro: 'AutoGenは、複数の対話型エージェント（コードを書いて実行するエージェントを含む）を協調させるLLMアプリケーション向けに、もともとMicrosoft Researchが構築したオープンソースのPythonマルチエージェントフレームワークです。2023年8月の研究論文発表以来、このプロジェクトは3つに分岐しました——Microsoft自身のAutoGenリポジトリは2025年10月以降メンテナンスモードに入り、その後継として一般提供されたのがMicrosoft Agent Frameworkであり、さらにMicrosoftを離れた原著者らが主導するコミュニティフォークAG2が独自に開発を続けています。',
-    metaDescription: 'AutoGenはMicrosoft Researchのオープンソース・マルチエージェントフレームワークで、現在はメンテナンスモードです。検証済みの沿革、AG2フォーク、Microsoft Agent Frameworkへの継承、コード例、料金を掲載。',
+    title: 'AutoGenレビュー2026：メンテナンスモードとAG2フォーク',
+    seoTitle: 'AutoGenレビュー2026：レガシー版の現状とAG2フォーク',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: 'AutoGenは、複数の対話型エージェント（コードを書いて実行するエージェントを含む）を協調させるLLMアプリケーション向けに、もともとMicrosoft Researchが構築したオープンソースのPythonマルチエージェントフレームワークです。2023年8月の研究論文発表以来、このプロジェクトは3つに分岐しました——Microsoft自身のAutoGenリポジトリは2025年10月以降メンテナンスモードに入り、その後継として一般提供されたのがMicrosoft Agent Frameworkであり、さらにMicrosoftを離れた原著者らが主導するコミュニティフォークAG2が独自に開発を続けています。本レビューは、オリジナルのAutoGenプロジェクトとそのコミュニティによる後継AG2に焦点を当てています。公式後継であるMicrosoft Agent Frameworkは、独自の歴史とロードマップを持つ別個の、活発に開発が続くプラットフォームです。',
+    metaDescription: 'AutoGenはMicrosoftの旧来型マルチエージェントフレームワークで、2025年10月からメンテナンスモードです。本レビューはレガシー版AutoGenとそのAG2フォークを扱います。',
     readTime: '12分で読める',
     targetKeywords: [
       'AutoGen レビュー',
@@ -957,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'AutoGenを避けるべきケース',
             list: [
-              '新規の本番プロジェクトを始める場合——Microsoft自身が、AutoGenには新機能が追加されないため、代わりに[Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)から始めることを新規ユーザーに推奨している',
+              '新規の本番プロジェクトを始める場合——レガシー版AutoGenは避け、代わりにMicrosoftが積極的にサポートする後継である[Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)から始める',
               'フレームワークの原著者らによる活発で速いオープンソース開発を望む場合——それはmicrosoft/autogenではなく[AG2](https://github.com/ag2ai/ag2)で続いている',
               'エンタープライズサポート、長期的なAPI安定性の保証、またはAzureネイティブなホスティングが必要な場合——それを提供するのはメンテナンスモードのAutoGenではなくMicrosoft Agent Framework',
               '自由形式のエージェント対話ではなく、役割ベースで枠組みの決まった「クルー」抽象化が必要な場合——[CrewAI](/ja/power-local-llm/crewai-review)はまさにそのパターンを中心に構築されている',
@@ -970,10 +974,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AutoGenを使うべきでないのはどんな場合ですか？',
         content: '**本レビュー時点では、新規の本番プロジェクトにAutoGenを使うのは避けてください——メンテナンスモードにあり、Microsoftも原著者らも活発な開発を他の場所に移しています。** 別のツールの方が適している具体的な状況をいくつか挙げます。',
         items: [
-          '既存のAutoGenコードがない新規プロジェクト——代わりにMicrosoft Agent Framework（Microsoftが表明する後継）またはAG2（活発に開発されているコミュニティフォーク）から始める',
+          '既存のAutoGenコードがない新規プロジェクト——レガシー版AutoGenは避け、代わりにMicrosoft Agent Framework（Microsoftが積極的にサポートする後継）またはAG2（活発に開発されているコミュニティフォーク）から始める',
           'Microsoft管理下の製品においてMicrosoftのエンタープライズサポート契約や長期的なAPI安定性の保証が必要なチーム——それを備えるのはMicrosoft Agent Frameworkで、AutoGenにはない',
           '速いペースのオープンソース機能開発を望むチーム——それは現在、AutoGenの原著者らが主導するAG2で起きており、microsoft/autogenでは起きていない',
-          '対話パターンを手作業で組み立てるのではなく、構造化された役割ベースのエージェント抽象化を最初から求めるプロジェクト——[CrewAI](/ja/power-local-llm/crewai-review)や[LangGraph](/ja/power-local-llm/langchain-review)の方が適している',
+          '対話パターンを手作業で組み立てるのではなく、構造化された役割ベースのエージェント抽象化を最初から求めるプロジェクト——[CrewAI](/ja/power-local-llm/crewai-review)や[LangGraph](/ja/power-local-llm/langgraph-review)の方が適している',
           '既存のAutoGenアプリケーションを維持しており、移行がまだ計画段階に入っていない場合に限りAutoGenを使う',
         ],
         note: 'これはAutoGenの元の設計に対する批判ではありません——同フレームワークが導入した会話駆動型・コード実行型のマルチエージェントパターンは、このカテゴリ全体に影響を与えました。これはMicrosoft自身による2025年10月のメンテナンスモード発表と、新規ユーザーをMicrosoft Agent Frameworkへ明確に誘導している事実を反映したものであり、コード品質についての編集上の評価ではありません。',
@@ -1058,10 +1062,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '正在评估用于 LLM 应用的多智能体编排框架的开发者与技术团队',
     primaryTerm: 'AutoGen',
-    title: 'AutoGen 2026 评测：功能、定价与替代方案',
-    seoTitle: 'AutoGen 2026 评测：多智能体框架现状与定价',
-    intro: 'AutoGen 是一个开源的 Python 多智能体框架，最初由 Microsoft Research 为协调多个对话式智能体（包括能够编写并执行代码的智能体）的 LLM 应用而打造。自 2023 年 8 月发布研究论文以来，该项目已分裂为三条路线：Microsoft 自身的 AutoGen 仓库自 2025 年 10 月起进入维护模式；其预定的继任者是已正式发布（GA）的 Microsoft Agent Framework；而由原作者在离开 Microsoft 后主导的社区分支 AG2 则继续活跃开发。',
-    metaDescription: 'AutoGen 是 Microsoft Research 的开源多智能体框架，目前处于维护模式。包含已核实的历史沿革、AG2 分支、Microsoft Agent Framework 继任情况、代码示例与定价信息。',
+    title: 'AutoGen 2026 评测：维护模式与 AG2 分支',
+    seoTitle: 'AutoGen 2026 评测：遗留项目现状与 AG2 分支',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: 'AutoGen 是一个开源的 Python 多智能体框架，最初由 Microsoft Research 为协调多个对话式智能体（包括能够编写并执行代码的智能体）的 LLM 应用而打造。自 2023 年 8 月发布研究论文以来，该项目已分裂为三条路线：Microsoft 自身的 AutoGen 仓库自 2025 年 10 月起进入维护模式；其预定的继任者是已正式发布（GA）的 Microsoft Agent Framework；而由原作者在离开 Microsoft 后主导的社区分支 AG2 则继续活跃开发。本文的评测范围专门限定于最初的 AutoGen 项目及其社区继任分支 AG2——官方继任者 Microsoft Agent Framework 是一个拥有自身历史和路线图、独立且持续活跃开发的平台。',
+    metaDescription: 'AutoGen 是 Microsoft 最初的多智能体框架，自 2025 年 10 月起进入维护模式。本文评测遗留版 AutoGen 及其 AG2 分支。',
     readTime: '阅读时间:12分钟',
     targetKeywords: [
       'AutoGen 评测',
@@ -1215,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '应避免使用 AutoGen 的情况',
             list: [
-              '你正在启动一个新的生产项目——Microsoft 官方建议新用户改用 [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)，因为 AutoGen 不再新增功能',
+              '你正在启动一个新的生产项目——应避免使用遗留版 AutoGen，改用 Microsoft 积极支持的继任者 [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)',
               '你希望获得来自框架原作者的活跃、快速迭代的开源开发——这如今发生在 [AG2](https://github.com/ag2ai/ag2)，而不是 microsoft/autogen',
               '你需要企业级支持、长期 API 稳定性保证，或 Azure 原生托管——Microsoft Agent Framework 才是官方支持的路径，处于维护模式的 AutoGen 不是',
               '你需要的是一个基于角色、结构化的“团队”抽象，而不是自由形式的智能体对话——[CrewAI](/zh/power-local-llm/crewai-review) 就是专门围绕这一模式构建的',
@@ -1228,10 +1233,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '什么情况下不应该使用 AutoGen？',
         content: '**截至本文撰写时，不建议在任何新的生产项目中使用 AutoGen——它已进入维护模式，Microsoft 与原作者都已将活跃开发转移到别处。** 以下是几种适合选择其他工具的具体情况。',
         items: [
-          '一个没有现有 AutoGen 代码的新项目——应改用 Microsoft Agent Framework（Microsoft 官方指定的继任者）或 AG2（活跃开发的社区分支）',
+          '一个没有现有 AutoGen 代码的新项目——应避免使用遗留版 AutoGen，改用 Microsoft Agent Framework（Microsoft 积极支持的继任者）或 AG2（活跃开发的社区分支）',
           '一个需要 Microsoft 企业级支持承诺或 Microsoft 维护产品长期 API 稳定性保证的团队——Microsoft Agent Framework 具备这些，AutoGen 没有',
           '一个希望获得快速迭代的开源功能开发的团队——这如今发生在由 AutoGen 原作者主导的 AG2，而不是 microsoft/autogen',
-          '一个希望获得开箱即用的结构化、基于角色的智能体抽象，而不是手工组装对话模式的项目——[CrewAI](/zh/power-local-llm/crewai-review) 或 [LangGraph](/zh/power-local-llm/langchain-review) 更适合这一需求',
+          '一个希望获得开箱即用的结构化、基于角色的智能体抽象，而不是手工组装对话模式的项目——[CrewAI](/zh/power-local-llm/crewai-review) 或 [LangGraph](/zh/power-local-llm/langgraph-review) 更适合这一需求',
           '只有在你正维护一个现有的 AutoGen 应用、且尚未规划迁移方案时，才应继续使用 AutoGen',
         ],
         note: '这并不是对 AutoGen 原始设计的批评——它所引入的、由对话驱动的代码执行多智能体模式影响了整个品类。这一评价反映的是 Microsoft 官方在 2025 年 10 月发布的维护模式公告，以及其明确将新用户引导至 Microsoft Agent Framework 的做法，而不是对代码质量的编辑判断。',
@@ -1316,10 +1321,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y equipos técnicos que evalúan frameworks de orquestación multiagente para aplicaciones LLM',
     primaryTerm: 'AutoGen',
-    title: 'Reseña de AutoGen 2026: funciones, precios y alternativas',
-    seoTitle: 'AutoGen 2026: estado del framework multiagente y precios',
-    intro: "AutoGen es un framework Python de código abierto para aplicaciones LLM multiagente, creado originalmente por Microsoft Research para coordinar varios agentes conversacionales — incluidos agentes que escriben y ejecutan código. Desde su paper de investigación de agosto de 2023, el proyecto se ha dividido en tres vías: el repositorio propio de AutoGen de Microsoft está en modo de mantenimiento desde octubre de 2025, su sucesor previsto es el Microsoft Agent Framework, ya en disponibilidad general, y un fork liderado por la comunidad llamado AG2 sigue en desarrollo activo bajo los autores originales tras dejar Microsoft.",
-    metaDescription: "AutoGen es el framework multiagente de código abierto de Microsoft Research, ahora en modo de mantenimiento. Historia verificada, el fork AG2, la sucesión del Microsoft Agent Framework, ejemplos de código y precios.",
+    title: 'Reseña de AutoGen 2026: modo mantenimiento y fork AG2',
+    seoTitle: 'AutoGen 2026: estado del proyecto legado y el fork AG2',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: "AutoGen es un framework Python de código abierto para aplicaciones LLM multiagente, creado originalmente por Microsoft Research para coordinar varios agentes conversacionales — incluidos agentes que escriben y ejecutan código. Desde su paper de investigación de agosto de 2023, el proyecto se ha dividido en tres vías: el repositorio propio de AutoGen de Microsoft está en modo de mantenimiento desde octubre de 2025, su sucesor previsto es el Microsoft Agent Framework, ya en disponibilidad general, y un fork liderado por la comunidad llamado AG2 sigue en desarrollo activo bajo los autores originales tras dejar Microsoft. Esta reseña se centra específicamente en el proyecto AutoGen original y su continuación liderada por la comunidad, AG2 — el Microsoft Agent Framework, el sucesor oficial, es una plataforma separada y activamente desarrollada con su propia historia y hoja de ruta.",
+    metaDescription: "AutoGen, el framework multiagente original de Microsoft, está en modo de mantenimiento desde octubre de 2025. Esta reseña cubre el AutoGen legado y su fork AG2.",
     readTime: '12 min de lectura',
     targetKeywords: [
       'reseña de AutoGen',
@@ -1473,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita AutoGen si',
             list: [
-              'Estás iniciando un proyecto de producción nuevo — el propio Microsoft recomienda que los nuevos usuarios empiecen con el [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), ya que AutoGen no recibe funciones nuevas',
+              'Estás iniciando un proyecto de producción nuevo — evita el AutoGen legado y empieza con el sucesor activamente respaldado por Microsoft, el [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), en su lugar',
               'Quieres desarrollo de código abierto activo y rápido por parte de los autores originales del framework — eso continúa en [AG2](https://github.com/ag2ai/ag2), no en microsoft/autogen',
               'Necesitas soporte empresarial, garantías de estabilidad de API a largo plazo o alojamiento nativo en Azure — el Microsoft Agent Framework es la vía compatible para eso, no AutoGen en modo de mantenimiento',
               'Necesitas una abstracción de “equipo” basada en roles y con opinión propia, en vez de conversación de agentes libre — [CrewAI](/es/power-local-llm/crewai-review) está construido específicamente en torno a ese patrón',
@@ -1486,10 +1492,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuándo NO deberías usar AutoGen?',
         content: "**Evita AutoGen para cualquier proyecto de producción nuevo al momento de esta reseña — está en modo de mantenimiento, y tanto Microsoft como los autores originales han trasladado el desarrollo activo a otros lugares.** Algunas situaciones concretas en las que otra herramienta es mejor opción.",
         items: [
-          'Un proyecto nuevo sin código AutoGen existente — empieza con el Microsoft Agent Framework (el sucesor declarado por Microsoft) o con AG2 (el fork comunitario activamente desarrollado) en su lugar',
+          'Un proyecto nuevo sin código AutoGen existente — evita el AutoGen legado y empieza con el Microsoft Agent Framework (el sucesor activamente respaldado por Microsoft) o con AG2 (el fork comunitario activamente desarrollado) en su lugar',
           'Un equipo que necesita compromisos de soporte empresarial de Microsoft o garantías de estabilidad de API a largo plazo sobre un producto mantenido por Microsoft — el Microsoft Agent Framework los ofrece, AutoGen no',
           'Un equipo que quiere desarrollo de funciones de código abierto rápido — eso ocurre ahora en AG2, liderado por los autores originales de AutoGen, no en microsoft/autogen',
-          'Un proyecto que quiere una abstracción de agentes estructurada y basada en roles de fábrica, en vez de ensamblar patrones de conversación manualmente — [CrewAI](/es/power-local-llm/crewai-review) o [LangGraph](/es/power-local-llm/langchain-review) encajan mejor ahí',
+          'Un proyecto que quiere una abstracción de agentes estructurada y basada en roles de fábrica, en vez de ensamblar patrones de conversación manualmente — [CrewAI](/es/power-local-llm/crewai-review) o [LangGraph](/es/power-local-llm/langgraph-review) encajan mejor ahí',
           'Usa AutoGen solo cuando estés manteniendo una aplicación AutoGen existente y una migración aún no se haya planificado',
         ],
         note: "Esto no es una crítica al diseño original de AutoGen — el patrón multiagente basado en conversación y ejecución de código que introdujo influyó en toda la categoría. Refleja el propio anuncio de Microsoft de octubre de 2025 sobre el modo de mantenimiento y su redirección explícita de los nuevos usuarios hacia el Microsoft Agent Framework, no un juicio editorial sobre la calidad del código.",
@@ -1574,10 +1580,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e equipes técnicas que avaliam frameworks de orquestração multiagente para aplicações LLM',
     primaryTerm: 'AutoGen',
-    title: 'AutoGen 2026: recursos, preços e alternativas',
-    seoTitle: 'AutoGen 2026: status do framework multiagente e preços',
-    intro: "O AutoGen é um framework Python de código aberto para múltiplos agentes, originalmente construído pela Microsoft Research para aplicações LLM que coordenam vários agentes conversacionais — incluindo agentes que escrevem e executam código. Desde seu artigo de pesquisa de agosto de 2023, o projeto se dividiu em três frentes: o próprio repositório AutoGen da Microsoft está em modo de manutenção desde outubro de 2025, seu sucessor pretendido é o Microsoft Agent Framework (já com disponibilidade geral), e um fork liderado pela comunidade chamado AG2 continua em desenvolvimento ativo sob os autores originais, após saírem da Microsoft.",
-    metaDescription: "O AutoGen é o framework multiagente de código aberto da Microsoft Research, agora em modo de manutenção. Histórico verificado, o fork AG2, a sucessão pelo Microsoft Agent Framework, exemplos de código e preços.",
+    title: 'AutoGen 2026: modo de manutenção e fork AG2',
+    seoTitle: 'AutoGen 2026: status do projeto legado e o fork AG2',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: "O AutoGen é um framework Python de código aberto para múltiplos agentes, originalmente construído pela Microsoft Research para aplicações LLM que coordenam vários agentes conversacionais — incluindo agentes que escrevem e executam código. Desde seu artigo de pesquisa de agosto de 2023, o projeto se dividiu em três frentes: o próprio repositório AutoGen da Microsoft está em modo de manutenção desde outubro de 2025, seu sucessor pretendido é o Microsoft Agent Framework (já com disponibilidade geral), e um fork liderado pela comunidade chamado AG2 continua em desenvolvimento ativo sob os autores originais, após saírem da Microsoft. Esta análise foca especificamente no projeto AutoGen original e em sua continuação liderada pela comunidade, o AG2 — o Microsoft Agent Framework, o sucessor oficial, é uma plataforma separada e ativamente desenvolvida, com sua própria história e roteiro.",
+    metaDescription: "O AutoGen, framework multiagente original da Microsoft, está em modo de manutenção desde outubro de 2025. Esta análise cobre o AutoGen legado e seu fork AG2.",
     readTime: '12 min de leitura',
     targetKeywords: [
       'análise do AutoGen',
@@ -1731,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o AutoGen se',
             list: [
-              'Você está começando um novo projeto de produção — a própria Microsoft recomenda que novos usuários comecem com o [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), já que o AutoGen não recebe novos recursos',
+              'Você está começando um novo projeto de produção — evite o AutoGen legado e comece com o sucessor ativamente apoiado pela Microsoft, o [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/), em vez disso',
               'Você quer um desenvolvimento de código aberto ativo e rápido, feito pelos autores originais do framework — isso continua no [AG2](https://github.com/ag2ai/ag2), não no microsoft/autogen',
               'Você precisa de suporte empresarial, garantias de estabilidade de API de longo prazo ou hospedagem nativa no Azure — o Microsoft Agent Framework é o caminho suportado para isso, não o AutoGen em modo de manutenção',
               'Você precisa de uma abstração de "equipe" baseada em papéis e opinativa, em vez de conversação livre entre agentes — o [CrewAI](/pt/power-local-llm/crewai-review) é construído especificamente em torno desse padrão',
@@ -1744,10 +1751,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quando você NÃO deveria usar o AutoGen?',
         content: "**Evite o AutoGen para qualquer novo projeto de produção no momento desta análise — ele está em modo de manutenção, e tanto a Microsoft quanto os autores originais moveram o desenvolvimento ativo para outros lugares.** Algumas situações concretas em que outra ferramenta é a melhor escolha.",
         items: [
-          "Um novo projeto sem código AutoGen existente — comece com o Microsoft Agent Framework (o sucessor declarado pela Microsoft) ou o AG2 (o fork comunitário ativamente desenvolvido)",
+          "Um novo projeto sem código AutoGen existente — evite o AutoGen legado e comece com o Microsoft Agent Framework (o sucessor ativamente apoiado pela Microsoft) ou o AG2 (o fork comunitário ativamente desenvolvido) em vez disso",
           'Uma equipe que precisa de compromissos de suporte empresarial da Microsoft ou de garantias de estabilidade de API de longo prazo em um produto mantido pela Microsoft — o Microsoft Agent Framework oferece isso, o AutoGen não',
           "Uma equipe que quer um desenvolvimento de recursos de código aberto acelerado — isso acontece agora no AG2, liderado pelos autores originais do AutoGen, não no microsoft/autogen",
-          'Um projeto que quer uma abstração de agente estruturada e baseada em papéis já pronta, em vez de montar padrões de conversação manualmente — o [CrewAI](/pt/power-local-llm/crewai-review) ou o [LangGraph](/pt/power-local-llm/langchain-review) se encaixam melhor',
+          'Um projeto que quer uma abstração de agente estruturada e baseada em papéis já pronta, em vez de montar padrões de conversação manualmente — o [CrewAI](/pt/power-local-llm/crewai-review) ou o [LangGraph](/pt/power-local-llm/langgraph-review) se encaixam melhor',
           'Use o AutoGen apenas quando estiver mantendo uma aplicação AutoGen existente e uma migração ainda não tiver sido planejada',
         ],
         note: "Isso não é uma crítica ao design original do AutoGen — o padrão multiagente orientado a conversação e execução de código que ele introduziu influenciou toda a categoria. Reflete o próprio anúncio da Microsoft de outubro de 2025 sobre o modo de manutenção e seu redirecionamento explícito de novos usuários ao Microsoft Agent Framework, não um julgamento editorial sobre a qualidade do código.",
@@ -1832,10 +1839,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'المطورون والفرق التقنية التي تقيّم أطر تنسيق الوكلاء المتعددة لتطبيقات LLM',
     primaryTerm: 'AutoGen',
-    title: 'مراجعة AutoGen 2026: المزايا والأسعار والبدائل',
-    seoTitle: 'مراجعة AutoGen 2026: حالة إطار العمل متعدد الوكلاء والأسعار',
-    intro: 'AutoGen إطار Python مفتوح المصدر ومتعدد الوكلاء، طوّرته في الأصل Microsoft Research لتطبيقات LLM التي تنسّق بين عدة وكلاء محادثة — بما في ذلك وكلاء يكتبون الكود وينفذونه. منذ ورقته البحثية الصادرة في أغسطس 2023، انقسم المشروع إلى ثلاثة مسارات: مستودع AutoGen الخاص بـMicrosoft في وضع صيانة منذ أكتوبر 2025، وخليفته المقصود هو Microsoft Agent Framework الذي وصل إلى الإتاحة العامة، وفرع مجتمعي يُسمى AG2 يواصل التطوير النشط تحت قيادة المؤلفين الأصليين بعد مغادرتهم Microsoft.',
-    metaDescription: 'AutoGen هو إطار Microsoft Research مفتوح المصدر متعدد الوكلاء، وهو الآن في وضع الصيانة. التاريخ الموثّق، وفرع AG2، وخلافة Microsoft Agent Framework، وأمثلة برمجية، والأسعار.',
+    title: 'مراجعة AutoGen 2026: وضع الصيانة وفرع AG2',
+    seoTitle: 'مراجعة AutoGen 2026: حالة المشروع القديم وفرع AG2',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: 'AutoGen إطار Python مفتوح المصدر ومتعدد الوكلاء، طوّرته في الأصل Microsoft Research لتطبيقات LLM التي تنسّق بين عدة وكلاء محادثة — بما في ذلك وكلاء يكتبون الكود وينفذونه. منذ ورقته البحثية الصادرة في أغسطس 2023، انقسم المشروع إلى ثلاثة مسارات: مستودع AutoGen الخاص بـMicrosoft في وضع صيانة منذ أكتوبر 2025، وخليفته المقصود هو Microsoft Agent Framework الذي وصل إلى الإتاحة العامة، وفرع مجتمعي يُسمى AG2 يواصل التطوير النشط تحت قيادة المؤلفين الأصليين بعد مغادرتهم Microsoft. تركّز هذه المراجعة تحديدًا على مشروع AutoGen الأصلي واستمراريته المجتمعية AG2 — أما Microsoft Agent Framework، الخليفة الرسمي، فهو منصة منفصلة ونشطة التطوير لها تاريخها وخارطة طريقها الخاصة.',
+    metaDescription: 'AutoGen، إطار Microsoft الأصلي متعدد الوكلاء، في وضع صيانة منذ أكتوبر 2025. تغطي هذه المراجعة نسخة AutoGen القديمة وفرعها AG2.',
     readTime: '12 دقيقة قراءة',
     targetKeywords: [
       'مراجعة AutoGen',
@@ -1989,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب AutoGen إذا',
             list: [
-              'كنت تبدأ مشروع إنتاج جديدًا — توصي Microsoft نفسها بأن يبدأ المستخدمون الجدد بـ[Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/) بدلًا من ذلك، لأن AutoGen لا يتلقى ميزات جديدة',
+              'كنت تبدأ مشروع إنتاج جديدًا — تجنّب نسخة AutoGen القديمة وابدأ بدلًا من ذلك بالخليفة المدعوم بنشاط من Microsoft، وهو [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)',
               'كنت تريد تطويرًا نشطًا وسريعًا مفتوح المصدر من المؤلفين الأصليين للإطار — يستمر ذلك في [AG2](https://github.com/ag2ai/ag2)، وليس في microsoft/autogen',
               'كنت تحتاج دعمًا مؤسسيًا، أو ضمانات استقرار API طويلة المدى، أو استضافة أصيلة على Azure — Microsoft Agent Framework هو المسار المدعوم لذلك، وليس AutoGen في وضع الصيانة',
               'كنت تحتاج تجريدة "طاقم" قائمة على الأدوار وذات رأي واضح بدلًا من محادثة وكلاء حرة الشكل — بُني [CrewAI](/ar/power-local-llm/crewai-review) خصيصًا حول هذا النمط',
@@ -2002,10 +2010,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'متى لا ينبغي استخدام AutoGen؟',
         content: '**تجنّب AutoGen لأي مشروع إنتاج جديد اعتبارًا من هذه المراجعة — فهو في وضع الصيانة، وقد نقلت كل من Microsoft والمؤلفين الأصليين التطوير النشط إلى مكان آخر.** بعض المواقف الملموسة التي تفوز فيها أداة أخرى.',
         items: [
-          'مشروع جديد دون كود AutoGen قائم — ابدأ بـMicrosoft Agent Framework (الخليفة الذي أعلنته Microsoft) أو AG2 (الفرع المجتمعي النشط التطوير) بدلًا من ذلك',
+          'مشروع جديد دون كود AutoGen قائم — تجنّب نسخة AutoGen القديمة وابدأ بدلًا من ذلك بـMicrosoft Agent Framework (الخليفة المدعوم بنشاط من Microsoft) أو AG2 (الفرع المجتمعي النشط التطوير)',
           'فريق يحتاج التزامات دعم مؤسسي من Microsoft أو ضمانات استقرار API طويلة المدى على منتج تصونه Microsoft — يوفّرها Microsoft Agent Framework، وليس AutoGen',
           'فريق يريد تطوير ميزات مفتوحة المصدر سريع الوتيرة — يحدث ذلك الآن في AG2، بقيادة المؤلفين الأصليين لـAutoGen، وليس في microsoft/autogen',
-          'مشروع يريد تجريدة وكلاء منظمة وقائمة على الأدوار جاهزة بدلًا من تجميع أنماط المحادثة يدويًا — يناسب ذلك [CrewAI](/ar/power-local-llm/crewai-review) أو [LangGraph](/ar/power-local-llm/langchain-review) بشكل أفضل',
+          'مشروع يريد تجريدة وكلاء منظمة وقائمة على الأدوار جاهزة بدلًا من تجميع أنماط المحادثة يدويًا — يناسب ذلك [CrewAI](/ar/power-local-llm/crewai-review) أو [LangGraph](/ar/power-local-llm/langgraph-review) بشكل أفضل',
           'استخدم AutoGen فقط عندما تكون تصون تطبيق AutoGen قائمًا ولم يُحدَّد نطاق ترحيله بعد',
         ],
         note: 'هذا ليس انتقادًا للتصميم الأصلي لـAutoGen — فنمط الوكلاء المتعدد القائم على الحوار وتنفيذ الكود الذي قدّمه أثّر في الفئة بأكملها. إنه يعكس إعلان Microsoft نفسها في أكتوبر 2025 عن وضع الصيانة وتوجيهها الصريح للمستخدمين الجدد نحو Microsoft Agent Framework، وليس حكمًا تحريريًا حول جودة الكود.',
@@ -2090,10 +2098,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'LLM 애플리케이션을 위한 멀티 에이전트 오케스트레이션 프레임워크를 평가하는 개발자 및 기술 팀',
     primaryTerm: 'AutoGen',
-    title: 'AutoGen 2026 리뷰: 기능, 가격, 대안',
-    seoTitle: 'AutoGen 2026 리뷰: 멀티 에이전트 프레임워크 현황과 가격',
-    intro: 'AutoGen은 Microsoft Research가 원래 개발한 오픈소스 Python 멀티 에이전트 프레임워크로, 코드를 작성하고 실행하는 에이전트를 포함해 여러 대화형 LLM 에이전트를 조율하는 애플리케이션을 위한 도구입니다. 2023년 8월 연구 논문 발표 이후 프로젝트는 세 갈래로 나뉘었습니다: Microsoft 자체 AutoGen 저장소는 2025년 10월부터 유지보수 모드에 들어갔고, 그 후속작으로 지정된 것은 정식 출시(GA)된 Microsoft Agent Framework이며, 원저자들이 Microsoft를 떠난 뒤 이끄는 커뮤니티 주도 포크 AG2가 계속 활발히 개발되고 있습니다.',
-    metaDescription: 'AutoGen은 Microsoft Research의 오픈소스 멀티 에이전트 프레임워크로, 현재 유지보수 모드입니다. 검증된 연혁, AG2 포크, Microsoft Agent Framework로의 계승, 코드 예제, 가격을 다룹니다.',
+    title: 'AutoGen 2026 리뷰: 유지보수 모드와 AG2 포크',
+    seoTitle: 'AutoGen 2026 리뷰: 레거시 프로젝트 현황과 AG2 포크',
+    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
+    intro: 'AutoGen은 Microsoft Research가 원래 개발한 오픈소스 Python 멀티 에이전트 프레임워크로, 코드를 작성하고 실행하는 에이전트를 포함해 여러 대화형 LLM 에이전트를 조율하는 애플리케이션을 위한 도구입니다. 2023년 8월 연구 논문 발표 이후 프로젝트는 세 갈래로 나뉘었습니다: Microsoft 자체 AutoGen 저장소는 2025년 10월부터 유지보수 모드에 들어갔고, 그 후속작으로 지정된 것은 정식 출시(GA)된 Microsoft Agent Framework이며, 원저자들이 Microsoft를 떠난 뒤 이끄는 커뮤니티 주도 포크 AG2가 계속 활발히 개발되고 있습니다. 이 리뷰는 원조 AutoGen 프로젝트와 그 커뮤니티 후속작인 AG2에 초점을 맞춥니다——공식 후속작인 Microsoft Agent Framework는 자체 역사와 로드맵을 가진, 별도로 활발히 개발되는 플랫폼입니다.',
+    metaDescription: 'AutoGen은 Microsoft의 원조 멀티 에이전트 프레임워크로, 2025년 10월부터 유지보수 모드입니다. 이 리뷰는 레거시 AutoGen과 그 AG2 포크를 다룹니다.',
     readTime: '12분 읽기',
     targetKeywords: [
       'AutoGen 리뷰',
@@ -2247,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 AutoGen을 피하십시오',
             list: [
-              '신규 프로덕션 프로젝트를 시작하는 경우——Microsoft 자체가 신규 사용자에게 [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)로 시작할 것을 권장합니다. AutoGen은 신규 기능을 받지 못하기 때문입니다',
+              '신규 프로덕션 프로젝트를 시작하는 경우——레거시 AutoGen을 피하고 대신 Microsoft가 적극적으로 지원하는 후속작인 [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/)로 시작하십시오',
               '프레임워크 원저자들의 활발하고 빠른 오픈소스 개발을 원하는 경우——그 흐름은 microsoft/autogen이 아니라 [AG2](https://github.com/ag2ai/ag2)에서 계속됩니다',
               '엔터프라이즈 지원, 장기 API 안정성 보장, Azure 네이티브 호스팅이 필요한 경우——이를 지원하는 경로는 유지보수 모드의 AutoGen이 아니라 Microsoft Agent Framework입니다',
               '자유 형식 에이전트 대화가 아니라 역할 기반의 정형화된 "크루(crew)" 추상화가 필요한 경우——[CrewAI](/ko/power-local-llm/crewai-review)가 바로 그 패턴을 위해 만들어졌습니다',
@@ -2260,10 +2269,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AutoGen을 사용하면 안 되는 경우는 언제입니까?',
         content: '**이 리뷰 작성 시점 기준으로 신규 프로덕션 프로젝트에는 AutoGen을 사용하지 마십시오——유지보수 모드이며, Microsoft와 원저자 모두 활발한 개발을 다른 곳으로 옮겼습니다.** 다른 도구가 더 나은 선택인 몇 가지 구체적인 상황입니다.',
         items: [
-          '기존 AutoGen 코드가 없는 신규 프로젝트——대신 Microsoft Agent Framework(Microsoft가 명시한 후속작)나 AG2(활발히 개발되는 커뮤니티 포크)로 시작',
+          '기존 AutoGen 코드가 없는 신규 프로젝트——레거시 AutoGen을 피하고 대신 Microsoft Agent Framework(Microsoft가 적극적으로 지원하는 후속작)나 AG2(활발히 개발되는 커뮤니티 포크)로 시작',
           'Microsoft가 관리하는 제품에 대한 Microsoft 엔터프라이즈 지원 약속이나 장기 API 안정성 보장이 필요한 팀——이는 Microsoft Agent Framework가 제공하며 AutoGen은 제공하지 않음',
           '빠르게 움직이는 오픈소스 기능 개발을 원하는 팀——이는 이제 microsoft/autogen이 아니라 AutoGen 원저자들이 이끄는 AG2에서 일어남',
-          '대화 패턴을 직접 조립하기보다 정형화된 역할 기반 에이전트 추상화를 기본으로 원하는 프로젝트——[CrewAI](/ko/power-local-llm/crewai-review)나 [LangGraph](/ko/power-local-llm/langchain-review)가 더 적합함',
+          '대화 패턴을 직접 조립하기보다 정형화된 역할 기반 에이전트 추상화를 기본으로 원하는 프로젝트——[CrewAI](/ko/power-local-llm/crewai-review)나 [LangGraph](/ko/power-local-llm/langgraph-review)가 더 적합함',
           '기존 AutoGen 애플리케이션을 유지 관리 중이며 아직 마이그레이션 범위가 정해지지 않은 경우에만 AutoGen을 사용',
         ],
         note: '이는 AutoGen의 원래 설계에 대한 비판이 아닙니다——AutoGen이 도입한 대화 중심, 코드 실행 멀티 에이전트 패턴은 이 카테고리 전체에 영향을 미쳤습니다. 이는 Microsoft의 2025년 10월 유지보수 모드 발표와 신규 사용자를 Microsoft Agent Framework로 명시적으로 안내한 것을 반영한 것이지, 코드 품질에 대한 편집상의 판단이 아닙니다.',

@@ -44,6 +44,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'hermes-agent-review':                    'hermes-agent-review-2026',
   'msty-go-review':                         'msty-go-review-2026',
   'msty-review':                             'msty-review',
+  'enchanted-review':                        'enchanted-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -144,6 +145,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'autogen-review':                               'autogen-review',
   // CrewAI review — agent frameworks series, article 3 of 14 — 2026-09-05
   'crewai-review':                                'crewai-review',
+  // LangGraph review — agent frameworks series, article 5 of 14 — 2026-09-05
+  'langgraph-review':                             'langgraph-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -216,6 +219,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'faster-whisper-review':                   'faster-whisper-review',
   'piper-tts-review':                        'piper-tts-review',
   'coqui-tts-review':                        'coqui-tts-review',
+  'xtts-v2-review':                          'xtts-v2-review',
+  'bark-tts-review':                         'bark-tts-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05
@@ -225,9 +230,13 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
   'llama-cpp-explained':                     'llama-cpp-explained',
+  // vLLM explainer (Runtimes & Inference Engines) — 2026-09-06
+  'vllm-explained':                          'vllm-explained',
+  'koboldcpp-review':                        'koboldcpp-review',
+  // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
+  'localai-explained':                       'localai-explained',
 
   // Runtimes & Engines — 2026-09-05
-  'llama-cpp-review':                        'llama-cpp-review',
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                         'windsurf-review',
   'sourcegraph-cody-review':                 'sourcegraph-cody-review',
@@ -260,4 +269,13 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'rikkahub-review':                         'rikkahub-review',
   // AnythingLLM Mobile review — 2026-09-06
   'anythingllm-mobile-review':                'anythingllm-mobile-review',
+  // Twinny, Aider, shell-gpt reviews — 2026-09-06
+  'twinny-review':                           'twinny-review',
+  'aider-review':                            'aider-review',
+  'shell-gpt-review':                        'shell-gpt-review',
+  // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
+  'aichat-review':                           'aichat-review',
+  'tgpt-review':                             'tgpt-review',
+  'blackbox-ai-cli-review':                  'blackbox-ai-cli-review',
+  'privategpt-review':                       'privategpt-review',
 }

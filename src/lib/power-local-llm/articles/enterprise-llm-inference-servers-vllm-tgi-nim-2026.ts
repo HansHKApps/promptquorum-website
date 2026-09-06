@@ -307,6 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[vLLM Explained](/power-local-llm/vllm-explained) -- a single-subject deep dive on vLLM specifically: PagedAttention, continuous batching, quantization support, and how to install and run it.',
           '[Choose a GPU for on-prem inference hardware](/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- consumer and workstation GPU tiers if you are sizing hardware to buy rather than rent.',
           '[Build a local AI workstation](/power-local-llm/local-ai-workstation-build-guide-2026) -- part lists and costs for a self-hosted inference machine.',
           '[llama.cpp vs Ollama vs vLLM compared](/local-llms/llamacpp-vs-ollama-vs-vllm) -- the underlying engine differences referenced throughout this guide.',
@@ -612,6 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[vLLM erklärt](/de/power-local-llm/vllm-explained) -- ein Deep-Dive speziell zu vLLM: PagedAttention, Continuous Batching, Quantisierungsunterstützung und Installation.',
           '[GPU für On-Prem-Inferenz-Hardware wählen](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- Consumer- und Workstation-GPU-Stufen, falls Sie Hardware kaufen statt mieten wollen.',
           '[Lokale KI-Workstation bauen](/de/power-local-llm/local-ai-workstation-build-guide-2026) -- Teilelisten und Kosten für eine selbst gehostete Inferenz-Maschine.',
           '[llama.cpp vs Ollama vs vLLM im Vergleich](/de/local-llms/llamacpp-vs-ollama-vs-vllm) -- die Engine-Unterschiede, auf die dieser Leitfaden durchgehend verweist.',
