@@ -27,7 +27,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork',
     seoTitle: 'AutoGen Review 2026: Legacy Status & the AG2 Fork',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: "AutoGen is an open-source, Python multi-agent framework originally built by Microsoft Research for LLM applications that coordinate multiple conversational agents — including agents that write and execute code. Since its August 2023 research paper, the project has split three ways: Microsoft's own AutoGen repository has been in maintenance mode since October 2025, its intended successor is the GA'd Microsoft Agent Framework, and a community-led fork called AG2 continues active development under the original authors after they left Microsoft. This review focuses specifically on the original AutoGen project and its community-led continuation, AG2 — the Microsoft Agent Framework, the official successor, is a separate, actively developed platform with its own history and roadmap.",
     metaDescription: "AutoGen, Microsoft's original multi-agent framework, has been in maintenance mode since October 2025. This review covers legacy AutoGen and its AG2 fork.",
     readTime: '12 min read',
@@ -287,7 +286,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen im Test 2026: Wartungsmodus-Status & AG2-Fork',
     seoTitle: 'AutoGen im Test 2026: Legacy-Status & der AG2-Fork',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: "AutoGen ist ein quelloffenes Python-Framework für Multi-Agenten-LLM-Anwendungen, ursprünglich von Microsoft Research entwickelt, um mehrere konversationelle Agenten zu koordinieren — einschließlich Agenten, die Code schreiben und ausführen. Seit dem Forschungspapier vom August 2023 hat sich das Projekt in drei Richtungen aufgespalten: Microsofts eigenes AutoGen-Repository befindet sich seit Oktober 2025 im Wartungsmodus, sein vorgesehener Nachfolger ist das allgemein verfügbare Microsoft Agent Framework, und ein community-geführter Fork namens AG2 wird von den ursprünglichen Autoren nach ihrem Weggang von Microsoft aktiv weiterentwickelt. Diese Bewertung konzentriert sich gezielt auf das ursprüngliche AutoGen-Projekt und seine von der Community weitergeführte Fortsetzung AG2 — das Microsoft Agent Framework, der offizielle Nachfolger, ist eine eigenständige, aktiv weiterentwickelte Plattform mit eigener Geschichte und Roadmap.",
     metaDescription: "AutoGen, Microsofts ursprüngliches Multi-Agenten-Framework, befindet sich seit Oktober 2025 im Wartungsmodus. Diese Bewertung behandelt das Legacy-AutoGen-Projekt und seinen AG2-Fork.",
     readTime: '12 Min. Lesezeit',
@@ -546,7 +544,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen 2026 : mode maintenance et fork AG2',
     seoTitle: 'AutoGen 2026 : projet historique et fork AG2',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: "AutoGen est un framework Python open source pour applications multi-agents, développé à l'origine par Microsoft Research pour des applications LLM où plusieurs agents conversationnels coordonnent leurs actions — y compris des agents capables d'écrire et d'exécuter du code. Depuis son article de recherche d'août 2023, le projet s'est scindé en trois : le dépôt AutoGen de Microsoft est en mode maintenance depuis octobre 2025, son successeur désigné est le Microsoft Agent Framework, désormais en disponibilité générale, et un fork communautaire appelé AG2 poursuit un développement actif sous la direction des auteurs originaux après leur départ de Microsoft. Cet avis porte spécifiquement sur le projet AutoGen original et sa continuation communautaire, AG2 — le Microsoft Agent Framework, successeur officiel, est une plateforme distincte et activement développée, avec sa propre histoire et sa propre feuille de route.",
     metaDescription: "AutoGen, framework multi-agents originel de Microsoft, est en mode maintenance depuis octobre 2025. Cet avis couvre le projet AutoGen historique et son fork AG2.",
     readTime: '12 min de lecture',
@@ -805,7 +802,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGenレビュー2026：メンテナンスモードとAG2フォーク',
     seoTitle: 'AutoGenレビュー2026：レガシー版の現状とAG2フォーク',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: 'AutoGenは、複数の対話型エージェント（コードを書いて実行するエージェントを含む）を協調させるLLMアプリケーション向けに、もともとMicrosoft Researchが構築したオープンソースのPythonマルチエージェントフレームワークです。2023年8月の研究論文発表以来、このプロジェクトは3つに分岐しました——Microsoft自身のAutoGenリポジトリは2025年10月以降メンテナンスモードに入り、その後継として一般提供されたのがMicrosoft Agent Frameworkであり、さらにMicrosoftを離れた原著者らが主導するコミュニティフォークAG2が独自に開発を続けています。本レビューは、オリジナルのAutoGenプロジェクトとそのコミュニティによる後継AG2に焦点を当てています。公式後継であるMicrosoft Agent Frameworkは、独自の歴史とロードマップを持つ別個の、活発に開発が続くプラットフォームです。',
     metaDescription: 'AutoGenはMicrosoftの旧来型マルチエージェントフレームワークで、2025年10月からメンテナンスモードです。本レビューはレガシー版AutoGenとそのAG2フォークを扱います。',
     readTime: '12分で読める',
@@ -1064,8 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen 2026 评测：维护模式与 AG2 分支',
     seoTitle: 'AutoGen 2026 评测：遗留项目现状与 AG2 分支',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
-    intro: 'AutoGen 是一个开源的 Python 多智能体框架，最初由 Microsoft Research 为协调多个对话式智能体（包括能够编写并执行代码的智能体）的 LLM 应用而打造。自 2023 年 8 月发布研究论文以来，该项目已分裂为三条路线：Microsoft 自身的 AutoGen 仓库自 2025 年 10 月起进入维护模式；其预定的继任者是已正式发布（GA）的 Microsoft Agent Framework；而由原作者在离开 Microsoft 后主导的社区分支 AG2 则继续活跃开发。本文的评测范围专门限定于最初的 AutoGen 项目及其社区继任分支 AG2——官方继任者 Microsoft Agent Framework 是一个拥有自身历史和路线图、独立且持续活跃开发的平台。',
+    intro: 'AutoGen 是一个开源的 Python 多智能体框架，最初由 Microsoft Research 为协调多个对话式智能体（包括能够编写并执行代码的智能体）的 LLM 应用而打造。自 2023 年 8 月发布研究论文以来，该项目已分裂为三条路线：Microsoft 自身的 AutoGen 仓库自 2025 年 10 月起进入维护模式；其预定的继任者是已正式发布（GA）的Microsoft Agent Framework；而由原作者在离开 Microsoft 后主导的社区分支 AG2 则继续活跃开发。本文的评测范围专门限定于最初的 AutoGen 项目及其社区继任分支 AG2——官方继任者 Microsoft Agent Framework 是一个拥有自身历史和路线图、独立且持续活跃开发的平台。',
     metaDescription: 'AutoGen 是 Microsoft 最初的多智能体框架，自 2025 年 10 月起进入维护模式。本文评测遗留版 AutoGen 及其 AG2 分支。',
     readTime: '阅读时间:12分钟',
     targetKeywords: [
@@ -1323,7 +1318,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'Reseña de AutoGen 2026: modo mantenimiento y fork AG2',
     seoTitle: 'AutoGen 2026: estado del proyecto legado y el fork AG2',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: "AutoGen es un framework Python de código abierto para aplicaciones LLM multiagente, creado originalmente por Microsoft Research para coordinar varios agentes conversacionales — incluidos agentes que escriben y ejecutan código. Desde su paper de investigación de agosto de 2023, el proyecto se ha dividido en tres vías: el repositorio propio de AutoGen de Microsoft está en modo de mantenimiento desde octubre de 2025, su sucesor previsto es el Microsoft Agent Framework, ya en disponibilidad general, y un fork liderado por la comunidad llamado AG2 sigue en desarrollo activo bajo los autores originales tras dejar Microsoft. Esta reseña se centra específicamente en el proyecto AutoGen original y su continuación liderada por la comunidad, AG2 — el Microsoft Agent Framework, el sucesor oficial, es una plataforma separada y activamente desarrollada con su propia historia y hoja de ruta.",
     metaDescription: "AutoGen, el framework multiagente original de Microsoft, está en modo de mantenimiento desde octubre de 2025. Esta reseña cubre el AutoGen legado y su fork AG2.",
     readTime: '12 min de lectura',
@@ -1582,7 +1576,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen 2026: modo de manutenção e fork AG2',
     seoTitle: 'AutoGen 2026: status do projeto legado e o fork AG2',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: "O AutoGen é um framework Python de código aberto para múltiplos agentes, originalmente construído pela Microsoft Research para aplicações LLM que coordenam vários agentes conversacionais — incluindo agentes que escrevem e executam código. Desde seu artigo de pesquisa de agosto de 2023, o projeto se dividiu em três frentes: o próprio repositório AutoGen da Microsoft está em modo de manutenção desde outubro de 2025, seu sucessor pretendido é o Microsoft Agent Framework (já com disponibilidade geral), e um fork liderado pela comunidade chamado AG2 continua em desenvolvimento ativo sob os autores originais, após saírem da Microsoft. Esta análise foca especificamente no projeto AutoGen original e em sua continuação liderada pela comunidade, o AG2 — o Microsoft Agent Framework, o sucessor oficial, é uma plataforma separada e ativamente desenvolvida, com sua própria história e roteiro.",
     metaDescription: "O AutoGen, framework multiagente original da Microsoft, está em modo de manutenção desde outubro de 2025. Esta análise cobre o AutoGen legado e seu fork AG2.",
     readTime: '12 min de leitura',
@@ -1841,7 +1834,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'مراجعة AutoGen 2026: وضع الصيانة وفرع AG2',
     seoTitle: 'مراجعة AutoGen 2026: حالة المشروع القديم وفرع AG2',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: 'AutoGen إطار Python مفتوح المصدر ومتعدد الوكلاء، طوّرته في الأصل Microsoft Research لتطبيقات LLM التي تنسّق بين عدة وكلاء محادثة — بما في ذلك وكلاء يكتبون الكود وينفذونه. منذ ورقته البحثية الصادرة في أغسطس 2023، انقسم المشروع إلى ثلاثة مسارات: مستودع AutoGen الخاص بـMicrosoft في وضع صيانة منذ أكتوبر 2025، وخليفته المقصود هو Microsoft Agent Framework الذي وصل إلى الإتاحة العامة، وفرع مجتمعي يُسمى AG2 يواصل التطوير النشط تحت قيادة المؤلفين الأصليين بعد مغادرتهم Microsoft. تركّز هذه المراجعة تحديدًا على مشروع AutoGen الأصلي واستمراريته المجتمعية AG2 — أما Microsoft Agent Framework، الخليفة الرسمي، فهو منصة منفصلة ونشطة التطوير لها تاريخها وخارطة طريقها الخاصة.',
     metaDescription: 'AutoGen، إطار Microsoft الأصلي متعدد الوكلاء، في وضع صيانة منذ أكتوبر 2025. تغطي هذه المراجعة نسخة AutoGen القديمة وفرعها AG2.',
     readTime: '12 دقيقة قراءة',
@@ -2100,7 +2092,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AutoGen',
     title: 'AutoGen 2026 리뷰: 유지보수 모드와 AG2 포크',
     seoTitle: 'AutoGen 2026 리뷰: 레거시 프로젝트 현황과 AG2 포크',
-    // TODO: link to /power-local-llm/microsoft-agent-framework-review once published
     intro: 'AutoGen은 Microsoft Research가 원래 개발한 오픈소스 Python 멀티 에이전트 프레임워크로, 코드를 작성하고 실행하는 에이전트를 포함해 여러 대화형 LLM 에이전트를 조율하는 애플리케이션을 위한 도구입니다. 2023년 8월 연구 논문 발표 이후 프로젝트는 세 갈래로 나뉘었습니다: Microsoft 자체 AutoGen 저장소는 2025년 10월부터 유지보수 모드에 들어갔고, 그 후속작으로 지정된 것은 정식 출시(GA)된 Microsoft Agent Framework이며, 원저자들이 Microsoft를 떠난 뒤 이끄는 커뮤니티 주도 포크 AG2가 계속 활발히 개발되고 있습니다. 이 리뷰는 원조 AutoGen 프로젝트와 그 커뮤니티 후속작인 AG2에 초점을 맞춥니다——공식 후속작인 Microsoft Agent Framework는 자체 역사와 로드맵을 가진, 별도로 활발히 개발되는 플랫폼입니다.',
     metaDescription: 'AutoGen은 Microsoft의 원조 멀티 에이전트 프레임워크로, 2025년 10월부터 유지보수 모드입니다. 이 리뷰는 레거시 AutoGen과 그 AG2 포크를 다룹니다.',
     readTime: '12분 읽기',
