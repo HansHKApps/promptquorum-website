@@ -225,6 +225,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
   'llama-cpp-explained':                     'llama-cpp-explained',
+  // vLLM explainer (Runtimes & Inference Engines) — 2026-09-06
+  'vllm-explained':                          'vllm-explained',
 
   // Runtimes & Engines — 2026-09-05
   'llama-cpp-review':                        'llama-cpp-review',
