@@ -246,4 +246,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'stableswarmui-review':                    'stableswarmui-review',
   // Fooocus review — 2026-09-06
   'fooocus-review':                          'fooocus-review',
+  // InvokeAI review — 2026-09-06
+  'invokeai-review':                         'invokeai-review',
 }

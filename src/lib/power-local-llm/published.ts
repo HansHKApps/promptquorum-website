@@ -269,6 +269,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Fooocus review (Image & Video Generation) — 2026-09-06
   'fooocus-review',
+
+  // InvokeAI review (Image & Video Generation) — 2026-09-06
+  'invokeai-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
