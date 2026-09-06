@@ -28,6 +28,10 @@ import { article as a_cursor_local_mode_review } from './articles/cursor-local-m
 import { article as a_twinny_review } from './articles/twinny-review'
 import { article as a_aider_review } from './articles/aider-review'
 import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
+import { article as a_aichat_review } from './articles/aichat-review'
+import { article as a_tgpt_review } from './articles/tgpt-review'
+import { article as a_blackbox_ai_cli_review } from './articles/blackbox-ai-cli-review'
+import { article as a_privategpt_review } from './articles/privategpt-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -334,4 +338,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'twinny-review':                                  a_twinny_review,
   'aider-review':                                   a_aider_review,
   'shell-gpt-review':                               a_shell_gpt_review,
+  // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
+  'aichat-review':                                  a_aichat_review,
+  'tgpt-review':                                    a_tgpt_review,
+  'blackbox-ai-cli-review':                         a_blackbox_ai_cli_review,
+  'privategpt-review':                              a_privategpt_review,
 }
