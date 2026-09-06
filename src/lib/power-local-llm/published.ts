@@ -257,6 +257,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Chapper review (Mobile & Edge LLMs) — 2026-09-06
   'chapper-review',
+
+  // ControlNet review (Image & Video Generation) — 2026-09-06
+  'controlnet-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

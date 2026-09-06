@@ -238,4 +238,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'cursor-local-mode-review':                'cursor-local-mode-review',
   // Chapper review — 2026-09-06
   'chapper-review':                          'chapper-review',
+  // ControlNet review — 2026-09-06
+  'controlnet-review':                       'controlnet-review',
 }
