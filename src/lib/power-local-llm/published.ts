@@ -254,6 +254,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // llama.cpp explainer — 2026-09-05
   'llama-cpp-explained',
+
+  // Chapper review (Mobile & Edge LLMs) — 2026-09-06
+  'chapper-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
