@@ -155,6 +155,7 @@ import { article as a_openclaw_review } from './articles/openclaw-review'
 import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026'
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
+import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_llama_cpp_review } from './articles/llama-cpp-review'
 
@@ -284,6 +285,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'msty-go-review-2026':                               a_msty_go_review_2026,
   'msty-review':                                       a_msty_review,
   'enchanted-review':                                  a_enchanted_review,
+  'boltai-review':                                     a_boltai_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
