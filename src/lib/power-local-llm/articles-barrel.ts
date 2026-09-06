@@ -32,6 +32,16 @@ import { article as a_aichat_review } from './articles/aichat-review'
 import { article as a_tgpt_review } from './articles/tgpt-review'
 import { article as a_blackbox_ai_cli_review } from './articles/blackbox-ai-cli-review'
 import { article as a_privategpt_review } from './articles/privategpt-review'
+import { article as a_chapper_review } from './articles/chapper-review'
+import { article as a_controlnet_review } from './articles/controlnet-review'
+import { article as a_maid_review } from './articles/maid-review'
+import { article as a_stableswarmui_review } from './articles/stableswarmui-review'
+import { article as a_fooocus_review } from './articles/fooocus-review'
+import { article as a_invokeai_review } from './articles/invokeai-review'
+import { article as a_automatic1111_review } from './articles/automatic1111-review'
+import { article as a_llm_farm_review } from './articles/llm-farm-review'
+import { article as a_layla_review } from './articles/layla-review'
+import { article as a_comfyui_review } from './articles/comfyui-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -353,4 +363,24 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'tgpt-review':                                    a_tgpt_review,
   'blackbox-ai-cli-review':                         a_blackbox_ai_cli_review,
   'privategpt-review':                              a_privategpt_review,
+  // Chapper review — 2026-09-06
+  'chapper-review':                                a_chapper_review,
+  // ControlNet review — 2026-09-06
+  'controlnet-review':                             a_controlnet_review,
+  // Maid review — 2026-09-06
+  'maid-review':                                   a_maid_review,
+  // SwarmUI (formerly StableSwarmUI) review — 2026-09-06
+  'stableswarmui-review':                          a_stableswarmui_review,
+  // Fooocus review — 2026-09-06
+  'fooocus-review':                                a_fooocus_review,
+  // InvokeAI review — 2026-09-06
+  'invokeai-review':                               a_invokeai_review,
+  // AUTOMATIC1111 WebUI review — 2026-09-06
+  'automatic1111-review':                          a_automatic1111_review,
+  // LLM Farm review — 2026-09-06
+  'llm-farm-review':                               a_llm_farm_review,
+  // Layla review — 2026-09-06
+  'layla-review':                                  a_layla_review,
+  // ComfyUI review — 2026-09-06
+  'comfyui-review':                                a_comfyui_review,
 }

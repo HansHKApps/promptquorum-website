@@ -254,4 +254,24 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'tgpt-review':                             'tgpt-review',
   'blackbox-ai-cli-review':                  'blackbox-ai-cli-review',
   'privategpt-review':                       'privategpt-review',
+  // Chapper review — 2026-09-06
+  'chapper-review':                          'chapper-review',
+  // ControlNet review — 2026-09-06
+  'controlnet-review':                       'controlnet-review',
+  // Maid review — 2026-09-06
+  'maid-review':                              'maid-review',
+  // SwarmUI (formerly StableSwarmUI) review — 2026-09-06
+  'stableswarmui-review':                    'stableswarmui-review',
+  // Fooocus review — 2026-09-06
+  'fooocus-review':                          'fooocus-review',
+  // InvokeAI review — 2026-09-06
+  'invokeai-review':                         'invokeai-review',
+  // AUTOMATIC1111 WebUI review — 2026-09-06
+  'automatic1111-review':                    'automatic1111-review',
+  // LLM Farm review — 2026-09-06
+  'llm-farm-review':                         'llm-farm-review',
+  // Layla review — 2026-09-06
+  'layla-review':                            'layla-review',
+  // ComfyUI review — 2026-09-06
+  'comfyui-review':                          'comfyui-review',
 }
