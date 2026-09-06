@@ -54,6 +54,7 @@ import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
 import { BetaFloatingCta } from '@/components/BetaFloatingCta'
+import { TableOfContentsButton } from '@/components/TableOfContentsButton'
 import { GooglePreferredSourcesCard } from '@/components/GooglePreferredSourcesCard'
 import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
 
@@ -269,6 +270,7 @@ export default function RootLayout({
           <CookieBanner />
           <PushPromptBanner />
           <BetaFloatingCta />
+          <TableOfContentsButton />
           <GooglePreferredSourcesCard />
 
           {/* Cookieless analytics — load for every visitor, no consent required.
