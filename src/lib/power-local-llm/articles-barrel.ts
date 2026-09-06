@@ -36,6 +36,7 @@ import { article as a_llm_farm_review } from './articles/llm-farm-review'
 import { article as a_layla_review } from './articles/layla-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
 import { article as a_rikkahub_review } from './articles/rikkahub-review'
+import { article as a_anythingllm_mobile_review } from './articles/anythingllm-mobile-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
@@ -358,4 +359,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'comfyui-review':                                a_comfyui_review,
   // RikkaHub review — 2026-09-06
   'rikkahub-review':                               a_rikkahub_review,
+  // AnythingLLM Mobile review — 2026-09-06
+  'anythingllm-mobile-review':                      a_anythingllm_mobile_review,
 }

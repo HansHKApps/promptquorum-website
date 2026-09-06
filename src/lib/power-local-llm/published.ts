@@ -287,6 +287,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // RikkaHub review (Mobile & Edge LLMs) — 2026-09-06
   'rikkahub-review',
+
+  // AnythingLLM Mobile review (Mobile & Edge LLMs) — 2026-09-06
+  'anythingllm-mobile-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

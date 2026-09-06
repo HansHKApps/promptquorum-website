@@ -258,4 +258,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'comfyui-review':                          'comfyui-review',
   // RikkaHub review — 2026-09-06
   'rikkahub-review':                         'rikkahub-review',
+  // AnythingLLM Mobile review — 2026-09-06
+  'anythingllm-mobile-review':                'anythingllm-mobile-review',
 }
