@@ -288,6 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[vLLM Explained](/power-local-llm/vllm-explained) — the Apache 2.0 alternative that loads models directly with no compile step, contrasted with TensorRT-LLM\'s ahead-of-time build.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the hardware-flexible engine that runs on CPUs, Apple Silicon, and a broad range of GPU vendors, unlike TensorRT-LLM\'s NVIDIA-only scope.',
+          '[SGLang Explained](/power-local-llm/sglang-explained) — a no-compile-step, more hardware-flexible GPU serving engine built around RadixAttention cache reuse and engine-level structured output, contrasted with TensorRT-LLM\'s ahead-of-time-compiled approach.',
           '[Enterprise LLM Inference Servers: vLLM, TGI, and NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — a deeper, deployment-focused comparison including NVIDIA NIM, which packages TensorRT-LLM.',
           '[Choose a GPU for on-prem inference hardware](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU generations to consider if you are sizing NVIDIA hardware to run TensorRT-LLM.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
@@ -581,6 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[vLLM erklärt](/power-local-llm/vllm-explained) — die Apache-2.0-Alternative, die Modelle direkt ohne Kompilierungsschritt lädt, im Kontrast zu TensorRT-LLMs vorgelagertem Build.',
           '[llama.cpp erklärt](/power-local-llm/llama-cpp-explained) — die hardwareflexible Engine, die auf CPUs, Apple Silicon und einer breiten Palette von GPU-Herstellern läuft, anders als TensorRT-LLMs reiner NVIDIA-Fokus.',
+          '[SGLang erklärt](/power-local-llm/sglang-explained) — eine kompilierschrittfreie, hardwareflexiblere GPU-Serving-Engine rund um RadixAttention-Cache-Wiederverwendung und Structured Output auf Engine-Ebene, im Kontrast zu TensorRT-LLMs vorab kompiliertem Ansatz.',
           '[Enterprise-LLM-Inference-Server: vLLM, TGI und NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer, deployment-fokussierter Vergleich inklusive NVIDIA NIM, das TensorRT-LLM bündelt.',
           '[Eine GPU für On-Prem-Inferenz-Hardware wählen](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Generationen zur Auswahl, wenn NVIDIA-Hardware für TensorRT-LLM dimensioniert werden soll.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',

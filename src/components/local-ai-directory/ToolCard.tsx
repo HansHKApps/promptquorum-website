@@ -10,7 +10,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
-import { StarIcon, CpuIcon, PlugIcon, TagIcon } from './icons'
+import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -120,8 +120,14 @@ export function ToolCard({
       }}
     >
       <span className={`absolute inset-x-0 top-0 h-1 ${accent.bar}`} aria-hidden="true" />
+      <span
+        className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-primary/5 text-primary/50 transition-colors group-hover:bg-primary/10 group-hover:text-primary"
+        aria-hidden="true"
+      >
+        <ChevronRightIcon className="h-3 w-3" />
+      </span>
 
-      <div className="flex flex-col h-full p-4 pt-5">
+      <div className="flex flex-col h-full p-4 pt-5 pr-8">
         <div className="flex items-start gap-3 mb-2.5">
           <span
             className={`shrink-0 flex h-9 w-9 items-center justify-center rounded-lg text-sm font-extrabold ${accent.avatar}`}

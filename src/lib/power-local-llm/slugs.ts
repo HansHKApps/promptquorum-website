@@ -46,6 +46,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'msty-review':                             'msty-review',
   'enchanted-review':                        'enchanted-review',
   'boltai-review':                           'boltai-review',
+  'jan-review':                              'jan-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -225,6 +226,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'xtts-v2-review':                          'xtts-v2-review',
   'bark-tts-review':                         'bark-tts-review',
   'styletts-2-review':                       'styletts-2-review',
+  'llava-review':                            'llava-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05
@@ -239,9 +241,14 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // TensorRT-LLM explainer (Runtimes & Inference Engines) — 2026-09-06
   'tensorrt-llm-explained':                  'tensorrt-llm-explained',
   'koboldcpp-review':                        'koboldcpp-review',
+  'exllamav2-explained':                     'exllamav2-explained',
   'mlc-llm-explained':                       'mlc-llm-explained',
   // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
   'localai-explained':                       'localai-explained',
+  // SGLang explainer (Runtimes & Inference Engines) — 2026-09-06
+  'sglang-explained':                        'sglang-explained',
+  // Llamafile explainer (Runtimes & Inference Engines) — 2026-09-07
+  'llamafile-explained':                     'llamafile-explained',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
