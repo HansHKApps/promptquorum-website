@@ -321,6 +321,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'llamafile-explained',
   // MLX-LM explainer — 2026-09-07
   'mlx-lm-explained',
+  // MLC LLM explainer — 2026-09-07
+  'mlc-llm-explained',
+  // KoboldCpp review — 2026-09-07
+  'koboldcpp-review',
+  // ExLlamaV2 explainer — 2026-09-07
+  'exllamav2-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
