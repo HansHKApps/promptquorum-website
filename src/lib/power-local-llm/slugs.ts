@@ -241,6 +241,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'mlc-llm-explained':                       'mlc-llm-explained',
   // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
   'localai-explained':                       'localai-explained',
+  // MLX-LM explainer (Runtimes & Inference Engines) — 2026-09-07
+  'mlx-lm-explained':                        'mlx-lm-explained',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05

@@ -186,6 +186,7 @@ import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
 import { article as a_mlc_llm_explained } from './articles/mlc-llm-explained'
 import { article as a_localai_explained } from './articles/localai-explained'
 import { article as a_tensorrt_llm_explained } from './articles/tensorrt-llm-explained'
+import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -357,6 +358,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mlc-llm-explained':                             a_mlc_llm_explained,
   'localai-explained':                             a_localai_explained,
   'tensorrt-llm-explained':                        a_tensorrt_llm_explained,
+  'mlx-lm-explained':                              a_mlx_lm_explained,
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                               a_windsurf_review,
