@@ -46,6 +46,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'msty-review':                             'msty-review',
   'enchanted-review':                        'enchanted-review',
   'boltai-review':                           'boltai-review',
+  'jan-review':                              'jan-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -223,6 +224,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'xtts-v2-review':                          'xtts-v2-review',
   'bark-tts-review':                         'bark-tts-review',
   'styletts-2-review':                       'styletts-2-review',
+  'llava-review':                            'llava-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05

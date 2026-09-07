@@ -51,6 +51,7 @@ import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
 import { article as a_styletts_2_review } from './articles/styletts-2-review'
+import { article as a_llava_review } from './articles/llava-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -179,6 +180,7 @@ import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_boltai_review } from './articles/boltai-review'
+import { article as a_jan_review } from './articles/jan-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
@@ -315,6 +317,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'msty-review':                                       a_msty_review,
   'enchanted-review':                                  a_enchanted_review,
   'boltai-review':                                     a_boltai_review,
+  'jan-review':                                        a_jan_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -346,6 +349,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'xtts-v2-review':                                 a_xtts_v2_review,
   'bark-tts-review':                                a_bark_tts_review,
   'styletts-2-review':                             a_styletts_2_review,
+  'llava-review':                                  a_llava_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
