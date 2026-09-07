@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Einen Agenten über die Konsole erstellen',
-            content: "Es gibt kein primäres Python- oder JavaScript-SDK, das im Vordergrund steht — SuperAGI ist konsolen-first aufgebaut. Ein typischer Ablauf: GUI öffnen, auf „Create new agent" klicken, ein Ziel eintippen („Recherchiere drei Wettbewerber und fasse deren Preise zusammen"), die Toolkits für Websuche und Web-Scraping aktivieren, eine maximale Schrittzahl festlegen und starten. Das Denken des Agenten, seine Tool-Aufrufe und alle Genehmigungsaufforderungen der Action Console erscheinen im selben Browser-Tab, während der Lauf fortschreitet.",
+            content: 'Es gibt kein primäres Python- oder JavaScript-SDK, das im Vordergrund steht — SuperAGI ist konsolen-first aufgebaut. Ein typischer Ablauf: GUI öffnen, auf „Create new agent" klicken, ein Ziel eintippen („Recherchiere drei Wettbewerber und fasse deren Preise zusammen"), die Toolkits für Websuche und Web-Scraping aktivieren, eine maximale Schrittzahl festlegen und starten. Das Denken des Agenten, seine Tool-Aufrufe und alle Genehmigungsaufforderungen der Action Console erscheinen im selben Browser-Tab, während der Lauf fortschreitet.',
           },
         ],
         note: "Das [README](https://github.com/TransformerOptimus/SuperAGI) des GitHub-Repositorys dokumentiert die aktuelle Funktionsliste und die Docker-Compose-Dateien am zuverlässigsten — die frühere gehostete Dokumentationsseite des Frameworks wurde inzwischen für das unabhängige kommerzielle Produkt des Unternehmens umgewidmet (siehe den Wartungsabschnitt unten).",
