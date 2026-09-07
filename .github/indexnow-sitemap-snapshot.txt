@@ -330,6 +330,7 @@ https://www.promptquorum.com/power-local-llm/langgraph-review
 https://www.promptquorum.com/power-local-llm/layla-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
+https://www.promptquorum.com/power-local-llm/llamafile-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/llava-review
 https://www.promptquorum.com/power-local-llm/llm-farm-review
@@ -390,6 +391,7 @@ https://www.promptquorum.com/power-local-llm/rikkahub-review
 https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/second-me-review
+https://www.promptquorum.com/power-local-llm/sglang-explained
 https://www.promptquorum.com/power-local-llm/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/power-local-llm/shell-gpt-review
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
