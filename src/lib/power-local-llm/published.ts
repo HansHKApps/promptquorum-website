@@ -257,6 +257,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'bark-tts-review',
   'styletts-2-review',
   'llava-review',
+  'ollama-vision-models-review',
+  'idefics-review',
+  'mlc-chat-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',

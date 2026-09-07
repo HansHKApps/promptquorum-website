@@ -52,6 +52,9 @@ import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
 import { article as a_styletts_2_review } from './articles/styletts-2-review'
 import { article as a_llava_review } from './articles/llava-review'
+import { article as a_ollama_vision_models_review } from './articles/ollama-vision-models-review'
+import { article as a_idefics_review } from './articles/idefics-review'
+import { article as a_mlc_chat_review } from './articles/mlc-chat-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -347,6 +350,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'bark-tts-review':                                a_bark_tts_review,
   'styletts-2-review':                             a_styletts_2_review,
   'llava-review':                                  a_llava_review,
+  'ollama-vision-models-review':                   a_ollama_vision_models_review,
+  'idefics-review':                                a_idefics_review,
+  'mlc-chat-review':                                a_mlc_chat_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
