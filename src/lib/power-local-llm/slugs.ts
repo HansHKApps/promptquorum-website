@@ -148,6 +148,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'crewai-review':                                'crewai-review',
   // LangGraph review — agent frameworks series, article 5 of 14 — 2026-09-05
   'langgraph-review':                             'langgraph-review',
+  // Semantic Kernel review — agent frameworks series, article 6 of 14 — 2026-09-06
+  'semantic-kernel-review':                       'semantic-kernel-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

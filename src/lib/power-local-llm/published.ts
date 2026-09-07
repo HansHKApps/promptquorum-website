@@ -173,6 +173,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'crewai-review',
   // Agent frameworks series — LangGraph review (article 5 of 14) — 2026-09-05
   'langgraph-review',
+  // Agent frameworks series — Semantic Kernel review (article 6 of 14) — 2026-09-06
+  'semantic-kernel-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

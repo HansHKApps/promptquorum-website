@@ -269,6 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — the general-purpose framework most often compared against AutoGen, including its LangGraph agent runtime.',
+          '[Semantic Kernel Review: Features, Pricing, Alternatives](/power-local-llm/semantic-kernel-review) — the other Microsoft SDK that Microsoft Agent Framework converges with AutoGen, with native .NET/Python/Java support.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where multi-agent frameworks fit.',
           '[MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For](/power-local-llm/metagpt-agnai-risuai-explained) — clears up the difference between MetaGPT (a role-based multi-agent framework in the same category as AutoGen) and two unrelated AI roleplay chat tools it often gets confused with.',
         ],
@@ -529,6 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[LangChain im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/langchain-review) — das Allzweck-Framework, das am häufigsten mit AutoGen verglichen wird, einschließlich seiner LangGraph-Agenten-Laufzeitumgebung.',
+          '[Semantic Kernel im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — das andere Microsoft-SDK, das das Microsoft Agent Framework mit AutoGen zusammenführt, mit nativer Unterstützung für .NET/Python/Java.',
           '[Lokale-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Multi-Agenten-Frameworks.',
         ],
       },
@@ -788,6 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           "[Avis LangChain : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/langchain-review) — le framework généraliste le plus souvent comparé à AutoGen, y compris son runtime d'agents LangGraph.",
+          "[Avis Semantic Kernel : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/semantic-kernel-review) — l'autre SDK de Microsoft que Microsoft Agent Framework fait converger avec AutoGen, avec un support natif de .NET/Python/Java.",
           "[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place des frameworks multi-agents.",
         ],
       },
@@ -1047,6 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[LangChainレビュー：機能・料金・代替ツール](/ja/power-local-llm/langchain-review) — AutoGenと最もよく比較される汎用フレームワーク。LangGraphによるエージェントランタイムも含めて解説。',
+          '[Semantic Kernelレビュー：機能・料金・代替ツール](/ja/power-local-llm/semantic-kernel-review) ——Microsoft Agent FrameworkがAutoGenと統合するもう1つのMicrosoft SDKで、.NET/Python/Javaをネイティブにサポートします。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全カタログ。マルチエージェントフレームワークの位置づけも掲載。',
         ],
       },
@@ -1306,6 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[LangChain 评测：功能、定价与替代方案](/zh/power-local-llm/langchain-review) — 与 AutoGen 最常被比较的通用型框架，包括其 LangGraph 智能体运行时。',
+          '[Semantic Kernel 评测：功能、定价、替代方案](/zh/power-local-llm/semantic-kernel-review) —— 微软另一款被 Microsoft Agent Framework 与 AutoGen 融合的 SDK，原生支持 .NET/Python/Java。',
           '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，涵盖多智能体框架在其中的定位。',
         ],
       },
@@ -1565,6 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Reseña de LangChain: funciones, precios y alternativas](/es/power-local-llm/langchain-review) — el framework de propósito general con el que más se compara AutoGen, incluido su runtime de agentes LangGraph.',
+          '[Reseña de Semantic Kernel: funciones, precios, alternativas](/es/power-local-llm/semantic-kernel-review) — el otro SDK de Microsoft que Microsoft Agent Framework converge con AutoGen, con soporte nativo para .NET/Python/Java.',
           '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encajan los frameworks multiagente.',
         ],
       },
@@ -1824,6 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Análise do LangChain: recursos, preços, alternativas](/pt/power-local-llm/langchain-review) — o framework de propósito geral mais comparado ao AutoGen, incluindo seu runtime de agentes LangGraph.',
+          '[Análise do Semantic Kernel: recursos, preços, alternativas](/pt/power-local-llm/semantic-kernel-review) — o outro SDK da Microsoft que o Microsoft Agent Framework converge com o AutoGen, com suporte nativo a .NET/Python/Java.',
           '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde se encaixam os frameworks multiagente.',
         ],
       },
@@ -2083,6 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[مراجعة LangChain: المزايا والأسعار والبدائل](/ar/power-local-llm/langchain-review) — الإطار عام الغرض الأكثر مقارنة بـAutoGen، بما في ذلك وقت تشغيل الوكلاء LangGraph الخاص به.',
+          '[مراجعة Semantic Kernel: الميزات والتسعير والبدائل](/ar/power-local-llm/semantic-kernel-review) — SDK آخر من Microsoft يدمجه Microsoft Agent Framework مع AutoGen، بدعم أصلي لـ .NET وPython وJava.',
           '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع أطر عمل تعدد الوكلاء بينها.',
         ],
       },
@@ -2342,6 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[LangChain 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langchain-review) — LangGraph 에이전트 런타임을 포함해 AutoGen과 가장 자주 비교되는 범용 프레임워크입니다.',
+          '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — Microsoft Agent Framework가 AutoGen과 함께 통합하는 다른 Microsoft SDK로, .NET/Python/Java를 네이티브로 지원합니다.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 멀티 에이전트 프레임워크가 어디에 속하는지도 포함합니다.',
         ],
       },
