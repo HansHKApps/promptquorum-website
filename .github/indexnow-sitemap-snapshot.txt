@@ -244,6 +244,7 @@ https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
 https://www.promptquorum.com/power-local-llm/aichat-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
+https://www.promptquorum.com/power-local-llm/anythingllm-mobile-review
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/aori-ai-personal-agent-review
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
@@ -283,6 +284,7 @@ https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-202
 https://www.promptquorum.com/power-local-llm/blackbox-ai-cli-review
 https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
+https://www.promptquorum.com/power-local-llm/boltai-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/chapper-review
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
@@ -382,6 +384,7 @@ https://www.promptquorum.com/power-local-llm/real-esrgan-ai-image-upscaler-revie
 https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm
 https://www.promptquorum.com/power-local-llm/replace-grammarly-notion-ai-with-local
 https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents
+https://www.promptquorum.com/power-local-llm/rikkahub-review
 https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/second-me-review
@@ -391,7 +394,9 @@ https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-role
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
 https://www.promptquorum.com/power-local-llm/stable-diffusion-review
 https://www.promptquorum.com/power-local-llm/stableswarmui-review
+https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/tabby-review
+https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/tgpt-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
