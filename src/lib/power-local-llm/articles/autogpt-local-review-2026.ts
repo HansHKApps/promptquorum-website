@@ -253,6 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Msty Go Review 2026](/power-local-llm/msty-go-review) — a scoped, sandboxed task-automation agent from the makers of Msty, positioned between a chat client and a fully autonomous agent.',
           '[Continue.dev vs. Cline vs. Aider (Local)](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — scoped, supervised local coding agents as an alternative to unscoped autonomous agents.',
           '[Langflow Review 2026](/power-local-llm/langflow-visual-ai-orchestration-review) — a visual, node-based agent/workflow builder without the Polyform licensing restriction.',
+          '[SuperAGI Review 2026](/power-local-llm/superagi-review) — a GUI-based, GitHub-adjacent autonomous agent project from the same 2023 AutoGPT-era wave, reviewed for its current maintenance status.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },

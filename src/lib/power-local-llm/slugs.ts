@@ -302,4 +302,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'tgpt-review':                             'tgpt-review',
   'blackbox-ai-cli-review':                  'blackbox-ai-cli-review',
   'privategpt-review':                       'privategpt-review',
+  // SuperAGI review (agent frameworks series, 8/14) — 2026-09-07
+  'superagi-review':                         'superagi-review',
 }
