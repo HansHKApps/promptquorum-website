@@ -153,6 +153,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'langgraph-review':                             'langgraph-review',
   // Semantic Kernel review — agent frameworks series, article 6 of 14 — 2026-09-06
   'semantic-kernel-review':                       'semantic-kernel-review',
+  // Letta review — agent frameworks series, article 7 of 14 — 2026-09-07
+  'letta-review':                                 'letta-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -229,6 +231,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'bark-tts-review':                         'bark-tts-review',
   'styletts-2-review':                       'styletts-2-review',
   'llava-review':                            'llava-review',
+  'ollama-vision-models-review':              'ollama-vision-models-review',
+  'idefics-review':                          'idefics-review',
+  'mlc-chat-review':                         'mlc-chat-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
   // Private LLM review — 2026-09-05

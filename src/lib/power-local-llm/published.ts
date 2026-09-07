@@ -175,6 +175,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'langgraph-review',
   // Agent frameworks series — Semantic Kernel review (article 6 of 14) — 2026-09-06
   'semantic-kernel-review',
+  // Agent frameworks series — Letta review (article 7 of 14) — 2026-09-07
+  'letta-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -262,6 +264,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'bark-tts-review',
   'styletts-2-review',
   'llava-review',
+  'ollama-vision-models-review',
+  'idefics-review',
+  'mlc-chat-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',

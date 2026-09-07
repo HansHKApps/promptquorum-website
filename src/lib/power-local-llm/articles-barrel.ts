@@ -52,6 +52,9 @@ import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
 import { article as a_styletts_2_review } from './articles/styletts-2-review'
 import { article as a_llava_review } from './articles/llava-review'
+import { article as a_ollama_vision_models_review } from './articles/ollama-vision-models-review'
+import { article as a_idefics_review } from './articles/idefics-review'
+import { article as a_mlc_chat_review } from './articles/mlc-chat-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -164,6 +167,7 @@ import { article as a_autogen_review } from './articles/autogen-review'
 import { article as a_crewai_review } from './articles/crewai-review'
 import { article as a_langgraph_review } from './articles/langgraph-review'
 import { article as a_semantic_kernel_review } from './articles/semantic-kernel-review'
+import { article as a_letta_review } from './articles/letta-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -294,6 +298,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'crewai-review':                                     a_crewai_review,
   'langgraph-review':                                  a_langgraph_review,
   'semantic-kernel-review':                            a_semantic_kernel_review,
+  'letta-review':                                      a_letta_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
@@ -359,6 +364,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'bark-tts-review':                                a_bark_tts_review,
   'styletts-2-review':                             a_styletts_2_review,
   'llava-review':                                  a_llava_review,
+  'ollama-vision-models-review':                   a_ollama_vision_models_review,
+  'idefics-review':                                a_idefics_review,
+  'mlc-chat-review':                                a_mlc_chat_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05
