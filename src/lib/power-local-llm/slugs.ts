@@ -238,7 +238,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'vllm-explained':                          'vllm-explained',
   // TensorRT-LLM explainer (Runtimes & Inference Engines) — 2026-09-06
   'tensorrt-llm-explained':                  'tensorrt-llm-explained',
-  'llamafile-explained':                     'llamafile-explained',
   'koboldcpp-review':                        'koboldcpp-review',
   'exllamav2-explained':                     'exllamav2-explained',
   'mlc-llm-explained':                       'mlc-llm-explained',
