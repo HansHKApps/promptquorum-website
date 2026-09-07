@@ -52,6 +52,9 @@ import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
 import { article as a_styletts_2_review } from './articles/styletts-2-review'
 import { article as a_llava_review } from './articles/llava-review'
+import { article as a_ollama_vision_models_review } from './articles/ollama-vision-models-review'
+import { article as a_idefics_review } from './articles/idefics-review'
+import { article as a_mlc_chat_review } from './articles/mlc-chat-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
@@ -184,6 +187,7 @@ import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_jan_review } from './articles/jan-review'
 import { article as a_gpt4all_review } from './articles/gpt4all-review'
+import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
@@ -328,6 +332,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'boltai-review':                                     a_boltai_review,
   'jan-review':                                        a_jan_review,
   'gpt4all-review':                                    a_gpt4all_review,
+  'draw-things-review':                                a_draw_things_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -360,6 +365,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'bark-tts-review':                                a_bark_tts_review,
   'styletts-2-review':                             a_styletts_2_review,
   'llava-review':                                  a_llava_review,
+  'ollama-vision-models-review':                   a_ollama_vision_models_review,
+  'idefics-review':                                a_idefics_review,
+  'mlc-chat-review':                                a_mlc_chat_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
   // Stable Diffusion review — 2026-09-05

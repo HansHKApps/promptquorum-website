@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   worksWith: null,
   engine: 'builtin',
   license: 'Apache 2.0',
-  price: 'paid',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: '2026-09-04',

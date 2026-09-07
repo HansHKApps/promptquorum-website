@@ -33,5 +33,5 @@ export const app: ToolRecord = {
     ar: 'runtime نماذج لغوية محمولة متعدد المنصات',
     ko: '크로스플랫폼 모바일 LLM 런타임',
   },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  lastVerifiedDate: '2026-09-07', // Verified against the App Store listing, MLC's GitHub Android APK release, and mlc-ai/mlc-llm docs — see /power-local-llm/mlc-chat-review
 }
