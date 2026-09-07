@@ -47,6 +47,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'enchanted-review':                        'enchanted-review',
   'boltai-review':                           'boltai-review',
   'jan-review':                              'jan-review',
+  'gpt4all-review':                          'gpt4all-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',

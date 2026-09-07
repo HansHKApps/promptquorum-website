@@ -181,6 +181,7 @@ import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_jan_review } from './articles/jan-review'
+import { article as a_gpt4all_review } from './articles/gpt4all-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
@@ -317,6 +318,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'enchanted-review':                                  a_enchanted_review,
   'boltai-review':                                     a_boltai_review,
   'jan-review':                                        a_jan_review,
+  'gpt4all-review':                                    a_gpt4all_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
