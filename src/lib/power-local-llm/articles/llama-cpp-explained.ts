@@ -263,6 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[llamafile Explained](/power-local-llm/llamafile-explained) — packages llama.cpp itself, plus a model, into a single cross-platform executable using Cosmopolitan Libc, trading the newest llama.cpp features for zero-install, single-file portability.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — the production-serving engine built around PagedAttention and continuous batching, for high-concurrency GPU deployment rather than single-user local use.',
           '[LocalAI Explained](/power-local-llm/localai-explained) — a self-hosted, OpenAI-API-compatible server that wraps llama.cpp and other backends to add multi-modal endpoints (image, audio, embeddings) on top.',
           '[TensorRT-LLM Explained](/power-local-llm/tensorrt-llm-explained) — NVIDIA\'s ahead-of-time-compiled, NVIDIA-only engine, contrasted with llama.cpp\'s hardware flexibility across CPU, Apple Silicon, and many GPU vendors.',
@@ -536,6 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[llamafile erklärt](/de/power-local-llm/llamafile-explained) — verpackt llama.cpp selbst zusammen mit einem Modell in eine einzige plattformübergreifende ausführbare Datei mittels Cosmopolitan Libc, auf Kosten der neuesten llama.cpp-Funktionen, aber mit installationsfreier Ein-Datei-Portabilität.',
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die auf PagedAttention und Continuous Batching aufgebaute Produktions-Serving-Engine für hochparallele GPU-Deployments statt Einzelnutzer-Betrieb.',
           '[LocalAI erklärt](/de/power-local-llm/localai-explained) — ein selbst gehosteter, OpenAI-API-kompatibler Server, der llama.cpp und andere Backends um multimodale Endpunkte (Bild, Audio, Embeddings) erweitert.',
           '[TensorRT-LLM erklärt](/power-local-llm/tensorrt-llm-explained) — NVIDIAs vorab kompilierte, reine NVIDIA-Engine, im Kontrast zu llama.cpps Hardware-Flexibilität über CPU, Apple Silicon und viele GPU-Hersteller hinweg.',
