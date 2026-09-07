@@ -315,6 +315,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localai-explained',
   // SGLang explainer — 2026-09-06
   'sglang-explained',
+  // Llamafile explainer — 2026-09-07
+  'llamafile-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
