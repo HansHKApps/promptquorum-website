@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'صوت توليدي مع أصوات غير كلامية',
     ko: '음향 효과와 음악을 포함한 생성적 음성 합성',
   },
+  reviewSlug: 'bark-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساعد كود بالذكاء الاصطناعي مع دعم النماذج المحلية',
     ko: '로컬 모델을 지원하는 AI 코드 어시스턴트',
   },
+  reviewSlug: 'sourcegraph-cody-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

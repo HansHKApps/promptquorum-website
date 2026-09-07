@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'SDK تنسيق مؤسسي من Microsoft بـC#/Python/Java',
     ko: 'C#/Python/Java용 Microsoft 엔터프라이즈 오케스트레이션 SDK',
   },
+  reviewSlug: 'semantic-kernel-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

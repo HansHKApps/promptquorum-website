@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة Stable Diffusion مبسَّطة، إعداد بسيط — لا إصدار منذ 2024 (عامان+)',
     ko: '간단한 설정의 간소화된 Stable Diffusion UI — 2024년 이후 릴리스 없음(2년 이상)',
   },
+  reviewSlug: 'fooocus-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

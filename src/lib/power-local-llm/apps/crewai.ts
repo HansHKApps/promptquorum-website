@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'سير عمل متعدد العملاء قائم على الأدوار',
     ko: '역할 기반 멀티에이전트 워크플로',
   },
+  reviewSlug: 'crewai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

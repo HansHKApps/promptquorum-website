@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'استنساخ ChatGPT بدون اتصال يركز على الخصوصية، مفتوح المصدر بالكامل',
     ko: '프라이버시 중심의 오프라인 ChatGPT 클론, 완전 오픈소스',
   },
+  reviewSlug: 'jan-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

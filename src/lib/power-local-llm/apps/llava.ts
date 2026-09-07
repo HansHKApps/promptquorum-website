@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نموذج رؤية + لغة محلي لفهم الصور',
     ko: '이미지 이해를 위한 로컬 비전 + 언어 모델',
   },
+  reviewSlug: 'llava-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

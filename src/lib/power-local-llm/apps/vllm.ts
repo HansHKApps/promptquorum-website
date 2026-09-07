@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'خدمة عالية الأداء للنشر متعدد المستخدمين على GPU',
     ko: '멀티유저 GPU 배포를 위한 고성능 서빙',
   },
+  reviewSlug: 'vllm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

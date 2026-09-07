@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'runtime أصلي لـApple Silicon من Apple Research',
     ko: 'Apple Research의 Apple Silicon 네이티브 런타임',
   },
+  reviewSlug: 'mlx-lm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة Stability AI الرسمية بدعم نماذج متعددة — لا إصدار منذ 2024 (عامان+)',
     ko: '멀티 모델을 지원하는 공식 Stability AI UI — 2024년 이후 릴리스 없음(2년 이상)',
   },
+  reviewSlug: 'stableswarmui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

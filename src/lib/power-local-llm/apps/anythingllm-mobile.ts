@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وصول عن بُعد إلى مساحة عملك المحلية في AnythingLLM',
     ko: '로컬 AnythingLLM 워크스페이스에 대한 원격 접근',
   },
+  reviewSlug: 'anythingllm-mobile-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'سير عمل عملاء قائم على الرسوم البيانية مع حالة',
     ko: '상태를 갖춘 그래프 기반 에이전트 워크플로',
   },
+  reviewSlug: 'langgraph-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نموذج توليد صور تأسيسي مفتوح المصدر',
     ko: '기반이 되는 오픈소스 이미지 생성 모델',
   },
+  reviewSlug: 'stable-diffusion-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

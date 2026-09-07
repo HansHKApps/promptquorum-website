@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'غلاف خفيف لـllama.cpp مع واجهة مدمجة',
     ko: '내장 인터페이스가 포함된 llama.cpp 경량 래퍼',
   },
+  reviewSlug: 'koboldcpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

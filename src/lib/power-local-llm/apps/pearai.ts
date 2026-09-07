@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'محرر كود ذكاء اصطناعي مفتوح المصدر مع دعم النماذج المحلية',
     ko: '로컬 모델을 지원하는 오픈소스 AI 코드 편집기',
   },
+  reviewSlug: 'pearai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

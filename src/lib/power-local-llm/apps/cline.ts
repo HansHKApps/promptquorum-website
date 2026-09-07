@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل ترميز مستقل لـVS Code مع تعديل الملفات',
     ko: 'VS Code용 파일 편집 기능을 갖춘 자율 코딩 에이전트',
   },
+  reviewSlug: 'cline-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

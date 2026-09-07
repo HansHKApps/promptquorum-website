@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تجربة مستخدم استهلاكية نظيفة، دعم متعدد المزودين',
     ko: '깔끔한 소비자 UX, 멀티 제공자 지원',
   },
+  reviewSlug: 'msty-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

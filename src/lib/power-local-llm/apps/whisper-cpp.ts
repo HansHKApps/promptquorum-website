@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'التعرف على الكلام محلياً، يعمل على CPU أو GPU',
     ko: 'CPU 및 GPU에 최적화된 로컬 음성 인식',
   },
+  reviewSlug: 'whisper-cpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

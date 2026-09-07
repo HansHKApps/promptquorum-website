@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'لعب أدوار ودردشة شخصيات مع lorebooks',
     ko: '로어북이 있는 롤플레이 및 캐릭터 채팅',
   },
+  reviewSlug: 'sillytavern-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل محمول أصلي لـOllama وLM Studio',
     ko: 'Ollama 및 LM Studio용 네이티브 모바일 클라이언트',
   },
+  reviewSlug: 'chapper-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

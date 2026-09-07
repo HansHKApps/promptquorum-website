@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل نماذج لغوية محلية مجاني لـiOS وAndroid',
     ko: 'iOS 및 Android용 무료 로컬 LLM 클라이언트',
   },
+  reviewSlug: 'pocketpal-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

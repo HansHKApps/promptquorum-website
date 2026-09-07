@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار تطبيقات نماذج لغوية للأغراض العامة',
     ko: '범용 LLM 애플리케이션 프레임워크',
   },
+  reviewSlug: 'langchain-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

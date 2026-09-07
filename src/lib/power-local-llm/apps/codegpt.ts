@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تكاملات IDE لمحررات متعددة',
     ko: '여러 편집기를 위한 IDE 연동',
   },
+  reviewSlug: 'codegpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

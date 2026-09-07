@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'ذكاء اصطناعي محلي Android مفتوح المصدر',
     ko: '오픈소스 Android 로컬 AI',
   },
+  reviewSlug: 'rikkahub-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

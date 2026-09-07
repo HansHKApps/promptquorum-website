@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار تنسيق متعدد العملاء من Microsoft',
     ko: 'Microsoft의 멀티에이전트 오케스트레이션 프레임워크',
   },
+  reviewSlug: 'autogen-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

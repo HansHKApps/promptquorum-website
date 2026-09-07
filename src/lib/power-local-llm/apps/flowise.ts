@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'منشئ سير عمل LangChain بصري',
     ko: '시각적 LangChain 워크플로 빌더',
   },
+  reviewSlug: 'flowise-ai-visual-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

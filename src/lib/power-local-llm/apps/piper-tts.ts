@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تحويل نص إلى كلام محلي خفيف الوزن',
     ko: 'CPU에서 동작하는 경량 다국어 음성 합성',
   },
+  reviewSlug: 'piper-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'المحرك الأساسي C++ وراء معظم الأدوات، يعمل في أي مكان بما فيه Apple Silicon',
     ko: '대부분의 다른 도구 기반에 있는 C++ 엔진, Apple Silicon 포함 어디서나 동작',
   },
+  reviewSlug: 'llama-cpp-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

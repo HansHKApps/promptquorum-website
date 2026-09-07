@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'استنساخ صوت مع دعم متعدد اللغات',
     ko: '다국어 지원을 갖춘 짧은 오디오 샘플 기반 음성 복제',
   },
+  reviewSlug: 'xtts-v2-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

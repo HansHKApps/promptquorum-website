@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تركيب صوت مفتوح المصدر مع خيارات نماذج متعددة',
     ko: '여러 모델 아키텍처를 갖춘 오픈소스 음성 합성',
   },
+  reviewSlug: 'coqui-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

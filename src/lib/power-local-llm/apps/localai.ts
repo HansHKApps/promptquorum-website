@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'بديل مباشر لـAPI OpenAI يدعم backends متعددة',
     ko: '여러 백엔드를 지원하는 OpenAI API 드롭인 대체',
   },
+  reviewSlug: 'localai-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

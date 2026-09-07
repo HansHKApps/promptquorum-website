@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مبرمج مزدوج في الطرفية مع فروقات متعددة الملفات متوافقة أصلياً مع git',
     ko: '멀티파일 git 네이티브 diff를 갖춘 터미널 페어 프로그래머',
   },
+  reviewSlug: 'aider-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

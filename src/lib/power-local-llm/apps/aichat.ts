@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'دردشة ذكاء اصطناعي في الطرفية تدعم backends محلية متعددة',
     ko: '여러 로컬 백엔드를 지원하는 터미널 AI 채팅',
   },
+  reviewSlug: 'aichat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

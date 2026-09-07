@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق Flutter محمول مفتوح المصدر للنماذج اللغوية',
     ko: 'LLM용 오픈소스 Flutter 모바일 앱',
   },
+  reviewSlug: 'maid-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

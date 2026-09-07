@@ -7,7 +7,7 @@ import type { ToolRecord } from './types'
 
 export const app: ToolRecord = {
   slug: 'automatic1111-webui',
-  name: 'AUTOMATIC1111 WebUI',
+  name: 'AUTOMATIC1111',
   categories: ['image-generation'],
   interfaces: ['web'],
   locality: 'local',
@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'الواجهة الأكثر شعبية لـStable Diffusion — لا إصدار منذ 2025 (19+ شهراً)',
     ko: 'Stable Diffusion용 가장 인기 있는 웹 UI — 2025년 이후 릴리스 없음(19개월 이상)',
   },
+  reviewSlug: 'automatic1111-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار بحث وRAG من deepset',
     ko: 'deepset의 검색 및 RAG 프레임워크',
   },
+  reviewSlug: 'haystack-deepset-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

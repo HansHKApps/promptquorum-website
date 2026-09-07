@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تشغيل نماذج لغوية محمولة في ملف واحد من Mozilla',
     ko: 'Mozilla의 단일 파일 포터블 LLM 실행',
   },
+  reviewSlug: 'llamafile-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

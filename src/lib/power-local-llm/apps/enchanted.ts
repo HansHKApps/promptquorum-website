@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل Ollama أدنى حجماً أصلي لـmacOS/iOS',
     ko: '최소한의 macOS/iOS 네이티브 Ollama 클라이언트',
   },
+  reviewSlug: 'enchanted-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'الواجهة المستضافة ذاتياً الأكثر شعبية بطراز ChatGPT، مع RAG مدمج',
     ko: '가장 인기 있는 ChatGPT 스타일 셀프호스팅 인터페이스, RAG 내장',
   },
+  reviewSlug: 'open-webui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

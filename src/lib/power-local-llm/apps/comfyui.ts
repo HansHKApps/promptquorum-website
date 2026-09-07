@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة قائمة على العُقد لسير عمل توليد صور متقدم — نشط، آخر إصدار قبل أسبوع',
     ko: '고급 이미지 생성 워크플로용 노드 기반 UI — 활발히 유지 관리, 릴리스 1주 전',
   },
+  reviewSlug: 'comfyui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

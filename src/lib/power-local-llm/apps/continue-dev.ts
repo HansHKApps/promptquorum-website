@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إكمال تلقائي ودردشة في VS Code وJetBrains مع النماذج المحلية',
     ko: 'VS Code 및 JetBrains에서 로컬 모델로 자동 완성 및 채팅',
   },
+  reviewSlug: 'continue-dev-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

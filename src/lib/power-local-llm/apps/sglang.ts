@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'خدمة استدلال مُهيكل لخطوط أنابيب العملاء الذكيين',
     ko: '에이전트 파이프라인을 위한 구조화 추론 서빙',
   },
+  reviewSlug: 'sglang-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

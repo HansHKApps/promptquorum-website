@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل ذكاء اصطناعي مكتبي أصلي لنظام macOS مع دعم Ollama',
     ko: 'Ollama를 지원하는 네이티브 macOS 데스크톱 AI 클라이언트',
   },
+  reviewSlug: 'boltai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

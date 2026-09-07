@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'استدلال محسَّن من NVIDIA لإعدادات GPU المؤسسية',
     ko: '엔터프라이즈 GPU 구성을 위한 NVIDIA 최적화 추론',
   },
+  reviewSlug: 'tensorrt-llm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

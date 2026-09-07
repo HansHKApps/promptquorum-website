@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'منشئ سير عمل ذكاء اصطناعي مع دعم RAG والعملاء الذكيين',
     ko: 'RAG 및 에이전트 지원을 갖춘 AI 워크플로 빌더',
   },
+  reviewSlug: 'dify-ai-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

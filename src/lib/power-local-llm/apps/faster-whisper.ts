@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نسخ Whisper سريع عبر تكميم CTranslate2',
     ko: 'CTranslate2 양자화를 통한 빠른 Whisper 전사',
   },
+  reviewSlug: 'faster-whisper-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

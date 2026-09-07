@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'runtime للنشر على الأجهزة المحمولة والحافة',
     ko: '모바일 및 엣지 디바이스용 배포 런타임',
   },
+  reviewSlug: 'mlc-llm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

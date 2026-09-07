@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'IDE يركز على الذكاء الاصطناعي مع تكامل النماذج المحلية',
     ko: '로컬 모델 통합을 갖춘 AI 우선 IDE',
   },
+  reviewSlug: 'windsurf-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

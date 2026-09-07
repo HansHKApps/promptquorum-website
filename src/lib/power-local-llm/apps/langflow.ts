@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تنسيق ذكاء اصطناعي بصري مع مكونات RAG',
     ko: 'RAG 컴포넌트를 갖춘 시각적 AI 오케스트레이션',
   },
+  reviewSlug: 'langflow-visual-ai-orchestration-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

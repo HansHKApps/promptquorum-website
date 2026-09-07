@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'استدلال مُكمَّم سريع محسَّن لـGPUs RTX',
     ko: 'RTX GPU에 최적화된 빠른 양자화 추론',
   },
+  reviewSlug: 'exllamav2-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

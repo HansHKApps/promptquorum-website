@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة للمستخدمين المتقدمين مع منظومة إضافات واسعة',
     ko: '방대한 플러그인 생태계를 갖춘 파워유저용 인터페이스',
   },
+  reviewSlug: 'text-generation-webui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

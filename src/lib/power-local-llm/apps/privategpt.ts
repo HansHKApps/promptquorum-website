@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'RAG كامل بدون اتصال موجَّه للمؤسسات',
     ko: '기업 지향의 완전 오프라인 RAG',
   },
+  reviewSlug: 'privategpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

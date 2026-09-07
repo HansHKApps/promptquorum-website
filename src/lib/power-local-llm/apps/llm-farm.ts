@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نماذج لغوية محلية لـiOS مع مستعرض نماذج',
     ko: '모델 탐색기가 있는 iOS용 로컬 LLM',
   },
+  reviewSlug: 'llm-farm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
