@@ -260,6 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — a closer look at the general-purpose framework most often compared against CrewAI for building LLM agents.',
           '[LlamaIndex Review: RAG Framework Compared](/power-local-llm/llamaindex-rag-framework-review) — a retrieval-focused alternative for teams whose primary job is document indexing rather than multi-agent orchestration.',
           '[Haystack (deepset) RAG Framework Review](/power-local-llm/haystack-deepset-rag-framework-review) — a production-RAG framework built by Germany-based deepset, for teams weighing it against CrewAI.',
+          '[Letta Review: Features, Pricing, Alternatives](/power-local-llm/letta-review) — the memory-focused alternative for teams that need a single agent to remember users across sessions rather than coordinating a crew of role-based agents.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where CrewAI fits among agent frameworks.',
           '[Langflow Review: Visual LangChain Builder](/power-local-llm/langflow-visual-ai-orchestration-review) — a visual, drag-and-drop alternative for teams that want less hand-written code than CrewAI requires.',
         ],
