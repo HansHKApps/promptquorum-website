@@ -163,6 +163,7 @@ import { article as a_langchain_review } from './articles/langchain-review'
 import { article as a_autogen_review } from './articles/autogen-review'
 import { article as a_crewai_review } from './articles/crewai-review'
 import { article as a_langgraph_review } from './articles/langgraph-review'
+import { article as a_semantic_kernel_review } from './articles/semantic-kernel-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -180,12 +181,16 @@ import { article as a_msty_go_review_2026 } from './articles/msty-go-review-2026
 import { article as a_msty_review } from './articles/msty-review'
 import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_boltai_review } from './articles/boltai-review'
+import { article as a_jan_review } from './articles/jan-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
+import { article as a_exllamav2_explained } from './articles/exllamav2-explained'
 import { article as a_mlc_llm_explained } from './articles/mlc-llm-explained'
 import { article as a_localai_explained } from './articles/localai-explained'
 import { article as a_tensorrt_llm_explained } from './articles/tensorrt-llm-explained'
+import { article as a_llamafile_explained } from './articles/llamafile-explained'
+import { article as a_sglang_explained } from './articles/sglang-explained'
 import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
@@ -286,6 +291,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'autogen-review':                                    a_autogen_review,
   'crewai-review':                                     a_crewai_review,
   'langgraph-review':                                  a_langgraph_review,
+  'semantic-kernel-review':                            a_semantic_kernel_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
@@ -316,6 +322,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'msty-review':                                       a_msty_review,
   'enchanted-review':                                  a_enchanted_review,
   'boltai-review':                                     a_boltai_review,
+  'jan-review':                                        a_jan_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
@@ -355,9 +362,12 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llama-cpp-explained':                           a_llama_cpp_explained,
   'vllm-explained':                                a_vllm_explained,
   'koboldcpp-review':                              a_koboldcpp_review,
+  'exllamav2-explained':                           a_exllamav2_explained,
   'mlc-llm-explained':                             a_mlc_llm_explained,
   'localai-explained':                             a_localai_explained,
   'tensorrt-llm-explained':                        a_tensorrt_llm_explained,
+  'llamafile-explained':                           a_llamafile_explained,
+  'sglang-explained':                              a_sglang_explained,
   'mlx-lm-explained':                              a_mlx_lm_explained,
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
