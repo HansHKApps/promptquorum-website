@@ -319,6 +319,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'sglang-explained',
   // Llamafile explainer — 2026-09-07
   'llamafile-explained',
+  // MLX-LM explainer — 2026-09-07
+  'mlx-lm-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
