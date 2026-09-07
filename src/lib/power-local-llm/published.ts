@@ -225,6 +225,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'msty-review',
   'enchanted-review',
   'boltai-review',
+  'jan-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
@@ -312,6 +313,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'vllm-explained',
   // LocalAI explainer — 2026-09-06
   'localai-explained',
+  // SGLang explainer — 2026-09-06
+  'sglang-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

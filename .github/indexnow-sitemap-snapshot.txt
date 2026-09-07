@@ -321,6 +321,7 @@ https://www.promptquorum.com/power-local-llm/hanoki-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/hermes-agent-review
 https://www.promptquorum.com/power-local-llm/invokeai-review
+https://www.promptquorum.com/power-local-llm/jan-review
 https://www.promptquorum.com/power-local-llm/jarvis-mac-review
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
 https://www.promptquorum.com/power-local-llm/langchain-review
@@ -330,6 +331,7 @@ https://www.promptquorum.com/power-local-llm/layla-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
+https://www.promptquorum.com/power-local-llm/llava-review
 https://www.promptquorum.com/power-local-llm/llm-farm-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance

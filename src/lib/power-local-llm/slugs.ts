@@ -46,6 +46,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'msty-review':                             'msty-review',
   'enchanted-review':                        'enchanted-review',
   'boltai-review':                           'boltai-review',
+  'jan-review':                              'jan-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
@@ -239,9 +240,12 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'tensorrt-llm-explained':                  'tensorrt-llm-explained',
   'llamafile-explained':                     'llamafile-explained',
   'koboldcpp-review':                        'koboldcpp-review',
+  'exllamav2-explained':                     'exllamav2-explained',
   'mlc-llm-explained':                       'mlc-llm-explained',
   // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
   'localai-explained':                       'localai-explained',
+  // SGLang explainer (Runtimes & Inference Engines) — 2026-09-06
+  'sglang-explained':                        'sglang-explained',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
