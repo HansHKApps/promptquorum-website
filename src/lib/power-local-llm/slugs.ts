@@ -150,6 +150,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'crewai-review':                                'crewai-review',
   // LangGraph review — agent frameworks series, article 5 of 14 — 2026-09-05
   'langgraph-review':                             'langgraph-review',
+  // Semantic Kernel review — agent frameworks series, article 6 of 14 — 2026-09-06
+  'semantic-kernel-review':                       'semantic-kernel-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -240,9 +242,16 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // TensorRT-LLM explainer (Runtimes & Inference Engines) — 2026-09-06
   'tensorrt-llm-explained':                  'tensorrt-llm-explained',
   'koboldcpp-review':                        'koboldcpp-review',
+  'exllamav2-explained':                     'exllamav2-explained',
   'mlc-llm-explained':                       'mlc-llm-explained',
   // LocalAI explainer (Runtimes & Inference Engines) — 2026-09-06
   'localai-explained':                       'localai-explained',
+  // SGLang explainer (Runtimes & Inference Engines) — 2026-09-06
+  'sglang-explained':                        'sglang-explained',
+  // Llamafile explainer (Runtimes & Inference Engines) — 2026-09-07
+  'llamafile-explained':                     'llamafile-explained',
+  // MLX-LM explainer (Runtimes & Inference Engines) — 2026-09-07
+  'mlx-lm-explained':                        'mlx-lm-explained',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05

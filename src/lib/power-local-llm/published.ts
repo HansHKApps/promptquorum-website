@@ -173,6 +173,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'crewai-review',
   // Agent frameworks series — LangGraph review (article 5 of 14) — 2026-09-05
   'langgraph-review',
+  // Agent frameworks series — Semantic Kernel review (article 6 of 14) — 2026-09-06
+  'semantic-kernel-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -314,6 +316,18 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'vllm-explained',
   // LocalAI explainer — 2026-09-06
   'localai-explained',
+  // SGLang explainer — 2026-09-06
+  'sglang-explained',
+  // Llamafile explainer — 2026-09-07
+  'llamafile-explained',
+  // MLX-LM explainer — 2026-09-07
+  'mlx-lm-explained',
+  // MLC LLM explainer — 2026-09-07
+  'mlc-llm-explained',
+  // KoboldCpp review — 2026-09-07
+  'koboldcpp-review',
+  // ExLlamaV2 explainer — 2026-09-07
+  'exllamav2-explained',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
