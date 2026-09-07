@@ -183,6 +183,7 @@ import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
 import { article as a_mlc_llm_explained } from './articles/mlc-llm-explained'
+import { article as a_sglang_explained } from './articles/sglang-explained'
 import { article as a_localai_explained } from './articles/localai-explained'
 import { article as a_tensorrt_llm_explained } from './articles/tensorrt-llm-explained'
 
@@ -353,6 +354,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'vllm-explained':                                a_vllm_explained,
   'koboldcpp-review':                              a_koboldcpp_review,
   'mlc-llm-explained':                             a_mlc_llm_explained,
+  'sglang-explained':                              a_sglang_explained,
   'localai-explained':                             a_localai_explained,
   'tensorrt-llm-explained':                        a_tensorrt_llm_explained,
   // Runtimes & Engines — 2026-09-05
