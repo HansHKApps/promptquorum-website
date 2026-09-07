@@ -194,6 +194,7 @@ import { article as a_tensorrt_llm_explained } from './articles/tensorrt-llm-exp
 import { article as a_llamafile_explained } from './articles/llamafile-explained'
 import { article as a_sglang_explained } from './articles/sglang-explained'
 import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
+import { article as a_superagi_review } from './articles/superagi-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -415,4 +416,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'tgpt-review':                                    a_tgpt_review,
   'blackbox-ai-cli-review':                         a_blackbox_ai_cli_review,
   'privategpt-review':                              a_privategpt_review,
+  // SuperAGI review (agent frameworks series, 8/14) — 2026-09-07
+  'superagi-review':                                a_superagi_review,
 }

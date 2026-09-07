@@ -330,6 +330,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'koboldcpp-review',
   // ExLlamaV2 explainer — 2026-09-07
   'exllamav2-explained',
+  // Agent frameworks series — 2026-09-07 (SuperAGI review, 8/14)
+  'superagi-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

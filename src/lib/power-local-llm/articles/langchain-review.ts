@@ -267,6 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Langflow Review: Visual LangChain Builder](/power-local-llm/langflow-visual-ai-orchestration-review) — a visual, drag-and-drop interface for building LangChain and LangGraph flows without hand-writing every chain.',
           '[LangGraph Review: Features, Pricing, Alternatives](/power-local-llm/langgraph-review) — a dedicated look at the graph-based agent runtime create_agent runs on, for teams that need explicit state, cycles, or human-in-the-loop control.',
           '[Letta Review: Features, Pricing, Alternatives](/power-local-llm/letta-review) — a framework specialized around long-term agent memory, for teams whose main need is a single agent that remembers users across sessions rather than chaining or orchestrating steps.',
+          '[SuperAGI Review: Features, Pricing, Is It Maintained?](/power-local-llm/superagi-review) — a GUI-based autonomous agent framework from the same 2023 wave, for teams weighing a code-first, actively maintained alternative against it.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where LangChain fits among agent frameworks.',
           '[Dify AI Workflow Builder Review](/power-local-llm/dify-ai-workflow-builder-review) — a backend-and-visual alternative for teams that want less code than LangChain requires.',
         ],
