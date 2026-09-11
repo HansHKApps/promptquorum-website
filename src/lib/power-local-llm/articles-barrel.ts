@@ -51,6 +51,14 @@ import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
 import { article as a_styletts_2_review } from './articles/styletts-2-review'
+import { article as a_piper_vs_kokoro_tts } from './articles/piper-vs-kokoro-tts'
+import { article as a_piper_vs_chatterbox_tts } from './articles/piper-vs-chatterbox-tts'
+import { article as a_kokoro_vs_elevenlabs } from './articles/kokoro-vs-elevenlabs'
+import { article as a_chatterbox_vs_elevenlabs } from './articles/chatterbox-vs-elevenlabs'
+import { article as a_best_tts_for_ollama } from './articles/best-tts-for-ollama'
+import { article as a_best_local_tts_raspberry_pi } from './articles/best-local-tts-raspberry-pi'
+import { article as a_best_local_tts_mac } from './articles/best-local-tts-mac'
+import { article as a_best_local_tts_nvidia_gpu } from './articles/best-local-tts-nvidia-gpu'
 import { article as a_llava_review } from './articles/llava-review'
 import { article as a_ollama_vision_models_review } from './articles/ollama-vision-models-review'
 import { article as a_idefics_review } from './articles/idefics-review'
@@ -367,6 +375,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'xtts-v2-review':                                 a_xtts_v2_review,
   'bark-tts-review':                                a_bark_tts_review,
   'styletts-2-review':                             a_styletts_2_review,
+  'piper-vs-kokoro-tts':                           a_piper_vs_kokoro_tts,
+  'piper-vs-chatterbox-tts':                       a_piper_vs_chatterbox_tts,
+  'kokoro-vs-elevenlabs':                          a_kokoro_vs_elevenlabs,
+  'chatterbox-vs-elevenlabs':                      a_chatterbox_vs_elevenlabs,
+  'best-tts-for-ollama':                           a_best_tts_for_ollama,
+  'best-local-tts-raspberry-pi':                   a_best_local_tts_raspberry_pi,
+  'best-local-tts-mac':                            a_best_local_tts_mac,
+  'best-local-tts-nvidia-gpu':                     a_best_local_tts_nvidia_gpu,
   'llava-review':                                  a_llava_review,
   'ollama-vision-models-review':                   a_ollama_vision_models_review,
   'idefics-review':                                a_idefics_review,
