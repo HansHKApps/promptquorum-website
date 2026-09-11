@@ -243,6 +243,7 @@ https://www.promptquorum.com/local-llms/what-are-local-llms
 https://www.promptquorum.com/local-llms/why-enterprises-use-local-llms
 https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
 https://www.promptquorum.com/power-local-llm
+https://www.promptquorum.com/power-local-llm/agent-zero-review
 https://www.promptquorum.com/power-local-llm/agentic-ai-security-identity-access
 https://www.promptquorum.com/power-local-llm/ai-generated-content-ip-risk
 https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
@@ -317,6 +318,7 @@ https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2
 https://www.promptquorum.com/power-local-llm/dify-ai-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies
 https://www.promptquorum.com/power-local-llm/draw-things-review
+https://www.promptquorum.com/power-local-llm/dspy-review
 https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux
 https://www.promptquorum.com/power-local-llm/edge-ai-hardware-for-local-llms
 https://www.promptquorum.com/power-local-llm/ekorbia-review
@@ -346,6 +348,7 @@ https://www.promptquorum.com/power-local-llm/langchain-review
 https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
 https://www.promptquorum.com/power-local-llm/langgraph-review
 https://www.promptquorum.com/power-local-llm/layla-review
+https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
@@ -428,6 +431,7 @@ https://www.promptquorum.com/power-local-llm/stableswarmui-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/superagi-review
 https://www.promptquorum.com/power-local-llm/tabby-review
+https://www.promptquorum.com/power-local-llm/taskweaver-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/tgpt-review
 https://www.promptquorum.com/power-local-llm/twinny-review
