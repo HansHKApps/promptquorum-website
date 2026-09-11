@@ -226,6 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of the two most popular local model runtimes.',
           '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- How the OpenAI-compatible endpoint that most of these apps use actually works.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, license, and link.',
+          'All five apps in this comparison now have dedicated solo reviews: [LobeChat](/local-llms/lobechat-review), [Big-AGI](/local-llms/big-agi-review), [NextChat](/local-llms/nextchat-review), [Page Assist](/local-llms/page-assist-review), and [Chatbox](/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -477,6 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs. LM Studio](/local-llms/ollama-vs-lm-studio) -- Vergleich der zwei beliebtesten lokalen Modell-Laufzeitumgebungen.',
           '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api) -- Wie der OpenAI-kompatible Endpunkt funktioniert, den die meisten dieser Apps nutzen.',
           '[Lokales-LLM-Software-Verzeichnis](/power-local-llm/local-llm-software-directory) -- 88 Tools aus Laufzeitumgebungen, Desktop-Apps, RAG, Coding und Agenten, jeweils mit Beschreibung, Lizenz und Link.',
+          'Alle fünf Apps in diesem Vergleich haben inzwischen eigene Einzeltests: [LobeChat](/de/local-llms/lobechat-review), [Big-AGI](/de/local-llms/big-agi-review), [NextChat](/de/local-llms/nextchat-review), [Page Assist](/de/local-llms/page-assist-review) und [Chatbox](/de/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -725,6 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparatif des deux moteurs de modèle local les plus populaires.',
           '[API compatible OpenAI pour LLM local](/local-llms/local-llm-openai-compatible-api) -- Comment fonctionne le point de terminaison compatible OpenAI utilisé par la plupart de ces applications.',
           '[Répertoire de logiciels LLM local](/power-local-llm/local-llm-software-directory) -- 88 outils couvrant moteurs, applications desktop, RAG, code et agents, chacun avec description, licence et lien.',
+          'Les cinq applications de ce comparatif ont désormais chacune leur avis dédié : [LobeChat](/fr/local-llms/lobechat-review), [Big-AGI](/fr/local-llms/big-agi-review), [NextChat](/fr/local-llms/nextchat-review), [Page Assist](/fr/local-llms/page-assist-review) et [Chatbox](/fr/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -973,6 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 最も人気のある2つのローカルモデル実行環境の比較。',
           '[ローカルLLM OpenAI互換API](/local-llms/local-llm-openai-compatible-api) -- これらのアプリの多くが使用するOpenAI互換エンドポイントの仕組み。',
           '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) -- 実行環境、デスクトップアプリ、RAG、コーディング、エージェントにまたがる88のツールを、説明・ライセンス・リンク付きで紹介。',
+          'この比較記事に登場する5つのアプリすべてに、単独レビューが用意されました：[LobeChat](/ja/local-llms/lobechat-review)、[Big-AGI](/ja/local-llms/big-agi-review)、[NextChat](/ja/local-llms/nextchat-review)、[Page Assist](/ja/local-llms/page-assist-review)、[Chatbox](/ja/local-llms/chatbox-review)。',
         ],
       },
       sources: {
@@ -1221,6 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 对比 LM Studio](/local-llms/ollama-vs-lm-studio) -- 两款最受欢迎的本地模型运行环境对比。',
           '[本地 LLM OpenAI 兼容 API](/local-llms/local-llm-openai-compatible-api) -- 这些应用中大多数所使用的 OpenAI 兼容端点的工作原理。',
           '[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) -- 涵盖运行环境、桌面应用、RAG、编码和智能体的 88 款工具,均附有说明、许可证和链接。',
+          '本文比较的五款应用现已全部拥有独立评测：[LobeChat](/zh/local-llms/lobechat-review)、[Big-AGI](/zh/local-llms/big-agi-review)、[NextChat](/zh/local-llms/nextchat-review)、[Page Assist](/zh/local-llms/page-assist-review)、[Chatbox](/zh/local-llms/chatbox-review)。',
         ],
       },
       sources: {
@@ -1469,6 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparativa de los dos motores de modelo local más populares.',
           '[API compatible con OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api) -- Cómo funciona el endpoint compatible con OpenAI que usan la mayoría de estas apps.',
           '[Directorio de software de LLM local](/power-local-llm/local-llm-software-directory) -- 88 herramientas entre motores, apps de escritorio, RAG, código y agentes, cada una con descripción, licencia y enlace.',
+          'Las cinco apps de esta comparativa ya tienen su propio análisis dedicado: [LobeChat](/es/local-llms/lobechat-review), [Big-AGI](/es/local-llms/big-agi-review), [NextChat](/es/local-llms/nextchat-review), [Page Assist](/es/local-llms/page-assist-review) y [Chatbox](/es/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -1717,6 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparativo dos dois ambientes de execução de modelo local mais populares.',
           '[API compatível com OpenAI para LLM local](/local-llms/local-llm-openai-compatible-api) -- Como funciona o endpoint compatível com OpenAI usado pela maioria desses apps.',
           '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) -- 88 ferramentas entre ambientes de execução, apps de desktop, RAG, código e agentes, cada uma com descrição, licença e link.',
+          'As cinco apps desta comparação agora têm análises individuais dedicadas: [LobeChat](/pt/local-llms/lobechat-review), [Big-AGI](/pt/local-llms/big-agi-review), [NextChat](/pt/local-llms/nextchat-review), [Page Assist](/pt/local-llms/page-assist-review) e [Chatbox](/pt/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -1965,6 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama مقابل LM Studio](/local-llms/ollama-vs-lm-studio) -- مقارنة بين أشهر بيئتي تشغيل نماذج محلية.',
           '[واجهة برمجة LLM المحلية المتوافقة مع OpenAI](/local-llms/local-llm-openai-compatible-api) -- كيف تعمل نقطة النهاية المتوافقة مع OpenAI التي تستخدمها معظم هذه التطبيقات.',
           '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) -- 88 أداة عبر بيئات التشغيل وتطبيقات سطح المكتب وRAG والبرمجة والوكلاء، كل منها مع وصف وترخيص ورابط.',
+          'أصبحت الآن جميع التطبيقات الخمسة في هذه المقارنة تمتلك مراجعات منفردة مخصصة: [LobeChat](/ar/local-llms/lobechat-review) و[Big-AGI](/ar/local-llms/big-agi-review) و[NextChat](/ar/local-llms/nextchat-review) و[Page Assist](/ar/local-llms/page-assist-review) و[Chatbox](/ar/local-llms/chatbox-review).',
         ],
       },
       sources: {
@@ -2213,6 +2221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 가장 인기 있는 두 로컬 모델 실행 환경 비교.',
           '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 이 앱들 대부분이 사용하는 OpenAI 호환 엔드포인트의 작동 방식.',
           '[로컬 LLM 소프트웨어 디렉토리](/power-local-llm/local-llm-software-directory) -- 실행 환경, 데스크톱 앱, RAG, 코딩, 에이전트에 걸친 88개 도구를 설명, 라이선스, 링크와 함께 소개.',
+          '이 비교 글에 등장하는 다섯 앱 모두 이제 단독 리뷰를 갖추고 있습니다: [LobeChat](/ko/local-llms/lobechat-review), [Big-AGI](/ko/local-llms/big-agi-review), [NextChat](/ko/local-llms/nextchat-review), [Page Assist](/ko/local-llms/page-assist-review), [Chatbox](/ko/local-llms/chatbox-review).',
         ],
       },
       sources: {
