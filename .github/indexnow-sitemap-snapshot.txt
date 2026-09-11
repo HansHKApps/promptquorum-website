@@ -199,12 +199,14 @@ https://www.promptquorum.com/local-llms/mram-in-memory-computing-local-ai-2026
 https://www.promptquorum.com/local-llms/multi-gpu-local-llms
 https://www.promptquorum.com/local-llms/multilingual-local-llms
 https://www.promptquorum.com/local-llms/multimodal-local-llms
+https://www.promptquorum.com/local-llms/nextchat-review
 https://www.promptquorum.com/local-llms/ollama-command-guide
 https://www.promptquorum.com/local-llms/ollama-on-mac-apple-silicon-setup-2026
 https://www.promptquorum.com/local-llms/ollama-vs-lm-studio
 https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm
 https://www.promptquorum.com/local-llms/open-webui-review
 https://www.promptquorum.com/local-llms/open-webui-vs-sillytavern
+https://www.promptquorum.com/local-llms/page-assist-review
 https://www.promptquorum.com/local-llms/private-local-ai-for-business
 https://www.promptquorum.com/local-llms/private-local-llm-sensitive-data
 https://www.promptquorum.com/local-llms/prompt-engineering-for-local-models
