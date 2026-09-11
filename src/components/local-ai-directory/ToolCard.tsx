@@ -178,7 +178,10 @@ export function ToolCard({
 
         {app.founder && (
           <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-l-2 border-primary/20 pl-2">
-            &ldquo;{app.founder.why}&rdquo; <span className="not-italic font-medium">— From the Maker</span>
+            {/* Prefer his own verbatim words when we have them; `why` is a
+                PromptQuorum paraphrase and shouldn't be shown in quotation
+                marks as if it were a direct quote. */}
+            &ldquo;{app.founder.fullQuote ? app.founder.fullQuote[0] : app.founder.why}&rdquo; <span className="not-italic font-medium">— From the Maker</span>
           </p>
         )}
 

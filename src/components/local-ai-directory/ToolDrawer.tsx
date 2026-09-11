@@ -13,7 +13,7 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
-import { CloseIcon, StarIcon, CopyIcon, CheckIcon, ChevronRightIcon } from './icons'
+import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
@@ -37,27 +37,18 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   )
 }
 
+// Renders the founder/maker's own words verbatim — never a PromptQuorum
+// paraphrase. Always visible (not collapsed): the point of "From the Maker"
+// is that it IS his words, not a summary of them. Height-capped with an
+// internal scrollbar so a long quote doesn't force the drawer itself to
+// grow — the drawer's own footprint stays fixed.
 function FounderFullQuote({ paragraphs, source }: { paragraphs: string[]; source?: string }) {
-  const [open, setOpen] = useState(false)
   return (
-    <div className="pt-1">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
-        aria-expanded={open}
-      >
-        <ChevronRightIcon className={`h-3 w-3 transition-transform ${open ? 'rotate-90' : ''}`} />
-        {open ? 'Hide full quote' : 'Read the full quote'}
-      </button>
-      {open && (
-        <div className="mt-2 max-h-56 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
-          {paragraphs.map((p, i) => (
-            <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
-          ))}
-          {source && <p className="text-xs text-text-secondary/80 not-italic">— {source}</p>}
-        </div>
-      )}
+    <div className="max-h-64 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
+      {paragraphs.map((p, i) => (
+        <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
+      ))}
+      {source && <p className="text-xs text-text-secondary/80 not-italic pt-1">— {source}</p>}
     </div>
   )
 }
@@ -300,14 +291,15 @@ export function ToolDrawer({
               {/* From the Maker */}
               <section className="mb-5">
                 <h3 className="text-sm font-bold text-text-primary mb-2">From the Maker</h3>
-                {app.founder ? (
+                {app.founder?.fullQuote ? (
+                  // A verbatim quote exists — show his own words only, not a
+                  // PromptQuorum paraphrase mixed in underneath.
+                  <FounderFullQuote paragraphs={app.founder.fullQuote} source={app.founder.who[lang] ?? app.founder.who.en} />
+                ) : app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.founder.why}</p>
                     <p><span className="font-semibold text-text-primary">Best for:</span> {app.founder.best}</p>
                     <p><span className="font-semibold text-text-primary">Limits:</span> {app.founder.limits}</p>
-                    {app.founder.fullQuote && (
-                      <FounderFullQuote paragraphs={app.founder.fullQuote} source={app.founder.who[lang] ?? app.founder.who.en} />
-                    )}
                   </div>
                 ) : (
                   <FounderClaimBox key={app.slug} appName={app.name} />
