@@ -387,6 +387,7 @@ https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/pearai-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
 https://www.promptquorum.com/power-local-llm/piper-tts-review
+https://www.promptquorum.com/power-local-llm/pocket-ai-review
 https://www.promptquorum.com/power-local-llm/pocketpal-ai-review
 https://www.promptquorum.com/power-local-llm/private-llm-review
 https://www.promptquorum.com/power-local-llm/privategpt-review
