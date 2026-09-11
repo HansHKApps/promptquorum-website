@@ -37,6 +37,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'open-webui-review':                     'open-webui-review',
   'lobechat-review':                        'lobechat-review',
   'big-agi-review':                         'big-agi-review',
+  'nextchat-review':                        'nextchat-review',
   'text-generation-webui-review':           'text-generation-webui-review',
   'sillytavern-review':                     'sillytavern-review',
   'lobechat-bigagi-nextchat-pageassist-chatbox-compared': 'lobechat-bigagi-nextchat-pageassist-chatbox-compared',
