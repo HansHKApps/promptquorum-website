@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: 'Prompting Strategy by Model',
         content: [
-          '**Qwen3 7B/14B/32B:** Best native Chinese support. Use Chinese for conversational prompts. Use English system prompts for reasoning-heavy tasks.',
+          '**Qwen3 8B/14B/32B:** Best native Chinese support. Use Chinese for conversational prompts. Use English system prompts for reasoning-heavy tasks.',
           '**DeepSeek-R1-Distill (all sizes):** Strong with both languages. English system prompt + Chinese user query is the optimal setup.',
           '**Llama 3 8B/70B:** Avoid Chinese prompts. The tokeniser fragments Chinese into byte tokens — replies are often awkward or hallucinated Chinese. Use English and request Chinese output explicitly.',
           '**Mistral Small:** Weakest Chinese support. Stick to English prompts.',
@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: '各模型提示策略',
         content: [
-          '**Qwen3 7B/14B/32B：** 最佳原生中文支持。推理密集型任务使用英文系统提示。',
+          '**Qwen3 8B/14B/32B：** 最佳原生中文支持。推理密集型任务使用英文系统提示。',
           '**DeepSeek-R1-Distill（所有规格）：** 两种语言均表现强劲。英文系统提示+中文用户查询是最优设置。',
           '**Llama 3 8B/70B：** 避免中文提示。分词器将汉字切割为字节token——回复往往中文生硬或出现幻觉。使用英文并明确要求中文输出。',
           '**Mistral Small：** 中文支持最弱。坚持使用英文提示。',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: 'Estratégia de prompting por modelo',
         content: [
-          '**Qwen3 7B/14B/32B:** Melhor suporte nativo em chinês. Use system prompts em inglês para tarefas de raciocínio intensivo.',
+          '**Qwen3 8B/14B/32B:** Melhor suporte nativo em chinês. Use system prompts em inglês para tarefas de raciocínio intensivo.',
           '**DeepSeek-R1-Distill (todos os tamanhos):** Forte em ambos os idiomas. System prompt em inglês + consulta do usuário em chinês é a configuração ideal.',
           '**Llama 3 8B/70B:** Evite prompts em chinês. O tokenizador fragmenta os caracteres chineses em bytes.',
           '**Mistral Small:** Suporte em chinês mais fraco. Mantenha prompts em inglês.',
@@ -1063,7 +1063,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: 'Estrategia de prompting por modelo',
         content: [
-          '**Qwen3 7B/14B/32B:** Mejor soporte nativo en chino. Usa system prompts en inglés para tareas de razonamiento intensivo.',
+          '**Qwen3 8B/14B/32B:** Mejor soporte nativo en chino. Usa system prompts en inglés para tareas de razonamiento intensivo.',
           '**DeepSeek-R1-Distill (todos los tamaños):** Fuerte en ambos idiomas. System prompt en inglés + consulta de usuario en chino es la configuración óptima.',
           '**Llama 3 8B/70B:** Evita prompts en chino. El tokenizador fragmenta los caracteres chinos en bytes.',
           '**Mistral Small:** Soporte en chino más débil. Mantente con prompts en inglés.',
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: 'استراتيجية الكتابة حسب النموذج',
         content: [
-          '**Qwen3 7B/14B/32B:** أفضل دعم صيني أصلي. استخدم نصوص نظام إنجليزية للمهام كثيفة الاستدلال.',
+          '**Qwen3 8B/14B/32B:** أفضل دعم صيني أصلي. استخدم نصوص نظام إنجليزية للمهام كثيفة الاستدلال.',
           '**DeepSeek-R1-Distill (جميع الأحجام):** قوي في كلتا اللغتين. نص النظام الإنجليزي + استعلام المستخدم بالصينية هو الإعداد الأمثل.',
           '**Llama 3 8B/70B:** تجنّب الأوامر الصينية. المحلّل يُجزّئ الأحرف الصينية إلى بايتات.',
           '**Mistral Small:** أضعف دعم للصينية. التزم بالأوامر الإنجليزية.',
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'model-guide',
         title: '모델별 프롬프팅 전략',
         content: [
-          '**Qwen3 7B/14B/32B:** 최고의 중국어 네이티브 지원. 추론 집약적 작업에는 영어 시스템 프롬프트를 사용하십시오.',
+          '**Qwen3 8B/14B/32B:** 최고의 중국어 네이티브 지원. 추론 집약적 작업에는 영어 시스템 프롬프트를 사용하십시오.',
           '**DeepSeek-R1-Distill (모든 크기):** 두 언어 모두 강력합니다. 영어 시스템 프롬프트 + 중국어 사용자 쿼리가 최적 설정입니다.',
           '**Llama 3 8B/70B:** 중국어 프롬프트를 피하십시오. 토크나이저가 한자를 바이트 단위로 분절합니다.',
           '**Mistral Small:** 중국어 지원이 더 약합니다. 영어 프롬프트를 사용하십시오.',

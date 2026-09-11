@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           callouts: [
             { type: 'proTip', text: 'Run `ollama ps` to confirm your model is loaded on GPU. If GPU utilization shows 0% in `nvidia-smi` while generating, drivers are not correctly routing to CUDA. Reinstall NVIDIA CUDA Toolkit and restart Ollama.' },
-            { type: 'keyPoint', text: 'RTX 4070 Ti speed reference: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 7B Q8_0 = 90-95 tok/sec. These assume --n-gpu-layers 99 and --ctx-size 2048.' },
+            { type: 'keyPoint', text: 'RTX 4070 Ti speed reference: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 8B Q8_0 = 90-95 tok/sec. These assume --n-gpu-layers 99 and --ctx-size 2048.' },
             { type: 'warning', text: 'Increasing --ctx-size beyond 8192 on a 12 GB GPU will cause model layer offloading back to CPU if the KV cache exhausts remaining VRAM. If speed drops suddenly on long conversations, reduce context size or use --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-en.svg',
@@ -1227,7 +1227,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: 'Ejecuta `ollama ps` para confirmar que tu modelo está cargado en la GPU. Si la utilización de GPU muestra 0% en `nvidia-smi` mientras genera, los controladores no están enrutando correctamente a CUDA. Reinstala el NVIDIA CUDA Toolkit y reinicia Ollama.' },
-            { type: 'keyPoint', text: 'Referencia de velocidad de la RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/seg. Llama 3.3 13B Q4_K_M = 60-70 tok/seg. Qwen3 7B Q8_0 = 90-95 tok/seg. Esto asume --n-gpu-layers 99 y --ctx-size 2048.' },
+            { type: 'keyPoint', text: 'Referencia de velocidad de la RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/seg. Llama 3.3 13B Q4_K_M = 60-70 tok/seg. Qwen3 8B Q8_0 = 90-95 tok/seg. Esto asume --n-gpu-layers 99 y --ctx-size 2048.' },
             { type: 'warning', text: 'Aumentar --ctx-size más allá de 8192 en una GPU de 12 GB provocará que las capas del modelo se descarguen de vuelta a la CPU si la caché KV agota la VRAM restante. Si la velocidad cae de repente en conversaciones largas, reduce el tamaño de contexto o usa --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-es.svg',
@@ -2027,7 +2027,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: 'شغّل `ollama ps` للتأكد من تحميل نموذجك على GPU. إذا أظهر استخدام GPU نسبة 0% في `nvidia-smi` أثناء التوليد، فإن التعريفات لا توجّه بشكل صحيح إلى CUDA. أعد تثبيت NVIDIA CUDA Toolkit وأعد تشغيل Ollama.' },
-            { type: 'keyPoint', text: 'مرجع سرعة RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 7B Q8_0 = 90-95 tok/sec. تفترض هذه --n-gpu-layers 99 و--ctx-size 2048.' },
+            { type: 'keyPoint', text: 'مرجع سرعة RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 8B Q8_0 = 90-95 tok/sec. تفترض هذه --n-gpu-layers 99 و--ctx-size 2048.' },
             { type: 'warning', text: 'زيادة --ctx-size إلى ما يتجاوز 8192 على GPU بسعة 12 GB سيسبب إعادة إزاحة طبقة النموذج إلى CPU إذا استنفد KV cache بقية VRAM. إذا انخفضت السرعة فجأة في المحادثات الطويلة، قلّل حجم السياق أو استخدم --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-ar.svg',
@@ -2845,7 +2845,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: 'Rode `ollama ps` para confirmar que seu modelo está carregado na GPU. Se a utilização da GPU mostrar 0% no `nvidia-smi` durante a geração, os drivers não estão roteando corretamente para o CUDA. Reinstale o NVIDIA CUDA Toolkit e reinicie o Ollama.' },
-            { type: 'keyPoint', text: 'Referência de velocidade da RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 7B Q8_0 = 90-95 tok/sec. Estes assumem --n-gpu-layers 99 e --ctx-size 2048.' },
+            { type: 'keyPoint', text: 'Referência de velocidade da RTX 4070 Ti: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 8B Q8_0 = 90-95 tok/sec. Estes assumem --n-gpu-layers 99 e --ctx-size 2048.' },
             { type: 'warning', text: 'Aumentar o --ctx-size além de 8192 em uma GPU de 12 GB fará com que as camadas do modelo voltem a ser descarregadas para a CPU se o cache KV esgotar a VRAM restante. Se a velocidade cair de repente em conversas longas, reduza o tamanho do contexto ou use --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-pt.svg',
@@ -3654,7 +3654,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: 'Fuehre `ollama ps` aus, um zu bestaetigen, dass dein Modell auf der GPU geladen ist. Wenn die GPU-Auslastung in `nvidia-smi` waehrend der Generierung 0 % zeigt, leiten die Treiber nicht korrekt zu CUDA. Installiere das NVIDIA CUDA Toolkit neu und starte Ollama neu.' },
-            { type: 'keyPoint', text: 'RTX-4070-Ti-Geschwindigkeitsreferenz: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 7B Q8_0 = 90-95 tok/sec. Diese setzen --n-gpu-layers 99 und --ctx-size 2048 voraus.' },
+            { type: 'keyPoint', text: 'RTX-4070-Ti-Geschwindigkeitsreferenz: Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 8B Q8_0 = 90-95 tok/sec. Diese setzen --n-gpu-layers 99 und --ctx-size 2048 voraus.' },
             { type: 'warning', text: '--ctx-size ueber 8192 auf einer 12-GB-GPU zu erhoehen, verursacht eine Rueckverlagerung der Modell-Layer auf die CPU, wenn der KV-Cache den verbleibenden VRAM erschoepft. Wenn die Geschwindigkeit bei langen Gespraechen ploetzlich faellt, reduziere die Kontextgroesse oder nutze --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-de.svg',
@@ -4472,7 +4472,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: 'Lancez `ollama ps` pour confirmer que votre modele est charge sur le GPU. Si l\'utilisation du GPU affiche 0 % dans `nvidia-smi` pendant la generation, les pilotes ne routent pas correctement vers CUDA. Reinstallez le NVIDIA CUDA Toolkit et redemarrez Ollama.' },
-            { type: 'keyPoint', text: 'Reference vitesse RTX 4070 Ti : Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 7B Q8_0 = 90-95 tok/sec. Cela suppose --n-gpu-layers 99 et --ctx-size 2048.' },
+            { type: 'keyPoint', text: 'Reference vitesse RTX 4070 Ti : Llama 3.1 8B Q4_K_M = 85-95 tok/sec. Llama 3.3 13B Q4_K_M = 60-70 tok/sec. Qwen3 8B Q8_0 = 90-95 tok/sec. Cela suppose --n-gpu-layers 99 et --ctx-size 2048.' },
             { type: 'warning', text: 'Augmenter --ctx-size au-dela de 8192 sur un GPU de 12 Go provoquera un redeport des couches du modele vers le CPU si le cache KV epuise la VRAM restante. Si la vitesse chute soudainement sur de longues conversations, reduisez la taille du contexte ou utilisez --flash-attn.' },
           ],
           image: '/images/llamacpp-speed-flags-fr.svg',
@@ -5282,7 +5282,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: '`ollama ps` を実行して、モデルがGPUにロードされていることを確認しましょう。生成中に `nvidia-smi` でGPU使用率が0%と表示される場合、ドライバーがCUDAに正しくルーティングしていません。NVIDIA CUDA Toolkitを再インストールし、Ollamaを再起動してください。' },
-            { type: 'keyPoint', text: 'RTX 4070 Ti速度リファレンス：Llama 3.1 8B Q4_K_M = 85〜95 tok/sec。Llama 3.3 13B Q4_K_M = 60〜70 tok/sec。Qwen3 7B Q8_0 = 90〜95 tok/sec。これらは --n-gpu-layers 99 と --ctx-size 2048 を前提とします。' },
+            { type: 'keyPoint', text: 'RTX 4070 Ti速度リファレンス：Llama 3.1 8B Q4_K_M = 85〜95 tok/sec。Llama 3.3 13B Q4_K_M = 60〜70 tok/sec。Qwen3 8B Q8_0 = 90〜95 tok/sec。これらは --n-gpu-layers 99 と --ctx-size 2048 を前提とします。' },
             { type: 'warning', text: '12 GB GPUで --ctx-size を8192を超えて増やすと、KVキャッシュが残りのVRAMを使い果たした場合にモデルレイヤーがCPUにオフロードされて戻ります。長い会話で速度が突然低下した場合は、コンテキストサイズを減らすか --flash-attn を使用してください。' },
           ],
           image: '/images/llamacpp-speed-flags-ja.svg',
@@ -6091,7 +6091,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: '运行 `ollama ps` 确认你的模型加载在 GPU 上。如果生成时 `nvidia-smi` 中 GPU 利用率显示 0%，说明驱动未正确路由到 CUDA。重新安装 NVIDIA CUDA Toolkit 并重启 Ollama。' },
-            { type: 'keyPoint', text: 'RTX 4070 Ti 速度参考：Llama 3.1 8B Q4_K_M = 85-95 tok/sec。Llama 3.3 13B Q4_K_M = 60-70 tok/sec。Qwen3 7B Q8_0 = 90-95 tok/sec。这些假设 --n-gpu-layers 99 和 --ctx-size 2048。' },
+            { type: 'keyPoint', text: 'RTX 4070 Ti 速度参考：Llama 3.1 8B Q4_K_M = 85-95 tok/sec。Llama 3.3 13B Q4_K_M = 60-70 tok/sec。Qwen3 8B Q8_0 = 90-95 tok/sec。这些假设 --n-gpu-layers 99 和 --ctx-size 2048。' },
             { type: 'warning', text: '在 12 GB GPU 上将 --ctx-size 增加到 8192 以上，如果 KV 缓存耗尽剩余显存，会导致模型层卸载回 CPU。如果长对话时速度突然下降，请减小上下文大小或使用 --flash-attn。' },
           ],
           image: '/images/llamacpp-speed-flags-zh.svg',
@@ -6880,7 +6880,7 @@ schema: {
           ],
           callouts: [
             { type: 'proTip', text: '`ollama ps`를 실행하여 모델이 GPU에 로드되었는지 확인하십시오. 생성 중 `nvidia-smi`에서 GPU 사용률이 0%로 표시된다면 드라이버가 CUDA로 올바르게 라우팅되지 않는 것입니다. NVIDIA CUDA Toolkit를 재설치하고 Ollama를 재시작하십시오.' },
-            { type: 'keyPoint', text: 'RTX 4070 Ti 속도 참조: Llama 3.1 8B Q4_K_M = 85~95 tok/sec. Llama 3.3 13B Q4_K_M = 60~70 tok/sec. Qwen3 7B Q8_0 = 90~95 tok/sec. 이 수치는 --n-gpu-layers 99 및 --ctx-size 2048 기준입니다.' },
+            { type: 'keyPoint', text: 'RTX 4070 Ti 속도 참조: Llama 3.1 8B Q4_K_M = 85~95 tok/sec. Llama 3.3 13B Q4_K_M = 60~70 tok/sec. Qwen3 8B Q8_0 = 90~95 tok/sec. 이 수치는 --n-gpu-layers 99 및 --ctx-size 2048 기준입니다.' },
             { type: 'warning', text: '12GB GPU에서 --ctx-size를 8192 이상으로 늘리면 KV 캐시가 나머지 VRAM을 소진할 경우 모델 레이어가 다시 CPU로 오프로드됩니다. 긴 대화에서 속도가 갑자기 떨어진다면 컨텍스트 크기를 줄이거나 --flash-attn을 사용하십시오.' },
           ],
           image: '/images/llamacpp-speed-flags-en.svg',

@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Qwen本地部署指南2026](/zh/local-llms/qwen-local-deployment-guide-2026) — 初学者友好的Qwen3 7B Ollama一键部署教程。',
+          '[Qwen本地部署指南2026](/zh/local-llms/qwen-local-deployment-guide-2026) — 初学者友好的Qwen3 8B Ollama一键部署教程。',
           '[微信本地LLM集成2026](/zh/power-local-llm/wechat-local-llm-integration-2026) — Qwen3-Coder驱动微信机器人：实现个人AI编程助手。',
         ],
       },

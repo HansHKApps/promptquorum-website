@@ -8,11 +8,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'What Are the Best Local LLM Apps for Android in Japan?',
     dateModified: '2026-06-20',
     seoTitle: 'Best Android LLMs Japan 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat runs Rinna 3.6B on 4 GB RAM. PocketPal AI handles ELYZA-7B on 6 GB. Termux+Ollama adds Qwen3 7B for 8 GB+ devices. All run offline in Japan.',
+    metaDescription: 'MLC Chat runs Rinna 3.6B on 4 GB RAM. PocketPal AI handles ELYZA-7B on 6 GB. Termux+Ollama adds Qwen3 8B for 8 GB+ devices. All run offline in Japan.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'Android users in Japan running local LLMs',
@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: easiest setup, preoptimized models including Rinna 3.6B for Japanese',
           'PocketPal AI: any GGUF model including ELYZA-7B, full Japanese support',
-          'Termux + Ollama: full Ollama library including Qwen3 7B, requires 8 GB RAM',
+          'Termux + Ollama: full Ollama library including Qwen3 8B, requires 8 GB RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: einfachster Einstieg, voroptimierte Modelle inkl. Rinna 3.6B',
           'PocketPal AI: beliebige GGUF-Modelle inkl. ELYZA-7B, volle Japanisch-Unterstützung',
-          'Termux + Ollama: volle Ollama-Bibliothek inkl. Qwen3 7B, benötigt 8 GB RAM',
+          'Termux + Ollama: volle Ollama-Bibliothek inkl. Qwen3 8B, benötigt 8 GB RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat : configuration la plus simple, modèles préoptimisés dont Rinna 3.6B',
           'PocketPal AI : tout modèle GGUF dont ELYZA-7B, support japonais complet',
-          'Termux + Ollama : bibliothèque Ollama complète dont Qwen3 7B, nécessite 8 Go de RAM',
+          'Termux + Ollama : bibliothèque Ollama complète dont Qwen3 8B, nécessite 8 Go de RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat：最も簡単なセットアップ、Rinna 3.6Bを含む最適化済みモデル',
           'PocketPal AI：ELYZA-7Bを含む任意のGGUFモデル、完全日本語対応',
-          'Termux + Ollama：Qwen3 7Bを含む完全なOllamaライブラリ、8GB RAM必要',
+          'Termux + Ollama：Qwen3 8Bを含む完全なOllamaライブラリ、8GB RAM必要',
         ],
         updatedDate: '2026-05',
       },
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat：最简单安装，含Rinna 3.6B的预优化模型',
           'PocketPal AI：含ELYZA-7B的任意GGUF模型，完整日语支持',
-          'Termux + Ollama：含Qwen3 7B的完整Ollama库，需8 GB内存',
+          'Termux + Ollama：含Qwen3 8B的完整Ollama库，需8 GB内存',
         ],
         updatedDate: '2026-05',
       },
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat is the easiest entry point in Japan — available on the Japanese Google Play Store with preoptimized Japanese models including Rinna 3.6B',
           'PocketPal AI supports any GGUF model from Hugging Face including ELYZA-7B, the strongest Japanese instruction-following model at the 7B tier',
-          'Termux + Ollama on Android unlocks the full Ollama model library including Qwen3 7B for Japanese/Chinese/English multilingual use, but requires 8 GB RAM',
+          'Termux + Ollama on Android unlocks the full Ollama model library including Qwen3 8B for Japanese/Chinese/English multilingual use, but requires 8 GB RAM',
           'Japanese tokenization runs ~30% slower than English on the same model — plan for lower tok/s when benchmarking Japanese inference on mobile',
         ],
       },
@@ -87,13 +87,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Three Android apps support Japanese-language local LLMs on the Japanese Play Store: MLC Chat, PocketPal AI, and Ollama via Termux.</strong> All three run fully offline after the initial model download — no data ever reaches a cloud server, which directly addresses APPI (個人情報保護法, Japan\'s Personal Information Protection Act) compliance for personal conversations.',
           'MLC Chat offers the fastest time to first token. Its preoptimized model list includes Rinna 3.6B, a lightweight Japanese-native model that fits in 3 GB RAM. On a Xperia 1 VI or Samsung Galaxy S24 with 12 GB RAM, Rinna 3.6B Q4 runs at 6–10 tok/s — comfortable for conversational use. Setup takes under 10 minutes with no command-line experience required.',
-          'PocketPal AI, developed by the Hugging Face community, loads any GGUF file directly from Hugging Face. This makes ELYZA-7B and Qwen3 7B available without waiting for an app-curated release. The tradeoff is a slightly longer setup requiring manual model selection. See the <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia local LLM guide</a> for device-specific RAM and storage tips.',
+          'PocketPal AI, developed by the Hugging Face community, loads any GGUF file directly from Hugging Face. This makes ELYZA-7B and Qwen3 8B available without waiting for an app-curated release. The tradeoff is a slightly longer setup requiring manual model selection. See the <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia local LLM guide</a> for device-specific RAM and storage tips.',
         ],
         columns: ['App', 'Min RAM', 'Japanese Model Support'],
         rows: [
           { 'App': 'MLC Chat', 'Min RAM': '4 GB', 'Japanese Model Support': 'Preoptimized models incl. Rinna 3.6B' },
           { 'App': 'PocketPal AI', 'Min RAM': '4 GB', 'Japanese Model Support': 'Any GGUF incl. ELYZA-7B' },
-          { 'App': 'Termux + Ollama', 'Min RAM': '8 GB', 'Japanese Model Support': 'Full Ollama library incl. Qwen3 7B' },
+          { 'App': 'Termux + Ollama', 'Min RAM': '8 GB', 'Japanese Model Support': 'Full Ollama library incl. Qwen3 8B' },
         ],
         note: 'Decision guide: Use MLC Chat for beginner setup. Use PocketPal AI for full model flexibility without a terminal. Use Termux + Ollama only with 8 GB RAM or more.',
       },
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Three Japanese-capable models cover the practical use cases on mid-range to flagship Android devices.</strong> The right choice depends on your RAM, your primary task, and whether you need multilingual output.',
           'Rinna 3.6B is the lightweight option: Japanese-native, trained on Japanese web corpus, and runs on 3 GB RAM minimum. It handles casual conversation, text summarization, and short-form generation well. It is the right pick for an Xperia 10 VI (4–6 GB RAM) or any mid-range device where a 7B model would be too slow.',
           'ELYZA-7B delivers the strongest Japanese instruction-following performance at the 7B tier. It requires 6 GB RAM minimum and runs comfortably on a Xperia 5 V, Xperia 1 VI, or Samsung Galaxy S24. Use ELYZA-7B for tasks requiring multi-step instructions, structured output, or nuanced Japanese writing.',
-          'Qwen3 7B is the multilingual pick: trained on Japanese, Chinese, and English corpora. It requires 6 GB RAM minimum and produces fluent output in all three languages within a single conversation. Use Qwen3 7B when your workflow spans JA/ZH/EN — for example, translating or summarizing cross-language business documents.',
+          'Qwen3 8B is the multilingual pick: trained on Japanese, Chinese, and English corpora. It requires 6 GB RAM minimum and produces fluent output in all three languages within a single conversation. Use Qwen3 8B when your workflow spans JA/ZH/EN — for example, translating or summarizing cross-language business documents.',
           'Important: Japanese tokenization is approximately 30% heavier than English for the same model. A device that runs a 7B English model at 8 tok/s will produce roughly 5–6 tok/s in Japanese. Factor this into your hardware decision. For CPU-only model recommendations, see <a href="/local-llms/best-cpu-only-llm" class="text-primary hover:underline">best CPU-only LLMs</a>. For a full setup guide, see the <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">best local LLM apps for Android guide</a>.',
         ],
       },
@@ -113,11 +113,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Do Japanese local LLM models work offline?',
-            a: 'Yes. All three models — Rinna 3.6B, ELYZA-7B, and Qwen3 7B — run fully offline after the initial download. No data is sent to any server, which makes them compliant with APPI requirements for handling personal information locally.',
+            a: 'Yes. All three models — Rinna 3.6B, ELYZA-7B, and Qwen3 8B — run fully offline after the initial download. No data is sent to any server, which makes them compliant with APPI requirements for handling personal information locally.',
           },
           {
             q: 'Which model runs best on a Xperia with 6 GB RAM?',
-            a: 'ELYZA-7B and Qwen3 7B both run on 6 GB RAM minimum. On a Xperia 5 V with 8 GB RAM you can run either at a comfortable speed. For Xperia 10 VI with 4–6 GB RAM, Rinna 3.6B is the better fit. See the <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia local LLM guide</a> for step-by-step setup.',
+            a: 'ELYZA-7B and Qwen3 8B both run on 6 GB RAM minimum. On a Xperia 5 V with 8 GB RAM you can run either at a comfortable speed. For Xperia 10 VI with 4–6 GB RAM, Rinna 3.6B is the better fit. See the <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia local LLM guide</a> for step-by-step setup.',
           },
           {
             q: 'What are the APPI benefits of running a local LLM?',
@@ -136,12 +136,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-de.webp',
     title: 'Welche lokalen LLM-Apps für Android sind in Japan am beliebtesten?',
     seoTitle: 'Beste Android LLMs Japan 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat (Rinna 3.6B, 4 GB RAM), PocketPal AI (ELYZA-7B, 6 GB) und Termux+Ollama (Qwen3 7B, 8 GB) sind die besten Android-Apps für lokale LLMs in Japan.',
+    metaDescription: 'MLC Chat (Rinna 3.6B, 4 GB RAM), PocketPal AI (ELYZA-7B, 6 GB) und Termux+Ollama (Qwen3 8B, 8 GB) sind die besten Android-Apps für lokale LLMs in Japan.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'Android-Nutzer in Japan, die lokale LLMs betreiben',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: einfachster Einstieg, voroptimierte Modelle inkl. Rinna 3.6B',
           'PocketPal AI: beliebige GGUF-Modelle inkl. ELYZA-7B, volle Japanisch-Unterstützung',
-          'Termux + Ollama: volle Ollama-Bibliothek inkl. Qwen3 7B, benötigt 8 GB RAM',
+          'Termux + Ollama: volle Ollama-Bibliothek inkl. Qwen3 8B, benötigt 8 GB RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat ist der einfachste Einstieg in Japan — im japanischen Google Play Store erhältlich, mit voroptimiertem Rinna 3.6B für Japanisch',
           'PocketPal AI unterstützt beliebige GGUF-Modelle von Hugging Face, einschließlich ELYZA-7B, dem stärksten japanischen Instruktionsmodell auf 7B-Ebene',
-          'Termux + Ollama auf Android schaltet die vollständige Ollama-Bibliothek frei, einschließlich Qwen3 7B für mehrsprachigen Einsatz auf Japanisch, Chinesisch und Englisch',
+          'Termux + Ollama auf Android schaltet die vollständige Ollama-Bibliothek frei, einschließlich Qwen3 8B für mehrsprachigen Einsatz auf Japanisch, Chinesisch und Englisch',
           'Japanische Tokenisierung läuft beim gleichen Modell ca. 30 % langsamer als Englisch — beim Benchmarking japanischer Inferenz auf Mobilgeräten entsprechend niedrigere tok/s einplanen',
         ],
       },
@@ -176,13 +176,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Stand Mai 2026 unterstützen drei Android-Apps japanischsprachige lokale LLMs im japanischen Play Store: MLC Chat, PocketPal AI und Ollama via Termux.</strong> Alle drei laufen nach dem ersten Modell-Download vollständig offline — keine Daten gelangen jemals auf einen Cloud-Server, was APPI (個人情報保護法, Japans Datenschutzgesetz) für persönliche Gespräche direkt adressiert.',
           'MLC Chat bietet die kürzeste Zeit bis zum ersten Token. Die voroptimierte Modellliste enthält Rinna 3.6B, ein leichtgewichtiges japanisches Nativmodell, das mit 3 GB RAM auskommt. Auf einem Xperia 1 VI oder Samsung Galaxy S24 mit 12 GB RAM erreicht Rinna 3.6B Q4 eine Geschwindigkeit von 6–10 tok/s — angenehm für die Konversationsnutzung. Die Einrichtung dauert unter 10 Minuten ohne Kommandozeilenerfahrung.',
-          'PocketPal AI, entwickelt von der Hugging-Face-Community, lädt beliebige GGUF-Dateien direkt von Hugging Face. Damit sind ELYZA-7B und Qwen3 7B verfügbar, ohne auf eine kurierte App-Version warten zu müssen. Als Kompromiss ist ein etwas längerer Einrichtungsvorgang mit manueller Modellauswahl erforderlich. Gerätespezifische RAM- und Speichertipps finden Sie im <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia-LLM-Leitfaden</a>.',
+          'PocketPal AI, entwickelt von der Hugging-Face-Community, lädt beliebige GGUF-Dateien direkt von Hugging Face. Damit sind ELYZA-7B und Qwen3 8B verfügbar, ohne auf eine kurierte App-Version warten zu müssen. Als Kompromiss ist ein etwas längerer Einrichtungsvorgang mit manueller Modellauswahl erforderlich. Gerätespezifische RAM- und Speichertipps finden Sie im <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia-LLM-Leitfaden</a>.',
         ],
         columns: ['App', 'Min. RAM', 'Japanische Modellunterstützung'],
         rows: [
           { 'App': 'MLC Chat', 'Min. RAM': '4 GB', 'Japanische Modellunterstützung': 'Voroptimierte Modelle inkl. Rinna 3.6B' },
           { 'App': 'PocketPal AI', 'Min. RAM': '4 GB', 'Japanische Modellunterstützung': 'Beliebige GGUF inkl. ELYZA-7B' },
-          { 'App': 'Termux + Ollama', 'Min. RAM': '8 GB', 'Japanische Modellunterstützung': 'Vollständige Ollama-Bibliothek inkl. Qwen3 7B' },
+          { 'App': 'Termux + Ollama', 'Min. RAM': '8 GB', 'Japanische Modellunterstützung': 'Vollständige Ollama-Bibliothek inkl. Qwen3 8B' },
         ],
         note: 'Entscheidungshilfe: MLC Chat für Einsteiger. PocketPal AI für volle Modellflexibilität ohne Terminal. Termux + Ollama nur mit 8 GB RAM oder mehr.',
       },
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Stand Mai 2026 decken drei japanischfähige Modelle die praktischen Anwendungsfälle auf Mittelklasse- bis Flaggschiff-Android-Geräten ab.</strong> Die richtige Wahl hängt vom verfügbaren RAM, der primären Aufgabe und dem Bedarf an mehrsprachigem Output ab.',
           'Rinna 3.6B ist die leichtgewichtige Option: japanisches Nativmodell, trainiert auf japanischem Web-Korpus, läuft mit mindestens 3 GB RAM. Es eignet sich gut für Casual-Konversation, Textzusammenfassung und Kurzformgenerierung. Auf einem Xperia 10 VI (4–6 GB RAM) oder jedem Mittelklassegerät, auf dem ein 7B-Modell zu langsam wäre, ist Rinna 3.6B die richtige Wahl.',
           'ELYZA-7B bietet die stärkste japanische Instruktionsausführung auf 7B-Ebene. Es benötigt mindestens 6 GB RAM und läuft komfortabel auf einem Xperia 5 V, Xperia 1 VI oder Samsung Galaxy S24. Verwenden Sie ELYZA-7B für Aufgaben, die mehrstufige Anweisungen, strukturierten Output oder nuanciertes japanisches Schreiben erfordern.',
-          'Qwen3 7B ist die mehrsprachige Option: trainiert auf japanischen, chinesischen und englischen Korpora. Es benötigt mindestens 6 GB RAM und erzeugt in einem einzigen Gespräch fließende Ausgaben in allen drei Sprachen. Verwenden Sie Qwen3 7B, wenn Ihr Workflow JA/ZH/EN umfasst — zum Beispiel für die Übersetzung oder Zusammenfassung sprachübergreifender Geschäftsdokumente.',
+          'Qwen3 8B ist die mehrsprachige Option: trainiert auf japanischen, chinesischen und englischen Korpora. Es benötigt mindestens 6 GB RAM und erzeugt in einem einzigen Gespräch fließende Ausgaben in allen drei Sprachen. Verwenden Sie Qwen3 8B, wenn Ihr Workflow JA/ZH/EN umfasst — zum Beispiel für die Übersetzung oder Zusammenfassung sprachübergreifender Geschäftsdokumente.',
           'Wichtig: Japanische Tokenisierung ist beim gleichen Modell etwa 30 % aufwendiger als Englisch. Ein Gerät, das ein englisches 7B-Modell mit 8 tok/s betreibt, liefert auf Japanisch etwa 5–6 tok/s. Beziehen Sie dies in Ihre Hardwareentscheidung ein. CPU-only-Modellempfehlungen finden Sie unter <a href="/de/local-llms/best-cpu-only-llm" class="text-primary hover:underline">beste CPU-only LLMs</a>. Den vollständigen Einrichtungsleitfaden finden Sie im <a href="/de/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Leitfaden für die besten lokalen LLM-Apps für Android</a>.',
         ],
       },
@@ -202,11 +202,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Funktionieren japanische lokale LLM-Modelle offline?',
-            a: 'Ja. Alle drei Modelle — Rinna 3.6B, ELYZA-7B und Qwen3 7B — laufen nach dem ersten Download vollständig offline. Es werden keine Daten an Server gesendet, was die APPI-Anforderungen für die lokale Verarbeitung personenbezogener Daten erfüllt.',
+            a: 'Ja. Alle drei Modelle — Rinna 3.6B, ELYZA-7B und Qwen3 8B — laufen nach dem ersten Download vollständig offline. Es werden keine Daten an Server gesendet, was die APPI-Anforderungen für die lokale Verarbeitung personenbezogener Daten erfüllt.',
           },
           {
             q: 'Welches Modell läuft am besten auf einem Xperia mit 6 GB RAM?',
-            a: 'ELYZA-7B und Qwen3 7B benötigen jeweils mindestens 6 GB RAM. Auf einem Xperia 5 V mit 8 GB RAM laufen beide mit komfortabler Geschwindigkeit. Für das Xperia 10 VI mit 4–6 GB RAM ist Rinna 3.6B die bessere Wahl. Schritt-für-Schritt-Anleitung im <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia-LLM-Leitfaden</a>.',
+            a: 'ELYZA-7B und Qwen3 8B benötigen jeweils mindestens 6 GB RAM. Auf einem Xperia 5 V mit 8 GB RAM laufen beide mit komfortabler Geschwindigkeit. Für das Xperia 10 VI mit 4–6 GB RAM ist Rinna 3.6B die bessere Wahl. Schritt-für-Schritt-Anleitung im <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia-LLM-Leitfaden</a>.',
           },
           {
             q: 'Welche APPI-Vorteile bietet ein lokales LLM?',
@@ -225,12 +225,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-fr.webp',
     title: 'Quelles sont les meilleures apps LLM locales pour Android au Japon ?',
     seoTitle: 'LLM Apps Android Japon 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat, PocketPal AI et Termux+Ollama : les 3 apps Android pour LLM local au Japon. Rinna 3.6B : 4 Go, ELYZA-7B : 6 Go, Qwen3 7B : 8 Go. 2026.',
+    metaDescription: 'MLC Chat, PocketPal AI et Termux+Ollama : les 3 apps Android pour LLM local au Japon. Rinna 3.6B : 4 Go, ELYZA-7B : 6 Go, Qwen3 8B : 8 Go. 2026.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs Android au Japon utilisant des LLM locaux',
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat : configuration la plus simple, modèles préoptimisés dont Rinna 3.6B',
           'PocketPal AI : tout modèle GGUF dont ELYZA-7B, support japonais complet',
-          'Termux + Ollama : bibliothèque Ollama complète dont Qwen3 7B, nécessite 8 Go de RAM',
+          'Termux + Ollama : bibliothèque Ollama complète dont Qwen3 8B, nécessite 8 Go de RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat est le point d\'entrée le plus facile au Japon — disponible sur le Google Play Store japonais avec Rinna 3.6B préoptimisé pour le japonais',
           'PocketPal AI prend en charge tout modèle GGUF de Hugging Face dont ELYZA-7B, le modèle japonais le plus performant pour le suivi d\'instructions à 7B',
-          'Termux + Ollama déverrouille la bibliothèque Ollama complète incluant Qwen3 7B pour un usage multilingue japonais/chinois/anglais, mais nécessite 8 Go de RAM',
+          'Termux + Ollama déverrouille la bibliothèque Ollama complète incluant Qwen3 8B pour un usage multilingue japonais/chinois/anglais, mais nécessite 8 Go de RAM',
           'La tokenisation japonaise est ~30 % plus lente que l\'anglais sur le même modèle — prévoir un tok/s inférieur lors des benchmarks d\'inférence japonaise sur mobile',
         ],
       },
@@ -265,13 +265,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>En mai 2026, trois applications Android prennent en charge les LLM locaux en japonais sur le Play Store japonais : MLC Chat, PocketPal AI et Ollama via Termux.</strong> Les trois fonctionnent entièrement hors ligne après le téléchargement initial du modèle — aucune donnée n\'atteint jamais un serveur cloud, ce qui répond directement aux exigences de l\'APPI (個人情報保護法, loi japonaise sur la protection des données personnelles) pour les conversations personnelles.',
           'MLC Chat offre le temps le plus court jusqu\'au premier token. Sa liste de modèles préoptimisés inclut Rinna 3.6B, un modèle japonais natif léger qui fonctionne avec 3 Go de RAM minimum. Sur un Xperia 1 VI ou Samsung Galaxy S24 avec 12 Go de RAM, Rinna 3.6B Q4 tourne à 6–10 tok/s — confortable pour un usage conversationnel. La configuration prend moins de 10 minutes sans expérience en ligne de commande.',
-          'PocketPal AI, développée par la communauté Hugging Face, charge tout fichier GGUF directement depuis Hugging Face. Cela rend ELYZA-7B et Qwen3 7B disponibles sans attendre une version validée par l\'application. La contrepartie est une configuration légèrement plus longue nécessitant une sélection manuelle du modèle. Consultez le <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guide LLM Xperia</a> pour les conseils RAM et stockage spécifiques à l\'appareil.',
+          'PocketPal AI, développée par la communauté Hugging Face, charge tout fichier GGUF directement depuis Hugging Face. Cela rend ELYZA-7B et Qwen3 8B disponibles sans attendre une version validée par l\'application. La contrepartie est une configuration légèrement plus longue nécessitant une sélection manuelle du modèle. Consultez le <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guide LLM Xperia</a> pour les conseils RAM et stockage spécifiques à l\'appareil.',
         ],
         columns: ['Application', 'RAM min.', 'Support modèles japonais'],
         rows: [
           { 'Application': 'MLC Chat', 'RAM min.': '4 Go', 'Support modèles japonais': 'Modèles préoptimisés dont Rinna 3.6B' },
           { 'Application': 'PocketPal AI', 'RAM min.': '4 Go', 'Support modèles japonais': 'Tout GGUF dont ELYZA-7B' },
-          { 'Application': 'Termux + Ollama', 'RAM min.': '8 Go', 'Support modèles japonais': 'Bibliothèque Ollama complète dont Qwen3 7B' },
+          { 'Application': 'Termux + Ollama', 'RAM min.': '8 Go', 'Support modèles japonais': 'Bibliothèque Ollama complète dont Qwen3 8B' },
         ],
         note: 'Guide de décision : MLC Chat pour les débutants. PocketPal AI pour la flexibilité totale des modèles sans terminal. Termux + Ollama uniquement avec 8 Go de RAM ou plus.',
       },
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>En mai 2026, trois modèles capables de japonais couvrent les cas d\'usage pratiques sur les appareils Android milieu de gamme à haut de gamme.</strong> Le bon choix dépend de votre RAM, de votre tâche principale et de votre besoin de sorties multilingues.',
           'Rinna 3.6B est l\'option légère : modèle natif japonais, entraîné sur un corpus web japonais, fonctionne avec 3 Go de RAM minimum. Il gère bien la conversation informelle, la synthèse de texte et la génération de contenu court. C\'est le bon choix pour un Xperia 10 VI (4–6 Go de RAM) ou tout appareil milieu de gamme où un modèle 7B serait trop lent.',
           'ELYZA-7B offre les meilleures performances de suivi d\'instructions japonais au niveau 7B. Il nécessite 6 Go de RAM minimum et tourne confortablement sur un Xperia 5 V, Xperia 1 VI ou Samsung Galaxy S24. Utilisez ELYZA-7B pour les tâches nécessitant des instructions multi-étapes, une sortie structurée ou une rédaction japonaise nuancée.',
-          'Qwen3 7B est le choix multilingue : entraîné sur des corpus japonais, chinois et anglais. Il nécessite 6 Go de RAM minimum et produit une sortie fluide dans les trois langues au sein d\'une même conversation. Utilisez Qwen3 7B lorsque votre workflow couvre JA/ZH/EN — par exemple pour traduire ou résumer des documents professionnels multilingues.',
+          'Qwen3 8B est le choix multilingue : entraîné sur des corpus japonais, chinois et anglais. Il nécessite 6 Go de RAM minimum et produit une sortie fluide dans les trois langues au sein d\'une même conversation. Utilisez Qwen3 8B lorsque votre workflow couvre JA/ZH/EN — par exemple pour traduire ou résumer des documents professionnels multilingues.',
           'Important : la tokenisation japonaise est environ 30 % plus lourde que l\'anglais pour le même modèle. Un appareil qui fait tourner un modèle anglais 7B à 8 tok/s produira environ 5–6 tok/s en japonais. Tenez-en compte dans votre choix matériel. Pour les recommandations de modèles CPU-only, voir <a href="/fr/local-llms/best-cpu-only-llm" class="text-primary hover:underline">meilleurs LLM CPU-only</a>. Pour le guide complet, voir le <a href="/fr/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guide des meilleures apps LLM locales pour Android</a>.',
         ],
       },
@@ -291,11 +291,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Les modèles LLM japonais locaux fonctionnent-ils hors ligne ?',
-            a: 'Oui. Les trois modèles — Rinna 3.6B, ELYZA-7B et Qwen3 7B — fonctionnent entièrement hors ligne après le téléchargement initial. Aucune donnée n\'est envoyée à un serveur, ce qui satisfait aux exigences de l\'APPI pour le traitement local des données personnelles.',
+            a: 'Oui. Les trois modèles — Rinna 3.6B, ELYZA-7B et Qwen3 8B — fonctionnent entièrement hors ligne après le téléchargement initial. Aucune donnée n\'est envoyée à un serveur, ce qui satisfait aux exigences de l\'APPI pour le traitement local des données personnelles.',
           },
           {
             q: 'Quel modèle fonctionne le mieux sur un Xperia avec 6 Go de RAM ?',
-            a: 'ELYZA-7B et Qwen3 7B nécessitent tous deux 6 Go de RAM minimum. Sur un Xperia 5 V avec 8 Go de RAM, les deux tournent à une vitesse confortable. Pour un Xperia 10 VI avec 4–6 Go de RAM, Rinna 3.6B est le meilleur choix. Consultez le <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guide LLM Xperia</a> pour la configuration étape par étape.',
+            a: 'ELYZA-7B et Qwen3 8B nécessitent tous deux 6 Go de RAM minimum. Sur un Xperia 5 V avec 8 Go de RAM, les deux tournent à une vitesse confortable. Pour un Xperia 10 VI avec 4–6 Go de RAM, Rinna 3.6B est le meilleur choix. Consultez le <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guide LLM Xperia</a> pour la configuration étape par étape.',
           },
           {
             q: 'Quels sont les avantages APPI d\'un LLM local ?',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'ローカルLLMを利用する日本のAndroidユーザー',
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat：最も簡単なセットアップ、Rinna 3.6Bを含む最適化済みモデル',
           'PocketPal AI：ELYZA-7Bを含む任意のGGUFモデル、完全日本語対応',
-          'Termux + Ollama：Qwen3 7Bを含む完全なOllamaライブラリ、8GB RAM必要',
+          'Termux + Ollama：Qwen3 8Bを含む完全なOllamaライブラリ、8GB RAM必要',
         ],
         updatedDate: '2026-05',
       },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chatは日本で最も簡単な入門アプリ — 日本のGoogle Playストアから入手でき、日本語向けに最適化されたRinna 3.6Bが使える',
           'PocketPal AIはHugging FaceからELYZA-7Bを含む任意のGGUFモデルに対応し、7Bクラスで最も強力な日本語指示追従性能を提供する',
-          'Termux + OllamaはAndroidでOllamaライブラリ全体（Qwen3 7Bを含む）を利用可能にするが、8GB以上のRAMが必要',
+          'Termux + OllamaはAndroidでOllamaライブラリ全体（Qwen3 8Bを含む）を利用可能にするが、8GB以上のRAMが必要',
           '日本語トークナイズは同じモデルで英語より約30%重い — モバイルでの日本語推論ベンチマーク時はtok/sが低くなることを想定すること',
         ],
       },
@@ -354,13 +354,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>2026年5月時点で、日本のPlayストアで日本語ローカルLLMに対応するAndroidアプリは3つあります：MLC Chat、PocketPal AI、Termux経由のOllamaです。</strong> 3つはいずれも初回モデルダウンロード後は完全オフラインで動作します。データは一切クラウドサーバーに送信されないため、個人情報保護法（APPI）のもとで個人的な会話を安心して扱えます。',
           'MLC Chatは最初のトークンまでの時間が最短です。最適化済みモデルリストにはRinna 3.6Bが含まれており、最小3GB RAMで動作する軽量な日本語ネイティブモデルです。Xperia 1 VIやSamsung Galaxy S24（12GB RAM）ではRinna 3.6B Q4が6〜10 tok/sで動作し、会話用途に十分な速度です。コマンドライン経験不要で10分以内にセットアップ完了。',
-          'Hugging Faceコミュニティが開発したPocketPal AIは、Hugging FaceからGGUFファイルを直接読み込めます。これによりELYZA-7BやQwen3 7Bをアプリのリリーススケジュールなしに利用できます。代わりにモデルを手動で選択・ダウンロードする手順が少し複雑になります。デバイスごとのRAM・ストレージに関するヒントは<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia LLMガイド</a>をご参照ください。',
+          'Hugging Faceコミュニティが開発したPocketPal AIは、Hugging FaceからGGUFファイルを直接読み込めます。これによりELYZA-7BやQwen3 8Bをアプリのリリーススケジュールなしに利用できます。代わりにモデルを手動で選択・ダウンロードする手順が少し複雑になります。デバイスごとのRAM・ストレージに関するヒントは<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia LLMガイド</a>をご参照ください。',
         ],
         columns: ['アプリ', '最小RAM', '日本語モデル対応'],
         rows: [
           { 'アプリ': 'MLC Chat', '最小RAM': '4 GB', '日本語モデル対応': 'Rinna 3.6Bを含む最適化済みモデル' },
           { 'アプリ': 'PocketPal AI', '最小RAM': '4 GB', '日本語モデル対応': 'ELYZA-7Bを含む任意のGGUF' },
-          { 'アプリ': 'Termux + Ollama', '最小RAM': '8 GB', '日本語モデル対応': 'Qwen3 7Bを含む完全なOllamaライブラリ' },
+          { 'アプリ': 'Termux + Ollama', '最小RAM': '8 GB', '日本語モデル対応': 'Qwen3 8Bを含む完全なOllamaライブラリ' },
         ],
         note: '選び方の目安：初心者はMLC Chat。ターミナル不要でモデルを自由に選びたい場合はPocketPal AI。8GB RAM以上のデバイスでTermux + Ollama。',
       },
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>2026年5月時点で、ミドルレンジからフラッグシップのAndroidデバイス向けに実用的な日本語対応モデルが3つあります。</strong> 最適な選択はRAM容量、主な用途、多言語出力の必要性によって異なります。',
           'Rinna 3.6Bは軽量オプションです。日本語Webコーパスで訓練された日本語ネイティブモデルで、最小3GB RAMで動作します。カジュアルな会話、文章要約、短文生成に適しています。Xperia 10 VI（4〜6GB RAM）や7Bモデルが遅すぎるミドルレンジデバイスに最適な選択です。',
           'ELYZA-7Bは7Bクラスで最も強力な日本語指示追従性能を提供します。最小6GB RAMが必要で、Xperia 5 V、Xperia 1 VI、Samsung Galaxy S24で快適に動作します。多段階の指示、構造化された出力、繊細な日本語文章を要するタスクにはELYZA-7Bを使用してください。',
-          'Qwen3 7Bは多言語オプションです。日本語・中国語・英語コーパスで訓練されており、最小6GB RAMが必要です。1回の会話で3言語すべての流暢な出力が可能です。日本語・中国語・英語を横断するワークフロー（例：クロスランゲージのビジネス文書の翻訳・要約）に最適です。',
+          'Qwen3 8Bは多言語オプションです。日本語・中国語・英語コーパスで訓練されており、最小6GB RAMが必要です。1回の会話で3言語すべての流暢な出力が可能です。日本語・中国語・英語を横断するワークフロー（例：クロスランゲージのビジネス文書の翻訳・要約）に最適です。',
           '重要な注意点：日本語トークナイズは同じモデルで英語より約30%重くなります。英語7Bモデルを8 tok/sで動かせるデバイスでも、日本語では5〜6 tok/s程度になります。ハードウェア選定時にこの点を考慮してください。CPU専用モデルの推奨は<a href="/ja/local-llms/best-cpu-only-llm" class="text-primary hover:underline">CPUのみで動くベストLLM</a>を参照。完全なセットアップガイドは<a href="/ja/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android向けローカルLLMアプリ完全ガイド</a>を参照。',
         ],
       },
@@ -380,11 +380,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '日本語のローカルLLMモデルはオフラインで動作しますか？',
-            a: 'はい。Rinna 3.6B、ELYZA-7B、Qwen3 7Bの3つはすべて、初回ダウンロード後は完全オフラインで動作します。サーバーへのデータ送信は一切なく、個人情報保護法（APPI）のもとで個人情報をローカル処理する要件を満たしています。',
+            a: 'はい。Rinna 3.6B、ELYZA-7B、Qwen3 8Bの3つはすべて、初回ダウンロード後は完全オフラインで動作します。サーバーへのデータ送信は一切なく、個人情報保護法（APPI）のもとで個人情報をローカル処理する要件を満たしています。',
           },
           {
             q: '6GB RAMのXperiaでどのモデルが最適ですか？',
-            a: 'ELYZA-7BとQwen3 7Bはどちらも最小6GB RAMで動作します。8GB RAMのXperia 5 Vでは両方が快適な速度で動きます。4〜6GB RAMのXperia 10 VIにはRinna 3.6Bが適しています。ステップバイステップのセットアップは<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia LLMガイド</a>をご覧ください。',
+            a: 'ELYZA-7BとQwen3 8Bはどちらも最小6GB RAMで動作します。8GB RAMのXperia 5 Vでは両方が快適な速度で動きます。4〜6GB RAMのXperia 10 VIにはRinna 3.6Bが適しています。ステップバイステップのセットアップは<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia LLMガイド</a>をご覧ください。',
           },
           {
             q: 'ローカルLLMを使うことでAPPIの面でどんなメリットがありますか？',
@@ -403,12 +403,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-es.webp',
     title: '¿Cuáles son las mejores apps de LLM local para Android en Japón?',
     seoTitle: 'Mejores LLM Android Japón 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat ejecuta Rinna 3.6B con 4 GB de RAM. PocketPal AI soporta ELYZA-7B con 6 GB. Termux + Ollama añade Qwen3 7B con 8 GB+. Todo offline en Japón.',
+    metaDescription: 'MLC Chat ejecuta Rinna 3.6B con 4 GB de RAM. PocketPal AI soporta ELYZA-7B con 6 GB. Termux + Ollama añade Qwen3 8B con 8 GB+. Todo offline en Japón.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de Android en Japón que ejecutan LLMs locales',
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: la configuración más sencilla, modelos preoptimizados incluido Rinna 3.6B para japonés',
           'PocketPal AI: cualquier modelo GGUF incluido ELYZA-7B, soporte completo para japonés',
-          'Termux + Ollama: biblioteca completa de Ollama incluido Qwen3 7B, requiere 8 GB de RAM',
+          'Termux + Ollama: biblioteca completa de Ollama incluido Qwen3 8B, requiere 8 GB de RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat es el punto de entrada más sencillo en Japón — disponible en el Google Play Store japonés con modelos japoneses preoptimizados incluido Rinna 3.6B',
           'PocketPal AI soporta cualquier modelo GGUF de Hugging Face, incluido ELYZA-7B, el modelo de seguimiento de instrucciones en japonés más potente del nivel 7B',
-          'Termux + Ollama en Android desbloquea la biblioteca completa de Ollama, incluido Qwen3 7B para uso multilingüe en japonés, chino e inglés, pero requiere 8 GB de RAM',
+          'Termux + Ollama en Android desbloquea la biblioteca completa de Ollama, incluido Qwen3 8B para uso multilingüe en japonés, chino e inglés, pero requiere 8 GB de RAM',
           'La tokenización en japonés es ~30% más lenta que en inglés con el mismo modelo — ten en cuenta que el tok/s será menor al hacer benchmarks de inferencia en japonés en dispositivos móviles',
         ],
       },
@@ -443,13 +443,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>En mayo de 2026, tres apps de Android soportan LLMs locales en japonés en el Play Store japonés: MLC Chat, PocketPal AI y Ollama vía Termux.</strong> Las tres funcionan completamente offline tras la descarga inicial del modelo — ningún dato llega jamás a un servidor en la nube, lo que aborda directamente el cumplimiento de la APPI (個人情報保護法, la Ley de Protección de Información Personal de Japón) para conversaciones personales.',
           'MLC Chat ofrece el menor tiempo hasta el primer token. Su lista de modelos preoptimizados incluye Rinna 3.6B, un modelo nativo en japonés y de bajo consumo que funciona con solo 3 GB de RAM. En un Xperia 1 VI o Samsung Galaxy S24 con 12 GB de RAM, Rinna 3.6B Q4 alcanza 6–10 tok/s — suficiente para uso conversacional. La configuración lleva menos de 10 minutos sin necesidad de experiencia en línea de comandos.',
-          'PocketPal AI, desarrollada por la comunidad de Hugging Face, carga cualquier archivo GGUF directamente desde Hugging Face. Esto permite usar ELYZA-7B y Qwen3 7B sin esperar a una versión curada por la app. La desventaja es una configuración algo más larga que requiere selección manual del modelo. Consulta la <a href="/es/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guía de LLM para Xperia</a> para consejos específicos sobre RAM y almacenamiento según dispositivo.',
+          'PocketPal AI, desarrollada por la comunidad de Hugging Face, carga cualquier archivo GGUF directamente desde Hugging Face. Esto permite usar ELYZA-7B y Qwen3 8B sin esperar a una versión curada por la app. La desventaja es una configuración algo más larga que requiere selección manual del modelo. Consulta la <a href="/es/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guía de LLM para Xperia</a> para consejos específicos sobre RAM y almacenamiento según dispositivo.',
         ],
         columns: ['App', 'RAM mín.', 'Soporte de modelos japoneses'],
         rows: [
           { 'App': 'MLC Chat', 'RAM mín.': '4 GB', 'Soporte de modelos japoneses': 'Modelos preoptimizados incl. Rinna 3.6B' },
           { 'App': 'PocketPal AI', 'RAM mín.': '4 GB', 'Soporte de modelos japoneses': 'Cualquier GGUF incl. ELYZA-7B' },
-          { 'App': 'Termux + Ollama', 'RAM mín.': '8 GB', 'Soporte de modelos japoneses': 'Biblioteca completa de Ollama incl. Qwen3 7B' },
+          { 'App': 'Termux + Ollama', 'RAM mín.': '8 GB', 'Soporte de modelos japoneses': 'Biblioteca completa de Ollama incl. Qwen3 8B' },
         ],
         note: 'Guía de decisión: usa MLC Chat si eres principiante. Usa PocketPal AI para máxima flexibilidad de modelos sin terminal. Usa Termux + Ollama solo con 8 GB de RAM o más.',
       },
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>En mayo de 2026, tres modelos con capacidad en japonés cubren los casos de uso prácticos en dispositivos Android de gama media a gama alta.</strong> La elección correcta depende de tu RAM, tu tarea principal y si necesitas salida multilingüe.',
           'Rinna 3.6B es la opción ligera: modelo nativo en japonés, entrenado en corpus web japonés, y funciona con un mínimo de 3 GB de RAM. Maneja bien la conversación casual, el resumen de textos y la generación de contenido corto. Es la opción adecuada para un Xperia 10 VI (4–6 GB de RAM) o cualquier dispositivo de gama media donde un modelo 7B sería demasiado lento.',
           'ELYZA-7B ofrece el mejor rendimiento de seguimiento de instrucciones en japonés en el nivel 7B. Requiere un mínimo de 6 GB de RAM y funciona cómodamente en un Xperia 5 V, Xperia 1 VI o Samsung Galaxy S24. Usa ELYZA-7B para tareas que requieren instrucciones de varios pasos, salida estructurada o redacción en japonés con matices.',
-          'Qwen3 7B es la opción multilingüe: entrenado en corpus en japonés, chino e inglés. Requiere un mínimo de 6 GB de RAM y produce salida fluida en los tres idiomas dentro de una misma conversación. Usa Qwen3 7B cuando tu flujo de trabajo abarque JA/ZH/EN — por ejemplo, para traducir o resumir documentos de negocios en varios idiomas.',
+          'Qwen3 8B es la opción multilingüe: entrenado en corpus en japonés, chino e inglés. Requiere un mínimo de 6 GB de RAM y produce salida fluida en los tres idiomas dentro de una misma conversación. Usa Qwen3 8B cuando tu flujo de trabajo abarque JA/ZH/EN — por ejemplo, para traducir o resumir documentos de negocios en varios idiomas.',
           'Importante: la tokenización en japonés es aproximadamente un 30% más pesada que en inglés para el mismo modelo. Un dispositivo que ejecuta un modelo 7B en inglés a 8 tok/s producirá aproximadamente 5–6 tok/s en japonés. Considera esto al elegir tu hardware. Para recomendaciones de modelos solo con CPU, consulta <a href="/es/local-llms/best-cpu-only-llm" class="text-primary hover:underline">los mejores LLMs solo para CPU</a>. Para una guía completa de configuración, consulta la <a href="/es/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guía de las mejores apps de LLM local para Android</a>.',
         ],
       },
@@ -469,11 +469,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Los modelos de LLM local japoneses funcionan sin conexión?',
-            a: 'Sí. Los tres modelos — Rinna 3.6B, ELYZA-7B y Qwen3 7B — funcionan completamente offline tras la descarga inicial. No se envían datos a ningún servidor, lo que los hace compatibles con los requisitos de la APPI para el manejo local de información personal.',
+            a: 'Sí. Los tres modelos — Rinna 3.6B, ELYZA-7B y Qwen3 8B — funcionan completamente offline tras la descarga inicial. No se envían datos a ningún servidor, lo que los hace compatibles con los requisitos de la APPI para el manejo local de información personal.',
           },
           {
             q: '¿Qué modelo funciona mejor en un Xperia con 6 GB de RAM?',
-            a: 'ELYZA-7B y Qwen3 7B funcionan ambos con un mínimo de 6 GB de RAM. En un Xperia 5 V con 8 GB de RAM puedes ejecutar cualquiera de los dos a una velocidad cómoda. Para el Xperia 10 VI con 4–6 GB de RAM, Rinna 3.6B es la mejor opción. Consulta la <a href="/es/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guía de LLM para Xperia</a> para la configuración paso a paso.',
+            a: 'ELYZA-7B y Qwen3 8B funcionan ambos con un mínimo de 6 GB de RAM. En un Xperia 5 V con 8 GB de RAM puedes ejecutar cualquiera de los dos a una velocidad cómoda. Para el Xperia 10 VI con 4–6 GB de RAM, Rinna 3.6B es la mejor opción. Consulta la <a href="/es/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guía de LLM para Xperia</a> para la configuración paso a paso.',
           },
           {
             q: '¿Cuáles son las ventajas de la APPI al ejecutar un LLM local?',
@@ -492,12 +492,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-pt.webp',
     title: 'Quais são os melhores apps de LLM local para Android no Japão?',
     seoTitle: 'Melhores LLM Android Japão 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat executa Rinna 3,6B com 4 GB de RAM. PocketPal AI suporta ELYZA-7B com 6 GB. Termux + Ollama adiciona Qwen3 7B com 8 GB+. Tudo offline no Japão.',
+    metaDescription: 'MLC Chat executa Rinna 3,6B com 4 GB de RAM. PocketPal AI suporta ELYZA-7B com 6 GB. Termux + Ollama adiciona Qwen3 8B com 8 GB+. Tudo offline no Japão.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'Usuários de Android no Japão executando LLMs locais',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: configuração mais simples, modelos pré-otimizados incluindo Rinna 3,6B para japonês',
           'PocketPal AI: qualquer modelo GGUF incluindo ELYZA-7B, suporte completo ao japonês',
-          'Termux + Ollama: biblioteca completa do Ollama incluindo Qwen3 7B, requer 8 GB de RAM',
+          'Termux + Ollama: biblioteca completa do Ollama incluindo Qwen3 8B, requer 8 GB de RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat é o ponto de entrada mais fácil no Japão — disponível na Google Play Store japonesa com modelos japoneses pré-otimizados incluindo Rinna 3,6B',
           'PocketPal AI suporta qualquer modelo GGUF do Hugging Face incluindo ELYZA-7B, o modelo mais potente de seguimento de instruções em japonês no nível 7B',
-          'Termux + Ollama no Android desbloqueia a biblioteca completa do Ollama incluindo Qwen3 7B para uso multilíngue em japonês, chinês e inglês, mas requer 8 GB de RAM',
+          'Termux + Ollama no Android desbloqueia a biblioteca completa do Ollama incluindo Qwen3 8B para uso multilíngue em japonês, chinês e inglês, mas requer 8 GB de RAM',
           'A tokenização japonesa é ~30% mais lenta do que o inglês no mesmo modelo — planeje velocidades tok/s menores ao fazer benchmark de inferência japonesa em dispositivos móveis',
         ],
       },
@@ -532,13 +532,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Em maio de 2026, três apps Android suportam LLMs locais em japonês na Play Store japonesa: MLC Chat, PocketPal AI e Ollama via Termux.</strong> Os três funcionam completamente offline após o download inicial do modelo — nenhum dado chega a um servidor em nuvem, o que aborda diretamente a conformidade com a APPI (個人情報保護法, Lei de Proteção de Informações Pessoais do Japão) para conversas pessoais.',
           'O MLC Chat oferece o menor tempo até o primeiro token. Sua lista de modelos pré-otimizados inclui o Rinna 3,6B, um modelo nativo japonês leve que funciona com apenas 3 GB de RAM. Em um Xperia 1 VI ou Samsung Galaxy S24 com 12 GB de RAM, o Rinna 3,6B Q4 roda a 6–10 tok/s — confortável para uso conversacional. A configuração leva menos de 10 minutos sem experiência em linha de comando.',
-          'O PocketPal AI, desenvolvido pela comunidade do Hugging Face, carrega qualquer arquivo GGUF diretamente do Hugging Face. Isso torna ELYZA-7B e Qwen3 7B disponíveis sem esperar por um lançamento curado do app. O trade-off é uma configuração um pouco mais longa que requer seleção manual do modelo. Consulte o <a href="/pt/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guia de LLM para Xperia</a> para dicas específicas de RAM e armazenamento por dispositivo.',
+          'O PocketPal AI, desenvolvido pela comunidade do Hugging Face, carrega qualquer arquivo GGUF diretamente do Hugging Face. Isso torna ELYZA-7B e Qwen3 8B disponíveis sem esperar por um lançamento curado do app. O trade-off é uma configuração um pouco mais longa que requer seleção manual do modelo. Consulte o <a href="/pt/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guia de LLM para Xperia</a> para dicas específicas de RAM e armazenamento por dispositivo.',
         ],
         columns: ['App', 'RAM mín.', 'Suporte a modelos japoneses'],
         rows: [
           { 'App': 'MLC Chat', 'RAM mín.': '4 GB', 'Suporte a modelos japoneses': 'Modelos pré-otimizados incl. Rinna 3,6B' },
           { 'App': 'PocketPal AI', 'RAM mín.': '4 GB', 'Suporte a modelos japoneses': 'Qualquer GGUF incl. ELYZA-7B' },
-          { 'App': 'Termux + Ollama', 'RAM mín.': '8 GB', 'Suporte a modelos japoneses': 'Biblioteca completa do Ollama incl. Qwen3 7B' },
+          { 'App': 'Termux + Ollama', 'RAM mín.': '8 GB', 'Suporte a modelos japoneses': 'Biblioteca completa do Ollama incl. Qwen3 8B' },
         ],
         note: 'Guia de decisão: use MLC Chat se for iniciante. Use PocketPal AI para máxima flexibilidade de modelos sem terminal. Use Termux + Ollama somente com 8 GB de RAM ou mais.',
       },
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Em maio de 2026, três modelos com capacidade para japonês cobrem os casos de uso práticos em dispositivos Android de médio porte a topo de linha.</strong> A escolha correta depende da sua RAM, da sua tarefa principal e se você precisa de saída multilíngue.',
           'O Rinna 3,6B é a opção leve: modelo nativo japonês, treinado em corpus web japonês, e funciona com no mínimo 3 GB de RAM. Lida bem com conversa casual, resumo de texto e geração de conteúdo curto. É a escolha certa para um Xperia 10 VI (4–6 GB de RAM) ou qualquer dispositivo de médio porte onde um modelo 7B seria muito lento.',
           'O ELYZA-7B oferece o melhor desempenho de seguimento de instruções em japonês no nível 7B. Requer no mínimo 6 GB de RAM e roda confortavelmente em um Xperia 5 V, Xperia 1 VI ou Samsung Galaxy S24. Use ELYZA-7B para tarefas que exigem instruções em várias etapas, saída estruturada ou redação japonesa com nuances.',
-          'O Qwen3 7B é a opção multilíngue: treinado em corpus japonês, chinês e inglês. Requer no mínimo 6 GB de RAM e produz saída fluente nas três línguas em uma única conversa. Use Qwen3 7B quando seu fluxo de trabalho abranger JA/ZH/EN — por exemplo, traduzir ou resumir documentos de negócios em vários idiomas.',
+          'O Qwen3 8B é a opção multilíngue: treinado em corpus japonês, chinês e inglês. Requer no mínimo 6 GB de RAM e produz saída fluente nas três línguas em uma única conversa. Use Qwen3 8B quando seu fluxo de trabalho abranger JA/ZH/EN — por exemplo, traduzir ou resumir documentos de negócios em vários idiomas.',
           'Importante: a tokenização japonesa é aproximadamente 30% mais pesada do que o inglês para o mesmo modelo. Um dispositivo que roda um modelo 7B em inglês a 8 tok/s produzirá aproximadamente 5–6 tok/s em japonês. Leve isso em conta na sua decisão de hardware. Para recomendações de modelos somente CPU, consulte <a href="/pt/local-llms/best-cpu-only-llm" class="text-primary hover:underline">os melhores LLMs somente para CPU</a>. Para um guia completo, consulte o <a href="/pt/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guia dos melhores apps de LLM local para Android</a>.',
         ],
       },
@@ -558,11 +558,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Os modelos de LLM local japoneses funcionam offline?',
-            a: 'Sim. Os três modelos — Rinna 3,6B, ELYZA-7B e Qwen3 7B — funcionam completamente offline após o download inicial. Nenhum dado é enviado a qualquer servidor, o que os torna compatíveis com os requisitos da APPI para o tratamento local de informações pessoais.',
+            a: 'Sim. Os três modelos — Rinna 3,6B, ELYZA-7B e Qwen3 8B — funcionam completamente offline após o download inicial. Nenhum dado é enviado a qualquer servidor, o que os torna compatíveis com os requisitos da APPI para o tratamento local de informações pessoais.',
           },
           {
             q: 'Qual modelo funciona melhor em um Xperia com 6 GB de RAM?',
-            a: 'ELYZA-7B e Qwen3 7B funcionam ambos com no mínimo 6 GB de RAM. Em um Xperia 5 V com 8 GB de RAM você pode executar qualquer um dos dois a uma velocidade confortável. Para o Xperia 10 VI com 4–6 GB de RAM, o Rinna 3,6B é a melhor opção. Consulte o <a href="/pt/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guia de LLM para Xperia</a> para configuração passo a passo.',
+            a: 'ELYZA-7B e Qwen3 8B funcionam ambos com no mínimo 6 GB de RAM. Em um Xperia 5 V com 8 GB de RAM você pode executar qualquer um dos dois a uma velocidade confortável. Para o Xperia 10 VI com 4–6 GB de RAM, o Rinna 3,6B é a melhor opção. Consulte o <a href="/pt/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">guia de LLM para Xperia</a> para configuração passo a passo.',
           },
           {
             q: 'Quais são as vantagens da APPI ao executar um LLM local?',
@@ -581,12 +581,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ar.webp',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام ⁨Android⁩ في اليابان؟',
     seoTitle: 'تطبيقات ⁨LLM⁩ لـ⁨Android⁩ باليابان ⁨2026⁩ | ⁨PromptQuorum⁩',
-    metaDescription: '⁨MLC Chat⁩ يشغّل ⁨Rinna 3.6B⁩ بـ⁨4 GB RAM. PocketPal AI⁩ يشغّل ⁨ELYZA-7B⁩ بـ⁨6 GB. Termux + Ollama⁩ يضيف ⁨Qwen3 7B⁩ لأجهزة ⁨8 GB⁩+. الثلاثة تعمل بلا إنترنت.',
+    metaDescription: '⁨MLC Chat⁩ يشغّل ⁨Rinna 3.6B⁩ بـ⁨4 GB RAM. PocketPal AI⁩ يشغّل ⁨ELYZA-7B⁩ بـ⁨6 GB. Termux + Ollama⁩ يضيف ⁨Qwen3 8B⁩ لأجهزة ⁨8 GB⁩+. الثلاثة تعمل بلا إنترنت.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو Android في اليابان الذين يشغّلون النماذج اللغوية الكبيرة المحلية',
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: أسهل إعداد، نماذج مُحسَّنة مسبقاً بما فيها Rinna 3.6B للغة اليابانية',
           'PocketPal AI: أي نموذج GGUF بما فيه ELYZA-7B، دعم كامل للغة اليابانية',
-          'Termux + Ollama: مكتبة Ollama الكاملة بما فيها Qwen3 7B، يحتاج 8 جيجابايت RAM',
+          'Termux + Ollama: مكتبة Ollama الكاملة بما فيها Qwen3 8B، يحتاج 8 جيجابايت RAM',
         ],
         updatedDate: '2026-05',
       },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat هو أسهل نقطة دخول في اليابان — متوفر في متجر Google Play الياباني مع نماذج يابانية مُحسَّنة مسبقاً بما فيها Rinna 3.6B',
           'PocketPal AI يدعم أي نموذج GGUF من Hugging Face بما فيه ELYZA-7B، وهو أقوى نموذج ياباني لاتباع التعليمات في فئة 7B',
-          'Termux + Ollama على Android يفتح مكتبة Ollama الكاملة بما فيها Qwen3 7B للاستخدام متعدد اللغات (ياباني/صيني/إنجليزي)، لكنه يحتاج 8 جيجابايت RAM',
+          'Termux + Ollama على Android يفتح مكتبة Ollama الكاملة بما فيها Qwen3 8B للاستخدام متعدد اللغات (ياباني/صيني/إنجليزي)، لكنه يحتاج 8 جيجابايت RAM',
           'الترميز الياباني أبطأ بـ~30% من الإنجليزي على نفس النموذج — توقع رموز/ثانية أقل عند قياس أداء الاستنتاج الياباني على الأجهزة المحمولة',
         ],
       },
@@ -621,13 +621,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>اعتباراً من مايو 2026، ثلاثة تطبيقات Android تدعم النماذج اللغوية الكبيرة المحلية باليابانية في متجر Play الياباني: MLC Chat وPocketPal AI وOllama عبر Termux.</strong> جميعها تعمل دون اتصال بالإنترنت بعد التنزيل الأولي للنموذج — لا تصل أي بيانات إلى خادم سحابي أبداً، مما يعالج مباشرةً متطلبات الامتثال لقانون APPI (個人情報保護法، قانون اليابان لحماية المعلومات الشخصية) للمحادثات الشخصية.',
           'MLC Chat يوفر أسرع وقت للوصول إلى الرمز الأول. قائمة نماذجه المُحسَّنة مسبقاً تتضمن Rinna 3.6B، وهو نموذج ياباني أصلي خفيف يعمل بـ3 جيجابايت RAM كحد أدنى. على Xperia 1 VI أو Samsung Galaxy S24 بـ12 جيجابايت RAM، يعمل Rinna 3.6B Q4 بـ6–10 رمز/ثانية — مريح للاستخدام التحادثي. يستغرق الإعداد أقل من 10 دقائق بدون خبرة في سطر الأوامر.',
-          'PocketPal AI، التي طوّرها مجتمع Hugging Face، يُحمِّل أي ملف GGUF مباشرةً من Hugging Face. هذا يجعل ELYZA-7B وQwen3 7B متاحَين دون انتظار إصدار منتقى من التطبيق. المقايضة هي إعداد أطول قليلاً يتطلب اختيار النموذج يدوياً. راجع <a href="/ar/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">دليل Xperia للنماذج اللغوية الكبيرة المحلية</a> للحصول على نصائح خاصة بكل جهاز حول RAM والتخزين.',
+          'PocketPal AI، التي طوّرها مجتمع Hugging Face، يُحمِّل أي ملف GGUF مباشرةً من Hugging Face. هذا يجعل ELYZA-7B وQwen3 8B متاحَين دون انتظار إصدار منتقى من التطبيق. المقايضة هي إعداد أطول قليلاً يتطلب اختيار النموذج يدوياً. راجع <a href="/ar/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">دليل Xperia للنماذج اللغوية الكبيرة المحلية</a> للحصول على نصائح خاصة بكل جهاز حول RAM والتخزين.',
         ],
         columns: ['التطبيق', 'الحد الأدنى من RAM', 'دعم النماذج اليابانية'],
         rows: [
           { 'التطبيق': 'MLC Chat', 'الحد الأدنى من RAM': '4 جيجابايت', 'دعم النماذج اليابانية': 'نماذج مُحسَّنة مسبقاً بما فيها Rinna 3.6B' },
           { 'التطبيق': 'PocketPal AI', 'الحد الأدنى من RAM': '4 جيجابايت', 'دعم النماذج اليابانية': 'أي GGUF بما فيه ELYZA-7B' },
-          { 'التطبيق': 'Termux + Ollama', 'الحد الأدنى من RAM': '8 جيجابايت', 'دعم النماذج اليابانية': 'مكتبة Ollama الكاملة بما فيها Qwen3 7B' },
+          { 'التطبيق': 'Termux + Ollama', 'الحد الأدنى من RAM': '8 جيجابايت', 'دعم النماذج اليابانية': 'مكتبة Ollama الكاملة بما فيها Qwen3 8B' },
         ],
         note: 'دليل القرار: استخدم MLC Chat إذا كنت مبتدئاً. استخدم PocketPal AI لأقصى مرونة في النماذج بدون طرفية. استخدم Termux + Ollama فقط مع 8 جيجابايت RAM أو أكثر.',
       },
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>اعتباراً من مايو 2026، ثلاثة نماذج قادرة على اللغة اليابانية تغطي حالات الاستخدام العملية على أجهزة Android من المتوسط إلى الرائد.</strong> الاختيار الصحيح يعتمد على RAM لديك ومهمتك الأساسية وما إذا كنت تحتاج إلى إخراج متعدد اللغات.',
           'Rinna 3.6B هو الخيار الخفيف: نموذج ياباني أصلي، مُدرَّب على مجموعة بيانات الويب اليابانية، يعمل بـ3 جيجابايت RAM كحد أدنى. يتعامل جيداً مع المحادثة غير الرسمية وتلخيص النصوص والتوليد القصير. إنه الخيار المناسب لـXperia 10 VI (4–6 جيجابايت RAM) أو أي جهاز متوسط المستوى حيث سيكون نموذج 7B بطيئاً جداً.',
           'ELYZA-7B يوفر أقوى أداء لاتباع التعليمات اليابانية في فئة 7B. يحتاج 6 جيجابايت RAM كحد أدنى ويعمل بشكل مريح على Xperia 5 V وXperia 1 VI وSamsung Galaxy S24. استخدم ELYZA-7B للمهام التي تتطلب تعليمات متعددة الخطوات أو إخراجاً منظماً أو كتابة يابانية دقيقة.',
-          'Qwen3 7B هو الخيار متعدد اللغات: مُدرَّب على مجموعات بيانات يابانية وصينية وإنجليزية. يحتاج 6 جيجابايت RAM كحد أدنى وينتج إخراجاً سلساً بالثلاث لغات في محادثة واحدة. استخدم Qwen3 7B عندما يمتد سير عملك على اليابانية والصينية والإنجليزية — مثلاً ترجمة أو تلخيص وثائق عمل متعددة اللغات.',
+          'Qwen3 8B هو الخيار متعدد اللغات: مُدرَّب على مجموعات بيانات يابانية وصينية وإنجليزية. يحتاج 6 جيجابايت RAM كحد أدنى وينتج إخراجاً سلساً بالثلاث لغات في محادثة واحدة. استخدم Qwen3 8B عندما يمتد سير عملك على اليابانية والصينية والإنجليزية — مثلاً ترجمة أو تلخيص وثائق عمل متعددة اللغات.',
           'مهم: الترميز الياباني أثقل بنحو 30% من الإنجليزي لنفس النموذج. جهاز يشغّل نموذج 7B إنجليزي بـ8 رمز/ثانية سينتج تقريباً 5–6 رمز/ثانية باليابانية. ضع هذا في الاعتبار عند اختيار الأجهزة. لتوصيات نماذج وحدة المعالجة المركزية فقط، راجع <a href="/ar/local-llms/best-cpu-only-llm" class="text-primary hover:underline">أفضل النماذج اللغوية الكبيرة للمعالج فقط</a>. للدليل الكامل للإعداد، راجع <a href="/ar/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">دليل أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android</a>.',
         ],
       },
@@ -647,11 +647,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل تعمل نماذج اللغة اليابانية المحلية دون اتصال؟',
-            a: 'نعم. جميع النماذج الثلاثة — Rinna 3.6B وELYZA-7B وQwen3 7B — تعمل دون اتصال بالكامل بعد التنزيل الأولي. لا تُرسَل أي بيانات إلى أي خادم، مما يجعلها متوافقة مع متطلبات APPI للتعامل المحلي مع المعلومات الشخصية.',
+            a: 'نعم. جميع النماذج الثلاثة — Rinna 3.6B وELYZA-7B وQwen3 8B — تعمل دون اتصال بالكامل بعد التنزيل الأولي. لا تُرسَل أي بيانات إلى أي خادم، مما يجعلها متوافقة مع متطلبات APPI للتعامل المحلي مع المعلومات الشخصية.',
           },
           {
             q: 'أي نموذج يعمل بشكل أفضل على Xperia بـ6 جيجابايت RAM؟',
-            a: 'كلٌّ من ELYZA-7B وQwen3 7B يعملان بـ6 جيجابايت RAM كحد أدنى. على Xperia 5 V بـ8 جيجابايت RAM يمكنك تشغيل أي منهما بسرعة مريحة. لـXperia 10 VI بـ4–6 جيجابايت RAM، Rinna 3.6B هو الأنسب. راجع <a href="/ar/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">دليل Xperia للنماذج اللغوية الكبيرة المحلية</a> للإعداد خطوة بخطوة.',
+            a: 'كلٌّ من ELYZA-7B وQwen3 8B يعملان بـ6 جيجابايت RAM كحد أدنى. على Xperia 5 V بـ8 جيجابايت RAM يمكنك تشغيل أي منهما بسرعة مريحة. لـXperia 10 VI بـ4–6 جيجابايت RAM، Rinna 3.6B هو الأنسب. راجع <a href="/ar/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">دليل Xperia للنماذج اللغوية الكبيرة المحلية</a> للإعداد خطوة بخطوة.',
           },
           {
             q: 'ما مزايا تشغيل نموذج لغوي كبير محلي من حيث APPI؟',
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: '日本使用本地LLM的Android用户',
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat：最简单安装，含Rinna 3.6B的预优化模型',
           'PocketPal AI：含ELYZA-7B的任意GGUF模型，完整日语支持',
-          'Termux + Ollama：含Qwen3 7B的完整Ollama库，需8 GB内存',
+          'Termux + Ollama：含Qwen3 8B的完整Ollama库，需8 GB内存',
         ],
         updatedDate: '2026-05',
       },
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat是日本最简单的入门应用——可从日本Google Play商店获取，包含为日语优化的Rinna 3.6B预训练模型',
           'PocketPal AI支持Hugging Face上任意GGUF模型，包括ELYZA-7B——7B级别中日语指令跟随性能最强的模型',
-          'Termux + Ollama可在Android上使用完整Ollama库，包括Qwen3 7B（日/中/英多语言），但需要8 GB内存',
+          'Termux + Ollama可在Android上使用完整Ollama库，包括Qwen3 8B（日/中/英多语言），但需要8 GB内存',
           '日语分词比英语重约30%——在移动端进行日语推理基准测试时，同款模型的tok/s会低于英语',
         ],
       },
@@ -710,13 +710,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>截至2026年5月，日本Play商店中有三款Android应用支持日语本地LLM：MLC Chat、PocketPal AI和Termux版Ollama。</strong> 三款应用在首次下载模型后均可完全离线运行——数据永远不会上传至云服务器，这直接满足了APPI（個人情報保護法，日本个人信息保护法）关于个人对话本地化处理的合规要求。',
           'MLC Chat提供最短的首次生成时间。其预优化模型列表包含Rinna 3.6B——一款轻量级日语原生模型，最低只需3 GB内存运行。在配备12 GB内存的Xperia 1 VI或Samsung Galaxy S24上，Rinna 3.6B Q4可达6–10 tok/s，足以满足对话使用需求。无需命令行经验，10分钟内完成配置。',
-          'PocketPal AI由Hugging Face社区开发，支持直接从Hugging Face加载任意GGUF文件。这使得ELYZA-7B和Qwen3 7B无需等待应用端更新即可使用。代价是需要手动选择和下载模型，配置步骤稍多。设备RAM与存储的具体建议请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia本地LLM指南</a>。',
+          'PocketPal AI由Hugging Face社区开发，支持直接从Hugging Face加载任意GGUF文件。这使得ELYZA-7B和Qwen3 8B无需等待应用端更新即可使用。代价是需要手动选择和下载模型，配置步骤稍多。设备RAM与存储的具体建议请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia本地LLM指南</a>。',
         ],
         columns: ['应用', '最低内存', '日语模型支持'],
         rows: [
           { '应用': 'MLC Chat', '最低内存': '4 GB', '日语模型支持': '含Rinna 3.6B的预优化模型' },
           { '应用': 'PocketPal AI', '最低内存': '4 GB', '日语模型支持': '含ELYZA-7B的任意GGUF' },
-          { '应用': 'Termux + Ollama', '最低内存': '8 GB', '日语模型支持': '含Qwen3 7B的完整Ollama库' },
+          { '应用': 'Termux + Ollama', '最低内存': '8 GB', '日语模型支持': '含Qwen3 8B的完整Ollama库' },
         ],
         note: '选择指南：初学者选MLC Chat；无需终端且想自由选模型选PocketPal AI；内存8 GB以上再考虑Termux + Ollama。',
       },
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>截至2026年5月，三款支持日语的模型覆盖了中端到旗舰Android设备上的主要使用场景。</strong> 正确的选择取决于可用内存、主要任务类型，以及是否需要多语言输出。',
           'Rinna 3.6B是轻量化选项：日语原生模型，在日语网络语料上训练，最低3 GB内存即可运行。擅长日常对话、文本摘要和短文生成。对于Xperia 10 VI（4–6 GB内存）或任何7B模型过慢的中端设备，Rinna 3.6B是最佳选择。',
           'ELYZA-7B在7B级别中提供最强的日语指令跟随性能。最低需要6 GB内存，可在Xperia 5 V、Xperia 1 VI或Samsung Galaxy S24上流畅运行。需要多步骤指令、结构化输出或细腻日语写作的任务请使用ELYZA-7B。',
-          'Qwen3 7B是多语言选择：在日语、中文和英语语料上训练，最低需要6 GB内存。可在单次对话中流畅输出三种语言。日语/中文/英语混合工作流（如跨语言商业文档翻译或摘要）请使用Qwen3 7B。',
+          'Qwen3 8B是多语言选择：在日语、中文和英语语料上训练，最低需要6 GB内存。可在单次对话中流畅输出三种语言。日语/中文/英语混合工作流（如跨语言商业文档翻译或摘要）请使用Qwen3 8B。',
           '重要提示：日语分词对同款模型约比英语重30%。能以8 tok/s运行英语7B模型的设备，处理日语时约为5–6 tok/s。请将此纳入硬件决策中。仅CPU模型推荐参见<a href="/zh/local-llms/best-cpu-only-llm" class="text-primary hover:underline">最佳纯CPU本地LLM</a>；完整配置指南参见<a href="/zh/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android最佳本地LLM应用完整指南</a>。',
         ],
       },
@@ -736,11 +736,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '日语本地LLM模型可以离线运行吗？',
-            a: '可以。Rinna 3.6B、ELYZA-7B和Qwen3 7B这三款模型在首次下载后均可完全离线运行。不向任何服务器发送数据，满足APPI（個人情報保護法）关于个人信息本地化处理的要求。',
+            a: '可以。Rinna 3.6B、ELYZA-7B和Qwen3 8B这三款模型在首次下载后均可完全离线运行。不向任何服务器发送数据，满足APPI（個人情報保護法）关于个人信息本地化处理的要求。',
           },
           {
             q: '6 GB内存的Xperia适合运行哪款模型？',
-            a: 'ELYZA-7B和Qwen3 7B最低均需6 GB内存。在8 GB内存的Xperia 5 V上，两款模型均可流畅运行。4–6 GB内存的Xperia 10 VI建议选择Rinna 3.6B。分步配置指南请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia本地LLM指南</a>。',
+            a: 'ELYZA-7B和Qwen3 8B最低均需6 GB内存。在8 GB内存的Xperia 5 V上，两款模型均可流畅运行。4–6 GB内存的Xperia 10 VI建议选择Rinna 3.6B。分步配置指南请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia本地LLM指南</a>。',
           },
           {
             q: '使用本地LLM在APPI合规方面有哪些优势？',
@@ -759,12 +759,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ko.webp',
     title: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
     seoTitle: '일본 Android 로컬 LLM 앱 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 7B를 추가합니다. 일본에서 완전히 오프라인으로 동작합니다.',
+    metaDescription: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 8B를 추가합니다. 일본에서 완전히 오프라인으로 동작합니다.',
     publishDate: '2026-05-27',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
-    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 7B'],
+    current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'Qwen3 8B'],
     current_hardware_mentioned: ['Xperia 1 VI', 'Xperia 5 V', 'Xperia 10 VI', 'Samsung Galaxy S24'],
     educationalLevel: 'Intermediate',
     audience: '일본에서 로컬 LLM을 실행하는 Android 사용자',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'MLC Chat: 가장 간단한 설정, Rinna 3.6B를 포함한 사전 최적화 모델 제공',
           'PocketPal AI: ELYZA-7B를 포함한 모든 GGUF 모델 지원, 완전한 일본어 지원',
-          'Termux + Ollama: Qwen3 7B를 포함한 전체 Ollama 라이브러리, 8 GB RAM 필요',
+          'Termux + Ollama: Qwen3 8B를 포함한 전체 Ollama 라이브러리, 8 GB RAM 필요',
         ],
         updatedDate: '2026-05',
       },
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'TechArticle',
       inLanguage: 'ko',
       headline: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
-      description: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 7B를 추가합니다.',
+      description: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 8B를 추가합니다.',
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-japan-android',
       datePublished: '2026-05-27',
       dateModified: '2026-05-27',
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'MLC Chat은 일본에서 가장 간단한 시작점입니다 — 일본 Google Play 스토어에서 제공되며 Rinna 3.6B를 포함한 사전 최적화된 일본어 모델을 탑재합니다',
           'PocketPal AI는 Hugging Face의 모든 GGUF 모델을 지원하며, 7B 수준에서 가장 강력한 일본어 지시 추종 모델인 ELYZA-7B도 포함합니다',
-          'Termux + Ollama는 Android에서 Qwen3 7B를 포함한 전체 Ollama 모델 라이브러리를 사용할 수 있게 하여 일본어/중국어/영어 다국어 활용이 가능하지만 8 GB RAM이 필요합니다',
+          'Termux + Ollama는 Android에서 Qwen3 8B를 포함한 전체 Ollama 모델 라이브러리를 사용할 수 있게 하여 일본어/중국어/영어 다국어 활용이 가능하지만 8 GB RAM이 필요합니다',
           '일본어 토크나이저는 동일한 모델에서 영어보다 약 30% 느리게 동작합니다 — 모바일 기기에서 일본어 추론 벤치마크 시 tok/s가 낮게 나올 것을 예상하십시오',
         ],
       },
@@ -842,12 +842,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>2026년 5월 기준, 일본 Play 스토어에서 일본어 로컬 LLM을 지원하는 Android 앱은 세 가지입니다: MLC Chat, PocketPal AI, Termux 경유 Ollama.</strong> 세 앱 모두 최초 모델 다운로드 이후 완전히 오프라인으로 동작합니다 — 어떤 데이터도 클라우드 서버에 도달하지 않으므로, 개인 대화에 관한 APPI(個人情報保護法, 일본 개인정보 보호법) 준수를 직접적으로 충족합니다.',
           'MLC Chat은 첫 번째 토큰까지의 시간이 가장 짧습니다. 사전 최적화 모델 목록에는 Rinna 3.6B가 포함되어 있으며, 이는 3 GB RAM에서도 실행 가능한 경량 일본어 네이티브 모델입니다. 12 GB RAM을 탑재한 Xperia 1 VI 또는 Samsung Galaxy S24에서 Rinna 3.6B Q4는 6–10 tok/s로 동작하여 대화형 사용에 충분합니다. 명령줄 경험 없이도 10분 이내에 설정이 완료됩니다.',
-          'Hugging Face 커뮤니티가 개발한 PocketPal AI는 Hugging Face에서 모든 GGUF 파일을 직접 불러올 수 있습니다. 이로 인해 앱의 공식 릴리스를 기다리지 않고도 ELYZA-7B와 Qwen3 7B를 사용할 수 있습니다. 단점은 수동 모델 선택이 필요하여 설정 시간이 약간 더 길다는 점입니다. 기기별 RAM 및 저장 공간 팁은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참고하십시오.',
+          'Hugging Face 커뮤니티가 개발한 PocketPal AI는 Hugging Face에서 모든 GGUF 파일을 직접 불러올 수 있습니다. 이로 인해 앱의 공식 릴리스를 기다리지 않고도 ELYZA-7B와 Qwen3 8B를 사용할 수 있습니다. 단점은 수동 모델 선택이 필요하여 설정 시간이 약간 더 길다는 점입니다. 기기별 RAM 및 저장 공간 팁은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참고하십시오.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '일본 Android에서 로컬 LLM을 실행하는 최고의 앱은 MLC Chat(Rinna 3.6B), PocketPal AI(ELYZA-7B), Termux + Ollama(Qwen3 7B)입니다.',
+            text: '일본 Android에서 로컬 LLM을 실행하는 최고의 앱은 MLC Chat(Rinna 3.6B), PocketPal AI(ELYZA-7B), Termux + Ollama(Qwen3 8B)입니다.',
           },
           {
             type: 'plain-terms',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { '앱': 'MLC Chat', '최소 RAM': '4 GB', '일본어 모델 지원': 'Rinna 3.6B 포함 사전 최적화 모델' },
           { '앱': 'PocketPal AI', '최소 RAM': '4 GB', '일본어 모델 지원': 'ELYZA-7B 포함 모든 GGUF 모델' },
-          { '앱': 'Termux + Ollama', '최소 RAM': '8 GB', '일본어 모델 지원': 'Qwen3 7B 포함 전체 Ollama 라이브러리' },
+          { '앱': 'Termux + Ollama', '최소 RAM': '8 GB', '일본어 모델 지원': 'Qwen3 8B 포함 전체 Ollama 라이브러리' },
         ],
         note: '결정 가이드: 초보자는 MLC Chat을 사용하십시오. 터미널 없이 모델 유연성이 필요하면 PocketPal AI를 선택하십시오. Termux + Ollama는 8 GB RAM 이상에서만 사용하십시오.',
       },
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>2026년 5월 기준, 세 가지 일본어 지원 모델이 중급부터 플래그십 Android 기기의 실용적인 사용 사례를 커버합니다.</strong> 올바른 선택은 RAM 용량, 주요 작업, 다국어 출력 필요 여부에 따라 달라집니다.',
           'Rinna 3.6B는 경량 옵션입니다: 일본어 네이티브 모델로 일본어 웹 코퍼스로 학습되었으며, 최소 3 GB RAM에서 동작합니다. 일상 대화, 텍스트 요약, 단문 생성에 적합합니다. Xperia 10 VI(4–6 GB RAM) 또는 7B 모델이 너무 느릴 중급 기기에 적합한 선택입니다.',
           'ELYZA-7B는 7B 수준에서 가장 강력한 일본어 지시 추종 성능을 제공합니다. 최소 6 GB RAM이 필요하며 Xperia 5 V, Xperia 1 VI, Samsung Galaxy S24에서 편안하게 동작합니다. 다단계 지시, 구조화된 출력, 세밀한 일본어 작문이 필요한 작업에 ELYZA-7B를 사용하십시오.',
-          'Qwen3 7B는 다국어 선택지입니다: 일본어, 중국어, 영어 코퍼스로 학습되었습니다. 최소 6 GB RAM이 필요하며 하나의 대화에서 세 언어 모두에 유창한 출력을 생성합니다. 예를 들어 다국어 비즈니스 문서 번역 또는 요약과 같이 일본어/중국어/영어가 혼용되는 작업에 Qwen3 7B를 사용하십시오.',
+          'Qwen3 8B는 다국어 선택지입니다: 일본어, 중국어, 영어 코퍼스로 학습되었습니다. 최소 6 GB RAM이 필요하며 하나의 대화에서 세 언어 모두에 유창한 출력을 생성합니다. 예를 들어 다국어 비즈니스 문서 번역 또는 요약과 같이 일본어/중국어/영어가 혼용되는 작업에 Qwen3 8B를 사용하십시오.',
           '중요: 일본어 토크나이저는 동일한 모델에서 영어보다 약 30% 더 무겁습니다. 영어 7B 모델을 8 tok/s로 실행하는 기기는 일본어에서 약 5–6 tok/s를 출력합니다. 하드웨어 결정 시 이 점을 고려하십시오. CPU 전용 모델 추천은 <a href="/ko/local-llms/best-cpu-only-llm" class="text-primary hover:underline">최고의 CPU 전용 LLM</a>을 참조하십시오. 전체 설정 가이드는 <a href="/ko/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android 최고의 로컬 LLM 앱 가이드</a>를 참조하십시오.',
         ],
       },
@@ -878,11 +878,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '일본어 로컬 LLM 모델은 오프라인에서도 동작합니까?',
-            a: '그렇습니다. Rinna 3.6B, ELYZA-7B, Qwen3 7B 세 모델 모두 최초 다운로드 이후 완전히 오프라인으로 동작합니다. 어떤 서버에도 데이터가 전송되지 않으므로 개인정보의 로컬 처리에 관한 APPI 요건을 충족합니다.',
+            a: '그렇습니다. Rinna 3.6B, ELYZA-7B, Qwen3 8B 세 모델 모두 최초 다운로드 이후 완전히 오프라인으로 동작합니다. 어떤 서버에도 데이터가 전송되지 않으므로 개인정보의 로컬 처리에 관한 APPI 요건을 충족합니다.',
           },
           {
             q: '6 GB RAM의 Xperia에서 어떤 모델이 가장 잘 동작합니까?',
-            a: 'ELYZA-7B와 Qwen3 7B 모두 최소 6 GB RAM에서 동작합니다. 8 GB RAM을 탑재한 Xperia 5 V에서는 두 모델 모두 편안한 속도로 실행됩니다. 4–6 GB RAM의 Xperia 10 VI에는 Rinna 3.6B가 더 적합합니다. 단계별 설정 방법은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참조하십시오.',
+            a: 'ELYZA-7B와 Qwen3 8B 모두 최소 6 GB RAM에서 동작합니다. 8 GB RAM을 탑재한 Xperia 5 V에서는 두 모델 모두 편안한 속도로 실행됩니다. 4–6 GB RAM의 Xperia 10 VI에는 Rinna 3.6B가 더 적합합니다. 단계별 설정 방법은 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia 로컬 LLM 가이드</a>를 참조하십시오.',
           },
           {
             q: '로컬 LLM 실행 시 APPI 측면의 이점은 무엇입니까?',

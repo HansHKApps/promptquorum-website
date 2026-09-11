@@ -481,7 +481,7 @@ schema: {
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: 'Interactive 14-slide deck: 5 best beginner local LLM models for 2026 -- Llama 3.2 3B (2.5 GB RAM), Phi-4 Mini (2.5 GB), Gemma 4 E2B (1.7 GB), Llama 3.1 8B (5.5 GB), Qwen3 8B (5.2 GB). Covers model comparison table, RAM decision guide, regional compliance (EU/Japan/China/Korea), common mistakes, and first-run steps. Note: slides reflect the April 2026 lineup (Mistral Small v0.3, Qwen3 7B); updated recommendations are in the text above pending slide regeneration. Download the PDF as a beginner local LLM reference card.',
+      gammaDescription: 'Interactive 14-slide deck: 5 best beginner local LLM models for 2026 -- Llama 3.2 3B (2.5 GB RAM), Phi-4 Mini (2.5 GB), Gemma 4 E2B (1.7 GB), Llama 3.1 8B (5.5 GB), Qwen3 8B (5.2 GB). Covers model comparison table, RAM decision guide, regional compliance (EU/Japan/China/Korea), common mistakes, and first-run steps. Note: slides reflect the April 2026 lineup (Mistral Small v0.3, Qwen3 8B); updated recommendations are in the text above pending slide regeneration. Download the PDF as a beginner local LLM reference card.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -886,7 +886,7 @@ schema: {
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: 'Presentación interactiva de 14 diapositivas: 5 mejores modelos LLM locales para principiantes en 2026 -- Llama 3.2 3B (2,5 GB RAM), Phi-4 Mini (2,5 GB), Gemma 4 E2B (1,7 GB), Llama 3.1 8B (5,5 GB), Qwen3 8B (5,2 GB). Cubre tabla de comparación de modelos, guía de decisión por RAM, cumplimiento regional (UE/Japón/China/Corea), errores comunes y primeros pasos. Nota: las diapositivas reflejan la selección de abril de 2026 (Mistral Small v0.3, Qwen3 7B); las recomendaciones actualizadas están en el texto anterior, pendiente de regenerar las diapositivas. Descarga el PDF como tarjeta de referencia de LLM local para principiantes.',
+      gammaDescription: 'Presentación interactiva de 14 diapositivas: 5 mejores modelos LLM locales para principiantes en 2026 -- Llama 3.2 3B (2,5 GB RAM), Phi-4 Mini (2,5 GB), Gemma 4 E2B (1,7 GB), Llama 3.1 8B (5,5 GB), Qwen3 8B (5,2 GB). Cubre tabla de comparación de modelos, guía de decisión por RAM, cumplimiento regional (UE/Japón/China/Corea), errores comunes y primeros pasos. Nota: las diapositivas reflejan la selección de abril de 2026 (Mistral Small v0.3, Qwen3 8B); las recomendaciones actualizadas están en el texto anterior, pendiente de regenerar las diapositivas. Descarga el PDF como tarjeta de referencia de LLM local para principiantes.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -1298,7 +1298,7 @@ schema: {
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: 'عرض تقديمي تفاعلي من 14 شريحة: أفضل 5 نماذج LLM محلية للمبتدئين في 2026 -- Llama 3.2 3B (2.5 GB RAM)، Phi-4 Mini (2.5 GB)، Gemma 4 E2B (1.7 GB)، Llama 3.1 8B (5.5 GB)، Qwen3 8B (5.2 GB). يغطي جدول مقارنة النماذج، ودليل القرار حسب RAM، والامتثال الإقليمي (الاتحاد الأوروبي/اليابان/الصين/كوريا)، والأخطاء الشائعة، والخطوات الأولى. نزّل ملف PDF كبطاقة مرجعية لـ LLM المحلي للمبتدئين. ملاحظة: تعكس الشرائح تشكيلة أبريل 2026 (Mistral Small v0.3، Qwen3 7B)؛ التوصيات المحدّثة موجودة في النص أعلاه بانتظار إعادة توليد الشرائح.',
+      gammaDescription: 'عرض تقديمي تفاعلي من 14 شريحة: أفضل 5 نماذج LLM محلية للمبتدئين في 2026 -- Llama 3.2 3B (2.5 GB RAM)، Phi-4 Mini (2.5 GB)، Gemma 4 E2B (1.7 GB)، Llama 3.1 8B (5.5 GB)، Qwen3 8B (5.2 GB). يغطي جدول مقارنة النماذج، ودليل القرار حسب RAM، والامتثال الإقليمي (الاتحاد الأوروبي/اليابان/الصين/كوريا)، والأخطاء الشائعة، والخطوات الأولى. نزّل ملف PDF كبطاقة مرجعية لـ LLM المحلي للمبتدئين. ملاحظة: تعكس الشرائح تشكيلة أبريل 2026 (Mistral Small v0.3، Qwen3 8B)؛ التوصيات المحدّثة موجودة في النص أعلاه بانتظار إعادة توليد الشرائح.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -1875,7 +1875,7 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: 'Interaktives 14-Folien-Deck: 5 beste Einsteiger-LLMs 2026 — Llama 3.2 3B (2,5 GB RAM), Phi-4 Mini (2,5 GB), Gemma 4 E2B (1,7 GB), Llama 3.1 8B (5,5 GB), Qwen3 8B (5,2 GB). Vergleichstabelle, RAM-Entscheidungsleitfaden, regionale Compliance und erste Schritte. Hinweis: Die Folien spiegeln noch die April-2026-Aufstellung wider (Mistral Small v0.3, Qwen3 7B); aktualisierte Empfehlungen stehen im Text oben, bis die Folien neu erstellt werden. PDF als Referenzkarte herunterladen.',
+      gammaDescription: 'Interaktives 14-Folien-Deck: 5 beste Einsteiger-LLMs 2026 — Llama 3.2 3B (2,5 GB RAM), Phi-4 Mini (2,5 GB), Gemma 4 E2B (1,7 GB), Llama 3.1 8B (5,5 GB), Qwen3 8B (5,2 GB). Vergleichstabelle, RAM-Entscheidungsleitfaden, regionale Compliance und erste Schritte. Hinweis: Die Folien spiegeln noch die April-2026-Aufstellung wider (Mistral Small v0.3, Qwen3 8B); aktualisierte Empfehlungen stehen im Text oben, bis die Folien neu erstellt werden. PDF als Referenzkarte herunterladen.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -2279,7 +2279,7 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: 'Présentation interactive de 14 diapositives : 5 meilleurs modèles LLM locaux pour débutants 2026 — Llama 3.2 3B (2.5 Go RAM), Phi-4 Mini (2.5 Go), Gemma 4 E2B (1.7 Go), Llama 3.1 8B (5.5 Go), Qwen3 8B (5.2 Go). Tableau comparatif, guide de décision RAM, conformité régionale et premiers pas. Remarque : les diapositives reflètent la gamme d\'avril 2026 (Mistral Small v0.3, Qwen3 7B) ; les recommandations mises à jour se trouvent dans le texte ci-dessus, en attendant la régénération des diapositives. Téléchargez le PDF comme carte de référence LLM local débutant.',
+      gammaDescription: 'Présentation interactive de 14 diapositives : 5 meilleurs modèles LLM locaux pour débutants 2026 — Llama 3.2 3B (2.5 Go RAM), Phi-4 Mini (2.5 Go), Gemma 4 E2B (1.7 Go), Llama 3.1 8B (5.5 Go), Qwen3 8B (5.2 Go). Tableau comparatif, guide de décision RAM, conformité régionale et premiers pas. Remarque : les diapositives reflètent la gamme d\'avril 2026 (Mistral Small v0.3, Qwen3 8B) ; les recommandations mises à jour se trouvent dans le texte ci-dessus, en attendant la régénération des diapositives. Téléchargez le PDF comme carte de référence LLM local débutant.',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -3136,7 +3136,7 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-      gammaDescription: '交互式14张幻灯片：2026年初学者最佳本地LLM — Llama 3.2 3B（2.5 GB内存）、Phi-4 Mini（2.5 GB）、Gemma 4 E2B（1.7 GB）、Llama 3.1 8B（5.5 GB）、Qwen3 8B（5.2 GB）。模型对比表、内存决策指南、地区合规性（欧盟/日本/中国/韩国）、常见错误和入门步骤。注意：幻灯片内容仍反映2026年4月的阵容（Mistral Small v0.3、Qwen3 7B）；最新推荐已更新于上方正文，幻灯片待重新生成。下载PDF作为初学者本地LLM参考卡。',
+      gammaDescription: '交互式14张幻灯片：2026年初学者最佳本地LLM — Llama 3.2 3B（2.5 GB内存）、Phi-4 Mini（2.5 GB）、Gemma 4 E2B（1.7 GB）、Llama 3.1 8B（5.5 GB）、Qwen3 8B（5.2 GB）。模型对比表、内存决策指南、地区合规性（欧盟/日本/中国/韩国）、常见错误和入门步骤。注意：幻灯片内容仍反映2026年4月的阵容（Mistral Small v0.3、Qwen3 8B）；最新推荐已更新于上方正文，幻灯片待重新生成。下载PDF作为初学者本地LLM参考卡。',
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -3554,7 +3554,7 @@ schema: {
       inLanguage: 'ko',
     },
     gammaEmbedUrl: '/presentations/best-beginner-local-llm-models-static.html',
-    gammaDescription: '인터랙티브 14슬라이드 덱: 2026년 초보자 최고 로컬 LLM 5선 -- Llama 3.2 3B (2.5 GB RAM), Phi-4 Mini (2.5 GB), Gemma 4 E2B (1.7 GB), Llama 3.1 8B (5.5 GB), Qwen3 8B (5.2 GB). 모델 비교표, RAM 결정 가이드, 지역별 컴플라이언스 (EU/일본/중국/한국), 흔한 실수, 첫 실행 단계를 다룹니다. 참고: 슬라이드는 2026년 4월 라인업(Mistral Small v0.3, Qwen3 7B)을 반영하며, 최신 추천 내용은 슬라이드 재생성 전까지 위 본문 텍스트를 참고하세요. 초보자 로컬 LLM 참고 카드로 PDF를 다운로드하세요.',
+    gammaDescription: '인터랙티브 14슬라이드 덱: 2026년 초보자 최고 로컬 LLM 5선 -- Llama 3.2 3B (2.5 GB RAM), Phi-4 Mini (2.5 GB), Gemma 4 E2B (1.7 GB), Llama 3.1 8B (5.5 GB), Qwen3 8B (5.2 GB). 모델 비교표, RAM 결정 가이드, 지역별 컴플라이언스 (EU/일본/중국/한국), 흔한 실수, 첫 실행 단계를 다룹니다. 참고: 슬라이드는 2026년 4월 라인업(Mistral Small v0.3, Qwen3 8B)을 반영하며, 최신 추천 내용은 슬라이드 재생성 전까지 위 본문 텍스트를 참고하세요. 초보자 로컬 LLM 참고 카드로 PDF를 다운로드하세요.',
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',

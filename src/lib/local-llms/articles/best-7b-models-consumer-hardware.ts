@@ -178,7 +178,7 @@ schema: {
           id: 'table',
           title: 'Which 7B Model Has the Best Performance Specs?',
           rows: [
-            { 'Metric': 'VRAM Required', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '8GB', 'Phi 2.7B': '4GB' },
+            { 'Metric': 'VRAM Required', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '~6GB', 'Phi 2.7B': '4GB' },
             { 'Metric': 'Tokens/sec (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Metric': 'Reasoning (MATH)', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { 'Metric': 'Code (HumanEval)', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -292,7 +292,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — MATH, HumanEval, MTBench benchmarks (Meta AI, 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — Instruction-following and reasoning evaluation (Mistral AI, 2023)',
-            '[Qwen3 Documentation](https://huggingface.co/Qwen/Qwen3-7B) — Multilingual support and benchmark results (Alibaba Cloud, 2024)',
+            '[Qwen3 Documentation](https://huggingface.co/Qwen/Qwen3-8B) — Multilingual support and benchmark results (Alibaba Cloud, 2024)',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Live rankings of 7B models across MATH, HumanEval, and instruction tasks (HuggingFace)',
           ],
         },
@@ -461,7 +461,7 @@ schema: {
           id: 'table',
           title: '¿Qué modelo 7B tiene las mejores especificaciones de rendimiento?',
           rows: [
-            { 'Métrica': 'VRAM requerido', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '8 GB', 'Phi 2.7B': '4 GB' },
+            { 'Métrica': 'VRAM requerido', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '~6 GB', 'Phi 2.7B': '4 GB' },
             { 'Métrica': 'Tokens/seg (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Métrica': 'Razonamiento (MATH)', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { 'Métrica': 'Código (HumanEval)', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -574,7 +574,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — Benchmarks MATH, HumanEval y MTBench (Meta AI, 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — Evaluación de seguimiento de instrucciones y razonamiento (Mistral AI, 2023)',
-            '[Documentación de Qwen3](https://huggingface.co/Qwen/Qwen3-7B) — Soporte multilingüe y resultados de benchmarks (Alibaba Cloud, 2024)',
+            '[Documentación de Qwen3](https://huggingface.co/Qwen/Qwen3-8B) — Soporte multilingüe y resultados de benchmarks (Alibaba Cloud, 2024)',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Rankings en vivo de modelos 7B en MATH, HumanEval y tareas de instrucciones (HuggingFace)',
           ],
         },
@@ -746,7 +746,7 @@ schema: {
           id: 'table',
           title: 'أي نموذج 7B يملك أفضل مواصفات أداء؟',
           rows: [
-            { 'Métrica': 'VRAM المطلوبة', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '8 GB', 'Phi 2.7B': '4 GB' },
+            { 'Métrica': 'VRAM المطلوبة', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '~6 GB', 'Phi 2.7B': '4 GB' },
             { 'Métrica': 'Tokens/ثانية (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Métrica': 'الاستدلال (MATH)', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { 'Métrica': 'الكود (HumanEval)', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -859,7 +859,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — اختبارات MATH وHumanEval وMTBench المرجعية (Meta AI، 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — تقييم اتباع التعليمات والاستدلال (Mistral AI، 2023)',
-            '[توثيق Qwen3](https://huggingface.co/Qwen/Qwen3-7B) — الدعم متعدد اللغات ونتائج الاختبارات المرجعية (Alibaba Cloud، 2024)',
+            '[توثيق Qwen3](https://huggingface.co/Qwen/Qwen3-8B) — الدعم متعدد اللغات ونتائج الاختبارات المرجعية (Alibaba Cloud، 2024)',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — ترتيبات حية لنماذج 7B في MATH وHumanEval ومهام التعليمات (HuggingFace)',
           ],
         },
@@ -969,7 +969,7 @@ schema: {
           id: 'table',
           title: 'Qual modelo 7B tem as melhores especificações de desempenho?',
           rows: [
-            { 'Métrica': 'VRAM necessária', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '8 GB', 'Phi 2.7B': '4 GB' },
+            { 'Métrica': 'VRAM necessária', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '~6 GB', 'Phi 2.7B': '4 GB' },
             { 'Métrica': 'Tokens/s (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Métrica': 'Raciocínio (MATH)', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { 'Métrica': 'Código (HumanEval)', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -1069,7 +1069,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) -- Benchmarks MATH, HumanEval e MTBench (Meta AI, 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) -- Avaliação de seguimento de instruções e raciocínio (Mistral AI, 2023)',
-            '[Documentação do Qwen3](https://huggingface.co/Qwen/Qwen3-7B) -- Suporte multilíngue e resultados de benchmarks (Alibaba Cloud, 2024)',
+            '[Documentação do Qwen3](https://huggingface.co/Qwen/Qwen3-8B) -- Suporte multilíngue e resultados de benchmarks (Alibaba Cloud, 2024)',
           ],
         },
       },
@@ -1252,7 +1252,7 @@ schema: {
           id: 'table',
           title: 'Welches 7B-Modell hat die besten Leistungswerte?',
           rows: [
-            { 'Kenngröße': 'Benötigtes VRAM', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '8 GB', 'Phi 2.7B': '4 GB' },
+            { 'Kenngröße': 'Benötigtes VRAM', 'Llama 3.1 8B': '8 GB', 'Mistral Small': '8 GB', 'Qwen3 8B': '~6 GB', 'Phi 2.7B': '4 GB' },
             { 'Kenngröße': 'Tokens/Sek. (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Kenngröße': 'Schlussfolgern (MATH)', 'Llama 3.1 8B': '82 %', 'Mistral Small': '75 %', 'Qwen3 8B': '79 %', 'Phi 2.7B': '45 %' },
             { 'Kenngröße': 'Code (HumanEval)', 'Llama 3.1 8B': '73 %', 'Mistral Small': '60 %', 'Qwen3 8B': '64 %', 'Phi 2.7B': '48 %' },
@@ -1368,7 +1368,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — MATH-, HumanEval- und MTBench-Benchmarks (Meta AI, 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — Bewertung der Instruktionsbefolgung und des Reasonings (Mistral AI, 2023)',
-            '[Qwen3 Dokumentation](https://huggingface.co/Qwen/Qwen3-7B) — Mehrsprachige Unterstützung und Benchmark-Ergebnisse (Alibaba Cloud, 2024)',
+            '[Qwen3 Dokumentation](https://huggingface.co/Qwen/Qwen3-8B) — Mehrsprachige Unterstützung und Benchmark-Ergebnisse (Alibaba Cloud, 2024)',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Live-Rankings von 7B-Modellen bei MATH, HumanEval und Instruktionsaufgaben (HuggingFace)',
           ],
         },
@@ -1544,7 +1544,7 @@ schema: {
           id: 'table',
           title: 'Quel modèle 7B offre les meilleures performances ?',
           rows: [
-            { 'Métrique': 'VRAM requis', 'Llama 3.1 8B': '8 Go', 'Mistral Small': '8 Go', 'Qwen3 8B': '8 Go', 'Phi 2.7B': '4 Go' },
+            { 'Métrique': 'VRAM requis', 'Llama 3.1 8B': '8 Go', 'Mistral Small': '8 Go', 'Qwen3 8B': '~6 Go', 'Phi 2.7B': '4 Go' },
             { 'Métrique': 'Tokens/sec (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { 'Métrique': 'Raisonnement (MATH)', 'Llama 3.1 8B': '82 %', 'Mistral Small': '75 %', 'Qwen3 8B': '79 %', 'Phi 2.7B': '45 %' },
             { 'Métrique': 'Code (HumanEval)', 'Llama 3.1 8B': '73 %', 'Mistral Small': '60 %', 'Qwen3 8B': '64 %', 'Phi 2.7B': '48 %' },
@@ -1658,7 +1658,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — Benchmarks MATH, HumanEval et MTBench (Meta AI, 2024)',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — Évaluation du suivi d\'instructions et du raisonnement (Mistral AI, 2023)',
-            '[Documentation Qwen3](https://huggingface.co/Qwen/Qwen3-7B) — Support multilingue et résultats des benchmarks (Alibaba Cloud, 2024)',
+            '[Documentation Qwen3](https://huggingface.co/Qwen/Qwen3-8B) — Support multilingue et résultats des benchmarks (Alibaba Cloud, 2024)',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Classements en direct des modèles 7B sur MATH, HumanEval et les tâches d\'instructions (HuggingFace)',
           ],
         },
@@ -1834,7 +1834,7 @@ schema: {
           id: 'table',
           title: 'どの7Bモデルが最高のパフォーマンス仕様を持つか？',
           rows: [
-            { '指標': '必要VRAM', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '8GB', 'Phi 2.7B': '4GB' },
+            { '指標': '必要VRAM', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '~6GB', 'Phi 2.7B': '4GB' },
             { '指標': 'トークン/秒（RTX 3060）', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { '指標': '推論（MATH）', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { '指標': 'コード（HumanEval）', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -1948,7 +1948,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — MATH、HumanEval、MTBenchベンチマーク（Meta AI、2024）',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — 指示追従と推論の評価（Mistral AI、2023）',
-            '[Qwen3ドキュメント](https://huggingface.co/Qwen/Qwen3-7B) — 多言語サポートとベンチマーク結果（Alibaba Cloud、2024）',
+            '[Qwen3ドキュメント](https://huggingface.co/Qwen/Qwen3-8B) — 多言語サポートとベンチマーク結果（Alibaba Cloud、2024）',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — MATH、HumanEval、指示タスクの7Bモデルライブランキング（HuggingFace）',
           ],
         },
@@ -2116,7 +2116,7 @@ schema: {
           id: 'table',
           title: '哪款7B模型的性能规格最佳？',
           rows: [
-            { '指标': '所需显存', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '8GB', 'Phi 2.7B': '4GB' },
+            { '指标': '所需显存', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '~6GB', 'Phi 2.7B': '4GB' },
             { '指标': 'Tokens/秒（RTX 3060）', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
             { '指标': '推理（MATH）', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
             { '指标': '代码（HumanEval）', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -2229,7 +2229,7 @@ schema: {
           items: [
             '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — MATH、HumanEval、MTBench基准测试（Meta AI，2024）',
             '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — 指令遵循与推理评测（Mistral AI，2023）',
-            '[Qwen3文档](https://huggingface.co/Qwen/Qwen3-7B) — 多语言支持与基准测试结果（阿里云，2024）',
+            '[Qwen3文档](https://huggingface.co/Qwen/Qwen3-8B) — 多语言支持与基准测试结果（阿里云，2024）',
             '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — MATH、HumanEval和指令任务7B模型实时排名（HuggingFace）',
           ],
         },
@@ -2409,7 +2409,7 @@ schema: {
         id: 'table',
         title: '어떤 7B 모델이 가장 뛰어난 성능 사양을 갖추고 있습니까?',
         rows: [
-          { '지표': '필요 VRAM', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '8GB', 'Phi 2.7B': '4GB' },
+          { '지표': '필요 VRAM', 'Llama 3.1 8B': '8GB', 'Mistral Small': '8GB', 'Qwen3 8B': '~6GB', 'Phi 2.7B': '4GB' },
           { '지표': '토큰/초 (RTX 3060)', 'Llama 3.1 8B': '15', 'Mistral Small': '16', 'Qwen3 8B': '15', 'Phi 2.7B': '20' },
           { '지표': '추론 (MATH)', 'Llama 3.1 8B': '82%', 'Mistral Small': '75%', 'Qwen3 8B': '79%', 'Phi 2.7B': '45%' },
           { '지표': '코드 (HumanEval)', 'Llama 3.1 8B': '73%', 'Mistral Small': '60%', 'Qwen3 8B': '64%', 'Phi 2.7B': '48%' },
@@ -2519,7 +2519,7 @@ schema: {
         items: [
           '[Llama 3.1 8B Model Card](https://ai.meta.com/blog/meta-llama-3/) — MATH, HumanEval, MTBench 벤치마크 (Meta AI, 2024)',
           '[Mistral Small Technical Report](https://mistral.ai/news/announcing-mistral-7b/) — 지시 수행 및 추론 평가 (Mistral AI, 2023)',
-          '[Qwen3 문서](https://huggingface.co/Qwen/Qwen3-7B) — 다국어 지원 및 벤치마크 결과 (Alibaba Cloud, 2024)',
+          '[Qwen3 문서](https://huggingface.co/Qwen/Qwen3-8B) — 다국어 지원 및 벤치마크 결과 (Alibaba Cloud, 2024)',
           '[Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — MATH, HumanEval, 지시 작업에 걸친 7B 모델 실시간 순위 (HuggingFace)',
         ],
       },

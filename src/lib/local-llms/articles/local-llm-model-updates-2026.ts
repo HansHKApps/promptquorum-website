@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         q42025: {
           title: 'Which Q4 2025 Models Are Still the Most Important in 2026?',
           image: '/images/model-comparison-2026-en.svg',
-          imageCaption: 'April 2026 local LLM model comparison: Llama 3.3 70B leads at 82% MMLU with 42GB VRAM, Qwen3 7B provides best multilingual support at 74% MMLU and 5GB VRAM, Gemma 3 9B adds vision capabilities, DeepSeek-R1 7B specializes in reasoning tasks at 52% MATH. All runnable via Ollama.',
+          imageCaption: 'April 2026 local LLM model comparison: Llama 3.3 70B leads at 82% MMLU with 42GB VRAM, Qwen3 8B provides best multilingual support at 74% MMLU and 5GB VRAM, Gemma 3 9B adds vision capabilities, DeepSeek-R1 7B specializes in reasoning tasks at 52% MATH. All runnable via Ollama.',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'Released': 'December 2025', 'Key Specs': '82% MMLU, 88% HumanEval, 128K context', 'Still Relevant': 'Yes -- best 70B option' },
             { 'Model': 'Phi-4 14B', 'Released': 'December 2024', 'Key Specs': '84% MMLU -- above its size class', 'Still Relevant': 'Yes -- strong 14B reasoning model' },
@@ -115,14 +115,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'quality-improvement',
           title: 'How Much Has Local LLM Quality Improved from 2024 to 2026?',
           content: [
-            '**The two-year improvement in locally-runnable model quality is substantial.** A 7B model (Qwen3 7B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance -- a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio. For hardware recommendations matching each model class, see [local LLM hardware guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+            '**The two-year improvement in locally-runnable model quality is substantial.** A 7B model (Qwen3 8B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance -- a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio. For hardware recommendations matching each model class, see [local LLM hardware guide 2026](/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-en.svg',
-          imageCaption: 'Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 7B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82-84% (Llama 3.3 70B and Qwen3 72B). Every 18-24 months, local model quality advances by one model generation.',
+          imageCaption: 'Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 8B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82-84% (Llama 3.3 70B and Qwen3 72B). Every 18-24 months, local model quality advances by one model generation.',
           rows: [
             { 'Year': 'Early 2024', 'Best 7B MMLU': '~64% (Mistral Small)', 'Best Local 70B MMLU': '~75% (Llama 3.3 70B)', 'Hardware Needed': '7B: 8 GB RAM; 70B: 48 GB RAM' },
-            { 'Year': 'Late 2025', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: 5 GB RAM; 70B: 40 GB RAM' },
-            { 'Year': 'April 2026', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~84% (Qwen3 72B)', 'Hardware Needed': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
+            { 'Year': 'Late 2025', 'Best 7B MMLU': '~74% (Qwen3 8B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: 5 GB RAM; 70B: 40 GB RAM' },
+            { 'Year': 'April 2026', 'Best 7B MMLU': '~74% (Qwen3 8B)', 'Best Local 70B MMLU': '~84% (Qwen3 72B)', 'Hardware Needed': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
           ],
           columns: ['Year', 'Best 7B MMLU', 'Best Local 70B MMLU', 'Hardware Needed'],
         },
@@ -173,14 +173,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About Local LLM Model Updates in 2026?',
           faqs: [
             { q: 'How quickly do new models appear in Ollama after their open-weight release?', a: 'Typically 1-7 days for major model releases from Meta, Google, Mistral, and Alibaba. The Ollama team prioritizes high-profile releases -- Llama 3.3 70B appeared in the Ollama library 3 days after Meta\'s open-weight release. Smaller or community models may take 2-4 weeks.' },
-            { q: 'Should I upgrade from Llama 3.1 8B to a newer model?', a: 'If you use Llama 3.1 8B for general tasks and are satisfied with quality, upgrading is optional. Qwen3 7B scores slightly higher on benchmarks and has better multilingual and coding support. For most English-focused general use, the practical quality difference is small. Upgrade if your current model struggles on specific tasks.' },
+            { q: 'Should I upgrade from Llama 3.1 8B to a newer model?', a: 'If you use Llama 3.1 8B for general tasks and are satisfied with quality, upgrading is optional. Qwen3 8B scores slightly higher on benchmarks and has better multilingual and coding support. For most English-focused general use, the practical quality difference is small. Upgrade if your current model struggles on specific tasks.' },
             { q: 'Will local models ever match current frontier cloud model quality?', a: 'The trend suggests yes -- with a lag of 18-24 months. GPT-4 (2023, estimated 1.7T parameters) is matched by Llama 3.3 70B (2025, locally runnable). GPT-5.5 (2024) will likely have a locally-runnable equivalent by late 2026 or 2027. The limiting factor is compute efficiency, not algorithmic capability.' },
             { q: 'What happened with DeepSeek and why was it significant?', a: 'DeepSeek-R1 (January 2025) demonstrated that a Chinese AI lab could produce reasoning-capable models competitive with OpenAI o1 at lower training cost. The open-weight release made a frontier-class reasoning model locally available for the first time. DeepSeek-R1 7B achieves 52% on MATH -- nearly double the 28% of Mistral Small -- specifically because of its chain-of-thought training methodology.' },
             { q: 'What is Llama 4 and is it available locally yet?', a: 'Llama 4 Scout is a mixture-of-experts model (17B active / 109B total parameters, 16 experts) with long-context (10M-token claimed) and multimodal support. It is available in the Ollama library via `ollama pull llama4:scout`, though it needs approximately 55 GB of VRAM at Q4 quantization -- out of reach for most consumer hardware.' },
             { q: 'What are Kimi K2.6, DeepSeek V4, GLM-5.1, and gpt-oss -- are they worth tracking too?', a: 'Yes -- all four released between April and June 2026 and are now part of the current best-in-class set. Kimi K2.6 (Moonshot AI, April 20, 2026) is a frontier coding model, SWE-Bench Pro 58.6, later followed by the coding-focused Kimi K2.7 Code (June 2026). DeepSeek V4 Pro (April 23, 2026) is an algorithmic-coding specialist at 93.5% LiveCodeBench, with a lighter DeepSeek V4 Flash sibling for smaller GPUs. GLM-5.1 (April 7, 2026) led structured code generation until GLM-5.2 superseded it two months later. OpenAI\'s gpt-oss:20b/120b (2026) are open-weight MoE models -- the 20b variant runs in 16 GB at roughly o3-mini reasoning level. See [Top Open Source Models on Ollama](/local-llms/top-open-source-models-ollama) for exact pull commands and benchmarks.' },
             { q: 'Are there any local models specifically for enterprise or regulated industries in 2026?', a: 'Mistral AI provides enterprise-grade support contracts for Mistral models. Their European origin is relevant for GDPR compliance (EU AI Act effective February 2025). For healthcare (HIPAA) or finance (SOC 2), any locally-deployed model can meet data residency requirements -- the model itself is data-neutral. The compliance work is in the deployment infrastructure, not the model selection.' },
             { q: 'Which model should a complete beginner start with in 2026?', a: 'Llama 3.2 3B or Gemma 3 4B are the best beginner choices. Both run on modest hardware (4-6 GB VRAM), have extensive documentation, and perform well on general tasks. Llama 3.2 3B has more community guides and tool integrations. Gemma 3 4B is newer, slightly faster, and supports vision capabilities. For non-technical users, LM Studio makes both easy to install and use without the command line.' },
-            { q: 'Are new models worth the effort to update if my current model works well?', a: 'Only if you hit specific quality limits with your current model. If your 7B or 8B model satisfies your use cases, upgrading is optional. However, if you notice reasoning errors, poor multilingual support, or weak coding ability, testing a newer model is worthwhile. Qwen3 7B (2025) outperforms Llama 3.1 8B on most benchmarks, making it a safe upgrade target for users seeking incremental improvement.' },
+            { q: 'Are new models worth the effort to update if my current model works well?', a: 'Only if you hit specific quality limits with your current model. If your 7B or 8B model satisfies your use cases, upgrading is optional. However, if you notice reasoning errors, poor multilingual support, or weak coding ability, testing a newer model is worthwhile. Qwen3 8B (2025) outperforms Llama 3.1 8B on most benchmarks, making it a safe upgrade target for users seeking incremental improvement.' },
           ],
         },
         sources: {
@@ -336,7 +336,7 @@ schema: {
             'name': 'Should I upgrade from Llama 3.1 8B to a newer model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'If you use Llama 3.1 8B for general tasks and are satisfied with quality, upgrading is optional. Qwen3 7B scores slightly higher on benchmarks and has better multilingual and coding support. For most English-focused general use, the practical quality difference is small. Upgrade if your current model struggles on specific tasks.',
+              'text': 'If you use Llama 3.1 8B for general tasks and are satisfied with quality, upgrading is optional. Qwen3 8B scores slightly higher on benchmarks and has better multilingual and coding support. For most English-focused general use, the practical quality difference is small. Upgrade if your current model struggles on specific tasks.',
             },
           },
           {
@@ -392,7 +392,7 @@ schema: {
             'name': 'Are new models worth the effort to update if my current model works well?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Only if you hit specific quality limits with your current model. If your 7B or 8B model satisfies your use cases, upgrading is optional. However, if you notice reasoning errors, poor multilingual support, or weak coding ability, testing a newer model is worthwhile. Qwen3 7B (2025) outperforms Llama 3.1 8B on most benchmarks, making it a safe upgrade target for users seeking incremental improvement.',
+              'text': 'Only if you hit specific quality limits with your current model. If your 7B or 8B model satisfies your use cases, upgrading is optional. However, if you notice reasoning errors, poor multilingual support, or weak coding ability, testing a newer model is worthwhile. Qwen3 8B (2025) outperforms Llama 3.1 8B on most benchmarks, making it a safe upgrade target for users seeking incremental improvement.',
             },
           },
         ],
@@ -468,7 +468,7 @@ schema: {
         q42025: {
           title: '¿Qué modelos del Q4 2025 siguen siendo los más importantes en 2026?',
           image: '/images/model-comparison-2026-es.svg',
-          imageCaption: 'Comparación de modelos LLM locales en abril de 2026: Llama 3.3 70B lidera con 82% MMLU y 42 GB VRAM, Qwen3 7B ofrece el mejor soporte multilingüe con 74% MMLU y 5 GB VRAM, Gemma 3 9B añade capacidades de visión, DeepSeek-R1 7B se especializa en tareas de razonamiento con 52% MATH. Todos ejecutables mediante Ollama.',
+          imageCaption: 'Comparación de modelos LLM locales en abril de 2026: Llama 3.3 70B lidera con 82% MMLU y 42 GB VRAM, Qwen3 8B ofrece el mejor soporte multilingüe con 74% MMLU y 5 GB VRAM, Gemma 3 9B añade capacidades de visión, DeepSeek-R1 7B se especializa en tareas de razonamiento con 52% MATH. Todos ejecutables mediante Ollama.',
           rows: [
             { 'Modelo': 'Llama 3.3 70B', 'Lanzamiento': 'Diciembre 2025', 'Especificaciones clave': '82% MMLU, 88% HumanEval, contexto 128K', 'Sigue siendo relevante': 'Sí -- mejor opción 70B' },
             { 'Modelo': 'Phi-4 14B', 'Lanzamiento': 'Diciembre 2024', 'Especificaciones clave': '84% MMLU -- por encima de su clase de tamaño', 'Sigue siendo relevante': 'Sí -- sólido modelo de razonamiento 14B' },
@@ -492,14 +492,14 @@ schema: {
           id: 'quality-improvement',
           title: '¿Cuánto ha mejorado la calidad de los LLM locales de 2024 a 2026?',
           content: [
-            '**La mejora de dos años en la calidad de los modelos ejecutables localmente es sustancial.** A abril de 2026, un modelo de 7B (Qwen3 7B, 74% MMLU) iguala el rendimiento en benchmark de un modelo de 13B de principios de 2024. Un modelo de 70B (Llama 3.3 70B, 82% MMLU) iguala el rendimiento de GPT-4 (2023) -- un modelo que hace 3 años requería infraestructura de servidores de mil millones de dólares ahora funciona en un Mac Studio. Para recomendaciones de hardware según cada clase de modelo, consulta la [guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+            '**La mejora de dos años en la calidad de los modelos ejecutables localmente es sustancial.** A abril de 2026, un modelo de 7B (Qwen3 8B, 74% MMLU) iguala el rendimiento en benchmark de un modelo de 13B de principios de 2024. Un modelo de 70B (Llama 3.3 70B, 82% MMLU) iguala el rendimiento de GPT-4 (2023) -- un modelo que hace 3 años requería infraestructura de servidores de mil millones de dólares ahora funciona en un Mac Studio. Para recomendaciones de hardware según cada clase de modelo, consulta la [guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-es.svg',
-          imageCaption: 'Mejora de calidad de LLM locales 2024-2026: los modelos de clase 7B mejoraron del 64% MMLU (Mistral Small, principios de 2024) al 74% (Qwen3 7B, abril de 2026). La clase 70B mejoró del 75% (Llama 3.3 70B) al 82-84% (Llama 3.3 70B y Qwen3 72B). Cada 18-24 meses, la calidad de los modelos locales avanza una generación.',
+          imageCaption: 'Mejora de calidad de LLM locales 2024-2026: los modelos de clase 7B mejoraron del 64% MMLU (Mistral Small, principios de 2024) al 74% (Qwen3 8B, abril de 2026). La clase 70B mejoró del 75% (Llama 3.3 70B) al 82-84% (Llama 3.3 70B y Qwen3 72B). Cada 18-24 meses, la calidad de los modelos locales avanza una generación.',
           rows: [
             { 'Año': 'Principios de 2024', 'Mejor 7B MMLU': '~64% (Mistral Small)', 'Mejor 70B local MMLU': '~75% (Llama 3.3 70B)', 'Hardware necesario': '7B: 8 GB RAM; 70B: 48 GB RAM' },
-            { 'Año': 'Finales de 2025', 'Mejor 7B MMLU': '~74% (Qwen3 7B)', 'Mejor 70B local MMLU': '~82% (Llama 3.3 70B)', 'Hardware necesario': '7B: 5 GB RAM; 70B: 40 GB RAM' },
-            { 'Año': 'Abril de 2026', 'Mejor 7B MMLU': '~74% (Qwen3 7B)', 'Mejor 70B local MMLU': '~84% (Qwen3 72B)', 'Hardware necesario': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
+            { 'Año': 'Finales de 2025', 'Mejor 7B MMLU': '~74% (Qwen3 8B)', 'Mejor 70B local MMLU': '~82% (Llama 3.3 70B)', 'Hardware necesario': '7B: 5 GB RAM; 70B: 40 GB RAM' },
+            { 'Año': 'Abril de 2026', 'Mejor 7B MMLU': '~74% (Qwen3 8B)', 'Mejor 70B local MMLU': '~84% (Qwen3 72B)', 'Hardware necesario': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
           ],
           columns: ['Año', 'Mejor 7B MMLU', 'Mejor 70B local MMLU', 'Hardware necesario'],
         },
@@ -550,13 +550,13 @@ schema: {
           title: 'Preguntas frecuentes sobre actualizaciones de modelos LLM locales en 2026',
           faqs: [
             { q: '¿Con qué rapidez aparecen los nuevos modelos en Ollama tras su lanzamiento open-weight?', a: 'Normalmente entre 1 y 7 días para lanzamientos principales de Meta, Google, Mistral y Alibaba. El equipo de Ollama prioriza los lanzamientos de alto perfil -- Llama 3.3 70B apareció en la biblioteca de Ollama 3 días después del lanzamiento open-weight de Meta. Los modelos más pequeños o comunitarios pueden tardar entre 2 y 4 semanas.' },
-            { q: '¿Debería actualizar de Llama 3.1 8B a un modelo más reciente?', a: 'Si usas Llama 3.1 8B para tareas generales y estás satisfecho con la calidad, actualizar es opcional. Qwen3 7B puntúa ligeramente más alto en benchmarks y tiene mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña. Actualiza si tu modelo actual tiene dificultades con tareas específicas.' },
+            { q: '¿Debería actualizar de Llama 3.1 8B a un modelo más reciente?', a: 'Si usas Llama 3.1 8B para tareas generales y estás satisfecho con la calidad, actualizar es opcional. Qwen3 8B puntúa ligeramente más alto en benchmarks y tiene mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña. Actualiza si tu modelo actual tiene dificultades con tareas específicas.' },
             { q: '¿Alcanzarán alguna vez los modelos locales la calidad de los modelos frontier en la nube?', a: 'La tendencia sugiere que sí -- con un retraso de 18-24 meses. GPT-4 (2023, con aproximadamente 1.7 billones de parámetros estimados) es igualado por Llama 3.3 70B (2025, ejecutable localmente). GPT-5.5 (2024) probablemente tendrá un equivalente ejecutable localmente a finales de 2026 o en 2027. El factor limitante es la eficiencia de cómputo, no la capacidad algorítmica.' },
             { q: '¿Qué pasó con DeepSeek y por qué fue significativo?', a: 'DeepSeek-R1 (enero de 2025) demostró que un laboratorio de IA chino podía producir modelos con capacidades de razonamiento competitivas con OpenAI o1 a menor coste de entrenamiento. El lanzamiento open-weight puso a disposición local por primera vez un modelo de razonamiento de clase frontier. DeepSeek-R1 7B alcanza el 52% en MATH -- casi el doble del 28% de Mistral Small -- específicamente gracias a su metodología de entrenamiento chain-of-thought.' },
             { q: '¿Qué es Llama 4 y está disponible localmente?', a: 'Llama 4 Scout es un modelo mixture-of-experts (17B activos / 109B parámetros totales, 16 expertos) con contexto largo (10M de tokens declarados) y soporte multimodal. Está disponible en la biblioteca de Ollama desde junio de 2026 mediante `ollama pull llama4:scout`, aunque necesita aproximadamente 55 GB de VRAM en cuantización Q4 -- fuera del alcance de la mayoría del hardware de consumo.' },
             { q: '¿Existen modelos locales específicamente para empresas o sectores regulados en 2026?', a: 'Mistral AI ofrece contratos de soporte empresarial para los modelos Mistral. Su origen europeo es relevante para el cumplimiento del RGPD (Ley de IA de la UE en vigor desde febrero de 2025). Para sanidad (HIPAA) o finanzas (SOC 2), cualquier modelo desplegado localmente puede cumplir los requisitos de residencia de datos -- el modelo en sí es neutral respecto a los datos. El trabajo de cumplimiento está en la infraestructura de despliegue, no en la selección del modelo.' },
             { q: '¿Con qué modelo debería empezar un principiante completo en 2026?', a: 'Llama 3.2 3B o Gemma 3 4B son las mejores opciones para principiantes. Ambos funcionan con hardware modesto (4-6 GB VRAM), tienen documentación extensa y rinden bien en tareas generales. Llama 3.2 3B tiene más guías comunitarias e integraciones de herramientas. Gemma 3 4B es más reciente, algo más rápido y soporta capacidades de visión. Para usuarios no técnicos, LM Studio hace que ambos sean fáciles de instalar y usar sin línea de comandos.' },
-            { q: '¿Merece la pena actualizar a nuevos modelos si el actual funciona bien?', a: 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Sin embargo, si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil, probar un modelo más reciente es recomendable. Qwen3 7B (2025) supera a Llama 3.1 8B en la mayoría de benchmarks, convirtiéndolo en un objetivo de actualización seguro para quienes busquen una mejora incremental.' },
+            { q: '¿Merece la pena actualizar a nuevos modelos si el actual funciona bien?', a: 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Sin embargo, si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil, probar un modelo más reciente es recomendable. Qwen3 8B (2025) supera a Llama 3.1 8B en la mayoría de benchmarks, convirtiéndolo en un objetivo de actualización seguro para quienes busquen una mejora incremental.' },
           ],
         },
         sources: {
@@ -673,7 +673,7 @@ schema: {
             'name': '¿Debería actualizar de Llama 3.1 8B a un modelo más reciente?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Si usas Llama 3.1 8B para tareas generales y estás satisfecho con la calidad, actualizar es opcional. Qwen3 7B puntúa ligeramente más alto en benchmarks y tiene mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña. Actualiza si tu modelo actual tiene dificultades con tareas específicas.',
+              'text': 'Si usas Llama 3.1 8B para tareas generales y estás satisfecho con la calidad, actualizar es opcional. Qwen3 8B puntúa ligeramente más alto en benchmarks y tiene mejor soporte multilingüe y de código. Para la mayoría de usos generales en inglés, la diferencia de calidad práctica es pequeña. Actualiza si tu modelo actual tiene dificultades con tareas específicas.',
             },
           },
           {
@@ -721,7 +721,7 @@ schema: {
             'name': '¿Merece la pena actualizar a nuevos modelos si el actual funciona bien?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Sin embargo, si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil, probar un modelo más reciente es recomendable. Qwen3 7B (2025) supera a Llama 3.1 8B en la mayoría de benchmarks, convirtiéndolo en un objetivo de actualización seguro para quienes busquen una mejora incremental.',
+              'text': 'Solo si alcanzas límites de calidad específicos. Si tu modelo de 7B u 8B satisface tus casos de uso, actualizar es opcional. Sin embargo, si notas errores de razonamiento, soporte multilingüe deficiente o capacidad de código débil, probar un modelo más reciente es recomendable. Qwen3 8B (2025) supera a Llama 3.1 8B en la mayoría de benchmarks, convirtiéndolo en un objetivo de actualización seguro para quienes busquen una mejora incremental.',
             },
           },
         ],
@@ -797,7 +797,7 @@ schema: {
         q42025: {
           title: 'أي نماذج من الربع الرابع 2025 لا تزال الأهم في 2026؟',
           image: '/images/model-comparison-2026-es.svg',
-          imageCaption: 'مقارنة نماذج LLM المحلية في أبريل 2026: يتصدّر Llama 3.3 70B بـ 82% MMLU و42 GB VRAM، يقدّم Qwen3 7B أفضل دعم متعدد اللغات بـ 74% MMLU و5 GB VRAM، يضيف Gemma 3 9B قدرات الرؤية، يتخصص DeepSeek-R1 7B في مهام الاستدلال بـ 52% MATH. جميعها قابلة للتشغيل عبر Ollama.',
+          imageCaption: 'مقارنة نماذج LLM المحلية في أبريل 2026: يتصدّر Llama 3.3 70B بـ 82% MMLU و42 GB VRAM، يقدّم Qwen3 8B أفضل دعم متعدد اللغات بـ 74% MMLU و5 GB VRAM، يضيف Gemma 3 9B قدرات الرؤية، يتخصص DeepSeek-R1 7B في مهام الاستدلال بـ 52% MATH. جميعها قابلة للتشغيل عبر Ollama.',
           rows: [
             { 'النموذج': 'Llama 3.3 70B', 'الإصدار': 'ديسمبر 2025', 'المواصفات الرئيسية': '82% MMLU، 88% HumanEval، سياق 128K', 'لا يزال وثيق الصلة': 'نعم -- أفضل خيار 70B' },
             { 'النموذج': 'Phi-4 14B', 'الإصدار': 'ديسمبر 2024', 'المواصفات الرئيسية': '84% MMLU -- فوق فئة حجمه', 'لا يزال وثيق الصلة': 'نعم -- نموذج استدلال 14B متين' },
@@ -821,14 +821,14 @@ schema: {
           id: 'quality-improvement',
           title: 'كم تحسّنت جودة نماذج LLM المحلية من 2024 إلى 2026؟',
           content: [
-            '**تحسّن السنتين في جودة النماذج القابلة للتشغيل محلياً كبير.** اعتباراً من أبريل 2026، يضاهي نموذج 7B (Qwen3 7B، 74% MMLU) أداء اختبار نموذج 13B من أوائل 2024. ويضاهي نموذج 70B (Llama 3.3 70B، 82% MMLU) أداء GPT-4 (2023) -- نموذج كان يتطلب قبل 3 سنوات بنية تحتية لخوادم بمليارات الدولارات يعمل الآن على Mac Studio. لتوصيات العتاد حسب كل فئة نموذج، راجع [دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026).',
+            '**تحسّن السنتين في جودة النماذج القابلة للتشغيل محلياً كبير.** اعتباراً من أبريل 2026، يضاهي نموذج 7B (Qwen3 8B، 74% MMLU) أداء اختبار نموذج 13B من أوائل 2024. ويضاهي نموذج 70B (Llama 3.3 70B، 82% MMLU) أداء GPT-4 (2023) -- نموذج كان يتطلب قبل 3 سنوات بنية تحتية لخوادم بمليارات الدولارات يعمل الآن على Mac Studio. لتوصيات العتاد حسب كل فئة نموذج، راجع [دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-es.svg',
-          imageCaption: 'تحسّن جودة نماذج LLM المحلية 2024-2026: تحسّنت نماذج فئة 7B من 64% MMLU (Mistral Small، أوائل 2024) إلى 74% (Qwen3 7B، أبريل 2026). تحسّنت فئة 70B من 75% (Llama 3.3 70B) إلى 82-84% (Llama 3.3 70B وQwen3 72B). كل 18-24 شهراً، تتقدم جودة النماذج المحلية جيلاً.',
+          imageCaption: 'تحسّن جودة نماذج LLM المحلية 2024-2026: تحسّنت نماذج فئة 7B من 64% MMLU (Mistral Small، أوائل 2024) إلى 74% (Qwen3 8B، أبريل 2026). تحسّنت فئة 70B من 75% (Llama 3.3 70B) إلى 82-84% (Llama 3.3 70B وQwen3 72B). كل 18-24 شهراً، تتقدم جودة النماذج المحلية جيلاً.',
           rows: [
             { 'السنة': 'أوائل 2024', 'أفضل 7B MMLU': '~64% (Mistral Small)', 'أفضل 70B محلي MMLU': '~75% (Llama 3.3 70B)', 'العتاد المطلوب': '7B: 8 GB RAM؛ 70B: 48 GB RAM' },
-            { 'السنة': 'أواخر 2025', 'أفضل 7B MMLU': '~74% (Qwen3 7B)', 'أفضل 70B محلي MMLU': '~82% (Llama 3.3 70B)', 'العتاد المطلوب': '7B: 5 GB RAM؛ 70B: 40 GB RAM' },
-            { 'السنة': 'أبريل 2026', 'أفضل 7B MMLU': '~74% (Qwen3 7B)', 'أفضل 70B محلي MMLU': '~84% (Qwen3 72B)', 'العتاد المطلوب': '7B: 4.7 GB RAM؛ 70B: 43 GB RAM' },
+            { 'السنة': 'أواخر 2025', 'أفضل 7B MMLU': '~74% (Qwen3 8B)', 'أفضل 70B محلي MMLU': '~82% (Llama 3.3 70B)', 'العتاد المطلوب': '7B: 5 GB RAM؛ 70B: 40 GB RAM' },
+            { 'السنة': 'أبريل 2026', 'أفضل 7B MMLU': '~74% (Qwen3 8B)', 'أفضل 70B محلي MMLU': '~84% (Qwen3 72B)', 'العتاد المطلوب': '7B: 4.7 GB RAM؛ 70B: 43 GB RAM' },
           ],
           columns: ['السنة', 'أفضل 7B MMLU', 'أفضل 70B محلي MMLU', 'العتاد المطلوب'],
         },
@@ -879,13 +879,13 @@ schema: {
           title: 'الأسئلة الشائعة حول تحديثات نماذج LLM المحلية في 2026',
           faqs: [
             { q: 'ما مدى سرعة ظهور النماذج الجديدة في Ollama بعد إصدار فتح أوزانها؟', a: 'عادةً بين 1 و7 أيام للإصدارات الرئيسية من Meta وGoogle وMistral وAlibaba. يعطي فريق Ollama الأولوية للإصدارات البارزة -- ظهر Llama 3.3 70B في مكتبة Ollama بعد 3 أيام من إصدار Meta لفتح الأوزان. النماذج الأصغر أو المجتمعية قد تستغرق بين أسبوعين و4 أسابيع.' },
-            { q: 'هل يجب أن أرقّي من Llama 3.1 8B إلى نموذج أحدث؟', a: 'إذا كنت تستخدم Llama 3.1 8B للمهام العامة وأنت راضٍ عن الجودة، فالترقية اختيارية. يحقق Qwen3 7B نتيجة أعلى قليلاً في الاختبارات ويملك دعماً أفضل متعدد اللغات وللكود. لمعظم الاستخدامات العامة بالإنجليزية، فرق الجودة العملي صغير. رقِّ إذا كان نموذجك الحالي يواجه صعوبة مع مهام محددة.' },
+            { q: 'هل يجب أن أرقّي من Llama 3.1 8B إلى نموذج أحدث؟', a: 'إذا كنت تستخدم Llama 3.1 8B للمهام العامة وأنت راضٍ عن الجودة، فالترقية اختيارية. يحقق Qwen3 8B نتيجة أعلى قليلاً في الاختبارات ويملك دعماً أفضل متعدد اللغات وللكود. لمعظم الاستخدامات العامة بالإنجليزية، فرق الجودة العملي صغير. رقِّ إذا كان نموذجك الحالي يواجه صعوبة مع مهام محددة.' },
             { q: 'هل ستصل النماذج المحلية يوماً إلى جودة النماذج الرائدة السحابية؟', a: 'يشير الاتجاه إلى نعم -- بتأخير 18-24 شهراً. يضاهي Llama 3.3 70B (2025، قابل للتشغيل محلياً) نموذج GPT-4 (2023، بنحو 1.7 تريليون معامل مقدّر). من المرجّح أن يكون لـ GPT-5.5 (2024) مكافئ قابل للتشغيل محلياً في أواخر 2026 أو 2027. العامل المحدّد هو كفاءة الحوسبة، وليس القدرة الخوارزمية.' },
             { q: 'ماذا حدث مع DeepSeek ولماذا كان مهماً؟', a: 'أثبت DeepSeek-R1 (يناير 2025) أن مختبر ذكاء اصطناعي صينياً يمكنه إنتاج نماذج بقدرات استدلال تنافس OpenAI o1 بتكلفة تدريب أقل. أتاح إصدار فتح الأوزان لأول مرة نموذج استدلال من الفئة الرائدة محلياً. يحقق DeepSeek-R1 7B 52% في MATH -- نحو ضعف 28% لـ Mistral Small -- تحديداً بفضل منهجية تدريبه بسلسلة التفكير.' },
             { q: 'ما هو Llama 4 وهل هو متاح محلياً؟', a: 'Llama 4 Scout هو نموذج خليط من الخبراء (17B نشط / 109B معامل إجمالي، 16 خبيراً) بسياق طويل (يصل إلى 10M رمز مُعلَن) ودعم متعدد الوسائط. أصبح متوفراً في مكتبة Ollama اعتباراً من يونيو 2026 عبر `ollama pull llama4:scout`، رغم أنه يحتاج نحو 55 GB من VRAM عند تكميم Q4 -- خارج متناول معظم عتاد المستهلكين.' },
             { q: 'هل توجد نماذج محلية مخصصة للمؤسسات أو القطاعات المنظمة في 2026؟', a: 'تقدّم Mistral AI عقود دعم مؤسسي لنماذج Mistral. منشأها الأوروبي وثيق الصلة بالامتثال لـ GDPR (قانون الذكاء الاصطناعي للاتحاد الأوروبي الساري منذ فبراير 2025). للرعاية الصحية (HIPAA) أو المالية (SOC 2)، يمكن لأي نموذج منشور محلياً تلبية متطلبات إقامة البيانات -- النموذج نفسه محايد تجاه البيانات. يكمن عمل الامتثال في بنية النشر التحتية، وليس في اختيار النموذج.' },
             { q: 'بأي نموذج يجب أن يبدأ مبتدئ تماماً في 2026؟', a: 'Llama 3.2 3B أو Gemma 3 4B هما أفضل خياري المبتدئين. كلاهما يعمل بعتاد متواضع (4-6 GB VRAM)، ويملكان توثيقاً واسعاً، ويؤديان جيداً في المهام العامة. يملك Llama 3.2 3B أدلة مجتمعية وتكاملات أدوات أكثر. Gemma 3 4B أحدث وأسرع قليلاً ويدعم قدرات الرؤية. للمستخدمين غير التقنيين، يجعل LM Studio كليهما سهل التثبيت والاستخدام دون سطر أوامر.' },
-            { q: 'هل تستحق الترقية إلى نماذج جديدة إذا كان الحالي يعمل جيداً؟', a: 'فقط إذا وصلت إلى حدود جودة محددة. إذا كان نموذجك 7B أو 8B يلبّي حالات استخدامك، فالترقية اختيارية. مع ذلك، إذا لاحظت أخطاء استدلال أو دعماً ضعيفاً متعدد اللغات أو قدرة كود ضعيفة، فتجربة نموذج أحدث موصى بها. يتفوق Qwen3 7B (2025) على Llama 3.1 8B في معظم الاختبارات، مما يجعله هدف ترقية آمناً لمن يبحث عن تحسن تدريجي.' },
+            { q: 'هل تستحق الترقية إلى نماذج جديدة إذا كان الحالي يعمل جيداً؟', a: 'فقط إذا وصلت إلى حدود جودة محددة. إذا كان نموذجك 7B أو 8B يلبّي حالات استخدامك، فالترقية اختيارية. مع ذلك، إذا لاحظت أخطاء استدلال أو دعماً ضعيفاً متعدد اللغات أو قدرة كود ضعيفة، فتجربة نموذج أحدث موصى بها. يتفوق Qwen3 8B (2025) على Llama 3.1 8B في معظم الاختبارات، مما يجعله هدف ترقية آمناً لمن يبحث عن تحسن تدريجي.' },
           ],
         },
         sources: {
@@ -1002,7 +1002,7 @@ schema: {
             'name': 'هل يجب أن أرقّي من Llama 3.1 8B إلى نموذج أحدث؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'إذا كنت تستخدم Llama 3.1 8B للمهام العامة وأنت راضٍ عن الجودة، فالترقية اختيارية. يحقق Qwen3 7B نتيجة أعلى قليلاً في الاختبارات ويملك دعماً أفضل متعدد اللغات وللكود. لمعظم الاستخدامات العامة بالإنجليزية، فرق الجودة العملي صغير. رقِّ إذا كان نموذجك الحالي يواجه صعوبة مع مهام محددة.',
+              'text': 'إذا كنت تستخدم Llama 3.1 8B للمهام العامة وأنت راضٍ عن الجودة، فالترقية اختيارية. يحقق Qwen3 8B نتيجة أعلى قليلاً في الاختبارات ويملك دعماً أفضل متعدد اللغات وللكود. لمعظم الاستخدامات العامة بالإنجليزية، فرق الجودة العملي صغير. رقِّ إذا كان نموذجك الحالي يواجه صعوبة مع مهام محددة.',
             },
           },
           {
@@ -1050,7 +1050,7 @@ schema: {
             'name': 'هل تستحق الترقية إلى نماذج جديدة إذا كان الحالي يعمل جيداً؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'فقط إذا وصلت إلى حدود جودة محددة. إذا كان نموذجك 7B أو 8B يلبّي حالات استخدامك، فالترقية اختيارية. مع ذلك، إذا لاحظت أخطاء استدلال أو دعماً ضعيفاً متعدد اللغات أو قدرة كود ضعيفة، فتجربة نموذج أحدث موصى بها. يتفوق Qwen3 7B (2025) على Llama 3.1 8B في معظم الاختبارات، مما يجعله هدف ترقية آمناً لمن يبحث عن تحسن تدريجي.',
+              'text': 'فقط إذا وصلت إلى حدود جودة محددة. إذا كان نموذجك 7B أو 8B يلبّي حالات استخدامك، فالترقية اختيارية. مع ذلك، إذا لاحظت أخطاء استدلال أو دعماً ضعيفاً متعدد اللغات أو قدرة كود ضعيفة، فتجربة نموذج أحدث موصى بها. يتفوق Qwen3 8B (2025) على Llama 3.1 8B في معظم الاختبارات، مما يجعله هدف ترقية آمناً لمن يبحث عن تحسن تدريجي.',
             },
           },
         ],
@@ -1188,7 +1188,7 @@ schema: {
         q42025: {
           title: 'Q4 2025 モデルの中で 2026 年も最も重要なものは？',
           image: '/images/model-comparison-2026-ja.svg',
-          imageCaption: '2026年4月ローカルLLMモデル比較：Llama 3.3 70B がトップ（MMLU 82%、VRAM 42GB）、Qwen3 7B が多言語対応で最良（MMLU 74%、VRAM 5GB）、Gemma 3 9B でビジョン機能追加、DeepSeek-R1 7B が推論タスク特化（MATH 52%）。すべて Ollama で実行可能。',
+          imageCaption: '2026年4月ローカルLLMモデル比較：Llama 3.3 70B がトップ（MMLU 82%、VRAM 42GB）、Qwen3 8B が多言語対応で最良（MMLU 74%、VRAM 5GB）、Gemma 3 9B でビジョン機能追加、DeepSeek-R1 7B が推論タスク特化（MATH 52%）。すべて Ollama で実行可能。',
           rows: [
             { 'モデル': 'Llama 3.3 70B', 'リリース': '2025年12月', '主要仕様': '82% MMLU、88% HumanEval、128K コンテキスト', 'まだ関連': 'はい -- 最高の70Bオプション' },
             { 'モデル': 'Phi-4 14B', 'リリース': '2024年12月', '主要仕様': '84% MMLU -- そのサイズクラスを上回る', 'まだ関連': 'はい -- 強力な14B推論モデル' },
@@ -1212,14 +1212,14 @@ schema: {
           id: 'quality-improvement',
           title: '2024年から2026年にかけてローカルLLMの品質はどのくらい改善されました？',
           content: [
-            '**ローカル実行可能モデル品質の2年間の改善は大幅です。** 2026年4月現在、7Bモデル（Qwen3 7B、74% MMLU）は2024年初頭の13Bモデルのベンチマーク性能に相当します。70Bモデル（Llama 3.3 70B、82% MMLU）は GPT-4（2023）の性能に相当します -- 3年前に数十億ドルのサーバーインフラストラクチャが必要だったモデルが現在 Mac Studio で実行されます。各モデルクラスに対応するハードウェア推奨については、[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) を参照してください。',
+            '**ローカル実行可能モデル品質の2年間の改善は大幅です。** 2026年4月現在、7Bモデル（Qwen3 8B、74% MMLU）は2024年初頭の13Bモデルのベンチマーク性能に相当します。70Bモデル（Llama 3.3 70B、82% MMLU）は GPT-4（2023）の性能に相当します -- 3年前に数十億ドルのサーバーインフラストラクチャが必要だったモデルが現在 Mac Studio で実行されます。各モデルクラスに対応するハードウェア推奨については、[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) を参照してください。',
           ],
           image: '/images/llm-quality-improvement-2024-2026-ja.svg',
-          imageCaption: 'ローカルLLM品質の改善2024～2026：7Bクラスモデルは64%（Mistral Small、2024初）から74%（Qwen3 7B、2026年4月）に改善。70Bクラスは75%（Llama 3.3 70B）から82～84%（Llama 3.3 70B と Qwen3 72B）に改善。18～24か月ごとにローカルモデル品質は1世代進化。',
+          imageCaption: 'ローカルLLM品質の改善2024～2026：7Bクラスモデルは64%（Mistral Small、2024初）から74%（Qwen3 8B、2026年4月）に改善。70Bクラスは75%（Llama 3.3 70B）から82～84%（Llama 3.3 70B と Qwen3 72B）に改善。18～24か月ごとにローカルモデル品質は1世代進化。',
           rows: [
             { '年': '2024年初', '最高の7B MMLU': '~64%（Mistral Small）', '最高のローカル70B MMLU': '~75%（Llama 3.3 70B）', 'ハードウェア要件': '7B: 8 GB RAM；70B: 48 GB RAM' },
-            { '年': '2025年後期', '最高の7B MMLU': '~74%（Qwen3 7B）', '最高のローカル70B MMLU': '~82%（Llama 3.3 70B）', 'ハードウェア要件': '7B: 5 GB RAM；70B: 40 GB RAM' },
-            { '年': '2026年4月', '最高の7B MMLU': '~74%（Qwen3 7B）', '最高のローカル70B MMLU': '~84%（Qwen3 72B）', 'ハードウェア要件': '7B: 4.7 GB RAM；70B: 43 GB RAM' },
+            { '年': '2025年後期', '最高の7B MMLU': '~74%（Qwen3 8B）', '最高のローカル70B MMLU': '~82%（Llama 3.3 70B）', 'ハードウェア要件': '7B: 5 GB RAM；70B: 40 GB RAM' },
+            { '年': '2026年4月', '最高の7B MMLU': '~74%（Qwen3 8B）', '最高のローカル70B MMLU': '~84%（Qwen3 72B）', 'ハードウェア要件': '7B: 4.7 GB RAM；70B: 43 GB RAM' },
           ],
           columns: ['年', '最高の7B MMLU', '最高のローカル70B MMLU', 'ハードウェア要件'],
         },
@@ -1270,13 +1270,13 @@ schema: {
           title: '2026年のローカルLLMモデルアップデートについてよくある質問',
           faqs: [
             { q: 'オープンウェイトリリース後、新しいモデルが Ollama にどのくらい素早く表示されますか？', a: 'Meta、Google、Mistral、Alibaba からのメジャーリリースの場合、通常1～7日です。Ollama チームはハイプロファイルリリースを優先します -- Llama 3.3 70B は Meta のオープンウェイトリリースの3日後に Ollama ライブラリに表示されました。小さいまたはコミュニティモデルは2～4週間かかることがあります。' },
-            { q: 'Llama 3.1 8B からより新しいモデルにアップグレードすべきですか？', a: 'Llama 3.1 8B を一般的なタスク用に使用していて品質に満足している場合、アップグレードはオプションです。Qwen3 7B はベンチマークで若干高いスコアで、多言語とコーディング対応が優れています。ほとんどの英語中心の一般的な使用では、実用的な品質差は小さいです。現在のモデルが特定のタスクで苦労している場合はアップグレードしてください。' },
+            { q: 'Llama 3.1 8B からより新しいモデルにアップグレードすべきですか？', a: 'Llama 3.1 8B を一般的なタスク用に使用していて品質に満足している場合、アップグレードはオプションです。Qwen3 8B はベンチマークで若干高いスコアで、多言語とコーディング対応が優れています。ほとんどの英語中心の一般的な使用では、実用的な品質差は小さいです。現在のモデルが特定のタスクで苦労している場合はアップグレードしてください。' },
             { q: 'ローカルモデルは現在のフロンティアクラウドモデル品質に到達しますか？', a: 'トレンドははい、18～24か月の遅延で提案しています。GPT-4（2023、推定1.7T パラメータ）は Llama 3.3 70B（2025、ローカル実行可能）と一致しています。GPT-5.5（2024）は 2026年後期または2027年までにローカル実行可能な同等品を持つ可能性があります。制限要因はアルゴリズムの能力ではなく計算効率です。' },
             { q: 'DeepSeek で何が起こったのか、なぜそれが重要だったのか？', a: 'DeepSeek-R1（2025年1月）は中国のAIラボが OpenAI o1 とより低い訓練コストで競争可能な推論モデルを生産できることを実証しました。オープンウェイトリリースにより、フロンティアクラスの推論モデルが初めてローカルで利用可能になりました。DeepSeek-R1 7B は MATH で 52% を達成します -- Mistral Small の 28% のほぼ2倍です -- チェーンオブソート訓練方法学によって特に。' },
             { q: 'Llama 4 とは何ですか、ローカルで利用可能ですか？', a: 'Llama 4 Scout は混合専門家（MoE）モデルで（アクティブ17B／総計109Bパラメータ、16エキスパート）、ロングコンテキスト（1000万トークンクレーム）とマルチモーダル対応を備えています。2026年6月以降、`ollama pull llama4:scout` により Ollama ライブラリで利用可能ですが、Q4量子化で約55GBのVRAMが必要であり、ほとんどのコンシューマー向けハードウェアでは手が届きません。' },
             { q: '2026年企業または規制産業向けのローカルモデルはありますか？', a: 'Mistral AI は Mistral モデル用のエンタープライズグレードサポート契約を提供しています。ヨーロッパの原産地は GDPR コンプライアンスに関連しています（EU AI Act は2025年2月に有効）。ヘルスケア（HIPAA）またはファイナンス（SOC 2）の場合、ローカルに展開されたモデルはデータ常駐要件を満たすことができます -- モデル自体はデータニュートラルです。コンプライアンス作業は展開インフラストラクチャにあり、モデル選択ではありません。' },
             { q: '初心者が2026年に開始すべきモデルはどれですか？', a: 'Llama 3.2 3B または Gemma 3 4B がベストの初心者選択です。どちらも控えめなハードウェア（4～6 GB VRAM）で実行され、一般的なタスクで優れた広範なドキュメンテーションとパフォーマンスがあります。Llama 3.2 3B にはより多くのコミュニティガイドとツール統合があります。Gemma 3 4B はより新しく、やや速く、ビジョン機能をサポートしています。非技術的ユーザーの場合、LM Studio はコマンドラインなしで両方を簡単にします。' },
-            { q: '現在のモデルがうまく機能している場合、アップグレードする価値はありますか？', a: '特定の品質制限に達した場合のみです。7B または 8B モデルがユースケースを満たしている場合、アップグレードはオプションです。推論エラー、弱い多言語対応、または弱いコーディング能力に気づいた場合は、新しいモデルをテストする価値があります。Qwen3 7B（2025）はほとんどのベンチマークで Llama 3.1 8B を上回り、段階的な改善を求めるユーザーの安全なアップグレードターゲットです。' },
+            { q: '現在のモデルがうまく機能している場合、アップグレードする価値はありますか？', a: '特定の品質制限に達した場合のみです。7B または 8B モデルがユースケースを満たしている場合、アップグレードはオプションです。推論エラー、弱い多言語対応、または弱いコーディング能力に気づいた場合は、新しいモデルをテストする価値があります。Qwen3 8B（2025）はほとんどのベンチマークで Llama 3.1 8B を上回り、段階的な改善を求めるユーザーの安全なアップグレードターゲットです。' },
             { q: 'モデルパフォーマンスの品質は地域により異なりますか？', a: 'ローカルモデルの品質はハードウェアとサイズに基づいており、地域による変動はありません。ただし、多言語対応は異なります：Qwen3 は 29 の言語でトレーニングされ、Llama モデルは主に英語です。日本語展開の場合、Qwen3 は最高の多言語パフォーマンス供給です。' },
             { q: 'あるモデルで特定のタスクを処理する方法を学ぶのにどのくらい時間がかかりますか？', a: 'コミュニティサポートによります。Llama 3.1 8B には 18 か月以上のファイン・チューン、システムプロンプト、ドキュメント化されたユースケースがあります。Gemma 3 9B はより新しく、サンプルが少なくなります。確立されたモデルの方が実用的です。' },
           ],
@@ -1348,7 +1348,7 @@ schema: {
             'name': 'Llama 3.1 8B からより新しいモデルにアップグレードすべきですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Llama 3.1 8B を一般的なタスク用に使用していて品質に満足している場合、アップグレードはオプションです。Qwen3 7B はベンチマークで若干高いスコアで、多言語とコーディング対応が優れています。ほとんどの英語中心の一般的な使用では、実用的な品質差は小さいです。現在のモデルが特定のタスクで苦労している場合はアップグレードしてください。',
+              'text': 'Llama 3.1 8B を一般的なタスク用に使用していて品質に満足している場合、アップグレードはオプションです。Qwen3 8B はベンチマークで若干高いスコアで、多言語とコーディング対応が優れています。ほとんどの英語中心の一般的な使用では、実用的な品質差は小さいです。現在のモデルが特定のタスクで苦労している場合はアップグレードしてください。',
             },
           },
           {
@@ -1396,7 +1396,7 @@ schema: {
             'name': '現在のモデルがうまく機能している場合、アップグレードする価値はありますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '特定の品質制限に達した場合のみです。7B または 8B モデルがユースケースを満たしている場合、アップグレードはオプションです。推論エラー、弱い多言語対応、または弱いコーディング能力に気づいた場合は、新しいモデルをテストする価値があります。Qwen3 7B（2025）はほとんどのベンチマークで Llama 3.1 8B を上回り、段階的な改善を求めるユーザーの安全なアップグレードターゲットです。',
+              'text': '特定の品質制限に達した場合のみです。7B または 8B モデルがユースケースを満たしている場合、アップグレードはオプションです。推論エラー、弱い多言語対応、または弱いコーディング能力に気づいた場合は、新しいモデルをテストする価値があります。Qwen3 8B（2025）はほとんどのベンチマークで Llama 3.1 8B を上回り、段階的な改善を求めるユーザーの安全なアップグレードターゲットです。',
             },
           },
           {
@@ -1486,7 +1486,7 @@ schema: {
         q42025: {
           title: 'Welche Q4 2025 Modelle sind 2026 noch am wichtigsten?',
           image: '/images/model-comparison-2026-de.svg',
-          imageCaption: 'April 2026 lokale LLM-Modellvergleich: Llama 3.3 70B führt mit 82 % MMLU und 42 GB VRAM, Qwen3 7B bietet beste mehrsprachige Unterstützung bei 74 % MMLU und 5 GB VRAM, Gemma 3 9B mit Vision-Fähigkeiten, DeepSeek-R1 7B spezialisiert auf Reasoning-Aufgaben mit 52 % MATH. Alle über Ollama lauffähig.',
+          imageCaption: 'April 2026 lokale LLM-Modellvergleich: Llama 3.3 70B führt mit 82 % MMLU und 42 GB VRAM, Qwen3 8B bietet beste mehrsprachige Unterstützung bei 74 % MMLU und 5 GB VRAM, Gemma 3 9B mit Vision-Fähigkeiten, DeepSeek-R1 7B spezialisiert auf Reasoning-Aufgaben mit 52 % MATH. Alle über Ollama lauffähig.',
           rows: [
             { 'Modell': 'Llama 3.3 70B', 'Veröffentlicht': 'Dezember 2025', 'Wichtigste Specs': '82 % MMLU, 88 % HumanEval, 128K Kontext', 'Noch relevant': 'Ja -- beste 70B-Option' },
             { 'Modell': 'Phi-4 14B', 'Veröffentlicht': 'Dezember 2024', 'Wichtigste Specs': '84 % MMLU -- über seiner Größenklasse', 'Noch relevant': 'Ja -- starkes 14B-Reasoning-Modell' },
@@ -1510,14 +1510,14 @@ schema: {
           id: 'quality-improvement',
           title: 'Um wie viel hat sich die Qualität lokaler LLMs von 2024 bis 2026 verbessert?',
           content: [
-            '**Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich.** Stand April 2026 entspricht ein 7B-Modell (Qwen3 7B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung -- ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026).',
+            '**Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich.** Stand April 2026 entspricht ein 7B-Modell (Qwen3 8B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung -- ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-de.svg',
-          imageCaption: 'Lokale LLM-Qualitätsverbesserung 2024-2026: 7B-Klasse-Modelle verbessert sich von 64 % MMLU (Mistral Small, Anfang 2024) auf 74 % (Qwen3 7B, April 2026). 70B-Klasse verbessert sich von 75 % (Llama 3.3 70B) auf 82-84 % (Llama 3.3 70B und Qwen3 72B). Alle 18-24 Monate rückt die lokale Modellqualität eine Generation vor.',
+          imageCaption: 'Lokale LLM-Qualitätsverbesserung 2024-2026: 7B-Klasse-Modelle verbessert sich von 64 % MMLU (Mistral Small, Anfang 2024) auf 74 % (Qwen3 8B, April 2026). 70B-Klasse verbessert sich von 75 % (Llama 3.3 70B) auf 82-84 % (Llama 3.3 70B und Qwen3 72B). Alle 18-24 Monate rückt die lokale Modellqualität eine Generation vor.',
           rows: [
             { 'Jahr': 'Anfang 2024', 'Beste 7B MMLU': '~64 % (Mistral Small)', 'Beste lokale 70B MMLU': '~75 % (Llama 3.3 70B)', 'Benötigte Hardware': '7B: 8 GB RAM; 70B: 48 GB RAM' },
-            { 'Jahr': 'Ende 2025', 'Beste 7B MMLU': '~74 % (Qwen3 7B)', 'Beste lokale 70B MMLU': '~82 % (Llama 3.3 70B)', 'Benötigte Hardware': '7B: 5 GB RAM; 70B: 40 GB RAM' },
-            { 'Jahr': 'April 2026', 'Beste 7B MMLU': '~74 % (Qwen3 7B)', 'Beste lokale 70B MMLU': '~84 % (Qwen3 72B)', 'Benötigte Hardware': '7B: 4,7 GB RAM; 70B: 43 GB RAM' },
+            { 'Jahr': 'Ende 2025', 'Beste 7B MMLU': '~74 % (Qwen3 8B)', 'Beste lokale 70B MMLU': '~82 % (Llama 3.3 70B)', 'Benötigte Hardware': '7B: 5 GB RAM; 70B: 40 GB RAM' },
+            { 'Jahr': 'April 2026', 'Beste 7B MMLU': '~74 % (Qwen3 8B)', 'Beste lokale 70B MMLU': '~84 % (Qwen3 72B)', 'Benötigte Hardware': '7B: 4,7 GB RAM; 70B: 43 GB RAM' },
           ],
           columns: ['Jahr', 'Beste 7B MMLU', 'Beste lokale 70B MMLU', 'Benötigte Hardware'],
         },
@@ -1568,7 +1568,7 @@ schema: {
           title: 'Häufig gestellte Fragen zu lokalen LLM-Modell-Updates 2026?',
           faqs: [
             { q: 'Wie schnell erscheinen neue Modelle in Ollama nach ihrem Open-Weight-Release?', a: 'Typischerweise 1-7 Tage für große Modell-Releases von Meta, Google, Mistral und Alibaba. Das Ollama-Team priorisiert hochkarätige Releases -- Llama 3.3 70B erschien 3 Tage nach Metas Open-Weight-Release in der Ollama-Bibliothek. Kleinere oder Community-Modelle können 2-4 Wochen dauern.' },
-            { q: 'Sollte ich von Llama 3.1 8B auf ein neueres Modell upgraden?', a: 'Wenn Sie Llama 3.1 8B für allgemeine Aufgaben verwenden und mit der Qualität zufrieden sind, ist ein Upgrade optional. Qwen3 7B hat leicht höhere Benchmark-Scores und bessere multilinguale und Codierungs-Unterstützung. Für die meisten englischsprachigen allgemeinen Verwendungen ist der praktische Qualitätsunterschied klein. Upgraden Sie, wenn Ihr aktuelles Modell bei spezifischen Aufgaben Schwierigkeiten hat.' },
+            { q: 'Sollte ich von Llama 3.1 8B auf ein neueres Modell upgraden?', a: 'Wenn Sie Llama 3.1 8B für allgemeine Aufgaben verwenden und mit der Qualität zufrieden sind, ist ein Upgrade optional. Qwen3 8B hat leicht höhere Benchmark-Scores und bessere multilinguale und Codierungs-Unterstützung. Für die meisten englischsprachigen allgemeinen Verwendungen ist der praktische Qualitätsunterschied klein. Upgraden Sie, wenn Ihr aktuelles Modell bei spezifischen Aufgaben Schwierigkeiten hat.' },
             { q: 'Werden lokale Modelle jemals die aktuelle Frontier Cloud-Modell-Qualität erreichen?', a: 'Der Trend deutet auf Ja hin -- mit einer Verzögerung von 18-24 Monaten. GPT-4 (2023, geschätzt 1,7 Billionen Parameter) wird durch Llama 3.3 70B (2025, lokal lauffähig) angepasst. GPT-5.5 (2024) wird wahrscheinlich bis Ende 2026 oder 2027 ein lokal lauffähiges Äquivalent haben. Der begrenzende Faktor ist Compute-Effizienz, nicht algorithmische Kapazität.' },
             { q: 'Was ist mit DeepSeek passiert und warum war es bedeutsam?', a: 'DeepSeek-R1 (Januar 2025) demonstrierte, dass ein chinesisches KI-Labor Reasoning-fähige Modelle produzieren kann, die mit OpenAI o1 bei niedrigeren Trainingskosten konkurrierbar sind. Der Open-Weight-Release machte ein Frontier-Klasse-Reasoning-Modell erstmals lokal verfügbar. DeepSeek-R1 7B erreicht 52 % bei MATH -- fast doppelt so viel wie die 28 % von Mistral Small -- speziell wegen seiner Chain-of-Thought-Trainingsmethodologie.' },
             { q: 'Was ist Llama 4 und ist es lokal noch verfügbar?', a: 'Llama 4 Scout ist ein Mixture-of-Experts-Modell (17B aktiv / 109B Gesamtparameter, 16 Experten) mit Long-Context (bis zu 10M Token behauptet) und multimodaler Unterstützung. Es ist seit Juni 2026 über `ollama pull llama4:scout` in der Ollama-Bibliothek verfügbar, benötigt bei Q4-Quantisierung jedoch etwa 55 GB VRAM -- außerhalb der Reichweite der meisten Consumer-Hardware.' },
@@ -1644,7 +1644,7 @@ schema: {
             'name': 'Sollte ich von Llama 3.1 8B auf ein neueres Modell upgraden?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Wenn Sie Llama 3.1 8B für allgemeine Aufgaben verwenden und mit der Qualität zufrieden sind, ist ein Upgrade optional. Qwen3 7B hat leicht höhere Benchmark-Scores und bessere multilinguale und Codierungs-Unterstützung. Für die meisten englischsprachigen allgemeinen Verwendungen ist der praktische Qualitätsunterschied klein. Upgraden Sie, wenn Ihr aktuelles Modell bei spezifischen Aufgaben Schwierigkeiten hat.',
+              'text': 'Wenn Sie Llama 3.1 8B für allgemeine Aufgaben verwenden und mit der Qualität zufrieden sind, ist ein Upgrade optional. Qwen3 8B hat leicht höhere Benchmark-Scores und bessere multilinguale und Codierungs-Unterstützung. Für die meisten englischsprachigen allgemeinen Verwendungen ist der praktische Qualitätsunterschied klein. Upgraden Sie, wenn Ihr aktuelles Modell bei spezifischen Aufgaben Schwierigkeiten hat.',
             },
           },
           {
@@ -1763,7 +1763,7 @@ schema: {
         q42025: {
           title: 'Q4 2025的模型中，2026年仍最重要的是哪些？',
           image: '/images/model-comparison-2026-zh.svg',
-          imageCaption: '2026年4月本地LLM模型对比：Llama 3.3 70B领先（MMLU 82%、VRAM 42GB）、Qwen3 7B多语言最优（MMLU 74%、VRAM 5GB、中文支持卓越）、Gemma 3 9B增加视觉、DeepSeek-R1 7B专攻推理（MATH 52%）。全部可通过Ollama运行。',
+          imageCaption: '2026年4月本地LLM模型对比：Llama 3.3 70B领先（MMLU 82%、VRAM 42GB）、Qwen3 8B多语言最优（MMLU 74%、VRAM 5GB、中文支持卓越）、Gemma 3 9B增加视觉、DeepSeek-R1 7B专攻推理（MATH 52%）。全部可通过Ollama运行。',
           rows: [
             { '模型': 'Llama 3.3 70B', '发布': '2025年12月', '关键规格': '82% MMLU、88% HumanEval、128K上下文', '仍相关': '是 -- 最佳70B选择' },
             { '模型': 'Phi-4 14B', '发布': '2024年12月', '关键规格': '84% MMLU -- 超越其规模等级', '仍相关': '是 -- 强大的14B推理模型' },
@@ -1787,14 +1787,14 @@ schema: {
           id: 'quality-improvement',
           title: '2024年到2026年本地LLM质量提升了多少？',
           content: [
-            '**两年间本地运行模型质量的提升幅度巨大。** 2026年4月，一个7B模型（Qwen3 7B、74% MMLU）的性能相当于2024年初的13B模型。一个70B模型（Llama 3.3 70B、82% MMLU）相当于GPT-4（2023）-- 三年前需要数十亿美元服务器基础设施的模型现在能在Mac Studio上运行。针对各模型等级的硬件建议，参见[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+            '**两年间本地运行模型质量的提升幅度巨大。** 2026年4月，一个7B模型（Qwen3 8B、74% MMLU）的性能相当于2024年初的13B模型。一个70B模型（Llama 3.3 70B、82% MMLU）相当于GPT-4（2023）-- 三年前需要数十亿美元服务器基础设施的模型现在能在Mac Studio上运行。针对各模型等级的硬件建议，参见[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
           ],
           image: '/images/llm-quality-improvement-2024-2026-zh.svg',
-          imageCaption: '本地LLM质量改进（2024-2026）：7B级模型从64%（Mistral Small、2024初）提升到74%（Qwen3 7B、2026年4月）。70B级从75%（Llama 3.3 70B）提升到82-84%（Llama 3.3 70B和Qwen3 72B）。每18-24个月本地模型质量进步一代。',
+          imageCaption: '本地LLM质量改进（2024-2026）：7B级模型从64%（Mistral Small、2024初）提升到74%（Qwen3 8B、2026年4月）。70B级从75%（Llama 3.3 70B）提升到82-84%（Llama 3.3 70B和Qwen3 72B）。每18-24个月本地模型质量进步一代。',
           rows: [
             { '年份': '2024年初', '最佳7B MMLU': '~64%（Mistral Small）', '最佳本地70B MMLU': '~75%（Llama 3.3 70B）', '所需硬件': '7B: 8 GB RAM；70B: 48 GB RAM' },
-            { '年份': '2025年末', '最佳7B MMLU': '~74%（Qwen3 7B）', '最佳本地70B MMLU': '~82%（Llama 3.3 70B）', '所需硬件': '7B: 5 GB RAM；70B: 40 GB RAM' },
-            { '年份': '2026年4月', '最佳7B MMLU': '~74%（Qwen3 7B）', '最佳本地70B MMLU': '~84%（Qwen3 72B）', '所需硬件': '7B: 4.7 GB RAM；70B: 43 GB RAM' },
+            { '年份': '2025年末', '最佳7B MMLU': '~74%（Qwen3 8B）', '最佳本地70B MMLU': '~82%（Llama 3.3 70B）', '所需硬件': '7B: 5 GB RAM；70B: 40 GB RAM' },
+            { '年份': '2026年4月', '最佳7B MMLU': '~74%（Qwen3 8B）', '最佳本地70B MMLU': '~84%（Qwen3 72B）', '所需硬件': '7B: 4.7 GB RAM；70B: 43 GB RAM' },
           ],
           columns: ['年份', '最佳7B MMLU', '最佳本地70B MMLU', '所需硬件'],
         },
@@ -1843,13 +1843,13 @@ schema: {
           title: '2026年本地LLM模型更新的常见问题？',
           faqs: [
             { q: '新模型在开源发布后多久出现在Ollama中？', a: '通常1-7天用于Meta、Google、Mistral和Alibaba的重大发布。Ollama团队优先考虑高调发布 -- Llama 3.3 70B在Meta开源发布后3天出现在Ollama库中。更小或社区模型可能需要2-4周。' },
-            { q: '我应该从Llama 3.1 8B升级到更新模型吗？', a: '如果你用Llama 3.1 8B处理一般任务且对质量满意，升级是可选的。Qwen3 7B基准分数略高，多语言和代码支持更好。对于大多数英文一般用途，实际质量差异很小。如果当前模型在特定任务上遇到困难，升级是值得的。' },
+            { q: '我应该从Llama 3.1 8B升级到更新模型吗？', a: '如果你用Llama 3.1 8B处理一般任务且对质量满意，升级是可选的。Qwen3 8B基准分数略高，多语言和代码支持更好。对于大多数英文一般用途，实际质量差异很小。如果当前模型在特定任务上遇到困难，升级是值得的。' },
             { q: '本地模型会否达到当前前沿云模型的质量？', a: '趋势表明是的 -- 滞后18-24个月。GPT-4（2023、估计1.7万亿参数）由本地运行的Llama 3.3 70B（2025）匹配。GPT-5.5（2024）到2026年末或2027年可能有本地运行等价物。限制因素是计算效率，非算法能力。' },
             { q: 'DeepSeek发生了什么，为什么意义重大？', a: 'DeepSeek-R1（2025年1月）证明中国AI实验室能以较低训练成本开发与OpenAI o1竞争的推理能力模型。开源发布使前沿推理模型首次在本地可用。DeepSeek-R1 7B在MATH上达52% -- 几乎是Mistral Small的28%的两倍 -- 特别是因为其思维链训练方法。' },
             { q: 'Llama 4是什么，现在可本地运行吗？', a: 'Llama 4 Scout是一款混合专家（MoE）模型（激活17B／总计109B参数，16个专家），支持长上下文（声称最高1000万令牌）和多模态能力。自2026年6月起已可通过`ollama pull llama4:scout`在Ollama库中获取，但在Q4量化下需要约55 GB显存 -- 超出大多数消费级硬件的能力范围。' },
             { q: '2026年本地是否有专针对企业或受管制行业的模型？', a: 'Mistral AI为Mistral模型提供企业级支持合同。其欧洲原产地与GDPR合规相关（欧盟AI法2025年2月生效）。用于医疗（HIPAA）或金融（SOC 2），任何本地部署模型都能满足数据驻留要求 -- 模型本身是数据中立的。合规工作在部署基础设施中，非模型选择中。' },
             { q: '完全初学者在2026年应从哪个模型开始？', a: 'Llama 3.2 3B或Gemma 3 4B是最佳初学者选择。两者都在有限硬件（4-6 GB VRAM）上运行，有广泛文档且在一般任务表现良好。Llama 3.2 3B有更多社区指南和工具集成。Gemma 3 4B更新、稍快且支持视觉能力。对于非技术用户，LM Studio使两者易于安装使用，无需命令行。' },
-            { q: '如果我的当前模型运行良好，升级新模型值得花费精力吗？', a: '仅当遇到具体质量限制时。如果你的7B或8B模型满足用例，升级是可选的。仅当注意到推理错误、多语言支持差或代码能力弱时升级才值得。Qwen3 7B在大多数基准上超越Llama 3.1 8B，是追求增量改进的用户的安全升级目标。' },
+            { q: '如果我的当前模型运行良好，升级新模型值得花费精力吗？', a: '仅当遇到具体质量限制时。如果你的7B或8B模型满足用例，升级是可选的。仅当注意到推理错误、多语言支持差或代码能力弱时升级才值得。Qwen3 8B在大多数基准上超越Llama 3.1 8B，是追求增量改进的用户的安全升级目标。' },
             { q: '本地LLM是否支持中文？', a: 'Qwen3全系列、Llama 3.3 70B、Gemma 3和DeepSeek-R1都支持中文。Qwen3中文优化最充分，支持29种语言包括中文、日文和英文。即使是最小量化（Q3_K_M）也保持中文质量。' },
             { q: '代码生成最适合用哪个模型？', a: 'Qwen3-Coder全系列。DeepSeek-R1 7B/70B也很优秀。支持最新编程语言。对于专业开发者，Qwen3-Coder系列提供最佳代码补全和错误修复。' },
             { q: 'DeepSeek有什么重要意义？', a: 'DeepSeek-R1（2025年1月）证明中国AI实验室能以较低成本开发与OpenAI o1竞争的推理模型。开源发布使前沿推理模型首次本地可用。DeepSeek-R1 7B在MATH达52%，是Mistral Small的28%的近两倍。' },
@@ -1966,7 +1966,7 @@ schema: {
             'name': '我应该从Llama 3.1 8B升级到更新模型吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '如果你用Llama 3.1 8B处理一般任务且对质量满意，升级是可选的。Qwen3 7B基准分数略高，多语言和代码支持更好。对于大多数英文一般用途，实际质量差异很小。如果当前模型在特定任务上遇到困难，升级是值得的。',
+              'text': '如果你用Llama 3.1 8B处理一般任务且对质量满意，升级是可选的。Qwen3 8B基准分数略高，多语言和代码支持更好。对于大多数英文一般用途，实际质量差异很小。如果当前模型在特定任务上遇到困难，升级是值得的。',
             },
           },
           {
@@ -2014,7 +2014,7 @@ schema: {
             'name': '如果我的当前模型运行良好，升级新模型值得花费精力吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '仅当遇到具体质量限制时。如果你的7B或8B模型满足用例，升级是可选的。仅当注意到推理错误、多语言支持差或代码能力弱时升级才值得。Qwen3 7B在大多数基准上超越Llama 3.1 8B，是追求增量改进的用户的安全升级目标。',
+              'text': '仅当遇到具体质量限制时。如果你的7B或8B模型满足用例，升级是可选的。仅当注意到推理错误、多语言支持差或代码能力弱时升级才值得。Qwen3 8B在大多数基准上超越Llama 3.1 8B，是追求增量改进的用户的安全升级目标。',
             },
           },
           {
@@ -2128,7 +2128,7 @@ schema: {
         q42025: {
           title: 'Quels modèles Q4 2025 sont toujours les plus importants en 2026 ?',
           image: '/images/model-comparison-2026-fr.svg',
-          imageCaption: 'Comparaison des modèles LLM locaux avril 2026 : Llama 3.3 70B en tête avec 82% MMLU et 42 GB VRAM, Qwen3 7B offre le meilleur support multilingue à 74% MMLU et 5 GB VRAM, Gemma 3 9B ajoute les capacités vision, DeepSeek-R1 7B spécialisé dans les tâches de raisonnement avec 52% MATH. Tous exécutables via Ollama.',
+          imageCaption: 'Comparaison des modèles LLM locaux avril 2026 : Llama 3.3 70B en tête avec 82% MMLU et 42 GB VRAM, Qwen3 8B offre le meilleur support multilingue à 74% MMLU et 5 GB VRAM, Gemma 3 9B ajoute les capacités vision, DeepSeek-R1 7B spécialisé dans les tâches de raisonnement avec 52% MATH. Tous exécutables via Ollama.',
           rows: [
             { 'Modèle': 'Llama 3.3 70B', 'Publié': 'Décembre 2025', 'Specs clés': '82% MMLU, 88% HumanEval, contexte 128K', 'Toujours pertinent': 'Oui -- meilleure option 70B' },
             { 'Modèle': 'Phi-4 14B', 'Publié': 'Décembre 2024', 'Specs clés': '84% MMLU -- au-dessus de sa catégorie de taille', 'Toujours pertinent': 'Oui -- modèle de raisonnement 14B solide' },
@@ -2152,14 +2152,14 @@ schema: {
           id: 'quality-improvement',
           title: 'De combien la qualité des LLM locaux a-t-elle progressé de 2024 à 2026 ?',
           content: [
-            '**L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle.** En avril 2026, un modèle 7B (Qwen3 7B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) -- un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
+            '**L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle.** En avril 2026, un modèle 7B (Qwen3 8B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) -- un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-fr.svg',
-          imageCaption: 'Amélioration de la qualité des LLM locaux 2024-2026 : les modèles de classe 7B se sont améliorés de 64% MMLU (Mistral Small, début 2024) à 74% (Qwen3 7B, avril 2026). La classe 70B s\'est améliorée de 75% (Llama 3.3 70B) à 82-84% (Llama 3.3 70B et Qwen3 72B). Tous les 18-24 mois, la qualité des modèles locaux progresse d\'une génération.',
+          imageCaption: 'Amélioration de la qualité des LLM locaux 2024-2026 : les modèles de classe 7B se sont améliorés de 64% MMLU (Mistral Small, début 2024) à 74% (Qwen3 8B, avril 2026). La classe 70B s\'est améliorée de 75% (Llama 3.3 70B) à 82-84% (Llama 3.3 70B et Qwen3 72B). Tous les 18-24 mois, la qualité des modèles locaux progresse d\'une génération.',
           rows: [
             { 'Période': 'Début 2024', 'Meilleur 7B MMLU': '~64% (Mistral Small)', 'Meilleur 70B local MMLU': '~75% (Llama 3.3 70B)', 'Matériel requis': '7B : 8 GB RAM ; 70B : 48 GB RAM' },
-            { 'Période': 'Fin 2025', 'Meilleur 7B MMLU': '~74% (Qwen3 7B)', 'Meilleur 70B local MMLU': '~82% (Llama 3.3 70B)', 'Matériel requis': '7B : 5 GB RAM ; 70B : 40 GB RAM' },
-            { 'Période': 'Avril 2026', 'Meilleur 7B MMLU': '~74% (Qwen3 7B)', 'Meilleur 70B local MMLU': '~84% (Qwen3 72B)', 'Matériel requis': '7B : 4.7 GB RAM ; 70B : 43 GB RAM' },
+            { 'Période': 'Fin 2025', 'Meilleur 7B MMLU': '~74% (Qwen3 8B)', 'Meilleur 70B local MMLU': '~82% (Llama 3.3 70B)', 'Matériel requis': '7B : 5 GB RAM ; 70B : 40 GB RAM' },
+            { 'Période': 'Avril 2026', 'Meilleur 7B MMLU': '~74% (Qwen3 8B)', 'Meilleur 70B local MMLU': '~84% (Qwen3 72B)', 'Matériel requis': '7B : 4.7 GB RAM ; 70B : 43 GB RAM' },
           ],
           columns: ['Période', 'Meilleur 7B MMLU', 'Meilleur 70B local MMLU', 'Matériel requis'],
         },
@@ -2210,13 +2210,13 @@ schema: {
           title: 'Questions fréquentes sur les mises à jour des modèles LLM locaux en 2026 ?',
           faqs: [
             { q: 'À quelle vitesse les nouveaux modèles apparaissent-ils dans Ollama après leur release open-weight ?', a: 'Généralement 1-7 jours pour les releases majeures de Meta, Google, Mistral et Alibaba. L\'équipe Ollama priorise les releases très connues -- Llama 3.3 70B est apparu dans la bibliothèque Ollama 3 jours après la release open-weight de Meta. Les modèles plus petits ou communautaires peuvent prendre 2-4 semaines.' },
-            { q: 'Dois-je mettre à niveau Llama 3.1 8B vers un modèle plus récent ?', a: 'Si vous utilisez Llama 3.1 8B pour des tâches générales et êtes satisfait de la qualité, la mise à niveau est facultative. Qwen3 7B a des scores de benchmark légèrement plus élevés et un meilleur support multilingue et de codage. Pour la plupart des utilisations générales en anglais, la différence de qualité pratique est mineure. Mettez à niveau si votre modèle actuel rencontre des problèmes sur des tâches spécifiques.' },
+            { q: 'Dois-je mettre à niveau Llama 3.1 8B vers un modèle plus récent ?', a: 'Si vous utilisez Llama 3.1 8B pour des tâches générales et êtes satisfait de la qualité, la mise à niveau est facultative. Qwen3 8B a des scores de benchmark légèrement plus élevés et un meilleur support multilingue et de codage. Pour la plupart des utilisations générales en anglais, la différence de qualité pratique est mineure. Mettez à niveau si votre modèle actuel rencontre des problèmes sur des tâches spécifiques.' },
             { q: 'Les modèles locaux atteindront-ils un jour la qualité actuelle des modèles cloud frontier ?', a: 'La tendance suggère oui -- avec un décalage de 18-24 mois. GPT-4 (2023, estimé à 1.7 trillion de paramètres) correspond à Llama 3.3 70B (2025, exécutable localement). GPT-5.5 (2024) aura probablement un équivalent exécutable localement d\'ici fin 2026 ou 2027. Le facteur limitant est l\'efficacité de calcul, non la capacité algorithmique.' },
             { q: 'Qu\'est-il arrivé avec DeepSeek et pourquoi c\'était significatif ?', a: 'DeepSeek-R1 (janvier 2025) a démontré qu\'un laboratoire d\'IA chinois pouvait produire des modèles dotés de capacités de raisonnement compétitives avec OpenAI o1 à des coûts d\'entraînement inférieurs. La release open-weight rendait un modèle de raisonnement de classe frontier disponible localement pour la première fois. DeepSeek-R1 7B atteint 52% en MATH -- près du double des 28% de Mistral Small -- en raison de sa méthodologie d\'entraînement chain-of-thought.' },
             { q: 'Qu\'est-ce que Llama 4 et est-il disponible localement pour le moment ?', a: 'Llama 4 Scout est un modèle mixture-of-experts (17B actifs / 109B paramètres totaux, 16 experts) avec long contexte (10M de tokens revendiqués) et support multimodal. Il est disponible dans la bibliothèque Ollama depuis juin 2026 via `ollama pull llama4:scout`, bien qu\'il nécessite environ 55 Go de VRAM en quantification Q4 -- hors de portée de la plupart du matériel grand public.' },
             { q: 'Y a-t-il des modèles locaux spécifiquement pour l\'entreprise ou les industries réglementées en 2026 ?', a: 'Mistral AI fournit des contrats de support de niveau entreprise pour les modèles Mistral. Leur origine européenne est pertinente pour la conformité RGPD (AI Act de l\'UE en vigueur depuis février 2025). Pour la santé (HIPAA) ou la finance (SOC 2), tout modèle déployé localement peut satisfaire les exigences de résidence des données -- le modèle lui-même est neutre en matière de données. Le travail de conformité réside dans l\'infrastructure de déploiement, non dans la sélection du modèle.' },
             { q: 'Quel modèle un débutant complet devrait-il commencer en 2026 ?', a: 'Llama 3.2 3B ou Gemma 3 4B sont les meilleures options pour débutants. Les deux fonctionnent sur du matériel modeste (4-6 GB VRAM), disposent d\'une documentation complète et fonctionnent bien sur les tâches générales. Llama 3.2 3B dispose de plus de guides communautaires et d\'intégrations d\'outils. Gemma 3 4B est plus récent, légèrement plus rapide et supporte les capacités de vision. Pour les utilisateurs non techniques, LM Studio rend les deux faciles à installer et utiliser sans ligne de commande.' },
-            { q: 'La mise à niveau vers les nouveaux modèles en vaut-elle la peine si mon modèle actuel fonctionne bien ?', a: 'Uniquement si vous atteignez des limites de qualité spécifiques. Si votre modèle 7B ou 8B satisfait vos cas d\'utilisation, la mise à niveau est facultative. Cependant, si vous remarquez des erreurs de raisonnement, un support multilingue faible ou une faible capacité de codage, tester un modèle plus récent vaut la peine. Qwen3 7B (2025) surpasse Llama 3.1 8B sur la plupart des benchmarks et est une cible de mise à niveau sûre pour les utilisateurs cherchant une amélioration progressive.' },
+            { q: 'La mise à niveau vers les nouveaux modèles en vaut-elle la peine si mon modèle actuel fonctionne bien ?', a: 'Uniquement si vous atteignez des limites de qualité spécifiques. Si votre modèle 7B ou 8B satisfait vos cas d\'utilisation, la mise à niveau est facultative. Cependant, si vous remarquez des erreurs de raisonnement, un support multilingue faible ou une faible capacité de codage, tester un modèle plus récent vaut la peine. Qwen3 8B (2025) surpasse Llama 3.1 8B sur la plupart des benchmarks et est une cible de mise à niveau sûre pour les utilisateurs cherchant une amélioration progressive.' },
           ],
         },
         sources: {
@@ -2285,7 +2285,7 @@ schema: {
             'name': 'Dois-je mettre à niveau Llama 3.1 8B vers un modèle plus récent ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Si vous utilisez Llama 3.1 8B pour des tâches générales et êtes satisfait de la qualité, la mise à niveau est facultative. Qwen3 7B a des scores de benchmark légèrement plus élevés et un meilleur support multilingue et de codage. Pour la plupart des utilisations générales en anglais, la différence de qualité pratique est mineure. Mettez à niveau si votre modèle actuel rencontre des problèmes sur des tâches spécifiques.',
+              'text': 'Si vous utilisez Llama 3.1 8B pour des tâches générales et êtes satisfait de la qualité, la mise à niveau est facultative. Qwen3 8B a des scores de benchmark légèrement plus élevés et un meilleur support multilingue et de codage. Pour la plupart des utilisations générales en anglais, la différence de qualité pratique est mineure. Mettez à niveau si votre modèle actuel rencontre des problèmes sur des tâches spécifiques.',
             },
           },
           {
@@ -2333,7 +2333,7 @@ schema: {
             'name': 'La mise à niveau vers les nouveaux modèles en vaut-elle la peine si mon modèle actuel fonctionne bien ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Uniquement si vous atteignez des limites de qualité spécifiques. Si votre modèle 7B ou 8B satisfait vos cas d\'utilisation, la mise à niveau est facultative. Cependant, si vous remarquez des erreurs de raisonnement, un support multilingue faible ou une faible capacité de codage, tester un modèle plus récent vaut la peine. Qwen3 7B (2025) surpasse Llama 3.1 8B sur la plupart des benchmarks et est une cible de mise à niveau sûre pour les utilisateurs cherchant une amélioration progressive.',
+              'text': 'Uniquement si vous atteignez des limites de qualité spécifiques. Si votre modèle 7B ou 8B satisfait vos cas d\'utilisation, la mise à niveau est facultative. Cependant, si vous remarquez des erreurs de raisonnement, un support multilingue faible ou une faible capacité de codage, tester un modèle plus récent vaut la peine. Qwen3 8B (2025) surpasse Llama 3.1 8B sur la plupart des benchmarks et est une cible de mise à niveau sûre pour les utilisateurs cherchant une amélioration progressive.',
             },
           },
         ],
@@ -2408,7 +2408,7 @@ schema: {
         q42025: {
           title: '2026년에도 가장 중요한 2025년 Q4 모델은 무엇입니까?',
           image: '/images/model-comparison-2026-en.svg',
-          imageCaption: '2026년 4월 로컬 LLM 모델 비교: Llama 3.3 70B는 42GB VRAM으로 MMLU 82%를 달성하며 선두를 유지하고, Qwen3 7B는 5GB VRAM으로 MMLU 74%의 최고 다국어 지원을 제공하며, Gemma 3 9B는 비전 기능을 추가하고, DeepSeek-R1 7B는 MATH 52%로 추론 작업에 특화되어 있습니다. 모두 Ollama를 통해 실행 가능합니다.',
+          imageCaption: '2026년 4월 로컬 LLM 모델 비교: Llama 3.3 70B는 42GB VRAM으로 MMLU 82%를 달성하며 선두를 유지하고, Qwen3 8B는 5GB VRAM으로 MMLU 74%의 최고 다국어 지원을 제공하며, Gemma 3 9B는 비전 기능을 추가하고, DeepSeek-R1 7B는 MATH 52%로 추론 작업에 특화되어 있습니다. 모두 Ollama를 통해 실행 가능합니다.',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'Released': '2025년 12월', 'Key Specs': 'MMLU 82%, HumanEval 88%, 128K 컨텍스트', 'Still Relevant': '예 -- 최고의 70B 옵션' },
             { 'Model': 'Phi-4 14B', 'Released': '2024년 12월', 'Key Specs': 'MMLU 84% -- 파라미터 규모를 초월한 성능', 'Still Relevant': '예 -- 강력한 14B 추론 모델' },
@@ -2432,14 +2432,14 @@ schema: {
           id: 'quality-improvement',
           title: '2024년부터 2026년까지 로컬 LLM 품질은 얼마나 향상되었습니까?',
           content: [
-            '**로컬에서 실행 가능한 모델 품질의 2년간 향상은 상당합니다.** 2026년 4월 기준, 7B 모델(Qwen3 7B, MMLU 74%)은 2024년 초 13B 모델의 벤치마크 성능과 동등합니다. 70B 모델(Llama 3.3 70B, MMLU 82%)은 GPT-4 (2023년) 성능과 동등한데, 3년 전에는 수십억 달러의 서버 인프라가 필요하던 모델이 이제 Mac Studio에서 실행됩니다. 각 모델 클래스에 맞는 하드웨어 추천은 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
+            '**로컬에서 실행 가능한 모델 품질의 2년간 향상은 상당합니다.** 2026년 4월 기준, 7B 모델(Qwen3 8B, MMLU 74%)은 2024년 초 13B 모델의 벤치마크 성능과 동등합니다. 70B 모델(Llama 3.3 70B, MMLU 82%)은 GPT-4 (2023년) 성능과 동등한데, 3년 전에는 수십억 달러의 서버 인프라가 필요하던 모델이 이제 Mac Studio에서 실행됩니다. 각 모델 클래스에 맞는 하드웨어 추천은 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
           ],
           image: '/images/llm-quality-improvement-2024-2026-en.svg',
-          imageCaption: '로컬 LLM 품질 향상 2024~2026: 7B급 모델은 MMLU 64% (Mistral Small, 2024년 초)에서 74% (Qwen3 7B, 2026년 4월)로 향상되었습니다. 70B급은 75% (Llama 3.3 70B)에서 82~84% (Llama 3.3 70B 및 Qwen3 72B)로 향상되었습니다. 18~24개월마다 로컬 모델 품질이 한 세대 발전합니다.',
+          imageCaption: '로컬 LLM 품질 향상 2024~2026: 7B급 모델은 MMLU 64% (Mistral Small, 2024년 초)에서 74% (Qwen3 8B, 2026년 4월)로 향상되었습니다. 70B급은 75% (Llama 3.3 70B)에서 82~84% (Llama 3.3 70B 및 Qwen3 72B)로 향상되었습니다. 18~24개월마다 로컬 모델 품질이 한 세대 발전합니다.',
           rows: [
             { 'Year': '2024년 초', 'Best 7B MMLU': '~64% (Mistral Small)', 'Best Local 70B MMLU': '~75% (Llama 3.3 70B)', 'Hardware Needed': '7B: RAM 8 GB; 70B: RAM 48 GB' },
-            { 'Year': '2025년 후반', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: RAM 5 GB; 70B: RAM 40 GB' },
-            { 'Year': '2026년 4월', 'Best 7B MMLU': '~74% (Qwen3 7B)', 'Best Local 70B MMLU': '~84% (Qwen3 72B)', 'Hardware Needed': '7B: RAM 4.7 GB; 70B: RAM 43 GB' },
+            { 'Year': '2025년 후반', 'Best 7B MMLU': '~74% (Qwen3 8B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: RAM 5 GB; 70B: RAM 40 GB' },
+            { 'Year': '2026년 4월', 'Best 7B MMLU': '~74% (Qwen3 8B)', 'Best Local 70B MMLU': '~84% (Qwen3 72B)', 'Hardware Needed': '7B: RAM 4.7 GB; 70B: RAM 43 GB' },
           ],
           columns: ['Year', 'Best 7B MMLU', 'Best Local 70B MMLU', 'Hardware Needed'],
         },
@@ -2495,7 +2495,7 @@ schema: {
             },
             {
               q: 'Llama 3.1 8B에서 더 새로운 모델로 업그레이드해야 합니까?',
-              a: '일반 작업에 Llama 3.1 8B를 사용하고 품질에 만족한다면 업그레이드는 선택 사항입니다. Qwen3 7B는 벤치마크 점수가 약간 더 높고 다국어 및 코딩 지원이 더 우수합니다. 대부분의 영어 중심 일반 사용에서 실용적 품질 차이는 작습니다. 현재 모델이 특정 작업에서 어려움을 겪을 때 업그레이드하십시오.',
+              a: '일반 작업에 Llama 3.1 8B를 사용하고 품질에 만족한다면 업그레이드는 선택 사항입니다. Qwen3 8B는 벤치마크 점수가 약간 더 높고 다국어 및 코딩 지원이 더 우수합니다. 대부분의 영어 중심 일반 사용에서 실용적 품질 차이는 작습니다. 현재 모델이 특정 작업에서 어려움을 겪을 때 업그레이드하십시오.',
             },
             {
               q: '로컬 모델이 언젠가 현재 최첨단 클라우드 모델 품질과 동등해질 수 있습니까?',
@@ -2519,7 +2519,7 @@ schema: {
             },
             {
               q: '현재 모델이 잘 작동한다면 새 모델로 업데이트할 가치가 있습니까?',
-              a: '현재 모델에서 특정 품질 한계에 도달했을 때만 업데이트하십시오. 7B 또는 8B 모델이 사용 사례를 충족한다면 업그레이드는 선택 사항입니다. 추론 오류, 낮은 다국어 지원, 또는 약한 코딩 능력이 발견되면 새로운 모델 테스트가 가치 있습니다. Qwen3 7B (2025년)는 대부분의 벤치마크에서 Llama 3.1 8B보다 성능이 뛰어나 점진적 개선을 원하는 사용자들에게 안전한 업그레이드 대상입니다.',
+              a: '현재 모델에서 특정 품질 한계에 도달했을 때만 업데이트하십시오. 7B 또는 8B 모델이 사용 사례를 충족한다면 업그레이드는 선택 사항입니다. 추론 오류, 낮은 다국어 지원, 또는 약한 코딩 능력이 발견되면 새로운 모델 테스트가 가치 있습니다. Qwen3 8B (2025년)는 대부분의 벤치마크에서 Llama 3.1 8B보다 성능이 뛰어나 점진적 개선을 원하는 사용자들에게 안전한 업그레이드 대상입니다.',
             },
           ],
         },

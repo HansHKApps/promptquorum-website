@@ -50,12 +50,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Qwen3 dense sizes are 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B model. The closest is Qwen3-8B (pull `qwen3:8b`); if you searched "Qwen3 7B", you want the 8B. Qwen3\'s largest dense model is 32B; for a 72B-class model use Qwen2.5-72B. Qwen3 8B and 14B run reliably on consumer GPUs via Ollama or vLLM with a Docker Compose API server. Qwen 32B needs an RTX 4090 24 GB — note the RTX 4090 is now EOL (NVIDIA discontinued the RTX 40-series in 2026); every unit for sale is used, at roughly $2,000–2,600, well above its former $1,599–1,999 launch MSRP. Qwen 3.6 27B (pull `qwen3.6:27b`) is a newer, stronger-coding release from Alibaba that fits the same VRAM tier as Qwen3 32B and is worth evaluating alongside it. Qwen2.5-72B requires dual GPUs, high-RAM CPU inference, or a cloud fallback — self-hosting it costs $0.05–0.12 per day depending on hardware amortization, versus $0.50–1.20/hr on RunPod.**',
+      '**Qwen3 dense sizes are 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B model. The closest is Qwen3-8B (pull `qwen3:8b`); if you searched "Qwen3 8B", you want the 8B. Qwen3\'s largest dense model is 32B; for a 72B-class model use Qwen2.5-72B. Qwen3 8B and 14B run reliably on consumer GPUs via Ollama or vLLM with a Docker Compose API server. Qwen 32B needs an RTX 4090 24 GB — note the RTX 4090 is now EOL (NVIDIA discontinued the RTX 40-series in 2026); every unit for sale is used, at roughly $2,000–2,600, well above its former $1,599–1,999 launch MSRP. Qwen 3.6 27B (pull `qwen3.6:27b`) is a newer, stronger-coding release from Alibaba that fits the same VRAM tier as Qwen3 32B and is worth evaluating alongside it. Qwen2.5-72B requires dual GPUs, high-RAM CPU inference, or a cloud fallback — self-hosting it costs $0.05–0.12 per day depending on hardware amortization, versus $0.50–1.20/hr on RunPod.**',
     quickAnswerTop: {
       en: {
         question: 'How do I deploy Qwen models in production locally?',
         answer:
-          'Run Qwen via a Docker Compose stack exposing an OpenAI-compatible API: Ollama handles GPU inference, Open WebUI provides the front-end, and Nginx reverse-proxies both. Qwen3 8B runs on 8 GB VRAM; Qwen2.5-72B needs dual RTX 4090s or cloud GPU rental.',
+          'Run Qwen via a Docker Compose stack exposing an OpenAI-compatible API: Ollama handles GPU inference, Open WebUI provides the front-end, and Nginx reverse-proxies both. Qwen3 8B runs on ~6 GB VRAM; Qwen2.5-72B needs dual RTX 4090s or cloud GPU rental.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, $150–350 used GPU',
           'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~$424 new',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Key Takeaways',
         items: [
-          'Qwen3 8B and 14B are consumer GPU targets — 8 GB and 16 GB VRAM respectively, running via Ollama in Docker',
+          'Qwen3 8B and 14B are consumer GPU targets — ~6 GB and 16 GB VRAM respectively, running via Ollama in Docker',
           'Qwen3 32B needs an RTX 4090 24 GB — the RTX 4090 is now EOL (discontinued by NVIDIA in 2026), so every card is used, at ~$2,000–2,600',
           'Qwen 3.6 27B (`qwen3.6:27b`) is a newer, stronger-coding release from Alibaba that fits the same 24 GB VRAM tier as Qwen3 32B — evaluate it alongside Qwen3 32B before buying hardware',
           'Qwen2.5-72B requires dual RTX 4090s, a high-RAM CPU build (128+ GB DDR5), or cloud rental — self-hosting costs ~$0.05–0.12/day amortized',
@@ -419,8 +419,8 @@ docker run --gpus all \\
         title: 'Frequently Asked Questions',
         faqs: [
           {
-            q: 'Is there a Qwen3 7B model?',
-            a: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 7B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
+            q: 'Is there a Qwen3 8B model?',
+            a: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
           },
           {
             q: 'Is there a Qwen 3.8 model?',
@@ -468,10 +468,10 @@ docker run --gpus all \\
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Is there a Qwen3 7B model?',
+          name: 'Is there a Qwen3 8B model?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 7B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
+            text: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 8B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
           },
         },
         {
@@ -587,12 +587,12 @@ docker run --gpus all \\
     audience:
       'Entwickler und Self-Hoster, die Qwen-Modelle produktiv betreiben möchten — mit persistentem API-Server, Multi-GPU-Build oder Always-On-Miniserver.',
     leadAnswerBlock:
-      '**Die Qwen3-Dense-Größen sind 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B-Modell. Am nächsten kommt Qwen3-8B (Pull `qwen3:8b`); wer nach "Qwen3 7B" gesucht hat, meint das 8B. Das größte Qwen3-Dense-Modell ist 32B; für ein 72B-Klasse-Modell nimm Qwen2.5-72B. Qwen3 8B und 14B laufen zuverlässig auf Consumer-GPUs via Ollama oder vLLM in einem Docker-Compose-API-Server. Qwen 32B benötigt eine RTX 4090 24 GB. Qwen2.5-72B braucht dual GPUs, CPU-Inferenz mit 128+ GB RAM oder Cloud-Fallback — Self-Hosting kostet 0,04–0,11 Euro/Tag (amortisiert), RunPod A100 kostet ~1,50 Euro/Stunde.**',
+      '**Die Qwen3-Dense-Größen sind 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B-Modell. Am nächsten kommt Qwen3-8B (Pull `qwen3:8b`); wer nach "Qwen3 8B" gesucht hat, meint das 8B. Das größte Qwen3-Dense-Modell ist 32B; für ein 72B-Klasse-Modell nimm Qwen2.5-72B. Qwen3 8B und 14B laufen zuverlässig auf Consumer-GPUs via Ollama oder vLLM in einem Docker-Compose-API-Server. Qwen 32B benötigt eine RTX 4090 24 GB. Qwen2.5-72B braucht dual GPUs, CPU-Inferenz mit 128+ GB RAM oder Cloud-Fallback — Self-Hosting kostet 0,04–0,11 Euro/Tag (amortisiert), RunPod A100 kostet ~1,50 Euro/Stunde.**',
     quickAnswerTop: {
       de: {
         question: 'Wie setze ich Qwen-Modelle lokal produktiv ein?',
         answer:
-          'Docker-Compose-Stack mit Ollama (GPU-Inferenz), Open WebUI (Frontend) und Nginx (Reverse-Proxy) — dieser Stack läuft in unter 10 Minuten und exponiert eine OpenAI-kompatible API. Qwen3 8B läuft auf 8 GB VRAM; Qwen2.5-72B benötigt dual RTX 4090s oder Cloud-GPU.',
+          'Docker-Compose-Stack mit Ollama (GPU-Inferenz), Open WebUI (Frontend) und Nginx (Reverse-Proxy) — dieser Stack läuft in unter 10 Minuten und exponiert eine OpenAI-kompatible API. Qwen3 8B läuft auf ~6 GB VRAM; Qwen2.5-72B benötigt dual RTX 4090s oder Cloud-GPU.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, 150–350 US-Dollar gebraucht (ca. 280–650 Euro)',
           'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ca. 400 Euro neu',
@@ -609,7 +609,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'Wichtigste Erkenntnisse',
         items: [
-          'Qwen3 8B und 14B laufen auf Consumer-GPUs — 8 GB bzw. 16 GB VRAM, via Ollama in Docker',
+          'Qwen3 8B und 14B laufen auf Consumer-GPUs — ~6 GB bzw. 16 GB VRAM, via Ollama in Docker',
           'Qwen3 32B braucht eine RTX 4090 24 GB — das größte Single-GPU-Deployment für die meisten Teams',
           'Qwen2.5-72B: dual RTX 4090, CPU-Build mit 128+ GB DDR5 oder Cloud-Rental',
           'Docker-Compose-Stack mit Ollama + Open WebUI + Nginx ist in unter 10 Minuten einsatzbereit',
@@ -670,8 +670,8 @@ docker run --gpus all \\
             a: 'Nein — "Qwen 3.8" ist keine reale Version. Gemeint ist wahrscheinlich Qwen3-8B (`ollama pull qwen3:8b`, 8 Milliarden Parameter) oder Qwen 3.6 (`ollama pull qwen3.6:27b`), ein neueres, im Coding stärkeres Release von Alibaba in derselben VRAM-Klasse wie Qwen3 32B. Alibabas Versionierung besteht aus Qwen3 (Dense-Größen 0,6B–32B) und dem separaten Qwen 3.6 Point-Release — eine "3.8" gibt es in keiner der beiden Reihen.',
           },
           {
-            q: 'Gibt es ein Qwen3 7B Modell?',
-            a: 'Nein. Die Qwen3-Dense-Reihe umfasst 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B. Wer nach "Qwen3 7B" gesucht hat, findet als nächstliegendes Modell Qwen3-8B (`ollama pull qwen3:8b`), das bei Q4_K_M ~5–6 GB VRAM belegt und auf einer RTX 3060 12 GB rund 25 tok/s erreicht. Für ein 72B-Klasse-Modell nutzen Sie Qwen2.5-72B.',
+            q: 'Gibt es ein Qwen3 8B Modell?',
+            a: 'Nein. Die Qwen3-Dense-Reihe umfasst 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B. Wer nach "Qwen3 8B" gesucht hat, findet als nächstliegendes Modell Qwen3-8B (`ollama pull qwen3:8b`), das bei Q4_K_M ~5–6 GB VRAM belegt und auf einer RTX 3060 12 GB rund 25 tok/s erreicht. Für ein 72B-Klasse-Modell nutzen Sie Qwen2.5-72B.',
           },
           {
             q: 'Kann ich Qwen2.5-72B auf einer einzelnen RTX 4090 betreiben?',
@@ -745,12 +745,12 @@ docker run --gpus all \\
     audience:
       'Développeurs et auto-hébergeurs déployant des modèles Qwen en production — serveurs API persistants, builds multi-GPU ou mini-serveurs toujours actifs.',
     leadAnswerBlock:
-      '**Les tailles denses de Qwen3 sont 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'existe pas de modèle 7B. Le plus proche est Qwen3-8B (pull `qwen3:8b`) ; si vous avez cherché « Qwen3 7B », c\'est le 8B qu\'il vous faut. Le plus grand modèle dense de Qwen3 est le 32B ; pour un modèle de classe 72B, utilisez Qwen2.5-72B. Qwen3 8B et 14B fonctionnent de manière fiable sur des GPU grand public via Ollama ou vLLM avec un serveur API Docker Compose. Qwen 32B nécessite un RTX 4090 24 Go. Qwen2.5-72B exige des GPU multiples, de l\'inférence CPU avec 128+ Go de RAM, ou un cloud de secours — l\'auto-hébergement coûte 0,04–0,11 €/jour amorti, contre 0,40–1,20 $/heure sur RunPod.**',
+      '**Les tailles denses de Qwen3 sont 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'existe pas de modèle 7B. Le plus proche est Qwen3-8B (pull `qwen3:8b`) ; si vous avez cherché « Qwen3 8B », c\'est le 8B qu\'il vous faut. Le plus grand modèle dense de Qwen3 est le 32B ; pour un modèle de classe 72B, utilisez Qwen2.5-72B. Qwen3 8B et 14B fonctionnent de manière fiable sur des GPU grand public via Ollama ou vLLM avec un serveur API Docker Compose. Qwen 32B nécessite un RTX 4090 24 Go. Qwen2.5-72B exige des GPU multiples, de l\'inférence CPU avec 128+ Go de RAM, ou un cloud de secours — l\'auto-hébergement coûte 0,04–0,11 €/jour amorti, contre 0,40–1,20 $/heure sur RunPod.**',
     quickAnswerTop: {
       fr: {
         question: 'Comment déployer des modèles Qwen en production localement ?',
         answer:
-          'Utilisez un stack Docker Compose avec Ollama (inférence GPU), Open WebUI (interface) et Nginx (reverse-proxy + auth) — ce stack est opérationnel en moins de 10 minutes et expose une API compatible OpenAI. Qwen3 8B fonctionne avec 8 Go de VRAM ; Qwen2.5-72B nécessite deux RTX 4090 ou un GPU cloud.',
+          'Utilisez un stack Docker Compose avec Ollama (inférence GPU), Open WebUI (interface) et Nginx (reverse-proxy + auth) — ce stack est opérationnel en moins de 10 minutes et expose une API compatible OpenAI. Qwen3 8B fonctionne avec ~6 Go de VRAM ; Qwen2.5-72B nécessite deux RTX 4090 ou un GPU cloud.',
         bullets: [
           'Qwen3 8B : RTX 3060 12 Go, ~25 tok/s, 150–350 $ GPU d\'occasion',
           'Qwen3 14B : RTX 4060 Ti 16 Go, ~18 tok/s, ~400 € neuf',
@@ -767,7 +767,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'Points clés',
         items: [
-          'Qwen3 8B et 14B ciblent les GPU grand public — 8 et 16 Go de VRAM respectivement, via Ollama dans Docker',
+          'Qwen3 8B et 14B ciblent les GPU grand public — ~6 et 16 Go de VRAM respectivement, via Ollama dans Docker',
           'Qwen3 32B nécessite un RTX 4090 24 Go — le plus grand déploiement monoGPU pour la plupart des équipes',
           'Qwen2.5-72B : double RTX 4090, build CPU avec 128+ Go DDR5, ou location cloud',
           'Un stack Docker Compose avec Ollama + Open WebUI + Nginx est opérationnel en moins de 10 minutes',
@@ -797,8 +797,8 @@ docker run --gpus all \\
             a: "Non — « Qwen 3.8 » n'est pas une version réelle. Vous voulez probablement dire Qwen3-8B (`ollama pull qwen3:8b`, 8 milliards de paramètres) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), une version plus récente et plus performante en code publiée par Alibaba, dans la même classe de VRAM que Qwen3 32B. Le versionnement d'Alibaba se compose de Qwen3 (tailles denses de 0,6B à 32B) et de la version ponctuelle distincte Qwen 3.6 — il n'existe de « 3.8 » dans aucune des deux gammes.",
           },
           {
-            q: 'Existe-t-il un modèle Qwen3 7B ?',
-            a: 'Non. La gamme dense de Qwen3 comprend 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'y a pas de 7B. Si vous avez cherché « Qwen3 7B », le modèle le plus proche est Qwen3-8B (`ollama pull qwen3:8b`), qui occupe ~5–6 Go de VRAM en Q4_K_M et atteint environ 25 tok/s sur une RTX 3060 12 Go. Pour un modèle de classe 72B, utilisez Qwen2.5-72B.',
+            q: 'Existe-t-il un modèle Qwen3 8B ?',
+            a: 'Non. La gamme dense de Qwen3 comprend 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'y a pas de 7B. Si vous avez cherché « Qwen3 8B », le modèle le plus proche est Qwen3-8B (`ollama pull qwen3:8b`), qui occupe ~5–6 Go de VRAM en Q4_K_M et atteint environ 25 tok/s sur une RTX 3060 12 Go. Pour un modèle de classe 72B, utilisez Qwen2.5-72B.',
           },
           {
             q: 'Puis-je faire tourner Qwen2.5-72B sur un seul RTX 4090 ?',
@@ -880,12 +880,12 @@ docker run --gpus all \\
     audience:
       'Qwenモデルを本番環境でデプロイする開発者・セルフホスター。永続的なAPIサーバー、マルチGPUビルド、常時稼働ミニPCサーバーを構築する方。',
     leadAnswerBlock:
-      '**Qwen3のdenseモデルは0.6B・1.7B・4B・8B・14B・32Bで、7Bモデルは存在しません。最も近いのはQwen3-8B（`qwen3:8b`をpull）で、「Qwen3 7B」を探していた場合はこの8Bが該当します。Qwen3の最大denseモデルは32Bで、72Bクラスが必要な場合はQwen2.5-72Bを使用します。Qwen3 8BおよびQwen 14BはOllamaまたはvLLMを使ったDocker Compose APIサーバーで、コンシューマーGPU上で安定稼働します。Qwen 32BはRTX 4090 24GBが必要。Qwen2.5-72BはデュアルGPU・高RAMのCPU推論、またはクラウドが必要です。自己ホスティングのコストは1日あたり約6〜16円（ハードウェア償却込み）、RunPodのA100は約65円/時間です。**',
+      '**Qwen3のdenseモデルは0.6B・1.7B・4B・8B・14B・32Bで、7Bモデルは存在しません。最も近いのはQwen3-8B（`qwen3:8b`をpull）で、「Qwen3 8B」を探していた場合はこの8Bが該当します。Qwen3の最大denseモデルは32Bで、72Bクラスが必要な場合はQwen2.5-72Bを使用します。Qwen3 8BおよびQwen 14BはOllamaまたはvLLMを使ったDocker Compose APIサーバーで、コンシューマーGPU上で安定稼働します。Qwen 32BはRTX 4090 24GBが必要。Qwen2.5-72BはデュアルGPU・高RAMのCPU推論、またはクラウドが必要です。自己ホスティングのコストは1日あたり約6〜16円（ハードウェア償却込み）、RunPodのA100は約65円/時間です。**',
     quickAnswerTop: {
       ja: {
         question: 'Qwenモデルをローカルで本番運用するには？',
         answer:
-          'Docker ComposeスタックでOllama（GPU推論）、Open WebUI（フロントエンド）、Nginx（リバースプロキシ）を組み合わせます。10分以内でOpenAI互換APIが起動します。Qwen3 8Bは8GB VRAM、Qwen2.5-72BはデュアルRTX 4090またはクラウドGPUが必要です。',
+          'Docker ComposeスタックでOllama（GPU推論）、Open WebUI（フロントエンド）、Nginx（リバースプロキシ）を組み合わせます。10分以内でOpenAI互換APIが起動します。Qwen3 8Bは約6GB VRAM、Qwen2.5-72BはデュアルRTX 4090またはクラウドGPUが必要です。',
         bullets: [
           'Qwen3 8B：RTX 3060 12GB、約25tok/s、中古2〜5万円',
           'Qwen3 14B：RTX 4060 Ti 16GB、約18tok/s、新品約6万円',
@@ -902,7 +902,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'まとめ',
         items: [
-          'Qwen3 8Bと14BはコンシューマーGPU向け — それぞれ8GBと16GB VRAM、Docker上のOllamaで動作',
+          'Qwen3 8Bと14BはコンシューマーGPU向け — それぞれ約6GBと16GB VRAM、Docker上のOllamaで動作',
           'Qwen3 32BはRTX 4090 24GBが必要 — ほとんどのチームにとって最大のシングルGPUデプロイ',
           'Qwen2.5-72Bはデュアルカード、128GB+ DDR5のCPUビルド、またはクラウドが必要',
           'Docker ComposeスタックはOllama + Open WebUI + Nginxで10分以内に起動',
@@ -932,8 +932,8 @@ docker run --gpus all \\
             a: 'いいえ——「Qwen 3.8」という実在のリリースはありません。おそらくQwen3-8B（`ollama pull qwen3:8b`、80億パラメータ）か、Qwen 3.6（`ollama pull qwen3.6:27b`、Qwen3 32Bと同じVRAM帯でコーディング性能が強化されたAlibabaの新しいリリース）のことを指していると考えられます。Alibabaのバージョン体系はQwen3（denseサイズ0.6B〜32B）と、別系統のポイントリリースであるQwen 3.6で構成されており、どちらのラインにも「3.8」は存在しません。',
           },
           {
-            q: 'Qwen3 7Bモデルは存在しますか？',
-            a: 'いいえ。Qwen3のdenseラインナップは0.6B・1.7B・4B・8B・14B・32Bで、7Bはありません。「Qwen3 7B」を探していた場合、最も近いモデルはQwen3-8B（`ollama pull qwen3:8b`）で、Q4_K_Mで約5〜6GBのVRAMに収まり、RTX 3060 12GBで約25 tok/sで動作します。72Bクラスが必要な場合はQwen2.5-72Bを使用してください。',
+            q: 'Qwen3 8Bモデルは存在しますか？',
+            a: 'いいえ。Qwen3のdenseラインナップは0.6B・1.7B・4B・8B・14B・32Bで、7Bはありません。「Qwen3 8B」を探していた場合、最も近いモデルはQwen3-8B（`ollama pull qwen3:8b`）で、Q4_K_Mで約5〜6GBのVRAMに収まり、RTX 3060 12GBで約25 tok/sで動作します。72Bクラスが必要な場合はQwen2.5-72Bを使用してください。',
           },
           {
             q: 'Qwen2.5-72BをRTX 4090 1枚で動かせますか？',
@@ -1020,12 +1020,12 @@ docker run --gpus all \\
     audience:
       '在生产环境中部署Qwen模型的开发者和自托管用户——包括持久API服务器、多GPU构建或全天候运行的迷你PC服务器。',
     leadAnswerBlock:
-      '**Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B型号。最接近的是Qwen3-8B（拉取`qwen3:8b`）；如果你搜索的是"Qwen3 7B"，你要的其实是8B。Qwen3最大的dense型号是32B；如需72B级别的模型，请使用Qwen2.5-72B。Qwen3 8B和14B可通过Ollama或vLLM在消费级GPU上稳定运行Docker Compose API服务器。Qwen 32B需要RTX 4090 24GB。Qwen2.5-72B需要双GPU、128GB+ RAM的CPU推理或云端备选——自托管成本约为每天0.3至0.8元人民币（含硬件摊销），RunPod A100约为11元人民币/小时。**',
+      '**Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B型号。最接近的是Qwen3-8B（拉取`qwen3:8b`）；如果你搜索的是"Qwen3 8B"，你要的其实是8B。Qwen3最大的dense型号是32B；如需72B级别的模型，请使用Qwen2.5-72B。Qwen3 8B和14B可通过Ollama或vLLM在消费级GPU上稳定运行Docker Compose API服务器。Qwen 32B需要RTX 4090 24GB。Qwen2.5-72B需要双GPU、128GB+ RAM的CPU推理或云端备选——自托管成本约为每天0.3至0.8元人民币（含硬件摊销），RunPod A100约为11元人民币/小时。**',
     quickAnswerTop: {
       zh: {
         question: '如何在本地生产环境中部署Qwen模型？',
         answer:
-          '使用Docker Compose堆栈：Ollama（GPU推理）+ Open WebUI（前端）+ Nginx（反向代理）。10分钟内启动OpenAI兼容API。Qwen3 8B需要8GB显存；Qwen2.5-72B需要双RTX 4090或云端GPU。',
+          '使用Docker Compose堆栈：Ollama（GPU推理）+ Open WebUI（前端）+ Nginx（反向代理）。10分钟内启动OpenAI兼容API。Qwen3 8B需要约6GB显存；Qwen2.5-72B需要双RTX 4090或云端GPU。',
         bullets: [
           'Qwen3 8B：RTX 3060 12GB，约25 tok/s，二手GPU约1000-2500元',
           'Qwen3 14B：RTX 4060 Ti 16GB，约18 tok/s，新品约3000元',
@@ -1042,7 +1042,7 @@ docker run --gpus all \\
         isTldr: true,
         title: '核心要点',
         items: [
-          'Qwen3 8B和14B适合消费级GPU——分别需要8GB和16GB显存，通过Docker中的Ollama运行',
+          'Qwen3 8B和14B适合消费级GPU——分别需要约6GB和16GB显存，通过Docker中的Ollama运行',
           'Qwen3 32B需要RTX 4090 24GB——是大多数团队最大的单GPU生产部署',
           'Qwen2.5-72B需要双GPU、128GB+ DDR5 CPU构建或云端租用',
           'Docker Compose堆栈（Ollama + Open WebUI + Nginx）10分钟内即可部署',
@@ -1090,8 +1090,8 @@ docker run --gpus all \\
             a: '没有——"Qwen 3.8"并非真实存在的版本。你很可能想找的是Qwen3-8B（`ollama pull qwen3:8b`，80亿参数）或Qwen 3.6（`ollama pull qwen3.6:27b`），后者是阿里巴巴发布的更新、编码能力更强的版本，与Qwen3 32B处于相同的显存档位。阿里巴巴的版本体系由Qwen3（dense尺寸0.6B–32B）和独立的Qwen 3.6点版本组成——这两条线中都不存在"3.8"。',
           },
           {
-            q: '有Qwen3 7B型号吗？',
-            a: '没有。Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B。如果你搜索的是"Qwen3 7B"，最接近的型号是Qwen3-8B（`ollama pull qwen3:8b`），在Q4_K_M下约占用5–6GB显存，在RTX 3060 12GB上约为25 tok/s。如需72B级别的模型，请使用Qwen2.5-72B。',
+            q: '有Qwen3 8B型号吗？',
+            a: '没有。Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B。如果你搜索的是"Qwen3 8B"，最接近的型号是Qwen3-8B（`ollama pull qwen3:8b`），在Q4_K_M下约占用5–6GB显存，在RTX 3060 12GB上约为25 tok/s。如需72B级别的模型，请使用Qwen2.5-72B。',
           },
           {
             q: '能用单张RTX 4090运行Qwen2.5-72B吗？',
@@ -1208,12 +1208,12 @@ docker run --gpus all \\
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Los tamaños densos de Qwen3 son 0,6B, 1,7B, 4B, 8B, 14B y 32B — no existe un modelo 7B. El más cercano es Qwen3-8B (haz pull de `qwen3:8b`); si buscabas "Qwen3 7B", lo que quieres es el 8B. El mayor modelo denso de Qwen3 es el 32B; para un modelo de clase 72B usa Qwen2.5-72B. Qwen3 8B y 14B funcionan de forma fiable en GPUs de consumo mediante Ollama o vLLM con un servidor API Docker Compose. Qwen 32B necesita una RTX 4090 de 24 GB. Qwen2.5-72B requiere GPUs duales, inferencia CPU con 128+ GB de RAM o una alternativa en la nube — el self-hosting cuesta entre $0,05 y $0,12 por día según la amortización del hardware, frente a $0,50–1,20/hr en RunPod.**',
+      '**Los tamaños densos de Qwen3 son 0,6B, 1,7B, 4B, 8B, 14B y 32B — no existe un modelo 7B. El más cercano es Qwen3-8B (haz pull de `qwen3:8b`); si buscabas "Qwen3 8B", lo que quieres es el 8B. El mayor modelo denso de Qwen3 es el 32B; para un modelo de clase 72B usa Qwen2.5-72B. Qwen3 8B y 14B funcionan de forma fiable en GPUs de consumo mediante Ollama o vLLM con un servidor API Docker Compose. Qwen 32B necesita una RTX 4090 de 24 GB. Qwen2.5-72B requiere GPUs duales, inferencia CPU con 128+ GB de RAM o una alternativa en la nube — el self-hosting cuesta entre $0,05 y $0,12 por día según la amortización del hardware, frente a $0,50–1,20/hr en RunPod.**',
     quickAnswerTop: {
       es: {
         question: '¿Cómo despliego modelos Qwen en producción localmente?',
         answer:
-          'Ejecuta Qwen mediante un stack Docker Compose que expone una API compatible con OpenAI: Ollama gestiona la inferencia GPU, Open WebUI proporciona el frontend y Nginx actúa como reverse proxy. Qwen3 8B funciona con 8 GB de VRAM; Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube.',
+          'Ejecuta Qwen mediante un stack Docker Compose que expone una API compatible con OpenAI: Ollama gestiona la inferencia GPU, Open WebUI proporciona el frontend y Nginx actúa como reverse proxy. Qwen3 8B funciona con ~6 GB de VRAM; Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, $150–350 GPU de segunda mano',
           'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~$424 nuevo',
@@ -1241,7 +1241,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'Puntos clave',
         items: [
-          'Qwen3 8B y 14B son objetivos para GPUs de consumo — 8 GB y 16 GB de VRAM respectivamente, ejecutándose mediante Ollama en Docker',
+          'Qwen3 8B y 14B son objetivos para GPUs de consumo — ~6 GB y 16 GB de VRAM respectivamente, ejecutándose mediante Ollama en Docker',
           'Qwen3 32B necesita una RTX 4090 de 24 GB; es el despliegue en producción con una sola tarjeta más grande para la mayoría de los equipos',
           'Qwen2.5-72B requiere dos RTX 4090, un build CPU con mucha RAM (128+ GB DDR5) o alquiler en la nube — el self-hosting cuesta ~$0,05–0,12/día amortizado',
           'Un stack Docker Compose con Ollama + Open WebUI + Nginx expone una API compatible con OpenAI en menos de 10 minutos',
@@ -1571,8 +1571,8 @@ docker run --gpus all \\
             a: 'No — "Qwen 3.8" no es una versión real. Probablemente te refieras a Qwen3-8B (`ollama pull qwen3:8b`, 8 mil millones de parámetros) o a Qwen 3.6 (`ollama pull qwen3.6:27b`), un lanzamiento más reciente de Alibaba con mejor rendimiento en código, en la misma categoría de VRAM que Qwen3 32B. El versionado de Alibaba consiste en Qwen3 (tamaños densos de 0,6B a 32B) y el lanzamiento puntual independiente Qwen 3.6 — no existe un "3.8" en ninguna de las dos líneas.',
           },
           {
-            q: '¿Existe un modelo Qwen3 7B?',
-            a: 'No. La gama densa de Qwen3 es 0,6B, 1,7B, 4B, 8B, 14B y 32B — no hay 7B. Si buscabas "Qwen3 7B", el modelo más cercano es Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM en Q4_K_M y alcanza unos 25 tok/s en una RTX 3060 12 GB. Para un modelo de clase 72B, usa Qwen2.5-72B.',
+            q: '¿Existe un modelo Qwen3 8B?',
+            a: 'No. La gama densa de Qwen3 es 0,6B, 1,7B, 4B, 8B, 14B y 32B — no hay 7B. Si buscabas "Qwen3 8B", el modelo más cercano es Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM en Q4_K_M y alcanza unos 25 tok/s en una RTX 3060 12 GB. Para un modelo de clase 72B, usa Qwen2.5-72B.',
           },
           {
             q: '¿Puedo ejecutar Qwen2.5-72B en una sola RTX 4090?',
@@ -1754,12 +1754,12 @@ docker run --gpus all \\
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Os tamanhos densos do Qwen3 são 0,6B, 1,7B, 4B, 8B, 14B e 32B — não existe um modelo 7B. O mais próximo é o Qwen3-8B (faça pull de `qwen3:8b`); se você buscou "Qwen3 7B", é o 8B que você quer. O maior modelo denso do Qwen3 é o 32B; para um modelo da classe 72B use o Qwen2.5-72B. Qwen3 8B e 14B funcionam de forma confiável em GPUs de consumo via Ollama ou vLLM com um servidor API Docker Compose. Qwen 32B precisa de uma RTX 4090 de 24 GB. Qwen2.5-72B requer GPUs duplas, inferência em CPU com 128+ GB de RAM ou uma alternativa na nuvem — o self-hosting custa entre US$ 0,05 e US$ 0,12 por dia conforme a amortização do hardware, contra US$ 0,50–1,20/h na RunPod.**',
+      '**Os tamanhos densos do Qwen3 são 0,6B, 1,7B, 4B, 8B, 14B e 32B — não existe um modelo 7B. O mais próximo é o Qwen3-8B (faça pull de `qwen3:8b`); se você buscou "Qwen3 8B", é o 8B que você quer. O maior modelo denso do Qwen3 é o 32B; para um modelo da classe 72B use o Qwen2.5-72B. Qwen3 8B e 14B funcionam de forma confiável em GPUs de consumo via Ollama ou vLLM com um servidor API Docker Compose. Qwen 32B precisa de uma RTX 4090 de 24 GB. Qwen2.5-72B requer GPUs duplas, inferência em CPU com 128+ GB de RAM ou uma alternativa na nuvem — o self-hosting custa entre US$ 0,05 e US$ 0,12 por dia conforme a amortização do hardware, contra US$ 0,50–1,20/h na RunPod.**',
     quickAnswerTop: {
       pt: {
         question: 'Como implanto modelos Qwen em produção localmente?',
         answer:
-          'Execute o Qwen por meio de um stack Docker Compose que expõe uma API compatível com OpenAI: o Ollama cuida da inferência na GPU, o Open WebUI fornece o front-end e o Nginx faz o reverse proxy de ambos. O Qwen3 8B roda com 8 GB de VRAM; o Qwen2.5-72B precisa de duas RTX 4090 ou de uma GPU na nuvem.',
+          'Execute o Qwen por meio de um stack Docker Compose que expõe uma API compatível com OpenAI: o Ollama cuida da inferência na GPU, o Open WebUI fornece o front-end e o Nginx faz o reverse proxy de ambos. O Qwen3 8B roda com ~6 GB de VRAM; o Qwen2.5-72B precisa de duas RTX 4090 ou de uma GPU na nuvem.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 GB, ~25 tok/s, US$ 150–350 GPU usada',
           'Qwen3 14B: RTX 4060 Ti 16 GB, ~18 tok/s, ~US$ 424 nova',
@@ -1787,7 +1787,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'Pontos principais',
         items: [
-          'Qwen3 8B e 14B são alvos para GPUs de consumo — 8 GB e 16 GB de VRAM respectivamente, rodando via Ollama no Docker',
+          'Qwen3 8B e 14B são alvos para GPUs de consumo — ~6 GB e 16 GB de VRAM respectivamente, rodando via Ollama no Docker',
           'Qwen3 32B precisa de uma RTX 4090 de 24 GB; é a maior implantação em produção com uma única placa para a maioria dos times',
           'Qwen2.5-72B requer duas RTX 4090, um build de CPU com muita RAM (128+ GB DDR5) ou aluguel na nuvem — o self-hosting custa ~US$ 0,05–0,12/dia amortizado',
           'Um stack Docker Compose com Ollama + Open WebUI + Nginx expõe uma API compatível com OpenAI em menos de 10 minutos',
@@ -2117,8 +2117,8 @@ docker run --gpus all \\
             a: 'Não — "Qwen 3.8" não é um lançamento real. Você provavelmente quer dizer Qwen3-8B (`ollama pull qwen3:8b`, 8 bilhões de parâmetros) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), um lançamento mais novo e com melhor desempenho em código da Alibaba, na mesma faixa de VRAM do Qwen3 32B. O versionamento da Alibaba é composto pelo Qwen3 (tamanhos densos de 0,6B a 32B) e pelo lançamento pontual separado Qwen 3.6 — não existe um "3.8" em nenhuma das duas linhas.',
           },
           {
-            q: 'Existe um modelo Qwen3 7B?',
-            a: 'Não. A linha densa do Qwen3 é 0,6B, 1,7B, 4B, 8B, 14B e 32B — não há 7B. Se você buscou "Qwen3 7B", o modelo mais próximo é o Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM em Q4_K_M e roda cerca de 25 tok/s em uma RTX 3060 12 GB. Para um modelo da classe 72B, use o Qwen2.5-72B.',
+            q: 'Existe um modelo Qwen3 8B?',
+            a: 'Não. A linha densa do Qwen3 é 0,6B, 1,7B, 4B, 8B, 14B e 32B — não há 7B. Se você buscou "Qwen3 8B", o modelo mais próximo é o Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM em Q4_K_M e roda cerca de 25 tok/s em uma RTX 3060 12 GB. Para um modelo da classe 72B, use o Qwen2.5-72B.',
           },
           {
             q: 'Posso rodar o Qwen2.5-72B em uma única RTX 4090?',
@@ -2301,12 +2301,12 @@ docker run --gpus all \\
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**أحجام Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد نموذج 7B. الأقرب هو Qwen3-8B (نفّذ `qwen3:8b` عبر pull)؛ إذا بحثت عن "Qwen3 7B" فأنت تريد نموذج 8B. أكبر نموذج كثيف في Qwen3 هو 32B؛ ولنموذج من فئة 72B استخدم Qwen2.5-72B. Qwen3 8B و14B يعملان بشكل موثوق على وحدات GPU استهلاكية عبر Ollama أو vLLM مع خادم API بـ Docker Compose. Qwen 32B يتطلب RTX 4090 بـ 24 جيجابايت من VRAM. Qwen2.5-72B يحتاج GPU مزدوجًا أو استدلالًا على المعالج بـ 128+ جيجابايت من RAM أو بديلًا سحابيًا — التكلفة الذاتية تتراوح بين $0.05 و$0.12 يوميًا حسب إهلاك الجهاز، مقارنةً بـ $0.50–1.20 للساعة على RunPod.**',
+      '**أحجام Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد نموذج 7B. الأقرب هو Qwen3-8B (نفّذ `qwen3:8b` عبر pull)؛ إذا بحثت عن "Qwen3 8B" فأنت تريد نموذج 8B. أكبر نموذج كثيف في Qwen3 هو 32B؛ ولنموذج من فئة 72B استخدم Qwen2.5-72B. Qwen3 8B و14B يعملان بشكل موثوق على وحدات GPU استهلاكية عبر Ollama أو vLLM مع خادم API بـ Docker Compose. Qwen 32B يتطلب RTX 4090 بـ 24 جيجابايت من VRAM. Qwen2.5-72B يحتاج GPU مزدوجًا أو استدلالًا على المعالج بـ 128+ جيجابايت من RAM أو بديلًا سحابيًا — التكلفة الذاتية تتراوح بين $0.05 و$0.12 يوميًا حسب إهلاك الجهاز، مقارنةً بـ $0.50–1.20 للساعة على RunPod.**',
     quickAnswerTop: {
       ar: {
         question: 'كيف أنشر نماذج Qwen في الإنتاج محليًا؟',
         answer:
-          'شغّل Qwen عبر حزمة Docker Compose التي تعرض API متوافقة مع OpenAI: Ollama يدير الاستدلال على GPU، وOpen WebUI يوفر الواجهة الأمامية، وNginx يعمل كبروكسي عكسي. Qwen3 8B يعمل بـ 8 جيجابايت VRAM؛ Qwen2.5-72B يحتاج RTX 4090 مزدوجًا أو GPU سحابيًا.',
+          'شغّل Qwen عبر حزمة Docker Compose التي تعرض API متوافقة مع OpenAI: Ollama يدير الاستدلال على GPU، وOpen WebUI يوفر الواجهة الأمامية، وNginx يعمل كبروكسي عكسي. Qwen3 8B يعمل بـحوالي 6 جيجابايت VRAM؛ Qwen2.5-72B يحتاج RTX 4090 مزدوجًا أو GPU سحابيًا.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 جيجابايت، ~25 رمز/ثانية، $150–350 GPU مستعمل',
           'Qwen3 14B: RTX 4060 Ti 16 جيجابايت، ~18 رمز/ثانية، ~$424 جديد',
@@ -2334,7 +2334,7 @@ docker run --gpus all \\
         isTldr: true,
         title: 'النقاط الرئيسية',
         items: [
-          'Qwen3 8B و14B مناسبان لوحدات GPU الاستهلاكية — 8 جيجابايت و16 جيجابايت VRAM على التوالي، يعملان عبر Ollama في Docker',
+          'Qwen3 8B و14B مناسبان لوحدات GPU الاستهلاكية — حوالي 6 جيجابايت و16 جيجابايت VRAM على التوالي، يعملان عبر Ollama في Docker',
           'Qwen3 32B يتطلب RTX 4090 بـ 24 جيجابايت؛ هو أكبر نشر بطاقة واحدة في الإنتاج لمعظم الفرق',
           'Qwen2.5-72B يحتاج RTX 4090 مزدوجًا، أو بناءً على المعالج بذاكرة RAM كبيرة (128+ جيجابايت DDR5)، أو استئجارًا سحابيًا — التكلفة الذاتية ~$0.05–0.12/يوم مُهلَكة',
           'حزمة Docker Compose مع Ollama + Open WebUI + Nginx تعرض API متوافقة مع OpenAI في أقل من 10 دقائق',
@@ -2363,7 +2363,7 @@ docker run --gpus all \\
           '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات الاستدلال المقاسة مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
         columns: ['النموذج', 'VRAM المطلوبة', 'الجهاز الموصى به', 'السرعة (Q4_K_M)', 'تكلفة GPU (USD)'],
         rows: [
-          { 'النموذج': 'Qwen3 8B', 'VRAM المطلوبة': '8 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': '~25 رمز/ثانية', 'تكلفة GPU (USD)': '$150–350 مستعمل' },
+          { 'النموذج': 'Qwen3 8B', 'VRAM المطلوبة': '~6 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': '~25 رمز/ثانية', 'تكلفة GPU (USD)': '$150–350 مستعمل' },
           { 'النموذج': 'Qwen3 14B', 'VRAM المطلوبة': '12 جيجابايت', 'الجهاز الموصى به': 'RTX 4060 Ti 16 جيجابايت', 'السرعة (Q4_K_M)': '~18 رمز/ثانية', 'تكلفة GPU (USD)': '~$424 جديد' },
           { 'النموذج': 'Qwen3 32B', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': '~12 رمز/ثانية', 'تكلفة GPU (USD)': '~$1,900 جديد' },
           { 'النموذج': 'Qwen 3.6 27B', 'VRAM المطلوبة': '~16 جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'انظر دليل المقارنة', 'تكلفة GPU (USD)': '~$1,900 جديد' },
@@ -2522,8 +2522,8 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         title: 'الأسئلة الشائعة',
         faqs: [
             { q: 'هل يوجد نموذج Qwen 3.8؟', a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.' },
-            { q: 'هل يوجد نموذج Qwen3 7B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
-            { q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟', a: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.' },
+            { q: 'هل يوجد نموذج Qwen3 8B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
+            { q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟', a: 'حوالي 6 جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.' },
             { q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟', a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
             { q: 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟', a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.' },
             { q: 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟', a: 'UM890 Pro مع Qwen3 8B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.' },
@@ -2554,10 +2554,10 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
           },
           {
             '@type': 'Question',
-            'name': 'هل يوجد نموذج Qwen3 7B؟',
+            'name': 'هل يوجد نموذج Qwen3 8B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
+              'text': 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
             },
           },
           {
@@ -2565,7 +2565,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'name': 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.',
+              'text': 'حوالي 6 جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.',
             },
           },
           {
@@ -2699,12 +2699,12 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       'AOOSTAR GEM12 Pro OCuLink',
     ],
     leadAnswerBlock:
-      '**Qwen3 dense 모델은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 — 7B 모델은 없습니다. 가장 가까운 것은 Qwen3-8B(`qwen3:8b` pull)이며, "Qwen3 7B"를 검색했다면 8B를 원하는 것입니다. Qwen3의 최대 dense 모델은 32B이고, 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요. Qwen3 8B 및 14B는 Ollama 또는 vLLM과 Docker Compose API 서버를 통해 소비자용 GPU에서 안정적으로 동작합니다. Qwen 32B는 RTX 4090 24 GB가 필요합니다. Qwen2.5-72B는 듀얼 GPU, 128 GB 이상 RAM의 CPU 추론, 또는 클라우드 대안이 필요합니다 — self-hosting 비용은 하드웨어 감가상각 기준 하루 $0.05~$0.12이며, RunPod는 시간당 $0.50~$1.20입니다.**',
+      '**Qwen3 dense 모델은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 — 7B 모델은 없습니다. 가장 가까운 것은 Qwen3-8B(`qwen3:8b` pull)이며, "Qwen3 8B"를 검색했다면 8B를 원하는 것입니다. Qwen3의 최대 dense 모델은 32B이고, 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요. Qwen3 8B 및 14B는 Ollama 또는 vLLM과 Docker Compose API 서버를 통해 소비자용 GPU에서 안정적으로 동작합니다. Qwen 32B는 RTX 4090 24 GB가 필요합니다. Qwen2.5-72B는 듀얼 GPU, 128 GB 이상 RAM의 CPU 추론, 또는 클라우드 대안이 필요합니다 — self-hosting 비용은 하드웨어 감가상각 기준 하루 $0.05~$0.12이며, RunPod는 시간당 $0.50~$1.20입니다.**',
     quickAnswerTop: {
       ko: {
         question: 'Qwen 모델을 로컬 프로덕션 환경에 어떻게 배포합니까?',
         answer:
-          'Docker Compose 스택으로 Qwen을 실행하면 OpenAI 호환 API가 노출됩니다. Ollama가 GPU 추론을 담당하고, Open WebUI가 프런트엔드를 제공하며, Nginx가 리버스 프록시 역할을 합니다. Qwen3 8B는 VRAM 8 GB로 동작하며, Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU가 필요합니다.',
+          'Docker Compose 스택으로 Qwen을 실행하면 OpenAI 호환 API가 노출됩니다. Ollama가 GPU 추론을 담당하고, Open WebUI가 프런트엔드를 제공하며, Nginx가 리버스 프록시 역할을 합니다. Qwen3 8B는 VRAM 약 6 GB로 동작하며, Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU가 필요합니다.',
         bullets: [
           'Qwen3 8B: RTX 3060 12 GB, 약 25 tok/s, 중고 GPU $150~350',
           'Qwen3 14B: RTX 4060 Ti 16 GB, 약 18 tok/s, 신품 약 $424',
@@ -2732,7 +2732,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         isTldr: true,
         title: '핵심 요약',
         items: [
-          'Qwen3 8B와 14B는 소비자용 GPU 목표 — VRAM 각각 8 GB, 16 GB, Docker에서 Ollama로 실행 가능',
+          'Qwen3 8B와 14B는 소비자용 GPU 목표 — VRAM 각각 약 6 GB, 16 GB, Docker에서 Ollama로 실행 가능',
           'Qwen3 32B는 RTX 4090 24 GB가 필요하며, 대부분의 팀에서 단일 카드 프로덕션 배포 최대 규모입니다',
           'Qwen2.5-72B는 RTX 4090 두 장, 대용량 RAM(128 GB 이상 DDR5)의 CPU 빌드, 또는 클라우드 대여가 필요합니다 — self-hosting 비용은 감가상각 기준 하루 약 $0.05~0.12',
           'Ollama + Open WebUI + Nginx로 구성된 Docker Compose 스택은 10분 이내에 OpenAI 호환 API를 노출합니다',
@@ -3062,8 +3062,8 @@ docker run --gpus all \
             a: '아니요 — "Qwen 3.8"은 실제 출시된 버전이 아닙니다. Qwen3-8B(`ollama pull qwen3:8b`, 80억 파라미터) 또는 Qwen 3.6(`ollama pull qwen3.6:27b`, Qwen3 32B와 동일한 VRAM 등급이며 코딩 성능이 더 강화된 알리바바의 최신 릴리스)을 찾으시는 것일 가능성이 높습니다. 알리바바의 버전 체계는 Qwen3(0.6B~32B의 dense 크기)와 별도의 Qwen 3.6 포인트 릴리스로 구성되며, 두 라인 어디에도 "3.8"은 존재하지 않습니다.',
           },
           {
-            q: 'Qwen3 7B 모델이 있습니까?',
-            a: '없습니다. Qwen3 dense 라인업은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 7B는 없습니다. "Qwen3 7B"를 검색했다면 가장 가까운 모델은 Qwen3-8B(`ollama pull qwen3:8b`)이며, Q4_K_M에서 VRAM 약 5~6 GB에 맞고 RTX 3060 12 GB에서 약 25 tok/s로 동작합니다. 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요.',
+            q: 'Qwen3 8B 모델이 있습니까?',
+            a: '없습니다. Qwen3 dense 라인업은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 7B는 없습니다. "Qwen3 8B"를 검색했다면 가장 가까운 모델은 Qwen3-8B(`ollama pull qwen3:8b`)이며, Q4_K_M에서 VRAM 약 5~6 GB에 맞고 RTX 3060 12 GB에서 약 25 tok/s로 동작합니다. 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요.',
           },
           {
             q: 'RTX 4090 한 장으로 Qwen2.5-72B를 실행할 수 있습니까?',

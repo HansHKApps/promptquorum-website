@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Homebrewでのインストール（日本語環境）：** `brew install ollama` で即インストール可能。日本語環境のmacOSでも追加設定不要。MLXは`pip install mlx-lm`（Python 3.11+推奨）。ZennにM系Mac別のインストール記事多数あり。',
           '**Apple Silicon日本市場の特殊性：** 台湾TSMC製のM系チップが日本では「Made in Japan的品質」として信頼されており、MacBook採用率が高い。M2 Pro 16GBは日本の開発者に最も普及した構成で、7Bモデルの実行に余裕あり。',
-          '**日本語ベンチマーク比較：** Zenn記事「MLX vs Ollama 速度比較 M2/M3」によると、日本語トークン処理ではMLXがOllama比で20-25%速い（M2 Pro 16GB、Qwen3-7B Q4使用）。英語モデルほどの差は出ない場合もあるが、日本語コーパスへの特化でQwen3がLlama 3.3より優位。',
+          '**日本語ベンチマーク比較：** Zenn記事「MLX vs Ollama 速度比較 M2/M3」によると、日本語トークン処理ではMLXがOllama比で20-25%速い（M2 Pro 16GB、Qwen3 8B Q4使用）。英語モデルほどの差は出ない場合もあるが、日本語コーパスへの特化でQwen3がLlama 3.3より優位。',
           '**VOICEVOX + Ollama連携：** 日本固有のユースケースとして、VOICEVOX（日本語TTS）とOllamaを組み合わせたローカル音声アシスタント構成が人気。MLXはこの用途では直接連携しにくく、OllamaのREST APIが優位。',
           '**コミュニティ：** 「Ollama日本語ユーザー会」Discord、Zennの#ローカルLLMタグ、Qiitaの「ローカルLLM」タグで最新情報収集が効率的。M5 Proリリース後の新ベンチマークが随時投稿されている。',
         ],
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**TSMC與Apple Silicon的台灣視角：** 台灣開發者普遍對M系列晶片有高度認同感。MLX作為Apple Research的開源框架，在台灣技術社群中被視為「蘋果官方支持的選擇」，接受度高於第三方替代方案。',
-          '**繁體中文模型在MLX上的表現：** Qwen3-7B透過MLX運行時，繁體中文輸出質量明顯優於量化後的Ollama格式（Q4_K_M）。建議使用`mlx-community/Qwen3-7B-Instruct-4bit`官方MLX轉換版本，已由社群驗證繁體字處理正確。',
+          '**繁體中文模型在MLX上的表現：** Qwen3 8B透過MLX運行時，繁體中文輸出質量明顯優於量化後的Ollama格式（Q4_K_M）。建議使用`mlx-community/Qwen3-8B-Instruct-4bit`官方MLX轉換版本，已由社群驗證繁體字處理正確。',
           '**Homebrew vs MacPorts（台灣用戶）：** 台灣開發社群以Homebrew為主流（`brew install ollama`）。部分BSD/學術背景的開發者偏好MacPorts，但Ollama官方文件以Homebrew為優先，建議使用。MLX需Python環境，推薦`pyenv`管理Python版本。',
           '**香港用戶注意事項：** 香港與台灣使用相同的ZH翻譯，兩地的App Store及Homebrew訪問均無限制。粵語輸出目前沒有本地LLM完整支援——書面繁體中文是最實用的選項，在提示詞中指定「使用書面繁體中文」即可。',
           '**社群資源：** PTT的AI_TECH板、Dcard科技版有MLX和Ollama的中文使用心得。GitHub上`mlx-community`組織提供台灣開發者轉換的繁體中文優化模型，是獲取最新量化版本的優先來源。',

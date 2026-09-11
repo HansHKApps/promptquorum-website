@@ -429,14 +429,14 @@ schema: {
               'Kompetenzstufe': 'Anfänger',
               'Worauf Sie sich konzentrieren sollten': 'Modellauswahl + Chat',
               'Was Sie ignorieren sollten': 'Quantisierung, Kontextlänge, Batching, GPU-Zuweisung',
-              'Empfehlung': 'Laden Sie Llama 3.2 3B, Qwen3 7B oder Mistral Small über den Browser herunter, beginnen Sie zu chatten. Lassen Sie alle Einstellungen auf den Standardwerten. Die App übernimmt die Ressourcenverwaltung für Sie.',
+              'Empfehlung': 'Laden Sie Llama 3.2 3B, Qwen3 8B oder Mistral Small über den Browser herunter, beginnen Sie zu chatten. Lassen Sie alle Einstellungen auf den Standardwerten. Die App übernimmt die Ressourcenverwaltung für Sie.',
               'Grund': 'Das Ändern von Einstellungen ohne Verständnis führt zu Abstürzen, CUDA-Fehlern oder unerwartetem Verlangsamen.',
             },
             {
               'Kompetenzstufe': 'Fortgeschrittene',
               'Worauf Sie sich konzentrieren sollten': 'Quantisierung + Kontextlänge',
               'Was Sie ignorieren sollten': 'Batch-Inferenz, Fine-Tuning, benutzerdefinierte GPU-Zuweisung',
-              'Empfehlung': 'Passen Sie die Quantisierung (Q4_K_M vs. Q5_K_M) auf Llama 3.2 3B, Qwen3 7B oder Phi-3.5 14B je nach verfügbarem VRAM an. Erweitern Sie die Kontextlänge auf 4k-8k, wenn Ihr Computer 16+ GB RAM hat. Testen Sie eine Änderung nach der anderen.',
+              'Empfehlung': 'Passen Sie die Quantisierung (Q4_K_M vs. Q5_K_M) auf Llama 3.2 3B, Qwen3 8B oder Phi-3.5 14B je nach verfügbarem VRAM an. Erweitern Sie die Kontextlänge auf 4k-8k, wenn Ihr Computer 16+ GB RAM hat. Testen Sie eine Änderung nach der anderen.',
               'Grund': 'Quantisierung beeinflusst direkt die Qualität-gegen-Geschwindigkeit Abwägung. Kontextlänge ermöglicht Ihnen, mit längeren Dokumenten zu arbeiten. Dies sind die höchsten Auswirkungen-Einstellungen.',
             },
             {
@@ -827,14 +827,14 @@ schema: {
               'Niveau': 'Débutants',
               'Concentrez-vous sur': 'Sélection modèle + chat',
               'Ignorez': 'Quantification, contexte, batching, allocation GPU',
-              'Recommandation': 'Téléchargez Llama 3.2 3B, Qwen3 7B ou Mistral Small, commencez à chatter. Laissez tous les paramètres par défaut. L\'app gère ressources pour vous.',
+              'Recommandation': 'Téléchargez Llama 3.2 3B, Qwen3 8B ou Mistral Small, commencez à chatter. Laissez tous les paramètres par défaut. L\'app gère ressources pour vous.',
               'Pourquoi': 'Modifier paramètres sans compréhension cause crashes, erreurs CUDA ou ralentissements inattendus.',
             },
             {
               'Niveau': 'Intermédiaires',
               'Concentrez-vous sur': 'Quantification + contexte',
               'Ignorez': 'Inférence batch, fine-tuning, allocation GPU personnalisée',
-              'Recommandation': 'Ajustez quantification (Q4_K_M vs Q5_K_M) sur Llama 3.2 3B, Qwen3 7B ou Phi-3.5 14B selon VRAM. Étendez contexte à 4k-8k si machine a 16+ GB RAM. Testez un changement à la fois.',
+              'Recommandation': 'Ajustez quantification (Q4_K_M vs Q5_K_M) sur Llama 3.2 3B, Qwen3 8B ou Phi-3.5 14B selon VRAM. Étendez contexte à 4k-8k si machine a 16+ GB RAM. Testez un changement à la fois.',
               'Pourquoi': 'Quantification impacte directement compromis qualité-vitesse. Contexte permet travailler documents plus longs. Plus grand impact.',
             },
             {

@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Run all of these on the internet-connected machine before transfer. Replace model tags as needed.',
         items: [
           '`ollama pull qwen3:14b` — 9.5 GB, recommended default',
-          '`ollama pull qwen3:7b` — 5.5 GB, for lower-VRAM machines',
+          '`ollama pull qwen3:8b` — 5.5 GB, for lower-VRAM machines',
           '`ollama pull nomic-embed-text` — 274 MB, for offline RAG embeddings',
           '`ollama pull deepseek-r1:7b` — 5.5 GB, if math/reasoning is the primary use case',
           'Model files location: `~/.ollama/models/` on Linux/macOS, `%USERPROFILE%\\.ollama\\models` on Windows',
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A model library for a small team typically holds 3–6 models at different sizes. Plan storage before purchase.',
         columns: ['Model', 'Q4_K_M Size', 'Q8_0 Size', 'VRAM Required'],
         rows: [
-          { 'Model': 'Qwen3 7B', 'Q4_K_M Size': '5.5 GB', 'Q8_0 Size': '8.5 GB', 'VRAM Required': '8 GB' },
+          { 'Model': 'Qwen3 8B', 'Q4_K_M Size': '5.5 GB', 'Q8_0 Size': '8.5 GB', 'VRAM Required': '~6 GB' },
           { 'Model': 'Qwen3 14B', 'Q4_K_M Size': '9.5 GB', 'Q8_0 Size': '15 GB', 'VRAM Required': '12 GB' },
           { 'Model': 'Qwen3 32B', 'Q4_K_M Size': '20.5 GB', 'Q8_0 Size': '34 GB', 'VRAM Required': '24 GB' },
           { 'Model': 'Qwen3 72B', 'Q4_K_M Size': '46 GB', 'Q8_0 Size': '75 GB', 'VRAM Required': '48 GB' },
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'Does Ollama make any network calls when running offline?', a: 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.' },
             { q: 'Can I run Qwen3 72B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },
-            { q: 'What is the smallest model that handles Chinese text well offline?', a: 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.' },
+            { q: 'What is the smallest model that handles Chinese text well offline?', a: 'Qwen3 8B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.' },
             { q: 'Do I need a CAC security assessment for an internal offline deployment?', a: 'Generally no. CAC\'s Algorithm Security Assessment rules target public-facing AI services. Internal deployments accessible only to employees are out of scope. Consult a compliance professional for your specific situation.' },
             { q: 'Can llama.cpp run without any system dependencies?', a: 'On Linux, the pre-built binary requires GLIBC 2.28+ (standard on Ubuntu 20.04+). On macOS arm64, the binary is self-contained. On Windows, the CUDA build requires CUDA runtime DLLs.' },
             { q: 'How do I update models in an air-gapped environment?', a: 'Download the updated GGUF on a connected machine, verify the SHA256 hash, transfer via USB/SSD, and replace the old GGUF in your model directory. Restart the Ollama server to pick up the new file.' },
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'What is the smallest model that handles Chinese text well offline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.',
+              'text': 'Qwen3 8B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.',
             },
           },
           {
@@ -333,16 +333,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: { id: 'tldr', title: 'Zusammenfassung', isTldr: true, items: ['Alles auf einem verbundenen Rechner herunterladen: Ollama-Binary, GGUF-Modell, Tokenizer-Configs', 'Per USB-SSD oder internes Netzwerk übertragen — nie Cloud-Sync verwenden', '`OLLAMA_MODELS`-Umgebungsvariable auf das Offline-Modell-Verzeichnis setzen', 'Qwen3 14B bei Q4_K_M (9,5 GB) ist der empfohlene Offline-Standard', 'NAS-Dimensionierung: 20 GB pro 7B-Modell, 50 GB pro 14B, 100 GB pro 32B', 'DSGVO: Lokale Inferenz — keine Datenweitergabe an Dritte, kein Auftragsverarbeitungsvertrag nötig'] },
       preflight: { id: 'preflight', title: 'Vorab-Checkliste — vor dem Offline-Gehen herunterladen', content: 'Alle Punkte auf einem verbundenen Rechner abhaken, bevor die Umgebung isoliert wird.', numberedItems: ['**Ollama-Binary** — ollama.com für Ihr Betriebssystem herunterladen. Version ≥0.3.0 empfohlen.', '**Modell-GGUF** — `ollama pull qwen3:14b` auf dem verbundenen Rechner ausführen.', '**Tokenizer + Chat-Template** — Ollama bündelt diese mit dem Modell-Manifest; kein separater Download nötig.', '**Embedding-Modell** (für Offline-RAG) — `ollama pull nomic-embed-text`.', '**Verifikations-Hash** — `sha256sum` auf jede GGUF-Datei vor dem Transfer anwenden.'] },
-      download: { id: 'download', title: 'Download-Befehle für den verbundenen Rechner', content: 'Alle Befehle auf dem verbundenen Rechner ausführen, bevor der Transfer stattfindet.', items: ['`ollama pull qwen3:14b` — 9,5 GB, empfohlener Standard', '`ollama pull qwen3:7b` — 5,5 GB, für VRAM-ärmere Maschinen', '`ollama pull nomic-embed-text` — 274 MB, für Offline-RAG-Embeddings'] },
+      download: { id: 'download', title: 'Download-Befehle für den verbundenen Rechner', content: 'Alle Befehle auf dem verbundenen Rechner ausführen, bevor der Transfer stattfindet.', items: ['`ollama pull qwen3:14b` — 9,5 GB, empfohlener Standard', '`ollama pull qwen3:8b` — 5,5 GB, für VRAM-ärmere Maschinen', '`ollama pull nomic-embed-text` — 274 MB, für Offline-RAG-Embeddings'] },
       ollamaAirgap: { id: 'ollama-airgap', title: 'Ollama Air-Gap-Workflow', content: 'Nach dem Dateitransfer auf die Offline-Maschine:', numberedItems: ['Gesamtes `~/.ollama/`-Verzeichnis auf denselben Pfad des Offline-Hosts kopieren.', 'Ollama-Binary installieren: `chmod +x ollama && sudo mv ollama /usr/local/bin/`', 'Modell-Verzeichnis setzen: `export OLLAMA_MODELS=/pfad/zu/modellen`', 'Server starten: `ollama serve` — Logs prüfen, ob keine Netzwerkaufrufe stattfinden.', 'Offline testen: `ollama run qwen3:14b` — sollte sofort ohne externe URL-Anfragen antworten.'] },
       llamacppAirgap: { id: 'llamacpp-airgap', title: 'llama.cpp Air-Gap-Workflow', content: 'llama.cpp ist nach Binary + GGUF vollständig eigenständig — keine Runtime-Abhängigkeiten.', items: ['Binary und GGUF-Datei auf die Offline-Maschine übertragen.', 'Ausführen: `./llama-server -m ./qwen3-14b-instruct-q4_K_M.gguf --port 8080`', 'OpenAI-kompatible API unter `http://localhost:8080/v1` — Drop-in für jedes OpenAI-SDK.'] },
-      nasStorage: { id: 'nas-storage', title: 'NAS-Speicherdimensionierung für Offline-Modell-Bibliotheken', content: 'Eine Modell-Bibliothek für ein kleines Team hält typischerweise 3–6 Modelle in verschiedenen Größen.', columns: ['Modell', 'Q4_K_M-Größe', 'Q8_0-Größe', 'VRAM-Bedarf'], rows: [{ 'Modell': 'Qwen3 7B', 'Q4_K_M-Größe': '5,5 GB', 'Q8_0-Größe': '8,5 GB', 'VRAM-Bedarf': '8 GB' }, { 'Modell': 'Qwen3 14B', 'Q4_K_M-Größe': '9,5 GB', 'Q8_0-Größe': '15 GB', 'VRAM-Bedarf': '12 GB' }, { 'Modell': 'Qwen3 32B', 'Q4_K_M-Größe': '20,5 GB', 'Q8_0-Größe': '34 GB', 'VRAM-Bedarf': '24 GB' }], items: ['Empfohlenes NAS für Modell-Speicherung: Synology DS923+ mit 4× 4-TB-Laufwerken im RAID 5 (~12 TB nutzbar)', 'Minimum für eine 2–3-Modell-Bibliothek: 2-TB-SSD', 'BSI-Grundschutz: NAS-Laufwerk in der Dateiserver-Grundkonfiguration (SYS.1.3) dokumentieren'] },
+      nasStorage: { id: 'nas-storage', title: 'NAS-Speicherdimensionierung für Offline-Modell-Bibliotheken', content: 'Eine Modell-Bibliothek für ein kleines Team hält typischerweise 3–6 Modelle in verschiedenen Größen.', columns: ['Modell', 'Q4_K_M-Größe', 'Q8_0-Größe', 'VRAM-Bedarf'], rows: [{ 'Modell': 'Qwen3 8B', 'Q4_K_M-Größe': '5,5 GB', 'Q8_0-Größe': '8,5 GB', 'VRAM-Bedarf': '~6 GB' }, { 'Modell': 'Qwen3 14B', 'Q4_K_M-Größe': '9,5 GB', 'Q8_0-Größe': '15 GB', 'VRAM-Bedarf': '12 GB' }, { 'Modell': 'Qwen3 32B', 'Q4_K_M-Größe': '20,5 GB', 'Q8_0-Größe': '34 GB', 'VRAM-Bedarf': '24 GB' }], items: ['Empfohlenes NAS für Modell-Speicherung: Synology DS923+ mit 4× 4-TB-Laufwerken im RAID 5 (~12 TB nutzbar)', 'Minimum für eine 2–3-Modell-Bibliothek: 2-TB-SSD', 'BSI-Grundschutz: NAS-Laufwerk in der Dateiserver-Grundkonfiguration (SYS.1.3) dokumentieren'] },
       chinaCompliance: { id: 'china-compliance', title: 'DSGVO & BSI-Grundschutz für Offline-Deployments', content: 'Für DSGVO-konforme Deployments in Deutschland gelten bei lokaler Inferenz vereinfachte Anforderungen.', items: ['**Keine Auftragsverarbeitung:** Lokale Inferenz ohne Cloud-Anbindung erfordert keinen Auftragsverarbeitungsvertrag nach DSGVO Art. 28.', '**BSI-Grundschutz:** Air-Gapped-Server-Deployment entspricht dem Baustein SYS.1.1 (Allgemeiner Server). Netzwerkisolierung in der Systemdokumentation erfassen.', '**Protokollierung:** Ollama protokolliert standardmäßig keine Prompts. Falls Revisionsprotokoll erforderlich, Middleware zwischenschalten und lokal speichern.', '**Firewall-Regel:** `iptables -A OUTPUT -j DROP` für den Inferenz-Server dokumentieren, um Netzwerkisolierung nachzuweisen.'] },
       offlineRag: { id: 'offline-rag', title: 'Offline-RAG-Setup', content: 'RAG vollständig offline erfordert: lokales LLM + lokales Embedding-Modell + lokale Vektordatenbank.', numberedItems: ['**Embedding-Modell:** `ollama pull nomic-embed-text` auf dem verbundenen Rechner. Mit dem Ollama-Verzeichnis übertragen.', '**Vektordatenbank:** Chroma als eigenständiges Binary (kein Python nötig); alternativ Qdrant-Binary-Release.', '**Dokumenten-Ingestion:** LangChain oder LlamaIndex offline nutzen (Wheels vor dem Offline-Gehen herunterladen).', '**Query-Flow:** Dokument → Embedding via lokales nomic-embed-text → Top-k-Chunks aus lokaler DB → Qwen3 → Antwort. Kein externer Aufruf.'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
         { q: 'Macht Ollama Netzwerkaufrufe im Offline-Betrieb?', a: 'Nein. Ollama kontaktiert ollama.com nur beim Herunterladen oder Aktualisieren von Modellen. `ollama serve` mit lokalem Cache macht keine ausgehenden Verbindungen.' },
         { q: 'Ist das Offline-Deployment DSGVO-konform?', a: 'Ja. Lokale Inferenz ohne Cloud-Anbindung erfordert keinen Auftragsverarbeitungsvertrag nach DSGVO Art. 28, da keine Daten an Dritte übermittelt werden.' },
-        { q: 'Welches ist das kleinste Modell für gutes Deutsch offline?', a: 'Qwen3 7B bei Q4_K_M (5,5 GB VRAM). Deutschsprachige Ausgaben sind kohärent; für anspruchsvollere Aufgaben Qwen3 14B verwenden.' },
+        { q: 'Welches ist das kleinste Modell für gutes Deutsch offline?', a: 'Qwen3 8B bei Q4_K_M (5,5 GB VRAM). Deutschsprachige Ausgaben sind kohärent; für anspruchsvollere Aufgaben Qwen3 14B verwenden.' },
       ] },
       relatedReading: { id: 'related-reading', title: 'Verwandte Artikel', items: ['[Lokales RAG für private Geschäftsdaten](/de/power-local-llm/local-rag-for-private-business-data)', '[Bestes NAS für lokale KI-Modelle 2026](/de/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen Lokal-Deployment-Guide 2026](/de/local-llms/qwen-local-deployment-guide-2026)'] },
     },
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: { id: 'download', title: 'Commandes de téléchargement', content: 'Exécuter sur la machine connectée.', items: ['`ollama pull qwen3:14b` — 9,5 Go, standard recommandé', '`ollama pull nomic-embed-text` — 274 Mo, pour le RAG hors ligne'] },
       ollamaAirgap: { id: 'ollama-airgap', title: 'Workflow Ollama air-gap', content: 'Après transfert des fichiers sur la machine hors ligne :', numberedItems: ['Copier l\'ensemble du répertoire `~/.ollama/` vers le même chemin sur l\'hôte hors ligne.', 'Définir le répertoire : `export OLLAMA_MODELS=/chemin/vers/modèles`', 'Démarrer le serveur : `ollama serve` — vérifier l\'absence d\'appels réseau dans les logs.', 'Tester hors ligne : `ollama run qwen3:14b`'] },
       llamacppAirgap: { id: 'llamacpp-airgap', title: 'Workflow llama.cpp air-gap', content: 'llama.cpp est autonome avec le binaire + GGUF.', items: ['Transférer le binaire et le fichier GGUF.', 'Exécuter : `./llama-server -m ./qwen3-14b-instruct-q4_K_M.gguf --port 8080`', 'API compatible OpenAI disponible sur `http://localhost:8080/v1`.'] },
-      nasStorage: { id: 'nas-storage', title: 'Dimensionnement NAS', content: 'Planifier 20 Go par modèle 7B, 50 Go par 14B, 100 Go par 32B en Q4_K_M.', columns: ['Modèle', 'Taille Q4_K_M', 'VRAM requise'], rows: [{ 'Modèle': 'Qwen3 7B', 'Taille Q4_K_M': '5,5 Go', 'VRAM requise': '8 Go' }, { 'Modèle': 'Qwen3 14B', 'Taille Q4_K_M': '9,5 Go', 'VRAM requise': '12 Go' }, { 'Modèle': 'Qwen3 32B', 'Taille Q4_K_M': '20,5 Go', 'VRAM requise': '24 Go' }], },
+      nasStorage: { id: 'nas-storage', title: 'Dimensionnement NAS', content: 'Planifier 20 Go par modèle 7B, 50 Go par 14B, 100 Go par 32B en Q4_K_M.', columns: ['Modèle', 'Taille Q4_K_M', 'VRAM requise'], rows: [{ 'Modèle': 'Qwen3 8B', 'Taille Q4_K_M': '5,5 Go', 'VRAM requise': '~6 Go' }, { 'Modèle': 'Qwen3 14B', 'Taille Q4_K_M': '9,5 Go', 'VRAM requise': '12 Go' }, { 'Modèle': 'Qwen3 32B', 'Taille Q4_K_M': '20,5 Go', 'VRAM requise': '24 Go' }], },
       chinaCompliance: { id: 'china-compliance', title: 'RGPD & conformité hors ligne', content: 'Pour les déploiements conformes au RGPD en France, l\'inférence locale simplifie les obligations.', items: ['**Pas de sous-traitance :** L\'inférence locale sans cloud ne nécessite pas de DPA selon l\'Art. 28 RGPD.', '**CNIL :** Les traitements locaux uniquement internes ne nécessitent pas de notification spécifique à la CNIL.', '**Journalisation :** Ollama ne journalise pas les prompts par défaut. Si un journal d\'audit est requis, ajouter un middleware local.'] },
       offlineRag: { id: 'offline-rag', title: 'RAG hors ligne', content: 'RAG entièrement hors ligne nécessite : LLM local + modèle d\'embedding local + base vectorielle locale.', numberedItems: ['**Modèle d\'embedding :** `ollama pull nomic-embed-text` sur la machine connectée.', '**Base vectorielle :** Chroma en binaire autonome ou Qdrant binary release.', '**Flux de requêtes :** Document → embedding nomic-embed → top-k chunks → Qwen3 → réponse. Zéro appel externe.'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: { id: 'download', title: 'ダウンロードコマンド', content: '接続マシンで実行。', items: ['`ollama pull qwen3:14b` — 9.5 GB、推奨デフォルト', '`ollama pull nomic-embed-text` — 274 MB、オフラインRAG用'] },
       ollamaAirgap: { id: 'ollama-airgap', title: 'Ollama air-gapワークフロー', content: 'オフラインマシンへのファイル転送後：', numberedItems: ['`~/.ollama/`ディレクトリ全体をオフラインホストの同じパスにコピー。', 'バイナリインストール：`chmod +x ollama && sudo mv ollama /usr/local/bin/`', 'モデルディレクトリ設定：`export OLLAMA_MODELS=/path/to/models`', 'サーバー起動：`ollama serve` — ログでネットワーク呼び出しなしを確認。', 'オフラインテスト：`ollama run qwen3:14b`'] },
       llamacppAirgap: { id: 'llamacpp-airgap', title: 'llama.cpp air-gapワークフロー', content: 'バイナリ + GGUF後、llama.cppは完全に自己完結。', items: ['バイナリとGGUFをオフラインマシンに転送。', '実行：`./llama-server -m ./qwen3-14b-instruct-q4_K_M.gguf --port 8080`', 'OpenAI互換API：`http://localhost:8080/v1`'] },
-      nasStorage: { id: 'nas-storage', title: 'NASストレージサイジング', content: '小チーム向けモデルライブラリは通常3〜6モデルを保有。', columns: ['モデル', 'Q4_K_M サイズ', 'VRAM必要量'], rows: [{ 'モデル': 'Qwen3 7B', 'Q4_K_M サイズ': '5.5 GB', 'VRAM必要量': '8 GB' }, { 'モデル': 'Qwen3 14B', 'Q4_K_M サイズ': '9.5 GB', 'VRAM必要量': '12 GB' }, { 'モデル': 'Qwen3 32B', 'Q4_K_M サイズ': '20.5 GB', 'VRAM必要量': '24 GB' }], },
+      nasStorage: { id: 'nas-storage', title: 'NASストレージサイジング', content: '小チーム向けモデルライブラリは通常3〜6モデルを保有。', columns: ['モデル', 'Q4_K_M サイズ', 'VRAM必要量'], rows: [{ 'モデル': 'Qwen3 8B', 'Q4_K_M サイズ': '5.5 GB', 'VRAM必要量': '~6 GB' }, { 'モデル': 'Qwen3 14B', 'Q4_K_M サイズ': '9.5 GB', 'VRAM必要量': '12 GB' }, { 'モデル': 'Qwen3 32B', 'Q4_K_M サイズ': '20.5 GB', 'VRAM必要量': '24 GB' }], },
       chinaCompliance: { id: 'china-compliance', title: 'METIガイドライン・データ管理対応', content: '日本のMETI AIガイドラインとデータガバナンスフレームワークへの対応。', items: ['**データ管理：** ローカル推論によりデータがハードウェアから出ない。METIの「AI利活用ガイドライン」のデータ管理要件を満たしやすい。', '**モデル記録：** METIガイドラインではモデル名とバージョンの記録が求められる。Ollamaはモデル情報を`~/.ollama/models/`に保存——記録に活用可能。', '**監査ログ：** Ollamaはデフォルトでプロンプトを記録しない。監査ログが必要な場合はミドルウェアをローカルに追加。'] },
       offlineRag: { id: 'offline-rag', title: 'オフラインRAGセットアップ', content: '完全オフラインのRAGには：ローカルLLM + ローカル埋め込みモデル + ローカルベクターDB。', numberedItems: ['**埋め込みモデル：** `ollama pull nomic-embed-text`を接続マシンで。Ollamaディレクトリと一緒に転送。', '**ベクターDB：** Chromaスタンドアロンバイナリ（Python不要）またはQdrantバイナリリリース。', '**クエリフロー：** 文書 → nomic-embed-textで埋め込み → ローカルDBからtop-kチャンク → Qwen3 → 応答。外部呼び出しゼロ。'] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [
@@ -497,17 +497,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: { id: 'tldr', title: '摘要', isTldr: true, items: ['在联网机器上下载所有内容：Ollama二进制、GGUF模型、分词器配置', '通过USB-SSD或内部网络传输——绝不使用云同步', '设置`OLLAMA_MODELS`环境变量指向离线模型目录', 'Qwen3 14B（Q4_K_M，9.5 GB）是推荐的离线默认选择', 'NAS规划：每个7B模型20 GB，14B模型50 GB，32B模型100 GB（Q4_K_M格式）', '《数据安全法》/CAC：本地推理满足数据驻留要求，数据始终在您的硬件内'] },
       preflight: { id: 'preflight', title: '部署前检查清单——断网前下载', content: '在隔离环境之前，在联网机器上逐一确认以下所有项目。', numberedItems: ['**Ollama二进制文件** — 从ollama.com下载您操作系统对应版本，推荐≥0.3.0。', '**模型GGUF文件** — 在联网机器上运行`ollama pull qwen3:14b`。', '**分词器和聊天模板** — Ollama随模型清单一起打包；无需单独下载。', '**嵌入模型**（离线RAG用）— `ollama pull nomic-embed-text`（274 MB）。', '**验证哈希** — 传输前对每个GGUF文件运行`sha256sum`，检测损坏。'] },
-      download: { id: 'download', title: '联网机器上的下载命令', content: '传输前在联网机器上运行所有命令。', items: ['`ollama pull qwen3:14b` — 9.5 GB，推荐默认', '`ollama pull qwen3:7b` — 5.5 GB，低显存机器用', '`ollama pull nomic-embed-text` — 274 MB，离线RAG嵌入', '`ollama pull deepseek-r1:7b` — 5.5 GB，数学/推理为主时使用', '模型文件位置：Linux/macOS的`~/.ollama/models/`，Windows的`%USERPROFILE%\\.ollama\\models`'] },
+      download: { id: 'download', title: '联网机器上的下载命令', content: '传输前在联网机器上运行所有命令。', items: ['`ollama pull qwen3:14b` — 9.5 GB，推荐默认', '`ollama pull qwen3:8b` — 5.5 GB，低显存机器用', '`ollama pull nomic-embed-text` — 274 MB，离线RAG嵌入', '`ollama pull deepseek-r1:7b` — 5.5 GB，数学/推理为主时使用', '模型文件位置：Linux/macOS的`~/.ollama/models/`，Windows的`%USERPROFILE%\\.ollama\\models`'] },
       ollamaAirgap: { id: 'ollama-airgap', title: 'Ollama离线工作流程', content: '将文件传输到离线机器后：', numberedItems: ['将完整的`~/.ollama/`目录从联网机器复制到离线主机的相同路径。', '安装Ollama二进制：`chmod +x ollama && sudo mv ollama /usr/local/bin/`', '设置模型目录：`export OLLAMA_MODELS=/path/to/offline/ollama/models`', '启动服务器：`ollama serve` — 检查日志确认无网络调用。', '离线测试：`ollama run qwen3:14b` — 应立即响应，无外部URL请求。', '局域网访问绑定：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`'] },
       llamacppAirgap: { id: 'llamacpp-airgap', title: 'llama.cpp离线工作流程', content: 'llama.cpp在二进制文件+GGUF就位后完全自包含——无需运行时依赖。', items: ['将预构建二进制和GGUF文件传输到离线机器。', '运行：`./llama-server -m ./qwen3-14b-instruct-q4_K_M.gguf --port 8080`', 'OpenAI兼容API在`http://localhost:8080/v1`——任何OpenAI SDK的直接替代。'] },
-      nasStorage: { id: 'nas-storage', title: 'NAS存储规划', content: '小团队的模型库通常存储3-6个不同规模的模型。', columns: ['模型', 'Q4_K_M大小', 'Q8_0大小', '所需显存'], rows: [{ '模型': 'Qwen3 7B', 'Q4_K_M大小': '5.5 GB', 'Q8_0大小': '8.5 GB', '所需显存': '8 GB' }, { '模型': 'Qwen3 14B', 'Q4_K_M大小': '9.5 GB', 'Q8_0大小': '15 GB', '所需显存': '12 GB' }, { '模型': 'Qwen3 32B', 'Q4_K_M大小': '20.5 GB', 'Q8_0大小': '34 GB', '所需显存': '24 GB' }, { '模型': 'nomic-embed-text', 'Q4_K_M大小': '0.27 GB', 'Q8_0大小': '0.5 GB', '所需显存': '1 GB' }], items: ['推荐NAS：群晖DS923+配4块4 TB硬盘（RAID 5，约12 TB可用）', '2-3模型库最低配置：2 TB SSD（便携硬盘适合单机部署）', '通过NFS挂载NAS到推理服务器，设置`OLLAMA_MODELS`为NFS路径'] },
+      nasStorage: { id: 'nas-storage', title: 'NAS存储规划', content: '小团队的模型库通常存储3-6个不同规模的模型。', columns: ['模型', 'Q4_K_M大小', 'Q8_0大小', '所需显存'], rows: [{ '模型': 'Qwen3 8B', 'Q4_K_M大小': '5.5 GB', 'Q8_0大小': '8.5 GB', '所需显存': '~6 GB' }, { '模型': 'Qwen3 14B', 'Q4_K_M大小': '9.5 GB', 'Q8_0大小': '15 GB', '所需显存': '12 GB' }, { '模型': 'Qwen3 32B', 'Q4_K_M大小': '20.5 GB', 'Q8_0大小': '34 GB', '所需显存': '24 GB' }, { '模型': 'nomic-embed-text', 'Q4_K_M大小': '0.27 GB', 'Q8_0大小': '0.5 GB', '所需显存': '1 GB' }], items: ['推荐NAS：群晖DS923+配4块4 TB硬盘（RAID 5，约12 TB可用）', '2-3模型库最低配置：2 TB SSD（便携硬盘适合单机部署）', '通过NFS挂载NAS到推理服务器，设置`OLLAMA_MODELS`为NFS路径'] },
       chinaCompliance: { id: 'china-compliance', title: '中国《数据安全法》和CAC合规', content: '中国《数据安全法》（DSL，2021年）和《网络安全法》（CSL）要求在中国境内处理的重要数据在境内存储。国家互联网信息办公室（CAC）还要求提供面向公众服务的AI系统在上线前完成安全评估。', items: ['**数据驻留：** 本地推理意味着数据不会离开您的硬件，满足《数据安全法》第31条（重要数据在境内存储），与模型来源无关。', '**模型溯源：** 选用Qwen3（阿里巴巴）或DeepSeek（杭州深度求索）简化企业合规文档，两者均为中国企业出品。', '**面向公众的AI服务：** 若您的部署面向用户（非纯内部），需按CAC《算法安全评估规定》提交备案。仅供内部员工使用的离线部署通常不在范围内。', '**网络隔离验证：** 使用`iptables`或防火墙规则确认推理服务器无对外连接——记录在案以供合规审查。', '**审计日志：** Ollama默认不记录提示词。如内部数据治理政策要求，需在本地添加中间件（非云端）。'] },
       offlineRag: { id: 'offline-rag', title: '离线RAG设置', content: '完全离线的检索增强生成（RAG）需要：本地LLM + 本地嵌入模型 + 本地向量数据库。', numberedItems: ['**嵌入模型：** 在联网机器上`ollama pull nomic-embed-text`，随Ollama模型目录一起传输。', '**向量数据库：** Chroma可作为独立二进制运行（无需Python）；或使用Qdrant二进制版。', '**文档摄入：** 离线使用LangChain或LlamaIndex（断网前下载wheel包）。文档加载器指向本地文件——无需网络爬虫。', '**查询流程：** 文档 → 本地nomic-embed-text嵌入 → 从本地向量DB检索top-k片段 → 传递给本地Qwen3 → 响应。零外部调用。', '**验证：** 用`tcpdump -i any -n port 443`确认完整RAG查询周期无HTTPS流量产生。'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
             { q: 'Ollama在离线运行时是否会产生网络调用？', a: '不会。Ollama仅在拉取或更新模型时连接ollama.com。使用本地缓存运行`ollama serve`不会产生任何对外连接。' },
             { q: '本地AI部署是否符合中国《数据安全法》？', a: '本地推理意味着数据始终留在您的硬件上，无论模型来自哪家公司，均满足《数据安全法》的数据驻留要求。' },
             { q: '内部离线部署是否需要CAC算法安全评估？', a: '通常不需要。CAC的算法安全评估规定主要针对面向公众的AI服务。仅供内部员工使用的部署通常不在范围内。请咨询合规专业人士了解您的具体情况。' },
-            { q: '最适合离线处理中文文本的最小模型是什么？', a: 'Qwen3 7B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。' },
+            { q: '最适合离线处理中文文本的最小模型是什么？', a: 'Qwen3 8B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。' },
             { q: '如何在隔离环境中更新模型？', a: '在联网机器上下载更新的GGUF，验证SHA256哈希，通过USB/SSD传输，替换模型目录中的旧文件，重启Ollama服务器。' },
           ] },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[本地RAG用于私人业务数据](/zh/power-local-llm/local-rag-for-private-business-data)', '[本地AI模型最佳NAS存储 2026](/zh/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen本地部署指南 2026](/zh/local-llms/qwen-local-deployment-guide-2026)', '[微信本地LLM集成2026](/zh/power-local-llm/wechat-local-llm-integration-2026) — 将离线Ollama后端接入微信机器人：技术路线与合规注意事项。'] },
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '最适合离线处理中文文本的最小模型是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 7B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。',
+              'text': 'Qwen3 8B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。',
             },
           },
           {
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Ejecuta todos estos comandos en la máquina con acceso a Internet antes de la transferencia. Reemplaza las etiquetas del modelo según sea necesario.',
         items: [
           '`ollama pull qwen3:14b` — 9,5 GB, predeterminado recomendado',
-          '`ollama pull qwen3:7b` — 5,5 GB, para máquinas con menos VRAM',
+          '`ollama pull qwen3:8b` — 5,5 GB, para máquinas con menos VRAM',
           '`ollama pull nomic-embed-text` — 274 MB, para embeddings en RAG offline',
           '`ollama pull deepseek-r1:7b` — 5,5 GB, si matemáticas/razonamiento es el caso de uso principal',
           'Ubicación de los archivos del modelo: `~/.ollama/models/` en Linux/macOS, `%USERPROFILE%\\.ollama\\models` en Windows',
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una biblioteca de modelos para un equipo pequeño suele contener entre 3 y 6 modelos de distintos tamaños. Planifica el almacenamiento antes de la compra.',
         columns: ['Modelo', 'Tamaño Q4_K_M', 'Tamaño Q8_0', 'VRAM necesaria'],
         rows: [
-          { 'Modelo': 'Qwen3 7B', 'Tamaño Q4_K_M': '5,5 GB', 'Tamaño Q8_0': '8,5 GB', 'VRAM necesaria': '8 GB' },
+          { 'Modelo': 'Qwen3 8B', 'Tamaño Q4_K_M': '5,5 GB', 'Tamaño Q8_0': '8,5 GB', 'VRAM necesaria': '~6 GB' },
           { 'Modelo': 'Qwen3 14B', 'Tamaño Q4_K_M': '9,5 GB', 'Tamaño Q8_0': '15 GB', 'VRAM necesaria': '12 GB' },
           { 'Modelo': 'Qwen3 32B', 'Tamaño Q4_K_M': '20,5 GB', 'Tamaño Q8_0': '34 GB', 'VRAM necesaria': '24 GB' },
           { 'Modelo': 'Qwen3 72B', 'Tamaño Q4_K_M': '46 GB', 'Tamaño Q8_0': '75 GB', 'VRAM necesaria': '48 GB' },
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?', a: 'Por defecto, Ollama no realiza llamadas de red cuando sirve un modelo almacenado en caché localmente. Solo contacta ollama.com para descargar o actualizar modelos. Ejecutar `ollama serve` con `OLLAMA_MODELS` apuntando a una caché local no genera ninguna conexión saliente.' },
             { q: '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?', a: 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.' },
-            { q: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', a: 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.' },
+            { q: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', a: 'Qwen3 8B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.' },
             { q: '¿Necesito una evaluación de seguridad regulatoria para un despliegue offline interno?', a: 'Generalmente no. La mayoría de normativas regulatorias sobre IA se aplican a servicios orientados al público. Los despliegues internos accesibles solo por empleados suelen estar fuera del ámbito de aplicación. Consulta a un profesional de cumplimiento normativo para tu situación específica.' },
             { q: '¿Puede llama.cpp ejecutarse sin dependencias del sistema?', a: 'En Linux, el binario precompilado requiere GLIBC 2.28+ (estándar en Ubuntu 20.04+). En macOS arm64, el binario es autocontenido. En Windows, la compilación con CUDA requiere las DLL del runtime de CUDA.' },
             { q: '¿Cómo actualizo los modelos en un entorno air-gapped?', a: 'Descarga el GGUF actualizado en una máquina conectada, verifica el hash SHA256, transfiérelo mediante USB/SSD y reemplaza el GGUF antiguo en tu directorio de modelos. Reinicia el servidor de Ollama para que detecte el nuevo archivo.' },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Cuál es el modelo más pequeño que maneja bien el español offline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.',
+              'text': 'Qwen3 8B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.',
             },
           },
           {
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '전송 전에 인터넷이 연결된 기기에서 다음 명령어를 모두 실행하십시오. 모델 태그는 필요에 따라 변경하십시오.',
         items: [
           '`ollama pull qwen3:14b` — 9.5 GB, 권장 기본값',
-          '`ollama pull qwen3:7b` — 5.5 GB, VRAM이 적은 기기용',
+          '`ollama pull qwen3:8b` — 5.5 GB, VRAM이 적은 기기용',
           '`ollama pull nomic-embed-text` — 274 MB, 오프라인 RAG 임베딩용',
           '`ollama pull deepseek-r1:7b` — 5.5 GB, 수학·추론 중심 사용 사례용',
           '모델 파일 위치: Linux/macOS는 `~/.ollama/models/`, Windows는 `%USERPROFILE%\\.ollama\\models`',
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '소규모 팀의 모델 라이브러리는 일반적으로 다양한 크기의 모델 3~6개로 구성됩니다. 구매 전에 스토리지를 계획하십시오.',
         columns: ['모델', 'Q4_K_M 크기', 'Q8_0 크기', '필요 VRAM'],
         rows: [
-          { '모델': 'Qwen3 7B', 'Q4_K_M 크기': '5.5 GB', 'Q8_0 크기': '8.5 GB', '필요 VRAM': '8 GB' },
+          { '모델': 'Qwen3 8B', 'Q4_K_M 크기': '5.5 GB', 'Q8_0 크기': '8.5 GB', '필요 VRAM': '~6 GB' },
           { '모델': 'Qwen3 14B', 'Q4_K_M 크기': '9.5 GB', 'Q8_0 크기': '15 GB', '필요 VRAM': '12 GB' },
           { '모델': 'Qwen3 32B', 'Q4_K_M 크기': '20.5 GB', 'Q8_0 크기': '34 GB', '필요 VRAM': '24 GB' },
           { '모델': 'Qwen3 72B', 'Q4_K_M 크기': '46 GB', 'Q8_0 크기': '75 GB', '필요 VRAM': '48 GB' },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Ollama는 오프라인 실행 시 네트워크 호출을 합니까?', a: '기본적으로 Ollama는 로컬에 캐시된 모델을 서빙할 때 네트워크 호출을 하지 않습니다. ollama.com은 모델 다운로드 또는 업데이트 시에만 접속합니다. 로컬 캐시와 함께 `OLLAMA_MODELS`를 설정하고 `ollama serve`를 실행하면 외부 연결이 발생하지 않습니다.' },
           { q: 'NAS 마운트 경로에서 Qwen3 72B를 실행할 수 있습니까?', a: '가능합니다. 다만 모델 로드 시 NFS 지연으로 인해 로딩 시간이 10~30초 더 소요됩니다. 로드 완료 후 추론 성능은 스토리지 속도가 아닌 GPU/CPU의 VRAM에만 의존합니다.' },
-          { q: '오프라인에서 한국어를 잘 처리하는 가장 작은 모델은 무엇입니까?', a: 'Qwen3 7B Q4_K_M(VRAM 5.5 GB)입니다. 한국어를 네이티브 토크나이저로 처리하며, RTX 3060에서 50~80 tok/s로 일관된 응답을 생성합니다.' },
+          { q: '오프라인에서 한국어를 잘 처리하는 가장 작은 모델은 무엇입니까?', a: 'Qwen3 8B Q4_K_M(VRAM 5.5 GB)입니다. 한국어를 네이티브 토크나이저로 처리하며, RTX 3060에서 50~80 tok/s로 일관된 응답을 생성합니다.' },
           { q: '내부 오프라인 배포에 규제 보안 평가가 필요합니까?', a: '일반적으로 필요하지 않습니다. 대부분의 AI 규제는 공개 서비스에 적용됩니다. 직원만 사용하는 내부 배포는 일반적으로 적용 범위 밖입니다. 구체적인 상황에 대해서는 컴플라이언스 전문가에게 문의하십시오.' },
           { q: 'llama.cpp는 시스템 의존성 없이 실행 가능합니까?', a: 'Linux에서는 사전 컴파일된 바이너리가 GLIBC 2.28 이상을 필요로 합니다(Ubuntu 20.04 이상에는 표준 포함). macOS arm64에서는 바이너리가 독립 실행됩니다. Windows CUDA 빌드는 CUDA 런타임 DLL이 필요합니다.' },
           { q: '에어갭 환경에서 모델을 어떻게 업데이트합니까?', a: '연결된 기기에서 업데이트된 GGUF를 다운로드하고 SHA256 해시를 검증한 후 USB/SSD로 전송하여 모델 디렉터리의 기존 GGUF를 교체하십시오. Ollama 서버를 재시작하여 새 파일을 인식시키십시오.' },
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       mainEntity: [
         { '@type': 'Question', name: 'Ollama는 오프라인 실행 시 네트워크 호출을 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama는 로컬 캐시 모델을 서빙할 때 네트워크 호출을 하지 않습니다. `OLLAMA_MODELS`를 설정하면 외부 연결이 발생하지 않습니다.' } },
-        { '@type': 'Question', name: '오프라인에서 한국어를 잘 처리하는 가장 작은 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M(VRAM 5.5 GB). 한국어 네이티브 토크나이저, RTX 3060에서 50~80 tok/s.' } },
+        { '@type': 'Question', name: '오프라인에서 한국어를 잘 처리하는 가장 작은 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B Q4_K_M(VRAM 5.5 GB). 한국어 네이티브 토크나이저, RTX 3060에서 50~80 tok/s.' } },
         { '@type': 'Question', name: '내부 오프라인 배포에 규제 보안 평가가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '일반적으로 필요하지 않습니다. 대부분의 AI 규제는 공개 서비스에 적용됩니다. 직원만 사용하는 내부 배포는 일반적으로 적용 범위 밖입니다.' } },
       ],
     },
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Execute todos esses comandos na máquina com acesso à Internet antes da transferência. Substitua as tags do modelo conforme necessário.',
         items: [
           '`ollama pull qwen3:14b` — 9,5 GB, padrão recomendado',
-          '`ollama pull qwen3:7b` — 5,5 GB, para máquinas com menos VRAM',
+          '`ollama pull qwen3:8b` — 5,5 GB, para máquinas com menos VRAM',
           '`ollama pull nomic-embed-text` — 274 MB, para embeddings em RAG offline',
           '`ollama pull deepseek-r1:7b` — 5,5 GB, se matemática/raciocínio for o caso de uso principal',
           'Local dos arquivos do modelo: `~/.ollama/models/` no Linux/macOS, `%USERPROFILE%\\.ollama\\models` no Windows',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uma biblioteca de modelos para um time pequeno normalmente contém de 3 a 6 modelos de tamanhos diferentes. Planeje o armazenamento antes da compra.',
         columns: ['Modelo', 'Tamanho Q4_K_M', 'Tamanho Q8_0', 'VRAM necessária'],
         rows: [
-          { 'Modelo': 'Qwen3 7B', 'Tamanho Q4_K_M': '5,5 GB', 'Tamanho Q8_0': '8,5 GB', 'VRAM necessária': '8 GB' },
+          { 'Modelo': 'Qwen3 8B', 'Tamanho Q4_K_M': '5,5 GB', 'Tamanho Q8_0': '8,5 GB', 'VRAM necessária': '~6 GB' },
           { 'Modelo': 'Qwen3 14B', 'Tamanho Q4_K_M': '9,5 GB', 'Tamanho Q8_0': '15 GB', 'VRAM necessária': '12 GB' },
           { 'Modelo': 'Qwen3 32B', 'Tamanho Q4_K_M': '20,5 GB', 'Tamanho Q8_0': '34 GB', 'VRAM necessária': '24 GB' },
           { 'Modelo': 'Qwen3 72B', 'Tamanho Q4_K_M': '46 GB', 'Tamanho Q8_0': '75 GB', 'VRAM necessária': '48 GB' },
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'O Ollama faz alguma chamada de rede ao executar offline?', a: 'Por padrão, o Ollama não faz chamadas de rede ao servir um modelo armazenado em cache localmente. Ele contata ollama.com apenas para baixar ou atualizar modelos. Executar `ollama serve` com `OLLAMA_MODELS` apontando para um cache local não gera nenhuma conexão de saída.' },
             { q: 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?', a: 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.' },
-            { q: 'Qual é o menor modelo que lida bem com texto em português offline?', a: 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.' },
+            { q: 'Qual é o menor modelo que lida bem com texto em português offline?', a: 'Qwen3 8B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.' },
             { q: 'Preciso de uma avaliação de segurança regulatória para uma implantação offline interna?', a: 'Geralmente não. A maioria das normas regulatórias sobre IA se aplica a serviços voltados ao público. Implantações internas acessíveis apenas por funcionários costumam estar fora do âmbito de aplicação. Consulte um profissional de conformidade para a sua situação específica.' },
             { q: 'O llama.cpp consegue rodar sem dependências do sistema?', a: 'No Linux, o binário pré-compilado requer GLIBC 2.28+ (padrão no Ubuntu 20.04+). No macOS arm64, o binário é autocontido. No Windows, a compilação com CUDA requer as DLLs do runtime do CUDA.' },
             { q: 'Como atualizo os modelos em um ambiente air-gapped?', a: 'Baixe o GGUF atualizado em uma máquina conectada, verifique o hash SHA256, transfira via USB/SSD e substitua o GGUF antigo no seu diretório de modelos. Reinicie o servidor do Ollama para que ele detecte o novo arquivo.' },
@@ -1268,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Qual é o menor modelo que lida bem com texto em português offline?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.',
+              'text': 'Qwen3 8B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.',
             },
           },
           {
@@ -1391,7 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'شغّل جميع هذه الأوامر على الجهاز المتصل بالإنترنت قبل النقل. استبدل وسوم النماذج حسب الحاجة.',
         items: [
           '`ollama pull qwen3:14b` — 9.5 جيجابايت، الافتراضي الموصى به',
-          '`ollama pull qwen3:7b` — 5.5 جيجابايت، للأجهزة ذات VRAM المنخفض',
+          '`ollama pull qwen3:8b` — 5.5 جيجابايت، للأجهزة ذات VRAM المنخفض',
           '`ollama pull nomic-embed-text` — 274 ميجابايت، لتضمينات RAG غير المتصل',
           '`ollama pull deepseek-r1:7b` — 5.5 جيجابايت، إذا كانت الرياضيات/الاستدلال حالة الاستخدام الرئيسية',
           'موقع ملفات النماذج: `~/.ollama/models/` على Linux/macOS، و`%USERPROFILE%\\.ollama\\models` على Windows',
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مكتبة النماذج لفريق صغير تحتوي عادةً على 3–6 نماذج بأحجام مختلفة. خطط للتخزين قبل الشراء.',
         columns: ['النموذج', 'حجم Q4_K_M', 'حجم Q8_0', 'VRAM المطلوب'],
         rows: [
-          { 'النموذج': 'Qwen3 7B', 'حجم Q4_K_M': '5.5 جيجابايت', 'حجم Q8_0': '8.5 جيجابايت', 'VRAM المطلوب': '8 جيجابايت' },
+          { 'النموذج': 'Qwen3 8B', 'حجم Q4_K_M': '5.5 جيجابايت', 'حجم Q8_0': '8.5 جيجابايت', 'VRAM المطلوب': '~6 جيجابايت' },
           { 'النموذج': 'Qwen3 14B', 'حجم Q4_K_M': '9.5 جيجابايت', 'حجم Q8_0': '15 جيجابايت', 'VRAM المطلوب': '12 جيجابايت' },
           { 'النموذج': 'Qwen3 32B', 'حجم Q4_K_M': '20.5 جيجابايت', 'حجم Q8_0': '34 جيجابايت', 'VRAM المطلوب': '24 جيجابايت' },
           { 'النموذج': 'Qwen3 72B', 'حجم Q4_K_M': '46 جيجابايت', 'حجم Q8_0': '75 جيجابايت', 'VRAM المطلوب': '48 جيجابايت' },
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'هل تُجري Ollama أي اتصالات شبكية عند العمل دون إنترنت؟', a: 'لا. لا تتصل Ollama بـ ollama.com إلا عند تنزيل النماذج أو تحديثها. تشغيل `ollama serve` مع تعيين `OLLAMA_MODELS` ليشير إلى ذاكرة تخزين محلية لا يولّد أي اتصالات صادرة.' },
             { q: 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟', a: 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.' },
-            { q: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', a: 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.' },
+            { q: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', a: 'Qwen3 8B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.' },
             { q: 'هل أحتاج إلى تقييم أمني تنظيمي للنشر الداخلي المعزول؟', a: 'بشكل عام لا. تنطبق معظم اللوائح التنظيمية للذكاء الاصطناعي على الخدمات الموجهة للعموم. عمليات النشر الداخلية المتاحة فقط للموظفين تقع عمومًا خارج نطاق التطبيق. استشر متخصصًا في الامتثال لوضعك المحدد.' },
             { q: 'هل يمكن تشغيل llama.cpp دون أي تبعيات للنظام؟', a: 'على Linux، يتطلب الملف التنفيذي المبني مسبقًا GLIBC 2.28+ (القياسي في Ubuntu 20.04+). على macOS arm64، الملف التنفيذي مكتفٍ ذاتيًا. على Windows، يتطلب بناء CUDA ملفات DLL لوقت تشغيل CUDA.' },
             { q: 'كيف أحدّث النماذج في بيئة معزولة air-gapped؟', a: 'نزّل ملف GGUF المحدّث على جهاز متصل، تحقق من تجزئة SHA256، انقله عبر USB/SSD، واستبدل ملف GGUF القديم في دليل نماذجك. أعد تشغيل خادم Ollama لاستيعاب الملف الجديد.' },
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.',
+              'text': 'Qwen3 8B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.',
             },
           },
           {

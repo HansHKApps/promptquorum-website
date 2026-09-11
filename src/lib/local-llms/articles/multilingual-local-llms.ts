@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Kann ich ein 7B-Modell bei 4 GB VRAM ausführen?',
-              a: 'Nein. Qwen3 8B (Q4_K_M) benötigt mindestens 8 GB. Verwenden Sie ein 3B-Modell (Phi-3, MobileLLM) für 4 GB VRAM. Oder verwenden Sie CPU-only-Inferenz (sehr langsam, nicht empfohlen).'
+              a: 'Nein. Qwen3 8B (Q4_K_M) benötigt mindestens 6 GB. Verwenden Sie ein 3B-Modell (Phi-3, MobileLLM) für 4 GB VRAM. Oder verwenden Sie CPU-only-Inferenz (sehr langsam, nicht empfohlen).'
             },
             {
               q: 'Warum ist die Qualität bei französischen/deutschen Aufgaben besser mit Mistral?',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Für den deutschen Mittelstand (KMUs und Großunternehmen) ist die Offline-Fähigkeit entscheidend: Kein Datentransfer zu US-Servern, vollständige Kontrolle über Verarbeitungsprotokolle, BSI Grundschutz-konforme Implementierung möglich. Finanzdienstleister, Anwaltskanzleien und Gesundheitsdienstleister profitieren besonders.',
           ],
           items: [
-            '**Beste Modelle für Deutsch:** Qwen3-7B übertrifft Llama 3.3 bei deutschen Texten dank größerem Trainingskorpus. Mistral Small zeigt starke Leistung bei EU-Rechtssprache. LeoLM (basierend auf Llama 3.3) wurde speziell auf deutschen Texten feinabgestimmt.',
+            '**Beste Modelle für Deutsch:** Qwen3 8B übertrifft Llama 3.3 bei deutschen Texten dank größerem Trainingskorpus. Mistral Small zeigt starke Leistung bei EU-Rechtssprache. LeoLM (basierend auf Llama 3.3) wurde speziell auf deutschen Texten feinabgestimmt.',
             '**Schweizerdeutsch und Österreichisch:** Dialekte werden von keinem lokalen LLM zuverlässig verstanden — für Hochdeutsch sind alle Topmodelle ausgezeichnet. Für Dialekterkennung: Whisper (Transkription) + Hochdeutsch-LLM ist die praktischste Pipeline.',
             '**Deutsche Grammatikkomplexität:** Kasusdeklination, Genus, trennbare Verben — Qwen3 und Mistral Small machen weniger grammatische Fehler als ältere Modelle. Für juristische oder akademische Texte: Q5_K_M-Quantisierung für bessere Präzision.',
             '**DSGVO und DSGVO Art. 25:** Lokale LLMs erfüllen „Privacy by Design" ohne zusätzliche Konfiguration. Für Unternehmen: Dokumentieren Sie den Einsatz im Verzeichnis von Verarbeitungstätigkeiten. Hinweis: Modellgewichte selbst unterliegen keiner DSGVO-Meldepflicht.',
@@ -1777,7 +1777,7 @@ schema: {
             },
             {
               q: 'Puis-je exécuter un modèle 7B avec 4 GB VRAM ?',
-              a: 'Non. Qwen3 8B (Q4_K_M) nécessite au minimum 8 GB. Utilisez un modèle 3B (Phi-3, MobileLLM) pour 4 GB VRAM. Ou utilisez l\'inférence CPU uniquement (très lent, non recommandé).'
+              a: 'Non. Qwen3 8B (Q4_K_M) nécessite au minimum 6 GB. Utilisez un modèle 3B (Phi-3, MobileLLM) pour 4 GB VRAM. Ou utilisez l\'inférence CPU uniquement (très lent, non recommandé).'
             },
             {
               q: 'Pourquoi la qualité est meilleure avec Mistral pour les tâches en français/allemand ?',
@@ -1843,7 +1843,7 @@ schema: {
             'Pour les entreprises françaises, le RGPD (équivalent français du GDPR) impose les mêmes obligations qu\'en Allemagne. Les LLMs locaux simplifient la conformité : aucune transmission vers des serveurs américains, journaux d\'audit complets, traitement des données sensibles en toute légalité.',
           ],
           items: [
-            '**Meilleurs modèles pour le français :** Mistral Small Instruct est le choix évident — conçu en France, entraîné sur des corpus français de haute qualité. Performances supérieures sur la syntaxe française complexe, le subjonctif, et les registres formels/informels. Qwen3-7B est une alternative solide pour les tâches multilingues.',
+            '**Meilleurs modèles pour le français :** Mistral Small Instruct est le choix évident — conçu en France, entraîné sur des corpus français de haute qualité. Performances supérieures sur la syntaxe française complexe, le subjonctif, et les registres formels/informels. Qwen3 8B est une alternative solide pour les tâches multilingues.',
             '**Français québécois vs européen :** Les modèles actuels distinguent mal les variantes. Pour un usage québécois, précisez explicitement dans votre prompt : « Réponds en français québécois informel » ou « Utilise le registre professionnel du Québec ». Mistral a tendance à produire du français européen par défaut.',
             '**Ressources communautaires FR :** Le Bon Coin Tech, Zenika Blog, OCTO Technology Blog pour les retours d\'expérience LLM en entreprise. LeMonde.fr et Le Monde Informatique couvrent régulièrement les évolutions réglementaires IA.',
             '**RGPD et IA générative :** La CNIL a publié des recommandations spécifiques sur l\'IA (2024). Les LLMs locaux satisfont par défaut au principe de minimisation des données — aucune donnée ne quitte vos serveurs. Pour les RH et la santé : exigence supplémentaire d\'une AIPD (Analyse d\'Impact).',
@@ -2287,7 +2287,7 @@ schema: {
             },
             {
               q: '4GB VRAM で 7B モデル実行可能？',
-              a: 'いいえ。Qwen3 8B (Q4_K_M) は最少 8GB 必須。4GB VRAM 向けは 3B モデル（Phi-3、MobileLLM）を使用。または CPU のみ推論（非常に遅い、未推奨）。'
+              a: 'いいえ。Qwen3 8B (Q4_K_M) は最少 6GB 必須。4GB VRAM 向けは 3B モデル（Phi-3、MobileLLM）を使用。または CPU のみ推論（非常に遅い、未推奨）。'
             },
             {
               q: 'Mistral のフランス語/ドイツ語タスク品質がより高いのはなぜ？',
@@ -2353,7 +2353,7 @@ schema: {
             '日本語の形態素解析と漢字・かな変換は、英語中心のLLMにとって課題になりがちです。しかし最新世代のQwen3とLlama 3.3は、日本語コーパスへの十分な学習により、実用レベルの日本語出力を実現しています。',
           ],
           items: [
-            '**日本語に最適なモデル：** Qwen3-7B（アリババ製）は日本語トークンの処理精度が高く、漢字・ひらがな・カタカナの混在文に強い。LLM-JP（国立情報学研究所製）は純粋な日本語特化モデル。Swallow（東工大製）はLlamaベースの日本語ファインチューン。',
+            '**日本語に最適なモデル：** Qwen3 8B（アリババ製）は日本語トークンの処理精度が高く、漢字・ひらがな・カタカナの混在文に強い。LLM-JP（国立情報学研究所製）は純粋な日本語特化モデル。Swallow（東工大製）はLlamaベースの日本語ファインチューン。',
             '**MLX vs Ollama（日本市場視点）：** M系Mac（M1/M2/M3/M4）ではMLXが最速。OllamaはWindowsとの互換性も高く、開発チームでの導入に向く。ZennやQiitaの日本語ベンチマーク記事では一般にMLXが推論速度で優位とされている。',
             '**日本語トークナイズの注意点：** 日本語は英語比で1トークン当たりの情報量が少ない（漢字1文字≒1トークン）。そのためコンテキストウィンドウの消費が英語より速い。Qwen3のような多言語モデルは日本語専用のサブワード辞書を持ち、この問題を緩和している。',
             '**日本語コミュニティリソース：** Zenn（zenn.dev）とQiita（qiita.com）に豊富な日本語セットアップ記事がある。特に「ローカルLLM Ollama 日本語」「MLX Qwen Mac」などの検索が有効。日本語Discordサーバー「AI絵師コミュニティ」「Ollama日本語ユーザー会」も情報源として活用可能。',
@@ -2704,7 +2704,7 @@ schema: {
             },
             {
               q: '4GB VRAM能运行7B模型吗？',
-              a: '不能。Qwen3 8B (Q4_K_M)最少需要8GB VRAM。4GB VRAM请使用3B模型（Phi-3、MobileLLM），或仅CPU推理（非常慢，不推荐）。'
+              a: '不能。Qwen3 8B (Q4_K_M)最少需要6GB VRAM。4GB VRAM请使用3B模型（Phi-3、MobileLLM），或仅CPU推理（非常慢，不推荐）。'
             },
             {
               q: '为什么Mistral在法语/德语任务上质量更高？',

@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian-centric — best for note-first workflows, scales to ~50,000 notes, 16 GB RAM minimum.',
           'AnythingLLM-centric — best for document-heavy KBs (PDFs, exports), scales to ~100,000 documents, all-in-one app.',
           'Custom Python + ChromaDB — best for engineers, scales past 1M items, requires self-managed services.',
-          'Recommended chat model in 2026: Llama 3.2 3B for 16 GB systems, Phi-4 Mini for 8 GB, Qwen3 7B for quality at 32 GB+.',
+          'Recommended chat model in 2026: Llama 3.2 3B for 16 GB systems, Phi-4 Mini for 8 GB, Qwen3 8B for quality at 32 GB+.',
           'Recommended embedding model: nomic-embed-text (768-dim, fast) or mxbai-embed-large (1024-dim, more accurate); bge-m3 for multilingual archives.',
           'Hardware floor: 16 GB RAM laptop; 32 GB recommended past 10,000 items; home server with 64 GB past 100,000.',
           'Capture is the bottleneck: most KB items are captured on mobile (web pages, screenshots, voice notes), queried on desktop. iOS Shortcuts → Obsidian, Working Copy (Git), or a-Shell are the three mobile capture paths.',
@@ -92,8 +92,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Pick one of three reference architectures rather than designing from scratch.** Obsidian-centric (note-first, ~50K items), AnythingLLM-centric (document-first, ~100K items), or custom Python + ChromaDB (engineer-first, 1M+ items). Mixing architectures rarely pays off — the integration tax dominates.',
           '**A local-AI PKB has five layers: capture, storage, embeddings, retrieval, interface.** Most beginner mistakes happen at the capture layer, not the LLM layer. If items do not flow into the system from mobile and email, no clever retrieval will save the build.',
-          '**Hardware floor: 16 GB RAM.** Below that, you are choosing between running an embedding model and running a chat model — not both. At 16 GB you can run Llama 3.2 3B + nomic-embed-text concurrently. At 32 GB you can step up to Qwen3 7B or run multiple chat sessions. Past 100,000 items, move embeddings to a home server.',
-          '**Recommended models in 2026:** chat — Llama 3.2 3B (default), Phi-4 Mini (8 GB systems), Qwen3 7B (quality on 32 GB+); embeddings — nomic-embed-text (768-dim, fast), mxbai-embed-large (1024-dim, more accurate), bge-m3 (multilingual).',
+          '**Hardware floor: 16 GB RAM.** Below that, you are choosing between running an embedding model and running a chat model — not both. At 16 GB you can run Llama 3.2 3B + nomic-embed-text concurrently. At 32 GB you can step up to Qwen3 8B or run multiple chat sessions. Past 100,000 items, move embeddings to a home server.',
+          '**Recommended models in 2026:** chat — Llama 3.2 3B (default), Phi-4 Mini (8 GB systems), Qwen3 8B (quality on 32 GB+); embeddings — nomic-embed-text (768-dim, fast), mxbai-embed-large (1024-dim, more accurate), bge-m3 (multilingual).',
           '**Capture is the scaling bottleneck, not retrieval.** Most knowledge items arrive on mobile (web clippings, screenshots, voice notes, forwarded emails). Design the mobile share sheet → vault path before tuning the LLM. iOS Shortcuts → Obsidian / Working Copy / a-Shell are the three viable iOS paths.',
           '**Sync method dictates what works on mobile.** Obsidian Sync handles binary embedding indexes cleanly; iCloud Drive corrupts them across platforms; Git requires `.gitignore` discipline and per-device re-indexing. Pick sync first, plugins second.',
           '**Backup is not optional.** Three layers: vault snapshot (Time Machine, Backblaze, restic), Git history of plain-text content, and a quarterly export of embeddings + metadata for a clean rebuild path. Embeddings are regenerable but expensive — back them up too if your vault is over 10,000 items.',
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Architectures covered:** Obsidian-centric, AnythingLLM-centric, custom Python + ChromaDB.',
           '**LLM backend:** Ollama (recommended) — runs chat and embedding models behind one local endpoint at `http://localhost:11434`.',
-          '**Recommended chat models 2026:** Llama 3.2 3B (16 GB systems), Phi-4 Mini (8 GB), Qwen3 7B (32 GB+).',
+          '**Recommended chat models 2026:** Llama 3.2 3B (16 GB systems), Phi-4 Mini (8 GB), Qwen3 8B (32 GB+).',
           '**Recommended embedding models 2026:** nomic-embed-text (768-dim, fast), mxbai-embed-large (1024-dim, accurate), bge-m3 (multilingual).',
           '**Item-count targets:** Obsidian ~50,000 notes, AnythingLLM ~100,000 documents, custom Python + ChromaDB 1M+ items.',
           '**Hardware floor:** 16 GB RAM laptop. Past 10,000 items: 32 GB recommended. Past 100,000 items: home server with 64 GB.',
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'A common build pattern that fails: pick the most powerful retrieval (custom hybrid search with re-ranking), the smartest chat model (Qwen3 7B), and ignore capture. Three weeks in, the vault has 47 items because nothing flows in from mobile. The fix is always the same: simplify retrieval, simplify chat, fix capture, and accept that 80% of value comes from items being in the system at all.',
+            text: 'A common build pattern that fails: pick the most powerful retrieval (custom hybrid search with re-ranking), the smartest chat model (Qwen3 8B), and ignore capture. Three weeks in, the vault has 47 items because nothing flows in from mobile. The fix is always the same: simplify retrieval, simplify chat, fix capture, and accept that 80% of value comes from items being in the system at all.',
           },
         ],
       },
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian-zentriert — am besten für notiz-zentrische Workflows, skaliert bis ~50.000 Notizen, mindestens 16 GB RAM.',
           'AnythingLLM-zentriert — am besten für dokumentenlastige PKBs (PDFs, Exporte), skaliert bis ~100.000 Dokumente, All-in-One-App.',
           'Eigener Python + ChromaDB Stack — am besten für Engineers, skaliert über 1 Mio. Elemente, erfordert selbstverwaltete Dienste.',
-          'Empfohlene Chat-Modelle 2026: Llama 3.2 3B für 16-GB-Systeme, Phi-4 Mini für 8 GB, Qwen3 7B für Qualität ab 32 GB.',
+          'Empfohlene Chat-Modelle 2026: Llama 3.2 3B für 16-GB-Systeme, Phi-4 Mini für 8 GB, Qwen3 8B für Qualität ab 32 GB.',
           'Empfohlenes Embedding-Modell: nomic-embed-text (768-dim, schnell) oder mxbai-embed-large (1024-dim, präziser); bge-m3 für mehrsprachige Archive.',
           'Hardware-Untergrenze: Laptop mit 16 GB RAM; 32 GB ab 10.000 Elementen empfohlen; Heimserver mit 64 GB ab 100.000.',
           'Capture ist der Engpass: Die meisten PKB-Items werden mobil erfasst (Webseiten, Screenshots, Sprachnotizen), aber am Desktop abgefragt. iOS Shortcuts → Obsidian, Working Copy (Git) oder a-Shell sind die drei mobilen Capture-Pfade.',
@@ -554,8 +554,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Wählen Sie eine von drei Referenzarchitekturen, statt von Grund auf zu designen.** Obsidian-zentriert (notiz-zentrisch, ~50K Elemente), AnythingLLM-zentriert (dokumenten-zentrisch, ~100K Elemente) oder eigener Python + ChromaDB Stack (engineer-zentrisch, 1M+ Elemente). Architekturen zu mischen lohnt sich selten — der Integrationsaufwand dominiert.',
           '**Eine lokale KI-PKB hat fünf Schichten: Capture, Speicherung, Embeddings, Retrieval, Schnittstelle.** Die meisten Anfängerfehler passieren in der Capture-Schicht, nicht im LLM. Wenn Items nicht aus Mobile und E-Mail in das System fließen, rettet kein noch so cleveres Retrieval den Build.',
-          '**Hardware-Untergrenze: 16 GB RAM.** Darunter müssen Sie zwischen Embedding-Modell und Chat-Modell wählen — beides geht nicht. Mit 16 GB lassen sich Llama 3.2 3B + nomic-embed-text parallel betreiben. Mit 32 GB können Sie auf Qwen3 7B aufrüsten oder mehrere Chat-Sitzungen führen. Ab 100.000 Elementen Embeddings auf einen Heimserver auslagern.',
-          '**Empfohlene Modelle 2026:** Chat — Llama 3.2 3B (Standard), Phi-4 Mini (8-GB-Systeme), Qwen3 7B (Qualität ab 32 GB); Embeddings — nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präziser), bge-m3 (mehrsprachig).',
+          '**Hardware-Untergrenze: 16 GB RAM.** Darunter müssen Sie zwischen Embedding-Modell und Chat-Modell wählen — beides geht nicht. Mit 16 GB lassen sich Llama 3.2 3B + nomic-embed-text parallel betreiben. Mit 32 GB können Sie auf Qwen3 8B aufrüsten oder mehrere Chat-Sitzungen führen. Ab 100.000 Elementen Embeddings auf einen Heimserver auslagern.',
+          '**Empfohlene Modelle 2026:** Chat — Llama 3.2 3B (Standard), Phi-4 Mini (8-GB-Systeme), Qwen3 8B (Qualität ab 32 GB); Embeddings — nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präziser), bge-m3 (mehrsprachig).',
           '**Capture ist der Skalierungs-Engpass, nicht Retrieval.** Die meisten Wissens-Items entstehen mobil (Web-Clippings, Screenshots, Sprachnotizen, weitergeleitete E-Mails). Entwerfen Sie den Pfad Mobile Share Sheet → Vault, bevor Sie das LLM tunen. iOS Shortcuts → Obsidian / Working Copy / a-Shell sind die drei tragfähigen iOS-Pfade.',
           '**Die Sync-Methode bestimmt, was auf Mobile funktioniert.** Obsidian Sync verarbeitet binäre Embedding-Indizes sauber; iCloud Drive korrumpiert sie plattformübergreifend; Git erfordert .gitignore-Disziplin und geräteweise Re-Indexing. Sync zuerst wählen, Plugins danach.',
           '**Backup ist nicht optional.** Drei Schichten: Vault-Snapshot (Time Machine, Backblaze, restic), Git-Historie der Klartext-Inhalte und ein quartalsweiser Export von Embeddings + Metadaten als sauberer Wiederaufbaupfad. Embeddings sind regenerierbar, aber teuer — sichern Sie sie ab 10.000 Elementen ebenfalls.',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Behandelte Architekturen:** Obsidian-zentriert, AnythingLLM-zentriert, eigener Python + ChromaDB Stack.',
           '**LLM-Backend:** Ollama (empfohlen) — betreibt Chat- und Embedding-Modelle hinter einem lokalen Endpoint unter `http://localhost:11434`.',
-          '**Empfohlene Chat-Modelle 2026:** Llama 3.2 3B (16-GB-Systeme), Phi-4 Mini (8 GB), Qwen3 7B (ab 32 GB).',
+          '**Empfohlene Chat-Modelle 2026:** Llama 3.2 3B (16-GB-Systeme), Phi-4 Mini (8 GB), Qwen3 8B (ab 32 GB).',
           '**Empfohlene Embedding-Modelle 2026:** nomic-embed-text (768-dim, schnell), mxbai-embed-large (1024-dim, präzise), bge-m3 (mehrsprachig).',
           '**Element-Zielgrößen:** Obsidian ~50.000 Notizen, AnythingLLM ~100.000 Dokumente, eigener Python + ChromaDB Stack 1 Mio.+.',
           '**Hardware-Untergrenze:** Laptop mit 16 GB RAM. Ab 10.000 Elementen: 32 GB empfohlen. Ab 100.000 Elementen: Heimserver mit 64 GB.',
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Ein häufiges Build-Muster, das scheitert: das leistungsstärkste Retrieval (eigene Hybridsuche mit Re-Ranking), das klügste Chat-Modell (Qwen3 7B) — und Capture wird ignoriert. Drei Wochen später hat der Vault 47 Items, weil mobil nichts hineinfließt. Die Korrektur ist immer dieselbe: Retrieval vereinfachen, Chat vereinfachen, Capture reparieren und akzeptieren, dass 80 % des Werts daraus entstehen, dass Items überhaupt im System landen.',
+            text: 'Ein häufiges Build-Muster, das scheitert: das leistungsstärkste Retrieval (eigene Hybridsuche mit Re-Ranking), das klügste Chat-Modell (Qwen3 8B) — und Capture wird ignoriert. Drei Wochen später hat der Vault 47 Items, weil mobil nichts hineinfließt. Die Korrektur ist immer dieselbe: Retrieval vereinfachen, Chat vereinfachen, Capture reparieren und akzeptieren, dass 80 % des Werts daraus entstehen, dass Items überhaupt im System landen.',
           },
         ],
       },
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian-centré — meilleur pour les workflows orientés notes, jusqu\'à ~50 000 notes, 16 Go de RAM minimum.',
           'AnythingLLM-centré — meilleur pour les PKB orientées documents (PDF, exports), jusqu\'à ~100 000 documents, application tout-en-un.',
           'Stack Python + ChromaDB sur mesure — meilleur pour les ingénieurs, au-delà de 1 M d\'éléments, services auto-gérés requis.',
-          'Modèles de chat recommandés en 2026 : Llama 3.2 3B pour systèmes 16 Go, Phi-4 Mini pour 8 Go, Qwen3 7B pour la qualité au-delà de 32 Go.',
+          'Modèles de chat recommandés en 2026 : Llama 3.2 3B pour systèmes 16 Go, Phi-4 Mini pour 8 Go, Qwen3 8B pour la qualité au-delà de 32 Go.',
           'Modèles d\'embedding recommandés : nomic-embed-text (768-dim, rapide) ou mxbai-embed-large (1024-dim, plus précis) ; bge-m3 pour les archives multilingues.',
           'Seuil matériel : portable 16 Go de RAM ; 32 Go recommandés au-delà de 10 000 éléments ; serveur domestique 64 Go au-delà de 100 000.',
           'La capture est le goulot d\'étranglement : la plupart des éléments PKB sont capturés sur mobile (pages web, captures d\'écran, notes vocales) et consultés sur le bureau. iOS Shortcuts → Obsidian, Working Copy (Git) ou a-Shell sont les trois chemins de capture mobile.',
@@ -1025,8 +1025,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Choisissez l\'une des trois architectures de référence plutôt que de partir de zéro.** Obsidian-centré (orienté notes, ~50K éléments), AnythingLLM-centré (orienté documents, ~100K éléments) ou stack Python + ChromaDB sur mesure (orienté ingénieurs, 1M+ éléments). Mélanger les architectures est rarement rentable — le coût d\'intégration domine.',
           '**Une PKB IA locale comporte cinq couches : capture, stockage, embeddings, récupération, interface.** La plupart des erreurs de débutant se produisent au niveau de la capture, pas du LLM. Si les éléments ne circulent pas depuis le mobile et l\'e-mail, aucune récupération ingénieuse ne sauvera le projet.',
-          '**Seuil matériel : 16 Go de RAM.** En dessous, vous choisissez entre exécuter un modèle d\'embedding ou un modèle de chat — pas les deux. À 16 Go, vous pouvez exécuter Llama 3.2 3B + nomic-embed-text simultanément. À 32 Go, vous pouvez passer à Qwen3 7B ou exécuter plusieurs sessions de chat. Au-delà de 100 000 éléments, déplacez les embeddings vers un serveur domestique.',
-          '**Modèles recommandés en 2026 :** chat — Llama 3.2 3B (par défaut), Phi-4 Mini (systèmes 8 Go), Qwen3 7B (qualité au-delà de 32 Go) ; embeddings — nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, plus précis), bge-m3 (multilingue).',
+          '**Seuil matériel : 16 Go de RAM.** En dessous, vous choisissez entre exécuter un modèle d\'embedding ou un modèle de chat — pas les deux. À 16 Go, vous pouvez exécuter Llama 3.2 3B + nomic-embed-text simultanément. À 32 Go, vous pouvez passer à Qwen3 8B ou exécuter plusieurs sessions de chat. Au-delà de 100 000 éléments, déplacez les embeddings vers un serveur domestique.',
+          '**Modèles recommandés en 2026 :** chat — Llama 3.2 3B (par défaut), Phi-4 Mini (systèmes 8 Go), Qwen3 8B (qualité au-delà de 32 Go) ; embeddings — nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, plus précis), bge-m3 (multilingue).',
           '**La capture est le goulot d\'étranglement, pas la récupération.** La plupart des éléments arrivent sur mobile (captures web, captures d\'écran, notes vocales, e-mails transférés). Concevez le chemin partage mobile → vault avant de régler le LLM. iOS Shortcuts → Obsidian / Working Copy / a-Shell sont les trois chemins iOS viables.',
           '**La méthode de synchronisation détermine ce qui fonctionne sur mobile.** Obsidian Sync gère proprement les index binaires d\'embeddings ; iCloud Drive les corrompt entre plateformes ; Git nécessite une discipline .gitignore et une réindexation par appareil. Choisissez la sync d\'abord, les plugins ensuite.',
           '**La sauvegarde n\'est pas optionnelle.** Trois couches : snapshot du vault (Time Machine, Backblaze, restic), historique Git du contenu en clair et un export trimestriel des embeddings + métadonnées comme chemin de reconstruction propre. Les embeddings sont régénérables, mais coûteux — sauvegardez-les aussi au-delà de 10 000 éléments.',
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Architectures couvertes :** Obsidian-centré, AnythingLLM-centré, stack Python + ChromaDB sur mesure.',
           '**Backend LLM :** Ollama (recommandé) — exécute les modèles de chat et d\'embedding derrière un endpoint local à `http://localhost:11434`.',
-          '**Modèles de chat recommandés en 2026 :** Llama 3.2 3B (systèmes 16 Go), Phi-4 Mini (8 Go), Qwen3 7B (32 Go+).',
+          '**Modèles de chat recommandés en 2026 :** Llama 3.2 3B (systèmes 16 Go), Phi-4 Mini (8 Go), Qwen3 8B (32 Go+).',
           '**Modèles d\'embedding recommandés en 2026 :** nomic-embed-text (768-dim, rapide), mxbai-embed-large (1024-dim, précis), bge-m3 (multilingue).',
           '**Cibles en nombre d\'éléments :** Obsidian ~50 000 notes, AnythingLLM ~100 000 documents, stack Python + ChromaDB sur mesure 1 M+.',
           '**Seuil matériel :** portable 16 Go de RAM. Au-delà de 10 000 éléments : 32 Go recommandés. Au-delà de 100 000 : serveur domestique 64 Go.',
@@ -1145,7 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Un schéma de projet courant qui échoue : choisir la récupération la plus puissante (recherche hybride sur mesure avec re-ranking), le modèle de chat le plus intelligent (Qwen3 7B), et ignorer la capture. Trois semaines plus tard, le vault contient 47 éléments parce que rien ne circule depuis le mobile. La correction est toujours la même : simplifier la récupération, simplifier le chat, réparer la capture, et accepter que 80 % de la valeur vienne du fait que les éléments sont simplement présents dans le système.',
+            text: 'Un schéma de projet courant qui échoue : choisir la récupération la plus puissante (recherche hybride sur mesure avec re-ranking), le modèle de chat le plus intelligent (Qwen3 8B), et ignorer la capture. Trois semaines plus tard, le vault contient 47 éléments parce que rien ne circule depuis le mobile. La correction est toujours la même : simplifier la récupération, simplifier le chat, réparer la capture, et accepter que 80 % de la valeur vienne du fait que les éléments sont simplement présents dans le système.',
           },
         ],
       },
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -1455,7 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian中心型 — ノート優先のワークフローに最適、約50,000ノートまで拡張、最低16 GB RAM。',
           'AnythingLLM中心型 — ドキュメント中心のPKB (PDF、エクスポート) に最適、約100,000ドキュメントまで拡張、オールインワンアプリ。',
           'カスタムPython + ChromaDBスタック — エンジニアに最適、100万アイテム以上まで拡張、自己管理サービスが必要。',
-          '2026年の推奨チャットモデル: 16 GBシステム向けLlama 3.2 3B、8 GB向けPhi-4 Mini、32 GB+の品質向けQwen3 7B。',
+          '2026年の推奨チャットモデル: 16 GBシステム向けLlama 3.2 3B、8 GB向けPhi-4 Mini、32 GB+の品質向けQwen3 8B。',
           '推奨Embeddingモデル: nomic-embed-text (768次元、高速) またはmxbai-embed-large (1024次元、より精密); 多言語アーカイブにはbge-m3。',
           'ハードウェア最低要件: 16 GB RAMノートPC; 10,000アイテム以上で32 GB推奨; 100,000以上でホームサーバー64 GB。',
           'キャプチャがボトルネック: ほとんどのPKBアイテムはモバイルでキャプチャされ (Webページ、スクリーンショット、音声メモ)、デスクトップで照会されます。iOS Shortcuts → Obsidian、Working Copy (Git)、a-Shellの3つがモバイルキャプチャパス。',
@@ -1488,8 +1488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**ゼロから設計するのではなく3つの参照アーキテクチャのいずれかを選択してください。** Obsidian中心型 (ノート優先、~50Kアイテム)、AnythingLLM中心型 (ドキュメント優先、~100Kアイテム)、カスタムPython + ChromaDBスタック (エンジニア向け、1M+アイテム)。アーキテクチャを混ぜることはまれにしか割に合いません — 統合コストが支配的になります。',
           '**ローカルAI PKBは5つのレイヤーから成ります: キャプチャ、ストレージ、Embedding、検索、インターフェース。** 初心者の失敗の多くはLLMレイヤーではなくキャプチャレイヤーで起こります。アイテムがモバイルとメールからシステムに流入しない場合、巧妙な検索もビルドを救えません。',
-          '**ハードウェア最低要件: 16 GB RAM。** これ未満では、Embeddingモデルとチャットモデルのどちらか一方しか実行できません — 両方は無理です。16 GBではLlama 3.2 3B + nomic-embed-textを並列実行できます。32 GBではQwen3 7Bにアップグレードしたり、複数チャットセッションを実行できます。100,000アイテム以上ではEmbeddingをホームサーバーに移してください。',
-          '**2026年の推奨モデル:** チャット — Llama 3.2 3B (デフォルト)、Phi-4 Mini (8 GBシステム)、Qwen3 7B (32 GB+の品質); Embedding — nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、より精密)、bge-m3 (多言語)。',
+          '**ハードウェア最低要件: 16 GB RAM。** これ未満では、Embeddingモデルとチャットモデルのどちらか一方しか実行できません — 両方は無理です。16 GBではLlama 3.2 3B + nomic-embed-textを並列実行できます。32 GBではQwen3 8Bにアップグレードしたり、複数チャットセッションを実行できます。100,000アイテム以上ではEmbeddingをホームサーバーに移してください。',
+          '**2026年の推奨モデル:** チャット — Llama 3.2 3B (デフォルト)、Phi-4 Mini (8 GBシステム)、Qwen3 8B (32 GB+の品質); Embedding — nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、より精密)、bge-m3 (多言語)。',
           '**キャプチャがスケーリングのボトルネックで、検索ではありません。** ほとんどの知識アイテムはモバイルで到着します (Webクリッピング、スクリーンショット、音声メモ、転送メール)。LLMをチューニングする前に、モバイル共有シート → vaultのパスを設計してください。iOS Shortcuts → Obsidian / Working Copy / a-Shellが3つの実用的なiOSパスです。',
           '**同期方法がモバイルで何が動くかを決定します。** Obsidian Syncはバイナリ Embeddingインデックスをきれいに処理します; iCloud Driveはプラットフォーム間で破損させます; Gitは.gitignore規律とデバイスごとの再インデックスを必要とします。同期を先に選択し、プラグインを後にしてください。',
           '**バックアップは必須です。** 3つのレイヤー: vaultスナップショット (Time Machine、Backblaze、restic)、平文コンテンツのGit履歴、Embedding + メタデータの四半期エクスポートをクリーンな再構築パスとして。Embeddingは再生成可能ですが高価です — 10,000アイテム以上ではこれもバックアップしてください。',
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**カバーするアーキテクチャ:** Obsidian中心型、AnythingLLM中心型、カスタムPython + ChromaDBスタック。',
           '**LLMバックエンド:** Ollama (推奨) — チャットモデルとEmbeddingモデルを1つのローカルエンドポイント `http://localhost:11434` の背後で実行。',
-          '**2026年の推奨チャットモデル:** Llama 3.2 3B (16 GBシステム)、Phi-4 Mini (8 GB)、Qwen3 7B (32 GB+)。',
+          '**2026年の推奨チャットモデル:** Llama 3.2 3B (16 GBシステム)、Phi-4 Mini (8 GB)、Qwen3 8B (32 GB+)。',
           '**2026年の推奨Embeddingモデル:** nomic-embed-text (768次元、高速)、mxbai-embed-large (1024次元、精密)、bge-m3 (多言語)。',
           '**アイテム数の目標:** Obsidian約50,000ノート、AnythingLLM約100,000ドキュメント、カスタムPython + ChromaDBスタック1M+。',
           '**ハードウェア最低要件:** 16 GB RAMノートPC。10,000アイテム以上: 32 GB推奨。100,000アイテム以上: 64 GBホームサーバー。',
@@ -1608,7 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '失敗するよくあるビルドパターン: 最も強力な検索 (再ランク付き独自ハイブリッド検索)、最も賢いチャットモデル (Qwen3 7B)、そしてキャプチャを無視。3週間後、vaultには47アイテムしかありません — モバイルから何も流入していないからです。修正は常に同じ: 検索を簡素化、チャットを簡素化、キャプチャを修正、そして価値の80%はアイテムがシステムに存在することから来ると受け入れる。',
+            text: '失敗するよくあるビルドパターン: 最も強力な検索 (再ランク付き独自ハイブリッド検索)、最も賢いチャットモデル (Qwen3 8B)、そしてキャプチャを無視。3週間後、vaultには47アイテムしかありません — モバイルから何も流入していないからです。修正は常に同じ: 検索を簡素化、チャットを簡素化、キャプチャを修正、そして価値の80%はアイテムがシステムに存在することから来ると受け入れる。',
           },
         ],
       },
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian 中心型 — 最适合笔记优先工作流,可扩展至约 50,000 条笔记,16 GB 内存最低。',
           'AnythingLLM 中心型 — 最适合文档密集型 PKB (PDF、导出),可扩展至约 100,000 条文档,一体化应用。',
           '自建 Python + ChromaDB 技术栈 — 最适合工程师,可扩展至 100 万+ 条目,需要自管服务。',
-          '2026 推荐聊天模型:16 GB 系统选 Llama 3.2 3B,8 GB 选 Phi-4 Mini,32 GB+ 追求质量选 Qwen3 7B。',
+          '2026 推荐聊天模型:16 GB 系统选 Llama 3.2 3B,8 GB 选 Phi-4 Mini,32 GB+ 追求质量选 Qwen3 8B。',
           '推荐嵌入模型:nomic-embed-text (768 维,快速) 或 mxbai-embed-large (1024 维,更精准);多语言归档选 bge-m3。',
           '硬件门槛:笔记本 16 GB 内存;10,000 条目以上推荐 32 GB;100,000 以上家庭服务器 64 GB。',
           '捕获是瓶颈:大多数 PKB 条目在移动端被捕获 (网页、截图、语音笔记),在桌面端被查询。iOS Shortcuts → Obsidian、Working Copy (Git) 或 a-Shell 是三种移动捕获路径。',
@@ -1951,8 +1951,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**选择三种参考架构之一,而不是从零开始设计。** Obsidian 中心型 (笔记优先,~50K 条目)、AnythingLLM 中心型 (文档优先,~100K 条目) 或自建 Python + ChromaDB 技术栈 (工程师优先,1M+ 条目)。混合架构很少划算 — 集成成本占主导。',
           '**本地 AI PKB 有五层:捕获、存储、嵌入、检索、界面。** 大多数初学者错误发生在捕获层,而不是 LLM 层。如果条目不能从移动端和邮件流入系统,再巧妙的检索也无法挽救项目。',
-          '**硬件门槛:16 GB 内存。** 低于此值,您只能在嵌入模型和聊天模型之间选一个 — 不能两者兼顾。在 16 GB 上可以并行运行 Llama 3.2 3B + nomic-embed-text。32 GB 可升级到 Qwen3 7B 或运行多个聊天会话。100,000 条目以上将嵌入迁移到家庭服务器。',
-          '**2026 推荐模型:** 聊天 — Llama 3.2 3B (默认)、Phi-4 Mini (8 GB 系统)、Qwen3 7B (32 GB+ 追求质量);嵌入 — nomic-embed-text (768 维,快速)、mxbai-embed-large (1024 维,更精准)、bge-m3 (多语言)。',
+          '**硬件门槛:16 GB 内存。** 低于此值,您只能在嵌入模型和聊天模型之间选一个 — 不能两者兼顾。在 16 GB 上可以并行运行 Llama 3.2 3B + nomic-embed-text。32 GB 可升级到 Qwen3 8B 或运行多个聊天会话。100,000 条目以上将嵌入迁移到家庭服务器。',
+          '**2026 推荐模型:** 聊天 — Llama 3.2 3B (默认)、Phi-4 Mini (8 GB 系统)、Qwen3 8B (32 GB+ 追求质量);嵌入 — nomic-embed-text (768 维,快速)、mxbai-embed-large (1024 维,更精准)、bge-m3 (多语言)。',
           '**捕获是扩展瓶颈,不是检索。** 大多数知识条目在移动端到达 (网页剪藏、截图、语音笔记、转发邮件)。在调优 LLM 之前,先设计移动分享 → vault 路径。iOS Shortcuts → Obsidian / Working Copy / a-Shell 是三种可行的 iOS 路径。',
           '**同步方式决定移动端能跑什么。** Obsidian Sync 干净处理二进制嵌入索引;iCloud Drive 跨平台破坏它们;Git 需要 .gitignore 纪律和按设备重新索引。先选同步,再选插件。',
           '**备份不是可选项。** 三层:vault 快照 (Time Machine、Backblaze、restic)、明文内容的 Git 历史,以及嵌入 + 元数据的季度导出作为干净的重建路径。嵌入可重新生成但成本高 — 10,000 条目以上也要备份它们。',
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**覆盖架构:** Obsidian 中心型、AnythingLLM 中心型、自建 Python + ChromaDB 技术栈。',
           '**LLM 后端:** Ollama (推荐) — 在一个本地端点 `http://localhost:11434` 后运行聊天和嵌入模型。',
-          '**2026 推荐聊天模型:** Llama 3.2 3B (16 GB 系统)、Phi-4 Mini (8 GB)、Qwen3 7B (32 GB+)。',
+          '**2026 推荐聊天模型:** Llama 3.2 3B (16 GB 系统)、Phi-4 Mini (8 GB)、Qwen3 8B (32 GB+)。',
           '**2026 推荐嵌入模型:** nomic-embed-text (768 维,快速)、mxbai-embed-large (1024 维,精准)、bge-m3 (多语言)。',
           '**条目数量目标:** Obsidian ~50,000 条笔记,AnythingLLM ~100,000 条文档,自建 Python + ChromaDB 技术栈 1M+。',
           '**硬件门槛:** 笔记本 16 GB 内存。10,000 条目以上:32 GB 推荐。100,000 条目以上:64 GB 家庭服务器。',
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '一种常见失败的构建模式:选择最强检索 (带重排的自定义混合搜索)、最聪明的聊天模型 (Qwen3 7B),却忽视捕获。三周后,vault 里有 47 个条目,因为移动端没有任何东西流入。修正方式始终一样:简化检索,简化聊天,修复捕获,接受 80% 的价值来自条目能进入系统这件事本身。',
+            text: '一种常见失败的构建模式:选择最强检索 (带重排的自定义混合搜索)、最聪明的聊天模型 (Qwen3 8B),却忽视捕获。三周后,vault 里有 47 个条目,因为移动端没有任何东西流入。修正方式始终一样:简化检索,简化聊天,修复捕获,接受 80% 的价值来自条目能进入系统这件事本身。',
           },
         ],
       },
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Centrada en Obsidian — mejor para flujos de trabajo orientados a notas, escala hasta ~50.000 notas, mínimo 16 GB de RAM.',
           'Centrada en AnythingLLM — mejor para PKBs con muchos documentos (PDFs, exportaciones), escala hasta ~100.000 documentos, app todo en uno.',
           'Stack personalizado Python + ChromaDB — mejor para ingenieros, escala más de 1 millón de elementos, requiere servicios autogestionados.',
-          'Modelos de chat recomendados en 2026: Llama 3.2 3B para sistemas de 16 GB, Phi-4 Mini para 8 GB, Qwen3 7B para calidad en 32 GB+.',
+          'Modelos de chat recomendados en 2026: Llama 3.2 3B para sistemas de 16 GB, Phi-4 Mini para 8 GB, Qwen3 8B para calidad en 32 GB+.',
           'Modelos de embedding recomendados: nomic-embed-text (768 dimensiones, rápido) o mxbai-embed-large (1024 dimensiones, más preciso); bge-m3 para archivos multilingues.',
           'Mínimo de hardware: portátil con 16 GB de RAM; 32 GB recomendado a partir de 10.000 elementos; servidor doméstico con 64 GB a partir de 100.000.',
           'La captura es el cuello de botella: la mayoría de los elementos de PKB se capturan en móvil (páginas web, capturas de pantalla, notas de voz) y se consultan en escritorio. iOS Shortcuts → Obsidian, Working Copy (Git) o a-Shell son las tres rutas de captura móvil.',
@@ -2414,8 +2414,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Elige una de las tres arquitecturas de referencia en lugar de diseñar desde cero.** Centrada en Obsidian (orientada a notas, ~50K elementos), centrada en AnythingLLM (orientada a documentos, ~100K elementos) o stack personalizado de Python + ChromaDB (orientada a ingenieros, más de 1M de elementos). Mezclar arquitecturas rara vez vale la pena — el coste de integración domina.',
           '**Una PKB con IA local tiene cinco capas: captura, almacenamiento, embeddings, recuperación, interfaz.** La mayoría de errores de principiantes ocurren en la capa de captura, no en el LLM. Si los elementos no fluyen desde el móvil y el email, ninguna recuperación inteligente salvará el proyecto.',
-          '**Mínimo de hardware: 16 GB de RAM.** Por debajo de eso, tienes que elegir entre ejecutar un modelo de embedding o un modelo de chat — no ambos. Con 16 GB puedes ejecutar Llama 3.2 3B + nomic-embed-text de forma concurrente. Con 32 GB puedes subir a Qwen3 7B o ejecutar varias sesiones de chat. Más de 100.000 elementos, mueve los embeddings a un servidor doméstico.',
-          '**Modelos recomendados en 2026:** chat — Llama 3.2 3B (por defecto), Phi-4 Mini (sistemas de 8 GB), Qwen3 7B (calidad en 32 GB+); embeddings — nomic-embed-text (768 dimensiones, rápido), mxbai-embed-large (1024 dimensiones, más preciso), bge-m3 (multilingue).',
+          '**Mínimo de hardware: 16 GB de RAM.** Por debajo de eso, tienes que elegir entre ejecutar un modelo de embedding o un modelo de chat — no ambos. Con 16 GB puedes ejecutar Llama 3.2 3B + nomic-embed-text de forma concurrente. Con 32 GB puedes subir a Qwen3 8B o ejecutar varias sesiones de chat. Más de 100.000 elementos, mueve los embeddings a un servidor doméstico.',
+          '**Modelos recomendados en 2026:** chat — Llama 3.2 3B (por defecto), Phi-4 Mini (sistemas de 8 GB), Qwen3 8B (calidad en 32 GB+); embeddings — nomic-embed-text (768 dimensiones, rápido), mxbai-embed-large (1024 dimensiones, más preciso), bge-m3 (multilingue).',
           '**La captura es el cuello de botella de escalado, no la recuperación.** La mayoría de los elementos de conocimiento llegan en móvil (recortes web, capturas de pantalla, notas de voz, emails reenviados). Diseña la ruta hoja de compartir móvil → vault antes de ajustar el LLM. iOS Shortcuts → Obsidian / Working Copy / a-Shell son las tres rutas iOS viables.',
           '**El método de sincronización determina lo que funciona en móvil.** Obsidian Sync gestiona los índices binarios de embeddings de forma limpia; iCloud Drive los corrompe entre plataformas; Git requiere disciplina con .gitignore y reindexación por dispositivo. Elige la sincronización primero, los plugins después.',
           '**El backup no es opcional.** Tres capas: snapshot del vault (Time Machine, Backblaze, restic), historial Git del contenido en texto plano y una exportación trimestral de embeddings + metadatos como ruta de reconstrucción limpia. Los embeddings son regenerables pero costosos — también respaldalos si tu vault supera los 10.000 elementos.',
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Arquitecturas cubiertas:** centrada en Obsidian, centrada en AnythingLLM, stack personalizado Python + ChromaDB.',
           '**Backend LLM:** Ollama (recomendado) — ejecuta modelos de chat y embedding detrás de un endpoint local en `http://localhost:11434`.',
-          '**Modelos de chat recomendados 2026:** Llama 3.2 3B (sistemas de 16 GB), Phi-4 Mini (8 GB), Qwen3 7B (32 GB+).',
+          '**Modelos de chat recomendados 2026:** Llama 3.2 3B (sistemas de 16 GB), Phi-4 Mini (8 GB), Qwen3 8B (32 GB+).',
           '**Modelos de embedding recomendados 2026:** nomic-embed-text (768 dimensiones, rápido), mxbai-embed-large (1024 dimensiones, preciso), bge-m3 (multilingue).',
           '**Objetivos de número de elementos:** Obsidian ~50.000 notas, AnythingLLM ~100.000 documentos, stack personalizado Python + ChromaDB más de 1M.',
           '**Mínimo de hardware:** portátil con 16 GB de RAM. Más de 10.000 elementos: 32 GB recomendado. Más de 100.000 elementos: servidor doméstico con 64 GB.',
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Un patrón de build común que falla: elegir la recuperación más potente (búsqueda híbrida personalizada con re-ranking), el modelo de chat más inteligente (Qwen3 7B), e ignorar la captura. Tres semanas después, el vault tiene 47 elementos porque nada fluye desde el móvil. La corrección es siempre la misma: simplifica la recuperación, simplifica el chat, arregla la captura, y acepta que el 80% del valor viene de que los elementos estén en el sistema.',
+            text: 'Un patrón de build común que falla: elegir la recuperación más potente (búsqueda híbrida personalizada con re-ranking), el modelo de chat más inteligente (Qwen3 8B), e ignorar la captura. Tres semanas después, el vault tiene 47 elementos porque nada fluye desde el móvil. La corrección es siempre la misma: simplifica la recuperación, simplifica el chat, arregla la captura, y acepta que el 80% del valor viene de que los elementos estén en el sistema.',
           },
         ],
       },
@@ -2822,7 +2822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -2857,7 +2857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Centrada no Obsidian — ideal para fluxos de trabalho orientados a notas, escala até ~50.000 notas, mínimo 16 GB de RAM.',
           'Centrada no AnythingLLM — ideal para PKBs com muitos documentos (PDFs, exportações), escala até ~100.000 documentos, app tudo em um.',
           'Stack personalizado Python + ChromaDB — ideal para engenheiros, escala mais de 1 milhão de elementos, exige serviços autogerenciados.',
-          'Modelos de chat recomendados em 2026: Llama 3.2 3B para sistemas de 16 GB, Phi-4 Mini para 8 GB, Qwen3 7B para qualidade em 32 GB+.',
+          'Modelos de chat recomendados em 2026: Llama 3.2 3B para sistemas de 16 GB, Phi-4 Mini para 8 GB, Qwen3 8B para qualidade em 32 GB+.',
           'Modelos de embedding recomendados: nomic-embed-text (768 dimensões, rápido) ou mxbai-embed-large (1024 dimensões, mais preciso); bge-m3 para arquivos multilíngues.',
           'Mínimo de hardware: notebook com 16 GB de RAM; 32 GB recomendado a partir de 10.000 elementos; servidor doméstico com 64 GB a partir de 100.000.',
           'A captura é o gargalo: a maioria dos elementos da PKB é capturada no celular (páginas web, capturas de tela, notas de voz) e consultada no desktop. iOS Shortcuts → Obsidian, Working Copy (Git) ou a-Shell são as três rotas de captura no celular.',
@@ -2890,8 +2890,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Escolha uma das três arquiteturas de referência em vez de projetar do zero.** Centrada no Obsidian (orientada a notas, ~50K elementos), centrada no AnythingLLM (orientada a documentos, ~100K elementos) ou stack personalizado de Python + ChromaDB (orientada a engenheiros, mais de 1M de elementos). Misturar arquiteturas raramente compensa — o custo de integração domina.',
           '**Uma PKB com IA local tem cinco camadas: captura, armazenamento, embeddings, recuperação, interface.** A maioria dos erros de iniciantes ocorre na camada de captura, não no LLM. Se os elementos não fluem do celular e do e-mail, nenhuma recuperação inteligente salvará o projeto.',
-          '**Mínimo de hardware: 16 GB de RAM.** Abaixo disso, você tem que escolher entre rodar um modelo de embedding ou um modelo de chat — não ambos. Com 16 GB você pode rodar Llama 3.2 3B + nomic-embed-text de forma concorrente. Com 32 GB você pode subir para Qwen3 7B ou rodar várias sessões de chat. Mais de 100.000 elementos, mova os embeddings para um servidor doméstico.',
-          '**Modelos recomendados em 2026:** chat — Llama 3.2 3B (padrão), Phi-4 Mini (sistemas de 8 GB), Qwen3 7B (qualidade em 32 GB+); embeddings — nomic-embed-text (768 dimensões, rápido), mxbai-embed-large (1024 dimensões, mais preciso), bge-m3 (multilíngue).',
+          '**Mínimo de hardware: 16 GB de RAM.** Abaixo disso, você tem que escolher entre rodar um modelo de embedding ou um modelo de chat — não ambos. Com 16 GB você pode rodar Llama 3.2 3B + nomic-embed-text de forma concorrente. Com 32 GB você pode subir para Qwen3 8B ou rodar várias sessões de chat. Mais de 100.000 elementos, mova os embeddings para um servidor doméstico.',
+          '**Modelos recomendados em 2026:** chat — Llama 3.2 3B (padrão), Phi-4 Mini (sistemas de 8 GB), Qwen3 8B (qualidade em 32 GB+); embeddings — nomic-embed-text (768 dimensões, rápido), mxbai-embed-large (1024 dimensões, mais preciso), bge-m3 (multilíngue).',
           '**A captura é o gargalo de escalonamento, não a recuperação.** A maioria dos elementos de conhecimento chega no celular (recortes web, capturas de tela, notas de voz, e-mails encaminhados). Projete a rota folha de compartilhamento no celular → vault antes de ajustar o LLM. iOS Shortcuts → Obsidian / Working Copy / a-Shell são as três rotas iOS viáveis.',
           '**O método de sincronização determina o que funciona no celular.** O Obsidian Sync gerencia os índices binários de embeddings de forma limpa; o iCloud Drive os corrompe entre plataformas; o Git exige disciplina com .gitignore e reindexação por dispositivo. Escolha a sincronização primeiro, os plugins depois.',
           '**O backup não é opcional.** Três camadas: snapshot do vault (Time Machine, Backblaze, restic), histórico Git do conteúdo em texto puro e uma exportação trimestral de embeddings + metadados como rota de reconstrução limpa. Os embeddings são regeneráveis, mas custosos — faça backup deles também se o seu vault superar os 10.000 elementos.',
@@ -2903,7 +2903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Arquiteturas cobertas:** centrada no Obsidian, centrada no AnythingLLM, stack personalizado Python + ChromaDB.',
           '**Backend LLM:** Ollama (recomendado) — roda modelos de chat e embedding atrás de um endpoint local em `http://localhost:11434`.',
-          '**Modelos de chat recomendados 2026:** Llama 3.2 3B (sistemas de 16 GB), Phi-4 Mini (8 GB), Qwen3 7B (32 GB+).',
+          '**Modelos de chat recomendados 2026:** Llama 3.2 3B (sistemas de 16 GB), Phi-4 Mini (8 GB), Qwen3 8B (32 GB+).',
           '**Modelos de embedding recomendados 2026:** nomic-embed-text (768 dimensões, rápido), mxbai-embed-large (1024 dimensões, preciso), bge-m3 (multilíngue).',
           '**Metas de número de elementos:** Obsidian ~50.000 notas, AnythingLLM ~100.000 documentos, stack personalizado Python + ChromaDB mais de 1M.',
           '**Mínimo de hardware:** notebook com 16 GB de RAM. Mais de 10.000 elementos: 32 GB recomendado. Mais de 100.000 elementos: servidor doméstico com 64 GB.',
@@ -3010,7 +3010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Um padrão de build comum que falha: escolher a recuperação mais poderosa (busca híbrida personalizada com re-ranking), o modelo de chat mais inteligente (Qwen3 7B) e ignorar a captura. Três semanas depois, o vault tem 47 elementos porque nada flui do celular. A correção é sempre a mesma: simplifique a recuperação, simplifique o chat, conserte a captura e aceite que 80% do valor vem de os elementos estarem no sistema.',
+            text: 'Um padrão de build comum que falha: escolher a recuperação mais poderosa (busca híbrida personalizada com re-ranking), o modelo de chat mais inteligente (Qwen3 8B) e ignorar a captura. Três semanas depois, o vault tem 47 elementos porque nada flui do celular. A correção é sempre a mesma: simplifique a recuperação, simplifique o chat, conserte a captura e aceite que 80% do valor vem de os elementos estarem no sistema.',
           },
         ],
       },
@@ -3297,7 +3297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -3332,7 +3332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'محورية Obsidian — الأفضل لسير عمل موجّه للملاحظات، يتسع حتى ~50,000 ملاحظة، حد أدنى 16 جيجابايت ذاكرة عشوائية.',
           'محورية AnythingLLM — الأفضل للـ PKBs ذات المستندات الكثيرة (PDFs، تصديرات)، تتسع حتى ~100,000 مستند، تطبيق شامل.',
           'حزمة Python + ChromaDB المخصصة — الأفضل للمهندسين، تتسع فوق مليون عنصر، تتطلب خدمات مُدارة ذاتياً.',
-          'نماذج الدردشة الموصى بها في 2026: Llama 3.2 3B لأنظمة 16 جيجابايت، وPhi-4 Mini لـ 8 جيجابايت، وQwen3 7B للجودة على 32 جيجابايت+.',
+          'نماذج الدردشة الموصى بها في 2026: Llama 3.2 3B لأنظمة 16 جيجابايت، وPhi-4 Mini لـ 8 جيجابايت، وQwen3 8B للجودة على 32 جيجابايت+.',
           'نماذج التضمين الموصى بها: nomic-embed-text (768 بُعداً، سريع) أو mxbai-embed-large (1024 بُعداً، أدق)؛ bge-m3 للأرشيفات متعددة اللغات.',
           'الحد الأدنى للأجهزة: حاسوب محمول بـ 16 جيجابايت ذاكرة عشوائية؛ 32 جيجابايت موصى من 10,000 عنصر؛ خادم منزلي بـ 64 جيجابايت من 100,000.',
           'الالتقاط هو العنق الزجاجي: تصل معظم عناصر PKB عبر الجوال (صفحات ويب وصور وملاحظات صوتية) وتُستعلم على سطح المكتب. iOS Shortcuts ← Obsidian أو Working Copy (Git) أو a-Shell هي المسارات الثلاثة لالتقاط iOS.',
@@ -3365,8 +3365,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**اختر إحدى البنى المرجعية الثلاث بدلاً من التصميم من الصفر.** محورية Obsidian (موجّهة للملاحظات، ~50K عنصر)، ومحورية AnythingLLM (موجّهة للمستندات، ~100K عنصر)، أو حزمة Python + ChromaDB المخصصة (موجّهة للمهندسين، أكثر من 1M عنصر). نادراً ما يستحق خلط البنى — تكلفة التكامل تسود.',
           '**لـ PKB بالذكاء الاصطناعي المحلي خمس طبقات: الالتقاط والتخزين والتضمينات والاسترداد والواجهة.** تقع معظم أخطاء المبتدئين في طبقة الالتقاط، لا في النموذج اللغوي. إذا لم تتدفق العناصر من الجوال والبريد الإلكتروني، فلن يُنقذ المشروع أي استرداد ذكي.',
-          '**الحد الأدنى للأجهزة: 16 جيجابايت ذاكرة عشوائية.** تحتها يجب الاختيار بين تشغيل نموذج تضمين أو نموذج دردشة — ليس كليهما. بـ 16 جيجابايت يمكنك تشغيل Llama 3.2 3B + nomic-embed-text بشكل متزامن. بـ 32 جيجابايت يمكنك الارتقاء إلى Qwen3 7B أو تشغيل عدة جلسات دردشة. فوق 100,000 عنصر انقل التضمينات إلى خادم منزلي.',
-          '**النماذج الموصى بها في 2026:** الدردشة — Llama 3.2 3B (الافتراضي)، وPhi-4 Mini (أنظمة 8 جيجابايت)، وQwen3 7B (الجودة على 32 جيجابايت+)؛ التضمينات — nomic-embed-text (768 بُعداً، سريع)، ومxbai-embed-large (1024 بُعداً، أدق)، وbge-m3 (متعدد اللغات).',
+          '**الحد الأدنى للأجهزة: 16 جيجابايت ذاكرة عشوائية.** تحتها يجب الاختيار بين تشغيل نموذج تضمين أو نموذج دردشة — ليس كليهما. بـ 16 جيجابايت يمكنك تشغيل Llama 3.2 3B + nomic-embed-text بشكل متزامن. بـ 32 جيجابايت يمكنك الارتقاء إلى Qwen3 8B أو تشغيل عدة جلسات دردشة. فوق 100,000 عنصر انقل التضمينات إلى خادم منزلي.',
+          '**النماذج الموصى بها في 2026:** الدردشة — Llama 3.2 3B (الافتراضي)، وPhi-4 Mini (أنظمة 8 جيجابايت)، وQwen3 8B (الجودة على 32 جيجابايت+)؛ التضمينات — nomic-embed-text (768 بُعداً، سريع)، ومxbai-embed-large (1024 بُعداً، أدق)، وbge-m3 (متعدد اللغات).',
           '**الالتقاط هو عنق الزجاجة في التوسع، لا الاسترداد.** تصل معظم عناصر المعرفة عبر الجوال (مقتطفات ويب وصور وملاحظات صوتية ورسائل مُعادة التوجيه). صمّم مسار ورقة مشاركة الجوال ← vault قبل ضبط النموذج اللغوي. iOS Shortcuts ← Obsidian أو Working Copy أو a-Shell هي المسارات الثلاثة القابلة للتطبيق على iOS.',
           '**طريقة المزامنة تحدد ما يعمل على الجوال.** يتعامل Obsidian Sync مع فهارس التضمينات الثنائية بنظافة؛ iCloud Drive يُفسدها بين المنصات؛ Git يتطلب انضباطاً مع .gitignore وإعادة الفهرسة لكل جهاز. اختر المزامنة أولاً، ثم الإضافات.',
           '**النسخ الاحتياطي ليس اختيارياً.** ثلاث طبقات: لقطة vault (Time Machine، وBackblaze، وrestic)، وسجل Git للمحتوى بنص عادي، وتصدير ربع سنوي للتضمينات + البيانات الوصفية كمسار إعادة بناء نظيف. التضمينات قابلة للتجديد لكنها مكلفة — انسخها احتياطياً أيضاً إذا تجاوز vault 10,000 عنصر.',
@@ -3378,7 +3378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**البنى المشمولة:** محورية Obsidian، ومحورية AnythingLLM، وحزمة Python + ChromaDB المخصصة.',
           '**واجهة LLM الخلفية:** Ollama (موصى به) — يُشغّل نماذج الدردشة والتضمين خلف نقطة نهاية محلية على `http://localhost:11434`.',
-          '**نماذج الدردشة الموصى بها 2026:** Llama 3.2 3B (أنظمة 16 جيجابايت)، وPhi-4 Mini (8 جيجابايت)، وQwen3 7B (+32 جيجابايت).',
+          '**نماذج الدردشة الموصى بها 2026:** Llama 3.2 3B (أنظمة 16 جيجابايت)، وPhi-4 Mini (8 جيجابايت)، وQwen3 8B (+32 جيجابايت).',
           '**نماذج التضمين الموصى بها 2026:** nomic-embed-text (768 بُعداً، سريع)، ومxbai-embed-large (1024 بُعداً، دقيق)، وbge-m3 (متعدد اللغات).',
           '**أهداف عدد العناصر:** Obsidian ~50,000 ملاحظة، وAnythingLLM ~100,000 مستند، وحزمة Python + ChromaDB المخصصة أكثر من 1M.',
           '**الحد الأدنى للأجهزة:** حاسوب محمول بـ 16 جيجابايت ذاكرة عشوائية. أكثر من 10,000 عنصر: 32 جيجابايت موصى. أكثر من 100,000 عنصر: خادم منزلي بـ 64 جيجابايت.',
@@ -3485,7 +3485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'نمط بناء شائع يفشل: اختيار الاسترداد الأقوى (بحث هجين مخصص مع إعادة ترتيب)، والنموذج الأذكى (Qwen3 7B)، وإهمال الالتقاط. بعد ثلاثة أسابيع، يحتوي vault على 47 عنصراً لأنه لا شيء يتدفق من الجوال. الحل دائماً واحد: بسّط الاسترداد، وبسّط الدردشة، وأصلح الالتقاط، واقبل أن 80% من القيمة تأتي من وجود العناصر في النظام.',
+            text: 'نمط بناء شائع يفشل: اختيار الاسترداد الأقوى (بحث هجين مخصص مع إعادة ترتيب)، والنموذج الأذكى (Qwen3 8B)، وإهمال الالتقاط. بعد ثلاثة أسابيع، يحتوي vault على 47 عنصراً لأنه لا شيء يتدفق من الجوال. الحل دائماً واحد: بسّط الاسترداد، وبسّط الدردشة، وأصلح الالتقاط، واقبل أن 80% من القيمة تأتي من وجود العناصر في النظام.',
           },
         ],
       },
@@ -3772,7 +3772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
-      'Qwen3 7B',
+      'Qwen3 8B',
       'nomic-embed-text',
       'mxbai-embed-large',
       'bge-m3',
@@ -3807,7 +3807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian 중심 — 노트 중심 워크플로우에 최적, 약 50,000개 노트까지 확장, 최소 16 GB RAM.',
           'AnythingLLM 중심 — 문서 중심 PKB(PDF, 내보내기)에 최적, 약 100,000개 문서까지 확장, 올인원 앱.',
           'Python + ChromaDB 커스텀 스택 — 엔지니어에게 최적, 100만 개 이상 항목 확장, 자체 관리 서비스 필요.',
-          '2026년 권장 채팅 모델: 16 GB 시스템용 Llama 3.2 3B, 8 GB용 Phi-4 Mini, 32 GB+ 고품질용 Qwen3 7B.',
+          '2026년 권장 채팅 모델: 16 GB 시스템용 Llama 3.2 3B, 8 GB용 Phi-4 Mini, 32 GB+ 고품질용 Qwen3 8B.',
           '권장 임베딩 모델: nomic-embed-text(768차원, 빠름) 또는 mxbai-embed-large(1024차원, 더 정확); 다국어 아카이브용 bge-m3.',
           '하드웨어 최소 사양: 16 GB RAM 노트북; 10,000개 항목 이상에서 32 GB 권장; 100,000개 이상에서 64 GB 홈 서버.',
           '캡처가 병목입니다: PKB 항목의 대부분은 모바일(웹 페이지, 스크린샷, 음성 메모)에서 캡처되고 데스크탑에서 조회됩니다. iOS Shortcuts → Obsidian, Working Copy(Git), a-Shell이 세 가지 모바일 캡처 경로입니다.',
@@ -3840,8 +3840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**처음부터 설계하는 대신 세 가지 참조 아키텍처 중 하나를 선택하십시오.** Obsidian 중심(노트 중심, ~50K 항목), AnythingLLM 중심(문서 중심, ~100K 항목), Python + ChromaDB 커스텀 스택(엔지니어 중심, 100만 개 이상). 아키텍처를 혼합하는 것은 거의 가치가 없습니다 — 통합 비용이 지배합니다.',
           '**로컬 AI PKB는 다섯 가지 레이어로 구성됩니다: 캡처, 저장, 임베딩, 검색, 인터페이스.** 초보자의 실수는 대부분 LLM이 아닌 캡처 레이어에서 발생합니다. 항목이 모바일과 이메일에서 흐르지 않으면 아무리 스마트한 검색도 프로젝트를 구할 수 없습니다.',
-          '**하드웨어 최소 사양: 16 GB RAM.** 그 이하에서는 임베딩 모델 또는 채팅 모델 중 하나만 실행해야 합니다 — 둘 다는 불가능합니다. 16 GB에서 Llama 3.2 3B + nomic-embed-text를 동시에 실행할 수 있습니다. 32 GB에서 Qwen3 7B로 업그레이드하거나 여러 채팅 세션을 실행할 수 있습니다. 100,000개 항목 이상에서 임베딩을 홈 서버로 이동하십시오.',
-          '**2026년 권장 모델:** 채팅 — Llama 3.2 3B(기본값), Phi-4 Mini(8 GB 시스템), Qwen3 7B(32 GB+ 고품질); 임베딩 — nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 더 정확), bge-m3(다국어).',
+          '**하드웨어 최소 사양: 16 GB RAM.** 그 이하에서는 임베딩 모델 또는 채팅 모델 중 하나만 실행해야 합니다 — 둘 다는 불가능합니다. 16 GB에서 Llama 3.2 3B + nomic-embed-text를 동시에 실행할 수 있습니다. 32 GB에서 Qwen3 8B로 업그레이드하거나 여러 채팅 세션을 실행할 수 있습니다. 100,000개 항목 이상에서 임베딩을 홈 서버로 이동하십시오.',
+          '**2026년 권장 모델:** 채팅 — Llama 3.2 3B(기본값), Phi-4 Mini(8 GB 시스템), Qwen3 8B(32 GB+ 고품질); 임베딩 — nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 더 정확), bge-m3(다국어).',
           '**캡처가 확장 병목이며 검색이 아닙니다.** 지식 항목의 대부분은 모바일(웹 클립, 스크린샷, 음성 메모, 전달된 이메일)에서 도착합니다. LLM을 조정하기 전에 모바일 공유 시트 → vault 경로를 설계하십시오. iOS Shortcuts → Obsidian / Working Copy / a-Shell이 세 가지 실행 가능한 iOS 경로입니다.',
           '**동기화 방법이 모바일에서 무엇이 작동하는지를 결정합니다.** Obsidian Sync는 임베딩 바이너리 인덱스를 깔끔하게 처리합니다; iCloud Drive는 플랫폼 간에 손상시킵니다; Git은 .gitignore 규율과 기기별 재인덱싱이 필요합니다. 플러그인보다 먼저 동기화를 선택하십시오.',
           '**백업은 선택이 아닙니다.** 세 가지 레이어: vault 스냅샷(Time Machine, Backblaze, restic), 일반 텍스트 콘텐츠의 Git 기록, 깔끔한 재구성 경로로서의 분기별 임베딩 + 메타데이터 내보내기. 임베딩은 재생성 가능하지만 비용이 많이 듭니다 — vault가 10,000개 항목을 초과하면 함께 백업하십시오.',
@@ -3853,7 +3853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**다루는 아키텍처:** Obsidian 중심, AnythingLLM 중심, Python + ChromaDB 커스텀 스택.',
           '**LLM 백엔드:** Ollama(권장) — `http://localhost:11434`의 로컬 엔드포인트 뒤에서 채팅 및 임베딩 모델 실행.',
-          '**2026년 권장 채팅 모델:** Llama 3.2 3B(16 GB 시스템), Phi-4 Mini(8 GB), Qwen3 7B(32 GB+).',
+          '**2026년 권장 채팅 모델:** Llama 3.2 3B(16 GB 시스템), Phi-4 Mini(8 GB), Qwen3 8B(32 GB+).',
           '**2026년 권장 임베딩 모델:** nomic-embed-text(768차원, 빠름), mxbai-embed-large(1024차원, 정확), bge-m3(다국어).',
           '**항목 수 목표:** Obsidian 약 50,000개 노트, AnythingLLM 약 100,000개 문서, Python + ChromaDB 커스텀 스택 100만 개 이상.',
           '**하드웨어 최소 사양:** 16 GB RAM 노트북. 10,000개 항목 이상: 32 GB 권장. 100,000개 항목 이상: 64 GB 홈 서버.',
@@ -3960,7 +3960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '실패하는 일반적인 구축 패턴: 가장 강력한 검색(재순위를 사용한 커스텀 하이브리드 검색)과 가장 스마트한 채팅 모델(Qwen3 7B)을 선택하고 캡처를 무시합니다. 3주 후 vault에 47개 항목이 있는데 모바일에서 아무것도 흐르지 않기 때문입니다. 수정은 항상 같습니다: 검색 단순화, 채팅 단순화, 캡처 수정, 그리고 가치의 80%는 항목이 시스템 안에 있다는 것에서 온다는 것을 받아들이십시오.',
+            text: '실패하는 일반적인 구축 패턴: 가장 강력한 검색(재순위를 사용한 커스텀 하이브리드 검색)과 가장 스마트한 채팅 모델(Qwen3 8B)을 선택하고 캡처를 무시합니다. 3주 후 vault에 47개 항목이 있는데 모바일에서 아무것도 흐르지 않기 때문입니다. 수정은 항상 같습니다: 검색 단순화, 채팅 단순화, 캡처 수정, 그리고 가치의 80%는 항목이 시스템 안에 있다는 것에서 온다는 것을 받아들이십시오.',
           },
         ],
       },

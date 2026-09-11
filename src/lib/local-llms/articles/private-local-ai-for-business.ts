@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which open-source models are best for business use?',
-              a: 'For business deployments: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
+              a: 'For business deployments: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
             },
             {
               q: 'What is the latency of on-premises AI vs cloud APIs?',
@@ -432,7 +432,7 @@ de: {
             { q: 'Verlangt die DSGVO Private lokale KI für deutsche Unternehmen?', a: 'DSGVO verlangt nicht explizit Private lokale KI. Sie verlangt angemessene Datenschutzmaßnahmen (Artikel 28). Hochregulierte Sektoren (Gesundheitswesen, Finanzen, Regierung) in Deutschland und Österreich mandatieren zunehmend Private lokale KI als den sichersten DSGVO-Konformitätsweg.' },
             { q: 'Welche Hardware für Private-lokale-KI-Bereitstellung?', a: 'Kleine Teams (5–20 Benutzer): 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.1 8B oder Mistral Small. Produktion (20–100 Benutzer): 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B mit Tensor-Parallelismus. Enterprise (100+ Benutzer): 4× RTX 5090 oder 2× A100 80 GB (8.000–30.000 €) für hohe Parallelität + RAG. Budget auch für Netzwerk, Kühlung und redundante Stromversorgung.' },
             { q: 'Wie stelle ich HIPAA-Konformität mit lokal gehostem LLM sicher?', a: 'HIPAA-Konformität für lokale LLMs erfordert: (1) Verschlüsselung im Ruhezustand (AES-256) und in Übertragung (TLS 1.3), (2) Vollständiges Audit-Logging von Anfragen/Antworten, (3) Zugriffskontrolle (rollenbasiert, MFA), (4) Business-Associate-Vereinbarung (BAA), wenn Services von Drittanbietern beteiligt sind, (5) Physische Serversicherheit.' },
-            { q: 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?', a: 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.' },
+            { q: 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?', a: 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.' },
             { q: 'Welche Latenz Private lokale KI vs. Cloud-APIs?', a: 'Cloud-APIs (OpenAI GPT-5.6): 200–500 ms erstes-Token-Latenz Netzwerk-RTT. vLLM On-Premises (RTX 5090): 50–150 ms erstes-Token-Latenz lokales Netzwerk. Batch-Verarbeitungs-Workloads profitieren am meisten On-Premises durch Beseitigung von API-Rate-Limits.' },
             { q: 'Kann ich Apple Silicon M5 für geschäftliche Private lokale KI nutzen?', a: 'Ja — MacBook Pro M5 Max (128 GB, 3.200+ €) führt Llama 3.3 70B mit 25–35 Token/Sekunde aus. Geräuschlos, keine GPU-Kühlung erforderlich, macOS-verwaltet. Eignet sich für kleine Teams (5–10 Benutzer) mit leichten Workloads. Für Produktion (20+ Benutzer) bieten NVIDIA RTX 5090 oder A100 höheren Durchsatz und Verwaltung gleichzeitiger Anfragen über vLLM.' },
             { q: 'Wie stelle ich Audit-Logs für Private lokale KI sicher?', a: 'Erfasse jede Anfrage/Antwort in strukturierter DB (PostgreSQL oder Elasticsearch). Einzuschließen: Zeitstempel, Benutzer-ID, Modellname, Token Ein-/Ausgabe, Antwortzeit. vLLM unterstützt nativ Request-Logging. HIPAA: Aktiviere AES-256-Verschlüsselung der Log-DB. SOC2: Implementiere rollenbasierte Zugriffskontrolle für Logs. Log-Aufbewahrung: Mindestens 7 Jahre (Finanzdienstleistungen) oder wie vom Konformitäts-Framework verlangt.' },
@@ -530,7 +530,7 @@ schema: {
             'name': 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.',
+              'text': 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.',
             },
           },
           {
@@ -850,7 +850,7 @@ schema: {
             },
             {
               q: 'Quels modèles open-source meilleurs usage métier ?',
-              a: 'Pour déploiements métier avril 2026 : Llama 3.3 70B (Meta, Llama Community License — gratuit usage commercial <700 M utilisateurs), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Petits déploiements : Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Tous commercialement licenciables gratuitement. Vérifier licence avant déploiement production.'
+              a: 'Pour déploiements métier avril 2026 : Llama 3.3 70B (Meta, Llama Community License — gratuit usage commercial <700 M utilisateurs), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Petits déploiements : Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. Tous commercialement licenciables gratuitement. Vérifier licence avant déploiement production.'
             },
             {
               q: 'Quelle latence IA on-premises vs APIs cloud ?',
@@ -969,7 +969,7 @@ schema: {
             name: 'Quels modèles open-source meilleurs usage métier ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Avril 2026 : Llama 3.1 8B (Apache 2.0, gratuit usage commercial), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Tous trois commercialement licenciables gratuitement.'
+              text: 'Avril 2026 : Llama 3.1 8B (Apache 2.0, gratuit usage commercial), Qwen3 8B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Tous trois commercialement licenciables gratuitement.'
             }
           },
           {
@@ -1248,7 +1248,7 @@ schema: {
             { q: '個人情報保護法はEU企業向けローカルAIを要求するか', a: '個人情報保護法は明示的にローカルAIを要求しません。個人情報の適切な保護（個人情報保護法第28条）を要求します。日本の高度に規制される産業（医療、金融、政府）はますますローカルAIをコンプライアンスの最も安全な経路として要求しています。' },
             { q: 'オンプレミスAI展開用のハードウェア', a: '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.1 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。' },
             { q: 'ローカルLLMで金融庁サイバーセキュリティ要件に準拠する方法', a: '金融庁準拠ローカルLLMには ： (1) 保存時（AES-256）と転送中（TLS 1.3）暗号化、(2) リクエスト/レスポンス監査ログ、(3) アクセス制御（ロールベース、MFA）、(4) セキュリティサーバー物理、(5) インシデント対応計画。定期的なセキュリティ監査を実施します。' },
-            { q: 'ビジネス使用に最適なオープンソースモデルはどれか', a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。' },
+            { q: 'ビジネス使用に最適なオープンソースモデルはどれか', a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 8B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。' },
             { q: 'ローカルAI vs クラウドAPIのレイテンシ', a: 'クラウドAPI（OpenAI GPT-5.6）初期トークンレイテンシ 200–500msネットワークRTT。vLLM オンプレミス RTX 5090 は初期トークンレイテンシ 50–150msローカルネットワークを達成します。バッチ処理ワークロードはクラウド API レート制限排除により、オンプレミスから最も利益を得ます。' },
             { q: 'ビジネスAIにApple Silicon M5を使用できるか', a: 'はい — MacBook Pro M5 Max（128 GB、¥428,000+）は Llama 3.3 70B を 25–35 トークン/秒 で実行します。静か、GPU冷却不要、macOS管理。小規模チーム（5–10ユーザー）軽量ワークロード向け。本番環境（20+ ユーザー）、NVIDIA RTX 5090 または A100 はスループット高く、vLLM経由の同時リクエスト管理提供。' },
             { q: 'オンプレミスAI監査ログを確認する方法', a: 'すべてのリクエスト/レスポンスを構造化DB（PostgreSQL または Elasticsearch）に記録します。含める ： timestamp、user ID、モデル名、入力/出力トークン、応答時間。vLLM はネイティブリクエストログをサポート。HIPAA ： DB ログを AES-256 暗号化で有効化。SOC2 ： ロールベースアクセス制御ログを実装。ログは最低7年保持（金融サービス）または規制フレームワーク要件。' },
@@ -1371,7 +1371,7 @@ schema: {
             'name': 'ビジネス使用に最適なオープンソースモデルはどれか',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。',
+              'text': '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 8B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。',
             },
           },
           {
@@ -1683,7 +1683,7 @@ schema: {
             { q: '数据安全法要求企业使用本地AI吗？', a: '数据安全法没有明确要求本地AI。它要求个人数据适当保护。但严格受监管的行业（金融、医疗、政府）越来越多地将本地AI视为数据安全法合规的最安全路径。' },
             { q: '本地AI部署需要什么硬件？', a: '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.1 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。' },
             { q: '如何使用本地LLM满足金融合规要求？', a: '金融机构的本地LLM合规需要：(1) 静态数据加密（AES-256）和传输中加密（TLS 1.3），(2) 所有查询和响应的审计日志，(3) 访问控制（基于角色、MFA），(4) 物理服务器安全，(5) 事件响应计划。定期安全审计。' },
-            { q: '哪些开源模型最适合业务使用？', a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。' },
+            { q: '哪些开源模型最适合业务使用？', a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 8B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。' },
             { q: '本地AI vs 云API的延迟？', a: '云API（OpenAI GPT-5.6）首token延迟200–500ms网络RTT。vLLM本地RTX 5090实现50–150ms本地网络首token延迟。批处理工作负载因消除API速率限制而最受本地益处。' },
             { q: '能否为业务AI使用Apple Silicon M5？', a: '可以——MacBook Pro M5 Max（128 GB、$3,200+）以25–35 token/秒执行Llama 3.3 70B。安静、无GPU冷却、macOS管理。适合小型团队（5–10用户）轻型工作负载。生产（20+用户）、NVIDIA RTX 5090或A100提供更高吞吐量和通过vLLM的并发请求管理。' },
             { q: '如何确保本地AI审计日志？', a: '将所有请求/响应记录到结构化数据库（PostgreSQL或Elasticsearch）。包括：时间戳、用户ID、模型名、输入/输出token、响应时间。vLLM本机支持请求日志。合规性：为日志启用AES-256加密。监管要求：保留日志最少7年（金融）或按框架要求。' },
@@ -1805,7 +1805,7 @@ schema: {
             'name': '哪些开源模型最适合业务使用？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。',
+              'text': '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 8B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。',
             },
           },
           {
@@ -2032,7 +2032,7 @@ schema: {
             },
             {
               q: '¿Qué modelos open-source son mejores para uso empresarial?',
-              a: 'Para despliegues empresariales en abril de 2026: Llama 3.3 70B (Meta, Llama Community License — uso comercial gratuito con menos de 700M usuarios), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Para despliegues más pequeños: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Todos con licencia comercial sin coste. Verifica siempre la licencia antes del despliegue en producción.',
+              a: 'Para despliegues empresariales en abril de 2026: Llama 3.3 70B (Meta, Llama Community License — uso comercial gratuito con menos de 700M usuarios), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Para despliegues más pequeños: Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. Todos con licencia comercial sin coste. Verifica siempre la licencia antes del despliegue en producción.',
             },
             {
               q: '¿Cuál es la latencia de la IA on-premises frente a las APIs en la nube?',
@@ -2310,7 +2310,7 @@ schema: {
             },
             {
               q: 'أي نماذج مفتوحة المصدر أفضل للاستخدام المؤسسي؟',
-              a: 'لعمليات النشر المؤسسية في أبريل 2026: Llama 3.3 70B (Meta، ترخيص مجتمع Llama — استخدام تجاري مجاني بأقل من 700 مليون مستخدم)، Qwen3 72B (Alibaba، Apache 2.0)، Mistral Small 3.1 24B (Mistral AI، Apache 2.0). لعمليات نشر أصغر: Llama 3.1 8B، Qwen3 7B، Phi-4 Mini 3.8B. جميعها بترخيص تجاري بلا تكلفة. تحقق دائمًا من الترخيص قبل النشر الإنتاجي.',
+              a: 'لعمليات النشر المؤسسية في أبريل 2026: Llama 3.3 70B (Meta، ترخيص مجتمع Llama — استخدام تجاري مجاني بأقل من 700 مليون مستخدم)، Qwen3 72B (Alibaba، Apache 2.0)، Mistral Small 3.1 24B (Mistral AI، Apache 2.0). لعمليات نشر أصغر: Llama 3.1 8B، Qwen3 8B، Phi-4 Mini 3.8B. جميعها بترخيص تجاري بلا تكلفة. تحقق دائمًا من الترخيص قبل النشر الإنتاجي.',
             },
             {
               q: 'ما زمن استجابة الذكاء الاصطناعي في الموقع مقابل واجهات API السحابية؟',
@@ -2770,7 +2770,7 @@ schema: {
             },
             {
               q: '비즈니스 사용에 가장 적합한 오픈소스 모델은 무엇입니까?',
-              a: '2026년 4월 기준 비즈니스 배포용: Llama 3.3 70B(Meta, Llama Community License — 7억 명 미만 사용자에게 상업적 무료 사용), Qwen3 72B(Alibaba, Apache 2.0), Mistral Small 3.1 24B(Mistral AI, Apache 2.0). 소규모 배포용: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. 모두 무료로 상업적으로 라이선스 가능합니다. 프로덕션 배포 전 반드시 라이선스를 확인하십시오.',
+              a: '2026년 4월 기준 비즈니스 배포용: Llama 3.3 70B(Meta, Llama Community License — 7억 명 미만 사용자에게 상업적 무료 사용), Qwen3 72B(Alibaba, Apache 2.0), Mistral Small 3.1 24B(Mistral AI, Apache 2.0). 소규모 배포용: Llama 3.1 8B, Qwen3 8B, Phi-4 Mini 3.8B. 모두 무료로 상업적으로 라이선스 가능합니다. 프로덕션 배포 전 반드시 라이선스를 확인하십시오.',
             },
             {
               q: '온프레미스 AI와 클라우드 API의 지연 시간 차이는 얼마입니까?',

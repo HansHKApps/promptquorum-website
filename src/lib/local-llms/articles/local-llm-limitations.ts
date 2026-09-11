@@ -539,7 +539,7 @@ schema: {
           id: 'best-choice',
           title: '🏆 Best Local LLM by Use Case',
           content: [
-            '- **Best for privacy and compliance** → Local LLM (Ollama + Llama 3.3 70B or Qwen3 7B)',
+            '- **Best for privacy and compliance** → Local LLM (Ollama + Llama 3.3 70B or Qwen3 8B)',
             '- **Best for reasoning and coding** → Cloud API (OpenAI GPT-5.6 or Anthropic Claude Opus 5)',
             '- **Best for speed with good quality** → Cloud API (OpenAI GPT-5.6 Luna for 10× cheaper token cost)',
             '- **Best for cost at scale** → Local LLM (if you have the hardware; amortized cost approaches zero)',
@@ -1033,7 +1033,7 @@ schema: {
           id: 'best-choice',
           title: '🏆 Mejor LLM local por caso de uso',
           content: [
-            '- **Mejor para privacidad y cumplimiento** → LLM local (Ollama + Llama 3.3 70B o Qwen3 7B)',
+            '- **Mejor para privacidad y cumplimiento** → LLM local (Ollama + Llama 3.3 70B o Qwen3 8B)',
             '- **Mejor para razonamiento y codificación** → API en la nube (OpenAI GPT-5.6 o Anthropic Claude Opus 5)',
             '- **Mejor para velocidad con buena calidad** → API en la nube (OpenAI GPT-5.6 Luna a 10× menor costo por token)',
             '- **Mejor para costo a escala** → LLM local (si tienes el hardware; el costo amortizado se acerca a cero)',
@@ -1527,7 +1527,7 @@ schema: {
           id: 'best-choice',
           title: '🏆 أفضل LLM محلي حسب حالة الاستخدام',
           content: [
-            '- **الأفضل للخصوصية والامتثال** ← LLM محلي (Ollama + Llama 3.3 70B أو Qwen3 7B)',
+            '- **الأفضل للخصوصية والامتثال** ← LLM محلي (Ollama + Llama 3.3 70B أو Qwen3 8B)',
             '- **الأفضل للاستدلال والبرمجة** ← واجهة API سحابية (OpenAI GPT-5.6 أو Anthropic Claude Opus 5)',
             '- **الأفضل للسرعة بجودة جيدة** ← واجهة API سحابية (OpenAI GPT-5.6 Luna بتكلفة أقل بـ 10× لكل token)',
             '- **الأفضل للتكلفة على نطاق واسع** ← LLM محلي (إذا امتلكت الأجهزة؛ تقترب التكلفة المُستهلَكة من الصفر)',
@@ -4571,7 +4571,7 @@ schema: {
           id: 'best-choice',
           title: '🏆 사용 사례별 최적 로컬 LLM',
           content: [
-            '- **개인정보 보호 및 컴플라이언스에 최적** → 로컬 LLM(Ollama + Llama 3.3 70B 또는 Qwen3 7B)',
+            '- **개인정보 보호 및 컴플라이언스에 최적** → 로컬 LLM(Ollama + Llama 3.3 70B 또는 Qwen3 8B)',
             '- **추론 및 코딩에 최적** → 클라우드 API(OpenAI GPT-5.6 또는 Anthropic Claude Opus 5)',
             '- **양질의 빠른 속도에 최적** → 클라우드 API(10배 저렴한 토큰 비용의 OpenAI GPT-5.6 Luna)',
             '- **대규모 비용에 최적** → 로컬 LLM(하드웨어가 있다면; 상각 비용은 거의 0에 가까워짐)',

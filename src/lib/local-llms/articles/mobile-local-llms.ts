@@ -3186,7 +3186,7 @@ schema: {
           items: [
             '**Chat offline em viagens:** Responder perguntas sem dados móveis ou Wi-Fi. Funciona bem com modelos 3B.',
             '**Notas privadas e diário:** Processar notas pessoais sem enviar dados para servidores externos.',
-            '**Tradução offline:** Traduzir textos sem internet. Qwen3 7B é excelente para idiomas asiáticos.',
+            '**Tradução offline:** Traduzir textos sem internet. Qwen3 8B é excelente para idiomas asiáticos.',
             '**Resumo rápido:** Resumir artigos ou e-mails enquanto offline.',
             '**Assistente de código simples:** Completar código básico no iPad Pro com modelos 13B.',
           ],

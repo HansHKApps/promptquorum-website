@@ -282,7 +282,7 @@ for filename, review in reviews:
             '**Best stack: HuggingFace Transformers + LoRA + Ollama (inference)**',
             'Why this stack: LoRA reduces fine-tuning VRAM 10×. Ollama loads fine-tuned models easily. Modular: train on one box, serve on another.',
             '',
-            '**Note (Juni 2026):** Meta deprecated Llama 3.3 for commercial fine-tuning. Fine-tune on Llama 3.2 (`meta-llama/Llama-3.2-1B` or larger) or Qwen3 (`Qwen/Qwen3-7B`) for Apache 2.0 / open-source license terms. Both support LoRA and load easily in Ollama.',
+            '**Note (Juni 2026):** Meta deprecated Llama 3.3 for commercial fine-tuning. Fine-tune on Llama 3.2 (`meta-llama/Llama-3.2-1B` or larger) or Qwen3 (`Qwen/Qwen3-8B`) for Apache 2.0 / open-source license terms. Both support LoRA and load easily in Ollama.',
           ],
           numberedItems: [
             'Fine-tune with `peft` library (LoRA) to reduce VRAM footprint.',
@@ -565,7 +565,7 @@ for filename, review in reviews:
             '**Mejor stack: HuggingFace Transformers + LoRA + Ollama (inferencia)**',
             'Por qué este stack: LoRA reduce el uso de VRAM para fine-tuning 10×. Ollama carga modelos ajustados fácilmente. Modular: entrena en una máquina, sirve en otra.',
             '',
-            '**Nota (abril 2026):** Meta deprecó Llama 3.3 para fine-tuning comercial. Haz fine-tuning en Llama 3.2 (`meta-llama/Llama-3.2-1B` o más grande) o Qwen3 (`Qwen/Qwen3-7B`) para términos de licencia Apache 2.0 / open-source. Ambos admiten LoRA y se cargan fácilmente en Ollama.',
+            '**Nota (abril 2026):** Meta deprecó Llama 3.3 para fine-tuning comercial. Haz fine-tuning en Llama 3.2 (`meta-llama/Llama-3.2-1B` o más grande) o Qwen3 (`Qwen/Qwen3-8B`) para términos de licencia Apache 2.0 / open-source. Ambos admiten LoRA y se cargan fácilmente en Ollama.',
           ],
           numberedItems: [
             'Realiza fine-tuning con la librería `peft` (LoRA) para reducir el uso de VRAM.',
@@ -857,7 +857,7 @@ for filename, review in reviews:
             '**أفضل منظومة: HuggingFace Transformers + LoRA + Ollama (للاستدلال)**',
             'لماذا هذه المنظومة: يقلّل LoRA استخدام VRAM لـ fine-tuning بمقدار 10×. يحمّل Ollama النماذج المضبوطة بسهولة. معياري: درّب على جهاز، وقدّم الخدمة على آخر.',
             '',
-            '**ملاحظة (يونيو 2026):** أوقفت Meta دعم Llama 3.3 لـ fine-tuning التجاري. نفّذ fine-tuning على Llama 3.2 (`meta-llama/Llama-3.2-1B` أو أكبر) أو Qwen3 (`Qwen/Qwen3-7B`) لشروط ترخيص Apache 2.0 / مفتوح المصدر. كلاهما يدعم LoRA ويُحمَّل بسهولة في Ollama.',
+            '**ملاحظة (يونيو 2026):** أوقفت Meta دعم Llama 3.3 لـ fine-tuning التجاري. نفّذ fine-tuning على Llama 3.2 (`meta-llama/Llama-3.2-1B` أو أكبر) أو Qwen3 (`Qwen/Qwen3-8B`) لشروط ترخيص Apache 2.0 / مفتوح المصدر. كلاهما يدعم LoRA ويُحمَّل بسهولة في Ollama.',
           ],
           numberedItems: [
             'نفّذ fine-tuning باستخدام مكتبة `peft` (LoRA) لتقليل استخدام VRAM.',
@@ -1291,7 +1291,7 @@ for filename, review in reviews:
             '**Bester Stack: HuggingFace Transformers + LoRA + Ollama (Inferenz)**',
             'Warum dieser Stack: LoRA reduziert den VRAM-Bedarf beim Fine-Tuning um den Faktor 10. Ollama lädt fine-getunete Modelle problemlos. Modular: auf einer Maschine trainieren, auf einer anderen serving betreiben.',
             '',
-            '**Hinweis (Juni 2026):** Meta hat Llama 3.3 für kommerzielles Fine-Tuning eingestellt. Fine-Tuning auf Llama 3.2 (`meta-llama/Llama-3.2-1B` oder größer) oder Qwen3 (`Qwen/Qwen3-7B`) für Apache 2.0 / Open-Source-Lizenzbedingungen durchführen. Beide unterstützen LoRA und werden in Ollama problemlos geladen.',
+            '**Hinweis (Juni 2026):** Meta hat Llama 3.3 für kommerzielles Fine-Tuning eingestellt. Fine-Tuning auf Llama 3.2 (`meta-llama/Llama-3.2-1B` oder größer) oder Qwen3 (`Qwen/Qwen3-8B`) für Apache 2.0 / Open-Source-Lizenzbedingungen durchführen. Beide unterstützen LoRA und werden in Ollama problemlos geladen.',
           ],
           numberedItems: [
             'Mit der `peft`-Bibliothek (LoRA) fine-tunen, um den VRAM-Bedarf zu reduzieren.',
@@ -1578,7 +1578,7 @@ for filename, review in reviews:
             '**Stack recommandé : HuggingFace Transformers + LoRA + Ollama (inférence)**',
             'Pourquoi ce stack : LoRA réduit la VRAM de fine-tuning par 10×. Ollama charge facilement les modèles affinés. Modulaire : entraînez sur une machine, servez sur une autre.',
             '',
-            '**Note (juin 2026) :** Meta a déprécié Llama 3.3 pour le fine-tuning commercial. Affinez sur Llama 3.2 (`meta-llama/Llama-3.2-1B` ou plus grand) ou Qwen3 (`Qwen/Qwen3-7B`) pour les termes de licence Apache 2.0 / open-source. Les deux supportent LoRA et se chargent facilement dans Ollama.',
+            '**Note (juin 2026) :** Meta a déprécié Llama 3.3 pour le fine-tuning commercial. Affinez sur Llama 3.2 (`meta-llama/Llama-3.2-1B` ou plus grand) ou Qwen3 (`Qwen/Qwen3-8B`) pour les termes de licence Apache 2.0 / open-source. Les deux supportent LoRA et se chargent facilement dans Ollama.',
           ],
           numberedItems: [
             'Affinez avec la bibliothèque `peft` (LoRA) pour réduire l\'empreinte VRAM.',
@@ -1861,7 +1861,7 @@ for filename, review in reviews:
             '**推奨スタック： HuggingFace Transformers + LoRA + Ollama（推論）**',
             'LoRAはVRAMフットプリントを１０分の１に削減。Ollamaはファインチューニング済みモデルを簡単に読み込み。モジュール式：トレーニングとservingを分離。',
             '',
-            '**注意（2026年6月）：** MetaはLlama 3.3の商用ファインチューニングを非推奨。Llama 3.2（`meta-llama/Llama-3.2-1B`以上）またはQwen3（`Qwen/Qwen3-7B`）のApache 2.0ライセンスを選択。両方ともLoRAとOllama読み込みに対応。',
+            '**注意（2026年6月）：** MetaはLlama 3.3の商用ファインチューニングを非推奨。Llama 3.2（`meta-llama/Llama-3.2-1B`以上）またはQwen3（`Qwen/Qwen3-8B`）のApache 2.0ライセンスを選択。両方ともLoRAとOllama読み込みに対応。',
           ],
           numberedItems: [
             '`peft`ライブラリ（LoRA）でVRAMフットプリントを削減。',
@@ -2144,7 +2144,7 @@ for filename, review in reviews:
             '**推荐堆栈： HuggingFace Transformers + LoRA + Ollama（推理）**',
             'LoRA将微调所需显存降伕10倍。Ollama轻松加载微调后模型。模块化：训练和serving分离。',
             '',
-            '**注意（2026年6月）：** Meta已对Llama 3.3商业微调不再推荐。建议在Llama 3.2（`meta-llama/Llama-3.2-1B`或更大）或Qwen3（`Qwen/Qwen3-7B`）上微调，遵循pache 2.0许可证。两者均支持LoRA且可在Ollama中加载。',
+            '**注意（2026年6月）：** Meta已对Llama 3.3商业微调不再推荐。建议在Llama 3.2（`meta-llama/Llama-3.2-1B`或更大）或Qwen3（`Qwen/Qwen3-8B`）上微调，遵循pache 2.0许可证。两者均支持LoRA且可在Ollama中加载。',
           ],
           numberedItems: [
             '使用`peft`库（LoRA）减少显存占用。',
@@ -2456,7 +2456,7 @@ for filename, review in reviews:
         '**최적 스택: HuggingFace Transformers + LoRA + Ollama(추론)**',
         '이 스택을 선택하는 이유: LoRA는 파인튜닝 VRAM을 10분의 1로 줄입니다. Ollama는 파인튜닝된 모델을 쉽게 로드합니다. 모듈식 구조: 한 박스에서 학습하고 다른 박스에서 서빙합니다.',
         '',
-        '**참고 사항 (2026년 6월):** Meta는 상업적 파인튜닝에서 Llama 3.3을 지원 중단했습니다. Apache 2.0 / 오픈소스 라이선스 조건을 위해 Llama 3.2(`meta-llama/Llama-3.2-1B` 또는 더 큰 모델) 또는 Qwen3(`Qwen/Qwen3-7B`)에서 파인튜닝하십시오. 두 모델 모두 LoRA를 지원하고 Ollama에서 쉽게 로드됩니다.',
+        '**참고 사항 (2026년 6월):** Meta는 상업적 파인튜닝에서 Llama 3.3을 지원 중단했습니다. Apache 2.0 / 오픈소스 라이선스 조건을 위해 Llama 3.2(`meta-llama/Llama-3.2-1B` 또는 더 큰 모델) 또는 Qwen3(`Qwen/Qwen3-8B`)에서 파인튜닝하십시오. 두 모델 모두 LoRA를 지원하고 Ollama에서 쉽게 로드됩니다.',
       ],
       numberedItems: [
         '`peft` 라이브러리(LoRA)로 파인튜닝하여 VRAM 사용량을 줄입니다.',
