@@ -190,6 +190,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'camel-review',
   // Agent frameworks series — GPT Engineer review (article 13 of 14) — 2026-09-11
   'gpt-engineer-review',
+  // Agent frameworks series — Pydantic AI review (article 14 of 14, final) — 2026-09-11
+  'pydantic-ai-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

@@ -59,6 +59,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ekorbia-review",
         "title": "Ekorbia Review 2026: Free Open-Source Local AI Desktop App",
         "url": "/power-local-llm/ekorbia-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review (2026): HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-09-07",
-        "tier": "about"
       }
     ],
-    "totalCount": 223,
+    "totalCount": 224,
     "capped": true
   },
   "llama.cpp": {
@@ -3093,6 +3093,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "superagi-review",
         "title": "SuperAGI Review 2026: Features, Pricing, Is It Maintained?",
         "url": "/power-local-llm/superagi-review",
@@ -3138,17 +3146,9 @@
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "haystack-deepset-rag-framework-review",
-        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
-        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "CrewAI": {
@@ -3227,14 +3227,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "letta-review",
-        "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
-        "url": "/power-local-llm/letta-review",
-        "dateModified": "2026-09-07",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "AutoGen": {
@@ -3320,7 +3320,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Semantic Kernel": {
@@ -3359,6 +3359,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "letta-review",
         "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
         "url": "/power-local-llm/letta-review",
@@ -3366,7 +3374,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LangGraph": {
@@ -3429,6 +3437,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "letta-review",
         "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
         "url": "/power-local-llm/letta-review",
@@ -3442,18 +3458,24 @@
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "crewai-review",
-        "title": "CrewAI Review 2026: Features, Pricing, Alternatives",
-        "url": "/power-local-llm/crewai-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
+  },
+  "Pydantic AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "SuperAGI": {
     "articles": [
@@ -3536,9 +3558,17 @@
         "url": "/power-local-llm/camel-review",
         "dateModified": "2026-09-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "TaskWeaver": {
@@ -3564,9 +3594,17 @@
         "url": "/power-local-llm/dspy-review",
         "dateModified": "2026-09-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pydantic-ai-review",
+        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
+        "url": "/power-local-llm/pydantic-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "OpenClaw": {
