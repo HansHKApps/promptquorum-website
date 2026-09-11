@@ -15,6 +15,7 @@ import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyTermId } from '@/lib/sectionAnchor'
+import { ARTICLE_TITLES_BY_LANG } from '@/lib/prompt-engineering/articleTitleIndex'
 
 interface Props {
   slug: string
@@ -408,13 +409,193 @@ const TOP_20_TERMS: Partial<Record<Language, Array<{ term: string; anchor: strin
   ],
 }
 
-// Maps bare category names to their hub section anchors
+// Maps bare category names to their hub section anchors (English — used as the
+// fallback when a locale-specific label below doesn't match).
 const CATEGORY_ANCHORS: Record<string, string> = {
   'Fundamentals': '/prompt-engineering#fundamentals',
   'Frameworks': '/prompt-engineering#frameworks',
   'Techniques': '/prompt-engineering#techniques',
   'Use Topics': '/prompt-engineering#use-topics',
   'Policy & Compliance': '/prompt-engineering#policy',
+}
+
+// Same 5 category anchors, keyed by the translated category label each locale's
+// article bodies actually use in `[Category: Title]` shortcodes (e.g. German
+// "Grundlagen", French "Fondamentaux"). Fundamentals/Frameworks/Techniques values
+// match the hub's THEME_LABELS (src/components/PromptEngineeringHub.tsx) confirmed
+// against real usage in src/lib/prompt-engineering/articles/*.ts; "Use Topics" and
+// "Policy & Compliance" are hand-translated (not yet widely used in body content).
+const CATEGORY_ANCHORS_BY_LANG: Partial<Record<Language, Record<string, string>>> = {
+  en: CATEGORY_ANCHORS,
+  de: {
+    'Grundlagen': '/prompt-engineering#fundamentals',
+    'Frameworks': '/prompt-engineering#frameworks',
+    'Techniken': '/prompt-engineering#techniques',
+    'Anwendungsthemen': '/prompt-engineering#use-topics',
+    'Richtlinien & Compliance': '/prompt-engineering#policy',
+  },
+  fr: {
+    'Fondamentaux': '/prompt-engineering#fundamentals',
+    'Frameworks': '/prompt-engineering#frameworks',
+    'Techniques': '/prompt-engineering#techniques',
+    "Sujets d'usage": '/prompt-engineering#use-topics',
+    'Politique et conformité': '/prompt-engineering#policy',
+  },
+  ja: {
+    '基礎': '/prompt-engineering#fundamentals',
+    'フレームワーク': '/prompt-engineering#frameworks',
+    'テクニック': '/prompt-engineering#techniques',
+    '活用トピック': '/prompt-engineering#use-topics',
+    'ポリシーとコンプライアンス': '/prompt-engineering#policy',
+  },
+  zh: {
+    '基础': '/prompt-engineering#fundamentals',
+    '基础知识': '/prompt-engineering#fundamentals',
+    '框架': '/prompt-engineering#frameworks',
+    '技术': '/prompt-engineering#techniques',
+    '使用主题': '/prompt-engineering#use-topics',
+    '政策与合规': '/prompt-engineering#policy',
+  },
+  es: {
+    'Fundamentos': '/prompt-engineering#fundamentals',
+    'Frameworks': '/prompt-engineering#frameworks',
+    'Técnicas': '/prompt-engineering#techniques',
+    'Temas de uso': '/prompt-engineering#use-topics',
+    'Política y cumplimiento': '/prompt-engineering#policy',
+  },
+  pt: {
+    'Fundamentos': '/prompt-engineering#fundamentals',
+    'Frameworks': '/prompt-engineering#frameworks',
+    'Técnicas': '/prompt-engineering#techniques',
+    'Temas de uso': '/prompt-engineering#use-topics',
+    'Política e conformidade': '/prompt-engineering#policy',
+  },
+  ar: {
+    'الأساسيات': '/prompt-engineering#fundamentals',
+    'الأطر': '/prompt-engineering#frameworks',
+    'التقنيات': '/prompt-engineering#techniques',
+    'مواضيع الاستخدام': '/prompt-engineering#use-topics',
+    'السياسات والامتثال': '/prompt-engineering#policy',
+  },
+  ko: {
+    '기초': '/prompt-engineering#fundamentals',
+    '프레임워크': '/prompt-engineering#frameworks',
+    '기법': '/prompt-engineering#techniques',
+    '활용 주제': '/prompt-engineering#use-topics',
+    '정책 및 규정 준수': '/prompt-engineering#policy',
+  },
+}
+
+// Generic multi-locale stopwords stripped before fuzzy-matching a bracketed title
+// against ARTICLE_TITLES_BY_LANG. Keeps scoring focused on distinctive content
+// words (e.g. "halluzinationen", "chain-of-thought") instead of function words
+// that appear in most titles ("what is...", "qu'est-ce que...", "was ist...").
+const INLINE_LINK_STOPWORDS = new Set([
+  'a', 'an', 'the', 'is', 'are', 'was', 'were', 'what', 'how', 'why', 'to', 'of', 'for', 'and', 'or', 'with', 'in',
+  'ist', 'sind', 'war', 'waren', 'wie', 'warum', 'der', 'die', 'das', 'und', 'für', 'zu', 'was', 'ein', 'eine',
+  'quest', 'ce', 'que', 'qu', 'est', 'de', 'des', 'du', 'le', 'la', 'les', 'et', 'pour', 'un', 'une',
+  'es', 'el', 'los', 'las', 'del', 'para', 'y', 'cómo', 'qué', 'un', 'una',
+  'o', 'os', 'as', 'da', 'e', 'como', 'é',
+  '는', '은', '이', '가', '을', '를', '의', '에', '와', '과', '무엇', '어떻게',
+])
+
+// Bridges known recurring translation drift between a locale's inline shortcode
+// text and its article's actual `title` field — e.g. French body copy sometimes
+// says "l'ingénierie des prompts" (a literal translation) while the article title
+// itself keeps the English loanword "Prompt Engineering". Only used to normalize
+// tokens for fuzzy-match scoring; never changes what's displayed.
+const INLINE_LINK_ALIASES: Partial<Record<Language, Record<string, string>>> = {
+  fr: {
+    'ingénierie': 'engineering',
+    'ingenierie': 'engineering',
+  },
+}
+
+function normalizeForFuzzyMatch(text: string, lang: Language): string[] {
+  const aliases = INLINE_LINK_ALIASES[lang]
+  const cleaned = text
+    .toLowerCase()
+    .replace(/[—–\-:：,.!?¿¡'’"“”()[\]]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+  if (!cleaned) return []
+  return cleaned
+    .split(' ')
+    .map((tok) => aliases?.[tok] ?? tok)
+    .map((tok) => (tok.length > 4 && tok.endsWith('s') ? tok.slice(0, -1) : tok)) // crude plural stemming
+    .filter((tok) => tok.length > 1 && !INLINE_LINK_STOPWORDS.has(tok))
+}
+
+// Known recurring paraphrases that word-overlap fuzzy matching can't reliably
+// disambiguate on its own — typically because the paraphrase reuses the site's
+// most common terms (e.g. "prompt engineering" appears in a dozen other titles
+// too), so token overlap alone can't tell them apart. Keyed by locale and the
+// same normalized (lowercase, trimmed) text the shortcode actually uses. Checked
+// before fuzzy matching. Extend this only for confirmed real drift, not
+// speculatively.
+const INLINE_LINK_PHRASE_ALIASES: Partial<Record<Language, Record<string, string>>> = {
+  fr: {
+    "qu'est-ce que l'ingénierie des prompts ?": 'what-is-prompt-engineering',
+    "qu'est-ce que l'ingénierie de prompt ?": 'what-is-prompt-engineering',
+  },
+}
+
+// Finds the best-matching slug for a bracketed title when it doesn't exactly
+// match any known article title verbatim (translated body copy often paraphrases
+// or shortens the linked article's real title). Requires a confident, unique
+// winner — ambiguous or weak matches return null so the caller falls back to the
+// category anchor instead of guessing wrong.
+function fuzzyMatchTitleToSlug(title: string, lang: Language): string | null {
+  const candidates = ARTICLE_TITLES_BY_LANG[lang]
+  if (!candidates) return null
+  const queryTokens = new Set(normalizeForFuzzyMatch(title, lang))
+  if (queryTokens.size < 2) return null
+
+  let best: { slug: string; score: number; overlap: number } | null = null
+  let secondBestScore = 0
+
+  for (const [candidateTitle, slug] of Object.entries(candidates)) {
+    const candidateTokens = new Set(normalizeForFuzzyMatch(candidateTitle, lang))
+    if (candidateTokens.size === 0) continue
+    let overlap = 0
+    queryTokens.forEach((qt) => {
+      if (candidateTokens.has(qt)) overlap++
+    })
+    if (overlap === 0) continue
+    const score = overlap / queryTokens.size
+    if (!best || score > best.score) {
+      secondBestScore = best ? best.score : 0
+      best = { slug, score, overlap }
+    } else if (score > secondBestScore) {
+      secondBestScore = score
+    }
+  }
+
+  if (!best) return null
+  if (best.overlap < 2) return null
+  if (best.score < 0.55) return null
+  if (best.score - secondBestScore < 0.15 && secondBestScore > 0) return null // ambiguous tie
+  return best.slug
+}
+
+// Resolves a (possibly translated) article title string to its slug: exact match
+// against that locale's real titles first, then the English title map (for any
+// English text that leaked into translated body copy), then fuzzy matching.
+function resolveTitleToSlug(title: string, lang: Language): string | undefined {
+  const trimmed = title.trim()
+  const localeExact = ARTICLE_TITLES_BY_LANG[lang]?.[trimmed]
+  if (localeExact) return localeExact
+  const enExact = TITLE_TO_SLUG[trimmed] ?? ARTICLE_TITLES_BY_LANG.en?.[trimmed]
+  if (enExact) return enExact
+  const phraseAlias = INLINE_LINK_PHRASE_ALIASES[lang]?.[trimmed.toLowerCase()]
+  if (phraseAlias) return phraseAlias
+  return fuzzyMatchTitleToSlug(trimmed, lang) ?? undefined
+}
+
+// Resolves a (possibly translated) bare category label to its hub anchor href.
+function resolveCategoryAnchor(category: string, lang: Language): string | undefined {
+  const trimmed = category.trim()
+  return CATEGORY_ANCHORS_BY_LANG[lang]?.[trimmed] ?? CATEGORY_ANCHORS[trimmed]
 }
 
 // Maps external citation names to their URLs
@@ -539,9 +720,11 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
     if (part.startsWith('[') && part.endsWith(']')) {
       const label = part.slice(1, -1)
 
-      // Bare category link: [Fundamentals], [Techniques], etc.
-      if (CATEGORY_ANCHORS[label]) {
-        let href = CATEGORY_ANCHORS[label]
+      // Bare category link: [Fundamentals], [Techniques], etc. — also matches the
+      // translated label a locale's body copy actually uses (e.g. "Grundlagen").
+      const bareCategoryHref = resolveCategoryAnchor(label, lang)
+      if (bareCategoryHref) {
+        let href = bareCategoryHref
         if (lang !== 'en') {
           const [basePath, anchor] = href.split('#')
           href = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`
@@ -553,12 +736,13 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         )
       }
 
-      // Category-prefixed link: [Fundamentals: Article Title]
+      // Category-prefixed link: [Fundamentals: Article Title] (or the translated
+      // equivalent, e.g. [Grundlagen: Was ist Prompt Engineering?])
       const colonIdx = label.indexOf(': ')
       if (colonIdx !== -1) {
         const category = label.slice(0, colonIdx)
         const title = label.slice(colonIdx + 2)
-        const slug = TITLE_TO_SLUG[title]
+        const slug = resolveTitleToSlug(title, lang)
 
         if (slug) {
           const href = lang !== 'en' ? `/${lang}/prompt-engineering/${slug}` : `/prompt-engineering/${slug}`
@@ -569,8 +753,9 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
           )
         }
 
-        // Fallback: link to the category hub section
-        let fallbackHref = CATEGORY_ANCHORS[category] ?? '/prompt-engineering'
+        // Fallback: link to the category hub section (locale-aware; falls back to
+        // the English label, then the hub root if nothing matches)
+        let fallbackHref = resolveCategoryAnchor(category, lang) ?? '/prompt-engineering'
         if (lang !== 'en' && !fallbackHref.includes('?lang=')) {
           const [basePath, anchor] = fallbackHref.split('#')
           fallbackHref = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`

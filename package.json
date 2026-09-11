@@ -25,6 +25,7 @@
     "generate:image-dimensions": "node scripts/generate-image-dimensions.mjs",
     "generate:content-metadata": "node scripts/generate-content-metadata.mjs",
     "generate:tool-article-index": "node scripts/generate-tool-article-index.mjs",
+    "generate:pe-title-index": "node scripts/generate-pe-title-index.mjs > src/lib/prompt-engineering/articleTitleIndex.ts",
     "seo:log": "node scripts/seo-log-change.mjs",
     "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
     "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
