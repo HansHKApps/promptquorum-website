@@ -13,7 +13,7 @@ export type MachineType = 'dgpu' | 'apple' | 'cpu'
 
 export type ViewMode = 'cards' | 'table'
 
-export type SortKey = 'stars' | 'name' | 'added' | 'ram' | 'status'
+export type SortKey = 'category' | 'stars' | 'name' | 'added' | 'ram' | 'status'
 
 export type SortDir = 'asc' | 'desc'
 

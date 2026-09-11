@@ -49,8 +49,8 @@ export function DirectoryClient({ apps, lang }: Props) {
   const [want, setWant] = useState<string | null>(null)
   const [filters, setFilters] = useState<FilterState>(emptyFilterState)
   const [view, setView] = useState<ViewMode>('cards')
-  const [sortKey, setSortKey] = useState<SortKey>('stars')
-  const [sortDir, setSortDir] = useState<SortDir>('desc')
+  const [sortKey, setSortKey] = useState<SortKey>('category')
+  const [sortDir, setSortDir] = useState<SortDir>('asc')
   // Machine choice: default from navigator.platform, override from any
   // previously-persisted viewer choice. A lazy useState initializer (not an
   // effect) so this resolves on first client render with no extra re-render
@@ -139,7 +139,7 @@ export function DirectoryClient({ apps, lang }: Props) {
       setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))
     } else {
       setSortKey(key)
-      setSortDir(key === 'name' ? 'asc' : 'desc')
+      setSortDir(key === 'name' || key === 'category' ? 'asc' : 'desc')
     }
     resetPaging()
   }
@@ -223,6 +223,7 @@ export function DirectoryClient({ apps, lang }: Props) {
                 onChange={(e) => handleSort(e.target.value as SortKey)}
                 className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
+                <option value="category">Category</option>
                 <option value="stars">Stars</option>
                 <option value="name">Name</option>
                 <option value="added">Recently added</option>

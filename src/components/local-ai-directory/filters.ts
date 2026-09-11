@@ -5,6 +5,14 @@
 import type { ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import type { FilterOptionCount, FilterState, MachineType, SortDir, SortKey } from './types'
 import { hardwareSortValue } from './hardware'
+import { CATEGORY_GROUPS, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
+
+// Display order for the default "Category" sort — top-level group order, then
+// subcategory order within each group, both taken from CATEGORY_GROUPS (the
+// same taxonomy order the filter sidebar uses), so the grid always groups by
+// main category before any user interaction changes the sort.
+const CATEGORY_GROUP_ORDER = CATEGORY_GROUPS.map((g) => g.key)
+const CATEGORY_SUB_ORDER = CATEGORY_GROUPS.flatMap((g) => g.subs)
 
 /** True for a value that means "not yet researched" — never offered as a selectable filter option. */
 function isUnresearched(value: unknown): boolean {
@@ -134,6 +142,22 @@ export function sortTools(apps: ToolRecord[], key: SortKey, dir: SortDir, machin
   const sign = dir === 'asc' ? 1 : -1
   const sorted = [...apps].sort((a, b) => {
     switch (key) {
+      case 'category': {
+        const primaryA = a.categories[0]
+        const primaryB = b.categories[0]
+        const groupIdxA = CATEGORY_GROUP_ORDER.indexOf(CATEGORY_SUB_GROUP[primaryA])
+        const groupIdxB = CATEGORY_GROUP_ORDER.indexOf(CATEGORY_SUB_GROUP[primaryB])
+        const subIdxA = CATEGORY_SUB_ORDER.indexOf(primaryA)
+        const subIdxB = CATEGORY_SUB_ORDER.indexOf(primaryB)
+        // Direction only flips which end of the taxonomy comes first — within
+        // a category, tools are always ranked by stars (desc) as the tiebreak,
+        // regardless of sort direction.
+        return (
+          sign * (groupIdxA - groupIdxB) ||
+          sign * (subIdxA - subIdxB) ||
+          nullsLast(a.stars, b.stars, (x, y) => y - x)
+        )
+      }
       case 'name':
         return sign * a.name.localeCompare(b.name)
       case 'stars':

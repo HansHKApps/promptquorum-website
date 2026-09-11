@@ -17,6 +17,7 @@ const COLUMNS: { key: SortKey; label: string }[] = [
   { key: 'ram', label: 'Hardware' },
   { key: 'added', label: 'Added' },
   { key: 'status', label: 'Status' },
+  { key: 'category', label: 'Category' },
 ]
 
 export function ToolTable({
@@ -56,7 +57,6 @@ export function ToolTable({
                 </th>
               )
             })}
-            <th className="text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap">Category</th>
           </tr>
         </thead>
         <tbody>
