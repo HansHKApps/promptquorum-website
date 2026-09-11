@@ -16,6 +16,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-app-with-built-in-rag':              'local-ai-app-with-built-in-rag',
 
   // Category 2 — RAG & Document Chat
+  'anythingllm-review':                          'anythingllm-review',
   'anythingllm-vs-privategpt-vs-openwebui-rag':  'anythingllm-vs-privategpt-vs-openwebui-rag',
   'local-rag-on-your-pdfs-step-by-step':         'local-rag-on-your-pdfs-step-by-step',
   'best-embedding-models-local-rag-2026':        'best-embedding-models-local-rag-2026',
