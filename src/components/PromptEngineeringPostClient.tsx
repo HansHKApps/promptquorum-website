@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
@@ -677,6 +677,25 @@ function PEMarkdownTable({ lines, renderLinks }: { lines: string[]; renderLinks:
 // Also handles markdown links: [text](url)
 // Injects ?lang= query parameter for internal links when lang is not 'en'
 function renderInlineLinks(text: string, lang: Language = 'en') {
+  // Split on **bold** FIRST, before the link/bracket split below — a bold
+  // span (e.g. a leadAnswerBlock) commonly wraps several [text](url) links,
+  // and splitting on links first would break the ** pair across fragments.
+  const boldSegments = text.split(/(\*\*[^*]+\*\*)/g)
+  if (boldSegments.length > 1) {
+    return boldSegments.map((seg, i) =>
+      seg.startsWith('**') && seg.endsWith('**') && seg.length > 4
+        ? (
+          <strong key={i} className="text-text-primary font-semibold">
+            {renderInlineLinksNoBold(seg.slice(2, -2), lang)}
+          </strong>
+        )
+        : <Fragment key={i}>{renderInlineLinksNoBold(seg, lang)}</Fragment>
+    )
+  }
+  return renderInlineLinksNoBold(text, lang)
+}
+
+function renderInlineLinksNoBold(text: string, lang: Language = 'en') {
   // Split on both markdown links [text](url) and bracketed labels [text]
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
@@ -793,7 +812,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
       return <span key={i} className="text-primary font-medium">{label}</span>
     }
 
-    // Handle bare URLs and **bold** markers
+    // Handle bare URLs (bold is already handled one level up)
     const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
     const segments = part.split(URL_PATTERN)
     return (
@@ -813,17 +832,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
               </a>
             )
           }
-          // Handle **bold** markers within non-URL text
-          const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
-          return (
-            <span key={j}>
-              {boldParts.map((bp, k) =>
-                bp.startsWith('**') && bp.endsWith('**')
-                  ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
-                  : bp
-              )}
-            </span>
-          )
+          return seg
         })}
       </span>
     )

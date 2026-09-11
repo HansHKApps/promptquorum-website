@@ -9,7 +9,7 @@
 //     required prop — this component never imports the smartHomeContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
@@ -284,8 +284,8 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
   },
 }
 
-// Render inline link placeholders and markdown links [text](url)
-// Injects ?lang= query parameter for internal links when lang is not 'en'
+// Render bare URLs. Bold is handled one level up in renderInlineLinks, before
+// the markdown-link split, so a bold span can safely contain links.
 function renderUrlsAndBold(text: string, keyOffset: number, slug = '') {
   const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
   const segments = text.split(URL_PATTERN)
@@ -305,22 +305,38 @@ function renderUrlsAndBold(text: string, keyOffset: number, slug = '') {
             </a>
           )
         }
-        const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
-        return (
-          <span key={j}>
-            {boldParts.map((bp, k) =>
-              bp.startsWith('**') && bp.endsWith('**')
-                ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
-                : bp
-            )}
-          </span>
-        )
+        return seg
       })}
     </span>
   )
 }
 
+// Render inline link placeholders and markdown links [text](url)
+// Injects ?lang= query parameter for internal links when lang is not 'en'
 function renderInlineLinks(
+  text: string,
+  lang: Language = 'en',
+  slug = ''
+) {
+  // Split on **bold** FIRST, before the markdown-link split below — a bold
+  // span (e.g. a leadAnswerBlock) commonly wraps several [text](url) links,
+  // and splitting on links first would break the ** pair across fragments.
+  const boldSegments = text.split(/(\*\*[^*]+\*\*)/g)
+  if (boldSegments.length > 1) {
+    return boldSegments.map((seg, i) =>
+      seg.startsWith('**') && seg.endsWith('**') && seg.length > 4
+        ? (
+          <strong key={i} className="text-text-primary font-semibold">
+            {renderInlineLinksNoBold(seg.slice(2, -2), lang, slug)}
+          </strong>
+        )
+        : <Fragment key={i}>{renderInlineLinksNoBold(seg, lang, slug)}</Fragment>
+    )
+  }
+  return renderInlineLinksNoBold(text, lang, slug)
+}
+
+function renderInlineLinksNoBold(
   text: string,
   lang: Language = 'en',
   slug = ''

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
@@ -221,6 +221,29 @@ function renderInlineLinks(
   lang: Language = 'en',
   slug = ''
 ) {
+  // Split on **bold** FIRST, before the markdown-link split below — a bold
+  // span (e.g. a leadAnswerBlock) commonly wraps several [text](url) links,
+  // and splitting on links first would break the ** pair across fragments.
+  const boldSegments = text.split(/(\*\*[^*]+\*\*)/g)
+  if (boldSegments.length > 1) {
+    return boldSegments.map((seg, i) =>
+      seg.startsWith('**') && seg.endsWith('**') && seg.length > 4
+        ? (
+          <strong key={i} className="text-text-primary font-semibold">
+            {renderInlineLinksNoBold(seg.slice(2, -2), lang, slug)}
+          </strong>
+        )
+        : <Fragment key={i}>{renderInlineLinksNoBold(seg, lang, slug)}</Fragment>
+    )
+  }
+  return renderInlineLinksNoBold(text, lang, slug)
+}
+
+function renderInlineLinksNoBold(
+  text: string,
+  lang: Language = 'en',
+  slug = ''
+) {
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
     // Handle markdown links: [text](url)
@@ -258,7 +281,7 @@ function renderInlineLinks(
       )
     }
 
-    // Handle bare URLs and **bold** markers
+    // Handle bare URLs (bold is already handled one level up)
     const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
     const segments = part.split(URL_PATTERN)
     return (
@@ -278,17 +301,7 @@ function renderInlineLinks(
               </a>
             )
           }
-          // Handle **bold** markers within non-URL text
-          const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
-          return (
-            <span key={j}>
-              {boldParts.map((bp, k) =>
-                bp.startsWith('**') && bp.endsWith('**')
-                  ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
-                  : bp
-              )}
-            </span>
-          )
+          return seg
         })}
       </span>
     )

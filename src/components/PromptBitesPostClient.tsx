@@ -219,10 +219,15 @@ function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
 }
 
 function mdLinksToHtml(text: string): string {
-  return text.replace(
-    /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a href="$2" class="text-primary hover:underline">$1</a>'
-  )
+  return text
+    .replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" class="text-primary hover:underline">$1</a>'
+    )
+    .replace(
+      /\*\*([^*]+)\*\*/g,
+      '<strong class="text-text-primary font-semibold">$1</strong>'
+    )
 }
 
 function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; columns: string[] }) {
