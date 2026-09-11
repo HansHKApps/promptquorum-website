@@ -176,6 +176,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // LibreChat review 2026-09-03
   'librechat-review':                        'librechat-review-2026',
 
+  // Agent frameworks series — Agent Zero review (article 9 of 14) — 2026-09-11
+  'agent-zero-review': 'agent-zero-review',
+
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',
   // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
