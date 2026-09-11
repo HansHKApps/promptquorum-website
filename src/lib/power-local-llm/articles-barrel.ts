@@ -183,6 +183,7 @@ import { article as a_agent_zero_review } from './articles/agent-zero-review'
 import { article as a_taskweaver_review } from './articles/taskweaver-review'
 import { article as a_dspy_review } from './articles/dspy-review'
 import { article as a_camel_review } from './articles/camel-review'
+import { article as a_gpt_engineer_review } from './articles/gpt-engineer-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -321,6 +322,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'taskweaver-review':                                 a_taskweaver_review,
   'dspy-review':                                        a_dspy_review,
   'camel-review':                                       a_camel_review,
+  'gpt-engineer-review':                               a_gpt_engineer_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
