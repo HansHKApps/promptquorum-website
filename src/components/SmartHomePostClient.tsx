@@ -19,7 +19,7 @@ import { smartHomeHubPath, smartHomeArticlePath } from '@/lib/smart-home/metadat
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { AffiliateLink } from '@/components/AffiliateLink'
-import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
+import { AFFILIATE_DISCLOSURE, SPONSORED_LABEL } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
@@ -454,6 +454,11 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       className={section.sponsoredSlot ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : 'mt-8'}
       id={id}
     >
+      {section.sponsoredSlot && (
+        <p className="mb-3 inline-block text-[11px] font-bold uppercase tracking-widest text-primary bg-primary/10 border border-primary/30 rounded-full px-2.5 py-1">
+          {SPONSORED_LABEL[lang] ?? SPONSORED_LABEL['en']}
+        </p>
+      )}
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
           {renderInlineLinks(section.title, lang)}

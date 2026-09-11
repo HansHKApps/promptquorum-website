@@ -109,6 +109,24 @@ export const AFFILIATE_DISCLOSURE: Record<string, string> = {
   ko: '이 페이지에는 타사 제품에 대한 참조 링크가 포함되어 있습니다. PromptQuorum은 어떤 제휴 프로그램에도 등록되어 있지 않습니다 — 이는 수수료가 발생하지 않는 일반 링크입니다. 링크 클릭 및 이후 단계는 전적으로 귀하의 책임입니다. 이 링크는 PromptQuorum의 어떠한 보증이나 검증을 나타내지 않습니다.',
 }
 
+// Short visible eyebrow label rendered on sections flagged `sponsoredSlot: true`
+// (SectionBlock in PowerLocalLLMPostClient / SmartHomePostClient /
+// BalconySolarPostClient). A CSS tint alone does not satisfy commercial-content
+// disclosure rules (German MStV §22 / UWG §5a(6) Kennzeichnungspflicht, FTC
+// Endorsement Guides 16 CFR 255, JP stealth-marketing rules, KR 표시광고법) —
+// the section needs a real, legible label identifying it as commercial content.
+export const SPONSORED_LABEL: Record<string, string> = {
+  en: 'Sponsored',
+  de: 'Anzeige',
+  fr: 'Publicité',
+  ja: '広告',
+  zh: '赞助内容',
+  es: 'Publicidad',
+  pt: 'Publicidade',
+  ar: 'إعلان',
+  ko: '광고',
+}
+
 // Commission wording — use only once real affiliate programs go live.
 export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   en: 'This page contains product links. We may earn a commission if you purchase through these links, at no extra cost to you.',
