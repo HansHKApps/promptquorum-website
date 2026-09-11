@@ -1819,6 +1819,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/atomic-chat-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/atomic-chat-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/autogen-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -9614,6 +9659,141 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-local-tts-mac-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-mac-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-nvidia-gpu-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-tts-raspberry-pi-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-mac-for-local-ai-2026-comparison-table-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -12239,6 +12419,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-tts-for-ollama-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-tts-for-ollama-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -12775,6 +13000,51 @@
     "height": 675
   },
   "/images/bodega-one-code-review-2026-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/boltai-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -13473,6 +13743,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chatterbox-vs-elevenlabs-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/chatty-mini-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -16279,6 +16594,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/draw-things-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/draw-things-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/easiest-local-ai-app-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -16684,6 +17044,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/ekorbia-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ekorbia-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/elevenlabs-vs-local-tts-hero-de.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -17040,6 +17445,51 @@
     "height": 675
   },
   "/images/eu-data-act-smart-home-2027-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/exllamav2-explained-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -18590,6 +19040,51 @@
     "height": 675
   },
   "/images/gpt-claude-gemini-which-model-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpt4all-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -20754,6 +21249,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/idefics-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/idefics-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -21669,6 +22209,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/jan-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/jan-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/jan-vs-lm-studio-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -21965,6 +22550,96 @@
     "height": 675
   },
   "/images/knowledge-cutoffs-and-geo-search-layer-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/koboldcpp-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/kokoro-vs-elevenlabs-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -22314,6 +22989,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/letta-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/letta-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/librechat-review-2026-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -22584,6 +23304,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/llamafile-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llamafile-explained-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/llamaindex-rag-framework-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -22625,6 +23390,51 @@
     "height": 675
   },
   "/images/llamaindex-rag-framework-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llava-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -30679,6 +31489,141 @@
     "width": 1200,
     "height": 675
   },
+  "/images/mlc-chat-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-chat-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlc-llm-explained-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-lm-explained-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -32469,6 +33414,51 @@
     "width": 800,
     "height": 295
   },
+  "/images/ollama-vision-models-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-vision-models-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ollama-vs-lm-studio-interface-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -33455,6 +34445,141 @@
     "height": 675
   },
   "/images/piper-tts-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-chatterbox-tts-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/piper-vs-kokoro-tts-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pocket-ai-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -38684,6 +39809,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/semantic-kernel-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/semantic-kernel-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/sensor-fusion-smart-home-2027-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -38818,6 +39988,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 1000,
     "height": 450
+  },
+  "/images/sglang-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sglang-explained-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/sglang-vs-vllm-local-serving-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -39859,6 +41074,96 @@
     "width": 1200,
     "height": 675
   },
+  "/images/styletts-2-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/styletts-2-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/superagi-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/system-prompt-vs-user-prompt-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -40010,6 +41315,51 @@
     "height": 675
   },
   "/images/temperature-and-top-p-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tensorrt-llm-explained-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

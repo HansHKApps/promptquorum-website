@@ -768,11 +768,11 @@
         },
         {
           "url": "/images/model-comparison-2026-en.svg",
-          "title": "April 2026 local LLM model comparison: Llama 3.3 70B leads at 82% MMLU with 42GB VRAM, Qwen3 7B provides best multilingual support at 74% MMLU and 5GB VRAM, Gemma 3 9B adds vision capabilities, DeepSeek-R1 7B specializes in reasoning tasks at 52% MATH. All runnable via Ollama."
+          "title": "April 2026 local LLM model comparison: Llama 3.3 70B leads at 82% MMLU with 42GB VRAM, Qwen3 8B provides best multilingual support at 74% MMLU and 5GB VRAM, Gemma 3 9B adds vision capabilities, DeepSeek-R1 7B specializes in reasoning tasks at 52% MATH. All runnable via Ollama."
         },
         {
           "url": "/images/llm-quality-improvement-2024-2026-en.svg",
-          "title": "Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 7B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82-84% (Llama 3.3 70B and Qwen3 72B). Every 18-24 months, local model quality advances by one model generation."
+          "title": "Local LLM quality improvement 2024-2026: 7B-class models improved from 64% MMLU (Mistral Small, early 2024) to 74% (Qwen3 8B, April 2026). 70B-class improved from 75% (Llama 3.3 70B) to 82-84% (Llama 3.3 70B and Qwen3 72B). Every 18-24 months, local model quality advances by one model generation."
         }
       ]
     },
@@ -7967,6 +7967,42 @@
       ],
       "images": []
     },
+    "semantic-kernel-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "letta-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "llamaindex-rag-framework-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
@@ -8367,6 +8403,96 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "boltai-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "jan-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gpt4all-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "draw-things-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ekorbia-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
       "hasSections": true,
       "langs": [
         "en",
@@ -8831,6 +8957,240 @@
       ],
       "images": []
     },
+    "styletts-2-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "piper-vs-kokoro-tts": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "piper-vs-chatterbox-tts": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "kokoro-vs-elevenlabs": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "chatterbox-vs-elevenlabs": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-tts-for-ollama": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-local-tts-raspberry-pi": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-local-tts-mac": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-local-tts-nvidia-gpu": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llava-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ollama-vision-models-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "idefics-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlc-chat-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "pocketpal-ai-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -8853,6 +9213,24 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pocket-ai-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
       "hasSections": true,
       "langs": [
         "en",
@@ -8939,10 +9317,118 @@
       ],
       "images": []
     },
+    "exllamav2-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlc-llm-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "localai-explained": {
       "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tensorrt-llm-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llamafile-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "sglang-explained": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlx-lm-explained": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
       "hasSections": true,
       "langs": [
         "en",
@@ -9051,132 +9537,6 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "twinny-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "aider-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "shell-gpt-review": {
-      "dateModified": "2026-09-05",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-05",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "aichat-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "tgpt-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "blackbox-ai-cli-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "de",
-        "fr",
-        "ja",
-        "zh",
-        "es",
-        "pt",
-        "ar",
-        "ko"
-      ],
-      "images": []
-    },
-    "privategpt-review": {
-      "dateModified": "2026-09-06",
-      "lastFactChecked": null,
-      "publishDate": "2026-09-06",
       "hasSections": true,
       "langs": [
         "en",
@@ -9357,6 +9717,186 @@
       "dateModified": "2026-09-06",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "rikkahub-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "anythingllm-mobile-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "twinny-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "aider-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "shell-gpt-review": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "aichat-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "tgpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "blackbox-ai-cli-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "privategpt-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "superagi-review": {
+      "dateModified": "2026-09-07",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-07",
       "hasSections": true,
       "langs": [
         "en",
