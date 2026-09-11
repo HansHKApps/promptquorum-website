@@ -106,6 +106,7 @@ import { app as app_ollama_vision_models } from './apps/ollama-vision-models'
 import { app as app_idefics } from './apps/idefics'
 import { app as app_mlc_chat } from './apps/mlc-chat'
 import { app as app_pocketpal_ai } from './apps/pocketpal-ai'
+import { app as app_pocket_ai } from './apps/pocket-ai'
 import { app as app_private_llm } from './apps/private-llm'
 import { app as app_llm_farm } from './apps/llm-farm'
 import { app as app_layla } from './apps/layla'
@@ -261,6 +262,7 @@ export const localAiApps: ToolRecord[] = [
   app_idefics,
   app_mlc_chat,
   app_pocketpal_ai,
+  app_pocket_ai,
   app_private_llm,
   app_llm_farm,
   app_layla,

@@ -176,6 +176,12 @@ export function ToolCard({
 
         <p className="text-sm text-text-secondary leading-relaxed line-clamp-2 mb-3">{tagline}</p>
 
+        {app.founder && (
+          <p className="text-xs italic text-text-secondary/80 leading-relaxed line-clamp-2 mb-3 border-l-2 border-primary/20 pl-2">
+            &ldquo;{app.founder.why}&rdquo; <span className="not-italic font-medium">— From the Maker</span>
+          </p>
+        )}
+
         {(engine || price) && (
           <div className="flex flex-wrap gap-1.5 mb-2.5">
             {engine && (
