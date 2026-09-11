@@ -122,9 +122,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'What Pocket AI Is',
         content: [
-          '**Pocket AI - No Internet is an iPhone app that downloads open-weight language models and runs them directly on the device, with no server-side component.** Once a model is downloaded, the app needs no internet connection to generate a response — inference runs locally through [llama.cpp](https://github.com/ggml-org/llama.cpp), a widely used open-source inference engine, accelerated by Apple\'s Metal graphics framework.',
-          'The app is built by developer Faisal at [Dataweal](https://mypocketai.app/). According to the developer, the motivation was that other local-model iPhone apps typically asked for an account, a subscription, or a server round trip before letting someone chat — Pocket AI is built to need none of those.',
-          'The app is available on the [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) under the name "Pocket AI - No Internet." This review relies on the developer\'s own description of the app\'s architecture and model catalogue, and on the public App Store listing, rather than an independent code audit — the app is closed-source (see the Privacy section below).',
+          '**Pocket AI - No Internet downloads open-weight language models and runs them directly on the iPhone, with no server-side component.** Once a model is downloaded, generating a response needs no internet connection — inference runs locally through llama.cpp, accelerated by Apple\'s Metal graphics framework.',
+          'According to the developer, the motivation was that other local-model iPhone apps typically asked for an account, a subscription, or a server round trip before letting someone chat — Pocket AI is built to need none of those.',
+          'This review relies on the developer\'s own description of the app\'s architecture and model catalogue, and on the public App Store listing, rather than an independent code audit — the app is closed-source (see the Privacy section below).',
         ],
       },
       howToGetStarted: {
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Optional: unlock Pro for voice input',
-            whyItMatters: 'A one-time, paid in-app purchase unlocks on-device Whisper voice input for dictation (see Pricing below). This is optional — text chat works without it.',
+            whyItMatters: 'Skip this if text chat is enough — voice input is the only thing it adds. A one-time in-app purchase unlocks on-device Whisper dictation for readers who want it (see Pricing below).',
           },
         ],
         note: 'Exact download sizes and the current model list can change between App Store updates — confirm the current specifics in the app\'s own model catalogue before committing to a large download on a limited data plan.',
