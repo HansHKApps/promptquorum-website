@@ -515,9 +515,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Was Pocket AI ist',
         content: [
-          '**Pocket AI - No Internet ist eine iPhone-App, die Open-Weight-Sprachmodelle herunterlädt und direkt auf dem Gerät ausführt, ohne serverseitige Komponente.** Sobald ein Modell heruntergeladen ist, benötigt die App keine Internetverbindung, um eine Antwort zu generieren — die Inferenz läuft lokal über [llama.cpp](https://github.com/ggml-org/llama.cpp), eine weit verbreitete Open-Source-Inferenz-Engine, beschleunigt durch Apples Metal-Grafik-Framework.',
-          'Die App wird von Entwickler Faisal bei [Dataweal](https://mypocketai.app/) entwickelt. Laut Entwickler war die Motivation, dass andere lokale iPhone-KI-Apps typischerweise zuerst ein Konto, ein Abonnement oder eine Serverkommunikation verlangten, bevor man chatten konnte — Pocket AI ist so gebaut, dass keines davon nötig ist.',
-          'Die App ist im [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) unter dem Namen "Pocket AI - No Internet" verfügbar. Dieser Test stützt sich auf die eigene Beschreibung der App-Architektur und Modellbibliothek durch den Entwickler sowie auf den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung — die App ist quellcodegeschlossen (siehe Abschnitt Datenschutz unten).',
+          '**Pocket AI - No Internet ist eine iPhone-App, die Open-Weight-Sprachmodelle herunterlädt und direkt auf dem Gerät ausführt, ohne serverseitige Komponente.** Sobald ein Modell heruntergeladen ist, benötigt die App keine Internetverbindung, um eine Antwort zu generieren — die Inferenz läuft lokal über llama.cpp, beschleunigt durch Apples Metal-Grafik-Framework.',
+          'Laut Entwickler war die Motivation, dass andere lokale iPhone-KI-Apps typischerweise zuerst ein Konto, ein Abonnement oder eine Serverkommunikation verlangten, bevor man chatten konnte — Pocket AI ist so gebaut, dass keines davon nötig ist.',
+          'Dieser Test stützt sich auf die eigene Beschreibung der App-Architektur und Modellbibliothek durch den Entwickler sowie auf den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung — die App ist quellcodegeschlossen (siehe Abschnitt Datenschutz unten).',
         ],
       },
       howToGetStarted: {
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Optional: Pro für Spracheingabe freischalten',
-            whyItMatters: 'Ein einmaliger, kostenpflichtiger In-App-Kauf schaltet On-Device-Whisper-Spracheingabe für Diktate frei (siehe Abschnitt „Preise“ unten). Dies ist optional — Text-Chat funktioniert auch ohne.',
+            whyItMatters: 'Überspringen Sie diesen Schritt, wenn Text-Chat ausreicht — Spracheingabe ist die einzige Ergänzung. Ein einmaliger In-App-Kauf schaltet On-Device-Whisper-Diktat für alle frei, die es wünschen (siehe Abschnitt „Preise“ unten).',
           },
         ],
         note: 'Genaue Downloadgrößen und die aktuelle Modellliste können sich zwischen App-Store-Updates ändern — prüfen Sie die aktuellen Angaben in der Modellbibliothek der App, bevor Sie sich bei einem begrenzten Datentarif auf einen großen Download festlegen.',
@@ -908,9 +908,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Ce qu\'est Pocket AI',
         content: [
-          '**Pocket AI - No Internet est une application iPhone qui télécharge des modèles de langage à poids ouverts et les exécute directement sur l\'appareil, sans composant serveur.** Une fois un modèle téléchargé, l\'application n\'a pas besoin de connexion internet pour générer une réponse — l\'inférence s\'exécute localement via [llama.cpp](https://github.com/ggml-org/llama.cpp), un moteur d\'inférence open source largement utilisé, accéléré par le framework graphique Metal d\'Apple.',
-          'L\'application est créée par le développeur Faisal chez [Dataweal](https://mypocketai.app/). Selon le développeur, la motivation était que les autres applications d\'IA locale pour iPhone demandaient généralement un compte, un abonnement ou un aller-retour serveur avant de permettre de discuter — Pocket AI est conçue pour n\'avoir besoin d\'aucun de ces éléments.',
-          'L\'application est disponible sur l\'[App Store d\'Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) sous le nom « Pocket AI - No Internet ». Cet avis s\'appuie sur la propre description du développeur concernant l\'architecture et le catalogue de modèles de l\'application, ainsi que sur la fiche App Store publique, plutôt que sur un audit de code indépendant — l\'application est à code source fermé (voir la section Confidentialité ci-dessous).',
+          '**Pocket AI - No Internet est une application iPhone qui télécharge des modèles de langage à poids ouverts et les exécute directement sur l\'appareil, sans composant serveur.** Une fois un modèle téléchargé, l\'application n\'a pas besoin de connexion internet pour générer une réponse — l\'inférence s\'exécute localement via llama.cpp, accéléré par le framework graphique Metal d\'Apple.',
+          'Selon le développeur, la motivation était que les autres applications d\'IA locale pour iPhone demandaient généralement un compte, un abonnement ou un aller-retour serveur avant de permettre de discuter — Pocket AI est conçue pour n\'avoir besoin d\'aucun de ces éléments.',
+          'Cet avis s\'appuie sur la propre description du développeur concernant l\'architecture et le catalogue de modèles de l\'application, ainsi que sur la fiche App Store publique, plutôt que sur un audit de code indépendant — l\'application est à code source fermé (voir la section Confidentialité ci-dessous).',
         ],
       },
       howToGetStarted: {
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Facultatif : débloquer le mode Pro pour la saisie vocale',
-            whyItMatters: 'Un achat intégré unique et payant débloque la saisie vocale Whisper sur l\'appareil pour la dictée (voir Tarifs ci-dessous). C\'est facultatif — le chat textuel fonctionne sans cela.',
+            whyItMatters: 'Ignorez cette étape si le chat textuel vous suffit — la saisie vocale est la seule chose qu\'elle ajoute. Un achat intégré unique débloque la dictée Whisper sur l\'appareil pour les lecteurs qui la souhaitent (voir Tarifs ci-dessous).',
           },
         ],
         note: 'Les tailles de téléchargement exactes et la liste actuelle des modèles peuvent changer entre les mises à jour de l\'App Store — vérifiez les détails actuels dans le catalogue de modèles de l\'application avant de vous engager dans un téléchargement volumineux avec un forfait de données limité.',
@@ -1301,9 +1301,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Pocket AIとは',
         content: [
-          '**Pocket AI - No Internetは、オープンウェイトの言語モデルをダウンロードし、サーバー側のコンポーネントなしに端末上で直接実行するiPhoneアプリです。** モデルをダウンロードすれば、応答を生成するのにインターネット接続は不要です——推論は[llama.cpp](https://github.com/ggml-org/llama.cpp)という広く使われているオープンソースの推論エンジンを通じてローカルで実行され、AppleのMetalグラフィックスフレームワークによって高速化されます。',
-          'このアプリは、[Dataweal](https://mypocketai.app/)の開発者Faisal氏によって構築・保守されています。開発者によれば、他のiPhone向けローカルモデルアプリの多くはチャットを始める前にアカウント、サブスクリプション、サーバー通信のいずれかを要求していたため、Pocket AIはそれらを一切必要としないよう設計されたとのことです。',
-          'このアプリは「Pocket AI - No Internet」という名前で[Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)で入手できます。本レビューは、アプリのアーキテクチャやモデルカタログについての開発者自身の説明、および公開されているApp Storeの掲載情報に依拠しており、独立したコード監査によるものではありません——アプリはクローズドソースです(下記のプライバシーの項目を参照)。',
+          '**Pocket AI - No Internetは、オープンウェイトの言語モデルをダウンロードし、サーバー側のコンポーネントなしに端末上で直接実行するiPhoneアプリです。** モデルをダウンロードすれば、応答を生成するのにインターネット接続は不要です——推論はllama.cppを通じてローカルで実行され、AppleのMetalグラフィックスフレームワークによって高速化されます。',
+          '開発者によれば、他のiPhone向けローカルモデルアプリの多くはチャットを始める前にアカウント、サブスクリプション、サーバー通信のいずれかを要求していたため、Pocket AIはそれらを一切必要としないよう設計されたとのことです。',
+          '本レビューは、アプリのアーキテクチャやモデルカタログについての開発者自身の説明、および公開されているApp Storeの掲載情報に依拠しており、独立したコード監査によるものではありません——アプリはクローズドソースです(下記のプライバシーの項目を参照)。',
         ],
       },
       howToGetStarted: {
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '任意:音声入力のためにProを解除する',
-            whyItMatters: '1回限りの有料アプリ内購入で、口述筆記のためのオンデバイスWhisper音声入力が解除されます(下記の料金セクションを参照)。これは任意であり、テキストチャットはこれがなくても機能します。',
+            whyItMatters: 'テキストチャットで十分なら、この手順は不要です——追加されるのは音声入力だけです。希望する人向けに、1回限りのアプリ内購入でオンデバイスWhisper音声入力(口述筆記用)が解除されます(下記の料金セクションを参照)。',
           },
         ],
         note: '正確なダウンロードサイズや現在のモデルリストはApp Storeの更新のたびに変わる可能性があります——データ量に制限のあるプランで大きなダウンロードを行う前に、アプリ自体のモデルカタログで最新情報を確認してください。',
@@ -1694,9 +1694,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Pocket AI是什么',
         content: [
-          '**Pocket AI - No Internet是一款iPhone应用,可下载开放权重语言模型并直接在设备上运行,没有服务器端组件。** 模型下载完成后,应用无需联网即可生成回复——推理通过[llama.cpp](https://github.com/ggml-org/llama.cpp)(一款广泛使用的开源推理引擎)在本地运行,并由苹果的Metal图形框架提供加速。',
-          '该应用由[Dataweal](https://mypocketai.app/)的开发者Faisal构建和维护。据开发者介绍,其开发动机是:其他iPhone本地模型应用通常在让用户聊天之前要求提供账户、订阅或与服务器通信——Pocket AI的设计理念是不需要这些条件中的任何一个。',
-          '该应用以"Pocket AI - No Internet"之名在[苹果App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)上架。本评测依据开发者对应用架构和模型库的自述,以及公开的App Store页面信息,而非独立的代码审计——该应用为闭源(见下方隐私部分)。',
+          '**Pocket AI - No Internet是一款iPhone应用,可下载开放权重语言模型并直接在设备上运行,没有服务器端组件。** 模型下载完成后,应用无需联网即可生成回复——推理通过llama.cpp在本地运行,并由苹果的Metal图形框架提供加速。',
+          '据开发者介绍,其开发动机是:其他iPhone本地模型应用通常在让用户聊天之前要求提供账户、订阅或与服务器通信——Pocket AI的设计理念是不需要这些条件中的任何一个。',
+          '本评测依据开发者对应用架构和模型库的自述,以及公开的App Store页面信息,而非独立的代码审计——该应用为闭源(见下方隐私部分)。',
         ],
       },
       howToGetStarted: {
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '可选:解锁Pro版以获得语音输入',
-            whyItMatters: '一次性付费的应用内购买可解锁设备端Whisper语音输入用于听写(详见下方价格部分)。这是可选的——文本聊天无需此功能即可使用。',
+            whyItMatters: '如果文本聊天已经足够,可以跳过此步骤——它只增加语音输入功能。一次性应用内购买即可为需要的用户解锁设备端Whisper语音输入(详见下方价格部分)。',
           },
         ],
         note: '确切的下载大小和当前模型列表可能会在App Store更新之间发生变化——在流量有限的套餐下进行大型下载前,请在应用自身的模型库中确认最新信息。',
@@ -2087,9 +2087,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Qué es Pocket AI',
         content: [
-          '**Pocket AI - No Internet es una app para iPhone que descarga modelos de lenguaje de pesos abiertos y los ejecuta directamente en el dispositivo, sin componente en servidor.** Una vez descargado un modelo, la app no necesita conexión a internet para generar una respuesta — la inferencia se ejecuta localmente mediante [llama.cpp](https://github.com/ggml-org/llama.cpp), un motor de inferencia de código abierto ampliamente usado, acelerado por el framework gráfico Metal de Apple.',
-          'La app está construida por el desarrollador Faisal en [Dataweal](https://mypocketai.app/). Según el desarrollador, la motivación fue que otras apps de modelos locales para iPhone normalmente pedían una cuenta, una suscripción o comunicación con un servidor antes de permitir chatear — Pocket AI está diseñada para no necesitar nada de eso.',
-          'La app está disponible en la [App Store de Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) bajo el nombre "Pocket AI - No Internet". Esta reseña se basa en la propia descripción del desarrollador sobre la arquitectura y el catálogo de modelos de la app, y en la ficha pública de la App Store, no en una auditoría de código independiente — la app es de código cerrado (vea la sección de Privacidad más abajo).',
+          '**Pocket AI - No Internet es una app para iPhone que descarga modelos de lenguaje de pesos abiertos y los ejecuta directamente en el dispositivo, sin componente en servidor.** Una vez descargado un modelo, la app no necesita conexión a internet para generar una respuesta — la inferencia se ejecuta localmente mediante llama.cpp, acelerado por el framework gráfico Metal de Apple.',
+          'Según el desarrollador, la motivación fue que otras apps de modelos locales para iPhone normalmente pedían una cuenta, una suscripción o comunicación con un servidor antes de permitir chatear — Pocket AI está diseñada para no necesitar nada de eso.',
+          'Esta reseña se basa en la propia descripción del desarrollador sobre la arquitectura y el catálogo de modelos de la app, y en la ficha pública de la App Store, no en una auditoría de código independiente — la app es de código cerrado (vea la sección de Privacidad más abajo).',
         ],
       },
       howToGetStarted: {
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Opcional: desbloquear Pro para entrada de voz',
-            whyItMatters: 'Una compra dentro de la app de pago único desbloquea la entrada de voz Whisper en el dispositivo para dictado (vea Precios más abajo). Esto es opcional — el chat de texto funciona sin ello.',
+            whyItMatters: 'Omita este paso si el chat de texto le basta — la entrada de voz es lo único que añade. Una compra única dentro de la app desbloquea el dictado Whisper en el dispositivo para quienes lo deseen (vea Precios más abajo).',
           },
         ],
         note: 'Los tamaños de descarga exactos y la lista de modelos actual pueden cambiar entre actualizaciones de la App Store — confirme los detalles actuales en el catálogo de modelos propio de la app antes de comprometerse a una descarga grande con un plan de datos limitado.',
@@ -2480,9 +2480,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'O que é o Pocket AI',
         content: [
-          '**O Pocket AI - No Internet é um aplicativo para iPhone que baixa modelos de linguagem de pesos abertos e os executa diretamente no dispositivo, sem componente de servidor.** Depois que um modelo é baixado, o aplicativo não precisa de conexão com a internet para gerar uma resposta — a inferência é executada localmente por meio do [llama.cpp](https://github.com/ggml-org/llama.cpp), um motor de inferência de código aberto amplamente utilizado, acelerado pelo framework gráfico Metal da Apple.',
-          'O aplicativo é criado e mantido pelo desenvolvedor Faisal na [Dataweal](https://mypocketai.app/). Segundo o desenvolvedor, a motivação foi que outros aplicativos de modelos locais para iPhone geralmente exigiam uma conta, uma assinatura ou comunicação com servidor antes de permitir conversar — o Pocket AI foi projetado para não precisar de nada disso.',
-          'O aplicativo está disponível na [App Store da Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) com o nome "Pocket AI - No Internet". Esta análise se baseia na própria descrição do desenvolvedor sobre a arquitetura e o catálogo de modelos do aplicativo, e na ficha pública da App Store, e não em uma auditoria de código independente — o aplicativo é de código fechado (veja a seção Privacidade abaixo).',
+          '**O Pocket AI - No Internet é um aplicativo para iPhone que baixa modelos de linguagem de pesos abertos e os executa diretamente no dispositivo, sem componente de servidor.** Depois que um modelo é baixado, o aplicativo não precisa de conexão com a internet para gerar uma resposta — a inferência é executada localmente por meio do llama.cpp, acelerado pelo framework gráfico Metal da Apple.',
+          'Segundo o desenvolvedor, a motivação foi que outros aplicativos de modelos locais para iPhone geralmente exigiam uma conta, uma assinatura ou comunicação com servidor antes de permitir conversar — o Pocket AI foi projetado para não precisar de nada disso.',
+          'Esta análise se baseia na própria descrição do desenvolvedor sobre a arquitetura e o catálogo de modelos do aplicativo, e na ficha pública da App Store, e não em uma auditoria de código independente — o aplicativo é de código fechado (veja a seção Privacidade abaixo).',
         ],
       },
       howToGetStarted: {
@@ -2510,7 +2510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Opcional: desbloquear o Pro para entrada de voz',
-            whyItMatters: 'Uma compra dentro do aplicativo de pagamento único desbloqueia a entrada de voz Whisper no dispositivo para ditado (veja Preços abaixo). Isso é opcional — o chat de texto funciona sem isso.',
+            whyItMatters: 'Pule esta etapa se o chat de texto for suficiente — a entrada de voz é a única coisa que ela adiciona. Uma compra única dentro do aplicativo desbloqueia o ditado Whisper no dispositivo para quem quiser (veja Preços abaixo).',
           },
         ],
         note: 'Os tamanhos exatos de download e a lista atual de modelos podem mudar entre atualizações da App Store — confirme os detalhes atuais no próprio catálogo de modelos do aplicativo antes de se comprometer com um download grande em um plano de dados limitado.',
@@ -2873,9 +2873,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'ما هو Pocket AI',
         content: [
-          '**Pocket AI - No Internet هو تطبيق آيفون يقوم بتنزيل نماذج لغوية مفتوحة الأوزان وتشغيلها مباشرة على الجهاز، دون أي مكوّن على الخادم.** بمجرد تنزيل نموذج، لا يحتاج التطبيق إلى اتصال بالإنترنت لتوليد رد — يتم الاستدلال محليًا عبر [llama.cpp](https://github.com/ggml-org/llama.cpp)، وهو محرك استدلال مفتوح المصدر واسع الاستخدام، مسرَّع بإطار عمل Metal الرسومي من آبل.',
-          'يُبنى التطبيق ويُصان بواسطة المطوّر فيصل في [Dataweal](https://mypocketai.app/). وفق المطوّر، كان الدافع أن تطبيقات النماذج المحلية الأخرى لآيفون كانت عادةً تطلب حسابًا أو اشتراكًا أو اتصالًا بخادم قبل السماح بالدردشة — بينما صُمّم Pocket AI ليستغني عن كل ذلك.',
-          'يتوفر التطبيق على [متجر تطبيقات آبل](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) باسم "Pocket AI - No Internet". تعتمد هذه المراجعة على وصف المطوّر الخاص لبنية التطبيق وكتالوج النماذج، وعلى صفحة متجر التطبيقات العامة، وليس على تدقيق مستقل للشيفرة — فالتطبيق مغلق المصدر (راجع قسم الخصوصية أدناه).',
+          '**Pocket AI - No Internet هو تطبيق آيفون يقوم بتنزيل نماذج لغوية مفتوحة الأوزان وتشغيلها مباشرة على الجهاز، دون أي مكوّن على الخادم.** بمجرد تنزيل نموذج، لا يحتاج التطبيق إلى اتصال بالإنترنت لتوليد رد — يتم الاستدلال محليًا عبر llama.cpp، مسرَّع بإطار عمل Metal الرسومي من آبل.',
+          'وفق المطوّر، كان الدافع أن تطبيقات النماذج المحلية الأخرى لآيفون كانت عادةً تطلب حسابًا أو اشتراكًا أو اتصالًا بخادم قبل السماح بالدردشة — بينما صُمّم Pocket AI ليستغني عن كل ذلك.',
+          'تعتمد هذه المراجعة على وصف المطوّر الخاص لبنية التطبيق وكتالوج النماذج، وعلى صفحة متجر التطبيقات العامة، وليس على تدقيق مستقل للشيفرة — فالتطبيق مغلق المصدر (راجع قسم الخصوصية أدناه).',
         ],
       },
       howToGetStarted: {
@@ -2903,7 +2903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'اختياري: فتح نسخة Pro للإدخال الصوتي',
-            whyItMatters: 'يفتح شراء مدفوع لمرة واحدة داخل التطبيق إدخال صوت Whisper على الجهاز للإملاء (راجع قسم الأسعار أدناه). هذا اختياري — تعمل الدردشة النصية دونه.',
+            whyItMatters: 'تخطَّ هذه الخطوة إذا كانت الدردشة النصية كافية — فالإدخال الصوتي هو الإضافة الوحيدة التي يقدّمها. يفتح شراء واحد داخل التطبيق إدخال صوت Whisper على الجهاز للإملاء لمن يريده (راجع قسم الأسعار أدناه).',
           },
         ],
         note: 'قد تتغير أحجام التنزيل الدقيقة وقائمة النماذج الحالية بين تحديثات متجر التطبيقات — تحقق من التفاصيل الحالية في كتالوج نماذج التطبيق نفسه قبل الالتزام بتنزيل كبير على باقة بيانات محدودة.',
@@ -3266,9 +3266,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-pocket-ai',
         title: 'Pocket AI란 무엇인가',
         content: [
-          '**Pocket AI - No Internet는 오픈 웨이트 언어 모델을 다운로드하여 서버 측 구성 요소 없이 기기에서 직접 실행하는 아이폰 앱입니다.** 모델을 다운로드하면 응답을 생성하는 데 인터넷 연결이 필요 없습니다 — 추론은 널리 사용되는 오픈소스 추론 엔진인 [llama.cpp](https://github.com/ggml-org/llama.cpp)를 통해 로컬에서 실행되며, 애플의 Metal 그래픽 프레임워크로 가속됩니다.',
-          '이 앱은 [Dataweal](https://mypocketai.app/)의 개발자 Faisal이 구축하고 유지 관리합니다. 개발자에 따르면, 다른 아이폰용 로컬 모델 앱들은 대개 채팅을 시작하기 전에 계정, 구독, 또는 서버 통신 중 하나를 요구했기 때문에 이 앱을 만들게 되었다고 합니다 — Pocket AI는 이 중 어느 것도 필요로 하지 않도록 설계되었습니다.',
-          '이 앱은 "Pocket AI - No Internet"라는 이름으로 [애플 앱스토어](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)에서 제공됩니다. 이 리뷰는 앱의 아키텍처와 모델 카탈로그에 대한 개발자 자신의 설명, 그리고 공개된 앱스토어 목록 정보에 근거하며, 독립적인 코드 감사에 근거하지 않습니다 — 이 앱은 비공개 소스입니다(아래 개인정보 보호 섹션 참조).',
+          '**Pocket AI - No Internet는 오픈 웨이트 언어 모델을 다운로드하여 서버 측 구성 요소 없이 기기에서 직접 실행하는 아이폰 앱입니다.** 모델을 다운로드하면 응답을 생성하는 데 인터넷 연결이 필요 없습니다 — 추론은 llama.cpp를 통해 로컬에서 실행되며, 애플의 Metal 그래픽 프레임워크로 가속됩니다.',
+          '개발자에 따르면, 다른 아이폰용 로컬 모델 앱들은 대개 채팅을 시작하기 전에 계정, 구독, 또는 서버 통신 중 하나를 요구했기 때문에 이 앱을 만들게 되었다고 합니다 — Pocket AI는 이 중 어느 것도 필요로 하지 않도록 설계되었습니다.',
+          '이 리뷰는 앱의 아키텍처와 모델 카탈로그에 대한 개발자 자신의 설명, 그리고 공개된 앱스토어 목록 정보에 근거하며, 독립적인 코드 감사에 근거하지 않습니다 — 이 앱은 비공개 소스입니다(아래 개인정보 보호 섹션 참조).',
         ],
       },
       howToGetStarted: {
@@ -3296,7 +3296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '선택 사항: 음성 입력을 위해 Pro 잠금 해제하기',
-            whyItMatters: '유료 일회성 앱 내 구매로 받아쓰기용 온디바이스 Whisper 음성 입력이 잠금 해제됩니다(아래 가격 섹션 참고). 이는 선택 사항이며 — 텍스트 채팅은 이것 없이도 작동합니다.',
+            whyItMatters: '텍스트 채팅으로 충분하다면 이 단계는 건너뛰어도 됩니다 — 음성 입력은 추가되는 유일한 기능입니다. 원하는 사용자를 위해 일회성 앱 내 구매로 온디바이스 Whisper 받아쓰기가 잠금 해제됩니다(아래 가격 섹션 참고).',
           },
         ],
         note: '정확한 다운로드 크기와 현재 모델 목록은 앱스토어 업데이트 사이에 변경될 수 있습니다 — 데이터 요금제가 제한적인 경우 대용량 다운로드를 하기 전에 앱 자체의 모델 카탈로그에서 최신 정보를 확인하세요.',
