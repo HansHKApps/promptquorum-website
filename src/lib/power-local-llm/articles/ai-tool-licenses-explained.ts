@@ -10,6 +10,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { TOTAL_TOOL_COUNT } from '../apps-barrel'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -327,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — 160+ local LLM tools with the license listed for each entry.',
+          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — ' + TOTAL_TOOL_COUNT + ' local LLM tools with the license listed for each entry.',
           '[Dify AI Workflow Builder Review](/power-local-llm/dify-ai-workflow-builder-review) — a platform review that names its license; use this guide to understand what that license means for your deployment.',
           '[AI-Generated Content and IP Risk](/power-local-llm/ai-generated-content-ip-risk) — the intellectual-property questions that sit alongside licensing when you deploy AI-generated output commercially.',
           '[Agentic AI Security: Identity & Access](/power-local-llm/agentic-ai-security-identity-access) — security and governance considerations for self-hosted AI deployments, a companion concern to license compliance.',

@@ -317,3 +317,13 @@ export const localAiApps: ToolRecord[] = [
   app_ypipe,
   app_n8n,
 ]
+
+export const TOTAL_TOOL_COUNT = localAiApps.length
+
+export const TOTAL_TOOL_COUNT_BY_LOCALITY = localAiApps.reduce(
+  (counts, tool) => {
+    counts[tool.locality] = (counts[tool.locality] ?? 0) + 1
+    return counts
+  },
+  {} as Record<ToolRecord['locality'], number>
+)
