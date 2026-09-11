@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار عملاء ذكيين بأنواع آمنة مبني على Pydantic',
     ko: 'Pydantic 위에 구축된 타입 안전 에이전트 프레임워크',
   },
+  reviewSlug: 'pydantic-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

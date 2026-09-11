@@ -186,6 +186,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'camel-review': 'camel-review',
   // Agent frameworks series — GPT Engineer review (article 13 of 14) — 2026-09-11
   'gpt-engineer-review': 'gpt-engineer-review',
+  // Agent frameworks series — Pydantic AI review (article 14 of 14, final) — 2026-09-11
+  'pydantic-ai-review': 'pydantic-ai-review',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',
