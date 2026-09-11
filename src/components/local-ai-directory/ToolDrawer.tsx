@@ -19,6 +19,7 @@ import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/
 import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
+import { getDownloadLinks } from './ToolCard'
 
 const STATUS_LABEL: Record<ToolRecord['status'], string> = {
   listed: 'Listed',
@@ -145,7 +146,7 @@ export function ToolDrawer({
     const lines = [
       app.name,
       app.tagline[lang] ?? app.tagline.en ?? '',
-      app.url ? (app.url.startsWith('http') ? app.url : `https://${app.url}`) : null,
+      ...getDownloadLinks(app).map((link) => link.href),
       '',
       ...rows
         .filter(([, value]) => value != null && value !== '')
@@ -238,16 +239,17 @@ export function ToolDrawer({
                     {app.stars.toLocaleString()}
                   </span>
                 )}
-                {app.url && (
+                {getDownloadLinks(app).map((link) => (
                   <a
-                    href={app.url.startsWith('http') ? app.url : `https://${app.url}`}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-primary hover:underline"
                   >
-                    {app.url} ↗
+                    {link.label}
                   </a>
-                )}
+                ))}
               </div>
 
               {/* Full details */}

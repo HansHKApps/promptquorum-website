@@ -40,6 +40,18 @@ export type EngineKey = 'builtin' | 'external' | 'both' | 'library'
 export type PriceKey = 'free' | 'freemium' | 'paid'
 export type StatusKey = 'listed' | 'verified' | 'tested'
 
+// Distribution channel a tool can be downloaded through — orthogonal to `platforms`
+// (which OS it runs on) and `interfaces` (desktop/web/CLI/mobile/library, i.e. how you
+// use it). A tool can have more than one, e.g. an app on both the App Store and Google Play.
+export type StoreLinkKey = 'appStore' | 'googlePlay' | 'github' | 'web'
+
+export const STORE_LINK_LABEL: Record<StoreLinkKey, string> = {
+  appStore: 'App Store',
+  googlePlay: 'Google Play',
+  github: 'GitHub',
+  web: 'Website',
+}
+
 export interface ToolRecordHardware {
   ramGb: number | null
   vramGb: number | null
@@ -85,6 +97,11 @@ export interface ToolRecord {
   status: StatusKey
   uses: UseCaseKey[] | null // null = not yet researched
   url: string | null // domain only, no scheme, e.g. "ollama.com" or "github.com/ggml-org/llama.cpp"
+  // Optional per-channel download links, full URLs (unlike `url`, these need the full
+  // path — an App Store/Play Store listing URL is never just a domain). When set with
+  // 2+ entries, the UI renders one button per channel instead of a single "Get it" link
+  // built from `url`. Omit entirely for tools that only need the single `url` field.
+  storeLinks?: Partial<Record<StoreLinkKey, string>>
   tagline: Partial<Record<Language, string>>
   founder?: ToolRecordFounder
   // ISO 8601 date the founder/maintainer reviewed THIS entry's technical specs and
