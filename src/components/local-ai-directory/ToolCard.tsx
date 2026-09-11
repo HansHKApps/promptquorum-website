@@ -7,7 +7,7 @@
 
 import Link from 'next/link'
 import type { Language } from '@/lib/blog/blogContent'
-import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import { STORE_LINK_LABEL, type ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
@@ -83,6 +83,20 @@ function articleCount(toolName: string): number {
   return (toolArticleIndex as ToolArticleIndex)[toolName]?.totalCount ?? 0
 }
 
+/** One button per distribution channel when `storeLinks` is set, else the single `url` fallback. */
+export function getDownloadLinks(app: ToolRecord): { href: string; label: string }[] {
+  if (app.storeLinks && Object.keys(app.storeLinks).length > 0) {
+    return Object.entries(app.storeLinks).map(([key, href]) => ({
+      href: href!,
+      label: `${STORE_LINK_LABEL[key as keyof typeof STORE_LINK_LABEL]} ↗`,
+    }))
+  }
+  if (app.url) {
+    return [{ href: `https://${app.url}`, label: app.url.includes('github.com') ? 'GitHub ↗' : 'Get it ↗' }]
+  }
+  return []
+}
+
 export function ToolCard({
   app,
   lang,
@@ -105,6 +119,7 @@ export function ToolCard({
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory]
 
   const stop = (e: React.MouseEvent) => e.stopPropagation()
+  const downloadLinks = getDownloadLinks(app)
 
   return (
     <div
@@ -234,31 +249,33 @@ export function ToolCard({
                 >
                   Read review
                 </Link>
-                {app.url && (
+                {downloadLinks.map((link) => (
                   <a
-                    href={`https://${app.url}`}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 text-center rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+                    className="flex-1 text-center rounded-lg border border-primary/20 px-2 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
                   >
-                    {app.url.includes('github.com') ? 'GitHub ↗' : 'Get it ↗'}
+                    {link.label}
                   </a>
-                )}
+                ))}
               </>
             ) : (
               <>
-                {app.url && (
+                {downloadLinks.map((link) => (
                   <a
-                    href={`https://${app.url}`}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
+                    className="flex-1 text-center rounded-lg border border-primary bg-primary px-2 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
                   >
-                    {app.url.includes('github.com') ? 'GitHub ↗' : 'Get it ↗'}
+                    {link.label}
                   </a>
-                )}
+                ))}
                 <button
                   type="button"
                   onClick={(e) => {
