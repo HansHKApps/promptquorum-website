@@ -186,6 +186,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'taskweaver-review',
   // Agent frameworks series — DSPy review (article 11 of 14) — 2026-09-11
   'dspy-review',
+  // Agent frameworks series — CAMEL review (article 12 of 14) — 2026-09-11
+  'camel-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
