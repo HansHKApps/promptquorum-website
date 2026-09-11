@@ -157,6 +157,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'semantic-kernel-review':                       'semantic-kernel-review',
   // Letta review — agent frameworks series, article 7 of 14 — 2026-09-07
   'letta-review':                                 'letta-review',
+  // Leon AI review — agent frameworks series, article 8 of 14 — 2026-09-11
+  'leon-ai-review':                               'leon-ai-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02

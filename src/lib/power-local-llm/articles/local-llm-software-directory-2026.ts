@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Letta** (formerly MemGPT)', 'Link': '[letta.com](https://letta.com)', 'Description': 'Long-term memory agents', 'License': 'Apache 2.0' },
           { 'Tool': '**Pydantic AI**', 'Link': '[ai.pydantic.dev](https://ai.pydantic.dev)', 'Description': 'Type-safe agent framework built on Pydantic', 'License': 'MIT' },
           { 'Tool': '**SuperAGI**', 'Link': '[github.com/TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI)', 'Description': 'Open-source autonomous agent framework with tool integration', 'License': 'MIT', 'Stars': '17.7k'},
-          { 'Tool': '**Leon AI**', 'Link': '[github.com/leon-ai/leon](https://github.com/leon-ai/leon)', 'Description': 'Open-source personal AI assistant framework', 'License': 'MIT', 'Stars': '17.5k'},
+          { 'Tool': '[**Leon AI**](/power-local-llm/leon-ai-review)', 'Link': '[github.com/leon-ai/leon](https://github.com/leon-ai/leon)', 'Description': 'Open-source personal AI assistant framework', 'License': 'MIT', 'Stars': '17.5k'},
           { 'Tool': '**Agent Zero**', 'Link': '[github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero)', 'Description': 'Minimal autonomous agent with coding ability', 'License': 'MIT', 'Stars': '19.1k'},
           { 'Tool': '**GPT Engineer**', 'Link': '[github.com/AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer)', 'Description': 'Autonomous code generation and full project building', 'License': 'MIT', 'Stars': '55.1k'},
           { 'Tool': '**CAMEL**', 'Link': '[github.com/camel-ai/camel](https://github.com/camel-ai/camel)', 'Description': 'Communicative agents for multi-agent collaboration', 'License': 'MIT', 'Stars': '17.7k'},
