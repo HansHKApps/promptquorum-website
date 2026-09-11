@@ -87,6 +87,8 @@ export const CATEGORY_GROUP_LABEL: Record<CategoryGroupKey, string> = {
   'train-operate': 'Train & Operate',
 }
 
+export const TOTAL_CATEGORY_GROUP_COUNT = Object.keys(CATEGORY_GROUP_LABEL).length
+
 export const CATEGORY_SUB_LABEL: Record<CategorySubKey, string> = {
   'inference-engines': 'Inference engines',
   'runtimes-managers': 'Runtimes & model managers',
