@@ -175,6 +175,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'langgraph-review',
   // Agent frameworks series — Semantic Kernel review (article 6 of 14) — 2026-09-06
   'semantic-kernel-review',
+  // Agent frameworks series — Letta review (article 7 of 14) — 2026-09-07
+  'letta-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
@@ -228,6 +230,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'enchanted-review',
   'boltai-review',
   'jan-review',
+  'gpt4all-review',
+  'draw-things-review',
+  'ekorbia-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
@@ -260,6 +265,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'bark-tts-review',
   'styletts-2-review',
   'llava-review',
+  'ollama-vision-models-review',
+  'idefics-review',
+  'mlc-chat-review',
 
   // PocketPal AI review (Mobile & Edge LLMs) — 2026-09-05
   'pocketpal-ai-review',
@@ -319,6 +327,16 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'sglang-explained',
   // Llamafile explainer — 2026-09-07
   'llamafile-explained',
+  // MLX-LM explainer — 2026-09-07
+  'mlx-lm-explained',
+  // MLC LLM explainer — 2026-09-07
+  'mlc-llm-explained',
+  // KoboldCpp review — 2026-09-07
+  'koboldcpp-review',
+  // ExLlamaV2 explainer — 2026-09-07
+  'exllamav2-explained',
+  // Agent frameworks series — 2026-09-07 (SuperAGI review, 8/14)
+  'superagi-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

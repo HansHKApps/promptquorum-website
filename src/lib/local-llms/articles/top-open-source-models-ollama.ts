@@ -311,6 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[Ollama Vision Models (2026)](/power-local-llm/ollama-vision-models-review) -- a dedicated, practical guide to running image-capable models through Ollama, including real CLI/API syntax.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- set up Ollama and pull your first model from this list in under 5 minutes',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- full benchmark rankings across all open-weight models including 70B tier',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) -- deeper comparison of Qwen3.8 / Qwen3-Coder 32B, DeepSeek-Coder, and Starcoder2',
@@ -894,6 +895,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
+            '[Modelos de visión de Ollama (2026)](/es/power-local-llm/ollama-vision-models-review) -- una guía práctica y dedicada para ejecutar modelos con capacidad de imagen mediante Ollama, con sintaxis real de CLI/API.',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- configura Ollama y descarga tu primer modelo de esta lista en menos de 5 minutos',
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) -- ranking completo de benchmarks entre todos los modelos de peso abierto incluyendo el nivel 70B',
             '[Mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) -- comparación más profunda de Qwen3.8 / Qwen3-Coder 32B, DeepSeek-Coder y Starcoder2',
@@ -1588,6 +1590,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
         relatedReading: {
           title: 'Verwandte Lektüre',
           items: [
+            '[Ollama-Vision-Modelle (2026)](/de/power-local-llm/ollama-vision-models-review) -- ein dedizierter, praktischer Leitfaden zum Ausführen bildfähiger Modelle über Ollama, mit echter CLI-/API-Syntax.',
             '[Lokale LLMs mit VS Code und Cursor installieren](/de/local-llms/local-llms-with-vscode-cursor) -- VS Code und Cursor erkennen jetzt Ollama automatisch.',
             '[So wählen Sie ein lokales Modell: Llama vs. Qwen vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) -- Vollständiger Vergleich für Anfänger.',
             '[Ollama vs. LM Studio: Welches ist schneller?](/de/local-llms/ollama-vs-lm-studio) -- GPU-Benchmarks und Durchsatzvergleiche.',
@@ -2062,6 +2065,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
         relatedReading: {
           title: 'Lectures connexes',
           items: [
+            '[Modèles de vision Ollama (2026)](/fr/power-local-llm/ollama-vision-models-review) -- un guide pratique et dédié pour exécuter des modèles capables d\'images via Ollama, avec une syntaxe CLI/API réelle.',
             '[Installer les modèles locaux avec VS Code et Cursor](/fr/local-llms/local-llms-with-vscode-cursor) -- VS Code et Cursor reconnaissent maintenant automatiquement Ollama.',
             '[Comment choisir un modèle local : Llama vs Qwen vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) -- Comparaison complète pour les débutants.',
             '[Ollama vs LM Studio : Lequel est le plus rapide ?](/fr/local-llms/ollama-vs-lm-studio) -- Benchmarks GPU et comparaisons de débit.',
@@ -2549,6 +2553,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         relatedReading: {
           title: '参考資料',
           items: [
+            '[Ollamaビジョンモデル(2026)](/ja/power-local-llm/ollama-vision-models-review) -- Ollamaで画像対応モデルを実行するための実践ガイド。実際のCLI/API構文を解説。',
             '[VS CodeとCursorでローカルLLMインストール](/ja/local-llms/local-llms-with-vscode-cursor) -- VS CodeとCursorが今Ollama自動認識。',
             '[ローカルモデル選択：Llamaは Qwenか Mistralか](/ja/local-llms/qwen-vs-llama-vs-mistral) -- ビギナー向け完全比較。',
             '[OllamaはLM Studioより速い？](/ja/local-llms/ollama-vs-lm-studio) -- GPU・スループットベンチ。',
@@ -2992,6 +2997,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[Ollama视觉模型(2026)](/zh/power-local-llm/ollama-vision-models-review) -- 通过Ollama运行图像模型的实用专项指南,含真实CLI/API语法。',
             '[如何安装Ollama：完整指南](/zh/local-llms/how-to-install-ollama)',
             '[Ollama vs LM Studio：完整对比](/zh/local-llms/ollama-vs-lm-studio)',
             '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)',
@@ -3413,6 +3419,7 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기 자료',
           items: [
+            '[Ollama 비전 모델(2026)](/ko/power-local-llm/ollama-vision-models-review) -- Ollama로 이미지 지원 모델을 실행하는 실용 가이드, 실제 CLI/API 문법 포함.',
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- Ollama를 설정하고 이 목록에서 첫 번째 모델을 5분 이내에 Pull하는 방법',
             '[2026년 최고 로컬 LLM](/ko/local-llms/best-local-llms-2026) -- 70B 티어를 포함한 모든 오픈 웨이트 모델의 전체 벤치마크 순위',
             '[코딩 최고 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- Qwen3.8 / Qwen3-Coder 32B, DeepSeek-Coder, Starcoder2의 심층 비교',
@@ -3781,6 +3788,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
+            '[نماذج رؤية Ollama (2026)](/ar/power-local-llm/ollama-vision-models-review) -- دليل عملي مخصص لتشغيل نماذج قادرة على معالجة الصور عبر Ollama، مع صيغة CLI/API فعلية.',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- إعداد Ollama وتنزيل أول نموذج من هذه القائمة في أقل من 5 دقائق',
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) -- ترتيب معياري كامل عبر جميع النماذج مفتوحة الأوزان بما في ذلك فئة 70B',
             '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) -- مقارنة أعمق لـ Qwen3.8 / Qwen3-Coder 32B وDeepSeek-Coder وStarcoder2',
