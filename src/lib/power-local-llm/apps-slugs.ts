@@ -102,6 +102,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'idefics':                                 'idefics',
   'mlc-chat':                                'mlc-chat',
   'pocketpal-ai':                            'pocketpal-ai',
+  'pocket-ai':                               'pocket-ai',
   'private-llm':                             'private-llm',
   'llm-farm':                                'llm-farm',
   'layla':                                   'layla',
