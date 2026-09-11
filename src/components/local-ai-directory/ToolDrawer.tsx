@@ -13,7 +13,7 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
-import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
+import { CloseIcon, StarIcon, CopyIcon, CheckIcon, ChevronRightIcon } from './icons'
 import { FILTER_VALUE_LABELS } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
@@ -33,6 +33,31 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
     <div className="flex flex-col sm:flex-row sm:gap-2 text-sm">
       <dt className="font-semibold text-text-primary shrink-0 sm:w-32">{label}:</dt>
       <dd className="text-text-secondary">{value}</dd>
+    </div>
+  )
+}
+
+function FounderFullQuote({ paragraphs, source }: { paragraphs: string[]; source?: string }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="pt-1">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+        aria-expanded={open}
+      >
+        <ChevronRightIcon className={`h-3 w-3 transition-transform ${open ? 'rotate-90' : ''}`} />
+        {open ? 'Hide full quote' : 'Read the full quote'}
+      </button>
+      {open && (
+        <div className="mt-2 max-h-56 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
+          {paragraphs.map((p, i) => (
+            <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
+          ))}
+          {source && <p className="text-xs text-text-secondary/80 not-italic">— {source}</p>}
+        </div>
+      )}
     </div>
   )
 }
@@ -154,7 +179,7 @@ export function ToolDrawer({
     ]
 
     if (app.founder) {
-      lines.push('', 'From the founder:', app.founder.why, `Best for: ${app.founder.best}`, `Limits: ${app.founder.limits}`)
+      lines.push('', 'From the Maker:', app.founder.why, `Best for: ${app.founder.best}`, `Limits: ${app.founder.limits}`)
     }
 
     if (app.pqReview) {
@@ -272,14 +297,17 @@ export function ToolDrawer({
                 </dl>
               </section>
 
-              {/* From the founder */}
+              {/* From the Maker */}
               <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">From the founder</h3>
+                <h3 className="text-sm font-bold text-text-primary mb-2">From the Maker</h3>
                 {app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.founder.why}</p>
                     <p><span className="font-semibold text-text-primary">Best for:</span> {app.founder.best}</p>
                     <p><span className="font-semibold text-text-primary">Limits:</span> {app.founder.limits}</p>
+                    {app.founder.fullQuote && (
+                      <FounderFullQuote paragraphs={app.founder.fullQuote} source={app.founder.who[lang] ?? app.founder.who.en} />
+                    )}
                   </div>
                 ) : (
                   <FounderClaimBox key={app.slug} appName={app.name} />

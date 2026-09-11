@@ -64,6 +64,12 @@ export interface ToolRecordFounder {
   best: string
   limits: string
   providedDate: string
+  // Optional full-length quote (one string per paragraph), verbatim from the
+  // founder/maintainer, for tools that have a dedicated "From the Maker"
+  // section in their review article. Rendered as an expandable, scrollable
+  // block in ToolDrawer so it doesn't force the drawer to grow — collapsed
+  // by default, `why`/`best`/`limits` above already give the short version.
+  fullQuote?: string[]
 }
 
 export interface ToolRecordReview {

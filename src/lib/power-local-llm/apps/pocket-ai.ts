@@ -54,5 +54,14 @@ export const app: ToolRecord = {
     best: 'Free, on-device chat with no account and no subscription — just a one-time Pro unlock for voice input.',
     limits: 'Closed source, and requires an iPhone 12 or newer since inference is memory-bound.',
     providedDate: '2026-09-08',
+    // Verbatim, same text as the "From the Maker" section in the dedicated
+    // review article (src/lib/power-local-llm/articles/pocket-ai-review.ts).
+    fullQuote: [
+      'Pocket AI exists because of one small frustration. Every good local-model app on iPhone asked me for something first: an account, a subscription, or a server round trip. I wanted none of those.',
+      'The app runs open-weight models directly on the iPhone through llama.cpp with Metal acceleration. Qwen, Gemma, Llama, Mistral, Phi and DeepSeek are all in the catalogue, 28 models today. There is no account and no server. Once a model is downloaded the app works in airplane mode: on a plane, in a tunnel, or on a phone that has never been signed in to anything. Voice input uses Whisper, on device, so dictation never leaves the phone either.',
+      'Pricing follows the same idea. The app is free and the Pro unlock is $4.99 once. No subscription. I would rather sell a thing than rent it.',
+      'What it is not: it is not open source, and it is not for old hardware. An iPhone 12 or newer is a real requirement, because model inference is memory-bound and there is no honest way around that.',
+      'It is a small app with one promise. Your conversation stays on your phone. That is the whole product.',
+    ],
   },
 }
