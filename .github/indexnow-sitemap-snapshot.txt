@@ -297,6 +297,7 @@ https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
+https://www.promptquorum.com/power-local-llm/camel-review
 https://www.promptquorum.com/power-local-llm/chapper-review
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/chatterbox-vs-elevenlabs
@@ -332,6 +333,7 @@ https://www.promptquorum.com/power-local-llm/exllamav2-explained
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
+https://www.promptquorum.com/power-local-llm/gpt-engineer-review
 https://www.promptquorum.com/power-local-llm/gpt4all-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review
 https://www.promptquorum.com/power-local-llm/hanoki-review
