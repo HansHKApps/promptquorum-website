@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet is a free iPhone app that runs open-weight AI models entirely on-device via [llama.cpp](https://github.com/ggml-org/llama.cpp) with Metal acceleration — no account, no server, and full offline use once a model is downloaded.** Made by developer Faisal at [Dataweal](https://mypocketai.app/), the app\'s catalogue spans 28 models across the Qwen, Gemma, Llama, Mistral, Phi, and DeepSeek families, per the developer. The app is free to use for text chat; a paid Pro unlock adds on-device Whisper voice input. It requires an iPhone 12 or newer, which the developer attributes to inference being memory-bound. Readers who want a comparison point should also read the [Private LLM review](/power-local-llm/private-llm-review) or [PocketPal AI review](/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet is a free iPhone app that runs open-weight AI models entirely on-device via [llama.cpp](https://github.com/ggml-org/llama.cpp) with Metal acceleration — no account, no server, and full offline use once a model is downloaded.** Made by developer Faisal, the app\'s catalogue spans 28 models across the Qwen, Gemma, Llama, Mistral, Phi, and DeepSeek families, per the developer. The app is free to use for text chat; a paid Pro unlock adds on-device Whisper voice input. It requires an iPhone 12 or newer, which the developer attributes to inference being memory-bound. Readers who want a comparison point should also read the [Private LLM review](/power-local-llm/private-llm-review) or [PocketPal AI review](/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet is a free iPhone app by developer Faisal at Dataweal that runs open-weight AI models (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) entirely on-device via llama.cpp with Metal acceleration, distributed directly through the Apple App Store, with a paid Pro unlock for on-device Whisper voice input.',
+            text: 'Pocket AI - No Internet is a free iPhone app by developer Faisal that runs open-weight AI models (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) entirely on-device via llama.cpp with Metal acceleration, distributed directly through the Apple App Store, with a paid Pro unlock for on-device Whisper voice input.',
           },
           {
             type: 'plain-terms',
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Price: free to [download](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) and use for text chat; a paid Pro unlock adds on-device Whisper voice input (see Pricing below).',
-          'Developer: Faisal, at [Dataweal](https://mypocketai.app/).',
+          'Developer: Faisal.',
           'Engine: [llama.cpp](https://github.com/ggml-org/llama.cpp) with Metal acceleration, running entirely on-device.',
           'Model catalogue: 28 models, per the developer, spanning the Qwen, Gemma, Llama, Mistral, Phi, and DeepSeek families.',
           'Offline: works in airplane mode once a model is downloaded; no account and no server round-trip for chat.',
@@ -213,14 +213,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'From the Maker',
         content: [
-          'PromptQuorum asked Faisal, the developer behind Pocket AI at Dataweal, to describe the app and the reasoning behind its pricing and platform choices. The following is presented as the developer\'s own words, lightly reformatted into paragraphs for readability, not as PromptQuorum\'s independent editorial assessment:',
+          'PromptQuorum asked Faisal, the developer behind Pocket AI, to describe the app and the reasoning behind its pricing and platform choices. The following is presented as the developer\'s own words, lightly reformatted into paragraphs for readability, not as PromptQuorum\'s independent editorial assessment:',
           '"Pocket AI exists because of one small frustration. Every good local-model app on iPhone asked me for something first: an account, a subscription, or a server round trip. I wanted none of those.',
           'The app runs open-weight models directly on the iPhone through llama.cpp with Metal acceleration. Qwen, Gemma, Llama, Mistral, Phi and DeepSeek are all in the catalogue, 28 models today. There is no account and no server. Once a model is downloaded the app works in airplane mode: on a plane, in a tunnel, or on a phone that has never been signed in to anything. Voice input uses Whisper, on device, so dictation never leaves the phone either.',
           'Pricing follows the same idea. The app is free and the Pro unlock is $4.99 once. No subscription. I would rather sell a thing than rent it.',
           'What it is not: it is not open source, and it is not for old hardware. An iPhone 12 or newer is a real requirement, because model inference is memory-bound and there is no honest way around that.',
           'It is a small app with one promise. Your conversation stays on your phone. That is the whole product."',
         ],
-        note: '— Faisal, developer, Dataweal',
+        note: '— Faisal, developer',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Who makes Pocket AI - No Internet?',
-            a: 'Pocket AI is developed by Faisal at [Dataweal](https://mypocketai.app/).',
+            a: 'Pocket AI is developed by Faisal.',
           },
           {
             q: 'What models does Pocket AI support?',
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet on the App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — pricing and platform compatibility.',
           '[Pocket AI official site](https://mypocketai.app/) — product overview.',
-          'Direct correspondence with Faisal, developer at Dataweal, provided to PromptQuorum before September 8, 2026 — app description, model catalogue count, pricing model, hardware requirement reasoning, and open-source status.',
+          'Direct correspondence with Faisal, the developer, provided to PromptQuorum before September 8, 2026 — app description, model catalogue count, pricing model, hardware requirement reasoning, and open-source status.',
         ],
       },
       relatedReading: {
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet ist eine kostenlose iPhone-App, die Open-Weight-KI-Modelle vollständig auf dem Gerät über [llama.cpp](https://github.com/ggml-org/llama.cpp) mit Metal-Beschleunigung ausführt — ohne Konto, ohne Server, und vollständig offline nutzbar, sobald ein Modell heruntergeladen ist.** Entwickelt von Faisal bei [Dataweal](https://mypocketai.app/), umfasst die Modellbibliothek laut Entwickler 28 Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek. Die App ist für Text-Chat kostenlos nutzbar; ein kostenpflichtiger Pro-Kauf schaltet On-Device-Whisper-Spracheingabe frei. Sie benötigt ein iPhone 12 oder neuer, was der Entwickler damit begründet, dass Inferenz speicherlimitiert ist. Zum Vergleich eignen sich auch der [Private-LLM-Test](/de/power-local-llm/private-llm-review) oder der [PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet ist eine kostenlose iPhone-App, die Open-Weight-KI-Modelle vollständig auf dem Gerät über [llama.cpp](https://github.com/ggml-org/llama.cpp) mit Metal-Beschleunigung ausführt — ohne Konto, ohne Server, und vollständig offline nutzbar, sobald ein Modell heruntergeladen ist.** Entwickelt von Faisal, umfasst die Modellbibliothek laut Entwickler 28 Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek. Die App ist für Text-Chat kostenlos nutzbar; ein kostenpflichtiger Pro-Kauf schaltet On-Device-Whisper-Spracheingabe frei. Sie benötigt ein iPhone 12 oder neuer, was der Entwickler damit begründet, dass Inferenz speicherlimitiert ist. Zum Vergleich eignen sich auch der [Private-LLM-Test](/de/power-local-llm/private-llm-review) oder der [PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet ist eine kostenlose iPhone-App von Entwickler Faisal bei Dataweal, die Open-Weight-KI-Modelle (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) vollständig auf dem Gerät über llama.cpp mit Metal-Beschleunigung ausführt, direkt über den Apple App Store vertrieben, mit einem kostenpflichtigen Pro-Kauf für On-Device-Whisper-Spracheingabe.',
+            text: 'Pocket AI - No Internet ist eine kostenlose iPhone-App von Entwickler Faisal, die Open-Weight-KI-Modelle (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) vollständig auf dem Gerät über llama.cpp mit Metal-Beschleunigung ausführt, direkt über den Apple App Store vertrieben, mit einem kostenpflichtigen Pro-Kauf für On-Device-Whisper-Spracheingabe.',
           },
           {
             type: 'plain-terms',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Preis: kostenlos zum [Herunterladen](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) und für Text-Chat nutzbar; ein kostenpflichtiger Pro-Kauf schaltet On-Device-Whisper-Spracheingabe frei (siehe Abschnitt „Preise“ unten).',
-          'Entwickler: Faisal, bei [Dataweal](https://mypocketai.app/).',
+          'Entwickler: Faisal.',
           'Engine: [llama.cpp](https://github.com/ggml-org/llama.cpp) mit Metal-Beschleunigung, vollständig auf dem Gerät ausgeführt.',
           'Modellbibliothek: laut Entwickler 28 Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek.',
           'Offline: funktioniert im Flugmodus, sobald ein Modell heruntergeladen ist; kein Konto und keine Serverkommunikation beim Chatten.',
@@ -606,14 +606,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Vom Entwickler',
         content: [
-          'PromptQuorum bat Faisal, den Entwickler von Pocket AI bei Dataweal, die App und die Beweggründe für ihre Preis- und Plattformentscheidungen zu beschreiben. Das Folgende wird als eigene Worte des Entwicklers wiedergegeben, zur besseren Lesbarkeit in Absätze gegliedert, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum:',
+          'PromptQuorum bat Faisal, den Entwickler von Pocket AI, die App und die Beweggründe für ihre Preis- und Plattformentscheidungen zu beschreiben. Das Folgende wird als eigene Worte des Entwicklers wiedergegeben, zur besseren Lesbarkeit in Absätze gegliedert, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum:',
           '„Pocket AI existiert wegen einer kleinen Frustration. Jede gute lokale KI-App auf dem iPhone verlangte zuerst etwas von mir: ein Konto, ein Abonnement oder eine Serverkommunikation. Ich wollte nichts davon.',
           'Die App führt Open-Weight-Modelle direkt auf dem iPhone über llama.cpp mit Metal-Beschleunigung aus. Qwen, Gemma, Llama, Mistral, Phi und DeepSeek sind alle in der Bibliothek, heute 28 Modelle. Es gibt kein Konto und keinen Server. Sobald ein Modell heruntergeladen ist, funktioniert die App im Flugmodus: im Flugzeug, im Tunnel oder auf einem Telefon, das sich nie bei irgendetwas angemeldet hat. Die Spracheingabe nutzt Whisper, auf dem Gerät, sodass auch das Diktat das Telefon nie verlässt.',
           'Die Preisgestaltung folgt derselben Idee. Die App ist kostenlos, und der Pro-Kauf kostet einmalig 4,99 $. Kein Abonnement. Ich verkaufe lieber etwas, als es zu vermieten.',
           'Was sie nicht ist: Sie ist nicht Open Source, und sie ist nicht für alte Hardware gedacht. Ein iPhone 12 oder neuer ist eine echte Anforderung, weil Modell-Inferenz speicherlimitiert ist und es dafür keinen ehrlichen Weg drumherum gibt.',
           'Es ist eine kleine App mit einem Versprechen. Ihr Gespräch bleibt auf Ihrem Telefon. Das ist das ganze Produkt."',
         ],
-        note: '— Faisal, Entwickler, Dataweal',
+        note: '— Faisal, Entwickler',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wer entwickelt Pocket AI - No Internet?',
-            a: 'Pocket AI wird von Faisal bei [Dataweal](https://mypocketai.app/) entwickelt.',
+            a: 'Pocket AI wird von Faisal entwickelt.',
           },
           {
             q: 'Welche Modelle unterstützt Pocket AI?',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet im App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — Preis und Plattformkompatibilität.',
           '[Offizielle Pocket-AI-Website](https://mypocketai.app/) — Produktübersicht.',
-          'Direkte Korrespondenz mit Faisal, Entwickler bei Dataweal, PromptQuorum vor dem 8. September 2026 mitgeteilt — App-Beschreibung, Anzahl der Modellbibliothek, Preismodell, Begründung der Hardware-Anforderung und Open-Source-Status.',
+          'Direkte Korrespondenz mit Faisal, dem Entwickler, PromptQuorum vor dem 8. September 2026 mitgeteilt — App-Beschreibung, Anzahl der Modellbibliothek, Preismodell, Begründung der Hardware-Anforderung und Open-Source-Status.',
         ],
       },
       relatedReading: {
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet est une application iPhone gratuite qui exécute des modèles d\'IA à poids ouverts entièrement sur l\'appareil via [llama.cpp](https://github.com/ggml-org/llama.cpp) avec accélération Metal — sans compte, sans serveur, et utilisable entièrement hors ligne une fois un modèle téléchargé.** Développée par Faisal chez [Dataweal](https://mypocketai.app/), sa bibliothèque compte, selon le développeur, 28 modèles répartis dans les familles Qwen, Gemma, Llama, Mistral, Phi et DeepSeek. L\'application est gratuite pour le chat textuel ; un déblocage Pro payant ajoute la saisie vocale Whisper sur l\'appareil. Elle nécessite un iPhone 12 ou plus récent, ce que le développeur attribue au fait que l\'inférence est limitée par la mémoire. Pour comparer, consultez aussi l\'[avis Private LLM](/fr/power-local-llm/private-llm-review) ou l\'[avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet est une application iPhone gratuite qui exécute des modèles d\'IA à poids ouverts entièrement sur l\'appareil via [llama.cpp](https://github.com/ggml-org/llama.cpp) avec accélération Metal — sans compte, sans serveur, et utilisable entièrement hors ligne une fois un modèle téléchargé.** Développée par Faisal, sa bibliothèque compte, selon le développeur, 28 modèles répartis dans les familles Qwen, Gemma, Llama, Mistral, Phi et DeepSeek. L\'application est gratuite pour le chat textuel ; un déblocage Pro payant ajoute la saisie vocale Whisper sur l\'appareil. Elle nécessite un iPhone 12 ou plus récent, ce que le développeur attribue au fait que l\'inférence est limitée par la mémoire. Pour comparer, consultez aussi l\'[avis Private LLM](/fr/power-local-llm/private-llm-review) ou l\'[avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet est une application iPhone gratuite développée par Faisal chez Dataweal qui exécute des modèles d\'IA à poids ouverts (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) entièrement sur l\'appareil via llama.cpp avec accélération Metal, distribuée directement via l\'App Store d\'Apple, avec un déblocage Pro payant pour la saisie vocale Whisper sur l\'appareil.',
+            text: 'Pocket AI - No Internet est une application iPhone gratuite développée par Faisal qui exécute des modèles d\'IA à poids ouverts (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) entièrement sur l\'appareil via llama.cpp avec accélération Metal, distribuée directement via l\'App Store d\'Apple, avec un déblocage Pro payant pour la saisie vocale Whisper sur l\'appareil.',
           },
           {
             type: 'plain-terms',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Prix : gratuite à [télécharger](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) et à utiliser pour le chat textuel ; un déblocage Pro payant ajoute la saisie vocale Whisper sur l\'appareil (voir Tarifs ci-dessous).',
-          'Développeur : Faisal, chez [Dataweal](https://mypocketai.app/).',
+          'Développeur : Faisal.',
           'Moteur : [llama.cpp](https://github.com/ggml-org/llama.cpp) avec accélération Metal, exécuté entièrement sur l\'appareil.',
           'Catalogue de modèles : 28 modèles, selon le développeur, répartis dans les familles Qwen, Gemma, Llama, Mistral, Phi et DeepSeek.',
           'Hors ligne : fonctionne en mode avion une fois un modèle téléchargé ; aucun compte ni aller-retour serveur pour le chat.',
@@ -999,14 +999,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'Le mot du développeur',
         content: [
-          'PromptQuorum a demandé à Faisal, le développeur de Pocket AI chez Dataweal, de décrire l\'application et le raisonnement derrière ses choix de prix et de plateforme. Ce qui suit est présenté comme les propres mots du développeur, réorganisé en paragraphes pour la lisibilité, et non comme une évaluation éditoriale indépendante de PromptQuorum :',
+          'PromptQuorum a demandé à Faisal, le développeur de Pocket AI, de décrire l\'application et le raisonnement derrière ses choix de prix et de plateforme. Ce qui suit est présenté comme les propres mots du développeur, réorganisé en paragraphes pour la lisibilité, et non comme une évaluation éditoriale indépendante de PromptQuorum :',
           '« Pocket AI existe à cause d\'une petite frustration. Chaque bonne application de modèle local sur iPhone me demandait d\'abord quelque chose : un compte, un abonnement ou un aller-retour serveur. Je n\'en voulais aucun.',
           'L\'application exécute des modèles à poids ouverts directement sur l\'iPhone via llama.cpp avec accélération Metal. Qwen, Gemma, Llama, Mistral, Phi et DeepSeek sont tous dans le catalogue, 28 modèles aujourd\'hui. Il n\'y a ni compte ni serveur. Une fois un modèle téléchargé, l\'application fonctionne en mode avion : dans un avion, dans un tunnel, ou sur un téléphone qui ne s\'est jamais connecté à quoi que ce soit. La saisie vocale utilise Whisper, sur l\'appareil, donc la dictée ne quitte jamais non plus le téléphone.',
           'La tarification suit la même logique. L\'application est gratuite et le déblocage Pro coûte 4,99 $ une seule fois. Pas d\'abonnement. Je préfère vendre une chose que la louer.',
           'Ce qu\'elle n\'est pas : elle n\'est pas open source, et elle n\'est pas faite pour du matériel ancien. Un iPhone 12 ou plus récent est une exigence réelle, parce que l\'inférence des modèles est limitée par la mémoire et qu\'il n\'y a aucun moyen honnête de contourner cela.',
           'C\'est une petite application avec une seule promesse. Votre conversation reste sur votre téléphone. C\'est tout le produit. »',
         ],
-        note: '— Faisal, développeur, Dataweal',
+        note: '— Faisal, développeur',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qui développe Pocket AI - No Internet ?',
-            a: 'Pocket AI est développée par Faisal chez [Dataweal](https://mypocketai.app/).',
+            a: 'Pocket AI est développée par Faisal.',
           },
           {
             q: 'Quels modèles Pocket AI prend-elle en charge ?',
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet sur l\'App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — prix et compatibilité des plateformes.',
           '[Site officiel de Pocket AI](https://mypocketai.app/) — présentation du produit.',
-          'Correspondance directe avec Faisal, développeur chez Dataweal, transmise à PromptQuorum avant le 8 septembre 2026 — description de l\'application, nombre de modèles au catalogue, modèle de tarification, raisonnement sur la configuration matérielle requise et statut open source.',
+          'Correspondance directe avec Faisal, développeur, transmise à PromptQuorum avant le 8 septembre 2026 — description de l\'application, nombre de modèles au catalogue, modèle de tarification, raisonnement sur la configuration matérielle requise et statut open source.',
         ],
       },
       relatedReading: {
@@ -1207,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internetは、[llama.cpp](https://github.com/ggml-org/llama.cpp)とMetalアクセラレーションによってオープンウェイトのAIモデルを完全に端末上で実行する無料のiPhoneアプリです——アカウント不要、サーバー不要で、モデルをダウンロードすれば完全オフラインで利用できます。** [Dataweal](https://mypocketai.app/)の開発者Faisal氏によって作られ、開発者によればカタログはQwen、Gemma、Llama、Mistral、Phi、DeepSeekの各ファミリーにまたがる28モデルに及びます。テキストチャットは無料で利用でき、有料のPro解除でオンデバイスのWhisper音声入力が追加されます。推論がメモリに制約されるため、開発者はiPhone 12以降が必要としています。比較のためには[Private LLMレビュー](/ja/power-local-llm/private-llm-review)や[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review)もご覧ください。',
+      '**Pocket AI - No Internetは、[llama.cpp](https://github.com/ggml-org/llama.cpp)とMetalアクセラレーションによってオープンウェイトのAIモデルを完全に端末上で実行する無料のiPhoneアプリです——アカウント不要、サーバー不要で、モデルをダウンロードすれば完全オフラインで利用できます。** Faisal氏によって作られ、開発者によればカタログはQwen、Gemma、Llama、Mistral、Phi、DeepSeekの各ファミリーにまたがる28モデルに及びます。テキストチャットは無料で利用でき、有料のPro解除でオンデバイスのWhisper音声入力が追加されます。推論がメモリに制約されるため、開発者はiPhone 12以降が必要としています。比較のためには[Private LLMレビュー](/ja/power-local-llm/private-llm-review)や[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review)もご覧ください。',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internetは、Datawealの開発者Faisal氏による無料のiPhoneアプリで、オープンウェイトAIモデル(Qwen、Gemma、Llama、Mistral、Phi、DeepSeek)をllama.cppとMetalアクセラレーションによって完全に端末上で実行し、Apple App Storeを通じて直接配布され、オンデバイスWhisper音声入力のための有料のPro解除がある。',
+            text: 'Pocket AI - No Internetは、開発者Faisal氏による無料のiPhoneアプリで、オープンウェイトAIモデル(Qwen、Gemma、Llama、Mistral、Phi、DeepSeek)をllama.cppとMetalアクセラレーションによって完全に端末上で実行し、Apple App Storeを通じて直接配布され、オンデバイスWhisper音声入力のための有料のPro解除がある。',
           },
           {
             type: 'plain-terms',
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '料金:[ダウンロード](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)は無料でテキストチャットに利用可能。有料のPro解除でオンデバイスWhisper音声入力が追加(下記の料金セクションを参照)。',
-          '開発者:[Dataweal](https://mypocketai.app/)のFaisal氏。',
+          '開発者:Faisal氏。',
           'エンジン:[llama.cpp](https://github.com/ggml-org/llama.cpp)とMetalアクセラレーションを使用し、完全に端末上で動作。',
           'モデルカタログ:開発者によれば、Qwen、Gemma、Llama、Mistral、Phi、DeepSeekの各ファミリーにまたがる28モデル。',
           'オフライン:モデルをダウンロードすれば機内モードでも動作。チャットにアカウントやサーバー通信は不要。',
@@ -1392,14 +1392,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '開発者から',
         content: [
-          'PromptQuorumは、DatawealでPocket AIを開発しているFaisal氏に、アプリの内容と価格・プラットフォーム選択の背景にある考え方を説明するよう依頼しました。以下は、読みやすさのために段落として再構成した開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません:',
+          'PromptQuorumは、Pocket AIを開発しているFaisal氏に、アプリの内容と価格・プラットフォーム選択の背景にある考え方を説明するよう依頼しました。以下は、読みやすさのために段落として再構成した開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません:',
           '「Pocket AIが存在するのは、ある小さな不満のためです。iPhone向けの優れたローカルモデルアプリはどれも、最初に何かを求めてきました。アカウント、サブスクリプション、あるいはサーバーとのやり取りです。私はそのいずれも望みませんでした。',
           'このアプリは、llama.cppとMetalアクセラレーションによってオープンウェイトモデルをiPhone上で直接実行します。Qwen、Gemma、Llama、Mistral、Phi、DeepSeekがすべてカタログに含まれており、今日時点で28モデルです。アカウントもサーバーもありません。モデルをダウンロードすれば、アプリは機内モードで動作します——飛行機の中、トンネルの中、あるいは何にもサインインしたことのない端末でも。音声入力にはオンデバイスのWhisperを使っているので、口述筆記も端末の外に出ることはありません。',
           '価格設定も同じ考え方に従っています。アプリは無料で、Pro解除は1回限り4.99ドルです。サブスクリプションはありません。私は物を貸すよりも売る方を選びます。',
           'このアプリでないもの:オープンソースではなく、古いハードウェア向けでもありません。モデルの推論はメモリに制約されるため、それを回避する誠実な方法はなく、iPhone 12以降というのは実際の要件です。',
           'これは一つの約束を持つ小さなアプリです。あなたの会話はあなたの端末にとどまる。それが製品のすべてです」',
         ],
-        note: '——Faisal氏、開発者、Dataweal',
+        note: '——Faisal氏、開発者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Pocket AI - No Internetを開発しているのは誰ですか?',
-            a: 'Pocket AIは[Dataweal](https://mypocketai.app/)のFaisal氏によって開発されています。',
+            a: 'Pocket AIはFaisal氏によって開発されています。',
           },
           {
             q: 'Pocket AIはどのモデルに対応していますか?',
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App StoreのPocket AI - No Internet](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — 価格とプラットフォームの互換性。',
           '[Pocket AI公式サイト](https://mypocketai.app/) — 製品概要。',
-          '2026年9月8日より前にPromptQuorumへ提供された、Datawealの開発者Faisal氏との直接のやり取り — アプリの説明、モデルカタログの数、価格モデル、ハードウェア要件の理由、オープンソース状況。',
+          '2026年9月8日より前にPromptQuorumへ提供された、開発者Faisal氏との直接のやり取り — アプリの説明、モデルカタログの数、価格モデル、ハードウェア要件の理由、オープンソース状況。',
         ],
       },
       relatedReading: {
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet是一款免费iPhone应用,通过[llama.cpp](https://github.com/ggml-org/llama.cpp)配合Metal加速,完全在设备端运行开放权重AI模型——无需账户,不依赖服务器,模型下载后即可完全离线使用。** 该应用由[Dataweal](https://mypocketai.app/)的开发者Faisal打造,据开发者介绍,其模型库涵盖Qwen、Gemma、Llama、Mistral、Phi和DeepSeek系列,共28个模型。文本聊天功能免费使用;付费解锁Pro版可获得设备端Whisper语音输入。该应用要求iPhone 12或更新机型,开发者将此归因于推理受内存限制。读者也可参阅[Private LLM评测](/zh/power-local-llm/private-llm-review)或[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review)作为对比。',
+      '**Pocket AI - No Internet是一款免费iPhone应用,通过[llama.cpp](https://github.com/ggml-org/llama.cpp)配合Metal加速,完全在设备端运行开放权重AI模型——无需账户,不依赖服务器,模型下载后即可完全离线使用。** 该应用由开发者Faisal打造,据开发者介绍,其模型库涵盖Qwen、Gemma、Llama、Mistral、Phi和DeepSeek系列,共28个模型。文本聊天功能免费使用;付费解锁Pro版可获得设备端Whisper语音输入。该应用要求iPhone 12或更新机型,开发者将此归因于推理受内存限制。读者也可参阅[Private LLM评测](/zh/power-local-llm/private-llm-review)或[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review)作为对比。',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -1656,7 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet是Dataweal开发者Faisal打造的一款免费iPhone应用,通过llama.cpp配合Metal加速,完全在设备端运行开放权重AI模型(Qwen、Gemma、Llama、Mistral、Phi、DeepSeek),直接通过苹果App Store分发,提供付费的Pro解锁以获得设备端Whisper语音输入。',
+            text: 'Pocket AI - No Internet是开发者Faisal打造的一款免费iPhone应用,通过llama.cpp配合Metal加速,完全在设备端运行开放权重AI模型(Qwen、Gemma、Llama、Mistral、Phi、DeepSeek),直接通过苹果App Store分发,提供付费的Pro解锁以获得设备端Whisper语音输入。',
           },
           {
             type: 'plain-terms',
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '价格:免费[下载](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)并用于文本聊天;付费的Pro解锁可增加设备端Whisper语音输入(详见下方价格部分)。',
-          '开发者:[Dataweal](https://mypocketai.app/)的Faisal。',
+          '开发者:Faisal。',
           '引擎:[llama.cpp](https://github.com/ggml-org/llama.cpp)配合Metal加速,完全在设备端运行。',
           '模型库:据开发者介绍,涵盖Qwen、Gemma、Llama、Mistral、Phi和DeepSeek系列,共28个模型。',
           '离线:模型下载完成后可在飞行模式下运行;聊天无需账户或与服务器通信。',
@@ -1785,14 +1785,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '来自开发者',
         content: [
-          'PromptQuorum请Dataweal公司负责开发Pocket AI的开发者Faisal描述这款应用,以及其定价和平台选择背后的考量。以下内容以开发者本人的话呈现,为便于阅读重新整理为段落,并非PromptQuorum独立的编辑评估:',
+          'PromptQuorum请负责开发Pocket AI的开发者Faisal描述这款应用,以及其定价和平台选择背后的考量。以下内容以开发者本人的话呈现,为便于阅读重新整理为段落,并非PromptQuorum独立的编辑评估:',
           '"Pocket AI的诞生源于一个小小的不满。iPhone上每一款优秀的本地模型应用,都会先向我索取点什么:账户、订阅,或是与服务器的往返通信。我一个都不想要。',
           '这款应用通过llama.cpp配合Metal加速,直接在iPhone上运行开放权重模型。Qwen、Gemma、Llama、Mistral、Phi和DeepSeek都在模型库中,如今共有28个模型。没有账户,也没有服务器。模型下载完成后,应用可在飞行模式下使用:无论是在飞机上、隧道里,还是在一台从未登录过任何账户的手机上。语音输入使用设备端的Whisper,因此听写内容同样不会离开手机。',
           '定价遵循同样的理念。应用免费,Pro解锁一次性收费4.99美元。没有订阅。我宁愿卖出一件东西,也不愿出租它。',
           '它不是什么:它不是开源的,也不适用于旧硬件。iPhone 12或更新机型是真实的要求,因为模型推理受内存限制,而这一点没有诚实的绕过方法。',
           '这是一款只承诺一件事的小应用。您的对话留在您的手机上。这就是产品的全部。"',
         ],
-        note: '——Faisal,开发者,Dataweal',
+        note: '——Faisal,开发者',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1895,7 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '谁开发了Pocket AI - No Internet?',
-            a: 'Pocket AI由[Dataweal](https://mypocketai.app/)的Faisal开发。',
+            a: 'Pocket AI由Faisal开发。',
           },
           {
             q: 'Pocket AI支持哪些模型?',
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store上的Pocket AI - No Internet](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — 价格和平台兼容性。',
           '[Pocket AI官方网站](https://mypocketai.app/) — 产品概述。',
-          '2026年9月8日之前提供给PromptQuorum的、与Dataweal开发者Faisal的直接通信 — 应用描述、模型库数量、定价模式、硬件要求的理由以及开源状态。',
+          '2026年9月8日之前提供给PromptQuorum的、与开发者Faisal的直接通信 — 应用描述、模型库数量、定价模式、硬件要求的理由以及开源状态。',
         ],
       },
       relatedReading: {
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet es una app gratuita para iPhone que ejecuta modelos de IA de pesos abiertos completamente en el dispositivo mediante [llama.cpp](https://github.com/ggml-org/llama.cpp) con aceleración Metal — sin cuenta, sin servidor, y utilizable completamente offline una vez descargado un modelo.** Creada por Faisal en [Dataweal](https://mypocketai.app/), su catálogo abarca, según el desarrollador, 28 modelos de las familias Qwen, Gemma, Llama, Mistral, Phi y DeepSeek. La app es gratuita para chat de texto; un desbloqueo Pro de pago añade entrada de voz Whisper en el dispositivo. Requiere un iPhone 12 o más reciente, algo que el desarrollador atribuye a que la inferencia está limitada por la memoria. Para comparar, consulte también la [reseña de Private LLM](/es/power-local-llm/private-llm-review) o la [reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet es una app gratuita para iPhone que ejecuta modelos de IA de pesos abiertos completamente en el dispositivo mediante [llama.cpp](https://github.com/ggml-org/llama.cpp) con aceleración Metal — sin cuenta, sin servidor, y utilizable completamente offline una vez descargado un modelo.** Creada por Faisal, su catálogo abarca, según el desarrollador, 28 modelos de las familias Qwen, Gemma, Llama, Mistral, Phi y DeepSeek. La app es gratuita para chat de texto; un desbloqueo Pro de pago añade entrada de voz Whisper en el dispositivo. Requiere un iPhone 12 o más reciente, algo que el desarrollador atribuye a que la inferencia está limitada por la memoria. Para comparar, consulte también la [reseña de Private LLM](/es/power-local-llm/private-llm-review) o la [reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -2049,7 +2049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet es una app gratuita para iPhone del desarrollador Faisal en Dataweal que ejecuta modelos de IA de pesos abiertos (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) completamente en el dispositivo mediante llama.cpp con aceleración Metal, distribuida directamente a través de la App Store de Apple, con un desbloqueo Pro de pago para entrada de voz Whisper en el dispositivo.',
+            text: 'Pocket AI - No Internet es una app gratuita para iPhone del desarrollador Faisal que ejecuta modelos de IA de pesos abiertos (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) completamente en el dispositivo mediante llama.cpp con aceleración Metal, distribuida directamente a través de la App Store de Apple, con un desbloqueo Pro de pago para entrada de voz Whisper en el dispositivo.',
           },
           {
             type: 'plain-terms',
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Precio: gratis para [descargar](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) y usar en chat de texto; un desbloqueo Pro de pago añade entrada de voz Whisper en el dispositivo (vea Precios más abajo).',
-          'Desarrollador: Faisal, en [Dataweal](https://mypocketai.app/).',
+          'Desarrollador: Faisal.',
           'Motor: [llama.cpp](https://github.com/ggml-org/llama.cpp) con aceleración Metal, ejecutado completamente en el dispositivo.',
           'Catálogo de modelos: 28 modelos, según el desarrollador, de las familias Qwen, Gemma, Llama, Mistral, Phi y DeepSeek.',
           'Offline: funciona en modo avión una vez descargado un modelo; sin cuenta ni comunicación con servidor para chatear.',
@@ -2178,14 +2178,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'La voz del creador',
         content: [
-          'PromptQuorum le pidió a Faisal, el desarrollador de Pocket AI en Dataweal, que describiera la app y el razonamiento detrás de sus decisiones de precio y plataforma. Lo siguiente se presenta como las propias palabras del desarrollador, reorganizado en párrafos para facilitar la lectura, no como una evaluación editorial independiente de PromptQuorum:',
+          'PromptQuorum le pidió a Faisal, el desarrollador de Pocket AI, que describiera la app y el razonamiento detrás de sus decisiones de precio y plataforma. Lo siguiente se presenta como las propias palabras del desarrollador, reorganizado en párrafos para facilitar la lectura, no como una evaluación editorial independiente de PromptQuorum:',
           '"Pocket AI existe por una pequeña frustración. Cada buena app de modelo local en iPhone me pedía primero algo: una cuenta, una suscripción o comunicación con un servidor. No quería nada de eso.',
           'La app ejecuta modelos de pesos abiertos directamente en el iPhone mediante llama.cpp con aceleración Metal. Qwen, Gemma, Llama, Mistral, Phi y DeepSeek están todos en el catálogo, hoy son 28 modelos. No hay cuenta ni servidor. Una vez descargado un modelo, la app funciona en modo avión: en un avión, en un túnel, o en un teléfono que nunca ha iniciado sesión en nada. La entrada de voz usa Whisper, en el dispositivo, así que el dictado tampoco sale nunca del teléfono.',
           'Los precios siguen la misma idea. La app es gratuita y el desbloqueo Pro cuesta 4,99 $ una sola vez. Sin suscripción. Prefiero vender algo antes que alquilarlo.',
           'Lo que no es: no es de código abierto, y no está pensada para hardware antiguo. Un iPhone 12 o más reciente es un requisito real, porque la inferencia de modelos está limitada por la memoria y no hay una forma honesta de evitarlo.',
           'Es una app pequeña con una sola promesa. Su conversación se queda en su teléfono. Ese es todo el producto."',
         ],
-        note: '— Faisal, desarrollador, Dataweal',
+        note: '— Faisal, desarrollador',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2288,7 +2288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Quién desarrolla Pocket AI - No Internet?',
-            a: 'Pocket AI está desarrollada por Faisal en [Dataweal](https://mypocketai.app/).',
+            a: 'Pocket AI está desarrollada por Faisal.',
           },
           {
             q: '¿Qué modelos admite Pocket AI?',
@@ -2336,7 +2336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet en la App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — precio y compatibilidad de plataforma.',
           '[Sitio oficial de Pocket AI](https://mypocketai.app/) — resumen del producto.',
-          'Correspondencia directa con Faisal, desarrollador en Dataweal, facilitada a PromptQuorum antes del 8 de septiembre de 2026 — descripción de la app, número de modelos en el catálogo, modelo de precios, razonamiento del requisito de hardware y estado de código abierto.',
+          'Correspondencia directa con Faisal, el desarrollador, facilitada a PromptQuorum antes del 8 de septiembre de 2026 — descripción de la app, número de modelos en el catálogo, modelo de precios, razonamiento del requisito de hardware y estado de código abierto.',
         ],
       },
       relatedReading: {
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**O Pocket AI - No Internet é um aplicativo gratuito para iPhone que executa modelos de IA de pesos abertos totalmente no dispositivo usando [llama.cpp](https://github.com/ggml-org/llama.cpp) com aceleração Metal — sem conta, sem servidor, e utilizável totalmente offline depois que um modelo é baixado.** Criado por Faisal na [Dataweal](https://mypocketai.app/), seu catálogo abrange, segundo o desenvolvedor, 28 modelos das famílias Qwen, Gemma, Llama, Mistral, Phi e DeepSeek. O aplicativo é gratuito para chat de texto; um desbloqueio Pro pago adiciona entrada de voz Whisper no dispositivo. Ele exige um iPhone 12 ou mais recente, algo que o desenvolvedor atribui ao fato de a inferência ser limitada pela memória. Para comparar, veja também a [análise do Private LLM](/pt/power-local-llm/private-llm-review) ou a [análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
+      '**O Pocket AI - No Internet é um aplicativo gratuito para iPhone que executa modelos de IA de pesos abertos totalmente no dispositivo usando [llama.cpp](https://github.com/ggml-org/llama.cpp) com aceleração Metal — sem conta, sem servidor, e utilizável totalmente offline depois que um modelo é baixado.** Criado por Faisal, seu catálogo abrange, segundo o desenvolvedor, 28 modelos das famílias Qwen, Gemma, Llama, Mistral, Phi e DeepSeek. O aplicativo é gratuito para chat de texto; um desbloqueio Pro pago adiciona entrada de voz Whisper no dispositivo. Ele exige um iPhone 12 ou mais recente, algo que o desenvolvedor atribui ao fato de a inferência ser limitada pela memória. Para comparar, veja também a [análise do Private LLM](/pt/power-local-llm/private-llm-review) ou a [análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -2442,7 +2442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O Pocket AI - No Internet é um aplicativo gratuito para iPhone do desenvolvedor Faisal na Dataweal que executa modelos de IA de pesos abertos (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) totalmente no dispositivo via llama.cpp com aceleração Metal, distribuído diretamente pela App Store da Apple, com um desbloqueio Pro pago para entrada de voz Whisper no dispositivo.',
+            text: 'O Pocket AI - No Internet é um aplicativo gratuito para iPhone do desenvolvedor Faisal que executa modelos de IA de pesos abertos (Qwen, Gemma, Llama, Mistral, Phi, DeepSeek) totalmente no dispositivo via llama.cpp com aceleração Metal, distribuído diretamente pela App Store da Apple, com um desbloqueio Pro pago para entrada de voz Whisper no dispositivo.',
           },
           {
             type: 'plain-terms',
@@ -2451,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Preço: gratuito para [baixar](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) e usar em chat de texto; um desbloqueio Pro pago adiciona entrada de voz Whisper no dispositivo (veja Preços abaixo).',
-          'Desenvolvedor: Faisal, na [Dataweal](https://mypocketai.app/).',
+          'Desenvolvedor: Faisal.',
           'Motor: [llama.cpp](https://github.com/ggml-org/llama.cpp) com aceleração Metal, executado totalmente no dispositivo.',
           'Catálogo de modelos: 28 modelos, segundo o desenvolvedor, das famílias Qwen, Gemma, Llama, Mistral, Phi e DeepSeek.',
           'Offline: funciona no modo avião depois que um modelo é baixado; sem conta ou comunicação com servidor para conversar.',
@@ -2571,14 +2571,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'A palavra do criador',
         content: [
-          'A PromptQuorum pediu a Faisal, o desenvolvedor do Pocket AI na Dataweal, que descrevesse o aplicativo e o raciocínio por trás de suas decisões de preço e plataforma. O que se segue é apresentado como as próprias palavras do desenvolvedor, reorganizadas em parágrafos para facilitar a leitura, e não como uma avaliação editorial independente da PromptQuorum:',
+          'A PromptQuorum pediu a Faisal, o desenvolvedor do Pocket AI, que descrevesse o aplicativo e o raciocínio por trás de suas decisões de preço e plataforma. O que se segue é apresentado como as próprias palavras do desenvolvedor, reorganizadas em parágrafos para facilitar a leitura, e não como uma avaliação editorial independente da PromptQuorum:',
           '"O Pocket AI existe por causa de uma pequena frustração. Todo bom aplicativo de modelo local no iPhone me pedia algo antes de tudo: uma conta, uma assinatura ou comunicação com um servidor. Eu não queria nada disso.',
           'O aplicativo executa modelos de pesos abertos diretamente no iPhone por meio do llama.cpp com aceleração Metal. Qwen, Gemma, Llama, Mistral, Phi e DeepSeek estão todos no catálogo, hoje são 28 modelos. Não há conta nem servidor. Depois que um modelo é baixado, o aplicativo funciona no modo avião: em um avião, em um túnel, ou em um telefone que nunca fez login em nada. A entrada de voz usa o Whisper, no dispositivo, então o ditado também nunca sai do telefone.',
           'O preço segue a mesma ideia. O aplicativo é gratuito e o desbloqueio Pro custa US$ 4,99 uma única vez. Sem assinatura. Prefiro vender uma coisa a alugá-la.',
           'O que ele não é: não é de código aberto, e não é para hardware antigo. Um iPhone 12 ou mais recente é uma exigência real, porque a inferência de modelos é limitada pela memória e não há como contornar isso de forma honesta.',
           'É um aplicativo pequeno com uma única promessa. Sua conversa fica no seu telefone. Esse é todo o produto."',
         ],
-        note: '— Faisal, desenvolvedor, Dataweal',
+        note: '— Faisal, desenvolvedor',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2681,7 +2681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quem desenvolve o Pocket AI - No Internet?',
-            a: 'O Pocket AI é desenvolvido por Faisal na [Dataweal](https://mypocketai.app/).',
+            a: 'O Pocket AI é desenvolvido por Faisal.',
           },
           {
             q: 'Quais modelos o Pocket AI suporta?',
@@ -2729,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet na App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — preço e compatibilidade de plataforma.',
           '[Site oficial do Pocket AI](https://mypocketai.app/) — visão geral do produto.',
-          'Correspondência direta com Faisal, desenvolvedor na Dataweal, fornecida à PromptQuorum antes de 8 de setembro de 2026 — descrição do aplicativo, número de modelos no catálogo, modelo de preços, raciocínio sobre o requisito de hardware e status de código aberto.',
+          'Correspondência direta com Faisal, o desenvolvedor, fornecida à PromptQuorum antes de 8 de setembro de 2026 — descrição do aplicativo, número de modelos no catálogo, modelo de preços, raciocínio sobre o requisito de hardware e status de código aberto.',
         ],
       },
       relatedReading: {
@@ -2779,7 +2779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet تطبيق مجاني لآيفون يشغّل نماذج ذكاء اصطناعي مفتوحة الأوزان بالكامل على الجهاز باستخدام [llama.cpp](https://github.com/ggml-org/llama.cpp) مع تسريع Metal — دون حساب، ودون خادم، ويمكن استخدامه بالكامل دون إنترنت بمجرد تنزيل نموذج.** من تطوير فيصل في [Dataweal](https://mypocketai.app/)، وتضم مكتبته وفق المطوّر 28 نموذجًا من عائلات Qwen وGemma وLlama وMistral وPhi وDeepSeek. التطبيق مجاني للدردشة النصية؛ ويضيف فتح Pro مدفوع إدخال صوت Whisper على الجهاز. يتطلب آيفون 12 أو أحدث، وهو ما يعزوه المطوّر إلى كون الاستدلال محدودًا بحجم الذاكرة. للمقارنة، راجع أيضًا [مراجعة Private LLM](/ar/power-local-llm/private-llm-review) أو [مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet تطبيق مجاني لآيفون يشغّل نماذج ذكاء اصطناعي مفتوحة الأوزان بالكامل على الجهاز باستخدام [llama.cpp](https://github.com/ggml-org/llama.cpp) مع تسريع Metal — دون حساب، ودون خادم، ويمكن استخدامه بالكامل دون إنترنت بمجرد تنزيل نموذج.** من تطوير فيصل، وتضم مكتبته وفق المطوّر 28 نموذجًا من عائلات Qwen وGemma وLlama وMistral وPhi وDeepSeek. التطبيق مجاني للدردشة النصية؛ ويضيف فتح Pro مدفوع إدخال صوت Whisper على الجهاز. يتطلب آيفون 12 أو أحدث، وهو ما يعزوه المطوّر إلى كون الاستدلال محدودًا بحجم الذاكرة. للمقارنة، راجع أيضًا [مراجعة Private LLM](/ar/power-local-llm/private-llm-review) أو [مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -2835,7 +2835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet تطبيق آيفون مجاني من المطوّر فيصل في Dataweal يشغّل نماذج ذكاء اصطناعي مفتوحة الأوزان (Qwen وGemma وLlama وMistral وPhi وDeepSeek) بالكامل على الجهاز عبر llama.cpp مع تسريع Metal، ويُوزَّع مباشرة عبر متجر تطبيقات آبل، مع فتح Pro مدفوع لإدخال صوت Whisper على الجهاز.',
+            text: 'Pocket AI - No Internet تطبيق آيفون مجاني من المطوّر فيصل يشغّل نماذج ذكاء اصطناعي مفتوحة الأوزان (Qwen وGemma وLlama وMistral وPhi وDeepSeek) بالكامل على الجهاز عبر llama.cpp مع تسريع Metal، ويُوزَّع مباشرة عبر متجر تطبيقات آبل، مع فتح Pro مدفوع لإدخال صوت Whisper على الجهاز.',
           },
           {
             type: 'plain-terms',
@@ -2844,7 +2844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'السعر: مجاني [للتنزيل](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) والاستخدام في الدردشة النصية؛ فتح Pro مدفوع يضيف إدخال صوت Whisper على الجهاز (راجع قسم الأسعار أدناه).',
-          'المطوّر: فيصل، في [Dataweal](https://mypocketai.app/).',
+          'المطوّر: فيصل.',
           'المحرك: [llama.cpp](https://github.com/ggml-org/llama.cpp) مع تسريع Metal، يعمل بالكامل على الجهاز.',
           'كتالوج النماذج: 28 نموذجًا وفق المطوّر، من عائلات Qwen وGemma وLlama وMistral وPhi وDeepSeek.',
           'العمل دون إنترنت: يعمل في وضع الطيران بمجرد تنزيل نموذج؛ دون حساب أو اتصال بخادم للدردشة.',
@@ -2964,14 +2964,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: 'من صانع التطبيق',
         content: [
-          'طلبت PromptQuorum من فيصل، مطوّر Pocket AI في Dataweal، أن يصف التطبيق والمنطق وراء قراراته المتعلقة بالتسعير والمنصة. ما يلي مقدَّم بصفته كلمات المطوّر نفسه، أُعيد تنظيمها في فقرات لتسهيل القراءة، وليس بوصفه تقييمًا تحريريًا مستقلًا من PromptQuorum:',
+          'طلبت PromptQuorum من فيصل، مطوّر Pocket AI، أن يصف التطبيق والمنطق وراء قراراته المتعلقة بالتسعير والمنصة. ما يلي مقدَّم بصفته كلمات المطوّر نفسه، أُعيد تنظيمها في فقرات لتسهيل القراءة، وليس بوصفه تقييمًا تحريريًا مستقلًا من PromptQuorum:',
           '«يوجد Pocket AI بسبب إحباط صغير. كل تطبيق نموذج محلي جيد على آيفون كان يطلب مني شيئًا أولًا: حسابًا، أو اشتراكًا، أو اتصالًا بخادم. لم أرد أيًا من ذلك.',
           'يشغّل التطبيق نماذج مفتوحة الأوزان مباشرة على آيفون عبر llama.cpp مع تسريع Metal. تتضمن Qwen وGemma وLlama وMistral وPhi وDeepSeek كلها في الكتالوج، وهي 28 نموذجًا اليوم. لا يوجد حساب ولا خادم. بمجرد تنزيل نموذج، يعمل التطبيق في وضع الطيران: في طائرة، أو في نفق، أو على هاتف لم يسجّل الدخول إلى أي شيء قط. يستخدم الإدخال الصوتي Whisper، على الجهاز، لذا لا يغادر الإملاء الهاتف أيضًا.',
           'يتبع التسعير الفكرة نفسها. التطبيق مجاني وفتح Pro يكلف 4.99 دولار لمرة واحدة. دون اشتراك. أفضّل بيع شيء على تأجيره.',
           'ما لا يكونه: ليس مفتوح المصدر، وليس مخصصًا للأجهزة القديمة. آيفون 12 أو أحدث متطلب حقيقي، لأن استدلال النماذج محدود بحجم الذاكرة ولا توجد طريقة صادقة للالتفاف حول ذلك.',
           'إنه تطبيق صغير بوعد واحد. تبقى محادثتك على هاتفك. هذا هو المنتج بأكمله».',
         ],
-        note: '— فيصل، مطوّر، Dataweal',
+        note: '— فيصل، مطوّر',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3074,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'من يطوّر Pocket AI - No Internet؟',
-            a: 'يطوّر Pocket AI فيصل في [Dataweal](https://mypocketai.app/).',
+            a: 'يطوّر Pocket AI فيصل.',
           },
           {
             q: 'ما النماذج التي يدعمها Pocket AI؟',
@@ -3122,7 +3122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Pocket AI - No Internet على متجر التطبيقات](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — السعر وتوافق المنصات.',
           '[الموقع الرسمي لـ Pocket AI](https://mypocketai.app/) — نظرة عامة على المنتج.',
-          'مراسلات مباشرة مع فيصل، المطوّر في Dataweal، قُدِّمت إلى PromptQuorum قبل 8 سبتمبر 2026 — وصف التطبيق، وعدد النماذج في الكتالوج، ونموذج التسعير، وتبرير متطلبات الأجهزة، وحالة المصدر المفتوح.',
+          'مراسلات مباشرة مع فيصل، المطوّر، قُدِّمت إلى PromptQuorum قبل 8 سبتمبر 2026 — وصف التطبيق، وعدد النماذج في الكتالوج، ونموذج التسعير، وتبرير متطلبات الأجهزة، وحالة المصدر المفتوح.',
         ],
       },
       relatedReading: {
@@ -3172,7 +3172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet는 [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Metal 가속을 통해 오픈 웨이트 AI 모델을 완전히 기기에서 실행하는 무료 아이폰 앱입니다 — 계정도 서버도 필요 없으며, 모델을 다운로드하면 완전히 오프라인으로 사용할 수 있습니다.** [Dataweal](https://mypocketai.app/)의 Faisal이 만들었으며, 개발자에 따르면 카탈로그는 Qwen, Gemma, Llama, Mistral, Phi, DeepSeek 계열에 걸쳐 28개 모델로 구성됩니다. 텍스트 채팅은 무료로 사용할 수 있으며, 유료 Pro 잠금 해제로 온디바이스 Whisper 음성 입력이 추가됩니다. 개발자에 따르면 추론이 메모리에 제약을 받기 때문에 아이폰 12 이상이 필요합니다. 비교를 원한다면 [Private LLM 리뷰](/ko/power-local-llm/private-llm-review)나 [PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review)도 참고하세요.',
+      '**Pocket AI - No Internet는 [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Metal 가속을 통해 오픈 웨이트 AI 모델을 완전히 기기에서 실행하는 무료 아이폰 앱입니다 — 계정도 서버도 필요 없으며, 모델을 다운로드하면 완전히 오프라인으로 사용할 수 있습니다.** Faisal이 만들었으며, 개발자에 따르면 카탈로그는 Qwen, Gemma, Llama, Mistral, Phi, DeepSeek 계열에 걸쳐 28개 모델로 구성됩니다. 텍스트 채팅은 무료로 사용할 수 있으며, 유료 Pro 잠금 해제로 온디바이스 Whisper 음성 입력이 추가됩니다. 개발자에 따르면 추론이 메모리에 제약을 받기 때문에 아이폰 12 이상이 필요합니다. 비교를 원한다면 [Private LLM 리뷰](/ko/power-local-llm/private-llm-review)나 [PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review)도 참고하세요.',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -3228,7 +3228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pocket AI - No Internet는 Dataweal의 개발자 Faisal이 만든 무료 아이폰 앱으로, llama.cpp와 Metal 가속을 통해 오픈 웨이트 AI 모델(Qwen, Gemma, Llama, Mistral, Phi, DeepSeek)을 완전히 기기에서 실행하며, 애플 앱스토어를 통해 직접 배포되고, 온디바이스 Whisper 음성 입력을 위한 유료 Pro 잠금 해제가 있습니다.',
+            text: 'Pocket AI - No Internet는 개발자 Faisal이 만든 무료 아이폰 앱으로, llama.cpp와 Metal 가속을 통해 오픈 웨이트 AI 모델(Qwen, Gemma, Llama, Mistral, Phi, DeepSeek)을 완전히 기기에서 실행하며, 애플 앱스토어를 통해 직접 배포되고, 온디바이스 Whisper 음성 입력을 위한 유료 Pro 잠금 해제가 있습니다.',
           },
           {
             type: 'plain-terms',
@@ -3237,7 +3237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '가격: 무료로 [다운로드](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)하여 텍스트 채팅에 사용 가능; 유료 Pro 잠금 해제로 온디바이스 Whisper 음성 입력 추가(아래 가격 섹션 참고).',
-          '개발자: [Dataweal](https://mypocketai.app/)의 Faisal.',
+          '개발자: Faisal.',
           '엔진: [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Metal 가속, 완전히 기기에서 실행.',
           '모델 카탈로그: 개발자에 따르면 Qwen, Gemma, Llama, Mistral, Phi, DeepSeek 계열에 걸쳐 28개 모델.',
           '오프라인: 모델을 다운로드하면 비행기 모드에서 작동; 채팅에 계정이나 서버 통신 불필요.',
@@ -3357,14 +3357,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'from-the-maker',
         title: '개발자의 말',
         content: [
-          'PromptQuorum은 Dataweal에서 Pocket AI를 개발한 Faisal에게 앱과 가격 및 플랫폼 선택 뒤에 있는 사고방식을 설명해 달라고 요청했습니다. 다음 내용은 가독성을 위해 단락으로 재구성되었을 뿐, 개발자 본인의 말 그대로 제시되는 것이며 PromptQuorum의 독립적인 편집상의 평가가 아닙니다:',
+          'PromptQuorum은 Pocket AI를 개발한 Faisal에게 앱과 가격 및 플랫폼 선택 뒤에 있는 사고방식을 설명해 달라고 요청했습니다. 다음 내용은 가독성을 위해 단락으로 재구성되었을 뿐, 개발자 본인의 말 그대로 제시되는 것이며 PromptQuorum의 독립적인 편집상의 평가가 아닙니다:',
           '"Pocket AI는 작은 불만에서 시작되었습니다. 아이폰에서 좋은 로컬 모델 앱들은 모두 먼저 무언가를 요구했습니다: 계정, 구독, 또는 서버 왕복 통신. 저는 그 어느 것도 원하지 않았습니다.',
           '이 앱은 llama.cpp와 Metal 가속을 통해 오픈 웨이트 모델을 아이폰에서 직접 실행합니다. Qwen, Gemma, Llama, Mistral, Phi, DeepSeek이 모두 카탈로그에 있으며, 오늘날 기준으로 28개 모델입니다. 계정도 서버도 없습니다. 모델을 다운로드하면 앱은 비행기 안, 터널 안, 또는 무엇에도 로그인한 적 없는 휴대전화 등 비행기 모드에서도 작동합니다. 음성 입력은 기기에서 실행되는 Whisper를 사용하므로 받아쓰기 역시 휴대전화를 벗어나지 않습니다.',
           '가격 정책도 같은 생각을 따릅니다. 앱은 무료이고 Pro 잠금 해제는 한 번에 4.99달러입니다. 구독은 없습니다. 저는 무언가를 빌려주기보다는 파는 쪽을 선호합니다.',
           '이 앱이 아닌 것: 오픈소스가 아니며, 오래된 하드웨어를 위한 것도 아닙니다. 아이폰 12 이상은 실제 요구 사항인데, 모델 추론이 메모리에 제약을 받기 때문이며 이를 우회할 정직한 방법은 없습니다.',
           '이것은 하나의 약속을 지닌 작은 앱입니다. 당신의 대화는 당신의 휴대전화에 남습니다. 그것이 이 제품의 전부입니다."',
         ],
-        note: '— Faisal, 개발자, Dataweal',
+        note: '— Faisal, 개발자',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3467,7 +3467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Pocket AI - No Internet는 누가 개발하나요?',
-            a: 'Pocket AI는 [Dataweal](https://mypocketai.app/)의 Faisal이 개발합니다.',
+            a: 'Pocket AI는 Faisal이 개발합니다.',
           },
           {
             q: 'Pocket AI는 어떤 모델을 지원하나요?',
@@ -3515,7 +3515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[앱스토어의 Pocket AI - No Internet](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) — 가격 및 플랫폼 호환성.',
           '[Pocket AI 공식 사이트](https://mypocketai.app/) — 제품 개요.',
-          '2026년 9월 8일 이전에 PromptQuorum에 제공된 Dataweal의 개발자 Faisal과의 직접 서신 — 앱 설명, 모델 카탈로그 수, 가격 모델, 하드웨어 요구 사항에 대한 이유, 오픈소스 여부.',
+          '2026년 9월 8일 이전에 PromptQuorum에 제공된 개발자 Faisal과의 직접 서신 — 앱 설명, 모델 카탈로그 수, 가격 모델, 하드웨어 요구 사항에 대한 이유, 오픈소스 여부.',
         ],
       },
       relatedReading: {
