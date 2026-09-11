@@ -161,6 +161,7 @@ https://www.promptquorum.com/local-llms/llm-quantization-explained
 https://www.promptquorum.com/local-llms/lm-studio-advanced-features
 https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai
 https://www.promptquorum.com/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared
+https://www.promptquorum.com/local-llms/lobechat-review
 https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama
 https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit
 https://www.promptquorum.com/local-llms/local-llm-commercial-license-guide-business
@@ -245,6 +246,7 @@ https://www.promptquorum.com/power-local-llm/aichat-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
 https://www.promptquorum.com/power-local-llm/anythingllm-mobile-review
+https://www.promptquorum.com/power-local-llm/anythingllm-review
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/aori-ai-personal-agent-review
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
