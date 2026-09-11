@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل مستقل بسيط بقدرات برمجية',
     ko: '코딩 기능을 갖춘 미니멀한 자율 에이전트',
   },
+  reviewSlug: 'agent-zero-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'ذكاء اصطناعي في شريط جانبي للمتصفح لـChrome وFirefox',
     ko: 'Chrome 및 Firefox용 브라우저 사이드바 AI',
   },
+  reviewSlug: 'page-assist-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

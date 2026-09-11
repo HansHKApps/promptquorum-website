@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار عمل مفتوح المصدر لمساعد ذكاء اصطناعي شخصي',
     ko: '오픈소스 개인 AI 비서 프레임워크',
   },
+  reviewSlug: 'leon-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

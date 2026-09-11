@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكلاء تواصليون للتعاون بين وكلاء متعددين',
     ko: '멀티 에이전트 협업을 위한 소통형 에이전트',
   },
+  reviewSlug: 'camel-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

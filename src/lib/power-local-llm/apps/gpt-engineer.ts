@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'توليد كود مستقل وبناء مشاريع كاملة',
     ko: '자율 코드 생성 및 전체 프로젝트 구축',
   },
+  reviewSlug: 'gpt-engineer-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

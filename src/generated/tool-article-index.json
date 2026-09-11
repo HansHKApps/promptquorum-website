@@ -2,6 +2,54 @@
   "Ollama": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-tts-for-ollama",
         "title": "Best TTS for Ollama (2026): Adding Voice Output to a Local LLM Setup",
@@ -32,57 +80,9 @@
         "url": "/power-local-llm/idefics-review",
         "dateModified": "2026-09-07",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlc-chat-review",
-        "title": "MLC Chat Review (2026): The Mobile App Built on MLC LLM, Assessed Honestly",
-        "url": "/power-local-llm/mlc-chat-review",
-        "dateModified": "2026-09-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-2026",
-        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
-        "url": "/local-llms/best-local-llms-2026",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aichat-review",
-        "title": "aichat Review: One Rust CLI, 20+ AI Providers",
-        "url": "/power-local-llm/aichat-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "boltai-review",
-        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
-        "url": "/power-local-llm/boltai-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chapper-review",
-        "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/chapper-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review 2026: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 217,
+    "totalCount": 223,
     "capped": true
   },
   "llama.cpp": {
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "jan-review",
         "title": "Jan Review 2026: The Open-Source, Offline ChatGPT Alternative",
         "url": "/power-local-llm/jan-review",
@@ -308,7 +316,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "TensorRT-LLM": {
@@ -561,6 +569,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -584,7 +600,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "MLX-LM": {
@@ -628,6 +644,54 @@
   "LM Studio": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "mlc-chat-review",
         "title": "MLC Chat Review (2026): The Mobile App Built on MLC LLM, Assessed Honestly",
@@ -658,57 +722,9 @@
         "url": "/power-local-llm/maid-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "privategpt-review",
-        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
-        "url": "/power-local-llm/privategpt-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rikkahub-review",
-        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
-        "url": "/power-local-llm/rikkahub-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vllm-explained",
-        "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
-        "url": "/power-local-llm/vllm-explained",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "sillytavern-review",
-        "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
-        "url": "/local-llms/sillytavern-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-review",
-        "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
-        "url": "/local-llms/text-generation-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 107,
+    "totalCount": 113,
     "capped": true
   },
   "Atomic Chat": {
@@ -917,6 +933,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-mobile-review",
         "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
         "url": "/power-local-llm/anythingllm-mobile-review",
@@ -986,17 +1010,9 @@
         "url": "/power-local-llm/chat-with-1000-pdfs-locally",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Msty": {
@@ -1097,6 +1113,30 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
@@ -1112,7 +1152,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 6,
     "capped": false
   },
   "Backyard AI": {
@@ -1452,6 +1492,46 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "boltai-review",
         "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
@@ -1482,49 +1562,9 @@
         "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "h2ogpt-review-2026",
-        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
-        "url": "/power-local-llm/h2ogpt-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "librechat-review-2026",
-        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
-        "url": "/power-local-llm/librechat-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-vs-sillytavern",
-        "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
-        "url": "/local-llms/open-webui-vs-sillytavern",
-        "dateModified": "2026-08-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 47,
     "capped": true
   },
   "LibreChat": {
@@ -1535,6 +1575,22 @@
         "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
         "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
       },
       {
@@ -1570,7 +1626,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 7,
     "capped": false
   },
   "text-generation-webui": {
@@ -1726,27 +1782,67 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rikkahub-review",
-        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
-        "url": "/power-local-llm/rikkahub-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "LobeChat": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-review",
+        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
+        "url": "/local-llms/lobechat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "open-webui-review",
@@ -1764,13 +1860,45 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 7,
     "capped": false
   },
   "Big-AGI": {
     "articles": [
       {
         "cluster": "local-llms",
+        "slug": "big-agi-review",
+        "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
+        "url": "/local-llms/big-agi-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -1778,25 +1906,35 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 5,
     "capped": false
   },
   "NextChat": {
     "articles": [
       {
         "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
+        "slug": "nextchat-review",
+        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
+        "url": "/local-llms/nextchat-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
-      }
-    ],
-    "totalCount": 1,
-    "capped": false
-  },
-  "Page Assist": {
-    "articles": [
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -1806,11 +1944,49 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 4,
+    "capped": false
+  },
+  "Page Assist": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "Chatbox": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "chatbox-review",
+        "title": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "url": "/local-llms/chatbox-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
@@ -1836,7 +2012,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Continue.dev": {
@@ -2335,6 +2511,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review 2026: Archived — What to Use Instead",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "blackbox-ai-cli-review",
         "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
         "url": "/power-local-llm/blackbox-ai-cli-review",
@@ -2348,17 +2532,9 @@
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "continue-dev-review",
-        "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
-        "url": "/power-local-llm/continue-dev-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "aichat": {
@@ -2433,6 +2609,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-mobile-review",
         "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
         "url": "/power-local-llm/anythingllm-mobile-review",
@@ -2494,17 +2678,9 @@
         "url": "/power-local-llm/msty-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
-        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
-        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Quivr": {
@@ -2524,9 +2700,17 @@
         "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Khoj": {
@@ -2541,6 +2725,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "quivr-self-hosted-knowledge-assistant-review",
         "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
         "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
@@ -2548,7 +2740,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Dify": {
@@ -2772,7 +2964,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Haystack": {
@@ -2846,9 +3038,17 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "txtai": {
@@ -2873,6 +3073,22 @@
         "title": "LangChain Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
       },
       {
@@ -2930,25 +3146,9 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langflow-visual-ai-orchestration-review",
-        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
-        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamaindex-rag-framework-review",
-        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
-        "url": "/power-local-llm/llamaindex-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 27,
     "capped": true
   },
   "CrewAI": {
@@ -2959,6 +3159,14 @@
         "title": "CrewAI Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/crewai-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dspy-review",
+        "title": "DSPy Review 2026: Features, Optimizers, Alternatives",
+        "url": "/power-local-llm/dspy-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
       },
       {
@@ -2987,31 +3195,47 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "camel-review",
+        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
+        "url": "/power-local-llm/camel-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review 2026: Archived — What to Use Instead",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "letta-review",
         "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
         "url": "/power-local-llm/letta-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogen-review",
-        "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
-        "url": "/power-local-llm/autogen-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langgraph-review",
-        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
-        "url": "/power-local-llm/langgraph-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
-    "capped": false
+    "totalCount": 12,
+    "capped": true
   },
   "AutoGen": {
     "articles": [
@@ -3021,6 +3245,22 @@
         "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dspy-review",
+        "title": "DSPy Review 2026: Features, Optimizers, Alternatives",
+        "url": "/power-local-llm/dspy-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "taskweaver-review",
+        "title": "TaskWeaver Review 2026: Features, Status, Alternatives",
+        "url": "/power-local-llm/taskweaver-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
       },
       {
@@ -3049,47 +3289,39 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "letta-review",
-        "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
-        "url": "/power-local-llm/letta-review",
-        "dateModified": "2026-09-07",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "superagi-review",
-        "title": "SuperAGI Review 2026: Features, Pricing, Is It Maintained?",
-        "url": "/power-local-llm/superagi-review",
-        "dateModified": "2026-09-07",
+        "slug": "camel-review",
+        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
+        "url": "/power-local-llm/camel-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "langgraph-review",
-        "title": "LangGraph Review 2026: Features, Pricing, Alternatives",
-        "url": "/power-local-llm/langgraph-review",
-        "dateModified": "2026-09-05",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review 2026: Archived — What to Use Instead",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-openai-compatible-api",
-        "title": "LM Studio & Ollama OpenAI-Compatible API Documentation: Python, Node.js, Aider, Cline & Roo Code (2026)",
-        "url": "/local-llms/local-llm-openai-compatible-api",
-        "dateModified": "2026-08-28",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
-    "capped": false
+    "totalCount": 15,
+    "capped": true
   },
   "Semantic Kernel": {
     "articles": [
@@ -3111,6 +3343,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "letta-review",
         "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
         "url": "/power-local-llm/letta-review",
@@ -3118,7 +3366,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 5,
     "capped": false
   },
   "LangGraph": {
@@ -3173,6 +3421,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "camel-review",
+        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
+        "url": "/power-local-llm/camel-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "letta-review",
         "title": "Letta Review 2026: Memory, ADE, Pricing, Alternatives",
         "url": "/power-local-llm/letta-review",
@@ -3194,17 +3450,9 @@
         "url": "/power-local-llm/crewai-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogpt-local-review-2026",
-        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
-        "url": "/power-local-llm/autogpt-local-review-2026",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "SuperAGI": {
@@ -3215,6 +3463,106 @@
         "title": "SuperAGI Review 2026: Features, Pricing, Is It Maintained?",
         "url": "/power-local-llm/superagi-review",
         "dateModified": "2026-09-07",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Leon AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Agent Zero": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "agent-zero-review",
+        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/agent-zero-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "GPT Engineer": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review 2026: Archived — What to Use Instead",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "CAMEL": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "camel-review",
+        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
+        "url": "/power-local-llm/camel-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "TaskWeaver": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "taskweaver-review",
+        "title": "TaskWeaver Review 2026: Features, Status, Alternatives",
+        "url": "/power-local-llm/taskweaver-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "DSPy": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dspy-review",
+        "title": "DSPy Review 2026: Features, Optimizers, Alternatives",
+        "url": "/power-local-llm/dspy-review",
+        "dateModified": "2026-09-11",
         "tier": "about"
       }
     ],
@@ -4143,6 +4491,20 @@
     "totalCount": 17,
     "capped": true
   },
+  "Pocket AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pocket-ai-review",
+        "title": "Pocket AI Review (2026): Offline On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/pocket-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Private LLM": {
     "articles": [
       {
@@ -4439,6 +4801,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -4446,7 +4816,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Enclave AI": {
@@ -5185,6 +5555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "gpt-engineer-review",
+        "title": "GPT Engineer Review 2026: Archived — What to Use Instead",
+        "url": "/power-local-llm/gpt-engineer-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "superagi-review",
         "title": "SuperAGI Review 2026: Features, Pricing, Is It Maintained?",
         "url": "/power-local-llm/superagi-review",
@@ -5192,7 +5570,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "MetaGPT": {

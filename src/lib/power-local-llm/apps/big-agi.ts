@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة أمامية متعددة المزودين متقدمة مع شخصيات',
     ko: '페르소나가 있는 고급 멀티 제공자 프런트엔드',
   },
+  reviewSlug: 'big-agi-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
