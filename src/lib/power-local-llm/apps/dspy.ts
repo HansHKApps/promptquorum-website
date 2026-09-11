@@ -1,4 +1,4 @@
-// Local AI App Directory — DsPy (layer: agent)
+// Local AI App Directory — DSPy (layer: agent)
 // Migrated from local-llm-software-directory-2026.ts (Phase 1 data migration).
 // Plan: see-the-directory-page-virtual-cocke.md
 // DRAFT — enrichment fields ('TODO'/null) are unverified and pending human review.
@@ -7,7 +7,7 @@ import type { ToolRecord } from './types'
 
 export const app: ToolRecord = {
   slug: 'dspy',
-  name: 'DsPy',
+  name: 'DSPy',
   categories: ['prompt-tooling-evals', 'sdks-libraries'],
   interfaces: ['library'],
   locality: 'hybrid',
@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'برامج تصريحية تحسّن نفسها ذاتيًا باستخدام نماذج اللغة',
     ko: '언어 모델을 활용한 선언적 자기개선 프로그램',
   },
+  reviewSlug: 'dspy-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

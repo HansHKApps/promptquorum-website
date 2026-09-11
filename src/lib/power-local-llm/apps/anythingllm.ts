@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'RAG ودردشة مستندات مع مخزن متجهات مدمج',
     ko: '내장 벡터 저장소를 갖춘 RAG 및 문서 채팅',
   },
+  reviewSlug: 'anythingllm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

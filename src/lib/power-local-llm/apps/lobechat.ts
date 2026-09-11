@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'واجهة حديثة ومصقولة مع سوق إضافات',
     ko: '플러그인 마켓플레이스가 있는 현대적이고 세련된 인터페이스',
   },
+  reviewSlug: 'lobechat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

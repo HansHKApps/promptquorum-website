@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل من مايكروسوفت يعتمد على الكود لتخطيط المهام',
     ko: '작업 계획을 위한 마이크로소프트의 코드 우선 에이전트',
   },
+  reviewSlug: 'taskweaver-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

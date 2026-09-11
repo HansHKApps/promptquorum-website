@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عميل متعدد المنصات لسطح المكتب والويب',
     ko: '크로스플랫폼 데스크톱 및 웹 클라이언트',
   },
+  reviewSlug: 'chatbox-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
