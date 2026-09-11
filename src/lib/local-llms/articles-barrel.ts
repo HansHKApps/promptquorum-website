@@ -35,6 +35,7 @@ import { article as a_cherry_studio_ai_desktop_client_2026 } from "./articles/ch
 import { article as a_open_webui_review } from "./articles/open-webui-review";
 import { article as a_lobechat_review } from "./articles/lobechat-review";
 import { article as a_big_agi_review } from "./articles/big-agi-review";
+import { article as a_nextchat_review } from "./articles/nextchat-review";
 import { article as a_text_generation_webui_review } from "./articles/text-generation-webui-review";
 import { article as a_sillytavern_review } from "./articles/sillytavern-review";
 import { article as a_lobechat_bigagi_nextchat_pageassist_chatbox_compared } from "./articles/lobechat-bigagi-nextchat-pageassist-chatbox-compared";
@@ -201,6 +202,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "open-webui-review": a_open_webui_review,
   "lobechat-review": a_lobechat_review,
   "big-agi-review": a_big_agi_review,
+  "nextchat-review": a_nextchat_review,
   "text-generation-webui-review": a_text_generation_webui_review,
   "sillytavern-review": a_sillytavern_review,
   "lobechat-bigagi-nextchat-pageassist-chatbox-compared": a_lobechat_bigagi_nextchat_pageassist_chatbox_compared,
