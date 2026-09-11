@@ -20,6 +20,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-app-non-technical-users',
 
   // Cat 2 — RAG & Document Chat (5)
+  'anythingllm-review',
   'anythingllm-vs-privategpt-vs-openwebui-rag',
   'local-rag-on-your-pdfs-step-by-step',
   'best-embedding-models-local-rag-2026',

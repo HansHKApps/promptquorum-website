@@ -37,6 +37,7 @@ import { article as a_layla_review } from './articles/layla-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
 import { article as a_rikkahub_review } from './articles/rikkahub-review'
 import { article as a_anythingllm_mobile_review } from './articles/anythingllm-mobile-review'
+import { article as a_anythingllm_review } from './articles/anythingllm-review'
 import { article as a_twinny_review } from './articles/twinny-review'
 import { article as a_aider_review } from './articles/aider-review'
 import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
@@ -436,6 +437,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'rikkahub-review':                               a_rikkahub_review,
   // AnythingLLM Mobile review — 2026-09-06
   'anythingllm-mobile-review':                      a_anythingllm_mobile_review,
+  'anythingllm-review':                             a_anythingllm_review,
   // Twinny, Aider, shell-gpt reviews — 2026-09-06
   'twinny-review':                                  a_twinny_review,
   'aider-review':                                   a_aider_review,
