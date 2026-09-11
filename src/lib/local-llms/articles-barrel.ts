@@ -33,6 +33,7 @@ import { article as a_ollama_vs_lm_studio } from "./articles/ollama-vs-lm-studio
 import { article as a_best_local_llm_frontends } from "./articles/best-local-llm-frontends";
 import { article as a_cherry_studio_ai_desktop_client_2026 } from "./articles/cherry-studio-ai-desktop-client-2026";
 import { article as a_open_webui_review } from "./articles/open-webui-review";
+import { article as a_lobechat_review } from "./articles/lobechat-review";
 import { article as a_text_generation_webui_review } from "./articles/text-generation-webui-review";
 import { article as a_sillytavern_review } from "./articles/sillytavern-review";
 import { article as a_lobechat_bigagi_nextchat_pageassist_chatbox_compared } from "./articles/lobechat-bigagi-nextchat-pageassist-chatbox-compared";
@@ -197,6 +198,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "best-local-llm-frontends": a_best_local_llm_frontends,
   "cherry-studio-ai-desktop-client-2026": a_cherry_studio_ai_desktop_client_2026,
   "open-webui-review": a_open_webui_review,
+  "lobechat-review": a_lobechat_review,
   "text-generation-webui-review": a_text_generation_webui_review,
   "sillytavern-review": a_sillytavern_review,
   "lobechat-bigagi-nextchat-pageassist-chatbox-compared": a_lobechat_bigagi_nextchat_pageassist_chatbox_compared,
