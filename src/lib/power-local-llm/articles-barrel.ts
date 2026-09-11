@@ -180,6 +180,7 @@ import { article as a_semantic_kernel_review } from './articles/semantic-kernel-
 import { article as a_letta_review } from './articles/letta-review'
 import { article as a_leon_ai_review } from './articles/leon-ai-review'
 import { article as a_agent_zero_review } from './articles/agent-zero-review'
+import { article as a_taskweaver_review } from './articles/taskweaver-review'
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_librechat_review_2026 } from './articles/librechat-review-2026'
@@ -315,6 +316,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'letta-review':                                      a_letta_review,
   'leon-ai-review':                                    a_leon_ai_review,
   'agent-zero-review':                                 a_agent_zero_review,
+  'taskweaver-review':                                 a_taskweaver_review,
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,

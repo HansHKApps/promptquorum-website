@@ -178,6 +178,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Agent frameworks series — Agent Zero review (article 9 of 14) — 2026-09-11
   'agent-zero-review': 'agent-zero-review',
+  // Agent frameworks series — TaskWeaver review (article 10 of 14) — 2026-09-11
+  'taskweaver-review': 'taskweaver-review',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',

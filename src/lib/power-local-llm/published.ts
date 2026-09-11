@@ -182,6 +182,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'leon-ai-review',
   // Agent frameworks series — Agent Zero review (article 9 of 14) — 2026-09-11
   'agent-zero-review',
+  // Agent frameworks series — TaskWeaver review (article 10 of 14) — 2026-09-11
+  'taskweaver-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
