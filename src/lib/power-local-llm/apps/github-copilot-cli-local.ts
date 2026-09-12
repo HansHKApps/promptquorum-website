@@ -39,4 +39,5 @@ export const app: ToolRecord = {
     ko: 'BYOK를 지원하고 Ollama 및 vLLM을 통해 완전한 로컬/오프라인 모델을 지원하는 GitHub의 터미널 코딩 에이전트',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'github-copilot-cli-review', // dedicated PromptQuorum review — added 2026-09-12
 }

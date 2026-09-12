@@ -405,6 +405,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'agnai-review',
   'metagpt-review',
   'risuai-review',
+  // Zed review — 2026-09-12
+  'zed-review',
+  // GitHub Copilot CLI review — 2026-09-12
+  'github-copilot-cli-review',
+  // Copilot for Obsidian review — 2026-09-12
+  'copilot-for-obsidian-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

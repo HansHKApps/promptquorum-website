@@ -34,4 +34,5 @@ export const app: ToolRecord = {
     ko: 'Obsidian용 로컬 LLM 채팅 플러그인',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'copilot-for-obsidian-review',
 }

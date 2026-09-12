@@ -243,6 +243,9 @@ import { article as a_kilo_code_review } from './articles/kilo-code-review'
 import { article as a_agnai_review } from './articles/agnai-review'
 import { article as a_metagpt_review } from './articles/metagpt-review'
 import { article as a_risuai_review } from './articles/risuai-review'
+import { article as a_zed_review } from './articles/zed-review'
+import { article as a_github_copilot_cli_review } from './articles/github-copilot-cli-review'
+import { article as a_copilot_for_obsidian_review } from './articles/copilot-for-obsidian-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -525,4 +528,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'agnai-review':                                   a_agnai_review,
   'metagpt-review':                                 a_metagpt_review,
   'risuai-review':                                  a_risuai_review,
+  'zed-review':                                      a_zed_review,
+  'github-copilot-cli-review':                       a_github_copilot_cli_review,
+  'copilot-for-obsidian-review':                      a_copilot_for_obsidian_review,
 }
