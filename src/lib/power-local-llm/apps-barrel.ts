@@ -108,6 +108,7 @@ import { app as app_mlc_chat } from './apps/mlc-chat'
 import { app as app_pocketpal_ai } from './apps/pocketpal-ai'
 import { app as app_pocket_ai } from './apps/pocket-ai'
 import { app as app_private_llm } from './apps/private-llm'
+import { app as app_google_ai_edge_gallery } from './apps/google-ai-edge-gallery'
 import { app as app_llm_farm } from './apps/llm-farm'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
@@ -264,6 +265,7 @@ export const localAiApps: ToolRecord[] = [
   app_pocketpal_ai,
   app_pocket_ai,
   app_private_llm,
+  app_google_ai_edge_gallery,
   app_llm_farm,
   app_layla,
   app_maid,

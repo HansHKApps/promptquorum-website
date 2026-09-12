@@ -261,6 +261,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'mlc-chat-review':                         'mlc-chat-review',
   // PocketPal AI review — 2026-09-05
   'pocketpal-ai-review':                     'pocketpal-ai-review',
+  'google-ai-edge-gallery-review':            'google-ai-edge-gallery-review',
   // Private LLM review — 2026-09-05
   'private-llm-review':                      'private-llm-review',
   // Pocket AI - No Internet review — 2026-09-11
