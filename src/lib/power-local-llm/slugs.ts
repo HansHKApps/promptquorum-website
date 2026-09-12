@@ -286,6 +286,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                 'stable-diffusion-review',
 
+  // Ollama review (Runtimes & Inference Engines) — 2026-09-12
+  'ollama-review':                           'ollama-review',
+  // LM Studio review (Runtimes & Inference Engines) — 2026-09-12
+  'lm-studio-review':                        'lm-studio-review',
   // llama.cpp explainer (Runtimes & Inference Engines) — 2026-09-05
   'llama-cpp-explained':                     'llama-cpp-explained',
   // vLLM explainer (Runtimes & Inference Engines) — 2026-09-06

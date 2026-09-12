@@ -14,10 +14,10 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Closed source',
+  license: 'Proprietary (free for personal and business use)', // verified via lmstudio.ai/app-terms on 2026-09-12 — closed source, not OSI-approved; was "Closed source"
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: null,
+  stars: null, // the LM Studio desktop app itself has no public GitHub repo; companion tools (lms CLI, mlx-engine) do but are not the app
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'serve'],
@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'أكثر واجهة رسومية مصقولة، مستعرض نماذج HuggingFace مدمج، وضع خادم',
     ko: '가장 세련된 GUI, HuggingFace 모델 탐색기 내장, 서버 모드',
   },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'lm-studio-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  lastVerifiedDate: '2026-09-12',
 }
