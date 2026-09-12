@@ -708,6 +708,7 @@ const HUB_THEMES: Array<{
       'local-llm-software-directory',
       'apple-mlx-vs-nvidia-cuda-local-llm-2026',
       'deepseek-vs-qwen-local-comparison-2026',
+      'docker-model-runner-review',
     ],
   },
   {
@@ -725,6 +726,7 @@ const HUB_THEMES: Array<{
       'local-ai-app-with-built-in-rag',
       'qwen-local-deployment-complete-guide-2026',
       'best-workstation-build-local-ai-2026',
+      'locally-uncensored-review',
     ],
   },
   {
@@ -741,6 +743,7 @@ const HUB_THEMES: Array<{
       'chat-with-1000-pdfs-locally',
       'local-rag-for-private-business-data',
       'best-rag-tools-for-business-documents-2026',
+      'maxkb-review',
     ],
   },
   {
@@ -758,6 +761,8 @@ const HUB_THEMES: Array<{
       'local-llm-code-review-ci-cd',
       'best-local-llm-ide-plugins-2026',
       'deepseek-vs-qwen-coding-local-2026',
+      'kilo-code-review',
+      'opencode-review',
     ],
   },
   {
@@ -774,6 +779,8 @@ const HUB_THEMES: Array<{
       'replace-zapier-with-local-ai-agents',
       'local-ai-agents-business-workflows-eu-compliance',
       'local-ai-behind-firewall-offline-2026',
+      'n8n-review',
+      'atomic-agent-review',
     ],
   },
   {
@@ -808,6 +815,8 @@ const HUB_THEMES: Array<{
       'edge-ai-hardware-for-local-llms',
       'vla-models-robots-local-inference',
       'vlm-video-analytics-drones-edge',
+      'on-device-ai-review',
+      'runanywhere-review',
     ],
   },
   {
@@ -840,6 +849,7 @@ const HUB_THEMES: Array<{
       'local-tts-voice-cloning-piper-coqui-xtts',
       'build-local-voice-assistant-2026',
       'local-multimodal-pipeline-voice-vision-text',
+      'dograh-review',
     ],
   },
   {
