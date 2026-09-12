@@ -10,7 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'localai-apexcreator',
   name: 'LocalAI: Offline AI Chat LLM',
-  categories: ['general-chat-clients'],
+  categories: ['general-chat-clients', 'document-pdf-chat'],
   interfaces: ['mobile'],
   locality: 'local',
   platforms: ['android'],
@@ -27,6 +27,7 @@ export const app: ToolRecord = {
   storeLinks: {
     googlePlay: 'https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp',
   },
+  reviewSlug: 'localai-apexcreator-review',
   tagline: {
     en: 'Free Android app for offline LLM chat via llama.cpp, with an optional premium tier',
     de: 'Kostenlose Android-App für Offline-LLM-Chat über llama.cpp, mit optionaler Premium-Stufe',

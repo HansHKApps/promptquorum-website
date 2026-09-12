@@ -372,6 +372,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'superagi-review',
   // ToolNeuron review — 2026-09-12
   'toolneuron-review',
+  // LocalAI (ApexCreator) review — 2026-09-12
+  'localai-apexcreator-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

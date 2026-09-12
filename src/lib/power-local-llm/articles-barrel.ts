@@ -222,6 +222,7 @@ import { article as a_sglang_explained } from './articles/sglang-explained'
 import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
 import { article as a_superagi_review } from './articles/superagi-review'
 import { article as a_toolneuron_review } from './articles/toolneuron-review'
+import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -476,4 +477,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'superagi-review':                                a_superagi_review,
   // ToolNeuron review — 2026-09-12
   'toolneuron-review':                              a_toolneuron_review,
+  'localai-apexcreator-review':                      a_localai_apexcreator_review,
 }

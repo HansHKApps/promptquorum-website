@@ -338,4 +338,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'superagi-review':                         'superagi-review',
   // ToolNeuron review — 2026-09-12
   'toolneuron-review':                       'toolneuron-review',
+  // LocalAI (ApexCreator) review — 2026-09-12
+  'localai-apexcreator-review':               'localai-apexcreator-review',
 }

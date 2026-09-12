@@ -97,6 +97,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "localai-apexcreator-review",
+        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
+        "url": "/power-local-llm/localai-apexcreator-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "toolneuron-review",
         "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
         "url": "/power-local-llm/toolneuron-review",
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review 2026: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 122,
+    "totalCount": 124,
     "capped": true
   },
   "vLLM": {
@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "localai-apexcreator-review",
+        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
+        "url": "/power-local-llm/localai-apexcreator-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-review",
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
@@ -316,7 +324,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "TensorRT-LLM": {
@@ -4310,7 +4318,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "Ollama vision models": {
@@ -4831,6 +4839,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "localai-apexcreator-review",
+        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
+        "url": "/power-local-llm/localai-apexcreator-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "toolneuron-review",
         "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
         "url": "/power-local-llm/toolneuron-review",
@@ -4862,7 +4878,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "AnythingLLM Mobile": {
@@ -6074,6 +6090,28 @@
         "slug": "toolneuron-review",
         "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
         "url": "/power-local-llm/toolneuron-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "localai-apexcreator-review",
+        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
+        "url": "/power-local-llm/localai-apexcreator-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "LocalAI: Offline AI Chat LLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "localai-apexcreator-review",
+        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
+        "url": "/power-local-llm/localai-apexcreator-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
