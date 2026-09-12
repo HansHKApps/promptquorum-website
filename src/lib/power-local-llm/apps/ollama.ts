@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: 180124,
+  stars: 180722, // re-verified via GitHub API (api.github.com/repos/ollama/ollama) on 2026-09-12; was 180124
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'serve', 'build'],
@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'الأسهل بشكل عام — تثبيت بأمر واحد، API متوافقة مع OpenAI، مكتبة نماذج ضخمة',
     ko: '전반적으로 가장 쉬운 — 단일 명령 설치, OpenAI 호환 API, 대형 모델 라이브러리',
   },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'ollama-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  lastVerifiedDate: '2026-09-12',
 }

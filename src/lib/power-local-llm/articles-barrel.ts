@@ -214,6 +214,8 @@ import { article as a_gpt4all_review } from './articles/gpt4all-review'
 import { article as a_docker_model_runner_review } from './articles/docker-model-runner-review'
 import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_ekorbia_review } from './articles/ekorbia-review'
+import { article as a_ollama_review } from './articles/ollama-review'
+import { article as a_lm_studio_review } from './articles/lm-studio-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
 import { article as a_vllm_explained } from './articles/vllm-explained'
 import { article as a_koboldcpp_review } from './articles/koboldcpp-review'
@@ -431,6 +433,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pocket-ai-review':                              a_pocket_ai_review,
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                        a_stable_diffusion_review,
+  'ollama-review':                                  a_ollama_review,
+  'lm-studio-review':                               a_lm_studio_review,
   'llama-cpp-explained':                           a_llama_cpp_explained,
   'vllm-explained':                                a_vllm_explained,
   'koboldcpp-review':                              a_koboldcpp_review,
