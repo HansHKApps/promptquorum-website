@@ -14,6 +14,7 @@ import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
+import featureReviewIndex from '@/generated/feature-review-index.json'
 import { t } from './directory-i18n'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
@@ -54,11 +55,17 @@ const PLATFORM_LABEL: Record<string, string> = {
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number }>
+type FeatureReviewIndex = Record<string, { cluster: string; urlSlug: string; url: string }>
 
-/** The dedicated review page for this tool, if one exists (tier "about"). */
-function reviewUrl(toolName: string): string | null {
-  const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
-  return entry?.articles.find((a) => a.tier === 'about')?.url ?? null
+/**
+ * The tool's own dedicated, single-subject review, if one exists — from the
+ * authoritative build-time index (src/generated/feature-review-index.json,
+ * derived from the tool's own `reviewSlug` field), NOT the fuzzy
+ * tool-article-index.json tier heuristic (which only guarantees an article
+ * *mentions* the tool, not that the tool is its primary subject).
+ */
+function featureReviewUrl(appSlug: string): string | null {
+  return (featureReviewIndex as FeatureReviewIndex)[appSlug]?.url ?? null
 }
 
 function articleCount(toolName: string): number {
@@ -95,7 +102,7 @@ export function ToolCard({
   const engine = app.engine !== 'TODO' ? app.engine : null
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
-  const review = reviewUrl(app.name)
+  const review = featureReviewUrl(app.slug)
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
@@ -247,13 +254,19 @@ export function ToolCard({
             )}
           </div>
 
+          {review && (
+            <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-1.5">
+              {t('featureArticleBadge', lang)}
+            </span>
+          )}
+
           <div className="flex gap-2 pt-1">
             {review ? (
               <>
                 <Link
                   href={review}
                   onClick={stop}
-                  className="flex-1 text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
+                  className="flex-1 text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold underline underline-offset-2 text-white hover:bg-primary/90"
                 >
                   {t('readReview', lang)}
                 </Link>

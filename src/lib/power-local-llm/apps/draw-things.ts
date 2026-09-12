@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'توليد صور محلي على macOS وiOS باستخدام Stable Diffusion',
     ko: 'Stable Diffusion을 활용한 macOS 및 iOS용 로컬 이미지 생성',
   },
+  reviewSlug: 'draw-things-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

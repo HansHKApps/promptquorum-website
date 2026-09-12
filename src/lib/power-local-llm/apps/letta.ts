@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'عملاء ذكيون مع ذاكرة طويلة الأمد',
     ko: '장기 기억을 갖춘 에이전트',
   },
+  reviewSlug: 'letta-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

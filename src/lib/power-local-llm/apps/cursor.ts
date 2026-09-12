@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'محرر كود يركز على الذكاء الاصطناعي مع دعم النماذج المحلية',
     ko: '로컬 모델 지원을 갖춘 AI 중심 코드 편집기',
   },
+  reviewSlug: 'cursor-local-mode-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

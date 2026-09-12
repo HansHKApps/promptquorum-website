@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'runtime نماذج لغوية محمولة متعدد المنصات',
     ko: '크로스플랫폼 모바일 LLM 런타임',
   },
+  reviewSlug: 'mlc-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-07', // Verified against the App Store listing, MLC's GitHub Android APK release, and mlc-ai/mlc-llm docs — see /power-local-llm/mlc-chat-review
 }

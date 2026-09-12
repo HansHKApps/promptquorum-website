@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مساحة دردشة خاصة مبنية بـRust/Tauri، مجانية، محرك يعمل على الجهاز على Mac',
     ko: 'Rust/Tauri 기반 무료 프라이버시 채팅 워크스페이스, Mac에서 온디바이스 엔진',
   },
+  reviewSlug: 'ekorbia-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-07',
 }

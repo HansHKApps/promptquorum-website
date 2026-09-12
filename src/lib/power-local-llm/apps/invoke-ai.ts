@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'توليد صور احترافي بواجهة سهلة الاستخدام — نشط، آخر إصدار قبل أسبوع',
     ko: '직관적인 UI를 갖춘 전문가급 이미지 생성 — 활발히 유지 관리, 릴리스 1주 전',
   },
+  reviewSlug: 'invokeai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

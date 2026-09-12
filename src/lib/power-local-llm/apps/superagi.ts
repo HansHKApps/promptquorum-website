@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'إطار عمل مفتوح المصدر للوكلاء المستقلين مع دعم دمج الأدوات',
     ko: '도구 통합을 지원하는 오픈소스 자율 에이전트 프레임워크',
   },
+  reviewSlug: 'superagi-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
