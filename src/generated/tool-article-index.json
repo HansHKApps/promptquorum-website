@@ -4463,6 +4463,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ai-on-device-review",
+        "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
+        "url": "/power-local-llm/ai-on-device-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "google-ai-edge-gallery-review",
         "title": "Google AI Edge Gallery Review (2026): Gemma 4 On-Device Chat for iPhone",
         "url": "/power-local-llm/google-ai-edge-gallery-review",
@@ -4524,17 +4532,9 @@
         "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "private-llm-review",
-        "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/private-llm-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Pocket AI": {
@@ -4559,6 +4559,14 @@
         "title": "Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-on-device-review",
+        "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
+        "url": "/power-local-llm/ai-on-device-review",
+        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -4624,17 +4632,9 @@
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-farm-review",
-        "title": "LLM Farm Review (2026): Open-Source GGUF App, Off the App Store",
-        "url": "/power-local-llm/llm-farm-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -4978,6 +4978,28 @@
         "slug": "noema-review",
         "title": "Noema Review (2026): Multi-Format Local AI for iPhone, iPad, and Mac",
         "url": "/power-local-llm/noema-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-on-device-review",
+        "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
+        "url": "/power-local-llm/ai-on-device-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "AI on Device": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-on-device-review",
+        "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
+        "url": "/power-local-llm/ai-on-device-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
