@@ -34,4 +34,5 @@ export const app: ToolRecord = {
     ko: 'Obsidian용 콘텐츠 생성 플러그인',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'text-generator-review', // dedicated PromptQuorum review
 }

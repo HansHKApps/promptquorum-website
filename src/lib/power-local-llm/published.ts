@@ -427,6 +427,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'nvidia-g-assist-review',
   // GPUStack review — 2026-09-12
   'gpustack-review',
+  // BMO Chatbot review — 2026-09-12
+  'bmo-chatbot-review',
+  // Text Generator review — 2026-09-12
+  'text-generator-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

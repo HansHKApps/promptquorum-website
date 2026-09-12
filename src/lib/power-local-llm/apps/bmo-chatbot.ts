@@ -34,4 +34,5 @@ export const app: ToolRecord = {
     ko: '로컬 LLM이 있는 Obsidian 챗봇',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'bmo-chatbot-review', // dedicated PromptQuorum review
 }
