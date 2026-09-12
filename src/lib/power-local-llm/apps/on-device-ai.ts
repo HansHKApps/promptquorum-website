@@ -24,6 +24,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['phone', 'chat'],
   url: 'ondevice-ai.app',
+  storeLinks: {
+    appStore: 'https://apps.apple.com/app/id6497060890',
+  },
   tagline: {
     en: 'On-device chat app for iPhone, iPad, and Apple Silicon Mac with 200+ downloadable local models (GGUF and MLX)',
     de: 'On-Device-Chat-App für iPhone, iPad und Apple-Silicon-Mac mit über 200 herunterladbaren lokalen Modellen (GGUF und MLX)',
@@ -35,5 +38,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق دردشة على الجهاز لأجهزة آيفون وآيباد وماك Apple Silicon مع أكثر من 200 نموذج محلي قابل للتنزيل (GGUF وMLX)',
     ko: 'iPhone, iPad, Apple 실리콘 Mac용 온디바이스 채팅 앱, 다운로드 가능한 200개 이상의 로컬 모델(GGUF, MLX) 지원',
   },
-  lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'on-device-ai-review',
+  lastVerifiedDate: '2026-09-12',
 }

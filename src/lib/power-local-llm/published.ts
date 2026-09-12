@@ -266,6 +266,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'noema-review',
   // AI on Device review — 2026-09-12
   'ai-on-device-review',
+  // On Device AI review — 2026-09-12
+  'on-device-ai-review',
 
   // Aori, RAPR AI, Open Felix, BoBe (Local AI Agents & Tool Use), Osaurus,
   // Hanoki (Easiest Desktop Apps), Voxa, Jarvis Mac (Voice/Speech/Multimodal),

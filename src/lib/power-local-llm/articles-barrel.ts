@@ -104,6 +104,7 @@ import { article as a_enclave_ai_review_2026 } from './articles/enclave-ai-revie
 import { article as a_liquid_apollo_review } from './articles/liquid-apollo-review'
 import { article as a_noema_review } from './articles/noema-review'
 import { article as a_ai_on_device_review } from './articles/ai-on-device-review'
+import { article as a_on_device_ai_review } from './articles/on-device-ai-review'
 import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
@@ -391,6 +392,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'liquid-apollo-review':                              a_liquid_apollo_review,
   'noema-review':                                      a_noema_review,
   'ai-on-device-review':                                a_ai_on_device_review,
+  // On Device AI review — 2026-09-12
+  'on-device-ai-review':                                a_on_device_ai_review,
   // Aori, RAPR AI, Open Felix, BoBe, Osaurus, Hanoki, Voxa, Jarvis (Mac),
   // Locally AI, Arbiter reviews — 2026-09-04
   'aori-ai-personal-agent-review':                     a_aori_ai_personal_agent_review,
