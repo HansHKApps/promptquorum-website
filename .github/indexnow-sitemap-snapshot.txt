@@ -410,6 +410,7 @@ https://www.promptquorum.com/power-local-llm/pocket-ai-review
 https://www.promptquorum.com/power-local-llm/pocketpal-ai-review
 https://www.promptquorum.com/power-local-llm/private-llm-review
 https://www.promptquorum.com/power-local-llm/privategpt-review
+https://www.promptquorum.com/power-local-llm/pydantic-ai-review
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
 https://www.promptquorum.com/power-local-llm/ragflow-document-understanding-rag-review
