@@ -320,6 +320,7 @@ https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2
 https://www.promptquorum.com/power-local-llm/diffusionbee-review
 https://www.promptquorum.com/power-local-llm/dify-ai-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies
+https://www.promptquorum.com/power-local-llm/docker-model-runner-review
 https://www.promptquorum.com/power-local-llm/draw-things-review
 https://www.promptquorum.com/power-local-llm/dspy-review
 https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux
@@ -347,6 +348,7 @@ https://www.promptquorum.com/power-local-llm/invokeai-review
 https://www.promptquorum.com/power-local-llm/jan-review
 https://www.promptquorum.com/power-local-llm/jarvis-mac-review
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
+https://www.promptquorum.com/power-local-llm/kilo-code-review
 https://www.promptquorum.com/power-local-llm/koboldcpp-review
 https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs
 https://www.promptquorum.com/power-local-llm/langchain-review
@@ -400,6 +402,7 @@ https://www.promptquorum.com/power-local-llm/mlx-lm-explained
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-review
+https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/noema-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
@@ -407,6 +410,7 @@ https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
 https://www.promptquorum.com/power-local-llm/openclaw-review
+https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/pearai-review
