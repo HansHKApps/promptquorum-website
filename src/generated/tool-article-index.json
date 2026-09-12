@@ -4463,6 +4463,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "noema-review",
+        "title": "Noema Review (2026): Multi-Format Local AI for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/noema-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-mobile-review",
         "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
         "url": "/power-local-llm/anythingllm-mobile-review",
@@ -4516,17 +4524,9 @@
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chatty-mini-review",
-        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
-        "url": "/power-local-llm/chatty-mini-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Pocket AI": {
@@ -4566,6 +4566,14 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "noema-review",
+        "title": "Noema Review (2026): Multi-Format Local AI for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/noema-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -4616,17 +4624,9 @@
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "maid-review",
-        "title": "Maid Review (2026): Open-Source Local LLM Chat App for Android",
-        "url": "/power-local-llm/maid-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -4948,6 +4948,20 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Noema": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "noema-review",
+        "title": "Noema Review (2026): Multi-Format Local AI for iPhone, iPad, and Mac",
+        "url": "/power-local-llm/noema-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
