@@ -176,6 +176,7 @@ import { article as a_digitalocean_vs_aws_cloud_for_ai_companies } from './artic
 import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
 import { article as a_haystack_deepset_rag_framework_review } from './articles/haystack-deepset-rag-framework-review'
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
+import { article as a_n8n_review } from './articles/n8n-review'
 import { article as a_h2ogpt_review_2026 } from './articles/h2ogpt-review-2026'
 import { article as a_langflow_visual_ai_orchestration_review } from './articles/langflow-visual-ai-orchestration-review'
 import { article as a_langchain_review } from './articles/langchain-review'
@@ -323,6 +324,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
   'enterprise-llm-inference-servers-vllm-tgi-nim-2026': a_enterprise_llm_inference_servers_vllm_tgi_nim_2026,
   'dify-ai-workflow-builder-review':                   a_dify_ai_workflow_builder_review,
+  'n8n-review':                                        a_n8n_review,
   'h2ogpt-review-2026':                                a_h2ogpt_review_2026,
   'langflow-visual-ai-orchestration-review':           a_langflow_visual_ai_orchestration_review,
   'langchain-review':                                  a_langchain_review,

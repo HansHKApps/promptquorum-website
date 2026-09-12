@@ -385,6 +385,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Solair AI review — 2026-09-12
   'solair-ai-review',
   'kilo-code-review',
+  // n8n review — 2026-09-12
+  'n8n-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
