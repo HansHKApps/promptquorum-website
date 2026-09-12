@@ -333,6 +333,7 @@ https://www.promptquorum.com/power-local-llm/exllamav2-explained
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
+https://www.promptquorum.com/power-local-llm/google-ai-edge-gallery-review
 https://www.promptquorum.com/power-local-llm/gpt-engineer-review
 https://www.promptquorum.com/power-local-llm/gpt4all-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review
@@ -353,6 +354,7 @@ https://www.promptquorum.com/power-local-llm/layla-review
 https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
+https://www.promptquorum.com/power-local-llm/liquid-apollo-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
 https://www.promptquorum.com/power-local-llm/llamafile-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
@@ -395,6 +397,7 @@ https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
+https://www.promptquorum.com/power-local-llm/off-grid-ai-review
 https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
@@ -437,6 +440,7 @@ https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/taskweaver-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/tgpt-review
+https://www.promptquorum.com/power-local-llm/toolneuron-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
