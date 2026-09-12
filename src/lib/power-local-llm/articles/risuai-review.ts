@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI and [SillyTavern](/power-local-llm/sillytavern-review) are two of the most commonly compared open-source roleplay frontends**, since both are free, connect to a backend you choose, and center on Lorebook-style memory systems. The clearest differences are license terms and how much each project leans toward mobile use.',
+        content: '**RisuAI and [SillyTavern](/local-llms/sillytavern-review) are two of the most commonly compared open-source roleplay frontends**, since both are free, connect to a backend you choose, and center on Lorebook-style memory systems. The clearest differences are license terms and how much each project leans toward mobile use.',
         itemHeadings: true,
         columns: ['Aspect', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Memory system', 'RisuAI': 'Lorebook plus HypaMemoryV2/V3 and SupaMemory compression', 'SillyTavern': 'Lorebook (World Info) plus community-built memory extensions' },
           { 'Aspect': 'Backend connections', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter, and self-hosted backends such as text-generation-webui', 'SillyTavern': 'A wider list including KoboldCpp, Ollama, llama.cpp, text-generation-webui, and LM Studio' },
         ],
-        note: 'If a hosted web app or a native mobile-friendly interface matters to you, RisuAI\'s distribution options are the more direct fit. If you want the widest range of directly supported self-hosted backends and a large community extension ecosystem, evaluate [SillyTavern](/power-local-llm/sillytavern-review) directly. Both are free, open-source, and do not run a model themselves — verify current backend support on each project\'s own repository before deciding.',
+        note: 'If a hosted web app or a native mobile-friendly interface matters to you, RisuAI\'s distribution options are the more direct fit. If you want the widest range of directly supported self-hosted backends and a large community extension ecosystem, evaluate [SillyTavern](/local-llms/sillytavern-review) directly. Both are free, open-source, and do not run a model themselves — verify current backend support on each project\'s own repository before deciding.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Wait, or look elsewhere, if',
             list: [
-              'You want the single widest list of directly supported self-hosted backends (including Ollama, KoboldCpp, and llama.cpp) in one client — [SillyTavern](/power-local-llm/sillytavern-review) documents broader backend support',
+              'You want the single widest list of directly supported self-hosted backends (including Ollama, KoboldCpp, and llama.cpp) in one client — [SillyTavern](/local-llms/sillytavern-review) documents broader backend support',
               'You want a fully closed, point-and-click desktop app with a built-in character library and no self-hosting or API-key setup at all — see [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026) for that model',
               'You need an officially supported, GPL-compatible alternative desktop-first client to compare against — see [Agnai](/power-local-llm/agnai-review)',
               'You need enterprise support, an SLA, or a vendor to contact for issues — RisuAI\'s support channel is its GitHub issue tracker, typical of a community open-source project rather than a commercial vendor',
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Competitors and Alternatives',
         content: 'RisuAI sits in the same roleplay and character-chat client segment as several other frontends. Here is how it compares with the closest alternatives — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog of local AI tools.',
         items: [
-          '**[SillyTavern](/power-local-llm/sillytavern-review)** — the closest direct comparison: a free, self-hosted-only roleplay frontend with a wider list of directly supported inference backends and a large community extension ecosystem, at the cost of no official hosted web app.',
+          '**[SillyTavern](/local-llms/sillytavern-review)** — the closest direct comparison: a free, self-hosted-only roleplay frontend with a wider list of directly supported inference backends and a large community extension ecosystem, at the cost of no official hosted web app.',
           '**[Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026)** — a closed-source desktop app (Windows/Mac) built for point-and-click simplicity, with a built-in Character Hub, and an optional paid cloud tier — a lower-configuration alternative to RisuAI\'s open-source, backend-agnostic approach.',
           '**[Agnai](/power-local-llm/agnai-review)** — another open-source roleplay and character-chat client covering similar ground, worth comparing directly on license terms, hosted-vs-self-hosted options, and backend support.',
         ],
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[SillyTavern Review](/power-local-llm/sillytavern-review) — the closest open-source alternative, with a wider list of directly supported self-hosted backends.',
+          '[SillyTavern Review](/local-llms/sillytavern-review) — the closest open-source alternative, with a wider list of directly supported self-hosted backends.',
           '[Backyard AI Review](/power-local-llm/backyard-ai-review-local-roleplay-2026) — a closed-source, point-and-click desktop alternative with a built-in character library.',
           '[Agnai Review](/power-local-llm/agnai-review) — another open-source roleplay and character-chat client for comparison.',
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — model-level guidance that applies to any local roleplay frontend, RisuAI included.',
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI und [SillyTavern](/de/power-local-llm/sillytavern-review) gehören zu den am häufigsten verglichenen quelloffenen Rollenspiel-Frontends**, da beide kostenlos sind, sich mit einem von Ihnen gewählten Backend verbinden und auf Lorebook-artigen Speichersystemen basieren. Die klarsten Unterschiede liegen in den Lizenzbedingungen und wie stark jedes Projekt auf mobile Nutzung setzt.',
+        content: '**RisuAI und [SillyTavern](/de/local-llms/sillytavern-review) gehören zu den am häufigsten verglichenen quelloffenen Rollenspiel-Frontends**, da beide kostenlos sind, sich mit einem von Ihnen gewählten Backend verbinden und auf Lorebook-artigen Speichersystemen basieren. Die klarsten Unterschiede liegen in den Lizenzbedingungen und wie stark jedes Projekt auf mobile Nutzung setzt.',
         itemHeadings: true,
         columns: ['Aspekt', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Speichersystem', 'RisuAI': 'Lorebook plus HypaMemoryV2/V3- und SupaMemory-Kompression', 'SillyTavern': 'Lorebook (World Info) plus community-erstellte Speicher-Erweiterungen' },
           { 'Aspekt': 'Backend-Verbindungen', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter und selbst gehostete Backends wie text-generation-webui', 'SillyTavern': 'Eine breitere Liste einschließlich KoboldCpp, Ollama, llama.cpp, text-generation-webui und LM Studio' },
         ],
-        note: 'Wenn Ihnen eine gehostete Web-App oder eine native, mobilfreundliche Oberfläche wichtig ist, passen RisuAIs Verteilungsoptionen direkter. Wenn Sie die breiteste Palette direkt unterstützter selbst gehosteter Backends und ein großes Community-Erweiterungs-Ökosystem wollen, prüfen Sie [SillyTavern](/de/power-local-llm/sillytavern-review) direkt. Beide sind kostenlos, quelloffen und betreiben selbst kein Modell — prüfen Sie die aktuelle Backend-Unterstützung im jeweiligen Repository, bevor Sie sich entscheiden.',
+        note: 'Wenn Ihnen eine gehostete Web-App oder eine native, mobilfreundliche Oberfläche wichtig ist, passen RisuAIs Verteilungsoptionen direkter. Wenn Sie die breiteste Palette direkt unterstützter selbst gehosteter Backends und ein großes Community-Erweiterungs-Ökosystem wollen, prüfen Sie [SillyTavern](/de/local-llms/sillytavern-review) direkt. Beide sind kostenlos, quelloffen und betreiben selbst kein Modell — prüfen Sie die aktuelle Backend-Unterstützung im jeweiligen Repository, bevor Sie sich entscheiden.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Warten Sie oder schauen Sie sich anderswo um, wenn',
             list: [
-              'Sie die insgesamt breiteste Liste direkt unterstützter selbst gehosteter Backends (einschließlich Ollama, KoboldCpp und llama.cpp) in einem Client wollen — [SillyTavern](/de/power-local-llm/sillytavern-review) dokumentiert breitere Backend-Unterstützung',
+              'Sie die insgesamt breiteste Liste direkt unterstützter selbst gehosteter Backends (einschließlich Ollama, KoboldCpp und llama.cpp) in einem Client wollen — [SillyTavern](/de/local-llms/sillytavern-review) dokumentiert breitere Backend-Unterstützung',
               'Sie eine vollständig geschlossene Point-and-Click-Desktop-App mit eingebauter Charakterbibliothek und ganz ohne Self-Hosting oder API-Key-Einrichtung wollen — siehe [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) für dieses Modell',
               'Sie eine offiziell unterstützte, GPL-kompatible alternative Desktop-first-Client zum Vergleich benötigen — siehe [Agnai](/de/power-local-llm/agnai-review)',
               'Sie Enterprise-Support, ein SLA oder einen Anbieter zum Kontaktieren bei Problemen benötigen — RisuAIs Support-Kanal ist der GitHub-Issue-Tracker, typisch für ein Community-Open-Source-Projekt statt einen kommerziellen Anbieter',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Konkurrenten und Alternativen',
         content: 'RisuAI befindet sich im selben Rollenspiel- und Charakter-Chat-Client-Segment wie mehrere andere Frontends. So schneidet es im Vergleich zu den nächstliegenden Alternativen ab — siehe das [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog lokaler KI-Tools.',
         items: [
-          '**[SillyTavern](/de/power-local-llm/sillytavern-review)** — der direkteste Vergleich: ein kostenloses, nur selbst gehostetes Rollenspiel-Frontend mit einer breiteren Liste direkt unterstützter Inferenz-Backends und einem großen Community-Erweiterungs-Ökosystem, allerdings ohne offizielle gehostete Web-App.',
+          '**[SillyTavern](/de/local-llms/sillytavern-review)** — der direkteste Vergleich: ein kostenloses, nur selbst gehostetes Rollenspiel-Frontend mit einer breiteren Liste direkt unterstützter Inferenz-Backends und einem großen Community-Erweiterungs-Ökosystem, allerdings ohne offizielle gehostete Web-App.',
           '**[Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026)** — eine Closed-Source-Desktop-App (Windows/Mac) für Point-and-Click-Einfachheit, mit eingebautem Character Hub und optionaler kostenpflichtiger Cloud-Stufe — eine Alternative mit weniger Konfigurationsaufwand zu RisuAIs quelloffenem, backend-agnostischem Ansatz.',
           '**[Agnai](/de/power-local-llm/agnai-review)** — ein weiterer quelloffener Rollenspiel- und Charakter-Chat-Client mit ähnlichem Funktionsumfang, den direkten Vergleich hinsichtlich Lizenzbedingungen, gehosteten vs. selbst gehosteten Optionen und Backend-Unterstützung wert.',
         ],
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[SillyTavern Review](/de/power-local-llm/sillytavern-review) — die nächstliegende quelloffene Alternative mit einer breiteren Liste direkt unterstützter selbst gehosteter Backends.',
+          '[SillyTavern Review](/de/local-llms/sillytavern-review) — die nächstliegende quelloffene Alternative mit einer breiteren Liste direkt unterstützter selbst gehosteter Backends.',
           '[Backyard AI Review](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine Closed-Source, Point-and-Click-Desktop-Alternative mit eingebauter Charakterbibliothek.',
           '[Agnai Review](/de/power-local-llm/agnai-review) — ein weiterer quelloffener Rollenspiel- und Charakter-Chat-Client zum Vergleich.',
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — modellseitige Hinweise, die für jedes lokale Rollenspiel-Frontend gelten, RisuAI eingeschlossen.',
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI et [SillyTavern](/fr/power-local-llm/sillytavern-review) sont parmi les frontends de jeu de rôle open source les plus fréquemment comparés**, car tous deux sont gratuits, se connectent à un backend de votre choix, et reposent sur des systèmes de mémoire de type Lorebook. Les différences les plus claires résident dans les conditions de licence et l\'orientation mobile de chaque projet.',
+        content: '**RisuAI et [SillyTavern](/fr/local-llms/sillytavern-review) sont parmi les frontends de jeu de rôle open source les plus fréquemment comparés**, car tous deux sont gratuits, se connectent à un backend de votre choix, et reposent sur des systèmes de mémoire de type Lorebook. Les différences les plus claires résident dans les conditions de licence et l\'orientation mobile de chaque projet.',
         itemHeadings: true,
         columns: ['Aspect', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Système de mémoire', 'RisuAI': 'Lorebook plus compression HypaMemoryV2/V3 et SupaMemory', 'SillyTavern': 'Lorebook (World Info) plus extensions de mémoire créées par la communauté' },
           { 'Aspect': 'Connexions backend', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter et backends auto-hébergés comme text-generation-webui', 'SillyTavern': 'Une liste plus large incluant KoboldCpp, Ollama, llama.cpp, text-generation-webui et LM Studio' },
         ],
-        note: 'Si une application web hébergée ou une interface native adaptée au mobile compte pour vous, les options de distribution de RisuAI conviennent plus directement. Si vous voulez la plus large gamme de backends auto-hébergés directement pris en charge et un vaste écosystème d\'extensions communautaires, évaluez directement [SillyTavern](/fr/power-local-llm/sillytavern-review). Les deux sont gratuits, open source, et n\'exécutent pas de modèle eux-mêmes — vérifiez le support backend actuel sur le dépôt de chaque projet avant de décider.',
+        note: 'Si une application web hébergée ou une interface native adaptée au mobile compte pour vous, les options de distribution de RisuAI conviennent plus directement. Si vous voulez la plus large gamme de backends auto-hébergés directement pris en charge et un vaste écosystème d\'extensions communautaires, évaluez directement [SillyTavern](/fr/local-llms/sillytavern-review). Les deux sont gratuits, open source, et n\'exécutent pas de modèle eux-mêmes — vérifiez le support backend actuel sur le dépôt de chaque projet avant de décider.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Attendez, ou cherchez ailleurs, si',
             list: [
-              'Vous voulez la plus large liste de backends auto-hébergés directement pris en charge (y compris Ollama, KoboldCpp et llama.cpp) dans un seul client — [SillyTavern](/fr/power-local-llm/sillytavern-review) documente un support backend plus large',
+              'Vous voulez la plus large liste de backends auto-hébergés directement pris en charge (y compris Ollama, KoboldCpp et llama.cpp) dans un seul client — [SillyTavern](/fr/local-llms/sillytavern-review) documente un support backend plus large',
               'Vous voulez une application de bureau entièrement fermée, point-and-click, avec une bibliothèque de personnages intégrée et aucune configuration d\'auto-hébergement ou de clé API — voir [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) pour ce modèle',
               'Vous avez besoin d\'une alternative client de bureau officiellement supportée et compatible GPL à comparer — voir [Agnai](/fr/power-local-llm/agnai-review)',
               'Vous avez besoin d\'un support entreprise, d\'un SLA ou d\'un fournisseur à contacter en cas de problème — le canal de support de RisuAI est son suivi de tickets GitHub, typique d\'un projet communautaire open source plutôt que d\'un fournisseur commercial',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Concurrents et alternatives',
         content: 'RisuAI se situe dans le même segment de clients de jeu de rôle et de chat de personnages que plusieurs autres frontends. Voici comment il se compare aux alternatives les plus proches — consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet d\'outils d\'IA locale.',
         items: [
-          '**[SillyTavern](/fr/power-local-llm/sillytavern-review)** — la comparaison directe la plus proche : un frontend de jeu de rôle gratuit, uniquement auto-hébergé, avec une liste plus large de backends d\'inférence directement pris en charge et un vaste écosystème d\'extensions communautaires, au prix de l\'absence d\'application web hébergée officielle.',
+          '**[SillyTavern](/fr/local-llms/sillytavern-review)** — la comparaison directe la plus proche : un frontend de jeu de rôle gratuit, uniquement auto-hébergé, avec une liste plus large de backends d\'inférence directement pris en charge et un vaste écosystème d\'extensions communautaires, au prix de l\'absence d\'application web hébergée officielle.',
           '**[Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026)** — une application de bureau à code fermé (Windows/Mac) conçue pour la simplicité point-and-click, avec un Character Hub intégré et une offre cloud payante optionnelle — une alternative moins exigeante en configuration à l\'approche open source et agnostique au backend de RisuAI.',
           '**[Agnai](/fr/power-local-llm/agnai-review)** — un autre client de jeu de rôle et de chat de personnages open source couvrant un terrain similaire, à comparer directement sur les conditions de licence, les options hébergées vs auto-hébergées, et le support backend.',
         ],
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Avis SillyTavern](/fr/power-local-llm/sillytavern-review) — l\'alternative open source la plus proche, avec une liste plus large de backends auto-hébergés directement pris en charge.',
+          '[Avis SillyTavern](/fr/local-llms/sillytavern-review) — l\'alternative open source la plus proche, avec une liste plus large de backends auto-hébergés directement pris en charge.',
           '[Avis Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — une alternative de bureau à code fermé, point-and-click, avec une bibliothèque de personnages intégrée.',
           '[Avis Agnai](/fr/power-local-llm/agnai-review) — un autre client de jeu de rôle et de chat de personnages open source à comparer.',
           '[LLM locaux sans censure pour l\'écriture créative : éthique, légalité et bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — recommandations au niveau du modèle applicables à tout frontend de jeu de rôle local, RisuAI compris.',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI y [SillyTavern](/es/power-local-llm/sillytavern-review) son dos de los frontends de rol de código abierto más comparados**, ya que ambos son gratuitos, se conectan a un backend que tú eliges, y se centran en sistemas de memoria estilo Lorebook. Las diferencias más claras están en los términos de licencia y en cuánto se orienta cada proyecto al uso móvil.',
+        content: '**RisuAI y [SillyTavern](/es/local-llms/sillytavern-review) son dos de los frontends de rol de código abierto más comparados**, ya que ambos son gratuitos, se conectan a un backend que tú eliges, y se centran en sistemas de memoria estilo Lorebook. Las diferencias más claras están en los términos de licencia y en cuánto se orienta cada proyecto al uso móvil.',
         itemHeadings: true,
         columns: ['Aspecto', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'Sistema de memoria', 'RisuAI': 'Lorebook más compresión HypaMemoryV2/V3 y SupaMemory', 'SillyTavern': 'Lorebook (World Info) más extensiones de memoria creadas por la comunidad' },
           { 'Aspecto': 'Conexiones de backend', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter y backends autoalojados como text-generation-webui', 'SillyTavern': 'Una lista más amplia que incluye KoboldCpp, Ollama, llama.cpp, text-generation-webui y LM Studio' },
         ],
-        note: 'Si una app web alojada o una interfaz nativa adaptada a móvil te importa, las opciones de distribución de RisuAI encajan más directamente. Si quieres la gama más amplia de backends autoalojados directamente compatibles y un gran ecosistema de extensiones comunitarias, evalúa directamente [SillyTavern](/es/power-local-llm/sillytavern-review). Ambos son gratuitos, de código abierto, y no ejecutan ningún modelo por sí mismos — verifica el soporte de backend actual en el repositorio de cada proyecto antes de decidir.',
+        note: 'Si una app web alojada o una interfaz nativa adaptada a móvil te importa, las opciones de distribución de RisuAI encajan más directamente. Si quieres la gama más amplia de backends autoalojados directamente compatibles y un gran ecosistema de extensiones comunitarias, evalúa directamente [SillyTavern](/es/local-llms/sillytavern-review). Ambos son gratuitos, de código abierto, y no ejecutan ningún modelo por sí mismos — verifica el soporte de backend actual en el repositorio de cada proyecto antes de decidir.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espera, o busca otra opción, si',
             list: [
-              'Quieres la lista más amplia posible de backends autoalojados directamente compatibles (incluidos Ollama, KoboldCpp y llama.cpp) en un solo cliente — [SillyTavern](/es/power-local-llm/sillytavern-review) documenta un soporte de backend más amplio',
+              'Quieres la lista más amplia posible de backends autoalojados directamente compatibles (incluidos Ollama, KoboldCpp y llama.cpp) en un solo cliente — [SillyTavern](/es/local-llms/sillytavern-review) documenta un soporte de backend más amplio',
               'Quieres una app de escritorio totalmente cerrada, de tipo apuntar y hacer clic, con una biblioteca de personajes integrada y sin ninguna configuración de autoalojamiento o claves API — consulta [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) para ese modelo',
               'Necesitas una alternativa de cliente de escritorio compatible con GPL y con soporte oficial para comparar — consulta [Agnai](/es/power-local-llm/agnai-review)',
               'Necesitas soporte empresarial, un SLA o un proveedor al que contactar ante problemas — el canal de soporte de RisuAI es su seguimiento de issues en GitHub, típico de un proyecto comunitario de código abierto y no de un proveedor comercial',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Competidores y alternativas',
         content: 'RisuAI se ubica en el mismo segmento de clientes de rol y chat de personajes que otros varios frontends. Así se compara con las alternativas más cercanas — consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo de herramientas de IA local.',
         items: [
-          '**[SillyTavern](/es/power-local-llm/sillytavern-review)** — la comparación directa más cercana: un frontend de rol gratuito y solo autoalojado con una lista más amplia de backends de inferencia directamente compatibles y un gran ecosistema de extensiones comunitarias, a costa de no tener una app web alojada oficial.',
+          '**[SillyTavern](/es/local-llms/sillytavern-review)** — la comparación directa más cercana: un frontend de rol gratuito y solo autoalojado con una lista más amplia de backends de inferencia directamente compatibles y un gran ecosistema de extensiones comunitarias, a costa de no tener una app web alojada oficial.',
           '**[Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026)** — una app de escritorio de código cerrado (Windows/Mac) pensada para la simplicidad de apuntar y hacer clic, con un Character Hub integrado y un nivel de nube de pago opcional — una alternativa con menos configuración frente al enfoque abierto y agnóstico de backend de RisuAI.',
           '**[Agnai](/es/power-local-llm/agnai-review)** — otro cliente de rol y chat de personajes de código abierto que cubre un terreno similar, y merece la pena comparar directamente en términos de licencia, opciones alojadas frente a autoalojadas, y soporte de backend.',
         ],
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de SillyTavern](/es/power-local-llm/sillytavern-review) — la alternativa de código abierto más cercana, con una lista más amplia de backends autoalojados directamente compatibles.',
+          '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — la alternativa de código abierto más cercana, con una lista más amplia de backends autoalojados directamente compatibles.',
           '[Reseña de Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — una alternativa de escritorio de código cerrado y apuntar-y-hacer-clic con una biblioteca de personajes integrada.',
           '[Reseña de Agnai](/es/power-local-llm/agnai-review) — otro cliente de rol y chat de personajes de código abierto para comparar.',
           '[LLMs locales sin censura para escritura creativa: ética, legalidad y buenas prácticas](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientación a nivel de modelo aplicable a cualquier frontend de rol local, RisuAI incluido.',
@@ -1125,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**O RisuAI e o [SillyTavern](/pt/power-local-llm/sillytavern-review) estão entre os frontends de roleplay open source mais comparados**, já que ambos são gratuitos, conectam-se a um backend de sua escolha, e giram em torno de sistemas de memória no estilo Lorebook. As diferenças mais claras estão nos termos de licença e no quanto cada projeto prioriza o uso mobile.',
+        content: '**O RisuAI e o [SillyTavern](/pt/local-llms/sillytavern-review) estão entre os frontends de roleplay open source mais comparados**, já que ambos são gratuitos, conectam-se a um backend de sua escolha, e giram em torno de sistemas de memória no estilo Lorebook. As diferenças mais claras estão nos termos de licença e no quanto cada projeto prioriza o uso mobile.',
         itemHeadings: true,
         columns: ['Aspecto', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'Sistema de memória', 'RisuAI': 'Lorebook mais compressão HypaMemoryV2/V3 e SupaMemory', 'SillyTavern': 'Lorebook (World Info) mais extensões de memória criadas pela comunidade' },
           { 'Aspecto': 'Conexões de backend', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter e backends autogerenciados como o text-generation-webui', 'SillyTavern': 'Uma lista mais ampla, incluindo KoboldCpp, Ollama, llama.cpp, text-generation-webui e LM Studio' },
         ],
-        note: 'Se um app web hospedado ou uma interface nativa adaptada para mobile importam para você, as opções de distribuição do RisuAI encaixam mais diretamente. Se você quer a maior variedade de backends autogerenciados diretamente suportados e um grande ecossistema de extensões da comunidade, avalie diretamente o [SillyTavern](/pt/power-local-llm/sillytavern-review). Ambos são gratuitos, open source, e não executam nenhum modelo por conta própria — verifique o suporte atual a backends no repositório de cada projeto antes de decidir.',
+        note: 'Se um app web hospedado ou uma interface nativa adaptada para mobile importam para você, as opções de distribuição do RisuAI encaixam mais diretamente. Se você quer a maior variedade de backends autogerenciados diretamente suportados e um grande ecossistema de extensões da comunidade, avalie diretamente o [SillyTavern](/pt/local-llms/sillytavern-review). Ambos são gratuitos, open source, e não executam nenhum modelo por conta própria — verifique o suporte atual a backends no repositório de cada projeto antes de decidir.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espere, ou procure outra opção, se',
             list: [
-              'Você quer a lista mais ampla possível de backends autogerenciados diretamente suportados (incluindo Ollama, KoboldCpp e llama.cpp) em um único cliente — o [SillyTavern](/pt/power-local-llm/sillytavern-review) documenta suporte mais amplo a backends',
+              'Você quer a lista mais ampla possível de backends autogerenciados diretamente suportados (incluindo Ollama, KoboldCpp e llama.cpp) em um único cliente — o [SillyTavern](/pt/local-llms/sillytavern-review) documenta suporte mais amplo a backends',
               'Você quer um app desktop totalmente fechado, do tipo apontar e clicar, com biblioteca de personagens integrada e nenhuma configuração de autogerenciamento ou chave de API — veja o [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) para esse modelo',
               'Você precisa de uma alternativa de cliente desktop com suporte oficial e compatível com GPL para comparar — veja o [Agnai](/pt/power-local-llm/agnai-review)',
               'Você precisa de suporte empresarial, um SLA ou um fornecedor para contatar em caso de problemas — o canal de suporte do RisuAI é o rastreador de issues do GitHub, típico de um projeto comunitário open source, não de um fornecedor comercial',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Concorrentes e alternativas',
         content: 'O RisuAI está no mesmo segmento de clientes de roleplay e chat de personagens que vários outros frontends. Veja como ele se compara com as alternativas mais próximas — consulte o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo de ferramentas de IA local.',
         items: [
-          '**[SillyTavern](/pt/power-local-llm/sillytavern-review)** — a comparação direta mais próxima: um frontend de roleplay gratuito e apenas autogerenciado, com uma lista mais ampla de backends de inferência diretamente suportados e um grande ecossistema de extensões da comunidade, ao custo de não ter um app web hospedado oficial.',
+          '**[SillyTavern](/pt/local-llms/sillytavern-review)** — a comparação direta mais próxima: um frontend de roleplay gratuito e apenas autogerenciado, com uma lista mais ampla de backends de inferência diretamente suportados e um grande ecossistema de extensões da comunidade, ao custo de não ter um app web hospedado oficial.',
           '**[Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026)** — um app desktop de código fechado (Windows/Mac) construído para simplicidade de apontar e clicar, com um Character Hub integrado, e um nível de nuvem pago opcional — uma alternativa de menor configuração à abordagem open source e agnóstica de backend do RisuAI.',
           '**[Agnai](/pt/power-local-llm/agnai-review)** — outro cliente de roleplay e chat de personagens open source cobrindo terreno semelhante, que vale comparar diretamente quanto a termos de licença, opções hospedadas vs. autogerenciadas, e suporte a backends.',
         ],
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do SillyTavern](/pt/power-local-llm/sillytavern-review) — a alternativa open source mais próxima, com uma lista mais ampla de backends autogerenciados diretamente suportados.',
+          '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — a alternativa open source mais próxima, com uma lista mais ampla de backends autogerenciados diretamente suportados.',
           '[Análise do Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — uma alternativa desktop de código fechado e apontar-e-clicar com biblioteca de personagens integrada.',
           '[Análise do Agnai](/pt/power-local-llm/agnai-review) — outro cliente de roleplay e chat de personagens open source para comparar.',
           '[LLMs locais sem censura para escrita criativa: ética, legalidade e boas práticas](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientações no nível do modelo aplicáveis a qualquer frontend de roleplay local, incluindo o RisuAI.',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAIと[SillyTavern](/ja/power-local-llm/sillytavern-review)は、最もよく比較されるオープンソースのロールプレイフロントエンドの2つです。** どちらも無料で、選択したバックエンドに接続し、Lorebookスタイルのメモリーシステムを中心としているためです。最も明確な違いはライセンス条件と、各プロジェクトがどの程度モバイル利用を重視しているかです。',
+        content: '**RisuAIと[SillyTavern](/ja/local-llms/sillytavern-review)は、最もよく比較されるオープンソースのロールプレイフロントエンドの2つです。** どちらも無料で、選択したバックエンドに接続し、Lorebookスタイルのメモリーシステムを中心としているためです。最も明確な違いはライセンス条件と、各プロジェクトがどの程度モバイル利用を重視しているかです。',
         itemHeadings: true,
         columns: ['項目', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'メモリーシステム', 'RisuAI': 'LorebookとHypaMemoryV2/V3、SupaMemory圧縮', 'SillyTavern': 'Lorebook(World Info)とコミュニティ製のメモリー拡張機能' },
           { '項目': 'バックエンド接続', 'RisuAI': 'OpenAI、Claude、Gemini、DeepInfra、OpenRouter、およびtext-generation-webuiなどのセルフホスト型バックエンド', 'SillyTavern': 'KoboldCpp、Ollama、llama.cpp、text-generation-webui、LM Studioを含むより幅広いリスト' },
         ],
-        note: 'ホスト型ウェブアプリやネイティブなモバイルフレンドリーインターフェースが重要であれば、RisuAIの配布オプションがより直接的に合います。直接サポートされるセルフホスト型バックエンドの最も幅広い選択肢と大規模なコミュニティ拡張エコシステムを求めるなら、[SillyTavern](/ja/power-local-llm/sillytavern-review)を直接評価してください。どちらも無料でオープンソースであり、モデル自体は実行しません——決定する前に、各プロジェクトのリポジトリで現在のバックエンドサポートを確認してください。',
+        note: 'ホスト型ウェブアプリやネイティブなモバイルフレンドリーインターフェースが重要であれば、RisuAIの配布オプションがより直接的に合います。直接サポートされるセルフホスト型バックエンドの最も幅広い選択肢と大規模なコミュニティ拡張エコシステムを求めるなら、[SillyTavern](/ja/local-llms/sillytavern-review)を直接評価してください。どちらも無料でオープンソースであり、モデル自体は実行しません——決定する前に、各プロジェクトのリポジトリで現在のバックエンドサポートを確認してください。',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな場合は様子を見るか他を検討',
             list: [
-              '1つのクライアントで、Ollama、KoboldCpp、llama.cppを含む直接サポートされるセルフホスト型バックエンドの最も幅広いリストがほしい——[SillyTavern](/ja/power-local-llm/sillytavern-review)はより広いバックエンドサポートを文書化しています',
+              '1つのクライアントで、Ollama、KoboldCpp、llama.cppを含む直接サポートされるセルフホスト型バックエンドの最も幅広いリストがほしい——[SillyTavern](/ja/local-llms/sillytavern-review)はより広いバックエンドサポートを文書化しています',
               '組み込みのキャラクターライブラリを備え、セルフホストやAPIキー設定が一切不要な、完全にクローズドなポイント&クリック型デスクトップアプリがほしい——そのモデルは[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)を参照',
               '比較対象として、公式にサポートされGPL互換の代替デスクトップファーストクライアントが必要——[Agnai](/ja/power-local-llm/agnai-review)を参照',
               'エンタープライズサポート、SLA、または問題発生時に連絡できるベンダーが必要——RisuAIのサポートチャネルはGitHubのissueトラッカーであり、商用ベンダーというよりコミュニティのオープンソースプロジェクトとして典型的なものです',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '競合とその他の選択肢',
         content: 'RisuAIは、他のいくつかのフロントエンドと同じロールプレイ・キャラクターチャットクライアントのセグメントに位置しています。最も近い代替案との比較は以下の通りです——ローカルAIツールの完全なカタログは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。',
         items: [
-          '**[SillyTavern](/ja/power-local-llm/sillytavern-review)** — 最も近い直接比較対象:直接サポートされる推論バックエンドの幅広いリストと大規模なコミュニティ拡張エコシステムを持つ、無料でセルフホスト専用のロールプレイフロントエンドですが、公式のホスト型ウェブアプリはありません。',
+          '**[SillyTavern](/ja/local-llms/sillytavern-review)** — 最も近い直接比較対象:直接サポートされる推論バックエンドの幅広いリストと大規模なコミュニティ拡張エコシステムを持つ、無料でセルフホスト専用のロールプレイフロントエンドですが、公式のホスト型ウェブアプリはありません。',
           '**[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)** — ポイント&クリックの簡便さのために構築されたクローズドソースのデスクトップアプリ(Windows/Mac)で、組み込みのCharacter Hubとオプションの有料クラウドプランを備えています——RisuAIのオープンソースでバックエンドに依存しないアプローチに対して、設定がより簡単な代替案です。',
           '**[Agnai](/ja/power-local-llm/agnai-review)** — 同様の領域をカバーする、もう一つのオープンソースのロールプレイ・キャラクターチャットクライアントで、ライセンス条件、ホスト型対セルフホスト型のオプション、バックエンドサポートについて直接比較する価値があります。',
         ],
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[SillyTavernレビュー](/ja/power-local-llm/sillytavern-review) — 直接サポートされるセルフホスト型バックエンドのより幅広いリストを持つ、最も近いオープンソースの代替案。',
+          '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 直接サポートされるセルフホスト型バックエンドのより幅広いリストを持つ、最も近いオープンソースの代替案。',
           '[Backyard AIレビュー](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — 組み込みのキャラクターライブラリを持つ、クローズドソースでポイント&クリック型のデスクトップ代替案。',
           '[Agnaiレビュー](/ja/power-local-llm/agnai-review) — 比較対象となる、もう一つのオープンソースのロールプレイ・キャラクターチャットクライアント。',
           '[創作のための検閲なしローカルLLM:倫理・合法性・ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — RisuAIを含む、あらゆるローカルロールプレイフロントエンドに適用されるモデルレベルのガイダンス。',
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI对比SillyTavern',
-        content: '**RisuAI和[SillyTavern](/zh/power-local-llm/sillytavern-review)是最常被比较的两款开源角色扮演前端**,因为两者都是免费的,都连接到你选择的后端,并且都以Lorebook风格的记忆系统为核心。最明显的区别在于许可证条款,以及每个项目在移动端使用上的侧重程度。',
+        content: '**RisuAI和[SillyTavern](/zh/local-llms/sillytavern-review)是最常被比较的两款开源角色扮演前端**,因为两者都是免费的,都连接到你选择的后端,并且都以Lorebook风格的记忆系统为核心。最明显的区别在于许可证条款,以及每个项目在移动端使用上的侧重程度。',
         itemHeadings: true,
         columns: ['方面', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方面': '记忆系统', 'RisuAI': 'Lorebook加HypaMemoryV2/V3和SupaMemory压缩', 'SillyTavern': 'Lorebook(World Info)加社区构建的记忆扩展' },
           { '方面': '后端连接', 'RisuAI': 'OpenAI、Claude、Gemini、DeepInfra、OpenRouter,以及text-generation-webui等自托管后端', 'SillyTavern': '更广泛的列表,包括KoboldCpp、Ollama、llama.cpp、text-generation-webui和LM Studio' },
         ],
-        note: '如果托管网页应用或原生移动端友好界面对你很重要,RisuAI的分发选项会更直接地满足需求。如果你想要直接支持的自托管后端范围最广,以及庞大的社区扩展生态系统,请直接评估[SillyTavern](/zh/power-local-llm/sillytavern-review)。两者都是免费开源的,本身都不运行模型——请在决定前查看各项目仓库中当前的后端支持情况。',
+        note: '如果托管网页应用或原生移动端友好界面对你很重要,RisuAI的分发选项会更直接地满足需求。如果你想要直接支持的自托管后端范围最广,以及庞大的社区扩展生态系统,请直接评估[SillyTavern](/zh/local-llms/sillytavern-review)。两者都是免费开源的,本身都不运行模型——请在决定前查看各项目仓库中当前的后端支持情况。',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '在以下情况建议等待或考虑其他方案',
             list: [
-              '你想要在单一客户端中获得直接支持的自托管后端最广泛的列表(包括Ollama、KoboldCpp和llama.cpp)——[SillyTavern](/zh/power-local-llm/sillytavern-review)记录了更广泛的后端支持',
+              '你想要在单一客户端中获得直接支持的自托管后端最广泛的列表(包括Ollama、KoboldCpp和llama.cpp)——[SillyTavern](/zh/local-llms/sillytavern-review)记录了更广泛的后端支持',
               '你想要一款完全封闭、点击即用的桌面应用,内置角色库,完全无需自托管或API密钥配置——请参阅[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)了解这种模式',
               '你需要一个官方支持、与GPL兼容的桌面优先客户端作为比较对象——请参阅[Agnai](/zh/power-local-llm/agnai-review)',
               '你需要企业支持、SLA或可在出现问题时联系的供应商——RisuAI的支持渠道是其GitHub issue跟踪器,这是社区开源项目而非商业供应商的典型做法',
@@ -1660,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '竞品与替代方案',
         content: 'RisuAI与其他若干前端处于同一角色扮演和角色聊天客户端细分领域。以下是它与最相近替代方案的对比——完整的本地AI工具目录请参阅[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
         items: [
-          '**[SillyTavern](/zh/power-local-llm/sillytavern-review)** — 最接近的直接对比对象:一款免费、仅限自托管的角色扮演前端,直接支持的推理后端列表更广,拥有庞大的社区扩展生态系统,但代价是没有官方托管网页应用。',
+          '**[SillyTavern](/zh/local-llms/sillytavern-review)** — 最接近的直接对比对象:一款免费、仅限自托管的角色扮演前端,直接支持的推理后端列表更广,拥有庞大的社区扩展生态系统,但代价是没有官方托管网页应用。',
           '**[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)** — 一款闭源桌面应用(Windows/Mac),专为点击即用的简便性而打造,内置Character Hub,并提供可选的付费云端套餐——相较于RisuAI开源、不依赖特定后端的方式,这是一种配置要求更低的替代方案。',
           '**[Agnai](/zh/power-local-llm/agnai-review)** — 另一款覆盖类似领域的开源角色扮演与角色聊天客户端,值得在许可证条款、托管与自托管选项以及后端支持方面进行直接比较。',
         ],
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[SillyTavern评测](/zh/power-local-llm/sillytavern-review) — 最接近的开源替代方案,拥有更广泛的直接支持自托管后端列表。',
+          '[SillyTavern评测](/zh/local-llms/sillytavern-review) — 最接近的开源替代方案,拥有更广泛的直接支持自托管后端列表。',
           '[Backyard AI评测](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) — 一款闭源、点击即用的桌面替代方案,内置角色库。',
           '[Agnai评测](/zh/power-local-llm/agnai-review) — 另一款可供比较的开源角色扮演与角色聊天客户端。',
           '[创意写作的无审查本地LLM:伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 适用于包括RisuAI在内的任何本地角色扮演前端的模型层面指导。',
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI مقابل SillyTavern',
-        content: '**يُعد RisuAI و[SillyTavern](/ar/power-local-llm/sillytavern-review) من بين أكثر واجهات لعب الأدوار مفتوحة المصدر التي تتم مقارنتها**، لأن كليهما مجاني، ويتصل بخلفية تختارها أنت، ويتمحور حول أنظمة ذاكرة على طراز Lorebook. تكمن الاختلافات الأوضح في شروط الترخيص ومدى ميل كل مشروع نحو الاستخدام على الأجهزة المحمولة.',
+        content: '**يُعد RisuAI و[SillyTavern](/ar/local-llms/sillytavern-review) من بين أكثر واجهات لعب الأدوار مفتوحة المصدر التي تتم مقارنتها**، لأن كليهما مجاني، ويتصل بخلفية تختارها أنت، ويتمحور حول أنظمة ذاكرة على طراز Lorebook. تكمن الاختلافات الأوضح في شروط الترخيص ومدى ميل كل مشروع نحو الاستخدام على الأجهزة المحمولة.',
         itemHeadings: true,
         columns: ['الجانب', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الجانب': 'نظام الذاكرة', 'RisuAI': 'Lorebook بالإضافة إلى ضغط HypaMemoryV2/V3 وSupaMemory', 'SillyTavern': 'Lorebook (World Info) بالإضافة إلى إضافات ذاكرة أنشأها المجتمع' },
           { 'الجانب': 'اتصالات الخلفية', 'RisuAI': 'OpenAI وClaude وGemini وDeepInfra وOpenRouter وخلفيات مستضافة ذاتيًا مثل text-generation-webui', 'SillyTavern': 'قائمة أوسع تشمل KoboldCpp وOllama وllama.cpp وtext-generation-webui وLM Studio' },
         ],
-        note: 'إذا كان تطبيق الويب المستضاف أو الواجهة الأصلية المتكيفة مع الأجهزة المحمولة مهمًا بالنسبة لك، فإن خيارات توزيع RisuAI تناسبك بشكل مباشر أكثر. إذا أردت أوسع نطاق من الخلفيات المستضافة ذاتيًا المدعومة مباشرة ومنظومة إضافات مجتمعية كبيرة، قيّم [SillyTavern](/ar/power-local-llm/sillytavern-review) مباشرة. كلاهما مجاني ومفتوح المصدر، ولا يشغّل أي منهما نموذجًا بنفسه — تحقق من دعم الخلفية الحالي في مستودع كل مشروع قبل اتخاذ القرار.',
+        note: 'إذا كان تطبيق الويب المستضاف أو الواجهة الأصلية المتكيفة مع الأجهزة المحمولة مهمًا بالنسبة لك، فإن خيارات توزيع RisuAI تناسبك بشكل مباشر أكثر. إذا أردت أوسع نطاق من الخلفيات المستضافة ذاتيًا المدعومة مباشرة ومنظومة إضافات مجتمعية كبيرة، قيّم [SillyTavern](/ar/local-llms/sillytavern-review) مباشرة. كلاهما مجاني ومفتوح المصدر، ولا يشغّل أي منهما نموذجًا بنفسه — تحقق من دعم الخلفية الحالي في مستودع كل مشروع قبل اتخاذ القرار.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'انتظر، أو ابحث في مكان آخر، إذا',
             list: [
-              'أردت أوسع قائمة ممكنة من الخلفيات المستضافة ذاتيًا المدعومة مباشرة (بما في ذلك Ollama وKoboldCpp وllama.cpp) في عميل واحد — يوثّق [SillyTavern](/ar/power-local-llm/sillytavern-review) دعمًا أوسع للخلفيات',
+              'أردت أوسع قائمة ممكنة من الخلفيات المستضافة ذاتيًا المدعومة مباشرة (بما في ذلك Ollama وKoboldCpp وllama.cpp) في عميل واحد — يوثّق [SillyTavern](/ar/local-llms/sillytavern-review) دعمًا أوسع للخلفيات',
               'أردت تطبيق سطح مكتب مغلقًا بالكامل بطريقة النقر والتوجيه، مع مكتبة شخصيات مدمجة ودون أي إعداد للاستضافة الذاتية أو مفاتيح واجهة برمجة التطبيقات — راجع [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) لهذا النموذج',
               'احتجت إلى بديل عميل سطح مكتب مدعوم رسميًا ومتوافق مع GPL للمقارنة — راجع [Agnai](/ar/power-local-llm/agnai-review)',
               'احتجت إلى دعم للشركات، أو اتفاقية مستوى خدمة، أو مزوّد يمكنك التواصل معه عند وجود مشاكل — قناة دعم RisuAI هي متتبع مشاكل GitHub، وهو أمر معتاد لمشروع مجتمعي مفتوح المصدر وليس مزوّدًا تجاريًا',
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المنافسون والبدائل',
         content: 'يقع RisuAI في نفس شريحة عملاء لعب الأدوار ودردشة الشخصيات جنبًا إلى جنب مع عدة واجهات أمامية أخرى. إليك كيف يقارن بأقرب البدائل — راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية.',
         items: [
-          '**[SillyTavern](/ar/power-local-llm/sillytavern-review)** — أقرب مقارنة مباشرة: واجهة أمامية مجانية ومستضافة ذاتيًا فقط للعب الأدوار مع قائمة أوسع من خلفيات الاستدلال المدعومة مباشرة ومنظومة إضافات مجتمعية كبيرة، مقابل عدم وجود تطبيق ويب مستضاف رسمي.',
+          '**[SillyTavern](/ar/local-llms/sillytavern-review)** — أقرب مقارنة مباشرة: واجهة أمامية مجانية ومستضافة ذاتيًا فقط للعب الأدوار مع قائمة أوسع من خلفيات الاستدلال المدعومة مباشرة ومنظومة إضافات مجتمعية كبيرة، مقابل عدم وجود تطبيق ويب مستضاف رسمي.',
           '**[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)** — تطبيق سطح مكتب مغلق المصدر (Windows/Mac) مصمم للبساطة بالنقر والتوجيه، مع Character Hub مدمج وخطة سحابية مدفوعة اختيارية — بديل أقل تعقيدًا في الإعداد مقارنة بنهج RisuAI المفتوح المصدر وغير المرتبط بخلفية معينة.',
           '**[Agnai](/ar/power-local-llm/agnai-review)** — عميل آخر مفتوح المصدر للعب الأدوار ودردشة الشخصيات يغطي مجالًا مشابهًا، يستحق المقارنة المباشرة من حيث شروط الترخيص وخيارات الاستضافة مقابل الاستضافة الذاتية ودعم الخلفية.',
         ],
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة SillyTavern](/ar/power-local-llm/sillytavern-review) — أقرب بديل مفتوح المصدر، مع قائمة أوسع من الخلفيات المستضافة ذاتيًا المدعومة مباشرة.',
+          '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — أقرب بديل مفتوح المصدر، مع قائمة أوسع من الخلفيات المستضافة ذاتيًا المدعومة مباشرة.',
           '[مراجعة Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — بديل سطح مكتب مغلق المصدر بطريقة النقر والتوجيه، مع مكتبة شخصيات مدمجة.',
           '[مراجعة Agnai](/ar/power-local-llm/agnai-review) — عميل آخر مفتوح المصدر للعب الأدوار ودردشة الشخصيات للمقارنة.',
           '[نماذج LLM المحلية غير الخاضعة للرقابة للكتابة الإبداعية: الأخلاقيات والقانونية وأفضل الممارسات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — إرشادات على مستوى النموذج تنطبق على أي واجهة أمامية للعب الأدوار المحلي، بما في ذلك RisuAI.',
@@ -2109,7 +2109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonSillyTavern: {
         id: 'risuai-vs-sillytavern',
         title: 'RisuAI vs. SillyTavern',
-        content: '**RisuAI와 [SillyTavern](/ko/power-local-llm/sillytavern-review)은 가장 흔히 비교되는 오픈소스 롤플레이 프런트엔드 중 두 가지입니다.** 둘 다 무료이고, 사용자가 선택한 백엔드에 연결되며, Lorebook 스타일의 메모리 시스템을 중심으로 하기 때문입니다. 가장 명확한 차이는 라이선스 조건과 각 프로젝트가 모바일 사용을 얼마나 지향하는지입니다.',
+        content: '**RisuAI와 [SillyTavern](/ko/local-llms/sillytavern-review)은 가장 흔히 비교되는 오픈소스 롤플레이 프런트엔드 중 두 가지입니다.** 둘 다 무료이고, 사용자가 선택한 백엔드에 연결되며, Lorebook 스타일의 메모리 시스템을 중심으로 하기 때문입니다. 가장 명확한 차이는 라이선스 조건과 각 프로젝트가 모바일 사용을 얼마나 지향하는지입니다.',
         itemHeadings: true,
         columns: ['항목', 'RisuAI', 'SillyTavern'],
         rows: [
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '메모리 시스템', 'RisuAI': 'Lorebook과 HypaMemoryV2/V3, SupaMemory 압축', 'SillyTavern': 'Lorebook(World Info)과 커뮤니티가 만든 메모리 확장 기능' },
           { '항목': '백엔드 연결', 'RisuAI': 'OpenAI, Claude, Gemini, DeepInfra, OpenRouter 및 text-generation-webui 같은 자체 호스팅 백엔드', 'SillyTavern': 'KoboldCpp, Ollama, llama.cpp, text-generation-webui, LM Studio를 포함한 더 넓은 목록' },
         ],
-        note: '호스팅 웹 앱이나 네이티브 모바일 친화적 인터페이스가 중요하다면 RisuAI의 배포 옵션이 더 직접적으로 맞습니다. 직접 지원되는 자체 호스팅 백엔드의 가장 넓은 범위와 대규모 커뮤니티 확장 생태계를 원한다면 [SillyTavern](/ko/power-local-llm/sillytavern-review)을 직접 평가해 보세요. 둘 다 무료이고 오픈소스이며 모델 자체를 실행하지 않습니다 — 결정하기 전에 각 프로젝트의 저장소에서 현재 백엔드 지원 상태를 확인하세요.',
+        note: '호스팅 웹 앱이나 네이티브 모바일 친화적 인터페이스가 중요하다면 RisuAI의 배포 옵션이 더 직접적으로 맞습니다. 직접 지원되는 자체 호스팅 백엔드의 가장 넓은 범위와 대규모 커뮤니티 확장 생태계를 원한다면 [SillyTavern](/ko/local-llms/sillytavern-review)을 직접 평가해 보세요. 둘 다 무료이고 오픈소스이며 모델 자체를 실행하지 않습니다 — 결정하기 전에 각 프로젝트의 저장소에서 현재 백엔드 지원 상태를 확인하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-risuai',
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 기다리거나 다른 곳을 찾아보세요',
             list: [
-              'Ollama, KoboldCpp, llama.cpp를 포함해 단일 클라이언트에서 직접 지원되는 가장 넓은 범위의 자체 호스팅 백엔드를 원하는 경우 — [SillyTavern](/ko/power-local-llm/sillytavern-review)이 더 폭넓은 백엔드 지원을 문서화하고 있음',
+              'Ollama, KoboldCpp, llama.cpp를 포함해 단일 클라이언트에서 직접 지원되는 가장 넓은 범위의 자체 호스팅 백엔드를 원하는 경우 — [SillyTavern](/ko/local-llms/sillytavern-review)이 더 폭넓은 백엔드 지원을 문서화하고 있음',
               '내장 캐릭터 라이브러리를 갖추고 자체 호스팅이나 API 키 설정이 전혀 필요 없는 완전히 폐쇄형인 포인트 앤드 클릭 데스크톱 앱을 원하는 경우 — 그러한 모델은 [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026)를 참고',
               '비교할 공식 지원되고 GPL 호환되는 대체 데스크톱 우선 클라이언트가 필요한 경우 — [Agnai](/ko/power-local-llm/agnai-review) 참고',
               '엔터프라이즈 지원, SLA, 또는 문제 발생 시 연락할 공급업체가 필요한 경우 — RisuAI의 지원 채널은 GitHub 이슈 트래커로, 상업적 공급업체가 아닌 커뮤니티 오픈소스 프로젝트에 전형적인 방식',
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '경쟁 제품 및 대안',
         content: 'RisuAI는 여러 다른 프런트엔드와 같은 롤플레이 및 캐릭터 채팅 클라이언트 세그먼트에 속해 있습니다. 가장 가까운 대안과 어떻게 비교되는지 살펴보겠습니다 — 로컬 AI 도구의 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요.',
         items: [
-          '**[SillyTavern](/ko/power-local-llm/sillytavern-review)** — 가장 가까운 직접 비교 대상: 직접 지원되는 추론 백엔드의 더 넓은 목록과 대규모 커뮤니티 확장 생태계를 갖춘 무료, 자체 호스팅 전용 롤플레이 프런트엔드지만 공식 호스팅 웹 앱은 없음.',
+          '**[SillyTavern](/ko/local-llms/sillytavern-review)** — 가장 가까운 직접 비교 대상: 직접 지원되는 추론 백엔드의 더 넓은 목록과 대규모 커뮤니티 확장 생태계를 갖춘 무료, 자체 호스팅 전용 롤플레이 프런트엔드지만 공식 호스팅 웹 앱은 없음.',
           '**[Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026)** — 포인트 앤드 클릭 단순성을 위해 만들어진 폐쇄형 소스 데스크톱 앱(Windows/Mac)으로, 내장 Character Hub와 선택적 유료 클라우드 요금제를 제공 — RisuAI의 오픈소스, 백엔드 무관적 접근 방식에 비해 설정이 덜 필요한 대안.',
           '**[Agnai](/ko/power-local-llm/agnai-review)** — 비슷한 영역을 다루는 또 다른 오픈소스 롤플레이 및 캐릭터 채팅 클라이언트로, 라이선스 조건, 호스팅 대 자체 호스팅 옵션, 백엔드 지원 측면에서 직접 비교할 가치가 있음.',
         ],
@@ -2212,7 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[SillyTavern 리뷰](/ko/power-local-llm/sillytavern-review) — 직접 지원되는 자체 호스팅 백엔드의 더 넓은 목록을 갖춘 가장 가까운 오픈소스 대안.',
+          '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 직접 지원되는 자체 호스팅 백엔드의 더 넓은 목록을 갖춘 가장 가까운 오픈소스 대안.',
           '[Backyard AI 리뷰](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 내장 캐릭터 라이브러리를 갖춘 폐쇄형 소스, 포인트 앤드 클릭 데스크톱 대안.',
           '[Agnai 리뷰](/ko/power-local-llm/agnai-review) — 비교할 만한 또 다른 오픈소스 롤플레이 및 캐릭터 채팅 클라이언트.',
           '[검열 없는 로컬 LLM 창작 글쓰기: 윤리, 합법성, 모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — RisuAI를 포함한 모든 로컬 롤플레이 프런트엔드에 적용되는 모델 수준 가이드.',

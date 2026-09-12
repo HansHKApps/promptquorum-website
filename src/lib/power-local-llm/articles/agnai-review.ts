@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai is the pick for readers who want a self-hostable, open-source roleplay chat frontend that can connect to several different AI services at once.** It supports Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer, runs hosted at [agnai.chat](https://agnai.chat) with no install, or self-hosts via `npm install agnai -g` or Docker with MongoDB and Redis both optional. Readers standardized on Ollama, or who want the largest extension ecosystem, should compare it with [SillyTavern](/power-local-llm/sillytavern-review) instead.',
+      '**Agnai is the pick for readers who want a self-hostable, open-source roleplay chat frontend that can connect to several different AI services at once.** It supports Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer, runs hosted at [agnai.chat](https://agnai.chat) with no install, or self-hosts via `npm install agnai -g` or Docker with MongoDB and Redis both optional. Readers standardized on Ollama, or who want the largest extension ecosystem, should compare it with [SillyTavern](/local-llms/sillytavern-review) instead.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Core features: multi-user/multi-bot group conversations, character cards in four persona formats (W++, Square Bracket Format, Boostyle, plain text), Memory/Lore books, and AI-assisted character generation.',
           'The hosted version at [agnai.chat](https://agnai.chat) needs no install and offers a free tier plus an optional paid subscription for priority access to Agnai\'s own hosted models.',
           'Agnai does not list Ollama as a native AI service — connecting an Ollama-served model works only through an OpenAI-compatible proxy layer, not a direct integration.',
-          'Compare with [SillyTavern](/power-local-llm/sillytavern-review), [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026), and [RisuAI](/power-local-llm/risuai-review) — companion entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Compare with [SillyTavern](/local-llms/sillytavern-review), [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026), and [RisuAI](/power-local-llm/risuai-review) — companion entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Best for', 'Setup level', 'Backend / model access', 'Key limitation'],
         rows: [
           { 'App': '[Agnai](https://agnai.chat)', 'Best for': 'Multi-user/multi-bot group roleplay across several AI-service backends', 'Setup level': 'Low (hosted) or medium (self-host: npm or Docker)', 'Backend / model access': 'Kobold-compatible, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', 'Key limitation': 'No native Ollama integration; hosted subscription pricing not published' },
-          { 'App': '[SillyTavern](/power-local-llm/sillytavern-review)', 'Best for': 'Maximum customization, extensions, prompt-template control', 'Setup level': 'High (separate backend + frontend)', 'Backend / model access': 'Any GGUF via KoboldCpp, text-generation-webui, or Ollama backend', 'Key limitation': 'Steepest learning curve of the group; no hosted option' },
+          { 'App': '[SillyTavern](/local-llms/sillytavern-review)', 'Best for': 'Maximum customization, extensions, prompt-template control', 'Setup level': 'High (separate backend + frontend)', 'Backend / model access': 'Any GGUF via KoboldCpp, text-generation-webui, or Ollama backend', 'Key limitation': 'Steepest learning curve of the group; no hosted option' },
           { 'App': '[Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'Best for': 'Low-friction local character chat with a built-in Character Hub', 'Setup level': 'Minimal (one installer)', 'Backend / model access': 'Bundled local models plus optional Backyard Cloud', 'Key limitation': 'No group chats; closed-source app; curated model list only' },
           { 'App': '[RisuAI](/power-local-llm/risuai-review)', 'Best for': 'Entry-level roleplay UI, web or self-hosted', 'Setup level': 'Medium (web or self-hosted, backend still required)', 'Backend / model access': 'Connected backend/GGUF via a linked service', 'Key limitation': 'Smaller extension ecosystem than SillyTavern; still needs a separate backend' },
         ],
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Who Should Not Use Agnai',
         items: [
-          '**Reader who specifically wants to connect Ollama.** Ollama is not a native Agnai backend; readers standardized on Ollama should consider [SillyTavern](/power-local-llm/sillytavern-review), which lists Ollama as a supported backend, or add an OpenAI-compatible proxy in front of Ollama first.',
+          '**Reader who specifically wants to connect Ollama.** Ollama is not a native Agnai backend; readers standardized on Ollama should consider [SillyTavern](/local-llms/sillytavern-review), which lists Ollama as a supported backend, or add an OpenAI-compatible proxy in front of Ollama first.',
           '**Reader who wants the largest extension ecosystem.** SillyTavern\'s community extension library is larger than Agnai\'s, based on each project\'s own repository activity.',
           '**Reader who wants a single-player desktop app with zero configuration.** [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026)\'s one-installer local mode needs less setup than self-hosting Agnai.',
           '**Reader who needs published, fixed subscription pricing before committing.** Agnai\'s hosted subscription tier pricing is not published in its own documentation; confirm current pricing directly on agnai.chat.',
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Agnai earns its place among self-hostable roleplay frontends by combining multi-user/multi-bot group conversations with support for nine external AI services — Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer — under an open-source AGPL-3.0 license. Self-hosting is genuinely low-friction: `npm install agnai -g` or a single Docker command, with MongoDB and Redis both optional. The trade-offs are specific, not vague: no native Ollama support (an OpenAI-compatible proxy is required instead), a smaller extension ecosystem than SillyTavern, and unpublished pricing for the hosted subscription tier. Readers who want group roleplay across multiple AI-service backends without configuring separate apps for each one get real value from Agnai; readers standardized on Ollama, or who want the deepest extension ecosystem, should compare it directly with [SillyTavern](/power-local-llm/sillytavern-review) first.',
+          'Agnai earns its place among self-hostable roleplay frontends by combining multi-user/multi-bot group conversations with support for nine external AI services — Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer — under an open-source AGPL-3.0 license. Self-hosting is genuinely low-friction: `npm install agnai -g` or a single Docker command, with MongoDB and Redis both optional. The trade-offs are specific, not vague: no native Ollama support (an OpenAI-compatible proxy is required instead), a smaller extension ecosystem than SillyTavern, and unpublished pricing for the hosted subscription tier. Readers who want group roleplay across multiple AI-service backends without configuring separate apps for each one get real value from Agnai; readers standardized on Ollama, or who want the deepest extension ecosystem, should compare it directly with [SillyTavern](/local-llms/sillytavern-review) first.',
       },
       sources: {
         id: 'sources',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — comprehensive app and tool directory for all platforms, including Agnai\'s own entry.',
-          '[SillyTavern Review](/power-local-llm/sillytavern-review) — the extension-rich, Ollama-compatible alternative with the largest configuration surface.',
+          '[SillyTavern Review](/local-llms/sillytavern-review) — the extension-rich, Ollama-compatible alternative with the largest configuration surface.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay-2026) — a closed-source, single-installer alternative for readers who want zero configuration.',
           '[RisuAI Review](/power-local-llm/risuai-review) — another open-source roleplay frontend, positioned between Agnai\'s multi-tenancy and Backyard AI\'s simplicity.',
           '[SillyTavern vs. Agnai vs. RisuAI: Best Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — full head-to-head comparison of all three open-source frontends.',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai ist die richtige Wahl für Leser, die ein selbst hostbares, quelloffenes Rollenspiel-Chat-Frontend wollen, das mehrere verschiedene KI-Dienste gleichzeitig anbinden kann.** Es unterstützt Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer, läuft gehostet auf [agnai.chat](https://agnai.chat) ohne Installation oder selbst gehostet über `npm install agnai -g` oder Docker, wobei MongoDB und Redis beide optional sind. Leser, die auf Ollama festgelegt sind oder das größte Erweiterungs-Ökosystem wollen, sollten stattdessen [SillyTavern](/de/power-local-llm/sillytavern-review) vergleichen.',
+      '**Agnai ist die richtige Wahl für Leser, die ein selbst hostbares, quelloffenes Rollenspiel-Chat-Frontend wollen, das mehrere verschiedene KI-Dienste gleichzeitig anbinden kann.** Es unterstützt Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer, läuft gehostet auf [agnai.chat](https://agnai.chat) ohne Installation oder selbst gehostet über `npm install agnai -g` oder Docker, wobei MongoDB und Redis beide optional sind. Leser, die auf Ollama festgelegt sind oder das größte Erweiterungs-Ökosystem wollen, sollten stattdessen [SillyTavern](/de/local-llms/sillytavern-review) vergleichen.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kernfunktionen: Gruppengespräche mit mehreren Nutzern/Bots, Charakterkarten in vier Persona-Formaten (W++, Square Bracket Format, Boostyle, Klartext), Memory/Lore-Books und KI-gestützte Charaktererstellung.',
           'Die gehostete Version auf [agnai.chat](https://agnai.chat) benötigt keine Installation und bietet eine kostenlose Stufe plus ein optionales kostenpflichtiges Abo für priorisierten Zugriff auf Agnais eigene gehostete Modelle.',
           'Agnai führt Ollama nicht als native KI-Dienst auf — die Anbindung eines über Ollama bereitgestellten Modells funktioniert nur über eine OpenAI-kompatible Proxy-Schicht, keine direkte Integration.',
-          'Vergleich mit [SillyTavern](/de/power-local-llm/sillytavern-review), [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) und [RisuAI](/de/power-local-llm/risuai-review) — Begleiteintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Vergleich mit [SillyTavern](/de/local-llms/sillytavern-review), [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) und [RisuAI](/de/power-local-llm/risuai-review) — Begleiteintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Am besten für', 'Einrichtungsaufwand', 'Backend-/Modellzugriff', 'Wichtigste Einschränkung'],
         rows: [
           { 'App': '[Agnai](https://agnai.chat)', 'Am besten für': 'Gruppenrollenspiel mit mehreren Nutzern/Bots über mehrere KI-Dienst-Backends', 'Einrichtungsaufwand': 'Niedrig (gehostet) oder mittel (Self-Host: npm oder Docker)', 'Backend-/Modellzugriff': 'Kobold-kompatibel, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', 'Wichtigste Einschränkung': 'Keine native Ollama-Integration; Abo-Preise der gehosteten Version nicht veröffentlicht' },
-          { 'App': '[SillyTavern](/de/power-local-llm/sillytavern-review)', 'Am besten für': 'Maximale Anpassung, Erweiterungen, Prompt-Template-Kontrolle', 'Einrichtungsaufwand': 'Hoch (separates Backend + Frontend)', 'Backend-/Modellzugriff': 'Jedes GGUF über KoboldCpp-, text-generation-webui- oder Ollama-Backend', 'Wichtigste Einschränkung': 'Steilste Lernkurve der Gruppe; keine gehostete Option' },
+          { 'App': '[SillyTavern](/de/local-llms/sillytavern-review)', 'Am besten für': 'Maximale Anpassung, Erweiterungen, Prompt-Template-Kontrolle', 'Einrichtungsaufwand': 'Hoch (separates Backend + Frontend)', 'Backend-/Modellzugriff': 'Jedes GGUF über KoboldCpp-, text-generation-webui- oder Ollama-Backend', 'Wichtigste Einschränkung': 'Steilste Lernkurve der Gruppe; keine gehostete Option' },
           { 'App': '[Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'Am besten für': 'Reibungsloser lokaler Charakter-Chat mit eingebautem Character Hub', 'Einrichtungsaufwand': 'Minimal (ein Installer)', 'Backend-/Modellzugriff': 'Gebündelte lokale Modelle plus optionale Backyard Cloud', 'Wichtigste Einschränkung': 'Keine Gruppenchats; Closed-Source-App; nur kuratierte Modellliste' },
           { 'App': '[RisuAI](/de/power-local-llm/risuai-review)', 'Am besten für': 'Einsteigerfreundliche Rollenspiel-UI, Web oder self-hosted', 'Einrichtungsaufwand': 'Mittel (Web oder self-hosted, Backend weiterhin nötig)', 'Backend-/Modellzugriff': 'Verbundenes Backend/GGUF über einen verlinkten Dienst', 'Wichtigste Einschränkung': 'Kleineres Erweiterungs-Ökosystem als SillyTavern; braucht weiterhin ein separates Backend' },
         ],
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Wer Agnai nicht nutzen sollte',
         items: [
-          '**Leser, die speziell Ollama anbinden wollen.** Ollama ist kein natives Agnai-Backend; Leser, die auf Ollama festgelegt sind, sollten [SillyTavern](/de/power-local-llm/sillytavern-review) in Betracht ziehen, das Ollama als unterstütztes Backend auflistet, oder zuerst eine OpenAI-kompatible Proxy vor Ollama schalten.',
+          '**Leser, die speziell Ollama anbinden wollen.** Ollama ist kein natives Agnai-Backend; Leser, die auf Ollama festgelegt sind, sollten [SillyTavern](/de/local-llms/sillytavern-review) in Betracht ziehen, das Ollama als unterstütztes Backend auflistet, oder zuerst eine OpenAI-kompatible Proxy vor Ollama schalten.',
           '**Leser, die das größte Erweiterungs-Ökosystem wollen.** SillyTaverns Community-Erweiterungsbibliothek ist größer als die von Agnai, basierend auf der jeweiligen Repository-Aktivität.',
           '**Leser, die eine Single-Player-Desktop-App ohne jede Konfiguration wollen.** Der Ein-Installer-Lokalmodus von [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) braucht weniger Einrichtung als Agnai self-hosten.',
           '**Leser, die vor der Entscheidung feste, veröffentlichte Abo-Preise brauchen.** Agnais Abo-Preise für die gehostete Stufe sind in der eigenen Dokumentation nicht veröffentlicht; aktuelle Preise direkt auf agnai.chat prüfen.',
@@ -483,7 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Agnai verdient seinen Platz unter den selbst hostbaren Rollenspiel-Frontends durch die Kombination aus Gruppengesprächen mit mehreren Nutzern/Bots und der Unterstützung von neun externen KI-Diensten — Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer — unter einer quelloffenen AGPL-3.0-Lizenz. Self-Hosting ist wirklich reibungsarm: `npm install agnai -g` oder ein einziger Docker-Befehl, wobei MongoDB und Redis beide optional sind. Die Kompromisse sind konkret, nicht vage: keine native Ollama-Unterstützung (stattdessen ist eine OpenAI-kompatible Proxy nötig), ein kleineres Erweiterungs-Ökosystem als SillyTavern und unveröffentlichte Preise für die gehostete Abo-Stufe. Leser, die Gruppenrollenspiel über mehrere KI-Dienst-Backends wollen, ohne für jedes eine separate App einzurichten, bekommen von Agnai echten Mehrwert; Leser, die auf Ollama festgelegt sind oder das tiefste Erweiterungs-Ökosystem wollen, sollten zuerst [SillyTavern](/de/power-local-llm/sillytavern-review) direkt vergleichen.',
+          'Agnai verdient seinen Platz unter den selbst hostbaren Rollenspiel-Frontends durch die Kombination aus Gruppengesprächen mit mehreren Nutzern/Bots und der Unterstützung von neun externen KI-Diensten — Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer — unter einer quelloffenen AGPL-3.0-Lizenz. Self-Hosting ist wirklich reibungsarm: `npm install agnai -g` oder ein einziger Docker-Befehl, wobei MongoDB und Redis beide optional sind. Die Kompromisse sind konkret, nicht vage: keine native Ollama-Unterstützung (stattdessen ist eine OpenAI-kompatible Proxy nötig), ein kleineres Erweiterungs-Ökosystem als SillyTavern und unveröffentlichte Preise für die gehostete Abo-Stufe. Leser, die Gruppenrollenspiel über mehrere KI-Dienst-Backends wollen, ohne für jedes eine separate App einzurichten, bekommen von Agnai echten Mehrwert; Leser, die auf Ollama festgelegt sind oder das tiefste Erweiterungs-Ökosystem wollen, sollten zuerst [SillyTavern](/de/local-llms/sillytavern-review) direkt vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen, inklusive Agnais eigenem Eintrag.',
-          '[SillyTavern im Test](/de/power-local-llm/sillytavern-review) — die erweiterungsreiche, Ollama-kompatible Alternative mit der größten Konfigurationsfläche.',
+          '[SillyTavern im Test](/de/local-llms/sillytavern-review) — die erweiterungsreiche, Ollama-kompatible Alternative mit der größten Konfigurationsfläche.',
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine Closed-Source-Alternative mit einem Installer für Leser, die keine Konfiguration wollen.',
           '[RisuAI im Test](/de/power-local-llm/risuai-review) — ein weiteres Open-Source-Rollenspiel-Frontend zwischen Agnais Multi-Tenancy und der Einfachheit von Backyard AI.',
           '[SillyTavern vs. Agnai vs. RisuAI: Bestes Rollenspiel-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — vollständiger Vergleich aller drei Open-Source-Frontends.',
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai est le bon choix pour les lecteurs qui veulent un frontend de chat de jeu de rôle open source et auto-hébergeable, capable de connecter plusieurs services IA différents à la fois.** Il prend en charge les backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer, fonctionne hébergé sur [agnai.chat](https://agnai.chat) sans installation, ou en auto-hébergement via `npm install agnai -g` ou Docker, MongoDB et Redis étant tous deux optionnels. Les lecteurs attachés à Ollama, ou qui veulent le plus grand écosystème d\'extensions, devraient plutôt comparer avec [SillyTavern](/fr/power-local-llm/sillytavern-review).',
+      '**Agnai est le bon choix pour les lecteurs qui veulent un frontend de chat de jeu de rôle open source et auto-hébergeable, capable de connecter plusieurs services IA différents à la fois.** Il prend en charge les backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer, fonctionne hébergé sur [agnai.chat](https://agnai.chat) sans installation, ou en auto-hébergement via `npm install agnai -g` ou Docker, MongoDB et Redis étant tous deux optionnels. Les lecteurs attachés à Ollama, ou qui veulent le plus grand écosystème d\'extensions, devraient plutôt comparer avec [SillyTavern](/fr/local-llms/sillytavern-review).',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionnalités clés : conversations de groupe multi-utilisateurs/multi-bots, cartes de personnages en quatre formats de persona (W++, Square Bracket Format, Boostyle, texte brut), livres de mémoire/lore, et génération de personnages assistée par IA.',
           'La version hébergée sur [agnai.chat](https://agnai.chat) ne nécessite aucune installation et propose un palier gratuit plus un abonnement payant optionnel pour un accès prioritaire aux propres modèles hébergés d\'Agnai.',
           'Agnai ne liste pas Ollama comme service IA natif — connecter un modèle servi par Ollama ne fonctionne que via une couche proxy compatible OpenAI, pas une intégration directe.',
-          'Comparaison avec [SillyTavern](/fr/power-local-llm/sillytavern-review), [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) et [RisuAI](/fr/power-local-llm/risuai-review) — fiche complémentaire dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparaison avec [SillyTavern](/fr/local-llms/sillytavern-review), [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) et [RisuAI](/fr/power-local-llm/risuai-review) — fiche complémentaire dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Application', 'Idéal pour', 'Niveau de configuration', 'Accès backend/modèle', 'Limite clé'],
         rows: [
           { 'Application': '[Agnai](https://agnai.chat)', 'Idéal pour': 'Jeu de rôle de groupe multi-utilisateurs/multi-bots via plusieurs backends de services IA', 'Niveau de configuration': 'Faible (hébergé) ou moyen (auto-hébergé : npm ou Docker)', 'Accès backend/modèle': 'Compatible Kobold, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', 'Limite clé': 'Pas d\'intégration Ollama native ; prix de l\'abonnement hébergé non publié' },
-          { 'Application': '[SillyTavern](/fr/power-local-llm/sillytavern-review)', 'Idéal pour': 'Personnalisation maximale, extensions, contrôle des modèles de prompt', 'Niveau de configuration': 'Élevé (backend + frontend séparés)', 'Accès backend/modèle': 'N\'importe quel GGUF via backend KoboldCpp, text-generation-webui ou Ollama', 'Limite clé': 'Courbe d\'apprentissage la plus raide du groupe ; pas d\'option hébergée' },
+          { 'Application': '[SillyTavern](/fr/local-llms/sillytavern-review)', 'Idéal pour': 'Personnalisation maximale, extensions, contrôle des modèles de prompt', 'Niveau de configuration': 'Élevé (backend + frontend séparés)', 'Accès backend/modèle': 'N\'importe quel GGUF via backend KoboldCpp, text-generation-webui ou Ollama', 'Limite clé': 'Courbe d\'apprentissage la plus raide du groupe ; pas d\'option hébergée' },
           { 'Application': '[Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'Idéal pour': 'Chat de personnage local à faible friction avec Character Hub intégré', 'Niveau de configuration': 'Minimal (un seul installeur)', 'Accès backend/modèle': 'Modèles locaux groupés plus Backyard Cloud optionnel', 'Limite clé': 'Pas de chats de groupe ; application closed-source ; liste de modèles uniquement organisée' },
           { 'Application': '[RisuAI](/fr/power-local-llm/risuai-review)', 'Idéal pour': 'Interface de jeu de rôle pour débutants, web ou auto-hébergée', 'Niveau de configuration': 'Moyen (web ou auto-hébergé, backend toujours nécessaire)', 'Accès backend/modèle': 'Backend connecté/GGUF via un service lié', 'Limite clé': 'Écosystème d\'extensions plus restreint que SillyTavern ; nécessite toujours un backend séparé' },
         ],
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Qui ne devrait pas utiliser Agnai',
         items: [
-          '**Lecteur qui veut spécifiquement connecter Ollama.** Ollama n\'est pas un backend natif d\'Agnai ; les lecteurs attachés à Ollama devraient envisager [SillyTavern](/fr/power-local-llm/sillytavern-review), qui liste Ollama comme backend supporté, ou ajouter d\'abord un proxy compatible OpenAI devant Ollama.',
+          '**Lecteur qui veut spécifiquement connecter Ollama.** Ollama n\'est pas un backend natif d\'Agnai ; les lecteurs attachés à Ollama devraient envisager [SillyTavern](/fr/local-llms/sillytavern-review), qui liste Ollama comme backend supporté, ou ajouter d\'abord un proxy compatible OpenAI devant Ollama.',
           '**Lecteur qui veut le plus grand écosystème d\'extensions.** La bibliothèque d\'extensions communautaire de SillyTavern est plus vaste que celle d\'Agnai, d\'après l\'activité de dépôt de chaque projet.',
           '**Lecteur qui veut une application de bureau mono-utilisateur sans aucune configuration.** Le mode local à un seul installeur de [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) nécessite moins de configuration que l\'auto-hébergement d\'Agnai.',
           '**Lecteur qui a besoin d\'un prix d\'abonnement fixe et publié avant de s\'engager.** Le prix de l\'abonnement hébergé d\'Agnai n\'est pas publié dans sa propre documentation ; vérifiez les prix actuels directement sur agnai.chat.',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Agnai mérite sa place parmi les frontends de jeu de rôle auto-hébergeables en combinant des conversations de groupe multi-utilisateurs/multi-bots avec la prise en charge de neuf services IA externes — backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer — sous licence open source AGPL-3.0. L\'auto-hébergement est réellement peu contraignant : `npm install agnai -g` ou une seule commande Docker, MongoDB et Redis étant tous deux optionnels. Les compromis sont précis, pas vagues : pas de support natif d\'Ollama (un proxy compatible OpenAI est nécessaire à la place), un écosystème d\'extensions plus restreint que SillyTavern, et des prix non publiés pour le palier d\'abonnement hébergé. Les lecteurs qui veulent du jeu de rôle de groupe sur plusieurs backends de services IA sans configurer une application séparée pour chacun tirent une réelle valeur d\'Agnai ; les lecteurs attachés à Ollama, ou qui veulent l\'écosystème d\'extensions le plus riche, devraient d\'abord comparer directement avec [SillyTavern](/fr/power-local-llm/sillytavern-review).',
+          'Agnai mérite sa place parmi les frontends de jeu de rôle auto-hébergeables en combinant des conversations de groupe multi-utilisateurs/multi-bots avec la prise en charge de neuf services IA externes — backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer — sous licence open source AGPL-3.0. L\'auto-hébergement est réellement peu contraignant : `npm install agnai -g` ou une seule commande Docker, MongoDB et Redis étant tous deux optionnels. Les compromis sont précis, pas vagues : pas de support natif d\'Ollama (un proxy compatible OpenAI est nécessaire à la place), un écosystème d\'extensions plus restreint que SillyTavern, et des prix non publiés pour le palier d\'abonnement hébergé. Les lecteurs qui veulent du jeu de rôle de groupe sur plusieurs backends de services IA sans configurer une application séparée pour chacun tirent une réelle valeur d\'Agnai ; les lecteurs attachés à Ollama, ou qui veulent l\'écosystème d\'extensions le plus riche, devraient d\'abord comparer directement avec [SillyTavern](/fr/local-llms/sillytavern-review).',
       },
       sources: {
         id: 'sources',
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes, incluant la fiche d\'Agnai.',
-          '[Avis SillyTavern](/fr/power-local-llm/sillytavern-review) — l\'alternative riche en extensions et compatible Ollama, avec la plus grande surface de configuration.',
+          '[Avis SillyTavern](/fr/local-llms/sillytavern-review) — l\'alternative riche en extensions et compatible Ollama, avec la plus grande surface de configuration.',
           '[Avis Backyard AI : Chat de Personnage IA Local et Jeu de Rôle](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — une alternative closed-source à installeur unique pour les lecteurs qui veulent zéro configuration.',
           '[Avis RisuAI](/fr/power-local-llm/risuai-review) — un autre frontend de jeu de rôle open source, positionné entre la multi-tenance d\'Agnai et la simplicité de Backyard AI.',
           '[SillyTavern vs. Agnai vs. RisuAI : Meilleur Frontend de Jeu de Rôle](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparaison complète des trois frontends open source.',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai es la mejor opción para quienes quieren un frontend de chat de rol de código abierto y autoalojable capaz de conectar varios servicios de IA a la vez.** Soporta backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer, funciona alojado en [agnai.chat](https://agnai.chat) sin instalación, o autoalojado vía `npm install agnai -g` o Docker, con MongoDB y Redis ambos opcionales. Quienes usan solo Ollama, o quieren el ecosistema de extensiones más grande, deberían comparar con [SillyTavern](/es/power-local-llm/sillytavern-review) en su lugar.',
+      '**Agnai es la mejor opción para quienes quieren un frontend de chat de rol de código abierto y autoalojable capaz de conectar varios servicios de IA a la vez.** Soporta backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer, funciona alojado en [agnai.chat](https://agnai.chat) sin instalación, o autoalojado vía `npm install agnai -g` o Docker, con MongoDB y Redis ambos opcionales. Quienes usan solo Ollama, o quieren el ecosistema de extensiones más grande, deberían comparar con [SillyTavern](/es/local-llms/sillytavern-review) en su lugar.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciones clave: conversaciones grupales multiusuario/multibot, tarjetas de personajes en cuatro formatos de persona (W++, Square Bracket Format, Boostyle, texto plano), libros de memoria/lore y generación de personajes asistida por IA.',
           'La versión alojada en [agnai.chat](https://agnai.chat) no necesita instalación y ofrece un nivel gratuito más una suscripción de pago opcional para acceso prioritario a los modelos alojados propios de Agnai.',
           'Agnai no lista a Ollama como servicio de IA nativo — conectar un modelo servido por Ollama solo funciona mediante una capa proxy compatible con OpenAI, no una integración directa.',
-          'Comparación con [SillyTavern](/es/power-local-llm/sillytavern-review), [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) y [RisuAI](/es/power-local-llm/risuai-review) — ficha complementaria en el [Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparación con [SillyTavern](/es/local-llms/sillytavern-review), [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) y [RisuAI](/es/power-local-llm/risuai-review) — ficha complementaria en el [Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Ideal para', 'Nivel de configuración', 'Acceso a backend/modelo', 'Limitación clave'],
         rows: [
           { 'App': '[Agnai](https://agnai.chat)', 'Ideal para': 'Rol grupal multiusuario/multibot con varios backends de servicios de IA', 'Nivel de configuración': 'Bajo (alojado) o medio (autoalojado: npm o Docker)', 'Acceso a backend/modelo': 'Compatible con Kobold, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', 'Limitación clave': 'Sin integración nativa con Ollama; precio de la suscripción alojada no publicado' },
-          { 'App': '[SillyTavern](/es/power-local-llm/sillytavern-review)', 'Ideal para': 'Máxima personalización, extensiones, control de plantillas de prompt', 'Nivel de configuración': 'Alto (backend y frontend separados)', 'Acceso a backend/modelo': 'Cualquier GGUF vía backend KoboldCpp, text-generation-webui u Ollama', 'Limitación clave': 'La curva de aprendizaje más pronunciada del grupo; sin opción alojada' },
+          { 'App': '[SillyTavern](/es/local-llms/sillytavern-review)', 'Ideal para': 'Máxima personalización, extensiones, control de plantillas de prompt', 'Nivel de configuración': 'Alto (backend y frontend separados)', 'Acceso a backend/modelo': 'Cualquier GGUF vía backend KoboldCpp, text-generation-webui u Ollama', 'Limitación clave': 'La curva de aprendizaje más pronunciada del grupo; sin opción alojada' },
           { 'App': '[Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'Ideal para': 'Chat de personajes local de baja fricción con Character Hub integrado', 'Nivel de configuración': 'Mínimo (un solo instalador)', 'Acceso a backend/modelo': 'Modelos locales incluidos más Backyard Cloud opcional', 'Limitación clave': 'Sin chats grupales; app de código cerrado; solo lista de modelos curada' },
           { 'App': '[RisuAI](/es/power-local-llm/risuai-review)', 'Ideal para': 'Interfaz de rol de nivel inicial, web o autoalojada', 'Nivel de configuración': 'Medio (web o autoalojado, backend sigue siendo necesario)', 'Acceso a backend/modelo': 'Backend conectado/GGUF vía un servicio vinculado', 'Limitación clave': 'Ecosistema de extensiones más pequeño que SillyTavern; sigue necesitando un backend separado' },
         ],
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quién no debería usar Agnai',
         items: [
-          '**Lector que quiere específicamente conectar Ollama.** Ollama no es un backend nativo de Agnai; quienes usan solo Ollama deberían considerar [SillyTavern](/es/power-local-llm/sillytavern-review), que lista Ollama como backend soportado, o añadir primero un proxy compatible con OpenAI delante de Ollama.',
+          '**Lector que quiere específicamente conectar Ollama.** Ollama no es un backend nativo de Agnai; quienes usan solo Ollama deberían considerar [SillyTavern](/es/local-llms/sillytavern-review), que lista Ollama como backend soportado, o añadir primero un proxy compatible con OpenAI delante de Ollama.',
           '**Lector que quiere el ecosistema de extensiones más grande.** La biblioteca de extensiones comunitaria de SillyTavern es más grande que la de Agnai, según la actividad de cada repositorio.',
           '**Lector que quiere una app de escritorio individual sin ninguna configuración.** El modo local de un solo instalador de [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) necesita menos configuración que autoalojar Agnai.',
           '**Lector que necesita precios de suscripción fijos y publicados antes de comprometerse.** El precio de la suscripción alojada de Agnai no está publicado en su propia documentación; confirma los precios actuales directamente en agnai.chat.',
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Agnai se gana su lugar entre los frontends de rol autoalojables al combinar conversaciones grupales multiusuario/multibot con soporte para nueve servicios de IA externos —backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer— bajo licencia de código abierto AGPL-3.0. El autoalojamiento es realmente de baja fricción: `npm install agnai -g` o un solo comando Docker, con MongoDB y Redis ambos opcionales. Las contrapartidas son concretas, no vagas: sin soporte nativo de Ollama (se necesita en su lugar un proxy compatible con OpenAI), un ecosistema de extensiones más pequeño que SillyTavern, y precios no publicados para el nivel de suscripción alojada. Quienes quieren rol grupal en varios backends de servicios de IA sin configurar una app separada para cada uno obtienen valor real de Agnai; quienes usan solo Ollama, o quieren el ecosistema de extensiones más profundo, deberían comparar primero directamente con [SillyTavern](/es/power-local-llm/sillytavern-review).',
+          'Agnai se gana su lugar entre los frontends de rol autoalojables al combinar conversaciones grupales multiusuario/multibot con soporte para nueve servicios de IA externos —backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer— bajo licencia de código abierto AGPL-3.0. El autoalojamiento es realmente de baja fricción: `npm install agnai -g` o un solo comando Docker, con MongoDB y Redis ambos opcionales. Las contrapartidas son concretas, no vagas: sin soporte nativo de Ollama (se necesita en su lugar un proxy compatible con OpenAI), un ecosistema de extensiones más pequeño que SillyTavern, y precios no publicados para el nivel de suscripción alojada. Quienes quieren rol grupal en varios backends de servicios de IA sin configurar una app separada para cada uno obtienen valor real de Agnai; quienes usan solo Ollama, o quieren el ecosistema de extensiones más profundo, deberían comparar primero directamente con [SillyTavern](/es/local-llms/sillytavern-review).',
       },
       sources: {
         id: 'sources',
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas, incluida la ficha propia de Agnai.',
-          '[Reseña de SillyTavern](/es/power-local-llm/sillytavern-review) — la alternativa rica en extensiones y compatible con Ollama, con la mayor superficie de configuración.',
+          '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — la alternativa rica en extensiones y compatible con Ollama, con la mayor superficie de configuración.',
           '[Reseña de Backyard AI: Chat de Personajes IA Local y Rol](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — una alternativa de código cerrado con un solo instalador para quienes quieren cero configuración.',
           '[Reseña de RisuAI](/es/power-local-llm/risuai-review) — otro frontend de rol de código abierto, posicionado entre la configuración multiusuario de Agnai y la simplicidad de Backyard AI.',
           '[SillyTavern vs. Agnai vs. RisuAI: Mejor Frontend de Rol](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparación completa de los tres frontends de código abierto.',
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**O Agnai é a escolha certa para quem quer um frontend de chat de roleplay de código aberto e auto-hospedável, capaz de conectar vários serviços de IA diferentes ao mesmo tempo.** Ele suporta backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer, roda hospedado em [agnai.chat](https://agnai.chat) sem instalação, ou auto-hospedado via `npm install agnai -g` ou Docker, com MongoDB e Redis ambos opcionais. Quem usa só Ollama, ou quer o maior ecossistema de extensões, deve comparar com o [SillyTavern](/pt/power-local-llm/sillytavern-review) em vez disso.',
+      '**O Agnai é a escolha certa para quem quer um frontend de chat de roleplay de código aberto e auto-hospedável, capaz de conectar vários serviços de IA diferentes ao mesmo tempo.** Ele suporta backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer, roda hospedado em [agnai.chat](https://agnai.chat) sem instalação, ou auto-hospedado via `npm install agnai -g` ou Docker, com MongoDB e Redis ambos opcionais. Quem usa só Ollama, ou quer o maior ecossistema de extensões, deve comparar com o [SillyTavern](/pt/local-llms/sillytavern-review) em vez disso.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Recursos principais: conversas em grupo multiusuário/multibot, cartões de personagem em quatro formatos de persona (W++, Square Bracket Format, Boostyle, texto simples), livros de memória/lore e geração de personagens assistida por IA.',
           'A versão hospedada em [agnai.chat](https://agnai.chat) não precisa de instalação e oferece um nível gratuito mais uma assinatura paga opcional para acesso prioritário aos modelos hospedados próprios do Agnai.',
           'O Agnai não lista o Ollama como serviço de IA nativo — conectar um modelo servido pelo Ollama só funciona via uma camada de proxy compatível com OpenAI, não uma integração direta.',
-          'Comparação com [SillyTavern](/pt/power-local-llm/sillytavern-review), [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) e [RisuAI](/pt/power-local-llm/risuai-review) — ficha complementar no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparação com [SillyTavern](/pt/local-llms/sillytavern-review), [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) e [RisuAI](/pt/power-local-llm/risuai-review) — ficha complementar no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Melhor para', 'Nível de configuração', 'Acesso a backend/modelo', 'Limitação principal'],
         rows: [
           { 'App': '[Agnai](https://agnai.chat)', 'Melhor para': 'Roleplay em grupo multiusuário/multibot com vários backends de serviços de IA', 'Nível de configuração': 'Baixo (hospedado) ou médio (auto-hospedado: npm ou Docker)', 'Acesso a backend/modelo': 'Compatível com Kobold, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', 'Limitação principal': 'Sem integração nativa com Ollama; preço da assinatura hospedada não publicado' },
-          { 'App': '[SillyTavern](/pt/power-local-llm/sillytavern-review)', 'Melhor para': 'Máxima personalização, extensões, controle de templates de prompt', 'Nível de configuração': 'Alto (backend e frontend separados)', 'Acesso a backend/modelo': 'Qualquer GGUF via backend KoboldCpp, text-generation-webui ou Ollama', 'Limitação principal': 'Curva de aprendizado mais íngreme do grupo; sem opção hospedada' },
+          { 'App': '[SillyTavern](/pt/local-llms/sillytavern-review)', 'Melhor para': 'Máxima personalização, extensões, controle de templates de prompt', 'Nível de configuração': 'Alto (backend e frontend separados)', 'Acesso a backend/modelo': 'Qualquer GGUF via backend KoboldCpp, text-generation-webui ou Ollama', 'Limitação principal': 'Curva de aprendizado mais íngreme do grupo; sem opção hospedada' },
           { 'App': '[Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'Melhor para': 'Chat de personagens local de baixo atrito com Character Hub integrado', 'Nível de configuração': 'Mínimo (um único instalador)', 'Acesso a backend/modelo': 'Modelos locais empacotados mais Backyard Cloud opcional', 'Limitação principal': 'Sem chats em grupo; app de código fechado; apenas lista de modelos curada' },
           { 'App': '[RisuAI](/pt/power-local-llm/risuai-review)', 'Melhor para': 'Interface de roleplay para iniciantes, web ou auto-hospedada', 'Nível de configuração': 'Médio (web ou auto-hospedado, backend ainda necessário)', 'Acesso a backend/modelo': 'Backend conectado/GGUF via um serviço vinculado', 'Limitação principal': 'Ecossistema de extensões menor que o SillyTavern; ainda exige um backend separado' },
         ],
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quem não deve usar o Agnai',
         items: [
-          '**Leitor que quer especificamente conectar o Ollama.** O Ollama não é um backend nativo do Agnai; leitores que usam só Ollama devem considerar o [SillyTavern](/pt/power-local-llm/sillytavern-review), que lista o Ollama como backend suportado, ou adicionar primeiro um proxy compatível com OpenAI na frente do Ollama.',
+          '**Leitor que quer especificamente conectar o Ollama.** O Ollama não é um backend nativo do Agnai; leitores que usam só Ollama devem considerar o [SillyTavern](/pt/local-llms/sillytavern-review), que lista o Ollama como backend suportado, ou adicionar primeiro um proxy compatível com OpenAI na frente do Ollama.',
           '**Leitor que quer o maior ecossistema de extensões.** A biblioteca de extensões da comunidade do SillyTavern é maior que a do Agnai, com base na atividade de repositório de cada projeto.',
           '**Leitor que quer um app de desktop individual sem nenhuma configuração.** O modo local com um único instalador do [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) exige menos configuração que auto-hospedar o Agnai.',
           '**Leitor que precisa de preços de assinatura fixos e publicados antes de se comprometer.** O preço da assinatura hospedada do Agnai não está publicado em sua própria documentação; confirme os preços atuais diretamente em agnai.chat.',
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Agnai ganha seu lugar entre os frontends de roleplay auto-hospedáveis ao combinar conversas em grupo multiusuário/multibot com suporte a nove serviços de IA externos — backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer — sob licença de código aberto AGPL-3.0. A auto-hospedagem é genuinamente de baixo atrito: `npm install agnai -g` ou um único comando Docker, com MongoDB e Redis ambos opcionais. Os trade-offs são específicos, não vagos: sem suporte nativo ao Ollama (é necessário um proxy compatível com OpenAI em vez disso), um ecossistema de extensões menor que o SillyTavern, e preços não publicados para o nível de assinatura hospedada. Leitores que querem roleplay em grupo em vários backends de serviços de IA sem configurar um app separado para cada um obtêm valor real do Agnai; leitores que usam só Ollama, ou que querem o ecossistema de extensões mais profundo, devem comparar primeiro diretamente com o [SillyTavern](/pt/power-local-llm/sillytavern-review).',
+          'O Agnai ganha seu lugar entre os frontends de roleplay auto-hospedáveis ao combinar conversas em grupo multiusuário/multibot com suporte a nove serviços de IA externos — backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer — sob licença de código aberto AGPL-3.0. A auto-hospedagem é genuinamente de baixo atrito: `npm install agnai -g` ou um único comando Docker, com MongoDB e Redis ambos opcionais. Os trade-offs são específicos, não vagos: sem suporte nativo ao Ollama (é necessário um proxy compatível com OpenAI em vez disso), um ecossistema de extensões menor que o SillyTavern, e preços não publicados para o nível de assinatura hospedada. Leitores que querem roleplay em grupo em vários backends de serviços de IA sem configurar um app separado para cada um obtêm valor real do Agnai; leitores que usam só Ollama, ou que querem o ecossistema de extensões mais profundo, devem comparar primeiro diretamente com o [SillyTavern](/pt/local-llms/sillytavern-review).',
       },
       sources: {
         id: 'sources',
@@ -1270,7 +1270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas, incluindo a própria ficha do Agnai.',
-          '[Análise do SillyTavern](/pt/power-local-llm/sillytavern-review) — a alternativa rica em extensões e compatível com Ollama, com a maior superfície de configuração.',
+          '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — a alternativa rica em extensões e compatível com Ollama, com a maior superfície de configuração.',
           '[Análise do Backyard AI: Chat de Personagens IA Local e Roleplay](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — uma alternativa de código fechado com instalador único para quem quer zero configuração.',
           '[Análise do RisuAI](/pt/power-local-llm/risuai-review) — outro frontend de roleplay open source, posicionado entre o multiusuário do Agnai e a simplicidade do Backyard AI.',
           '[SillyTavern vs. Agnai vs. RisuAI: Melhor Frontend de Roleplay](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparação completa dos três frontends open source.',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnaiは、複数の異なるAIサービスを同時に接続できる、セルフホスト可能なオープンソースのロールプレイチャット・フロントエンドを求める読者に向いています。** Kobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerに対応し、インストール不要で[agnai.chat](https://agnai.chat)上でホスト利用するか、`npm install agnai -g`またはDockerでセルフホストでき、MongoDBとRedisはいずれも任意です。Ollamaに固定している読者、または最大級の拡張機能エコシステムを求める読者は、代わりに[SillyTavern](/ja/power-local-llm/sillytavern-review)を比較検討してください。',
+      '**Agnaiは、複数の異なるAIサービスを同時に接続できる、セルフホスト可能なオープンソースのロールプレイチャット・フロントエンドを求める読者に向いています。** Kobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerに対応し、インストール不要で[agnai.chat](https://agnai.chat)上でホスト利用するか、`npm install agnai -g`またはDockerでセルフホストでき、MongoDBとRedisはいずれも任意です。Ollamaに固定している読者、または最大級の拡張機能エコシステムを求める読者は、代わりに[SillyTavern](/ja/local-llms/sillytavern-review)を比較検討してください。',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '主な機能:マルチユーザー/マルチボットのグループ会話、4種類のペルソナ形式(W++、Square Bracket Format、Boostyle、プレーンテキスト)のキャラクターカード、Memory/Loreブック、AI支援のキャラクター生成。',
           '[agnai.chat](https://agnai.chat)のホスト版はインストール不要で、無料枠に加え、Agnai自身のホスト型モデルへの優先アクセスを提供する任意の有料サブスクリプションがある。',
           'AgnaiはOllamaをネイティブAIサービスとして記載していない — Ollamaで提供されるモデルの接続はOpenAI互換プロキシ層経由でのみ機能し、直接統合ではない。',
-          '[SillyTavern](/ja/power-local-llm/sillytavern-review)、[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)、[RisuAI](/ja/power-local-llm/risuai-review)との比較 — [ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内の関連エントリー。',
+          '[SillyTavern](/ja/local-llms/sillytavern-review)、[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)、[RisuAI](/ja/power-local-llm/risuai-review)との比較 — [ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内の関連エントリー。',
         ],
       },
       whatIsAgnai: {
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['アプリ', '最適な用途', 'セットアップの難易度', 'バックエンド/モデルアクセス', '主な制限'],
         rows: [
           { 'アプリ': '[Agnai](https://agnai.chat)', '最適な用途': '複数のAIサービスバックエンドをまたいだマルチユーザー/マルチボットのグループロールプレイ', 'セットアップの難易度': '低(ホスト版)または中(セルフホスト:npmまたはDocker)', 'バックエンド/モデルアクセス': 'Kobold互換、NovelAI、AI Horde、Goose、OpenAI、Claude、Replicate、OpenRouter、Mancer', '主な制限': 'ネイティブなOllama統合がない;ホスト版のサブスクリプション価格は未公開' },
-          { 'アプリ': '[SillyTavern](/ja/power-local-llm/sillytavern-review)', '最適な用途': '最大限のカスタマイズ、拡張機能、プロンプトテンプレート制御', 'セットアップの難易度': '高(バックエンドとフロントエンドが別)', 'バックエンド/モデルアクセス': 'KoboldCpp、text-generation-webui、Ollamaバックエンド経由で任意のGGUF', '主な制限': 'グループの中で最も急な学習曲線;ホストオプションなし' },
+          { 'アプリ': '[SillyTavern](/ja/local-llms/sillytavern-review)', '最適な用途': '最大限のカスタマイズ、拡張機能、プロンプトテンプレート制御', 'セットアップの難易度': '高(バックエンドとフロントエンドが別)', 'バックエンド/モデルアクセス': 'KoboldCpp、text-generation-webui、Ollamaバックエンド経由で任意のGGUF', '主な制限': 'グループの中で最も急な学習曲線;ホストオプションなし' },
           { 'アプリ': '[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)', '最適な用途': '組み込みのCharacter Hubを備えた低摩擦なローカルキャラクターチャット', 'セットアップの難易度': '最小(インストーラー1本)', 'バックエンド/モデルアクセス': '同梱のローカルモデルに加え任意のBackyard Cloud', '主な制限': 'グループチャットなし;クローズドソースアプリ;厳選されたモデルリストのみ' },
           { 'アプリ': '[RisuAI](/ja/power-local-llm/risuai-review)', '最適な用途': 'ウェブまたはセルフホストの入門レベルのロールプレイUI', 'セットアップの難易度': '中(ウェブまたはセルフホスト、バックエンドは依然として必要)', 'バックエンド/モデルアクセス': '接続されたサービス経由のバックエンド/GGUF', '主な制限': 'SillyTavernより小さい拡張機能エコシステム;依然として別のバックエンドが必要' },
         ],
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Agnaiを使うべきでない人',
         items: [
-          '**特にOllamaを接続したい読者。** OllamaはAgnaiのネイティブバックエンドではない。Ollamaに固定している読者は、Ollamaをサポートバックエンドとして記載している[SillyTavern](/ja/power-local-llm/sillytavern-review)を検討するか、Ollamaの前にOpenAI互換プロキシをまず追加すべきである。',
+          '**特にOllamaを接続したい読者。** OllamaはAgnaiのネイティブバックエンドではない。Ollamaに固定している読者は、Ollamaをサポートバックエンドとして記載している[SillyTavern](/ja/local-llms/sillytavern-review)を検討するか、Ollamaの前にOpenAI互換プロキシをまず追加すべきである。',
           '**最大級の拡張機能エコシステムを求める読者。** それぞれのプロジェクトのリポジトリ活動に基づくと、SillyTavernのコミュニティ拡張機能ライブラリはAgnaiより大きい。',
           '**設定なしの単一ユーザー向けデスクトップアプリを求める読者。** [Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)のインストーラー1本のローカルモードは、Agnaiをセルフホストするより設定が少なくて済む。',
           '**契約前に確定・公開済みのサブスクリプション価格が必要な読者。** Agnaiのホスト版サブスクリプション階層の価格は自身のドキュメントに公開されていない。現在の価格はagnai.chatで直接確認すること。',
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Agnaiは、マルチユーザー/マルチボットのグループ会話と、Kobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerという9つの外部AIサービスへの対応を、オープンソースのAGPL-3.0ライセンスの下で組み合わせることで、セルフホスト可能なロールプレイフロントエンドの中に自らの地位を築いている。セルフホストは実際に低摩擦であり、`npm install agnai -g`または単一のDockerコマンドで済み、MongoDBとRedisはいずれも任意である。トレードオフは曖昧ではなく具体的だ:ネイティブなOllamaサポートはなく(代わりにOpenAI互換プロキシが必要)、SillyTavernより小さい拡張機能エコシステムであり、ホスト版サブスクリプション階層の価格は未公開である。複数のAIサービスバックエンドをまたいだグループロールプレイを、それぞれに別々のアプリを設定せずに求める読者は、Agnaiから実質的な価値を得られる。Ollamaに固定している読者、または最も深い拡張機能エコシステムを求める読者は、まず[SillyTavern](/ja/power-local-llm/sillytavern-review)と直接比較すべきである。',
+          'Agnaiは、マルチユーザー/マルチボットのグループ会話と、Kobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerという9つの外部AIサービスへの対応を、オープンソースのAGPL-3.0ライセンスの下で組み合わせることで、セルフホスト可能なロールプレイフロントエンドの中に自らの地位を築いている。セルフホストは実際に低摩擦であり、`npm install agnai -g`または単一のDockerコマンドで済み、MongoDBとRedisはいずれも任意である。トレードオフは曖昧ではなく具体的だ:ネイティブなOllamaサポートはなく(代わりにOpenAI互換プロキシが必要)、SillyTavernより小さい拡張機能エコシステムであり、ホスト版サブスクリプション階層の価格は未公開である。複数のAIサービスバックエンドをまたいだグループロールプレイを、それぞれに別々のアプリを設定せずに求める読者は、Agnaiから実質的な価値を得られる。Ollamaに固定している読者、または最も深い拡張機能エコシステムを求める読者は、まず[SillyTavern](/ja/local-llms/sillytavern-review)と直接比較すべきである。',
       },
       sources: {
         id: 'sources',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Agnai自身のエントリーを含む、全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
-          '[SillyTavernレビュー](/ja/power-local-llm/sillytavern-review) — 拡張機能が豊富でOllama互換、最大の設定範囲を持つ代替ツール。',
+          '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 拡張機能が豊富でOllama互換、最大の設定範囲を持つ代替ツール。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — 設定不要を求める読者向けのインストーラー1本のクローズドソース代替ツール。',
           '[RisuAIレビュー](/ja/power-local-llm/risuai-review) — Agnaiのマルチテナントと Backyard AIのシンプルさの中間に位置する、もう一つのオープンソースロールプレイフロントエンド。',
           '[SillyTavern vs. Agnai vs. RisuAI:最適なロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 3つのオープンソースフロントエンドの完全な比較。',
@@ -1571,7 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai适合想要一个开源、可自托管、能同时连接多个不同AI服务的角色扮演聊天前端的读者。** 它支持兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer,可在[agnai.chat](https://agnai.chat)免安装托管使用,也可通过`npm install agnai -g`或Docker自托管,MongoDB和Redis均为可选。固定使用Ollama、或想要最大扩展生态的读者,应改为比较[SillyTavern](/zh/power-local-llm/sillytavern-review)。',
+      '**Agnai适合想要一个开源、可自托管、能同时连接多个不同AI服务的角色扮演聊天前端的读者。** 它支持兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer,可在[agnai.chat](https://agnai.chat)免安装托管使用,也可通过`npm install agnai -g`或Docker自托管,MongoDB和Redis均为可选。固定使用Ollama、或想要最大扩展生态的读者,应改为比较[SillyTavern](/zh/local-llms/sillytavern-review)。',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '核心功能:多用户/多机器人群聊、四种角色格式(W++、Square Bracket Format、Boostyle、纯文本)的角色卡、Memory/Lore书,以及AI辅助角色生成。',
           '[agnai.chat](https://agnai.chat)的托管版免安装,提供免费层级,外加可选付费订阅以优先访问Agnai自有的托管模型。',
           'Agnai未将Ollama列为原生AI服务——连接由Ollama提供的模型只能通过OpenAI兼容代理层实现,而非直接集成。',
-          '与[SillyTavern](/zh/power-local-llm/sillytavern-review)、[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)和[RisuAI](/zh/power-local-llm/risuai-review)的比较——[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中的配套条目。',
+          '与[SillyTavern](/zh/local-llms/sillytavern-review)、[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)和[RisuAI](/zh/power-local-llm/risuai-review)的比较——[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中的配套条目。',
         ],
       },
       whatIsAgnai: {
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['应用', '最适合', '搭建难度', '后端/模型访问', '主要局限'],
         rows: [
           { '应用': '[Agnai](https://agnai.chat)', '最适合': '跨多个AI服务后端的多用户/多机器人群体角色扮演', '搭建难度': '低(托管版)或中(自托管:npm或Docker)', '后端/模型访问': '兼容Kobold、NovelAI、AI Horde、Goose、OpenAI、Claude、Replicate、OpenRouter、Mancer', '主要局限': '没有原生Ollama集成;托管版订阅价格未公开' },
-          { '应用': '[SillyTavern](/zh/power-local-llm/sillytavern-review)', '最适合': '最大程度的自定义、扩展、提示词模板控制', '搭建难度': '高(后端与前端分离)', '后端/模型访问': '通过KoboldCpp、text-generation-webui或Ollama后端使用任意GGUF', '主要局限': '三者中学习曲线最陡;没有托管选项' },
+          { '应用': '[SillyTavern](/zh/local-llms/sillytavern-review)', '最适合': '最大程度的自定义、扩展、提示词模板控制', '搭建难度': '高(后端与前端分离)', '后端/模型访问': '通过KoboldCpp、text-generation-webui或Ollama后端使用任意GGUF', '主要局限': '三者中学习曲线最陡;没有托管选项' },
           { '应用': '[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)', '最适合': '带内置Character Hub的低摩擦本地角色聊天', '搭建难度': '最小(一个安装程序)', '后端/模型访问': '内置本地模型加可选的Backyard Cloud', '主要局限': '没有群聊;闭源应用;仅提供精选模型列表' },
           { '应用': '[RisuAI](/zh/power-local-llm/risuai-review)', '最适合': '入门级角色扮演界面,网页版或自托管', '搭建难度': '中(网页版或自托管,仍需后端)', '后端/模型访问': '通过链接服务连接的后端/GGUF', '主要局限': '扩展生态比SillyTavern小;仍需单独的后端' },
         ],
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不应该使用Agnai',
         items: [
-          '**特别想连接Ollama的读者。** Ollama不是Agnai的原生后端;固定使用Ollama的读者应考虑将Ollama列为支持后端的[SillyTavern](/zh/power-local-llm/sillytavern-review),或先在Ollama前面加一层OpenAI兼容代理。',
+          '**特别想连接Ollama的读者。** Ollama不是Agnai的原生后端;固定使用Ollama的读者应考虑将Ollama列为支持后端的[SillyTavern](/zh/local-llms/sillytavern-review),或先在Ollama前面加一层OpenAI兼容代理。',
           '**想要最大扩展生态的读者。** 根据各项目自身的仓库活跃度,SillyTavern的社区扩展库比Agnai更大。',
           '**想要零配置单人桌面应用的读者。** [Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)的单一安装程序本地模式所需的搭建比自托管Agnai更少。',
           '**在投入前需要固定、已公开订阅价格的读者。** Agnai托管版订阅层级的价格没有在其文档中公开;请直接在agnai.chat确认当前价格。',
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Agnai将多用户/多机器人群聊与对九种外部AI服务——兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer——的支持结合在开源AGPL-3.0许可证之下,在可自托管的角色扮演前端中占有一席之地。自托管确实摩擦很小:`npm install agnai -g`或单条Docker命令即可,MongoDB和Redis均为可选。取舍是具体的,而非模糊的:没有原生Ollama支持(需要OpenAI兼容代理代替),扩展生态比SillyTavern小,托管版订阅层级价格未公开。想要在多个AI服务后端上进行群体角色扮演、又不想为每个后端单独配置应用的读者,能从Agnai获得实际价值;固定使用Ollama、或想要最深扩展生态的读者,应先直接与[SillyTavern](/zh/power-local-llm/sillytavern-review)比较。',
+          'Agnai将多用户/多机器人群聊与对九种外部AI服务——兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer——的支持结合在开源AGPL-3.0许可证之下,在可自托管的角色扮演前端中占有一席之地。自托管确实摩擦很小:`npm install agnai -g`或单条Docker命令即可,MongoDB和Redis均为可选。取舍是具体的,而非模糊的:没有原生Ollama支持(需要OpenAI兼容代理代替),扩展生态比SillyTavern小,托管版订阅层级价格未公开。想要在多个AI服务后端上进行群体角色扮演、又不想为每个后端单独配置应用的读者,能从Agnai获得实际价值;固定使用Ollama、或想要最深扩展生态的读者,应先直接与[SillyTavern](/zh/local-llms/sillytavern-review)比较。',
       },
       sources: {
         id: 'sources',
@@ -1784,7 +1784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) —— 涵盖所有平台的完整应用与工具目录,包含Agnai自己的条目。',
-          '[SillyTavern评测](/zh/power-local-llm/sillytavern-review) —— 扩展丰富、兼容Ollama、配置面最广的替代方案。',
+          '[SillyTavern评测](/zh/local-llms/sillytavern-review) —— 扩展丰富、兼容Ollama、配置面最广的替代方案。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) —— 面向想要零配置读者的单安装程序闭源替代方案。',
           '[RisuAI评测](/zh/power-local-llm/risuai-review) —— 另一个开源角色扮演前端,介于Agnai的多租户与Backyard AI的简单性之间。',
           '[SillyTavern vs. Agnai vs. RisuAI:最佳角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) —— 三个开源前端的完整正面比较。',
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai هو الخيار المناسب لمن يريد واجهة دردشة تقمص أدوار مفتوحة المصدر وقابلة للاستضافة الذاتية، وقادرة على ربط عدة خدمات ذكاء اصطناعي مختلفة في آن واحد.** يدعم الخلفيات المتوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer، ويعمل مستضافًا على [agnai.chat](https://agnai.chat) دون تثبيت، أو مستضافًا ذاتيًا عبر `npm install agnai -g` أو Docker، مع كون MongoDB وRedis اختياريَين كليهما. القرّاء الملتزمون بـ Ollama، أو الراغبون في أكبر منظومة إضافات، يجب أن يقارنوا بدلًا من ذلك بـ [SillyTavern](/ar/power-local-llm/sillytavern-review).',
+      '**Agnai هو الخيار المناسب لمن يريد واجهة دردشة تقمص أدوار مفتوحة المصدر وقابلة للاستضافة الذاتية، وقادرة على ربط عدة خدمات ذكاء اصطناعي مختلفة في آن واحد.** يدعم الخلفيات المتوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer، ويعمل مستضافًا على [agnai.chat](https://agnai.chat) دون تثبيت، أو مستضافًا ذاتيًا عبر `npm install agnai -g` أو Docker، مع كون MongoDB وRedis اختياريَين كليهما. القرّاء الملتزمون بـ Ollama، أو الراغبون في أكبر منظومة إضافات، يجب أن يقارنوا بدلًا من ذلك بـ [SillyTavern](/ar/local-llms/sillytavern-review).',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الميزات الأساسية: محادثات جماعية متعددة المستخدمين/متعددة الروبوتات، وبطاقات شخصيات بأربعة تنسيقات شخصية (W++، وSquare Bracket Format، وBoostyle، والنص العادي)، وكتب الذاكرة/الخلفية القصصية، وتوليد الشخصيات بمساعدة الذكاء الاصطناعي.',
           'النسخة المستضافة على [agnai.chat](https://agnai.chat) لا تحتاج إلى تثبيت وتوفّر مستوى مجانيًا إضافة إلى اشتراك مدفوع اختياري للوصول ذي الأولوية إلى نماذج Agnai المستضافة الخاصة.',
           'لا يُدرج Agnai خدمة Ollama كخدمة ذكاء اصطناعي أصيلة — لا يعمل ربط نموذج مقدَّم عبر Ollama إلا من خلال طبقة وكيل متوافقة مع OpenAI، لا كتكامل مباشر.',
-          'مقارنة مع [SillyTavern](/ar/power-local-llm/sillytavern-review)، و[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)، و[RisuAI](/ar/power-local-llm/risuai-review) — مدخل مكمّل في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'مقارنة مع [SillyTavern](/ar/local-llms/sillytavern-review)، و[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)، و[RisuAI](/ar/power-local-llm/risuai-review) — مدخل مكمّل في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
         ],
       },
       whatIsAgnai: {
@@ -1970,7 +1970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['التطبيق', 'الأنسب لـ', 'مستوى الإعداد', 'الوصول إلى الخلفية/النموذج', 'القيد الرئيسي'],
         rows: [
           { 'التطبيق': '[Agnai](https://agnai.chat)', 'الأنسب لـ': 'تقمص أدوار جماعي متعدد المستخدمين/الروبوتات عبر عدة خلفيات خدمات ذكاء اصطناعي', 'مستوى الإعداد': 'منخفض (مستضاف) أو متوسط (استضافة ذاتية: npm أو Docker)', 'الوصول إلى الخلفية/النموذج': 'متوافق مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وClaude، وReplicate، وOpenRouter، وMancer', 'القيد الرئيسي': 'لا تكامل أصيل مع Ollama؛ سعر الاشتراك المستضاف غير منشور' },
-          { 'التطبيق': '[SillyTavern](/ar/power-local-llm/sillytavern-review)', 'الأنسب لـ': 'أقصى تخصيص، وإضافات، وتحكم في قوالب الموجّهات', 'مستوى الإعداد': 'مرتفع (خلفية وواجهة أمامية منفصلتان)', 'الوصول إلى الخلفية/النموذج': 'أي ملف GGUF عبر خلفية KoboldCpp أو text-generation-webui أو Ollama', 'القيد الرئيسي': 'أشد منحنى تعلّم في المجموعة؛ لا خيار استضافة' },
+          { 'التطبيق': '[SillyTavern](/ar/local-llms/sillytavern-review)', 'الأنسب لـ': 'أقصى تخصيص، وإضافات، وتحكم في قوالب الموجّهات', 'مستوى الإعداد': 'مرتفع (خلفية وواجهة أمامية منفصلتان)', 'الوصول إلى الخلفية/النموذج': 'أي ملف GGUF عبر خلفية KoboldCpp أو text-generation-webui أو Ollama', 'القيد الرئيسي': 'أشد منحنى تعلّم في المجموعة؛ لا خيار استضافة' },
           { 'التطبيق': '[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)', 'الأنسب لـ': 'دردشة شخصيات محلية منخفضة الاحتكاك مع Character Hub مدمج', 'مستوى الإعداد': 'أدنى حد (مثبّت واحد)', 'الوصول إلى الخلفية/النموذج': 'نماذج محلية مُجمَّعة إضافة إلى Backyard Cloud اختياري', 'القيد الرئيسي': 'لا دردشات جماعية؛ تطبيق مغلق المصدر؛ قائمة نماذج منسّقة فقط' },
           { 'التطبيق': '[RisuAI](/ar/power-local-llm/risuai-review)', 'الأنسب لـ': 'واجهة تقمص أدوار للمبتدئين، عبر الويب أو مستضافة ذاتيًا', 'مستوى الإعداد': 'متوسط (ويب أو استضافة ذاتية، لا تزال الخلفية مطلوبة)', 'الوصول إلى الخلفية/النموذج': 'خلفية متصلة/GGUF عبر خدمة مرتبطة', 'القيد الرئيسي': 'منظومة إضافات أصغر من SillyTavern؛ لا تزال تحتاج خلفية منفصلة' },
         ],
@@ -1990,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'من لا يجب أن يستخدم Agnai',
         items: [
-          '**القارئ الذي يريد تحديدًا ربط Ollama.** Ollama ليست خلفية أصيلة في Agnai؛ يجب على القرّاء الملتزمين بـ Ollama النظر في [SillyTavern](/ar/power-local-llm/sillytavern-review)، الذي يُدرج Ollama كخلفية مدعومة، أو إضافة وكيل متوافق مع OpenAI أمام Ollama أولًا.',
+          '**القارئ الذي يريد تحديدًا ربط Ollama.** Ollama ليست خلفية أصيلة في Agnai؛ يجب على القرّاء الملتزمين بـ Ollama النظر في [SillyTavern](/ar/local-llms/sillytavern-review)، الذي يُدرج Ollama كخلفية مدعومة، أو إضافة وكيل متوافق مع OpenAI أمام Ollama أولًا.',
           '**القارئ الذي يريد أكبر منظومة إضافات.** مكتبة الإضافات المجتمعية لـ SillyTavern أكبر من مكتبة Agnai، استنادًا إلى نشاط مستودع كل مشروع.',
           '**القارئ الذي يريد تطبيق سطح مكتب فردي دون أي إعداد.** يحتاج وضع Backyard AI المحلي ذو المثبّت الواحد [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) إعدادًا أقل من استضافة Agnai ذاتيًا.',
           '**القارئ الذي يحتاج إلى سعر اشتراك ثابت ومنشور قبل الالتزام.** سعر مستوى الاشتراك المستضاف لـ Agnai غير منشور في وثائقه الخاصة؛ أكّد الأسعار الحالية مباشرة على agnai.chat.',
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يكتسب Agnai مكانته بين واجهات تقمص الأدوار القابلة للاستضافة الذاتية بجمعه بين المحادثات الجماعية متعددة المستخدمين/الروبوتات ودعم تسع خدمات ذكاء اصطناعي خارجية — خلفيات متوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer — بموجب رخصة مفتوحة المصدر AGPL-3.0. الاستضافة الذاتية منخفضة الاحتكاك فعليًا: `npm install agnai -g` أو أمر Docker واحد، مع كون MongoDB وRedis اختياريَين كليهما. المقايضات محددة، وليست غامضة: لا دعم أصيل لـ Ollama (يلزم بدلًا من ذلك وكيل متوافق مع OpenAI)، ومنظومة إضافات أصغر من SillyTavern، وأسعار غير منشورة لمستوى الاشتراك المستضاف. القرّاء الراغبون في تقمص أدوار جماعي عبر عدة خلفيات خدمات ذكاء اصطناعي دون إعداد تطبيق منفصل لكل منها يحصلون على قيمة حقيقية من Agnai؛ أما القرّاء الملتزمون بـ Ollama، أو الراغبون في أعمق منظومة إضافات، فيجب أن يقارنوا أولًا مباشرة بـ [SillyTavern](/ar/power-local-llm/sillytavern-review).',
+          'يكتسب Agnai مكانته بين واجهات تقمص الأدوار القابلة للاستضافة الذاتية بجمعه بين المحادثات الجماعية متعددة المستخدمين/الروبوتات ودعم تسع خدمات ذكاء اصطناعي خارجية — خلفيات متوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer — بموجب رخصة مفتوحة المصدر AGPL-3.0. الاستضافة الذاتية منخفضة الاحتكاك فعليًا: `npm install agnai -g` أو أمر Docker واحد، مع كون MongoDB وRedis اختياريَين كليهما. المقايضات محددة، وليست غامضة: لا دعم أصيل لـ Ollama (يلزم بدلًا من ذلك وكيل متوافق مع OpenAI)، ومنظومة إضافات أصغر من SillyTavern، وأسعار غير منشورة لمستوى الاشتراك المستضاف. القرّاء الراغبون في تقمص أدوار جماعي عبر عدة خلفيات خدمات ذكاء اصطناعي دون إعداد تطبيق منفصل لكل منها يحصلون على قيمة حقيقية من Agnai؛ أما القرّاء الملتزمون بـ Ollama، أو الراغبون في أعمق منظومة إضافات، فيجب أن يقارنوا أولًا مباشرة بـ [SillyTavern](/ar/local-llms/sillytavern-review).',
       },
       sources: {
         id: 'sources',
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات، بما في ذلك مدخل Agnai الخاص.',
-          '[مراجعة SillyTavern](/ar/power-local-llm/sillytavern-review) — البديل الغني بالإضافات والمتوافق مع Ollama، بأكبر مساحة إعداد.',
+          '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — البديل الغني بالإضافات والمتوافق مع Ollama، بأكبر مساحة إعداد.',
           '[مراجعة Backyard AI: دردشة شخصيات محلية وتقمص أدوار بالذكاء الاصطناعي](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — بديل مغلق المصدر بمثبّت واحد للقرّاء الراغبين في صفر إعداد.',
           '[مراجعة RisuAI](/ar/power-local-llm/risuai-review) — واجهة تقمص أدوار أخرى مفتوحة المصدر، تقع بين تعدد المستأجرين في Agnai وبساطة Backyard AI.',
           '[SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة تقمص أدوار](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — مقارنة شاملة بين الواجهات الأمامية الثلاث مفتوحة المصدر.',
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Agnai는 여러 AI 서비스를 동시에 연결할 수 있는 오픈소스이자 셀프 호스팅 가능한 롤플레이 채팅 프런트엔드를 원하는 독자에게 적합합니다.** Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer를 지원하며, 설치 없이 [agnai.chat](https://agnai.chat)에서 호스팅 버전으로 사용하거나 `npm install agnai -g` 또는 Docker로 셀프 호스팅할 수 있고 MongoDB와 Redis는 모두 선택 사항입니다. Ollama에 고정되어 있거나 가장 큰 확장 생태계를 원하는 독자는 대신 [SillyTavern](/ko/power-local-llm/sillytavern-review)을 비교해야 합니다.',
+      '**Agnai는 여러 AI 서비스를 동시에 연결할 수 있는 오픈소스이자 셀프 호스팅 가능한 롤플레이 채팅 프런트엔드를 원하는 독자에게 적합합니다.** Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer를 지원하며, 설치 없이 [agnai.chat](https://agnai.chat)에서 호스팅 버전으로 사용하거나 `npm install agnai -g` 또는 Docker로 셀프 호스팅할 수 있고 MongoDB와 Redis는 모두 선택 사항입니다. Ollama에 고정되어 있거나 가장 큰 확장 생태계를 원하는 독자는 대신 [SillyTavern](/ko/local-llms/sillytavern-review)을 비교해야 합니다.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Agnai for AI roleplay and character chat?',
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '핵심 기능: 다중 사용자/다중 봇 그룹 대화, 4가지 페르소나 형식(W++, Square Bracket Format, Boostyle, 일반 텍스트)의 캐릭터 카드, Memory/Lore 북, AI 지원 캐릭터 생성.',
           '[agnai.chat](https://agnai.chat)의 호스팅 버전은 설치가 필요 없으며, Agnai 자체 호스팅 모델에 우선 접근할 수 있는 선택적 유료 구독과 함께 무료 등급을 제공합니다.',
           'Agnai는 Ollama를 네이티브 AI 서비스로 기재하지 않습니다 — Ollama가 제공하는 모델 연결은 직접 통합이 아니라 OpenAI 호환 프록시 계층을 통해서만 작동합니다.',
-          '[SillyTavern](/ko/power-local-llm/sillytavern-review), [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026), [RisuAI](/ko/power-local-llm/risuai-review)와의 비교 — [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 내 관련 항목.',
+          '[SillyTavern](/ko/local-llms/sillytavern-review), [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026), [RisuAI](/ko/power-local-llm/risuai-review)와의 비교 — [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 내 관련 항목.',
         ],
       },
       whatIsAgnai: {
@@ -2227,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['앱', '최적 용도', '설정 난이도', '백엔드/모델 접근', '주요 한계'],
         rows: [
           { '앱': '[Agnai](https://agnai.chat)', '최적 용도': '여러 AI 서비스 백엔드를 아우르는 다중 사용자/다중 봇 그룹 롤플레이', '설정 난이도': '낮음(호스팅) 또는 중간(셀프 호스팅: npm 또는 Docker)', '백엔드/모델 접근': 'Kobold 호환, NovelAI, AI Horde, Goose, OpenAI, Claude, Replicate, OpenRouter, Mancer', '주요 한계': '네이티브 Ollama 통합 없음; 호스팅 구독 가격 미공개' },
-          { '앱': '[SillyTavern](/ko/power-local-llm/sillytavern-review)', '최적 용도': '최대 수준의 커스터마이징, 확장 기능, 프롬프트 템플릿 제어', '설정 난이도': '높음(백엔드와 프런트엔드 분리)', '백엔드/모델 접근': 'KoboldCpp, text-generation-webui, Ollama 백엔드를 통한 모든 GGUF', '주요 한계': '그룹 중 가장 가파른 학습 곡선; 호스팅 옵션 없음' },
+          { '앱': '[SillyTavern](/ko/local-llms/sillytavern-review)', '최적 용도': '최대 수준의 커스터마이징, 확장 기능, 프롬프트 템플릿 제어', '설정 난이도': '높음(백엔드와 프런트엔드 분리)', '백엔드/모델 접근': 'KoboldCpp, text-generation-webui, Ollama 백엔드를 통한 모든 GGUF', '주요 한계': '그룹 중 가장 가파른 학습 곡선; 호스팅 옵션 없음' },
           { '앱': '[Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026)', '최적 용도': '내장 Character Hub를 갖춘 마찰이 적은 로컬 캐릭터 채팅', '설정 난이도': '최소(단일 설치 프로그램)', '백엔드/모델 접근': '번들 로컬 모델과 선택적 Backyard Cloud', '주요 한계': '그룹 채팅 없음; 클로즈드 소스 앱; 큐레이션된 모델 목록만 제공' },
           { '앱': '[RisuAI](/ko/power-local-llm/risuai-review)', '최적 용도': '웹 또는 셀프 호스팅 초급자용 롤플레이 UI', '설정 난이도': '중간(웹 또는 셀프 호스팅, 백엔드 여전히 필요)', '백엔드/모델 접근': '연결된 서비스를 통한 백엔드/GGUF', '주요 한계': 'SillyTavern보다 작은 확장 생태계; 여전히 별도 백엔드 필요' },
         ],
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Agnai를 사용하지 말아야 할 사람',
         items: [
-          '**특히 Ollama를 연결하고 싶은 독자.** Ollama는 Agnai의 네이티브 백엔드가 아닙니다. Ollama에 고정되어 있는 독자는 Ollama를 지원 백엔드로 기재한 [SillyTavern](/ko/power-local-llm/sillytavern-review)을 고려하거나, 먼저 Ollama 앞에 OpenAI 호환 프록시를 추가해야 합니다.',
+          '**특히 Ollama를 연결하고 싶은 독자.** Ollama는 Agnai의 네이티브 백엔드가 아닙니다. Ollama에 고정되어 있는 독자는 Ollama를 지원 백엔드로 기재한 [SillyTavern](/ko/local-llms/sillytavern-review)을 고려하거나, 먼저 Ollama 앞에 OpenAI 호환 프록시를 추가해야 합니다.',
           '**가장 큰 확장 생태계를 원하는 독자.** 각 프로젝트 자체의 저장소 활동을 기준으로 SillyTavern의 커뮤니티 확장 라이브러리가 Agnai보다 큽니다.',
           '**전혀 설정이 필요 없는 단일 사용자 데스크톱 앱을 원하는 독자.** [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026)의 단일 설치 프로그램 로컬 모드는 Agnai를 셀프 호스팅하는 것보다 설정이 적게 필요합니다.',
           '**결정 전에 확정되고 공개된 구독 가격이 필요한 독자.** Agnai 호스팅 구독 등급의 가격은 자체 문서에 공개되어 있지 않습니다. 현재 가격은 agnai.chat에서 직접 확인하세요.',
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Agnai는 다중 사용자/다중 봇 그룹 대화와 아홉 개 외부 AI 서비스 — Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer — 에 대한 지원을 오픈소스 AGPL-3.0 라이선스 아래 결합함으로써 셀프 호스팅 가능한 롤플레이 프런트엔드 중에서 자리를 확보합니다. 셀프 호스팅은 실제로 마찰이 적습니다: `npm install agnai -g` 또는 단일 Docker 명령이면 되고, MongoDB와 Redis는 모두 선택 사항입니다. 트레이드오프는 모호하지 않고 구체적입니다: 네이티브 Ollama 지원이 없고(대신 OpenAI 호환 프록시가 필요), SillyTavern보다 확장 생태계가 작으며, 호스팅 구독 등급의 가격이 공개되어 있지 않습니다. 각 백엔드마다 별도의 앱을 설정하지 않고도 여러 AI 서비스 백엔드에 걸친 그룹 롤플레이를 원하는 독자는 Agnai에서 실질적인 가치를 얻습니다. Ollama에 고정되어 있거나 가장 깊은 확장 생태계를 원하는 독자는 먼저 [SillyTavern](/ko/power-local-llm/sillytavern-review)과 직접 비교해야 합니다.',
+          'Agnai는 다중 사용자/다중 봇 그룹 대화와 아홉 개 외부 AI 서비스 — Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer — 에 대한 지원을 오픈소스 AGPL-3.0 라이선스 아래 결합함으로써 셀프 호스팅 가능한 롤플레이 프런트엔드 중에서 자리를 확보합니다. 셀프 호스팅은 실제로 마찰이 적습니다: `npm install agnai -g` 또는 단일 Docker 명령이면 되고, MongoDB와 Redis는 모두 선택 사항입니다. 트레이드오프는 모호하지 않고 구체적입니다: 네이티브 Ollama 지원이 없고(대신 OpenAI 호환 프록시가 필요), SillyTavern보다 확장 생태계가 작으며, 호스팅 구독 등급의 가격이 공개되어 있지 않습니다. 각 백엔드마다 별도의 앱을 설정하지 않고도 여러 AI 서비스 백엔드에 걸친 그룹 롤플레이를 원하는 독자는 Agnai에서 실질적인 가치를 얻습니다. Ollama에 고정되어 있거나 가장 깊은 확장 생태계를 원하는 독자는 먼저 [SillyTavern](/ko/local-llms/sillytavern-review)과 직접 비교해야 합니다.',
       },
       sources: {
         id: 'sources',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 자료',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Agnai 자체 항목을 포함해 모든 플랫폼을 아우르는 포괄적인 앱·도구 디렉터리.',
-          '[SillyTavern 리뷰](/ko/power-local-llm/sillytavern-review) — 확장 기능이 풍부하고 Ollama와 호환되며 가장 넓은 설정 범위를 가진 대안.',
+          '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 확장 기능이 풍부하고 Ollama와 호환되며 가장 넓은 설정 범위를 가진 대안.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 설정이 전혀 필요 없길 원하는 독자를 위한 단일 설치 프로그램의 클로즈드 소스 대안.',
           '[RisuAI 리뷰](/ko/power-local-llm/risuai-review) — Agnai의 멀티 테넌트와 Backyard AI의 단순함 사이에 자리한 또 다른 오픈소스 롤플레이 프런트엔드.',
           '[SillyTavern vs. Agnai vs. RisuAI: 최고의 롤플레이 프런트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 세 오픈소스 프런트엔드의 전체 비교.',
