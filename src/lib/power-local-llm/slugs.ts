@@ -329,6 +329,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Twinny, Aider, shell-gpt reviews — 2026-09-06
   'twinny-review':                           'twinny-review',
   'aider-review':                            'aider-review',
+  'opencode-review':                         'opencode-review',
   'shell-gpt-review':                        'shell-gpt-review',
   // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
   'aichat-review':                           'aichat-review',
