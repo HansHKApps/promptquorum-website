@@ -37,4 +37,5 @@ export const app: ToolRecord = {
     ko: 'VS Code, JetBrains, CLI용 모델 독립적 오픈소스 코딩 에이전트, 로컬 모델 지원',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'kilo-code-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

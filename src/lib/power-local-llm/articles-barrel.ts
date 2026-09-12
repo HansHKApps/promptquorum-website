@@ -228,6 +228,7 @@ import { article as a_localai_apexcreator_review } from './articles/localai-apex
 import { article as a_diffusionbee_review } from './articles/diffusionbee-review'
 import { article as a_macwhisper_review } from './articles/macwhisper-review'
 import { article as a_solair_ai_review } from './articles/solair-ai-review'
+import { article as a_kilo_code_review } from './articles/kilo-code-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -492,4 +493,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'macwhisper-review':                              a_macwhisper_review,
   // Solair AI review — 2026-09-12
   'solair-ai-review':                               a_solair_ai_review,
+  // Kilo Code review — 2026-09-12
+  'kilo-code-review':                               a_kilo_code_review,
 }
