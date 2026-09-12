@@ -33,4 +33,5 @@ export const app: ToolRecord = {
     ko: '채팅, 비전, 이미지, 음성을 위한 OpenAI 호환 API를 갖춘 AMD 최적화 로컬 LLM 서버',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'lemonade-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

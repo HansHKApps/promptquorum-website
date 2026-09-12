@@ -39,4 +39,5 @@ export const app: ToolRecord = {
     ko: '로컬을 포함한 모든 모델 제공업체에 연결되는 자체 호스팅 엔터프라이즈 검색 및 RAG 어시스턴트',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'onyx-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

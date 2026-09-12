@@ -174,6 +174,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ragflow-document-understanding-rag-review':    'ragflow-document-understanding-rag-review',
   // MaxKB self-hosted RAG/agent platform review 2026-09-12
   'maxkb-review':                                 'maxkb-review',
+  // Lemonade AMD-sponsored local AI server review 2026-09-12
+  'lemonade-review':                              'lemonade-review',
+  // Onyx self-hosted enterprise search/RAG review (formerly Danswer) 2026-09-12
+  'onyx-review':                                  'onyx-review',
   // Khoj review 2026-09-02
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Second Me review 2026-09-03
