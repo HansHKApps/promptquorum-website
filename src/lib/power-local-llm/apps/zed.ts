@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
-  license: 'GPL-3.0 / Apache-2.0 (dual-licensed)',
+  license: 'GPL-3.0 (editor) / AGPL-3.0 (server) / Apache-2.0 (GPUI)',
   price: 'freemium',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 89787, // github.com/zed-industries/zed, verified via GitHub API 2026-09-05
@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'محرر أكواد عالي الأداء بدعم أصلي للنماذج المحلية عبر Ollama وLM Studio',
     ko: 'Ollama 및 LM Studio를 통해 네이티브 로컬 모델을 지원하는 고성능 코드 에디터',
   },
+  reviewSlug: 'zed-review', // dedicated PromptQuorum review — 2026-09-12
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

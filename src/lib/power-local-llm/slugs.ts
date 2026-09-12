@@ -369,4 +369,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'agnai-review':                            'agnai-review',
   'metagpt-review':                          'metagpt-review',
   'risuai-review':                           'risuai-review',
+  // Zed review — 2026-09-12
+  'zed-review':                              'zed-review',
+  // GitHub Copilot CLI review — 2026-09-12
+  'github-copilot-cli-review':                'github-copilot-cli-review',
+  // Copilot for Obsidian review — 2026-09-12
+  'copilot-for-obsidian-review':              'copilot-for-obsidian-review',
 }
