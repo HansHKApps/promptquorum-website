@@ -143,6 +143,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Dify LLMOps platform review 2026-09-02
   'dify-ai-workflow-builder-review':              'dify-ai-workflow-builder-review',
+  // n8n review — 2026-09-12
+  'n8n-review':                                   'n8n-review',
   // Langflow review — 2026-09-02
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
   // LangChain review — agent frameworks series, article 1 of 14 — 2026-09-05

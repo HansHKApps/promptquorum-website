@@ -39,4 +39,5 @@ export const app: ToolRecord = {
     ko: '네이티브 AI/LLM 노드를 갖춘 워크플로 자동화 플랫폼, 로컬 모델을 지원하는 자체 호스팅 가능',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'n8n-review',
 }
