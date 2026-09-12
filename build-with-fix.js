@@ -18,10 +18,22 @@ function fixValidator() {
 
 function runBuild() {
   return new Promise((resolve, reject) => {
-    const child = spawn('npx', ['next', 'build'], {
-      stdio: 'inherit',
-      env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=4096' }
-    })
+    // NODE_OPTIONS alone doesn't reach the forked worker process Next.js uses
+    // for static page generation (jest-worker forks inherit process.execArgv,
+    // not env-derived flags), so that worker kept OOMing near a ~2GB default
+    // heap even with NODE_OPTIONS=--max-old-space-size=4096 set here. Passing
+    // the flag as a literal CLI arg puts it in execArgv, which the forked
+    // worker does inherit. Bumped to 6144 (build machine has 8GB) since the
+    // page-generation worker is the only heavy process running at this point.
+    const nextBin = require.resolve('next/dist/bin/next')
+    const child = spawn(
+      process.execPath,
+      ['--max-old-space-size=6144', nextBin, 'build'],
+      {
+        stdio: 'inherit',
+        env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=6144' }
+      }
+    )
 
     child.on('close', (code) => {
       // Always continue regardless of exit code - we'll check for output directory
