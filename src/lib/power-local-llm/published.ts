@@ -246,6 +246,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'boltai-review',
   'jan-review',
   'gpt4all-review',
+  'docker-model-runner-review',
   'draw-things-review',
   'ekorbia-review',
   // Enterprise/B2B — governance & risk — 2026-09-03

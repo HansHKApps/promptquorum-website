@@ -10,6 +10,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'docker-model-runner',
   name: 'Docker Model Runner',
+  reviewSlug: 'docker-model-runner-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   categories: ['runtimes-managers'],
   interfaces: ['cli', 'desktop'],
   locality: 'local',
