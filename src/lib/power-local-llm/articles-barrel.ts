@@ -202,6 +202,7 @@ import { article as a_second_me_review_2026 } from './articles/second-me-review-
 import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
+import { article as a_atomic_agent_review } from './articles/atomic-agent-review'
 import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
 import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
 import { article as a_openclaw_review } from './articles/openclaw-review'
@@ -355,6 +356,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'autogpt-local-review-2026':                         a_autogpt_local_review_2026,
   // Atomic Chat review — 2026-09-03
   'atomic-chat-review':                                a_atomic_chat_review,
+  // Atomic Agent review — 2026-09-12
+  'atomic-agent-review':                               a_atomic_agent_review,
   // LibreChat review — 2026-09-03
   'librechat-review-2026':                             a_librechat_review_2026,
   // Bodega One Code review — 2026-09-03
