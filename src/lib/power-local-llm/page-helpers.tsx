@@ -709,6 +709,17 @@ const HUB_THEMES: Array<{
       'apple-mlx-vs-nvidia-cuda-local-llm-2026',
       'deepseek-vs-qwen-local-comparison-2026',
       'docker-model-runner-review',
+      'ai-tool-licenses-explained',
+      'exllamav2-explained',
+      'llama-cpp-explained',
+      'llamafile-explained',
+      'localai-explained',
+      'mlc-llm-explained',
+      'mlx-lm-explained',
+      'sglang-explained',
+      'tensorrt-llm-explained',
+      'vllm-explained',
+      'rtx-3090-local-llm-buy-or-rent',
     ],
   },
   {
@@ -727,6 +738,23 @@ const HUB_THEMES: Array<{
       'qwen-local-deployment-complete-guide-2026',
       'best-workstation-build-local-ai-2026',
       'locally-uncensored-review',
+      'arbiter-local-ai-chat-review',
+      'atomic-chat-review',
+      'bobe-review',
+      'boltai-review',
+      'chapper-review',
+      'ekorbia-review',
+      'enchanted-review',
+      'gpt4all-review',
+      'hanoki-review',
+      'jan-review',
+      'jarvis-mac-review',
+      'msty-review',
+      'open-felix-review',
+      'osaurus-ai-review',
+      'rapr-ai-review',
+      'voxa-review',
+      'locally-ai-review',
     ],
   },
   {
@@ -744,6 +772,12 @@ const HUB_THEMES: Array<{
       'local-rag-for-private-business-data',
       'best-rag-tools-for-business-documents-2026',
       'maxkb-review',
+      'haystack-deepset-rag-framework-review',
+      'llamaindex-rag-framework-review',
+      'privategpt-review',
+      'quivr-self-hosted-knowledge-assistant-review',
+      'ragflow-document-understanding-rag-review',
+      'txtai-embedded-vector-database-review',
     ],
   },
   {
@@ -763,6 +797,21 @@ const HUB_THEMES: Array<{
       'deepseek-vs-qwen-coding-local-2026',
       'kilo-code-review',
       'opencode-review',
+      'aichat-review',
+      'aider-review',
+      'blackbox-ai-cli-review',
+      'cline-review',
+      'codegpt-review',
+      'continue-dev-review',
+      'cursor-local-mode-review',
+      'openhands-review',
+      'pearai-review',
+      'shell-gpt-review',
+      'sourcegraph-cody-review',
+      'tabby-review',
+      'tgpt-review',
+      'twinny-review',
+      'windsurf-review',
     ],
   },
   {
@@ -781,6 +830,20 @@ const HUB_THEMES: Array<{
       'local-ai-behind-firewall-offline-2026',
       'n8n-review',
       'atomic-agent-review',
+      'aori-ai-personal-agent-review',
+      'autogen-review',
+      'babyagi-review-autonomous-agent',
+      'crewai-review',
+      'dify-ai-workflow-builder-review',
+      'flowise-ai-visual-workflow-builder-review',
+      'langchain-review',
+      'langflow-visual-ai-orchestration-review',
+      'langgraph-review',
+      'letta-review',
+      'open-interpreter-review',
+      'openclaw-review',
+      'semantic-kernel-review',
+      'superagi-review',
     ],
   },
   {
@@ -796,6 +859,8 @@ const HUB_THEMES: Array<{
       'local-llm-prompts-for-fiction-writers',
       'uncensored-local-llm-creative-writing-ethics',
       'local-llm-screenwriting-and-novel-drafting',
+      'koboldcpp-review',
+      'metagpt-agnai-risuai-explained',
     ],
   },
   {
@@ -817,6 +882,16 @@ const HUB_THEMES: Array<{
       'vlm-video-analytics-drones-edge',
       'on-device-ai-review',
       'runanywhere-review',
+      'anythingllm-mobile-review',
+      'chatty-mini-review',
+      'layla-review',
+      'llm-farm-review',
+      'maid-review',
+      'mlc-chat-review',
+      'pocket-ai-review',
+      'pocketpal-ai-review',
+      'private-llm-review',
+      'rikkahub-review',
     ],
   },
   {
@@ -834,6 +909,8 @@ const HUB_THEMES: Array<{
       'replace-grammarly-notion-ai-with-local',
       'wechat-bot-local-llm-personal-assistant-2026',
       'wechat-local-llm-integration-2026',
+      'khoj-ai-second-brain-review',
+      'obsidian-logseq-ai-plugins',
     ],
   },
   {
@@ -850,6 +927,24 @@ const HUB_THEMES: Array<{
       'build-local-voice-assistant-2026',
       'local-multimodal-pipeline-voice-vision-text',
       'dograh-review',
+      'bark-tts-review',
+      'best-local-tts-mac',
+      'best-local-tts-nvidia-gpu',
+      'best-local-tts-raspberry-pi',
+      'best-tts-for-ollama',
+      'chatterbox-vs-elevenlabs',
+      'coqui-tts-review',
+      'faster-whisper-review',
+      'idefics-review',
+      'kokoro-vs-elevenlabs',
+      'llava-review',
+      'ollama-vision-models-review',
+      'piper-tts-review',
+      'piper-vs-chatterbox-tts',
+      'piper-vs-kokoro-tts',
+      'styletts-2-review',
+      'whisper-cpp-review',
+      'xtts-v2-review',
     ],
   },
   {
@@ -859,7 +954,36 @@ const HUB_THEMES: Array<{
     description: 'Stable Diffusion, Flux, and ComfyUI running entirely on your own GPU — no cloud queue, no per-image cost, no content filters. Local image and video generation compared for speed, VRAM requirements, and output quality, including which open video models are actually usable in 2026.',
     colorBadge: 'bg-pink-50 text-pink-700 border-pink-200',
     colorDot: 'bg-pink-400',
-    slugs: ['local-ai-video-generation-vs-cloud', 'local-ai-image-generation-vs-cloud'],
+    slugs: [
+      'local-ai-video-generation-vs-cloud',
+      'local-ai-image-generation-vs-cloud',
+      'automatic1111-review',
+      'comfyui-review',
+      'controlnet-review',
+      'draw-things-review',
+      'fooocus-review',
+      'invokeai-review',
+      'real-esrgan-ai-image-upscaler-review',
+      'stable-diffusion-review',
+      'stableswarmui-review',
+    ],
+  },
+  {
+    id: 'enterprise-compliance',
+    badge: 'Enterprise & Compliance',
+    question: 'Enterprise & Compliance: What Do Companies Need to Deploy Local AI Safely?',
+    description: 'Identity and access controls for agentic AI, call-center and helpdesk deployments, and shadow AI governance by company size. Covers US state employment-law compliance, who owns the IP in AI-generated content, and how cloud GPU vendors compare for AI companies that still need scale beyond on-premise hardware.',
+    colorBadge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    colorDot: 'bg-indigo-400',
+    slugs: [
+      'agentic-ai-security-identity-access',
+      'best-local-llms-customer-support-call-centers-enterprise',
+      'enterprise-chatbot-deployment-helpdesk-hr-bots',
+      'shadow-ai-controls-by-company-size',
+      'us-state-ai-employment-laws-compliance',
+      'ai-generated-content-ip-risk',
+      'digitalocean-vs-aws-cloud-for-ai-companies',
+    ],
   },
 ]
 
@@ -919,6 +1043,11 @@ const HUB_THEME_TEXT_DE: Array<{ badge: string; question: string; description: s
     question: 'Bild- & Videogenerierung: Welche lokalen Modelle erstellen Visuals offline?',
     description: 'Stable Diffusion, Flux und ComfyUI, die vollständig auf der eigenen GPU laufen — keine Cloud-Warteschlange, keine Kosten pro Bild, keine Inhaltsfilter. Lokale Bild- und Videogenerierung im Vergleich zu Geschwindigkeit, VRAM-Anforderungen und Ausgabequalität, einschließlich welcher offenen Videomodelle 2026 tatsächlich nutzbar sind.',
   },
+  {
+    badge: 'Enterprise & Compliance',
+    question: 'Enterprise & Compliance: Was brauchen Unternehmen für einen sicheren Einsatz lokaler KI?',
+    description: 'Identitäts- und Zugriffskontrollen für agentenbasierte KI, Call-Center- und Helpdesk-Einsätze sowie Shadow-AI-Governance nach Unternehmensgröße. Behandelt die Einhaltung US-bundesstaatlicher Arbeitsrechtsvorgaben, die Frage, wem die Rechte an KI-generierten Inhalten gehören, und den Vergleich von Cloud-GPU-Anbietern für KI-Unternehmen, die über lokale Hardware hinaus skalieren müssen.',
+  },
 ]
 
 const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: string }> = [
@@ -971,6 +1100,11 @@ const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: s
     badge: 'Génération d\'Images & de Vidéos',
     question: 'Génération d\'Images & de Vidéos : Quels Modèles Locaux Créent des Visuels Hors Ligne ?',
     description: 'Stable Diffusion, Flux et ComfyUI fonctionnant entièrement sur votre propre GPU — pas de file d\'attente cloud, pas de coût par image, pas de filtres de contenu. Génération locale d\'images et de vidéos comparée en termes de vitesse, d\'exigences VRAM et de qualité de sortie, y compris quels modèles vidéo ouverts sont réellement utilisables en 2026.',
+  },
+  {
+    badge: 'Entreprise & Conformité',
+    question: 'Entreprise & Conformité : De Quoi les Entreprises Ont-elles Besoin pour Déployer l\'IA Locale en Toute Sécurité ?',
+    description: 'Contrôles d\'identité et d\'accès pour l\'IA agentique, déploiements en centres d\'appels et helpdesk, et gouvernance du shadow AI selon la taille de l\'entreprise. Couvre la conformité aux lois du travail des États américains, la question de savoir qui détient les droits de propriété intellectuelle sur le contenu généré par IA, et une comparaison des fournisseurs de GPU cloud pour les entreprises d\'IA ayant besoin de scaler au-delà du matériel sur site.',
   },
 ]
 
@@ -1026,6 +1160,11 @@ const HUB_THEME_TEXT_JA: Array<{ badge: string; question: string; description: s
     question: '画像・動画生成：どのローカルモデルがオフラインでビジュアルを作成しますか？',
     description: 'Stable Diffusion、Flux、ComfyUIを自分のGPUだけで完全に実行 — クラウドの待ち行列なし、画像ごとのコストなし、コンテンツフィルターなし。速度、VRAM要件、出力品質についてローカル画像・動画生成を比較し、2026年に実際に使えるオープン動画モデルも紹介。',
   },
+  {
+    badge: 'エンタープライズ & コンプライアンス',
+    question: 'エンタープライズ & コンプライアンス：企業が安全にローカルAIを導入するために必要なことは？',
+    description: 'エージェント型AIのアイデンティティとアクセス制御、コールセンター/ヘルプデスク導入、企業規模別のシャドーAIガバナンスを扱います。米国州レベルの雇用法コンプライアンス、AI生成コンテンツの知的財産権の帰属、オンプレミスを超えてスケールが必要なAI企業向けクラウドGPUベンダーの比較も含みます。',
+  },
 ]
 
 // ZH theme text — same index order as HUB_THEMES
@@ -1079,6 +1218,11 @@ const HUB_THEME_TEXT_ZH: Array<{ badge: string; question: string; description: s
     badge: '图像与视频生成',
     question: '图像与视频生成：哪些本地模型可以离线创建视觉内容？',
     description: 'Stable Diffusion、Flux 和 ComfyUI 完全在您自己的 GPU 上运行 — 无需云端排队，无按图收费，无内容过滤。比较本地图像与视频生成在速度、显存需求和输出质量方面的差异，包括2026年哪些开源视频模型真正可用。',
+  },
+  {
+    badge: '企业与合规',
+    question: '企业与合规：企业安全部署本地AI需要什么？',
+    description: '涵盖代理式AI的身份与访问控制、呼叫中心与服务台部署、按企业规模划分的影子AI治理。还涉及美国各州就业法合规、AI生成内容的知识产权归属，以及需要超越本地硬件规模扩展的AI企业在云GPU厂商之间的比较。',
   },
 ]
 
@@ -1134,6 +1278,11 @@ const HUB_THEME_TEXT_ES: Array<{ badge: string; question: string; description: s
     question: 'Generación de Imágenes y Video: ¿Qué Modelos Locales Crean Contenido Visual Offline?',
     description: 'Stable Diffusion, Flux y ComfyUI ejecutándose completamente en tu propia GPU — sin cola en la nube, sin costo por imagen, sin filtros de contenido. Generación local de imágenes y video comparada en velocidad, requisitos de VRAM y calidad de salida, incluyendo qué modelos de video abiertos son realmente utilizables en 2026.',
   },
+  {
+    badge: 'Empresa y Cumplimiento',
+    question: 'Empresa y Cumplimiento: ¿Qué Necesitan las Empresas para Implementar IA Local de Forma Segura?',
+    description: 'Controles de identidad y acceso para IA agéntica, implementaciones en centros de llamadas y helpdesk, y gobernanza de shadow AI según el tamaño de la empresa. Cubre el cumplimiento de las leyes laborales estatales de EE. UU., quién posee la propiedad intelectual del contenido generado por IA, y una comparación de proveedores de GPU en la nube para empresas de IA que necesitan escalar más allá del hardware local.',
+  },
 ]
 
 // PT theme text — same index order as HUB_THEMES
@@ -1187,6 +1336,11 @@ const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: s
     badge: 'Geração de Imagens e Vídeos',
     question: 'Geração de Imagens e Vídeos: Quais Modelos Locais Criam Conteúdo Visual Offline?',
     description: 'Stable Diffusion, Flux e ComfyUI rodando totalmente na sua própria GPU — sem fila na nuvem, sem custo por imagem, sem filtros de conteúdo. Geração local de imagens e vídeos comparada em velocidade, requisitos de VRAM e qualidade de saída, incluindo quais modelos de vídeo abertos são realmente utilizáveis em 2026.',
+  },
+  {
+    badge: 'Empresas e Conformidade',
+    question: 'Empresas e Conformidade: O Que as Empresas Precisam para Implantar IA Local com Segurança?',
+    description: 'Controles de identidade e acesso para IA agêntica, implantações em call centers e helpdesk, e governança de shadow AI por porte de empresa. Aborda a conformidade com as leis trabalhistas estaduais dos EUA, a quem pertence a propriedade intelectual de conteúdo gerado por IA, e uma comparação de provedores de GPU em nuvem para empresas de IA que precisam escalar além do hardware local.',
   },
 ]
 
@@ -1242,6 +1396,11 @@ const HUB_THEME_TEXT_KO: Array<{ badge: string; question: string; description: s
     question: '이미지 및 영상 생성: 어떤 로컬 모델이 오프라인으로 비주얼을 만들까요?',
     description: 'Stable Diffusion, Flux, ComfyUI를 자신의 GPU에서만 완전히 실행 — 클라우드 대기열 없음, 이미지당 비용 없음, 콘텐츠 필터 없음. 속도·VRAM 요구 사항·출력 품질 기준으로 로컬 이미지·영상 생성을 비교하고, 2026년 실제로 사용 가능한 오픈 영상 모델도 소개.',
   },
+  {
+    badge: '엔터프라이즈 및 컴플라이언스',
+    question: '엔터프라이즈 및 컴플라이언스: 기업이 로컬 AI를 안전하게 도입하려면 무엇이 필요할까요?',
+    description: '에이전트형 AI를 위한 신원 및 접근 제어, 콜센터·헬프데스크 배포, 기업 규모별 섀도우 AI 거버넌스를 다룹니다. 미국 주별 고용법 준수, AI 생성 콘텐츠의 지식재산권 귀속 문제, 온프레미스 하드웨어를 넘어 확장이 필요한 AI 기업을 위한 클라우드 GPU 공급업체 비교도 포함합니다.',
+  },
 ]
 
 // AR theme text — same index order as HUB_THEMES
@@ -1295,6 +1454,11 @@ const HUB_THEME_TEXT_AR: Array<{ badge: string; question: string; description: s
     badge: 'توليد الصور والفيديو',
     question: 'توليد الصور والفيديو: أيّ النماذج المحلية تُنشئ محتوى بصرياً دون اتصال؟',
     description: 'تشغيل Stable Diffusion وFlux وComfyUI بالكامل على وحدة معالجة الرسومات الخاصة بك — بدون قائمة انتظار سحابية، بدون تكلفة لكل صورة، بدون فلاتر محتوى. مقارنة توليد الصور والفيديو المحلي من حيث السرعة ومتطلبات VRAM وجودة الإخراج، بما في ذلك أي نماذج فيديو مفتوحة قابلة للاستخدام فعلياً في 2026.',
+  },
+  {
+    badge: 'المؤسسات والامتثال',
+    question: 'المؤسسات والامتثال: ماذا تحتاج الشركات لنشر الذكاء الاصطناعي المحلي بأمان؟',
+    description: 'ضوابط الهوية والوصول للذكاء الاصطناعي الوكيل، ونشر مراكز الاتصال ومكاتب الدعم، وحوكمة الذكاء الاصطناعي الخفي حسب حجم الشركة. يغطي الامتثال لقوانين التوظيف في الولايات الأمريكية، ومن يملك الملكية الفكرية للمحتوى المُنشأ بالذكاء الاصطناعي، ومقارنة بين مزودي وحدات معالجة الرسومات السحابية لشركات الذكاء الاصطناعي التي تحتاج إلى التوسع بما يتجاوز الأجهزة المحلية.',
   },
 ]
 
