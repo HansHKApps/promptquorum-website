@@ -4,8 +4,16 @@
 //
 // Source doc's concern ("hybrid local/cloud; not confirmed as primarily local; no usage
 // numbers") stands — confirmed hybrid (local/cloud/hybrid modes, user's choice), but no
-// public usage figure found. Packages the open-source OpenClaw agent stack into a closed,
-// polished app — no public repo for Atomic Bot itself, so stars is null.
+// public usage figure found. Packages the open-source OpenClaw agent stack into a native
+// installer app.
+//
+// CORRECTED 2026-09-12 (see full review at /power-local-llm/atomic-bot-review): the license
+// and stars fields below were wrong. Atomic Bot's own app repository is public at
+// github.com/AtomicBot-ai/atomicbot and is MIT-licensed with 324 stars, both verified via the
+// GitHub API (https://api.github.com/repos/AtomicBot-ai/atomicbot) on 2026-09-12 — it is not
+// closed-source/proprietary, and it does have a public repo of its own. Do not confuse this
+// with the much larger, widely-cited star count for the underlying OpenClaw ecosystem, which
+// belongs to OpenClaw itself, not to Atomic Bot's repo.
 
 import type { ToolRecord } from './types'
 
@@ -18,13 +26,14 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux', 'ios', 'android'],
   worksWith: ['OpenAI API', 'Anthropic API', 'Mistral API', 'Groq', 'Hugging Face'],
   engine: 'external',
-  license: 'Proprietary (packages the open-source OpenClaw agent stack)',
+  license: 'MIT (Atomic Bot\'s own app repo; packages the separately-licensed OpenClaw stack)',
   price: 'TODO',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: null, // closed source packaging of OpenClaw, no public repo of its own
+  stars: 324, // Atomic Bot's own repo (github.com/AtomicBot-ai/atomicbot), verified via the GitHub API on 2026-09-12 — not the much larger OpenClaw ecosystem figure
   addedDate: '2026-09-05',
   status: 'listed',
   uses: ['agent', 'chat'],
+  reviewSlug: 'atomic-bot-review',
   url: 'atomicbot.ai',
   tagline: {
     en: 'Desktop and cloud AI coworker packaging the open-source OpenClaw agent stack, runs locally or in the cloud',

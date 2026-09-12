@@ -225,6 +225,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'atomic-chat-review',
   // Atomic Agent review — 2026-09-12
   'atomic-agent-review',
+  // goose review — 2026-09-12
+  'goose-review',
+  // Atomic Bot review — 2026-09-12
+  'atomic-bot-review',
   // h2oGPT enterprise review — 2026-09-03
   'h2ogpt-review',
   // LibreChat review — 2026-09-03
