@@ -401,6 +401,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'kilo-code-review',
   // n8n review — 2026-09-12
   'n8n-review',
+  // Agnai, MetaGPT, RisuAI single-subject reviews — 2026-09-12
+  'agnai-review',
+  'metagpt-review',
+  'risuai-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

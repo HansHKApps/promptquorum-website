@@ -239,6 +239,10 @@ import { article as a_diffusionbee_review } from './articles/diffusionbee-review
 import { article as a_macwhisper_review } from './articles/macwhisper-review'
 import { article as a_solair_ai_review } from './articles/solair-ai-review'
 import { article as a_kilo_code_review } from './articles/kilo-code-review'
+// Agnai, MetaGPT, RisuAI single-subject reviews — 2026-09-12
+import { article as a_agnai_review } from './articles/agnai-review'
+import { article as a_metagpt_review } from './articles/metagpt-review'
+import { article as a_risuai_review } from './articles/risuai-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -517,4 +521,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'solair-ai-review':                               a_solair_ai_review,
   // Kilo Code review — 2026-09-12
   'kilo-code-review':                               a_kilo_code_review,
+  // Agnai, MetaGPT, RisuAI single-subject reviews — 2026-09-12
+  'agnai-review':                                   a_agnai_review,
+  'metagpt-review':                                 a_metagpt_review,
+  'risuai-review':                                  a_risuai_review,
 }

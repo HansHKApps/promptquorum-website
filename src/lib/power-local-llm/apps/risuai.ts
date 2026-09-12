@@ -15,6 +15,7 @@ export const app: ToolRecord = {
   worksWith: ['text-generation-webui', 'OpenAI API', 'OpenRouter'],
   engine: 'external',
   license: 'GPL 3.0',
+  reviewSlug: 'risuai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 1600,

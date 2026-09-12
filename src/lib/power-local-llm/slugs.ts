@@ -365,4 +365,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'solair-ai-review':                        'solair-ai-review',
   // Kilo Code review — 2026-09-12
   'kilo-code-review':                        'kilo-code-review',
+  // Agnai, MetaGPT, RisuAI single-subject reviews — 2026-09-12
+  'agnai-review':                            'agnai-review',
+  'metagpt-review':                          'metagpt-review',
+  'risuai-review':                           'risuai-review',
 }
