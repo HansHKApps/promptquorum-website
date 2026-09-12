@@ -224,6 +224,9 @@ import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
 import { article as a_superagi_review } from './articles/superagi-review'
 import { article as a_toolneuron_review } from './articles/toolneuron-review'
 import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
+import { article as a_diffusionbee_review } from './articles/diffusionbee-review'
+import { article as a_macwhisper_review } from './articles/macwhisper-review'
+import { article as a_solair_ai_review } from './articles/solair-ai-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -480,4 +483,10 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // ToolNeuron review — 2026-09-12
   'toolneuron-review':                              a_toolneuron_review,
   'localai-apexcreator-review':                      a_localai_apexcreator_review,
+  // DiffusionBee review — 2026-09-12
+  'diffusionbee-review':                            a_diffusionbee_review,
+  // MacWhisper review — 2026-09-12
+  'macwhisper-review':                              a_macwhisper_review,
+  // Solair AI review — 2026-09-12
+  'solair-ai-review':                               a_solair_ai_review,
 }

@@ -170,7 +170,10 @@ import { app as app_ypipe } from './apps/ypipe'
 import { app as app_n8n } from './apps/n8n'
 import { app as app_off_grid_ai } from './apps/off-grid-ai'
 import { app as app_toolneuron } from './apps/toolneuron'
+import { app as app_diffusionbee } from './apps/diffusionbee'
 import { app as app_localai_apexcreator } from './apps/localai-apexcreator'
+import { app as app_macwhisper } from './apps/macwhisper'
+import { app as app_solair_ai } from './apps/solair-ai'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -332,6 +335,9 @@ export const localAiApps: ToolRecord[] = [
   app_n8n,
   app_toolneuron,
   app_localai_apexcreator,
+  app_diffusionbee,
+  app_macwhisper,
+  app_solair_ai,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

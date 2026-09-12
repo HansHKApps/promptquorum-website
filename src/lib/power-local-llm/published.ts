@@ -376,6 +376,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'toolneuron-review',
   // LocalAI (ApexCreator) review — 2026-09-12
   'localai-apexcreator-review',
+  // DiffusionBee review — 2026-09-12
+  'diffusionbee-review',
+  // MacWhisper review — 2026-09-12
+  'macwhisper-review',
+  // Solair AI review — 2026-09-12
+  'solair-ai-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
