@@ -14,7 +14,8 @@ export const app: ToolRecord = {
   platforms: ['web'],
   worksWith: ['KoboldAI'],
   engine: 'external',
-  license: 'MIT',
+  license: 'AGPL-3.0',
+  reviewSlug: 'agnai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 776,

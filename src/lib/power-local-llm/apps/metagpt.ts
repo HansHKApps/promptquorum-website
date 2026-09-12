@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'محاكاة شركة برمجيات مع عملاء متعددين',
     ko: '여러 에이전트를 사용한 소프트웨어 회사 시뮬레이션',
   },
+  reviewSlug: 'metagpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
