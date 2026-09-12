@@ -5,7 +5,9 @@
 // Source doc's concern was "parent company status ambiguous after Qualcomm absorption" —
 // confirmed: Nexa AI became a Qualcomm company in March 2026; Hyperlink itself is still
 // live and listed on Product Hunt. No public version number or exact release date found —
-// left as TODO/'TODO' rather than guessed. price and stars unconfirmed — left as TODO/null.
+// left as TODO. price updated 2026-09-12: free to download/use per Nexa AI's own listing,
+// Product Hunt, and the Microsoft Store — no confirmed paid tier found during research for
+// the dedicated review below. stars stays null — closed source, no public repo.
 
 import type { ToolRecord } from './types'
 
@@ -19,7 +21,7 @@ export const app: ToolRecord = {
   worksWith: null,
   engine: 'builtin',
   license: 'Proprietary',
-  price: 'TODO',
+  price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null, // closed source, no public repo
   addedDate: '2026-09-05',
@@ -38,4 +40,5 @@ export const app: ToolRecord = {
     ko: '로컬 파일을 검색하고 질문에 답하는 온디바이스 AI 어시스턴트 — 2026년 Qualcomm에 인수됨',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'hyperlink-nexa-review',
 }

@@ -1,4 +1,9 @@
 {
+  "ollama": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ollama-review",
+    "url": "/power-local-llm/ollama-review"
+  },
   "llama-cpp": {
     "cluster": "power-local-llm",
     "urlSlug": "llama-cpp-explained",
@@ -49,6 +54,11 @@
     "urlSlug": "mlx-lm-explained",
     "url": "/power-local-llm/mlx-lm-explained"
   },
+  "lm-studio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lm-studio-review",
+    "url": "/power-local-llm/lm-studio-review"
+  },
   "atomic-chat": {
     "cluster": "power-local-llm",
     "urlSlug": "atomic-chat-review",
@@ -98,6 +108,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "open-interpreter-review",
     "url": "/power-local-llm/open-interpreter-review"
+  },
+  "locally-uncensored": {
+    "cluster": "power-local-llm",
+    "urlSlug": "locally-uncensored-review",
+    "url": "/power-local-llm/locally-uncensored-review"
   },
   "boltai": {
     "cluster": "power-local-llm",
@@ -589,6 +604,16 @@
     "urlSlug": "real-esrgan-ai-image-upscaler-review",
     "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review"
   },
+  "animatediff": {
+    "cluster": "power-local-llm",
+    "urlSlug": "animatediff-video-generation-guide",
+    "url": "/power-local-llm/animatediff-video-generation-guide"
+  },
+  "copilot-for-obsidian": {
+    "cluster": "power-local-llm",
+    "urlSlug": "copilot-for-obsidian-review",
+    "url": "/power-local-llm/copilot-for-obsidian-review"
+  },
   "autogpt": {
     "cluster": "power-local-llm",
     "urlSlug": "autogpt-local-review",
@@ -599,10 +624,45 @@
     "urlSlug": "babyagi-review-autonomous-agent",
     "url": "/power-local-llm/babyagi-review-autonomous-agent"
   },
+  "metagpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "metagpt-review",
+    "url": "/power-local-llm/metagpt-review"
+  },
+  "agnai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "agnai-review",
+    "url": "/power-local-llm/agnai-review"
+  },
+  "risuai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "risuai-review",
+    "url": "/power-local-llm/risuai-review"
+  },
   "second-me": {
     "cluster": "power-local-llm",
     "urlSlug": "second-me-review",
     "url": "/power-local-llm/second-me-review"
+  },
+  "goose": {
+    "cluster": "power-local-llm",
+    "urlSlug": "goose-review",
+    "url": "/power-local-llm/goose-review"
+  },
+  "zed": {
+    "cluster": "power-local-llm",
+    "urlSlug": "zed-review",
+    "url": "/power-local-llm/zed-review"
+  },
+  "atomic-agent": {
+    "cluster": "power-local-llm",
+    "urlSlug": "atomic-agent-review",
+    "url": "/power-local-llm/atomic-agent-review"
+  },
+  "dograh": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dograh-review",
+    "url": "/power-local-llm/dograh-review"
   },
   "kilo-code": {
     "cluster": "power-local-llm",
@@ -614,6 +674,31 @@
     "urlSlug": "opencode-review",
     "url": "/power-local-llm/opencode-review"
   },
+  "maxkb": {
+    "cluster": "power-local-llm",
+    "urlSlug": "maxkb-review",
+    "url": "/power-local-llm/maxkb-review"
+  },
+  "runanywhere": {
+    "cluster": "power-local-llm",
+    "urlSlug": "runanywhere-review",
+    "url": "/power-local-llm/runanywhere-review"
+  },
+  "hyperlink-nexa": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hyperlink-nexa-review",
+    "url": "/power-local-llm/hyperlink-nexa-review"
+  },
+  "github-copilot-cli-local": {
+    "cluster": "power-local-llm",
+    "urlSlug": "github-copilot-cli-review",
+    "url": "/power-local-llm/github-copilot-cli-review"
+  },
+  "atomic-bot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "atomic-bot-review",
+    "url": "/power-local-llm/atomic-bot-review"
+  },
   "n8n": {
     "cluster": "power-local-llm",
     "urlSlug": "n8n-review",
@@ -623,6 +708,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "docker-model-runner-review",
     "url": "/power-local-llm/docker-model-runner-review"
+  },
+  "on-device-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "on-device-ai-review",
+    "url": "/power-local-llm/on-device-ai-review"
   },
   "toolneuron": {
     "cluster": "power-local-llm",
