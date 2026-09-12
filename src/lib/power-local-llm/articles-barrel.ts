@@ -40,6 +40,7 @@ import { article as a_anythingllm_mobile_review } from './articles/anythingllm-m
 import { article as a_anythingllm_review } from './articles/anythingllm-review'
 import { article as a_twinny_review } from './articles/twinny-review'
 import { article as a_aider_review } from './articles/aider-review'
+import { article as a_opencode_review } from './articles/opencode-review'
 import { article as a_shell_gpt_review } from './articles/shell-gpt-review'
 import { article as a_aichat_review } from './articles/aichat-review'
 import { article as a_tgpt_review } from './articles/tgpt-review'
@@ -472,6 +473,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Twinny, Aider, shell-gpt reviews — 2026-09-06
   'twinny-review':                                  a_twinny_review,
   'aider-review':                                   a_aider_review,
+  // OpenCode review — 2026-09-12
+  'opencode-review':                                a_opencode_review,
   'shell-gpt-review':                               a_shell_gpt_review,
   // aichat, tgpt, Blackbox AI CLI, PrivateGPT reviews — 2026-09-06
   'aichat-review':                                  a_aichat_review,

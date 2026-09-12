@@ -37,4 +37,5 @@ export const app: ToolRecord = {
     ko: '75개 이상의 모델 제공업체(로컬 모델 포함)를 지원하는 터미널 우선 오픈소스 코딩 에이전트',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'opencode-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

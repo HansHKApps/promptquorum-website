@@ -48,6 +48,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'cursor-local-mode-review',
   'twinny-review',
   'aider-review',
+  'opencode-review',
   'shell-gpt-review',
   'aichat-review',
   'tgpt-review',
