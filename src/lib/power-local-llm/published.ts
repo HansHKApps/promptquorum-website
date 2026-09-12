@@ -203,6 +203,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ragflow-document-understanding-rag-review',
   // MaxKB self-hosted RAG/agent platform review — 2026-09-12
   'maxkb-review',
+  // Lemonade AMD-sponsored local AI server review — 2026-09-12
+  'lemonade-review',
+  // Onyx self-hosted enterprise search/RAG review (formerly Danswer) — 2026-09-12
+  'onyx-review',
   // Khoj review — 2026-09-02
   'khoj-ai-second-brain-review',
   'real-esrgan-ai-image-upscaler-review',
