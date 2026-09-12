@@ -574,6 +574,28 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     ko: '비용 및 비교: 로컬 vs 클라우드 vs 구독 — 어떤 것이 더 저렴한가요?',
     ar: 'التكلفة والمقارنات: محلي مقابل سحابي مقابل الاشتراكات — أيهما أرخص؟',
   },
+  'apple-silicon': {
+    en: 'Apple Silicon: How Do M-Series Macs Run Local LLMs?',
+    de: 'Apple Silicon: Wie führen Macs mit M-Chips lokale LLMs aus?',
+    fr: 'Apple Silicon : Comment les Mac à puce M exécutent-ils des LLMs locaux ?',
+    ja: 'Apple Silicon：M シリーズ Mac はどのようにローカル LLM を実行するか？',
+    zh: 'Apple 芯片：M 系列 Mac 如何运行本地 LLM？',
+    es: 'Apple Silicon: ¿Cómo ejecutan los Mac con chips M los LLMs locales?',
+    pt: 'Apple Silicon: Como os Macs com chips M executam LLMs locais?',
+    ko: 'Apple 실리콘: M 시리즈 Mac은 로컬 LLM을 어떻게 실행하나요?',
+    ar: 'Apple Silicon: كيف تشغّل أجهزة Mac ذات شريحة M نماذج LLM محلية؟',
+  },
+  'enterprise-compliance': {
+    en: 'Enterprise & Compliance: How Do Businesses Deploy and Govern Local LLMs?',
+    de: 'Enterprise & Compliance: Wie setzen Unternehmen lokale LLMs ein und regeln sie?',
+    fr: 'Entreprise et conformité : Comment les entreprises déploient-elles et encadrent-elles les LLMs locaux ?',
+    ja: 'エンタープライズとコンプライアンス：企業はローカル LLM をどう導入し統制するか？',
+    zh: '企业与合规：企业如何部署并治理本地LLM？',
+    es: 'Empresa y cumplimiento: ¿Cómo despliegan y gobiernan las empresas los LLMs locales?',
+    pt: 'Empresa e conformidade: Como as empresas implantam e governam LLMs locais?',
+    ko: '엔터프라이즈 및 컴플라이언스: 기업은 로컬 LLM을 어떻게 도입하고 관리하나요?',
+    ar: 'المؤسسات والامتثال: كيف تنشر الشركات نماذج LLM المحلية وتحكم استخدامها؟',
+  },
 }
 
 const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
@@ -686,6 +708,28 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     pt: 'Análise de ponto de equilíbrio: local vs cloud vs modelos de assinatura. Custos ocultos de SaaS: taxas de excedente, assentos enterprise, logs de auditoria. O hardware local se paga em 6–18 meses para usuários intensivos. Calculadoras de ROI para diferentes tipos de carga de trabalho.',
     ko: '손익분기점 분석: 로컬 vs 클라우드 vs 구독 모델. 숨겨진 SaaS 비용: 초과 요금, 엔터프라이즈 좌석, 감사 로그. 로컬 하드웨어는 대용량 사용자의 경우 6–18개월 내에 비용을 회수합니다. 다양한 워크로드 유형의 ROI 계산기.',
     ar: 'تحليل نقطة التعادل: محلي مقابل سحابي مقابل نماذج الاشتراك. تكاليف ⁨SaaS⁩ الخفية: رسوم التجاوز، ومقاعد المؤسسات، وسجلات التدقيق. تسترد الأجهزة المحلية تكلفتها خلال 6-18 شهرًا للمستخدمين المكثّفين. حاسبات عائد استثمار لأنواع مختلفة من أعباء العمل.',
+  },
+  'apple-silicon': {
+    en: 'Mac-specific guides for M-series Apple Silicon — unified memory sizing, MLX vs Ollama vs llama.cpp benchmarks, Whisper transcription on Metal, and Mac Mini/MacBook builds for local inference. Apple Silicon shares unified memory between CPU and GPU, so a 32 GB M-series Mac can run 30B-parameter models without a discrete GPU. MLX is Apple\'s own inference framework and is typically faster than llama.cpp on the same chip.',
+    de: 'Mac-spezifische Leitfäden für Apple Silicon der M-Serie — Größenplanung für Unified Memory, Benchmarks von MLX gegenüber Ollama und llama.cpp, Whisper-Transkription über Metal sowie Mac-Mini- und MacBook-Builds für lokale Inferenz. Apple Silicon teilt sich Unified Memory zwischen CPU und GPU, sodass ein Mac der M-Serie mit 32 GB RAM 30B-Parameter-Modelle ohne dedizierte GPU ausführen kann. MLX ist Apples eigenes Inferenz-Framework und auf demselben Chip meist schneller als llama.cpp.',
+    fr: 'Guides spécifiques aux Mac pour Apple Silicon de la série M — dimensionnement de la mémoire unifiée, benchmarks MLX face à Ollama et llama.cpp, transcription Whisper via Metal, et configurations Mac Mini/MacBook pour l\'inférence locale. Apple Silicon partage une mémoire unifiée entre le CPU et le GPU : un Mac de la série M avec 32 Go de RAM peut exécuter des modèles à 30 milliards de paramètres sans GPU dédié. MLX est le framework d\'inférence propre à Apple et se montre généralement plus rapide que llama.cpp sur la même puce.',
+    ja: 'M シリーズ Apple Silicon 向けの Mac 専用ガイド — Unified Memory のサイジング、MLX と Ollama・llama.cpp のベンチマーク比較、Metal 上での Whisper 文字起こし、ローカル推論向けの Mac mini・MacBook 構成を扱います。Apple Silicon は CPU と GPU で Unified Memory を共有するため、32 GB RAM の M シリーズ Mac はディスクリート GPU なしで 300 億パラメータ級のモデルを実行できます。MLX は Apple 独自の推論フレームワークで、同じチップ上では llama.cpp より高速なことが一般的です。',
+    zh: '面向 M 系列 Apple 芯片的 Mac 专属指南 — 统一内存容量规划、MLX 与 Ollama、llama.cpp 的基准对比、基于 Metal 的 Whisper 转录，以及用于本地推理的 Mac mini/MacBook 配置。Apple 芯片在 CPU 与 GPU 之间共享统一内存，因此配备 32 GB 内存的 M 系列 Mac 无需独立显卡即可运行 300 亿参数级模型。MLX 是苹果自研的推理框架，在同一芯片上通常比 llama.cpp 更快。',
+    es: 'Guías específicas para Mac con Apple Silicon de la serie M — dimensionamiento de memoria unificada, comparativas de MLX frente a Ollama y llama.cpp, transcripción con Whisper sobre Metal, y configuraciones de Mac Mini/MacBook para inferencia local. Apple Silicon comparte memoria unificada entre CPU y GPU, por lo que un Mac de la serie M con 32 GB de RAM puede ejecutar modelos de 30 000 millones de parámetros sin GPU dedicada. MLX es el framework de inferencia propio de Apple y suele ser más rápido que llama.cpp en el mismo chip.',
+    pt: 'Guias específicos para Mac com Apple Silicon da série M — dimensionamento de memória unificada, comparativos de MLX frente a Ollama e llama.cpp, transcrição com Whisper via Metal, e configurações de Mac Mini/MacBook para inferência local. O Apple Silicon compartilha memória unificada entre CPU e GPU, então um Mac da série M com 32 GB de RAM roda modelos de 30 bilhões de parâmetros sem GPU dedicada. O MLX é o framework de inferência da própria Apple e costuma ser mais rápido que o llama.cpp no mesmo chip.',
+    ko: 'M 시리즈 Apple 실리콘 전용 Mac 가이드 — 통합 메모리 용량 산정, MLX 대 Ollama·llama.cpp 벤치마크 비교, Metal 기반 Whisper 음성 인식, 로컬 추론을 위한 Mac mini/MacBook 구성을 다룹니다. Apple 실리콘은 CPU와 GPU가 통합 메모리를 공유하므로, 32GB RAM을 갖춘 M 시리즈 Mac은 별도 GPU 없이도 300억 파라미터급 모델을 실행할 수 있습니다. MLX는 Apple 자체 추론 프레임워크로, 동일 칩에서 llama.cpp보다 대체로 더 빠릅니다.',
+    ar: 'أدلة خاصة بأجهزة Mac التي تعمل بمعالجات Apple Silicon من سلسلة M — تحديد حجم الذاكرة الموحّدة، ومقارنات أداء MLX مقابل Ollama وllama.cpp، وتفريغ الصوت عبر Whisper باستخدام Metal، وتشكيلات Mac mini وMacBook للاستدلال المحلي. يشارك Apple Silicon الذاكرة الموحّدة بين CPU وGPU، لذا يمكن لجهاز Mac من سلسلة M بذاكرة 32 GB تشغيل نماذج بحجم 30 مليار معلمة دون حاجة إلى GPU منفصلة. MLX هو إطار عمل الاستدلال الخاص بشركة Apple، وعادة ما يكون أسرع من llama.cpp على الشريحة نفسها.',
+  },
+  'enterprise-compliance': {
+    en: 'Buying guides for enterprise GPU servers, SOC 2 and ISO 27001 compliance for self-hosted LLMs, commercial licensing terms, and head-to-head comparisons of API gateways, fine-tuning frameworks, agent frameworks, evaluation tools, observability platforms, and vector databases for production deployments. Renting cloud GPUs typically breaks even against buying on-premises hardware within 8-14 months for continuous workloads.',
+    de: 'Kaufratgeber für Enterprise-GPU-Server, SOC-2- und ISO-27001-Compliance für selbst gehostete LLMs, Bedingungen kommerzieller Lizenzen sowie direkte Vergleiche von API-Gateways, Fine-Tuning-Frameworks, Agenten-Frameworks, Evaluationstools, Observability-Plattformen und Vektordatenbanken für Produktivumgebungen. Das Mieten von Cloud-GPUs amortisiert sich bei durchgehender Auslastung meist innerhalb von 8-14 Monaten gegenüber dem Kauf eigener On-Premises-Hardware.',
+    fr: 'Guides d\'achat de serveurs GPU d\'entreprise, conformité SOC 2 et ISO 27001 pour les LLMs auto-hébergés, conditions de licences commerciales, ainsi que des comparatifs directs de passerelles API, de frameworks de fine-tuning, de frameworks d\'agents, d\'outils d\'évaluation, de plateformes d\'observabilité et de bases de données vectorielles pour les déploiements en production. La location de GPU cloud s\'amortit généralement face à l\'achat de matériel sur site en 8 à 14 mois pour des charges de travail continues.',
+    ja: 'エンタープライズ向け GPU サーバーの購入ガイド、自社ホスト型 LLM の SOC 2・ISO 27001 準拠、商用ライセンス条件、そして本番導入向けの API ゲートウェイ、ファインチューニングフレームワーク、エージェントフレームワーク、評価ツール、可観測性プラットフォーム、ベクトルデータベースの直接比較を扱います。継続稼働のワークロードでは、クラウド GPU のレンタルは通常 8〜14 か月でオンプレミス機材の購入と比べて損益分岐点に達します。',
+    zh: '企业级GPU服务器采购指南、面向自托管LLM的SOC 2与ISO 27001合规、商业授权条款，以及针对生产环境部署的API网关、微调框架、智能体框架、评估工具、可观测性平台和向量数据库的正面对比。对于持续运行的工作负载，租用云GPU通常在8-14个月内即可与自建本地硬件持平。',
+    es: 'Guías de compra de servidores GPU empresariales, cumplimiento SOC 2 e ISO 27001 para LLMs autoalojados, condiciones de licencias comerciales, y comparativas directas de gateways de API, frameworks de fine-tuning, frameworks de agentes, herramientas de evaluación, plataformas de observabilidad y bases de datos vectoriales para despliegues en producción. Alquilar GPUs en la nube suele amortizarse frente a comprar hardware on-premises en 8-14 meses para cargas de trabajo continuas.',
+    pt: 'Guias de compra de servidores GPU empresariais, conformidade SOC 2 e ISO 27001 para LLMs auto-hospedados, condições de licenciamento comercial, e comparativos diretos de gateways de API, frameworks de fine-tuning, frameworks de agentes, ferramentas de avaliação, plataformas de observabilidade e bancos de dados vetoriais para implantações em produção. Alugar GPUs na nuvem costuma se pagar frente à compra de hardware on-premises em 8-14 meses para cargas de trabalho contínuas.',
+    ko: '엔터프라이즈 GPU 서버 구매 가이드, 자체 호스팅 LLM을 위한 SOC 2 및 ISO 27001 준수, 상업용 라이선스 조건, 그리고 프로덕션 배포를 위한 API 게이트웨이, 파인튜닝 프레임워크, 에이전트 프레임워크, 평가 도구, 관찰 가능성 플랫폼, 벡터 데이터베이스의 정면 비교를 다룹니다. 지속적인 워크로드의 경우 클라우드 GPU 임대는 보통 8~14개월 내에 온프레미스 하드웨어 구매와 손익분기점에 도달합니다.',
+    ar: 'أدلة شراء خوادم GPU للمؤسسات، والامتثال لمعياري SOC 2 وISO 27001 للنماذج المستضافة ذاتيًا، وشروط التراخيص التجارية، ومقارنات مباشرة بين بوابات API، وأطر الضبط الدقيق، وأطر الوكلاء، وأدوات التقييم، ومنصات قابلية الرصد، وقواعد البيانات المتجهية للنشر الإنتاجي. عادةً ما يتعادل استئجار GPU سحابية مع شراء أجهزة داخل المنشأة خلال 8-14 شهرًا لأعباء العمل المستمرة.',
   },
 }
 
@@ -1009,6 +1053,8 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'hardware-setups':    { badge: 'bg-indigo-50 text-indigo-700 border-indigo-200', dot: 'bg-indigo-400' },
   'privacy-business':   { badge: 'bg-cyan-50 text-cyan-700 border-cyan-200',  dot: 'bg-cyan-400' },
   'cost-comparisons':   { badge: 'bg-teal-50 text-teal-700 border-teal-200',  dot: 'bg-teal-400' },
+  'apple-silicon':      { badge: 'bg-sky-50 text-sky-700 border-sky-200',    dot: 'bg-sky-400' },
+  'enterprise-compliance': { badge: 'bg-violet-50 text-violet-700 border-violet-200', dot: 'bg-violet-400' },
 }
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
