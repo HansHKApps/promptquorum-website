@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Eingebauter Dokumenten-Chat (RAG)', 'Ollama': 'Keine eingebaute Funktion — Kombination mit einem Client wie Open WebUI oder AnythingLLM nötig', 'LM Studio': 'Eingebaute Funktion "Chat with Documents"' },
           { 'Aspekt': 'Optionale Cloud-Stufe', 'Ollama': 'Ja, ab 20 $/Monat für gehostete Inferenz', 'LM Studio': 'Ja, "Bionic+" ab 20 $/Monat und "Pro" ab 100 $/Monat für gehostete Modelle und höhere Limits' },
         ],
-        note: 'Wenn Sie ein skriptfähiges, terminalbasiertes Tool wollen, das andere Anwendungen als Backend aufrufen können, passt Ollamas Workflow direkter. Wenn Sie eine einzelne ausgereifte GUI mit eingebautem Modell-Browser und Dokumenten-Chat ohne jede Terminalnutzung wollen, prüfen Sie LM Studio direkt unter [lmstudio.ai](https://lmstudio.ai) — Details im vollständigen [LM Studio Review](/power-local-llm/lm-studio-review). Beide sind für ihre lokale Kernfunktionalität kostenlos; prüfen Sie vor einer Entscheidung die aktuellen Funktionen auf der jeweiligen Projektseite.',
+        note: 'Wenn Sie ein skriptfähiges, terminalbasiertes Tool wollen, das andere Anwendungen als Backend aufrufen können, passt Ollamas Workflow direkter. Wenn Sie eine einzelne ausgereifte GUI mit eingebautem Modell-Browser und Dokumenten-Chat ohne jede Terminalnutzung wollen, prüfen Sie LM Studio direkt unter [lmstudio.ai](https://lmstudio.ai) — Details im vollständigen [LM Studio Review](/de/power-local-llm/lm-studio-review). Beide sind für ihre lokale Kernfunktionalität kostenlos; prüfen Sie vor einer Entscheidung die aktuellen Funktionen auf der jeweiligen Projektseite.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -497,14 +497,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama vs. andere lokale Laufzeitumgebungen',
-        content: 'Ollama ist eines von mehreren Tools, die lokale Modell-Inferenz hinter einer einfacheren Oberfläche verpacken. Hier sehen Sie, wie es sich im Vergleich zu anderen Optionen in diesem Bereich einordnet — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/power-local-llm/local-llm-software-directory), den direkten Vergleich im Abschnitt [Ollama vs. LM Studio](#ollama-vs-lm-studio) oben.',
+        content: 'Ollama ist eines von mehreren Tools, die lokale Modell-Inferenz hinter einer einfacheren Oberfläche verpacken. Hier sehen Sie, wie es sich im Vergleich zu anderen Optionen in diesem Bereich einordnet — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory), den direkten Vergleich im Abschnitt [Ollama vs. LM Studio](#ollama-vs-lm-studio) oben.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — eine GUI-first-Desktop-App mit ähnlichem Funktionsumfang (lokale Inferenz, OpenAI-kompatible API), eingebautem Modell-Browser und Dokumenten-Chat; siehe den [LM Studio Review](/power-local-llm/lm-studio-review) und den Vergleichsabschnitt oben für einen direkten Vergleich.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — die quelloffene Inferenz-Engine, auf der Ollama selbst aufbaut; die direkte Nutzung bietet mehr Kontrolle auf niedrigerer Ebene (eigene Build-Flags, direktes GGUF-Laden) auf Kosten von Ollamas paketmanagerähnlichem Komfort. Siehe die [llama.cpp-Erklärung](/power-local-llm/llama-cpp-explained).',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — eine weitere llama.cpp-basierte Laufzeitumgebung, historisch beliebt für kreatives Schreiben und Rollenspiel mit eingebauter Web-UI; siehe den [KoboldCpp Review](/power-local-llm/koboldcpp-review).',
-          '**[LocalAI](https://localai.io)** — eine quelloffene, OpenAI-API-kompatible Laufzeitumgebung, die eine breitere Palette an Modell-Backends jenseits von llama.cpp (einschließlich Bild- und Audiomodelle) in einem Server unterstützt; siehe die [LocalAI-Erklärung](/power-local-llm/localai-explained).',
+          '**[LM Studio](https://lmstudio.ai)** — eine GUI-first-Desktop-App mit ähnlichem Funktionsumfang (lokale Inferenz, OpenAI-kompatible API), eingebautem Modell-Browser und Dokumenten-Chat; siehe den [LM Studio Review](/de/power-local-llm/lm-studio-review) und den Vergleichsabschnitt oben für einen direkten Vergleich.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — die quelloffene Inferenz-Engine, auf der Ollama selbst aufbaut; die direkte Nutzung bietet mehr Kontrolle auf niedrigerer Ebene (eigene Build-Flags, direktes GGUF-Laden) auf Kosten von Ollamas paketmanagerähnlichem Komfort. Siehe die [llama.cpp-Erklärung](/de/power-local-llm/llama-cpp-explained).',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — eine weitere llama.cpp-basierte Laufzeitumgebung, historisch beliebt für kreatives Schreiben und Rollenspiel mit eingebauter Web-UI; siehe den [KoboldCpp Review](/de/power-local-llm/koboldcpp-review).',
+          '**[LocalAI](https://localai.io)** — eine quelloffene, OpenAI-API-kompatible Laufzeitumgebung, die eine breitere Palette an Modell-Backends jenseits von llama.cpp (einschließlich Bild- und Audiomodelle) in einem Server unterstützt; siehe die [LocalAI-Erklärung](/de/power-local-llm/localai-explained).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Inferenz-Tools — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Ollamas eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokaler Inferenz-Tools — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Ollamas eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Chat de documents intégré (RAG)', 'Ollama': 'Pas une fonctionnalité intégrée — à combiner avec un client comme Open WebUI ou AnythingLLM', 'LM Studio': 'Fonctionnalité intégrée « Chat with Documents »' },
           { 'Aspect': 'Offre cloud optionnelle', 'Ollama': 'Oui, à partir de 20 $/mois pour l\'inférence hébergée', 'LM Studio': 'Oui, « Bionic+ » à partir de 20 $/mois et « Pro » à partir de 100 $/mois pour des modèles hébergés et des limites plus élevées' },
         ],
-        note: 'Si vous voulez un outil scriptable, terminal-first, que d\'autres applications peuvent appeler comme backend, le flux de travail d\'Ollama convient plus directement. Si vous voulez une seule interface graphique aboutie avec un navigateur de modèles intégré et une fonction de chat de documents sans utiliser de terminal, évaluez LM Studio directement sur [lmstudio.ai](https://lmstudio.ai) — voir le [LM Studio Review](/power-local-llm/lm-studio-review) complet pour les détails. Les deux sont gratuits pour leur fonctionnalité locale de base ; vérifiez les fonctionnalités actuelles sur le site de chaque projet avant de décider.',
+        note: 'Si vous voulez un outil scriptable, terminal-first, que d\'autres applications peuvent appeler comme backend, le flux de travail d\'Ollama convient plus directement. Si vous voulez une seule interface graphique aboutie avec un navigateur de modèles intégré et une fonction de chat de documents sans utiliser de terminal, évaluez LM Studio directement sur [lmstudio.ai](https://lmstudio.ai) — voir le [LM Studio Review](/fr/power-local-llm/lm-studio-review) complet pour les détails. Les deux sont gratuits pour leur fonctionnalité locale de base ; vérifiez les fonctionnalités actuelles sur le site de chaque projet avant de décider.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -782,14 +782,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama face aux autres moteurs locaux',
-        content: 'Ollama fait partie de plusieurs outils qui enveloppent l\'inférence de modèles locale derrière une interface plus simple. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Ollama vs. LM Studio](#ollama-vs-lm-studio) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Ollama fait partie de plusieurs outils qui enveloppent l\'inférence de modèles locale derrière une interface plus simple. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Ollama vs. LM Studio](#ollama-vs-lm-studio) ci-dessus pour le face-à-face le plus proche.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — une application de bureau GUI-first couvrant un terrain similaire (inférence locale, API compatible OpenAI) avec un navigateur de modèles intégré et une fonction de chat de documents ; voir le [LM Studio Review](/power-local-llm/lm-studio-review) et la section de comparaison ci-dessus pour un face-à-face direct.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — le moteur d\'inférence open source sur lequel Ollama lui-même est construit ; l\'utiliser directement offre un contrôle de plus bas niveau (drapeaux de compilation personnalisés, chargement direct de GGUF) au prix de la commodité d\'Ollama proche d\'un gestionnaire de paquets. Voir l\'[explication de llama.cpp](/power-local-llm/llama-cpp-explained).',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — un autre moteur d\'exécution basé sur llama.cpp, historiquement populaire pour l\'écriture créative et le jeu de rôle, avec une interface web intégrée ; voir le [KoboldCpp Review](/power-local-llm/koboldcpp-review).',
-          '**[LocalAI](https://localai.io)** — un moteur d\'exécution open source compatible avec l\'API OpenAI qui prend en charge une gamme plus large de backends de modèles au-delà de llama.cpp (y compris des modèles d\'image et audio) dans un seul serveur ; voir l\'[explication de LocalAI](/power-local-llm/localai-explained).',
+          '**[LM Studio](https://lmstudio.ai)** — une application de bureau GUI-first couvrant un terrain similaire (inférence locale, API compatible OpenAI) avec un navigateur de modèles intégré et une fonction de chat de documents ; voir le [LM Studio Review](/fr/power-local-llm/lm-studio-review) et la section de comparaison ci-dessus pour un face-à-face direct.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — le moteur d\'inférence open source sur lequel Ollama lui-même est construit ; l\'utiliser directement offre un contrôle de plus bas niveau (drapeaux de compilation personnalisés, chargement direct de GGUF) au prix de la commodité d\'Ollama proche d\'un gestionnaire de paquets. Voir l\'[explication de llama.cpp](/fr/power-local-llm/llama-cpp-explained).',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — un autre moteur d\'exécution basé sur llama.cpp, historiquement populaire pour l\'écriture créative et le jeu de rôle, avec une interface web intégrée ; voir le [KoboldCpp Review](/fr/power-local-llm/koboldcpp-review).',
+          '**[LocalAI](https://localai.io)** — un moteur d\'exécution open source compatible avec l\'API OpenAI qui prend en charge une gamme plus large de backends de modèles au-delà de llama.cpp (y compris des modèles d\'image et audio) dans un seul serveur ; voir l\'[explication de LocalAI](/fr/power-local-llm/localai-explained).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils d\'inférence locale — consultez le [répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d\'Ollama.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils d\'inférence locale — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d\'Ollama.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'Chat de documentos integrado (RAG)', 'Ollama': 'No es una función integrada — combínelo con un cliente como Open WebUI o AnythingLLM', 'LM Studio': 'Función integrada "Chat with Documents"' },
           { 'Aspecto': 'Nivel de nube opcional', 'Ollama': 'Sí, desde 20 $/mes por inferencia alojada', 'LM Studio': 'Sí, "Bionic+" desde 20 $/mes y "Pro" desde 100 $/mes por modelos alojados y límites más altos' },
         ],
-        note: 'Si quiere una herramienta programable, centrada en la terminal, que otras aplicaciones puedan invocar como backend, el flujo de trabajo de Ollama encaja más directamente. Si quiere una única GUI pulida con un navegador de modelos integrado y una función de chat de documentos sin usar la terminal, evalúe LM Studio directamente en [lmstudio.ai](https://lmstudio.ai) — vea la [review completa de LM Studio](/power-local-llm/lm-studio-review) para más detalles. Ambos son gratuitos para su funcionalidad local principal; verifique las funciones actuales en el sitio de cada proyecto antes de decidir.',
+        note: 'Si quiere una herramienta programable, centrada en la terminal, que otras aplicaciones puedan invocar como backend, el flujo de trabajo de Ollama encaja más directamente. Si quiere una única GUI pulida con un navegador de modelos integrado y una función de chat de documentos sin usar la terminal, evalúe LM Studio directamente en [lmstudio.ai](https://lmstudio.ai) — vea la [review completa de LM Studio](/es/power-local-llm/lm-studio-review) para más detalles. Ambos son gratuitos para su funcionalidad local principal; verifique las funciones actuales en el sitio de cada proyecto antes de decidir.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -1067,14 +1067,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama frente a otros motores locales',
-        content: 'Ollama es una de varias herramientas que envuelven la inferencia de modelos locales detrás de una interfaz más sencilla. Así se posiciona frente a otras opciones en ese espacio — vea el [directorio de software de IA local](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [Ollama vs. LM Studio](#ollama-vs-lm-studio) más arriba para el enfrentamiento más cercano.',
+        content: 'Ollama es una de varias herramientas que envuelven la inferencia de modelos locales detrás de una interfaz más sencilla. Así se posiciona frente a otras opciones en ese espacio — vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [Ollama vs. LM Studio](#ollama-vs-lm-studio) más arriba para el enfrentamiento más cercano.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — una aplicación de escritorio GUI-first que cubre un terreno similar (inferencia local, API compatible con OpenAI) con un navegador de modelos integrado y una función de chat de documentos; vea la [review de LM Studio](/power-local-llm/lm-studio-review) y la sección de comparación anterior para un enfrentamiento directo.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — el motor de inferencia de código abierto sobre el que se construye el propio Ollama; usarlo directamente ofrece control de nivel más bajo (flags de compilación personalizados, carga directa de GGUF) a costa de la comodidad de Ollama tipo gestor de paquetes. Vea la [explicación de llama.cpp](/power-local-llm/llama-cpp-explained).',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — otro motor de ejecución basado en llama.cpp, históricamente popular para escritura creativa y roleplay con una interfaz web integrada; vea la [review de KoboldCpp](/power-local-llm/koboldcpp-review).',
-          '**[LocalAI](https://localai.io)** — un motor de ejecución de código abierto compatible con la API de OpenAI que admite una gama más amplia de backends de modelos más allá de llama.cpp (incluyendo modelos de imagen y audio) en un solo servidor; vea la [explicación de LocalAI](/power-local-llm/localai-explained).',
+          '**[LM Studio](https://lmstudio.ai)** — una aplicación de escritorio GUI-first que cubre un terreno similar (inferencia local, API compatible con OpenAI) con un navegador de modelos integrado y una función de chat de documentos; vea la [review de LM Studio](/es/power-local-llm/lm-studio-review) y la sección de comparación anterior para un enfrentamiento directo.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — el motor de inferencia de código abierto sobre el que se construye el propio Ollama; usarlo directamente ofrece control de nivel más bajo (flags de compilación personalizados, carga directa de GGUF) a costa de la comodidad de Ollama tipo gestor de paquetes. Vea la [explicación de llama.cpp](/es/power-local-llm/llama-cpp-explained).',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — otro motor de ejecución basado en llama.cpp, históricamente popular para escritura creativa y roleplay con una interfaz web integrada; vea la [review de KoboldCpp](/es/power-local-llm/koboldcpp-review).',
+          '**[LocalAI](https://localai.io)** — un motor de ejecución de código abierto compatible con la API de OpenAI que admite una gama más amplia de backends de modelos más allá de llama.cpp (incluyendo modelos de imagen y audio) en un solo servidor; vea la [explicación de LocalAI](/es/power-local-llm/localai-explained).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de inferencia local — vea el [directorio de software de IA local](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Ollama.',
+        note: 'Esta no es una lista exhaustiva de herramientas de inferencia local — vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Ollama.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspecto': 'Chat de documentos embutido (RAG)', 'Ollama': 'Não é um recurso embutido — combine com um cliente como Open WebUI ou AnythingLLM', 'LM Studio': 'Recurso embutido "Chat with Documents"' },
           { 'Aspecto': 'Nível de nuvem opcional', 'Ollama': 'Sim, a partir de US$ 20/mês para inferência hospedada', 'LM Studio': 'Sim, "Bionic+" a partir de US$ 20/mês e "Pro" a partir de US$ 100/mês para modelos hospedados e limites mais altos' },
         ],
-        note: 'Se você quer uma ferramenta programável, centrada em terminal, que outras aplicações possam chamar como backend, o fluxo de trabalho do Ollama encaixa mais diretamente. Se você quer uma única GUI polida com um navegador de modelos embutido e um recurso de chat de documentos sem usar o terminal, avalie o LM Studio diretamente em [lmstudio.ai](https://lmstudio.ai) — veja a [review completa do LM Studio](/power-local-llm/lm-studio-review) para detalhes. Ambos são gratuitos para sua funcionalidade local principal; verifique os recursos atuais no site de cada projeto antes de decidir.',
+        note: 'Se você quer uma ferramenta programável, centrada em terminal, que outras aplicações possam chamar como backend, o fluxo de trabalho do Ollama encaixa mais diretamente. Se você quer uma única GUI polida com um navegador de modelos embutido e um recurso de chat de documentos sem usar o terminal, avalie o LM Studio diretamente em [lmstudio.ai](https://lmstudio.ai) — veja a [review completa do LM Studio](/pt/power-local-llm/lm-studio-review) para detalhes. Ambos são gratuitos para sua funcionalidade local principal; verifique os recursos atuais no site de cada projeto antes de decidir.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -1352,14 +1352,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama em comparação a outros runtimes locais',
-        content: 'O Ollama é uma de várias ferramentas que empacotam inferência de modelos locais por trás de uma interface mais simples. Veja como ele se posiciona em relação a outras opções nesse espaço — veja o [diretório de software de IA local](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [Ollama vs. LM Studio](#ollama-vs-lm-studio) acima para o confronto mais próximo.',
+        content: 'O Ollama é uma de várias ferramentas que empacotam inferência de modelos locais por trás de uma interface mais simples. Veja como ele se posiciona em relação a outras opções nesse espaço — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [Ollama vs. LM Studio](#ollama-vs-lm-studio) acima para o confronto mais próximo.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — um aplicativo de desktop GUI-first cobrindo terreno semelhante (inferência local, API compatível com OpenAI) com um navegador de modelos embutido e um recurso de chat de documentos; veja a [review do LM Studio](/power-local-llm/lm-studio-review) e a seção de comparação acima para um confronto direto.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — o motor de inferência de código aberto sobre o qual o próprio Ollama é construído; usá-lo diretamente oferece controle de nível mais baixo (flags de compilação personalizadas, carregamento direto de GGUF) ao custo da conveniência do Ollama parecida com gerenciador de pacotes. Veja a [explicação do llama.cpp](/power-local-llm/llama-cpp-explained).',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — outro runtime baseado em llama.cpp, historicamente popular para escrita criativa e roleplay com uma interface web embutida; veja a [review do KoboldCpp](/power-local-llm/koboldcpp-review).',
-          '**[LocalAI](https://localai.io)** — um runtime de código aberto compatível com a API da OpenAI que suporta uma gama mais ampla de backends de modelo além do llama.cpp (incluindo modelos de imagem e áudio) em um único servidor; veja a [explicação do LocalAI](/power-local-llm/localai-explained).',
+          '**[LM Studio](https://lmstudio.ai)** — um aplicativo de desktop GUI-first cobrindo terreno semelhante (inferência local, API compatível com OpenAI) com um navegador de modelos embutido e um recurso de chat de documentos; veja a [review do LM Studio](/pt/power-local-llm/lm-studio-review) e a seção de comparação acima para um confronto direto.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — o motor de inferência de código aberto sobre o qual o próprio Ollama é construído; usá-lo diretamente oferece controle de nível mais baixo (flags de compilação personalizadas, carregamento direto de GGUF) ao custo da conveniência do Ollama parecida com gerenciador de pacotes. Veja a [explicação do llama.cpp](/pt/power-local-llm/llama-cpp-explained).',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — outro runtime baseado em llama.cpp, historicamente popular para escrita criativa e roleplay com uma interface web embutida; veja a [review do KoboldCpp](/pt/power-local-llm/koboldcpp-review).',
+          '**[LocalAI](https://localai.io)** — um runtime de código aberto compatível com a API da OpenAI que suporta uma gama mais ampla de backends de modelo além do llama.cpp (incluindo modelos de imagem e áudio) em um único servidor; veja a [explicação do LocalAI](/pt/power-local-llm/localai-explained).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de inferência local — veja o [diretório de software de IA local](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Ollama.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de inferência local — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Ollama.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '観点': '組み込みのドキュメントチャット（RAG）', 'Ollama': '組み込み機能ではない——Open WebUIやAnythingLLMのようなクライアントと組み合わせる', 'LM Studio': '組み込みの「Chat with Documents」機能あり' },
           { '観点': '任意のクラウド階層', 'Ollama': 'あり。ホスト型推論が月額20ドルから', 'LM Studio': 'あり。ホスト型モデルとより高い利用上限のための「Bionic+」が月額20ドルから、「Pro」が月額100ドルから' },
         ],
-        note: '他のアプリケーションがバックエンドとして呼び出せる、スクリプト可能でターミナルファーストなツールが欲しいなら、Ollamaのワークフローの方がより直接的に合います。ターミナルを一切使わずに、組み込みのモデルブラウザとドキュメントチャット機能を備えた1つの洗練されたGUIが欲しいなら、[lmstudio.ai](https://lmstudio.ai)でLM Studioを直接検討してください——詳細は[LM Studioレビュー](/power-local-llm/lm-studio-review)全文を参照。両者ともコアとなるローカル機能は無料です。判断する前に、それぞれのプロジェクトの公式サイトで最新の機能を確認してください。',
+        note: '他のアプリケーションがバックエンドとして呼び出せる、スクリプト可能でターミナルファーストなツールが欲しいなら、Ollamaのワークフローの方がより直接的に合います。ターミナルを一切使わずに、組み込みのモデルブラウザとドキュメントチャット機能を備えた1つの洗練されたGUIが欲しいなら、[lmstudio.ai](https://lmstudio.ai)でLM Studioを直接検討してください——詳細は[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)全文を参照。両者ともコアとなるローカル機能は無料です。判断する前に、それぞれのプロジェクトの公式サイトで最新の機能を確認してください。',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -1637,14 +1637,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollamaと他のローカルランタイムとの比較',
-        content: 'Ollamaは、ローカルモデル推論をより簡単なインターフェースの裏に包んだ複数のツールの1つです。この分野の他の選択肢と比べてOllamaがどう位置づけられるかを紹介します——完全なカタログは[ローカルAIソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちは上記の[Ollama vs. LM Studioの比較](#ollama-vs-lm-studio)を参照してください。',
+        content: 'Ollamaは、ローカルモデル推論をより簡単なインターフェースの裏に包んだ複数のツールの1つです。この分野の他の選択肢と比べてOllamaがどう位置づけられるかを紹介します——完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちは上記の[Ollama vs. LM Studioの比較](#ollama-vs-lm-studio)を参照してください。',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 組み込みのモデルブラウザとドキュメントチャット機能を備え、ローカル推論やOpenAI互換APIなど似た領域をカバーするGUIファーストのデスクトップアプリ。直接の比較は[LM Studioレビュー](/power-local-llm/lm-studio-review)と上記の比較セクションを参照。',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama自身がその上に構築されているオープンソースの推論エンジン。直接使うことで、Ollamaのパッケージマネージャーのような利便性と引き換えに、より低レベルな制御（カスタムビルドフラグ、GGUFの直接読み込み）が得られる。[llama.cpp解説](/power-local-llm/llama-cpp-explained)を参照。',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 組み込みのWeb UIを備え、歴史的に創作やロールプレイ用途で人気のある、もう1つのllama.cppベースのランタイム。[KoboldCppレビュー](/power-local-llm/koboldcpp-review)を参照。',
-          '**[LocalAI](https://localai.io)** — 1台のサーバーでllama.cppを超える幅広いモデルバックエンド（画像や音声モデルを含む）をサポートする、オープンソースでOpenAI API互換のランタイム。[LocalAI解説](/power-local-llm/localai-explained)を参照。',
+          '**[LM Studio](https://lmstudio.ai)** — 組み込みのモデルブラウザとドキュメントチャット機能を備え、ローカル推論やOpenAI互換APIなど似た領域をカバーするGUIファーストのデスクトップアプリ。直接の比較は[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)と上記の比較セクションを参照。',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama自身がその上に構築されているオープンソースの推論エンジン。直接使うことで、Ollamaのパッケージマネージャーのような利便性と引き換えに、より低レベルな制御（カスタムビルドフラグ、GGUFの直接読み込み）が得られる。[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained)を参照。',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 組み込みのWeb UIを備え、歴史的に創作やロールプレイ用途で人気のある、もう1つのllama.cppベースのランタイム。[KoboldCppレビュー](/ja/power-local-llm/koboldcpp-review)を参照。',
+          '**[LocalAI](https://localai.io)** — 1台のサーバーでllama.cppを超える幅広いモデルバックエンド（画像や音声モデルを含む）をサポートする、オープンソースでOpenAI API互換のランタイム。[LocalAI解説](/ja/power-local-llm/localai-explained)を参照。',
         ],
-        note: 'これはローカル推論ツールの網羅的なリストではありません——Ollama自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカル推論ツールの網羅的なリストではありません——Ollama自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '方面': '内置文档聊天（RAG）', 'Ollama': '并非内置功能——需搭配Open WebUI或AnythingLLM等客户端使用', 'LM Studio': '内置"Chat with Documents"功能' },
           { '方面': '可选云端层级', 'Ollama': '有，托管推理起价每月20美元', 'LM Studio': '有，"Bionic+"起价每月20美元，"Pro"起价每月100美元，提供托管模型和更高的使用上限' },
         ],
-        note: '如果您想要一个可脚本化、以终端为主、供其他应用调用作为后端的工具，Ollama的工作流更直接契合。如果您想要一个功能完善、内置模型浏览器和文档聊天功能、完全无需使用终端的图形界面，可以直接在[lmstudio.ai](https://lmstudio.ai)评估LM Studio——详情请参阅完整的[LM Studio评测](/power-local-llm/lm-studio-review)。两者的核心本地功能都是免费的；做决定前请在各自项目的官方网站上核实最新功能。',
+        note: '如果您想要一个可脚本化、以终端为主、供其他应用调用作为后端的工具，Ollama的工作流更直接契合。如果您想要一个功能完善、内置模型浏览器和文档聊天功能、完全无需使用终端的图形界面，可以直接在[lmstudio.ai](https://lmstudio.ai)评估LM Studio——详情请参阅完整的[LM Studio评测](/zh/power-local-llm/lm-studio-review)。两者的核心本地功能都是免费的；做决定前请在各自项目的官方网站上核实最新功能。',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -1922,14 +1922,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama与其他本地运行时的对比',
-        content: 'Ollama是将本地模型推理封装在更简单界面之下的多款工具之一。以下是它与该领域其他选项的对比——完整目录请参阅[本地AI软件目录](/power-local-llm/local-llm-software-directory)，最接近的正面对比请参阅上方专门的[Ollama vs. LM Studio对比](#ollama-vs-lm-studio)。',
+        content: 'Ollama是将本地模型推理封装在更简单界面之下的多款工具之一。以下是它与该领域其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的正面对比请参阅上方专门的[Ollama vs. LM Studio对比](#ollama-vs-lm-studio)。',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 一款图形界面优先的桌面应用，覆盖类似领域（本地推理、OpenAI兼容API），并内置模型浏览器和文档聊天功能；直接对比请参阅[LM Studio评测](/power-local-llm/lm-studio-review)和上方的对比部分。',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama本身构建于其上的开源推理引擎；直接使用它可获得更底层的控制（自定义编译标志、直接加载GGUF），但代价是失去Ollama类似包管理器的便利性。参阅[llama.cpp解析](/power-local-llm/llama-cpp-explained)。',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 另一款基于llama.cpp的运行时，历来在创意写作和角色扮演用例中广受欢迎，并内置Web界面；参阅[KoboldCpp评测](/power-local-llm/koboldcpp-review)。',
-          '**[LocalAI](https://localai.io)** — 一款开源、兼容OpenAI API的运行时，在单一服务器中支持超出llama.cpp范围的更广泛模型后端（包括图像和音频模型）；参阅[LocalAI解析](/power-local-llm/localai-explained)。',
+          '**[LM Studio](https://lmstudio.ai)** — 一款图形界面优先的桌面应用，覆盖类似领域（本地推理、OpenAI兼容API），并内置模型浏览器和文档聊天功能；直接对比请参阅[LM Studio评测](/zh/power-local-llm/lm-studio-review)和上方的对比部分。',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama本身构建于其上的开源推理引擎；直接使用它可获得更底层的控制（自定义编译标志、直接加载GGUF），但代价是失去Ollama类似包管理器的便利性。参阅[llama.cpp解析](/zh/power-local-llm/llama-cpp-explained)。',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 另一款基于llama.cpp的运行时，历来在创意写作和角色扮演用例中广受欢迎，并内置Web界面；参阅[KoboldCpp评测](/zh/power-local-llm/koboldcpp-review)。',
+          '**[LocalAI](https://localai.io)** — 一款开源、兼容OpenAI API的运行时，在单一服务器中支持超出llama.cpp范围的更广泛模型后端（包括图像和音频模型）；参阅[LocalAI解析](/zh/power-local-llm/localai-explained)。',
         ],
-        note: '这并非本地推理工具的详尽列表——完整且定期更新的目录（包括Ollama自身的目录条目）请参阅[本地AI软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地推理工具的详尽列表——完整且定期更新的目录（包括Ollama自身的目录条目）请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2176,7 +2176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '내장 문서 채팅(RAG)', 'Ollama': '내장 기능 아님 — Open WebUI나 AnythingLLM 같은 클라이언트와 조합해야 함', 'LM Studio': '내장된 "Chat with Documents" 기능 제공' },
           { '항목': '선택적 클라우드 계층', 'Ollama': '있음, 호스팅 추론 월 20달러부터', 'LM Studio': '있음, 호스팅 모델과 더 높은 한도를 위한 "Bionic+" 월 20달러부터, "Pro" 월 100달러부터' },
         ],
-        note: '다른 애플리케이션이 백엔드로 호출할 수 있는 스크립트 가능하고 터미널 중심인 도구를 원한다면 Ollama의 워크플로가 더 직접적으로 맞습니다. 터미널을 전혀 사용하지 않고 내장 모델 브라우저와 문서 채팅 기능을 갖춘 하나의 완성도 높은 GUI를 원한다면 [lmstudio.ai](https://lmstudio.ai)에서 LM Studio를 직접 평가해 보세요 — 자세한 내용은 [LM Studio 리뷰](/power-local-llm/lm-studio-review) 전문을 참고하세요. 둘 다 핵심 로컬 기능은 무료입니다. 결정을 내리기 전에 각 프로젝트의 공식 사이트에서 최신 기능을 확인하세요.',
+        note: '다른 애플리케이션이 백엔드로 호출할 수 있는 스크립트 가능하고 터미널 중심인 도구를 원한다면 Ollama의 워크플로가 더 직접적으로 맞습니다. 터미널을 전혀 사용하지 않고 내장 모델 브라우저와 문서 채팅 기능을 갖춘 하나의 완성도 높은 GUI를 원한다면 [lmstudio.ai](https://lmstudio.ai)에서 LM Studio를 직접 평가해 보세요 — 자세한 내용은 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) 전문을 참고하세요. 둘 다 핵심 로컬 기능은 무료입니다. 결정을 내리기 전에 각 프로젝트의 공식 사이트에서 최신 기능을 확인하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -2207,14 +2207,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama와 다른 로컬 런타임 비교',
-        content: 'Ollama는 로컬 모델 추론을 더 간단한 인터페이스 뒤에 감싼 여러 도구 중 하나입니다. 이 영역에서 다른 옵션들과 비교해 Ollama가 어떻게 자리매김하는지 살펴보세요 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 근접한 정면 비교는 위의 [Ollama vs. LM Studio 비교](#ollama-vs-lm-studio)를 참고하세요.',
+        content: 'Ollama는 로컬 모델 추론을 더 간단한 인터페이스 뒤에 감싼 여러 도구 중 하나입니다. 이 영역에서 다른 옵션들과 비교해 Ollama가 어떻게 자리매김하는지 살펴보세요 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 근접한 정면 비교는 위의 [Ollama vs. LM Studio 비교](#ollama-vs-lm-studio)를 참고하세요.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — 내장 모델 브라우저와 문서 채팅 기능을 갖추고 유사한 영역(로컬 추론, OpenAI 호환 API)을 다루는 GUI 우선 데스크톱 앱. 직접적인 비교는 [LM Studio 리뷰](/power-local-llm/lm-studio-review)와 위의 비교 섹션을 참고하세요.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama 자체가 구축된 기반이 되는 오픈소스 추론 엔진. 직접 사용하면 Ollama의 패키지 관리자 같은 편리함을 대가로 더 낮은 수준의 제어(커스텀 빌드 플래그, GGUF 직접 로딩)가 가능합니다. [llama.cpp 해설](/power-local-llm/llama-cpp-explained)을 참고하세요.',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 내장 웹 UI를 갖춘, 역사적으로 창작 글쓰기와 롤플레이 용도로 인기 있는 또 다른 llama.cpp 기반 런타임. [KoboldCpp 리뷰](/power-local-llm/koboldcpp-review)를 참고하세요.',
-          '**[LocalAI](https://localai.io)** — 단일 서버에서 llama.cpp를 넘어선 더 폭넓은 모델 백엔드(이미지와 오디오 모델 포함)를 지원하는 오픈소스이자 OpenAI API 호환 런타임. [LocalAI 해설](/power-local-llm/localai-explained)을 참고하세요.',
+          '**[LM Studio](https://lmstudio.ai)** — 내장 모델 브라우저와 문서 채팅 기능을 갖추고 유사한 영역(로컬 추론, OpenAI 호환 API)을 다루는 GUI 우선 데스크톱 앱. 직접적인 비교는 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)와 위의 비교 섹션을 참고하세요.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — Ollama 자체가 구축된 기반이 되는 오픈소스 추론 엔진. 직접 사용하면 Ollama의 패키지 관리자 같은 편리함을 대가로 더 낮은 수준의 제어(커스텀 빌드 플래그, GGUF 직접 로딩)가 가능합니다. [llama.cpp 해설](/ko/power-local-llm/llama-cpp-explained)을 참고하세요.',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 내장 웹 UI를 갖춘, 역사적으로 창작 글쓰기와 롤플레이 용도로 인기 있는 또 다른 llama.cpp 기반 런타임. [KoboldCpp 리뷰](/ko/power-local-llm/koboldcpp-review)를 참고하세요.',
+          '**[LocalAI](https://localai.io)** — 단일 서버에서 llama.cpp를 넘어선 더 폭넓은 모델 백엔드(이미지와 오디오 모델 포함)를 지원하는 오픈소스이자 OpenAI API 호환 런타임. [LocalAI 해설](/ko/power-local-llm/localai-explained)을 참고하세요.',
         ],
-        note: '이는 로컬 추론 도구의 완전한 목록이 아닙니다 — Ollama 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 추론 도구의 완전한 목록이 아닙니다 — Ollama 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2461,7 +2461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الجانب': 'دردشة مستندات مدمجة (RAG)', 'Ollama': 'ليست ميزة مدمجة — تُدمج مع عميل مثل Open WebUI أو AnythingLLM', 'LM Studio': 'ميزة مدمجة باسم "Chat with Documents"' },
           { 'الجانب': 'مستوى سحابة اختياري', 'Ollama': 'نعم، بدءًا من 20 دولارًا شهريًا للاستدلال المستضاف', 'LM Studio': 'نعم، "Bionic+" بدءًا من 20 دولارًا شهريًا و"Pro" بدءًا من 100 دولار شهريًا لنماذج مستضافة وحدود استخدام أعلى' },
         ],
-        note: 'إذا أردت أداة قابلة للبرمجة النصية وتعتمد على الطرفية بشكل أساسي، يمكن لتطبيقات أخرى استدعاؤها كخادم خلفي، فإن سير عمل Ollama هو الأنسب بشكل مباشر. أما إذا أردت واجهة رسومية واحدة متقنة مع متصفح نماذج مدمج وميزة دردشة مستندات دون استخدام الطرفية إطلاقًا، فقيّم LM Studio مباشرةً على [lmstudio.ai](https://lmstudio.ai) — راجع [مراجعة LM Studio](/power-local-llm/lm-studio-review) الكاملة للتفاصيل. كلاهما مجاني في وظائفه المحلية الأساسية؛ تحقّق من الميزات الحالية على موقع كل مشروع قبل اتخاذ القرار.',
+        note: 'إذا أردت أداة قابلة للبرمجة النصية وتعتمد على الطرفية بشكل أساسي، يمكن لتطبيقات أخرى استدعاؤها كخادم خلفي، فإن سير عمل Ollama هو الأنسب بشكل مباشر. أما إذا أردت واجهة رسومية واحدة متقنة مع متصفح نماذج مدمج وميزة دردشة مستندات دون استخدام الطرفية إطلاقًا، فقيّم LM Studio مباشرةً على [lmstudio.ai](https://lmstudio.ai) — راجع [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) الكاملة للتفاصيل. كلاهما مجاني في وظائفه المحلية الأساسية؛ تحقّق من الميزات الحالية على موقع كل مشروع قبل اتخاذ القرار.',
       },
       whoShouldUse: {
         id: 'who-should-use-ollama',
@@ -2492,14 +2492,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ollama-competitors',
         title: 'Ollama مقارنةً ببيئات تشغيل محلية أخرى',
-        content: 'تُعد Ollama واحدة من عدة أدوات تُغلّف استدلال النماذج المحلي خلف واجهة أبسط. إليك كيف تقارَن مع خيارات أخرى في هذا المجال — راجع [دليل برامج الذكاء الاصطناعي المحلي](/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصَّصة [Ollama مقابل LM Studio](#ollama-vs-lm-studio) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'تُعد Ollama واحدة من عدة أدوات تُغلّف استدلال النماذج المحلي خلف واجهة أبسط. إليك كيف تقارَن مع خيارات أخرى في هذا المجال — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصَّصة [Ollama مقابل LM Studio](#ollama-vs-lm-studio) أعلاه لأقرب مواجهة مباشرة.',
         items: [
-          '**[LM Studio](https://lmstudio.ai)** — تطبيق سطح مكتب ذو أولوية للواجهة الرسومية يغطي مجالًا مشابهًا (استدلال محلي، واجهة API متوافقة مع OpenAI) مع متصفح نماذج مدمج وميزة دردشة مستندات؛ راجع [مراجعة LM Studio](/power-local-llm/lm-studio-review) وقسم المقارنة أعلاه لمواجهة مباشرة.',
-          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — محرك الاستدلال مفتوح المصدر الذي بُنيت Ollama نفسها فوقه؛ استخدامه مباشرةً يمنح تحكمًا أدنى مستوى (رايات بناء مخصَّصة، تحميل GGUF مباشر) على حساب راحة Ollama الشبيهة بمدير الحزم. راجع [شرح llama.cpp](/power-local-llm/llama-cpp-explained).',
-          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — بيئة تشغيل أخرى قائمة على llama.cpp، اشتهرت تاريخيًا في الكتابة الإبداعية وتقمّص الأدوار مع واجهة ويب مدمجة؛ راجع [مراجعة KoboldCpp](/power-local-llm/koboldcpp-review).',
-          '**[LocalAI](https://localai.io)** — بيئة تشغيل مفتوحة المصدر ومتوافقة مع واجهة OpenAI API، تدعم مجموعة أوسع من محركات النماذج الخلفية إلى جانب llama.cpp (بما في ذلك نماذج الصور والصوت) في خادم واحد؛ راجع [شرح LocalAI](/power-local-llm/localai-explained).',
+          '**[LM Studio](https://lmstudio.ai)** — تطبيق سطح مكتب ذو أولوية للواجهة الرسومية يغطي مجالًا مشابهًا (استدلال محلي، واجهة API متوافقة مع OpenAI) مع متصفح نماذج مدمج وميزة دردشة مستندات؛ راجع [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) وقسم المقارنة أعلاه لمواجهة مباشرة.',
+          '**[llama.cpp](https://github.com/ggml-org/llama.cpp)** — محرك الاستدلال مفتوح المصدر الذي بُنيت Ollama نفسها فوقه؛ استخدامه مباشرةً يمنح تحكمًا أدنى مستوى (رايات بناء مخصَّصة، تحميل GGUF مباشر) على حساب راحة Ollama الشبيهة بمدير الحزم. راجع [شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained).',
+          '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — بيئة تشغيل أخرى قائمة على llama.cpp، اشتهرت تاريخيًا في الكتابة الإبداعية وتقمّص الأدوار مع واجهة ويب مدمجة؛ راجع [مراجعة KoboldCpp](/ar/power-local-llm/koboldcpp-review).',
+          '**[LocalAI](https://localai.io)** — بيئة تشغيل مفتوحة المصدر ومتوافقة مع واجهة OpenAI API، تدعم مجموعة أوسع من محركات النماذج الخلفية إلى جانب llama.cpp (بما في ذلك نماذج الصور والصوت) في خادم واحد؛ راجع [شرح LocalAI](/ar/power-local-llm/localai-explained).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال المحلي — راجع [دليل برامج الذكاء الاصطناعي المحلي](/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Ollama نفسه.',
+        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال المحلي — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Ollama نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
