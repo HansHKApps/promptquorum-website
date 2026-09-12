@@ -7,34 +7,36 @@
 import { CloseIcon } from './icons'
 import { filterOptionLabel } from './FilterBar'
 import type { FilterState } from './types'
+import type { Language } from '@/lib/blog/blogContent'
+import type { UseCaseKey } from '@/lib/power-local-llm/apps/types'
+import { getWantLabels, t } from './directory-i18n'
 
 const GROUP_ORDER: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
-const WANT_LABELS: Record<string, string> = {
-  chat: 'Chat', code: 'Code', agent: 'Run agents', docs: 'Chat with docs', image: 'Generate images',
-  audio: 'Voice / audio', phone: 'Use on my phone', build: 'Build my own app', serve: 'Serve a model',
-}
 
 export function ActiveFilterChips({
   want,
   filters,
   onClearWant,
   onClearFilter,
+  lang,
 }: {
   want: string | null
   filters: FilterState
   onClearWant: () => void
   onClearFilter: (group: keyof FilterState, value: string) => void
+  lang: Language
 }) {
   const chips: { key: string; label: string; onRemove: () => void }[] = []
+  const wantLabels = getWantLabels(lang)
 
   if (want) {
-    chips.push({ key: `want-${want}`, label: WANT_LABELS[want] ?? want, onRemove: onClearWant })
+    chips.push({ key: `want-${want}`, label: wantLabels[want as UseCaseKey] ?? want, onRemove: onClearWant })
   }
   for (const group of GROUP_ORDER) {
     for (const value of filters[group]) {
       chips.push({
         key: `${group}-${value}`,
-        label: filterOptionLabel(group, value),
+        label: filterOptionLabel(group, value, lang),
         onRemove: () => onClearFilter(group, value),
       })
     }
@@ -43,7 +45,7 @@ export function ActiveFilterChips({
   if (chips.length === 0) return null
 
   return (
-    <div className="flex flex-wrap gap-1.5 mt-3" aria-label="Active filters">
+    <div className="flex flex-wrap gap-1.5 mt-3" aria-label={t('activeFiltersAriaLabel', lang)}>
       {chips.map((chip) => (
         <button
           key={chip.key}

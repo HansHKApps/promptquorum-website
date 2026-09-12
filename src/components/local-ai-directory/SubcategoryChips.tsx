@@ -14,17 +14,21 @@ import { cn } from '@/lib/utils'
 import { CATEGORY_SUB_LABEL, type CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import type { FilterOptionCount } from './types'
 import { CloseIcon } from './icons'
+import type { Language } from '@/lib/blog/blogContent'
+import { t } from './directory-i18n'
 
 export function SubcategoryChips({
   counts,
   selected,
   onToggle,
   onClear,
+  lang,
 }: {
   counts: FilterOptionCount[]
   selected: Set<string>
   onToggle: (value: string) => void
   onClear: () => void
+  lang: Language
 }) {
   if (counts.length === 0) return null
 
@@ -34,9 +38,9 @@ export function SubcategoryChips({
     <div
       className="flex flex-wrap items-center gap-1.5 rounded-lg border border-dashed border-primary/25 bg-primary/[0.03] px-3 py-2.5 animate-in fade-in slide-in-from-top-1 duration-150"
       role="group"
-      aria-label="Narrow down by type"
+      aria-label={t('narrowDownAriaLabel', lang)}
     >
-      <span className="text-xs font-medium text-text-secondary shrink-0">Narrow down:</span>
+      <span className="text-xs font-medium text-text-secondary shrink-0">{t('narrowDownLabel', lang)}</span>
       {counts.map(({ value, count }) => {
         const isSelected = selected.has(value)
         return (
@@ -52,7 +56,7 @@ export function SubcategoryChips({
                 : 'border-primary/20 bg-white text-text-primary hover:border-primary/50 hover:bg-primary/5'
             )}
           >
-            {CATEGORY_SUB_LABEL[value as CategorySubKey] ?? value}
+            {CATEGORY_SUB_LABEL[value as CategorySubKey]?.[lang] ?? value}
             <span className={cn('text-[10px]', isSelected ? 'text-white/80' : 'text-text-secondary')}>{count}</span>
           </button>
         )
@@ -63,7 +67,7 @@ export function SubcategoryChips({
           onClick={onClear}
           className="inline-flex items-center gap-1 text-xs font-medium text-text-secondary hover:text-primary"
         >
-          Clear
+          {t('clear', lang)}
           <CloseIcon className="h-3 w-3" />
         </button>
       )}

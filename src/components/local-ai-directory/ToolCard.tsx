@@ -14,6 +14,7 @@ import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
 import type { MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
+import { t } from './directory-i18n'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
@@ -26,25 +27,10 @@ const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar
   'train-operate': { bar: 'bg-amber-500', chip: 'bg-amber-50 text-amber-700', avatar: 'bg-amber-100 text-amber-700' },
 }
 
-const LOCALITY_LABEL: Record<'local' | 'hybrid' | 'cloud', string> = {
-  local: '100% local',
-  hybrid: 'Hybrid',
-  cloud: 'Cloud',
-}
-
 const LOCALITY_BADGE: Record<'local' | 'hybrid' | 'cloud', string> = {
   local: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   hybrid: 'bg-amber-50 text-amber-700 border-amber-200',
   cloud: 'bg-slate-50 text-slate-600 border-slate-200',
-}
-
-// Short badge text — differs from the longer FilterBar labels, which read
-// fine in a checkbox list but wrap awkwardly inside a pill.
-const ENGINE_LABEL: Record<'builtin' | 'external' | 'both' | 'library', string> = {
-  builtin: 'Runs its own engine',
-  external: 'Needs Ollama/LM Studio',
-  both: 'Own engine + external',
-  library: 'Library / SDK',
 }
 
 const ENGINE_BADGE: Record<'builtin' | 'external' | 'both' | 'library', string> = {
@@ -54,18 +40,14 @@ const ENGINE_BADGE: Record<'builtin' | 'external' | 'both' | 'library', string> 
   library: 'bg-slate-50 text-slate-600 border-slate-200',
 }
 
-const PRICE_LABEL: Record<'free' | 'freemium' | 'paid', string> = {
-  free: 'Free',
-  freemium: 'Free + paid tier',
-  paid: 'Paid',
-}
-
 const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
   free: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   freemium: 'bg-amber-50 text-amber-700 border-amber-200',
   paid: 'bg-rose-50 text-rose-700 border-rose-200',
 }
 
+// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// names — kept identical across locales rather than "translated".
 const PLATFORM_LABEL: Record<string, string> = {
   mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
 }
@@ -84,7 +66,7 @@ function articleCount(toolName: string): number {
 }
 
 /** One button per distribution channel when `storeLinks` is set, else the single `url` fallback. */
-export function getDownloadLinks(app: ToolRecord): { href: string; label: string }[] {
+export function getDownloadLinks(app: ToolRecord, lang: Language): { href: string; label: string }[] {
   if (app.storeLinks && Object.keys(app.storeLinks).length > 0) {
     return Object.entries(app.storeLinks).map(([key, href]) => ({
       href: href!,
@@ -92,7 +74,7 @@ export function getDownloadLinks(app: ToolRecord): { href: string; label: string
     }))
   }
   if (app.url) {
-    return [{ href: `https://${app.url}`, label: app.url.includes('github.com') ? 'GitHub ↗' : 'Get it ↗' }]
+    return [{ href: `https://${app.url}`, label: app.url.includes('github.com') ? t('githubLink', lang) : t('getItLink', lang) }]
   }
   return []
 }
@@ -116,10 +98,27 @@ export function ToolCard({
   const review = reviewUrl(app.name)
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
-  const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory]
+  const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
+
+  const LOCALITY_LABEL: Record<'local' | 'hybrid' | 'cloud', string> = {
+    local: t('cardLocalityLocal', lang),
+    hybrid: t('localityHybridShort', lang),
+    cloud: t('localityCloud', lang),
+  }
+  const ENGINE_LABEL: Record<'builtin' | 'external' | 'both' | 'library', string> = {
+    builtin: t('cardEngineBuiltin', lang),
+    external: t('cardEngineExternal', lang),
+    both: t('cardEngineBoth', lang),
+    library: t('engineLibrary', lang),
+  }
+  const PRICE_LABEL: Record<'free' | 'freemium' | 'paid', string> = {
+    free: t('priceFree', lang),
+    freemium: t('cardPriceFreemium', lang),
+    paid: t('pricePaid', lang),
+  }
 
   const stop = (e: React.MouseEvent) => e.stopPropagation()
-  const downloadLinks = getDownloadLinks(app)
+  const downloadLinks = getDownloadLinks(app, lang)
 
   return (
     <div
@@ -160,10 +159,10 @@ export function ToolCard({
             {isFounderStarActive(app.founderReviewedDate) && (
               <span
                 className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-amber-50 text-amber-800 border-amber-300"
-                title="The founder reviewed this entry's technical specs and description for accuracy"
+                title={t('founderReviewedTooltip', lang)}
               >
                 <StarIcon className="h-2.5 w-2.5" />
-                Founder-reviewed
+                {t('founderReviewedBadge', lang)}
               </span>
             )}
             {locality && (
@@ -181,7 +180,7 @@ export function ToolCard({
             {/* Prefer his own verbatim words when we have them; `why` is a
                 PromptQuorum paraphrase and shouldn't be shown in quotation
                 marks as if it were a direct quote. */}
-            &ldquo;{app.founder.fullQuote ? app.founder.fullQuote[0] : app.founder.why}&rdquo; <span className="not-italic font-medium">— From the Maker</span>
+            &ldquo;{app.founder.fullQuote ? app.founder.fullQuote[0] : app.founder.why}&rdquo; <span className="not-italic font-medium">— {t('fromTheMaker', lang)}</span>
           </p>
         )}
 
@@ -212,14 +211,14 @@ export function ToolCard({
 
         <div className="flex items-start gap-1.5 text-xs mb-3">
           <CpuIcon className="h-3.5 w-3.5 mt-px shrink-0 text-text-secondary/50" />
-          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact />
+          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
         </div>
 
         <div className="mt-auto space-y-2.5">
           <div className="flex flex-wrap gap-1">
             {app.interfaces.map((i) => (
               <span key={i} className="rounded-md bg-primary/5 border border-primary/10 px-1.5 py-0.5 text-[11px] font-medium text-primary">
-                {INTERFACE_LABEL[i]}
+                {INTERFACE_LABEL[i][lang]}
               </span>
             ))}
             {app.platforms?.map((p) => (
@@ -239,7 +238,7 @@ export function ToolCard({
               )}
               {count > 0 && (
                 <span className="text-primary font-medium">
-                  {count} {count === 1 ? 'article' : 'articles'}
+                  {count === 1 ? t('articleCountOne', lang, { count }) : t('articleCountOther', lang, { count })}
                 </span>
               )}
             </div>
@@ -256,7 +255,7 @@ export function ToolCard({
                   onClick={stop}
                   className="flex-1 text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
                 >
-                  Read review
+                  {t('readReview', lang)}
                 </Link>
                 {downloadLinks.map((link) => (
                   <a
@@ -293,7 +292,7 @@ export function ToolCard({
                   }}
                   className="flex-1 text-center rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
                 >
-                  Details
+                  {t('detailsButton', lang)}
                 </button>
               </>
             )}

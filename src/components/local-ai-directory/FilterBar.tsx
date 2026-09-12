@@ -12,31 +12,41 @@ import { CheckIcon } from './icons'
 import { cn } from '@/lib/utils'
 import type { FilterOptionCount, FilterState } from './types'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
+import type { Language } from '@/lib/blog/blogContent'
+import { t } from './directory-i18n'
 
-const GROUP_LABELS: Record<keyof FilterState, string> = {
-  locality: 'Runs',
-  engine: 'How it runs models',
-  worksWith: 'Works with',
-  platforms: 'Platform',
-  category: 'Category',
-  interface: 'Interface',
-  price: 'Price',
+// Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
+// names — kept identical across locales, same as elsewhere on the site,
+// rather than "translated".
+const PLATFORM_VALUE_LABEL: Record<string, string> = {
+  mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web',
 }
 
-const VALUE_LABELS: Partial<Record<keyof FilterState, Record<string, string>>> = {
-  locality: { local: 'Fully local', hybrid: 'Hybrid (local + cloud)', cloud: 'Cloud' },
-  engine: { builtin: 'Built-in engine', external: 'Needs external engine', both: 'Either', library: 'Library / SDK' },
-  price: { free: 'Free', freemium: 'Freemium', paid: 'Paid' },
-  platforms: { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' },
-  category: CATEGORY_SUB_LABEL,
-  interface: INTERFACE_LABEL,
+function getGroupLabels(lang: Language): Record<keyof FilterState, string> {
+  return {
+    locality: t('groupRuns', lang),
+    engine: t('groupEngine', lang),
+    worksWith: t('groupWorksWith', lang),
+    platforms: t('groupPlatform', lang),
+    category: t('groupCategory', lang),
+    interface: t('groupInterface', lang),
+    price: t('groupPrice', lang),
+  }
 }
 
-export const FILTER_GROUP_LABELS = GROUP_LABELS
-export const FILTER_VALUE_LABELS = VALUE_LABELS
+export function getValueLabels(lang: Language): Partial<Record<keyof FilterState, Record<string, string>>> {
+  return {
+    locality: { local: t('localityLocalFilter', lang), hybrid: t('localityHybridFilter', lang), cloud: t('localityCloud', lang) },
+    engine: { builtin: t('engineBuiltin', lang), external: t('engineExternal', lang), both: t('engineBoth', lang), library: t('engineLibrary', lang) },
+    price: { free: t('priceFree', lang), freemium: t('priceFreemium', lang), paid: t('pricePaid', lang) },
+    platforms: PLATFORM_VALUE_LABEL,
+    category: Object.fromEntries(Object.entries(CATEGORY_SUB_LABEL).map(([k, v]) => [k, v[lang]])),
+    interface: Object.fromEntries(Object.entries(INTERFACE_LABEL).map(([k, v]) => [k, v[lang]])),
+  }
+}
 
-export function filterOptionLabel(group: keyof FilterState, value: string): string {
-  return VALUE_LABELS[group]?.[value] ?? value
+export function filterOptionLabel(group: keyof FilterState, value: string, lang: Language): string {
+  return getValueLabels(lang)[group]?.[value] ?? value
 }
 
 const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
@@ -46,17 +56,21 @@ function FilterGroup({
   options,
   selected,
   onToggle,
+  lang,
+  groupLabels,
 }: {
   group: keyof FilterState
   options: FilterOptionCount[]
   selected: Set<string>
   onToggle: (group: keyof FilterState, value: string) => void
+  lang: Language
+  groupLabels: Record<keyof FilterState, string>
 }) {
   return (
     <fieldset>
-      <legend className="text-xs font-bold uppercase tracking-wide text-text-primary mb-2.5">{GROUP_LABELS[group]}</legend>
+      <legend className="text-xs font-bold uppercase tracking-wide text-text-primary mb-2.5">{groupLabels[group]}</legend>
       {options.length === 0 ? (
-        <p className="text-xs text-text-secondary/70 italic">Not yet catalogued for these tools</p>
+        <p className="text-xs text-text-secondary/70 italic">{t('notCatalogued', lang)}</p>
       ) : (
         <ul className="space-y-2">
           {options.map(({ value, count }) => {
@@ -78,7 +92,7 @@ function FilterGroup({
                   </Checkbox.Indicator>
                 </Checkbox.Root>
                 <label htmlFor={id} className="flex flex-1 cursor-pointer items-center justify-between text-sm text-text-secondary">
-                  <span>{filterOptionLabel(group, value)}</span>
+                  <span>{filterOptionLabel(group, value, lang)}</span>
                   <span className="text-xs text-text-secondary/70">{count}</span>
                 </label>
               </li>
@@ -97,6 +111,7 @@ export function FilterBar({
   onToggle,
   onClearAll,
   hasActiveFilters,
+  lang,
 }: {
   open: boolean
   countsByGroup: Record<keyof FilterState, FilterOptionCount[]>
@@ -104,8 +119,11 @@ export function FilterBar({
   onToggle: (group: keyof FilterState, value: string) => void
   onClearAll: () => void
   hasActiveFilters: boolean
+  lang: Language
 }) {
   if (!open) return null
+
+  const groupLabels = getGroupLabels(lang)
 
   return (
     <div
@@ -119,12 +137,14 @@ export function FilterBar({
           options={countsByGroup[group]}
           selected={filters[group]}
           onToggle={onToggle}
+          lang={lang}
+          groupLabels={groupLabels}
         />
       ))}
       {hasActiveFilters && (
         <div className="col-span-full">
           <button type="button" onClick={onClearAll} className="text-xs font-medium text-primary hover:underline">
-            Clear all filters
+            {t('clearAllFilters', lang)}
           </button>
         </div>
       )}

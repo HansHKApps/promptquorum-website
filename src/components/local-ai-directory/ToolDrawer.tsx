@@ -14,18 +14,13 @@ import { HardwareBlock } from './HardwareBlock'
 import { computeHardwareDisplay } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
-import { FILTER_VALUE_LABELS } from './FilterBar'
+import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
-
-const STATUS_LABEL: Record<ToolRecord['status'], string> = {
-  listed: 'Listed',
-  verified: 'Verified',
-  tested: 'PromptQuorum-tested',
-}
+import { t } from './directory-i18n'
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   if (value == null || value === '') return null
@@ -59,22 +54,23 @@ function joinOrUnknown(values: string[] | null): ReactNode {
 }
 
 /** Renders the reader-facing label for an enum value, never the raw key ("rag", "external"). */
-function labelFor(group: keyof typeof FILTER_VALUE_LABELS, value: string | null): ReactNode {
+function labelFor(group: keyof ReturnType<typeof getValueLabels>, value: string | null, lang: Language): ReactNode {
   if (!value || value === 'TODO') return null
-  return FILTER_VALUE_LABELS[group]?.[value] ?? value
+  return getValueLabels(lang)[group]?.[value] ?? value
 }
 
-function labelList(group: keyof typeof FILTER_VALUE_LABELS, values: string[] | null): ReactNode {
+function labelList(group: keyof ReturnType<typeof getValueLabels>, values: string[] | null, lang: Language): ReactNode {
   if (!values || values.length === 0) return null
-  return values.map((v) => FILTER_VALUE_LABELS[group]?.[v] ?? v).join(', ')
+  const labels = getValueLabels(lang)
+  return values.map((v) => labels[group]?.[v] ?? v).join(', ')
 }
 
-function FounderClaimBox({ appName }: { appName: string }) {
+function FounderClaimBox({ appName, lang }: { appName: string; lang: Language }) {
   const [expanded, setExpanded] = useState(false)
   return (
     <div className="rounded-xl border border-dashed border-primary/25 bg-primary/[0.03] p-4">
       <p className="text-sm text-text-secondary italic">
-        Claim this entry — if you build or maintain {appName}, email hello@promptquorum.com to add a founder statement.
+        {t('claimEntryTemplate', lang, { appName })}
       </p>
       <button
         type="button"
@@ -85,36 +81,32 @@ function FounderClaimBox({ appName }: { appName: string }) {
         <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-primary text-[11px] leading-none">
           {expanded ? '–' : '+'}
         </span>
-        {expanded ? 'Hide details' : 'Why claim it'}
+        {expanded ? t('hideDetails', lang) : t('whyClaimIt', lang)}
       </button>
       {expanded && (
         <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-primary/10 pt-3">
           <p>
-            <span className="font-semibold text-text-primary">Get the "Verified" badge.</span> Claimed entries carry
-            a visible marker showing the details on this page were confirmed by the people who actually build{' '}
-            {appName}, not just pulled from a repository.
+            <span className="font-semibold text-text-primary">{t('verifiedBadgeTitle', lang)}</span>{' '}
+            {t('verifiedBadgeBodyTemplate', lang, { appName })}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">Correct the record.</span> Flag wrong specs, outdated
-            benchmarks, or missing features directly to us, and they get fixed in the article — before the next
-            reader sees them.
+            <span className="font-semibold text-text-primary">{t('correctRecordTitle', lang)}</span>{' '}
+            {t('correctRecordBody', lang)}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">Add your own statement.</span> A short founder note —
-            why you built it, what it's best at, where it falls short — runs next to the editorial review, in your
-            own words.
+            <span className="font-semibold text-text-primary">{t('addStatementTitle', lang)}</span>{' '}
+            {t('addStatementBody', lang)}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">Free, ongoing visibility.</span> No cost, no ad spend.
-            Everyone who compares {appName} against alternatives on this site sees your correction and your
-            statement.
+            <span className="font-semibold text-text-primary">{t('freeVisibilityTitle', lang)}</span>{' '}
+            {t('freeVisibilityBodyTemplate', lang, { appName })}
           </p>
           <p className="pt-1">
-            Email{' '}
+            {t('emailPrefix', lang)}{' '}
             <a href="mailto:hello@promptquorum.com" className="text-primary hover:underline">
               hello@promptquorum.com
             </a>{' '}
-            — put {appName} in the subject line.
+            {t('emailSuffixTemplate', lang, { appName })}
           </p>
         </div>
       )}
@@ -140,6 +132,12 @@ export function ToolDrawer({
   const open = app != null
   const [copied, setCopied] = useState(false)
 
+  const STATUS_LABEL: Record<ToolRecord['status'], string> = {
+    listed: t('statusListed', lang),
+    verified: t('statusVerified', lang),
+    tested: t('statusTested', lang),
+  }
+
   const alternatives = app
     ? allApps.filter((a) => a.slug !== app.slug && a.categories.some((c) => app.categories.includes(c))).slice(0, 6)
     : []
@@ -147,22 +145,22 @@ export function ToolDrawer({
   async function handleCopy() {
     if (!app) return
     const rows: [string, ReactNode][] = [
-      ['Category', app.categories.map((c) => CATEGORY_SUB_LABEL[c]).join(', ')],
-      ['Interface', app.interfaces.map((i) => INTERFACE_LABEL[i]).join(', ')],
-      ['Runs', labelFor('locality', app.locality)],
-      ['Engine', labelFor('engine', app.engine)],
-      ['Price', labelFor('price', app.price)],
-      ['License', app.license === 'TODO' ? null : app.license],
-      ['Platforms', labelList('platforms', app.platforms)],
-      ['Works with', joinOrUnknown(app.worksWith)],
-      ['Added', app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
-      ['Last verified', app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
+      [t('detailCategory', lang), app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')],
+      [t('detailInterface', lang), app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')],
+      [t('detailRuns', lang), labelFor('locality', app.locality, lang)],
+      [t('detailEngine', lang), labelFor('engine', app.engine, lang)],
+      [t('detailPrice', lang), labelFor('price', app.price, lang)],
+      [t('detailLicense', lang), app.license === 'TODO' ? null : app.license],
+      [t('detailPlatforms', lang), labelList('platforms', app.platforms, lang)],
+      [t('detailWorksWith', lang), joinOrUnknown(app.worksWith)],
+      [t('detailAdded', lang), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
+      [t('detailLastVerified', lang), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
 
     const lines = [
       app.name,
       app.tagline[lang] ?? app.tagline.en ?? '',
-      ...getDownloadLinks(app).map((link) => link.href),
+      ...getDownloadLinks(app, lang).map((link) => link.href),
       '',
       ...rows
         .filter(([, value]) => value != null && value !== '')
@@ -170,11 +168,11 @@ export function ToolDrawer({
     ]
 
     if (app.founder) {
-      lines.push('', 'From the Maker:', app.founder.why, `Best for: ${app.founder.best}`, `Limits: ${app.founder.limits}`)
+      lines.push('', `${t('fromTheMaker', lang)}:`, app.founder.why, `${t('bestFor', lang)} ${app.founder.best}`, `${t('limits', lang)} ${app.founder.limits}`)
     }
 
     if (app.pqReview) {
-      lines.push('', 'PromptQuorum review:', app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
+      lines.push('', `${t('pqReviewHeading', lang)}:`, app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
     }
 
     const text = lines.filter((l) => l != null).join('\n')
@@ -205,23 +203,23 @@ export function ToolDrawer({
                   <button
                     type="button"
                     onClick={handleCopy}
-                    aria-label="Copy entry details"
+                    aria-label={t('copyEntryAriaLabel', lang)}
                     className="inline-flex items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium text-text-secondary hover:bg-gray-100"
                   >
                     {copied ? (
                       <>
                         <CheckIcon className="h-3.5 w-3.5 text-emerald-600" />
-                        <span className="text-emerald-600">Copied</span>
+                        <span className="text-emerald-600">{t('copied', lang)}</span>
                       </>
                     ) : (
                       <>
                         <CopyIcon className="h-3.5 w-3.5" />
-                        <span>Copy</span>
+                        <span>{t('copyLabel', lang)}</span>
                       </>
                     )}
                   </button>
                   <Dialog.Close asChild>
-                    <button type="button" aria-label="Close" className="rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
+                    <button type="button" aria-label={t('closeAriaLabel', lang)} className="rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
                       <CloseIcon className="h-4 w-4" />
                     </button>
                   </Dialog.Close>
@@ -236,9 +234,8 @@ export function ToolDrawer({
                 <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
                   <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-amber-500" />
                   <p className="text-xs text-amber-900">
-                    <span className="font-bold uppercase tracking-wide">Founder-reviewed.</span>{' '}
-                    {app.name}&rsquo;s founder reviewed this entry&rsquo;s technical specs and description for accuracy.
-                    The review itself remains independent PromptQuorum editorial content.
+                    <span className="font-bold uppercase tracking-wide">{t('founderReviewedBannerLabel', lang)}</span>{' '}
+                    {t('founderReviewedBannerBodyTemplate', lang, { name: app.name })}
                   </p>
                 </div>
               )}
@@ -255,7 +252,7 @@ export function ToolDrawer({
                     {app.stars.toLocaleString()}
                   </span>
                 )}
-                {getDownloadLinks(app).map((link) => (
+                {getDownloadLinks(app, lang).map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
@@ -271,26 +268,26 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
-                  <DetailRow label="Category" value={app.categories.map((c) => CATEGORY_SUB_LABEL[c]).join(', ')} />
-                  <DetailRow label="Interface" value={app.interfaces.map((i) => INTERFACE_LABEL[i]).join(', ')} />
-                  <DetailRow label="Runs" value={labelFor('locality', app.locality)} />
-                  <DetailRow label="Engine" value={labelFor('engine', app.engine)} />
-                  <DetailRow label="Price" value={labelFor('price', app.price)} />
-                  <DetailRow label="License" value={app.license === 'TODO' ? null : app.license} />
-                  <DetailRow label="Platforms" value={labelList('platforms', app.platforms)} />
-                  <DetailRow label="Works with" value={joinOrUnknown(app.worksWith)} />
+                  <DetailRow label={t('detailCategory', lang)} value={app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')} />
+                  <DetailRow label={t('detailInterface', lang)} value={app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')} />
+                  <DetailRow label={t('detailRuns', lang)} value={labelFor('locality', app.locality, lang)} />
+                  <DetailRow label={t('detailEngine', lang)} value={labelFor('engine', app.engine, lang)} />
+                  <DetailRow label={t('detailPrice', lang)} value={labelFor('price', app.price, lang)} />
+                  <DetailRow label={t('detailLicense', lang)} value={app.license === 'TODO' ? null : app.license} />
+                  <DetailRow label={t('detailPlatforms', lang)} value={labelList('platforms', app.platforms, lang)} />
+                  <DetailRow label={t('detailWorksWith', lang)} value={joinOrUnknown(app.worksWith)} />
                   <DetailRow
-                    label="Hardware"
-                    value={computeHardwareDisplay(app.hardware, machine, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact /> : null}
+                    label={t('detailHardware', lang)}
+                    value={computeHardwareDisplay(app.hardware, machine, lang, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact /> : null}
                   />
-                  <DetailRow label="Added" value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
-                  <DetailRow label="Last verified" value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />
+                  <DetailRow label={t('detailAdded', lang)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
+                  <DetailRow label={t('detailLastVerified', lang)} value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />
                 </dl>
               </section>
 
               {/* From the Maker */}
               <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">From the Maker</h3>
+                <h3 className="text-sm font-bold text-text-primary mb-2">{t('fromTheMaker', lang)}</h3>
                 {app.founder?.fullQuote ? (
                   // A verbatim quote exists — show his own words only, not a
                   // PromptQuorum paraphrase mixed in underneath.
@@ -298,35 +295,35 @@ export function ToolDrawer({
                 ) : app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.founder.why}</p>
-                    <p><span className="font-semibold text-text-primary">Best for:</span> {app.founder.best}</p>
-                    <p><span className="font-semibold text-text-primary">Limits:</span> {app.founder.limits}</p>
+                    <p><span className="font-semibold text-text-primary">{t('bestFor', lang)}</span> {app.founder.best}</p>
+                    <p><span className="font-semibold text-text-primary">{t('limits', lang)}</span> {app.founder.limits}</p>
                   </div>
                 ) : (
-                  <FounderClaimBox key={app.slug} appName={app.name} />
+                  <FounderClaimBox key={app.slug} appName={app.name} lang={lang} />
                 )}
               </section>
 
               {/* PromptQuorum review */}
               {app.pqReview && (
                 <section className="mb-5">
-                  <h3 className="text-sm font-bold text-text-primary mb-2">PromptQuorum review</h3>
+                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqReviewHeading', lang)}</h3>
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.pqReview.text[lang] ?? app.pqReview.text.en ?? ''}</p>
-                    <p className="text-xs text-text-secondary/80">Tested {formatDisplayDate(app.pqReview.date, lang)} on {app.pqReview.hw}</p>
+                    <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', lang, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
                   </div>
                 </section>
               )}
 
               {/* PromptQuorum articles */}
               <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">PromptQuorum articles</h3>
+                <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqArticlesHeading', lang)}</h3>
                 <ArticlesBlock toolName={app.name} lang={lang} />
               </section>
 
               {/* Alternatives */}
               {alternatives.length > 0 && (
                 <section className="mb-5">
-                  <h3 className="text-sm font-bold text-text-primary mb-2">Alternatives</h3>
+                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('alternativesHeading', lang)}</h3>
                   <div className="flex flex-wrap gap-2">
                     {alternatives.map((alt) => (
                       <button

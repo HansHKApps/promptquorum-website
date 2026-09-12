@@ -10,15 +10,7 @@ import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { StarIcon } from './icons'
 import type { MachineType, SortDir, SortKey } from './types'
-
-const COLUMNS: { key: SortKey; label: string }[] = [
-  { key: 'name', label: 'Tool' },
-  { key: 'stars', label: 'Stars' },
-  { key: 'ram', label: 'Hardware' },
-  { key: 'added', label: 'Added' },
-  { key: 'status', label: 'Status' },
-  { key: 'category', label: 'Category' },
-]
+import { t } from './directory-i18n'
 
 export function ToolTable({
   apps,
@@ -37,6 +29,20 @@ export function ToolTable({
   onSort: (key: SortKey) => void
   onOpen: (slug: string) => void
 }) {
+  const COLUMNS: { key: SortKey; label: string }[] = [
+    { key: 'name', label: t('colTool', lang) },
+    { key: 'stars', label: t('colStars', lang) },
+    { key: 'ram', label: t('detailHardware', lang) },
+    { key: 'added', label: t('detailAdded', lang) },
+    { key: 'status', label: t('colStatus', lang) },
+    { key: 'category', label: t('colCategory', lang) },
+  ]
+  const STATUS_LABEL: Record<ToolRecord['status'], string> = {
+    listed: t('statusListed', lang),
+    verified: t('statusVerified', lang),
+    tested: t('statusTested', lang),
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[720px] border-collapse text-sm">
@@ -80,13 +86,13 @@ export function ToolTable({
                 )}
               </td>
               <td className="p-2 sm:p-3 text-text-secondary">
-                <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} compact />
+                <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
               </td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
               </td>
-              <td className="p-2 sm:p-3 text-text-secondary capitalize">{app.status}</td>
-              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]]}</td>
+              <td className="p-2 sm:p-3 text-text-secondary">{STATUS_LABEL[app.status]}</td>
+              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]][lang]}</td>
             </tr>
           ))}
         </tbody>

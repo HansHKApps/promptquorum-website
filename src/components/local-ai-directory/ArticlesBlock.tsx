@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import toolArticleIndex from '@/generated/tool-article-index.json'
+import { t } from './directory-i18n'
 
 type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
@@ -16,7 +17,7 @@ export function ArticlesBlock({ toolName, lang }: { toolName: string; lang: Lang
   const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
 
   if (!entry || entry.articles.length === 0) {
-    return <p className="text-sm text-text-secondary italic">No PromptQuorum articles mention this tool yet.</p>
+    return <p className="text-sm text-text-secondary italic">{t('noArticlesYet', lang)}</p>
   }
 
   const about = entry.articles.filter((a) => a.tier === 'about')
@@ -28,7 +29,7 @@ export function ArticlesBlock({ toolName, lang }: { toolName: string; lang: Lang
         <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
           <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
           {a.dateModified && (
-            <span className="text-xs text-text-secondary shrink-0">Updated {formatDisplayDate(a.dateModified, lang)}</span>
+            <span className="text-xs text-text-secondary shrink-0">{t('updatedPrefix', lang)} {formatDisplayDate(a.dateModified, lang)}</span>
           )}
         </li>
       ))}
@@ -41,14 +42,14 @@ export function ArticlesBlock({ toolName, lang }: { toolName: string; lang: Lang
       {mentioned.length > 0 && (
         <div>
           <p className={about.length > 0 ? 'text-xs font-semibold text-text-secondary uppercase tracking-wide mb-1.5' : 'sr-only'}>
-            Also mentioned in:
+            {t('alsoMentionedIn', lang)}
           </p>
           {renderList(mentioned)}
         </div>
       )}
       {entry.capped && (
         <p className="text-xs text-text-secondary italic">
-          +{entry.totalCount - entry.articles.length} more not shown
+          {t('moreNotShownTemplate', lang, { n: entry.totalCount - entry.articles.length })}
         </p>
       )}
     </div>

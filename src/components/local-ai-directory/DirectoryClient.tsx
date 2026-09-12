@@ -29,12 +29,7 @@ import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools 
 import { detectDefaultMachine, readStoredMachine, writeStoredMachine } from './hardware'
 import { emptyFilterState, type FilterState, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
-
-const MACHINE_LABEL: Record<MachineType, string> = {
-  dgpu: 'Graphics Card',
-  apple: 'Apple Silicon',
-  cpu: 'CPU only',
-}
+import { getMachineLabels, t } from './directory-i18n'
 
 // page-redesign-v2.md §4 step 3: "24 cards, then 'Show 24 more · N remaining'"
 const PAGE_SIZE = 24
@@ -45,6 +40,7 @@ interface Props {
 }
 
 export function DirectoryClient({ apps, lang }: Props) {
+  const MACHINE_LABEL = useMemo(() => getMachineLabels(lang), [lang])
   const [search, setSearch] = useState('')
   const [want, setWant] = useState<string | null>(null)
   const [filters, setFilters] = useState<FilterState>(emptyFilterState)
@@ -151,14 +147,15 @@ export function DirectoryClient({ apps, lang }: Props) {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div className="space-y-4 mb-6">
-        <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} />
-        <WantChips counts={wantCounts} selected={want} onSelect={handleWant} />
+        <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
+        <WantChips counts={wantCounts} selected={want} onSelect={handleWant} lang={lang} />
         {want && (
           <SubcategoryChips
             counts={countsByGroup.category}
             selected={filters.category}
             onToggle={(value) => toggleFilter('category', value)}
             onClear={clearCategoryFilters}
+            lang={lang}
           />
         )}
       </div>
@@ -177,24 +174,24 @@ export function DirectoryClient({ apps, lang }: Props) {
               filtersOpen ? 'bg-primary text-white border-primary' : 'bg-white text-text-primary border-primary/20 hover:bg-primary/5'
             )}
           >
-            Filters {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
+            {t('filtersButton', lang)} {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
           </button>
 
           <div className="relative flex-1 min-w-[200px]">
             <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-secondary/60" />
             <input
               type="text"
-              aria-label="Search by name, tagline, or license"
+              aria-label={t('searchAriaLabel', lang)}
               value={search}
               onChange={(e) => handleSearch(e.target.value)}
-              placeholder="Search by name, tagline, or license…"
+              placeholder={t('searchPlaceholder', lang)}
               className="w-full rounded-lg border border-primary/20 bg-white pl-9 pr-9 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
             />
             {search && (
               <button
                 type="button"
                 onClick={() => handleSearch('')}
-                aria-label="Clear search"
+                aria-label={t('clearSearchAriaLabel', lang)}
                 className="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-secondary/60 hover:text-text-secondary"
               >
                 <CloseIcon className="h-3.5 w-3.5" />
@@ -203,7 +200,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           </div>
 
           <label className="flex items-center gap-2 text-sm">
-            <span className="text-text-secondary shrink-0">My machine:</span>
+            <span className="text-text-secondary shrink-0">{t('myMachineLabel', lang)}</span>
             <select
               value={machine}
               onChange={(e) => handleMachineChange(e.target.value as MachineType)}
@@ -217,31 +214,31 @@ export function DirectoryClient({ apps, lang }: Props) {
 
           {view === 'cards' && (
             <label className="flex items-center gap-2 text-sm">
-              <span className="text-text-secondary shrink-0">Sort:</span>
+              <span className="text-text-secondary shrink-0">{t('sortLabel', lang)}</span>
               <select
                 value={sortKey}
                 onChange={(e) => handleSort(e.target.value as SortKey)}
                 className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
-                <option value="category">Category</option>
-                <option value="stars">Stars</option>
-                <option value="name">Name</option>
-                <option value="added">Recently added</option>
-                <option value="ram">Hardware requirement</option>
-                <option value="status">Status</option>
+                <option value="category">{t('groupCategory', lang)}</option>
+                <option value="stars">{t('colStars', lang)}</option>
+                <option value="name">{t('sortName', lang)}</option>
+                <option value="added">{t('sortAdded', lang)}</option>
+                <option value="ram">{t('sortRam', lang)}</option>
+                <option value="status">{t('colStatus', lang)}</option>
               </select>
               <button
                 type="button"
                 onClick={() => setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))}
                 className="text-text-secondary hover:text-primary"
-                aria-label="Toggle sort direction"
+                aria-label={t('toggleSortDirAriaLabel', lang)}
               >
                 {sortDir === 'asc' ? '↑' : '↓'}
               </button>
             </label>
           )}
 
-          <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label="View mode">
+          <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('viewModeAriaLabel', lang)}>
             <button
               type="button"
               onClick={() => setView('cards')}
@@ -249,7 +246,7 @@ export function DirectoryClient({ apps, lang }: Props) {
               className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium', view === 'cards' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
             >
               <GridIcon className="h-4 w-4" />
-              Cards
+              {t('viewCards', lang)}
             </button>
             <button
               type="button"
@@ -258,12 +255,12 @@ export function DirectoryClient({ apps, lang }: Props) {
               className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-l border-primary/20', view === 'table' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
             >
               <TableIcon className="h-4 w-4" />
-              Table
+              {t('viewTable', lang)}
             </button>
           </div>
 
           <span className="hidden md:flex items-center text-sm text-text-secondary shrink-0">
-            {sorted.length} of {apps.length} apps
+            {t('appsCountTemplate', lang, { visible: sorted.length, total: apps.length })}
           </span>
         </div>
 
@@ -274,6 +271,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           onToggle={toggleFilter}
           onClearAll={clearAllFilters}
           hasActiveFilters={hasActiveFilters}
+          lang={lang}
         />
 
         <ActiveFilterChips
@@ -281,6 +279,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           filters={filters}
           onClearWant={() => handleWant(null)}
           onClearFilter={clearOneFilter}
+          lang={lang}
         />
       </div>
 
@@ -288,7 +287,7 @@ export function DirectoryClient({ apps, lang }: Props) {
         {view === 'cards' && (
           <>
             {sorted.length === 0 ? (
-              <p className="text-sm text-text-secondary italic py-10 text-center">No tools match these filters.</p>
+              <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', lang)}</p>
             ) : (
               <>
                 {/* Breakpoints match page-redesign-v2.md §2 exactly (1180/860/560px),
@@ -307,7 +306,7 @@ export function DirectoryClient({ apps, lang }: Props) {
                       onClick={() => setShown((s) => s + PAGE_SIZE)}
                       className="rounded-lg border border-primary/20 bg-white px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-primary/5"
                     >
-                      Show {Math.min(PAGE_SIZE, remaining)} more · {remaining} remaining
+                      {t('showMoreTemplate', lang, { n: Math.min(PAGE_SIZE, remaining), remaining })}
                     </button>
                   </div>
                 )}
@@ -318,7 +317,7 @@ export function DirectoryClient({ apps, lang }: Props) {
 
         {view === 'table' && (
           sorted.length === 0 ? (
-            <p className="text-sm text-text-secondary italic py-10 text-center">No tools match these filters.</p>
+            <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', lang)}</p>
           ) : (
             <ToolTable
               apps={visibleRows}

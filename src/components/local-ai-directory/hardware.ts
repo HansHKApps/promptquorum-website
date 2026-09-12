@@ -4,6 +4,8 @@
 
 import type { MachineType } from './types'
 import type { EngineKey, ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
+import type { Language } from '@/lib/blog/blogContent'
+import { t } from './directory-i18n'
 
 const STORAGE_KEY = 'pq-directory-machine'
 
@@ -63,28 +65,28 @@ export interface HardwareDisplay {
  *   builtin  -> the tool itself loads weights, so a real floor exists, set by
  *               model size (~8 GB system RAM for the common 7-8B 4-bit case)
  */
-function derivedFromEngine(engine: EngineKey | 'TODO' | undefined): HardwareDisplay | null {
+function derivedFromEngine(engine: EngineKey | 'TODO' | undefined, lang: Language): HardwareDisplay | null {
   switch (engine) {
     case 'external':
       return {
         known: true,
-        headline: 'Set by your engine',
-        detail: 'This is a client — Ollama, LM Studio or your server holds the model',
+        headline: t('hwSetByEngine', lang),
+        detail: t('hwSetByEngineDetail', lang),
         cpuFriendly: true,
       }
     case 'library':
       return {
         known: true,
-        headline: 'Set by the model you load',
-        detail: 'The library itself is lightweight',
+        headline: t('hwSetByModel', lang),
+        detail: t('hwSetByModelDetail', lang),
         cpuFriendly: true,
       }
     case 'builtin':
     case 'both':
       return {
         known: true,
-        headline: '≈8 GB RAM for a 7B model',
-        detail: 'Loads models itself — scales with model size and quantisation',
+        headline: t('hwApproxRamHeadline', lang),
+        detail: t('hwApproxRamDetail', lang),
         cpuFriendly: true,
       }
     default:
@@ -106,10 +108,11 @@ function derivedFromEngine(engine: EngineKey | 'TODO' | undefined): HardwareDisp
 export function computeHardwareDisplay(
   hardware: ToolRecordHardware | null,
   machine: MachineType,
+  lang: Language,
   engine?: EngineKey | 'TODO'
 ): HardwareDisplay {
   if (!hardware) {
-    return derivedFromEngine(engine) ?? { known: false, headline: null, detail: null, cpuFriendly: false }
+    return derivedFromEngine(engine, lang) ?? { known: false, headline: null, detail: null, cpuFriendly: false }
   }
 
   const { ramGb, vramGb, cpuOnly } = hardware
@@ -123,8 +126,8 @@ export function computeHardwareDisplay(
     }
     return {
       known: true,
-      headline: `${unifiedMin} GB unified memory`,
-      detail: cpuFriendly ? 'Runs CPU-only if needed (slower)' : null,
+      headline: t('hwUnifiedMemoryTemplate', lang, { n: unifiedMin }),
+      detail: cpuFriendly ? t('hwRunsCpuOnlySlower', lang) : null,
       cpuFriendly,
     }
   }
@@ -133,15 +136,15 @@ export function computeHardwareDisplay(
     if (!cpuFriendly) {
       return {
         known: true,
-        headline: 'GPU recommended',
-        detail: ramGb != null ? `${ramGb} GB RAM minimum — CPU-only will be slow` : 'CPU-only will be slow for this tool',
+        headline: t('hwGpuRecommended', lang),
+        detail: ramGb != null ? t('hwRamMinimumCpuSlowTemplate', lang, { n: ramGb }) : t('hwCpuOnlySlowGeneric', lang),
         cpuFriendly: false,
       }
     }
     return {
       known: ramGb != null,
-      headline: ramGb != null ? `${ramGb} GB RAM` : null,
-      detail: 'CPU-only supported',
+      headline: ramGb != null ? t('hwRamTemplate', lang, { n: ramGb }) : null,
+      detail: t('hwCpuOnlySupported', lang),
       cpuFriendly: true,
     }
   }
@@ -150,16 +153,16 @@ export function computeHardwareDisplay(
   if (vramGb != null) {
     return {
       known: true,
-      headline: `${vramGb} GB VRAM`,
-      detail: ramGb != null ? `+ ${ramGb} GB system RAM` : null,
+      headline: t('hwVramTemplate', lang, { n: vramGb }),
+      detail: ramGb != null ? t('hwPlusSystemRamTemplate', lang, { n: ramGb }) : null,
       cpuFriendly,
     }
   }
   if (ramGb != null) {
     return {
       known: true,
-      headline: `${ramGb} GB RAM`,
-      detail: cpuFriendly ? 'No dedicated GPU required' : null,
+      headline: t('hwRamTemplate', lang, { n: ramGb }),
+      detail: cpuFriendly ? t('hwNoDedicatedGpu', lang) : null,
       cpuFriendly,
     }
   }
@@ -172,7 +175,9 @@ export function hardwareSortValue(
   machine: MachineType,
   engine?: EngineKey | 'TODO'
 ): number | null {
-  const display = computeHardwareDisplay(hardware, machine, engine)
+  // `display.known` (used below) is language-independent, so the display
+  // text itself is never surfaced here — any lang works as the throwaway arg.
+  const display = computeHardwareDisplay(hardware, machine, 'en', engine)
   if (!hardware) {
     // Clients and libraries add no memory cost of their own; bundled engines
     // carry the ~8 GB floor of the model they load.

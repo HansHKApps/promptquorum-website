@@ -4,19 +4,22 @@
 import { computeHardwareDisplay } from './hardware'
 import type { MachineType } from './types'
 import type { EngineKey, ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
+import type { Language } from '@/lib/blog/blogContent'
 
 export function HardwareBlock({
   hardware,
   machine,
   engine,
+  lang,
   compact = false,
 }: {
   hardware: ToolRecordHardware | null
   machine: MachineType
   engine?: EngineKey | 'TODO'
+  lang: Language
   compact?: boolean
 }) {
-  const display = computeHardwareDisplay(hardware, machine, engine)
+  const display = computeHardwareDisplay(hardware, machine, lang, engine)
 
   if (!display.known) {
     return null
