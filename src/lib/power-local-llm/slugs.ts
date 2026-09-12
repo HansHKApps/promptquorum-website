@@ -49,6 +49,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'boltai-review':                           'boltai-review',
   'jan-review':                              'jan-review',
   'gpt4all-review':                          'gpt4all-review',
+  'docker-model-runner-review':               'docker-model-runner-review',
   'draw-things-review':                      'draw-things-review',
   'ekorbia-review':                          'ekorbia-review',
 
