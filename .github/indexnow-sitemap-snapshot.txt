@@ -246,6 +246,7 @@ https://www.promptquorum.com/power-local-llm
 https://www.promptquorum.com/power-local-llm/agent-zero-review
 https://www.promptquorum.com/power-local-llm/agentic-ai-security-identity-access
 https://www.promptquorum.com/power-local-llm/ai-generated-content-ip-risk
+https://www.promptquorum.com/power-local-llm/ai-on-device-review
 https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
 https://www.promptquorum.com/power-local-llm/aichat-review
 https://www.promptquorum.com/power-local-llm/aider-review
