@@ -257,6 +257,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'enclave-ai-review',
   // Liquid Apollo review (hybrid local+cloud) — 2026-09-12
   'liquid-apollo-review',
+  'noema-review',
 
   // Aori, RAPR AI, Open Felix, BoBe (Local AI Agents & Tool Use), Osaurus,
   // Hanoki (Easiest Desktop Apps), Voxa, Jarvis Mac (Voice/Speech/Multimodal),

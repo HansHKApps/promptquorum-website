@@ -111,6 +111,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'rikkahub':                                'rikkahub',
   'anythingllm-mobile':                      'anythingllm-mobile',
   'enclave-ai':                              'enclave-ai',
+  'noema':                                   'noema',
   'locally-ai':                              'locally-ai',
   'arbiter':                                 'arbiter',
   'stable-diffusion':                        'stable-diffusion',
