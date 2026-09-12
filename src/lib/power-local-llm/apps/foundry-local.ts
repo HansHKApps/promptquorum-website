@@ -21,6 +21,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve', 'build'],
   url: 'foundrylocal.ai',
+  reviewSlug: 'foundry-local-review', // dedicated PromptQuorum review
   tagline: {
     en: 'Microsoft\'s on-device AI runtime with SDKs for C#, JavaScript, Rust, and Python',
     de: 'Microsofts On-Device-KI-Laufzeitumgebung mit SDKs für C#, JavaScript, Rust und Python',

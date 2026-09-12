@@ -291,6 +291,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                 'stable-diffusion-review',
 
+  // AMD GAIA review — 2026-09-12
+  'amd-gaia-review':                         'amd-gaia-review',
+  // Foundry Local review (Runtimes & Inference Engines) — 2026-09-12
+  'foundry-local-review':                    'foundry-local-review',
   // Ollama review (Runtimes & Inference Engines) — 2026-09-12
   'ollama-review':                           'ollama-review',
   // Hyperlink (Nexa AI) review (Local Search / Personal Assistants) — 2026-09-12
@@ -384,4 +388,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'copilot-for-obsidian-review':              'copilot-for-obsidian-review',
   // NVIDIA Project G-Assist review — 2026-09-12
   'nvidia-g-assist-review':                   'nvidia-g-assist-review',
+  // GPUStack review — 2026-09-12
+  'gpustack-review':                          'gpustack-review',
 }

@@ -223,6 +223,8 @@ import { article as a_docker_model_runner_review } from './articles/docker-model
 import { article as a_runanywhere_review } from './articles/runanywhere-review'
 import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_ekorbia_review } from './articles/ekorbia-review'
+import { article as a_amd_gaia_review } from './articles/amd-gaia-review'
+import { article as a_foundry_local_review } from './articles/foundry-local-review'
 import { article as a_ollama_review } from './articles/ollama-review'
 import { article as a_hyperlink_nexa_review } from './articles/hyperlink-nexa-review'
 import { article as a_lm_studio_review } from './articles/lm-studio-review'
@@ -251,6 +253,7 @@ import { article as a_zed_review } from './articles/zed-review'
 import { article as a_github_copilot_cli_review } from './articles/github-copilot-cli-review'
 import { article as a_copilot_for_obsidian_review } from './articles/copilot-for-obsidian-review'
 import { article as a_nvidia_g_assist_review } from './articles/nvidia-g-assist-review'
+import { article as a_gpustack_review } from './articles/gpustack-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -464,6 +467,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pocket-ai-review':                              a_pocket_ai_review,
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                        a_stable_diffusion_review,
+  'amd-gaia-review':                                a_amd_gaia_review,
+  'foundry-local-review':                            a_foundry_local_review,
   'ollama-review':                                  a_ollama_review,
   'hyperlink-nexa-review':                          a_hyperlink_nexa_review,
   'lm-studio-review':                               a_lm_studio_review,
@@ -543,4 +548,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'github-copilot-cli-review':                       a_github_copilot_cli_review,
   'copilot-for-obsidian-review':                      a_copilot_for_obsidian_review,
   'nvidia-g-assist-review':                           a_nvidia_g_assist_review,
+  'gpustack-review':                                  a_gpustack_review,
 }

@@ -330,6 +330,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Stable Diffusion review (Image & Video Generation) — 2026-09-05
   'stable-diffusion-review',
 
+  // AMD GAIA review — 2026-09-12
+  'amd-gaia-review',
+  // Foundry Local review — 2026-09-12
+  'foundry-local-review',
   // Ollama review — 2026-09-12
   'ollama-review',
   // Hyperlink (Nexa AI) review — 2026-09-12
@@ -421,6 +425,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'copilot-for-obsidian-review',
   // NVIDIA Project G-Assist review — 2026-09-12
   'nvidia-g-assist-review',
+  // GPUStack review — 2026-09-12
+  'gpustack-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
