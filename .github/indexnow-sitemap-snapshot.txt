@@ -251,6 +251,7 @@ https://www.promptquorum.com/power-local-llm/ai-on-device-review
 https://www.promptquorum.com/power-local-llm/ai-tool-licenses-explained
 https://www.promptquorum.com/power-local-llm/aichat-review
 https://www.promptquorum.com/power-local-llm/aider-review
+https://www.promptquorum.com/power-local-llm/amd-gaia-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
 https://www.promptquorum.com/power-local-llm/anythingllm-mobile-review
 https://www.promptquorum.com/power-local-llm/anythingllm-review
@@ -342,11 +343,13 @@ https://www.promptquorum.com/power-local-llm/exo-review
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
+https://www.promptquorum.com/power-local-llm/foundry-local-review
 https://www.promptquorum.com/power-local-llm/github-copilot-cli-review
 https://www.promptquorum.com/power-local-llm/google-ai-edge-gallery-review
 https://www.promptquorum.com/power-local-llm/goose-review
 https://www.promptquorum.com/power-local-llm/gpt-engineer-review
 https://www.promptquorum.com/power-local-llm/gpt4all-review
+https://www.promptquorum.com/power-local-llm/gpustack-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review
 https://www.promptquorum.com/power-local-llm/hanoki-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
