@@ -435,6 +435,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'bmo-chatbot-review',
   // Text Generator review — 2026-09-12
   'text-generator-review',
+  // Odysseus review (Batch 21) — 2026-09-12
+  'odysseus-review',
+  // PhoneClaw review (Batch 21) — 2026-09-12
+  'phoneclaw-review',
+  // Ypipe review (Batch 21) — 2026-09-12
+  'ypipe-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

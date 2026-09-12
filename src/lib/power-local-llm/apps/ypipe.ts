@@ -39,4 +39,5 @@ export const app: ToolRecord = {
     ko: '추론 엔진, 모델, MCP 서버를 하나의 실행 파일로 묶은 에어갭 로컬 AI 클라이언트',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'ypipe-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }

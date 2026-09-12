@@ -398,4 +398,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'bmo-chatbot-review':                       'bmo-chatbot-review',
   // Text Generator review — 2026-09-12
   'text-generator-review':                    'text-generator-review',
+  // Odysseus review (Batch 21) — 2026-09-12
+  'odysseus-review':                          'odysseus-review',
+  // PhoneClaw review (Batch 21) — 2026-09-12
+  'phoneclaw-review':                         'phoneclaw-review',
+  // Ypipe review (Batch 21) — 2026-09-12
+  'ypipe-review':                             'ypipe-review',
 }
