@@ -264,6 +264,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'google-ai-edge-gallery-review':            'google-ai-edge-gallery-review',
   // Private LLM review — 2026-09-05
   'private-llm-review':                      'private-llm-review',
+  // Off Grid AI review — 2026-09-12
+  'off-grid-ai-review':                      'off-grid-ai-review',
   // Pocket AI - No Internet review — 2026-09-11
   'pocket-ai-review':                        'pocket-ai-review',
   // Stable Diffusion review — 2026-09-05

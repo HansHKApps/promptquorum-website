@@ -165,6 +165,7 @@ import { app as app_onyx } from './apps/onyx'
 import { app as app_phoneclaw } from './apps/phoneclaw'
 import { app as app_ypipe } from './apps/ypipe'
 import { app as app_n8n } from './apps/n8n'
+import { app as app_off_grid_ai } from './apps/off-grid-ai'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -276,6 +277,7 @@ export const localAiApps: ToolRecord[] = [
   app_locally_ai,
   app_arbiter,
   app_loci_ai,
+  app_off_grid_ai,
   app_stable_diffusion,
   app_comfyui,
   app_automatic1111_webui,

@@ -299,6 +299,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Private LLM review (Mobile & Edge LLMs) — 2026-09-05
   'private-llm-review',
 
+  // Off Grid AI review (Mobile & Edge LLMs) — 2026-09-12
+  'off-grid-ai-review',
+
   // Pocket AI - No Internet review (Mobile & Edge LLMs) — 2026-09-11
   'pocket-ai-review',
 

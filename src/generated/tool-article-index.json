@@ -4563,6 +4563,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "off-grid-ai-review",
+        "title": "Off Grid AI Review (2026): Cross-Platform Local AI for iOS, Android, macOS, and Windows",
+        "url": "/power-local-llm/off-grid-ai-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pocket-ai-review",
         "title": "Pocket AI Review (2026): Offline On-Device AI Chat for iPhone",
         "url": "/power-local-llm/pocket-ai-review",
@@ -4616,17 +4624,9 @@
         "url": "/power-local-llm/rikkahub-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chatty-mini-review",
-        "title": "Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android",
-        "url": "/power-local-llm/chatty-mini-review",
-        "dateModified": "2026-09-04",
-        "tier": "about"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -4967,6 +4967,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Off Grid AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "off-grid-ai-review",
+        "title": "Off Grid AI Review (2026): Cross-Platform Local AI for iOS, Android, macOS, and Windows",
+        "url": "/power-local-llm/off-grid-ai-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Stable Diffusion": {
     "articles": [
       {
@@ -5050,7 +5064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "ComfyUI": {
