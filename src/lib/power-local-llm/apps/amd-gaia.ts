@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['agent', 'chat'],
   url: 'amd-gaia.ai',
+  reviewSlug: 'amd-gaia-review', // dedicated PromptQuorum review
   tagline: {
     en: 'Local AI agents accelerated by AMD Ryzen AI NPU and iGPU hardware',
     de: 'Lokale KI-Agenten, beschleunigt durch AMD Ryzen AI NPU- und iGPU-Hardware',
