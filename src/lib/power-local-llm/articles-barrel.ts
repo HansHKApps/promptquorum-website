@@ -254,6 +254,8 @@ import { article as a_github_copilot_cli_review } from './articles/github-copilo
 import { article as a_copilot_for_obsidian_review } from './articles/copilot-for-obsidian-review'
 import { article as a_nvidia_g_assist_review } from './articles/nvidia-g-assist-review'
 import { article as a_gpustack_review } from './articles/gpustack-review'
+import { article as a_bmo_chatbot_review } from './articles/bmo-chatbot-review'
+import { article as a_text_generator_review } from './articles/text-generator-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -549,4 +551,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'copilot-for-obsidian-review':                      a_copilot_for_obsidian_review,
   'nvidia-g-assist-review':                           a_nvidia_g_assist_review,
   'gpustack-review':                                  a_gpustack_review,
+  'bmo-chatbot-review':                                a_bmo_chatbot_review,
+  'text-generator-review':                             a_text_generator_review,
 }

@@ -390,4 +390,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'nvidia-g-assist-review':                   'nvidia-g-assist-review',
   // GPUStack review — 2026-09-12
   'gpustack-review':                          'gpustack-review',
+  // BMO Chatbot review — 2026-09-12
+  'bmo-chatbot-review':                       'bmo-chatbot-review',
+  // Text Generator review — 2026-09-12
+  'text-generator-review':                    'text-generator-review',
 }
