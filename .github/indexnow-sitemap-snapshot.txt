@@ -338,6 +338,7 @@ https://www.promptquorum.com/power-local-llm/enterprise-chatbot-deployment-helpd
 https://www.promptquorum.com/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim
 https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide
 https://www.promptquorum.com/power-local-llm/exllamav2-explained
+https://www.promptquorum.com/power-local-llm/exo-review
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
@@ -416,6 +417,7 @@ https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-review
 https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/noema-review
+https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
 https://www.promptquorum.com/power-local-llm/ollama-review
