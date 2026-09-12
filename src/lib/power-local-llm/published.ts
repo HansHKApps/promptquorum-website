@@ -281,6 +281,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'chatty-mini-review',
   'whisper-cpp-review',
   'faster-whisper-review',
+  'dograh-review',
   'piper-tts-review',
   'coqui-tts-review',
   'xtts-v2-review',
