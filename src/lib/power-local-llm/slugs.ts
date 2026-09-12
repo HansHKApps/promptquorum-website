@@ -347,4 +347,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'macwhisper-review':                       'macwhisper-review',
   // Solair AI review — 2026-09-12
   'solair-ai-review':                        'solair-ai-review',
+  // Kilo Code review — 2026-09-12
+  'kilo-code-review':                        'kilo-code-review',
 }

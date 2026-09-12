@@ -382,6 +382,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'macwhisper-review',
   // Solair AI review — 2026-09-12
   'solair-ai-review',
+  'kilo-code-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
