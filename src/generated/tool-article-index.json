@@ -97,6 +97,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "toolneuron-review",
+        "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
+        "url": "/power-local-llm/toolneuron-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pocket-ai-review",
         "title": "Pocket AI Review (2026): Offline On-Device AI Chat for iPhone",
         "url": "/power-local-llm/pocket-ai-review",
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/koboldcpp-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review (2026): On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 121,
+    "totalCount": 122,
     "capped": true
   },
   "vLLM": {
@@ -4725,6 +4725,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "toolneuron-review",
+        "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
+        "url": "/power-local-llm/toolneuron-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
@@ -4732,7 +4740,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Maid": {
@@ -4823,6 +4831,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "toolneuron-review",
+        "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
+        "url": "/power-local-llm/toolneuron-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -4846,7 +4862,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "AnythingLLM Mobile": {
@@ -6035,6 +6051,20 @@
       }
     ],
     "totalCount": 4,
+    "capped": false
+  },
+  "ToolNeuron": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "toolneuron-review",
+        "title": "ToolNeuron Review (2026): Open-Source Encrypted Android AI App",
+        "url": "/power-local-llm/toolneuron-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   }
 }

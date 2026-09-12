@@ -167,6 +167,8 @@ import { app as app_phoneclaw } from './apps/phoneclaw'
 import { app as app_ypipe } from './apps/ypipe'
 import { app as app_n8n } from './apps/n8n'
 import { app as app_off_grid_ai } from './apps/off-grid-ai'
+import { app as app_toolneuron } from './apps/toolneuron'
+import { app as app_localai_apexcreator } from './apps/localai-apexcreator'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -324,6 +326,8 @@ export const localAiApps: ToolRecord[] = [
   app_phoneclaw,
   app_ypipe,
   app_n8n,
+  app_toolneuron,
+  app_localai_apexcreator,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

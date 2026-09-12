@@ -369,6 +369,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'exllamav2-explained',
   // Agent frameworks series — 2026-09-07 (SuperAGI review, 8/14)
   'superagi-review',
+  // ToolNeuron review — 2026-09-12
+  'toolneuron-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

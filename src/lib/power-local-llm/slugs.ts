@@ -335,4 +335,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'privategpt-review':                       'privategpt-review',
   // SuperAGI review (agent frameworks series, 8/14) — 2026-09-07
   'superagi-review':                         'superagi-review',
+  // ToolNeuron review — 2026-09-12
+  'toolneuron-review':                       'toolneuron-review',
 }
