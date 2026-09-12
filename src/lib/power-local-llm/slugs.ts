@@ -211,6 +211,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Liquid Apollo review (hybrid local+cloud) — 2026-09-12
   'liquid-apollo-review':                    'liquid-apollo-review',
   'noema-review':                            'noema-review',
+  'ai-on-device-review':                     'ai-on-device-review',
 
   // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster
   'edge-ai-hardware-for-local-llms':              'edge-ai-hardware-for-local-llms',
