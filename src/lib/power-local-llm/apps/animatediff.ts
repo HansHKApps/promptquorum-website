@@ -34,4 +34,5 @@ export const app: ToolRecord = {
     ko: 'Stable Diffusion 텍스트 프롬프트 기반 영상 생성 — 릴리스 없음, 2024년 마지막 커밋(2년 이상)',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'animatediff-video-generation-guide-2026',
 }

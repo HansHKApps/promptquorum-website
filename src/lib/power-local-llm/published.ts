@@ -330,6 +330,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Ollama review — 2026-09-12
   'ollama-review',
+  // Hyperlink (Nexa AI) review — 2026-09-12
+  'hyperlink-nexa-review',
   // LM Studio review — 2026-09-12
   'lm-studio-review',
 
