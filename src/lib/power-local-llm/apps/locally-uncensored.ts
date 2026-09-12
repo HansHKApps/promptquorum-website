@@ -34,4 +34,5 @@ export const app: ToolRecord = {
     ko: '채팅 / 코드 / 이미지 / 비디오 / LoRA, 설치 파일 하나로',
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'locally-uncensored-review', // dedicated PromptQuorum review
 }

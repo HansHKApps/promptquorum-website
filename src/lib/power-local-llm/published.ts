@@ -251,6 +251,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'boltai-review',
   'jan-review',
   'gpt4all-review',
+  'locally-uncensored-review',
   'docker-model-runner-review',
   'runanywhere-review',
   'draw-things-review',
