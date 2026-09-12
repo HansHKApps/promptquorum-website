@@ -33,4 +33,5 @@ export const app: ToolRecord = {
     ko: '코딩, 자동화, 워크플로를 위한 로컬 우선 AI 에이전트 — Linux Foundation이 관리',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'goose-review',
 }

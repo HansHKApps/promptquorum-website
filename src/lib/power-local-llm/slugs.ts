@@ -213,6 +213,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'atomic-chat-review':                           'atomic-chat-review',
   // Atomic Agent review — 2026-09-12
   'atomic-agent-review':                          'atomic-agent-review',
+  // goose review — 2026-09-12
+  'goose-review':                                 'goose-review',
+  // Atomic Bot review — 2026-09-12
+  'atomic-bot-review':                            'atomic-bot-review',
   // h2oGPT enterprise review — 2026-09-03
   'h2ogpt-review':                           'h2ogpt-review-2026',
   // Enclave AI review — 2026-09-03
