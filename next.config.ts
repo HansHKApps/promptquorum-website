@@ -10,9 +10,19 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   trailingSlash: false,
+  // Build was OOMing ("JavaScript heap out of memory") in the prerender/
+  // static-generation phase — this site fans out to ~684 articles x up to 9
+  // locales. Per Next.js's own memory-usage guide, source maps are kept in
+  // memory by default during that phase; disabling them there (and turning
+  // on the general webpack memory optimizations) is the documented fix for
+  // OOM appearing after "Generating static pages", independent of the
+  // per-process heap flags in build-with-fix.js, which weren't reaching the
+  // worker process that actually crashed.
+  enablePrerenderSourceMaps: false,
   experimental: {
     cpus: 1,
     workerThreads: false,
+    webpackMemoryOptimizations: true,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
