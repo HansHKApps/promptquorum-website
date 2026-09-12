@@ -33,4 +33,5 @@ export const app: ToolRecord = {
     ko: 'llama.cpp를 통해 탐색하고 파일을 편집하며 셸 명령을 실행하는 로컬 우선 AI 에이전트',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'atomic-agent-review',
 }
