@@ -116,6 +116,7 @@ import { app as app_chapper } from './apps/chapper'
 import { app as app_rikkahub } from './apps/rikkahub'
 import { app as app_anythingllm_mobile } from './apps/anythingllm-mobile'
 import { app as app_enclave_ai } from './apps/enclave-ai'
+import { app as app_liquid_apollo } from './apps/liquid-apollo'
 import { app as app_locally_ai } from './apps/locally-ai'
 import { app as app_arbiter } from './apps/arbiter'
 import { app as app_loci_ai } from './apps/loci-ai'
@@ -274,6 +275,7 @@ export const localAiApps: ToolRecord[] = [
   app_rikkahub,
   app_anythingllm_mobile,
   app_enclave_ai,
+  app_liquid_apollo,
   app_locally_ai,
   app_arbiter,
   app_loci_ai,

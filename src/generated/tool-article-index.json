@@ -2,6 +2,14 @@
   "Ollama": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "big-agi-review",
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/ekorbia-review",
         "dateModified": "2026-09-07",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpt4all-review",
-        "title": "GPT4All Review 2026: Free Offline AI Chat App by Nomic AI",
-        "url": "/power-local-llm/gpt4all-review",
-        "dateModified": "2026-09-07",
-        "tier": "about"
       }
     ],
-    "totalCount": 224,
+    "totalCount": 225,
     "capped": true
   },
   "llama.cpp": {
@@ -644,6 +644,14 @@
   "LM Studio": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "big-agi-review",
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
@@ -714,17 +722,9 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "maid-review",
-        "title": "Maid Review (2026): Open-Source Local LLM Chat App for Android",
-        "url": "/power-local-llm/maid-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 113,
+    "totalCount": 114,
     "capped": true
   },
   "Atomic Chat": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "Msty": {
@@ -4563,6 +4563,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "off-grid-ai-review",
         "title": "Off Grid AI Review (2026): Cross-Platform Local AI for iOS, Android, macOS, and Windows",
         "url": "/power-local-llm/off-grid-ai-review",
@@ -4616,17 +4624,9 @@
         "url": "/power-local-llm/maid-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rikkahub-review",
-        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
-        "url": "/power-local-llm/rikkahub-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Google AI Edge Gallery": {
@@ -4869,6 +4869,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -4876,7 +4884,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Enclave AI": {
@@ -4887,6 +4895,14 @@
         "title": "Enclave AI Review 2026: On-Device AI for iPhone, iPad, Mac",
         "url": "/power-local-llm/enclave-ai-review-2026",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
@@ -4906,7 +4922,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
+    "capped": false
+  },
+  "Liquid Apollo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Locally AI": {
@@ -4948,9 +4978,17 @@
         "url": "/power-local-llm/arbiter-local-ai-chat-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Loci AI": {

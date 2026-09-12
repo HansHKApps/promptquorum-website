@@ -208,6 +208,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'h2ogpt-review':                           'h2ogpt-review-2026',
   // Enclave AI review — 2026-09-03
   'enclave-ai-review':                       'enclave-ai-review-2026',
+  // Liquid Apollo review (hybrid local+cloud) — 2026-09-12
+  'liquid-apollo-review':                    'liquid-apollo-review',
 
   // Edge & Embedded AI — 2026-09-02, folded in from the removed /edge-ai cluster
   'edge-ai-hardware-for-local-llms':              'edge-ai-hardware-for-local-llms',

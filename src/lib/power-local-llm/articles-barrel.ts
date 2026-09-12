@@ -100,6 +100,7 @@ import { article as a_best_local_coding_models_2026 } from './articles/best-loca
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
 import { article as a_best_local_llm_apps_iphone_2026 } from './articles/best-local-llm-apps-iphone-2026'
 import { article as a_enclave_ai_review_2026 } from './articles/enclave-ai-review-2026'
+import { article as a_liquid_apollo_review } from './articles/liquid-apollo-review'
 import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
@@ -368,6 +369,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'us-state-ai-employment-laws-compliance':            a_us_state_ai_employment_laws_compliance,
   // Enclave AI review — 2026-09-03
   'enclave-ai-review-2026':                            a_enclave_ai_review_2026,
+  // Liquid Apollo review (hybrid local+cloud) — 2026-09-12
+  'liquid-apollo-review':                              a_liquid_apollo_review,
   // Aori, RAPR AI, Open Felix, BoBe, Osaurus, Hanoki, Voxa, Jarvis (Mac),
   // Locally AI, Arbiter reviews — 2026-09-04
   'aori-ai-personal-agent-review':                     a_aori_ai_personal_agent_review,
