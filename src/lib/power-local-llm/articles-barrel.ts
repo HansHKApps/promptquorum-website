@@ -48,6 +48,7 @@ import { article as a_blackbox_ai_cli_review } from './articles/blackbox-ai-cli-
 import { article as a_privategpt_review } from './articles/privategpt-review'
 import { article as a_whisper_cpp_review } from './articles/whisper-cpp-review'
 import { article as a_faster_whisper_review } from './articles/faster-whisper-review'
+import { article as a_dograh_review } from './articles/dograh-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
 import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
@@ -413,6 +414,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pearai-review':                                 a_pearai_review,
   'whisper-cpp-review':                            a_whisper_cpp_review,
   'faster-whisper-review':                         a_faster_whisper_review,
+  'dograh-review':                                 a_dograh_review,
   'piper-tts-review':                               a_piper_tts_review,
   'coqui-tts-review':                               a_coqui_tts_review,
   'xtts-v2-review':                                 a_xtts_v2_review,

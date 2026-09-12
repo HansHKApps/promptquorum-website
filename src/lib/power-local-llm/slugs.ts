@@ -254,6 +254,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
   'faster-whisper-review':                   'faster-whisper-review',
+  'dograh-review':                           'dograh-review',
   'piper-tts-review':                        'piper-tts-review',
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',

@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['audio', 'agent'],
   url: 'dograh.com',
+  reviewSlug: 'dograh-review',
   tagline: {
     en: 'Open-source, self-hosted voice AI platform — a Vapi and Retell alternative with bring-your-own model',
     de: 'Open-Source-Voice-KI-Plattform zum Selbsthosten – eine Alternative zu Vapi und Retell mit eigenem Modell (Bring-your-own-Model)',
