@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'exolabs.net',
+  reviewSlug: 'exo-review',
   tagline: {
     en: 'Distributed inference — run large models by pooling compute across multiple everyday devices',
     de: 'Verteilte Inferenz – große Modelle ausführen, indem Rechenleistung mehrerer alltäglicher Geräte gebündelt wird',

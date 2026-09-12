@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   addedDate: '2026-09-05',
   status: 'listed',
   uses: ['chat', 'agent'],
+  reviewSlug: 'nvidia-g-assist-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   url: 'nvidia.com/en-us/software/nvidia-app/g-assist',
   tagline: {
     en: 'On-device AI assistant for GeForce RTX PCs, running a local small language model to tune games and system settings',

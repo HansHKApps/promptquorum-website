@@ -261,6 +261,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'whisper-cpp-review':                      'whisper-cpp-review',
   'faster-whisper-review':                   'faster-whisper-review',
   'dograh-review':                           'dograh-review',
+  'exo-review':                              'exo-review',
   'piper-tts-review':                        'piper-tts-review',
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',
@@ -379,4 +380,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'github-copilot-cli-review':                'github-copilot-cli-review',
   // Copilot for Obsidian review — 2026-09-12
   'copilot-for-obsidian-review':              'copilot-for-obsidian-review',
+  // NVIDIA Project G-Assist review — 2026-09-12
+  'nvidia-g-assist-review':                   'nvidia-g-assist-review',
 }

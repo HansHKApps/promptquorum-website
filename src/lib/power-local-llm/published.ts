@@ -294,6 +294,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'whisper-cpp-review',
   'faster-whisper-review',
   'dograh-review',
+  // exo review — 2026-09-12
+  'exo-review',
   'piper-tts-review',
   'coqui-tts-review',
   'xtts-v2-review',
@@ -415,6 +417,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'github-copilot-cli-review',
   // Copilot for Obsidian review — 2026-09-12
   'copilot-for-obsidian-review',
+  // NVIDIA Project G-Assist review — 2026-09-12
+  'nvidia-g-assist-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
