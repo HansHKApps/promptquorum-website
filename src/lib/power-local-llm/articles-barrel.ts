@@ -66,6 +66,7 @@ import { article as a_idefics_review } from './articles/idefics-review'
 import { article as a_mlc_chat_review } from './articles/mlc-chat-review'
 import { article as a_pocketpal_ai_review } from './articles/pocketpal-ai-review'
 import { article as a_private_llm_review } from './articles/private-llm-review'
+import { article as a_google_ai_edge_gallery_review } from './articles/google-ai-edge-gallery-review'
 import { article as a_pocket_ai_review } from './articles/pocket-ai-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
@@ -404,6 +405,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mlc-chat-review':                                a_mlc_chat_review,
   'pocketpal-ai-review':                           a_pocketpal_ai_review,
   'private-llm-review':                            a_private_llm_review,
+  'google-ai-edge-gallery-review':                 a_google_ai_edge_gallery_review,
   // Pocket AI - No Internet review — 2026-09-11
   'pocket-ai-review':                              a_pocket_ai_review,
   // Stable Diffusion review — 2026-09-05

@@ -4455,6 +4455,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review (2026): Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-mobile-review",
         "title": "AnythingLLM Mobile Review (2026): On-Device Chat + RAG",
         "url": "/power-local-llm/anythingllm-mobile-review",
@@ -4516,17 +4524,9 @@
         "url": "/power-local-llm/chatty-mini-review",
         "dateModified": "2026-09-04",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Pocket AI": {
@@ -4555,6 +4555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review (2026): Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pocket-ai-review",
         "title": "Pocket AI Review (2026): Offline On-Device AI Chat for iPhone",
         "url": "/power-local-llm/pocket-ai-review",
@@ -4616,18 +4624,32 @@
         "url": "/power-local-llm/chatty-mini-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      }
+    ],
+    "totalCount": 16,
+    "capped": true
+  },
+  "Google AI Edge Gallery": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "google-ai-edge-gallery-review",
+        "title": "Google AI Edge Gallery Review (2026): Gemma 4 On-Device Chat for iPhone",
+        "url": "/power-local-llm/google-ai-edge-gallery-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-iphone-2026",
-        "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
-        "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
+        "slug": "loci-ai-review-offline-local-ai",
+        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
+        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
+        "dateModified": "2026-08-22",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
-    "capped": true
+    "totalCount": 2,
+    "capped": false
   },
   "LLM Farm": {
     "articles": [
