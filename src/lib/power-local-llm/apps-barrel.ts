@@ -174,6 +174,8 @@ import { app as app_diffusionbee } from './apps/diffusionbee'
 import { app as app_localai_apexcreator } from './apps/localai-apexcreator'
 import { app as app_macwhisper } from './apps/macwhisper'
 import { app as app_solair_ai } from './apps/solair-ai'
+import { app as app_docker_model_runner } from './apps/docker-model-runner'
+import { app as app_on_device_ai } from './apps/on-device-ai'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -333,6 +335,8 @@ export const localAiApps: ToolRecord[] = [
   app_phoneclaw,
   app_ypipe,
   app_n8n,
+  app_docker_model_runner,
+  app_on_device_ai,
   app_toolneuron,
   app_localai_apexcreator,
   app_diffusionbee,

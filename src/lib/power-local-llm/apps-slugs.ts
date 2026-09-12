@@ -160,6 +160,13 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'phoneclaw':                               'phoneclaw',
   'ypipe':                                   'ypipe',
   'n8n':                                     'n8n',
+  'docker-model-runner':                     'docker-model-runner',
+  'on-device-ai':                            'on-device-ai',
+  'google-ai-edge-gallery':                  'google-ai-edge-gallery',
+  'toolneuron':                              'toolneuron',
+  'diffusionbee':                            'diffusionbee',
+  'macwhisper':                              'macwhisper',
+  'solair-ai':                               'solair-ai',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
