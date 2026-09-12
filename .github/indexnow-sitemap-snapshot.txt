@@ -350,6 +350,7 @@ https://www.promptquorum.com/power-local-llm/h2ogpt-review
 https://www.promptquorum.com/power-local-llm/hanoki-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/hermes-agent-review
+https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
 https://www.promptquorum.com/power-local-llm/invokeai-review
 https://www.promptquorum.com/power-local-llm/jan-review
