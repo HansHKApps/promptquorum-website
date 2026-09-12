@@ -216,6 +216,7 @@ import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_jan_review } from './articles/jan-review'
 import { article as a_gpt4all_review } from './articles/gpt4all-review'
 import { article as a_docker_model_runner_review } from './articles/docker-model-runner-review'
+import { article as a_runanywhere_review } from './articles/runanywhere-review'
 import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_ekorbia_review } from './articles/ekorbia-review'
 import { article as a_llama_cpp_explained } from './articles/llama-cpp-explained'
@@ -380,6 +381,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'jan-review':                                        a_jan_review,
   'gpt4all-review':                                    a_gpt4all_review,
   'docker-model-runner-review':                        a_docker_model_runner_review,
+  'runanywhere-review':                                a_runanywhere_review,
   'draw-things-review':                                a_draw_things_review,
   'ekorbia-review':                                    a_ekorbia_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
