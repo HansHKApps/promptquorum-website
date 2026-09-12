@@ -1,0 +1,652 @@
+{
+  "llama-cpp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llama-cpp-explained",
+    "url": "/power-local-llm/llama-cpp-explained"
+  },
+  "vllm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "vllm-explained",
+    "url": "/power-local-llm/vllm-explained"
+  },
+  "localai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localai-explained",
+    "url": "/power-local-llm/localai-explained"
+  },
+  "tensorrt-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tensorrt-llm-explained",
+    "url": "/power-local-llm/tensorrt-llm-explained"
+  },
+  "mlc-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlc-llm-explained",
+    "url": "/power-local-llm/mlc-llm-explained"
+  },
+  "sglang": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sglang-explained",
+    "url": "/power-local-llm/sglang-explained"
+  },
+  "exllamav2": {
+    "cluster": "power-local-llm",
+    "urlSlug": "exllamav2-explained",
+    "url": "/power-local-llm/exllamav2-explained"
+  },
+  "koboldcpp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "koboldcpp-review",
+    "url": "/power-local-llm/koboldcpp-review"
+  },
+  "llamafile": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llamafile-explained",
+    "url": "/power-local-llm/llamafile-explained"
+  },
+  "mlx-lm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlx-lm-explained",
+    "url": "/power-local-llm/mlx-lm-explained"
+  },
+  "atomic-chat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "atomic-chat-review",
+    "url": "/power-local-llm/atomic-chat-review"
+  },
+  "jan": {
+    "cluster": "power-local-llm",
+    "urlSlug": "jan-review",
+    "url": "/power-local-llm/jan-review"
+  },
+  "gpt4all": {
+    "cluster": "power-local-llm",
+    "urlSlug": "gpt4all-review",
+    "url": "/power-local-llm/gpt4all-review"
+  },
+  "anythingllm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "anythingllm-review",
+    "url": "/power-local-llm/anythingllm-review"
+  },
+  "msty": {
+    "cluster": "power-local-llm",
+    "urlSlug": "msty-review",
+    "url": "/power-local-llm/msty-review"
+  },
+  "cherry-studio": {
+    "cluster": "local-llms",
+    "urlSlug": "cherry-studio-ai-desktop-client",
+    "url": "/local-llms/cherry-studio-ai-desktop-client"
+  },
+  "backyard-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "backyard-ai-review-local-roleplay",
+    "url": "/power-local-llm/backyard-ai-review-local-roleplay"
+  },
+  "enchanted": {
+    "cluster": "power-local-llm",
+    "urlSlug": "enchanted-review",
+    "url": "/power-local-llm/enchanted-review"
+  },
+  "h2ogpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "h2ogpt-review",
+    "url": "/power-local-llm/h2ogpt-review"
+  },
+  "open-interpreter": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-interpreter-review",
+    "url": "/power-local-llm/open-interpreter-review"
+  },
+  "boltai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "boltai-review",
+    "url": "/power-local-llm/boltai-review"
+  },
+  "draw-things": {
+    "cluster": "power-local-llm",
+    "urlSlug": "draw-things-review",
+    "url": "/power-local-llm/draw-things-review"
+  },
+  "ekorbia": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ekorbia-review",
+    "url": "/power-local-llm/ekorbia-review"
+  },
+  "hanoki": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hanoki-review",
+    "url": "/power-local-llm/hanoki-review"
+  },
+  "open-felix": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-felix-review",
+    "url": "/power-local-llm/open-felix-review"
+  },
+  "osaurus": {
+    "cluster": "power-local-llm",
+    "urlSlug": "osaurus-ai-review",
+    "url": "/power-local-llm/osaurus-ai-review"
+  },
+  "bobe": {
+    "cluster": "power-local-llm",
+    "urlSlug": "bobe-review",
+    "url": "/power-local-llm/bobe-review"
+  },
+  "voxa": {
+    "cluster": "power-local-llm",
+    "urlSlug": "voxa-review",
+    "url": "/power-local-llm/voxa-review"
+  },
+  "jarvis": {
+    "cluster": "power-local-llm",
+    "urlSlug": "jarvis-mac-review",
+    "url": "/power-local-llm/jarvis-mac-review"
+  },
+  "open-webui": {
+    "cluster": "local-llms",
+    "urlSlug": "open-webui-review",
+    "url": "/local-llms/open-webui-review"
+  },
+  "librechat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "librechat-review",
+    "url": "/power-local-llm/librechat-review"
+  },
+  "text-generation-webui": {
+    "cluster": "local-llms",
+    "urlSlug": "text-generation-webui-review",
+    "url": "/local-llms/text-generation-webui-review"
+  },
+  "sillytavern": {
+    "cluster": "local-llms",
+    "urlSlug": "sillytavern-review",
+    "url": "/local-llms/sillytavern-review"
+  },
+  "lobechat": {
+    "cluster": "local-llms",
+    "urlSlug": "lobechat-review",
+    "url": "/local-llms/lobechat-review"
+  },
+  "big-agi": {
+    "cluster": "local-llms",
+    "urlSlug": "big-agi-review",
+    "url": "/local-llms/big-agi-review"
+  },
+  "nextchat": {
+    "cluster": "local-llms",
+    "urlSlug": "nextchat-review",
+    "url": "/local-llms/nextchat-review"
+  },
+  "page-assist": {
+    "cluster": "local-llms",
+    "urlSlug": "page-assist-review",
+    "url": "/local-llms/page-assist-review"
+  },
+  "chatbox": {
+    "cluster": "local-llms",
+    "urlSlug": "chatbox-review",
+    "url": "/local-llms/chatbox-review"
+  },
+  "continue-dev": {
+    "cluster": "power-local-llm",
+    "urlSlug": "continue-dev-review",
+    "url": "/power-local-llm/continue-dev-review"
+  },
+  "cline": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cline-review",
+    "url": "/power-local-llm/cline-review"
+  },
+  "pearai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pearai-review",
+    "url": "/power-local-llm/pearai-review"
+  },
+  "windsurf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "windsurf-review",
+    "url": "/power-local-llm/windsurf-review"
+  },
+  "sourcegraph-cody": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sourcegraph-cody-review",
+    "url": "/power-local-llm/sourcegraph-cody-review"
+  },
+  "tabby": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tabby-review",
+    "url": "/power-local-llm/tabby-review"
+  },
+  "codegpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "codegpt-review",
+    "url": "/power-local-llm/codegpt-review"
+  },
+  "openhands": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openhands-review",
+    "url": "/power-local-llm/openhands-review"
+  },
+  "cursor": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cursor-local-mode-review",
+    "url": "/power-local-llm/cursor-local-mode-review"
+  },
+  "twinny": {
+    "cluster": "power-local-llm",
+    "urlSlug": "twinny-review",
+    "url": "/power-local-llm/twinny-review"
+  },
+  "bodega-one-code": {
+    "cluster": "power-local-llm",
+    "urlSlug": "bodega-one-code-review",
+    "url": "/power-local-llm/bodega-one-code-review"
+  },
+  "aider": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aider-review",
+    "url": "/power-local-llm/aider-review"
+  },
+  "shellgpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "shell-gpt-review",
+    "url": "/power-local-llm/shell-gpt-review"
+  },
+  "aichat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aichat-review",
+    "url": "/power-local-llm/aichat-review"
+  },
+  "tgpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tgpt-review",
+    "url": "/power-local-llm/tgpt-review"
+  },
+  "blackbox-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "blackbox-ai-cli-review",
+    "url": "/power-local-llm/blackbox-ai-cli-review"
+  },
+  "privategpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "privategpt-review",
+    "url": "/power-local-llm/privategpt-review"
+  },
+  "quivr": {
+    "cluster": "power-local-llm",
+    "urlSlug": "quivr-self-hosted-knowledge-assistant-review",
+    "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review"
+  },
+  "khoj": {
+    "cluster": "power-local-llm",
+    "urlSlug": "khoj-ai-second-brain-review",
+    "url": "/power-local-llm/khoj-ai-second-brain-review"
+  },
+  "dify": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dify-ai-workflow-builder-review",
+    "url": "/power-local-llm/dify-ai-workflow-builder-review"
+  },
+  "flowise": {
+    "cluster": "power-local-llm",
+    "urlSlug": "flowise-ai-visual-workflow-builder-review",
+    "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review"
+  },
+  "langflow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "langflow-visual-ai-orchestration-review",
+    "url": "/power-local-llm/langflow-visual-ai-orchestration-review"
+  },
+  "llamaindex": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llamaindex-rag-framework-review",
+    "url": "/power-local-llm/llamaindex-rag-framework-review"
+  },
+  "haystack": {
+    "cluster": "power-local-llm",
+    "urlSlug": "haystack-deepset-rag-framework-review",
+    "url": "/power-local-llm/haystack-deepset-rag-framework-review"
+  },
+  "ragflow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ragflow-document-understanding-rag-review",
+    "url": "/power-local-llm/ragflow-document-understanding-rag-review"
+  },
+  "txtai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "txtai-embedded-vector-database-review",
+    "url": "/power-local-llm/txtai-embedded-vector-database-review"
+  },
+  "langchain": {
+    "cluster": "power-local-llm",
+    "urlSlug": "langchain-review",
+    "url": "/power-local-llm/langchain-review"
+  },
+  "crewai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "crewai-review",
+    "url": "/power-local-llm/crewai-review"
+  },
+  "autogen": {
+    "cluster": "power-local-llm",
+    "urlSlug": "autogen-review",
+    "url": "/power-local-llm/autogen-review"
+  },
+  "semantic-kernel": {
+    "cluster": "power-local-llm",
+    "urlSlug": "semantic-kernel-review",
+    "url": "/power-local-llm/semantic-kernel-review"
+  },
+  "langgraph": {
+    "cluster": "power-local-llm",
+    "urlSlug": "langgraph-review",
+    "url": "/power-local-llm/langgraph-review"
+  },
+  "letta": {
+    "cluster": "power-local-llm",
+    "urlSlug": "letta-review",
+    "url": "/power-local-llm/letta-review"
+  },
+  "pydantic-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pydantic-ai-review",
+    "url": "/power-local-llm/pydantic-ai-review"
+  },
+  "superagi": {
+    "cluster": "power-local-llm",
+    "urlSlug": "superagi-review",
+    "url": "/power-local-llm/superagi-review"
+  },
+  "leon-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "leon-ai-review",
+    "url": "/power-local-llm/leon-ai-review"
+  },
+  "agent-zero": {
+    "cluster": "power-local-llm",
+    "urlSlug": "agent-zero-review",
+    "url": "/power-local-llm/agent-zero-review"
+  },
+  "gpt-engineer": {
+    "cluster": "power-local-llm",
+    "urlSlug": "gpt-engineer-review",
+    "url": "/power-local-llm/gpt-engineer-review"
+  },
+  "camel": {
+    "cluster": "power-local-llm",
+    "urlSlug": "camel-review",
+    "url": "/power-local-llm/camel-review"
+  },
+  "taskweaver": {
+    "cluster": "power-local-llm",
+    "urlSlug": "taskweaver-review",
+    "url": "/power-local-llm/taskweaver-review"
+  },
+  "dspy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dspy-review",
+    "url": "/power-local-llm/dspy-review"
+  },
+  "openclaw": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openclaw-review",
+    "url": "/power-local-llm/openclaw-review"
+  },
+  "hermes-agent": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hermes-agent-review",
+    "url": "/power-local-llm/hermes-agent-review"
+  },
+  "msty-go": {
+    "cluster": "power-local-llm",
+    "urlSlug": "msty-go-review",
+    "url": "/power-local-llm/msty-go-review"
+  },
+  "whisper-cpp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "whisper-cpp-review",
+    "url": "/power-local-llm/whisper-cpp-review"
+  },
+  "faster-whisper": {
+    "cluster": "power-local-llm",
+    "urlSlug": "faster-whisper-review",
+    "url": "/power-local-llm/faster-whisper-review"
+  },
+  "piper-tts": {
+    "cluster": "power-local-llm",
+    "urlSlug": "piper-tts-review",
+    "url": "/power-local-llm/piper-tts-review"
+  },
+  "coqui-tts": {
+    "cluster": "power-local-llm",
+    "urlSlug": "coqui-tts-review",
+    "url": "/power-local-llm/coqui-tts-review"
+  },
+  "xtts-v2": {
+    "cluster": "power-local-llm",
+    "urlSlug": "xtts-v2-review",
+    "url": "/power-local-llm/xtts-v2-review"
+  },
+  "bark": {
+    "cluster": "power-local-llm",
+    "urlSlug": "bark-tts-review",
+    "url": "/power-local-llm/bark-tts-review"
+  },
+  "styletts-2": {
+    "cluster": "power-local-llm",
+    "urlSlug": "styletts-2-review",
+    "url": "/power-local-llm/styletts-2-review"
+  },
+  "llava": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llava-review",
+    "url": "/power-local-llm/llava-review"
+  },
+  "ollama-vision-models": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ollama-vision-models-review",
+    "url": "/power-local-llm/ollama-vision-models-review"
+  },
+  "idefics": {
+    "cluster": "power-local-llm",
+    "urlSlug": "idefics-review",
+    "url": "/power-local-llm/idefics-review"
+  },
+  "mlc-chat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlc-chat-review",
+    "url": "/power-local-llm/mlc-chat-review"
+  },
+  "pocketpal-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pocketpal-ai-review",
+    "url": "/power-local-llm/pocketpal-ai-review"
+  },
+  "pocket-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pocket-ai-review",
+    "url": "/power-local-llm/pocket-ai-review"
+  },
+  "private-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "private-llm-review",
+    "url": "/power-local-llm/private-llm-review"
+  },
+  "google-ai-edge-gallery": {
+    "cluster": "power-local-llm",
+    "urlSlug": "google-ai-edge-gallery-review",
+    "url": "/power-local-llm/google-ai-edge-gallery-review"
+  },
+  "llm-farm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llm-farm-review",
+    "url": "/power-local-llm/llm-farm-review"
+  },
+  "layla": {
+    "cluster": "power-local-llm",
+    "urlSlug": "layla-review",
+    "url": "/power-local-llm/layla-review"
+  },
+  "maid": {
+    "cluster": "power-local-llm",
+    "urlSlug": "maid-review",
+    "url": "/power-local-llm/maid-review"
+  },
+  "chapper": {
+    "cluster": "power-local-llm",
+    "urlSlug": "chapper-review",
+    "url": "/power-local-llm/chapper-review"
+  },
+  "rikkahub": {
+    "cluster": "power-local-llm",
+    "urlSlug": "rikkahub-review",
+    "url": "/power-local-llm/rikkahub-review"
+  },
+  "anythingllm-mobile": {
+    "cluster": "power-local-llm",
+    "urlSlug": "anythingllm-mobile-review",
+    "url": "/power-local-llm/anythingllm-mobile-review"
+  },
+  "enclave-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "enclave-ai-review",
+    "url": "/power-local-llm/enclave-ai-review"
+  },
+  "liquid-apollo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "liquid-apollo-review",
+    "url": "/power-local-llm/liquid-apollo-review"
+  },
+  "noema": {
+    "cluster": "power-local-llm",
+    "urlSlug": "noema-review",
+    "url": "/power-local-llm/noema-review"
+  },
+  "ai-on-device": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ai-on-device-review",
+    "url": "/power-local-llm/ai-on-device-review"
+  },
+  "locally-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "locally-ai-review",
+    "url": "/power-local-llm/locally-ai-review"
+  },
+  "arbiter": {
+    "cluster": "power-local-llm",
+    "urlSlug": "arbiter-local-ai-chat-review",
+    "url": "/power-local-llm/arbiter-local-ai-chat-review"
+  },
+  "loci-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "loci-ai-review-offline-local-ai",
+    "url": "/power-local-llm/loci-ai-review-offline-local-ai"
+  },
+  "off-grid-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "off-grid-ai-review",
+    "url": "/power-local-llm/off-grid-ai-review"
+  },
+  "stable-diffusion": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stable-diffusion-review",
+    "url": "/power-local-llm/stable-diffusion-review"
+  },
+  "comfyui": {
+    "cluster": "power-local-llm",
+    "urlSlug": "comfyui-review",
+    "url": "/power-local-llm/comfyui-review"
+  },
+  "automatic1111-webui": {
+    "cluster": "power-local-llm",
+    "urlSlug": "automatic1111-review",
+    "url": "/power-local-llm/automatic1111-review"
+  },
+  "invoke-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "invokeai-review",
+    "url": "/power-local-llm/invokeai-review"
+  },
+  "fooocus": {
+    "cluster": "power-local-llm",
+    "urlSlug": "fooocus-review",
+    "url": "/power-local-llm/fooocus-review"
+  },
+  "stableswarmui": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stableswarmui-review",
+    "url": "/power-local-llm/stableswarmui-review"
+  },
+  "controlnet": {
+    "cluster": "power-local-llm",
+    "urlSlug": "controlnet-review",
+    "url": "/power-local-llm/controlnet-review"
+  },
+  "real-esrgan": {
+    "cluster": "power-local-llm",
+    "urlSlug": "real-esrgan-ai-image-upscaler-review",
+    "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review"
+  },
+  "autogpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "autogpt-local-review",
+    "url": "/power-local-llm/autogpt-local-review"
+  },
+  "babyagi": {
+    "cluster": "power-local-llm",
+    "urlSlug": "babyagi-review-autonomous-agent",
+    "url": "/power-local-llm/babyagi-review-autonomous-agent"
+  },
+  "second-me": {
+    "cluster": "power-local-llm",
+    "urlSlug": "second-me-review",
+    "url": "/power-local-llm/second-me-review"
+  },
+  "kilo-code": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kilo-code-review",
+    "url": "/power-local-llm/kilo-code-review"
+  },
+  "opencode": {
+    "cluster": "power-local-llm",
+    "urlSlug": "opencode-review",
+    "url": "/power-local-llm/opencode-review"
+  },
+  "n8n": {
+    "cluster": "power-local-llm",
+    "urlSlug": "n8n-review",
+    "url": "/power-local-llm/n8n-review"
+  },
+  "docker-model-runner": {
+    "cluster": "power-local-llm",
+    "urlSlug": "docker-model-runner-review",
+    "url": "/power-local-llm/docker-model-runner-review"
+  },
+  "toolneuron": {
+    "cluster": "power-local-llm",
+    "urlSlug": "toolneuron-review",
+    "url": "/power-local-llm/toolneuron-review"
+  },
+  "localai-apexcreator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localai-apexcreator-review",
+    "url": "/power-local-llm/localai-apexcreator-review"
+  },
+  "diffusionbee": {
+    "cluster": "power-local-llm",
+    "urlSlug": "diffusionbee-review",
+    "url": "/power-local-llm/diffusionbee-review"
+  },
+  "macwhisper": {
+    "cluster": "power-local-llm",
+    "urlSlug": "macwhisper-review",
+    "url": "/power-local-llm/macwhisper-review"
+  },
+  "solair-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "solair-ai-review",
+    "url": "/power-local-llm/solair-ai-review"
+  }
+}

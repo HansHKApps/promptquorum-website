@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'وكيل CLI كلاسيكي، Ollama عبر رابط API',
     ko: '클래식 CLI 에이전트, API URL로 Ollama 연결',
   },
+  reviewSlug: 'autogpt-local-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

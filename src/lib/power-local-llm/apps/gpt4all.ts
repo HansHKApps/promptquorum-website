@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'مناسب للمبتدئين مع دعم قوي للـCPU فقط',
     ko: '강력한 CPU 전용 지원을 갖춘 입문자 친화적 앱',
   },
+  reviewSlug: 'gpt4all-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -21,6 +21,21 @@ import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
 import { t } from './directory-i18n'
+import Link from 'next/link'
+import featureReviewIndex from '@/generated/feature-review-index.json'
+
+type FeatureReviewIndex = Record<string, { cluster: string; urlSlug: string; url: string }>
+
+/**
+ * The tool's own dedicated, single-subject review, if one exists — from the
+ * authoritative build-time index (src/generated/feature-review-index.json,
+ * derived from the tool's own `reviewSlug` field). Mirrors ToolCard.tsx's
+ * `featureReviewUrl` — kept local here rather than imported, since ToolCard
+ * only exports `getDownloadLinks` today.
+ */
+function featureReviewUrl(appSlug: string): string | null {
+  return (featureReviewIndex as FeatureReviewIndex)[appSlug]?.url ?? null
+}
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   if (value == null || value === '') return null
@@ -131,6 +146,7 @@ export function ToolDrawer({
 }) {
   const open = app != null
   const [copied, setCopied] = useState(false)
+  const featureReview = app ? featureReviewUrl(app.slug) : null
 
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
     listed: t('statusListed', lang),
@@ -311,6 +327,23 @@ export function ToolDrawer({
                     <p>{app.pqReview.text[lang] ?? app.pqReview.text.en ?? ''}</p>
                     <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', lang, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
                   </div>
+                </section>
+              )}
+
+              {/* Dedicated feature review — authoritative reviewSlug-derived
+                  link, visually distinct from the "N articles mention this"
+                  list rendered by ArticlesBlock below. */}
+              {featureReview && (
+                <section className="mb-5">
+                  <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-2">
+                    {t('featureArticleBadge', lang)}
+                  </span>
+                  <Link
+                    href={featureReview}
+                    className="block text-sm font-bold underline underline-offset-2 text-primary hover:text-primary/80"
+                  >
+                    {t('readReview', lang)}
+                  </Link>
                 </section>
               )}
 

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نموذج وسائط متعددة مفتوح المصدر للرؤية واللغة',
     ko: '비전과 언어를 위한 오픈소스 멀티모달 모델',
   },
+  reviewSlug: 'idefics-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-07', // Verified against HuggingFace model cards for idefics-80b, idefics2-8b, and Idefics3-8B-Llama3 — see /power-local-llm/idefics-review
 }

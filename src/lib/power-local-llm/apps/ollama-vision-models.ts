@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نماذج قادرة على الرؤية عبر Ollama (Llama 3.2 Vision وLLaVA وغيرها)',
     ko: 'Ollama를 통한 비전 지원 모델(Llama 3.2 Vision, LLaVA 등)',
   },
+  reviewSlug: 'ollama-vision-models-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

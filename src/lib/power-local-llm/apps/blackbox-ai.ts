@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'توليد كود ودردشة من الطرفية عبر صدفتك',
     ko: '셸에서 터미널 코드 생성 및 채팅',
   },
+  reviewSlug: 'blackbox-ai-cli-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

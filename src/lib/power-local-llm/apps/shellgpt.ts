@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'أداة CLI لتوليد أوامر الصدفة والدردشة',
     ko: '셸 명령어 생성 및 채팅용 CLI 도구',
   },
+  reviewSlug: 'shell-gpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

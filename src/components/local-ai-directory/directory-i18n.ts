@@ -230,6 +230,11 @@ const DIR_UI = {
   articleCountOne: { en: '{count} article', de: '{count} Artikel', fr: '{count} article', ja: '記事{count}件', zh: '{count}篇文章', es: '{count} artículo', pt: '{count} artigo', ar: '{count} مقال', ko: '기사 {count}개' },
   articleCountOther: { en: '{count} articles', de: '{count} Artikel', fr: '{count} articles', ja: '記事{count}件', zh: '{count}篇文章', es: '{count} artículos', pt: '{count} artigos', ar: '{count} مقالات', ko: '기사 {count}개' },
   readReview: { en: 'Read review', de: 'Testbericht lesen', fr: "Lire l'avis", ja: 'レビューを読む', zh: '阅读评测', es: 'Leer la reseña', pt: 'Ler a análise', ar: 'قراءة المراجعة', ko: '리뷰 읽기' },
+  // Badge/link shown only when the tool has an authoritative, single-subject
+  // dedicated review (src/generated/feature-review-index.json) — visually
+  // distinct from the plain "Read review" text link and from the "N articles
+  // mention this tool" count, both of which stay unchanged.
+  featureArticleBadge: { en: 'Feature Article', de: 'Ausführlicher Test', fr: 'Article dédié', ja: '特集記事', zh: '专题评测', es: 'Artículo destacado', pt: 'Artigo destacado', ar: 'مقال متخصص', ko: '심층 리뷰' },
   detailsButton: { en: 'Details', de: 'Details', fr: 'Détails', ja: '詳細', zh: '详情', es: 'Detalles', pt: 'Detalhes', ar: 'التفاصيل', ko: '상세 정보' },
   githubLink: { en: 'GitHub ↗', de: 'GitHub ↗', fr: 'GitHub ↗', ja: 'GitHub ↗', zh: 'GitHub ↗', es: 'GitHub ↗', pt: 'GitHub ↗', ar: 'GitHub ↗', ko: 'GitHub ↗' },
   getItLink: { en: 'Get it ↗', de: 'Herunterladen ↗', fr: 'Télécharger ↗', ja: '入手する ↗', zh: '立即获取 ↗', es: 'Obtenerlo ↗', pt: 'Obter ↗', ar: 'احصل عليه ↗', ko: '받기 ↗' },
