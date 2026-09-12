@@ -211,6 +211,7 @@ import { article as a_enchanted_review } from './articles/enchanted-review'
 import { article as a_boltai_review } from './articles/boltai-review'
 import { article as a_jan_review } from './articles/jan-review'
 import { article as a_gpt4all_review } from './articles/gpt4all-review'
+import { article as a_locally_uncensored_review } from './articles/locally-uncensored-review'
 import { article as a_docker_model_runner_review } from './articles/docker-model-runner-review'
 import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_ekorbia_review } from './articles/ekorbia-review'
@@ -372,6 +373,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'boltai-review':                                     a_boltai_review,
   'jan-review':                                        a_jan_review,
   'gpt4all-review':                                    a_gpt4all_review,
+  'locally-uncensored-review':                         a_locally_uncensored_review,
   'docker-model-runner-review':                        a_docker_model_runner_review,
   'draw-things-review':                                a_draw_things_review,
   'ekorbia-review':                                    a_ekorbia_review,
