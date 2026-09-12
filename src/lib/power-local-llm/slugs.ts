@@ -341,4 +341,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'toolneuron-review':                       'toolneuron-review',
   // LocalAI (ApexCreator) review — 2026-09-12
   'localai-apexcreator-review':               'localai-apexcreator-review',
+  // DiffusionBee review — 2026-09-12
+  'diffusionbee-review':                     'diffusionbee-review',
+  // MacWhisper review — 2026-09-12
+  'macwhisper-review':                       'macwhisper-review',
+  // Solair AI review — 2026-09-12
+  'solair-ai-review':                        'solair-ai-review',
 }
