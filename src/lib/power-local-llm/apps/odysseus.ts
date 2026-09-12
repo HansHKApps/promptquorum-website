@@ -39,4 +39,5 @@ export const app: ToolRecord = {
     ko: '채팅, 에이전트, 리서치, 문서를 위한 자체 호스팅 로컬 우선 AI 워크스페이스 — Felix Kjellberg(PewDiePie) 제작',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'odysseus-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }

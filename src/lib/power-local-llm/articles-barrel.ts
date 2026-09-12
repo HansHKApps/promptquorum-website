@@ -258,6 +258,9 @@ import { article as a_nvidia_g_assist_review } from './articles/nvidia-g-assist-
 import { article as a_gpustack_review } from './articles/gpustack-review'
 import { article as a_bmo_chatbot_review } from './articles/bmo-chatbot-review'
 import { article as a_text_generator_review } from './articles/text-generator-review'
+import { article as a_odysseus_review } from './articles/odysseus-review'
+import { article as a_phoneclaw_review } from './articles/phoneclaw-review'
+import { article as a_ypipe_review } from './articles/ypipe-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -557,4 +560,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'gpustack-review':                                  a_gpustack_review,
   'bmo-chatbot-review':                                a_bmo_chatbot_review,
   'text-generator-review':                             a_text_generator_review,
+  'odysseus-review':                                  a_odysseus_review,
+  'phoneclaw-review':                                 a_phoneclaw_review,
+  'ypipe-review':                                      a_ypipe_review,
 }

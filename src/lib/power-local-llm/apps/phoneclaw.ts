@@ -37,4 +37,5 @@ export const app: ToolRecord = {
     ko: 'AI 에이전트가 휴대폰을 제어하고 자동화할 수 있게 하는 macOS 앱',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  reviewSlug: 'phoneclaw-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }
