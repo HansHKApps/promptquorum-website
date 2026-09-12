@@ -366,6 +366,7 @@ https://www.promptquorum.com/power-local-llm/llamafile-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/llava-review
 https://www.promptquorum.com/power-local-llm/llm-farm-review
+https://www.promptquorum.com/power-local-llm/lm-studio-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
 https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
@@ -410,6 +411,7 @@ https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/noema-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
+https://www.promptquorum.com/power-local-llm/ollama-review
 https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/on-device-ai-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
