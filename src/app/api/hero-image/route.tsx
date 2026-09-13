@@ -23,6 +23,12 @@ function renderRich(text: string, boldColor: string) {
   })
 }
 
+type HeroFact = {
+  label: string
+  value: string
+  tone?: 'emerald' | 'amber' | 'rose' | 'slate' | 'violet'
+}
+
 type HeroSpec = {
   lang: string
   title: string
@@ -31,7 +37,25 @@ type HeroSpec = {
   rows?: string[][]
   callout?: { formula: string; note: string }
   bullets?: string[]
+  // Optional graphical fact-chip strip (min RAM/VRAM, license, price, platforms
+  // pulled from the app's directory tile data) rendered between the body and
+  // the footer. Purely additive — deliberately excluded from bodyCharCount()
+  // below, since chips are scannable metadata, not prose, and must not become
+  // a way to dodge the real-content floor with four short strings.
+  facts?: HeroFact[]
   footer: string
+}
+
+// Matches the emerald/amber/rose/slate semantic vocabulary already used for
+// price/locality/compatibility badges in ToolCard.tsx and CompatibilityBadge.tsx
+// (Tailwind -50/-200/-700 hex triplets, since Satori doesn't process Tailwind
+// classes), plus a violet tone matching this route's own #6750A4 brand purple.
+const FACT_TONE: Record<NonNullable<HeroFact['tone']>, { bg: string; border: string; text: string }> = {
+  emerald: { bg: '#ECFDF5', border: '#A7F3D0', text: '#047857' },
+  amber: { bg: '#FFFBEB', border: '#FDE68A', text: '#B45309' },
+  rose: { bg: '#FFF1F2', border: '#FECDD3', text: '#BE123C' },
+  slate: { bg: '#F8FAFC', border: '#E2E8F0', text: '#475569' },
+  violet: { bg: '#F7F2FA', border: '#E8DEF8', text: '#6750A4' },
 }
 
 // Hard floor on rendered body content so a near-empty hero (the original bug:
@@ -59,6 +83,9 @@ function minBodyChars(lang: string): number {
   return CJK_LANGS.has(lang) ? MIN_BODY_CHARS_CJK : MIN_BODY_CHARS_DEFAULT
 }
 
+// Deliberately does NOT count spec.facts — chip strings ("6 GB RAM", "MIT")
+// are scannable metadata, not prose, and must never let a caller satisfy this
+// floor with four short chips instead of real body content.
 function bodyCharCount(spec: HeroSpec): number {
   if (spec.callout) return spec.callout.formula.length + spec.callout.note.length
   if (spec.columns && spec.rows) {
@@ -304,6 +331,46 @@ export async function POST(request: Request) {
                   {spec.subtitle}
                 </div>
               </div>
+            </div>
+          )}
+
+          {spec.facts && spec.facts.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', gap: '10px', marginTop: '20px' }}>
+              {spec.facts.slice(0, 4).map((fact, i) => {
+                const tone = FACT_TONE[fact.tone ?? 'slate']
+                return (
+                  <div
+                    key={i}
+                    style={{
+                      display: 'flex',
+                      flexDirection: rowDir,
+                      alignItems: 'baseline',
+                      gap: fact.label ? '5px' : '0',
+                      background: tone.bg,
+                      border: `1px solid ${tone.border}`,
+                      borderRadius: '9999px',
+                      padding: '6px 14px',
+                    }}
+                  >
+                    {fact.label && (
+                      <span
+                        style={{
+                          display: 'flex',
+                          fontSize: '10px',
+                          fontWeight: 700,
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.02em',
+                          color: tone.text,
+                          opacity: 0.75,
+                        }}
+                      >
+                        {fact.label}
+                      </span>
+                    )}
+                    <span style={{ display: 'flex', fontSize: '13px', fontWeight: 700, color: tone.text }}>{fact.value}</span>
+                  </div>
+                )
+              })}
             </div>
           )}
 
