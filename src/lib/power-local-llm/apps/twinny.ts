@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/twinnydotdev/twinny README, checked 2026-09-13 — no hardware/system-requirements section; it's a thin VS Code extension, depends entirely on the LLM backend the user configures, no fixed floor of its own
   stars: 3600,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'GPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/aandrew-me/tgpt README, checked 2026-09-13 — a Go CLI binary with no bundled inference engine; it is a thin terminal client that calls external providers (local Ollama or cloud APIs), so it never touches a GPU itself and has no hardware/system-requirements section beyond a standard terminal environment
   stars: 3300,
   addedDate: '2026-09-04',
   status: 'listed',

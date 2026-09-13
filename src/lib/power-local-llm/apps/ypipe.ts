@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Not publicly documented (technical preview)',
   price: 'free', // free during the technical preview period; no post-preview pricing published
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/iunera/ypipe and the PromptQuorum review (src/lib/power-local-llm/articles/ypipe-review.ts), checked 2026-09-13 — no hardware/system-requirements published for this technical-preview tool; bundles an inference engine but the floor depends on which model the user downloads through it, no fixed floor of its own
   stars: 13, // github.com/iunera/ypipe, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

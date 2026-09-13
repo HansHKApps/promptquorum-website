@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/ggerganov/whisper.cpp README "Memory usage" table — CPU-only inference works across every model size (tiny ~273MB RAM up to large ~3.9GB RAM), with optional Metal/CUDA/Vulkan acceleration; no single fixed RAM floor since it scales with the chosen model size, verified 2026-09-13
   stars: 53400,
   addedDate: '2026-09-04',
   status: 'listed',

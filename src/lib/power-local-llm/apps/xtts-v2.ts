@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'CPML',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // checked huggingface.co/coqui/XTTS-v2 model card, docs.coqui.ai/en/latest/models/xtts.html, and the coqui-ai/TTS GitHub discussions (#3268) and issues (#3976) 2026-09-13 — no maintainer/official minimum VRAM is published; community reports conflict (~2-4GB for inference vs. 8-17GB for fine-tuning depending on driver/CPU-offload behavior), so left unresearched rather than fabricated
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

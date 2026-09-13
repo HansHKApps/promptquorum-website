@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/Siddhesh2377/ToolNeuron README, checked 2026-09-13 — states minSdk 31/compileSdk 37 and arm64-v8a/x86_64 ABIs but no minimum device RAM; on-device GGUF model loaded by the user determines the real floor, no fixed floor of its own
   stars: 467, // GitHub stars, per api.github.com/repos/Siddhesh2377/ToolNeuron, 2026-09-12
   addedDate: '2026-09-12',
   status: 'listed',
