@@ -283,6 +283,7 @@ After updating, verify:
 - [ ] The top 5 GSC queries by impressions are directly answered by the page content
 - [ ] The title tag contains words that match the highest-impression GSC queries
 - [ ] Zero-click high-impression queries have been addressed (content gap filled or title/meta improved)
+- [ ] If this page links to, or is linked from, a hub/comparison/review page for the same product — run the Step 4.5 Hub-vs-Review Price/Spec Cross-Check below
 
 ### Step 5: Multi-Language Propagation
 
@@ -429,6 +430,19 @@ After updating a cluster, verify that every page in the cluster agrees on:
 - Which GPU is recommended per tier
 
 If page A says "Kimi K2.6 is best for coding" and page B says "Qwen2.5-Coder 32B is best for coding," one of them is wrong. Fix before publishing.
+
+### Step 4.5: Hub-vs-Review Price/Spec Cross-Check (MANDATORY when a hub or a review changes)
+
+**Confirmed failure mode (2026-09-13):** a mini-PC comparison hub page (`best-mini-pc-home-assistant-local-ai.ts`) went stale against its own linked reviews on three separate facts — a price gap ($650 hub vs. $799–849 review, same config), a superseded price the review had explicitly corrected but the hub still quoted ($1,099–1,299 vs. the review's updated $1,299–1,599), and an inverted hardware spec (hub said "dual 1GbE / 1x M.2," review said the mainstream SKU is "dual 2.5GbE / 2x M.2" and separately warned about a different dual-1GbE SKU). The hub had survived a prior review pass untouched — updating the review did not trigger anyone to re-check the hub that links to it, and vice versa.
+
+**Rule:** Any time you update a review/spec/price in one article, or update a hub/comparison/ranking page, identify every other page that cross-links to it (grep the slug and the product/model name across the cluster) and check specifically for:
+- **Price figures** for the same product/config — hub tables and prose vs. the individual review's current price
+- **Hardware specs called out as differentiators** (port counts, connector types like 1GbE/2.5GbE, storage slot counts, RAM/VRAM) — a hub's summary table row must match what the review it links to actually says
+- **Any figure a review's own text calls out as "corrected," "revised," or "originally quoted as X, now Y"** — that revision must propagate to every page quoting the old figure, not just live in the review that made the correction
+
+Do this in both directions: after refreshing a review, grep hub/comparison pages that link to it; after refreshing a hub, spot-check the reviews it links to. This is a same-page-update fix, not a "flag for later" — same standard as Step 5.5 structural parity: found but not fixed is a shallow update (Anti-Pattern #1).
+
+**Why:** Cross-linked review clusters (smart-home mini-PC/hardware pages, power-local-llm app reviews, GPU/hardware guides) exist specifically because the site claims verified specs and prices — that claim breaks the moment two pages that link to each other disagree, and an outside reader (or a competitor) checking is exactly the kind of gap that damages trust in every other "verified" claim on the site.
 
 ---
 

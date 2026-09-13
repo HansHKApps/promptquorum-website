@@ -5,19 +5,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Best Mini PCs for Home Assistant + Local AI (2026)',
     seoTitle: 'Best Mini PC for Home Assistant + Local AI in 2026',
     intro:
-      'The best mini PC for Home Assistant plus a local LLM on one box in 2026 is the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) at about $650, which runs the hub, Frigate, and a 7B model via Ollama. On a budget, an Intel N150 box like the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant and a small model. For the strongest on-device AI and vision, the GEEKOM A9 Max (Ryzen AI 9 HX 370, about $1,099–1,299) steps up further. This buyer\'s guide compares all five specific units side by side, gives a direct recommendation for each use case, and covers setup notes — cross-linking to the local-llms hardware guide for VRAM depth.',
+      'The best mini PC for Home Assistant plus a local LLM on one box in 2026 is the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) at about $799–849, which runs the hub, Frigate, and a 7B model via Ollama. On a budget, an Intel N150 box like the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant and a small model. For the strongest on-device AI and vision, the GEEKOM A9 Max (Ryzen AI 9 HX 370, about $1,299–1,599) steps up further. This buyer\'s guide compares all five specific units side by side, gives a direct recommendation for each use case, and covers setup notes — cross-linking to the local-llms hardware guide for VRAM depth.',
     metaDescription:
-      'Best mini PC for Home Assistant 2026: Beelink SER8 (~$650) for Frigate + a 7B model; Intel N150 boxes (~$180–230) for budget; GEEKOM A9 Max (~$1,099+) for on-device AI. Compared side by side.',
+      'Best mini PC for Home Assistant 2026: Beelink SER8 (~$799–849) for Frigate + a 7B model; Intel N150 boxes (~$180–230) for budget; GEEKOM A9 Max (~$1,299+) for on-device AI. Compared side by side.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.webp',
     twitterDescription:
-      'Best mini PC for Home Assistant 2026: Beelink SER8 (~$650) runs Frigate + a 7B model on Ollama; budget Intel N150 boxes (~$180–230); GEEKOM A9 Max (~$1,099+) for on-device AI. 5 units compared.',
+      'Best mini PC for Home Assistant 2026: Beelink SER8 (~$799–849) runs Frigate + a 7B model on Ollama; budget Intel N150 boxes (~$180–230); GEEKOM A9 Max (~$1,299+) for on-device AI. 5 units compared.',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'Buyers choosing a mini PC for Home Assistant and local AI',
@@ -30,16 +30,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**The best all-round mini PC for Home Assistant plus a local LLM in 2026 is the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) at about $650 — it runs the hub, Frigate, and a 7B model on Ollama on one box.** For a budget or fanless build, an Intel N150 box like the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant and a small model. For the strongest on-device AI, the GEEKOM A9 Max (about $1,099–1,299) steps up further. Prioritise RAM and the iGPU over raw CPU clock for AI latency.',
+      '**The best all-round mini PC for Home Assistant plus a local LLM in 2026 is the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) at about $799–849 — it runs the hub, Frigate, and a 7B model on Ollama on one box.** For a budget or fanless build, an Intel N150 box like the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant and a small model. For the strongest on-device AI, the GEEKOM A9 Max (about $1,299–1,599) steps up further. Prioritise RAM and the iGPU over raw CPU clock for AI latency.',
     quickAnswerTop: {
       en: {
         question: 'What mini PC is best for Home Assistant and local AI in 2026?',
         answer:
-          'For most people the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, about $650) is the best pick — its strong iGPU runs a 7B model on Ollama alongside Home Assistant, Frigate, and Whisper. On a budget or for a near-fanless box, an Intel N150 mini PC such as the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant plus a small model. For the strongest on-device AI and vision, a Ryzen AI mini PC like the GEEKOM A9 Max (about $1,099–1,299) steps up further.',
+          'For most people the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, about $799–849) is the best pick — its strong iGPU runs a 7B model on Ollama alongside Home Assistant, Frigate, and Whisper. On a budget or for a near-fanless box, an Intel N150 mini PC such as the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant plus a small model. For the strongest on-device AI and vision, a Ryzen AI mini PC like the GEEKOM A9 Max (about $1,299–1,599) steps up further.',
         bullets: [
-          'Best all-round: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ~$650 — HA + Frigate + a 7B model on Ollama',
+          'Best all-round: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ~$799–849 — HA + Frigate + a 7B model on Ollama',
           'Budget / near-fanless: Intel N150 (Beelink EQ14, GMKtec G3 Plus) ~$180–230 — HA + a small model',
-          'Best for local AI: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~$1,099–1,299 — strongest iGPU + NPU for vision',
+          'Best for local AI: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~$1,299–1,599 — strongest iGPU + NPU for vision',
           'Prioritise RAM and a capable iGPU over CPU clock; more RAM fits a larger model',
           'See the local-llms hardware guide for VRAM depth',
         ],
@@ -72,8 +72,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Prioritise RAM and a capable integrated GPU or NPU over raw CPU clock',
           'A low-power Intel N150 mini PC (~$180–220) runs Home Assistant and a small model',
-          'A Ryzen 7/9 mini PC with a strong iGPU (~$650) handles a 7B model alongside the hub',
-          'A Ryzen AI NPU-equipped mini PC (~$1,099+) is the strongest option for on-device AI and vision',
+          'A Ryzen 7/9 mini PC with a strong iGPU (~$799–849) handles a 7B model alongside the hub',
+          'A Ryzen AI NPU-equipped mini PC (~$1,299+) is the strongest option for on-device AI and vision',
           'One mini PC can run Home Assistant, Ollama, Whisper, and Frigate together',
           'See the cross-cluster local-llms hardware guide for VRAM specifics',
         ],
@@ -84,9 +84,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Three configurations cover most Home Assistant + local AI setups.** Pick by budget and the model size you want to run.',
         items: [
-          '**Best overall — Beelink SER8 (32 GB):** runs Home Assistant, Frigate, and a 7B model on Ollama on one box. Around $650 for the 32 GB / 1 TB configuration, though listings vary — check the current price.',
+          '**Best overall — Beelink SER8 (32 GB):** runs Home Assistant, Frigate, and a 7B model on Ollama on one box. Around $799–849 for the 32 GB / 1 TB configuration, though listings vary — check the current price.',
           '**Best budget — Beelink EQ14 or GMKtec G3 Plus (Intel N150):** runs Home Assistant plus a small model (1–3B) for about $180–220.',
-          '**Best for local AI — GEEKOM A9 Max (Ryzen AI 9 HX 370):** the strongest iGPU and an NPU for on-device vision; typically $1,099–1,299 depending on configuration and retailer.',
+          '**Best for local AI — GEEKOM A9 Max (Ryzen AI 9 HX 370):** the strongest iGPU and an NPU for on-device vision; typically $1,299–1,599 depending on configuration and retailer.',
         ],
         affiliateLinks: [
           { label: 'Check SER8 price →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -213,15 +213,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Match the unit to your target model and budget.** Prices, power figures, and connectivity specs are approximate, drawn from manufacturer listings and independent hardware reviews — confirm the current listing before buying.',
         columns: ['Model', 'CPU', 'GPU/iGPU', 'RAM (as tested / max)', 'Ethernet', 'Storage', 'Approx. price (Aug 2026)', 'Idle / typical power', 'Best for'],
         rows: [
-          { 'Model': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrated)', 'RAM (as tested / max)': '16 GB / 16 GB max (1 SO-DIMM)', 'Ethernet': 'Dual 1GbE', 'Storage': '1x M.2 NVMe SSD', 'Approx. price (Aug 2026)': '~$189–220', 'Idle / typical power': '~5–12W idle, ~15–25W under load', 'Best for': 'HA + a small model' },
+          { 'Model': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrated)', 'RAM (as tested / max)': '16 GB / 16 GB max (1 SO-DIMM)', 'Ethernet': 'Dual 2.5GbE', 'Storage': '2x M.2 NVMe SSD', 'Approx. price (Aug 2026)': '~$189–220', 'Idle / typical power': '~5–12W idle, ~15–25W under load', 'Best for': 'HA + a small model' },
           { 'Model': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrated)', 'RAM (as tested / max)': '16 GB / officially 16 GB, up to 32 GB reported (1 SO-DIMM)', 'Ethernet': '1x 2.5GbE', 'Storage': 'Dual M.2 (2280 NVMe up to 4TB + 2242 SATA up to 2TB)', 'Approx. price (Aug 2026)': '~$180–230', 'Idle / typical power': '~5–12W idle, ~15–25W under load', 'Best for': 'HA + a small model, budget flexibility' },
-          { 'Model': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (as tested / max)': '32 GB / up to 256 GB (2x DDR5 SO-DIMM)', 'Ethernet': '1x 2.5GbE', 'Storage': 'Dual M.2 PCIe 4.0 (up to 8TB combined)', 'Approx. price (Aug 2026)': '~$650', 'Idle / typical power': '~7–10W idle, ~45W+ under sustained AI load', 'Best for': 'HA + Frigate + a 7B model' },
+          { 'Model': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (as tested / max)': '32 GB / up to 256 GB (2x DDR5 SO-DIMM)', 'Ethernet': '1x 2.5GbE', 'Storage': 'Dual M.2 PCIe 4.0 (up to 8TB combined)', 'Approx. price (Aug 2026)': '~$799–849', 'Idle / typical power': '~7–10W idle, ~45W+ under sustained AI load', 'Best for': 'HA + Frigate + a 7B model' },
           { 'Model': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'Same class as SER8', 'RAM (as tested / max)': '32 GB / up to 96 GB (2x DDR5 SO-DIMM)', 'Ethernet': 'Dual 2.5GbE', 'Storage': 'Dual M.2 NVMe + OCuLink for external expansion', 'Approx. price (Aug 2026)': '~$649 (32GB) / ~$439 barebones', 'Idle / typical power': '~7–9W idle, ~54–90W under sustained load', 'Best for': 'Similar to SER8, more configurable' },
-          { 'Model': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (as tested / max)': '32 GB / up to 128 GB (2x DDR5 SO-DIMM)', 'Ethernet': 'Dual 2.5GbE', 'Storage': 'Dual M.2 NVMe SSD', 'Approx. price (Aug 2026)': '~$1,099–1,299', 'Idle / typical power': '~7–9W idle, ~20–34W typical use', 'Best for': 'Strongest on-device AI + vision' },
+          { 'Model': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (as tested / max)': '32 GB / up to 128 GB (2x DDR5 SO-DIMM)', 'Ethernet': 'Dual 2.5GbE', 'Storage': 'Dual M.2 NVMe SSD', 'Approx. price (Aug 2026)': '~$1,299–1,599', 'Idle / typical power': '~7–9W idle, ~20–34W typical use', 'Best for': 'Strongest on-device AI + vision' },
         ],
         items: [
           'For VRAM and quantization depth, see the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm).',
-          'Networking note: only the EQ14 lacks a 2.5GbE port (it has dual 1GbE instead) — for Home Assistant plus camera streams, a wired 2.5GbE connection reduces the chance of the network becoming the bottleneck.',
+          'Networking note: every unit here ships at least one 2.5GbE port — the EQ14 and Minisforum UM890 Pro even ship two — for Home Assistant plus camera streams, a wired 2.5GbE connection reduces the chance of the network becoming the bottleneck.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.webp',
         imageCaption: 'Mini PC Classes for Home Assistant AI -- RAM guidance and what each can run',
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Hardware is the only real cost — the software stack is free.** Home Assistant, Ollama, a local model, and Frigate are all free and open-source; the mini PC itself is the entire budget line.',
         items: [
-          '**Hardware cost by tier:** budget N150 box ~$180–230; balanced Ryzen 7/9 box (32 GB) ~$650; step-up NPU box ~$1,099–1,299.',
+          '**Hardware cost by tier:** budget N150 box ~$180–230; balanced Ryzen 7/9 box (32 GB) ~$799–849; step-up NPU box ~$1,299–1,599.',
           '**Power for a 24/7 box:** idle draw is broadly similar across all five units in this guide (roughly 5–10W), but sustained AI-inference load varies more — an N150 box draws noticeably less under load (~15–25W) than a Ryzen 7/9 box running a 7B model (~45W or more). For a box that runs around the clock, that difference adds up over a year more than peak benchmark performance does.',
           'Manufacturer-published TDP figures set the upper bound (N150: 6W; 8845HS/8945HS: 45W, configurable up to 70W on some boards; HX 370: configurable 15–54W) — actual draw depends on workload and BIOS power-mode settings.',
         ],
@@ -346,13 +346,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Mini PCs for Home Assistant + Local AI (2026)',
-      description: 'Best mini PC for Home Assistant 2026: Beelink SER8 (~$650) for Frigate + a 7B model; Intel N150 boxes (~$180–230) for budget; GEEKOM A9 Max (~$1,099+) for on-device AI. Compared side by side.',
+      description: 'Best mini PC for Home Assistant 2026: Beelink SER8 (~$799–849) for Frigate + a 7B model; Intel N150 boxes (~$180–230) for budget; GEEKOM A9 Max (~$1,299+) for on-device AI. Compared side by side.',
       url: 'https://www.promptquorum.com/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Local LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -374,19 +374,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'أفضل ⁨Mini PCs⁩ لـ ⁨Home Assistant⁩ + الذكاء الاصطناعي المحلي (⁨2026⁩)',
     seoTitle: 'أفضل ⁨Mini PC⁩ لـ ⁨Home Assistant + LLM⁩ محلي ⁨2026⁩',
     intro:
-      'أفضل mini PC لـ Home Assistant مع نموذج LLM محلي على صندوق واحد في 2026 هو Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB) بنحو ‎$650‎، إذ يشغّل المركز وFrigate ونموذج 7B عبر Ollama. وبميزانية محدودة، يشغّل صندوق Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant ونموذجًا صغيرًا. وللحصول على أقوى ذكاء اصطناعي على الجهاز ورؤية، يرتقي GEEKOM A9 Max (Ryzen AI 9 HX 370، نحو ‎$1,099–1,299‎) خطوة أخرى. يقارن هذا الدليل الشرائي الأجهزة الخمسة المحددة جنبًا إلى جنب، ويقدّم توصية مباشرة لكل حالة استخدام، ويغطي ملاحظات الإعداد — مع إحالات متقاطعة إلى دليل أجهزة local-llms لتفاصيل VRAM.',
+      'أفضل mini PC لـ Home Assistant مع نموذج LLM محلي على صندوق واحد في 2026 هو Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB) بنحو ‎$799–849‎، إذ يشغّل المركز وFrigate ونموذج 7B عبر Ollama. وبميزانية محدودة، يشغّل صندوق Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant ونموذجًا صغيرًا. وللحصول على أقوى ذكاء اصطناعي على الجهاز ورؤية، يرتقي GEEKOM A9 Max (Ryzen AI 9 HX 370، نحو ‎$1,299–1,599‎) خطوة أخرى. يقارن هذا الدليل الشرائي الأجهزة الخمسة المحددة جنبًا إلى جنب، ويقدّم توصية مباشرة لكل حالة استخدام، ويغطي ملاحظات الإعداد — مع إحالات متقاطعة إلى دليل أجهزة local-llms لتفاصيل VRAM.',
     metaDescription:
-      'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$650‎) لـ Frigate + نموذج 7B؛ صناديق Intel N150 (نحو ‎$180–230‎) اقتصادية؛ GEEKOM A9 Max (نحو ‎$1,099+‎) لذكاء اصطناعي على الجهاز. مقارنة جنبًا إلى جنب.',
+      'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$799–849‎) لـ Frigate + نموذج 7B؛ صناديق Intel N150 (نحو ‎$180–230‎) اقتصادية؛ GEEKOM A9 Max (نحو ‎$1,299+‎) لذكاء اصطناعي على الجهاز. مقارنة جنبًا إلى جنب.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ar.webp',
     twitterDescription:
-      'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$650‎) يشغّل Frigate + نموذج 7B على Ollama؛ صناديق Intel N150 الاقتصادية (نحو ‎$180–230‎)؛ GEEKOM A9 Max (نحو ‎$1,099+‎) لذكاء اصطناعي على الجهاز. مقارنة 5 أجهزة.',
+      'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$799–849‎) يشغّل Frigate + نموذج 7B على Ollama؛ صناديق Intel N150 الاقتصادية (نحو ‎$180–230‎)؛ GEEKOM A9 Max (نحو ‎$1,299+‎) لذكاء اصطناعي على الجهاز. مقارنة 5 أجهزة.',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون الذين يختارون mini PC لـ Home Assistant والذكاء الاصطناعي المحلي',
@@ -399,16 +399,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**أفضل mini PC شامل لـ Home Assistant مع نموذج LLM محلي في 2026 هو Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB) بنحو ‎$650‎ — يشغّل المركز وFrigate ونموذج 7B على Ollama على صندوق واحد.** لبناء اقتصادي أو شبه صامت، يشغّل صندوق Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant ونموذجًا صغيرًا. وللحصول على أقوى ذكاء اصطناعي على الجهاز، يرتقي GEEKOM A9 Max (نحو ‎$1,099–1,299‎) خطوة أخرى. أعطِ الأولوية لـ RAM وiGPU على تردد CPU الخام لزمن استجابة الذكاء الاصطناعي.',
+      '**أفضل mini PC شامل لـ Home Assistant مع نموذج LLM محلي في 2026 هو Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB) بنحو ‎$799–849‎ — يشغّل المركز وFrigate ونموذج 7B على Ollama على صندوق واحد.** لبناء اقتصادي أو شبه صامت، يشغّل صندوق Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant ونموذجًا صغيرًا. وللحصول على أقوى ذكاء اصطناعي على الجهاز، يرتقي GEEKOM A9 Max (نحو ‎$1,299–1,599‎) خطوة أخرى. أعطِ الأولوية لـ RAM وiGPU على تردد CPU الخام لزمن استجابة الذكاء الاصطناعي.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل mini PC لـ Home Assistant والذكاء الاصطناعي المحلي في 2026؟',
         answer:
-          'لمعظم الناس، Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB، نحو ‎$650‎) هو أفضل اختيار — iGPU القوية تشغّل نموذج 7B على Ollama إلى جانب Home Assistant وFrigate وWhisper. بميزانية محدودة أو لصندوق شبه صامت، يشغّل mini PC بـ Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant مع نموذج صغير. وللحصول على أقوى ذكاء اصطناعي على الجهاز ورؤية، يرتقي mini PC بـ Ryzen AI مثل GEEKOM A9 Max (نحو ‎$1,099–1,299‎) خطوة أخرى.',
+          'لمعظم الناس، Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB، نحو ‎$799–849‎) هو أفضل اختيار — iGPU القوية تشغّل نموذج 7B على Ollama إلى جانب Home Assistant وFrigate وWhisper. بميزانية محدودة أو لصندوق شبه صامت، يشغّل mini PC بـ Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant مع نموذج صغير. وللحصول على أقوى ذكاء اصطناعي على الجهاز ورؤية، يرتقي mini PC بـ Ryzen AI مثل GEEKOM A9 Max (نحو ‎$1,299–1,599‎) خطوة أخرى.',
         bullets: [
-          'الأفضل شاملًا: Beelink SER8 (Ryzen 7 8845HS، 32 GB) نحو ‎$650‎ — HA + Frigate + نموذج 7B على Ollama',
+          'الأفضل شاملًا: Beelink SER8 (Ryzen 7 8845HS، 32 GB) نحو ‎$799–849‎ — HA + Frigate + نموذج 7B على Ollama',
           'اقتصادي / شبه صامت: Intel N150 (Beelink EQ14، GMKtec G3 Plus) نحو ‎$180–230‎ — HA + نموذج صغير',
-          'الأفضل للذكاء الاصطناعي المحلي: GEEKOM A9 Max (Ryzen AI 9 HX 370) نحو ‎$1,099–1,299‎ — أقوى iGPU + NPU للرؤية',
+          'الأفضل للذكاء الاصطناعي المحلي: GEEKOM A9 Max (Ryzen AI 9 HX 370) نحو ‎$1,299–1,599‎ — أقوى iGPU + NPU للرؤية',
           'أعطِ الأولوية لـ RAM وiGPU قادرة على تردد CPU؛ RAM أكثر يستوعب نموذجًا أكبر',
           'راجع دليل أجهزة local-llms لتفاصيل VRAM',
         ],
@@ -441,8 +441,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'أعطِ الأولوية لـ RAM وGPU متكاملة أو NPU قادرة على تردد CPU الخام',
           'mini PC اقتصادي بـ Intel N150 (نحو ‎$180–220‎) يشغّل Home Assistant ونموذجًا صغيرًا',
-          'mini PC بـ Ryzen 7/9 مع iGPU قوية (نحو ‎$650‎) يتعامل مع نموذج 7B إلى جانب المركز',
-          'mini PC بـ Ryzen AI مزوّد بـ NPU (نحو ‎$1,099+‎) هو الخيار الأقوى للذكاء الاصطناعي على الجهاز والرؤية',
+          'mini PC بـ Ryzen 7/9 مع iGPU قوية (نحو ‎$799–849‎) يتعامل مع نموذج 7B إلى جانب المركز',
+          'mini PC بـ Ryzen AI مزوّد بـ NPU (نحو ‎$1,299+‎) هو الخيار الأقوى للذكاء الاصطناعي على الجهاز والرؤية',
           'يمكن لـ mini PC واحد تشغيل Home Assistant وOllama وWhisper وFrigate معًا',
           'راجع دليل أجهزة local-llms متعدد العناقيد لتفاصيل VRAM',
         ],
@@ -453,9 +453,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ثلاث تكوينات تغطي معظم إعدادات Home Assistant + الذكاء الاصطناعي المحلي.** اختر حسب الميزانية وحجم النموذج الذي تريد تشغيله.',
         items: [
-          '**الأفضل شاملًا — Beelink SER8 (32 GB):** يشغّل Home Assistant وFrigate ونموذج 7B على Ollama على صندوق واحد. نحو ‎$650‎ لتكوين ‎32 GB / 1 TB‎، رغم أن الأسعار تختلف حسب البائع — راجع السعر الحالي.',
+          '**الأفضل شاملًا — Beelink SER8 (32 GB):** يشغّل Home Assistant وFrigate ونموذج 7B على Ollama على صندوق واحد. نحو ‎$799–849‎ لتكوين ‎32 GB / 1 TB‎، رغم أن الأسعار تختلف حسب البائع — راجع السعر الحالي.',
           '**الأفضل اقتصاديًا — Beelink EQ14 أو GMKtec G3 Plus (Intel N150):** يشغّل Home Assistant مع نموذج صغير (1–3B) بنحو ‎$180–220‎.',
-          '**الأفضل للذكاء الاصطناعي المحلي — GEEKOM A9 Max (Ryzen AI 9 HX 370):** أقوى iGPU وNPU للرؤية على الجهاز؛ عادةً بين ‎$1,099‎ و‎$1,299‎ حسب التكوين والبائع.',
+          '**الأفضل للذكاء الاصطناعي المحلي — GEEKOM A9 Max (Ryzen AI 9 HX 370):** أقوى iGPU وNPU للرؤية على الجهاز؛ عادةً بين ‎$1,299‎ و‎$1,599‎ حسب التكوين والبائع.',
         ],
         affiliateLinks: [
           { label: 'راجع سعر SER8 ←', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -582,15 +582,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**طابق الجهاز مع نموذجك المستهدف وميزانيتك.** الأسعار وأرقام استهلاك الطاقة ومواصفات الاتصال تقريبية، مستمدة من قوائم الشركات المصنّعة ومراجعات أجهزة مستقلة اعتبارًا من أغسطس 2026 — تأكد من السعر الحالي قبل الشراء.',
         columns: ['الجهاز', 'CPU', 'GPU/iGPU', 'RAM (المختبَرة/الأقصى)', 'الشبكة السلكية', 'التخزين', 'السعر التقريبي (أغسطس 2026)', 'استهلاك الطاقة عند الخمول/النموذجي', 'الأفضل لـ'],
         rows: [
-          { 'الجهاز': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (متكاملة)', 'RAM (المختبَرة/الأقصى)': '16 GB / أقصى 16 GB (منفذ SO-DIMM واحد)', 'الشبكة السلكية': 'منفذا ‎1GbE‎', 'التخزين': 'منفذ ‎M.2 NVMe‎ واحد', 'السعر التقريبي (أغسطس 2026)': '‎$189–220‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎5–12W‎ خمول، ‎15–25W‎ تحت الحِمل', 'الأفضل لـ': 'HA + نموذج صغير' },
+          { 'الجهاز': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (متكاملة)', 'RAM (المختبَرة/الأقصى)': '16 GB / أقصى 16 GB (منفذ SO-DIMM واحد)', 'الشبكة السلكية': 'منفذا ‎2.5GbE‎', 'التخزين': 'منفذا ‎M.2 NVMe‎', 'السعر التقريبي (أغسطس 2026)': '‎$189–220‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎5–12W‎ خمول، ‎15–25W‎ تحت الحِمل', 'الأفضل لـ': 'HA + نموذج صغير' },
           { 'الجهاز': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (متكاملة)', 'RAM (المختبَرة/الأقصى)': '16 GB / رسميًا 16 GB، وأُفيد بـ 32 GB (منفذ SO-DIMM واحد)', 'الشبكة السلكية': 'منفذ ‎2.5GbE‎ واحد', 'التخزين': 'منفذا ‎M.2‎ (‎2280 NVMe‎ حتى ‎4TB‎ + ‎2242 SATA‎ حتى ‎2TB‎)', 'السعر التقريبي (أغسطس 2026)': '‎$180–230‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎5–12W‎ خمول، ‎15–25W‎ تحت الحِمل', 'الأفضل لـ': 'HA + نموذج صغير، مرونة في الميزانية' },
-          { 'الجهاز': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (المختبَرة/الأقصى)': '32 GB / حتى 256 GB (منفذا ‎DDR5 SO-DIMM‎)', 'الشبكة السلكية': 'منفذ ‎2.5GbE‎ واحد', 'التخزين': 'منفذا ‎M.2 PCIe 4.0‎ (حتى ‎8TB‎ مجتمعة)', 'السعر التقريبي (أغسطس 2026)': '‎$650‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎7–10W‎ خمول، ‎45W+‎ تحت حِمل ذكاء اصطناعي مستدام', 'الأفضل لـ': 'HA + Frigate + نموذج 7B' },
+          { 'الجهاز': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (المختبَرة/الأقصى)': '32 GB / حتى 256 GB (منفذا ‎DDR5 SO-DIMM‎)', 'الشبكة السلكية': 'منفذ ‎2.5GbE‎ واحد', 'التخزين': 'منفذا ‎M.2 PCIe 4.0‎ (حتى ‎8TB‎ مجتمعة)', 'السعر التقريبي (أغسطس 2026)': '‎$799–849‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎7–10W‎ خمول، ‎45W+‎ تحت حِمل ذكاء اصطناعي مستدام', 'الأفضل لـ': 'HA + Frigate + نموذج 7B' },
           { 'الجهاز': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'نفس فئة SER8', 'RAM (المختبَرة/الأقصى)': '32 GB / حتى 96 GB (منفذا ‎DDR5 SO-DIMM‎)', 'الشبكة السلكية': 'منفذا ‎2.5GbE‎', 'التخزين': 'منفذا ‎M.2 NVMe‎ + ‎OCuLink‎ للتوسعة الخارجية', 'السعر التقريبي (أغسطس 2026)': '‎$649‎ (32GB) / ‎$439‎ بدون تجهيزات', 'استهلاك الطاقة عند الخمول/النموذجي': '‎7–9W‎ خمول، ‎54–90W‎ تحت حِمل مستمر', 'الأفضل لـ': 'مشابه لـ SER8، أكثر قابلية للتكوين' },
-          { 'الجهاز': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (المختبَرة/الأقصى)': '32 GB / حتى 128 GB (منفذا ‎DDR5 SO-DIMM‎)', 'الشبكة السلكية': 'منفذا ‎2.5GbE‎', 'التخزين': 'منفذا ‎M.2 NVMe‎', 'السعر التقريبي (أغسطس 2026)': '‎$1,099–1,299‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎7–9W‎ خمول، ‎20–34W‎ استخدام نموذجي', 'الأفضل لـ': 'أقوى ذكاء اصطناعي على الجهاز + رؤية' },
+          { 'الجهاز': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (المختبَرة/الأقصى)': '32 GB / حتى 128 GB (منفذا ‎DDR5 SO-DIMM‎)', 'الشبكة السلكية': 'منفذا ‎2.5GbE‎', 'التخزين': 'منفذا ‎M.2 NVMe‎', 'السعر التقريبي (أغسطس 2026)': '‎$1,299–1,599‎', 'استهلاك الطاقة عند الخمول/النموذجي': '‎7–9W‎ خمول، ‎20–34W‎ استخدام نموذجي', 'الأفضل لـ': 'أقوى ذكاء اصطناعي على الجهاز + رؤية' },
         ],
         items: [
           'لـ VRAM وعمق التكميم، راجع متعدد العناقيد [أفضل mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm).',
-          'ملاحظة الشبكة: فقط EQ14 يفتقر إلى منفذ ‎2.5GbE‎ (لديه منفذا ‎1GbE‎ بدلًا من ذلك) — لـ Home Assistant مع تدفقات الكاميرات، يقلل الاتصال السلكي بسرعة ‎2.5GbE‎ من احتمال أن تصبح الشبكة عنق الزجاجة.',
+          'ملاحظة الشبكة: كل جهاز هنا يحتوي على منفذ ‎2.5GbE‎ واحد على الأقل — بل إن EQ14 وMinisforum UM890 Pro يحتويان على منفذين — لـ Home Assistant مع تدفقات الكاميرات، يقلل الاتصال السلكي بسرعة ‎2.5GbE‎ من احتمال أن تصبح الشبكة عنق الزجاجة.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ar.webp',
         imageCaption: 'فئات الحاسوب المصغر لذكاء Home Assistant -- إرشادات الذاكرة وما يمكن تشغيله',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الأجهزة هي التكلفة الحقيقية الوحيدة — البرمجيات مجانية.** Home Assistant وOllama ونموذج محلي وFrigate جميعها مجانية ومفتوحة المصدر؛ mini PC نفسه هو بند الميزانية الوحيد.',
         items: [
-          '**تكلفة الأجهزة حسب الفئة:** جهاز N150 اقتصادي نحو ‎$180–230‎؛ جهاز Ryzen 7/9 متوازن (32 GB) نحو ‎$650‎؛ جهاز NPU متقدم نحو ‎$1,099–1,299‎.',
+          '**تكلفة الأجهزة حسب الفئة:** جهاز N150 اقتصادي نحو ‎$180–230‎؛ جهاز Ryzen 7/9 متوازن (32 GB) نحو ‎$799–849‎؛ جهاز NPU متقدم نحو ‎$1,299–1,599‎.',
           '**استهلاك الطاقة لجهاز يعمل على مدار الساعة:** استهلاك الخمول متقارب بشكل عام بين الأجهزة الخمسة في هذا الدليل (نحو ‎5–10W‎)، لكن حِمل استدلال الذكاء الاصطناعي المستمر يتفاوت أكثر — يستهلك جهاز N150 أقل بوضوح تحت الحِمل (نحو ‎15–25W‎) مقارنةً بجهاز Ryzen 7/9 يشغّل نموذج 7B (نحو ‎45W‎ أو أكثر). بالنسبة لجهاز يعمل على مدار الساعة، يتراكم هذا الفارق على مدى عام أكثر من أداء الاختبارات القصوى.',
           'أرقام القدرة الحرارية (TDP) المنشورة من الشركة المصنّعة تحدد الحد الأعلى (N150: ‎6W‎؛ 8845HS/8945HS: ‎45W‎، قابلة للتكوين حتى ‎70W‎ على بعض اللوحات؛ HX 370: قابلة للتكوين ‎15–54W‎) — يعتمد الاستهلاك الفعلي على حِمل العمل وإعدادات وضع الطاقة في BIOS.',
         ],
@@ -715,13 +715,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل Mini PCs لـ Home Assistant + الذكاء الاصطناعي المحلي (2026)',
-      description: 'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$650‎) لـ Frigate + نموذج 7B؛ صناديق Intel N150 (نحو ‎$180–230‎) اقتصادية؛ GEEKOM A9 Max (نحو ‎$1,099+‎) لذكاء اصطناعي على الجهاز. مقارنة جنبًا إلى جنب.',
+      description: 'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$799–849‎) لـ Frigate + نموذج 7B؛ صناديق Intel N150 (نحو ‎$180–230‎) اقتصادية؛ GEEKOM A9 Max (نحو ‎$1,299+‎) لذكاء اصطناعي على الجهاز. مقارنة جنبًا إلى جنب.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -743,19 +743,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Beste Mini-PCs für Home Assistant + lokale KI (2026)',
     seoTitle: 'Bester Mini-PC für Home Assistant + lokale KI 2026',
     intro:
-      'Der beste Mini-PC für Home Assistant plus ein lokales LLM auf einem Gerät ist 2026 der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) für rund 650 €, der den Hub, Frigate und ein 7B-Modell über Ollama betreibt. Mit knapperem Budget betreibt ein Intel-N150-Gerät wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant und ein kleines Modell. Für die stärkste On-Device-KI und Bildverarbeitung geht der GEEKOM A9 Max (Ryzen AI 9 HX 370, rund 1.099–1.299 €) noch einen Schritt weiter. Diese Kaufberatung vergleicht alle fünf konkreten Geräte direkt nebeneinander, gibt eine klare Empfehlung für jeden Anwendungsfall und behandelt Einrichtungshinweise – mit Querverweis auf den local-llms-Hardware-Leitfaden für VRAM-Tiefe.',
+      'Der beste Mini-PC für Home Assistant plus ein lokales LLM auf einem Gerät ist 2026 der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) für rund 999 €, der den Hub, Frigate und ein 7B-Modell über Ollama betreibt. Mit knapperem Budget betreibt ein Intel-N150-Gerät wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant und ein kleines Modell. Für die stärkste On-Device-KI und Bildverarbeitung geht der GEEKOM A9 Max (Ryzen AI 9 HX 370, rund 1.399–1.899 €) noch einen Schritt weiter. Diese Kaufberatung vergleicht alle fünf konkreten Geräte direkt nebeneinander, gibt eine klare Empfehlung für jeden Anwendungsfall und behandelt Einrichtungshinweise – mit Querverweis auf den local-llms-Hardware-Leitfaden für VRAM-Tiefe.',
     metaDescription:
-      'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate plus 7B-Modell, Intel-N150-Rechner ab ~180 € fürs Budget. Empfehlung nach Bedarf.',
+      'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~999 €) für Frigate plus 7B-Modell, Intel-N150-Rechner ab ~180 € fürs Budget. Empfehlung nach Bedarf.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-de.webp',
     twitterDescription:
-      'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) betreibt Frigate + ein 7B-Modell auf Ollama; günstige Intel-N150-Geräte (~180–230 €); GEEKOM A9 Max (~1.099 €+) für On-Device-KI. 5 Geräte im Vergleich.',
+      'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~999 €) betreibt Frigate + ein 7B-Modell auf Ollama; günstige Intel-N150-Geräte (~180–230 €); GEEKOM A9 Max (~1.399 €+) für On-Device-KI. 5 Geräte im Vergleich.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die einen Mini-PC für Home Assistant und lokale KI wählen',
@@ -768,16 +768,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**Der beste Allround-Mini-PC für Home Assistant plus ein lokales LLM ist 2026 der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) für rund 650 € – er betreibt den Hub, Frigate und ein 7B-Modell auf Ollama auf einem Gerät.** Für einen günstigen oder nahezu lautlosen Aufbau betreibt ein Intel-N150-Gerät wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant und ein kleines Modell. Für die stärkste On-Device-KI geht der GEEKOM A9 Max (rund 1.099–1.299 €) noch einen Schritt weiter. Priorisieren Sie RAM und die iGPU für die KI-Latenz über die rohe CPU-Taktung.',
+      '**Der beste Allround-Mini-PC für Home Assistant plus ein lokales LLM ist 2026 der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) für rund 999 € – er betreibt den Hub, Frigate und ein 7B-Modell auf Ollama auf einem Gerät.** Für einen günstigen oder nahezu lautlosen Aufbau betreibt ein Intel-N150-Gerät wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant und ein kleines Modell. Für die stärkste On-Device-KI geht der GEEKOM A9 Max (rund 1.399–1.899 €) noch einen Schritt weiter. Priorisieren Sie RAM und die iGPU für die KI-Latenz über die rohe CPU-Taktung.',
     quickAnswerTop: {
       de: {
         question: 'Welcher Mini-PC ist 2026 am besten für Home Assistant und lokale KI?',
         answer:
-          'Für die meisten ist der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, rund 650 €) die beste Wahl – seine starke iGPU betreibt ein 7B-Modell auf Ollama neben Home Assistant, Frigate und Whisper. Mit knapperem Budget oder für ein nahezu lautloses Gerät betreibt ein Intel-N150-Mini-PC wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant plus ein kleines Modell. Für die stärkste On-Device-KI und Bildverarbeitung geht ein Ryzen-AI-Mini-PC wie der GEEKOM A9 Max (rund 1.099–1.299 €) noch einen Schritt weiter.',
+          'Für die meisten ist der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, rund 999 €) die beste Wahl – seine starke iGPU betreibt ein 7B-Modell auf Ollama neben Home Assistant, Frigate und Whisper. Mit knapperem Budget oder für ein nahezu lautloses Gerät betreibt ein Intel-N150-Mini-PC wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant plus ein kleines Modell. Für die stärkste On-Device-KI und Bildverarbeitung geht ein Ryzen-AI-Mini-PC wie der GEEKOM A9 Max (rund 1.399–1.899 €) noch einen Schritt weiter.',
         bullets: [
-          'Beste Allround-Wahl: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ca. 650 € – HA + Frigate + ein 7B-Modell auf Ollama',
+          'Beste Allround-Wahl: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ca. 999 € – HA + Frigate + ein 7B-Modell auf Ollama',
           'Budget / nahezu lautlos: Intel N150 (Beelink EQ14, GMKtec G3 Plus) ca. 180–230 € – HA + ein kleines Modell',
-          'Beste Wahl für lokale KI: GEEKOM A9 Max (Ryzen AI 9 HX 370) ca. 1.099–1.299 € – stärkste iGPU + NPU für Bildverarbeitung',
+          'Beste Wahl für lokale KI: GEEKOM A9 Max (Ryzen AI 9 HX 370) ca. 1.399–1.899 € – stärkste iGPU + NPU für Bildverarbeitung',
           'RAM und eine leistungsfähige iGPU über die CPU-Taktung priorisieren; mehr RAM fasst ein größeres Modell',
           'Für VRAM-Tiefe siehe den local-llms-Hardware-Leitfaden',
         ],
@@ -810,8 +810,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAM und eine leistungsfähige integrierte GPU oder NPU über die rohe CPU-Taktung priorisieren',
           'Ein stromsparender Intel-N150-Mini-PC (~180–220 €) betreibt Home Assistant und ein kleines Modell',
-          'Ein Ryzen-7/9-Mini-PC mit starker iGPU (~650 €) bewältigt ein 7B-Modell neben dem Hub',
-          'Ein Ryzen-AI-Mini-PC mit NPU (~1.099 €+) ist die stärkste Option für On-Device-KI und Bildverarbeitung',
+          'Ein Ryzen-7/9-Mini-PC mit starker iGPU (~999 €) bewältigt ein 7B-Modell neben dem Hub',
+          'Ein Ryzen-AI-Mini-PC mit NPU (~1.399 €+) ist die stärkste Option für On-Device-KI und Bildverarbeitung',
           'Ein Mini-PC kann Home Assistant, Ollama, Whisper und Frigate zusammen betreiben',
           'Für VRAM-Details siehe den clusterübergreifenden local-llms-Hardware-Leitfaden',
         ],
@@ -822,9 +822,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Drei Konfigurationen decken die meisten Home-Assistant-plus-lokale-KI-Aufbauten ab.** Wählen Sie nach Budget und der gewünschten Modellgröße.',
         items: [
-          '**Beste Allround-Wahl — Beelink SER8 (32 GB):** betreibt Home Assistant, Frigate und ein 7B-Modell auf Ollama auf einem Gerät. Rund 650 € für die Konfiguration mit 32 GB / 1 TB, wobei die Preise je nach Händler variieren – aktuellen Preis prüfen.',
+          '**Beste Allround-Wahl — Beelink SER8 (32 GB):** betreibt Home Assistant, Frigate und ein 7B-Modell auf Ollama auf einem Gerät. Rund 999 € für die Konfiguration mit 32 GB / 1 TB, wobei die Preise je nach Händler variieren – aktuellen Preis prüfen.',
           '**Beste Budget-Wahl — Beelink EQ14 oder GMKtec G3 Plus (Intel N150):** betreibt Home Assistant plus ein kleines Modell (1–3B) für rund 180–220 €.',
-          '**Beste Wahl für lokale KI — GEEKOM A9 Max (Ryzen AI 9 HX 370):** stärkste iGPU und eine NPU für On-Device-Bildverarbeitung; üblicherweise 1.099–1.299 € je nach Konfiguration und Händler.',
+          '**Beste Wahl für lokale KI — GEEKOM A9 Max (Ryzen AI 9 HX 370):** stärkste iGPU und eine NPU für On-Device-Bildverarbeitung; üblicherweise 1.399–1.899 € je nach Konfiguration und Händler.',
         ],
         affiliateLinks: [
           { label: 'SER8-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -951,15 +951,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Passen Sie das Gerät an Ihr Zielmodell und Budget an.** Preise, Verbrauchsangaben und Anschlussdetails sind Näherungswerte, entnommen aus Herstellerangaben und unabhängigen Hardware-Tests, Stand August 2026 – prüfen Sie den aktuellen Preis vor dem Kauf.',
         columns: ['Modell', 'CPU', 'GPU/iGPU', 'RAM (getestet/max.)', 'Ethernet', 'Speicher', 'Preis ca. (Aug. 2026)', 'Leerlauf-/typischer Verbrauch', 'Ideal für'],
         rows: [
-          { 'Modell': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integriert)', 'RAM (getestet/max.)': '16 GB / max. 16 GB (1 SO-DIMM)', 'Ethernet': '2x 1GbE', 'Speicher': '1x M.2-NVMe-SSD', 'Preis ca. (Aug. 2026)': '~189–220 €', 'Leerlauf-/typischer Verbrauch': '~5–12W Leerlauf, ~15–25W unter Last', 'Ideal für': 'HA + ein kleines Modell' },
+          { 'Modell': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integriert)', 'RAM (getestet/max.)': '16 GB / max. 16 GB (1 SO-DIMM)', 'Ethernet': '2x 2,5GbE', 'Speicher': '2x M.2-NVMe-SSD', 'Preis ca. (Aug. 2026)': '~189–220 €', 'Leerlauf-/typischer Verbrauch': '~5–12W Leerlauf, ~15–25W unter Last', 'Ideal für': 'HA + ein kleines Modell' },
           { 'Modell': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integriert)', 'RAM (getestet/max.)': '16 GB / offiziell 16 GB, berichtet bis 32 GB (1 SO-DIMM)', 'Ethernet': '1x 2,5GbE', 'Speicher': '2x M.2 (2280 NVMe bis 4TB + 2242 SATA bis 2TB)', 'Preis ca. (Aug. 2026)': '~180–230 €', 'Leerlauf-/typischer Verbrauch': '~5–12W Leerlauf, ~15–25W unter Last', 'Ideal für': 'HA + ein kleines Modell, Budget-Flexibilität' },
-          { 'Modell': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (getestet/max.)': '32 GB / bis 256 GB (2x DDR5-SO-DIMM)', 'Ethernet': '1x 2,5GbE', 'Speicher': '2x M.2 PCIe 4.0 (bis 8TB kombiniert)', 'Preis ca. (Aug. 2026)': '~650 €', 'Leerlauf-/typischer Verbrauch': '~7–10W Leerlauf, ~45W+ unter nachhaltiger KI-Last', 'Ideal für': 'HA + Frigate + ein 7B-Modell' },
+          { 'Modell': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (getestet/max.)': '32 GB / bis 256 GB (2x DDR5-SO-DIMM)', 'Ethernet': '1x 2,5GbE', 'Speicher': '2x M.2 PCIe 4.0 (bis 8TB kombiniert)', 'Preis ca. (Aug. 2026)': '~999 €', 'Leerlauf-/typischer Verbrauch': '~7–10W Leerlauf, ~45W+ unter nachhaltiger KI-Last', 'Ideal für': 'HA + Frigate + ein 7B-Modell' },
           { 'Modell': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'Gleiche Klasse wie SER8', 'RAM (getestet/max.)': '32 GB / bis 96 GB (2x DDR5-SO-DIMM)', 'Ethernet': '2x 2,5GbE', 'Speicher': '2x M.2 NVMe + OCuLink für externe Erweiterung', 'Preis ca. (Aug. 2026)': '~649 € (32GB) / ~439 € Barebone', 'Leerlauf-/typischer Verbrauch': '~7–9W Leerlauf, ~54–90W unter Dauerlast', 'Ideal für': 'Ähnlich SER8, konfigurierbarer' },
-          { 'Modell': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (getestet/max.)': '32 GB / bis 128 GB (2x DDR5-SO-DIMM)', 'Ethernet': '2x 2,5GbE', 'Speicher': '2x M.2-NVMe-SSD', 'Preis ca. (Aug. 2026)': '~1.099–1.299 €', 'Leerlauf-/typischer Verbrauch': '~7–9W Leerlauf, ~20–34W typische Nutzung', 'Ideal für': 'Stärkste On-Device-KI + Bildverarbeitung' },
+          { 'Modell': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (getestet/max.)': '32 GB / bis 128 GB (2x DDR5-SO-DIMM)', 'Ethernet': '2x 2,5GbE', 'Speicher': '2x M.2-NVMe-SSD', 'Preis ca. (Aug. 2026)': '~1.399–1.899 €', 'Leerlauf-/typischer Verbrauch': '~7–9W Leerlauf, ~20–34W typische Nutzung', 'Ideal für': 'Stärkste On-Device-KI + Bildverarbeitung' },
         ],
         items: [
           'Für VRAM und Quantisierungs-Tiefe siehe clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm).',
-          'Netzwerkhinweis: Nur der EQ14 hat keinen 2,5GbE-Anschluss (stattdessen zwei 1GbE-Anschlüsse) – für Home Assistant plus Kamera-Streams verringert eine kabelgebundene 2,5GbE-Verbindung das Risiko, dass das Netzwerk zum Flaschenhals wird.',
+          'Netzwerkhinweis: Jedes Gerät hier hat mindestens einen 2,5GbE-Anschluss – der EQ14 und der Minisforum UM890 Pro sogar zwei – für Home Assistant plus Kamera-Streams verringert eine kabelgebundene 2,5GbE-Verbindung das Risiko, dass das Netzwerk zum Flaschenhals wird.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-de.webp',
         imageCaption: 'Mini-PC-Klassen für Home Assistant KI -- RAM-Empfehlung und Leistungsfähigkeit',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Hardware ist die einzige echte Kostenposition – die Software ist kostenlos.** Home Assistant, Ollama, ein lokales Modell und Frigate sind alle kostenlos und Open Source; der Mini-PC selbst ist der gesamte Budgetposten.',
         items: [
-          '**Hardwarekosten nach Klasse:** günstiges N150-Gerät ~180–230 €; ausgewogenes Ryzen-7/9-Gerät (32 GB) ~650 €; NPU-Spitzengerät ~1.099–1.299 €.',
+          '**Hardwarekosten nach Klasse:** günstiges N150-Gerät ~180–230 €; ausgewogenes Ryzen-7/9-Gerät (32 GB) ~999 €; NPU-Spitzengerät ~1.399–1.899 €.',
           '**Stromverbrauch für ein 24/7-Gerät:** der Leerlaufverbrauch ist bei allen fünf Geräten dieser Übersicht weitgehend ähnlich (etwa 5–10W), aber die nachhaltige KI-Inferenzlast variiert stärker – ein N150-Gerät verbraucht unter Last deutlich weniger (~15–25W) als ein Ryzen-7/9-Gerät, das ein 7B-Modell betreibt (~45W oder mehr). Für ein rund um die Uhr laufendes Gerät summiert sich dieser Unterschied über ein Jahr mehr als die maximale Benchmark-Leistung.',
           'Die vom Hersteller veröffentlichten TDP-Werte setzen die Obergrenze (N150: 6W; 8845HS/8945HS: 45W, bei manchen Boards konfigurierbar bis 70W; HX 370: konfigurierbar 15–54W) – der tatsächliche Verbrauch hängt vom Workload und den BIOS-Energiemodus-Einstellungen ab.',
         ],
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Gibt es Mini-PCs mit vorinstalliertem Home Assistant?', a: 'Vereinzelt, aber es lohnt sich selten. Die offizielle vorinstallierte Route sind die Home-Assistant-Geräte des Projekts selbst; bei gewöhnlichen Mini-PCs ist ein vorinstalliertes System eher ein Aufpreis für einen Schritt, den Sie in etwa 15 Minuten selbst erledigen. Home Assistant OS wird als Abbild auf einen USB-Stick geschrieben und direkt auf dem Gerät installiert. Wichtiger als die Vorinstallation ist, dass RAM und Datenträger zu Ihrem Ziel passen.' },
           { q: 'Worauf sollte ich beim Kauf eines Mini-PCs für Home Assistant achten?', a: 'Auf vier Punkte: RAM, Datenträger, Netzwerk und TDP. Für Home Assistant allein genügen 8 GB; sobald ein Modell der 7B-Klasse mitlaufen soll, sind 16 GB die untere Grenze und 32 GB komfortabel. Eine NVMe-SSD statt eMMC verhindert Engpässe bei der Datenbank. 2,5-Gbit-Ethernet hilft bei mehreren Kameras. Die TDP entscheidet über Dauerstromverbrauch und Lautstärke: 6 W bei der Intel-N-Serie gegenüber 45 W und mehr bei Ryzen-7/9-Geräten.' },
           { q: 'Gibt es einen lüfterlosen Mini-PC für Home Assistant?', a: 'Vollständig lüfterlose Gehäuse sind eine eigene, meist teurere Gerätekategorie. Die günstigen N150-Geräte in dieser Übersicht sind nicht lüfterlos, im Betrieb aber nahezu lautlos – bei 6 W TDP läuft der Lüfter im Alltag kaum hörbar. Für ein Gerät im Wohnraum ist das in der Praxis der entscheidende Punkt. Ryzen-7/9-Geräte mit 45 bis 70 W sind unter KI-Last deutlich hörbar und gehören eher in den Technikraum.' },
-          { q: 'Welcher Rechner eignet sich für Home Assistant?', a: 'Mini-PC, Rechner und Computer meinen hier dasselbe – die Auswahl richtet sich nach dem Ziel, nicht nach der Bauform. Für Home Assistant plus ein kleines Modell genügt ein Intel-N150-Rechner ab rund 180 €. Für Frigate-Objekterkennung zusammen mit einem 7B-Modell ist ein Ryzen-7/9-Gerät mit 32 GB die passende Klasse, etwa der Beelink SER8 für rund 650 €. Erst wenn Sprachmodelle dauerhaft auf dem Gerät laufen sollen, lohnt ein NPU-Gerät.' },
+          { q: 'Welcher Rechner eignet sich für Home Assistant?', a: 'Mini-PC, Rechner und Computer meinen hier dasselbe – die Auswahl richtet sich nach dem Ziel, nicht nach der Bauform. Für Home Assistant plus ein kleines Modell genügt ein Intel-N150-Rechner ab rund 180 €. Für Frigate-Objekterkennung zusammen mit einem 7B-Modell ist ein Ryzen-7/9-Gerät mit 32 GB die passende Klasse, etwa der Beelink SER8 für rund 999 €. Erst wenn Sprachmodelle dauerhaft auf dem Gerät laufen sollen, lohnt ein NPU-Gerät.' },
           { q: 'Intel N100 oder N150 für Home Assistant?', a: 'Beide reichen für Home Assistant aus. Der N150 ist die neuere Ausgabe derselben Effizienzklasse mit etwas höheren Taktraten; am Verbrauch von rund 6 W TDP ändert sich nichts. Für Automatisierungen, Add-ons und ein kleines Modell nehmen sich die beiden im Alltag wenig. Die Grenze ist bei beiden dieselbe: für ein reaktionsschnelles Modell der 7B-Klasse zusammen mit Frigate ist diese Klasse zu schwach.' },
           { q: 'Taugt ein Mini-PC als KI- und Smart-Home-Server im Heimnetz?', a: 'Ja, aber nicht in der Budgetklasse. Ein Ryzen-7/9-Gerät mit 32 GB stellt über Ollama einen OpenAI-kompatiblen Endpunkt im Heimnetz bereit, den Home Assistant und andere Geräte gemeinsam nutzen können. Unter Dauerlast liegt der Verbrauch bei N150-Geräten bei etwa 15 bis 25 W und bei Ryzen-Geräten deutlich darüber. Ein N150-Rechner eignet sich als KI-Server nur für sehr kleine Modelle.' },
           { q: 'Kann ein Mini-PC sowohl Home Assistant als auch ein lokales LLM betreiben?', a: 'Ja. Ein Mini-PC mit genug RAM und einer leistungsfähigen integrierten GPU oder NPU betreibt Home Assistant und ein kleines lokales LLM zusammen und kann Whisper und Frigate hinzufügen. Dieser Ein-Geräte-Ansatz ist der einfachste Weg zu einem lokalen KI-Smart-Home.' },
@@ -1091,13 +1091,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Mini-PCs für Home Assistant + lokale KI (2026)',
-      description: 'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate + ein 7B-Modell; Intel-N150-Geräte (~180–230 €) fürs Budget; GEEKOM A9 Max (~1.099 €+) für On-Device-KI. Direkt verglichen.',
+      description: 'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~999 €) für Frigate + ein 7B-Modell; Intel-N150-Geräte (~180–230 €) fürs Budget; GEEKOM A9 Max (~1.399 €+) für On-Device-KI. Direkt verglichen.',
       url: 'https://www.promptquorum.com/de/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-30',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Lokales LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Gibt es Mini-PCs mit vorinstalliertem Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Vereinzelt, aber es lohnt sich selten. Die offizielle vorinstallierte Route sind die Home-Assistant-Geräte des Projekts selbst; bei gewöhnlichen Mini-PCs ist ein vorinstalliertes System eher ein Aufpreis für einen Schritt, den Sie in etwa 15 Minuten selbst erledigen. Home Assistant OS wird als Abbild auf einen USB-Stick geschrieben und direkt auf dem Gerät installiert. Wichtiger als die Vorinstallation ist, dass RAM und Datenträger zu Ihrem Ziel passen.' } },
         { '@type': 'Question', name: 'Worauf sollte ich beim Kauf eines Mini-PCs für Home Assistant achten?', acceptedAnswer: { '@type': 'Answer', text: 'Auf vier Punkte: RAM, Datenträger, Netzwerk und TDP. Für Home Assistant allein genügen 8 GB; sobald ein Modell der 7B-Klasse mitlaufen soll, sind 16 GB die untere Grenze und 32 GB komfortabel. Eine NVMe-SSD statt eMMC verhindert Engpässe bei der Datenbank. 2,5-Gbit-Ethernet hilft bei mehreren Kameras. Die TDP entscheidet über Dauerstromverbrauch und Lautstärke: 6 W bei der Intel-N-Serie gegenüber 45 W und mehr bei Ryzen-7/9-Geräten.' } },
         { '@type': 'Question', name: 'Gibt es einen lüfterlosen Mini-PC für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Vollständig lüfterlose Gehäuse sind eine eigene, meist teurere Gerätekategorie. Die günstigen N150-Geräte in dieser Übersicht sind nicht lüfterlos, im Betrieb aber nahezu lautlos – bei 6 W TDP läuft der Lüfter im Alltag kaum hörbar. Für ein Gerät im Wohnraum ist das in der Praxis der entscheidende Punkt. Ryzen-7/9-Geräte mit 45 bis 70 W sind unter KI-Last deutlich hörbar und gehören eher in den Technikraum.' } },
-        { '@type': 'Question', name: 'Welcher Rechner eignet sich für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Mini-PC, Rechner und Computer meinen hier dasselbe – die Auswahl richtet sich nach dem Ziel, nicht nach der Bauform. Für Home Assistant plus ein kleines Modell genügt ein Intel-N150-Rechner ab rund 180 €. Für Frigate-Objekterkennung zusammen mit einem 7B-Modell ist ein Ryzen-7/9-Gerät mit 32 GB die passende Klasse, etwa der Beelink SER8 für rund 650 €. Erst wenn Sprachmodelle dauerhaft auf dem Gerät laufen sollen, lohnt ein NPU-Gerät.' } },
+        { '@type': 'Question', name: 'Welcher Rechner eignet sich für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Mini-PC, Rechner und Computer meinen hier dasselbe – die Auswahl richtet sich nach dem Ziel, nicht nach der Bauform. Für Home Assistant plus ein kleines Modell genügt ein Intel-N150-Rechner ab rund 180 €. Für Frigate-Objekterkennung zusammen mit einem 7B-Modell ist ein Ryzen-7/9-Gerät mit 32 GB die passende Klasse, etwa der Beelink SER8 für rund 999 €. Erst wenn Sprachmodelle dauerhaft auf dem Gerät laufen sollen, lohnt ein NPU-Gerät.' } },
         { '@type': 'Question', name: 'Intel N100 oder N150 für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Beide reichen für Home Assistant aus. Der N150 ist die neuere Ausgabe derselben Effizienzklasse mit etwas höheren Taktraten; am Verbrauch von rund 6 W TDP ändert sich nichts. Für Automatisierungen, Add-ons und ein kleines Modell nehmen sich die beiden im Alltag wenig. Die Grenze ist bei beiden dieselbe: für ein reaktionsschnelles Modell der 7B-Klasse zusammen mit Frigate ist diese Klasse zu schwach.' } },
         { '@type': 'Question', name: 'Taugt ein Mini-PC als KI- und Smart-Home-Server im Heimnetz?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber nicht in der Budgetklasse. Ein Ryzen-7/9-Gerät mit 32 GB stellt über Ollama einen OpenAI-kompatiblen Endpunkt im Heimnetz bereit, den Home Assistant und andere Geräte gemeinsam nutzen können. Unter Dauerlast liegt der Verbrauch bei N150-Geräten bei etwa 15 bis 25 W und bei Ryzen-Geräten deutlich darüber. Ein N150-Rechner eignet sich als KI-Server nur für sehr kleine Modelle.' } },
         { '@type': 'Question', name: 'Kann ein Mini-PC sowohl Home Assistant als auch ein lokales LLM betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ein Mini-PC mit genug RAM und einer leistungsfähigen iGPU oder NPU betreibt Home Assistant und ein kleines lokales LLM zusammen und kann Whisper und Frigate hinzufügen.' } },
@@ -1126,19 +1126,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Mejores Mini PC para Home Assistant + IA Local (2026)',
     seoTitle: 'Mejor Mini PC para Home Assistant + IA Local en 2026',
     intro:
-      'El mejor mini PC para ejecutar Home Assistant más un LLM local en un solo equipo en 2026 es el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por unos 650 €, que ejecuta el hub, Frigate y un modelo 7B con Ollama. Con menos presupuesto, un equipo Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant y un modelo pequeño. Para la IA en el dispositivo y la visión más potentes, el GEEKOM A9 Max (Ryzen AI 9 HX 370, unos 1.099–1.299 €) sube un escalón más. Esta guía de compra compara los cinco equipos concretos uno junto a otro, da una recomendación directa para cada caso de uso y cubre notas de configuración, con enlace cruzado a la guía de hardware de local-llms para la profundidad de VRAM.',
+      'El mejor mini PC para ejecutar Home Assistant más un LLM local en un solo equipo en 2026 es el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por unos 999 €, que ejecuta el hub, Frigate y un modelo 7B con Ollama. Con menos presupuesto, un equipo Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant y un modelo pequeño. Para la IA en el dispositivo y la visión más potentes, el GEEKOM A9 Max (Ryzen AI 9 HX 370, desde 1.439 €) sube un escalón más. Esta guía de compra compara los cinco equipos concretos uno junto a otro, da una recomendación directa para cada caso de uso y cubre notas de configuración, con enlace cruzado a la guía de hardware de local-llms para la profundidad de VRAM.',
     metaDescription:
-      'Mejor mini PC para Home Assistant 2026: Beelink SER8 (~650 €) para Frigate + un modelo 7B; equipos Intel N150 (~180–230 €) económicos; GEEKOM A9 Max (~1.099 €+) para IA en el dispositivo. Comparados uno junto a otro.',
+      'Mejor mini PC para Home Assistant 2026: Beelink SER8 (~999 €) para Frigate + un modelo 7B; equipos Intel N150 (~180–230 €) económicos; GEEKOM A9 Max (~1.439 €+) para IA en el dispositivo. Comparados uno junto a otro.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-es.webp',
     twitterDescription:
-      'Mejor mini PC para Home Assistant 2026: el Beelink SER8 (~650 €) ejecuta Frigate + un modelo 7B con Ollama; equipos Intel N150 económicos (~180–230 €); GEEKOM A9 Max (~1.099 €+) para IA en el dispositivo. 5 equipos comparados.',
+      'Mejor mini PC para Home Assistant 2026: el Beelink SER8 (~999 €) ejecuta Frigate + un modelo 7B con Ollama; equipos Intel N150 económicos (~180–230 €); GEEKOM A9 Max (~1.439 €+) para IA en el dispositivo. 5 equipos comparados.',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores que eligen un mini PC para Home Assistant e IA local',
@@ -1151,16 +1151,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**El mejor mini PC integral para Home Assistant más un LLM local en 2026 es el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por unos 650 €: ejecuta el hub, Frigate y un modelo 7B con Ollama en un solo equipo.** Para una configuración económica o casi silenciosa, un equipo Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant y un modelo pequeño. Para la IA en el dispositivo más potente, el GEEKOM A9 Max (unos 1.099–1.299 €) sube un escalón más. Prioriza la RAM y la iGPU sobre la frecuencia bruta de la CPU para la latencia de IA.',
+      '**El mejor mini PC integral para Home Assistant más un LLM local en 2026 es el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por unos 999 €: ejecuta el hub, Frigate y un modelo 7B con Ollama en un solo equipo.** Para una configuración económica o casi silenciosa, un equipo Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant y un modelo pequeño. Para la IA en el dispositivo más potente, el GEEKOM A9 Max (desde 1.439 €) sube un escalón más. Prioriza la RAM y la iGPU sobre la frecuencia bruta de la CPU para la latencia de IA.',
     quickAnswerTop: {
       es: {
         question: '¿Qué mini PC es mejor para Home Assistant e IA local en 2026?',
         answer:
-          'Para la mayoría, el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, unos 650 €) es la mejor opción: su iGPU fuerte ejecuta un modelo 7B con Ollama junto a Home Assistant, Frigate y Whisper. Con menos presupuesto o para un equipo casi silencioso, un mini PC Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant más un modelo pequeño. Para la IA en el dispositivo y la visión más potentes, un mini PC Ryzen AI como el GEEKOM A9 Max (unos 1.099–1.299 €) sube un escalón más.',
+          'Para la mayoría, el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, unos 999 €) es la mejor opción: su iGPU fuerte ejecuta un modelo 7B con Ollama junto a Home Assistant, Frigate y Whisper. Con menos presupuesto o para un equipo casi silencioso, un mini PC Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant más un modelo pequeño. Para la IA en el dispositivo y la visión más potentes, un mini PC Ryzen AI como el GEEKOM A9 Max (desde 1.439 €) sube un escalón más.',
         bullets: [
-          'Mejor integral: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ~650 € — HA + Frigate + un modelo 7B con Ollama',
+          'Mejor integral: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ~999 € — HA + Frigate + un modelo 7B con Ollama',
           'Económico / casi silencioso: Intel N150 (Beelink EQ14, GMKtec G3 Plus) ~180–230 € — HA + un modelo pequeño',
-          'Mejor para IA local: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~1.099–1.299 € — la iGPU + NPU más potentes para visión',
+          'Mejor para IA local: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~1.439 € — la iGPU + NPU más potentes para visión',
           'Prioriza la RAM y una iGPU capaz sobre la frecuencia de la CPU; más RAM aloja un modelo mayor',
           'Consulta la guía de hardware de local-llms para la profundidad de VRAM',
         ],
@@ -1193,8 +1193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Prioriza la RAM y una GPU integrada o NPU capaz sobre la frecuencia bruta de la CPU',
           'Un mini PC de bajo consumo de la serie N de Intel (~180–220 €) ejecuta Home Assistant y un modelo pequeño',
-          'Un mini PC Ryzen 7/9 con una iGPU fuerte (~650 €) maneja un modelo 7B junto al hub',
-          'Un mini PC con NPU Ryzen AI (~1.099 €+) es la opción más potente para IA en el dispositivo y visión',
+          'Un mini PC Ryzen 7/9 con una iGPU fuerte (~999 €) maneja un modelo 7B junto al hub',
+          'Un mini PC con NPU Ryzen AI (~1.439 €+) es la opción más potente para IA en el dispositivo y visión',
           'Un solo mini PC puede ejecutar Home Assistant, Ollama, Whisper y Frigate juntos',
           'Consulta la guía de hardware de local-llms (entre clústeres) para detalles de VRAM',
         ],
@@ -1205,9 +1205,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tres configuraciones cubren la mayoría de instalaciones de Home Assistant + IA local.** Elige según tu presupuesto y el tamaño de modelo que quieras ejecutar.',
         items: [
-          '**Mejor en general — Beelink SER8 (32 GB):** ejecuta Home Assistant, Frigate y un modelo 7B con Ollama en un solo equipo. Unos 650 € para la configuración de 32 GB / 1 TB, aunque los precios varían según el vendedor — consulta el precio actual.',
+          '**Mejor en general — Beelink SER8 (32 GB):** ejecuta Home Assistant, Frigate y un modelo 7B con Ollama en un solo equipo. Unos 999 € para la configuración de 32 GB / 1 TB, aunque los precios varían según el vendedor — consulta el precio actual.',
           '**Mejor económico — Beelink EQ14 o GMKtec G3 Plus (Intel N150):** ejecuta Home Assistant más un modelo pequeño (1–3B) por unos 180–220 €.',
-          '**Mejor para IA local — GEEKOM A9 Max (Ryzen AI 9 HX 370):** la iGPU más potente y una NPU para visión en el dispositivo; normalmente entre 1.099 y 1.299 € según configuración y vendedor.',
+          '**Mejor para IA local — GEEKOM A9 Max (Ryzen AI 9 HX 370):** la iGPU más potente y una NPU para visión en el dispositivo; normalmente desde 1.439 € según configuración y vendedor.',
         ],
         affiliateLinks: [
           { label: 'Ver precio del SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -1334,15 +1334,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ajusta el equipo a tu modelo objetivo y presupuesto.** Los precios, las cifras de consumo y los datos de conectividad son aproximados, obtenidos de listados del fabricante y análisis de hardware independientes a agosto de 2026 — confirma el precio vigente antes de comprar.',
         columns: ['Modelo', 'CPU', 'GPU/iGPU', 'RAM (probada/máx.)', 'Ethernet', 'Almacenamiento', 'Precio aprox. (ago. 2026)', 'Consumo en reposo / típico', 'Ideal para'],
         rows: [
-          { 'Modelo': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (probada/máx.)': '16 GB / máx. 16 GB (1 SO-DIMM)', 'Ethernet': '2x 1GbE', 'Almacenamiento': '1x SSD M.2 NVMe', 'Precio aprox. (ago. 2026)': '~189–220 €', 'Consumo en reposo / típico': '~5–12W en reposo, ~15–25W bajo carga', 'Ideal para': 'HA + un modelo pequeño' },
+          { 'Modelo': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (probada/máx.)': '16 GB / máx. 16 GB (1 SO-DIMM)', 'Ethernet': '2x 2.5GbE', 'Almacenamiento': '2x SSD M.2 NVMe', 'Precio aprox. (ago. 2026)': '~189–220 €', 'Consumo en reposo / típico': '~5–12W en reposo, ~15–25W bajo carga', 'Ideal para': 'HA + un modelo pequeño' },
           { 'Modelo': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (probada/máx.)': '16 GB / oficialmente 16 GB, hasta 32 GB reportado (1 SO-DIMM)', 'Ethernet': '1x 2.5GbE', 'Almacenamiento': '2x M.2 (2280 NVMe hasta 4TB + 2242 SATA hasta 2TB)', 'Precio aprox. (ago. 2026)': '~180–230 €', 'Consumo en reposo / típico': '~5–12W en reposo, ~15–25W bajo carga', 'Ideal para': 'HA + un modelo pequeño, flexibilidad de presupuesto' },
-          { 'Modelo': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (probada/máx.)': '32 GB / hasta 256 GB (2x SO-DIMM DDR5)', 'Ethernet': '1x 2.5GbE', 'Almacenamiento': '2x M.2 PCIe 4.0 (hasta 8TB combinados)', 'Precio aprox. (ago. 2026)': '~650 €', 'Consumo en reposo / típico': '~7–10W en reposo, ~45W+ bajo carga de IA sostenida', 'Ideal para': 'HA + Frigate + un modelo 7B' },
+          { 'Modelo': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (probada/máx.)': '32 GB / hasta 256 GB (2x SO-DIMM DDR5)', 'Ethernet': '1x 2.5GbE', 'Almacenamiento': '2x M.2 PCIe 4.0 (hasta 8TB combinados)', 'Precio aprox. (ago. 2026)': '~999 €', 'Consumo en reposo / típico': '~7–10W en reposo, ~45W+ bajo carga de IA sostenida', 'Ideal para': 'HA + Frigate + un modelo 7B' },
           { 'Modelo': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'Misma clase que el SER8', 'RAM (probada/máx.)': '32 GB / hasta 96 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Almacenamiento': '2x M.2 NVMe + OCuLink para expansión externa', 'Precio aprox. (ago. 2026)': '~649 € (32GB) / ~439 € barebones', 'Consumo en reposo / típico': '~7–9W en reposo, ~54–90W bajo carga sostenida', 'Ideal para': 'Similar al SER8, más configurable' },
-          { 'Modelo': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (probada/máx.)': '32 GB / hasta 128 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Almacenamiento': '2x SSD M.2 NVMe', 'Precio aprox. (ago. 2026)': '~1.099–1.299 €', 'Consumo en reposo / típico': '~7–9W en reposo, ~20–34W en uso típico', 'Ideal para': 'La IA en el dispositivo + visión más potentes' },
+          { 'Modelo': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (probada/máx.)': '32 GB / hasta 128 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Almacenamiento': '2x SSD M.2 NVMe', 'Precio aprox. (ago. 2026)': '~1.439 €', 'Consumo en reposo / típico': '~7–9W en reposo, ~20–34W en uso típico', 'Ideal para': 'La IA en el dispositivo + visión más potentes' },
         ],
         items: [
           'Para VRAM y profundidad de cuantización, consulta entre clústeres [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm).',
-          'Nota sobre red: solo el EQ14 carece de puerto 2.5GbE (tiene dos puertos 1GbE en su lugar) — para Home Assistant más streams de cámaras, una conexión cableada de 2.5GbE reduce la probabilidad de que la red se convierta en el cuello de botella.',
+          'Nota sobre red: todos los equipos de esta guía llevan al menos un puerto 2.5GbE — el EQ14 y el Minisforum UM890 Pro incluso llevan dos — para Home Assistant más streams de cámaras, una conexión cableada de 2.5GbE reduce la probabilidad de que la red se convierta en el cuello de botella.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-es.webp',
         imageCaption: 'Clases de Mini PC para IA de Home Assistant -- Guía de RAM y capacidades',
@@ -1408,7 +1408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El hardware es el único coste real — el software es gratuito.** Home Assistant, Ollama, un modelo local y Frigate son gratuitos y de código abierto; el mini PC en sí es la única partida del presupuesto.',
         items: [
-          '**Coste de hardware por nivel:** equipo económico N150 ~180–230 €; equipo equilibrado Ryzen 7/9 (32 GB) ~650 €; equipo con NPU de gama superior ~1.099–1.299 €.',
+          '**Coste de hardware por nivel:** equipo económico N150 ~180–230 €; equipo equilibrado Ryzen 7/9 (32 GB) ~999 €; equipo con NPU de gama superior ~1.439 €.',
           '**Consumo para un equipo 24/7:** el consumo en reposo es bastante similar entre los cinco equipos de esta guía (aproximadamente 5–10W), pero la carga sostenida de inferencia de IA varía más — un equipo N150 consume notablemente menos bajo carga (~15–25W) que un equipo Ryzen 7/9 ejecutando un modelo 7B (~45W o más). Para un equipo que funciona las 24 horas, esa diferencia se acumula a lo largo de un año más que el rendimiento máximo en pruebas comparativas.',
           'Las cifras de TDP publicadas por el fabricante marcan el límite superior (N150: 6W; 8845HS/8945HS: 45W, configurable hasta 70W en algunas placas; HX 370: configurable 15–54W) — el consumo real depende de la carga de trabajo y de los ajustes del modo de energía en la BIOS.',
         ],
@@ -1467,13 +1467,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Mini PC para Home Assistant + IA Local (2026)',
-      description: 'Mejor mini PC para Home Assistant 2026: Beelink SER8 (~650 €) para Frigate + un modelo 7B; equipos Intel N150 (~180–230 €) económicos; GEEKOM A9 Max (~1.099 €+) para IA en el dispositivo. Comparados uno junto a otro.',
+      description: 'Mejor mini PC para Home Assistant 2026: Beelink SER8 (~999 €) para Frigate + un modelo 7B; equipos Intel N150 (~180–230 €) económicos; GEEKOM A9 Max (~1.439 €+) para IA en el dispositivo. Comparados uno junto a otro.',
       url: 'https://www.promptquorum.com/es/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1494,19 +1494,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Home Assistant + 로컬 AI를 위한 최고의 미니 PC (2026)',
     seoTitle: '2026년 Home Assistant + 로컬 AI를 위한 최고의 미니 PC',
     intro:
-      '2026년 하나의 기기에서 Home Assistant와 로컬 LLM을 실행하기 위한 최고의 미니 PC는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 약 $650)로, 허브와 Frigate, Ollama의 7B 모델을 함께 실행합니다. 예산이 빠듯하다면 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 기기(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI와 비전을 원한다면 GEEKOM A9 Max(Ryzen AI 9 HX 370, 약 $1,099–1,299)가 한 단계 더 나아갑니다. 이 구매 가이드는 다섯 가지 구체적인 제품을 나란히 비교하고, 각 사용 사례에 대한 직접적인 추천을 제공하며, 설정 메모를 다룹니다. VRAM 심층 정보는 local-llms 하드웨어 가이드로 크로스 링크합니다.',
+      '2026년 하나의 기기에서 Home Assistant와 로컬 LLM을 실행하기 위한 최고의 미니 PC는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 현재가 확인 필요)로, 허브와 Frigate, Ollama의 7B 모델을 함께 실행합니다. 예산이 빠듯하다면 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 기기(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI와 비전을 원한다면 GEEKOM A9 Max(Ryzen AI 9 HX 370, 약 $1,299–1,599)가 한 단계 더 나아갑니다. 이 구매 가이드는 다섯 가지 구체적인 제품을 나란히 비교하고, 각 사용 사례에 대한 직접적인 추천을 제공하며, 설정 메모를 다룹니다. VRAM 심층 정보는 local-llms 하드웨어 가이드로 크로스 링크합니다.',
     metaDescription:
-      '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(약 $650)로 Frigate + 7B 모델; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,099+). 나란히 비교했습니다.',
+      '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(현재가 확인 필요)로 Frigate + 7B 모델; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,299+). 나란히 비교했습니다.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ko.webp',
     twitterDescription:
-      '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(약 $650)가 Frigate + 7B 모델을 실행; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,099+). 5개 제품 비교.',
+      '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(현재가 확인 필요)가 Frigate + 7B 모델을 실행; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,299+). 5개 제품 비교.',
     readTime: '10분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'Home Assistant와 로컬 AI를 위한 미니 PC를 선택하는 구매자',
@@ -1519,16 +1519,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant 미니 PC 2026',
     ],
     leadAnswerBlock:
-      '**2026년 Home Assistant와 로컬 LLM을 위한 최고의 올라운드 미니 PC는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 약 $650)입니다 — 허브와 Frigate, Ollama의 7B 모델을 하나의 기기에서 실행합니다.** 예산형 또는 거의 무소음 구성으로는 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 기기(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI를 원한다면 GEEKOM A9 Max(약 $1,099–1,299)가 한 단계 더 나아갑니다. AI 지연 시간을 위해 원시 CPU 클럭보다 RAM과 iGPU를 우선시하십시오.',
+      '**2026년 Home Assistant와 로컬 LLM을 위한 최고의 올라운드 미니 PC는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 현재가 확인 필요)입니다 — 허브와 Frigate, Ollama의 7B 모델을 하나의 기기에서 실행합니다.** 예산형 또는 거의 무소음 구성으로는 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 기기(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI를 원한다면 GEEKOM A9 Max(약 $1,299–1,599)가 한 단계 더 나아갑니다. AI 지연 시간을 위해 원시 CPU 클럭보다 RAM과 iGPU를 우선시하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년 Home Assistant와 로컬 AI에 가장 적합한 미니 PC는 무엇입니까?',
         answer:
-          '대부분의 사용자에게는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 약 $650)이 최고의 선택입니다 — 강력한 iGPU가 Home Assistant, Frigate, Whisper와 함께 Ollama의 7B 모델을 실행합니다. 예산이 빠듯하거나 거의 무소음 기기를 원한다면 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 미니 PC(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI와 비전을 원한다면 GEEKOM A9 Max(약 $1,099–1,299) 같은 Ryzen AI 미니 PC가 한 단계 더 나아갑니다.',
+          '대부분의 사용자에게는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 현재가 확인 필요)이 최고의 선택입니다 — 강력한 iGPU가 Home Assistant, Frigate, Whisper와 함께 Ollama의 7B 모델을 실행합니다. 예산이 빠듯하거나 거의 무소음 기기를 원한다면 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 미니 PC(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 가장 강력한 온-디바이스 AI와 비전을 원한다면 GEEKOM A9 Max(약 $1,299–1,599) 같은 Ryzen AI 미니 PC가 한 단계 더 나아갑니다.',
         bullets: [
-          '최고의 올라운드: Beelink SER8(Ryzen 7 8845HS, 32 GB) 약 $650 — HA + Frigate + Ollama의 7B 모델',
+          '최고의 올라운드: Beelink SER8(Ryzen 7 8845HS, 32 GB) 현재가 확인 필요 — HA + Frigate + Ollama의 7B 모델',
           '예산형 / 거의 무소음: Intel N150(Beelink EQ14, GMKtec G3 Plus) 약 $180–230 — HA + 소형 모델',
-          '로컬 AI 최고 선택: GEEKOM A9 Max(Ryzen AI 9 HX 370) 약 $1,099–1,299 — 비전을 위한 최강 iGPU + NPU',
+          '로컬 AI 최고 선택: GEEKOM A9 Max(Ryzen AI 9 HX 370) 약 $1,299–1,599 — 비전을 위한 최강 iGPU + NPU',
           'CPU 클럭보다 RAM과 고성능 iGPU를 우선시하십시오; RAM이 많을수록 더 큰 모델을 담습니다',
           'VRAM 심층 정보는 local-llms 하드웨어 가이드를 참조하십시오',
         ],
@@ -1561,8 +1561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '원시 CPU 클럭보다 RAM과 고성능 내장 GPU 또는 NPU를 우선시하십시오',
           '저전력 Intel N150 미니 PC(약 $180–220)는 Home Assistant와 소형 모델을 실행합니다',
-          '강력한 iGPU가 있는 Ryzen 7/9 미니 PC(약 $650)는 허브 옆에서 7B 모델을 처리합니다',
-          'NPU가 있는 Ryzen AI 미니 PC(약 $1,099+)는 온-디바이스 AI와 비전을 위한 최강 옵션입니다',
+          '강력한 iGPU가 있는 Ryzen 7/9 미니 PC(현재가 확인 필요)는 허브 옆에서 7B 모델을 처리합니다',
+          'NPU가 있는 Ryzen AI 미니 PC(약 $1,299+)는 온-디바이스 AI와 비전을 위한 최강 옵션입니다',
           '하나의 미니 PC로 Home Assistant, Ollama, Whisper, Frigate를 함께 실행할 수 있습니다',
           'VRAM 세부 사항은 크로스 클러스터 local-llms 하드웨어 가이드를 참조하십시오',
         ],
@@ -1573,9 +1573,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**세 가지 구성이 대부분의 Home Assistant + 로컬 AI 설정을 다룹니다.** 예산과 실행하려는 모델 크기에 따라 선택하십시오.',
         items: [
-          '**최고의 올라운드 — Beelink SER8(32 GB):** Home Assistant, Frigate, Ollama의 7B 모델을 하나의 기기에서 실행합니다. 32 GB / 1 TB 구성 기준 약 $650이지만, 가격은 판매처마다 다르므로 현재 가격을 확인하십시오.',
+          '**최고의 올라운드 — Beelink SER8(32 GB):** Home Assistant, Frigate, Ollama의 7B 모델을 하나의 기기에서 실행합니다. 32 GB / 1 TB 구성 기준 현재가 확인 필요이지만, 가격은 판매처마다 다르므로 현재 가격을 확인하십시오.',
           '**최고의 예산 선택 — Beelink EQ14 또는 GMKtec G3 Plus(Intel N150):** Home Assistant와 소형 모델(1–3B)을 약 $180–220에 실행합니다.',
-          '**로컬 AI 최고 선택 — GEEKOM A9 Max(Ryzen AI 9 HX 370):** 온-디바이스 비전을 위한 최강 iGPU와 NPU를 탑재; 구성과 판매처에 따라 일반적으로 $1,099–1,299입니다.',
+          '**로컬 AI 최고 선택 — GEEKOM A9 Max(Ryzen AI 9 HX 370):** 온-디바이스 비전을 위한 최강 iGPU와 NPU를 탑재; 구성과 판매처에 따라 일반적으로 $1,299–1,599입니다.',
         ],
         affiliateLinks: [
           { label: 'SER8 가격 확인 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -1702,15 +1702,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**목표 모델과 예산에 맞는 기기를 선택하십시오.** 가격, 전력 수치, 연결 사양은 근사치이며, 2026년 8월 기준 제조사 게시 정보와 독립적인 하드웨어 리뷰에서 가져왔습니다 — 구매 전 현재 가격을 확인하십시오.',
         columns: ['제품', 'CPU', 'GPU/iGPU', 'RAM(테스트/최대)', '이더넷', '저장소', '대략적 가격', '유휴/일반 전력 소비', '이런 경우에 최적'],
         rows: [
-          { '제품': '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD(내장)', 'RAM(테스트/최대)': '16 GB / 최대 16 GB(SO-DIMM 1개)', '이더넷': '1GbE 2개', '저장소': 'M.2 NVMe SSD 1개', '대략적 가격': '약 $189–220', '유휴/일반 전력 소비': '유휴 약 5–12W, 부하 시 약 15–25W', '이런 경우에 최적': 'HA + 소형 모델' },
+          { '제품': '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD(내장)', 'RAM(테스트/최대)': '16 GB / 최대 16 GB(SO-DIMM 1개)', '이더넷': '2.5GbE 2개', '저장소': 'M.2 NVMe SSD 2개', '대략적 가격': '약 $189–220', '유휴/일반 전력 소비': '유휴 약 5–12W, 부하 시 약 15–25W', '이런 경우에 최적': 'HA + 소형 모델' },
           { '제품': '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD(내장)', 'RAM(테스트/최대)': '16 GB / 공식 16 GB, 32 GB까지 보고됨(SO-DIMM 1개)', '이더넷': '2.5GbE 1개', '저장소': 'M.2 2개(2280 NVMe 최대 4TB + 2242 SATA 최대 2TB)', '대략적 가격': '약 $180–230', '유휴/일반 전력 소비': '유휴 약 5–12W, 부하 시 약 15–25W', '이런 경우에 최적': 'HA + 소형 모델, 예산 유연성' },
-          { '제품': '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM(테스트/최대)': '32 GB / 최대 256 GB(DDR5 SO-DIMM 2개)', '이더넷': '2.5GbE 1개', '저장소': 'M.2 PCIe 4.0 2개(합산 최대 8TB)', '대략적 가격': '약 $650', '유휴/일반 전력 소비': '유휴 약 7–10W, 지속적인 AI 부하 시 약 45W 이상', '이런 경우에 최적': 'HA + Frigate + 7B 모델' },
+          { '제품': '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM(테스트/최대)': '32 GB / 최대 256 GB(DDR5 SO-DIMM 2개)', '이더넷': '2.5GbE 1개', '저장소': 'M.2 PCIe 4.0 2개(합산 최대 8TB)', '대략적 가격': '현재가 확인 필요', '유휴/일반 전력 소비': '유휴 약 7–10W, 지속적인 AI 부하 시 약 45W 이상', '이런 경우에 최적': 'HA + Frigate + 7B 모델' },
           { '제품': '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'SER8과 동일 등급', 'RAM(테스트/최대)': '32 GB / 최대 96 GB(DDR5 SO-DIMM 2개)', '이더넷': '2.5GbE 2개', '저장소': 'M.2 NVMe 2개 + 외부 확장용 OCuLink', '대략적 가격': '약 $649(32GB) / 약 $439 베어본', '유휴/일반 전력 소비': '유휴 약 7–9W, 지속 부하 시 약 54–90W', '이런 경우에 최적': 'SER8과 유사, 더 구성 가능' },
-          { '제품': '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM(테스트/최대)': '32 GB / 최대 128 GB(DDR5 SO-DIMM 2개)', '이더넷': '2.5GbE 2개', '저장소': 'M.2 NVMe SSD 2개', '대략적 가격': '약 $1,099–1,299', '유휴/일반 전력 소비': '유휴 약 7–9W, 일반 사용 시 약 20–34W', '이런 경우에 최적': '최강 온-디바이스 AI + 비전' },
+          { '제품': '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM(테스트/최대)': '32 GB / 최대 128 GB(DDR5 SO-DIMM 2개)', '이더넷': '2.5GbE 2개', '저장소': 'M.2 NVMe SSD 2개', '대략적 가격': '약 $1,299–1,599', '유휴/일반 전력 소비': '유휴 약 7–9W, 일반 사용 시 약 20–34W', '이런 경우에 최적': '최강 온-디바이스 AI + 비전' },
         ],
         items: [
           'VRAM 및 양자화 심도는 크로스 클러스터 [로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하십시오.',
-          '네트워크 참고: EQ14만 2.5GbE 포트가 없습니다(대신 1GbE 포트 2개) — Home Assistant와 카메라 스트림을 함께 사용할 경우, 유선 2.5GbE 연결로 네트워크가 병목이 될 가능성을 줄일 수 있습니다.',
+          '네트워크 참고: 여기 모든 제품은 2.5GbE 포트를 최소 1개 갖추고 있으며, EQ14와 Minisforum UM890 Pro는 2개를 갖추고 있습니다 — Home Assistant와 카메라 스트림을 함께 사용할 경우, 유선 2.5GbE 연결로 네트워크가 병목이 될 가능성을 줄일 수 있습니다.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ko.webp',
         imageCaption: 'Home Assistant AI용 미니 PC 등급 -- RAM 가이드와 실행 가능 범위',
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**하드웨어가 유일한 실질적 비용입니다 — 소프트웨어는 무료입니다.** Home Assistant, Ollama, 로컬 모델, Frigate는 모두 무료이며 오픈 소스입니다; 미니 PC 자체가 전체 예산 항목입니다.',
         items: [
-          '**등급별 하드웨어 비용:** 예산형 N150 기기 약 $180–230; 균형형 Ryzen 7/9 기기(32 GB) 약 $650; 최상위 NPU 기기 약 $1,099–1,299.',
+          '**등급별 하드웨어 비용:** 예산형 N150 기기 약 $180–230; 균형형 Ryzen 7/9 기기(32 GB) 현재가 확인 필요; 최상위 NPU 기기 약 $1,299–1,599.',
           '**24/7 기기의 전력 소비:** 이 가이드의 다섯 기기 모두 유휴 전력 소비는 대체로 비슷하지만(약 5–10W), 지속적인 AI 추론 부하는 더 크게 다릅니다 — N150 기기는 부하 시 눈에 띄게 적게 소비하며(약 15–25W), 7B 모델을 실행하는 Ryzen 7/9 기기(약 45W 이상)와 비교됩니다. 24시간 내내 작동하는 기기라면 이 차이는 최고 벤치마크 성능보다 1년 동안 더 많이 누적됩니다.',
           '제조사가 게시한 TDP 수치가 상한선을 정합니다(N150: 6W; 8845HS/8945HS: 45W, 일부 보드에서는 최대 70W까지 조정 가능; HX 370: 15–54W 조정 가능) — 실제 소비 전력은 워크로드와 BIOS 전력 모드 설정에 따라 달라집니다.',
         ],
@@ -1835,13 +1835,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + 로컬 AI를 위한 최고의 미니 PC (2026)',
-      description: '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(약 $650)로 Frigate + 7B 모델; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,099+). 나란히 비교했습니다.',
+      description: '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(현재가 확인 필요)로 Frigate + 7B 모델; 예산용 Intel N150 기기(약 $180–230); 온-디바이스 AI용 GEEKOM A9 Max(약 $1,299+). 나란히 비교했습니다.',
       url: 'https://www.promptquorum.com/ko/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1863,19 +1863,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Meilleurs Mini-PC pour Home Assistant + IA Locale (2026)',
     seoTitle: 'Meilleur Mini-PC pour Home Assistant + IA Locale 2026',
     intro:
-      'Le meilleur mini-PC pour faire tourner Home Assistant plus un LLM local sur une seule machine en 2026 est le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go) à environ 650 €, qui fait tourner le hub, Frigate et un modèle 7B via Ollama. Avec un budget serré, une machine Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant et un petit modèle. Pour l\'IA embarquée et la vision les plus puissantes, le GEEKOM A9 Max (Ryzen AI 9 HX 370, environ 1 099–1 299 €) monte encore d\'un cran. Ce guide d\'achat compare les cinq machines concrètes côte à côte, donne une recommandation directe pour chaque cas d\'usage et couvre des notes de configuration — avec lien croisé vers le guide matériel de local-llms pour la profondeur de VRAM.',
+      'Le meilleur mini-PC pour faire tourner Home Assistant plus un LLM local sur une seule machine en 2026 est le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go) à environ 999 €, qui fait tourner le hub, Frigate et un modèle 7B via Ollama. Avec un budget serré, une machine Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant et un petit modèle. Pour l\'IA embarquée et la vision les plus puissantes, le GEEKOM A9 Max (Ryzen AI 9 HX 370, environ 1 350–1 750 €) monte encore d\'un cran. Ce guide d\'achat compare les cinq machines concrètes côte à côte, donne une recommandation directe pour chaque cas d\'usage et couvre des notes de configuration — avec lien croisé vers le guide matériel de local-llms pour la profondeur de VRAM.',
     metaDescription:
-      'Meilleur mini-PC pour Home Assistant 2026 : Beelink SER8 (~650 €) pour Frigate + un modèle 7B ; machines Intel N150 (~180–230 €) économiques ; GEEKOM A9 Max (~1 099 €+) pour l\'IA embarquée. Comparés côte à côte.',
+      'Meilleur mini-PC pour Home Assistant 2026 : Beelink SER8 (~999 €) pour Frigate + un modèle 7B ; machines Intel N150 (~180–230 €) économiques ; GEEKOM A9 Max (~1 350 €+) pour l\'IA embarquée. Comparés côte à côte.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-fr.webp',
     twitterDescription:
-      'Meilleur mini-PC pour Home Assistant 2026 : le Beelink SER8 (~650 €) fait tourner Frigate + un modèle 7B sur Ollama ; machines Intel N150 abordables (~180–230 €) ; GEEKOM A9 Max (~1 099 €+) pour l\'IA embarquée. 5 machines comparées.',
+      'Meilleur mini-PC pour Home Assistant 2026 : le Beelink SER8 (~999 €) fait tourner Frigate + un modèle 7B sur Ollama ; machines Intel N150 abordables (~180–230 €) ; GEEKOM A9 Max (~1 350 €+) pour l\'IA embarquée. 5 machines comparées.',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs choisissant un mini-PC pour Home Assistant et l\'IA locale',
@@ -1888,16 +1888,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**Le meilleur mini-PC polyvalent pour Home Assistant plus un LLM local en 2026 est le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go) à environ 650 € — il fait tourner le hub, Frigate et un modèle 7B sur Ollama sur une seule machine.** Pour une configuration abordable ou quasi silencieuse, une machine Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant et un petit modèle. Pour l\'IA embarquée la plus puissante, le GEEKOM A9 Max (environ 1 099–1 299 €) monte encore d\'un cran. Priorisez la RAM et l\'iGPU plutôt que la fréquence brute du CPU pour la latence de l\'IA.',
+      '**Le meilleur mini-PC polyvalent pour Home Assistant plus un LLM local en 2026 est le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go) à environ 999 € — il fait tourner le hub, Frigate et un modèle 7B sur Ollama sur une seule machine.** Pour une configuration abordable ou quasi silencieuse, une machine Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant et un petit modèle. Pour l\'IA embarquée la plus puissante, le GEEKOM A9 Max (environ 1 350–1 750 €) monte encore d\'un cran. Priorisez la RAM et l\'iGPU plutôt que la fréquence brute du CPU pour la latence de l\'IA.',
     quickAnswerTop: {
       fr: {
         question: 'Quel mini-PC est le meilleur pour Home Assistant et l\'IA locale en 2026 ?',
         answer:
-          'Pour la plupart des gens, le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go, environ 650 €) est le meilleur choix : son iGPU puissant fait tourner un modèle 7B sur Ollama aux côtés de Home Assistant, Frigate et Whisper. Avec un budget serré ou pour une machine quasi silencieuse, un mini-PC Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant plus un petit modèle. Pour l\'IA embarquée et la vision les plus puissantes, un mini-PC Ryzen AI comme le GEEKOM A9 Max (environ 1 099–1 299 €) monte encore d\'un cran.',
+          'Pour la plupart des gens, le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go, environ 999 €) est le meilleur choix : son iGPU puissant fait tourner un modèle 7B sur Ollama aux côtés de Home Assistant, Frigate et Whisper. Avec un budget serré ou pour une machine quasi silencieuse, un mini-PC Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant plus un petit modèle. Pour l\'IA embarquée et la vision les plus puissantes, un mini-PC Ryzen AI comme le GEEKOM A9 Max (environ 1 350–1 750 €) monte encore d\'un cran.',
         bullets: [
-          'Meilleur polyvalent : Beelink SER8 (Ryzen 7 8845HS, 32 Go) ~650 € — HA + Frigate + un modèle 7B sur Ollama',
+          'Meilleur polyvalent : Beelink SER8 (Ryzen 7 8845HS, 32 Go) ~999 € — HA + Frigate + un modèle 7B sur Ollama',
           'Abordable / quasi silencieux : Intel N150 (Beelink EQ14, GMKtec G3 Plus) ~180–230 € — HA + un petit modèle',
-          'Meilleur pour l\'IA locale : GEEKOM A9 Max (Ryzen AI 9 HX 370) ~1 099–1 299 € — l\'iGPU + le NPU les plus puissants pour la vision',
+          'Meilleur pour l\'IA locale : GEEKOM A9 Max (Ryzen AI 9 HX 370) ~1 350–1 750 € — l\'iGPU + le NPU les plus puissants pour la vision',
           'Priorisez la RAM et un iGPU capable plutôt que la fréquence du CPU ; plus de RAM contient un plus gros modèle',
           'Voir le guide matériel de local-llms pour la profondeur de VRAM',
         ],
@@ -1930,8 +1930,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Priorisez la RAM et un GPU intégré ou NPU capable plutôt que la fréquence brute du CPU',
           'Un mini-PC Intel N150 économique (~180–220 €) fait tourner Home Assistant et un petit modèle',
-          'Un mini-PC Ryzen 7/9 avec un iGPU puissant (~650 €) gère un modèle 7B aux côtés du hub',
-          'Un mini-PC Ryzen AI à NPU (~1 099 €+) est l\'option la plus puissante pour l\'IA embarquée et la vision',
+          'Un mini-PC Ryzen 7/9 avec un iGPU puissant (~999 €) gère un modèle 7B aux côtés du hub',
+          'Un mini-PC Ryzen AI à NPU (~1 350 €+) est l\'option la plus puissante pour l\'IA embarquée et la vision',
           'Un mini-PC peut faire tourner Home Assistant, Ollama, Whisper et Frigate ensemble',
           'Voir le guide matériel de local-llms (inter-clusters) pour les détails de VRAM',
         ],
@@ -1942,9 +1942,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Trois configurations couvrent la plupart des installations Home Assistant + IA locale.** Choisissez selon votre budget et la taille de modèle voulue.',
         items: [
-          '**Meilleur polyvalent — Beelink SER8 (32 Go) :** fait tourner Home Assistant, Frigate et un modèle 7B sur Ollama sur une seule machine. Environ 650 € pour la configuration 32 Go / 1 To, bien que les prix varient selon le vendeur — vérifiez le prix actuel.',
+          '**Meilleur polyvalent — Beelink SER8 (32 Go) :** fait tourner Home Assistant, Frigate et un modèle 7B sur Ollama sur une seule machine. Environ 999 € pour la configuration 32 Go / 1 To, bien que les prix varient selon le vendeur — vérifiez le prix actuel.',
           '**Meilleur abordable — Beelink EQ14 ou GMKtec G3 Plus (Intel N150) :** fait tourner Home Assistant plus un petit modèle (1–3B) pour environ 180–220 €.',
-          '**Meilleur pour l\'IA locale — GEEKOM A9 Max (Ryzen AI 9 HX 370) :** l\'iGPU le plus puissant et un NPU pour la vision embarquée ; généralement entre 1 099 et 1 299 € selon la configuration et le vendeur.',
+          '**Meilleur pour l\'IA locale — GEEKOM A9 Max (Ryzen AI 9 HX 370) :** l\'iGPU le plus puissant et un NPU pour la vision embarquée ; généralement entre 1 350 et 1 750 € selon la configuration et le vendeur.',
         ],
         affiliateLinks: [
           { label: 'Voir le prix du SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -2071,15 +2071,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Adaptez la machine à votre modèle cible et à votre budget.** Les prix, les chiffres de consommation et les caractéristiques réseau sont approximatifs, tirés des fiches constructeur et de tests matériels indépendants en date d\'août 2026 — vérifiez le prix actuel avant d\'acheter.',
         columns: ['Modèle', 'CPU', 'GPU/iGPU', 'RAM (testée/max)', 'Ethernet', 'Stockage', 'Prix approx. (août 2026)', 'Consommation au repos/typique', 'Idéal pour'],
         rows: [
-          { 'Modèle': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (intégré)', 'RAM (testée/max)': '16 Go / 16 Go max (1 SO-DIMM)', 'Ethernet': '2x 1GbE', 'Stockage': '1x SSD M.2 NVMe', 'Prix approx. (août 2026)': '~189–220 €', 'Consommation au repos/typique': '~5–12W au repos, ~15–25W en charge', 'Idéal pour': 'HA + un petit modèle' },
+          { 'Modèle': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (intégré)', 'RAM (testée/max)': '16 Go / 16 Go max (1 SO-DIMM)', 'Ethernet': '2x 2,5GbE', 'Stockage': '2x SSD M.2 NVMe', 'Prix approx. (août 2026)': '~189–220 €', 'Consommation au repos/typique': '~5–12W au repos, ~15–25W en charge', 'Idéal pour': 'HA + un petit modèle' },
           { 'Modèle': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (intégré)', 'RAM (testée/max)': '16 Go / officiellement 16 Go, jusqu\'à 32 Go signalé (1 SO-DIMM)', 'Ethernet': '1x 2,5GbE', 'Stockage': '2x M.2 (2280 NVMe jusqu\'à 4To + 2242 SATA jusqu\'à 2To)', 'Prix approx. (août 2026)': '~180–230 €', 'Consommation au repos/typique': '~5–12W au repos, ~15–25W en charge', 'Idéal pour': 'HA + un petit modèle, flexibilité budgétaire' },
-          { 'Modèle': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (testée/max)': '32 Go / jusqu\'à 256 Go (2x SO-DIMM DDR5)', 'Ethernet': '1x 2,5GbE', 'Stockage': '2x M.2 PCIe 4.0 (jusqu\'à 8To combinés)', 'Prix approx. (août 2026)': '~650 €', 'Consommation au repos/typique': '~7–10W au repos, ~45W+ en charge IA soutenue', 'Idéal pour': 'HA + Frigate + un modèle 7B' },
+          { 'Modèle': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (testée/max)': '32 Go / jusqu\'à 256 Go (2x SO-DIMM DDR5)', 'Ethernet': '1x 2,5GbE', 'Stockage': '2x M.2 PCIe 4.0 (jusqu\'à 8To combinés)', 'Prix approx. (août 2026)': '~999 €', 'Consommation au repos/typique': '~7–10W au repos, ~45W+ en charge IA soutenue', 'Idéal pour': 'HA + Frigate + un modèle 7B' },
           { 'Modèle': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'Même classe que le SER8', 'RAM (testée/max)': '32 Go / jusqu\'à 96 Go (2x SO-DIMM DDR5)', 'Ethernet': '2x 2,5GbE', 'Stockage': '2x M.2 NVMe + OCuLink pour extension externe', 'Prix approx. (août 2026)': '~649 € (32Go) / ~439 € nu', 'Consommation au repos/typique': '~7–9W au repos, ~54–90W en charge soutenue', 'Idéal pour': 'Similaire au SER8, plus configurable' },
-          { 'Modèle': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (testée/max)': '32 Go / jusqu\'à 128 Go (2x SO-DIMM DDR5)', 'Ethernet': '2x 2,5GbE', 'Stockage': '2x SSD M.2 NVMe', 'Prix approx. (août 2026)': '~1 099–1 299 €', 'Consommation au repos/typique': '~7–9W au repos, ~20–34W en usage typique', 'Idéal pour': 'IA embarquée + vision les plus puissantes' },
+          { 'Modèle': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (testée/max)': '32 Go / jusqu\'à 128 Go (2x SO-DIMM DDR5)', 'Ethernet': '2x 2,5GbE', 'Stockage': '2x SSD M.2 NVMe', 'Prix approx. (août 2026)': '~1 350–1 750 €', 'Consommation au repos/typique': '~7–9W au repos, ~20–34W en usage typique', 'Idéal pour': 'IA embarquée + vision les plus puissantes' },
         ],
         items: [
           'Pour la VRAM et la profondeur de quantification, voir inter-clusters [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm).',
-          'Remarque réseau : seul l\'EQ14 n\'a pas de port 2,5GbE (il a deux ports 1GbE à la place) — pour Home Assistant plus des flux caméra, une connexion filaire en 2,5GbE réduit le risque que le réseau devienne le goulot d\'étranglement.',
+          'Remarque réseau : chaque machine ici a au moins un port 2,5GbE — l\'EQ14 et le Minisforum UM890 Pro en ont même deux — pour Home Assistant plus des flux caméra, une connexion filaire en 2,5GbE réduit le risque que le réseau devienne le goulot d\'étranglement.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-fr.webp',
         imageCaption: 'Classes de Mini PC pour l\'IA Home Assistant -- Recommandations RAM et capacités',
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le matériel est le seul coût réel — le logiciel est gratuit.** Home Assistant, Ollama, un modèle local et Frigate sont tous gratuits et open source ; le mini-PC lui-même est le seul poste de budget.',
         items: [
-          '**Coût matériel par palier :** machine N150 économique ~180–230 € ; machine Ryzen 7/9 équilibrée (32 Go) ~650 € ; machine NPU haut de gamme ~1 099–1 299 €.',
+          '**Coût matériel par palier :** machine N150 économique ~180–230 € ; machine Ryzen 7/9 équilibrée (32 Go) ~999 € ; machine NPU haut de gamme ~1 350–1 750 €.',
           '**Consommation pour une machine 24/7 :** la consommation au repos est globalement similaire entre les cinq machines de ce guide (environ 5–10W), mais la charge d\'inférence IA soutenue varie davantage — une machine N150 consomme nettement moins en charge (~15–25W) qu\'une machine Ryzen 7/9 faisant tourner un modèle 7B (~45W ou plus). Pour une machine qui tourne en continu, cette différence s\'accumule sur une année plus que la performance de pointe en benchmark.',
           'Les chiffres de TDP publiés par le constructeur fixent la limite supérieure (N150 : 6W ; 8845HS/8945HS : 45W, configurable jusqu\'à 70W sur certaines cartes ; HX 370 : configurable 15–54W) — la consommation réelle dépend de la charge de travail et des réglages du mode d\'alimentation dans le BIOS.',
         ],
@@ -2204,13 +2204,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Mini-PC pour Home Assistant + IA Locale (2026)',
-      description: 'Meilleur mini-PC pour Home Assistant 2026 : Beelink SER8 (~650 €) pour Frigate + un modèle 7B ; machines Intel N150 (~180–230 €) économiques ; GEEKOM A9 Max (~1 099 €+) pour l\'IA embarquée. Comparés côte à côte.',
+      description: 'Meilleur mini-PC pour Home Assistant 2026 : Beelink SER8 (~999 €) pour Frigate + un modèle 7B ; machines Intel N150 (~180–230 €) économiques ; GEEKOM A9 Max (~1 350 €+) pour l\'IA embarquée. Comparés côte à côte.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2232,19 +2232,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
     seoTitle: 'Home Assistant + ローカルAIに最適なミニPC 2026年版ガイド',
     intro:
-      '2026年、Home Assistant とローカル LLM を一台で動かすのに最適なミニPCは Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、約¥94,800）で、ハブと Frigate、Ollama の 7B モデルを動かします。予算を抑えるなら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 機（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIと映像処理を求めるなら、GEEKOM A9 Max（Ryzen AI 9 HX 370、約¥165,000〜195,000）がさらに一段上です。本購入ガイドは五つの具体的な機種を並べて比較し、用途ごとに明確な推奨を示し、設定上の注意を扱います——VRAM の詳細は local-llms のハードウェアガイドへ相互リンクします。',
+      '2026年、Home Assistant とローカル LLM を一台で動かすのに最適なミニPCは Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、現在価格要確認）で、ハブと Frigate、Ollama の 7B モデルを動かします。予算を抑えるなら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 機（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIと映像処理を求めるなら、GEEKOM A9 Max（Ryzen AI 9 HX 370、約21万〜24万円台）がさらに一段上です。本購入ガイドは五つの具体的な機種を並べて比較し、用途ごとに明確な推奨を示し、設定上の注意を扱います——VRAM の詳細は local-llms のハードウェアガイドへ相互リンクします。',
     metaDescription:
-      'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（約¥94,800）で Frigate＋7B モデル、予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約¥165,000〜）。並べて比較。',
+      'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（現在価格要確認）で Frigate＋7B モデル、予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約21万円台〜）。並べて比較。',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ja.webp',
     twitterDescription:
-      'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（約¥94,800）が Frigate＋7B モデルを動かす。予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約¥165,000〜）。5機種比較。',
+      'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（現在価格要確認）が Frigate＋7B モデルを動かす。予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約21万円台〜）。5機種比較。',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: 'Home Assistant とローカルAIのためミニPCを選ぶ購入者',
@@ -2257,16 +2257,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant ミニpc 2026',
     ],
     leadAnswerBlock:
-      '**2026年、Home Assistant とローカル LLM に最適なオールラウンドなミニPCは Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、約¥94,800）です——ハブと Frigate、Ollama の 7B モデルを一台で動かします。** 予算重視やほぼ無音の構成なら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 機（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIを求めるなら、GEEKOM A9 Max（約¥165,000〜195,000）がさらに一段上です。AI のレイテンシのため、生の CPU クロックより RAM と iGPU を優先しましょう。',
+      '**2026年、Home Assistant とローカル LLM に最適なオールラウンドなミニPCは Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、現在価格要確認）です——ハブと Frigate、Ollama の 7B モデルを一台で動かします。** 予算重視やほぼ無音の構成なら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 機（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIを求めるなら、GEEKOM A9 Max（約21万〜24万円台）がさらに一段上です。AI のレイテンシのため、生の CPU クロックより RAM と iGPU を優先しましょう。',
     quickAnswerTop: {
       ja: {
         question: '2026年、Home Assistant とローカルAIに最適なミニPCは？',
         answer:
-          '多くの人には Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、約¥94,800）が最適です——強力な iGPU が Home Assistant、Frigate、Whisper と並べて Ollama の 7B モデルを動かします。予算重視やほぼ無音の機器なら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 のミニPC（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIと映像処理を求めるなら、GEEKOM A9 Max（約¥165,000〜195,000）のような Ryzen AI のミニPCがさらに一段上です。',
+          '多くの人には Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、現在価格要確認）が最適です——強力な iGPU が Home Assistant、Frigate、Whisper と並べて Ollama の 7B モデルを動かします。予算重視やほぼ無音の機器なら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 のミニPC（約¥28,000〜33,000）が Home Assistant と小型モデルを動かします。最も強力なオンデバイスAIと映像処理を求めるなら、GEEKOM A9 Max（約21万〜24万円台）のような Ryzen AI のミニPCがさらに一段上です。',
         bullets: [
-          'オールラウンド最適：Beelink SER8（Ryzen 7 8845HS、32 GB）約¥94,800——HA + Frigate + Ollama の 7B モデル',
+          'オールラウンド最適：Beelink SER8（Ryzen 7 8845HS、32 GB）現在価格要確認——HA + Frigate + Ollama の 7B モデル',
           '予算重視／ほぼ無音：Intel N150（Beelink EQ14、GMKtec G3 Plus）約¥28,000〜33,000——HA + 小型モデル',
-          'ローカルAI最適：GEEKOM A9 Max（Ryzen AI 9 HX 370）約¥165,000〜195,000——映像処理に最強の iGPU + NPU',
+          'ローカルAI最適：GEEKOM A9 Max（Ryzen AI 9 HX 370）約21万〜24万円台——映像処理に最強の iGPU + NPU',
           'CPU クロックより RAM と高性能な iGPU を優先；RAM が多いほど大きなモデルが載る',
           'VRAM の詳細は local-llms のハードウェアガイドを参照',
         ],
@@ -2299,8 +2299,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '生の CPU クロックより、RAM と高性能な統合 GPU または NPU を優先する',
           '低消費電力の Intel N150 ミニPC（約¥28,000〜33,000）は Home Assistant と小型モデルを動かす',
-          '強力な iGPU を備えた Ryzen 7/9 のミニPC（約¥94,800）はハブと並べて 7B モデルを扱う',
-          'NPU を備えた Ryzen AI のミニPC（約¥165,000〜）はオンデバイスAIと映像処理に最強の選択肢',
+          '強力な iGPU を備えた Ryzen 7/9 のミニPC（現在価格要確認）はハブと並べて 7B モデルを扱う',
+          'NPU を備えた Ryzen AI のミニPC（約21万円台〜）はオンデバイスAIと映像処理に最強の選択肢',
           '一台のミニPCで Home Assistant、Ollama、Whisper、Frigate を一緒に動かせる',
           'VRAM の詳細はクラスター横断の local-llms ハードウェアガイドを参照',
         ],
@@ -2311,9 +2311,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**三つの構成でHome Assistant＋ローカルAIのほとんどのニーズをカバーできます。** 予算と動かしたいモデルサイズで選びましょう。',
         items: [
-          '**総合最適 — Beelink SER8（32 GB）：** Home Assistant、Frigate、Ollama の 7B モデルを一台で動かします。32 GB／1 TB 構成で約¥94,800ですが、価格は販売店によって変わるため、最新価格を確認してください。',
+          '**総合最適 — Beelink SER8（32 GB）：** Home Assistant、Frigate、Ollama の 7B モデルを一台で動かします。32 GB／1 TB 構成で現在価格要確認ですが、価格は販売店によって変わるため、最新価格を確認してください。',
           '**予算最適 — Beelink EQ14 または GMKtec G3 Plus（Intel N150）：** Home Assistant と小型モデル（1〜3B）を約¥28,000〜33,000で動かします。',
-          '**ローカルAI最適 — GEEKOM A9 Max（Ryzen AI 9 HX 370）：** オンデバイス映像処理に最強の iGPU と NPU を搭載；構成と販売店により通常約¥165,000〜195,000です。',
+          '**ローカルAI最適 — GEEKOM A9 Max（Ryzen AI 9 HX 370）：** オンデバイス映像処理に最強の iGPU と NPU を搭載；構成と販売店により通常約21万〜24万円台です。',
         ],
         affiliateLinks: [
           { label: 'SER8の価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -2440,15 +2440,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**目標のモデルと予算に合った機種を選びましょう。** 価格、消費電力、接続仕様の数値はおおよそのもので、2026年8月時点のメーカー公表情報と独立系ハードウェアレビューから引用しています——購入前に最新価格を確認してください。',
         columns: ['機種', 'CPU', 'GPU/iGPU', 'RAM（テスト構成／最大）', 'イーサネット', 'ストレージ', 'おおよその価格', '待機時／通常時消費電力', 'こんな人に最適'],
         rows: [
-          { '機種': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（内蔵）', 'RAM（テスト構成／最大）': '16 GB／最大16 GB（SO-DIMM 1基）', 'イーサネット': '1GbE×2', 'ストレージ': 'M.2 NVMe SSD×1', 'おおよその価格': '約¥28,000〜33,000', '待機時／通常時消費電力': '待機時約5〜12W、負荷時約15〜25W', 'こんな人に最適': 'HA + 小型モデル' },
+          { '機種': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（内蔵）', 'RAM（テスト構成／最大）': '16 GB／最大16 GB（SO-DIMM 1基）', 'イーサネット': '2.5GbE×2', 'ストレージ': 'M.2 NVMe SSD×2', 'おおよその価格': '約¥28,000〜33,000', '待機時／通常時消費電力': '待機時約5〜12W、負荷時約15〜25W', 'こんな人に最適': 'HA + 小型モデル' },
           { '機種': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（内蔵）', 'RAM（テスト構成／最大）': '16 GB／公式16 GB、32 GBまで報告例あり（SO-DIMM 1基）', 'イーサネット': '2.5GbE×1', 'ストレージ': 'M.2×2（2280 NVMe最大4TB＋2242 SATA最大2TB）', 'おおよその価格': '約¥28,000〜35,000', '待機時／通常時消費電力': '待機時約5〜12W、負荷時約15〜25W', 'こんな人に最適': 'HA + 小型モデル、予算の柔軟性' },
-          { '機種': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM（テスト構成／最大）': '32 GB／最大256 GB（DDR5 SO-DIMM×2）', 'イーサネット': '2.5GbE×1', 'ストレージ': 'M.2 PCIe 4.0×2（合計最大8TB）', 'おおよその価格': '約¥94,800', '待機時／通常時消費電力': '待機時約7〜10W、持続的AI負荷時約45W以上', 'こんな人に最適': 'HA + Frigate + 7B モデル' },
+          { '機種': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM（テスト構成／最大）': '32 GB／最大256 GB（DDR5 SO-DIMM×2）', 'イーサネット': '2.5GbE×1', 'ストレージ': 'M.2 PCIe 4.0×2（合計最大8TB）', 'おおよその価格': '現在価格要確認', '待機時／通常時消費電力': '待機時約7〜10W、持続的AI負荷時約45W以上', 'こんな人に最適': 'HA + Frigate + 7B モデル' },
           { '機種': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'SER8 と同クラス', 'RAM（テスト構成／最大）': '32 GB／最大96 GB（DDR5 SO-DIMM×2）', 'イーサネット': '2.5GbE×2', 'ストレージ': 'M.2 NVMe×2＋外部拡張用OCuLink', 'おおよその価格': '約¥97,000（32GB）／約¥66,000（ベアボーン）', '待機時／通常時消費電力': '待機時約7〜9W、持続負荷時約54〜90W', 'こんな人に最適': 'SER8に類似、より構成の自由度が高い' },
-          { '機種': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM（テスト構成／最大）': '32 GB／最大128 GB（DDR5 SO-DIMM×2）', 'イーサネット': '2.5GbE×2', 'ストレージ': 'M.2 NVMe SSD×2', 'おおよその価格': '約¥165,000〜195,000', '待機時／通常時消費電力': '待機時約7〜9W、通常使用時約20〜34W', 'こんな人に最適': '最強のオンデバイスAI + 映像処理' },
+          { '機種': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM（テスト構成／最大）': '32 GB／最大128 GB（DDR5 SO-DIMM×2）', 'イーサネット': '2.5GbE×2', 'ストレージ': 'M.2 NVMe SSD×2', 'おおよその価格': '約21万〜24万円台', '待機時／通常時消費電力': '待機時約7〜9W、通常使用時約20〜34W', 'こんな人に最適': '最強のオンデバイスAI + 映像処理' },
         ],
         items: [
           'VRAM と量子化の詳細は、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。',
-          'ネットワークに関する注記：EQ14のみ2.5GbEポートがなく（代わりに1GbEポートが2基）——Home Assistantとカメラのストリームを併用する場合、有線2.5GbE接続によりネットワークがボトルネックになる可能性を減らせます。',
+          'ネットワークに関する注記：ここに挙げた機種はすべて2.5GbEポートを少なくとも1基備えており、EQ14とMinisforum UM890 Proは2基備えています——Home Assistantとカメラのストリームを併用する場合、有線2.5GbE接続によりネットワークがボトルネックになる可能性を減らせます。',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ja.webp',
         imageCaption: 'Home Assistant AI向けミニPCクラス -- RAM目安とできること',
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ハードウェアだけが実質的なコストです——ソフトウェアは無料です。** Home Assistant、Ollama、ローカルモデル、Frigate はすべて無料かつオープンソースです；ミニPC自体が予算のすべてです。',
         items: [
-          '**クラス別ハードウェアコスト：** 予算重視のN150機は約¥28,000〜35,000；バランス型のRyzen 7/9機（32 GB）は約¥94,800；最上位のNPU機は約¥165,000〜195,000。',
+          '**クラス別ハードウェアコスト：** 予算重視のN150機は約¥28,000〜35,000；バランス型のRyzen 7/9機（32 GB）は現在価格要確認；最上位のNPU機は約21万〜24万円台。',
           '**24時間稼働機の消費電力：** このガイドの5機種すべてで待機時消費電力はおおむね同程度（約5〜10W）ですが、持続的なAI推論負荷はより大きく異なります——N150機は負荷時の消費電力が明らかに少なく（約15〜25W）、7Bモデルを動かすRyzen 7/9機（約45W以上）と比較されます。24時間稼働する機器の場合、この差はピーク時のベンチマーク性能よりも1年間で大きく積み重なります。',
           'メーカー公表のTDP値が上限を定めます（N150：6W；8845HS/8945HS：45W、一部の基板では最大70Wまで調整可；HX 370：15〜54W調整可）——実際の消費電力はワークロードとBIOSの電源モード設定によって変わります。',
         ],
@@ -2573,13 +2573,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + ローカルAIに最適なミニPC（2026）',
-      description: 'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（約¥94,800）で Frigate＋7B モデル、予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約¥165,000〜）。並べて比較。',
+      description: 'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（現在価格要確認）で Frigate＋7B モデル、予算重視は Intel N150 機（約¥28,000〜33,000）、オンデバイスAIには GEEKOM A9 Max（約21万円台〜）。並べて比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ローカルLLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2601,19 +2601,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Melhores Mini PCs para Home Assistant + IA Local (2026)',
     seoTitle: 'Melhor Mini PC para Home Assistant + IA Local em 2026',
     intro:
-      'O melhor mini PC para rodar o Home Assistant mais um LLM local em uma só máquina em 2026 é o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por cerca de R$ 5.000, que roda o hub, o Frigate e um modelo 7B via Ollama. Com orçamento apertado, uma máquina Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno. Para a IA embarcada e a visão mais potentes, o GEEKOM A9 Max (Ryzen AI 9 HX 370, cerca de R$ 8.500–10.100) sobe mais um nível. Este guia de compra compara as cinco máquinas concretas lado a lado, dá uma recomendação direta para cada caso de uso e cobre notas de configuração — com link cruzado para o guia de hardware do local-llms para a profundidade de VRAM.',
+      'O melhor mini PC para rodar o Home Assistant mais um LLM local em uma só máquina em 2026 é o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por preço a confirmar, que roda o hub, o Frigate e um modelo 7B via Ollama. Com orçamento apertado, uma máquina Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno. Para a IA embarcada e a visão mais potentes, o GEEKOM A9 Max (Ryzen AI 9 HX 370, cerca de US$1.299–1.599) sobe mais um nível. Este guia de compra compara as cinco máquinas concretas lado a lado, dá uma recomendação direta para cada caso de uso e cobre notas de configuração — com link cruzado para o guia de hardware do local-llms para a profundidade de VRAM.',
     metaDescription:
-      'Melhor mini PC para Home Assistant 2026: Beelink SER8 (~R$ 5.000) para Frigate + um modelo 7B; máquinas Intel N150 (~R$ 1.400–1.900) econômicas; GEEKOM A9 Max (~R$ 8.500+) para IA embarcada. Comparados lado a lado.',
+      'Melhor mini PC para Home Assistant 2026: Beelink SER8 (~preço a confirmar) para Frigate + um modelo 7B; máquinas Intel N150 (~R$ 1.400–1.900) econômicas; GEEKOM A9 Max (~US$1.299+) para IA embarcada. Comparados lado a lado.',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-pt.webp',
     twitterDescription:
-      'Melhor mini PC para Home Assistant 2026: o Beelink SER8 (~R$ 5.000) roda Frigate + um modelo 7B no Ollama; máquinas Intel N150 acessíveis (~R$ 1.400–1.900); GEEKOM A9 Max (~R$ 8.500+) para IA embarcada. 5 máquinas comparadas.',
+      'Melhor mini PC para Home Assistant 2026: o Beelink SER8 (~preço a confirmar) roda Frigate + um modelo 7B no Ollama; máquinas Intel N150 acessíveis (~R$ 1.400–1.900); GEEKOM A9 Max (~US$1.299+) para IA embarcada. 5 máquinas comparadas.',
     readTime: '10 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores escolhendo um mini PC para Home Assistant e IA local',
@@ -2626,16 +2626,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant mini pc 2026',
     ],
     leadAnswerBlock:
-      '**O melhor mini PC completo para o Home Assistant mais um LLM local em 2026 é o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por cerca de R$ 5.000 — ele roda o hub, o Frigate e um modelo 7B no Ollama em uma só máquina.** Para uma configuração econômica ou quase silenciosa, uma máquina Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno. Para a IA embarcada mais potente, o GEEKOM A9 Max (cerca de R$ 8.500–10.100) sobe mais um nível. Os preços no Brasil podem variar bastante devido a impostos de importação. Priorize a RAM e a iGPU sobre a frequência bruta da CPU para a latência da IA.',
+      '**O melhor mini PC completo para o Home Assistant mais um LLM local em 2026 é o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por preço a confirmar — ele roda o hub, o Frigate e um modelo 7B no Ollama em uma só máquina.** Para uma configuração econômica ou quase silenciosa, uma máquina Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno. Para a IA embarcada mais potente, o GEEKOM A9 Max (cerca de US$1.299–1.599) sobe mais um nível. Os preços no Brasil podem variar bastante devido a impostos de importação. Priorize a RAM e a iGPU sobre a frequência bruta da CPU para a latência da IA.',
     quickAnswerTop: {
       pt: {
         question: 'Qual mini PC é melhor para Home Assistant e IA local em 2026?',
         answer:
-          'Para a maioria, o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, cerca de R$ 5.000) é a melhor escolha — sua iGPU forte roda um modelo 7B no Ollama ao lado do Home Assistant, do Frigate e do Whisper. Com orçamento apertado ou para uma máquina quase silenciosa, um mini PC Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant mais um modelo pequeno. Para a IA embarcada e a visão mais potentes, um mini PC Ryzen AI como o GEEKOM A9 Max (cerca de R$ 8.500–10.100) sobe mais um nível.',
+          'Para a maioria, o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB, preço a confirmar) é a melhor escolha — sua iGPU forte roda um modelo 7B no Ollama ao lado do Home Assistant, do Frigate e do Whisper. Com orçamento apertado ou para uma máquina quase silenciosa, um mini PC Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant mais um modelo pequeno. Para a IA embarcada e a visão mais potentes, um mini PC Ryzen AI como o GEEKOM A9 Max (cerca de US$1.299–1.599) sobe mais um nível.',
         bullets: [
-          'Melhor completo: Beelink SER8 (Ryzen 7 8845HS, 32 GB) ~R$ 5.000 — HA + Frigate + um modelo 7B no Ollama',
+          'Melhor completo: Beelink SER8 (Ryzen 7 8845HS, 32 GB) preço a confirmar — HA + Frigate + um modelo 7B no Ollama',
           'Econômico / quase silencioso: Intel N150 (Beelink EQ14, GMKtec G3 Plus) ~R$ 1.400–1.900 — HA + um modelo pequeno',
-          'Melhor para IA local: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~R$ 8.500–10.100 — a iGPU + NPU mais potentes para visão',
+          'Melhor para IA local: GEEKOM A9 Max (Ryzen AI 9 HX 370) ~US$1.299–1.599 — a iGPU + NPU mais potentes para visão',
           'Priorize a RAM e uma iGPU capaz sobre a frequência da CPU; mais RAM comporta um modelo maior',
           'Veja o guia de hardware do local-llms para a profundidade de VRAM',
         ],
@@ -2668,8 +2668,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Priorize a RAM e uma GPU integrada ou NPU capaz sobre a frequência bruta da CPU',
           'Um mini PC Intel N150 econômico (~R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno',
-          'Um mini PC Ryzen 7/9 com uma iGPU forte (~R$ 5.000) lida com um modelo 7B ao lado do hub',
-          'Um mini PC Ryzen AI com NPU (~R$ 8.500+) é a opção mais potente para IA embarcada e visão',
+          'Um mini PC Ryzen 7/9 com uma iGPU forte (~preço a confirmar) lida com um modelo 7B ao lado do hub',
+          'Um mini PC Ryzen AI com NPU (~US$1.299+) é a opção mais potente para IA embarcada e visão',
           'Um mini PC pode rodar Home Assistant, Ollama, Whisper e Frigate juntos',
           'Veja o guia de hardware do local-llms (entre clusters) para detalhes de VRAM',
         ],
@@ -2680,9 +2680,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Três configurações cobrem a maioria das instalações de Home Assistant + IA local.** Escolha pelo orçamento e pelo tamanho de modelo que você quer rodar.',
         items: [
-          '**Melhor completo — Beelink SER8 (32 GB):** roda o Home Assistant, o Frigate e um modelo 7B no Ollama em uma só máquina. Cerca de R$ 5.000 para a configuração de 32 GB / 1 TB, embora os preços variem por revendedor — confira o preço atual.',
+          '**Melhor completo — Beelink SER8 (32 GB):** roda o Home Assistant, o Frigate e um modelo 7B no Ollama em uma só máquina. Preço a confirmar para a configuração de 32 GB / 1 TB — os preços variam bastante por revendedor e por impostos de importação — confira o preço atual.',
           '**Melhor econômico — Beelink EQ14 ou GMKtec G3 Plus (Intel N150):** roda o Home Assistant mais um modelo pequeno (1–3B) por cerca de R$ 1.400–1.900.',
-          '**Melhor para IA local — GEEKOM A9 Max (Ryzen AI 9 HX 370):** a iGPU mais forte e uma NPU para visão embarcada; normalmente entre R$ 8.500 e R$ 10.100, dependendo da configuração e do revendedor.',
+          '**Melhor para IA local — GEEKOM A9 Max (Ryzen AI 9 HX 370):** a iGPU mais forte e uma NPU para visão embarcada; normalmente entre US$1.299 e US$1.599, dependendo da configuração e do revendedor.',
         ],
         affiliateLinks: [
           { label: 'Ver preço do SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -2809,15 +2809,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ajuste a máquina ao seu modelo-alvo e orçamento.** Os preços e os números de consumo são aproximados, obtidos de listagens do fabricante e análises de hardware independentes em agosto de 2026 — confira o preço atual antes de comprar.',
         columns: ['Modelo', 'CPU', 'GPU/iGPU', 'RAM (testada / máx.)', 'Ethernet', 'Armazenamento', 'Preço aprox. (ago. 2026)', 'Consumo em repouso/típico', 'Ideal para'],
         rows: [
-          { 'Modelo': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (testada / máx.)': '16 GB / máx. 16 GB (1x SO-DIMM)', 'Ethernet': '2x 1GbE', 'Armazenamento': '1x SSD M.2 NVMe', 'Preço aprox. (ago. 2026)': '~R$ 1.400–1.900', 'Consumo em repouso/típico': '~5–12W em repouso, ~15–25W sob carga', 'Ideal para': 'HA + um modelo pequeno' },
+          { 'Modelo': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (testada / máx.)': '16 GB / máx. 16 GB (1x SO-DIMM)', 'Ethernet': '2x 2.5GbE', 'Armazenamento': '2x SSD M.2 NVMe', 'Preço aprox. (ago. 2026)': '~R$ 1.400–1.900', 'Consumo em repouso/típico': '~5–12W em repouso, ~15–25W sob carga', 'Ideal para': 'HA + um modelo pequeno' },
           { 'Modelo': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrada)', 'RAM (testada / máx.)': '16 GB / oficialmente 16 GB, há relatos de 32 GB (1x SO-DIMM)', 'Ethernet': '1x 2.5GbE', 'Armazenamento': '2x M.2 (2280 NVMe até 4TB + 2242 SATA até 2TB)', 'Preço aprox. (ago. 2026)': '~R$ 1.400–1.900', 'Consumo em repouso/típico': '~5–12W em repouso, ~15–25W sob carga', 'Ideal para': 'HA + um modelo pequeno, flexibilidade de orçamento' },
-          { 'Modelo': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (testada / máx.)': '32 GB / máx. 256 GB (2x SO-DIMM DDR5)', 'Ethernet': '1x 2.5GbE', 'Armazenamento': '2x M.2 PCIe 4.0 (até 8TB no total)', 'Preço aprox. (ago. 2026)': '~R$ 5.000', 'Consumo em repouso/típico': '~7–10W em repouso, ~45W+ sob carga de IA sustentada', 'Ideal para': 'HA + Frigate + um modelo 7B' },
+          { 'Modelo': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', 'RAM (testada / máx.)': '32 GB / máx. 256 GB (2x SO-DIMM DDR5)', 'Ethernet': '1x 2.5GbE', 'Armazenamento': '2x M.2 PCIe 4.0 (até 8TB no total)', 'Preço aprox. (ago. 2026)': 'preço a confirmar', 'Consumo em repouso/típico': '~7–10W em repouso, ~45W+ sob carga de IA sustentada', 'Ideal para': 'HA + Frigate + um modelo 7B' },
           { 'Modelo': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': 'Mesma classe do SER8', 'RAM (testada / máx.)': '32 GB / máx. 96 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Armazenamento': '2x M.2 NVMe + OCuLink para expansão externa', 'Preço aprox. (ago. 2026)': '~R$ 5.000 (32GB) / ~R$ 3.400 sem componentes', 'Consumo em repouso/típico': '~7–9W em repouso, ~54–90W sob carga sustentada', 'Ideal para': 'Similar ao SER8, mais configurável' },
-          { 'Modelo': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (testada / máx.)': '32 GB / máx. 128 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Armazenamento': '2x SSD M.2 NVMe', 'Preço aprox. (ago. 2026)': '~R$ 8.500–10.100', 'Consumo em repouso/típico': '~7–9W em repouso, ~20–34W em uso típico', 'Ideal para': 'IA embarcada + visão mais potentes' },
+          { 'Modelo': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', 'RAM (testada / máx.)': '32 GB / máx. 128 GB (2x SO-DIMM DDR5)', 'Ethernet': '2x 2.5GbE', 'Armazenamento': '2x SSD M.2 NVMe', 'Preço aprox. (ago. 2026)': '~US$1.299–1.599', 'Consumo em repouso/típico': '~7–9W em repouso, ~20–34W em uso típico', 'Ideal para': 'IA embarcada + visão mais potentes' },
         ],
         items: [
           'Para VRAM e profundidade de quantização, veja entre clusters [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm).',
-          'Nota sobre rede: só o EQ14 não tem porta 2.5GbE (traz duas portas 1GbE) — se você combina o Home Assistant com streams de câmera, uma conexão cabeada em 2.5GbE reduz o risco de a rede virar o gargalo.',
+          'Nota sobre rede: todas as máquinas aqui trazem pelo menos uma porta 2.5GbE — o EQ14 e o Minisforum UM890 Pro trazem até duas — se você combina o Home Assistant com streams de câmera, uma conexão cabeada em 2.5GbE reduz o risco de a rede virar o gargalo.',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-pt.webp',
         imageCaption: 'Classes de Mini PC para IA do Home Assistant -- Orientação de RAM e capacidades',
@@ -2883,7 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O hardware é o único custo real — o software é gratuito.** Home Assistant, Ollama, um modelo local e Frigate são todos gratuitos e de código aberto; o mini PC em si é toda a linha de orçamento.',
         items: [
-          '**Custo de hardware por faixa:** máquina N150 econômica ~R$ 1.400–1.900; máquina Ryzen 7/9 equilibrada (32 GB) ~R$ 5.000; máquina NPU de ponta ~R$ 8.500–10.100.',
+          '**Custo de hardware por faixa:** máquina N150 econômica ~R$ 1.400–1.900; máquina Ryzen 7/9 equilibrada (32 GB) preço a confirmar; máquina NPU de ponta ~US$1.299–1.599.',
           '**Consumo para uma máquina 24/7:** o consumo em repouso é amplamente semelhante entre as cinco máquinas deste guia (cerca de 5–10W), mas a carga de inferência de IA sustentada varia mais — uma máquina N150 consome bem menos sob carga (~15–25W) do que uma máquina Ryzen 7/9 rodando um modelo 7B (~45W ou mais). Para uma máquina que roda o tempo todo, essa diferença se acumula ao longo de um ano mais do que o desempenho de pico em benchmark.',
           'Os valores de TDP publicados pelo fabricante definem o limite superior (N150: 6W; 8845HS/8945HS: 45W, configurável até 70W em algumas placas; HX 370: configurável 15–54W) — o consumo real depende da carga de trabalho e das configurações do modo de energia na BIOS.',
         ],
@@ -2942,13 +2942,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Mini PCs para Home Assistant + IA Local (2026)',
-      description: 'Melhor mini PC para Home Assistant 2026: Beelink SER8 (~R$ 5.000) para Frigate + um modelo 7B; máquinas Intel N150 (~R$ 1.400–1.900) econômicas; GEEKOM A9 Max (~R$ 8.500+) para IA embarcada. Comparados lado a lado.',
+      description: 'Melhor mini PC para Home Assistant 2026: Beelink SER8 (~preço a confirmar) para Frigate + um modelo 7B; máquinas Intel N150 (~R$ 1.400–1.900) econômicas; GEEKOM A9 Max (~US$1.299+) para IA embarcada. Comparados lado a lado.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2970,19 +2970,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-13',
     next_refresh_due: '2027-02-23',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
     seoTitle: '2026年最佳迷你 PC：Home Assistant 加本地大语言模型',
     intro:
-      '2026年在一台机器上运行 Home Assistant 加本地 LLM 的最佳迷你 PC 是 Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $650），可运行中枢、Frigate 以及通过 Ollama 的 7B 模型。若预算有限，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 机器（约 $180–230）可运行 Home Assistant 和一个小型模型。若追求最强的设备端 AI 与视觉处理，GEEKOM A9 Max（Ryzen AI 9 HX 370，约 $1,099–1,299）则更进一步。本购买指南将五款具体机型并排比较，为每种使用场景给出直接建议，并涵盖配置注意事项——并交叉链接到 local-llms 硬件指南以了解 VRAM 细节。',
+      '2026年在一台机器上运行 Home Assistant 加本地 LLM 的最佳迷你 PC 是 Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $799–849），可运行中枢、Frigate 以及通过 Ollama 的 7B 模型。若预算有限，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 机器（约 $180–230）可运行 Home Assistant 和一个小型模型。若追求最强的设备端 AI 与视觉处理，GEEKOM A9 Max（Ryzen AI 9 HX 370，约 $1,299–1,599）则更进一步。本购买指南将五款具体机型并排比较，为每种使用场景给出直接建议，并涵盖配置注意事项——并交叉链接到 local-llms 硬件指南以了解 VRAM 细节。',
     metaDescription:
-      '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $650）运行 Frigate + 7B 模型；预算型 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,099+）。并排比较。',
+      '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $799–849）运行 Frigate + 7B 模型；预算型 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,299+）。并排比较。',
     heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-zh.webp',
     twitterDescription:
-      '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $650）运行 Frigate + 7B 模型；实惠的 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,099+）。5款机型对比。',
+      '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $799–849）运行 Frigate + 7B 模型；实惠的 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,299+）。5款机型对比。',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
     audience: '为 Home Assistant 和本地 AI 选购迷你 PC 的人',
@@ -2995,16 +2995,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant 迷你pc 2026',
     ],
     leadAnswerBlock:
-      '**2026年 Home Assistant 加本地 LLM 的最佳全能迷你 PC 是 Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $650）——它在一台机器上运行中枢、Frigate 以及 Ollama 的 7B 模型。** 若追求预算或近乎无声的配置，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 机器（约 $180–230）可运行 Home Assistant 和一个小型模型。若追求最强的设备端 AI，GEEKOM A9 Max（约 $1,099–1,299）则更进一步。为了 AI 延迟，优先考虑内存和 iGPU，而非纯粹的 CPU 主频。',
+      '**2026年 Home Assistant 加本地 LLM 的最佳全能迷你 PC 是 Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $799–849）——它在一台机器上运行中枢、Frigate 以及 Ollama 的 7B 模型。** 若追求预算或近乎无声的配置，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 机器（约 $180–230）可运行 Home Assistant 和一个小型模型。若追求最强的设备端 AI，GEEKOM A9 Max（约 $1,299–1,599）则更进一步。为了 AI 延迟，优先考虑内存和 iGPU，而非纯粹的 CPU 主频。',
     quickAnswerTop: {
       zh: {
         question: '2026年 Home Assistant 和本地 AI 用哪台迷你 PC 最好？',
         answer:
-          '对大多数人，Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $650）是最佳选择——其强力 iGPU 可在 Home Assistant、Frigate 和 Whisper 之外运行 Ollama 的 7B 模型。若追求预算或近乎无声的机器，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 迷你 PC（约 $180–230）可运行 Home Assistant 加一个小型模型。若追求最强的设备端 AI 与视觉处理，GEEKOM A9 Max（约 $1,099–1,299）这类 Ryzen AI 迷你 PC 则更进一步。',
+          '对大多数人，Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $799–849）是最佳选择——其强力 iGPU 可在 Home Assistant、Frigate 和 Whisper 之外运行 Ollama 的 7B 模型。若追求预算或近乎无声的机器，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 迷你 PC（约 $180–230）可运行 Home Assistant 加一个小型模型。若追求最强的设备端 AI 与视觉处理，GEEKOM A9 Max（约 $1,299–1,599）这类 Ryzen AI 迷你 PC 则更进一步。',
         bullets: [
-          '全能最佳：Beelink SER8（Ryzen 7 8845HS、32 GB）约 $650 —— HA + Frigate + Ollama 的 7B 模型',
+          '全能最佳：Beelink SER8（Ryzen 7 8845HS、32 GB）约 $799–849 —— HA + Frigate + Ollama 的 7B 模型',
           '预算 / 近乎无声：Intel N150（Beelink EQ14、GMKtec G3 Plus）约 $180–230 —— HA + 一个小型模型',
-          '本地 AI 首选：GEEKOM A9 Max（Ryzen AI 9 HX 370）约 $1,099–1,299 —— 视觉处理最强的 iGPU + NPU',
+          '本地 AI 首选：GEEKOM A9 Max（Ryzen AI 9 HX 370）约 $1,299–1,599 —— 视觉处理最强的 iGPU + NPU',
           '优先内存和强力 iGPU，而非 CPU 主频；内存越多可容纳越大的模型',
           '关于 VRAM 细节，参见 local-llms 硬件指南',
         ],
@@ -3037,8 +3037,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '优先内存和一块强力的集成 GPU 或 NPU，而非纯粹的 CPU 主频',
           '低功耗的 Intel N150 迷你 PC（约 $180–220）可运行 Home Assistant 和一个小型模型',
-          '配强力 iGPU 的 Ryzen 7/9 迷你 PC（约 $650）能在中枢旁边处理 7B 模型',
-          '配 NPU 的 Ryzen AI 迷你 PC（约 $1,099+）是设备端 AI 与视觉处理的最强选择',
+          '配强力 iGPU 的 Ryzen 7/9 迷你 PC（约 $799–849）能在中枢旁边处理 7B 模型',
+          '配 NPU 的 Ryzen AI 迷你 PC（约 $1,299+）是设备端 AI 与视觉处理的最强选择',
           '一台迷你 PC 可同时运行 Home Assistant、Ollama、Whisper 和 Frigate',
           '关于 VRAM 细节，参见跨集群的 local-llms 硬件指南',
         ],
@@ -3049,9 +3049,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**三种配置可覆盖大多数 Home Assistant + 本地 AI 需求。** 按预算和你想运行的模型大小来选择。',
         items: [
-          '**全能最佳 — Beelink SER8（32 GB）：** 在一台机器上运行 Home Assistant、Frigate 以及 Ollama 的 7B 模型。32 GB / 1 TB 配置约 $650，但价格因经销商而异——请查看当前价格。',
+          '**全能最佳 — Beelink SER8（32 GB）：** 在一台机器上运行 Home Assistant、Frigate 以及 Ollama 的 7B 模型。32 GB / 1 TB 配置约 $799–849，但价格因经销商而异——请查看当前价格。',
           '**预算最佳 — Beelink EQ14 或 GMKtec G3 Plus（Intel N150）：** 以约 $180–220 运行 Home Assistant 加一个小型模型（1–3B）。',
-          '**本地 AI 首选 — GEEKOM A9 Max（Ryzen AI 9 HX 370）：** 视觉处理最强的 iGPU 加 NPU；根据配置和经销商，通常约为 $1,099–1,299。',
+          '**本地 AI 首选 — GEEKOM A9 Max（Ryzen AI 9 HX 370）：** 视觉处理最强的 iGPU 加 NPU；根据配置和经销商，通常约为 $1,299–1,599。',
         ],
         affiliateLinks: [
           { label: '查看 SER8 价格 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -3178,15 +3178,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**根据你的目标模型和预算选择机型。** 价格与功耗数据为近似值，来自 2026 年 8 月的厂商信息和独立硬件评测——购买前请确认当前价格。',
         columns: ['机型', 'CPU', 'GPU/iGPU', '内存（测试配置 / 最大）', '以太网', '存储', '大致价格', '待机/典型功耗', '适合场景'],
         rows: [
-          { '机型': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（集成）', '内存（测试配置 / 最大）': '16 GB / 最大 16 GB（1 根 SO-DIMM）', '以太网': '2x 1GbE', '存储': '1x M.2 NVMe SSD', '大致价格': '约 $189–220', '待机/典型功耗': '待机约5–12W，负载约15–25W', '适合场景': 'HA + 一个小型模型' },
+          { '机型': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（集成）', '内存（测试配置 / 最大）': '16 GB / 最大 16 GB（1 根 SO-DIMM）', '以太网': '2x 2.5GbE', '存储': '2x M.2 NVMe SSD', '大致价格': '约 $189–220', '待机/典型功耗': '待机约5–12W，负载约15–25W', '适合场景': 'HA + 一个小型模型' },
           { '机型': '[GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD（集成）', '内存（测试配置 / 最大）': '16 GB / 官方 16 GB，有用户报告可达 32 GB（1 根 SO-DIMM）', '以太网': '1x 2.5GbE', '存储': '2x M.2（2280 NVMe 最高 4TB + 2242 SATA 最高 2TB）', '大致价格': '约 $180–230', '待机/典型功耗': '待机约5–12W，负载约15–25W', '适合场景': 'HA + 一个小型模型，预算灵活' },
-          { '机型': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', '内存（测试配置 / 最大）': '32 GB / 最大 256 GB（2 根 DDR5 SO-DIMM）', '以太网': '1x 2.5GbE', '存储': '2x M.2 PCIe 4.0（合计最高 8TB）', '大致价格': '约 $650', '待机/典型功耗': '待机约7–10W，持续 AI 负载约45W以上', '适合场景': 'HA + Frigate + 7B 模型' },
+          { '机型': '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review)', 'CPU': 'Ryzen 7 8845HS', 'GPU/iGPU': 'Radeon 780M', '内存（测试配置 / 最大）': '32 GB / 最大 256 GB（2 根 DDR5 SO-DIMM）', '以太网': '1x 2.5GbE', '存储': '2x M.2 PCIe 4.0（合计最高 8TB）', '大致价格': '约 $799–849', '待机/典型功耗': '待机约7–10W，持续 AI 负载约45W以上', '适合场景': 'HA + Frigate + 7B 模型' },
           { '机型': '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review)', 'CPU': 'Ryzen 9 8945HS', 'GPU/iGPU': '与 SER8 同级别', '内存（测试配置 / 最大）': '32 GB / 最大 96 GB（2 根 DDR5 SO-DIMM）', '以太网': '2x 2.5GbE', '存储': '2x M.2 NVMe + 外接扩展用 OCuLink', '大致价格': '约 $649（32GB）/ 约 $439（裸机）', '待机/典型功耗': '待机约7–9W，持续负载约54–90W', '适合场景': '类似 SER8，配置更灵活' },
-          { '机型': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', '内存（测试配置 / 最大）': '32 GB / 最大 128 GB（2 根 DDR5 SO-DIMM）', '以太网': '2x 2.5GbE', '存储': '2x M.2 NVMe SSD', '大致价格': '约 $1,099–1,299', '待机/典型功耗': '待机约7–9W，典型使用约20–34W', '适合场景': '最强设备端 AI + 视觉处理' },
+          { '机型': '[GEEKOM A9 Max](/smart-home/geekom-a9-max-local-ai-review)', 'CPU': 'Ryzen AI 9 HX 370', 'GPU/iGPU': 'Radeon 890M + NPU', '内存（测试配置 / 最大）': '32 GB / 最大 128 GB（2 根 DDR5 SO-DIMM）', '以太网': '2x 2.5GbE', '存储': '2x M.2 NVMe SSD', '大致价格': '约 $1,299–1,599', '待机/典型功耗': '待机约7–9W，典型使用约20–34W', '适合场景': '最强设备端 AI + 视觉处理' },
         ],
         items: [
           '关于 VRAM 和量化细节，参见跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。',
-          '关于网络的说明：只有 EQ14 没有 2.5GbE 网口（而是配备两个 1GbE 网口）——如果你同时运行 Home Assistant 和摄像头视频流，使用有线 2.5GbE 连接可以降低网络成为瓶颈的风险。',
+          '关于网络的说明：这里的每款机型都至少配备一个 2.5GbE 网口——EQ14 和 Minisforum UM890 Pro 甚至配备两个——如果你同时运行 Home Assistant 和摄像头视频流，使用有线 2.5GbE 连接可以降低网络成为瓶颈的风险。',
         ],
         image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-zh.webp',
         imageCaption: 'Home Assistant AI用迷你主机分类 -- 内存建议与可运行内容',
@@ -3252,7 +3252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**硬件是唯一的实际成本——软件是免费的。** Home Assistant、Ollama、本地模型和 Frigate 都是免费开源的；迷你 PC 本身就是全部预算支出。',
         items: [
-          '**按级别划分的硬件成本：** 预算型 N150 机型约 $180–230；均衡型 Ryzen 7/9 机型（32 GB）约 $650；顶配 NPU 机型约 $1,099–1,299。',
+          '**按级别划分的硬件成本：** 预算型 N150 机型约 $180–230；均衡型 Ryzen 7/9 机型（32 GB）约 $799–849；顶配 NPU 机型约 $1,299–1,599。',
           '**24/7 设备的功耗：** 本指南中五款机型的待机功耗大体相近（约 5–10W），但持续 AI 推理负载下差异更大——N150 机型在负载下的功耗（约15–25W）明显低于运行 7B 模型的 Ryzen 7/9 机型（约45W 或更高）。对于全天候运行的设备，这一差异在一年内累积下来，比峰值基准性能更重要。',
           '厂商公布的 TDP 数值划定了上限（N150：6W；8845HS/8945HS：45W，部分主板可调至 70W；HX 370：可调 15–54W）——实际功耗取决于工作负载和 BIOS 电源模式设置。',
         ],
@@ -3311,13 +3311,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant + 本地 AI 的最佳迷你 PC（2026）',
-      description: '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $650）运行 Frigate + 7B 模型；预算型 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,099+）。并排比较。',
+      description: '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $799–849）运行 Frigate + 7B 模型；预算型 Intel N150 机器（约 $180–230）；设备端 AI 首选 GEEKOM A9 Max（约 $1,299+）。并排比较。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-mini-pc-home-assistant-local-ai',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-08-23',
+      dateModified: '2026-09-13',
       about: [{ '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '本地 LLM' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
