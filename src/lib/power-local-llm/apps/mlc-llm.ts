@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per llm.mlc.ai/docs: MLC LLM is a universal deployment engine targeting many backends (CUDA/ROCm/Metal/Vulkan GPUs, WebGPU, iOS, Android, and CPU via LLVM) — its docs state a model must "fit within the memory and computing budget of the corresponding hardware backend" but publish no single fixed RAM/VRAM floor or GPU requirement across all of them, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per llm.mlc.ai/docs: MLC LLM is a universal deployment engine targeting many backends (CUDA/ROCm/Metal/Vulkan GPUs, WebGPU, iOS, Android, and CPU via LLVM) — its docs state a model must "fit within the memory and computing budget of the corresponding hardware backend" but publish no single fixed RAM/VRAM floor or GPU requirement across all of them, verified 2026-09-13
   stars: 23134,
   addedDate: '2026-09-04',
   status: 'listed',

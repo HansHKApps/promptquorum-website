@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Open source',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (bobebot.com) states no minimum RAM/hardware spec; it's a local desktop client whose floor depends on the model backend the user connects, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // official site (bobebot.com) states no minimum RAM/hardware spec; it's a local desktop client whose floor depends on the model backend the user connects, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

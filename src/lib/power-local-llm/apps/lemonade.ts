@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache-2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/lemonade-sdk/lemonade README (also see src/lib/power-local-llm/articles/lemonade-review.ts): AMD-sponsored server optimized for Ryzen AI NPU/Radeon GPU but explicitly also "installs and runs on ... generic x86_64/ARM64 CPUs" via its llama.cpp backend; no fixed RAM/VRAM floor, depends on the model loaded, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/lemonade-sdk/lemonade README (also see src/lib/power-local-llm/articles/lemonade-review.ts): AMD-sponsored server optimized for Ryzen AI NPU/Radeon GPU but explicitly also "installs and runs on ... generic x86_64/ARM64 CPUs" via its llama.cpp backend; no fixed RAM/VRAM floor, depends on the model loaded, verified 2026-09-13
   stars: 5621, // github.com/lemonade-sdk/lemonade, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

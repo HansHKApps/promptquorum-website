@@ -3,9 +3,33 @@
 // Phase 3 of /Users/hanskuepper/.claude/plans/see-the-directory-page-virtual-cocke.md.
 
 import type { HardwareProfile, MachineType } from './types'
-import type { EngineKey, ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
+import type { EngineKey, OSKey, ToolRecordHardware } from '@/lib/power-local-llm/apps/types'
+import type { InterfaceKey } from '@/lib/power-local-llm/apps/categories'
 import type { Language } from '@/lib/blog/blogContent'
 import { t } from './directory-i18n'
+
+/**
+ * The two facts needed to tell whether a tool is available on the viewer's
+ * phone at all — a more fundamental question than "does it have enough RAM",
+ * and one RAM math alone can't answer (a Linux-only GPU server has no iPhone
+ * build no matter how much RAM the phone has). Optional on every function
+ * below: omit it and mobile machines fall back to pure RAM math, same as
+ * before this existed — only pass it once a caller actually has app.interfaces
+ * /app.platforms in scope, which every current call site does.
+ */
+export interface MobilePlatformContext {
+  interfaces: InterfaceKey[]
+  platforms: OSKey[] | null
+}
+
+function hasMobilePlatformSupport(ctx: MobilePlatformContext, machine: 'ios' | 'android'): boolean {
+  if (!ctx.interfaces.includes('mobile')) return false
+  // `platforms: null` means "not yet researched" — interfaces already
+  // confirmed a mobile build exists, so don't penalize a tool for a
+  // still-open platforms field by claiming the wrong OS specifically.
+  if (!ctx.platforms) return true
+  return ctx.platforms.includes(machine)
+}
 
 const STORAGE_KEY = 'pq-directory-machine'
 
@@ -17,25 +41,32 @@ const STORAGE_KEY = 'pq-directory-machine'
 const PROFILE_STORAGE_KEY = 'pq-hw-profile'
 
 /**
- * Detects a sensible default machine type from navigator.platform.
- * Mac / iPhone / iPad -> apple; everything else -> dgpu.
- * Matches the prototype's logic exactly (already validated there) — this is
- * a best-effort default, not a hardware probe, and is only ever used until
- * the viewer picks (and we persist) an explicit choice.
+ * Detects a sensible default machine type from navigator.platform/userAgent.
+ * iPhone/iPad -> ios (a phone/tablet, not a laptop — see MachineType's doc
+ * comment); Mac -> apple (desktop unified memory); Android -> android;
+ * everything else -> dgpu. Matches the prototype's Mac/iPhone/iPad-> apple
+ * logic except it now separates the phone/tablet case out of "apple", which
+ * previously lumped a Mac and an iPhone into the same desktop-oriented
+ * compatibility math. Best-effort default, not a hardware probe — only ever
+ * used until the viewer picks (and we persist) an explicit choice.
  */
 export function detectDefaultMachine(): MachineType {
   if (typeof navigator === 'undefined') return 'dgpu'
   const platform = navigator.platform || ''
-  if (/Mac|iPhone|iPad/i.test(platform)) return 'apple'
+  const ua = navigator.userAgent || ''
+  if (/iPhone|iPad/i.test(platform) || /iPhone|iPad/i.test(ua)) return 'ios'
+  if (/Mac/i.test(platform)) return 'apple'
+  if (/Android/i.test(ua)) return 'android'
   return 'dgpu'
 }
+
+const MACHINE_TYPES: readonly MachineType[] = ['dgpu', 'apple', 'cpu', 'ios', 'android']
 
 /** Reads the persisted machine choice, if any. Never throws. */
 export function readStoredMachine(): MachineType | null {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (raw === 'dgpu' || raw === 'apple' || raw === 'cpu') return raw
-    return null
+    return (MACHINE_TYPES as string[]).includes(raw ?? '') ? (raw as MachineType) : null
   } catch {
     return null
   }
@@ -66,6 +97,12 @@ export function readStoredProfile(): HardwareProfile | null {
     }
     if (p.machine === 'apple' && typeof p.unifiedGb === 'number') {
       return { machine: 'apple', unifiedGb: p.unifiedGb }
+    }
+    if (p.machine === 'ios' && typeof p.ramGb === 'number') {
+      return { machine: 'ios', ramGb: p.ramGb }
+    }
+    if (p.machine === 'android' && typeof p.ramGb === 'number') {
+      return { machine: 'android', ramGb: p.ramGb }
     }
     return null
   } catch {
@@ -170,10 +207,48 @@ export function computeHardwareDisplay(
   hardware: ToolRecordHardware | null,
   machine: MachineType,
   lang: Language,
-  engine?: EngineKey | 'TODO'
+  engine?: EngineKey | 'TODO',
+  mobile?: MobilePlatformContext
 ): HardwareDisplay {
+  if ((machine === 'ios' || machine === 'android') && mobile && !hasMobilePlatformSupport(mobile, machine)) {
+    return {
+      known: true,
+      headline: t(machine === 'ios' ? 'hwNoIosApp' : 'hwNoAndroidApp', lang),
+      detail: null,
+      cpuFriendly: false,
+    }
+  }
+
   if (!hardware) {
     return derivedFromEngine(engine, lang) ?? { known: false, headline: null, detail: null, cpuFriendly: false }
+  }
+
+  if (hardware.variesByModel) {
+    return {
+      known: true,
+      headline: t('hwVariesByModel', lang),
+      detail: t('hwVariesByModelDetail', lang),
+      cpuFriendly: hardware.cpuOnly === true,
+    }
+  }
+
+  // A `hardware` object with no numbers in it at all carries the same meaning
+  // as `hardware === null` (see that field's doc comment: "not yet researched
+  // — hardware floor depends on the model loaded, not a fixed tool attribute")
+  // — some records were entered as the former instead of the latter. Route
+  // both spellings through the same derivedFromEngine fallback rather than
+  // falling through to the number-shaped branches below and rendering a blank
+  // "known: false" for what should read as "set by your engine"/"set by the
+  // model you load" (client/library tools especially — this previously left
+  // dozens of them with no hardware text at all under the apple/dgpu machine
+  // types). Only external/library engines get this fallback: builtin/both
+  // tools with genuinely no number and no `variesByModel` flag are a real,
+  // still-open research gap, not something safe to describe generically
+  // (a compact TTS or upscaler model has nothing in common with "~8GB for a
+  // 7B LLM").
+  if (hardware.ramGb == null && hardware.vramGb == null && (engine === 'external' || engine === 'library')) {
+    const derived = derivedFromEngine(engine, lang)
+    if (derived) return derived
   }
 
   const { ramGb, vramGb, cpuOnly } = hardware
@@ -205,6 +280,17 @@ export function computeHardwareDisplay(
       known: ramGb != null,
       headline: ramGb != null ? t('hwRamTemplate', lang, { n: ramGb }) : null,
       detail: t('hwCpuOnlySupported', lang),
+      cpuFriendly: true,
+    }
+  }
+
+  // Phone/tablet: same single-RAM-number shape as 'cpu' above, but never
+  // suggests "add a GPU" — that's not a thing you can do to a phone.
+  if (machine === 'ios' || machine === 'android') {
+    return {
+      known: ramGb != null,
+      headline: ramGb != null ? t('hwRamTemplate', lang, { n: ramGb }) : null,
+      detail: null,
       cpuFriendly: true,
     }
   }
@@ -249,7 +335,7 @@ export function hardwareSortValue(
     const unifiedMin = unifiedMemoryFloor(hardware.ramGb, hardware.vramGb)
     return unifiedMin > 0 ? unifiedMin : null
   }
-  if (machine === 'cpu') {
+  if (machine === 'cpu' || machine === 'ios' || machine === 'android') {
     return hardware.ramGb ?? null
   }
   return hardware.vramGb ?? hardware.ramGb ?? (display.known ? 0 : null)
@@ -292,9 +378,18 @@ export function computeCompatibilityVerdict(
   hardware: ToolRecordHardware | null,
   profile: HardwareProfile | null,
   machine: MachineType,
-  engine?: EngineKey | 'TODO'
+  engine?: EngineKey | 'TODO',
+  mobile?: MobilePlatformContext
 ): CompatibilityVerdict {
   if (!profile || profile.machine !== machine) return 'unknown'
+
+  // A tool with no mobile build at all won't run on a phone no matter how
+  // much RAM the phone has — check this before any RAM math, since it's the
+  // more fundamental (and more common) reason a desktop-only tool "won't
+  // run" on an iPhone/Android machine selection.
+  if ((machine === 'ios' || machine === 'android') && mobile && !hasMobilePlatformSupport(mobile, machine)) {
+    return 'wont-run'
+  }
 
   // Clients and libraries add no local inference cost of their own — the
   // engine/server they talk to pays it, same treatment as cpuFriendly above.
@@ -319,7 +414,7 @@ export function computeCompatibilityVerdict(
     return verdictFromRatio(profile.unifiedGb, need)
   }
 
-  if (profile.machine === 'cpu') {
+  if (profile.machine === 'cpu' || profile.machine === 'ios' || profile.machine === 'android') {
     if (ramGb == null) return cpuFallback ? 'marginal' : 'unknown'
     const verdict = verdictFromRatio(profile.ramGb, ramGb)
     return cpuFallback && verdict === 'wont-run' ? 'marginal' : verdict

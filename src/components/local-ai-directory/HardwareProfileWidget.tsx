@@ -85,9 +85,14 @@ export function HardwareProfileWidget({
 }) {
   const memoryHint = deviceMemoryHint()
   const matchesMachine = profile != null && profile.machine === machine
+  // Safari (so every iPhone/iPad) doesn't implement navigator.deviceMemory at
+  // all, so memoryHint is always null there — 16 GB is a sane blind guess for
+  // a laptop/desktop but a wildly high one for a phone (typical iPhone/Android
+  // RAM is 6-8 GB), so the two machine categories get different fallbacks.
+  const defaultRamGb = machine === 'ios' || machine === 'android' ? 8 : 16
 
   const [ramGb, setRamGb] = useState<number>(() =>
-    profile && 'ramGb' in profile ? profile.ramGb : memoryHint ?? 16
+    profile && 'ramGb' in profile ? profile.ramGb : memoryHint ?? defaultRamGb
   )
   const [vramGb, setVramGb] = useState<number>(() => (profile && 'vramGb' in profile ? profile.vramGb : 8))
   const [unifiedGb, setUnifiedGb] = useState<number>(() =>
@@ -98,6 +103,8 @@ export function HardwareProfileWidget({
     let next: HardwareProfile
     if (machine === 'dgpu') next = { machine: 'dgpu', ramGb, vramGb }
     else if (machine === 'cpu') next = { machine: 'cpu', ramGb }
+    else if (machine === 'ios') next = { machine: 'ios', ramGb }
+    else if (machine === 'android') next = { machine: 'android', ramGb }
     else next = { machine: 'apple', unifiedGb }
     writeStoredProfile(next)
     onProfileChange(next)
@@ -115,8 +122,9 @@ export function HardwareProfileWidget({
     let summary = t('hwProfileSetLink', lang)
     if (matchesMachine && profile) {
       if (profile.machine === 'dgpu') summary = t('hwProfileSummaryDgpuTemplate', lang, { ram: profile.ramGb, vram: profile.vramGb })
-      else if (profile.machine === 'cpu') summary = t('hwProfileSummaryCpuTemplate', lang, { ram: profile.ramGb })
-      else summary = t('hwProfileSummaryAppleTemplate', lang, { unified: profile.unifiedGb })
+      else if (profile.machine === 'cpu' || profile.machine === 'ios' || profile.machine === 'android') {
+        summary = t('hwProfileSummaryCpuTemplate', lang, { ram: profile.ramGb })
+      } else summary = t('hwProfileSummaryAppleTemplate', lang, { unified: profile.unifiedGb })
     } else if (profile) {
       // Saved, but for a machine type the viewer has since switched away
       // from in the selector above — the numbers don't apply anymore.
@@ -137,7 +145,7 @@ export function HardwareProfileWidget({
   return (
     <div id="hw-profile-widget" className="rounded-lg border border-primary/20 bg-white p-3 space-y-3 text-sm shadow-sm">
       <div className="flex flex-wrap items-end gap-3">
-        {(machine === 'dgpu' || machine === 'cpu') && (
+        {(machine === 'dgpu' || machine === 'cpu' || machine === 'ios' || machine === 'android') && (
           <NumberField
             label={t('hwProfileRamLabel', lang)}
             value={ramGb}

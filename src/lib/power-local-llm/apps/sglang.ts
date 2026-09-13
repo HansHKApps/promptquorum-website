@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per docs.sglang.io install docs: primary path requires CUDA 13 and an NVIDIA GPU (FlashInfer needs sm75+, e.g. T4/A10/A100/L4/L40S/H100); no single minimum VRAM is stated since it scales with model size (community reports commonly cite 16-40GB+). SGLang's own README also lists AMD GPU, Intel Xeon CPU, Google TPU, and Ascend NPU as supported backends, so CPU-only operation is possible via a non-default backend. Verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per docs.sglang.io install docs: primary path requires CUDA 13 and an NVIDIA GPU (FlashInfer needs sm75+, e.g. T4/A10/A100/L4/L40S/H100); no single minimum VRAM is stated since it scales with model size (community reports commonly cite 16-40GB+). SGLang's own README also lists AMD GPU, Intel Xeon CPU, Google TPU, and Ascend NPU as supported backends, so CPU-only operation is possible via a non-default backend. Verified 2026-09-13
   stars: 33500,
   addedDate: '2026-09-04',
   status: 'listed',

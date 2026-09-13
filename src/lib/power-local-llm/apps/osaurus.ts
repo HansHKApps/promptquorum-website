@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'MIT',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per osaurus.ai: a native macOS app with a native inference engine "built for Apple Silicon" for local models, alongside Ollama/MLX/LM Studio backends and cloud providers; no numeric RAM minimum is published, but its own local-inference path requires Apple Silicon's GPU, not CPU-only — verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // per osaurus.ai: a native macOS app with a native inference engine "built for Apple Silicon" for local models, alongside Ollama/MLX/LM Studio backends and cloud providers; no numeric RAM minimum is published, but its own local-inference path requires Apple Silicon's GPU, not CPU-only — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

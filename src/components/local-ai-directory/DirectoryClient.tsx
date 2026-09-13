@@ -28,9 +28,12 @@ import { HardwareProfileWidget } from './HardwareProfileWidget'
 import { SearchIcon, GridIcon, TableIcon, CloseIcon } from './icons'
 import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools } from './filters'
 import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStoredProfile } from './hardware'
-import { emptyFilterState, type FilterState, type HardwareProfile, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
+import { emptyFilterState, machineCategory, type FilterState, type HardwareProfile, type MachineCategory, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
-import { getMachineLabels, t } from './directory-i18n'
+import { getDeviceCategoryLabels, getMachineLabels, t } from './directory-i18n'
+
+const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
+const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
 
 // page-redesign-v2.md §4 step 3: "24 cards, then 'Show 24 more · N remaining'"
 const PAGE_SIZE = 24
@@ -42,6 +45,7 @@ interface Props {
 
 export function DirectoryClient({ apps, lang }: Props) {
   const MACHINE_LABEL = useMemo(() => getMachineLabels(lang), [lang])
+  const DEVICE_CATEGORY_LABEL = useMemo(() => getDeviceCategoryLabels(lang), [lang])
   const [search, setSearch] = useState('')
   const [want, setWant] = useState<string | null>(null)
   const [filters, setFilters] = useState<FilterState>(emptyFilterState)
@@ -83,6 +87,18 @@ export function DirectoryClient({ apps, lang }: Props) {
   const handleMachineChange = (next: MachineType) => {
     setMachine(next)
     writeStoredMachine(next)
+  }
+
+  // Derived, not separate state — the device category is always implied by
+  // whichever MachineType is currently selected (see machineCategory), so
+  // there is only ever one source of truth to keep in sync.
+  const deviceCategory = machineCategory(machine)
+  const handleDeviceCategoryChange = (next: MachineCategory) => {
+    if (next === deviceCategory) return
+    // Switching category needs a concrete MachineType to land on — first
+    // option in that category's list, same as the coarse per-platform
+    // guesses detectDefaultMachine makes on first load.
+    handleMachineChange(next === 'mobile' ? 'ios' : 'dgpu')
   }
 
   const query = useMemo(() => ({ filters, search, want }), [filters, search, want])
@@ -214,13 +230,36 @@ export function DirectoryClient({ apps, lang }: Props) {
           </div>
 
           <label className="flex items-center gap-2 text-sm">
-            <span className="text-text-secondary shrink-0">{t('myMachineLabel', lang)}</span>
+            <span className="text-text-secondary shrink-0">{t('deviceCategoryLabel', lang)}</span>
+            <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', lang)}>
+              {(['desktop', 'mobile'] as MachineCategory[]).map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => handleDeviceCategoryChange(cat)}
+                  aria-pressed={deviceCategory === cat}
+                  className={cn(
+                    'px-3 py-2 text-sm font-medium',
+                    cat === 'mobile' && 'border-l border-primary/20',
+                    deviceCategory === cat ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5'
+                  )}
+                >
+                  {DEVICE_CATEGORY_LABEL[cat]}
+                </button>
+              ))}
+            </div>
+          </label>
+
+          <label className="flex items-center gap-2 text-sm">
+            <span className="text-text-secondary shrink-0">
+              {t(deviceCategory === 'mobile' ? 'myPhoneLabel' : 'myMachineLabel', lang)}
+            </span>
             <select
               value={machine}
               onChange={(e) => handleMachineChange(e.target.value as MachineType)}
               className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
-              {(Object.keys(MACHINE_LABEL) as MachineType[]).map((m) => (
+              {(deviceCategory === 'mobile' ? MOBILE_MACHINES : DESKTOP_MACHINES).map((m) => (
                 <option key={m} value={m}>{MACHINE_LABEL[m]}</option>
               ))}
             </select>

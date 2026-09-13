@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/ggml-org/llama.cpp README: "Plain C/C++ implementation without any dependencies" with dedicated CPU backends (ARM NEON, AVX/AVX2/AVX512, etc.); GPU backends are optional additions. No fixed RAM/VRAM minimum is stated — floor depends entirely on the GGUF model and quantization loaded, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/ggml-org/llama.cpp README: "Plain C/C++ implementation without any dependencies" with dedicated CPU backends (ARM NEON, AVX/AVX2/AVX512, etc.); GPU backends are optional additions. No fixed RAM/VRAM minimum is stated — floor depends entirely on the GGUF model and quantization loaded, verified 2026-09-13
   stars: 126800,
   addedDate: '2026-09-04',
   status: 'listed',

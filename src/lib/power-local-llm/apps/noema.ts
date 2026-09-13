@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per noemaai.com: no numeric RAM/device minimum is published; it supports multiple backends (GGUF, MLX, Core ML, ExecuTorch, Apple Foundation Models) that use different mixes of CPU/GPU/Neural Engine depending on format, so cpuOnly is genuinely unclear — verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per noemaai.com: no numeric RAM/device minimum is published; it supports multiple backends (GGUF, MLX, Core ML, ExecuTorch, Apple Foundation Models) that use different mixes of CPU/GPU/Neural Engine depending on format, so cpuOnly is genuinely unclear — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

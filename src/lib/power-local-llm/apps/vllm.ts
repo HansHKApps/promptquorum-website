@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per docs.vllm.ai/en/latest/getting_started/installation/gpu/ — requires a GPU with compute capability >= 7.5 for the NVIDIA backend (e.g. T4, RTX 20-series, A100, L4, H100), with separate AMD (ROCm 6.3+) and Intel GPU backends; no CPU-only production path and no fixed VRAM figure in GB since it depends on the model served, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // per docs.vllm.ai/en/latest/getting_started/installation/gpu/ — requires a GPU with compute capability >= 7.5 for the NVIDIA backend (e.g. T4, RTX 20-series, A100, L4, H100), with separate AMD (ROCm 6.3+) and Intel GPU backends; no CPU-only production path and no fixed VRAM figure in GB since it depends on the model served, verified 2026-09-13
   stars: 90800,
   addedDate: '2026-09-04',
   status: 'listed',

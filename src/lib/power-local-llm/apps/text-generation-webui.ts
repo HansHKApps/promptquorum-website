@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/oobabooga/text-generation-webui README — ships an explicit CPU-only install path (`requirements_cpu_only.txt`, a "CPU only" PyTorch wheel row for Linux/WSL and Windows, and a CPU-only Docker Compose file) alongside NVIDIA/AMD/Intel/Apple GPU options; no fixed VRAM/RAM floor since it's model-dependent, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/oobabooga/text-generation-webui README — ships an explicit CPU-only install path (`requirements_cpu_only.txt`, a "CPU only" PyTorch wheel row for Linux/WSL and Windows, and a CPU-only Docker Compose file) alongside NVIDIA/AMD/Intel/Apple GPU options; no fixed VRAM/RAM floor since it's model-dependent, verified 2026-09-13
   stars: 47600,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'MIT',
   price: 'freemium',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per askvoxa.dev, checked 2026-09-13 — only build prerequisites (Rust, Node 18+) are documented, no runtime hardware/system-requirements section; depends entirely on the LLM/voice backend the user configures, no fixed floor of its own
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per askvoxa.dev, checked 2026-09-13 — only build prerequisites (Rust, Node 18+) are documented, no runtime hardware/system-requirements section; depends entirely on the LLM/voice backend the user configures, no fixed floor of its own
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

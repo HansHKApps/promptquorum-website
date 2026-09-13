@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Apache-2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per docs.gpustack.ai + github.com/gpustack/gpustack quickstart: the management server itself can run CPU-only, but a worker node that actually serves models requires at least one GPU (NVIDIA documented explicitly; other vendors supported); no minimum VRAM stated, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // per docs.gpustack.ai + github.com/gpustack/gpustack quickstart: the management server itself can run CPU-only, but a worker node that actually serves models requires at least one GPU (NVIDIA documented explicitly; other vendors supported); no minimum VRAM stated, verified 2026-09-13
   stars: 5607, // github.com/gpustack/gpustack, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',
