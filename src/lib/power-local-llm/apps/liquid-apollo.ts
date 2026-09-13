@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which LFM2 model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 4, vramGb: null, cpuOnly: null }, // per liquid.ai's own LEAP/Apollo launch post (liquid.ai/blog/liquid-ai-launches-leap-and-apollo...): compact LFM2 models are "lightweight enough for modern phones with as little as 4GB of RAM"; mobile SoC uses on-device NPU/GPU rather than discrete VRAM, so cpuOnly doesn't cleanly apply, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

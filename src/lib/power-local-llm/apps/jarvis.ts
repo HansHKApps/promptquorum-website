@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Open source',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // jarvis-mac.lovable.app states macOS 12+ and "4GB free disk space" but no documented RAM/VRAM floor; it bundles Llama 3.2 3B + Whisper + Kokoro and uses Apple Metal, "Apple Silicon recommended but Intel Macs supported" — GPU requirement unclear on Intel, checked official site + GitHub (Reezxy/Jarvis---Local-Voice-assistant), 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

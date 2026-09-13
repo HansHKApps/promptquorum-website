@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/LostRuins/koboldcpp README: "Runs on CPU or GPU, supports full or partial offloading" — no fixed RAM/VRAM minimum stated, floor depends entirely on the GGUF model and context size loaded, verified 2026-09-13
   stars: 11600,
   addedDate: '2026-09-04',
   status: 'listed',

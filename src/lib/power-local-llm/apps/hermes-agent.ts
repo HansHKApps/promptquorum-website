@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // CLI agent orchestrator only, no built-in inference — per github.com/NousResearch/hermes-agent README, no fixed process-level RAM/VRAM requirement is documented; entirely dependent on the Ollama/LM Studio/vLLM/llama.cpp backend the user points it at, checked 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

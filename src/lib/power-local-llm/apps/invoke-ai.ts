@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: 4, cpuOnly: false }, // per invoke.ai/start-here/system-requirements/ official hardware table: SD1.5 minimum tier is Nvidia 10xx+, 4GB VRAM, 8GB RAM; CPU-only mode exists only on Linux ARM64 and is documented as "slow without a GPU", verified 2026-09-13
   stars: 28100,
   addedDate: '2026-09-04',
   status: 'listed',

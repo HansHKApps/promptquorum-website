@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure orchestration library (langchain.com); no local inference or fixed hardware floor of its own — entirely dependent on the backend (Ollama, llama.cpp, vLLM, LM Studio) the developer wires it to, checked 2026-09-13
   stars: 145635,
   addedDate: '2026-09-04',
   status: 'listed',
