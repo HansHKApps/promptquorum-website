@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // logseq-copilot is a Logseq plugin with no built-in inference engine — per PromptQuorum's own logseq-copilot-review.ts research (against github.com/jarodise/logseq-copilot), it only calls out to a configured OpenAI-compatible endpoint (local Ollama/LM Studio or cloud Gemini/Grok), so hardware floor depends entirely on that backend, verified 2026-09-13
   stars: 17,
   addedDate: '2026-09-04',
   status: 'listed',

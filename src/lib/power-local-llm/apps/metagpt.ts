@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per PromptQuorum's own metagpt-review.ts research (against github.com/FoundationAgents/MetaGPT README): MetaGPT is a pip-installed Python multi-agent framework (Python 3.9-3.11, plus Node.js/pnpm) that drives whichever LLM API provider you configure — it has no local inference engine of its own, so no GPU/VRAM requirement is published, verified 2026-09-13
   stars: 70200,
   addedDate: '2026-09-04',
   status: 'listed',

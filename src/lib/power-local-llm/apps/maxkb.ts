@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'GPL-3.0',
   price: 'freemium', // Community edition free forever (capped: 2 users/5 apps/50 KBs); Pro edition ~$1,920/yr
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per PromptQuorum's own maxkb-review.ts research (against github.com/1Panel-dev/MaxKB): "MaxKB itself does not require a GPU — it orchestrates retrieval and calls out to whatever model provider you configure" (typically a separate Ollama instance); no built-in inference engine, so VRAM/RAM needs are governed by the connected backend and model, verified 2026-09-13
   stars: 22716, // github.com/1Panel-dev/MaxKB, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

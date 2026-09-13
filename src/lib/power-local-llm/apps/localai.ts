@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/mudler/LocalAI README: "Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required." GPU acceleration (NVIDIA/AMD/Intel/Apple Silicon/Vulkan/Jetson) is offered as an optional enhancement, not a requirement; no fixed minimum RAM published, verified 2026-09-13
   stars: 48855,
   addedDate: '2026-09-04',
   status: 'listed',

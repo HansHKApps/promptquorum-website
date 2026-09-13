@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // LlamaIndex is a Python orchestration/RAG framework with no built-in inference engine of its own — per llamaindex.ai and its docs, it routes to whatever LLM backend (local or cloud API) the developer configures, so hardware floor is entirely backend-dependent; no fixed minimum published, checked 2026-09-13
   stars: 52016,
   addedDate: '2026-09-04',
   status: 'listed',

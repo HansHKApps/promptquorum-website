@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'paid',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per PromptQuorum's own locally-uncensored-review.ts research (against github.com/PurpleDoubleD/locally-uncensored and locallyuncensored.com): "This app has no fixed hardware minimum of its own beyond running a supported OS" — it is a front end over Ollama/llama.cpp/KoboldCpp/LocalAI or its own LU Engine, so RAM/VRAM/CPU-only depend entirely on the backend and model chosen, verified 2026-09-13
   stars: 1400,
   addedDate: '2026-09-04',
   status: 'listed',

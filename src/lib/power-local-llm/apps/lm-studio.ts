@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Proprietary (free for personal and business use)', // verified via lmstudio.ai/app-terms on 2026-09-12 — closed source, not OSI-approved; was "Closed source"
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per lmstudio.ai/docs/app and PromptQuorum's own lm-studio-review.ts research: "LM Studio has no fixed hardware minimum beyond running one of the supported platforms" — it runs GGUF models via llama.cpp (CPU-capable) on Windows/Linux and GGUF or MLX on Apple Silicon Macs (no Intel Mac build); GPU acceleration is optional, not required, verified 2026-09-13
   stars: null, // the LM Studio desktop app itself has no public GitHub repo; companion tools (lms CLI, mlx-engine) do but are not the app
   addedDate: '2026-09-04',
   status: 'listed',

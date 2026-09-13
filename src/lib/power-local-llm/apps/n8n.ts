@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Sustainable Use License (fair-code)',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — not documented against a primary source: n8n's own hosting docs pages (docs.n8n.io/hosting/...) returned 404s during this research (site restructured); numerous third-party hosting guides consistently cite "2 CPU cores, 2GB RAM" as n8n's documented minimum, but this could not be verified directly against n8n's own docs or GitHub repo, checked 2026-09-13
   stars: 203406, // github.com/n8n-io/n8n, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',
