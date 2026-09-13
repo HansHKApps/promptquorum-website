@@ -1339,7 +1339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Mieten, wenn:** die Nachfrage unvorhersehbar ist, Sie noch experimentieren, Sie GPUs nur vorübergehend brauchen, Sie die neueste Hardware ohne Kapitalanschaffung brauchen, oder Sie keine physische Infrastruktur verwalten wollen.',
           '**Kaufen, wenn:** die Auslastung durchgehend hoch ist, der Workload planbar und stetig ist, Sie GPUs nahezu 24/7 betreiben, Datenresidenzanforderungen Cloud-Speicher ausschließen, oder Sie bereits die Infrastruktur zum Hosten von Hardware haben.',
-          'Für die Kaufseite dieser Entscheidung — Teilelisten, echte Kosten und Hardware-Optionen zum Betrieb von Modellen auf eigenen GPUs — siehe den [GPU-Kaufratgeber für lokale LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) und den [Local-AI-Workstation-Bauleitfaden](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Für die Kaufseite dieser Entscheidung — Teilelisten, echte Kosten und Hardware-Optionen zum Betrieb von Modellen auf eigenen GPUs — siehe den [GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) und den [Local-AI-Workstation-Bauleitfaden](/de/power-local-llm/local-ai-workstation-build-guide-2026).',
         ],
       },
       finalRanking: {
@@ -1426,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist es günstiger, eine KI-GPU zu kaufen oder zu mieten?',
-            a: 'Das hängt von der Auslastung ab. Mieten ist günstiger bei unvorhersehbarer Nachfrage, Experimentieren, vorübergehendem Bedarf oder dem Wunsch nach der neuesten Hardware ohne Kapitalanschaffung. Kaufen wird günstiger, sobald die Auslastung durchgehend hoch ist und die GPU nahezu 24/7 läuft — siehe den [GPU-Kaufratgeber für lokale LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) für die Seite mit eigener Hardware in diesem Vergleich.',
+            a: 'Das hängt von der Auslastung ab. Mieten ist günstiger bei unvorhersehbarer Nachfrage, Experimentieren, vorübergehendem Bedarf oder dem Wunsch nach der neuesten Hardware ohne Kapitalanschaffung. Kaufen wird günstiger, sobald die Auslastung durchgehend hoch ist und die GPU nahezu 24/7 läuft — siehe den [GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) für die Seite mit eigener Hardware in diesem Vergleich.',
           },
         ],
       },
@@ -1434,9 +1434,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[GPU-Kaufratgeber für lokale LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — Teile und Preise für eigene Hardware statt Cloud-GPU-Miete.',
-          '[Local-AI-Workstation-Bauleitfaden](/power-local-llm/local-ai-workstation-build-guide-2026) — vollständiger Bauleitfaden für eine lokale KI-Maschine, die Kaufalternative zu jedem Anbieter auf dieser Seite.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — ein separater Vergleich für Website-Hosting, nicht für KI-/GPU-Cloud-Rechenleistung.',
+          '[GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — Teile und Preise für eigene Hardware statt Cloud-GPU-Miete.',
+          '[Local-AI-Workstation-Bauleitfaden](/de/power-local-llm/local-ai-workstation-build-guide-2026) — vollständiger Bauleitfaden für eine lokale KI-Maschine, die Kaufalternative zu jedem Anbieter auf dieser Seite.',
+          '[Best Web Hosting 2026](/de/power-local-llm/best-web-hosting-2026) — ein separater Vergleich für Website-Hosting, nicht für KI-/GPU-Cloud-Rechenleistung.',
         ],
       },
     },
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Louez si :** la demande est imprévisible, vous expérimentez encore, vous avez besoin de GPU seulement temporairement, vous voulez le matériel le plus récent sans achat en capital, ou vous ne voulez pas gérer d\'infrastructure physique.',
           '**Achetez si :** l\'utilisation est durablement élevée, la charge est prévisible et stable, vous faites tourner les GPU proche de 24h/24, des exigences de résidence des données excluent le stockage cloud, ou vous avez déjà l\'infrastructure pour héberger du matériel.',
-          'Pour le volet achat de cette décision — listes de pièces, coûts réels et options matérielles pour exécuter des modèles sur des GPU possédés — voir le [Guide d\'achat GPU pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026) et le [Guide de montage d\'une station de travail IA locale](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Pour le volet achat de cette décision — listes de pièces, coûts réels et options matérielles pour exécuter des modèles sur des GPU possédés — voir le [Guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) et le [Guide de montage d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026).',
         ],
       },
       finalRanking: {
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Est-il moins cher d\'acheter ou de louer un GPU IA ?',
-            a: 'Cela dépend de l\'utilisation. Louer est moins cher pour une demande imprévisible, l\'expérimentation, un besoin temporaire, ou vouloir le matériel le plus récent sans achat en capital. Acheter devient moins cher une fois que l\'utilisation est durablement élevée et que le GPU tourne proche de 24h/24 — voir le [Guide d\'achat GPU pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026) pour le volet matériel possédé de cette comparaison.',
+            a: 'Cela dépend de l\'utilisation. Louer est moins cher pour une demande imprévisible, l\'expérimentation, un besoin temporaire, ou vouloir le matériel le plus récent sans achat en capital. Acheter devient moins cher une fois que l\'utilisation est durablement élevée et que le GPU tourne proche de 24h/24 — voir le [Guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) pour le volet matériel possédé de cette comparaison.',
           },
         ],
       },
@@ -2138,9 +2138,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Guide d\'achat GPU pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — pièces et prix pour posséder son matériel plutôt que louer des GPU cloud.',
-          '[Guide de montage d\'une station de travail IA locale](/power-local-llm/local-ai-workstation-build-guide-2026) — guide de montage complet pour une machine IA locale, l\'alternative achat à chaque fournisseur de cette page.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — un comparatif séparé pour l\'hébergement de site web, pas le calcul cloud IA/GPU.',
+          '[Guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — pièces et prix pour posséder son matériel plutôt que louer des GPU cloud.',
+          '[Guide de montage d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) — guide de montage complet pour une machine IA locale, l\'alternative achat à chaque fournisseur de cette page.',
+          '[Best Web Hosting 2026](/fr/power-local-llm/best-web-hosting-2026) — un comparatif séparé pour l\'hébergement de site web, pas le calcul cloud IA/GPU.',
         ],
       },
     },
@@ -2747,7 +2747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Alquile cuando:** la demanda es impredecible, todavía está experimentando, necesita GPU solo temporalmente, necesita el hardware más nuevo sin una compra de capital, o no quiere gestionar infraestructura física.',
           '**Compre cuando:** la utilización es consistentemente alta, la carga es predecible y estable, opera GPU casi 24/7, requisitos de residencia de datos descartan el almacenamiento en la nube, o ya tiene la infraestructura para alojar hardware.',
-          'Para el lado de la compra en esta decisión — listas de piezas, costos reales y opciones de hardware para ejecutar modelos en GPU propias — vea la [Guía de compra de GPU para LLM locales](/power-local-llm/best-gpu-buying-guide-local-llm-2026) y la [Guía de armado de una estación de trabajo de IA local](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Para el lado de la compra en esta decisión — listas de piezas, costos reales y opciones de hardware para ejecutar modelos en GPU propias — vea la [Guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) y la [Guía de armado de una estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026).',
         ],
       },
       finalRanking: {
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es más barato comprar o alquilar una GPU de IA?',
-            a: 'Depende de la utilización. Alquilar es más barato para demanda impredecible, experimentación, necesidad temporal, o querer el hardware más nuevo sin una compra de capital. Comprar se vuelve más barato una vez que la utilización es consistentemente alta y la GPU opera casi 24/7 — vea la [Guía de compra de GPU para LLM locales](/power-local-llm/best-gpu-buying-guide-local-llm-2026) para el lado del hardware propio de esta comparación.',
+            a: 'Depende de la utilización. Alquilar es más barato para demanda impredecible, experimentación, necesidad temporal, o querer el hardware más nuevo sin una compra de capital. Comprar se vuelve más barato una vez que la utilización es consistentemente alta y la GPU opera casi 24/7 — vea la [Guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) para el lado del hardware propio de esta comparación.',
           },
         ],
       },
@@ -2842,9 +2842,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Guía de compra de GPU para LLM locales](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — piezas y precios para ser propietario de hardware en lugar de alquilar GPU en la nube.',
-          '[Guía de armado de una estación de trabajo de IA local](/power-local-llm/local-ai-workstation-build-guide-2026) — guía completa de armado para una máquina de IA local, la alternativa de compra a cada proveedor de esta página.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — una comparativa separada para hosting de sitios web, no cómputo cloud de IA/GPU.',
+          '[Guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — piezas y precios para ser propietario de hardware en lugar de alquilar GPU en la nube.',
+          '[Guía de armado de una estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) — guía completa de armado para una máquina de IA local, la alternativa de compra a cada proveedor de esta página.',
+          '[Best Web Hosting 2026](/es/power-local-llm/best-web-hosting-2026) — una comparativa separada para hosting de sitios web, no cómputo cloud de IA/GPU.',
         ],
       },
     },
@@ -3451,7 +3451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Alugue quando:** a demanda é imprevisível, você ainda está experimentando, precisa de GPUs apenas temporariamente, precisa do hardware mais novo sem uma compra de capital, ou não quer gerenciar infraestrutura física.',
           '**Compre quando:** a utilização é consistentemente alta, a carga é previsível e estável, você roda GPUs perto de 24/7, exigências de residência de dados descartam armazenamento em nuvem, ou você já tem a infraestrutura para hospedar hardware.',
-          'Para o lado da compra nessa decisão — listas de peças, custos reais e opções de hardware para rodar modelos em GPUs próprias — veja o [Guia de Compra de GPU para LLMs Locais](/power-local-llm/best-gpu-buying-guide-local-llm-2026) e o [Guia de Montagem de Workstation de IA Local](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Para o lado da compra nessa decisão — listas de peças, custos reais e opções de hardware para rodar modelos em GPUs próprias — veja o [Guia de Compra de GPU para LLMs Locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) e o [Guia de Montagem de Workstation de IA Local](/pt/power-local-llm/local-ai-workstation-build-guide-2026).',
         ],
       },
       finalRanking: {
@@ -3538,7 +3538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'É mais barato comprar ou alugar uma GPU de IA?',
-            a: 'Depende da utilização. Alugar é mais barato para demanda imprevisível, experimentação, necessidade temporária, ou querer o hardware mais novo sem uma compra de capital. Comprar se torna mais barato quando a utilização é consistentemente alta e a GPU roda perto de 24/7 — veja o [Guia de Compra de GPU para LLMs Locais](/power-local-llm/best-gpu-buying-guide-local-llm-2026) para o lado do hardware próprio dessa comparação.',
+            a: 'Depende da utilização. Alugar é mais barato para demanda imprevisível, experimentação, necessidade temporária, ou querer o hardware mais novo sem uma compra de capital. Comprar se torna mais barato quando a utilização é consistentemente alta e a GPU roda perto de 24/7 — veja o [Guia de Compra de GPU para LLMs Locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) para o lado do hardware próprio dessa comparação.',
           },
         ],
       },
@@ -3546,9 +3546,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Guia de Compra de GPU para LLMs Locais](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — peças e preços para ter hardware próprio em vez de alugar GPU em nuvem.',
-          '[Guia de Montagem de Workstation de IA Local](/power-local-llm/local-ai-workstation-build-guide-2026) — guia de montagem completo para uma máquina de IA local, a alternativa de compra a cada provedor desta página.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — um comparativo separado para hospedagem de sites, não computação de nuvem de IA/GPU.',
+          '[Guia de Compra de GPU para LLMs Locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — peças e preços para ter hardware próprio em vez de alugar GPU em nuvem.',
+          '[Guia de Montagem de Workstation de IA Local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) — guia de montagem completo para uma máquina de IA local, a alternativa de compra a cada provedor desta página.',
+          '[Best Web Hosting 2026](/pt/power-local-llm/best-web-hosting-2026) — um comparativo separado para hospedagem de sites, não computação de nuvem de IA/GPU.',
         ],
       },
     },
@@ -4155,7 +4155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**レンタルすべき時：** 需要が予測不能な場合、まだ実験段階の場合、GPUが一時的にしか必要ない場合、資本購入なしで最新ハードウェアが必要な場合、または物理インフラを管理したくない場合。',
           '**購入すべき時：** 利用率が一貫して高い場合、ワークロードが予測可能で安定している場合、GPUをほぼ24時間365日稼働させる場合、データ所在地要件がクラウドストレージを排除する場合、またはすでにハードウェアをホストするインフラを持っている場合。',
-          'この決定の購入側について——自社GPUでモデルを実行するための部品リスト、実際のコスト、ハードウェアの選択肢——は[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026)と[ローカルAIワークステーション構築ガイド](/power-local-llm/local-ai-workstation-build-guide-2026)をご覧ください。',
+          'この決定の購入側について——自社GPUでモデルを実行するための部品リスト、実際のコスト、ハードウェアの選択肢——は[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)と[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026)をご覧ください。',
         ],
       },
       finalRanking: {
@@ -4242,7 +4242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AI用GPUは購入とレンタルのどちらが安いですか？',
-            a: 'それは利用率次第です。レンタルは、予測不能な需要、実験、一時的な必要性、または資本購入なしで最新ハードウェアを求める場合に安くなります。購入は、利用率が一貫して高くGPUがほぼ24時間365日稼働する時点で安くなります——この比較の自社ハードウェア側については、[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026)をご覧ください。',
+            a: 'それは利用率次第です。レンタルは、予測不能な需要、実験、一時的な必要性、または資本購入なしで最新ハードウェアを求める場合に安くなります。購入は、利用率が一貫して高くGPUがほぼ24時間365日稼働する時点で安くなります——この比較の自社ハードウェア側については、[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)をご覧ください。',
           },
         ],
       },
@@ -4250,9 +4250,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 完全なクラウドプラットフォームの上に構築するのではなく、自社ハードウェアを所有するための部品と価格。',
-          '[ローカルAIワークステーション構築ガイド](/power-local-llm/local-ai-workstation-build-guide-2026) — ローカルAIマシンの完全な構築ガイド。このページのすべてのプロバイダーに対する購入代替案。',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — AI/GPUクラウド計算ではなく、Webサイトホスティングのための別の比較。',
+          '[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 完全なクラウドプラットフォームの上に構築するのではなく、自社ハードウェアを所有するための部品と価格。',
+          '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026) — ローカルAIマシンの完全な構築ガイド。このページのすべてのプロバイダーに対する購入代替案。',
+          '[Best Web Hosting 2026](/ja/power-local-llm/best-web-hosting-2026) — AI/GPUクラウド計算ではなく、Webサイトホスティングのための別の比較。',
         ],
       },
     },
@@ -4859,7 +4859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**租用适用于：** 需求不可预测、仍在实验阶段、只是临时需要 GPU、需要最新硬件但不想做资本支出，或不想管理物理基础设施。',
           '**购买适用于：** 利用率持续较高、负载可预测且稳定、GPU 接近 24/7 运行、数据驻留要求排除了云存储，或你已经具备托管硬件的基础设施。',
-          '关于这一决策的购买一侧——在自有 GPU 上运行模型的零件清单、真实成本和硬件选项——请参见[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026)和[本地 AI 工作站搭建指南](/power-local-llm/local-ai-workstation-build-guide-2026)。',
+          '关于这一决策的购买一侧——在自有 GPU 上运行模型的零件清单、真实成本和硬件选项——请参见[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)和[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026)。',
         ],
       },
       finalRanking: {
@@ -4946,7 +4946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '购买还是租用 AI GPU 更便宜？',
-            a: '这取决于利用率。对于不可预测的需求、实验、临时需求，或想要最新硬件但不想做资本支出的情况，租用更便宜。一旦利用率持续较高、GPU 接近 24/7 运行，购买就会变得更便宜——关于这一比较中自有硬件的一侧，请参见[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
+            a: '这取决于利用率。对于不可预测的需求、实验、临时需求，或想要最新硬件但不想做资本支出的情况，租用更便宜。一旦利用率持续较高、GPU 接近 24/7 运行，购买就会变得更便宜——关于这一比较中自有硬件的一侧，请参见[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
           },
         ],
       },
@@ -4954,9 +4954,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 拥有自有硬件而非租用云 GPU 的零件和价格。',
-          '[本地 AI 工作站搭建指南](/power-local-llm/local-ai-workstation-build-guide-2026) — 本地 AI 主机的完整搭建指南，是本页所有服务商的购买替代方案。',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — 一篇独立的网站托管对比文章，而非 AI/GPU 云算力对比。',
+          '[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 拥有自有硬件而非租用云 GPU 的零件和价格。',
+          '[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026) — 本地 AI 主机的完整搭建指南，是本页所有服务商的购买替代方案。',
+          '[Best Web Hosting 2026](/zh/power-local-llm/best-web-hosting-2026) — 一篇独立的网站托管对比文章，而非 AI/GPU 云算力对比。',
         ],
       },
     },
@@ -5563,7 +5563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**استأجروا عندما:** يكون الطلب غير قابل للتنبؤ، ما زلتم تجرّبون، تحتاجون إلى وحدات GPU مؤقتاً فقط، تحتاجون إلى أحدث الأجهزة دون شراء رأسمالي، أو لا تريدون إدارة بنية تحتية فعلية.',
           '**اشتروا عندما:** يكون الاستخدام مرتفعاً باستمرار، الحمل قابل للتنبؤ ومستقر، تشغّلون وحدات GPU على مدار الساعة تقريباً، تستبعد متطلبات إقامة البيانات التخزين السحابي، أو لديكم بالفعل البنية التحتية لاستضافة الأجهزة.',
-          'للجانب الخاص بالشراء من هذا القرار — قوائم القطع، والتكاليف الحقيقية، وخيارات الأجهزة لتشغيل النماذج على وحدات GPU مملوكة — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) و[دليل بناء محطة عمل ذكاء اصطناعي محلية](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'للجانب الخاص بالشراء من هذا القرار — قوائم القطع، والتكاليف الحقيقية، وخيارات الأجهزة لتشغيل النماذج على وحدات GPU مملوكة — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) و[دليل بناء محطة عمل ذكاء اصطناعي محلية](/ar/power-local-llm/local-ai-workstation-build-guide-2026).',
         ],
       },
       finalRanking: {
@@ -5650,7 +5650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل شراء GPU للذكاء الاصطناعي أرخص من استئجارها؟',
-            a: 'يعتمد ذلك على الاستخدام. الاستئجار أرخص للطلب غير القابل للتنبؤ، والتجريب، والحاجة المؤقتة، أو الرغبة في أحدث الأجهزة دون شراء رأسمالي. يصبح الشراء أرخص بمجرد أن يكون الاستخدام مرتفعاً باستمرار وتعمل GPU على مدار الساعة تقريباً — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) للجانب الخاص بالأجهزة المملوكة من هذه المقارنة.',
+            a: 'يعتمد ذلك على الاستخدام. الاستئجار أرخص للطلب غير القابل للتنبؤ، والتجريب، والحاجة المؤقتة، أو الرغبة في أحدث الأجهزة دون شراء رأسمالي. يصبح الشراء أرخص بمجرد أن يكون الاستخدام مرتفعاً باستمرار وتعمل GPU على مدار الساعة تقريباً — راجعوا [دليل شراء GPU للنماذج اللغوية المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) للجانب الخاص بالأجهزة المملوكة من هذه المقارنة.',
           },
         ],
       },
@@ -5658,9 +5658,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل شراء GPU للنماذج اللغوية المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — قطع وأسعار لامتلاك أجهزتكم الخاصة بدلاً من استئجار GPU سحابية.',
-          '[دليل بناء محطة عمل ذكاء اصطناعي محلية](/power-local-llm/local-ai-workstation-build-guide-2026) — دليل بناء كامل لجهاز ذكاء اصطناعي محلي، البديل الشرائي لكل مزود في هذه الصفحة.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — مقارنة منفصلة لاستضافة المواقع، وليست لحوسبة الذكاء الاصطناعي/GPU السحابية.',
+          '[دليل شراء GPU للنماذج اللغوية المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — قطع وأسعار لامتلاك أجهزتكم الخاصة بدلاً من استئجار GPU سحابية.',
+          '[دليل بناء محطة عمل ذكاء اصطناعي محلية](/ar/power-local-llm/local-ai-workstation-build-guide-2026) — دليل بناء كامل لجهاز ذكاء اصطناعي محلي، البديل الشرائي لكل مزود في هذه الصفحة.',
+          '[Best Web Hosting 2026](/ar/power-local-llm/best-web-hosting-2026) — مقارنة منفصلة لاستضافة المواقع، وليست لحوسبة الذكاء الاصطناعي/GPU السحابية.',
         ],
       },
     },
@@ -6267,7 +6267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**대여해야 할 때:** 수요가 예측 불가능하거나, 아직 실험 중이거나, GPU가 일시적으로만 필요하거나, 자본 지출 없이 최신 하드웨어가 필요하거나, 물리적 인프라를 관리하고 싶지 않은 경우.',
           '**구매해야 할 때:** 이용률이 지속적으로 높거나, 워크로드가 예측 가능하고 안정적이거나, GPU를 거의 24/7 운영하거나, 데이터 거주 요구 사항이 클라우드 스토리지를 배제하거나, 이미 하드웨어를 호스팅할 인프라를 갖추고 있는 경우.',
-          '이 결정의 구매 측면 — 자체 GPU에서 모델을 실행하기 위한 부품 목록, 실제 비용, 하드웨어 옵션 — 은 [로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026)와 [로컬 AI 워크스테이션 조립 가이드](/power-local-llm/local-ai-workstation-build-guide-2026)를 참고하십시오.',
+          '이 결정의 구매 측면 — 자체 GPU에서 모델을 실행하기 위한 부품 목록, 실제 비용, 하드웨어 옵션 — 은 [로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)와 [로컬 AI 워크스테이션 조립 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026)를 참고하십시오.',
         ],
       },
       finalRanking: {
@@ -6354,7 +6354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AI GPU는 구매와 대여 중 어느 쪽이 더 저렴한가요?',
-            a: '이용률에 따라 다릅니다. 대여는 예측 불가능한 수요, 실험, 일시적 필요, 또는 자본 지출 없이 최신 하드웨어를 원하는 경우에 더 저렴합니다. 이용률이 지속적으로 높고 GPU가 거의 24/7 운영될 때 구매가 더 저렴해집니다 — 이 비교의 자체 하드웨어 측면에 대해서는 [로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하십시오.',
+            a: '이용률에 따라 다릅니다. 대여는 예측 불가능한 수요, 실험, 일시적 필요, 또는 자본 지출 없이 최신 하드웨어를 원하는 경우에 더 저렴합니다. 이용률이 지속적으로 높고 GPU가 거의 24/7 운영될 때 구매가 더 저렴해집니다 — 이 비교의 자체 하드웨어 측면에 대해서는 [로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하십시오.',
           },
         ],
       },
@@ -6362,9 +6362,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 클라우드 GPU를 대여하는 대신 자체 하드웨어를 소유하기 위한 부품과 가격.',
-          '[로컬 AI 워크스테이션 조립 가이드](/power-local-llm/local-ai-workstation-build-guide-2026) — 로컬 AI 머신을 위한 완전한 조립 가이드, 이 페이지의 모든 제공업체에 대한 구매 대안.',
-          '[Best Web Hosting 2026](/power-local-llm/best-web-hosting-2026) — AI/GPU 클라우드 컴퓨팅이 아니라 웹사이트 호스팅을 위한 별도의 비교입니다.',
+          '[로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 클라우드 GPU를 대여하는 대신 자체 하드웨어를 소유하기 위한 부품과 가격.',
+          '[로컬 AI 워크스테이션 조립 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026) — 로컬 AI 머신을 위한 완전한 조립 가이드, 이 페이지의 모든 제공업체에 대한 구매 대안.',
+          '[Best Web Hosting 2026](/ko/power-local-llm/best-web-hosting-2026) — AI/GPU 클라우드 컴퓨팅이 아니라 웹사이트 호스팅을 위한 별도의 비교입니다.',
         ],
       },
     },

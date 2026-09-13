@@ -589,13 +589,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Läuft RikkaHub lokal auf dem Gerät?',
         content: [
           '**Nein. RikkaHub enthält keine On-Device-Inferenz-Engine und kann kein Sprachmodell direkt auf der CPU, GPU oder NPU Ihres Smartphones ausführen.** Es handelt sich um einen Client: Sie konfigurieren einen API-Schlüssel und Endpunkt für einen Anbieter, RikkaHub sendet Ihre Nachrichten über das Netzwerk an diesen Endpunkt und zeigt die zurückgegebene Antwort an.',
-          'Das ist ein wesentlicher Unterschied zu mobilen Apps wie [PocketPal AI](/power-local-llm/pocketpal-ai-review) oder [Private LLM](/power-local-llm/private-llm-review), die eine Inferenz-Engine (llama.cpp oder eine ähnliche Laufzeitumgebung) mitbringen und ein heruntergeladenes Modell direkt mit dem RAM und der GPU/NPU des Geräts ausführen, ohne dass nach dem Download eine Netzwerkverbindung nötig wäre. RikkaHubs eigenes [README](https://github.com/rikkahub/rikkahub) beschreibt die App schlicht als „an Android APP that supports for multiple LLM providers" — das Wort „lokal" taucht in der Feature-Liste nirgends auf, und eine Durchsuchung des vollständigen öffentlichen Quellcode-Baums (über 1.900 Dateien, Stand September 2026) findet weder eine llama.cpp-, MLC-, LiteRT- noch LiteRT-LM-Komponente irgendwo im Code.',
+          'Das ist ein wesentlicher Unterschied zu mobilen Apps wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private LLM](/de/power-local-llm/private-llm-review), die eine Inferenz-Engine (llama.cpp oder eine ähnliche Laufzeitumgebung) mitbringen und ein heruntergeladenes Modell direkt mit dem RAM und der GPU/NPU des Geräts ausführen, ohne dass nach dem Download eine Netzwerkverbindung nötig wäre. RikkaHubs eigenes [README](https://github.com/rikkahub/rikkahub) beschreibt die App schlicht als „an Android APP that supports for multiple LLM providers" — das Wort „lokal" taucht in der Feature-Liste nirgends auf, und eine Durchsuchung des vollständigen öffentlichen Quellcode-Baums (über 1.900 Dateien, Stand September 2026) findet weder eine llama.cpp-, MLC-, LiteRT- noch LiteRT-LM-Komponente irgendwo im Code.',
           'Am nächsten kommt RikkaHub „lokaler KI", wenn Sie das Feld für benutzerdefinierte API/URL auf einen Server im eigenen Netzwerk statt auf einen öffentlichen Cloud-Endpunkt richten — zum Beispiel [Ollama](https://ollama.com) oder [LM Studio](https://lmstudio.ai), die auf einem PC im selben Haushalt laufen und eine OpenAI-kompatible API bereitstellen. In dieser Konfiguration läuft das Modell weiterhin auf der Hardware des PCs, nicht auf dem Smartphone; RikkaHub fungiert als mobile Oberfläche für einen Server, den Sie selbst kontrollieren. Das hält Ihre Gesprächsdaten von der Cloud-Infrastruktur Dritter fern, ist aber eine grundlegend andere Konfiguration — und eine andere Geschichte in Sachen Datenschutz und Hardware — als eine App, die das Modell direkt auf dem Gerät ausführt.',
         ],
         decisionBlock: {
           title: 'RikkaHub oder eine On-Device-App?',
           localIf: [
-            'Sie möchten, dass die Inferenz direkt auf dem Smartphone läuft, mit null Netzwerkaufrufen nach dem Herunterladen eines Modells — nutzen Sie stattdessen [PocketPal AI](/power-local-llm/pocketpal-ai-review) oder [Private LLM](/power-local-llm/private-llm-review).',
+            'Sie möchten, dass die Inferenz direkt auf dem Smartphone läuft, mit null Netzwerkaufrufen nach dem Herunterladen eines Modells — nutzen Sie stattdessen [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private LLM](/de/power-local-llm/private-llm-review).',
             'Sie brauchen eine App, die ganz ohne Netzwerkverbindung funktioniert, auch nicht zu einem Gerät im selben WLAN — RikkaHub muss immer einen API-Endpunkt erreichen, auch einen lokalen.',
           ],
           cloudIf: [
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen eignet sich RikkaHub nicht',
         items: [
-          '**Nutzer, die KI vollständig auf ihrem Gerät ohne Netzwerkverbindung ausführen möchten.** RikkaHub muss immer einen API-Endpunkt erreichen, lokal oder in der Cloud; wer eine wirklich offline funktionierende App möchte, sollte stattdessen [PocketPal AI](/power-local-llm/pocketpal-ai-review) oder [Private LLM](/power-local-llm/private-llm-review) nutzen.',
+          '**Nutzer, die KI vollständig auf ihrem Gerät ohne Netzwerkverbindung ausführen möchten.** RikkaHub muss immer einen API-Endpunkt erreichen, lokal oder in der Cloud; wer eine wirklich offline funktionierende App möchte, sollte stattdessen [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private LLM](/de/power-local-llm/private-llm-review) nutzen.',
           '**Nutzer, die noch keinen API-Schlüssel besitzen und keinen verwalten möchten.** RikkaHub bringt keinen kostenlosen, gebündelten KI-Zugang mit — wer eine App öffnen und sofort ohne Einrichtung oder Konto chatten möchte, sollte stattdessen eine kuratierte App mit integrierten Modellen wählen.',
           '**iPhone- oder iPad-Nutzer.** RikkaHub hat zum Testzeitpunkt keine offizielle iOS-Version; Apple-Nutzer sollten stattdessen eine dedizierte iOS-App wie Private LLM oder Enclave AI in Betracht ziehen.',
           '**Nutzer, die den geringstmöglichen technischen Einrichtungsaufwand möchten.** Das Hinzufügen eines Providers erfordert die korrekte Eingabe von API-Format, Basis-URL, Schlüssel und Modellname — es gibt keinen Ein-Klick-„Herunterladen-und-Chatten"-Ablauf wie bei On-Device-Apps.',
@@ -788,13 +788,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Läuft lokal?': 'Nein — reiner Cloud-/Self-Hosted-API-Client; eigener Schlüssel oder Server nötig',
           },
           {
-            'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'App': '[PocketPal AI](/de/power-local-llm/pocketpal-ai-review)',
             'Lizenz / Kosten': 'Kostenlos, quelloffen (MIT)',
             'Plattformen': 'iPhone/iPad, Android',
             'Läuft lokal?': 'Ja — lädt GGUF-Modelle herunter und führt sie per llama.cpp auf dem Gerät aus',
           },
           {
-            'App': '[Private LLM](/power-local-llm/private-llm-review)',
+            'App': '[Private LLM](/de/power-local-llm/private-llm-review)',
             'Lizenz / Kosten': 'Kostenpflichtig, Einmalkauf; Closed Source',
             'Plattformen': 'iPhone/iPad/Mac (nur Apple)',
             'Läuft lokal?': 'Ja — über 140 On-Device-Modelle mit OmniQuant- und GPTQ-Quantisierung',
@@ -899,11 +899,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI im Test (2026)](/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene App, die GGUF-Modelle tatsächlich auf dem Gerät ausführt, der direkte architektonische Gegensatz zu RikkaHub.',
-          '[Private LLM im Test](/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-On-Device-Alternative für iPhone, iPad und Mac mit über 140 Modellen.',
-          '[Die besten Local-LLM-Apps für Android 2026](/power-local-llm/best-local-llm-apps-android-2026) — die Übersicht der On-Device-Android-Apps, für Leser, die gezielt lokale Inferenz statt eines Cloud-Clients suchen.',
-          '[Die besten Local-LLM-Apps für iPhone 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — das iOS-Pendant, für Leser, die eine On-Device-Option für Apple-Geräte benötigen, da RikkaHub keine anbietet.',
-          '[Die besten mobilen KI-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel für alle, die sich für On-Device-Inferenz statt eines Cloud-Clients wie RikkaHub entscheiden.',
+          '[PocketPal AI im Test (2026)](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene App, die GGUF-Modelle tatsächlich auf dem Gerät ausführt, der direkte architektonische Gegensatz zu RikkaHub.',
+          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-On-Device-Alternative für iPhone, iPad und Mac mit über 140 Modellen.',
+          '[Die besten Local-LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Übersicht der On-Device-Android-Apps, für Leser, die gezielt lokale Inferenz statt eines Cloud-Clients suchen.',
+          '[Die besten Local-LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — das iOS-Pendant, für Leser, die eine On-Device-Option für Apple-Geräte benötigen, da RikkaHub keine anbietet.',
+          '[Die besten mobilen KI-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel für alle, die sich für On-Device-Inferenz statt eines Cloud-Clients wie RikkaHub entscheiden.',
         ],
       },
     },
@@ -1053,13 +1053,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿RikkaHub ejecuta modelos de IA localmente?',
         content: [
           '**No. RikkaHub no incluye un motor de inferencia en el dispositivo y no puede ejecutar un modelo de lenguaje directamente en la CPU, GPU o NPU de tu teléfono.** Es un cliente: configuras una clave API y un endpoint para un proveedor, RikkaHub envía tus mensajes a ese endpoint por la red, y muestra la respuesta que recibe.',
-          'Esta es una distinción importante frente a apps móviles como [PocketPal AI](/power-local-llm/pocketpal-ai-review) o [Private LLM](/power-local-llm/private-llm-review), que incluyen un motor de inferencia (llama.cpp u otro similar) y ejecutan un archivo de modelo descargado directamente usando la RAM y la GPU/NPU del propio dispositivo, sin necesitar conexión de red una vez descargado el modelo. El propio [README](https://github.com/rikkahub/rikkahub) de RikkaHub la describe llanamente como "an Android APP that supports for multiple LLM providers" — la palabra "local" no aparece en ninguna parte de su lista de funciones, y una búsqueda en todo el árbol de código fuente público (más de 1.900 archivos, revisado en septiembre de 2026) no encuentra ningún componente llama.cpp, MLC, LiteRT ni LiteRT-LM en ninguna parte del código.',
+          'Esta es una distinción importante frente a apps móviles como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Private LLM](/es/power-local-llm/private-llm-review), que incluyen un motor de inferencia (llama.cpp u otro similar) y ejecutan un archivo de modelo descargado directamente usando la RAM y la GPU/NPU del propio dispositivo, sin necesitar conexión de red una vez descargado el modelo. El propio [README](https://github.com/rikkahub/rikkahub) de RikkaHub la describe llanamente como "an Android APP that supports for multiple LLM providers" — la palabra "local" no aparece en ninguna parte de su lista de funciones, y una búsqueda en todo el árbol de código fuente público (más de 1.900 archivos, revisado en septiembre de 2026) no encuentra ningún componente llama.cpp, MLC, LiteRT ni LiteRT-LM en ninguna parte del código.',
           'Lo más cercano a "IA local" que ofrece RikkaHub es apuntar su campo de API/URL personalizada a un servidor en tu propia red en lugar de un endpoint público en la nube — por ejemplo, [Ollama](https://ollama.com) o [LM Studio](https://lmstudio.ai) corriendo en un PC de tu casa, exponiendo una API compatible con OpenAI. En esa configuración, el modelo sigue ejecutándose en el hardware del PC, no en el del teléfono; RikkaHub actúa como una interfaz móvil para un servidor que tú controlas, lo cual mantiene tus datos de conversación fuera de infraestructura en la nube de terceros, pero es una configuración —y una historia de privacidad y hardware— materialmente distinta a una app que ejecuta el modelo en el propio dispositivo.',
         ],
         decisionBlock: {
           title: '¿RikkaHub o una app on-device?',
           localIf: [
-            'Quieres que la inferencia ocurra en el propio teléfono, con cero llamadas de red una vez descargado un modelo — usa [PocketPal AI](/power-local-llm/pocketpal-ai-review) o [Private LLM](/power-local-llm/private-llm-review) en su lugar.',
+            'Quieres que la inferencia ocurra en el propio teléfono, con cero llamadas de red una vez descargado un modelo — usa [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Private LLM](/es/power-local-llm/private-llm-review) en su lugar.',
             'Necesitas que la app funcione sin ninguna ruta de red disponible, ni siquiera a un dispositivo en la misma Wi-Fi — RikkaHub siempre necesita alcanzar un endpoint API, aunque sea local.',
           ],
           cloudIf: [
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Para quién no es RikkaHub',
         items: [
-          '**Usuarios que quieren IA corriendo por completo en su dispositivo sin conexión de red.** RikkaHub siempre necesita alcanzar un endpoint API, local o en la nube; quienes quieran una app genuinamente sin conexión deberían usar [PocketPal AI](/power-local-llm/pocketpal-ai-review) o [Private LLM](/power-local-llm/private-llm-review) en su lugar.',
+          '**Usuarios que quieren IA corriendo por completo en su dispositivo sin conexión de red.** RikkaHub siempre necesita alcanzar un endpoint API, local o en la nube; quienes quieran una app genuinamente sin conexión deberían usar [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Private LLM](/es/power-local-llm/private-llm-review) en su lugar.',
           '**Usuarios que no tienen ya una clave API y no quieren gestionar una.** RikkaHub no incluye ningún acceso a IA gratuito o incluido — quien quiera abrir una app y chatear de inmediato sin ninguna configuración ni cuenta debería buscar una app curada con modelos incorporados.',
           '**Usuarios de iPhone o iPad.** RikkaHub no tenía ninguna versión oficial de iOS al momento de la reseña; los usuarios de Apple deberían considerar una app de iOS dedicada como Private LLM o Enclave AI.',
           '**Usuarios que quieren la menor carga técnica posible de configuración.** Añadir un proveedor requiere introducir correctamente el formato de API, la URL base, la clave y el nombre del modelo — no hay un flujo de un solo toque de "descargar y chatear" como en las apps on-device.',
@@ -1252,13 +1252,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '¿Corre localmente?': 'No — solo cliente de API en la nube/autoalojada; aportas tu propia clave o servidor',
           },
           {
-            'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'App': '[PocketPal AI](/es/power-local-llm/pocketpal-ai-review)',
             'Licencia / costo': 'Gratuita, código abierto (MIT)',
             'Plataformas': 'iPhone/iPad, Android',
             '¿Corre localmente?': 'Sí — descarga y ejecuta modelos GGUF en el dispositivo mediante llama.cpp',
           },
           {
-            'App': '[Private LLM](/power-local-llm/private-llm-review)',
+            'App': '[Private LLM](/es/power-local-llm/private-llm-review)',
             'Licencia / costo': 'De pago, compra única; código cerrado',
             'Plataformas': 'iPhone/iPad/Mac (solo Apple)',
             '¿Corre localmente?': 'Sí — más de 140 modelos on-device con cuantización OmniQuant y GPTQ',
@@ -1363,11 +1363,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de PocketPal AI (2026)](/power-local-llm/pocketpal-ai-review) — una app gratuita y de código abierto que sí ejecuta modelos GGUF en el dispositivo, el contraste arquitectónico directo con RikkaHub.',
-          '[Reseña de Private LLM](/power-local-llm/private-llm-review) — una alternativa de pago y código cerrado on-device para iPhone, iPad y Mac con un catálogo de más de 140 modelos.',
-          '[Las mejores apps de LLM local para Android en 2026](/power-local-llm/best-local-llm-apps-android-2026) — el repaso de apps on-device para Android, para lectores que buscan específicamente inferencia local en lugar de un cliente en la nube.',
-          '[Las mejores apps de LLM local para iPhone en 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — el equivalente en iOS, para lectores que necesitan una opción on-device para plataformas Apple, ya que RikkaHub no ofrece ninguna.',
-          '[Los mejores modelos LLM móviles en 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — el artículo complementario sobre modelos, para quien decida que prefiere inferencia local en vez de un cliente en la nube como RikkaHub.',
+          '[Reseña de PocketPal AI (2026)](/es/power-local-llm/pocketpal-ai-review) — una app gratuita y de código abierto que sí ejecuta modelos GGUF en el dispositivo, el contraste arquitectónico directo con RikkaHub.',
+          '[Reseña de Private LLM](/es/power-local-llm/private-llm-review) — una alternativa de pago y código cerrado on-device para iPhone, iPad y Mac con un catálogo de más de 140 modelos.',
+          '[Las mejores apps de LLM local para Android en 2026](/es/power-local-llm/best-local-llm-apps-android-2026) — el repaso de apps on-device para Android, para lectores que buscan específicamente inferencia local en lugar de un cliente en la nube.',
+          '[Las mejores apps de LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — el equivalente en iOS, para lectores que necesitan una opción on-device para plataformas Apple, ya que RikkaHub no ofrece ninguna.',
+          '[Los mejores modelos LLM móviles en 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — el artículo complementario sobre modelos, para quien decida que prefiere inferencia local en vez de un cliente en la nube como RikkaHub.',
         ],
       },
     },
@@ -1517,13 +1517,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'RikkaHub exécute-t-elle des modèles d\'IA en local ?',
         content: [
           '**Non. RikkaHub n\'intègre aucun moteur d\'inférence embarqué et ne peut pas exécuter un modèle de langage directement sur le CPU, le GPU ou le NPU de votre téléphone.** C\'est un client : vous configurez une clé API et un endpoint pour un fournisseur, RikkaHub envoie vos messages à cet endpoint via le réseau, et affiche la réponse reçue.',
-          'C\'est une distinction importante par rapport à des applications mobiles comme [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou [Private LLM](/power-local-llm/private-llm-review), qui embarquent un moteur d\'inférence (llama.cpp ou équivalent) et exécutent un fichier de modèle téléchargé directement avec la RAM et le GPU/NPU de l\'appareil, sans connexion réseau nécessaire une fois le modèle téléchargé. Le [README](https://github.com/rikkahub/rikkahub) de RikkaHub la décrit sobrement comme « an Android APP that supports for multiple LLM providers » — le mot « local » n\'apparaît nulle part dans sa liste de fonctionnalités, et une recherche dans l\'intégralité de l\'arborescence du code source public (plus de 1 900 fichiers, vérifié en septembre 2026) ne révèle aucun composant llama.cpp, MLC, LiteRT ou LiteRT-LM dans le code.',
+          'C\'est une distinction importante par rapport à des applications mobiles comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Private LLM](/fr/power-local-llm/private-llm-review), qui embarquent un moteur d\'inférence (llama.cpp ou équivalent) et exécutent un fichier de modèle téléchargé directement avec la RAM et le GPU/NPU de l\'appareil, sans connexion réseau nécessaire une fois le modèle téléchargé. Le [README](https://github.com/rikkahub/rikkahub) de RikkaHub la décrit sobrement comme « an Android APP that supports for multiple LLM providers » — le mot « local » n\'apparaît nulle part dans sa liste de fonctionnalités, et une recherche dans l\'intégralité de l\'arborescence du code source public (plus de 1 900 fichiers, vérifié en septembre 2026) ne révèle aucun composant llama.cpp, MLC, LiteRT ou LiteRT-LM dans le code.',
           'Ce qui se rapproche le plus de « l\'IA locale » chez RikkaHub consiste à pointer son champ d\'API/URL personnalisée vers un serveur de votre propre réseau plutôt qu\'un endpoint cloud public — par exemple [Ollama](https://ollama.com) ou [LM Studio](https://lmstudio.ai) tournant sur un PC du même domicile, exposant une API compatible OpenAI. Dans cette configuration, le modèle s\'exécute toujours sur le matériel du PC, pas sur celui du téléphone ; RikkaHub agit comme une interface mobile pour un serveur que vous contrôlez, ce qui garde vos données de conversation hors des infrastructures cloud tierces, mais constitue une configuration — et une histoire de confidentialité et de matériel — sensiblement différente d\'une application exécutant le modèle directement sur l\'appareil.',
         ],
         decisionBlock: {
           title: 'RikkaHub ou une application embarquée ?',
           localIf: [
-            'Vous voulez que l\'inférence se déroule sur le téléphone lui-même, avec zéro appel réseau une fois un modèle téléchargé — utilisez plutôt [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou [Private LLM](/power-local-llm/private-llm-review).',
+            'Vous voulez que l\'inférence se déroule sur le téléphone lui-même, avec zéro appel réseau une fois un modèle téléchargé — utilisez plutôt [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Private LLM](/fr/power-local-llm/private-llm-review).',
             'Vous avez besoin d\'une application fonctionnant sans aucune route réseau disponible, même vers un appareil sur le même Wi-Fi — RikkaHub a toujours besoin d\'atteindre un endpoint API, même local.',
           ],
           cloudIf: [
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'À qui RikkaHub ne s\'adresse pas',
         items: [
-          '**Utilisateurs voulant une IA fonctionnant entièrement sur leur appareil sans connexion réseau.** RikkaHub a toujours besoin d\'atteindre un endpoint API, local ou cloud ; ceux qui veulent une application réellement hors ligne devraient utiliser plutôt [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou [Private LLM](/power-local-llm/private-llm-review).',
+          '**Utilisateurs voulant une IA fonctionnant entièrement sur leur appareil sans connexion réseau.** RikkaHub a toujours besoin d\'atteindre un endpoint API, local ou cloud ; ceux qui veulent une application réellement hors ligne devraient utiliser plutôt [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Private LLM](/fr/power-local-llm/private-llm-review).',
           '**Utilisateurs ne disposant pas déjà d\'une clé API et ne voulant pas en gérer une.** RikkaHub n\'inclut aucun accès IA gratuit ou intégré — quiconque veut ouvrir une application et discuter immédiatement sans aucune configuration ni compte devrait plutôt se tourner vers une application organisée avec des modèles intégrés.',
           '**Utilisateurs d\'iPhone ou d\'iPad.** RikkaHub n\'avait aucune version iOS officielle au moment du test ; les utilisateurs Apple devraient envisager une application iOS dédiée comme Private LLM ou Enclave AI.',
           '**Utilisateurs voulant la charge technique de configuration la plus faible possible.** Ajouter un fournisseur nécessite de saisir correctement le format d\'API, l\'URL de base, la clé et le nom du modèle — il n\'existe aucun parcours en un clic « télécharger et discuter » comme sur les applications embarquées.',
@@ -1716,13 +1716,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Local ?': 'Non — client API cloud/auto-hébergé uniquement ; apportez votre propre clé ou serveur',
           },
           {
-            'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'App': '[PocketPal AI](/fr/power-local-llm/pocketpal-ai-review)',
             'Licence / coût': 'Gratuite, open source (MIT)',
             'Plateformes': 'iPhone/iPad, Android',
             'Local ?': 'Oui — télécharge et exécute des modèles GGUF sur l\'appareil via llama.cpp',
           },
           {
-            'App': '[Private LLM](/power-local-llm/private-llm-review)',
+            'App': '[Private LLM](/fr/power-local-llm/private-llm-review)',
             'Licence / coût': 'Payante, achat unique ; source fermée',
             'Plateformes': 'iPhone/iPad/Mac (Apple uniquement)',
             'Local ?': 'Oui — plus de 140 modèles embarqués avec quantification OmniQuant et GPTQ',
@@ -1827,11 +1827,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Test de PocketPal AI (2026)](/power-local-llm/pocketpal-ai-review) — une application gratuite et open source qui exécute réellement des modèles GGUF sur l\'appareil, le contraste architectural direct avec RikkaHub.',
-          '[Test de Private LLM](/power-local-llm/private-llm-review) — une alternative payante, à source fermée et embarquée pour iPhone, iPad et Mac avec un catalogue de plus de 140 modèles.',
-          '[Les meilleures applications LLM locales pour Android en 2026](/power-local-llm/best-local-llm-apps-android-2026) — le panorama des applications Android embarquées, pour les lecteurs cherchant spécifiquement l\'inférence locale plutôt qu\'un client cloud.',
-          '[Les meilleures applications LLM locales pour iPhone en 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — l\'équivalent iOS, pour les lecteurs ayant besoin d\'une option embarquée sur plateforme Apple, puisque RikkaHub n\'en propose aucune.',
-          '[Les meilleurs modèles LLM mobiles en 2026 : Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — l\'article complémentaire sur les modèles, pour qui décide de préférer l\'inférence locale à un client cloud comme RikkaHub.',
+          '[Test de PocketPal AI (2026)](/fr/power-local-llm/pocketpal-ai-review) — une application gratuite et open source qui exécute réellement des modèles GGUF sur l\'appareil, le contraste architectural direct avec RikkaHub.',
+          '[Test de Private LLM](/fr/power-local-llm/private-llm-review) — une alternative payante, à source fermée et embarquée pour iPhone, iPad et Mac avec un catalogue de plus de 140 modèles.',
+          '[Les meilleures applications LLM locales pour Android en 2026](/fr/power-local-llm/best-local-llm-apps-android-2026) — le panorama des applications Android embarquées, pour les lecteurs cherchant spécifiquement l\'inférence locale plutôt qu\'un client cloud.',
+          '[Les meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — l\'équivalent iOS, pour les lecteurs ayant besoin d\'une option embarquée sur plateforme Apple, puisque RikkaHub n\'en propose aucune.',
+          '[Les meilleurs modèles LLM mobiles en 2026 : Phi-4 Mini vs Gemma 4 vs SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — l\'article complémentaire sur les modèles, pour qui décide de préférer l\'inférence locale à un client cloud comme RikkaHub.',
         ],
       },
     },
@@ -1981,13 +1981,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'RikkaHubはローカルでAIモデルを実行しますか?',
         content: [
           '**いいえ。RikkaHubにはオンデバイス推論エンジンが含まれておらず、スマートフォンのCPU・GPU・NPU上で言語モデルを直接実行することはできません。**これはクライアントです。プロバイダー用のAPIキーとエンドポイントを設定すると、RikkaHubはネットワーク経由でそのエンドポイントにメッセージを送信し、返ってきた応答を表示します。',
-          'これは、[PocketPal AI](/power-local-llm/pocketpal-ai-review)や[Private LLM](/power-local-llm/private-llm-review)のようなモバイルアプリとの重要な違いです。これらのアプリは推論エンジン(llama.cppなど)を内蔵しており、ダウンロードしたモデルファイルをデバイス自体のRAMとGPU/NPUを使って直接実行し、モデルのダウンロード後はネットワーク接続を必要としません。RikkaHub自身の[README](https://github.com/rikkahub/rikkahub)は、このアプリを単に「an Android APP that supports for multiple LLM providers」と説明しており、機能一覧のどこにも「ローカル」という言葉は登場しません。さらに、公開されているソースコードツリー全体(2026年9月時点で1,900以上のファイル)を検索しても、llama.cpp、MLC、LiteRT、LiteRT-LMのいずれのコンポーネントもコード内に見つかりません。',
+          'これは、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private LLM](/ja/power-local-llm/private-llm-review)のようなモバイルアプリとの重要な違いです。これらのアプリは推論エンジン(llama.cppなど)を内蔵しており、ダウンロードしたモデルファイルをデバイス自体のRAMとGPU/NPUを使って直接実行し、モデルのダウンロード後はネットワーク接続を必要としません。RikkaHub自身の[README](https://github.com/rikkahub/rikkahub)は、このアプリを単に「an Android APP that supports for multiple LLM providers」と説明しており、機能一覧のどこにも「ローカル」という言葉は登場しません。さらに、公開されているソースコードツリー全体(2026年9月時点で1,900以上のファイル)を検索しても、llama.cpp、MLC、LiteRT、LiteRT-LMのいずれのコンポーネントもコード内に見つかりません。',
           'RikkaHubが「ローカルAI」に最も近づくのは、カスタムAPI/URL欄を、パブリッククラウドのエンドポイントではなく自宅ネットワーク上のサーバーに向ける場合です — 例えば、同じ家の中のPCで動く[Ollama](https://ollama.com)や[LM Studio](https://lmstudio.ai)がOpenAI互換APIを公開している場合です。この構成でも、モデルはスマートフォンではなくPCのハードウェア上で実行され続けます。RikkaHubは、自分が管理するサーバーのためのモバイル用フロントエンドとして機能します。これにより会話データがサードパーティのクラウドインフラの外に留まる一方で、モデル自体をデバイス上で実行するアプリとは、構成としても、プライバシーやハードウェアの観点でも実質的に異なる仕組みになります。',
         ],
         decisionBlock: {
           title: 'RikkaHubかオンデバイスアプリか?',
           localIf: [
-            'モデルをダウンロードした後は一切ネットワーク通信を行わず、スマートフォン自体で推論を行いたい場合 — 代わりに[PocketPal AI](/power-local-llm/pocketpal-ai-review)や[Private LLM](/power-local-llm/private-llm-review)を使ってください。',
+            'モデルをダウンロードした後は一切ネットワーク通信を行わず、スマートフォン自体で推論を行いたい場合 — 代わりに[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private LLM](/ja/power-local-llm/private-llm-review)を使ってください。',
             '同じWi-Fi上の機器であっても、一切のネットワーク経路がない状態で動作するアプリが必要な場合 — RikkaHubはローカルなものであっても常にAPIエンドポイントに到達する必要があります。',
           ],
           cloudIf: [
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'RikkaHubに向いていない人',
         items: [
-          '**AIをネットワーク接続なしで完全にデバイス上で動かしたい人。** RikkaHubはローカルであれクラウドであれ、常にAPIエンドポイントに到達する必要があります。本当にオフラインで動くアプリが欲しい場合は、代わりに[PocketPal AI](/power-local-llm/pocketpal-ai-review)や[Private LLM](/power-local-llm/private-llm-review)を使うべきです。',
+          '**AIをネットワーク接続なしで完全にデバイス上で動かしたい人。** RikkaHubはローカルであれクラウドであれ、常にAPIエンドポイントに到達する必要があります。本当にオフラインで動くアプリが欲しい場合は、代わりに[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private LLM](/ja/power-local-llm/private-llm-review)を使うべきです。',
           '**まだAPIキーを持っておらず、それを管理したくない人。** RikkaHubには無料や同梱のAIアクセスは含まれていません。アプリを開いてすぐに設定やアカウントなしでチャットしたい人は、代わりにモデルが組み込まれたキュレーション済みのアプリを検討すべきです。',
           '**iPhoneまたはiPadのユーザー。** RikkaHubはレビュー時点で公式のiOS版がありません。Appleユーザーは、Private LLMやEnclave AIなどの専用iOSアプリを検討すべきです。',
           '**できるだけ技術的な設定の手間を減らしたい人。** プロバイダーを追加するには、APIフォーマット、ベースURL、キー、モデル名を正しく入力する必要があります。オンデバイスアプリのようなワンタップの「ダウンロードしてすぐチャット」というフローはありません。',
@@ -2180,13 +2180,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ローカル実行?': 'いいえ — クラウド/セルフホストAPIクライアントのみ。自分のキーまたはサーバーを持ち込む必要あり',
           },
           {
-            'アプリ': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'アプリ': '[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)',
             'ライセンス/料金': '無料、オープンソース(MIT)',
             'プラットフォーム': 'iPhone/iPad、Android',
             'ローカル実行?': 'はい — GGUFモデルをダウンロードしてllama.cpp経由でデバイス上で実行',
           },
           {
-            'アプリ': '[Private LLM](/power-local-llm/private-llm-review)',
+            'アプリ': '[Private LLM](/ja/power-local-llm/private-llm-review)',
             'ライセンス/料金': '有料、買い切り。クローズドソース',
             'プラットフォーム': 'iPhone/iPad/Mac(Appleのみ)',
             'ローカル実行?': 'はい — OmniQuantとGPTQ量子化を用いた140以上のオンデバイスモデル',
@@ -2291,11 +2291,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[PocketPal AIレビュー(2026)](/power-local-llm/pocketpal-ai-review) — GGUFモデルを実際にデバイス上で実行する無料オープンソースアプリで、RikkaHubとの直接的なアーキテクチャ上の対比。',
-          '[Private LLMレビュー](/power-local-llm/private-llm-review) — iPhone、iPad、Mac向けの有料でクローズドソースのオンデバイス代替アプリ。140以上のモデルカタログを持つ。',
-          '[2026年版 Android向けベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-android-2026) — クラウドクライアントではなく特にローカル推論を求める読者向けの、Android向けオンデバイスアプリのまとめ。',
-          '[2026年版 iPhone向けベストローカルLLMアプリ](/power-local-llm/best-local-llm-apps-iphone-2026) — RikkaHubがiOS版を提供していないため、Appleプラットフォームでのオンデバイス選択肢が必要な読者向けのiOS版のまとめ。',
-          '[2026年版 ベストモバイルLLMモデル:Phi-4 Mini対Gemma 4対SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — RikkaHubのようなクラウドクライアントではなくオンデバイス推論を選ぶことにした人向けの、モデル面の関連記事。',
+          '[PocketPal AIレビュー(2026)](/ja/power-local-llm/pocketpal-ai-review) — GGUFモデルを実際にデバイス上で実行する無料オープンソースアプリで、RikkaHubとの直接的なアーキテクチャ上の対比。',
+          '[Private LLMレビュー](/ja/power-local-llm/private-llm-review) — iPhone、iPad、Mac向けの有料でクローズドソースのオンデバイス代替アプリ。140以上のモデルカタログを持つ。',
+          '[2026年版 Android向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-android-2026) — クラウドクライアントではなく特にローカル推論を求める読者向けの、Android向けオンデバイスアプリのまとめ。',
+          '[2026年版 iPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — RikkaHubがiOS版を提供していないため、Appleプラットフォームでのオンデバイス選択肢が必要な読者向けのiOS版のまとめ。',
+          '[2026年版 ベストモバイルLLMモデル:Phi-4 Mini対Gemma 4対SmolLM](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — RikkaHubのようなクラウドクライアントではなくオンデバイス推論を選ぶことにした人向けの、モデル面の関連記事。',
         ],
       },
     },
@@ -2446,13 +2446,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O RikkaHub executa modelos de IA localmente?',
         content: [
           '**Não. O RikkaHub não inclui um mecanismo de inferência no dispositivo e não consegue executar um modelo de linguagem diretamente na CPU, GPU ou NPU do seu celular.** É um cliente: você configura uma chave de API e um endpoint para um provedor, o RikkaHub envia suas mensagens a esse endpoint pela rede, e exibe a resposta recebida.',
-          'Essa é uma distinção importante em relação a apps mobile como o [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/power-local-llm/private-llm-review), que incluem um mecanismo de inferência (llama.cpp ou similar) e executam um arquivo de modelo baixado diretamente usando a RAM e a GPU/NPU do próprio dispositivo, sem precisar de conexão de rede depois que o modelo é baixado. O próprio [README](https://github.com/rikkahub/rikkahub) do RikkaHub descreve o app simplesmente como "an Android APP that supports for multiple LLM providers" — a palavra "local" não aparece em nenhum lugar da lista de recursos, e uma busca em toda a árvore de código-fonte pública (mais de 1.900 arquivos, verificado em setembro de 2026) não encontra nenhum componente llama.cpp, MLC, LiteRT ou LiteRT-LM em nenhuma parte do código.',
+          'Essa é uma distinção importante em relação a apps mobile como o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/pt/power-local-llm/private-llm-review), que incluem um mecanismo de inferência (llama.cpp ou similar) e executam um arquivo de modelo baixado diretamente usando a RAM e a GPU/NPU do próprio dispositivo, sem precisar de conexão de rede depois que o modelo é baixado. O próprio [README](https://github.com/rikkahub/rikkahub) do RikkaHub descreve o app simplesmente como "an Android APP that supports for multiple LLM providers" — a palavra "local" não aparece em nenhum lugar da lista de recursos, e uma busca em toda a árvore de código-fonte pública (mais de 1.900 arquivos, verificado em setembro de 2026) não encontra nenhum componente llama.cpp, MLC, LiteRT ou LiteRT-LM em nenhuma parte do código.',
           'O mais próximo que o RikkaHub chega de "IA local" é apontar seu campo de API/URL personalizada para um servidor na sua própria rede em vez de um endpoint público na nuvem — por exemplo, [Ollama](https://ollama.com) ou [LM Studio](https://lmstudio.ai) rodando em um PC na mesma casa, expondo uma API compatível com OpenAI. Nessa configuração, o modelo continua sendo executado no hardware do PC, não no do celular; o RikkaHub atua como uma interface mobile para um servidor que você controla, o que mantém seus dados de conversa fora da infraestrutura de nuvem de terceiros, mas é uma configuração — e uma história de privacidade e hardware — materialmente diferente de um app que executa o modelo no próprio dispositivo.',
         ],
         decisionBlock: {
           title: 'RikkaHub ou um app on-device?',
           localIf: [
-            'Você quer que a inferência aconteça no próprio celular, com zero chamadas de rede depois que um modelo é baixado — use o [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/power-local-llm/private-llm-review) em vez disso.',
+            'Você quer que a inferência aconteça no próprio celular, com zero chamadas de rede depois que um modelo é baixado — use o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/pt/power-local-llm/private-llm-review) em vez disso.',
             'Você precisa que o app funcione sem nenhuma rota de rede disponível, nem mesmo para um dispositivo na mesma Wi-Fi — o RikkaHub sempre precisa alcançar um endpoint de API, mesmo que local.',
           ],
           cloudIf: [
@@ -2617,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Para quem o RikkaHub não é indicado',
         items: [
-          '**Usuários que querem IA rodando inteiramente no dispositivo, sem conexão de rede.** O RikkaHub sempre precisa alcançar um endpoint de API, local ou na nuvem; quem quer um app genuinamente offline deve usar o [PocketPal AI](/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/power-local-llm/private-llm-review) em vez disso.',
+          '**Usuários que querem IA rodando inteiramente no dispositivo, sem conexão de rede.** O RikkaHub sempre precisa alcançar um endpoint de API, local ou na nuvem; quem quer um app genuinamente offline deve usar o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou o [Private LLM](/pt/power-local-llm/private-llm-review) em vez disso.',
           '**Usuários que ainda não têm uma chave de API e não querem gerenciar uma.** O RikkaHub não inclui nenhum acesso a IA gratuito ou embutido — quem quer abrir um app e conversar imediatamente sem nenhuma configuração ou conta deve procurar um app com curadoria e modelos embutidos.',
           '**Usuários de iPhone ou iPad.** O RikkaHub não tinha nenhuma versão oficial para iOS no momento da análise; usuários da Apple devem considerar um app de iOS dedicado, como o Private LLM ou o Enclave AI.',
           '**Usuários que querem a menor carga técnica de configuração possível.** Adicionar um provedor exige informar corretamente o formato de API, a URL base, a chave e o nome do modelo — não existe um fluxo de "baixar e conversar" em um toque, como nos apps on-device.',
@@ -2645,13 +2645,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Roda localmente?': 'Não — apenas cliente de API na nuvem/auto-hospedada; você traz sua própria chave ou servidor',
           },
           {
-            'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'App': '[PocketPal AI](/pt/power-local-llm/pocketpal-ai-review)',
             'Licença / custo': 'Gratuito, código aberto (MIT)',
             'Plataformas': 'iPhone/iPad, Android',
             'Roda localmente?': 'Sim — baixa e executa modelos GGUF no dispositivo via llama.cpp',
           },
           {
-            'App': '[Private LLM](/power-local-llm/private-llm-review)',
+            'App': '[Private LLM](/pt/power-local-llm/private-llm-review)',
             'Licença / custo': 'Pago, compra única; código fechado',
             'Plataformas': 'iPhone/iPad/Mac (somente Apple)',
             'Roda localmente?': 'Sim — mais de 140 modelos on-device com quantização OmniQuant e GPTQ',
@@ -2756,11 +2756,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do PocketPal AI (2026)](/power-local-llm/pocketpal-ai-review) — um app gratuito e de código aberto que realmente executa modelos GGUF no dispositivo, o contraste arquitetônico direto com o RikkaHub.',
-          '[Análise do Private LLM](/power-local-llm/private-llm-review) — uma alternativa paga, de código fechado e on-device para iPhone, iPad e Mac, com um catálogo de mais de 140 modelos.',
-          '[Os melhores apps de LLM local para Android em 2026](/power-local-llm/best-local-llm-apps-android-2026) — o panorama de apps on-device para Android, para leitores que buscam especificamente inferência local em vez de um cliente na nuvem.',
-          '[Os melhores apps de LLM local para iPhone em 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — o equivalente em iOS, para leitores que precisam de uma opção on-device para plataformas Apple, já que o RikkaHub não oferece nenhuma.',
-          '[Os melhores modelos LLM mobile em 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — o artigo complementar sobre modelos, para quem decidir que prefere inferência local em vez de um cliente na nuvem como o RikkaHub.',
+          '[Análise do PocketPal AI (2026)](/pt/power-local-llm/pocketpal-ai-review) — um app gratuito e de código aberto que realmente executa modelos GGUF no dispositivo, o contraste arquitetônico direto com o RikkaHub.',
+          '[Análise do Private LLM](/pt/power-local-llm/private-llm-review) — uma alternativa paga, de código fechado e on-device para iPhone, iPad e Mac, com um catálogo de mais de 140 modelos.',
+          '[Os melhores apps de LLM local para Android em 2026](/pt/power-local-llm/best-local-llm-apps-android-2026) — o panorama de apps on-device para Android, para leitores que buscam especificamente inferência local em vez de um cliente na nuvem.',
+          '[Os melhores apps de LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o equivalente em iOS, para leitores que precisam de uma opção on-device para plataformas Apple, já que o RikkaHub não oferece nenhuma.',
+          '[Os melhores modelos LLM mobile em 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — o artigo complementar sobre modelos, para quem decidir que prefere inferência local em vez de um cliente na nuvem como o RikkaHub.',
         ],
       },
     },
@@ -2910,13 +2910,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'هل يشغّل RikkaHub نماذج الذكاء الاصطناعي محلياً؟',
         content: [
           '**لا. لا يتضمن RikkaHub محرك استدلال على الجهاز ولا يمكنه تشغيل نموذج لغوي مباشرة على وحدة المعالجة المركزية (CPU) أو الرسومية (GPU) أو العصبية (NPU) في هاتفك.** إنه عميل: تقوم بإعداد مفتاح API ونقطة نهاية لمزود ما، ويرسل RikkaHub رسائلك إلى تلك النقطة عبر الشبكة، ويعرض الرد الذي يستلمه.',
-          'هذا فرق جوهري عن تطبيقات موبايل مثل [PocketPal AI](/power-local-llm/pocketpal-ai-review) أو [Private LLM](/power-local-llm/private-llm-review)، التي تتضمن محرك استدلال (llama.cpp أو ما شابه) وتشغّل ملف نموذج تم تنزيله مباشرة باستخدام ذاكرة الوصول العشوائي (RAM) ووحدة الرسومات/المعالجة العصبية الخاصة بالجهاز نفسه، دون الحاجة لاتصال شبكي بعد تنزيل النموذج. يصف [ملف README](https://github.com/rikkahub/rikkahub) الخاص بـ RikkaHub التطبيق ببساطة بأنه "an Android APP that supports for multiple LLM providers" — ولا تظهر كلمة "محلي" في أي مكان في قائمة ميزاته، كما أن البحث في كامل شجرة الشيفرة المصدرية العامة (أكثر من 1,900 ملف، تم التحقق في سبتمبر 2026) لا يكشف عن وجود أي مكوّن llama.cpp أو MLC أو LiteRT أو LiteRT-LM في أي مكان بالشيفرة.',
+          'هذا فرق جوهري عن تطبيقات موبايل مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Private LLM](/ar/power-local-llm/private-llm-review)، التي تتضمن محرك استدلال (llama.cpp أو ما شابه) وتشغّل ملف نموذج تم تنزيله مباشرة باستخدام ذاكرة الوصول العشوائي (RAM) ووحدة الرسومات/المعالجة العصبية الخاصة بالجهاز نفسه، دون الحاجة لاتصال شبكي بعد تنزيل النموذج. يصف [ملف README](https://github.com/rikkahub/rikkahub) الخاص بـ RikkaHub التطبيق ببساطة بأنه "an Android APP that supports for multiple LLM providers" — ولا تظهر كلمة "محلي" في أي مكان في قائمة ميزاته، كما أن البحث في كامل شجرة الشيفرة المصدرية العامة (أكثر من 1,900 ملف، تم التحقق في سبتمبر 2026) لا يكشف عن وجود أي مكوّن llama.cpp أو MLC أو LiteRT أو LiteRT-LM في أي مكان بالشيفرة.',
           'أقرب ما يصل إليه RikkaHub لـ"الذكاء الاصطناعي المحلي" هو توجيه حقل API/URL المخصص إلى خادم على شبكتك الخاصة بدلاً من نقطة نهاية سحابية عامة — على سبيل المثال [Ollama](https://ollama.com) أو [LM Studio](https://lmstudio.ai) يعملان على جهاز كمبيوتر في نفس المنزل، ويعرضان واجهة برمجية متوافقة مع OpenAI. في هذا الإعداد، يستمر النموذج بالعمل على عتاد ذلك الكمبيوتر، وليس على الهاتف؛ إذ يعمل RikkaHub كواجهة موبايل لخادم تتحكم به، مما يبقي بيانات محادثتك خارج البنية التحتية السحابية لطرف ثالث، لكنه إعداد مختلف جوهرياً — وقصة مختلفة من حيث الخصوصية والعتاد — عن تطبيق يشغّل النموذج على الجهاز نفسه.',
         ],
         decisionBlock: {
           title: 'RikkaHub أم تطبيق يعمل على الجهاز؟',
           localIf: [
-            'تريد أن يحدث الاستدلال على الهاتف نفسه، دون أي اتصال شبكي بعد تنزيل النموذج — استخدم [PocketPal AI](/power-local-llm/pocketpal-ai-review) أو [Private LLM](/power-local-llm/private-llm-review) بدلاً من ذلك.',
+            'تريد أن يحدث الاستدلال على الهاتف نفسه، دون أي اتصال شبكي بعد تنزيل النموذج — استخدم [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Private LLM](/ar/power-local-llm/private-llm-review) بدلاً من ذلك.',
             'تحتاج تطبيقاً يعمل دون أي مسار شبكي متاح على الإطلاق، حتى إلى جهاز على نفس شبكة Wi-Fi — يحتاج RikkaHub دائماً للوصول إلى نقطة نهاية API، حتى لو كانت محلية.',
           ],
           cloudIf: [
@@ -3081,7 +3081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'لمن لا يناسب RikkaHub',
         items: [
-          '**المستخدمون الراغبون في تشغيل الذكاء الاصطناعي بالكامل على أجهزتهم دون أي اتصال شبكي.** يحتاج RikkaHub دائماً للوصول إلى نقطة نهاية API، محلية كانت أم سحابية؛ على من يريد تطبيقاً يعمل دون اتصال بالفعل استخدام [PocketPal AI](/power-local-llm/pocketpal-ai-review) أو [Private LLM](/power-local-llm/private-llm-review) بدلاً من ذلك.',
+          '**المستخدمون الراغبون في تشغيل الذكاء الاصطناعي بالكامل على أجهزتهم دون أي اتصال شبكي.** يحتاج RikkaHub دائماً للوصول إلى نقطة نهاية API، محلية كانت أم سحابية؛ على من يريد تطبيقاً يعمل دون اتصال بالفعل استخدام [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Private LLM](/ar/power-local-llm/private-llm-review) بدلاً من ذلك.',
           '**المستخدمون الذين لا يملكون بالفعل مفتاح API ولا يريدون إدارة واحد.** لا يتضمن RikkaHub أي وصول مجاني أو مدمج للذكاء الاصطناعي — على من يريد فتح تطبيق والمحادثة فوراً دون أي إعداد أو حساب البحث عن تطبيق منسّق بنماذج مدمجة بدلاً من ذلك.',
           '**مستخدمو iPhone أو iPad.** لم يكن لدى RikkaHub أي إصدار iOS رسمي وقت المراجعة؛ على مستخدمي Apple النظر في تطبيق iOS مخصص مثل Private LLM أو Enclave AI.',
           '**المستخدمون الراغبون في أقل عبء إعداد تقني ممكن.** تتطلب إضافة مزود إدخال صيغة API وعنوان URL الأساسي والمفتاح واسم النموذج بشكل صحيح — لا يوجد مسار "نزّل وابدأ المحادثة" بلمسة واحدة كما في التطبيقات التي تعمل على الجهاز.',
@@ -3109,13 +3109,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'هل يعمل محلياً؟': 'لا — عميل API سحابي/مستضاف ذاتياً فقط؛ تحضر مفتاحك أو خادمك الخاص',
           },
           {
-            'التطبيق': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            'التطبيق': '[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)',
             'الرخصة / التكلفة': 'مجاني، مفتوح المصدر (MIT)',
             'المنصات': 'iPhone/iPad، Android',
             'هل يعمل محلياً؟': 'نعم — ينزّل ويشغّل نماذج GGUF على الجهاز عبر llama.cpp',
           },
           {
-            'التطبيق': '[Private LLM](/power-local-llm/private-llm-review)',
+            'التطبيق': '[Private LLM](/ar/power-local-llm/private-llm-review)',
             'الرخصة / التكلفة': 'مدفوع، شراء لمرة واحدة؛ مغلق المصدر',
             'المنصات': 'iPhone/iPad/Mac (Apple فقط)',
             'هل يعمل محلياً؟': 'نعم — أكثر من 140 نموذجاً على الجهاز مع تكميم OmniQuant وGPTQ',
@@ -3220,11 +3220,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة PocketPal AI (2026)](/power-local-llm/pocketpal-ai-review) — تطبيق مجاني ومفتوح المصدر يشغّل بالفعل نماذج GGUF على الجهاز، وهو التناقض المعماري المباشر مع RikkaHub.',
-          '[مراجعة Private LLM](/power-local-llm/private-llm-review) — بديل مدفوع ومغلق المصدر يعمل على الجهاز لـ iPhone وiPad وMac بكتالوج يضم أكثر من 140 نموذجاً.',
-          '[أفضل تطبيقات LLM المحلية لأندرويد في 2026](/power-local-llm/best-local-llm-apps-android-2026) — استعراض تطبيقات أندرويد التي تعمل على الجهاز، للقراء الباحثين تحديداً عن استدلال محلي بدلاً من عميل سحابي.',
-          '[أفضل تطبيقات LLM المحلية لـ iPhone في 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — النظير على iOS، للقراء المحتاجين لخيار يعمل على الجهاز لمنصات Apple، إذ لا يقدّم RikkaHub أياً منها.',
-          '[أفضل نماذج LLM للموبايل في 2026: Phi-4 Mini مقابل Gemma 4 مقابل SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — المقال المكمّل على مستوى النماذج لمن يقرر تفضيل الاستدلال المحلي على عميل سحابي مثل RikkaHub.',
+          '[مراجعة PocketPal AI (2026)](/ar/power-local-llm/pocketpal-ai-review) — تطبيق مجاني ومفتوح المصدر يشغّل بالفعل نماذج GGUF على الجهاز، وهو التناقض المعماري المباشر مع RikkaHub.',
+          '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — بديل مدفوع ومغلق المصدر يعمل على الجهاز لـ iPhone وiPad وMac بكتالوج يضم أكثر من 140 نموذجاً.',
+          '[أفضل تطبيقات LLM المحلية لأندرويد في 2026](/ar/power-local-llm/best-local-llm-apps-android-2026) — استعراض تطبيقات أندرويد التي تعمل على الجهاز، للقراء الباحثين تحديداً عن استدلال محلي بدلاً من عميل سحابي.',
+          '[أفضل تطبيقات LLM المحلية لـ iPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — النظير على iOS، للقراء المحتاجين لخيار يعمل على الجهاز لمنصات Apple، إذ لا يقدّم RikkaHub أياً منها.',
+          '[أفضل نماذج LLM للموبايل في 2026: Phi-4 Mini مقابل Gemma 4 مقابل SmolLM](/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — المقال المكمّل على مستوى النماذج لمن يقرر تفضيل الاستدلال المحلي على عميل سحابي مثل RikkaHub.',
         ],
       },
     },
@@ -3374,13 +3374,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'RikkaHub会在本地运行AI模型吗?',
         content: [
           '**不会。RikkaHub不包含设备端推理引擎,无法在手机的CPU、GPU或NPU上直接运行语言模型。**它是一个客户端:你为某个提供商配置API密钥和端点,RikkaHub通过网络把你的消息发送到该端点,并显示收到的回复。',
-          '这与[PocketPal AI](/power-local-llm/pocketpal-ai-review)或[Private LLM](/power-local-llm/private-llm-review)等移动应用有着本质区别——这些应用内置了推理引擎(llama.cpp或类似的运行环境),使用设备自身的RAM和GPU/NPU直接运行已下载的模型文件,模型下载后无需网络连接。RikkaHub自己的[README](https://github.com/rikkahub/rikkahub)将其描述为"an Android APP that supports for multiple LLM providers"——功能列表中没有任何地方出现"本地"一词,而对完整公开源代码树(截至2026年9月检查,共有1,900多个文件)的搜索也没有发现任何llama.cpp、MLC、LiteRT或LiteRT-LM组件。',
+          '这与[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)或[Private LLM](/zh/power-local-llm/private-llm-review)等移动应用有着本质区别——这些应用内置了推理引擎(llama.cpp或类似的运行环境),使用设备自身的RAM和GPU/NPU直接运行已下载的模型文件,模型下载后无需网络连接。RikkaHub自己的[README](https://github.com/rikkahub/rikkahub)将其描述为"an Android APP that supports for multiple LLM providers"——功能列表中没有任何地方出现"本地"一词,而对完整公开源代码树(截至2026年9月检查,共有1,900多个文件)的搜索也没有发现任何llama.cpp、MLC、LiteRT或LiteRT-LM组件。',
           'RikkaHub最接近"本地AI"的做法,是把自定义API/URL字段指向你自己网络上的服务器,而不是公共云端点——例如同一屋檐下的电脑运行的[Ollama](https://ollama.com)或[LM Studio](https://lmstudio.ai),对外暴露兼容OpenAI的接口。在这种配置下,模型仍然运行在电脑的硬件上,而不是手机上;RikkaHub扮演的是你所控制的服务器的移动端前端角色。这样做能让你的对话数据留在第三方云基础设施之外,但从架构、隐私和硬件角度来看,这与一款直接在设备上运行模型的应用有着实质性差异。',
         ],
         decisionBlock: {
           title: 'RikkaHub还是设备端应用?',
           localIf: [
-            '你希望推理发生在手机本身上,模型下载完成后完全不需要任何网络请求——请改用[PocketPal AI](/power-local-llm/pocketpal-ai-review)或[Private LLM](/power-local-llm/private-llm-review)。',
+            '你希望推理发生在手机本身上,模型下载完成后完全不需要任何网络请求——请改用[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)或[Private LLM](/zh/power-local-llm/private-llm-review)。',
             '你需要应用在完全没有网络路由的情况下工作,即使是连接同一Wi-Fi上的设备也不行——RikkaHub始终需要连接到某个API端点,即使是本地的。',
           ],
           cloudIf: [
@@ -3545,7 +3545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'RikkaHub不适合谁使用',
         items: [
-          '**希望AI完全在设备上运行、不联网的用户。** RikkaHub始终需要连接到某个API端点,无论是本地还是云端;真正想要离线应用的用户应改用[PocketPal AI](/power-local-llm/pocketpal-ai-review)或[Private LLM](/power-local-llm/private-llm-review)。',
+          '**希望AI完全在设备上运行、不联网的用户。** RikkaHub始终需要连接到某个API端点,无论是本地还是云端;真正想要离线应用的用户应改用[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)或[Private LLM](/zh/power-local-llm/private-llm-review)。',
           '**还没有API密钥、也不想管理密钥的用户。** RikkaHub不包含任何免费或内置的AI访问权限——想要打开应用就能立即聊天、不需要任何设置或账号的用户,应改选内置模型的精选应用。',
           '**iPhone或iPad用户。** RikkaHub在评测时没有官方iOS版本;Apple用户应考虑Private LLM或Enclave AI等专门的iOS应用。',
           '**希望技术设置门槛尽可能低的用户。** 添加提供商需要正确输入API格式、基础URL、密钥和模型名称——它没有设备端应用那种一键"下载即聊"的流程。',
@@ -3573,13 +3573,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '是否本地运行?': '否——仅为云端/自托管API客户端;需自带密钥或服务器',
           },
           {
-            '应用': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            '应用': '[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)',
             '许可证/费用': '免费,开源(MIT)',
             '平台': 'iPhone/iPad、Android',
             '是否本地运行?': '是——下载GGUF模型并通过llama.cpp在设备上运行',
           },
           {
-            '应用': '[Private LLM](/power-local-llm/private-llm-review)',
+            '应用': '[Private LLM](/zh/power-local-llm/private-llm-review)',
             '许可证/费用': '付费,一次性购买;闭源',
             '平台': 'iPhone/iPad/Mac(仅限Apple)',
             '是否本地运行?': '是——140多个设备端模型,支持OmniQuant和GPTQ量化',
@@ -3684,11 +3684,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[PocketPal AI评测(2026)](/power-local-llm/pocketpal-ai-review) —— 一款真正在设备上运行GGUF模型的免费开源应用,与RikkaHub形成直接的架构对比。',
-          '[Private LLM评测](/power-local-llm/private-llm-review) —— 面向iPhone、iPad和Mac的付费闭源设备端替代方案,拥有140多个模型的目录。',
-          '[2026年Android最佳本地LLM应用](/power-local-llm/best-local-llm-apps-android-2026) —— Android设备端应用汇总,适合专门寻找本地推理而非云端客户端的读者。',
-          '[2026年iPhone最佳本地LLM应用](/power-local-llm/best-local-llm-apps-iphone-2026) —— iOS版对应内容,适合需要Apple平台设备端方案的读者,因为RikkaHub并不提供此类选项。',
-          '[2026年最佳移动LLM模型:Phi-4 Mini对比Gemma 4对比SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) —— 面向选择本地推理而非RikkaHub这类云端客户端用户的模型层面补充文章。',
+          '[PocketPal AI评测(2026)](/zh/power-local-llm/pocketpal-ai-review) —— 一款真正在设备上运行GGUF模型的免费开源应用,与RikkaHub形成直接的架构对比。',
+          '[Private LLM评测](/zh/power-local-llm/private-llm-review) —— 面向iPhone、iPad和Mac的付费闭源设备端替代方案,拥有140多个模型的目录。',
+          '[2026年Android最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-android-2026) —— Android设备端应用汇总,适合专门寻找本地推理而非云端客户端的读者。',
+          '[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) —— iOS版对应内容,适合需要Apple平台设备端方案的读者,因为RikkaHub并不提供此类选项。',
+          '[2026年最佳移动LLM模型:Phi-4 Mini对比Gemma 4对比SmolLM](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm) —— 面向选择本地推理而非RikkaHub这类云端客户端用户的模型层面补充文章。',
         ],
       },
     },
@@ -3839,13 +3839,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'RikkaHub는 AI 모델을 로컬에서 실행합니까?',
         content: [
           '**아닙니다. RikkaHub에는 온디바이스 추론 엔진이 포함되어 있지 않으며, 스마트폰의 CPU, GPU, NPU에서 언어 모델을 직접 실행할 수 없습니다.** 이는 클라이언트입니다: 프로바이더에 대한 API 키와 엔드포인트를 설정하면, RikkaHub는 네트워크를 통해 해당 엔드포인트로 메시지를 보내고 돌아온 응답을 표시합니다.',
-          '이는 [PocketPal AI](/power-local-llm/pocketpal-ai-review)나 [Private LLM](/power-local-llm/private-llm-review) 같은 모바일 앱과의 중요한 차이입니다. 이 앱들은 추론 엔진(llama.cpp 또는 유사한 런타임)을 내장하고 있으며, 다운로드한 모델 파일을 기기 자체의 RAM과 GPU/NPU를 사용해 직접 실행하므로, 모델을 다운로드한 뒤에는 네트워크 연결이 필요하지 않습니다. RikkaHub 자체 [README](https://github.com/rikkahub/rikkahub)는 이 앱을 단순히 "an Android APP that supports for multiple LLM providers"라고 설명하고 있으며, 기능 목록 어디에도 "로컬"이라는 단어는 등장하지 않습니다. 또한 공개된 전체 소스 코드 트리(2026년 9월 기준 1,900개 이상의 파일)를 검색해도 llama.cpp, MLC, LiteRT, LiteRT-LM 구성 요소는 코드 어디에도 존재하지 않습니다.',
+          '이는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private LLM](/ko/power-local-llm/private-llm-review) 같은 모바일 앱과의 중요한 차이입니다. 이 앱들은 추론 엔진(llama.cpp 또는 유사한 런타임)을 내장하고 있으며, 다운로드한 모델 파일을 기기 자체의 RAM과 GPU/NPU를 사용해 직접 실행하므로, 모델을 다운로드한 뒤에는 네트워크 연결이 필요하지 않습니다. RikkaHub 자체 [README](https://github.com/rikkahub/rikkahub)는 이 앱을 단순히 "an Android APP that supports for multiple LLM providers"라고 설명하고 있으며, 기능 목록 어디에도 "로컬"이라는 단어는 등장하지 않습니다. 또한 공개된 전체 소스 코드 트리(2026년 9월 기준 1,900개 이상의 파일)를 검색해도 llama.cpp, MLC, LiteRT, LiteRT-LM 구성 요소는 코드 어디에도 존재하지 않습니다.',
           'RikkaHub가 "로컬 AI"에 가장 가까워지는 경우는 커스텀 API/URL 필드를 공개 클라우드 엔드포인트가 아니라 자체 네트워크의 서버로 지정할 때입니다 — 예를 들어 같은 집 안의 PC에서 실행되며 OpenAI 호환 API를 노출하는 [Ollama](https://ollama.com)나 [LM Studio](https://lmstudio.ai)가 그렇습니다. 이 구성에서도 모델은 여전히 스마트폰이 아니라 PC의 하드웨어에서 실행됩니다. RikkaHub는 사용자가 직접 제어하는 서버를 위한 모바일 프런트엔드 역할을 하며, 이는 대화 데이터를 서드파티 클라우드 인프라 밖에 유지해 주지만, 모델을 기기 자체에서 실행하는 앱과는 구성 면에서도, 그리고 개인정보 보호와 하드웨어 측면에서도 본질적으로 다른 방식입니다.',
         ],
         decisionBlock: {
           title: 'RikkaHub인가, 온디바이스 앱인가?',
           localIf: [
-            '모델을 다운로드한 뒤 네트워크 통신이 전혀 없이 스마트폰 자체에서 추론이 이루어지길 원한다면 — 대신 [PocketPal AI](/power-local-llm/pocketpal-ai-review)나 [Private LLM](/power-local-llm/private-llm-review)을 사용하십시오.',
+            '모델을 다운로드한 뒤 네트워크 통신이 전혀 없이 스마트폰 자체에서 추론이 이루어지길 원한다면 — 대신 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private LLM](/ko/power-local-llm/private-llm-review)을 사용하십시오.',
             '같은 Wi-Fi에 있는 기기로의 연결조차 포함해 어떤 네트워크 경로도 없이 작동하는 앱이 필요하다면 — RikkaHub는 로컬 엔드포인트라 하더라도 항상 API 엔드포인트에 도달해야 합니다.',
           ],
           cloudIf: [
@@ -4010,7 +4010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'RikkaHub에 적합하지 않은 사용자',
         items: [
-          '**네트워크 연결 없이 AI가 기기에서 완전히 실행되기를 원하는 사용자.** RikkaHub는 로컬이든 클라우드든 항상 API 엔드포인트에 도달해야 합니다. 진정한 오프라인 앱을 원하는 사용자는 대신 [PocketPal AI](/power-local-llm/pocketpal-ai-review)나 [Private LLM](/power-local-llm/private-llm-review)을 사용해야 합니다.',
+          '**네트워크 연결 없이 AI가 기기에서 완전히 실행되기를 원하는 사용자.** RikkaHub는 로컬이든 클라우드든 항상 API 엔드포인트에 도달해야 합니다. 진정한 오프라인 앱을 원하는 사용자는 대신 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private LLM](/ko/power-local-llm/private-llm-review)을 사용해야 합니다.',
           '**아직 API 키가 없고 이를 관리하고 싶지 않은 사용자.** RikkaHub에는 무료나 번들로 제공되는 AI 접근 권한이 없습니다 — 어떤 설정이나 계정 없이 앱을 열고 바로 대화하고 싶은 사용자는 내장 모델을 갖춘 큐레이션된 앱을 대신 찾아야 합니다.',
           '**iPhone이나 iPad 사용자.** RikkaHub는 리뷰 시점 기준 공식 iOS 버전이 없습니다. Apple 사용자는 Private LLM이나 Enclave AI 같은 전용 iOS 앱을 고려해야 합니다.',
           '**가능한 한 낮은 기술적 설정 부담을 원하는 사용자.** 프로바이더를 추가하려면 API 형식, 기본 URL, 키, 모델 이름을 정확히 입력해야 합니다 — 온디바이스 앱처럼 한 번의 탭으로 "다운로드하고 바로 채팅"하는 흐름은 없습니다.',
@@ -4038,13 +4038,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '로컬 실행 여부': '아니오 — 클라우드/셀프 호스팅 API 클라이언트 전용이며, 자체 키나 서버가 필요합니다',
           },
           {
-            '앱': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
+            '앱': '[PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)',
             '라이선스 / 비용': '무료, 오픈소스(MIT)',
             '플랫폼': 'iPhone/iPad, Android',
             '로컬 실행 여부': '예 — GGUF 모델을 다운로드해 llama.cpp를 통해 기기에서 실행',
           },
           {
-            '앱': '[Private LLM](/power-local-llm/private-llm-review)',
+            '앱': '[Private LLM](/ko/power-local-llm/private-llm-review)',
             '라이선스 / 비용': '유료, 1회 구매; 클로즈드 소스',
             '플랫폼': 'iPhone/iPad/Mac(Apple 전용)',
             '로컬 실행 여부': '예 — OmniQuant 및 GPTQ 양자화를 적용한 140개 이상의 온디바이스 모델',
@@ -4149,11 +4149,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[PocketPal AI 리뷰(2026)](/power-local-llm/pocketpal-ai-review) — 실제로 GGUF 모델을 기기에서 실행하는 무료 오픈소스 앱으로, RikkaHub와의 직접적인 아키텍처 대비를 보여줍니다.',
-          '[Private LLM 리뷰](/power-local-llm/private-llm-review) — iPhone, iPad, Mac을 위한 유료 클로즈드 소스 온디바이스 대안으로, 140개 이상의 모델 카탈로그를 갖추고 있습니다.',
-          '[2026년 Android용 최고의 로컬 LLM 앱](/power-local-llm/best-local-llm-apps-android-2026) — 클라우드 클라이언트가 아니라 로컬 추론을 명확히 원하는 독자를 위한 Android 온디바이스 앱 모음.',
-          '[2026년 iPhone용 최고의 로컬 LLM 앱](/power-local-llm/best-local-llm-apps-iphone-2026) — RikkaHub가 제공하지 않는, Apple 플랫폼용 온디바이스 옵션이 필요한 독자를 위한 iOS 버전.',
-          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini 대 Gemma 4 대 SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — RikkaHub 같은 클라우드 클라이언트 대신 로컬 추론을 선택하기로 결정한 사람을 위한 모델 차원의 보완 기사.',
+          '[PocketPal AI 리뷰(2026)](/ko/power-local-llm/pocketpal-ai-review) — 실제로 GGUF 모델을 기기에서 실행하는 무료 오픈소스 앱으로, RikkaHub와의 직접적인 아키텍처 대비를 보여줍니다.',
+          '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — iPhone, iPad, Mac을 위한 유료 클로즈드 소스 온디바이스 대안으로, 140개 이상의 모델 카탈로그를 갖추고 있습니다.',
+          '[2026년 Android용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — 클라우드 클라이언트가 아니라 로컬 추론을 명확히 원하는 독자를 위한 Android 온디바이스 앱 모음.',
+          '[2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — RikkaHub가 제공하지 않는, Apple 플랫폼용 온디바이스 옵션이 필요한 독자를 위한 iOS 버전.',
+          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini 대 Gemma 4 대 SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — RikkaHub 같은 클라우드 클라이언트 대신 로컬 추론을 선택하기로 결정한 사람을 위한 모델 차원의 보완 기사.',
         ],
       },
     },

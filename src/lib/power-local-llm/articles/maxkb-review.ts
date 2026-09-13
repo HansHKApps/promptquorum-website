@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zum Zeitpunkt dieser Review rund 22.700 GitHub-Sterne, mit neuen Releases alle paar Wochen laut der [GitHub-Releases-Seite](https://github.com/1Panel-dev/MaxKB/releases)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu MaxKBs Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie MaxKB im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu MaxKBs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie MaxKB im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify Review: Quelloffene LLMOps-Plattform](/de/power-local-llm/dify-ai-workflow-builder-review) — eine breitere Workflow-, RAG- und Agenten-Plattform für Teams, die mehr integrierte Orchestrierung wollen.',
           '[AnythingLLM Review](/de/power-local-llm/anythingllm-review) — ein schlankeres, MIT-lizenziertes selbst gehostetes Dokumenten-Chat-Tool.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ein Dreiervergleich von RAG-Tools, falls MaxKBs Agenten-Ebene mehr ist, als Sie brauchen.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Environ 22 700 étoiles GitHub au moment de cette review, avec de nouvelles versions publiées toutes les quelques semaines selon la [page des releases GitHub](https://github.com/1Panel-dev/MaxKB/releases)',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de MaxKB dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer MaxKB en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de MaxKB dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer MaxKB en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify Review : plateforme LLMOps open source](/fr/power-local-llm/dify-ai-workflow-builder-review) — une plateforme workflow, RAG et agents plus large pour les équipes voulant plus d\'orchestration intégrée.',
           '[AnythingLLM Review](/fr/power-local-llm/anythingllm-review) — un outil de chat documentaire auto-hébergé plus léger, sous licence MIT.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — une comparaison à trois d\'outils RAG si la couche agent de MaxKB dépasse vos besoins.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alrededor de 22.700 estrellas en GitHub al momento de esta reseña, con nuevas versiones cada pocas semanas según la [página de releases de GitHub](https://github.com/1Panel-dev/MaxKB/releases)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado de la ficha de MaxKB en el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consulta esa página para comparar MaxKB de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento detallado de la ficha de MaxKB en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para comparar MaxKB de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify Review: plataforma LLMOps de código abierto](/es/power-local-llm/dify-ai-workflow-builder-review) — una plataforma más amplia de flujos de trabajo, RAG y agentes para equipos que quieren más orquestación integrada.',
           '[AnythingLLM Review](/es/power-local-llm/anythingllm-review) — una herramienta de chat documental autoalojada más ligera, bajo licencia MIT.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — una comparación de tres herramientas RAG si la capa de agentes de MaxKB es más de lo que necesitas.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cerca de 22.700 estrelas no GitHub no momento desta avaliação, com novas versões lançadas a cada poucas semanas segundo a [página de releases do GitHub](https://github.com/1Panel-dev/MaxKB/releases)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do MaxKB no [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — veja essa página para comparar o MaxKB rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do MaxKB no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o MaxKB rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify Review: plataforma LLMOps de código aberto](/pt/power-local-llm/dify-ai-workflow-builder-review) — uma plataforma mais ampla de fluxo de trabalho, RAG e agentes para equipes que querem mais orquestração integrada.',
           '[AnythingLLM Review](/pt/power-local-llm/anythingllm-review) — uma ferramenta de chat de documentos auto-hospedada mais leve, sob licença MIT.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — uma comparação entre três ferramentas RAG caso a camada de agentes do MaxKB seja mais do que você precisa.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点でGitHubスターは約22,700件。[GitHubのリリースページ](https://github.com/1Panel-dev/MaxKB/releases)によれば数週間ごとに新バージョンをリリース',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)内のMaxKBの項目を深掘りする内容です——他の数十のローカルAIツールとMaxKBを一目で比較するには、そちらのページを参照してください。' },
+          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のMaxKBの項目を深掘りする内容です——他の数十のローカルAIツールとMaxKBを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Difyレビュー：オープンソースLLMOpsプラットフォーム](/ja/power-local-llm/dify-ai-workflow-builder-review) — より多くの統合オーケストレーションを求めるチーム向けの、より広範なワークフロー・RAG・エージェント基盤。',
           '[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review) — MITライセンスの、より軽量なセルフホスト型ドキュメントチャットツール。',
           '[AnythingLLM対PrivateGPT対Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — MaxKBのエージェント層が過剰な場合の、RAGツール3種の比較。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1442,7 +1442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测GitHub星标约22,700个，根据[GitHub发布页面](https://github.com/1Panel-dev/MaxKB/releases)，每隔几周发布一次新版本',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中MaxKB条目的深入版本——请查看该页面，一览MaxKB与其他数十款本地AI工具的对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中MaxKB条目的深入版本——请查看该页面，一览MaxKB与其他数十款本地AI工具的对比。' },
         ],
       },
       overview: {
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify评测：开源LLMOps平台](/zh/power-local-llm/dify-ai-workflow-builder-review) — 面向希望获得更多内置编排能力团队的更广泛工作流、RAG与智能体平台。',
           '[AnythingLLM评测](/zh/power-local-llm/anythingllm-review) — 一款更轻量、基于MIT许可证的自托管文档聊天工具。',
           '[AnythingLLM对比PrivateGPT对比Open WebUI（RAG）](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 如果MaxKB的智能体层超出你的需求，可参考这份三方RAG工具对比。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'حوالي 22,700 نجمة على GitHub وقت كتابة هذه المراجعة، مع إصدارات جديدة كل بضعة أسابيع وفق [صفحة إصدارات GitHub](https://github.com/1Panel-dev/MaxKB/releases)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل MaxKB في [دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة MaxKB بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل MaxKB في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة MaxKB بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Dify: منصة LLMOps مفتوحة المصدر](/ar/power-local-llm/dify-ai-workflow-builder-review) — منصة أوسع لسير العمل وRAG والوكلاء للفرق التي تريد تنسيقًا مدمجًا أكبر.',
           '[مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review) — أداة دردشة مستندات ذاتية الاستضافة أخف وزنًا، برخصة MIT.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة ثلاثية لأدوات RAG إذا كانت طبقة الوكلاء في MaxKB أكثر مما تحتاجه.',
-          '[دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 약 22,700개, [GitHub 릴리스 페이지](https://github.com/1Panel-dev/MaxKB/releases)에 따르면 몇 주마다 새 버전 출시',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 등록된 MaxKB 항목의 심층 버전입니다 — MaxKB를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 MaxKB 항목의 심층 버전입니다 — MaxKB를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2051,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Dify 리뷰: 오픈소스 LLMOps 플랫폼](/ko/power-local-llm/dify-ai-workflow-builder-review) — 더 많은 내장 오케스트레이션을 원하는 팀을 위한 더 폭넓은 워크플로·RAG·에이전트 플랫폼.',
           '[AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) — MIT 라이선스의 더 가벼운 셀프 호스팅 문서 채팅 도구.',
           '[AnythingLLM 대 PrivateGPT 대 Open WebUI(RAG)](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — MaxKB의 에이전트 레이어가 필요 이상인 경우를 위한 세 가지 RAG 도구 비교.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

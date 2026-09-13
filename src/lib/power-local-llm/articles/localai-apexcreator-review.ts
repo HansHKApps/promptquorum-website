@@ -2726,7 +2726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'LocalAI 리뷰(2026):ApexCreator의 오프라인 안드로이드 AI 채팅 앱',
     seoTitle: 'LocalAI(ApexCreator) 리뷰 2026:오프라인 안드로이드 AI 채팅',
     intro:
-      '개발자 [ApexCreator](mailto:info@apexcreators.co.in)가 만든 [LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)은 llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하는 무료 안드로이드 앱으로, 유료 프리미엄 등급을 선택할 수 있습니다. 자체 Google Play 등록 정보에 따르면 PDF, Word, Excel, CSV 파일에 대한 기기 내 벡터 검색 기반 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력, 실시간 성능 텔레메트리를 제공합니다. [ToolNeuron](/power-local-llm/toolneuron-review)과 달리 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 아래의 모든 주장은 독립적인 테스트나 개발자 인터뷰가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다.',
+      '개발자 [ApexCreator](mailto:info@apexcreators.co.in)가 만든 [LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)은 llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하는 무료 안드로이드 앱으로, 유료 프리미엄 등급을 선택할 수 있습니다. 자체 Google Play 등록 정보에 따르면 PDF, Word, Excel, CSV 파일에 대한 기기 내 벡터 검색 기반 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력, 실시간 성능 텔레메트리를 제공합니다. [ToolNeuron](/ko/power-local-llm/toolneuron-review)과 달리 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 아래의 모든 주장은 독립적인 테스트나 개발자 인터뷰가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다.',
     metaDescription:
       'LocalAI(ApexCreator) 리뷰 2026:llama.cpp를 통한 오프라인 AI 채팅, PDF/문서 RAG, 비전 모델을 지원하는 무료 안드로이드 앱, 선택적 프리미엄 등급 제공. 클로즈드 소스 — 등록 정보가 주장하는 내용과 이 리뷰가 확인하지 못한 내용.',
     twitterDescription:
@@ -2750,7 +2750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**LocalAI: Offline AI Chat LLM은 개발자 ApexCreator가 만든 무료 안드로이드 앱으로, llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하며 유료 프리미엄 등급을 선택할 수 있습니다.** 자체 Google Play 등록 정보에 따르면 기기 내 벡터 검색(sqlite-vec)을 이용한 PDF, Word, Excel, CSV 파일 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력을 제공합니다. 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 여기 실린 모든 기술적 주장은 독립적인 감사가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다. 공개 저장소가 있는 오픈소스 대안을 원하는 독자는 대신 [ToolNeuron 리뷰](/power-local-llm/toolneuron-review)를 읽어보시기 바랍니다.',
+      '**LocalAI: Offline AI Chat LLM은 개발자 ApexCreator가 만든 무료 안드로이드 앱으로, llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하며 유료 프리미엄 등급을 선택할 수 있습니다.** 자체 Google Play 등록 정보에 따르면 기기 내 벡터 검색(sqlite-vec)을 이용한 PDF, Word, Excel, CSV 파일 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력을 제공합니다. 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 여기 실린 모든 기술적 주장은 독립적인 감사가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다. 공개 저장소가 있는 오픈소스 대안을 원하는 독자는 대신 [ToolNeuron 리뷰](/ko/power-local-llm/toolneuron-review)를 읽어보시기 바랍니다.',
     quickAnswerTop: {
       en: {
         question: 'Is LocalAI (ApexCreator) worth installing?',
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI 받기',
         content: [
           '**LocalAI: Offline AI Chat LLM은 Google Play에서만 이용할 수 있습니다.**',
-          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)와 함께 보는 자료이며, 이 앱의 자체 항목도 포함되어 있습니다.',
+          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 함께 보는 자료이며, 이 앱의 자체 항목도 포함되어 있습니다.',
         ],
         columns: ['채널', '받기'],
         rows: [
@@ -2848,7 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI란 무엇인가',
         content: [
           '**LocalAI: Offline AI Chat LLM은 자체 Google Play 등록 정보에 따르면 llama.cpp를 통해 GGUF 형식 언어 모델을 기기 내에서 실행하는 안드로이드 앱입니다.** 단순 채팅을 넘어, 등록 정보는 일반적인 오피스 파일 형식에 대한 문서 검색(RAG)과 비전 지원 모델을 설명하며, 이를 단일 목적 챗봇이 아닌 더 넓은 온디바이스 AI 툴킷으로 포지셔닝하고 있습니다.',
-          '이 앱은 ApexCreator라는 이름으로 활동하는 개발자 또는 소규모 스튜디오가 만들었으며, [info@apexcreators.co.in](mailto:info@apexcreators.co.in)으로 연락할 수 있습니다. 이 리뷰는 앱의 공개 Play 스토어 등록 정보와 일반적인 웹 검색 결과에 의존하고 있습니다 — 독립적인 검토를 위한 공개 소스 코드 저장소, 전용 개발자 웹사이트, 개인정보 보호정책 문서를 찾을 수 없었으며, 이는 [ToolNeuron](/power-local-llm/toolneuron-review)과 같은 오픈소스 대안과의 중요한 차이입니다.',
+          '이 앱은 ApexCreator라는 이름으로 활동하는 개발자 또는 소규모 스튜디오가 만들었으며, [info@apexcreators.co.in](mailto:info@apexcreators.co.in)으로 연락할 수 있습니다. 이 리뷰는 앱의 공개 Play 스토어 등록 정보와 일반적인 웹 검색 결과에 의존하고 있습니다 — 독립적인 검토를 위한 공개 소스 코드 저장소, 전용 개발자 웹사이트, 개인정보 보호정책 문서를 찾을 수 없었으며, 이는 [ToolNeuron](/ko/power-local-llm/toolneuron-review)과 같은 오픈소스 대안과의 중요한 차이입니다.',
         ],
       },
       howToGetStarted: {
@@ -2903,7 +2903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호 및 오픈소스 여부',
         content: [
           '**LocalAI는 클로즈드 소스입니다: 이 리뷰에서는 이 앱의 공개 코드 저장소를 찾지 못했습니다.** 등록 정보는 채팅, 문서 RAG, 비전 기능이 기기 내에서 실행된다고 설명하지만, 코드가 공개되지 않았기 때문에 오픈소스 앱처럼 앱의 실제 동작과 이러한 주장을 독립적으로 대조할 수 없습니다.',
-          '이는 전체 코드베이스와 보안 아키텍처가 공개되어 감사 가능한 [ToolNeuron](/power-local-llm/toolneuron-review)과 같은 앱과의 중요한 차이입니다. 독립적인 검증 가능성을 중요하게 여기는 독자는 설치 전에 이를 고려해야 합니다.',
+          '이는 전체 코드베이스와 보안 아키텍처가 공개되어 감사 가능한 [ToolNeuron](/ko/power-local-llm/toolneuron-review)과 같은 앱과의 중요한 차이입니다. 독립적인 검증 가능성을 중요하게 여기는 독자는 설치 전에 이를 고려해야 합니다.',
         ],
         items: [
           '**클로즈드 소스.** 이 앱에 대한 공개 GitHub 저장소나 그에 준하는 것을 찾지 못했습니다. 기능 및 개인정보 보호 관련 주장은 오직 Play 스토어 등록 정보에만 근거합니다.',
@@ -2954,21 +2954,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '핵심 차이': '등록 정보에 따른 문서 RAG 및 비전 모델 지원이지만 독립적으로 검증할 수 없음',
           },
           {
-            '앱': '[ToolNeuron](/power-local-llm/toolneuron-review)',
+            '앱': '[ToolNeuron](/ko/power-local-llm/toolneuron-review)',
             '플랫폼': '안드로이드 전용',
             '가격': '무료, 오픈소스(MIT)',
             '오픈소스': '예 — 공개 GitHub 저장소',
             '핵심 차이': '비슷하게 폭넓은 기능(RAG, 음성, 플러그인), 완전히 감사 가능한 소스 코드',
           },
           {
-            '앱': '[Layla](/power-local-llm/layla-review)',
+            '앱': '[Layla](/ko/power-local-llm/layla-review)',
             '플랫폼': '안드로이드 및 iOS',
             '가격': '일회성 구매 19.99달러, 추가 인앱 등급',
             '오픈소스': '아니오 — 클로즈드 소스',
             '핵심 차이': '페르소나 및 롤플레이 중심, 선택적 옵트인 클라우드 모드',
           },
           {
-            '앱': '[RikkaHub](/power-local-llm/rikkahub-review)',
+            '앱': '[RikkaHub](/ko/power-local-llm/rikkahub-review)',
             '플랫폼': '안드로이드 전용',
             '가격': '무료, 오픈소스',
             '오픈소스': '예',
@@ -2991,7 +2991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI를 사용하지 말아야 하는 사람',
         items: [
           '**아이폰, 데스크톱, 웹 사용자.** 이 앱은 안드로이드 전용이며 Google Play를 통해서만 배포됩니다.',
-          '**앱의 소스 코드를 직접 감사하고 싶은 독자.** 이 리뷰에서는 공개 저장소를 찾지 못했습니다. [ToolNeuron](/power-local-llm/toolneuron-review) 같은 오픈소스 대안은 독립적인 코드 검토를 허용합니다.',
+          '**앱의 소스 코드를 직접 감사하고 싶은 독자.** 이 리뷰에서는 공개 저장소를 찾지 못했습니다. [ToolNeuron](/ko/power-local-llm/toolneuron-review) 같은 오픈소스 대안은 독립적인 코드 검토를 허용합니다.',
           '**설치 전에 상세하고 독립적으로 검토 가능한 개인정보 보호정책이 필요한 독자.** 이 리뷰는 Play 스토어 자체 데이터 안전 섹션 외에 그런 것을 찾지 못했습니다.',
           '**앱 스토어 평점을 크게 중요시하는 독자.** 이 리뷰의 조사 시점 기준 181개 평가 중 5점 만점에 3.0점으로, 여기서 비교한 여러 대안보다 낮은 평점입니다.',
         ],
@@ -3022,7 +3022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LocalAI는 ToolNeuron과 비교해 어떤가요?',
-            a: '[ToolNeuron](/power-local-llm/toolneuron-review)은 무료이자 오픈소스이며, 보안 아키텍처를 문서화한 공개 GitHub 저장소가 있습니다. LocalAI(ApexCreator)는 등록 정보에 따르면 문서 RAG와 비전 모델 지원을 포함해 비슷하게 폭넓은 기능을 제공하지만 클로즈드 소스이며, 이 리뷰에서는 공개 저장소를 찾지 못했습니다. 독립적으로 감사 가능한 소스 코드가 중요한지에 따라 선택하세요.',
+            a: '[ToolNeuron](/ko/power-local-llm/toolneuron-review)은 무료이자 오픈소스이며, 보안 아키텍처를 문서화한 공개 GitHub 저장소가 있습니다. LocalAI(ApexCreator)는 등록 정보에 따르면 문서 RAG와 비전 모델 지원을 포함해 비슷하게 폭넓은 기능을 제공하지만 클로즈드 소스이며, 이 리뷰에서는 공개 저장소를 찾지 못했습니다. 독립적으로 감사 가능한 소스 코드가 중요한지에 따라 선택하세요.',
           },
         ],
       },
@@ -3032,7 +3032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'LocalAI: Offline AI Chat LLM은 자체 Google Play 등록 정보에 따르면 무료 안드로이드 앱에 실제로 폭넓은 기능을 담고 있습니다: llama.cpp를 통한 온디바이스 채팅, 일반적인 오피스 파일 형식에 대한 문서 RAG, 비전 지원 모델 지원, 구조화된 출력 — 단순 채팅 클라이언트를 훨씬 넘어서는 기능입니다.',
           '이 리뷰가 신중한 태도를 유지하는 이유는, 이 모든 주장이 개발자 자체의 스토어 등록 정보에 근거한다는 점입니다: 이 리뷰는 공개 소스 코드, 전용 개발자 웹사이트, 상세한 개인정보 보호정책을 찾지 못했고 이를 대조할 방법이 없었습니다. 이는 동등한 주장을 공개된 코드로 검증할 수 있는 ToolNeuron 같은 오픈소스 대안과 비교했을 때 실질적인 공백입니다.',
-          '무료로 기능이 풍부한 안드로이드 AI 앱을 시도해 보고 싶고 소스 코드 투명성을 크게 중요시하지 않는 독자라면 합리적으로 시도해 볼 수 있습니다. 앱이 로컬 데이터로 실제로 무엇을 하는지 독립적으로 검증하고 싶은 독자는 대신 소스를 공개하는 [ToolNeuron](/power-local-llm/toolneuron-review)이나 [RikkaHub](/power-local-llm/rikkahub-review)로 시작해야 합니다.',
+          '무료로 기능이 풍부한 안드로이드 AI 앱을 시도해 보고 싶고 소스 코드 투명성을 크게 중요시하지 않는 독자라면 합리적으로 시도해 볼 수 있습니다. 앱이 로컬 데이터로 실제로 무엇을 하는지 독립적으로 검증하고 싶은 독자는 대신 소스를 공개하는 [ToolNeuron](/ko/power-local-llm/toolneuron-review)이나 [RikkaHub](/ko/power-local-llm/rikkahub-review)로 시작해야 합니다.',
         ],
       },
       sources: {
@@ -3047,11 +3047,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[ToolNeuron 리뷰](/power-local-llm/toolneuron-review) — 공개 GitHub 저장소가 있는, 비슷하게 폭넓은 무료 오픈소스 안드로이드 대안.',
-          '[Layla 리뷰](/power-local-llm/layla-review) — 선택적 클라우드 모드가 있는 유료 크로스플랫폼 온디바이스 동반 앱.',
-          '[RikkaHub 리뷰](/power-local-llm/rikkahub-review) — 또 다른 무료 오픈소스 안드로이드 로컬 AI 채팅 앱.',
-          '[PocketPal AI 리뷰](/power-local-llm/pocketpal-ai-review) — iOS와 일부 안드로이드를 지원하는 무료 오픈소스 로컬 AI 앱.',
-          '[전체 로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구를 더 광범위하게 정리한 디렉터리.',
+          '[ToolNeuron 리뷰](/ko/power-local-llm/toolneuron-review) — 공개 GitHub 저장소가 있는, 비슷하게 폭넓은 무료 오픈소스 안드로이드 대안.',
+          '[Layla 리뷰](/ko/power-local-llm/layla-review) — 선택적 클라우드 모드가 있는 유료 크로스플랫폼 온디바이스 동반 앱.',
+          '[RikkaHub 리뷰](/ko/power-local-llm/rikkahub-review) — 또 다른 무료 오픈소스 안드로이드 로컬 AI 채팅 앱.',
+          '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — iOS와 일부 안드로이드를 지원하는 무료 오픈소스 로컬 AI 앱.',
+          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구를 더 광범위하게 정리한 디렉터리.',
         ],
       },
     },

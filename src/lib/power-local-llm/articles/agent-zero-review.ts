@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-Agenten-Zusammenarbeit: jeder Agent kann untergeordnete Agenten starten, um Recherche-, Coding- oder Review-Arbeit zu delegieren',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero hat sich seit seiner ursprünglichen Beschreibung als minimaler Coding-Agent deutlich verändert — die aktuelle Version bringt einen vollständigen Linux-Desktop, Browser-Automatisierung und gemeinsame Dokumentbearbeitung mit. Im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) sieht man auf einen Blick, wie Agent Zero im Vergleich zu anderen Agenten-Frameworks abschneidet.' },
+          { type: 'note', text: 'Agent Zero hat sich seit seiner ursprünglichen Beschreibung als minimaler Coding-Agent deutlich verändert — die aktuelle Version bringt einen vollständigen Linux-Desktop, Browser-Automatisierung und gemeinsame Dokumentbearbeitung mit. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sieht man auf einen Blick, wie Agent Zero im Vergleich zu anderen Agenten-Frameworks abschneidet.' },
         ],
       },
       history: {
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Das GitHub-Repository von Agent Zero wurde im Juni 2024 unter dem ursprünglichen Besitzer `frdel` erstellt und gewann schnell eine Anhängerschaft als leichtgewichtiger, transparenter Allzweck-Agent — aufgebaut um einen minimalen Kern und ein Delegationsmuster mit untergeordneten Agenten statt um einen großen, starren Funktionsumfang.**",
           "Das Repository wurde inzwischen auf die GitHub-Organisation `agent0ai` übertragen: Wer die alte URL `frdel/agent-zero` aufruft, erhält heute eine HTTP-Weiterleitung zu [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero). Das Projekt wird von einem Unternehmen betreut, Agent Zero, s.r.o. (einer tschechischen Gesellschaft mit beschränkter Haftung), das in der MIT-Lizenzdatei des Repositorys als Rechteinhaber genannt ist, bleibt dabei aber vollständig quelloffen unter eben dieser Lizenz.",
           "Der Umfang des Projekts ist im Zuge dieser Übertragung erheblich gewachsen. Während die ursprüngliche Ausrichtung einen minimalen Agenten mit Coding-Fähigkeiten betonte, liefert die aktuelle Version einen Docker-basierten Linux-Desktop, den der Agent direkt bedienen kann, einen Browser mit DOM-Annotation und -Steuerung, Live-Co-Editing von Markdown- und Office-Dokumenten, einen Plugin Hub mit über 100 Community-Erweiterungen sowie einen begleitenden Desktop-Installer (A0 Launcher) und Terminal-Installer (A0 Install).",
-          "Damit steht Agent Zero anders da als die meisten anderen Frameworks dieser Serie. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review) und [AutoGen](/power-local-llm/autogen-review) sind Entwicklerbibliotheken, die man in die eigene Python-Anwendung importiert. Agent Zero liefert dagegen ein lauffähiges, selbst gehostetes Produkt mit einer Web-UI, die man im Browser öffnet — darin näher an [Leon AI](/power-local-llm/leon-ai-review) oder [SuperAGI](/power-local-llm/superagi-review) als an einer code-first-Orchestrierungsbibliothek.",
+          "Damit steht Agent Zero anders da als die meisten anderen Frameworks dieser Serie. [LangChain](/de/power-local-llm/langchain-review), [CrewAI](/de/power-local-llm/crewai-review) und [AutoGen](/de/power-local-llm/autogen-review) sind Entwicklerbibliotheken, die man in die eigene Python-Anwendung importiert. Agent Zero liefert dagegen ein lauffähiges, selbst gehostetes Produkt mit einer Web-UI, die man im Browser öffnet — darin näher an [Leon AI](/de/power-local-llm/leon-ai-review) oder [SuperAGI](/de/power-local-llm/superagi-review) als an einer code-first-Orchestrierungsbibliothek.",
         ],
         itemHeadings: true,
         rows: [
@@ -447,8 +447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Meide Agent Zero, wenn',
             list: [
-              'Du eine schlanke Python- oder JavaScript-Bibliothek brauchst, um LLM-Aufrufe innerhalb deiner eigenen Anwendung zu komponieren — dafür sind [LangChain](/power-local-llm/langchain-review) oder [LangGraph](/power-local-llm/langgraph-review) gebaut und dokumentiert',
-              'Du rollenbasierte Multi-Agenten-Koordination mit einer definierten Crew-Struktur als Kernabstraktion brauchst — [CrewAI](/power-local-llm/crewai-review) ist genau für dieses Muster gebaut',
+              'Du eine schlanke Python- oder JavaScript-Bibliothek brauchst, um LLM-Aufrufe innerhalb deiner eigenen Anwendung zu komponieren — dafür sind [LangChain](/de/power-local-llm/langchain-review) oder [LangGraph](/de/power-local-llm/langgraph-review) gebaut und dokumentiert',
+              'Du rollenbasierte Multi-Agenten-Koordination mit einer definierten Crew-Struktur als Kernabstraktion brauchst — [CrewAI](/de/power-local-llm/crewai-review) ist genau für dieses Muster gebaut',
               'Du Docker nicht betreiben kannst oder willst — Agent Zero hat keinen dokumentierten containerlosen Installationsweg',
               'Du Enterprise-Support oder ein SLA brauchst — zum Zeitpunkt dieses Reviews hat Agent Zero keine bestätigte kommerzielle Support-Stufe',
             ],
@@ -461,9 +461,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Agent Zero meiden, wenn Docker keine Option ist, wenn eine einbettbare Code-Bibliothek statt einer eigenständigen Anwendung benötigt wird, oder wenn ein dokumentiertes, ausgereiftes Multi-Agenten-Framework mit stabilem API-Vertrag gebraucht wird.**",
         items: [
           'Ein Team ohne Docker-Zugang oder mit Richtlinien gegen das Ausführen von Drittanbieter-Containern mit Desktop- und Browser-Automatisierungsfähigkeit',
-          'Ein Team, das eine eigene LLM-Anwendung baut und eine Orchestrierungsbibliothek in bestehenden Code importieren muss — eine Bibliothek wie [LangChain](/power-local-llm/langchain-review) oder [Semantic Kernel](/power-local-llm/semantic-kernel-review) passt hier direkter',
+          'Ein Team, das eine eigene LLM-Anwendung baut und eine Orchestrierungsbibliothek in bestehenden Code importieren muss — eine Bibliothek wie [LangChain](/de/power-local-llm/langchain-review) oder [Semantic Kernel](/de/power-local-llm/semantic-kernel-review) passt hier direkter',
           'Ein Team, das für Automatisierungs-Pipelines einen langfristigen, versionierten API-Vertrag braucht — Agent Zero hat seinen Funktionsumfang zwischen der ursprünglichen minimalen Agenten-Ausrichtung und dem heutigen Desktop-und-Browser-Funktionsumfang erheblich verändert und veröffentlicht weiterhin häufig neue Releases (v2.12, Stand September 2026)',
-          'Ein Team, das speziell persistentes, selbstbearbeitendes Langzeit-Agentengedächtnis als ausgereiftes, dokumentiertes Kernfeature braucht — [Letta](/power-local-llm/letta-review) ist genau dafür gebaut und dokumentiert',
+          'Ein Team, das speziell persistentes, selbstbearbeitendes Langzeit-Agentengedächtnis als ausgereiftes, dokumentiertes Kernfeature braucht — [Letta](/de/power-local-llm/letta-review) ist genau dafür gebaut und dokumentiert',
           'Agent Zero stattdessen nutzen, wenn die zentrale Anforderung ein selbst gehosteter Agent ist, der einen echten Desktop, Browser und Dokumente bedienen kann, und der Betrieb in Docker kein Problem darstellt',
         ],
         note: "Agent Zero wird aktiv gepflegt, mit einer öffentlichen Roadmap häufiger getaggter Releases bis v2.12 (September 2026) — die hier dokumentierten Umfangsänderungen können sich also bis zum nächsten Besuch weiterentwickeln. Vor Produktionseinsatz das aktuelle Repository prüfen, bevor man sich auf ein bestimmtes Feature verlässt.",
@@ -475,10 +475,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Interface', 'Lizenz', 'Träger', 'Am besten für'],
         rows: [
           { 'Tool': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'Interface': 'Web-UI + Docker', 'Lizenz': 'MIT', 'Träger': 'Agent Zero, s.r.o. (Unternehmen)', 'Am besten für': 'Selbst gehosteter Desktop+Browser-Agent' },
-          { 'Tool': '[Leon AI](/power-local-llm/leon-ai-review)', 'Interface': 'Sprache/Text-App + CLI', 'Lizenz': 'MIT', 'Träger': 'Louis Grenard (unabhängig)', 'Am besten für': 'Selbst gehosteter Assistent' },
-          { 'Tool': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Web-GUI-Konsole', 'Lizenz': 'MIT', 'Träger': 'TransformerOptimus (unabhängig)', 'Am besten für': 'GUI-basierte autonome Agenten' },
-          { 'Tool': '[CrewAI](/power-local-llm/crewai-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT', 'Träger': 'CrewAI, Inc. (VC-finanziert)', 'Am besten für': 'Rollenbasierte Agenten-Crews' },
-          { 'Tool': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT / CC BY 4.0', 'Träger': 'Microsoft (Wartungsmodus)', 'Am besten für': 'Nur bestehende AutoGen-Apps' },
+          { 'Tool': '[Leon AI](/de/power-local-llm/leon-ai-review)', 'Interface': 'Sprache/Text-App + CLI', 'Lizenz': 'MIT', 'Träger': 'Louis Grenard (unabhängig)', 'Am besten für': 'Selbst gehosteter Assistent' },
+          { 'Tool': '[SuperAGI](/de/power-local-llm/superagi-review)', 'Interface': 'Web-GUI-Konsole', 'Lizenz': 'MIT', 'Träger': 'TransformerOptimus (unabhängig)', 'Am besten für': 'GUI-basierte autonome Agenten' },
+          { 'Tool': '[CrewAI](/de/power-local-llm/crewai-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT', 'Träger': 'CrewAI, Inc. (VC-finanziert)', 'Am besten für': 'Rollenbasierte Agenten-Crews' },
+          { 'Tool': '[AutoGen](/de/power-local-llm/autogen-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT / CC BY 4.0', 'Träger': 'Microsoft (Wartungsmodus)', 'Am besten für': 'Nur bestehende AutoGen-Apps' },
         ],
       },
       commonMistakes: {
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 2: Erwarten, dass Agent Zero wie eine importierbare Python-Bibliothek funktioniert',
-            content: "Agent Zero ist eine selbst gehostete, Docker-basierte Anwendung mit Web-UI, kein Paket, das man per `pip install` in eine bestehende Codebasis einbindet. Für eine code-first-Bibliothek, mit der man Aufrufe komponiert, sind [LangChain](/power-local-llm/langchain-review) oder [CrewAI](/power-local-llm/crewai-review) gebaut und dokumentiert.",
+            content: "Agent Zero ist eine selbst gehostete, Docker-basierte Anwendung mit Web-UI, kein Paket, das man per `pip install` in eine bestehende Codebasis einbindet. Für eine code-first-Bibliothek, mit der man Aufrufe komponiert, sind [LangChain](/de/power-local-llm/langchain-review) oder [CrewAI](/de/power-local-llm/crewai-review) gebaut und dokumentiert.",
           },
           {
             title: 'Fehler 3: Die alte frdel/agent-zero-URL mit dem aktuellen Repository verwechseln',
@@ -531,11 +531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Leon AI Review: Funktionen, Preise, Alternativen](/power-local-llm/leon-ai-review) — ein weiteres selbst gehostetes Framework für einen persönlichen Agenten, zum Vergleich mit dem Desktop-und-Browser-Fokus von Agent Zero.',
-          '[SuperAGI Review: Funktionen, Preise, Alternativen](/power-local-llm/superagi-review) — ein weiteres GUI-basiertes, unabhängiges Open-Source-Projekt für autonome Agenten.',
-          '[CrewAI Review: Funktionen, Preise, Alternativen](/power-local-llm/crewai-review) — ein code-first, rollenbasiertes Multi-Agenten-Framework für Teams, die Orchestrierung in ihre eigene Anwendung einbetten wollen, statt eine eigenständige Docker-App zu betreiben.',
-          '[AutoGen Review: Funktionen, Preise, Alternativen](/power-local-llm/autogen-review) — das Multi-Agenten-Konversationsframework von Microsoft Research, inzwischen im Wartungsmodus, zum historischen Vergleich.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Agent Zero unter den Agenten-Frameworks.',
+          '[Leon AI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/leon-ai-review) — ein weiteres selbst gehostetes Framework für einen persönlichen Agenten, zum Vergleich mit dem Desktop-und-Browser-Fokus von Agent Zero.',
+          '[SuperAGI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/superagi-review) — ein weiteres GUI-basiertes, unabhängiges Open-Source-Projekt für autonome Agenten.',
+          '[CrewAI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein code-first, rollenbasiertes Multi-Agenten-Framework für Teams, die Orchestrierung in ihre eigene Anwendung einbetten wollen, statt eine eigenständige Docker-App zu betreiben.',
+          '[AutoGen Review: Funktionen, Preise, Alternativen](/de/power-local-llm/autogen-review) — das Multi-Agenten-Konversationsframework von Microsoft Research, inzwischen im Wartungsmodus, zum historischen Vergleich.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Agent Zero unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Coopération multi-agents : tout agent peut créer des agents subordonnés pour déléguer la recherche, le codage ou la relecture",
         ],
         callouts: [
-          { type: 'note', text: "Agent Zero a beaucoup évolué depuis sa description initiale d'agent de codage minimaliste — la version actuelle ajoute un bureau Linux complet, l'automatisation du navigateur et la co-édition de documents. Voir le [Répertoire des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour situer Agent Zero par rapport aux autres frameworks d'agents en un coup d'œil." },
+          { type: 'note', text: "Agent Zero a beaucoup évolué depuis sa description initiale d'agent de codage minimaliste — la version actuelle ajoute un bureau Linux complet, l'automatisation du navigateur et la co-édition de documents. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer Agent Zero par rapport aux autres frameworks d'agents en un coup d'œil." },
         ],
       },
       history: {
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Le dépôt GitHub d'Agent Zero a été créé en juin 2024 sous le compte du mainteneur d'origine `frdel`, et a rapidement gagné en popularité en tant qu'agent autonome généraliste léger et transparent — construit autour d'un noyau minimal et d'un schéma de délégation à des agents subordonnés plutôt qu'autour d'un ensemble de fonctionnalités rigide et étendu.**",
           "Le dépôt a depuis été transféré vers l'organisation GitHub `agent0ai` : accéder à l'ancienne URL `frdel/agent-zero` déclenche désormais une redirection HTTP vers [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero). Le projet est maintenu par une entreprise, Agent Zero, s.r.o. (une société à responsabilité limitée tchèque), nommée comme titulaire des droits d'auteur dans le fichier de licence MIT du dépôt, tout en restant entièrement open source sous cette même licence.",
           "L'ampleur du projet a considérablement augmenté parallèlement à ce transfert. Là où le positionnement initial mettait l'accent sur un agent minimaliste doté de capacités de codage, la version actuelle livre un bureau Linux basé sur Docker que l'agent peut piloter directement, un navigateur avec annotation et contrôle au niveau du DOM, la co-édition en direct de documents Markdown et bureautiques, un Plugin Hub avec plus de 100 extensions communautaires, ainsi qu'un installeur de bureau compagnon (A0 Launcher) et un installeur en ligne de commande (A0 Install).",
-          "Cela place Agent Zero dans une position différente de la plupart des autres frameworks de cette série. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review) et [AutoGen](/power-local-llm/autogen-review) sont des bibliothèques de développement que l'on importe dans sa propre application Python. Agent Zero se présente comme un produit exécutable et auto-hébergé, avec une interface web que l'on ouvre dans un navigateur — plus proche à cet égard de [Leon AI](/power-local-llm/leon-ai-review) ou de [SuperAGI](/power-local-llm/superagi-review) que d'une bibliothèque d'orchestration axée code.",
+          "Cela place Agent Zero dans une position différente de la plupart des autres frameworks de cette série. [LangChain](/fr/power-local-llm/langchain-review), [CrewAI](/fr/power-local-llm/crewai-review) et [AutoGen](/fr/power-local-llm/autogen-review) sont des bibliothèques de développement que l'on importe dans sa propre application Python. Agent Zero se présente comme un produit exécutable et auto-hébergé, avec une interface web que l'on ouvre dans un navigateur — plus proche à cet égard de [Leon AI](/fr/power-local-llm/leon-ai-review) ou de [SuperAGI](/fr/power-local-llm/superagi-review) que d'une bibliothèque d'orchestration axée code.",
         ],
         itemHeadings: true,
         rows: [
@@ -716,8 +716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez Agent Zero si',
             list: [
-              'Vous avez besoin d\'une bibliothèque Python ou JavaScript légère pour composer des appels LLM au sein de votre propre application — [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) sont conçus et documentés précisément pour cela',
-              "Vous avez besoin d'une coordination multi-agents basée sur des rôles, avec une structure d'équipe définie comme abstraction centrale — [CrewAI](/power-local-llm/crewai-review) est spécifiquement conçu pour ce schéma",
+              'Vous avez besoin d\'une bibliothèque Python ou JavaScript légère pour composer des appels LLM au sein de votre propre application — [LangChain](/fr/power-local-llm/langchain-review) ou [LangGraph](/fr/power-local-llm/langgraph-review) sont conçus et documentés précisément pour cela',
+              "Vous avez besoin d'une coordination multi-agents basée sur des rôles, avec une structure d'équipe définie comme abstraction centrale — [CrewAI](/fr/power-local-llm/crewai-review) est spécifiquement conçu pour ce schéma",
               "Vous ne pouvez pas ou ne voulez pas exécuter Docker — Agent Zero ne dispose d'aucun chemin d'installation documenté sans conteneur",
               "Vous avez besoin d'un support entreprise ou d'un SLA — à ce jour, Agent Zero ne propose aucune offre de support commercial confirmée",
             ],
@@ -730,9 +730,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Évitez Agent Zero lorsque Docker n'est pas envisageable, lorsque vous avez besoin d'une bibliothèque de code intégrable plutôt que d'une application autonome, ou lorsque vous avez besoin d'un framework multi-agent documenté, mature, avec un contrat d'API stable.**",
         items: [
           "Une équipe sans accès à Docker ou soumise à des politiques interdisant l'exécution de conteneurs tiers dotés de capacités d'automatisation de bureau et de navigateur",
-          "Une équipe qui développe une application LLM sur mesure et doit importer une bibliothèque d'orchestration dans du code existant — une bibliothèque comme [LangChain](/power-local-llm/langchain-review) ou [Semantic Kernel](/power-local-llm/semantic-kernel-review) convient plus directement",
+          "Une équipe qui développe une application LLM sur mesure et doit importer une bibliothèque d'orchestration dans du code existant — une bibliothèque comme [LangChain](/fr/power-local-llm/langchain-review) ou [Semantic Kernel](/fr/power-local-llm/semantic-kernel-review) convient plus directement",
           "Une équipe qui a besoin d'un contrat d'API stable et versionné sur le long terme pour des pipelines d'automatisation — Agent Zero a considérablement changé de périmètre entre son positionnement initial d'agent minimaliste et son ensemble actuel de fonctionnalités bureau-et-navigateur, et continue de publier des versions fréquentes (v2.12 en date de septembre 2026)",
-          "Une équipe qui a spécifiquement besoin d'une mémoire d'agent persistante et auto-modifiable sur le long terme, comme fonctionnalité centrale mature et documentée — [Letta](/power-local-llm/letta-review) est conçu et documenté précisément pour cela",
+          "Une équipe qui a spécifiquement besoin d'une mémoire d'agent persistante et auto-modifiable sur le long terme, comme fonctionnalité centrale mature et documentée — [Letta](/fr/power-local-llm/letta-review) est conçu et documenté précisément pour cela",
           "Utilisez plutôt Agent Zero lorsque l'exigence déterminante est un agent auto-hébergé capable de piloter un véritable bureau, un navigateur et des documents, et que vous êtes à l'aise avec son exécution dans Docker",
         ],
         note: "Agent Zero est activement maintenu, avec une feuille de route publique de versions taguées fréquentes jusqu'à v2.12 (septembre 2026), si bien que les évolutions de périmètre documentées ici peuvent encore bouger avant votre prochaine visite — vérifiez le dépôt en direct avant de dépendre d'une fonctionnalité précise en production.",
@@ -744,10 +744,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Outil', 'Interface', 'Licence', 'Éditeur', 'Idéal pour'],
         rows: [
           { 'Outil': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'Interface': 'Interface web + Docker', 'Licence': 'MIT', 'Éditeur': 'Agent Zero, s.r.o. (entreprise)', 'Idéal pour': 'Agent bureau + navigateur auto-hébergé' },
-          { 'Outil': '[Leon AI](/power-local-llm/leon-ai-review)', 'Interface': 'App voix/texte + CLI', 'Licence': 'MIT', 'Éditeur': 'Louis Grenard (indépendant)', 'Idéal pour': 'Assistant personnel auto-hébergé' },
-          { 'Outil': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Console web graphique', 'Licence': 'MIT', 'Éditeur': 'TransformerOptimus (indépendant)', 'Idéal pour': 'Agents autonomes via interface graphique' },
-          { 'Outil': '[CrewAI](/power-local-llm/crewai-review)', 'Interface': 'Code Python', 'Licence': 'MIT', 'Éditeur': 'CrewAI, Inc. (financé par VC)', 'Idéal pour': "Équipes d'agents basées sur des rôles" },
-          { 'Outil': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Code Python', 'Licence': 'MIT / CC BY 4.0', 'Éditeur': 'Microsoft (mode maintenance)', 'Idéal pour': 'Applis AutoGen existantes uniquement' },
+          { 'Outil': '[Leon AI](/fr/power-local-llm/leon-ai-review)', 'Interface': 'App voix/texte + CLI', 'Licence': 'MIT', 'Éditeur': 'Louis Grenard (indépendant)', 'Idéal pour': 'Assistant personnel auto-hébergé' },
+          { 'Outil': '[SuperAGI](/fr/power-local-llm/superagi-review)', 'Interface': 'Console web graphique', 'Licence': 'MIT', 'Éditeur': 'TransformerOptimus (indépendant)', 'Idéal pour': 'Agents autonomes via interface graphique' },
+          { 'Outil': '[CrewAI](/fr/power-local-llm/crewai-review)', 'Interface': 'Code Python', 'Licence': 'MIT', 'Éditeur': 'CrewAI, Inc. (financé par VC)', 'Idéal pour': "Équipes d'agents basées sur des rôles" },
+          { 'Outil': '[AutoGen](/fr/power-local-llm/autogen-review)', 'Interface': 'Code Python', 'Licence': 'MIT / CC BY 4.0', 'Éditeur': 'Microsoft (mode maintenance)', 'Idéal pour': 'Applis AutoGen existantes uniquement' },
         ],
       },
       commonMistakes: {
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: "Erreur 2 : s'attendre à ce qu'Agent Zero fonctionne comme une bibliothèque Python importable",
-            content: "Agent Zero est une application auto-hébergée, basée sur Docker, avec une interface web — pas un paquet que l'on installe via `pip install` dans une base de code existante. Pour une bibliothèque axée code que l'on compose par appels, [LangChain](/power-local-llm/langchain-review) ou [CrewAI](/power-local-llm/crewai-review) sont conçus et documentés pour cela.",
+            content: "Agent Zero est une application auto-hébergée, basée sur Docker, avec une interface web — pas un paquet que l'on installe via `pip install` dans une base de code existante. Pour une bibliothèque axée code que l'on compose par appels, [LangChain](/fr/power-local-llm/langchain-review) ou [CrewAI](/fr/power-local-llm/crewai-review) sont conçus et documentés pour cela.",
           },
           {
             title: "Erreur 3 : confondre l'ancienne URL frdel/agent-zero avec le dépôt actuel",
@@ -800,11 +800,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          "[Avis Leon AI : fonctionnalités, tarifs, alternatives](/power-local-llm/leon-ai-review) — un autre framework d'agent personnel auto-hébergé, à comparer avec l'orientation bureau-et-navigateur d'Agent Zero.",
-          '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/power-local-llm/superagi-review) — un autre projet d\'agent autonome open source indépendant, basé sur une interface graphique.',
-          "[Avis CrewAI : fonctionnalités, tarifs, alternatives](/power-local-llm/crewai-review) — un framework multi-agent axé code et basé sur des rôles, pour les équipes qui veulent intégrer l'orchestration dans leur propre application plutôt que d'exécuter une application Docker autonome.",
-          '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/power-local-llm/autogen-review) — le framework de conversation multi-agent de Microsoft Research, désormais en mode maintenance, à titre de comparaison historique.',
-          "[Répertoire des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d'Agent Zero parmi les frameworks d'agents.",
+          "[Avis Leon AI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/leon-ai-review) — un autre framework d'agent personnel auto-hébergé, à comparer avec l'orientation bureau-et-navigateur d'Agent Zero.",
+          '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/superagi-review) — un autre projet d\'agent autonome open source indépendant, basé sur une interface graphique.',
+          "[Avis CrewAI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agent axé code et basé sur des rôles, pour les équipes qui veulent intégrer l'orchestration dans leur propre application plutôt que d'exécuter une application Docker autonome.",
+          '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/autogen-review) — le framework de conversation multi-agent de Microsoft Research, désormais en mode maintenance, à titre de comparaison historique.',
+          "[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d'Agent Zero parmi les frameworks d'agents.",
         ],
       },
     },
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cooperación multiagente: cualquier agente puede crear agentes subordinados para delegar investigación, código o revisión',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero ha cambiado de forma significativa desde su descripción original como agente de código minimalista — la versión actual añade un escritorio Linux completo, automatización de navegador y coedición de documentos. Consulta el [Directorio de software LLM local](/power-local-llm/local-llm-software-directory) para ver de un vistazo cómo se compara Agent Zero con otros frameworks de agentes.' },
+          { type: 'note', text: 'Agent Zero ha cambiado de forma significativa desde su descripción original como agente de código minimalista — la versión actual añade un escritorio Linux completo, automatización de navegador y coedición de documentos. Consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para ver de un vistazo cómo se compara Agent Zero con otros frameworks de agentes.' },
         ],
       },
       history: {
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**El repositorio de GitHub de Agent Zero se creó en junio de 2024 bajo la cuenta del propietario original `frdel`, y rápidamente ganó seguidores como agente autónomo de propósito general, ligero y transparente — construido en torno a un núcleo mínimo y un patrón de delegación a agentes subordinados, en lugar de un conjunto de funciones grande y rígido.**",
           "Desde entonces, el repositorio se ha transferido a la organización de GitHub `agent0ai`: al acceder a la antigua URL `frdel/agent-zero` ahora se recibe una redirección HTTP hacia [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero). El proyecto está mantenido por una empresa, Agent Zero, s.r.o. (una entidad checa de responsabilidad limitada), designada como titular de los derechos de autor en el archivo de licencia MIT del repositorio, aunque sigue siendo completamente de código abierto bajo esa misma licencia.",
           "El alcance del proyecto ha crecido considerablemente junto con esa transferencia. Mientras que el planteamiento original hacía hincapié en un agente minimalista con capacidad de codificación, la versión actual incluye un escritorio Linux basado en Docker que el agente puede operar directamente, un navegador con anotación y control a nivel de DOM, coedición en vivo de documentos Markdown y de ofimática, un Plugin Hub con más de 100 extensiones de la comunidad, y un instalador de escritorio complementario (A0 Launcher) y un instalador de terminal (A0 Install).",
-          "Esto sitúa a Agent Zero en una posición distinta a la de la mayoría de los demás frameworks de esta serie. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review) y [AutoGen](/power-local-llm/autogen-review) son bibliotecas para desarrolladores que se importan dentro de tu propia aplicación Python. Agent Zero se distribuye como un producto ejecutable y autoalojado, con una interfaz web que se abre en el navegador — en ese sentido, más cercano a [Leon AI](/power-local-llm/leon-ai-review) o [SuperAGI](/power-local-llm/superagi-review) que a una biblioteca de orquestación orientada al código.",
+          "Esto sitúa a Agent Zero en una posición distinta a la de la mayoría de los demás frameworks de esta serie. [LangChain](/es/power-local-llm/langchain-review), [CrewAI](/es/power-local-llm/crewai-review) y [AutoGen](/es/power-local-llm/autogen-review) son bibliotecas para desarrolladores que se importan dentro de tu propia aplicación Python. Agent Zero se distribuye como un producto ejecutable y autoalojado, con una interfaz web que se abre en el navegador — en ese sentido, más cercano a [Leon AI](/es/power-local-llm/leon-ai-review) o [SuperAGI](/es/power-local-llm/superagi-review) que a una biblioteca de orquestación orientada al código.",
         ],
         itemHeadings: true,
         rows: [
@@ -985,8 +985,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita Agent Zero si',
             list: [
-              'Necesitas una biblioteca ligera de Python o JavaScript para componer llamadas a un LLM dentro de tu propia aplicación — [LangChain](/power-local-llm/langchain-review) o [LangGraph](/power-local-llm/langgraph-review) están construidos y documentados justamente para eso',
-              'Necesitas coordinación multiagente basada en roles con una estructura de equipo definida como abstracción central — [CrewAI](/power-local-llm/crewai-review) está diseñado específicamente para ese patrón',
+              'Necesitas una biblioteca ligera de Python o JavaScript para componer llamadas a un LLM dentro de tu propia aplicación — [LangChain](/es/power-local-llm/langchain-review) o [LangGraph](/es/power-local-llm/langgraph-review) están construidos y documentados justamente para eso',
+              'Necesitas coordinación multiagente basada en roles con una estructura de equipo definida como abstracción central — [CrewAI](/es/power-local-llm/crewai-review) está diseñado específicamente para ese patrón',
               'No puedes o no quieres ejecutar Docker — Agent Zero no tiene ninguna vía de instalación sin contenedor documentada',
               'Necesitas soporte empresarial o un SLA — a la fecha de este análisis, Agent Zero no tiene un nivel de soporte comercial confirmado',
             ],
@@ -999,9 +999,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evita Agent Zero cuando Docker no sea una opción, cuando necesites una biblioteca de código incrustable en lugar de una aplicación independiente, o cuando necesites un framework multiagente maduro y documentado con un contrato de API estable.**",
         items: [
           'Un equipo sin acceso a Docker o con políticas que prohíben ejecutar contenedores de terceros con capacidad de automatización de escritorio y navegador',
-          'Un equipo que construye una aplicación LLM personalizada y necesita importar una biblioteca de orquestación dentro de código ya existente — una biblioteca como [LangChain](/power-local-llm/langchain-review) o [Semantic Kernel](/power-local-llm/semantic-kernel-review) encaja de forma más directa',
+          'Un equipo que construye una aplicación LLM personalizada y necesita importar una biblioteca de orquestación dentro de código ya existente — una biblioteca como [LangChain](/es/power-local-llm/langchain-review) o [Semantic Kernel](/es/power-local-llm/semantic-kernel-review) encaja de forma más directa',
           'Un equipo que necesita un contrato de API estable y versionado a largo plazo para pipelines de automatización — Agent Zero ha cambiado sustancialmente de alcance entre su planteamiento original como agente minimalista y su conjunto actual de funciones de escritorio y navegador, y sigue publicando versiones con frecuencia (v2.12 a fecha de septiembre de 2026)',
-          'Un equipo que necesita específicamente memoria de agente persistente y autoeditable a largo plazo como función central madura y documentada — [Letta](/power-local-llm/letta-review) está construido y documentado específicamente para eso',
+          'Un equipo que necesita específicamente memoria de agente persistente y autoeditable a largo plazo como función central madura y documentada — [Letta](/es/power-local-llm/letta-review) está construido y documentado específicamente para eso',
           'Usa Agent Zero cuando el requisito determinante sea un agente autoalojado capaz de manejar un escritorio, un navegador y documentos reales, y te sientas cómodo ejecutándolo en Docker',
         ],
         note: "Agent Zero se mantiene de forma activa, con una hoja de ruta pública de versiones etiquetadas frecuentes hasta la v2.12 (septiembre de 2026), así que los cambios de alcance documentados aquí pueden avanzar más antes de tu próxima visita — comprueba el repositorio en vivo antes de depender de una función concreta para producción.",
@@ -1013,10 +1013,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Herramienta', 'Interfaz', 'Licencia', 'Respaldo', 'Ideal para'],
         rows: [
           { 'Herramienta': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'Interfaz': 'Interfaz web + Docker', 'Licencia': 'MIT', 'Respaldo': 'Agent Zero, s.r.o. (empresa)', 'Ideal para': 'Agente autoalojado de escritorio y navegador' },
-          { 'Herramienta': '[Leon AI](/power-local-llm/leon-ai-review)', 'Interfaz': 'App voz/texto + CLI', 'Licencia': 'MIT', 'Respaldo': 'Louis Grenard (independiente)', 'Ideal para': 'Asistente personal autoalojado' },
-          { 'Herramienta': '[SuperAGI](/power-local-llm/superagi-review)', 'Interfaz': 'Consola web GUI', 'Licencia': 'MIT', 'Respaldo': 'TransformerOptimus (independiente)', 'Ideal para': 'Agentes autónomos con GUI' },
-          { 'Herramienta': '[CrewAI](/power-local-llm/crewai-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT', 'Respaldo': 'CrewAI, Inc. (respaldo VC)', 'Ideal para': 'Equipos multiagente por roles' },
-          { 'Herramienta': '[AutoGen](/power-local-llm/autogen-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT / CC BY 4.0', 'Respaldo': 'Microsoft (modo mantenimiento)', 'Ideal para': 'Solo apps existentes de AutoGen' },
+          { 'Herramienta': '[Leon AI](/es/power-local-llm/leon-ai-review)', 'Interfaz': 'App voz/texto + CLI', 'Licencia': 'MIT', 'Respaldo': 'Louis Grenard (independiente)', 'Ideal para': 'Asistente personal autoalojado' },
+          { 'Herramienta': '[SuperAGI](/es/power-local-llm/superagi-review)', 'Interfaz': 'Consola web GUI', 'Licencia': 'MIT', 'Respaldo': 'TransformerOptimus (independiente)', 'Ideal para': 'Agentes autónomos con GUI' },
+          { 'Herramienta': '[CrewAI](/es/power-local-llm/crewai-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT', 'Respaldo': 'CrewAI, Inc. (respaldo VC)', 'Ideal para': 'Equipos multiagente por roles' },
+          { 'Herramienta': '[AutoGen](/es/power-local-llm/autogen-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT / CC BY 4.0', 'Respaldo': 'Microsoft (modo mantenimiento)', 'Ideal para': 'Solo apps existentes de AutoGen' },
         ],
       },
       commonMistakes: {
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 2: Esperar que Agent Zero funcione como una biblioteca Python importable',
-            content: "Agent Zero es una aplicación autoalojada basada en Docker, con una interfaz web, no un paquete que se instala con `pip install` dentro de una base de código existente. Para una biblioteca orientada al código con la que componer llamadas, [LangChain](/power-local-llm/langchain-review) o [CrewAI](/power-local-llm/crewai-review) están construidos y documentados justamente para eso.",
+            content: "Agent Zero es una aplicación autoalojada basada en Docker, con una interfaz web, no un paquete que se instala con `pip install` dentro de una base de código existente. Para una biblioteca orientada al código con la que componer llamadas, [LangChain](/es/power-local-llm/langchain-review) o [CrewAI](/es/power-local-llm/crewai-review) están construidos y documentados justamente para eso.",
           },
           {
             title: 'Error 3: Confundir la antigua URL frdel/agent-zero con el repositorio actual',
@@ -1069,11 +1069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Análisis de Leon AI: funciones, precio, alternativas](/power-local-llm/leon-ai-review) — otro framework de agente personal autoalojado, para comparar con el enfoque de escritorio y navegador de Agent Zero.',
-          '[Análisis de SuperAGI: funciones, precio, alternativas](/power-local-llm/superagi-review) — otro proyecto de agente autónomo de código abierto, independiente y basado en GUI.',
-          '[Análisis de CrewAI: funciones, precio, alternativas](/power-local-llm/crewai-review) — un framework multiagente basado en roles y orientado al código, para equipos que quieren incrustar la orquestación en su propia aplicación en lugar de ejecutar una app Docker independiente.',
-          '[Análisis de AutoGen: funciones, precio, alternativas](/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, ahora en modo mantenimiento, para comparación histórica.',
-          '[Directorio de software LLM local](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Agent Zero entre los frameworks de agentes.',
+          '[Análisis de Leon AI: funciones, precio, alternativas](/es/power-local-llm/leon-ai-review) — otro framework de agente personal autoalojado, para comparar con el enfoque de escritorio y navegador de Agent Zero.',
+          '[Análisis de SuperAGI: funciones, precio, alternativas](/es/power-local-llm/superagi-review) — otro proyecto de agente autónomo de código abierto, independiente y basado en GUI.',
+          '[Análisis de CrewAI: funciones, precio, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles y orientado al código, para equipos que quieren incrustar la orquestación en su propia aplicación en lugar de ejecutar una app Docker independiente.',
+          '[Análisis de AutoGen: funciones, precio, alternativas](/es/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, ahora en modo mantenimiento, para comparación histórica.',
+          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Agent Zero entre los frameworks de agentes.',
         ],
       },
     },
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cooperação multiagente: qualquer agente pode criar agentes subordinados para delegar pesquisa, codificação ou revisão de trabalho',
         ],
         callouts: [
-          { type: 'note', text: 'O Agent Zero mudou bastante desde sua descrição original como agente de codificação minimalista — a versão atual adiciona um desktop Linux completo, automação de navegador e coedição de documentos. Veja o [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) para comparar o Agent Zero com outros frameworks de agentes rapidamente.' },
+          { type: 'note', text: 'O Agent Zero mudou bastante desde sua descrição original como agente de codificação minimalista — a versão atual adiciona um desktop Linux completo, automação de navegador e coedição de documentos. Veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para comparar o Agent Zero com outros frameworks de agentes rapidamente.' },
         ],
       },
       history: {
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**O repositório do Agent Zero no GitHub foi criado em junho de 2024 sob o dono original `frdel`, e rapidamente ganhou seguidores como um agente autônomo de propósito geral leve e transparente — construído em torno de um núcleo mínimo e de um padrão de delegação a agentes subordinados, em vez de um conjunto grande e rígido de funcionalidades.**",
           "Desde então, o repositório foi transferido para a organização `agent0ai` no GitHub: acessar a antiga URL `frdel/agent-zero` agora resulta em um redirecionamento HTTP para [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero). O projeto é mantido por uma empresa, a Agent Zero, s.r.o. (uma entidade de responsabilidade limitada tcheca), citada como titular dos direitos autorais no arquivo de licença MIT do repositório, permanecendo totalmente open source sob essa mesma licença.",
           "O escopo do projeto cresceu substancialmente junto com essa transferência. Enquanto a proposta original enfatizava um agente minimalista com capacidade de codificação, a versão atual traz um desktop Linux baseado em Docker que o agente consegue operar diretamente, um navegador com anotação e controle em nível de DOM, coedição ao vivo de documentos Markdown e de escritório, um Plugin Hub com mais de 100 extensões da comunidade, e instaladores complementares para desktop (A0 Launcher) e terminal (A0 Install).",
-          "Isso coloca o Agent Zero em uma posição diferente da maioria dos outros frameworks desta série. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review) e [AutoGen](/power-local-llm/autogen-review) são bibliotecas de desenvolvedor que você importa dentro da sua própria aplicação Python. O Agent Zero é entregue como um produto executável e auto-hospedado, com uma Web UI que você abre no navegador — mais próximo, nesse sentido, do [Leon AI](/power-local-llm/leon-ai-review) ou do [SuperAGI](/power-local-llm/superagi-review) do que de uma biblioteca de orquestração voltada a código.",
+          "Isso coloca o Agent Zero em uma posição diferente da maioria dos outros frameworks desta série. [LangChain](/pt/power-local-llm/langchain-review), [CrewAI](/pt/power-local-llm/crewai-review) e [AutoGen](/pt/power-local-llm/autogen-review) são bibliotecas de desenvolvedor que você importa dentro da sua própria aplicação Python. O Agent Zero é entregue como um produto executável e auto-hospedado, com uma Web UI que você abre no navegador — mais próximo, nesse sentido, do [Leon AI](/pt/power-local-llm/leon-ai-review) ou do [SuperAGI](/pt/power-local-llm/superagi-review) do que de uma biblioteca de orquestração voltada a código.",
         ],
         itemHeadings: true,
         rows: [
@@ -1254,8 +1254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o Agent Zero se',
             list: [
-              'Você precisa de uma biblioteca leve em Python ou JavaScript para compor chamadas de LLM dentro da sua própria aplicação — [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) são feitos e documentados justamente para isso',
-              'Você precisa de coordenação multiagente baseada em papéis, com uma estrutura de equipe definida como abstração central — o [CrewAI](/power-local-llm/crewai-review) foi construído especificamente para esse padrão',
+              'Você precisa de uma biblioteca leve em Python ou JavaScript para compor chamadas de LLM dentro da sua própria aplicação — [LangChain](/pt/power-local-llm/langchain-review) ou [LangGraph](/pt/power-local-llm/langgraph-review) são feitos e documentados justamente para isso',
+              'Você precisa de coordenação multiagente baseada em papéis, com uma estrutura de equipe definida como abstração central — o [CrewAI](/pt/power-local-llm/crewai-review) foi construído especificamente para esse padrão',
               'Você não pode ou não quer rodar Docker — o Agent Zero não tem um caminho de instalação sem container documentado',
               'Você precisa de suporte empresarial ou de um SLA — até o momento desta análise, o Agent Zero não tem um plano de suporte comercial confirmado',
             ],
@@ -1268,9 +1268,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evite o Agent Zero quando o Docker não for uma opção, quando você precisar de uma biblioteca de código embutível em vez de uma aplicação independente, ou quando precisar de um framework multiagente maduro e documentado com um contrato de API estável.**",
         items: [
           'Uma equipe sem acesso ao Docker ou com políticas contra rodar containers de terceiros com capacidade de automação de desktop e navegador',
-          'Uma equipe construindo uma aplicação de LLM personalizada que precisa importar uma biblioteca de orquestração dentro de um código já existente — uma biblioteca como [LangChain](/power-local-llm/langchain-review) ou [Semantic Kernel](/power-local-llm/semantic-kernel-review) é uma opção mais direta',
+          'Uma equipe construindo uma aplicação de LLM personalizada que precisa importar uma biblioteca de orquestração dentro de um código já existente — uma biblioteca como [LangChain](/pt/power-local-llm/langchain-review) ou [Semantic Kernel](/pt/power-local-llm/semantic-kernel-review) é uma opção mais direta',
           'Uma equipe que precisa de um contrato de API estável e versionado ao longo do tempo para pipelines de automação — o Agent Zero mudou de escopo substancialmente entre sua proposta original de agente minimalista e seu conjunto atual de recursos de desktop e navegador, e continua lançando versões com frequência (v2.12 em setembro de 2026)',
-          'Uma equipe que precisa especificamente de memória de agente persistente e autoeditável de longo prazo como recurso central maduro e documentado — o [Letta](/power-local-llm/letta-review) foi construído e documentado exatamente para isso',
+          'Uma equipe que precisa especificamente de memória de agente persistente e autoeditável de longo prazo como recurso central maduro e documentado — o [Letta](/pt/power-local-llm/letta-review) foi construído e documentado exatamente para isso',
           'Use o Agent Zero, em vez disso, quando o requisito definidor for um agente auto-hospedado capaz de operar um desktop, navegador e documentos de verdade, e você se sentir confortável rodando-o em Docker',
         ],
         note: "O Agent Zero é mantido ativamente, com um roadmap público de versões lançadas com frequência até a v2.12 (setembro de 2026), então mudanças de escopo documentadas aqui podem avançar ainda mais antes da sua próxima visita — confira o repositório ao vivo antes de depender de um recurso específico em produção.",
@@ -1282,10 +1282,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ferramenta', 'Interface', 'Licença', 'Mantido por', 'Melhor Para'],
         rows: [
           { 'Ferramenta': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'Interface': 'Web UI + Docker', 'Licença': 'MIT', 'Mantido por': 'Agent Zero, s.r.o. (empresa)', 'Melhor Para': 'Agente de desktop + navegador auto-hospedado' },
-          { 'Ferramenta': '[Leon AI](/power-local-llm/leon-ai-review)', 'Interface': 'App voz/texto + CLI', 'Licença': 'MIT', 'Mantido por': 'Louis Grenard (independente)', 'Melhor Para': 'Assistente pessoal auto-hospedado' },
-          { 'Ferramenta': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Console Web GUI', 'Licença': 'MIT', 'Mantido por': 'TransformerOptimus (independente)', 'Melhor Para': 'Agentes autônomos via GUI' },
-          { 'Ferramenta': '[CrewAI](/power-local-llm/crewai-review)', 'Interface': 'Código Python', 'Licença': 'MIT', 'Mantido por': 'CrewAI, Inc. (com VC)', 'Melhor Para': 'Equipes multiagente por papéis' },
-          { 'Ferramenta': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Código Python', 'Licença': 'MIT / CC BY 4.0', 'Mantido por': 'Microsoft (modo manutenção)', 'Melhor Para': 'Apenas apps AutoGen existentes' },
+          { 'Ferramenta': '[Leon AI](/pt/power-local-llm/leon-ai-review)', 'Interface': 'App voz/texto + CLI', 'Licença': 'MIT', 'Mantido por': 'Louis Grenard (independente)', 'Melhor Para': 'Assistente pessoal auto-hospedado' },
+          { 'Ferramenta': '[SuperAGI](/pt/power-local-llm/superagi-review)', 'Interface': 'Console Web GUI', 'Licença': 'MIT', 'Mantido por': 'TransformerOptimus (independente)', 'Melhor Para': 'Agentes autônomos via GUI' },
+          { 'Ferramenta': '[CrewAI](/pt/power-local-llm/crewai-review)', 'Interface': 'Código Python', 'Licença': 'MIT', 'Mantido por': 'CrewAI, Inc. (com VC)', 'Melhor Para': 'Equipes multiagente por papéis' },
+          { 'Ferramenta': '[AutoGen](/pt/power-local-llm/autogen-review)', 'Interface': 'Código Python', 'Licença': 'MIT / CC BY 4.0', 'Mantido por': 'Microsoft (modo manutenção)', 'Melhor Para': 'Apenas apps AutoGen existentes' },
         ],
       },
       commonMistakes: {
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 2: Esperar que o Agent Zero funcione como uma biblioteca Python importável',
-            content: "O Agent Zero é uma aplicação auto-hospedada e baseada em Docker, com uma Web UI, não um pacote que você instala com `pip install` num código já existente. Para uma biblioteca voltada a código, com a qual você compõe chamadas, [LangChain](/power-local-llm/langchain-review) ou [CrewAI](/power-local-llm/crewai-review) são feitos e documentados justamente para isso.",
+            content: "O Agent Zero é uma aplicação auto-hospedada e baseada em Docker, com uma Web UI, não um pacote que você instala com `pip install` num código já existente. Para uma biblioteca voltada a código, com a qual você compõe chamadas, [LangChain](/pt/power-local-llm/langchain-review) ou [CrewAI](/pt/power-local-llm/crewai-review) são feitos e documentados justamente para isso.",
           },
           {
             title: 'Erro 3: Confundir a antiga URL frdel/agent-zero com o repositório atual',
@@ -1338,11 +1338,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Análise do Leon AI: Recursos, Preço, Alternativas](/power-local-llm/leon-ai-review) — outro framework de agente pessoal auto-hospedado, para comparar com o foco em desktop e navegador do Agent Zero.',
-          '[Análise do SuperAGI: Recursos, Preço, Alternativas](/power-local-llm/superagi-review) — outro projeto de agente autônomo open-source e independente, baseado em GUI.',
-          '[Análise do CrewAI: Recursos, Preço, Alternativas](/power-local-llm/crewai-review) — um framework multiagente por papéis, voltado a código, para equipes que querem embutir orquestração na própria aplicação em vez de rodar um app Docker independente.',
-          '[Análise do AutoGen: Recursos, Preço, Alternativas](/power-local-llm/autogen-review) — o framework de conversação multiagente da Microsoft Research, agora em modo manutenção, para comparação histórica.',
-          '[Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Agent Zero se encaixa entre os frameworks de agentes.',
+          '[Análise do Leon AI: Recursos, Preço, Alternativas](/pt/power-local-llm/leon-ai-review) — outro framework de agente pessoal auto-hospedado, para comparar com o foco em desktop e navegador do Agent Zero.',
+          '[Análise do SuperAGI: Recursos, Preço, Alternativas](/pt/power-local-llm/superagi-review) — outro projeto de agente autônomo open-source e independente, baseado em GUI.',
+          '[Análise do CrewAI: Recursos, Preço, Alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente por papéis, voltado a código, para equipes que querem embutir orquestração na própria aplicação em vez de rodar um app Docker independente.',
+          '[Análise do AutoGen: Recursos, Preço, Alternativas](/pt/power-local-llm/autogen-review) — o framework de conversação multiagente da Microsoft Research, agora em modo manutenção, para comparação histórica.',
+          '[Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Agent Zero se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'マルチエージェント連携:どのエージェントもサブエージェントを起動し、調査・コーディング・レビュー作業を委任できる',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zeroは、当初の「最小構成のコーディングエージェント」という説明から大きく変化している——現行版はフルのLinuxデスクトップ、ブラウザ自動操作、ドキュメント共同編集を追加している。Agent Zeroが他のエージェントフレームワークと比べてどう位置づけられるかは、[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)を参照。' },
+          { type: 'note', text: 'Agent Zeroは、当初の「最小構成のコーディングエージェント」という説明から大きく変化している——現行版はフルのLinuxデスクトップ、ブラウザ自動操作、ドキュメント共同編集を追加している。Agent Zeroが他のエージェントフレームワークと比べてどう位置づけられるかは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照。' },
         ],
       },
       history: {
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Agent ZeroのGitHubリポジトリは2024年6月、元のオーナーである`frdel`のもとで作成され、大規模で硬直的な機能セットではなく、最小限のコアとサブエージェント委任パターンを中心に構築された、軽量・透明性重視の汎用自律エージェントとして瞬く間に支持を集めた。**",
           "その後リポジトリは`agent0ai`というGitHub組織へ移管され、古い`frdel/agent-zero`のURLへアクセスすると現在は[github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero)へのHTTPリダイレクトが返される。プロジェクトはAgent Zero, s.r.o.(チェコの有限責任会社)という企業によって保守されており、この企業はリポジトリのMITライセンスファイルに著作権者として記載されているが、同じライセンスの下で完全にオープンソースであり続けている。",
           "この移管に伴い、プロジェクトのスコープも大幅に拡大した。当初はコーディング能力を持つ最小構成のエージェントというフレーミングが強調されていたが、現行版はエージェントが直接操作できるDockerベースのLinuxデスクトップ、DOMレベルの注釈・操作が可能なブラウザ、Markdownおよびオフィス文書のライブ共同編集、100件を超えるコミュニティ拡張機能を集めたPlugin Hub、さらにデスクトップ用インストーラー(A0 Launcher)とターミナル用インストーラー(A0 Install)を備えている。",
-          "これにより、Agent Zeroはこのシリーズで扱う他の多くのフレームワークとは異なる位置づけになる。[LangChain](/power-local-llm/langchain-review)、[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)は自分のPythonアプリケーションにインポートして使う開発者向けライブラリだ。一方Agent Zeroは、ブラウザで開くWeb UIを備えた実行可能なセルフホスト型プロダクトとして提供されており、その点ではコードファーストのオーケストレーションライブラリよりも[Leon AI](/power-local-llm/leon-ai-review)や[SuperAGI](/power-local-llm/superagi-review)に近い。",
+          "これにより、Agent Zeroはこのシリーズで扱う他の多くのフレームワークとは異なる位置づけになる。[LangChain](/ja/power-local-llm/langchain-review)、[CrewAI](/ja/power-local-llm/crewai-review)、[AutoGen](/ja/power-local-llm/autogen-review)は自分のPythonアプリケーションにインポートして使う開発者向けライブラリだ。一方Agent Zeroは、ブラウザで開くWeb UIを備えた実行可能なセルフホスト型プロダクトとして提供されており、その点ではコードファーストのオーケストレーションライブラリよりも[Leon AI](/ja/power-local-llm/leon-ai-review)や[SuperAGI](/ja/power-local-llm/superagi-review)に近い。",
         ],
         itemHeadings: true,
         rows: [
@@ -1523,8 +1523,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな場合はAgent Zeroを避ける',
             list: [
-              '自分のアプリケーション内でLLM呼び出しを組み立てるための軽量なPythonまたはJavaScriptライブラリが必要——代わりに[LangChain](/power-local-llm/langchain-review)や[LangGraph](/power-local-llm/langgraph-review)がその用途向けに構築・文書化されている',
-              '明確なクルー構造を中核とするロールベースのマルチエージェント連携が必要——[CrewAI](/power-local-llm/crewai-review)がそのパターン専用に構築されている',
+              '自分のアプリケーション内でLLM呼び出しを組み立てるための軽量なPythonまたはJavaScriptライブラリが必要——代わりに[LangChain](/ja/power-local-llm/langchain-review)や[LangGraph](/ja/power-local-llm/langgraph-review)がその用途向けに構築・文書化されている',
+              '明確なクルー構造を中核とするロールベースのマルチエージェント連携が必要——[CrewAI](/ja/power-local-llm/crewai-review)がそのパターン専用に構築されている',
               'Dockerを実行できない、または実行したくない——Agent Zeroにはコンテナを使わないインストール方法が文書化されていない',
               'エンタープライズサポートやSLAが必要——本レビュー時点でAgent Zeroに確認済みの商用サポートプランはない',
             ],
@@ -1537,9 +1537,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Dockerが選択肢にない場合、スタンドアロンアプリケーションではなく組み込み可能なコードライブラリが必要な場合、あるいは安定したAI契約を持つ文書化された成熟したマルチエージェントフレームワークが必要な場合は、Agent Zeroを避けること。**",
         items: [
           'Dockerへのアクセスがない、またはデスクトップ・ブラウザ自動操作機能を持つサードパーティコンテナの実行を禁止するポリシーがあるチーム',
-          '既存のコードにオーケストレーションライブラリをインポートする必要がある、カスタムLLMアプリケーションを構築しているチーム——[LangChain](/power-local-llm/langchain-review)や[Semantic Kernel](/power-local-llm/semantic-kernel-review)のようなライブラリの方が直接的に適している',
+          '既存のコードにオーケストレーションライブラリをインポートする必要がある、カスタムLLMアプリケーションを構築しているチーム——[LangChain](/ja/power-local-llm/langchain-review)や[Semantic Kernel](/ja/power-local-llm/semantic-kernel-review)のようなライブラリの方が直接的に適している',
           '自動化パイプライン向けに、長期にわたり安定したバージョン管理されたAPI契約が必要なチーム——Agent Zeroは当初の最小構成エージェントという位置づけから現在のデスクトップ・ブラウザ機能セットへとスコープを大幅に変化させてきており、今後も頻繁なリリースが続く(2026年9月時点でv2.12)',
-          '永続的で自己編集可能な長期エージェントメモリを、成熟し文書化された中核機能として特に必要とするチーム——[Letta](/power-local-llm/letta-review)がまさにその用途向けに構築・文書化されている',
+          '永続的で自己編集可能な長期エージェントメモリを、成熟し文書化された中核機能として特に必要とするチーム——[Letta](/ja/power-local-llm/letta-review)がまさにその用途向けに構築・文書化されている',
           '決め手となる要件がセルフホスト型で本物のデスクトップ・ブラウザ・ドキュメントを操作できるエージェントであり、Dockerでの実行に抵抗がない場合は、代わりにAgent Zeroを使うとよい',
         ],
         note: "Agent Zeroは積極的に保守されており、v2.12(2026年9月)まで頻繁なタグ付きリリースの公開ロードマップがあるため、ここに記載したスコープの変化は次回訪問までにさらに進んでいる可能性がある——本番用途で特定の機能に依存する前に、最新のリポジトリを確認すること。",
@@ -1551,10 +1551,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ツール', 'インターフェース', 'ライセンス', '運営元', '最適な用途'],
         rows: [
           { 'ツール': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'インターフェース': 'Web UI + Docker', 'ライセンス': 'MIT', '運営元': 'Agent Zero, s.r.o.(企業)', '最適な用途': 'セルフホスト型デスクトップ+ブラウザエージェント' },
-          { 'ツール': '[Leon AI](/power-local-llm/leon-ai-review)', 'インターフェース': '音声/テキストアプリ+CLI', 'ライセンス': 'MIT', '運営元': 'Louis Grenard(個人)', '最適な用途': 'セルフホスト型パーソナルアシスタント' },
-          { 'ツール': '[SuperAGI](/power-local-llm/superagi-review)', 'インターフェース': 'Web GUIコンソール', 'ライセンス': 'MIT', '運営元': 'TransformerOptimus(個人)', '最適な用途': 'GUIベースの自律エージェント' },
-          { 'ツール': '[CrewAI](/power-local-llm/crewai-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT', '運営元': 'CrewAI, Inc.(VC出資)', '最適な用途': 'ロールベースのマルチエージェントクルー' },
-          { 'ツール': '[AutoGen](/power-local-llm/autogen-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT / CC BY 4.0', '運営元': 'Microsoft(保守モード)', '最適な用途': '既存のAutoGenアプリのみ' },
+          { 'ツール': '[Leon AI](/ja/power-local-llm/leon-ai-review)', 'インターフェース': '音声/テキストアプリ+CLI', 'ライセンス': 'MIT', '運営元': 'Louis Grenard(個人)', '最適な用途': 'セルフホスト型パーソナルアシスタント' },
+          { 'ツール': '[SuperAGI](/ja/power-local-llm/superagi-review)', 'インターフェース': 'Web GUIコンソール', 'ライセンス': 'MIT', '運営元': 'TransformerOptimus(個人)', '最適な用途': 'GUIベースの自律エージェント' },
+          { 'ツール': '[CrewAI](/ja/power-local-llm/crewai-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT', '運営元': 'CrewAI, Inc.(VC出資)', '最適な用途': 'ロールベースのマルチエージェントクルー' },
+          { 'ツール': '[AutoGen](/ja/power-local-llm/autogen-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT / CC BY 4.0', '運営元': 'Microsoft(保守モード)', '最適な用途': '既存のAutoGenアプリのみ' },
         ],
       },
       commonMistakes: {
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解2:Agent Zeroをインポート可能なPythonライブラリのように使えると期待する',
-            content: "Agent ZeroはWeb UIを備えたセルフホスト型のDockerベースアプリケーションであり、既存のコードベースに`pip install`するパッケージではない。呼び出しを組み立てるコードファーストのライブラリが必要なら、代わりに[LangChain](/power-local-llm/langchain-review)や[CrewAI](/power-local-llm/crewai-review)がその用途向けに構築・文書化されている。",
+            content: "Agent ZeroはWeb UIを備えたセルフホスト型のDockerベースアプリケーションであり、既存のコードベースに`pip install`するパッケージではない。呼び出しを組み立てるコードファーストのライブラリが必要なら、代わりに[LangChain](/ja/power-local-llm/langchain-review)や[CrewAI](/ja/power-local-llm/crewai-review)がその用途向けに構築・文書化されている。",
           },
           {
             title: '誤解3:古いfrdel/agent-zero URLと現在のリポジトリを混同する',
@@ -1607,11 +1607,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Leon AIレビュー:機能・料金・代替ツール](/power-local-llm/leon-ai-review) —— Agent Zeroのデスクトップ・ブラウザ重視の方向性と比較できる、もう1つのセルフホスト型パーソナルエージェントフレームワーク。',
-          '[SuperAGIレビュー:機能・料金・代替ツール](/power-local-llm/superagi-review) —— GUIベースで独立したもう1つのオープンソース自律エージェントプロジェクト。',
-          '[CrewAIレビュー:機能・料金・代替ツール](/power-local-llm/crewai-review) —— スタンドアロンのDockerアプリを実行するのではなく、自分のアプリケーションにオーケストレーションを組み込みたいチーム向けの、コードファーストでロールベースのマルチエージェントフレームワーク。',
-          '[AutoGenレビュー:機能・料金・代替ツール](/power-local-llm/autogen-review) —— Microsoft Researchによるマルチエージェント対話フレームワーク、現在は保守モードにあり、歴史的な比較対象として。',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) —— この記事が属する、ローカルAIツールの全カタログ。Agent Zeroがエージェントフレームワークの中でどう位置づけられるかも含む。',
+          '[Leon AIレビュー:機能・料金・代替ツール](/ja/power-local-llm/leon-ai-review) —— Agent Zeroのデスクトップ・ブラウザ重視の方向性と比較できる、もう1つのセルフホスト型パーソナルエージェントフレームワーク。',
+          '[SuperAGIレビュー:機能・料金・代替ツール](/ja/power-local-llm/superagi-review) —— GUIベースで独立したもう1つのオープンソース自律エージェントプロジェクト。',
+          '[CrewAIレビュー:機能・料金・代替ツール](/ja/power-local-llm/crewai-review) —— スタンドアロンのDockerアプリを実行するのではなく、自分のアプリケーションにオーケストレーションを組み込みたいチーム向けの、コードファーストでロールベースのマルチエージェントフレームワーク。',
+          '[AutoGenレビュー:機能・料金・代替ツール](/ja/power-local-llm/autogen-review) —— Microsoft Researchによるマルチエージェント対話フレームワーク、現在は保守モードにあり、歴史的な比較対象として。',
+          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) —— この記事が属する、ローカルAIツールの全カタログ。Agent Zeroがエージェントフレームワークの中でどう位置づけられるかも含む。',
         ],
       },
     },
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '多智能体协作：任何智能体都可以创建下属智能体，委派研究、编码或审查工作',
         ],
         callouts: [
-          { type: 'note', text: '自最初被描述为极简编码智能体以来，Agent Zero 已发生显著变化——当前版本新增了完整的 Linux 桌面、浏览器自动化和文档协同编辑功能。可参考[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory)，快速了解 Agent Zero 与其他智能体框架的对比。' },
+          { type: 'note', text: '自最初被描述为极简编码智能体以来，Agent Zero 已发生显著变化——当前版本新增了完整的 Linux 桌面、浏览器自动化和文档协同编辑功能。可参考[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，快速了解 Agent Zero 与其他智能体框架的对比。' },
         ],
       },
       history: {
@@ -1696,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Agent Zero 的 GitHub 仓库创建于 2024 年 6 月，最初归属于账号 `frdel`，很快便凭借其轻量、透明的通用自主智能体定位积累了一批拥趸——它的核心是一个精简内核加上下属智能体委派模式，而不是一套庞大、固定的功能集合。**",
           "此后该仓库已转移至 `agent0ai` GitHub 组织：访问旧的 `frdel/agent-zero` 地址现在会通过 HTTP 重定向跳转到 [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero)。项目由 Agent Zero, s.r.o.（一家捷克有限责任公司）维护，该公司在仓库的 MIT 许可证文件中被列为版权持有者，同时项目依然完全遵循同一份许可证保持开源。",
           "伴随这次转移，项目的范围也大幅扩展。最初的定位强调的是具备编码能力的极简智能体，而当前版本已提供基于 Docker 的 Linux 桌面（智能体可直接操作）、支持 DOM 级标注与控制的浏览器、Markdown 与办公文档的实时协同编辑、拥有 100 多个社区扩展的 Plugin Hub，以及配套的桌面安装程序（A0 Launcher）和终端安装脚本（A0 Install）。",
-          "这使得 Agent Zero 在本系列其他框架中显得与众不同。[LangChain](/power-local-llm/langchain-review)、[CrewAI](/power-local-llm/crewai-review) 和 [AutoGen](/power-local-llm/autogen-review) 都是需要导入你自己 Python 应用中的开发库。而 Agent Zero 以一个可直接运行、自托管的产品形态出现，附带一个可在浏览器中打开的 Web UI——在这一点上，它更接近 [Leon AI](/power-local-llm/leon-ai-review) 或 [SuperAGI](/power-local-llm/superagi-review)，而非代码优先的编排库。",
+          "这使得 Agent Zero 在本系列其他框架中显得与众不同。[LangChain](/zh/power-local-llm/langchain-review)、[CrewAI](/zh/power-local-llm/crewai-review) 和 [AutoGen](/zh/power-local-llm/autogen-review) 都是需要导入你自己 Python 应用中的开发库。而 Agent Zero 以一个可直接运行、自托管的产品形态出现，附带一个可在浏览器中打开的 Web UI——在这一点上，它更接近 [Leon AI](/zh/power-local-llm/leon-ai-review) 或 [SuperAGI](/zh/power-local-llm/superagi-review)，而非代码优先的编排库。",
         ],
         itemHeadings: true,
         rows: [
@@ -1792,8 +1792,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '以下情况应避免使用 Agent Zero',
             list: [
-              '你需要一个轻量的 Python 或 JavaScript 库，在自己的应用中组合调用 LLM——[LangChain](/power-local-llm/langchain-review) 或 [LangGraph](/power-local-llm/langgraph-review) 正是为此而生并有相应文档',
-              '你需要以定义好的团队结构作为核心抽象的基于角色的多智能体协作——[CrewAI](/power-local-llm/crewai-review) 是专为该模式打造的',
+              '你需要一个轻量的 Python 或 JavaScript 库，在自己的应用中组合调用 LLM——[LangChain](/zh/power-local-llm/langchain-review) 或 [LangGraph](/zh/power-local-llm/langgraph-review) 正是为此而生并有相应文档',
+              '你需要以定义好的团队结构作为核心抽象的基于角色的多智能体协作——[CrewAI](/zh/power-local-llm/crewai-review) 是专为该模式打造的',
               '你无法或不想运行 Docker——Agent Zero 没有文档记录的非容器安装方式',
               '你需要企业级支持或 SLA——截至本次评测，Agent Zero 没有已确认的商业支持套餐',
             ],
@@ -1806,9 +1806,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**当 Docker 不可用、你需要的是一个可嵌入的代码库而非独立应用，或者你需要一个文档完善、成熟且 API 契约稳定的多智能体框架时，应避开 Agent Zero。**",
         items: [
           '团队没有 Docker 访问权限，或有政策禁止运行具备桌面和浏览器自动化能力的第三方容器',
-          '团队正在构建自定义 LLM 应用，需要将编排库导入现有代码——像 [LangChain](/power-local-llm/langchain-review) 或 [Semantic Kernel](/power-local-llm/semantic-kernel-review) 这样的库更为直接契合',
+          '团队正在构建自定义 LLM 应用，需要将编排库导入现有代码——像 [LangChain](/zh/power-local-llm/langchain-review) 或 [Semantic Kernel](/zh/power-local-llm/semantic-kernel-review) 这样的库更为直接契合',
           '团队需要为自动化流水线提供长期稳定、有版本管理的 API 契约——Agent Zero 从最初的极简智能体定位到如今的桌面与浏览器功能集，范围已发生大幅变化，并且仍在频繁发布新版本（截至 2026 年 9 月为 v2.12）',
-          '团队明确需要持久化、可自我编辑的长期智能体记忆，作为一项成熟且有文档记录的核心功能——[Letta](/power-local-llm/letta-review) 正是专为此而构建并有相应文档',
+          '团队明确需要持久化、可自我编辑的长期智能体记忆，作为一项成熟且有文档记录的核心功能——[Letta](/zh/power-local-llm/letta-review) 正是专为此而构建并有相应文档',
           '而当核心需求是一个能操控真实桌面、浏览器和文档的自托管智能体，且你能接受在 Docker 中运行时，Agent Zero 则是合适的选择',
         ],
         note: "Agent Zero 维护活跃，公开路线图显示其持续频繁发布标记版本，截至 2026 年 9 月已发布到 v2.12，因此本文记录的功能范围在你下次查看时可能已有变动——在依赖某项具体功能用于生产环境之前，请查看实时仓库确认。",
@@ -1820,10 +1820,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['工具', '交互形态', '许可协议', '维护方', '最适合'],
         rows: [
           { '工具': '[Agent Zero](https://github.com/agent0ai/agent-zero)', '交互形态': 'Web UI + Docker', '许可协议': 'MIT', '维护方': 'Agent Zero, s.r.o.（公司）', '最适合': '自托管桌面+浏览器智能体' },
-          { '工具': '[Leon AI](/power-local-llm/leon-ai-review)', '交互形态': '语音/文本应用 + CLI', '许可协议': 'MIT', '维护方': 'Louis Grenard（个人）', '最适合': '自托管个人助理' },
-          { '工具': '[SuperAGI](/power-local-llm/superagi-review)', '交互形态': 'Web GUI 控制台', '许可协议': 'MIT', '维护方': 'TransformerOptimus（个人）', '最适合': '基于 GUI 的自主智能体' },
-          { '工具': '[CrewAI](/power-local-llm/crewai-review)', '交互形态': 'Python 代码', '许可协议': 'MIT', '维护方': 'CrewAI, Inc.（VC 支持）', '最适合': '基于角色的多智能体团队' },
-          { '工具': '[AutoGen](/power-local-llm/autogen-review)', '交互形态': 'Python 代码', '许可协议': 'MIT / CC BY 4.0', '维护方': 'Microsoft（维护模式）', '最适合': '仅限现有 AutoGen 应用' },
+          { '工具': '[Leon AI](/zh/power-local-llm/leon-ai-review)', '交互形态': '语音/文本应用 + CLI', '许可协议': 'MIT', '维护方': 'Louis Grenard（个人）', '最适合': '自托管个人助理' },
+          { '工具': '[SuperAGI](/zh/power-local-llm/superagi-review)', '交互形态': 'Web GUI 控制台', '许可协议': 'MIT', '维护方': 'TransformerOptimus（个人）', '最适合': '基于 GUI 的自主智能体' },
+          { '工具': '[CrewAI](/zh/power-local-llm/crewai-review)', '交互形态': 'Python 代码', '许可协议': 'MIT', '维护方': 'CrewAI, Inc.（VC 支持）', '最适合': '基于角色的多智能体团队' },
+          { '工具': '[AutoGen](/zh/power-local-llm/autogen-review)', '交互形态': 'Python 代码', '许可协议': 'MIT / CC BY 4.0', '维护方': 'Microsoft（维护模式）', '最适合': '仅限现有 AutoGen 应用' },
         ],
       },
       commonMistakes: {
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区二：期望 Agent Zero 像可导入的 Python 库那样使用',
-            content: "Agent Zero 是一个自托管、基于 Docker 的应用，带有 Web UI，而不是一个可以 `pip install` 进现有代码库的软件包。如果你需要代码优先、可组合调用的库，[LangChain](/power-local-llm/langchain-review) 或 [CrewAI](/power-local-llm/crewai-review) 才是为此而生并有相应文档的选择。",
+            content: "Agent Zero 是一个自托管、基于 Docker 的应用，带有 Web UI，而不是一个可以 `pip install` 进现有代码库的软件包。如果你需要代码优先、可组合调用的库，[LangChain](/zh/power-local-llm/langchain-review) 或 [CrewAI](/zh/power-local-llm/crewai-review) 才是为此而生并有相应文档的选择。",
           },
           {
             title: '误区三：把旧的 frdel/agent-zero 地址与当前仓库混淆',
@@ -1876,11 +1876,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Leon AI 评测：功能、定价、替代方案](/power-local-llm/leon-ai-review) —— 另一个自托管个人智能体框架，可与 Agent Zero 的桌面加浏览器定位做对比。',
-          '[SuperAGI 评测：功能、定价、替代方案](/power-local-llm/superagi-review) —— 另一个基于 GUI、独立维护的开源自主智能体项目。',
-          '[CrewAI 评测：功能、定价、替代方案](/power-local-llm/crewai-review) —— 一个代码优先、基于角色的多智能体框架，适合希望将编排能力嵌入自身应用而非运行独立 Docker 应用的团队。',
-          '[AutoGen 评测：功能、定价、替代方案](/power-local-llm/autogen-review) —— 微软研究院推出的多智能体对话框架，现已进入维护模式，可作历史对比参考。',
-          '[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录，包含 Agent Zero 在智能体框架中的定位。',
+          '[Leon AI 评测：功能、定价、替代方案](/zh/power-local-llm/leon-ai-review) —— 另一个自托管个人智能体框架，可与 Agent Zero 的桌面加浏览器定位做对比。',
+          '[SuperAGI 评测：功能、定价、替代方案](/zh/power-local-llm/superagi-review) —— 另一个基于 GUI、独立维护的开源自主智能体项目。',
+          '[CrewAI 评测：功能、定价、替代方案](/zh/power-local-llm/crewai-review) —— 一个代码优先、基于角色的多智能体框架，适合希望将编排能力嵌入自身应用而非运行独立 Docker 应用的团队。',
+          '[AutoGen 评测：功能、定价、替代方案](/zh/power-local-llm/autogen-review) —— 微软研究院推出的多智能体对话框架，现已进入维护模式，可作历史对比参考。',
+          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录，包含 Agent Zero 在智能体框架中的定位。',
         ],
       },
     },
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعاون متعدد الوكلاء: يمكن لأي وكيل إنشاء وكلاء فرعيين لتفويض أعمال البحث أو البرمجة أو المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'تغيّر Agent Zero بشكل كبير منذ وصفه الأصلي كوكيل برمجي بسيط — يضيف الإصدار الحالي سطح مكتب لينكس كاملًا وأتمتة للمتصفح وتحريرًا مشتركًا للمستندات. راجع [دليل برمجيات النماذج المحلية](/power-local-llm/local-llm-software-directory) لمعرفة كيف يقارن Agent Zero بأطر عمل الوكلاء الأخرى بنظرة سريعة.' },
+          { type: 'note', text: 'تغيّر Agent Zero بشكل كبير منذ وصفه الأصلي كوكيل برمجي بسيط — يضيف الإصدار الحالي سطح مكتب لينكس كاملًا وأتمتة للمتصفح وتحريرًا مشتركًا للمستندات. راجع [دليل برمجيات النماذج المحلية](/ar/power-local-llm/local-llm-software-directory) لمعرفة كيف يقارن Agent Zero بأطر عمل الوكلاء الأخرى بنظرة سريعة.' },
         ],
       },
       history: {
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**أُنشئ مستودع Agent Zero على GitHub في يونيو 2024 تحت مالكه الأصلي `frdel`، وسرعان ما اكتسب متابعين بوصفه وكيلًا مستقلًا خفيفًا وشفافًا وعام الغرض — مبنيًا حول نواة بسيطة ونمط تفويض للوكلاء الفرعيين، بدلًا من مجموعة مزايا كبيرة وصارمة.**",
           "تم نقل المستودع منذ ذلك الحين إلى منظمة `agent0ai` على GitHub: فزيارة رابط `frdel/agent-zero` القديم تُعيد الآن توجيهًا HTTP إلى [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero). يشرف على المشروع كيان شركة، هو Agent Zero, s.r.o. (شركة ذات مسؤولية محدودة تشيكية)، مذكورة كصاحبة حقوق النشر في ملف رخصة MIT الخاص بالمستودع، مع بقائه مفتوح المصدر بالكامل بموجب الرخصة نفسها.",
           "توسّع نطاق المشروع بشكل كبير بالتزامن مع هذا النقل. فبينما ركّز التصور الأصلي على وكيل بسيط بقدرة برمجية، يقدّم الإصدار الحالي سطح مكتب لينكس يعمل عبر Docker يستطيع الوكيل تشغيله مباشرة، ومتصفحًا بتحكم وتعليق على مستوى عناصر DOM، وتحريرًا مشتركًا مباشرًا لملفات Markdown ومستندات المكتب، ومركز إضافات يضم أكثر من 100 إضافة من المجتمع، إضافة إلى مثبّت سطح مكتب مرافق (A0 Launcher) ومثبّت سطر أوامر (A0 Install).",
-          "هذا يضع Agent Zero في موقع مختلف عن معظم أطر العمل الأخرى في هذه السلسلة. فـ [LangChain](/power-local-llm/langchain-review) و[CrewAI](/power-local-llm/crewai-review) و[AutoGen](/power-local-llm/autogen-review) مكتبات مطورين تستوردها داخل تطبيق Python الخاص بك. أما Agent Zero فيُشحن كمنتج جاهز للتشغيل وذاتي الاستضافة بواجهة ويب تفتحها في المتصفح — وهو من هذه الناحية أقرب إلى [Leon AI](/power-local-llm/leon-ai-review) أو [SuperAGI](/power-local-llm/superagi-review) منه إلى مكتبة تنسيق قائمة على الكود.",
+          "هذا يضع Agent Zero في موقع مختلف عن معظم أطر العمل الأخرى في هذه السلسلة. فـ [LangChain](/ar/power-local-llm/langchain-review) و[CrewAI](/ar/power-local-llm/crewai-review) و[AutoGen](/ar/power-local-llm/autogen-review) مكتبات مطورين تستوردها داخل تطبيق Python الخاص بك. أما Agent Zero فيُشحن كمنتج جاهز للتشغيل وذاتي الاستضافة بواجهة ويب تفتحها في المتصفح — وهو من هذه الناحية أقرب إلى [Leon AI](/ar/power-local-llm/leon-ai-review) أو [SuperAGI](/ar/power-local-llm/superagi-review) منه إلى مكتبة تنسيق قائمة على الكود.",
         ],
         itemHeadings: true,
         rows: [
@@ -2061,8 +2061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب Agent Zero إذا',
             list: [
-              'كنت تحتاج مكتبة Python أو JavaScript خفيفة لتركيب استدعاءات نماذج اللغة داخل تطبيقك الخاص — [LangChain](/power-local-llm/langchain-review) أو [LangGraph](/power-local-llm/langgraph-review) مبنيان وموثقان لذلك بالضبط',
-              'كنت تحتاج تنسيقًا متعدد الوكلاء قائمًا على الأدوار ببنية طاقم عمل محددة كتجريد أساسي — [CrewAI](/power-local-llm/crewai-review) مصمم خصيصًا لهذا النمط',
+              'كنت تحتاج مكتبة Python أو JavaScript خفيفة لتركيب استدعاءات نماذج اللغة داخل تطبيقك الخاص — [LangChain](/ar/power-local-llm/langchain-review) أو [LangGraph](/ar/power-local-llm/langgraph-review) مبنيان وموثقان لذلك بالضبط',
+              'كنت تحتاج تنسيقًا متعدد الوكلاء قائمًا على الأدوار ببنية طاقم عمل محددة كتجريد أساسي — [CrewAI](/ar/power-local-llm/crewai-review) مصمم خصيصًا لهذا النمط',
               'لم تكن قادرًا على تشغيل Docker أو لا ترغب في ذلك — لا يوجد مسار تثبيت موثّق لـ Agent Zero بدون حاوية',
               'كنت تحتاج دعمًا مؤسسيًا أو اتفاقية مستوى خدمة (SLA) — حتى وقت هذه المراجعة، لا توجد فئة دعم تجاري مؤكدة لـ Agent Zero',
             ],
@@ -2075,9 +2075,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**تجنّب Agent Zero عندما لا يكون Docker خيارًا متاحًا، أو عندما تحتاج مكتبة كود قابلة للتضمين بدلًا من تطبيق مستقل، أو عندما تحتاج إطار عمل متعدد الوكلاء ناضجًا وموثقًا بعقد واجهة برمجية (API) مستقر.**",
         items: [
           'فريق لا يملك وصولًا إلى Docker أو لديه سياسات تمنع تشغيل حاويات من طرف ثالث بقدرات أتمتة سطح مكتب ومتصفح',
-          'فريق يبني تطبيق نماذج لغة مخصصًا يحتاج استيراد مكتبة تنسيق داخل كود قائم — مكتبة مثل [LangChain](/power-local-llm/langchain-review) أو [Semantic Kernel](/power-local-llm/semantic-kernel-review) أنسب مباشرة لهذا الغرض',
+          'فريق يبني تطبيق نماذج لغة مخصصًا يحتاج استيراد مكتبة تنسيق داخل كود قائم — مكتبة مثل [LangChain](/ar/power-local-llm/langchain-review) أو [Semantic Kernel](/ar/power-local-llm/semantic-kernel-review) أنسب مباشرة لهذا الغرض',
           'فريق يحتاج عقد واجهة برمجية (API) طويل الأمد وموسوم بإصدارات لخطوط أتمتة — تغيّر نطاق Agent Zero بشكل كبير بين تصوره الأصلي كوكيل بسيط ومجموعة مزايا سطح المكتب والمتصفح الحالية، ويستمر في الإصدار بشكل متكرر (v2.12 حتى سبتمبر 2026)',
-          'فريق يحتاج تحديدًا ذاكرة طويلة الأمد ذاتية التحرير للوكيل كميزة أساسية ناضجة وموثقة — [Letta](/power-local-llm/letta-review) مبني وموثق خصيصًا لذلك',
+          'فريق يحتاج تحديدًا ذاكرة طويلة الأمد ذاتية التحرير للوكيل كميزة أساسية ناضجة وموثقة — [Letta](/ar/power-local-llm/letta-review) مبني وموثق خصيصًا لذلك',
           'استخدم Agent Zero بدلًا من ذلك عندما يكون المتطلب الأساسي وكيلًا ذاتي الاستضافة قادرًا على تشغيل سطح مكتب ومتصفح ومستندات حقيقية، وكنت مرتاحًا لتشغيله عبر Docker',
         ],
         note: "يخضع Agent Zero لصيانة نشطة، مع خريطة طريق عامة لإصدارات موسومة متكررة وصولًا إلى v2.12 (سبتمبر 2026)، لذا قد تتطور التغييرات الموثقة هنا أكثر قبل زيارتك القادمة — تحقق من المستودع الحي قبل الاعتماد على ميزة محددة في بيئة إنتاج.",
@@ -2089,10 +2089,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الأداة', 'الواجهة', 'الرخصة', 'الجهة الداعمة', 'الأنسب لـ'],
         rows: [
           { 'الأداة': '[Agent Zero](https://github.com/agent0ai/agent-zero)', 'الواجهة': 'واجهة ويب + Docker', 'الرخصة': 'MIT', 'الجهة الداعمة': 'Agent Zero, s.r.o. (شركة)', 'الأنسب لـ': 'وكيل سطح مكتب ومتصفح ذاتي الاستضافة' },
-          { 'الأداة': '[Leon AI](/power-local-llm/leon-ai-review)', 'الواجهة': 'تطبيق صوت/نص + CLI', 'الرخصة': 'MIT', 'الجهة الداعمة': 'Louis Grenard (مستقل)', 'الأنسب لـ': 'مساعد شخصي ذاتي الاستضافة' },
-          { 'الأداة': '[SuperAGI](/power-local-llm/superagi-review)', 'الواجهة': 'واجهة تحكم رسومية', 'الرخصة': 'MIT', 'الجهة الداعمة': 'TransformerOptimus (مستقل)', 'الأنسب لـ': 'وكلاء مستقلون بواجهة رسومية' },
-          { 'الأداة': '[CrewAI](/power-local-llm/crewai-review)', 'الواجهة': 'كود Python', 'الرخصة': 'MIT', 'الجهة الداعمة': 'CrewAI, Inc. (بدعم استثماري)', 'الأنسب لـ': 'طواقم وكلاء قائمة على الأدوار' },
-          { 'الأداة': '[AutoGen](/power-local-llm/autogen-review)', 'الواجهة': 'كود Python', 'الرخصة': 'MIT / CC BY 4.0', 'الجهة الداعمة': 'Microsoft (وضع صيانة)', 'الأنسب لـ': 'تطبيقات AutoGen القائمة فقط' },
+          { 'الأداة': '[Leon AI](/ar/power-local-llm/leon-ai-review)', 'الواجهة': 'تطبيق صوت/نص + CLI', 'الرخصة': 'MIT', 'الجهة الداعمة': 'Louis Grenard (مستقل)', 'الأنسب لـ': 'مساعد شخصي ذاتي الاستضافة' },
+          { 'الأداة': '[SuperAGI](/ar/power-local-llm/superagi-review)', 'الواجهة': 'واجهة تحكم رسومية', 'الرخصة': 'MIT', 'الجهة الداعمة': 'TransformerOptimus (مستقل)', 'الأنسب لـ': 'وكلاء مستقلون بواجهة رسومية' },
+          { 'الأداة': '[CrewAI](/ar/power-local-llm/crewai-review)', 'الواجهة': 'كود Python', 'الرخصة': 'MIT', 'الجهة الداعمة': 'CrewAI, Inc. (بدعم استثماري)', 'الأنسب لـ': 'طواقم وكلاء قائمة على الأدوار' },
+          { 'الأداة': '[AutoGen](/ar/power-local-llm/autogen-review)', 'الواجهة': 'كود Python', 'الرخصة': 'MIT / CC BY 4.0', 'الجهة الداعمة': 'Microsoft (وضع صيانة)', 'الأنسب لـ': 'تطبيقات AutoGen القائمة فقط' },
         ],
       },
       commonMistakes: {
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ 2: توقّع أن يعمل Agent Zero كمكتبة Python قابلة للاستيراد',
-            content: "Agent Zero تطبيق ذاتي الاستضافة قائم على Docker بواجهة ويب، وليس حزمة تثبّتها عبر `pip install` داخل قاعدة كود قائمة. إذا كنت تريد مكتبة قائمة على الكود تركّب بها الاستدعاءات، فإن [LangChain](/power-local-llm/langchain-review) أو [CrewAI](/power-local-llm/crewai-review) مبنيان وموثقان لذلك بالضبط.",
+            content: "Agent Zero تطبيق ذاتي الاستضافة قائم على Docker بواجهة ويب، وليس حزمة تثبّتها عبر `pip install` داخل قاعدة كود قائمة. إذا كنت تريد مكتبة قائمة على الكود تركّب بها الاستدعاءات، فإن [LangChain](/ar/power-local-llm/langchain-review) أو [CrewAI](/ar/power-local-llm/crewai-review) مبنيان وموثقان لذلك بالضبط.",
           },
           {
             title: 'الخطأ 3: الخلط بين رابط frdel/agent-zero القديم والمستودع الحالي',
@@ -2145,11 +2145,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Leon AI: المزايا والأسعار والبدائل](/power-local-llm/leon-ai-review) — إطار عمل آخر لوكيل شخصي ذاتي الاستضافة، للمقارنة مع تركيز Agent Zero على سطح المكتب والمتصفح.',
-          '[مراجعة SuperAGI: المزايا والأسعار والبدائل](/power-local-llm/superagi-review) — مشروع وكيل مستقل آخر مفتوح المصدر وقائم على واجهة رسومية.',
-          '[مراجعة CrewAI: المزايا والأسعار والبدائل](/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار وعلى الكود، للفرق التي تريد تضمين التنسيق داخل تطبيقها الخاص بدلًا من تشغيل تطبيق Docker مستقل.',
-          '[مراجعة AutoGen: المزايا والأسعار والبدائل](/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، في وضع صيانة الآن، للمقارنة التاريخية.',
-          '[دليل برمجيات النماذج المحلية](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك موقع Agent Zero بين أطر عمل الوكلاء.',
+          '[مراجعة Leon AI: المزايا والأسعار والبدائل](/ar/power-local-llm/leon-ai-review) — إطار عمل آخر لوكيل شخصي ذاتي الاستضافة، للمقارنة مع تركيز Agent Zero على سطح المكتب والمتصفح.',
+          '[مراجعة SuperAGI: المزايا والأسعار والبدائل](/ar/power-local-llm/superagi-review) — مشروع وكيل مستقل آخر مفتوح المصدر وقائم على واجهة رسومية.',
+          '[مراجعة CrewAI: المزايا والأسعار والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار وعلى الكود، للفرق التي تريد تضمين التنسيق داخل تطبيقها الخاص بدلًا من تشغيل تطبيق Docker مستقل.',
+          '[مراجعة AutoGen: المزايا والأسعار والبدائل](/ar/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، في وضع صيانة الآن، للمقارنة التاريخية.',
+          '[دليل برمجيات النماذج المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك موقع Agent Zero بين أطر عمل الوكلاء.',
         ],
       },
     },
@@ -2224,7 +2224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '멀티 에이전트 협업: 모든 에이전트가 하위 에이전트를 만들어 리서치, 코딩, 리뷰 작업을 위임 가능',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero는 원래 최소한의 코딩 에이전트로 소개되었던 시절과 비교해 크게 달라졌습니다 — 현재 릴리스는 완전한 리눅스 데스크톱, 브라우저 자동화, 문서 공동 편집을 추가했습니다. Agent Zero가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { type: 'note', text: 'Agent Zero는 원래 최소한의 코딩 에이전트로 소개되었던 시절과 비교해 크게 달라졌습니다 — 현재 릴리스는 완전한 리눅스 데스크톱, 브라우저 자동화, 문서 공동 편집을 추가했습니다. Agent Zero가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
         ],
       },
       history: {
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Agent Zero의 GitHub 저장소는 2024년 6월 원래 소유자 `frdel`의 계정 아래 생성되었으며, 크고 경직된 기능 집합이 아니라 최소한의 코어와 하위 에이전트 위임 패턴을 중심으로 구축된 경량의 투명한 범용 자율 에이전트로 빠르게 팬층을 확보했습니다.**",
           "이후 저장소는 `agent0ai` GitHub 조직으로 이전되었습니다. 예전 `frdel/agent-zero` URL로 접속하면 이제 [github.com/agent0ai/agent-zero](https://github.com/agent0ai/agent-zero)로 HTTP 리다이렉트됩니다. 프로젝트는 저장소의 MIT 라이선스 파일에 저작권자로 명시된 기업, Agent Zero, s.r.o.(체코의 유한책임회사)가 유지관리하며, 동일한 라이선스 아래 여전히 완전한 오픈소스로 남아 있습니다.",
           "이 조직 이전과 함께 프로젝트의 범위도 크게 확장되었습니다. 원래는 코딩 능력을 갖춘 최소한의 에이전트로 소개되었지만, 현재 릴리스는 에이전트가 직접 조작할 수 있는 Docker 기반 리눅스 데스크톱, DOM 수준의 주석과 제어가 가능한 브라우저, Markdown 및 오피스 문서의 실시간 공동 편집, 100개가 넘는 커뮤니티 확장 기능을 담은 Plugin Hub, 그리고 함께 제공되는 데스크톱 설치 프로그램(A0 Launcher)과 터미널 설치 프로그램(A0 Install)을 갖추고 있습니다.",
-          "이 때문에 Agent Zero는 이 시리즈의 다른 대부분 프레임워크와는 다른 위치에 있습니다. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review)은 자신의 Python 애플리케이션에 임포트해서 쓰는 개발자용 라이브러리입니다. 반면 Agent Zero는 브라우저에서 여는 Web UI를 갖춘 실행 가능한 셀프 호스팅 제품으로 출시되었으며, 이 점에서는 코드 우선 오케스트레이션 라이브러리보다 [Leon AI](/power-local-llm/leon-ai-review)나 [SuperAGI](/power-local-llm/superagi-review)에 더 가깝습니다.",
+          "이 때문에 Agent Zero는 이 시리즈의 다른 대부분 프레임워크와는 다른 위치에 있습니다. [LangChain](/ko/power-local-llm/langchain-review), [CrewAI](/ko/power-local-llm/crewai-review), [AutoGen](/ko/power-local-llm/autogen-review)은 자신의 Python 애플리케이션에 임포트해서 쓰는 개발자용 라이브러리입니다. 반면 Agent Zero는 브라우저에서 여는 Web UI를 갖춘 실행 가능한 셀프 호스팅 제품으로 출시되었으며, 이 점에서는 코드 우선 오케스트레이션 라이브러리보다 [Leon AI](/ko/power-local-llm/leon-ai-review)나 [SuperAGI](/ko/power-local-llm/superagi-review)에 더 가깝습니다.",
         ],
         itemHeadings: true,
         rows: [
@@ -2330,8 +2330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Agent Zero를 피해야 하는 경우',
             list: [
-              '자신의 애플리케이션 안에서 LLM 호출을 구성할 경량 Python이나 JavaScript 라이브러리가 필요할 때 — 이런 용도로 만들어지고 문서화된 것은 [LangChain](/power-local-llm/langchain-review)이나 [LangGraph](/power-local-llm/langgraph-review)입니다',
-              '정의된 크루 구조를 핵심 추상화로 삼는 역할 기반 멀티 에이전트 조정이 필요할 때 — 이 패턴에 특화된 것은 [CrewAI](/power-local-llm/crewai-review)입니다',
+              '자신의 애플리케이션 안에서 LLM 호출을 구성할 경량 Python이나 JavaScript 라이브러리가 필요할 때 — 이런 용도로 만들어지고 문서화된 것은 [LangChain](/ko/power-local-llm/langchain-review)이나 [LangGraph](/ko/power-local-llm/langgraph-review)입니다',
+              '정의된 크루 구조를 핵심 추상화로 삼는 역할 기반 멀티 에이전트 조정이 필요할 때 — 이 패턴에 특화된 것은 [CrewAI](/ko/power-local-llm/crewai-review)입니다',
               'Docker를 실행할 수 없거나 실행하고 싶지 않을 때 — Agent Zero는 컨테이너 없는 설치 방법이 문서화되어 있지 않습니다',
               '엔터프라이즈 지원이나 SLA가 필요할 때 — 이 리뷰 작성 시점 기준 Agent Zero에는 확인된 상업용 지원 등급이 없습니다',
             ],
@@ -2344,9 +2344,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Docker를 사용할 수 없거나, 독립 실행형 애플리케이션 대신 임베드 가능한 코드 라이브러리가 필요하거나, 안정적인 API 계약을 갖춘 성숙하고 문서화된 멀티 에이전트 프레임워크가 필요할 때는 Agent Zero를 피하세요.**",
         items: [
           'Docker에 접근할 수 없거나 데스크톱 및 브라우저 자동화 기능을 갖춘 서드파티 컨테이너 실행을 금지하는 정책이 있는 팀',
-          '기존 코드에 오케스트레이션 라이브러리를 임포트해야 하는 맞춤형 LLM 애플리케이션을 구축하는 팀 — [LangChain](/power-local-llm/langchain-review)이나 [Semantic Kernel](/power-local-llm/semantic-kernel-review) 같은 라이브러리가 더 직접적으로 맞습니다',
+          '기존 코드에 오케스트레이션 라이브러리를 임포트해야 하는 맞춤형 LLM 애플리케이션을 구축하는 팀 — [LangChain](/ko/power-local-llm/langchain-review)이나 [Semantic Kernel](/ko/power-local-llm/semantic-kernel-review) 같은 라이브러리가 더 직접적으로 맞습니다',
           '자동화 파이프라인을 위해 오래 유지되는 버전 관리된 API 계약이 필요한 팀 — Agent Zero는 원래의 최소 에이전트 개념에서 현재의 데스크톱-브라우저 기능 집합으로 크게 범위를 바꿔왔고, 지금도 자주 릴리스를 이어가고 있습니다(2026년 9월 기준 v2.12)',
-          '성숙하고 문서화된 핵심 기능으로서 지속적이고 스스로 편집되는 장기 에이전트 메모리가 특별히 필요한 팀 — 이 용도로 만들어지고 문서화된 것은 [Letta](/power-local-llm/letta-review)입니다',
+          '성숙하고 문서화된 핵심 기능으로서 지속적이고 스스로 편집되는 장기 에이전트 메모리가 특별히 필요한 팀 — 이 용도로 만들어지고 문서화된 것은 [Letta](/ko/power-local-llm/letta-review)입니다',
           '결정적인 요구사항이 실제 데스크톱, 브라우저, 문서를 조작할 수 있는 셀프 호스팅 에이전트이고 Docker에서 실행하는 것이 편안하다면 대신 Agent Zero를 사용하세요',
         ],
         note: "Agent Zero는 v2.12(2026년 9월)까지 잦은 태그 릴리스가 이어지는 공개 로드맵과 함께 활발히 유지관리되고 있으므로, 여기서 설명한 범위 변화는 다음 방문 전에 더 진행될 수 있습니다 — 프로덕션에서 특정 기능에 의존하기 전에 실제 저장소를 확인하세요.",
@@ -2358,10 +2358,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['도구', '인터페이스', '라이선스', '운영 주체', '최적 용도'],
         rows: [
           { '도구': '[Agent Zero](https://github.com/agent0ai/agent-zero)', '인터페이스': 'Web UI + Docker', '라이선스': 'MIT', '운영 주체': 'Agent Zero, s.r.o.(기업)', '최적 용도': '셀프 호스팅 데스크톱+브라우저 에이전트' },
-          { '도구': '[Leon AI](/power-local-llm/leon-ai-review)', '인터페이스': '음성/텍스트 앱 + CLI', '라이선스': 'MIT', '운영 주체': 'Louis Grenard(개인)', '최적 용도': '셀프 호스팅 개인 비서' },
-          { '도구': '[SuperAGI](/power-local-llm/superagi-review)', '인터페이스': 'Web GUI 콘솔', '라이선스': 'MIT', '운영 주체': 'TransformerOptimus(개인)', '최적 용도': 'GUI 기반 자율 에이전트' },
-          { '도구': '[CrewAI](/power-local-llm/crewai-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT', '운영 주체': 'CrewAI, Inc.(VC 투자)', '최적 용도': '역할 기반 멀티 에이전트 크루' },
-          { '도구': '[AutoGen](/power-local-llm/autogen-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT / CC BY 4.0', '운영 주체': 'Microsoft(유지보수 모드)', '최적 용도': '기존 AutoGen 앱 전용' },
+          { '도구': '[Leon AI](/ko/power-local-llm/leon-ai-review)', '인터페이스': '음성/텍스트 앱 + CLI', '라이선스': 'MIT', '운영 주체': 'Louis Grenard(개인)', '최적 용도': '셀프 호스팅 개인 비서' },
+          { '도구': '[SuperAGI](/ko/power-local-llm/superagi-review)', '인터페이스': 'Web GUI 콘솔', '라이선스': 'MIT', '운영 주체': 'TransformerOptimus(개인)', '최적 용도': 'GUI 기반 자율 에이전트' },
+          { '도구': '[CrewAI](/ko/power-local-llm/crewai-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT', '운영 주체': 'CrewAI, Inc.(VC 투자)', '최적 용도': '역할 기반 멀티 에이전트 크루' },
+          { '도구': '[AutoGen](/ko/power-local-llm/autogen-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT / CC BY 4.0', '운영 주체': 'Microsoft(유지보수 모드)', '최적 용도': '기존 AutoGen 앱 전용' },
         ],
       },
       commonMistakes: {
@@ -2375,7 +2375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '실수 2: Agent Zero가 임포트 가능한 Python 라이브러리처럼 동작할 것이라고 기대하기',
-            content: "Agent Zero는 Web UI를 갖춘 셀프 호스팅 Docker 기반 애플리케이션이지, 기존 코드베이스에 `pip install`로 넣는 패키지가 아닙니다. 호출을 직접 구성하는 코드 우선 라이브러리가 필요하다면, 이런 용도로 만들어지고 문서화된 것은 [LangChain](/power-local-llm/langchain-review)이나 [CrewAI](/power-local-llm/crewai-review)입니다.",
+            content: "Agent Zero는 Web UI를 갖춘 셀프 호스팅 Docker 기반 애플리케이션이지, 기존 코드베이스에 `pip install`로 넣는 패키지가 아닙니다. 호출을 직접 구성하는 코드 우선 라이브러리가 필요하다면, 이런 용도로 만들어지고 문서화된 것은 [LangChain](/ko/power-local-llm/langchain-review)이나 [CrewAI](/ko/power-local-llm/crewai-review)입니다.",
           },
           {
             title: '실수 3: 예전 frdel/agent-zero URL과 현재 저장소를 혼동하기',
@@ -2414,11 +2414,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Leon AI 리뷰: 기능, 가격, 대안](/power-local-llm/leon-ai-review) — 또 다른 셀프 호스팅 개인 에이전트 프레임워크로, Agent Zero의 데스크톱-브라우저 중심 방향성과 비교해볼 수 있습니다.',
-          '[SuperAGI 리뷰: 기능, 가격, 대안](/power-local-llm/superagi-review) — 또 다른 GUI 기반의 독립 오픈소스 자율 에이전트 프로젝트입니다.',
-          '[CrewAI 리뷰: 기능, 가격, 대안](/power-local-llm/crewai-review) — 독립 실행형 Docker 앱 대신 자신의 애플리케이션에 오케스트레이션을 임베드하려는 팀을 위한 코드 우선 역할 기반 멀티 에이전트 프레임워크입니다.',
-          '[AutoGen 리뷰: 기능, 가격, 대안](/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 현재 유지보수 모드이며 역사적 비교를 위한 항목입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 사이에서 Agent Zero의 위치를 확인할 수 있습니다.',
+          '[Leon AI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/leon-ai-review) — 또 다른 셀프 호스팅 개인 에이전트 프레임워크로, Agent Zero의 데스크톱-브라우저 중심 방향성과 비교해볼 수 있습니다.',
+          '[SuperAGI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/superagi-review) — 또 다른 GUI 기반의 독립 오픈소스 자율 에이전트 프로젝트입니다.',
+          '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 독립 실행형 Docker 앱 대신 자신의 애플리케이션에 오케스트레이션을 임베드하려는 팀을 위한 코드 우선 역할 기반 멀티 에이전트 프레임워크입니다.',
+          '[AutoGen 리뷰: 기능, 가격, 대안](/ko/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 현재 유지보수 모드이며 역사적 비교를 위한 항목입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 사이에서 Agent Zero의 위치를 확인할 수 있습니다.',
         ],
       },
     },

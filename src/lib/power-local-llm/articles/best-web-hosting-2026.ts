@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hosting-vs-gpu-cloud',
         title: 'Standard-Hosting vs. KI-/GPU-Cloud-Hosting',
         content:
-          'IONOS und Hetzner betreiben auch GPU-Cloud-Produkte für KI-Workloads — siehe unseren [DSGVO-Cloud-GPU-Vergleich](/local-llms/eu-cloud-gpu-gdpr-2026) — aber der oben genannte IONOS-Tarif ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung. Wenn Sie Rechenleistung zum Betreiben oder Fine-Tuning eines lokalen LLM benötigen statt eine Website zu hosten, gibt es drei Wege, keiner davon ist Standard-Webhosting: (1) eine GPU stundenweise mieten und das Modell selbst betreiben — siehe den [Cloud-GPU-Mietratgeber 2026](/power-local-llm/cloud-gpu-rental-guide-2026) für Stundenpreise bei RunPod, Lambda Labs und Vast.ai, oder den oben verlinkten EU-spezifischen Vergleich für DSGVO-fokussierte GPU-Anbieter einschließlich Hetzner; (2) eine verwaltete Inferenz-API aufrufen, die pro Token oder pro Anfrage abrechnet und keine eigene GPU-Verwaltung erfordert; (3) eine eigene KI-Workstation aufbauen und die Hardware besitzen, was eine höhere Vorabinvestition gegen keine laufende Mietrechnung tauscht.',
+          'IONOS und Hetzner betreiben auch GPU-Cloud-Produkte für KI-Workloads — siehe unseren [DSGVO-Cloud-GPU-Vergleich](/local-llms/eu-cloud-gpu-gdpr-2026) — aber der oben genannte IONOS-Tarif ist deren Standard-Webhosting-Stufe, keine GPU-Rechenleistung. Wenn Sie Rechenleistung zum Betreiben oder Fine-Tuning eines lokalen LLM benötigen statt eine Website zu hosten, gibt es drei Wege, keiner davon ist Standard-Webhosting: (1) eine GPU stundenweise mieten und das Modell selbst betreiben — siehe den [Cloud-GPU-Mietratgeber 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) für Stundenpreise bei RunPod, Lambda Labs und Vast.ai, oder den oben verlinkten EU-spezifischen Vergleich für DSGVO-fokussierte GPU-Anbieter einschließlich Hetzner; (2) eine verwaltete Inferenz-API aufrufen, die pro Token oder pro Anfrage abrechnet und keine eigene GPU-Verwaltung erfordert; (3) eine eigene KI-Workstation aufbauen und die Hardware besitzen, was eine höhere Vorabinvestition gegen keine laufende Mietrechnung tauscht.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -552,8 +552,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[DSGVO-konforme Cloud-GPU-Anbieter in der EU vergleichen](/local-llms/eu-cloud-gpu-gdpr-2026) — Hetzner, IONOS GPU Cloud und andere EU-native GPU-Anbieter für KI-Workloads, unabhängig vom Webhosting.',
-          '[Cloud-GPU-Miete allgemein vergleichen](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai nach Stundenpreis, Verfügbarkeit und Einrichtungszeit.',
-          '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/power-local-llm/best-web-hosting) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
+          '[Cloud-GPU-Miete allgemein vergleichen](/de/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs und Vast.ai nach Stundenpreis, Verfügbarkeit und Einrichtungszeit.',
+          '[Die globale Seite mit geprüften Webhosting-Preisen ansehen](/de/power-local-llm/best-web-hosting) — das weltweite Gegenstück zu dieser Deutschland-Seite.',
         ],
       },
     },
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LWS est le moins cher au démarrage mais présente le saut le plus important :** 1,49€/mois la première année, renouvelé à 3,99€/mois — une hausse de 2,7x.',
           '**o2switch fonctionne avec une "Offre Unique" :** environ 4,20-5,04€/mois la première année, renouvelée autour de 7-8,40€/mois, sans paliers d\'offres à comparer.',
           '**OVHcloud, la marque d\'hébergement française la plus reconnue, fait l\'objet d\'une mention éditoriale uniquement.** Aucun programme d\'affiliation ouvert au marché français n\'existe (seul un programme CJ pour le marché américain), donc elle n\'est pas présentée comme un choix monétisé.',
-          '**Il s\'agit d\'hébergement web standard, pas de calcul GPU en cloud.** Pour le calcul IA/LLM, voir le [Guide de location de GPU cloud 2026](/power-local-llm/cloud-gpu-rental-guide-2026) séparé.',
+          '**Il s\'agit d\'hébergement web standard, pas de calcul GPU en cloud.** Pour le calcul IA/LLM, voir le [Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) séparé.',
           '**Un site a besoin de plus que son seul forfait d\'hébergement.** Une base de données séparée (Neon, Supabase), une sauvegarde hors site (Backblaze B2, Cloudflare R2, Wasabi) et un moyen sûr de partager de gros fichiers sont trois décisions auxquelles la plupart des propriétaires de site font face tôt ou tard — détaillées ci-dessous avec des prix vérifiés directement.',
         ],
       },
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hosting-vs-gpu-cloud',
         title: 'Hébergement Standard vs. Cloud GPU/IA',
         content:
-          'Cette page couvre l\'hébergement web mutualisé et professionnel pour un site, pas le calcul GPU pour des charges de travail IA. Pour exécuter ou affiner un LLM, il existe trois voies distinctes, aucune n\'étant de l\'hébergement web standard : (1) louer une GPU à l\'heure et exécuter le modèle soi-même — voir le [Guide de location de GPU cloud 2026](/power-local-llm/cloud-gpu-rental-guide-2026), qui compare RunPod, Lambda Labs et Vast.ai sur le tarif horaire, la garantie de disponibilité et le temps de mise en place ; (2) appeler une API d\'inférence managée, facturée au token ou à la requête, sans aucune gestion de GPU ; (3) construire sa propre station de travail IA et posséder le matériel, ce qui échange un investissement initial plus élevé contre l\'absence de facture de location récurrente. Il n\'existe pas encore de comparatif GPU cloud spécifique au marché français sur ce site, donc le guide général est le lien pertinent pour les lecteurs français évaluant le calcul GPU.',
+          'Cette page couvre l\'hébergement web mutualisé et professionnel pour un site, pas le calcul GPU pour des charges de travail IA. Pour exécuter ou affiner un LLM, il existe trois voies distinctes, aucune n\'étant de l\'hébergement web standard : (1) louer une GPU à l\'heure et exécuter le modèle soi-même — voir le [Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026), qui compare RunPod, Lambda Labs et Vast.ai sur le tarif horaire, la garantie de disponibilité et le temps de mise en place ; (2) appeler une API d\'inférence managée, facturée au token ou à la requête, sans aucune gestion de GPU ; (3) construire sa propre station de travail IA et posséder le matériel, ce qui échange un investissement initial plus élevé contre l\'absence de facture de location récurrente. Il n\'existe pas encore de comparatif GPU cloud spécifique au marché français sur ce site, donc le guide général est le lien pertinent pour les lecteurs français évaluant le calcul GPU.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -864,8 +864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures Complémentaires',
         items: [
-          '[Comparer la location de GPU cloud pour l\'inférence IA](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs et Vast.ai sur le tarif horaire, la disponibilité et le temps de mise en place, un produit différent de l\'hébergement web.',
-          '[Voir la page mondiale des prix d\'hébergement vérifiés](/power-local-llm/best-web-hosting) — l\'équivalent mondial de cette page pour le marché français.',
+          '[Comparer la location de GPU cloud pour l\'inférence IA](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs et Vast.ai sur le tarif horaire, la disponibilité et le temps de mise en place, un produit différent de l\'hébergement web.',
+          '[Voir la page mondiale des prix d\'hébergement vérifiés](/fr/power-local-llm/best-web-hosting) — l\'équivalent mondial de cette page pour le marché français.',
         ],
       },
     },
@@ -1334,7 +1334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'standard-vs-ai',
         title: 'Hospedagem padrão vs. hospedagem especializada em IA',
         content:
-          'Tudo nesta página é hospedagem de site padrão — o tipo que você precisa para um site institucional, blog em WordPress ou loja virtual. Nenhum desses planos inclui acesso a GPU, então nenhum deles roda ou faz fine-tuning de um LLM local. Existem três caminhos separados para rodar ou ajustar um LLM, e nenhum deles é hospedagem de site padrão: (1) alugar uma GPU por hora e rodar o modelo você mesmo — veja o [Guia de Aluguel de GPU em Nuvem 2026](/power-local-llm/cloud-gpu-rental-guide-2026), que compara RunPod, Lambda Labs e Vast.ai em preço por hora, garantia de disponibilidade e adequação a residência de dados; (2) usar uma API de inferência gerenciada, cobrada por token ou por requisição, sem precisar administrar nenhuma GPU; (3) montar uma workstation de IA própria e ser dono do hardware, trocando um investimento inicial maior por nenhuma conta de aluguel recorrente.',
+          'Tudo nesta página é hospedagem de site padrão — o tipo que você precisa para um site institucional, blog em WordPress ou loja virtual. Nenhum desses planos inclui acesso a GPU, então nenhum deles roda ou faz fine-tuning de um LLM local. Existem três caminhos separados para rodar ou ajustar um LLM, e nenhum deles é hospedagem de site padrão: (1) alugar uma GPU por hora e rodar o modelo você mesmo — veja o [Guia de Aluguel de GPU em Nuvem 2026](/pt/power-local-llm/cloud-gpu-rental-guide-2026), que compara RunPod, Lambda Labs e Vast.ai em preço por hora, garantia de disponibilidade e adequação a residência de dados; (2) usar uma API de inferência gerenciada, cobrada por token ou por requisição, sem precisar administrar nenhuma GPU; (3) montar uma workstation de IA própria e ser dono do hardware, trocando um investimento inicial maior por nenhuma conta de aluguel recorrente.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Guia de Aluguel de GPU em Nuvem 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs e Vast.ai comparados por preço por hora, disponibilidade e tempo de configuração, um produto diferente de hospedagem de site.',
+          '[Guia de Aluguel de GPU em Nuvem 2026](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs e Vast.ai comparados por preço por hora, disponibilidade e tempo de configuração, um produto diferente de hospedagem de site.',
         ],
       },
     },
@@ -1578,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'standard-vs-ai',
         title: 'الاستضافة القياسية مقابل الاستضافة المتخصصة بالذكاء الاصطناعي',
         content:
-          'المزودون الأربعة أعلاه يبيعون استضافة مواقع قياسية — لموقع شركة، أو تثبيت WordPress، أو متجر إلكتروني — دون أي وصول إلى GPU. استضافة موقع مشكلة مختلفة عن استئجار قدرة حوسبة لتشغيل أو ضبط نموذج لغوي كبير محلي. توجد ثلاث طرق منفصلة لتشغيل أو ضبط نموذج لغوي، وليست أي منها استضافة مواقع قياسية: (1) استئجار GPU بالساعة وتشغيل النموذج بنفسك — راجع [دليل استئجار GPU السحابي 2026](/power-local-llm/cloud-gpu-rental-guide-2026)، الذي يقارن RunPod وLambda Labs وVast.ai من حيث السعر بالساعة ومدة التشغيل، وكذلك [أفضل GPU لتشغيل نموذج لغوي محلي في الإمارات](/prompt-bites/best-gpu-local-llm-uae-price)؛ (2) استخدام واجهة برمجية للاستدلال المُدار، تُحتسب فيها التكلفة لكل رمز أو لكل طلب دون أي إدارة لـGPU؛ (3) بناء محطة عمل ذكاء اصطناعي خاصة وامتلاك العتاد، وهو ما يستبدل استثمارًا مبدئيًا أعلى بعدم وجود فاتورة إيجار متكررة.',
+          'المزودون الأربعة أعلاه يبيعون استضافة مواقع قياسية — لموقع شركة، أو تثبيت WordPress، أو متجر إلكتروني — دون أي وصول إلى GPU. استضافة موقع مشكلة مختلفة عن استئجار قدرة حوسبة لتشغيل أو ضبط نموذج لغوي كبير محلي. توجد ثلاث طرق منفصلة لتشغيل أو ضبط نموذج لغوي، وليست أي منها استضافة مواقع قياسية: (1) استئجار GPU بالساعة وتشغيل النموذج بنفسك — راجع [دليل استئجار GPU السحابي 2026](/ar/power-local-llm/cloud-gpu-rental-guide-2026)، الذي يقارن RunPod وLambda Labs وVast.ai من حيث السعر بالساعة ومدة التشغيل، وكذلك [أفضل GPU لتشغيل نموذج لغوي محلي في الإمارات](/prompt-bites/best-gpu-local-llm-uae-price)؛ (2) استخدام واجهة برمجية للاستدلال المُدار، تُحتسب فيها التكلفة لكل رمز أو لكل طلب دون أي إدارة لـGPU؛ (3) بناء محطة عمل ذكاء اصطناعي خاصة وامتلاك العتاد، وهو ما يستبدل استثمارًا مبدئيًا أعلى بعدم وجود فاتورة إيجار متكررة.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل استئجار GPU السحابي 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — مقارنة RunPod وLambda Labs وVast.ai من حيث السعر بالساعة ومدة التشغيل، وهو منتج مختلف عن استضافة المواقع.',
+          '[دليل استئجار GPU السحابي 2026](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — مقارنة RunPod وLambda Labs وVast.ai من حيث السعر بالساعة ومدة التشغيل، وهو منتج مختلف عن استضافة المواقع.',
           '[أفضل GPU لتشغيل نموذج لغوي محلي في الإمارات](/prompt-bites/best-gpu-local-llm-uae-price) — تفصيل أسعار GPU الاستهلاكية الخاص بالإمارات.',
         ],
       },
@@ -2355,7 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'standard-vs-ai',
         title: '일반 호스팅 vs AI 특화 호스팅',
         content:
-          'Cafe24, 가비아, 닷홈, NHN Hosting은 모두 기업 사이트, 워드프레스 설치, 온라인 쇼핑몰용 일반 웹 호스팅을 판매하며, GPU 접근 권한은 포함되어 있지 않습니다. 로컬 LLM을 실행하거나 파인튜닝하는 방법에는 크게 세 가지가 있으며, 어느 것도 일반 웹 호스팅이 아닙니다: (1) GPU를 시간 단위로 대여해 직접 모델을 실행하는 방법 — RunPod, Lambda Labs, Vast.ai를 시간당 가격, 가동률, 데이터 거주지 적합성 기준으로 비교한 [클라우드 GPU 대여 가이드 2026](/power-local-llm/cloud-gpu-rental-guide-2026)을 참고하세요; (2) 토큰 단위 또는 요청 단위로 과금되는 관리형 추론 API를 사용해 GPU 관리를 전혀 하지 않는 방법; (3) 자체 AI 워크스테이션을 구축해 하드웨어를 직접 소유하는 방법으로, 초기 투자 비용이 커지는 대신 지속적인 대여 비용이 없습니다.',
+          'Cafe24, 가비아, 닷홈, NHN Hosting은 모두 기업 사이트, 워드프레스 설치, 온라인 쇼핑몰용 일반 웹 호스팅을 판매하며, GPU 접근 권한은 포함되어 있지 않습니다. 로컬 LLM을 실행하거나 파인튜닝하는 방법에는 크게 세 가지가 있으며, 어느 것도 일반 웹 호스팅이 아닙니다: (1) GPU를 시간 단위로 대여해 직접 모델을 실행하는 방법 — RunPod, Lambda Labs, Vast.ai를 시간당 가격, 가동률, 데이터 거주지 적합성 기준으로 비교한 [클라우드 GPU 대여 가이드 2026](/ko/power-local-llm/cloud-gpu-rental-guide-2026)을 참고하세요; (2) 토큰 단위 또는 요청 단위로 과금되는 관리형 추론 API를 사용해 GPU 관리를 전혀 하지 않는 방법; (3) 자체 AI 워크스테이션을 구축해 하드웨어를 직접 소유하는 방법으로, 초기 투자 비용이 커지는 대신 지속적인 대여 비용이 없습니다.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -2475,7 +2475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[클라우드 GPU 대여 가이드 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs, Vast.ai를 시간당 가격, 가동률, 구축 시간 기준으로 비교, 웹 호스팅과는 다른 제품입니다.',
+          '[클라우드 GPU 대여 가이드 2026](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs, Vast.ai를 시간당 가격, 가동률, 구축 시간 기준으로 비교, 웹 호스팅과는 다른 제품입니다.',
         ],
       },
     },

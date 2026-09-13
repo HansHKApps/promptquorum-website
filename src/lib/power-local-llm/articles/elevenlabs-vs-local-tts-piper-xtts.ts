@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wählen Sie XTTS v2, wenn:** Sie Voice Cloning brauchen, Sprachqualität und Natürlichkeit wichtiger sind als Geschwindigkeit, Sie eine GPU haben, mehrsprachiges Cloning wichtig ist und Sie mit einer technischeren Einrichtung vertraut sind.'
         ],
         note: 'Piper und XTTS v2 sind die zwei etabliertesten lokalen Optionen, aber nicht die einzigen. Neuere lokale TTS-Modelle, die schnellere Synthese auf bescheidener Hardware anstreben, und andere, die näher an XTTS-Niveau bei Natürlichkeit und Cloning-Qualität herankommen, tauchen regelmäßig auf. Wenn Sie lokale TTS von Grund auf evaluieren, lohnt sich ein kurzer Blick auf aktuelle Community-Ranglisten, bevor Sie sich festlegen — aber Piper und XTTS v2 bleiben die sichersten, am besten dokumentierten Startpunkte für die meisten Projekte.',
-        blockquote: 'Für die vollständige Lizenz-Aufschlüsselung beider Engines — inklusive Bedingungen pro Stimme und Checkpoint — siehe unseren [Leitfaden zu lokalen TTS- & Voice-Cloning-Lizenzen](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+        blockquote: 'Für die vollständige Lizenz-Aufschlüsselung beider Engines — inklusive Bedingungen pro Stimme und Checkpoint — siehe unseren [Leitfaden zu lokalen TTS- & Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -2348,7 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choisissez XTTS v2 quand :** vous avez besoin de clonage vocal, la qualité et le naturel de la voix comptent plus que la vitesse, vous avez un GPU, le clonage multilingue compte, et vous êtes à l\'aise avec une configuration plus technique.'
         ],
         note: 'Piper et XTTS v2 sont les deux options locales les plus établies, mais pas les seules. De nouveaux modèles TTS locaux visant une synthèse plus rapide sur du matériel modeste, et d\'autres se rapprochant du niveau de naturel et de qualité de clonage de XTTS, apparaissent régulièrement. Si vous évaluez le TTS local à partir de zéro, cela vaut la peine de jeter un œil aux classements communautaires actuels avant de vous engager — mais Piper et XTTS v2 restent les points de départ les plus sûrs et les mieux documentés pour la plupart des projets.',
-        blockquote: 'Pour le détail complet des licences des deux moteurs — y compris les conditions par voix et par checkpoint — consultez notre [guide des licences TTS local et clonage vocal](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+        blockquote: 'Pour le détail complet des licences des deux moteurs — y compris les conditions par voix et par checkpoint — consultez notre [guide des licences TTS local et clonage vocal](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -3303,7 +3303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**选XTTS v2的情况：** 你需要声音克隆，语音质量和自然度比速度更重要，你有GPU，多语言克隆很关键，你能接受更偏技术的搭建过程。'
         ],
         note: 'Piper和XTTS v2是最成熟的两个本地方案，但不是唯一选择。目标是在普通硬件上实现更快合成的新型本地TTS模型，以及不断逼近XTTS级自然度和克隆质量的其他方案，都在持续涌现。如果你是从零开始评估本地TTS，投入前值得快速看一眼当前的社区排行榜——但对大多数项目来说，Piper和XTTS v2仍是最安全、文档最完善的起点。',
-        blockquote: '关于这两款引擎的完整许可细则——包括逐语音和逐检查点的条款——请参阅我们的[本地TTS与声音克隆许可指南](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。'
+        blockquote: '关于这两款引擎的完整许可细则——包括逐语音和逐检查点的条款——请参阅我们的[本地TTS与声音克隆许可指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -4258,7 +4258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**XTTS v2を選ぶべき場合:**音声クローンが必要、速度よりも音声品質と自然さが重要、GPUがある、多言語クローンが重要、より技術的なセットアップに抵抗がない場合。'
         ],
         note: 'PiperとXTTS v2は最も確立された2つのローカル選択肢ですが、それだけではありません。控えめなハードウェアでより高速な合成を目指す新しいローカルTTSモデルや、XTTS並みの自然さとクローン品質に近づこうとするモデルが定期的に登場しています。ローカルTTSをゼロから評価するなら、最終決定の前に最新のコミュニティランキングをざっと確認する価値があります——ただし、ほとんどのプロジェクトにとって、PiperとXTTS v2は依然として最も安全でドキュメントが充実した出発点です。',
-        blockquote: '両エンジンのライセンスの詳細な内訳——音声ごと・チェックポイントごとの条件を含む——については、[ローカルTTSと音声クローンのライセンスガイド](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)をご覧ください。'
+        blockquote: '両エンジンのライセンスの詳細な内訳——音声ごと・チェックポイントごとの条件を含む——については、[ローカルTTSと音声クローンのライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)をご覧ください。'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -5216,7 +5216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Elige XTTS v2 cuando:** necesitas clonación de voz, la calidad y naturalidad de la voz importan más que la velocidad, tienes una GPU, la clonación multilingüe importa y te sientes cómodo con una configuración más técnica.'
         ],
         note: 'Piper y XTTS v2 son las dos opciones locales más consolidadas, pero no son las únicas. Aparecen regularmente modelos de TTS local más nuevos orientados a una síntesis más rápida en hardware modesto, y otros que se acercan más al nivel de naturalidad y calidad de clonación de XTTS. Si estás evaluando el TTS local desde cero, vale la pena echar un vistazo rápido a las clasificaciones actuales de la comunidad antes de comprometerte, pero Piper y XTTS v2 siguen siendo los puntos de partida más seguros y documentados para la mayoría de proyectos.',
-        blockquote: 'Para el desglose completo de licencias de ambos motores, incluyendo términos por voz y por checkpoint, consulta nuestra [guía de licencias de TTS local y clonación de voz](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+        blockquote: 'Para el desglose completo de licencias de ambos motores, incluyendo términos por voz y por checkpoint, consulta nuestra [guía de licencias de TTS local y clonación de voz](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -6173,7 +6173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Escolha o XTTS v2 quando:** você precisa de clonagem de voz, qualidade e naturalidade da voz importam mais que velocidade, você tem uma GPU, clonagem multilíngue importa, e você está confortável com uma configuração mais técnica.'
         ],
         note: 'O Piper e o XTTS v2 são as duas opções locais mais consolidadas, mas não são as únicas. Novos modelos de TTS local voltados para síntese mais rápida em hardware modesto, e outros que se aproximam do nível de naturalidade e qualidade de clonagem do XTTS, aparecem regularmente. Se você está avaliando TTS local do zero, vale a pena dar uma olhada rápida nos rankings atuais da comunidade antes de se comprometer — mas o Piper e o XTTS v2 continuam sendo os pontos de partida mais seguros e documentados para a maioria dos projetos.',
-        blockquote: 'Para o detalhamento completo de licenciamento de ambas as engines — incluindo termos por voz e por checkpoint — veja nosso [guia de Licenças de TTS Local e Clonagem de Voz](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+        blockquote: 'Para o detalhamento completo de licenciamento de ambas as engines — incluindo termos por voz e por checkpoint — veja nosso [guia de Licenças de TTS Local e Clonagem de Voz](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -8081,7 +8081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**اختر XTTS v2 عندما:** تحتاج إلى استنساخ الصوت، وتهمك جودة الصوت وطبيعيته أكثر من السرعة، ولديك وحدة معالجة رسومية، والاستنساخ متعدد اللغات مهم لك، وأنت مرتاح لإعداد أكثر تقنية.'
         ],
         note: 'يُعد Piper و XTTS v2 الخيارين المحليين الأكثر رسوخًا، لكنهما ليسا الوحيدين. تظهر بانتظام نماذج TTS محلية أحدث تستهدف توليدًا أسرع على أجهزة متواضعة، وأخرى تقترب أكثر من مستوى XTTS في الطبيعية وجودة الاستنساخ. إذا كنت تُقيّم TTS المحلي من الصفر، يستحق الأمر إلقاء نظرة سريعة على لوحات ترتيب المجتمع الحالية قبل الالتزام — لكن يبقى Piper و XTTS v2 أكثر نقاط الانطلاق أمانًا وتوثيقًا لمعظم المشاريع.',
-        blockquote: 'للاطلاع على التفصيل الكامل للترخيص لكلا المحركين — بما في ذلك الشروط الخاصة بكل صوت ونقطة تحقق — راجع دليلنا [تراخيص TTS واستنساخ الصوت المحلي](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+        blockquote: 'للاطلاع على التفصيل الكامل للترخيص لكلا المحركين — بما في ذلك الشروط الخاصة بكل صوت ونقطة تحقق — راجع دليلنا [تراخيص TTS واستنساخ الصوت المحلي](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
         id: 'hardware-guide',

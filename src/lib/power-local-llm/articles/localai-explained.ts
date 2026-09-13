@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI erklärt: Die selbstgehostete Alternative zur OpenAI-API (2026)',
     seoTitle: 'LocalAI erklärt: Die selbstgehostete Alternative zur OpenAI-API (2026)',
-    intro: 'LocalAI ist eine kostenlose, MIT-lizenzierte, selbstgehostete KI-Engine von Ettore Di Giacinto ("mudler"), gepflegt von einer Open-Source-Community unter [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Sie stellt eine drop-in OpenAI-kompatible API (plus Anthropic- und ElevenLabs-kompatible Endpunkte) vor einem modularen Satz unabhängig geladener Backends bereit, sodass eine einzige laufende Instanz Textgenerierung, Bildgenerierung, Speech-to-Text, Text-to-Speech und Embeddings abdecken kann, statt für jede Modalität ein separates Tool zu brauchen. LocalAI ersetzt Engines wie [llama.cpp](/power-local-llm/llama-cpp-explained) oder [vLLM](/power-local-llm/vllm-explained) nicht — es kann beide (und andere) als Backend laden und wirkt so als Orchestrierungs- und API-Schicht statt als konkurrierende Roh-Inferenz-Engine.',
+    intro: 'LocalAI ist eine kostenlose, MIT-lizenzierte, selbstgehostete KI-Engine von Ettore Di Giacinto ("mudler"), gepflegt von einer Open-Source-Community unter [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Sie stellt eine drop-in OpenAI-kompatible API (plus Anthropic- und ElevenLabs-kompatible Endpunkte) vor einem modularen Satz unabhängig geladener Backends bereit, sodass eine einzige laufende Instanz Textgenerierung, Bildgenerierung, Speech-to-Text, Text-to-Speech und Embeddings abdecken kann, statt für jede Modalität ein separates Tool zu brauchen. LocalAI ersetzt Engines wie [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder [vLLM](/de/power-local-llm/vllm-explained) nicht — es kann beide (und andere) als Backend laden und wirkt so als Orchestrierungs- und API-Schicht statt als konkurrierende Roh-Inferenz-Engine.',
     metaDescription: 'LocalAI ist die kostenlose, MIT-lizenzierte, selbstgehostete Engine, die eine OpenAI-kompatible API vor llama.cpp-, vLLM-, Stable-Diffusion- und Whisper-Backends für Text, Bild und Audio stellt.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LocalAI Backends',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI ist eine kostenlose, MIT-lizenzierte, selbstgehostete KI-Engine, die eine OpenAI-kompatible API (plus Anthropic- und ElevenLabs-kompatible Endpunkte) vor einem modularen Satz unabhängig geladener Inferenz-Backends bereitstellt.** Statt einer fest eingebauten Inferenz-Engine leitet der Kern jede Anfrage an einen austauschbaren Backend-Prozess weiter — [llama.cpp](/power-local-llm/llama-cpp-explained) und [vLLM](/power-local-llm/vllm-explained) für Text, `diffusers`-basierte Backends für Bildgenerierung, `whisper.cpp`-basierte Backends für Speech-to-Text und weitere für Text-to-Speech und Embeddings —, sodass eine selbstgehostete Instanz mehrere Modalitäten abdeckt, für die man sonst separate Tools bräuchte. Es läuft rein auf der CPU ohne GPU-Pflicht oder mit NVIDIA-CUDA-, AMD-ROCm-, Intel- oder Vulkan-Beschleunigung und wird als Docker-Images, macOS-Installer und CLI-Binary ausgeliefert.',
+    leadAnswerBlock: '**LocalAI ist eine kostenlose, MIT-lizenzierte, selbstgehostete KI-Engine, die eine OpenAI-kompatible API (plus Anthropic- und ElevenLabs-kompatible Endpunkte) vor einem modularen Satz unabhängig geladener Inferenz-Backends bereitstellt.** Statt einer fest eingebauten Inferenz-Engine leitet der Kern jede Anfrage an einen austauschbaren Backend-Prozess weiter — [llama.cpp](/de/power-local-llm/llama-cpp-explained) und [vLLM](/de/power-local-llm/vllm-explained) für Text, `diffusers`-basierte Backends für Bildgenerierung, `whisper.cpp`-basierte Backends für Speech-to-Text und weitere für Text-to-Speech und Embeddings —, sodass eine selbstgehostete Instanz mehrere Modalitäten abdeckt, für die man sonst separate Tools bräuchte. Es läuft rein auf der CPU ohne GPU-Pflicht oder mit NVIDIA-CUDA-, AMD-ROCm-, Intel- oder Vulkan-Beschleunigung und wird als Docker-Images, macOS-Installer und CLI-Binary ausgeliefert.',
     quickAnswerTop: {
       de: {
         question: 'Was ist LocalAI und wie funktioniert es?',
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Der Kern von LocalAI ist ein leichtgewichtiger Router, keine monolithische Inferenz-Engine — er empfängt eine OpenAI-kompatible Anfrage, ermittelt Modell und Backend, auf das sie abgebildet wird, und kommuniziert mit einem separaten Backend-Prozess, der die eigentliche Inferenz ausführt.',
         items: [
           'Der Kernprozess übernimmt API-Kompatibilität, Request-Routing und Modellkonfiguration und spricht dann über gRPC mit Backend-Prozessen',
-          'Vom Projekt dokumentierte Backends umfassen [llama.cpp](/power-local-llm/llama-cpp-explained) und [vLLM](/power-local-llm/vllm-explained) für Textgenerierung, `diffusers`-basierte Backends für Bildgenerierung und `whisper.cpp`-basierte Backends für Speech-to-Text',
+          'Vom Projekt dokumentierte Backends umfassen [llama.cpp](/de/power-local-llm/llama-cpp-explained) und [vLLM](/de/power-local-llm/vllm-explained) für Textgenerierung, `diffusers`-basierte Backends für Bildgenerierung und `whisper.cpp`-basierte Backends für Speech-to-Text',
           'Backends lassen sich aus einer Modell-/Backend-Gallery installieren oder manuell über eine YAML-Datei konfigurieren, die auf ein bestimmtes Backend und Modell verweist',
           'Da Backends separate, installierbare Komponenten sind, muss ein Deployment nur die tatsächlich benötigten Backends laden, statt standardmäßig jede mögliche Engine mitzuliefern',
           'Das Projekt entwickelt zusätzlich zu bestehenden Engines auch eigene native Backends',
@@ -452,12 +452,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'Wie schneidet LocalAI im Vergleich zu llama.cpp und vLLM ab?',
-        content: 'LocalAI ist keine konkurrierende Roh-Inferenz-Engine gegenüber [llama.cpp](/power-local-llm/llama-cpp-explained) oder [vLLM](/power-local-llm/vllm-explained) — die dokumentierte Architektur lädt beide als austauschbare Backends für Textgenerierung, neben separaten Backends für Bild und Audio.',
+        content: 'LocalAI ist keine konkurrierende Roh-Inferenz-Engine gegenüber [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder [vLLM](/de/power-local-llm/vllm-explained) — die dokumentierte Architektur lädt beide als austauschbare Backends für Textgenerierung, neben separaten Backends für Bild und Audio.',
         itemHeadings: true,
         columns: ['Projekt', 'Rolle'],
         rows: [
-          { 'Projekt': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Rolle': 'Eine CPU-/GPU-freundliche Text-Inferenz-Engine; eines der Text-Backends, die LocalAI laden kann.' },
-          { 'Projekt': '[vLLM](/power-local-llm/vllm-explained)', 'Rolle': 'Eine Hochdurchsatz-GPU-Serving-Engine; dokumentiert als weiteres Text-Backend, das LocalAI laden kann.' },
+          { 'Projekt': '[llama.cpp](/de/power-local-llm/llama-cpp-explained)', 'Rolle': 'Eine CPU-/GPU-freundliche Text-Inferenz-Engine; eines der Text-Backends, die LocalAI laden kann.' },
+          { 'Projekt': '[vLLM](/de/power-local-llm/vllm-explained)', 'Rolle': 'Eine Hochdurchsatz-GPU-Serving-Engine; dokumentiert als weiteres Text-Backend, das LocalAI laden kann.' },
           { 'Projekt': 'LocalAI', 'Rolle': 'Die Routing- und API-Kompatibilitätsschicht über solchen Backends, ergänzt um Bild-, Audio- und Embedding-Backends neben Text.' },
         ],
         note: 'Die Wahl zwischen diesen Projekten ist meist kein Entweder-oder — ein LocalAI-Deployment kann für seine Textanfragen intern llama.cpp oder vLLM nutzen. Die Entscheidung ist, ob man diese Engine direkt ansprechen will (llama.cpp, vLLM) oder über eine breitere multimodale API-Schicht, die auch Bild- und Audioanfragen routen kann (LocalAI).',
@@ -479,8 +479,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'LocalAI meiden, wenn',
             list: [
-              'Nur schneller, minimaler Einzelnutzer-Text-Chat auf dem eigenen Rechner benötigt wird — [Ollama](/power-local-llm/llama-cpp-explained) oder LM Studio haben dafür die schmalere Setup-Fläche',
-              'Der maximal mögliche GPU-Serving-Durchsatz für Text allein zählt — [vLLM](/power-local-llm/vllm-explained) direkt anzusprechen vermeidet eine zusätzliche Routing-Schicht',
+              'Nur schneller, minimaler Einzelnutzer-Text-Chat auf dem eigenen Rechner benötigt wird — [Ollama](/de/power-local-llm/llama-cpp-explained) oder LM Studio haben dafür die schmalere Setup-Fläche',
+              'Der maximal mögliche GPU-Serving-Durchsatz für Text allein zählt — [vLLM](/de/power-local-llm/vllm-explained) direkt anzusprechen vermeidet eine zusätzliche Routing-Schicht',
               'Eine grafische Desktop-App ohne Konfigurationsaufwand gewünscht ist statt eines selbst zu konfigurierenden und wartenden Servers',
             ],
           },
@@ -495,8 +495,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tool': '[LocalAI](https://github.com/mudler/LocalAI)', 'Umfang': 'Text, Bild, Audio, Embeddings über austauschbare Backends. Docker, macOS-Installer oder CLI-Binary.', 'Am besten für': 'Eine selbstgehostete, multimodale, OpenAI-/Anthropic-/ElevenLabs-kompatible API.' },
           { 'Tool': '[Ollama](https://ollama.com)', 'Umfang': 'Vor allem Text- (und teils Vision-)Modelle. Ein-Befehl-Installation und Modell-Pull.', 'Am besten für': 'Der schnellste Weg zu einem lokalen Textmodell für einen Nutzer.' },
-          { 'Tool': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Umfang': 'Text-Inferenz-Engine für CPU und GPU. CLI, Web-UI und OpenAI-kompatibler Server.', 'Am besten für': 'Direkte Kontrolle auf Engine-Ebene über Text-Inferenz — oft das Backend unter Ollama und LocalAI.' },
-          { 'Tool': '[vLLM](/power-local-llm/vllm-explained)', 'Umfang': 'Hochdurchsatz-GPU-Text-Serving-Bibliothek. Python-Paket, OpenAI-kompatibler Server.', 'Am besten für': 'Maximaler gleichzeitiger GPU-Durchsatz für Text allein.' },
+          { 'Tool': '[llama.cpp](/de/power-local-llm/llama-cpp-explained)', 'Umfang': 'Text-Inferenz-Engine für CPU und GPU. CLI, Web-UI und OpenAI-kompatibler Server.', 'Am besten für': 'Direkte Kontrolle auf Engine-Ebene über Text-Inferenz — oft das Backend unter Ollama und LocalAI.' },
+          { 'Tool': '[vLLM](/de/power-local-llm/vllm-explained)', 'Umfang': 'Hochdurchsatz-GPU-Text-Serving-Bibliothek. Python-Paket, OpenAI-kompatibler Server.', 'Am besten für': 'Maximaler gleichzeitiger GPU-Durchsatz für Text allein.' },
         ],
         note: 'Dieser Artikel hat diese Tools nicht selbst gegeneinander benchmarkt und behauptet nicht, dass eines technisch überlegen ist — der Vergleich deckt nur dokumentierte Fakten zu Umfang, Setup und Architektur ab.',
       },
@@ -560,10 +560,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[llama.cpp erklärt](/power-local-llm/llama-cpp-explained) — die Text-Inferenz-Engine, die LocalAI als eines seiner Backends laden kann.',
-          '[vLLM erklärt](/power-local-llm/vllm-explained) — die Hochdurchsatz-GPU-Serving-Bibliothek, die LocalAI ebenfalls als Text-Backend laden kann.',
-          '[Local LLM Software-Verzeichnis](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
-          '[GPU-Kaufratgeber für lokale LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Klassen zur Orientierung, falls LocalAI mit GPU-beschleunigten Backends betrieben werden soll.',
+          '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die Text-Inferenz-Engine, die LocalAI als eines seiner Backends laden kann.',
+          '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die Hochdurchsatz-GPU-Serving-Bibliothek, die LocalAI ebenfalls als Text-Backend laden kann.',
+          '[Local LLM Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Klassen zur Orientierung, falls LocalAI mit GPU-beschleunigten Backends betrieben werden soll.',
         ],
       },
     },
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI expliqué : l\'alternative auto-hébergée à l\'API OpenAI (2026)',
     seoTitle: 'LocalAI expliqué : l\'alternative auto-hébergée à l\'API OpenAI (2026)',
-    intro: 'LocalAI est un moteur d\'IA gratuit, sous licence MIT et auto-hébergé, créé par Ettore Di Giacinto ("mudler") et maintenu par une communauté open-source sur [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Il expose une API compatible OpenAI en remplacement direct (plus des points de terminaison compatibles Anthropic et ElevenLabs) devant un ensemble modulaire de backends chargés indépendamment, si bien qu\'une seule instance peut couvrir la génération de texte, la génération d\'image, la transcription audio, la synthèse vocale et les embeddings au lieu de nécessiter un outil séparé par modalité. LocalAI ne remplace pas des moteurs comme [llama.cpp](/power-local-llm/llama-cpp-explained) ou [vLLM](/power-local-llm/vllm-explained) — il peut charger l\'un ou l\'autre (et d\'autres) comme backend, agissant comme une couche d\'orchestration et de compatibilité API plutôt que comme un moteur d\'inférence concurrent.',
+    intro: 'LocalAI est un moteur d\'IA gratuit, sous licence MIT et auto-hébergé, créé par Ettore Di Giacinto ("mudler") et maintenu par une communauté open-source sur [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Il expose une API compatible OpenAI en remplacement direct (plus des points de terminaison compatibles Anthropic et ElevenLabs) devant un ensemble modulaire de backends chargés indépendamment, si bien qu\'une seule instance peut couvrir la génération de texte, la génération d\'image, la transcription audio, la synthèse vocale et les embeddings au lieu de nécessiter un outil séparé par modalité. LocalAI ne remplace pas des moteurs comme [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou [vLLM](/fr/power-local-llm/vllm-explained) — il peut charger l\'un ou l\'autre (et d\'autres) comme backend, agissant comme une couche d\'orchestration et de compatibilité API plutôt que comme un moteur d\'inférence concurrent.',
     metaDescription: 'LocalAI est le moteur gratuit, sous licence MIT et auto-hébergé qui place une API compatible OpenAI devant des backends llama.cpp, vLLM, Stable Diffusion et Whisper pour texte, image et audio.',
     readTime: '12 min de lecture',
     targetKeywords: [
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'backends LocalAI',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI est un moteur d\'IA gratuit, sous licence MIT et auto-hébergé, qui expose une API compatible OpenAI (plus des points de terminaison compatibles Anthropic et ElevenLabs) devant un ensemble modulaire de backends d\'inférence chargés indépendamment.** Au lieu d\'embarquer un seul moteur d\'inférence figé, son noyau route chaque requête vers un processus backend interchangeable — [llama.cpp](/power-local-llm/llama-cpp-explained) et [vLLM](/power-local-llm/vllm-explained) pour le texte, des backends basés sur `diffusers` pour la génération d\'image, des backends basés sur `whisper.cpp` pour la transcription, et d\'autres pour la synthèse vocale et les embeddings — si bien qu\'une seule instance auto-hébergée peut couvrir plusieurs modalités qui nécessiteraient sinon des outils séparés. Il fonctionne uniquement sur CPU sans GPU requis, ou avec accélération NVIDIA CUDA, AMD ROCm, Intel ou Vulkan, et est distribué sous forme d\'images Docker, d\'un installeur macOS et d\'un binaire CLI.',
+    leadAnswerBlock: '**LocalAI est un moteur d\'IA gratuit, sous licence MIT et auto-hébergé, qui expose une API compatible OpenAI (plus des points de terminaison compatibles Anthropic et ElevenLabs) devant un ensemble modulaire de backends d\'inférence chargés indépendamment.** Au lieu d\'embarquer un seul moteur d\'inférence figé, son noyau route chaque requête vers un processus backend interchangeable — [llama.cpp](/fr/power-local-llm/llama-cpp-explained) et [vLLM](/fr/power-local-llm/vllm-explained) pour le texte, des backends basés sur `diffusers` pour la génération d\'image, des backends basés sur `whisper.cpp` pour la transcription, et d\'autres pour la synthèse vocale et les embeddings — si bien qu\'une seule instance auto-hébergée peut couvrir plusieurs modalités qui nécessiteraient sinon des outils séparés. Il fonctionne uniquement sur CPU sans GPU requis, ou avec accélération NVIDIA CUDA, AMD ROCm, Intel ou Vulkan, et est distribué sous forme d\'images Docker, d\'un installeur macOS et d\'un binaire CLI.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que LocalAI et comment ça fonctionne ?',
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Le noyau de LocalAI est un routeur léger, pas un moteur d\'inférence monolithique — il reçoit une requête compatible OpenAI, détermine le modèle et le backend auxquels elle correspond, puis communique avec un processus backend séparé pour exécuter réellement l\'inférence.',
         items: [
           'Le processus principal gère la compatibilité API, le routage des requêtes et la configuration des modèles, puis communique avec les processus backend via gRPC',
-          'Les backends documentés par le projet incluent [llama.cpp](/power-local-llm/llama-cpp-explained) et [vLLM](/power-local-llm/vllm-explained) pour la génération de texte, des backends basés sur `diffusers` pour la génération d\'image, et des backends basés sur `whisper.cpp` pour la transcription',
+          'Les backends documentés par le projet incluent [llama.cpp](/fr/power-local-llm/llama-cpp-explained) et [vLLM](/fr/power-local-llm/vllm-explained) pour la génération de texte, des backends basés sur `diffusers` pour la génération d\'image, et des backends basés sur `whisper.cpp` pour la transcription',
           'Les backends peuvent être installés depuis une galerie de modèles/backends, ou configurés manuellement via un fichier YAML pointant vers un backend et un modèle spécifiques',
           'Comme les backends sont des composants installables séparés, un déploiement n\'a besoin de charger que les backends réellement requis par son cas d\'usage, plutôt que d\'embarquer tous les moteurs possibles par défaut',
           'Le projet développe aussi lui-même certains backends natifs en plus d\'intégrer des moteurs existants',
@@ -735,12 +735,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'Comment LocalAI se compare-t-il à llama.cpp et vLLM ?',
-        content: 'LocalAI n\'est pas un moteur d\'inférence brut concurrent de [llama.cpp](/power-local-llm/llama-cpp-explained) ou [vLLM](/power-local-llm/vllm-explained) — son architecture documentée charge les deux comme backends interchangeables pour la génération de texte, aux côtés de backends séparés pour l\'image et l\'audio.',
+        content: 'LocalAI n\'est pas un moteur d\'inférence brut concurrent de [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou [vLLM](/fr/power-local-llm/vllm-explained) — son architecture documentée charge les deux comme backends interchangeables pour la génération de texte, aux côtés de backends séparés pour l\'image et l\'audio.',
         itemHeadings: true,
         columns: ['Projet', 'Rôle'],
         rows: [
-          { 'Projet': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Rôle': 'Un moteur d\'inférence texte adapté au CPU/GPU ; l\'un des backends texte que LocalAI peut charger.' },
-          { 'Projet': '[vLLM](/power-local-llm/vllm-explained)', 'Rôle': 'Un moteur de serving GPU à haut débit ; documenté comme un autre backend texte que LocalAI peut charger.' },
+          { 'Projet': '[llama.cpp](/fr/power-local-llm/llama-cpp-explained)', 'Rôle': 'Un moteur d\'inférence texte adapté au CPU/GPU ; l\'un des backends texte que LocalAI peut charger.' },
+          { 'Projet': '[vLLM](/fr/power-local-llm/vllm-explained)', 'Rôle': 'Un moteur de serving GPU à haut débit ; documenté comme un autre backend texte que LocalAI peut charger.' },
           { 'Projet': 'LocalAI', 'Rôle': 'La couche de routage et de compatibilité API au-dessus de ces backends, ajoutant des backends image, audio et embedding en plus du texte.' },
         ],
         note: 'Choisir entre ces projets n\'est généralement pas un « soit l\'un soit l\'autre » — un déploiement LocalAI peut faire tourner llama.cpp ou vLLM en interne pour ses requêtes texte. La décision porte sur le fait de s\'adresser directement à ce moteur (llama.cpp, vLLM) ou via une couche API multimodale plus large capable aussi de router des requêtes image et audio (LocalAI).',
@@ -762,8 +762,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Éviter LocalAI si',
             list: [
-              'Seul un chat texte rapide et minimal, mono-utilisateur, sur sa propre machine est nécessaire — [Ollama](/power-local-llm/llama-cpp-explained) ou LM Studio ont une surface de configuration plus réduite pour ce cas précis',
-              'Le débit GPU maximal possible pour le texte seul est prioritaire — s\'adresser directement à [vLLM](/power-local-llm/vllm-explained) évite une couche de routage supplémentaire',
+              'Seul un chat texte rapide et minimal, mono-utilisateur, sur sa propre machine est nécessaire — [Ollama](/fr/power-local-llm/llama-cpp-explained) ou LM Studio ont une surface de configuration plus réduite pour ce cas précis',
+              'Le débit GPU maximal possible pour le texte seul est prioritaire — s\'adresser directement à [vLLM](/fr/power-local-llm/vllm-explained) évite une couche de routage supplémentaire',
               'Une application de bureau graphique sans configuration est préférée à un serveur auto-hébergé à configurer et maintenir',
             ],
           },
@@ -778,8 +778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Outil': '[LocalAI](https://github.com/mudler/LocalAI)', 'Périmètre': 'Texte, image, audio, embeddings via backends interchangeables. Docker, installeur macOS ou binaire CLI.', 'Idéal pour': 'Une seule API auto-hébergée, multimodale, compatible OpenAI/Anthropic/ElevenLabs.' },
           { 'Outil': '[Ollama](https://ollama.com)', 'Périmètre': 'Surtout des modèles de texte (et un peu de vision). Installation et téléchargement de modèle en une commande.', 'Idéal pour': 'Le chemin le plus rapide vers un modèle de texte local mono-utilisateur.' },
-          { 'Outil': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Périmètre': 'Moteur d\'inférence texte pour CPU et GPU. CLI, interface web et serveur compatible OpenAI.', 'Idéal pour': 'Contrôle direct au niveau moteur sur l\'inférence texte — souvent le backend sous Ollama et LocalAI.' },
-          { 'Outil': '[vLLM](/power-local-llm/vllm-explained)', 'Périmètre': 'Bibliothèque de serving texte GPU à haut débit. Paquet Python, serveur compatible OpenAI.', 'Idéal pour': 'Débit GPU concurrent maximal pour le texte seul.' },
+          { 'Outil': '[llama.cpp](/fr/power-local-llm/llama-cpp-explained)', 'Périmètre': 'Moteur d\'inférence texte pour CPU et GPU. CLI, interface web et serveur compatible OpenAI.', 'Idéal pour': 'Contrôle direct au niveau moteur sur l\'inférence texte — souvent le backend sous Ollama et LocalAI.' },
+          { 'Outil': '[vLLM](/fr/power-local-llm/vllm-explained)', 'Périmètre': 'Bibliothèque de serving texte GPU à haut débit. Paquet Python, serveur compatible OpenAI.', 'Idéal pour': 'Débit GPU concurrent maximal pour le texte seul.' },
         ],
         note: 'Cet article n\'a pas fait de benchmark indépendant de ces outils les uns contre les autres et n\'affirme pas la supériorité technique de l\'un d\'eux — la comparaison ne couvre que des faits documentés de périmètre, de configuration et d\'architecture.',
       },
@@ -843,10 +843,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[llama.cpp expliqué](/power-local-llm/llama-cpp-explained) — le moteur d\'inférence texte que LocalAI peut charger comme l\'un de ses backends.',
-          '[vLLM expliqué](/power-local-llm/vllm-explained) — la bibliothèque de serving GPU à haut débit que LocalAI peut aussi charger comme backend texte.',
-          '[Annuaire des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie.',
-          '[Guide d\'achat GPU pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — les gammes de GPU à considérer si vous prévoyez de faire tourner LocalAI avec des backends accélérés par GPU.',
+          '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence texte que LocalAI peut charger comme l\'un de ses backends.',
+          '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — la bibliothèque de serving GPU à haut débit que LocalAI peut aussi charger comme backend texte.',
+          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie.',
+          '[Guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — les gammes de GPU à considérer si vous prévoyez de faire tourner LocalAI avec des backends accélérés par GPU.',
         ],
       },
     },
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI explicado: la alternativa autoalojada a la API de OpenAI (2026)',
     seoTitle: 'LocalAI explicado: la alternativa autoalojada a la API de OpenAI (2026)',
-    intro: 'LocalAI es un motor de IA gratuito, con licencia MIT y autoalojado, creado por Ettore Di Giacinto ("mudler") y mantenido por una comunidad de código abierto en [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Expone una API compatible con OpenAI lista para sustituirla (además de endpoints compatibles con Anthropic y ElevenLabs) frente a un conjunto modular de backends cargados de forma independiente, de modo que una sola instancia puede cubrir generación de texto, generación de imágenes, transcripción de audio, síntesis de voz y embeddings en lugar de necesitar una herramienta distinta por modalidad. LocalAI no sustituye a motores como [llama.cpp](/power-local-llm/llama-cpp-explained) o [vLLM](/power-local-llm/vllm-explained): puede cargar cualquiera de los dos (y otros) como backend, actuando como una capa de orquestación y compatibilidad de API en lugar de un motor de inferencia rival.',
+    intro: 'LocalAI es un motor de IA gratuito, con licencia MIT y autoalojado, creado por Ettore Di Giacinto ("mudler") y mantenido por una comunidad de código abierto en [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Expone una API compatible con OpenAI lista para sustituirla (además de endpoints compatibles con Anthropic y ElevenLabs) frente a un conjunto modular de backends cargados de forma independiente, de modo que una sola instancia puede cubrir generación de texto, generación de imágenes, transcripción de audio, síntesis de voz y embeddings en lugar de necesitar una herramienta distinta por modalidad. LocalAI no sustituye a motores como [llama.cpp](/es/power-local-llm/llama-cpp-explained) o [vLLM](/es/power-local-llm/vllm-explained): puede cargar cualquiera de los dos (y otros) como backend, actuando como una capa de orquestación y compatibilidad de API en lugar de un motor de inferencia rival.',
     metaDescription: 'LocalAI es el motor gratuito, con licencia MIT y autoalojado que coloca una API compatible con OpenAI delante de backends de llama.cpp, vLLM, Stable Diffusion y Whisper para texto, imagen y audio.',
     readTime: '12 min de lectura',
     targetKeywords: [
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'backends de LocalAI',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI es un motor de IA gratuito, con licencia MIT y autoalojado, que expone una API compatible con OpenAI (además de endpoints compatibles con Anthropic y ElevenLabs) frente a un conjunto modular de backends de inferencia cargados de forma independiente.** En lugar de incluir un único motor de inferencia fijo, su núcleo enruta cada solicitud a un proceso backend intercambiable — [llama.cpp](/power-local-llm/llama-cpp-explained) y [vLLM](/power-local-llm/vllm-explained) para texto, backends basados en `diffusers` para generación de imágenes, backends basados en `whisper.cpp` para transcripción, y otros para síntesis de voz y embeddings — de modo que una sola instancia autoalojada puede cubrir varias modalidades que de otro modo requerirían herramientas separadas. Funciona solo con CPU sin necesidad de GPU, o con aceleración NVIDIA CUDA, AMD ROCm, Intel o Vulkan, y se distribuye como imágenes Docker, un instalador de macOS y un binario de CLI.',
+    leadAnswerBlock: '**LocalAI es un motor de IA gratuito, con licencia MIT y autoalojado, que expone una API compatible con OpenAI (además de endpoints compatibles con Anthropic y ElevenLabs) frente a un conjunto modular de backends de inferencia cargados de forma independiente.** En lugar de incluir un único motor de inferencia fijo, su núcleo enruta cada solicitud a un proceso backend intercambiable — [llama.cpp](/es/power-local-llm/llama-cpp-explained) y [vLLM](/es/power-local-llm/vllm-explained) para texto, backends basados en `diffusers` para generación de imágenes, backends basados en `whisper.cpp` para transcripción, y otros para síntesis de voz y embeddings — de modo que una sola instancia autoalojada puede cubrir varias modalidades que de otro modo requerirían herramientas separadas. Funciona solo con CPU sin necesidad de GPU, o con aceleración NVIDIA CUDA, AMD ROCm, Intel o Vulkan, y se distribuye como imágenes Docker, un instalador de macOS y un binario de CLI.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es LocalAI y cómo funciona?',
@@ -945,7 +945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El núcleo de LocalAI es un enrutador ligero, no un motor de inferencia monolítico: recibe una solicitud compatible con OpenAI, determina a qué modelo y backend corresponde, y se comunica con un proceso backend separado que ejecuta realmente la inferencia.',
         items: [
           'El proceso principal gestiona la compatibilidad de API, el enrutamiento de solicitudes y la configuración de modelos, y luego se comunica con los procesos backend por gRPC',
-          'Los backends documentados por el proyecto incluyen [llama.cpp](/power-local-llm/llama-cpp-explained) y [vLLM](/power-local-llm/vllm-explained) para generación de texto, backends basados en `diffusers` para generación de imágenes, y backends basados en `whisper.cpp` para transcripción',
+          'Los backends documentados por el proyecto incluyen [llama.cpp](/es/power-local-llm/llama-cpp-explained) y [vLLM](/es/power-local-llm/vllm-explained) para generación de texto, backends basados en `diffusers` para generación de imágenes, y backends basados en `whisper.cpp` para transcripción',
           'Los backends se pueden instalar desde una galería de modelos/backends, o configurar manualmente con un archivo YAML que apunte a un backend y modelo específicos',
           'Como los backends son componentes instalables separados, un despliegue solo necesita cargar los backends que realmente requiere su caso de uso, en lugar de incluir todos los motores posibles por defecto',
           'El proyecto también desarrolla algunos backends nativos propios además de integrar motores existentes',
@@ -1018,12 +1018,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: '¿Cómo se compara LocalAI con llama.cpp y vLLM?',
-        content: 'LocalAI no es un motor de inferencia bruta rival de [llama.cpp](/power-local-llm/llama-cpp-explained) o [vLLM](/power-local-llm/vllm-explained): su arquitectura documentada carga a ambos como backends intercambiables para generación de texto, junto a backends separados para imagen y audio.',
+        content: 'LocalAI no es un motor de inferencia bruta rival de [llama.cpp](/es/power-local-llm/llama-cpp-explained) o [vLLM](/es/power-local-llm/vllm-explained): su arquitectura documentada carga a ambos como backends intercambiables para generación de texto, junto a backends separados para imagen y audio.',
         itemHeadings: true,
         columns: ['Proyecto', 'Rol'],
         rows: [
-          { 'Proyecto': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Rol': 'Un motor de inferencia de texto amigable con CPU/GPU; uno de los backends de texto que LocalAI puede cargar.' },
-          { 'Proyecto': '[vLLM](/power-local-llm/vllm-explained)', 'Rol': 'Un motor de serving GPU de alto rendimiento; documentado como otro backend de texto que LocalAI puede cargar.' },
+          { 'Proyecto': '[llama.cpp](/es/power-local-llm/llama-cpp-explained)', 'Rol': 'Un motor de inferencia de texto amigable con CPU/GPU; uno de los backends de texto que LocalAI puede cargar.' },
+          { 'Proyecto': '[vLLM](/es/power-local-llm/vllm-explained)', 'Rol': 'Un motor de serving GPU de alto rendimiento; documentado como otro backend de texto que LocalAI puede cargar.' },
           { 'Proyecto': 'LocalAI', 'Rol': 'La capa de enrutamiento y compatibilidad de API sobre esos backends, que añade backends de imagen, audio y embeddings además de texto.' },
         ],
         note: 'Elegir entre estos proyectos normalmente no es "uno u otro": un despliegue de LocalAI puede estar ejecutando llama.cpp o vLLM por debajo para sus solicitudes de texto. La decisión es si quieres hablar directamente con ese motor (llama.cpp, vLLM) o a través de una capa de API multimodal más amplia que también pueda enrutar solicitudes de imagen y audio (LocalAI).',
@@ -1045,8 +1045,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita LocalAI si',
             list: [
-              'Solo necesitas chat de texto rápido y mínimo, de un solo usuario, en tu propia máquina: [Ollama](/power-local-llm/llama-cpp-explained) o LM Studio tienen una superficie de configuración más pequeña para ese caso concreto',
-              'Necesitas el máximo rendimiento posible de GPU solo para texto: hablar directamente con [vLLM](/power-local-llm/vllm-explained) evita una capa de enrutamiento adicional',
+              'Solo necesitas chat de texto rápido y mínimo, de un solo usuario, en tu propia máquina: [Ollama](/es/power-local-llm/llama-cpp-explained) o LM Studio tienen una superficie de configuración más pequeña para ese caso concreto',
+              'Necesitas el máximo rendimiento posible de GPU solo para texto: hablar directamente con [vLLM](/es/power-local-llm/vllm-explained) evita una capa de enrutamiento adicional',
               'Prefieres una app de escritorio gráfica sin configuración en lugar de un servidor autoalojado que configurar y mantener',
             ],
           },
@@ -1061,8 +1061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Herramienta': '[LocalAI](https://github.com/mudler/LocalAI)', 'Alcance': 'Texto, imagen, audio, embeddings vía backends intercambiables. Docker, instalador de macOS o binario de CLI.', 'Ideal para': 'Una sola API autoalojada, multimodal, compatible con OpenAI/Anthropic/ElevenLabs.' },
           { 'Herramienta': '[Ollama](https://ollama.com)', 'Alcance': 'Sobre todo modelos de texto (y algo de visión). Instalación y descarga de modelo en un comando.', 'Ideal para': 'La vía más rápida hacia un modelo de texto local para un solo usuario.' },
-          { 'Herramienta': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Alcance': 'Motor de inferencia de texto para CPU y GPU. CLI, interfaz web y servidor compatible con OpenAI.', 'Ideal para': 'Control directo a nivel de motor sobre la inferencia de texto; a menudo el backend bajo Ollama y LocalAI.' },
-          { 'Herramienta': '[vLLM](/power-local-llm/vllm-explained)', 'Alcance': 'Biblioteca de serving de texto GPU de alto rendimiento. Paquete de Python, servidor compatible con OpenAI.', 'Ideal para': 'Máximo rendimiento GPU concurrente solo para texto.' },
+          { 'Herramienta': '[llama.cpp](/es/power-local-llm/llama-cpp-explained)', 'Alcance': 'Motor de inferencia de texto para CPU y GPU. CLI, interfaz web y servidor compatible con OpenAI.', 'Ideal para': 'Control directo a nivel de motor sobre la inferencia de texto; a menudo el backend bajo Ollama y LocalAI.' },
+          { 'Herramienta': '[vLLM](/es/power-local-llm/vllm-explained)', 'Alcance': 'Biblioteca de serving de texto GPU de alto rendimiento. Paquete de Python, servidor compatible con OpenAI.', 'Ideal para': 'Máximo rendimiento GPU concurrente solo para texto.' },
         ],
         note: 'Este artículo no ha hecho pruebas propias comparando estas herramientas entre sí y no afirma que una sea técnicamente superior: la comparación cubre solo hechos documentados de alcance, configuración y arquitectura.',
       },
@@ -1126,10 +1126,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[llama.cpp explicado](/power-local-llm/llama-cpp-explained) — el motor de inferencia de texto que LocalAI puede cargar como uno de sus backends.',
-          '[vLLM explicado](/power-local-llm/vllm-explained) — la biblioteca de serving GPU de alto rendimiento que LocalAI también puede cargar como backend de texto.',
-          '[Directorio de software de LLM locales](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
-          '[Guía de compra de GPU para LLM locales](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — niveles de GPU a considerar si planeas ejecutar LocalAI con backends acelerados por GPU.',
+          '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia de texto que LocalAI puede cargar como uno de sus backends.',
+          '[vLLM explicado](/es/power-local-llm/vllm-explained) — la biblioteca de serving GPU de alto rendimiento que LocalAI también puede cargar como backend de texto.',
+          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — niveles de GPU a considerar si planeas ejecutar LocalAI con backends acelerados por GPU.',
         ],
       },
     },
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI explicado: a alternativa auto-hospedada à API da OpenAI (2026)',
     seoTitle: 'LocalAI explicado: a alternativa auto-hospedada à API da OpenAI (2026)',
-    intro: 'LocalAI é um motor de IA gratuito, sob licença MIT e auto-hospedado, criado por Ettore Di Giacinto ("mudler") e mantido por uma comunidade open-source em [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Ele expõe uma API compatível com a OpenAI, pronta para substituição direta (além de endpoints compatíveis com Anthropic e ElevenLabs), na frente de um conjunto modular de backends carregados de forma independente, de modo que uma única instância cobre geração de texto, geração de imagem, transcrição de áudio, síntese de voz e embeddings, em vez de exigir uma ferramenta separada por modalidade. O LocalAI não substitui motores como o [llama.cpp](/power-local-llm/llama-cpp-explained) ou o [vLLM](/power-local-llm/vllm-explained) — ele pode carregar qualquer um dos dois (e outros) como backend, atuando como uma camada de orquestração e compatibilidade de API, e não como um motor de inferência concorrente.',
+    intro: 'LocalAI é um motor de IA gratuito, sob licença MIT e auto-hospedado, criado por Ettore Di Giacinto ("mudler") e mantido por uma comunidade open-source em [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). Ele expõe uma API compatível com a OpenAI, pronta para substituição direta (além de endpoints compatíveis com Anthropic e ElevenLabs), na frente de um conjunto modular de backends carregados de forma independente, de modo que uma única instância cobre geração de texto, geração de imagem, transcrição de áudio, síntese de voz e embeddings, em vez de exigir uma ferramenta separada por modalidade. O LocalAI não substitui motores como o [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou o [vLLM](/pt/power-local-llm/vllm-explained) — ele pode carregar qualquer um dos dois (e outros) como backend, atuando como uma camada de orquestração e compatibilidade de API, e não como um motor de inferência concorrente.',
     metaDescription: 'LocalAI é o motor gratuito, sob licença MIT e auto-hospedado que coloca uma API compatível com a OpenAI na frente de backends llama.cpp, vLLM, Stable Diffusion e Whisper para texto, imagem e áudio.',
     readTime: '12 min de leitura',
     targetKeywords: [
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'backends do LocalAI',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**O LocalAI é um motor de IA gratuito, sob licença MIT e auto-hospedado, que expõe uma API compatível com a OpenAI (além de endpoints compatíveis com Anthropic e ElevenLabs) na frente de um conjunto modular de backends de inferência carregados de forma independente.** Em vez de embutir um único motor de inferência fixo, seu núcleo roteia cada requisição para um processo de backend intercambiável — [llama.cpp](/power-local-llm/llama-cpp-explained) e [vLLM](/power-local-llm/vllm-explained) para texto, backends baseados em `diffusers` para geração de imagem, backends baseados em `whisper.cpp` para transcrição, e outros para síntese de voz e embeddings — de modo que uma única instância auto-hospedada cobre várias modalidades que, do contrário, exigiriam ferramentas separadas. Ele roda apenas em CPU sem exigir GPU, ou com aceleração NVIDIA CUDA, AMD ROCm, Intel ou Vulkan, e é distribuído como imagens Docker, um instalador para macOS e um binário de linha de comando.',
+    leadAnswerBlock: '**O LocalAI é um motor de IA gratuito, sob licença MIT e auto-hospedado, que expõe uma API compatível com a OpenAI (além de endpoints compatíveis com Anthropic e ElevenLabs) na frente de um conjunto modular de backends de inferência carregados de forma independente.** Em vez de embutir um único motor de inferência fixo, seu núcleo roteia cada requisição para um processo de backend intercambiável — [llama.cpp](/pt/power-local-llm/llama-cpp-explained) e [vLLM](/pt/power-local-llm/vllm-explained) para texto, backends baseados em `diffusers` para geração de imagem, backends baseados em `whisper.cpp` para transcrição, e outros para síntese de voz e embeddings — de modo que uma única instância auto-hospedada cobre várias modalidades que, do contrário, exigiriam ferramentas separadas. Ele roda apenas em CPU sem exigir GPU, ou com aceleração NVIDIA CUDA, AMD ROCm, Intel ou Vulkan, e é distribuído como imagens Docker, um instalador para macOS e um binário de linha de comando.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o LocalAI e como ele funciona?',
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O núcleo do LocalAI é um roteador leve, não um motor de inferência monolítico — ele recebe uma requisição compatível com a OpenAI, determina a qual modelo e backend ela corresponde, e se comunica com um processo de backend separado que de fato executa a inferência.',
         items: [
           'O processo principal cuida da compatibilidade de API, do roteamento de requisições e da configuração de modelos, e então se comunica com os processos de backend via gRPC',
-          'Os backends documentados pelo projeto incluem [llama.cpp](/power-local-llm/llama-cpp-explained) e [vLLM](/power-local-llm/vllm-explained) para geração de texto, backends baseados em `diffusers` para geração de imagem, e backends baseados em `whisper.cpp` para transcrição',
+          'Os backends documentados pelo projeto incluem [llama.cpp](/pt/power-local-llm/llama-cpp-explained) e [vLLM](/pt/power-local-llm/vllm-explained) para geração de texto, backends baseados em `diffusers` para geração de imagem, e backends baseados em `whisper.cpp` para transcrição',
           'Os backends podem ser instalados a partir de uma galeria de modelos/backends, ou configurados manualmente com um arquivo YAML que aponte para um backend e modelo específicos',
           'Como os backends são componentes instaláveis separados, uma implantação só precisa carregar os backends que seu caso de uso realmente exige, em vez de embutir todos os motores possíveis por padrão',
           'O projeto também desenvolve alguns backends nativos próprios, além de integrar motores já existentes',
@@ -1301,12 +1301,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'Como o LocalAI se compara ao llama.cpp e ao vLLM?',
-        content: 'O LocalAI não é um motor de inferência bruta concorrente do [llama.cpp](/power-local-llm/llama-cpp-explained) ou do [vLLM](/power-local-llm/vllm-explained) — sua arquitetura documentada carrega ambos como backends intercambiáveis para geração de texto, ao lado de backends separados para imagem e áudio.',
+        content: 'O LocalAI não é um motor de inferência bruta concorrente do [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou do [vLLM](/pt/power-local-llm/vllm-explained) — sua arquitetura documentada carrega ambos como backends intercambiáveis para geração de texto, ao lado de backends separados para imagem e áudio.',
         itemHeadings: true,
         columns: ['Projeto', 'Papel'],
         rows: [
-          { 'Projeto': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Papel': 'Um motor de inferência de texto amigável a CPU/GPU; um dos backends de texto que o LocalAI pode carregar.' },
-          { 'Projeto': '[vLLM](/power-local-llm/vllm-explained)', 'Papel': 'Um motor de serving em GPU de alto throughput; documentado como outro backend de texto que o LocalAI pode carregar.' },
+          { 'Projeto': '[llama.cpp](/pt/power-local-llm/llama-cpp-explained)', 'Papel': 'Um motor de inferência de texto amigável a CPU/GPU; um dos backends de texto que o LocalAI pode carregar.' },
+          { 'Projeto': '[vLLM](/pt/power-local-llm/vllm-explained)', 'Papel': 'Um motor de serving em GPU de alto throughput; documentado como outro backend de texto que o LocalAI pode carregar.' },
           { 'Projeto': 'LocalAI', 'Papel': 'A camada de roteamento e compatibilidade de API acima desses backends, adicionando backends de imagem, áudio e embedding além do texto.' },
         ],
         note: 'Escolher entre esses projetos geralmente não é "ou um ou outro" — uma implantação do LocalAI pode estar rodando llama.cpp ou vLLM por baixo para suas requisições de texto. A decisão é se você quer falar diretamente com esse motor (llama.cpp, vLLM) ou por meio de uma camada de API multimodal mais ampla que também roteia requisições de imagem e áudio (LocalAI).',
@@ -1328,8 +1328,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o LocalAI se',
             list: [
-              'Você só precisa de chat de texto rápido e mínimo, de um único usuário, na própria máquina — [Ollama](/power-local-llm/llama-cpp-explained) ou LM Studio têm uma superfície de configuração menor para esse caso específico',
-              'Você precisa do máximo throughput possível de GPU só para texto — falar diretamente com o [vLLM](/power-local-llm/vllm-explained) evita uma camada extra de roteamento',
+              'Você só precisa de chat de texto rápido e mínimo, de um único usuário, na própria máquina — [Ollama](/pt/power-local-llm/llama-cpp-explained) ou LM Studio têm uma superfície de configuração menor para esse caso específico',
+              'Você precisa do máximo throughput possível de GPU só para texto — falar diretamente com o [vLLM](/pt/power-local-llm/vllm-explained) evita uma camada extra de roteamento',
               'Você prefere um aplicativo de desktop gráfico sem configuração em vez de um servidor auto-hospedado para configurar e manter',
             ],
           },
@@ -1344,8 +1344,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ferramenta': '[LocalAI](https://github.com/mudler/LocalAI)', 'Escopo': 'Texto, imagem, áudio, embeddings via backends intercambiáveis. Docker, instalador macOS ou binário CLI.', 'Melhor para': 'Uma única API auto-hospedada, multimodal, compatível com OpenAI/Anthropic/ElevenLabs.' },
           { 'Ferramenta': '[Ollama](https://ollama.com)', 'Escopo': 'Principalmente modelos de texto (e alguma visão). Instalação e download de modelo em um comando.', 'Melhor para': 'O caminho mais rápido até um modelo de texto local para um único usuário.' },
-          { 'Ferramenta': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Escopo': 'Motor de inferência de texto para CPU e GPU. CLI, interface web e servidor compatível com OpenAI.', 'Melhor para': 'Controle direto em nível de motor sobre a inferência de texto — muitas vezes o backend por trás do Ollama e do LocalAI.' },
-          { 'Ferramenta': '[vLLM](/power-local-llm/vllm-explained)', 'Escopo': 'Biblioteca de serving de texto em GPU de alto throughput. Pacote Python, servidor compatível com OpenAI.', 'Melhor para': 'Máximo throughput concorrente de GPU só para texto.' },
+          { 'Ferramenta': '[llama.cpp](/pt/power-local-llm/llama-cpp-explained)', 'Escopo': 'Motor de inferência de texto para CPU e GPU. CLI, interface web e servidor compatível com OpenAI.', 'Melhor para': 'Controle direto em nível de motor sobre a inferência de texto — muitas vezes o backend por trás do Ollama e do LocalAI.' },
+          { 'Ferramenta': '[vLLM](/pt/power-local-llm/vllm-explained)', 'Escopo': 'Biblioteca de serving de texto em GPU de alto throughput. Pacote Python, servidor compatível com OpenAI.', 'Melhor para': 'Máximo throughput concorrente de GPU só para texto.' },
         ],
         note: 'Este artigo não fez benchmark próprio comparando essas ferramentas entre si e não afirma que uma seja tecnicamente superior — a comparação cobre apenas fatos documentados de escopo, configuração e arquitetura.',
       },
@@ -1409,10 +1409,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[llama.cpp explicado](/power-local-llm/llama-cpp-explained) — o motor de inferência de texto que o LocalAI pode carregar como um de seus backends.',
-          '[vLLM explicado](/power-local-llm/vllm-explained) — a biblioteca de serving em GPU de alto throughput que o LocalAI também pode carregar como backend de texto.',
-          '[Diretório de software de LLMs locais](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
-          '[Guia de compra de GPU para LLMs locais](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — níveis de GPU a considerar se você planeja rodar o LocalAI com backends acelerados por GPU.',
+          '[llama.cpp explicado](/pt/power-local-llm/llama-cpp-explained) — o motor de inferência de texto que o LocalAI pode carregar como um de seus backends.',
+          '[vLLM explicado](/pt/power-local-llm/vllm-explained) — a biblioteca de serving em GPU de alto throughput que o LocalAI também pode carregar como backend de texto.',
+          '[Diretório de software de LLMs locais](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Guia de compra de GPU para LLMs locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — níveis de GPU a considerar se você planeja rodar o LocalAI com backends acelerados por GPU.',
         ],
       },
     },
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAIとは：セルフホスト型OpenAI API代替エンジンを解説（2026年版）',
     seoTitle: 'LocalAIとは：セルフホスト型OpenAI API代替エンジンを解説（2026年版）',
-    intro: 'LocalAIは、Ettore Di Giacinto氏（「mudler」）が作成し、[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)でオープンソースコミュニティによって開発が続けられている、無料・MITライセンスのセルフホスト型AIエンジンです。OpenAI互換API（加えてAnthropic互換・ElevenLabs互換のエンドポイント）をドロップイン形式で提供し、その背後には独立して読み込まれるモジュール式バックエンド群が存在します。そのため単一のインスタンスだけで、テキスト生成・画像生成・音声認識・音声合成・埋め込みをカバーでき、モダリティごとに別々のツールを用意する必要がありません。LocalAIは[llama.cpp](/power-local-llm/llama-cpp-explained)や[vLLM](/power-local-llm/vllm-explained)のようなエンジンを置き換えるものではなく、そのどちらか（あるいは他のエンジン）をバックエンドとして読み込むことができ、競合する生の推論エンジンというより、オーケストレーション兼API互換レイヤーとして機能します。',
+    intro: 'LocalAIは、Ettore Di Giacinto氏（「mudler」）が作成し、[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)でオープンソースコミュニティによって開発が続けられている、無料・MITライセンスのセルフホスト型AIエンジンです。OpenAI互換API（加えてAnthropic互換・ElevenLabs互換のエンドポイント）をドロップイン形式で提供し、その背後には独立して読み込まれるモジュール式バックエンド群が存在します。そのため単一のインスタンスだけで、テキスト生成・画像生成・音声認識・音声合成・埋め込みをカバーでき、モダリティごとに別々のツールを用意する必要がありません。LocalAIは[llama.cpp](/ja/power-local-llm/llama-cpp-explained)や[vLLM](/ja/power-local-llm/vllm-explained)のようなエンジンを置き換えるものではなく、そのどちらか（あるいは他のエンジン）をバックエンドとして読み込むことができ、競合する生の推論エンジンというより、オーケストレーション兼API互換レイヤーとして機能します。',
     metaDescription: 'LocalAIは、llama.cpp・vLLM・Stable Diffusion・WhisperバックエンドをOpenAI互換APIの背後に配置する、無料でMITライセンスのセルフホスト型エンジンです。テキスト・画像・音声に対応します。',
     readTime: '12分で読了',
     targetKeywords: [
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LocalAI バックエンド',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAIは、独立して読み込まれる複数の推論バックエンドの前段に、OpenAI互換API（加えてAnthropic互換・ElevenLabs互換のエンドポイント）を提供する、無料でMITライセンスのセルフホスト型AIエンジンです。** 単一の固定推論エンジンを内蔵する代わりに、コアは各リクエストを交換可能なバックエンドプロセスへルーティングします——テキスト用の[llama.cpp](/power-local-llm/llama-cpp-explained)と[vLLM](/power-local-llm/vllm-explained)、画像生成用の`diffusers`ベースのバックエンド、音声認識用の`whisper.cpp`ベースのバックエンド、そして音声合成や埋め込み用の他のバックエンド。これにより、単一のセルフホスト型インスタンスで、本来なら別々のツールが必要になる複数のモダリティをカバーできます。GPU不要でCPUのみでも動作し、NVIDIA CUDA・AMD ROCm・Intel・Vulkanによるアクセラレーションにも対応、Dockerイメージ・macOS用インストーラー・CLIバイナリとして配布されています。',
+    leadAnswerBlock: '**LocalAIは、独立して読み込まれる複数の推論バックエンドの前段に、OpenAI互換API（加えてAnthropic互換・ElevenLabs互換のエンドポイント）を提供する、無料でMITライセンスのセルフホスト型AIエンジンです。** 単一の固定推論エンジンを内蔵する代わりに、コアは各リクエストを交換可能なバックエンドプロセスへルーティングします——テキスト用の[llama.cpp](/ja/power-local-llm/llama-cpp-explained)と[vLLM](/ja/power-local-llm/vllm-explained)、画像生成用の`diffusers`ベースのバックエンド、音声認識用の`whisper.cpp`ベースのバックエンド、そして音声合成や埋め込み用の他のバックエンド。これにより、単一のセルフホスト型インスタンスで、本来なら別々のツールが必要になる複数のモダリティをカバーできます。GPU不要でCPUのみでも動作し、NVIDIA CUDA・AMD ROCm・Intel・Vulkanによるアクセラレーションにも対応、Dockerイメージ・macOS用インストーラー・CLIバイナリとして配布されています。',
     quickAnswerTop: {
       ja: {
         question: 'LocalAIとは何で、どのように機能しますか？',
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LocalAIのコアは軽量なルーターであり、モノリシックな推論エンジンではない——OpenAI互換のリクエストを受け取り、それがどのモデル・バックエンドに対応するかを判断し、実際に推論を実行する別のバックエンドプロセスと通信する。',
         items: [
           'コアプロセスはAPI互換性・リクエストルーティング・モデル設定を担当し、その後gRPC経由でバックエンドプロセスと通信する',
-          'プロジェクトが文書化しているバックエンドには、テキスト生成用の[llama.cpp](/power-local-llm/llama-cpp-explained)と[vLLM](/power-local-llm/vllm-explained)、画像生成用の`diffusers`ベースのバックエンド、音声認識用の`whisper.cpp`ベースのバックエンドが含まれる',
+          'プロジェクトが文書化しているバックエンドには、テキスト生成用の[llama.cpp](/ja/power-local-llm/llama-cpp-explained)と[vLLM](/ja/power-local-llm/vllm-explained)、画像生成用の`diffusers`ベースのバックエンド、音声認識用の`whisper.cpp`ベースのバックエンドが含まれる',
           'バックエンドはモデル/バックエンドギャラリーからインストールするか、特定のバックエンドとモデルを指定するYAMLファイルで手動設定できる',
           'バックエンドは独立してインストール可能なコンポーネントであるため、デプロイはユースケースが実際に必要とするバックエンドだけを読み込めばよく、デフォルトであらゆるエンジンを同梱する必要がない',
           'プロジェクトは既存エンジンのラップに加えて、独自のネイティブバックエンドも一部開発している',
@@ -1584,12 +1584,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'LocalAIとllama.cpp、vLLMはどう違うか？',
-        content: 'LocalAIは、[llama.cpp](/power-local-llm/llama-cpp-explained)や[vLLM](/power-local-llm/vllm-explained)と競合する生の推論エンジンではない——その文書化されたアーキテクチャは、テキスト生成用にこの両方を交換可能なバックエンドとして読み込み、それに加えて画像・音声用の別のバックエンドを持つ。',
+        content: 'LocalAIは、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)や[vLLM](/ja/power-local-llm/vllm-explained)と競合する生の推論エンジンではない——その文書化されたアーキテクチャは、テキスト生成用にこの両方を交換可能なバックエンドとして読み込み、それに加えて画像・音声用の別のバックエンドを持つ。',
         itemHeadings: true,
         columns: ['プロジェクト', '役割'],
         rows: [
-          { 'プロジェクト': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '役割': 'CPU/GPUに適したテキスト推論エンジン。LocalAIが読み込めるテキストバックエンドの一つ。' },
-          { 'プロジェクト': '[vLLM](/power-local-llm/vllm-explained)', '役割': '高スループットのGPUサービングエンジン。LocalAIが読み込める別のテキストバックエンドとして文書化されている。' },
+          { 'プロジェクト': '[llama.cpp](/ja/power-local-llm/llama-cpp-explained)', '役割': 'CPU/GPUに適したテキスト推論エンジン。LocalAIが読み込めるテキストバックエンドの一つ。' },
+          { 'プロジェクト': '[vLLM](/ja/power-local-llm/vllm-explained)', '役割': '高スループットのGPUサービングエンジン。LocalAIが読み込める別のテキストバックエンドとして文書化されている。' },
           { 'プロジェクト': 'LocalAI', '役割': 'これらのバックエンドの上位に位置するルーティング兼API互換レイヤーで、テキストに加えて画像・音声・埋め込みバックエンドを追加する。' },
         ],
         note: 'これらのプロジェクトの選択は、通常「どちらか一方」という話ではない——LocalAIのデプロイは、テキストリクエストのために内部でllama.cppやvLLMを動かしていることがある。判断すべきは、そのエンジンに直接話しかけたいか（llama.cpp、vLLM）、それとも画像・音声リクエストもルーティングできるより広範なマルチモーダルAPIレイヤー（LocalAI）を通したいか、である。',
@@ -1611,8 +1611,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '次の場合はLocalAIを避ける',
             list: [
-              '自分のマシン上での高速でミニマルな単一ユーザー向けテキストチャットだけが必要——その特定の用途には[Ollama](/power-local-llm/llama-cpp-explained)やLM Studioの方が設定の手間が少ない',
-              'テキストのみに関して可能な限り最大のGPUサービングスループットが必要——[vLLM](/power-local-llm/vllm-explained)に直接話しかける方が余分なルーティング層を避けられる',
+              '自分のマシン上での高速でミニマルな単一ユーザー向けテキストチャットだけが必要——その特定の用途には[Ollama](/ja/power-local-llm/llama-cpp-explained)やLM Studioの方が設定の手間が少ない',
+              'テキストのみに関して可能な限り最大のGPUサービングスループットが必要——[vLLM](/ja/power-local-llm/vllm-explained)に直接話しかける方が余分なルーティング層を避けられる',
               '設定・保守が必要なセルフホスト型サーバーではなく、設定不要でグラフィカルなデスクトップアプリを望んでいる',
             ],
           },
@@ -1627,8 +1627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'ツール': '[LocalAI](https://github.com/mudler/LocalAI)', '範囲': '交換可能なバックエンドによるテキスト・画像・音声・埋め込み。Docker、macOSインストーラー、CLIバイナリ。', '最適な用途': 'OpenAI/Anthropic/ElevenLabs互換の単一セルフホスト型マルチモーダルAPI。' },
           { 'ツール': '[Ollama](https://ollama.com)', '範囲': '主にテキスト（一部ビジョン）モデル。ワンコマンドでのインストールとモデル取得。', '最適な用途': '単一ユーザー向けローカルテキストモデルへの最速の道。' },
-          { 'ツール': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '範囲': 'CPU・GPU向けテキスト推論エンジン。CLI、Web UI、OpenAI互換サーバー。', '最適な用途': 'テキスト推論に対するエンジンレベルでの直接制御——しばしばOllamaやLocalAIの裏側のバックエンド。' },
-          { 'ツール': '[vLLM](/power-local-llm/vllm-explained)', '範囲': '高スループットのGPUテキストサービングライブラリ。Pythonパッケージ、OpenAI互換サーバー。', '最適な用途': 'テキストのみに対する最大の同時GPUスループット。' },
+          { 'ツール': '[llama.cpp](/ja/power-local-llm/llama-cpp-explained)', '範囲': 'CPU・GPU向けテキスト推論エンジン。CLI、Web UI、OpenAI互換サーバー。', '最適な用途': 'テキスト推論に対するエンジンレベルでの直接制御——しばしばOllamaやLocalAIの裏側のバックエンド。' },
+          { 'ツール': '[vLLM](/ja/power-local-llm/vllm-explained)', '範囲': '高スループットのGPUテキストサービングライブラリ。Pythonパッケージ、OpenAI互換サーバー。', '最適な用途': 'テキストのみに対する最大の同時GPUスループット。' },
         ],
         note: 'この記事はこれらのツールを互いに独自ベンチマークしたものではなく、いずれかが技術的に優れていると主張するものでもない——比較は範囲・セットアップ・アーキテクチャに関する文書化された事実のみをカバーしている。',
       },
@@ -1692,10 +1692,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[llama.cppとは](/power-local-llm/llama-cpp-explained) — LocalAIがバックエンドの一つとして読み込めるテキスト推論エンジン。',
-          '[vLLMとは](/power-local-llm/vllm-explained) — LocalAIがテキストバックエンドとして読み込める、高スループットGPUサービングライブラリ。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。',
-          '[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPUアクセラレーション対応バックエンドでLocalAIを動かす場合に検討すべきGPUクラス。',
+          '[llama.cppとは](/ja/power-local-llm/llama-cpp-explained) — LocalAIがバックエンドの一つとして読み込めるテキスト推論エンジン。',
+          '[vLLMとは](/ja/power-local-llm/vllm-explained) — LocalAIがテキストバックエンドとして読み込める、高スループットGPUサービングライブラリ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPUアクセラレーション対応バックエンドでLocalAIを動かす場合に検討すべきGPUクラス。',
         ],
       },
     },
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI 详解：自托管的 OpenAI API 替代方案（2026）',
     seoTitle: 'LocalAI 详解：自托管的 OpenAI API 替代方案（2026）',
-    intro: 'LocalAI 是由 Ettore Di Giacinto（"mudler"）创建、由开源社区在 [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI) 维护的免费、MIT 许可、可自托管的 AI 引擎。它在一组独立加载的模块化后端之前提供了一个可直接替换的 OpenAI 兼容 API（另外还有 Anthropic 兼容和 ElevenLabs 兼容的接口),因此单个运行实例就能覆盖文本生成、图像生成、语音转文字、文字转语音和向量嵌入,而不需要为每种模态单独准备一个工具。LocalAI 并不会取代 [llama.cpp](/power-local-llm/llama-cpp-explained) 或 [vLLM](/power-local-llm/vllm-explained) 这类引擎——它可以将两者(以及其他引擎)作为后端加载,扮演的是编排与 API 兼容层的角色,而不是与之竞争的底层推理引擎。',
+    intro: 'LocalAI 是由 Ettore Di Giacinto（"mudler"）创建、由开源社区在 [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI) 维护的免费、MIT 许可、可自托管的 AI 引擎。它在一组独立加载的模块化后端之前提供了一个可直接替换的 OpenAI 兼容 API（另外还有 Anthropic 兼容和 ElevenLabs 兼容的接口),因此单个运行实例就能覆盖文本生成、图像生成、语音转文字、文字转语音和向量嵌入,而不需要为每种模态单独准备一个工具。LocalAI 并不会取代 [llama.cpp](/zh/power-local-llm/llama-cpp-explained) 或 [vLLM](/zh/power-local-llm/vllm-explained) 这类引擎——它可以将两者(以及其他引擎)作为后端加载,扮演的是编排与 API 兼容层的角色,而不是与之竞争的底层推理引擎。',
     metaDescription: 'LocalAI 是免费、MIT 许可的自托管引擎,在 llama.cpp、vLLM、Stable Diffusion 和 Whisper 等后端之前提供 OpenAI 兼容 API,覆盖文本、图像与音频。',
     readTime: '12 分钟阅读',
     targetKeywords: [
@@ -1723,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LocalAI 后端',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI 是一款免费、MIT 许可、可自托管的 AI 引擎,它在一组独立加载的推理后端之前提供了 OpenAI 兼容 API(另外还有 Anthropic 兼容和 ElevenLabs 兼容的接口)。** 它的核心并不内置单一固定的推理引擎,而是将每个请求路由到可替换的后端进程——文本使用 [llama.cpp](/power-local-llm/llama-cpp-explained) 和 [vLLM](/power-local-llm/vllm-explained),图像生成使用基于 `diffusers` 的后端,语音转文字使用基于 `whisper.cpp` 的后端,文字转语音和向量嵌入则使用其他后端——因此一个自托管实例就能覆盖原本需要多个独立工具才能实现的多种模态。它既可以仅用 CPU 运行(无需 GPU),也可以借助 NVIDIA CUDA、AMD ROCm、Intel 或 Vulkan 加速,并以 Docker 镜像、macOS 安装包和 CLI 二进制文件的形式分发。',
+    leadAnswerBlock: '**LocalAI 是一款免费、MIT 许可、可自托管的 AI 引擎,它在一组独立加载的推理后端之前提供了 OpenAI 兼容 API(另外还有 Anthropic 兼容和 ElevenLabs 兼容的接口)。** 它的核心并不内置单一固定的推理引擎,而是将每个请求路由到可替换的后端进程——文本使用 [llama.cpp](/zh/power-local-llm/llama-cpp-explained) 和 [vLLM](/zh/power-local-llm/vllm-explained),图像生成使用基于 `diffusers` 的后端,语音转文字使用基于 `whisper.cpp` 的后端,文字转语音和向量嵌入则使用其他后端——因此一个自托管实例就能覆盖原本需要多个独立工具才能实现的多种模态。它既可以仅用 CPU 运行(无需 GPU),也可以借助 NVIDIA CUDA、AMD ROCm、Intel 或 Vulkan 加速,并以 Docker 镜像、macOS 安装包和 CLI 二进制文件的形式分发。',
     quickAnswerTop: {
       zh: {
         question: 'LocalAI 是什么,它是如何工作的？',
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LocalAI 的核心是一个轻量级路由器,而不是单体式推理引擎——它接收一个 OpenAI 兼容请求,判断该请求对应哪个模型和后端,然后与一个独立的后端进程通信,由该进程真正执行推理。',
         items: [
           '核心进程负责 API 兼容性、请求路由和模型配置,随后通过 gRPC 与后端进程通信',
-          '项目文档记录的后端包括用于文本生成的 [llama.cpp](/power-local-llm/llama-cpp-explained) 和 [vLLM](/power-local-llm/vllm-explained)、用于图像生成的基于 `diffusers` 的后端,以及用于语音转文字的基于 `whisper.cpp` 的后端',
+          '项目文档记录的后端包括用于文本生成的 [llama.cpp](/zh/power-local-llm/llama-cpp-explained) 和 [vLLM](/zh/power-local-llm/vllm-explained)、用于图像生成的基于 `diffusers` 的后端,以及用于语音转文字的基于 `whisper.cpp` 的后端',
           '后端可以从模型/后端图库中安装,也可以通过指向特定后端和模型的 YAML 文件手动配置',
           '由于后端是独立的、可安装的组件,一次部署只需加载该使用场景真正需要的后端,而不必默认捆绑所有可能的引擎',
           '除了封装现有引擎外,项目本身也开发了一些原生后端',
@@ -1867,12 +1867,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'LocalAI 与 llama.cpp、vLLM 相比如何？',
-        content: 'LocalAI 并不是 [llama.cpp](/power-local-llm/llama-cpp-explained) 或 [vLLM](/power-local-llm/vllm-explained) 的竞争性底层推理引擎——其文档记录的架构会将两者都作为文本生成的可替换后端加载,同时还有用于图像和音频的独立后端。',
+        content: 'LocalAI 并不是 [llama.cpp](/zh/power-local-llm/llama-cpp-explained) 或 [vLLM](/zh/power-local-llm/vllm-explained) 的竞争性底层推理引擎——其文档记录的架构会将两者都作为文本生成的可替换后端加载,同时还有用于图像和音频的独立后端。',
         itemHeadings: true,
         columns: ['项目', '角色'],
         rows: [
-          { '项目': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '角色': '一款对 CPU/GPU 友好的文本推理引擎;是 LocalAI 可加载的文本后端之一。' },
-          { '项目': '[vLLM](/power-local-llm/vllm-explained)', '角色': '一款高吞吐量 GPU 服务引擎;文档记录为 LocalAI 可加载的另一个文本后端。' },
+          { '项目': '[llama.cpp](/zh/power-local-llm/llama-cpp-explained)', '角色': '一款对 CPU/GPU 友好的文本推理引擎;是 LocalAI 可加载的文本后端之一。' },
+          { '项目': '[vLLM](/zh/power-local-llm/vllm-explained)', '角色': '一款高吞吐量 GPU 服务引擎;文档记录为 LocalAI 可加载的另一个文本后端。' },
           { '项目': 'LocalAI', '角色': '位于这些后端之上的路由与 API 兼容层,在文本之外还加入了图像、音频和嵌入后端。' },
         ],
         note: '在这些项目之间做选择通常不是「二选一」——一个 LocalAI 部署的文本请求底层可能正在运行 llama.cpp 或 vLLM。真正需要判断的是:你想直接对话该引擎(llama.cpp、vLLM),还是通过一个也能路由图像和音频请求的更广泛的多模态 API 层(LocalAI)。',
@@ -1894,8 +1894,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '在以下情况避免使用 LocalAI',
             list: [
-              '只需要在自己机器上进行快速、极简的单用户文本聊天——针对这一具体场景,[Ollama](/power-local-llm/llama-cpp-explained) 或 LM Studio 的配置面更小',
-              '只关心纯文本场景下可能达到的最大 GPU 服务吞吐量——直接对话 [vLLM](/power-local-llm/vllm-explained) 可以避免额外的路由层',
+              '只需要在自己机器上进行快速、极简的单用户文本聊天——针对这一具体场景,[Ollama](/zh/power-local-llm/llama-cpp-explained) 或 LM Studio 的配置面更小',
+              '只关心纯文本场景下可能达到的最大 GPU 服务吞吐量——直接对话 [vLLM](/zh/power-local-llm/vllm-explained) 可以避免额外的路由层',
               '更希望使用无需配置的图形化桌面应用,而不是需要自行配置和维护的自托管服务器',
             ],
           },
@@ -1910,8 +1910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '工具': '[LocalAI](https://github.com/mudler/LocalAI)', '范围': '通过可替换后端提供文本、图像、音频、嵌入。Docker、macOS 安装包或 CLI 二进制文件。', '最适合': '兼容 OpenAI/Anthropic/ElevenLabs 的单一自托管多模态 API。' },
           { '工具': '[Ollama](https://ollama.com)', '范围': '主要是文本(以及部分视觉)模型。一条命令即可安装并拉取模型。', '最适合': '面向单用户的最快本地文本模型使用路径。' },
-          { '工具': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '范围': '面向 CPU 和 GPU 的文本推理引擎。CLI、内置 Web UI 以及 OpenAI 兼容服务器。', '最适合': '对文本推理进行引擎级的直接控制——通常是 Ollama 和 LocalAI 背后的后端。' },
-          { '工具': '[vLLM](/power-local-llm/vllm-explained)', '范围': '高吞吐量 GPU 文本服务库。Python 包,OpenAI 兼容服务器。', '最适合': '仅针对文本场景的最大并发 GPU 吞吐量。' },
+          { '工具': '[llama.cpp](/zh/power-local-llm/llama-cpp-explained)', '范围': '面向 CPU 和 GPU 的文本推理引擎。CLI、内置 Web UI 以及 OpenAI 兼容服务器。', '最适合': '对文本推理进行引擎级的直接控制——通常是 Ollama 和 LocalAI 背后的后端。' },
+          { '工具': '[vLLM](/zh/power-local-llm/vllm-explained)', '范围': '高吞吐量 GPU 文本服务库。Python 包,OpenAI 兼容服务器。', '最适合': '仅针对文本场景的最大并发 GPU 吞吐量。' },
         ],
         note: '本文并未对这些工具进行独立的相互基准测试,也不主张其中某一个在技术上更优——上表仅涵盖已记录的范围、配置和架构事实。',
       },
@@ -1975,10 +1975,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[llama.cpp 详解](/power-local-llm/llama-cpp-explained) — LocalAI 可以作为其后端之一加载的文本推理引擎。',
-          '[vLLM 详解](/power-local-llm/vllm-explained) — LocalAI 也可以作为文本后端加载的高吞吐量 GPU 服务库。',
-          '[本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录。',
-          '[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 如果计划用 GPU 加速后端运行 LocalAI,可参考的 GPU 档位选择。',
+          '[llama.cpp 详解](/zh/power-local-llm/llama-cpp-explained) — LocalAI 可以作为其后端之一加载的文本推理引擎。',
+          '[vLLM 详解](/zh/power-local-llm/vllm-explained) — LocalAI 也可以作为文本后端加载的高吞吐量 GPU 服务库。',
+          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录。',
+          '[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 如果计划用 GPU 加速后端运行 LocalAI,可参考的 GPU 档位选择。',
         ],
       },
     },
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'شرح LocalAI: البديل المستضاف ذاتيًا لواجهة OpenAI API (2026)',
     seoTitle: 'شرح LocalAI: البديل المستضاف ذاتيًا لواجهة OpenAI API (2026)',
-    intro: 'LocalAI هو محرك ذكاء اصطناعي مجاني، مرخّص بموجب رخصة MIT، وقابل للاستضافة الذاتية، أنشأه Ettore Di Giacinto ("mudler") ويصونه مجتمع مفتوح المصدر على [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). يوفّر واجهة برمجة تطبيقات متوافقة مع OpenAI جاهزة للاستبدال المباشر (بالإضافة إلى نقاط نهاية متوافقة مع Anthropic و ElevenLabs) أمام مجموعة معيارية من الخلفيات (backends) التي تُحمَّل بشكل مستقل، بحيث يمكن لنسخة واحدة قيد التشغيل أن تغطي توليد النصوص وتوليد الصور وتحويل الصوت إلى نص وتحويل النص إلى صوت والتضمينات (embeddings)، بدلاً من الحاجة إلى أداة منفصلة لكل نمط. لا يحل LocalAI محل محركات مثل [llama.cpp](/power-local-llm/llama-cpp-explained) أو [vLLM](/power-local-llm/vllm-explained) — بل يمكنه تحميل أي منهما (وغيرهما) كخلفية، ليعمل كطبقة تنسيق وتوافق واجهة برمجة تطبيقات بدلاً من محرك استدلال منافس.',
+    intro: 'LocalAI هو محرك ذكاء اصطناعي مجاني، مرخّص بموجب رخصة MIT، وقابل للاستضافة الذاتية، أنشأه Ettore Di Giacinto ("mudler") ويصونه مجتمع مفتوح المصدر على [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI). يوفّر واجهة برمجة تطبيقات متوافقة مع OpenAI جاهزة للاستبدال المباشر (بالإضافة إلى نقاط نهاية متوافقة مع Anthropic و ElevenLabs) أمام مجموعة معيارية من الخلفيات (backends) التي تُحمَّل بشكل مستقل، بحيث يمكن لنسخة واحدة قيد التشغيل أن تغطي توليد النصوص وتوليد الصور وتحويل الصوت إلى نص وتحويل النص إلى صوت والتضمينات (embeddings)، بدلاً من الحاجة إلى أداة منفصلة لكل نمط. لا يحل LocalAI محل محركات مثل [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو [vLLM](/ar/power-local-llm/vllm-explained) — بل يمكنه تحميل أي منهما (وغيرهما) كخلفية، ليعمل كطبقة تنسيق وتوافق واجهة برمجة تطبيقات بدلاً من محرك استدلال منافس.',
     metaDescription: 'LocalAI محرك مجاني ومرخّص بموجب MIT وقابل للاستضافة الذاتية، يضع واجهة متوافقة مع OpenAI أمام خلفيات llama.cpp و vLLM و Stable Diffusion و Whisper للنصوص والصور والصوت.',
     readTime: '12 دقيقة قراءة',
     targetKeywords: [
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'خلفيات LocalAI',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI محرك ذكاء اصطناعي مجاني، مرخّص بموجب MIT، وقابل للاستضافة الذاتية، يوفّر واجهة برمجة تطبيقات متوافقة مع OpenAI (بالإضافة إلى نقاط نهاية متوافقة مع Anthropic و ElevenLabs) أمام مجموعة معيارية من خلفيات الاستدلال التي تُحمَّل بشكل مستقل.** بدلاً من تضمين محرك استدلال واحد ثابت، يوجّه جوهره كل طلب إلى عملية خلفية قابلة للتبديل — [llama.cpp](/power-local-llm/llama-cpp-explained) و [vLLM](/power-local-llm/vllm-explained) للنصوص، وخلفيات مبنية على `diffusers` لتوليد الصور، وخلفيات مبنية على `whisper.cpp` لتحويل الصوت إلى نص، وخلفيات أخرى لتحويل النص إلى صوت والتضمينات — بحيث تغطي نسخة واحدة مستضافة ذاتيًا عدة أنماط كانت ستتطلب أدوات منفصلة لولا ذلك. يعمل على المعالج فقط دون الحاجة إلى وحدة معالجة رسومية، أو بتسريع من NVIDIA CUDA أو AMD ROCm أو Intel أو Vulkan، ويُوزَّع كصور Docker ومثبّت macOS وملف تنفيذي لسطر الأوامر.',
+    leadAnswerBlock: '**LocalAI محرك ذكاء اصطناعي مجاني، مرخّص بموجب MIT، وقابل للاستضافة الذاتية، يوفّر واجهة برمجة تطبيقات متوافقة مع OpenAI (بالإضافة إلى نقاط نهاية متوافقة مع Anthropic و ElevenLabs) أمام مجموعة معيارية من خلفيات الاستدلال التي تُحمَّل بشكل مستقل.** بدلاً من تضمين محرك استدلال واحد ثابت، يوجّه جوهره كل طلب إلى عملية خلفية قابلة للتبديل — [llama.cpp](/ar/power-local-llm/llama-cpp-explained) و [vLLM](/ar/power-local-llm/vllm-explained) للنصوص، وخلفيات مبنية على `diffusers` لتوليد الصور، وخلفيات مبنية على `whisper.cpp` لتحويل الصوت إلى نص، وخلفيات أخرى لتحويل النص إلى صوت والتضمينات — بحيث تغطي نسخة واحدة مستضافة ذاتيًا عدة أنماط كانت ستتطلب أدوات منفصلة لولا ذلك. يعمل على المعالج فقط دون الحاجة إلى وحدة معالجة رسومية، أو بتسريع من NVIDIA CUDA أو AMD ROCm أو Intel أو Vulkan، ويُوزَّع كصور Docker ومثبّت macOS وملف تنفيذي لسطر الأوامر.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو LocalAI وكيف يعمل؟',
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'جوهر LocalAI عبارة عن موجّه خفيف، وليس محرك استدلال أحادي الكتلة — يستقبل طلبًا متوافقًا مع OpenAI، ويحدد النموذج والخلفية اللذين يقابلهما هذا الطلب، ثم يتواصل مع عملية خلفية منفصلة تنفّذ الاستدلال فعليًا.',
         items: [
           'تتولى العملية الأساسية توافق واجهة برمجة التطبيقات وتوجيه الطلبات وتهيئة النموذج، ثم تتواصل مع عمليات الخلفية عبر gRPC',
-          'الخلفيات الموثّقة من قِبل المشروع تشمل [llama.cpp](/power-local-llm/llama-cpp-explained) و [vLLM](/power-local-llm/vllm-explained) لتوليد النصوص، وخلفيات مبنية على `diffusers` لتوليد الصور، وخلفيات مبنية على `whisper.cpp` لتحويل الصوت إلى نص',
+          'الخلفيات الموثّقة من قِبل المشروع تشمل [llama.cpp](/ar/power-local-llm/llama-cpp-explained) و [vLLM](/ar/power-local-llm/vllm-explained) لتوليد النصوص، وخلفيات مبنية على `diffusers` لتوليد الصور، وخلفيات مبنية على `whisper.cpp` لتحويل الصوت إلى نص',
           'يمكن تثبيت الخلفيات من معرض للنماذج/الخلفيات، أو تهيئتها يدويًا عبر ملف YAML يشير إلى خلفية ونموذج محددين',
           'بما أن الخلفيات مكوّنات منفصلة قابلة للتثبيت، لا يحتاج النشر إلا لتحميل الخلفيات التي تتطلبها حالة استخدامه فعليًا، بدلاً من تضمين كل محرك ممكن افتراضيًا',
           'يطوّر المشروع أيضًا بعض الخلفيات الأصلية بنفسه إضافةً إلى تغليف محركات موجودة',
@@ -2150,12 +2150,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'كيف يقارَن LocalAI بـ llama.cpp و vLLM؟',
-        content: 'LocalAI ليس محرك استدلال خام منافسًا لـ [llama.cpp](/power-local-llm/llama-cpp-explained) أو [vLLM](/power-local-llm/vllm-explained) — فبنيته الموثّقة تحمّل كليهما كخلفيات قابلة للتبديل لتوليد النصوص، إلى جانب خلفيات منفصلة للصور والصوت.',
+        content: 'LocalAI ليس محرك استدلال خام منافسًا لـ [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو [vLLM](/ar/power-local-llm/vllm-explained) — فبنيته الموثّقة تحمّل كليهما كخلفيات قابلة للتبديل لتوليد النصوص، إلى جانب خلفيات منفصلة للصور والصوت.',
         itemHeadings: true,
         columns: ['المشروع', 'الدور'],
         rows: [
-          { 'المشروع': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'الدور': 'محرك استدلال نصي مناسب للمعالج/وحدة المعالجة الرسومية؛ إحدى خلفيات النصوص التي يمكن لـ LocalAI تحميلها.' },
-          { 'المشروع': '[vLLM](/power-local-llm/vllm-explained)', 'الدور': 'محرك تقديم بوحدة معالجة رسومية عالي الإنتاجية؛ موثّق كخلفية نصية أخرى يمكن لـ LocalAI تحميلها.' },
+          { 'المشروع': '[llama.cpp](/ar/power-local-llm/llama-cpp-explained)', 'الدور': 'محرك استدلال نصي مناسب للمعالج/وحدة المعالجة الرسومية؛ إحدى خلفيات النصوص التي يمكن لـ LocalAI تحميلها.' },
+          { 'المشروع': '[vLLM](/ar/power-local-llm/vllm-explained)', 'الدور': 'محرك تقديم بوحدة معالجة رسومية عالي الإنتاجية؛ موثّق كخلفية نصية أخرى يمكن لـ LocalAI تحميلها.' },
           { 'المشروع': 'LocalAI', 'الدور': 'طبقة التوجيه والتوافق مع واجهة برمجة التطبيقات فوق هذه الخلفيات، تضيف خلفيات للصور والصوت والتضمينات إلى جانب النصوص.' },
         ],
         note: 'الاختيار بين هذه المشاريع ليس عادةً "إما/أو" — فقد يشغّل نشر LocalAI في الخلفية llama.cpp أو vLLM لطلبات النصوص الخاصة به. القرار هو ما إذا كنت تريد التحدث مباشرة إلى ذلك المحرك (llama.cpp، vLLM) أم عبر طبقة واجهة برمجة تطبيقات متعددة الأنماط أوسع يمكنها أيضًا توجيه طلبات الصور والصوت (LocalAI).',
@@ -2177,8 +2177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب LocalAI إذا',
             list: [
-              'كنت تحتاج فقط إلى دردشة نصية سريعة وبسيطة لمستخدم واحد على جهازك الخاص — يتميز [Ollama](/power-local-llm/llama-cpp-explained) أو LM Studio بمساحة إعداد أصغر لهذه الحالة تحديدًا',
-              'كنت تحتاج إلى أقصى إنتاجية ممكنة لوحدة المعالجة الرسومية للنصوص فقط — التحدث مباشرة إلى [vLLM](/power-local-llm/vllm-explained) يتجنب طبقة توجيه إضافية',
+              'كنت تحتاج فقط إلى دردشة نصية سريعة وبسيطة لمستخدم واحد على جهازك الخاص — يتميز [Ollama](/ar/power-local-llm/llama-cpp-explained) أو LM Studio بمساحة إعداد أصغر لهذه الحالة تحديدًا',
+              'كنت تحتاج إلى أقصى إنتاجية ممكنة لوحدة المعالجة الرسومية للنصوص فقط — التحدث مباشرة إلى [vLLM](/ar/power-local-llm/vllm-explained) يتجنب طبقة توجيه إضافية',
               'كنت تفضّل تطبيق سطح مكتب رسوميًا دون إعداد بدلاً من خادم مستضاف ذاتيًا يتطلب الإعداد والصيانة',
             ],
           },
@@ -2193,8 +2193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الأداة': '[LocalAI](https://github.com/mudler/LocalAI)', 'النطاق': 'نصوص وصور وصوت وتضمينات عبر خلفيات قابلة للتبديل. Docker أو مثبّت macOS أو ملف تنفيذي لسطر الأوامر.', 'الأنسب لـ': 'واجهة برمجة تطبيقات واحدة مستضافة ذاتيًا، متعددة الأنماط، متوافقة مع OpenAI/Anthropic/ElevenLabs.' },
           { 'الأداة': '[Ollama](https://ollama.com)', 'النطاق': 'نماذج نصية بشكل رئيسي (وبعض الرؤية). تثبيت وسحب نموذج بأمر واحد.', 'الأنسب لـ': 'أسرع طريق إلى نموذج نصي محلي لمستخدم واحد.' },
-          { 'الأداة': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'النطاق': 'محرك استدلال نصي للمعالج ووحدة المعالجة الرسومية. سطر أوامر وواجهة ويب مدمجة وخادم متوافق مع OpenAI.', 'الأنسب لـ': 'تحكم مباشر على مستوى المحرك في استدلال النصوص — غالبًا الخلفية وراء Ollama و LocalAI.' },
-          { 'الأداة': '[vLLM](/power-local-llm/vllm-explained)', 'النطاق': 'مكتبة تقديم نصوص عالية الإنتاجية بوحدة معالجة رسومية. حزمة Python، خادم متوافق مع OpenAI.', 'الأنسب لـ': 'أقصى إنتاجية متزامنة لوحدة المعالجة الرسومية للنصوص فقط.' },
+          { 'الأداة': '[llama.cpp](/ar/power-local-llm/llama-cpp-explained)', 'النطاق': 'محرك استدلال نصي للمعالج ووحدة المعالجة الرسومية. سطر أوامر وواجهة ويب مدمجة وخادم متوافق مع OpenAI.', 'الأنسب لـ': 'تحكم مباشر على مستوى المحرك في استدلال النصوص — غالبًا الخلفية وراء Ollama و LocalAI.' },
+          { 'الأداة': '[vLLM](/ar/power-local-llm/vllm-explained)', 'النطاق': 'مكتبة تقديم نصوص عالية الإنتاجية بوحدة معالجة رسومية. حزمة Python، خادم متوافق مع OpenAI.', 'الأنسب لـ': 'أقصى إنتاجية متزامنة لوحدة المعالجة الرسومية للنصوص فقط.' },
         ],
         note: 'لم يقم هذا المقال باختبار أداء مستقل لهذه الأدوات مقابل بعضها البعض ولا يدّعي تفوّق إحداها تقنيًا — تغطي المقارنة فقط حقائق موثّقة عن النطاق والإعداد والبنية.',
       },
@@ -2258,10 +2258,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[شرح llama.cpp](/power-local-llm/llama-cpp-explained) — محرك استدلال النصوص الذي يمكن لـ LocalAI تحميله كإحدى خلفياته.',
-          '[شرح vLLM](/power-local-llm/vllm-explained) — مكتبة تقديم عالية الإنتاجية بوحدة معالجة رسومية يمكن لـ LocalAI تحميلها أيضًا كخلفية نصية.',
-          '[دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
-          '[دليل شراء وحدة معالجة رسومية لنماذج اللغة المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — فئات وحدات المعالجة الرسومية التي تستحق النظر إذا كنت تخطط لتشغيل LocalAI بخلفيات مسرَّعة بوحدة معالجة رسومية.',
+          '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك استدلال النصوص الذي يمكن لـ LocalAI تحميله كإحدى خلفياته.',
+          '[شرح vLLM](/ar/power-local-llm/vllm-explained) — مكتبة تقديم عالية الإنتاجية بوحدة معالجة رسومية يمكن لـ LocalAI تحميلها أيضًا كخلفية نصية.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
+          '[دليل شراء وحدة معالجة رسومية لنماذج اللغة المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — فئات وحدات المعالجة الرسومية التي تستحق النظر إذا كنت تخطط لتشغيل LocalAI بخلفيات مسرَّعة بوحدة معالجة رسومية.',
         ],
       },
     },
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LocalAI',
     title: 'LocalAI 완벽 해설: 셀프호스팅 OpenAI API 대안 (2026)',
     seoTitle: 'LocalAI 완벽 해설: 셀프호스팅 OpenAI API 대안 (2026)',
-    intro: 'LocalAI는 Ettore Di Giacinto("mudler")가 만들고 [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)에서 오픈소스 커뮤니티가 유지·관리하는 무료, MIT 라이선스, 셀프호스팅 AI 엔진입니다. 독립적으로 로드되는 모듈형 백엔드 앞단에 드롭인 방식의 OpenAI 호환 API(그리고 Anthropic·ElevenLabs 호환 엔드포인트)를 제공하므로, 하나의 인스턴스만으로 텍스트 생성, 이미지 생성, 음성 인식, 음성 합성, 임베딩을 모두 처리할 수 있어 모달리티마다 별도의 도구가 필요하지 않습니다. LocalAI는 [llama.cpp](/power-local-llm/llama-cpp-explained)나 [vLLM](/power-local-llm/vllm-explained) 같은 엔진을 대체하지 않습니다—오히려 이 둘(과 다른 엔진들)을 백엔드로 로드할 수 있으며, 경쟁하는 원시 추론 엔진이 아니라 오케스트레이션 겸 API 호환 계층으로 동작합니다.',
+    intro: 'LocalAI는 Ettore Di Giacinto("mudler")가 만들고 [github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)에서 오픈소스 커뮤니티가 유지·관리하는 무료, MIT 라이선스, 셀프호스팅 AI 엔진입니다. 독립적으로 로드되는 모듈형 백엔드 앞단에 드롭인 방식의 OpenAI 호환 API(그리고 Anthropic·ElevenLabs 호환 엔드포인트)를 제공하므로, 하나의 인스턴스만으로 텍스트 생성, 이미지 생성, 음성 인식, 음성 합성, 임베딩을 모두 처리할 수 있어 모달리티마다 별도의 도구가 필요하지 않습니다. LocalAI는 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 [vLLM](/ko/power-local-llm/vllm-explained) 같은 엔진을 대체하지 않습니다—오히려 이 둘(과 다른 엔진들)을 백엔드로 로드할 수 있으며, 경쟁하는 원시 추론 엔진이 아니라 오케스트레이션 겸 API 호환 계층으로 동작합니다.',
     metaDescription: 'LocalAI는 llama.cpp, vLLM, Stable Diffusion, Whisper 백엔드 앞에 OpenAI 호환 API를 두는 무료, MIT 라이선스 셀프호스팅 엔진입니다. 텍스트, 이미지, 오디오를 다룹니다.',
     readTime: '12분 소요',
     targetKeywords: [
@@ -2289,7 +2289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LocalAI 백엔드',
       '[github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)',
     ],
-    leadAnswerBlock: '**LocalAI는 독립적으로 로드되는 여러 추론 백엔드 앞단에 OpenAI 호환 API(그리고 Anthropic·ElevenLabs 호환 엔드포인트)를 제공하는 무료, MIT 라이선스, 셀프호스팅 AI 엔진입니다.** 하나의 고정된 추론 엔진을 내장하는 대신, 코어가 각 요청을 교체 가능한 백엔드 프로세스로 라우팅합니다—텍스트용 [llama.cpp](/power-local-llm/llama-cpp-explained)와 [vLLM](/power-local-llm/vllm-explained), 이미지 생성용 `diffusers` 기반 백엔드, 음성 인식용 `whisper.cpp` 기반 백엔드, 그리고 음성 합성·임베딩용 다른 백엔드들이 그 예입니다. 이 덕분에 하나의 셀프호스팅 인스턴스가 원래라면 별도의 도구가 필요했을 여러 모달리티를 처리할 수 있습니다. GPU 없이 CPU만으로 동작하거나 NVIDIA CUDA, AMD ROCm, Intel, Vulkan 가속을 사용할 수 있으며, Docker 이미지, macOS 설치 파일, CLI 바이너리 형태로 배포됩니다.',
+    leadAnswerBlock: '**LocalAI는 독립적으로 로드되는 여러 추론 백엔드 앞단에 OpenAI 호환 API(그리고 Anthropic·ElevenLabs 호환 엔드포인트)를 제공하는 무료, MIT 라이선스, 셀프호스팅 AI 엔진입니다.** 하나의 고정된 추론 엔진을 내장하는 대신, 코어가 각 요청을 교체 가능한 백엔드 프로세스로 라우팅합니다—텍스트용 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)와 [vLLM](/ko/power-local-llm/vllm-explained), 이미지 생성용 `diffusers` 기반 백엔드, 음성 인식용 `whisper.cpp` 기반 백엔드, 그리고 음성 합성·임베딩용 다른 백엔드들이 그 예입니다. 이 덕분에 하나의 셀프호스팅 인스턴스가 원래라면 별도의 도구가 필요했을 여러 모달리티를 처리할 수 있습니다. GPU 없이 CPU만으로 동작하거나 NVIDIA CUDA, AMD ROCm, Intel, Vulkan 가속을 사용할 수 있으며, Docker 이미지, macOS 설치 파일, CLI 바이너리 형태로 배포됩니다.',
     quickAnswerTop: {
       ko: {
         question: 'LocalAI란 무엇이며 어떻게 작동하나요?',
@@ -2360,7 +2360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'LocalAI의 코어는 경량 라우터이지 단일 거대 추론 엔진이 아닙니다—OpenAI 호환 요청을 받아 어떤 모델과 백엔드에 대응하는지 판단한 뒤, 실제로 추론을 수행하는 별도의 백엔드 프로세스와 통신합니다.',
         items: [
           '핵심 프로세스는 API 호환성, 요청 라우팅, 모델 구성을 담당한 뒤 gRPC를 통해 백엔드 프로세스와 통신함',
-          '프로젝트가 문서화한 백엔드에는 텍스트 생성용 [llama.cpp](/power-local-llm/llama-cpp-explained)와 [vLLM](/power-local-llm/vllm-explained), 이미지 생성용 `diffusers` 기반 백엔드, 음성 인식용 `whisper.cpp` 기반 백엔드가 포함됨',
+          '프로젝트가 문서화한 백엔드에는 텍스트 생성용 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)와 [vLLM](/ko/power-local-llm/vllm-explained), 이미지 생성용 `diffusers` 기반 백엔드, 음성 인식용 `whisper.cpp` 기반 백엔드가 포함됨',
           '백엔드는 모델/백엔드 갤러리에서 설치하거나, 특정 백엔드와 모델을 지정하는 YAML 파일로 수동 구성할 수 있음',
           '백엔드가 독립적으로 설치 가능한 구성 요소이기 때문에, 배포는 실제로 필요한 백엔드만 로드하면 되고 기본적으로 모든 가능한 엔진을 함께 실을 필요가 없음',
           '프로젝트는 기존 엔진을 감싸는 것 외에도 일부 네이티브 백엔드를 직접 개발함',
@@ -2433,12 +2433,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsLlamaCppVllm: {
         id: 'localai-vs-llama-cpp-vllm',
         title: 'LocalAI는 llama.cpp, vLLM과 어떻게 다른가?',
-        content: 'LocalAI는 [llama.cpp](/power-local-llm/llama-cpp-explained)나 [vLLM](/power-local-llm/vllm-explained)과 경쟁하는 원시 추론 엔진이 아닙니다—문서화된 아키텍처상 텍스트 생성을 위해 이 둘을 교체 가능한 백엔드로 로드하며, 이미지와 오디오를 위한 별도의 백엔드도 함께 갖추고 있습니다.',
+        content: 'LocalAI는 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 [vLLM](/ko/power-local-llm/vllm-explained)과 경쟁하는 원시 추론 엔진이 아닙니다—문서화된 아키텍처상 텍스트 생성을 위해 이 둘을 교체 가능한 백엔드로 로드하며, 이미지와 오디오를 위한 별도의 백엔드도 함께 갖추고 있습니다.',
         itemHeadings: true,
         columns: ['프로젝트', '역할'],
         rows: [
-          { '프로젝트': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '역할': 'CPU/GPU 친화적인 텍스트 추론 엔진; LocalAI가 로드할 수 있는 텍스트 백엔드 중 하나.' },
-          { '프로젝트': '[vLLM](/power-local-llm/vllm-explained)', '역할': '높은 처리량의 GPU 서빙 엔진; LocalAI가 로드할 수 있는 또 다른 텍스트 백엔드로 문서화됨.' },
+          { '프로젝트': '[llama.cpp](/ko/power-local-llm/llama-cpp-explained)', '역할': 'CPU/GPU 친화적인 텍스트 추론 엔진; LocalAI가 로드할 수 있는 텍스트 백엔드 중 하나.' },
+          { '프로젝트': '[vLLM](/ko/power-local-llm/vllm-explained)', '역할': '높은 처리량의 GPU 서빙 엔진; LocalAI가 로드할 수 있는 또 다른 텍스트 백엔드로 문서화됨.' },
           { '프로젝트': 'LocalAI', '역할': '이러한 백엔드들 위에 있는 라우팅 겸 API 호환 계층으로, 텍스트 외에 이미지·오디오·임베딩 백엔드를 추가함.' },
         ],
         note: '이들 프로젝트 사이의 선택은 보통 "둘 중 하나"의 문제가 아닙니다—LocalAI 배포는 텍스트 요청을 위해 내부적으로 llama.cpp나 vLLM을 실행하고 있을 수 있습니다. 결정해야 할 것은 그 엔진에 직접 접근할 것인지(llama.cpp, vLLM), 아니면 이미지와 오디오 요청도 라우팅할 수 있는 더 넓은 멀티모달 API 계층(LocalAI)을 통할 것인지입니다.',
@@ -2460,8 +2460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 LocalAI를 피하세요',
             list: [
-              '자신의 컴퓨터에서 빠르고 최소한의 단일 사용자 텍스트 채팅만 필요한 경우—이 구체적인 용도에는 [Ollama](/power-local-llm/llama-cpp-explained)나 LM Studio가 설정 범위가 더 작음',
-              '텍스트만을 위한 최대 GPU 서빙 처리량이 필요한 경우—[vLLM](/power-local-llm/vllm-explained)에 직접 접근하면 추가 라우팅 계층을 피할 수 있음',
+              '자신의 컴퓨터에서 빠르고 최소한의 단일 사용자 텍스트 채팅만 필요한 경우—이 구체적인 용도에는 [Ollama](/ko/power-local-llm/llama-cpp-explained)나 LM Studio가 설정 범위가 더 작음',
+              '텍스트만을 위한 최대 GPU 서빙 처리량이 필요한 경우—[vLLM](/ko/power-local-llm/vllm-explained)에 직접 접근하면 추가 라우팅 계층을 피할 수 있음',
               '설정하고 유지 관리해야 하는 셀프호스팅 서버보다 설정이 필요 없는 그래픽 데스크톱 앱을 선호하는 경우',
             ],
           },
@@ -2476,8 +2476,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '도구': '[LocalAI](https://github.com/mudler/LocalAI)', '범위': '교체 가능한 백엔드를 통한 텍스트, 이미지, 오디오, 임베딩. Docker, macOS 설치 파일, 또는 CLI 바이너리.', '가장 적합한 경우': 'OpenAI/Anthropic/ElevenLabs와 호환되는 하나의 셀프호스팅 멀티모달 API.' },
           { '도구': '[Ollama](https://ollama.com)', '범위': '주로 텍스트(및 일부 비전) 모델. 한 줄 명령으로 설치 및 모델 다운로드.', '가장 적합한 경우': '단일 사용자를 위한 로컬 텍스트 모델로 가는 가장 빠른 경로.' },
-          { '도구': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '범위': 'CPU와 GPU용 텍스트 추론 엔진. CLI, 내장 웹 UI, OpenAI 호환 서버.', '가장 적합한 경우': '텍스트 추론에 대한 엔진 수준의 직접적인 제어—흔히 Ollama와 LocalAI 이면의 백엔드.' },
-          { '도구': '[vLLM](/power-local-llm/vllm-explained)', '범위': '높은 처리량의 GPU 텍스트 서빙 라이브러리. Python 패키지, OpenAI 호환 서버.', '가장 적합한 경우': '텍스트만을 위한 최대 동시 GPU 처리량.' },
+          { '도구': '[llama.cpp](/ko/power-local-llm/llama-cpp-explained)', '범위': 'CPU와 GPU용 텍스트 추론 엔진. CLI, 내장 웹 UI, OpenAI 호환 서버.', '가장 적합한 경우': '텍스트 추론에 대한 엔진 수준의 직접적인 제어—흔히 Ollama와 LocalAI 이면의 백엔드.' },
+          { '도구': '[vLLM](/ko/power-local-llm/vllm-explained)', '범위': '높은 처리량의 GPU 텍스트 서빙 라이브러리. Python 패키지, OpenAI 호환 서버.', '가장 적합한 경우': '텍스트만을 위한 최대 동시 GPU 처리량.' },
         ],
         note: '이 글은 이 도구들을 서로 독립적으로 벤치마크하지 않았으며 어느 하나가 기술적으로 우월하다고 주장하지 않습니다—비교는 문서화된 범위, 설정, 아키텍처 사실만을 다룹니다.',
       },
@@ -2541,10 +2541,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[llama.cpp 해설](/power-local-llm/llama-cpp-explained) — LocalAI가 백엔드 중 하나로 로드할 수 있는 텍스트 추론 엔진.',
-          '[vLLM 해설](/power-local-llm/vllm-explained) — LocalAI가 텍스트 백엔드로도 로드할 수 있는 높은 처리량의 GPU 서빙 라이브러리.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
-          '[로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU 가속 백엔드로 LocalAI를 실행할 계획이라면 고려할 만한 GPU 등급.',
+          '[llama.cpp 해설](/ko/power-local-llm/llama-cpp-explained) — LocalAI가 백엔드 중 하나로 로드할 수 있는 텍스트 추론 엔진.',
+          '[vLLM 해설](/ko/power-local-llm/vllm-explained) — LocalAI가 텍스트 백엔드로도 로드할 수 있는 높은 처리량의 GPU 서빙 라이브러리.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU 가속 백엔드로 LocalAI를 실행할 계획이라면 고려할 만한 GPU 등급.',
         ],
       },
     },

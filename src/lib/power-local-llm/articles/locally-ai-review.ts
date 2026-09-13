@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigste Einschränkung': 'Nur für Apple-Geräte — keine Windows- oder Android-App',
           },
           {
-            'App': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'App': '[Loci](/de/power-local-llm/loci-ai-review-offline-local-ai)',
             'Am besten für': 'Plattformübergreifende Nutzer, die unkomplizierten privaten Chat auf mehr Geräten wollen',
             'Plattform-Fokus': 'iPhone/iPad/Android/Mac/Windows (5 Plattformen)',
             'Modellflexibilität': 'Kuratierte Bibliothek u. a. mit Gemma, Qwen, Llama und Phi; kein Import eigener GGUF-Dateien',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen sich Locally AI nicht eignet',
         items: [
-          '**Windows- oder Android-Nutzer.** Locally AI ist nur für Apple-Geräte (iPhone, iPad, Mac) verfügbar; Nutzer anderer Plattformen brauchen eine andere App, etwa [Loci](/power-local-llm/loci-ai-review-offline-local-ai), das fünf Plattformen inklusive Windows und Android abdeckt.',
+          '**Windows- oder Android-Nutzer.** Locally AI ist nur für Apple-Geräte (iPhone, iPad, Mac) verfügbar; Nutzer anderer Plattformen brauchen eine andere App, etwa [Loci](/de/power-local-llm/loci-ai-review-offline-local-ai), das fünf Plattformen inklusive Windows und Android abdeckt.',
           '**Nutzer, die beliebige eigene GGUF-Dateien importieren wollen.** Wer auf ein bestimmtes feinabgestimmtes oder Nischen-Modell von Hugging Face angewiesen ist, statt aus Locally AIs unterstützten Modellfamilien zu wählen, ist mit einem manuelleren Tool rund um GGUF-Import besser bedient.',
           '**Nutzer, die Reasoning-Qualität auf Frontier-Niveau erwarten.** Offene Modelle, die bequem auf Smartphone oder Tablet laufen, tauschen für diese Portabilität etwas Reasoning-Tiefe ein; Nutzer mit hochsensiblen Analysen, komplexem mehrstufigem Reasoning oder codingintensiven Aufgaben wollen für diese spezifischen Aufgaben möglicherweise weiterhin ein Frontier-Cloud-Modell nutzen.',
           '**Entwickler, die Kommandozeilen- oder API-first-Kontrolle wollen.** Wer Inferenz skripten, in bestehendes Tooling integrieren oder Modelle headless auf einem Mac ausführen möchte, greift eventuell lieber neben oder statt einer Consumer-Chat-App zu einem entwicklerorientierten Tool wie Ollama.',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie schneidet Locally AI im Vergleich zu Loci ab?',
-            a: 'Locally AI ist nur für Apple-Geräte (iPhone, iPad, Mac) verfügbar und speziell für Apple Silicon optimiert, mit Unterstützung für Llama, Gemma, Qwen, DeepSeek und weitere offene Modelle. Loci deckt fünf Plattformen ab — iPhone, iPad, Android, Mac und Windows — mit einer kuratierten Modellbibliothek. Wählen Sie Locally AI, wenn Sie vollständig im Apple-Ökosystem unterwegs sind; wählen Sie Loci, wenn Sie zusätzlich Android- oder Windows-Unterstützung brauchen. Mehr Details in unserem vollständigen [Loci-AI-Review](/power-local-llm/loci-ai-review-offline-local-ai).',
+            a: 'Locally AI ist nur für Apple-Geräte (iPhone, iPad, Mac) verfügbar und speziell für Apple Silicon optimiert, mit Unterstützung für Llama, Gemma, Qwen, DeepSeek und weitere offene Modelle. Loci deckt fünf Plattformen ab — iPhone, iPad, Android, Mac und Windows — mit einer kuratierten Modellbibliothek. Wählen Sie Locally AI, wenn Sie vollständig im Apple-Ökosystem unterwegs sind; wählen Sie Loci, wenn Sie zusätzlich Android- oder Windows-Unterstützung brauchen. Mehr Details in unserem vollständigen [Loci-AI-Review](/de/power-local-llm/loci-ai-review-offline-local-ai).',
           },
           {
             q: 'Brauche ich ein bestimmtes iPhone-, iPad- oder Mac-Modell für Locally AI?',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Locally AI ist eine unkomplizierte Wahl für Apple-Nutzer, die eine privacy-first, On-Device-App für den Chat mit großen Open-Source-Modellfamilien — Llama, Gemma, Qwen und DeepSeek — wollen, ohne das Apple-Ökosystem zu verlassen oder Modelldateien manuell zu verwalten. Die Optimierung für Apple Silicon und der vollständig offline funktionierende Betrieb nach dem Modell-Download machen die App gut geeignet für Nutzer, denen wichtig ist, Unterhaltungen von entfernten Servern fernzuhalten, und die eine App-Erfahrung statt eines Kommandozeilen-Workflows bevorzugen. Der Kompromiss liegt im Plattformumfang: Locally AI deckt weder Windows noch Android ab, wer diese Plattformen braucht, sollte stattdessen eine plattformübergreifende App wie [Loci](/power-local-llm/loci-ai-review-offline-local-ai) in Betracht ziehen. Wer beliebige eigene GGUF-Dateien importieren oder tiefere Quantisierungskontrolle braucht, sollte die App mit konfigurationsintensiveren Tools wie Private LLM oder Ollama vergleichen. Für die vorgesehene Zielgruppe — Apple-Nutzer, die privaten, offline verfügbaren Zugang zu führenden offenen Modellen ohne technischen Aufwand wollen — füllt Locally AI eine klare Nische.',
+          'Locally AI ist eine unkomplizierte Wahl für Apple-Nutzer, die eine privacy-first, On-Device-App für den Chat mit großen Open-Source-Modellfamilien — Llama, Gemma, Qwen und DeepSeek — wollen, ohne das Apple-Ökosystem zu verlassen oder Modelldateien manuell zu verwalten. Die Optimierung für Apple Silicon und der vollständig offline funktionierende Betrieb nach dem Modell-Download machen die App gut geeignet für Nutzer, denen wichtig ist, Unterhaltungen von entfernten Servern fernzuhalten, und die eine App-Erfahrung statt eines Kommandozeilen-Workflows bevorzugen. Der Kompromiss liegt im Plattformumfang: Locally AI deckt weder Windows noch Android ab, wer diese Plattformen braucht, sollte stattdessen eine plattformübergreifende App wie [Loci](/de/power-local-llm/loci-ai-review-offline-local-ai) in Betracht ziehen. Wer beliebige eigene GGUF-Dateien importieren oder tiefere Quantisierungskontrolle braucht, sollte die App mit konfigurationsintensiveren Tools wie Private LLM oder Ollama vergleichen. Für die vorgesehene Zielgruppe — Apple-Nutzer, die privaten, offline verfügbaren Zugang zu führenden offenen Modellen ohne technischen Aufwand wollen — füllt Locally AI eine klare Nische.',
       },
       sources: {
         id: 'sources',
@@ -592,18 +592,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Offizielle Locally-AI-Website](https://www.locallyai.app/) — Produktübersicht, unterstützte Modellfamilien, Plattformverfügbarkeit.',
           '[Offizielle Loci-Website](https://askloci.ai) — Vergleichsreferenz für plattformübergreifende Nutzung.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — begleitender Review, der für den Alternativenvergleich in diesem Artikel genutzt wurde.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/de/power-local-llm/loci-ai-review-offline-local-ai) — begleitender Review, der für den Alternativenvergleich in diesem Artikel genutzt wurde.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende Alternative für iPhone, iPad, Android, Mac und Windows.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — der iPhone-App-Überblick; u. a. PocketPal AI, Private LLM, MLC Chat, LLM Farm und Apple Intelligence.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — geräteorientierter Leitfaden für On-Device- und Remote-Inferenz auf Tablets.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — Modellebene als Ergänzung; Benchmarks und Qualitätsabwägungen auf mobilen Geräten.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende Alternative für iPhone, iPad, Android, Mac und Windows.',
+          '[Best Local LLM Apps for iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der iPhone-App-Überblick; u. a. PocketPal AI, Private LLM, MLC Chat, LLM Farm und Apple Intelligence.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/de/power-local-llm/run-ai-on-tablet-ipad-android) — geräteorientierter Leitfaden für On-Device- und Remote-Inferenz auf Tablets.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — Modellebene als Ergänzung; Benchmarks und Qualitätsabwägungen auf mobilen Geräten.',
+          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },
     },
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Limite principale': 'Apple uniquement — pas d\'application Windows ou Android',
           },
           {
-            'Application': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'Application': '[Loci](/fr/power-local-llm/loci-ai-review-offline-local-ai)',
             'Idéale pour': 'Les utilisateurs multiplateformes voulant un chat privé simple sur davantage d\'appareils',
             'Focus plateforme': 'iPhone/iPad/Android/Mac/Windows (5 plateformes)',
             'Flexibilité des modèles': 'Bibliothèque sélectionnée incluant Gemma, Qwen, Llama et Phi ; pas d\'import de fichiers GGUF personnalisés',
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Qui ne devrait pas utiliser Locally AI',
         items: [
-          '**Les utilisateurs Windows ou Android.** Locally AI est exclusivement Apple (iPhone, iPad, Mac) ; les utilisateurs d\'autres plateformes ont besoin d\'une autre application, comme [Loci](/power-local-llm/loci-ai-review-offline-local-ai), qui couvre cinq plateformes dont Windows et Android.',
+          '**Les utilisateurs Windows ou Android.** Locally AI est exclusivement Apple (iPhone, iPad, Mac) ; les utilisateurs d\'autres plateformes ont besoin d\'une autre application, comme [Loci](/fr/power-local-llm/loci-ai-review-offline-local-ai), qui couvre cinq plateformes dont Windows et Android.',
           '**Les utilisateurs voulant importer des fichiers GGUF personnalisés quelconques.** Si votre flux de travail dépend de l\'exécution d\'un fichier de modèle spécifique, finement ajusté ou de niche, provenant de Hugging Face, plutôt que de choisir parmi les familles de modèles prises en charge par Locally AI, un outil plus manuel conçu autour de l\'import GGUF conviendra mieux.',
           '**Les utilisateurs attendant une qualité de raisonnement de niveau frontière.** Les modèles ouverts dimensionnés pour tourner confortablement sur un téléphone ou une tablette sacrifient une partie de la profondeur de raisonnement pour cette portabilité ; les utilisateurs ayant des analyses à forts enjeux, un raisonnement complexe multi-étapes ou des charges de travail intensives en code voudront peut-être conserver un modèle cloud de pointe pour ces tâches spécifiques.',
           '**Les développeurs voulant un contrôle d\'abord en ligne de commande ou par API.** Les utilisateurs voulant scripter l\'inférence, l\'intégrer à des outils existants, ou exécuter des modèles sans interface sur un Mac préféreront peut-être un outil orienté développeur comme Ollama, en complément ou à la place d\'une application de chat grand public.',
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment Locally AI se compare-t-elle à Loci ?',
-            a: 'Locally AI est exclusivement Apple (iPhone, iPad, Mac) et spécifiquement optimisée pour Apple Silicon, avec la prise en charge de Llama, Gemma, Qwen, DeepSeek et d\'autres modèles ouverts. Loci couvre cinq plateformes — iPhone, iPad, Android, Mac et Windows — avec une bibliothèque de modèles sélectionnée. Choisissez Locally AI si vous êtes entièrement dans l\'écosystème Apple ; choisissez Loci si vous avez aussi besoin d\'Android ou de Windows. Voir notre [revue complète de Loci AI](/power-local-llm/loci-ai-review-offline-local-ai) pour plus de détails.',
+            a: 'Locally AI est exclusivement Apple (iPhone, iPad, Mac) et spécifiquement optimisée pour Apple Silicon, avec la prise en charge de Llama, Gemma, Qwen, DeepSeek et d\'autres modèles ouverts. Loci couvre cinq plateformes — iPhone, iPad, Android, Mac et Windows — avec une bibliothèque de modèles sélectionnée. Choisissez Locally AI si vous êtes entièrement dans l\'écosystème Apple ; choisissez Loci si vous avez aussi besoin d\'Android ou de Windows. Voir notre [revue complète de Loci AI](/fr/power-local-llm/loci-ai-review-offline-local-ai) pour plus de détails.',
           },
           {
             q: 'Ai-je besoin d\'un modèle spécifique d\'iPhone, d\'iPad ou de Mac pour utiliser Locally AI ?',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Locally AI est un choix simple pour les utilisateurs Apple voulant une application privacy-first et sur l\'appareil pour discuter avec de grandes familles de modèles open source — Llama, Gemma, Qwen et DeepSeek — sans quitter l\'écosystème Apple ni gérer manuellement les fichiers de modèles. Son optimisation pour Apple Silicon et son fonctionnement entièrement hors ligne après le téléchargement du modèle la rendent bien adaptée aux utilisateurs qui privilégient le fait de garder leurs conversations hors des serveurs distants et qui préfèrent une expérience d\'application plutôt qu\'un flux de travail en ligne de commande. Le compromis se situe dans la portée plateforme : Locally AI ne couvre ni Windows ni Android, les utilisateurs ayant besoin de ces plateformes devraient plutôt se tourner vers une application multiplateforme comme [Loci](/power-local-llm/loci-ai-review-offline-local-ai). Les utilisateurs voulant importer des fichiers GGUF personnalisés quelconques ou nécessitant un contrôle plus poussé de la quantification devraient comparer avec des outils plus exigeants en configuration comme Private LLM ou Ollama. Pour son public visé — des utilisateurs Apple voulant un accès privé et hors ligne aux principaux modèles ouverts sans surcharge technique — Locally AI occupe une niche claire.',
+          'Locally AI est un choix simple pour les utilisateurs Apple voulant une application privacy-first et sur l\'appareil pour discuter avec de grandes familles de modèles open source — Llama, Gemma, Qwen et DeepSeek — sans quitter l\'écosystème Apple ni gérer manuellement les fichiers de modèles. Son optimisation pour Apple Silicon et son fonctionnement entièrement hors ligne après le téléchargement du modèle la rendent bien adaptée aux utilisateurs qui privilégient le fait de garder leurs conversations hors des serveurs distants et qui préfèrent une expérience d\'application plutôt qu\'un flux de travail en ligne de commande. Le compromis se situe dans la portée plateforme : Locally AI ne couvre ni Windows ni Android, les utilisateurs ayant besoin de ces plateformes devraient plutôt se tourner vers une application multiplateforme comme [Loci](/fr/power-local-llm/loci-ai-review-offline-local-ai). Les utilisateurs voulant importer des fichiers GGUF personnalisés quelconques ou nécessitant un contrôle plus poussé de la quantification devraient comparer avec des outils plus exigeants en configuration comme Private LLM ou Ollama. Pour son public visé — des utilisateurs Apple voulant un accès privé et hors ligne aux principaux modèles ouverts sans surcharge technique — Locally AI occupe une niche claire.',
       },
       sources: {
         id: 'sources',
@@ -893,18 +893,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Site officiel de Locally AI](https://www.locallyai.app/) — présentation du produit, familles de modèles prises en charge, disponibilité par plateforme.',
           '[Site officiel de Loci](https://askloci.ai) — référence de comparaison multiplateforme.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — revue compagnon utilisée pour la comparaison des alternatives dans cet article.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/fr/power-local-llm/loci-ai-review-offline-local-ai) — revue compagnon utilisée pour la comparaison des alternatives dans cet article.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — une alternative multiplateforme couvrant iPhone, iPad, Android, Mac et Windows.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — le tour d\'horizon des applications pour iPhone ; inclut PocketPal AI, Private LLM, MLC Chat, LLM Farm et Apple Intelligence.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — guide centré sur les appareils pour l\'inférence sur l\'appareil et à distance sur tablette.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complément au niveau des modèles ; benchmarks et compromis de qualité sur mobile.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/fr/power-local-llm/loci-ai-review-offline-local-ai) — une alternative multiplateforme couvrant iPhone, iPad, Android, Mac et Windows.',
+          '[Best Local LLM Apps for iPhone in 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — le tour d\'horizon des applications pour iPhone ; inclut PocketPal AI, Private LLM, MLC Chat, LLM Farm et Apple Intelligence.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/fr/power-local-llm/run-ai-on-tablet-ipad-android) — guide centré sur les appareils pour l\'inférence sur l\'appareil et à distance sur tablette.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complément au niveau des modèles ; benchmarks et compromis de qualité sur mobile.',
+          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
         ],
       },
     },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Limitación clave': 'Solo Apple —sin app para Windows o Android',
           },
           {
-            'App': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'App': '[Loci](/es/power-local-llm/loci-ai-review-offline-local-ai)',
             'Mejor para': 'Usuarios multiplataforma que quieren chat privado sencillo en más dispositivos',
             'Enfoque de plataforma': 'iPhone/iPad/Android/Mac/Windows (5 plataformas)',
             'Flexibilidad de modelos': 'Biblioteca seleccionada que incluye Gemma, Qwen, Llama y Phi; sin importación de archivos GGUF personalizados',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quién no debería usar Locally AI',
         items: [
-          '**Usuarios de Windows o Android.** Locally AI es exclusiva de Apple (iPhone, iPad, Mac); los usuarios de otras plataformas necesitan otra app, como [Loci](/power-local-llm/loci-ai-review-offline-local-ai), que cubre cinco plataformas, incluidas Windows y Android.',
+          '**Usuarios de Windows o Android.** Locally AI es exclusiva de Apple (iPhone, iPad, Mac); los usuarios de otras plataformas necesitan otra app, como [Loci](/es/power-local-llm/loci-ai-review-offline-local-ai), que cubre cinco plataformas, incluidas Windows y Android.',
           '**Usuarios que quieren importar archivos GGUF personalizados arbitrarios.** Si tu flujo de trabajo depende de ejecutar un archivo de modelo específico, ajustado o de nicho desde Hugging Face en lugar de elegir entre las familias de modelos compatibles con Locally AI, te conviene más una herramienta más manual centrada en la importación de GGUF.',
           '**Usuarios que esperan una calidad de razonamiento de nivel frontera.** Los modelos abiertos con un tamaño que cabe cómodamente en un teléfono o tablet sacrifican algo de profundidad de razonamiento a cambio de esa portabilidad; los usuarios con análisis de alto riesgo, razonamiento complejo de varios pasos o cargas de trabajo intensivas en código pueden seguir necesitando un modelo frontera en la nube para esas tareas concretas.',
           '**Desarrolladores que quieren control centrado en línea de comandos o API.** Los usuarios que quieran automatizar la inferencia con scripts, integrarla con herramientas existentes o ejecutar modelos sin interfaz en un Mac probablemente prefieran una herramienta orientada a desarrolladores como Ollama, junto a o en lugar de una app de chat para el consumidor.',
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cómo se compara Locally AI con Loci?',
-            a: 'Locally AI es exclusiva de Apple (iPhone, iPad, Mac) y está optimizada específicamente para Apple Silicon, con soporte para Llama, Gemma, Qwen, DeepSeek y otros modelos abiertos. Loci cubre cinco plataformas —iPhone, iPad, Android, Mac y Windows— con una biblioteca de modelos curada. Elige Locally AI si estás totalmente en el ecosistema Apple; elige Loci si también necesitas compatibilidad con Android o Windows. Consulta nuestra [reseña completa de Loci AI](/power-local-llm/loci-ai-review-offline-local-ai) para más detalles.',
+            a: 'Locally AI es exclusiva de Apple (iPhone, iPad, Mac) y está optimizada específicamente para Apple Silicon, con soporte para Llama, Gemma, Qwen, DeepSeek y otros modelos abiertos. Loci cubre cinco plataformas —iPhone, iPad, Android, Mac y Windows— con una biblioteca de modelos curada. Elige Locally AI si estás totalmente en el ecosistema Apple; elige Loci si también necesitas compatibilidad con Android o Windows. Consulta nuestra [reseña completa de Loci AI](/es/power-local-llm/loci-ai-review-offline-local-ai) para más detalles.',
           },
           {
             q: '¿Necesito un modelo específico de iPhone, iPad o Mac para usar Locally AI?',
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Locally AI es una opción sencilla para usuarios de Apple que quieren una app privacy-first y en el dispositivo para chatear con grandes familias de modelos de código abierto —Llama, Gemma, Qwen y DeepSeek— sin salir del ecosistema Apple ni gestionar manualmente los archivos de modelo. Su optimización para Apple Silicon y su funcionamiento totalmente sin conexión tras descargar el modelo la hacen adecuada para usuarios que priorizan mantener sus conversaciones fuera de servidores remotos y que prefieren una experiencia de app en lugar de un flujo de trabajo de línea de comandos. La contrapartida está en el alcance de plataformas: Locally AI no cubre Windows ni Android, así que quienes necesiten esas plataformas deberían mirar una app multiplataforma como [Loci](/power-local-llm/loci-ai-review-offline-local-ai). Quienes quieran importar archivos GGUF personalizados arbitrarios o necesiten un control de cuantización más profundo deberían compararla con herramientas que exigen más configuración, como Private LLM u Ollama. Para su público objetivo —usuarios de Apple que quieren acceso privado y sin conexión a los principales modelos abiertos sin complicaciones técnicas— Locally AI ocupa un nicho claro.',
+          'Locally AI es una opción sencilla para usuarios de Apple que quieren una app privacy-first y en el dispositivo para chatear con grandes familias de modelos de código abierto —Llama, Gemma, Qwen y DeepSeek— sin salir del ecosistema Apple ni gestionar manualmente los archivos de modelo. Su optimización para Apple Silicon y su funcionamiento totalmente sin conexión tras descargar el modelo la hacen adecuada para usuarios que priorizan mantener sus conversaciones fuera de servidores remotos y que prefieren una experiencia de app en lugar de un flujo de trabajo de línea de comandos. La contrapartida está en el alcance de plataformas: Locally AI no cubre Windows ni Android, así que quienes necesiten esas plataformas deberían mirar una app multiplataforma como [Loci](/es/power-local-llm/loci-ai-review-offline-local-ai). Quienes quieran importar archivos GGUF personalizados arbitrarios o necesiten un control de cuantización más profundo deberían compararla con herramientas que exigen más configuración, como Private LLM u Ollama. Para su público objetivo —usuarios de Apple que quieren acceso privado y sin conexión a los principales modelos abiertos sin complicaciones técnicas— Locally AI ocupa un nicho claro.',
       },
       sources: {
         id: 'sources',
@@ -1194,18 +1194,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Sitio oficial de Locally AI](https://www.locallyai.app/) —descripción del producto, familias de modelos compatibles, disponibilidad por plataforma.',
           '[Sitio oficial de Loci](https://askloci.ai) —referencia de comparación multiplataforma.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) —reseña complementaria usada para la comparación de alternativas en este artículo.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/es/power-local-llm/loci-ai-review-offline-local-ai) —reseña complementaria usada para la comparación de alternativas en este artículo.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) —una alternativa multiplataforma que cubre iPhone, iPad, Android, Mac y Windows.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) —el repaso de apps para iPhone; incluye PocketPal AI, Private LLM, MLC Chat, LLM Farm y Apple Intelligence.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) —guía centrada en dispositivos para inferencia local y remota en tablets.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) —complemento a nivel de modelo; benchmarks y compromisos de calidad en móvil.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) —directorio completo de apps y herramientas para todas las plataformas.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/es/power-local-llm/loci-ai-review-offline-local-ai) —una alternativa multiplataforma que cubre iPhone, iPad, Android, Mac y Windows.',
+          '[Best Local LLM Apps for iPhone in 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) —el repaso de apps para iPhone; incluye PocketPal AI, Private LLM, MLC Chat, LLM Farm y Apple Intelligence.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/es/power-local-llm/run-ai-on-tablet-ipad-android) —guía centrada en dispositivos para inferencia local y remota en tablets.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm) —complemento a nivel de modelo; benchmarks y compromisos de calidad en móvil.',
+          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) —directorio completo de apps y herramientas para todas las plataformas.',
         ],
       },
     },
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Principal limitação': 'Apenas Apple — sem app para Windows ou Android',
           },
           {
-            'App': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'App': '[Loci](/pt/power-local-llm/loci-ai-review-offline-local-ai)',
             'Melhor para': 'Usuários multiplataforma que querem chat privado simples em mais dispositivos',
             'Foco de plataforma': 'iPhone/iPad/Android/Mac/Windows (5 plataformas)',
             'Flexibilidade de modelos': 'Biblioteca curada incluindo Gemma, Qwen, Llama e Phi; sem importação de arquivos GGUF personalizados',
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quem não deve usar o Locally AI',
         items: [
-          '**Usuários de Windows ou Android.** O Locally AI é exclusivo da Apple (iPhone, iPad, Mac); usuários de outras plataformas precisam de outro app, como o [Loci](/power-local-llm/loci-ai-review-offline-local-ai), que cobre cinco plataformas, incluindo Windows e Android.',
+          '**Usuários de Windows ou Android.** O Locally AI é exclusivo da Apple (iPhone, iPad, Mac); usuários de outras plataformas precisam de outro app, como o [Loci](/pt/power-local-llm/loci-ai-review-offline-local-ai), que cobre cinco plataformas, incluindo Windows e Android.',
           '**Usuários que querem importar arquivos GGUF personalizados arbitrários.** Se o seu fluxo de trabalho depende de rodar um arquivo de modelo específico, ajustado ou de nicho vindo do Hugging Face, em vez de escolher entre as famílias de modelos suportadas pelo Locally AI, uma ferramenta mais manual voltada para importação de GGUF é mais adequada.',
           '**Usuários que esperam qualidade de raciocínio de nível de ponta.** Modelos abertos dimensionados para rodar confortavelmente em um telefone ou tablet trocam parte da profundidade de raciocínio por essa portabilidade; usuários com análises de alto risco, raciocínio complexo em várias etapas ou cargas de trabalho intensas em código podem ainda precisar de um modelo de ponta em nuvem para essas tarefas específicas.',
           '**Desenvolvedores que querem controle via linha de comando ou API.** Usuários que querem automatizar a inferência com scripts, integrá-la a ferramentas existentes ou rodar modelos sem interface em um Mac podem preferir uma ferramenta voltada para desenvolvedores, como o Ollama, junto de ou em vez de um app de chat para o consumidor.',
@@ -1475,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Como o Locally AI se compara ao Loci?',
-            a: 'O Locally AI é exclusivo da Apple (iPhone, iPad, Mac) e especificamente otimizado para Apple Silicon, com suporte a Llama, Gemma, Qwen, DeepSeek e outros modelos abertos. O Loci cobre cinco plataformas — iPhone, iPad, Android, Mac e Windows — com uma biblioteca de modelos curada. Escolha o Locally AI se você está totalmente dentro do ecossistema Apple; escolha o Loci se também precisar de suporte a Android ou Windows. Veja nosso [review completo do Loci AI](/power-local-llm/loci-ai-review-offline-local-ai) para mais detalhes.',
+            a: 'O Locally AI é exclusivo da Apple (iPhone, iPad, Mac) e especificamente otimizado para Apple Silicon, com suporte a Llama, Gemma, Qwen, DeepSeek e outros modelos abertos. O Loci cobre cinco plataformas — iPhone, iPad, Android, Mac e Windows — com uma biblioteca de modelos curada. Escolha o Locally AI se você está totalmente dentro do ecossistema Apple; escolha o Loci se também precisar de suporte a Android ou Windows. Veja nosso [review completo do Loci AI](/pt/power-local-llm/loci-ai-review-offline-local-ai) para mais detalhes.',
           },
           {
             q: 'Preciso de um modelo específico de iPhone, iPad ou Mac para usar o Locally AI?',
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Locally AI é uma escolha direta para usuários Apple que querem um app privacy-first e no dispositivo para conversar com grandes famílias de modelos de código aberto — Llama, Gemma, Qwen e DeepSeek — sem sair do ecossistema Apple nem gerenciar arquivos de modelo manualmente. Sua otimização para Apple Silicon e o funcionamento totalmente offline após o download do modelo o tornam adequado para usuários que priorizam manter as conversas fora de servidores remotos e que preferem uma experiência de app em vez de um fluxo de trabalho de linha de comando. A contrapartida está no alcance de plataformas: o Locally AI não cobre Windows nem Android, então usuários que precisam dessas plataformas devem considerar um app multiplataforma como o [Loci](/power-local-llm/loci-ai-review-offline-local-ai). Usuários que querem importar arquivos GGUF personalizados arbitrários ou precisam de controle de quantização mais profundo devem comparar com ferramentas que exigem mais configuração, como Private LLM ou Ollama. Para seu público-alvo — usuários Apple que querem acesso privado e offline aos principais modelos abertos sem complicação técnica — o Locally AI ocupa um nicho claro.',
+          'O Locally AI é uma escolha direta para usuários Apple que querem um app privacy-first e no dispositivo para conversar com grandes famílias de modelos de código aberto — Llama, Gemma, Qwen e DeepSeek — sem sair do ecossistema Apple nem gerenciar arquivos de modelo manualmente. Sua otimização para Apple Silicon e o funcionamento totalmente offline após o download do modelo o tornam adequado para usuários que priorizam manter as conversas fora de servidores remotos e que preferem uma experiência de app em vez de um fluxo de trabalho de linha de comando. A contrapartida está no alcance de plataformas: o Locally AI não cobre Windows nem Android, então usuários que precisam dessas plataformas devem considerar um app multiplataforma como o [Loci](/pt/power-local-llm/loci-ai-review-offline-local-ai). Usuários que querem importar arquivos GGUF personalizados arbitrários ou precisam de controle de quantização mais profundo devem comparar com ferramentas que exigem mais configuração, como Private LLM ou Ollama. Para seu público-alvo — usuários Apple que querem acesso privado e offline aos principais modelos abertos sem complicação técnica — o Locally AI ocupa um nicho claro.',
       },
       sources: {
         id: 'sources',
@@ -1495,18 +1495,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Site oficial do Locally AI](https://www.locallyai.app/) — visão geral do produto, famílias de modelos suportadas, disponibilidade por plataforma.',
           '[Site oficial do Loci](https://askloci.ai) — referência de comparação multiplataforma.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — review complementar usado para a comparação de alternativas neste artigo.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/pt/power-local-llm/loci-ai-review-offline-local-ai) — review complementar usado para a comparação de alternativas neste artigo.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — uma alternativa multiplataforma cobrindo iPhone, iPad, Android, Mac e Windows.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — o panorama de apps para iPhone; inclui PocketPal AI, Private LLM, MLC Chat, LLM Farm e Apple Intelligence.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — guia focado em dispositivos para inferência local e remota em tablets.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complemento no nível de modelos; benchmarks e trade-offs de qualidade em mobile.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/pt/power-local-llm/loci-ai-review-offline-local-ai) — uma alternativa multiplataforma cobrindo iPhone, iPad, Android, Mac e Windows.',
+          '[Best Local LLM Apps for iPhone in 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o panorama de apps para iPhone; inclui PocketPal AI, Private LLM, MLC Chat, LLM Farm e Apple Intelligence.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/pt/power-local-llm/run-ai-on-tablet-ipad-android) — guia focado em dispositivos para inferência local e remota em tablets.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complemento no nível de modelos; benchmarks e trade-offs de qualidade em mobile.',
+          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
         ],
       },
     },
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主な制限': 'Apple専用——WindowsやAndroidアプリなし',
           },
           {
-            'アプリ': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'アプリ': '[Loci](/ja/power-local-llm/loci-ai-review-offline-local-ai)',
             '最適な用途': 'より多くのデバイスで手軽なプライベートチャットを求めるクロスプラットフォームユーザー',
             'プラットフォームの焦点': 'iPhone/iPad/Android/Mac/Windows(5プラットフォーム)',
             'モデルの柔軟性': 'Gemma、Qwen、Llama、Phiを含む厳選ライブラリ。カスタムGGUFのインポートなし',
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Locally AIが向いていない人',
         items: [
-          '**WindowsやAndroidのユーザー。** Locally AIはApple専用(iPhone、iPad、Mac)のため、他のプラットフォームのユーザーは、WindowsとAndroidを含む5プラットフォームをカバーする[Loci](/power-local-llm/loci-ai-review-offline-local-ai)のような別のアプリが必要。',
+          '**WindowsやAndroidのユーザー。** Locally AIはApple専用(iPhone、iPad、Mac)のため、他のプラットフォームのユーザーは、WindowsとAndroidを含む5プラットフォームをカバーする[Loci](/ja/power-local-llm/loci-ai-review-offline-local-ai)のような別のアプリが必要。',
           '**任意のカスタムGGUFファイルをインポートしたいユーザー。** Locally AIが対応するモデルファミリーから選ぶのではなく、Hugging Faceから特定のファインチューニングされたモデルやニッチなモデルファイルを実行することにワークフローが依存している場合、GGUFインポートを中心とした、より手動操作寄りのツールの方が適している。',
           '**フロンティアモデル級の推論品質を期待するユーザー。** 電話やタブレットで無理なく動作するサイズに調整されたオープンモデルは、その携帯性と引き換えに推論の深さの一部を犠牲にしている。高リスクな分析、複雑な多段階推論、コーディング中心のワークロードを扱うユーザーは、そうした特定のタスクについては依然としてフロンティア級のクラウドモデルを必要とする場合がある。',
           '**コマンドラインやAPI優先のコントロールを求める開発者。** 推論をスクリプト化したい、既存のツール群と統合したい、Mac上でモデルをヘッドレスで実行したいユーザーは、コンシューマー向けチャットアプリの代わりに、あるいは併用して、Ollamaのような開発者向けツールを好む場合がある。',
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Locally AIはLociと比べてどうですか?',
-            a: 'Locally AIはApple専用(iPhone、iPad、Mac)で、Apple Silicon向けに特化して最適化されており、Llama、Gemma、Qwen、DeepSeek、その他のオープンモデルに対応しています。Lociは——iPhone、iPad、Android、Mac、Windowsの5プラットフォームを、厳選されたモデルライブラリでカバーしています。Appleエコシステムに完全に身を置いているならLocally AIを、AndroidやWindowsのサポートも必要ならLociを選んでください。詳しくは[Loci AIレビュー全文](/power-local-llm/loci-ai-review-offline-local-ai)をご覧ください。',
+            a: 'Locally AIはApple専用(iPhone、iPad、Mac)で、Apple Silicon向けに特化して最適化されており、Llama、Gemma、Qwen、DeepSeek、その他のオープンモデルに対応しています。Lociは——iPhone、iPad、Android、Mac、Windowsの5プラットフォームを、厳選されたモデルライブラリでカバーしています。Appleエコシステムに完全に身を置いているならLocally AIを、AndroidやWindowsのサポートも必要ならLociを選んでください。詳しくは[Loci AIレビュー全文](/ja/power-local-llm/loci-ai-review-offline-local-ai)をご覧ください。',
           },
           {
             q: 'Locally AIを使うには特定のiPhone、iPad、Macモデルが必要ですか?',
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          'Locally AIは、Llama、Gemma、Qwen、DeepSeekといった主要なオープンソースモデルファミリーとチャットするための、プライバシー重視のデバイス上アプリを、Appleエコシステムを離れることなく、モデルファイルを手動で管理することもなく使いたいAppleユーザーにとって、素直に選べる選択肢です。Apple Silicon最適化と、モデルダウンロード後は完全にオフラインで動作する点は、会話をリモートサーバーから遠ざけることを優先し、コマンドラインのワークフローよりもアプリとしての使い勝手を求めるユーザーによく合っています。トレードオフはプラットフォームの範囲にあります。Locally AIはWindowsやAndroidをカバーしていないため、それらのプラットフォームが必要なユーザーは、代わりに[Loci](/power-local-llm/loci-ai-review-offline-local-ai)のようなクロスプラットフォームアプリを検討すべきです。任意のカスタムGGUFファイルをインポートしたい、あるいはより深い量子化コントロールが必要なユーザーは、Private LLMやOllamaのような設定の自由度が高いツールと比較すべきです。想定される対象ユーザー——技術的な手間なく主要なオープンモデルへプライベートかつオフラインでアクセスしたいAppleユーザー——にとって、Locally AIは明確なニッチを埋めています。',
+          'Locally AIは、Llama、Gemma、Qwen、DeepSeekといった主要なオープンソースモデルファミリーとチャットするための、プライバシー重視のデバイス上アプリを、Appleエコシステムを離れることなく、モデルファイルを手動で管理することもなく使いたいAppleユーザーにとって、素直に選べる選択肢です。Apple Silicon最適化と、モデルダウンロード後は完全にオフラインで動作する点は、会話をリモートサーバーから遠ざけることを優先し、コマンドラインのワークフローよりもアプリとしての使い勝手を求めるユーザーによく合っています。トレードオフはプラットフォームの範囲にあります。Locally AIはWindowsやAndroidをカバーしていないため、それらのプラットフォームが必要なユーザーは、代わりに[Loci](/ja/power-local-llm/loci-ai-review-offline-local-ai)のようなクロスプラットフォームアプリを検討すべきです。任意のカスタムGGUFファイルをインポートしたい、あるいはより深い量子化コントロールが必要なユーザーは、Private LLMやOllamaのような設定の自由度が高いツールと比較すべきです。想定される対象ユーザー——技術的な手間なく主要なオープンモデルへプライベートかつオフラインでアクセスしたいAppleユーザー——にとって、Locally AIは明確なニッチを埋めています。',
       },
       sources: {
         id: 'sources',
@@ -1796,18 +1796,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Locally AI公式サイト](https://www.locallyai.app/) — 製品概要、対応モデルファミリー、プラットフォーム対応状況。',
           '[Loci公式サイト](https://askloci.ai) — クロスプラットフォーム比較の参照元。',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — 本記事の代替アプリ比較で使用した関連レビュー。',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ja/power-local-llm/loci-ai-review-offline-local-ai) — 本記事の代替アプリ比較で使用した関連レビュー。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — iPhone、iPad、Android、Mac、Windowsをカバーするクロスプラットフォームの代替アプリ。',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — iPhoneアプリのまとめ。PocketPal AI、Private LLM、MLC Chat、LLM Farm、Apple Intelligenceを含む。',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — タブレットでのデバイス上・リモート推論に焦点を当てたガイド。',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — モデルレイヤーの関連記事。モバイルでのベンチマークと品質のトレードオフ。',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ja/power-local-llm/loci-ai-review-offline-local-ai) — iPhone、iPad、Android、Mac、Windowsをカバーするクロスプラットフォームの代替アプリ。',
+          '[Best Local LLM Apps for iPhone in 2026](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iPhoneアプリのまとめ。PocketPal AI、Private LLM、MLC Chat、LLM Farm、Apple Intelligenceを含む。',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/ja/power-local-llm/run-ai-on-tablet-ipad-android) — タブレットでのデバイス上・リモート推論に焦点を当てたガイド。',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — モデルレイヤーの関連記事。モバイルでのベンチマークと品質のトレードオフ。',
+          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
         ],
       },
     },
@@ -1999,7 +1999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '主要局限': '仅限Apple平台——没有Windows或Android应用',
           },
           {
-            '应用': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            '应用': '[Loci](/zh/power-local-llm/loci-ai-review-offline-local-ai)',
             '最适合': '希望在更多设备上获得低门槛私密聊天体验的跨平台用户',
             '平台重点': 'iPhone/iPad/Android/Mac/Windows(5个平台)',
             '模型灵活性': '精选模型库,包含Gemma、Qwen、Llama和Phi;不支持导入自定义GGUF',
@@ -2036,7 +2036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不适合使用Locally AI',
         items: [
-          '**Windows或Android用户。** Locally AI仅限Apple平台(iPhone、iPad、Mac);其他平台的用户需要选择别的应用,例如覆盖包括Windows和Android在内五个平台的[Loci](/power-local-llm/loci-ai-review-offline-local-ai)。',
+          '**Windows或Android用户。** Locally AI仅限Apple平台(iPhone、iPad、Mac);其他平台的用户需要选择别的应用,例如覆盖包括Windows和Android在内五个平台的[Loci](/zh/power-local-llm/loci-ai-review-offline-local-ai)。',
           '**想要导入任意自定义GGUF文件的用户。** 如果你的工作流依赖运行来自Hugging Face的特定微调或小众模型文件,而不是从Locally AI支持的模型系列中选择,那么围绕GGUF导入构建的、操作更手动的工具会更适合你。',
           '**期待前沿模型级推理质量的用户。** 能够舒适运行在手机或平板上的开源模型,为了这种便携性会在推理深度上有所妥协;面对高风险分析、复杂多步骤推理或大量编码工作的用户,针对这些特定任务可能仍需要前沿级的云端模型。',
           '**希望以命令行或API为先获得控制权的开发者。** 想要脚本化推理、与现有工具集成,或在Mac上无界面运行模型的用户,可能更倾向于搭配或替代消费级聊天应用,使用Ollama这类面向开发者的工具。',
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Locally AI与Loci相比如何?',
-            a: 'Locally AI仅限Apple平台(iPhone、iPad、Mac),并专门针对Apple Silicon优化,支持Llama、Gemma、Qwen、DeepSeek及其他开源模型。Loci覆盖五个平台——iPhone、iPad、Android、Mac和Windows——并提供精选模型库。如果你完全处于Apple生态系统中,选择Locally AI;如果你还需要Android或Windows支持,选择Loci。更多详情请参阅我们完整的[Loci AI评测](/power-local-llm/loci-ai-review-offline-local-ai)。',
+            a: 'Locally AI仅限Apple平台(iPhone、iPad、Mac),并专门针对Apple Silicon优化,支持Llama、Gemma、Qwen、DeepSeek及其他开源模型。Loci覆盖五个平台——iPhone、iPad、Android、Mac和Windows——并提供精选模型库。如果你完全处于Apple生态系统中,选择Locally AI;如果你还需要Android或Windows支持,选择Loci。更多详情请参阅我们完整的[Loci AI评测](/zh/power-local-llm/loci-ai-review-offline-local-ai)。',
           },
           {
             q: '使用Locally AI需要特定的iPhone、iPad或Mac机型吗?',
@@ -2097,18 +2097,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Locally AI官网](https://www.locallyai.app/) — 产品概览、支持的模型系列、平台可用性。',
           '[Loci官网](https://askloci.ai) — 跨平台对比参考。',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — 本文用于替代方案对比的配套评测。',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/zh/power-local-llm/loci-ai-review-offline-local-ai) — 本文用于替代方案对比的配套评测。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — 覆盖iPhone、iPad、Android、Mac和Windows的跨平台替代方案。',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone应用汇总,包括PocketPal AI、Private LLM、MLC Chat、LLM Farm和Apple Intelligence。',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — 聚焦设备的平板电脑本地及远程推理指南。',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 模型层面的配套文章,涵盖移动端的基准测试和质量取舍。',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — 覆盖所有平台的综合应用与工具目录。',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/zh/power-local-llm/loci-ai-review-offline-local-ai) — 覆盖iPhone、iPad、Android、Mac和Windows的跨平台替代方案。',
+          '[Best Local LLM Apps for iPhone in 2026](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone应用汇总,包括PocketPal AI、Private LLM、MLC Chat、LLM Farm和Apple Intelligence。',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/zh/power-local-llm/run-ai-on-tablet-ipad-android) — 聚焦设备的平板电脑本地及远程推理指南。',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 模型层面的配套文章,涵盖移动端的基准测试和质量取舍。',
+          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 覆盖所有平台的综合应用与工具目录。',
         ],
       },
     },
@@ -2300,7 +2300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'القيد الرئيسي': 'حصري لأجهزة Apple — لا تطبيق لـ Windows أو Android',
           },
           {
-            'التطبيق': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            'التطبيق': '[Loci](/ar/power-local-llm/loci-ai-review-offline-local-ai)',
             'الأفضل لـ': 'المستخدمون متعدّدو المنصّات الراغبون في محادثة خاصة بسيطة على مزيد من الأجهزة',
             'تركيز المنصّة': 'iPhone/iPad/Android/Mac/Windows (5 منصّات)',
             'مرونة النماذج': 'مكتبة مختارة تضم Gemma وQwen وLlama وPhi؛ لا يوجد استيراد لملفات GGUF مخصّصة',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'لمن لا يناسب Locally AI',
         items: [
-          '**مستخدمو Windows أو Android.** Locally AI حصري لأجهزة Apple (iPhone وiPad وMac)؛ يحتاج مستخدمو المنصّات الأخرى تطبيقًا آخر، مثل [Loci](/power-local-llm/loci-ai-review-offline-local-ai)، الذي يغطي خمس منصّات بما فيها Windows وAndroid.',
+          '**مستخدمو Windows أو Android.** Locally AI حصري لأجهزة Apple (iPhone وiPad وMac)؛ يحتاج مستخدمو المنصّات الأخرى تطبيقًا آخر، مثل [Loci](/ar/power-local-llm/loci-ai-review-offline-local-ai)، الذي يغطي خمس منصّات بما فيها Windows وAndroid.',
           '**المستخدمون الراغبون في استيراد ملفات GGUF مخصّصة عشوائية.** إذا كان سير عملك يعتمد على تشغيل ملف نموذج معيّن مُعدَّل بدقة أو متخصّص من Hugging Face بدلًا من الاختيار من عائلات النماذج التي يدعمها Locally AI، فأداة أكثر يدوية مبنية حول استيراد GGUF ستكون أنسب.',
           '**المستخدمون الذين يتوقعون جودة استدلال بمستوى النماذج المتقدمة.** النماذج المفتوحة المصمَّمة لتعمل بشكل مريح على هاتف أو جهاز لوحي تتنازل عن بعض عمق الاستدلال مقابل هذه القابلية للتنقل؛ قد يظل المستخدمون الذين يجرون تحليلات عالية المخاطر، أو استدلالًا معقدًا متعدد الخطوات، أو أعباء عمل كثيفة في البرمجة بحاجة إلى نموذج سحابي متقدم لتلك المهام المحددة.',
           '**المطوّرون الراغبون في تحكّم يعتمد أولًا على سطر الأوامر أو واجهة برمجية.** المستخدمون الراغبون في برمجة الاستدلال، أو دمجه مع أدوات موجودة، أو تشغيل نماذج بلا واجهة على Mac قد يفضّلون أداة موجهة للمطوّرين مثل Ollama، إلى جانب تطبيق محادثة استهلاكي أو بدلًا منه.',
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كيف يُقارَن Locally AI بـ Loci؟',
-            a: 'Locally AI حصري لأجهزة Apple (iPhone وiPad وMac) ومحسَّن خصيصًا لشريحة Apple Silicon، مع دعم لـ Llama وGemma وQwen وDeepSeek ونماذج مفتوحة أخرى. يغطي Loci خمس منصّات — iPhone وiPad وAndroid وMac وWindows — بمكتبة نماذج مختارة. اختر Locally AI إذا كنت ضمن نظام Apple البيئي بالكامل؛ واختر Loci إذا كنت تحتاج أيضًا دعم Android أو Windows. راجع [مراجعتنا الكاملة لـ Loci AI](/power-local-llm/loci-ai-review-offline-local-ai) لمزيد من التفاصيل.',
+            a: 'Locally AI حصري لأجهزة Apple (iPhone وiPad وMac) ومحسَّن خصيصًا لشريحة Apple Silicon، مع دعم لـ Llama وGemma وQwen وDeepSeek ونماذج مفتوحة أخرى. يغطي Loci خمس منصّات — iPhone وiPad وAndroid وMac وWindows — بمكتبة نماذج مختارة. اختر Locally AI إذا كنت ضمن نظام Apple البيئي بالكامل؛ واختر Loci إذا كنت تحتاج أيضًا دعم Android أو Windows. راجع [مراجعتنا الكاملة لـ Loci AI](/ar/power-local-llm/loci-ai-review-offline-local-ai) لمزيد من التفاصيل.',
           },
           {
             q: 'هل أحتاج طرازًا معيّنًا من iPhone أو iPad أو Mac لاستخدام Locally AI؟',
@@ -2390,7 +2390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          'Locally AI خيار مباشر لمستخدمي Apple الراغبين في تطبيق يضع الخصوصية أولًا ويعمل على الجهاز للمحادثة مع عائلات نماذج مفتوحة المصدر رئيسية — Llama وGemma وQwen وDeepSeek — دون مغادرة نظام Apple البيئي أو إدارة ملفات النماذج يدويًا. يجعله تحسينه لشريحة Apple Silicon وعمله بالكامل دون اتصال بعد تنزيل النموذج مناسبًا للمستخدمين الذين يمنحون الأولوية لإبقاء محادثاتهم بعيدة عن الخوادم البعيدة، ويفضّلون تجربة تطبيق على سير عمل عبر سطر الأوامر. تكمن المفاضلة في نطاق المنصّات: لا يغطي Locally AI Windows أو Android، لذا يجب على من يحتاج تلك المنصّات النظر بدلًا من ذلك في تطبيق متعدّد المنصّات مثل [Loci](/power-local-llm/loci-ai-review-offline-local-ai). ينبغي على من يريد استيراد ملفات GGUF مخصّصة عشوائية أو يحتاج تحكّمًا أعمق بالضغط الكمي مقارنته بأدوات أكثر تطلّبًا للإعداد مثل Private LLM أو Ollama. بالنسبة لجمهوره المستهدف — مستخدمو Apple الراغبون في وصول خاص ودون اتصال إلى النماذج المفتوحة الرائدة دون تعقيد تقني — يملأ Locally AI فجوة واضحة.',
+          'Locally AI خيار مباشر لمستخدمي Apple الراغبين في تطبيق يضع الخصوصية أولًا ويعمل على الجهاز للمحادثة مع عائلات نماذج مفتوحة المصدر رئيسية — Llama وGemma وQwen وDeepSeek — دون مغادرة نظام Apple البيئي أو إدارة ملفات النماذج يدويًا. يجعله تحسينه لشريحة Apple Silicon وعمله بالكامل دون اتصال بعد تنزيل النموذج مناسبًا للمستخدمين الذين يمنحون الأولوية لإبقاء محادثاتهم بعيدة عن الخوادم البعيدة، ويفضّلون تجربة تطبيق على سير عمل عبر سطر الأوامر. تكمن المفاضلة في نطاق المنصّات: لا يغطي Locally AI Windows أو Android، لذا يجب على من يحتاج تلك المنصّات النظر بدلًا من ذلك في تطبيق متعدّد المنصّات مثل [Loci](/ar/power-local-llm/loci-ai-review-offline-local-ai). ينبغي على من يريد استيراد ملفات GGUF مخصّصة عشوائية أو يحتاج تحكّمًا أعمق بالضغط الكمي مقارنته بأدوات أكثر تطلّبًا للإعداد مثل Private LLM أو Ollama. بالنسبة لجمهوره المستهدف — مستخدمو Apple الراغبون في وصول خاص ودون اتصال إلى النماذج المفتوحة الرائدة دون تعقيد تقني — يملأ Locally AI فجوة واضحة.',
       },
       sources: {
         id: 'sources',
@@ -2398,18 +2398,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[موقع Locally AI الرسمي](https://www.locallyai.app/) — نظرة عامة على المنتج، عائلات النماذج المدعومة، توفر المنصّات.',
           '[موقع Loci الرسمي](https://askloci.ai) — مرجع للمقارنة متعدّدة المنصّات.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — مراجعة مصاحبة استُخدمت لمقارنة البدائل في هذا المقال.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ar/power-local-llm/loci-ai-review-offline-local-ai) — مراجعة مصاحبة استُخدمت لمقارنة البدائل في هذا المقال.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — بديل متعدّد المنصّات يغطي iPhone وiPad وAndroid وMac وWindows.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — استعراض تطبيقات iPhone؛ يشمل PocketPal AI وPrivate LLM وMLC Chat وLLM Farm وApple Intelligence.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — دليل يركّز على الأجهزة للاستدلال على الجهاز والاستدلال عن بُعد على الأجهزة اللوحية.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — مقال مكمّل على مستوى النماذج؛ معايير أداء ومفاضلات جودة على الهاتف المحمول.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصّات.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ar/power-local-llm/loci-ai-review-offline-local-ai) — بديل متعدّد المنصّات يغطي iPhone وiPad وAndroid وMac وWindows.',
+          '[Best Local LLM Apps for iPhone in 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — استعراض تطبيقات iPhone؛ يشمل PocketPal AI وPrivate LLM وMLC Chat وLLM Farm وApple Intelligence.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/ar/power-local-llm/run-ai-on-tablet-ipad-android) — دليل يركّز على الأجهزة للاستدلال على الجهاز والاستدلال عن بُعد على الأجهزة اللوحية.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — مقال مكمّل على مستوى النماذج؛ معايير أداء ومفاضلات جودة على الهاتف المحمول.',
+          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصّات.',
         ],
       },
     },
@@ -2601,7 +2601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '주요 한계': 'Apple 전용 — Windows나 Android 앱 없음',
           },
           {
-            '앱': '[Loci](/power-local-llm/loci-ai-review-offline-local-ai)',
+            '앱': '[Loci](/ko/power-local-llm/loci-ai-review-offline-local-ai)',
             '적합한 사용자': '더 많은 기기에서 부담 없는 프라이빗 채팅을 원하는 크로스플랫폼 사용자',
             '플랫폼 초점': 'iPhone/iPad/Android/Mac/Windows(5개 플랫폼)',
             '모델 유연성': 'Gemma, Qwen, Llama, Phi를 포함한 큐레이션 라이브러리. 커스텀 GGUF 가져오기 불가',
@@ -2638,7 +2638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Locally AI가 적합하지 않은 사용자',
         items: [
-          '**Windows나 Android 사용자.** Locally AI는 Apple 전용(iPhone, iPad, Mac)이므로, 다른 플랫폼 사용자는 Windows와 Android를 포함한 5개 플랫폼을 지원하는 [Loci](/power-local-llm/loci-ai-review-offline-local-ai) 같은 다른 앱이 필요합니다.',
+          '**Windows나 Android 사용자.** Locally AI는 Apple 전용(iPhone, iPad, Mac)이므로, 다른 플랫폼 사용자는 Windows와 Android를 포함한 5개 플랫폼을 지원하는 [Loci](/ko/power-local-llm/loci-ai-review-offline-local-ai) 같은 다른 앱이 필요합니다.',
           '**임의의 커스텀 GGUF 파일을 가져오고 싶은 사용자.** Locally AI가 지원하는 모델 계열 중에서 선택하는 대신 Hugging Face에서 가져온 특정 파인튜닝 모델이나 틈새 모델 파일을 실행하는 데 워크플로가 의존한다면, GGUF 가져오기를 중심으로 한 더 수동적인 도구가 더 잘 맞습니다.',
           '**최상급 모델 수준의 추론 품질을 기대하는 사용자.** 폰이나 태블릿에서 무리 없이 작동하도록 크기가 맞춰진 오픈 모델은 그 휴대성과 맞바꿔 추론 깊이를 일부 희생합니다. 고위험 분석, 복잡한 다단계 추론, 코딩 비중이 큰 작업을 하는 사용자는 해당 특정 작업에 대해 여전히 최상급 클라우드 모델이 필요할 수 있습니다.',
           '**명령줄 또는 API 우선 제어를 원하는 개발자.** 추론을 스크립트화하거나 기존 도구와 통합하거나 Mac에서 헤드리스로 모델을 실행하고 싶은 사용자는 소비자용 채팅 앱과 함께, 또는 그 대신 Ollama 같은 개발자 중심 도구를 선호할 수 있습니다.',
@@ -2679,7 +2679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Locally AI는 Loci와 비교하면 어떤가요?',
-            a: 'Locally AI는 Apple 전용(iPhone, iPad, Mac)이며 Apple Silicon에 특화되어 최적화되어 있고, Llama, Gemma, Qwen, DeepSeek, 그 외 오픈 모델을 지원합니다. Loci는 iPhone, iPad, Android, Mac, Windows 다섯 개 플랫폼을 큐레이션된 모델 라이브러리로 지원합니다. Apple 생태계 안에 완전히 머무른다면 Locally AI를, Android나 Windows 지원도 필요하다면 Loci를 선택하세요. 자세한 내용은 [Loci AI 전체 리뷰](/power-local-llm/loci-ai-review-offline-local-ai)를 참고하세요.',
+            a: 'Locally AI는 Apple 전용(iPhone, iPad, Mac)이며 Apple Silicon에 특화되어 최적화되어 있고, Llama, Gemma, Qwen, DeepSeek, 그 외 오픈 모델을 지원합니다. Loci는 iPhone, iPad, Android, Mac, Windows 다섯 개 플랫폼을 큐레이션된 모델 라이브러리로 지원합니다. Apple 생태계 안에 완전히 머무른다면 Locally AI를, Android나 Windows 지원도 필요하다면 Loci를 선택하세요. 자세한 내용은 [Loci AI 전체 리뷰](/ko/power-local-llm/loci-ai-review-offline-local-ai)를 참고하세요.',
           },
           {
             q: 'Locally AI를 쓰려면 특정 iPhone, iPad, Mac 모델이 필요한가요?',
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '총평',
         content:
-          'Locally AI는 Apple 생태계를 벗어나지 않고 모델 파일을 직접 관리하지 않으면서 Llama, Gemma, Qwen, DeepSeek 같은 대형 오픈소스 모델 계열과 대화할 수 있는 프라이버시 우선 온디바이스 앱을 원하는 Apple 사용자에게 직관적인 선택입니다. Apple Silicon 최적화와 모델 다운로드 후 완전히 오프라인으로 작동한다는 점은 대화를 원격 서버 밖에 두는 것을 우선시하고 명령줄 워크플로보다 앱 경험을 선호하는 사용자에게 잘 맞습니다. 트레이드오프는 플랫폼 범위에 있습니다: Locally AI는 Windows나 Android를 지원하지 않으므로, 해당 플랫폼이 필요한 사용자는 대신 [Loci](/power-local-llm/loci-ai-review-offline-local-ai) 같은 크로스플랫폼 앱을 살펴봐야 합니다. 임의의 커스텀 GGUF 파일을 가져오고 싶거나 더 깊은 양자화 제어가 필요한 사용자는 Private LLM이나 Ollama처럼 설정이 더 복잡한 도구와 비교해야 합니다. 대상 사용자층 — 기술적 부담 없이 주요 오픈 모델에 프라이빗하고 오프라인으로 접근하고 싶은 Apple 사용자 — 에게 Locally AI는 명확한 틈새를 채웁니다.',
+          'Locally AI는 Apple 생태계를 벗어나지 않고 모델 파일을 직접 관리하지 않으면서 Llama, Gemma, Qwen, DeepSeek 같은 대형 오픈소스 모델 계열과 대화할 수 있는 프라이버시 우선 온디바이스 앱을 원하는 Apple 사용자에게 직관적인 선택입니다. Apple Silicon 최적화와 모델 다운로드 후 완전히 오프라인으로 작동한다는 점은 대화를 원격 서버 밖에 두는 것을 우선시하고 명령줄 워크플로보다 앱 경험을 선호하는 사용자에게 잘 맞습니다. 트레이드오프는 플랫폼 범위에 있습니다: Locally AI는 Windows나 Android를 지원하지 않으므로, 해당 플랫폼이 필요한 사용자는 대신 [Loci](/ko/power-local-llm/loci-ai-review-offline-local-ai) 같은 크로스플랫폼 앱을 살펴봐야 합니다. 임의의 커스텀 GGUF 파일을 가져오고 싶거나 더 깊은 양자화 제어가 필요한 사용자는 Private LLM이나 Ollama처럼 설정이 더 복잡한 도구와 비교해야 합니다. 대상 사용자층 — 기술적 부담 없이 주요 오픈 모델에 프라이빗하고 오프라인으로 접근하고 싶은 Apple 사용자 — 에게 Locally AI는 명확한 틈새를 채웁니다.',
       },
       sources: {
         id: 'sources',
@@ -2699,18 +2699,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Locally AI 공식 사이트](https://www.locallyai.app/) — 제품 개요, 지원 모델 계열, 플랫폼 지원 현황.',
           '[Loci 공식 사이트](https://askloci.ai) — 크로스플랫폼 비교 참고 자료.',
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — 이 글의 대안 비교에 사용된 관련 리뷰.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ko/power-local-llm/loci-ai-review-offline-local-ai) — 이 글의 대안 비교에 사용된 관련 리뷰.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/power-local-llm/loci-ai-review-offline-local-ai) — iPhone, iPad, Android, Mac, Windows를 아우르는 크로스플랫폼 대안.',
-          '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 앱 총정리, PocketPal AI, Private LLM, MLC Chat, LLM Farm, Apple Intelligence 포함.',
-          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — 태블릿의 온디바이스 및 원격 추론에 초점을 맞춘 가이드.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모델 계층 관련 글, 모바일에서의 벤치마크와 품질 트레이드오프.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 아우르는 종합 앱·도구 디렉터리.',
+          '[Loci AI Review: Private Offline AI on iPhone, Android, iPad and Mac](/ko/power-local-llm/loci-ai-review-offline-local-ai) — iPhone, iPad, Android, Mac, Windows를 아우르는 크로스플랫폼 대안.',
+          '[Best Local LLM Apps for iPhone in 2026](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 앱 총정리, PocketPal AI, Private LLM, MLC Chat, LLM Farm, Apple Intelligence 포함.',
+          '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 태블릿의 온디바이스 및 원격 추론에 초점을 맞춘 가이드.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모델 계층 관련 글, 모바일에서의 벤치마크와 품질 트레이드오프.',
+          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 아우르는 종합 앱·도구 디렉터리.',
         ],
       },
     },

@@ -395,7 +395,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper ist eine kostenlose, MIT-lizenzierte Python-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, entwickelt von Guillaume Klein und unter SYSTRAN gepflegt, die mit der Inferenz-Engine CTranslate2 Transkription rund viermal schneller ausführt als die ursprüngliche Implementierung, bei geringerem Speicherverbrauch.** Es unterstützt NVIDIA-GPUs (über CUDA, mit den Compute-Typen float16 oder int8) und CPUs (über int8-Quantisierung) und enthält einen eingebauten Silero-VAD-Filter (Sprachaktivitätserkennung), der Stille automatisch überspringt. Einen direkten Benchmark-Vergleich mit whisper.cpp auf echter Hardware finden Sie im [Whisper.cpp-vs-faster-whisper-Vergleich](/power-local-llm/local-whisper-stt-comparison-2026) von PromptQuorum.',
+      '**faster-whisper ist eine kostenlose, MIT-lizenzierte Python-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, entwickelt von Guillaume Klein und unter SYSTRAN gepflegt, die mit der Inferenz-Engine CTranslate2 Transkription rund viermal schneller ausführt als die ursprüngliche Implementierung, bei geringerem Speicherverbrauch.** Es unterstützt NVIDIA-GPUs (über CUDA, mit den Compute-Typen float16 oder int8) und CPUs (über int8-Quantisierung) und enthält einen eingebauten Silero-VAD-Filter (Sprachaktivitätserkennung), der Stille automatisch überspringt. Einen direkten Benchmark-Vergleich mit whisper.cpp auf echter Hardware finden Sie im [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026) von PromptQuorum.',
     quickAnswerTop: {
       de: {
         question: 'Was ist faster-whisper und lohnt sich der Einsatz für lokale Spracherkennung?',
@@ -451,7 +451,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test konzentriert sich auf faster-whisper als eigenständiges Werkzeug: Geschichte, Installation, echten Python-Code, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit whisper.cpp auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Dieser Test konzentriert sich auf faster-whisper als eigenständiges Werkzeug: Geschichte, Installation, echten Python-Code, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit whisper.cpp auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -580,8 +580,8 @@ for segment in segments:
           'faster-whisper ist eine schnelle Python-Transkriptionsbibliothek, kein vollständiges Produkt für Konversations-KI und kein Python-freies Bereitstellungswerkzeug. Für folgende Situationen ist es das falsche Werkzeug:',
         ],
         items: [
-          '**Python-freie oder plattformübergreifende Binary-Bereitstellung.** faster-whisper ist eine Python-Bibliothek mit einer nativen CTranslate2-Abhängigkeit — es ist nicht als einzelnes, abhängigkeitsfreies Binary konzipiert, wie es whisper.cpp ist. Wenn Sie einen Raspberry Pi, eine iOS-App oder eine WebAssembly-Seite ohne Python-Laufzeitumgebung ansprechen müssen, ist [whisper.cpp](/power-local-llm/whisper-cpp-review) die bessere Wahl.',
-          '**Apple-Silicon-GPU-Beschleunigung.** Das CTranslate2-Backend von faster-whisper unterstützt CPU und NVIDIA CUDA, hat aber keinen Apple-Metal-GPU-Beschleunigungspfad — auf einem Mac fällt faster-whisper auf reine CPU-Inferenz zurück. [PromptQuorums Benchmark](/power-local-llm/local-whisper-stt-comparison-2026) fand whisper.cpp mit Metal-Beschleunigung deutlich schneller als faster-whisper nur auf CPU auf Apple Silicon.',
+          '**Python-freie oder plattformübergreifende Binary-Bereitstellung.** faster-whisper ist eine Python-Bibliothek mit einer nativen CTranslate2-Abhängigkeit — es ist nicht als einzelnes, abhängigkeitsfreies Binary konzipiert, wie es whisper.cpp ist. Wenn Sie einen Raspberry Pi, eine iOS-App oder eine WebAssembly-Seite ohne Python-Laufzeitumgebung ansprechen müssen, ist [whisper.cpp](/de/power-local-llm/whisper-cpp-review) die bessere Wahl.',
+          '**Apple-Silicon-GPU-Beschleunigung.** Das CTranslate2-Backend von faster-whisper unterstützt CPU und NVIDIA CUDA, hat aber keinen Apple-Metal-GPU-Beschleunigungspfad — auf einem Mac fällt faster-whisper auf reine CPU-Inferenz zurück. [PromptQuorums Benchmark](/de/power-local-llm/local-whisper-stt-comparison-2026) fand whisper.cpp mit Metal-Beschleunigung deutlich schneller als faster-whisper nur auf CPU auf Apple Silicon.',
           '**Sprechertrennung ("wer hat was gesagt").** faster-whisper transkribiert, was gesagt wurde, trennt oder kennzeichnet aber nicht von sich aus verschiedene Sprecher in einer Aufnahme mit mehreren Personen. Für Sprechertrennung kombinieren Sie die Transkripte mit einem dedizierten Werkzeug oder verwenden Sie [WhisperX](https://github.com/m-bain/whisperX), das Sprechertrennung auf Whisper-Transkripte aufsetzt.',
           '**Null Einrichtungsaufwand für technisch weniger versierte Nutzer.** faster-whisper ist eine Python-Bibliothek für Entwickler, die Pipelines bauen, keine Endanwendung mit grafischer Oberfläche. Wer eine Point-and-Click-Transkriptions-App will, sollte stattdessen eine Anwendung auf Basis von faster-whisper oder whisper.cpp oder einen gehosteten Transkriptionsdienst in Betracht ziehen.',
         ],
@@ -636,7 +636,7 @@ for segment in segments:
           },
           {
             q: 'Was ist der Unterschied zwischen faster-whisper und whisper.cpp?',
-            a: 'faster-whisper ist eine Python-Bibliothek auf Basis von CTranslate2, primär für NVIDIA-GPU-Durchsatz in Python-Pipelines optimiert. whisper.cpp ist eine reine C/C++-Implementierung ohne Python-Abhängigkeit, gebaut für Portabilität über CPU, Apple Metal, CUDA und eingebettete Geräte. Siehe PromptQuorums [ausführlichen Benchmark-Vergleich](/power-local-llm/local-whisper-stt-comparison-2026) für plattformspezifische Zahlen.',
+            a: 'faster-whisper ist eine Python-Bibliothek auf Basis von CTranslate2, primär für NVIDIA-GPU-Durchsatz in Python-Pipelines optimiert. whisper.cpp ist eine reine C/C++-Implementierung ohne Python-Abhängigkeit, gebaut für Portabilität über CPU, Apple Metal, CUDA und eingebettete Geräte. Siehe PromptQuorums [ausführlichen Benchmark-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026) für plattformspezifische Zahlen.',
           },
           {
             q: 'Unterstützt faster-whisper Sprachaktivitätserkennung?',
@@ -660,7 +660,7 @@ for segment in segments:
         id: 'verdict',
         title: 'Fazit',
         content:
-          'faster-whisper erreicht sein Kernziel: OpenAIs Whisper-Modell für Python-Entwickler deutlich schneller und speicherschonender zu machen, ohne zu verändern, was das Modell liefert. Das CTranslate2-Backend liefert rund die vierfache Geschwindigkeit der ursprünglichen Implementierung, der eingebaute Silero-VAD-Filter ist eine echte praktische Erleichterung für reale Audiodateien mit Stille, und die MIT-Lizenz macht es sicher, kommerzielle Produkte darauf aufzubauen. Es ist kostenlos, gut gepflegt und liefert bei gegebener Modellgröße dieselbe Transkriptionsqualität wie das ursprüngliche Whisper. Nicht die stärkste Wahl ist es bei Python-freier oder Apple-Silicon-GPU-beschleunigter Bereitstellung — dort gewinnen die Metal-Unterstützung und das abhängigkeitsfreie Binary von whisper.cpp, wie [PromptQuorums direkter Vergleich](/power-local-llm/local-whisper-stt-comparison-2026) dokumentiert. Für alle, die eine Python-Pipeline für Spracherkennung auf einer NVIDIA-GPU oder CPU bauen und Geschwindigkeit wollen, ohne das Python-Ökosystem zu verlassen, ist faster-whisper ein gut verifizierter, kostenloser Ausgangspunkt.',
+          'faster-whisper erreicht sein Kernziel: OpenAIs Whisper-Modell für Python-Entwickler deutlich schneller und speicherschonender zu machen, ohne zu verändern, was das Modell liefert. Das CTranslate2-Backend liefert rund die vierfache Geschwindigkeit der ursprünglichen Implementierung, der eingebaute Silero-VAD-Filter ist eine echte praktische Erleichterung für reale Audiodateien mit Stille, und die MIT-Lizenz macht es sicher, kommerzielle Produkte darauf aufzubauen. Es ist kostenlos, gut gepflegt und liefert bei gegebener Modellgröße dieselbe Transkriptionsqualität wie das ursprüngliche Whisper. Nicht die stärkste Wahl ist es bei Python-freier oder Apple-Silicon-GPU-beschleunigter Bereitstellung — dort gewinnen die Metal-Unterstützung und das abhängigkeitsfreie Binary von whisper.cpp, wie [PromptQuorums direkter Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026) dokumentiert. Für alle, die eine Python-Pipeline für Spracherkennung auf einer NVIDIA-GPU oder CPU bauen und Geschwindigkeit wollen, ohne das Python-Ökosystem zu verlassen, ist faster-whisper ein gut verifizierter, kostenloser Ausgangspunkt.',
       },
       sources: {
         id: 'sources',
@@ -677,11 +677,11 @@ for segment in segments:
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung](/power-local-llm/local-whisper-stt-comparison-2026) — der direkte Vergleich für alle, die sich zwischen whisper.cpp und faster-whisper entscheiden müssen.',
-          '[Whisper.cpp im Test](/power-local-llm/whisper-cpp-review) — die Python-freie C/C++-Alternative, im selben Detailgrad getestet.',
-          '[Einen vollständig offline Sprachassistenten bauen 2026](/power-local-llm/build-local-voice-assistant-2026) — eine Whisper-basierte STT-Engine mit einem lokalen LLM und Piper TTS zu einer vollständigen Sprachpipeline verbinden.',
-          '[Piper TTS im Test](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
-          '[Das vollständige Local-LLM-Software-Verzeichnis](/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler KI-Werkzeuge über alle Kategorien hinweg.',
+          '[Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung](/de/power-local-llm/local-whisper-stt-comparison-2026) — der direkte Vergleich für alle, die sich zwischen whisper.cpp und faster-whisper entscheiden müssen.',
+          '[Whisper.cpp im Test](/de/power-local-llm/whisper-cpp-review) — die Python-freie C/C++-Alternative, im selben Detailgrad getestet.',
+          '[Einen vollständig offline Sprachassistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — eine Whisper-basierte STT-Engine mit einem lokalen LLM und Piper TTS zu einer vollständigen Sprachpipeline verbinden.',
+          '[Piper TTS im Test](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
+          '[Das vollständige Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler KI-Werkzeuge über alle Kategorien hinweg.',
         ],
       },
     },
@@ -751,7 +751,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper est une réimplémentation gratuite, sous licence MIT, en Python, du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Guillaume Klein et maintenue sous SYSTRAN, qui utilise le moteur d\'inférence CTranslate2 pour transcrire environ 4 fois plus vite que l\'implémentation originale, avec une consommation mémoire réduite.** Elle prend en charge les GPU NVIDIA (via CUDA, avec les types de calcul float16 ou int8) et les CPU (via la quantification int8), et inclut un filtre VAD (détection d\'activité vocale) Silero intégré pour ignorer automatiquement les silences. Pour un comparatif chiffré face à whisper.cpp sur du matériel réel, voir le [comparatif whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum.',
+      '**faster-whisper est une réimplémentation gratuite, sous licence MIT, en Python, du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Guillaume Klein et maintenue sous SYSTRAN, qui utilise le moteur d\'inférence CTranslate2 pour transcrire environ 4 fois plus vite que l\'implémentation originale, avec une consommation mémoire réduite.** Elle prend en charge les GPU NVIDIA (via CUDA, avec les types de calcul float16 ou int8) et les CPU (via la quantification int8), et inclut un filtre VAD (détection d\'activité vocale) Silero intégré pour ignorer automatiquement les silences. Pour un comparatif chiffré face à whisper.cpp sur du matériel réel, voir le [comparatif whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que faster-whisper et vaut-il le coup pour la reconnaissance vocale locale ?',
@@ -807,7 +807,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'Cet avis se concentre sur faster-whisper comme outil autonome : histoire, installation, vrai code Python, licence et limites honnêtes. Pour un comparatif chiffré face à whisper.cpp sur Apple Silicon et GPU NVIDIA, voir le [comparatif whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Cet avis se concentre sur faster-whisper comme outil autonome : histoire, installation, vrai code Python, licence et limites honnêtes. Pour un comparatif chiffré face à whisper.cpp sur Apple Silicon et GPU NVIDIA, voir le [comparatif whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -936,8 +936,8 @@ for segment in segments:
           'faster-whisper est une bibliothèque Python de transcription rapide, pas un produit complet d\'IA conversationnelle ni un outil de déploiement sans Python. C\'est le mauvais outil dans les situations suivantes :',
         ],
         items: [
-          '**Déploiement sans Python ou en binaire multiplateforme.** faster-whisper est une bibliothèque Python avec une dépendance native CTranslate2 — elle n\'est pas conçue pour être un binaire unique et sans dépendance comme l\'est whisper.cpp. Si vous devez cibler un Raspberry Pi, une application iOS ou une page WebAssembly sans environnement Python, [whisper.cpp](/power-local-llm/whisper-cpp-review) est mieux adapté.',
-          '**Accélération GPU sur Apple Silicon.** Le backend CTranslate2 de faster-whisper prend en charge le CPU et NVIDIA CUDA, mais n\'a aucun chemin d\'accélération GPU Apple Metal — sur un Mac, faster-whisper retombe sur une inférence CPU uniquement. [Le comparatif de PromptQuorum](/power-local-llm/local-whisper-stt-comparison-2026) a constaté que whisper.cpp avec accélération Metal est nettement plus rapide que faster-whisper en CPU seul sur Apple Silicon.',
+          '**Déploiement sans Python ou en binaire multiplateforme.** faster-whisper est une bibliothèque Python avec une dépendance native CTranslate2 — elle n\'est pas conçue pour être un binaire unique et sans dépendance comme l\'est whisper.cpp. Si vous devez cibler un Raspberry Pi, une application iOS ou une page WebAssembly sans environnement Python, [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) est mieux adapté.',
+          '**Accélération GPU sur Apple Silicon.** Le backend CTranslate2 de faster-whisper prend en charge le CPU et NVIDIA CUDA, mais n\'a aucun chemin d\'accélération GPU Apple Metal — sur un Mac, faster-whisper retombe sur une inférence CPU uniquement. [Le comparatif de PromptQuorum](/fr/power-local-llm/local-whisper-stt-comparison-2026) a constaté que whisper.cpp avec accélération Metal est nettement plus rapide que faster-whisper en CPU seul sur Apple Silicon.',
           '**Diarisation ("qui a dit quoi").** faster-whisper transcrit ce qui a été dit, mais ne sépare ni n\'étiquette nativement les différents locuteurs dans un enregistrement à plusieurs personnes. Pour la diarisation, combinez ses transcriptions avec un outil dédié, ou utilisez [WhisperX](https://github.com/m-bain/whisperX), qui superpose la diarisation aux transcriptions Whisper.',
           '**Zéro configuration pour les utilisateurs non techniques.** faster-whisper est une bibliothèque Python destinée aux développeurs qui construisent des pipelines, pas une application destinée à l\'utilisateur final avec une interface graphique. Ceux qui veulent une application de transcription en quelques clics devraient plutôt se tourner vers une application construite sur faster-whisper ou whisper.cpp, ou vers un service de transcription hébergé.',
         ],
@@ -992,7 +992,7 @@ for segment in segments:
           },
           {
             q: 'Quelle est la différence entre faster-whisper et whisper.cpp ?',
-            a: 'faster-whisper est une bibliothèque Python basée sur CTranslate2, optimisée avant tout pour le débit GPU NVIDIA dans des pipelines Python. whisper.cpp est une implémentation C/C++ pure sans dépendance Python, conçue pour la portabilité entre CPU, Apple Metal, CUDA et appareils embarqués. Voir le [comparatif détaillé](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum pour des chiffres par plateforme.',
+            a: 'faster-whisper est une bibliothèque Python basée sur CTranslate2, optimisée avant tout pour le débit GPU NVIDIA dans des pipelines Python. whisper.cpp est une implémentation C/C++ pure sans dépendance Python, conçue pour la portabilité entre CPU, Apple Metal, CUDA et appareils embarqués. Voir le [comparatif détaillé](/fr/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum pour des chiffres par plateforme.',
           },
           {
             q: 'faster-whisper prend-il en charge la détection d\'activité vocale ?',
@@ -1016,7 +1016,7 @@ for segment in segments:
         id: 'verdict',
         title: 'Verdict',
         content:
-          'faster-whisper réussit son objectif principal : rendre le modèle Whisper d\'OpenAI sensiblement plus rapide et plus léger en mémoire pour les développeurs Python, sans changer ce que le modèle produit. Son backend CTranslate2 offre environ 4 fois le débit de l\'implémentation originale, son filtre VAD Silero intégré est un vrai confort pratique pour de l\'audio réel contenant des silences, et sa licence MIT permet de construire dessus des produits commerciaux en toute sécurité. Il est gratuit, bien maintenu, et produit la même qualité de transcription que le Whisper d\'origine pour une taille de modèle donnée. Là où il n\'est pas le choix le plus fort, c\'est pour un déploiement sans Python ou accéléré par GPU sur Apple Silicon — le support Metal et le binaire sans dépendance de whisper.cpp y gagnent, comme le documente le [comparatif direct](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum. Pour quiconque construit un pipeline Python de reconnaissance vocale sur GPU NVIDIA ou CPU et veut de la vitesse sans quitter l\'écosystème Python, faster-whisper est un point de départ bien vérifié et sans coût.',
+          'faster-whisper réussit son objectif principal : rendre le modèle Whisper d\'OpenAI sensiblement plus rapide et plus léger en mémoire pour les développeurs Python, sans changer ce que le modèle produit. Son backend CTranslate2 offre environ 4 fois le débit de l\'implémentation originale, son filtre VAD Silero intégré est un vrai confort pratique pour de l\'audio réel contenant des silences, et sa licence MIT permet de construire dessus des produits commerciaux en toute sécurité. Il est gratuit, bien maintenu, et produit la même qualité de transcription que le Whisper d\'origine pour une taille de modèle donnée. Là où il n\'est pas le choix le plus fort, c\'est pour un déploiement sans Python ou accéléré par GPU sur Apple Silicon — le support Metal et le binaire sans dépendance de whisper.cpp y gagnent, comme le documente le [comparatif direct](/fr/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum. Pour quiconque construit un pipeline Python de reconnaissance vocale sur GPU NVIDIA ou CPU et veut de la vitesse sans quitter l\'écosystème Python, faster-whisper est un point de départ bien vérifié et sans coût.',
       },
       sources: {
         id: 'sources',
@@ -1033,11 +1033,11 @@ for segment in segments:
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Whisper.cpp vs faster-whisper 2026 : benchmarks STT locaux, installation et accélération GPU](/power-local-llm/local-whisper-stt-comparison-2026) — le comparatif direct pour les lecteurs indécis entre whisper.cpp et faster-whisper.',
-          '[Avis whisper.cpp](/power-local-llm/whisper-cpp-review) — l\'alternative en C/C++ sans Python, examinée avec le même niveau de détail.',
-          '[Construire un assistant vocal entièrement hors ligne en 2026](/power-local-llm/build-local-voice-assistant-2026) — connecter un moteur STT basé sur Whisper à un LLM local et à Piper TTS pour un pipeline vocal complet.',
-          '[Avis Piper TTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le pendant local de la synthèse vocale, pour retransformer un texte généré en parole hors ligne.',
-          '[L\'annuaire complet des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — un annuaire plus large des outils d\'IA locale toutes catégories confondues.',
+          '[Whisper.cpp vs faster-whisper 2026 : benchmarks STT locaux, installation et accélération GPU](/fr/power-local-llm/local-whisper-stt-comparison-2026) — le comparatif direct pour les lecteurs indécis entre whisper.cpp et faster-whisper.',
+          '[Avis whisper.cpp](/fr/power-local-llm/whisper-cpp-review) — l\'alternative en C/C++ sans Python, examinée avec le même niveau de détail.',
+          '[Construire un assistant vocal entièrement hors ligne en 2026](/fr/power-local-llm/build-local-voice-assistant-2026) — connecter un moteur STT basé sur Whisper à un LLM local et à Piper TTS pour un pipeline vocal complet.',
+          '[Avis Piper TTS](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le pendant local de la synthèse vocale, pour retransformer un texte généré en parole hors ligne.',
+          '[L\'annuaire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un annuaire plus large des outils d\'IA locale toutes catégories confondues.',
         ],
       },
     },
@@ -1107,7 +1107,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper es una reimplementación gratuita en Python, con licencia MIT, del modelo de reconocimiento de voz Whisper de OpenAI, creada por Guillaume Klein y mantenida bajo SYSTRAN, que usa el motor de inferencia CTranslate2 para transcribir aproximadamente 4 veces más rápido que la implementación original, con menor consumo de memoria.** Es compatible con GPU NVIDIA (mediante CUDA, con tipos de cómputo float16 o int8) y CPU (mediante cuantización int8), e incluye un filtro VAD (detección de actividad de voz) Silero integrado que omite automáticamente los silencios. Para un comparativo directo frente a whisper.cpp con hardware real, consulta el [comparativo whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum.',
+      '**faster-whisper es una reimplementación gratuita en Python, con licencia MIT, del modelo de reconocimiento de voz Whisper de OpenAI, creada por Guillaume Klein y mantenida bajo SYSTRAN, que usa el motor de inferencia CTranslate2 para transcribir aproximadamente 4 veces más rápido que la implementación original, con menor consumo de memoria.** Es compatible con GPU NVIDIA (mediante CUDA, con tipos de cómputo float16 o int8) y CPU (mediante cuantización int8), e incluye un filtro VAD (detección de actividad de voz) Silero integrado que omite automáticamente los silencios. Para un comparativo directo frente a whisper.cpp con hardware real, consulta el [comparativo whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es faster-whisper y merece la pena para reconocimiento de voz local?',
@@ -1163,7 +1163,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'Este análisis se centra en faster-whisper como herramienta independiente: historia, instalación, código Python real, licencia y límites honestos. Para un comparativo directo frente a whisper.cpp en Apple Silicon y GPU NVIDIA, consulta el [comparativo whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Este análisis se centra en faster-whisper como herramienta independiente: historia, instalación, código Python real, licencia y límites honestos. Para un comparativo directo frente a whisper.cpp en Apple Silicon y GPU NVIDIA, consulta el [comparativo whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -1292,8 +1292,8 @@ for segment in segments:
           'faster-whisper es una biblioteca de Python de transcripción rápida, no un producto completo de IA conversacional ni una herramienta de despliegue sin Python. Es la herramienta equivocada en estas situaciones:',
         ],
         items: [
-          '**Despliegue sin Python o en binario multiplataforma.** faster-whisper es una biblioteca de Python con una dependencia nativa de CTranslate2 — no está diseñada para ser un binario único y sin dependencias como whisper.cpp. Si necesitas apuntar a una Raspberry Pi, una app de iOS o una página WebAssembly sin entorno Python, [whisper.cpp](/power-local-llm/whisper-cpp-review) es la mejor opción.',
-          '**Aceleración por GPU en Apple Silicon.** El backend CTranslate2 de faster-whisper admite CPU y NVIDIA CUDA, pero no tiene ninguna ruta de aceleración por GPU Apple Metal — en un Mac, faster-whisper recurre a la inferencia solo en CPU. [El comparativo de PromptQuorum](/power-local-llm/local-whisper-stt-comparison-2026) encontró que whisper.cpp con aceleración Metal es notablemente más rápido que faster-whisper solo en CPU en Apple Silicon.',
+          '**Despliegue sin Python o en binario multiplataforma.** faster-whisper es una biblioteca de Python con una dependencia nativa de CTranslate2 — no está diseñada para ser un binario único y sin dependencias como whisper.cpp. Si necesitas apuntar a una Raspberry Pi, una app de iOS o una página WebAssembly sin entorno Python, [whisper.cpp](/es/power-local-llm/whisper-cpp-review) es la mejor opción.',
+          '**Aceleración por GPU en Apple Silicon.** El backend CTranslate2 de faster-whisper admite CPU y NVIDIA CUDA, pero no tiene ninguna ruta de aceleración por GPU Apple Metal — en un Mac, faster-whisper recurre a la inferencia solo en CPU. [El comparativo de PromptQuorum](/es/power-local-llm/local-whisper-stt-comparison-2026) encontró que whisper.cpp con aceleración Metal es notablemente más rápido que faster-whisper solo en CPU en Apple Silicon.',
           '**Diarización de hablantes ("quién dijo qué").** faster-whisper transcribe lo que se dijo, pero no separa ni etiqueta de forma nativa a distintos hablantes en una grabación con varias personas. Para diarización, combina sus transcripciones con una herramienta dedicada, o usa [WhisperX](https://github.com/m-bain/whisperX), que añade diarización sobre las transcripciones de Whisper.',
           '**Cero configuración para usuarios no técnicos.** faster-whisper es una biblioteca de Python pensada para desarrolladores que construyen pipelines, no una aplicación de usuario final con interfaz gráfica. Quien quiera una app de transcripción de un clic debería recurrir en su lugar a una aplicación construida sobre faster-whisper o whisper.cpp, o a un servicio de transcripción alojado.',
         ],
@@ -1348,7 +1348,7 @@ for segment in segments:
           },
           {
             q: '¿Cuál es la diferencia entre faster-whisper y whisper.cpp?',
-            a: 'faster-whisper es una biblioteca de Python basada en CTranslate2, optimizada sobre todo para el rendimiento en GPU NVIDIA dentro de pipelines en Python. whisper.cpp es una implementación pura en C/C++ sin dependencia de Python, diseñada para portabilidad entre CPU, Apple Metal, CUDA y dispositivos embebidos. Consulta el [comparativo detallado](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum para cifras específicas por plataforma.',
+            a: 'faster-whisper es una biblioteca de Python basada en CTranslate2, optimizada sobre todo para el rendimiento en GPU NVIDIA dentro de pipelines en Python. whisper.cpp es una implementación pura en C/C++ sin dependencia de Python, diseñada para portabilidad entre CPU, Apple Metal, CUDA y dispositivos embebidos. Consulta el [comparativo detallado](/es/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum para cifras específicas por plataforma.',
           },
           {
             q: '¿faster-whisper admite detección de actividad de voz?',
@@ -1372,7 +1372,7 @@ for segment in segments:
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'faster-whisper logra su objetivo principal: hacer que el modelo Whisper de OpenAI sea notablemente más rápido y ligero en memoria para los desarrolladores de Python, sin cambiar lo que produce el modelo. Su backend CTranslate2 ofrece aproximadamente 4 veces el rendimiento de la implementación original, su filtro VAD Silero integrado es una comodidad práctica real para audio del mundo real con silencios, y su licencia MIT permite construir con seguridad productos comerciales sobre él. Es gratuito, está bien mantenido, y produce la misma calidad de transcripción que el Whisper original para un tamaño de modelo dado. Donde no es la opción más sólida es en un despliegue sin Python o acelerado por GPU en Apple Silicon — ahí ganan el soporte Metal y el binario sin dependencias de whisper.cpp, como documenta el [comparativo directo](/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum. Para cualquiera que construya un pipeline de Python para reconocimiento de voz en GPU NVIDIA o CPU y quiera velocidad sin salir del ecosistema Python, faster-whisper es un punto de partida bien verificado y sin coste.',
+          'faster-whisper logra su objetivo principal: hacer que el modelo Whisper de OpenAI sea notablemente más rápido y ligero en memoria para los desarrolladores de Python, sin cambiar lo que produce el modelo. Su backend CTranslate2 ofrece aproximadamente 4 veces el rendimiento de la implementación original, su filtro VAD Silero integrado es una comodidad práctica real para audio del mundo real con silencios, y su licencia MIT permite construir con seguridad productos comerciales sobre él. Es gratuito, está bien mantenido, y produce la misma calidad de transcripción que el Whisper original para un tamaño de modelo dado. Donde no es la opción más sólida es en un despliegue sin Python o acelerado por GPU en Apple Silicon — ahí ganan el soporte Metal y el binario sin dependencias de whisper.cpp, como documenta el [comparativo directo](/es/power-local-llm/local-whisper-stt-comparison-2026) de PromptQuorum. Para cualquiera que construya un pipeline de Python para reconocimiento de voz en GPU NVIDIA o CPU y quiera velocidad sin salir del ecosistema Python, faster-whisper es un punto de partida bien verificado y sin coste.',
       },
       sources: {
         id: 'sources',
@@ -1389,11 +1389,11 @@ for segment in segments:
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalación y aceleración por GPU](/power-local-llm/local-whisper-stt-comparison-2026) — el comparativo directo para quien tenga que elegir entre whisper.cpp y faster-whisper.',
-          '[Análisis de whisper.cpp](/power-local-llm/whisper-cpp-review) — la alternativa en C/C++ sin Python, analizada con el mismo nivel de detalle.',
-          '[Construir un asistente de voz totalmente sin conexión en 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar un motor STT basado en Whisper con un LLM local y Piper TTS en un pipeline de voz completo.',
-          '[Análisis de Piper TTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — el equivalente local de síntesis de voz, para convertir texto generado de nuevo en voz sin conexión.',
-          '[El directorio completo de software de LLM local](/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de IA local en todas las categorías.',
+          '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalación y aceleración por GPU](/es/power-local-llm/local-whisper-stt-comparison-2026) — el comparativo directo para quien tenga que elegir entre whisper.cpp y faster-whisper.',
+          '[Análisis de whisper.cpp](/es/power-local-llm/whisper-cpp-review) — la alternativa en C/C++ sin Python, analizada con el mismo nivel de detalle.',
+          '[Construir un asistente de voz totalmente sin conexión en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — conectar un motor STT basado en Whisper con un LLM local y Piper TTS en un pipeline de voz completo.',
+          '[Análisis de Piper TTS](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — el equivalente local de síntesis de voz, para convertir texto generado de nuevo en voz sin conexión.',
+          '[El directorio completo de software de LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de IA local en todas las categorías.',
         ],
       },
     },
@@ -1463,7 +1463,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisperは、Guillaume Klein氏が開発し、SYSTRANの下で保守されている、OpenAIの音声認識モデルWhisperの無料・MITライセンスのPython再実装で、推論エンジンCTranslate2を使用し、オリジナル実装よりも約4倍速く文字起こしを実行し、メモリ使用量も抑えています。** NVIDIA GPU(CUDA経由、float16またはint8の計算タイプ)とCPU(int8量子化経由)に対応し、無音区間を自動的にスキップする組み込みのSilero VAD(音声区間検出)フィルターを備えています。実際のハードウェアでwhisper.cppと直接比較したベンチマークは、PromptQuorumの[whisper.cpp対faster-whisper比較記事](/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
+      '**faster-whisperは、Guillaume Klein氏が開発し、SYSTRANの下で保守されている、OpenAIの音声認識モデルWhisperの無料・MITライセンスのPython再実装で、推論エンジンCTranslate2を使用し、オリジナル実装よりも約4倍速く文字起こしを実行し、メモリ使用量も抑えています。** NVIDIA GPU(CUDA経由、float16またはint8の計算タイプ)とCPU(int8量子化経由)に対応し、無音区間を自動的にスキップする組み込みのSilero VAD(音声区間検出)フィルターを備えています。実際のハードウェアでwhisper.cppと直接比較したベンチマークは、PromptQuorumの[whisper.cpp対faster-whisper比較記事](/ja/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
     quickAnswerTop: {
       ja: {
         question: 'faster-whisperとは何か、ローカル音声認識に使う価値はあるか',
@@ -1519,7 +1519,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: '本レビューは、faster-whisperを単体のツールとして扱い、歴史、インストール、実際のPythonコード、ライセンス、正直な限界に焦点を当てます。Apple SiliconとNVIDIA GPUでのwhisper.cppとの直接比較ベンチマークは、[whisper.cpp対faster-whisper比較記事](/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
+            text: '本レビューは、faster-whisperを単体のツールとして扱い、歴史、インストール、実際のPythonコード、ライセンス、正直な限界に焦点を当てます。Apple SiliconとNVIDIA GPUでのwhisper.cppとの直接比較ベンチマークは、[whisper.cpp対faster-whisper比較記事](/ja/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
           },
         ],
       },
@@ -1648,8 +1648,8 @@ for segment in segments:
           'faster-whisperは高速なPython文字起こしライブラリであり、完全な対話型AI製品でもPython不要のデプロイツールでもありません。以下の状況には向いていません。',
         ],
         items: [
-          '**Python不要またはクロスプラットフォームのバイナリ展開。** faster-whisperはネイティブのCTranslate2依存関係を持つPythonライブラリであり、whisper.cppのような単一の依存関係のないバイナリとして設計されていません。Raspberry Pi、iOSアプリ、Python環境のないWebAssemblyページを対象とする必要がある場合は、[whisper.cpp](/power-local-llm/whisper-cpp-review)の方が適しています。',
-          '**Apple SiliconのGPUアクセラレーション。** faster-whisperのCTranslate2バックエンドはCPUとNVIDIA CUDAに対応していますが、Apple MetalのGPUアクセラレーションパスはありません ー Macでは、faster-whisperはCPUのみの推論にフォールバックします。[PromptQuorumのベンチマーク](/power-local-llm/local-whisper-stt-comparison-2026)では、Apple SiliconにおいてMetalアクセラレーションを備えたwhisper.cppが、CPUのみのfaster-whisperよりも明らかに高速であることが判明しました。',
+          '**Python不要またはクロスプラットフォームのバイナリ展開。** faster-whisperはネイティブのCTranslate2依存関係を持つPythonライブラリであり、whisper.cppのような単一の依存関係のないバイナリとして設計されていません。Raspberry Pi、iOSアプリ、Python環境のないWebAssemblyページを対象とする必要がある場合は、[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)の方が適しています。',
+          '**Apple SiliconのGPUアクセラレーション。** faster-whisperのCTranslate2バックエンドはCPUとNVIDIA CUDAに対応していますが、Apple MetalのGPUアクセラレーションパスはありません ー Macでは、faster-whisperはCPUのみの推論にフォールバックします。[PromptQuorumのベンチマーク](/ja/power-local-llm/local-whisper-stt-comparison-2026)では、Apple SiliconにおいてMetalアクセラレーションを備えたwhisper.cppが、CPUのみのfaster-whisperよりも明らかに高速であることが判明しました。',
           '**話者分離(誰が何を言ったか)。** faster-whisperは発話内容を文字起こしするが、複数人の録音で異なる話者をネイティブに分離・ラベル付けすることはできない。話者分離には、専用ツールと文字起こし結果を組み合わせるか、Whisperの文字起こしに話者分離を追加する[WhisperX](https://github.com/m-bain/whisperX)を使用してください。',
           '**非技術者向けのゼロセットアップ。** faster-whisperはパイプラインを構築する開発者向けのPythonライブラリであり、グラフィカルインターフェースを備えたエンドユーザー向けアプリケーションではありません。ワンクリックの文字起こしアプリが欲しいユーザーは、faster-whisperやwhisper.cppを基にしたアプリケーション、またはホスト型の文字起こしサービスを検討すべきです。',
         ],
@@ -1704,7 +1704,7 @@ for segment in segments:
           },
           {
             q: 'faster-whisperとwhisper.cppの違いは何ですか?',
-            a: 'faster-whisperはCTranslate2をベースとしたPythonライブラリで、主にPythonパイプライン内でのNVIDIA GPUのスループット向けに最適化されています。whisper.cppはPython依存のない純粋なC/C++実装で、CPU、Apple Metal、CUDA、組み込みデバイス間の移植性を重視して構築されています。プラットフォームごとの数値については、PromptQuorumの[詳細な比較記事](/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
+            a: 'faster-whisperはCTranslate2をベースとしたPythonライブラリで、主にPythonパイプライン内でのNVIDIA GPUのスループット向けに最適化されています。whisper.cppはPython依存のない純粋なC/C++実装で、CPU、Apple Metal、CUDA、組み込みデバイス間の移植性を重視して構築されています。プラットフォームごとの数値については、PromptQuorumの[詳細な比較記事](/ja/power-local-llm/local-whisper-stt-comparison-2026)をご覧ください。',
           },
           {
             q: 'faster-whisperは音声区間検出に対応していますか?',
@@ -1728,7 +1728,7 @@ for segment in segments:
         id: 'verdict',
         title: '総評',
         content:
-          'faster-whisperは、Pythonの開発者にとってOpenAIのWhisperモデルを大幅に高速化し、メモリ効率を高めるという中核目標を、モデルが生成する内容を変えることなく達成しています。CTranslate2バックエンドはオリジナル実装の約4倍のスループットを実現し、組み込みのSilero VADフィルターは無音を含む実際の音声に対する実用的な利点であり、MITライセンスにより商用製品への組み込みも安心して行えます。無料でよく保守されており、指定したモデルサイズでの文字起こし品質はオリジナルのWhisperと同一です。最も強い選択肢とは言えないのは、Python不要またはApple SiliconのGPUアクセラレーションが必要な展開先で、そこではPromptQuorumの[直接比較記事](/power-local-llm/local-whisper-stt-comparison-2026)が示す通り、whisper.cppのMetalサポートと依存関係のないバイナリに軍配が上がります。NVIDIA GPUやCPU上でPythonの音声認識パイプラインを構築し、Pythonエコシステムを離れずに速度を求めるすべての人にとって、faster-whisperは十分に検証された、コストのかからない出発点です。',
+          'faster-whisperは、Pythonの開発者にとってOpenAIのWhisperモデルを大幅に高速化し、メモリ効率を高めるという中核目標を、モデルが生成する内容を変えることなく達成しています。CTranslate2バックエンドはオリジナル実装の約4倍のスループットを実現し、組み込みのSilero VADフィルターは無音を含む実際の音声に対する実用的な利点であり、MITライセンスにより商用製品への組み込みも安心して行えます。無料でよく保守されており、指定したモデルサイズでの文字起こし品質はオリジナルのWhisperと同一です。最も強い選択肢とは言えないのは、Python不要またはApple SiliconのGPUアクセラレーションが必要な展開先で、そこではPromptQuorumの[直接比較記事](/ja/power-local-llm/local-whisper-stt-comparison-2026)が示す通り、whisper.cppのMetalサポートと依存関係のないバイナリに軍配が上がります。NVIDIA GPUやCPU上でPythonの音声認識パイプラインを構築し、Pythonエコシステムを離れずに速度を求めるすべての人にとって、faster-whisperは十分に検証された、コストのかからない出発点です。',
       },
       sources: {
         id: 'sources',
@@ -1745,11 +1745,11 @@ for segment in segments:
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[whisper.cpp対faster-whisper 2026:ローカルSTTベンチマーク、セットアップ、GPUアクセラレーション](/power-local-llm/local-whisper-stt-comparison-2026) ー whisper.cppとfaster-whisperの選択で迷う読者向けの直接比較。',
-          '[whisper.cppレビュー](/power-local-llm/whisper-cpp-review) ー Python不要のC/C++版の代替ツールを同じ深さでレビュー。',
-          '[2026年に完全オフラインの音声アシスタントを構築する](/power-local-llm/build-local-voice-assistant-2026) ー Whisperベースの音声認識エンジンをローカルLLMとPiper TTSに接続し、完全な音声パイプラインを構築。',
-          '[Piper TTSレビュー](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ー 生成したテキストをオフラインで音声に戻す、ローカルの音声合成版。',
-          '[ローカルLLMソフトウェア完全ディレクトリ](/power-local-llm/local-llm-software-directory) ー あらゆるカテゴリのローカルAIツールを網羅した、より広範なディレクトリ。',
+          '[whisper.cpp対faster-whisper 2026:ローカルSTTベンチマーク、セットアップ、GPUアクセラレーション](/ja/power-local-llm/local-whisper-stt-comparison-2026) ー whisper.cppとfaster-whisperの選択で迷う読者向けの直接比較。',
+          '[whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review) ー Python不要のC/C++版の代替ツールを同じ深さでレビュー。',
+          '[2026年に完全オフラインの音声アシスタントを構築する](/ja/power-local-llm/build-local-voice-assistant-2026) ー Whisperベースの音声認識エンジンをローカルLLMとPiper TTSに接続し、完全な音声パイプラインを構築。',
+          '[Piper TTSレビュー](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ー 生成したテキストをオフラインで音声に戻す、ローカルの音声合成版。',
+          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory) ー あらゆるカテゴリのローカルAIツールを網羅した、より広範なディレクトリ。',
         ],
       },
     },
@@ -1820,7 +1820,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**O faster-whisper é uma reimplementação gratuita em Python, com licença MIT, do modelo de reconhecimento de voz Whisper da OpenAI, criada por Guillaume Klein e mantida sob SYSTRAN, que usa o motor de inferência CTranslate2 para transcrever aproximadamente 4 vezes mais rápido que a implementação original, com menor consumo de memória.** Ele é compatível com GPUs NVIDIA (via CUDA, com tipos de computação float16 ou int8) e CPUs (via quantização int8), e inclui um filtro VAD (detecção de atividade de voz) Silero integrado que ignora automaticamente os silêncios. Para um comparativo direto com o whisper.cpp em hardware real, veja o [comparativo whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum.',
+      '**O faster-whisper é uma reimplementação gratuita em Python, com licença MIT, do modelo de reconhecimento de voz Whisper da OpenAI, criada por Guillaume Klein e mantida sob SYSTRAN, que usa o motor de inferência CTranslate2 para transcrever aproximadamente 4 vezes mais rápido que a implementação original, com menor consumo de memória.** Ele é compatível com GPUs NVIDIA (via CUDA, com tipos de computação float16 ou int8) e CPUs (via quantização int8), e inclui um filtro VAD (detecção de atividade de voz) Silero integrado que ignora automaticamente os silêncios. Para um comparativo direto com o whisper.cpp em hardware real, veja o [comparativo whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o faster-whisper e vale a pena usá-lo para reconhecimento de voz local?',
@@ -1876,7 +1876,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise foca no faster-whisper como ferramenta independente: história, instalação, código Python real, licenciamento e limites honestos. Para um comparativo direto com o whisper.cpp em Apple Silicon e GPUs NVIDIA, veja o [comparativo whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Esta análise foca no faster-whisper como ferramenta independente: história, instalação, código Python real, licenciamento e limites honestos. Para um comparativo direto com o whisper.cpp em Apple Silicon e GPUs NVIDIA, veja o [comparativo whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -2005,8 +2005,8 @@ for segment in segments:
           'O faster-whisper é uma biblioteca Python de transcrição rápida, não um produto completo de IA conversacional nem uma ferramenta de implantação sem Python. É a ferramenta errada nas seguintes situações:',
         ],
         items: [
-          '**Implantação sem Python ou em binário multiplataforma.** O faster-whisper é uma biblioteca Python com uma dependência nativa do CTranslate2 — não foi projetado para ser um binário único e sem dependências como o whisper.cpp. Se você precisa mirar em um Raspberry Pi, um app iOS ou uma página WebAssembly sem ambiente Python, o [whisper.cpp](/power-local-llm/whisper-cpp-review) é a melhor opção.',
-          '**Aceleração por GPU no Apple Silicon.** O backend CTranslate2 do faster-whisper suporta CPU e NVIDIA CUDA, mas não tem nenhum caminho de aceleração por GPU Apple Metal — em um Mac, o faster-whisper recorre à inferência apenas em CPU. [O benchmark da PromptQuorum](/power-local-llm/local-whisper-stt-comparison-2026) constatou que o whisper.cpp com aceleração Metal é bem mais rápido que o faster-whisper apenas em CPU no Apple Silicon.',
+          '**Implantação sem Python ou em binário multiplataforma.** O faster-whisper é uma biblioteca Python com uma dependência nativa do CTranslate2 — não foi projetado para ser um binário único e sem dependências como o whisper.cpp. Se você precisa mirar em um Raspberry Pi, um app iOS ou uma página WebAssembly sem ambiente Python, o [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) é a melhor opção.',
+          '**Aceleração por GPU no Apple Silicon.** O backend CTranslate2 do faster-whisper suporta CPU e NVIDIA CUDA, mas não tem nenhum caminho de aceleração por GPU Apple Metal — em um Mac, o faster-whisper recorre à inferência apenas em CPU. [O benchmark da PromptQuorum](/pt/power-local-llm/local-whisper-stt-comparison-2026) constatou que o whisper.cpp com aceleração Metal é bem mais rápido que o faster-whisper apenas em CPU no Apple Silicon.',
           '**Diarização de falantes ("quem disse o quê").** O faster-whisper transcreve o que foi dito, mas não separa nem rotula nativamente diferentes falantes em uma gravação com várias pessoas. Para diarização, combine suas transcrições com uma ferramenta dedicada, ou use o [WhisperX](https://github.com/m-bain/whisperX), que adiciona diarização sobre as transcrições do Whisper.',
           '**Configuração zero para usuários não técnicos.** O faster-whisper é uma biblioteca Python voltada para desenvolvedores que constroem pipelines, não uma aplicação de usuário final com interface gráfica. Quem quiser um app de transcrição de clicar-e-usar deve procurar uma aplicação construída sobre o faster-whisper ou o whisper.cpp, ou um serviço de transcrição hospedado.',
         ],
@@ -2061,7 +2061,7 @@ for segment in segments:
           },
           {
             q: 'Qual é a diferença entre faster-whisper e whisper.cpp?',
-            a: 'O faster-whisper é uma biblioteca Python baseada em CTranslate2, otimizada principalmente para throughput de GPU NVIDIA em pipelines Python. O whisper.cpp é uma implementação pura em C/C++ sem dependência de Python, construída para portabilidade entre CPU, Apple Metal, CUDA e dispositivos embarcados. Veja o [comparativo detalhado](/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum para números específicos por plataforma.',
+            a: 'O faster-whisper é uma biblioteca Python baseada em CTranslate2, otimizada principalmente para throughput de GPU NVIDIA em pipelines Python. O whisper.cpp é uma implementação pura em C/C++ sem dependência de Python, construída para portabilidade entre CPU, Apple Metal, CUDA e dispositivos embarcados. Veja o [comparativo detalhado](/pt/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum para números específicos por plataforma.',
           },
           {
             q: 'O faster-whisper suporta detecção de atividade de voz?',
@@ -2085,7 +2085,7 @@ for segment in segments:
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O faster-whisper consegue seu objetivo central: tornar o modelo Whisper da OpenAI sensivelmente mais rápido e mais leve em memória para desenvolvedores Python, sem mudar o que o modelo produz. Seu backend CTranslate2 oferece aproximadamente 4 vezes o throughput da implementação original, seu filtro VAD Silero embutido é uma comodidade prática real para áudio do mundo real com silêncios, e sua licença MIT torna seguro construir produtos comerciais sobre ele. É gratuito, bem mantido, e produz a mesma qualidade de transcrição que o Whisper original para um dado tamanho de modelo. Onde ele não é a escolha mais forte é em implantação sem Python ou acelerada por GPU no Apple Silicon — ali o suporte Metal e o binário sem dependências do whisper.cpp vencem, como documenta o [comparativo direto](/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum. Para quem constrói um pipeline Python para reconhecimento de voz em GPU NVIDIA ou CPU e quer velocidade sem sair do ecossistema Python, o faster-whisper é um ponto de partida bem verificado e sem custo.',
+          'O faster-whisper consegue seu objetivo central: tornar o modelo Whisper da OpenAI sensivelmente mais rápido e mais leve em memória para desenvolvedores Python, sem mudar o que o modelo produz. Seu backend CTranslate2 oferece aproximadamente 4 vezes o throughput da implementação original, seu filtro VAD Silero embutido é uma comodidade prática real para áudio do mundo real com silêncios, e sua licença MIT torna seguro construir produtos comerciais sobre ele. É gratuito, bem mantido, e produz a mesma qualidade de transcrição que o Whisper original para um dado tamanho de modelo. Onde ele não é a escolha mais forte é em implantação sem Python ou acelerada por GPU no Apple Silicon — ali o suporte Metal e o binário sem dependências do whisper.cpp vencem, como documenta o [comparativo direto](/pt/power-local-llm/local-whisper-stt-comparison-2026) da PromptQuorum. Para quem constrói um pipeline Python para reconhecimento de voz em GPU NVIDIA ou CPU e quer velocidade sem sair do ecossistema Python, o faster-whisper é um ponto de partida bem verificado e sem custo.',
       },
       sources: {
         id: 'sources',
@@ -2102,11 +2102,11 @@ for segment in segments:
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalação e aceleração por GPU](/power-local-llm/local-whisper-stt-comparison-2026) — o comparativo direto para quem precisa escolher entre whisper.cpp e faster-whisper.',
-          '[Análise do whisper.cpp](/power-local-llm/whisper-cpp-review) — a alternativa em C/C++ sem Python, analisada com o mesmo nível de detalhe.',
-          '[Construir um assistente de voz totalmente offline em 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar um motor STT baseado em Whisper a um LLM local e ao Piper TTS em um pipeline de voz completo.',
-          '[Análise do Piper TTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — o equivalente local de síntese de voz, para transformar texto gerado de volta em voz offline.',
-          '[O diretório completo de software de LLM local](/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de IA local em todas as categorias.',
+          '[Whisper.cpp vs faster-whisper 2026: benchmarks de STT local, instalação e aceleração por GPU](/pt/power-local-llm/local-whisper-stt-comparison-2026) — o comparativo direto para quem precisa escolher entre whisper.cpp e faster-whisper.',
+          '[Análise do whisper.cpp](/pt/power-local-llm/whisper-cpp-review) — a alternativa em C/C++ sem Python, analisada com o mesmo nível de detalhe.',
+          '[Construir um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — conectar um motor STT baseado em Whisper a um LLM local e ao Piper TTS em um pipeline de voz completo.',
+          '[Análise do Piper TTS](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — o equivalente local de síntese de voz, para transformar texto gerado de volta em voz offline.',
+          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de IA local em todas as categorias.',
         ],
       },
     },
@@ -2176,7 +2176,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper هو إعادة تنفيذ مجانية برخصة MIT بلغة Python لنموذج تحويل الكلام إلى نص Whisper من OpenAI، طوّره Guillaume Klein ويُصان ضمن SYSTRAN، ويستخدم محرك الاستدلال CTranslate2 لتشغيل التفريغ الصوتي بسرعة أكبر بنحو 4 أضعاف من التنفيذ الأصلي، مع استهلاك أقل للذاكرة.** يدعم معالجات NVIDIA GPU (عبر CUDA، بأنواع حساب float16 أو int8) والمعالج المركزي (عبر الضغط الكمّي int8)، ويتضمن مرشح Silero VAD (كشف النشاط الصوتي) مدمجًا يتخطى الصمت تلقائيًا. للاطلاع على مقارنة أداء مباشرة مع whisper.cpp على أجهزة حقيقية، راجع [مقارنة whisper.cpp مقابل faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum.',
+      '**faster-whisper هو إعادة تنفيذ مجانية برخصة MIT بلغة Python لنموذج تحويل الكلام إلى نص Whisper من OpenAI، طوّره Guillaume Klein ويُصان ضمن SYSTRAN، ويستخدم محرك الاستدلال CTranslate2 لتشغيل التفريغ الصوتي بسرعة أكبر بنحو 4 أضعاف من التنفيذ الأصلي، مع استهلاك أقل للذاكرة.** يدعم معالجات NVIDIA GPU (عبر CUDA، بأنواع حساب float16 أو int8) والمعالج المركزي (عبر الضغط الكمّي int8)، ويتضمن مرشح Silero VAD (كشف النشاط الصوتي) مدمجًا يتخطى الصمت تلقائيًا. للاطلاع على مقارنة أداء مباشرة مع whisper.cpp على أجهزة حقيقية، راجع [مقارنة whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو faster-whisper وهل يستحق الاستخدام لتحويل الكلام إلى نص محليًا؟',
@@ -2232,7 +2232,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'تركّز هذه المراجعة على faster-whisper كأداة مستقلة: تاريخها، وتثبيتها، وكود Python الحقيقي، ورخصتها، وحدودها الصريحة. للاطلاع على مقارنة أداء مباشرة مع whisper.cpp على Apple Silicon وNVIDIA GPU، راجع [مقارنة whisper.cpp مقابل faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'تركّز هذه المراجعة على faster-whisper كأداة مستقلة: تاريخها، وتثبيتها، وكود Python الحقيقي، ورخصتها، وحدودها الصريحة. للاطلاع على مقارنة أداء مباشرة مع whisper.cpp على Apple Silicon وNVIDIA GPU، راجع [مقارنة whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -2361,8 +2361,8 @@ for segment in segments:
           'faster-whisper هو مكتبة Python سريعة للتفريغ الصوتي، وليس منتجًا كاملًا للذكاء الاصطناعي الحواري ولا أداة نشر خالية من Python. وهو الأداة الخاطئة في الحالات التالية:',
         ],
         items: [
-          '**النشر الخالي من Python أو كملف تنفيذي متعدد المنصات.** faster-whisper مكتبة Python لها اعتمادية أصلية على CTranslate2 — وهي غير مصممة لتكون ملفًا تنفيذيًا واحدًا خاليًا من الاعتماديات كما هو الحال مع whisper.cpp. إذا كنت بحاجة لاستهداف Raspberry Pi أو تطبيق iOS أو صفحة WebAssembly دون بيئة Python، فإن [whisper.cpp](/power-local-llm/whisper-cpp-review) هو الخيار الأنسب.',
-          '**تسريع المعالج الرسومي على Apple Silicon.** تدعم خلفية CTranslate2 في faster-whisper المعالج المركزي وNVIDIA CUDA، لكن ليس لديها أي مسار تسريع لمعالج Apple Metal الرسومي — على جهاز Mac، يعود faster-whisper إلى الاستدلال على المعالج المركزي فقط. وجد [قياس أداء PromptQuorum](/power-local-llm/local-whisper-stt-comparison-2026) أن whisper.cpp بتسريع Metal أسرع بشكل ملحوظ من faster-whisper على المعالج المركزي فقط في Apple Silicon.',
+          '**النشر الخالي من Python أو كملف تنفيذي متعدد المنصات.** faster-whisper مكتبة Python لها اعتمادية أصلية على CTranslate2 — وهي غير مصممة لتكون ملفًا تنفيذيًا واحدًا خاليًا من الاعتماديات كما هو الحال مع whisper.cpp. إذا كنت بحاجة لاستهداف Raspberry Pi أو تطبيق iOS أو صفحة WebAssembly دون بيئة Python، فإن [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) هو الخيار الأنسب.',
+          '**تسريع المعالج الرسومي على Apple Silicon.** تدعم خلفية CTranslate2 في faster-whisper المعالج المركزي وNVIDIA CUDA، لكن ليس لديها أي مسار تسريع لمعالج Apple Metal الرسومي — على جهاز Mac، يعود faster-whisper إلى الاستدلال على المعالج المركزي فقط. وجد [قياس أداء PromptQuorum](/ar/power-local-llm/local-whisper-stt-comparison-2026) أن whisper.cpp بتسريع Metal أسرع بشكل ملحوظ من faster-whisper على المعالج المركزي فقط في Apple Silicon.',
           '**فصل المتحدثين ("من قال ماذا").** يقوم faster-whisper بتفريغ ما قيل، لكنه لا يفصل أو يصنّف بشكل أصلي المتحدثين المختلفين في تسجيل متعدد الأشخاص. لفصل المتحدثين، ادمج نتائج التفريغ مع أداة مخصصة، أو استخدم [WhisperX](https://github.com/m-bain/whisperX)، الذي يضيف فصل المتحدثين فوق تفريغات Whisper.',
           '**إعداد بلا أي تعقيد للمستخدمين غير التقنيين.** faster-whisper مكتبة Python موجهة للمطورين الذين يبنون خطوط معالجة، وليست تطبيقًا للمستخدم النهائي بواجهة رسومية. من يريد تطبيق تفريغ بنقرة واحدة ينبغي أن يبحث عن تطبيق مبني فوق faster-whisper أو whisper.cpp، أو خدمة تفريغ مستضافة بدلًا من ذلك.',
         ],
@@ -2417,7 +2417,7 @@ for segment in segments:
           },
           {
             q: 'ما الفرق بين faster-whisper وwhisper.cpp؟',
-            a: 'faster-whisper هي مكتبة Python مبنية على CTranslate2، مُحسَّنة بشكل أساسي لأداء معالجات NVIDIA GPU ضمن خطوط معالجة Python. أما whisper.cpp فهو تطبيق خالص بلغة C/C++ دون اعتماد على Python، مصمَّم لقابلية النقل بين المعالج المركزي وApple Metal وCUDA والأجهزة المدمجة. راجع [المقارنة التفصيلية](/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum للحصول على أرقام خاصة بكل منصة.',
+            a: 'faster-whisper هي مكتبة Python مبنية على CTranslate2، مُحسَّنة بشكل أساسي لأداء معالجات NVIDIA GPU ضمن خطوط معالجة Python. أما whisper.cpp فهو تطبيق خالص بلغة C/C++ دون اعتماد على Python، مصمَّم لقابلية النقل بين المعالج المركزي وApple Metal وCUDA والأجهزة المدمجة. راجع [المقارنة التفصيلية](/ar/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum للحصول على أرقام خاصة بكل منصة.',
           },
           {
             q: 'هل يدعم faster-whisper كشف النشاط الصوتي؟',
@@ -2441,7 +2441,7 @@ for segment in segments:
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'ينجح faster-whisper في تحقيق هدفه الأساسي: جعل نموذج Whisper من OpenAI أسرع بشكل ملحوظ وأخف على الذاكرة لمطوري Python، دون تغيير ما ينتجه النموذج. توفر خلفية CTranslate2 أداءً أعلى بنحو 4 أضعاف تقريبًا من التنفيذ الأصلي، ومرشح Silero VAD المدمج راحة عملية حقيقية للصوت الواقعي الذي يحتوي على صمت، وتجعل رخصة MIT من الآمن البناء عليها لمنتجات تجارية. وهو مجاني، ويُصان جيدًا، وينتج نفس جودة التفريغ الصوتي مثل Whisper الأصلي لحجم نموذج معين. أما الحالة التي لا يكون فيها الخيار الأقوى فهي النشر الخالي من Python أو المُسرَّع بمعالج رسومي على Apple Silicon — إذ يفوز هناك دعم Metal والملف التنفيذي الخالي من الاعتماديات في whisper.cpp، كما توثّق [المقارنة المباشرة](/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum. أما لكل من يبني خط معالجة Python لتحويل الكلام إلى نص على معالج NVIDIA GPU أو المعالج المركزي ويريد السرعة دون مغادرة نظام Python البيئي، فإن faster-whisper نقطة انطلاق موثوقة جيدًا وبلا تكلفة.',
+          'ينجح faster-whisper في تحقيق هدفه الأساسي: جعل نموذج Whisper من OpenAI أسرع بشكل ملحوظ وأخف على الذاكرة لمطوري Python، دون تغيير ما ينتجه النموذج. توفر خلفية CTranslate2 أداءً أعلى بنحو 4 أضعاف تقريبًا من التنفيذ الأصلي، ومرشح Silero VAD المدمج راحة عملية حقيقية للصوت الواقعي الذي يحتوي على صمت، وتجعل رخصة MIT من الآمن البناء عليها لمنتجات تجارية. وهو مجاني، ويُصان جيدًا، وينتج نفس جودة التفريغ الصوتي مثل Whisper الأصلي لحجم نموذج معين. أما الحالة التي لا يكون فيها الخيار الأقوى فهي النشر الخالي من Python أو المُسرَّع بمعالج رسومي على Apple Silicon — إذ يفوز هناك دعم Metal والملف التنفيذي الخالي من الاعتماديات في whisper.cpp، كما توثّق [المقارنة المباشرة](/ar/power-local-llm/local-whisper-stt-comparison-2026) من PromptQuorum. أما لكل من يبني خط معالجة Python لتحويل الكلام إلى نص على معالج NVIDIA GPU أو المعالج المركزي ويريد السرعة دون مغادرة نظام Python البيئي، فإن faster-whisper نقطة انطلاق موثوقة جيدًا وبلا تكلفة.',
       },
       sources: {
         id: 'sources',
@@ -2458,11 +2458,11 @@ for segment in segments:
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[whisper.cpp مقابل faster-whisper 2026: قياسات أداء STT محلية، والإعداد، وتسريع المعالج الرسومي](/power-local-llm/local-whisper-stt-comparison-2026) — المقارنة المباشرة لمن يحتار بين whisper.cpp وfaster-whisper.',
-          '[مراجعة whisper.cpp](/power-local-llm/whisper-cpp-review) — البديل بلغة C/C++ الخالي من Python، بنفس مستوى التفصيل.',
-          '[بناء مساعد صوتي بلا اتصال بالكامل عام 2026](/power-local-llm/build-local-voice-assistant-2026) — ربط محرك تحويل كلام قائم على Whisper بنموذج لغة محلي وPiper TTS في خط معالجة صوتي كامل.',
-          '[مراجعة Piper TTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — النظير المحلي لتحويل النص إلى كلام، لتحويل النص المُولَّد مرة أخرى إلى صوت بلا اتصال.',
-          '[الدليل الكامل لبرمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات الذكاء الاصطناعي المحلية عبر جميع الفئات.',
+          '[whisper.cpp مقابل faster-whisper 2026: قياسات أداء STT محلية، والإعداد، وتسريع المعالج الرسومي](/ar/power-local-llm/local-whisper-stt-comparison-2026) — المقارنة المباشرة لمن يحتار بين whisper.cpp وfaster-whisper.',
+          '[مراجعة whisper.cpp](/ar/power-local-llm/whisper-cpp-review) — البديل بلغة C/C++ الخالي من Python، بنفس مستوى التفصيل.',
+          '[بناء مساعد صوتي بلا اتصال بالكامل عام 2026](/ar/power-local-llm/build-local-voice-assistant-2026) — ربط محرك تحويل كلام قائم على Whisper بنموذج لغة محلي وPiper TTS في خط معالجة صوتي كامل.',
+          '[مراجعة Piper TTS](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — النظير المحلي لتحويل النص إلى كلام، لتحويل النص المُولَّد مرة أخرى إلى صوت بلا اتصال.',
+          '[الدليل الكامل لبرمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات الذكاء الاصطناعي المحلية عبر جميع الفئات.',
         ],
       },
     },
@@ -2532,7 +2532,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper是一款免费的、采用MIT许可证的Python重新实现,基于OpenAI的语音识别模型Whisper,由Guillaume Klein开发并由SYSTRAN维护,使用CTranslate2推理引擎将转录速度提升至原始实现的约4倍,同时降低内存占用。** 它支持NVIDIA GPU(通过CUDA,采用float16或int8计算类型)和CPU(通过int8量化),并内置Silero VAD(语音活动检测)过滤器,可自动跳过静音部分。若需在真实硬件上与whisper.cpp进行直接性能对比,请参阅PromptQuorum的[whisper.cpp对比faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026)。',
+      '**faster-whisper是一款免费的、采用MIT许可证的Python重新实现,基于OpenAI的语音识别模型Whisper,由Guillaume Klein开发并由SYSTRAN维护,使用CTranslate2推理引擎将转录速度提升至原始实现的约4倍,同时降低内存占用。** 它支持NVIDIA GPU(通过CUDA,采用float16或int8计算类型)和CPU(通过int8量化),并内置Silero VAD(语音活动检测)过滤器,可自动跳过静音部分。若需在真实硬件上与whisper.cpp进行直接性能对比,请参阅PromptQuorum的[whisper.cpp对比faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026)。',
     quickAnswerTop: {
       zh: {
         question: 'faster-whisper是什么?值得用它做本地语音识别吗?',
@@ -2588,7 +2588,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: '本评测聚焦faster-whisper作为独立工具的方方面面:历史、安装、真实Python代码、许可证以及真实局限。若需在Apple Silicon和NVIDIA GPU上与whisper.cpp进行直接性能对比,请参阅[whisper.cpp对比faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026)。',
+            text: '本评测聚焦faster-whisper作为独立工具的方方面面:历史、安装、真实Python代码、许可证以及真实局限。若需在Apple Silicon和NVIDIA GPU上与whisper.cpp进行直接性能对比,请参阅[whisper.cpp对比faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026)。',
           },
         ],
       },
@@ -2717,8 +2717,8 @@ for segment in segments:
           'faster-whisper是一个快速的Python转录库,不是完整的对话式AI产品,也不是不依赖Python的部署工具。在以下情况下它不是合适的工具:',
         ],
         items: [
-          '**不依赖Python或跨平台二进制部署。** faster-whisper是一个带有原生CTranslate2依赖的Python库——它并非设计成像whisper.cpp那样单一、无依赖的二进制文件。如果你需要面向Raspberry Pi、iOS应用或没有Python环境的WebAssembly页面,[whisper.cpp](/power-local-llm/whisper-cpp-review)更适合。',
-          '**Apple Silicon GPU加速。** faster-whisper的CTranslate2后端支持CPU和NVIDIA CUDA,但没有Apple Metal GPU加速路径——在Mac上,faster-whisper会回退到仅CPU推理。[PromptQuorum的测评](/power-local-llm/local-whisper-stt-comparison-2026)发现,在Apple Silicon上,带有Metal加速的whisper.cpp明显快于仅使用CPU的faster-whisper。',
+          '**不依赖Python或跨平台二进制部署。** faster-whisper是一个带有原生CTranslate2依赖的Python库——它并非设计成像whisper.cpp那样单一、无依赖的二进制文件。如果你需要面向Raspberry Pi、iOS应用或没有Python环境的WebAssembly页面,[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)更适合。',
+          '**Apple Silicon GPU加速。** faster-whisper的CTranslate2后端支持CPU和NVIDIA CUDA,但没有Apple Metal GPU加速路径——在Mac上,faster-whisper会回退到仅CPU推理。[PromptQuorum的测评](/zh/power-local-llm/local-whisper-stt-comparison-2026)发现,在Apple Silicon上,带有Metal加速的whisper.cpp明显快于仅使用CPU的faster-whisper。',
           '**说话人分离("谁说了什么")。** faster-whisper会转录说了什么,但不会原生分离或标注多人录音中的不同说话人。要实现说话人分离,请将其转录结果与专用工具结合,或使用[WhisperX](https://github.com/m-bain/whisperX),它在Whisper转录基础上叠加了说话人分离功能。',
           '**面向非技术用户的零配置体验。** faster-whisper是面向构建流水线的开发者的Python库,而不是带图形界面的终端用户应用程序。想要一键式转录应用的用户,应该寻找基于faster-whisper或whisper.cpp构建的应用程序,或托管式转录服务。',
         ],
@@ -2773,7 +2773,7 @@ for segment in segments:
           },
           {
             q: 'faster-whisper和whisper.cpp有什么区别?',
-            a: 'faster-whisper是基于CTranslate2的Python库,主要针对Python流水线中的NVIDIA GPU吞吐量进行优化。whisper.cpp是不依赖Python的纯C/C++实现,专为在CPU、Apple Metal、CUDA和嵌入式设备之间的可移植性而构建。有关各平台的具体数据,请参阅PromptQuorum的[详细对比评测](/power-local-llm/local-whisper-stt-comparison-2026)。',
+            a: 'faster-whisper是基于CTranslate2的Python库,主要针对Python流水线中的NVIDIA GPU吞吐量进行优化。whisper.cpp是不依赖Python的纯C/C++实现,专为在CPU、Apple Metal、CUDA和嵌入式设备之间的可移植性而构建。有关各平台的具体数据,请参阅PromptQuorum的[详细对比评测](/zh/power-local-llm/local-whisper-stt-comparison-2026)。',
           },
           {
             q: 'faster-whisper支持语音活动检测吗?',
@@ -2797,7 +2797,7 @@ for segment in segments:
         id: 'verdict',
         title: '结论',
         content:
-          'faster-whisper实现了它的核心目标:在不改变模型输出内容的前提下,让Python开发者使用的OpenAI Whisper模型明显更快、更省内存。它的CTranslate2后端提供约4倍于原始实现的吞吐量,内置的Silero VAD过滤器对于含有静音的真实音频来说是真正实用的便利,而MIT许可证也让在其基础上构建商业产品变得安全可靠。它免费、维护良好,并在给定模型规模下提供与原始Whisper一致的转录质量。它并非最强选择的场景是不依赖Python的部署,或需要在Apple Silicon上进行GPU加速的部署——正如PromptQuorum的[直接对比评测](/power-local-llm/local-whisper-stt-comparison-2026)所记录的那样,whisper.cpp的Metal支持和无依赖二进制文件在这种场景下更胜一筹。对于所有在NVIDIA GPU或CPU上构建Python语音识别流水线、希望在不离开Python生态系统的前提下获得速度的人来说,faster-whisper都是一个经过充分验证、零成本的起点。',
+          'faster-whisper实现了它的核心目标:在不改变模型输出内容的前提下,让Python开发者使用的OpenAI Whisper模型明显更快、更省内存。它的CTranslate2后端提供约4倍于原始实现的吞吐量,内置的Silero VAD过滤器对于含有静音的真实音频来说是真正实用的便利,而MIT许可证也让在其基础上构建商业产品变得安全可靠。它免费、维护良好,并在给定模型规模下提供与原始Whisper一致的转录质量。它并非最强选择的场景是不依赖Python的部署,或需要在Apple Silicon上进行GPU加速的部署——正如PromptQuorum的[直接对比评测](/zh/power-local-llm/local-whisper-stt-comparison-2026)所记录的那样,whisper.cpp的Metal支持和无依赖二进制文件在这种场景下更胜一筹。对于所有在NVIDIA GPU或CPU上构建Python语音识别流水线、希望在不离开Python生态系统的前提下获得速度的人来说,faster-whisper都是一个经过充分验证、零成本的起点。',
       },
       sources: {
         id: 'sources',
@@ -2814,11 +2814,11 @@ for segment in segments:
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[whisper.cpp对比faster-whisper 2026:本地STT基准测试、安装与GPU加速](/power-local-llm/local-whisper-stt-comparison-2026) ——为需要在whisper.cpp和faster-whisper之间做选择的读者提供的直接对比。',
-          '[whisper.cpp评测](/power-local-llm/whisper-cpp-review) ——不依赖Python的C/C++替代方案,采用同等深度评测。',
-          '[2026年构建完全离线的语音助手](/power-local-llm/build-local-voice-assistant-2026) ——将基于Whisper的语音识别引擎与本地大语言模型和Piper TTS连接成完整的语音流水线。',
-          '[Piper TTS评测](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ——本地文本转语音的对应工具,用于将生成的文本离线转换回语音。',
-          '[本地大语言模型软件完整目录](/power-local-llm/local-llm-software-directory) ——覆盖所有分类的更广泛本地AI工具目录。',
+          '[whisper.cpp对比faster-whisper 2026:本地STT基准测试、安装与GPU加速](/zh/power-local-llm/local-whisper-stt-comparison-2026) ——为需要在whisper.cpp和faster-whisper之间做选择的读者提供的直接对比。',
+          '[whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review) ——不依赖Python的C/C++替代方案,采用同等深度评测。',
+          '[2026年构建完全离线的语音助手](/zh/power-local-llm/build-local-voice-assistant-2026) ——将基于Whisper的语音识别引擎与本地大语言模型和Piper TTS连接成完整的语音流水线。',
+          '[Piper TTS评测](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ——本地文本转语音的对应工具,用于将生成的文本离线转换回语音。',
+          '[本地大语言模型软件完整目录](/zh/power-local-llm/local-llm-software-directory) ——覆盖所有分类的更广泛本地AI工具目录。',
         ],
       },
     },
@@ -2889,7 +2889,7 @@ for segment in segments:
     current_models_mentioned: ['Whisper large-v3', 'Whisper base', 'Whisper tiny', 'distil-large-v3'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**faster-whisper는 Guillaume Klein이 개발하고 SYSTRAN에서 관리하는 무료 MIT 라이선스 Python 재구현체로, OpenAI의 음성 인식 모델 Whisper를 기반으로 하며 추론 엔진 CTranslate2를 사용해 원본 구현보다 약 4배 빠르게 전사를 수행하면서 메모리 사용량도 줄입니다.** NVIDIA GPU(CUDA를 통해 float16 또는 int8 연산 유형 사용)와 CPU(int8 양자화 사용)를 지원하며, 무음 구간을 자동으로 건너뛰는 내장 Silero VAD(음성 활동 감지) 필터를 포함합니다. 실제 하드웨어에서 whisper.cpp와 직접 비교한 벤치마크는 PromptQuorum의 [whisper.cpp 대 faster-whisper 비교](/power-local-llm/local-whisper-stt-comparison-2026)에서 확인할 수 있습니다.',
+      '**faster-whisper는 Guillaume Klein이 개발하고 SYSTRAN에서 관리하는 무료 MIT 라이선스 Python 재구현체로, OpenAI의 음성 인식 모델 Whisper를 기반으로 하며 추론 엔진 CTranslate2를 사용해 원본 구현보다 약 4배 빠르게 전사를 수행하면서 메모리 사용량도 줄입니다.** NVIDIA GPU(CUDA를 통해 float16 또는 int8 연산 유형 사용)와 CPU(int8 양자화 사용)를 지원하며, 무음 구간을 자동으로 건너뛰는 내장 Silero VAD(음성 활동 감지) 필터를 포함합니다. 실제 하드웨어에서 whisper.cpp와 직접 비교한 벤치마크는 PromptQuorum의 [whisper.cpp 대 faster-whisper 비교](/ko/power-local-llm/local-whisper-stt-comparison-2026)에서 확인할 수 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'faster-whisper란 무엇이며, 로컬 음성 인식에 사용할 가치가 있습니까?',
@@ -2945,7 +2945,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 faster-whisper를 독립 도구로서 다루며 역사, 설치, 실제 Python 코드, 라이선스, 솔직한 한계에 초점을 맞춥니다. Apple Silicon 및 NVIDIA GPU에서 whisper.cpp와 직접 비교한 벤치마크는 [whisper.cpp 대 faster-whisper 비교](/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
+            text: '이 리뷰는 faster-whisper를 독립 도구로서 다루며 역사, 설치, 실제 Python 코드, 라이선스, 솔직한 한계에 초점을 맞춥니다. Apple Silicon 및 NVIDIA GPU에서 whisper.cpp와 직접 비교한 벤치마크는 [whisper.cpp 대 faster-whisper 비교](/ko/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
           },
         ],
       },
@@ -3074,8 +3074,8 @@ for segment in segments:
           'faster-whisper는 빠른 Python 전사 라이브러리이지, 완전한 대화형 AI 제품이나 Python이 필요 없는 배포 도구가 아닙니다. 다음과 같은 상황에서는 적합한 도구가 아닙니다.',
         ],
         items: [
-          '**Python이 필요 없거나 크로스 플랫폼 바이너리 배포.** faster-whisper는 네이티브 CTranslate2 의존성을 가진 Python 라이브러리입니다 — whisper.cpp처럼 단일 의존성 없는 바이너리로 설계되지 않았습니다. Raspberry Pi, iOS 앱, 또는 Python 환경이 없는 WebAssembly 페이지를 대상으로 해야 한다면 [whisper.cpp](/power-local-llm/whisper-cpp-review)가 더 적합합니다.',
-          '**Apple Silicon GPU 가속.** faster-whisper의 CTranslate2 백엔드는 CPU와 NVIDIA CUDA를 지원하지만 Apple Metal GPU 가속 경로는 없습니다 — Mac에서는 faster-whisper가 CPU 전용 추론으로 대체됩니다. [PromptQuorum의 벤치마크](/power-local-llm/local-whisper-stt-comparison-2026)는 Apple Silicon에서 Metal 가속을 사용하는 whisper.cpp가 CPU만 사용하는 faster-whisper보다 눈에 띄게 빠르다는 것을 확인했습니다.',
+          '**Python이 필요 없거나 크로스 플랫폼 바이너리 배포.** faster-whisper는 네이티브 CTranslate2 의존성을 가진 Python 라이브러리입니다 — whisper.cpp처럼 단일 의존성 없는 바이너리로 설계되지 않았습니다. Raspberry Pi, iOS 앱, 또는 Python 환경이 없는 WebAssembly 페이지를 대상으로 해야 한다면 [whisper.cpp](/ko/power-local-llm/whisper-cpp-review)가 더 적합합니다.',
+          '**Apple Silicon GPU 가속.** faster-whisper의 CTranslate2 백엔드는 CPU와 NVIDIA CUDA를 지원하지만 Apple Metal GPU 가속 경로는 없습니다 — Mac에서는 faster-whisper가 CPU 전용 추론으로 대체됩니다. [PromptQuorum의 벤치마크](/ko/power-local-llm/local-whisper-stt-comparison-2026)는 Apple Silicon에서 Metal 가속을 사용하는 whisper.cpp가 CPU만 사용하는 faster-whisper보다 눈에 띄게 빠르다는 것을 확인했습니다.',
           '**화자 분리("누가 무엇을 말했는가").** faster-whisper는 말한 내용을 전사하지만, 여러 사람이 등장하는 녹음에서 서로 다른 화자를 기본적으로 분리하거나 표시하지 않습니다. 화자 분리를 위해서는 전사 결과를 전용 도구와 결합하거나, Whisper 전사 결과 위에 화자 분리를 추가하는 [WhisperX](https://github.com/m-bain/whisperX)를 사용하십시오.',
           '**비기술 사용자를 위한 제로 설정.** faster-whisper는 파이프라인을 구축하는 개발자를 위한 Python 라이브러리이지, 그래픽 인터페이스를 갖춘 최종 사용자 애플리케이션이 아닙니다. 원클릭 전사 앱을 원하는 사용자는 대신 faster-whisper나 whisper.cpp 기반의 애플리케이션이나 호스팅형 전사 서비스를 찾아야 합니다.',
         ],
@@ -3130,7 +3130,7 @@ for segment in segments:
           },
           {
             q: 'faster-whisper와 whisper.cpp의 차이는 무엇입니까?',
-            a: 'faster-whisper는 CTranslate2를 기반으로 한 Python 라이브러리로, Python 파이프라인 내에서 NVIDIA GPU 처리량을 최적화하는 데 주로 초점을 맞춥니다. whisper.cpp는 Python 의존성이 없는 순수 C/C++ 구현으로, CPU, Apple Metal, CUDA, 임베디드 기기 간 이식성을 위해 만들어졌습니다. 플랫폼별 구체적인 수치는 PromptQuorum의 [상세 비교](/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
+            a: 'faster-whisper는 CTranslate2를 기반으로 한 Python 라이브러리로, Python 파이프라인 내에서 NVIDIA GPU 처리량을 최적화하는 데 주로 초점을 맞춥니다. whisper.cpp는 Python 의존성이 없는 순수 C/C++ 구현으로, CPU, Apple Metal, CUDA, 임베디드 기기 간 이식성을 위해 만들어졌습니다. 플랫폼별 구체적인 수치는 PromptQuorum의 [상세 비교](/ko/power-local-llm/local-whisper-stt-comparison-2026)를 참고하십시오.',
           },
           {
             q: 'faster-whisper는 음성 활동 감지를 지원합니까?',
@@ -3154,7 +3154,7 @@ for segment in segments:
         id: 'verdict',
         title: '결론',
         content:
-          'faster-whisper는 모델이 만들어내는 결과를 바꾸지 않으면서도, Python 개발자를 위해 OpenAI의 Whisper 모델을 눈에 띄게 더 빠르고 메모리 면에서 가볍게 만든다는 핵심 목표를 달성했습니다. CTranslate2 백엔드는 원본 구현 대비 약 4배의 처리량을 제공하고, 내장된 Silero VAD 필터는 무음이 포함된 실제 오디오에서 실질적으로 유용한 편의 기능이며, MIT 라이선스 덕분에 상업 제품에 안전하게 기반으로 삼을 수 있습니다. 무료이고 잘 유지보수되며, 주어진 모델 크기에서 원본 Whisper와 동일한 전사 품질을 제공합니다. 가장 강력한 선택이 아닌 경우는 Python이 필요 없거나 Apple Silicon에서 GPU 가속이 필요한 배포인데, 이 경우 PromptQuorum의 [직접 비교](/power-local-llm/local-whisper-stt-comparison-2026)가 보여주듯 whisper.cpp의 Metal 지원과 의존성 없는 바이너리가 우세합니다. NVIDIA GPU나 CPU에서 Python 음성 인식 파이프라인을 구축하며 Python 생태계를 벗어나지 않고 속도를 원하는 모든 사람에게, faster-whisper는 충분히 검증되고 비용이 들지 않는 좋은 출발점입니다.',
+          'faster-whisper는 모델이 만들어내는 결과를 바꾸지 않으면서도, Python 개발자를 위해 OpenAI의 Whisper 모델을 눈에 띄게 더 빠르고 메모리 면에서 가볍게 만든다는 핵심 목표를 달성했습니다. CTranslate2 백엔드는 원본 구현 대비 약 4배의 처리량을 제공하고, 내장된 Silero VAD 필터는 무음이 포함된 실제 오디오에서 실질적으로 유용한 편의 기능이며, MIT 라이선스 덕분에 상업 제품에 안전하게 기반으로 삼을 수 있습니다. 무료이고 잘 유지보수되며, 주어진 모델 크기에서 원본 Whisper와 동일한 전사 품질을 제공합니다. 가장 강력한 선택이 아닌 경우는 Python이 필요 없거나 Apple Silicon에서 GPU 가속이 필요한 배포인데, 이 경우 PromptQuorum의 [직접 비교](/ko/power-local-llm/local-whisper-stt-comparison-2026)가 보여주듯 whisper.cpp의 Metal 지원과 의존성 없는 바이너리가 우세합니다. NVIDIA GPU나 CPU에서 Python 음성 인식 파이프라인을 구축하며 Python 생태계를 벗어나지 않고 속도를 원하는 모든 사람에게, faster-whisper는 충분히 검증되고 비용이 들지 않는 좋은 출발점입니다.',
       },
       sources: {
         id: 'sources',
@@ -3171,11 +3171,11 @@ for segment in segments:
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[whisper.cpp 대 faster-whisper 2026: 로컬 STT 벤치마크, 설치, GPU 가속](/power-local-llm/local-whisper-stt-comparison-2026) — whisper.cpp와 faster-whisper 사이에서 고민하는 독자를 위한 직접 비교.',
-          '[whisper.cpp 리뷰](/power-local-llm/whisper-cpp-review) — Python이 필요 없는 C/C++ 대안을 동일한 깊이로 리뷰.',
-          '[2026년 완전 오프라인 음성 비서 구축하기](/power-local-llm/build-local-voice-assistant-2026) — Whisper 기반 음성 인식 엔진을 로컬 LLM 및 Piper TTS와 연결해 완전한 음성 파이프라인 구축.',
-          '[Piper TTS 리뷰](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 생성된 텍스트를 오프라인에서 다시 음성으로 변환하는, 로컬 음성 합성 짝꿍 도구.',
-          '[로컬 LLM 소프트웨어 전체 디렉터리](/power-local-llm/local-llm-software-directory) — 모든 카테고리를 아우르는 더 넓은 로컬 AI 도구 디렉터리.',
+          '[whisper.cpp 대 faster-whisper 2026: 로컬 STT 벤치마크, 설치, GPU 가속](/ko/power-local-llm/local-whisper-stt-comparison-2026) — whisper.cpp와 faster-whisper 사이에서 고민하는 독자를 위한 직접 비교.',
+          '[whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review) — Python이 필요 없는 C/C++ 대안을 동일한 깊이로 리뷰.',
+          '[2026년 완전 오프라인 음성 비서 구축하기](/ko/power-local-llm/build-local-voice-assistant-2026) — Whisper 기반 음성 인식 엔진을 로컬 LLM 및 Piper TTS와 연결해 완전한 음성 파이프라인 구축.',
+          '[Piper TTS 리뷰](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 생성된 텍스트를 오프라인에서 다시 음성으로 변환하는, 로컬 음성 합성 짝꿍 도구.',
+          '[로컬 LLM 소프트웨어 전체 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 모든 카테고리를 아우르는 더 넓은 로컬 AI 도구 디렉터리.',
         ],
       },
     },

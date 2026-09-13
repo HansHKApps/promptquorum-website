@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die 2.0 Developer Preview ergänzt drei Ausführungsmodi (smart, controlled, agent), native und Agent-Skills (auf Basis von SKILL.md), geschichtetes Gedächtnis sowie Unterstützung für lokale und externe KI-Anbieter',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Review behandelt sowohl den stabilen Branch `master` von Leon als auch die 2.0 Developer Preview auf dem Branch `develop`, da das GitHub-Repository beide aktiv pflegt und das Projekt 2.0 ausdrücklich als grundlegenden Umbau und nicht als reine Versionserhöhung einordnet. Siehe das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) für einen schnellen Vergleich von Leon AI mit anderen Agenten-Frameworks.' },
+          { type: 'note', text: 'Dieser Review behandelt sowohl den stabilen Branch `master` von Leon als auch die 2.0 Developer Preview auf dem Branch `develop`, da das GitHub-Repository beide aktiv pflegt und das Projekt 2.0 ausdrücklich als grundlegenden Umbau und nicht als reine Versionserhöhung einordnet. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für einen schnellen Vergleich von Leon AI mit anderen Agenten-Frameworks.' },
         ],
       },
       history: {
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AI begann 2017 als Hobbyprojekt des französischen Entwicklers Louis Grenard und wird seit der ersten öffentlichen Veröffentlichung 2019 aktiv, größtenteils in der Freizeit, weiterentwickelt.** Über den größten Teil seiner Geschichte war Leon ein klassischer, intent-basierter persönlicher Assistent: Man spricht oder tippt eine Anfrage, diese wird mit trainierten Intents abgeglichen, und ein passender Skill führt die Aktion aus — gebaut, um offline zu laufen, damit Anfragen den Rechner nicht verlassen müssen.",
           "Laut einem Hinweis im [GitHub-Repository](https://github.com/leon-ai/leon) vom März 2026 befindet sich Leon mitten in einer 2.0 Developer Preview — einem Umbau des Kerns rund um Tools, Kontext, Gedächtnis und agentische Ausführung statt fester Intents allein. Der Branch `develop`, mittlerweile Standard des Repositorys, trägt diesen neuen Kern; die ältere, stabilere, intent-basierte Version bleibt auf dem Branch `master` verfügbar für alle, die den dokumentierten, vor-agentischen Assistenten statt des laufenden Umbaus möchten.",
-          "Diese Geschichte unterscheidet Leon von den anderen Frameworks dieser Serie. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) und [Semantic Kernel](/power-local-llm/semantic-kernel-review) wurden von Anfang an als Entwickler-Bibliotheken gebaut, um LLM-Aufrufe zu Anwendungen zusammenzusetzen. Leon begann als Endnutzer-Produkt für einen persönlichen Assistenten — etwas, das man installiert und direkt anspricht — und der 2.0-Umbau ergänzt agentische Fähigkeiten auf dieser Assistenten-Grundlage, nicht umgekehrt.",
+          "Diese Geschichte unterscheidet Leon von den anderen Frameworks dieser Serie. [LangChain](/de/power-local-llm/langchain-review), [CrewAI](/de/power-local-llm/crewai-review), [AutoGen](/de/power-local-llm/autogen-review) und [Semantic Kernel](/de/power-local-llm/semantic-kernel-review) wurden von Anfang an als Entwickler-Bibliotheken gebaut, um LLM-Aufrufe zu Anwendungen zusammenzusetzen. Leon begann als Endnutzer-Produkt für einen persönlichen Assistenten — etwas, das man installiert und direkt anspricht — und der 2.0-Umbau ergänzt agentische Fähigkeiten auf dieser Assistenten-Grundlage, nicht umgekehrt.",
         ],
         itemHeadings: true,
         rows: [
@@ -447,9 +447,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Meiden Sie Leon AI, wenn',
             list: [
-              'Sie ein dokumentiertes, produktionsreifes Framework benötigen, um LLM-Aufrufe zu einer eigenen Anwendung zusammenzusetzen — [LangChain](/power-local-llm/langchain-review) oder [LangGraph](/power-local-llm/langgraph-review) sind genau dafür gebaut und dokumentiert',
-              'Sie rollenbasierte Koordination mehrerer spezialisierter Agenten benötigen — [CrewAI](/power-local-llm/crewai-review) oder [AutoGen](/power-local-llm/autogen-review) sind für dieses Muster ausgelegt, das nicht der Fokus von Leon ist',
-              'Sie einen Agenten mit dauerhaftem, selbst bearbeitbarem Langzeitgedächtnis als bereits dokumentiertes Kernprodukt benötigen — [Letta](/power-local-llm/letta-review) ist genau dafür gebaut',
+              'Sie ein dokumentiertes, produktionsreifes Framework benötigen, um LLM-Aufrufe zu einer eigenen Anwendung zusammenzusetzen — [LangChain](/de/power-local-llm/langchain-review) oder [LangGraph](/de/power-local-llm/langgraph-review) sind genau dafür gebaut und dokumentiert',
+              'Sie rollenbasierte Koordination mehrerer spezialisierter Agenten benötigen — [CrewAI](/de/power-local-llm/crewai-review) oder [AutoGen](/de/power-local-llm/autogen-review) sind für dieses Muster ausgelegt, das nicht der Fokus von Leon ist',
+              'Sie einen Agenten mit dauerhaftem, selbst bearbeitbarem Langzeitgedächtnis als bereits dokumentiertes Kernprodukt benötigen — [Letta](/de/power-local-llm/letta-review) ist genau dafür gebaut',
               'Sie Enterprise-Support, ein SLA oder ein gehostetes Produkt benötigen — Leon hat überhaupt keine kommerzielle Stufe oder gehosteten Cloud-Dienst',
             ],
           },
@@ -461,9 +461,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Verzichten Sie auf Leon AI, wenn Sie ein ausgereiftes, vollständig dokumentiertes Framework oder Produkt benötigen, oder wenn die unvollständige Dokumentation des 2.0-Umbaus Ihr Team blockieren würde.**",
         items: [
           'Ein Team, das heute stabile, versionierte Dokumentation benötigt — die 2.0 Developer Preview hat ausdrücklich noch keine fertige Dokumentation, und das Repository verweist stattdessen auf Quelldateien',
-          'Ein Team, das eine eigene LLM-Anwendung baut statt ein Assistentenprodukt einzusetzen — eine Bibliothek wie [LangChain](/power-local-llm/langchain-review) oder [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) passt direkter, um Aufrufe in einer eigenen App zusammenzusetzen',
+          'Ein Team, das eine eigene LLM-Anwendung baut statt ein Assistentenprodukt einzusetzen — eine Bibliothek wie [LangChain](/de/power-local-llm/langchain-review) oder [LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review) passt direkter, um Aufrufe in einer eigenen App zusammenzusetzen',
           'Ein Team, das eine aktiv große Community von Mitwirkenden und häufige Skills von Dritten benötigt — das Projekt beschreibt sich selbst als weiterhin größtenteils in der Freizeit von einer kleinen Gruppe entwickelt, wobei Mitwirkung an 2.0 bewusst stufenweise geöffnet wird, während sich der Kern stabilisiert',
-          'Ein Team, das dauerhaftes, selbst bearbeitbares Agentengedächtnis als ausgereiftes, dokumentiertes Feature benötigt — [Letta](/power-local-llm/letta-review) ist genau dafür gebaut und dokumentiert, während Leons Gedächtnisschicht in 2.0 noch neu ist',
+          'Ein Team, das dauerhaftes, selbst bearbeitbares Agentengedächtnis als ausgereiftes, dokumentiertes Feature benötigt — [Letta](/de/power-local-llm/letta-review) ist genau dafür gebaut und dokumentiert, während Leons Gedächtnisschicht in 2.0 noch neu ist',
           'Nutzen Sie Leon AI stattdessen, wenn die entscheidende Anforderung ein selbst gehosteter, ansprechbarer persönlicher Assistent mit Offline-Fähigkeit ist und Sie mit einem kleineren, sich weiterentwickelnden Open-Source-Projekt zurechtkommen',
         ],
         note: "Leons 2.0-Umbau ist aktive, laufende Arbeit und kein aufgegebenes Versprechen — das Repository zeigt regelmäßige Commits —, ist aber, Stand des Repository-Hinweises vom März 2026, ausdrücklich eine Developer Preview und kein fertiges Release.",
@@ -475,10 +475,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Interface', 'Lizenz', 'Träger', 'Am besten für'],
         rows: [
           { 'Tool': '[Leon AI](https://github.com/leon-ai/leon)', 'Interface': 'Sprach-/Text-App + CLI', 'Lizenz': 'MIT', 'Träger': 'Louis Grenard (unabhängig)', 'Am besten für': 'Selbst gehosteter persönlicher Assistent' },
-          { 'Tool': '[Letta](/power-local-llm/letta-review)', 'Interface': 'Python-/TS-Code', 'Lizenz': 'Apache 2.0', 'Träger': 'Letta Inc. (VC-finanziert)', 'Am besten für': 'Langzeitgedächtnis für einzelne Agenten' },
-          { 'Tool': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'Interface': 'Selbst gehostete App', 'Lizenz': 'MIT', 'Träger': 'Unabhängig', 'Am besten für': 'Selbstverbessernder persönlicher Agent' },
-          { 'Tool': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT / CC-BY', 'Träger': 'Microsoft Research', 'Am besten für': 'Multi-Agenten-Konversationsmuster' },
-          { 'Tool': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Web-GUI-Konsole', 'Lizenz': 'MIT', 'Träger': 'TransformerOptimus (unabhängig)', 'Am besten für': 'GUI-basierte autonome Agenten' },
+          { 'Tool': '[Letta](/de/power-local-llm/letta-review)', 'Interface': 'Python-/TS-Code', 'Lizenz': 'Apache 2.0', 'Träger': 'Letta Inc. (VC-finanziert)', 'Am besten für': 'Langzeitgedächtnis für einzelne Agenten' },
+          { 'Tool': '[Hermes Agent](/de/power-local-llm/hermes-agent-review)', 'Interface': 'Selbst gehostete App', 'Lizenz': 'MIT', 'Träger': 'Unabhängig', 'Am besten für': 'Selbstverbessernder persönlicher Agent' },
+          { 'Tool': '[AutoGen](/de/power-local-llm/autogen-review)', 'Interface': 'Python-Code', 'Lizenz': 'MIT / CC-BY', 'Träger': 'Microsoft Research', 'Am besten für': 'Multi-Agenten-Konversationsmuster' },
+          { 'Tool': '[SuperAGI](/de/power-local-llm/superagi-review)', 'Interface': 'Web-GUI-Konsole', 'Lizenz': 'MIT', 'Träger': 'TransformerOptimus (unabhängig)', 'Am besten für': 'GUI-basierte autonome Agenten' },
         ],
       },
       commonMistakes: {
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 2: Erwarten, dass Leon wie eine universelle LLM-Orchestrierungs-Bibliothek funktioniert',
-            content: "Leon AI ist ein Endnutzer-Produkt für einen persönlichen Assistenten, das man installiert und anspricht, keine Python- oder JavaScript-Bibliothek, um LLM-Aufrufe innerhalb einer eigenen Anwendung zusammenzusetzen. Für diesen Anwendungsfall sind [LangChain](/power-local-llm/langchain-review) oder [LangGraph](/power-local-llm/langgraph-review) genau dafür gebaut und dokumentiert.",
+            content: "Leon AI ist ein Endnutzer-Produkt für einen persönlichen Assistenten, das man installiert und anspricht, keine Python- oder JavaScript-Bibliothek, um LLM-Aufrufe innerhalb einer eigenen Anwendung zusammenzusetzen. Für diesen Anwendungsfall sind [LangChain](/de/power-local-llm/langchain-review) oder [LangGraph](/de/power-local-llm/langgraph-review) genau dafür gebaut und dokumentiert.",
           },
           {
             title: 'Fehler 3: Annehmen, dass es ein gehostetes Leon-Cloud-Produkt gibt',
@@ -531,11 +531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Letta Review: Funktionen, Preise, Alternativen](/power-local-llm/letta-review) — das Framework für Langzeitgedächtnis-Agenten im Vergleich zu Leons Fokus auf einen ansprechbaren persönlichen Assistenten.',
-          '[AutoGen Review: Funktionen, Preise, Alternativen](/power-local-llm/autogen-review) — das Multi-Agenten-Konversations-Framework von Microsoft Research, für Teams, die mehrere Agenten koordinieren statt einen einzelnen selbst gehosteten Assistenten zu betreiben.',
-          '[SuperAGI Review: Funktionen, Preise, Alternativen](/power-local-llm/superagi-review) — ein weiteres unabhängiges, GUI-basiertes Open-Source-Projekt für autonome Agenten, im Vergleich zu Leons CLI-first-Setup.',
-          '[Hermes Agent Review: Funktionen, Preise, Alternativen](/power-local-llm/hermes-agent-review) — ein näherer Vergleich mit einem selbst gehosteten persönlichen Agenten, ebenfalls auf Basis von dauerhaftem Gedächtnis gebaut.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Leon AI unter den Agenten-Frameworks.',
+          '[Letta Review: Funktionen, Preise, Alternativen](/de/power-local-llm/letta-review) — das Framework für Langzeitgedächtnis-Agenten im Vergleich zu Leons Fokus auf einen ansprechbaren persönlichen Assistenten.',
+          '[AutoGen Review: Funktionen, Preise, Alternativen](/de/power-local-llm/autogen-review) — das Multi-Agenten-Konversations-Framework von Microsoft Research, für Teams, die mehrere Agenten koordinieren statt einen einzelnen selbst gehosteten Assistenten zu betreiben.',
+          '[SuperAGI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/superagi-review) — ein weiteres unabhängiges, GUI-basiertes Open-Source-Projekt für autonome Agenten, im Vergleich zu Leons CLI-first-Setup.',
+          '[Hermes Agent Review: Funktionen, Preise, Alternativen](/de/power-local-llm/hermes-agent-review) — ein näherer Vergleich mit einem selbst gehosteten persönlichen Agenten, ebenfalls auf Basis von dauerhaftem Gedächtnis gebaut.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Leon AI unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La 2.0 Developer Preview ajoute trois modes d\'exécution (smart, controlled, agent), des skills natifs et des skills agent (basés sur SKILL.md), une mémoire en couches, et la prise en charge de fournisseurs d\'IA locaux et distants',
         ],
         callouts: [
-          { type: 'note', text: "Cet avis couvre à la fois la branche stable `master` de Leon et la 2.0 Developer Preview sur la branche `develop`, car le dépôt GitHub maintient activement les deux, et le projet présente explicitement la 2.0 comme une refonte complète plutôt qu'une simple montée de version. Voir le [Répertoire des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour situer Leon AI par rapport aux autres frameworks d'agents." },
+          { type: 'note', text: "Cet avis couvre à la fois la branche stable `master` de Leon et la 2.0 Developer Preview sur la branche `develop`, car le dépôt GitHub maintient activement les deux, et le projet présente explicitement la 2.0 comme une refonte complète plutôt qu'une simple montée de version. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer Leon AI par rapport aux autres frameworks d'agents." },
         ],
       },
       history: {
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AI a débuté comme projet personnel du développeur français Louis Grenard en 2017 et fait l'objet d'un développement actif, en grande partie sur son temps libre, depuis sa première publication en 2019.** Pendant l'essentiel de son existence, Leon a été un assistant personnel classique à classification d'intentions : on lui parle ou on lui écrit, la requête est comparée à des intentions entraînées, et un skill correspondant exécute l'action — conçu pour fonctionner hors ligne afin que les requêtes n'aient pas à quitter la machine.",
           "Selon un avis publié sur le [dépôt GitHub](https://github.com/leon-ai/leon) en mars 2026, Leon est en pleine 2.0 Developer Preview — une refonte du cœur autour des outils, du contexte, de la mémoire et de l'exécution agentique plutôt que des seules intentions fixes. La branche `develop`, désormais celle par défaut du dépôt, porte ce nouveau cœur ; l'ancienne version, plus stable et basée sur les intentions, reste disponible sur la branche `master` pour qui préfère l'assistant documenté et pré-agentique à la refonte en cours.",
-          "Cette histoire distingue Leon des autres frameworks de cette série. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) et [Semantic Kernel](/power-local-llm/semantic-kernel-review) ont été construits dès le départ comme des bibliothèques pour développeurs, destinées à composer des appels LLM au sein d'applications. Leon a débuté comme un produit d'assistant personnel destiné à l'utilisateur final — quelque chose que l'on installe et à qui l'on parle directement — et sa refonte 2.0 ajoute des capacités agentiques sur cette base d'assistant, et non l'inverse.",
+          "Cette histoire distingue Leon des autres frameworks de cette série. [LangChain](/fr/power-local-llm/langchain-review), [CrewAI](/fr/power-local-llm/crewai-review), [AutoGen](/fr/power-local-llm/autogen-review) et [Semantic Kernel](/fr/power-local-llm/semantic-kernel-review) ont été construits dès le départ comme des bibliothèques pour développeurs, destinées à composer des appels LLM au sein d'applications. Leon a débuté comme un produit d'assistant personnel destiné à l'utilisateur final — quelque chose que l'on installe et à qui l'on parle directement — et sa refonte 2.0 ajoute des capacités agentiques sur cette base d'assistant, et non l'inverse.",
         ],
         itemHeadings: true,
         rows: [
@@ -716,9 +716,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez Leon AI si',
             list: [
-              "Vous avez besoin d'un framework documenté et prêt pour la production, pour composer des appels LLM au sein d'une application personnalisée — [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) sont construits et documentés précisément pour cela",
-              "Vous avez besoin d'une coordination multi-agents basée sur des rôles entre plusieurs agents spécialisés — [CrewAI](/power-local-llm/crewai-review) ou [AutoGen](/power-local-llm/autogen-review) sont conçus pour ce schéma, qui n'est pas l'axe de Leon",
-              "Vous avez besoin d'un agent à mémoire à long terme persistante et auto-éditable comme produit central déjà documenté — [Letta](/power-local-llm/letta-review) est construit précisément pour cela",
+              "Vous avez besoin d'un framework documenté et prêt pour la production, pour composer des appels LLM au sein d'une application personnalisée — [LangChain](/fr/power-local-llm/langchain-review) ou [LangGraph](/fr/power-local-llm/langgraph-review) sont construits et documentés précisément pour cela",
+              "Vous avez besoin d'une coordination multi-agents basée sur des rôles entre plusieurs agents spécialisés — [CrewAI](/fr/power-local-llm/crewai-review) ou [AutoGen](/fr/power-local-llm/autogen-review) sont conçus pour ce schéma, qui n'est pas l'axe de Leon",
+              "Vous avez besoin d'un agent à mémoire à long terme persistante et auto-éditable comme produit central déjà documenté — [Letta](/fr/power-local-llm/letta-review) est construit précisément pour cela",
               "Vous avez besoin de support entreprise, d'un SLA ou d'un produit hébergé — Leon n'a aucune offre commerciale ni service cloud hébergé",
             ],
           },
@@ -730,9 +730,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Évitez Leon AI si vous avez besoin d'un framework ou d'un produit mature et entièrement documenté, ou si la documentation incomplète de la refonte 2.0 bloquerait votre équipe.**",
         items: [
           "Une équipe qui a besoin dès aujourd'hui d'une documentation stable et versionnée — la 2.0 Developer Preview n'a explicitement pas encore de documentation finalisée, et le dépôt renvoie plutôt vers les fichiers source",
-          "Une équipe qui construit une application LLM personnalisée plutôt que de déployer un produit d'assistant — une bibliothèque comme [LangChain](/power-local-llm/langchain-review) ou [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) convient plus directement pour composer des appels au sein de sa propre application",
+          "Une équipe qui construit une application LLM personnalisée plutôt que de déployer un produit d'assistant — une bibliothèque comme [LangChain](/fr/power-local-llm/langchain-review) ou [LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) convient plus directement pour composer des appels au sein de sa propre application",
           "Une équipe qui a besoin d'une large base de contributeurs actifs et de skills tiers fréquents — le projet se décrit lui-même comme encore largement développé sur le temps libre par un petit groupe, avec la contribution à la 2.0 volontairement ouverte par étapes le temps que le cœur se stabilise",
-          "Une équipe qui a besoin d'une mémoire d'agent persistante et auto-éditable comme fonctionnalité mature et documentée — [Letta](/power-local-llm/letta-review) est construit et documenté précisément pour cela, alors que la couche mémoire de Leon en 2.0 est encore récente",
+          "Une équipe qui a besoin d'une mémoire d'agent persistante et auto-éditable comme fonctionnalité mature et documentée — [Letta](/fr/power-local-llm/letta-review) est construit et documenté précisément pour cela, alors que la couche mémoire de Leon en 2.0 est encore récente",
           "Utilisez plutôt Leon AI quand l'exigence centrale est un assistant personnel auto-hébergé à qui parler, avec capacité hors ligne, et que vous êtes à l'aise avec un projet open source plus petit et en évolution",
         ],
         note: "La refonte 2.0 de Leon est un travail actif et en cours, pas une promesse abandonnée — le dépôt montre des commits réguliers — mais il s'agit explicitement d'une developer preview, pas d'une version finalisée, à la date de l'avis publié sur le dépôt en mars 2026.",
@@ -744,10 +744,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Outil', 'Interface', 'Licence', 'Porté par', 'Idéal pour'],
         rows: [
           { 'Outil': '[Leon AI](https://github.com/leon-ai/leon)', 'Interface': 'App voix/texte + CLI', 'Licence': 'MIT', 'Porté par': 'Louis Grenard (indépendant)', 'Idéal pour': 'Assistant personnel auto-hébergé' },
-          { 'Outil': '[Letta](/power-local-llm/letta-review)', 'Interface': 'Code Python / TS', 'Licence': 'Apache 2.0', 'Porté par': 'Letta Inc. (financé par VC)', 'Idéal pour': 'Mémoire à long terme pour un agent' },
-          { 'Outil': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'Interface': 'App auto-hébergée', 'Licence': 'MIT', 'Porté par': 'Indépendant', 'Idéal pour': 'Agent personnel auto-améliorant' },
-          { 'Outil': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Code Python', 'Licence': 'MIT / CC-BY', 'Porté par': 'Microsoft Research', 'Idéal pour': 'Schémas de conversation multi-agents' },
-          { 'Outil': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Console GUI web', 'Licence': 'MIT', 'Porté par': 'TransformerOptimus (indépendant)', 'Idéal pour': 'Agents autonomes via interface graphique' },
+          { 'Outil': '[Letta](/fr/power-local-llm/letta-review)', 'Interface': 'Code Python / TS', 'Licence': 'Apache 2.0', 'Porté par': 'Letta Inc. (financé par VC)', 'Idéal pour': 'Mémoire à long terme pour un agent' },
+          { 'Outil': '[Hermes Agent](/fr/power-local-llm/hermes-agent-review)', 'Interface': 'App auto-hébergée', 'Licence': 'MIT', 'Porté par': 'Indépendant', 'Idéal pour': 'Agent personnel auto-améliorant' },
+          { 'Outil': '[AutoGen](/fr/power-local-llm/autogen-review)', 'Interface': 'Code Python', 'Licence': 'MIT / CC-BY', 'Porté par': 'Microsoft Research', 'Idéal pour': 'Schémas de conversation multi-agents' },
+          { 'Outil': '[SuperAGI](/fr/power-local-llm/superagi-review)', 'Interface': 'Console GUI web', 'Licence': 'MIT', 'Porté par': 'TransformerOptimus (indépendant)', 'Idéal pour': 'Agents autonomes via interface graphique' },
         ],
       },
       commonMistakes: {
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 2 : attendre de Leon qu\'il fonctionne comme une bibliothèque d\'orchestration LLM généraliste',
-            content: "Leon AI est un produit d'assistant personnel destiné à l'utilisateur final, que l'on installe et à qui l'on parle, pas une bibliothèque Python ou JavaScript pour composer des appels LLM au sein de sa propre application. Pour ce cas d'usage, [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) sont construits et documentés précisément pour cela.",
+            content: "Leon AI est un produit d'assistant personnel destiné à l'utilisateur final, que l'on installe et à qui l'on parle, pas une bibliothèque Python ou JavaScript pour composer des appels LLM au sein de sa propre application. Pour ce cas d'usage, [LangChain](/fr/power-local-llm/langchain-review) ou [LangGraph](/fr/power-local-llm/langgraph-review) sont construits et documentés précisément pour cela.",
           },
           {
             title: "Erreur 3 : supposer l'existence d'un produit Leon Cloud hébergé",
@@ -800,11 +800,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Avis Letta : fonctionnalités, tarifs, alternatives](/power-local-llm/letta-review) — le framework de mémoire à long terme pour agents, à comparer avec l\'approche de Leon centrée sur un assistant personnel à qui parler.',
-          '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/power-local-llm/autogen-review) — le framework de conversation multi-agents de Microsoft Research, pour les équipes qui coordonnent plusieurs agents plutôt que de faire tourner un seul assistant auto-hébergé.',
-          '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/power-local-llm/superagi-review) — un autre projet open source indépendant d\'agent autonome à interface graphique, à comparer avec l\'installation CLI-first de Leon.',
-          '[Avis Hermes Agent : fonctionnalités, tarifs, alternatives](/power-local-llm/hermes-agent-review) — une comparaison plus proche d\'un agent personnel auto-hébergé, également construit autour de la mémoire persistante.',
-          '[Répertoire des logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de Leon AI parmi les frameworks d\'agents.',
+          '[Avis Letta : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/letta-review) — le framework de mémoire à long terme pour agents, à comparer avec l\'approche de Leon centrée sur un assistant personnel à qui parler.',
+          '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/autogen-review) — le framework de conversation multi-agents de Microsoft Research, pour les équipes qui coordonnent plusieurs agents plutôt que de faire tourner un seul assistant auto-hébergé.',
+          '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/superagi-review) — un autre projet open source indépendant d\'agent autonome à interface graphique, à comparer avec l\'installation CLI-first de Leon.',
+          '[Avis Hermes Agent : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/hermes-agent-review) — une comparaison plus proche d\'un agent personnel auto-hébergé, également construit autour de la mémoire persistante.',
+          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de Leon AI parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La 2.0 Developer Preview añade tres modos de ejecución (smart, controlled, agent), skills nativos y skills de agente (basados en SKILL.md), memoria en capas, y compatibilidad con proveedores de IA locales y remotos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña cubre tanto la rama estable `master` de Leon como la 2.0 Developer Preview en la rama `develop`, ya que el repositorio de GitHub mantiene ambas activamente y el proyecto presenta explícitamente la 2.0 como una reconstrucción desde cero, no como una simple actualización de versión. Consulta el [Directorio de software de LLM locales](/power-local-llm/local-llm-software-directory) para ver cómo se compara Leon AI con otros frameworks de agentes.' },
+          { type: 'note', text: 'Esta reseña cubre tanto la rama estable `master` de Leon como la 2.0 Developer Preview en la rama `develop`, ya que el repositorio de GitHub mantiene ambas activamente y el proyecto presenta explícitamente la 2.0 como una reconstrucción desde cero, no como una simple actualización de versión. Consulta el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para ver cómo se compara Leon AI con otros frameworks de agentes.' },
         ],
       },
       history: {
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AI comenzó como un proyecto personal del desarrollador francés Louis Grenard en 2017 y ha estado en desarrollo activo, en gran parte en tiempo libre, desde su primer lanzamiento público en 2019.** Durante la mayor parte de su historia, Leon ha sido un asistente personal clásico de clasificación de intenciones: hablas o escribes una solicitud, esta se compara con intenciones entrenadas, y un skill coincidente ejecuta la acción — diseñado para funcionar sin conexión, de modo que las solicitudes no tengan que salir del equipo.",
           "Según un aviso publicado en el [repositorio de GitHub](https://github.com/leon-ai/leon) en marzo de 2026, Leon está en pleno proceso de una 2.0 Developer Preview — una reconstrucción del núcleo en torno a herramientas, contexto, memoria y ejecución agéntica, en lugar de solo intenciones fijas. La rama `develop`, ahora la predeterminada del repositorio, lleva este nuevo núcleo; la versión anterior, más estable y basada en intenciones, sigue disponible en la rama `master` para quien prefiera el asistente documentado y pre-agéntico en vez de la reescritura en curso.",
-          "Esta historia distingue a Leon de los demás frameworks de esta serie. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) y [Semantic Kernel](/power-local-llm/semantic-kernel-review) se construyeron desde el inicio como bibliotecas para desarrolladores, pensadas para componer llamadas a LLM dentro de aplicaciones. Leon comenzó como un producto de asistente personal orientado al usuario final — algo que se instala y con lo que se habla directamente — y su reconstrucción 2.0 añade capacidad agéntica sobre esa base de asistente, no al revés.",
+          "Esta historia distingue a Leon de los demás frameworks de esta serie. [LangChain](/es/power-local-llm/langchain-review), [CrewAI](/es/power-local-llm/crewai-review), [AutoGen](/es/power-local-llm/autogen-review) y [Semantic Kernel](/es/power-local-llm/semantic-kernel-review) se construyeron desde el inicio como bibliotecas para desarrolladores, pensadas para componer llamadas a LLM dentro de aplicaciones. Leon comenzó como un producto de asistente personal orientado al usuario final — algo que se instala y con lo que se habla directamente — y su reconstrucción 2.0 añade capacidad agéntica sobre esa base de asistente, no al revés.",
         ],
         itemHeadings: true,
         rows: [
@@ -985,9 +985,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita Leon AI si',
             list: [
-              'Necesitas un framework documentado y listo para producción para componer llamadas a LLM dentro de una aplicación personalizada — [LangChain](/power-local-llm/langchain-review) o [LangGraph](/power-local-llm/langgraph-review) están construidos y documentados específicamente para eso',
-              'Necesitas coordinación multiagente basada en roles entre varios agentes especializados — [CrewAI](/power-local-llm/crewai-review) o [AutoGen](/power-local-llm/autogen-review) están diseñados para ese patrón, que no es el enfoque de Leon',
-              'Necesitas un agente con memoria a largo plazo persistente y autoeditable como producto principal ya documentado — [Letta](/power-local-llm/letta-review) está construido específicamente para eso',
+              'Necesitas un framework documentado y listo para producción para componer llamadas a LLM dentro de una aplicación personalizada — [LangChain](/es/power-local-llm/langchain-review) o [LangGraph](/es/power-local-llm/langgraph-review) están construidos y documentados específicamente para eso',
+              'Necesitas coordinación multiagente basada en roles entre varios agentes especializados — [CrewAI](/es/power-local-llm/crewai-review) o [AutoGen](/es/power-local-llm/autogen-review) están diseñados para ese patrón, que no es el enfoque de Leon',
+              'Necesitas un agente con memoria a largo plazo persistente y autoeditable como producto principal ya documentado — [Letta](/es/power-local-llm/letta-review) está construido específicamente para eso',
               'Necesitas soporte empresarial, un SLA o un producto alojado — Leon no tiene ningún plan comercial ni servicio en la nube alojado',
             ],
           },
@@ -999,9 +999,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evita Leon AI cuando necesites un framework o producto maduro y completamente documentado, o cuando la documentación incompleta de la reconstrucción 2.0 pudiera bloquear a tu equipo.**",
         items: [
           'Un equipo que necesita documentación estable y versionada hoy mismo — la 2.0 Developer Preview explícitamente aún no tiene documentación terminada, y el repositorio te remite a los archivos fuente en su lugar',
-          'Un equipo que construye una aplicación LLM personalizada en lugar de desplegar un producto de asistente — una biblioteca como [LangChain](/power-local-llm/langchain-review) o [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) encaja más directamente para componer llamadas dentro de tu propia aplicación',
+          'Un equipo que construye una aplicación LLM personalizada en lugar de desplegar un producto de asistente — una biblioteca como [LangChain](/es/power-local-llm/langchain-review) o [LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) encaja más directamente para componer llamadas dentro de tu propia aplicación',
           'Un equipo que necesita una base de colaboradores activamente grande y skills frecuentes de terceros — el proyecto se describe a sí mismo como aún desarrollado en gran parte en tiempo libre por un grupo pequeño, con la contribución a la 2.0 abierta deliberadamente por etapas mientras el núcleo se estabiliza',
-          'Un equipo que necesita memoria de agente persistente y autoeditable como función madura y documentada — [Letta](/power-local-llm/letta-review) está construido y documentado específicamente para eso, mientras que la capa de memoria de Leon en la 2.0 todavía es nueva',
+          'Un equipo que necesita memoria de agente persistente y autoeditable como función madura y documentada — [Letta](/es/power-local-llm/letta-review) está construido y documentado específicamente para eso, mientras que la capa de memoria de Leon en la 2.0 todavía es nueva',
           'Usa Leon AI en cambio cuando el requisito central sea un asistente personal autoalojado, al que hablarle, con capacidad sin conexión, y te sientas cómodo con un proyecto de código abierto más pequeño y en evolución',
         ],
         note: "La reconstrucción 2.0 de Leon es trabajo activo y en curso, no una promesa abandonada — el repositorio muestra commits regulares —, pero es explícitamente una developer preview, no una versión terminada, según el aviso publicado en el repositorio en marzo de 2026.",
@@ -1013,10 +1013,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Herramienta', 'Interfaz', 'Licencia', 'Respaldo', 'Ideal para'],
         rows: [
           { 'Herramienta': '[Leon AI](https://github.com/leon-ai/leon)', 'Interfaz': 'App de voz/texto + CLI', 'Licencia': 'MIT', 'Respaldo': 'Louis Grenard (independiente)', 'Ideal para': 'Asistente personal autoalojado' },
-          { 'Herramienta': '[Letta](/power-local-llm/letta-review)', 'Interfaz': 'Código Python / TS', 'Licencia': 'Apache 2.0', 'Respaldo': 'Letta Inc. (financiado por VC)', 'Ideal para': 'Memoria a largo plazo para un agente' },
-          { 'Herramienta': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'Interfaz': 'App autoalojada', 'Licencia': 'MIT', 'Respaldo': 'Independiente', 'Ideal para': 'Agente personal autosuperador' },
-          { 'Herramienta': '[AutoGen](/power-local-llm/autogen-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT / CC-BY', 'Respaldo': 'Microsoft Research', 'Ideal para': 'Patrones de conversación multiagente' },
-          { 'Herramienta': '[SuperAGI](/power-local-llm/superagi-review)', 'Interfaz': 'Consola web con GUI', 'Licencia': 'MIT', 'Respaldo': 'TransformerOptimus (independiente)', 'Ideal para': 'Agentes autónomos con interfaz gráfica' },
+          { 'Herramienta': '[Letta](/es/power-local-llm/letta-review)', 'Interfaz': 'Código Python / TS', 'Licencia': 'Apache 2.0', 'Respaldo': 'Letta Inc. (financiado por VC)', 'Ideal para': 'Memoria a largo plazo para un agente' },
+          { 'Herramienta': '[Hermes Agent](/es/power-local-llm/hermes-agent-review)', 'Interfaz': 'App autoalojada', 'Licencia': 'MIT', 'Respaldo': 'Independiente', 'Ideal para': 'Agente personal autosuperador' },
+          { 'Herramienta': '[AutoGen](/es/power-local-llm/autogen-review)', 'Interfaz': 'Código Python', 'Licencia': 'MIT / CC-BY', 'Respaldo': 'Microsoft Research', 'Ideal para': 'Patrones de conversación multiagente' },
+          { 'Herramienta': '[SuperAGI](/es/power-local-llm/superagi-review)', 'Interfaz': 'Consola web con GUI', 'Licencia': 'MIT', 'Respaldo': 'TransformerOptimus (independiente)', 'Ideal para': 'Agentes autónomos con interfaz gráfica' },
         ],
       },
       commonMistakes: {
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 2: esperar que Leon funcione como una biblioteca de orquestación LLM de propósito general',
-            content: "Leon AI es un producto de asistente personal para el usuario final que se instala y con el que se habla, no una biblioteca de Python o JavaScript para componer llamadas a LLM dentro de tu propia aplicación. Para ese caso de uso, [LangChain](/power-local-llm/langchain-review) o [LangGraph](/power-local-llm/langgraph-review) están construidos y documentados específicamente.",
+            content: "Leon AI es un producto de asistente personal para el usuario final que se instala y con el que se habla, no una biblioteca de Python o JavaScript para componer llamadas a LLM dentro de tu propia aplicación. Para ese caso de uso, [LangChain](/es/power-local-llm/langchain-review) o [LangGraph](/es/power-local-llm/langgraph-review) están construidos y documentados específicamente.",
           },
           {
             title: 'Error 3: asumir que existe un producto Leon Cloud alojado',
@@ -1069,11 +1069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de Letta: funciones, precios, alternativas](/power-local-llm/letta-review) — el framework de memoria a largo plazo para agentes, en comparación con el enfoque de Leon centrado en un asistente personal al que hablarle.',
-          '[Reseña de AutoGen: funciones, precios, alternativas](/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, para equipos que coordinan varios agentes en lugar de ejecutar un único asistente autoalojado.',
-          '[Reseña de SuperAGI: funciones, precios, alternativas](/power-local-llm/superagi-review) — otro proyecto independiente de código abierto de agente autónomo con interfaz gráfica, en comparación con la instalación CLI-first de Leon.',
-          '[Reseña de Hermes Agent: funciones, precios, alternativas](/power-local-llm/hermes-agent-review) — una comparación más cercana con un agente personal autoalojado, también construido en torno a la memoria persistente.',
-          '[Directorio de software de LLM locales](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Leon AI entre los frameworks de agentes.',
+          '[Reseña de Letta: funciones, precios, alternativas](/es/power-local-llm/letta-review) — el framework de memoria a largo plazo para agentes, en comparación con el enfoque de Leon centrado en un asistente personal al que hablarle.',
+          '[Reseña de AutoGen: funciones, precios, alternativas](/es/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, para equipos que coordinan varios agentes en lugar de ejecutar un único asistente autoalojado.',
+          '[Reseña de SuperAGI: funciones, precios, alternativas](/es/power-local-llm/superagi-review) — otro proyecto independiente de código abierto de agente autónomo con interfaz gráfica, en comparación con la instalación CLI-first de Leon.',
+          '[Reseña de Hermes Agent: funciones, precios, alternativas](/es/power-local-llm/hermes-agent-review) — una comparación más cercana con un agente personal autoalojado, también construido en torno a la memoria persistente.',
+          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Leon AI entre los frameworks de agentes.',
         ],
       },
     },
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A 2.0 Developer Preview adiciona três modos de execução (smart, controlled, agent), skills nativos e skills de agente (baseados em SKILL.md), memória em camadas, e suporte a provedores de IA locais e remotos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise cobre tanto a branch estável `master` do Leon quanto a 2.0 Developer Preview na branch `develop`, já que o repositório do GitHub mantém ambas ativamente e o projeto apresenta explicitamente a 2.0 como uma reconstrução do zero, não apenas um aumento de versão. Veja o [Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) para comparar o Leon AI com outros frameworks de agentes.' },
+          { type: 'note', text: 'Esta análise cobre tanto a branch estável `master` do Leon quanto a 2.0 Developer Preview na branch `develop`, já que o repositório do GitHub mantém ambas ativamente e o projeto apresenta explicitamente a 2.0 como uma reconstrução do zero, não apenas um aumento de versão. Veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para comparar o Leon AI com outros frameworks de agentes.' },
         ],
       },
       history: {
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**O Leon AI começou como um projeto pessoal do desenvolvedor francês Louis Grenard em 2017 e está em desenvolvimento ativo, em grande parte no tempo livre, desde o primeiro lançamento público em 2019.** Durante a maior parte de sua história, o Leon foi um assistente pessoal clássico de classificação de intenções: você fala ou digita um pedido, ele é comparado com intenções treinadas, e um skill correspondente executa a ação — construído para funcionar offline, de modo que os pedidos não precisem sair da máquina.",
           "Segundo um aviso no [repositório do GitHub](https://github.com/leon-ai/leon) de março de 2026, o Leon está em plena 2.0 Developer Preview — uma reconstrução do núcleo em torno de ferramentas, contexto, memória e execução agentiva, em vez de apenas intenções fixas. A branch `develop`, agora padrão do repositório, carrega esse novo núcleo; a versão mais antiga e estável, baseada em intenções, continua disponível na branch `master` para quem preferir o assistente documentado e pré-agentivo em vez da reescrita em andamento.",
-          "Essa história diferencia o Leon dos demais frameworks desta série. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) e [Semantic Kernel](/power-local-llm/semantic-kernel-review) foram construídos desde o início como bibliotecas para desenvolvedores, feitas para compor chamadas a LLMs dentro de aplicações. O Leon começou como um produto de assistente pessoal voltado ao usuário final — algo que você instala e com o qual conversa diretamente — e sua reconstrução 2.0 está adicionando capacidade agentiva sobre essa base de assistente, não o contrário.",
+          "Essa história diferencia o Leon dos demais frameworks desta série. [LangChain](/pt/power-local-llm/langchain-review), [CrewAI](/pt/power-local-llm/crewai-review), [AutoGen](/pt/power-local-llm/autogen-review) e [Semantic Kernel](/pt/power-local-llm/semantic-kernel-review) foram construídos desde o início como bibliotecas para desenvolvedores, feitas para compor chamadas a LLMs dentro de aplicações. O Leon começou como um produto de assistente pessoal voltado ao usuário final — algo que você instala e com o qual conversa diretamente — e sua reconstrução 2.0 está adicionando capacidade agentiva sobre essa base de assistente, não o contrário.",
         ],
         itemHeadings: true,
         rows: [
@@ -1254,9 +1254,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o Leon AI se',
             list: [
-              'Você precisa de um framework documentado e pronto para produção, para compor chamadas a LLMs dentro de uma aplicação personalizada — [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) foram construídos e documentados especificamente para isso',
-              'Você precisa de coordenação multiagente baseada em papéis entre vários agentes especializados — [CrewAI](/power-local-llm/crewai-review) ou [AutoGen](/power-local-llm/autogen-review) foram projetados para esse padrão, que não é o foco do Leon',
-              'Você precisa de um agente com memória de longo prazo persistente e autoeditável como produto central já documentado — o [Letta](/power-local-llm/letta-review) foi construído especificamente para isso',
+              'Você precisa de um framework documentado e pronto para produção, para compor chamadas a LLMs dentro de uma aplicação personalizada — [LangChain](/pt/power-local-llm/langchain-review) ou [LangGraph](/pt/power-local-llm/langgraph-review) foram construídos e documentados especificamente para isso',
+              'Você precisa de coordenação multiagente baseada em papéis entre vários agentes especializados — [CrewAI](/pt/power-local-llm/crewai-review) ou [AutoGen](/pt/power-local-llm/autogen-review) foram projetados para esse padrão, que não é o foco do Leon',
+              'Você precisa de um agente com memória de longo prazo persistente e autoeditável como produto central já documentado — o [Letta](/pt/power-local-llm/letta-review) foi construído especificamente para isso',
               'Você precisa de suporte empresarial, um SLA ou um produto hospedado — o Leon não tem nenhum plano comercial nem serviço em nuvem hospedado',
             ],
           },
@@ -1268,9 +1268,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Evite o Leon AI quando precisar de um framework ou produto maduro e totalmente documentado, ou quando a documentação incompleta da reconstrução 2.0 puder bloquear sua equipe.**",
         items: [
           'Uma equipe que precisa de documentação estável e versionada hoje — a 2.0 Developer Preview explicitamente ainda não tem documentação finalizada, e o repositório indica os arquivos-fonte em vez disso',
-          'Uma equipe que constrói uma aplicação LLM personalizada em vez de implantar um produto de assistente — uma biblioteca como [LangChain](/power-local-llm/langchain-review) ou [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) se encaixa mais diretamente para compor chamadas dentro da própria aplicação',
+          'Uma equipe que constrói uma aplicação LLM personalizada em vez de implantar um produto de assistente — uma biblioteca como [LangChain](/pt/power-local-llm/langchain-review) ou [LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) se encaixa mais diretamente para compor chamadas dentro da própria aplicação',
           'Uma equipe que precisa de uma base de colaboradores ativamente grande e skills frequentes de terceiros — o projeto se descreve como ainda desenvolvido em grande parte no tempo livre por um grupo pequeno, com a contribuição para a 2.0 sendo aberta deliberadamente por etapas enquanto o núcleo se estabiliza',
-          'Uma equipe que precisa de memória de agente persistente e autoeditável como recurso maduro e documentado — o [Letta](/power-local-llm/letta-review) foi construído e documentado especificamente para isso, enquanto a camada de memória do Leon na 2.0 ainda é nova',
+          'Uma equipe que precisa de memória de agente persistente e autoeditável como recurso maduro e documentado — o [Letta](/pt/power-local-llm/letta-review) foi construído e documentado especificamente para isso, enquanto a camada de memória do Leon na 2.0 ainda é nova',
           'Use o Leon AI em vez disso quando o requisito principal for um assistente pessoal autoinstalável, com o qual se conversa, com capacidade offline, e você se sentir confortável com um projeto de código aberto menor e em evolução',
         ],
         note: "A reconstrução 2.0 do Leon é trabalho ativo e em andamento, não uma promessa abandonada — o repositório mostra commits regulares —, mas é explicitamente uma developer preview, não um lançamento finalizado, segundo o aviso no repositório de março de 2026.",
@@ -1282,10 +1282,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ferramenta', 'Interface', 'Licença', 'Apoio', 'Melhor para'],
         rows: [
           { 'Ferramenta': '[Leon AI](https://github.com/leon-ai/leon)', 'Interface': 'App de voz/texto + CLI', 'Licença': 'MIT', 'Apoio': 'Louis Grenard (independente)', 'Melhor para': 'Assistente pessoal autoinstalável' },
-          { 'Ferramenta': '[Letta](/power-local-llm/letta-review)', 'Interface': 'Código Python / TS', 'Licença': 'Apache 2.0', 'Apoio': 'Letta Inc. (com investimento de VC)', 'Melhor para': 'Memória de longo prazo para um agente' },
-          { 'Ferramenta': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'Interface': 'App autoinstalável', 'Licença': 'MIT', 'Apoio': 'Independente', 'Melhor para': 'Agente pessoal autoaprimorável' },
-          { 'Ferramenta': '[AutoGen](/power-local-llm/autogen-review)', 'Interface': 'Código Python', 'Licença': 'MIT / CC-BY', 'Apoio': 'Microsoft Research', 'Melhor para': 'Padrões de conversa multiagente' },
-          { 'Ferramenta': '[SuperAGI](/power-local-llm/superagi-review)', 'Interface': 'Console web com GUI', 'Licença': 'MIT', 'Apoio': 'TransformerOptimus (independente)', 'Melhor para': 'Agentes autônomos baseados em GUI' },
+          { 'Ferramenta': '[Letta](/pt/power-local-llm/letta-review)', 'Interface': 'Código Python / TS', 'Licença': 'Apache 2.0', 'Apoio': 'Letta Inc. (com investimento de VC)', 'Melhor para': 'Memória de longo prazo para um agente' },
+          { 'Ferramenta': '[Hermes Agent](/pt/power-local-llm/hermes-agent-review)', 'Interface': 'App autoinstalável', 'Licença': 'MIT', 'Apoio': 'Independente', 'Melhor para': 'Agente pessoal autoaprimorável' },
+          { 'Ferramenta': '[AutoGen](/pt/power-local-llm/autogen-review)', 'Interface': 'Código Python', 'Licença': 'MIT / CC-BY', 'Apoio': 'Microsoft Research', 'Melhor para': 'Padrões de conversa multiagente' },
+          { 'Ferramenta': '[SuperAGI](/pt/power-local-llm/superagi-review)', 'Interface': 'Console web com GUI', 'Licença': 'MIT', 'Apoio': 'TransformerOptimus (independente)', 'Melhor para': 'Agentes autônomos baseados em GUI' },
         ],
       },
       commonMistakes: {
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 2: esperar que o Leon funcione como uma biblioteca de orquestração LLM de propósito geral',
-            content: "O Leon AI é um produto de assistente pessoal para o usuário final, que você instala e com o qual conversa, não uma biblioteca Python ou JavaScript para compor chamadas a LLMs dentro da sua própria aplicação. Para esse caso de uso, [LangChain](/power-local-llm/langchain-review) ou [LangGraph](/power-local-llm/langgraph-review) foram construídos e documentados especificamente.",
+            content: "O Leon AI é um produto de assistente pessoal para o usuário final, que você instala e com o qual conversa, não uma biblioteca Python ou JavaScript para compor chamadas a LLMs dentro da sua própria aplicação. Para esse caso de uso, [LangChain](/pt/power-local-llm/langchain-review) ou [LangGraph](/pt/power-local-llm/langgraph-review) foram construídos e documentados especificamente.",
           },
           {
             title: 'Erro 3: presumir que existe um produto Leon Cloud hospedado',
@@ -1338,11 +1338,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise da Letta: recursos, preços, alternativas](/power-local-llm/letta-review) — o framework de memória de longo prazo para agentes, em comparação com o foco do Leon em um assistente pessoal para conversar.',
-          '[Análise do AutoGen: recursos, preços, alternativas](/power-local-llm/autogen-review) — o framework de conversa multiagente do Microsoft Research, para equipes que coordenam vários agentes em vez de rodar um único assistente autoinstalável.',
-          '[Análise do SuperAGI: recursos, preços, alternativas](/power-local-llm/superagi-review) — outro projeto independente de código aberto de agente autônomo com GUI, em comparação com a instalação CLI-first do Leon.',
-          '[Análise do Hermes Agent: recursos, preços, alternativas](/power-local-llm/hermes-agent-review) — uma comparação mais próxima com um agente pessoal autoinstalável, também construído em torno de memória persistente.',
-          '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Leon AI se encaixa entre os frameworks de agentes.',
+          '[Análise da Letta: recursos, preços, alternativas](/pt/power-local-llm/letta-review) — o framework de memória de longo prazo para agentes, em comparação com o foco do Leon em um assistente pessoal para conversar.',
+          '[Análise do AutoGen: recursos, preços, alternativas](/pt/power-local-llm/autogen-review) — o framework de conversa multiagente do Microsoft Research, para equipes que coordenam vários agentes em vez de rodar um único assistente autoinstalável.',
+          '[Análise do SuperAGI: recursos, preços, alternativas](/pt/power-local-llm/superagi-review) — outro projeto independente de código aberto de agente autônomo com GUI, em comparação com a instalação CLI-first do Leon.',
+          '[Análise do Hermes Agent: recursos, preços, alternativas](/pt/power-local-llm/hermes-agent-review) — uma comparação mais próxima com um agente pessoal autoinstalável, também construído em torno de memória persistente.',
+          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Leon AI se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1416,7 +1416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Previewでは3つの実行モード（smart、controlled、agent）、ネイティブスキルとエージェントスキル（SKILL.mdベース）、階層化メモリー、ローカルおよびリモートのAIプロバイダー対応が追加される',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューではLeonの安定版`master`ブランチと`develop`ブランチの2.0 Developer Previewの両方を扱います。GitHubリポジトリは両方を積極的に保守しており、プロジェクトは2.0を単なるバージョンアップではなくゼロからの作り直しと明確に位置づけているためです。Leon AIが他のエージェントフレームワークとどう比較されるかは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { type: 'note', text: 'このレビューではLeonの安定版`master`ブランチと`develop`ブランチの2.0 Developer Previewの両方を扱います。GitHubリポジトリは両方を積極的に保守しており、プロジェクトは2.0を単なるバージョンアップではなくゼロからの作り直しと明確に位置づけているためです。Leon AIが他のエージェントフレームワークとどう比較されるかは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
         ],
       },
       history: {
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AIは2017年にフランス人開発者Louis Grenardの趣味プロジェクトとして始まり、2019年の最初の公開リリース以降、主に空き時間で活発に開発が続いています。** その歴史の大半において、Leonは古典的なインテント分類型のパーソナルアシスタントでした — 話しかけるか入力すると、その要求が学習済みのインテントと照合され、一致したスキルがアクションを実行する仕組みで、リクエストがマシンの外に出なくて済むようオフライン動作を前提に作られています。",
           "2026年3月の[GitHubリポジトリ](https://github.com/leon-ai/leon)の告知によると、Leonは現在2.0 Developer Previewの真っ最中で、固定インテントだけでなくツール・コンテキスト・メモリー・エージェント的実行を中心にコアを作り直しています。現在リポジトリのデフォルトとなった`develop`ブランチがこの新しいコアを担い、より安定した従来のインテントベースのバージョンは、進行中の書き直しではなく文書化済みでエージェント化以前のアシスタントを望む人向けに`master`ブランチで引き続き利用できます。",
-          "この歴史は、このシリーズの他のフレームワークとLeonを区別しています。[LangChain](/power-local-llm/langchain-review)、[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)、[Semantic Kernel](/power-local-llm/semantic-kernel-review)は、当初からLLM呼び出しをアプリケーションに組み込むための開発者向けライブラリとして構築されました。Leonはエンドユーザー向けのパーソナルアシスタント製品として始まり — インストールして直接話しかけるもの — その2.0への作り直しは、逆ではなくこのアシスタントという土台の上にエージェント的な能力を加えるものです。",
+          "この歴史は、このシリーズの他のフレームワークとLeonを区別しています。[LangChain](/ja/power-local-llm/langchain-review)、[CrewAI](/ja/power-local-llm/crewai-review)、[AutoGen](/ja/power-local-llm/autogen-review)、[Semantic Kernel](/ja/power-local-llm/semantic-kernel-review)は、当初からLLM呼び出しをアプリケーションに組み込むための開発者向けライブラリとして構築されました。Leonはエンドユーザー向けのパーソナルアシスタント製品として始まり — インストールして直接話しかけるもの — その2.0への作り直しは、逆ではなくこのアシスタントという土台の上にエージェント的な能力を加えるものです。",
         ],
         itemHeadings: true,
         rows: [
@@ -1523,9 +1523,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな場合はLeon AIを避ける',
             list: [
-              'カスタムアプリケーションにLLM呼び出しを組み込むための、文書化されたプロダクション対応のフレームワークが必要 — [LangChain](/power-local-llm/langchain-review)や[LangGraph](/power-local-llm/langgraph-review)はまさにそのために構築・文書化されている',
-              '複数の専門エージェント間でロールベースのマルチエージェント調整が必要 — [CrewAI](/power-local-llm/crewai-review)や[AutoGen](/power-local-llm/autogen-review)はそのパターン向けに設計されており、Leonの焦点ではない',
-              '永続的で自己編集可能な長期記憶を持つ、すでに文書化されたコア製品としてのエージェントが必要 — [Letta](/power-local-llm/letta-review)はまさにそのために構築されている',
+              'カスタムアプリケーションにLLM呼び出しを組み込むための、文書化されたプロダクション対応のフレームワークが必要 — [LangChain](/ja/power-local-llm/langchain-review)や[LangGraph](/ja/power-local-llm/langgraph-review)はまさにそのために構築・文書化されている',
+              '複数の専門エージェント間でロールベースのマルチエージェント調整が必要 — [CrewAI](/ja/power-local-llm/crewai-review)や[AutoGen](/ja/power-local-llm/autogen-review)はそのパターン向けに設計されており、Leonの焦点ではない',
+              '永続的で自己編集可能な長期記憶を持つ、すでに文書化されたコア製品としてのエージェントが必要 — [Letta](/ja/power-local-llm/letta-review)はまさにそのために構築されている',
               'エンタープライズサポート、SLA、ホスト型製品が必要 — Leonには商用プランもホスト型クラウドサービスも一切ない',
             ],
           },
@@ -1537,9 +1537,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**成熟した完全に文書化されたフレームワークや製品が必要な場合、または2.0の作り直しの不完全なドキュメントがチームの妨げになる場合は、Leon AIを避けてください。**",
         items: [
           '今日、安定してバージョン管理されたドキュメントが必要なチーム — 2.0 Developer Previewは明確にまだ完成したドキュメントを持たず、リポジトリは代わりにソースファイルを参照するよう案内する',
-          'アシスタント製品を導入するのではなく、カスタムLLMアプリケーションを構築するチーム — [LangChain](/power-local-llm/langchain-review)や[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)のようなライブラリの方が、自前のアプリに呼び出しを組み込むのに直接的に適している',
+          'アシスタント製品を導入するのではなく、カスタムLLMアプリケーションを構築するチーム — [LangChain](/ja/power-local-llm/langchain-review)や[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)のようなライブラリの方が、自前のアプリに呼び出しを組み込むのに直接的に適している',
           '活発に大規模なコントリビューターベースと頻繁なサードパーティスキルが必要なチーム — このプロジェクトは今も主に少人数のグループが空き時間で開発していると自認しており、コアが安定するまで2.0への貢献は意図的に段階的に開放されている',
-          '成熟し文書化された機能としての永続的・自己編集可能なエージェントメモリーが必要なチーム — [Letta](/power-local-llm/letta-review)はまさにそのために構築・文書化されているのに対し、Leonの2.0のメモリー層はまだ新しい',
+          '成熟し文書化された機能としての永続的・自己編集可能なエージェントメモリーが必要なチーム — [Letta](/ja/power-local-llm/letta-review)はまさにそのために構築・文書化されているのに対し、Leonの2.0のメモリー層はまだ新しい',
           '代わりに、決定的な要件がセルフホストで話しかけられるオフライン対応のパーソナルアシスタントであり、より小規模で発展途上のオープンソースプロジェクトでも構わない場合にLeon AIを使う',
         ],
         note: "Leonの2.0への作り直しは放棄された約束ではなく、活発で進行中の作業です — リポジトリでは定期的なコミットが確認できます — が、2026年3月のリポジトリの告知時点では、明確に完成版のリリースではなくdeveloper previewです。",
@@ -1551,10 +1551,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ツール', 'インターフェース', 'ライセンス', '運営元', '最適な用途'],
         rows: [
           { 'ツール': '[Leon AI](https://github.com/leon-ai/leon)', 'インターフェース': '音声/テキストアプリ + CLI', 'ライセンス': 'MIT', '運営元': 'Louis Grenard（個人）', '最適な用途': 'セルフホスト型パーソナルアシスタント' },
-          { 'ツール': '[Letta](/power-local-llm/letta-review)', 'インターフェース': 'Python / TSコード', 'ライセンス': 'Apache 2.0', '運営元': 'Letta Inc.（VC出資）', '最適な用途': '単一エージェントの長期記憶' },
-          { 'ツール': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'インターフェース': 'セルフホスト型アプリ', 'ライセンス': 'MIT', '運営元': '個人', '最適な用途': '自己改善型パーソナルエージェント' },
-          { 'ツール': '[AutoGen](/power-local-llm/autogen-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT / CC-BY', '運営元': 'Microsoft Research', '最適な用途': 'マルチエージェント会話パターン' },
-          { 'ツール': '[SuperAGI](/power-local-llm/superagi-review)', 'インターフェース': 'WebGUIコンソール', 'ライセンス': 'MIT', '運営元': 'TransformerOptimus（個人）', '最適な用途': 'GUIベースの自律エージェント' },
+          { 'ツール': '[Letta](/ja/power-local-llm/letta-review)', 'インターフェース': 'Python / TSコード', 'ライセンス': 'Apache 2.0', '運営元': 'Letta Inc.（VC出資）', '最適な用途': '単一エージェントの長期記憶' },
+          { 'ツール': '[Hermes Agent](/ja/power-local-llm/hermes-agent-review)', 'インターフェース': 'セルフホスト型アプリ', 'ライセンス': 'MIT', '運営元': '個人', '最適な用途': '自己改善型パーソナルエージェント' },
+          { 'ツール': '[AutoGen](/ja/power-local-llm/autogen-review)', 'インターフェース': 'Pythonコード', 'ライセンス': 'MIT / CC-BY', '運営元': 'Microsoft Research', '最適な用途': 'マルチエージェント会話パターン' },
+          { 'ツール': '[SuperAGI](/ja/power-local-llm/superagi-review)', 'インターフェース': 'WebGUIコンソール', 'ライセンス': 'MIT', '運営元': 'TransformerOptimus（個人）', '最適な用途': 'GUIベースの自律エージェント' },
         ],
       },
       commonMistakes: {
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解2：Leonが汎用のLLMオーケストレーションライブラリのように動くと期待してしまう',
-            content: "Leon AIはインストールして話しかけるエンドユーザー向けのパーソナルアシスタント製品であり、自前のアプリケーション内でLLM呼び出しを組み立てるためのPythonやJavaScriptのライブラリではありません。その用途には[LangChain](/power-local-llm/langchain-review)や[LangGraph](/power-local-llm/langgraph-review)がまさにそのために構築・文書化されています。",
+            content: "Leon AIはインストールして話しかけるエンドユーザー向けのパーソナルアシスタント製品であり、自前のアプリケーション内でLLM呼び出しを組み立てるためのPythonやJavaScriptのライブラリではありません。その用途には[LangChain](/ja/power-local-llm/langchain-review)や[LangGraph](/ja/power-local-llm/langgraph-review)がまさにそのために構築・文書化されています。",
           },
           {
             title: '誤解3：ホスト型のLeon Cloud製品が存在すると思い込んでしまう',
@@ -1607,11 +1607,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Lettaレビュー：機能・料金・代替ツール](/power-local-llm/letta-review) — 長期記憶エージェントフレームワークで、話しかけられるパーソナルアシスタントに焦点を当てたLeonとの比較対象。',
-          '[AutoGenレビュー：機能・料金・代替ツール](/power-local-llm/autogen-review) — Microsoft Researchのマルチエージェント会話フレームワークで、単一のセルフホスト型アシスタントを動かすのではなく複数エージェントを調整するチーム向け。',
-          '[SuperAGIレビュー：機能・料金・代替ツール](/power-local-llm/superagi-review) — もう一つの独立系・GUIベースのオープンソース自律エージェントプロジェクトで、LeonのCLI優先のセットアップとの比較対象。',
-          '[Hermes Agentレビュー：機能・料金・代替ツール](/power-local-llm/hermes-agent-review) — 永続的メモリーを中心に構築された、より近いセルフホスト型パーソナルエージェントとの比較。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLeon AIがどこに位置するかを含む。',
+          '[Lettaレビュー：機能・料金・代替ツール](/ja/power-local-llm/letta-review) — 長期記憶エージェントフレームワークで、話しかけられるパーソナルアシスタントに焦点を当てたLeonとの比較対象。',
+          '[AutoGenレビュー：機能・料金・代替ツール](/ja/power-local-llm/autogen-review) — Microsoft Researchのマルチエージェント会話フレームワークで、単一のセルフホスト型アシスタントを動かすのではなく複数エージェントを調整するチーム向け。',
+          '[SuperAGIレビュー：機能・料金・代替ツール](/ja/power-local-llm/superagi-review) — もう一つの独立系・GUIベースのオープンソース自律エージェントプロジェクトで、LeonのCLI優先のセットアップとの比較対象。',
+          '[Hermes Agentレビュー：機能・料金・代替ツール](/ja/power-local-llm/hermes-agent-review) — 永続的メモリーを中心に構築された、より近いセルフホスト型パーソナルエージェントとの比較。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLeon AIがどこに位置するかを含む。',
         ],
       },
     },
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Preview新增三种执行模式（smart、controlled、agent）、原生技能与智能体技能（基于SKILL.md）、分层记忆，以及对本地和远程AI提供方的支持',
         ],
         callouts: [
-          { type: 'note', text: '本评测同时涵盖Leon的稳定`master`分支和`develop`分支上的2.0 Developer Preview，因为GitHub仓库对两者都在积极维护，且项目明确将2.0定位为从零重构，而不是简单的版本升级。关于Leon AI与其他智能体框架的对比，参见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。' },
+          { type: 'note', text: '本评测同时涵盖Leon的稳定`master`分支和`develop`分支上的2.0 Developer Preview，因为GitHub仓库对两者都在积极维护，且项目明确将2.0定位为从零重构，而不是简单的版本升级。关于Leon AI与其他智能体框架的对比，参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
         ],
       },
       history: {
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AI于2017年由法国开发者Louis Grenard作为个人业余项目发起，自2019年首次公开发布以来一直在活跃开发，且主要是在业余时间完成的。**在其历史的大部分时间里，Leon一直是一款经典的基于意图分类的个人助手：你说话或打字发出请求，请求会与训练好的意图进行匹配，匹配到的技能随后执行相应操作——其设计目标是可离线运行，使请求无需离开设备。",
           "根据[GitHub仓库](https://github.com/leon-ai/leon)2026年3月发布的一则通知，Leon正处于2.0 Developer Preview阶段——围绕工具、上下文、记忆和智能体化执行重构核心，而不再只依赖固定意图。如今作为仓库默认分支的`develop`分支承载着这一新核心；更稳定、基于意图的旧版本仍保留在`master`分支上，供那些想要文档完善、智能体化之前的助手、而不是正在进行的重写版本的用户使用。",
-          "这段历史让Leon有别于本系列中的其他框架。[LangChain](/power-local-llm/langchain-review)、[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)和[Semantic Kernel](/power-local-llm/semantic-kernel-review)从一开始就是作为开发者库构建的，用于将LLM调用组合进应用程序。Leon最初是面向终端用户的个人助手产品——一个你安装后直接与之对话的东西——其2.0重构是在这一助手定位之上叠加智能体化能力，而不是反过来。",
+          "这段历史让Leon有别于本系列中的其他框架。[LangChain](/zh/power-local-llm/langchain-review)、[CrewAI](/zh/power-local-llm/crewai-review)、[AutoGen](/zh/power-local-llm/autogen-review)和[Semantic Kernel](/zh/power-local-llm/semantic-kernel-review)从一开始就是作为开发者库构建的，用于将LLM调用组合进应用程序。Leon最初是面向终端用户的个人助手产品——一个你安装后直接与之对话的东西——其2.0重构是在这一助手定位之上叠加智能体化能力，而不是反过来。",
         ],
         itemHeadings: true,
         rows: [
@@ -1792,9 +1792,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '应避免使用Leon AI的情况',
             list: [
-              '你需要一个文档完善、可用于生产的框架，用来将LLM调用组合进自定义应用——[LangChain](/power-local-llm/langchain-review)或[LangGraph](/power-local-llm/langgraph-review)正是为此而构建和文档化的',
-              '你需要在多个专业智能体之间进行基于角色的多智能体协调——[CrewAI](/power-local-llm/crewai-review)或[AutoGen](/power-local-llm/autogen-review)专为此模式设计，而这不是Leon的重点',
-              '你需要一个以持久、可自我编辑的长期记忆为核心、且已有完善文档的智能体产品——[Letta](/power-local-llm/letta-review)正是为此而构建',
+              '你需要一个文档完善、可用于生产的框架，用来将LLM调用组合进自定义应用——[LangChain](/zh/power-local-llm/langchain-review)或[LangGraph](/zh/power-local-llm/langgraph-review)正是为此而构建和文档化的',
+              '你需要在多个专业智能体之间进行基于角色的多智能体协调——[CrewAI](/zh/power-local-llm/crewai-review)或[AutoGen](/zh/power-local-llm/autogen-review)专为此模式设计，而这不是Leon的重点',
+              '你需要一个以持久、可自我编辑的长期记忆为核心、且已有完善文档的智能体产品——[Letta](/zh/power-local-llm/letta-review)正是为此而构建',
               '你需要企业支持、SLA或托管产品——Leon完全没有商业套餐或托管云服务',
             ],
           },
@@ -1806,9 +1806,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**当你需要一个成熟、文档完善的框架或产品，或2.0重构不完整的文档会阻碍团队进展时，应避免使用Leon AI。**",
         items: [
           '团队今天就需要稳定、版本化的文档——2.0 Developer Preview明确尚无完整文档，仓库转而引导你查看源文件',
-          '团队正在构建自定义LLM应用，而不是部署助手产品——像[LangChain](/power-local-llm/langchain-review)或[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)这样的库更适合用于在自有应用中组合调用',
+          '团队正在构建自定义LLM应用，而不是部署助手产品——像[LangChain](/zh/power-local-llm/langchain-review)或[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)这样的库更适合用于在自有应用中组合调用',
           '团队需要活跃、庞大的贡献者群体以及频繁的第三方技能——该项目自称目前仍主要由一小群人在业余时间开发，且在核心稳定之前，对2.0的贡献刻意分阶段开放',
-          '团队需要将持久、可自我编辑的智能体记忆作为成熟且有文档记录的功能——[Letta](/power-local-llm/letta-review)正是为此而构建并有完善文档，而Leon在2.0中的记忆层仍属新生事物',
+          '团队需要将持久、可自我编辑的智能体记忆作为成熟且有文档记录的功能——[Letta](/zh/power-local-llm/letta-review)正是为此而构建并有完善文档，而Leon在2.0中的记忆层仍属新生事物',
           '当核心需求是一个可对话的自托管个人助手、具备离线能力，且你能接受一个更小、仍在演进中的开源项目时，请改用Leon AI',
         ],
         note: "Leon的2.0重构是积极、持续进行中的工作，并非被放弃的承诺——仓库显示有规律的提交——但截至2026年3月仓库发布的通知，它明确仍是开发者预览版，而非最终发布版本。",
@@ -1820,10 +1820,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['工具', '界面', '许可证', '支持方', '最适合'],
         rows: [
           { '工具': '[Leon AI](https://github.com/leon-ai/leon)', '界面': '语音/文本应用 + CLI', '许可证': 'MIT', '支持方': 'Louis Grenard（独立开发者）', '最适合': '自托管个人助手' },
-          { '工具': '[Letta](/power-local-llm/letta-review)', '界面': 'Python / TS代码', '许可证': 'Apache 2.0', '支持方': 'Letta Inc.（VC投资）', '最适合': '单智能体长期记忆' },
-          { '工具': '[Hermes Agent](/power-local-llm/hermes-agent-review)', '界面': '自托管应用', '许可证': 'MIT', '支持方': '独立开发者', '最适合': '自我改进型个人智能体' },
-          { '工具': '[AutoGen](/power-local-llm/autogen-review)', '界面': 'Python代码', '许可证': 'MIT / CC-BY', '支持方': 'Microsoft Research', '最适合': '多智能体对话模式' },
-          { '工具': '[SuperAGI](/power-local-llm/superagi-review)', '界面': 'Web GUI控制台', '许可证': 'MIT', '支持方': 'TransformerOptimus（独立开发者）', '最适合': '基于GUI的自主智能体' },
+          { '工具': '[Letta](/zh/power-local-llm/letta-review)', '界面': 'Python / TS代码', '许可证': 'Apache 2.0', '支持方': 'Letta Inc.（VC投资）', '最适合': '单智能体长期记忆' },
+          { '工具': '[Hermes Agent](/zh/power-local-llm/hermes-agent-review)', '界面': '自托管应用', '许可证': 'MIT', '支持方': '独立开发者', '最适合': '自我改进型个人智能体' },
+          { '工具': '[AutoGen](/zh/power-local-llm/autogen-review)', '界面': 'Python代码', '许可证': 'MIT / CC-BY', '支持方': 'Microsoft Research', '最适合': '多智能体对话模式' },
+          { '工具': '[SuperAGI](/zh/power-local-llm/superagi-review)', '界面': 'Web GUI控制台', '许可证': 'MIT', '支持方': 'TransformerOptimus（独立开发者）', '最适合': '基于GUI的自主智能体' },
         ],
       },
       commonMistakes: {
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区二：期望Leon像通用LLM编排库一样工作',
-            content: "Leon AI是一款你安装后直接与之对话的面向终端用户的个人助手产品，而不是一个用于在自有应用中组合LLM调用的Python或JavaScript库。对于那种用例，[LangChain](/power-local-llm/langchain-review)或[LangGraph](/power-local-llm/langgraph-review)正是为此而构建和文档化的。",
+            content: "Leon AI是一款你安装后直接与之对话的面向终端用户的个人助手产品，而不是一个用于在自有应用中组合LLM调用的Python或JavaScript库。对于那种用例，[LangChain](/zh/power-local-llm/langchain-review)或[LangGraph](/zh/power-local-llm/langgraph-review)正是为此而构建和文档化的。",
           },
           {
             title: '误区三：以为存在托管的Leon Cloud产品',
@@ -1876,11 +1876,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[Letta评测：功能、价格、替代方案](/power-local-llm/letta-review)——长期记忆智能体框架，可与Leon专注于可对话个人助手的定位进行对比。',
-          '[AutoGen评测：功能、价格、替代方案](/power-local-llm/autogen-review)——Microsoft Research的多智能体对话框架，适合需要协调多个智能体、而不是运行单个自托管助手的团队。',
-          '[SuperAGI评测：功能、价格、替代方案](/power-local-llm/superagi-review)——另一款独立、基于GUI的开源自主智能体项目，可与Leon以CLI为先的安装方式进行对比。',
-          '[Hermes Agent评测：功能、价格、替代方案](/power-local-llm/hermes-agent-review)——一个更接近的自托管个人智能体对比对象，同样围绕持久记忆构建。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含Leon AI在各类智能体框架中的定位。',
+          '[Letta评测：功能、价格、替代方案](/zh/power-local-llm/letta-review)——长期记忆智能体框架，可与Leon专注于可对话个人助手的定位进行对比。',
+          '[AutoGen评测：功能、价格、替代方案](/zh/power-local-llm/autogen-review)——Microsoft Research的多智能体对话框架，适合需要协调多个智能体、而不是运行单个自托管助手的团队。',
+          '[SuperAGI评测：功能、价格、替代方案](/zh/power-local-llm/superagi-review)——另一款独立、基于GUI的开源自主智能体项目，可与Leon以CLI为先的安装方式进行对比。',
+          '[Hermes Agent评测：功能、价格、替代方案](/zh/power-local-llm/hermes-agent-review)——一个更接近的自托管个人智能体对比对象，同样围绕持久记忆构建。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含Leon AI在各类智能体框架中的定位。',
         ],
       },
     },
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تضيف نسخة 2.0 Developer Preview ثلاثة أوضاع تنفيذ (smart وcontrolled وagent)، ومهارات أصلية (native skills) ومهارات وكيلية (تعتمد على SKILL.md)، وذاكرة متعددة الطبقات، ودعمًا لمزودي ذكاء اصطناعي محليين وعن بُعد',
         ],
         callouts: [
-          { type: 'note', text: 'تغطي هذه المراجعة فرع Leon المستقر `master` ونسخة 2.0 Developer Preview على فرع `develop` معًا، لأن مستودع GitHub يحافظ عليهما بنشاط، ولأن المشروع يصف 2.0 صراحة بأنها إعادة بناء كاملة وليست مجرد ترقية إصدار. راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) لمقارنة سريعة بين Leon AI وأطر العمل الوكيلية الأخرى.' },
+          { type: 'note', text: 'تغطي هذه المراجعة فرع Leon المستقر `master` ونسخة 2.0 Developer Preview على فرع `develop` معًا، لأن مستودع GitHub يحافظ عليهما بنشاط، ولأن المشروع يصف 2.0 صراحة بأنها إعادة بناء كاملة وليست مجرد ترقية إصدار. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) لمقارنة سريعة بين Leon AI وأطر العمل الوكيلية الأخرى.' },
         ],
       },
       history: {
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**بدأ Leon AI كمشروع شخصي للمطور الفرنسي Louis Grenard عام 2017، وهو قيد تطوير نشط، في معظمه خلال أوقات الفراغ، منذ إصداره العلني الأول عام 2019.** على مدى معظم تاريخه، كان Leon مساعدًا شخصيًا كلاسيكيًا يعتمد على تصنيف النوايا: تتحدث إليه أو تكتب له طلبًا، فتُطابَق مع نوايا مدرَّبة مسبقًا، ثم تنفّذ مهارة مطابقة الإجراء — وقد بُني ليعمل دون اتصال حتى لا تضطر الطلبات لمغادرة الجهاز.",
           "بحسب إشعار في [مستودع GitHub](https://github.com/leon-ai/leon) بتاريخ مارس 2026، يمر Leon حاليًا بمرحلة 2.0 Developer Preview — إعادة بناء للنواة حول الأدوات والسياق والذاكرة والتنفيذ الوكيلي، بدلًا من النوايا الثابتة وحدها. يحمل فرع `develop`، الذي أصبح الآن الفرع الافتراضي للمستودع، هذه النواة الجديدة؛ بينما تبقى النسخة الأقدم والأكثر استقرارًا، والقائمة على النوايا، متاحة على فرع `master` لمن يفضّل المساعد الموثّق وما قبل الوكيلي بدلًا من إعادة الكتابة الجارية.",
-          "يميّز هذا التاريخ Leon عن بقية أطر العمل في هذه السلسلة. فقد بُنيت [LangChain](/power-local-llm/langchain-review) و[CrewAI](/power-local-llm/crewai-review) و[AutoGen](/power-local-llm/autogen-review) و[Semantic Kernel](/power-local-llm/semantic-kernel-review) منذ البداية كمكتبات للمطورين لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيقات. بدأ Leon كمنتج مساعد شخصي موجَّه للمستخدم النهائي — شيء تثبّته وتتحدث إليه مباشرة — وتضيف إعادة بنائه في 2.0 قدرات وكيلية فوق هذا الإطار الخاص بالمساعد، لا العكس.",
+          "يميّز هذا التاريخ Leon عن بقية أطر العمل في هذه السلسلة. فقد بُنيت [LangChain](/ar/power-local-llm/langchain-review) و[CrewAI](/ar/power-local-llm/crewai-review) و[AutoGen](/ar/power-local-llm/autogen-review) و[Semantic Kernel](/ar/power-local-llm/semantic-kernel-review) منذ البداية كمكتبات للمطورين لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيقات. بدأ Leon كمنتج مساعد شخصي موجَّه للمستخدم النهائي — شيء تثبّته وتتحدث إليه مباشرة — وتضيف إعادة بنائه في 2.0 قدرات وكيلية فوق هذا الإطار الخاص بالمساعد، لا العكس.",
         ],
         itemHeadings: true,
         rows: [
@@ -2061,9 +2061,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب Leon AI إذا',
             list: [
-              'كنت تحتاج إطار عمل موثّقًا وجاهزًا للإنتاج لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيق مخصص — بُنيت [LangChain](/power-local-llm/langchain-review) أو [LangGraph](/power-local-llm/langgraph-review) وتم توثيقهما تحديدًا لهذا الغرض',
-              'كنت تحتاج تنسيقًا متعدد الوكلاء قائمًا على الأدوار بين عدة وكلاء متخصصين — صُمم [CrewAI](/power-local-llm/crewai-review) أو [AutoGen](/power-local-llm/autogen-review) لهذا النمط، وهو ليس تركيز Leon',
-              'كنت تحتاج وكيلًا بذاكرة طويلة الأمد دائمة وقابلة للتعديل الذاتي كمنتج أساسي موثّق بالفعل — بُني [Letta](/power-local-llm/letta-review) تحديدًا لهذا الغرض',
+              'كنت تحتاج إطار عمل موثّقًا وجاهزًا للإنتاج لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيق مخصص — بُنيت [LangChain](/ar/power-local-llm/langchain-review) أو [LangGraph](/ar/power-local-llm/langgraph-review) وتم توثيقهما تحديدًا لهذا الغرض',
+              'كنت تحتاج تنسيقًا متعدد الوكلاء قائمًا على الأدوار بين عدة وكلاء متخصصين — صُمم [CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review) لهذا النمط، وهو ليس تركيز Leon',
+              'كنت تحتاج وكيلًا بذاكرة طويلة الأمد دائمة وقابلة للتعديل الذاتي كمنتج أساسي موثّق بالفعل — بُني [Letta](/ar/power-local-llm/letta-review) تحديدًا لهذا الغرض',
               'كنت تحتاج دعمًا للمؤسسات، أو اتفاقية مستوى خدمة (SLA)، أو منتجًا مستضافًا — لا تملك Leon أي خطة تجارية أو خدمة سحابية مستضافة على الإطلاق',
             ],
           },
@@ -2075,9 +2075,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**تجنّب Leon AI عندما تحتاج إطار عمل أو منتجًا ناضجًا وموثّقًا بالكامل، أو عندما تعيق الوثائق غير المكتملة لإعادة بناء 2.0 فريقك.**",
         items: [
           'فريق يحتاج اليوم وثائق مستقرة ومرقَّمة بإصدارات — لا تملك نسخة 2.0 Developer Preview صراحة وثائق مكتملة بعد، ويوجّهك المستودع بدلًا من ذلك إلى الملفات المصدرية',
-          'فريق يبني تطبيق نماذج لغة كبيرة مخصصًا بدلًا من نشر منتج مساعد — مكتبة مثل [LangChain](/power-local-llm/langchain-review) أو [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) أنسب مباشرة لتجميع الاستدعاءات داخل تطبيقك الخاص',
+          'فريق يبني تطبيق نماذج لغة كبيرة مخصصًا بدلًا من نشر منتج مساعد — مكتبة مثل [LangChain](/ar/power-local-llm/langchain-review) أو [LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) أنسب مباشرة لتجميع الاستدعاءات داخل تطبيقك الخاص',
           'فريق يحتاج قاعدة مساهمين نشطة وكبيرة ومهارات متكررة من أطراف ثالثة — يصف المشروع نفسه بأنه لا يزال يُطوَّر إلى حد كبير في أوقات الفراغ من قِبل مجموعة صغيرة، مع فتح المساهمة في 2.0 على مراحل عمدًا ريثما تستقر النواة',
-          'فريق يحتاج ذاكرة وكيل دائمة وقابلة للتعديل الذاتي كميزة ناضجة وموثّقة — بُني [Letta](/power-local-llm/letta-review) وتم توثيقه تحديدًا لهذا الغرض، بينما لا تزال طبقة الذاكرة في نسخة 2.0 من Leon جديدة',
+          'فريق يحتاج ذاكرة وكيل دائمة وقابلة للتعديل الذاتي كميزة ناضجة وموثّقة — بُني [Letta](/ar/power-local-llm/letta-review) وتم توثيقه تحديدًا لهذا الغرض، بينما لا تزال طبقة الذاكرة في نسخة 2.0 من Leon جديدة',
           'استخدم Leon AI بدلًا من ذلك عندما يكون المتطلب الأساسي مساعدًا شخصيًا ذاتي الاستضافة يمكن التحدث إليه، بقدرة على العمل دون اتصال، وكنت مرتاحًا مع مشروع مفتوح المصدر أصغر وقيد التطور',
         ],
         note: "إعادة بناء Leon نحو 2.0 عمل نشط ومستمر وليس وعدًا مهجورًا — يُظهر المستودع التزامات (commits) منتظمة — لكنها صراحة نسخة تجريبية للمطورين (developer preview) وليست إصدارًا نهائيًا، بحسب إشعار المستودع في مارس 2026.",
@@ -2089,10 +2089,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الأداة', 'الواجهة', 'الترخيص', 'الجهة الداعمة', 'الأنسب لـ'],
         rows: [
           { 'الأداة': '[Leon AI](https://github.com/leon-ai/leon)', 'الواجهة': 'تطبيق صوت/نص + CLI', 'الترخيص': 'MIT', 'الجهة الداعمة': 'Louis Grenard (مستقل)', 'الأنسب لـ': 'مساعد شخصي ذاتي الاستضافة' },
-          { 'الأداة': '[Letta](/power-local-llm/letta-review)', 'الواجهة': 'شيفرة Python / TS', 'الترخيص': 'Apache 2.0', 'الجهة الداعمة': 'Letta Inc. (بتمويل استثماري)', 'الأنسب لـ': 'ذاكرة طويلة الأمد لوكيل واحد' },
-          { 'الأداة': '[Hermes Agent](/power-local-llm/hermes-agent-review)', 'الواجهة': 'تطبيق ذاتي الاستضافة', 'الترخيص': 'MIT', 'الجهة الداعمة': 'مستقل', 'الأنسب لـ': 'وكيل شخصي ذاتي التحسين' },
-          { 'الأداة': '[AutoGen](/power-local-llm/autogen-review)', 'الواجهة': 'شيفرة Python', 'الترخيص': 'MIT / CC-BY', 'الجهة الداعمة': 'Microsoft Research', 'الأنسب لـ': 'أنماط محادثة متعددة الوكلاء' },
-          { 'الأداة': '[SuperAGI](/power-local-llm/superagi-review)', 'الواجهة': 'وحدة تحكم ويب بواجهة رسومية', 'الترخيص': 'MIT', 'الجهة الداعمة': 'TransformerOptimus (مستقل)', 'الأنسب لـ': 'وكلاء مستقلون بواجهة رسومية' },
+          { 'الأداة': '[Letta](/ar/power-local-llm/letta-review)', 'الواجهة': 'شيفرة Python / TS', 'الترخيص': 'Apache 2.0', 'الجهة الداعمة': 'Letta Inc. (بتمويل استثماري)', 'الأنسب لـ': 'ذاكرة طويلة الأمد لوكيل واحد' },
+          { 'الأداة': '[Hermes Agent](/ar/power-local-llm/hermes-agent-review)', 'الواجهة': 'تطبيق ذاتي الاستضافة', 'الترخيص': 'MIT', 'الجهة الداعمة': 'مستقل', 'الأنسب لـ': 'وكيل شخصي ذاتي التحسين' },
+          { 'الأداة': '[AutoGen](/ar/power-local-llm/autogen-review)', 'الواجهة': 'شيفرة Python', 'الترخيص': 'MIT / CC-BY', 'الجهة الداعمة': 'Microsoft Research', 'الأنسب لـ': 'أنماط محادثة متعددة الوكلاء' },
+          { 'الأداة': '[SuperAGI](/ar/power-local-llm/superagi-review)', 'الواجهة': 'وحدة تحكم ويب بواجهة رسومية', 'الترخيص': 'MIT', 'الجهة الداعمة': 'TransformerOptimus (مستقل)', 'الأنسب لـ': 'وكلاء مستقلون بواجهة رسومية' },
         ],
       },
       commonMistakes: {
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ الثاني: توقع أن يعمل Leon كمكتبة تنسيق عامة لنماذج اللغة الكبيرة',
-            content: "Leon AI منتج مساعد شخصي للمستخدم النهائي تثبّته وتتحدث إليه، وليس مكتبة Python أو JavaScript لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيقك الخاص. لهذا الاستخدام، بُنيت [LangChain](/power-local-llm/langchain-review) أو [LangGraph](/power-local-llm/langgraph-review) وتم توثيقهما تحديدًا.",
+            content: "Leon AI منتج مساعد شخصي للمستخدم النهائي تثبّته وتتحدث إليه، وليس مكتبة Python أو JavaScript لتجميع استدعاءات نماذج اللغة الكبيرة داخل تطبيقك الخاص. لهذا الاستخدام، بُنيت [LangChain](/ar/power-local-llm/langchain-review) أو [LangGraph](/ar/power-local-llm/langgraph-review) وتم توثيقهما تحديدًا.",
           },
           {
             title: 'الخطأ الثالث: افتراض وجود منتج Leon Cloud مستضاف',
@@ -2145,11 +2145,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Letta: الميزات والأسعار والبدائل](/power-local-llm/letta-review) — إطار عمل الذاكرة طويلة الأمد للوكلاء، للمقارنة مع تركيز Leon على مساعد شخصي يمكن التحدث إليه.',
-          '[مراجعة AutoGen: الميزات والأسعار والبدائل](/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، للفرق التي تنسّق عدة وكلاء بدلًا من تشغيل مساعد واحد ذاتي الاستضافة.',
-          '[مراجعة SuperAGI: الميزات والأسعار والبدائل](/power-local-llm/superagi-review) — مشروع آخر مستقل ومفتوح المصدر لوكيل مستقل بواجهة رسومية، للمقارنة مع إعداد Leon الذي يعتمد على سطر الأوامر أولًا.',
-          '[مراجعة Hermes Agent: الميزات والأسعار والبدائل](/power-local-llm/hermes-agent-review) — مقارنة أقرب مع وكيل شخصي ذاتي الاستضافة، مبني أيضًا حول الذاكرة الدائمة.',
-          '[دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Leon AI بين أطر العمل الوكيلية.',
+          '[مراجعة Letta: الميزات والأسعار والبدائل](/ar/power-local-llm/letta-review) — إطار عمل الذاكرة طويلة الأمد للوكلاء، للمقارنة مع تركيز Leon على مساعد شخصي يمكن التحدث إليه.',
+          '[مراجعة AutoGen: الميزات والأسعار والبدائل](/ar/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، للفرق التي تنسّق عدة وكلاء بدلًا من تشغيل مساعد واحد ذاتي الاستضافة.',
+          '[مراجعة SuperAGI: الميزات والأسعار والبدائل](/ar/power-local-llm/superagi-review) — مشروع آخر مستقل ومفتوح المصدر لوكيل مستقل بواجهة رسومية، للمقارنة مع إعداد Leon الذي يعتمد على سطر الأوامر أولًا.',
+          '[مراجعة Hermes Agent: الميزات والأسعار والبدائل](/ar/power-local-llm/hermes-agent-review) — مقارنة أقرب مع وكيل شخصي ذاتي الاستضافة، مبني أيضًا حول الذاكرة الدائمة.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Leon AI بين أطر العمل الوكيلية.',
         ],
       },
     },
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Preview는 세 가지 실행 모드(smart, controlled, agent), 네이티브 스킬과 에이전트 스킬(SKILL.md 기반), 계층화된 메모리, 로컬 및 원격 AI 제공업체 지원을 추가합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 Leon의 안정 `master` 브랜치와 `develop` 브랜치의 2.0 Developer Preview를 모두 다룹니다. GitHub 저장소가 두 브랜치를 모두 적극적으로 유지 관리하고 있고, 프로젝트가 2.0을 단순한 버전 업이 아니라 처음부터 다시 만드는 재구축으로 명시적으로 규정하고 있기 때문입니다. Leon AI가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 Leon의 안정 `master` 브랜치와 `develop` 브랜치의 2.0 Developer Preview를 모두 다룹니다. GitHub 저장소가 두 브랜치를 모두 적극적으로 유지 관리하고 있고, 프로젝트가 2.0을 단순한 버전 업이 아니라 처음부터 다시 만드는 재구축으로 명시적으로 규정하고 있기 때문입니다. Leon AI가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.' },
         ],
       },
       history: {
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Leon AI는 프랑스 개발자 Louis Grenard가 2017년에 취미 프로젝트로 시작했으며, 2019년 첫 공개 릴리스 이후 주로 여가 시간을 활용해 활발히 개발되어 왔습니다.** 역사의 대부분 동안 Leon은 전형적인 의도 분류 기반 개인 비서였습니다: 말하거나 입력한 요청을 학습된 의도와 매칭하고, 일치하는 스킬이 해당 작업을 실행하는 방식으로, 요청이 기기를 벗어날 필요가 없도록 오프라인으로 작동하게 설계되었습니다.",
           "[GitHub 저장소](https://github.com/leon-ai/leon)의 2026년 3월 공지에 따르면, Leon은 현재 2.0 Developer Preview가 한창 진행 중입니다 — 고정된 의도에만 의존하지 않고 도구, 컨텍스트, 메모리, 에이전틱 실행을 중심으로 코어를 재구축하는 것입니다. 이제 저장소의 기본 브랜치가 된 `develop` 브랜치가 이 새로운 코어를 담고 있으며, 더 안정적이고 의도 기반인 예전 버전은 진행 중인 재작성 대신 문서화된 에이전틱 이전 비서를 원하는 사람들을 위해 `master` 브랜치에 계속 남아 있습니다.",
-          "이 역사는 Leon을 이 시리즈의 다른 프레임워크들과 구별짓습니다. [LangChain](/power-local-llm/langchain-review), [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review), [Semantic Kernel](/power-local-llm/semantic-kernel-review)은 처음부터 LLM 호출을 애플리케이션에 조합해 넣기 위한 개발자용 라이브러리로 만들어졌습니다. Leon은 최종 사용자용 개인 비서 제품으로 시작했습니다 — 설치해서 직접 대화하는 것 — 그리고 2.0 재구축은 그 반대가 아니라 이 비서라는 틀 위에 에이전틱 능력을 더하는 것입니다.",
+          "이 역사는 Leon을 이 시리즈의 다른 프레임워크들과 구별짓습니다. [LangChain](/ko/power-local-llm/langchain-review), [CrewAI](/ko/power-local-llm/crewai-review), [AutoGen](/ko/power-local-llm/autogen-review), [Semantic Kernel](/ko/power-local-llm/semantic-kernel-review)은 처음부터 LLM 호출을 애플리케이션에 조합해 넣기 위한 개발자용 라이브러리로 만들어졌습니다. Leon은 최종 사용자용 개인 비서 제품으로 시작했습니다 — 설치해서 직접 대화하는 것 — 그리고 2.0 재구축은 그 반대가 아니라 이 비서라는 틀 위에 에이전틱 능력을 더하는 것입니다.",
         ],
         itemHeadings: true,
         rows: [
@@ -2330,9 +2330,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 Leon AI를 피하십시오',
             list: [
-              '커스텀 애플리케이션에 LLM 호출을 조합해 넣기 위한 문서화되고 프로덕션 준비가 된 프레임워크가 필요한 경우 — [LangChain](/power-local-llm/langchain-review)이나 [LangGraph](/power-local-llm/langgraph-review)가 바로 그 목적을 위해 만들어지고 문서화되었습니다',
-              '여러 전문화된 에이전트 사이의 역할 기반 멀티 에이전트 조정이 필요한 경우 — [CrewAI](/power-local-llm/crewai-review)나 [AutoGen](/power-local-llm/autogen-review)이 그 패턴을 위해 설계되었으며, 이는 Leon의 초점이 아닙니다',
-              '이미 문서화된 핵심 제품으로서 지속적이고 스스로 편집 가능한 장기 메모리를 갖춘 에이전트가 필요한 경우 — [Letta](/power-local-llm/letta-review)가 바로 그 목적을 위해 만들어졌습니다',
+              '커스텀 애플리케이션에 LLM 호출을 조합해 넣기 위한 문서화되고 프로덕션 준비가 된 프레임워크가 필요한 경우 — [LangChain](/ko/power-local-llm/langchain-review)이나 [LangGraph](/ko/power-local-llm/langgraph-review)가 바로 그 목적을 위해 만들어지고 문서화되었습니다',
+              '여러 전문화된 에이전트 사이의 역할 기반 멀티 에이전트 조정이 필요한 경우 — [CrewAI](/ko/power-local-llm/crewai-review)나 [AutoGen](/ko/power-local-llm/autogen-review)이 그 패턴을 위해 설계되었으며, 이는 Leon의 초점이 아닙니다',
+              '이미 문서화된 핵심 제품으로서 지속적이고 스스로 편집 가능한 장기 메모리를 갖춘 에이전트가 필요한 경우 — [Letta](/ko/power-local-llm/letta-review)가 바로 그 목적을 위해 만들어졌습니다',
               '엔터프라이즈 지원, SLA, 호스팅 제품이 필요한 경우 — Leon에는 상업용 요금제나 호스팅형 클라우드 서비스가 전혀 없습니다',
             ],
           },
@@ -2344,9 +2344,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**성숙하고 완전히 문서화된 프레임워크나 제품이 필요할 때, 또는 2.0 재구축의 불완전한 문서가 팀을 가로막을 때는 Leon AI를 피하십시오.**",
         items: [
           '오늘 당장 안정적이고 버전 관리된 문서가 필요한 팀 — 2.0 Developer Preview는 명시적으로 아직 완성된 문서가 없으며, 저장소는 대신 소스 파일을 참고하도록 안내합니다',
-          '비서 제품을 배포하기보다 커스텀 LLM 애플리케이션을 구축하는 팀 — [LangChain](/power-local-llm/langchain-review)이나 [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) 같은 라이브러리가 자체 애플리케이션 안에 호출을 조합하는 데 더 직접적으로 맞습니다',
+          '비서 제품을 배포하기보다 커스텀 LLM 애플리케이션을 구축하는 팀 — [LangChain](/ko/power-local-llm/langchain-review)이나 [LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review) 같은 라이브러리가 자체 애플리케이션 안에 호출을 조합하는 데 더 직접적으로 맞습니다',
           '활발하고 규모가 큰 기여자 기반과 잦은 서드파티 스킬이 필요한 팀 — 이 프로젝트는 스스로를 여전히 소규모 그룹이 주로 여가 시간에 개발하는 프로젝트로 설명하며, 코어가 안정될 때까지 2.0 기여는 의도적으로 단계적으로 열리고 있습니다',
-          '성숙하고 문서화된 기능으로서 지속적이고 스스로 편집 가능한 에이전트 메모리가 필요한 팀 — [Letta](/power-local-llm/letta-review)가 바로 그 목적을 위해 만들어지고 문서화되었으며, Leon의 2.0 메모리 레이어는 아직 새롭습니다',
+          '성숙하고 문서화된 기능으로서 지속적이고 스스로 편집 가능한 에이전트 메모리가 필요한 팀 — [Letta](/ko/power-local-llm/letta-review)가 바로 그 목적을 위해 만들어지고 문서화되었으며, Leon의 2.0 메모리 레이어는 아직 새롭습니다',
           '대신, 핵심 요구사항이 셀프 호스팅으로 말을 걸 수 있는 개인 비서와 오프라인 기능이고, 더 작고 계속 진화하는 오픈소스 프로젝트도 괜찮다면 Leon AI를 사용하십시오',
         ],
         note: "Leon의 2.0 재구축은 포기된 약속이 아니라 활발하고 진행 중인 작업입니다 — 저장소는 정기적인 커밋을 보여줍니다 — 하지만 2026년 3월 저장소 공지 기준으로 명시적으로 완성된 릴리스가 아니라 developer preview입니다.",
@@ -2358,10 +2358,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['도구', '인터페이스', '라이선스', '지원 주체', '최적 용도'],
         rows: [
           { '도구': '[Leon AI](https://github.com/leon-ai/leon)', '인터페이스': '음성/텍스트 앱 + CLI', '라이선스': 'MIT', '지원 주체': 'Louis Grenard(독립)', '최적 용도': '셀프 호스팅 개인 비서' },
-          { '도구': '[Letta](/power-local-llm/letta-review)', '인터페이스': 'Python / TS 코드', '라이선스': 'Apache 2.0', '지원 주체': 'Letta Inc.(VC 투자)', '최적 용도': '단일 에이전트 장기 메모리' },
-          { '도구': '[Hermes Agent](/power-local-llm/hermes-agent-review)', '인터페이스': '셀프 호스팅 앱', '라이선스': 'MIT', '지원 주체': '독립', '최적 용도': '자기 개선형 개인 에이전트' },
-          { '도구': '[AutoGen](/power-local-llm/autogen-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT / CC-BY', '지원 주체': 'Microsoft Research', '최적 용도': '멀티 에이전트 대화 패턴' },
-          { '도구': '[SuperAGI](/power-local-llm/superagi-review)', '인터페이스': '웹 GUI 콘솔', '라이선스': 'MIT', '지원 주체': 'TransformerOptimus(독립)', '최적 용도': 'GUI 기반 자율 에이전트' },
+          { '도구': '[Letta](/ko/power-local-llm/letta-review)', '인터페이스': 'Python / TS 코드', '라이선스': 'Apache 2.0', '지원 주체': 'Letta Inc.(VC 투자)', '최적 용도': '단일 에이전트 장기 메모리' },
+          { '도구': '[Hermes Agent](/ko/power-local-llm/hermes-agent-review)', '인터페이스': '셀프 호스팅 앱', '라이선스': 'MIT', '지원 주체': '독립', '최적 용도': '자기 개선형 개인 에이전트' },
+          { '도구': '[AutoGen](/ko/power-local-llm/autogen-review)', '인터페이스': 'Python 코드', '라이선스': 'MIT / CC-BY', '지원 주체': 'Microsoft Research', '최적 용도': '멀티 에이전트 대화 패턴' },
+          { '도구': '[SuperAGI](/ko/power-local-llm/superagi-review)', '인터페이스': '웹 GUI 콘솔', '라이선스': 'MIT', '지원 주체': 'TransformerOptimus(독립)', '최적 용도': 'GUI 기반 자율 에이전트' },
         ],
       },
       commonMistakes: {
@@ -2375,7 +2375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '오해 2: Leon이 범용 LLM 오케스트레이션 라이브러리처럼 작동할 것이라고 기대하기',
-            content: "Leon AI는 설치해서 대화하는 최종 사용자용 개인 비서 제품이지, 자체 애플리케이션 안에서 LLM 호출을 조합하기 위한 Python이나 JavaScript 라이브러리가 아닙니다. 그런 용도에는 [LangChain](/power-local-llm/langchain-review)이나 [LangGraph](/power-local-llm/langgraph-review)가 바로 그 목적을 위해 만들어지고 문서화되어 있습니다.",
+            content: "Leon AI는 설치해서 대화하는 최종 사용자용 개인 비서 제품이지, 자체 애플리케이션 안에서 LLM 호출을 조합하기 위한 Python이나 JavaScript 라이브러리가 아닙니다. 그런 용도에는 [LangChain](/ko/power-local-llm/langchain-review)이나 [LangGraph](/ko/power-local-llm/langgraph-review)가 바로 그 목적을 위해 만들어지고 문서화되어 있습니다.",
           },
           {
             title: '오해 3: 호스팅형 Leon Cloud 제품이 존재한다고 가정하기',
@@ -2414,11 +2414,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Letta 리뷰: 기능, 가격, 대안](/power-local-llm/letta-review) — 장기 메모리 에이전트 프레임워크로, 말을 걸 수 있는 개인 비서에 초점을 맞춘 Leon과 비교해볼 만합니다.',
-          '[AutoGen 리뷰: 기능, 가격, 대안](/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 셀프 호스팅 비서 하나를 운영하기보다 여러 에이전트를 조정하는 팀에 적합합니다.',
-          '[SuperAGI 리뷰: 기능, 가격, 대안](/power-local-llm/superagi-review) — 또 다른 독립적이고 GUI 기반인 오픈소스 자율 에이전트 프로젝트로, CLI 중심인 Leon의 설정과 비교해볼 만합니다.',
-          '[Hermes Agent 리뷰: 기능, 가격, 대안](/power-local-llm/hermes-agent-review) — 지속적인 메모리를 중심으로 만들어진, Leon과 더 가까운 셀프 호스팅 개인 에이전트 비교 대상입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Leon AI가 어디에 위치하는지도 포함합니다.',
+          '[Letta 리뷰: 기능, 가격, 대안](/ko/power-local-llm/letta-review) — 장기 메모리 에이전트 프레임워크로, 말을 걸 수 있는 개인 비서에 초점을 맞춘 Leon과 비교해볼 만합니다.',
+          '[AutoGen 리뷰: 기능, 가격, 대안](/ko/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 셀프 호스팅 비서 하나를 운영하기보다 여러 에이전트를 조정하는 팀에 적합합니다.',
+          '[SuperAGI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/superagi-review) — 또 다른 독립적이고 GUI 기반인 오픈소스 자율 에이전트 프로젝트로, CLI 중심인 Leon의 설정과 비교해볼 만합니다.',
+          '[Hermes Agent 리뷰: 기능, 가격, 대안](/ko/power-local-llm/hermes-agent-review) — 지속적인 메모리를 중심으로 만들어진, Leon과 더 가까운 셀프 호스팅 개인 에이전트 비교 대상입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Leon AI가 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

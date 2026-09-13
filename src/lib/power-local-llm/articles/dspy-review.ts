@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation: `pip install dspy`, erfordert das Konfigurieren eines LLM-Anbieters vor dem ersten Programmlauf',
         ],
         callouts: [
-          { type: 'note', text: "DSPy löst ein anderes Problem als die meisten Agenten-Frameworks in dieser Serie — es optimiert die Prompts innerhalb einer Pipeline, statt Multi-Agent-Gespräche zu orchestrieren. Im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) sehen Sie, wo DSPy unter Agenten- und Pipeline-Frameworks einzuordnen ist." },
+          { type: 'note', text: "DSPy löst ein anderes Problem als die meisten Agenten-Frameworks in dieser Serie — es optimiert die Prompts innerhalb einer Pipeline, statt Multi-Agent-Gespräche zu orchestrieren. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sehen Sie, wo DSPy unter Agenten- und Pipeline-Frameworks einzuordnen ist." },
         ],
       },
       history: {
@@ -431,10 +431,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Vermeiden Sie DSPy, wenn',
             list: [
-              "Sie Multi-Agent-Orchestrierung benötigen — mehrere LLM-Agenten, die kommunizieren, delegieren und Aufgaben koordinieren — das ist die Kernaufgabe von [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) oder [LangGraph](/power-local-llm/langgraph-review), nicht von DSPy",
-              'Sie eine No-Code- oder Low-Code-Oberfläche brauchen — DSPy ist eine Python-Bibliothek ohne visuellen Builder, anders als Tools wie [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) oder [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)',
+              "Sie Multi-Agent-Orchestrierung benötigen — mehrere LLM-Agenten, die kommunizieren, delegieren und Aufgaben koordinieren — das ist die Kernaufgabe von [CrewAI](/de/power-local-llm/crewai-review), [AutoGen](/de/power-local-llm/autogen-review) oder [LangGraph](/de/power-local-llm/langgraph-review), nicht von DSPy",
+              'Sie eine No-Code- oder Low-Code-Oberfläche brauchen — DSPy ist eine Python-Bibliothek ohne visuellen Builder, anders als Tools wie [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review) oder [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review)',
               "Sie keine gelabelten Beispiele oder Bewertungsfunktion für Ihre Aufgabe haben — DSPys Optimizer brauchen etwas, woran sie messen können; ohne das landet man ohnehin wieder beim manuellen Prompt-Schreiben",
-              'Sie das breitest mögliche Ökosystem vorgefertigter Integrationen brauchen (Dokumenten-Loader, Vektordatenbank-Connectoren, Agenten-Tools) — [LangChain](/power-local-llm/langchain-review) hat dafür die größere Integrationsfläche',
+              'Sie das breitest mögliche Ökosystem vorgefertigter Integrationen brauchen (Dokumenten-Loader, Vektordatenbank-Connectoren, Agenten-Tools) — [LangChain](/de/power-local-llm/langchain-review) hat dafür die größere Integrationsfläche',
             ],
           },
         ],
@@ -459,11 +459,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Kernaufgabe', 'Lizenz', 'Status', 'Am besten für'],
         rows: [
           { 'Tool': '[DSPy](https://github.com/stanfordnlp/dspy)', 'Kernaufgabe': 'Prompt-/Gewichts-Optimierung', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Prompts anhand einer Metrik abstimmen' },
-          { 'Tool': '[LangChain](/power-local-llm/langchain-review)', 'Kernaufgabe': 'Allgemeiner LLM-Pipeline-Bau', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Breitestes Integrations-Ökosystem' },
-          { 'Tool': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', 'Kernaufgabe': 'RAG-fokussiertes Daten-Framework', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Retrieval-Augmented-Pipelines' },
-          { 'Tool': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', 'Kernaufgabe': 'Strukturierte Prompt-/Skill-Komposition', 'Lizenz': 'MIT', 'Status': 'Aktiv (konvergiert in MAF)', 'Am besten für': 'Enterprise .NET/Python/Java-SDK' },
+          { 'Tool': '[LangChain](/de/power-local-llm/langchain-review)', 'Kernaufgabe': 'Allgemeiner LLM-Pipeline-Bau', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Breitestes Integrations-Ökosystem' },
+          { 'Tool': '[LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review)', 'Kernaufgabe': 'RAG-fokussiertes Daten-Framework', 'Lizenz': 'MIT', 'Status': 'Aktiv', 'Am besten für': 'Retrieval-Augmented-Pipelines' },
+          { 'Tool': '[Semantic Kernel](/de/power-local-llm/semantic-kernel-review)', 'Kernaufgabe': 'Strukturierte Prompt-/Skill-Komposition', 'Lizenz': 'MIT', 'Status': 'Aktiv (konvergiert in MAF)', 'Am besten für': 'Enterprise .NET/Python/Java-SDK' },
         ],
-        note: "Diese Tabelle vergleicht DSPy mit Python-Pipeline-Frameworks mit der nächsten konzeptionellen Überschneidung, nicht mit Multi-Agent-Orchestratoren — DSPy konkurriert nicht direkt mit [CrewAI](/power-local-llm/crewai-review) oder [AutoGen](/power-local-llm/autogen-review), die Agentenkoordination statt Prompt-Optimierung lösen.",
+        note: "Diese Tabelle vergleicht DSPy mit Python-Pipeline-Frameworks mit der nächsten konzeptionellen Überschneidung, nicht mit Multi-Agent-Orchestratoren — DSPy konkurriert nicht direkt mit [CrewAI](/de/power-local-llm/crewai-review) oder [AutoGen](/de/power-local-llm/autogen-review), die Agentenkoordination statt Prompt-Optimierung lösen.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Fehler 1: Erwarten, dass DSPy mehrere Agenten orchestriert',
-            content: "DSPys Modules setzen sich zu einer einzelnen Pipeline zusammen, nicht zu einem Team kommunizierender Agenten. Teams, die Agenten benötigen, die Teilaufgaben aneinander delegieren, sollten stattdessen [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) oder [LangGraph](/power-local-llm/langgraph-review) evaluieren — DSPy kann die Prompts innerhalb eines Schritts einer solchen Pipeline optimieren, ersetzt aber nicht die Orchestrierungsschicht selbst.",
+            content: "DSPys Modules setzen sich zu einer einzelnen Pipeline zusammen, nicht zu einem Team kommunizierender Agenten. Teams, die Agenten benötigen, die Teilaufgaben aneinander delegieren, sollten stattdessen [CrewAI](/de/power-local-llm/crewai-review), [AutoGen](/de/power-local-llm/autogen-review) oder [LangGraph](/de/power-local-llm/langgraph-review) evaluieren — DSPy kann die Prompts innerhalb eines Schritts einer solchen Pipeline optimieren, ersetzt aber nicht die Orchestrierungsschicht selbst.",
           },
           {
             title: 'Fehler 2: Nie einen Optimizer ausführen',
@@ -515,11 +515,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[LangChain Review: Funktionen, Preise, Alternativen](/power-local-llm/langchain-review) — das allgemeine Python-LLM-Pipeline-Framework mit dem breitesten Integrations-Ökosystem, für Teams, die fertige Connectoren statt Prompt-Optimierung brauchen.',
-          '[LlamaIndex Review: RAG-Framework](/power-local-llm/llamaindex-rag-framework-review) — ein RAG-fokussiertes Daten-Framework für Retrieval-Augmented-Pipelines, ein weiteres Python-Framework in derselben Baustein-Kategorie wie DSPy.',
-          '[Semantic Kernel Review: Funktionen, Preise, Alternativen](/power-local-llm/semantic-kernel-review) — Microsofts Enterprise-Orchestrierungs-SDK für strukturierte Prompt- und Skill-Komposition, für Teams mit .NET/Python/Java.',
-          '[CrewAI Review: Funktionen, Preise, Alternativen](/power-local-llm/crewai-review) — ein rollenbasiertes Multi-Agent-Framework, für Teams, die Agentenkoordination statt Prompt-Optimierung brauchen.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DSPy unter Agenten- und Pipeline-Frameworks.',
+          '[LangChain Review: Funktionen, Preise, Alternativen](/de/power-local-llm/langchain-review) — das allgemeine Python-LLM-Pipeline-Framework mit dem breitesten Integrations-Ökosystem, für Teams, die fertige Connectoren statt Prompt-Optimierung brauchen.',
+          '[LlamaIndex Review: RAG-Framework](/de/power-local-llm/llamaindex-rag-framework-review) — ein RAG-fokussiertes Daten-Framework für Retrieval-Augmented-Pipelines, ein weiteres Python-Framework in derselben Baustein-Kategorie wie DSPy.',
+          '[Semantic Kernel Review: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — Microsofts Enterprise-Orchestrierungs-SDK für strukturierte Prompt- und Skill-Komposition, für Teams mit .NET/Python/Java.',
+          '[CrewAI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein rollenbasiertes Multi-Agent-Framework, für Teams, die Agentenkoordination statt Prompt-Optimierung brauchen.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DSPy unter Agenten- und Pipeline-Frameworks.',
         ],
       },
     },
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Installation : `pip install dspy`, nécessite de configurer un fournisseur LLM avant d'exécuter un programme",
         ],
         callouts: [
-          { type: 'note', text: "DSPy résout un problème différent de la plupart des frameworks d'agents de cette série — il optimise les prompts à l'intérieur d'un pipeline plutôt que d'orchestrer des conversations multi-agents. Consultez le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour voir où DSPy se situe parmi les frameworks d'agents et de pipelines." },
+          { type: 'note', text: "DSPy résout un problème différent de la plupart des frameworks d'agents de cette série — il optimise les prompts à l'intérieur d'un pipeline plutôt que d'orchestrer des conversations multi-agents. Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour voir où DSPy se situe parmi les frameworks d'agents et de pipelines." },
         ],
       },
       history: {
@@ -692,10 +692,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez DSPy si',
             list: [
-              "Vous avez besoin d'orchestration multi-agents — plusieurs agents LLM qui communiquent, délèguent et coordonnent des tâches — c'est le cœur de métier de [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) ou [LangGraph](/power-local-llm/langgraph-review), pas de DSPy",
-              "Vous avez besoin d'une interface sans code ou low-code — DSPy est une bibliothèque Python sans constructeur visuel, contrairement à des outils comme [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) ou [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)",
+              "Vous avez besoin d'orchestration multi-agents — plusieurs agents LLM qui communiquent, délèguent et coordonnent des tâches — c'est le cœur de métier de [CrewAI](/fr/power-local-llm/crewai-review), [AutoGen](/fr/power-local-llm/autogen-review) ou [LangGraph](/fr/power-local-llm/langgraph-review), pas de DSPy",
+              "Vous avez besoin d'une interface sans code ou low-code — DSPy est une bibliothèque Python sans constructeur visuel, contrairement à des outils comme [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review) ou [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review)",
               "Vous n'avez pas d'exemples étiquetés ni de fonction de score pour votre tâche — les optimiseurs de DSPy ont besoin d'un critère de mesure ; sans cela, vous revenez de toute façon à écrire des prompts à la main",
-              "Vous avez besoin du plus large écosystème possible d'intégrations prêtes à l'emploi (chargeurs de documents, connecteurs de bases vectorielles, outils d'agents) — [LangChain](/power-local-llm/langchain-review) offre une surface d'intégration plus large pour cela",
+              "Vous avez besoin du plus large écosystème possible d'intégrations prêtes à l'emploi (chargeurs de documents, connecteurs de bases vectorielles, outils d'agents) — [LangChain](/fr/power-local-llm/langchain-review) offre une surface d'intégration plus large pour cela",
             ],
           },
         ],
@@ -720,11 +720,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Outil', 'Métier principal', 'Licence', 'Statut', 'Idéal pour'],
         rows: [
           { 'Outil': '[DSPy](https://github.com/stanfordnlp/dspy)', 'Métier principal': 'Optimisation de prompts/poids', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': 'Ajuster les prompts selon une métrique' },
-          { 'Outil': '[LangChain](/power-local-llm/langchain-review)', 'Métier principal': 'Construction générale de pipelines LLM', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': "Écosystème d'intégrations le plus large" },
-          { 'Outil': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', 'Métier principal': 'Framework de données axé RAG', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': 'Pipelines de génération augmentée par récupération' },
-          { 'Outil': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', 'Métier principal': 'Composition structurée de prompts/compétences', 'Licence': 'MIT', 'Statut': 'Actif (converge vers MAF)', 'Idéal pour': 'SDK entreprise .NET/Python/Java' },
+          { 'Outil': '[LangChain](/fr/power-local-llm/langchain-review)', 'Métier principal': 'Construction générale de pipelines LLM', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': "Écosystème d'intégrations le plus large" },
+          { 'Outil': '[LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review)', 'Métier principal': 'Framework de données axé RAG', 'Licence': 'MIT', 'Statut': 'Actif', 'Idéal pour': 'Pipelines de génération augmentée par récupération' },
+          { 'Outil': '[Semantic Kernel](/fr/power-local-llm/semantic-kernel-review)', 'Métier principal': 'Composition structurée de prompts/compétences', 'Licence': 'MIT', 'Statut': 'Actif (converge vers MAF)', 'Idéal pour': 'SDK entreprise .NET/Python/Java' },
         ],
-        note: "Ce tableau compare DSPy à des frameworks de pipelines Python avec le chevauchement conceptuel le plus proche, pas à des orchestrateurs multi-agents — DSPy ne concurrence pas directement [CrewAI](/power-local-llm/crewai-review) ou [AutoGen](/power-local-llm/autogen-review), qui résolvent la coordination d'agents plutôt que l'optimisation de prompts.",
+        note: "Ce tableau compare DSPy à des frameworks de pipelines Python avec le chevauchement conceptuel le plus proche, pas à des orchestrateurs multi-agents — DSPy ne concurrence pas directement [CrewAI](/fr/power-local-llm/crewai-review) ou [AutoGen](/fr/power-local-llm/autogen-review), qui résolvent la coordination d'agents plutôt que l'optimisation de prompts.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erreur 1 : attendre de DSPy qu\'il orchestre plusieurs agents',
-            content: "Les Modules de DSPy se composent en un pipeline unique, pas en une équipe d'agents communicants. Les équipes ayant besoin d'agents se délégant des sous-tâches devraient plutôt évaluer [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) ou [LangGraph](/power-local-llm/langgraph-review) — DSPy peut optimiser les prompts à l'intérieur d'une étape de l'un de ces pipelines, mais ne remplace pas la couche d'orchestration elle-même.",
+            content: "Les Modules de DSPy se composent en un pipeline unique, pas en une équipe d'agents communicants. Les équipes ayant besoin d'agents se délégant des sous-tâches devraient plutôt évaluer [CrewAI](/fr/power-local-llm/crewai-review), [AutoGen](/fr/power-local-llm/autogen-review) ou [LangGraph](/fr/power-local-llm/langgraph-review) — DSPy peut optimiser les prompts à l'intérieur d'une étape de l'un de ces pipelines, mais ne remplace pas la couche d'orchestration elle-même.",
           },
           {
             title: "Erreur 2 : ne jamais exécuter d'optimiseur",
@@ -776,11 +776,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Avis LangChain : fonctionnalités, prix, alternatives](/power-local-llm/langchain-review) — le framework Python généraliste de pipelines LLM avec l\'écosystème d\'intégrations le plus large, pour les équipes qui ont besoin de connecteurs prêts à l\'emploi plutôt que d\'optimisation de prompts.',
-          '[Avis LlamaIndex : framework RAG](/power-local-llm/llamaindex-rag-framework-review) — un framework de données axé RAG pour les pipelines de génération augmentée par récupération, un autre framework Python de la même catégorie de briques que DSPy.',
-          '[Avis Semantic Kernel : fonctionnalités, prix, alternatives](/power-local-llm/semantic-kernel-review) — le SDK d\'orchestration entreprise de Microsoft pour la composition structurée de prompts et compétences, pour les équipes travaillant en .NET/Python/Java.',
-          '[Avis CrewAI : fonctionnalités, prix, alternatives](/power-local-llm/crewai-review) — un framework multi-agents basé sur les rôles, pour les équipes ayant besoin de coordination d\'agents plutôt que d\'optimisation de prompts.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la place de DSPy parmi les frameworks d\'agents et de pipelines.',
+          '[Avis LangChain : fonctionnalités, prix, alternatives](/fr/power-local-llm/langchain-review) — le framework Python généraliste de pipelines LLM avec l\'écosystème d\'intégrations le plus large, pour les équipes qui ont besoin de connecteurs prêts à l\'emploi plutôt que d\'optimisation de prompts.',
+          '[Avis LlamaIndex : framework RAG](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework de données axé RAG pour les pipelines de génération augmentée par récupération, un autre framework Python de la même catégorie de briques que DSPy.',
+          '[Avis Semantic Kernel : fonctionnalités, prix, alternatives](/fr/power-local-llm/semantic-kernel-review) — le SDK d\'orchestration entreprise de Microsoft pour la composition structurée de prompts et compétences, pour les équipes travaillant en .NET/Python/Java.',
+          '[Avis CrewAI : fonctionnalités, prix, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agents basé sur les rôles, pour les équipes ayant besoin de coordination d\'agents plutôt que d\'optimisation de prompts.',
+          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la place de DSPy parmi les frameworks d\'agents et de pipelines.',
         ],
       },
     },
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalación: `pip install dspy`, requiere configurar un proveedor de LLM antes de ejecutar un programa',
         ],
         callouts: [
-          { type: 'note', text: "DSPy resuelve un problema distinto al de la mayoría de los frameworks de agentes de esta serie: optimiza los prompts dentro de un pipeline en lugar de orquestar conversaciones multiagente. Consulte el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para ver dónde encaja DSPy entre los frameworks de agentes y pipelines." },
+          { type: 'note', text: "DSPy resuelve un problema distinto al de la mayoría de los frameworks de agentes de esta serie: optimiza los prompts dentro de un pipeline en lugar de orquestar conversaciones multiagente. Consulte el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver dónde encaja DSPy entre los frameworks de agentes y pipelines." },
         ],
       },
       history: {
@@ -953,10 +953,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite DSPy si',
             list: [
-              "Necesita orquestación multiagente — varios agentes de LLM que se comunican, delegan y coordinan tareas — eso es el trabajo principal de [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) o [LangGraph](/power-local-llm/langgraph-review), no de DSPy",
-              'Necesita una interfaz sin código o low-code — DSPy es una biblioteca de Python sin creador visual, a diferencia de herramientas como [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) o [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)',
+              "Necesita orquestación multiagente — varios agentes de LLM que se comunican, delegan y coordinan tareas — eso es el trabajo principal de [CrewAI](/es/power-local-llm/crewai-review), [AutoGen](/es/power-local-llm/autogen-review) o [LangGraph](/es/power-local-llm/langgraph-review), no de DSPy",
+              'Necesita una interfaz sin código o low-code — DSPy es una biblioteca de Python sin creador visual, a diferencia de herramientas como [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review) o [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review)',
               "No tiene ejemplos etiquetados ni una función de puntuación para su tarea — los optimizadores de DSPy necesitan algo contra lo que medir; sin eso, de todos modos vuelve a escribir prompts a mano",
-              'Necesita el ecosistema más amplio posible de integraciones ya construidas (cargadores de documentos, conectores de bases vectoriales, herramientas de agentes) — [LangChain](/power-local-llm/langchain-review) tiene una superficie de integración más grande para eso',
+              'Necesita el ecosistema más amplio posible de integraciones ya construidas (cargadores de documentos, conectores de bases vectoriales, herramientas de agentes) — [LangChain](/es/power-local-llm/langchain-review) tiene una superficie de integración más grande para eso',
             ],
           },
         ],
@@ -981,11 +981,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Herramienta', 'Tarea principal', 'Licencia', 'Estado', 'Mejor para'],
         rows: [
           { 'Herramienta': '[DSPy](https://github.com/stanfordnlp/dspy)', 'Tarea principal': 'Optimización de prompts/pesos', 'Licencia': 'MIT', 'Estado': 'Activo', 'Mejor para': 'Ajustar prompts según una métrica' },
-          { 'Herramienta': '[LangChain](/power-local-llm/langchain-review)', 'Tarea principal': 'Construcción general de pipelines de LLM', 'Licencia': 'MIT', 'Estado': 'Activo', 'Mejor para': 'El ecosistema de integraciones más amplio' },
-          { 'Herramienta': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', 'Tarea principal': 'Framework de datos enfocado en RAG', 'Licencia': 'MIT', 'Estado': 'Activo', 'Mejor para': 'Pipelines de generación aumentada por recuperación' },
-          { 'Herramienta': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', 'Tarea principal': 'Composición estructurada de prompts/skills', 'Licencia': 'MIT', 'Estado': 'Activo (converge hacia MAF)', 'Mejor para': 'SDK empresarial .NET/Python/Java' },
+          { 'Herramienta': '[LangChain](/es/power-local-llm/langchain-review)', 'Tarea principal': 'Construcción general de pipelines de LLM', 'Licencia': 'MIT', 'Estado': 'Activo', 'Mejor para': 'El ecosistema de integraciones más amplio' },
+          { 'Herramienta': '[LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review)', 'Tarea principal': 'Framework de datos enfocado en RAG', 'Licencia': 'MIT', 'Estado': 'Activo', 'Mejor para': 'Pipelines de generación aumentada por recuperación' },
+          { 'Herramienta': '[Semantic Kernel](/es/power-local-llm/semantic-kernel-review)', 'Tarea principal': 'Composición estructurada de prompts/skills', 'Licencia': 'MIT', 'Estado': 'Activo (converge hacia MAF)', 'Mejor para': 'SDK empresarial .NET/Python/Java' },
         ],
-        note: "Esta tabla compara DSPy con frameworks de pipelines de Python con la superposición conceptual más cercana, no con orquestadores multiagente — DSPy no compite directamente con [CrewAI](/power-local-llm/crewai-review) ni [AutoGen](/power-local-llm/autogen-review), que resuelven la coordinación de agentes en lugar de la optimización de prompts.",
+        note: "Esta tabla compara DSPy con frameworks de pipelines de Python con la superposición conceptual más cercana, no con orquestadores multiagente — DSPy no compite directamente con [CrewAI](/es/power-local-llm/crewai-review) ni [AutoGen](/es/power-local-llm/autogen-review), que resuelven la coordinación de agentes en lugar de la optimización de prompts.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Error 1: esperar que DSPy orqueste varios agentes',
-            content: "Los Modules de DSPy se componen en un único pipeline, no en un equipo de agentes que se comunican. Los equipos que necesitan agentes que se delegan subtareas entre sí deberían evaluar en su lugar [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) o [LangGraph](/power-local-llm/langgraph-review) — DSPy puede optimizar los prompts dentro de un paso de uno de esos pipelines, pero no sustituye la propia capa de orquestación.",
+            content: "Los Modules de DSPy se componen en un único pipeline, no en un equipo de agentes que se comunican. Los equipos que necesitan agentes que se delegan subtareas entre sí deberían evaluar en su lugar [CrewAI](/es/power-local-llm/crewai-review), [AutoGen](/es/power-local-llm/autogen-review) o [LangGraph](/es/power-local-llm/langgraph-review) — DSPy puede optimizar los prompts dentro de un paso de uno de esos pipelines, pero no sustituye la propia capa de orquestación.",
           },
           {
             title: 'Error 2: no ejecutar nunca un optimizador',
@@ -1037,11 +1037,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de LangChain: funciones, precios, alternativas](/power-local-llm/langchain-review) — el framework de Python de propósito general para pipelines de LLM con el ecosistema de integraciones más amplio, para equipos que necesitan conectores ya hechos en lugar de optimización de prompts.',
-          '[Reseña de LlamaIndex: framework RAG](/power-local-llm/llamaindex-rag-framework-review) — un framework de datos enfocado en RAG para pipelines de generación aumentada por recuperación, otro framework de Python en la misma categoría de bloques que DSPy.',
-          '[Reseña de Semantic Kernel: funciones, precios, alternativas](/power-local-llm/semantic-kernel-review) — el SDK de orquestación empresarial de Microsoft para composición estructurada de prompts y skills, para equipos que trabajan en .NET/Python/Java.',
-          '[Reseña de CrewAI: funciones, precios, alternativas](/power-local-llm/crewai-review) — un framework multiagente basado en roles, para equipos que necesitan coordinación de agentes en lugar de optimización de prompts.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluido dónde encaja DSPy entre los frameworks de agentes y pipelines.',
+          '[Reseña de LangChain: funciones, precios, alternativas](/es/power-local-llm/langchain-review) — el framework de Python de propósito general para pipelines de LLM con el ecosistema de integraciones más amplio, para equipos que necesitan conectores ya hechos en lugar de optimización de prompts.',
+          '[Reseña de LlamaIndex: framework RAG](/es/power-local-llm/llamaindex-rag-framework-review) — un framework de datos enfocado en RAG para pipelines de generación aumentada por recuperación, otro framework de Python en la misma categoría de bloques que DSPy.',
+          '[Reseña de Semantic Kernel: funciones, precios, alternativas](/es/power-local-llm/semantic-kernel-review) — el SDK de orquestación empresarial de Microsoft para composición estructurada de prompts y skills, para equipos que trabajan en .NET/Python/Java.',
+          '[Reseña de CrewAI: funciones, precios, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles, para equipos que necesitan coordinación de agentes en lugar de optimización de prompts.',
+          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluido dónde encaja DSPy entre los frameworks de agentes y pipelines.',
         ],
       },
     },
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação: `pip install dspy`, requer configurar um provedor de LLM antes de executar um programa',
         ],
         callouts: [
-          { type: 'note', text: "O DSPy resolve um problema diferente da maioria dos frameworks de agentes desta série — ele otimiza os prompts dentro de um pipeline em vez de orquestrar conversas multiagente. Veja o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para entender onde o DSPy se encaixa entre frameworks de agentes e pipelines." },
+          { type: 'note', text: "O DSPy resolve um problema diferente da maioria dos frameworks de agentes desta série — ele otimiza os prompts dentro de um pipeline em vez de orquestrar conversas multiagente. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para entender onde o DSPy se encaixa entre frameworks de agentes e pipelines." },
         ],
       },
       history: {
@@ -1214,10 +1214,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o DSPy se',
             list: [
-              "Você precisa de orquestração multiagente — vários agentes de LLM se comunicando, delegando e coordenando tarefas — esse é o trabalho principal do [CrewAI](/power-local-llm/crewai-review), do [AutoGen](/power-local-llm/autogen-review) ou do [LangGraph](/power-local-llm/langgraph-review), não do DSPy",
-              'Você precisa de uma interface sem código ou low-code — o DSPy é uma biblioteca Python sem construtor visual, diferente de ferramentas como [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) ou [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)',
+              "Você precisa de orquestração multiagente — vários agentes de LLM se comunicando, delegando e coordenando tarefas — esse é o trabalho principal do [CrewAI](/pt/power-local-llm/crewai-review), do [AutoGen](/pt/power-local-llm/autogen-review) ou do [LangGraph](/pt/power-local-llm/langgraph-review), não do DSPy",
+              'Você precisa de uma interface sem código ou low-code — o DSPy é uma biblioteca Python sem construtor visual, diferente de ferramentas como [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review) ou [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review)',
               "Você não tem exemplos rotulados nem uma função de pontuação para sua tarefa — os otimizadores do DSPy precisam de algo contra o qual medir; sem isso, você volta a escrever prompts manualmente de qualquer forma",
-              'Você precisa do ecossistema mais amplo possível de integrações prontas (carregadores de documentos, conectores de bancos vetoriais, ferramentas de agentes) — o [LangChain](/power-local-llm/langchain-review) tem uma superfície de integração maior para isso',
+              'Você precisa do ecossistema mais amplo possível de integrações prontas (carregadores de documentos, conectores de bancos vetoriais, ferramentas de agentes) — o [LangChain](/pt/power-local-llm/langchain-review) tem uma superfície de integração maior para isso',
             ],
           },
         ],
@@ -1242,11 +1242,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ferramenta', 'Tarefa principal', 'Licença', 'Status', 'Melhor para'],
         rows: [
           { 'Ferramenta': '[DSPy](https://github.com/stanfordnlp/dspy)', 'Tarefa principal': 'Otimização de prompts/pesos', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'Ajustar prompts com base em uma métrica' },
-          { 'Ferramenta': '[LangChain](/power-local-llm/langchain-review)', 'Tarefa principal': 'Construção geral de pipelines de LLM', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'O ecossistema de integrações mais amplo' },
-          { 'Ferramenta': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', 'Tarefa principal': 'Framework de dados focado em RAG', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'Pipelines de geração aumentada por recuperação' },
-          { 'Ferramenta': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', 'Tarefa principal': 'Composição estruturada de prompts/skills', 'Licença': 'MIT', 'Status': 'Ativo (convergindo para o MAF)', 'Melhor para': 'SDK empresarial .NET/Python/Java' },
+          { 'Ferramenta': '[LangChain](/pt/power-local-llm/langchain-review)', 'Tarefa principal': 'Construção geral de pipelines de LLM', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'O ecossistema de integrações mais amplo' },
+          { 'Ferramenta': '[LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review)', 'Tarefa principal': 'Framework de dados focado em RAG', 'Licença': 'MIT', 'Status': 'Ativo', 'Melhor para': 'Pipelines de geração aumentada por recuperação' },
+          { 'Ferramenta': '[Semantic Kernel](/pt/power-local-llm/semantic-kernel-review)', 'Tarefa principal': 'Composição estruturada de prompts/skills', 'Licença': 'MIT', 'Status': 'Ativo (convergindo para o MAF)', 'Melhor para': 'SDK empresarial .NET/Python/Java' },
         ],
-        note: "Esta tabela compara o DSPy com frameworks de pipeline Python com a sobreposição conceitual mais próxima, não com orquestradores multiagente — o DSPy não compete diretamente com [CrewAI](/power-local-llm/crewai-review) ou [AutoGen](/power-local-llm/autogen-review), que resolvem coordenação de agentes, não otimização de prompts.",
+        note: "Esta tabela compara o DSPy com frameworks de pipeline Python com a sobreposição conceitual mais próxima, não com orquestradores multiagente — o DSPy não compete diretamente com [CrewAI](/pt/power-local-llm/crewai-review) ou [AutoGen](/pt/power-local-llm/autogen-review), que resolvem coordenação de agentes, não otimização de prompts.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erro 1: esperar que o DSPy orquestre vários agentes',
-            content: "Os Modules do DSPy se compõem em um único pipeline, não em uma equipe de agentes que se comunicam. Equipes que precisam de agentes delegando subtarefas uns aos outros devem avaliar em vez disso [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review) ou [LangGraph](/power-local-llm/langgraph-review) — o DSPy pode otimizar os prompts dentro de uma etapa de um desses pipelines, mas não substitui a própria camada de orquestração.",
+            content: "Os Modules do DSPy se compõem em um único pipeline, não em uma equipe de agentes que se comunicam. Equipes que precisam de agentes delegando subtarefas uns aos outros devem avaliar em vez disso [CrewAI](/pt/power-local-llm/crewai-review), [AutoGen](/pt/power-local-llm/autogen-review) ou [LangGraph](/pt/power-local-llm/langgraph-review) — o DSPy pode otimizar os prompts dentro de uma etapa de um desses pipelines, mas não substitui a própria camada de orquestração.",
           },
           {
             title: 'Erro 2: nunca executar um otimizador',
@@ -1298,11 +1298,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do LangChain: recursos, preços, alternativas](/power-local-llm/langchain-review) — o framework Python de propósito geral para pipelines de LLM com o ecossistema de integrações mais amplo, para equipes que precisam de conectores prontos em vez de otimização de prompts.',
-          '[Análise do LlamaIndex: framework RAG](/power-local-llm/llamaindex-rag-framework-review) — um framework de dados focado em RAG para pipelines de geração aumentada por recuperação, outro framework Python na mesma categoria de blocos de construção que o DSPy.',
-          '[Análise do Semantic Kernel: recursos, preços, alternativas](/power-local-llm/semantic-kernel-review) — o SDK de orquestração empresarial da Microsoft para composição estruturada de prompts e skills, para equipes trabalhando em .NET/Python/Java.',
-          '[Análise do CrewAI: recursos, preços, alternativas](/power-local-llm/crewai-review) — um framework multiagente baseado em papéis, para equipes que precisam de coordenação de agentes em vez de otimização de prompts.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DSPy se encaixa entre frameworks de agentes e pipelines.',
+          '[Análise do LangChain: recursos, preços, alternativas](/pt/power-local-llm/langchain-review) — o framework Python de propósito geral para pipelines de LLM com o ecossistema de integrações mais amplo, para equipes que precisam de conectores prontos em vez de otimização de prompts.',
+          '[Análise do LlamaIndex: framework RAG](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework de dados focado em RAG para pipelines de geração aumentada por recuperação, outro framework Python na mesma categoria de blocos de construção que o DSPy.',
+          '[Análise do Semantic Kernel: recursos, preços, alternativas](/pt/power-local-llm/semantic-kernel-review) — o SDK de orquestração empresarial da Microsoft para composição estruturada de prompts e skills, para equipes trabalhando em .NET/Python/Java.',
+          '[Análise do CrewAI: recursos, preços, alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente baseado em papéis, para equipes que precisam de coordenação de agentes em vez de otimização de prompts.',
+          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DSPy se encaixa entre frameworks de agentes e pipelines.',
         ],
       },
     },
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インストール：`pip install dspy`、プログラム実行前にLLMプロバイダーの設定が必要',
         ],
         callouts: [
-          { type: 'note', text: "DSPyはこのシリーズの他の多くのエージェントフレームワークとは異なる問題を解決するものです——マルチエージェントの会話をオーケストレーションするのではなく、パイプライン内のプロンプトを最適化します。DSPyがエージェント/パイプラインフレームワークの中でどこに位置するかは、[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)を参照してください。" },
+          { type: 'note', text: "DSPyはこのシリーズの他の多くのエージェントフレームワークとは異なる問題を解決するものです——マルチエージェントの会話をオーケストレーションするのではなく、パイプライン内のプロンプトを最適化します。DSPyがエージェント/パイプラインフレームワークの中でどこに位置するかは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。" },
         ],
       },
       history: {
@@ -1475,10 +1475,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな場合はDSPyを避ける',
             list: [
-              "複数のLLMエージェントが通信・委任・タスク調整を行うマルチエージェント・オーケストレーションが必要——それは[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)、[LangGraph](/power-local-llm/langgraph-review)の主要な仕事であり、DSPyのものではない",
-              'ノーコードまたはローコードのインターフェースが必要——DSPyは[Langflow](/power-local-llm/langflow-visual-ai-orchestration-review)や[Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)のようなツールとは異なり、ビジュアルビルダーのないPythonライブラリである',
+              "複数のLLMエージェントが通信・委任・タスク調整を行うマルチエージェント・オーケストレーションが必要——それは[CrewAI](/ja/power-local-llm/crewai-review)、[AutoGen](/ja/power-local-llm/autogen-review)、[LangGraph](/ja/power-local-llm/langgraph-review)の主要な仕事であり、DSPyのものではない",
+              'ノーコードまたはローコードのインターフェースが必要——DSPyは[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)や[Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)のようなツールとは異なり、ビジュアルビルダーのないPythonライブラリである',
               "タスクにラベル付きの例やスコアリング関数がない——DSPyのオプティマイザーは何かに対して測定する必要があるため、それがなければ結局は手動でプロンプトを書くことになる",
-              'ドキュメントローダー、ベクトルストアのコネクタ、エージェントツールなど、可能な限り幅広い既成の統合エコシステムが必要——その用途には[LangChain](/power-local-llm/langchain-review)の方が統合範囲が広い',
+              'ドキュメントローダー、ベクトルストアのコネクタ、エージェントツールなど、可能な限り幅広い既成の統合エコシステムが必要——その用途には[LangChain](/ja/power-local-llm/langchain-review)の方が統合範囲が広い',
             ],
           },
         ],
@@ -1503,11 +1503,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ツール', '中心的な役割', 'ライセンス', 'ステータス', '最適な用途'],
         rows: [
           { 'ツール': '[DSPy](https://github.com/stanfordnlp/dspy)', '中心的な役割': 'プロンプト/重みの最適化', 'ライセンス': 'MIT', 'ステータス': '活発', '最適な用途': 'メトリクスに基づくプロンプト調整' },
-          { 'ツール': '[LangChain](/power-local-llm/langchain-review)', '中心的な役割': '汎用LLMパイプライン構築', 'ライセンス': 'MIT', 'ステータス': '活発', '最適な用途': '最も広い統合エコシステム' },
-          { 'ツール': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', '中心的な役割': 'RAG特化のデータフレームワーク', 'ライセンス': 'MIT', 'ステータス': '活発', '最適な用途': '検索拡張パイプライン' },
-          { 'ツール': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', '中心的な役割': '構造化されたプロンプト/スキル構成', 'ライセンス': 'MIT', 'ステータス': '活発（MAFへ収束中）', '最適な用途': 'エンタープライズ.NET/Python/Java SDK' },
+          { 'ツール': '[LangChain](/ja/power-local-llm/langchain-review)', '中心的な役割': '汎用LLMパイプライン構築', 'ライセンス': 'MIT', 'ステータス': '活発', '最適な用途': '最も広い統合エコシステム' },
+          { 'ツール': '[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)', '中心的な役割': 'RAG特化のデータフレームワーク', 'ライセンス': 'MIT', 'ステータス': '活発', '最適な用途': '検索拡張パイプライン' },
+          { 'ツール': '[Semantic Kernel](/ja/power-local-llm/semantic-kernel-review)', '中心的な役割': '構造化されたプロンプト/スキル構成', 'ライセンス': 'MIT', 'ステータス': '活発（MAFへ収束中）', '最適な用途': 'エンタープライズ.NET/Python/Java SDK' },
         ],
-        note: "この表は、マルチエージェント・オーケストレーターではなく、概念的に最も近いPythonパイプラインフレームワークとDSPyを比較しています——DSPyは、エージェント調整を解決する[CrewAI](/power-local-llm/crewai-review)や[AutoGen](/power-local-llm/autogen-review)（プロンプト最適化ではない）と直接競合するものではありません。",
+        note: "この表は、マルチエージェント・オーケストレーターではなく、概念的に最も近いPythonパイプラインフレームワークとDSPyを比較しています——DSPyは、エージェント調整を解決する[CrewAI](/ja/power-local-llm/crewai-review)や[AutoGen](/ja/power-local-llm/autogen-review)（プロンプト最適化ではない）と直接競合するものではありません。",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '間違い1：DSPyが複数エージェントをオーケストレーションすると期待する',
-            content: "DSPyのModuleは、通信し合うエージェントのチームではなく、単一のパイプラインに組み合わされます。互いにサブタスクを委任し合うエージェントを必要とするチームは、代わりに[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)、[LangGraph](/power-local-llm/langgraph-review)を評価すべきです——DSPyはそれらのパイプラインの一部のステップ内のプロンプトを最適化できますが、オーケストレーション層そのものの代替にはなりません。",
+            content: "DSPyのModuleは、通信し合うエージェントのチームではなく、単一のパイプラインに組み合わされます。互いにサブタスクを委任し合うエージェントを必要とするチームは、代わりに[CrewAI](/ja/power-local-llm/crewai-review)、[AutoGen](/ja/power-local-llm/autogen-review)、[LangGraph](/ja/power-local-llm/langgraph-review)を評価すべきです——DSPyはそれらのパイプラインの一部のステップ内のプロンプトを最適化できますが、オーケストレーション層そのものの代替にはなりません。",
           },
           {
             title: '間違い2：オプティマイザーを一度も実行しない',
@@ -1559,11 +1559,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[LangChainレビュー：機能、料金、代替ツール](/power-local-llm/langchain-review) — プロンプト最適化ではなく既成のコネクタを必要とするチーム向けの、最も広い統合エコシステムを持つ汎用PythonのLLMパイプラインフレームワーク。',
-          '[LlamaIndexレビュー：RAGフレームワーク](/power-local-llm/llamaindex-rag-framework-review) — 検索拡張パイプライン向けのRAG特化データフレームワークで、DSPyと同じ構成要素カテゴリに属する別のPythonフレームワーク。',
-          '[Semantic Kernelレビュー：機能、料金、代替ツール](/power-local-llm/semantic-kernel-review) — .NET/Python/Javaで作業するチーム向けの、構造化されたプロンプトとスキル構成のためのMicrosoftのエンタープライズ・オーケストレーションSDK。',
-          '[CrewAIレビュー：機能、料金、代替ツール](/power-local-llm/crewai-review) — プロンプト最適化ではなくエージェント調整を必要とするチーム向けの、ロールベースのマルチエージェントフレームワーク。',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。エージェント/パイプラインフレームワークの中でDSPyがどこに位置するかを含む。',
+          '[LangChainレビュー：機能、料金、代替ツール](/ja/power-local-llm/langchain-review) — プロンプト最適化ではなく既成のコネクタを必要とするチーム向けの、最も広い統合エコシステムを持つ汎用PythonのLLMパイプラインフレームワーク。',
+          '[LlamaIndexレビュー：RAGフレームワーク](/ja/power-local-llm/llamaindex-rag-framework-review) — 検索拡張パイプライン向けのRAG特化データフレームワークで、DSPyと同じ構成要素カテゴリに属する別のPythonフレームワーク。',
+          '[Semantic Kernelレビュー：機能、料金、代替ツール](/ja/power-local-llm/semantic-kernel-review) — .NET/Python/Javaで作業するチーム向けの、構造化されたプロンプトとスキル構成のためのMicrosoftのエンタープライズ・オーケストレーションSDK。',
+          '[CrewAIレビュー：機能、料金、代替ツール](/ja/power-local-llm/crewai-review) — プロンプト最適化ではなくエージェント調整を必要とするチーム向けの、ロールベースのマルチエージェントフレームワーク。',
+          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。エージェント/パイプラインフレームワークの中でDSPyがどこに位置するかを含む。',
         ],
       },
     },
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装：`pip install dspy`，运行程序前需要先配置LLM提供商',
         ],
         callouts: [
-          { type: 'note', text: "DSPy解决的问题与本系列中大多数智能体框架不同——它优化的是管道内部的提示词，而不是编排多智能体对话。参见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)，了解DSPy在智能体与管道框架中的定位。" },
+          { type: 'note', text: "DSPy解决的问题与本系列中大多数智能体框架不同——它优化的是管道内部的提示词，而不是编排多智能体对话。参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，了解DSPy在智能体与管道框架中的定位。" },
         ],
       },
       history: {
@@ -1736,10 +1736,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '以下情况应避免使用DSPy',
             list: [
-              "你需要多智能体编排——多个LLM智能体相互通信、委派并协调任务——这是[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)或[LangGraph](/power-local-llm/langgraph-review)的核心工作，而非DSPy的",
-              '你需要无代码或低代码界面——DSPy是一个没有可视化构建器的Python库，不同于[Langflow](/power-local-llm/langflow-visual-ai-orchestration-review)或[Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)等工具',
+              "你需要多智能体编排——多个LLM智能体相互通信、委派并协调任务——这是[CrewAI](/zh/power-local-llm/crewai-review)、[AutoGen](/zh/power-local-llm/autogen-review)或[LangGraph](/zh/power-local-llm/langgraph-review)的核心工作，而非DSPy的",
+              '你需要无代码或低代码界面——DSPy是一个没有可视化构建器的Python库，不同于[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)或[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)等工具',
               "你的任务没有带标签的示例或评分函数——DSPy的优化器需要有可衡量的对象；没有这些，最终还是要回到手动编写提示词",
-              '你需要尽可能广泛的预构建集成生态（文档加载器、向量数据库连接器、智能体工具）——[LangChain](/power-local-llm/langchain-review)在这方面拥有更大的集成面',
+              '你需要尽可能广泛的预构建集成生态（文档加载器、向量数据库连接器、智能体工具）——[LangChain](/zh/power-local-llm/langchain-review)在这方面拥有更大的集成面',
             ],
           },
         ],
@@ -1764,11 +1764,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['工具', '核心工作', '许可证', '状态', '最适合场景'],
         rows: [
           { '工具': '[DSPy](https://github.com/stanfordnlp/dspy)', '核心工作': '提示词/权重优化', '许可证': 'MIT', '状态': '活跃', '最适合场景': '按指标调优提示词' },
-          { '工具': '[LangChain](/power-local-llm/langchain-review)', '核心工作': '通用LLM管道构建', '许可证': 'MIT', '状态': '活跃', '最适合场景': '最广泛的集成生态' },
-          { '工具': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', '核心工作': '面向RAG的数据框架', '许可证': 'MIT', '状态': '活跃', '最适合场景': '检索增强型管道' },
-          { '工具': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', '核心工作': '结构化提示词/技能组合', '许可证': 'MIT', '状态': '活跃（正向MAF收敛）', '最适合场景': '企业级.NET/Python/Java SDK' },
+          { '工具': '[LangChain](/zh/power-local-llm/langchain-review)', '核心工作': '通用LLM管道构建', '许可证': 'MIT', '状态': '活跃', '最适合场景': '最广泛的集成生态' },
+          { '工具': '[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)', '核心工作': '面向RAG的数据框架', '许可证': 'MIT', '状态': '活跃', '最适合场景': '检索增强型管道' },
+          { '工具': '[Semantic Kernel](/zh/power-local-llm/semantic-kernel-review)', '核心工作': '结构化提示词/技能组合', '许可证': 'MIT', '状态': '活跃（正向MAF收敛）', '最适合场景': '企业级.NET/Python/Java SDK' },
         ],
-        note: "本表对比的是DSPy与概念上重叠度最高的Python管道框架，而非多智能体编排器——DSPy并不与解决智能体协调问题（而非提示词优化）的[CrewAI](/power-local-llm/crewai-review)或[AutoGen](/power-local-llm/autogen-review)直接竞争。",
+        note: "本表对比的是DSPy与概念上重叠度最高的Python管道框架，而非多智能体编排器——DSPy并不与解决智能体协调问题（而非提示词优化）的[CrewAI](/zh/power-local-llm/crewai-review)或[AutoGen](/zh/power-local-llm/autogen-review)直接竞争。",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '错误1：期望DSPy能编排多个智能体',
-            content: "DSPy的Module组合成的是单一管道，而不是一支相互通信的智能体团队。需要智能体相互委派子任务的团队，应该转而评估[CrewAI](/power-local-llm/crewai-review)、[AutoGen](/power-local-llm/autogen-review)或[LangGraph](/power-local-llm/langgraph-review)——DSPy可以优化这些管道中某个步骤内部的提示词，但无法替代编排层本身。",
+            content: "DSPy的Module组合成的是单一管道，而不是一支相互通信的智能体团队。需要智能体相互委派子任务的团队，应该转而评估[CrewAI](/zh/power-local-llm/crewai-review)、[AutoGen](/zh/power-local-llm/autogen-review)或[LangGraph](/zh/power-local-llm/langgraph-review)——DSPy可以优化这些管道中某个步骤内部的提示词，但无法替代编排层本身。",
           },
           {
             title: '错误2：从不运行优化器',
@@ -1820,11 +1820,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[LangChain评测：功能、价格、替代方案](/power-local-llm/langchain-review) — 面向需要现成连接器而非提示词优化的团队，是拥有最广泛集成生态的通用Python LLM管道框架。',
-          '[LlamaIndex评测：RAG框架](/power-local-llm/llamaindex-rag-framework-review) — 面向检索增强型管道的RAG专用数据框架，是与DSPy同属构建模块类别的另一个Python框架。',
-          '[Semantic Kernel评测：功能、价格、替代方案](/power-local-llm/semantic-kernel-review) — 微软面向.NET/Python/Java团队的企业级编排SDK，用于结构化提示词和技能组合。',
-          '[CrewAI评测：功能、价格、替代方案](/power-local-llm/crewai-review) — 面向需要智能体协调而非提示词优化团队的、基于角色的多智能体框架。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中包含DSPy在智能体与管道框架中的定位。',
+          '[LangChain评测：功能、价格、替代方案](/zh/power-local-llm/langchain-review) — 面向需要现成连接器而非提示词优化的团队，是拥有最广泛集成生态的通用Python LLM管道框架。',
+          '[LlamaIndex评测：RAG框架](/zh/power-local-llm/llamaindex-rag-framework-review) — 面向检索增强型管道的RAG专用数据框架，是与DSPy同属构建模块类别的另一个Python框架。',
+          '[Semantic Kernel评测：功能、价格、替代方案](/zh/power-local-llm/semantic-kernel-review) — 微软面向.NET/Python/Java团队的企业级编排SDK，用于结构化提示词和技能组合。',
+          '[CrewAI评测：功能、价格、替代方案](/zh/power-local-llm/crewai-review) — 面向需要智能体协调而非提示词优化团队的、基于角色的多智能体框架。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中包含DSPy在智能体与管道框架中的定位。',
         ],
       },
     },
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت: `pip install dspy`، ويتطلب إعداد مزوّد نموذج لغة قبل تشغيل أي برنامج',
         ],
         callouts: [
-          { type: 'note', text: "يحل DSPy مشكلة مختلفة عن معظم أطر عمل الوكلاء في هذه السلسلة — فهو يُحسِّن المُوجِّهات داخل خط أنابيب بدلًا من تنسيق محادثات متعددة الوكلاء. راجع [دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) لمعرفة مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب." },
+          { type: 'note', text: "يحل DSPy مشكلة مختلفة عن معظم أطر عمل الوكلاء في هذه السلسلة — فهو يُحسِّن المُوجِّهات داخل خط أنابيب بدلًا من تنسيق محادثات متعددة الوكلاء. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) لمعرفة مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب." },
         ],
       },
       history: {
@@ -1997,10 +1997,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب DSPy إذا',
             list: [
-              "تحتاج إلى تنسيق متعدد الوكلاء — عدة وكلاء نماذج لغة يتواصلون ويفوّضون وينسّقون المهام — وهذه هي المهمة الأساسية لـ[CrewAI](/power-local-llm/crewai-review) أو [AutoGen](/power-local-llm/autogen-review) أو [LangGraph](/power-local-llm/langgraph-review)، لا DSPy",
-              'تحتاج إلى واجهة بلا شيفرة أو منخفضة الشيفرة — DSPy مكتبة Python بلا أداة بناء بصرية، بخلاف أدوات مثل [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) أو [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review)',
+              "تحتاج إلى تنسيق متعدد الوكلاء — عدة وكلاء نماذج لغة يتواصلون ويفوّضون وينسّقون المهام — وهذه هي المهمة الأساسية لـ[CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review) أو [LangGraph](/ar/power-local-llm/langgraph-review)، لا DSPy",
+              'تحتاج إلى واجهة بلا شيفرة أو منخفضة الشيفرة — DSPy مكتبة Python بلا أداة بناء بصرية، بخلاف أدوات مثل [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review) أو [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)',
               "ليس لديك أمثلة مُصنَّفة أو دالة تقييم لمهمتك — تحتاج مُحسِّنات DSPy إلى شيء تقيس مقابله؛ فمن دون ذلك ستعود إلى كتابة المُوجِّهات يدويًا على أي حال",
-              'تحتاج إلى أوسع منظومة ممكنة من التكاملات الجاهزة (محمِّلات المستندات، موصلات قواعد بيانات المتجهات، أدوات الوكلاء) — يمتلك [LangChain](/power-local-llm/langchain-review) مساحة تكامل أكبر لهذا الغرض',
+              'تحتاج إلى أوسع منظومة ممكنة من التكاملات الجاهزة (محمِّلات المستندات، موصلات قواعد بيانات المتجهات، أدوات الوكلاء) — يمتلك [LangChain](/ar/power-local-llm/langchain-review) مساحة تكامل أكبر لهذا الغرض',
             ],
           },
         ],
@@ -2025,11 +2025,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الأداة', 'المهمة الأساسية', 'الرخصة', 'الحالة', 'الأنسب لـ'],
         rows: [
           { 'الأداة': '[DSPy](https://github.com/stanfordnlp/dspy)', 'المهمة الأساسية': 'تحسين المُوجِّهات/الأوزان', 'الرخصة': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'ضبط المُوجِّهات وفق مقياس' },
-          { 'الأداة': '[LangChain](/power-local-llm/langchain-review)', 'المهمة الأساسية': 'بناء خطوط أنابيب عام لنماذج اللغة', 'الرخصة': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'أوسع منظومة تكاملات' },
-          { 'الأداة': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', 'المهمة الأساسية': 'إطار بيانات مركّز على RAG', 'الرخصة': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'خطوط أنابيب الاسترجاع المُعزَّز' },
-          { 'الأداة': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', 'المهمة الأساسية': 'تأليف مُوجِّهات/مهارات مُهيكَل', 'الرخصة': 'MIT', 'الحالة': 'نشط (يتقارب نحو MAF)', 'الأنسب لـ': 'حزمة تطوير برمجيات مؤسسية .NET/Python/Java' },
+          { 'الأداة': '[LangChain](/ar/power-local-llm/langchain-review)', 'المهمة الأساسية': 'بناء خطوط أنابيب عام لنماذج اللغة', 'الرخصة': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'أوسع منظومة تكاملات' },
+          { 'الأداة': '[LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review)', 'المهمة الأساسية': 'إطار بيانات مركّز على RAG', 'الرخصة': 'MIT', 'الحالة': 'نشط', 'الأنسب لـ': 'خطوط أنابيب الاسترجاع المُعزَّز' },
+          { 'الأداة': '[Semantic Kernel](/ar/power-local-llm/semantic-kernel-review)', 'المهمة الأساسية': 'تأليف مُوجِّهات/مهارات مُهيكَل', 'الرخصة': 'MIT', 'الحالة': 'نشط (يتقارب نحو MAF)', 'الأنسب لـ': 'حزمة تطوير برمجيات مؤسسية .NET/Python/Java' },
         ],
-        note: "يقارن هذا الجدول DSPy بأطر عمل خطوط أنابيب Python ذات أقرب تداخل مفاهيمي، لا بمنسّقي الوكلاء المتعددين — فـDSPy لا ينافس مباشرة [CrewAI](/power-local-llm/crewai-review) أو [AutoGen](/power-local-llm/autogen-review)، اللذين يحلان مشكلة تنسيق الوكلاء لا تحسين المُوجِّهات.",
+        note: "يقارن هذا الجدول DSPy بأطر عمل خطوط أنابيب Python ذات أقرب تداخل مفاهيمي، لا بمنسّقي الوكلاء المتعددين — فـDSPy لا ينافس مباشرة [CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review)، اللذين يحلان مشكلة تنسيق الوكلاء لا تحسين المُوجِّهات.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'الخطأ 1: توقّع أن يُنسّق DSPy بين عدة وكلاء',
-            content: "تتجمّع Modules في DSPy في خط أنابيب واحد، لا في فريق من الوكلاء المتواصلة. ينبغي للفرق التي تحتاج إلى وكلاء يفوّضون مهامًا فرعية لبعضهم البعض أن تقيّم بدلًا من ذلك [CrewAI](/power-local-llm/crewai-review) أو [AutoGen](/power-local-llm/autogen-review) أو [LangGraph](/power-local-llm/langgraph-review) — يمكن لـDSPy تحسين المُوجِّهات داخل خطوة من إحدى تلك خطوط الأنابيب، لكنه لا يحلّ محل طبقة التنسيق نفسها.",
+            content: "تتجمّع Modules في DSPy في خط أنابيب واحد، لا في فريق من الوكلاء المتواصلة. ينبغي للفرق التي تحتاج إلى وكلاء يفوّضون مهامًا فرعية لبعضهم البعض أن تقيّم بدلًا من ذلك [CrewAI](/ar/power-local-llm/crewai-review) أو [AutoGen](/ar/power-local-llm/autogen-review) أو [LangGraph](/ar/power-local-llm/langgraph-review) — يمكن لـDSPy تحسين المُوجِّهات داخل خطوة من إحدى تلك خطوط الأنابيب، لكنه لا يحلّ محل طبقة التنسيق نفسها.",
           },
           {
             title: 'الخطأ 2: عدم تشغيل مُحسِّن مطلقًا',
@@ -2081,11 +2081,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة LangChain: الميزات والأسعار والبدائل](/power-local-llm/langchain-review) — إطار عمل Python عام لخطوط أنابيب نماذج اللغة بأوسع منظومة تكاملات، للفرق التي تحتاج موصلات جاهزة لا تحسين مُوجِّهات.',
-          '[مراجعة LlamaIndex: إطار عمل RAG](/power-local-llm/llamaindex-rag-framework-review) — إطار بيانات مركّز على RAG لخطوط أنابيب الاسترجاع المُعزَّز، وهو إطار Python آخر ضمن فئة اللبنات نفسها التي ينتمي إليها DSPy.',
-          '[مراجعة Semantic Kernel: الميزات والأسعار والبدائل](/power-local-llm/semantic-kernel-review) — حزمة تطوير برمجيات مايكروسوفت المؤسسية لتنسيق تأليف المُوجِّهات والمهارات المُهيكَل، للفرق العاملة بـ.NET/Python/Java.',
-          '[مراجعة CrewAI: الميزات والأسعار والبدائل](/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار، للفرق التي تحتاج تنسيق وكلاء لا تحسين مُوجِّهات.',
-          '[دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب.',
+          '[مراجعة LangChain: الميزات والأسعار والبدائل](/ar/power-local-llm/langchain-review) — إطار عمل Python عام لخطوط أنابيب نماذج اللغة بأوسع منظومة تكاملات، للفرق التي تحتاج موصلات جاهزة لا تحسين مُوجِّهات.',
+          '[مراجعة LlamaIndex: إطار عمل RAG](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار بيانات مركّز على RAG لخطوط أنابيب الاسترجاع المُعزَّز، وهو إطار Python آخر ضمن فئة اللبنات نفسها التي ينتمي إليها DSPy.',
+          '[مراجعة Semantic Kernel: الميزات والأسعار والبدائل](/ar/power-local-llm/semantic-kernel-review) — حزمة تطوير برمجيات مايكروسوفت المؤسسية لتنسيق تأليف المُوجِّهات والمهارات المُهيكَل، للفرق العاملة بـ.NET/Python/Java.',
+          '[مراجعة CrewAI: الميزات والأسعار والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار، للفرق التي تحتاج تنسيق وكلاء لا تحسين مُوجِّهات.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب.',
         ],
       },
     },
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설치: `pip install dspy`, 프로그램 실행 전 LLM 제공업체 설정 필요',
         ],
         callouts: [
-          { type: 'note', text: "DSPy는 이 시리즈의 대부분 에이전트 프레임워크와는 다른 문제를 해결합니다 — 멀티 에이전트 대화를 오케스트레이션하는 대신 파이프라인 내부의 프롬프트를 최적화합니다. DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "DSPy는 이 시리즈의 대부분 에이전트 프레임워크와는 다른 문제를 해결합니다 — 멀티 에이전트 대화를 오케스트레이션하는 대신 파이프라인 내부의 프롬프트를 최적화합니다. DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요." },
         ],
       },
       history: {
@@ -2258,10 +2258,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 DSPy를 피하세요',
             list: [
-              "멀티 에이전트 오케스트레이션이 필요한 경우 — 여러 LLM 에이전트가 서로 통신하고, 위임하고, 작업을 조정하는 것 — 이는 DSPy가 아니라 [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review), [LangGraph](/power-local-llm/langgraph-review)의 핵심 역할입니다",
-              '노코드 또는 로우코드 인터페이스가 필요한 경우 — DSPy는 [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review)나 [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review) 같은 도구와 달리 비주얼 빌더가 없는 Python 라이브러리입니다',
+              "멀티 에이전트 오케스트레이션이 필요한 경우 — 여러 LLM 에이전트가 서로 통신하고, 위임하고, 작업을 조정하는 것 — 이는 DSPy가 아니라 [CrewAI](/ko/power-local-llm/crewai-review), [AutoGen](/ko/power-local-llm/autogen-review), [LangGraph](/ko/power-local-llm/langgraph-review)의 핵심 역할입니다",
+              '노코드 또는 로우코드 인터페이스가 필요한 경우 — DSPy는 [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review)나 [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review) 같은 도구와 달리 비주얼 빌더가 없는 Python 라이브러리입니다',
               "작업에 대한 레이블이 있는 예시나 채점 함수가 없는 경우 — DSPy의 옵티마이저는 비교할 대상이 필요하므로, 이것이 없으면 어차피 다시 프롬프트를 손으로 작성하게 됩니다",
-              '가능한 한 폭넓은 사전 구축 통합 생태계(문서 로더, 벡터 스토어 커넥터, 에이전트 도구)가 필요한 경우 — [LangChain](/power-local-llm/langchain-review)이 이 용도로 더 넓은 통합 범위를 제공합니다',
+              '가능한 한 폭넓은 사전 구축 통합 생태계(문서 로더, 벡터 스토어 커넥터, 에이전트 도구)가 필요한 경우 — [LangChain](/ko/power-local-llm/langchain-review)이 이 용도로 더 넓은 통합 범위를 제공합니다',
             ],
           },
         ],
@@ -2286,11 +2286,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['도구', '핵심 역할', '라이선스', '상태', '최적 용도'],
         rows: [
           { '도구': '[DSPy](https://github.com/stanfordnlp/dspy)', '핵심 역할': '프롬프트/가중치 최적화', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '지표에 따른 프롬프트 조정' },
-          { '도구': '[LangChain](/power-local-llm/langchain-review)', '핵심 역할': '범용 LLM 파이프라인 구축', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '가장 폭넓은 통합 생태계' },
-          { '도구': '[LlamaIndex](/power-local-llm/llamaindex-rag-framework-review)', '핵심 역할': 'RAG 중심 데이터 프레임워크', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '검색 증강 파이프라인' },
-          { '도구': '[Semantic Kernel](/power-local-llm/semantic-kernel-review)', '핵심 역할': '구조화된 프롬프트/스킬 구성', '라이선스': 'MIT', '상태': '활발함(MAF로 수렴 중)', '최적 용도': '엔터프라이즈 .NET/Python/Java SDK' },
+          { '도구': '[LangChain](/ko/power-local-llm/langchain-review)', '핵심 역할': '범용 LLM 파이프라인 구축', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '가장 폭넓은 통합 생태계' },
+          { '도구': '[LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review)', '핵심 역할': 'RAG 중심 데이터 프레임워크', '라이선스': 'MIT', '상태': '활발함', '최적 용도': '검색 증강 파이프라인' },
+          { '도구': '[Semantic Kernel](/ko/power-local-llm/semantic-kernel-review)', '핵심 역할': '구조화된 프롬프트/스킬 구성', '라이선스': 'MIT', '상태': '활발함(MAF로 수렴 중)', '최적 용도': '엔터프라이즈 .NET/Python/Java SDK' },
         ],
-        note: "이 표는 DSPy를 멀티 에이전트 오케스트레이터가 아니라 개념적으로 가장 가까운 Python 파이프라인 프레임워크와 비교합니다 — DSPy는 프롬프트 최적화가 아니라 에이전트 조정을 해결하는 [CrewAI](/power-local-llm/crewai-review)나 [AutoGen](/power-local-llm/autogen-review)과 직접 경쟁하지 않습니다.",
+        note: "이 표는 DSPy를 멀티 에이전트 오케스트레이터가 아니라 개념적으로 가장 가까운 Python 파이프라인 프레임워크와 비교합니다 — DSPy는 프롬프트 최적화가 아니라 에이전트 조정을 해결하는 [CrewAI](/ko/power-local-llm/crewai-review)나 [AutoGen](/ko/power-local-llm/autogen-review)과 직접 경쟁하지 않습니다.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '실수 1: DSPy가 여러 에이전트를 오케스트레이션할 것으로 기대하기',
-            content: "DSPy의 Module은 서로 통신하는 에이전트 팀이 아니라 단일 파이프라인으로 구성됩니다. 서로에게 하위 작업을 위임하는 에이전트가 필요한 팀은 대신 [CrewAI](/power-local-llm/crewai-review), [AutoGen](/power-local-llm/autogen-review), [LangGraph](/power-local-llm/langgraph-review)를 평가해야 합니다 — DSPy는 그러한 파이프라인의 한 단계 내부 프롬프트를 최적화할 수 있지만, 오케스트레이션 레이어 자체를 대체하지는 않습니다.",
+            content: "DSPy의 Module은 서로 통신하는 에이전트 팀이 아니라 단일 파이프라인으로 구성됩니다. 서로에게 하위 작업을 위임하는 에이전트가 필요한 팀은 대신 [CrewAI](/ko/power-local-llm/crewai-review), [AutoGen](/ko/power-local-llm/autogen-review), [LangGraph](/ko/power-local-llm/langgraph-review)를 평가해야 합니다 — DSPy는 그러한 파이프라인의 한 단계 내부 프롬프트를 최적화할 수 있지만, 오케스트레이션 레이어 자체를 대체하지는 않습니다.",
           },
           {
             title: '실수 2: 옵티마이저를 한 번도 실행하지 않기',
@@ -2342,11 +2342,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[LangChain 리뷰: 기능, 가격, 대안](/power-local-llm/langchain-review) — 프롬프트 최적화가 아니라 사전 구축된 커넥터가 필요한 팀을 위한, 가장 폭넓은 통합 생태계를 갖춘 범용 Python LLM 파이프라인 프레임워크.',
-          '[LlamaIndex 리뷰: RAG 프레임워크](/power-local-llm/llamaindex-rag-framework-review) — 검색 증강 파이프라인을 위한 RAG 중심 데이터 프레임워크로, DSPy와 동일한 빌딩 블록 카테고리에 속하는 또 다른 Python 프레임워크.',
-          '[Semantic Kernel 리뷰: 기능, 가격, 대안](/power-local-llm/semantic-kernel-review) — .NET/Python/Java로 작업하는 팀을 위한, 구조화된 프롬프트와 스킬 구성을 위한 마이크로소프트의 엔터프라이즈 오케스트레이션 SDK.',
-          '[CrewAI 리뷰: 기능, 가격, 대안](/power-local-llm/crewai-review) — 프롬프트 최적화가 아니라 에이전트 조정이 필요한 팀을 위한, 역할 기반 멀티 에이전트 프레임워크.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지도 포함합니다.',
+          '[LangChain 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langchain-review) — 프롬프트 최적화가 아니라 사전 구축된 커넥터가 필요한 팀을 위한, 가장 폭넓은 통합 생태계를 갖춘 범용 Python LLM 파이프라인 프레임워크.',
+          '[LlamaIndex 리뷰: RAG 프레임워크](/ko/power-local-llm/llamaindex-rag-framework-review) — 검색 증강 파이프라인을 위한 RAG 중심 데이터 프레임워크로, DSPy와 동일한 빌딩 블록 카테고리에 속하는 또 다른 Python 프레임워크.',
+          '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — .NET/Python/Java로 작업하는 팀을 위한, 구조화된 프롬프트와 스킬 구성을 위한 마이크로소프트의 엔터프라이즈 오케스트레이션 SDK.',
+          '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 프롬프트 최적화가 아니라 에이전트 조정이 필요한 팀을 위한, 역할 기반 멀티 에이전트 프레임워크.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

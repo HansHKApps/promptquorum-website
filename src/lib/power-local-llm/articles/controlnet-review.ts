@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'Code und erste vortrainierte Gewichte von ControlNet wurden im Februar 2023 zusammen mit dem arXiv-Preprint auf GitHub veröffentlicht. Am 14. April 2023 folgte eine überarbeitete "ControlNet 1.1"-Version mit mehr unterstützten Konditionierungstypen und verbesserter Robustheit. Das Paper wurde offiziell auf der [ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) veröffentlicht und erhielt den Marr Prize der Konferenz, bestätigt auf der [offiziellen Awards-Seite der Computer Vision Foundation](https://www.thecvf.com/?page_id=413).',
-          'ControlNet wurde rund um die ursprüngliche Stable-Diffusion-1.5-Architektur entwickelt und zuerst daran demonstriert. Die Open-Source-Community — und später Stability AI selbst — trainierte anschließend zusätzliche ControlNet-Checkpoints für neuere Basismodelle, darunter Stable Diffusion XL und Stable Diffusion 3.5, und übertrug damit dieselbe Konditionierungstechnik auf jede neue Modellgeneration. Siehe [Stable Diffusion Test](/power-local-llm/stable-diffusion-review) für Hintergründe zu diesen Basismodellen.',
+          'ControlNet wurde rund um die ursprüngliche Stable-Diffusion-1.5-Architektur entwickelt und zuerst daran demonstriert. Die Open-Source-Community — und später Stability AI selbst — trainierte anschließend zusätzliche ControlNet-Checkpoints für neuere Basismodelle, darunter Stable Diffusion XL und Stable Diffusion 3.5, und übertrug damit dieselbe Konditionierungstechnik auf jede neue Modellgeneration. Siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review) für Hintergründe zu diesen Basismodellen.',
         ],
         note: 'Fakten am 2026-09-06 direkt gegen arxiv.org, das GitHub-Repository lllyasviel/ControlNet, die CVF-ICCV-2023-Open-Access-Seite und die offizielle Awards-Liste auf thecvf.com verifiziert.',
       },
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Einrichtung von ControlNet unterscheidet sich je Oberfläche, da es keinen eigenständigen Installer gibt. Die beiden häufigsten Wege sind unten skizziert.',
         ],
         numberedItems: [
-          { title: 'Prüfen, ob bereits eine funktionierende Stable-Diffusion-Oberfläche läuft', whyItMatters: 'ControlNet hat nichts, woran es andocken kann, ohne dass AUTOMATIC1111, ComfyUI oder InvokeAI bereits installiert sind und Bilder erzeugen — siehe [Stable Diffusion Test](/power-local-llm/stable-diffusion-review), falls noch keine Oberfläche eingerichtet ist.' },
+          { title: 'Prüfen, ob bereits eine funktionierende Stable-Diffusion-Oberfläche läuft', whyItMatters: 'ControlNet hat nichts, woran es andocken kann, ohne dass AUTOMATIC1111, ComfyUI oder InvokeAI bereits installiert sind und Bilder erzeugen — siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review), falls noch keine Oberfläche eingerichtet ist.' },
           { title: 'ControlNet-Erweiterung installieren (AUTOMATIC1111) oder native Unterstützung prüfen (ComfyUI/InvokeAI)', whyItMatters: 'AUTOMATIC1111 bringt ControlNet nicht integriert mit — fügen Sie die Community-Erweiterung [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) über den Extensions-Tab hinzu. ComfyUI enthält ControlNet-bezogene Nodes im Kern; InvokeAI stellt ControlNet über die integrierte Control-Layers-Funktion bereit, sodass in beiden Fällen keine separate Erweiterung nötig ist.' },
           { title: 'Einen zum Basismodell passenden ControlNet-Checkpoint herunterladen', whyItMatters: 'Ein für SD 1.5 trainierter Checkpoint funktioniert nicht korrekt mit SDXL oder SD 3.5 — passen Sie das ControlNet-Modell an die genutzte Stable-Diffusion-Version an und prüfen Sie die Lizenz vor dem Download (siehe Lizenzabschnitt unten).' },
           { title: 'Checkpoint im richtigen Modellordner ablegen', whyItMatters: 'AUTOMATIC1111 erwartet ControlNet-Modelle unter `extensions/sd-webui-controlnet/models`; ComfyUI und InvokeAI nutzen eigene dokumentierte Modellverzeichnisse — prüfen Sie den aktuellen Einrichtungsleitfaden der jeweiligen Oberfläche für den genauen Pfad.' },
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Community-Berichte und Dokumentationen der Oberflächen beschreiben für ein einzelnes ControlNet-Modell auf Stable Diffusion 1.5 üblicherweise etwa 1–2 GB zusätzlichen VRAM-Bedarf, und einen größeren Anstieg — häufig um 2–4 GB je Modell genannt — bei SDXL, da dessen Encoder-Schichten größer und damit aufwendiger zu duplizieren sind. Werden mehrere ControlNet-Modelle gleichzeitig genutzt (z. B. Tiefe plus Pose plus Canny zugleich), summiert sich dieser Mehrbedarf weiter. Leichtere Alternativen wie T2I-Adapter (siehe Alternativen-Abschnitt unten) sind darauf ausgelegt, deutlich weniger VRAM-Mehrbedarf als ControlNet zu verursachen, allerdings mit in manchen Community-Vergleichen etwas weniger präziser Kontrolle.',
           'Da diese Werte aus Community-Benchmarks stammen und nicht aus einem von PromptQuorum selbst durchgeführten kontrollierten Test, sollten Sie sie als Planungsrahmen behandeln: Prüfen Sie aktuelles VRAM-Verhalten in der Dokumentation oder dem Issue-Tracker Ihrer konkreten Oberfläche, bevor Sie annehmen, dass eine grenzwertige GPU eine bestimmte Kombination aus Basismodell und ControlNet bewältigt.',
         ],
-        note: 'Siehe [Stable Diffusion Test — Hardware-Anforderungen](/power-local-llm/stable-diffusion-review) für VRAM-Bereiche des Basismodells, bevor der ControlNet-Mehrbedarf hinzukommt.',
+        note: 'Siehe [Stable Diffusion Test — Hardware-Anforderungen](/de/power-local-llm/stable-diffusion-review) für VRAM-Bereiche des Basismodells, bevor der ControlNet-Mehrbedarf hinzukommt.',
       },
       pricing: {
         id: 'pricing',
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet, T2I-Adapter und IP-Adapter schließen sich nicht gegenseitig aus — viele Workflows kombinieren ControlNet (für Pose oder Komposition) mit IP-Adapter (für Stil- oder Charakterkonsistenz) in derselben Generierung. Welche Kombination sinnvoll ist, hängt davon ab, was Sie festlegen wollen: Struktur (ControlNet, T2I-Adapter) versus Erscheinungsbild (IP-Adapter).',
-          'Zur zugrunde liegenden Stable-Diffusion-Modellwahl, an die diese Techniken andocken, siehe [Stable Diffusion Test](/power-local-llm/stable-diffusion-review). Für einen breiteren Vergleich von lokaler versus Cloud-Bildgenerierung insgesamt siehe [Lokale KI-Bildgenerierung vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud).',
+          'Zur zugrunde liegenden Stable-Diffusion-Modellwahl, an die diese Techniken andocken, siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review). Für einen breiteren Vergleich von lokaler versus Cloud-Bildgenerierung insgesamt siehe [Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud).',
           'Auf Oberflächen-Seite hat [ComfyUI](https://github.com/comfyanonymous/ComfyUI) native ControlNet-Nodes ohne separate Erweiterung; [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) benötigt die Community-Erweiterung [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet); [InvokeAI](https://github.com/invoke-ai/InvokeAI) integriert es als eingebaute Control Layers in der Canvas; und [Fooocus](https://github.com/lllyasviel/Fooocus) — entwickelt vom selben Forscher, der ControlNet geschaffen hat — enthält eigene vereinfachte, ControlNet-basierte Funktionen zur strukturellen Steuerung, statt die rohe ControlNet-Modellauswahl offenzulegen.',
         ],
       },
@@ -672,9 +672,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Stable Diffusion Test (2026)](/power-local-llm/stable-diffusion-review) — die Basismodellfamilie, an die ControlNet andockt, inkl. Lizenzbedingungen und VRAM-Anforderungen je Version.',
-          '[Lokale KI-Bildgenerierung vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — tieferer Vergleich lokaler Bildmodellfamilien nach Lizenzbedingungen, VRAM und realen Anwendungsfällen.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
+          '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die Basismodellfamilie, an die ControlNet andockt, inkl. Lizenzbedingungen und VRAM-Anforderungen je Version.',
+          '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — tieferer Vergleich lokaler Bildmodellfamilien nach Lizenzbedingungen, VRAM und realen Anwendungsfällen.',
+          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },
     },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'El código y los primeros pesos preentrenados de ControlNet se publicaron en GitHub en febrero de 2023, junto con el preprint de arXiv. Una versión más refinada, "ControlNet 1.1", llegó el 14 de abril de 2023, ampliando los tipos de condicionamiento admitidos y mejorando su robustez. El artículo se publicó formalmente en [ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) y recibió el Marr Prize de la conferencia, confirmado en la [página oficial de premios de la Computer Vision Foundation](https://www.thecvf.com/?page_id=413).',
-          'ControlNet se diseñó en torno a la arquitectura original de Stable Diffusion 1.5 y se demostró primero sobre ella. La comunidad de código abierto —y más tarde Stability AI misma— entrenó después checkpoints adicionales de ControlNet para modelos base más nuevos, incluidos Stable Diffusion XL y Stable Diffusion 3.5, extendiendo la misma técnica de condicionamiento a cada nueva generación de modelos. Consulta [Análisis de Stable Diffusion](/power-local-llm/stable-diffusion-review) para más contexto sobre esos modelos base.',
+          'ControlNet se diseñó en torno a la arquitectura original de Stable Diffusion 1.5 y se demostró primero sobre ella. La comunidad de código abierto —y más tarde Stability AI misma— entrenó después checkpoints adicionales de ControlNet para modelos base más nuevos, incluidos Stable Diffusion XL y Stable Diffusion 3.5, extendiendo la misma técnica de condicionamiento a cada nueva generación de modelos. Consulta [Análisis de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) para más contexto sobre esos modelos base.',
         ],
         note: 'Datos verificados directamente en arxiv.org, el repositorio de GitHub lllyasviel/ControlNet, la página de acceso abierto de CVF ICCV 2023 y el listado oficial de premios de thecvf.com el 2026-09-06.',
       },
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La instalación de ControlNet difiere según la interfaz porque no es un instalador independiente. A continuación se describen las dos rutas más comunes.',
         ],
         numberedItems: [
-          { title: 'Confirma que ya tienes una interfaz de Stable Diffusion funcionando', whyItMatters: 'ControlNet no tiene a qué conectarse si AUTOMATIC1111, ComfyUI o InvokeAI no están ya instalados y generando imágenes —consulta [Análisis de Stable Diffusion](/power-local-llm/stable-diffusion-review) si aún no has configurado ninguno.' },
+          { title: 'Confirma que ya tienes una interfaz de Stable Diffusion funcionando', whyItMatters: 'ControlNet no tiene a qué conectarse si AUTOMATIC1111, ComfyUI o InvokeAI no están ya instalados y generando imágenes —consulta [Análisis de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) si aún no has configurado ninguno.' },
           { title: 'Instala la extensión de ControlNet (AUTOMATIC1111) o confirma el soporte nativo (ComfyUI/InvokeAI)', whyItMatters: 'AUTOMATIC1111 no incluye ControlNet integrado —añade la extensión de la comunidad [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) desde la pestaña Extensions. ComfyUI incluye nodos relacionados con ControlNet en su núcleo; InvokeAI expone ControlNet mediante su función integrada de Control Layers, así que en ninguno de los dos hace falta instalar una extensión aparte.' },
           { title: 'Descarga un checkpoint de ControlNet que coincida con tu modelo base', whyItMatters: 'Un checkpoint entrenado para SD 1.5 no funcionará correctamente con SDXL o SD 3.5 —haz coincidir el modelo de ControlNet con la versión de Stable Diffusion que uses, y verifica su licencia antes de descargarlo (ver la sección de licencia más abajo).' },
           { title: 'Coloca el checkpoint en la carpeta de modelos correcta', whyItMatters: 'AUTOMATIC1111 espera los modelos de ControlNet en `extensions/sd-webui-controlnet/models`; ComfyUI e InvokeAI usan sus propios directorios de modelos documentados —consulta la guía de configuración actual de esa interfaz para la ruta exacta.' },
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los informes de la comunidad y la documentación de las interfaces suelen describir aproximadamente 1–2 GB de VRAM adicional para un único modelo de ControlNet en Stable Diffusion 1.5, y un aumento mayor —comúnmente citado alrededor de 2–4 GB por modelo— en SDXL, ya que sus capas de codificación son más grandes de duplicar. Usar varios modelos de ControlNet a la vez (por ejemplo, profundidad más pose más Canny simultáneamente) acumula aún más este sobrecoste. Alternativas más ligeras como T2I-Adapter (ver la sección de alternativas más abajo) están diseñadas para añadir bastante menos sobrecoste de VRAM que ControlNet, a costa de un control algo menos preciso en algunas comparativas de la comunidad.',
           'Como estas cifras provienen de pruebas de la comunidad y no de un test controlado que PromptQuorum haya realizado por sí mismo, trátalas como rangos de planificación: confirma el comportamiento actual de VRAM en la documentación o el gestor de incidencias de tu interfaz concreta antes de asumir que una GPU al límite podrá con una combinación determinada de modelo base y ControlNet.',
         ],
-        note: 'Consulta [Análisis de Stable Diffusion — Requisitos de hardware](/power-local-llm/stable-diffusion-review) para los rangos de VRAM del modelo base antes de sumar el sobrecoste de ControlNet.',
+        note: 'Consulta [Análisis de Stable Diffusion — Requisitos de hardware](/es/power-local-llm/stable-diffusion-review) para los rangos de VRAM del modelo base antes de sumar el sobrecoste de ControlNet.',
       },
       pricing: {
         id: 'pricing',
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet, T2I-Adapter e IP-Adapter no son mutuamente excluyentes —muchos flujos de trabajo combinan ControlNet (para pose o composición) con IP-Adapter (para consistencia de estilo o personaje) en la misma generación. Qué combinación tiene sentido depende de lo que quieras fijar: estructura (ControlNet, T2I-Adapter) frente a apariencia (IP-Adapter).',
-          'Para la elección del modelo base de Stable Diffusion al que se conectan estas técnicas, consulta [Análisis de Stable Diffusion](/power-local-llm/stable-diffusion-review). Para una comparación más amplia entre generación de imágenes local y en la nube, consulta [Generación de imágenes con IA local frente a la nube](/power-local-llm/local-ai-image-generation-vs-cloud).',
+          'Para la elección del modelo base de Stable Diffusion al que se conectan estas técnicas, consulta [Análisis de Stable Diffusion](/es/power-local-llm/stable-diffusion-review). Para una comparación más amplia entre generación de imágenes local y en la nube, consulta [Generación de imágenes con IA local frente a la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud).',
           'En el lado de las interfaces, [ComfyUI](https://github.com/comfyanonymous/ComfyUI) tiene nodos nativos de ControlNet sin necesidad de una extensión aparte; [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) necesita la extensión de la comunidad [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet); [InvokeAI](https://github.com/invoke-ai/InvokeAI) lo integra como Control Layers incorporadas en su lienzo; y [Fooocus](https://github.com/lllyasviel/Fooocus) —creado por el mismo investigador que creó ControlNet— incluye sus propias funciones simplificadas de guía estructural basadas en ControlNet, en lugar de exponer la selección de modelos de ControlNet en bruto.',
         ],
       },
@@ -1006,9 +1006,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Análisis de Stable Diffusion (2026)](/power-local-llm/stable-diffusion-review) — la familia de modelos base a la que se conecta ControlNet, incluidas las condiciones de licencia y los requisitos de VRAM por versión.',
-          '[Generación de imágenes con IA local frente a la nube](/power-local-llm/local-ai-image-generation-vs-cloud) — comparación más profunda de familias de modelos de imagen locales por condiciones de licencia, VRAM y casos de uso reales.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas.',
+          '[Análisis de Stable Diffusion (2026)](/es/power-local-llm/stable-diffusion-review) — la familia de modelos base a la que se conecta ControlNet, incluidas las condiciones de licencia y los requisitos de VRAM por versión.',
+          '[Generación de imágenes con IA local frente a la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — comparación más profunda de familias de modelos de imagen locales por condiciones de licencia, VRAM y casos de uso reales.',
+          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas.',
         ],
       },
     },
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'Le code et les premiers poids pré-entraînés de ControlNet ont été publiés sur GitHub en février 2023, en même temps que la prépublication arXiv. Une version plus aboutie, « ControlNet 1.1 », a suivi le 14 avril 2023, élargissant les types de conditionnement pris en charge et améliorant leur robustesse. L\'article a été officiellement publié à l\'[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) et a reçu le Marr Prize de la conférence, confirmé sur la [page officielle des récompenses de la Computer Vision Foundation](https://www.thecvf.com/?page_id=413).',
-          'ControlNet a été conçu autour de l\'architecture originale de Stable Diffusion 1.5 et démontré d\'abord sur celle-ci. La communauté open source — puis Stability AI elle-même — a ensuite entraîné des checkpoints ControlNet supplémentaires pour des modèles de base plus récents, dont Stable Diffusion XL et Stable Diffusion 3.5, étendant la même technique de conditionnement à chaque nouvelle génération de modèle. Voir [Test de Stable Diffusion](/power-local-llm/stable-diffusion-review) pour le contexte sur ces modèles de base.',
+          'ControlNet a été conçu autour de l\'architecture originale de Stable Diffusion 1.5 et démontré d\'abord sur celle-ci. La communauté open source — puis Stability AI elle-même — a ensuite entraîné des checkpoints ControlNet supplémentaires pour des modèles de base plus récents, dont Stable Diffusion XL et Stable Diffusion 3.5, étendant la même technique de conditionnement à chaque nouvelle génération de modèle. Voir [Test de Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) pour le contexte sur ces modèles de base.',
         ],
         note: 'Faits vérifiés directement sur arxiv.org, le dépôt GitHub lllyasviel/ControlNet, la page d\'accès libre CVF de l\'ICCV 2023 et la liste officielle des récompenses sur thecvf.com le 2026-09-06.',
       },
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'installation de ControlNet diffère selon l\'interface, car ce n\'est pas un installateur autonome. Les deux chemins les plus courants sont décrits ci-dessous.',
         ],
         numberedItems: [
-          { title: 'Vérifier qu\'une interface Stable Diffusion fonctionne déjà', whyItMatters: 'ControlNet n\'a rien où se greffer si AUTOMATIC1111, ComfyUI ou InvokeAI ne sont pas déjà installés et ne génèrent pas d\'images — voir [Test de Stable Diffusion](/power-local-llm/stable-diffusion-review) si ce n\'est pas encore fait.' },
+          { title: 'Vérifier qu\'une interface Stable Diffusion fonctionne déjà', whyItMatters: 'ControlNet n\'a rien où se greffer si AUTOMATIC1111, ComfyUI ou InvokeAI ne sont pas déjà installés et ne génèrent pas d\'images — voir [Test de Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) si ce n\'est pas encore fait.' },
           { title: 'Installer l\'extension ControlNet (AUTOMATIC1111) ou vérifier la prise en charge native (ComfyUI/InvokeAI)', whyItMatters: 'AUTOMATIC1111 n\'inclut pas ControlNet par défaut — ajoutez l\'extension communautaire [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) depuis l\'onglet Extensions. ComfyUI inclut des nœuds liés à ControlNet dans son cœur ; InvokeAI expose ControlNet via sa fonctionnalité intégrée de Control Layers, donc aucune extension séparée n\'est nécessaire dans les deux cas.' },
           { title: 'Télécharger un checkpoint ControlNet correspondant au modèle de base', whyItMatters: 'Un checkpoint entraîné pour SD 1.5 ne fonctionnera pas correctement avec SDXL ou SD 3.5 — faites correspondre le modèle ControlNet à la version de Stable Diffusion utilisée, et vérifiez sa licence avant de le télécharger (voir la section licence ci-dessous).' },
           { title: 'Placer le checkpoint dans le bon dossier de modèles', whyItMatters: 'AUTOMATIC1111 attend les modèles ControlNet dans `extensions/sd-webui-controlnet/models` ; ComfyUI et InvokeAI utilisent leurs propres répertoires de modèles documentés — consultez le guide d\'installation actuel de cette interface pour le chemin exact.' },
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les retours de la communauté et la documentation des interfaces décrivent généralement environ 1 à 2 Go de VRAM supplémentaire pour un seul modèle ControlNet sur Stable Diffusion 1.5, et une hausse plus importante — souvent citée autour de 2 à 4 Go par modèle — sur SDXL, dont les couches d\'encodage plus grandes sont plus coûteuses à dupliquer. L\'utilisation simultanée de plusieurs modèles ControlNet (par exemple profondeur, pose et Canny en même temps) cumule encore cette surcharge. Des alternatives plus légères comme T2I-Adapter (voir la section alternatives ci-dessous) sont conçues pour ajouter nettement moins de surcharge VRAM que ControlNet, au prix d\'un contrôle un peu moins précis dans certaines comparaisons communautaires.',
           'Ces chiffres provenant de tests communautaires et non d\'un test contrôlé mené par PromptQuorum lui-même, traitez-les comme des fourchettes de planification : vérifiez le comportement VRAM actuel dans la documentation ou le suivi des problèmes de votre interface spécifique avant de supposer qu\'un GPU à la limite gérera une combinaison donnée de modèle de base et de ControlNet.',
         ],
-        note: 'Voir [Test de Stable Diffusion — Configuration matérielle](/power-local-llm/stable-diffusion-review) pour les fourchettes de VRAM du modèle de base avant d\'ajouter la surcharge de ControlNet.',
+        note: 'Voir [Test de Stable Diffusion — Configuration matérielle](/fr/power-local-llm/stable-diffusion-review) pour les fourchettes de VRAM du modèle de base avant d\'ajouter la surcharge de ControlNet.',
       },
       pricing: {
         id: 'pricing',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet, T2I-Adapter et IP-Adapter ne s\'excluent pas mutuellement — de nombreux flux de travail combinent ControlNet (pour la pose ou la composition) avec IP-Adapter (pour la cohérence de style ou de personnage) dans la même génération. La combinaison pertinente dépend de ce que l\'on cherche à fixer : la structure (ControlNet, T2I-Adapter) ou l\'apparence (IP-Adapter).',
-          'Pour le choix du modèle de base Stable Diffusion auquel ces techniques se rattachent, voir [Test de Stable Diffusion](/power-local-llm/stable-diffusion-review). Pour une comparaison plus large entre génération d\'images locale et cloud, voir [Génération d\'images IA locale vs cloud](/power-local-llm/local-ai-image-generation-vs-cloud).',
+          'Pour le choix du modèle de base Stable Diffusion auquel ces techniques se rattachent, voir [Test de Stable Diffusion](/fr/power-local-llm/stable-diffusion-review). Pour une comparaison plus large entre génération d\'images locale et cloud, voir [Génération d\'images IA locale vs cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud).',
           'Côté interfaces, [ComfyUI](https://github.com/comfyanonymous/ComfyUI) dispose de nœuds ControlNet natifs sans extension séparée nécessaire ; [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) nécessite l\'extension communautaire [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) ; [InvokeAI](https://github.com/invoke-ai/InvokeAI) l\'intègre sous forme de Control Layers intégrées dans son canevas ; et [Fooocus](https://github.com/lllyasviel/Fooocus) — créé par le même chercheur qui a créé ControlNet — inclut ses propres fonctionnalités simplifiées de guidage structurel basées sur ControlNet plutôt que d\'exposer la sélection brute des modèles ControlNet.',
         ],
       },
@@ -1340,9 +1340,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Test de Stable Diffusion (2026)](/power-local-llm/stable-diffusion-review) — la famille de modèles de base à laquelle ControlNet se rattache, avec les conditions de licence et les besoins en VRAM par version.',
-          '[Génération d\'images IA locale vs cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — comparaison plus approfondie des familles de modèles d\'image locaux sur les conditions de licence, la VRAM et les cas d\'usage réels.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
+          '[Test de Stable Diffusion (2026)](/fr/power-local-llm/stable-diffusion-review) — la famille de modèles de base à laquelle ControlNet se rattache, avec les conditions de licence et les besoins en VRAM par version.',
+          '[Génération d\'images IA locale vs cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — comparaison plus approfondie des familles de modèles d\'image locaux sur les conditions de licence, la VRAM et les cas d\'usage réels.',
+          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
         ],
       },
     },
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNetのコードと最初の事前学習済み重みは、arXivプレプリントと同時に2023年2月にGitHubで公開されました。より洗練された「ControlNet 1.1」は2023年4月14日に続いてリリースされ、対応する条件付けタイプが拡充され、堅牢性が向上しました。論文は[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html)で正式に発表され、[Computer Vision Foundationの公式受賞ページ](https://www.thecvf.com/?page_id=413)で確認された通り、同カンファレンスのMarr Prizeを受賞しました。',
-          'ControlNetはオリジナルのStable Diffusion 1.5アーキテクチャを中心に構築され、最初にそこで実証されました。その後、オープンソースコミュニティ、そして後にStability AI自身が、Stable Diffusion XLやStable Diffusion 3.5を含むより新しいベースモデル向けに追加のControlNetチェックポイントを学習し、同じ条件付け技術を各新世代のモデルへと拡張しました。これらのベースモデルの背景については[Stable Diffusionレビュー](/power-local-llm/stable-diffusion-review)を参照してください。',
+          'ControlNetはオリジナルのStable Diffusion 1.5アーキテクチャを中心に構築され、最初にそこで実証されました。その後、オープンソースコミュニティ、そして後にStability AI自身が、Stable Diffusion XLやStable Diffusion 3.5を含むより新しいベースモデル向けに追加のControlNetチェックポイントを学習し、同じ条件付け技術を各新世代のモデルへと拡張しました。これらのベースモデルの背景については[Stable Diffusionレビュー](/ja/power-local-llm/stable-diffusion-review)を参照してください。',
         ],
         note: '事実は2026-09-06時点でarxiv.org、GitHubのlllyasviel/ControlNetリポジトリ、CVFのICCV 2023オープンアクセスページ、thecvf.comの公式受賞リストと直接照合して検証済み。',
       },
@@ -1491,7 +1491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ControlNetは単体インストーラーではないため、セットアップ方法はUIごとに異なります。以下に最も一般的な2つの方法を示します。',
         ],
         numberedItems: [
-          { title: '動作するStable Diffusion用UIがすでにあるか確認する', whyItMatters: 'AUTOMATIC1111・ComfyUI・InvokeAIのいずれかがすでにインストールされ画像を生成できていなければ、ControlNetを組み込む先がありません — まだセットアップしていない場合は[Stable Diffusionレビュー](/power-local-llm/stable-diffusion-review)を参照してください。' },
+          { title: '動作するStable Diffusion用UIがすでにあるか確認する', whyItMatters: 'AUTOMATIC1111・ComfyUI・InvokeAIのいずれかがすでにインストールされ画像を生成できていなければ、ControlNetを組み込む先がありません — まだセットアップしていない場合は[Stable Diffusionレビュー](/ja/power-local-llm/stable-diffusion-review)を参照してください。' },
           { title: 'ControlNet拡張機能をインストールする（AUTOMATIC1111）、またはネイティブ対応を確認する（ComfyUI/InvokeAI）', whyItMatters: 'AUTOMATIC1111にはControlNetが標準搭載されていません — Extensionsタブからコミュニティ拡張機能[sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)を追加してください。ComfyUIはコアにControlNet関連ノードを含み、InvokeAIは組み込みのControl Layers機能でControlNetを提供するため、どちらも別途拡張機能のインストールは不要です。' },
           { title: 'ベースモデルに合ったControlNetチェックポイントをダウンロードする', whyItMatters: 'SD 1.5用に学習されたチェックポイントはSDXLやSD 3.5では正しく機能しません — 使用しているStable Diffusionのバージョンに合ったControlNetモデルを選び、ダウンロード前にライセンスを確認してください（下記のライセンスセクションを参照）。' },
           { title: 'チェックポイントを正しいモデルフォルダに置く', whyItMatters: 'AUTOMATIC1111は`extensions/sd-webui-controlnet/models`にControlNetモデルを期待します。ComfyUIとInvokeAIはそれぞれ独自の文書化されたモデルディレクトリを使うため、正確なパスはそのUIの最新のセットアップガイドを確認してください。' },
@@ -1531,7 +1531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'コミュニティの報告やUIのドキュメントでは、Stable Diffusion 1.5上で単一のControlNetモデルにつき約1〜2GBの追加VRAM、SDXLではエンコーダー層が大きく複製コストも高いため、より大きな増加（1モデルあたり2〜4GB程度とよく言われます）が一般的に説明されています。複数のControlNetモデルを同時に使用する場合（例えば深度・ポーズ・Cannyを同時に）、このオーバーヘッドはさらに積み重なります。T2I-Adapterのような軽量な代替（下記の代替技術セクション参照）は、ControlNetよりも大幅にVRAMオーバーヘッドを抑えるよう設計されていますが、一部のコミュニティ比較ではやや精度が劣るという代償があります。',
           'これらの数値はPromptQuorum自身が実施した管理された検証ではなくコミュニティのベンチマークに基づくため、あくまで計画上の目安として扱ってください。ぎりぎりのGPUがベースモデルとControlNetの特定の組み合わせに耐えられると想定する前に、使用する具体的なUIのドキュメントやIssueトラッカーで現在のVRAM挙動を確認してください。',
         ],
-        note: 'ControlNetのオーバーヘッドを上乗せする前のベースモデルのVRAM範囲については、[Stable Diffusionレビュー — ハードウェア要件](/power-local-llm/stable-diffusion-review)を参照してください。',
+        note: 'ControlNetのオーバーヘッドを上乗せする前のベースモデルのVRAM範囲については、[Stable Diffusionレビュー — ハードウェア要件](/ja/power-local-llm/stable-diffusion-review)を参照してください。',
       },
       pricing: {
         id: 'pricing',
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet、T2I-Adapter、IP-Adapterは互いに排他的ではありません — 多くのワークフローは、同じ生成の中でControlNet（ポーズや構図用）とIP-Adapter（スタイルやキャラクターの一貫性用）を組み合わせています。どの組み合わせが適切かは、何を固定したいか — 構造（ControlNet、T2I-Adapter）か外見（IP-Adapter）か — によって決まります。',
-          'これらの技術が接続されるStable Diffusionのベースモデル選びについては、[Stable Diffusionレビュー](/power-local-llm/stable-diffusion-review)を参照してください。ローカル画像生成とクラウド全般の比較については、[ローカルAI画像生成 対 クラウド](/power-local-llm/local-ai-image-generation-vs-cloud)を参照してください。',
+          'これらの技術が接続されるStable Diffusionのベースモデル選びについては、[Stable Diffusionレビュー](/ja/power-local-llm/stable-diffusion-review)を参照してください。ローカル画像生成とクラウド全般の比較については、[ローカルAI画像生成 対 クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud)を参照してください。',
           'UI面では、[ComfyUI](https://github.com/comfyanonymous/ComfyUI)は別途拡張機能不要のネイティブControlNetノードを持ち、[AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)はコミュニティ拡張機能[sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)が必要、[InvokeAI](https://github.com/invoke-ai/InvokeAI)はキャンバス上の組み込みControl Layersとして統合しています。また、ControlNetを開発した同じ研究者が作った[Fooocus](https://github.com/lllyasviel/Fooocus)は、生のControlNetモデル選択を公開する代わりに、ControlNetをベースにした独自の簡易的な構造誘導機能を内蔵しています。',
         ],
       },
@@ -1674,9 +1674,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Stable Diffusionレビュー（2026年）](/power-local-llm/stable-diffusion-review) — ControlNetが接続されるベースモデルファミリー。バージョンごとのライセンス条件とVRAM要件を含む。',
-          '[ローカルAI画像生成 対 クラウド](/power-local-llm/local-ai-image-generation-vs-cloud) — ライセンス条件、VRAM、実際のユースケースに基づくローカル画像モデルファミリーの詳細な比較。',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
+          '[Stable Diffusionレビュー（2026年）](/ja/power-local-llm/stable-diffusion-review) — ControlNetが接続されるベースモデルファミリー。バージョンごとのライセンス条件とVRAM要件を含む。',
+          '[ローカルAI画像生成 対 クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — ライセンス条件、VRAM、実際のユースケースに基づくローカル画像モデルファミリーの詳細な比較。',
+          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
         ],
       },
     },
@@ -1791,7 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'O código e os primeiros pesos pré-treinados do ControlNet foram publicados no GitHub em fevereiro de 2023, junto com o preprint no arXiv. Uma versão mais refinada, "ControlNet 1.1", veio em seguida em 14 de abril de 2023, ampliando os tipos de condicionamento suportados e melhorando a robustez. O artigo foi formalmente publicado na [ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) e recebeu o Marr Prize da conferência, confirmado na [página oficial de prêmios da Computer Vision Foundation](https://www.thecvf.com/?page_id=413).',
-          'O ControlNet foi construído em torno da arquitetura original do Stable Diffusion 1.5 e demonstrado primeiro sobre ela. A comunidade de código aberto — e depois a própria Stability AI — treinou posteriormente checkpoints adicionais de ControlNet para modelos base mais novos, incluindo Stable Diffusion XL e Stable Diffusion 3.5, estendendo a mesma técnica de condicionamento a cada nova geração de modelo. Veja [Análise do Stable Diffusion](/power-local-llm/stable-diffusion-review) para o contexto sobre esses modelos base.',
+          'O ControlNet foi construído em torno da arquitetura original do Stable Diffusion 1.5 e demonstrado primeiro sobre ela. A comunidade de código aberto — e depois a própria Stability AI — treinou posteriormente checkpoints adicionais de ControlNet para modelos base mais novos, incluindo Stable Diffusion XL e Stable Diffusion 3.5, estendendo a mesma técnica de condicionamento a cada nova geração de modelo. Veja [Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) para o contexto sobre esses modelos base.',
         ],
         note: 'Fatos verificados diretamente em arxiv.org, no repositório do GitHub lllyasviel/ControlNet, na página de acesso aberto da CVF na ICCV 2023 e na lista oficial de prêmios do thecvf.com em 2026-09-06.',
       },
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A configuração do ControlNet muda conforme a interface, porque não é um instalador independente. Os dois caminhos mais comuns estão descritos abaixo.',
         ],
         numberedItems: [
-          { title: 'Confirme que já existe uma interface de Stable Diffusion funcionando', whyItMatters: 'O ControlNet não tem a que se conectar sem AUTOMATIC1111, ComfyUI ou InvokeAI já instalados e gerando imagens — veja [Análise do Stable Diffusion](/power-local-llm/stable-diffusion-review) caso ainda não tenha configurado nenhum.' },
+          { title: 'Confirme que já existe uma interface de Stable Diffusion funcionando', whyItMatters: 'O ControlNet não tem a que se conectar sem AUTOMATIC1111, ComfyUI ou InvokeAI já instalados e gerando imagens — veja [Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) caso ainda não tenha configurado nenhum.' },
           { title: 'Instale a extensão do ControlNet (AUTOMATIC1111) ou confirme o suporte nativo (ComfyUI/InvokeAI)', whyItMatters: 'O AUTOMATIC1111 não vem com o ControlNet integrado — adicione a extensão da comunidade [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) pela aba Extensions. O ComfyUI inclui nós relacionados ao ControlNet no núcleo; o InvokeAI expõe o ControlNet por meio do recurso integrado de Control Layers, então nenhum dos dois exige a instalação de uma extensão separada.' },
           { title: 'Baixe um checkpoint de ControlNet compatível com seu modelo base', whyItMatters: 'Um checkpoint treinado para SD 1.5 não funcionará corretamente com SDXL ou SD 3.5 — combine o modelo de ControlNet com a versão do Stable Diffusion que você usa, e confirme a licença antes de baixar (veja a seção de licença abaixo).' },
           { title: 'Coloque o checkpoint na pasta de modelos correta', whyItMatters: 'O AUTOMATIC1111 espera os modelos de ControlNet em `extensions/sd-webui-controlnet/models`; o ComfyUI e o InvokeAI usam seus próprios diretórios de modelos documentados — consulte o guia de configuração atual dessa interface para o caminho exato.' },
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Relatos da comunidade e a documentação das interfaces geralmente descrevem cerca de 1–2 GB de VRAM adicional para um único modelo de ControlNet no Stable Diffusion 1.5, e um aumento maior — comumente citado em torno de 2–4 GB por modelo — no SDXL, já que suas camadas de codificação são maiores e mais custosas de duplicar. Usar vários modelos de ControlNet ao mesmo tempo (por exemplo, profundidade mais pose mais Canny simultaneamente) acumula ainda mais essa sobrecarga. Alternativas mais leves como o T2I-Adapter (veja a seção de alternativas abaixo) são projetadas para adicionar bem menos sobrecarga de VRAM que o ControlNet, ao custo de um controle um pouco menos preciso em algumas comparações da comunidade.',
           'Como esses números vêm de benchmarks da comunidade e não de um teste controlado realizado pela própria PromptQuorum, trate-os como faixas de planejamento: confirme o comportamento atual de VRAM na documentação ou no rastreador de problemas da sua interface específica antes de assumir que uma GPU no limite dará conta de determinada combinação de modelo base e ControlNet.',
         ],
-        note: 'Veja [Análise do Stable Diffusion — Requisitos de hardware](/power-local-llm/stable-diffusion-review) para as faixas de VRAM do modelo base antes de somar a sobrecarga do ControlNet.',
+        note: 'Veja [Análise do Stable Diffusion — Requisitos de hardware](/pt/power-local-llm/stable-diffusion-review) para as faixas de VRAM do modelo base antes de somar a sobrecarga do ControlNet.',
       },
       pricing: {
         id: 'pricing',
@@ -1913,7 +1913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet, T2I-Adapter e IP-Adapter não são mutuamente exclusivos — muitos fluxos de trabalho combinam ControlNet (para pose ou composição) com IP-Adapter (para consistência de estilo ou personagem) na mesma geração. Qual combinação faz sentido depende do que você quer fixar: estrutura (ControlNet, T2I-Adapter) versus aparência (IP-Adapter).',
-          'Para a escolha do modelo base de Stable Diffusion ao qual essas técnicas se conectam, veja [Análise do Stable Diffusion](/power-local-llm/stable-diffusion-review). Para uma comparação mais ampla entre geração de imagens local e em nuvem no geral, veja [Geração de imagens com IA local vs. nuvem](/power-local-llm/local-ai-image-generation-vs-cloud).',
+          'Para a escolha do modelo base de Stable Diffusion ao qual essas técnicas se conectam, veja [Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review). Para uma comparação mais ampla entre geração de imagens local e em nuvem no geral, veja [Geração de imagens com IA local vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud).',
           'Do lado das interfaces, o [ComfyUI](https://github.com/comfyanonymous/ComfyUI) tem nós nativos de ControlNet sem necessidade de extensão separada; o [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) precisa da extensão da comunidade [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet); o [InvokeAI](https://github.com/invoke-ai/InvokeAI) o integra como Control Layers embutidas em sua tela; e o [Fooocus](https://github.com/lllyasviel/Fooocus) — criado pelo mesmo pesquisador que criou o ControlNet — inclui seus próprios recursos simplificados de orientação estrutural baseados em ControlNet, em vez de expor a seleção bruta de modelos de ControlNet.',
         ],
       },
@@ -2008,9 +2008,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do Stable Diffusion (2026)](/power-local-llm/stable-diffusion-review) — a família de modelos base à qual o ControlNet se conecta, incluindo termos de licença e requisitos de VRAM por versão.',
-          '[Geração de imagens com IA local vs. nuvem](/power-local-llm/local-ai-image-generation-vs-cloud) — comparação mais aprofundada de famílias de modelos de imagem locais quanto a termos de licença, VRAM e casos de uso reais.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
+          '[Análise do Stable Diffusion (2026)](/pt/power-local-llm/stable-diffusion-review) — a família de modelos base à qual o ControlNet se conecta, incluindo termos de licença e requisitos de VRAM por versão.',
+          '[Geração de imagens com IA local vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — comparação mais aprofundada de famílias de modelos de imagem locais quanto a termos de licença, VRAM e casos de uso reais.',
+          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
         ],
       },
     },
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'نُشر كود ControlNet وأول أوزان مُدرَّبة مسبقًا على GitHub في فبراير 2023، إلى جانب النسخة الأولية على arXiv. تلا ذلك إصدار أكثر نضجًا باسم "ControlNet 1.1" في 14 أبريل 2023، موسِّعًا أنواع الاشتراط المدعومة ومحسِّنًا متانتها. نُشرت الورقة رسميًا في [ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) وفازت بجائزة Marr Prize في المؤتمر، وهو ما تؤكده [صفحة الجوائز الرسمية لمؤسسة Computer Vision Foundation](https://www.thecvf.com/?page_id=413).',
-          'صُمِّم ControlNet حول معمارية Stable Diffusion 1.5 الأصلية، وجرى التحقق منه أولًا عليها. ثم دربت مجتمعية المصادر المفتوحة — ولاحقًا Stability AI نفسها — نقاط تفتيش إضافية لـ ControlNet لنماذج أساسية أحدث، بما فيها Stable Diffusion XL وStable Diffusion 3.5، فامتد أسلوب الاشتراط نفسه إلى كل جيل جديد من النماذج. راجع [مراجعة Stable Diffusion](/power-local-llm/stable-diffusion-review) لخلفية عن هذه النماذج الأساسية.',
+          'صُمِّم ControlNet حول معمارية Stable Diffusion 1.5 الأصلية، وجرى التحقق منه أولًا عليها. ثم دربت مجتمعية المصادر المفتوحة — ولاحقًا Stability AI نفسها — نقاط تفتيش إضافية لـ ControlNet لنماذج أساسية أحدث، بما فيها Stable Diffusion XL وStable Diffusion 3.5، فامتد أسلوب الاشتراط نفسه إلى كل جيل جديد من النماذج. راجع [مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) لخلفية عن هذه النماذج الأساسية.',
         ],
         note: 'تم التحقق من الحقائق مباشرةً من arxiv.org، ومستودع GitHub الخاص بـ lllyasviel/ControlNet، وصفحة الوصول المفتوح لمؤتمر ICCV 2023 التابعة لمؤسسة CVF، وقائمة الجوائز الرسمية على thecvf.com بتاريخ 2026-09-06.',
       },
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يختلف إعداد ControlNet حسب الواجهة لأنه ليس مثبِّتًا مستقلًا. يوضَّح أدناه المساران الأكثر شيوعًا.',
         ],
         numberedItems: [
-          { title: 'تأكد من وجود واجهة Stable Diffusion تعمل بالفعل', whyItMatters: 'ليس لدى ControlNet ما يلتحق به دون تثبيت AUTOMATIC1111 أو ComfyUI أو InvokeAI مسبقًا وتوليد الصور — راجع [مراجعة Stable Diffusion](/power-local-llm/stable-diffusion-review) إذا لم تُعِدّ أيًّا منها بعد.' },
+          { title: 'تأكد من وجود واجهة Stable Diffusion تعمل بالفعل', whyItMatters: 'ليس لدى ControlNet ما يلتحق به دون تثبيت AUTOMATIC1111 أو ComfyUI أو InvokeAI مسبقًا وتوليد الصور — راجع [مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) إذا لم تُعِدّ أيًّا منها بعد.' },
           { title: 'ثبّت إضافة ControlNet (AUTOMATIC1111) أو تأكد من الدعم الأصلي (ComfyUI/InvokeAI)', whyItMatters: 'لا يأتي AUTOMATIC1111 مع ControlNet مدمجًا — أضِف الإضافة المجتمعية [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) عبر تبويب Extensions. يتضمن ComfyUI عُقدًا متعلقة بـ ControlNet في نواته؛ ويوفّر InvokeAI ControlNet عبر ميزة طبقات التحكم المدمجة، لذا لا يحتاج أيّ منهما تثبيت إضافة منفصلة.' },
           { title: 'نزِّل نقطة تفتيش ControlNet مطابقة لنموذجك الأساسي', whyItMatters: 'نقطة تفتيش مُدرَّبة لـ SD 1.5 لن تعمل بشكل صحيح مع SDXL أو SD 3.5 — طابِق نموذج ControlNet مع إصدار Stable Diffusion الذي تستخدمه، وتحقق من رخصته قبل التنزيل (انظر قسم الترخيص أدناه).' },
           { title: 'ضع نقطة التفتيش في مجلد النماذج الصحيح', whyItMatters: 'يتوقع AUTOMATIC1111 نماذج ControlNet في `extensions/sd-webui-controlnet/models`؛ ويستخدم ComfyUI وInvokeAI أدلّة نماذج موثَّقة خاصة بهما — راجع دليل الإعداد الحالي لتلك الواجهة لمعرفة المسار الدقيق.' },
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'عادةً ما تصف تقارير المجتمع ووثائق الواجهات نحو 1–2 غيغابايت إضافية من VRAM لنموذج ControlNet واحد على Stable Diffusion 1.5، وزيادة أكبر — يُذكَر غالبًا نحو 2–4 غيغابايت لكل نموذج — على SDXL، لأن طبقات ترميزه أكبر وأكثر كلفة في التكرار. استخدام عدة نماذج ControlNet في آنٍ واحد (مثل العمق والوضعية وCanny معًا) يراكم هذه الأعباء أكثر. تُصمَّم بدائل أخف مثل T2I-Adapter (انظر قسم البدائل أدناه) لإضافة أعباء VRAM أقل بكثير من ControlNet، على حساب دقة تحكم أقل قليلًا في بعض مقارنات المجتمع.',
           'بما أن هذه الأرقام تأتي من اختبارات المجتمع وليس من اختبار مضبوط أجرته PromptQuorum نفسها، تعامل معها كنطاقات تخطيطية: تحقق من سلوك VRAM الحالي في وثائق واجهتك المحدَّدة أو متتبّع المشكلات الخاص بها قبل افتراض أن بطاقة رسومات على حافة الأداء ستتحمّل تركيبة معينة من النموذج الأساسي وControlNet.',
         ],
-        note: 'راجع [مراجعة Stable Diffusion — متطلبات الأجهزة](/power-local-llm/stable-diffusion-review) لمعرفة نطاقات VRAM للنموذج الأساسي قبل إضافة أعباء ControlNet فوقها.',
+        note: 'راجع [مراجعة Stable Diffusion — متطلبات الأجهزة](/ar/power-local-llm/stable-diffusion-review) لمعرفة نطاقات VRAM للنموذج الأساسي قبل إضافة أعباء ControlNet فوقها.',
       },
       pricing: {
         id: 'pricing',
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet وT2I-Adapter وIP-Adapter لا تُقصي بعضها البعض — تجمع كثير من مسارات العمل بين ControlNet (للوضعية أو التكوين) وIP-Adapter (لاتساق الأسلوب أو الشخصية) في التوليد نفسه. أي مزيج مناسب يعتمد على ما تريد تثبيته: البنية (ControlNet، T2I-Adapter) مقابل المظهر (IP-Adapter).',
-          'لاختيار نموذج Stable Diffusion الأساسي الذي تلتحق به هذه الأساليب، راجع [مراجعة Stable Diffusion](/power-local-llm/stable-diffusion-review). لمقارنة أوسع بين توليد الصور المحلي والسحابي عمومًا، راجع [توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابي](/power-local-llm/local-ai-image-generation-vs-cloud).',
+          'لاختيار نموذج Stable Diffusion الأساسي الذي تلتحق به هذه الأساليب، راجع [مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review). لمقارنة أوسع بين توليد الصور المحلي والسحابي عمومًا، راجع [توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابي](/ar/power-local-llm/local-ai-image-generation-vs-cloud).',
           'من جانب الواجهات، يمتلك [ComfyUI](https://github.com/comfyanonymous/ComfyUI) عُقد ControlNet أصلية دون الحاجة لإضافة منفصلة؛ ويحتاج [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) الإضافة المجتمعية [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)؛ ويدمجه [InvokeAI](https://github.com/invoke-ai/InvokeAI) كطبقات تحكم مدمجة في لوحته؛ أما [Fooocus](https://github.com/lllyasviel/Fooocus) — الذي ابتكره الباحث نفسه الذي ابتكر ControlNet — فيتضمن ميزات توجيه بنيوي مبسَّطة خاصة به مبنية على ControlNet بدلًا من إتاحة اختيار نماذج ControlNet الخام.',
         ],
       },
@@ -2342,9 +2342,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Stable Diffusion (2026)](/power-local-llm/stable-diffusion-review) — عائلة النماذج الأساسية التي يلتحق بها ControlNet، بما في ذلك شروط الترخيص ومتطلبات VRAM لكل إصدار.',
-          '[توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابي](/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أعمق لعائلات نماذج الصور المحلية من حيث شروط الترخيص وVRAM وحالات الاستخدام الواقعية.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
+          '[مراجعة Stable Diffusion (2026)](/ar/power-local-llm/stable-diffusion-review) — عائلة النماذج الأساسية التي يلتحق بها ControlNet، بما في ذلك شروط الترخيص ومتطلبات VRAM لكل إصدار.',
+          '[توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابي](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أعمق لعائلات نماذج الصور المحلية من حيث شروط الترخيص وVRAM وحالات الاستخدام الواقعية.',
+          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
         ],
       },
     },
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet的代码和首批预训练权重于2023年2月连同arXiv预印本一起在GitHub上发布。更完善的"ControlNet 1.1"版本随后于2023年4月14日发布，扩展了支持的条件类型并提升了各类型的稳健性。该论文正式发表于[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html)，并获得大会Marr Prize，这一点已在[Computer Vision Foundation官方获奖页面](https://www.thecvf.com/?page_id=413)上得到确认。',
-          'ControlNet是围绕原始Stable Diffusion 1.5架构构建的，并首先在其上得到验证。此后，开源社区——以及后来的Stability AI自身——为更新的基础模型（包括Stable Diffusion XL和Stable Diffusion 3.5）训练了更多ControlNet检查点，将同样的条件控制技术延伸到每一代新模型。关于这些基础模型的背景，请参见[Stable Diffusion评测](/power-local-llm/stable-diffusion-review)。',
+          'ControlNet是围绕原始Stable Diffusion 1.5架构构建的，并首先在其上得到验证。此后，开源社区——以及后来的Stability AI自身——为更新的基础模型（包括Stable Diffusion XL和Stable Diffusion 3.5）训练了更多ControlNet检查点，将同样的条件控制技术延伸到每一代新模型。关于这些基础模型的背景，请参见[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review)。',
         ],
         note: '事实已于2026-09-06直接对照arxiv.org、GitHub上的lllyasviel/ControlNet仓库、CVF的ICCV 2023开放获取页面以及thecvf.com官方获奖名单进行核实。',
       },
@@ -2493,7 +2493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ControlNet的设置因界面而异，因为它不是独立的安装程序。下面概述了两种最常见的方式。',
         ],
         numberedItems: [
-          { title: '确认你已经拥有可正常运行的Stable Diffusion界面', whyItMatters: '如果AUTOMATIC1111、ComfyUI或InvokeAI尚未安装并能正常生成图像，ControlNet将无处依附——如果你尚未搭建好其中之一，请参见[Stable Diffusion评测](/power-local-llm/stable-diffusion-review)。' },
+          { title: '确认你已经拥有可正常运行的Stable Diffusion界面', whyItMatters: '如果AUTOMATIC1111、ComfyUI或InvokeAI尚未安装并能正常生成图像，ControlNet将无处依附——如果你尚未搭建好其中之一，请参见[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review)。' },
           { title: '安装ControlNet扩展（AUTOMATIC1111）或确认原生支持（ComfyUI/InvokeAI）', whyItMatters: 'AUTOMATIC1111并未内置ControlNet——请通过Extensions标签添加社区扩展[sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)。ComfyUI的核心已包含ControlNet相关节点；InvokeAI通过其内置的Control Layers功能提供ControlNet，因此两者都无需单独安装扩展。' },
           { title: '下载与你的基础模型匹配的ControlNet检查点', whyItMatters: '为SD 1.5训练的检查点无法在SDXL或SD 3.5上正确工作——请将ControlNet模型与你使用的Stable Diffusion版本相匹配，并在下载前确认其许可（见下方许可部分）。' },
           { title: '将检查点放入正确的模型文件夹', whyItMatters: 'AUTOMATIC1111期望ControlNet模型位于`extensions/sd-webui-controlnet/models`；ComfyUI和InvokeAI各自使用其文档记录的模型目录——请查阅该界面当前的搭建指南以获取确切路径。' },
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '社区报告和界面文档通常将在Stable Diffusion 1.5上使用单个ControlNet模型的额外显存占用描述为约1–2 GB，而在SDXL上则会有更大幅度的增加——常被引用为每个模型约2–4 GB，因为其编码层更大，复制成本也更高。同时使用多个ControlNet模型（例如同时使用深度、姿势和Canny）会进一步累加这一开销。像T2I-Adapter这样更轻量的替代方案（见下方替代方案部分）设计为比ControlNet大幅减少显存开销，但在某些社区对比中，其控制精度会略逊一筹。',
           '由于这些数字来自社区基准测试，而非PromptQuorum自行进行的受控测试，请将其视为规划范围：在假设某块处于临界状态的GPU能够胜任特定基础模型与ControlNet组合之前，请在你具体使用的界面的文档或问题跟踪器中确认当前的显存表现。',
         ],
-        note: '在叠加ControlNet的显存开销之前，请参见[Stable Diffusion评测——硬件要求](/power-local-llm/stable-diffusion-review)了解基础模型的显存范围。',
+        note: '在叠加ControlNet的显存开销之前，请参见[Stable Diffusion评测——硬件要求](/zh/power-local-llm/stable-diffusion-review)了解基础模型的显存范围。',
       },
       pricing: {
         id: 'pricing',
@@ -2581,7 +2581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet、T2I-Adapter和IP-Adapter并非互斥——许多工作流程会在同一次生成中结合使用ControlNet（用于姿势或构图）与IP-Adapter（用于风格或角色一致性）。哪种组合合理取决于你想固定的是什么：结构（ControlNet、T2I-Adapter）还是外观（IP-Adapter）。',
-          '关于这些技术所依附的Stable Diffusion基础模型选择，请参见[Stable Diffusion评测](/power-local-llm/stable-diffusion-review)。关于本地与云端图像生成的更广泛对比，请参见[本地AI图像生成对比云端](/power-local-llm/local-ai-image-generation-vs-cloud)。',
+          '关于这些技术所依附的Stable Diffusion基础模型选择，请参见[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review)。关于本地与云端图像生成的更广泛对比，请参见[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud)。',
           '在界面方面，[ComfyUI](https://github.com/comfyanonymous/ComfyUI)拥有原生ControlNet节点，无需单独扩展；[AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)需要社区扩展[sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)；[InvokeAI](https://github.com/invoke-ai/InvokeAI)将其作为内置Control Layers集成到画布中；而由创建ControlNet的同一位研究者开发的[Fooocus](https://github.com/lllyasviel/Fooocus)，则内置了自己简化的、基于ControlNet的结构引导功能，而不是直接暴露原始的ControlNet模型选择。',
         ],
       },
@@ -2676,9 +2676,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Stable Diffusion评测（2026）](/power-local-llm/stable-diffusion-review) —— ControlNet所依附的基础模型系列，包括各版本的许可条款和显存要求。',
-          '[本地AI图像生成对比云端](/power-local-llm/local-ai-image-generation-vs-cloud) —— 从许可条款、显存和实际使用场景角度对本地图像模型系列进行更深入的对比。',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) —— 面向所有平台的全面应用与工具目录。',
+          '[Stable Diffusion评测（2026）](/zh/power-local-llm/stable-diffusion-review) —— ControlNet所依附的基础模型系列，包括各版本的许可条款和显存要求。',
+          '[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud) —— 从许可条款、显存和实际使用场景角度对本地图像模型系列进行更深入的对比。',
+          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) —— 面向所有平台的全面应用与工具目录。',
         ],
       },
     },
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet의 코드와 초기 사전 학습 가중치는 arXiv 프리프린트와 함께 2023년 2월 GitHub에 공개되었습니다. 더 정교해진 "ControlNet 1.1" 버전이 2023년 4월 14일에 뒤이어 출시되어 지원되는 조건화 유형을 확장하고 각 유형의 견고성을 향상시켰습니다. 이 논문은 [ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html)에서 정식으로 발표되었으며, [Computer Vision Foundation의 공식 수상 페이지](https://www.thecvf.com/?page_id=413)에서 확인된 대로 학회의 Marr Prize를 수상했습니다.',
-          'ControlNet은 원본 Stable Diffusion 1.5 아키텍처를 중심으로 만들어졌으며 먼저 그 위에서 검증되었습니다. 이후 오픈소스 커뮤니티가, 그리고 나중에는 Stability AI 자체가 Stable Diffusion XL과 Stable Diffusion 3.5를 포함한 더 새로운 기반 모델을 위해 추가적인 ControlNet 체크포인트를 학습시켜, 동일한 조건화 기법을 각 새로운 세대의 모델로 확장했습니다. 이 기반 모델들에 대한 배경은 [Stable Diffusion 리뷰](/power-local-llm/stable-diffusion-review)를 참고하세요.',
+          'ControlNet은 원본 Stable Diffusion 1.5 아키텍처를 중심으로 만들어졌으며 먼저 그 위에서 검증되었습니다. 이후 오픈소스 커뮤니티가, 그리고 나중에는 Stability AI 자체가 Stable Diffusion XL과 Stable Diffusion 3.5를 포함한 더 새로운 기반 모델을 위해 추가적인 ControlNet 체크포인트를 학습시켜, 동일한 조건화 기법을 각 새로운 세대의 모델로 확장했습니다. 이 기반 모델들에 대한 배경은 [Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review)를 참고하세요.',
         ],
         note: '사실은 2026-09-06 기준 arxiv.org, GitHub의 lllyasviel/ControlNet 저장소, CVF의 ICCV 2023 오픈 액세스 페이지, thecvf.com의 공식 수상 목록과 직접 대조하여 검증했습니다.',
       },
@@ -2827,7 +2827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ControlNet은 독립 실행형 설치 프로그램이 아니므로 설정 방법이 UI마다 다릅니다. 가장 흔한 두 가지 방법을 아래에 정리했습니다.',
         ],
         numberedItems: [
-          { title: '이미 작동하는 Stable Diffusion용 UI가 있는지 확인한다', whyItMatters: 'AUTOMATIC1111, ComfyUI, InvokeAI 중 하나가 이미 설치되어 이미지를 생성하고 있지 않다면 ControlNet이 연결될 곳이 없습니다 — 아직 설정하지 않았다면 [Stable Diffusion 리뷰](/power-local-llm/stable-diffusion-review)를 참고하세요.' },
+          { title: '이미 작동하는 Stable Diffusion용 UI가 있는지 확인한다', whyItMatters: 'AUTOMATIC1111, ComfyUI, InvokeAI 중 하나가 이미 설치되어 이미지를 생성하고 있지 않다면 ControlNet이 연결될 곳이 없습니다 — 아직 설정하지 않았다면 [Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review)를 참고하세요.' },
           { title: 'ControlNet 확장 기능을 설치하거나(AUTOMATIC1111) 네이티브 지원을 확인한다(ComfyUI/InvokeAI)', whyItMatters: 'AUTOMATIC1111에는 ControlNet이 기본 내장되어 있지 않습니다 — Extensions 탭에서 커뮤니티 확장 기능 [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)을 추가하세요. ComfyUI는 핵심에 ControlNet 관련 노드를 포함하고 있으며, InvokeAI는 내장된 Control Layers 기능을 통해 ControlNet을 제공하므로 둘 다 별도의 확장 기능 설치가 필요 없습니다.' },
           { title: '기반 모델에 맞는 ControlNet 체크포인트를 다운로드한다', whyItMatters: 'SD 1.5용으로 학습된 체크포인트는 SDXL이나 SD 3.5에서 제대로 작동하지 않습니다 — 사용 중인 Stable Diffusion 버전에 ControlNet 모델을 맞추고, 다운로드 전에 라이선스를 확인하세요(아래 라이선스 섹션 참고).' },
           { title: '체크포인트를 올바른 모델 폴더에 넣는다', whyItMatters: 'AUTOMATIC1111은 ControlNet 모델이 `extensions/sd-webui-controlnet/models`에 있기를 기대합니다. ComfyUI와 InvokeAI는 각자 문서화된 모델 디렉터리를 사용하므로, 정확한 경로는 해당 UI의 현재 설정 가이드를 확인하세요.' },
@@ -2867,7 +2867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '커뮤니티 보고와 UI 문서에서는 일반적으로 Stable Diffusion 1.5에서 단일 ControlNet 모델당 약 1–2GB의 추가 VRAM을 설명하며, SDXL에서는 인코딩 레이어가 더 커서 복제 비용도 더 크기 때문에 더 큰 증가폭(모델당 약 2–4GB로 흔히 언급됨)을 보입니다. 여러 ControlNet 모델을 동시에 사용하면(예: 깊이와 포즈와 Canny를 동시에) 이 부담이 더 쌓입니다. T2I-Adapter 같은 더 가벼운 대안(아래 대안 섹션 참고)은 ControlNet보다 VRAM 부담을 상당히 줄이도록 설계되었지만, 일부 커뮤니티 비교에서는 제어 정밀도가 다소 떨어집니다.',
           '이 수치는 PromptQuorum이 직접 수행한 통제된 테스트가 아니라 커뮤니티 벤치마크에서 나온 것이므로 계획용 참고 범위로 다루세요 — 한계에 가까운 GPU가 특정 기반 모델과 ControlNet 조합을 감당할 것이라고 가정하기 전에, 사용 중인 UI의 문서나 이슈 트래커에서 현재의 VRAM 동작을 확인하세요.',
         ],
-        note: 'ControlNet의 부담을 더하기 전 기반 모델의 VRAM 범위는 [Stable Diffusion 리뷰 — 하드웨어 요구 사항](/power-local-llm/stable-diffusion-review)을 참고하세요.',
+        note: 'ControlNet의 부담을 더하기 전 기반 모델의 VRAM 범위는 [Stable Diffusion 리뷰 — 하드웨어 요구 사항](/ko/power-local-llm/stable-diffusion-review)을 참고하세요.',
       },
       pricing: {
         id: 'pricing',
@@ -2915,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         content: [
           'ControlNet, T2I-Adapter, IP-Adapter는 서로 배타적이지 않습니다 — 많은 작업 흐름이 같은 생성 과정에서 ControlNet(포즈나 구도용)과 IP-Adapter(스타일이나 캐릭터 일관성용)를 함께 사용합니다. 어떤 조합이 적절한지는 고정하려는 대상이 구조(ControlNet, T2I-Adapter)인지 외형(IP-Adapter)인지에 달려 있습니다.',
-          '이러한 기법들이 연결되는 Stable Diffusion 기반 모델 선택에 대해서는 [Stable Diffusion 리뷰](/power-local-llm/stable-diffusion-review)를 참고하세요. 로컬 이미지 생성과 클라우드 전반의 더 폭넓은 비교는 [로컬 AI 이미지 생성 대 클라우드](/power-local-llm/local-ai-image-generation-vs-cloud)를 참고하세요.',
+          '이러한 기법들이 연결되는 Stable Diffusion 기반 모델 선택에 대해서는 [Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review)를 참고하세요. 로컬 이미지 생성과 클라우드 전반의 더 폭넓은 비교는 [로컬 AI 이미지 생성 대 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud)를 참고하세요.',
           'UI 측면에서 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)는 별도의 확장 기능 없이 네이티브 ControlNet 노드를 갖추고 있고, [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)은 커뮤니티 확장 기능 [sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)이 필요하며, [InvokeAI](https://github.com/invoke-ai/InvokeAI)는 캔버스에 내장된 Control Layers로 이를 통합합니다. 그리고 ControlNet을 만든 바로 그 연구자가 만든 [Fooocus](https://github.com/lllyasviel/Fooocus)는 원시적인 ControlNet 모델 선택을 노출하는 대신, ControlNet 기반의 자체 단순화된 구조 유도 기능을 내장하고 있습니다.',
         ],
       },
@@ -3010,9 +3010,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[Stable Diffusion 리뷰 (2026)](/power-local-llm/stable-diffusion-review) — ControlNet이 연결되는 기반 모델 계열로, 버전별 라이선스 조건과 VRAM 요구 사항을 포함합니다.',
-          '[로컬 AI 이미지 생성 대 클라우드](/power-local-llm/local-ai-image-generation-vs-cloud) — 라이선스 조건, VRAM, 실제 사용 사례 측면에서 로컬 이미지 모델 계열을 더 깊이 비교합니다.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 위한 포괄적인 앱 및 도구 디렉터리.',
+          '[Stable Diffusion 리뷰 (2026)](/ko/power-local-llm/stable-diffusion-review) — ControlNet이 연결되는 기반 모델 계열로, 버전별 라이선스 조건과 VRAM 요구 사항을 포함합니다.',
+          '[로컬 AI 이미지 생성 대 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — 라이선스 조건, VRAM, 실제 사용 사례 측면에서 로컬 이미지 모델 계열을 더 깊이 비교합니다.',
+          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 위한 포괄적인 앱 및 도구 디렉터리.',
         ],
       },
     },

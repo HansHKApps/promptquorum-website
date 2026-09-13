@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'デシジョンツリーは意図的に短いです。ほとんどのチームはモデル選択を過度に考え、ハーネス選択を過度に考えていません — ハーネス側については[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)を参照してください。信頼できるピック内のモデル違いはハーネスフィット違いより小さい。',
+            text: 'デシジョンツリーは意図的に短いです。ほとんどのチームはモデル選択を過度に考え、ハーネス選択を過度に考えていません — ハーネス側については[Continue.dev vs Cline vs Aider](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local)を参照してください。信頼できるピック内のモデル違いはハーネスフィット違いより小さい。',
           },
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-ja.svg',
@@ -1906,9 +1906,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[GitHub CopilotをローカルLLMで置換](/power-local-llm/replace-github-copilot-with-local-llm) — 実用的応用コンテキスト：コスト計算、ハードウェアサイジング、および作業フローがどのモデルに対応。',
-          '[Continue.dev vs Cline vs Aider：2026年最良ローカルコーディングエージェント](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — モデル選択とペア；モデルの下のハーネスレイヤー。',
-          '[インターネットなしのローカルコーディングLLM](/power-local-llm/local-coding-llm-without-internet) — 完全オフラインワークフロー向けのニッチ利用事例コンテキスト。',
+          '[GitHub CopilotをローカルLLMで置換](/ja/power-local-llm/replace-github-copilot-with-local-llm) — 実用的応用コンテキスト：コスト計算、ハードウェアサイジング、および作業フローがどのモデルに対応。',
+          '[Continue.dev vs Cline vs Aider：2026年最良ローカルコーディングエージェント](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) — モデル選択とペア；モデルの下のハーネスレイヤー。',
+          '[インターネットなしのローカルコーディングLLM](/ja/power-local-llm/local-coding-llm-without-internet) — 完全オフラインワークフロー向けのニッチ利用事例コンテキスト。',
           '[LLM量子化説明](/local-llms/llm-quantization-explained) — このガイド全体で使用されるVRAM計算の下の、より深いテクニカルレイヤー。',
           '[2026年最良ローカルLLM](/local-llms/best-local-llms-2026) — 非コーディング作業ロード向けの汎用モデル機関。',
           '[Power Local LLM Hub](/power-local-llm) — 完全ガイドライブラリ。',
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '决策树有意简短。大多数团队过度思考模型选择，轻视工具选择 — 对于工具一侧，请参阅[Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local)。可靠选择内的模型差异小于工具适配差异。',
+            text: '决策树有意简短。大多数团队过度思考模型选择，轻视工具选择 — 对于工具一侧，请参阅[Continue.dev vs Cline vs Aider](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local)。可靠选择内的模型差异小于工具适配差异。',
           },
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-zh.svg',
@@ -2427,9 +2427,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[用本地LLM替换GitHub Copilot](/power-local-llm/replace-github-copilot-with-local-llm) — 实际应用背景：成本数学、硬件调整和哪个模型适配哪个工作流。',
-          '[Continue.dev vs Cline vs Aider：2026年最佳本地编码代理](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 与模型选择配对；模型下的工具层。',
-          '[无互联网本地编码LLM](/power-local-llm/local-coding-llm-without-internet) — 完全离线工作流的小众使用案例背景。',
+          '[用本地LLM替换GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) — 实际应用背景：成本数学、硬件调整和哪个模型适配哪个工作流。',
+          '[Continue.dev vs Cline vs Aider：2026年最佳本地编码代理](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 与模型选择配对；模型下的工具层。',
+          '[无互联网本地编码LLM](/zh/power-local-llm/local-coding-llm-without-internet) — 完全离线工作流的小众使用案例背景。',
           '[LLM量化解释](/local-llms/llm-quantization-explained) — 本指南中使用的VRAM数学下的更深技术层。',
           '[2026年最佳本地LLM](/local-llms/best-local-llms-2026) — 非编码工作负载的通用模型权威。',
           '[Power Local LLM Hub](/power-local-llm) — 完整指南库。',

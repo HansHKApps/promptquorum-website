@@ -1027,10 +1027,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Shadow AI：哪些管控措施真正适合您公司的规模](/power-local-llm/shadow-ai-controls-by-company-size) — 位于单个智能体部署之上的政策层面。',
+          '[Shadow AI：哪些管控措施真正适合您公司的规模](/zh/power-local-llm/shadow-ai-controls-by-company-size) — 位于单个智能体部署之上的政策层面。',
           '[本地LLM安全与隐私检查清单](/local-llms/local-llm-security-privacy-checklist) — 用于经批准的内部部署的技术控制清单。',
           '[本地/物理隔离LLM部署](/local-llms/on-prem-air-gapped-local-llm) — 经批准的内部部署在运营层面实际涉及的内容。',
-          '[基于MCP的本地AI智能体](/power-local-llm/local-ai-agents-with-mcp-2026) — 本文威胁模型所假设的工具调用与Model Context Protocol配置。',
+          '[基于MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 本文威胁模型所假设的工具调用与Model Context Protocol配置。',
           '[PromptQuorum power-local-llm hub](/power-local-llm) — more enterprise and local-LLM deployment guides.',
         ],
       },

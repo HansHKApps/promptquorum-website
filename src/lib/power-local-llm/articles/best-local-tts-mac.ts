@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Die beste lokale TTS-Engine für Mac (2026): Was wirklich Apple Silicon nutzt',
     seoTitle: 'Beste lokale TTS für Mac 2026: Apple-Silicon-Guide',
     intro:
-      'Die meisten „beste lokale TTS"-Übersichten behandeln jeden Mac gleich, doch Apple Silicon verändert, welche Engine tatsächlich sinnvoll ist. [Piper](/power-local-llm/piper-tts-review) läuft vollständig auf der CPU und nutzt die GPU überhaupt nicht — auf einem Apple-Silicon-Mac oder einem Intel-Mac verhält es sich etwa gleich. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) kann über Apples eigenes [MLX](https://github.com/ml-explore/mlx)-Framework laufen, via das Community-Projekt [mlx-audio](https://github.com/Blaizzy/mlx-audio), das speziell für die Metal-GPU von Apple Silicon gebaut wurde. [XTTS v2](/power-local-llm/xtts-v2-review) unterstützt dagegen Apples Metal Performance Shaders (MPS) Backend überhaupt nicht — ein verfolgtes [GitHub-Issue](https://github.com/coqui-ai/TTS/issues/3649) dokumentiert, dass die MPS-Gerätenutzung einfach hängen bleibt — es läuft daher auf jedem Mac nur auf der CPU. Dieser Leitfaden vergleicht, was jede Engine auf Apple Silicon tatsächlich leistet, weist darauf hin, wo Intel-Macs auf die reinen CPU-Optionen beschränkt sind, und sagt Ihnen, welche Sie installieren sollten.',
+      'Die meisten „beste lokale TTS"-Übersichten behandeln jeden Mac gleich, doch Apple Silicon verändert, welche Engine tatsächlich sinnvoll ist. [Piper](/de/power-local-llm/piper-tts-review) läuft vollständig auf der CPU und nutzt die GPU überhaupt nicht — auf einem Apple-Silicon-Mac oder einem Intel-Mac verhält es sich etwa gleich. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) kann über Apples eigenes [MLX](https://github.com/ml-explore/mlx)-Framework laufen, via das Community-Projekt [mlx-audio](https://github.com/Blaizzy/mlx-audio), das speziell für die Metal-GPU von Apple Silicon gebaut wurde. [XTTS v2](/de/power-local-llm/xtts-v2-review) unterstützt dagegen Apples Metal Performance Shaders (MPS) Backend überhaupt nicht — ein verfolgtes [GitHub-Issue](https://github.com/coqui-ai/TTS/issues/3649) dokumentiert, dass die MPS-Gerätenutzung einfach hängen bleibt — es läuft daher auf jedem Mac nur auf der CPU. Dieser Leitfaden vergleicht, was jede Engine auf Apple Silicon tatsächlich leistet, weist darauf hin, wo Intel-Macs auf die reinen CPU-Optionen beschränkt sind, und sagt Ihnen, welche Sie installieren sollten.',
     metaDescription:
       'Piper läuft auf jedem Mac nur auf der CPU. Kokoro kann Metal über MLX nutzen. Die MPS-Unterstützung von XTTS v2 ist ein bekanntes, defektes GitHub-Issue. Hier ist die lokale TTS-Engine, die Sie auf Apple Silicon tatsächlich installieren sollten.',
     twitterDescription:
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**Kokoro-82M ist die beste lokale TTS-Engine für Apple-Silicon-Macs, wenn Sie GPU-Beschleunigung wollen, da es über Apples eigenes [MLX](https://github.com/ml-explore/mlx)-Framework via das Community-Projekt [mlx-audio](https://github.com/Blaizzy/mlx-audio) laufen kann; [Piper](/power-local-llm/piper-tts-review) ist die beste Wahl, wenn Sie die einfachste, portabelste Installation wollen, die sich auf Intel- und Apple-Silicon-Macs identisch verhält, da es auf keinem von beiden die GPU nutzt.** [XTTS v2](/power-local-llm/xtts-v2-review) ist die Wahl, wenn Sie speziell Voice-Cloning benötigen, doch seine Metal-(MPS)-Unterstützung ist ein dokumentiertes, defektes [GitHub-Issue](https://github.com/coqui-ai/TTS/issues/3649) — erwarten Sie auf jedem Mac reine CPU-Leistung. [Bark](/power-local-llm/bark-tts-review) hat experimentelle MPS-Unterstützung hinter einer Umgebungsvariable, wobei einige Operationen weiterhin auf die CPU zurückfallen.',
+      '**Kokoro-82M ist die beste lokale TTS-Engine für Apple-Silicon-Macs, wenn Sie GPU-Beschleunigung wollen, da es über Apples eigenes [MLX](https://github.com/ml-explore/mlx)-Framework via das Community-Projekt [mlx-audio](https://github.com/Blaizzy/mlx-audio) laufen kann; [Piper](/de/power-local-llm/piper-tts-review) ist die beste Wahl, wenn Sie die einfachste, portabelste Installation wollen, die sich auf Intel- und Apple-Silicon-Macs identisch verhält, da es auf keinem von beiden die GPU nutzt.** [XTTS v2](/de/power-local-llm/xtts-v2-review) ist die Wahl, wenn Sie speziell Voice-Cloning benötigen, doch seine Metal-(MPS)-Unterstützung ist ein dokumentiertes, defektes [GitHub-Issue](https://github.com/coqui-ai/TTS/issues/3649) — erwarten Sie auf jedem Mac reine CPU-Leistung. [Bark](/de/power-local-llm/bark-tts-review) hat experimentelle MPS-Unterstützung hinter einer Umgebungsvariable, wobei einige Operationen weiterhin auf die CPU zurückfallen.',
     quickAnswerTop: {
       question: 'Was ist die beste lokale Text-zu-Sprache-Engine für Mac?',
       answer:
@@ -435,9 +435,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Insgesamt am besten für Apple Silicon:** [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) via [mlx-audio](https://github.com/Blaizzy/mlx-audio) — die einzige hier behandelte Engine mit einem echten Metal-GPU-Pfad, klein genug (82M Parameter), um auf jedem Apple-Silicon-Mac bequem zu laufen.',
-          '**Am besten für Einfachheit und Intel-Kompatibilität:** [Piper](/power-local-llm/piper-tts-review) — von Grund auf nur CPU, sodass Installation und Leistung identisch sind, egal ob auf einem M-Series-Chip oder einem älteren Intel-Mac.',
-          '**Am besten, wenn Sie Voice-Cloning benötigen:** [XTTS v2](/power-local-llm/xtts-v2-review) — klont eine Stimme aus ~6 Sekunden Referenzaudio, läuft aber auf jedem Mac nur mit CPU und ist ausschließlich für nicht-kommerzielle Nutzung lizenziert.',
-          '**Am besten für ausdrucksstarkes, nicht-sprachliches Audio:** [Bark](/power-local-llm/bark-tts-review) — Lachen, Seufzer und einfache Musik aus Text, mit experimenteller (teilweiser) Apple-Silicon-GPU-Unterstützung, wobei sein Repository seit April 2024 ruht.',
+          '**Am besten für Einfachheit und Intel-Kompatibilität:** [Piper](/de/power-local-llm/piper-tts-review) — von Grund auf nur CPU, sodass Installation und Leistung identisch sind, egal ob auf einem M-Series-Chip oder einem älteren Intel-Mac.',
+          '**Am besten, wenn Sie Voice-Cloning benötigen:** [XTTS v2](/de/power-local-llm/xtts-v2-review) — klont eine Stimme aus ~6 Sekunden Referenzaudio, läuft aber auf jedem Mac nur mit CPU und ist ausschließlich für nicht-kommerzielle Nutzung lizenziert.',
+          '**Am besten für ausdrucksstarkes, nicht-sprachliches Audio:** [Bark](/de/power-local-llm/bark-tts-review) — Lachen, Seufzer und einfache Musik aus Text, mit experimenteller (teilweiser) Apple-Silicon-GPU-Unterstützung, wobei sein Repository seit April 2024 ruht.',
         ],
       },
       whoShouldUse: {
@@ -471,21 +471,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sprachqualität': 'Natürlich, nah an größeren Cloud-Modellen',
           },
           {
-            'Engine': '[Piper](/power-local-llm/piper-tts-review)',
+            'Engine': '[Piper](/de/power-local-llm/piper-tts-review)',
             'Apple-Silicon-Beschl.': 'Keine (Design) — nur CPU, ONNX Runtime',
             'RAM-Bedarf': 'Sehr niedrig (~50–100MB pro Stimme)',
             'macOS-Installation': '`pip install piper-tts`, kein GPU-Setup',
             'Sprachqualität': 'Klar, etwas robotische Prosodie',
           },
           {
-            'Engine': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Engine': '[XTTS v2](/de/power-local-llm/xtts-v2-review)',
             'Apple-Silicon-Beschl.': 'Keine — MPS hängt (GH-Issue #3649)',
             'RAM-Bedarf': 'Mittel–hoch (volles Cloning-Modell)',
             'macOS-Installation': '`pip install coqui-tts`, nur CPU auf Mac',
             'Sprachqualität': 'Hoch, klont eine bestimmte Stimme',
           },
           {
-            'Engine': '[Bark](/power-local-llm/bark-tts-review)',
+            'Engine': '[Bark](/de/power-local-llm/bark-tts-review)',
             'Apple-Silicon-Beschl.': 'Experimentell — `SUNO_ENABLE_MPS=True`',
             'RAM-Bedarf': 'Hoch (Small-Models-Flag zum Reduzieren)',
             'macOS-Installation': 'pip install von GitHub, kein PyPI-Paket',
@@ -502,8 +502,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82M läuft über Apples eigenes [MLX](https://github.com/ml-explore/mlx)-Framework via das Community-Projekt [mlx-audio](https://github.com/Blaizzy/mlx-audio), das Apple Silicon und Python 3.10–3.12 erfordert.** MLX ist Apples Open-Source-Machine-Learning-Framework, von Grund auf für Metal auf der Unified-Memory-Architektur von Apple Silicon gebaut — dasselbe Framework, das der [Apple-Silicon-Leitfaden für lokale LLMs](/local-llms/apple-silicon-local-llm-guide-2026) und der [Vergleich MLX vs. Ollama vs. llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) für Sprachmodelle behandeln. Die offiziellen Kokoro-82M-Gewichte, veröffentlicht von hexgrad auf Hugging Face, sind nativ ein PyTorch-Modell; der MLX-Pfad ist ein Community-Port, keine offizielle Apple- oder hexgrad-Veröffentlichung, und mlx-audio bietet zudem quantisierte (bf16, 8-bit, 4-bit) Varianten für geringeren Speicherverbrauch.',
-          '**Piper berührt auf keiner Plattform die GPU, Apple Silicon eingeschlossen — das ist Design, keine Einschränkung.** Piper wandelt Text mit espeak-ng in Phoneme um und synthetisiert dann Audio mit einem Modell, das für schnelle CPU-Inferenz nach [ONNX Runtime](https://onnxruntime.ai/) exportiert wurde. Genau diese Design-Entscheidung ist der Grund, warum Piper sogar auf einem Raspberry Pi in Echtzeit läuft — siehe PromptQuorums [Piper-TTS-Test](/power-local-llm/piper-tts-review) für die vollständige Architektur und Installationsschritte.',
-          '**Die Apple-Silicon-Metal-(MPS)-Unterstützung von XTTS v2 funktioniert derzeit nicht.** Ein verfolgtes Issue im [coqui-ai/TTS-GitHub-Repository](https://github.com/coqui-ai/TTS/issues/3649), betitelt „Unable to use xtts_v2 with mps device on Apple Silicon", dokumentiert, dass der Versuch, XTTS v2 auf dem MPS-Gerät auszuführen, hängen bleibt, statt abzuschließen. Coquis eigenes Projekt führt Apple-Silicon-GPU-Unterstützung nicht als offiziell unterstützt auf. In der Praxis bedeutet das, dass XTTS v2 auf einem Mac nur auf der CPU läuft, über dasselbe [Coqui-TTS-Toolkit](/power-local-llm/coqui-tts-review) (MPL-2.0-lizenziert), das es auf anderen Plattformen ausführt.',
+          '**Piper berührt auf keiner Plattform die GPU, Apple Silicon eingeschlossen — das ist Design, keine Einschränkung.** Piper wandelt Text mit espeak-ng in Phoneme um und synthetisiert dann Audio mit einem Modell, das für schnelle CPU-Inferenz nach [ONNX Runtime](https://onnxruntime.ai/) exportiert wurde. Genau diese Design-Entscheidung ist der Grund, warum Piper sogar auf einem Raspberry Pi in Echtzeit läuft — siehe PromptQuorums [Piper-TTS-Test](/de/power-local-llm/piper-tts-review) für die vollständige Architektur und Installationsschritte.',
+          '**Die Apple-Silicon-Metal-(MPS)-Unterstützung von XTTS v2 funktioniert derzeit nicht.** Ein verfolgtes Issue im [coqui-ai/TTS-GitHub-Repository](https://github.com/coqui-ai/TTS/issues/3649), betitelt „Unable to use xtts_v2 with mps device on Apple Silicon", dokumentiert, dass der Versuch, XTTS v2 auf dem MPS-Gerät auszuführen, hängen bleibt, statt abzuschließen. Coquis eigenes Projekt führt Apple-Silicon-GPU-Unterstützung nicht als offiziell unterstützt auf. In der Praxis bedeutet das, dass XTTS v2 auf einem Mac nur auf der CPU läuft, über dasselbe [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review) (MPL-2.0-lizenziert), das es auf anderen Plattformen ausführt.',
           '**Bark hat experimentelle Apple-Silicon-MPS-Unterstützung, geschützt hinter einer Umgebungsvariable.** Das Setzen von `SUNO_ENABLE_MPS=True` aktiviert Metal-Beschleunigung, laut Diskussion im [suno-ai/bark-GitHub-Repository](https://github.com/suno-ai/bark), doch einige PyTorch-Operatoren, von denen Bark abhängt, waren zum Zeitpunkt nicht für MPS implementiert, was bei diesen Schritten zu teilweisem CPU-Fallback führt. Bark unterstützt zudem ein `SUNO_USE_SMALL_MODELS=True`-Flag speziell zur Reduzierung des Speicherdrucks auf Macs mit weniger Unified Memory.',
         ],
         note: 'Der Apple-Silicon-Beschleunigungsstatus für Community-gepflegte TTS-Projekte kann sich zwischen Releases schneller ändern, als dieser Artikel aktualisiert wird — prüfen Sie vor der Annahme, dass das aktuelle Verhalten dem hier beschriebenen entspricht, die eigenen GitHub-Issues und das README jedes Projekts.',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Keine der vier Engines in diesem Vergleich ist die richtige Wahl für jeden Mac-TTS-Anwendungsfall — jede hat Situationen, in denen ein anderes Werkzeug oder eine Cloud-API besser passt.**',
         ],
         items: [
-          '❌ **Benötigen eine garantierte kommerzielle Lizenz mit geklonten Stimmen.** Die CPML-Lizenz von XTTS v2 ist nicht-kommerziell, ohne bestätigten aktiven Weg zu einer kommerziellen Lizenz, seit Coqui AI seine kostenpflichtigen Dienste im Dezember 2023 einstellte — siehe PromptQuorums [ElevenLabs-Vergleich](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Cloud-Alternative.',
+          '❌ **Benötigen eine garantierte kommerzielle Lizenz mit geklonten Stimmen.** Die CPML-Lizenz von XTTS v2 ist nicht-kommerziell, ohne bestätigten aktiven Weg zu einer kommerziellen Lizenz, seit Coqui AI seine kostenpflichtigen Dienste im Dezember 2023 einstellte — siehe PromptQuorums [ElevenLabs-Vergleich](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Cloud-Alternative.',
           '❌ **Benötigen garantierte aktive Pflege.** Barks öffentliches GitHub-Repository zeigt seit dem 5. April 2024 keine Commits mehr; wenn laufende Fixes und Updates für Ihr Projekt wichtig sind, sind Piper (aktiv gepflegt von der Open Home Foundation) oder Kokoro (ein aktiv genutztes Community-Ökosystem rund um mlx-audio) sicherere Wetten.',
           '❌ **Benötigen heute produktionsreife Apple-Silicon-GPU-Unterstützung, ohne Abhängigkeit von einem Community-Projekt.** Der MLX-Pfad von Kokoro läuft über ein Community-Projekt, keine offizielle Apple- oder hexgrad-Veröffentlichung — behandeln Sie ihn als gut, aber nicht vom Hersteller garantiert.',
           '❌ **Benötigen interaktive Echtzeit-Sprache auf sehr begrenztem Apple-Silicon-Speicher (8GB-Basiskonfigurationen), während gleichzeitig ein großes lokales LLM läuft.** Einen großen XTTS-v2- oder Bark-Prozess neben einem LLM auf einem speicherbegrenzten Mac zu stapeln, kann eng werden; die kleinen Speicherbedarfe von Piper und Kokoro lassen mehr Spielraum.',
@@ -623,21 +623,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[coqui-ai/TTS-GitHub-Issue #3649](https://github.com/coqui-ai/TTS/issues/3649) — „Unable to use xtts_v2 with mps device on Apple Silicon", dokumentiert das ungelöste MPS-Hängen.',
           '[suno-ai/bark-GitHub-Repository](https://github.com/suno-ai/bark) — Issues und Pull-Requests, die experimentelle Apple-Silicon-MPS-Unterstützung via SUNO_ENABLE_MPS dokumentieren.',
           '[Apple-MLX-Framework](https://github.com/ml-explore/mlx) — Apples offizielles Open-Source-Machine-Learning-Framework mit nativer Metal-GPU-Beschleunigung für Apple Silicon.',
-          '[Piper-TTS-Test](/power-local-llm/piper-tts-review) — PromptQuorums dedizierter Test, einschließlich Installationsbefehlen und Lizenzhistorie.',
-          '[XTTS-v2-Test](/power-local-llm/xtts-v2-review), [Coqui-TTS-Test](/power-local-llm/coqui-tts-review) und [Bark-TTS-Test](/power-local-llm/bark-tts-review) — PromptQuorums dedizierte Tests der übrigen hier behandelten Engines.',
+          '[Piper-TTS-Test](/de/power-local-llm/piper-tts-review) — PromptQuorums dedizierter Test, einschließlich Installationsbefehlen und Lizenzhistorie.',
+          '[XTTS-v2-Test](/de/power-local-llm/xtts-v2-review), [Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review) und [Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — PromptQuorums dedizierte Tests der übrigen hier behandelten Engines.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Piper-TTS-Test](/power-local-llm/piper-tts-review) — die schnelle, reine-CPU, freizügig lizenzierte Engine aus diesem Vergleich, in voller Tiefe.',
-          '[XTTS-v2-Test](/power-local-llm/xtts-v2-review) — das hier behandelte Voice-Cloning-Modell, einschließlich seiner nicht-kommerziellen CPML-Lizenz.',
-          '[Coqui-TTS-Test](/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 (und andere Modelle) ausführt, MPL-2.0-lizenziert.',
-          '[Bark-TTS-Test](/power-local-llm/bark-tts-review) — die ausdrucksstarke, nicht-sprachliche lokale TTS-Engine aus diesem Vergleich, einschließlich ihres Pflegestatus.',
+          '[Piper-TTS-Test](/de/power-local-llm/piper-tts-review) — die schnelle, reine-CPU, freizügig lizenzierte Engine aus diesem Vergleich, in voller Tiefe.',
+          '[XTTS-v2-Test](/de/power-local-llm/xtts-v2-review) — das hier behandelte Voice-Cloning-Modell, einschließlich seiner nicht-kommerziellen CPML-Lizenz.',
+          '[Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 (und andere Modelle) ausführt, MPL-2.0-lizenziert.',
+          '[Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — die ausdrucksstarke, nicht-sprachliche lokale TTS-Engine aus diesem Vergleich, einschließlich ihres Pflegestatus.',
           '[Apple-Silicon-Leitfaden für lokale LLMs](/local-llms/apple-silicon-local-llm-guide-2026) — Speicherstufen, Metal-GPU-Beschleunigung und Mac-Auswahl für lokale KI über TTS hinaus.',
           '[MLX vs. Ollama vs. llama.cpp auf Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — dasselbe MLX-Framework, das dieser Leitfaden für Kokoro behandelt, erklärt für lokale Sprachmodelle.',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für Leser, die eine verwaltete kommerzielle Option in Betracht ziehen.',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für Leser, die eine verwaltete kommerzielle Option in Betracht ziehen.',
         ],
       },
     },
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleur moteur TTS local pour Mac (2026) : ce qui utilise vraiment Apple Silicon',
     seoTitle: 'Meilleur TTS local pour Mac 2026 : guide Apple Silicon',
     intro:
-      'La plupart des comparatifs « meilleur TTS local » traitent tous les Mac de la même façon, mais Apple Silicon change quel moteur a réellement du sens. [Piper](/power-local-llm/piper-tts-review) tourne entièrement sur le CPU et ne touche jamais le GPU — sur un Mac Apple Silicon ou Intel, il se comporte à peu près pareil. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) peut tourner via le framework [MLX](https://github.com/ml-explore/mlx) d\'Apple, grâce au projet communautaire [mlx-audio](https://github.com/Blaizzy/mlx-audio), conçu spécifiquement pour le GPU Metal d\'Apple Silicon. [XTTS v2](/power-local-llm/xtts-v2-review), en revanche, ne prend pas du tout en charge le backend Metal Performance Shaders (MPS) d\'Apple — une [issue GitHub](https://github.com/coqui-ai/TTS/issues/3649) suivie documente que l\'utilisation du périphérique MPS se contente de bloquer — il tourne donc uniquement sur CPU sur tout Mac. Ce guide compare ce que chaque moteur fait réellement sur Apple Silicon, signale où les Mac Intel sont limités aux options CPU uniquement, et indique lequel installer.',
+      'La plupart des comparatifs « meilleur TTS local » traitent tous les Mac de la même façon, mais Apple Silicon change quel moteur a réellement du sens. [Piper](/fr/power-local-llm/piper-tts-review) tourne entièrement sur le CPU et ne touche jamais le GPU — sur un Mac Apple Silicon ou Intel, il se comporte à peu près pareil. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) peut tourner via le framework [MLX](https://github.com/ml-explore/mlx) d\'Apple, grâce au projet communautaire [mlx-audio](https://github.com/Blaizzy/mlx-audio), conçu spécifiquement pour le GPU Metal d\'Apple Silicon. [XTTS v2](/fr/power-local-llm/xtts-v2-review), en revanche, ne prend pas du tout en charge le backend Metal Performance Shaders (MPS) d\'Apple — une [issue GitHub](https://github.com/coqui-ai/TTS/issues/3649) suivie documente que l\'utilisation du périphérique MPS se contente de bloquer — il tourne donc uniquement sur CPU sur tout Mac. Ce guide compare ce que chaque moteur fait réellement sur Apple Silicon, signale où les Mac Intel sont limités aux options CPU uniquement, et indique lequel installer.',
     metaDescription:
       'Piper est CPU uniquement sur tout Mac. Kokoro peut utiliser Metal via MLX. Le support MPS de XTTS v2 est une issue GitHub connue et cassée. Voici le moteur TTS local à installer sur Apple Silicon.',
     twitterDescription:
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**Kokoro-82M est le meilleur moteur TTS local pour les Mac Apple Silicon si vous voulez l\'accélération GPU, puisqu\'il peut tourner via le framework [MLX](https://github.com/ml-explore/mlx) d\'Apple grâce au projet communautaire [mlx-audio](https://github.com/Blaizzy/mlx-audio) ; [Piper](/power-local-llm/piper-tts-review) est le meilleur choix si vous voulez l\'installation la plus simple et la plus portable, qui se comporte à l\'identique sur Mac Intel et Apple Silicon, puisqu\'il n\'utilise jamais le GPU sur aucun des deux.** [XTTS v2](/power-local-llm/xtts-v2-review) est le choix si vous avez spécifiquement besoin de clonage vocal, mais son support Metal (MPS) est une [issue GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentée et cassée — attendez-vous à des performances CPU uniquement sur tout Mac. [Bark](/power-local-llm/bark-tts-review) a un support MPS expérimental derrière une variable d\'environnement, certaines opérations continuant de retomber sur le CPU.',
+      '**Kokoro-82M est le meilleur moteur TTS local pour les Mac Apple Silicon si vous voulez l\'accélération GPU, puisqu\'il peut tourner via le framework [MLX](https://github.com/ml-explore/mlx) d\'Apple grâce au projet communautaire [mlx-audio](https://github.com/Blaizzy/mlx-audio) ; [Piper](/fr/power-local-llm/piper-tts-review) est le meilleur choix si vous voulez l\'installation la plus simple et la plus portable, qui se comporte à l\'identique sur Mac Intel et Apple Silicon, puisqu\'il n\'utilise jamais le GPU sur aucun des deux.** [XTTS v2](/fr/power-local-llm/xtts-v2-review) est le choix si vous avez spécifiquement besoin de clonage vocal, mais son support Metal (MPS) est une [issue GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentée et cassée — attendez-vous à des performances CPU uniquement sur tout Mac. [Bark](/fr/power-local-llm/bark-tts-review) a un support MPS expérimental derrière une variable d\'environnement, certaines opérations continuant de retomber sur le CPU.',
     quickAnswerTop: {
       question: 'Quel est le meilleur moteur de synthèse vocale local pour Mac ?',
       answer:
@@ -773,9 +773,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Meilleur choix global pour Apple Silicon :** [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) via [mlx-audio](https://github.com/Blaizzy/mlx-audio) — le seul moteur ici avec un vrai chemin GPU Metal, assez petit (82M paramètres) pour tourner confortablement sur tout Mac Apple Silicon.',
-          '**Meilleur choix pour la simplicité et la compatibilité Intel :** [Piper](/power-local-llm/piper-tts-review) — CPU uniquement par conception, donc installation et performances identiques que ce soit sur une puce M-series ou un ancien Mac Intel.',
-          '**Meilleur choix si vous avez besoin de clonage vocal :** [XTTS v2](/power-local-llm/xtts-v2-review) — clone une voix à partir de ~6 secondes d\'audio de référence, mais tourne uniquement sur CPU sur tout Mac et n\'est licencié que pour un usage non commercial.',
-          '**Meilleur choix pour l\'audio expressif non vocal :** [Bark](/power-local-llm/bark-tts-review) — rires, soupirs et musique simple à partir de texte, avec un support GPU Apple Silicon expérimental (partiel), sachant que son dépôt est dormant depuis avril 2024.',
+          '**Meilleur choix pour la simplicité et la compatibilité Intel :** [Piper](/fr/power-local-llm/piper-tts-review) — CPU uniquement par conception, donc installation et performances identiques que ce soit sur une puce M-series ou un ancien Mac Intel.',
+          '**Meilleur choix si vous avez besoin de clonage vocal :** [XTTS v2](/fr/power-local-llm/xtts-v2-review) — clone une voix à partir de ~6 secondes d\'audio de référence, mais tourne uniquement sur CPU sur tout Mac et n\'est licencié que pour un usage non commercial.',
+          '**Meilleur choix pour l\'audio expressif non vocal :** [Bark](/fr/power-local-llm/bark-tts-review) — rires, soupirs et musique simple à partir de texte, avec un support GPU Apple Silicon expérimental (partiel), sachant que son dépôt est dormant depuis avril 2024.',
         ],
       },
       whoShouldUse: {
@@ -809,21 +809,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Qualité vocale': 'Naturelle, proche de modèles cloud plus grands',
           },
           {
-            'Moteur': '[Piper](/power-local-llm/piper-tts-review)',
+            'Moteur': '[Piper](/fr/power-local-llm/piper-tts-review)',
             'Accél. Apple Silicon': 'Aucune (conception) — CPU, ONNX Runtime',
             'Empreinte RAM': 'Très faible (~50–100Mo par voix)',
             'Installation macOS': '`pip install piper-tts`, aucune config GPU',
             'Qualité vocale': 'Claire, prosodie parfois robotique',
           },
           {
-            'Moteur': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Moteur': '[XTTS v2](/fr/power-local-llm/xtts-v2-review)',
             'Accél. Apple Silicon': 'Aucune — MPS bloque (issue GH #3649)',
             'Empreinte RAM': 'Modérée à élevée (modèle de clonage complet)',
             'Installation macOS': '`pip install coqui-tts`, CPU uniquement sur Mac',
             'Qualité vocale': 'Élevée, clone une voix spécifique',
           },
           {
-            'Moteur': '[Bark](/power-local-llm/bark-tts-review)',
+            'Moteur': '[Bark](/fr/power-local-llm/bark-tts-review)',
             'Accél. Apple Silicon': 'Expérimentale — `SUNO_ENABLE_MPS=True`',
             'Empreinte RAM': 'Élevée (flag small-models pour réduire)',
             'Installation macOS': 'pip install depuis GitHub, pas de paquet PyPI',
@@ -840,8 +840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82M tourne via le framework [MLX](https://github.com/ml-explore/mlx) d\'Apple grâce au projet communautaire [mlx-audio](https://github.com/Blaizzy/mlx-audio), qui nécessite Apple Silicon et Python 3.10–3.12.** MLX est le framework de machine learning open source d\'Apple, construit depuis zéro pour Metal sur l\'architecture à mémoire unifiée d\'Apple Silicon — le même framework que couvrent le [guide LLM local Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) et le [comparatif MLX vs. Ollama vs. llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) pour les modèles de langage. Les poids officiels de Kokoro-82M, publiés par hexgrad sur Hugging Face, sont nativement un modèle PyTorch ; le chemin MLX est un portage communautaire, pas une publication officielle d\'Apple ou hexgrad, et mlx-audio propose aussi des variantes quantifiées (bf16, 8-bit, 4-bit) pour réduire l\'utilisation mémoire.',
-          '**Piper ne touche jamais le GPU, sur aucune plateforme, Apple Silicon inclus — c\'est un choix de conception, pas une limitation.** Piper convertit le texte en phonèmes avec espeak-ng, puis synthétise l\'audio avec un modèle exporté vers [ONNX Runtime](https://onnxruntime.ai/) pour une inférence CPU rapide. Ce choix de conception explique précisément pourquoi Piper tourne en temps réel même sur un Raspberry Pi — voir le [test Piper TTS](/power-local-llm/piper-tts-review) de PromptQuorum pour l\'architecture complète et les étapes d\'installation.',
-          '**Le support Apple Silicon Metal (MPS) de XTTS v2 ne fonctionne actuellement pas.** Une issue suivie sur le [dépôt GitHub coqui-ai/TTS](https://github.com/coqui-ai/TTS/issues/3649), intitulée « Unable to use xtts_v2 with mps device on Apple Silicon », documente que tenter d\'exécuter XTTS v2 sur le périphérique MPS bloque au lieu de se terminer. Le propre projet de Coqui ne liste pas le support GPU Apple Silicon comme officiellement supporté. En pratique, cela signifie que XTTS v2 tourne uniquement sur CPU sur un Mac, via le même [toolkit Coqui TTS](/power-local-llm/coqui-tts-review) (licencié MPL-2.0) qui l\'exécute sur d\'autres plateformes.',
+          '**Piper ne touche jamais le GPU, sur aucune plateforme, Apple Silicon inclus — c\'est un choix de conception, pas une limitation.** Piper convertit le texte en phonèmes avec espeak-ng, puis synthétise l\'audio avec un modèle exporté vers [ONNX Runtime](https://onnxruntime.ai/) pour une inférence CPU rapide. Ce choix de conception explique précisément pourquoi Piper tourne en temps réel même sur un Raspberry Pi — voir le [test Piper TTS](/fr/power-local-llm/piper-tts-review) de PromptQuorum pour l\'architecture complète et les étapes d\'installation.',
+          '**Le support Apple Silicon Metal (MPS) de XTTS v2 ne fonctionne actuellement pas.** Une issue suivie sur le [dépôt GitHub coqui-ai/TTS](https://github.com/coqui-ai/TTS/issues/3649), intitulée « Unable to use xtts_v2 with mps device on Apple Silicon », documente que tenter d\'exécuter XTTS v2 sur le périphérique MPS bloque au lieu de se terminer. Le propre projet de Coqui ne liste pas le support GPU Apple Silicon comme officiellement supporté. En pratique, cela signifie que XTTS v2 tourne uniquement sur CPU sur un Mac, via le même [toolkit Coqui TTS](/fr/power-local-llm/coqui-tts-review) (licencié MPL-2.0) qui l\'exécute sur d\'autres plateformes.',
           '**Bark dispose d\'un support Apple Silicon MPS expérimental, protégé par une variable d\'environnement.** Définir `SUNO_ENABLE_MPS=True` active l\'accélération Metal, selon les discussions sur le [dépôt GitHub suno-ai/bark](https://github.com/suno-ai/bark), mais certains opérateurs PyTorch dont Bark dépend n\'étaient pas implémentés pour MPS au moment de la rédaction, entraînant un repli partiel sur CPU pour ces étapes. Bark prend aussi en charge un flag `SUNO_USE_SMALL_MODELS=True` spécifiquement pour réduire la pression mémoire sur les Mac disposant de moins de mémoire unifiée.',
         ],
         note: 'Le statut de l\'accélération Apple Silicon pour les projets TTS maintenus par la communauté peut changer entre les versions plus vite que cet article n\'est mis à jour — vérifiez les issues GitHub et le README de chaque projet avant de supposer que le comportement actuel correspond à ce qui est décrit ici.',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Aucun des quatre moteurs de ce comparatif n\'est le bon choix pour chaque cas d\'usage TTS sur Mac — chacun a des situations où un autre outil, ou une API cloud, convient mieux.**',
         ],
         items: [
-          '❌ **Besoin d\'une licence commerciale garantie avec voix clonées.** La licence CPML de XTTS v2 est non commerciale, sans voie confirmée et active vers une licence commerciale depuis que Coqui AI a arrêté ses services payants en décembre 2023 — voir le [comparatif ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) de PromptQuorum pour une alternative cloud commerciale gérée.',
+          '❌ **Besoin d\'une licence commerciale garantie avec voix clonées.** La licence CPML de XTTS v2 est non commerciale, sans voie confirmée et active vers une licence commerciale depuis que Coqui AI a arrêté ses services payants en décembre 2023 — voir le [comparatif ElevenLabs](/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) de PromptQuorum pour une alternative cloud commerciale gérée.',
           '❌ **Besoin d\'une maintenance active garantie.** Le dépôt GitHub public de Bark n\'affiche aucun commit depuis le 5 avril 2024 ; si les correctifs et mises à jour continus comptent pour votre projet, Piper (activement maintenu par l\'Open Home Foundation) ou Kokoro (un écosystème communautaire activement utilisé autour de mlx-audio) sont des paris plus sûrs.',
           '❌ **Besoin d\'un support GPU Apple Silicon de qualité production dès aujourd\'hui, sans dépendance à un projet communautaire.** Le chemin MLX de Kokoro passe par un projet communautaire, pas une publication officielle d\'Apple ou hexgrad — considérez-le comme bon, mais non garanti par un éditeur.',
           '❌ **Besoin de voix interactive en temps réel sur une mémoire Apple Silicon très limitée (configurations de base 8Go) tout en faisant tourner simultanément un grand LLM local.** Empiler un gros processus XTTS v2 ou Bark à côté d\'un LLM sur un Mac à mémoire contrainte peut être serré ; les faibles empreintes de Piper et Kokoro laissent plus de marge.',
@@ -953,21 +953,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Issue GitHub coqui-ai/TTS #3649](https://github.com/coqui-ai/TTS/issues/3649) — « Unable to use xtts_v2 with mps device on Apple Silicon », documentant le blocage MPS non résolu.',
           '[Dépôt GitHub suno-ai/bark](https://github.com/suno-ai/bark) — issues et pull requests documentant le support Apple Silicon MPS expérimental via SUNO_ENABLE_MPS.',
           '[Framework Apple MLX](https://github.com/ml-explore/mlx) — le framework de machine learning open source officiel d\'Apple avec accélération GPU Metal native pour Apple Silicon.',
-          '[Test Piper TTS](/power-local-llm/piper-tts-review) — le test dédié de PromptQuorum, incluant les commandes d\'installation et l\'historique des licences.',
-          '[Test XTTS v2](/power-local-llm/xtts-v2-review), [Test Coqui TTS](/power-local-llm/coqui-tts-review) et [Test Bark TTS](/power-local-llm/bark-tts-review) — les tests dédiés de PromptQuorum pour les autres moteurs couverts ici.',
+          '[Test Piper TTS](/fr/power-local-llm/piper-tts-review) — le test dédié de PromptQuorum, incluant les commandes d\'installation et l\'historique des licences.',
+          '[Test XTTS v2](/fr/power-local-llm/xtts-v2-review), [Test Coqui TTS](/fr/power-local-llm/coqui-tts-review) et [Test Bark TTS](/fr/power-local-llm/bark-tts-review) — les tests dédiés de PromptQuorum pour les autres moteurs couverts ici.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Test Piper TTS](/power-local-llm/piper-tts-review) — le moteur rapide, CPU uniquement, sous licence permissive couvert dans ce comparatif, en profondeur.',
-          '[Test XTTS v2](/power-local-llm/xtts-v2-review) — le modèle de clonage vocal couvert ici, incluant sa licence CPML non commerciale.',
-          '[Test Coqui TTS](/power-local-llm/coqui-tts-review) — le toolkit qui exécute XTTS v2 (et d\'autres modèles), sous licence MPL-2.0.',
-          '[Test Bark TTS](/power-local-llm/bark-tts-review) — le moteur TTS local expressif et non vocal couvert ici, incluant son statut de maintenance.',
+          '[Test Piper TTS](/fr/power-local-llm/piper-tts-review) — le moteur rapide, CPU uniquement, sous licence permissive couvert dans ce comparatif, en profondeur.',
+          '[Test XTTS v2](/fr/power-local-llm/xtts-v2-review) — le modèle de clonage vocal couvert ici, incluant sa licence CPML non commerciale.',
+          '[Test Coqui TTS](/fr/power-local-llm/coqui-tts-review) — le toolkit qui exécute XTTS v2 (et d\'autres modèles), sous licence MPL-2.0.',
+          '[Test Bark TTS](/fr/power-local-llm/bark-tts-review) — le moteur TTS local expressif et non vocal couvert ici, incluant son statut de maintenance.',
           '[Guide LLM local Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) — niveaux de mémoire, accélération GPU Metal et choix de Mac pour l\'IA locale au-delà du TTS.',
           '[MLX vs. Ollama vs. llama.cpp sur Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — le même framework MLX couvert ici pour Kokoro, expliqué pour les modèles de langage locaux.',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — le comparatif cloud vs. local pour les lecteurs envisageant une option commerciale gérée.',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — le comparatif cloud vs. local pour les lecteurs envisageant une option commerciale gérée.',
         ],
       },
     },
@@ -1016,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mejor motor TTS local para Mac (2026): qué usa realmente Apple Silicon',
     seoTitle: 'Mejor TTS local para Mac 2026: guía Apple Silicon',
     intro:
-      'La mayoría de las comparativas de "mejor TTS local" tratan todos los Mac igual, pero Apple Silicon cambia qué motor tiene realmente sentido. [Piper](/power-local-llm/piper-tts-review) corre completamente en la CPU y nunca toca la GPU — en un Mac Apple Silicon o uno Intel, rinde más o menos igual. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) puede correr a través del framework [MLX](https://github.com/ml-explore/mlx) propio de Apple mediante el proyecto comunitario [mlx-audio](https://github.com/Blaizzy/mlx-audio), diseñado específicamente para la GPU Metal de Apple Silicon. [XTTS v2](/power-local-llm/xtts-v2-review), en cambio, no soporta en absoluto el backend Metal Performance Shaders (MPS) de Apple — un [issue de GitHub](https://github.com/coqui-ai/TTS/issues/3649) rastreado documenta que usar el dispositivo MPS simplemente se cuelga — así que corre solo en CPU en cualquier Mac. Esta guía compara qué hace realmente cada motor en Apple Silicon, señala dónde los Mac Intel quedan limitados a las opciones solo-CPU, y te dice cuál instalar.',
+      'La mayoría de las comparativas de "mejor TTS local" tratan todos los Mac igual, pero Apple Silicon cambia qué motor tiene realmente sentido. [Piper](/es/power-local-llm/piper-tts-review) corre completamente en la CPU y nunca toca la GPU — en un Mac Apple Silicon o uno Intel, rinde más o menos igual. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) puede correr a través del framework [MLX](https://github.com/ml-explore/mlx) propio de Apple mediante el proyecto comunitario [mlx-audio](https://github.com/Blaizzy/mlx-audio), diseñado específicamente para la GPU Metal de Apple Silicon. [XTTS v2](/es/power-local-llm/xtts-v2-review), en cambio, no soporta en absoluto el backend Metal Performance Shaders (MPS) de Apple — un [issue de GitHub](https://github.com/coqui-ai/TTS/issues/3649) rastreado documenta que usar el dispositivo MPS simplemente se cuelga — así que corre solo en CPU en cualquier Mac. Esta guía compara qué hace realmente cada motor en Apple Silicon, señala dónde los Mac Intel quedan limitados a las opciones solo-CPU, y te dice cuál instalar.',
     metaDescription:
       'Piper es solo CPU en todo Mac. Kokoro puede usar Metal vía MLX. El soporte MPS de XTTS v2 es un issue de GitHub conocido y roto. Este es el motor TTS local que realmente hay que instalar en Apple Silicon.',
     twitterDescription:
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**Kokoro-82M es el mejor motor TTS local para Mac Apple Silicon si quieres aceleración por GPU, ya que puede correr a través del framework [MLX](https://github.com/ml-explore/mlx) propio de Apple mediante el proyecto comunitario [mlx-audio](https://github.com/Blaizzy/mlx-audio); [Piper](/power-local-llm/piper-tts-review) es la mejor opción si quieres la instalación más simple y portable, que se comporta igual en Mac Intel y Apple Silicon, ya que nunca usa la GPU en ninguno de los dos.** [XTTS v2](/power-local-llm/xtts-v2-review) es la opción si necesitas específicamente clonación de voz, pero su soporte Metal (MPS) es un [issue de GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentado y roto — espera rendimiento solo-CPU en cualquier Mac. [Bark](/power-local-llm/bark-tts-review) tiene soporte MPS experimental detrás de una variable de entorno, con algunas operaciones que aún recaen en la CPU.',
+      '**Kokoro-82M es el mejor motor TTS local para Mac Apple Silicon si quieres aceleración por GPU, ya que puede correr a través del framework [MLX](https://github.com/ml-explore/mlx) propio de Apple mediante el proyecto comunitario [mlx-audio](https://github.com/Blaizzy/mlx-audio); [Piper](/es/power-local-llm/piper-tts-review) es la mejor opción si quieres la instalación más simple y portable, que se comporta igual en Mac Intel y Apple Silicon, ya que nunca usa la GPU en ninguno de los dos.** [XTTS v2](/es/power-local-llm/xtts-v2-review) es la opción si necesitas específicamente clonación de voz, pero su soporte Metal (MPS) es un [issue de GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentado y roto — espera rendimiento solo-CPU en cualquier Mac. [Bark](/es/power-local-llm/bark-tts-review) tiene soporte MPS experimental detrás de una variable de entorno, con algunas operaciones que aún recaen en la CPU.',
     quickAnswerTop: {
       question: '¿Cuál es el mejor motor de texto a voz local para Mac?',
       answer:
@@ -1103,9 +1103,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Mejor opción general para Apple Silicon:** [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) vía [mlx-audio](https://github.com/Blaizzy/mlx-audio) — el único motor aquí con una ruta real de GPU Metal, lo bastante pequeño (82M parámetros) para correr cómodamente en cualquier Mac Apple Silicon.',
-          '**Mejor opción para simplicidad y compatibilidad con Intel:** [Piper](/power-local-llm/piper-tts-review) — solo-CPU por diseño, así que la instalación y el rendimiento son idénticos tanto en un chip serie M como en un Mac Intel antiguo.',
-          '**Mejor opción si necesitas clonación de voz:** [XTTS v2](/power-local-llm/xtts-v2-review) — clona una voz a partir de ~6 segundos de audio de referencia, pero corre solo con CPU en cualquier Mac y su licencia es exclusivamente para uso no comercial.',
-          '**Mejor opción para audio expresivo no verbal:** [Bark](/power-local-llm/bark-tts-review) — risas, suspiros y música simple a partir de texto, con soporte de GPU Apple Silicon experimental (parcial), aunque su repositorio está inactivo desde abril de 2024.',
+          '**Mejor opción para simplicidad y compatibilidad con Intel:** [Piper](/es/power-local-llm/piper-tts-review) — solo-CPU por diseño, así que la instalación y el rendimiento son idénticos tanto en un chip serie M como en un Mac Intel antiguo.',
+          '**Mejor opción si necesitas clonación de voz:** [XTTS v2](/es/power-local-llm/xtts-v2-review) — clona una voz a partir de ~6 segundos de audio de referencia, pero corre solo con CPU en cualquier Mac y su licencia es exclusivamente para uso no comercial.',
+          '**Mejor opción para audio expresivo no verbal:** [Bark](/es/power-local-llm/bark-tts-review) — risas, suspiros y música simple a partir de texto, con soporte de GPU Apple Silicon experimental (parcial), aunque su repositorio está inactivo desde abril de 2024.',
         ],
       },
       whoShouldUse: {
@@ -1139,21 +1139,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Calidad de voz': 'Natural, cercana a modelos cloud grandes',
           },
           {
-            'Motor': '[Piper](/power-local-llm/piper-tts-review)',
+            'Motor': '[Piper](/es/power-local-llm/piper-tts-review)',
             'Aceleración Apple Silicon': 'Ninguna (diseño) — CPU, ONNX Runtime',
             'Uso de RAM': 'Muy bajo (~50–100MB por voz)',
             'Instalación macOS': '`pip install piper-tts`, sin config de GPU',
             'Calidad de voz': 'Clara, prosodia algo robótica',
           },
           {
-            'Motor': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Motor': '[XTTS v2](/es/power-local-llm/xtts-v2-review)',
             'Aceleración Apple Silicon': 'Ninguna — MPS se cuelga (issue GH #3649)',
             'Uso de RAM': 'Moderado-alto (modelo de clonación completo)',
             'Instalación macOS': '`pip install coqui-tts`, solo CPU en Mac',
             'Calidad de voz': 'Alta, clona una voz específica',
           },
           {
-            'Motor': '[Bark](/power-local-llm/bark-tts-review)',
+            'Motor': '[Bark](/es/power-local-llm/bark-tts-review)',
             'Aceleración Apple Silicon': 'Experimental — `SUNO_ENABLE_MPS=True`',
             'Uso de RAM': 'Alto (flag small-models para reducir)',
             'Instalación macOS': 'pip install desde GitHub, sin paquete PyPI',
@@ -1170,8 +1170,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82M corre a través del framework [MLX](https://github.com/ml-explore/mlx) propio de Apple mediante el proyecto comunitario [mlx-audio](https://github.com/Blaizzy/mlx-audio), que requiere Apple Silicon y Python 3.10–3.12.** MLX es el framework de machine learning open source de Apple, construido desde cero para Metal sobre la arquitectura de memoria unificada de Apple Silicon — el mismo framework que cubre la [guía de LLM local para Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) y la [comparativa MLX vs. Ollama vs. llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) para modelos de lenguaje. Los pesos oficiales de Kokoro-82M, publicados por hexgrad en Hugging Face, son nativamente un modelo PyTorch; la ruta MLX es un port comunitario, no una publicación oficial de Apple o hexgrad, y mlx-audio también ofrece variantes cuantizadas (bf16, 8-bit, 4-bit) para menor uso de memoria.',
-          '**Piper nunca toca la GPU en ninguna plataforma, Apple Silicon incluido — esto es por diseño, no una limitación.** Piper convierte texto a fonemas con espeak-ng, y luego sintetiza audio con un modelo exportado a [ONNX Runtime](https://onnxruntime.ai/) para inferencia rápida en CPU. Esa decisión de diseño es exactamente por qué Piper corre en tiempo real incluso en una Raspberry Pi — ver la [reseña de Piper TTS](/power-local-llm/piper-tts-review) de PromptQuorum para la arquitectura completa y los pasos de instalación.',
-          '**El soporte de Metal (MPS) de XTTS v2 en Apple Silicon actualmente no funciona.** Un issue rastreado en el [repositorio de GitHub coqui-ai/TTS](https://github.com/coqui-ai/TTS/issues/3649), titulado "Unable to use xtts_v2 with mps device on Apple Silicon", documenta que intentar correr XTTS v2 en el dispositivo MPS se cuelga en lugar de completarse. El propio proyecto de Coqui no lista el soporte de GPU en Apple Silicon como oficialmente soportado. En la práctica, esto significa que XTTS v2 corre solo con CPU en un Mac, a través del mismo [toolkit Coqui TTS](/power-local-llm/coqui-tts-review) (con licencia MPL-2.0) que lo ejecuta en otras plataformas.',
+          '**Piper nunca toca la GPU en ninguna plataforma, Apple Silicon incluido — esto es por diseño, no una limitación.** Piper convierte texto a fonemas con espeak-ng, y luego sintetiza audio con un modelo exportado a [ONNX Runtime](https://onnxruntime.ai/) para inferencia rápida en CPU. Esa decisión de diseño es exactamente por qué Piper corre en tiempo real incluso en una Raspberry Pi — ver la [reseña de Piper TTS](/es/power-local-llm/piper-tts-review) de PromptQuorum para la arquitectura completa y los pasos de instalación.',
+          '**El soporte de Metal (MPS) de XTTS v2 en Apple Silicon actualmente no funciona.** Un issue rastreado en el [repositorio de GitHub coqui-ai/TTS](https://github.com/coqui-ai/TTS/issues/3649), titulado "Unable to use xtts_v2 with mps device on Apple Silicon", documenta que intentar correr XTTS v2 en el dispositivo MPS se cuelga en lugar de completarse. El propio proyecto de Coqui no lista el soporte de GPU en Apple Silicon como oficialmente soportado. En la práctica, esto significa que XTTS v2 corre solo con CPU en un Mac, a través del mismo [toolkit Coqui TTS](/es/power-local-llm/coqui-tts-review) (con licencia MPL-2.0) que lo ejecuta en otras plataformas.',
           '**Bark tiene soporte experimental de Apple Silicon MPS, protegido detrás de una variable de entorno.** Establecer `SUNO_ENABLE_MPS=True` activa la aceleración Metal, según la discusión en el [repositorio de GitHub suno-ai/bark](https://github.com/suno-ai/bark), pero algunos operadores de PyTorch de los que depende Bark no estaban implementados para MPS al momento de escribir esto, causando un fallback parcial a CPU para esos pasos. Bark también soporta un flag `SUNO_USE_SMALL_MODELS=True` específicamente para reducir la presión de memoria en Mac con menos memoria unificada.',
         ],
         note: 'El estado de la aceleración en Apple Silicon para proyectos TTS mantenidos por la comunidad puede cambiar entre versiones más rápido de lo que este artículo se actualiza — revisa los issues de GitHub y el README de cada proyecto antes de asumir que el comportamiento actual coincide con lo descrito aquí.',
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ninguno de los cuatro motores de esta comparativa es la opción correcta para todo caso de uso de TTS en Mac — cada uno tiene situaciones donde otra herramienta, o una API cloud, encaja mejor.**',
         ],
         items: [
-          '❌ **Necesitas una licencia comercial garantizada con voces clonadas.** La licencia CPML de XTTS v2 es no comercial, sin una vía activa confirmada hacia una licencia comercial desde que Coqui AI cerró sus servicios de pago en diciembre de 2023 — ver la [comparativa con ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) de PromptQuorum para una alternativa cloud comercial gestionada.',
+          '❌ **Necesitas una licencia comercial garantizada con voces clonadas.** La licencia CPML de XTTS v2 es no comercial, sin una vía activa confirmada hacia una licencia comercial desde que Coqui AI cerró sus servicios de pago en diciembre de 2023 — ver la [comparativa con ElevenLabs](/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) de PromptQuorum para una alternativa cloud comercial gestionada.',
           '❌ **Necesitas mantenimiento activo garantizado.** El repositorio público de GitHub de Bark no muestra commits desde el 5 de abril de 2024; si las correcciones y actualizaciones continuas importan para tu proyecto, Piper (mantenido activamente por Open Home Foundation) o Kokoro (un ecosistema comunitario activamente usado en torno a mlx-audio) son apuestas más seguras.',
           '❌ **Necesitas soporte de GPU en Apple Silicon de nivel producción hoy mismo, sin depender de un proyecto comunitario.** La ruta MLX de Kokoro pasa por un proyecto comunitario, no una publicación oficial de Apple o hexgrad — trátala como buena, pero no garantizada por un proveedor.',
           '❌ **Necesitas voz interactiva en tiempo real en memoria Apple Silicon muy limitada (configuraciones base de 8GB) mientras también corres un LLM local grande a la vez.** Apilar un proceso grande de XTTS v2 o Bark junto a un LLM en un Mac con memoria ajustada puede ser justo; las huellas pequeñas de Piper y Kokoro dejan más margen.',
@@ -1283,21 +1283,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Issue de GitHub coqui-ai/TTS #3649](https://github.com/coqui-ai/TTS/issues/3649) — "Unable to use xtts_v2 with mps device on Apple Silicon", que documenta el bloqueo de MPS sin resolver.',
           '[Repositorio de GitHub suno-ai/bark](https://github.com/suno-ai/bark) — issues y pull requests que documentan el soporte experimental de Apple Silicon MPS vía SUNO_ENABLE_MPS.',
           '[Framework MLX de Apple](https://github.com/ml-explore/mlx) — el framework oficial de machine learning open source de Apple con aceleración nativa de GPU Metal para Apple Silicon.',
-          '[Reseña de Piper TTS](/power-local-llm/piper-tts-review) — la reseña dedicada de PromptQuorum, incluyendo comandos de instalación e historial de licencias.',
-          '[Reseña de XTTS v2](/power-local-llm/xtts-v2-review), [Reseña de Coqui TTS](/power-local-llm/coqui-tts-review) y [Reseña de Bark TTS](/power-local-llm/bark-tts-review) — las reseñas dedicadas de PromptQuorum de los demás motores cubiertos aquí.',
+          '[Reseña de Piper TTS](/es/power-local-llm/piper-tts-review) — la reseña dedicada de PromptQuorum, incluyendo comandos de instalación e historial de licencias.',
+          '[Reseña de XTTS v2](/es/power-local-llm/xtts-v2-review), [Reseña de Coqui TTS](/es/power-local-llm/coqui-tts-review) y [Reseña de Bark TTS](/es/power-local-llm/bark-tts-review) — las reseñas dedicadas de PromptQuorum de los demás motores cubiertos aquí.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de Piper TTS](/power-local-llm/piper-tts-review) — el motor rápido, solo-CPU, con licencia permisiva cubierto en esta comparativa, en profundidad completa.',
-          '[Reseña de XTTS v2](/power-local-llm/xtts-v2-review) — el modelo de clonación de voz cubierto aquí, incluyendo su licencia CPML no comercial.',
-          '[Reseña de Coqui TTS](/power-local-llm/coqui-tts-review) — el toolkit que ejecuta XTTS v2 (y otros modelos), con licencia MPL-2.0.',
-          '[Reseña de Bark TTS](/power-local-llm/bark-tts-review) — el motor TTS local expresivo y no verbal cubierto aquí, incluyendo su estado de mantenimiento.',
+          '[Reseña de Piper TTS](/es/power-local-llm/piper-tts-review) — el motor rápido, solo-CPU, con licencia permisiva cubierto en esta comparativa, en profundidad completa.',
+          '[Reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) — el modelo de clonación de voz cubierto aquí, incluyendo su licencia CPML no comercial.',
+          '[Reseña de Coqui TTS](/es/power-local-llm/coqui-tts-review) — el toolkit que ejecuta XTTS v2 (y otros modelos), con licencia MPL-2.0.',
+          '[Reseña de Bark TTS](/es/power-local-llm/bark-tts-review) — el motor TTS local expresivo y no verbal cubierto aquí, incluyendo su estado de mantenimiento.',
           '[Guía de LLM local para Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) — niveles de memoria, aceleración de GPU Metal y elección de Mac para IA local más allá del TTS.',
           '[MLX vs. Ollama vs. llama.cpp en Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — el mismo framework MLX cubierto aquí para Kokoro, explicado para modelos de lenguaje locales.',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparativa cloud vs. local para lectores que consideran una opción comercial gestionada.',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparativa cloud vs. local para lectores que consideran una opción comercial gestionada.',
         ],
       },
     },
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhor mecanismo de TTS local para Mac (2026): o que realmente usa o Apple Silicon',
     seoTitle: 'Melhor TTS local para Mac 2026: guia Apple Silicon',
     intro:
-      'A maioria dos comparativos de "melhor TTS local" trata todo Mac da mesma forma, mas o Apple Silicon muda qual mecanismo realmente faz sentido. O [Piper](/power-local-llm/piper-tts-review) roda inteiramente na CPU e nunca toca na GPU — em um Mac Apple Silicon ou em um Intel, o desempenho é parecido. O [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) pode rodar através do framework [MLX](https://github.com/ml-explore/mlx) da própria Apple, via o projeto comunitário [mlx-audio](https://github.com/Blaizzy/mlx-audio), construído especificamente para a GPU Metal do Apple Silicon. Já o [XTTS v2](/power-local-llm/xtts-v2-review) não oferece nenhum suporte ao backend Metal Performance Shaders (MPS) da Apple — uma [issue no GitHub](https://github.com/coqui-ai/TTS/issues/3649) acompanhada documenta que usar o dispositivo MPS simplesmente trava — então ele roda apenas na CPU em qualquer Mac. Este guia compara o que cada mecanismo realmente faz no Apple Silicon, aponta onde os Macs Intel ficam limitados às opções somente-CPU, e diz qual instalar.',
+      'A maioria dos comparativos de "melhor TTS local" trata todo Mac da mesma forma, mas o Apple Silicon muda qual mecanismo realmente faz sentido. O [Piper](/pt/power-local-llm/piper-tts-review) roda inteiramente na CPU e nunca toca na GPU — em um Mac Apple Silicon ou em um Intel, o desempenho é parecido. O [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) pode rodar através do framework [MLX](https://github.com/ml-explore/mlx) da própria Apple, via o projeto comunitário [mlx-audio](https://github.com/Blaizzy/mlx-audio), construído especificamente para a GPU Metal do Apple Silicon. Já o [XTTS v2](/pt/power-local-llm/xtts-v2-review) não oferece nenhum suporte ao backend Metal Performance Shaders (MPS) da Apple — uma [issue no GitHub](https://github.com/coqui-ai/TTS/issues/3649) acompanhada documenta que usar o dispositivo MPS simplesmente trava — então ele roda apenas na CPU em qualquer Mac. Este guia compara o que cada mecanismo realmente faz no Apple Silicon, aponta onde os Macs Intel ficam limitados às opções somente-CPU, e diz qual instalar.',
     metaDescription:
       'O Piper é somente CPU em todo Mac. O Kokoro pode usar Metal via MLX. O suporte MPS do XTTS v2 é uma issue conhecida e quebrada no GitHub. Este é o mecanismo de TTS local para realmente instalar no Apple Silicon.',
     twitterDescription:
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**O Kokoro-82M é o melhor mecanismo de TTS local para Macs Apple Silicon se você quer aceleração por GPU, já que pode rodar através do framework [MLX](https://github.com/ml-explore/mlx) da própria Apple via o projeto comunitário [mlx-audio](https://github.com/Blaizzy/mlx-audio); o [Piper](/power-local-llm/piper-tts-review) é a melhor escolha se você quer a instalação mais simples e portátil, que se comporta de forma idêntica em Macs Intel e Apple Silicon, já que nunca usa a GPU em nenhum dos dois.** O [XTTS v2](/power-local-llm/xtts-v2-review) é a escolha se você precisa especificamente de clonagem de voz, mas seu suporte Metal (MPS) é uma [issue no GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentada e quebrada — espere desempenho somente-CPU em qualquer Mac. O [Bark](/power-local-llm/bark-tts-review) tem suporte MPS experimental atrás de uma variável de ambiente, com algumas operações ainda recaindo na CPU.',
+      '**O Kokoro-82M é o melhor mecanismo de TTS local para Macs Apple Silicon se você quer aceleração por GPU, já que pode rodar através do framework [MLX](https://github.com/ml-explore/mlx) da própria Apple via o projeto comunitário [mlx-audio](https://github.com/Blaizzy/mlx-audio); o [Piper](/pt/power-local-llm/piper-tts-review) é a melhor escolha se você quer a instalação mais simples e portátil, que se comporta de forma idêntica em Macs Intel e Apple Silicon, já que nunca usa a GPU em nenhum dos dois.** O [XTTS v2](/pt/power-local-llm/xtts-v2-review) é a escolha se você precisa especificamente de clonagem de voz, mas seu suporte Metal (MPS) é uma [issue no GitHub](https://github.com/coqui-ai/TTS/issues/3649) documentada e quebrada — espere desempenho somente-CPU em qualquer Mac. O [Bark](/pt/power-local-llm/bark-tts-review) tem suporte MPS experimental atrás de uma variável de ambiente, com algumas operações ainda recaindo na CPU.',
     quickAnswerTop: {
       question: 'Qual é o melhor mecanismo de texto para voz local para Mac?',
       answer:
@@ -1433,9 +1433,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Melhor opção geral para Apple Silicon:** [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) via [mlx-audio](https://github.com/Blaizzy/mlx-audio) — o único mecanismo aqui com um caminho real de GPU Metal, pequeno o suficiente (82M parâmetros) para rodar confortavelmente em qualquer Mac Apple Silicon.',
-          '**Melhor opção para simplicidade e compatibilidade com Intel:** [Piper](/power-local-llm/piper-tts-review) — somente-CPU por design, então instalação e desempenho são idênticos, seja em um chip série M ou em um Mac Intel mais antigo.',
-          '**Melhor opção se você precisa de clonagem de voz:** [XTTS v2](/power-local-llm/xtts-v2-review) — clona uma voz a partir de ~6 segundos de áudio de referência, mas roda somente com CPU em qualquer Mac e é licenciado apenas para uso não comercial.',
-          '**Melhor opção para áudio expressivo não verbal:** [Bark](/power-local-llm/bark-tts-review) — risadas, suspiros e música simples a partir de texto, com suporte de GPU Apple Silicon experimental (parcial), embora seu repositório esteja inativo desde abril de 2024.',
+          '**Melhor opção para simplicidade e compatibilidade com Intel:** [Piper](/pt/power-local-llm/piper-tts-review) — somente-CPU por design, então instalação e desempenho são idênticos, seja em um chip série M ou em um Mac Intel mais antigo.',
+          '**Melhor opção se você precisa de clonagem de voz:** [XTTS v2](/pt/power-local-llm/xtts-v2-review) — clona uma voz a partir de ~6 segundos de áudio de referência, mas roda somente com CPU em qualquer Mac e é licenciado apenas para uso não comercial.',
+          '**Melhor opção para áudio expressivo não verbal:** [Bark](/pt/power-local-llm/bark-tts-review) — risadas, suspiros e música simples a partir de texto, com suporte de GPU Apple Silicon experimental (parcial), embora seu repositório esteja inativo desde abril de 2024.',
         ],
       },
       whoShouldUse: {
@@ -1469,21 +1469,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Qualidade de voz': 'Natural, próxima de modelos cloud maiores',
           },
           {
-            'Mecanismo': '[Piper](/power-local-llm/piper-tts-review)',
+            'Mecanismo': '[Piper](/pt/power-local-llm/piper-tts-review)',
             'Aceleração Apple Silicon': 'Nenhuma (design) — CPU, ONNX Runtime',
             'Uso de RAM': 'Muito baixo (~50–100MB por voz)',
             'Instalação macOS': '`pip install piper-tts`, sem config de GPU',
             'Qualidade de voz': 'Clara, prosódia um pouco robótica',
           },
           {
-            'Mecanismo': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Mecanismo': '[XTTS v2](/pt/power-local-llm/xtts-v2-review)',
             'Aceleração Apple Silicon': 'Nenhuma — MPS trava (issue GH #3649)',
             'Uso de RAM': 'Moderado a alto (modelo de clonagem completo)',
             'Instalação macOS': '`pip install coqui-tts`, só CPU no Mac',
             'Qualidade de voz': 'Alta, clona uma voz específica',
           },
           {
-            'Mecanismo': '[Bark](/power-local-llm/bark-tts-review)',
+            'Mecanismo': '[Bark](/pt/power-local-llm/bark-tts-review)',
             'Aceleração Apple Silicon': 'Experimental — `SUNO_ENABLE_MPS=True`',
             'Uso de RAM': 'Alto (flag small-models para reduzir)',
             'Instalação macOS': 'pip install do GitHub, sem pacote PyPI',
@@ -1500,8 +1500,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**O Kokoro-82M roda através do framework [MLX](https://github.com/ml-explore/mlx) da própria Apple, via o projeto comunitário [mlx-audio](https://github.com/Blaizzy/mlx-audio), que exige Apple Silicon e Python 3.10–3.12.** O MLX é o framework de machine learning de código aberto da Apple, construído do zero para Metal na arquitetura de memória unificada do Apple Silicon — o mesmo framework coberto pelo [guia de LLM local para Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) e pela [comparação MLX vs. Ollama vs. llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) para modelos de linguagem. Os pesos oficiais do Kokoro-82M, publicados pela hexgrad no Hugging Face, são nativamente um modelo PyTorch; o caminho MLX é um port da comunidade, não um lançamento oficial da Apple ou da hexgrad, e o mlx-audio também oferece variantes quantizadas (bf16, 8-bit, 4-bit) para menor uso de memória.',
-          '**O Piper nunca toca na GPU em nenhuma plataforma, Apple Silicon incluído — isso é design, não limitação.** O Piper converte texto em fonemas com espeak-ng, depois sintetiza áudio com um modelo exportado para o [ONNX Runtime](https://onnxruntime.ai/) para inferência rápida na CPU. Essa escolha de design é exatamente o motivo pelo qual o Piper roda em tempo real até em uma Raspberry Pi — veja a [análise do Piper TTS](/power-local-llm/piper-tts-review) da PromptQuorum para a arquitetura completa e os passos de instalação.',
-          '**O suporte Apple Silicon Metal (MPS) do XTTS v2 atualmente não funciona.** Uma issue acompanhada no [repositório coqui-ai/TTS no GitHub](https://github.com/coqui-ai/TTS/issues/3649), intitulada "Unable to use xtts_v2 with mps device on Apple Silicon", documenta que tentar rodar o XTTS v2 no dispositivo MPS trava em vez de completar. O próprio projeto da Coqui não lista o suporte de GPU do Apple Silicon como oficialmente suportado. Na prática, isso significa que o XTTS v2 roda somente com CPU em um Mac, através do mesmo [toolkit Coqui TTS](/power-local-llm/coqui-tts-review) (licenciado sob MPL-2.0) que o executa em outras plataformas.',
+          '**O Piper nunca toca na GPU em nenhuma plataforma, Apple Silicon incluído — isso é design, não limitação.** O Piper converte texto em fonemas com espeak-ng, depois sintetiza áudio com um modelo exportado para o [ONNX Runtime](https://onnxruntime.ai/) para inferência rápida na CPU. Essa escolha de design é exatamente o motivo pelo qual o Piper roda em tempo real até em uma Raspberry Pi — veja a [análise do Piper TTS](/pt/power-local-llm/piper-tts-review) da PromptQuorum para a arquitetura completa e os passos de instalação.',
+          '**O suporte Apple Silicon Metal (MPS) do XTTS v2 atualmente não funciona.** Uma issue acompanhada no [repositório coqui-ai/TTS no GitHub](https://github.com/coqui-ai/TTS/issues/3649), intitulada "Unable to use xtts_v2 with mps device on Apple Silicon", documenta que tentar rodar o XTTS v2 no dispositivo MPS trava em vez de completar. O próprio projeto da Coqui não lista o suporte de GPU do Apple Silicon como oficialmente suportado. Na prática, isso significa que o XTTS v2 roda somente com CPU em um Mac, através do mesmo [toolkit Coqui TTS](/pt/power-local-llm/coqui-tts-review) (licenciado sob MPL-2.0) que o executa em outras plataformas.',
           '**O Bark tem suporte Apple Silicon MPS experimental, protegido por uma variável de ambiente.** Definir `SUNO_ENABLE_MPS=True` ativa a aceleração Metal, segundo discussões no [repositório suno-ai/bark no GitHub](https://github.com/suno-ai/bark), mas alguns operadores do PyTorch dos quais o Bark depende não estavam implementados para MPS no momento, causando fallback parcial para CPU nessas etapas. O Bark também suporta uma flag `SUNO_USE_SMALL_MODELS=True` especificamente para reduzir a pressão de memória em Macs com menos memória unificada.',
         ],
         note: 'O status da aceleração no Apple Silicon para projetos de TTS mantidos pela comunidade pode mudar entre versões mais rápido do que este artigo é atualizado — verifique as issues no GitHub e o README de cada projeto antes de assumir que o comportamento atual corresponde ao descrito aqui.',
@@ -1554,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nenhum dos quatro mecanismos desta comparação é a escolha certa para todo caso de uso de TTS em Mac — cada um tem situações em que outra ferramenta, ou uma API na nuvem, se encaixa melhor.**',
         ],
         items: [
-          '❌ **Precisa de uma licença comercial garantida com vozes clonadas.** A licença CPML do XTTS v2 é não comercial, sem um caminho ativo confirmado para uma licença comercial desde que a Coqui AI encerrou seus serviços pagos em dezembro de 2023 — veja a [comparação com ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) da PromptQuorum para uma alternativa comercial gerenciada na nuvem.',
+          '❌ **Precisa de uma licença comercial garantida com vozes clonadas.** A licença CPML do XTTS v2 é não comercial, sem um caminho ativo confirmado para uma licença comercial desde que a Coqui AI encerrou seus serviços pagos em dezembro de 2023 — veja a [comparação com ElevenLabs](/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) da PromptQuorum para uma alternativa comercial gerenciada na nuvem.',
           '❌ **Precisa de manutenção ativa garantida.** O repositório público do Bark no GitHub não mostra commits desde 5 de abril de 2024; se correções e atualizações contínuas importam para seu projeto, o Piper (mantido ativamente pela Open Home Foundation) ou o Kokoro (um ecossistema comunitário ativamente usado em torno do mlx-audio) são apostas mais seguras.',
           '❌ **Precisa de suporte de GPU de nível produção no Apple Silicon hoje, sem depender de um projeto comunitário.** O caminho MLX do Kokoro passa por um projeto comunitário, não um lançamento oficial da Apple ou da hexgrad — trate-o como bom, mas não garantido por um fornecedor.',
           '❌ **Precisa de voz interativa em tempo real em memória Apple Silicon muito limitada (configurações básicas de 8GB) enquanto também roda um LLM local grande ao mesmo tempo.** Empilhar um processo grande de XTTS v2 ou Bark junto a um LLM em um Mac com memória restrita pode ficar apertado; as pegadas pequenas do Piper e do Kokoro deixam mais margem.',
@@ -1613,21 +1613,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Issue #3649 do coqui-ai/TTS no GitHub](https://github.com/coqui-ai/TTS/issues/3649) — "Unable to use xtts_v2 with mps device on Apple Silicon", que documenta a travada não resolvida do MPS.',
           '[Repositório suno-ai/bark no GitHub](https://github.com/suno-ai/bark) — issues e pull requests que documentam o suporte experimental Apple Silicon MPS via SUNO_ENABLE_MPS.',
           '[Framework MLX da Apple](https://github.com/ml-explore/mlx) — o framework oficial de machine learning de código aberto da Apple, com aceleração nativa de GPU Metal para Apple Silicon.',
-          '[Análise do Piper TTS](/power-local-llm/piper-tts-review) — a análise dedicada da PromptQuorum, incluindo comandos de instalação e histórico de licenciamento.',
-          '[Análise do XTTS v2](/power-local-llm/xtts-v2-review), [Análise do Coqui TTS](/power-local-llm/coqui-tts-review) e [Análise do Bark TTS](/power-local-llm/bark-tts-review) — as análises dedicadas da PromptQuorum dos demais mecanismos cobertos aqui.',
+          '[Análise do Piper TTS](/pt/power-local-llm/piper-tts-review) — a análise dedicada da PromptQuorum, incluindo comandos de instalação e histórico de licenciamento.',
+          '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review), [Análise do Coqui TTS](/pt/power-local-llm/coqui-tts-review) e [Análise do Bark TTS](/pt/power-local-llm/bark-tts-review) — as análises dedicadas da PromptQuorum dos demais mecanismos cobertos aqui.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do Piper TTS](/power-local-llm/piper-tts-review) — o mecanismo rápido, somente-CPU e com licença permissiva coberto nesta comparação, em profundidade total.',
-          '[Análise do XTTS v2](/power-local-llm/xtts-v2-review) — o modelo de clonagem de voz coberto aqui, incluindo sua licença CPML não comercial.',
-          '[Análise do Coqui TTS](/power-local-llm/coqui-tts-review) — o toolkit que executa o XTTS v2 (e outros modelos), licenciado sob MPL-2.0.',
-          '[Análise do Bark TTS](/power-local-llm/bark-tts-review) — o mecanismo de TTS local expressivo e não verbal coberto aqui, incluindo seu status de manutenção.',
+          '[Análise do Piper TTS](/pt/power-local-llm/piper-tts-review) — o mecanismo rápido, somente-CPU e com licença permissiva coberto nesta comparação, em profundidade total.',
+          '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) — o modelo de clonagem de voz coberto aqui, incluindo sua licença CPML não comercial.',
+          '[Análise do Coqui TTS](/pt/power-local-llm/coqui-tts-review) — o toolkit que executa o XTTS v2 (e outros modelos), licenciado sob MPL-2.0.',
+          '[Análise do Bark TTS](/pt/power-local-llm/bark-tts-review) — o mecanismo de TTS local expressivo e não verbal coberto aqui, incluindo seu status de manutenção.',
           '[Guia de LLM local para Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) — níveis de memória, aceleração de GPU Metal e escolha de Mac para IA local além do TTS.',
           '[MLX vs. Ollama vs. llama.cpp no Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — o mesmo framework MLX coberto aqui para o Kokoro, explicado para modelos de linguagem locais.',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — a comparação nuvem vs. local para leitores que consideram uma opção comercial gerenciada.',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — a comparação nuvem vs. local para leitores que consideram uma opção comercial gerenciada.',
         ],
       },
     },
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mac向けベストなローカルTTSエンジン(2026):実際にApple Siliconを使うのはどれか',
     seoTitle: 'Mac向けベストなローカルTTS 2026:Apple Siliconガイド',
     intro:
-      '「ベストなローカルTTS」比較記事の多くは、どのMacでも同じように扱いますが、Apple Siliconによって実際に理にかなうエンジンは変わります。[Piper](/power-local-llm/piper-tts-review)はすべてCPU上で動作し、GPUには一切触れません — Apple SiliconのMacでもIntel Macでも、性能はほぼ同じです。[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)は、コミュニティプロジェクトである[mlx-audio](https://github.com/Blaizzy/mlx-audio)を通じて、Apple自身の[MLX](https://github.com/ml-explore/mlx)フレームワーク経由で動かすことができます。このフレームワークは、Apple SiliconのMetal GPU向けに特別に作られています。対照的に、[XTTS v2](/power-local-llm/xtts-v2-review)はAppleのMetal Performance Shaders(MPS)バックエンドを一切サポートしていません — 追跡されている[GitHub issue](https://github.com/coqui-ai/TTS/issues/3649)は、MPSデバイスを使用しようとするとハングするだけだと記録しています。そのため、どのMacでもCPUのみで動作します。このガイドでは、各エンジンがApple Siliconで実際に何をするのかを比較し、Intel MacがCPUのみの選択肢に限定される部分を指摘し、どれをインストールすべきかを伝えます。',
+      '「ベストなローカルTTS」比較記事の多くは、どのMacでも同じように扱いますが、Apple Siliconによって実際に理にかなうエンジンは変わります。[Piper](/ja/power-local-llm/piper-tts-review)はすべてCPU上で動作し、GPUには一切触れません — Apple SiliconのMacでもIntel Macでも、性能はほぼ同じです。[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)は、コミュニティプロジェクトである[mlx-audio](https://github.com/Blaizzy/mlx-audio)を通じて、Apple自身の[MLX](https://github.com/ml-explore/mlx)フレームワーク経由で動かすことができます。このフレームワークは、Apple SiliconのMetal GPU向けに特別に作られています。対照的に、[XTTS v2](/ja/power-local-llm/xtts-v2-review)はAppleのMetal Performance Shaders(MPS)バックエンドを一切サポートしていません — 追跡されている[GitHub issue](https://github.com/coqui-ai/TTS/issues/3649)は、MPSデバイスを使用しようとするとハングするだけだと記録しています。そのため、どのMacでもCPUのみで動作します。このガイドでは、各エンジンがApple Siliconで実際に何をするのかを比較し、Intel MacがCPUのみの選択肢に限定される部分を指摘し、どれをインストールすべきかを伝えます。',
     metaDescription:
       'PiperはどのMacでもCPUのみ。KokoroはMLX経由でMetalを使用可能。XTTS v2のMPS対応は既知の壊れたGitHub issue。Apple Siliconで実際にインストールすべきローカルTTSエンジンを解説。',
     twitterDescription:
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**GPUアクセラレーションが欲しいなら、Kokoro-82MがApple Silicon Mac向けのベストなローカルTTSエンジンです。コミュニティプロジェクトの[mlx-audio](https://github.com/Blaizzy/mlx-audio)を通じて、Apple自身の[MLX](https://github.com/ml-explore/mlx)フレームワーク経由で動作できるからです。[Piper](/power-local-llm/piper-tts-review)は、IntelでもApple Siliconでも同じように動く、最もシンプルで可搬性の高いインストールが欲しい場合のベストな選択です。どちらでもGPUを一切使わないためです。** 声のクローニングが特に必要なら[XTTS v2](/power-local-llm/xtts-v2-review)が選択肢になりますが、そのMetal(MPS)対応は文書化された壊れた[GitHub issue](https://github.com/coqui-ai/TTS/issues/3649)であり、どのMacでもCPUのみの性能になると考えてください。[Bark](/power-local-llm/bark-tts-review)は環境変数の背後に実験的なMPS対応があり、一部の処理は今もCPUにフォールバックします。',
+      '**GPUアクセラレーションが欲しいなら、Kokoro-82MがApple Silicon Mac向けのベストなローカルTTSエンジンです。コミュニティプロジェクトの[mlx-audio](https://github.com/Blaizzy/mlx-audio)を通じて、Apple自身の[MLX](https://github.com/ml-explore/mlx)フレームワーク経由で動作できるからです。[Piper](/ja/power-local-llm/piper-tts-review)は、IntelでもApple Siliconでも同じように動く、最もシンプルで可搬性の高いインストールが欲しい場合のベストな選択です。どちらでもGPUを一切使わないためです。** 声のクローニングが特に必要なら[XTTS v2](/ja/power-local-llm/xtts-v2-review)が選択肢になりますが、そのMetal(MPS)対応は文書化された壊れた[GitHub issue](https://github.com/coqui-ai/TTS/issues/3649)であり、どのMacでもCPUのみの性能になると考えてください。[Bark](/ja/power-local-llm/bark-tts-review)は環境変数の背後に実験的なMPS対応があり、一部の処理は今もCPUにフォールバックします。',
     quickAnswerTop: {
       question: 'Mac向けベストなローカルテキスト読み上げエンジンは何ですか?',
       answer:
@@ -1763,9 +1763,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Apple Silicon向けの総合ベスト:** [mlx-audio](https://github.com/Blaizzy/mlx-audio)経由の[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — ここで扱う中で唯一本物のMetal GPU経路を持ち、小型(8200万パラメータ)なのでどのApple Silicon Macでも快適に動く。',
-          '**シンプルさとIntel互換性のベスト:** [Piper](/power-local-llm/piper-tts-review) — 設計上CPUのみなので、M系チップでも古いIntel Macでも、インストールと性能が同じ。',
-          '**声のクローニングが必要な場合のベスト:** [XTTS v2](/power-local-llm/xtts-v2-review) — 約6秒の参照音声から声をクローンできるが、どのMacでもCPUのみで動作し、非商用利用のみのライセンス。',
-          '**表現力豊かな非音声オーディオのベスト:** [Bark](/power-local-llm/bark-tts-review) — テキストから笑い声、ため息、簡単な音楽を生成。Apple SiliconのGPU対応は実験的(部分的)で、リポジトリは2024年4月以降休止中。',
+          '**シンプルさとIntel互換性のベスト:** [Piper](/ja/power-local-llm/piper-tts-review) — 設計上CPUのみなので、M系チップでも古いIntel Macでも、インストールと性能が同じ。',
+          '**声のクローニングが必要な場合のベスト:** [XTTS v2](/ja/power-local-llm/xtts-v2-review) — 約6秒の参照音声から声をクローンできるが、どのMacでもCPUのみで動作し、非商用利用のみのライセンス。',
+          '**表現力豊かな非音声オーディオのベスト:** [Bark](/ja/power-local-llm/bark-tts-review) — テキストから笑い声、ため息、簡単な音楽を生成。Apple SiliconのGPU対応は実験的(部分的)で、リポジトリは2024年4月以降休止中。',
         ],
       },
       whoShouldUse: {
@@ -1799,21 +1799,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '音声品質': '自然、大規模クラウドモデルに近い',
           },
           {
-            'エンジン': '[Piper](/power-local-llm/piper-tts-review)',
+            'エンジン': '[Piper](/ja/power-local-llm/piper-tts-review)',
             'Apple Silicon対応': '設計上なし — CPUのみのONNX Runtime',
             'RAMフットプリント': '非常に低(1音声あたり約50〜100MB)',
             'macOSインストール': '`pip install piper-tts`、GPU設定不要',
             '音声品質': '明瞭だが、やや機械的な抑揚',
           },
           {
-            'エンジン': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'エンジン': '[XTTS v2](/ja/power-local-llm/xtts-v2-review)',
             'Apple Silicon対応': 'なし — MPSがハング(GH issue #3649)',
             'RAMフットプリント': '中〜高(フルクローニングモデル)',
             'macOSインストール': '`pip install coqui-tts`、MacではCPUのみ',
             '音声品質': '高品質、特定の声をクローン',
           },
           {
-            'エンジン': '[Bark](/power-local-llm/bark-tts-review)',
+            'エンジン': '[Bark](/ja/power-local-llm/bark-tts-review)',
             'Apple Silicon対応': '実験的 — `SUNO_ENABLE_MPS=True`',
             'RAMフットプリント': '高(small-modelsフラグで削減可能)',
             'macOSインストール': 'GitHubからpip install、PyPIパッケージなし',
@@ -1830,8 +1830,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82Mは、コミュニティプロジェクトの[mlx-audio](https://github.com/Blaizzy/mlx-audio)を通じて、Apple自身の[MLX](https://github.com/ml-explore/mlx)フレームワーク経由で動作し、Apple SiliconとPython 3.10〜3.12を必要とします。** MLXはAppleのオープンソース機械学習フレームワークで、Apple Siliconの統合メモリアーキテクチャ上のMetalのために一から作られています — これは、言語モデル向けにサイトの[Apple Silicon local LLMガイド](/local-llms/apple-silicon-local-llm-guide-2026)と[MLX vs. Ollama vs. llama.cppの比較](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)で扱っているのと同じフレームワークです。Hugging Face上でhexgradが公開した公式のKokoro-82Mの重みは、ネイティブにはPyTorchモデルです。MLX経路はコミュニティによる移植であり、Appleやhexgradによる公式リリースではありません。また、mlx-audioはメモリ使用量を抑えるための量子化(bf16、8ビット、4ビット)バリアントも提供しています。',
-          '**Piperは、Apple Siliconを含むどのプラットフォームでもGPUに一切触れません — これは設計であり、制約ではありません。** Piperはespeak-ngでテキストを音素に変換し、高速なCPU推論向けに[ONNX Runtime](https://onnxruntime.ai/)にエクスポートされたモデルで音声を合成します。この設計上の選択こそ、Piperが Raspberry Piでもリアルタイムに動く理由です — 完全なアーキテクチャとインストール手順はPromptQuorumの[Piper TTSレビュー](/power-local-llm/piper-tts-review)を参照してください。',
-          '**XTTS v2のApple SiliconのMetal(MPS)対応は現時点では機能しません。** [coqui-ai/TTS GitHubリポジトリ](https://github.com/coqui-ai/TTS/issues/3649)で追跡されているissue「Unable to use xtts_v2 with mps device on Apple Silicon」は、MPSデバイスでXTTS v2を実行しようとすると、完了せずにハングすることを記録しています。Coqui自身のプロジェクトも、Apple SiliconのGPU対応を公式にサポートしているとは記載していません。実際には、これはXTTS v2がMacではCPUのみで動作することを意味し、他のプラットフォームでも同じ[Coqui TTSツールキット](/power-local-llm/coqui-tts-review)(MPL-2.0ライセンス)を通じて実行されます。',
+          '**Piperは、Apple Siliconを含むどのプラットフォームでもGPUに一切触れません — これは設計であり、制約ではありません。** Piperはespeak-ngでテキストを音素に変換し、高速なCPU推論向けに[ONNX Runtime](https://onnxruntime.ai/)にエクスポートされたモデルで音声を合成します。この設計上の選択こそ、Piperが Raspberry Piでもリアルタイムに動く理由です — 完全なアーキテクチャとインストール手順はPromptQuorumの[Piper TTSレビュー](/ja/power-local-llm/piper-tts-review)を参照してください。',
+          '**XTTS v2のApple SiliconのMetal(MPS)対応は現時点では機能しません。** [coqui-ai/TTS GitHubリポジトリ](https://github.com/coqui-ai/TTS/issues/3649)で追跡されているissue「Unable to use xtts_v2 with mps device on Apple Silicon」は、MPSデバイスでXTTS v2を実行しようとすると、完了せずにハングすることを記録しています。Coqui自身のプロジェクトも、Apple SiliconのGPU対応を公式にサポートしているとは記載していません。実際には、これはXTTS v2がMacではCPUのみで動作することを意味し、他のプラットフォームでも同じ[Coqui TTSツールキット](/ja/power-local-llm/coqui-tts-review)(MPL-2.0ライセンス)を通じて実行されます。',
           '**Barkには実験的なApple Silicon MPS対応があり、環境変数の背後にあります。** `SUNO_ENABLE_MPS=True`を設定するとMetalアクセラレーションが有効になります([suno-ai/bark GitHubリポジトリ](https://github.com/suno-ai/bark)での議論による)。ただし、Barkが依存する一部のPyTorchオペレーターは当時MPS向けに実装されておらず、それらのステップは部分的にCPUへフォールバックします。Barkは、統合メモリの少ないMacでのメモリ負荷を軽減するための`SUNO_USE_SMALL_MODELS=True`フラグもサポートしています。',
         ],
         note: 'コミュニティが保守するTTSプロジェクトのApple Siliconアクセラレーション状況は、この記事が更新されるよりも速くリリース間で変わる可能性があります — ここに書かれている内容が現在の動作と一致すると想定する前に、各プロジェクト自身のGitHub issueとREADMEを確認してください。',
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**この比較にある4つのエンジンはどれも、すべてのMac TTSのユースケースに適しているわけではありません — それぞれ、別のツールやクラウドAPIの方が適している状況があります。**',
         ],
         items: [
-          '❌ **クローンした声を伴う、確実な商用ライセンスが必要な場合。** XTTS v2のCPMLライセンスは非商用であり、Coqui AIが2023年12月に有料サービスを終了して以来、商用ライセンスへの確認された有効な道筋はありません — マネージド型の商用クラウド代替については、PromptQuorumの[ElevenLabs比較](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)を参照してください。',
+          '❌ **クローンした声を伴う、確実な商用ライセンスが必要な場合。** XTTS v2のCPMLライセンスは非商用であり、Coqui AIが2023年12月に有料サービスを終了して以来、商用ライセンスへの確認された有効な道筋はありません — マネージド型の商用クラウド代替については、PromptQuorumの[ElevenLabs比較](/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)を参照してください。',
           '❌ **確実なアクティブメンテナンスが必要な場合。** Barkの公開GitHubリポジトリは2024年4月5日以降コミットがありません。継続的な修正やアップデートがプロジェクトにとって重要なら、Piper(Open Home Foundationがアクティブに保守)やKokoro(mlx-audioを中心とした活発に利用されているコミュニティエコシステム)の方が安全な選択です。',
           '❌ **コミュニティプロジェクトへの依存なしに、今すぐ本番グレードのApple Silicon GPU対応が必要な場合。** KokoroのMLX経路はコミュニティプロジェクトを通じて動作しており、Appleやhexgradの公式リリースではありません — 良いものではあっても、ベンダー保証があるわけではないと考えてください。',
           '❌ **非常に限られたApple Siliconメモリ(8GBベース構成)で、同時に大規模なローカルLLMも動かしながらリアルタイムの対話型音声が必要な場合。** メモリが限られたMac上で大きなXTTS v2やBarkのプロセスをLLMと並行して動かすのはきついことがあります。PiperとKokoroの小さなフットプリントの方が余裕を残せます。',
@@ -1943,21 +1943,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[coqui-ai/TTS GitHub issue #3649](https://github.com/coqui-ai/TTS/issues/3649) — 「Unable to use xtts_v2 with mps device on Apple Silicon」、未解決のMPSハングを記録。',
           '[suno-ai/bark GitHubリポジトリ](https://github.com/suno-ai/bark) — SUNO_ENABLE_MPSを介した実験的なApple Silicon MPS対応を記録するissueとプルリクエスト。',
           '[Apple MLXフレームワーク](https://github.com/ml-explore/mlx) — Apple SiliconにネイティブなMetal GPUアクセラレーションを備えた、Appleの公式オープンソース機械学習フレームワーク。',
-          '[Piper TTSレビュー](/power-local-llm/piper-tts-review) — インストールコマンドとライセンス履歴を含む、PromptQuorumの専用レビュー。',
-          '[XTTS v2レビュー](/power-local-llm/xtts-v2-review)、[Coqui TTSレビュー](/power-local-llm/coqui-tts-review)、[Bark TTSレビュー](/power-local-llm/bark-tts-review) — ここで扱う他のエンジンについてのPromptQuorumの専用レビュー。',
+          '[Piper TTSレビュー](/ja/power-local-llm/piper-tts-review) — インストールコマンドとライセンス履歴を含む、PromptQuorumの専用レビュー。',
+          '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review)、[Coqui TTSレビュー](/ja/power-local-llm/coqui-tts-review)、[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review) — ここで扱う他のエンジンについてのPromptQuorumの専用レビュー。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Piper TTSレビュー](/power-local-llm/piper-tts-review) — この比較で扱った、高速でCPUのみの、寛容なライセンスのエンジンを詳しく解説。',
-          '[XTTS v2レビュー](/power-local-llm/xtts-v2-review) — ここで扱った声のクローニングモデル。非商用のCPMLライセンスを含む。',
-          '[Coqui TTSレビュー](/power-local-llm/coqui-tts-review) — XTTS v2(および他のモデル)を実行するツールキット。MPL-2.0ライセンス。',
-          '[Bark TTSレビュー](/power-local-llm/bark-tts-review) — ここで扱った表現力豊かな非音声オーディオエンジン。メンテナンス状況を含む。',
+          '[Piper TTSレビュー](/ja/power-local-llm/piper-tts-review) — この比較で扱った、高速でCPUのみの、寛容なライセンスのエンジンを詳しく解説。',
+          '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review) — ここで扱った声のクローニングモデル。非商用のCPMLライセンスを含む。',
+          '[Coqui TTSレビュー](/ja/power-local-llm/coqui-tts-review) — XTTS v2(および他のモデル)を実行するツールキット。MPL-2.0ライセンス。',
+          '[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review) — ここで扱った表現力豊かな非音声オーディオエンジン。メンテナンス状況を含む。',
           '[Apple Silicon local LLMガイド](/local-llms/apple-silicon-local-llm-guide-2026) — メモリ階層、Metal GPUアクセラレーション、TTS以外のローカルAI向けのMac選び。',
           '[MLX vs. Ollama vs. llama.cpp on Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — このガイドがKokoroで扱っているのと同じMLXフレームワークを、ローカル言語モデル向けに解説。',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — マネージド型の商用オプションを検討している読者向けの、クラウドとローカルの比較。',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — マネージド型の商用オプションを検討している読者向けの、クラウドとローカルの比較。',
         ],
       },
     },
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mac 最佳本地 TTS 引擎(2026):哪个真正用上了 Apple Silicon',
     seoTitle: 'Mac 最佳本地 TTS 2026:Apple Silicon 指南',
     intro:
-      '大多数"最佳本地 TTS"横评把每台 Mac 都一视同仁,但 Apple Silicon 实际上改变了哪个引擎才真正划算。[Piper](/power-local-llm/piper-tts-review) 完全在 CPU 上运行,从不触碰 GPU —— 无论是在 Apple Silicon Mac 还是 Intel Mac 上,表现都差不多。[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) 可以通过社区项目 [mlx-audio](https://github.com/Blaizzy/mlx-audio),经由 Apple 自家的 [MLX](https://github.com/ml-explore/mlx) 框架运行,而这个框架正是专为 Apple Silicon 的 Metal GPU 打造的。相比之下,[XTTS v2](/power-local-llm/xtts-v2-review) 完全不支持 Apple 的 Metal Performance Shaders(MPS)后端 —— 一个持续跟踪的 [GitHub issue](https://github.com/coqui-ai/TTS/issues/3649) 记录了使用 MPS 设备只会卡死不动 —— 因此它在任何 Mac 上都只能跑 CPU。本指南比较各引擎在 Apple Silicon 上实际的表现,指出 Intel Mac 被限制在哪些纯 CPU 选项上,并告诉你该安装哪一个。',
+      '大多数"最佳本地 TTS"横评把每台 Mac 都一视同仁,但 Apple Silicon 实际上改变了哪个引擎才真正划算。[Piper](/zh/power-local-llm/piper-tts-review) 完全在 CPU 上运行,从不触碰 GPU —— 无论是在 Apple Silicon Mac 还是 Intel Mac 上,表现都差不多。[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) 可以通过社区项目 [mlx-audio](https://github.com/Blaizzy/mlx-audio),经由 Apple 自家的 [MLX](https://github.com/ml-explore/mlx) 框架运行,而这个框架正是专为 Apple Silicon 的 Metal GPU 打造的。相比之下,[XTTS v2](/zh/power-local-llm/xtts-v2-review) 完全不支持 Apple 的 Metal Performance Shaders(MPS)后端 —— 一个持续跟踪的 [GitHub issue](https://github.com/coqui-ai/TTS/issues/3649) 记录了使用 MPS 设备只会卡死不动 —— 因此它在任何 Mac 上都只能跑 CPU。本指南比较各引擎在 Apple Silicon 上实际的表现,指出 Intel Mac 被限制在哪些纯 CPU 选项上,并告诉你该安装哪一个。',
     metaDescription:
       'Piper 在所有 Mac 上都只用 CPU。Kokoro 可以通过 MLX 使用 Metal。XTTS v2 的 MPS 支持是已知的失效 GitHub issue。这里是 Apple Silicon 上真正该安装的本地 TTS 引擎。',
     twitterDescription:
@@ -2029,7 +2029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**如果你想要 GPU 加速,Kokoro-82M 是 Apple Silicon Mac 上最好的本地 TTS 引擎,因为它可以通过社区项目 [mlx-audio](https://github.com/Blaizzy/mlx-audio),经由 Apple 自家的 [MLX](https://github.com/ml-explore/mlx) 框架运行;如果你想要最简单、可移植性最强的安装方式,在 Intel 和 Apple Silicon Mac 上表现完全一致,[Piper](/power-local-llm/piper-tts-review) 是最佳选择,因为它在两者上都不使用 GPU。** 如果你特别需要声音克隆,[XTTS v2](/power-local-llm/xtts-v2-review) 是可选项,但它的 Metal(MPS)支持是一个已记录的失效 [GitHub issue](https://github.com/coqui-ai/TTS/issues/3649) —— 预计在任何 Mac 上都只有 CPU 性能。[Bark](/power-local-llm/bark-tts-review) 在一个环境变量背后有实验性的 MPS 支持,部分运算仍会退回到 CPU。',
+      '**如果你想要 GPU 加速,Kokoro-82M 是 Apple Silicon Mac 上最好的本地 TTS 引擎,因为它可以通过社区项目 [mlx-audio](https://github.com/Blaizzy/mlx-audio),经由 Apple 自家的 [MLX](https://github.com/ml-explore/mlx) 框架运行;如果你想要最简单、可移植性最强的安装方式,在 Intel 和 Apple Silicon Mac 上表现完全一致,[Piper](/zh/power-local-llm/piper-tts-review) 是最佳选择,因为它在两者上都不使用 GPU。** 如果你特别需要声音克隆,[XTTS v2](/zh/power-local-llm/xtts-v2-review) 是可选项,但它的 Metal(MPS)支持是一个已记录的失效 [GitHub issue](https://github.com/coqui-ai/TTS/issues/3649) —— 预计在任何 Mac 上都只有 CPU 性能。[Bark](/zh/power-local-llm/bark-tts-review) 在一个环境变量背后有实验性的 MPS 支持,部分运算仍会退回到 CPU。',
     quickAnswerTop: {
       question: 'Mac 上最好的本地文本转语音引擎是什么?',
       answer:
@@ -2093,9 +2093,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Apple Silicon 上的综合最佳:** 通过 [mlx-audio](https://github.com/Blaizzy/mlx-audio) 运行的 [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) —— 这里唯一拥有真正 Metal GPU 路径的引擎,体积足够小(8200 万参数),能在任何 Apple Silicon Mac 上流畅运行。',
-          '**简单性和 Intel 兼容性最佳:** [Piper](/power-local-llm/piper-tts-review) —— 设计上只用 CPU,因此无论是在 M 系列芯片还是老款 Intel Mac 上,安装和性能都完全一致。',
-          '**需要声音克隆时最佳:** [XTTS v2](/power-local-llm/xtts-v2-review) —— 可从约 6 秒的参考音频克隆声音,但在任何 Mac 上都只能用 CPU 运行,且许可仅限非商用。',
-          '**富有表现力的非语音音效最佳:** [Bark](/power-local-llm/bark-tts-review) —— 能从文本生成笑声、叹息和简单音乐,Apple Silicon 上的 GPU 支持是实验性(部分)的,且其仓库自 2024 年 4 月起已处于休眠状态。',
+          '**简单性和 Intel 兼容性最佳:** [Piper](/zh/power-local-llm/piper-tts-review) —— 设计上只用 CPU,因此无论是在 M 系列芯片还是老款 Intel Mac 上,安装和性能都完全一致。',
+          '**需要声音克隆时最佳:** [XTTS v2](/zh/power-local-llm/xtts-v2-review) —— 可从约 6 秒的参考音频克隆声音,但在任何 Mac 上都只能用 CPU 运行,且许可仅限非商用。',
+          '**富有表现力的非语音音效最佳:** [Bark](/zh/power-local-llm/bark-tts-review) —— 能从文本生成笑声、叹息和简单音乐,Apple Silicon 上的 GPU 支持是实验性(部分)的,且其仓库自 2024 年 4 月起已处于休眠状态。',
         ],
       },
       whoShouldUse: {
@@ -2129,21 +2129,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '音质': '自然,接近大型云端模型',
           },
           {
-            '引擎': '[Piper](/power-local-llm/piper-tts-review)',
+            '引擎': '[Piper](/zh/power-local-llm/piper-tts-review)',
             'Apple Silicon 加速': '设计上无 —— 纯 CPU ONNX Runtime',
             'RAM 占用': '非常低(每个声音约 50~100MB)',
             'macOS 安装': '`pip install piper-tts`,无需 GPU 配置',
             '音质': '清晰,但语调略显机械',
           },
           {
-            '引擎': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            '引擎': '[XTTS v2](/zh/power-local-llm/xtts-v2-review)',
             'Apple Silicon 加速': '无 —— MPS 会卡死(GH issue #3649)',
             'RAM 占用': '中到高(完整克隆模型)',
             'macOS 安装': '`pip install coqui-tts`,Mac 上只用 CPU',
             '音质': '高品质,可克隆特定声音',
           },
           {
-            '引擎': '[Bark](/power-local-llm/bark-tts-review)',
+            '引擎': '[Bark](/zh/power-local-llm/bark-tts-review)',
             'Apple Silicon 加速': '实验性 —— `SUNO_ENABLE_MPS=True`',
             'RAM 占用': '高(可用 small-models 标志降低)',
             'macOS 安装': '从 GitHub pip install,无 PyPI 包',
@@ -2160,8 +2160,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82M 通过社区项目 [mlx-audio](https://github.com/Blaizzy/mlx-audio),经由 Apple 自家的 [MLX](https://github.com/ml-explore/mlx) 框架运行,需要 Apple Silicon 和 Python 3.10~3.12。** MLX 是 Apple 的开源机器学习框架,从底层为 Apple Silicon 统一内存架构上的 Metal 打造 —— 与本站 [Apple Silicon 本地 LLM 指南](/local-llms/apple-silicon-local-llm-guide-2026) 和 [MLX 对比 Ollama 对比 llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) 中针对语言模型讲解的是同一个框架。hexgrad 在 Hugging Face 上发布的官方 Kokoro-82M 权重原生是 PyTorch 模型;MLX 路径是社区移植版本,并非 Apple 或 hexgrad 的官方发布,mlx-audio 还提供 bf16、8 位、4 位量化版本以降低内存占用。',
-          '**Piper 在任何平台(包括 Apple Silicon)上都从不触碰 GPU —— 这是设计使然,而非局限。** Piper 用 espeak-ng 将文本转换为音素,再通过导出到 [ONNX Runtime](https://onnxruntime.ai/) 的模型进行快速 CPU 推理合成音频。正是这个设计选择让 Piper 即便在 Raspberry Pi 上也能实时运行 —— 完整架构和安装步骤参见 PromptQuorum 的 [Piper TTS 评测](/power-local-llm/piper-tts-review)。',
-          '**XTTS v2 的 Apple Silicon Metal(MPS)支持目前并不能正常工作。** [coqui-ai/TTS GitHub 仓库](https://github.com/coqui-ai/TTS/issues/3649) 中跟踪的一个 issue,标题为"Unable to use xtts_v2 with mps device on Apple Silicon",记录了在 MPS 设备上尝试运行 XTTS v2 只会卡死而无法完成。Coqui 自己的项目也没有将 Apple Silicon GPU 支持列为正式支持。实际上,这意味着 XTTS v2 在 Mac 上只能用 CPU 运行,而运行它所用的正是在其他平台上运行它的同一个 [Coqui TTS 工具包](/power-local-llm/coqui-tts-review)(MPL-2.0 许可)。',
+          '**Piper 在任何平台(包括 Apple Silicon)上都从不触碰 GPU —— 这是设计使然,而非局限。** Piper 用 espeak-ng 将文本转换为音素,再通过导出到 [ONNX Runtime](https://onnxruntime.ai/) 的模型进行快速 CPU 推理合成音频。正是这个设计选择让 Piper 即便在 Raspberry Pi 上也能实时运行 —— 完整架构和安装步骤参见 PromptQuorum 的 [Piper TTS 评测](/zh/power-local-llm/piper-tts-review)。',
+          '**XTTS v2 的 Apple Silicon Metal(MPS)支持目前并不能正常工作。** [coqui-ai/TTS GitHub 仓库](https://github.com/coqui-ai/TTS/issues/3649) 中跟踪的一个 issue,标题为"Unable to use xtts_v2 with mps device on Apple Silicon",记录了在 MPS 设备上尝试运行 XTTS v2 只会卡死而无法完成。Coqui 自己的项目也没有将 Apple Silicon GPU 支持列为正式支持。实际上,这意味着 XTTS v2 在 Mac 上只能用 CPU 运行,而运行它所用的正是在其他平台上运行它的同一个 [Coqui TTS 工具包](/zh/power-local-llm/coqui-tts-review)(MPL-2.0 许可)。',
           '**Bark 有实验性的 Apple Silicon MPS 支持,隐藏在一个环境变量背后。** 设置 `SUNO_ENABLE_MPS=True` 可启用 Metal 加速,依据是 [suno-ai/bark GitHub 仓库](https://github.com/suno-ai/bark) 上的讨论,但 Bark 依赖的一部分 PyTorch 算子当时尚未针对 MPS 实现,导致这些步骤部分退回到 CPU。Bark 还支持 `SUNO_USE_SMALL_MODELS=True` 标志,专门用来降低统一内存较少的 Mac 上的内存压力。',
         ],
         note: '社区维护的 TTS 项目在 Apple Silicon 上的加速状态,变化速度可能快于本文的更新周期 —— 在假设这里描述的内容与当前行为一致之前,请查阅各项目自己的 GitHub issue 和 README。',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**这个比较中的四款引擎没有一款适合所有 Mac TTS 使用场景 —— 每一款都有更适合用其他工具或云端 API 的情况。**',
         ],
         items: [
-          '❌ **需要带声音克隆功能且有保证的商业许可。** XTTS v2 的 CPML 许可为非商用,自 Coqui AI 于 2023 年 12 月终止付费服务以来,没有已确认的有效商业许可途径 —— 如需托管式商业云端替代方案,参见 PromptQuorum 的 [ElevenLabs 对比](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)。',
+          '❌ **需要带声音克隆功能且有保证的商业许可。** XTTS v2 的 CPML 许可为非商用,自 Coqui AI 于 2023 年 12 月终止付费服务以来,没有已确认的有效商业许可途径 —— 如需托管式商业云端替代方案,参见 PromptQuorum 的 [ElevenLabs 对比](/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)。',
           '❌ **需要有保证的活跃维护。** Bark 的公开 GitHub 仓库自 2024 年 4 月 5 日起没有任何提交;如果持续的修复和更新对你的项目很重要,Piper(由 Open Home Foundation 积极维护)或 Kokoro(围绕 mlx-audio 形成的活跃社区生态)是更安全的选择。',
           '❌ **需要今天就有生产级 Apple Silicon GPU 支持,且不依赖社区项目。** Kokoro 的 MLX 路径是通过一个社区项目运行的,并非 Apple 或 hexgrad 的官方发布 —— 把它当作是好用、但没有厂商保证的方案。',
           '❌ **需要在内存非常有限的 Apple Silicon(8GB 基础配置)上,同时运行一个大型本地 LLM 并进行实时交互式语音。** 在内存受限的 Mac 上同时运行大型 XTTS v2 或 Bark 进程和 LLM 可能会很吃紧;Piper 和 Kokoro 更小的内存占用能留出更多余量。',
@@ -2273,21 +2273,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[coqui-ai/TTS GitHub issue #3649](https://github.com/coqui-ai/TTS/issues/3649) —— "Unable to use xtts_v2 with mps device on Apple Silicon",记录了未解决的 MPS 卡死问题。',
           '[suno-ai/bark GitHub 仓库](https://github.com/suno-ai/bark) —— 记录通过 SUNO_ENABLE_MPS 实现实验性 Apple Silicon MPS 支持的 issue 与 pull request。',
           '[Apple MLX 框架](https://github.com/ml-explore/mlx) —— Apple 的官方开源机器学习框架,为 Apple Silicon 提供原生 Metal GPU 加速。',
-          '[Piper TTS 评测](/power-local-llm/piper-tts-review) —— PromptQuorum 的专门评测,包含安装命令和许可历史。',
-          '[XTTS v2 评测](/power-local-llm/xtts-v2-review)、[Coqui TTS 评测](/power-local-llm/coqui-tts-review) 和 [Bark TTS 评测](/power-local-llm/bark-tts-review) —— PromptQuorum 对本文涉及的其他引擎的专门评测。',
+          '[Piper TTS 评测](/zh/power-local-llm/piper-tts-review) —— PromptQuorum 的专门评测,包含安装命令和许可历史。',
+          '[XTTS v2 评测](/zh/power-local-llm/xtts-v2-review)、[Coqui TTS 评测](/zh/power-local-llm/coqui-tts-review) 和 [Bark TTS 评测](/zh/power-local-llm/bark-tts-review) —— PromptQuorum 对本文涉及的其他引擎的专门评测。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Piper TTS 评测](/power-local-llm/piper-tts-review) —— 本比较中涉及的快速、纯 CPU、宽松许可引擎的详细解读。',
-          '[XTTS v2 评测](/power-local-llm/xtts-v2-review) —— 本文涉及的声音克隆模型,包含其非商用 CPML 许可。',
-          '[Coqui TTS 评测](/power-local-llm/coqui-tts-review) —— 运行 XTTS v2(及其他模型)的工具包,MPL-2.0 许可。',
-          '[Bark TTS 评测](/power-local-llm/bark-tts-review) —— 本文涉及的富有表现力的非语音音频引擎,包含其维护状态。',
+          '[Piper TTS 评测](/zh/power-local-llm/piper-tts-review) —— 本比较中涉及的快速、纯 CPU、宽松许可引擎的详细解读。',
+          '[XTTS v2 评测](/zh/power-local-llm/xtts-v2-review) —— 本文涉及的声音克隆模型,包含其非商用 CPML 许可。',
+          '[Coqui TTS 评测](/zh/power-local-llm/coqui-tts-review) —— 运行 XTTS v2(及其他模型)的工具包,MPL-2.0 许可。',
+          '[Bark TTS 评测](/zh/power-local-llm/bark-tts-review) —— 本文涉及的富有表现力的非语音音频引擎,包含其维护状态。',
           '[Apple Silicon 本地 LLM 指南](/local-llms/apple-silicon-local-llm-guide-2026) —— 内存分级、Metal GPU 加速,以及 TTS 之外本地 AI 的 Mac 选购建议。',
           '[MLX 对比 Ollama 对比 llama.cpp(Mac 版)](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) —— 本指南在 Kokoro 上涉及的同一个 MLX 框架,针对本地语言模型的解读。',
-          '[ElevenLabs 对比 Piper 对比 XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) —— 为考虑托管式商业方案的读者准备的云端与本地对比。',
+          '[ElevenLabs 对比 Piper 对比 XTTS v2](/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) —— 为考虑托管式商业方案的读者准备的云端与本地对比。',
         ],
       },
     },
@@ -2336,7 +2336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل محرك TTS محلي لأجهزة Mac (2026): ما الذي يستخدم Apple Silicon فعليًا',
     seoTitle: 'أفضل TTS محلي لـ Mac 2026: دليل Apple Silicon',
     intro:
-      'تتعامل معظم مقالات "أفضل TTS محلي" مع كل جهاز Mac بالطريقة نفسها، لكن Apple Silicon يغيّر فعليًا أي محرك يكون منطقيًا. يعمل [Piper](/power-local-llm/piper-tts-review) بالكامل على المعالج CPU ولا يلمس وحدة معالجة الرسومات GPU إطلاقًا — يعمل بأداء متقارب سواء على جهاز Mac بمعالج Apple Silicon أو بمعالج Intel. يمكن تشغيل [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) عبر إطار عمل [MLX](https://github.com/ml-explore/mlx) الخاص بشركة Apple، من خلال مشروع المجتمع [mlx-audio](https://github.com/Blaizzy/mlx-audio)، وهو مبني خصيصًا لوحدة معالجة الرسومات Metal في معالجات Apple Silicon. في المقابل، لا يدعم [XTTS v2](/power-local-llm/xtts-v2-review) خلفية Metal Performance Shaders (MPS) من Apple على الإطلاق — إذ توثّق [مشكلة GitHub](https://github.com/coqui-ai/TTS/issues/3649) متابَعة أن استخدام جهاز MPS يتسبب فقط في التعليق (hang) — لذا يعمل على المعالج CPU فقط على أي جهاز Mac. يقارن هذا الدليل ما يفعله كل محرك فعليًا على Apple Silicon، ويشير إلى أين تقتصر أجهزة Mac بمعالج Intel على الخيارات القائمة على المعالج CPU فقط، ويخبرك بأيها يجب تثبيته.',
+      'تتعامل معظم مقالات "أفضل TTS محلي" مع كل جهاز Mac بالطريقة نفسها، لكن Apple Silicon يغيّر فعليًا أي محرك يكون منطقيًا. يعمل [Piper](/ar/power-local-llm/piper-tts-review) بالكامل على المعالج CPU ولا يلمس وحدة معالجة الرسومات GPU إطلاقًا — يعمل بأداء متقارب سواء على جهاز Mac بمعالج Apple Silicon أو بمعالج Intel. يمكن تشغيل [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) عبر إطار عمل [MLX](https://github.com/ml-explore/mlx) الخاص بشركة Apple، من خلال مشروع المجتمع [mlx-audio](https://github.com/Blaizzy/mlx-audio)، وهو مبني خصيصًا لوحدة معالجة الرسومات Metal في معالجات Apple Silicon. في المقابل، لا يدعم [XTTS v2](/ar/power-local-llm/xtts-v2-review) خلفية Metal Performance Shaders (MPS) من Apple على الإطلاق — إذ توثّق [مشكلة GitHub](https://github.com/coqui-ai/TTS/issues/3649) متابَعة أن استخدام جهاز MPS يتسبب فقط في التعليق (hang) — لذا يعمل على المعالج CPU فقط على أي جهاز Mac. يقارن هذا الدليل ما يفعله كل محرك فعليًا على Apple Silicon، ويشير إلى أين تقتصر أجهزة Mac بمعالج Intel على الخيارات القائمة على المعالج CPU فقط، ويخبرك بأيها يجب تثبيته.',
     metaDescription:
       'يعمل Piper بالمعالج CPU فقط على كل جهاز Mac. يمكن لـ Kokoro استخدام Metal عبر MLX. دعم MPS في XTTS v2 هو مشكلة GitHub معطوبة معروفة. إليك محرك TTS المحلي الذي يجب تثبيته فعليًا على Apple Silicon.',
     twitterDescription:
@@ -2359,7 +2359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**إذا أردت تسريع GPU، فإن Kokoro-82M هو أفضل محرك TTS محلي لأجهزة Mac بمعالج Apple Silicon، لأنه يمكن تشغيله عبر إطار عمل [MLX](https://github.com/ml-explore/mlx) الخاص بشركة Apple من خلال مشروع المجتمع [mlx-audio](https://github.com/Blaizzy/mlx-audio)؛ أما [Piper](/power-local-llm/piper-tts-review) فهو الخيار الأفضل إذا أردت أبسط تثبيت وأكثره قابلية للنقل، والذي يتصرف بالطريقة نفسها على أجهزة Intel وApple Silicon على حد سواء، لأنه لا يستخدم وحدة GPU في أي منهما.** يُعد [XTTS v2](/power-local-llm/xtts-v2-review) الخيار المناسب إن احتجت تحديدًا إلى استنساخ الصوت، لكن دعمه لـ Metal (MPS) هو [مشكلة GitHub](https://github.com/coqui-ai/TTS/issues/3649) معطوبة وموثّقة — توقّع أداءً قائمًا على المعالج CPU فقط على أي جهاز Mac. يمتلك [Bark](/power-local-llm/bark-tts-review) دعمًا تجريبيًا لـ MPS خلف متغيّر بيئي، مع استمرار تراجع بعض العمليات إلى المعالج CPU.',
+      '**إذا أردت تسريع GPU، فإن Kokoro-82M هو أفضل محرك TTS محلي لأجهزة Mac بمعالج Apple Silicon، لأنه يمكن تشغيله عبر إطار عمل [MLX](https://github.com/ml-explore/mlx) الخاص بشركة Apple من خلال مشروع المجتمع [mlx-audio](https://github.com/Blaizzy/mlx-audio)؛ أما [Piper](/ar/power-local-llm/piper-tts-review) فهو الخيار الأفضل إذا أردت أبسط تثبيت وأكثره قابلية للنقل، والذي يتصرف بالطريقة نفسها على أجهزة Intel وApple Silicon على حد سواء، لأنه لا يستخدم وحدة GPU في أي منهما.** يُعد [XTTS v2](/ar/power-local-llm/xtts-v2-review) الخيار المناسب إن احتجت تحديدًا إلى استنساخ الصوت، لكن دعمه لـ Metal (MPS) هو [مشكلة GitHub](https://github.com/coqui-ai/TTS/issues/3649) معطوبة وموثّقة — توقّع أداءً قائمًا على المعالج CPU فقط على أي جهاز Mac. يمتلك [Bark](/ar/power-local-llm/bark-tts-review) دعمًا تجريبيًا لـ MPS خلف متغيّر بيئي، مع استمرار تراجع بعض العمليات إلى المعالج CPU.',
     quickAnswerTop: {
       question: 'ما هو أفضل محرك تحويل نص إلى كلام محلي لجهاز Mac؟',
       answer:
@@ -2423,9 +2423,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **الأفضل بشكل عام لـ Apple Silicon:** [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) عبر [mlx-audio](https://github.com/Blaizzy/mlx-audio) — المحرك الوحيد المُتناوَل هنا الذي يمتلك مسار GPU حقيقيًا من نوع Metal، وصغير بما يكفي (82 مليون معامل) ليعمل براحة على أي جهاز Mac بمعالج Apple Silicon.',
-          '**الأفضل للبساطة والتوافق مع Intel:** [Piper](/power-local-llm/piper-tts-review) — يعمل بالمعالج CPU فقط بحكم التصميم، لذا فإن التثبيت والأداء متطابقان سواء كنت تستخدم شريحة من سلسلة M أو جهاز Mac أقدم بمعالج Intel.',
-          '**الأفضل إذا احتجت إلى استنساخ الصوت:** [XTTS v2](/power-local-llm/xtts-v2-review) — يستنسخ صوتًا من نحو 6 ثوانٍ من الصوت المرجعي، لكنه يعمل بالمعالج CPU فقط على أي جهاز Mac ومرخّص للاستخدام غير التجاري فقط.',
-          '**الأفضل للصوت التعبيري غير الكلامي:** [Bark](/power-local-llm/bark-tts-review) — يولّد الضحك والتنهد وموسيقى بسيطة من النص، مع دعم تجريبي (جزئي) لوحدة GPU على Apple Silicon، مع ملاحظة أن مستودعه خامل منذ أبريل 2024.',
+          '**الأفضل للبساطة والتوافق مع Intel:** [Piper](/ar/power-local-llm/piper-tts-review) — يعمل بالمعالج CPU فقط بحكم التصميم، لذا فإن التثبيت والأداء متطابقان سواء كنت تستخدم شريحة من سلسلة M أو جهاز Mac أقدم بمعالج Intel.',
+          '**الأفضل إذا احتجت إلى استنساخ الصوت:** [XTTS v2](/ar/power-local-llm/xtts-v2-review) — يستنسخ صوتًا من نحو 6 ثوانٍ من الصوت المرجعي، لكنه يعمل بالمعالج CPU فقط على أي جهاز Mac ومرخّص للاستخدام غير التجاري فقط.',
+          '**الأفضل للصوت التعبيري غير الكلامي:** [Bark](/ar/power-local-llm/bark-tts-review) — يولّد الضحك والتنهد وموسيقى بسيطة من النص، مع دعم تجريبي (جزئي) لوحدة GPU على Apple Silicon، مع ملاحظة أن مستودعه خامل منذ أبريل 2024.',
         ],
       },
       whoShouldUse: {
@@ -2459,21 +2459,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'جودة الصوت': 'طبيعية، قريبة من نماذج السحابة الكبيرة',
           },
           {
-            'المحرك': '[Piper](/power-local-llm/piper-tts-review)',
+            'المحرك': '[Piper](/ar/power-local-llm/piper-tts-review)',
             'تسريع Apple Silicon': 'لا يوجد بحكم التصميم — ONNX Runtime بالمعالج CPU فقط',
             'استهلاك RAM': 'منخفض جدًا (نحو 50-100 ميغابايت لكل صوت)',
             'تثبيت macOS': '`pip install piper-tts`، دون إعداد GPU',
             'جودة الصوت': 'واضحة، مع نبرة آلية بعض الشيء',
           },
           {
-            'المحرك': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'المحرك': '[XTTS v2](/ar/power-local-llm/xtts-v2-review)',
             'تسريع Apple Silicon': 'لا يوجد — MPS يتعلّق (GH issue #3649)',
             'استهلاك RAM': 'متوسط إلى مرتفع (نموذج استنساخ كامل)',
             'تثبيت macOS': '`pip install coqui-tts`، CPU فقط على Mac',
             'جودة الصوت': 'عالية، تستنسخ صوتًا معيّنًا',
           },
           {
-            'المحرك': '[Bark](/power-local-llm/bark-tts-review)',
+            'المحرك': '[Bark](/ar/power-local-llm/bark-tts-review)',
             'تسريع Apple Silicon': 'تجريبي — `SUNO_ENABLE_MPS=True`',
             'استهلاك RAM': 'مرتفع (يمكن تقليله بعلامة small-models)',
             'تثبيت macOS': 'pip install من GitHub، لا توجد حزمة PyPI',
@@ -2490,8 +2490,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**يعمل Kokoro-82M عبر إطار عمل [MLX](https://github.com/ml-explore/mlx) الخاص بشركة Apple من خلال مشروع المجتمع [mlx-audio](https://github.com/Blaizzy/mlx-audio)، الذي يتطلب معالج Apple Silicon وإصدار Python 3.10-3.12.** إطار عمل MLX هو إطار تعلّم آلي مفتوح المصدر من Apple، بُني من الصفر لتقنية Metal على بنية الذاكرة الموحّدة في معالجات Apple Silicon — وهو الإطار نفسه الذي يتناوله [دليل نماذج اللغة المحلية على Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) و[مقارنة MLX مقابل Ollama مقابل llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) الخاصان بالموقع بالنسبة لنماذج اللغة. أوزان Kokoro-82M الرسمية التي أصدرها hexgrad على Hugging Face هي أصلًا نموذج PyTorch؛ ومسار MLX هو منفذ (port) من المجتمع وليس إصدارًا رسميًا من Apple أو hexgrad، كما يوفّر mlx-audio أيضًا صيغًا مُكمَّمة (bf16، وبت 8، وبت 4) لتقليل استهلاك الذاكرة.',
-          '**لا يلمس Piper وحدة GPU إطلاقًا على أي منصة، بما في ذلك Apple Silicon — وهذا بحكم التصميم لا كقيد.** يحوّل Piper النص إلى صوتيات (phonemes) باستخدام espeak-ng، ثم يركّب الصوت بنموذج مُصدَّر إلى [ONNX Runtime](https://onnxruntime.ai/) لاستدلال سريع على المعالج CPU. هذا الخيار التصميمي هو السبب الدقيق الذي يجعل Piper يعمل في الزمن الحقيقي حتى على جهاز Raspberry Pi — راجع [مراجعة Piper TTS](/power-local-llm/piper-tts-review) الخاصة بـ PromptQuorum للاطلاع على البنية الكاملة وخطوات التثبيت.',
-          '**دعم XTTS v2 لتقنية Metal (MPS) على Apple Silicon لا يعمل حاليًا.** توثّق مشكلة متابَعة على [مستودع coqui-ai/TTS على GitHub](https://github.com/coqui-ai/TTS/issues/3649)، بعنوان "Unable to use xtts_v2 with mps device on Apple Silicon"، أن محاولة تشغيل XTTS v2 على جهاز MPS تتسبب في التعليق بدلًا من إتمام العملية. كما لا يُدرج مشروع Coqui نفسه دعم GPU على Apple Silicon ضمن الدعم الرسمي. عمليًا، هذا يعني أن XTTS v2 يعمل بالمعالج CPU فقط على جهاز Mac، عبر نفس [أداة Coqui TTS](/power-local-llm/coqui-tts-review) (المرخّصة بموجب MPL-2.0) التي تشغّله على المنصات الأخرى.',
+          '**لا يلمس Piper وحدة GPU إطلاقًا على أي منصة، بما في ذلك Apple Silicon — وهذا بحكم التصميم لا كقيد.** يحوّل Piper النص إلى صوتيات (phonemes) باستخدام espeak-ng، ثم يركّب الصوت بنموذج مُصدَّر إلى [ONNX Runtime](https://onnxruntime.ai/) لاستدلال سريع على المعالج CPU. هذا الخيار التصميمي هو السبب الدقيق الذي يجعل Piper يعمل في الزمن الحقيقي حتى على جهاز Raspberry Pi — راجع [مراجعة Piper TTS](/ar/power-local-llm/piper-tts-review) الخاصة بـ PromptQuorum للاطلاع على البنية الكاملة وخطوات التثبيت.',
+          '**دعم XTTS v2 لتقنية Metal (MPS) على Apple Silicon لا يعمل حاليًا.** توثّق مشكلة متابَعة على [مستودع coqui-ai/TTS على GitHub](https://github.com/coqui-ai/TTS/issues/3649)، بعنوان "Unable to use xtts_v2 with mps device on Apple Silicon"، أن محاولة تشغيل XTTS v2 على جهاز MPS تتسبب في التعليق بدلًا من إتمام العملية. كما لا يُدرج مشروع Coqui نفسه دعم GPU على Apple Silicon ضمن الدعم الرسمي. عمليًا، هذا يعني أن XTTS v2 يعمل بالمعالج CPU فقط على جهاز Mac، عبر نفس [أداة Coqui TTS](/ar/power-local-llm/coqui-tts-review) (المرخّصة بموجب MPL-2.0) التي تشغّله على المنصات الأخرى.',
           '**يمتلك Bark دعمًا تجريبيًا لـ MPS على Apple Silicon، محجوبًا خلف متغيّر بيئي.** يؤدي ضبط `SUNO_ENABLE_MPS=True` إلى تفعيل تسريع Metal، وفق نقاش على [مستودع suno-ai/bark على GitHub](https://github.com/suno-ai/bark)، لكن بعض عمليات PyTorch التي يعتمد عليها Bark لم تكن مُنفَّذة لـ MPS في ذلك الوقت، ما يتسبب في تراجع جزئي إلى المعالج CPU لتلك الخطوات. يدعم Bark أيضًا علامة `SUNO_USE_SMALL_MODELS=True` مخصصة لتقليل ضغط الذاكرة على أجهزة Mac ذات الذاكرة الموحّدة الأقل.',
         ],
         note: 'يمكن أن تتغيّر حالة تسريع Apple Silicon لمشاريع TTS التي يصونها المجتمع بين الإصدارات بوتيرة أسرع من وتيرة تحديث هذا المقال — تحقّق من مشكلات GitHub وملف README الخاصين بكل مشروع قبل افتراض أن ما هو موصوف هنا يطابق السلوك الحالي.',
@@ -2544,7 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لا تعد أي من المحركات الأربعة في هذه المقارنة الخيار الصحيح لكل حالة استخدام TTS على Mac — لكل منها حالات تكون فيها أداة أخرى أو واجهة برمجة سحابية أنسب.**',
         ],
         items: [
-          '❌ **تحتاج ترخيصًا تجاريًا مضمونًا مع أصوات مستنسَخة.** ترخيص CPML الخاص بـ XTTS v2 غير تجاري، دون مسار مؤكد وفعّال نحو ترخيص تجاري منذ أن أوقفت Coqui AI خدماتها المدفوعة في ديسمبر 2023 — راجع [مقارنة PromptQuorum مع ElevenLabs](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) للاطلاع على بديل سحابي تجاري مُدار.',
+          '❌ **تحتاج ترخيصًا تجاريًا مضمونًا مع أصوات مستنسَخة.** ترخيص CPML الخاص بـ XTTS v2 غير تجاري، دون مسار مؤكد وفعّال نحو ترخيص تجاري منذ أن أوقفت Coqui AI خدماتها المدفوعة في ديسمبر 2023 — راجع [مقارنة PromptQuorum مع ElevenLabs](/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) للاطلاع على بديل سحابي تجاري مُدار.',
           '❌ **تحتاج صيانة نشطة مضمونة.** لم يشهد مستودع Bark العلني على GitHub أي تحديثات منذ 5 أبريل 2024؛ إذا كانت الإصلاحات والتحديثات المستمرة مهمة لمشروعك، فإن Piper (الذي تصونه بنشاط مؤسسة Open Home Foundation) أو Kokoro (بنظام مجتمعي نشط حول mlx-audio) خيار أكثر أمانًا.',
           '❌ **تحتاج دعم GPU على مستوى الإنتاج على Apple Silicon اليوم، دون الاعتماد على مشروع مجتمعي.** يعمل مسار Kokoro عبر MLX من خلال مشروع مجتمعي، وليس إصدارًا رسميًا من Apple أو hexgrad — اعتبره جيدًا لكن دون ضمان من مزوّد.',
           '❌ **تحتاج صوتًا تفاعليًا في الزمن الحقيقي على ذاكرة Apple Silicon محدودة جدًا (تكوينات أساسية بـ 8 غيغابايت) مع تشغيل نموذج لغة محلي كبير في الوقت نفسه.** قد يكون تشغيل عملية كبيرة من XTTS v2 أو Bark إلى جانب نموذج لغة على جهاز Mac محدود الذاكرة أمرًا ضيقًا؛ توفّر بصمة Piper وKokoro الأصغر مساحة أكبر.',
@@ -2603,21 +2603,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مشكلة GitHub رقم 3649 في coqui-ai/TTS](https://github.com/coqui-ai/TTS/issues/3649) — "Unable to use xtts_v2 with mps device on Apple Silicon"، توثّق تعليق MPS غير المحلول.',
           '[مستودع suno-ai/bark على GitHub](https://github.com/suno-ai/bark) — مشكلات وطلبات دمج توثّق دعم MPS التجريبي على Apple Silicon عبر SUNO_ENABLE_MPS.',
           '[إطار عمل Apple MLX](https://github.com/ml-explore/mlx) — إطار التعلّم الآلي مفتوح المصدر الرسمي من Apple، مع تسريع GPU أصلي من نوع Metal لمعالجات Apple Silicon.',
-          '[مراجعة Piper TTS](/power-local-llm/piper-tts-review) — مراجعة PromptQuorum المخصصة، بما في ذلك أوامر التثبيت وسجل الترخيص.',
-          '[مراجعة XTTS v2](/power-local-llm/xtts-v2-review)، و[مراجعة Coqui TTS](/power-local-llm/coqui-tts-review)، و[مراجعة Bark TTS](/power-local-llm/bark-tts-review) — مراجعات PromptQuorum المخصصة للمحركات الأخرى المُتناوَلة هنا.',
+          '[مراجعة Piper TTS](/ar/power-local-llm/piper-tts-review) — مراجعة PromptQuorum المخصصة، بما في ذلك أوامر التثبيت وسجل الترخيص.',
+          '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review)، و[مراجعة Coqui TTS](/ar/power-local-llm/coqui-tts-review)، و[مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) — مراجعات PromptQuorum المخصصة للمحركات الأخرى المُتناوَلة هنا.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Piper TTS](/power-local-llm/piper-tts-review) — المحرك السريع القائم على المعالج CPU فقط بترخيص متساهل المُتناوَل في هذه المقارنة، بعمق كامل.',
-          '[مراجعة XTTS v2](/power-local-llm/xtts-v2-review) — نموذج استنساخ الصوت المُتناوَل هنا، بما في ذلك ترخيصه CPML غير التجاري.',
-          '[مراجعة Coqui TTS](/power-local-llm/coqui-tts-review) — الأداة التي تشغّل XTTS v2 (ونماذج أخرى)، مرخّصة بموجب MPL-2.0.',
-          '[مراجعة Bark TTS](/power-local-llm/bark-tts-review) — محرك الصوت التعبيري غير الكلامي المُتناوَل هنا، بما في ذلك حالة صيانته.',
+          '[مراجعة Piper TTS](/ar/power-local-llm/piper-tts-review) — المحرك السريع القائم على المعالج CPU فقط بترخيص متساهل المُتناوَل في هذه المقارنة، بعمق كامل.',
+          '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) — نموذج استنساخ الصوت المُتناوَل هنا، بما في ذلك ترخيصه CPML غير التجاري.',
+          '[مراجعة Coqui TTS](/ar/power-local-llm/coqui-tts-review) — الأداة التي تشغّل XTTS v2 (ونماذج أخرى)، مرخّصة بموجب MPL-2.0.',
+          '[مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) — محرك الصوت التعبيري غير الكلامي المُتناوَل هنا، بما في ذلك حالة صيانته.',
           '[دليل نماذج اللغة المحلية على Apple Silicon](/local-llms/apple-silicon-local-llm-guide-2026) — مستويات الذاكرة، وتسريع GPU من نوع Metal، واختيار جهاز Mac للذكاء الاصطناعي المحلي بما يتجاوز TTS.',
           '[MLX مقابل Ollama مقابل llama.cpp على Mac](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — إطار عمل MLX نفسه الذي يتناوله هذا الدليل بالنسبة لـ Kokoro، مشروحًا لنماذج اللغة المحلية.',
-          '[ElevenLabs مقابل Piper مقابل XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — مقارنة السحابة مقابل المحلي للقراء الذين يفكرون في خيار تجاري مُدار.',
+          '[ElevenLabs مقابل Piper مقابل XTTS v2](/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — مقارنة السحابة مقابل المحلي للقراء الذين يفكرون في خيار تجاري مُدار.',
         ],
       },
     },
@@ -2666,7 +2666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mac용 최고의 로컬 TTS 엔진(2026): 실제로 Apple Silicon을 사용하는 것은 무엇인가',
     seoTitle: 'Mac용 최고의 로컬 TTS 2026: Apple Silicon 가이드',
     intro:
-      '대부분의 "최고의 로컬 TTS" 비교 글은 모든 Mac을 동일하게 취급하지만, Apple Silicon에 따라 실제로 어떤 엔진이 적합한지가 달라집니다. [Piper](/power-local-llm/piper-tts-review)는 전적으로 CPU에서 실행되며 GPU를 전혀 사용하지 않습니다 — Apple Silicon Mac에서든 Intel Mac에서든 성능이 거의 동일합니다. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)은 커뮤니티 프로젝트인 [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통해 Apple의 자체 [MLX](https://github.com/ml-explore/mlx) 프레임워크로 실행할 수 있으며, 이 프레임워크는 Apple Silicon의 Metal GPU를 위해 특별히 제작되었습니다. 반면 [XTTS v2](/power-local-llm/xtts-v2-review)는 Apple의 Metal Performance Shaders(MPS) 백엔드를 전혀 지원하지 않습니다 — 추적 중인 [GitHub 이슈](https://github.com/coqui-ai/TTS/issues/3649)는 MPS 장치를 사용하면 그저 멈춰버린다는 사실을 기록하고 있습니다 — 따라서 어떤 Mac에서도 CPU로만 실행됩니다. 이 가이드는 각 엔진이 Apple Silicon에서 실제로 어떻게 작동하는지 비교하고, Intel Mac이 CPU 전용 옵션에 제한되는 지점을 짚어주며, 무엇을 설치해야 하는지 알려드립니다.',
+      '대부분의 "최고의 로컬 TTS" 비교 글은 모든 Mac을 동일하게 취급하지만, Apple Silicon에 따라 실제로 어떤 엔진이 적합한지가 달라집니다. [Piper](/ko/power-local-llm/piper-tts-review)는 전적으로 CPU에서 실행되며 GPU를 전혀 사용하지 않습니다 — Apple Silicon Mac에서든 Intel Mac에서든 성능이 거의 동일합니다. [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)은 커뮤니티 프로젝트인 [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통해 Apple의 자체 [MLX](https://github.com/ml-explore/mlx) 프레임워크로 실행할 수 있으며, 이 프레임워크는 Apple Silicon의 Metal GPU를 위해 특별히 제작되었습니다. 반면 [XTTS v2](/ko/power-local-llm/xtts-v2-review)는 Apple의 Metal Performance Shaders(MPS) 백엔드를 전혀 지원하지 않습니다 — 추적 중인 [GitHub 이슈](https://github.com/coqui-ai/TTS/issues/3649)는 MPS 장치를 사용하면 그저 멈춰버린다는 사실을 기록하고 있습니다 — 따라서 어떤 Mac에서도 CPU로만 실행됩니다. 이 가이드는 각 엔진이 Apple Silicon에서 실제로 어떻게 작동하는지 비교하고, Intel Mac이 CPU 전용 옵션에 제한되는 지점을 짚어주며, 무엇을 설치해야 하는지 알려드립니다.',
     metaDescription:
       'Piper는 모든 Mac에서 CPU로만 작동합니다. Kokoro는 MLX를 통해 Metal을 사용할 수 있습니다. XTTS v2의 MPS 지원은 알려진 결함이 있는 GitHub 이슈입니다. Apple Silicon에서 실제로 설치해야 할 로컬 TTS 엔진을 안내합니다.',
     twitterDescription:
@@ -2689,7 +2689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Piper', 'Kokoro-82M', 'XTTS v2', 'Bark'],
     current_hardware_mentioned: ['Apple Silicon', 'Apple M-series', 'M4', 'M5', 'Intel Mac'],
     leadAnswerBlock:
-      '**GPU 가속을 원한다면 Kokoro-82M이 Apple Silicon Mac용 최고의 로컬 TTS 엔진입니다. 커뮤니티 프로젝트 [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통해 Apple의 자체 [MLX](https://github.com/ml-explore/mlx) 프레임워크로 실행할 수 있기 때문입니다. [Piper](/power-local-llm/piper-tts-review)는 Intel과 Apple Silicon에서 동일하게 작동하는 가장 간단하고 이식성 높은 설치를 원할 때 최선의 선택입니다. 어느 쪽에서도 GPU를 전혀 사용하지 않기 때문입니다.** 음성 클로닝이 특별히 필요하다면 [XTTS v2](/power-local-llm/xtts-v2-review)가 선택지가 되지만, Metal(MPS) 지원은 문서화된 결함이 있는 [GitHub 이슈](https://github.com/coqui-ai/TTS/issues/3649)이므로 어떤 Mac에서도 CPU 전용 성능을 예상해야 합니다. [Bark](/power-local-llm/bark-tts-review)는 환경 변수 뒤에 실험적인 MPS 지원이 있으며, 일부 처리는 여전히 CPU로 대체됩니다.',
+      '**GPU 가속을 원한다면 Kokoro-82M이 Apple Silicon Mac용 최고의 로컬 TTS 엔진입니다. 커뮤니티 프로젝트 [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통해 Apple의 자체 [MLX](https://github.com/ml-explore/mlx) 프레임워크로 실행할 수 있기 때문입니다. [Piper](/ko/power-local-llm/piper-tts-review)는 Intel과 Apple Silicon에서 동일하게 작동하는 가장 간단하고 이식성 높은 설치를 원할 때 최선의 선택입니다. 어느 쪽에서도 GPU를 전혀 사용하지 않기 때문입니다.** 음성 클로닝이 특별히 필요하다면 [XTTS v2](/ko/power-local-llm/xtts-v2-review)가 선택지가 되지만, Metal(MPS) 지원은 문서화된 결함이 있는 [GitHub 이슈](https://github.com/coqui-ai/TTS/issues/3649)이므로 어떤 Mac에서도 CPU 전용 성능을 예상해야 합니다. [Bark](/ko/power-local-llm/bark-tts-review)는 환경 변수 뒤에 실험적인 MPS 지원이 있으며, 일부 처리는 여전히 CPU로 대체됩니다.',
     quickAnswerTop: {
       question: 'Mac용 최고의 로컬 텍스트 음성 변환 엔진은 무엇입니까?',
       answer:
@@ -2753,9 +2753,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '🏆 **Apple Silicon에서 전반적으로 최선:** [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통한 [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 여기서 다루는 엔진 중 유일하게 실제 Metal GPU 경로를 갖추었고, 크기가 충분히 작아(8,200만 파라미터) 어떤 Apple Silicon Mac에서도 여유롭게 실행됩니다.',
-          '**단순성과 Intel 호환성 면에서 최선:** [Piper](/power-local-llm/piper-tts-review) — 설계상 CPU 전용이므로 M 시리즈 칩이든 오래된 Intel Mac이든 설치와 성능이 동일합니다.',
-          '**음성 클로닝이 필요한 경우 최선:** [XTTS v2](/power-local-llm/xtts-v2-review) — 약 6초의 참조 오디오로 음성을 복제할 수 있지만, 어떤 Mac에서도 CPU로만 작동하며 비상업적 용도로만 라이선스가 허용됩니다.',
-          '**표현력 있는 비언어 오디오 면에서 최선:** [Bark](/power-local-llm/bark-tts-review) — 텍스트로부터 웃음, 한숨, 간단한 음악을 생성합니다. Apple Silicon GPU 지원은 실험적(부분적)이며, 저장소는 2024년 4월 이후 휴면 상태입니다.',
+          '**단순성과 Intel 호환성 면에서 최선:** [Piper](/ko/power-local-llm/piper-tts-review) — 설계상 CPU 전용이므로 M 시리즈 칩이든 오래된 Intel Mac이든 설치와 성능이 동일합니다.',
+          '**음성 클로닝이 필요한 경우 최선:** [XTTS v2](/ko/power-local-llm/xtts-v2-review) — 약 6초의 참조 오디오로 음성을 복제할 수 있지만, 어떤 Mac에서도 CPU로만 작동하며 비상업적 용도로만 라이선스가 허용됩니다.',
+          '**표현력 있는 비언어 오디오 면에서 최선:** [Bark](/ko/power-local-llm/bark-tts-review) — 텍스트로부터 웃음, 한숨, 간단한 음악을 생성합니다. Apple Silicon GPU 지원은 실험적(부분적)이며, 저장소는 2024년 4월 이후 휴면 상태입니다.',
         ],
       },
       whoShouldUse: {
@@ -2789,21 +2789,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '음성 품질': '자연스러움, 대형 클라우드 모델에 근접',
           },
           {
-            '엔진': '[Piper](/power-local-llm/piper-tts-review)',
+            '엔진': '[Piper](/ko/power-local-llm/piper-tts-review)',
             'Apple Silicon 가속': '설계상 없음 — CPU 전용 ONNX Runtime',
             'RAM 사용량': '매우 낮음(음성당 약 50~100MB)',
             'macOS 설치': '`pip install piper-tts`, GPU 설정 불필요',
             '음성 품질': '명료하지만 다소 기계적인 억양',
           },
           {
-            '엔진': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            '엔진': '[XTTS v2](/ko/power-local-llm/xtts-v2-review)',
             'Apple Silicon 가속': '없음 — MPS가 멈춤(GH 이슈 #3649)',
             'RAM 사용량': '중간~높음(완전한 클로닝 모델)',
             'macOS 설치': '`pip install coqui-tts`, Mac에서는 CPU 전용',
             '음성 품질': '고품질, 특정 음성 복제 가능',
           },
           {
-            '엔진': '[Bark](/power-local-llm/bark-tts-review)',
+            '엔진': '[Bark](/ko/power-local-llm/bark-tts-review)',
             'Apple Silicon 가속': '실험적 — `SUNO_ENABLE_MPS=True`',
             'RAM 사용량': '높음(small-models 플래그로 감소 가능)',
             'macOS 설치': 'GitHub에서 pip install, PyPI 패키지 없음',
@@ -2820,8 +2820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kokoro-82M은 커뮤니티 프로젝트 [mlx-audio](https://github.com/Blaizzy/mlx-audio)를 통해 Apple의 자체 [MLX](https://github.com/ml-explore/mlx) 프레임워크로 실행되며, Apple Silicon과 Python 3.10~3.12가 필요합니다.** MLX는 Apple의 오픈소스 머신러닝 프레임워크로, Apple Silicon의 통합 메모리 아키텍처 위에서 Metal을 위해 처음부터 구축되었습니다 — 이는 이 사이트의 [Apple Silicon 로컬 LLM 가이드](/local-llms/apple-silicon-local-llm-guide-2026)와 [MLX 대 Ollama 대 llama.cpp 비교](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac)가 언어 모델에 대해 다루는 것과 동일한 프레임워크입니다. Hugging Face에서 hexgrad가 공개한 공식 Kokoro-82M 가중치는 원래 PyTorch 모델입니다. MLX 경로는 커뮤니티 이식판이며 Apple이나 hexgrad의 공식 릴리스가 아닙니다. mlx-audio는 또한 메모리 사용량을 줄이기 위한 bf16, 8비트, 4비트 양자화 변형도 제공합니다.',
-          '**Piper는 Apple Silicon을 포함한 어떤 플랫폼에서도 GPU를 전혀 사용하지 않습니다 — 이는 설계이지 제약이 아닙니다.** Piper는 espeak-ng로 텍스트를 음소로 변환한 다음, 빠른 CPU 추론을 위해 [ONNX Runtime](https://onnxruntime.ai/)으로 내보낸 모델로 오디오를 합성합니다. 이 설계 선택이야말로 Piper가 Raspberry Pi에서도 실시간으로 실행되는 이유입니다 — 전체 아키텍처와 설치 단계는 PromptQuorum의 [Piper TTS 리뷰](/power-local-llm/piper-tts-review)를 참조하십시오.',
-          '**XTTS v2의 Apple Silicon Metal(MPS) 지원은 현재 작동하지 않습니다.** [coqui-ai/TTS GitHub 저장소](https://github.com/coqui-ai/TTS/issues/3649)에서 추적 중인 이슈("Unable to use xtts_v2 with mps device on Apple Silicon")는 MPS 장치에서 XTTS v2를 실행하려는 시도가 완료되지 않고 멈춰버린다는 사실을 기록하고 있습니다. Coqui 자체 프로젝트도 XTTS v2에 대한 Apple Silicon GPU 지원을 공식적으로 지원한다고 명시하지 않습니다. 실제로 이는 XTTS v2가 Mac에서 CPU로만 작동한다는 것을 의미하며, 다른 플랫폼에서도 이를 실행하는 동일한 [Coqui TTS 툴킷](/power-local-llm/coqui-tts-review)(MPL-2.0 라이선스)을 통해 실행됩니다.',
+          '**Piper는 Apple Silicon을 포함한 어떤 플랫폼에서도 GPU를 전혀 사용하지 않습니다 — 이는 설계이지 제약이 아닙니다.** Piper는 espeak-ng로 텍스트를 음소로 변환한 다음, 빠른 CPU 추론을 위해 [ONNX Runtime](https://onnxruntime.ai/)으로 내보낸 모델로 오디오를 합성합니다. 이 설계 선택이야말로 Piper가 Raspberry Pi에서도 실시간으로 실행되는 이유입니다 — 전체 아키텍처와 설치 단계는 PromptQuorum의 [Piper TTS 리뷰](/ko/power-local-llm/piper-tts-review)를 참조하십시오.',
+          '**XTTS v2의 Apple Silicon Metal(MPS) 지원은 현재 작동하지 않습니다.** [coqui-ai/TTS GitHub 저장소](https://github.com/coqui-ai/TTS/issues/3649)에서 추적 중인 이슈("Unable to use xtts_v2 with mps device on Apple Silicon")는 MPS 장치에서 XTTS v2를 실행하려는 시도가 완료되지 않고 멈춰버린다는 사실을 기록하고 있습니다. Coqui 자체 프로젝트도 XTTS v2에 대한 Apple Silicon GPU 지원을 공식적으로 지원한다고 명시하지 않습니다. 실제로 이는 XTTS v2가 Mac에서 CPU로만 작동한다는 것을 의미하며, 다른 플랫폼에서도 이를 실행하는 동일한 [Coqui TTS 툴킷](/ko/power-local-llm/coqui-tts-review)(MPL-2.0 라이선스)을 통해 실행됩니다.',
           '**Bark는 환경 변수 뒤에 실험적인 Apple Silicon MPS 지원을 갖추고 있습니다.** `SUNO_ENABLE_MPS=True`를 설정하면 [suno-ai/bark GitHub 저장소](https://github.com/suno-ai/bark)에서의 논의에 따라 Metal 가속이 활성화되지만, Bark가 의존하는 일부 PyTorch 연산자는 당시 MPS용으로 구현되지 않아 해당 단계들이 부분적으로 CPU로 대체됩니다. Bark는 또한 통합 메모리가 적은 Mac에서 메모리 부담을 줄이기 위해 특별히 `SUNO_USE_SMALL_MODELS=True` 플래그도 지원합니다.',
         ],
         note: '커뮤니티가 유지보수하는 TTS 프로젝트의 Apple Silicon 가속 상태는 이 글이 업데이트되는 속도보다 릴리스 간에 더 빠르게 변할 수 있습니다 — 여기에 설명된 내용이 현재 동작과 일치한다고 가정하기 전에 각 프로젝트의 GitHub 이슈와 README를 직접 확인하십시오.',
@@ -2874,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**이 비교에 포함된 네 가지 엔진 모두가 모든 Mac TTS 사용 사례에 적합한 선택은 아닙니다 — 각각 다른 도구나 클라우드 API가 더 적합한 상황이 있습니다.**',
         ],
         items: [
-          '❌ **복제된 음성과 함께 확실한 상업용 라이선스가 필요한 경우.** XTTS v2의 CPML 라이선스는 비상업적이며, Coqui AI가 2023년 12월에 유료 서비스를 종료한 이후 상업용 라이선스로 이어지는 확인된 유효한 경로가 없습니다 — 관리형 상업용 클라우드 대안은 PromptQuorum의 [ElevenLabs 비교](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 참조하십시오.',
+          '❌ **복제된 음성과 함께 확실한 상업용 라이선스가 필요한 경우.** XTTS v2의 CPML 라이선스는 비상업적이며, Coqui AI가 2023년 12월에 유료 서비스를 종료한 이후 상업용 라이선스로 이어지는 확인된 유효한 경로가 없습니다 — 관리형 상업용 클라우드 대안은 PromptQuorum의 [ElevenLabs 비교](/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 참조하십시오.',
           '❌ **확실한 활발한 유지보수가 필요한 경우.** Bark의 공개 GitHub 저장소는 2024년 4월 5일 이후 커밋이 없습니다. 지속적인 수정과 업데이트가 프로젝트에 중요하다면 Piper(Open Home Foundation이 활발히 유지보수)나 Kokoro(mlx-audio를 중심으로 활발하게 사용되는 커뮤니티 생태계)가 더 안전한 선택입니다.',
           '❌ **커뮤니티 프로젝트에 의존하지 않고 오늘 당장 프로덕션급 Apple Silicon GPU 지원이 필요한 경우.** Kokoro의 MLX 경로는 커뮤니티 프로젝트를 통해 작동하며 Apple이나 hexgrad의 공식 릴리스가 아닙니다 — 좋기는 하지만 벤더가 보장하는 것은 아니라고 여기십시오.',
           '❌ **매우 제한된 Apple Silicon 메모리(8GB 기본 구성)에서 대형 로컬 LLM을 동시에 실행하면서 실시간 대화형 음성이 필요한 경우.** 메모리가 제한된 Mac에서 큰 XTTS v2나 Bark 프로세스를 LLM과 함께 실행하는 것은 빠듯할 수 있습니다. Piper와 Kokoro의 작은 메모리 사용량이 더 많은 여유를 남깁니다.',
@@ -2933,21 +2933,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[coqui-ai/TTS GitHub 이슈 #3649](https://github.com/coqui-ai/TTS/issues/3649) — "Unable to use xtts_v2 with mps device on Apple Silicon", 미해결 MPS 멈춤 현상을 기록.',
           '[suno-ai/bark GitHub 저장소](https://github.com/suno-ai/bark) — SUNO_ENABLE_MPS를 통한 실험적 Apple Silicon MPS 지원을 기록한 이슈 및 풀 리퀘스트.',
           '[Apple MLX 프레임워크](https://github.com/ml-explore/mlx) — Apple Silicon용 네이티브 Metal GPU 가속을 갖춘 Apple의 공식 오픈소스 머신러닝 프레임워크.',
-          '[Piper TTS 리뷰](/power-local-llm/piper-tts-review) — 설치 명령어와 라이선스 이력을 포함한 PromptQuorum의 전용 리뷰.',
-          '[XTTS v2 리뷰](/power-local-llm/xtts-v2-review), [Coqui TTS 리뷰](/power-local-llm/coqui-tts-review), [Bark TTS 리뷰](/power-local-llm/bark-tts-review) — 여기서 다루는 다른 엔진들에 대한 PromptQuorum의 전용 리뷰.',
+          '[Piper TTS 리뷰](/ko/power-local-llm/piper-tts-review) — 설치 명령어와 라이선스 이력을 포함한 PromptQuorum의 전용 리뷰.',
+          '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review), [Coqui TTS 리뷰](/ko/power-local-llm/coqui-tts-review), [Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review) — 여기서 다루는 다른 엔진들에 대한 PromptQuorum의 전용 리뷰.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Piper TTS 리뷰](/power-local-llm/piper-tts-review) — 이 비교에서 다룬 빠르고 CPU 전용이며 관대한 라이선스를 가진 엔진을 심층적으로 다룹니다.',
-          '[XTTS v2 리뷰](/power-local-llm/xtts-v2-review) — 여기서 다룬 음성 클로닝 모델로, 비상업적 CPML 라이선스를 포함합니다.',
-          '[Coqui TTS 리뷰](/power-local-llm/coqui-tts-review) — XTTS v2(및 다른 모델)를 실행하는 툴킷으로, MPL-2.0 라이선스입니다.',
-          '[Bark TTS 리뷰](/power-local-llm/bark-tts-review) — 여기서 다룬 표현력 있는 비언어 오디오 엔진으로, 유지보수 상태를 포함합니다.',
+          '[Piper TTS 리뷰](/ko/power-local-llm/piper-tts-review) — 이 비교에서 다룬 빠르고 CPU 전용이며 관대한 라이선스를 가진 엔진을 심층적으로 다룹니다.',
+          '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review) — 여기서 다룬 음성 클로닝 모델로, 비상업적 CPML 라이선스를 포함합니다.',
+          '[Coqui TTS 리뷰](/ko/power-local-llm/coqui-tts-review) — XTTS v2(및 다른 모델)를 실행하는 툴킷으로, MPL-2.0 라이선스입니다.',
+          '[Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review) — 여기서 다룬 표현력 있는 비언어 오디오 엔진으로, 유지보수 상태를 포함합니다.',
           '[Apple Silicon 로컬 LLM 가이드](/local-llms/apple-silicon-local-llm-guide-2026) — TTS를 넘어선 로컬 AI를 위한 메모리 계층, Metal GPU 가속, Mac 선택.',
           '[Mac에서의 MLX 대 Ollama 대 llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — 이 가이드가 Kokoro에 대해 다루는 것과 동일한 MLX 프레임워크를 로컬 언어 모델 관점에서 설명합니다.',
-          '[ElevenLabs 대 Piper 대 XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 관리형 상업용 옵션을 고려하는 독자를 위한 클라우드 대 로컬 비교.',
+          '[ElevenLabs 대 Piper 대 XTTS v2](/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 관리형 상업용 옵션을 고려하는 독자를 위한 클라우드 대 로컬 비교.',
         ],
       },
     },
