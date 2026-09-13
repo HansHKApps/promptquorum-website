@@ -407,7 +407,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper ist eine kostenlose, lokale neuronale Text-zu-Sprache-Engine, die innerhalb des Rhasspy-Sprachassistenten-Projekts von Michael Hansen entstand und heute von der Open Home Foundation unter [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl) gepflegt wird — schnell genug, um in Echtzeit auf reiner CPU-Hardware wie einem Raspberry Pi zu laufen.** Installation mit `pip install piper-tts`. Seit 2025 steht das aktiv gepflegte Repository unter der Lizenz GPL-3.0-or-later — ein Wechsel gegenüber der MIT-Lizenz des ursprünglichen, heute archivierten Repositories `rhasspy/piper`. Für einen Lizenz-Deep-Dive über Piper, Coqui TTS, XTTS v2, F5-TTS, Bark und StyleTTS 2 siehe PromptQuorums [Leitfaden zu lokalen TTS-Lizenzen](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
+      '**Piper ist eine kostenlose, lokale neuronale Text-zu-Sprache-Engine, die innerhalb des Rhasspy-Sprachassistenten-Projekts von Michael Hansen entstand und heute von der Open Home Foundation unter [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl) gepflegt wird — schnell genug, um in Echtzeit auf reiner CPU-Hardware wie einem Raspberry Pi zu laufen.** Installation mit `pip install piper-tts`. Seit 2025 steht das aktiv gepflegte Repository unter der Lizenz GPL-3.0-or-later — ein Wechsel gegenüber der MIT-Lizenz des ursprünglichen, heute archivierten Repositories `rhasspy/piper`. Für einen Lizenz-Deep-Dive über Piper, Coqui TTS, XTTS v2, F5-TTS, Bark und StyleTTS 2 siehe PromptQuorums [Leitfaden zu lokalen TTS-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
     quickAnswerTop: {
       en: {
         question: 'Was ist Piper TTS und wird es noch gepflegt?',
@@ -601,7 +601,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper ist eine schnelle, universelle lokale Text-zu-Sprache-Engine, kein Voice-Cloning- oder Ausdrucks-Sprachwerkzeug. In folgenden Fällen ist es das falsche Werkzeug:',
         ],
         items: [
-          '**Ausdrucksstarkes, emotionales oder Voice-Cloning aus wenigen Sekunden.** Piper synthetisiert Sprache aus vortrainierten Stimmmodellen, nicht aus einer kurzen Referenzaufnahme einer bestimmten Person. Wer eine Stimme aus wenigen Sekunden Beispielaudio klonen oder ausdrucksstärkere Sprechweise möchte, findet in [XTTS v2](https://huggingface.co/coqui/XTTS-v2) das dafür gebaute Werkzeug — siehe PromptQuorums [Leitfaden zu lokalen TTS-Lizenzen](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) für dessen (nicht-kommerzielle) Lizenzbedingungen.',
+          '**Ausdrucksstarkes, emotionales oder Voice-Cloning aus wenigen Sekunden.** Piper synthetisiert Sprache aus vortrainierten Stimmmodellen, nicht aus einer kurzen Referenzaufnahme einer bestimmten Person. Wer eine Stimme aus wenigen Sekunden Beispielaudio klonen oder ausdrucksstärkere Sprechweise möchte, findet in [XTTS v2](https://huggingface.co/coqui/XTTS-v2) das dafür gebaute Werkzeug — siehe PromptQuorums [Leitfaden zu lokalen TTS-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) für dessen (nicht-kommerzielle) Lizenzbedingungen.',
           '**Mehrsprecher-Cloning aus einer kurzen Probe.** Ebenso hat Piper keinen eingebauten Mechanismus, um aus einer Audioprobe eines bestimmten Sprechers spontan eine neue Stimme zu erzeugen; jede Stimme ist ein separat trainiertes und verteiltes Modell.',
           '**GPL-3.0-Copyleft-Pflichten in einem Closed-Source-Produkt.** Wer Pipers eigenen Quellcode modifizieren und in einer Closed-Source-Binärdatei weitergeben möchte, muss die GPL-3.0-or-later-Lizenz des aktuellen Repositories als echte Einschränkung berücksichtigen, die das ursprüngliche, MIT-lizenzierte Repository nicht hatte. Den obigen Abschnitt Lizenz und Kosten lesen und vor einem solchen Einsatz einen Anwalt konsultieren.',
           '**Garantiert einheitliche Stimmqualität über alle Sprachen hinweg.** Da Stimmen von unterschiedlichen Community-Mitgliedern trainiert und beigesteuert werden, variiert die Qualität spürbar je nach Sprache und Stimme — vor der Festlegung auf Piper für eine Produktivanwendung Samples der Zielsprache prüfen.',
@@ -683,7 +683,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Piper bleibt eine der schnellsten Möglichkeiten, echte lokale Sprachsynthese auf bescheidener Hardware zum Laufen zu bringen — seine echtzeitfähige, reine CPU-Leistung machte es zur Standardstimme von Home Assistant, und daran hat sich unter den neuen Maintainern nichts geändert. Was sich geändert hat und was jeder, der Piper 2026 prüft, wissen muss, ist die Lizenz: Das aktiv gepflegte Repository wechselte 2025 beim Umzug zur Open Home Foundation von MIT auf GPL-3.0-or-later — ein realer Unterschied für alle, die modifizierten Piper-Quellcode in ein Closed-Source-Produkt einbauen und weitergeben wollen. Es bleibt kostenlos, gut dokumentiert und aktiv weiterentwickelt (v1.8.0 mit Stand September 2026), auch wenn die eigenen Maintainer offen um weitere Unterstützung bitten. Für schnelle, offline, universelle Sprachsynthese auf CPU-Hardware ist Piper eine gut verifizierte, kostenlose Wahl — für ausdrucksstarkes Voice-Cloning aus wenigen Sekunden lohnt sich der Blick auf PromptQuorums Abdeckung von [XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) oder der Vergleich mit der verwalteten Cloud-Alternative im [Vergleich ElevenLabs vs. lokale TTS](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
+          'Piper bleibt eine der schnellsten Möglichkeiten, echte lokale Sprachsynthese auf bescheidener Hardware zum Laufen zu bringen — seine echtzeitfähige, reine CPU-Leistung machte es zur Standardstimme von Home Assistant, und daran hat sich unter den neuen Maintainern nichts geändert. Was sich geändert hat und was jeder, der Piper 2026 prüft, wissen muss, ist die Lizenz: Das aktiv gepflegte Repository wechselte 2025 beim Umzug zur Open Home Foundation von MIT auf GPL-3.0-or-later — ein realer Unterschied für alle, die modifizierten Piper-Quellcode in ein Closed-Source-Produkt einbauen und weitergeben wollen. Es bleibt kostenlos, gut dokumentiert und aktiv weiterentwickelt (v1.8.0 mit Stand September 2026), auch wenn die eigenen Maintainer offen um weitere Unterstützung bitten. Für schnelle, offline, universelle Sprachsynthese auf CPU-Hardware ist Piper eine gut verifizierte, kostenlose Wahl — für ausdrucksstarkes Voice-Cloning aus wenigen Sekunden lohnt sich der Blick auf PromptQuorums Abdeckung von [XTTS v2](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) oder der Vergleich mit der verwalteten Cloud-Alternative im [Vergleich ElevenLabs vs. lokale TTS](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
       },
       sources: {
         id: 'sources',
@@ -700,11 +700,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der Lizenz-Deep-Dive über alle wichtigen lokalen TTS-Engines.',
-          '[ElevenLabs vs. Piper vs. XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für alle, die über Self-Hosting entscheiden.',
-          '[Einen vollständig offline Sprachassistenten bauen 2026](/power-local-llm/build-local-voice-assistant-2026) — Piper mit einem lokalen LLM und einer Whisper-basierten STT-Engine zu einer vollständigen Sprachpipeline verbinden.',
-          '[Whisper.cpp im Test](/power-local-llm/whisper-cpp-review) — das lokale Spracherkennungs-Gegenstück, im selben Detailgrad getestet.',
-          '[faster-whisper im Test](/power-local-llm/faster-whisper-review) — die CTranslate2-basierte Spracherkennungs-Alternative, im selben Detailgrad getestet.',
+          '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der Lizenz-Deep-Dive über alle wichtigen lokalen TTS-Engines.',
+          '[ElevenLabs vs. Piper vs. XTTS v2](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für alle, die über Self-Hosting entscheiden.',
+          '[Einen vollständig offline Sprachassistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — Piper mit einem lokalen LLM und einer Whisper-basierten STT-Engine zu einer vollständigen Sprachpipeline verbinden.',
+          '[Whisper.cpp im Test](/de/power-local-llm/whisper-cpp-review) — das lokale Spracherkennungs-Gegenstück, im selben Detailgrad getestet.',
+          '[faster-whisper im Test](/de/power-local-llm/faster-whisper-review) — die CTranslate2-basierte Spracherkennungs-Alternative, im selben Detailgrad getestet.',
         ],
       },
     },
@@ -774,7 +774,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper est un moteur de synthèse vocale neuronale local et gratuit, créé au sein du projet d\'assistant vocal Rhasspy par Michael Hansen, aujourd\'hui maintenu par l\'Open Home Foundation sur [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), assez rapide pour fonctionner en temps réel sur du matériel CPU seul comme un Raspberry Pi.** Installation avec `pip install piper-tts`. Depuis 2025, le dépôt activement maintenu est sous licence GPL-3.0-or-later — un changement par rapport à la licence MIT du dépôt d\'origine `rhasspy/piper`, désormais archivé. Pour un comparatif de licences entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark et StyleTTS 2, voir le [guide des licences TTS locales](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+      '**Piper est un moteur de synthèse vocale neuronale local et gratuit, créé au sein du projet d\'assistant vocal Rhasspy par Michael Hansen, aujourd\'hui maintenu par l\'Open Home Foundation sur [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), assez rapide pour fonctionner en temps réel sur du matériel CPU seul comme un Raspberry Pi.** Installation avec `pip install piper-tts`. Depuis 2025, le dépôt activement maintenu est sous licence GPL-3.0-or-later — un changement par rapport à la licence MIT du dépôt d\'origine `rhasspy/piper`, désormais archivé. Pour un comparatif de licences entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark et StyleTTS 2, voir le [guide des licences TTS locales](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
     quickAnswerTop: {
       en: {
         question: 'Qu\'est-ce que Piper TTS et est-il encore maintenu ?',
@@ -968,7 +968,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper est un moteur de synthèse vocale locale rapide et généraliste, pas un outil de clonage de voix ou de parole expressive. C\'est le mauvais outil dans les cas suivants :',
         ],
         items: [
-          '**Clonage vocal expressif, émotionnel ou à partir de quelques secondes.** Piper synthétise la parole à partir de modèles de voix pré-entraînés, pas à partir d\'un court extrait audio de référence d\'une personne précise. Pour cloner une voix à partir de quelques secondes d\'échantillon audio, ou obtenir une élocution plus expressive, [XTTS v2](https://huggingface.co/coqui/XTTS-v2) est conçu pour cela — voir le [guide des licences TTS locales](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum pour ses conditions de licence (non commerciales).',
+          '**Clonage vocal expressif, émotionnel ou à partir de quelques secondes.** Piper synthétise la parole à partir de modèles de voix pré-entraînés, pas à partir d\'un court extrait audio de référence d\'une personne précise. Pour cloner une voix à partir de quelques secondes d\'échantillon audio, ou obtenir une élocution plus expressive, [XTTS v2](https://huggingface.co/coqui/XTTS-v2) est conçu pour cela — voir le [guide des licences TTS locales](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum pour ses conditions de licence (non commerciales).',
           '**Clonage multi-locuteur à partir d\'un court échantillon.** De même, Piper n\'a aucun mécanisme intégré pour générer à la volée une nouvelle voix à partir d\'un échantillon audio d\'un locuteur donné ; chaque voix est un modèle entraîné et distribué séparément.',
           '**Obligations copyleft de la GPL-3.0 dans un produit fermé.** Si votre cas d\'usage implique de modifier et de redistribuer le code source de Piper lui-même dans un binaire fermé, la licence GPL-3.0-or-later du dépôt actuel est une contrainte réelle que le dépôt d\'origine, sous MIT, n\'avait pas. Relire la section Licence et coût ci-dessus et consulter un avocat avant ce type de déploiement.',
           '**Qualité vocale garantie et homogène sur toutes les langues.** Les voix étant entraînées et fournies par différents contributeurs de la communauté, la qualité varie sensiblement selon la langue et la voix — vérifier des échantillons dans la langue cible avant de s\'engager sur Piper pour une application en production.',
@@ -1050,7 +1050,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Piper reste l\'un des moyens les plus rapides d\'obtenir une vraie synthèse vocale locale sur du matériel modeste — sa performance en temps réel sur CPU seul en a fait la voix par défaut de Home Assistant, et cela n\'a pas changé sous ses nouveaux mainteneurs. Ce qui a changé, et que tout lecteur évaluant Piper en 2026 doit connaître, c\'est la licence : le dépôt activement maintenu est passé de MIT à GPL-3.0-or-later lors du transfert vers l\'Open Home Foundation en 2025, une réelle différence pour quiconque prévoit d\'intégrer et de redistribuer du code source Piper modifié dans un produit fermé. Il reste gratuit, bien documenté et activement publié (v1.8.0 à la date de septembre 2026), même si ses propres mainteneurs recherchent ouvertement de l\'aide. Pour une synthèse vocale rapide, hors ligne et généraliste sur du matériel de classe CPU, Piper est un choix bien vérifié et sans coût — pour un clonage vocal expressif en quelques secondes, associez cet avis à la couverture de [XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) par PromptQuorum ou comparez avec l\'alternative cloud gérée dans le [comparatif ElevenLabs vs TTS local](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
+          'Piper reste l\'un des moyens les plus rapides d\'obtenir une vraie synthèse vocale locale sur du matériel modeste — sa performance en temps réel sur CPU seul en a fait la voix par défaut de Home Assistant, et cela n\'a pas changé sous ses nouveaux mainteneurs. Ce qui a changé, et que tout lecteur évaluant Piper en 2026 doit connaître, c\'est la licence : le dépôt activement maintenu est passé de MIT à GPL-3.0-or-later lors du transfert vers l\'Open Home Foundation en 2025, une réelle différence pour quiconque prévoit d\'intégrer et de redistribuer du code source Piper modifié dans un produit fermé. Il reste gratuit, bien documenté et activement publié (v1.8.0 à la date de septembre 2026), même si ses propres mainteneurs recherchent ouvertement de l\'aide. Pour une synthèse vocale rapide, hors ligne et généraliste sur du matériel de classe CPU, Piper est un choix bien vérifié et sans coût — pour un clonage vocal expressif en quelques secondes, associez cet avis à la couverture de [XTTS v2](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) par PromptQuorum ou comparez avec l\'alternative cloud gérée dans le [comparatif ElevenLabs vs TTS local](/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
       },
       sources: {
         id: 'sources',
@@ -1067,11 +1067,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Licences TTS et clonage vocal local : Piper, XTTS v2, F5-TTS et Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le comparatif de licences pour tous les principaux moteurs TTS locaux.',
-          '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — le comparatif cloud contre local pour choisir de s\'auto-héberger ou non.',
-          '[Construire un assistant vocal entièrement hors ligne en 2026](/power-local-llm/build-local-voice-assistant-2026) — connecter Piper à un LLM local et à un moteur STT basé sur Whisper pour un pipeline vocal complet.',
-          '[Avis Whisper.cpp](/power-local-llm/whisper-cpp-review) — l\'équivalent local en reconnaissance vocale, examiné avec le même niveau de détail.',
-          '[Avis faster-whisper](/power-local-llm/faster-whisper-review) — l\'alternative de reconnaissance vocale basée sur CTranslate2, examinée avec le même niveau de détail.',
+          '[Licences TTS et clonage vocal local : Piper, XTTS v2, F5-TTS et Coqui](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le comparatif de licences pour tous les principaux moteurs TTS locaux.',
+          '[ElevenLabs vs Piper vs XTTS v2](/fr/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — le comparatif cloud contre local pour choisir de s\'auto-héberger ou non.',
+          '[Construire un assistant vocal entièrement hors ligne en 2026](/fr/power-local-llm/build-local-voice-assistant-2026) — connecter Piper à un LLM local et à un moteur STT basé sur Whisper pour un pipeline vocal complet.',
+          '[Avis Whisper.cpp](/fr/power-local-llm/whisper-cpp-review) — l\'équivalent local en reconnaissance vocale, examiné avec le même niveau de détail.',
+          '[Avis faster-whisper](/fr/power-local-llm/faster-whisper-review) — l\'alternative de reconnaissance vocale basée sur CTranslate2, examinée avec le même niveau de détail.',
         ],
       },
     },
@@ -1141,7 +1141,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper es un motor de síntesis de voz neuronal local y gratuito, creado dentro del proyecto de asistente de voz Rhasspy por Michael Hansen, hoy mantenido por la Open Home Foundation en [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), lo bastante rápido como para funcionar en tiempo real en hardware solo con CPU como una Raspberry Pi.** Se instala con `pip install piper-tts`. Desde 2025, el repositorio activamente mantenido usa la licencia GPL-3.0-or-later — un cambio respecto a la licencia MIT del repositorio original `rhasspy/piper`, ahora archivado. Para un análisis de licencias entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark y StyleTTS 2, consulta la [guía de licencias de TTS local](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+      '**Piper es un motor de síntesis de voz neuronal local y gratuito, creado dentro del proyecto de asistente de voz Rhasspy por Michael Hansen, hoy mantenido por la Open Home Foundation en [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), lo bastante rápido como para funcionar en tiempo real en hardware solo con CPU como una Raspberry Pi.** Se instala con `pip install piper-tts`. Desde 2025, el repositorio activamente mantenido usa la licencia GPL-3.0-or-later — un cambio respecto a la licencia MIT del repositorio original `rhasspy/piper`, ahora archivado. Para un análisis de licencias entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark y StyleTTS 2, consulta la [guía de licencias de TTS local](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
     quickAnswerTop: {
       en: {
         question: '¿Qué es Piper TTS y sigue manteniéndose?',
@@ -1335,7 +1335,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper es un motor de síntesis de voz local rápido y de propósito general, no una herramienta de clonación de voz ni de habla expresiva. Es la herramienta equivocada en las siguientes situaciones:',
         ],
         items: [
-          '**Clonación de voz expresiva, emocional o a partir de pocos segundos.** Piper sintetiza voz a partir de modelos de voz preentrenados, no a partir de un breve clip de audio de referencia de una persona concreta. Si necesitas clonar una voz a partir de pocos segundos de audio de muestra, o buscas una entonación más expresiva, [XTTS v2](https://huggingface.co/coqui/XTTS-v2) está diseñado para eso — consulta la [guía de licencias de TTS local](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum para conocer sus términos de licencia (no comercial).',
+          '**Clonación de voz expresiva, emocional o a partir de pocos segundos.** Piper sintetiza voz a partir de modelos de voz preentrenados, no a partir de un breve clip de audio de referencia de una persona concreta. Si necesitas clonar una voz a partir de pocos segundos de audio de muestra, o buscas una entonación más expresiva, [XTTS v2](https://huggingface.co/coqui/XTTS-v2) está diseñado para eso — consulta la [guía de licencias de TTS local](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum para conocer sus términos de licencia (no comercial).',
           '**Clonación multi-hablante a partir de una muestra corta.** De igual forma, Piper no tiene ningún mecanismo integrado para generar al vuelo una nueva voz a partir de una muestra de audio de un hablante específico; cada voz es un modelo entrenado y distribuido por separado.',
           '**Obligaciones copyleft de GPL-3.0 en un producto de código cerrado.** Si tu caso de uso implica modificar y redistribuir el propio código fuente de Piper dentro de un binario de código cerrado, la licencia GPL-3.0-or-later del repositorio actual es una restricción real que el repositorio original con licencia MIT no tenía. Revisa la sección Licencia y coste anterior y consulta con un abogado antes de ese tipo de despliegue.',
           '**Calidad de voz garantizada y homogénea en todos los idiomas.** Como las voces son entrenadas y aportadas por distintos miembros de la comunidad, la calidad varía notablemente según el idioma y la voz concreta — revisa muestras del idioma objetivo antes de comprometerte con Piper para una aplicación de producción.',
@@ -1417,7 +1417,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Piper sigue siendo una de las formas más rápidas de conseguir síntesis de voz local real en hardware modesto — su rendimiento en tiempo real solo con CPU es lo que lo convirtió en la voz por defecto de Home Assistant, y eso no ha cambiado bajo sus nuevos mantenedores. Lo que sí ha cambiado, y lo que cualquiera que evalúe Piper en 2026 debe saber, es la licencia: el repositorio activamente mantenido pasó de MIT a GPL-3.0-or-later cuando el desarrollo se trasladó a la Open Home Foundation en 2025, una diferencia real para quien planee integrar y redistribuir código fuente modificado de Piper en un producto de código cerrado. Sigue siendo gratuito, bien documentado y con lanzamientos activos (v1.8.0 a fecha de septiembre de 2026), aunque sus propios mantenedores buscan abiertamente más ayuda. Para síntesis de voz rápida, offline y de propósito general en hardware de clase CPU, Piper es una opción bien verificada y sin coste — para clonación de voz expresiva en pocos segundos, combina este análisis con la cobertura de [XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum o compáralo con la alternativa en la nube gestionada en la [comparativa ElevenLabs vs TTS local](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
+          'Piper sigue siendo una de las formas más rápidas de conseguir síntesis de voz local real en hardware modesto — su rendimiento en tiempo real solo con CPU es lo que lo convirtió en la voz por defecto de Home Assistant, y eso no ha cambiado bajo sus nuevos mantenedores. Lo que sí ha cambiado, y lo que cualquiera que evalúe Piper en 2026 debe saber, es la licencia: el repositorio activamente mantenido pasó de MIT a GPL-3.0-or-later cuando el desarrollo se trasladó a la Open Home Foundation en 2025, una diferencia real para quien planee integrar y redistribuir código fuente modificado de Piper en un producto de código cerrado. Sigue siendo gratuito, bien documentado y con lanzamientos activos (v1.8.0 a fecha de septiembre de 2026), aunque sus propios mantenedores buscan abiertamente más ayuda. Para síntesis de voz rápida, offline y de propósito general en hardware de clase CPU, Piper es una opción bien verificada y sin coste — para clonación de voz expresiva en pocos segundos, combina este análisis con la cobertura de [XTTS v2](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum o compáralo con la alternativa en la nube gestionada en la [comparativa ElevenLabs vs TTS local](/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
       },
       sources: {
         id: 'sources',
@@ -1434,11 +1434,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Licencias de TTS y clonación de voz local: Piper, XTTS v2, F5-TTS y Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — el análisis de licencias de todos los motores TTS locales principales.',
-          '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparativa nube contra local para decidir si autohospedar.',
-          '[Construir un asistente de voz totalmente offline en 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar Piper con un LLM local y un motor STT basado en Whisper para un pipeline de voz completo.',
-          '[Análisis de Whisper.cpp](/power-local-llm/whisper-cpp-review) — el equivalente local de reconocimiento de voz, analizado con el mismo nivel de detalle.',
-          '[Análisis de faster-whisper](/power-local-llm/faster-whisper-review) — la alternativa de reconocimiento de voz basada en CTranslate2, analizada con el mismo nivel de detalle.',
+          '[Licencias de TTS y clonación de voz local: Piper, XTTS v2, F5-TTS y Coqui](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — el análisis de licencias de todos los motores TTS locales principales.',
+          '[ElevenLabs vs Piper vs XTTS v2](/es/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — la comparativa nube contra local para decidir si autohospedar.',
+          '[Construir un asistente de voz totalmente offline en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — conectar Piper con un LLM local y un motor STT basado en Whisper para un pipeline de voz completo.',
+          '[Análisis de Whisper.cpp](/es/power-local-llm/whisper-cpp-review) — el equivalente local de reconocimiento de voz, analizado con el mismo nivel de detalle.',
+          '[Análisis de faster-whisper](/es/power-local-llm/faster-whisper-review) — la alternativa de reconocimiento de voz basada en CTranslate2, analizada con el mismo nivel de detalle.',
         ],
       },
     },
@@ -1508,7 +1508,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**PiperはMichael Hansen氏がRhasspy音声アシスタントプロジェクトの中で開発した無料のローカル・ニューラル音声合成エンジンで、現在は[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)でOpen Home Foundationが保守しており、Raspberry PiのようなCPUのみのハードウェアでもリアルタイムに動作するほど高速です。** `pip install piper-tts`でインストールできます。2025年以降、実際に保守されているリポジトリはGPL-3.0-or-laterライセンスの下にあり、これはアーカイブされた元のリポジトリ`rhasspy/piper`のMITライセンスからの変更です。Piper、Coqui TTS、XTTS v2、F5-TTS、Bark、StyleTTS 2のライセンス比較については、PromptQuorumの[ローカルTTSライセンスガイド](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照してください。',
+      '**PiperはMichael Hansen氏がRhasspy音声アシスタントプロジェクトの中で開発した無料のローカル・ニューラル音声合成エンジンで、現在は[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)でOpen Home Foundationが保守しており、Raspberry PiのようなCPUのみのハードウェアでもリアルタイムに動作するほど高速です。** `pip install piper-tts`でインストールできます。2025年以降、実際に保守されているリポジトリはGPL-3.0-or-laterライセンスの下にあり、これはアーカイブされた元のリポジトリ`rhasspy/piper`のMITライセンスからの変更です。Piper、Coqui TTS、XTTS v2、F5-TTS、Bark、StyleTTS 2のライセンス比較については、PromptQuorumの[ローカルTTSライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照してください。',
     quickAnswerTop: {
       en: {
         question: 'Piper TTSとは何か、今も保守されているのか',
@@ -1702,7 +1702,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piperは高速で汎用的なローカル音声合成エンジンであり、声のクローンや表現豊かな発話のためのツールではありません。以下のような用途には向いていません:',
         ],
         items: [
-          '**表現豊かで感情的な、あるいは数秒での声のクローン。** Piperは事前学習済みの声モデルから音声を合成するのであって、特定の人物の短い参照音声から合成するわけではありません。数秒のサンプル音声から声をクローンしたい、あるいはより感情豊かな発話が必要な場合は、[XTTS v2](https://huggingface.co/coqui/XTTS-v2)がそのために作られています — その(非商用の)ライセンス条件についてはPromptQuorumの[ローカルTTSライセンスガイド](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照してください。',
+          '**表現豊かで感情的な、あるいは数秒での声のクローン。** Piperは事前学習済みの声モデルから音声を合成するのであって、特定の人物の短い参照音声から合成するわけではありません。数秒のサンプル音声から声をクローンしたい、あるいはより感情豊かな発話が必要な場合は、[XTTS v2](https://huggingface.co/coqui/XTTS-v2)がそのために作られています — その(非商用の)ライセンス条件についてはPromptQuorumの[ローカルTTSライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照してください。',
           '**短いサンプルからのマルチスピーカー・クローン。** 同様に、Piperには特定の話者の音声サンプルからその場で新しい声を生成する仕組みは組み込まれていません。各声は個別に学習・配布されたモデルです。',
           '**クローズドソース製品におけるGPL-3.0コピーレフトの義務。** Piper自身のソースコードを改変してクローズドソースのバイナリの中で配布するようなユースケースの場合、現行リポジトリのGPL-3.0-or-laterライセンスは、元のMITライセンスのリポジトリにはなかった実質的な制約となります。上記のライセンスとコストのセクションを確認し、そのような導入の前に弁護士に相談してください。',
           '**すべての言語で一貫した音声品質の保証。** 声は異なるコミュニティメンバーによって学習・提供されているため、言語や声によって品質が大きく異なります — 本番アプリケーションでPiperの採用を決める前に、対象言語のサンプルを確認してください。',
@@ -1784,7 +1784,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: '総評',
         content:
-          'Piperは今も、控えめなハードウェア上で本物のローカル音声合成を動かす最速の手段の一つであり続けています。そのCPUのみでのリアルタイム性能こそがHome Assistantの標準の声となった理由であり、それは新しい保守体制の下でも変わっていません。変わったのは、そして2026年にPiperを評価するすべての人が知っておくべきなのは、ライセンスです。実際に保守されているリポジトリは、2025年にOpen Home Foundationへ開発が移行した際にMITからGPL-3.0-or-laterへ変わりました。これは、改変したPiperのソースコードをクローズドソース製品に組み込んで配布しようとしている人にとって実質的な違いです。それでも無料で、十分に文書化されており、活発にリリースが続いています(2026年9月時点でv1.8.0)。プロジェクト自身のメンテナーが公然と追加の協力者を求めている点は留意すべきですが。CPUクラスのハードウェア上で高速・オフライン・汎用的な音声合成を求めるなら、Piperはよく検証された無料の選択肢です — 数秒での表現豊かな声のクローンが必要な場合は、本レビューとあわせてPromptQuorumの[XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)の解説や、マネージド・クラウドの代替との比較である[ElevenLabs対ローカルTTS比較](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)も参照してください。',
+          'Piperは今も、控えめなハードウェア上で本物のローカル音声合成を動かす最速の手段の一つであり続けています。そのCPUのみでのリアルタイム性能こそがHome Assistantの標準の声となった理由であり、それは新しい保守体制の下でも変わっていません。変わったのは、そして2026年にPiperを評価するすべての人が知っておくべきなのは、ライセンスです。実際に保守されているリポジトリは、2025年にOpen Home Foundationへ開発が移行した際にMITからGPL-3.0-or-laterへ変わりました。これは、改変したPiperのソースコードをクローズドソース製品に組み込んで配布しようとしている人にとって実質的な違いです。それでも無料で、十分に文書化されており、活発にリリースが続いています(2026年9月時点でv1.8.0)。プロジェクト自身のメンテナーが公然と追加の協力者を求めている点は留意すべきですが。CPUクラスのハードウェア上で高速・オフライン・汎用的な音声合成を求めるなら、Piperはよく検証された無料の選択肢です — 数秒での表現豊かな声のクローンが必要な場合は、本レビューとあわせてPromptQuorumの[XTTS v2](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)の解説や、マネージド・クラウドの代替との比較である[ElevenLabs対ローカルTTS比較](/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)も参照してください。',
       },
       sources: {
         id: 'sources',
@@ -1801,11 +1801,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルTTSと声のクローンのライセンス:Piper、XTTS v2、F5-TTS、Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 主要なローカルTTSエンジン全体のライセンス比較。',
-          '[ElevenLabs対Piper対XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 自前ホスティングを検討する読者向けのクラウド対ローカル比較。',
-          '[2026年版・完全オフライン音声アシスタントの構築](/power-local-llm/build-local-voice-assistant-2026) — Piperをローカルなら LLMおよびWhisperベースのSTTエンジンとつなぎ、完全な音声パイプラインを構築する方法。',
-          '[Whisper.cppレビュー](/power-local-llm/whisper-cpp-review) — 同じ深さで解説したローカル音声認識の対となる記事。',
-          '[faster-whisperレビュー](/power-local-llm/faster-whisper-review) — 同じ深さで解説したCTranslate2ベースの音声認識の代替。',
+          '[ローカルTTSと声のクローンのライセンス:Piper、XTTS v2、F5-TTS、Coqui](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 主要なローカルTTSエンジン全体のライセンス比較。',
+          '[ElevenLabs対Piper対XTTS v2](/ja/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 自前ホスティングを検討する読者向けのクラウド対ローカル比較。',
+          '[2026年版・完全オフライン音声アシスタントの構築](/ja/power-local-llm/build-local-voice-assistant-2026) — Piperをローカルなら LLMおよびWhisperベースのSTTエンジンとつなぎ、完全な音声パイプラインを構築する方法。',
+          '[Whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review) — 同じ深さで解説したローカル音声認識の対となる記事。',
+          '[faster-whisperレビュー](/ja/power-local-llm/faster-whisper-review) — 同じ深さで解説したCTranslate2ベースの音声認識の代替。',
         ],
       },
     },
@@ -1876,7 +1876,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**O Piper é um mecanismo de síntese de voz neural local e gratuito, criado dentro do projeto de assistente de voz Rhasspy por Michael Hansen, hoje mantido pela Open Home Foundation em [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), rápido o suficiente para rodar em tempo real em hardware somente com CPU, como um Raspberry Pi.** Instale com `pip install piper-tts`. Desde 2025, o repositório ativamente mantido está sob a licença GPL-3.0-or-later — uma mudança em relação à licença MIT do repositório original `rhasspy/piper`, agora arquivado. Para uma análise de licenças entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark e StyleTTS 2, veja o [guia de licenças de TTS local](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
+      '**O Piper é um mecanismo de síntese de voz neural local e gratuito, criado dentro do projeto de assistente de voz Rhasspy por Michael Hansen, hoje mantido pela Open Home Foundation em [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), rápido o suficiente para rodar em tempo real em hardware somente com CPU, como um Raspberry Pi.** Instale com `pip install piper-tts`. Desde 2025, o repositório ativamente mantido está sob a licença GPL-3.0-or-later — uma mudança em relação à licença MIT do repositório original `rhasspy/piper`, agora arquivado. Para uma análise de licenças entre Piper, Coqui TTS, XTTS v2, F5-TTS, Bark e StyleTTS 2, veja o [guia de licenças de TTS local](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
     quickAnswerTop: {
       en: {
         question: 'O que é o Piper TTS e ele ainda é mantido?',
@@ -2070,7 +2070,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'O Piper é um mecanismo de síntese de voz local rápido e de propósito geral, não uma ferramenta de clonagem de voz ou fala expressiva. É a ferramenta errada nas seguintes situações:',
         ],
         items: [
-          '**Clonagem de voz expressiva, emocional ou a partir de poucos segundos.** O Piper sintetiza fala a partir de modelos de voz pré-treinados, não a partir de um trecho curto de áudio de referência de uma pessoa específica. Se você precisa clonar uma voz a partir de poucos segundos de áudio de amostra, ou quer uma entonação mais expressiva, o [XTTS v2](https://huggingface.co/coqui/XTTS-v2) foi feito para isso — veja o [guia de licenças de TTS local](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum para seus termos de licença (não comercial).',
+          '**Clonagem de voz expressiva, emocional ou a partir de poucos segundos.** O Piper sintetiza fala a partir de modelos de voz pré-treinados, não a partir de um trecho curto de áudio de referência de uma pessoa específica. Se você precisa clonar uma voz a partir de poucos segundos de áudio de amostra, ou quer uma entonação mais expressiva, o [XTTS v2](https://huggingface.co/coqui/XTTS-v2) foi feito para isso — veja o [guia de licenças de TTS local](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum para seus termos de licença (não comercial).',
           '**Clonagem multi-falante a partir de uma amostra curta.** Da mesma forma, o Piper não tem nenhum mecanismo integrado para gerar na hora uma nova voz a partir de uma amostra de áudio de um falante específico; cada voz é um modelo treinado e distribuído separadamente.',
           '**Obrigações copyleft da GPL-3.0 em um produto de código fechado.** Se o seu caso de uso envolve modificar e redistribuir o próprio código-fonte do Piper dentro de um binário de código fechado, a licença GPL-3.0-or-later do repositório atual é uma restrição real que o repositório original, licenciado sob MIT, não tinha. Revise a seção Licença e custo acima e consulte um advogado antes desse tipo de implantação.',
           '**Qualidade de voz garantida e consistente em todos os idiomas.** Como as vozes são treinadas e contribuídas por diferentes membros da comunidade, a qualidade varia perceptivelmente por idioma e por voz específica — verifique amostras do seu idioma alvo antes de se comprometer com o Piper para uma aplicação de produção.',
@@ -2152,7 +2152,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Piper continua sendo uma das formas mais rápidas de obter síntese de voz local de verdade em hardware modesto — seu desempenho em tempo real somente com CPU foi o que o tornou a voz padrão do Home Assistant, e isso não mudou sob seus novos mantenedores. O que mudou, e o que todo leitor que avaliar o Piper em 2026 precisa saber, é a licença: o repositório ativamente mantido passou de MIT para GPL-3.0-or-later quando o desenvolvimento migrou para a Open Home Foundation em 2025, uma diferença real para quem planeja incorporar e redistribuir código-fonte modificado do Piper em um produto de código fechado. Ele continua gratuito, bem documentado e com lançamentos ativos (v1.8.0 até setembro de 2026), embora seus próprios mantenedores estejam abertamente buscando mais ajuda. Para síntese de voz rápida, offline e de propósito geral em hardware de classe CPU, o Piper é uma escolha bem verificada e sem custo — para clonagem de voz expressiva em poucos segundos, combine esta análise com a cobertura da PromptQuorum sobre o [XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ou compare com a alternativa gerenciada na nuvem na [comparação ElevenLabs vs TTS local](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
+          'O Piper continua sendo uma das formas mais rápidas de obter síntese de voz local de verdade em hardware modesto — seu desempenho em tempo real somente com CPU foi o que o tornou a voz padrão do Home Assistant, e isso não mudou sob seus novos mantenedores. O que mudou, e o que todo leitor que avaliar o Piper em 2026 precisa saber, é a licença: o repositório ativamente mantido passou de MIT para GPL-3.0-or-later quando o desenvolvimento migrou para a Open Home Foundation em 2025, uma diferença real para quem planeja incorporar e redistribuir código-fonte modificado do Piper em um produto de código fechado. Ele continua gratuito, bem documentado e com lançamentos ativos (v1.8.0 até setembro de 2026), embora seus próprios mantenedores estejam abertamente buscando mais ajuda. Para síntese de voz rápida, offline e de propósito geral em hardware de classe CPU, o Piper é uma escolha bem verificada e sem custo — para clonagem de voz expressiva em poucos segundos, combine esta análise com a cobertura da PromptQuorum sobre o [XTTS v2](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) ou compare com a alternativa gerenciada na nuvem na [comparação ElevenLabs vs TTS local](/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
       },
       sources: {
         id: 'sources',
@@ -2169,11 +2169,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Licenças de TTS e clonagem de voz local: Piper, XTTS v2, F5-TTS e Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — a análise de licenças de todos os principais mecanismos TTS locais.',
-          '[ElevenLabs vs Piper vs XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — a comparação nuvem vs local para quem está decidindo se deve se autoalojar.',
-          '[Construir um assistente de voz totalmente offline em 2026](/power-local-llm/build-local-voice-assistant-2026) — conectar o Piper a um LLM local e a um mecanismo STT baseado em Whisper em um pipeline de voz completo.',
-          '[Análise do Whisper.cpp](/power-local-llm/whisper-cpp-review) — o equivalente local de reconhecimento de voz, analisado com o mesmo nível de detalhe.',
-          '[Análise do faster-whisper](/power-local-llm/faster-whisper-review) — a alternativa de reconhecimento de voz baseada em CTranslate2, analisada com o mesmo nível de detalhe.',
+          '[Licenças de TTS e clonagem de voz local: Piper, XTTS v2, F5-TTS e Coqui](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — a análise de licenças de todos os principais mecanismos TTS locais.',
+          '[ElevenLabs vs Piper vs XTTS v2](/pt/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — a comparação nuvem vs local para quem está decidindo se deve se autoalojar.',
+          '[Construir um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — conectar o Piper a um LLM local e a um mecanismo STT baseado em Whisper em um pipeline de voz completo.',
+          '[Análise do Whisper.cpp](/pt/power-local-llm/whisper-cpp-review) — o equivalente local de reconhecimento de voz, analisado com o mesmo nível de detalhe.',
+          '[Análise do faster-whisper](/pt/power-local-llm/faster-whisper-review) — a alternativa de reconhecimento de voz baseada em CTranslate2, analisada com o mesmo nível de detalhe.',
         ],
       },
     },
@@ -2243,7 +2243,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper هو محرك تحويل نص إلى كلام عصبي محلي ومجاني، نشأ ضمن مشروع المساعد الصوتي Rhasspy على يد Michael Hansen، وتصونه اليوم Open Home Foundation عبر [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)، وهو سريع بما يكفي للعمل في الوقت الفعلي على أجهزة تعتمد على CPU فقط مثل Raspberry Pi.** التثبيت عبر `pip install piper-tts`. منذ عام 2025، يخضع المستودع الذي يُصان فعليًا لرخصة GPL-3.0-or-later — وهو تغيير عن رخصة MIT الخاصة بالمستودع الأصلي `rhasspy/piper`، المؤرشف الآن. للاطلاع على مقارنة رخص بين Piper وCoqui TTS وXTTS v2 وF5-TTS وBark وStyleTTS 2، راجع [دليل رخص TTS المحلي](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
+      '**Piper هو محرك تحويل نص إلى كلام عصبي محلي ومجاني، نشأ ضمن مشروع المساعد الصوتي Rhasspy على يد Michael Hansen، وتصونه اليوم Open Home Foundation عبر [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)، وهو سريع بما يكفي للعمل في الوقت الفعلي على أجهزة تعتمد على CPU فقط مثل Raspberry Pi.** التثبيت عبر `pip install piper-tts`. منذ عام 2025، يخضع المستودع الذي يُصان فعليًا لرخصة GPL-3.0-or-later — وهو تغيير عن رخصة MIT الخاصة بالمستودع الأصلي `rhasspy/piper`، المؤرشف الآن. للاطلاع على مقارنة رخص بين Piper وCoqui TTS وXTTS v2 وF5-TTS وBark وStyleTTS 2، راجع [دليل رخص TTS المحلي](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
     quickAnswerTop: {
       en: {
         question: 'ما هو Piper TTS، وهل لا يزال يُصان؟',
@@ -2437,7 +2437,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper محرك تحويل نص إلى كلام محلي سريع وعام الغرض، وليس أداة استنساخ صوتي أو كلام معبّر. إنه الأداة الخاطئة في الحالات التالية:',
         ],
         items: [
-          '**الاستنساخ الصوتي المعبّر أو العاطفي أو من ثوانٍ قليلة.** يولّف Piper الكلام من نماذج صوتية مدرَّبة مسبقًا، وليس من مقطع صوتي مرجعي قصير لشخص محدد. إذا كنت بحاجة إلى استنساخ صوت من ثوانٍ قليلة من عينة صوتية، أو تريد أداءً أكثر تعبيرًا، فإن [XTTS v2](https://huggingface.co/coqui/XTTS-v2) مصمَّم لذلك — راجع [دليل رخص TTS المحلي](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum للاطلاع على شروط رخصته (غير التجارية).',
+          '**الاستنساخ الصوتي المعبّر أو العاطفي أو من ثوانٍ قليلة.** يولّف Piper الكلام من نماذج صوتية مدرَّبة مسبقًا، وليس من مقطع صوتي مرجعي قصير لشخص محدد. إذا كنت بحاجة إلى استنساخ صوت من ثوانٍ قليلة من عينة صوتية، أو تريد أداءً أكثر تعبيرًا، فإن [XTTS v2](https://huggingface.co/coqui/XTTS-v2) مصمَّم لذلك — راجع [دليل رخص TTS المحلي](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum للاطلاع على شروط رخصته (غير التجارية).',
           '**استنساخ متعدد المتحدثين من عينة قصيرة.** وبالمثل، لا تتوفر لدى Piper آلية مدمجة لتوليد صوت جديد فوريًا من عينة صوتية لمتحدث معين؛ فكل صوت هو نموذج مدرَّب وموزَّع بشكل منفصل.',
           '**التزامات copyleft الخاصة بـGPL-3.0 في منتج مغلق المصدر.** إذا كانت حالة استخدامك تتضمن تعديل الكود المصدري لـPiper نفسه وإعادة توزيعه داخل ملف ثنائي مغلق المصدر، فإن رخصة GPL-3.0-or-later للمستودع الحالي تمثل قيدًا حقيقيًا لم يكن موجودًا في المستودع الأصلي المرخّص بموجب MIT. راجع قسم الرخصة والتكلفة أعلاه واستشر محاميًا قبل هذا النوع من النشر.',
           '**جودة صوتية مضمونة ومتسقة عبر جميع اللغات.** بما أن الأصوات مدرَّبة ومساهَم بها من أعضاء مختلفين في المجتمع، تتفاوت الجودة بشكل ملحوظ حسب اللغة والصوت المحدد — تحقق من عينات للغة المستهدفة قبل الالتزام بـPiper لتطبيق إنتاجي.',
@@ -2519,7 +2519,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يظل Piper من أسرع الطرق للحصول على تحويل نص إلى كلام محلي حقيقي على عتاد متواضع — أداؤه في الوقت الفعلي على CPU فقط هو ما جعله الصوت الافتراضي لـHome Assistant، ولم يتغيّر ذلك تحت الصائنين الجدد. أما ما تغيّر، وما يحتاج كل من يقيّم Piper في 2026 إلى معرفته، فهو الرخصة: انتقل المستودع الذي يُصان فعليًا من MIT إلى GPL-3.0-or-later عند انتقال التطوير إلى Open Home Foundation في 2025، وهذا فرق حقيقي لمن يخطط لدمج وإعادة توزيع كود Piper المصدري المعدَّل داخل منتج مغلق المصدر. يظل مجانيًا وموثَّقًا جيدًا ونشط الإصدارات (v1.8.0 حتى سبتمبر 2026)، رغم أن صائنيه أنفسهم يطلبون علنًا مزيدًا من المساعدة. بالنسبة لتحويل نص إلى كلام سريع وغير متصل وعام الغرض على عتاد من فئة CPU، يُعد Piper خيارًا موثَّقًا جيدًا وبلا تكلفة — أما للاستنساخ الصوتي المعبّر في ثوانٍ قليلة، فاقرن هذه المراجعة بتغطية PromptQuorum لـ[XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) أو قارن مع البديل السحابي المُدار في [مقارنة ElevenLabs مقابل TTS المحلي](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
+          'يظل Piper من أسرع الطرق للحصول على تحويل نص إلى كلام محلي حقيقي على عتاد متواضع — أداؤه في الوقت الفعلي على CPU فقط هو ما جعله الصوت الافتراضي لـHome Assistant، ولم يتغيّر ذلك تحت الصائنين الجدد. أما ما تغيّر، وما يحتاج كل من يقيّم Piper في 2026 إلى معرفته، فهو الرخصة: انتقل المستودع الذي يُصان فعليًا من MIT إلى GPL-3.0-or-later عند انتقال التطوير إلى Open Home Foundation في 2025، وهذا فرق حقيقي لمن يخطط لدمج وإعادة توزيع كود Piper المصدري المعدَّل داخل منتج مغلق المصدر. يظل مجانيًا وموثَّقًا جيدًا ونشط الإصدارات (v1.8.0 حتى سبتمبر 2026)، رغم أن صائنيه أنفسهم يطلبون علنًا مزيدًا من المساعدة. بالنسبة لتحويل نص إلى كلام سريع وغير متصل وعام الغرض على عتاد من فئة CPU، يُعد Piper خيارًا موثَّقًا جيدًا وبلا تكلفة — أما للاستنساخ الصوتي المعبّر في ثوانٍ قليلة، فاقرن هذه المراجعة بتغطية PromptQuorum لـ[XTTS v2](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) أو قارن مع البديل السحابي المُدار في [مقارنة ElevenLabs مقابل TTS المحلي](/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts).',
       },
       sources: {
         id: 'sources',
@@ -2536,11 +2536,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[رخص TTS المحلي والاستنساخ الصوتي: Piper وXTTS v2 وF5-TTS وCoqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة الرخص عبر أهم محركات TTS المحلية.',
-          '[ElevenLabs مقابل Piper مقابل XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — مقارنة السحابة مقابل المحلي لمن يقرر الاستضافة الذاتية.',
-          '[بناء مساعد صوتي غير متصل بالكامل في 2026](/power-local-llm/build-local-voice-assistant-2026) — ربط Piper بنموذج لغوي محلي ومحرك تعرف صوتي قائم على Whisper لإنشاء خط أنابيب صوتي كامل.',
-          '[مراجعة Whisper.cpp](/power-local-llm/whisper-cpp-review) — نظير التعرف الصوتي المحلي، بنفس مستوى التفصيل.',
-          '[مراجعة faster-whisper](/power-local-llm/faster-whisper-review) — بديل التعرف الصوتي المعتمد على CTranslate2، بنفس مستوى التفصيل.',
+          '[رخص TTS المحلي والاستنساخ الصوتي: Piper وXTTS v2 وF5-TTS وCoqui](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة الرخص عبر أهم محركات TTS المحلية.',
+          '[ElevenLabs مقابل Piper مقابل XTTS v2](/ar/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — مقارنة السحابة مقابل المحلي لمن يقرر الاستضافة الذاتية.',
+          '[بناء مساعد صوتي غير متصل بالكامل في 2026](/ar/power-local-llm/build-local-voice-assistant-2026) — ربط Piper بنموذج لغوي محلي ومحرك تعرف صوتي قائم على Whisper لإنشاء خط أنابيب صوتي كامل.',
+          '[مراجعة Whisper.cpp](/ar/power-local-llm/whisper-cpp-review) — نظير التعرف الصوتي المحلي، بنفس مستوى التفصيل.',
+          '[مراجعة faster-whisper](/ar/power-local-llm/faster-whisper-review) — بديل التعرف الصوتي المعتمد على CTranslate2، بنفس مستوى التفصيل.',
         ],
       },
     },
@@ -2610,7 +2610,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper是一款免费的本地神经网络语音合成引擎,由Michael Hansen在Rhasspy语音助手项目中创建,现由Open Home Foundation在[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)维护,速度快到足以在纯CPU硬件(如Raspberry Pi)上实时运行。** 使用`pip install piper-tts`安装。自2025年起,实际维护的仓库采用GPL-3.0-or-later许可证——相较于已归档的原始仓库`rhasspy/piper`的MIT许可证,这是一次变更。关于Piper、Coqui TTS、XTTS v2、F5-TTS、Bark和StyleTTS 2的许可证对比,参见PromptQuorum的[本地TTS许可证指南](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
+      '**Piper是一款免费的本地神经网络语音合成引擎,由Michael Hansen在Rhasspy语音助手项目中创建,现由Open Home Foundation在[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)维护,速度快到足以在纯CPU硬件(如Raspberry Pi)上实时运行。** 使用`pip install piper-tts`安装。自2025年起,实际维护的仓库采用GPL-3.0-or-later许可证——相较于已归档的原始仓库`rhasspy/piper`的MIT许可证,这是一次变更。关于Piper、Coqui TTS、XTTS v2、F5-TTS、Bark和StyleTTS 2的许可证对比,参见PromptQuorum的[本地TTS许可证指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
     quickAnswerTop: {
       en: {
         question: 'Piper TTS是什么?它还在维护吗?',
@@ -2804,7 +2804,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper是一款快速、通用的本地语音合成引擎,而不是语音克隆或富有表现力的语音工具。在以下情况下,它并不是合适的选择:',
         ],
         items: [
-          '**富有表现力、情感化或短短几秒钟内完成的语音克隆。** Piper是从预训练的语音模型合成语音,而不是从特定人物的简短参考音频克隆而来。如果你需要从几秒钟的样本音频克隆一个声音,或需要更具表现力的语调,[XTTS v2](https://huggingface.co/coqui/XTTS-v2)正是为此而设计——关于其(非商业)许可条款,参见PromptQuorum的[本地TTS许可证指南](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
+          '**富有表现力、情感化或短短几秒钟内完成的语音克隆。** Piper是从预训练的语音模型合成语音,而不是从特定人物的简短参考音频克隆而来。如果你需要从几秒钟的样本音频克隆一个声音,或需要更具表现力的语调,[XTTS v2](https://huggingface.co/coqui/XTTS-v2)正是为此而设计——关于其(非商业)许可条款,参见PromptQuorum的[本地TTS许可证指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
           '**从简短样本进行多说话人克隆。** 同样,Piper没有内置机制可以从特定说话人的音频样本即时生成新语音;每个语音都是单独训练并分发的模型。',
           '**闭源产品中的GPL-3.0著佐权义务。** 如果你的使用场景涉及修改并在闭源二进制文件中重新分发Piper自身的源代码,当前仓库的GPL-3.0-or-later许可证是一个实质性限制,而原始的MIT许可证仓库没有这一限制。请查阅上文的许可证与成本部分,并在此类部署前咨询律师。',
           '**跨所有语言保证一致的语音质量。** 由于语音由不同社区成员训练和贡献,质量会因语言和具体语音而明显不同——在生产应用中采用Piper之前,请先检查目标语言的样本。',
@@ -2886,7 +2886,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: '结论',
         content:
-          'Piper依然是在配置一般的硬件上获得真正本地语音合成的最快方式之一——它仅靠CPU即可实时运行的性能,正是它成为Home Assistant默认语音的原因,而这一点在新的维护者接手后并未改变。真正改变的、也是每个在2026年评估Piper的人都需要知道的,是许可证:实际维护的仓库在2025年随开发转移到Open Home Foundation时,从MIT变为了GPL-3.0-or-later,这对任何计划将修改后的Piper源代码集成并重新分发到闭源产品中的人而言,都是实质性的差异。它依然免费、文档完善,并保持活跃发布(截至2026年9月为v1.8.0),尽管其维护者自己也在公开寻求更多帮助。对于在CPU级硬件上进行快速、离线、通用的语音合成而言,Piper是一个经过充分验证且零成本的选择——如果需要几秒钟内完成的富有表现力的语音克隆,可以将本评测与PromptQuorum关于[XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)的报道结合阅读,或参考[ElevenLabs与本地TTS对比](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)中的托管云端替代方案。',
+          'Piper依然是在配置一般的硬件上获得真正本地语音合成的最快方式之一——它仅靠CPU即可实时运行的性能,正是它成为Home Assistant默认语音的原因,而这一点在新的维护者接手后并未改变。真正改变的、也是每个在2026年评估Piper的人都需要知道的,是许可证:实际维护的仓库在2025年随开发转移到Open Home Foundation时,从MIT变为了GPL-3.0-or-later,这对任何计划将修改后的Piper源代码集成并重新分发到闭源产品中的人而言,都是实质性的差异。它依然免费、文档完善,并保持活跃发布(截至2026年9月为v1.8.0),尽管其维护者自己也在公开寻求更多帮助。对于在CPU级硬件上进行快速、离线、通用的语音合成而言,Piper是一个经过充分验证且零成本的选择——如果需要几秒钟内完成的富有表现力的语音克隆,可以将本评测与PromptQuorum关于[XTTS v2](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)的报道结合阅读,或参考[ElevenLabs与本地TTS对比](/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)中的托管云端替代方案。',
       },
       sources: {
         id: 'sources',
@@ -2903,11 +2903,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地TTS与语音克隆许可证:Piper、XTTS v2、F5-TTS与Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) —— 覆盖所有主要本地TTS引擎的许可证深度对比。',
-          '[ElevenLabs对比Piper对比XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) —— 面向决定是否自行托管的读者的云端与本地对比。',
-          '[2026年打造完全离线的语音助手](/power-local-llm/build-local-voice-assistant-2026) —— 将Piper与本地LLM及基于Whisper的STT引擎连接,构建完整语音流程。',
-          '[Whisper.cpp评测](/power-local-llm/whisper-cpp-review) —— 同等深度的本地语音识别对应产品评测。',
-          '[faster-whisper评测](/power-local-llm/faster-whisper-review) —— 同等深度评测的基于CTranslate2的语音识别替代方案。',
+          '[本地TTS与语音克隆许可证:Piper、XTTS v2、F5-TTS与Coqui](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) —— 覆盖所有主要本地TTS引擎的许可证深度对比。',
+          '[ElevenLabs对比Piper对比XTTS v2](/zh/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) —— 面向决定是否自行托管的读者的云端与本地对比。',
+          '[2026年打造完全离线的语音助手](/zh/power-local-llm/build-local-voice-assistant-2026) —— 将Piper与本地LLM及基于Whisper的STT引擎连接,构建完整语音流程。',
+          '[Whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review) —— 同等深度的本地语音识别对应产品评测。',
+          '[faster-whisper评测](/zh/power-local-llm/faster-whisper-review) —— 同等深度评测的基于CTranslate2的语音识别替代方案。',
         ],
       },
     },
@@ -2978,7 +2978,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     current_models_mentioned: ['en_US-lessac-medium', 'en_US-amy-medium'],
     current_hardware_mentioned: ['CPU', 'Raspberry Pi', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Piper는 Michael Hansen이 Rhasspy 음성 비서 프로젝트 안에서 만든 무료 로컬 신경망 음성 합성 엔진으로, 현재는 Open Home Foundation이 [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)에서 관리하고 있으며, Raspberry Pi 같은 CPU 전용 하드웨어에서도 실시간으로 동작할 만큼 빠릅니다.** `pip install piper-tts`로 설치합니다. 2025년 이후 실제로 관리되는 저장소는 GPL-3.0-or-later 라이선스를 따르며, 이는 아카이브된 원래 저장소 `rhasspy/piper`의 MIT 라이선스에서 바뀐 것입니다. Piper, Coqui TTS, XTTS v2, F5-TTS, Bark, StyleTTS 2의 라이선스 비교는 PromptQuorum의 [로컬 TTS 라이선스 가이드](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하십시오.',
+      '**Piper는 Michael Hansen이 Rhasspy 음성 비서 프로젝트 안에서 만든 무료 로컬 신경망 음성 합성 엔진으로, 현재는 Open Home Foundation이 [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)에서 관리하고 있으며, Raspberry Pi 같은 CPU 전용 하드웨어에서도 실시간으로 동작할 만큼 빠릅니다.** `pip install piper-tts`로 설치합니다. 2025년 이후 실제로 관리되는 저장소는 GPL-3.0-or-later 라이선스를 따르며, 이는 아카이브된 원래 저장소 `rhasspy/piper`의 MIT 라이선스에서 바뀐 것입니다. Piper, Coqui TTS, XTTS v2, F5-TTS, Bark, StyleTTS 2의 라이선스 비교는 PromptQuorum의 [로컬 TTS 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하십시오.',
     quickAnswerTop: {
       en: {
         question: 'Piper TTS란 무엇이며, 지금도 관리되고 있습니까?',
@@ -3172,7 +3172,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           'Piper는 빠르고 범용적인 로컬 음성 합성 엔진이지, 음성 클로닝이나 표현력 있는 발화를 위한 도구가 아닙니다. 다음과 같은 상황에서는 적합하지 않습니다:',
         ],
         items: [
-          '**표현력 있고 감정적인, 또는 몇 초 안에 이루어지는 음성 클로닝.** Piper는 사전 학습된 음성 모델로부터 음성을 합성하는 것이지, 특정 인물의 짧은 참조 오디오 클립으로부터 합성하는 것이 아닙니다. 몇 초의 샘플 오디오로 음성을 클로닝해야 하거나 더 표현력 있는 발화가 필요하다면, [XTTS v2](https://huggingface.co/coqui/XTTS-v2)가 그 목적을 위해 만들어졌습니다 — 그 (비상업적) 라이선스 조건은 PromptQuorum의 [로컬 TTS 라이선스 가이드](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하십시오.',
+          '**표현력 있고 감정적인, 또는 몇 초 안에 이루어지는 음성 클로닝.** Piper는 사전 학습된 음성 모델로부터 음성을 합성하는 것이지, 특정 인물의 짧은 참조 오디오 클립으로부터 합성하는 것이 아닙니다. 몇 초의 샘플 오디오로 음성을 클로닝해야 하거나 더 표현력 있는 발화가 필요하다면, [XTTS v2](https://huggingface.co/coqui/XTTS-v2)가 그 목적을 위해 만들어졌습니다 — 그 (비상업적) 라이선스 조건은 PromptQuorum의 [로컬 TTS 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하십시오.',
           '**짧은 샘플로부터의 다중 화자 클로닝.** 마찬가지로 Piper에는 특정 화자의 오디오 샘플로부터 즉석에서 새 음성을 생성하는 내장 메커니즘이 없습니다. 각 음성은 별도로 학습되고 배포되는 모델입니다.',
           '**폐쇄 소스 제품에서의 GPL-3.0 카피레프트 의무.** Piper 자체 소스 코드를 수정해 폐쇄 소스 바이너리 안에서 배포하는 사용 사례라면, 현재 저장소의 GPL-3.0-or-later 라이선스는 원래 MIT 라이선스 저장소에는 없던 실질적인 제약입니다. 위의 라이선스와 비용 섹션을 검토하고, 그런 종류의 배포를 하기 전에 변호사와 상담하십시오.',
           '**모든 언어에서 일관되게 보장되는 음성 품질.** 음성은 서로 다른 커뮤니티 구성원이 학습시키고 기여하기 때문에, 언어와 특정 음성에 따라 품질이 눈에 띄게 다릅니다 — 프로덕션 애플리케이션에 Piper를 채택하기 전에 대상 언어의 샘플을 확인하십시오.',
@@ -3254,7 +3254,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'verdict',
         title: '결론',
         content:
-          'Piper는 여전히 평범한 하드웨어에서 진짜 로컬 음성 합성을 구현하는 가장 빠른 방법 중 하나로 남아 있습니다 — CPU만으로도 실시간으로 동작하는 성능 덕분에 Home Assistant의 기본 음성이 되었고, 새로운 관리자 체제 아래에서도 이는 변하지 않았습니다. 변한 것, 그리고 2026년에 Piper를 평가하는 모든 사람이 알아야 할 것은 라이선스입니다. 2025년 개발이 Open Home Foundation으로 이전하면서 실제로 관리되는 저장소는 MIT에서 GPL-3.0-or-later로 바뀌었으며, 이는 수정된 Piper 소스 코드를 폐쇄 소스 제품에 통합해 재배포하려는 사람에게 실질적인 차이입니다. Piper는 여전히 무료이고, 문서화가 잘 되어 있으며, 활발히 릴리스되고 있습니다(2026년 9월 기준 v1.8.0). 다만 그 관리자들 스스로도 공개적으로 더 많은 도움을 구하고 있습니다. CPU급 하드웨어에서 빠르고 오프라인이며 범용적인 음성 합성을 원한다면, Piper는 충분히 검증된 무비용 선택지입니다 — 몇 초 안에 이루어지는 표현력 있는 음성 클로닝이 필요하다면, 이 리뷰와 함께 PromptQuorum의 [XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) 관련 콘텐츠를 참고하거나, 관리형 클라우드 대안과 비교한 [ElevenLabs 대 로컬 TTS 비교](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 참고하십시오.',
+          'Piper는 여전히 평범한 하드웨어에서 진짜 로컬 음성 합성을 구현하는 가장 빠른 방법 중 하나로 남아 있습니다 — CPU만으로도 실시간으로 동작하는 성능 덕분에 Home Assistant의 기본 음성이 되었고, 새로운 관리자 체제 아래에서도 이는 변하지 않았습니다. 변한 것, 그리고 2026년에 Piper를 평가하는 모든 사람이 알아야 할 것은 라이선스입니다. 2025년 개발이 Open Home Foundation으로 이전하면서 실제로 관리되는 저장소는 MIT에서 GPL-3.0-or-later로 바뀌었으며, 이는 수정된 Piper 소스 코드를 폐쇄 소스 제품에 통합해 재배포하려는 사람에게 실질적인 차이입니다. Piper는 여전히 무료이고, 문서화가 잘 되어 있으며, 활발히 릴리스되고 있습니다(2026년 9월 기준 v1.8.0). 다만 그 관리자들 스스로도 공개적으로 더 많은 도움을 구하고 있습니다. CPU급 하드웨어에서 빠르고 오프라인이며 범용적인 음성 합성을 원한다면, Piper는 충분히 검증된 무비용 선택지입니다 — 몇 초 안에 이루어지는 표현력 있는 음성 클로닝이 필요하다면, 이 리뷰와 함께 PromptQuorum의 [XTTS v2](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) 관련 콘텐츠를 참고하거나, 관리형 클라우드 대안과 비교한 [ElevenLabs 대 로컬 TTS 비교](/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts)를 참고하십시오.',
       },
       sources: {
         id: 'sources',
@@ -3271,11 +3271,11 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 TTS 및 음성 클로닝 라이선스: Piper, XTTS v2, F5-TTS, Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 주요 로컬 TTS 엔진 전체를 다루는 라이선스 비교.',
-          '[ElevenLabs 대 Piper 대 XTTS v2](/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 자체 호스팅 여부를 결정하려는 독자를 위한 클라우드 대 로컬 비교.',
-          '[2026년 완전 오프라인 음성 비서 구축하기](/power-local-llm/build-local-voice-assistant-2026) — Piper를 로컬 LLM 및 Whisper 기반 STT 엔진과 연결해 완전한 음성 파이프라인을 구축하는 방법.',
-          '[Whisper.cpp 리뷰](/power-local-llm/whisper-cpp-review) — 동일한 깊이로 다룬 로컬 음성 인식 대응 제품 리뷰.',
-          '[faster-whisper 리뷰](/power-local-llm/faster-whisper-review) — 동일한 깊이로 다룬 CTranslate2 기반 음성 인식 대안.',
+          '[로컬 TTS 및 음성 클로닝 라이선스: Piper, XTTS v2, F5-TTS, Coqui](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 주요 로컬 TTS 엔진 전체를 다루는 라이선스 비교.',
+          '[ElevenLabs 대 Piper 대 XTTS v2](/ko/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — 자체 호스팅 여부를 결정하려는 독자를 위한 클라우드 대 로컬 비교.',
+          '[2026년 완전 오프라인 음성 비서 구축하기](/ko/power-local-llm/build-local-voice-assistant-2026) — Piper를 로컬 LLM 및 Whisper 기반 STT 엔진과 연결해 완전한 음성 파이프라인을 구축하는 방법.',
+          '[Whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review) — 동일한 깊이로 다룬 로컬 음성 인식 대응 제품 리뷰.',
+          '[faster-whisper 리뷰](/ko/power-local-llm/faster-whisper-review) — 동일한 깊이로 다룬 CTranslate2 기반 음성 인식 대안.',
         ],
       },
     },

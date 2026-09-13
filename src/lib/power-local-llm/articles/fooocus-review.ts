@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigster Kompromiss': 'Kleinere Community als ComfyUI oder AUTOMATIC1111; weniger einsteigerorientiert als Fooocus',
           },
         ],
-        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste. Lizenzen, Sterne-Zahlen und Wartungsstatus wurden am 2026-09-06 direkt anhand des jeweiligen GitHub-Repositorys verifiziert und können sich ändern — siehe [Stable Diffusion Test](/power-local-llm/stable-diffusion-review) für die zugrunde liegende Modellfamilie, auf der dieser Artikel und jede der oben genannten Oberflächen aufbauen.',
+        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste. Lizenzen, Sterne-Zahlen und Wartungsstatus wurden am 2026-09-06 direkt anhand des jeweiligen GitHub-Repositorys verifiziert und können sich ändern — siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review) für die zugrunde liegende Modellfamilie, auf der dieser Artikel und jede der oben genannten Oberflächen aufbauen.',
       },
       whoShouldUse: {
         id: 'who-should-use',

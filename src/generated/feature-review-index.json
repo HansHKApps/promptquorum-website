@@ -609,10 +609,35 @@
     "urlSlug": "animatediff-video-generation-guide",
     "url": "/power-local-llm/animatediff-video-generation-guide"
   },
+  "smart-connections": {
+    "cluster": "power-local-llm",
+    "urlSlug": "smart-connections-review",
+    "url": "/power-local-llm/smart-connections-review"
+  },
   "copilot-for-obsidian": {
     "cluster": "power-local-llm",
     "urlSlug": "copilot-for-obsidian-review",
     "url": "/power-local-llm/copilot-for-obsidian-review"
+  },
+  "text-generator": {
+    "cluster": "power-local-llm",
+    "urlSlug": "text-generator-review",
+    "url": "/power-local-llm/text-generator-review"
+  },
+  "logseq-copilot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "logseq-copilot-review",
+    "url": "/power-local-llm/logseq-copilot-review"
+  },
+  "bmo-chatbot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "bmo-chatbot-review",
+    "url": "/power-local-llm/bmo-chatbot-review"
+  },
+  "joplin-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "joplin-ai-agent-review",
+    "url": "/power-local-llm/joplin-ai-agent-review"
   },
   "autogpt": {
     "cluster": "power-local-llm",
@@ -654,6 +679,21 @@
     "urlSlug": "zed-review",
     "url": "/power-local-llm/zed-review"
   },
+  "lemonade": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lemonade-review",
+    "url": "/power-local-llm/lemonade-review"
+  },
+  "foundry-local": {
+    "cluster": "power-local-llm",
+    "urlSlug": "foundry-local-review",
+    "url": "/power-local-llm/foundry-local-review"
+  },
+  "amd-gaia": {
+    "cluster": "power-local-llm",
+    "urlSlug": "amd-gaia-review",
+    "url": "/power-local-llm/amd-gaia-review"
+  },
   "atomic-agent": {
     "cluster": "power-local-llm",
     "urlSlug": "atomic-agent-review",
@@ -684,6 +724,11 @@
     "urlSlug": "runanywhere-review",
     "url": "/power-local-llm/runanywhere-review"
   },
+  "nvidia-g-assist": {
+    "cluster": "power-local-llm",
+    "urlSlug": "nvidia-g-assist-review",
+    "url": "/power-local-llm/nvidia-g-assist-review"
+  },
   "hyperlink-nexa": {
     "cluster": "power-local-llm",
     "urlSlug": "hyperlink-nexa-review",
@@ -698,6 +743,36 @@
     "cluster": "power-local-llm",
     "urlSlug": "atomic-bot-review",
     "url": "/power-local-llm/atomic-bot-review"
+  },
+  "odysseus": {
+    "cluster": "power-local-llm",
+    "urlSlug": "odysseus-review",
+    "url": "/power-local-llm/odysseus-review"
+  },
+  "exo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "exo-review",
+    "url": "/power-local-llm/exo-review"
+  },
+  "gpustack": {
+    "cluster": "power-local-llm",
+    "urlSlug": "gpustack-review",
+    "url": "/power-local-llm/gpustack-review"
+  },
+  "onyx": {
+    "cluster": "power-local-llm",
+    "urlSlug": "onyx-review",
+    "url": "/power-local-llm/onyx-review"
+  },
+  "phoneclaw": {
+    "cluster": "power-local-llm",
+    "urlSlug": "phoneclaw-review",
+    "url": "/power-local-llm/phoneclaw-review"
+  },
+  "ypipe": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ypipe-review",
+    "url": "/power-local-llm/ypipe-review"
   },
   "n8n": {
     "cluster": "power-local-llm",

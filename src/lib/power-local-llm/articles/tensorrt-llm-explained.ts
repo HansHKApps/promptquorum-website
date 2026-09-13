@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM erklärt: NVIDIAs GPU-optimierte Inference-Engine (2026)',
     seoTitle: 'TensorRT-LLM erklärt: NVIDIAs Inference-Engine (2026)',
-    intro: 'TensorRT-LLM ist eine von NVIDIA unter der Apache-2.0-Lizenz veröffentlichte Open-Source-Bibliothek zum Kompilieren und Optimieren von Large-Language-Model-Inferenz speziell für NVIDIA-GPUs. Statt ein Modell direkt zu laden und auszuführen, wie es [llama.cpp](/power-local-llm/llama-cpp-explained) oder [vLLM](/power-local-llm/vllm-explained) tun, kompiliert TensorRT-LLM ein Modell vorab in eine optimierte „Engine", die aus benutzerdefinierten CUDA-Kernels besteht, die auf eine bestimmte NVIDIA-GPU-Generation zugeschnitten sind. Dieser Kompilierungsschritt ist der Kern des gesamten Designs: Im Austausch für den zusätzlichen Build-Schritt und die reine NVIDIA-Hardware-Anforderung zielt TensorRT-LLM auf die höchstmögliche Inferenzleistung auf NVIDIA-GPUs ab und ist die Engine hinter NVIDIAs eigenen NIM-Microservices sowie ein gängiges Backend für den [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
+    intro: 'TensorRT-LLM ist eine von NVIDIA unter der Apache-2.0-Lizenz veröffentlichte Open-Source-Bibliothek zum Kompilieren und Optimieren von Large-Language-Model-Inferenz speziell für NVIDIA-GPUs. Statt ein Modell direkt zu laden und auszuführen, wie es [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder [vLLM](/de/power-local-llm/vllm-explained) tun, kompiliert TensorRT-LLM ein Modell vorab in eine optimierte „Engine", die aus benutzerdefinierten CUDA-Kernels besteht, die auf eine bestimmte NVIDIA-GPU-Generation zugeschnitten sind. Dieser Kompilierungsschritt ist der Kern des gesamten Designs: Im Austausch für den zusätzlichen Build-Schritt und die reine NVIDIA-Hardware-Anforderung zielt TensorRT-LLM auf die höchstmögliche Inferenzleistung auf NVIDIA-GPUs ab und ist die Engine hinter NVIDIAs eigenen NIM-Microservices sowie ein gängiges Backend für den [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
     metaDescription: 'TensorRT-LLM ist NVIDIAs Open-Source-, Apache-2.0-lizenzierte Engine zum Kompilieren von LLMs in GPU-optimierte Inference-Engines. Was es ist, wie es sich zu vLLM und llama.cpp verhält, und wie man eine Engine baut und betreibt.',
     readTime: '13 Minuten Lesezeit',
     targetKeywords: [
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'TensorRT-LLM Engine bauen',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM ist eine kostenlose, quelloffene (Apache 2.0) Bibliothek von NVIDIA, die große Sprachmodelle in optimierte Inference-„Engines" kompiliert, die speziell für NVIDIA-GPUs gebaut sind.** Aufbauend auf NVIDIAs [TensorRT](https://developer.nvidia.com/tensorrt)-SDK für Deep-Learning-Inferenz ergänzt es LLM-spezifische Techniken wie In-Flight- (kontinuierliches) Batching, einen paginierten KV-Cache, benutzerdefinierte Attention-Kernels und Quantisierung bis hinunter zu FP8 und INT4, um den Inferenz-Durchsatz so weit wie die Ziel-GPU-Generation es erlaubt zu steigern. Der entscheidende Kompromiss ist der vorgelagerte Kompilierungsschritt: Ein Modell muss zu einer GPU-spezifischen Engine gebaut werden, bevor es Anfragen bedienen kann — anders als [llama.cpp](/power-local-llm/llama-cpp-explained) oder [vLLM](/power-local-llm/vllm-explained), die ein Modell direkt ohne separaten Kompilierungsschritt laden. In der Produktion wird TensorRT-LLM meist über den [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) oder verpackt in NVIDIA-NIM-Microservices genutzt und zielt auf maximalen Durchsatz pro GPU auf NVIDIA-Hardware in Rechenzentrums- und Enterprise-Deployments ab — nicht auf Single-User-Desktop-Chat.',
+    leadAnswerBlock: '**TensorRT-LLM ist eine kostenlose, quelloffene (Apache 2.0) Bibliothek von NVIDIA, die große Sprachmodelle in optimierte Inference-„Engines" kompiliert, die speziell für NVIDIA-GPUs gebaut sind.** Aufbauend auf NVIDIAs [TensorRT](https://developer.nvidia.com/tensorrt)-SDK für Deep-Learning-Inferenz ergänzt es LLM-spezifische Techniken wie In-Flight- (kontinuierliches) Batching, einen paginierten KV-Cache, benutzerdefinierte Attention-Kernels und Quantisierung bis hinunter zu FP8 und INT4, um den Inferenz-Durchsatz so weit wie die Ziel-GPU-Generation es erlaubt zu steigern. Der entscheidende Kompromiss ist der vorgelagerte Kompilierungsschritt: Ein Modell muss zu einer GPU-spezifischen Engine gebaut werden, bevor es Anfragen bedienen kann — anders als [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder [vLLM](/de/power-local-llm/vllm-explained), die ein Modell direkt ohne separaten Kompilierungsschritt laden. In der Produktion wird TensorRT-LLM meist über den [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) oder verpackt in NVIDIA-NIM-Microservices genutzt und zielt auf maximalen Durchsatz pro GPU auf NVIDIA-Hardware in Rechenzentrums- und Enterprise-Deployments ab — nicht auf Single-User-Desktop-Chat.',
     quickAnswerTop: {
       de: {
         question: 'Was ist TensorRT-LLM und wie funktioniert es?',
@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enthält den Befehl `trtllm-serve`, um direkt aus einer gebauten Engine einen OpenAI-kompatiblen Endpunkt bereitzustellen',
           'Unterstützt viele beliebte offene Modellfamilien, wobei die genaue Unterstützung pro Modell und nötige Konvertierungsschritte je nach TensorRT-LLM-Release variieren — vor der Modellwahl die [Dokumentation zu unterstützten Modellen](https://github.com/NVIDIA/TensorRT-LLM) des Projekts prüfen',
         ],
-        note: 'TensorRT-LLM ist Infrastruktur für NVIDIA-Hardware, keine Consumer-Chat-App — es gibt keinen grafischen Installer und keine herstellerübergreifende GPU-Unterstützung. Wer stattdessen eine Point-and-Click-Chat-App möchte, findet in [Ollama oder LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) den passenden Anwendungsfall; siehe die Vergleichsabschnitte weiter unten.',
+        note: 'TensorRT-LLM ist Infrastruktur für NVIDIA-Hardware, keine Consumer-Chat-App — es gibt keinen grafischen Installer und keine herstellerübergreifende GPU-Unterstützung. Wer stattdessen eine Point-and-Click-Chat-App möchte, findet in [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) den passenden Anwendungsfall; siehe die Vergleichsabschnitte weiter unten.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'GPU-Generation': 'Ada Lovelace (z. B. L4, L40S)', 'Details': 'Unterstützt, wobei INT8 (einschließlich SmoothQuant) häufig als Fallback dient, wo die volle FP8-Tooling-Unterstützung schmaler ist als bei Hopper/Blackwell.' },
           { 'GPU-Generation': 'Ältere Architekturen (z. B. Ampere)', 'Details': 'Für einige frühere NVIDIA-Rechenzentrums-GPUs besteht breitere Kompatibilität, aber die neuesten Quantisierungsformate und Kernel-Optimierungen zielen auf aktuelle Hardware — die genaue GPU-zu-Feature-Matrix für die geplante Version findet sich in NVIDIAs [Release Notes](https://nvidia.github.io/TensorRT-LLM/release-notes.html).' },
         ],
-        note: 'Wer ein Modell auf einem Laptop, einem Mac oder einer Nicht-NVIDIA-GPU ausführen möchte, ist bei TensorRT-LLM falsch — [llama.cpp](/power-local-llm/llama-cpp-explained) und darauf aufbauende Tools wie Ollama und LM Studio zielen direkt auf CPU- und Apple-Silicon-Hardware ab und sind für dieses Szenario die bessere Wahl.',
+        note: 'Wer ein Modell auf einem Laptop, einem Mac oder einer Nicht-NVIDIA-GPU ausführen möchte, ist bei TensorRT-LLM falsch — [llama.cpp](/de/power-local-llm/llama-cpp-explained) und darauf aufbauende Tools wie Ollama und LM Studio zielen direkt auf CPU- und Apple-Silicon-Hardware ab und sind für dieses Szenario die bessere Wahl.',
       },
       quantization: {
         id: 'quantization-support',
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`: ein in TensorRT-LLM enthaltener Befehl, der direkt aus einer gebauten Engine einen OpenAI-kompatiblen API-Endpunkt bereitstellt, ohne separates Serving-Framework',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server): eine allgemeine Model-Serving-Plattform mit TensorRT-LLM-Backend, die Request-Queuing, Multi-Model-Orchestrierung und produktionsreife Deployment-Funktionen wie Kubernetes-Integration ergänzt',
-          'NVIDIA NIM: vorgefertigte, containerisierte Microservices, die als Teil eines [NVIDIA-AI-Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)-Abos verkauft werden und ein TensorRT-LLM-optimiertes Backend hinter einer standardisierten API mit Herstellersupport bündeln — siehe den [Vergleich der Enterprise-Inference-Server](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für einen tieferen Blick auf Lizenzierung und Support von NIM',
+          'NVIDIA NIM: vorgefertigte, containerisierte Microservices, die als Teil eines [NVIDIA-AI-Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)-Abos verkauft werden und ein TensorRT-LLM-optimiertes Backend hinter einer standardisierten API mit Herstellersupport bündeln — siehe den [Vergleich der Enterprise-Inference-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für einen tieferen Blick auf Lizenzierung und Support von NIM',
         ],
         note: 'Die rohe TensorRT-LLM-Python-API direkt zu betreiben ist üblich für Entwicklung, Benchmarking und den Bau einer eigenen Serving-Schicht; Triton und NIM übernehmen die Produktionsaspekte — Request-Batching über viele Modelle hinweg, Multi-Tenant-Routing, Health-Checks und Supportverträge —, die eine reine Engine allein nicht bietet.',
       },
@@ -458,13 +458,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'Wie schneidet TensorRT-LLM im Vergleich zu vLLM und llama.cpp ab?',
-        content: 'TensorRT-LLM, [vLLM](/power-local-llm/vllm-explained) und [llama.cpp](/power-local-llm/llama-cpp-explained) führen alle LLM-Inferenz aus, positionieren sich aber unterschiedlich zwischen Performance und Flexibilität.',
+        content: 'TensorRT-LLM, [vLLM](/de/power-local-llm/vllm-explained) und [llama.cpp](/de/power-local-llm/llama-cpp-explained) führen alle LLM-Inferenz aus, positionieren sich aber unterschiedlich zwischen Performance und Flexibilität.',
         itemHeadings: true,
         columns: ['Engine', 'Details'],
         rows: [
           { 'Engine': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Details': 'Nur NVIDIA, Apache-2.0-lizenziert. Erfordert einen vorgelagerten Kompilierungsschritt pro GPU-Generation; zielt auf den höchstmöglichen Durchsatz auf dieser spezifischen NVIDIA-Hardware, im Austausch für Build-Schritt und Herstellerbindung.' },
-          { 'Engine': '[vLLM](/power-local-llm/vllm-explained)', 'Details': 'Apache-2.0-lizenziert, lädt Hugging-Face-Transformers-kompatible Modelle direkt ohne Kompilierungsschritt. NVIDIA-GPUs sind das primäre Ziel, mit dokumentierten (schmaleren) AMD-, Intel- und TPU-Backends.' },
-          { 'Engine': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Details': 'MIT-lizenzierte C/C++-Engine, die auf CPU, Apple Silicon und einer breiten Palette von GPU-Herstellern über das GGUF-Modellformat läuft — die hardwareflexibelste der drei, aber nicht für die Multi-GPU-Skalierung im Rechenzentrum gebaut, auf die TensorRT-LLM und vLLM zielen.' },
+          { 'Engine': '[vLLM](/de/power-local-llm/vllm-explained)', 'Details': 'Apache-2.0-lizenziert, lädt Hugging-Face-Transformers-kompatible Modelle direkt ohne Kompilierungsschritt. NVIDIA-GPUs sind das primäre Ziel, mit dokumentierten (schmaleren) AMD-, Intel- und TPU-Backends.' },
+          { 'Engine': '[llama.cpp](/de/power-local-llm/llama-cpp-explained)', 'Details': 'MIT-lizenzierte C/C++-Engine, die auf CPU, Apple Silicon und einer breiten Palette von GPU-Herstellern über das GGUF-Modellformat läuft — die hardwareflexibelste der drei, aber nicht für die Multi-GPU-Skalierung im Rechenzentrum gebaut, auf die TensorRT-LLM und vLLM zielen.' },
         ],
         note: 'Dieser Artikel hat diese drei Engines nicht selbst gegeneinander benchmarkt und behauptet nicht, dass eine davon universell schneller ist — der Durchsatz hängt stark von Modell, GPU-Generation, Batch-Eigenschaften und der jeweiligen Engine-Version ab. Der eigentliche Vorteil von TensorRT-LLM ist Spitzenleistung speziell auf aktueller NVIDIA-Hardware, auf Kosten von Build-Schritt und reiner NVIDIA-Unterstützung; vLLM tauscht einen Teil dieser GPU-spezifischen Spitzenoptimierung gegen einen einfacheren Workflow ohne Kompilierung und breitere (wenn auch weiterhin primär NVIDIA-) Hardware-Abdeckung; llama.cpp tauscht weiteren Spitzendurchsatz gegen den Betrieb auf Hardware, die keine der beiden anderen adressiert, einschließlich CPUs und Macs.',
       },
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Schicht': 'NVIDIA Triton Inference Server', 'Details': 'Eine allgemeine, kostenlose und quelloffene Model-Serving-Plattform mit TensorRT-LLM-Backend, die Request-Routing, Multi-Model-Hosting und Produktions-Orchestrierung um eine oder mehrere Engines herum ergänzt.' },
           { 'Schicht': 'NVIDIA NIM', 'Details': 'Eine kostenpflichtige, vorgefertigte Microservice-Schicht, verkauft als Teil eines NVIDIA-AI-Enterprise-Abos, die ein TensorRT-LLM-optimiertes Backend hinter einer standardisierten API mit Herstellersupport bündelt — tauscht Eigenaufwand gegen ein unterstütztes, einsatzbereites Container-Deployment.' },
         ],
-        note: 'Ein üblicher Weg: Das Modell zu einer TensorRT-LLM-Engine bauen und dann über Triton für selbstverwaltete Produktions-Deployments servieren, oder den Build-Schritt ganz überspringen und einen vorgefertigten NIM-Container nutzen, falls sich das kostenpflichtige Abo und der Herstellersupport für das Team lohnen. Siehe den [Vergleich der Enterprise-Inference-Server](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für die Lizenz- und Kostenabwägungen zwischen NIM, vLLM und TGI.',
+        note: 'Ein üblicher Weg: Das Modell zu einer TensorRT-LLM-Engine bauen und dann über Triton für selbstverwaltete Produktions-Deployments servieren, oder den Build-Schritt ganz überspringen und einen vorgefertigten NIM-Container nutzen, falls sich das kostenpflichtige Abo und der Herstellersupport für das Team lohnen. Siehe den [Vergleich der Enterprise-Inference-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für die Lizenz- und Kostenabwägungen zwischen NIM, vLLM und TGI.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLM meiden, wenn',
             list: [
-              'Ein Modell auf dem eigenen Laptop oder Desktop für den persönlichen Chat laufen soll — [Ollama oder LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) passen dafür deutlich besser',
+              'Ein Modell auf dem eigenen Laptop oder Desktop für den persönlichen Chat laufen soll — [Ollama oder LM Studio](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) passen dafür deutlich besser',
               'Die Hardware nicht von NVIDIA stammt — TensorRT-LLM hat überhaupt kein Backend für CPU, AMD, Intel oder Apple Silicon, anders als vLLM oder llama.cpp',
               'Schnelle Iteration über viele verschiedene Modelle gewünscht ist, ohne dass ein Kompilierungsschritt pro Modell und GPU bremst — der Direktlade-Ansatz von vLLM passt hier besser',
               'Das Team keine freie Kapazität hat, eine CUDA-/TensorRT-Build-Pipeline zu betreiben, und lieber für ein unterstütztes, vorgefertigtes Deployment zahlt — dafür ist NVIDIA NIM gebaut',
@@ -515,11 +515,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Setup', 'Am besten für'],
         rows: [
           { 'Tool': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Setup': 'GPU-spezifische Engine mit `trtllm-build` kompilieren, dann mit `trtllm-serve` oder Triton servieren. NVIDIA-GPU und CUDA erforderlich.', 'Am besten für': 'Maximaler Durchsatz pro GPU auf NVIDIA-Hardware in der Produktion, auf Kosten eines Kompilierungsschritts.' },
-          { 'Tool': '[vLLM](/power-local-llm/vllm-explained)', 'Setup': 'Python-Paket via pip; OpenAI-kompatibler Server, gestartet mit `vllm serve`. Kein Kompilierungsschritt; primäres Ziel NVIDIA-GPU.', 'Am besten für': 'Hoher Durchsatz für viele Nutzer mit einfacherem Workflow ohne Kompilierung.' },
-          { 'Tool': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Setup': 'CLI, integrierte Web-UI und OpenAI-kompatible API via llama-server. Läuft auf CPU oder einer breiten Palette von GPU-Herstellern.', 'Am besten für': 'Hardware-Flexibilität, Embedded-/Edge-Deployment sowie CPU- oder Apple-Silicon-Nutzung.' },
+          { 'Tool': '[vLLM](/de/power-local-llm/vllm-explained)', 'Setup': 'Python-Paket via pip; OpenAI-kompatibler Server, gestartet mit `vllm serve`. Kein Kompilierungsschritt; primäres Ziel NVIDIA-GPU.', 'Am besten für': 'Hoher Durchsatz für viele Nutzer mit einfacherem Workflow ohne Kompilierung.' },
+          { 'Tool': '[llama.cpp](/de/power-local-llm/llama-cpp-explained)', 'Setup': 'CLI, integrierte Web-UI und OpenAI-kompatible API via llama-server. Läuft auf CPU oder einer breiten Palette von GPU-Herstellern.', 'Am besten für': 'Hardware-Flexibilität, Embedded-/Edge-Deployment sowie CPU- oder Apple-Silicon-Nutzung.' },
           { 'Tool': 'NVIDIA NIM', 'Setup': 'Vorgefertigter Container, bereitgestellt mit kostenpflichtigem NVIDIA-AI-Enterprise-Abo. Kein Build-Schritt für Endnutzer.', 'Am besten für': 'Teams, die TensorRT-LLM-Leistung wollen, ohne die Build-Pipeline selbst zu betreiben.' },
         ],
-        note: 'Dieser Artikel hat Geschwindigkeit oder Ausgabequalität dieser Tools nicht selbst benchmarkt und behauptet nicht, dass eines für jede Arbeitslast technisch überlegen ist — der Vergleich oben deckt nur dokumentierte Architektur-, Setup- und Lizenzfakten ab. Siehe den [Leitfaden zu Enterprise-Inference-Servern](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für einen tieferen Lizenz- und Deployment-Vergleich.',
+        note: 'Dieser Artikel hat Geschwindigkeit oder Ausgabequalität dieser Tools nicht selbst benchmarkt und behauptet nicht, dass eines für jede Arbeitslast technisch überlegen ist — der Vergleich oben deckt nur dokumentierte Architektur-, Setup- und Lizenzfakten ab. Siehe den [Leitfaden zu Enterprise-Inference-Servern](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) für einen tieferen Lizenz- und Deployment-Vergleich.',
       },
       limitations: {
         id: 'limitations',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 3: Versuch, es auf Nicht-NVIDIA-Hardware auszuführen',
-            content: 'TensorRT-LLM hat kein Backend für CPU-only, AMD, Intel oder Apple Silicon. Der Versuch, es außerhalb von NVIDIA-GPUs zu nutzen, ist überhaupt kein unterstützter Weg — [llama.cpp](/power-local-llm/llama-cpp-explained) oder vLLM sind die Tools für breitere Hardware-Abdeckung.',
+            content: 'TensorRT-LLM hat kein Backend für CPU-only, AMD, Intel oder Apple Silicon. Der Versuch, es außerhalb von NVIDIA-GPUs zu nutzen, ist überhaupt kein unterstützter Weg — [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder vLLM sind die Tools für breitere Hardware-Abdeckung.',
           },
         ],
       },
@@ -580,12 +580,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[vLLM erklärt](/power-local-llm/vllm-explained) — die Apache-2.0-Alternative, die Modelle direkt ohne Kompilierungsschritt lädt, im Kontrast zu TensorRT-LLMs vorgelagertem Build.',
-          '[llama.cpp erklärt](/power-local-llm/llama-cpp-explained) — die hardwareflexible Engine, die auf CPUs, Apple Silicon und einer breiten Palette von GPU-Herstellern läuft, anders als TensorRT-LLMs reiner NVIDIA-Fokus.',
-          '[SGLang erklärt](/power-local-llm/sglang-explained) — eine kompilierschrittfreie, hardwareflexiblere GPU-Serving-Engine rund um RadixAttention-Cache-Wiederverwendung und Structured Output auf Engine-Ebene, im Kontrast zu TensorRT-LLMs vorab kompiliertem Ansatz.',
-          '[Enterprise-LLM-Inference-Server: vLLM, TGI und NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer, deployment-fokussierter Vergleich inklusive NVIDIA NIM, das TensorRT-LLM bündelt.',
-          '[Eine GPU für On-Prem-Inferenz-Hardware wählen](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Generationen zur Auswahl, wenn NVIDIA-Hardware für TensorRT-LLM dimensioniert werden soll.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die Apache-2.0-Alternative, die Modelle direkt ohne Kompilierungsschritt lädt, im Kontrast zu TensorRT-LLMs vorgelagertem Build.',
+          '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die hardwareflexible Engine, die auf CPUs, Apple Silicon und einer breiten Palette von GPU-Herstellern läuft, anders als TensorRT-LLMs reiner NVIDIA-Fokus.',
+          '[SGLang erklärt](/de/power-local-llm/sglang-explained) — eine kompilierschrittfreie, hardwareflexiblere GPU-Serving-Engine rund um RadixAttention-Cache-Wiederverwendung und Structured Output auf Engine-Ebene, im Kontrast zu TensorRT-LLMs vorab kompiliertem Ansatz.',
+          '[Enterprise-LLM-Inference-Server: vLLM, TGI und NIM](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — ein tieferer, deployment-fokussierter Vergleich inklusive NVIDIA NIM, das TensorRT-LLM bündelt.',
+          '[Eine GPU für On-Prem-Inferenz-Hardware wählen](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Generationen zur Auswahl, wenn NVIDIA-Hardware für TensorRT-LLM dimensioniert werden soll.',
+          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM expliqué : le moteur d\'inférence optimisé GPU de NVIDIA (2026)',
     seoTitle: 'TensorRT-LLM expliqué : le moteur d\'inférence de NVIDIA (2026)',
-    intro: 'TensorRT-LLM est une bibliothèque open source publiée par NVIDIA sous licence Apache 2.0, destinée à compiler et optimiser l\'inférence de grands modèles de langage spécifiquement pour les GPU NVIDIA. Plutôt que de charger un modèle et de l\'exécuter directement comme le font [llama.cpp](/power-local-llm/llama-cpp-explained) ou [vLLM](/power-local-llm/vllm-explained), TensorRT-LLM compile un modèle à l\'avance en un « moteur » optimisé, construit à partir de noyaux CUDA personnalisés réglés pour une génération précise de GPU NVIDIA. Cette étape de compilation est au cœur de toute sa conception : en échange de cette étape de build supplémentaire et de l\'exigence de matériel exclusivement NVIDIA, il vise la performance d\'inférence la plus élevée possible sur GPU NVIDIA, et c\'est le moteur derrière les microservices NIM de NVIDIA ainsi qu\'un backend courant pour [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
+    intro: 'TensorRT-LLM est une bibliothèque open source publiée par NVIDIA sous licence Apache 2.0, destinée à compiler et optimiser l\'inférence de grands modèles de langage spécifiquement pour les GPU NVIDIA. Plutôt que de charger un modèle et de l\'exécuter directement comme le font [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou [vLLM](/fr/power-local-llm/vllm-explained), TensorRT-LLM compile un modèle à l\'avance en un « moteur » optimisé, construit à partir de noyaux CUDA personnalisés réglés pour une génération précise de GPU NVIDIA. Cette étape de compilation est au cœur de toute sa conception : en échange de cette étape de build supplémentaire et de l\'exigence de matériel exclusivement NVIDIA, il vise la performance d\'inférence la plus élevée possible sur GPU NVIDIA, et c\'est le moteur derrière les microservices NIM de NVIDIA ainsi qu\'un backend courant pour [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
     metaDescription: 'TensorRT-LLM est le moteur open source de NVIDIA, sous licence Apache 2.0, qui compile les LLM en moteurs d\'inférence optimisés pour GPU. Ce que c\'est, comment il se compare à vLLM et llama.cpp, et comment construire et exécuter un moteur.',
     readTime: '13 min de lecture',
     targetKeywords: [
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'construire un moteur TensorRT-LLM',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM est une bibliothèque gratuite et open source (Apache 2.0) publiée par NVIDIA qui compile de grands modèles de langage en « moteurs » d\'inférence optimisés, construits spécifiquement pour les GPU NVIDIA.** Construit sur le SDK d\'inférence deep learning [TensorRT](https://developer.nvidia.com/tensorrt) de NVIDIA, il ajoute des techniques spécifiques aux LLM, dont le batching continu (« in-flight »), un cache KV paginé, des noyaux d\'attention personnalisés et une prise en charge de la quantification jusqu\'à FP8 et INT4, afin de pousser le débit d\'inférence aussi loin que la génération de GPU cible le permet. Le compromis déterminant est cette étape de compilation en amont : un modèle doit être construit en un moteur spécifique au GPU avant de pouvoir servir du trafic, contrairement à [llama.cpp](/power-local-llm/llama-cpp-explained) ou [vLLM](/power-local-llm/vllm-explained), qui chargent un modèle directement sans étape de compilation séparée. En production, TensorRT-LLM est le plus souvent utilisé via [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) ou intégré dans des microservices NVIDIA NIM, et vise un débit maximal par GPU sur du matériel NVIDIA dans des déploiements de datacenter et d\'entreprise — pas le chat de bureau pour un seul utilisateur.',
+    leadAnswerBlock: '**TensorRT-LLM est une bibliothèque gratuite et open source (Apache 2.0) publiée par NVIDIA qui compile de grands modèles de langage en « moteurs » d\'inférence optimisés, construits spécifiquement pour les GPU NVIDIA.** Construit sur le SDK d\'inférence deep learning [TensorRT](https://developer.nvidia.com/tensorrt) de NVIDIA, il ajoute des techniques spécifiques aux LLM, dont le batching continu (« in-flight »), un cache KV paginé, des noyaux d\'attention personnalisés et une prise en charge de la quantification jusqu\'à FP8 et INT4, afin de pousser le débit d\'inférence aussi loin que la génération de GPU cible le permet. Le compromis déterminant est cette étape de compilation en amont : un modèle doit être construit en un moteur spécifique au GPU avant de pouvoir servir du trafic, contrairement à [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou [vLLM](/fr/power-local-llm/vllm-explained), qui chargent un modèle directement sans étape de compilation séparée. En production, TensorRT-LLM est le plus souvent utilisé via [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) ou intégré dans des microservices NVIDIA NIM, et vise un débit maximal par GPU sur du matériel NVIDIA dans des déploiements de datacenter et d\'entreprise — pas le chat de bureau pour un seul utilisateur.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que TensorRT-LLM et comment fonctionne-t-il ?',
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inclut une commande `trtllm-serve` pour déployer directement un point de terminaison compatible OpenAI à partir d\'un moteur construit',
           'Prend en charge de nombreuses familles de modèles ouverts populaires, bien que le support exact par modèle et les étapes de conversion nécessaires varient selon la version de TensorRT-LLM — vérifiez la [documentation des modèles pris en charge](https://github.com/NVIDIA/TensorRT-LLM) du projet avant de choisir un modèle',
         ],
-        note: 'TensorRT-LLM est une infrastructure pour matériel NVIDIA, pas une application de chat grand public — il n\'y a pas d\'installateur graphique ni de prise en charge GPU multi-constructeurs. Pour une application de chat locale en un clic, des outils comme [Ollama ou LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) sont conçus pour cet usage ; voir les sections de comparaison ci-dessous.',
+        note: 'TensorRT-LLM est une infrastructure pour matériel NVIDIA, pas une application de chat grand public — il n\'y a pas d\'installateur graphique ni de prise en charge GPU multi-constructeurs. Pour une application de chat locale en un clic, des outils comme [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) sont conçus pour cet usage ; voir les sections de comparaison ci-dessous.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Génération de GPU': 'Ada Lovelace (ex. L4, L40S)', 'Détails': 'Prise en charge, avec INT8 (y compris SmoothQuant) couramment utilisé comme solution de repli là où la prise en charge complète des outils FP8 est plus limitée que sur Hopper/Blackwell.' },
           { 'Génération de GPU': 'Architectures plus anciennes (ex. Ampere)', 'Détails': 'Une compatibilité plus large existe pour certains GPU de datacenter NVIDIA antérieurs, mais les formats de quantification et optimisations de noyaux les plus récents ciblent le matériel actuel — consultez les [notes de version](https://nvidia.github.io/TensorRT-LLM/release-notes.html) de NVIDIA pour la matrice exacte GPU/fonctionnalité de la version envisagée.' },
         ],
-        note: 'Pour exécuter un modèle sur un ordinateur portable, un Mac ou un GPU non NVIDIA, TensorRT-LLM n\'est pas l\'outil conçu pour cela — [llama.cpp](/power-local-llm/llama-cpp-explained) et les outils construits dessus, comme Ollama et LM Studio, ciblent directement le matériel CPU et Apple Silicon et conviennent mieux à ce scénario.',
+        note: 'Pour exécuter un modèle sur un ordinateur portable, un Mac ou un GPU non NVIDIA, TensorRT-LLM n\'est pas l\'outil conçu pour cela — [llama.cpp](/fr/power-local-llm/llama-cpp-explained) et les outils construits dessus, comme Ollama et LM Studio, ciblent directement le matériel CPU et Apple Silicon et conviennent mieux à ce scénario.',
       },
       quantization: {
         id: 'quantization-support',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve` : une commande incluse avec TensorRT-LLM qui déploie un point de terminaison API compatible OpenAI directement à partir d\'un moteur construit, sans framework de service séparé',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) : une plateforme de service de modèles généraliste avec un backend TensorRT-LLM, ajoutant la mise en file d\'attente des requêtes, l\'orchestration multi-modèles et des fonctionnalités de déploiement de niveau production comme l\'intégration Kubernetes',
-          'NVIDIA NIM : des microservices conteneurisés prêts à l\'emploi, vendus dans le cadre d\'un abonnement [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), qui intègrent un backend optimisé par TensorRT-LLM derrière une API standardisée avec support constructeur — voir la [comparaison des serveurs d\'inférence d\'entreprise](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour un examen plus approfondi de la licence et du support de NIM',
+          'NVIDIA NIM : des microservices conteneurisés prêts à l\'emploi, vendus dans le cadre d\'un abonnement [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), qui intègrent un backend optimisé par TensorRT-LLM derrière une API standardisée avec support constructeur — voir la [comparaison des serveurs d\'inférence d\'entreprise](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour un examen plus approfondi de la licence et du support de NIM',
         ],
         note: 'Exécuter directement l\'API Python brute de TensorRT-LLM est courant pour le développement, le benchmarking et la construction d\'une couche de service personnalisée ; Triton et NIM existent pour gérer les préoccupations de production — mise en lot des requêtes sur de nombreux modèles, routage multi-tenant, contrôles de santé et contrats de support — qu\'un moteur brut seul ne fournit pas.',
       },
@@ -752,13 +752,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'Comment TensorRT-LLM se compare-t-il à vLLM et llama.cpp ?',
-        content: 'TensorRT-LLM, [vLLM](/power-local-llm/vllm-explained) et [llama.cpp](/power-local-llm/llama-cpp-explained) exécutent tous de l\'inférence LLM, mais se positionnent différemment entre performance et flexibilité.',
+        content: 'TensorRT-LLM, [vLLM](/fr/power-local-llm/vllm-explained) et [llama.cpp](/fr/power-local-llm/llama-cpp-explained) exécutent tous de l\'inférence LLM, mais se positionnent différemment entre performance et flexibilité.',
         itemHeadings: true,
         columns: ['Moteur', 'Détails'],
         rows: [
           { 'Moteur': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Détails': 'Exclusivement NVIDIA, sous licence Apache 2.0. Nécessite une étape de compilation en amont par génération de GPU ; vise le débit le plus élevé possible sur ce matériel NVIDIA précis, en échange de l\'étape de build et d\'un verrouillage constructeur.' },
-          { 'Moteur': '[vLLM](/power-local-llm/vllm-explained)', 'Détails': 'Sous licence Apache 2.0, charge directement les modèles compatibles Hugging Face Transformers sans étape de compilation. Les GPU NVIDIA sont sa cible principale, avec des backends AMD, Intel et TPU documentés (plus restreints).' },
-          { 'Moteur': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Détails': 'Moteur C/C++ sous licence MIT, fonctionnant sur CPU, Apple Silicon et un large éventail de fabricants de GPU via le format de modèle GGUF — le plus flexible des trois côté matériel, mais pas conçu pour l\'échelle multi-GPU haute concurrence des datacenters que visent TensorRT-LLM et vLLM.' },
+          { 'Moteur': '[vLLM](/fr/power-local-llm/vllm-explained)', 'Détails': 'Sous licence Apache 2.0, charge directement les modèles compatibles Hugging Face Transformers sans étape de compilation. Les GPU NVIDIA sont sa cible principale, avec des backends AMD, Intel et TPU documentés (plus restreints).' },
+          { 'Moteur': '[llama.cpp](/fr/power-local-llm/llama-cpp-explained)', 'Détails': 'Moteur C/C++ sous licence MIT, fonctionnant sur CPU, Apple Silicon et un large éventail de fabricants de GPU via le format de modèle GGUF — le plus flexible des trois côté matériel, mais pas conçu pour l\'échelle multi-GPU haute concurrence des datacenters que visent TensorRT-LLM et vLLM.' },
         ],
         note: 'Cet article n\'a pas comparé ces trois moteurs par des benchmarks indépendants et ne prétend pas que l\'un soit universellement plus rapide — le débit dépend fortement du modèle, de la génération de GPU, des caractéristiques du lot et de la version de chaque moteur. L\'avantage réel de TensorRT-LLM est la performance de pointe spécifiquement sur du matériel NVIDIA actuel, au prix de l\'étape de compilation et d\'un support exclusivement NVIDIA ; vLLM échange une partie de cette optimisation de pointe spécifique au GPU contre un workflow plus simple sans compilation et une couverture matérielle plus large (bien que toujours principalement NVIDIA) ; llama.cpp échange davantage de débit de pointe contre la capacité de fonctionner sur du matériel que ni l\'un ni l\'autre ne cible, y compris les CPU et les Mac.',
       },
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Couche': 'NVIDIA Triton Inference Server', 'Détails': 'Une plateforme de service de modèles généraliste, gratuite et open source, avec un backend TensorRT-LLM, ajoutant routage des requêtes, hébergement multi-modèles et orchestration de production autour d\'un ou plusieurs moteurs.' },
           { 'Couche': 'NVIDIA NIM', 'Détails': 'Une couche de microservices prêts à l\'emploi et payante, vendue dans le cadre d\'un abonnement NVIDIA AI Enterprise, qui intègre un backend optimisé par TensorRT-LLM derrière une API standardisée avec support constructeur — échangeant l\'effort de configuration manuelle contre un conteneur pris en charge et prêt à déployer.' },
         ],
-        note: 'Un chemin courant : compiler le modèle en moteur TensorRT-LLM, puis le servir via Triton pour un déploiement en production auto-géré, ou sauter entièrement l\'étape de compilation en utilisant un conteneur NIM prêt à l\'emploi si l\'abonnement payant et le support constructeur en valent la peine pour votre équipe. Voir la [comparaison des serveurs d\'inférence d\'entreprise](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour les compromis de licence et de coût entre NIM, vLLM et TGI.',
+        note: 'Un chemin courant : compiler le modèle en moteur TensorRT-LLM, puis le servir via Triton pour un déploiement en production auto-géré, ou sauter entièrement l\'étape de compilation en utilisant un conteneur NIM prêt à l\'emploi si l\'abonnement payant et le support constructeur en valent la peine pour votre équipe. Voir la [comparaison des serveurs d\'inférence d\'entreprise](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour les compromis de licence et de coût entre NIM, vLLM et TGI.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Évitez TensorRT-LLM si',
             list: [
-              'Vous voulez exécuter un modèle sur votre propre ordinateur portable ou de bureau pour un chat personnel — [Ollama ou LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) répondent bien mieux à ce besoin',
+              'Vous voulez exécuter un modèle sur votre propre ordinateur portable ou de bureau pour un chat personnel — [Ollama ou LM Studio](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) répondent bien mieux à ce besoin',
               'Votre matériel n\'est pas NVIDIA — TensorRT-LLM n\'a aucun backend CPU, AMD, Intel ou Apple Silicon, contrairement à vLLM ou llama.cpp',
               'Vous voulez itérer rapidement sur de nombreux modèles différents sans qu\'une étape de compilation par modèle et par GPU ne vous ralentisse — l\'approche de chargement direct de vLLM convient mieux',
               'Votre équipe n\'a pas la capacité disponible pour gérer un pipeline de build CUDA/TensorRT et préfère payer pour un déploiement pris en charge et prêt à l\'emploi — NVIDIA NIM est conçu pour ce compromis',
@@ -809,11 +809,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Outil', 'Mise en place', 'Idéal pour'],
         rows: [
           { 'Outil': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Mise en place': 'Compiler un moteur spécifique au GPU avec `trtllm-build`, puis le servir avec `trtllm-serve` ou Triton. GPU NVIDIA et CUDA requis.', 'Idéal pour': 'Débit maximal par GPU sur matériel NVIDIA en production, au prix d\'une étape de compilation.' },
-          { 'Outil': '[vLLM](/power-local-llm/vllm-explained)', 'Mise en place': 'Paquet Python via pip ; serveur compatible OpenAI démarré avec `vllm serve`. Pas d\'étape de compilation ; cible principale GPU NVIDIA.', 'Idéal pour': 'Service haut débit multi-utilisateurs avec un workflow plus simple sans compilation.' },
-          { 'Outil': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Mise en place': 'CLI, interface web intégrée et API compatible OpenAI via llama-server. Fonctionne sur CPU ou un large éventail de fabricants de GPU.', 'Idéal pour': 'Flexibilité matérielle, déploiement embarqué/en périphérie, et usage CPU ou Apple Silicon.' },
+          { 'Outil': '[vLLM](/fr/power-local-llm/vllm-explained)', 'Mise en place': 'Paquet Python via pip ; serveur compatible OpenAI démarré avec `vllm serve`. Pas d\'étape de compilation ; cible principale GPU NVIDIA.', 'Idéal pour': 'Service haut débit multi-utilisateurs avec un workflow plus simple sans compilation.' },
+          { 'Outil': '[llama.cpp](/fr/power-local-llm/llama-cpp-explained)', 'Mise en place': 'CLI, interface web intégrée et API compatible OpenAI via llama-server. Fonctionne sur CPU ou un large éventail de fabricants de GPU.', 'Idéal pour': 'Flexibilité matérielle, déploiement embarqué/en périphérie, et usage CPU ou Apple Silicon.' },
           { 'Outil': 'NVIDIA NIM', 'Mise en place': 'Conteneur prêt à l\'emploi, déployé avec un abonnement payant NVIDIA AI Enterprise. Aucune étape de build pour l\'utilisateur final.', 'Idéal pour': 'Équipes voulant la performance de TensorRT-LLM sans exploiter le pipeline de build elles-mêmes.' },
         ],
-        note: 'Cet article n\'a pas comparé indépendamment la vitesse ou la qualité de sortie de ces outils et ne prétend pas que l\'un soit techniquement supérieur pour toutes les charges de travail — la comparaison ci-dessus couvre uniquement des faits documentés d\'architecture, de mise en place et de licence. Voir le [guide des serveurs d\'inférence d\'entreprise](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour une comparaison plus approfondie de licence et de déploiement.',
+        note: 'Cet article n\'a pas comparé indépendamment la vitesse ou la qualité de sortie de ces outils et ne prétend pas que l\'un soit techniquement supérieur pour toutes les charges de travail — la comparaison ci-dessus couvre uniquement des faits documentés d\'architecture, de mise en place et de licence. Voir le [guide des serveurs d\'inférence d\'entreprise](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) pour une comparaison plus approfondie de licence et de déploiement.',
       },
       limitations: {
         id: 'limitations',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erreur 3 : essayer de l\'exécuter sur du matériel non NVIDIA',
-            content: 'TensorRT-LLM n\'a aucun backend CPU seul, AMD, Intel ou Apple Silicon. Essayer de l\'utiliser en dehors des GPU NVIDIA n\'est pas un chemin pris en charge du tout — [llama.cpp](/power-local-llm/llama-cpp-explained) ou vLLM sont les outils conçus pour une couverture matérielle plus large.',
+            content: 'TensorRT-LLM n\'a aucun backend CPU seul, AMD, Intel ou Apple Silicon. Essayer de l\'utiliser en dehors des GPU NVIDIA n\'est pas un chemin pris en charge du tout — [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou vLLM sont les outils conçus pour une couverture matérielle plus large.',
           },
         ],
       },
@@ -874,11 +874,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[vLLM expliqué](/power-local-llm/vllm-explained) — l\'alternative Apache 2.0 qui charge les modèles directement sans étape de compilation, à comparer avec la construction en amont de TensorRT-LLM.',
-          '[llama.cpp expliqué](/power-local-llm/llama-cpp-explained) — le moteur flexible côté matériel qui fonctionne sur CPU, Apple Silicon et un large éventail de fabricants de GPU, contrairement au périmètre exclusivement NVIDIA de TensorRT-LLM.',
-          '[Serveurs d\'inférence LLM d\'entreprise : vLLM, TGI et NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — une comparaison plus approfondie orientée déploiement, incluant NVIDIA NIM, qui intègre TensorRT-LLM.',
-          '[Choisir un GPU pour du matériel d\'inférence sur site](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — les générations de GPU à considérer pour dimensionner du matériel NVIDIA destiné à TensorRT-LLM.',
-          '[Répertoire logiciel LLM local](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — l\'alternative Apache 2.0 qui charge les modèles directement sans étape de compilation, à comparer avec la construction en amont de TensorRT-LLM.',
+          '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — le moteur flexible côté matériel qui fonctionne sur CPU, Apple Silicon et un large éventail de fabricants de GPU, contrairement au périmètre exclusivement NVIDIA de TensorRT-LLM.',
+          '[Serveurs d\'inférence LLM d\'entreprise : vLLM, TGI et NIM](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — une comparaison plus approfondie orientée déploiement, incluant NVIDIA NIM, qui intègre TensorRT-LLM.',
+          '[Choisir un GPU pour du matériel d\'inférence sur site](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — les générations de GPU à considérer pour dimensionner du matériel NVIDIA destiné à TensorRT-LLM.',
+          '[Répertoire logiciel LLM local](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM explicado: el motor de inferencia optimizado para GPU de NVIDIA (2026)',
     seoTitle: 'TensorRT-LLM explicado: el motor de inferencia de NVIDIA (2026)',
-    intro: 'TensorRT-LLM es una biblioteca de código abierto publicada por NVIDIA bajo licencia Apache 2.0 para compilar y optimizar la inferencia de modelos de lenguaje grandes específicamente en GPU de NVIDIA. En lugar de cargar un modelo y ejecutarlo directamente como hacen [llama.cpp](/power-local-llm/llama-cpp-explained) o [vLLM](/power-local-llm/vllm-explained), TensorRT-LLM compila un modelo por adelantado en un "motor" optimizado, construido a partir de kernels CUDA personalizados ajustados para una generación específica de GPU de NVIDIA. Ese paso de compilación es la base de todo su diseño: a cambio del paso de compilación adicional y del requisito de hardware exclusivo de NVIDIA, apunta al máximo rendimiento de inferencia posible en GPU de NVIDIA, y es el motor detrás de los microservicios NIM de NVIDIA y un backend habitual para [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
+    intro: 'TensorRT-LLM es una biblioteca de código abierto publicada por NVIDIA bajo licencia Apache 2.0 para compilar y optimizar la inferencia de modelos de lenguaje grandes específicamente en GPU de NVIDIA. En lugar de cargar un modelo y ejecutarlo directamente como hacen [llama.cpp](/es/power-local-llm/llama-cpp-explained) o [vLLM](/es/power-local-llm/vllm-explained), TensorRT-LLM compila un modelo por adelantado en un "motor" optimizado, construido a partir de kernels CUDA personalizados ajustados para una generación específica de GPU de NVIDIA. Ese paso de compilación es la base de todo su diseño: a cambio del paso de compilación adicional y del requisito de hardware exclusivo de NVIDIA, apunta al máximo rendimiento de inferencia posible en GPU de NVIDIA, y es el motor detrás de los microservicios NIM de NVIDIA y un backend habitual para [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
     metaDescription: 'TensorRT-LLM es el motor de código abierto de NVIDIA, licenciado bajo Apache 2.0, para compilar LLM en motores de inferencia optimizados para GPU. Qué es, cómo se compara con vLLM y llama.cpp, y cómo construir y ejecutar un motor.',
     readTime: '13 min de lectura',
     targetKeywords: [
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'construir motor TensorRT-LLM',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM es una biblioteca gratuita y de código abierto (Apache 2.0) publicada por NVIDIA que compila modelos de lenguaje grandes en "motores" de inferencia optimizados, construidos específicamente para GPU de NVIDIA.** Construido sobre el SDK de inferencia de aprendizaje profundo [TensorRT](https://developer.nvidia.com/tensorrt) de NVIDIA, añade técnicas específicas para LLM, incluyendo batching continuo ("en vuelo"), una caché KV paginada, kernels de atención personalizados y soporte de cuantización hasta FP8 e INT4, para llevar el rendimiento de inferencia tan alto como lo permita la generación de GPU objetivo. El compromiso definitorio es el paso de compilación previo: un modelo debe construirse en un motor específico de GPU antes de poder servir tráfico, a diferencia de [llama.cpp](/power-local-llm/llama-cpp-explained) o [vLLM](/power-local-llm/vllm-explained), que cargan un modelo directamente sin un paso de compilación separado. En producción, TensorRT-LLM se usa con mayor frecuencia a través de [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) o empaquetado dentro de microservicios NVIDIA NIM, y apunta al máximo rendimiento por GPU en hardware NVIDIA en despliegues empresariales y de centro de datos — no al chat de escritorio para un solo usuario.',
+    leadAnswerBlock: '**TensorRT-LLM es una biblioteca gratuita y de código abierto (Apache 2.0) publicada por NVIDIA que compila modelos de lenguaje grandes en "motores" de inferencia optimizados, construidos específicamente para GPU de NVIDIA.** Construido sobre el SDK de inferencia de aprendizaje profundo [TensorRT](https://developer.nvidia.com/tensorrt) de NVIDIA, añade técnicas específicas para LLM, incluyendo batching continuo ("en vuelo"), una caché KV paginada, kernels de atención personalizados y soporte de cuantización hasta FP8 e INT4, para llevar el rendimiento de inferencia tan alto como lo permita la generación de GPU objetivo. El compromiso definitorio es el paso de compilación previo: un modelo debe construirse en un motor específico de GPU antes de poder servir tráfico, a diferencia de [llama.cpp](/es/power-local-llm/llama-cpp-explained) o [vLLM](/es/power-local-llm/vllm-explained), que cargan un modelo directamente sin un paso de compilación separado. En producción, TensorRT-LLM se usa con mayor frecuencia a través de [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) o empaquetado dentro de microservicios NVIDIA NIM, y apunta al máximo rendimiento por GPU en hardware NVIDIA en despliegues empresariales y de centro de datos — no al chat de escritorio para un solo usuario.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es TensorRT-LLM y cómo funciona?',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incluye un comando `trtllm-serve` para levantar directamente un endpoint compatible con OpenAI a partir de un motor ya construido',
           'Admite muchas familias populares de modelos abiertos, aunque el soporte exacto por modelo y los pasos de conversión necesarios varían según la versión de TensorRT-LLM — revisa la [documentación de modelos soportados](https://github.com/NVIDIA/TensorRT-LLM) del proyecto antes de elegir un modelo',
         ],
-        note: 'TensorRT-LLM es infraestructura para hardware de NVIDIA, no una app de chat para consumidores — no hay instalador gráfico ni soporte de GPU multifabricante. Si buscas una app de chat local para instalar con un clic, herramientas como [Ollama o LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) están hechas para ese caso de uso; ver las secciones de comparación más abajo.',
+        note: 'TensorRT-LLM es infraestructura para hardware de NVIDIA, no una app de chat para consumidores — no hay instalador gráfico ni soporte de GPU multifabricante. Si buscas una app de chat local para instalar con un clic, herramientas como [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) están hechas para ese caso de uso; ver las secciones de comparación más abajo.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Generación de GPU': 'Ada Lovelace (p. ej. L4, L40S)', 'Detalles': 'Compatible, con INT8 (incluido SmoothQuant) usado comúnmente como respaldo donde el soporte completo de herramientas FP8 es más limitado que en Hopper/Blackwell.' },
           { 'Generación de GPU': 'Arquitecturas más antiguas (p. ej. Ampere)', 'Detalles': 'Existe compatibilidad más amplia para algunas GPU de centro de datos de NVIDIA anteriores, pero los formatos de cuantización y optimizaciones de kernel más nuevos apuntan al hardware actual — consulta las [notas de la versión](https://nvidia.github.io/TensorRT-LLM/release-notes.html) de NVIDIA para la matriz exacta GPU/función de la versión que planeas usar.' },
         ],
-        note: 'Si tu objetivo es ejecutar un modelo en un portátil, un Mac o cualquier GPU que no sea de NVIDIA, TensorRT-LLM no es la herramienta hecha para eso — [llama.cpp](/power-local-llm/llama-cpp-explained) y herramientas construidas sobre él, como Ollama y LM Studio, apuntan directamente a hardware CPU y Apple Silicon y son mejor opción para ese escenario.',
+        note: 'Si tu objetivo es ejecutar un modelo en un portátil, un Mac o cualquier GPU que no sea de NVIDIA, TensorRT-LLM no es la herramienta hecha para eso — [llama.cpp](/es/power-local-llm/llama-cpp-explained) y herramientas construidas sobre él, como Ollama y LM Studio, apuntan directamente a hardware CPU y Apple Silicon y son mejor opción para ese escenario.',
       },
       quantization: {
         id: 'quantization-support',
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`: un comando incluido con TensorRT-LLM que levanta un endpoint de API compatible con OpenAI directamente a partir de un motor ya construido, sin un framework de servicio aparte',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server): una plataforma de servicio de modelos de propósito general con un backend de TensorRT-LLM, que añade cola de solicitudes, orquestación multimodelo y funciones de despliegue de nivel producción como integración con Kubernetes',
-          'NVIDIA NIM: microservicios en contenedores ya construidos, vendidos como parte de una suscripción a [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), que empaquetan un backend optimizado con TensorRT-LLM detrás de una API estandarizada con soporte del fabricante — ver la [comparación de servidores de inferencia empresarial](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para un análisis más profundo de la licencia y el soporte de NIM',
+          'NVIDIA NIM: microservicios en contenedores ya construidos, vendidos como parte de una suscripción a [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), que empaquetan un backend optimizado con TensorRT-LLM detrás de una API estandarizada con soporte del fabricante — ver la [comparación de servidores de inferencia empresarial](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para un análisis más profundo de la licencia y el soporte de NIM',
         ],
         note: 'Ejecutar la API de Python cruda de TensorRT-LLM directamente es común para desarrollo, pruebas de rendimiento y construir una capa de servicio personalizada; Triton y NIM existen para manejar las preocupaciones de producción — agrupar solicitudes entre muchos modelos, enrutamiento multiinquilino, comprobaciones de salud y contratos de soporte — que un motor crudo por sí solo no proporciona.',
       },
@@ -1045,13 +1045,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: '¿Cómo se compara TensorRT-LLM con vLLM y llama.cpp?',
-        content: 'TensorRT-LLM, [vLLM](/power-local-llm/vllm-explained) y [llama.cpp](/power-local-llm/llama-cpp-explained) ejecutan inferencia de LLM, pero se ubican en distintos puntos del espectro entre rendimiento y flexibilidad.',
+        content: 'TensorRT-LLM, [vLLM](/es/power-local-llm/vllm-explained) y [llama.cpp](/es/power-local-llm/llama-cpp-explained) ejecutan inferencia de LLM, pero se ubican en distintos puntos del espectro entre rendimiento y flexibilidad.',
         itemHeadings: true,
         columns: ['Motor', 'Detalles'],
         rows: [
           { 'Motor': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Detalles': 'Exclusivo de NVIDIA, con licencia Apache 2.0. Requiere un paso de compilación previa por generación de GPU; apunta al mayor rendimiento posible en ese hardware específico de NVIDIA a cambio del paso de compilación y una dependencia del fabricante.' },
-          { 'Motor': '[vLLM](/power-local-llm/vllm-explained)', 'Detalles': 'Con licencia Apache 2.0, carga directamente modelos compatibles con Hugging Face Transformers sin paso de compilación. Las GPU de NVIDIA son su objetivo principal, con backends de AMD, Intel y TPU documentados (más limitados).' },
-          { 'Motor': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Detalles': 'Motor C/C++ con licencia MIT que funciona en CPU, Apple Silicon y una amplia gama de fabricantes de GPU mediante el formato de modelo GGUF — el más flexible en hardware de los tres, pero no diseñado para la escala multi-GPU de alta concurrencia de centro de datos que buscan TensorRT-LLM y vLLM.' },
+          { 'Motor': '[vLLM](/es/power-local-llm/vllm-explained)', 'Detalles': 'Con licencia Apache 2.0, carga directamente modelos compatibles con Hugging Face Transformers sin paso de compilación. Las GPU de NVIDIA son su objetivo principal, con backends de AMD, Intel y TPU documentados (más limitados).' },
+          { 'Motor': '[llama.cpp](/es/power-local-llm/llama-cpp-explained)', 'Detalles': 'Motor C/C++ con licencia MIT que funciona en CPU, Apple Silicon y una amplia gama de fabricantes de GPU mediante el formato de modelo GGUF — el más flexible en hardware de los tres, pero no diseñado para la escala multi-GPU de alta concurrencia de centro de datos que buscan TensorRT-LLM y vLLM.' },
         ],
         note: 'Este artículo no ha comparado estos tres motores de forma independiente y no afirma que uno sea universalmente más rápido — el rendimiento depende en gran medida del modelo, la generación de GPU, las características del lote y la versión de cada motor. La ventaja real de TensorRT-LLM es el rendimiento máximo específicamente en hardware NVIDIA actual, a costa del paso de compilación y el soporte exclusivo de NVIDIA; vLLM cambia parte de ese ajuste específico de GPU de máximo rendimiento por un flujo de trabajo más simple sin compilación y una cobertura de hardware más amplia (aunque sigue siendo principalmente NVIDIA); llama.cpp cambia más rendimiento máximo por funcionar en hardware que ninguno de los otros dos aborda, incluyendo CPU y Mac.',
       },
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Capa': 'NVIDIA Triton Inference Server', 'Detalles': 'Una plataforma de servicio de modelos de propósito general, gratuita y de código abierto, con un backend de TensorRT-LLM, que añade enrutamiento de solicitudes, alojamiento multimodelo y orquestación de producción alrededor de uno o más motores.' },
           { 'Capa': 'NVIDIA NIM', 'Detalles': 'Una capa de microservicios de pago, ya construidos, vendida como parte de una suscripción a NVIDIA AI Enterprise, que empaqueta un backend optimizado con TensorRT-LLM detrás de una API estandarizada con soporte del fabricante — cambiando la configuración manual por un contenedor con soporte y listo para desplegar.' },
         ],
-        note: 'Un camino habitual es: compilar el modelo en un motor TensorRT-LLM y luego servirlo mediante Triton para un despliegue de producción autogestionado, o saltarse por completo el paso de compilación usando un contenedor NIM ya construido si la suscripción de pago y el soporte del fabricante valen la pena para tu equipo. Ver la [comparación de servidores de inferencia empresarial](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para las compensaciones de licencia y costo entre NIM, vLLM y TGI.',
+        note: 'Un camino habitual es: compilar el modelo en un motor TensorRT-LLM y luego servirlo mediante Triton para un despliegue de producción autogestionado, o saltarse por completo el paso de compilación usando un contenedor NIM ya construido si la suscripción de pago y el soporte del fabricante valen la pena para tu equipo. Ver la [comparación de servidores de inferencia empresarial](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para las compensaciones de licencia y costo entre NIM, vLLM y TGI.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evita TensorRT-LLM si',
             list: [
-              'Quieres ejecutar un modelo en tu propio portátil o escritorio para chat personal — [Ollama o LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) encajan mucho mejor con esa necesidad',
+              'Quieres ejecutar un modelo en tu propio portátil o escritorio para chat personal — [Ollama o LM Studio](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) encajan mucho mejor con esa necesidad',
               'Tu hardware no es de NVIDIA — TensorRT-LLM no tiene ningún backend de CPU, AMD, Intel o Apple Silicon, a diferencia de vLLM o llama.cpp',
               'Quieres iterar rápidamente en muchos modelos distintos sin que un paso de compilación por modelo y por GPU te ralentice — el enfoque de carga directa de vLLM encaja mejor',
               'Tu equipo no tiene capacidad disponible para mantener una canalización de compilación CUDA/TensorRT y prefiere pagar por un despliegue ya construido y con soporte — NVIDIA NIM está diseñado para ese intercambio',
@@ -1102,11 +1102,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Herramienta', 'Configuración', 'Ideal para'],
         rows: [
           { 'Herramienta': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Configuración': 'Compilar un motor específico de GPU con `trtllm-build`, luego servirlo con `trtllm-serve` o Triton. Requiere GPU de NVIDIA y CUDA.', 'Ideal para': 'Máximo rendimiento por GPU en hardware NVIDIA en producción, a costa de un paso de compilación.' },
-          { 'Herramienta': '[vLLM](/power-local-llm/vllm-explained)', 'Configuración': 'Paquete de Python vía pip; servidor compatible con OpenAI iniciado con `vllm serve`. Sin paso de compilación; GPU de NVIDIA como objetivo principal.', 'Ideal para': 'Servicio de alto rendimiento multiusuario con un flujo de trabajo más simple sin compilación.' },
-          { 'Herramienta': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Configuración': 'CLI, interfaz web integrada y API compatible con OpenAI vía llama-server. Funciona en CPU o una amplia gama de fabricantes de GPU.', 'Ideal para': 'Flexibilidad de hardware, despliegue embebido/en el borde, y uso en CPU o Apple Silicon.' },
+          { 'Herramienta': '[vLLM](/es/power-local-llm/vllm-explained)', 'Configuración': 'Paquete de Python vía pip; servidor compatible con OpenAI iniciado con `vllm serve`. Sin paso de compilación; GPU de NVIDIA como objetivo principal.', 'Ideal para': 'Servicio de alto rendimiento multiusuario con un flujo de trabajo más simple sin compilación.' },
+          { 'Herramienta': '[llama.cpp](/es/power-local-llm/llama-cpp-explained)', 'Configuración': 'CLI, interfaz web integrada y API compatible con OpenAI vía llama-server. Funciona en CPU o una amplia gama de fabricantes de GPU.', 'Ideal para': 'Flexibilidad de hardware, despliegue embebido/en el borde, y uso en CPU o Apple Silicon.' },
           { 'Herramienta': 'NVIDIA NIM', 'Configuración': 'Contenedor ya construido, desplegado con una suscripción de pago a NVIDIA AI Enterprise. Sin paso de compilación para el usuario final.', 'Ideal para': 'Equipos que quieren el rendimiento de TensorRT-LLM sin operar ellos mismos la canalización de compilación.' },
         ],
-        note: 'Este artículo no ha comparado de forma independiente la velocidad ni la calidad de salida de estas herramientas y no afirma que una sea técnicamente superior para toda carga de trabajo — la comparación anterior cubre solo hechos documentados de arquitectura, configuración y licencia. Ver la [guía de servidores de inferencia empresarial](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para una comparación más profunda de licencia y despliegue.',
+        note: 'Este artículo no ha comparado de forma independiente la velocidad ni la calidad de salida de estas herramientas y no afirma que una sea técnicamente superior para toda carga de trabajo — la comparación anterior cubre solo hechos documentados de arquitectura, configuración y licencia. Ver la [guía de servidores de inferencia empresarial](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para una comparación más profunda de licencia y despliegue.',
       },
       limitations: {
         id: 'limitations',
@@ -1136,7 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 3: intentar ejecutarlo en hardware que no es de NVIDIA',
-            content: 'TensorRT-LLM no tiene ningún backend de solo CPU, AMD, Intel o Apple Silicon. Intentar usarlo fuera de las GPU de NVIDIA no es un camino soportado en absoluto — [llama.cpp](/power-local-llm/llama-cpp-explained) o vLLM son las herramientas construidas para una cobertura de hardware más amplia.',
+            content: 'TensorRT-LLM no tiene ningún backend de solo CPU, AMD, Intel o Apple Silicon. Intentar usarlo fuera de las GPU de NVIDIA no es un camino soportado en absoluto — [llama.cpp](/es/power-local-llm/llama-cpp-explained) o vLLM son las herramientas construidas para una cobertura de hardware más amplia.',
           },
         ],
       },
@@ -1167,11 +1167,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[vLLM explicado](/power-local-llm/vllm-explained) — la alternativa Apache 2.0 que carga modelos directamente sin paso de compilación, en contraste con la compilación previa de TensorRT-LLM.',
-          '[llama.cpp explicado](/power-local-llm/llama-cpp-explained) — el motor flexible en hardware que funciona en CPU, Apple Silicon y una amplia gama de fabricantes de GPU, a diferencia del alcance exclusivo de NVIDIA de TensorRT-LLM.',
-          '[Servidores de inferencia LLM empresariales: vLLM, TGI y NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — una comparación más profunda centrada en el despliegue, incluyendo NVIDIA NIM, que empaqueta TensorRT-LLM.',
-          '[Elegir una GPU para hardware de inferencia local](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — generaciones de GPU a considerar si estás dimensionando hardware NVIDIA para ejecutar TensorRT-LLM.',
-          '[Directorio de software de LLM local](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[vLLM explicado](/es/power-local-llm/vllm-explained) — la alternativa Apache 2.0 que carga modelos directamente sin paso de compilación, en contraste con la compilación previa de TensorRT-LLM.',
+          '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — el motor flexible en hardware que funciona en CPU, Apple Silicon y una amplia gama de fabricantes de GPU, a diferencia del alcance exclusivo de NVIDIA de TensorRT-LLM.',
+          '[Servidores de inferencia LLM empresariales: vLLM, TGI y NIM](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — una comparación más profunda centrada en el despliegue, incluyendo NVIDIA NIM, que empaqueta TensorRT-LLM.',
+          '[Elegir una GPU para hardware de inferencia local](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — generaciones de GPU a considerar si estás dimensionando hardware NVIDIA para ejecutar TensorRT-LLM.',
+          '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM explicado: o motor de inferência otimizado para GPU da NVIDIA (2026)',
     seoTitle: 'TensorRT-LLM explicado: o motor de inferência da NVIDIA (2026)',
-    intro: 'O TensorRT-LLM é uma biblioteca de código aberto publicada pela NVIDIA sob a licença Apache 2.0 para compilar e otimizar a inferência de grandes modelos de linguagem especificamente em GPUs da NVIDIA. Em vez de carregar um modelo e executá-lo diretamente como fazem o [llama.cpp](/power-local-llm/llama-cpp-explained) ou o [vLLM](/power-local-llm/vllm-explained), o TensorRT-LLM compila um modelo antecipadamente em um "motor" otimizado, construído a partir de kernels CUDA personalizados ajustados para uma geração específica de GPU da NVIDIA. Essa etapa de compilação é a base de todo o seu design: em troca da etapa extra de build e da exigência de hardware exclusivamente NVIDIA, ele busca o máximo desempenho de inferência possível em GPUs NVIDIA, e é o motor por trás dos próprios microsserviços NIM da NVIDIA e um backend comum para o [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
+    intro: 'O TensorRT-LLM é uma biblioteca de código aberto publicada pela NVIDIA sob a licença Apache 2.0 para compilar e otimizar a inferência de grandes modelos de linguagem especificamente em GPUs da NVIDIA. Em vez de carregar um modelo e executá-lo diretamente como fazem o [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou o [vLLM](/pt/power-local-llm/vllm-explained), o TensorRT-LLM compila um modelo antecipadamente em um "motor" otimizado, construído a partir de kernels CUDA personalizados ajustados para uma geração específica de GPU da NVIDIA. Essa etapa de compilação é a base de todo o seu design: em troca da etapa extra de build e da exigência de hardware exclusivamente NVIDIA, ele busca o máximo desempenho de inferência possível em GPUs NVIDIA, e é o motor por trás dos próprios microsserviços NIM da NVIDIA e um backend comum para o [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
     metaDescription: 'TensorRT-LLM é o motor de código aberto da NVIDIA, sob licença Apache 2.0, que compila LLMs em motores de inferência otimizados para GPU. O que é, como se compara ao vLLM e ao llama.cpp, e como construir e executar um motor.',
     readTime: '13 min de leitura',
     targetKeywords: [
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'construir motor TensorRT-LLM',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM é uma biblioteca gratuita e de código aberto (Apache 2.0) publicada pela NVIDIA que compila grandes modelos de linguagem em "motores" de inferência otimizados, construídos especificamente para GPUs da NVIDIA.** Construído sobre o SDK de inferência de deep learning [TensorRT](https://developer.nvidia.com/tensorrt) da NVIDIA, ele adiciona técnicas específicas para LLMs, incluindo batching contínuo ("in-flight"), um cache KV paginado, kernels de atenção personalizados e suporte a quantização até FP8 e INT4, para elevar o throughput de inferência tanto quanto a geração de GPU alvo permitir. O trade-off definidor é a etapa de compilação antecipada: um modelo precisa ser construído em um motor específico para a GPU antes de poder atender tráfego, ao contrário do [llama.cpp](/power-local-llm/llama-cpp-explained) ou do [vLLM](/power-local-llm/vllm-explained), que carregam um modelo diretamente sem uma etapa de compilação separada. Em produção, o TensorRT-LLM é usado com mais frequência via [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) ou empacotado dentro de microsserviços NVIDIA NIM, e visa o máximo throughput por GPU em hardware NVIDIA em implantações de datacenter e empresariais — não o chat de desktop para um único usuário.',
+    leadAnswerBlock: '**TensorRT-LLM é uma biblioteca gratuita e de código aberto (Apache 2.0) publicada pela NVIDIA que compila grandes modelos de linguagem em "motores" de inferência otimizados, construídos especificamente para GPUs da NVIDIA.** Construído sobre o SDK de inferência de deep learning [TensorRT](https://developer.nvidia.com/tensorrt) da NVIDIA, ele adiciona técnicas específicas para LLMs, incluindo batching contínuo ("in-flight"), um cache KV paginado, kernels de atenção personalizados e suporte a quantização até FP8 e INT4, para elevar o throughput de inferência tanto quanto a geração de GPU alvo permitir. O trade-off definidor é a etapa de compilação antecipada: um modelo precisa ser construído em um motor específico para a GPU antes de poder atender tráfego, ao contrário do [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou do [vLLM](/pt/power-local-llm/vllm-explained), que carregam um modelo diretamente sem uma etapa de compilação separada. Em produção, o TensorRT-LLM é usado com mais frequência via [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) ou empacotado dentro de microsserviços NVIDIA NIM, e visa o máximo throughput por GPU em hardware NVIDIA em implantações de datacenter e empresariais — não o chat de desktop para um único usuário.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o TensorRT-LLM e como ele funciona?',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inclui um comando `trtllm-serve` para levantar diretamente um endpoint compatível com OpenAI a partir de um motor já construído',
           'Suporta muitas famílias populares de modelos abertos, embora o suporte exato por modelo e as etapas de conversão necessárias variem conforme a versão do TensorRT-LLM — verifique a [documentação de modelos suportados](https://github.com/NVIDIA/TensorRT-LLM) do projeto antes de escolher um modelo',
         ],
-        note: 'TensorRT-LLM é infraestrutura para hardware NVIDIA, não um app de chat para consumidores — não há instalador gráfico nem suporte a GPU multi-fabricante. Se você quer um app de chat local para instalar com um clique, ferramentas como [Ollama ou LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) são feitas para esse caso de uso; veja as seções de comparação abaixo.',
+        note: 'TensorRT-LLM é infraestrutura para hardware NVIDIA, não um app de chat para consumidores — não há instalador gráfico nem suporte a GPU multi-fabricante. Se você quer um app de chat local para instalar com um clique, ferramentas como [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) são feitas para esse caso de uso; veja as seções de comparação abaixo.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Geração de GPU': 'Ada Lovelace (ex.: L4, L40S)', 'Detalhes': 'Suportado, com INT8 (incluindo SmoothQuant) comumente usado como alternativa onde o suporte completo de ferramentas FP8 é mais restrito do que em Hopper/Blackwell.' },
           { 'Geração de GPU': 'Arquiteturas mais antigas (ex.: Ampere)', 'Detalhes': 'Existe compatibilidade mais ampla para algumas GPUs de datacenter NVIDIA anteriores, mas os formatos de quantização e otimizações de kernel mais novos visam o hardware atual — consulte as [notas de versão](https://nvidia.github.io/TensorRT-LLM/release-notes.html) da NVIDIA para a matriz exata GPU/recurso da versão que você planeja usar.' },
         ],
-        note: 'Se o objetivo é rodar um modelo em um notebook, um Mac ou qualquer GPU que não seja NVIDIA, o TensorRT-LLM não é a ferramenta feita para isso — o [llama.cpp](/power-local-llm/llama-cpp-explained) e ferramentas construídas sobre ele, como Ollama e LM Studio, visam diretamente hardware CPU e Apple Silicon e são a opção melhor para esse cenário.',
+        note: 'Se o objetivo é rodar um modelo em um notebook, um Mac ou qualquer GPU que não seja NVIDIA, o TensorRT-LLM não é a ferramenta feita para isso — o [llama.cpp](/pt/power-local-llm/llama-cpp-explained) e ferramentas construídas sobre ele, como Ollama e LM Studio, visam diretamente hardware CPU e Apple Silicon e são a opção melhor para esse cenário.',
       },
       quantization: {
         id: 'quantization-support',
@@ -1313,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`: um comando incluído com o TensorRT-LLM que levanta um endpoint de API compatível com OpenAI diretamente a partir de um motor construído, sem um framework de atendimento separado',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server): uma plataforma de atendimento de modelos de propósito geral com um backend TensorRT-LLM, adicionando fila de requisições, orquestração multi-modelo e recursos de implantação de nível produção como integração com Kubernetes',
-          'NVIDIA NIM: microsserviços em contêiner já prontos, vendidos como parte de uma assinatura [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), que empacotam um backend otimizado pelo TensorRT-LLM atrás de uma API padronizada com suporte do fabricante — veja a [comparação de servidores de inferência empresariais](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para um olhar mais profundo sobre licenciamento e suporte do NIM',
+          'NVIDIA NIM: microsserviços em contêiner já prontos, vendidos como parte de uma assinatura [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/), que empacotam um backend otimizado pelo TensorRT-LLM atrás de uma API padronizada com suporte do fabricante — veja a [comparação de servidores de inferência empresariais](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para um olhar mais profundo sobre licenciamento e suporte do NIM',
         ],
         note: 'Executar diretamente a API Python bruta do TensorRT-LLM é comum para desenvolvimento, benchmarking e construção de uma camada de atendimento personalizada; Triton e NIM existem para lidar com as preocupações de produção — agrupamento de requisições entre muitos modelos, roteamento multi-tenant, verificações de saúde e contratos de suporte — que um motor bruto sozinho não fornece.',
       },
@@ -1338,13 +1338,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'Como o TensorRT-LLM se compara ao vLLM e ao llama.cpp?',
-        content: 'TensorRT-LLM, [vLLM](/power-local-llm/vllm-explained) e [llama.cpp](/power-local-llm/llama-cpp-explained) executam inferência de LLM, mas se posicionam em pontos diferentes do espectro entre desempenho e flexibilidade.',
+        content: 'TensorRT-LLM, [vLLM](/pt/power-local-llm/vllm-explained) e [llama.cpp](/pt/power-local-llm/llama-cpp-explained) executam inferência de LLM, mas se posicionam em pontos diferentes do espectro entre desempenho e flexibilidade.',
         itemHeadings: true,
         columns: ['Motor', 'Detalhes'],
         rows: [
           { 'Motor': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Detalhes': 'Exclusivo da NVIDIA, licenciado sob Apache 2.0. Requer uma etapa de compilação antecipada por geração de GPU; visa o maior throughput possível naquele hardware NVIDIA específico em troca da etapa de build e de um lock-in de fabricante.' },
-          { 'Motor': '[vLLM](/power-local-llm/vllm-explained)', 'Detalhes': 'Licenciado sob Apache 2.0, carrega modelos compatíveis com Hugging Face Transformers diretamente sem etapa de compilação. GPUs NVIDIA são seu alvo principal, com backends AMD, Intel e TPU documentados (mais restritos).' },
-          { 'Motor': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Detalhes': 'Motor C/C++ licenciado sob MIT que roda em CPU, Apple Silicon e uma ampla gama de fabricantes de GPU via o formato de modelo GGUF — o mais flexível em hardware dos três, mas não construído para a escala multi-GPU de alta concorrência de datacenter que TensorRT-LLM e vLLM visam.' },
+          { 'Motor': '[vLLM](/pt/power-local-llm/vllm-explained)', 'Detalhes': 'Licenciado sob Apache 2.0, carrega modelos compatíveis com Hugging Face Transformers diretamente sem etapa de compilação. GPUs NVIDIA são seu alvo principal, com backends AMD, Intel e TPU documentados (mais restritos).' },
+          { 'Motor': '[llama.cpp](/pt/power-local-llm/llama-cpp-explained)', 'Detalhes': 'Motor C/C++ licenciado sob MIT que roda em CPU, Apple Silicon e uma ampla gama de fabricantes de GPU via o formato de modelo GGUF — o mais flexível em hardware dos três, mas não construído para a escala multi-GPU de alta concorrência de datacenter que TensorRT-LLM e vLLM visam.' },
         ],
         note: 'Este artigo não comparou de forma independente esses três motores entre si e não afirma que um seja universalmente mais rápido — o throughput depende muito do modelo, da geração de GPU, das características do batch e da versão de cada motor. A vantagem real do TensorRT-LLM é o desempenho de pico especificamente em hardware NVIDIA atual, ao custo da etapa de compilação e do suporte exclusivo à NVIDIA; o vLLM troca parte desse ajuste específico de pico por GPU por um fluxo de trabalho mais simples sem compilação e uma cobertura de hardware mais ampla (embora ainda majoritariamente NVIDIA); o llama.cpp troca ainda mais throughput de pico pela capacidade de rodar em hardware que nenhum dos outros dois atende, incluindo CPUs e Macs.',
       },
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Camada': 'NVIDIA Triton Inference Server', 'Detalhes': 'Uma plataforma de atendimento de modelos de propósito geral, gratuita e de código aberto, com um backend TensorRT-LLM, adicionando roteamento de requisições, hospedagem multi-modelo e orquestração de produção ao redor de um ou mais motores.' },
           { 'Camada': 'NVIDIA NIM', 'Detalhes': 'Uma camada de microsserviços pagos e já construídos, vendida como parte de uma assinatura NVIDIA AI Enterprise, que empacota um backend otimizado pelo TensorRT-LLM atrás de uma API padronizada com suporte do fabricante — trocando o esforço de configuração própria por um contêiner com suporte e pronto para implantar.' },
         ],
-        note: 'Um caminho comum é: compilar o modelo em um motor TensorRT-LLM e depois servi-lo via Triton para uma implantação de produção autogerenciada, ou pular a etapa de compilação inteiramente usando um contêiner NIM já pronto se a assinatura paga e o suporte do fabricante valerem a pena para sua equipe. Veja a [comparação de servidores de inferência empresariais](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para os trade-offs de licenciamento e custo entre NIM, vLLM e TGI.',
+        note: 'Um caminho comum é: compilar o modelo em um motor TensorRT-LLM e depois servi-lo via Triton para uma implantação de produção autogerenciada, ou pular a etapa de compilação inteiramente usando um contêiner NIM já pronto se a assinatura paga e o suporte do fabricante valerem a pena para sua equipe. Veja a [comparação de servidores de inferência empresariais](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para os trade-offs de licenciamento e custo entre NIM, vLLM e TGI.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Evite o TensorRT-LLM se',
             list: [
-              'Você quer rodar um modelo no seu próprio notebook ou desktop para chat pessoal — [Ollama ou LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) atendem muito melhor a essa necessidade',
+              'Você quer rodar um modelo no seu próprio notebook ou desktop para chat pessoal — [Ollama ou LM Studio](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) atendem muito melhor a essa necessidade',
               'Seu hardware não é da NVIDIA — o TensorRT-LLM não tem nenhum backend para CPU, AMD, Intel ou Apple Silicon, ao contrário do vLLM ou do llama.cpp',
               'Você quer iterar rapidamente em muitos modelos diferentes sem que uma etapa de compilação por modelo e por GPU te atrase — a abordagem de carregamento direto do vLLM se encaixa melhor',
               'Sua equipe não tem capacidade sobrando para manter um pipeline de build CUDA/TensorRT e prefere pagar por uma implantação pronta e com suporte — o NVIDIA NIM é feito para essa troca',
@@ -1395,11 +1395,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ferramenta', 'Configuração', 'Ideal para'],
         rows: [
           { 'Ferramenta': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'Configuração': 'Compilar um motor específico para a GPU com `trtllm-build`, depois servi-lo com `trtllm-serve` ou Triton. GPU NVIDIA e CUDA exigidos.', 'Ideal para': 'Throughput máximo por GPU em hardware NVIDIA em produção, ao custo de uma etapa de compilação.' },
-          { 'Ferramenta': '[vLLM](/power-local-llm/vllm-explained)', 'Configuração': 'Pacote Python via pip; servidor compatível com OpenAI iniciado com `vllm serve`. Sem etapa de compilação; alvo principal GPU NVIDIA.', 'Ideal para': 'Atendimento multiusuário de alto throughput com um fluxo de trabalho mais simples sem compilação.' },
-          { 'Ferramenta': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'Configuração': 'CLI, interface web integrada e API compatível com OpenAI via llama-server. Roda em CPU ou uma ampla gama de fabricantes de GPU.', 'Ideal para': 'Flexibilidade de hardware, implantação embarcada/de borda, e uso em CPU ou Apple Silicon.' },
+          { 'Ferramenta': '[vLLM](/pt/power-local-llm/vllm-explained)', 'Configuração': 'Pacote Python via pip; servidor compatível com OpenAI iniciado com `vllm serve`. Sem etapa de compilação; alvo principal GPU NVIDIA.', 'Ideal para': 'Atendimento multiusuário de alto throughput com um fluxo de trabalho mais simples sem compilação.' },
+          { 'Ferramenta': '[llama.cpp](/pt/power-local-llm/llama-cpp-explained)', 'Configuração': 'CLI, interface web integrada e API compatível com OpenAI via llama-server. Roda em CPU ou uma ampla gama de fabricantes de GPU.', 'Ideal para': 'Flexibilidade de hardware, implantação embarcada/de borda, e uso em CPU ou Apple Silicon.' },
           { 'Ferramenta': 'NVIDIA NIM', 'Configuração': 'Contêiner já pronto, implantado com uma assinatura paga do NVIDIA AI Enterprise. Sem etapa de build para o usuário final.', 'Ideal para': 'Equipes que querem o desempenho do TensorRT-LLM sem operar o pipeline de build por conta própria.' },
         ],
-        note: 'Este artigo não comparou de forma independente a velocidade ou a qualidade de saída dessas ferramentas e não afirma que uma seja tecnicamente superior para toda carga de trabalho — a comparação acima cobre apenas fatos documentados de arquitetura, configuração e licenciamento. Veja o [guia de servidores de inferência empresariais](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para uma comparação mais profunda de licenciamento e implantação.',
+        note: 'Este artigo não comparou de forma independente a velocidade ou a qualidade de saída dessas ferramentas e não afirma que uma seja tecnicamente superior para toda carga de trabalho — a comparação acima cobre apenas fatos documentados de arquitetura, configuração e licenciamento. Veja o [guia de servidores de inferência empresariais](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) para uma comparação mais profunda de licenciamento e implantação.',
       },
       limitations: {
         id: 'limitations',
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Erro 3: tentar rodá-lo em hardware que não é da NVIDIA',
-            content: 'O TensorRT-LLM não tem nenhum backend somente CPU, AMD, Intel ou Apple Silicon. Tentar usá-lo fora de GPUs NVIDIA não é um caminho suportado de forma alguma — o [llama.cpp](/power-local-llm/llama-cpp-explained) ou o vLLM são as ferramentas construídas para uma cobertura de hardware mais ampla.',
+            content: 'O TensorRT-LLM não tem nenhum backend somente CPU, AMD, Intel ou Apple Silicon. Tentar usá-lo fora de GPUs NVIDIA não é um caminho suportado de forma alguma — o [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou o vLLM são as ferramentas construídas para uma cobertura de hardware mais ampla.',
           },
         ],
       },
@@ -1460,11 +1460,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[vLLM explicado](/power-local-llm/vllm-explained) — a alternativa Apache 2.0 que carrega modelos diretamente sem etapa de compilação, em contraste com a construção antecipada do TensorRT-LLM.',
-          '[llama.cpp explicado](/power-local-llm/llama-cpp-explained) — o motor flexível em hardware que roda em CPUs, Apple Silicon e uma ampla gama de fabricantes de GPU, ao contrário do escopo exclusivo à NVIDIA do TensorRT-LLM.',
-          '[Servidores de inferência LLM empresariais: vLLM, TGI e NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — uma comparação mais profunda focada em implantação, incluindo o NVIDIA NIM, que empacota o TensorRT-LLM.',
-          '[Escolher uma GPU para hardware de inferência local](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — gerações de GPU a considerar se você está dimensionando hardware NVIDIA para rodar o TensorRT-LLM.',
-          '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[vLLM explicado](/pt/power-local-llm/vllm-explained) — a alternativa Apache 2.0 que carrega modelos diretamente sem etapa de compilação, em contraste com a construção antecipada do TensorRT-LLM.',
+          '[llama.cpp explicado](/pt/power-local-llm/llama-cpp-explained) — o motor flexível em hardware que roda em CPUs, Apple Silicon e uma ampla gama de fabricantes de GPU, ao contrário do escopo exclusivo à NVIDIA do TensorRT-LLM.',
+          '[Servidores de inferência LLM empresariais: vLLM, TGI e NIM](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — uma comparação mais profunda focada em implantação, incluindo o NVIDIA NIM, que empacota o TensorRT-LLM.',
+          '[Escolher uma GPU para hardware de inferência local](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — gerações de GPU a considerar se você está dimensionando hardware NVIDIA para rodar o TensorRT-LLM.',
+          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLMとは:NVIDIAのGPU最適化推論エンジンを解説(2026年版)',
     seoTitle: 'TensorRT-LLMとは:NVIDIAの推論エンジンを解説(2026年版)',
-    intro: 'TensorRT-LLMは、NVIDIAがApache 2.0ライセンスで公開しているオープンソースライブラリで、大規模言語モデルの推論をNVIDIA GPU向けに特化してコンパイル・最適化するものです。[llama.cpp](/power-local-llm/llama-cpp-explained)や[vLLM](/power-local-llm/vllm-explained)のようにモデルを読み込んでそのまま実行するのではなく、TensorRT-LLMは特定のNVIDIA GPU世代向けに調整されたカスタムCUDAカーネルから構成される最適化済みの「エンジン」に、モデルを事前にコンパイルします。このコンパイル工程こそが設計全体の根幹であり、追加のビルド工程とNVIDIA専用ハードウェアという要件と引き換えに、NVIDIA GPU上で達成可能な最高の推論性能を目指します。また、NVIDIA自身のNIMマイクロサービスの内部で使われているエンジンであり、[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)の一般的なバックエンドでもあります。',
+    intro: 'TensorRT-LLMは、NVIDIAがApache 2.0ライセンスで公開しているオープンソースライブラリで、大規模言語モデルの推論をNVIDIA GPU向けに特化してコンパイル・最適化するものです。[llama.cpp](/ja/power-local-llm/llama-cpp-explained)や[vLLM](/ja/power-local-llm/vllm-explained)のようにモデルを読み込んでそのまま実行するのではなく、TensorRT-LLMは特定のNVIDIA GPU世代向けに調整されたカスタムCUDAカーネルから構成される最適化済みの「エンジン」に、モデルを事前にコンパイルします。このコンパイル工程こそが設計全体の根幹であり、追加のビルド工程とNVIDIA専用ハードウェアという要件と引き換えに、NVIDIA GPU上で達成可能な最高の推論性能を目指します。また、NVIDIA自身のNIMマイクロサービスの内部で使われているエンジンであり、[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)の一般的なバックエンドでもあります。',
     metaDescription: 'TensorRT-LLMはNVIDIAのオープンソース・Apache 2.0ライセンスのエンジンで、LLMをGPU最適化された推論エンジンにコンパイルします。vLLMやllama.cppとの違い、エンジンの構築・実行方法を解説します。',
     readTime: '13分で読了',
     targetKeywords: [
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'TensorRT-LLM エンジン ビルド',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLMは、NVIDIAが公開している無料のオープンソース(Apache 2.0)ライブラリで、大規模言語モデルをNVIDIA GPU専用に構築された最適化済み推論「エンジン」にコンパイルします。** NVIDIAの[TensorRT](https://developer.nvidia.com/tensorrt)深層学習推論SDKの上に構築されており、インフライト(継続的)バッチング、ページ化されたKVキャッシュ、カスタムAttentionカーネル、FP8やINT4までの量子化サポートといったLLM特有の技術を加えることで、対象GPU世代が許す限りの推論スループットを引き出します。決定的なトレードオフは事前コンパイル工程です。トラフィックを処理する前に、モデルをGPU専用のエンジンとしてビルドする必要があり、これは別途コンパイル工程を必要とせずモデルを直接読み込む[llama.cpp](/power-local-llm/llama-cpp-explained)や[vLLM](/power-local-llm/vllm-explained)とは異なります。本番環境では、TensorRT-LLMは[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)経由、あるいはNVIDIA NIMマイクロサービスにパッケージされた形で利用されることが最も多く、データセンターやエンタープライズのデプロイにおいてNVIDIAハードウェア上でGPUあたりの最大スループットを狙うものであり、個人向けデスクトップチャットを対象としたものではありません。',
+    leadAnswerBlock: '**TensorRT-LLMは、NVIDIAが公開している無料のオープンソース(Apache 2.0)ライブラリで、大規模言語モデルをNVIDIA GPU専用に構築された最適化済み推論「エンジン」にコンパイルします。** NVIDIAの[TensorRT](https://developer.nvidia.com/tensorrt)深層学習推論SDKの上に構築されており、インフライト(継続的)バッチング、ページ化されたKVキャッシュ、カスタムAttentionカーネル、FP8やINT4までの量子化サポートといったLLM特有の技術を加えることで、対象GPU世代が許す限りの推論スループットを引き出します。決定的なトレードオフは事前コンパイル工程です。トラフィックを処理する前に、モデルをGPU専用のエンジンとしてビルドする必要があり、これは別途コンパイル工程を必要とせずモデルを直接読み込む[llama.cpp](/ja/power-local-llm/llama-cpp-explained)や[vLLM](/ja/power-local-llm/vllm-explained)とは異なります。本番環境では、TensorRT-LLMは[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)経由、あるいはNVIDIA NIMマイクロサービスにパッケージされた形で利用されることが最も多く、データセンターやエンタープライズのデプロイにおいてNVIDIAハードウェア上でGPUあたりの最大スループットを狙うものであり、個人向けデスクトップチャットを対象としたものではありません。',
     quickAnswerTop: {
       ja: {
         question: 'TensorRT-LLMとは何で、どのように動作するのか?',
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ビルド済みエンジンから直接OpenAI互換エンドポイントを立ち上げる`trtllm-serve`コマンドを含む',
           '多くの人気オープンモデルファミリーをサポートしているが、モデルごとの正確なサポート状況や必要な変換手順はTensorRT-LLMのリリースによって異なる — モデルを決める前にプロジェクトの[サポートモデルに関するドキュメント](https://github.com/NVIDIA/TensorRT-LLM)を確認すること',
         ],
-        note: 'TensorRT-LLMはNVIDIAハードウェア向けのインフラであり、コンシューマー向けチャットアプリではない — グラフィカルなインストーラーもベンダー横断のGPUサポートも存在しない。ワンクリックで使えるローカルチャットアプリが欲しい場合は、[OllamaやLM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)のようなツールがその用途向けに作られている。下記の比較セクションを参照。',
+        note: 'TensorRT-LLMはNVIDIAハードウェア向けのインフラであり、コンシューマー向けチャットアプリではない — グラフィカルなインストーラーもベンダー横断のGPUサポートも存在しない。ワンクリックで使えるローカルチャットアプリが欲しい場合は、[OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)のようなツールがその用途向けに作られている。下記の比較セクションを参照。',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1583,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'GPU世代': 'Ada Lovelace(例:L4、L40S)', '詳細': 'サポート対象。完全なFP8ツールサポートがHopper/Blackwellほど広くない場合、SmoothQuantを含むINT8がフォールバックとして一般的に使われる。' },
           { 'GPU世代': 'より古いアーキテクチャ(例:Ampere)', '詳細': '一部の従来のNVIDIAデータセンターGPU向けにより広い互換性があるが、最新の量子化フォーマットやカーネル最適化は現行世代ハードウェアを対象としている — 使用予定バージョンの正確なGPU/機能対応表はNVIDIAの[リリースノート](https://nvidia.github.io/TensorRT-LLM/release-notes.html)を確認すること。' },
         ],
-        note: 'ノートPCやMac、あるいはNVIDIA以外のGPUでモデルを実行したい場合、TensorRT-LLMはそのために作られたツールではない — [llama.cpp](/power-local-llm/llama-cpp-explained)や、OllamaやLM Studioなどそれを基盤とするツールは、CPUやApple Siliconハードウェアを直接対象としており、そのシナリオにより適している。',
+        note: 'ノートPCやMac、あるいはNVIDIA以外のGPUでモデルを実行したい場合、TensorRT-LLMはそのために作られたツールではない — [llama.cpp](/ja/power-local-llm/llama-cpp-explained)や、OllamaやLM Studioなどそれを基盤とするツールは、CPUやApple Siliconハードウェアを直接対象としており、そのシナリオにより適している。',
       },
       quantization: {
         id: 'quantization-support',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`:TensorRT-LLMに含まれるコマンドで、別のサービングフレームワークを使わず、ビルド済みエンジンから直接OpenAI互換のAPIエンドポイントを立ち上げる',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server):TensorRT-LLMバックエンドを備えた汎用モデルサービングプラットフォームで、リクエストキューイング、マルチモデルオーケストレーション、Kubernetes統合などの本番グレードのデプロイ機能を追加する',
-          'NVIDIA NIM:[NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)サブスクリプションの一部として販売される、構築済みのコンテナ化マイクロサービスで、TensorRT-LLM最適化バックエンドを標準化されたAPIの背後にパッケージしベンダーサポートを提供する — NIMのライセンスとサポートモデルについてより詳しくは[エンタープライズ推論サーバー比較](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照',
+          'NVIDIA NIM:[NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)サブスクリプションの一部として販売される、構築済みのコンテナ化マイクロサービスで、TensorRT-LLM最適化バックエンドを標準化されたAPIの背後にパッケージしベンダーサポートを提供する — NIMのライセンスとサポートモデルについてより詳しくは[エンタープライズ推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照',
         ],
         note: '生のTensorRT-LLM Python APIを直接実行することは、開発・ベンチマーク・カスタムサービング層の構築においてよく見られる。TritonとNIMは、多数のモデル間でのリクエストバッチング、マルチテナントルーティング、ヘルスチェック、サポート契約といった、生のエンジン単体では提供されない本番環境の課題に対応するために存在する。',
       },
@@ -1631,13 +1631,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'TensorRT-LLMはvLLMやllama.cppとどう違うのか?',
-        content: 'TensorRT-LLM、[vLLM](/power-local-llm/vllm-explained)、[llama.cpp](/power-local-llm/llama-cpp-explained)はいずれもLLM推論を実行するが、性能と柔軟性のスペクトラムにおいて異なる位置にある。',
+        content: 'TensorRT-LLM、[vLLM](/ja/power-local-llm/vllm-explained)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)はいずれもLLM推論を実行するが、性能と柔軟性のスペクトラムにおいて異なる位置にある。',
         itemHeadings: true,
         columns: ['エンジン', '詳細'],
         rows: [
           { 'エンジン': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', '詳細': 'NVIDIA専用、Apache 2.0ライセンス。GPU世代ごとに事前コンパイル工程が必要。ビルド工程とベンダーロックインと引き換えに、その特定のNVIDIAハードウェア上で達成可能な最高のスループットを狙う。' },
-          { 'エンジン': '[vLLM](/power-local-llm/vllm-explained)', '詳細': 'Apache 2.0ライセンス。Hugging Face Transformers互換モデルをコンパイル工程なしで直接読み込む。NVIDIA GPUが主要対象だが、AMD・Intel・TPU向けバックエンドも(限定的ながら)文書化されている。' },
-          { 'エンジン': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '詳細': 'MITライセンスのC/C++エンジンで、GGUFモデルフォーマットを通じてCPU、Apple Silicon、幅広いGPUベンダー上で動作する — 3つの中で最もハードウェア柔軟性が高いが、TensorRT-LLMやvLLMが狙うマルチGPU・高並行性のデータセンター規模向けには作られていない。' },
+          { 'エンジン': '[vLLM](/ja/power-local-llm/vllm-explained)', '詳細': 'Apache 2.0ライセンス。Hugging Face Transformers互換モデルをコンパイル工程なしで直接読み込む。NVIDIA GPUが主要対象だが、AMD・Intel・TPU向けバックエンドも(限定的ながら)文書化されている。' },
+          { 'エンジン': '[llama.cpp](/ja/power-local-llm/llama-cpp-explained)', '詳細': 'MITライセンスのC/C++エンジンで、GGUFモデルフォーマットを通じてCPU、Apple Silicon、幅広いGPUベンダー上で動作する — 3つの中で最もハードウェア柔軟性が高いが、TensorRT-LLMやvLLMが狙うマルチGPU・高並行性のデータセンター規模向けには作られていない。' },
         ],
         note: '本記事はこれら3つのエンジンを独自にベンチマーク比較しておらず、どれかが普遍的に高速だと主張するものではない — スループットはモデル、GPU世代、バッチ特性、各エンジンのバージョンに大きく依存する。TensorRT-LLMの本当の強みは、ビルド工程とNVIDIA専用サポートというコストと引き換えに、特に現行世代のNVIDIAハードウェア上でのピーク性能にある。vLLMはそのGPU固有のピーク最適化の一部を、コンパイル不要のよりシンプルなワークフローとより広い(ただし依然NVIDIA中心の)ハードウェアカバレッジと引き換える。llama.cppはさらにピークスループットを犠牲にする代わりに、CPUやMacを含む、他の2つが対象としないハードウェア上で動作する。',
       },
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'レイヤー': 'NVIDIA Triton Inference Server', '詳細': 'TensorRT-LLMバックエンドを備えた汎用の無料オープンソースモデルサービングプラットフォームで、1つ以上のエンジンの周囲にリクエストルーティング、マルチモデルホスティング、本番オーケストレーションを追加する。' },
           { 'レイヤー': 'NVIDIA NIM', '詳細': 'NVIDIA AI Enterpriseサブスクリプションの一部として販売される、構築済みの有料マイクロサービス層で、標準化されたAPIの背後にTensorRT-LLM最適化バックエンドをベンダーサポート付きでパッケージする — 自前のセットアップ作業を、サポート付きですぐにデプロイできるコンテナと引き換える。' },
         ],
-        note: '一般的な経路は、モデルをTensorRT-LLMエンジンにビルドし、それをTritonで提供して自己管理型の本番デプロイを行うか、あるいは有料サブスクリプションとベンダーサポートがチームにとって価値があるなら、ビルド工程を完全に飛ばして構築済みのNIMコンテナを使うことである。NIM、vLLM、TGI間のライセンスとコストのトレードオフについては[エンタープライズ推論サーバー比較](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照。',
+        note: '一般的な経路は、モデルをTensorRT-LLMエンジンにビルドし、それをTritonで提供して自己管理型の本番デプロイを行うか、あるいは有料サブスクリプションとベンダーサポートがチームにとって価値があるなら、ビルド工程を完全に飛ばして構築済みのNIMコンテナを使うことである。NIM、vLLM、TGI間のライセンスとコストのトレードオフについては[エンタープライズ推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照。',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLMを避けるべき場合',
             list: [
-              '個人のチャット用に自分のノートPCやデスクトップでモデルを動かしたい場合 — [OllamaやLM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)の方がはるかに適している',
+              '個人のチャット用に自分のノートPCやデスクトップでモデルを動かしたい場合 — [OllamaやLM Studio](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)の方がはるかに適している',
               'ハードウェアがNVIDIA製ではない場合 — TensorRT-LLMには、vLLMやllama.cppとは異なり、CPU、AMD、Intel、Apple Silicon向けのバックエンドが一切存在しない',
               'モデルごと・GPUごとのコンパイル工程に足を引っ張られず、多くの異なるモデルを素早く試したい場合 — vLLMの直接読み込み方式の方が適している',
               'チームにCUDA/TensorRTのビルドパイプラインを保有する余力がなく、サポート付きの構築済みデプロイに対価を払いたい場合 — NVIDIA NIMがそのトレードオフのために作られている',
@@ -1688,11 +1688,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ツール', 'セットアップ', '最適な用途'],
         rows: [
           { 'ツール': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'セットアップ': '`trtllm-build`でGPU専用エンジンをコンパイルし、`trtllm-serve`またはTritonで提供する。NVIDIA GPUとCUDAが必須。', '最適な用途': 'コンパイル工程というコストと引き換えに、本番環境のNVIDIAハードウェア上でGPUあたり最大のスループットを得たい場合。' },
-          { 'ツール': '[vLLM](/power-local-llm/vllm-explained)', 'セットアップ': 'pip経由のPythonパッケージ。`vllm serve`で起動するOpenAI互換サーバー。コンパイル工程は不要。主要対象はNVIDIA GPU。', '最適な用途': 'コンパイル不要のよりシンプルなワークフローで、高スループットのマルチユーザーサービングを行いたい場合。' },
-          { 'ツール': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'セットアップ': 'CLI、内蔵Web UI、llama-server経由のOpenAI互換API。CPUまたは幅広いGPUベンダー上で動作。', '最適な用途': 'ハードウェアの柔軟性、組み込み/エッジデプロイ、CPUやApple Siliconでの利用。' },
+          { 'ツール': '[vLLM](/ja/power-local-llm/vllm-explained)', 'セットアップ': 'pip経由のPythonパッケージ。`vllm serve`で起動するOpenAI互換サーバー。コンパイル工程は不要。主要対象はNVIDIA GPU。', '最適な用途': 'コンパイル不要のよりシンプルなワークフローで、高スループットのマルチユーザーサービングを行いたい場合。' },
+          { 'ツール': '[llama.cpp](/ja/power-local-llm/llama-cpp-explained)', 'セットアップ': 'CLI、内蔵Web UI、llama-server経由のOpenAI互換API。CPUまたは幅広いGPUベンダー上で動作。', '最適な用途': 'ハードウェアの柔軟性、組み込み/エッジデプロイ、CPUやApple Siliconでの利用。' },
           { 'ツール': 'NVIDIA NIM', 'セットアップ': '構築済みのコンテナで、有料のNVIDIA AI Enterpriseサブスクリプションでデプロイする。エンドユーザー側のビルド工程は不要。', '最適な用途': 'ビルドパイプラインを自前で運用せずにTensorRT-LLM相当の性能を求めるチーム。' },
         ],
-        note: '本記事はこれらのツール間の速度や出力品質を独自にベンチマーク比較しておらず、どのワークロードにおいてもどれかが技術的に優れていると主張するものではない — 上記の比較は、文書化されているアーキテクチャ、セットアップ、ライセンスの事実のみを扱っている。より深いライセンスとデプロイの比較については[エンタープライズ推論サーバーガイド](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照。',
+        note: '本記事はこれらのツール間の速度や出力品質を独自にベンチマーク比較しておらず、どのワークロードにおいてもどれかが技術的に優れていると主張するものではない — 上記の比較は、文書化されているアーキテクチャ、セットアップ、ライセンスの事実のみを扱っている。より深いライセンスとデプロイの比較については[エンタープライズ推論サーバーガイド](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照。',
       },
       limitations: {
         id: 'limitations',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '間違い3:NVIDIA以外のハードウェアで動かそうとする',
-            content: 'TensorRT-LLMには、CPUのみ、AMD、Intel、Apple Silicon向けのバックエンドが一切ない。NVIDIA GPU以外でこれを使おうとすることは、そもそもサポートされている経路ではない — より広いハードウェアカバレッジのために作られたツールとしては、[llama.cpp](/power-local-llm/llama-cpp-explained)やvLLMがある。',
+            content: 'TensorRT-LLMには、CPUのみ、AMD、Intel、Apple Silicon向けのバックエンドが一切ない。NVIDIA GPU以外でこれを使おうとすることは、そもそもサポートされている経路ではない — より広いハードウェアカバレッジのために作られたツールとしては、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)やvLLMがある。',
           },
         ],
       },
@@ -1753,11 +1753,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[vLLMとは](/power-local-llm/vllm-explained) — コンパイル工程なしでモデルを直接読み込むApache 2.0の代替ツールで、TensorRT-LLMの事前ビルド方式と対比される。',
-          '[llama.cppとは](/power-local-llm/llama-cpp-explained) — CPU、Apple Silicon、幅広いGPUベンダー上で動作するハードウェア柔軟性の高いエンジンで、TensorRT-LLMのNVIDIA専用のスコープとは異なる。',
-          '[エンタープライズLLM推論サーバー:vLLM、TGI、NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — TensorRT-LLMをパッケージ化したNVIDIA NIMを含む、デプロイに焦点を当てたより詳しい比較。',
-          '[オンプレミス推論ハードウェア向けGPUの選び方](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TensorRT-LLMを実行するためにNVIDIAハードウェアをサイジングする際に検討すべきGPU世代。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
+          '[vLLMとは](/ja/power-local-llm/vllm-explained) — コンパイル工程なしでモデルを直接読み込むApache 2.0の代替ツールで、TensorRT-LLMの事前ビルド方式と対比される。',
+          '[llama.cppとは](/ja/power-local-llm/llama-cpp-explained) — CPU、Apple Silicon、幅広いGPUベンダー上で動作するハードウェア柔軟性の高いエンジンで、TensorRT-LLMのNVIDIA専用のスコープとは異なる。',
+          '[エンタープライズLLM推論サーバー:vLLM、TGI、NIM](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — TensorRT-LLMをパッケージ化したNVIDIA NIMを含む、デプロイに焦点を当てたより詳しい比較。',
+          '[オンプレミス推論ハードウェア向けGPUの選び方](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TensorRT-LLMを実行するためにNVIDIAハードウェアをサイジングする際に検討すべきGPU世代。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM详解:NVIDIA的GPU优化推理引擎(2026版)',
     seoTitle: 'TensorRT-LLM详解:NVIDIA的推理引擎(2026版)',
-    intro: 'TensorRT-LLM是NVIDIA以Apache 2.0许可证发布的开源库,专门用于在NVIDIA GPU上编译和优化大语言模型推理。与[llama.cpp](/power-local-llm/llama-cpp-explained)或[vLLM](/power-local-llm/vllm-explained)那样直接加载并运行模型不同,TensorRT-LLM会将模型预先编译成一个优化过的"引擎",该引擎由针对特定NVIDIA GPU代际调优的自定义CUDA内核构成。这一编译步骤是其整体设计的核心权衡:以额外的构建步骤和仅限NVIDIA的硬件要求为代价,换取NVIDIA GPU上可实现的最高推理性能,它也是NVIDIA自家NIM微服务背后的引擎,并且是[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)常见的后端。',
+    intro: 'TensorRT-LLM是NVIDIA以Apache 2.0许可证发布的开源库,专门用于在NVIDIA GPU上编译和优化大语言模型推理。与[llama.cpp](/zh/power-local-llm/llama-cpp-explained)或[vLLM](/zh/power-local-llm/vllm-explained)那样直接加载并运行模型不同,TensorRT-LLM会将模型预先编译成一个优化过的"引擎",该引擎由针对特定NVIDIA GPU代际调优的自定义CUDA内核构成。这一编译步骤是其整体设计的核心权衡:以额外的构建步骤和仅限NVIDIA的硬件要求为代价,换取NVIDIA GPU上可实现的最高推理性能,它也是NVIDIA自家NIM微服务背后的引擎,并且是[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)常见的后端。',
     metaDescription: 'TensorRT-LLM是NVIDIA的开源、Apache 2.0许可引擎,用于将LLM编译成GPU优化的推理引擎。介绍它是什么、与vLLM和llama.cpp的对比,以及如何构建并运行一个引擎。',
     readTime: '13分钟阅读',
     targetKeywords: [
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '构建 TensorRT-LLM 引擎',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM是NVIDIA发布的免费开源(Apache 2.0)库,可将大语言模型编译为专为NVIDIA GPU构建的优化推理"引擎"。** 它构建在NVIDIA的[TensorRT](https://developer.nvidia.com/tensorrt)深度学习推理SDK之上,增加了LLM专用技术,包括飞行中(连续)批处理、分页KV缓存、自定义注意力内核,以及低至FP8和INT4的量化支持,从而在目标GPU代际所允许的范围内尽可能提升推理吞吐量。其决定性的权衡在于预先编译步骤:模型必须先构建成特定GPU的引擎才能提供服务,这与直接加载模型、无需单独编译步骤的[llama.cpp](/power-local-llm/llama-cpp-explained)或[vLLM](/power-local-llm/vllm-explained)不同。在生产环境中,TensorRT-LLM最常通过[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)使用,或打包在NVIDIA NIM微服务内部,目标是在数据中心和企业部署中于NVIDIA硬件上实现每GPU的最大吞吐量——而不是面向单用户的桌面聊天场景。',
+    leadAnswerBlock: '**TensorRT-LLM是NVIDIA发布的免费开源(Apache 2.0)库,可将大语言模型编译为专为NVIDIA GPU构建的优化推理"引擎"。** 它构建在NVIDIA的[TensorRT](https://developer.nvidia.com/tensorrt)深度学习推理SDK之上,增加了LLM专用技术,包括飞行中(连续)批处理、分页KV缓存、自定义注意力内核,以及低至FP8和INT4的量化支持,从而在目标GPU代际所允许的范围内尽可能提升推理吞吐量。其决定性的权衡在于预先编译步骤:模型必须先构建成特定GPU的引擎才能提供服务,这与直接加载模型、无需单独编译步骤的[llama.cpp](/zh/power-local-llm/llama-cpp-explained)或[vLLM](/zh/power-local-llm/vllm-explained)不同。在生产环境中,TensorRT-LLM最常通过[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)使用,或打包在NVIDIA NIM微服务内部,目标是在数据中心和企业部署中于NVIDIA硬件上实现每GPU的最大吞吐量——而不是面向单用户的桌面聊天场景。',
     quickAnswerTop: {
       zh: {
         question: 'TensorRT-LLM是什么,它是如何工作的?',
@@ -1849,7 +1849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '包含`trtllm-serve`命令,可直接从已构建的引擎启动一个OpenAI兼容端点',
           '支持许多流行的开放模型系列,但具体每个模型的支持情况及所需的转换步骤会因TensorRT-LLM版本而异——在选定模型前请查阅该项目的[支持模型文档](https://github.com/NVIDIA/TensorRT-LLM)',
         ],
-        note: 'TensorRT-LLM是面向NVIDIA硬件的基础设施,而非消费级聊天应用——它没有图形化安装程序,也不支持跨厂商GPU。如果你想要的是一键式的本地聊天应用,像[Ollama或LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)这样的工具正是为该用例而设计;参见下方的对比章节。',
+        note: 'TensorRT-LLM是面向NVIDIA硬件的基础设施,而非消费级聊天应用——它没有图形化安装程序,也不支持跨厂商GPU。如果你想要的是一键式的本地聊天应用,像[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)这样的工具正是为该用例而设计;参见下方的对比章节。',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -1876,7 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'GPU代际': 'Ada Lovelace(例如L4、L40S)', '详情': '受支持,在完整FP8工具支持不如Hopper/Blackwell广泛的情况下,通常使用包括SmoothQuant在内的INT8作为回退方案。' },
           { 'GPU代际': '更早的架构(例如Ampere)', '详情': '对于部分较早的NVIDIA数据中心GPU存在更广泛的兼容性,但最新的量化格式和内核优化针对的是当前代硬件——请查阅NVIDIA的[发布说明](https://nvidia.github.io/TensorRT-LLM/release-notes.html)以获取你计划使用版本的确切GPU与功能对应表。' },
         ],
-        note: '如果你的目标是在笔记本电脑、Mac或任何非NVIDIA GPU上运行模型,TensorRT-LLM并非为此而设计的工具——[llama.cpp](/power-local-llm/llama-cpp-explained)以及基于它构建的工具(如Ollama和LM Studio)直接面向CPU和Apple Silicon硬件,更适合这种场景。',
+        note: '如果你的目标是在笔记本电脑、Mac或任何非NVIDIA GPU上运行模型,TensorRT-LLM并非为此而设计的工具——[llama.cpp](/zh/power-local-llm/llama-cpp-explained)以及基于它构建的工具(如Ollama和LM Studio)直接面向CPU和Apple Silicon硬件,更适合这种场景。',
       },
       quantization: {
         id: 'quantization-support',
@@ -1899,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`:TensorRT-LLM自带的命令,可直接从已构建的引擎启动一个OpenAI兼容的API端点,无需单独的服务框架',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server):一个通用模型服务平台,带有TensorRT-LLM后端,增加了请求排队、多模型编排以及Kubernetes集成等生产级部署功能',
-          'NVIDIA NIM:作为[NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)订阅一部分销售的预构建容器化微服务,将TensorRT-LLM优化的后端打包在标准化API之后并提供厂商支持——关于NIM许可与支持模式的更深入介绍,参见[企业推理服务器比较](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)',
+          'NVIDIA NIM:作为[NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)订阅一部分销售的预构建容器化微服务,将TensorRT-LLM优化的后端打包在标准化API之后并提供厂商支持——关于NIM许可与支持模式的更深入介绍,参见[企业推理服务器比较](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)',
         ],
         note: '直接运行原始的TensorRT-LLM Python API在开发、基准测试和构建自定义服务层时很常见;Triton和NIM的存在是为了处理仅靠原始引擎无法提供的生产环境问题——跨多个模型的请求批处理、多租户路由、健康检查和支持合同。',
       },
@@ -1924,13 +1924,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'TensorRT-LLM与vLLM、llama.cpp相比如何?',
-        content: 'TensorRT-LLM、[vLLM](/power-local-llm/vllm-explained)和[llama.cpp](/power-local-llm/llama-cpp-explained)都执行LLM推理,但它们在性能与灵活性的光谱上处于不同位置。',
+        content: 'TensorRT-LLM、[vLLM](/zh/power-local-llm/vllm-explained)和[llama.cpp](/zh/power-local-llm/llama-cpp-explained)都执行LLM推理,但它们在性能与灵活性的光谱上处于不同位置。',
         itemHeadings: true,
         columns: ['引擎', '详情'],
         rows: [
           { '引擎': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', '详情': '仅限NVIDIA,Apache 2.0许可。每个GPU代际都需要预先编译步骤;以构建步骤和厂商锁定为代价,追求在特定NVIDIA硬件上可实现的最高吞吐量。' },
-          { '引擎': '[vLLM](/power-local-llm/vllm-explained)', '详情': 'Apache 2.0许可,直接加载与Hugging Face Transformers兼容的模型,无需编译步骤。NVIDIA GPU是其主要目标,同时也记录了(较窄的)AMD、Intel和TPU后端。' },
-          { '引擎': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '详情': 'MIT许可的C/C++引擎,通过GGUF模型格式在CPU、Apple Silicon以及广泛的GPU厂商上运行——三者中硬件灵活性最高,但并非为TensorRT-LLM和vLLM所面向的多GPU、高并发数据中心规模而构建。' },
+          { '引擎': '[vLLM](/zh/power-local-llm/vllm-explained)', '详情': 'Apache 2.0许可,直接加载与Hugging Face Transformers兼容的模型,无需编译步骤。NVIDIA GPU是其主要目标,同时也记录了(较窄的)AMD、Intel和TPU后端。' },
+          { '引擎': '[llama.cpp](/zh/power-local-llm/llama-cpp-explained)', '详情': 'MIT许可的C/C++引擎,通过GGUF模型格式在CPU、Apple Silicon以及广泛的GPU厂商上运行——三者中硬件灵活性最高,但并非为TensorRT-LLM和vLLM所面向的多GPU、高并发数据中心规模而构建。' },
         ],
         note: '本文未对这三种引擎进行独立基准比较,也不主张其中任何一种在所有情况下都更快——吞吐量在很大程度上取决于模型、GPU代际、批处理特性以及各引擎的版本。TensorRT-LLM真正的优势在于特别是在当前代NVIDIA硬件上的峰值性能,代价是编译步骤和仅限NVIDIA的支持;vLLM则以更简单的免编译工作流和更广泛(但仍以NVIDIA为主)的硬件覆盖,换取部分针对GPU的峰值优化;llama.cpp进一步牺牲峰值吞吐量,换取在另外两者都未覆盖的硬件(包括CPU和Mac)上运行的能力。',
       },
@@ -1945,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '层级': 'NVIDIA Triton Inference Server', '详情': '一个通用的免费开源模型服务平台,带有TensorRT-LLM后端,围绕一个或多个引擎增加请求路由、多模型托管和生产编排功能。' },
           { '层级': 'NVIDIA NIM', '详情': '一个作为NVIDIA AI Enterprise订阅一部分销售的付费预构建微服务层,将TensorRT-LLM优化的后端打包在标准化API之后并提供厂商支持——以自行配置的工作量,换取一个受支持、可直接部署的容器。' },
         ],
-        note: '一种常见路径是:将模型构建成TensorRT-LLM引擎,然后通过Triton提供服务,实现自我管理的生产部署;或者,如果付费订阅和厂商支持对你的团队而言物有所值,则完全跳过构建步骤,直接使用预构建的NIM容器。关于NIM、vLLM和TGI之间的许可与成本权衡,参见[企业推理服务器比较](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)。',
+        note: '一种常见路径是:将模型构建成TensorRT-LLM引擎,然后通过Triton提供服务,实现自我管理的生产部署;或者,如果付费订阅和厂商支持对你的团队而言物有所值,则完全跳过构建步骤,直接使用预构建的NIM容器。关于NIM、vLLM和TGI之间的许可与成本权衡,参见[企业推理服务器比较](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)。',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '在以下情况下应避免使用TensorRT-LLM',
             list: [
-              '你想在自己的笔记本电脑或台式机上运行模型用于个人聊天——[Ollama或LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)更能满足这种需求',
+              '你想在自己的笔记本电脑或台式机上运行模型用于个人聊天——[Ollama或LM Studio](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)更能满足这种需求',
               '你的硬件不是NVIDIA的——与vLLM或llama.cpp不同,TensorRT-LLM完全没有CPU、AMD、Intel或Apple Silicon的后端',
               '你想在许多不同模型间快速迭代,而不希望每个模型、每个GPU的编译步骤拖慢速度——vLLM的直接加载方式更合适',
               '你的团队没有余力自行维护CUDA/TensorRT构建流水线,更愿意为受支持的预构建部署付费——NVIDIA NIM正是为这种权衡而设计的',
@@ -1981,11 +1981,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['工具', '设置方式', '最适合场景'],
         rows: [
           { '工具': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', '设置方式': '使用`trtllm-build`编译特定GPU的引擎,再用`trtllm-serve`或Triton提供服务。需要NVIDIA GPU和CUDA。', '最适合场景': '在生产环境的NVIDIA硬件上以编译步骤为代价获取每GPU最大吞吐量。' },
-          { '工具': '[vLLM](/power-local-llm/vllm-explained)', '设置方式': '通过pip安装的Python包;使用`vllm serve`启动的OpenAI兼容服务器。无需编译步骤;主要面向NVIDIA GPU。', '最适合场景': '以更简单的免编译工作流实现高吞吐量的多用户服务。' },
-          { '工具': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '设置方式': 'CLI、内置Web UI,以及通过llama-server提供的OpenAI兼容API。可在CPU或广泛的GPU厂商硬件上运行。', '最适合场景': '硬件灵活性、嵌入式/边缘部署,以及CPU或Apple Silicon的使用场景。' },
+          { '工具': '[vLLM](/zh/power-local-llm/vllm-explained)', '设置方式': '通过pip安装的Python包;使用`vllm serve`启动的OpenAI兼容服务器。无需编译步骤;主要面向NVIDIA GPU。', '最适合场景': '以更简单的免编译工作流实现高吞吐量的多用户服务。' },
+          { '工具': '[llama.cpp](/zh/power-local-llm/llama-cpp-explained)', '设置方式': 'CLI、内置Web UI,以及通过llama-server提供的OpenAI兼容API。可在CPU或广泛的GPU厂商硬件上运行。', '最适合场景': '硬件灵活性、嵌入式/边缘部署,以及CPU或Apple Silicon的使用场景。' },
           { '工具': 'NVIDIA NIM', '设置方式': '预构建容器,通过付费的NVIDIA AI Enterprise订阅部署。终端用户无需构建步骤。', '最适合场景': '希望获得TensorRT-LLM级别性能、但不想自行运维构建流水线的团队。' },
         ],
-        note: '本文未对这些工具的速度或输出质量进行独立基准比较,也不主张任何一种在所有工作负载中技术上更优——上述比较仅涵盖已记录在案的架构、设置和许可方面的事实。关于更深入的许可与部署比较,参见[企业推理服务器指南](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)。',
+        note: '本文未对这些工具的速度或输出质量进行独立基准比较,也不主张任何一种在所有工作负载中技术上更优——上述比较仅涵盖已记录在案的架构、设置和许可方面的事实。关于更深入的许可与部署比较,参见[企业推理服务器指南](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)。',
       },
       limitations: {
         id: 'limitations',
@@ -2015,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '错误3:试图在非NVIDIA硬件上运行它',
-            content: 'TensorRT-LLM完全没有纯CPU、AMD、Intel或Apple Silicon的后端。尝试在NVIDIA GPU以外使用它根本不是一条受支持的路径——[llama.cpp](/power-local-llm/llama-cpp-explained)或vLLM是为更广泛硬件覆盖而构建的工具。',
+            content: 'TensorRT-LLM完全没有纯CPU、AMD、Intel或Apple Silicon的后端。尝试在NVIDIA GPU以外使用它根本不是一条受支持的路径——[llama.cpp](/zh/power-local-llm/llama-cpp-explained)或vLLM是为更广泛硬件覆盖而构建的工具。',
           },
         ],
       },
@@ -2046,11 +2046,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[vLLM详解](/power-local-llm/vllm-explained) — 无需编译步骤即可直接加载模型的Apache 2.0替代方案,与TensorRT-LLM的预先构建方式形成对比。',
-          '[llama.cpp详解](/power-local-llm/llama-cpp-explained) — 可在CPU、Apple Silicon以及广泛GPU厂商硬件上运行的硬件灵活型引擎,与TensorRT-LLM仅限NVIDIA的范围不同。',
-          '[企业级LLM推理服务器:vLLM、TGI和NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 一篇更深入、聚焦部署的比较文章,涵盖打包了TensorRT-LLM的NVIDIA NIM。',
-          '[为本地推理硬件选择GPU](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 若你正在为运行TensorRT-LLM配置NVIDIA硬件,可参考的GPU代际选择。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[vLLM详解](/zh/power-local-llm/vllm-explained) — 无需编译步骤即可直接加载模型的Apache 2.0替代方案,与TensorRT-LLM的预先构建方式形成对比。',
+          '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — 可在CPU、Apple Silicon以及广泛GPU厂商硬件上运行的硬件灵活型引擎,与TensorRT-LLM仅限NVIDIA的范围不同。',
+          '[企业级LLM推理服务器:vLLM、TGI和NIM](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — 一篇更深入、聚焦部署的比较文章,涵盖打包了TensorRT-LLM的NVIDIA NIM。',
+          '[为本地推理硬件选择GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 若你正在为运行TensorRT-LLM配置NVIDIA硬件,可参考的GPU代际选择。',
+          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'TensorRT-LLM 완벽 정리: NVIDIA의 GPU 최적화 추론 엔진(2026년)',
     seoTitle: 'TensorRT-LLM 완벽 정리: NVIDIA의 추론 엔진(2026년)',
-    intro: 'TensorRT-LLM은 NVIDIA가 Apache 2.0 라이선스로 공개한 오픈소스 라이브러리로, NVIDIA GPU 전용으로 대규모 언어 모델 추론을 컴파일하고 최적화합니다. [llama.cpp](/power-local-llm/llama-cpp-explained)나 [vLLM](/power-local-llm/vllm-explained)처럼 모델을 로드해 바로 실행하는 대신, TensorRT-LLM은 특정 NVIDIA GPU 세대에 맞춰 튜닝된 커스텀 CUDA 커널로 구성된 최적화된 "엔진"으로 모델을 사전에 컴파일합니다. 이 컴파일 단계가 바로 전체 설계의 핵심 트레이드오프입니다. 추가적인 빌드 단계와 NVIDIA 전용 하드웨어라는 요건을 감수하는 대가로, NVIDIA GPU에서 달성 가능한 최고의 추론 성능을 목표로 하며, NVIDIA 자체 NIM 마이크로서비스의 내부 엔진이자 [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)의 일반적인 백엔드이기도 합니다.',
+    intro: 'TensorRT-LLM은 NVIDIA가 Apache 2.0 라이선스로 공개한 오픈소스 라이브러리로, NVIDIA GPU 전용으로 대규모 언어 모델 추론을 컴파일하고 최적화합니다. [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 [vLLM](/ko/power-local-llm/vllm-explained)처럼 모델을 로드해 바로 실행하는 대신, TensorRT-LLM은 특정 NVIDIA GPU 세대에 맞춰 튜닝된 커스텀 CUDA 커널로 구성된 최적화된 "엔진"으로 모델을 사전에 컴파일합니다. 이 컴파일 단계가 바로 전체 설계의 핵심 트레이드오프입니다. 추가적인 빌드 단계와 NVIDIA 전용 하드웨어라는 요건을 감수하는 대가로, NVIDIA GPU에서 달성 가능한 최고의 추론 성능을 목표로 하며, NVIDIA 자체 NIM 마이크로서비스의 내부 엔진이자 [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)의 일반적인 백엔드이기도 합니다.',
     metaDescription: 'TensorRT-LLM은 NVIDIA의 오픈소스, Apache 2.0 라이선스 엔진으로 LLM을 GPU에 최적화된 추론 엔진으로 컴파일합니다. vLLM 및 llama.cpp와의 비교, 엔진 구축 및 실행 방법을 설명합니다.',
     readTime: '13분 읽기',
     targetKeywords: [
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'TensorRT-LLM 엔진 빌드',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM은 NVIDIA가 공개한 무료 오픈소스(Apache 2.0) 라이브러리로, 대규모 언어 모델을 NVIDIA GPU 전용으로 구축된 최적화된 추론 "엔진"으로 컴파일합니다.** NVIDIA의 [TensorRT](https://developer.nvidia.com/tensorrt) 딥러닝 추론 SDK 위에 구축되었으며, 인플라이트(연속) 배칭, 페이지 기반 KV 캐시, 커스텀 어텐션 커널, FP8 및 INT4까지의 양자화 지원 등 LLM 전용 기술을 추가해 대상 GPU 세대가 허용하는 한도까지 추론 처리량을 끌어올립니다. 결정적인 트레이드오프는 사전 컴파일 단계입니다. 트래픽을 처리하기 전에 모델을 GPU 전용 엔진으로 빌드해야 하며, 이는 별도의 컴파일 단계 없이 모델을 직접 로드하는 [llama.cpp](/power-local-llm/llama-cpp-explained)나 [vLLM](/power-local-llm/vllm-explained)과는 다른 방식입니다. 프로덕션 환경에서 TensorRT-LLM은 [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)를 통해서나 NVIDIA NIM 마이크로서비스에 패키징된 형태로 가장 흔히 사용되며, 데이터센터와 엔터프라이즈 배포 환경에서 NVIDIA 하드웨어의 GPU당 최대 처리량을 목표로 합니다 — 단일 사용자용 데스크톱 채팅이 대상이 아닙니다.',
+    leadAnswerBlock: '**TensorRT-LLM은 NVIDIA가 공개한 무료 오픈소스(Apache 2.0) 라이브러리로, 대규모 언어 모델을 NVIDIA GPU 전용으로 구축된 최적화된 추론 "엔진"으로 컴파일합니다.** NVIDIA의 [TensorRT](https://developer.nvidia.com/tensorrt) 딥러닝 추론 SDK 위에 구축되었으며, 인플라이트(연속) 배칭, 페이지 기반 KV 캐시, 커스텀 어텐션 커널, FP8 및 INT4까지의 양자화 지원 등 LLM 전용 기술을 추가해 대상 GPU 세대가 허용하는 한도까지 추론 처리량을 끌어올립니다. 결정적인 트레이드오프는 사전 컴파일 단계입니다. 트래픽을 처리하기 전에 모델을 GPU 전용 엔진으로 빌드해야 하며, 이는 별도의 컴파일 단계 없이 모델을 직접 로드하는 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 [vLLM](/ko/power-local-llm/vllm-explained)과는 다른 방식입니다. 프로덕션 환경에서 TensorRT-LLM은 [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server)를 통해서나 NVIDIA NIM 마이크로서비스에 패키징된 형태로 가장 흔히 사용되며, 데이터센터와 엔터프라이즈 배포 환경에서 NVIDIA 하드웨어의 GPU당 최대 처리량을 목표로 합니다 — 단일 사용자용 데스크톱 채팅이 대상이 아닙니다.',
     quickAnswerTop: {
       ko: {
         question: 'TensorRT-LLM이란 무엇이고 어떻게 작동하나요?',
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '빌드된 엔진에서 곧바로 OpenAI 호환 엔드포인트를 실행할 수 있는 `trtllm-serve` 명령 포함',
           '많은 인기 오픈 모델 계열을 지원하지만, 모델별 정확한 지원 범위와 필요한 변환 단계는 TensorRT-LLM 릴리스에 따라 다름 — 모델을 정하기 전에 프로젝트의 [지원 모델 문서](https://github.com/NVIDIA/TensorRT-LLM)를 확인할 것',
         ],
-        note: 'TensorRT-LLM은 NVIDIA 하드웨어를 위한 인프라이며 일반 소비자용 채팅 앱이 아닙니다 — 그래픽 설치 프로그램도, 여러 제조사 GPU에 대한 지원도 없습니다. 원클릭으로 사용할 수 있는 로컬 채팅 앱을 원한다면 [Ollama나 LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) 같은 도구가 바로 그 용도를 위해 만들어졌습니다. 아래 비교 섹션을 참고하세요.',
+        note: 'TensorRT-LLM은 NVIDIA 하드웨어를 위한 인프라이며 일반 소비자용 채팅 앱이 아닙니다 — 그래픽 설치 프로그램도, 여러 제조사 GPU에 대한 지원도 없습니다. 원클릭으로 사용할 수 있는 로컬 채팅 앱을 원한다면 [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) 같은 도구가 바로 그 용도를 위해 만들어졌습니다. 아래 비교 섹션을 참고하세요.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'GPU 세대': 'Ada Lovelace(예: L4, L40S)', '세부 내용': '지원됨. 완전한 FP8 툴링 지원이 Hopper/Blackwell만큼 넓지 않은 경우, SmoothQuant를 포함한 INT8이 대체 수단으로 흔히 사용됨.' },
           { 'GPU 세대': '이전 아키텍처(예: Ampere)', '세부 내용': '일부 이전 세대 NVIDIA 데이터센터 GPU에 대해 더 폭넓은 호환성이 존재하지만, 최신 양자화 포맷과 커널 최적화는 현행 세대 하드웨어를 대상으로 함 — 사용할 버전의 정확한 GPU별 기능 매트릭스는 NVIDIA의 [릴리스 노트](https://nvidia.github.io/TensorRT-LLM/release-notes.html)를 확인할 것.' },
         ],
-        note: '노트북, Mac, 또는 NVIDIA가 아닌 GPU에서 모델을 실행하는 것이 목표라면, TensorRT-LLM은 그런 용도로 만들어진 도구가 아닙니다 — [llama.cpp](/power-local-llm/llama-cpp-explained)와 이를 기반으로 한 Ollama, LM Studio 같은 도구는 CPU와 Apple Silicon 하드웨어를 직접 대상으로 하며 해당 시나리오에 더 적합합니다.',
+        note: '노트북, Mac, 또는 NVIDIA가 아닌 GPU에서 모델을 실행하는 것이 목표라면, TensorRT-LLM은 그런 용도로 만들어진 도구가 아닙니다 — [llama.cpp](/ko/power-local-llm/llama-cpp-explained)와 이를 기반으로 한 Ollama, LM Studio 같은 도구는 CPU와 Apple Silicon 하드웨어를 직접 대상으로 하며 해당 시나리오에 더 적합합니다.',
       },
       quantization: {
         id: 'quantization-support',
@@ -2192,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`: TensorRT-LLM에 포함된 명령으로, 별도의 서빙 프레임워크 없이 빌드된 엔진에서 곧바로 OpenAI 호환 API 엔드포인트를 실행함',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server): TensorRT-LLM 백엔드를 갖춘 범용 모델 서빙 플랫폼으로, 요청 큐잉, 멀티모델 오케스트레이션, Kubernetes 통합 같은 프로덕션급 배포 기능을 추가함',
-          'NVIDIA NIM: [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/) 구독의 일부로 판매되는 사전 구축된 컨테이너화 마이크로서비스로, TensorRT-LLM 최적화 백엔드를 표준화된 API 뒤에 패키징하고 제조사 지원을 제공함 — NIM의 라이선스와 지원 모델에 대해 더 자세히 알아보려면 [엔터프라이즈 추론 서버 비교](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고',
+          'NVIDIA NIM: [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/) 구독의 일부로 판매되는 사전 구축된 컨테이너화 마이크로서비스로, TensorRT-LLM 최적화 백엔드를 표준화된 API 뒤에 패키징하고 제조사 지원을 제공함 — NIM의 라이선스와 지원 모델에 대해 더 자세히 알아보려면 [엔터프라이즈 추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고',
         ],
         note: '순수한 TensorRT-LLM Python API를 직접 실행하는 것은 개발, 벤치마킹, 커스텀 서빙 계층 구축 시 흔히 볼 수 있습니다. Triton과 NIM은 순수 엔진만으로는 제공되지 않는 프로덕션 관련 문제들 — 여러 모델에 걸친 요청 배칭, 멀티테넌트 라우팅, 상태 확인, 지원 계약 — 을 처리하기 위해 존재합니다.',
       },
@@ -2217,13 +2217,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'TensorRT-LLM은 vLLM, llama.cpp와 비교해 어떤가요?',
-        content: 'TensorRT-LLM, [vLLM](/power-local-llm/vllm-explained), [llama.cpp](/power-local-llm/llama-cpp-explained)는 모두 LLM 추론을 수행하지만 성능과 유연성이라는 스펙트럼에서 서로 다른 지점에 위치합니다.',
+        content: 'TensorRT-LLM, [vLLM](/ko/power-local-llm/vllm-explained), [llama.cpp](/ko/power-local-llm/llama-cpp-explained)는 모두 LLM 추론을 수행하지만 성능과 유연성이라는 스펙트럼에서 서로 다른 지점에 위치합니다.',
         itemHeadings: true,
         columns: ['엔진', '세부 내용'],
         rows: [
           { '엔진': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', '세부 내용': 'NVIDIA 전용, Apache 2.0 라이선스. GPU 세대마다 사전 컴파일 단계가 필요함; 빌드 단계와 벤더 종속을 감수하는 대가로 특정 NVIDIA 하드웨어에서 달성 가능한 최고의 처리량을 목표로 함.' },
-          { '엔진': '[vLLM](/power-local-llm/vllm-explained)', '세부 내용': 'Apache 2.0 라이선스로, Hugging Face Transformers 호환 모델을 컴파일 단계 없이 직접 로드함. NVIDIA GPU가 주요 대상이며, (더 제한적인) AMD, Intel, TPU 백엔드도 문서화되어 있음.' },
-          { '엔진': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '세부 내용': 'MIT 라이선스 C/C++ 엔진으로, GGUF 모델 포맷을 통해 CPU, Apple Silicon, 그리고 폭넓은 GPU 제조사에서 작동함 — 셋 중 하드웨어 유연성이 가장 높지만, TensorRT-LLM과 vLLM이 목표로 하는 멀티 GPU, 고동시성 데이터센터 규모를 위해 만들어진 것은 아님.' },
+          { '엔진': '[vLLM](/ko/power-local-llm/vllm-explained)', '세부 내용': 'Apache 2.0 라이선스로, Hugging Face Transformers 호환 모델을 컴파일 단계 없이 직접 로드함. NVIDIA GPU가 주요 대상이며, (더 제한적인) AMD, Intel, TPU 백엔드도 문서화되어 있음.' },
+          { '엔진': '[llama.cpp](/ko/power-local-llm/llama-cpp-explained)', '세부 내용': 'MIT 라이선스 C/C++ 엔진으로, GGUF 모델 포맷을 통해 CPU, Apple Silicon, 그리고 폭넓은 GPU 제조사에서 작동함 — 셋 중 하드웨어 유연성이 가장 높지만, TensorRT-LLM과 vLLM이 목표로 하는 멀티 GPU, 고동시성 데이터센터 규모를 위해 만들어진 것은 아님.' },
         ],
         note: '이 글은 이 세 엔진을 독립적으로 벤치마크 비교하지 않았으며, 어느 하나가 보편적으로 더 빠르다고 주장하지 않습니다 — 처리량은 모델, GPU 세대, 배치 특성, 각 엔진의 버전에 크게 좌우됩니다. TensorRT-LLM의 실질적인 강점은 빌드 단계와 NVIDIA 전용 지원이라는 비용을 감수하는 대가로 특히 현행 세대 NVIDIA 하드웨어에서의 최고 성능에 있습니다. vLLM은 그런 GPU 특화 최고 성능 최적화의 일부를 컴파일이 필요 없는 더 단순한 워크플로와 더 폭넓은(여전히 NVIDIA가 주된) 하드웨어 커버리지와 맞바꿉니다. llama.cpp는 최고 처리량을 더 희생하는 대신 다른 두 엔진이 다루지 않는 하드웨어(CPU와 Mac 포함)에서 작동할 수 있는 능력을 얻습니다.',
       },
@@ -2238,7 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '계층': 'NVIDIA Triton Inference Server', '세부 내용': 'TensorRT-LLM 백엔드를 갖춘 범용 무료 오픈소스 모델 서빙 플랫폼으로, 하나 이상의 엔진 주위에 요청 라우팅, 멀티모델 호스팅, 프로덕션 오케스트레이션을 추가함.' },
           { '계층': 'NVIDIA NIM', '세부 내용': 'NVIDIA AI Enterprise 구독의 일부로 판매되는 사전 구축된 유료 마이크로서비스 계층으로, 표준화된 API 뒤에 TensorRT-LLM 최적화 백엔드를 패키징하고 제조사 지원을 제공함 — 직접 설정하는 수고를, 지원되고 바로 배포 가능한 컨테이너와 맞바꿈.' },
         ],
-        note: '흔한 경로는 다음과 같습니다: 모델을 TensorRT-LLM 엔진으로 빌드한 다음 Triton을 통해 서빙하여 자체 관리형 프로덕션 배포를 구성하거나, 유료 구독과 제조사 지원이 팀에 가치가 있다면 빌드 단계를 완전히 건너뛰고 사전 구축된 NIM 컨테이너를 사용하는 것입니다. NIM, vLLM, TGI 사이의 라이선스 및 비용 트레이드오프에 대해서는 [엔터프라이즈 추론 서버 비교](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요.',
+        note: '흔한 경로는 다음과 같습니다: 모델을 TensorRT-LLM 엔진으로 빌드한 다음 Triton을 통해 서빙하여 자체 관리형 프로덕션 배포를 구성하거나, 유료 구독과 제조사 지원이 팀에 가치가 있다면 빌드 단계를 완전히 건너뛰고 사전 구축된 NIM 컨테이너를 사용하는 것입니다. NIM, vLLM, TGI 사이의 라이선스 및 비용 트레이드오프에 대해서는 [엔터프라이즈 추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'TensorRT-LLM을 피해야 하는 경우',
             list: [
-              '개인 채팅을 위해 자신의 노트북이나 데스크톱에서 모델을 실행하고 싶은 경우 — [Ollama나 LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)가 그 요구에 훨씬 더 적합함',
+              '개인 채팅을 위해 자신의 노트북이나 데스크톱에서 모델을 실행하고 싶은 경우 — [Ollama나 LM Studio](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)가 그 요구에 훨씬 더 적합함',
               '하드웨어가 NVIDIA 제품이 아닌 경우 — vLLM이나 llama.cpp와 달리 TensorRT-LLM에는 CPU, AMD, Intel, Apple Silicon용 백엔드가 전혀 없음',
               '모델별, GPU별 컴파일 단계에 발목 잡히지 않고 여러 모델을 빠르게 반복 실험하고 싶은 경우 — vLLM의 직접 로드 방식이 더 적합함',
               '팀에 CUDA/TensorRT 빌드 파이프라인을 직접 운영할 여력이 없어 지원되는 사전 구축 배포에 비용을 지불하는 편을 선호하는 경우 — NVIDIA NIM이 바로 그런 트레이드오프를 위해 만들어짐',
@@ -2274,11 +2274,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['도구', '설정', '적합한 용도'],
         rows: [
           { '도구': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', '설정': '`trtllm-build`로 GPU 전용 엔진을 컴파일한 뒤 `trtllm-serve`나 Triton으로 서빙함. NVIDIA GPU와 CUDA 필요.', '적합한 용도': '컴파일 단계라는 비용을 감수하고 프로덕션 환경에서 NVIDIA 하드웨어의 GPU당 최대 처리량을 얻고 싶은 경우.' },
-          { '도구': '[vLLM](/power-local-llm/vllm-explained)', '설정': 'pip으로 설치하는 Python 패키지; `vllm serve`로 시작하는 OpenAI 호환 서버. 컴파일 단계 없음; 주요 대상은 NVIDIA GPU.', '적합한 용도': '컴파일이 필요 없는 더 단순한 워크플로로 고처리량 멀티유저 서빙을 하고 싶은 경우.' },
-          { '도구': '[llama.cpp](/power-local-llm/llama-cpp-explained)', '설정': 'CLI, 내장 웹 UI, llama-server를 통한 OpenAI 호환 API. CPU 또는 폭넓은 GPU 제조사에서 작동.', '적합한 용도': '하드웨어 유연성, 임베디드/엣지 배포, CPU 또는 Apple Silicon 사용.' },
+          { '도구': '[vLLM](/ko/power-local-llm/vllm-explained)', '설정': 'pip으로 설치하는 Python 패키지; `vllm serve`로 시작하는 OpenAI 호환 서버. 컴파일 단계 없음; 주요 대상은 NVIDIA GPU.', '적합한 용도': '컴파일이 필요 없는 더 단순한 워크플로로 고처리량 멀티유저 서빙을 하고 싶은 경우.' },
+          { '도구': '[llama.cpp](/ko/power-local-llm/llama-cpp-explained)', '설정': 'CLI, 내장 웹 UI, llama-server를 통한 OpenAI 호환 API. CPU 또는 폭넓은 GPU 제조사에서 작동.', '적합한 용도': '하드웨어 유연성, 임베디드/엣지 배포, CPU 또는 Apple Silicon 사용.' },
           { '도구': 'NVIDIA NIM', '설정': '사전 구축된 컨테이너로, 유료 NVIDIA AI Enterprise 구독을 통해 배포함. 최종 사용자에게 빌드 단계 없음.', '적합한 용도': '빌드 파이프라인을 직접 운영하지 않고 TensorRT-LLM 수준의 성능을 원하는 팀.' },
         ],
-        note: '이 글은 이 도구들 간의 속도나 출력 품질을 독립적으로 벤치마크 비교하지 않았으며, 모든 워크로드에서 어느 하나가 기술적으로 우월하다고 주장하지 않습니다 — 위 비교는 문서화된 아키텍처, 설정, 라이선스 관련 사실만 다룹니다. 더 깊이 있는 라이선스 및 배포 비교는 [엔터프라이즈 추론 서버 가이드](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요.',
+        note: '이 글은 이 도구들 간의 속도나 출력 품질을 독립적으로 벤치마크 비교하지 않았으며, 모든 워크로드에서 어느 하나가 기술적으로 우월하다고 주장하지 않습니다 — 위 비교는 문서화된 아키텍처, 설정, 라이선스 관련 사실만 다룹니다. 더 깊이 있는 라이선스 및 배포 비교는 [엔터프라이즈 추론 서버 가이드](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요.',
       },
       limitations: {
         id: 'limitations',
@@ -2308,7 +2308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '실수 3: NVIDIA가 아닌 하드웨어에서 실행하려고 시도함',
-            content: 'TensorRT-LLM에는 CPU 전용, AMD, Intel, Apple Silicon용 백엔드가 전혀 없습니다. NVIDIA GPU 밖에서 이를 사용하려는 시도는 애초에 지원되는 경로가 아닙니다 — 더 폭넓은 하드웨어 커버리지를 위해 만들어진 도구로는 [llama.cpp](/power-local-llm/llama-cpp-explained)나 vLLM이 있습니다.',
+            content: 'TensorRT-LLM에는 CPU 전용, AMD, Intel, Apple Silicon용 백엔드가 전혀 없습니다. NVIDIA GPU 밖에서 이를 사용하려는 시도는 애초에 지원되는 경로가 아닙니다 — 더 폭넓은 하드웨어 커버리지를 위해 만들어진 도구로는 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 vLLM이 있습니다.',
           },
         ],
       },
@@ -2339,11 +2339,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[vLLM 완벽 정리](/power-local-llm/vllm-explained) — 컴파일 단계 없이 모델을 직접 로드하는 Apache 2.0 대안으로, TensorRT-LLM의 사전 빌드 방식과 대비됨.',
-          '[llama.cpp 완벽 정리](/power-local-llm/llama-cpp-explained) — CPU, Apple Silicon, 폭넓은 GPU 제조사에서 작동하는 하드웨어 유연성이 높은 엔진으로, TensorRT-LLM의 NVIDIA 전용 범위와는 다름.',
-          '[엔터프라이즈 LLM 추론 서버: vLLM, TGI, NIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — TensorRT-LLM을 패키징한 NVIDIA NIM을 포함해 배포에 초점을 맞춘 더 심층적인 비교.',
-          '[온프레미스 추론 하드웨어를 위한 GPU 선택](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TensorRT-LLM을 실행하기 위해 NVIDIA 하드웨어를 산정할 때 고려할 GPU 세대.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[vLLM 완벽 정리](/ko/power-local-llm/vllm-explained) — 컴파일 단계 없이 모델을 직접 로드하는 Apache 2.0 대안으로, TensorRT-LLM의 사전 빌드 방식과 대비됨.',
+          '[llama.cpp 완벽 정리](/ko/power-local-llm/llama-cpp-explained) — CPU, Apple Silicon, 폭넓은 GPU 제조사에서 작동하는 하드웨어 유연성이 높은 엔진으로, TensorRT-LLM의 NVIDIA 전용 범위와는 다름.',
+          '[엔터프라이즈 LLM 추론 서버: vLLM, TGI, NIM](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — TensorRT-LLM을 패키징한 NVIDIA NIM을 포함해 배포에 초점을 맞춘 더 심층적인 비교.',
+          '[온프레미스 추론 하드웨어를 위한 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TensorRT-LLM을 실행하기 위해 NVIDIA 하드웨어를 산정할 때 고려할 GPU 세대.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },
@@ -2360,7 +2360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TensorRT-LLM',
     title: 'شرح TensorRT-LLM: محرك الاستدلال من NVIDIA المُحسَّن لوحدات GPU (2026)',
     seoTitle: 'شرح TensorRT-LLM: محرك الاستدلال من NVIDIA (2026)',
-    intro: 'TensorRT-LLM هي مكتبة مفتوحة المصدر نشرتها NVIDIA بترخيص Apache 2.0، مخصصة لتجميع وتحسين استدلال نماذج اللغة الكبيرة تحديدًا على وحدات معالجة الرسوميات (GPU) من NVIDIA. وبدلًا من تحميل النموذج وتشغيله مباشرة كما تفعل [llama.cpp](/power-local-llm/llama-cpp-explained) أو [vLLM](/power-local-llm/vllm-explained)، تقوم TensorRT-LLM بتجميع النموذج مسبقًا في "محرك" مُحسَّن مبني من نوى CUDA مخصصة ومضبوطة لجيل معين من وحدات GPU من NVIDIA. وهذه الخطوة التجميعية هي المقايضة التي يقوم عليها التصميم بأكمله: مقابل خطوة بناء إضافية واشتراط عتاد حصري من NVIDIA، تستهدف المكتبة أعلى أداء استدلال ممكن على وحدات GPU من NVIDIA، وهي المحرك الكامن وراء خدمات NIM المصغّرة من NVIDIA نفسها، وخلفية شائعة لـ[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
+    intro: 'TensorRT-LLM هي مكتبة مفتوحة المصدر نشرتها NVIDIA بترخيص Apache 2.0، مخصصة لتجميع وتحسين استدلال نماذج اللغة الكبيرة تحديدًا على وحدات معالجة الرسوميات (GPU) من NVIDIA. وبدلًا من تحميل النموذج وتشغيله مباشرة كما تفعل [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو [vLLM](/ar/power-local-llm/vllm-explained)، تقوم TensorRT-LLM بتجميع النموذج مسبقًا في "محرك" مُحسَّن مبني من نوى CUDA مخصصة ومضبوطة لجيل معين من وحدات GPU من NVIDIA. وهذه الخطوة التجميعية هي المقايضة التي يقوم عليها التصميم بأكمله: مقابل خطوة بناء إضافية واشتراط عتاد حصري من NVIDIA، تستهدف المكتبة أعلى أداء استدلال ممكن على وحدات GPU من NVIDIA، وهي المحرك الكامن وراء خدمات NIM المصغّرة من NVIDIA نفسها، وخلفية شائعة لـ[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server).',
     metaDescription: 'TensorRT-LLM هو محرك NVIDIA مفتوح المصدر بترخيص Apache 2.0 لتجميع نماذج اللغة الكبيرة في محركات استدلال مُحسَّنة لوحدات GPU. ما هو، وكيف يقارَن بـ vLLM وllama.cpp، وكيفية بناء محرك وتشغيله.',
     readTime: '13 دقيقة قراءة',
     targetKeywords: [
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'بناء محرك TensorRT-LLM',
       '[github.com/NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)',
     ],
-    leadAnswerBlock: '**TensorRT-LLM مكتبة مجانية ومفتوحة المصدر (Apache 2.0) نشرتها NVIDIA، تقوم بتجميع نماذج اللغة الكبيرة في "محركات" استدلال مُحسَّنة مبنية خصيصًا لوحدات GPU من NVIDIA.** وهي مبنية فوق حزمة أدوات الاستدلال للتعلم العميق [TensorRT](https://developer.nvidia.com/tensorrt) من NVIDIA، وتضيف تقنيات خاصة بنماذج اللغة الكبيرة تشمل التجميع المستمر أثناء التشغيل (in-flight)، وذاكرة تخزين مؤقت KV مُقسَّمة إلى صفحات، ونوى انتباه (attention) مخصصة، ودعمًا للتكميم يصل إلى FP8 وINT4، وذلك لرفع إنتاجية الاستدلال إلى أقصى ما يسمح به جيل وحدة GPU المستهدفة. والمقايضة الحاسمة هنا هي خطوة التجميع المسبق: يجب بناء النموذج في محرك مخصص لوحدة GPU معينة قبل أن يتمكن من خدمة أي طلبات، على عكس [llama.cpp](/power-local-llm/llama-cpp-explained) أو [vLLM](/power-local-llm/vllm-explained) اللذين يحمّلان النموذج مباشرة دون خطوة تجميع منفصلة. وفي بيئات الإنتاج، غالبًا ما يُستخدم TensorRT-LLM عبر [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) أو مُضمَّنًا داخل خدمات NIM المصغّرة من NVIDIA، ويستهدف أقصى إنتاجية لكل وحدة GPU على عتاد NVIDIA في عمليات النشر بمراكز البيانات والمؤسسات — لا الدردشة على سطح المكتب لمستخدم واحد.',
+    leadAnswerBlock: '**TensorRT-LLM مكتبة مجانية ومفتوحة المصدر (Apache 2.0) نشرتها NVIDIA، تقوم بتجميع نماذج اللغة الكبيرة في "محركات" استدلال مُحسَّنة مبنية خصيصًا لوحدات GPU من NVIDIA.** وهي مبنية فوق حزمة أدوات الاستدلال للتعلم العميق [TensorRT](https://developer.nvidia.com/tensorrt) من NVIDIA، وتضيف تقنيات خاصة بنماذج اللغة الكبيرة تشمل التجميع المستمر أثناء التشغيل (in-flight)، وذاكرة تخزين مؤقت KV مُقسَّمة إلى صفحات، ونوى انتباه (attention) مخصصة، ودعمًا للتكميم يصل إلى FP8 وINT4، وذلك لرفع إنتاجية الاستدلال إلى أقصى ما يسمح به جيل وحدة GPU المستهدفة. والمقايضة الحاسمة هنا هي خطوة التجميع المسبق: يجب بناء النموذج في محرك مخصص لوحدة GPU معينة قبل أن يتمكن من خدمة أي طلبات، على عكس [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو [vLLM](/ar/power-local-llm/vllm-explained) اللذين يحمّلان النموذج مباشرة دون خطوة تجميع منفصلة. وفي بيئات الإنتاج، غالبًا ما يُستخدم TensorRT-LLM عبر [NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server) أو مُضمَّنًا داخل خدمات NIM المصغّرة من NVIDIA، ويستهدف أقصى إنتاجية لكل وحدة GPU على عتاد NVIDIA في عمليات النشر بمراكز البيانات والمؤسسات — لا الدردشة على سطح المكتب لمستخدم واحد.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو TensorRT-LLM وكيف يعمل؟',
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتضمن أمر `trtllm-serve` لإنشاء نقطة نهاية متوافقة مع OpenAI مباشرة من محرك تم بناؤه',
           'تدعم العديد من عائلات النماذج المفتوحة الشائعة، رغم أن الدعم الدقيق لكل نموذج وخطوات التحويل اللازمة تختلف بحسب إصدار TensorRT-LLM — يُنصح بمراجعة [وثائق النماذج المدعومة](https://github.com/NVIDIA/TensorRT-LLM) الخاصة بالمشروع قبل الالتزام بنموذج معين',
         ],
-        note: 'TensorRT-LLM بنية تحتية لعتاد NVIDIA، وليست تطبيق دردشة موجّهًا للمستهلكين — فلا يوجد مثبِّت رسومي ولا دعم لوحدات GPU من مورّدين متعددين. أما إذا كنت تريد تطبيق دردشة محلي جاهز بنقرة واحدة، فأدوات مثل [Ollama أو LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) مصمَّمة لهذا الاستخدام؛ راجع أقسام المقارنة أدناه.',
+        note: 'TensorRT-LLM بنية تحتية لعتاد NVIDIA، وليست تطبيق دردشة موجّهًا للمستهلكين — فلا يوجد مثبِّت رسومي ولا دعم لوحدات GPU من مورّدين متعددين. أما إذا كنت تريد تطبيق دردشة محلي جاهز بنقرة واحدة، فأدوات مثل [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) مصمَّمة لهذا الاستخدام؛ راجع أقسام المقارنة أدناه.',
       },
       howItWorks: {
         id: 'how-tensorrt-llm-works',
@@ -2462,7 +2462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'جيل وحدة GPU': 'Ada Lovelace (مثل L4 وL40S)', 'التفاصيل': 'مدعومة، مع استخدام INT8 (بما في ذلك SmoothQuant) عادةً كبديل حيث يكون الدعم الكامل لأدوات FP8 أضيق مما هو عليه في Hopper/Blackwell.' },
           { 'جيل وحدة GPU': 'بنى أقدم (مثل Ampere)', 'التفاصيل': 'توجد توافقية أوسع مع بعض وحدات GPU الأقدم الخاصة بمراكز بيانات NVIDIA، لكن صيغ التكميم وتحسينات النوى الأحدث تستهدف العتاد من الجيل الحالي — يُنصح بمراجعة [ملاحظات الإصدار](https://nvidia.github.io/TensorRT-LLM/release-notes.html) من NVIDIA لمعرفة مصفوفة الميزات الدقيقة لكل وحدة GPU بالإصدار الذي تنوي استخدامه.' },
         ],
-        note: 'إذا كان هدفك تشغيل نموذج على حاسوب محمول أو جهاز Mac أو أي وحدة GPU ليست من NVIDIA، فإن TensorRT-LLM ليست الأداة المصمَّمة لذلك — فـ[llama.cpp](/power-local-llm/llama-cpp-explained) والأدوات المبنية عليها، مثل Ollama وLM Studio، تستهدف عتاد وحدة المعالجة المركزية وApple Silicon مباشرة وهي الأنسب لهذا السيناريو.',
+        note: 'إذا كان هدفك تشغيل نموذج على حاسوب محمول أو جهاز Mac أو أي وحدة GPU ليست من NVIDIA، فإن TensorRT-LLM ليست الأداة المصمَّمة لذلك — فـ[llama.cpp](/ar/power-local-llm/llama-cpp-explained) والأدوات المبنية عليها، مثل Ollama وLM Studio، تستهدف عتاد وحدة المعالجة المركزية وApple Silicon مباشرة وهي الأنسب لهذا السيناريو.',
       },
       quantization: {
         id: 'quantization-support',
@@ -2485,7 +2485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '`trtllm-serve`: أمر مضمَّن مع TensorRT-LLM ينشئ نقطة نهاية واجهة برمجة تطبيقات متوافقة مع OpenAI مباشرة من محرك تم بناؤه، دون إطار خدمة منفصل',
           '[NVIDIA Triton Inference Server](https://developer.nvidia.com/triton-inference-server): منصة خدمة نماذج عامة الغرض بخلفية TensorRT-LLM، تضيف قوائم انتظار الطلبات، وتنسيق نماذج متعددة، وميزات نشر على مستوى الإنتاج مثل التكامل مع Kubernetes',
-          'NVIDIA NIM: خدمات مصغّرة جاهزة ومُحوسبة (containerized) تُباع كجزء من اشتراك [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)، وتُغلِّف خلفية مُحسَّنة بواسطة TensorRT-LLM خلف واجهة برمجة تطبيقات موحّدة مع دعم من المورّد — راجع [مقارنة خوادم الاستدلال المؤسسية](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) لمزيد من التفاصيل حول ترخيص NIM ونموذج الدعم الخاص بها',
+          'NVIDIA NIM: خدمات مصغّرة جاهزة ومُحوسبة (containerized) تُباع كجزء من اشتراك [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)، وتُغلِّف خلفية مُحسَّنة بواسطة TensorRT-LLM خلف واجهة برمجة تطبيقات موحّدة مع دعم من المورّد — راجع [مقارنة خوادم الاستدلال المؤسسية](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) لمزيد من التفاصيل حول ترخيص NIM ونموذج الدعم الخاص بها',
         ],
         note: 'تشغيل واجهة برمجة تطبيقات TensorRT-LLM الخام مباشرة أمر شائع للتطوير واختبار الأداء وبناء طبقة خدمة مخصصة؛ أما Triton وNIM فوُجدا لمعالجة اعتبارات الإنتاج — تجميع الطلبات عبر نماذج متعددة، وتوجيه متعدد المستأجرين، وفحوصات الصحة، وعقود الدعم — التي لا يوفرها المحرك الخام وحده.',
       },
@@ -2510,13 +2510,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       vsVllmLlamaCpp: {
         id: 'tensorrt-llm-vs-vllm-llama-cpp',
         title: 'كيف تقارَن TensorRT-LLM بـvLLM وllama.cpp؟',
-        content: 'تُشغِّل TensorRT-LLM و[vLLM](/power-local-llm/vllm-explained) و[llama.cpp](/power-local-llm/llama-cpp-explained) جميعها استدلال نماذج اللغة الكبيرة، لكنها تقع في نقاط مختلفة على طيف الأداء مقابل المرونة.',
+        content: 'تُشغِّل TensorRT-LLM و[vLLM](/ar/power-local-llm/vllm-explained) و[llama.cpp](/ar/power-local-llm/llama-cpp-explained) جميعها استدلال نماذج اللغة الكبيرة، لكنها تقع في نقاط مختلفة على طيف الأداء مقابل المرونة.',
         itemHeadings: true,
         columns: ['المحرك', 'التفاصيل'],
         rows: [
           { 'المحرك': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'التفاصيل': 'حصرية لـNVIDIA، بترخيص Apache 2.0. تتطلب خطوة تجميع مسبقة لكل جيل من وحدات GPU؛ تستهدف أعلى إنتاجية ممكنة على ذلك العتاد المحدد من NVIDIA مقابل خطوة البناء والارتباط بمورّد واحد.' },
-          { 'المحرك': '[vLLM](/power-local-llm/vllm-explained)', 'التفاصيل': 'بترخيص Apache 2.0، تحمّل النماذج المتوافقة مع Hugging Face Transformers مباشرة دون خطوة تجميع. وحدات GPU من NVIDIA هي هدفها الأساسي، مع خلفيات موثَّقة (أضيق) لـAMD وIntel وTPU أيضًا.' },
-          { 'المحرك': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'التفاصيل': 'محرك C/C++ بترخيص MIT يعمل على وحدة المعالجة المركزية وApple Silicon ومجموعة واسعة من مورّدي وحدات GPU عبر صيغة نموذج GGUF — الأكثر مرونة من حيث العتاد بين الثلاثة، لكنه غير مصمَّم لمقياس مراكز البيانات متعددة وحدات GPU وعالية التزامن التي تستهدفها TensorRT-LLM وvLLM.' },
+          { 'المحرك': '[vLLM](/ar/power-local-llm/vllm-explained)', 'التفاصيل': 'بترخيص Apache 2.0، تحمّل النماذج المتوافقة مع Hugging Face Transformers مباشرة دون خطوة تجميع. وحدات GPU من NVIDIA هي هدفها الأساسي، مع خلفيات موثَّقة (أضيق) لـAMD وIntel وTPU أيضًا.' },
+          { 'المحرك': '[llama.cpp](/ar/power-local-llm/llama-cpp-explained)', 'التفاصيل': 'محرك C/C++ بترخيص MIT يعمل على وحدة المعالجة المركزية وApple Silicon ومجموعة واسعة من مورّدي وحدات GPU عبر صيغة نموذج GGUF — الأكثر مرونة من حيث العتاد بين الثلاثة، لكنه غير مصمَّم لمقياس مراكز البيانات متعددة وحدات GPU وعالية التزامن التي تستهدفها TensorRT-LLM وvLLM.' },
         ],
         note: 'لم يقارن هذا المقال هذه المحركات الثلاثة ببعضها بشكل مستقل، ولا يدّعي أن أحدها أسرع بشكل شامل — تعتمد الإنتاجية بشدة على النموذج وجيل وحدة GPU وخصائص الدُفعات وإصدار كل محرك. تكمن الميزة الحقيقية لـTensorRT-LLM في أعلى أداء تحديدًا على عتاد NVIDIA من الجيل الحالي، مقابل تكلفة خطوة التجميع والدعم الحصري لـNVIDIA؛ بينما تتنازل vLLM عن جزء من ذلك الضبط الدقيق الخاص بوحدة GPU مقابل سير عمل أبسط دون تجميع وتغطية عتاد أوسع (وإن ظلت NVIDIA هي الأساس)؛ في حين تتنازل llama.cpp عن مزيد من الإنتاجية القصوى مقابل القدرة على العمل على عتاد لا يستهدفه أيٌّ من الآخرين، بما في ذلك وحدات المعالجة المركزية وأجهزة Mac.',
       },
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الطبقة': 'NVIDIA Triton Inference Server', 'التفاصيل': 'منصة خدمة نماذج عامة الغرض، مجانية ومفتوحة المصدر، بخلفية TensorRT-LLM، تضيف توجيه الطلبات واستضافة نماذج متعددة وتنسيق الإنتاج حول محرك واحد أو أكثر.' },
           { 'الطبقة': 'NVIDIA NIM', 'التفاصيل': 'طبقة خدمات مصغّرة جاهزة ومدفوعة، تُباع كجزء من اشتراك NVIDIA AI Enterprise، تُغلِّف خلفية مُحسَّنة بواسطة TensorRT-LLM خلف واجهة برمجة تطبيقات موحّدة مع دعم من المورّد — وتستبدل جهد الإعداد الذاتي بحاوية مدعومة وجاهزة للنشر.' },
         ],
-        note: 'من المسارات الشائعة: بناء النموذج في محرك TensorRT-LLM ثم خدمته عبر Triton من أجل نشر إنتاج مُدار ذاتيًا، أو تخطي خطوة البناء بالكامل باستخدام حاوية NIM جاهزة إذا كان الاشتراك المدفوع ودعم المورّد يستحقان ذلك بالنسبة لفريقك. راجع [مقارنة خوادم الاستدلال المؤسسية](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) للاطلاع على المقايضات في الترخيص والتكلفة بين NIM وvLLM وTGI.',
+        note: 'من المسارات الشائعة: بناء النموذج في محرك TensorRT-LLM ثم خدمته عبر Triton من أجل نشر إنتاج مُدار ذاتيًا، أو تخطي خطوة البناء بالكامل باستخدام حاوية NIM جاهزة إذا كان الاشتراك المدفوع ودعم المورّد يستحقان ذلك بالنسبة لفريقك. راجع [مقارنة خوادم الاستدلال المؤسسية](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) للاطلاع على المقايضات في الترخيص والتكلفة بين NIM وvLLM وTGI.',
       },
       whoShouldUse: {
         id: 'who-should-use-tensorrt-llm',
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'تجنّب استخدام TensorRT-LLM إذا',
             list: [
-              'كنت تريد تشغيل نموذج على حاسوبك المحمول أو المكتبي الخاص للدردشة الشخصية — [Ollama أو LM Studio](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) يناسبان هذه الحاجة بشكل أفضل بكثير',
+              'كنت تريد تشغيل نموذج على حاسوبك المحمول أو المكتبي الخاص للدردشة الشخصية — [Ollama أو LM Studio](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) يناسبان هذه الحاجة بشكل أفضل بكثير',
               'لم يكن عتادك من NVIDIA — فلا تملك TensorRT-LLM أي خلفية لوحدة المعالجة المركزية أو AMD أو Intel أو Apple Silicon على الإطلاق، على عكس vLLM أو llama.cpp',
               'كنت تريد التكرار السريع عبر نماذج مختلفة كثيرة دون أن تبطئك خطوة تجميع لكل نموذج ولكل وحدة GPU — أسلوب التحميل المباشر في vLLM أنسب هنا',
               'لم يكن لدى فريقك سعة إضافية لامتلاك خط أنابيب بناء CUDA/TensorRT وتفضل الدفع مقابل نشر جاهز ومدعوم — NVIDIA NIM مصمَّمة لهذه المقايضة بدلًا من ذلك',
@@ -2567,11 +2567,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الأداة', 'الإعداد', 'الأنسب لـ'],
         rows: [
           { 'الأداة': '[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)', 'الإعداد': 'تجميع محرك مخصص لوحدة GPU باستخدام `trtllm-build`، ثم خدمته بـ`trtllm-serve` أو Triton. مطلوب وحدة GPU من NVIDIA وCUDA.', 'الأنسب لـ': 'أقصى إنتاجية لكل وحدة GPU على عتاد NVIDIA في بيئة الإنتاج، مقابل تكلفة خطوة تجميع.' },
-          { 'الأداة': '[vLLM](/power-local-llm/vllm-explained)', 'الإعداد': 'حزمة Python عبر pip؛ خادم متوافق مع OpenAI يُشغَّل بأمر `vllm serve`. لا توجد خطوة تجميع؛ الهدف الأساسي وحدات GPU من NVIDIA.', 'الأنسب لـ': 'خدمة عالية الإنتاجية لمستخدمين متعددين بسير عمل أبسط دون تجميع.' },
-          { 'الأداة': '[llama.cpp](/power-local-llm/llama-cpp-explained)', 'الإعداد': 'واجهة سطر أوامر، وواجهة ويب مضمَّنة، وواجهة برمجة تطبيقات متوافقة مع OpenAI عبر llama-server. تعمل على وحدة المعالجة المركزية أو مجموعة واسعة من مورّدي وحدات GPU.', 'الأنسب لـ': 'مرونة العتاد، والنشر المدمج/على الحافة، والاستخدام على وحدة المعالجة المركزية أو Apple Silicon.' },
+          { 'الأداة': '[vLLM](/ar/power-local-llm/vllm-explained)', 'الإعداد': 'حزمة Python عبر pip؛ خادم متوافق مع OpenAI يُشغَّل بأمر `vllm serve`. لا توجد خطوة تجميع؛ الهدف الأساسي وحدات GPU من NVIDIA.', 'الأنسب لـ': 'خدمة عالية الإنتاجية لمستخدمين متعددين بسير عمل أبسط دون تجميع.' },
+          { 'الأداة': '[llama.cpp](/ar/power-local-llm/llama-cpp-explained)', 'الإعداد': 'واجهة سطر أوامر، وواجهة ويب مضمَّنة، وواجهة برمجة تطبيقات متوافقة مع OpenAI عبر llama-server. تعمل على وحدة المعالجة المركزية أو مجموعة واسعة من مورّدي وحدات GPU.', 'الأنسب لـ': 'مرونة العتاد، والنشر المدمج/على الحافة، والاستخدام على وحدة المعالجة المركزية أو Apple Silicon.' },
           { 'الأداة': 'NVIDIA NIM', 'الإعداد': 'حاوية جاهزة، تُنشر عبر اشتراك مدفوع في NVIDIA AI Enterprise. لا توجد خطوة بناء للمستخدم النهائي.', 'الأنسب لـ': 'الفرق التي تريد أداء بمستوى TensorRT-LLM دون تشغيل خط أنابيب البناء بنفسها.' },
         ],
-        note: 'لم يقارن هذا المقال بشكل مستقل السرعة أو جودة المخرجات بين هذه الأدوات، ولا يدّعي أن إحداها أفضل تقنيًا لكل حِمل عمل — تغطي المقارنة أعلاه فقط الحقائق الموثَّقة المتعلقة بالبنية والإعداد والترخيص. راجع [دليل خوادم الاستدلال المؤسسية](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) لمقارنة أعمق حول الترخيص والنشر.',
+        note: 'لم يقارن هذا المقال بشكل مستقل السرعة أو جودة المخرجات بين هذه الأدوات، ولا يدّعي أن إحداها أفضل تقنيًا لكل حِمل عمل — تغطي المقارنة أعلاه فقط الحقائق الموثَّقة المتعلقة بالبنية والإعداد والترخيص. راجع [دليل خوادم الاستدلال المؤسسية](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) لمقارنة أعمق حول الترخيص والنشر.',
       },
       limitations: {
         id: 'limitations',
@@ -2601,7 +2601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ الثالث: محاولة تشغيله على عتاد ليس من NVIDIA',
-            content: 'لا تملك TensorRT-LLM أي خلفية مخصصة لوحدة المعالجة المركزية وحدها أو AMD أو Intel أو Apple Silicon. ومحاولة استخدامها خارج وحدات GPU من NVIDIA ليست مسارًا مدعومًا على الإطلاق — أما [llama.cpp](/power-local-llm/llama-cpp-explained) أو vLLM فهما الأداتان المصمَّمتان لتغطية عتاد أوسع.',
+            content: 'لا تملك TensorRT-LLM أي خلفية مخصصة لوحدة المعالجة المركزية وحدها أو AMD أو Intel أو Apple Silicon. ومحاولة استخدامها خارج وحدات GPU من NVIDIA ليست مسارًا مدعومًا على الإطلاق — أما [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو vLLM فهما الأداتان المصمَّمتان لتغطية عتاد أوسع.',
           },
         ],
       },
@@ -2632,11 +2632,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[شرح vLLM](/power-local-llm/vllm-explained) — البديل بترخيص Apache 2.0 الذي يحمّل النماذج مباشرة دون خطوة تجميع، في مقابل البناء المسبق لـTensorRT-LLM.',
-          '[شرح llama.cpp](/power-local-llm/llama-cpp-explained) — المحرك المرن من حيث العتاد الذي يعمل على وحدات المعالجة المركزية وApple Silicon ومجموعة واسعة من مورّدي وحدات GPU، على عكس نطاق TensorRT-LLM الحصري لـNVIDIA.',
-          '[خوادم استدلال نماذج اللغة الكبيرة المؤسسية: vLLM وTGI وNIM](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — مقارنة أعمق تركز على النشر، تشمل NVIDIA NIM التي تُغلِّف TensorRT-LLM.',
-          '[اختيار وحدة GPU لعتاد الاستدلال الداخلي](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — أجيال وحدات GPU التي يجب مراعاتها إذا كنت تحدد حجم عتاد NVIDIA لتشغيل TensorRT-LLM.',
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[شرح vLLM](/ar/power-local-llm/vllm-explained) — البديل بترخيص Apache 2.0 الذي يحمّل النماذج مباشرة دون خطوة تجميع، في مقابل البناء المسبق لـTensorRT-LLM.',
+          '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — المحرك المرن من حيث العتاد الذي يعمل على وحدات المعالجة المركزية وApple Silicon ومجموعة واسعة من مورّدي وحدات GPU، على عكس نطاق TensorRT-LLM الحصري لـNVIDIA.',
+          '[خوادم استدلال نماذج اللغة الكبيرة المؤسسية: vLLM وTGI وNIM](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — مقارنة أعمق تركز على النشر، تشمل NVIDIA NIM التي تُغلِّف TensorRT-LLM.',
+          '[اختيار وحدة GPU لعتاد الاستدلال الداخلي](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — أجيال وحدات GPU التي يجب مراعاتها إذا كنت تحدد حجم عتاد NVIDIA لتشغيل TensorRT-LLM.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },

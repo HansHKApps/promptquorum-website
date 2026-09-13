@@ -472,8 +472,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: beste Voice-Cloning-Qualität',
         content: [
-          '**XTTS v2, veröffentlicht von Coqui und ausgeführt über das [Coqui-TTS-Toolkit](/power-local-llm/coqui-tts-review), ist die beste lokale Voice-Cloning-Option für GPU-Besitzer, die die höchste aus einem kurzen Referenzclip erreichbare Qualität benötigen.** Es klont eine Stimme aus nur 6 Sekunden Referenzaudio und spricht sie in 17 Sprachen zurück, einschließlich sprachübergreifendem Cloning — eine Stimme aus englischem Audio klonen und auf Spanisch oder Japanisch sprechen lassen.',
-          'Beim VRAM betragen XTTS v2s Modellgewichte etwa 2 GB, doch 4 GB sind das praktische Minimum zum Ausführen, und 4-6 GB werden für Echtzeit-Inferenz empfohlen, laut PromptQuorums dediziertem [XTTS-v2-Test](/power-local-llm/xtts-v2-review). Die Lizenz ist für die meisten Leser der entscheidende Faktor: Die Coqui Public Model License (CPML) ist ausdrücklich nicht-kommerziell, und da Coqui AI, das Unternehmen, seine kostenpflichtigen Dienste im Dezember 2023 einstellte, gibt es derzeit keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz.',
+          '**XTTS v2, veröffentlicht von Coqui und ausgeführt über das [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review), ist die beste lokale Voice-Cloning-Option für GPU-Besitzer, die die höchste aus einem kurzen Referenzclip erreichbare Qualität benötigen.** Es klont eine Stimme aus nur 6 Sekunden Referenzaudio und spricht sie in 17 Sprachen zurück, einschließlich sprachübergreifendem Cloning — eine Stimme aus englischem Audio klonen und auf Spanisch oder Japanisch sprechen lassen.',
+          'Beim VRAM betragen XTTS v2s Modellgewichte etwa 2 GB, doch 4 GB sind das praktische Minimum zum Ausführen, und 4-6 GB werden für Echtzeit-Inferenz empfohlen, laut PromptQuorums dediziertem [XTTS-v2-Test](/de/power-local-llm/xtts-v2-review). Die Lizenz ist für die meisten Leser der entscheidende Faktor: Die Coqui Public Model License (CPML) ist ausdrücklich nicht-kommerziell, und da Coqui AI, das Unternehmen, seine kostenpflichtigen Dienste im Dezember 2023 einstellte, gibt es derzeit keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz.',
         ],
         items: [
           'Nutzen Sie XTTS v2, wenn: Ihr Projekt privat, akademisch oder ein nicht-kommerzieller Prototyp ist und Sie die beste lokal verfügbare Cloning-Qualität wollen.',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~2 GB Modellgewichte, 4 GB Minimum, 4-6 GB empfohlen für Echtzeit-Inferenz.',
           '**Am besten für:** höchste Treue beim lokalen Voice-Cloning, sprachübergreifende Unterstützung für 17 Sprachen, nicht-kommerzielle oder Forschungsnutzung.',
         ],
-        note: 'Vollständige Lizenzdetails, echte Nutzungsbefehle und Einschränkungen finden Sie in PromptQuorums dediziertem [XTTS-v2-Test](/power-local-llm/xtts-v2-review).',
+        note: 'Vollständige Lizenzdetails, echte Nutzungsbefehle und Einschränkungen finden Sie in PromptQuorums dediziertem [XTTS-v2-Test](/de/power-local-llm/xtts-v2-review).',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: bestes ausdrucksstarkes, nicht-sprachliches Audio',
         content: [
           '**Bark, veröffentlicht von Suno auf [GitHub](https://github.com/suno-ai/bark), ist die richtige Wahl, wenn Sie mehr als Sprache wollen — Lachen, Seufzer, Keuchen und einfache Musik, erzeugt allein aus Textprompts — und es ist die Engine in diesem Vergleich, die am meisten von einer GPU profitiert, da seine generative, Token-für-Token-Architektur ohne CUDA-Beschleunigung die langsamste der vier ist.** Es unterstützt kein individuelles Voice-Cloning; laut Sunos eigener Dokumentation „unterstützt es derzeit kein individuelles Voice-Cloning".',
-          'Beim VRAM dokumentiert PromptQuorums dedizierter [Bark-Test](/power-local-llm/bark-tts-review), dass das volle Modell etwa 12 GB benötigt, wobei eine Umgebungsvariable für ein kleines Modell (`SUNO_USE_SMALL_MODELS`) das auf etwa 8 GB reduziert — merklich mehr als XTTS v2s 4-6 GB. Es steht unter der MIT-Lizenz, seit dem 1. Mai 2023 vollständig kommerziell nutzbar, doch sein Wartungsstatus ist eine echte offene Frage: Das öffentliche GitHub-Repository zeigt keine Commits seit dem 5. April 2024.',
+          'Beim VRAM dokumentiert PromptQuorums dedizierter [Bark-Test](/de/power-local-llm/bark-tts-review), dass das volle Modell etwa 12 GB benötigt, wobei eine Umgebungsvariable für ein kleines Modell (`SUNO_USE_SMALL_MODELS`) das auf etwa 8 GB reduziert — merklich mehr als XTTS v2s 4-6 GB. Es steht unter der MIT-Lizenz, seit dem 1. Mai 2023 vollständig kommerziell nutzbar, doch sein Wartungsstatus ist eine echte offene Frage: Das öffentliche GitHub-Repository zeigt keine Commits seit dem 5. April 2024.',
         ],
         items: [
           'Nutzen Sie Bark, wenn: Sie neben Sprache nicht-sprachliches Audio (Lachen, Seufzer, Umgebungsgeräusche) benötigen und 8-12 GB VRAM übrig haben.',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~12 GB für das volle Modell, ~8 GB mit der Small-Model-Variable — der höchste Bedarf der vier hier verglichenen Engines.',
           '**Am besten für:** ausdrucksstarke Audiogenerierung, Soundeffekte kombiniert mit Sprache, Prototyping und Forschungsnutzung.',
         ],
-        note: 'Vollständige Nutzungsbefehle, die Small-Model-VRAM-Variable und Barks Wartungsstatus finden Sie in PromptQuorums dediziertem [Bark-TTS-Test](/power-local-llm/bark-tts-review).',
+        note: 'Vollständige Nutzungsbefehle, die Small-Model-VRAM-Variable und Barks Wartungsstatus finden Sie in PromptQuorums dediziertem [Bark-TTS-Test](/de/power-local-llm/bark-tts-review).',
       },
       kokoro: {
         id: 'kokoro',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Engine', 'VRAM (GPU)', 'GPU-Geschwindigkeitsvorteil', 'Voice-Cloning', 'Lizenz'],
         rows: [
           {
-            'Engine': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Engine': '[XTTS v2](/de/power-local-llm/xtts-v2-review)',
             'VRAM (GPU)': '4-6 GB empfohlen',
             'GPU-Geschwindigkeitsvorteil': 'Groß — CPU ist unpraktikabel',
             'Voice-Cloning': 'Ja, 6s-Clip / 17 Sprachen',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Lizenz': 'MIT',
           },
           {
-            'Engine': '[Bark](/power-local-llm/bark-tts-review)',
+            'Engine': '[Bark](/de/power-local-llm/bark-tts-review)',
             'VRAM (GPU)': '~8-12 GB (klein/voll)',
             'GPU-Geschwindigkeitsvorteil': 'Größter der vier',
             'Voice-Cloning': 'Nein',
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie viel VRAM brauchen Sie tatsächlich?',
         content: [
           '**Eine GPU mit 6 GB VRAM oder mehr deckt jede Engine in diesem Vergleich problemlos ab, außer Barks vollem Modell, das etwa 12 GB benötigt (oder rund 8 GB mit der Small-Model-Variable).** Wählen Sie Ihre Karte nach der tatsächlich benötigten Engine, statt standardmäßig für die schwerste Option zu kaufen.',
-          'Allgemeine Hinweise zur GPU-Wahl nach VRAM-Stufe für lokale KI-Workloads (nicht TTS-spezifisch) finden Sie in PromptQuorums [GPU-Kaufratgeber für lokale LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — dieselbe VRAM-first-Kauflogik gilt auch für TTS, und wenn Sie bereits ein lokales LLM neben TTS betreiben, konkurrieren beide Workloads um denselben VRAM-Pool.',
+          'Allgemeine Hinweise zur GPU-Wahl nach VRAM-Stufe für lokale KI-Workloads (nicht TTS-spezifisch) finden Sie in PromptQuorums [GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — dieselbe VRAM-first-Kauflogik gilt auch für TTS, und wenn Sie bereits ein lokales LLM neben TTS betreiben, konkurrieren beide Workloads um denselben VRAM-Pool.',
         ],
         items: [
           'Einsteiger-GPU (6-8 GB VRAM): deckt XTTS v2 problemlos ab, deckt Bark nur mit der Small-Model-Variable ab, deckt Kokoro und Chatterboxs kleinere Varianten mühelos ab.',
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Für Leser, die bereits eine NVIDIA-GPU besitzen und sie für Text-zu-Sprache nutzen möchten, hängt die Wahl davon ab, was das Audio leisten muss. XTTS v2 ist die Wahl für die höchste erreichbare Voice-Cloning-Qualität in einem nicht-kommerziellen oder Forschungskontext, aufgrund seiner nicht-kommerziellen CPML-Lizenz. Chatterbox ist die Wahl, wenn dieselbe Cloning-Fähigkeit in einem kommerziellen Produkt eingesetzt werden muss, dank seiner MIT-Lizenz und der auf Echtzeit ausgelegten kleineren Modellgrößen. Bark ist speziell die Wahl, wenn das Projekt ausdrucksstarkes, nicht-sprachliches Audio benötigt — Lachen, Seufzer, einfache Musik — und dafür 8-12 GB VRAM investieren kann, mit dem Vorbehalt, dass sein Wartungsstatus ungewiss ist. Kokoro bleibt die richtige Wahl, wann immer Cloning nicht die Anforderung ist: Es läuft problemlos allein auf der CPU, sodass das Reservieren von GPU-VRAM dafür selten lohnt. Im Zweifel starten Sie mit Kokoro für einfache Vertonung und steigen erst auf XTTS v2 oder Chatterbox um, sobald eine echte Cloning-Anforderung entsteht — so bleibt der VRAM Ihrer GPU für alles andere verfügbar, was Sie parallel betreiben, einschließlich eines lokalen LLM. Die Lizenzdetails zu jeder hier genannten Engine finden Sie in PromptQuorums [Leitfaden zu lokalen TTS- und Voice-Cloning-Lizenzen](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
+          'Für Leser, die bereits eine NVIDIA-GPU besitzen und sie für Text-zu-Sprache nutzen möchten, hängt die Wahl davon ab, was das Audio leisten muss. XTTS v2 ist die Wahl für die höchste erreichbare Voice-Cloning-Qualität in einem nicht-kommerziellen oder Forschungskontext, aufgrund seiner nicht-kommerziellen CPML-Lizenz. Chatterbox ist die Wahl, wenn dieselbe Cloning-Fähigkeit in einem kommerziellen Produkt eingesetzt werden muss, dank seiner MIT-Lizenz und der auf Echtzeit ausgelegten kleineren Modellgrößen. Bark ist speziell die Wahl, wenn das Projekt ausdrucksstarkes, nicht-sprachliches Audio benötigt — Lachen, Seufzer, einfache Musik — und dafür 8-12 GB VRAM investieren kann, mit dem Vorbehalt, dass sein Wartungsstatus ungewiss ist. Kokoro bleibt die richtige Wahl, wann immer Cloning nicht die Anforderung ist: Es läuft problemlos allein auf der CPU, sodass das Reservieren von GPU-VRAM dafür selten lohnt. Im Zweifel starten Sie mit Kokoro für einfache Vertonung und steigen erst auf XTTS v2 oder Chatterbox um, sobald eine echte Cloning-Anforderung entsteht — so bleibt der VRAM Ihrer GPU für alles andere verfügbar, was Sie parallel betreiben, einschließlich eines lokalen LLM. Die Lizenzdetails zu jeder hier genannten Engine finden Sie in PromptQuorums [Leitfaden zu lokalen TTS- und Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
       },
       sources: {
         id: 'sources',
@@ -660,20 +660,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox auf GitHub](https://github.com/resemble-ai/chatterbox) — README: Installation, MIT-Lizenz, Wasserzeichen und CPU-/GPU-Unterstützung.',
           '[suno-ai/bark auf GitHub](https://github.com/suno-ai/bark) — README: Lizenz, VRAM-/Small-Model-Variable und Wartungs-/Commit-Historie.',
           '[Kokoro-82M auf Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — Model-Card: Parameterzahl, Apache-2.0-Lizenz und CPU-/GPU-Performance.',
-          '[XTTS-v2-Test](/power-local-llm/xtts-v2-review) — PromptQuorums dedizierter Test mit vollständigen Nutzungsbefehlen und Lizenzdetails.',
-          '[Bark-TTS-Test](/power-local-llm/bark-tts-review) — PromptQuorums dedizierter Test mit VRAM-Werten und Wartungsstatus.',
-          '[Lokale TTS- und Voice-Cloning-Lizenzen](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — vollständiger Lizenz- und VRAM-Vergleich über lokale TTS-Engines hinweg.',
+          '[XTTS-v2-Test](/de/power-local-llm/xtts-v2-review) — PromptQuorums dedizierter Test mit vollständigen Nutzungsbefehlen und Lizenzdetails.',
+          '[Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — PromptQuorums dedizierter Test mit VRAM-Werten und Wartungsstatus.',
+          '[Lokale TTS- und Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — vollständiger Lizenz- und VRAM-Vergleich über lokale TTS-Engines hinweg.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[XTTS-v2-Test](/power-local-llm/xtts-v2-review) — der dedizierte Deep Dive zum qualitativ hochwertigsten lokalen Voice-Cloning-Modell, mit echten Nutzungsbefehlen.',
-          '[Bark-TTS-Test](/power-local-llm/bark-tts-review) — der dedizierte Deep Dive zu Sunos ausdrucksstarkem, nicht-sprachlichem Audiomodell.',
-          '[Coqui-TTS-Test](/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 und andere Modelle ausführt, mit einer breiteren, freizügig lizenzierten Codebasis.',
-          '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der vollständige Lizenz- und VRAM-Vergleich über jede lokale TTS-Engine hinweg.',
-          '[Beste GPUs für lokale LLMs: vollständiger Kaufratgeber 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — VRAM-first-Kauflogik für GPUs, die ebenso für die Kombination von TTS mit einem lokalen LLM gilt.',
+          '[XTTS-v2-Test](/de/power-local-llm/xtts-v2-review) — der dedizierte Deep Dive zum qualitativ hochwertigsten lokalen Voice-Cloning-Modell, mit echten Nutzungsbefehlen.',
+          '[Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — der dedizierte Deep Dive zu Sunos ausdrucksstarkem, nicht-sprachlichem Audiomodell.',
+          '[Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 und andere Modelle ausführt, mit einer breiteren, freizügig lizenzierten Codebasis.',
+          '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der vollständige Lizenz- und VRAM-Vergleich über jede lokale TTS-Engine hinweg.',
+          '[Beste GPUs für lokale LLMs: vollständiger Kaufratgeber 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — VRAM-first-Kauflogik für GPUs, die ebenso für die Kombination von TTS mit einem lokalen LLM gilt.',
         ],
       },
     },
@@ -823,8 +823,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2 : meilleure qualité de clonage vocal',
         content: [
-          '**XTTS v2, publié par Coqui et exécuté via le [toolkit Coqui TTS](/power-local-llm/coqui-tts-review), est la meilleure option de clonage vocal local pour les possesseurs de GPU cherchant la meilleure qualité atteignable à partir d\'un court extrait de référence.** Il clone une voix à partir de seulement 6 secondes d\'audio de référence et la restitue dans 17 langues, y compris en clonage translinguistique — cloner une voix à partir d\'un audio anglais et la faire parler en espagnol ou en japonais.',
-          'Côté VRAM, les poids du modèle XTTS v2 pèsent environ 2 Go, mais 4 Go constituent le minimum pratique pour le faire tourner, et 4-6 Go sont recommandés pour une inférence en temps réel, selon le [test XTTS v2](/power-local-llm/xtts-v2-review) dédié de PromptQuorum. La licence est le facteur décisif pour la plupart des lecteurs : la Coqui Public Model License (CPML) est explicitement non commerciale, et comme Coqui AI, l\'entreprise, a cessé ses services payants en décembre 2023, il n\'existe actuellement aucune voie confirmée vers une licence commerciale.',
+          '**XTTS v2, publié par Coqui et exécuté via le [toolkit Coqui TTS](/fr/power-local-llm/coqui-tts-review), est la meilleure option de clonage vocal local pour les possesseurs de GPU cherchant la meilleure qualité atteignable à partir d\'un court extrait de référence.** Il clone une voix à partir de seulement 6 secondes d\'audio de référence et la restitue dans 17 langues, y compris en clonage translinguistique — cloner une voix à partir d\'un audio anglais et la faire parler en espagnol ou en japonais.',
+          'Côté VRAM, les poids du modèle XTTS v2 pèsent environ 2 Go, mais 4 Go constituent le minimum pratique pour le faire tourner, et 4-6 Go sont recommandés pour une inférence en temps réel, selon le [test XTTS v2](/fr/power-local-llm/xtts-v2-review) dédié de PromptQuorum. La licence est le facteur décisif pour la plupart des lecteurs : la Coqui Public Model License (CPML) est explicitement non commerciale, et comme Coqui AI, l\'entreprise, a cessé ses services payants en décembre 2023, il n\'existe actuellement aucune voie confirmée vers une licence commerciale.',
         ],
         items: [
           'Utilisez XTTS v2 si : votre projet est personnel, académique ou un prototype non commercial et vous voulez la meilleure qualité de clonage disponible localement.',
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM :** ~2 Go pour les poids du modèle, 4 Go minimum, 4-6 Go recommandés pour l\'inférence en temps réel.',
           '**Idéal pour :** clonage vocal local de plus haute fidélité, prise en charge translinguistique de 17 langues, usage non commercial ou recherche.',
         ],
-        note: 'Détails de licence complets, commandes d\'usage réelles et limites sont couverts dans le [test XTTS v2](/power-local-llm/xtts-v2-review) dédié de PromptQuorum.',
+        note: 'Détails de licence complets, commandes d\'usage réelles et limites sont couverts dans le [test XTTS v2](/fr/power-local-llm/xtts-v2-review) dédié de PromptQuorum.',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark : meilleur audio expressif non vocal',
         content: [
           '**Bark, publié par Suno sur [GitHub](https://github.com/suno-ai/bark), est le bon choix si vous voulez plus que de la parole — rires, soupirs, halètements et musique simple générés à partir de simples prompts textuels — et c\'est le moteur de ce comparatif qui profite le plus d\'un GPU, son architecture générative token par token étant la plus lente des quatre sans accélération CUDA.** Il ne prend pas en charge le clonage vocal personnalisé ; selon la documentation officielle de Suno, il « ne prend actuellement pas en charge le clonage vocal personnalisé ».',
-          'Côté VRAM, le [test Bark](/power-local-llm/bark-tts-review) dédié de PromptQuorum documente un besoin d\'environ 12 Go pour le modèle complet, avec un drapeau d\'environnement pour petit modèle (`SUNO_USE_SMALL_MODELS`) le réduisant à environ 8 Go — sensiblement plus que les 4-6 Go de XTTS v2. Il est sous licence MIT, devenue pleinement compatible usage commercial le 1er mai 2023, mais son statut de maintenance pose une vraie question ouverte : le dépôt GitHub public ne montre aucun commit depuis le 5 avril 2024.',
+          'Côté VRAM, le [test Bark](/fr/power-local-llm/bark-tts-review) dédié de PromptQuorum documente un besoin d\'environ 12 Go pour le modèle complet, avec un drapeau d\'environnement pour petit modèle (`SUNO_USE_SMALL_MODELS`) le réduisant à environ 8 Go — sensiblement plus que les 4-6 Go de XTTS v2. Il est sous licence MIT, devenue pleinement compatible usage commercial le 1er mai 2023, mais son statut de maintenance pose une vraie question ouverte : le dépôt GitHub public ne montre aucun commit depuis le 5 avril 2024.',
         ],
         items: [
           'Utilisez Bark si : vous avez besoin d\'audio non vocal (rires, soupirs, son ambiant) en plus de la parole et disposez de 8-12 Go de VRAM.',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM :** ~12 Go pour le modèle complet, ~8 Go avec le drapeau petit modèle — le plus lourd des quatre moteurs comparés ici.',
           '**Idéal pour :** génération d\'audio expressif, effets sonores combinés à la parole, prototypage et recherche.',
         ],
-        note: 'Commandes d\'usage complètes, drapeau VRAM petit modèle et statut de maintenance de Bark sont couverts dans le [test Bark TTS](/power-local-llm/bark-tts-review) dédié de PromptQuorum.',
+        note: 'Commandes d\'usage complètes, drapeau VRAM petit modèle et statut de maintenance de Bark sont couverts dans le [test Bark TTS](/fr/power-local-llm/bark-tts-review) dédié de PromptQuorum.',
       },
       kokoro: {
         id: 'kokoro',
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Moteur', 'VRAM (GPU)', 'Gain de vitesse GPU', 'Clonage vocal', 'Licence'],
         rows: [
           {
-            'Moteur': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Moteur': '[XTTS v2](/fr/power-local-llm/xtts-v2-review)',
             'VRAM (GPU)': '4-6 Go recommandés',
             'Gain de vitesse GPU': 'Important — CPU peu praticable',
             'Clonage vocal': 'Oui, clip 6s / 17 langues',
@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Licence': 'MIT',
           },
           {
-            'Moteur': '[Bark](/power-local-llm/bark-tts-review)',
+            'Moteur': '[Bark](/fr/power-local-llm/bark-tts-review)',
             'VRAM (GPU)': '~8-12 Go (petit/complet)',
             'Gain de vitesse GPU': 'Le plus important des quatre',
             'Clonage vocal': 'Non',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Combien de VRAM vous faut-il vraiment ?',
         content: [
           '**Un GPU avec 6 Go de VRAM ou plus couvre confortablement tous les moteurs de ce comparatif, sauf le modèle complet de Bark, qui nécessite environ 12 Go (ou environ 8 Go avec son drapeau petit modèle).** Adaptez votre carte au moteur réellement nécessaire plutôt que d\'acheter par défaut pour l\'option la plus lourde.',
-          'Pour des conseils généraux sur le choix d\'un GPU par palier de VRAM pour des charges IA locales (pas spécifique au TTS), voir le [guide d\'achat GPU pour LLM locaux](/power-local-llm/best-gpu-buying-guide-local-llm-2026) de PromptQuorum — la même logique d\'achat centrée sur le VRAM s\'applique au TTS, et si vous faites déjà tourner un LLM local en parallèle du TTS, les deux charges se partagent le même réservoir de VRAM.',
+          'Pour des conseils généraux sur le choix d\'un GPU par palier de VRAM pour des charges IA locales (pas spécifique au TTS), voir le [guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) de PromptQuorum — la même logique d\'achat centrée sur le VRAM s\'applique au TTS, et si vous faites déjà tourner un LLM local en parallèle du TTS, les deux charges se partagent le même réservoir de VRAM.',
         ],
         items: [
           'GPU d\'entrée de gamme (6-8 Go de VRAM) : couvre XTTS v2 confortablement, couvre Bark uniquement avec le drapeau petit modèle, couvre Kokoro et les variantes plus petites de Chatterbox sans difficulté.',
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Pour les lecteurs possédant déjà un GPU NVIDIA et voulant l\'exploiter pour la synthèse vocale, le choix dépend de ce que l\'audio doit accomplir. XTTS v2 est le choix pour la meilleure qualité de clonage vocal atteignable dans un contexte non commercial ou de recherche, du fait de sa licence CPML non commerciale. Chatterbox est le choix quand cette même capacité de clonage doit être livrée dans un produit commercial, grâce à sa licence MIT et ses modèles plus petits conçus pour le temps réel. Bark est le choix spécifiquement quand le projet a besoin d\'audio expressif non vocal — rires, soupirs, musique simple — et peut consacrer 8-12 Go de VRAM pour l\'obtenir, avec la réserve que son statut de maintenance est incertain. Kokoro reste le bon choix dès lors que le clonage n\'est pas requis : il tourne confortablement sur CPU seul, donc réserver du VRAM GPU pour lui vaut rarement la peine. En cas de doute, commencez avec Kokoro pour de la narration simple et ne passez à XTTS v2 ou Chatterbox qu\'une fois un véritable besoin de clonage identifié — cela garde le VRAM de votre GPU disponible pour tout ce que vous faites tourner à côté, y compris un LLM local. Pour les détails de licence de chaque moteur mentionné ici, voir le [guide des licences TTS et clonage vocal locaux](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+          'Pour les lecteurs possédant déjà un GPU NVIDIA et voulant l\'exploiter pour la synthèse vocale, le choix dépend de ce que l\'audio doit accomplir. XTTS v2 est le choix pour la meilleure qualité de clonage vocal atteignable dans un contexte non commercial ou de recherche, du fait de sa licence CPML non commerciale. Chatterbox est le choix quand cette même capacité de clonage doit être livrée dans un produit commercial, grâce à sa licence MIT et ses modèles plus petits conçus pour le temps réel. Bark est le choix spécifiquement quand le projet a besoin d\'audio expressif non vocal — rires, soupirs, musique simple — et peut consacrer 8-12 Go de VRAM pour l\'obtenir, avec la réserve que son statut de maintenance est incertain. Kokoro reste le bon choix dès lors que le clonage n\'est pas requis : il tourne confortablement sur CPU seul, donc réserver du VRAM GPU pour lui vaut rarement la peine. En cas de doute, commencez avec Kokoro pour de la narration simple et ne passez à XTTS v2 ou Chatterbox qu\'une fois un véritable besoin de clonage identifié — cela garde le VRAM de votre GPU disponible pour tout ce que vous faites tourner à côté, y compris un LLM local. Pour les détails de licence de chaque moteur mentionné ici, voir le [guide des licences TTS et clonage vocal locaux](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -1011,20 +1011,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox sur GitHub](https://github.com/resemble-ai/chatterbox) — README : installation, licence MIT, filigrane et prise en charge CPU/GPU.',
           '[suno-ai/bark sur GitHub](https://github.com/suno-ai/bark) — README : licence, drapeau VRAM/petit modèle et historique de maintenance/commits.',
           '[Kokoro-82M sur Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — fiche modèle : nombre de paramètres, licence Apache 2.0 et performance CPU/GPU.',
-          '[Test XTTS v2](/power-local-llm/xtts-v2-review) — le test dédié de PromptQuorum avec commandes d\'usage complètes et détails de licence.',
-          '[Test Bark TTS](/power-local-llm/bark-tts-review) — le test dédié de PromptQuorum avec chiffres VRAM et statut de maintenance.',
-          '[Licences TTS et clonage vocal locaux](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparatif complet des licences et du VRAM des moteurs TTS locaux.',
+          '[Test XTTS v2](/fr/power-local-llm/xtts-v2-review) — le test dédié de PromptQuorum avec commandes d\'usage complètes et détails de licence.',
+          '[Test Bark TTS](/fr/power-local-llm/bark-tts-review) — le test dédié de PromptQuorum avec chiffres VRAM et statut de maintenance.',
+          '[Licences TTS et clonage vocal locaux](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparatif complet des licences et du VRAM des moteurs TTS locaux.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Test XTTS v2](/power-local-llm/xtts-v2-review) — le dossier dédié au modèle de clonage vocal local de plus haute qualité, avec commandes d\'usage réelles.',
-          '[Test Bark TTS](/power-local-llm/bark-tts-review) — le dossier dédié au modèle audio expressif et non vocal de Suno.',
-          '[Test Coqui TTS](/power-local-llm/coqui-tts-review) — le toolkit qui fait tourner XTTS v2 et d\'autres modèles, avec une base de code plus large et sous licence permissive.',
-          '[Licences TTS et clonage vocal locaux : Piper, XTTS v2, F5-TTS et Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le comparatif complet des licences et du VRAM de chaque moteur TTS local.',
-          '[Meilleurs GPU pour LLM locaux : guide d\'achat complet 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la logique d\'achat GPU centrée sur le VRAM, applicable de la même façon au couplage TTS et LLM local.',
+          '[Test XTTS v2](/fr/power-local-llm/xtts-v2-review) — le dossier dédié au modèle de clonage vocal local de plus haute qualité, avec commandes d\'usage réelles.',
+          '[Test Bark TTS](/fr/power-local-llm/bark-tts-review) — le dossier dédié au modèle audio expressif et non vocal de Suno.',
+          '[Test Coqui TTS](/fr/power-local-llm/coqui-tts-review) — le toolkit qui fait tourner XTTS v2 et d\'autres modèles, avec une base de code plus large et sous licence permissive.',
+          '[Licences TTS et clonage vocal locaux : Piper, XTTS v2, F5-TTS et Coqui](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — le comparatif complet des licences et du VRAM de chaque moteur TTS local.',
+          '[Meilleurs GPU pour LLM locaux : guide d\'achat complet 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la logique d\'achat GPU centrée sur le VRAM, applicable de la même façon au couplage TTS et LLM local.',
         ],
       },
     },
@@ -1174,8 +1174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: mejor calidad de clonación de voz',
         content: [
-          '**XTTS v2, publicado por Coqui y ejecutado a través del [conjunto de herramientas Coqui TTS](/power-local-llm/coqui-tts-review), es la mejor opción de clonación de voz local para propietarios de GPU que necesitan la mayor calidad alcanzable a partir de un clip de referencia corto.** Clona una voz a partir de tan solo 6 segundos de audio de referencia y la reproduce en 17 idiomas, incluyendo clonación entre idiomas — clonar una voz a partir de audio en inglés y hablar el resultado en español o japonés.',
-          'En cuanto a VRAM, los pesos del modelo de XTTS v2 rondan los 2 GB, pero 4 GB es el mínimo práctico para ejecutarlo, y se recomiendan 4-6 GB para inferencia en tiempo real, según la [reseña de XTTS v2](/power-local-llm/xtts-v2-review) dedicada de PromptQuorum. La licencia es el factor decisivo para la mayoría de lectores: la Coqui Public Model License (CPML) es explícitamente no comercial, y como Coqui AI, la empresa, cerró sus servicios de pago en diciembre de 2023, actualmente no hay una vía confirmada hacia una licencia comercial.',
+          '**XTTS v2, publicado por Coqui y ejecutado a través del [conjunto de herramientas Coqui TTS](/es/power-local-llm/coqui-tts-review), es la mejor opción de clonación de voz local para propietarios de GPU que necesitan la mayor calidad alcanzable a partir de un clip de referencia corto.** Clona una voz a partir de tan solo 6 segundos de audio de referencia y la reproduce en 17 idiomas, incluyendo clonación entre idiomas — clonar una voz a partir de audio en inglés y hablar el resultado en español o japonés.',
+          'En cuanto a VRAM, los pesos del modelo de XTTS v2 rondan los 2 GB, pero 4 GB es el mínimo práctico para ejecutarlo, y se recomiendan 4-6 GB para inferencia en tiempo real, según la [reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) dedicada de PromptQuorum. La licencia es el factor decisivo para la mayoría de lectores: la Coqui Public Model License (CPML) es explícitamente no comercial, y como Coqui AI, la empresa, cerró sus servicios de pago en diciembre de 2023, actualmente no hay una vía confirmada hacia una licencia comercial.',
         ],
         items: [
           'Usa XTTS v2 si: tu proyecto es personal, académico o un prototipo no comercial y quieres la mejor calidad de clonación disponible localmente.',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~2 GB de pesos del modelo, 4 GB mínimo, 4-6 GB recomendados para inferencia en tiempo real.',
           '**Ideal para:** clonación de voz local de la más alta fidelidad, soporte translingüe de 17 idiomas, uso no comercial o de investigación.',
         ],
-        note: 'Detalles completos de licencia, comandos de uso reales y limitaciones se cubren en la [reseña de XTTS v2](/power-local-llm/xtts-v2-review) dedicada de PromptQuorum.',
+        note: 'Detalles completos de licencia, comandos de uso reales y limitaciones se cubren en la [reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) dedicada de PromptQuorum.',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: mejor audio expresivo no vocal',
         content: [
           '**Bark, publicado por Suno en [GitHub](https://github.com/suno-ai/bark), es la opción adecuada si quieres más que voz — risas, suspiros, jadeos y música simple generados solo a partir de instrucciones de texto — y es el motor de esta comparativa que más se beneficia de una GPU, ya que su arquitectura generativa, token por token, es la más lenta de los cuatro sin aceleración CUDA.** No admite clonación de voz personalizada; según la propia documentación de Suno, "actualmente no admite clonación de voz personalizada".',
-          'En cuanto a VRAM, la [reseña de Bark](/power-local-llm/bark-tts-review) dedicada de PromptQuorum documenta que el modelo completo necesita unos 12 GB, con una variable de entorno para modelo pequeño (`SUNO_USE_SMALL_MODELS`) que lo reduce a unos 8 GB — notablemente más que los 4-6 GB de XTTS v2. Está bajo licencia MIT, plenamente apta para uso comercial desde el 1 de mayo de 2023, pero su estado de mantenimiento es una pregunta abierta real: el repositorio público de GitHub no muestra confirmaciones (commits) desde el 5 de abril de 2024.',
+          'En cuanto a VRAM, la [reseña de Bark](/es/power-local-llm/bark-tts-review) dedicada de PromptQuorum documenta que el modelo completo necesita unos 12 GB, con una variable de entorno para modelo pequeño (`SUNO_USE_SMALL_MODELS`) que lo reduce a unos 8 GB — notablemente más que los 4-6 GB de XTTS v2. Está bajo licencia MIT, plenamente apta para uso comercial desde el 1 de mayo de 2023, pero su estado de mantenimiento es una pregunta abierta real: el repositorio público de GitHub no muestra confirmaciones (commits) desde el 5 de abril de 2024.',
         ],
         items: [
           'Usa Bark si: necesitas audio no vocal (risas, suspiros, sonido ambiental) junto con voz y dispones de 8-12 GB de VRAM.',
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~12 GB para el modelo completo, ~8 GB con la variable de modelo pequeño — el más exigente de los cuatro motores comparados aquí.',
           '**Ideal para:** generación de audio expresivo, efectos de sonido combinados con voz, prototipado y uso en investigación.',
         ],
-        note: 'Comandos de uso completos, la variable de VRAM de modelo pequeño y el estado de mantenimiento de Bark se cubren en la [reseña de Bark TTS](/power-local-llm/bark-tts-review) dedicada de PromptQuorum.',
+        note: 'Comandos de uso completos, la variable de VRAM de modelo pequeño y el estado de mantenimiento de Bark se cubren en la [reseña de Bark TTS](/es/power-local-llm/bark-tts-review) dedicada de PromptQuorum.',
       },
       kokoro: {
         id: 'kokoro',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Motor', 'VRAM (GPU)', 'Beneficio de velocidad GPU', 'Clonación de voz', 'Licencia'],
         rows: [
           {
-            'Motor': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Motor': '[XTTS v2](/es/power-local-llm/xtts-v2-review)',
             'VRAM (GPU)': '4-6 GB recomendados',
             'Beneficio de velocidad GPU': 'Grande — CPU poco práctico',
             'Clonación de voz': 'Sí, clip 6s / 17 idiomas',
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Licencia': 'MIT',
           },
           {
-            'Motor': '[Bark](/power-local-llm/bark-tts-review)',
+            'Motor': '[Bark](/es/power-local-llm/bark-tts-review)',
             'VRAM (GPU)': '~8-12 GB (pequeño/completo)',
             'Beneficio de velocidad GPU': 'El mayor de los cuatro',
             'Clonación de voz': 'No',
@@ -1279,7 +1279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuánta VRAM necesitas realmente?',
         content: [
           '**Una GPU con 6 GB de VRAM o más cubre cómodamente todos los motores de esta comparativa excepto el modelo completo de Bark, que necesita unos 12 GB (o unos 8 GB con su variable de modelo pequeño).** Ajusta tu tarjeta al motor que realmente necesitas en lugar de comprar por defecto para la opción más pesada.',
-          'Para orientación general sobre cómo elegir una GPU por nivel de VRAM para cargas de IA local (no específicas de TTS), consulta la [guía de compra de GPU para LLM locales](/power-local-llm/best-gpu-buying-guide-local-llm-2026) de PromptQuorum — la misma lógica de compra centrada en VRAM se aplica al TTS, y si ya ejecutas un LLM local junto al TTS, ambas cargas compiten por el mismo grupo de VRAM.',
+          'Para orientación general sobre cómo elegir una GPU por nivel de VRAM para cargas de IA local (no específicas de TTS), consulta la [guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) de PromptQuorum — la misma lógica de compra centrada en VRAM se aplica al TTS, y si ya ejecutas un LLM local junto al TTS, ambas cargas compiten por el mismo grupo de VRAM.',
         ],
         items: [
           'GPU de entrada (6-8 GB de VRAM): cubre XTTS v2 cómodamente, cubre Bark solo con la variable de modelo pequeño, cubre Kokoro y las variantes más pequeñas de Chatterbox sin problema.',
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Para lectores que ya tienen una GPU NVIDIA y quieren usarla para texto a voz, la elección depende de lo que el audio necesite hacer. XTTS v2 es la opción para la mayor calidad de clonación de voz alcanzable en un contexto no comercial o de investigación, dada su licencia CPML no comercial. Chatterbox es la opción cuando esa misma capacidad de clonación necesita llevarse a un producto comercial, gracias a su licencia MIT y sus tamaños de modelo más pequeños orientados al tiempo real. Bark es la opción específicamente cuando el proyecto necesita audio expresivo no vocal — risas, suspiros, música simple — y puede permitirse gastar 8-12 GB de VRAM para conseguirlo, con la salvedad de que su estado de mantenimiento es incierto. Kokoro sigue siendo la opción correcta siempre que la clonación no sea el requisito: funciona cómodamente solo con CPU, así que reservar VRAM de GPU para él rara vez merece la pena. Si tienes dudas, empieza con Kokoro para narración simple y sube a XTTS v2 o Chatterbox solo cuando aparezca un requisito real de clonación — eso mantiene la VRAM de tu GPU disponible para lo que sea que ejecutes junto a ello, incluido un LLM local. Para los detalles de licencia de cada motor mencionado aquí, consulta la [guía de licencias de TTS y clonación de voz locales](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+          'Para lectores que ya tienen una GPU NVIDIA y quieren usarla para texto a voz, la elección depende de lo que el audio necesite hacer. XTTS v2 es la opción para la mayor calidad de clonación de voz alcanzable en un contexto no comercial o de investigación, dada su licencia CPML no comercial. Chatterbox es la opción cuando esa misma capacidad de clonación necesita llevarse a un producto comercial, gracias a su licencia MIT y sus tamaños de modelo más pequeños orientados al tiempo real. Bark es la opción específicamente cuando el proyecto necesita audio expresivo no vocal — risas, suspiros, música simple — y puede permitirse gastar 8-12 GB de VRAM para conseguirlo, con la salvedad de que su estado de mantenimiento es incierto. Kokoro sigue siendo la opción correcta siempre que la clonación no sea el requisito: funciona cómodamente solo con CPU, así que reservar VRAM de GPU para él rara vez merece la pena. Si tienes dudas, empieza con Kokoro para narración simple y sube a XTTS v2 o Chatterbox solo cuando aparezca un requisito real de clonación — eso mantiene la VRAM de tu GPU disponible para lo que sea que ejecutes junto a ello, incluido un LLM local. Para los detalles de licencia de cada motor mencionado aquí, consulta la [guía de licencias de TTS y clonación de voz locales](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -1362,20 +1362,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox en GitHub](https://github.com/resemble-ai/chatterbox) — README: instalación, licencia MIT, marca de agua y soporte CPU/GPU.',
           '[suno-ai/bark en GitHub](https://github.com/suno-ai/bark) — README: licencia, variable de VRAM/modelo pequeño e historial de mantenimiento/commits.',
           '[Kokoro-82M en Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — ficha de modelo: número de parámetros, licencia Apache 2.0 y rendimiento CPU/GPU.',
-          '[Reseña de XTTS v2](/power-local-llm/xtts-v2-review) — la reseña dedicada de PromptQuorum con comandos de uso completos y detalles de licencia.',
-          '[Reseña de Bark TTS](/power-local-llm/bark-tts-review) — la reseña dedicada de PromptQuorum con cifras de VRAM y estado de mantenimiento.',
-          '[Licencias de TTS y clonación de voz locales](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativa completa de licencias y VRAM entre motores TTS locales.',
+          '[Reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) — la reseña dedicada de PromptQuorum con comandos de uso completos y detalles de licencia.',
+          '[Reseña de Bark TTS](/es/power-local-llm/bark-tts-review) — la reseña dedicada de PromptQuorum con cifras de VRAM y estado de mantenimiento.',
+          '[Licencias de TTS y clonación de voz locales](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativa completa de licencias y VRAM entre motores TTS locales.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Reseña de XTTS v2](/power-local-llm/xtts-v2-review) — el análisis dedicado al modelo de clonación de voz local de mayor calidad, con comandos de uso reales.',
-          '[Reseña de Bark TTS](/power-local-llm/bark-tts-review) — el análisis dedicado al modelo de audio expresivo y no vocal de Suno.',
-          '[Reseña de Coqui TTS](/power-local-llm/coqui-tts-review) — el conjunto de herramientas que ejecuta XTTS v2 y otros modelos, con una base de código más amplia y de licencia permisiva.',
-          '[Licencias de TTS y clonación de voz locales: Piper, XTTS v2, F5-TTS y Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — la comparativa completa de licencias y VRAM entre todos los motores TTS locales.',
-          '[Mejores GPU para LLM locales: guía de compra completa 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la lógica de compra centrada en VRAM, igualmente aplicable al combinar TTS con un LLM local.',
+          '[Reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) — el análisis dedicado al modelo de clonación de voz local de mayor calidad, con comandos de uso reales.',
+          '[Reseña de Bark TTS](/es/power-local-llm/bark-tts-review) — el análisis dedicado al modelo de audio expresivo y no vocal de Suno.',
+          '[Reseña de Coqui TTS](/es/power-local-llm/coqui-tts-review) — el conjunto de herramientas que ejecuta XTTS v2 y otros modelos, con una base de código más amplia y de licencia permisiva.',
+          '[Licencias de TTS y clonación de voz locales: Piper, XTTS v2, F5-TTS y Coqui](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — la comparativa completa de licencias y VRAM entre todos los motores TTS locales.',
+          '[Mejores GPU para LLM locales: guía de compra completa 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la lógica de compra centrada en VRAM, igualmente aplicable al combinar TTS con un LLM local.',
         ],
       },
     },
@@ -1525,8 +1525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: 最高のボイスクローニング品質',
         content: [
-          '**Coquiがリリースし、[Coqui TTSツールキット](/power-local-llm/coqui-tts-review)を通じて実行されるXTTS v2は、短い参照クリップから達成可能な最高品質を必要とするGPU所有者にとって最良のローカルボイスクローニングの選択肢である。** わずか6秒の参照音声から声をクローンし、17言語で読み上げることができる。クロスリンガルクローニング — 英語の音声から声をクローンし、スペイン語や日本語で話させる — にも対応する。',
-          'VRAMについては、XTTS v2のモデル重みは約2GBだが、実行には4GBが実用上の最低ラインであり、リアルタイム推論には4-6GBが推奨される。詳細はPromptQuorumの[XTTS v2レビュー](/power-local-llm/xtts-v2-review)を参照。ほとんどの読者にとって決め手となるのはライセンスである。Coqui Public Model License(CPML)は明確に非商用であり、この会社であるCoqui AIが2023年12月に有料サービスを終了したため、現時点で確認された商用ライセンスへの有効な道筋は存在しない。',
+          '**Coquiがリリースし、[Coqui TTSツールキット](/ja/power-local-llm/coqui-tts-review)を通じて実行されるXTTS v2は、短い参照クリップから達成可能な最高品質を必要とするGPU所有者にとって最良のローカルボイスクローニングの選択肢である。** わずか6秒の参照音声から声をクローンし、17言語で読み上げることができる。クロスリンガルクローニング — 英語の音声から声をクローンし、スペイン語や日本語で話させる — にも対応する。',
+          'VRAMについては、XTTS v2のモデル重みは約2GBだが、実行には4GBが実用上の最低ラインであり、リアルタイム推論には4-6GBが推奨される。詳細はPromptQuorumの[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review)を参照。ほとんどの読者にとって決め手となるのはライセンスである。Coqui Public Model License(CPML)は明確に非商用であり、この会社であるCoqui AIが2023年12月に有料サービスを終了したため、現時点で確認された商用ライセンスへの有効な道筋は存在しない。',
         ],
         items: [
           'XTTS v2を使うべき場合: プロジェクトが個人利用、学術用途、または非商用のプロトタイプであり、ローカルで得られる最高のクローニング品質を求める場合。',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** モデル重みが約2GB、最低4GB、リアルタイム推論には4-6GBを推奨。',
           '**最適な用途:** ローカルで得られる最も忠実度の高いボイスクローニング、17言語のクロスリンガル対応、非商用または研究用途。',
         ],
-        note: '完全なライセンス詳細、実際の使用コマンド、制限事項はPromptQuorumの[XTTS v2レビュー](/power-local-llm/xtts-v2-review)で扱っている。',
+        note: '完全なライセンス詳細、実際の使用コマンド、制限事項はPromptQuorumの[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review)で扱っている。',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: 最良の表現力豊かな非音声オーディオ',
         content: [
           '**Sunoが[GitHub](https://github.com/suno-ai/bark)で公開したBarkは、音声以上のもの — 笑い声、ため息、あえぎ声、そしてテキストプロンプトだけから生成されるシンプルな音楽 — を求める場合に適した選択肢であり、この比較の中でGPUの恩恵を最も受けるエンジンである。トークンごとの生成的アーキテクチャは、CUDAアクセラレーションなしでは4モデル中最も遅いためである。** カスタムボイスクローニングには対応していない。Suno自身のドキュメントによれば「現時点でカスタムボイスクローニングには対応していない」。',
-          'VRAMについては、PromptQuorumの[Barkレビュー](/power-local-llm/bark-tts-review)によれば、フルモデルは約12GBを必要とし、小型モデル用の環境フラグ(`SUNO_USE_SMALL_MODELS`)によって約8GBまで削減できる — XTTS v2の4-6GBより明らかに多い。ライセンスはMITで、2023年5月1日に完全に商用利用可能となったが、メンテナンス状況は実際に未解決の問題である。公開GitHubリポジトリには2024年4月5日以降コミットが見られない。',
+          'VRAMについては、PromptQuorumの[Barkレビュー](/ja/power-local-llm/bark-tts-review)によれば、フルモデルは約12GBを必要とし、小型モデル用の環境フラグ(`SUNO_USE_SMALL_MODELS`)によって約8GBまで削減できる — XTTS v2の4-6GBより明らかに多い。ライセンスはMITで、2023年5月1日に完全に商用利用可能となったが、メンテナンス状況は実際に未解決の問題である。公開GitHubリポジトリには2024年4月5日以降コミットが見られない。',
         ],
         items: [
           'Barkを使うべき場合: 音声に加えて非音声オーディオ(笑い声、ため息、環境音)が必要で、8-12GBのVRAMに余裕がある場合。',
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** フルモデルで約12GB、小型モデルフラグで約8GB — ここで比較した4エンジンの中で最も重い。',
           '**最適な用途:** 表現力豊かなオーディオ生成、音声と組み合わせたサウンドエフェクト、プロトタイピングや研究用途。',
         ],
-        note: '完全な使用コマンド、小型モデルVRAMフラグ、Barkのメンテナンス状況についてはPromptQuorumの[Bark TTSレビュー](/power-local-llm/bark-tts-review)で扱っている。',
+        note: '完全な使用コマンド、小型モデルVRAMフラグ、Barkのメンテナンス状況についてはPromptQuorumの[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review)で扱っている。',
       },
       kokoro: {
         id: 'kokoro',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['エンジン', 'VRAM(GPU)', 'GPU速度メリット', 'ボイスクローニング', 'ライセンス'],
         rows: [
           {
-            'エンジン': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'エンジン': '[XTTS v2](/ja/power-local-llm/xtts-v2-review)',
             'VRAM(GPU)': '4-6GB推奨',
             'GPU速度メリット': '大 — CPUは非現実的',
             'ボイスクローニング': 'あり、6秒クリップ/17言語',
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ライセンス': 'MIT',
           },
           {
-            'エンジン': '[Bark](/power-local-llm/bark-tts-review)',
+            'エンジン': '[Bark](/ja/power-local-llm/bark-tts-review)',
             'VRAM(GPU)': '約8-12GB(小型/フル)',
             'GPU速度メリット': '4つの中で最大',
             'ボイスクローニング': 'なし',
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '実際に必要なVRAMはどれくらいか',
         content: [
           '**6GB以上のVRAMを持つGPUであれば、Barkのフルモデル(約12GB、または小型モデルフラグで約8GB)を除き、この比較のすべてのエンジンを余裕をもってカバーできる。** デフォルトで最も重い選択肢を購入するのではなく、実際に必要なエンジンに合わせてカードを選ぶこと。',
-          'TTS専用ではないローカルAIワークロード全般におけるVRAM段階別のGPU選定については、PromptQuorumの[ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026)を参照。同じVRAM優先の購入ロジックはTTSにも当てはまり、TTSと並行してローカルLLMをすでに運用している場合、両方のワークロードは同じVRAMプールを奪い合うことになる。',
+          'TTS専用ではないローカルAIワークロード全般におけるVRAM段階別のGPU選定については、PromptQuorumの[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)を参照。同じVRAM優先の購入ロジックはTTSにも当てはまり、TTSと並行してローカルLLMをすでに運用している場合、両方のワークロードは同じVRAMプールを奪い合うことになる。',
         ],
         items: [
           'エントリー向けGPU(6-8GBのVRAM): XTTS v2を余裕でカバーし、Barkは小型モデルフラグを使った場合のみカバーし、Kokoroとより小さなChatterboxバリアントは容易にカバーする。',
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'すでにNVIDIA GPUを持っていて、それをテキスト読み上げに活用したい読者にとって、選択はその音声に何をさせたいかによって決まる。非商用のCPMLライセンスを踏まえると、非商用または研究用途で達成可能な最高のボイスクローニング品質を求めるならXTTS v2が選択肢となる。同じクローニング能力を商用製品として出荷する必要がある場合は、MITライセンスとリアルタイム志向の小型モデルサイズを備えたChatterboxが選択肢となる。プロジェクトが表現力豊かな非音声オーディオ — 笑い声、ため息、シンプルな音楽 — を必要とし、それを得るために8-12GBのVRAMを費やせる場合は、メンテナンス状況が不確かである点に留意しつつBarkが選択肢となる。クローニングが要件でない限り、Kokoroは引き続き正しい選択肢である。CPUのみで問題なく動作するため、そのためにGPUのVRAMを確保する価値はほとんどない。迷ったら、単純なナレーションにはKokoroから始め、本当にクローニングの要件が出てきた段階で初めてXTTS v2やChatterboxに移行する — そうすることで、ローカルLLMを含め、並行して動かす他の処理のためにGPUのVRAMを確保しておける。ここで挙げた各エンジンのライセンスの詳細については、PromptQuorumの[ローカルTTSおよびボイスクローニングのライセンスガイド](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照。',
+          'すでにNVIDIA GPUを持っていて、それをテキスト読み上げに活用したい読者にとって、選択はその音声に何をさせたいかによって決まる。非商用のCPMLライセンスを踏まえると、非商用または研究用途で達成可能な最高のボイスクローニング品質を求めるならXTTS v2が選択肢となる。同じクローニング能力を商用製品として出荷する必要がある場合は、MITライセンスとリアルタイム志向の小型モデルサイズを備えたChatterboxが選択肢となる。プロジェクトが表現力豊かな非音声オーディオ — 笑い声、ため息、シンプルな音楽 — を必要とし、それを得るために8-12GBのVRAMを費やせる場合は、メンテナンス状況が不確かである点に留意しつつBarkが選択肢となる。クローニングが要件でない限り、Kokoroは引き続き正しい選択肢である。CPUのみで問題なく動作するため、そのためにGPUのVRAMを確保する価値はほとんどない。迷ったら、単純なナレーションにはKokoroから始め、本当にクローニングの要件が出てきた段階で初めてXTTS v2やChatterboxに移行する — そうすることで、ローカルLLMを含め、並行して動かす他の処理のためにGPUのVRAMを確保しておける。ここで挙げた各エンジンのライセンスの詳細については、PromptQuorumの[ローカルTTSおよびボイスクローニングのライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照。',
       },
       sources: {
         id: 'sources',
@@ -1713,20 +1713,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub上のresemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README: インストール、MITライセンス、電子透かし、CPU/GPUサポート。',
           '[GitHub上のsuno-ai/bark](https://github.com/suno-ai/bark) — README: ライセンス、VRAM/小型モデルフラグ、メンテナンス/コミット履歴。',
           '[Hugging Face上のKokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — モデルカード: パラメータ数、Apache 2.0ライセンス、CPU/GPU性能。',
-          '[XTTS v2レビュー](/power-local-llm/xtts-v2-review) — 完全な使用コマンドとライセンス詳細を含むPromptQuorumの専用レビュー。',
-          '[Bark TTSレビュー](/power-local-llm/bark-tts-review) — VRAM値とメンテナンス状況を含むPromptQuorumの専用レビュー。',
-          '[ローカルTTSおよびボイスクローニングのライセンス](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — ローカルTTSエンジン全体のライセンスとVRAMの完全比較。',
+          '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review) — 完全な使用コマンドとライセンス詳細を含むPromptQuorumの専用レビュー。',
+          '[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review) — VRAM値とメンテナンス状況を含むPromptQuorumの専用レビュー。',
+          '[ローカルTTSおよびボイスクローニングのライセンス](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — ローカルTTSエンジン全体のライセンスとVRAMの完全比較。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[XTTS v2レビュー](/power-local-llm/xtts-v2-review) — 実際の使用コマンドを含む、最高品質のローカルボイスクローニングモデルの専用解説。',
-          '[Bark TTSレビュー](/power-local-llm/bark-tts-review) — Sunoの表現力豊かな非音声オーディオモデルの専用解説。',
-          '[Coqui TTSレビュー](/power-local-llm/coqui-tts-review) — XTTS v2や他のモデルを実行するツールキットで、より広範囲かつ自由なライセンスのコードベースを持つ。',
-          '[ローカルTTSおよびボイスクローニングのライセンス: Piper、XTTS v2、F5-TTS、Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — あらゆるローカルTTSエンジンにわたるライセンスとVRAMの完全比較。',
-          '[ローカルLLM向けベストGPU: 完全購入ガイド2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TTSとローカルLLMを組み合わせる場合にも同様に当てはまる、VRAM優先のGPU購入ロジック。',
+          '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review) — 実際の使用コマンドを含む、最高品質のローカルボイスクローニングモデルの専用解説。',
+          '[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review) — Sunoの表現力豊かな非音声オーディオモデルの専用解説。',
+          '[Coqui TTSレビュー](/ja/power-local-llm/coqui-tts-review) — XTTS v2や他のモデルを実行するツールキットで、より広範囲かつ自由なライセンスのコードベースを持つ。',
+          '[ローカルTTSおよびボイスクローニングのライセンス: Piper、XTTS v2、F5-TTS、Coqui](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — あらゆるローカルTTSエンジンにわたるライセンスとVRAMの完全比較。',
+          '[ローカルLLM向けベストGPU: 完全購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TTSとローカルLLMを組み合わせる場合にも同様に当てはまる、VRAM優先のGPU購入ロジック。',
         ],
       },
     },
@@ -1876,8 +1876,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2:最佳声音克隆质量',
         content: [
-          '**XTTS v2 由 Coqui 发布,通过 [Coqui TTS 工具包](/power-local-llm/coqui-tts-review)运行,是需要从短参考片段中获得最高可达质量的 GPU 用户的最佳本地声音克隆选择。** 它仅需 6 秒参考音频即可克隆一个声音,并支持用该声音输出 17 种语言,包括跨语言克隆——用英语音频克隆声音,再用西班牙语或日语说出来。',
-          '在 VRAM 方面,XTTS v2 的模型权重约为 2 GB,但实用的最低运行门槛是 4 GB,实时推理建议 4-6 GB,详见 PromptQuorum 的 [XTTS v2 测评](/power-local-llm/xtts-v2-review)。对大多数读者而言,许可证才是决定性因素:Coqui Public Model License(CPML)明确为非商业许可,而由于该公司 Coqui AI 已于 2023 年 12 月关闭其付费服务,目前没有确认可行的商业许可途径。',
+          '**XTTS v2 由 Coqui 发布,通过 [Coqui TTS 工具包](/zh/power-local-llm/coqui-tts-review)运行,是需要从短参考片段中获得最高可达质量的 GPU 用户的最佳本地声音克隆选择。** 它仅需 6 秒参考音频即可克隆一个声音,并支持用该声音输出 17 种语言,包括跨语言克隆——用英语音频克隆声音,再用西班牙语或日语说出来。',
+          '在 VRAM 方面,XTTS v2 的模型权重约为 2 GB,但实用的最低运行门槛是 4 GB,实时推理建议 4-6 GB,详见 PromptQuorum 的 [XTTS v2 测评](/zh/power-local-llm/xtts-v2-review)。对大多数读者而言,许可证才是决定性因素:Coqui Public Model License(CPML)明确为非商业许可,而由于该公司 Coqui AI 已于 2023 年 12 月关闭其付费服务,目前没有确认可行的商业许可途径。',
         ],
         items: [
           '适合使用 XTTS v2 的情况:项目属于个人、学术或非商业原型,你想要本地可获得的最佳克隆质量。',
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** 模型权重约 2 GB,最低 4 GB,实时推理建议 4-6 GB。',
           '**最适合:** 本地可实现的最高保真度声音克隆,支持 17 种语言的跨语言能力,非商业或研究用途。',
         ],
-        note: '完整的许可证细节、真实使用命令和限制,详见 PromptQuorum 的 [XTTS v2 测评](/power-local-llm/xtts-v2-review)。',
+        note: '完整的许可证细节、真实使用命令和限制,详见 PromptQuorum 的 [XTTS v2 测评](/zh/power-local-llm/xtts-v2-review)。',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark:最佳非语音表现力音频',
         content: [
           '**Bark 由 Suno 发布于 [GitHub](https://github.com/suno-ai/bark),如果你想要的不只是语音——笑声、叹息、喘息以及仅凭文本提示生成的简单音乐——它是正确选择,也是这次对比中从 GPU 中受益最多的引擎,因为其逐 token 生成的架构在没有 CUDA 加速时是四款中最慢的。** 它不支持自定义声音克隆;据 Suno 自己的文档所述,它"目前不支持自定义声音克隆"。',
-          '在 VRAM 方面,PromptQuorum 的 [Bark 测评](/power-local-llm/bark-tts-review)记录完整模型大约需要 12 GB,通过小模型环境变量标志(`SUNO_USE_SMALL_MODELS`)可降至约 8 GB——明显高于 XTTS v2 的 4-6 GB。它采用 MIT 许可证,自 2023 年 5 月 1 日起完全可用于商业用途,但其维护状态确实是一个悬而未决的问题:公开的 GitHub 仓库自 2024 年 4 月 5 日以来没有新的提交。',
+          '在 VRAM 方面,PromptQuorum 的 [Bark 测评](/zh/power-local-llm/bark-tts-review)记录完整模型大约需要 12 GB,通过小模型环境变量标志(`SUNO_USE_SMALL_MODELS`)可降至约 8 GB——明显高于 XTTS v2 的 4-6 GB。它采用 MIT 许可证,自 2023 年 5 月 1 日起完全可用于商业用途,但其维护状态确实是一个悬而未决的问题:公开的 GitHub 仓库自 2024 年 4 月 5 日以来没有新的提交。',
         ],
         items: [
           '适合使用 Bark 的情况:你需要在语音之外还有非语音音频(笑声、叹息、环境声),并有 8-12 GB VRAM 可用。',
@@ -1916,7 +1916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** 完整模型约 12 GB,启用小模型标志约 8 GB——这里对比的四款引擎中占用最高的一款。',
           '**最适合:** 富有表现力的音频生成、与语音结合的音效、原型开发与研究用途。',
         ],
-        note: '完整使用命令、小模型 VRAM 标志以及 Bark 的维护状态,详见 PromptQuorum 的 [Bark TTS 测评](/power-local-llm/bark-tts-review)。',
+        note: '完整使用命令、小模型 VRAM 标志以及 Bark 的维护状态,详见 PromptQuorum 的 [Bark TTS 测评](/zh/power-local-llm/bark-tts-review)。',
       },
       kokoro: {
         id: 'kokoro',
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['引擎', 'VRAM(GPU)', 'GPU 速度收益', '声音克隆', '许可证'],
         rows: [
           {
-            '引擎': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            '引擎': '[XTTS v2](/zh/power-local-llm/xtts-v2-review)',
             'VRAM(GPU)': '建议 4-6 GB',
             'GPU 速度收益': '大——CPU 不实用',
             '声音克隆': '支持,6秒片段/17种语言',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '许可证': 'MIT',
           },
           {
-            '引擎': '[Bark](/power-local-llm/bark-tts-review)',
+            '引擎': '[Bark](/zh/power-local-llm/bark-tts-review)',
             'VRAM(GPU)': '约8-12 GB(小/完整)',
             'GPU 速度收益': '四款中最大',
             '声音克隆': '不支持',
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '你实际需要多少 VRAM?',
         content: [
           '**一块拥有 6 GB 以上 VRAM 的 GPU 足以轻松覆盖本对比中的所有引擎,唯独 Bark 的完整模型需要约 12 GB(或使用小模型标志时约 8 GB)。** 按你实际需要的引擎来匹配显卡,而不是默认购买最重的选项。',
-          '关于按 VRAM 档位为本地 AI 工作负载(非 TTS 专用)选择 GPU 的一般性建议,参见 PromptQuorum 的[本地 LLM GPU 购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026)——同样以 VRAM 优先的购买逻辑同样适用于 TTS,如果你已经在同时运行本地 LLM 和 TTS,这两项工作负载会争抢同一块 VRAM。',
+          '关于按 VRAM 档位为本地 AI 工作负载(非 TTS 专用)选择 GPU 的一般性建议,参见 PromptQuorum 的[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)——同样以 VRAM 优先的购买逻辑同样适用于 TTS,如果你已经在同时运行本地 LLM 和 TTS,这两项工作负载会争抢同一块 VRAM。',
         ],
         items: [
           '入门级 GPU(6-8 GB VRAM):轻松覆盖 XTTS v2,仅在使用小模型标志时覆盖 Bark,轻松覆盖 Kokoro 及 Chatterbox 的较小变体。',
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '对于已经拥有 NVIDIA GPU、想将其用于文本转语音的读者来说,选择取决于音频需要实现什么效果。鉴于其非商业 CPML 许可证,在非商业或研究场景下追求可达到的最高声音克隆质量,XTTS v2 是首选。当同样的克隆能力需要投入商业产品时,凭借 MIT 许可证及面向实时场景的较小模型规格,Chatterbox 是首选。当项目特别需要富有表现力的非语音音频——笑声、叹息、简单音乐——并能为此花费 8-12 GB VRAM 时,Bark 是首选,但需注意其维护状态不确定。只要克隆不是硬性需求,Kokoro 始终是正确选择:它单靠 CPU 就能运行良好,因此为它预留 GPU 显存很少值得。如果拿不准,可以从 Kokoro 用于简单旁白开始,只有在出现真正的克隆需求时才升级到 XTTS v2 或 Chatterbox——这样能让你 GPU 的显存留给同时运行的其他任务,包括本地 LLM。关于本文提到的每款引擎的许可证详情,参见 PromptQuorum 的[本地 TTS 与声音克隆许可证指南](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
+          '对于已经拥有 NVIDIA GPU、想将其用于文本转语音的读者来说,选择取决于音频需要实现什么效果。鉴于其非商业 CPML 许可证,在非商业或研究场景下追求可达到的最高声音克隆质量,XTTS v2 是首选。当同样的克隆能力需要投入商业产品时,凭借 MIT 许可证及面向实时场景的较小模型规格,Chatterbox 是首选。当项目特别需要富有表现力的非语音音频——笑声、叹息、简单音乐——并能为此花费 8-12 GB VRAM 时,Bark 是首选,但需注意其维护状态不确定。只要克隆不是硬性需求,Kokoro 始终是正确选择:它单靠 CPU 就能运行良好,因此为它预留 GPU 显存很少值得。如果拿不准,可以从 Kokoro 用于简单旁白开始,只有在出现真正的克隆需求时才升级到 XTTS v2 或 Chatterbox——这样能让你 GPU 的显存留给同时运行的其他任务,包括本地 LLM。关于本文提到的每款引擎的许可证详情,参见 PromptQuorum 的[本地 TTS 与声音克隆许可证指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
       },
       sources: {
         id: 'sources',
@@ -2064,20 +2064,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub 上的 resemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README:安装、MIT 许可证、水印以及 CPU/GPU 支持。',
           '[GitHub 上的 suno-ai/bark](https://github.com/suno-ai/bark) — README:许可证、VRAM/小模型标志以及维护/提交历史。',
           '[Hugging Face 上的 Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 模型卡:参数量、Apache 2.0 许可证以及 CPU/GPU 性能。',
-          '[XTTS v2 测评](/power-local-llm/xtts-v2-review) — PromptQuorum 的专项测评,含完整使用命令和许可证细节。',
-          '[Bark TTS 测评](/power-local-llm/bark-tts-review) — PromptQuorum 的专项测评,含 VRAM 数据和维护状态。',
-          '[本地 TTS 与声音克隆许可证](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 各本地 TTS 引擎的完整许可证与 VRAM 对比。',
+          '[XTTS v2 测评](/zh/power-local-llm/xtts-v2-review) — PromptQuorum 的专项测评,含完整使用命令和许可证细节。',
+          '[Bark TTS 测评](/zh/power-local-llm/bark-tts-review) — PromptQuorum 的专项测评,含 VRAM 数据和维护状态。',
+          '[本地 TTS 与声音克隆许可证](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 各本地 TTS 引擎的完整许可证与 VRAM 对比。',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[XTTS v2 测评](/power-local-llm/xtts-v2-review) — 关于本地最高质量声音克隆模型的专项深度解析,附真实使用命令。',
-          '[Bark TTS 测评](/power-local-llm/bark-tts-review) — 关于 Suno 富有表现力的非语音音频模型的专项深度解析。',
-          '[Coqui TTS 测评](/power-local-llm/coqui-tts-review) — 运行 XTTS v2 及其他模型的工具包,拥有更广泛的宽松许可代码库。',
-          '[本地 TTS 与声音克隆许可证:Piper、XTTS v2、F5-TTS 与 Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 各本地 TTS 引擎的完整许可证与 VRAM 对比。',
-          '[本地 LLM 最佳 GPU:2026 完整购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 以 VRAM 为先的 GPU 购买逻辑,同样适用于将 TTS 与本地 LLM 搭配使用的场景。',
+          '[XTTS v2 测评](/zh/power-local-llm/xtts-v2-review) — 关于本地最高质量声音克隆模型的专项深度解析,附真实使用命令。',
+          '[Bark TTS 测评](/zh/power-local-llm/bark-tts-review) — 关于 Suno 富有表现力的非语音音频模型的专项深度解析。',
+          '[Coqui TTS 测评](/zh/power-local-llm/coqui-tts-review) — 运行 XTTS v2 及其他模型的工具包,拥有更广泛的宽松许可代码库。',
+          '[本地 TTS 与声音克隆许可证:Piper、XTTS v2、F5-TTS 与 Coqui](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 各本地 TTS 引擎的完整许可证与 VRAM 对比。',
+          '[本地 LLM 最佳 GPU:2026 完整购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 以 VRAM 为先的 GPU 购买逻辑,同样适用于将 TTS 与本地 LLM 搭配使用的场景。',
         ],
       },
     },
@@ -2227,8 +2227,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: melhor qualidade de clonagem de voz',
         content: [
-          '**O XTTS v2, lançado pela Coqui e executado por meio do [kit de ferramentas Coqui TTS](/power-local-llm/coqui-tts-review), é a melhor opção de clonagem de voz local para quem tem GPU e precisa da maior qualidade alcançável a partir de um clipe de referência curto.** Ele clona uma voz a partir de apenas 6 segundos de áudio de referência e a reproduz em 17 idiomas, incluindo clonagem entre idiomas — clonar uma voz a partir de áudio em inglês e falar o resultado em espanhol ou japonês.',
-          'Em termos de VRAM, os pesos do modelo do XTTS v2 têm cerca de 2 GB, mas 4 GB é o mínimo prático para rodá-lo, e 4-6 GB são recomendados para inferência em tempo real, segundo a [análise do XTTS v2](/power-local-llm/xtts-v2-review) dedicada da PromptQuorum. A licença é o fator decisivo para a maioria dos leitores: a Coqui Public Model License (CPML) é explicitamente não comercial, e como a Coqui AI, a empresa, encerrou seus serviços pagos em dezembro de 2023, atualmente não há um caminho confirmado para uma licença comercial.',
+          '**O XTTS v2, lançado pela Coqui e executado por meio do [kit de ferramentas Coqui TTS](/pt/power-local-llm/coqui-tts-review), é a melhor opção de clonagem de voz local para quem tem GPU e precisa da maior qualidade alcançável a partir de um clipe de referência curto.** Ele clona uma voz a partir de apenas 6 segundos de áudio de referência e a reproduz em 17 idiomas, incluindo clonagem entre idiomas — clonar uma voz a partir de áudio em inglês e falar o resultado em espanhol ou japonês.',
+          'Em termos de VRAM, os pesos do modelo do XTTS v2 têm cerca de 2 GB, mas 4 GB é o mínimo prático para rodá-lo, e 4-6 GB são recomendados para inferência em tempo real, segundo a [análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) dedicada da PromptQuorum. A licença é o fator decisivo para a maioria dos leitores: a Coqui Public Model License (CPML) é explicitamente não comercial, e como a Coqui AI, a empresa, encerrou seus serviços pagos em dezembro de 2023, atualmente não há um caminho confirmado para uma licença comercial.',
         ],
         items: [
           'Use o XTTS v2 se: seu projeto for pessoal, acadêmico ou um protótipo não comercial e você quiser a melhor qualidade de clonagem disponível localmente.',
@@ -2236,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~2 GB de pesos do modelo, 4 GB no mínimo, 4-6 GB recomendados para inferência em tempo real.',
           '**Ideal para:** clonagem de voz local da mais alta fidelidade, suporte multilíngue cruzado a 17 idiomas, uso não comercial ou de pesquisa.',
         ],
-        note: 'Detalhes completos de licença, comandos de uso reais e limitações são cobertos na [análise do XTTS v2](/power-local-llm/xtts-v2-review) dedicada da PromptQuorum.',
+        note: 'Detalhes completos de licença, comandos de uso reais e limitações são cobertos na [análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) dedicada da PromptQuorum.',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: melhor áudio expressivo não vocal',
         content: [
           '**O Bark, lançado pela Suno no [GitHub](https://github.com/suno-ai/bark), é a escolha certa se você quiser mais do que fala — risadas, suspiros, arfadas e música simples geradas apenas a partir de prompts de texto — e é o motor deste comparativo que mais se beneficia de uma GPU, já que sua arquitetura generativa, token por token, é a mais lenta dos quatro sem aceleração CUDA.** Ele não suporta clonagem de voz personalizada; segundo a própria documentação da Suno, ele "atualmente não suporta clonagem de voz personalizada".',
-          'Em termos de VRAM, a [análise do Bark](/power-local-llm/bark-tts-review) dedicada da PromptQuorum documenta que o modelo completo precisa de cerca de 12 GB, com uma flag de ambiente para modelo pequeno (`SUNO_USE_SMALL_MODELS`) reduzindo isso para cerca de 8 GB — perceptivelmente mais do que os 4-6 GB do XTTS v2. Ele está sob licença MIT, totalmente apta para uso comercial desde 1º de maio de 2023, mas seu status de manutenção é uma questão real em aberto: o repositório público no GitHub não mostra commits desde 5 de abril de 2024.',
+          'Em termos de VRAM, a [análise do Bark](/pt/power-local-llm/bark-tts-review) dedicada da PromptQuorum documenta que o modelo completo precisa de cerca de 12 GB, com uma flag de ambiente para modelo pequeno (`SUNO_USE_SMALL_MODELS`) reduzindo isso para cerca de 8 GB — perceptivelmente mais do que os 4-6 GB do XTTS v2. Ele está sob licença MIT, totalmente apta para uso comercial desde 1º de maio de 2023, mas seu status de manutenção é uma questão real em aberto: o repositório público no GitHub não mostra commits desde 5 de abril de 2024.',
         ],
         items: [
           'Use o Bark se: você precisar de áudio não vocal (risadas, suspiros, som ambiente) além da fala e tiver 8-12 GB de VRAM disponíveis.',
@@ -2267,7 +2267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** ~12 GB para o modelo completo, ~8 GB com a flag de modelo pequeno — o mais pesado dos quatro motores comparados aqui.',
           '**Ideal para:** geração de áudio expressivo, efeitos sonoros combinados com fala, prototipagem e uso em pesquisa.',
         ],
-        note: 'Comandos de uso completos, a flag de VRAM de modelo pequeno e o status de manutenção do Bark são cobertos na [análise do Bark TTS](/power-local-llm/bark-tts-review) dedicada da PromptQuorum.',
+        note: 'Comandos de uso completos, a flag de VRAM de modelo pequeno e o status de manutenção do Bark são cobertos na [análise do Bark TTS](/pt/power-local-llm/bark-tts-review) dedicada da PromptQuorum.',
       },
       kokoro: {
         id: 'kokoro',
@@ -2292,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Motor', 'VRAM (GPU)', 'Ganho de velocidade com GPU', 'Clonagem de voz', 'Licença'],
         rows: [
           {
-            'Motor': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'Motor': '[XTTS v2](/pt/power-local-llm/xtts-v2-review)',
             'VRAM (GPU)': '4-6 GB recomendados',
             'Ganho de velocidade com GPU': 'Grande — CPU pouco prático',
             'Clonagem de voz': 'Sim, clipe 6s / 17 idiomas',
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Licença': 'MIT',
           },
           {
-            'Motor': '[Bark](/power-local-llm/bark-tts-review)',
+            'Motor': '[Bark](/pt/power-local-llm/bark-tts-review)',
             'VRAM (GPU)': '~8-12 GB (pequeno/completo)',
             'Ganho de velocidade com GPU': 'O maior dos quatro',
             'Clonagem de voz': 'Não',
@@ -2332,7 +2332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quanta VRAM você realmente precisa?',
         content: [
           '**Uma GPU com 6 GB de VRAM ou mais cobre confortavelmente todos os motores deste comparativo, exceto o modelo completo do Bark, que precisa de cerca de 12 GB (ou cerca de 8 GB com sua flag de modelo pequeno).** Combine sua placa com o motor que você realmente precisa, em vez de comprar por padrão a opção mais pesada.',
-          'Para orientação geral sobre como escolher uma GPU por faixa de VRAM para cargas de trabalho de IA local (não específico para TTS), veja o [guia de compra de GPU para LLMs locais](/power-local-llm/best-gpu-buying-guide-local-llm-2026) da PromptQuorum — a mesma lógica de compra centrada em VRAM se aplica ao TTS, e se você já roda um LLM local junto com TTS, as duas cargas de trabalho disputam o mesmo pool de VRAM.',
+          'Para orientação geral sobre como escolher uma GPU por faixa de VRAM para cargas de trabalho de IA local (não específico para TTS), veja o [guia de compra de GPU para LLMs locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) da PromptQuorum — a mesma lógica de compra centrada em VRAM se aplica ao TTS, e se você já roda um LLM local junto com TTS, as duas cargas de trabalho disputam o mesmo pool de VRAM.',
         ],
         items: [
           'GPU de entrada (6-8 GB de VRAM): cobre o XTTS v2 confortavelmente, cobre o Bark só com a flag de modelo pequeno, cobre o Kokoro e as variantes menores do Chatterbox com facilidade.',
@@ -2404,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'Para leitores que já têm uma GPU NVIDIA e querem usá-la para conversão de texto em fala, a escolha depende do que o áudio precisa fazer. O XTTS v2 é a escolha para a mais alta qualidade de clonagem de voz alcançável em um contexto não comercial ou de pesquisa, dada sua licença CPML não comercial. O Chatterbox é a escolha quando essa mesma capacidade de clonagem precisa ser entregue em um produto comercial, graças à sua licença MIT e aos tamanhos de modelo menores voltados para tempo real. O Bark é a escolha especificamente quando o projeto precisa de áudio expressivo não vocal — risadas, suspiros, música simples — e pode gastar 8-12 GB de VRAM para consegui-lo, com a ressalva de que seu status de manutenção é incerto. O Kokoro continua sendo a escolha certa sempre que a clonagem não for o requisito: ele roda confortavelmente só com CPU, então reservar VRAM de GPU para ele raramente vale a pena. Na dúvida, comece com o Kokoro para narração simples e migre para o XTTS v2 ou o Chatterbox só quando surgir um requisito real de clonagem — isso mantém a VRAM da sua GPU disponível para o que mais você estiver rodando junto, inclusive um LLM local. Para os detalhes de licença de cada motor mencionado aqui, veja o [guia de licenças de TTS e clonagem de voz locais](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
+          'Para leitores que já têm uma GPU NVIDIA e querem usá-la para conversão de texto em fala, a escolha depende do que o áudio precisa fazer. O XTTS v2 é a escolha para a mais alta qualidade de clonagem de voz alcançável em um contexto não comercial ou de pesquisa, dada sua licença CPML não comercial. O Chatterbox é a escolha quando essa mesma capacidade de clonagem precisa ser entregue em um produto comercial, graças à sua licença MIT e aos tamanhos de modelo menores voltados para tempo real. O Bark é a escolha especificamente quando o projeto precisa de áudio expressivo não vocal — risadas, suspiros, música simples — e pode gastar 8-12 GB de VRAM para consegui-lo, com a ressalva de que seu status de manutenção é incerto. O Kokoro continua sendo a escolha certa sempre que a clonagem não for o requisito: ele roda confortavelmente só com CPU, então reservar VRAM de GPU para ele raramente vale a pena. Na dúvida, comece com o Kokoro para narração simples e migre para o XTTS v2 ou o Chatterbox só quando surgir um requisito real de clonagem — isso mantém a VRAM da sua GPU disponível para o que mais você estiver rodando junto, inclusive um LLM local. Para os detalhes de licença de cada motor mencionado aqui, veja o [guia de licenças de TTS e clonagem de voz locais](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -2415,20 +2415,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox no GitHub](https://github.com/resemble-ai/chatterbox) — README: instalação, licença MIT, marca d\'água e suporte a CPU/GPU.',
           '[suno-ai/bark no GitHub](https://github.com/suno-ai/bark) — README: licença, flag de VRAM/modelo pequeno e histórico de manutenção/commits.',
           '[Kokoro-82M no Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — ficha do modelo: contagem de parâmetros, licença Apache 2.0 e desempenho em CPU/GPU.',
-          '[Análise do XTTS v2](/power-local-llm/xtts-v2-review) — a análise dedicada da PromptQuorum com comandos de uso completos e detalhes de licença.',
-          '[Análise do Bark TTS](/power-local-llm/bark-tts-review) — a análise dedicada da PromptQuorum com valores de VRAM e status de manutenção.',
-          '[Licenças de TTS e clonagem de voz locais](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativo completo de licenças e VRAM entre os motores de TTS locais.',
+          '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) — a análise dedicada da PromptQuorum com comandos de uso completos e detalhes de licença.',
+          '[Análise do Bark TTS](/pt/power-local-llm/bark-tts-review) — a análise dedicada da PromptQuorum com valores de VRAM e status de manutenção.',
+          '[Licenças de TTS e clonagem de voz locais](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativo completo de licenças e VRAM entre os motores de TTS locais.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do XTTS v2](/power-local-llm/xtts-v2-review) — a análise aprofundada dedicada ao modelo de clonagem de voz local de mais alta qualidade, com comandos de uso reais.',
-          '[Análise do Bark TTS](/power-local-llm/bark-tts-review) — a análise aprofundada dedicada ao modelo de áudio expressivo e não vocal da Suno.',
-          '[Análise do Coqui TTS](/power-local-llm/coqui-tts-review) — o kit de ferramentas que executa o XTTS v2 e outros modelos, com uma base de código mais ampla e de licença permissiva.',
-          '[Licenças de TTS e clonagem de voz locais: Piper, XTTS v2, F5-TTS e Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — o comparativo completo de licenças e VRAM entre todos os motores de TTS locais.',
-          '[Melhores GPUs para LLMs locais: guia de compra completo 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — a lógica de compra centrada em VRAM, igualmente aplicável ao combinar TTS com um LLM local.',
+          '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) — a análise aprofundada dedicada ao modelo de clonagem de voz local de mais alta qualidade, com comandos de uso reais.',
+          '[Análise do Bark TTS](/pt/power-local-llm/bark-tts-review) — a análise aprofundada dedicada ao modelo de áudio expressivo e não vocal da Suno.',
+          '[Análise do Coqui TTS](/pt/power-local-llm/coqui-tts-review) — o kit de ferramentas que executa o XTTS v2 e outros modelos, com uma base de código mais ampla e de licença permissiva.',
+          '[Licenças de TTS e clonagem de voz locais: Piper, XTTS v2, F5-TTS e Coqui](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — o comparativo completo de licenças e VRAM entre todos os motores de TTS locais.',
+          '[Melhores GPUs para LLMs locais: guia de compra completo 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — a lógica de compra centrada em VRAM, igualmente aplicável ao combinar TTS com um LLM local.',
         ],
       },
     },
@@ -2578,8 +2578,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: أفضل جودة لاستنساخ الصوت',
         content: [
-          '**XTTS v2، الذي أصدرته Coqui ويُشغَّل عبر [مجموعة أدوات Coqui TTS](/power-local-llm/coqui-tts-review)، هو أفضل خيار محلي لاستنساخ الصوت لمالكي GPU الذين يحتاجون إلى أعلى جودة يمكن تحقيقها من مقطع مرجعي قصير.** يستنسخ صوتًا من 6 ثوانٍ فقط من الصوت المرجعي وينطقه بـ17 لغة، بما في ذلك الاستنساخ عبر اللغات — استنساخ صوت من صوت إنجليزي وجعله يتحدث بالإسبانية أو اليابانية.',
-          'من حيث VRAM، تبلغ أوزان نموذج XTTS v2 حوالي 2 جيجابايت، لكن 4 جيجابايت هو الحد الأدنى العملي لتشغيله، ويُنصح بـ4-6 جيجابايت للاستدلال الفوري، وفقًا لـ[مراجعة XTTS v2](/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum. الترخيص هو العامل الحاسم لمعظم القراء: Coqui Public Model License (CPML) غير تجاري صراحةً، وبما أن Coqui AI، الشركة، أوقفت خدماتها المدفوعة في ديسمبر 2023، فلا يوجد حاليًا مسار مؤكد نحو ترخيص تجاري.',
+          '**XTTS v2، الذي أصدرته Coqui ويُشغَّل عبر [مجموعة أدوات Coqui TTS](/ar/power-local-llm/coqui-tts-review)، هو أفضل خيار محلي لاستنساخ الصوت لمالكي GPU الذين يحتاجون إلى أعلى جودة يمكن تحقيقها من مقطع مرجعي قصير.** يستنسخ صوتًا من 6 ثوانٍ فقط من الصوت المرجعي وينطقه بـ17 لغة، بما في ذلك الاستنساخ عبر اللغات — استنساخ صوت من صوت إنجليزي وجعله يتحدث بالإسبانية أو اليابانية.',
+          'من حيث VRAM، تبلغ أوزان نموذج XTTS v2 حوالي 2 جيجابايت، لكن 4 جيجابايت هو الحد الأدنى العملي لتشغيله، ويُنصح بـ4-6 جيجابايت للاستدلال الفوري، وفقًا لـ[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum. الترخيص هو العامل الحاسم لمعظم القراء: Coqui Public Model License (CPML) غير تجاري صراحةً، وبما أن Coqui AI، الشركة، أوقفت خدماتها المدفوعة في ديسمبر 2023، فلا يوجد حاليًا مسار مؤكد نحو ترخيص تجاري.',
         ],
         items: [
           'استخدم XTTS v2 إذا: كان مشروعك شخصيًا أو أكاديميًا أو نموذجًا أوليًا غير تجاري وتريد أفضل جودة استنساخ متاحة محليًا.',
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** حوالي 2 جيجابايت لأوزان النموذج، 4 جيجابايت كحد أدنى، ويُنصح بـ4-6 جيجابايت للاستدلال الفوري.',
           '**الأنسب لـ:** استنساخ الصوت المحلي الأعلى دقة، دعم عبر اللغات لـ17 لغة، الاستخدام غير التجاري أو البحثي.',
         ],
-        note: 'تفاصيل الترخيص الكاملة، وأوامر الاستخدام الحقيقية، والقيود مذكورة في [مراجعة XTTS v2](/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum.',
+        note: 'تفاصيل الترخيص الكاملة، وأوامر الاستخدام الحقيقية، والقيود مذكورة في [مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum.',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -2610,7 +2610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: أفضل صوت تعبيري غير كلامي',
         content: [
           '**Bark، الذي أصدرته Suno على [GitHub](https://github.com/suno-ai/bark)، هو الخيار الصحيح إذا أردت أكثر من الكلام — ضحك، تنهدات، لهاث، وموسيقى بسيطة تُولَّد فقط من مطالبات نصية — وهو المحرك في هذه المقارنة الذي يستفيد أكثر من GPU، لأن بنيته التوليدية القائمة على الرموز واحدًا تلو الآخر هي الأبطأ بين الأربعة دون تسريع CUDA.** لا يدعم استنساخ الصوت المخصص؛ فوفقًا لوثائق Suno نفسها، فهو "لا يدعم حاليًا استنساخ الصوت المخصص".',
-          'من حيث VRAM، توثّق [مراجعة Bark](/power-local-llm/bark-tts-review) المخصصة من PromptQuorum أن النموذج الكامل يحتاج إلى حوالي 12 جيجابايت، مع علامة بيئية لنموذج صغير (`SUNO_USE_SMALL_MODELS`) تخفض ذلك إلى حوالي 8 جيجابايت — أكثر بشكل ملحوظ من 4-6 جيجابايت لـXTTS v2. إنه مرخّص بموجب MIT، وأصبح مناسبًا تجاريًا بالكامل في 1 مايو 2023، لكن حالة صيانته سؤال حقيقي مفتوح: لا يُظهر مستودع GitHub العام أي تعديلات (commits) منذ 5 أبريل 2024.',
+          'من حيث VRAM، توثّق [مراجعة Bark](/ar/power-local-llm/bark-tts-review) المخصصة من PromptQuorum أن النموذج الكامل يحتاج إلى حوالي 12 جيجابايت، مع علامة بيئية لنموذج صغير (`SUNO_USE_SMALL_MODELS`) تخفض ذلك إلى حوالي 8 جيجابايت — أكثر بشكل ملحوظ من 4-6 جيجابايت لـXTTS v2. إنه مرخّص بموجب MIT، وأصبح مناسبًا تجاريًا بالكامل في 1 مايو 2023، لكن حالة صيانته سؤال حقيقي مفتوح: لا يُظهر مستودع GitHub العام أي تعديلات (commits) منذ 5 أبريل 2024.',
         ],
         items: [
           'استخدم Bark إذا: كنت بحاجة إلى صوت غير كلامي (ضحك، تنهدات، صوت محيطي) إلى جانب الكلام ولديك 8-12 جيجابايت من VRAM متاحة.',
@@ -2618,7 +2618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** حوالي 12 جيجابايت للنموذج الكامل، وحوالي 8 جيجابايت مع علامة النموذج الصغير — الأثقل بين المحركات الأربعة المقارنة هنا.',
           '**الأنسب لـ:** توليد صوت تعبيري، مؤثرات صوتية مدمجة مع الكلام، النمذجة الأولية والاستخدام البحثي.',
         ],
-        note: 'أوامر الاستخدام الكاملة، وعلامة VRAM الخاصة بالنموذج الصغير، وحالة صيانة Bark مذكورة في [مراجعة Bark TTS](/power-local-llm/bark-tts-review) المخصصة من PromptQuorum.',
+        note: 'أوامر الاستخدام الكاملة، وعلامة VRAM الخاصة بالنموذج الصغير، وحالة صيانة Bark مذكورة في [مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) المخصصة من PromptQuorum.',
       },
       kokoro: {
         id: 'kokoro',
@@ -2643,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['المحرك', 'VRAM (GPU)', 'فائدة سرعة GPU', 'استنساخ الصوت', 'الترخيص'],
         rows: [
           {
-            'المحرك': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            'المحرك': '[XTTS v2](/ar/power-local-llm/xtts-v2-review)',
             'VRAM (GPU)': '4-6 جيجابايت موصى بها',
             'فائدة سرعة GPU': 'كبيرة — CPU غير عملي',
             'استنساخ الصوت': 'نعم، مقطع 6 ثوانٍ / 17 لغة',
@@ -2657,7 +2657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الترخيص': 'MIT',
           },
           {
-            'المحرك': '[Bark](/power-local-llm/bark-tts-review)',
+            'المحرك': '[Bark](/ar/power-local-llm/bark-tts-review)',
             'VRAM (GPU)': 'حوالي 8-12 جيجابايت (صغير/كامل)',
             'فائدة سرعة GPU': 'الأكبر بين الأربعة',
             'استنساخ الصوت': 'لا',
@@ -2683,7 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كم من VRAM تحتاج فعليًا؟',
         content: [
           '**تغطي GPU بذاكرة VRAM تبلغ 6 جيجابايت أو أكثر بارتياح كل المحركات في هذه المقارنة باستثناء النموذج الكامل لـBark، الذي يحتاج إلى حوالي 12 جيجابايت (أو حوالي 8 جيجابايت مع علامة النموذج الصغير).** اختر بطاقتك بناءً على المحرك الذي تحتاجه فعليًا بدلًا من الشراء افتراضيًا للخيار الأثقل.',
-          'للحصول على إرشادات عامة حول اختيار GPU حسب مستوى VRAM لأعباء عمل الذكاء الاصطناعي المحلية (غير مخصصة لـTTS)، راجع [دليل شراء GPU للنماذج اللغوية الكبيرة المحلية](/power-local-llm/best-gpu-buying-guide-local-llm-2026) من PromptQuorum — نفس منطق الشراء القائم على أولوية VRAM ينطبق على TTS، وإذا كنت تشغّل بالفعل نموذجًا لغويًا كبيرًا محليًا إلى جانب TTS، فإن عبئي العمل يتنافسان على نفس مجمع VRAM.',
+          'للحصول على إرشادات عامة حول اختيار GPU حسب مستوى VRAM لأعباء عمل الذكاء الاصطناعي المحلية (غير مخصصة لـTTS)، راجع [دليل شراء GPU للنماذج اللغوية الكبيرة المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) من PromptQuorum — نفس منطق الشراء القائم على أولوية VRAM ينطبق على TTS، وإذا كنت تشغّل بالفعل نموذجًا لغويًا كبيرًا محليًا إلى جانب TTS، فإن عبئي العمل يتنافسان على نفس مجمع VRAM.',
         ],
         items: [
           'GPU للمبتدئين (6-8 جيجابايت VRAM): تغطي XTTS v2 بارتياح، وتغطي Bark فقط مع علامة النموذج الصغير، وتغطي Kokoro ونسخ Chatterbox الأصغر بسهولة.',
@@ -2755,7 +2755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          'بالنسبة للقراء الذين يمتلكون بالفعل GPU من NVIDIA ويريدون استخدامها لتحويل النص إلى كلام، يعتمد الاختيار على ما يحتاجه الصوت. XTTS v2 هو الخيار لأعلى جودة استنساخ صوت يمكن تحقيقها في سياق غير تجاري أو بحثي، نظرًا لترخيصه CPML غير التجاري. Chatterbox هو الخيار عندما يجب أن تُشحن قدرة الاستنساخ نفسها في منتج تجاري، بفضل ترخيصه MIT وأحجام نماذجه الأصغر الموجهة نحو الوقت الفعلي. Bark هو الخيار تحديدًا عندما يحتاج المشروع إلى صوت تعبيري غير كلامي — ضحك، تنهدات، موسيقى بسيطة — ويمكنه إنفاق 8-12 جيجابايت من VRAM للحصول عليه، مع التحفظ بأن حالة صيانته غير مؤكدة. يبقى Kokoro الخيار الصحيح كلما لم يكن الاستنساخ مطلوبًا: فهو يعمل بارتياح على CPU وحدها، لذا نادرًا ما يستحق تخصيص VRAM من GPU له. إذا لم تكن متأكدًا، ابدأ بـKokoro للسرد البسيط وانتقل إلى XTTS v2 أو Chatterbox فقط عندما تظهر حاجة استنساخ حقيقية — وهذا يبقي VRAM الخاصة بـGPU لديك متاحة لكل ما تشغّله بجانبها، بما في ذلك نموذج لغوي كبير محلي. للاطلاع على تفاصيل الترخيص لكل محرك مذكور هنا، راجع [دليل تراخيص TTS واستنساخ الصوت المحلية](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
+          'بالنسبة للقراء الذين يمتلكون بالفعل GPU من NVIDIA ويريدون استخدامها لتحويل النص إلى كلام، يعتمد الاختيار على ما يحتاجه الصوت. XTTS v2 هو الخيار لأعلى جودة استنساخ صوت يمكن تحقيقها في سياق غير تجاري أو بحثي، نظرًا لترخيصه CPML غير التجاري. Chatterbox هو الخيار عندما يجب أن تُشحن قدرة الاستنساخ نفسها في منتج تجاري، بفضل ترخيصه MIT وأحجام نماذجه الأصغر الموجهة نحو الوقت الفعلي. Bark هو الخيار تحديدًا عندما يحتاج المشروع إلى صوت تعبيري غير كلامي — ضحك، تنهدات، موسيقى بسيطة — ويمكنه إنفاق 8-12 جيجابايت من VRAM للحصول عليه، مع التحفظ بأن حالة صيانته غير مؤكدة. يبقى Kokoro الخيار الصحيح كلما لم يكن الاستنساخ مطلوبًا: فهو يعمل بارتياح على CPU وحدها، لذا نادرًا ما يستحق تخصيص VRAM من GPU له. إذا لم تكن متأكدًا، ابدأ بـKokoro للسرد البسيط وانتقل إلى XTTS v2 أو Chatterbox فقط عندما تظهر حاجة استنساخ حقيقية — وهذا يبقي VRAM الخاصة بـGPU لديك متاحة لكل ما تشغّله بجانبها، بما في ذلك نموذج لغوي كبير محلي. للاطلاع على تفاصيل الترخيص لكل محرك مذكور هنا، راجع [دليل تراخيص TTS واستنساخ الصوت المحلية](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -2766,20 +2766,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox على GitHub](https://github.com/resemble-ai/chatterbox) — README: التثبيت، ترخيص MIT، العلامة المائية، ودعم CPU/GPU.',
           '[suno-ai/bark على GitHub](https://github.com/suno-ai/bark) — README: الترخيص، علامة VRAM/النموذج الصغير، وسجل الصيانة/التعديلات.',
           '[Kokoro-82M على Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — بطاقة النموذج: عدد المعاملات، ترخيص Apache 2.0، وأداء CPU/GPU.',
-          '[مراجعة XTTS v2](/power-local-llm/xtts-v2-review) — مراجعة PromptQuorum المخصصة مع أوامر استخدام كاملة وتفاصيل الترخيص.',
-          '[مراجعة Bark TTS](/power-local-llm/bark-tts-review) — مراجعة PromptQuorum المخصصة مع أرقام VRAM وحالة الصيانة.',
-          '[تراخيص TTS واستنساخ الصوت المحلية](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة كاملة للتراخيص وVRAM عبر محركات TTS المحلية.',
+          '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) — مراجعة PromptQuorum المخصصة مع أوامر استخدام كاملة وتفاصيل الترخيص.',
+          '[مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) — مراجعة PromptQuorum المخصصة مع أرقام VRAM وحالة الصيانة.',
+          '[تراخيص TTS واستنساخ الصوت المحلية](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة كاملة للتراخيص وVRAM عبر محركات TTS المحلية.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة XTTS v2](/power-local-llm/xtts-v2-review) — التحليل المعمّق المخصص لنموذج استنساخ الصوت المحلي الأعلى جودة، مع أوامر استخدام حقيقية.',
-          '[مراجعة Bark TTS](/power-local-llm/bark-tts-review) — التحليل المعمّق المخصص لنموذج الصوت التعبيري غير الكلامي من Suno.',
-          '[مراجعة Coqui TTS](/power-local-llm/coqui-tts-review) — مجموعة الأدوات التي تُشغّل XTTS v2 ونماذج أخرى، بقاعدة كود أوسع ومرخّصة بشكل متساهل.',
-          '[تراخيص TTS واستنساخ الصوت المحلية: Piper وXTTS v2 وF5-TTS وCoqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — المقارنة الكاملة للتراخيص وVRAM عبر كل محركات TTS المحلية.',
-          '[أفضل وحدات GPU للنماذج اللغوية الكبيرة المحلية: دليل شراء كامل 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — منطق شراء GPU القائم على أولوية VRAM، وينطبق بالمثل عند الجمع بين TTS ونموذج لغوي كبير محلي.',
+          '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) — التحليل المعمّق المخصص لنموذج استنساخ الصوت المحلي الأعلى جودة، مع أوامر استخدام حقيقية.',
+          '[مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) — التحليل المعمّق المخصص لنموذج الصوت التعبيري غير الكلامي من Suno.',
+          '[مراجعة Coqui TTS](/ar/power-local-llm/coqui-tts-review) — مجموعة الأدوات التي تُشغّل XTTS v2 ونماذج أخرى، بقاعدة كود أوسع ومرخّصة بشكل متساهل.',
+          '[تراخيص TTS واستنساخ الصوت المحلية: Piper وXTTS v2 وF5-TTS وCoqui](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — المقارنة الكاملة للتراخيص وVRAM عبر كل محركات TTS المحلية.',
+          '[أفضل وحدات GPU للنماذج اللغوية الكبيرة المحلية: دليل شراء كامل 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — منطق شراء GPU القائم على أولوية VRAM، وينطبق بالمثل عند الجمع بين TTS ونموذج لغوي كبير محلي.',
         ],
       },
     },
@@ -2929,8 +2929,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'xtts-v2',
         title: 'XTTS v2: 최고의 음성 클로닝 품질',
         content: [
-          '**Coqui가 공개하고 [Coqui TTS 툴킷](/power-local-llm/coqui-tts-review)을 통해 실행되는 XTTS v2는, 짧은 참조 클립으로부터 달성 가능한 최고 품질을 필요로 하는 GPU 보유자에게 최고의 로컬 음성 클로닝 옵션입니다.** 단 6초의 참조 오디오만으로 목소리를 복제하고 17개 언어로 다시 말하게 할 수 있으며, 크로스 언어 클로닝—영어 오디오에서 목소리를 복제한 뒤 스페인어나 일본어로 말하게 하는 것—도 포함됩니다.',
-          'VRAM 측면에서 XTTS v2의 모델 가중치는 약 2GB이지만, 실행을 위한 실질적인 최소치는 4GB이며 실시간 추론에는 4-6GB가 권장됩니다. 자세한 내용은 PromptQuorum의 [XTTS v2 리뷰](/power-local-llm/xtts-v2-review)를 참고하세요. 대부분의 독자에게 결정적인 요소는 라이선스입니다. Coqui Public Model License(CPML)는 명시적으로 비상업용이며, 이 회사인 Coqui AI가 2023년 12월 유료 서비스를 종료했기 때문에 현재 확인된 활성 상업용 라이선스 경로는 없습니다.',
+          '**Coqui가 공개하고 [Coqui TTS 툴킷](/ko/power-local-llm/coqui-tts-review)을 통해 실행되는 XTTS v2는, 짧은 참조 클립으로부터 달성 가능한 최고 품질을 필요로 하는 GPU 보유자에게 최고의 로컬 음성 클로닝 옵션입니다.** 단 6초의 참조 오디오만으로 목소리를 복제하고 17개 언어로 다시 말하게 할 수 있으며, 크로스 언어 클로닝—영어 오디오에서 목소리를 복제한 뒤 스페인어나 일본어로 말하게 하는 것—도 포함됩니다.',
+          'VRAM 측면에서 XTTS v2의 모델 가중치는 약 2GB이지만, 실행을 위한 실질적인 최소치는 4GB이며 실시간 추론에는 4-6GB가 권장됩니다. 자세한 내용은 PromptQuorum의 [XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review)를 참고하세요. 대부분의 독자에게 결정적인 요소는 라이선스입니다. Coqui Public Model License(CPML)는 명시적으로 비상업용이며, 이 회사인 Coqui AI가 2023년 12월 유료 서비스를 종료했기 때문에 현재 확인된 활성 상업용 라이선스 경로는 없습니다.',
         ],
         items: [
           'XTTS v2를 사용해야 하는 경우: 프로젝트가 개인용, 학술용, 또는 비상업적 프로토타입이며 로컬에서 얻을 수 있는 최고의 클로닝 품질을 원하는 경우.',
@@ -2938,7 +2938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** 모델 가중치 약 2GB, 최소 4GB, 실시간 추론에는 4-6GB 권장.',
           '**최적의 용도:** 로컬에서 가능한 가장 충실도 높은 음성 클로닝, 17개 언어 크로스 언어 지원, 비상업용 또는 연구 용도.',
         ],
-        note: '전체 라이선스 상세 내용, 실제 사용 명령어, 제한 사항은 PromptQuorum의 [XTTS v2 리뷰](/power-local-llm/xtts-v2-review)에서 다룹니다.',
+        note: '전체 라이선스 상세 내용, 실제 사용 명령어, 제한 사항은 PromptQuorum의 [XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review)에서 다룹니다.',
       },
       chatterbox: {
         id: 'chatterbox',
@@ -2961,7 +2961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bark: 최고의 비언어적 표현력 오디오',
         content: [
           '**Suno가 [GitHub](https://github.com/suno-ai/bark)에 공개한 Bark는, 음성 이상의 것 — 웃음, 한숨, 헐떡임, 그리고 텍스트 프롬프트만으로 생성되는 간단한 음악 — 을 원할 때 올바른 선택이며, 이 비교에서 GPU의 혜택을 가장 많이 받는 엔진입니다. 토큰 단위로 생성하는 아키텍처가 CUDA 가속 없이는 네 엔진 중 가장 느리기 때문입니다.** 사용자 지정 음성 클로닝은 지원하지 않습니다. Suno 자체 문서에 따르면 "현재 사용자 지정 음성 클로닝을 지원하지 않습니다".',
-          'VRAM 측면에서 PromptQuorum의 [Bark 리뷰](/power-local-llm/bark-tts-review)에 따르면 전체 모델은 약 12GB를 필요로 하며, 소형 모델용 환경 변수 플래그(`SUNO_USE_SMALL_MODELS`)를 사용하면 이를 약 8GB로 줄일 수 있습니다 — XTTS v2의 4-6GB보다 눈에 띄게 많습니다. MIT 라이선스를 따르며 2023년 5월 1일부로 완전히 상업적으로 사용할 수 있게 되었지만, 유지 관리 상태는 실제로 해결되지 않은 문제입니다. 공개 GitHub 저장소는 2024년 4월 5일 이후 커밋이 없습니다.',
+          'VRAM 측면에서 PromptQuorum의 [Bark 리뷰](/ko/power-local-llm/bark-tts-review)에 따르면 전체 모델은 약 12GB를 필요로 하며, 소형 모델용 환경 변수 플래그(`SUNO_USE_SMALL_MODELS`)를 사용하면 이를 약 8GB로 줄일 수 있습니다 — XTTS v2의 4-6GB보다 눈에 띄게 많습니다. MIT 라이선스를 따르며 2023년 5월 1일부로 완전히 상업적으로 사용할 수 있게 되었지만, 유지 관리 상태는 실제로 해결되지 않은 문제입니다. 공개 GitHub 저장소는 2024년 4월 5일 이후 커밋이 없습니다.',
         ],
         items: [
           'Bark를 사용해야 하는 경우: 음성과 함께 비언어적 오디오(웃음, 한숨, 환경음)가 필요하고 8-12GB의 VRAM 여유가 있는 경우.',
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**VRAM:** 전체 모델 기준 약 12GB, 소형 모델 플래그 사용 시 약 8GB — 여기서 비교한 네 엔진 중 가장 무겁습니다.',
           '**최적의 용도:** 표현력 있는 오디오 생성, 음성과 결합된 음향 효과, 프로토타이핑 및 연구 용도.',
         ],
-        note: '전체 사용 명령어, 소형 모델 VRAM 플래그, Bark의 유지 관리 상태는 PromptQuorum의 [Bark TTS 리뷰](/power-local-llm/bark-tts-review)에서 다룹니다.',
+        note: '전체 사용 명령어, 소형 모델 VRAM 플래그, Bark의 유지 관리 상태는 PromptQuorum의 [Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review)에서 다룹니다.',
       },
       kokoro: {
         id: 'kokoro',
@@ -2994,7 +2994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['엔진', 'VRAM(GPU)', 'GPU 속도 이점', '음성 클로닝', '라이선스'],
         rows: [
           {
-            '엔진': '[XTTS v2](/power-local-llm/xtts-v2-review)',
+            '엔진': '[XTTS v2](/ko/power-local-llm/xtts-v2-review)',
             'VRAM(GPU)': '4-6GB 권장',
             'GPU 속도 이점': '큼 — CPU는 비실용적',
             '음성 클로닝': '있음, 6초 클립/17개 언어',
@@ -3008,7 +3008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '라이선스': 'MIT',
           },
           {
-            '엔진': '[Bark](/power-local-llm/bark-tts-review)',
+            '엔진': '[Bark](/ko/power-local-llm/bark-tts-review)',
             'VRAM(GPU)': '약 8-12GB(소형/전체)',
             'GPU 속도 이점': '네 엔진 중 가장 큼',
             '음성 클로닝': '없음',
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '실제로 필요한 VRAM은 얼마인가',
         content: [
           '**6GB 이상의 VRAM을 가진 GPU는 이 비교의 모든 엔진을 여유롭게 커버하며, 예외는 약 12GB(소형 모델 플래그 사용 시 약 8GB)가 필요한 Bark의 전체 모델뿐입니다.** 기본적으로 가장 무거운 옵션에 맞춰 구매하기보다는 실제로 필요한 엔진에 맞춰 카드를 선택하세요.',
-          'TTS에 국한되지 않은 로컬 AI 워크로드 전반에 대한 VRAM 등급별 GPU 선택 일반 가이드는 PromptQuorum의 [로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하세요 — 동일한 VRAM 우선 구매 논리가 TTS에도 적용되며, 이미 TTS와 함께 로컬 LLM을 실행하고 있다면 두 워크로드는 동일한 VRAM 풀을 두고 경쟁하게 됩니다.',
+          'TTS에 국한되지 않은 로컬 AI 워크로드 전반에 대한 VRAM 등급별 GPU 선택 일반 가이드는 PromptQuorum의 [로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하세요 — 동일한 VRAM 우선 구매 논리가 TTS에도 적용되며, 이미 TTS와 함께 로컬 LLM을 실행하고 있다면 두 워크로드는 동일한 VRAM 풀을 두고 경쟁하게 됩니다.',
         ],
         items: [
           '입문형 GPU(6-8GB VRAM): XTTS v2를 여유롭게 커버하고, Bark는 소형 모델 플래그를 사용할 때만 커버하며, Kokoro와 Chatterbox의 더 작은 변형은 손쉽게 커버합니다.',
@@ -3106,7 +3106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          '이미 NVIDIA GPU를 보유하고 있으며 이를 텍스트 음성 변환에 활용하고자 하는 독자에게는, 오디오가 무엇을 해야 하는지에 따라 선택이 달라집니다. 비상업용 CPML 라이선스를 고려할 때, 비상업적 또는 연구 목적에서 달성 가능한 최고의 음성 클로닝 품질을 원한다면 XTTS v2가 선택지입니다. 동일한 클로닝 기능을 상업 제품에 탑재해야 한다면, MIT 라이선스와 실시간 지향의 더 작은 모델 크기 덕분에 Chatterbox가 선택지입니다. 프로젝트에 비언어적 표현력 오디오—웃음, 한숨, 간단한 음악—가 필요하고 이를 위해 8-12GB의 VRAM을 투입할 수 있다면, 유지 관리 상태가 불확실하다는 점을 유의한 채로 Bark가 선택지입니다. 클로닝이 요구 사항이 아닌 한 Kokoro는 여전히 올바른 선택입니다. CPU만으로도 여유롭게 실행되므로 이를 위해 GPU VRAM을 확보해 둘 가치는 거의 없습니다. 확신이 서지 않는다면 단순 내레이션에는 Kokoro로 시작하고, 실제로 클로닝 요구 사항이 생겼을 때에만 XTTS v2나 Chatterbox로 넘어가세요 — 그렇게 하면 로컬 LLM을 포함해 함께 실행하는 다른 작업을 위해 GPU의 VRAM을 계속 확보해 둘 수 있습니다. 여기서 언급한 각 엔진의 라이선스 상세 내용은 PromptQuorum의 [로컬 TTS 및 음성 클로닝 라이선스 가이드](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.',
+          '이미 NVIDIA GPU를 보유하고 있으며 이를 텍스트 음성 변환에 활용하고자 하는 독자에게는, 오디오가 무엇을 해야 하는지에 따라 선택이 달라집니다. 비상업용 CPML 라이선스를 고려할 때, 비상업적 또는 연구 목적에서 달성 가능한 최고의 음성 클로닝 품질을 원한다면 XTTS v2가 선택지입니다. 동일한 클로닝 기능을 상업 제품에 탑재해야 한다면, MIT 라이선스와 실시간 지향의 더 작은 모델 크기 덕분에 Chatterbox가 선택지입니다. 프로젝트에 비언어적 표현력 오디오—웃음, 한숨, 간단한 음악—가 필요하고 이를 위해 8-12GB의 VRAM을 투입할 수 있다면, 유지 관리 상태가 불확실하다는 점을 유의한 채로 Bark가 선택지입니다. 클로닝이 요구 사항이 아닌 한 Kokoro는 여전히 올바른 선택입니다. CPU만으로도 여유롭게 실행되므로 이를 위해 GPU VRAM을 확보해 둘 가치는 거의 없습니다. 확신이 서지 않는다면 단순 내레이션에는 Kokoro로 시작하고, 실제로 클로닝 요구 사항이 생겼을 때에만 XTTS v2나 Chatterbox로 넘어가세요 — 그렇게 하면 로컬 LLM을 포함해 함께 실행하는 다른 작업을 위해 GPU의 VRAM을 계속 확보해 둘 수 있습니다. 여기서 언급한 각 엔진의 라이선스 상세 내용은 PromptQuorum의 [로컬 TTS 및 음성 클로닝 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.',
       },
       sources: {
         id: 'sources',
@@ -3117,20 +3117,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub의 resemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README: 설치, MIT 라이선스, 워터마크, CPU/GPU 지원.',
           '[GitHub의 suno-ai/bark](https://github.com/suno-ai/bark) — README: 라이선스, VRAM/소형 모델 플래그, 유지 관리/커밋 이력.',
           '[Hugging Face의 Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 모델 카드: 파라미터 수, Apache 2.0 라이선스, CPU/GPU 성능.',
-          '[XTTS v2 리뷰](/power-local-llm/xtts-v2-review) — 전체 사용 명령어와 라이선스 상세 내용을 담은 PromptQuorum 전용 리뷰.',
-          '[Bark TTS 리뷰](/power-local-llm/bark-tts-review) — VRAM 수치와 유지 관리 상태를 담은 PromptQuorum 전용 리뷰.',
-          '[로컬 TTS 및 음성 클로닝 라이선스](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 로컬 TTS 엔진 전반의 라이선스와 VRAM 완전 비교.',
+          '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review) — 전체 사용 명령어와 라이선스 상세 내용을 담은 PromptQuorum 전용 리뷰.',
+          '[Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review) — VRAM 수치와 유지 관리 상태를 담은 PromptQuorum 전용 리뷰.',
+          '[로컬 TTS 및 음성 클로닝 라이선스](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 로컬 TTS 엔진 전반의 라이선스와 VRAM 완전 비교.',
         ],
       },
       relatedReading: {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[XTTS v2 리뷰](/power-local-llm/xtts-v2-review) — 실제 사용 명령어를 포함해 최고 품질의 로컬 음성 클로닝 모델을 다룬 전용 심층 분석.',
-          '[Bark TTS 리뷰](/power-local-llm/bark-tts-review) — Suno의 표현력 있는 비언어적 오디오 모델을 다룬 전용 심층 분석.',
-          '[Coqui TTS 리뷰](/power-local-llm/coqui-tts-review) — XTTS v2 및 다른 모델을 실행하는 툴킷으로, 더 넓고 자유로운 라이선스의 코드베이스를 가지고 있습니다.',
-          '[로컬 TTS 및 음성 클로닝 라이선스: Piper, XTTS v2, F5-TTS, Coqui](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 모든 로컬 TTS 엔진에 걸친 라이선스와 VRAM 완전 비교.',
-          '[로컬 LLM을 위한 최고의 GPU: 2026년 완전 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TTS를 로컬 LLM과 조합할 때도 동일하게 적용되는 VRAM 우선 GPU 구매 논리.',
+          '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review) — 실제 사용 명령어를 포함해 최고 품질의 로컬 음성 클로닝 모델을 다룬 전용 심층 분석.',
+          '[Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review) — Suno의 표현력 있는 비언어적 오디오 모델을 다룬 전용 심층 분석.',
+          '[Coqui TTS 리뷰](/ko/power-local-llm/coqui-tts-review) — XTTS v2 및 다른 모델을 실행하는 툴킷으로, 더 넓고 자유로운 라이선스의 코드베이스를 가지고 있습니다.',
+          '[로컬 TTS 및 음성 클로닝 라이선스: Piper, XTTS v2, F5-TTS, Coqui](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 모든 로컬 TTS 엔진에 걸친 라이선스와 VRAM 완전 비교.',
+          '[로컬 LLM을 위한 최고의 GPU: 2026년 완전 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — TTS를 로컬 LLM과 조합할 때도 동일하게 적용되는 VRAM 우선 GPU 구매 논리.',
         ],
       },
     },
