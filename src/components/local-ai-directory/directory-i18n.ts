@@ -25,6 +25,11 @@ const DIR_UI = {
     en: 'Filters', de: 'Filter', fr: 'Filtres', ja: 'フィルター', zh: '筛选',
     es: 'Filtros', pt: 'Filtros', ar: 'الفلاتر', ko: '필터',
   },
+  moreOptionsButton: {
+    en: 'Device, sort & view', de: 'Gerät, Sortierung & Ansicht', fr: 'Appareil, tri et affichage',
+    ja: 'デバイス・並び替え・表示', zh: '设备、排序与视图', es: 'Dispositivo, orden y vista',
+    pt: 'Dispositivo, ordem e visualização', ar: 'الجهاز والترتيب والعرض', ko: '기기·정렬·보기',
+  },
   searchAriaLabel: {
     en: 'Search by name, tagline, or license',
     de: 'Suche nach Name, Beschreibung oder Lizenz',
