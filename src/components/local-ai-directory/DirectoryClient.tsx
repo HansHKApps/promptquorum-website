@@ -25,7 +25,7 @@ import { ToolCard } from './ToolCard'
 import { ToolTable } from './ToolTable'
 import { ToolDrawer } from './ToolDrawer'
 import { HardwareProfileWidget } from './HardwareProfileWidget'
-import { SearchIcon, GridIcon, TableIcon, CloseIcon } from './icons'
+import { SearchIcon, GridIcon, TableIcon, CloseIcon, ChevronRightIcon } from './icons'
 import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools } from './filters'
 import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStoredProfile } from './hardware'
 import { emptyFilterState, machineCategory, type FilterState, type HardwareProfile, type MachineCategory, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
@@ -79,6 +79,16 @@ export function DirectoryClient({ apps, lang }: Props) {
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
   const [filtersOpen, setFiltersOpen] = useState(false)
+  // The device/machine/hardware/sort/view-mode controls collapse under their
+  // own toggle on narrow screens only (see the min-[560px]:flex override on
+  // the wrapper below, which forces them back open regardless of this state
+  // once the layout switches from stacked to row-wrapped). Below that width,
+  // every one of these controls used to render full-width in the single
+  // stacked column and sit inside the sticky header, so the header alone
+  // could fill most of a phone's viewport before any tool card was visible —
+  // this state exists so a mobile viewer can collapse that block down to just
+  // the Filters button and search bar, and expand it back only when needed.
+  const [mobileOptionsOpen, setMobileOptionsOpen] = useState(false)
   // Card-view pagination — resets to one page whenever the visible set
   // could change shape (search/want/filters/sort), so "Show more" always
   // starts from a stable first page instead of an arbitrary offset.
@@ -229,6 +239,24 @@ export function DirectoryClient({ apps, lang }: Props) {
             )}
           </div>
 
+          <button
+            type="button"
+            onClick={() => setMobileOptionsOpen((o) => !o)}
+            aria-expanded={mobileOptionsOpen}
+            aria-controls="local-ai-mobile-options"
+            className="min-[560px]:hidden inline-flex items-center justify-between gap-1.5 rounded-lg border border-primary/20 bg-white px-3 py-2 text-sm font-medium text-text-primary hover:bg-primary/5"
+          >
+            {t('moreOptionsButton', lang)}
+            <ChevronRightIcon className={cn('h-4 w-4 shrink-0 transition-transform', mobileOptionsOpen && 'rotate-90')} />
+          </button>
+
+          <div
+            id="local-ai-mobile-options"
+            className={cn(
+              mobileOptionsOpen ? 'flex' : 'hidden',
+              'flex-col gap-3 w-full min-[560px]:contents'
+            )}
+          >
           <label className="flex items-center gap-2 text-sm">
             <span className="text-text-secondary shrink-0">{t('deviceCategoryLabel', lang)}</span>
             <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', lang)}>
@@ -324,6 +352,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           <span className="hidden md:flex items-center text-sm text-text-secondary shrink-0">
             {t('appsCountTemplate', lang, { visible: sorted.length, total: apps.length })}
           </span>
+          </div>
         </div>
 
         <FilterBar
