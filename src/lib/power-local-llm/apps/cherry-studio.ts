@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // github.com/CherryHQ/cherry-studio has no published hardware requirements (open issue CherryHQ/cherry-studio#9440 requests adding them); floor depends on the model backend configured, verified 2026-09-13
   stars: 51430,
   addedDate: '2026-09-04',
   status: 'listed',

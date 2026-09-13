@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'TODO',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left unresearched intentionally — already flagged in a separate project as not a real, discrete product (no standalone "DALL-E 3 Local via Ollama Vision" tool exists); skipped in the 2026-09-13 hardware backfill per that finding
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

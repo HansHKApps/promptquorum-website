@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Free',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (prevolut.uk) states no minimum RAM/hardware; connects to any LM Studio or OpenAI-compatible server, so the floor depends on that backend, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

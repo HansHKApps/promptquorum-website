@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Proprietary (bundled with Docker Desktop)',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // docs.docker.com/ai/model-runner: default llama.cpp engine "works on all platforms" including CPU; no fixed minimum RAM/VRAM published (GPU requirements only listed per-driver for optional GPU acceleration), verified 2026-09-13
   stars: null,
   addedDate: '2026-09-13',
   status: 'listed',

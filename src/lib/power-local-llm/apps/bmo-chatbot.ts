@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // Obsidian plugin — README (github.com/longy2k/obsidian-bmo-chatbot) only requires Obsidian plus a self-hosted API (Ollama/LM Studio) or a cloud API key; no hardware floor of its own, verified 2026-09-13
   stars: 532,
   addedDate: '2026-09-04',
   status: 'listed',

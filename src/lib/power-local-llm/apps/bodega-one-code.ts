@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Closed source',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (bodegaone.ai) states no minimum RAM/hardware; a bring-your-own-LLM client (Ollama/LM Studio/llama.cpp or cloud API keys) with no fixed floor of its own, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

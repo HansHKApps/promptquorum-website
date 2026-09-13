@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // no official Cursor system-requirements page found on cursor.com/docs; it's a cloud-API-first editor, floor depends on which model/backend is selected, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

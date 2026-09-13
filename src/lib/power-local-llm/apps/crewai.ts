@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (crewai.com) states no minimum RAM/hardware; it's a Python agent-orchestration framework, floor depends entirely on the LLM backend the user wires in, verified 2026-09-13
   stars: 58082,
   addedDate: '2026-09-04',
   status: 'listed',

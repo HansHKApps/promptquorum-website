@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // docs.continue.dev has no stated fixed hardware minimum for the extension itself; it's a VS Code/JetBrains client, floor depends entirely on the local or cloud model backend configured, verified 2026-09-13
   stars: 35757,
   addedDate: '2026-09-04',
   status: 'listed',
