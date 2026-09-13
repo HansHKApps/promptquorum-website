@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 8, cpuOnly: false }, // per tabby.tabbyml.com/docs/faq/ ("Tabby operates in int8 mode with CUDA, requiring approximately 8GB of VRAM for CodeLlama-7B" — the default completion model) and tabby.tabbyml.com/docs/models/ (recommends NVIDIA T4/10-series/20-series or Apple Silicon for 1B-3B models, V100/A100/30-40-series for 7B-13B); no documented CPU-only path, verified 2026-09-13
   stars: 33858,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per docs.windsurf.com system-requirements pages, checked 2026-09-13 — only OS/glibc/IDE-version minimums documented (e.g. glibc >= 2.28 on Linux), no RAM/VRAM figures; depends entirely on the LLM backend the user configures, no fixed floor of its own
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

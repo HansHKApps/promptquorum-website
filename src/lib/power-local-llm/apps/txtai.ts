@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per neuml.github.io/txtai/install/ — GPU is optional (default install includes GPU-enabled PyTorch, but a CPU-only PyTorch build is explicitly supported and CPU Docker images are recommended when no GPU is available); no fixed RAM/VRAM floor since it's model-dependent, verified 2026-09-13
   stars: 12900,
   addedDate: '2026-09-04',
   status: 'listed',

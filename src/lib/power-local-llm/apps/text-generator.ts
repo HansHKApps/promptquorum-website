@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/nhaouari/obsidian-textgenerator-plugin README, checked 2026-09-13 — no hardware/system-requirements section; it's a thin Obsidian plugin, depends entirely on the LLM backend the user configures, no fixed floor of its own
   stars: 2000,
   addedDate: '2026-09-04',
   status: 'listed',

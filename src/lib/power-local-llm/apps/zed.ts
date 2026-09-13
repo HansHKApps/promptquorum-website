@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'GPL-3.0 (editor) / AGPL-3.0 (server) / Apache-2.0 (GPUI)',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per the PromptQuorum review (src/lib/power-local-llm/articles/zed-review.ts): "Zed has no fixed hardware minimum for the editor itself — the practical requirement is whichever local AI model you choose to load through Ollama or LM Studio", checked 2026-09-13
   stars: 89787, // github.com/zed-industries/zed, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',
