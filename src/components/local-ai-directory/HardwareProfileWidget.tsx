@@ -11,14 +11,20 @@
 // against): nothing is written to localStorage until the viewer clicks
 // "Save my setup". `navigator.deviceMemory` may pre-fill the RAM input as a
 // labelled, honestly-worded HINT ("≈8GB detected — confirm or adjust") but
-// that value sits in the input, unsaved, until the click. No fetch/analytics
-// call ever references this data — it is 100% client-local.
+// that value sits in the input, unsaved, until the click. The exact profile
+// itself is never transmitted anywhere — the only network call this can ever
+// trigger is trackHardwareProfileSaved(), which (a) only fires on this same
+// explicit Save click, never passively, (b) only fires at all if the viewer
+// already granted the site's existing general "Analytics" cookie-consent
+// category, and (c) sends coarse buckets (e.g. "16-32") only, never the raw
+// numbers — see src/lib/tracking/hardwareProfile.ts for the full contract.
 
 import { useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { HardwareProfile, MachineType } from './types'
 import { writeStoredProfile, clearStoredProfile } from './hardware'
 import { getMachineLabels, t } from './directory-i18n'
+import { trackHardwareProfileSaved } from '@/lib/tracking/hardwareProfile'
 
 /**
  * navigator.deviceMemory is a Chromium-only, coarse (power-of-two, capped at
@@ -96,6 +102,7 @@ export function HardwareProfileWidget({
     writeStoredProfile(next)
     onProfileChange(next)
     onExpandedChange(false)
+    trackHardwareProfileSaved(next)
   }
 
   const handleForget = () => {
