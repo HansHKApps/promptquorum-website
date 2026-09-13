@@ -176,6 +176,9 @@ import { app as app_macwhisper } from './apps/macwhisper'
 import { app as app_solair_ai } from './apps/solair-ai'
 import { app as app_docker_model_runner } from './apps/docker-model-runner'
 import { app as app_on_device_ai } from './apps/on-device-ai'
+import { app as app_aori } from './apps/aori'
+import { app as app_rapr_ai } from './apps/rapr-ai'
+import { app as app_chatty_mini } from './apps/chatty-mini'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -342,6 +345,9 @@ export const localAiApps: ToolRecord[] = [
   app_diffusionbee,
   app_macwhisper,
   app_solair_ai,
+  app_aori,
+  app_rapr_ai,
+  app_chatty_mini,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
