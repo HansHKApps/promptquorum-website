@@ -24,10 +24,11 @@ import { ActiveFilterChips } from './ActiveFilterChips'
 import { ToolCard } from './ToolCard'
 import { ToolTable } from './ToolTable'
 import { ToolDrawer } from './ToolDrawer'
+import { HardwareProfileWidget } from './HardwareProfileWidget'
 import { SearchIcon, GridIcon, TableIcon, CloseIcon } from './icons'
 import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools } from './filters'
-import { detectDefaultMachine, readStoredMachine, writeStoredMachine } from './hardware'
-import { emptyFilterState, type FilterState, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
+import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStoredProfile } from './hardware'
+import { emptyFilterState, type FilterState, type HardwareProfile, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
 import { getMachineLabels, t } from './directory-i18n'
 
@@ -57,6 +58,19 @@ export function DirectoryClient({ apps, lang }: Props) {
     if (typeof window === 'undefined') return 'dgpu'
     return readStoredMachine() ?? detectDefaultMachine()
   })
+  // Precise hardware profile — a separate, opt-in layer on top of `machine`
+  // above (see hardware.ts's readStoredProfile/writeStoredProfile). Same
+  // lazy-initializer pattern as `machine`: never written automatically, only
+  // ever from the widget's explicit "Save my setup" click.
+  const [profile, setProfile] = useState<HardwareProfile | null>(() => {
+    if (typeof window === 'undefined') return null
+    return readStoredProfile()
+  })
+  const [hwWidgetExpanded, setHwWidgetExpanded] = useState(false)
+  const requestHardwareProfile = () => {
+    setHwWidgetExpanded(true)
+    document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
   const [openSlug, setOpenSlug] = useState<string | null>(null)
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
@@ -212,6 +226,15 @@ export function DirectoryClient({ apps, lang }: Props) {
             </select>
           </label>
 
+          <HardwareProfileWidget
+            machine={machine}
+            profile={profile}
+            onProfileChange={setProfile}
+            lang={lang}
+            expanded={hwWidgetExpanded}
+            onExpandedChange={setHwWidgetExpanded}
+          />
+
           {view === 'cards' && (
             <label className="flex items-center gap-2 text-sm">
               <span className="text-text-secondary shrink-0">{t('sortLabel', lang)}</span>
@@ -296,7 +319,15 @@ export function DirectoryClient({ apps, lang }: Props) {
                     widths instead of a close-but-different default. */}
                 <div className="grid grid-cols-1 min-[560px]:grid-cols-2 min-[860px]:grid-cols-3 min-[1180px]:grid-cols-4 gap-4">
                   {visibleRows.map((app) => (
-                    <ToolCard key={app.slug} app={app} lang={lang} machine={machine} onOpen={setOpenSlug} />
+                    <ToolCard
+                      key={app.slug}
+                      app={app}
+                      lang={lang}
+                      machine={machine}
+                      profile={profile}
+                      onOpen={setOpenSlug}
+                      onRequestHardware={requestHardwareProfile}
+                    />
                   ))}
                 </div>
                 {remaining > 0 && (
@@ -323,10 +354,12 @@ export function DirectoryClient({ apps, lang }: Props) {
               apps={visibleRows}
               lang={lang}
               machine={machine}
+              profile={profile}
               sortKey={sortKey}
               sortDir={sortDir}
               onSort={handleSort}
               onOpen={setOpenSlug}
+              onRequestHardware={requestHardwareProfile}
             />
           )
         )}
@@ -337,8 +370,10 @@ export function DirectoryClient({ apps, lang }: Props) {
         allApps={apps}
         lang={lang}
         machine={machine}
+        profile={profile}
         onClose={() => setOpenSlug(null)}
         onOpenSlug={setOpenSlug}
+        onRequestHardware={requestHardwareProfile}
       />
     </div>
   )

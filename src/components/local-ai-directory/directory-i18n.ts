@@ -367,6 +367,7 @@ const DIR_UI = {
   colStars: { en: 'Stars', de: 'Sterne', fr: 'Étoiles', ja: 'スター数', zh: '星标数', es: 'Estrellas', pt: 'Estrelas', ar: 'النجوم', ko: '스타 수' },
   colStatus: { en: 'Status', de: 'Status', fr: 'Statut', ja: 'ステータス', zh: '状态', es: 'Estado', pt: 'Status', ar: 'الحالة', ko: '상태' },
   colCategory: { en: 'Category', de: 'Kategorie', fr: 'Catégorie', ja: 'カテゴリー', zh: '类别', es: 'Categoría', pt: 'Categoria', ar: 'الفئة', ko: '카테고리' },
+  colCompatFit: { en: 'Fit', de: 'Passt?', fr: 'Compatibilité', ja: '適合度', zh: '适配度', es: 'Compatibilidad', pt: 'Compatibilidade', ar: 'الملاءمة', ko: '적합도' },
 
   // --- hardware.ts headline/detail strings ---
   hwSetByEngine: { en: 'Set by your engine', de: 'Wird von deiner Engine bestimmt', fr: 'Déterminé par votre moteur', ja: '使用エンジンにより異なる', zh: '由所用引擎决定', es: 'Depende de tu motor', pt: 'Definido pelo seu motor', ar: 'يحدده المحرك الذي تستخدمه', ko: '사용 중인 엔진에 따라 결정됨' },
@@ -425,6 +426,56 @@ const DIR_UI = {
   hwVramTemplate: { en: '{n} GB VRAM', de: '{n} GB VRAM', fr: '{n} Go de VRAM', ja: '{n}GBのVRAM', zh: '{n}GB显存', es: '{n} GB de VRAM', pt: '{n} GB de VRAM', ar: '{n} جيجابايت VRAM', ko: '{n}GB VRAM' },
   hwPlusSystemRamTemplate: { en: '+ {n} GB system RAM', de: '+ {n} GB System-RAM', fr: '+ {n} Go de RAM système', ja: '＋システムRAM {n}GB', zh: '+{n}GB系统内存', es: '+ {n} GB de RAM del sistema', pt: '+ {n} GB de RAM do sistema', ar: '+ {n} جيجابايت رام النظام', ko: '+ 시스템 RAM {n}GB' },
   hwNoDedicatedGpu: { en: 'No dedicated GPU required', de: 'Keine dedizierte GPU erforderlich', fr: 'Aucun GPU dédié requis', ja: '専用GPUは不要', zh: '无需独立显卡', es: 'No requiere GPU dedicada', pt: 'Não requer GPU dedicada', ar: 'لا يتطلب معالج رسومات مخصصًا', ko: '전용 GPU 불필요' },
+
+  // --- CompatibilityBadge (per-tool "can I run it" verdict) ---
+  compatRunsWell: { en: 'Runs well', de: 'Läuft gut', fr: 'Fonctionne bien', ja: '快適に動作', zh: '运行流畅', es: 'Funciona bien', pt: 'Funciona bem', ar: 'يعمل بسلاسة', ko: '원활하게 실행됨' },
+  compatMarginal: { en: 'Marginal', de: 'Grenzwertig', fr: 'Tout juste', ja: 'ギリギリ', zh: '勉强够用', es: 'Ajustado', pt: 'No limite', ar: 'على الحد الأدنى', ko: '아슬아슬함' },
+  compatWontRun: { en: "Won't run", de: 'Läuft nicht', fr: 'Ne fonctionnera pas', ja: '動作不可', zh: '无法运行', es: 'No funcionará', pt: 'Não vai rodar', ar: 'لن يعمل', ko: '실행 불가' },
+  compatSetHardware: { en: 'Set your hardware', de: 'Hardware angeben', fr: 'Indiquer votre matériel', ja: 'スペックを設定', zh: '设置你的硬件', es: 'Indica tu hardware', pt: 'Informe seu hardware', ar: 'حدد جهازك', ko: '내 사양 설정' },
+  compatNotReviewed: {
+    en: 'Not yet reviewed for hardware fit', de: 'Hardware-Eignung noch nicht geprüft',
+    fr: "Compatibilité matérielle pas encore vérifiée", ja: 'ハードウェア適合性は未確認',
+    zh: '尚未评估硬件适配性', es: 'Compatibilidad de hardware aún no evaluada',
+    pt: 'Compatibilidade de hardware ainda não avaliada', ar: 'لم تُراجع ملاءمة الجهاز بعد',
+    ko: '하드웨어 적합성 미검토',
+  },
+
+  // --- HardwareProfileWidget ("Your setup" panel) ---
+  hwProfileSetLink: { en: 'Set your exact specs', de: 'Genaue Werte angeben', fr: 'Indiquer vos caractéristiques exactes', ja: '正確なスペックを入力', zh: '输入你的确切配置', es: 'Indica tus specs exactas', pt: 'Informe suas especificações exatas', ar: 'أدخل مواصفاتك الدقيقة', ko: '정확한 사양 입력' },
+  hwProfileSummaryDgpuTemplate: { en: '{ram} GB RAM / {vram} GB VRAM · Edit', de: '{ram} GB RAM / {vram} GB VRAM · Bearbeiten', fr: '{ram} Go de RAM / {vram} Go de VRAM · Modifier', ja: '{ram}GB RAM / {vram}GB VRAM · 編集', zh: '{ram}GB内存 / {vram}GB显存 · 编辑', es: '{ram} GB RAM / {vram} GB VRAM · Editar', pt: '{ram} GB RAM / {vram} GB VRAM · Editar', ar: '{ram} جيجا رام / {vram} جيجا VRAM · تعديل', ko: '{ram}GB RAM / {vram}GB VRAM · 수정' },
+  hwProfileSummaryCpuTemplate: { en: '{ram} GB RAM · Edit', de: '{ram} GB RAM · Bearbeiten', fr: '{ram} Go de RAM · Modifier', ja: '{ram}GB RAM · 編集', zh: '{ram}GB内存 · 编辑', es: '{ram} GB RAM · Editar', pt: '{ram} GB RAM · Editar', ar: '{ram} جيجا رام · تعديل', ko: '{ram}GB RAM · 수정' },
+  hwProfileSummaryAppleTemplate: { en: '{unified} GB unified · Edit', de: '{unified} GB Unified Memory · Bearbeiten', fr: '{unified} Go unifiés · Modifier', ja: '{unified}GBユニファイド · 編集', zh: '{unified}GB统一内存 · 编辑', es: '{unified} GB unificada · Editar', pt: '{unified} GB unificada · Editar', ar: '{unified} جيجا موحدة · تعديل', ko: '{unified}GB 통합 · 수정' },
+  hwProfileRamLabel: { en: 'RAM (GB)', de: 'RAM (GB)', fr: 'RAM (Go)', ja: 'RAM（GB）', zh: '内存（GB）', es: 'RAM (GB)', pt: 'RAM (GB)', ar: 'الرام (جيجابايت)', ko: 'RAM(GB)' },
+  hwProfileVramLabel: { en: 'VRAM (GB)', de: 'VRAM (GB)', fr: 'VRAM (Go)', ja: 'VRAM（GB）', zh: '显存（GB）', es: 'VRAM (GB)', pt: 'VRAM (GB)', ar: 'VRAM (جيجابايت)', ko: 'VRAM(GB)' },
+  hwProfileUnifiedLabel: { en: 'Unified memory (GB)', de: 'Unified Memory (GB)', fr: 'Mémoire unifiée (Go)', ja: 'ユニファイドメモリ（GB）', zh: '统一内存（GB）', es: 'Memoria unificada (GB)', pt: 'Memória unificada (GB)', ar: 'الذاكرة الموحدة (جيجابايت)', ko: '통합 메모리(GB)' },
+  hwProfileDetectedHintTemplate: {
+    en: '≈{n} GB detected — confirm or adjust', de: '≈{n} GB erkannt — bestätigen oder anpassen',
+    fr: '≈{n} Go détectés — confirmez ou ajustez', ja: '約{n}GBを検出 — 確認または調整してください',
+    zh: '检测到约{n}GB——请确认或调整', es: '≈{n} GB detectados — confirma o ajusta',
+    pt: '≈{n} GB detectados — confirme ou ajuste', ar: 'تم رصد ≈{n} جيجابايت — أكّد أو عدّل',
+    ko: '약 {n}GB 감지됨 — 확인 또는 조정',
+  },
+  hwProfileSaveButton: { en: 'Save my setup', de: 'Mein Setup speichern', fr: 'Enregistrer ma config', ja: '設定を保存', zh: '保存我的配置', es: 'Guardar mi configuración', pt: 'Salvar minha configuração', ar: 'حفظ إعداداتي', ko: '내 사양 저장' },
+  hwProfileForgetButton: { en: 'Forget my hardware', de: 'Hardware vergessen', fr: 'Oublier mon matériel', ja: 'スペックを削除', zh: '忘记我的硬件', es: 'Olvidar mi hardware', pt: 'Esquecer meu hardware', ar: 'نسيان جهازي', ko: '내 사양 삭제' },
+  hwProfileCancelButton: { en: 'Cancel', de: 'Abbrechen', fr: 'Annuler', ja: 'キャンセル', zh: '取消', es: 'Cancelar', pt: 'Cancelar', ar: 'إلغاء', ko: '취소' },
+  hwProfilePrivacyNote: {
+    en: 'Stored only in this browser — never sent anywhere.', de: 'Wird nur in diesem Browser gespeichert — nirgendwohin übertragen.',
+    fr: 'Enregistré uniquement dans ce navigateur — jamais transmis.', ja: 'このブラウザにのみ保存されます — どこにも送信されません。',
+    zh: '仅保存在此浏览器中——不会发送到任何地方。', es: 'Se guarda solo en este navegador — nunca se envía a ningún sitio.',
+    pt: 'Salvo apenas neste navegador — nunca é enviado a lugar nenhum.', ar: 'يُحفظ في هذا المتصفح فقط — لا يُرسل إلى أي مكان.',
+    ko: '이 브라우저에만 저장되며 어디로도 전송되지 않습니다.',
+  },
+  hwProfileStaleForMachineTemplate: {
+    en: 'Saved for a different machine type — set it for {machine}',
+    de: 'Für einen anderen Gerätetyp gespeichert — für {machine} neu angeben',
+    fr: "Enregistré pour un autre type d'appareil — à définir pour {machine}",
+    ja: '別の機器タイプ用に保存されています — {machine}用に設定してください',
+    zh: '为其他设备类型保存——请为{machine}重新设置',
+    es: 'Guardado para otro tipo de equipo — configúralo para {machine}',
+    pt: 'Salvo para outro tipo de equipamento — configure para {machine}',
+    ar: 'محفوظ لنوع جهاز مختلف — اضبطه لـ {machine}',
+    ko: '다른 기기 유형으로 저장됨 — {machine}용으로 다시 설정하세요',
+  },
 } satisfies Record<string, Dict>
 
 export type DirUiKey = keyof typeof DIR_UI
