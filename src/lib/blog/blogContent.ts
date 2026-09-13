@@ -30769,4 +30769,1374 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       },
     },
   },
+  hardwareCompatibilityDirectory: {
+    en: {
+      category: 'Product Updates',
+      title: 'The Local AI Software Directory Now Shows If Your Machine Can Run Each Tool',
+      seoTitle: 'Hardware Compatibility Check: Local AI Directory',
+      intro: 'The Local AI Software Directory now includes an opt-in hardware profile and a per-app compatibility badge that checks whether your own machine can run each of its 167 listed tools. Here is what changed, how the comparison works, and how the privacy design holds up.',
+      publishDate: 'Published September 13, 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 min read',
+      metaDescription: 'The Local AI Software Directory added an opt-in hardware profile and per-app compatibility badges (Runs well / Marginal / Won\'t run) covering 153 of its 167 listed tools.',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Quick Answer',
+          items: [
+            'The [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026) added a "Your setup" hardware profile and a compatibility badge (Runs well, Marginal, Won\'t run, or Set your hardware) to each of its 167 listed local AI tools.',
+            'The profile is opt-in and saved only when you click "Save my setup" — it is never written automatically and never sent to a server. It lives in your browser\'s localStorage until you clear it.',
+            'Hardware requirement data is researched for 153 of the 167 tools. The badge compares your saved numbers (system RAM, VRAM, or Apple unified memory) against each tool\'s measured requirement.',
+            'A "Runs well" verdict needs roughly 30% headroom over a tool\'s measured requirement — meeting the requirement exactly reads as "Marginal", not "Runs well".',
+            'A review of five other local-AI directory sites on September 13, 2026 found none of them persist a saved hardware profile across the whole site — each offers a one-off, single-page calculator instead.',
+          ],
+        },
+        whatsNew: {
+          title: 'What Changed on the Directory',
+          content: [
+            'The [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026) already let visitors filter and sort 167 local AI apps, model runtimes, and agent frameworks by category, license, and hardware footprint. A "My machine" selector let you pick a coarse machine type — graphics card, Apple Silicon, or CPU-only — and see each tool\'s hardware requirement rephrased for that type.',
+            'The new addition is a "Your setup" panel next to that selector. Instead of a coarse machine type, you can enter your actual numbers — system RAM and VRAM for a graphics-card machine, unified memory for Apple Silicon, or system RAM for a CPU-only machine. Once saved, every tool card and table row shows a compatibility badge that compares your numbers against that tool\'s researched requirement.',
+          ],
+        },
+        howItWorks: {
+          title: 'From "What Does It Need" to "Can I Run It"',
+          content: [
+            'The existing hardware display always answered one question: what does this tool need. The new badge answers a different one: given your machine, will this specific tool actually run.',
+            'The comparison uses a headroom rule rather than a bare pass/fail. Your saved number has to beat a tool\'s requirement by roughly 30% to count as "Runs well". Meeting the requirement without that margin reads as "Marginal" — it will likely run, but slowly or with little memory to spare. Falling short reads as "Won\'t run", unless the tool has a CPU-only fallback, in which case it is graded "Marginal" instead. Apple Silicon numbers are converted from a VRAM figure to an equivalent unified-memory floor, since macOS and other running apps reserve part of that shared pool.',
+          ],
+        },
+        verdicts: {
+          title: 'What Each Badge Means',
+          content: 'Four states cover every tool on the directory, whether or not you have saved a profile.',
+          rows: [
+            { Badge: 'Runs well', Meaning: 'Your saved hardware clears the tool\'s requirement with roughly 30% headroom' },
+            { Badge: 'Marginal', Meaning: 'Meets the requirement with little or no headroom, or falls back to a slower CPU-only mode' },
+            { Badge: "Won't run", Meaning: 'Falls short of the requirement and the tool has no CPU-only fallback' },
+            { Badge: 'Set your hardware', Meaning: 'No profile saved yet — click the badge to open the "Your setup" panel' },
+          ],
+          columns: ['Badge', 'Meaning'],
+        },
+        privacy: {
+          title: 'The Profile Never Leaves Your Browser',
+          content: [
+            'Nothing is written to your browser until you click "Save my setup" — there is no passive detection and nothing is stored automatically. The RAM field can be pre-filled from your browser\'s device-memory value as a labelled hint ("≈8GB detected — confirm or adjust"), but that number sits in the input, unsaved, until you click.',
+            'The saved profile is written to your browser\'s localStorage under its own key, separate from the existing coarse "My machine" selection, and your exact numbers are never sent in a network request. If you have already opted into analytics, saving does trigger one anonymized event recording only a coarse range (like "16–32GB") — never the number you typed. A "Forget my hardware" button next to the panel clears it immediately.',
+            'This is a factual description of how the feature is built, not a marketing claim. You can confirm it yourself by opening your browser\'s developer tools, checking the Application or Storage tab, and watching the Network tab while you use the directory.',
+          ],
+        },
+        categoryFirst: {
+          title: 'A Feature We Have Not Seen Elsewhere — Checked, Not Assumed',
+          content: [
+            'On September 13, 2026, we reviewed five other local-AI directory and tool-comparison sites — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net), and [localclaw.io](https://localclaw.io) — to see whether any of them offered something similar. None of the five persist a saved hardware profile across their site; each instead offers a one-off, single-page hardware calculator that does not carry your numbers to other pages or return them on a later visit.',
+            'Based on that check, a save-once, works-everywhere hardware profile appears to be new among the local-AI directory sites we reviewed. That is a statement about the five sites we checked on that date, not a claim about every site that exists — a site outside that review could offer the same thing without us knowing.',
+          ],
+        },
+        cta: {
+          title: 'Try It on the Directory',
+          content: 'Open the [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026), pick your machine type, save your setup, and see a compatibility badge on all 167 listed tools — from single-purpose local chat apps to full agent frameworks.',
+        },
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Is my hardware information sent to PromptQuorum or anyone else?',
+              a: 'Your exact numbers are never sent anywhere — the profile itself is stored only in your browser\'s localStorage. If you have already opted into analytics, saving does trigger one anonymized event with a coarse range only (e.g. "16-32GB" for RAM), never the number you typed. You can verify this yourself in your browser\'s developer tools — any request that fires will show only that bucket string.',
+            },
+            {
+              q: 'What is the difference between "My machine" and "Your setup"?',
+              a: '"My machine" is a coarse machine-type choice (graphics card, Apple Silicon, or CPU-only) that has been on the directory since launch. "Your setup" is the new, opt-in layer on top of it — your actual RAM, VRAM, or unified-memory numbers, which produce a specific compatibility badge per tool instead of a rephrased generic requirement.',
+            },
+            {
+              q: 'What does a "Marginal" badge mean?',
+              a: 'Your saved hardware meets a tool\'s measured requirement but without the roughly 30% headroom needed for a "Runs well" verdict, or the tool only works in a slower CPU-only mode on your setup. It will likely run, but performance or available memory may be tight.',
+            },
+            {
+              q: 'How do I clear my saved hardware profile?',
+              a: 'Open the "Your setup" panel and click "Forget my hardware." This removes the profile from your browser\'s localStorage immediately; nothing needs to be requested from PromptQuorum, because nothing was ever sent there.',
+            },
+            {
+              q: 'How many of the 167 tools have hardware compatibility data?',
+              a: '153 of the 167 tools listed have researched hardware-requirement data. The remaining tools show a "Set your hardware" or "not yet reviewed for hardware fit" state instead of a comfortable, marginal, or won\'t-run verdict, since there is nothing yet to compare against.',
+            },
+            {
+              q: 'Is this the only site with a persistent hardware profile?',
+              a: 'We reviewed five other local-AI directory sites on September 13, 2026 and found none of them carry a saved hardware profile across their whole site — each offered a single-page calculator instead. That describes the sites we checked on that date, not every site that exists.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Is my hardware information sent to PromptQuorum or anyone else?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Your exact numbers are never sent anywhere — the profile itself is stored only in your browser\'s localStorage. If you have already opted into analytics, saving does trigger one anonymized event with a coarse range only (e.g. "16-32GB" for RAM), never the number you typed. You can verify this yourself in your browser\'s developer tools — any request that fires will show only that bucket string.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between "My machine" and "Your setup"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"My machine" is a coarse machine-type choice (graphics card, Apple Silicon, or CPU-only) that has been on the directory since launch. "Your setup" is the new, opt-in layer on top of it — your actual RAM, VRAM, or unified-memory numbers, which produce a specific compatibility badge per tool instead of a rephrased generic requirement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What does a "Marginal" badge mean?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Your saved hardware meets a tool\'s measured requirement but without the roughly 30% headroom needed for a "Runs well" verdict, or the tool only works in a slower CPU-only mode on your setup. It will likely run, but performance or available memory may be tight.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I clear my saved hardware profile?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Open the "Your setup" panel and click "Forget my hardware." This removes the profile from your browser\'s localStorage immediately; nothing needs to be requested from PromptQuorum, because nothing was ever sent there.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many of the 167 tools have hardware compatibility data?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '153 of the 167 tools listed have researched hardware-requirement data. The remaining tools show a "Set your hardware" or "not yet reviewed for hardware fit" state instead of a comfortable, marginal, or won\'t-run verdict, since there is nothing yet to compare against.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is this the only site with a persistent hardware profile?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We reviewed five other local-AI directory sites on September 13, 2026 and found none of them carry a saved hardware profile across their whole site — each offered a single-page calculator instead. That describes the sites we checked on that date, not every site that exists.',
+            },
+          },
+        ],
+      },
+    },
+    ar: {
+      category: 'تحديثات المنتج',
+      title: 'دليل برمجيات الذكاء الاصطناعي المحلي يخبرك الآن إن كان جهازك قادرًا على تشغيل كل أداة',
+      seoTitle: 'فحص توافق الأجهزة في دليل الذكاء الاصطناعي المحلي',
+      intro: 'أصبح دليل برمجيات الذكاء الاصطناعي المحلي يتضمن الآن ملفًا اختياريًا لمواصفات جهازك، وشارة توافق لكل أداة تتحقق مما إذا كان جهازك الخاص قادرًا على تشغيل كل أداة من الأدوات الـ167 المدرجة. إليك ما تغيّر، وكيف تتم المقارنة، ومدى صلابة تصميم الخصوصية.',
+      publishDate: 'نُشر في 13 سبتمبر 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 دقائق للقراءة',
+      metaDescription: 'أضاف دليل برمجيات الذكاء الاصطناعي المحلي ملف مواصفات جهاز اختياريًا وشارات توافق (يعمل بسلاسة / على الحد الأدنى / لن يعمل) تغطي 153 من أصل 167 أداة.',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'النقاط الرئيسية',
+          items: [
+            'أضاف [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026) لوحة "إعدادات جهازك" وشارة توافق (يعمل بسلاسة، على الحد الأدنى، لن يعمل، أو حدد جهازك) لكل أداة من الأدوات الـ167 المدرجة للذكاء الاصطناعي المحلي.',
+            'هذا الملف اختياري ولا يُحفظ إلا عند النقر على "احفظ إعدادات جهازي" — لا يُكتب تلقائيًا أبدًا ولا يُرسل إلى أي خادم. يبقى في localStorage الخاص بمتصفحك حتى تقوم بمسحه.',
+            'بيانات متطلبات الأجهزة موثّقة لـ153 من أصل 167 أداة. تقارن الشارة الأرقام التي حفظتها (ذاكرة RAM للنظام، أو VRAM، أو الذاكرة الموحدة من Apple) بالمتطلبات الفعلية المقاسة لكل أداة.',
+            'الحكم بـ"يعمل بسلاسة" يتطلب هامشًا يبلغ نحو 30% فوق المتطلبات المقاسة للأداة — وتحقيق المتطلبات بالضبط يُصنَّف كـ"على الحد الأدنى"، وليس "يعمل بسلاسة".',
+            'كشفت مراجعة أُجريت في 13 سبتمبر 2026 لخمسة مواقع أخرى من أدلة الذكاء الاصطناعي المحلي أن لا أحد منها يحتفظ بملف مواصفات جهاز محفوظ عبر الموقع بأكمله — إذ يقدّم كل موقع بدلًا من ذلك أداة حساب لمرة واحدة على صفحة واحدة فقط.',
+          ],
+        },
+        whatsNew: {
+          title: 'ما الذي تغيّر في الدليل',
+          content: [
+            'كان [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026) يتيح بالفعل للزوار تصفية وترتيب 167 تطبيقًا للذكاء الاصطناعي المحلي، ومحركات تشغيل النماذج، وأطر عمل الوكلاء، حسب الفئة والترخيص ومتطلبات الأجهزة. كان مُحدد "جهازي" يتيح اختيار نوع جهاز عام — بطاقة رسومية، أو Apple Silicon، أو معالج فقط (CPU) — ويعرض متطلبات الأجهزة لكل أداة معاد صياغتها بما يناسب ذلك النوع.',
+            'الإضافة الجديدة هي لوحة "إعدادات جهازك" بجانب ذلك المُحدد. بدلًا من اختيار نوع جهاز عام، يمكنك إدخال أرقامك الفعلية — ذاكرة RAM للنظام وVRAM لجهاز يحتوي على بطاقة رسومية، أو الذاكرة الموحدة لأجهزة Apple Silicon، أو ذاكرة RAM للنظام لجهاز يعمل بالمعالج فقط. بعد الحفظ، تعرض كل بطاقة أداة وكل صف في الجدول شارة توافق تقارن أرقامك بمتطلبات تلك الأداة الموثّقة.',
+          ],
+        },
+        howItWorks: {
+          title: 'من "ما الذي تحتاجه" إلى "هل يمكنني تشغيلها"',
+          content: [
+            'كان عرض الأجهزة الحالي يجيب دائمًا عن سؤال واحد: ما الذي تحتاجه هذه الأداة. أما الشارة الجديدة فتجيب عن سؤال مختلف: بناءً على جهازك، هل ستعمل هذه الأداة تحديدًا فعليًا.',
+            'تستخدم المقارنة قاعدة هامش بدلًا من نجاح أو فشل بسيط. يجب أن يتجاوز الرقم الذي حفظته متطلبات الأداة بنحو 30% ليُحتسب كـ"يعمل بسلاسة". أما تحقيق المتطلبات دون ذلك الهامش فيُصنَّف كـ"على الحد الأدنى" — من المرجح أن تعمل الأداة، لكن ببطء أو بذاكرة متبقية قليلة. وإذا لم تُحقق المتطلبات، يُصنَّف الوضع كـ"لن يعمل"، إلا إذا كانت الأداة تملك وضع احتياطي يعمل بالمعالج فقط، وعندها تُصنَّف كـ"على الحد الأدنى" بدلًا من ذلك. تُحوَّل أرقام Apple Silicon من رقم VRAM إلى حد أدنى مكافئ من الذاكرة الموحدة، لأن macOS والتطبيقات الأخرى قيد التشغيل تحجز جزءًا من تلك الذاكرة المشتركة.',
+          ],
+        },
+        verdicts: {
+          title: 'ماذا تعني كل شارة',
+          content: 'أربع حالات تغطي كل أداة في الدليل، سواء حفظت ملف مواصفات جهازك أم لا.',
+          rows: [
+            { الشارة: 'يعمل بسلاسة', المعنى: 'جهازك المحفوظ يتجاوز متطلبات الأداة بهامش يبلغ نحو 30%' },
+            { الشارة: 'على الحد الأدنى', المعنى: 'يحقق المتطلبات بهامش ضئيل أو معدوم، أو يعتمد على وضع أبطأ يعمل بالمعالج فقط' },
+            { الشارة: 'لن يعمل', المعنى: 'لا يحقق المتطلبات، ولا تملك الأداة وضعًا احتياطيًا يعمل بالمعالج فقط' },
+            { الشارة: 'حدد جهازك', المعنى: 'لم يتم حفظ أي ملف مواصفات بعد — انقر على الشارة لفتح لوحة "إعدادات جهازك"' },
+          ],
+          columns: ['الشارة', 'المعنى'],
+        },
+        privacy: {
+          title: 'الملف لا يغادر متصفحك أبدًا',
+          content: [
+            'لا يُكتب شيء في متصفحك قبل النقر على "احفظ إعدادات جهازي" — لا يوجد أي كشف تلقائي ولا يتم تخزين أي شيء تلقائيًا. يمكن ملء حقل RAM مسبقًا بقيمة الذاكرة الخاصة بمتصفحك كتلميح موضح بوضوح ("تم رصد ≈8 جيجابايت — أكد أو عدّل")، لكن هذا الرقم يبقى في الحقل دون حفظ حتى تنقر.',
+            'يُكتب الملف المحفوظ في localStorage الخاص بمتصفحك تحت مفتاح خاص به، منفصل عن اختيار "جهازي" العام الحالي، ولا تُرسل أرقامك الدقيقة مطلقًا في أي طلب شبكة. إذا كنت قد وافقت مسبقًا على التحليلات (analytics)، فإن الحفظ يؤدي إلى إطلاق حدث واحد مجهول الهوية يسجّل نطاقًا تقريبيًا فقط (مثل "16-32 جيجابايت") — وليس الرقم الذي أدخلته أبدًا. زر "انسَ جهازي" بجانب اللوحة يمسحه فورًا.',
+            'هذا وصف واقعي لكيفية بناء الميزة، وليس ادعاءً تسويقيًا. يمكنك التحقق من ذلك بنفسك بفتح أدوات المطوّر في متصفحك، والتحقق من علامة التبويب Application أو Storage، ومراقبة علامة التبويب Network أثناء استخدامك للدليل.',
+          ],
+        },
+        categoryFirst: {
+          title: 'ميزة لم نرَ لها مثيلًا في مكان آخر — تم التحقق منها، لا افتراضها',
+          content: [
+            'في 13 سبتمبر 2026، راجعنا خمسة مواقع أخرى من أدلة ومقارنات أدوات الذكاء الاصطناعي المحلي — [opensourcesai.com](https://opensourcesai.com)، و[runlocalai.co](https://runlocalai.co)، و[everylocalai.com](https://everylocalai.com)، و[local-ai.net](https://local-ai.net)، و[localclaw.io](https://localclaw.io) — لمعرفة ما إذا كان أي منها يقدّم شيئًا مشابهًا. لا يحتفظ أي من المواقع الخمسة بملف مواصفات جهاز محفوظ عبر الموقع بأكمله؛ بل يقدّم كل منها بدلًا من ذلك أداة حساب أجهزة لمرة واحدة على صفحة واحدة، لا تنقل أرقامك إلى صفحات أخرى ولا تستعيدها في زيارة لاحقة.',
+            'بناءً على هذه المراجعة، يبدو أن ملف مواصفات جهاز يُحفظ مرة واحدة ويعمل عبر الموقع بأكمله هو أمر جديد بين مواقع أدلة الذكاء الاصطناعي المحلي التي راجعناها. هذا بيان يتعلق بالمواقع الخمسة التي تحققنا منها في ذلك التاريخ، وليس ادعاءً بشأن كل موقع موجود — فقد يقدّم موقع خارج نطاق هذه المراجعة الشيء نفسه دون أن نعلم بذلك.',
+          ],
+        },
+        cta: {
+          title: 'جرّبها في الدليل',
+          content: 'افتح [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026)، وحدد نوع جهازك، واحفظ إعداداتك، وشاهد شارة توافق على جميع الأدوات الـ167 المدرجة — من تطبيقات المحادثة المحلية البسيطة إلى أطر عمل الوكلاء الكاملة.',
+        },
+        faq: {
+          title: 'الأسئلة الشائعة',
+          faqs: [
+            {
+              q: 'هل تُرسل معلومات جهازي إلى PromptQuorum أو إلى أي جهة أخرى؟',
+              a: 'أرقامك الدقيقة لا تُرسل أبدًا إلى أي مكان — الملف نفسه يُخزَّن فقط في localStorage الخاص بمتصفحك. إذا كنت قد وافقت مسبقًا على التحليلات، فإن الحفظ يؤدي إلى إطلاق حدث واحد مجهول الهوية يتضمن نطاقًا تقريبيًا فقط (مثل "16-32 جيجابايت" لذاكرة RAM)، وليس الرقم الذي أدخلته. يمكنك التحقق من ذلك بنفسك في أدوات المطوّر الخاصة بمتصفحك — أي طلب يُطلق سيظهر فيه هذا النطاق فقط.',
+            },
+            {
+              q: 'ما الفرق بين "جهازي" و"إعدادات جهازك"؟',
+              a: '"جهازي" هو اختيار عام لنوع الجهاز (بطاقة رسومية، أو Apple Silicon، أو معالج فقط) موجود في الدليل منذ إطلاقه. أما "إعدادات جهازك" فهي الطبقة الاختيارية الجديدة المضافة فوقه — أرقامك الفعلية من RAM أو VRAM أو الذاكرة الموحدة، والتي تُنتج شارة توافق محددة لكل أداة بدلًا من متطلبات عامة معاد صياغتها فقط.',
+            },
+            {
+              q: 'ماذا تعني شارة "على الحد الأدنى"؟',
+              a: 'جهازك المحفوظ يحقق المتطلبات المقاسة للأداة، لكن دون الهامش البالغ نحو 30% اللازم للحصول على تصنيف "يعمل بسلاسة"، أو أن الأداة تعمل فقط في وضع أبطأ يعتمد على المعالج فقط في إعداداتك. من المرجح أن تعمل، لكن قد يكون الأداء أو الذاكرة المتاحة محدودَين.',
+            },
+            {
+              q: 'كيف أمسح ملف مواصفات جهازي المحفوظ؟',
+              a: 'افتح لوحة "إعدادات جهازك" وانقر على "انسَ جهازي". يؤدي ذلك إلى إزالة الملف من localStorage الخاص بمتصفحك فورًا؛ ولا حاجة لطلب أي شيء من PromptQuorum، لأنه لم يُرسل إليه أي شيء أصلًا.',
+            },
+            {
+              q: 'كم عدد الأدوات من أصل 167 التي تملك بيانات توافق أجهزة؟',
+              a: '153 من أصل 167 أداة مدرجة تملك بيانات متطلبات أجهزة موثّقة. أما الأدوات المتبقية فتُظهر حالة "حدد جهازك" أو "لم تتم مراجعتها بعد من ناحية توافق الأجهزة" بدلًا من تصنيف يعمل بسلاسة أو على الحد الأدنى أو لن يعمل، نظرًا لعدم وجود بيانات للمقارنة حتى الآن.',
+            },
+            {
+              q: 'هل هذا هو الموقع الوحيد الذي يملك ملف مواصفات جهاز دائمًا؟',
+              a: 'راجعنا خمسة مواقع أخرى من أدلة الذكاء الاصطناعي المحلي في 13 سبتمبر 2026، ولم نجد أن أيًا منها يحتفظ بملف مواصفات جهاز محفوظ عبر الموقع بأكمله — بل قدّم كل منها أداة حساب لمرة واحدة على صفحة واحدة بدلًا من ذلك. هذا وصف للمواقع التي تحققنا منها في ذلك التاريخ، وليس ادعاءً بشأن كل موقع موجود.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'هل تُرسل معلومات جهازي إلى PromptQuorum أو إلى أي جهة أخرى؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'أرقامك الدقيقة لا تُرسل أبدًا إلى أي مكان — الملف نفسه يُخزَّن فقط في localStorage الخاص بمتصفحك. إذا كنت قد وافقت مسبقًا على التحليلات، فإن الحفظ يؤدي إلى إطلاق حدث واحد مجهول الهوية يتضمن نطاقًا تقريبيًا فقط (مثل "16-32 جيجابايت" لذاكرة RAM)، وليس الرقم الذي أدخلته. يمكنك التحقق من ذلك بنفسك في أدوات المطوّر الخاصة بمتصفحك — أي طلب يُطلق سيظهر فيه هذا النطاق فقط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'ما الفرق بين "جهازي" و"إعدادات جهازك"؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"جهازي" هو اختيار عام لنوع الجهاز (بطاقة رسومية، أو Apple Silicon، أو معالج فقط) موجود في الدليل منذ إطلاقه. أما "إعدادات جهازك" فهي الطبقة الاختيارية الجديدة المضافة فوقه — أرقامك الفعلية من RAM أو VRAM أو الذاكرة الموحدة، والتي تُنتج شارة توافق محددة لكل أداة بدلًا من متطلبات عامة معاد صياغتها فقط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'ماذا تعني شارة "على الحد الأدنى"؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'جهازك المحفوظ يحقق المتطلبات المقاسة للأداة، لكن دون الهامش البالغ نحو 30% اللازم للحصول على تصنيف "يعمل بسلاسة"، أو أن الأداة تعمل فقط في وضع أبطأ يعتمد على المعالج فقط في إعداداتك. من المرجح أن تعمل، لكن قد يكون الأداء أو الذاكرة المتاحة محدودَين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'كيف أمسح ملف مواصفات جهازي المحفوظ؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'افتح لوحة "إعدادات جهازك" وانقر على "انسَ جهازي". يؤدي ذلك إلى إزالة الملف من localStorage الخاص بمتصفحك فورًا؛ ولا حاجة لطلب أي شيء من PromptQuorum، لأنه لم يُرسل إليه أي شيء أصلًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'كم عدد الأدوات من أصل 167 التي تملك بيانات توافق أجهزة؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '153 من أصل 167 أداة مدرجة تملك بيانات متطلبات أجهزة موثّقة. أما الأدوات المتبقية فتُظهر حالة "حدد جهازك" أو "لم تتم مراجعتها بعد من ناحية توافق الأجهزة" بدلًا من تصنيف يعمل بسلاسة أو على الحد الأدنى أو لن يعمل، نظرًا لعدم وجود بيانات للمقارنة حتى الآن.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل هذا هو الموقع الوحيد الذي يملك ملف مواصفات جهاز دائمًا؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'راجعنا خمسة مواقع أخرى من أدلة الذكاء الاصطناعي المحلي في 13 سبتمبر 2026، ولم نجد أن أيًا منها يحتفظ بملف مواصفات جهاز محفوظ عبر الموقع بأكمله — بل قدّم كل منها أداة حساب لمرة واحدة على صفحة واحدة بدلًا من ذلك. هذا وصف للمواقع التي تحققنا منها في ذلك التاريخ، وليس ادعاءً بشأن كل موقع موجود.',
+            },
+          },
+        ],
+      },
+    },
+    de: {
+      category: 'Produkt-Updates',
+      title: 'Das Local AI Software Directory zeigt jetzt, ob Ihr Rechner jedes Tool ausführen kann',
+      seoTitle: 'Hardware-Kompatibilitätscheck im Local AI Directory',
+      intro: 'Das Local AI Software Directory bietet jetzt ein optionales Hardware-Profil und ein Kompatibilitäts-Badge pro Tool, das prüft, ob Ihr eigener Rechner jedes der 167 gelisteten Tools ausführen kann. Hier erfahren Sie, was sich geändert hat, wie der Vergleich funktioniert und wie es um den Datenschutz bestellt ist.',
+      publishDate: 'Veröffentlicht 13. September 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 Min. Lesezeit',
+      metaDescription: 'Das Local AI Software Directory hat ein optionales Hardware-Profil und Kompatibilitäts-Badges (Läuft gut / Grenzwertig / Läuft nicht) für 153 von 167 Tools erhalten.',
+      educationalLevel: 'Anfänger',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Zusammenfassung',
+          items: [
+            'Das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026) hat ein „Ihr Setup"-Hardware-Profil und ein Kompatibilitäts-Badge (Läuft gut, Grenzwertig, Läuft nicht oder Hardware angeben) für jedes der 167 gelisteten lokalen KI-Tools erhalten.',
+            'Das Profil ist optional und wird nur gespeichert, wenn Sie auf „Mein Setup speichern" klicken — es wird nie automatisch geschrieben und nie an einen Server gesendet. Es verbleibt im localStorage Ihres Browsers, bis Sie es löschen.',
+            'Für 153 der 167 Tools liegen recherchierte Hardware-Anforderungsdaten vor. Das Badge vergleicht Ihre gespeicherten Werte (System-RAM, VRAM oder Apple Unified Memory) mit der gemessenen Anforderung jedes Tools.',
+            'Für die Bewertung „Läuft gut" braucht es rund 30 % Puffer über der gemessenen Anforderung eines Tools — die Anforderung exakt zu erreichen zählt als „Grenzwertig", nicht als „Läuft gut".',
+            'Eine Überprüfung von fünf anderen Local-AI-Directory-Seiten am 13. September 2026 ergab, dass keine von ihnen ein gespeichertes Hardware-Profil seitenübergreifend beibehält — jede bietet stattdessen nur einen einmaligen Rechner auf einer einzelnen Seite.',
+          ],
+        },
+        whatsNew: {
+          title: 'Was sich im Directory geändert hat',
+          content: [
+            'Das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026) ließ Besucher bereits 167 lokale KI-Apps, Modell-Runtimes und Agenten-Frameworks nach Kategorie, Lizenz und Hardware-Bedarf filtern und sortieren. Eine „Mein Rechner"-Auswahl erlaubte die Wahl eines groben Rechnertyps — Grafikkarte, Apple Silicon oder nur CPU — und zeigte die Hardware-Anforderung jedes Tools passend zu diesem Typ an.',
+            'Neu ist ein „Ihr Setup"-Panel neben dieser Auswahl. Statt eines groben Rechnertyps können Sie Ihre tatsächlichen Werte eingeben — System-RAM und VRAM bei einer Grafikkarte, Unified Memory bei Apple Silicon oder System-RAM bei einem reinen CPU-Rechner. Nach dem Speichern zeigt jede Tool-Karte und jede Tabellenzeile ein Kompatibilitäts-Badge, das Ihre Werte mit der recherchierten Anforderung dieses Tools vergleicht.',
+          ],
+        },
+        howItWorks: {
+          title: 'Von „Was braucht es" zu „Kann ich es ausführen"',
+          content: [
+            'Die bestehende Hardware-Anzeige beantwortete immer nur eine Frage: Was braucht dieses Tool. Das neue Badge beantwortet eine andere: Wird dieses konkrete Tool auf Ihrem Rechner tatsächlich laufen.',
+            'Der Vergleich nutzt eine Puffer-Regel statt eines reinen Bestehen-oder-Nicht. Ihr gespeicherter Wert muss die Anforderung eines Tools um rund 30 % übertreffen, um als „Läuft gut" zu zählen. Wird die Anforderung ohne diesen Puffer erreicht, gilt „Grenzwertig" — es läuft wahrscheinlich, aber langsam oder mit wenig Speicherreserve. Wird die Anforderung unterschritten, gilt „Läuft nicht", außer das Tool hat einen reinen CPU-Fallback — dann wird stattdessen „Grenzwertig" vergeben. Apple-Silicon-Werte werden von einer VRAM-Angabe in eine entsprechende Unified-Memory-Untergrenze umgerechnet, da macOS und andere laufende Apps einen Teil dieses gemeinsamen Speichers belegen.',
+          ],
+        },
+        verdicts: {
+          title: 'Was jedes Badge bedeutet',
+          content: 'Vier Zustände decken jedes Tool im Directory ab, unabhängig davon, ob Sie ein Profil gespeichert haben.',
+          rows: [
+            { Badge: 'Läuft gut', Bedeutung: 'Ihre gespeicherte Hardware übertrifft die Anforderung des Tools um rund 30 % Puffer' },
+            { Badge: 'Grenzwertig', Bedeutung: 'Erfüllt die Anforderung mit wenig oder keinem Puffer, oder fällt auf einen langsameren reinen CPU-Modus zurück' },
+            { Badge: 'Läuft nicht', Bedeutung: 'Unterschreitet die Anforderung, und das Tool hat keinen reinen CPU-Fallback' },
+            { Badge: 'Hardware angeben', Bedeutung: 'Noch kein Profil gespeichert — Klick auf das Badge öffnet das „Ihr Setup"-Panel' },
+          ],
+          columns: ['Badge', 'Bedeutung'],
+        },
+        privacy: {
+          title: 'Das Profil verlässt Ihren Browser nie',
+          content: [
+            'Es wird nichts in Ihrem Browser gespeichert, bevor Sie auf „Mein Setup speichern" klicken — es gibt keine passive Erkennung, und nichts wird automatisch abgelegt. Das RAM-Feld kann anhand des Speicherwerts Ihres Browsers als beschrifteter Hinweis vorausgefüllt werden („≈8GB erkannt — bestätigen oder anpassen"), aber diese Zahl steht ungespeichert im Eingabefeld, bis Sie klicken.',
+            'Das gespeicherte Profil wird unter einem eigenen Schlüssel im localStorage Ihres Browsers abgelegt, getrennt von der bestehenden groben „Mein Rechner"-Auswahl, und Ihre genauen Werte werden niemals in einer Netzwerkanfrage versendet. Wenn Sie der Analyse bereits zugestimmt haben, löst das Speichern ein einziges anonymisiertes Ereignis aus, das nur einen groben Bereich erfasst (z. B. „16–32 GB") — niemals die von Ihnen eingegebene Zahl. Eine Schaltfläche „Hardware vergessen" neben dem Panel löscht es sofort.',
+            'Das ist eine sachliche Beschreibung, wie die Funktion gebaut ist, keine Marketingaussage. Sie können das selbst überprüfen, indem Sie die Entwicklertools Ihres Browsers öffnen, den Reiter „Anwendung" bzw. „Speicher" prüfen und den Netzwerk-Reiter beobachten, während Sie das Directory nutzen.',
+          ],
+        },
+        categoryFirst: {
+          title: 'Eine Funktion, die uns anderswo nicht begegnet ist — geprüft, nicht angenommen',
+          content: [
+            'Am 13. September 2026 haben wir fünf andere Local-AI-Directory- und Tool-Vergleichsseiten überprüft — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net) und [localclaw.io](https://localclaw.io) —, um zu sehen, ob eine davon etwas Vergleichbares anbietet. Keine der fünf behält ein gespeichertes Hardware-Profil seitenübergreifend bei; jede bietet stattdessen nur einen einmaligen Hardware-Rechner auf einer einzelnen Seite, der Ihre Werte nicht auf andere Seiten überträgt oder bei einem späteren Besuch wieder anzeigt.',
+            'Auf Basis dieser Prüfung scheint ein einmal gespeichertes, seitenübergreifend nutzbares Hardware-Profil unter den von uns überprüften Local-AI-Directory-Seiten neu zu sein. Das ist eine Aussage über die fünf an diesem Datum geprüften Seiten, keine Behauptung über jede existierende Seite — eine nicht geprüfte Seite könnte dasselbe bieten, ohne dass wir davon wissen.',
+          ],
+        },
+        cta: {
+          title: 'Jetzt im Directory ausprobieren',
+          content: 'Öffnen Sie das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026), wählen Sie Ihren Rechnertyp, speichern Sie Ihr Setup und sehen Sie ein Kompatibilitäts-Badge bei allen 167 gelisteten Tools — von einfachen lokalen Chat-Apps bis zu vollständigen Agenten-Frameworks.',
+        },
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Werden meine Hardware-Angaben an PromptQuorum oder Dritte gesendet?',
+              a: 'Ihre genauen Werte werden nie irgendwohin gesendet — das Profil selbst wird ausschließlich im localStorage Ihres Browsers gespeichert. Wenn Sie der Analyse bereits zugestimmt haben, löst das Speichern ein einziges anonymisiertes Ereignis mit nur einem groben Bereich aus (z. B. „16–32 GB" für RAM), niemals die von Ihnen eingegebene Zahl. Sie können das selbst in den Entwicklertools Ihres Browsers überprüfen — eine eventuell ausgelöste Anfrage zeigt nur diesen Bereichswert.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen „Mein Rechner" und „Ihr Setup"?',
+              a: '„Mein Rechner" ist eine grobe Rechnertyp-Auswahl (Grafikkarte, Apple Silicon oder nur CPU), die seit dem Start des Directorys existiert. „Ihr Setup" ist die neue, optionale Ebene darauf — Ihre tatsächlichen RAM-, VRAM- oder Unified-Memory-Werte, die ein konkretes Kompatibilitäts-Badge pro Tool erzeugen statt einer umformulierten allgemeinen Anforderung.',
+            },
+            {
+              q: 'Was bedeutet das Badge „Grenzwertig"?',
+              a: 'Ihre gespeicherte Hardware erfüllt die gemessene Anforderung eines Tools, aber ohne den rund 30-prozentigen Puffer für die Bewertung „Läuft gut", oder das Tool läuft auf Ihrem Setup nur in einem langsameren reinen CPU-Modus. Es wird wahrscheinlich laufen, aber Leistung oder verfügbarer Speicher könnten knapp sein.',
+            },
+            {
+              q: 'Wie lösche ich mein gespeichertes Hardware-Profil?',
+              a: 'Öffnen Sie das „Ihr Setup"-Panel und klicken Sie auf „Hardware vergessen". Das entfernt das Profil sofort aus dem localStorage Ihres Browsers; bei PromptQuorum muss nichts angefragt werden, da dort nie etwas gespeichert wurde.',
+            },
+            {
+              q: 'Für wie viele der 167 Tools gibt es Hardware-Kompatibilitätsdaten?',
+              a: 'Für 153 der 167 gelisteten Tools liegen recherchierte Hardware-Anforderungsdaten vor. Die übrigen Tools zeigen einen Zustand „Hardware angeben" oder „noch nicht auf Hardware-Eignung geprüft" statt einer Läuft-gut-, Grenzwertig- oder Läuft-nicht-Bewertung, da es noch nichts zum Vergleichen gibt.',
+            },
+            {
+              q: 'Ist das die einzige Seite mit einem dauerhaft gespeicherten Hardware-Profil?',
+              a: 'Wir haben am 13. September 2026 fünf andere Local-AI-Directory-Seiten überprüft und bei keiner ein seitenübergreifend gespeichertes Hardware-Profil gefunden — jede bot stattdessen nur einen einmaligen Rechner auf einer Seite. Das beschreibt die an diesem Datum geprüften Seiten, nicht jede existierende Seite.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Werden meine Hardware-Angaben an PromptQuorum oder Dritte gesendet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ihre genauen Werte werden nie irgendwohin gesendet — das Profil selbst wird ausschließlich im localStorage Ihres Browsers gespeichert. Wenn Sie der Analyse bereits zugestimmt haben, löst das Speichern ein einziges anonymisiertes Ereignis mit nur einem groben Bereich aus (z. B. „16–32 GB" für RAM), niemals die von Ihnen eingegebene Zahl. Sie können das selbst in den Entwicklertools Ihres Browsers überprüfen — eine eventuell ausgelöste Anfrage zeigt nur diesen Bereichswert.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen „Mein Rechner" und „Ihr Setup"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '„Mein Rechner" ist eine grobe Rechnertyp-Auswahl (Grafikkarte, Apple Silicon oder nur CPU), die seit dem Start des Directorys existiert. „Ihr Setup" ist die neue, optionale Ebene darauf — Ihre tatsächlichen RAM-, VRAM- oder Unified-Memory-Werte, die ein konkretes Kompatibilitäts-Badge pro Tool erzeugen statt einer umformulierten allgemeinen Anforderung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was bedeutet das Badge „Grenzwertig"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ihre gespeicherte Hardware erfüllt die gemessene Anforderung eines Tools, aber ohne den rund 30-prozentigen Puffer für die Bewertung „Läuft gut", oder das Tool läuft auf Ihrem Setup nur in einem langsameren reinen CPU-Modus. Es wird wahrscheinlich laufen, aber Leistung oder verfügbarer Speicher könnten knapp sein.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wie lösche ich mein gespeichertes Hardware-Profil?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Öffnen Sie das „Ihr Setup"-Panel und klicken Sie auf „Hardware vergessen". Das entfernt das Profil sofort aus dem localStorage Ihres Browsers; bei PromptQuorum muss nichts angefragt werden, da dort nie etwas gespeichert wurde.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Für wie viele der 167 Tools gibt es Hardware-Kompatibilitätsdaten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Für 153 der 167 gelisteten Tools liegen recherchierte Hardware-Anforderungsdaten vor. Die übrigen Tools zeigen einen Zustand „Hardware angeben" oder „noch nicht auf Hardware-Eignung geprüft" statt einer Läuft-gut-, Grenzwertig- oder Läuft-nicht-Bewertung, da es noch nichts zum Vergleichen gibt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist das die einzige Seite mit einem dauerhaft gespeicherten Hardware-Profil?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wir haben am 13. September 2026 fünf andere Local-AI-Directory-Seiten überprüft und bei keiner ein seitenübergreifend gespeichertes Hardware-Profil gefunden — jede bot stattdessen nur einen einmaligen Rechner auf einer Seite. Das beschreibt die an diesem Datum geprüften Seiten, nicht jede existierende Seite.',
+            },
+          },
+        ],
+      },
+    },
+    es: {
+      category: 'Actualizaciones de producto',
+      title: 'El directorio de software de IA local ahora te dice si tu equipo puede ejecutar cada herramienta',
+      seoTitle: 'Compatibilidad de hardware en el directorio de IA local',
+      intro: 'El directorio de software de IA local ahora incluye un perfil de hardware opcional y una insignia de compatibilidad por herramienta que comprueba si tu propio equipo puede ejecutar cada una de las 167 herramientas listadas. Esto es lo que cambió, cómo funciona la comparación y qué tan sólido es el diseño de privacidad.',
+      publishDate: 'Publicado 13 de septiembre de 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 min de lectura',
+      metaDescription: 'El directorio de software de IA local añadió un perfil de hardware opcional e insignias de compatibilidad (Funciona bien / Ajustado / No funcionará) para 153 de sus 167 herramientas.',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Puntos clave',
+          items: [
+            'El [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026) añadió un perfil de hardware "Tu equipo" y una insignia de compatibilidad (Funciona bien, Ajustado, No funcionará, o Indica tu hardware) a cada una de las 167 herramientas de IA local listadas.',
+            'El perfil es opcional y solo se guarda cuando haces clic en "Guardar mi equipo" — nunca se escribe automáticamente ni se envía a un servidor. Permanece en el localStorage de tu navegador hasta que lo borres.',
+            'Los datos de requisitos de hardware están documentados para 153 de las 167 herramientas. La insignia compara tus valores guardados (RAM del sistema, VRAM, o memoria unificada de Apple) con el requisito medido de cada herramienta.',
+            'Un veredicto "Funciona bien" necesita alrededor de un 30% de margen sobre el requisito medido de una herramienta — cumplirlo exactamente se traduce en "Ajustado", no en "Funciona bien".',
+            'Una revisión de otros cinco sitios de directorios de IA local el 13 de septiembre de 2026 encontró que ninguno mantiene un perfil de hardware guardado en todo el sitio — cada uno ofrece en su lugar una calculadora puntual de una sola página.',
+          ],
+        },
+        whatsNew: {
+          title: 'Qué cambió en el directorio',
+          content: [
+            'El [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026) ya permitía filtrar y ordenar 167 apps de IA local, motores de inferencia y frameworks de agentes por categoría, licencia y requisitos de hardware. Un selector "Mi equipo" permitía elegir un tipo de equipo general — tarjeta gráfica, Apple Silicon, o solo CPU — y ver el requisito de hardware de cada herramienta expresado para ese tipo.',
+            'Lo nuevo es un panel "Tu equipo" junto a ese selector. En lugar de un tipo de equipo general, puedes introducir tus valores reales — RAM del sistema y VRAM para un equipo con tarjeta gráfica, memoria unificada para Apple Silicon, o RAM del sistema para un equipo solo CPU. Una vez guardado, cada ficha de herramienta y cada fila de la tabla muestra una insignia de compatibilidad que compara tus valores con el requisito documentado de esa herramienta.',
+          ],
+        },
+        howItWorks: {
+          title: 'De "qué necesita" a "puedo ejecutarlo"',
+          content: [
+            'La visualización de hardware existente siempre respondía a una pregunta: qué necesita esta herramienta. La nueva insignia responde a otra distinta: dado tu equipo, ¿esta herramienta en concreto realmente funcionará?',
+            'La comparación usa una regla de margen en lugar de un simple aprueba/no aprueba. Tu valor guardado debe superar el requisito de una herramienta en aproximadamente un 30% para contar como "Funciona bien". Cumplir el requisito sin ese margen se traduce en "Ajustado" — probablemente funcionará, pero lento o con poca memoria libre. Quedarse corto se traduce en "No funcionará", salvo que la herramienta tenga un modo de reserva solo con CPU, en cuyo caso se califica como "Ajustado". Los valores de Apple Silicon se convierten de una cifra de VRAM a un mínimo equivalente de memoria unificada, ya que macOS y otras apps en ejecución reservan parte de esa memoria compartida.',
+          ],
+        },
+        verdicts: {
+          title: 'Qué significa cada insignia',
+          content: 'Cuatro estados cubren cada herramienta del directorio, hayas guardado o no un perfil.',
+          rows: [
+            { Insignia: 'Funciona bien', Significado: 'Tu hardware guardado supera el requisito de la herramienta con alrededor de un 30% de margen' },
+            { Insignia: 'Ajustado', Significado: 'Cumple el requisito con poco o ningún margen, o recurre a un modo solo CPU más lento' },
+            { Insignia: 'No funcionará', Significado: 'No alcanza el requisito y la herramienta no tiene modo de reserva solo con CPU' },
+            { Insignia: 'Indica tu hardware', Significado: 'Aún no has guardado un perfil — haz clic en la insignia para abrir el panel "Tu equipo"' },
+          ],
+          columns: ['Insignia', 'Significado'],
+        },
+        privacy: {
+          title: 'El perfil nunca sale de tu navegador',
+          content: [
+            'No se guarda nada en tu navegador hasta que haces clic en "Guardar mi equipo" — no hay detección pasiva y nada se almacena automáticamente. El campo de RAM puede autocompletarse con el valor de memoria de tu navegador como una pista claramente etiquetada ("≈8GB detectados — confirma o ajusta"), pero ese número permanece en el campo, sin guardar, hasta que haces clic.',
+            'El perfil guardado se escribe en el localStorage de tu navegador bajo su propia clave, separada de la selección general existente "Mi equipo", y tus valores exactos nunca se envían en una solicitud de red. Si ya has aceptado las analíticas, guardar sí activa un único evento anonimizado que registra solo un rango general (por ejemplo, "16-32GB") — nunca el número que escribiste. Un botón "Olvidar mi hardware" junto al panel lo borra al instante.',
+            'Esto es una descripción factual de cómo está construida la función, no una afirmación de marketing. Puedes comprobarlo tú mismo abriendo las herramientas de desarrollador de tu navegador, revisando la pestaña Application o Storage, y observando la pestaña Network mientras usas el directorio.',
+          ],
+        },
+        categoryFirst: {
+          title: 'Una función que no hemos visto en otros sitios — comprobado, no supuesto',
+          content: [
+            'El 13 de septiembre de 2026 revisamos otros cinco sitios de directorios y comparadores de herramientas de IA local — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net) y [localclaw.io](https://localclaw.io) — para ver si alguno ofrecía algo similar. Ninguno de los cinco mantiene un perfil de hardware guardado en todo el sitio; cada uno ofrece en su lugar una calculadora de hardware puntual de una sola página que no traslada tus valores a otras páginas ni los recupera en una visita posterior.',
+            'A partir de esa revisión, un perfil de hardware guardado una vez y utilizable en todo el sitio parece ser nuevo entre los sitios de directorios de IA local que revisamos. Esta es una afirmación sobre los cinco sitios revisados en esa fecha, no sobre todos los sitios que existen — un sitio fuera de esa revisión podría ofrecer lo mismo sin que lo sepamos.',
+          ],
+        },
+        cta: {
+          title: 'Pruébalo en el directorio',
+          content: 'Abre el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026), elige tu tipo de equipo, guarda tu configuración y verás una insignia de compatibilidad en las 167 herramientas listadas — desde apps de chat local sencillas hasta frameworks de agentes completos.',
+        },
+        faq: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            {
+              q: '¿Se envía mi información de hardware a PromptQuorum o a alguien más?',
+              a: 'Tus valores exactos nunca se envían a ningún sitio — el perfil en sí se guarda solo en el localStorage de tu navegador. Si ya has aceptado las analíticas, guardar sí activa un único evento anonimizado con solo un rango general (por ejemplo, "16-32GB" para la RAM), nunca el número que escribiste. Puedes verificarlo tú mismo en las herramientas de desarrollador de tu navegador — cualquier solicitud que se active mostrará solo ese rango.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre "Mi equipo" y "Tu equipo"?',
+              a: '"Mi equipo" es una elección general de tipo de equipo (tarjeta gráfica, Apple Silicon, o solo CPU) que existe en el directorio desde su lanzamiento. "Tu equipo" es la nueva capa opcional que se añade encima — tus valores reales de RAM, VRAM o memoria unificada, que generan una insignia de compatibilidad específica por herramienta en lugar de un requisito genérico reformulado.',
+            },
+            {
+              q: '¿Qué significa una insignia "Ajustado"?',
+              a: 'Tu hardware guardado cumple el requisito medido de una herramienta, pero sin el margen de aproximadamente un 30% necesario para un veredicto "Funciona bien", o la herramienta solo funciona en un modo solo CPU más lento con tu configuración. Probablemente funcionará, pero el rendimiento o la memoria disponible podrían ser ajustados.',
+            },
+            {
+              q: '¿Cómo borro mi perfil de hardware guardado?',
+              a: 'Abre el panel "Tu equipo" y haz clic en "Olvidar mi hardware". Esto elimina el perfil del localStorage de tu navegador de inmediato; no hace falta pedir nada a PromptQuorum, porque nunca se le envió nada.',
+            },
+            {
+              q: '¿Cuántas de las 167 herramientas tienen datos de compatibilidad de hardware?',
+              a: '153 de las 167 herramientas listadas tienen datos de requisitos de hardware documentados. Las herramientas restantes muestran un estado "Indica tu hardware" o "aún no revisado para compatibilidad de hardware" en lugar de un veredicto de funciona bien, ajustado o no funcionará, ya que todavía no hay nada con qué comparar.',
+            },
+            {
+              q: '¿Es este el único sitio con un perfil de hardware persistente?',
+              a: 'Revisamos otros cinco sitios de directorios de IA local el 13 de septiembre de 2026 y ninguno mantiene un perfil de hardware guardado en todo el sitio — cada uno ofrecía en su lugar una calculadora puntual de una sola página. Eso describe los sitios revisados en esa fecha, no todos los sitios que existen.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Se envía mi información de hardware a PromptQuorum o a alguien más?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tus valores exactos nunca se envían a ningún sitio — el perfil en sí se guarda solo en el localStorage de tu navegador. Si ya has aceptado las analíticas, guardar sí activa un único evento anonimizado con solo un rango general (por ejemplo, "16-32GB" para la RAM), nunca el número que escribiste. Puedes verificarlo tú mismo en las herramientas de desarrollador de tu navegador — cualquier solicitud que se active mostrará solo ese rango.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es la diferencia entre "Mi equipo" y "Tu equipo"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"Mi equipo" es una elección general de tipo de equipo (tarjeta gráfica, Apple Silicon, o solo CPU) que existe en el directorio desde su lanzamiento. "Tu equipo" es la nueva capa opcional que se añade encima — tus valores reales de RAM, VRAM o memoria unificada, que generan una insignia de compatibilidad específica por herramienta en lugar de un requisito genérico reformulado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué significa una insignia "Ajustado"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tu hardware guardado cumple el requisito medido de una herramienta, pero sin el margen de aproximadamente un 30% necesario para un veredicto "Funciona bien", o la herramienta solo funciona en un modo solo CPU más lento con tu configuración. Probablemente funcionará, pero el rendimiento o la memoria disponible podrían ser ajustados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo borro mi perfil de hardware guardado?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Abre el panel "Tu equipo" y haz clic en "Olvidar mi hardware". Esto elimina el perfil del localStorage de tu navegador de inmediato; no hace falta pedir nada a PromptQuorum, porque nunca se le envió nada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuántas de las 167 herramientas tienen datos de compatibilidad de hardware?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '153 de las 167 herramientas listadas tienen datos de requisitos de hardware documentados. Las herramientas restantes muestran un estado "Indica tu hardware" o "aún no revisado para compatibilidad de hardware" en lugar de un veredicto de funciona bien, ajustado o no funcionará, ya que todavía no hay nada con qué comparar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es este el único sitio con un perfil de hardware persistente?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Revisamos otros cinco sitios de directorios de IA local el 13 de septiembre de 2026 y ninguno mantiene un perfil de hardware guardado en todo el sitio — cada uno ofrecía en su lugar una calculadora puntual de una sola página. Eso describe los sitios revisados en esa fecha, no todos los sitios que existen.',
+            },
+          },
+        ],
+      },
+    },
+    fr: {
+      category: 'Mises à jour produit',
+      title: "L'annuaire des logiciels IA locale indique désormais si votre machine peut faire tourner chaque outil",
+      seoTitle: 'Vérification de compatibilité matérielle : annuaire IA locale',
+      intro: "L'annuaire des logiciels IA locale propose désormais un profil matériel optionnel et un badge de compatibilité par outil qui indique si votre propre machine peut faire tourner chacun des 167 outils répertoriés. Voici ce qui a changé, comment fonctionne la comparaison, et ce qu'il en est de la confidentialité.",
+      publishDate: 'Publié le 13 septembre 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 min de lecture',
+      metaDescription: "L'annuaire des logiciels IA locale a ajouté un profil matériel optionnel et des badges de compatibilité (Fonctionne bien / Tout juste / Ne fonctionnera pas) pour 153 des 167 outils.",
+      educationalLevel: 'Débutant',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Points clés',
+          items: [
+            "L'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026) a ajouté un profil matériel « Votre configuration » et un badge de compatibilité (Fonctionne bien, Tout juste, Ne fonctionnera pas, ou Indiquer votre matériel) pour chacun des 167 outils IA locale répertoriés.",
+            'Le profil est optionnel et n\'est enregistré que si vous cliquez sur « Enregistrer ma configuration » — il n\'est jamais écrit automatiquement ni envoyé à un serveur. Il reste dans le localStorage de votre navigateur jusqu\'à ce que vous l\'effaciez.',
+            "Les données de configuration matérielle sont documentées pour 153 des 167 outils. Le badge compare vos valeurs enregistrées (RAM système, VRAM, ou mémoire unifiée Apple) à la configuration mesurée de chaque outil.",
+            'Un verdict « Fonctionne bien » nécessite environ 30 % de marge par rapport à la configuration mesurée d\'un outil — l\'atteindre exactement se traduit par « Tout juste », pas par « Fonctionne bien ».',
+            'Un examen de cinq autres annuaires IA locale le 13 septembre 2026 a montré qu\'aucun ne conserve un profil matériel enregistré sur l\'ensemble du site — chacun propose plutôt un calculateur ponctuel sur une seule page.',
+          ],
+        },
+        whatsNew: {
+          title: "Ce qui a changé dans l'annuaire",
+          content: [
+            "L'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026) permettait déjà de filtrer et trier 167 applications, moteurs d'inférence et frameworks d'agents IA locale par catégorie, licence et besoin matériel. Un sélecteur « Ma machine » permettait de choisir un type de machine approximatif — carte graphique, Apple Silicon, ou CPU seul — et d'afficher la configuration matérielle de chaque outil reformulée pour ce type.",
+            'La nouveauté est un panneau « Votre configuration » à côté de ce sélecteur. Au lieu d\'un type de machine approximatif, vous pouvez saisir vos valeurs réelles — RAM système et VRAM pour une machine avec carte graphique, mémoire unifiée pour Apple Silicon, ou RAM système pour une machine CPU seul. Une fois enregistré, chaque fiche outil et chaque ligne de tableau affiche un badge de compatibilité comparant vos valeurs à la configuration documentée de cet outil.',
+          ],
+        },
+        howItWorks: {
+          title: 'De « De quoi a-t-il besoin » à « Puis-je le faire tourner »',
+          content: [
+            "L'affichage matériel existant répondait toujours à une seule question : de quoi cet outil a-t-il besoin. Le nouveau badge répond à une question différente : sur votre machine, cet outil précis va-t-il réellement fonctionner.",
+            'La comparaison applique une règle de marge plutôt qu\'un simple réussi/échoué. Votre valeur enregistrée doit dépasser la configuration requise d\'un outil d\'environ 30 % pour compter comme « Fonctionne bien ». L\'atteindre sans cette marge se traduit par « Tout juste » — l\'outil fonctionnera probablement, mais lentement ou avec peu de mémoire disponible. En dessous, le verdict est « Ne fonctionnera pas », sauf si l\'outil dispose d\'un mode CPU seul de repli, auquel cas il est noté « Tout juste ». Les valeurs Apple Silicon sont converties depuis un chiffre de VRAM vers un seuil équivalent de mémoire unifiée, car macOS et les autres applications actives réservent une partie de cette mémoire partagée.',
+          ],
+        },
+        verdicts: {
+          title: 'Ce que signifie chaque badge',
+          content: 'Quatre états couvrent chaque outil de l\'annuaire, que vous ayez ou non enregistré un profil.',
+          rows: [
+            { Badge: 'Fonctionne bien', Signification: 'Votre matériel enregistré dépasse la configuration requise de l\'outil avec environ 30 % de marge' },
+            { Badge: 'Tout juste', Signification: 'Atteint la configuration requise avec peu ou pas de marge, ou bascule sur un mode CPU seul plus lent' },
+            { Badge: 'Ne fonctionnera pas', Signification: "N'atteint pas la configuration requise et l'outil n'a pas de mode CPU seul de repli" },
+            { Badge: 'Indiquer votre matériel', Signification: 'Aucun profil enregistré pour l\'instant — cliquez sur le badge pour ouvrir le panneau « Votre configuration »' },
+          ],
+          columns: ['Badge', 'Signification'],
+        },
+        privacy: {
+          title: 'Le profil ne quitte jamais votre navigateur',
+          content: [
+            'Rien n\'est enregistré dans votre navigateur avant que vous cliquiez sur « Enregistrer ma configuration » — il n\'y a aucune détection passive et rien n\'est stocké automatiquement. Le champ RAM peut être pré-rempli à partir de la valeur mémoire de votre navigateur, sous forme d\'indication clairement identifiée (« ≈8 Go détectés — confirmez ou ajustez »), mais ce chiffre reste dans le champ, non enregistré, tant que vous n\'avez pas cliqué.',
+            'Le profil enregistré est écrit dans le localStorage de votre navigateur sous sa propre clé, distincte de la sélection approximative existante « Ma machine », et vos valeurs exactes ne sont jamais envoyées dans une requête réseau. Si vous avez déjà accepté les analyses, l\'enregistrement déclenche un seul événement anonymisé qui n\'indique qu\'une plage approximative (par exemple « 16-32 Go ») — jamais le chiffre que vous avez saisi. Un bouton « Oublier mon matériel » à côté du panneau l\'efface immédiatement.',
+            'Il s\'agit d\'une description factuelle de la façon dont la fonctionnalité est construite, pas d\'une affirmation marketing. Vous pouvez le vérifier vous-même en ouvrant les outils de développement de votre navigateur, en consultant l\'onglet Application ou Stockage, et en observant l\'onglet Réseau pendant que vous utilisez l\'annuaire.',
+          ],
+        },
+        categoryFirst: {
+          title: "Une fonctionnalité que nous n'avons pas vue ailleurs — vérifiée, pas supposée",
+          content: [
+            "Le 13 septembre 2026, nous avons examiné cinq autres annuaires et comparateurs d'outils IA locale — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net) et [localclaw.io](https://localclaw.io) — pour voir si l'un d'eux proposait quelque chose de comparable. Aucun des cinq ne conserve de profil matériel enregistré sur l'ensemble du site ; chacun propose plutôt un calculateur matériel ponctuel sur une seule page, qui ne transmet pas vos valeurs aux autres pages ni ne les restitue lors d'une visite ultérieure.",
+            "Sur la base de cette vérification, un profil matériel enregistré une fois et utilisable sur tout le site semble nouveau parmi les annuaires IA locale que nous avons examinés. C'est une constatation sur les cinq sites vérifiés à cette date, pas une affirmation sur tous les sites existants — un site en dehors de cet examen pourrait proposer la même chose sans que nous le sachions.",
+          ],
+        },
+        cta: {
+          title: "Essayez-le sur l'annuaire",
+          content: "Ouvrez l'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026), choisissez votre type de machine, enregistrez votre configuration, et consultez un badge de compatibilité sur les 167 outils répertoriés — des applications de chat locales aux frameworks d'agents complets.",
+        },
+        faq: {
+          title: 'Questions fréquentes',
+          faqs: [
+            {
+              q: 'Mes informations matérielles sont-elles envoyées à PromptQuorum ou à un tiers ?',
+              a: "Vos valeurs exactes ne sont jamais envoyées où que ce soit — le profil lui-même est stocké uniquement dans le localStorage de votre navigateur. Si vous avez déjà accepté les analyses, l'enregistrement déclenche un seul événement anonymisé indiquant seulement une plage approximative (par exemple « 16-32 Go » pour la RAM), jamais le chiffre saisi. Vous pouvez le vérifier vous-même dans les outils de développement de votre navigateur — toute requête déclenchée n'affichera que cette plage.",
+            },
+            {
+              q: 'Quelle est la différence entre « Ma machine » et « Votre configuration » ?',
+              a: '« Ma machine » est un choix approximatif de type de machine (carte graphique, Apple Silicon, ou CPU seul) présent sur l\'annuaire depuis son lancement. « Votre configuration » est la nouvelle couche optionnelle qui s\'y ajoute — vos valeurs réelles de RAM, VRAM ou mémoire unifiée, qui produisent un badge de compatibilité précis par outil au lieu d\'une configuration générique reformulée.',
+            },
+            {
+              q: 'Que signifie un badge « Tout juste » ?',
+              a: 'Votre matériel enregistré atteint la configuration mesurée d\'un outil, mais sans la marge d\'environ 30 % nécessaire pour un verdict « Fonctionne bien », ou l\'outil ne fonctionne que dans un mode CPU seul plus lent sur votre configuration. Il fonctionnera probablement, mais les performances ou la mémoire disponible pourraient être limitées.',
+            },
+            {
+              q: 'Comment effacer mon profil matériel enregistré ?',
+              a: 'Ouvrez le panneau « Votre configuration » et cliquez sur « Oublier mon matériel ». Cela supprime immédiatement le profil du localStorage de votre navigateur ; rien n\'a besoin d\'être demandé à PromptQuorum, puisque rien n\'y a jamais été envoyé.',
+            },
+            {
+              q: 'Combien des 167 outils disposent de données de compatibilité matérielle ?',
+              a: "153 des 167 outils répertoriés disposent de données de configuration matérielle documentées. Les autres outils affichent un état « Indiquer votre matériel » ou « pas encore évalué pour la compatibilité matérielle » au lieu d'un verdict fonctionne bien, tout juste ou ne fonctionnera pas, faute d'élément de comparaison pour l'instant.",
+            },
+            {
+              q: 'Est-ce le seul site avec un profil matériel persistant ?',
+              a: "Nous avons examiné cinq autres annuaires IA locale le 13 septembre 2026 et aucun ne conserve de profil matériel enregistré sur l'ensemble du site — chacun proposait plutôt un calculateur ponctuel sur une seule page. Cela décrit les sites vérifiés à cette date, pas tous les sites existants.",
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Mes informations matérielles sont-elles envoyées à PromptQuorum ou à un tiers ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Vos valeurs exactes ne sont jamais envoyées où que ce soit — le profil lui-même est stocké uniquement dans le localStorage de votre navigateur. Si vous avez déjà accepté les analyses, l'enregistrement déclenche un seul événement anonymisé indiquant seulement une plage approximative (par exemple « 16-32 Go » pour la RAM), jamais le chiffre saisi. Vous pouvez le vérifier vous-même dans les outils de développement de votre navigateur — toute requête déclenchée n'affichera que cette plage.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre « Ma machine » et « Votre configuration » ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '« Ma machine » est un choix approximatif de type de machine (carte graphique, Apple Silicon, ou CPU seul) présent sur l\'annuaire depuis son lancement. « Votre configuration » est la nouvelle couche optionnelle qui s\'y ajoute — vos valeurs réelles de RAM, VRAM ou mémoire unifiée, qui produisent un badge de compatibilité précis par outil au lieu d\'une configuration générique reformulée.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Que signifie un badge « Tout juste » ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Votre matériel enregistré atteint la configuration mesurée d\'un outil, mais sans la marge d\'environ 30 % nécessaire pour un verdict « Fonctionne bien », ou l\'outil ne fonctionne que dans un mode CPU seul plus lent sur votre configuration. Il fonctionnera probablement, mais les performances ou la mémoire disponible pourraient être limitées.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Comment effacer mon profil matériel enregistré ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ouvrez le panneau « Votre configuration » et cliquez sur « Oublier mon matériel ». Cela supprime immédiatement le profil du localStorage de votre navigateur ; rien n\'a besoin d\'être demandé à PromptQuorum, puisque rien n\'y a jamais été envoyé.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Combien des 167 outils disposent de données de compatibilité matérielle ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "153 des 167 outils répertoriés disposent de données de configuration matérielle documentées. Les autres outils affichent un état « Indiquer votre matériel » ou « pas encore évalué pour la compatibilité matérielle » au lieu d'un verdict fonctionne bien, tout juste ou ne fonctionnera pas, faute d'élément de comparaison pour l'instant.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Est-ce le seul site avec un profil matériel persistant ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Nous avons examiné cinq autres annuaires IA locale le 13 septembre 2026 et aucun ne conserve de profil matériel enregistré sur l'ensemble du site — chacun proposait plutôt un calculateur ponctuel sur une seule page. Cela décrit les sites vérifiés à cette date, pas tous les sites existants.",
+            },
+          },
+        ],
+      },
+    },
+    ja: {
+      category: 'プロダクトアップデート',
+      title: 'Local AI Software Directoryが、お使いのマシンで各ツールが動くかを表示するようになりました',
+      seoTitle: 'Local AI Directoryにハードウェア互換性チェック追加',
+      intro: 'Local AI Software Directoryに、任意設定のハードウェアプロファイルと、掲載167ツールそれぞれについて自分のマシンで動くかを判定する互換性バッジが追加されました。何が変わったか、判定の仕組み、プライバシー設計について説明します。',
+      publishDate: '2026年9月13日公開',
+      last_full_refresh: '2026-09-13',
+      readTime: '5分で読める',
+      metaDescription: 'Local AI Software Directoryに、任意設定のハードウェアプロファイルと互換性バッジ(快適に動作/ギリギリ/動作不可)が追加され、167ツール中153ツールに対応しています。',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '重要ポイント',
+          items: [
+            '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)に「自分の環境」ハードウェアプロファイルと互換性バッジ(快適に動作、ギリギリ、動作不可、スペックを設定)が、掲載167ツールすべてに追加されました。',
+            'このプロファイルは任意設定で、「保存」をクリックしたときだけ保存されます — 自動的に書き込まれることも、サーバーに送信されることもありません。ブラウザのlocalStorageに保存され、削除するまで残ります。',
+            'ハードウェア要件データは167ツール中153ツールで調査済みです。バッジは保存した数値(システムRAM、VRAM、またはAppleのユニファイドメモリ)を各ツールの実測要件と比較します。',
+            '「快適に動作」の判定には、実測要件に対しておよそ30%の余裕が必要です — 要件をちょうど満たすだけでは「快適に動作」ではなく「ギリギリ」になります。',
+            '2026年9月13日に他の5つのローカルAIディレクトリサイトを調査したところ、サイト全体でハードウェアプロファイルを保存し続ける仕組みを持つサイトはありませんでした — いずれも単発の1ページ完結型の計算ツールでした。',
+          ],
+        },
+        whatsNew: {
+          title: 'ディレクトリで何が変わったか',
+          content: [
+            '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)では、これまでも167のローカルAIアプリ、モデルランタイム、エージェントフレームワークをカテゴリ、ライセンス、必要ハードウェアで絞り込み・並べ替えできました。「自分のマシン」セレクターでは、グラフィックカード、Apple Silicon、CPUのみといった大まかなマシンタイプを選ぶと、各ツールのハードウェア要件がそのタイプに合わせて表示されていました。',
+            '新しく追加されたのは、そのセレクターの隣にある「自分の環境」パネルです。大まかなマシンタイプの代わりに、実際の数値 — グラフィックカード搭載機ならシステムRAMとVRAM、Apple Siliconならユニファイドメモリ、CPUのみのマシンならシステムRAM — を入力できます。保存すると、各ツールカードとテーブルの各行に、入力した数値をそのツールの調査済み要件と比較した互換性バッジが表示されます。',
+          ],
+        },
+        howItWorks: {
+          title: '「何が必要か」から「自分の環境で動くか」へ',
+          content: [
+            '既存のハードウェア表示は常に一つの問いに答えていました — このツールには何が必要か。新しいバッジは別の問いに答えます — あなたのマシンで、この具体的なツールが実際に動くかどうかです。',
+            '比較には単純な合否ではなく、余裕度のルールを使います。保存した数値がツールの要件をおよそ30%上回っていれば「快適に動作」と判定されます。その余裕なしに要件を満たすだけなら「ギリギリ」— おそらく動作しますが、遅かったり、空きメモリが少なかったりします。要件に届かない場合は「動作不可」ですが、そのツールにCPUのみのフォールバックがある場合は代わりに「ギリギリ」と判定されます。Apple Siliconの数値は、VRAMの値から相当するユニファイドメモリの下限値に換算されます。macOSや他の実行中アプリがその共有メモリの一部を確保するためです。',
+          ],
+        },
+        verdicts: {
+          title: '各バッジの意味',
+          content: 'プロファイルを保存しているかどうかにかかわらず、4つの状態がすべてのツールに対応します。',
+          rows: [
+            { バッジ: '快適に動作', 意味: '保存したハードウェアがツールの要件をおよそ30%の余裕で上回っている' },
+            { バッジ: 'ギリギリ', 意味: '余裕がほとんどないまま要件を満たしている、または遅いCPUのみのモードにフォールバックする' },
+            { バッジ: '動作不可', 意味: '要件を満たさず、そのツールにCPUのみのフォールバックがない' },
+            { バッジ: 'スペックを設定', 意味: 'まだプロファイルが保存されていない — バッジをクリックすると「自分の環境」パネルが開く' },
+          ],
+          columns: ['バッジ', '意味'],
+        },
+        privacy: {
+          title: 'プロファイルはブラウザの外に一切出ません',
+          content: [
+            '「保存」をクリックするまで、ブラウザには何も書き込まれません — 受動的な検出は一切なく、自動的に保存されることもありません。RAMの入力欄はブラウザのメモリ値を基に、それとわかる形のヒント(「≈8GB検出 — 確認または調整してください」)として自動入力されることがありますが、その数値はクリックするまで入力欄に留まるだけで保存されません。',
+            '保存されたプロファイルは、既存の大まかな「自分のマシン」選択とは別のキーでブラウザのlocalStorageに書き込まれ、実際に入力した数値がネットワークリクエストで送信されることは一切ありません。すでにアナリティクスの利用に同意している場合、保存時に「16〜32GB」のような大まかな範囲のみを記録する匿名化イベントが1件送信されますが、入力した具体的な数値が送信されることはありません。パネル横の「ハードウェアを忘れる」ボタンで即座に削除できます。',
+            'これは機能の実装方法についての事実の説明であり、マーケティング上の主張ではありません。ブラウザの開発者ツールを開き、ApplicationタブまたはStorageタブを確認し、ディレクトリを使いながらNetworkタブを観察することで、自分自身で確認できます。',
+          ],
+        },
+        categoryFirst: {
+          title: '他では見かけなかった機能 — 推測ではなく確認済み',
+          content: [
+            '2026年9月13日、他の5つのローカルAIディレクトリ・ツール比較サイト — [opensourcesai.com](https://opensourcesai.com)、[runlocalai.co](https://runlocalai.co)、[everylocalai.com](https://everylocalai.com)、[local-ai.net](https://local-ai.net)、[localclaw.io](https://localclaw.io) — を調査し、同様の機能があるか確認しました。5サイトのいずれも、サイト全体で保存されるハードウェアプロファイルは持っておらず、代わりにいずれも単発の1ページ完結型のハードウェア計算ツールを提供しているだけで、数値を他のページに引き継いだり、次回訪問時に呼び出したりする機能はありませんでした。',
+            'この調査結果に基づくと、一度保存すればサイト全体で使えるハードウェアプロファイルは、我々が調査したローカルAIディレクトリサイトの中では新しい機能のようです。これはその日に調査した5サイトについての事実であり、存在するすべてのサイトについての主張ではありません — 調査対象外のサイトが同様の機能を持っている可能性はあり、その場合は我々には分かりません。',
+          ],
+        },
+        cta: {
+          title: 'ディレクトリで試してみる',
+          content: '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)を開き、マシンタイプを選び、自分の環境を保存すれば、単純なローカルチャットアプリから本格的なエージェントフレームワークまで、掲載167ツールすべてに互換性バッジが表示されます。',
+        },
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: '私のハードウェア情報はPromptQuorumや他社に送信されますか?',
+              a: '実際に入力した数値がどこかに送信されることは一切ありません — プロファイル自体はブラウザのlocalStorageにのみ保存されます。すでにアナリティクスの利用に同意している場合、保存時に「16〜32GB」のような大まかな範囲のみを記録する匿名化イベントが1件送信されますが、入力した具体的な数値が送信されることはありません。ブラウザの開発者ツールで自分自身で確認できます — 送信されるリクエストがあっても、その範囲の値しか表示されません。',
+            },
+            {
+              q: '「自分のマシン」と「自分の環境」の違いは何ですか?',
+              a: '「自分のマシン」は、ディレクトリの公開当初からある大まかなマシンタイプの選択(グラフィックカード、Apple Silicon、CPUのみ)です。「自分の環境」は、その上に追加された新しい任意設定のレイヤーで、実際のRAM、VRAM、ユニファイドメモリの数値を入力すると、言い換えただけの一般的な要件ではなく、ツールごとの具体的な互換性バッジが表示されます。',
+            },
+            {
+              q: '「ギリギリ」バッジは何を意味しますか?',
+              a: '保存したハードウェアがツールの実測要件を満たしてはいるものの、「快適に動作」に必要なおよそ30%の余裕がない、またはそのツールが自分の環境では遅いCPUのみのモードでしか動作しない状態です。おそらく動作しますが、パフォーマンスや空きメモリが厳しい可能性があります。',
+            },
+            {
+              q: '保存したハードウェアプロファイルはどうやって削除しますか?',
+              a: '「自分の環境」パネルを開き、「ハードウェアを忘れる」をクリックしてください。ブラウザのlocalStorageからプロファイルが即座に削除されます。PromptQuorum側には元々何も送信されていないため、PromptQuorumに何かを依頼する必要はありません。',
+            },
+            {
+              q: '167ツールのうち、何ツールにハードウェア互換性データがありますか?',
+              a: '掲載167ツールのうち153ツールに調査済みのハードウェア要件データがあります。残りのツールは、快適に動作・ギリギリ・動作不可の判定ではなく、「スペックを設定」または「ハードウェア適合性は未評価」という状態で表示されます。比較対象となるデータがまだないためです。',
+            },
+            {
+              q: 'このような永続的なハードウェアプロファイルを持つのはこのサイトだけですか?',
+              a: '2026年9月13日に他の5つのローカルAIディレクトリサイトを調査しましたが、サイト全体でハードウェアプロファイルを保存する仕組みを持つサイトはありませんでした — いずれも単発の1ページ完結型の計算ツールでした。これはその日に調査したサイトについての説明であり、存在するすべてのサイトについての主張ではありません。',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '私のハードウェア情報はPromptQuorumや他社に送信されますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '実際に入力した数値がどこかに送信されることは一切ありません — プロファイル自体はブラウザのlocalStorageにのみ保存されます。すでにアナリティクスの利用に同意している場合、保存時に「16〜32GB」のような大まかな範囲のみを記録する匿名化イベントが1件送信されますが、入力した具体的な数値が送信されることはありません。ブラウザの開発者ツールで自分自身で確認できます — 送信されるリクエストがあっても、その範囲の値しか表示されません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '「自分のマシン」と「自分の環境」の違いは何ですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '「自分のマシン」は、ディレクトリの公開当初からある大まかなマシンタイプの選択(グラフィックカード、Apple Silicon、CPUのみ)です。「自分の環境」は、その上に追加された新しい任意設定のレイヤーで、実際のRAM、VRAM、ユニファイドメモリの数値を入力すると、言い換えただけの一般的な要件ではなく、ツールごとの具体的な互換性バッジが表示されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '「ギリギリ」バッジは何を意味しますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '保存したハードウェアがツールの実測要件を満たしてはいるものの、「快適に動作」に必要なおよそ30%の余裕がない、またはそのツールが自分の環境では遅いCPUのみのモードでしか動作しない状態です。おそらく動作しますが、パフォーマンスや空きメモリが厳しい可能性があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '保存したハードウェアプロファイルはどうやって削除しますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '「自分の環境」パネルを開き、「ハードウェアを忘れる」をクリックしてください。ブラウザのlocalStorageからプロファイルが即座に削除されます。PromptQuorum側には元々何も送信されていないため、PromptQuorumに何かを依頼する必要はありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '167ツールのうち、何ツールにハードウェア互換性データがありますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '掲載167ツールのうち153ツールに調査済みのハードウェア要件データがあります。残りのツールは、快適に動作・ギリギリ・動作不可の判定ではなく、「スペックを設定」または「ハードウェア適合性は未評価」という状態で表示されます。比較対象となるデータがまだないためです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'このような永続的なハードウェアプロファイルを持つのはこのサイトだけですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026年9月13日に他の5つのローカルAIディレクトリサイトを調査しましたが、サイト全体でハードウェアプロファイルを保存する仕組みを持つサイトはありませんでした — いずれも単発の1ページ完結型の計算ツールでした。これはその日に調査したサイトについての説明であり、存在するすべてのサイトについての主張ではありません。',
+            },
+          },
+        ],
+      },
+    },
+    ko: {
+      category: '제품 업데이트',
+      title: 'Local AI Software Directory가 이제 내 컴퓨터에서 각 도구를 실행할 수 있는지 알려드립니다',
+      seoTitle: 'Local AI Directory에 하드웨어 호환성 확인 기능 추가',
+      intro: 'Local AI Software Directory에 선택적 하드웨어 프로필과 도구별 호환성 배지가 추가되어, 자신의 컴퓨터가 등록된 167개 도구 각각을 실행할 수 있는지 확인할 수 있습니다. 무엇이 바뀌었는지, 비교 방식은 어떻게 작동하는지, 개인정보 보호 설계는 어떤지 설명합니다.',
+      publishDate: '2026년 9월 13일 게시',
+      last_full_refresh: '2026-09-13',
+      readTime: '5분 읽기',
+      metaDescription: 'Local AI Software Directory에 선택적 하드웨어 프로필과 호환성 배지(원활하게 실행됨/아슬아슬함/실행 불가)가 추가되어 167개 도구 중 153개를 지원합니다.',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '핵심 내용',
+          items: [
+            '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)에 등록된 167개 로컬 AI 도구 각각에 "내 사양" 하드웨어 프로필과 호환성 배지(원활하게 실행됨, 아슬아슬함, 실행 불가, 또는 내 사양 설정)가 추가되었습니다.',
+            '이 프로필은 선택 사항이며 "내 사양 저장"을 클릭했을 때만 저장됩니다 — 자동으로 기록되거나 서버로 전송되는 일은 절대 없습니다. 삭제하기 전까지는 브라우저의 localStorage에 남아 있습니다.',
+            '하드웨어 요구사항 데이터는 167개 도구 중 153개에 대해 조사되어 있습니다. 배지는 저장한 수치(시스템 RAM, VRAM, 또는 Apple 통합 메모리)를 각 도구의 실측 요구사항과 비교합니다.',
+            '"원활하게 실행됨" 판정을 받으려면 도구의 실측 요구사항보다 약 30% 정도의 여유가 있어야 합니다 — 요구사항을 정확히 충족하는 수준은 "원활하게 실행됨"이 아니라 "아슬아슬함"으로 판정됩니다.',
+            '2026년 9월 13일에 다른 로컬 AI 디렉터리 사이트 5곳을 조사한 결과, 사이트 전체에 걸쳐 저장된 하드웨어 프로필을 유지하는 곳은 하나도 없었습니다 — 모두 단발성 단일 페이지 계산기를 제공할 뿐이었습니다.',
+          ],
+        },
+        whatsNew: {
+          title: '디렉터리에서 무엇이 바뀌었는가',
+          content: [
+            '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)는 이미 167개의 로컬 AI 앱, 모델 런타임, 에이전트 프레임워크를 카테고리, 라이선스, 하드웨어 요구사항별로 필터링하고 정렬할 수 있었습니다. "내 컴퓨터" 선택기를 통해 그래픽 카드, Apple Silicon, CPU 전용 중 대략적인 기기 유형을 선택하면, 각 도구의 하드웨어 요구사항이 해당 유형에 맞게 표시되었습니다.',
+            '새로 추가된 것은 이 선택기 옆에 있는 "내 사양" 패널입니다. 대략적인 기기 유형 대신, 그래픽 카드 기기라면 시스템 RAM과 VRAM, Apple Silicon이라면 통합 메모리, CPU 전용 기기라면 시스템 RAM처럼 실제 수치를 입력할 수 있습니다. 저장하고 나면 모든 도구 카드와 표의 각 행에 사용자의 수치를 해당 도구의 조사된 요구사항과 비교한 호환성 배지가 표시됩니다.',
+          ],
+        },
+        howItWorks: {
+          title: '"무엇이 필요한가"에서 "내가 실행할 수 있는가"로',
+          content: [
+            '기존의 하드웨어 표시는 항상 하나의 질문에만 답했습니다 — 이 도구는 무엇이 필요한가. 새로운 배지는 다른 질문에 답합니다 — 당신의 컴퓨터를 기준으로, 이 특정 도구가 실제로 실행될 것인가.',
+            '이 비교는 단순한 합격/불합격이 아니라 여유율 규칙을 사용합니다. 저장한 수치가 도구의 요구사항을 약 30% 이상 초과해야 "원활하게 실행됨"으로 판정됩니다. 그 여유 없이 요구사항을 충족하는 경우는 "아슬아슬함"으로 판정됩니다 — 실행될 가능성은 높지만 느리거나 남는 메모리가 거의 없을 수 있습니다. 요구사항에 미치지 못하면 "실행 불가"로 판정되지만, 해당 도구에 CPU 전용 대체 모드가 있는 경우에는 대신 "아슬아슬함"으로 판정됩니다. Apple Silicon 수치는 VRAM 값에서 그에 상응하는 통합 메모리 하한선으로 환산됩니다. macOS와 실행 중인 다른 앱들이 그 공유 메모리의 일부를 차지하기 때문입니다.',
+          ],
+        },
+        verdicts: {
+          title: '각 배지의 의미',
+          content: '프로필을 저장했는지 여부와 관계없이, 네 가지 상태가 디렉터리의 모든 도구를 아우릅니다.',
+          rows: [
+            { 배지: '원활하게 실행됨', 의미: '저장된 하드웨어가 도구 요구사항을 약 30% 여유로 충족함' },
+            { 배지: '아슬아슬함', 의미: '여유가 거의 또는 전혀 없이 요구사항을 충족하거나, 더 느린 CPU 전용 모드로 대체됨' },
+            { 배지: '실행 불가', 의미: '요구사항에 미치지 못하며 해당 도구에 CPU 전용 대체 모드가 없음' },
+            { 배지: '내 사양 설정', 의미: '아직 저장된 프로필이 없음 — 배지를 클릭하면 "내 사양" 패널이 열림' },
+          ],
+          columns: ['배지', '의미'],
+        },
+        privacy: {
+          title: '프로필은 브라우저 밖으로 절대 나가지 않습니다',
+          content: [
+            '"내 사양 저장"을 클릭하기 전까지는 브라우저에 아무것도 기록되지 않습니다 — 수동적인 감지는 전혀 없으며, 어떤 것도 자동으로 저장되지 않습니다. RAM 입력란은 브라우저의 메모리 값을 기준으로 명확히 표시된 힌트("≈8GB 감지됨 — 확인 또는 조정")로 미리 채워질 수 있지만, 클릭하기 전까지 그 값은 저장되지 않은 채 입력란에만 남아 있습니다.',
+            '저장된 프로필은 기존의 대략적인 "내 컴퓨터" 선택과는 별도의 키로 브라우저의 localStorage에 기록되며, 사용자가 입력한 정확한 수치는 네트워크 요청으로 전송되는 일이 절대 없습니다. 이미 분석(애널리틱스) 사용에 동의한 경우, 저장 시 "16~32GB"와 같이 대략적인 구간만 기록하는 익명화된 이벤트가 한 번 전송되지만, 입력한 구체적인 숫자는 전송되지 않습니다. 패널 옆의 "내 하드웨어 삭제" 버튼을 누르면 즉시 삭제됩니다.',
+            '이는 이 기능이 어떻게 구현되었는지에 대한 사실적인 설명이며, 마케팅 주장이 아닙니다. 브라우저의 개발자 도구를 열어 Application 또는 Storage 탭을 확인하고, 디렉터리를 사용하는 동안 Network 탭을 관찰함으로써 직접 확인할 수 있습니다.',
+          ],
+        },
+        categoryFirst: {
+          title: '다른 곳에서는 보지 못한 기능 — 추정이 아니라 확인한 사실',
+          content: [
+            '2026년 9월 13일, 다른 로컬 AI 디렉터리 및 도구 비교 사이트 5곳 — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net), [localclaw.io](https://localclaw.io) — 을 조사하여 유사한 기능을 제공하는지 확인했습니다. 다섯 사이트 모두 사이트 전체에 걸쳐 저장된 하드웨어 프로필을 유지하지 않았으며, 각각 단발성 단일 페이지 하드웨어 계산기를 제공할 뿐 사용자의 수치를 다른 페이지로 이어가거나 이후 방문 시 다시 불러오지 못했습니다.',
+            '이 조사 결과를 근거로, 한 번 저장하면 사이트 전체에서 사용할 수 있는 하드웨어 프로필은 저희가 조사한 로컬 AI 디렉터리 사이트들 중에서는 새로운 기능으로 보입니다. 이는 해당 날짜에 조사한 다섯 사이트에 대한 진술이며, 존재하는 모든 사이트에 대한 주장이 아닙니다 — 이번 조사 범위 밖의 사이트가 같은 기능을 제공하고 있을 수도 있으며, 그 경우 저희는 알지 못합니다.',
+          ],
+        },
+        cta: {
+          title: '디렉터리에서 직접 사용해 보세요',
+          content: '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)를 열어 기기 유형을 선택하고 내 사양을 저장하면, 단순한 로컬 채팅 앱부터 완전한 에이전트 프레임워크까지 등록된 167개 도구 전체에서 호환성 배지를 확인할 수 있습니다.',
+        },
+        faq: {
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '제 하드웨어 정보가 PromptQuorum이나 다른 곳으로 전송되나요?',
+              a: '사용자가 입력한 정확한 수치는 어디로도 전송되지 않습니다 — 프로필 자체는 브라우저의 localStorage에만 저장됩니다. 이미 분석 사용에 동의한 경우, 저장 시 "16~32GB"와 같이 대략적인 구간만 기록하는 익명화된 이벤트가 한 번 전송되지만, 입력한 구체적인 숫자는 전송되지 않습니다. 브라우저의 개발자 도구에서 직접 확인할 수 있습니다 — 전송되는 요청이 있더라도 그 구간 값만 표시됩니다.',
+            },
+            {
+              q: '"내 컴퓨터"와 "내 사양"의 차이는 무엇인가요?',
+              a: '"내 컴퓨터"는 디렉터리 출시 때부터 있었던 대략적인 기기 유형 선택(그래픽 카드, Apple Silicon, 또는 CPU 전용)입니다. "내 사양"은 그 위에 새로 추가된 선택적 레이어로, 실제 RAM, VRAM, 또는 통합 메모리 수치를 입력하면 다시 표현된 일반적인 요구사항 대신 도구별로 구체적인 호환성 배지가 표시됩니다.',
+            },
+            {
+              q: '"아슬아슬함" 배지는 무엇을 의미하나요?',
+              a: '저장된 하드웨어가 도구의 실측 요구사항은 충족하지만 "원활하게 실행됨" 판정에 필요한 약 30%의 여유는 없거나, 사용자의 사양에서는 더 느린 CPU 전용 모드로만 작동한다는 의미입니다. 실행될 가능성은 높지만 성능이나 사용 가능한 메모리가 빠듯할 수 있습니다.',
+            },
+            {
+              q: '저장된 하드웨어 프로필은 어떻게 삭제하나요?',
+              a: '"내 사양" 패널을 열고 "내 하드웨어 삭제"를 클릭하세요. 이렇게 하면 브라우저의 localStorage에서 프로필이 즉시 제거됩니다. 애초에 PromptQuorum으로 아무것도 전송된 적이 없으므로, PromptQuorum 측에 별도로 요청할 필요가 없습니다.',
+            },
+            {
+              q: '167개 도구 중 몇 개에 하드웨어 호환성 데이터가 있나요?',
+              a: '등록된 167개 도구 중 153개에 조사된 하드웨어 요구사항 데이터가 있습니다. 나머지 도구는 원활하게 실행됨, 아슬아슬함, 실행 불가 판정 대신 "내 사양 설정" 또는 "하드웨어 적합성 미검토" 상태로 표시됩니다. 아직 비교할 데이터가 없기 때문입니다.',
+            },
+            {
+              q: '지속되는 하드웨어 프로필을 제공하는 곳이 여기뿐인가요?',
+              a: '2026년 9월 13일에 다른 로컬 AI 디렉터리 사이트 5곳을 조사했지만, 사이트 전체에 걸쳐 저장된 하드웨어 프로필을 유지하는 곳은 하나도 없었습니다 — 모두 단발성 단일 페이지 계산기를 제공할 뿐이었습니다. 이는 해당 날짜에 조사한 사이트들에 대한 설명이며, 존재하는 모든 사이트에 대한 주장이 아닙니다.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '제 하드웨어 정보가 PromptQuorum이나 다른 곳으로 전송되나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '사용자가 입력한 정확한 수치는 어디로도 전송되지 않습니다 — 프로필 자체는 브라우저의 localStorage에만 저장됩니다. 이미 분석 사용에 동의한 경우, 저장 시 "16~32GB"와 같이 대략적인 구간만 기록하는 익명화된 이벤트가 한 번 전송되지만, 입력한 구체적인 숫자는 전송되지 않습니다. 브라우저의 개발자 도구에서 직접 확인할 수 있습니다 — 전송되는 요청이 있더라도 그 구간 값만 표시됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '"내 컴퓨터"와 "내 사양"의 차이는 무엇인가요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"내 컴퓨터"는 디렉터리 출시 때부터 있었던 대략적인 기기 유형 선택(그래픽 카드, Apple Silicon, 또는 CPU 전용)입니다. "내 사양"은 그 위에 새로 추가된 선택적 레이어로, 실제 RAM, VRAM, 또는 통합 메모리 수치를 입력하면 다시 표현된 일반적인 요구사항 대신 도구별로 구체적인 호환성 배지가 표시됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '"아슬아슬함" 배지는 무엇을 의미하나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '저장된 하드웨어가 도구의 실측 요구사항은 충족하지만 "원활하게 실행됨" 판정에 필요한 약 30%의 여유는 없거나, 사용자의 사양에서는 더 느린 CPU 전용 모드로만 작동한다는 의미입니다. 실행될 가능성은 높지만 성능이나 사용 가능한 메모리가 빠듯할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '저장된 하드웨어 프로필은 어떻게 삭제하나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"내 사양" 패널을 열고 "내 하드웨어 삭제"를 클릭하세요. 이렇게 하면 브라우저의 localStorage에서 프로필이 즉시 제거됩니다. 애초에 PromptQuorum으로 아무것도 전송된 적이 없으므로, PromptQuorum 측에 별도로 요청할 필요가 없습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '167개 도구 중 몇 개에 하드웨어 호환성 데이터가 있나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '등록된 167개 도구 중 153개에 조사된 하드웨어 요구사항 데이터가 있습니다. 나머지 도구는 원활하게 실행됨, 아슬아슬함, 실행 불가 판정 대신 "내 사양 설정" 또는 "하드웨어 적합성 미검토" 상태로 표시됩니다. 아직 비교할 데이터가 없기 때문입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '지속되는 하드웨어 프로필을 제공하는 곳이 여기뿐인가요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026년 9월 13일에 다른 로컬 AI 디렉터리 사이트 5곳을 조사했지만, 사이트 전체에 걸쳐 저장된 하드웨어 프로필을 유지하는 곳은 하나도 없었습니다 — 모두 단발성 단일 페이지 계산기를 제공할 뿐이었습니다. 이는 해당 날짜에 조사한 사이트들에 대한 설명이며, 존재하는 모든 사이트에 대한 주장이 아닙니다.',
+            },
+          },
+        ],
+      },
+    },
+    pt: {
+      category: 'Atualizações de Produto',
+      title: 'O diretório de software de IA local agora mostra se o seu computador consegue rodar cada ferramenta',
+      seoTitle: 'Verificação de compatibilidade de hardware no diretório de IA local',
+      intro: 'O diretório de software de IA local agora inclui um perfil de hardware opcional e um selo de compatibilidade por ferramenta que verifica se o seu próprio computador consegue rodar cada uma das 167 ferramentas listadas. Veja o que mudou, como funciona a comparação e como fica o design de privacidade.',
+      publishDate: 'Publicado em 13 de setembro de 2026',
+      last_full_refresh: '2026-09-13',
+      readTime: '5 min de leitura',
+      metaDescription: 'O diretório de software de IA local adicionou um perfil de hardware opcional e selos de compatibilidade (Funciona bem / No limite / Não vai rodar) para 153 das 167 ferramentas.',
+      educationalLevel: 'Iniciante',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Pontos principais',
+          items: [
+            'O [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026) adicionou um perfil de hardware "Sua configuração" e um selo de compatibilidade (Funciona bem, No limite, Não vai rodar, ou Informe seu hardware) a cada uma das 167 ferramentas de IA local listadas.',
+            'O perfil é opcional e só é salvo quando você clica em "Salvar minha configuração" — nunca é gravado automaticamente nem enviado a um servidor. Ele permanece no localStorage do seu navegador até você apagá-lo.',
+            'Dados de requisitos de hardware estão documentados para 153 das 167 ferramentas. O selo compara os números que você salvou (RAM do sistema, VRAM, ou memória unificada da Apple) com o requisito medido de cada ferramenta.',
+            'Um veredito "Funciona bem" exige cerca de 30% de folga acima do requisito medido de uma ferramenta — atingir o requisito exatamente é classificado como "No limite", não como "Funciona bem".',
+            'Uma análise de outros cinco sites de diretórios de IA local em 13 de setembro de 2026 descobriu que nenhum deles mantém um perfil de hardware salvo em todo o site — cada um oferece, em vez disso, uma calculadora avulsa de página única.',
+          ],
+        },
+        whatsNew: {
+          title: 'O que mudou no diretório',
+          content: [
+            'O [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026) já permitia filtrar e ordenar 167 apps de IA local, engines de inferência e frameworks de agentes por categoria, licença e exigência de hardware. Um seletor "Meu computador" permitia escolher um tipo de máquina genérico — placa de vídeo, Apple Silicon, ou somente CPU — e ver o requisito de hardware de cada ferramenta reformulado para esse tipo.',
+            'A novidade é um painel "Sua configuração" ao lado desse seletor. Em vez de um tipo de máquina genérico, você pode informar seus números reais — RAM do sistema e VRAM para uma máquina com placa de vídeo, memória unificada para Apple Silicon, ou RAM do sistema para uma máquina somente CPU. Depois de salvo, cada cartão de ferramenta e cada linha da tabela mostra um selo de compatibilidade que compara seus números com o requisito documentado daquela ferramenta.',
+          ],
+        },
+        howItWorks: {
+          title: 'De "o que ela precisa" para "eu consigo rodar"',
+          content: [
+            'A exibição de hardware existente sempre respondia a uma pergunta: o que essa ferramenta precisa. O novo selo responde a uma pergunta diferente: dado o seu computador, essa ferramenta específica vai realmente rodar.',
+            'A comparação usa uma regra de folga em vez de um simples passa/não passa. O número que você salvou precisa superar o requisito de uma ferramenta em cerca de 30% para contar como "Funciona bem". Atingir o requisito sem essa margem é classificado como "No limite" — provavelmente vai rodar, mas devagar ou com pouca memória sobrando. Ficar abaixo é classificado como "Não vai rodar", a menos que a ferramenta tenha um modo de reserva somente com CPU, caso em que recebe "No limite" em vez disso. Os números de Apple Silicon são convertidos de um valor de VRAM para um piso equivalente de memória unificada, já que o macOS e outros apps em execução reservam parte dessa memória compartilhada.',
+          ],
+        },
+        verdicts: {
+          title: 'O que cada selo significa',
+          content: 'Quatro estados cobrem todas as ferramentas do diretório, tendo você salvo um perfil ou não.',
+          rows: [
+            { Selo: 'Funciona bem', Significado: 'Seu hardware salvo supera o requisito da ferramenta com cerca de 30% de folga' },
+            { Selo: 'No limite', Significado: 'Atende ao requisito com pouca ou nenhuma folga, ou recorre a um modo somente CPU mais lento' },
+            { Selo: 'Não vai rodar', Significado: 'Fica abaixo do requisito e a ferramenta não tem modo de reserva somente com CPU' },
+            { Selo: 'Informe seu hardware', Significado: 'Nenhum perfil salvo ainda — clique no selo para abrir o painel "Sua configuração"' },
+          ],
+          columns: ['Selo', 'Significado'],
+        },
+        privacy: {
+          title: 'O perfil nunca sai do seu navegador',
+          content: [
+            'Nada é gravado no seu navegador até você clicar em "Salvar minha configuração" — não há detecção passiva e nada é armazenado automaticamente. O campo de RAM pode ser pré-preenchido a partir do valor de memória do seu navegador como uma dica claramente identificada ("≈8GB detectados — confirme ou ajuste"), mas esse número fica no campo, sem ser salvo, até você clicar.',
+            'O perfil salvo é gravado no localStorage do seu navegador sob uma chave própria, separada da seleção genérica existente "Meu computador", e seus números exatos nunca são enviados em uma requisição de rede. Se você já aceitou os cookies de analytics, salvar dispara um único evento anonimizado que registra apenas uma faixa aproximada (por exemplo, "16-32GB") — nunca o número que você digitou. Um botão "Esquecer meu hardware" ao lado do painel o apaga imediatamente.',
+            'Isso é uma descrição factual de como o recurso foi construído, não uma alegação de marketing. Você pode confirmar isso sozinho abrindo as ferramentas de desenvolvedor do seu navegador, verificando a aba Application ou Storage, e observando a aba Network enquanto usa o diretório.',
+          ],
+        },
+        categoryFirst: {
+          title: 'Um recurso que não vimos em outro lugar — verificado, não presumido',
+          content: [
+            'Em 13 de setembro de 2026, analisamos outros cinco sites de diretórios e comparadores de ferramentas de IA local — [opensourcesai.com](https://opensourcesai.com), [runlocalai.co](https://runlocalai.co), [everylocalai.com](https://everylocalai.com), [local-ai.net](https://local-ai.net) e [localclaw.io](https://localclaw.io) — para ver se algum oferecia algo parecido. Nenhum dos cinco mantém um perfil de hardware salvo em todo o site; cada um oferece, em vez disso, uma calculadora de hardware avulsa de página única, que não carrega seus números para outras páginas nem os recupera em uma visita posterior.',
+            'Com base nessa verificação, um perfil de hardware salvo uma vez e utilizável em todo o site parece ser algo novo entre os sites de diretórios de IA local que analisamos. Essa é uma constatação sobre os cinco sites verificados naquela data, não uma afirmação sobre todos os sites que existem — um site fora dessa análise poderia oferecer o mesmo sem que soubéssemos.',
+          ],
+        },
+        cta: {
+          title: 'Experimente no diretório',
+          content: 'Abra o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026), escolha seu tipo de computador, salve sua configuração e veja um selo de compatibilidade nas 167 ferramentas listadas — de apps de chat local simples a frameworks de agentes completos.',
+        },
+        faq: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            {
+              q: 'Minhas informações de hardware são enviadas para a PromptQuorum ou para terceiros?',
+              a: 'Seus números exatos nunca são enviados para lugar nenhum — o perfil em si é armazenado somente no localStorage do seu navegador. Se você já aceitou os cookies de analytics, salvar dispara um único evento anonimizado com apenas uma faixa aproximada (por exemplo, "16-32GB" para a RAM), nunca o número digitado. Você pode verificar isso sozinho nas ferramentas de desenvolvedor do seu navegador — qualquer requisição disparada mostrará apenas essa faixa.',
+            },
+            {
+              q: 'Qual a diferença entre "Meu computador" e "Sua configuração"?',
+              a: '"Meu computador" é uma escolha genérica de tipo de máquina (placa de vídeo, Apple Silicon, ou somente CPU) que existe no diretório desde o lançamento. "Sua configuração" é a nova camada opcional que se soma a ela — seus números reais de RAM, VRAM ou memória unificada, que geram um selo de compatibilidade específico por ferramenta em vez de um requisito genérico reformulado.',
+            },
+            {
+              q: 'O que significa um selo "No limite"?',
+              a: 'Seu hardware salvo atende ao requisito medido de uma ferramenta, mas sem a folga de cerca de 30% necessária para um veredito "Funciona bem", ou a ferramenta só funciona em um modo somente CPU mais lento na sua configuração. Provavelmente vai rodar, mas o desempenho ou a memória disponível podem ficar apertados.',
+            },
+            {
+              q: 'Como apago meu perfil de hardware salvo?',
+              a: 'Abra o painel "Sua configuração" e clique em "Esquecer meu hardware". Isso remove o perfil do localStorage do seu navegador imediatamente; não é preciso pedir nada à PromptQuorum, pois nada foi enviado a ela.',
+            },
+            {
+              q: 'Quantas das 167 ferramentas têm dados de compatibilidade de hardware?',
+              a: '153 das 167 ferramentas listadas têm dados de requisitos de hardware documentados. As ferramentas restantes mostram um estado "Informe seu hardware" ou "ainda não avaliado quanto à compatibilidade de hardware" em vez de um veredito de funciona bem, no limite ou não vai rodar, já que ainda não há nada com que comparar.',
+            },
+            {
+              q: 'Este é o único site com um perfil de hardware persistente?',
+              a: 'Analisamos outros cinco sites de diretórios de IA local em 13 de setembro de 2026 e nenhum mantém um perfil de hardware salvo em todo o site — cada um oferecia, em vez disso, uma calculadora avulsa de página única. Isso descreve os sites verificados naquela data, não todos os sites que existem.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Minhas informações de hardware são enviadas para a PromptQuorum ou para terceiros?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Seus números exatos nunca são enviados para lugar nenhum — o perfil em si é armazenado somente no localStorage do seu navegador. Se você já aceitou os cookies de analytics, salvar dispara um único evento anonimizado com apenas uma faixa aproximada (por exemplo, "16-32GB" para a RAM), nunca o número digitado. Você pode verificar isso sozinho nas ferramentas de desenvolvedor do seu navegador — qualquer requisição disparada mostrará apenas essa faixa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual a diferença entre "Meu computador" e "Sua configuração"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"Meu computador" é uma escolha genérica de tipo de máquina (placa de vídeo, Apple Silicon, ou somente CPU) que existe no diretório desde o lançamento. "Sua configuração" é a nova camada opcional que se soma a ela — seus números reais de RAM, VRAM ou memória unificada, que geram um selo de compatibilidade específico por ferramenta em vez de um requisito genérico reformulado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O que significa um selo "No limite"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Seu hardware salvo atende ao requisito medido de uma ferramenta, mas sem a folga de cerca de 30% necessária para um veredito "Funciona bem", ou a ferramenta só funciona em um modo somente CPU mais lento na sua configuração. Provavelmente vai rodar, mas o desempenho ou a memória disponível podem ficar apertados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como apago meu perfil de hardware salvo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Abra o painel "Sua configuração" e clique em "Esquecer meu hardware". Isso remove o perfil do localStorage do seu navegador imediatamente; não é preciso pedir nada à PromptQuorum, pois nada foi enviado a ela.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quantas das 167 ferramentas têm dados de compatibilidade de hardware?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '153 das 167 ferramentas listadas têm dados de requisitos de hardware documentados. As ferramentas restantes mostram um estado "Informe seu hardware" ou "ainda não avaliado quanto à compatibilidade de hardware" em vez de um veredito de funciona bem, no limite ou não vai rodar, já que ainda não há nada com que comparar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Este é o único site com um perfil de hardware persistente?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Analisamos outros cinco sites de diretórios de IA local em 13 de setembro de 2026 e nenhum mantém um perfil de hardware salvo em todo o site — cada um oferecia, em vez disso, uma calculadora avulsa de página única. Isso descreve os sites verificados naquela data, não todos os sites que existem.',
+            },
+          },
+        ],
+      },
+    },
+    zh: {
+      category: '产品更新',
+      title: 'Local AI Software Directory现在能告诉你,你的电脑能否运行每一款工具',
+      seoTitle: 'Local AI目录新增硬件兼容性检测',
+      intro: 'Local AI Software Directory新增了一个可选的硬件配置资料,以及针对每款工具的兼容性徽章,用于检测你自己的电脑能否运行目录中列出的167款工具。以下是具体变化、比对逻辑,以及隐私设计的实际情况。',
+      publishDate: '发布于2026年9月13日',
+      last_full_refresh: '2026-09-13',
+      readTime: '阅读约5分钟',
+      metaDescription: 'Local AI Software Directory新增了可选硬件配置资料和兼容性徽章(运行流畅/勉强够用/无法运行),覆盖167款工具中的153款。',
+      educationalLevel: 'Beginner',
+      freshness_tier: 'monthly',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            '[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026)为其列出的167款本地AI工具都新增了"你的配置"硬件资料和兼容性徽章(运行流畅、勉强够用、无法运行,或设置你的硬件)。',
+            '该配置资料是可选的,只有点击"保存我的配置"才会保存——它绝不会自动写入,也绝不会发送到任何服务器。它保存在你浏览器的localStorage中,直到你清除它为止。',
+            '167款工具中有153款已研究并记录了硬件需求数据。该徽章会将你保存的数值(系统RAM、显存VRAM,或Apple统一内存)与每款工具的实测需求进行比对。',
+            '"运行流畅"的判定需要比工具的实测需求高出大约30%的余量——刚好达到需求会被判定为"勉强够用",而非"运行流畅"。',
+            '2026年9月13日对另外五个本地AI目录网站的检查发现,没有一个能在整个网站范围内保留已保存的硬件配置资料——每个网站提供的都只是单页一次性计算工具。',
+          ],
+        },
+        whatsNew: {
+          title: '目录发生了什么变化',
+          content: [
+            '[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026)此前已经支持按类别、许可证和硬件需求对167款本地AI应用、模型运行时和智能体框架进行筛选和排序。一个"我的设备"选择器可以选取一个大致的机型类别——独立显卡、Apple Silicon,或纯CPU——并显示按该类型改写后的每款工具硬件需求。',
+            '新增的是该选择器旁边的"你的配置"面板。你可以输入实际数值,而不是一个大致的机型类别——独立显卡设备填写系统RAM和显存VRAM,Apple Silicon填写统一内存,纯CPU设备填写系统RAM。保存后,每张工具卡片和表格行都会显示一个兼容性徽章,将你的数值与该工具已记录的需求进行比对。',
+          ],
+        },
+        howItWorks: {
+          title: '从"它需要什么"到"我能不能运行它"',
+          content: [
+            '现有的硬件显示始终只回答一个问题:这款工具需要什么。新的徽章回答的是另一个问题:基于你的设备,这款具体工具是否真的能运行。',
+            '这个比对采用余量规则,而不是简单的通过/不通过。你保存的数值需要比工具的需求高出大约30%,才能算作"运行流畅"。刚好达到需求、没有这个余量,会被判定为"勉强够用"——很可能能运行,但速度较慢,或剩余内存较少。低于需求则判定为"无法运行",除非该工具有纯CPU的备用模式,此时会改判为"勉强够用"。Apple Silicon的数值会从显存VRAM数字换算为等效的统一内存下限,因为macOS及其他正在运行的应用会占用这部分共享内存的一部分。',
+          ],
+        },
+        verdicts: {
+          title: '每个徽章代表什么',
+          content: '无论你是否已保存配置资料,四种状态涵盖了目录中的每一款工具。',
+          rows: [
+            { 徽章: '运行流畅', 含义: '你保存的硬件超出该工具需求约30%的余量' },
+            { 徽章: '勉强够用', 含义: '刚好或几乎没有余量地满足需求,或需回退到较慢的纯CPU模式' },
+            { 徽章: '无法运行', 含义: '未达到需求,且该工具没有纯CPU备用模式' },
+            { 徽章: '设置你的硬件', 含义: '尚未保存配置资料——点击徽章可打开"你的配置"面板' },
+          ],
+          columns: ['徽章', '含义'],
+        },
+        privacy: {
+          title: '配置资料绝不会离开你的浏览器',
+          content: [
+            '在你点击"保存我的配置"之前,浏览器中不会写入任何内容——没有被动检测,也不会自动存储任何数据。RAM输入框可能会根据浏览器的内存数值自动填入一个明确标注的提示("检测到≈8GB——请确认或调整"),但这个数字只会停留在输入框中,直到你点击保存前都不会被存储。',
+            '已保存的配置资料会使用单独的键写入浏览器的localStorage,与现有的大致"我的设备"选择分开存储,你输入的确切数值绝不会通过网络请求发送。如果你已经同意使用分析统计,保存时会触发一次匿名事件,只记录一个粗略区间(例如"16-32GB"),绝不会记录你输入的具体数字。面板旁边的"忘记我的硬件"按钮可以立即清除它。',
+            '这是对该功能实现方式的事实性描述,而非营销说辞。你可以自行打开浏览器开发者工具,查看Application(应用)或Storage(存储)标签页,并在使用目录时观察Network(网络)标签页,来验证这一点。',
+          ],
+        },
+        categoryFirst: {
+          title: '一个我们在其他地方未曾见过的功能——经过核实,而非假设',
+          content: [
+            '2026年9月13日,我们检查了另外五个本地AI目录及工具比较网站——[opensourcesai.com](https://opensourcesai.com)、[runlocalai.co](https://runlocalai.co)、[everylocalai.com](https://everylocalai.com)、[local-ai.net](https://local-ai.net)和[localclaw.io](https://localclaw.io)——看它们是否提供类似的功能。这五个网站都没有在整个网站范围内保留已保存的硬件配置资料;每个网站提供的都只是单页一次性硬件计算工具,不会把你的数值带到其他页面,也不会在下次访问时恢复。',
+            '基于这次检查,一次保存、全站通用的硬件配置资料,在我们所检查的本地AI目录网站中似乎是一个新功能。这只是关于我们在那个日期检查过的五个网站的结论,并非对所有现存网站的断言——未在此次检查范围内的网站也可能提供类似功能,只是我们并不知情。',
+          ],
+        },
+        cta: {
+          title: '在目录中试一试',
+          content: '打开[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026),选择你的设备类型,保存你的配置,即可在全部167款列出的工具上看到兼容性徽章——从单一用途的本地聊天应用到完整的智能体框架都涵盖在内。',
+        },
+        faq: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '我的硬件信息会发送给PromptQuorum或其他任何人吗?',
+              a: '你输入的确切数值绝不会发送到任何地方——配置资料本身仅存储在你浏览器的localStorage中。如果你已经同意使用分析统计,保存时会触发一次匿名事件,只记录一个粗略区间(例如RAM的"16-32GB"),绝不会记录你输入的具体数字。你可以在浏览器的开发者工具中自行验证这一点——即使触发了请求,也只会显示该区间值。',
+            },
+            {
+              q: '"我的设备"和"你的配置"有什么区别?',
+              a: '"我的设备"是自目录上线以来就存在的大致机型选择(独立显卡、Apple Silicon,或纯CPU)。"你的配置"是新增的可选层,叠加在其之上——你输入实际的RAM、显存VRAM或统一内存数值后,会为每款工具生成具体的兼容性徽章,而不再是一个改写过的通用需求描述。',
+            },
+            {
+              q: '"勉强够用"徽章是什么意思?',
+              a: '你保存的硬件满足了工具的实测需求,但没有达到判定为"运行流畅"所需的约30%余量,或者该工具在你的配置下只能以较慢的纯CPU模式运行。它很可能能运行,但性能或可用内存可能比较紧张。',
+            },
+            {
+              q: '如何清除我已保存的硬件配置资料?',
+              a: '打开"你的配置"面板,点击"忘记我的硬件"。这会立即从你浏览器的localStorage中移除该配置资料;由于从未发送给PromptQuorum任何数据,因此也无需向PromptQuorum提出任何请求。',
+            },
+            {
+              q: '167款工具中有多少款拥有硬件兼容性数据?',
+              a: '在列出的167款工具中,有153款拥有经过研究记录的硬件需求数据。其余工具会显示"设置你的硬件"或"尚未评估硬件适配性"的状态,而不是运行流畅、勉强够用或无法运行的判定,因为目前还没有可供比对的数据。',
+            },
+            {
+              q: '这是唯一一个拥有持久化硬件配置资料的网站吗?',
+              a: '我们在2026年9月13日检查了另外五个本地AI目录网站,发现没有一个能在整个网站范围内保留已保存的硬件配置资料——每个网站提供的都只是单页一次性计算工具。这只是对那个日期所检查网站的描述,并非对所有现存网站的断言。',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '我的硬件信息会发送给PromptQuorum或其他任何人吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '你输入的确切数值绝不会发送到任何地方——配置资料本身仅存储在你浏览器的localStorage中。如果你已经同意使用分析统计,保存时会触发一次匿名事件,只记录一个粗略区间(例如RAM的"16-32GB"),绝不会记录你输入的具体数字。你可以在浏览器的开发者工具中自行验证这一点——即使触发了请求,也只会显示该区间值。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '"我的设备"和"你的配置"有什么区别?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '"我的设备"是自目录上线以来就存在的大致机型选择(独立显卡、Apple Silicon,或纯CPU)。"你的配置"是新增的可选层,叠加在其之上——你输入实际的RAM、显存VRAM或统一内存数值后,会为每款工具生成具体的兼容性徽章,而不再是一个改写过的通用需求描述。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '"勉强够用"徽章是什么意思?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '你保存的硬件满足了工具的实测需求,但没有达到判定为"运行流畅"所需的约30%余量,或者该工具在你的配置下只能以较慢的纯CPU模式运行。它很可能能运行,但性能或可用内存可能比较紧张。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何清除我已保存的硬件配置资料?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '打开"你的配置"面板,点击"忘记我的硬件"。这会立即从你浏览器的localStorage中移除该配置资料;由于从未发送给PromptQuorum任何数据,因此也无需向PromptQuorum提出任何请求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '167款工具中有多少款拥有硬件兼容性数据?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '在列出的167款工具中,有153款拥有经过研究记录的硬件需求数据。其余工具会显示"设置你的硬件"或"尚未评估硬件适配性"的状态,而不是运行流畅、勉强够用或无法运行的判定,因为目前还没有可供比对的数据。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '这是唯一一个拥有持久化硬件配置资料的网站吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '我们在2026年9月13日检查了另外五个本地AI目录网站,发现没有一个能在整个网站范围内保留已保存的硬件配置资料——每个网站提供的都只是单页一次性计算工具。这只是对那个日期所检查网站的描述,并非对所有现存网站的断言。',
+            },
+          },
+        ],
+      },
+    },
+  },
 }

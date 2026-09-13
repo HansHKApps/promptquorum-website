@@ -15,6 +15,7 @@ export const SLUG_TO_POST_ID = {
   'eu-companies-local-qwen-gdpr-shift': 'euCompaniesLocalQwenGdpr',
   'promptquorum-desktop-app-beta': 'desktopAppBeta',
   'balcony-solar-us-legalization-race-2026': 'balconySolarLegalizationRace',
+  'local-ai-hardware-compatibility-check': 'hardwareCompatibilityDirectory',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID
