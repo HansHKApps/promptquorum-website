@@ -12,7 +12,7 @@ type Dict = Record<Language, string>
 export type LicenseFamilyKey =
   | 'mit' | 'apache' | 'bsd' | 'gpl' | 'lgpl' | 'agpl' | 'mpl'
   | 'bsl' | 'sspl' | 'commonsClause' | 'sustainableUse' | 'rail'
-  | 'ccBy' | 'customVendor' | 'proprietary' | 'unclear'
+  | 'ccBy' | 'customVendor' | 'sourceAvailable' | 'proprietary' | 'unclear'
 
 export interface LicenseFamily {
   key: LicenseFamilyKey
@@ -262,6 +262,22 @@ export const LICENSE_FAMILIES: LicenseFamily[] = [
       pt: 'Uma licença própria do fornecedor que parece de acesso aberto, mas adiciona suas próprias condições — geralmente um limite de uso acima do qual é necessário um acordo comercial.',
       ar: 'رخصة خاصة بمزوّد معيّن تبدو كأنها وصول مفتوح لكنها تضيف شروطها الخاصة — غالبًا عتبة استخدام يتطلب تجاوزها اتفاقية تجارية.',
       ko: '개방형 접근처럼 보이지만 자체 조건을 추가하는 벤더 전용 라이선스 — 흔히 특정 사용 규모를 넘으면 상업 계약이 필요해진다.',
+    },
+  },
+  {
+    key: 'sourceAvailable',
+    patterns: [/source-available/i, /source available/i],
+    name: { en: 'Source-Available License', de: 'Source-Available-Lizenz', fr: 'Licence source disponible', ja: 'ソース公開ライセンス（Source-Available）', zh: '源码可见许可（Source-Available）', es: 'Licencia de código disponible', pt: 'Licença de código disponível', ar: 'رخصة الشيفرة المتاحة (Source-Available)', ko: '소스 공개(Source-Available) 라이선스' },
+    summary: {
+      en: 'The source code is visible, but this is not open source: the vendor sets its own rules on modification, redistribution, and commercial use in a custom license. Read the project’s specific terms before relying on it.',
+      de: 'Der Quellcode ist einsehbar, das ist aber kein Open Source: Der Anbieter legt in einer eigenen Lizenz seine eigenen Regeln für Änderung, Weiterverbreitung und kommerzielle Nutzung fest. Vor der Nutzung die konkreten Bedingungen des Projekts lesen.',
+      fr: 'Le code source est visible, mais ce n’est pas de l’open source : l’éditeur fixe ses propres règles de modification, de redistribution et d’usage commercial dans une licence personnalisée. Lisez les conditions spécifiques du projet avant de vous y fier.',
+      ja: 'ソースコードは公開されているが、オープンソースではない。ベンダーが独自ライセンスの中で改変・再配布・商用利用に関する独自ルールを定めている。利用前にそのプロジェクト固有の条件を確認すること。',
+      zh: '源码可见,但这不是开源:厂商在自定义许可中设定了自己的修改、再分发和商业使用规则。使用前请阅读该项目的具体条款。',
+      es: 'El código fuente es visible, pero esto no es código abierto: el proveedor fija sus propias reglas de modificación, redistribución y uso comercial en una licencia personalizada. Lee los términos específicos del proyecto antes de confiar en ella.',
+      pt: 'O código-fonte é visível, mas isso não é código aberto: o fornecedor define suas próprias regras de modificação, redistribuição e uso comercial em uma licença personalizada. Leia os termos específicos do projeto antes de confiar nela.',
+      ar: 'الشيفرة المصدرية مرئية، لكن هذا ليس مصدرًا مفتوحًا: يضع المزوّد قواعده الخاصة للتعديل وإعادة التوزيع والاستخدام التجاري ضمن رخصة مخصّصة. اطّلع على الشروط المحددة للمشروع قبل الاعتماد عليها.',
+      ko: '소스 코드는 볼 수 있지만 오픈소스는 아니다. 공급업체가 자체 라이선스에서 수정·재배포·상업적 이용에 대한 규칙을 직접 정한다. 이용하기 전에 해당 프로젝트의 구체적인 조건을 확인할 것.',
     },
   },
   {

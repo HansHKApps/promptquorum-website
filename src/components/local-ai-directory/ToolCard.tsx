@@ -288,13 +288,13 @@ export function ToolCard({
             </span>
           )}
 
-          <div className="flex gap-2 pt-1">
+          <div className="flex flex-wrap gap-2 pt-1">
             {review ? (
               <>
                 <Link
                   href={review}
                   onClick={stop}
-                  className="flex-1 text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold underline underline-offset-2 text-white hover:bg-primary/90"
+                  className="w-full text-center rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold underline underline-offset-2 text-white hover:bg-primary/90"
                 >
                   {t('readReview', lang)}
                 </Link>
@@ -305,7 +305,7 @@ export function ToolCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 text-center rounded-lg border border-primary/20 px-2 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+                    className="flex-1 min-w-[45%] text-center rounded-lg border border-primary/20 px-2 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
                   >
                     {link.label}
                   </a>
@@ -320,7 +320,7 @@ export function ToolCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={stop}
-                    className="flex-1 text-center rounded-lg border border-primary bg-primary px-2 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
+                    className="flex-1 min-w-[45%] text-center rounded-lg border border-primary bg-primary px-2 py-1.5 text-xs font-semibold text-white hover:bg-primary/90"
                   >
                     {link.label}
                   </a>
@@ -331,7 +331,7 @@ export function ToolCard({
                     e.stopPropagation()
                     onOpen(app.slug)
                   }}
-                  className="flex-1 text-center rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
+                  className="flex-1 min-w-[45%] text-center rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
                 >
                   {t('detailsButton', lang)}
                 </button>

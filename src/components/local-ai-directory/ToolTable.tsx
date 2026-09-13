@@ -88,7 +88,7 @@ export function ToolTable({
               <td className="p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap">
                 {app.name}
               </td>
-              <td className="p-2 sm:p-3 text-text-secondary">
+              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 {app.stars != null ? (
                   <span className="inline-flex items-center gap-1">
                     <StarIcon className="h-3.5 w-3.5 text-amber-400" />
@@ -98,13 +98,13 @@ export function ToolTable({
                   <span className="text-text-secondary/50">—</span>
                 )}
               </td>
-              <td className="p-2 sm:p-3 text-text-secondary">
+              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact profile={profile} onRequestHardware={onRequestHardware} mobile={{ interfaces: app.interfaces, platforms: app.platforms }} />
               </td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
               </td>
-              <td className="p-2 sm:p-3 text-text-secondary">{STATUS_LABEL[app.status]}</td>
+              <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{STATUS_LABEL[app.status]}</td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]][lang]}</td>
               <td className="p-2 sm:p-3 whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
                 <CompatibilityBadge
