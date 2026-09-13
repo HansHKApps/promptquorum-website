@@ -38,7 +38,11 @@ export type UseCaseKey =
 export type LocalityKey = 'local' | 'hybrid' | 'cloud'
 export type EngineKey = 'builtin' | 'external' | 'both' | 'library'
 export type PriceKey = 'free' | 'freemium' | 'paid'
-export type StatusKey = 'listed' | 'verified' | 'tested'
+// Lifecycle/editorial-depth tier, independent of the founder-input signal
+// (`founder`/`founderReviewedDate` below, which render their own separate badge).
+// 'planned' = not yet publicly available; 'listed' = live, baseline default;
+// 'verified'/'tested' = reserved for future deeper-editorial tiers, unused today.
+export type StatusKey = 'planned' | 'listed' | 'verified' | 'tested'
 
 // Distribution channel a tool can be downloaded through — orthogonal to `platforms`
 // (which OS it runs on) and `interfaces` (desktop/web/CLI/mobile/library, i.e. how you

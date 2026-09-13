@@ -167,7 +167,7 @@ export function sortTools(apps: ToolRecord[], key: SortKey, dir: SortDir, machin
       case 'ram':
         return sign * nullsLast(hardwareSortValue(a.hardware, machine, a.engine), hardwareSortValue(b.hardware, machine, b.engine), (x, y) => x - y)
       case 'status': {
-        const order: Record<string, number> = { tested: 0, verified: 1, listed: 2 }
+        const order: Record<string, number> = { tested: 0, verified: 1, listed: 2, planned: 3 }
         return sign * ((order[a.status] ?? 99) - (order[b.status] ?? 99))
       }
       default:
