@@ -11,14 +11,15 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
-import { computeHardwareDisplay } from './hardware'
+import { CompatibilityBadge } from './CompatibilityBadge'
+import { computeHardwareDisplay, computeCompatibilityVerdict } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
-import type { MachineType } from './types'
+import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
 import { t } from './directory-i18n'
 import Link from 'next/link'
@@ -134,15 +135,19 @@ export function ToolDrawer({
   allApps,
   lang,
   machine,
+  profile,
   onClose,
   onOpenSlug,
+  onRequestHardware,
 }: {
   app: ToolRecord | null
   allApps: ToolRecord[]
   lang: Language
   machine: MachineType
+  profile: HardwareProfile | null
   onClose: () => void
   onOpenSlug: (slug: string) => void
+  onRequestHardware?: () => void
 }) {
   const open = app != null
   const [copied, setCopied] = useState(false)
@@ -295,7 +300,26 @@ export function ToolDrawer({
                   <DetailRow label={t('detailWorksWith', lang)} value={joinOrUnknown(app.worksWith)} />
                   <DetailRow
                     label={t('detailHardware', lang)}
-                    value={computeHardwareDisplay(app.hardware, machine, lang, app.engine).known ? <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact /> : null}
+                    value={
+                      computeHardwareDisplay(app.hardware, machine, lang, app.engine).known ? (
+                        <div className="flex flex-wrap items-center gap-2">
+                          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
+                          <CompatibilityBadge
+                            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                            hasProfile={profile != null}
+                            lang={lang}
+                            onRequestProfile={onRequestHardware}
+                          />
+                        </div>
+                      ) : (
+                        <CompatibilityBadge
+                          verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                          hasProfile={profile != null}
+                          lang={lang}
+                          onRequestProfile={onRequestHardware}
+                        />
+                      )
+                    }
                   />
                   <DetailRow label={t('detailAdded', lang)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow label={t('detailLastVerified', lang)} value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />

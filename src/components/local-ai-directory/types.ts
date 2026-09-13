@@ -11,6 +11,21 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 /** The three "what hardware am I on" choices from the machine selector. */
 export type MachineType = 'dgpu' | 'apple' | 'cpu'
 
+/**
+ * The viewer's opt-in, precise hardware numbers — layered on top of the
+ * coarse `MachineType` choice above, never persisted without an explicit
+ * "Save my setup" action (see hardware.ts's writeStoredProfile). Shape
+ * matches the field set the machine type actually needs: a dGPU owner
+ * reports RAM + VRAM, a CPU-only owner just RAM, and an Apple Silicon owner
+ * a single unified-memory number. The `machine` discriminant lets
+ * computeCompatibilityVerdict detect a stale profile (saved for a machine
+ * type the viewer has since switched away from in the selector).
+ */
+export type HardwareProfile =
+  | { machine: 'dgpu'; ramGb: number; vramGb: number }
+  | { machine: 'cpu'; ramGb: number }
+  | { machine: 'apple'; unifiedGb: number }
+
 export type ViewMode = 'cards' | 'table'
 
 export type SortKey = 'category' | 'stars' | 'name' | 'added' | 'ram' | 'status'

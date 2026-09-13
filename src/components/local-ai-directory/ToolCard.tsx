@@ -10,9 +10,11 @@ import type { Language } from '@/lib/blog/blogContent'
 import { STORE_LINK_LABEL, type ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
+import { CompatibilityBadge } from './CompatibilityBadge'
+import { computeCompatibilityVerdict } from './hardware'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
-import type { MachineType } from './types'
+import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import { t } from './directory-i18n'
@@ -90,12 +92,16 @@ export function ToolCard({
   app,
   lang,
   machine,
+  profile,
   onOpen,
+  onRequestHardware,
 }: {
   app: ToolRecord
   lang: Language
   machine: MachineType
+  profile: HardwareProfile | null
   onOpen: (slug: string) => void
+  onRequestHardware?: () => void
 }) {
   const tagline = app.tagline[lang] ?? app.tagline.en ?? ''
   const locality = app.locality !== 'TODO' ? app.locality : null
@@ -216,9 +222,18 @@ export function ToolCard({
           </div>
         )}
 
-        <div className="flex items-start gap-1.5 text-xs mb-3">
+        <div className="flex items-start gap-1.5 text-xs mb-2">
           <CpuIcon className="h-3.5 w-3.5 mt-px shrink-0 text-text-secondary/50" />
           <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
+        </div>
+
+        <div className="mb-3" onClick={stop}>
+          <CompatibilityBadge
+            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+            hasProfile={profile != null}
+            lang={lang}
+            onRequestProfile={onRequestHardware}
+          />
         </div>
 
         <div className="mt-auto space-y-2.5">

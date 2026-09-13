@@ -8,26 +8,32 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
+import { CompatibilityBadge } from './CompatibilityBadge'
+import { computeCompatibilityVerdict } from './hardware'
 import { StarIcon } from './icons'
-import type { MachineType, SortDir, SortKey } from './types'
+import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
 
 export function ToolTable({
   apps,
   lang,
   machine,
+  profile,
   sortKey,
   sortDir,
   onSort,
   onOpen,
+  onRequestHardware,
 }: {
   apps: ToolRecord[]
   lang: Language
   machine: MachineType
+  profile: HardwareProfile | null
   sortKey: SortKey
   sortDir: SortDir
   onSort: (key: SortKey) => void
   onOpen: (slug: string) => void
+  onRequestHardware?: () => void
 }) {
   const COLUMNS: { key: SortKey; label: string }[] = [
     { key: 'name', label: t('colTool', lang) },
@@ -37,6 +43,9 @@ export function ToolTable({
     { key: 'status', label: t('colStatus', lang) },
     { key: 'category', label: t('colCategory', lang) },
   ]
+  // A dedicated, unsortable "can I run it" column, kept out of COLUMNS
+  // (SortKey has no matching value and adding one isn't warranted for a
+  // per-viewer verdict) but rendered as an extra <th>/<td> pair below.
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
     planned: t('statusPlanned', lang),
     listed: t('statusListed', lang),
@@ -64,6 +73,9 @@ export function ToolTable({
                 </th>
               )
             })}
+            <th className="text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap">
+              {t('colCompatFit', lang)}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -94,6 +106,14 @@ export function ToolTable({
               </td>
               <td className="p-2 sm:p-3 text-text-secondary">{STATUS_LABEL[app.status]}</td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]][lang]}</td>
+              <td className="p-2 sm:p-3 whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+                <CompatibilityBadge
+                  verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                  hasProfile={profile != null}
+                  lang={lang}
+                  onRequestProfile={onRequestHardware}
+                />
+              </td>
             </tr>
           ))}
         </tbody>
