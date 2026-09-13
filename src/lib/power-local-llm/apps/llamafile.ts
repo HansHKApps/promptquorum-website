@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/Mozilla-Ocho/llamafile README: "runs locally on most operating systems and CPU architectures," explicitly including 64-bit Raspberry Pis, "provided your weights fit into memory"; GPU is optional for acceleration. No fixed RAM/VRAM minimum stated — floor depends entirely on the embedded model, verified 2026-09-13
   stars: 25900,
   addedDate: '2026-09-04',
   status: 'listed',

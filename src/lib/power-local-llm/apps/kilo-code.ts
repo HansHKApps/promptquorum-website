@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'freemium', // free for individuals (BYOK, zero markup); Kilo Pass, Teams, Enterprise are paid
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // VS Code/CLI extension calling user-configured API backends (OpenRouter, Ollama, etc.), no local inference of its own; checked kilo.ai/docs and github.com/Kilo-Org/kilocode — no published minimum RAM/VRAM, only unofficial reports of high VS Code extension-host memory use, verified 2026-09-13
   stars: 27181, // github.com/Kilo-Org/kilocode, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

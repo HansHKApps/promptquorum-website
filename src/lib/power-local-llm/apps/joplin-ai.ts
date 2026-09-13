@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/HugoValim/joplin-ai-plugin README: a thin Joplin plugin that streams OpenAI-compatible /chat/completions requests to a user-configured endpoint (Ollama, etc.) — no local inference and no fixed hardware floor of its own, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

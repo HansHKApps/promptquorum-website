@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 6, vramGb: null, cpuOnly: null }, // per layla-network.ai's own published minimum ("any Android or iOS phone from the last 4-5 years with at least 6GB of RAM and an ARM64 processor"; 8GB+ for flagship/best performance); mobile SoC uses on-device NPU/GPU rather than discrete VRAM, so cpuOnly doesn't cleanly apply, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

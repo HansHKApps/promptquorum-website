@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 1, vramGb: null, cpuOnly: true }, // per github.com/danny-avila/LibreChat discussion #3941 (official maintainer answer): Docker deployment minimum is "1 GiB RAM and 1 vCPU" (2GB+ recommended with all features enabled); no GPU required — LibreChat is a chat UI that calls external/API model backends, verified 2026-09-13
   stars: 42808,
   addedDate: '2026-09-04',
   status: 'listed',

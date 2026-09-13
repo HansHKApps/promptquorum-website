@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 2, vramGb: null, cpuOnly: true }, // per docs.langflow.org/deployment-caddyfile official deployment docs: "a dual-core CPU and at least 2GB of RAM" minimum for the flow-builder server itself (8GB+ only if processing local models/embeddings within a flow); no GPU required to run Langflow, verified 2026-09-13
   stars: 154239,
   addedDate: '2026-09-04',
   status: 'listed',

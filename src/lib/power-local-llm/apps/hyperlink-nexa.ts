@@ -22,7 +22,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Proprietary',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 16, vramGb: 8, cpuOnly: false }, // per Nexa AI's own published tiers (blogs.nvidia.com/blog/rtx-ai-garage-nexa-hyperlink-local-agent and product listings): Apple Silicon Mac needs 16GB RAM, Windows w/ NVIDIA or AMD discrete GPU needs 8GB VRAM, Windows w/ AMD Ryzen AI (no discrete GPU) needs 32GB RAM — figures shown are the lower/more common discrete-GPU tier, verified 2026-09-13
   stars: null, // closed source, no public repo
   addedDate: '2026-09-05',
   status: 'listed',

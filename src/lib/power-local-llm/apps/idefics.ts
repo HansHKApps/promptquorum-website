@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 18, cpuOnly: false }, // per huggingface.co/HuggingFaceM4/idefics-9b-instruct model card + HF's automated model-memory estimate (~16.4GB for float16/bfloat16 inference of the 9B variant, rounded up for overhead); the 80B variant needs far more — no official RAM figure published, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

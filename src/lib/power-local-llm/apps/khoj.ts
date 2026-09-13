@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: null, cpuOnly: true }, // per docs.khoj.dev/get-started/setup/ official self-host docs: "Minimum 8 GB RAM"; a GPU (Nvidia, AMD, or Mac M1+) "significantly speeds up chat responses" but is explicitly not required, verified 2026-09-13
   stars: 37068,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 1, vramGb: null, cpuOnly: true }, // per docs.letta.com/self-hosting: base server is the Python process (~500MB) plus bundled Postgres/pgvector (~300MB), ~1GB total, growing with agent memory; "Letta orchestrates LLM calls — no GPU required when using cloud providers" (a self-hosted local-LLM backend has its own, separate requirement), verified 2026-09-13
   stars: 24617,
   addedDate: '2026-09-04',
   status: 'listed',
