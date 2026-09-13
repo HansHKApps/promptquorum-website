@@ -261,17 +261,30 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS7Row4Purpose}</Td>
                     <Td>{t.privacyS7Row4Duration}</Td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-100">
                     <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row5Cookie}</code></Td>
                     <Td>{t.privacyS7Row5SetBy}</Td>
                     <Td>{t.privacyS7Row5Purpose}</Td>
                     <Td>{t.privacyS7Row5Duration}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row6Cookie}</code></Td>
+                    <Td>{t.privacyS7Row6SetBy}</Td>
+                    <Td>{t.privacyS7Row6Purpose}</Td>
+                    <Td>{t.privacyS7Row6Duration}</Td>
+                  </tr>
+                  <tr>
+                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row7Cookie}</code></Td>
+                    <Td>{t.privacyS7Row7SetBy}</Td>
+                    <Td>{t.privacyS7Row7Purpose}</Td>
+                    <Td>{t.privacyS7Row7Duration}</Td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <P>{t.privacyS7Para2}</P>
             <P>{t.privacyS7Para3}</P>
+            <P>{t.privacyS7Para4}</P>
           </section>
 
           {/* Section 8 */}
