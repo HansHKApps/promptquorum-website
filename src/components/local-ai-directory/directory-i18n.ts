@@ -310,6 +310,14 @@ const DIR_UI = {
   detailHardware: { en: 'Hardware', de: 'Hardware', fr: 'Matériel', ja: 'ハードウェア', zh: '硬件', es: 'Hardware', pt: 'Hardware', ar: 'العتاد', ko: '하드웨어' },
   detailAdded: { en: 'Added', de: 'Hinzugefügt', fr: 'Ajouté', ja: '追加日', zh: '添加日期', es: 'Añadido', pt: 'Adicionado', ar: 'تاريخ الإضافة', ko: '추가일' },
   detailLastVerified: { en: 'Last verified', de: 'Zuletzt geprüft', fr: 'Dernière vérification', ja: '最終確認日', zh: '最后验证日期', es: 'Última verificación', pt: 'Última verificação', ar: 'آخر تحقق', ko: '마지막 확인일' },
+  cardLastUpdatedTemplate: {
+    en: 'Updated {date}', de: 'Aktualisiert am {date}', fr: 'Mis à jour le {date}', ja: '{date} 更新',
+    zh: '{date} 更新', es: 'Actualizado el {date}', pt: 'Atualizado em {date}', ar: 'حُدِّث في {date}', ko: '{date} 업데이트',
+  },
+  cardLastUpdatedAriaLabel: {
+    en: 'Last updated', de: 'Zuletzt aktualisiert', fr: 'Dernière mise à jour', ja: '最終更新日',
+    zh: '最后更新日期', es: 'Última actualización', pt: 'Última atualização', ar: 'آخر تحديث', ko: '마지막 업데이트',
+  },
   bestFor: { en: 'Best for:', de: 'Am besten für:', fr: 'Idéal pour :', ja: '最適な用途:', zh: '最适合：', es: 'Ideal para:', pt: 'Ideal para:', ar: 'الأنسب لـ:', ko: '적합한 용도:' },
   limits: { en: 'Limits:', de: 'Grenzen:', fr: 'Limites :', ja: '制限:', zh: '局限性：', es: 'Limitaciones:', pt: 'Limitações:', ar: 'القيود:', ko: '한계:' },
   claimEntryTemplate: {

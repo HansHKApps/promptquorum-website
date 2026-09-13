@@ -13,13 +13,14 @@ import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryG
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
 import { computeCompatibilityVerdict } from './hardware'
-import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
+import { StarIcon, CpuIcon, PlugIcon, TagIcon, ClockIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
@@ -111,6 +112,8 @@ export function ToolCard({
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
   const review = featureReviewUrl(app.slug)
+  const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
+  const lastUpdatedLabel = lastUpdatedIso ? formatDisplayDate(lastUpdatedIso, lang) : null
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
@@ -281,6 +284,21 @@ export function ToolCard({
               </button>
             )}
           </div>
+
+          {lastUpdatedLabel && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+                onOpen(app.slug)
+              }}
+              aria-label={t('cardLastUpdatedAriaLabel', lang)}
+              className="inline-flex w-fit items-center gap-1 rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] text-text-secondary hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+            >
+              <ClockIcon className="h-3 w-3 text-text-secondary/60" />
+              {t('cardLastUpdatedTemplate', lang, { date: lastUpdatedLabel })}
+            </button>
+          )}
 
           {review && (
             <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-1.5">
