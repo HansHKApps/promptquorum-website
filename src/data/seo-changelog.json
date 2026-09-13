@@ -1661,5 +1661,131 @@
     ],
     "reason": "page-updater: data-free meta review — AR meta was 134 chars, under the 140 min",
     "baseline": null
+  },
+  {
+    "id": "cb99a4c3-0ded-4691-ae9f-0c22f8cfee48",
+    "slug": "/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:23.619Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Updated 2026 directory of 167 local LLM tools across 7 categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate.",
+        "new": "167 local LLM tools compared across 7 categories, filterable by your hardware. Licenses, links, and real stacks included — find your setup in minutes."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC mode — meta description length fix (190>158 chars) + answer/benefit/CTA structure; also fixed a body coherence bug where Continue.dev was recommended as a live coding-stack default despite being marked discontinued elsewhere on the page (swapped to Cline in 6 places)",
+    "baseline": null
+  },
+  {
+    "id": "3b4f7379-819a-4660-8586-4171fdd5f472",
+    "slug": "/de/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.303Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Aktualisiertes 2026-Verzeichnis von 167 lokalen LLM-Tools in 10 Kategorien — Runtimes, Desktop-Apps, Web-UIs, IDE-Tools, Terminal-Tools, RAG, Agenten, Sprache, Mobile, Bildgeneration.",
+        "new": "167 lokale LLM-Tools über 7 Kategorien, filterbar nach Ihrer Hardware. Lizenzen, Links und reale Setups — finden Sie Ihr Setup in Minuten."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' (pre-restructure taxonomy) synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
+    "baseline": null
+  },
+  {
+    "id": "ce36c23a-48c0-4517-a3fa-469eab46f88b",
+    "slug": "/fr/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.405Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Répertoire 2026 mis à jour de 167 outils LLM locaux en 10 catégories — runtimes, apps bureau, interfaces web, outils IDE, outils terminal, RAG, agents, voix, mobile, génération d'images. Août 2026.",
+        "new": "167 outils LLM locaux sur 7 catégories, filtrables selon votre matériel. Licences, liens et stacks réels — trouvez votre config en quelques minutes."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
+    "baseline": null
+  },
+  {
+    "id": "9c698b89-2568-46fc-8779-29ddbcf88ebe",
+    "slug": "/ja/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.514Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "167のローカルLLMツール・アプリ・フレームワーク・デプロイソフトウェアを10カテゴリでまとめた更新版2026年ディレクトリ — Ollama、LM Studio、RAG、エージェント、画像生成。2026年8月更新。",
+        "new": "167のローカルLLMツールを7カテゴリで比較。ハードウェアで絞り込み可能、ライセンス・リンク・実際の構成例つき — 数分で自分のセットアップが見つかります。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
+    "baseline": null
+  },
+  {
+    "id": "3a76cb84-3a95-4e96-9dd5-9abf1de8aa06",
+    "slug": "/zh/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.617Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "收录167款本地LLM工具、应用、框架与部署软件的2026年更新版目录，覆盖10大类——Ollama、LM Studio、RAG、智能体、图像生成。2026年8月更新。",
+        "new": "167款本地LLM工具，按7大类对比，可按你的硬件筛选。附许可证、链接与真实技术栈——几分钟内找到适合你的方案。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
+    "baseline": null
+  },
+  {
+    "id": "04ed8540-2ac4-4449-8fdd-f037b6d4c720",
+    "slug": "/es/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.721Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Directorio actualizado de 2026 con 167 herramientas de LLM local en 10 categorías — runtimes, apps de escritorio, interfaces web, herramientas IDE, RAG, agentes, voz, móvil, generación de imágenes. Actualizado en agosto de 2026.",
+        "new": "167 herramientas LLM local en 7 categorías, filtrables por tu hardware. Licencias, enlaces y stacks reales — encuentra tu configuración en minutos."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed; also synced schema.description override",
+    "baseline": null
+  },
+  {
+    "id": "ece23757-1826-4424-8cc8-405e243a638c",
+    "slug": "/pt/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.826Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Diretório atualizado de 2026 com 167 ferramentas, aplicativos, frameworks & software de implantação de LLM local em 10 categorias — Ollama, LM Studio, RAG, agentes, geração de imagens. Agosto 2026.",
+        "new": "167 ferramentas LLM local comparadas em 7 categorias, filtráveis pelo seu hardware. Licenças, links e stacks reais — encontre sua configuração em minutos."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed; also synced schema.description override",
+    "baseline": null
+  },
+  {
+    "id": "0738663a-2090-48a4-acb4-c9a6177711d5",
+    "slug": "/ar/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:53.929Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "دليل محدَّث لعام 2026 يضم 167 أداة للنماذج اللغوية المحلية في 10 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وأدوات IDE وRAG والعملاء الذكيين والصوت وتوليد الصور. آخر تحديث أغسطس 2026.",
+        "new": "167 أداة للنماذج اللغوية المحلية عبر 7 فئات، قابلة للتصفية حسب جهازك. تراخيص وروابط وتجهيزات فعلية — اعثر على إعدادك خلال دقائق."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed; also synced schema.description override",
+    "baseline": null
+  },
+  {
+    "id": "ea79718f-69ef-412f-a964-233cbd368413",
+    "slug": "/ko/power-local-llm/local-llm-software-directory",
+    "date": "2026-09-13T12:38:54.035Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "167개의 로컬 LLM 도구·앱·프레임워크·배포 소프트웨어를 10개 카테고리로 정리한 2026년 업데이트판 디렉토리 — Ollama, LM Studio, RAG, 에이전트, 이미지 생성. 2026년 8월 업데이트.",
+        "new": "167개 로컬 LLM 도구를 7개 카테고리로 비교. 내 하드웨어 기준으로 필터링 가능, 라이선스·링크·실제 구성 예시 포함 — 몇 분이면 내게 맞는 세팅을 찾을 수 있습니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
+    "baseline": null
   }
 ]
