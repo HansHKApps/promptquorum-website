@@ -60,6 +60,15 @@ export interface ToolRecordHardware {
   ramGb: number | null
   vramGb: number | null
   cpuOnly: boolean | null
+  // True when the tool's real requirement is inherently variable — it depends on
+  // whichever model/backend the user loads or connects, not a fixed attribute of
+  // the tool itself (e.g. SGLang, Ollama, or any client that just forwards to a
+  // backend the user picks). Distinct from ramGb/vramGb/cpuOnly all being null for
+  // a tool nobody has looked into yet: this flag means the research WAS done and
+  // concluded "there is no single number," so the UI should say that plainly
+  // instead of showing the generic "not yet reviewed" label. Leave unset (falsy)
+  // for tools that genuinely just haven't been researched.
+  variesByModel?: boolean
 }
 
 export interface ToolRecordFounder {

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per github.com/ml-explore/mlx-lm README: MLX-LM is "for generating text and fine-tuning large language models on Apple silicon with MLX," requiring an Apple Silicon Mac's GPU/unified memory (no VRAM in the traditional sense); docs warn "models which are large relative to the total RAM available on the machine can be slow" and suggest raising the wired-memory limit on macOS 15+ rather than publishing a fixed minimum, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // per github.com/ml-explore/mlx-lm README: MLX-LM is "for generating text and fine-tuning large language models on Apple silicon with MLX," requiring an Apple Silicon Mac's GPU/unified memory (no VRAM in the traditional sense); docs warn "models which are large relative to the total RAM available on the machine can be slow" and suggest raising the wired-memory limit on macOS 15+ rather than publishing a fixed minimum, verified 2026-09-13
   stars: 8900,
   addedDate: '2026-09-04',
   status: 'listed',

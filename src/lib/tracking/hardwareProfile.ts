@@ -50,8 +50,8 @@ export function trackHardwareProfileSaved(profile: HardwareProfile): void {
   const payload: Record<string, string> =
     profile.machine === 'dgpu'
       ? { machine: 'dgpu', ram_bucket: bucket(profile.ramGb, RAM_EDGES), vram_bucket: bucket(profile.vramGb, VRAM_EDGES) }
-      : profile.machine === 'cpu'
-        ? { machine: 'cpu', ram_bucket: bucket(profile.ramGb, RAM_EDGES) }
+      : profile.machine === 'cpu' || profile.machine === 'ios' || profile.machine === 'android'
+        ? { machine: profile.machine, ram_bucket: bucket(profile.ramGb, RAM_EDGES) }
         : { machine: 'apple', unified_bucket: bucket(profile.unifiedGb, RAM_EDGES) }
 
   try {

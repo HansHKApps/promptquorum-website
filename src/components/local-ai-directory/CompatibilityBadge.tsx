@@ -27,6 +27,7 @@ export function CompatibilityBadge({
   hasProfile,
   lang,
   onRequestProfile,
+  variesByModel,
 }: {
   verdict: CompatibilityVerdict
   /** Whether the viewer has saved a hardware profile at all — distinguishes
@@ -38,6 +39,11 @@ export function CompatibilityBadge({
   /** Called when the viewer clicks the "no profile saved" state — should
    *  open/scroll to the HardwareProfileWidget. Ignored for every other verdict. */
   onRequestProfile?: () => void
+  /** From `tool.hardware?.variesByModel` — true when this tool's requirement is
+   *  inherently variable (depends on whichever model/backend the viewer loads),
+   *  not simply unresearched. Only changes wording for the `unknown` verdict;
+   *  ignored otherwise. See ToolRecordHardware.variesByModel for the full story. */
+  variesByModel?: boolean
 }) {
   if (verdict === 'unknown' && !hasProfile) {
     return (
@@ -49,6 +55,20 @@ export function CompatibilityBadge({
         <QuestionIcon className="h-2.5 w-2.5" />
         {t('compatSetHardware', lang)}
       </button>
+    )
+  }
+
+  if (verdict === 'unknown' && variesByModel) {
+    // Profile exists, and this tool HAS been researched — the research just
+    // concluded there is no single fixed number, because the requirement is
+    // set by whichever model/backend the viewer loads, not the tool itself.
+    // Distinct from compatNotReviewed below, which means "nobody has looked
+    // into this tool's hardware footprint yet."
+    return (
+      <span className={`${BASE_CLASSES} ${VERDICT_STYLE.unknown}`}>
+        <QuestionIcon className="h-2.5 w-2.5" />
+        {t('compatVariesByModel', lang)}
+      </span>
     )
   }
 

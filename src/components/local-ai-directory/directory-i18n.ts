@@ -14,7 +14,7 @@
 // for `{name}`-style placeholders.
 
 import type { Language } from '@/lib/blog/blogContent'
-import type { MachineType } from './types'
+import type { MachineCategory, MachineType } from './types'
 import type { UseCaseKey } from '@/lib/power-local-llm/apps/types'
 
 type Dict = Record<Language, string>
@@ -56,6 +56,26 @@ const DIR_UI = {
     en: 'My machine:', de: 'Mein Gerät:', fr: 'Mon appareil :',
     ja: '使用機器:', zh: '我的设备：', es: 'Mi equipo:',
     pt: 'Meu equipamento:', ar: 'جهازي:', ko: '내 기기:',
+  },
+  deviceCategoryLabel: {
+    en: 'Device:', de: 'Gerätetyp:', fr: 'Appareil :',
+    ja: 'デバイス:', zh: '设备类型：', es: 'Dispositivo:',
+    pt: 'Dispositivo:', ar: 'الجهاز:', ko: '기기 유형:',
+  },
+  deviceCategoryDesktop: {
+    en: 'Laptop / Desktop', de: 'Laptop / Desktop', fr: 'Ordinateur portable / bureau',
+    ja: 'ノート/デスクトップPC', zh: '笔记本/台式机', es: 'Portátil / Escritorio',
+    pt: 'Notebook / Desktop', ar: 'حاسوب محمول / مكتبي', ko: '노트북/데스크톱',
+  },
+  deviceCategoryMobile: {
+    en: 'Mobile', de: 'Mobilgerät', fr: 'Mobile',
+    ja: 'モバイル', zh: '手机', es: 'Móvil',
+    pt: 'Celular', ar: 'الجوال', ko: '모바일',
+  },
+  myPhoneLabel: {
+    en: 'My phone:', de: 'Mein Handy:', fr: 'Mon téléphone :',
+    ja: '使用スマートフォン:', zh: '我的手机：', es: 'Mi teléfono:',
+    pt: 'Meu celular:', ar: 'هاتفي:', ko: '내 휴대폰:',
   },
   sortLabel: {
     en: 'Sort:', de: 'Sortieren:', fr: 'Trier :', ja: '並び替え:',
@@ -133,6 +153,16 @@ const DIR_UI = {
   machineCpu: {
     en: 'CPU only', de: 'Nur CPU', fr: 'CPU uniquement', ja: 'CPUのみ',
     zh: '仅CPU', es: 'Solo CPU', pt: 'Somente CPU', ar: 'المعالج فقط', ko: 'CPU만',
+  },
+  machineIos: {
+    en: 'iPhone / iPad', de: 'iPhone / iPad', fr: 'iPhone / iPad',
+    ja: 'iPhone/iPad', zh: 'iPhone/iPad', es: 'iPhone / iPad',
+    pt: 'iPhone / iPad', ar: 'آيفون / آيباد', ko: '아이폰/아이패드',
+  },
+  machineAndroid: {
+    en: 'Android', de: 'Android', fr: 'Android',
+    ja: 'Android', zh: 'Android', es: 'Android',
+    pt: 'Android', ar: 'أندرويد', ko: '안드로이드',
   },
 
   // --- "I want to…" chips (WantChips + ActiveFilterChips share these) ---
@@ -422,7 +452,7 @@ const DIR_UI = {
     ar: 'يحمّل النماذج بنفسه — يختلف حسب حجم النموذج والتكميم',
     ko: '모델을 직접 로드함 — 모델 크기와 양자화 수준에 따라 달라짐',
   },
-  hwUnifiedMemoryTemplate: { en: '{n} GB unified memory', de: '{n} GB Unified Memory', fr: '{n} Go de mémoire unifiée', ja: '{n}GBのユニファイドメモリ', zh: '{n}GB统一内存', es: '{n} GB de memoria unificada', pt: '{n} GB de memória unificada', ar: '{n} جيجابايت ذاكرة موحدة', ko: '{n}GB 통합 메모리' },
+  hwUnifiedMemoryTemplate: { en: 'Min. {n} GB unified memory', de: 'Mind. {n} GB Unified Memory', fr: '{n} Go de mémoire unifiée min.', ja: '最低{n}GBのユニファイドメモリ', zh: '最低{n}GB统一内存', es: 'Mín. {n} GB de memoria unificada', pt: 'Mín. {n} GB de memória unificada', ar: 'الحد الأدنى {n} جيجابايت ذاكرة موحدة', ko: '최소 {n}GB 통합 메모리' },
   hwRunsCpuOnlySlower: {
     en: 'Runs CPU-only if needed (slower)', de: 'Läuft bei Bedarf auch nur mit CPU (langsamer)',
     fr: 'Fonctionne uniquement sur CPU si nécessaire (plus lent)', ja: '必要に応じてCPUのみでも動作します（低速）',
@@ -447,11 +477,39 @@ const DIR_UI = {
     zh: '此工具仅用CPU运行会很慢', es: 'Solo con CPU, esta herramienta será lenta',
     pt: 'Apenas com CPU, esta ferramenta será lenta', ar: 'سيكون التشغيل بالمعالج فقط بطيئًا لهذه الأداة', ko: '이 도구는 CPU만 사용 시 느립니다',
   },
-  hwRamTemplate: { en: '{n} GB RAM', de: '{n} GB RAM', fr: '{n} Go de RAM', ja: '{n}GBのRAM', zh: '{n}GB内存', es: '{n} GB de RAM', pt: '{n} GB de RAM', ar: '{n} جيجابايت رام', ko: '{n}GB RAM' },
+  hwRamTemplate: { en: 'Min. {n} GB RAM', de: 'Mind. {n} GB RAM', fr: '{n} Go de RAM min.', ja: '最低{n}GBのRAM', zh: '最低{n}GB内存', es: 'Mín. {n} GB de RAM', pt: 'Mín. {n} GB de RAM', ar: 'الحد الأدنى {n} جيجابايت رام', ko: '최소 {n}GB RAM' },
   hwCpuOnlySupported: { en: 'CPU-only supported', de: 'Nur-CPU-Betrieb unterstützt', fr: 'Fonctionnement CPU seul pris en charge', ja: 'CPUのみでの動作に対応', zh: '支持仅用CPU运行', es: 'Compatible con solo CPU', pt: 'Compatível com apenas CPU', ar: 'يدعم التشغيل بالمعالج فقط', ko: 'CPU 전용 실행 지원' },
-  hwVramTemplate: { en: '{n} GB VRAM', de: '{n} GB VRAM', fr: '{n} Go de VRAM', ja: '{n}GBのVRAM', zh: '{n}GB显存', es: '{n} GB de VRAM', pt: '{n} GB de VRAM', ar: '{n} جيجابايت VRAM', ko: '{n}GB VRAM' },
+  hwVramTemplate: { en: 'Min. {n} GB VRAM', de: 'Mind. {n} GB VRAM', fr: '{n} Go de VRAM min.', ja: '最低{n}GBのVRAM', zh: '最低{n}GB显存', es: 'Mín. {n} GB de VRAM', pt: 'Mín. {n} GB de VRAM', ar: 'الحد الأدنى {n} جيجابايت VRAM', ko: '최소 {n}GB VRAM' },
   hwPlusSystemRamTemplate: { en: '+ {n} GB system RAM', de: '+ {n} GB System-RAM', fr: '+ {n} Go de RAM système', ja: '＋システムRAM {n}GB', zh: '+{n}GB系统内存', es: '+ {n} GB de RAM del sistema', pt: '+ {n} GB de RAM do sistema', ar: '+ {n} جيجابايت رام النظام', ko: '+ 시스템 RAM {n}GB' },
   hwNoDedicatedGpu: { en: 'No dedicated GPU required', de: 'Keine dedizierte GPU erforderlich', fr: 'Aucun GPU dédié requis', ja: '専用GPUは不要', zh: '无需独立显卡', es: 'No requiere GPU dedicada', pt: 'Não requer GPU dedicada', ar: 'لا يتطلب معالج رسومات مخصصًا', ko: '전용 GPU 불필요' },
+  hwVariesByModel: {
+    en: 'Depends on the model you run', de: 'Hängt vom verwendeten Modell ab',
+    fr: 'Dépend du modèle utilisé', ja: '実行するモデルによって異なります',
+    zh: '取决于运行的模型', es: 'Depende del modelo que uses',
+    pt: 'Depende do modelo usado', ar: 'يعتمد على النموذج الذي تشغّله',
+    ko: '실행하는 모델에 따라 다름',
+  },
+  hwNoIosApp: {
+    en: 'No iPhone/iPad app', de: 'Keine iPhone-/iPad-App', fr: "Pas d'appli iPhone/iPad",
+    ja: 'iPhone/iPad版なし', zh: '没有iPhone/iPad应用', es: 'Sin app para iPhone/iPad',
+    pt: 'Sem app para iPhone/iPad', ar: 'لا يوجد تطبيق لآيفون/آيباد', ko: '아이폰/아이패드 앱 없음',
+  },
+  hwNoAndroidApp: {
+    en: 'No Android app', de: 'Keine Android-App', fr: "Pas d'appli Android",
+    ja: 'Android版なし', zh: '没有Android应用', es: 'Sin app para Android',
+    pt: 'Sem app para Android', ar: 'لا يوجد تطبيق أندرويد', ko: '안드로이드 앱 없음',
+  },
+  hwVariesByModelDetail: {
+    en: 'No fixed requirement — set by whichever model or backend you load',
+    de: 'Keine feste Anforderung — abhängig vom geladenen Modell oder Backend',
+    fr: 'Pas de configuration fixe — dépend du modèle ou du backend chargé',
+    ja: '固定要件はありません — 読み込むモデルやバックエンドによって決まります',
+    zh: '没有固定要求——取决于你加载的模型或后端',
+    es: 'Sin requisito fijo — depende del modelo o backend que cargues',
+    pt: 'Sem requisito fixo — depende do modelo ou backend carregado',
+    ar: 'لا يوجد متطلب ثابت — يحدده النموذج أو الواجهة الخلفية التي تحمّلها',
+    ko: '고정된 요구 사항 없음 — 불러오는 모델이나 백엔드에 따라 결정됨',
+  },
 
   // --- CompatibilityBadge (per-tool "can I run it" verdict) ---
   compatRunsWell: { en: 'Runs well', de: 'Läuft gut', fr: 'Fonctionne bien', ja: '快適に動作', zh: '运行流畅', es: 'Funciona bien', pt: 'Funciona bem', ar: 'يعمل بسلاسة', ko: '원활하게 실행됨' },
@@ -464,6 +522,13 @@ const DIR_UI = {
     zh: '尚未评估硬件适配性', es: 'Compatibilidad de hardware aún no evaluada',
     pt: 'Compatibilidade de hardware ainda não avaliada', ar: 'لم تُراجع ملاءمة الجهاز بعد',
     ko: '하드웨어 적합성 미검토',
+  },
+  compatVariesByModel: {
+    en: 'Depends on the model you run', de: 'Hängt vom verwendeten Modell ab',
+    fr: 'Dépend du modèle utilisé', ja: '実行するモデルによって異なります',
+    zh: '取决于运行的模型', es: 'Depende del modelo que uses',
+    pt: 'Depende do modelo usado', ar: 'يعتمد على النموذج الذي تشغّله',
+    ko: '실행하는 모델에 따라 다름',
   },
 
   // --- HardwareProfileWidget ("Your setup" panel) ---
@@ -522,7 +587,16 @@ export function getMachineLabels(lang: Language): Record<MachineType, string> {
   return {
     dgpu: t('machineDgpu', lang),
     apple: t('machineApple', lang),
+    ios: t('machineIos', lang),
+    android: t('machineAndroid', lang),
     cpu: t('machineCpu', lang),
+  }
+}
+
+export function getDeviceCategoryLabels(lang: Language): Record<MachineCategory, string> {
+  return {
+    desktop: t('deviceCategoryDesktop', lang),
+    mobile: t('deviceCategoryMobile', lang),
   }
 }
 

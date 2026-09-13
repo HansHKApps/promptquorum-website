@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per nvidia.github.io/TensorRT-LLM/reference/support-matrix.html — supports only Ampere/Ada Lovelace/Hopper/Blackwell/Grace Hopper/GB200 NVIDIA GPU architectures on Linux x86_64/aarch64, no CPU-only mode; no fixed minimum VRAM in GB is published since it depends on the model compiled, verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false, variesByModel: true }, // per nvidia.github.io/TensorRT-LLM/reference/support-matrix.html — supports only Ampere/Ada Lovelace/Hopper/Blackwell/Grace Hopper/GB200 NVIDIA GPU architectures on Linux x86_64/aarch64, no CPU-only mode; no fixed minimum VRAM in GB is published since it depends on the model compiled, verified 2026-09-13
   stars: 14500,
   addedDate: '2026-09-04',
   status: 'listed',

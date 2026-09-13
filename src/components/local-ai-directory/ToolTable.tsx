@@ -99,7 +99,7 @@ export function ToolTable({
                 )}
               </td>
               <td className="p-2 sm:p-3 text-text-secondary">
-                <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
+                <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact profile={profile} onRequestHardware={onRequestHardware} mobile={{ interfaces: app.interfaces, platforms: app.platforms }} />
               </td>
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                 {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
@@ -108,8 +108,9 @@ export function ToolTable({
               <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]][lang]}</td>
               <td className="p-2 sm:p-3 whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
                 <CompatibilityBadge
-                  verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                  verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                   hasProfile={profile != null}
+                  variesByModel={app.hardware?.variesByModel === true}
                   lang={lang}
                   onRequestProfile={onRequestHardware}
                 />

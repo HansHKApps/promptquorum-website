@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/rikkahub/rikkahub README: confirmed as a native Android LLM chat client that switches between providers; no RAM, Android-version, or GPU minimum is documented in the README. Verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per github.com/rikkahub/rikkahub README: confirmed as a native Android LLM chat client that switches between providers; no RAM, Android-version, or GPU minimum is documented in the README. Verified 2026-09-13
   stars: 7400,
   addedDate: '2026-09-04',
   status: 'listed',

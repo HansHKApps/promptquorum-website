@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'RunAnywhere License (Apache-2.0 based, with commercial terms)', // core SDK is free; per-platform SDKs (Flutter/Kotlin) are plain Apache-2.0
   price: 'freemium', // free developer SDK; commercial/enterprise plans for production + control plane
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per docs.runanywhere.ai: minimum OS is iOS 17.5/macOS 14.5 (Swift SDK) and Android API 24 (Kotlin SDK); no fixed RAM/VRAM floor is stated (per-model RAM needs, e.g. ~500MB-4GB, are model-dependent, not an SDK requirement) — SDK explicitly runs on-device with CPU fallback, no dedicated GPU required. Verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per docs.runanywhere.ai: minimum OS is iOS 17.5/macOS 14.5 (Swift SDK) and Android API 24 (Kotlin SDK); no fixed RAM/VRAM floor is stated (per-model RAM needs, e.g. ~500MB-4GB, are model-dependent, not an SDK requirement) — SDK explicitly runs on-device with CPU fallback, no dedicated GPU required. Verified 2026-09-13
   stars: 10282, // github.com/RunanywhereAI/runanywhere-sdks, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

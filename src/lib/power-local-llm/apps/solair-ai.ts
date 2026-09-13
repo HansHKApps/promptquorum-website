@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per solair-ai-review.ts (research already done for the dedicated review) citing the App Store listing: requires iOS 26.0 (A14+)/iPadOS 26.0 (A12+)/macOS 26.0 (Apple Silicon only, no Intel); runs on-device, picking a model size to match the device's RAM — no discrete GPU/VRAM requirement or fixed RAM figure is published. Verified 2026-09-13; app itself requires iPhone A14+/iPad A12+/Apple Silicon Mac
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per solair-ai-review.ts (research already done for the dedicated review) citing the App Store listing: requires iOS 26.0 (A14+)/iPadOS 26.0 (A12+)/macOS 26.0 (Apple Silicon only, no Intel); runs on-device, picking a model size to match the device's RAM — no discrete GPU/VRAM requirement or fixed RAM figure is published. Verified 2026-09-13; app itself requires iPhone A14+/iPad A12+/Apple Silicon Mac
   stars: null, // App Store apps do not have a GitHub star count; App Store rating (4.3/5, 26 ratings) is covered in the review article, not this directory field
   addedDate: '2026-09-12',
   status: 'listed',

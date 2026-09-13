@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/mindverse/Second-Me README: explicitly supports CPU-only deployment (Docker or integrated setup) on Windows/Linux/Mac, with optional MLX GPU acceleration on Apple Silicon (CLI-only); RAM scales with chosen model (~8GB for ~0.8B up to ~32GB for ~3.5B), so there is no single fixed floor. Verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per github.com/mindverse/Second-Me README: explicitly supports CPU-only deployment (Docker or integrated setup) on Windows/Linux/Mac, with optional MLX GPU acceleration on Apple Silicon (CLI-only); RAM scales with chosen model (~8GB for ~0.8B up to ~32GB for ~3.5B), so there is no single fixed floor. Verified 2026-09-13
   stars: 16000,
   addedDate: '2026-09-04',
   status: 'listed',

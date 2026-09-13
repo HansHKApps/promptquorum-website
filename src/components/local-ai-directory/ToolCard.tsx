@@ -227,13 +227,14 @@ export function ToolCard({
 
         <div className="flex items-start gap-1.5 text-xs mb-2">
           <CpuIcon className="h-3.5 w-3.5 mt-px shrink-0 text-text-secondary/50" />
-          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
+          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact profile={profile} onRequestHardware={onRequestHardware} mobile={{ interfaces: app.interfaces, platforms: app.platforms }} />
         </div>
 
         <div className="mb-3" onClick={stop}>
           <CompatibilityBadge
-            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
             hasProfile={profile != null}
+            variesByModel={app.hardware?.variesByModel === true}
             lang={lang}
             onRequestProfile={onRequestHardware}
           />

@@ -317,20 +317,22 @@ export function ToolDrawer({
                   <DetailRow
                     label={t('detailHardware', lang)}
                     value={
-                      computeHardwareDisplay(app.hardware, machine, lang, app.engine).known ? (
+                      computeHardwareDisplay(app.hardware, machine, lang, app.engine, { interfaces: app.interfaces, platforms: app.platforms }).known ? (
                         <div className="flex flex-wrap items-center gap-2">
-                          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact />
+                          <HardwareBlock hardware={app.hardware} machine={machine} engine={app.engine} lang={lang} compact profile={profile} onRequestHardware={onRequestHardware} mobile={{ interfaces: app.interfaces, platforms: app.platforms }} />
                           <CompatibilityBadge
-                            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                            verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                             hasProfile={profile != null}
+                            variesByModel={app.hardware?.variesByModel === true}
                             lang={lang}
                             onRequestProfile={onRequestHardware}
                           />
                         </div>
                       ) : (
                         <CompatibilityBadge
-                          verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine)}
+                          verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                           hasProfile={profile != null}
+                          variesByModel={app.hardware?.variesByModel === true}
                           lang={lang}
                           onRequestProfile={onRequestHardware}
                         />

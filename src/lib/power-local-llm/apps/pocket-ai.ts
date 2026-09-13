@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per mypocketai.app: requires "iPhone 12 or newer, iOS 17+"; older iPhones use lighter models (Qwen 0.6B) at ~20-35 tok/s, models range ~460MB-2.7GB — no numeric RAM minimum published, and iPhones have no discrete VRAM (unified memory/Neural Engine) — verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true, variesByModel: true }, // per mypocketai.app: requires "iPhone 12 or newer, iOS 17+"; older iPhones use lighter models (Qwen 0.6B) at ~20-35 tok/s, models range ~460MB-2.7GB — no numeric RAM minimum published, and iPhones have no discrete VRAM (unified memory/Neural Engine) — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-11',
   status: 'listed',

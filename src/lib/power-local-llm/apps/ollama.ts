@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per articles/ollama-review.ts (sourced from ollama.com/download and github.com/ollama/ollama): "Ollama has no fixed hardware minimum beyond running its supported OS" — the practical limit is whichever model is pulled, needing more RAM or VRAM as model size grows — verified 2026-09-13
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per articles/ollama-review.ts (sourced from ollama.com/download and github.com/ollama/ollama): "Ollama has no fixed hardware minimum beyond running its supported OS" — the practical limit is whichever model is pulled, needing more RAM or VRAM as model size grows — verified 2026-09-13
   stars: 180722, // re-verified via GitHub API (api.github.com/repos/ollama/ollama) on 2026-09-12; was 180124
   addedDate: '2026-09-04',
   status: 'listed',
