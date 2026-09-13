@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 16, vramGb: 4, cpuOnly: true }, // per github.com/AUTOMATIC1111/stable-diffusion-webui wiki Troubleshooting page: "The program needs 16gb of regular RAM to run smoothly" (8GB workable with a swap/page file), 4GB VRAM baseline tier with --medvram/--lowvram flags, CPU-only mode also supported (much slower); verified 2026-09-13
   stars: 164800,
   addedDate: '2026-09-04',
   status: 'listed',

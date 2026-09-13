@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // checked docs.anythingllm.com/mobile/overview and Google Play listing 2026-09-13 — no documented Android version, RAM, or storage minimum for the mobile app; Android-only, runs an on-device embedding model + vector DB for RAG, no GPU required
   stars: 65608,
   addedDate: '2026-09-04',
   status: 'listed',

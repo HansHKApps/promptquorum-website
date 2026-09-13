@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/AtomicBot-ai/atomic-agent README: "runs on everyday consumer GPUs and CPUs, no datacenter needed", "falls back to CPU when no GPU driver is available" — no fixed RAM/VRAM number stated, depends on the local model chosen via llama-server; verified 2026-09-13
   stars: 2494, // github.com/AtomicBot-ai/atomic-agent, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

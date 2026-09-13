@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/sigoden/aichat README: no stated hardware requirements — aichat is a CLI client for LLM APIs/local servers, no local inference or GPU need of its own; verified 2026-09-13
   stars: 10400,
   addedDate: '2026-09-04',
   status: 'listed',

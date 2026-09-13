@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 13, cpuOnly: false }, // per github.com/guoyww/AnimateDiff README: SDXL-Beta motion module inference "usually requires ~13GB VRAM"; the base SD v1.5 AnimateDiff branch has no explicit VRAM figure stated, GPU required for practical use; verified 2026-09-13
   stars: 12200,
   addedDate: '2026-09-04',
   status: 'listed',

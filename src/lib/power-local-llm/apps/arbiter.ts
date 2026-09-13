@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'paid',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 6, vramGb: null, cpuOnly: true }, // per App Store listing (apps.apple.com/us/app/arbiter-local-ai-chat/id6747954532) and askarbiter.ai: "iPhones and iPads with iOS 16 or later, with best performance on devices with A14 Bionic or newer and at least 6 GB of RAM" — on-device only, no discrete GPU/VRAM concept; verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

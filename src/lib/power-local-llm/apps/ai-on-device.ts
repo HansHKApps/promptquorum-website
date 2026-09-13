@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'paid',
-  hardware: null, // TODO: hard requirement is Apple Intelligence compatibility (iOS 26.0 / macOS 26.0+), not a RAM/VRAM floor — needs manual research if a numeric floor is ever published
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per App Store listing (apps.apple.com/us/app/ai-on-device/id6753206463): "Requires iOS 26.0 or later" / "macOS 26.0 or later" and "ONLY WORKS ON COMPATIBLE DEVICES WITH APPLE INTELLIGENCE" — the hard requirement is Apple Intelligence device compatibility, not a published RAM/VRAM number; verified 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

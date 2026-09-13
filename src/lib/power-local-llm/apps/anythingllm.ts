@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 16, vramGb: null, cpuOnly: true }, // per docs.anythingllm.com/installation-desktop/system-requirements: recommended baseline "16GB RAM, 8-core CPU (any)"; GPU only "recommended" on Windows for local LLMs (8-12GB+ VRAM), not required — app is "very lightweight" when using cloud providers instead of local models; verified 2026-09-13
   stars: 65608,
   addedDate: '2026-09-04',
   status: 'listed',

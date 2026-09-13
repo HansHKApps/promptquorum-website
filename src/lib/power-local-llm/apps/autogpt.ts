@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/Significant-Gravitas/AutoGPT README: no RAM/GPU/disk requirements stated, only that self-hosting needs Docker — depends entirely on the LLM backend the user configures; verified 2026-09-13
   stars: 187100,
   addedDate: '2026-09-04',
   status: 'listed',

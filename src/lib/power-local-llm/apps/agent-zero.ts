@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/agent0ai/agent-zero README: Docker-based, runs "wherever Docker runs, from a $6 VPS or Raspberry Pi to a local workstation or GPU server" — no stated RAM/VRAM floor for the framework itself, depends entirely on the configured LLM backend; verified 2026-09-13
   stars: 19100,
   addedDate: '2026-09-04',
   status: 'listed',

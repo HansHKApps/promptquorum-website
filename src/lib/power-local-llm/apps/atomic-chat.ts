@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: null, cpuOnly: true }, // per github.com/AtomicBot-ai/Atomic-Chat README: "3B models: 8GB RAM minimum" (baseline tier; 16GB for 7B, 32GB for 13B) and "Atomic Chat operates CPU-only by default. GPU acceleration is supplementary, not required."; verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

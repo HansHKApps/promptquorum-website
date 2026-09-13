@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per aider.chat/docs/install.html: only states Python 3.8-3.13 version requirements, no RAM/GPU floor — Aider is a CLI coding assistant that calls an LLM API or local backend, no GPU need of its own; verified 2026-09-13
   stars: 48732,
   addedDate: '2026-09-04',
   status: 'listed',
