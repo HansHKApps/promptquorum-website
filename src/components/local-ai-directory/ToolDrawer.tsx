@@ -21,6 +21,7 @@ import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
+import { LicenseInfoModal } from './LicenseInfoModal'
 import { t } from './directory-i18n'
 import Link from 'next/link'
 import featureReviewIndex from '@/generated/feature-review-index.json'
@@ -151,6 +152,7 @@ export function ToolDrawer({
 }) {
   const open = app != null
   const [copied, setCopied] = useState(false)
+  const [licenseModalOpen, setLicenseModalOpen] = useState(false)
   const featureReview = app ? featureReviewUrl(app.slug) : null
 
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
@@ -209,6 +211,7 @@ export function ToolDrawer({
   }
 
   return (
+    <>
     <Dialog.Root open={open} onOpenChange={(next) => { if (!next) onClose() }}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/40 z-40 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=closed]:animate-out data-[state=closed]:fade-out" />
@@ -295,7 +298,20 @@ export function ToolDrawer({
                   <DetailRow label={t('detailRuns', lang)} value={labelFor('locality', app.locality, lang)} />
                   <DetailRow label={t('detailEngine', lang)} value={labelFor('engine', app.engine, lang)} />
                   <DetailRow label={t('detailPrice', lang)} value={labelFor('price', app.price, lang)} />
-                  <DetailRow label={t('detailLicense', lang)} value={app.license === 'TODO' ? null : app.license} />
+                  <DetailRow
+                    label={t('detailLicense', lang)}
+                    value={
+                      app.license && app.license !== 'TODO' ? (
+                        <button
+                          type="button"
+                          onClick={() => setLicenseModalOpen(true)}
+                          className="underline underline-offset-2 decoration-dotted hover:text-primary"
+                        >
+                          {app.license}
+                        </button>
+                      ) : null
+                    }
+                  />
                   <DetailRow label={t('detailPlatforms', lang)} value={labelList('platforms', app.platforms, lang)} />
                   <DetailRow label={t('detailWorksWith', lang)} value={joinOrUnknown(app.worksWith)} />
                   <DetailRow
@@ -403,5 +419,11 @@ export function ToolDrawer({
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
+    <LicenseInfoModal
+      license={licenseModalOpen && app ? app.license : null}
+      lang={lang}
+      onClose={() => setLicenseModalOpen(false)}
+    />
+    </>
   )
 }

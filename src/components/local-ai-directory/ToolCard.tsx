@@ -6,6 +6,7 @@
 // (audit item #4/#5: two competing card formats, most fields missing).
 
 import Link from 'next/link'
+import { useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import { STORE_LINK_LABEL, type ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
@@ -18,6 +19,7 @@ import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import { t } from './directory-i18n'
+import { LicenseInfoModal } from './LicenseInfoModal'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
@@ -132,6 +134,7 @@ export function ToolCard({
 
   const stop = (e: React.MouseEvent) => e.stopPropagation()
   const downloadLinks = getDownloadLinks(app, lang)
+  const [licenseModalOpen, setLicenseModalOpen] = useState(false)
 
   return (
     <div
@@ -265,7 +268,16 @@ export function ToolCard({
               )}
             </div>
             {app.license && app.license !== 'TODO' && (
-              <span className="rounded bg-gray-50 border border-gray-200 px-1.5 py-0.5">{app.license}</span>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setLicenseModalOpen(true)
+                }}
+                className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+              >
+                {app.license}
+              </button>
             )}
           </div>
 
@@ -327,6 +339,14 @@ export function ToolCard({
           </div>
         </div>
       </div>
+
+      {app.license && app.license !== 'TODO' && (
+        <LicenseInfoModal
+          license={licenseModalOpen ? app.license : null}
+          lang={lang}
+          onClose={() => setLicenseModalOpen(false)}
+        />
+      )}
     </div>
   )
 }
