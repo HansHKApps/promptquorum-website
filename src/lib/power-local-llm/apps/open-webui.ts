@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'BSD 3-Clause',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/open-webui/open-webui README and docs.openwebui.com/getting-started: installable via pip/Docker/Kubernetes with "lightweight installs for low-resource" setups mentioned, but no numeric RAM/VRAM minimum is published for the UI container itself, which is provider-agnostic (Ollama or any OpenAI-compatible API) — verified 2026-09-13
   stars: 150909,
   addedDate: '2026-09-04',
   status: 'listed',

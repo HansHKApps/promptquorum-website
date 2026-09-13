@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/ChatGPTNextWeb/NextChat README: a ~5MB compact client / ~100kb first-screen web app that only calls a configured LLM API (OpenAI-compatible, RWKV-Runner, LocalAI, etc.) — it never runs inference itself, so no GPU/VRAM of its own; verified 2026-09-13
   stars: 88700,
   addedDate: '2026-09-04',
   status: 'listed',

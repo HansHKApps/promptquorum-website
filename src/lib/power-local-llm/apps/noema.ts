@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model format/size is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per noemaai.com: no numeric RAM/device minimum is published; it supports multiple backends (GGUF, MLX, Core ML, ExecuTorch, Apple Foundation Models) that use different mixes of CPU/GPU/Neural Engine depending on format, so cpuOnly is genuinely unclear — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

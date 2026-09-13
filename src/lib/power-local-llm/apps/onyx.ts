@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT (core) + Enterprise Edition proprietary',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per onyx.app and docs.onyx.app/deployment quickstart: no numeric RAM/CPU minimum is published (the CLI installer only "checks your system resources"); Onyx connects to any model provider, including local ones, so its floor depends entirely on that choice — verified 2026-09-13
   stars: 31935, // github.com/onyx-dot-app/onyx, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',
