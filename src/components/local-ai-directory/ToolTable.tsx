@@ -38,6 +38,7 @@ export function ToolTable({
     { key: 'category', label: t('colCategory', lang) },
   ]
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
+    planned: t('statusPlanned', lang),
     listed: t('statusListed', lang),
     verified: t('statusVerified', lang),
     tested: t('statusTested', lang),

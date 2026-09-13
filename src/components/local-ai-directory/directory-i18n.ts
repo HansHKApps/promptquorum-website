@@ -240,6 +240,7 @@ const DIR_UI = {
   getItLink: { en: 'Get it ↗', de: 'Herunterladen ↗', fr: 'Télécharger ↗', ja: '入手する ↗', zh: '立即获取 ↗', es: 'Obtenerlo ↗', pt: 'Obter ↗', ar: 'احصل عليه ↗', ko: '받기 ↗' },
 
   // --- ToolDrawer ---
+  statusPlanned: { en: 'Planned', de: 'Geplant', fr: 'Prévu', ja: '予定', zh: '计划中', es: 'Planeado', pt: 'Planejado', ar: 'مخطَّط له', ko: '예정됨' },
   statusListed: { en: 'Listed', de: 'Gelistet', fr: 'Répertorié', ja: '掲載中', zh: '已收录', es: 'Listado', pt: 'Listado', ar: 'مُدرج', ko: '등재됨' },
   statusVerified: { en: 'Verified', de: 'Verifiziert', fr: 'Vérifié', ja: '検証済み', zh: '已验证', es: 'Verificado', pt: 'Verificado', ar: 'مُتحقَّق منه', ko: '검증됨' },
   statusTested: { en: 'PromptQuorum-tested', de: 'Von PromptQuorum getestet', fr: 'Testé par PromptQuorum', ja: 'PromptQuorumがテスト済み', zh: 'PromptQuorum已测试', es: 'Probado por PromptQuorum', pt: 'Testado pela PromptQuorum', ar: 'اختبرته PromptQuorum', ko: 'PromptQuorum 테스트 완료' },
