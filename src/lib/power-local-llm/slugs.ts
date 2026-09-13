@@ -404,4 +404,10 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'phoneclaw-review':                         'phoneclaw-review',
   // Ypipe review (Batch 21) — 2026-09-12
   'ypipe-review':                             'ypipe-review',
+  // Joplin AI Agent review — 2026-09-12
+  'joplin-ai-agent-review':                   'joplin-ai-agent-review',
+  // logseq-copilot review — 2026-09-12
+  'logseq-copilot-review':                    'logseq-copilot-review',
+  // Smart Connections review — 2026-09-12
+  'smart-connections-review':                 'smart-connections-review',
 }

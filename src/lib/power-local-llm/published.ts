@@ -441,6 +441,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'phoneclaw-review',
   // Ypipe review (Batch 21) — 2026-09-12
   'ypipe-review',
+  // logseq-copilot review — 2026-09-12
+  'logseq-copilot-review',
+  // Joplin AI Agent review — 2026-09-12
+  'joplin-ai-agent-review',
+  // Smart Connections review — 2026-09-12
+  'smart-connections-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

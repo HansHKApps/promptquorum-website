@@ -14,7 +14,12 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
   engine: 'external',
-  license: 'GPL 3.0',
+  // CORRECTED 2026-09-12: was 'GPL 3.0'. The project changed license in early 2026 from
+  // GPLv3 to a new, developer-authored source-available "Smart Plugins License" — not an
+  // OSI-approved open-source license. See https://smartconnections.app/legal/license/ and
+  // the community discussion at https://github.com/brianpetro/obsidian-smart-connections/issues/1293
+  // ("License change removes open source protections; contributor consent unclear").
+  license: 'Source-available (Smart Plugins License)',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: 5400,
@@ -22,6 +27,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['docs'],
   url: 'github.com/brianpetro/obsidian-smart-connections',
+  reviewSlug: 'smart-connections-review',
   tagline: {
     en: 'Obsidian semantic search and chat plugin',
     de: 'Obsidian-Plugin für semantische Suche und Chat',

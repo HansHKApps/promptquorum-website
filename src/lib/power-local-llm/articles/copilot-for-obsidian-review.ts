@@ -210,12 +210,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'Competitors and Alternatives',
-        content: 'Copilot for Obsidian competes with a handful of other AI plugins for Obsidian and similar notes apps, most notably Smart Connections and Logseq Copilot. Neither of those currently has a dedicated, standalone PromptQuorum review of its own, so instead of linking to a review that doesn\'t exist, this section points to PromptQuorum\'s broader ecosystem coverage, which discusses both alternatives directly alongside Copilot for Obsidian.',
+        content: 'Copilot for Obsidian competes with a handful of other AI plugins for Obsidian and similar notes apps, most notably Smart Connections and Logseq Copilot. PromptQuorum has published standalone reviews of both, alongside a review of Joplin AI Agent for a third notes app.',
         items: [
           '**[Local LLM With Obsidian 2026](/power-local-llm/local-llm-with-obsidian-2026)** — a pillar guide to the wider local-LLM-in-Obsidian ecosystem, covering Copilot for Obsidian alongside other plugin options such as Smart Connections.',
           '**[Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins)** — a multi-plugin comparison covering Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot, and BMO Chatbot side by side.',
         ],
-        note: 'These are broader comparison and ecosystem articles, not dedicated single-app reviews — PromptQuorum has not yet published standalone reviews of Smart Connections or Logseq Copilot specifically. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for Copilot for Obsidian\'s own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends this plugin connects to.',
+        note: 'For dedicated single-app reviews, see PromptQuorum\'s [Smart Connections Review](/power-local-llm/smart-connections-review), [Logseq Copilot Review](/power-local-llm/logseq-copilot-review), and [Joplin AI Agent Review](/power-local-llm/joplin-ai-agent-review). See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for Copilot for Obsidian\'s own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends this plugin connects to.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -488,12 +488,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Copilot for Obsidian konkurriert mit einer Handvoll anderer KI-Plugins für Obsidian und ähnliche Notiz-Apps, vor allem Smart Connections und Logseq Copilot. Für keines davon existiert derzeit eine eigenständige PromptQuorum-Review, daher verweist dieser Abschnitt statt auf eine nicht existierende Review auf PromptQuorums breitere Ökosystem-Abdeckung, die beide Alternativen direkt neben Copilot for Obsidian behandelt.',
+        content: 'Copilot for Obsidian konkurriert mit einer Handvoll anderer KI-Plugins für Obsidian und ähnliche Notiz-Apps, vor allem Smart Connections und Logseq Copilot. PromptQuorum hat eigenständige Reviews zu beiden veröffentlicht, sowie eine Review zu Joplin AI Agent für eine dritte Notiz-App.',
         items: [
           '**[Lokale LLMs mit Obsidian 2026](/de/power-local-llm/local-llm-with-obsidian-2026)** — ein Leitfaden zum breiteren Ökosystem lokaler LLMs in Obsidian, der Copilot for Obsidian neben anderen Plugin-Optionen wie Smart Connections behandelt.',
           '**[KI-Plugins für Obsidian und Logseq im Vergleich](/de/power-local-llm/obsidian-logseq-ai-plugins)** — ein Mehr-Plugin-Vergleich, der Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot und BMO Chatbot nebeneinander behandelt.',
         ],
-        note: 'Dies sind breitere Vergleichs- und Ökosystem-Artikel, keine eigenständigen Einzel-App-Reviews — PromptQuorum hat noch keine eigenständigen Reviews von Smart Connections oder Logseq Copilot speziell veröffentlicht. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für Copilot for Obsidians eigenen Verzeichniseintrag neben dem vollständigen Katalog lokaler KI-Tools, sowie PromptQuorums [Ollama-Review](/de/power-local-llm/ollama-review) oder [LM-Studio-Review](/de/power-local-llm/lm-studio-review) für die lokalen Modell-Backends, mit denen sich dieses Plugin verbindet.',
+        note: 'Eigenständige Einzel-App-Reviews finden Sie unter PromptQuorums [Smart Connections Review](/de/power-local-llm/smart-connections-review), [logseq-copilot Review](/de/power-local-llm/logseq-copilot-review) und [Joplin AI Agent Review](/de/power-local-llm/joplin-ai-agent-review). Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für Copilot for Obsidians eigenen Verzeichniseintrag neben dem vollständigen Katalog lokaler KI-Tools, sowie PromptQuorums [Ollama-Review](/de/power-local-llm/ollama-review) oder [LM-Studio-Review](/de/power-local-llm/lm-studio-review) für die lokalen Modell-Backends, mit denen sich dieses Plugin verbindet.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -766,12 +766,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'Concurrents et alternatives',
-        content: 'Copilot for Obsidian est en concurrence avec une poignée d\'autres plugins IA pour Obsidian et des applications de notes similaires, notamment Smart Connections et Logseq Copilot. Aucun des deux n\'a actuellement d\'avis PromptQuorum dédié et autonome, donc plutôt que de renvoyer vers un avis qui n\'existe pas, cette section pointe vers la couverture d\'écosystème plus large de PromptQuorum, qui aborde directement ces deux alternatives aux côtés de Copilot for Obsidian.',
+        content: 'Copilot for Obsidian est en concurrence avec une poignée d\'autres plugins IA pour Obsidian et des applications de notes similaires, notamment Smart Connections et Logseq Copilot. PromptQuorum a publié des avis autonomes sur les deux, ainsi qu\'un avis sur Joplin AI Agent pour une troisième application de notes.',
         items: [
           '**[LLM local avec Obsidian 2026](/fr/power-local-llm/local-llm-with-obsidian-2026)** — un guide de référence sur l\'écosystème plus large des LLM locaux dans Obsidian, couvrant Copilot for Obsidian aux côtés d\'autres options de plugins comme Smart Connections.',
           '**[Comparatif des plugins IA pour Obsidian et Logseq](/fr/power-local-llm/obsidian-logseq-ai-plugins)** — une comparaison multi-plugins couvrant côte à côte Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot et BMO Chatbot.',
         ],
-        note: 'Ce sont des articles de comparaison et d\'écosystème plus larges, pas des avis dédiés à une seule application — PromptQuorum n\'a pas encore publié d\'avis autonomes spécifiques à Smart Connections ou Logseq Copilot. Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour la fiche propre de Copilot for Obsidian aux côtés du catalogue complet d\'outils IA locaux, ainsi que l\'[avis Ollama](/fr/power-local-llm/ollama-review) ou l\'[avis LM Studio](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les backends de modèles locaux auxquels ce plugin se connecte.',
+        note: 'Pour des avis dédiés à une seule application, voir les avis de PromptQuorum sur [Smart Connections](/fr/power-local-llm/smart-connections-review), [logseq-copilot](/fr/power-local-llm/logseq-copilot-review) et [Joplin AI Agent](/fr/power-local-llm/joplin-ai-agent-review). Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour la fiche propre de Copilot for Obsidian aux côtés du catalogue complet d\'outils IA locaux, ainsi que l\'[avis Ollama](/fr/power-local-llm/ollama-review) ou l\'[avis LM Studio](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les backends de modèles locaux auxquels ce plugin se connecte.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1044,12 +1044,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'Competidores y alternativas',
-        content: 'Copilot for Obsidian compite con un puñado de otros plugins de IA para Obsidian y aplicaciones de notas similares, sobre todo Smart Connections y Logseq Copilot. Ninguno de los dos tiene actualmente una reseña propia y dedicada de PromptQuorum, así que en lugar de enlazar a una reseña que no existe, esta sección apunta a la cobertura de ecosistema más amplia de PromptQuorum, que trata directamente ambas alternativas junto a Copilot for Obsidian.',
+        content: 'Copilot for Obsidian compite con un puñado de otros plugins de IA para Obsidian y aplicaciones de notas similares, sobre todo Smart Connections y Logseq Copilot. PromptQuorum ha publicado reseñas independientes de ambos, además de una reseña de Joplin AI Agent para una tercera aplicación de notas.',
         items: [
           '**[LLM local con Obsidian 2026](/es/power-local-llm/local-llm-with-obsidian-2026)** — una guía de referencia sobre el ecosistema más amplio de LLM locales en Obsidian, que cubre Copilot for Obsidian junto a otras opciones de plugins como Smart Connections.',
           '**[Plugins de IA para Obsidian y Logseq, comparados](/es/power-local-llm/obsidian-logseq-ai-plugins)** — una comparación de varios plugins que cubre Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot y BMO Chatbot lado a lado.',
         ],
-        note: 'Estos son artículos de comparación y ecosistema más amplios, no reseñas dedicadas de una sola aplicación — PromptQuorum aún no ha publicado reseñas independientes específicas de Smart Connections o Logseq Copilot. Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para la entrada propia de Copilot for Obsidian junto al catálogo completo de herramientas de IA locales, y la [reseña de Ollama](/es/power-local-llm/ollama-review) o la [reseña de LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los backends de modelos locales a los que se conecta este plugin.',
+        note: 'Para reseñas dedicadas a una sola aplicación, consulta las reseñas de PromptQuorum sobre [Smart Connections](/es/power-local-llm/smart-connections-review), [logseq-copilot](/es/power-local-llm/logseq-copilot-review) y [Joplin AI Agent](/es/power-local-llm/joplin-ai-agent-review). Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para la entrada propia de Copilot for Obsidian junto al catálogo completo de herramientas de IA locales, y la [reseña de Ollama](/es/power-local-llm/ollama-review) o la [reseña de LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los backends de modelos locales a los que se conecta este plugin.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1322,12 +1322,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'Concorrentes e alternativas',
-        content: 'Copilot for Obsidian compete com um punhado de outros plugins de IA para Obsidian e aplicativos de notas semelhantes, principalmente Smart Connections e Logseq Copilot. Nenhum dos dois tem atualmente uma análise própria e dedicada do PromptQuorum, então, em vez de linkar para uma análise que não existe, esta seção aponta para a cobertura de ecossistema mais ampla do PromptQuorum, que aborda diretamente ambas as alternativas ao lado do Copilot for Obsidian.',
+        content: 'Copilot for Obsidian compete com um punhado de outros plugins de IA para Obsidian e aplicativos de notas semelhantes, principalmente Smart Connections e Logseq Copilot. A PromptQuorum publicou análises independentes de ambos, além de uma análise do Joplin AI Agent para um terceiro aplicativo de notas.',
         items: [
           '**[LLM local com Obsidian 2026](/pt/power-local-llm/local-llm-with-obsidian-2026)** — um guia de referência sobre o ecossistema mais amplo de LLMs locais no Obsidian, cobrindo o Copilot for Obsidian ao lado de outras opções de plugins como o Smart Connections.',
           '**[Plugins de IA para Obsidian e Logseq, comparados](/pt/power-local-llm/obsidian-logseq-ai-plugins)** — uma comparação de vários plugins cobrindo lado a lado Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot e BMO Chatbot.',
         ],
-        note: 'Estes são artigos de comparação e ecossistema mais amplos, não análises dedicadas a um único aplicativo — o PromptQuorum ainda não publicou análises independentes específicas do Smart Connections ou do Logseq Copilot. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para a entrada própria do Copilot for Obsidian ao lado do catálogo completo de ferramentas de IA locais, e a [análise do Ollama](/pt/power-local-llm/ollama-review) ou a [análise do LM Studio](/pt/power-local-llm/lm-studio-review) do PromptQuorum para os backends de modelos locais aos quais este plugin se conecta.',
+        note: 'Para análises dedicadas a um único aplicativo, veja as análises da PromptQuorum sobre [Smart Connections](/pt/power-local-llm/smart-connections-review), [logseq-copilot](/pt/power-local-llm/logseq-copilot-review) e [Joplin AI Agent](/pt/power-local-llm/joplin-ai-agent-review). Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para a entrada própria do Copilot for Obsidian ao lado do catálogo completo de ferramentas de IA locais, e a [análise do Ollama](/pt/power-local-llm/ollama-review) ou a [análise do LM Studio](/pt/power-local-llm/lm-studio-review) do PromptQuorum para os backends de modelos locais aos quais este plugin se conecta.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1600,12 +1600,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: '競合と代替ツール',
-        content: 'Copilot for Obsidianは、ObsidianおよびLogseqなど類似のノートアプリ向けの他のいくつかのAIプラグイン、特にSmart ConnectionsやLogseq Copilotと競合しています。どちらも現時点ではPromptQuorum独自の単独レビューを持たないため、このセクションでは存在しないレビューへリンクする代わりに、Copilot for Obsidianと並んで両方の代替ツールを直接取り上げているPromptQuorumのより広いエコシステム記事を紹介します。',
+        content: 'Copilot for Obsidianは、ObsidianおよびLogseqなど類似のノートアプリ向けの他のいくつかのAIプラグイン、特にSmart ConnectionsやLogseq Copilotと競合しています。PromptQuorumは両方の単独レビューを公開しており、さらに別のノートアプリ向けのJoplin AI Agentのレビューも公開しています。',
         items: [
           '**[Obsidianにおけるローカルllm 2026](/ja/power-local-llm/local-llm-with-obsidian-2026)** — Smart Connectionsなど他のプラグイン選択肢と並んでCopilot for Obsidianを扱う、Obsidianにおけるローカルllmエコシステム全体のガイド記事。',
           '**[ObsidianとLogseqのAIプラグイン比較](/ja/power-local-llm/obsidian-logseq-ai-plugins)** — Copilot for Obsidian、Smart Connections、Text Generator、logseq-copilot、BMO Chatbotを並べて比較する複数プラグイン比較記事。',
         ],
-        note: 'これらはより広い比較・エコシステム記事であり、単独アプリ専用のレビューではありません――PromptQuorumはSmart ConnectionsやLogseq Copilotに特化した単独レビューをまだ公開していません。Copilot for Obsidianの本体の掲載を含めた完全なローカルAIツールカタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、このプラグインが接続するローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)または[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)をご覧ください。',
+        note: '単独アプリ専用のレビューについては、PromptQuorumの[Smart Connectionsレビュー](/ja/power-local-llm/smart-connections-review)、[logseq-copilotレビュー](/ja/power-local-llm/logseq-copilot-review)、[Joplin AI Agentレビュー](/ja/power-local-llm/joplin-ai-agent-review)をご覧ください。Copilot for Obsidianの本体の掲載を含めた完全なローカルAIツールカタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、このプラグインが接続するローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)または[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1878,12 +1878,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: '竞品与替代方案',
-        content: 'Copilot for Obsidian与少数其他面向Obsidian及类似笔记应用的AI插件存在竞争,最主要的是Smart Connections和Logseq Copilot。这两者目前都没有PromptQuorum专属的独立评测,因此本节没有链接到一篇不存在的评测,而是指向PromptQuorum更广泛的生态覆盖内容,其中直接讨论了这两种替代方案以及Copilot for Obsidian。',
+        content: 'Copilot for Obsidian与少数其他面向Obsidian及类似笔记应用的AI插件存在竞争,最主要的是Smart Connections和Logseq Copilot。PromptQuorum已发布针对这两者的独立评测,并另外发布了针对第三款笔记应用Joplin AI Agent的评测。',
         items: [
           '**[Obsidian本地LLM指南2026](/zh/power-local-llm/local-llm-with-obsidian-2026)** ——关于Obsidian中更广泛本地LLM生态系统的支柱指南,涵盖Copilot for Obsidian以及Smart Connections等其他插件选项。',
           '**[Obsidian与Logseq AI插件对比](/zh/power-local-llm/obsidian-logseq-ai-plugins)** ——一篇多插件对比文章,并列涵盖Copilot for Obsidian、Smart Connections、Text Generator、logseq-copilot和BMO Chatbot。',
         ],
-        note: '这些是更广泛的对比与生态系统文章,而非专属于单一应用的独立评测——PromptQuorum尚未专门发布针对Smart Connections或Logseq Copilot的独立评测。有关Copilot for Obsidian自身的目录条目以及本地AI工具的完整目录,请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory);有关该插件所连接的本地模型后端,请参阅PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
+        note: '如需专属于单一应用的独立评测,请参阅PromptQuorum的[Smart Connections评测](/zh/power-local-llm/smart-connections-review)、[logseq-copilot评测](/zh/power-local-llm/logseq-copilot-review)和[Joplin AI Agent评测](/zh/power-local-llm/joplin-ai-agent-review)。有关Copilot for Obsidian自身的目录条目以及本地AI工具的完整目录,请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory);有关该插件所连接的本地模型后端,请参阅PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2156,12 +2156,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: 'المنافسون والبدائل',
-        content: 'تنافس Copilot for Obsidian عددًا قليلًا من إضافات الذكاء الاصطناعي الأخرى لـObsidian وتطبيقات ملاحظات مشابهة، أبرزها Smart Connections وLogseq Copilot. لا تملك أي منهما حاليًا مراجعة مستقلة ومخصصة من PromptQuorum، لذا بدلًا من الربط بمراجعة غير موجودة، يوجّه هذا القسم إلى تغطية النظام البيئي الأوسع من PromptQuorum، التي تتناول مباشرةً كلا البديلين إلى جانب Copilot for Obsidian.',
+        content: 'تنافس Copilot for Obsidian عددًا قليلًا من إضافات الذكاء الاصطناعي الأخرى لـObsidian وتطبيقات ملاحظات مشابهة، أبرزها Smart Connections وLogseq Copilot. نشرت PromptQuorum مراجعات مستقلة لكليهما، إلى جانب مراجعة لـJoplin AI Agent الخاص بتطبيق ملاحظات ثالث.',
         items: [
           '**[نموذج LLM محلي مع Obsidian 2026](/ar/power-local-llm/local-llm-with-obsidian-2026)** — دليل شامل حول النظام البيئي الأوسع لنماذج LLM المحلية في Obsidian، يغطي Copilot for Obsidian إلى جانب خيارات إضافات أخرى مثل Smart Connections.',
           '**[إضافات ذكاء اصطناعي لـObsidian وLogseq، مقارنة](/ar/power-local-llm/obsidian-logseq-ai-plugins)** — مقارنة متعددة الإضافات تغطي جنبًا إلى جنب Copilot for Obsidian وSmart Connections وText Generator وlogseq-copilot وBMO Chatbot.',
         ],
-        note: 'هذه مقالات مقارنة ونظام بيئي أوسع نطاقًا، وليست مراجعات مخصصة لتطبيق واحد — لم تنشر PromptQuorum بعد مراجعات مستقلة خاصة بـSmart Connections أو Logseq Copilot تحديدًا. راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) لمدخل Copilot for Obsidian الخاص إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، و[مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum لمحركات النماذج المحلية التي تتصل بها هذه الإضافة.',
+        note: 'للاطلاع على مراجعات مخصصة لتطبيق واحد، راجع مراجعات PromptQuorum لـ[Smart Connections](/ar/power-local-llm/smart-connections-review) و[logseq-copilot](/ar/power-local-llm/logseq-copilot-review) و[Joplin AI Agent](/ar/power-local-llm/joplin-ai-agent-review). راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) لمدخل Copilot for Obsidian الخاص إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، و[مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum لمحركات النماذج المحلية التي تتصل بها هذه الإضافة.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2434,12 +2434,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-obsidian-competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Copilot for Obsidian은 Obsidian 및 유사 노트 앱을 위한 몇몇 다른 AI 플러그인, 특히 Smart Connections와 Logseq Copilot과 경쟁합니다. 둘 다 현재 PromptQuorum의 독립적인 전용 리뷰가 없으므로, 존재하지 않는 리뷰로 연결하는 대신 이 섹션은 Copilot for Obsidian과 함께 두 대안을 직접 다루는 PromptQuorum의 더 폭넓은 생태계 콘텐츠를 안내합니다.',
+        content: 'Copilot for Obsidian은 Obsidian 및 유사 노트 앱을 위한 몇몇 다른 AI 플러그인, 특히 Smart Connections와 Logseq Copilot과 경쟁합니다. PromptQuorum은 두 플러그인 모두에 대한 독립 리뷰를 게시했으며, 세 번째 노트 앱인 Joplin AI Agent에 대한 리뷰도 게시했습니다.',
         items: [
           '**[Obsidian과 함께하는 로컬 LLM 2026](/ko/power-local-llm/local-llm-with-obsidian-2026)** — Smart Connections 같은 다른 플러그인 옵션과 함께 Copilot for Obsidian을 다루는, Obsidian 내 더 폭넓은 로컬 LLM 생태계에 대한 핵심 가이드.',
           '**[Obsidian과 Logseq AI 플러그인 비교](/ko/power-local-llm/obsidian-logseq-ai-plugins)** — Copilot for Obsidian, Smart Connections, Text Generator, logseq-copilot, BMO Chatbot을 나란히 다루는 다중 플러그인 비교 글.',
         ],
-        note: '이는 단일 앱 전용 리뷰가 아니라 더 폭넓은 비교·생태계 글입니다 — PromptQuorum은 아직 Smart Connections나 Logseq Copilot에 특화된 독립 리뷰를 게시하지 않았습니다. Copilot for Obsidian 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 이 플러그인이 연결하는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
+        note: '단일 앱 전용 독립 리뷰는 PromptQuorum의 [Smart Connections 리뷰](/ko/power-local-llm/smart-connections-review), [logseq-copilot 리뷰](/ko/power-local-llm/logseq-copilot-review), [Joplin AI Agent 리뷰](/ko/power-local-llm/joplin-ai-agent-review)를 참고하세요. Copilot for Obsidian 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 이 플러그인이 연결하는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
