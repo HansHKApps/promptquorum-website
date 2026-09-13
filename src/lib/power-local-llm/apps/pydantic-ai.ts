@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure Python agent framework/library — depends entirely on whichever LLM backend the user configures (Ollama, vLLM, hosted API, etc.); no fixed hardware floor of its own documented at ai.pydantic.dev. Verified 2026-09-13
   stars: 19720,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/yl4579/StyleTTS2 README: training assumes GPU (finetuning example uses 4x NVidia A100) but the docs explicitly note that on older GPUs with numerical float issues "you will need to use more modern GPUs or do inference on CPUs" — CPU inference is a documented fallback; no specific minimum VRAM/RAM figure is given. Verified 2026-09-13
   stars: 6300,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // IDE plugin/agent (sourcegraph.com/cody) — depends entirely on whether it's pointed at Sourcegraph's cloud models or a local Ollama backend; no fixed hardware floor of its own documented. Verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

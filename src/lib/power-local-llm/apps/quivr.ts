@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/QuivrHQ/quivr README: only prerequisite stated is Python 3.10+; no RAM/GPU minimum documented for the self-hosted stack, and hardware depends on the connected LLM backend (Ollama, etc.). Verified 2026-09-13
   stars: 39500,
   addedDate: '2026-09-04',
   status: 'listed',

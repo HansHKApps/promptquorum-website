@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/zylon-ai/private-gpt README + docs.privategpt.dev: PrivateGPT does not run models itself, it connects to an external OpenAI-compatible inference server (Ollama/vLLM/llama.cpp/etc.); no hardware floor stated for the app layer itself beyond Python 3.11-3.13. Verified 2026-09-13
   stars: 57500,
   addedDate: '2026-09-04',
   status: 'listed',

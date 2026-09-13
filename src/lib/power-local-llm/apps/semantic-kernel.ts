@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // enterprise orchestration SDK (C#/Python/Java) — depends entirely on the connected model backend (Ollama, LM Studio, OpenAI API, etc.); no fixed hardware floor documented at learn.microsoft.com/semantic-kernel. Verified 2026-09-13
   stars: 28528,
   addedDate: '2026-09-04',
   status: 'listed',

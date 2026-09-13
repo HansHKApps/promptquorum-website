@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'GPL 3.0',
   reviewSlug: 'risuai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per risuai-review.ts (research already done for the dedicated review) + github.com/kwaroran/RisuAI: RisuAI is a frontend only, it does not run a model itself — it connects to a backend you choose. Self-hosting from source requires Node.js 20.19+ or 22.12+; no RAM/GPU minimum is documented for the client itself. Verified 2026-09-13
   stars: 1600,
   addedDate: '2026-09-04',
   status: 'listed',

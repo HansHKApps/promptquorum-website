@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/xinntao/Real-ESRGAN README: the NCNN-based portable executables run with no CUDA/PyTorch environment (Intel/AMD/Nvidia GPU via Vulkan, or CPU); no minimum RAM/VRAM figure is documented. Verified 2026-09-13
   stars: 36700,
   addedDate: '2026-09-04',
   status: 'listed',
