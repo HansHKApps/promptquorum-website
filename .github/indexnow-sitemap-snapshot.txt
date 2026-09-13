@@ -64,6 +64,7 @@ https://www.promptquorum.com/blog/enterprise-data-privacy
 https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift
 https://www.promptquorum.com/blog/frontier-models-prompt-library
 https://www.promptquorum.com/blog/geopolitics-and-ai
+https://www.promptquorum.com/blog/local-ai-hardware-compatibility-check
 https://www.promptquorum.com/blog/local-ai-vs-cloud
 https://www.promptquorum.com/blog/prompt-frameworks
 https://www.promptquorum.com/blog/prompt-optimization
