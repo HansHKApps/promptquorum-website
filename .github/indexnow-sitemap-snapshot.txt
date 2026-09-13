@@ -298,6 +298,7 @@ https://www.promptquorum.com/power-local-llm/best-vpn-ai-privacy-local-llm-2026
 https://www.promptquorum.com/power-local-llm/best-web-hosting
 https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026
 https://www.promptquorum.com/power-local-llm/blackbox-ai-cli-review
+https://www.promptquorum.com/power-local-llm/bmo-chatbot-review
 https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
@@ -367,6 +368,7 @@ https://www.promptquorum.com/power-local-llm/langchain-review
 https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
 https://www.promptquorum.com/power-local-llm/langgraph-review
 https://www.promptquorum.com/power-local-llm/layla-review
+https://www.promptquorum.com/power-local-llm/lemonade-review
 https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
@@ -422,10 +424,12 @@ https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/noema-review
 https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
+https://www.promptquorum.com/power-local-llm/odysseus-review
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
 https://www.promptquorum.com/power-local-llm/ollama-review
 https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/on-device-ai-review
+https://www.promptquorum.com/power-local-llm/onyx-review
 https://www.promptquorum.com/power-local-llm/open-felix-review
 https://www.promptquorum.com/power-local-llm/open-interpreter-review
 https://www.promptquorum.com/power-local-llm/openclaw-review
@@ -433,6 +437,7 @@ https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/pearai-review
+https://www.promptquorum.com/power-local-llm/phoneclaw-review
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma
 https://www.promptquorum.com/power-local-llm/piper-tts-review
 https://www.promptquorum.com/power-local-llm/piper-vs-chatterbox-tts
@@ -470,6 +475,7 @@ https://www.promptquorum.com/power-local-llm/superagi-review
 https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/taskweaver-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
+https://www.promptquorum.com/power-local-llm/text-generator-review
 https://www.promptquorum.com/power-local-llm/tgpt-review
 https://www.promptquorum.com/power-local-llm/toolneuron-review
 https://www.promptquorum.com/power-local-llm/twinny-review
@@ -487,6 +493,7 @@ https://www.promptquorum.com/power-local-llm/wechat-local-llm-integration-2026
 https://www.promptquorum.com/power-local-llm/whisper-cpp-review
 https://www.promptquorum.com/power-local-llm/windsurf-review
 https://www.promptquorum.com/power-local-llm/xtts-v2-review
+https://www.promptquorum.com/power-local-llm/ypipe-review
 https://www.promptquorum.com/power-local-llm/zed-review
 https://www.promptquorum.com/privacy
 https://www.promptquorum.com/prompt-bites
