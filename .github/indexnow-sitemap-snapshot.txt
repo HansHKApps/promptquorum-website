@@ -485,6 +485,7 @@ https://www.promptquorum.com/power-local-llm/toolneuron-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
+https://www.promptquorum.com/power-local-llm/unsloth-review
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
 https://www.promptquorum.com/power-local-llm/vla-models-robots-local-inference
 https://www.promptquorum.com/power-local-llm/vllm-explained
