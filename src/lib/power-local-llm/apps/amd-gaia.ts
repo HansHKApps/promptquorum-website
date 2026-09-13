@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 16, vramGb: null, cpuOnly: false }, // per github.com/amd/gaia README: minimum AMD Ryzen AI 300-series NPU (recommended Ryzen AI Max+ 395), 16GB RAM minimum / 64GB recommended, Windows 11 or Linux — requires AMD's NPU+iGPU, not a discrete-GPU VRAM figure; verified 2026-09-13
   stars: 1539, // github.com/amd/gaia, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

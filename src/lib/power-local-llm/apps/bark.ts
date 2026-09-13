@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 12, cpuOnly: true }, // per github.com/suno-ai/bark README: "The full version of Bark requires around 12GB of VRAM" (SUNO_USE_SMALL_MODELS=True fits 8GB, down to ~2GB with SUNO_OFFLOAD_CPU); also runs CPU-only (PyTorch 2.0+), "significantly slower"; verified 2026-09-13
   stars: 39300,
   addedDate: '2026-09-04',
   status: 'listed',

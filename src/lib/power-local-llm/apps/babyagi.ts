@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/yoheinakajima/babyagi README: no RAM/GPU requirements stated — a Python script that calls an LLM API, hardware floor depends entirely on the backend the user configures; verified 2026-09-13
   stars: 22400,
   addedDate: '2026-09-04',
   status: 'listed',

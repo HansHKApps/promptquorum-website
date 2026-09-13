@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // checked backyard.ai, backyard.ai/docs, and the app landing page 2026-09-13 — no official minimum RAM/VRAM/CPU-only specs published (third-party summaries exist but aren't sourced to Backyard AI's own docs); left unresearched rather than fabricated
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/enricoros/big-AGI README: no hardware requirements stated — Big-AGI is a client with no local inference, connects to 20+ external API providers (self-host via Docker/Vercel or use the hosted version), no GPU needed; verified 2026-09-13
   stars: 7100,
   addedDate: '2026-09-04',
   status: 'listed',

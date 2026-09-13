@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per docs.blackbox.ai/features/blackbox-cli/getting-started: requires only Node.js 20+, a terminal, and a Blackbox account/API key — a cloud-API client with no local inference, no GPU need; verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',
