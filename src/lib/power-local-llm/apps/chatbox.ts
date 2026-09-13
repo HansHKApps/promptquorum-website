@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'GPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (chatboxai.app) states no minimum RAM/hardware across its Windows/macOS/Linux/iOS/Android/web builds; floor depends on the model backend configured, verified 2026-09-13
   stars: 41637,
   addedDate: '2026-09-04',
   status: 'listed',

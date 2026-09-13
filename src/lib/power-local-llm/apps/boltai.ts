@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (boltai.com) states only macOS 13+ / Intel & Apple Silicon support, no minimum RAM; hardware floor depends on the local or cloud backend the user configures, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

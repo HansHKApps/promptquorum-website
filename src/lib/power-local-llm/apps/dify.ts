@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Modified Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 4, vramGb: null, cpuOnly: true }, // docs.dify.ai self-host Docker Compose quick-start: stated minimum "CPU >= 2 Core" and "RAM >= 4 GiB" for the self-hosted stack itself; no GPU required unless the user's chosen model backend needs one, verified 2026-09-13
   stars: 154429,
   addedDate: '2026-09-04',
   status: 'listed',

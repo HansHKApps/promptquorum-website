@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // github.com/cline/cline states no standalone hardware requirements beyond running VS Code itself; floor depends on the model backend configured, verified 2026-09-13
   stars: 67463,
   addedDate: '2026-09-04',
   status: 'listed',

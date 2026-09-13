@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'AGPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // github.com/logancyang/obsidian-copilot README states no minimum RAM/hardware; an Obsidian plugin whose floor depends on the model backend configured, verified 2026-09-13
   stars: 7700,
   addedDate: '2026-09-04',
   status: 'listed',

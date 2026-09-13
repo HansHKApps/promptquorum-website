@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (codegpt.co) states no minimum RAM/hardware for its VS Code/JetBrains/Visual Studio plugins; floor depends on the model backend configured, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MPL 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // github.com/idiap/coqui-ai-TTS: PyTorch backend selectable as CPU/CUDA/ROCm and the code falls back to CPU when no CUDA device is available; no fixed minimum RAM/VRAM is published, verified 2026-09-13
   stars: 2300,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 8, cpuOnly: false }, // github.com/lllyasviel/ControlNet docs/low_vram.md: low-VRAM mode targets "8GB GPU(s)"; no CPU-only mode is documented, verified 2026-09-13
   stars: 34100,
   addedDate: '2026-09-04',
   status: 'listed',

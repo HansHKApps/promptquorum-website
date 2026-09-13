@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'AGPL-3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which Stable Diffusion checkpoint is loaded, not a fixed tool attribute
+  hardware: { ramGb: 8, vramGb: null, cpuOnly: true }, // github.com/mxcl/diffusionbee README: "16 GB RAM preferred. It will run a bit slow with 8GB ram"; uses Apple Silicon's integrated GPU (no discrete VRAM) and also supports Intel Macs without a dedicated graphics chip, just slower, verified 2026-09-13
   stars: 13586,
   addedDate: '2026-09-12',
   status: 'listed',
