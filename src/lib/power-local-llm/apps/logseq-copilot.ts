@@ -14,24 +14,25 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio', 'OpenAI API', 'Google Gemini API'],
   engine: 'external',
-  license: 'GPL 3.0',
+  license: 'MIT',
   price: 'free',
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
-  stars: 317,
+  stars: 17,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['docs'],
-  url: 'github.com/eindex/logseq-copilot', // corrected 2026-09-04: logancyang/logseq-copilot 404s; the real repo is EINDEX/logseq-copilot (317 stars, matches)
+  url: 'github.com/jarodise/logseq-copilot', // corrected 2026-09-12: the 2026-09-04 "fix" to EINDEX/logseq-copilot was itself wrong — eindex/logseq-copilot is a browser extension with zero AI/LLM features and does not match worksWith below; the real repo matching worksWith (Ollama, LM Studio, OpenAI API, Google Gemini API) is JARODISE/logseq-copilot (MIT license, 17 stars) — see reviewSlug for the full write-up
   tagline: {
-    en: 'Browser extension that surfaces your Logseq notes next to search and LLM chat',
-    de: 'Browser-Erweiterung, die Ihre Logseq-Notizen neben Suche und LLM-Chat anzeigt',
-    fr: 'Extension de navigateur qui affiche vos notes Logseq à côté de la recherche et du chat LLM',
-    ja: 'Logseqのノートを検索やLLMチャットの隣に表示するブラウザ拡張機能',
-    zh: '在搜索和LLM聊天旁显示Logseq笔记的浏览器扩展',
-    es: 'Extensión de navegador que muestra tus notas de Logseq junto a la búsqueda y el chat LLM',
-    pt: 'Extensão de navegador que mostra suas notas do Logseq ao lado da busca e do chat LLM',
-    ar: 'إضافة متصفح تعرض ملاحظات Logseq بجانب البحث ودردشة النماذج اللغوية',
-    ko: '검색과 LLM 채팅 옆에 Logseq 노트를 보여주는 브라우저 확장 프로그램',
+    en: 'Logseq plugin that adds AI chat blocks and slash commands using local or cloud models',
+    de: 'Logseq-Plugin, das KI-Chat-Blöcke und Slash-Befehle über lokale oder Cloud-Modelle hinzufügt',
+    fr: 'Plugin Logseq qui ajoute des blocs de chat IA et des commandes slash via des modèles locaux ou cloud',
+    ja: 'ローカルまたはクラウドモデルでAIチャットブロックとスラッシュコマンドを追加するLogseqプラグイン',
+    zh: '通过本地或云端模型为Logseq添加AI聊天块和斜杠命令的插件',
+    es: 'Plugin de Logseq que añade bloques de chat IA y comandos de barra mediante modelos locales o en la nube',
+    pt: 'Plugin do Logseq que adiciona blocos de chat com IA e comandos de barra via modelos locais ou em nuvem',
+    ar: 'إضافة Logseq تضيف كتل دردشة بالذكاء الاصطناعي وأوامر شرطة مائلة باستخدام نماذج محلية أو سحابية',
+    ko: '로컬 또는 클라우드 모델을 사용해 AI 채팅 블록과 슬래시 명령을 추가하는 Logseq 플러그인',
   },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  reviewSlug: 'logseq-copilot-review',
+  lastVerifiedDate: '2026-09-12',
 }

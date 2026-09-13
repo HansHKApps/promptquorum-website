@@ -261,6 +261,9 @@ import { article as a_text_generator_review } from './articles/text-generator-re
 import { article as a_odysseus_review } from './articles/odysseus-review'
 import { article as a_phoneclaw_review } from './articles/phoneclaw-review'
 import { article as a_ypipe_review } from './articles/ypipe-review'
+import { article as a_joplin_ai_agent_review } from './articles/joplin-ai-agent-review'
+import { article as a_logseq_copilot_review } from './articles/logseq-copilot-review'
+import { article as a_smart_connections_review } from './articles/smart-connections-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -563,4 +566,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'odysseus-review':                                  a_odysseus_review,
   'phoneclaw-review':                                 a_phoneclaw_review,
   'ypipe-review':                                      a_ypipe_review,
+  'logseq-copilot-review':                            a_logseq_copilot_review,
+  'joplin-ai-agent-review':                           a_joplin_ai_agent_review,
+  'smart-connections-review':                         a_smart_connections_review,
 }
