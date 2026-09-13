@@ -179,6 +179,7 @@ import { app as app_on_device_ai } from './apps/on-device-ai'
 import { app as app_aori } from './apps/aori'
 import { app as app_rapr_ai } from './apps/rapr-ai'
 import { app as app_chatty_mini } from './apps/chatty-mini'
+import { app as app_unsloth } from './apps/unsloth'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -348,6 +349,7 @@ export const localAiApps: ToolRecord[] = [
   app_aori,
   app_rapr_ai,
   app_chatty_mini,
+  app_unsloth,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
