@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: null, cpuOnly: false }, // per wiki.drawthings.ai (How Powerful Is My Device / FAQ): 8GB unified memory is the practical floor for SD1.5-class image gen; Apple Silicon GPU/Neural Engine acceleration is used instead of discrete VRAM, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

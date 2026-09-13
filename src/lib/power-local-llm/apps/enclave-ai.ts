@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'paid',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — closed-source iOS/Mac app; enclaveai.app and its App Store listing state no minimum device RAM/model requirement, checked website/App Store/blog 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

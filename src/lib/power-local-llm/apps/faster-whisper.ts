@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/SYSTRAN/faster-whisper README: CPU inference (with int8 quantization) is a first-class documented mode alongside GPU; no fixed RAM/VRAM minimum stated, usage scales with model size chosen, verified 2026-09-13
   stars: 25200,
   addedDate: '2026-09-04',
   status: 'listed',

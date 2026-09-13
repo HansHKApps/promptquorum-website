@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 8, cpuOnly: false }, // per github.com/turboderp-org/exllamav2 README: requires an NVIDIA CUDA GPU (no CPU inference path); README's own quantization tiers cite 13B fitting in 8GB VRAM at 2.65bpw as the smallest documented working config, verified 2026-09-13
   stars: 4600,
   addedDate: '2026-09-04',
   status: 'listed',

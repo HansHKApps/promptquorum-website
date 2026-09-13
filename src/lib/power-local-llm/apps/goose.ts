@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache-2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per goose-docs.ai installation docs: no stated minimum RAM/VRAM for the goose process itself — GPU/CPU guidance in the docs is about the LLM backend chosen (Ollama, OpenAI, Anthropic), not a goose-specific floor, checked 2026-09-13
   stars: 53925, // github.com/aaif-goose/goose, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

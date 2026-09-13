@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure Ollama client (github.com/AugustDev/enchanted), ships no inference engine of its own — hardware floor is entirely the connected Ollama server's, checked 2026-09-13
   stars: 6000,
   addedDate: '2026-09-04',
   status: 'listed',
