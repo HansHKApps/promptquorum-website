@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   // ("License change removes open source protections; contributor consent unclear").
   license: 'Source-available (Smart Plugins License)',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per smart-connections-review.ts (research already done for the dedicated review): core semantic-search feature uses a bundled, "zero-setup local model for embeddings, no API keys" that runs entirely on-device on both Obsidian desktop and mobile — no GPU or fixed RAM floor documented. Verified 2026-09-13
   stars: 5400,
   addedDate: '2026-09-04',
   status: 'listed',

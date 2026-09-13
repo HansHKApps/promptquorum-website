@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/a-ghorbani/pocketpal-ai README + pocketpal-ai-review.ts: app itself has no fixed RAM floor (2-4B models need ~3-4GB free RAM, 7-8B need 6-8GB+, per general GGUF sizing guidance, not app-specific); runs CPU-only by default with optional Metal (iOS)/Hexagon NPU (Android) acceleration, no GPU required. Verified 2026-09-13
   stars: 8200,
   addedDate: '2026-09-04',
   status: 'listed',

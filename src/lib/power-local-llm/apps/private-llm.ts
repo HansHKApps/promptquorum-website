@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'paid',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 4, vramGb: null, cpuOnly: true }, // per private-llm-review.ts citing the developer's own FAQ: 4GB RAM minimum recommended (iPad); requires iOS 17.0+/A12 Bionic or macOS 14.0+; runs on-device via Apple's Neural Engine/GPU, no discrete VRAM requirement. Verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

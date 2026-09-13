@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'OpenRAIL',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 10, cpuOnly: false }, // per github.com/CompVis/stable-diffusion README: "the model is relatively lightweight and runs on a GPU with at least 10GB VRAM" (base SD v1 model card guidance); no RAM figure documented. Verified 2026-09-13
   stars: 27277,
   addedDate: '2026-09-04',
   status: 'listed',

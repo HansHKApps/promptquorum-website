@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // lightweight CLI wrapper (github.com/TheR1D/shell_gpt) — depends entirely on the connected backend (OpenAI-compatible API or Ollama); no fixed hardware floor documented. Verified 2026-09-13
   stars: 12300,
   addedDate: '2026-09-04',
   status: 'listed',

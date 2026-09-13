@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 16, vramGb: null, cpuOnly: true }, // per github.com/infiniflow/ragflow README "Prerequisites": CPU >= 4 cores, RAM >= 16GB, Disk >= 50GB for the Docker stack itself; DeepDoc tasks run on CPU by default with GPU as an optional accelerator (DEVICE=gpu env flag), so the platform does not require a GPU. Verified 2026-09-13
   stars: 90045,
   addedDate: '2026-09-04',
   status: 'listed',
