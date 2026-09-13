@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 6, vramGb: null, cpuOnly: true }, // per Mobile Artificial Intelligence's own llama.cpp guide (mobile-artificial-intelligence.com/maid/guides/llama-cpp): Q4_K_M-quantized 1-3B GGUF models "load comfortably on devices with 6 GB of RAM" via llama.cpp on-device inference — no GPU required; this figure is for the recommended starting model tier, not an absolute floor for every model Maid can load, verified 2026-09-13
   stars: 2700,
   addedDate: '2026-09-04',
   status: 'listed',

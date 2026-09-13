@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: 8, cpuOnly: false }, // per github.com/haotian-liu/LLaVA README: "LLaVA-1.5-7B uses less than 8GB VRAM on a single GPU" with 4-bit quantization (the 13B variant needs ~12GB VRAM at 4-bit); no documented CPU-only inference path, verified 2026-09-13
   stars: 25014,
   addedDate: '2026-09-04',
   status: 'listed',

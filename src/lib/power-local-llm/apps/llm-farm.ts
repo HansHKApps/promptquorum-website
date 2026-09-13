@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per github.com/guinmoon/LLMFarm README: requires macOS 13+ or iOS 16+ and uses Metal acceleration via llama.cpp/GGML — README states it does "dont work on intel Mac", implying Apple Silicon GPU (Metal) is required; no numeric RAM figure published, verified 2026-09-13
   stars: 2100,
   addedDate: '2026-09-04',
   status: 'listed',

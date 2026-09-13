@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — not documented: checked msty.ai (redirects from msty.app) and docs.msty.ai/studio; neither publishes a minimum RAM/GPU spec for the desktop app — like other Ollama-style front ends, its practical floor depends on whichever local model/backend the user loads, checked 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

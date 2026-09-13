@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Proprietary',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which Whisper/Parakeet model size is loaded, not a fixed tool attribute
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per PromptQuorum's own macwhisper-review.ts research and macwhisper.com/the Mac App Store listing ("Whisper Transcription", id1668083311): MacWhisper explicitly supports both Apple Silicon and Intel Mac hardware, so it runs without requiring a dedicated GPU; macwhisper.com links to a separate System Requirements page that did not render its numeric RAM figure during this research (JS-rendered), so no ramGb value is asserted — checked 2026-09-13
   stars: null, // No GitHub repository — closed-source app; not applicable
   addedDate: '2026-09-12',
   status: 'listed',

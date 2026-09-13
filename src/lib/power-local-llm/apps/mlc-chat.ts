@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 6, vramGb: null, cpuOnly: false }, // per MLC's own official announcement (blog.mlc.ai/2023/05/22/bringing-open-large-language-models-to-consumer-devices, corroborated by Tom's Hardware and Digit.in coverage of the same post): MLC Chat's iOS build needs roughly 6GB of device RAM to run Vicuna-7B (4GB for the smaller RedPajama-3B), tested on iPhone 12 Pro/14 Pro/14 Pro Max; the app uses GPU-accelerated inference (Metal on iOS, Vulkan/OpenCL on Android) rather than CPU-only, verified 2026-09-13
   stars: 23134,
   addedDate: '2026-09-04',
   status: 'listed',

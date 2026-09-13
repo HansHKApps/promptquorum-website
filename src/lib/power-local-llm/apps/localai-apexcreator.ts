@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded — needs manual research
+  hardware: null, // left null — not documented: checked the Google Play listing (play.google.com/store/apps/details?id=com.ApexCreator.localaiapp) and the developer's own promo copy; neither publishes a minimum Android RAM/device spec, only informal guidance that higher-RAM/high-end chipsets run larger on-device models faster — checked 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

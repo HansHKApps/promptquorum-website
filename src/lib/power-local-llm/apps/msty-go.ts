@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — not documented: checked msty.ai/go and the linked docs.msty.ai/go; Msty Go is described only as a "mobile companion" for remotely monitoring/approving a desktop Msty instance, with no RAM/storage/GPU specs published, checked 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',
