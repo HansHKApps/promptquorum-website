@@ -7,6 +7,7 @@ import { CookieSettingsLink } from './CookieSettingsLink'
 import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
 import { trackPrefSource } from '@/lib/preferredSource'
 import type { Language } from '@/lib/geo-schema'
+import { LOCALE_ROUTED_ROOTS } from '@/lib/i18n/constants'
 
 // Icons (minimal set for footer)
 const Twitter = () => (
@@ -140,26 +141,20 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
   const effectiveLang: Language = pathLang ?? lang
   const t = FOOTER_COPY[effectiveLang] || FOOTER_COPY['en']
 
-  // Roots that are path-prefix routed for all non-EN langs (/de/<path>, …).
-  // Keep in sync with PATH_LOCALE_CLUSTERS + PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
-  const PATH_PREFIX_ROOTS = [
-    'power-local-llm', 'prompt-bites', 'smart-home',
-    'prompt-engineering', 'local-llms', 'blog', 'frameworks',
-    'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy',
-  ]
-
+  // Only path-prefix to a root that actually has a /<lang>/ route folder
+  // (LOCALE_ROUTED_ROOTS — single source of truth, shared with LanguageSwitcher.tsx, no more
+  // duplicated/drifting cluster arrays). A route with no localized variant (/author,
+  // /impressum, /image-license, …) has no /<lang>/ target to link to, so it stays on the
+  // current English URL — never a ?lang= fallback (deprecated, see CLAUDE.md).
   const hrefFor = (code: Language) => {
     let basePath = pathname
-    let wasPathPrefixed = false
     for (const lang of NON_EN_LANGS) {
       if (pathname === `/${lang}`) {
         basePath = '/'
-        wasPathPrefixed = true
         break
       }
       if (pathname.startsWith(`/${lang}/`)) {
         basePath = pathname.slice(`/${lang}`.length)
-        wasPathPrefixed = true
         break
       }
     }
@@ -171,19 +166,13 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
       return qs ? `${basePath}?${qs}` : basePath
     }
 
-    // Path-prefix routing: home and any path under a path-prefix-routed root resolve to
-    // /<lang>/<path> (subdirectory), mirroring the in-article "Read in:" links — never ?lang=.
-    const isPathPrefixRouted =
-      basePath === '/' ||
-      PATH_PREFIX_ROOTS.some((c) => basePath === `/${c}` || basePath.startsWith(`/${c}/`))
-    if (wasPathPrefixed || isPathPrefixRouted) {
-      return `/${code}${basePath}`
+    const rootSegment = basePath === '/' ? null : basePath.split('/')[1]
+    const isLocaleRouted = basePath === '/' || (rootSegment !== null && (LOCALE_ROUTED_ROOTS as readonly string[]).includes(rootSegment))
+    if (!isLocaleRouted) {
+      return basePath
     }
 
-    // Legacy fallback for English-only/static paths that have no /<lang>/ route.
-    const params = new URLSearchParams(searchParams)
-    params.set('lang', code)
-    return `${basePath}?${params.toString()}`
+    return `/${code}${basePath === '/' ? '' : basePath}`
   }
 
   const langPrefix = effectiveLang === 'en' ? '' : `/${effectiveLang}`
