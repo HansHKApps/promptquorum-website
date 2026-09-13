@@ -22,16 +22,22 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['code'],
   url: 'continue.dev',
+  // Updated 2026-09-13: Cursor acquired Continue.dev's maker in June 2026; last real
+  // commit was July 2026 — the project is effectively discontinued. Tagline now
+  // discloses this instead of describing it as an active tool; see the dedicated
+  // review (continue-dev-review) for the full account. This tagline is reused
+  // elsewhere as longer-form prose, not just in a 60-char table cell, so it is not
+  // held to the article table's cell-length limit.
   tagline: {
-    en: 'VS Code and JetBrains autocomplete and chat with local models',
-    de: 'VS Code- und JetBrains-Autovervollständigung und Chat mit lokalen Modellen',
-    fr: 'Autocomplétion et chat VS Code et JetBrains avec modèles locaux',
-    ja: 'ローカルモデルを使ったVS CodeとJetBrainsの自動補完・チャット',
-    zh: '支持本地模型的VS Code和JetBrains自动补全与聊天',
-    es: 'Autocompletado y chat en VS Code y JetBrains con modelos locales',
-    pt: 'Autocompletar e chat no VS Code e JetBrains com modelos locais',
-    ar: 'إكمال تلقائي ودردشة في VS Code وJetBrains مع النماذج المحلية',
-    ko: 'VS Code 및 JetBrains에서 로컬 모델로 자동 완성 및 채팅',
+    en: 'Discontinued VS Code/JetBrains assistant — Cursor acquired the maker in 2026',
+    de: 'Eingestellter VS-Code-/JetBrains-Assistent — Cursor übernahm den Hersteller 2026',
+    fr: 'Assistant VS Code/JetBrains abandonné — Cursor a racheté l\'éditeur en 2026',
+    ja: '提供終了したVS Code/JetBrains向けアシスタント — 2026年にCursorが開発元を買収',
+    zh: '已停止维护的VS Code/JetBrains助手——2026年被Cursor收购开发商',
+    es: 'Asistente de VS Code/JetBrains descontinuado — Cursor adquirió al fabricante en 2026',
+    pt: 'Assistente de VS Code/JetBrains descontinuado — a Cursor adquiriu a fabricante em 2026',
+    ar: 'مساعد VS Code/JetBrains متوقف — استحوذت Cursor على الشركة المصنعة عام 2026',
+    ko: '단종된 VS Code/JetBrains 어시스턴트 — 2026년 Cursor가 제작사를 인수',
   },
   reviewSlug: 'continue-dev-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
