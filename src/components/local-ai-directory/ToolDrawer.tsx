@@ -12,7 +12,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
-import { computeHardwareDisplay, computeCompatibilityVerdict } from './hardware'
+import { computeHardwareDisplay, computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
 import { ArticlesBlock } from './ArticlesBlock'
 import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
@@ -324,6 +324,7 @@ export function ToolDrawer({
                             verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                             hasProfile={profile != null}
                             variesByModel={app.hardware?.variesByModel === true}
+                            fitGb={computeVariesByModelFitGb(profile, machine)}
                             lang={lang}
                             onRequestProfile={onRequestHardware}
                           />
@@ -333,6 +334,7 @@ export function ToolDrawer({
                           verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                           hasProfile={profile != null}
                           variesByModel={app.hardware?.variesByModel === true}
+                          fitGb={computeVariesByModelFitGb(profile, machine)}
                           lang={lang}
                           onRequestProfile={onRequestHardware}
                         />

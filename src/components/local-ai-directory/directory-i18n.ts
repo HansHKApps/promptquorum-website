@@ -518,6 +518,24 @@ const DIR_UI = {
     ar: 'لا يوجد متطلب ثابت — يحدده النموذج أو الواجهة الخلفية التي تحمّلها',
     ko: '고정된 요구 사항 없음 — 불러오는 모델이나 백엔드에 따라 결정됨',
   },
+  hwVariesByModelFitTemplate: {
+    en: 'Fits models up to ~{n} GB (Q4)', de: 'Passend für Modelle bis ~{n} GB (Q4)',
+    fr: 'Adapté aux modèles jusqu\'à ~{n} Go (Q4)', ja: '約{n}GBまでのモデルに対応（Q4）',
+    zh: '可运行约{n}GB以内的模型（Q4）', es: 'Compatible con modelos de hasta ~{n} GB (Q4)',
+    pt: 'Compatível com modelos de até ~{n} GB (Q4)', ar: 'يناسب النماذج حتى ~{n} جيجابايت (Q4)',
+    ko: '약 {n}GB까지의 모델에 적합 (Q4)',
+  },
+  hwVariesByModelFitDetailTemplate: {
+    en: 'Estimated from your saved setup — actual fit depends on context length and the specific model.',
+    de: 'Geschätzt anhand deines gespeicherten Setups — die tatsächliche Passung hängt von Kontextlänge und Modell ab.',
+    fr: 'Estimation basée sur votre configuration enregistrée — la compatibilité réelle dépend de la longueur de contexte et du modèle.',
+    ja: '保存された設定からの推定値です — 実際の適合性はコンテキスト長や具体的なモデルによって変わります。',
+    zh: '根据你保存的配置估算——实际是否合适取决于上下文长度和具体模型。',
+    es: 'Estimado a partir de tu configuración guardada — el ajuste real depende de la longitud de contexto y del modelo concreto.',
+    pt: 'Estimativa com base na sua configuração salva — o encaixe real depende do tamanho do contexto e do modelo específico.',
+    ar: 'تقدير استناداً إلى إعدادك المحفوظ — يعتمد الملاءمة الفعلية على طول السياق والنموذج المحدد.',
+    ko: '저장된 설정을 기준으로 한 추정치입니다 — 실제 적합성은 컨텍스트 길이와 구체적인 모델에 따라 달라집니다.',
+  },
 
   // --- CompatibilityBadge (per-tool "can I run it" verdict) ---
   compatRunsWell: { en: 'Runs well', de: 'Läuft gut', fr: 'Fonctionne bien', ja: '快適に動作', zh: '运行流畅', es: 'Funciona bien', pt: 'Funciona bem', ar: 'يعمل بسلاسة', ko: '원활하게 실행됨' },
@@ -537,6 +555,13 @@ const DIR_UI = {
     zh: '取决于运行的模型', es: 'Depende del modelo que uses',
     pt: 'Depende do modelo usado', ar: 'يعتمد على النموذج الذي تشغّله',
     ko: '실행하는 모델에 따라 다름',
+  },
+  compatVariesByModelFitTemplate: {
+    en: 'Fits models up to ~{n} GB', de: 'Bis ~{n} GB Modellgröße',
+    fr: 'Jusqu\'à ~{n} Go', ja: '約{n}GBまで対応',
+    zh: '最高约{n}GB', es: 'Hasta ~{n} GB',
+    pt: 'Até ~{n} GB', ar: 'حتى ~{n} جيجابايت',
+    ko: '약 {n}GB까지',
   },
 
   // --- HardwareProfileWidget ("Your setup" panel) ---

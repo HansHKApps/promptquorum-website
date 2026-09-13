@@ -198,6 +198,52 @@ export function unifiedMemoryFloor(ramGb: number | null | undefined, vramGb: num
 }
 
 /**
+ * Fixed KV-cache/runtime overhead reserved before estimating how large a
+ * model (in GB, at Q4 quantization) the viewer's saved profile can hold — a
+ * Q4 GGUF's file size is already a close proxy for the RAM/VRAM it needs to
+ * load, so no separate GB-per-billion-parameters conversion is needed here.
+ */
+const MODEL_FIT_CONTEXT_OVERHEAD_GB = 2
+
+/**
+ * How much of the viewer's saved memory figure is actually available for
+ * model weights, once OS/runtime overhead is accounted for. Apple's 0.7
+ * factor matches unifiedMemoryFloor's own macOS-overhead assumption above;
+ * discrete GPU VRAM is already dedicated so it gets the least deduction;
+ * CPU/mobile RAM is shared with the OS and other apps so it gets the most.
+ */
+function usableMemoryGb(profile: HardwareProfile): number {
+  switch (profile.machine) {
+    case 'apple':
+      return profile.unifiedGb * 0.7
+    case 'dgpu':
+      return profile.vramGb * 0.9
+    case 'cpu':
+      return profile.ramGb * 0.7
+    case 'ios':
+    case 'android':
+      return profile.ramGb * 0.5
+  }
+}
+
+/**
+ * For a tool whose hardware need is set entirely by whichever model the
+ * viewer loads (`hardware.variesByModel`), estimates the largest Q4-quantized
+ * model (in GB) their saved profile can hold — a concrete, personalized
+ * answer instead of a pure "depends" non-answer once they've told the site
+ * their hardware. Returns null when there's no profile for the selected
+ * machine type (nothing to estimate from) or the estimate would be <= 0.
+ * Deliberately a rough estimate (rounded down to a whole GB) rather than a
+ * false-precision decimal — actual fit still depends on context length and
+ * the specific model, which the UI copy alongside this number says explicitly.
+ */
+export function computeVariesByModelFitGb(profile: HardwareProfile | null, machine: MachineType): number | null {
+  if (!profile || profile.machine !== machine) return null
+  const fit = Math.floor(usableMemoryGb(profile) - MODEL_FIT_CONTEXT_OVERHEAD_GB)
+  return fit > 0 ? fit : null
+}
+
+/**
  * Computes what to show for a tool's hardware requirement given the viewer's
  * selected machine type. When a tool has no measured `hardware` record, falls
  * back to what its `engine` implies (see derivedFromEngine) rather than
@@ -208,7 +254,8 @@ export function computeHardwareDisplay(
   machine: MachineType,
   lang: Language,
   engine?: EngineKey | 'TODO',
-  mobile?: MobilePlatformContext
+  mobile?: MobilePlatformContext,
+  profile?: HardwareProfile | null
 ): HardwareDisplay {
   if ((machine === 'ios' || machine === 'android') && mobile && !hasMobilePlatformSupport(mobile, machine)) {
     return {
@@ -224,10 +271,11 @@ export function computeHardwareDisplay(
   }
 
   if (hardware.variesByModel) {
+    const fitGb = computeVariesByModelFitGb(profile ?? null, machine)
     return {
       known: true,
-      headline: t('hwVariesByModel', lang),
-      detail: t('hwVariesByModelDetail', lang),
+      headline: fitGb != null ? t('hwVariesByModelFitTemplate', lang, { n: fitGb }) : t('hwVariesByModel', lang),
+      detail: fitGb != null ? t('hwVariesByModelFitDetailTemplate', lang) : t('hwVariesByModelDetail', lang),
       cpuFriendly: hardware.cpuOnly === true,
     }
   }

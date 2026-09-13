@@ -28,6 +28,7 @@ export function CompatibilityBadge({
   lang,
   onRequestProfile,
   variesByModel,
+  fitGb,
 }: {
   verdict: CompatibilityVerdict
   /** Whether the viewer has saved a hardware profile at all — distinguishes
@@ -44,6 +45,11 @@ export function CompatibilityBadge({
    *  not simply unresearched. Only changes wording for the `unknown` verdict;
    *  ignored otherwise. See ToolRecordHardware.variesByModel for the full story. */
   variesByModel?: boolean
+  /** From `computeVariesByModelFitGb(profile, machine)` — the largest Q4 model
+   *  size (GB) the viewer's saved profile can hold. Only used alongside
+   *  `variesByModel`; turns the generic "depends on the model" pill into a
+   *  concrete, personalized answer once a profile is saved. */
+  fitGb?: number | null
 }) {
   if (verdict === 'unknown' && !hasProfile) {
     return (
@@ -55,6 +61,17 @@ export function CompatibilityBadge({
         <QuestionIcon className="h-2.5 w-2.5" />
         {t('compatSetHardware', lang)}
       </button>
+    )
+  }
+
+  if (verdict === 'unknown' && variesByModel && fitGb != null) {
+    // Profile exists and gives us enough to estimate a concrete ceiling —
+    // a real, personalized answer instead of the generic "depends" pill below.
+    return (
+      <span className={`${BASE_CLASSES} ${VERDICT_STYLE.comfortable}`}>
+        <CheckIcon className="h-2.5 w-2.5" />
+        {t('compatVariesByModelFitTemplate', lang, { n: fitGb })}
+      </span>
     )
   }
 

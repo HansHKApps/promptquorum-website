@@ -54,7 +54,7 @@ export function HardwareBlock({
    *  machine types. */
   mobile?: MobilePlatformContext
 }) {
-  const display = computeHardwareDisplay(hardware, machine, lang, engine, mobile)
+  const display = computeHardwareDisplay(hardware, machine, lang, engine, mobile, profile)
 
   if (!display.known) {
     return null

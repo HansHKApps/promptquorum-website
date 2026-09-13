@@ -12,7 +12,7 @@ import { STORE_LINK_LABEL, type ToolRecord } from '@/lib/power-local-llm/apps/ty
 import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
-import { computeCompatibilityVerdict } from './hardware'
+import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ClockIcon, ChevronRightIcon } from './icons'
 import { isFounderStarActive } from './founderStar'
 import type { HardwareProfile, MachineType } from './types'
@@ -238,6 +238,7 @@ export function ToolCard({
             verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
             hasProfile={profile != null}
             variesByModel={app.hardware?.variesByModel === true}
+            fitGb={computeVariesByModelFitGb(profile, machine)}
             lang={lang}
             onRequestProfile={onRequestHardware}
           />

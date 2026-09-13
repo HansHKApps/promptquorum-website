@@ -9,7 +9,7 @@ import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
-import { computeCompatibilityVerdict } from './hardware'
+import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
 import { StarIcon } from './icons'
 import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
@@ -111,6 +111,7 @@ export function ToolTable({
                   verdict={computeCompatibilityVerdict(app.hardware, profile, machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms })}
                   hasProfile={profile != null}
                   variesByModel={app.hardware?.variesByModel === true}
+                  fitGb={computeVariesByModelFitGb(profile, machine)}
                   lang={lang}
                   onRequestProfile={onRequestHardware}
                 />
