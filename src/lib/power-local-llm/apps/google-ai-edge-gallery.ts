@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which Gemma size is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — checked github.com/google-ai-edge/gallery README + GitHub Issue #423 ("what are the minimal requirements?") + App Store listing: no official minimum device RAM stated; on-device RAM need scales with the Gemma variant loaded (E2B vs E4B), checked 2026-09-13
   stars: null,
   addedDate: '2026-09-12',
   status: 'listed',

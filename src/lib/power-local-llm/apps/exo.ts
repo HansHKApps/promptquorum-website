@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Apache-2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/exo-explore README: no fixed per-device minimum — only requirement is enough combined memory across the cluster to fit the model; heterogeneous clusters can include CPU-only/integrated-GPU devices, verified 2026-09-13
   stars: 47260, // github.com/exo-explore/exo, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

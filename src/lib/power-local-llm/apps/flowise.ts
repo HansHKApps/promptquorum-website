@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // Node.js visual LangChain workflow builder, no inference engine of its own — hardware floor is entirely the connected model backend's, no fixed minimum on flowiseai.com/docs, checked 2026-09-13
   stars: 55414,
   addedDate: '2026-09-04',
   status: 'listed',

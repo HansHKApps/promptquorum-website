@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'BSD-2-Clause',
   price: 'freemium', // self-hosted OSS is free forever; managed cloud is $0.01/min + provider usage
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // self-hosted BYOK voice-agent platform; docs.dograh.com getting-started + self-hosting pages state no minimum host spec — depends entirely on the STT/LLM/TTS providers connected, checked 2026-09-13
   stars: 5588, // github.com/dograh-hq/dograh, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

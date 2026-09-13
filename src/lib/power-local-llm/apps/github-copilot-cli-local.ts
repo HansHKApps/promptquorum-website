@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Proprietary',
   price: 'freemium', // GitHub Copilot Free tier exists; full CLI features require a paid Copilot plan
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // terminal client only, no local inference engine of its own — hardware floor is entirely the connected Ollama/vLLM/Foundry Local backend's, checked docs.github.com 2026-09-13
   stars: null, // closed source, no public repo
   addedDate: '2026-09-05',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/h2oai/h2ogpt docs/README_CPU.md + docs/README_GPU.md: dedicated CPU-only mode (via llama.cpp/GPT4All) is officially documented alongside GPU mode; neither doc states a fixed minimum RAM/VRAM figure, it scales with the model loaded, verified 2026-09-13
   stars: 12000,
   addedDate: '2026-09-04',
   status: 'listed',

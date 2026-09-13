@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'MIT',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: null, // left null — hanoki.app states no minimum macOS/hardware spec; the app is a client only (local via Ollama or cloud APIs), checked website/search 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // ekorbia.com states no minimum spec; its own embeddings (nomic-embed-text) run CPU-only, but chat depends entirely on the connected Ollama/OpenAI backend, checked 2026-09-13
   stars: 1,
   addedDate: '2026-09-04',
   status: 'listed',

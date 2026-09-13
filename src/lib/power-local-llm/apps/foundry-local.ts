@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT (SDK)',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: null, cpuOnly: true }, // per learn.microsoft.com/azure/ai-foundry/foundry-local system requirements: 8GB RAM minimum (16GB recommended), 3GB free disk; GPU/NPU acceleration (NVIDIA/AMD/Intel) is optional, CPU execution provider works without one, verified 2026-09-13
   stars: 2541, // github.com/microsoft/Foundry-Local, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

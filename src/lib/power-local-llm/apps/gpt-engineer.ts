@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // CLI code-gen tool that calls an external LLM API, no local inference engine of its own — no hardware minimum in github.com/AntonOsika/gpt-engineer README, checked 2026-09-13
   stars: 55100,
   addedDate: '2026-09-04',
   status: 'listed',

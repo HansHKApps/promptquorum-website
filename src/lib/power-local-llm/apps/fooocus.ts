@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'GPL 3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 8, vramGb: 4, cpuOnly: true }, // per github.com/lllyasviel/Fooocus README "minimal requirement" table: 4GB Nvidia VRAM + 8GB system RAM; README also documents a CPU-only path (~32GB RAM, very slow), verified 2026-09-13
   stars: 52700,
   addedDate: '2026-09-04',
   status: 'listed',

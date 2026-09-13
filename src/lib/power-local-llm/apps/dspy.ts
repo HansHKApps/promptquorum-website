@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // Python prompting/programming framework, no inference engine of its own — hardware floor is entirely the connected LLM backend's, no fixed minimum in github.com/stanfordnlp/dspy docs, checked 2026-09-13
   stars: 37700,
   addedDate: '2026-09-04',
   status: 'listed',
