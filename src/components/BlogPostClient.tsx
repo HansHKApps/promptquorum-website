@@ -99,14 +99,29 @@ const BLOG_UI = {
   },
 }
 
+// Internal links (starting with "/") need the current locale's path prefix —
+// this component previously passed every href through verbatim, so every
+// internal link in a non-English blog post silently opened the English
+// edition regardless of which locale page it appeared on (found 2026-09-13
+// auditing the same bug class in the directory's review links; see
+// PowerLocalLLMPostClient.tsx's renderInlineLinksNoBold for the reference
+// pattern this mirrors). External links (http/https) are left as-is.
+function localizeHref(url: string, lang: Language): string {
+  if (lang === 'en' || !url.startsWith('/') || url.startsWith(`/${lang}/`)) return url
+  return `/${lang}${url}`
+}
+
 // Extracted into its own component so it can own its scroll-overflow-detection
 // hooks per Rules of Hooks — it is rendered inline inside a `.map()` over
 // post.sections in BlogPostClientContent, so hooks cannot live there directly.
-function renderTableMarkdownLinks(text: string) {
-  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:text-primary/80 underline">$1</a>')
+function renderTableMarkdownLinks(text: string, lang: Language) {
+  return text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    (_match, label: string, url: string) => `<a href="${localizeHref(url, lang)}" class="text-primary hover:text-primary/80 underline">${label}</a>`
+  )
 }
 
-function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<string, string>[] }) {
+function BlogSectionTable({ columns, rows, lang }: { columns: string[]; rows: Record<string, string>[]; lang: Language }) {
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
 
@@ -129,7 +144,7 @@ function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<s
               <th
                 key={col}
                 className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 break-words${colIdx === 0 ? ' sticky left-0 z-10 min-w-max' : ' min-w-[150px] sm:min-w-auto'}`}
-                dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(col) }}
+                dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(col, lang) }}
               />
             ))}
           </tr>
@@ -143,7 +158,7 @@ function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<s
                 <td
                   key={`${idx}-${col}`}
                   className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary min-w-max' : 'p-2 sm:p-3 text-text-secondary break-words max-w-xs sm:max-w-none'}
-                  dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(row[colLabel] || row[col] || '—') }}
+                  dangerouslySetInnerHTML={{ __html: renderTableMarkdownLinks(row[colLabel] || row[col] || '—', lang) }}
                 />
                 )
               })}
@@ -291,7 +306,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
                     {section.items.map((item, idx) => (
                       <li key={idx} className="text-text-secondary flex gap-3">
                         <span className="text-primary font-bold flex-shrink-0">•</span>
-                        <span dangerouslySetInnerHTML={{ __html: item.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:text-primary/80 underline">$1</a>') }} />
+                        <span dangerouslySetInnerHTML={{ __html: item.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label: string, url: string) => `<a href="${localizeHref(url, lang)}" class="text-primary hover:text-primary/80 underline">${label}</a>`) }} />
                       </li>
                     ))}
                   </ul>
@@ -299,7 +314,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
 
                 {/* Table: rows with columns */}
                 {section.rows && section.rows.length > 0 && section.columns && (
-                  <BlogSectionTable columns={section.columns} rows={section.rows} />
+                  <BlogSectionTable columns={section.columns} rows={section.rows} lang={lang} />
                 )}
 
                 {/* Download CTA */}

@@ -218,11 +218,29 @@ function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
   )
 }
 
-function mdLinksToHtml(text: string): string {
+// Internal links (starting with "/") need the current locale's path prefix —
+// this article's own markdown never carries it (matching every other
+// cluster's hand-authored content), and unlike the other 5 clusters'
+// markdown renderers (see PowerLocalLLMPostClient.tsx's
+// renderInlineLinksNoBold), this one had never applied it at all, so every
+// internal link in a non-English prompt-bites page silently opened the
+// English edition regardless of which locale page it appeared on (found
+// 2026-09-13 auditing the same bug class in the directory's review links).
+// External links (http/https) and same-page anchors (#...) are left as-is.
+function localizeHref(url: string, lang: Language): string {
+  if (lang === 'en' || !url.startsWith('/') || url.startsWith(`/${lang}/`)) return url
+  if (url.includes('#')) {
+    const [basePath, anchor] = url.split('#')
+    return `/${lang}${basePath}#${anchor}`
+  }
+  return `/${lang}${url}`
+}
+
+function mdLinksToHtml(text: string, lang: Language): string {
   return text
     .replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" class="text-primary hover:underline">$1</a>'
+      (_match, label: string, url: string) => `<a href="${localizeHref(url, lang)}" class="text-primary hover:underline">${label}</a>`
     )
     .replace(
       /\*\*([^*]+)\*\*/g,
@@ -230,14 +248,14 @@ function mdLinksToHtml(text: string): string {
     )
 }
 
-function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; columns: string[] }) {
+function SectionTable({ rows, columns, lang }: { rows: Array<Record<string, string>>; columns: string[]; lang: Language }) {
   return (
     <div className="overflow-x-auto my-4">
       <table className="w-full text-sm border-collapse">
         <thead>
           <tr className="border-b border-primary/20">
             {columns.map((col) => (
-              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary break-words min-w-[150px]" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(col) }} />
+              <th key={col} className="text-left py-2 pr-4 font-semibold text-text-primary break-words min-w-[150px]" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(col, lang) }} />
             ))}
           </tr>
         </thead>
@@ -247,7 +265,7 @@ function SectionTable({ rows, columns }: { rows: Array<Record<string, string>>; 
               {columns.map((col) => {
                 const colLabel = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
                 return (
-                <td key={col} className="py-2 pr-4 text-text-secondary align-top break-words max-w-xs sm:max-w-none" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(row[colLabel] ?? row[col] ?? '') }} />
+                <td key={col} className="py-2 pr-4 text-text-secondary align-top break-words max-w-xs sm:max-w-none" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(row[colLabel] ?? row[col] ?? '', lang) }} />
                 )
               })}
             </tr>
@@ -308,7 +326,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
         />
       ))}
       {section.rows && section.columns && (
-        <SectionTable rows={section.rows} columns={section.columns} />
+        <SectionTable rows={section.rows} columns={section.columns} lang={lang} />
       )}
       {section.snippetBlocks && section.snippetBlocks.length > 0 && (
         <div className="space-y-3 my-6">
@@ -321,7 +339,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
               </p>
               <p
                 className="text-text-secondary text-sm leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: mdLinksToHtml(snippet.text) }}
+                dangerouslySetInnerHTML={{ __html: mdLinksToHtml(snippet.text, lang) }}
               />
             </div>
           ))}
@@ -332,7 +350,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
           {section.items.map((item, i) => (
             <li key={i} className="flex gap-2 text-sm text-text-secondary">
               <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
-              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(item) }} />
+              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(item, lang) }} />
             </li>
           ))}
         </ul>
@@ -378,14 +396,14 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
                     {item.rank}
                   </span>
                   <div>
-                    <h3 className="font-bold text-text-primary text-lg" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(heading) }} />
+                    <h3 className="font-bold text-text-primary text-lg" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(heading, lang) }} />
                     {item.tagline && (
-                      <p className="text-sm text-text-secondary italic" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(item.tagline) }} />
+                      <p className="text-sm text-text-secondary italic" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(item.tagline, lang) }} />
                     )}
                   </div>
                 </div>
                 {body && (
-                  <p className="text-text-secondary leading-relaxed text-sm mb-3" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(body) }} />
+                  <p className="text-text-secondary leading-relaxed text-sm mb-3" dangerouslySetInnerHTML={{ __html: mdLinksToHtml(body, lang) }} />
                 )}
                 {(item.pros?.length || item.cons?.length) && (
                   <div className="grid sm:grid-cols-2 gap-4 mb-3">
@@ -396,7 +414,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
                           {item.pros.map((p, j) => (
                             <li key={j} className="text-sm text-text-secondary flex gap-2">
                               <span className="text-green-500 flex-shrink-0">+</span>
-                              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(p) }} />
+                              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(p, lang) }} />
                             </li>
                           ))}
                         </ul>
@@ -409,7 +427,7 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
                           {item.cons.map((c, j) => (
                             <li key={j} className="text-sm text-text-secondary flex gap-2">
                               <span className="text-orange-500 flex-shrink-0">–</span>
-                              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(c) }} />
+                              <span dangerouslySetInnerHTML={{ __html: mdLinksToHtml(c, lang) }} />
                             </li>
                           ))}
                         </ul>
@@ -540,7 +558,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
           <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
             <p
               className="text-text-primary font-semibold leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: mdLinksToHtml(article.leadAnswerBlock) }}
+              dangerouslySetInnerHTML={{ __html: mdLinksToHtml(article.leadAnswerBlock, lang) }}
             />
           </div>
         )}

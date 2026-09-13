@@ -813,5 +813,25 @@
     "cluster": "power-local-llm",
     "urlSlug": "solair-ai-review",
     "url": "/power-local-llm/solair-ai-review"
+  },
+  "aori": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aori-ai-personal-agent-review",
+    "url": "/power-local-llm/aori-ai-personal-agent-review"
+  },
+  "rapr-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "rapr-ai-review",
+    "url": "/power-local-llm/rapr-ai-review"
+  },
+  "chatty-mini": {
+    "cluster": "power-local-llm",
+    "urlSlug": "chatty-mini-review",
+    "url": "/power-local-llm/chatty-mini-review"
+  },
+  "unsloth": {
+    "cluster": "power-local-llm",
+    "urlSlug": "unsloth-review",
+    "url": "/power-local-llm/unsloth-review"
   }
 }
