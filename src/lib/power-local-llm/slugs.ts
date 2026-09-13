@@ -323,6 +323,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // MLX-LM explainer (Runtimes & Inference Engines) — 2026-09-07
   'mlx-lm-explained':                        'mlx-lm-explained',
 
+  // Unsloth review (Fine-Tuning & Training) — 2026-09-13
+  'unsloth-review':                          'unsloth-review',
+
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                         'windsurf-review',
