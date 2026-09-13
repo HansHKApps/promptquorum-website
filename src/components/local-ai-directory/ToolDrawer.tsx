@@ -21,23 +21,10 @@ import { isFounderStarActive } from './founderStar'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
+import { featureReviewUrl } from './reviewLinks'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { t } from './directory-i18n'
 import Link from 'next/link'
-import featureReviewIndex from '@/generated/feature-review-index.json'
-
-type FeatureReviewIndex = Record<string, { cluster: string; urlSlug: string; url: string }>
-
-/**
- * The tool's own dedicated, single-subject review, if one exists — from the
- * authoritative build-time index (src/generated/feature-review-index.json,
- * derived from the tool's own `reviewSlug` field). Mirrors ToolCard.tsx's
- * `featureReviewUrl` — kept local here rather than imported, since ToolCard
- * only exports `getDownloadLinks` today.
- */
-function featureReviewUrl(appSlug: string): string | null {
-  return (featureReviewIndex as FeatureReviewIndex)[appSlug]?.url ?? null
-}
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   if (value == null || value === '') return null
@@ -153,7 +140,7 @@ export function ToolDrawer({
   const open = app != null
   const [copied, setCopied] = useState(false)
   const [licenseModalOpen, setLicenseModalOpen] = useState(false)
-  const featureReview = app ? featureReviewUrl(app.slug) : null
+  const featureReview = app ? featureReviewUrl(app.slug, lang) : null
 
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
     planned: t('statusPlanned', lang),

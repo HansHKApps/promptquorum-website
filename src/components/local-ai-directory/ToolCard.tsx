@@ -17,7 +17,7 @@ import { StarIcon, CpuIcon, PlugIcon, TagIcon, ClockIcon, ChevronRightIcon } fro
 import { isFounderStarActive } from './founderStar'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
-import featureReviewIndex from '@/generated/feature-review-index.json'
+import { featureReviewUrl } from './reviewLinks'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
@@ -60,18 +60,6 @@ const PLATFORM_LABEL: Record<string, string> = {
 
 type ToolArticleEntry = { url: string; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number }>
-type FeatureReviewIndex = Record<string, { cluster: string; urlSlug: string; url: string }>
-
-/**
- * The tool's own dedicated, single-subject review, if one exists — from the
- * authoritative build-time index (src/generated/feature-review-index.json,
- * derived from the tool's own `reviewSlug` field), NOT the fuzzy
- * tool-article-index.json tier heuristic (which only guarantees an article
- * *mentions* the tool, not that the tool is its primary subject).
- */
-function featureReviewUrl(appSlug: string): string | null {
-  return (featureReviewIndex as FeatureReviewIndex)[appSlug]?.url ?? null
-}
 
 function articleCount(toolName: string): number {
   return (toolArticleIndex as ToolArticleIndex)[toolName]?.totalCount ?? 0
@@ -111,7 +99,7 @@ export function ToolCard({
   const engine = app.engine !== 'TODO' ? app.engine : null
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
-  const review = featureReviewUrl(app.slug)
+  const review = featureReviewUrl(app.slug, lang)
   const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
   const lastUpdatedLabel = lastUpdatedIso ? formatDisplayDate(lastUpdatedIso, lang) : null
   const primaryCategory = app.categories[0]

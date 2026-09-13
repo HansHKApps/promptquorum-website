@@ -595,11 +595,19 @@ function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang:
   const moreTemplate = POST_UI.articlesAboutMore[lang] ?? POST_UI.articlesAboutMore['en']
   const mentionedInHeader = POST_UI.articlesMentionedInHeader[lang] ?? POST_UI.articlesMentionedInHeader['en']
 
+  // tool-article-index.json only ever emits an unprefixed English path (the
+  // generator has no concept of locale), so every entry's `url` needs the
+  // viewer's own locale prefix added here — otherwise "related articles"
+  // always navigates to the English edition regardless of which locale this
+  // page itself is rendering (reported 2026-09-13, same root cause as the
+  // directory's ArticlesBlock.tsx and reviewLinks.ts).
+  const localize = (url: string) => (lang === 'en' ? url : `/${lang}${url}`)
+
   const renderList = (articles: ToolArticleEntry[]) => (
     <ul className="mt-2 space-y-1.5 text-sm">
       {articles.map((a) => (
         <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-          <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
+          <Link href={localize(a.url)} className="text-primary hover:underline">{a.title}</Link>
           {a.dateModified && (
             <span className="text-xs text-text-secondary shrink-0">
               {updatedLabel} {formatDisplayDate(a.dateModified, lang)}

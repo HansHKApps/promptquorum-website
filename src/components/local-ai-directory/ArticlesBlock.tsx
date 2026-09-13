@@ -23,11 +23,19 @@ export function ArticlesBlock({ toolName, lang }: { toolName: string; lang: Lang
   const about = entry.articles.filter((a) => a.tier === 'about')
   const mentioned = entry.articles.filter((a) => a.tier === 'mentioned')
 
+  // tool-article-index.json (scripts/generate-tool-article-index.mjs) only
+  // ever emits an unprefixed English path — the generator has no concept of
+  // locale — so every entry's `url` needs the viewer's own locale prefix
+  // added here, same fix and same root cause as reviewLinks.ts's
+  // featureReviewUrl (reported 2026-09-13: clicking an article link from a
+  // non-English directory page landed on the English article).
+  const localize = (url: string) => (lang === 'en' ? url : `/${lang}${url}`)
+
   const renderList = (articles: ToolArticleEntry[]) => (
     <ul className="space-y-1.5 text-sm">
       {articles.map((a) => (
         <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-          <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
+          <Link href={localize(a.url)} className="text-primary hover:underline">{a.title}</Link>
           {a.dateModified && (
             <span className="text-xs text-text-secondary shrink-0">{t('updatedPrefix', lang)} {formatDisplayDate(a.dateModified, lang)}</span>
           )}
