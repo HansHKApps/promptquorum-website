@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'Apache 2.0',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: false }, // per openfelix.com: "Runs local on Apple Silicon" using Qwen 3.5 via MLX for on-device inference (escalating to cloud models for complex tasks); no numeric RAM minimum is published, but local mode requires Apple Silicon's GPU via MLX, not a CPU-only path — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

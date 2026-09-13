@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache 2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/trypear/pearai-app README: a VSCode/Continue-based AI code editor (TypeScript/Electron) supporting both local and cloud models via its pearai-submodule; no hardware minimum is published for the editor itself — verified 2026-09-13
   stars: 706,
   addedDate: '2026-09-04',
   status: 'listed',

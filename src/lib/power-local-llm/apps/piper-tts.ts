@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/OHF-Voice/piper1-gpl README: "a fast and local neural text-to-speech engine" (compact ONNX voice models) used in Home Assistant, NVDA, and JetsonGPT for offline/embedded use; no numeric RAM minimum is published in the official README, but it is CPU-only by design with no GPU/VRAM requirement — verified 2026-09-13
   stars: 11300,
   addedDate: '2026-09-04',
   status: 'listed',

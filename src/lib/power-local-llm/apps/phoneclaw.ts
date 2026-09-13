@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Apache-2.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per articles/phoneclaw-review.ts (sourced from github.com/kellyvv/PhoneClaw README): requirement is stated by iPhone chip generation, not GB figures — Gemma 4 E2B needs an A16 chip or newer, E4B needs iPhone 15 Pro/A17 Pro or newer, and E4B is forced CPU-only on sideloaded (non-Xcode/TestFlight) installs due to a signing memory cap — verified 2026-09-13
   stars: 1233, // github.com/kellyvv/PhoneClaw, verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

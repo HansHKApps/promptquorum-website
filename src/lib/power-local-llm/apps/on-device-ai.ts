@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Closed source',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 6, vramGb: null, cpuOnly: true }, // per ondevice-ai.app: "Devices with 6GB+ RAM provide optimal performance"; supported devices (iPhone 14+, Apple Silicon Macs) use unified memory and the Neural Engine rather than a discrete GPU/VRAM — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-13',
   status: 'listed',

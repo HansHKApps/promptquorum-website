@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   engine: 'both',
   license: 'AGPL-3.0',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/odysseus-dev/odysseus README (also documented in articles/odysseus-review.ts): Odysseus itself has no fixed hardware minimum — a local-model backend needs that model's own RAM/VRAM, while an API-provider backend needs only a small footprint for its Docker containers; genuinely backend-dependent — verified 2026-09-13
   stars: 86856, // github.com/odysseus-dev/odysseus (formerly pewdiepie-archdaemon/odysseus), verified via GitHub API 2026-09-05
   addedDate: '2026-09-05',
   status: 'listed',

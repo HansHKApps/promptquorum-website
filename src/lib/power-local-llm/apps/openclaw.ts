@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'library',
   license: 'MIT', // corrected 2026-09-05: GitHub API reports license.spdx_id NOASSERTION, but the repo's actual LICENSE file is MIT (OpenClaw Foundation, 2026)
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/openclaw/openclaw README and docs.openclaw.ai/install: only Node.js (24.16+/26.1+) and OS support are documented; "models and agent harnesses (Claude, Codex, local models) are plugins," so hardware floor depends entirely on the chosen backend — verified 2026-09-13
   stars: 388916, // re-verified 2026-09-05
   addedDate: '2026-09-04',
   status: 'listed',

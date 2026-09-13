@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/n4ze3m/page-assist README: a Chrome/Firefox browser extension and sidebar UI that talks to a separately-installed backend (Ollama or any OpenAI-compatible endpoint) — the extension itself never runs inference, so it needs no GPU of its own — verified 2026-09-13
   stars: 8200,
   addedDate: '2026-09-04',
   status: 'listed',

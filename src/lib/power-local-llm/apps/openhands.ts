@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'MIT',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: 4, vramGb: null, cpuOnly: true }, // per github.com/All-Hands-AI/OpenHands docs/SELF_HOSTING.md: "2 vCPU / 4 GB RAM is plenty for a single user" self-hosting the Agent Canvas control plane on a VM; the host itself needs no GPU since agents call a configured LLM (local or cloud) rather than running one in-process — verified 2026-09-13
   stars: 86000,
   addedDate: '2026-09-04',
   status: 'listed',

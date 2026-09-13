@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'external',
   license: 'Various',
   price: 'free',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per articles/ollama-vision-models-review.ts "VRAM and Hardware Guidance": Ollama publishes no separate VRAM table — the practical minimum ranges from ~4GB VRAM (Moondream) to 24GB+ (LLaVA 34B) purely by which vision model tag is pulled, and any model can fall back to CPU-only at reduced speed — verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
   status: 'listed',

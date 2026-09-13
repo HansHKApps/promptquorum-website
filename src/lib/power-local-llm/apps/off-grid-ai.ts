@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'MIT',
   price: 'freemium',
-  hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per getoffgridai.co: no numeric RAM/VRAM minimum is published; the site cites only speed metrics ("15-30 tok/s on flagship devices," NPU/Core ML acceleration on iOS), so whether it is ever CPU-only is unclear — verified 2026-09-13
   stars: 3080, // GitHub OGAM (mobile) repo star count, verified directly against github.com/off-grid-ai/OGAM
   addedDate: '2026-09-12',
   status: 'listed',

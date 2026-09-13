@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   engine: 'builtin',
   license: 'Proprietary',
   price: 'free',
-  hardware: null, // TODO: requires an RTX GPU with 6GB+ VRAM per NVIDIA's stated minimum — needs manual research to convert to ToolRecordHardware
+  hardware: { ramGb: null, vramGb: 6, cpuOnly: false }, // per NVIDIA's official requirements page (nvidia.com/en-us/software/nvidia-app/g-assist) and articles/nvidia-g-assist-review.ts: requires a GeForce RTX 20/30/40/50-series or RTX PRO GPU with 6GB+ VRAM (post-Aug-2026 update, down from a 12GB launch minimum); no separate system RAM minimum is published — verified 2026-09-13
   stars: null, // closed source, no public repo
   addedDate: '2026-09-05',
   status: 'listed',
