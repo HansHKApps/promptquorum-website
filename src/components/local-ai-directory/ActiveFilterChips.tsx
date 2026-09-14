@@ -11,7 +11,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import type { UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import { getWantLabels, t } from './directory-i18n'
 
-const GROUP_ORDER: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
+const GROUP_ORDER: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'mcp']
 
 export function ActiveFilterChips({
   want,
