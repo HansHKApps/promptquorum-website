@@ -833,5 +833,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "unsloth-review",
     "url": "/power-local-llm/unsloth-review"
+  },
+  "vane": {
+    "cluster": "power-local-llm",
+    "urlSlug": "vane-review",
+    "url": "/power-local-llm/vane-review"
   }
 }

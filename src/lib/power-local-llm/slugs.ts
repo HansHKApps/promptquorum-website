@@ -178,6 +178,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'lemonade-review':                              'lemonade-review',
   // Onyx self-hosted enterprise search/RAG review (formerly Danswer) 2026-09-12
   'onyx-review':                                  'onyx-review',
+  // Vane self-hosted AI answering engine review (formerly Perplexica) 2026-09-14
+  'vane-review':                                  'vane-review',
   // Khoj review 2026-09-02
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Second Me review 2026-09-03

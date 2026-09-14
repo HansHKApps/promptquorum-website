@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review (2026): Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/goose-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpustack-review",
-        "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
-        "url": "/power-local-llm/gpustack-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 256,
+    "totalCount": 257,
     "capped": true
   },
   "llama.cpp": {
@@ -1029,6 +1029,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "maxkb-review",
         "title": "MaxKB Review 2026: Self-Hosted RAG Platform for DeepSeek and Qwen",
         "url": "/power-local-llm/maxkb-review",
@@ -1090,17 +1098,9 @@
         "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-personal-knowledge-base-2026",
-        "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
-        "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Msty": {
@@ -2963,6 +2963,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hyperlink-nexa-review",
         "title": "Hyperlink (Nexa AI) Review 2026: On-Device File Search",
         "url": "/power-local-llm/hyperlink-nexa-review",
@@ -2994,7 +3002,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Dify": {
@@ -6631,6 +6639,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amd-gaia-review",
         "title": "AMD GAIA Review 2026: NPU-Accelerated Local AI Agents",
         "url": "/power-local-llm/amd-gaia-review",
@@ -6638,7 +6654,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Foundry Local": {
@@ -6793,6 +6809,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "onyx-review",
         "title": "Onyx Review 2026: Self-Hosted Enterprise Search and RAG (Formerly Danswer)",
         "url": "/power-local-llm/onyx-review",
@@ -6800,7 +6824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "RunAnywhere": {
@@ -6972,9 +6996,17 @@
         "url": "/power-local-llm/onyx-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "PhoneClaw": {
