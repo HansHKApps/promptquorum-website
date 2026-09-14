@@ -399,6 +399,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // MLX-LM explainer — 2026-09-07
   'mlx-lm-explained',
   'unsloth-review',
+  // LiteLLM review — 2026-09-14
+  'litellm-review',
   // MLC LLM explainer — 2026-09-07
   'mlc-llm-explained',
   // KoboldCpp review — 2026-09-07

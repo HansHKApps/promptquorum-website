@@ -243,6 +243,7 @@ import { article as a_llamafile_explained } from './articles/llamafile-explained
 import { article as a_sglang_explained } from './articles/sglang-explained'
 import { article as a_mlx_lm_explained } from './articles/mlx-lm-explained'
 import { article as a_unsloth_review } from './articles/unsloth-review'
+import { article as a_litellm_review } from './articles/litellm-review'
 import { article as a_superagi_review } from './articles/superagi-review'
 import { article as a_toolneuron_review } from './articles/toolneuron-review'
 import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
@@ -500,6 +501,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'sglang-explained':                              a_sglang_explained,
   'mlx-lm-explained':                              a_mlx_lm_explained,
   'unsloth-review':                                a_unsloth_review,
+  'litellm-review':                                a_litellm_review,
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                               a_windsurf_review,
