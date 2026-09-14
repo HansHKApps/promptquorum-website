@@ -158,3 +158,8 @@ export function buildLocalAiAppsItemListSchema(apps: ToolRecord[], lang: Languag
 // - 'TODO' / null sentinel values on any field    — omitted outright rather
 //   than emitted as a placeholder string; a `"TODO"` value in public JSON-LD
 //   would be a worse signal to crawlers than no property at all.
+// - mcpSupport (boolean)                          — same vocabulary gap as
+//   worksWith: no SoftwareApplication property models "speaks this specific
+//   integration protocol." `keywords` (via `uses`) already covers free-text
+//   discovery; adding a bespoke property here would be an equally unfounded
+//   vocabulary stretch.

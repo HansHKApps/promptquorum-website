@@ -40,4 +40,5 @@ export const app: ToolRecord = {
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'ypipe-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
+  mcpSupport: true, // tagline claims it bundles "MCP servers" into its executable — verified 2026-09-14
 }

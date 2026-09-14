@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ko: '영구 메모리, MCP 도구, 채팅 앱 연동을 갖춘 셀프호스팅 개인 AI 에이전트',
   },
   reviewSlug: 'nanobot-review', // dedicated PromptQuorum review — added 2026-09-14
+  mcpSupport: true, // tagline claims "MCP tools" as a first-class feature — verified 2026-09-14
   lastVerifiedDate: '2026-09-14',
 }

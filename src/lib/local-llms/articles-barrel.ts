@@ -43,6 +43,7 @@ import { article as a_sillytavern_review } from "./articles/sillytavern-review";
 import { article as a_lobechat_bigagi_nextchat_pageassist_chatbox_compared } from "./articles/lobechat-bigagi-nextchat-pageassist-chatbox-compared";
 import { article as a_text_generation_webui_vs_vllm_vs_llamacpp } from "./articles/text-generation-webui-vs-vllm-vs-llamacpp";
 import { article as a_local_llm_openai_compatible_api } from "./articles/local-llm-openai-compatible-api";
+import { article as a_mcp_vs_api_explained } from "./articles/mcp-vs-api-explained";
 import { article as a_lm_studio_advanced_features } from "./articles/lm-studio-advanced-features";
 import { article as a_ollama_command_guide } from "./articles/ollama-command-guide";
 import { article as a_best_local_rag_tools } from "./articles/best-local-rag-tools";
@@ -212,6 +213,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "lobechat-bigagi-nextchat-pageassist-chatbox-compared": a_lobechat_bigagi_nextchat_pageassist_chatbox_compared,
   "text-generation-webui-vs-vllm-vs-llamacpp": a_text_generation_webui_vs_vllm_vs_llamacpp,
   "local-llm-openai-compatible-api": a_local_llm_openai_compatible_api,
+  "mcp-vs-api-explained": a_mcp_vs_api_explained,
   "lm-studio-advanced-features": a_lm_studio_advanced_features,
   "ollama-command-guide": a_ollama_command_guide,
   "best-local-rag-tools": a_best_local_rag_tools,

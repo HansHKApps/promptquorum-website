@@ -52,6 +52,8 @@ const PRICE_BADGE: Record<'free' | 'freemium' | 'paid', string> = {
   paid: 'bg-rose-50 text-rose-700 border-rose-200',
 }
 
+const MCP_BADGE = 'bg-violet-50 text-violet-700 border-violet-200'
+
 // Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
 // names — kept identical across locales rather than "translated".
 const PLATFORM_LABEL: Record<string, string> = {
@@ -191,7 +193,7 @@ export function ToolCard({
           </p>
         )}
 
-        {(engine || price) && (
+        {(engine || price || app.mcpSupport) && (
           <div className="flex flex-wrap gap-1.5 mb-2.5">
             {engine && (
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${ENGINE_BADGE[engine]}`}>
@@ -203,6 +205,12 @@ export function ToolCard({
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${PRICE_BADGE[price]}`}>
                 <TagIcon className="h-3 w-3" />
                 {PRICE_LABEL[price]}
+              </span>
+            )}
+            {app.mcpSupport && (
+              <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${MCP_BADGE}`}>
+                <PlugIcon className="h-3 w-3" />
+                {t('mcpSupported', lang)}
               </span>
             )}
           </div>

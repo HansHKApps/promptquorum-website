@@ -59,6 +59,7 @@ export interface FilterState {
   category: Set<string>
   interface: Set<string>
   price: Set<string>
+  mcp: Set<string>
 }
 
 export function emptyFilterState(): FilterState {
@@ -70,6 +71,7 @@ export function emptyFilterState(): FilterState {
     category: new Set(),
     interface: new Set(),
     price: new Set(),
+    mcp: new Set(),
   }
 }
 

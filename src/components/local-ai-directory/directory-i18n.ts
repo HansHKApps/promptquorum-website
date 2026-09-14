@@ -213,6 +213,7 @@ const DIR_UI = {
   groupCategory: { en: 'Category', de: 'Kategorie', fr: 'Catégorie', ja: 'カテゴリー', zh: '类别', es: 'Categoría', pt: 'Categoria', ar: 'الفئة', ko: '카테고리' },
   groupInterface: { en: 'Interface', de: 'Schnittstelle', fr: 'Interface', ja: 'インターフェース', zh: '界面', es: 'Interfaz', pt: 'Interface', ar: 'الواجهة', ko: '인터페이스' },
   groupPrice: { en: 'Price', de: 'Preis', fr: 'Prix', ja: '価格', zh: '价格', es: 'Precio', pt: 'Preço', ar: 'السعر', ko: '가격' },
+  groupMcp: { en: 'MCP support', de: 'MCP-Unterstützung', fr: 'Prise en charge MCP', ja: 'MCP対応', zh: 'MCP支持', es: 'Compatibilidad con MCP', pt: 'Compatibilidade com MCP', ar: 'دعم MCP', ko: 'MCP 지원' },
   notCatalogued: {
     en: 'Not yet catalogued for these tools', de: 'Für diese Tools noch nicht erfasst',
     fr: 'Pas encore répertorié pour ces outils', ja: 'これらのツールではまだ未分類',
@@ -237,6 +238,7 @@ const DIR_UI = {
   priceFree: { en: 'Free', de: 'Kostenlos', fr: 'Gratuit', ja: '無料', zh: '免费', es: 'Gratis', pt: 'Grátis', ar: 'مجاني', ko: '무료' },
   priceFreemium: { en: 'Freemium', de: 'Freemium', fr: 'Freemium', ja: 'フリーミアム', zh: '免费增值', es: 'Freemium', pt: 'Freemium', ar: 'مجاني جزئيًا', ko: '프리미엄(일부 유료)' },
   pricePaid: { en: 'Paid', de: 'Kostenpflichtig', fr: 'Payant', ja: '有料', zh: '付费', es: 'De pago', pt: 'Pago', ar: 'مدفوع', ko: '유료' },
+  mcpSupported: { en: 'Supports MCP', de: 'Unterstützt MCP', fr: 'Prend en charge MCP', ja: 'MCP対応', zh: '支持MCP', es: 'Compatible con MCP', pt: 'Compatível com MCP', ar: 'يدعم MCP', ko: 'MCP 지원' },
 
   // --- StatsBar ---
   statsLocalityLocal: { en: 'Fully local', de: 'Vollständig lokal', fr: 'Entièrement local', ja: '完全ローカル', zh: '完全本地', es: 'Totalmente local', pt: 'Totalmente local', ar: 'محلي بالكامل', ko: '완전 로컬' },
@@ -312,6 +314,7 @@ const DIR_UI = {
   },
   detailPlatforms: { en: 'Platforms', de: 'Plattformen', fr: 'Plateformes', ja: '対応プラットフォーム', zh: '支持平台', es: 'Plataformas', pt: 'Plataformas', ar: 'المنصات', ko: '플랫폼' },
   detailWorksWith: { en: 'Works with', de: 'Kompatibel mit', fr: 'Compatible avec', ja: '対応先', zh: '兼容', es: 'Compatible con', pt: 'Compatível com', ar: 'يعمل مع', ko: '호환 대상' },
+  detailMcp: { en: 'MCP support', de: 'MCP-Unterstützung', fr: 'Prise en charge MCP', ja: 'MCP対応', zh: 'MCP支持', es: 'Compatibilidad con MCP', pt: 'Compatibilidade com MCP', ar: 'دعم MCP', ko: 'MCP 지원' },
   detailHardware: { en: 'Hardware', de: 'Hardware', fr: 'Matériel', ja: 'ハードウェア', zh: '硬件', es: 'Hardware', pt: 'Hardware', ar: 'العتاد', ko: '하드웨어' },
   detailAdded: { en: 'Added', de: 'Hinzugefügt', fr: 'Ajouté', ja: '追加日', zh: '添加日期', es: 'Añadido', pt: 'Adicionado', ar: 'تاريخ الإضافة', ko: '추가일' },
   detailLastVerified: { en: 'Last verified', de: 'Zuletzt geprüft', fr: 'Dernière vérification', ja: '最終確認日', zh: '最后验证日期', es: 'Última verificación', pt: 'Última verificação', ar: 'آخر تحقق', ko: '마지막 확인일' },

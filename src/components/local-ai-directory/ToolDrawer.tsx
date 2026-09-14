@@ -164,6 +164,7 @@ export function ToolDrawer({
       [t('detailLicense', lang), app.license === 'TODO' ? null : app.license],
       [t('detailPlatforms', lang), labelList('platforms', app.platforms, lang)],
       [t('detailWorksWith', lang), joinOrUnknown(app.worksWith)],
+      [t('detailMcp', lang), app.mcpSupport ? t('mcpSupported', lang) : null],
       [t('detailAdded', lang), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
       [t('detailLastVerified', lang), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
@@ -301,6 +302,7 @@ export function ToolDrawer({
                   />
                   <DetailRow label={t('detailPlatforms', lang)} value={labelList('platforms', app.platforms, lang)} />
                   <DetailRow label={t('detailWorksWith', lang)} value={joinOrUnknown(app.worksWith)} />
+                  {app.mcpSupport && <DetailRow label={t('detailMcp', lang)} value={t('mcpSupported', lang)} />}
                   <DetailRow
                     label={t('detailHardware', lang)}
                     value={

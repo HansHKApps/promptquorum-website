@@ -139,5 +139,14 @@ export interface ToolRecord {
   reviewSlug?: string
   pqReview?: ToolRecordReview
   changelog?: ToolRecordChangelogEntry[]
+  // True when the tool has a verified MCP (Model Context Protocol) server or
+  // client integration — a standardized, discoverable tool-connection
+  // protocol, distinct from a plain API/function-calling integration already
+  // captured loosely in `worksWith`. Leave unset for every tool that has not
+  // been specifically checked, same convention as `hardware`/`platforms`
+  // above: unset means "not yet researched," never "verified absent." No
+  // `false` state is modeled — there is no value in asserting a negative for
+  // 173 of 175 tools nobody has checked.
+  mcpSupport?: boolean
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified
 }

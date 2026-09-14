@@ -31,6 +31,7 @@ function getGroupLabels(lang: Language): Record<keyof FilterState, string> {
     category: t('groupCategory', lang),
     interface: t('groupInterface', lang),
     price: t('groupPrice', lang),
+    mcp: t('groupMcp', lang),
   }
 }
 
@@ -42,6 +43,7 @@ export function getValueLabels(lang: Language): Partial<Record<keyof FilterState
     platforms: PLATFORM_VALUE_LABEL,
     category: Object.fromEntries(Object.entries(CATEGORY_SUB_LABEL).map(([k, v]) => [k, v[lang]])),
     interface: Object.fromEntries(Object.entries(INTERFACE_LABEL).map(([k, v]) => [k, v[lang]])),
+    mcp: { mcp: t('mcpSupported', lang) },
   }
 }
 
@@ -49,7 +51,7 @@ export function filterOptionLabel(group: keyof FilterState, value: string, lang:
   return getValueLabels(lang)[group]?.[value] ?? value
 }
 
-const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price']
+const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'mcp']
 
 function FilterGroup({
   group,

@@ -45,6 +45,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'lobechat-bigagi-nextchat-pageassist-chatbox-compared': 'lobechat-bigagi-nextchat-pageassist-chatbox-compared',
   'text-generation-webui-vs-vllm-vs-llamacpp': 'text-generation-webui-vs-vllm-vs-llamacpp',
   'local-llm-openai-compatible-api':      'local-llm-openai-compatible-api',
+  'mcp-vs-api-explained':                 'mcp-vs-api-explained',
   'lm-studio-advanced-features':          'lm-studio-advanced-features',
   'ollama-command-guide':                 'ollama-command-guide',
   'best-local-rag-tools':                 'best-local-rag-tools',

@@ -1139,6 +1139,24 @@
         }
       ]
     },
+    "mcp-vs-api-explained": {
+      "dateModified": "2026-09-14",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-14",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "lm-studio-advanced-features": {
       "dateModified": "2026-08-28",
       "lastFactChecked": null,
