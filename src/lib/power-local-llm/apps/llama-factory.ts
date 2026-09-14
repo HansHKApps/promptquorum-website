@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ar: 'ضبط أكثر من 100 نموذج لغوي مفتوح باستخدام LoRA أو QLoRA أو التدريب الكامل، عبر واجهة ويب أو CLI',
     ko: '웹 UI 또는 CLI로 100개 이상의 오픈 LLM을 LoRA, QLoRA, 전체 학습으로 파인튜닝',
   },
+  reviewSlug: 'llama-factory-review',
   lastVerifiedDate: '2026-09-14',
 }
