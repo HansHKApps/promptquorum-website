@@ -10145,6 +10145,42 @@
       ],
       "images": []
     },
+    "llama-factory-review": {
+      "dateModified": "2026-09-14",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-14",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "multica-review": {
+      "dateModified": "2026-09-14",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-14",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "windsurf-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,

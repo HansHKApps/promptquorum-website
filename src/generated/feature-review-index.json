@@ -834,10 +834,20 @@
     "urlSlug": "unsloth-review",
     "url": "/power-local-llm/unsloth-review"
   },
+  "llama-factory": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llama-factory-review",
+    "url": "/power-local-llm/llama-factory-review"
+  },
   "litellm": {
     "cluster": "power-local-llm",
     "urlSlug": "litellm-review",
     "url": "/power-local-llm/litellm-review"
+  },
+  "multica": {
+    "cluster": "power-local-llm",
+    "urlSlug": "multica-review",
+    "url": "/power-local-llm/multica-review"
   },
   "nanobot": {
     "cluster": "power-local-llm",
@@ -848,10 +858,5 @@
     "cluster": "power-local-llm",
     "urlSlug": "vane-review",
     "url": "/power-local-llm/vane-review"
-  },
-  "llama-factory": {
-    "cluster": "power-local-llm",
-    "urlSlug": "llama-factory-review",
-    "url": "/power-local-llm/llama-factory-review"
   }
 }
