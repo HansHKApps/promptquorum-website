@@ -195,6 +195,7 @@ https://www.promptquorum.com/local-llms/long-context-local-llms
 https://www.promptquorum.com/local-llms/m5-pro-max-llm-benchmarks-2026
 https://www.promptquorum.com/local-llms/mac-mini-m5-local-ai-server
 https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm
+https://www.promptquorum.com/local-llms/mcp-vs-api-explained
 https://www.promptquorum.com/local-llms/mlx-vs-ollama-vs-llama-cpp-mac
 https://www.promptquorum.com/local-llms/mobile-local-llms
 https://www.promptquorum.com/local-llms/mram-in-memory-computing-local-ai-2026
