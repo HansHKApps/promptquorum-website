@@ -7332,5 +7332,97 @@
     ],
     "totalCount": 9,
     "capped": false
+  },
+  "LLaMA-Factory": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lm-studio-advanced-features",
+        "title": "LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning",
+        "url": "/local-llms/lm-studio-advanced-features",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "litellm": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "shell-gpt-review",
+        "title": "shell-gpt (sgpt) Review: AI Shell Commands, One Keystroke Away",
+        "url": "/power-local-llm/shell-gpt-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-llm-api-gateway-2026",
+        "title": "LiteLLM vs OpenRouter vs Portkey: Best LLM Gateway 2026",
+        "url": "/local-llms/best-llm-api-gateway-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "continue-dev-vs-cline-vs-aider-local",
+        "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
+        "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "onyx-review",
+        "title": "Onyx Review 2026: Self-Hosted Enterprise Search and RAG (Formerly Danswer)",
+        "url": "/power-local-llm/onyx-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "jan-review",
+        "title": "Jan Review 2026: The Open-Source, Offline ChatGPT Alternative",
+        "url": "/power-local-llm/jan-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "open-webui-review",
+        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
+        "url": "/local-llms/open-webui-review",
+        "dateModified": "2026-09-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "qwen-local-deployment-complete-guide-2026",
+        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
+        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 9,
+    "capped": false
   }
 }
