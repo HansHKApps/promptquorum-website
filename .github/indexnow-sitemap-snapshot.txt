@@ -375,7 +375,9 @@ https://www.promptquorum.com/power-local-llm/leon-ai-review
 https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/liquid-apollo-review
+https://www.promptquorum.com/power-local-llm/litellm-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
+https://www.promptquorum.com/power-local-llm/llama-factory-review
 https://www.promptquorum.com/power-local-llm/llamafile-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/llava-review
@@ -423,7 +425,9 @@ https://www.promptquorum.com/power-local-llm/mlx-lm-explained
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-review
+https://www.promptquorum.com/power-local-llm/multica-review
 https://www.promptquorum.com/power-local-llm/n8n-review
+https://www.promptquorum.com/power-local-llm/nanobot-review
 https://www.promptquorum.com/power-local-llm/noema-review
 https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
@@ -487,6 +491,7 @@ https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-revi
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
 https://www.promptquorum.com/power-local-llm/unsloth-review
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
+https://www.promptquorum.com/power-local-llm/vane-review
 https://www.promptquorum.com/power-local-llm/vla-models-robots-local-inference
 https://www.promptquorum.com/power-local-llm/vllm-explained
 https://www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge
