@@ -14,7 +14,7 @@
 
 ## Supported AI Models
 
-**Cloud providers (25+)**: OpenAI (GPT-4o), Anthropic Claude (4.6 Sonnet), Google Gemini (2.5 Pro), xAI Grok, DeepSeek, Mistral, Cohere, Meta Llama (via Together AI, Groq, OpenRouter), Perplexity, and more.
+**Cloud providers (25+)**: OpenAI (GPT-5.6), Anthropic Claude (Sonnet 5), Google Gemini (3.1 Pro), xAI Grok, DeepSeek, Mistral, Cohere, Meta Llama (via Together AI, Groq, OpenRouter), Perplexity, and more.
 
 **Local / self-hosted**: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga, and any OpenAI-compatible endpoint.
 
@@ -97,4 +97,4 @@ When referencing or displaying PromptQuorum images, cite: **Source: PromptQuorum
 
 ---
 
-Last updated: 2026-07-26
+Last updated: 2026-09-14

@@ -17,6 +17,12 @@
       "action": "refresh",
       "summary": "Full lab sweep (13 official sources + AWS Bedrock corroboration): added Claude Opus 5, Gemini 3.7 Flash/3.5 Flash-Lite/3.1 Deep Think, Grok 4.6, GLM-5.3, Kimi K3, Qwen3.8-Max/27B/Flash-Next, Ministral 3. Superseded Opus 4.8, Gemini 3.5 Flash, Gemini 3.1 Flash-Lite, Grok 4.5, GLM-5.2, Kimi K2.6, Qwen3.7-Max. Site diff surfaced 47 new (non-baselined) violations across 13 EN files (Claude Opus 4.8, Kimi K2.6, GLM-5.2 mentions) -- reported to owner as a brief, no page edits made yet pending direction.",
       "branch": "main"
+    },
+    {
+      "date": "2026-09-14",
+      "action": "refresh",
+      "summary": "Full 13-source lab sweep (2026-09-14). Confirmed Gemma 4 via Google's own ai.google.dev page and Phi-4 via a successful azure.microsoft.com fetch, resolving two prior-cycle re-check flags. Added Claude Fable 5.1 (supersedes Fable 5), GPT-6 Astra (new tier above GPT-5.6, relationship unconfirmed -- help.openai.com 403), Gemini 3.8 Flash (supersedes 3.7 Flash), GLM-5.3-Flash. Resolved Llama 3.3 70B to current (no Meta supersession language; Llama 4 is a different MoE class) and added exact-name Mistral Small 3.1 as current (confirmed still live on Ollama's own library, no Small 4 there yet). Re-verified the carried-over 2026-08-27 47-violation brief (13 EN files, Opus 4.8/Kimi K2.6/GLM-5.2): all 13 already correct -- either refreshed in an intervening 2026-08-28 pass (historical/comparison baseline mentions) or covered by the registry's documented Kimi K2.6 local-LLM/Ollama exception. This cycle's own site diff instead surfaced two new sets: 5 files newly stale from this cycle's Fable-5.1/Gemini-3.8-Flash supersessions (fixed all locales, pricing re-verified before renaming, no dateModified bump), and 5 pre-existing never-baselined files (on-device-ai-review, google-ai-edge-gallery-review, private-llm-review, off-grid-ai-review, ollama-vision-models-review) resolved via live third-party verification. validate-model-names STALE_MODEL: 0 new violations (down from 63). validate-registry-freshness: 0 errors (also fixed public/llms.txt stale model examples + Last-updated line). Full build passed via with-build-lock.sh. 1439 pre-existing UNKNOWN_MODEL violations (TTS/image/video tool names, never in scope for this LLM registry) left as-is for a future cycle.",
+      "branch": "fix/model-refresh-2026-09"
     }
   ]
 }

@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX chat app iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7th generation)+', 'Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI is a free app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro that runs AI models entirely on the device, giving you a choice of more than 200 downloadable open-weight models rather than a single bundled one.** It uses two local inference engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) for GGUF-format models and MLX for Apple Silicon — and supports model families including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral. Beyond chat, it bundles voice transcription with speaker diarization, document and RSS import into "knowledge libraries," multi-agent workflows, on-device text-to-speech, and Siri Shortcuts automation. The app is free to download from the [App Store](${APP_STORE_URL}), with in-app purchases ranging from $3.99 to $99.99 and optional, bring-your-own-key connections to external cloud AI providers. It requires an iPhone 14 or later, an iPad mini (7th generation) or later, an Apple Silicon Mac, or an Apple Vision Pro. It is a different app from the paid, single-fixed-model "[AI on Device](/power-local-llm/ai-on-device-review)" by a different developer — see the naming clarification in this review before choosing between them.`,
     quickAnswerTop: {
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX Chat-App iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7. Generation)+', 'Apple-Silicon-Mac', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI ist eine kostenlose App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro, die KI-Modelle vollständig auf dem Gerät ausführt und Ihnen die Wahl zwischen mehr als 200 herunterladbaren Open-Weight-Modellen lässt, statt eines einzigen fest eingebauten Modells.** Die App nutzt zwei lokale Inferenz-Engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) für Modelle im GGUF-Format und MLX für Apple Silicon — und unterstützt Modellfamilien wie Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 und Mistral. Über den Chat hinaus bietet sie Sprachtranskription mit Sprechererkennung, Import von Dokumenten und RSS-Feeds in „Wissensbibliotheken", Multi-Agenten-Workflows, On-Device-Text-zu-Sprache und Automatisierung über Siri-Kurzbefehle. Die App ist im [App Store](${APP_STORE_URL}) kostenlos herunterladbar, mit In-App-Käufen von 3,99 $ bis 99,99 $ und optionalen Verbindungen zu externen Cloud-KI-Anbietern über einen eigenen API-Schlüssel. Vorausgesetzt werden ein iPhone 14 oder neuer, ein iPad mini (7. Generation) oder neuer, ein Apple-Silicon-Mac oder eine Apple Vision Pro. Es handelt sich um eine andere App als das kostenpflichtige, auf ein festes Modell beschränkte „[AI on Device](/de/power-local-llm/ai-on-device-review)" eines anderen Entwicklers — siehe die Klarstellung zur Namensverwechslung in dieser Review, bevor Sie sich entscheiden.`,
     quickAnswerTop: {
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7e génération)+', 'Mac Apple Silicon', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI est une application gratuite pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro qui exécute des modèles d'IA entièrement sur l'appareil, en vous laissant choisir parmi plus de 200 modèles open-weight téléchargeables plutôt qu'un seul modèle intégré.** Elle utilise deux moteurs d'inférence locale — [llama.cpp](https://github.com/ggml-org/llama.cpp) pour les modèles au format GGUF et MLX pour Apple Silicon — et prend en charge des familles de modèles telles que Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 et Mistral. Au-delà du chat, elle intègre la transcription vocale avec identification des locuteurs, l'import de documents et de flux RSS dans des « bibliothèques de connaissances », des workflows multi-agents, la synthèse vocale sur l'appareil et l'automatisation via les raccourcis Siri. L'application est gratuite sur l'[App Store](${APP_STORE_URL}), avec des achats intégrés de 3,99 $ à 99,99 $ et des connexions optionnelles à des fournisseurs d'IA cloud externes via votre propre clé API. Elle nécessite un iPhone 14 ou ultérieur, un iPad mini (7e génération) ou ultérieur, un Mac Apple Silicon ou un Apple Vision Pro. Il s'agit d'une application différente de « [AI on Device](/fr/power-local-llm/ai-on-device-review) », payante et limitée à un modèle unique, d'un autre développeur — consultez la clarification sur les noms dans cet avis avant de choisir entre les deux.`,
     quickAnswerTop: {
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7.ª generación)+', 'Mac con Apple Silicon', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI es una app gratuita para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro que ejecuta modelos de IA totalmente en el dispositivo, dándote a elegir entre más de 200 modelos de pesos abiertos descargables en lugar de uno solo integrado.** Usa dos motores de inferencia local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos en formato GGUF y MLX para Apple Silicon — y admite familias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 y Mistral. Más allá del chat, incluye transcripción de voz con identificación de hablantes, importación de documentos y feeds RSS a "bibliotecas de conocimiento", flujos de trabajo multiagente, texto a voz en el dispositivo y automatización con Atajos de Siri. La app es gratuita en la [App Store](${APP_STORE_URL}), con compras dentro de la app de entre $3.99 y $99.99 y conexiones opcionales, con tu propia clave, a proveedores de IA en la nube externos. Requiere un iPhone 14 o posterior, un iPad mini (7.ª generación) o posterior, un Mac con Apple Silicon o un Apple Vision Pro. Es una app distinta de "[AI on Device](/es/power-local-llm/ai-on-device-review)", de pago y con un único modelo fijo, de otro desarrollador — revisa la aclaración de nombres en esta reseña antes de elegir entre ambas.`,
     quickAnswerTop: {
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX チャットアプリ iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14以降', 'iPad mini(第7世代)以降', 'Apple SiliconMac', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AIは、iPhone・iPad・Apple SiliconMac・Apple Vision Pro向けの無料アプリで、固定の1モデルではなく200以上のダウンロード可能なオープンウェイトモデルから選んで、AIモデルを完全に端末上で実行できます。**GGUF形式のモデル用[llama.cpp](https://github.com/ggml-org/llama.cpp)とApple Silicon向けMLXという2つのローカル推論エンジンを使い、Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4、Mistralといったモデルファミリーに対応しています。チャット以外にも、話者識別付きの音声文字起こし、ドキュメントやRSSフィードを「ナレッジライブラリ」に取り込む機能、マルチエージェントのワークフロー、オンデバイスの音声合成、Siriショートカットによる自動化を備えています。アプリは[App Store](${APP_STORE_URL})で無料ダウンロードでき、3.99ドルから99.99ドルのアプリ内課金と、自分のAPIキーを使う任意の外部クラウドAIプロバイダー接続があります。動作にはiPhone 14以降、iPad mini(第7世代)以降、Apple SiliconMac、またはApple Vision Proが必要です。別の開発者による、固定1モデルの有料アプリ「[AI on Device](/ja/power-local-llm/ai-on-device-review)」とは異なるアプリなので、選ぶ前に本レビューの名称の違いに関する説明を確認してください。`,
     quickAnswerTop: {
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX 聊天应用 iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14及以上', 'iPad mini(第7代)及以上', 'Apple芯片Mac', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI是一款适用于iPhone、iPad、Apple芯片Mac和Apple Vision Pro的免费应用,完全在设备端运行AI模型,让你从200多种可下载的开放权重模型中选择,而不是使用单一内置模型。**它使用两个本地推理引擎——[llama.cpp](https://github.com/ggml-org/llama.cpp)用于GGUF格式模型,MLX用于Apple芯片——支持Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4和Mistral等模型系列。除了聊天,它还集成了带说话人识别的语音转录、将文档和RSS源导入"知识库"、多智能体工作流、设备端文本转语音,以及通过Siri快捷指令实现自动化。该应用在[App Store](${APP_STORE_URL})免费下载,提供3.99美元到99.99美元的应用内购买,并可使用你自己的API密钥选择性连接外部云端AI提供商。使用要求为iPhone 14或更新机型、iPad mini(第7代)或更新机型、Apple芯片Mac,或Apple Vision Pro。它与另一位开发者推出的付费单一固定模型应用"[AI on Device](/zh/power-local-llm/ai-on-device-review)"不是同一款应用——在两者之间做选择前,请先查看本评测中关于名称混淆的说明。`,
     quickAnswerTop: {
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7ª geração)+', 'Mac com Apple Silicon', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI é um app gratuito para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro que executa modelos de IA totalmente no dispositivo, permitindo escolher entre mais de 200 modelos de pesos abertos para baixar, em vez de um único modelo embutido.** Ele usa dois mecanismos de inferência local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos em formato GGUF e MLX para Apple Silicon — e oferece suporte a famílias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 e Mistral. Além do chat, ele inclui transcrição de voz com identificação de interlocutores, importação de documentos e feeds RSS para "bibliotecas de conhecimento", fluxos de trabalho multiagente, texto para voz no dispositivo e automação via Atalhos da Siri. O app é gratuito na [App Store](${APP_STORE_URL}), com compras dentro do app de $3,99 a $99,99 e conexões opcionais, com sua própria chave, a provedores de IA em nuvem externos. Ele exige um iPhone 14 ou posterior, um iPad mini (7ª geração) ou posterior, um Mac com Apple Silicon ou um Apple Vision Pro. É um app diferente do "[AI on Device](/pt/power-local-llm/ai-on-device-review)", pago e com um único modelo fixo, de outro desenvolvedor — confira o esclarecimento sobre nomes neste review antes de escolher entre os dois.`,
     quickAnswerTop: {
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق دردشة GGUF MLX iPhone',
       'On Device AI مقابل AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14 فما فوق', 'iPad mini (الجيل السابع) فما فوق', 'Mac بمعالج Apple Silicon', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI هو تطبيق مجاني لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro، يشغّل نماذج الذكاء الاصطناعي بالكامل على الجهاز، ويتيح لك الاختيار من بين أكثر من 200 نموذج مفتوح الأوزان قابل للتنزيل بدلاً من نموذج واحد مدمج.** يستخدم التطبيق محركَي استدلال محليَّين — [llama.cpp](https://github.com/ggml-org/llama.cpp) لنماذج بصيغة GGUF وMLX لمعالجات Apple Silicon — ويدعم عائلات نماذج مثل Llama 3 وGemma 3 وQwen 3 وDeepSeek وPhi-4 وMistral. إضافة إلى الدردشة، يضم التطبيق تفريغ صوتي نصي مع تمييز المتحدثين، واستيراد المستندات وخلاصات RSS إلى "مكتبات معرفة"، وسير عمل متعدد الوكلاء، وتحويل نص إلى كلام على الجهاز، وأتمتة عبر اختصارات Siri. التطبيق مجاني على [App Store](${APP_STORE_URL})، مع مشتريات داخل التطبيق تتراوح بين 3.99 و99.99 دولارًا واتصالات اختيارية، بمفتاح API خاص بك، بمزودي ذكاء اصطناعي سحابي خارجيين. يتطلب جهاز iPhone 14 أو أحدث، أو iPad mini (الجيل السابع) أو أحدث، أو Mac بمعالج Apple Silicon، أو Apple Vision Pro. هذا تطبيق مختلف عن "[AI on Device](/ar/power-local-llm/ai-on-device-review)" المدفوع والمحدود بنموذج ثابت واحد من مطور آخر — راجع توضيح الأسماء في هذه المراجعة قبل الاختيار بينهما.`,
     quickAnswerTop: {
@@ -2210,7 +2210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX 채팅 앱 iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 3', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14 이상', 'iPad mini(7세대) 이상', 'Apple 실리콘 Mac', 'Apple Vision Pro'],
     leadAnswerBlock: `**On Device AI는 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 무료 앱으로, AI 모델을 기기에서 완전히 실행하며 고정된 단일 모델 대신 200개 이상의 다운로드 가능한 오픈 웨이트 모델 중에서 선택할 수 있게 해줍니다.** GGUF 형식 모델용 [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Apple 실리콘용 MLX라는 두 가지 로컬 추론 엔진을 사용하며, Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral 등의 모델 계열을 지원합니다. 채팅 외에도 화자 구분이 가능한 음성 전사, 문서와 RSS 피드를 "지식 라이브러리"로 가져오는 기능, 멀티 에이전트 워크플로, 기기 내 텍스트 음성 변환, Siri 단축어를 통한 자동화 기능을 갖추고 있습니다. 이 앱은 [App Store](${APP_STORE_URL})에서 무료로 제공되며, 3.99달러에서 99.99달러 사이의 인앱 구매와 자신의 API 키를 사용하는 외부 클라우드 AI 제공업체에 대한 선택적 연결이 있습니다. iPhone 14 이상, iPad mini(7세대) 이상, Apple 실리콘 Mac, 또는 Apple Vision Pro가 필요합니다. 이는 다른 개발자가 만든 유료 고정 단일 모델 앱인 "[AI on Device](/ko/power-local-llm/ai-on-device-review)"와는 다른 앱이므로, 둘 중 하나를 선택하기 전에 본 리뷰의 이름 구분 설명을 확인하시기 바랍니다.`,
     quickAnswerTop: {

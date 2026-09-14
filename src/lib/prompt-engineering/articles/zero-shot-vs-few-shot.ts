@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       audience: 'Developers, analysts, and prompt engineers choosing between instruction-only and example-driven prompts',
       next_refresh_due: '2027-02-28',
       last_full_refresh: '2026-08-31',
-      current_models_mentioned: ['Claude Opus 5', 'Claude Sonnet 5', 'Claude Haiku 4.5', 'GPT-5.6', 'Gemini 3.1 Pro', 'Gemini 3.7 Flash', 'Llama 4 Scout', 'Qwen3 8B', 'Gemma 4'],
+      current_models_mentioned: ['Claude Opus 5', 'Claude Sonnet 5', 'Claude Haiku 4.5', 'GPT-5.6', 'Gemini 3.1 Pro', 'Gemini 3.8 Flash', 'Llama 4 Scout', 'Qwen3 8B', 'Gemma 4'],
       aboutTopics: ['Few-Shot Learning', 'Zero-Shot Learning', 'Prompt Engineering', 'In-Context Learning'],
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'Model class': 'Frontier reasoning (Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', 'Zero-shot quality': 'High on general tasks', 'Does few-shot still help?': 'Mainly for output format, house style, and proprietary label sets' },
-            { 'Model class': 'Frontier non-reasoning (Claude Sonnet 5, Gemini 3.7 Flash)', 'Zero-shot quality': 'Good', 'Does few-shot still help?': 'Yes — for narrow domains and strict schemas' },
+            { 'Model class': 'Frontier non-reasoning (Claude Sonnet 5, Gemini 3.8 Flash)', 'Zero-shot quality': 'Good', 'Does few-shot still help?': 'Yes — for narrow domains and strict schemas' },
             { 'Model class': 'Small hosted (Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', 'Zero-shot quality': 'Mixed on specialized tasks', 'Does few-shot still help?': 'Yes — usually the largest single accuracy gain' },
             { 'Model class': 'Local open-weight 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Zero-shot quality': 'Variable; format drift is common', 'Does few-shot still help?': 'Yes — often the difference between usable and unusable output' },
           ],
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'Modellklasse': 'Frontier-Reasoning (Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', 'Zero-Shot-Qualität': 'Hoch bei allgemeinen Aufgaben', 'Bringt Few-Shot noch etwas?': 'Vor allem für Ausgabeformat, Hausstil und proprietäre Label-Sets' },
-            { 'Modellklasse': 'Frontier ohne Reasoning (Claude Sonnet 5, Gemini 3.7 Flash)', 'Zero-Shot-Qualität': 'Gut', 'Bringt Few-Shot noch etwas?': 'Ja — bei engen Domänen und strengen Schemata' },
+            { 'Modellklasse': 'Frontier ohne Reasoning (Claude Sonnet 5, Gemini 3.8 Flash)', 'Zero-Shot-Qualität': 'Gut', 'Bringt Few-Shot noch etwas?': 'Ja — bei engen Domänen und strengen Schemata' },
             { 'Modellklasse': 'Kleine gehostete Modelle (Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', 'Zero-Shot-Qualität': 'Gemischt bei Spezialaufgaben', 'Bringt Few-Shot noch etwas?': 'Ja — meist der größte einzelne Genauigkeitsgewinn' },
             { 'Modellklasse': 'Lokale Open-Weight-Modelle 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Zero-Shot-Qualität': 'Schwankend; Formatabweichungen sind häufig', 'Bringt Few-Shot noch etwas?': 'Ja — oft der Unterschied zwischen brauchbarer und unbrauchbarer Ausgabe' },
           ],
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'Clase de modelo': 'Razonamiento de frontera (Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', 'Calidad zero-shot': 'Alta en tareas generales', '¿Sigue ayudando few-shot?': 'Sobre todo para formato de salida, estilo de la casa y etiquetas propias' },
-            { 'Clase de modelo': 'Frontera sin razonamiento (Claude Sonnet 5, Gemini 3.7 Flash)', 'Calidad zero-shot': 'Buena', '¿Sigue ayudando few-shot?': 'Sí — en dominios estrechos y esquemas estrictos' },
+            { 'Clase de modelo': 'Frontera sin razonamiento (Claude Sonnet 5, Gemini 3.8 Flash)', 'Calidad zero-shot': 'Buena', '¿Sigue ayudando few-shot?': 'Sí — en dominios estrechos y esquemas estrictos' },
             { 'Clase de modelo': 'Modelos pequeños alojados (Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', 'Calidad zero-shot': 'Irregular en tareas especializadas', '¿Sigue ayudando few-shot?': 'Sí — normalmente la mayor ganancia individual de precisión' },
             { 'Clase de modelo': 'Open-weight local de 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Calidad zero-shot': 'Variable; la deriva de formato es habitual', '¿Sigue ayudando few-shot?': 'Sí — a menudo marca la diferencia entre salida usable e inservible' },
           ],
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'Classe de modèle': 'Raisonnement de pointe (Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', 'Qualité en zero-shot': 'Élevée sur les tâches générales', 'Le few-shot aide-t-il encore ?': 'Surtout pour le format de sortie, le style maison et les étiquettes propriétaires' },
-            { 'Classe de modèle': 'Pointe sans raisonnement (Claude Sonnet 5, Gemini 3.7 Flash)', 'Qualité en zero-shot': 'Bonne', 'Le few-shot aide-t-il encore ?': 'Oui — pour les domaines étroits et les schémas stricts' },
+            { 'Classe de modèle': 'Pointe sans raisonnement (Claude Sonnet 5, Gemini 3.8 Flash)', 'Qualité en zero-shot': 'Bonne', 'Le few-shot aide-t-il encore ?': 'Oui — pour les domaines étroits et les schémas stricts' },
             { 'Classe de modèle': 'Petits modèles hébergés (Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', 'Qualité en zero-shot': 'Inégale sur les tâches spécialisées', 'Le few-shot aide-t-il encore ?': 'Oui — généralement le plus grand gain de précision à lui seul' },
             { 'Classe de modèle': 'Open-weight local 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Qualité en zero-shot': 'Variable ; les dérives de format sont fréquentes', 'Le few-shot aide-t-il encore ?': 'Oui — souvent la différence entre une sortie exploitable et inutilisable' },
           ],
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'モデル区分': 'フロンティア推論（Claude Opus 5、GPT-5.6、Gemini 3.1 Pro）', 'ゼロショットの品質': '一般タスクで高い', 'フューショットは今も有効か': '主に出力形式・社内トーン・独自ラベル体系で有効' },
-            { 'モデル区分': 'フロンティア非推論（Claude Sonnet 5、Gemini 3.7 Flash）', 'ゼロショットの品質': '良好', 'フューショットは今も有効か': '有効。狭い領域と厳密なスキーマで効く' },
+            { 'モデル区分': 'フロンティア非推論（Claude Sonnet 5、Gemini 3.8 Flash）', 'ゼロショットの品質': '良好', 'フューショットは今も有効か': '有効。狭い領域と厳密なスキーマで効く' },
             { 'モデル区分': '小型ホスト型（Claude Haiku 4.5、Gemini 3.5 Flash-Lite）', 'ゼロショットの品質': '専門タスクでは不安定', 'フューショットは今も有効か': '有効。単独では最大の精度改善になることが多い' },
             { 'モデル区分': 'ローカルのオープンウェイト7〜30B（Qwen3 8B、Llama 4 Scout、Gemma 4）', 'ゼロショットの品質': 'ばらつきが大きく形式崩れが起きやすい', 'フューショットは今も有効か': '有効。実用に耐えるかどうかを分けることが多い' },
           ],
@@ -1905,7 +1905,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { '模型类别': '前沿推理模型（Claude Opus 5、GPT-5.6、Gemini 3.1 Pro）', '零样本表现': '通用任务上很好', '少样本还有用吗': '主要用于输出格式、公司语气和自有标签体系' },
-            { '模型类别': '前沿非推理模型（Claude Sonnet 5、Gemini 3.7 Flash）', '零样本表现': '良好', '少样本还有用吗': '有用——适用于窄领域和严格结构' },
+            { '模型类别': '前沿非推理模型（Claude Sonnet 5、Gemini 3.8 Flash）', '零样本表现': '良好', '少样本还有用吗': '有用——适用于窄领域和严格结构' },
             { '模型类别': '小型托管模型（Claude Haiku 4.5、Gemini 3.5 Flash-Lite）', '零样本表现': '专业任务上不稳定', '少样本还有用吗': '有用——通常是单项收益最大的准确率提升' },
             { '模型类别': '本地开源权重 7–30B（Qwen3 8B、Llama 4 Scout、Gemma 4）', '零样本表现': '波动较大，容易跑偏格式', '少样本还有用吗': '有用——往往决定输出可用还是不可用' },
           ],
@@ -2236,7 +2236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'Classe de modelo': 'Raciocínio de ponta (Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', 'Qualidade em zero-shot': 'Alta em tarefas gerais', 'O few-shot ainda ajuda?': 'Principalmente para formato de saída, tom da casa e rótulos proprietários' },
-            { 'Classe de modelo': 'Ponta sem raciocínio (Claude Sonnet 5, Gemini 3.7 Flash)', 'Qualidade em zero-shot': 'Boa', 'O few-shot ainda ajuda?': 'Sim — em domínios estreitos e esquemas rígidos' },
+            { 'Classe de modelo': 'Ponta sem raciocínio (Claude Sonnet 5, Gemini 3.8 Flash)', 'Qualidade em zero-shot': 'Boa', 'O few-shot ainda ajuda?': 'Sim — em domínios estreitos e esquemas rígidos' },
             { 'Classe de modelo': 'Modelos pequenos hospedados (Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', 'Qualidade em zero-shot': 'Irregular em tarefas especializadas', 'O few-shot ainda ajuda?': 'Sim — normalmente o maior ganho isolado de precisão' },
             { 'Classe de modelo': 'Open-weight local de 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Qualidade em zero-shot': 'Variável; desvio de formato é comum', 'O few-shot ainda ajuda?': 'Sim — muitas vezes é a diferença entre saída utilizável e inútil' },
           ],
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { 'فئة النموذج': 'استدلال متقدم (Claude Opus 5، GPT-5.6، Gemini 3.1 Pro)', 'جودة التوجيه الصفري': 'عالية في المهام العامة', 'هل تفيد الأمثلة القليلة؟': 'أساسًا لصيغة المخرجات وأسلوب المؤسسة والتسميات الخاصة' },
-            { 'فئة النموذج': 'متقدم بلا استدلال (Claude Sonnet 5، Gemini 3.7 Flash)', 'جودة التوجيه الصفري': 'جيدة', 'هل تفيد الأمثلة القليلة؟': 'نعم — في المجالات الضيقة والمخططات الصارمة' },
+            { 'فئة النموذج': 'متقدم بلا استدلال (Claude Sonnet 5، Gemini 3.8 Flash)', 'جودة التوجيه الصفري': 'جيدة', 'هل تفيد الأمثلة القليلة؟': 'نعم — في المجالات الضيقة والمخططات الصارمة' },
             { 'فئة النموذج': 'نماذج صغيرة مستضافة (Claude Haiku 4.5، Gemini 3.5 Flash-Lite)', 'جودة التوجيه الصفري': 'متفاوتة في المهام المتخصصة', 'هل تفيد الأمثلة القليلة؟': 'نعم — عادةً أكبر مكسب دقة منفرد' },
             { 'فئة النموذج': 'نماذج محلية مفتوحة الأوزان 7–30B (Qwen3 8B، Llama 4 Scout، Gemma 4)', 'جودة التوجيه الصفري': 'متغيّرة؛ الانحراف عن الصيغة شائع', 'هل تفيد الأمثلة القليلة؟': 'نعم — غالبًا الفارق بين مخرجات صالحة وأخرى غير صالحة' },
           ],
@@ -2898,7 +2898,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           rows: [
             { '모델 분류': '프런티어 추론(Claude Opus 5, GPT-5.6, Gemini 3.1 Pro)', '제로샷 품질': '일반 과제에서 높음', '퓨샷이 여전히 도움이 되나': '주로 출력 형식, 사내 톤, 자체 라벨 체계에서' },
-            { '모델 분류': '프런티어 비추론(Claude Sonnet 5, Gemini 3.7 Flash)', '제로샷 품질': '양호', '퓨샷이 여전히 도움이 되나': '그렇다 — 좁은 도메인과 엄격한 스키마에서' },
+            { '모델 분류': '프런티어 비추론(Claude Sonnet 5, Gemini 3.8 Flash)', '제로샷 품질': '양호', '퓨샷이 여전히 도움이 되나': '그렇다 — 좁은 도메인과 엄격한 스키마에서' },
             { '모델 분류': '소형 호스팅(Claude Haiku 4.5, Gemini 3.5 Flash-Lite)', '제로샷 품질': '전문 과제에서는 들쭉날쭉', '퓨샷이 여전히 도움이 되나': '그렇다 — 단일 항목으로 가장 큰 정확도 향상인 경우가 많음' },
             { '모델 분류': '로컬 오픈웨이트 7~30B(Qwen3 8B, Llama 4 Scout, Gemma 4)', '제로샷 품질': '편차가 크고 형식 이탈이 잦음', '퓨샷이 여전히 도움이 되나': '그렇다 — 쓸 만한 출력과 못 쓰는 출력을 가르는 경우가 많음' },
           ],
