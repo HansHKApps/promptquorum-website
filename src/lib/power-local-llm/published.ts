@@ -450,6 +450,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'joplin-ai-agent-review',
   // Smart Connections review — 2026-09-12
   'smart-connections-review',
+  // nanobot review (HKUDS/nanobot) — 2026-09-14
+  'nanobot-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

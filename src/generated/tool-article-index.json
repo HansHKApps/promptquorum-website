@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
         "url": "/power-local-llm/vane-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/github-copilot-cli-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "goose-review",
-        "title": "Goose Review 2026: Block's Open-Source AI Agent, Now Under the Linux Foundation",
-        "url": "/power-local-llm/goose-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 257,
+    "totalCount": 258,
     "capped": true
   },
   "llama.cpp": {
@@ -183,6 +183,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "docker-model-runner-review",
         "title": "Docker Model Runner Review 2026: Local LLMs via the Docker CLI",
         "url": "/power-local-llm/docker-model-runner-review",
@@ -244,17 +252,9 @@
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "privategpt-review",
-        "title": "PrivateGPT Review: It's Not a Chat App Anymore",
-        "url": "/power-local-llm/privategpt-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 77,
+    "totalCount": 78,
     "capped": true
   },
   "LocalAI": {
@@ -1401,6 +1401,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-agent-review",
         "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
         "url": "/power-local-llm/atomic-agent-review",
@@ -1424,7 +1432,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Locally Uncensored": {
@@ -3457,6 +3465,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "n8n-review",
         "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
         "url": "/power-local-llm/n8n-review",
@@ -3518,17 +3534,9 @@
         "url": "/power-local-llm/gpt-engineer-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "leon-ai-review",
-        "title": "Leon AI Review 2026: Features, Install, Alternatives",
-        "url": "/power-local-llm/leon-ai-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "AutoGen": {
@@ -7455,6 +7463,20 @@
       }
     ],
     "totalCount": 9,
+    "capped": false
+  },
+  "nanobot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   }
 }

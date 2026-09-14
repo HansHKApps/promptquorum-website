@@ -190,6 +190,7 @@ import { article as a_semantic_kernel_review } from './articles/semantic-kernel-
 import { article as a_letta_review } from './articles/letta-review'
 import { article as a_leon_ai_review } from './articles/leon-ai-review'
 import { article as a_agent_zero_review } from './articles/agent-zero-review'
+import { article as a_nanobot_review } from './articles/nanobot-review'
 import { article as a_taskweaver_review } from './articles/taskweaver-review'
 import { article as a_dspy_review } from './articles/dspy-review'
 import { article as a_camel_review } from './articles/camel-review'
@@ -370,6 +371,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'letta-review':                                      a_letta_review,
   'leon-ai-review':                                    a_leon_ai_review,
   'agent-zero-review':                                 a_agent_zero_review,
+  'nanobot-review':                                    a_nanobot_review,
   'taskweaver-review':                                 a_taskweaver_review,
   'dspy-review':                                        a_dspy_review,
   'camel-review':                                       a_camel_review,
