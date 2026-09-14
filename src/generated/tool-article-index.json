@@ -11,22 +11,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
         "url": "/power-local-llm/vane-review",
@@ -80,9 +64,25 @@
         "url": "/power-local-llm/foundry-local-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "github-copilot-cli-review",
+        "title": "GitHub Copilot CLI Review 2026: Cloud-Backed by Default, Local via BYOK",
+        "url": "/power-local-llm/github-copilot-cli-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "goose-review",
+        "title": "Goose Review 2026: Block's Open-Source AI Agent, Now Under the Linux Foundation",
+        "url": "/power-local-llm/goose-review",
+        "dateModified": "2026-09-12",
+        "tier": "about"
       }
     ],
-    "totalCount": 259,
+    "totalCount": 257,
     "capped": true
   },
   "llama.cpp": {
@@ -183,17 +183,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-09-14",
         "tier": "about"
       },
@@ -252,9 +244,17 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "localai-explained",
+        "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
+        "url": "/power-local-llm/localai-explained",
+        "dateModified": "2026-09-06",
+        "tier": "about"
       }
     ],
-    "totalCount": 79,
+    "totalCount": 78,
     "capped": true
   },
   "LocalAI": {
@@ -265,14 +265,6 @@
         "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
         "tier": "about"
       },
       {
@@ -338,10 +330,18 @@
         "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
-    "capped": true
+    "totalCount": 10,
+    "capped": false
   },
   "TensorRT-LLM": {
     "articles": [
@@ -804,7 +804,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 133,
+    "totalCount": 134,
     "capped": true
   },
   "Atomic Chat": {
@@ -1401,14 +1401,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "atomic-agent-review",
         "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
         "url": "/power-local-llm/atomic-agent-review",
@@ -1432,7 +1424,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 4,
     "capped": false
   },
   "Locally Uncensored": {
@@ -3450,7 +3442,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 30,
     "capped": true
   },
   "CrewAI": {
@@ -3461,14 +3453,6 @@
         "title": "CrewAI Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/crewai-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
         "tier": "about"
       },
       {
@@ -3534,9 +3518,17 @@
         "url": "/power-local-llm/gpt-engineer-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "leon-ai-review",
+        "title": "Leon AI Review 2026: Features, Install, Alternatives",
+        "url": "/power-local-llm/leon-ai-review",
+        "dateModified": "2026-09-11",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 14,
     "capped": true
   },
   "AutoGen": {
@@ -4613,6 +4605,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "idefics-review",
         "title": "Idefics Review (2026): HuggingFace's Open Vision-Language Models, Honestly Assessed",
         "url": "/power-local-llm/idefics-review",
@@ -4674,17 +4674,9 @@
         "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Ollama vision models": {
@@ -6554,9 +6546,17 @@
         "url": "/power-local-llm/second-me-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-09-14",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "goose": {
@@ -7306,6 +7306,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-llm-fine-tuning-framework-2026",
         "title": "Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud",
@@ -7370,11 +7378,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "LLaMA-Factory": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "lm-studio-advanced-features",
@@ -7384,19 +7400,11 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "litellm": {
     "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
       {
         "cluster": "power-local-llm",
         "slug": "shell-gpt-review",
@@ -7470,21 +7478,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
-  },
-  "nanobot": {
-    "articles": [
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      }
-    ],
-    "totalCount": 1,
+    "totalCount": 9,
     "capped": false
   }
 }

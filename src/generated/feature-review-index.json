@@ -848,5 +848,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "vane-review",
     "url": "/power-local-llm/vane-review"
+  },
+  "llama-factory": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llama-factory-review",
+    "url": "/power-local-llm/llama-factory-review"
   }
 }
