@@ -91,9 +91,9 @@ const DIR_UI = {
     es: 'Nombre', pt: 'Nome', ar: 'الاسم', ko: '이름',
   },
   sortAdded: {
-    en: 'Recently added', de: 'Zuletzt hinzugefügt', fr: 'Ajouté récemment',
-    ja: '新着順', zh: '最近添加', es: 'Añadido recientemente',
-    pt: 'Adicionado recentemente', ar: 'أُضيف مؤخرًا', ko: '최근 추가순',
+    en: 'Recently updated', de: 'Zuletzt aktualisiert', fr: 'Mis à jour récemment',
+    ja: '更新順', zh: '最近更新', es: 'Actualizado recientemente',
+    pt: 'Atualizado recentemente', ar: 'حُدِّث مؤخرًا', ko: '최근 업데이트순',
   },
   sortRam: {
     en: 'Hardware requirement', de: 'Hardware-Anforderung', fr: 'Configuration requise',
@@ -436,6 +436,7 @@ const DIR_UI = {
 
   // --- ToolTable columns ---
   colTool: { en: 'Tool', de: 'Tool', fr: 'Outil', ja: 'ツール', zh: '工具', es: 'Herramienta', pt: 'Ferramenta', ar: 'الأداة', ko: '도구' },
+  colLastUpdated: { en: 'Last Updated', de: 'Zuletzt aktualisiert', fr: 'Dernière mise à jour', ja: '最終更新日', zh: '最后更新日期', es: 'Última actualización', pt: 'Última atualização', ar: 'آخر تحديث', ko: '마지막 업데이트' },
   colStars: { en: 'Stars', de: 'Sterne', fr: 'Étoiles', ja: 'スター数', zh: '星标数', es: 'Estrellas', pt: 'Estrelas', ar: 'النجوم', ko: '스타 수' },
   colStatus: { en: 'Status', de: 'Status', fr: 'Statut', ja: 'ステータス', zh: '状态', es: 'Estado', pt: 'Status', ar: 'الحالة', ko: '상태' },
   colCategory: { en: 'Category', de: 'Kategorie', fr: 'Catégorie', ja: 'カテゴリー', zh: '类别', es: 'Categoría', pt: 'Categoria', ar: 'الفئة', ko: '카테고리' },

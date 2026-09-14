@@ -66,7 +66,7 @@ export function ToolTable({
     { kind: 'sort', key: 'ram', label: t('detailHardware', lang) },
     { kind: 'static', key: 'price', label: t('detailPrice', lang) },
     { kind: 'static', key: 'platforms', label: t('detailPlatforms', lang) },
-    { kind: 'sort', key: 'added', label: t('detailAdded', lang) },
+    { kind: 'sort', key: 'added', label: t('colLastUpdated', lang) },
     { kind: 'sort', key: 'status', label: t('colStatus', lang) },
     { kind: 'sort', key: 'category', label: t('colCategory', lang) },
     { kind: 'static', key: 'fit', label: t('colCompatFit', lang) },
@@ -111,6 +111,7 @@ export function ToolTable({
         <tbody>
           {apps.map((app) => {
             const price = app.price !== 'TODO' ? app.price : null
+            const lastUpdatedDate = app.lastVerifiedDate ?? app.addedDate
             return (
               <tr
                 key={app.slug}
@@ -142,7 +143,7 @@ export function ToolTable({
                     : <span className="text-text-secondary/50">—</span>}
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
-                  {app.addedDate ? formatDisplayDate(app.addedDate, lang) : <span className="text-text-secondary/50">—</span>}
+                  {lastUpdatedDate ? formatDisplayDate(lastUpdatedDate, lang) : <span className="text-text-secondary/50">—</span>}
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{STATUS_LABEL[app.status]}</td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">{CATEGORY_SUB_LABEL[app.categories[0]][lang]}</td>

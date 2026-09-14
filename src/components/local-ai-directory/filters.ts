@@ -164,7 +164,7 @@ export function sortTools(apps: ToolRecord[], key: SortKey, dir: SortDir, machin
       case 'stars':
         return sign * nullsLast(a.stars, b.stars, (x, y) => x - y)
       case 'added':
-        return sign * nullsLast(a.addedDate, b.addedDate, (x, y) => x.localeCompare(y))
+        return sign * nullsLast(a.lastVerifiedDate ?? a.addedDate, b.lastVerifiedDate ?? b.addedDate, (x, y) => x.localeCompare(y))
       case 'ram':
         return sign * nullsLast(hardwareSortValue(a.hardware, machine, a.engine), hardwareSortValue(b.hardware, machine, b.engine), (x, y) => x - y)
       case 'status': {
