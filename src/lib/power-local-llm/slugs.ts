@@ -335,6 +335,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // LLaMA-Factory review (Fine-Tuning & Training) — 2026-09-14
   'llama-factory-review':                    'llama-factory-review',
 
+  // Multica review (Local AI Agents & Tool Use) — 2026-09-14
+  'multica-review':                          'multica-review',
+
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05
   'windsurf-review':                         'windsurf-review',

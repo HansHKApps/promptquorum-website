@@ -403,6 +403,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'litellm-review',
   // LLaMA-Factory review — 2026-09-14
   'llama-factory-review',
+  // Multica review — 2026-09-14
+  'multica-review',
   // MLC LLM explainer — 2026-09-07
   'mlc-llm-explained',
   // KoboldCpp review — 2026-09-07
