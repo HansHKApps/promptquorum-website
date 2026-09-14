@@ -189,6 +189,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // LibreChat review 2026-09-03
   'librechat-review':                        'librechat-review-2026',
 
+  // nanobot review — HKUDS/nanobot self-hosted personal AI agent framework — 2026-09-14
+  'nanobot-review': 'nanobot-review',
+
   // Agent frameworks series — Agent Zero review (article 9 of 14) — 2026-09-11
   'agent-zero-review': 'agent-zero-review',
   // Agent frameworks series — TaskWeaver review (article 10 of 14) — 2026-09-11
