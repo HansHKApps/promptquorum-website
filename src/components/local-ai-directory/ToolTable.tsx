@@ -3,6 +3,7 @@
 // (sticky first column, hover row highlight, overflow-x scroll container)
 // for visual parity with the rest of the article shell.
 
+import { useEffect, useRef, useState } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
@@ -71,8 +72,21 @@ export function ToolTable({
     { kind: 'static', key: 'fit', label: t('colCompatFit', lang) },
   ]
 
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [isScrollable, setIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const checkOverflow = () => setIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [apps])
+
   return (
-    <div className="overflow-x-auto">
+    <div className="relative overflow-x-auto" ref={scrollRef}>
       <table className="w-full min-w-[960px] border-collapse text-sm">
         <thead>
           <tr className="border-b-2 border-primary/20">
@@ -147,6 +161,9 @@ export function ToolTable({
           })}
         </tbody>
       </table>
+      {isScrollable && (
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent" />
+      )}
     </div>
   )
 }
