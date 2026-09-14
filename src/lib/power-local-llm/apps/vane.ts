@@ -21,6 +21,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'docs'],
   url: 'github.com/ItzCrazyKns/Vane',
+  reviewSlug: 'vane-review', // dedicated PromptQuorum review
   tagline: {
     en: 'Self-hosted AI answering engine combining local search with local or cloud LLMs for cited answers',
     de: 'Selbst gehostete KI-Antwortmaschine, die lokale Suche mit lokalen oder Cloud-LLMs für belegte Antworten kombiniert',

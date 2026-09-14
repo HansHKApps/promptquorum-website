@@ -207,6 +207,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lemonade-review',
   // Onyx self-hosted enterprise search/RAG review (formerly Danswer) — 2026-09-12
   'onyx-review',
+  // Vane self-hosted AI answering engine review (formerly Perplexica) — 2026-09-14
+  'vane-review',
   // Khoj review — 2026-09-02
   'khoj-ai-second-brain-review',
   'real-esrgan-ai-image-upscaler-review',

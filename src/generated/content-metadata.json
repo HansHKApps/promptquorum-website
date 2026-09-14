@@ -920,6 +920,96 @@
       ],
       "images": []
     },
+    "lobechat-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "big-agi-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "nextchat-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "page-assist-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "chatbox-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "text-generation-webui-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -6511,7 +6601,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-13",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6529,7 +6619,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 151 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Continue.dev, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 173 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -6537,7 +6627,7 @@
         },
         {
           "url": "/images/local-llm-software-directory-2026-coding-patterns-en.svg",
-          "title": "IDE integrations: Continue.dev for inline autocomplete in VS Code and JetBrains, Cline for autonomous agent file edits, PearAI and Windsurf for full AI-first IDE environments — all connect to Ollama via the OpenAI-compatible API."
+          "title": "IDE integrations: Twinny for inline autocomplete in VS Code and JetBrains, Cline for autonomous agent file edits, PearAI and Windsurf for full AI-first IDE environments — all connect to Ollama via the OpenAI-compatible API."
         },
         {
           "url": "/images/local-llm-software-directory-2026-rag-systems-en.svg",
@@ -7859,6 +7949,24 @@
       ],
       "images": []
     },
+    "n8n-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "h2ogpt-review-2026": {
       "dateModified": "2026-09-03",
       "lastFactChecked": null,
@@ -8003,6 +8111,132 @@
       ],
       "images": []
     },
+    "leon-ai-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "agent-zero-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "taskweaver-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "dspy-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "camel-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gpt-engineer-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pydantic-ai-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "llamaindex-rag-framework-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
@@ -8061,6 +8295,78 @@
       "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "maxkb-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lemonade-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "onyx-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vane-review": {
+      "dateModified": "2026-09-14",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-14",
       "hasSections": true,
       "langs": [
         "en",
@@ -8223,6 +8529,60 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "atomic-agent-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "goose-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "atomic-bot-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -8471,6 +8831,60 @@
       ],
       "images": []
     },
+    "locally-uncensored-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "docker-model-runner-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "runanywhere-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "draw-things-review": {
       "dateModified": "2026-09-07",
       "lastFactChecked": null,
@@ -8583,6 +8997,78 @@
       "dateModified": "2026-09-03",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "liquid-apollo-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "noema-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ai-on-device-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "on-device-ai-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -8871,6 +9357,42 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "dograh-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "exo-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -9227,6 +9749,42 @@
       ],
       "images": []
     },
+    "google-ai-edge-gallery-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "off-grid-ai-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "pocket-ai-review": {
       "dateModified": "2026-09-11",
       "lastFactChecked": null,
@@ -9249,6 +9807,96 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "amd-gaia-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "foundry-local-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ollama-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hyperlink-nexa-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lm-studio-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -9429,6 +10077,24 @@
       "dateModified": "2026-09-07",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "unsloth-review": {
+      "dateModified": "2026-09-13",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-13",
       "hasSections": true,
       "langs": [
         "en",
@@ -9767,6 +10433,24 @@
       ],
       "images": []
     },
+    "anythingllm-review": {
+      "dateModified": "2026-09-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "twinny-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
@@ -9789,6 +10473,24 @@
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "opencode-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -9897,6 +10599,402 @@
       "dateModified": "2026-09-07",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "toolneuron-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "localai-apexcreator-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "diffusionbee-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "macwhisper-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "solair-ai-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "kilo-code-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "agnai-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "metagpt-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "risuai-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "zed-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "github-copilot-cli-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "copilot-for-obsidian-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "nvidia-g-assist-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "gpustack-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "bmo-chatbot-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "text-generator-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "odysseus-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "phoneclaw-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ypipe-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "logseq-copilot-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "joplin-ai-agent-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "smart-connections-review": {
+      "dateModified": "2026-09-12",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-12",
       "hasSections": true,
       "langs": [
         "en",
@@ -12800,7 +13898,7 @@
       ]
     },
     "best-mini-pc-home-assistant-local-ai": {
-      "dateModified": "2026-08-23",
+      "dateModified": "2026-09-13",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
@@ -15138,6 +16236,21 @@
     },
     "balconySolarLegalizationRace": {
       "lastmod": "2026-07-16",
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hardwareCompatibilityDirectory": {
+      "lastmod": "2026-09-13",
       "langs": [
         "en",
         "de",
