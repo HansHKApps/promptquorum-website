@@ -180,6 +180,11 @@ import { app as app_aori } from './apps/aori'
 import { app as app_rapr_ai } from './apps/rapr-ai'
 import { app as app_chatty_mini } from './apps/chatty-mini'
 import { app as app_unsloth } from './apps/unsloth'
+import { app as app_llama_factory } from './apps/llama-factory'
+import { app as app_litellm } from './apps/litellm'
+import { app as app_multica } from './apps/multica'
+import { app as app_nanobot } from './apps/nanobot'
+import { app as app_vane } from './apps/vane'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -350,6 +355,11 @@ export const localAiApps: ToolRecord[] = [
   app_rapr_ai,
   app_chatty_mini,
   app_unsloth,
+  app_llama_factory,
+  app_litellm,
+  app_multica,
+  app_nanobot,
+  app_vane,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
