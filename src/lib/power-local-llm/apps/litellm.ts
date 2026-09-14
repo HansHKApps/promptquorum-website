@@ -21,6 +21,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['build', 'serve'],
   url: 'github.com/BerriAI/litellm',
+  reviewSlug: 'litellm-review',
   tagline: {
     en: 'Single OpenAI-compatible gateway for 100+ LLM provider APIs, with routing and cost tracking',
     de: 'Einheitliches OpenAI-kompatibles Gateway für über 100 LLM-Anbieter-APIs, mit Routing und Kostenverfolgung',

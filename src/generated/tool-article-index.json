@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/foundry-local-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "github-copilot-cli-review",
-        "title": "GitHub Copilot CLI Review 2026: Cloud-Backed by Default, Local via BYOK",
-        "url": "/power-local-llm/github-copilot-cli-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 258,
+    "totalCount": 259,
     "capped": true
   },
   "llama.cpp": {
@@ -183,6 +183,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
@@ -244,17 +252,9 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "localai-explained",
-        "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
-        "url": "/power-local-llm/localai-explained",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 78,
+    "totalCount": 79,
     "capped": true
   },
   "LocalAI": {
@@ -265,6 +265,14 @@
         "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-09-14",
         "tier": "about"
       },
       {
@@ -330,18 +338,10 @@
         "url": "/power-local-llm/librechat-review-2026",
         "dateModified": "2026-09-03",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "TensorRT-LLM": {
     "articles": [
@@ -3450,7 +3450,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "CrewAI": {
@@ -7391,6 +7391,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "litellm-review",
+        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
+        "url": "/power-local-llm/litellm-review",
+        "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "shell-gpt-review",
         "title": "shell-gpt (sgpt) Review: AI Shell Commands, One Keystroke Away",
         "url": "/power-local-llm/shell-gpt-review",
@@ -7462,7 +7470,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "nanobot": {

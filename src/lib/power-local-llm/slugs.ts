@@ -330,6 +330,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Unsloth review (Fine-Tuning & Training) — 2026-09-13
   'unsloth-review':                          'unsloth-review',
+  // LiteLLM review (Routers & Gateways) — 2026-09-14
+  'litellm-review':                          'litellm-review',
 
   // Runtimes & Engines — 2026-09-05
   // Windsurf, Sourcegraph Cody, Tabby reviews — 2026-09-05

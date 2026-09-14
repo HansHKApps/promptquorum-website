@@ -834,6 +834,11 @@
     "urlSlug": "unsloth-review",
     "url": "/power-local-llm/unsloth-review"
   },
+  "litellm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "litellm-review",
+    "url": "/power-local-llm/litellm-review"
+  },
   "nanobot": {
     "cluster": "power-local-llm",
     "urlSlug": "nanobot-review",
