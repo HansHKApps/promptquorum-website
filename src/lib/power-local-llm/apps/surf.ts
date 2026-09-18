@@ -37,5 +37,6 @@ export const app: ToolRecord = {
     ar: 'دفتر ملاحظات مكتبي مدعوم بالذكاء الاصطناعي ينظم ملفاتك وصفحات الويب وينشئ ملاحظات منها، مع حرية اختيار نماذج محلية أو مفتوحة أو سحابية',
     ko: '파일과 웹페이지를 정리해 노트를 생성해주는 데스크톱 AI 노트 앱으로, 로컬·오픈·클라우드 모델을 자유롭게 선택할 수 있다',
   },
+  reviewSlug: 'surf-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

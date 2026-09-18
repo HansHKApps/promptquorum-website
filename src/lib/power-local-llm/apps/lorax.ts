@@ -35,5 +35,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال مستضاف ذاتيًا يخدم آلاف محولات LoRA المضبوطة على وحدة معالجة رسومات واحدة دون تكلفة لكل محول',
     ko: '어댑터당 비용 없이 단일 GPU에서 수천 개의 파인튜닝된 LoRA 어댑터를 서빙하는 셀프호스팅 추론 서버',
   },
+  reviewSlug: 'lorax-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

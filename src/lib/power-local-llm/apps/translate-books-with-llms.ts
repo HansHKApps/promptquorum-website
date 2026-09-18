@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['docs', 'build'],
   url: 'github.com/hydropix/TranslateBooksWithLLMs',
+  reviewSlug: 'translate-books-with-llms-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Translates full-length books and documents (EPUB, TXT, SRT) with a local Ollama model or cloud LLMs, preserving formatting and resuming where it left off',
     de: 'Übersetzt vollständige Bücher und Dokumente (EPUB, TXT, SRT) mit einem lokalen Ollama-Modell oder Cloud-LLMs, erhält dabei die Formatierung und setzt Übersetzungen fort, wo sie abgebrochen wurden',

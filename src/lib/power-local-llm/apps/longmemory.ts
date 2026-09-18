@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'مخزن ذاكرة دائم مستضاف ذاتيًا يمنح Claude Desktop وCopilot وCodex وأدوات الذكاء الاصطناعي الأخرى ذاكرة طويلة الأمد عبر الجلسات',
     ko: 'Claude Desktop, Copilot, Codex 등 여러 AI 도구에 세션 간 장기 기억을 부여하는 셀프호스팅 영구 메모리 저장소',
   },
+  reviewSlug: 'longmemory-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

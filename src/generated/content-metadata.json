@@ -11638,6 +11638,186 @@
         "ko"
       ],
       "images": []
+    },
+    "longmemory-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lorax-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "rapid-mlx-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "farfalle-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "surf-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "claude-code-local-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "sidekick-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lucebox-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "little-coder-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "translate-books-with-llms-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {

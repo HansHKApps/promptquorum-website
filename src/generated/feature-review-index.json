@@ -884,6 +884,11 @@
     "urlSlug": "chroma-review",
     "url": "/power-local-llm/chroma-review"
   },
+  "claude-code-local": {
+    "cluster": "power-local-llm",
+    "urlSlug": "claude-code-local-review",
+    "url": "/power-local-llm/claude-code-local-review"
+  },
   "clawrouter": {
     "cluster": "power-local-llm",
     "urlSlug": "clawrouter-review",
@@ -903,6 +908,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "dynamo-review",
     "url": "/power-local-llm/dynamo-review"
+  },
+  "farfalle": {
+    "cluster": "power-local-llm",
+    "urlSlug": "farfalle-review",
+    "url": "/power-local-llm/farfalle-review"
   },
   "funclip": {
     "cluster": "power-local-llm",
@@ -934,6 +944,11 @@
     "urlSlug": "langfuse-review",
     "url": "/power-local-llm/langfuse-review"
   },
+  "little-coder": {
+    "cluster": "power-local-llm",
+    "urlSlug": "little-coder-review",
+    "url": "/power-local-llm/little-coder-review"
+  },
   "lmdeploy": {
     "cluster": "power-local-llm",
     "urlSlug": "lmdeploy-review",
@@ -943,6 +958,21 @@
     "cluster": "power-local-llm",
     "urlSlug": "local-deep-research-review",
     "url": "/power-local-llm/local-deep-research-review"
+  },
+  "longmemory": {
+    "cluster": "power-local-llm",
+    "urlSlug": "longmemory-review",
+    "url": "/power-local-llm/longmemory-review"
+  },
+  "lorax": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lorax-review",
+    "url": "/power-local-llm/lorax-review"
+  },
+  "lucebox": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lucebox-review",
+    "url": "/power-local-llm/lucebox-review"
   },
   "meetily": {
     "cluster": "power-local-llm",
@@ -979,6 +1009,11 @@
     "urlSlug": "qdrant-review",
     "url": "/power-local-llm/qdrant-review"
   },
+  "rapid-mlx": {
+    "cluster": "power-local-llm",
+    "urlSlug": "rapid-mlx-review",
+    "url": "/power-local-llm/rapid-mlx-review"
+  },
   "self-hosted-ai-starter-kit": {
     "cluster": "power-local-llm",
     "urlSlug": "self-hosted-ai-starter-kit-review",
@@ -989,6 +1024,11 @@
     "urlSlug": "shimmy-review",
     "url": "/power-local-llm/shimmy-review"
   },
+  "sidekick": {
+    "cluster": "power-local-llm",
+    "urlSlug": "sidekick-review",
+    "url": "/power-local-llm/sidekick-review"
+  },
   "siyuan": {
     "cluster": "power-local-llm",
     "urlSlug": "siyuan-review",
@@ -998,6 +1038,16 @@
     "cluster": "power-local-llm",
     "urlSlug": "stable-diffusion-forge-review",
     "url": "/power-local-llm/stable-diffusion-forge-review"
+  },
+  "surf": {
+    "cluster": "power-local-llm",
+    "urlSlug": "surf-review",
+    "url": "/power-local-llm/surf-review"
+  },
+  "translate-books-with-llms": {
+    "cluster": "power-local-llm",
+    "urlSlug": "translate-books-with-llms-review",
+    "url": "/power-local-llm/translate-books-with-llms-review"
   },
   "turbo-fieldfare": {
     "cluster": "power-local-llm",

@@ -35,5 +35,6 @@ export const app: ToolRecord = {
     ar: 'محرك استدلال محلي متوافق مع OpenAI مخصص لشرائح Apple Silicon، مصمم كواجهة خلفية جاهزة لـ Claude Code وCursor وAider',
     ko: 'Claude Code, Cursor, Aider의 백엔드로 바로 사용할 수 있도록 만든 Apple Silicon용 OpenAI 호환 로컬 추론 엔진',
   },
+  reviewSlug: 'rapid-mlx-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
