@@ -436,4 +436,15 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'chroma-review':                            'chroma-review',
   'karakeep-review':                          'karakeep-review',
   'omlx-review':                              'omlx-review',
+  // FeatureAppPost batch 2 (next 10 of the 2026-09-18 directory additions) — 2026-09-19
+  'weaviate-review':                          'weaviate-review',
+  'self-hosted-ai-starter-kit-review':        'self-hosted-ai-starter-kit-review',
+  'stable-diffusion-forge-review':            'stable-diffusion-forge-review',
+  'openllm-review':                           'openllm-review',
+  'blinko-review':                            'blinko-review',
+  'local-deep-research-review':               'local-deep-research-review',
+  'aiclient2api-review':                      'aiclient2api-review',
+  'dynamo-review':                            'dynamo-review',
+  'lmdeploy-review':                          'lmdeploy-review',
+  'agentic-inbox-review':                     'agentic-inbox-review',
 }

@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'وكيل بحث معمّق مستضاف ذاتيًا يجري أبحاثًا موثقة متعددة الخطوات عبر arXiv وPubMed والويب ومستنداتك الخاصة باستخدام نماذج لغوية محلية أو سحابية',
     ko: 'arXiv, PubMed, 웹, 자체 문서를 아우르며 로컬 또는 클라우드 LLM으로 다단계 인용 리서치를 수행하는 셀프호스팅 딥리서치 에이전트',
   },
+  reviewSlug: 'local-deep-research-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

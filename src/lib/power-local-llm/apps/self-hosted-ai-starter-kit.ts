@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'قالب docker-compose من n8n يجمع بين n8n وOllama وQdrant وPostgreSQL في حزمة ذكاء اصطناعي محلية جاهزة للتشغيل',
     ko: 'n8n, Ollama, Qdrant, PostgreSQL을 하나로 묶은 n8n 제공의 바로 실행 가능한 로컬 AI 스택 docker-compose 템플릿',
   },
+  reviewSlug: 'self-hosted-ai-starter-kit-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

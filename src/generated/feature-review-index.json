@@ -859,6 +859,21 @@
     "urlSlug": "vane-review",
     "url": "/power-local-llm/vane-review"
   },
+  "agentic-inbox": {
+    "cluster": "power-local-llm",
+    "urlSlug": "agentic-inbox-review",
+    "url": "/power-local-llm/agentic-inbox-review"
+  },
+  "aiclient2api": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aiclient2api-review",
+    "url": "/power-local-llm/aiclient2api-review"
+  },
+  "blinko": {
+    "cluster": "power-local-llm",
+    "urlSlug": "blinko-review",
+    "url": "/power-local-llm/blinko-review"
+  },
   "chroma": {
     "cluster": "power-local-llm",
     "urlSlug": "chroma-review",
@@ -868,6 +883,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "cognee-review",
     "url": "/power-local-llm/cognee-review"
+  },
+  "dynamo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dynamo-review",
+    "url": "/power-local-llm/dynamo-review"
   },
   "karakeep": {
     "cluster": "power-local-llm",
@@ -884,6 +904,16 @@
     "urlSlug": "langfuse-review",
     "url": "/power-local-llm/langfuse-review"
   },
+  "lmdeploy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lmdeploy-review",
+    "url": "/power-local-llm/lmdeploy-review"
+  },
+  "local-deep-research": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-deep-research-review",
+    "url": "/power-local-llm/local-deep-research-review"
+  },
   "meetily": {
     "cluster": "power-local-llm",
     "urlSlug": "meetily-review",
@@ -899,14 +929,34 @@
     "urlSlug": "omlx-review",
     "url": "/power-local-llm/omlx-review"
   },
+  "openllm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openllm-review",
+    "url": "/power-local-llm/openllm-review"
+  },
   "qdrant": {
     "cluster": "power-local-llm",
     "urlSlug": "qdrant-review",
     "url": "/power-local-llm/qdrant-review"
   },
+  "self-hosted-ai-starter-kit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "self-hosted-ai-starter-kit-review",
+    "url": "/power-local-llm/self-hosted-ai-starter-kit-review"
+  },
   "siyuan": {
     "cluster": "power-local-llm",
     "urlSlug": "siyuan-review",
     "url": "/power-local-llm/siyuan-review"
+  },
+  "stable-diffusion-forge": {
+    "cluster": "power-local-llm",
+    "urlSlug": "stable-diffusion-forge-review",
+    "url": "/power-local-llm/stable-diffusion-forge-review"
+  },
+  "weaviate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "weaviate-review",
+    "url": "/power-local-llm/weaviate-review"
   }
 }

@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve', 'build'],
   url: 'github.com/justlovemaki/AIClient2API',
+  reviewSlug: 'aiclient2api-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Self-hosted proxy that converts Gemini CLI, Codex, Grok, Kiro, and Antigravity client protocols into a single OpenAI-compatible API',
     de: 'Selbst gehosteter Proxy, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API umwandelt',

@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/ai-dynamo/dynamo',
+  reviewSlug: 'dynamo-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Self-hosted, datacenter-scale distributed inference serving framework for large LLM deployments across multiple GPUs and nodes',
     de: 'Selbst gehostetes, für Rechenzentren skaliertes Framework für verteilte Inferenz-Bereitstellung großer LLM-Deployments über mehrere GPUs und Knoten',

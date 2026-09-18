@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['agent'],
   url: 'github.com/cloudflare/agentic-inbox',
+  reviewSlug: 'agentic-inbox-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Self-hosted email client that runs entirely on your own Cloudflare account with an AI agent that reads, searches, and drafts replies',
     de: 'Selbst gehosteter E-Mail-Client, der vollständig im eigenen Cloudflare-Konto läuft, mit einem KI-Agenten, der liest, sucht und Antworten entwirft',
