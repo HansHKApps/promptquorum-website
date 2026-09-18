@@ -35,5 +35,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال صوتي ولغوي مستضاف ذاتيًا يجمع بين التعرف على الكلام Whisper وتحويل النص إلى كلام واستدلال نماذج اللغة لمشروع المساعد الصوتي Willow.',
     ko: 'Willow 음성 비서 프로젝트를 위해 Whisper ASR, TTS, LLM 추론을 결합한 셀프호스팅 음성·언어 추론 서버.',
   },
+  reviewSlug: 'willow-inference-server-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

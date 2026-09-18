@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['audio'],
   url: 'github.com/izwi-ai/izwi',
+  reviewSlug: 'izwi-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Local-first voice AI runtime for transcription, speaker diarization, text-to-speech, and voice cloning with an OpenAI-compatible API',
     de: 'Lokal-first Voice-AI-Laufzeitumgebung für Transkription, Sprecher-Diarisierung, Text-zu-Sprache und Stimmenklonung mit OpenAI-kompatibler API',

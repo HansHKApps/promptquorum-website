@@ -40,5 +40,6 @@ export const app: ToolRecord = {
     ko: '네이티브 MLX를 통해 Apple 실리콘에 vLLM 방식의 연속 배치 처리를 제공하는 OpenAI 및 Anthropic 호환 추론 서버.',
   },
   mcpSupport: true, // README lists MCP tool calling as a first-class feature, verified 2026-09-18
+  reviewSlug: 'vllm-mlx-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

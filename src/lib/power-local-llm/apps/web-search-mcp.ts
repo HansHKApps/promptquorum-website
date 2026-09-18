@@ -39,5 +39,6 @@ export const app: ToolRecord = {
     ko: 'LM Studio 같은 도구의 로컬 LLM에 실제 웹 검색과 페이지 콘텐츠 접근 기능을 제공하는 로컬 호스팅 MCP 서버.',
   },
   mcpSupport: true, // it is an MCP server by definition — README: "A TypeScript MCP (Model Context Protocol) server", verified 2026-09-18
+  reviewSlug: 'web-search-mcp-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

@@ -310,6 +310,17 @@ import { article as a_sidekick_review } from './articles/sidekick-review'
 import { article as a_lucebox_review } from './articles/lucebox-review'
 import { article as a_little_coder_review } from './articles/little-coder-review'
 import { article as a_translate_books_with_llms_review } from './articles/translate-books-with-llms-review'
+import { article as a_openai_edge_tts_review } from './articles/openai-edge-tts-review'
+import { article as a_ollitert_review } from './articles/ollitert-review'
+import { article as a_parlor_review } from './articles/parlor-review'
+import { article as a_izwi_review } from './articles/izwi-review'
+import { article as a_vllm_mlx_review } from './articles/vllm-mlx-review'
+import { article as a_mlxcel_review } from './articles/mlxcel-review'
+import { article as a_mlx_serve_review } from './articles/mlx-serve-review'
+import { article as a_willow_inference_server_review } from './articles/willow-inference-server-review'
+import { article as a_web_search_mcp_review } from './articles/web-search-mcp-review'
+import { article as a_candle_vllm_review } from './articles/candle-vllm-review'
+import { article as a_swiftlm_review } from './articles/swiftlm-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -661,4 +672,15 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'lucebox-review':                                      a_lucebox_review,
   'little-coder-review':                                 a_little_coder_review,
   'translate-books-with-llms-review':                    a_translate_books_with_llms_review,
+  'openai-edge-tts-review':                              a_openai_edge_tts_review,
+  'ollitert-review':                                     a_ollitert_review,
+  'parlor-review':                                       a_parlor_review,
+  'izwi-review':                                         a_izwi_review,
+  'vllm-mlx-review':                                     a_vllm_mlx_review,
+  'mlxcel-review':                                       a_mlxcel_review,
+  'mlx-serve-review':                                    a_mlx_serve_review,
+  'willow-inference-server-review':                      a_willow_inference_server_review,
+  'web-search-mcp-review':                               a_web_search_mcp_review,
+  'candle-vllm-review':                                  a_candle_vllm_review,
+  'swiftlm-review':                                      a_swiftlm_review,
 }

@@ -38,5 +38,6 @@ export const app: ToolRecord = {
     ar: 'خادم API مستضاف ذاتيًا ومتوافق مع OpenAI لتحويل النص إلى كلام، مبني على الأصوات المجانية عبر الإنترنت من Microsoft Edge.',
     ko: 'Microsoft Edge의 무료 온라인 음성을 기반으로 한 셀프호스팅 OpenAI 호환 텍스트 음성 변환 API 서버.',
   },
+  reviewSlug: 'openai-edge-tts-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

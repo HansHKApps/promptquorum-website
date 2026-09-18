@@ -41,5 +41,6 @@ export const app: ToolRecord = {
     ko: 'OpenAI 및 Anthropic 호환 API로 MLX와 GGUF 모델을 제공하는 Apple 실리콘용 네이티브 Zig 추론 서버로, macOS 메뉴바 앱이 함께 제공됨.',
   },
   mcpSupport: true, // README: bundled macOS app includes "agent mode, and tool calling" with MCP tool integration, verified 2026-09-18
+  reviewSlug: 'mlx-serve-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

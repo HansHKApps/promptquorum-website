@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ar: 'منصة استدلال وتقديم على طراز vLLM مبنية بلغة Rust مع واجهة برمجية متوافقة مع OpenAI، تعمل على كل من CUDA وApple Metal.',
     ko: 'OpenAI 호환 API를 갖춘 Rust 기반 vLLM 방식 추론 및 서빙 플랫폼으로, CUDA와 Apple Metal 모두에서 동작.',
   },
+  reviewSlug: 'candle-vllm-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

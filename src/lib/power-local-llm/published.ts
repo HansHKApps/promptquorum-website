@@ -501,6 +501,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'lucebox-review',
   'little-coder-review',
   'translate-books-with-llms-review',
+  'openai-edge-tts-review',
+  'ollitert-review',
+  'parlor-review',
+  'izwi-review',
+  'vllm-mlx-review',
+  'mlxcel-review',
+  'mlx-serve-review',
+  'willow-inference-server-review',
+  'web-search-mcp-review',
+  'candle-vllm-review',
+  'swiftlm-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

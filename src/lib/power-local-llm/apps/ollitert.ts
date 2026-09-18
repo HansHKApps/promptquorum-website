@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'يحوّل هاتف أندرويد إلى خادم استدلال محلي بالكامل ومتوافق مع OpenAI لنماذج اللغة باستخدام بيئة تشغيل LiteRT-LM من جوجل.',
     ko: '구글의 LiteRT-LM 런타임을 사용해 안드로이드 폰을 완전 로컬, OpenAI 호환 LLM 추론 서버로 바꿔주는 앱.',
   },
+  reviewSlug: 'ollitert-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
