@@ -879,6 +879,11 @@
     "urlSlug": "blinko-review",
     "url": "/power-local-llm/blinko-review"
   },
+  "candle-vllm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "candle-vllm-review",
+    "url": "/power-local-llm/candle-vllm-review"
+  },
   "chroma": {
     "cluster": "power-local-llm",
     "urlSlug": "chroma-review",
@@ -923,6 +928,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "intentkit-review",
     "url": "/power-local-llm/intentkit-review"
+  },
+  "izwi": {
+    "cluster": "power-local-llm",
+    "urlSlug": "izwi-review",
+    "url": "/power-local-llm/izwi-review"
   },
   "karakeep": {
     "cluster": "power-local-llm",
@@ -989,15 +999,40 @@
     "urlSlug": "mission-control-review",
     "url": "/power-local-llm/mission-control-review"
   },
+  "mlx-serve": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlx-serve-review",
+    "url": "/power-local-llm/mlx-serve-review"
+  },
+  "mlxcel": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlxcel-review",
+    "url": "/power-local-llm/mlxcel-review"
+  },
+  "ollitert": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ollitert-review",
+    "url": "/power-local-llm/ollitert-review"
+  },
   "omlx": {
     "cluster": "power-local-llm",
     "urlSlug": "omlx-review",
     "url": "/power-local-llm/omlx-review"
   },
+  "openai-edge-tts": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openai-edge-tts-review",
+    "url": "/power-local-llm/openai-edge-tts-review"
+  },
   "openllm": {
     "cluster": "power-local-llm",
     "urlSlug": "openllm-review",
     "url": "/power-local-llm/openllm-review"
+  },
+  "parlor": {
+    "cluster": "power-local-llm",
+    "urlSlug": "parlor-review",
+    "url": "/power-local-llm/parlor-review"
   },
   "plano": {
     "cluster": "power-local-llm",
@@ -1044,6 +1079,11 @@
     "urlSlug": "surf-review",
     "url": "/power-local-llm/surf-review"
   },
+  "swiftlm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "swiftlm-review",
+    "url": "/power-local-llm/swiftlm-review"
+  },
   "translate-books-with-llms": {
     "cluster": "power-local-llm",
     "urlSlug": "translate-books-with-llms-review",
@@ -1054,9 +1094,24 @@
     "urlSlug": "turbo-fieldfare-review",
     "url": "/power-local-llm/turbo-fieldfare-review"
   },
+  "vllm-mlx": {
+    "cluster": "power-local-llm",
+    "urlSlug": "vllm-mlx-review",
+    "url": "/power-local-llm/vllm-mlx-review"
+  },
   "weaviate": {
     "cluster": "power-local-llm",
     "urlSlug": "weaviate-review",
     "url": "/power-local-llm/weaviate-review"
+  },
+  "web-search-mcp": {
+    "cluster": "power-local-llm",
+    "urlSlug": "web-search-mcp-review",
+    "url": "/power-local-llm/web-search-mcp-review"
+  },
+  "willow-inference-server": {
+    "cluster": "power-local-llm",
+    "urlSlug": "willow-inference-server-review",
+    "url": "/power-local-llm/willow-inference-server-review"
   }
 }

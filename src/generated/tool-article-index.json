@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "rapid-mlx-review",
         "title": "Rapid-MLX Review: Native MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/rapid-mlx-review",
@@ -67,22 +75,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "translate-books-with-llms-review",
-        "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
-        "url": "/power-local-llm/translate-books-with-llms-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "turbo-fieldfare-review",
-        "title": "TurboFieldfare Review: Running Gemma 4 26B-A4B in 2 GB of RAM",
-        "url": "/power-local-llm/turbo-fieldfare-review",
+        "slug": "swiftlm-review",
+        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
+        "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
     ],
-    "totalCount": 278,
+    "totalCount": 282,
     "capped": true
   },
   "llama.cpp": {
@@ -108,6 +108,30 @@
         "slug": "local-deep-research-review",
         "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
         "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxcel-review",
+        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
+        "url": "/power-local-llm/mlxcel-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "parlor-review",
+        "title": "Parlor Review: On-Device Real-Time Voice and Vision AI",
+        "url": "/power-local-llm/parlor-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       },
@@ -142,33 +166,9 @@
         "url": "/power-local-llm/translate-books-with-llms-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide-2026",
-        "title": "Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide-2026",
-        "dateModified": "2026-09-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atomic-agent-review",
-        "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
-        "url": "/power-local-llm/atomic-agent-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 146,
+    "totalCount": 150,
     "capped": true
   },
   "vLLM": {
@@ -179,6 +179,14 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "candle-vllm-review",
+        "title": "candle-vllm Review: Rust-Native LLM Serving on CUDA and Metal",
+        "url": "/power-local-llm/candle-vllm-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -223,6 +231,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -236,25 +252,9 @@
         "url": "/power-local-llm/litellm-review",
         "dateModified": "2026-09-14",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 88,
+    "totalCount": 91,
     "capped": true
   },
   "LocalAI": {
@@ -751,6 +751,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -782,6 +798,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "swiftlm-review",
+        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
+        "url": "/power-local-llm/swiftlm-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
@@ -798,7 +822,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 10,
     "capped": false
   },
   "LM Studio": {
@@ -832,6 +856,14 @@
         "slug": "translate-books-with-llms-review",
         "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
         "url": "/power-local-llm/translate-books-with-llms-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "web-search-mcp-review",
+        "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
+        "url": "/power-local-llm/web-search-mcp-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       },
@@ -874,17 +906,9 @@
         "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lemonade-review",
-        "title": "Lemonade Review 2026: AMD-Sponsored Local AI Server for NPU and GPU",
-        "url": "/power-local-llm/lemonade-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 139,
+    "totalCount": 140,
     "capped": true
   },
   "Atomic Chat": {
@@ -1695,6 +1719,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "parlor-review",
+        "title": "Parlor Review: On-Device Real-Time Voice and Vision AI",
+        "url": "/power-local-llm/parlor-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "meetily-review",
         "title": "Meetily Review 2026: Local, Privacy-First AI Meeting Notes",
         "url": "/power-local-llm/meetily-review",
@@ -1718,7 +1750,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Jarvis": {
@@ -1897,6 +1929,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "web-search-mcp-review",
+        "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
+        "url": "/power-local-llm/web-search-mcp-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "odysseus-review",
         "title": "Odysseus Review 2026: The Self-Hosted AI Workspace",
         "url": "/power-local-llm/odysseus-review",
@@ -1920,7 +1960,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "text-generation-webui": {
@@ -4355,6 +4395,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "izwi-review",
+        "title": "Izwi Review: Local Voice AI for TTS, STT, and Cloning",
+        "url": "/power-local-llm/izwi-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "meetily-review",
         "title": "Meetily Review 2026: Local, Privacy-First AI Meeting Notes",
         "url": "/power-local-llm/meetily-review",
@@ -4400,25 +4456,9 @@
         "url": "/power-local-llm/build-local-voice-assistant-2026",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-whisper-stt-comparison-2026",
-        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-        "url": "/power-local-llm/local-whisper-stt-comparison-2026",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 21,
     "capped": true
   },
   "faster-whisper": {
@@ -4473,6 +4513,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "meetily-review",
         "title": "Meetily Review 2026: Local, Privacy-First AI Meeting Notes",
         "url": "/power-local-llm/meetily-review",
@@ -4494,17 +4542,9 @@
         "url": "/power-local-llm/mlc-chat-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "styletts-2-review",
-        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
-        "url": "/power-local-llm/styletts-2-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Piper TTS": {
@@ -4515,6 +4555,14 @@
         "title": "Piper TTS Review (2026): Fast, Local Neural Text-to-Speech",
         "url": "/power-local-llm/piper-tts-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openai-edge-tts-review",
+        "title": "openai-edge-tts Review: A Free OpenAI-Compatible TTS Server",
+        "url": "/power-local-llm/openai-edge-tts-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -4559,6 +4607,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
@@ -4572,26 +4628,10 @@
         "url": "/power-local-llm/best-local-tts-raspberry-pi",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "piper-vs-chatterbox-tts",
-        "title": "Piper vs Chatterbox TTS (2026): Fast Local Speech or Voice Cloning?",
-        "url": "/power-local-llm/piper-vs-chatterbox-tts",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mac-mini-m5-local-ai-server",
-        "title": "Mac Mini M6 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant",
-        "url": "/local-llms/mac-mini-m5-local-ai-server",
-        "dateModified": "2026-08-26",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 12,
+    "capped": true
   },
   "Coqui TTS": {
     "articles": [
@@ -4637,6 +4677,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
@@ -4666,17 +4714,9 @@
         "url": "/power-local-llm/mlc-chat-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "styletts-2-review",
-        "title": "StyleTTS 2 Review (2026): Columbia's MIT-Licensed Research Model for Natural Speech",
-        "url": "/power-local-llm/styletts-2-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "XTTS v2": {
@@ -4817,6 +4857,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "piper-vs-kokoro-tts",
         "title": "Piper vs Kokoro TTS (2026): Which Local Voice Engine Should You Use?",
         "url": "/power-local-llm/piper-vs-kokoro-tts",
@@ -4838,18 +4886,10 @@
         "url": "/power-local-llm/llava-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "xtts-v2-review",
-        "title": "XTTS v2 Review (2026): Multilingual Voice Cloning from 6 Seconds of Audio",
-        "url": "/power-local-llm/xtts-v2-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "StyleTTS 2": {
     "articles": [
@@ -5133,6 +5173,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollitert-review",
+        "title": "OlliteRT Review: Turn an Android Phone Into a Local LLM Server",
+        "url": "/power-local-llm/ollitert-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ai-on-device-review",
         "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
         "url": "/power-local-llm/ai-on-device-review",
@@ -5194,17 +5242,9 @@
         "url": "/power-local-llm/maid-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rikkahub-review",
-        "title": "RikkaHub Review (2026): Multi-Provider AI Chat for Android",
-        "url": "/power-local-llm/rikkahub-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Pocket AI": {
@@ -7195,6 +7235,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "multica-review",
         "title": "Multica Review 2026: A Workspace for AI Coding Agents",
         "url": "/power-local-llm/multica-review",
@@ -7210,7 +7258,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "MaxKB": {
@@ -7471,6 +7519,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openai-edge-tts-review",
+        "title": "openai-edge-tts Review: A Free OpenAI-Compatible TTS Server",
+        "url": "/power-local-llm/openai-edge-tts-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "karakeep-review",
         "title": "Karakeep Review 2026: Self-Hosted Bookmarks with AI Auto-Tagging",
         "url": "/power-local-llm/karakeep-review",
@@ -7478,7 +7534,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "PhoneClaw": {
@@ -7738,9 +7794,17 @@
         "url": "/power-local-llm/funclip-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Solair AI": {
@@ -8117,6 +8181,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "candle-vllm": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "candle-vllm-review",
+        "title": "candle-vllm Review: Rust-Native LLM Serving on CUDA and Metal",
+        "url": "/power-local-llm/candle-vllm-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Chroma": {
     "articles": [
       {
@@ -8324,6 +8402,20 @@
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Izwi": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "izwi-review",
+        "title": "Izwi Review: Local Voice AI for TTS, STT, and Cloning",
+        "url": "/power-local-llm/izwi-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -8572,9 +8664,17 @@
         "url": "/power-local-llm/lorax-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Lucebox": {
@@ -8689,6 +8789,56 @@
     "totalCount": 1,
     "capped": false
   },
+  "mlx-serve": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "mlxcel": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxcel-review",
+        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
+        "url": "/power-local-llm/mlxcel-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "OlliteRT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollitert-review",
+        "title": "OlliteRT Review: Turn an Android Phone Into a Local LLM Server",
+        "url": "/power-local-llm/ollitert-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "oMLX": {
     "articles": [
       {
@@ -8709,14 +8859,52 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxcel-review",
+        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
+        "url": "/power-local-llm/mlxcel-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "rapid-mlx-review",
         "title": "Rapid-MLX Review: Native MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/rapid-mlx-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 6,
+    "capped": false
+  },
+  "openai-edge-tts": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openai-edge-tts-review",
+        "title": "openai-edge-tts Review: A Free OpenAI-Compatible TTS Server",
+        "url": "/power-local-llm/openai-edge-tts-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "OpenLLM": {
@@ -8726,6 +8914,20 @@
         "slug": "openllm-review",
         "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
         "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Parlor": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "parlor-review",
+        "title": "Parlor Review: On-Device Real-Time Voice and Vision AI",
+        "url": "/power-local-llm/parlor-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -8816,7 +9018,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 166,
+    "totalCount": 172,
     "capped": true
   },
   "Qdrant": {
@@ -8914,9 +9116,33 @@
         "url": "/power-local-llm/rapid-mlx-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlx-serve-review",
+        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
+        "url": "/power-local-llm/mlx-serve-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxcel-review",
+        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
+        "url": "/power-local-llm/mlxcel-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 4,
     "capped": false
   },
   "Self-hosted AI Starter Kit": {
@@ -9035,6 +9261,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "SwiftLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "swiftlm-review",
+        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
+        "url": "/power-local-llm/swiftlm-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "TranslateBooksWithLLMs": {
     "articles": [
       {
@@ -9075,14 +9315,30 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "vllm-mlx-review",
+        "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
+        "url": "/power-local-llm/vllm-mlx-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxcel-review",
+        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
+        "url": "/power-local-llm/mlxcel-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Weaviate": {
@@ -9170,5 +9426,33 @@
     ],
     "totalCount": 16,
     "capped": true
+  },
+  "web-search-mcp": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "web-search-mcp-review",
+        "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
+        "url": "/power-local-llm/web-search-mcp-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Willow Inference Server": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "willow-inference-server-review",
+        "title": "Willow Inference Server Review 2026: Self-Hosted Whisper ASR and TTS",
+        "url": "/power-local-llm/willow-inference-server-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   }
 }

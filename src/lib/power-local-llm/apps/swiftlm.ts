@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال أصلي بلغة Swift لشرائح Apple يقدم نماذج MLX عبر واجهة برمجية متوافقة تمامًا مع OpenAI، دون الحاجة إلى Python.',
     ko: 'Python 없이 MLX 모델을 엄격한 OpenAI 호환 API로 제공하는 Apple 실리콘용 네이티브 Swift 추론 서버.',
   },
+  reviewSlug: 'swiftlm-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

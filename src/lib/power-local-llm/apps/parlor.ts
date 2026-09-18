@@ -26,6 +26,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'audio'],
   url: 'github.com/fikrikarim/parlor',
+  reviewSlug: 'parlor-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Fully on-device multimodal AI assistant for real-time voice and vision conversations, powered by local models.',
     de: 'Vollständig lokal laufender multimodaler KI-Assistent für Echtzeit-Sprach- und Bildgespräche, angetrieben von lokalen Modellen.',

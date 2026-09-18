@@ -469,4 +469,16 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'lucebox-review':                           'lucebox-review',
   'little-coder-review':                      'little-coder-review',
   'translate-books-with-llms-review':         'translate-books-with-llms-review',
+  // FeatureAppPost batch 5 (ranks 31-41 of the 2026-09-18 directory additions, final batch) — 2026-09-19
+  'openai-edge-tts-review':                   'openai-edge-tts-review',
+  'ollitert-review':                          'ollitert-review',
+  'parlor-review':                            'parlor-review',
+  'izwi-review':                              'izwi-review',
+  'vllm-mlx-review':                          'vllm-mlx-review',
+  'mlxcel-review':                            'mlxcel-review',
+  'mlx-serve-review':                         'mlx-serve-review',
+  'willow-inference-server-review':           'willow-inference-server-review',
+  'web-search-mcp-review':                    'web-search-mcp-review',
+  'candle-vllm-review':                       'candle-vllm-review',
+  'swiftlm-review':                           'swiftlm-review',
 }

@@ -11818,6 +11818,204 @@
         "ko"
       ],
       "images": []
+    },
+    "openai-edge-tts-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ollitert-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "parlor-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "izwi-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "vllm-mlx-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlxcel-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mlx-serve-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "willow-inference-server-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "web-search-mcp-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "candle-vllm-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "swiftlm-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {

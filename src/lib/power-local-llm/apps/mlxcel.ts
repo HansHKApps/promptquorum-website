@@ -38,5 +38,6 @@ export const app: ToolRecord = {
     ar: 'بيئة تشغيل استدلال أصلية بلغة Rust وعالية الأداء لنماذج اللغة والنماذج البصرية اللغوية والتضمينات والصوت على شرائح Apple وNVIDIA CUDA.',
     ko: 'Apple 실리콘과 NVIDIA CUDA에서 LLM, VLM, 임베딩, 오디오를 처리하는 고성능 Rust 네이티브 추론 런타임.',
   },
+  reviewSlug: 'mlxcel-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
