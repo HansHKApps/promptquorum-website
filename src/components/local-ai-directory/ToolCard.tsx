@@ -152,6 +152,15 @@ export function ToolCard({
       </span>
 
       <div className="flex flex-col h-full p-4 pt-5 pr-8">
+        {isFounderStarActive(app.founderReviewedDate) && (
+          <span
+            className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-amber-500 bg-amber-100 text-amber-900 shadow-sm"
+            title={t('founderReviewedTooltip', lang)}
+          >
+            <StarIcon className="h-3 w-3 fill-amber-600 text-amber-600" />
+            {t('founderReviewedBadge', lang)}
+          </span>
+        )}
         <div className="flex items-start gap-3 mb-2.5">
           <span
             className={`shrink-0 flex h-9 w-9 items-center justify-center rounded-lg text-sm font-extrabold ${accent.avatar}`}
@@ -166,15 +175,6 @@ export function ToolCard({
             </span>
           </div>
           <div className="shrink-0 flex flex-col items-end gap-1">
-            {isFounderStarActive(app.founderReviewedDate) && (
-              <span
-                className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border bg-amber-50 text-amber-800 border-amber-300"
-                title={t('founderReviewedTooltip', lang)}
-              >
-                <StarIcon className="h-2.5 w-2.5" />
-                {t('founderReviewedBadge', lang)}
-              </span>
-            )}
             {locality && (
               <span className={`inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full border ${LOCALITY_BADGE[locality]}`}>
                 {LOCALITY_LABEL[locality]}

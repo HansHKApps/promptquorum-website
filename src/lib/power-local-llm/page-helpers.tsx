@@ -25,6 +25,7 @@ import { DirectoryClient } from '@/components/local-ai-directory/DirectoryClient
 import { localAiApps } from './apps-barrel'
 import { TOTAL_CATEGORY_GROUP_COUNT } from './apps/categories'
 import { buildLocalAiAppsItemListSchema } from './apps-schema'
+import { isFounderStarActive } from '@/components/local-ai-directory/founderStar'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -393,6 +394,16 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} /> }
     : undefined
 
+  // Surface the same "founder-reviewed" fact-check credit shown on the tool's
+  // directory tile/drawer (ToolCard.tsx/ToolDrawer.tsx) on its own dedicated
+  // review article, found via the ToolRecord whose reviewSlug points back at
+  // this article. Self-expires with the tile badge (FOUNDER_STAR_VALID_DAYS).
+  const reviewedApp = localAiApps.find((a) => a.reviewSlug === slug)
+  const founderReviewed =
+    reviewedApp && isFounderStarActive(reviewedApp.founderReviewedDate)
+      ? { appName: reviewedApp.name, date: reviewedApp.founderReviewedDate! }
+      : undefined
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -406,7 +417,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} founderReviewed={founderReviewed} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }
