@@ -280,6 +280,16 @@ import { article as a_cognee_review } from './articles/cognee-review'
 import { article as a_chroma_review } from './articles/chroma-review'
 import { article as a_karakeep_review } from './articles/karakeep-review'
 import { article as a_omlx_review } from './articles/omlx-review'
+import { article as a_weaviate_review } from './articles/weaviate-review'
+import { article as a_self_hosted_ai_starter_kit_review } from './articles/self-hosted-ai-starter-kit-review'
+import { article as a_stable_diffusion_forge_review } from './articles/stable-diffusion-forge-review'
+import { article as a_openllm_review } from './articles/openllm-review'
+import { article as a_blinko_review } from './articles/blinko-review'
+import { article as a_local_deep_research_review } from './articles/local-deep-research-review'
+import { article as a_aiclient2api_review } from './articles/aiclient2api-review'
+import { article as a_dynamo_review } from './articles/dynamo-review'
+import { article as a_lmdeploy_review } from './articles/lmdeploy-review'
+import { article as a_agentic_inbox_review } from './articles/agentic-inbox-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -601,4 +611,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'chroma-review':                                     a_chroma_review,
   'karakeep-review':                                   a_karakeep_review,
   'omlx-review':                                        a_omlx_review,
+  'weaviate-review':                                    a_weaviate_review,
+  'self-hosted-ai-starter-kit-review':                  a_self_hosted_ai_starter_kit_review,
+  'stable-diffusion-forge-review':                      a_stable_diffusion_forge_review,
+  'openllm-review':                                     a_openllm_review,
+  'blinko-review':                                      a_blinko_review,
+  'local-deep-research-review':                         a_local_deep_research_review,
+  'aiclient2api-review':                                a_aiclient2api_review,
+  'dynamo-review':                                      a_dynamo_review,
+  'lmdeploy-review':                                    a_lmdeploy_review,
+  'agentic-inbox-review':                               a_agentic_inbox_review,
 }

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال قابل للاستضافة الذاتية يشغّل نماذج لغة مفتوحة المصدر مثل DeepSeek وLlama خلف واجهة برمجية متوافقة مع OpenAI',
     ko: 'DeepSeek, Llama 같은 오픈소스 LLM을 OpenAI 호환 API로 제공하는 셀프호스팅 가능한 추론 서버',
   },
+  reviewSlug: 'openllm-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

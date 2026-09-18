@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'نسخة محسّنة من Stable Diffusion WebUI تركز على استدلال أسرع واستهلاك أقل لذاكرة الفيديو والموارد',
     ko: '더 빠른 추론과 낮은 VRAM·리소스 사용에 초점을 맞춘 Stable Diffusion WebUI의 최적화 포크',
   },
+  reviewSlug: 'stable-diffusion-forge-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

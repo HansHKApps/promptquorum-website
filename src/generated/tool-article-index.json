@@ -11,6 +11,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chroma-review",
         "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
         "url": "/power-local-llm/chroma-review",
@@ -56,33 +80,9 @@
         "url": "/local-llms/local-llm-hardware-guide-2026",
         "dateModified": "2026-09-16",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vane-review",
-        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
-        "url": "/power-local-llm/vane-review",
-        "dateModified": "2026-09-14",
-        "tier": "about"
       }
     ],
-    "totalCount": 265,
+    "totalCount": 269,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/lm-studio-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "localai-apexcreator-review",
-        "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
-        "url": "/power-local-llm/localai-apexcreator-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 138,
+    "totalCount": 139,
     "capped": true
   },
   "vLLM": {
@@ -179,6 +179,30 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openllm-review",
+        "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
+        "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -228,33 +252,9 @@
         "url": "/power-local-llm/github-copilot-cli-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpustack-review",
-        "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
-        "url": "/power-local-llm/gpustack-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kilo-code-review",
-        "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
-        "url": "/power-local-llm/kilo-code-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 81,
+    "totalCount": 85,
     "capped": true
   },
   "LocalAI": {
@@ -325,22 +325,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "ollama-review",
-        "title": "Ollama Review 2026: The One-Command Local LLM Runtime",
-        "url": "/power-local-llm/ollama-review",
-        "dateModified": "2026-09-12",
+        "slug": "aiclient2api-review",
+        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
+        "url": "/power-local-llm/aiclient2api-review",
+        "dateModified": "2026-09-19",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "obsidian-logseq-ai-plugins",
-        "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
-        "url": "/power-local-llm/obsidian-logseq-ai-plugins",
-        "dateModified": "2026-09-05",
+        "slug": "openllm-review",
+        "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
+        "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 14,
     "capped": true
   },
   "TensorRT-LLM": {
@@ -351,6 +351,14 @@
         "title": "TensorRT-LLM Explained: NVIDIA's GPU-Optimized Inference Engine (2026)",
         "url": "/power-local-llm/tensorrt-llm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -395,6 +403,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vla-models-robots-local-inference",
         "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
         "url": "/power-local-llm/vla-models-robots-local-inference",
@@ -410,7 +426,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 10,
     "capped": false
   },
   "MLC LLM": {
@@ -479,6 +495,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "gpustack-review",
         "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
         "url": "/power-local-llm/gpustack-review",
@@ -503,6 +527,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aiclient2api-review",
+        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
+        "url": "/power-local-llm/aiclient2api-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openllm-review",
+        "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
+        "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -510,7 +558,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 9,
     "capped": false
   },
   "ExLlamaV2": {
@@ -532,6 +580,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "double-local-llm-speed",
         "title": "How to Double Local LLM Speed: Optimization Techniques",
@@ -540,7 +596,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "KoboldCpp": {
@@ -749,6 +805,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "amd-gaia-review",
         "title": "AMD GAIA Review 2026: NPU-Accelerated Local AI Agents",
         "url": "/power-local-llm/amd-gaia-review",
@@ -810,17 +874,9 @@
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "logseq-copilot-review",
-        "title": "logseq-copilot Review 2026: Local-Model AI Chat Inside Logseq",
-        "url": "/power-local-llm/logseq-copilot-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
-    "totalCount": 135,
+    "totalCount": 136,
     "capped": true
   },
   "Atomic Chat": {
@@ -3011,6 +3067,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agentic-inbox-review",
+        "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
+        "url": "/power-local-llm/agentic-inbox-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "siyuan-review",
         "title": "SiYuan Review 2026: The Privacy-First, Block-Based Knowledge Base",
         "url": "/power-local-llm/siyuan-review",
@@ -3050,7 +3114,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Dify": {
@@ -3321,6 +3385,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "langchain-chatchat-review",
         "title": "Langchain-Chatchat Review 2026: Self-Hosted RAG and Agent Framework",
         "url": "/power-local-llm/langchain-chatchat-review",
@@ -3376,7 +3448,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "RAGFlow": {
@@ -3415,6 +3487,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-review",
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
@@ -3422,7 +3502,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "txtai": {
@@ -3434,6 +3514,14 @@
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -3452,7 +3540,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LangChain": {
@@ -3463,6 +3551,14 @@
         "title": "LangChain Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -3528,17 +3624,9 @@
         "url": "/power-local-llm/agent-zero-review",
         "dateModified": "2026-09-11",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "leon-ai-review",
-        "title": "Leon AI Review 2026: Features, Install, Alternatives",
-        "url": "/power-local-llm/leon-ai-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
       }
     ],
-    "totalCount": 37,
+    "totalCount": 39,
     "capped": true
   },
   "CrewAI": {
@@ -3931,6 +4019,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phoneclaw-review",
         "title": "PhoneClaw Review 2026: The On-Device iPhone AI Agent",
         "url": "/power-local-llm/phoneclaw-review",
@@ -3938,7 +4034,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "GPT Engineer": {
@@ -4796,7 +4892,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Ollama vision models": {
@@ -5609,6 +5705,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "diffusionbee-review",
         "title": "DiffusionBee Review (2026): Local Stable Diffusion for Mac",
         "url": "/power-local-llm/diffusionbee-review",
@@ -5670,17 +5774,9 @@
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stableswarmui-review",
-        "title": "SwarmUI Review (2026): The Multi-GPU Stable Diffusion Web UI",
-        "url": "/power-local-llm/stableswarmui-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "ComfyUI": {
@@ -5766,7 +5862,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -5777,6 +5873,14 @@
         "title": "AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -5842,17 +5946,9 @@
         "url": "/power-local-llm/stable-diffusion-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "animatediff-video-generation-guide-2026",
-        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
-        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Fooocus": {
@@ -5907,6 +6003,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "draw-things-review",
         "title": "Draw Things Review (2026): Free Offline Image AI for Mac & iOS",
         "url": "/power-local-llm/draw-things-review",
@@ -5922,7 +6026,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "StableSwarmUI": {
@@ -5947,6 +6051,14 @@
         "title": "ControlNet Review (2026): Structural Control for Stable Diffusion",
         "url": "/power-local-llm/controlnet-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -6014,7 +6126,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Real-ESRGAN": {
@@ -6121,6 +6233,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "karakeep-review",
         "title": "Karakeep Review 2026: Self-Hosted Bookmarks with AI Auto-Tagging",
         "url": "/power-local-llm/karakeep-review",
@@ -6134,17 +6254,9 @@
         "url": "/power-local-llm/bmo-chatbot-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "joplin-ai-agent-review",
-        "title": "Joplin AI Agent Review 2026: Local Models Inside Joplin",
-        "url": "/power-local-llm/joplin-ai-agent-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Copilot for Obsidian": {
@@ -6315,6 +6427,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "siyuan-review",
         "title": "SiYuan Review 2026: The Privacy-First, Block-Based Knowledge Base",
         "url": "/power-local-llm/siyuan-review",
@@ -6354,7 +6474,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "BMO Chatbot": {
@@ -6423,6 +6543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "karakeep-review",
         "title": "Karakeep Review 2026: Self-Hosted Bookmarks with AI Auto-Tagging",
         "url": "/power-local-llm/karakeep-review",
@@ -6446,7 +6574,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "BabyAGI": {
@@ -6458,6 +6586,14 @@
         "url": "/power-local-llm/babyagi-review-autonomous-agent",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -6476,7 +6612,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "MetaGPT": {
@@ -6685,6 +6821,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agentic-inbox-review",
+        "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
+        "url": "/power-local-llm/agentic-inbox-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
@@ -6692,7 +6836,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "goose": {
@@ -7153,6 +7297,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "exo-review",
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
@@ -7160,7 +7312,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Onyx": {
@@ -7183,6 +7335,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "karakeep-review",
         "title": "Karakeep Review 2026: Self-Hosted Bookmarks with AI Auto-Tagging",
         "url": "/power-local-llm/karakeep-review",
@@ -7190,7 +7350,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "PhoneClaw": {
@@ -7232,6 +7392,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-agent-framework-2026",
         "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
@@ -7264,7 +7432,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Docker Model Runner": {
@@ -7599,6 +7767,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aiclient2api-review",
+        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
+        "url": "/power-local-llm/aiclient2api-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "shell-gpt-review",
         "title": "shell-gpt (sgpt) Review: AI Shell Commands, One Keystroke Away",
         "url": "/power-local-llm/shell-gpt-review",
@@ -7623,6 +7807,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "openllm-review",
+        "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
+        "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "langfuse-review",
         "title": "Langfuse Review: Open-Source LLM Observability and Evals",
         "url": "/power-local-llm/langfuse-review",
@@ -7644,33 +7836,9 @@
         "url": "/power-local-llm/jan-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "txtai-embedded-vector-database-review",
-        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
-        "url": "/power-local-llm/txtai-embedded-vector-database-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 14,
     "capped": true
   },
   "multica": {
@@ -7682,9 +7850,17 @@
         "url": "/power-local-llm/multica-review",
         "dateModified": "2026-09-14",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agentic-inbox-review",
+        "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
+        "url": "/power-local-llm/agentic-inbox-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "nanobot": {
@@ -7695,6 +7871,56 @@
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
         "dateModified": "2026-09-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agentic-inbox-review",
+        "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
+        "url": "/power-local-llm/agentic-inbox-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Agentic Inbox": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "agentic-inbox-review",
+        "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
+        "url": "/power-local-llm/agentic-inbox-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "AIClient2API": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aiclient2api-review",
+        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
+        "url": "/power-local-llm/aiclient2api-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Blinko": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       }
     ],
@@ -7709,6 +7935,14 @@
         "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
         "url": "/power-local-llm/chroma-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -7774,17 +8008,9 @@
         "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "qdrant-review",
-        "title": "Qdrant Review 2026: The Self-Hosted Vector Database for RAG",
-        "url": "/power-local-llm/qdrant-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "cognee": {
@@ -7801,6 +8027,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "NVIDIA Dynamo": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Karakeep": {
     "articles": [
       {
@@ -7810,9 +8050,17 @@
         "url": "/power-local-llm/karakeep-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "KServe": {
@@ -7846,9 +8094,17 @@
         "url": "/power-local-llm/cognee-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Langfuse": {
@@ -7879,6 +8135,42 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "LMDeploy": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "dynamo-review",
+        "title": "NVIDIA Dynamo Review: Datacenter-Scale Inference Serving",
+        "url": "/power-local-llm/dynamo-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Local Deep Research": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-deep-research-review",
+        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
+        "url": "/power-local-llm/local-deep-research-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Meetily": {
@@ -7931,6 +8223,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "txtai-embedded-vector-database-review",
         "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
@@ -7954,7 +8254,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "oMLX": {
@@ -7971,8 +8271,54 @@
     "totalCount": 1,
     "capped": false
   },
+  "OpenLLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openllm-review",
+        "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
+        "url": "/power-local-llm/openllm-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Plano": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aiclient2api-review",
+        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
+        "url": "/power-local-llm/aiclient2api-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "blinko-review",
+        "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
+        "url": "/power-local-llm/blinko-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "lmdeploy-review",
+        "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
+        "url": "/power-local-llm/lmdeploy-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
+        "tier": "mentioned"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "chroma-review",
@@ -8020,41 +8366,9 @@
         "url": "/power-local-llm/milvus-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mcp-vs-api-explained",
-        "title": "MCP vs. API Explained: How the Model Context Protocol Relates to Traditional APIs",
-        "url": "/local-llms/mcp-vs-api-explained",
-        "dateModified": "2026-09-14",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "multica-review",
-        "title": "Multica Review 2026: A Workspace for AI Coding Agents",
-        "url": "/power-local-llm/multica-review",
-        "dateModified": "2026-09-14",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 151,
+    "totalCount": 155,
     "capped": true
   },
   "Qdrant": {
@@ -8065,6 +8379,22 @@
         "title": "Qdrant Review 2026: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
         "tier": "about"
       },
       {
@@ -8122,29 +8452,21 @@
         "url": "/local-llms/best-vector-database-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
-        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 24,
     "capped": true
   },
   "Self-hosted AI Starter Kit": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "self-hosted-ai-starter-kit-review",
+        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
+        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "n8n-review",
@@ -8154,7 +8476,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "SiYuan": {
@@ -8175,6 +8497,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
@@ -8182,7 +8512,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "vllm-mlx": {
@@ -8201,6 +8531,14 @@
   },
   "Weaviate": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "weaviate-review",
+        "title": "Weaviate Review 2026: The Self-Hostable Vector Database for RAG",
+        "url": "/power-local-llm/weaviate-review",
+        "dateModified": "2026-09-19",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "anythingllm-review",
@@ -8272,17 +8610,9 @@
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
-        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
-        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
-        "dateModified": "2026-09-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   }
 }

@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'قاعدة بيانات متجهة مفتوحة المصدر تجمع بين البحث المتجه والتصفية البنيوية لتطبيقات الذكاء الاصطناعي وRAG',
     ko: '벡터 검색과 구조화된 필터링을 결합한 AI·RAG 애플리케이션용 오픈소스 벡터 데이터베이스',
   },
+  reviewSlug: 'weaviate-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

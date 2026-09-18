@@ -469,6 +469,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'chroma-review',
   'karakeep-review',
   'omlx-review',
+  // FeatureAppPost batch 2 (next 10 of the 2026-09-18 directory additions) — 2026-09-19
+  'weaviate-review',
+  'self-hosted-ai-starter-kit-review',
+  'stable-diffusion-forge-review',
+  'openllm-review',
+  'blinko-review',
+  'local-deep-research-review',
+  'aiclient2api-review',
+  'dynamo-review',
+  'lmdeploy-review',
+  'agentic-inbox-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

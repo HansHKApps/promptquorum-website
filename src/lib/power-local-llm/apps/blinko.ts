@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق ملاحظات مفتوح المصدر ومستضاف ذاتيًا، يوفر بحثًا باللغة الطبيعية مدعومًا بتقنية RAG عبر ملاحظاتك الخاصة',
     ko: 'RAG 기반 자연어 검색으로 자신의 메모를 탐색할 수 있는 오픈소스 셀프호스팅 메모 앱',
   },
+  reviewSlug: 'blinko-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
