@@ -38,6 +38,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'pocket-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not yet independently verified beyond the vendor's own claims
+  founderReviewedDate: '2026-09-13', // matches the hardware-field verification note above
   founder: {
     who: {
       en: 'Faisal, developer',
