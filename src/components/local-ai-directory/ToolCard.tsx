@@ -13,7 +13,8 @@ import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL, INTERFACE_LABEL, type CategoryG
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
 import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
-import { StarIcon, CpuIcon, PlugIcon, TagIcon, ClockIcon, ChevronRightIcon } from './icons'
+import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
+import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -283,18 +284,9 @@ export function ToolCard({
           </div>
 
           {lastUpdatedLabel && (
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation()
-                onOpen(app.slug)
-              }}
-              aria-label={t('cardLastUpdatedAriaLabel', lang)}
-              className="inline-flex w-fit items-center gap-1 rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-[11px] text-text-secondary hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
-            >
-              <ClockIcon className="h-3 w-3 text-text-secondary/60" />
-              {t('cardLastUpdatedTemplate', lang, { date: lastUpdatedLabel })}
-            </button>
+            <div onClick={stop}>
+              <LastUpdatedBadge lang={lang} date={lastUpdatedLabel} />
+            </div>
           )}
 
           {review && (

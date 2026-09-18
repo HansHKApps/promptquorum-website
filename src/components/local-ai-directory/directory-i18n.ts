@@ -326,6 +326,17 @@ const DIR_UI = {
     en: 'Last updated', de: 'Zuletzt aktualisiert', fr: 'Dernière mise à jour', ja: '最終更新日',
     zh: '最后更新日期', es: 'Última actualización', pt: 'Última atualização', ar: 'آخر تحديث', ko: '마지막 업데이트',
   },
+  lastUpdatedTooltip: {
+    en: 'This is the date PromptQuorum last verified this listing.',
+    de: 'An diesem Datum hat PromptQuorum diesen Eintrag zuletzt geprüft.',
+    fr: 'Date à laquelle PromptQuorum a vérifié cette fiche pour la dernière fois.',
+    ja: 'PromptQuorumがこの情報を最後に確認した日付です。',
+    zh: '这是 PromptQuorum 最后一次核实该条目的日期。',
+    es: 'Fecha en la que PromptQuorum verificó por última vez esta ficha.',
+    pt: 'Data em que a PromptQuorum verificou esta ficha pela última vez.',
+    ar: 'هذا هو التاريخ الذي تحققت فيه PromptQuorum من هذا الإدراج آخر مرة.',
+    ko: 'PromptQuorum이 이 항목을 마지막으로 확인한 날짜입니다.',
+  },
   bestFor: { en: 'Best for:', de: 'Am besten für:', fr: 'Idéal pour :', ja: '最適な用途:', zh: '最适合：', es: 'Ideal para:', pt: 'Ideal para:', ar: 'الأنسب لـ:', ko: '적합한 용도:' },
   limits: { en: 'Limits:', de: 'Grenzen:', fr: 'Limites :', ja: '制限:', zh: '局限性：', es: 'Limitaciones:', pt: 'Limitações:', ar: 'القيود:', ko: '한계:' },
   claimEntryTemplate: {

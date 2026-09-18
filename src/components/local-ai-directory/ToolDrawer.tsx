@@ -23,6 +23,7 @@ import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
 import { featureReviewUrl } from './reviewLinks'
 import { LicenseInfoModal } from './LicenseInfoModal'
+import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { t } from './directory-i18n'
 import Link from 'next/link'
 
@@ -331,7 +332,14 @@ export function ToolDrawer({
                     }
                   />
                   <DetailRow label={t('detailAdded', lang)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
-                  <DetailRow label={t('detailLastVerified', lang)} value={app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null} />
+                  <DetailRow
+                    label={t('detailLastVerified', lang)}
+                    value={
+                      app.lastVerifiedDate ? (
+                        <LastUpdatedBadge lang={lang} date={formatDisplayDate(app.lastVerifiedDate, lang)} variant="plain" />
+                      ) : null
+                    }
+                  />
                 </dl>
               </section>
 
