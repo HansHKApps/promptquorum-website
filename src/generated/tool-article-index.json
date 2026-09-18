@@ -50,6 +50,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide-2026",
+        "title": "Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide-2026",
+        "dateModified": "2026-09-16",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "litellm-review",
         "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/vane-review",
         "dateModified": "2026-09-14",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review (2026): Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
       }
     ],
     "totalCount": 265,
@@ -101,6 +101,14 @@
         "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-hardware-guide-2026",
+        "title": "Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared",
+        "url": "/local-llms/local-llm-hardware-guide-2026",
+        "dateModified": "2026-09-16",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "localai-apexcreator-review",
         "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
         "url": "/power-local-llm/localai-apexcreator-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
