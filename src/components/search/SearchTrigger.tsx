@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations } from '@/translations'
 import { SearchModal } from './SearchModal'
+import { CompanionSearchModal } from './CompanionSearchModal'
 
 export function SearchTrigger() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,7 +50,11 @@ export function SearchTrigger() {
         <kbd className="text-[11px] text-gray-400 border border-gray-200 rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
       </button>
 
-      <SearchModal isOpen={isOpen} onClose={() => setIsOpen(false)} lang={lang} />
+      {/* German locale gets Roland's companion Q&A tool; every other locale
+          keeps the classic Fuse.js search unchanged. */}
+      {lang === 'de'
+        ? <CompanionSearchModal isOpen={isOpen} onClose={() => setIsOpen(false)} lang={lang} />
+        : <SearchModal isOpen={isOpen} onClose={() => setIsOpen(false)} lang={lang} />}
     </>
   )
 }
