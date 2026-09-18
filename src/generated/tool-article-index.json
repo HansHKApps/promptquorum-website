@@ -7540,5 +7540,459 @@
     ],
     "totalCount": 1,
     "capped": false
+  },
+  "Chroma": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-rag-2026",
+        "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
+        "url": "/local-llms/local-rag-2026",
+        "dateModified": "2026-08-31",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-rag-tools",
+        "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
+        "url": "/local-llms/best-local-rag-tools",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 12,
+    "capped": true
+  },
+  "KServe": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "title": "Enterprise LLM Inference Servers 2026: vLLM vs TGI vs NVIDIA NIM vs Ollama",
+        "url": "/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Langfuse": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "best-llm-observability-tools-2026",
+        "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
+        "url": "/local-llms/best-llm-observability-tools-2026",
+        "dateModified": "2026-08-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Milvus": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-rag-2026",
+        "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
+        "url": "/local-llms/local-rag-2026",
+        "dateModified": "2026-08-31",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-rag-tools",
+        "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
+        "url": "/local-llms/best-local-rag-tools",
+        "dateModified": "2026-08-28",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 5,
+    "capped": false
+  },
+  "Plano": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "mcp-vs-api-explained",
+        "title": "MCP vs. API Explained: How the Model Context Protocol Relates to Traditional APIs",
+        "url": "/local-llms/mcp-vs-api-explained",
+        "dateModified": "2026-09-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "multica-review",
+        "title": "Multica Review 2026: A Workspace for AI Coding Agents",
+        "url": "/power-local-llm/multica-review",
+        "dateModified": "2026-09-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "vane-review",
+        "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
+        "url": "/power-local-llm/vane-review",
+        "dateModified": "2026-09-14",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "unsloth-review",
+        "title": "Unsloth Review 2026: Free Fine-Tuning for LLMs, Images & Audio",
+        "url": "/power-local-llm/unsloth-review",
+        "dateModified": "2026-09-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review (2026): Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-on-device-review",
+        "title": "AI on Device Review (2026): A $4.99 Apple Intelligence-Only App",
+        "url": "/power-local-llm/ai-on-device-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "atomic-agent-review",
+        "title": "Atomic Agent Review: Local AI Agent CLI, Free & MIT-Licensed",
+        "url": "/power-local-llm/atomic-agent-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "copilot-for-obsidian-review",
+        "title": "Copilot for Obsidian Review 2026: Local-Model AI Agent for Your Vault",
+        "url": "/power-local-llm/copilot-for-obsidian-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "diffusionbee-review",
+        "title": "DiffusionBee Review (2026): Local Stable Diffusion for Mac",
+        "url": "/power-local-llm/diffusionbee-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 144,
+    "capped": true
+  },
+  "Qdrant": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "superagi-review",
+        "title": "SuperAGI Review 2026: Features, Pricing, Is It Maintained?",
+        "url": "/power-local-llm/superagi-review",
+        "dateModified": "2026-09-07",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chat-with-1000-pdfs-locally",
+        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
+        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "n8n-review",
+        "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
+        "url": "/power-local-llm/n8n-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 19,
+    "capped": true
+  },
+  "Self-hosted AI Starter Kit": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "n8n-review",
+        "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
+        "url": "/power-local-llm/n8n-review",
+        "dateModified": "2026-09-12",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Stable Diffusion WebUI Forge": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "automatic1111-review",
+        "title": "AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained",
+        "url": "/power-local-llm/automatic1111-review",
+        "dateModified": "2026-09-06",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Weaviate": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-review",
+        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
+        "url": "/power-local-llm/anythingllm-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "h2ogpt-review-2026",
+        "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
+        "url": "/power-local-llm/h2ogpt-review-2026",
+        "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-vector-database-2026",
+        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
+        "url": "/local-llms/best-vector-database-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
+        "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "title": "Enterprise Chatbot Deployment with Local LLMs: Internal Helpdesk & HR Bots (2026)",
+        "url": "/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 13,
+    "capped": true
   }
 }

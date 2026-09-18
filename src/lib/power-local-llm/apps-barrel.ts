@@ -185,6 +185,57 @@ import { app as app_litellm } from './apps/litellm'
 import { app as app_multica } from './apps/multica'
 import { app as app_nanobot } from './apps/nanobot'
 import { app as app_vane } from './apps/vane'
+import { app as app_agentic_inbox } from './apps/agentic-inbox'
+import { app as app_aiclient2api } from './apps/aiclient2api'
+import { app as app_baserow } from './apps/baserow'
+import { app as app_blinko } from './apps/blinko'
+import { app as app_candle_vllm } from './apps/candle-vllm'
+import { app as app_chroma } from './apps/chroma'
+import { app as app_claude_code_local } from './apps/claude-code-local'
+import { app as app_clawrouter } from './apps/clawrouter'
+import { app as app_cognee } from './apps/cognee'
+import { app as app_dreamserver } from './apps/dreamserver'
+import { app as app_dynamo } from './apps/dynamo'
+import { app as app_farfalle } from './apps/farfalle'
+import { app as app_funclip } from './apps/funclip'
+import { app as app_intentkit } from './apps/intentkit'
+import { app as app_izwi } from './apps/izwi'
+import { app as app_karakeep } from './apps/karakeep'
+import { app as app_kserve } from './apps/kserve'
+import { app as app_langchain_chatchat } from './apps/langchain-chatchat'
+import { app as app_langfuse } from './apps/langfuse'
+import { app as app_little_coder } from './apps/little-coder'
+import { app as app_lmdeploy } from './apps/lmdeploy'
+import { app as app_local_deep_research } from './apps/local-deep-research'
+import { app as app_longmemory } from './apps/longmemory'
+import { app as app_lorax } from './apps/lorax'
+import { app as app_lucebox } from './apps/lucebox'
+import { app as app_meetily } from './apps/meetily'
+import { app as app_milvus } from './apps/milvus'
+import { app as app_mission_control } from './apps/mission-control'
+import { app as app_mlx_serve } from './apps/mlx-serve'
+import { app as app_mlxcel } from './apps/mlxcel'
+import { app as app_ollitert } from './apps/ollitert'
+import { app as app_omlx } from './apps/omlx'
+import { app as app_openai_edge_tts } from './apps/openai-edge-tts'
+import { app as app_openllm } from './apps/openllm'
+import { app as app_parlor } from './apps/parlor'
+import { app as app_plano } from './apps/plano'
+import { app as app_qdrant } from './apps/qdrant'
+import { app as app_rapid_mlx } from './apps/rapid-mlx'
+import { app as app_self_hosted_ai_starter_kit } from './apps/self-hosted-ai-starter-kit'
+import { app as app_shimmy } from './apps/shimmy'
+import { app as app_sidekick } from './apps/sidekick'
+import { app as app_siyuan } from './apps/siyuan'
+import { app as app_stable_diffusion_forge } from './apps/stable-diffusion-forge'
+import { app as app_surf } from './apps/surf'
+import { app as app_swiftlm } from './apps/swiftlm'
+import { app as app_translate_books_with_llms } from './apps/translate-books-with-llms'
+import { app as app_turbo_fieldfare } from './apps/turbo-fieldfare'
+import { app as app_vllm_mlx } from './apps/vllm-mlx'
+import { app as app_weaviate } from './apps/weaviate'
+import { app as app_web_search_mcp } from './apps/web-search-mcp'
+import { app as app_willow_inference_server } from './apps/willow-inference-server'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -360,6 +411,57 @@ export const localAiApps: ToolRecord[] = [
   app_multica,
   app_nanobot,
   app_vane,
+  app_agentic_inbox,
+  app_aiclient2api,
+  app_baserow,
+  app_blinko,
+  app_candle_vllm,
+  app_chroma,
+  app_claude_code_local,
+  app_clawrouter,
+  app_cognee,
+  app_dreamserver,
+  app_dynamo,
+  app_farfalle,
+  app_funclip,
+  app_intentkit,
+  app_izwi,
+  app_karakeep,
+  app_kserve,
+  app_langchain_chatchat,
+  app_langfuse,
+  app_little_coder,
+  app_lmdeploy,
+  app_local_deep_research,
+  app_longmemory,
+  app_lorax,
+  app_lucebox,
+  app_meetily,
+  app_milvus,
+  app_mission_control,
+  app_mlx_serve,
+  app_mlxcel,
+  app_ollitert,
+  app_omlx,
+  app_openai_edge_tts,
+  app_openllm,
+  app_parlor,
+  app_plano,
+  app_qdrant,
+  app_rapid_mlx,
+  app_self_hosted_ai_starter_kit,
+  app_shimmy,
+  app_sidekick,
+  app_siyuan,
+  app_stable_diffusion_forge,
+  app_surf,
+  app_swiftlm,
+  app_translate_books_with_llms,
+  app_turbo_fieldfare,
+  app_vllm_mlx,
+  app_weaviate,
+  app_web_search_mcp,
+  app_willow_inference_server,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
