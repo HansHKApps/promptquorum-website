@@ -869,6 +869,11 @@
     "urlSlug": "aiclient2api-review",
     "url": "/power-local-llm/aiclient2api-review"
   },
+  "baserow": {
+    "cluster": "power-local-llm",
+    "urlSlug": "baserow-review",
+    "url": "/power-local-llm/baserow-review"
+  },
   "blinko": {
     "cluster": "power-local-llm",
     "urlSlug": "blinko-review",
@@ -879,20 +884,45 @@
     "urlSlug": "chroma-review",
     "url": "/power-local-llm/chroma-review"
   },
+  "clawrouter": {
+    "cluster": "power-local-llm",
+    "urlSlug": "clawrouter-review",
+    "url": "/power-local-llm/clawrouter-review"
+  },
   "cognee": {
     "cluster": "power-local-llm",
     "urlSlug": "cognee-review",
     "url": "/power-local-llm/cognee-review"
+  },
+  "dreamserver": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dreamserver-review",
+    "url": "/power-local-llm/dreamserver-review"
   },
   "dynamo": {
     "cluster": "power-local-llm",
     "urlSlug": "dynamo-review",
     "url": "/power-local-llm/dynamo-review"
   },
+  "funclip": {
+    "cluster": "power-local-llm",
+    "urlSlug": "funclip-review",
+    "url": "/power-local-llm/funclip-review"
+  },
+  "intentkit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "intentkit-review",
+    "url": "/power-local-llm/intentkit-review"
+  },
   "karakeep": {
     "cluster": "power-local-llm",
     "urlSlug": "karakeep-review",
     "url": "/power-local-llm/karakeep-review"
+  },
+  "kserve": {
+    "cluster": "power-local-llm",
+    "urlSlug": "kserve-review",
+    "url": "/power-local-llm/kserve-review"
   },
   "langchain-chatchat": {
     "cluster": "power-local-llm",
@@ -924,6 +954,11 @@
     "urlSlug": "milvus-review",
     "url": "/power-local-llm/milvus-review"
   },
+  "mission-control": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mission-control-review",
+    "url": "/power-local-llm/mission-control-review"
+  },
   "omlx": {
     "cluster": "power-local-llm",
     "urlSlug": "omlx-review",
@@ -933,6 +968,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "openllm-review",
     "url": "/power-local-llm/openllm-review"
+  },
+  "plano": {
+    "cluster": "power-local-llm",
+    "urlSlug": "plano-review",
+    "url": "/power-local-llm/plano-review"
   },
   "qdrant": {
     "cluster": "power-local-llm",
@@ -944,6 +984,11 @@
     "urlSlug": "self-hosted-ai-starter-kit-review",
     "url": "/power-local-llm/self-hosted-ai-starter-kit-review"
   },
+  "shimmy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "shimmy-review",
+    "url": "/power-local-llm/shimmy-review"
+  },
   "siyuan": {
     "cluster": "power-local-llm",
     "urlSlug": "siyuan-review",
@@ -953,6 +998,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "stable-diffusion-forge-review",
     "url": "/power-local-llm/stable-diffusion-forge-review"
+  },
+  "turbo-fieldfare": {
+    "cluster": "power-local-llm",
+    "urlSlug": "turbo-fieldfare-review",
+    "url": "/power-local-llm/turbo-fieldfare-review"
   },
   "weaviate": {
     "cluster": "power-local-llm",

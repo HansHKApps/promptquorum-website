@@ -11458,6 +11458,186 @@
         "ko"
       ],
       "images": []
+    },
+    "plano-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "turbo-fieldfare-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "clawrouter-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "dreamserver-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "intentkit-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "funclip-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "mission-control-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "kserve-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "baserow-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "shimmy-review": {
+      "dateModified": "2026-09-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {

@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ko: '내장 API 엔드포인트를 갖춘 셀프호스팅 오픈소스 에이전트 클러스터로, 협업하는 AI 에이전트 팀을 구축하고 운영',
   },
   mcpSupport: true, // repo's GitHub navigation lists an MCP Registry for integrating external tools — verified 2026-09-18
+  reviewSlug: 'intentkit-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

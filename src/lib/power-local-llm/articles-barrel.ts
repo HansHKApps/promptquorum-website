@@ -290,6 +290,16 @@ import { article as a_aiclient2api_review } from './articles/aiclient2api-review
 import { article as a_dynamo_review } from './articles/dynamo-review'
 import { article as a_lmdeploy_review } from './articles/lmdeploy-review'
 import { article as a_agentic_inbox_review } from './articles/agentic-inbox-review'
+import { article as a_plano_review } from './articles/plano-review'
+import { article as a_turbo_fieldfare_review } from './articles/turbo-fieldfare-review'
+import { article as a_clawrouter_review } from './articles/clawrouter-review'
+import { article as a_dreamserver_review } from './articles/dreamserver-review'
+import { article as a_intentkit_review } from './articles/intentkit-review'
+import { article as a_funclip_review } from './articles/funclip-review'
+import { article as a_mission_control_review } from './articles/mission-control-review'
+import { article as a_kserve_review } from './articles/kserve-review'
+import { article as a_baserow_review } from './articles/baserow-review'
+import { article as a_shimmy_review } from './articles/shimmy-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -621,4 +631,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'dynamo-review':                                      a_dynamo_review,
   'lmdeploy-review':                                    a_lmdeploy_review,
   'agentic-inbox-review':                               a_agentic_inbox_review,
+  'plano-review':                                        a_plano_review,
+  'turbo-fieldfare-review':                              a_turbo_fieldfare_review,
+  'clawrouter-review':                                   a_clawrouter_review,
+  'dreamserver-review':                                  a_dreamserver_review,
+  'intentkit-review':                                    a_intentkit_review,
+  'funclip-review':                                      a_funclip_review,
+  'mission-control-review':                              a_mission_control_review,
+  'kserve-review':                                       a_kserve_review,
+  'baserow-review':                                      a_baserow_review,
+  'shimmy-review':                                       a_shimmy_review,
 }

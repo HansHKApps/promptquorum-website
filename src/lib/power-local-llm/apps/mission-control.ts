@@ -37,5 +37,6 @@ export const app: ToolRecord = {
     ko: 'Claude Code, Codex, OpenClaw 등 여러 에이전트 런타임에 걸쳐 작업을 배정하고 실행을 검토하며 비용을 추적하는 셀프호스팅 제어 플레인',
   },
   mcpSupport: true, // README lists "MCP server" among its own interfaces (Web UI, CLI, MCP server, REST API, WebSocket, SSE) — verified 2026-09-18
+  reviewSlug: 'mission-control-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

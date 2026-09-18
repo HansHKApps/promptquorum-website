@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'منصة مستضافة ذاتيًا وموحدة لخدمة النماذج، لنشر نماذج الذكاء الاصطناعي التوليدية والتنبؤية على نطاق واسع باستخدام Kubernetes',
     ko: 'Kubernetes 위에서 생성형 및 예측형 AI 모델을 대규모로 배포하는 표준화된 셀프호스팅 모델 서빙 플랫폼',
   },
+  reviewSlug: 'kserve-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

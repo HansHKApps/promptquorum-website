@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال متوافق مع OpenAI مبني بلغة Rust الخالصة في ملف تنفيذي واحد، يقدم نماذج GGUF وSafeTensors المحلية دون الحاجة إلى Python أو llama.cpp',
     ko: 'Python이나 llama.cpp 없이 로컬 GGUF·SafeTensors 모델을 제공하는, 순수 Rust로 작성된 단일 바이너리 OpenAI 호환 추론 서버',
   },
+  reviewSlug: 'shimmy-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
