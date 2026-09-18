@@ -4,19 +4,52 @@
 // the image to public/images/{cluster}-hub-overview-hero-{lang}.webp.
 // Usage: node scripts/gen-hub-heroes.mjs (requires the dev server running on :3055)
 
+import fs from 'node:fs'
+
 const BASE = 'http://localhost:3055';
 
+// The power-local-llm hub footer states the directory's current tool count.
+// `apps-barrel.ts` is TypeScript with extensionless relative imports, which a
+// plain Node ESM script can't resolve without a bundler/loader (verified: a
+// native `import()` of the .ts file — even with --experimental-strip-types —
+// fails on `./apps/ollama` with no extension). So instead of hardcoding the
+// number, this reads the same file `TOTAL_TOOL_COUNT = localAiApps.length` is
+// derived from and counts the array entries directly — self-updating as long
+// as apps-barrel.ts keeps one bare identifier per line inside that array
+// literal. If this ever throws, hardcode the real count as a fallback and
+// re-verify it against TOTAL_TOOL_COUNT before running.
+function getPowerLocalLlmToolCount() {
+  const content = fs.readFileSync('src/lib/power-local-llm/apps-barrel.ts', 'utf-8');
+  const m = content.match(/export const localAiApps:\s*ToolRecord\[\]\s*=\s*\[([\s\S]*?)\n\]/);
+  if (!m) throw new Error('gen-hub-heroes: could not find localAiApps array in apps-barrel.ts — hardcode the tool count manually and re-verify against TOTAL_TOOL_COUNT');
+  const entries = m[1].split('\n').map(s => s.trim()).filter(s => s && !s.startsWith('//'));
+  if (entries.length < 1) throw new Error('gen-hub-heroes: parsed 0 tools from apps-barrel.ts — aborting rather than writing a bogus count');
+  return entries.length;
+}
+
+const TOOL_COUNT = getPowerLocalLlmToolCount();
+
+// NOTE: /api/hero-image now rejects any spec whose rendered body content
+// (bullets/table/callout, or — with none of those — the subtitle) falls
+// under a per-language char floor (see MIN_BODY_CHARS_* in the route), added
+// after these hub heroes were first generated to stop near-empty hero cards.
+// The original short subtitles here (e.g. "Guides & Comparisons by Use
+// Case") are well under that floor, so each power-local-llm subtitle below
+// is expanded with real, factual elaboration (the same use-case categories
+// already named in the footer) purely so the regenerated image has a
+// non-empty body — this is longer than the site's actual UI copy for this
+// hub and is not meant to match it verbatim.
 const HUBS = {
   'power-local-llm': {
-    en: { title: 'Local LLM Software', subtitle: 'Guides & Comparisons by Use Case', footer: 'Coding, RAG, agents, mobile — 88-tool directory' },
-    de: { title: 'Lokale LLM-Software', subtitle: 'Guides und Vergleiche nach Anwendungsfall', footer: 'Coding, RAG, Agenten, Mobile — 88 Tools' },
-    fr: { title: 'Logiciels LLM Locaux', subtitle: "Guides et Comparatifs par Cas d'Usage", footer: 'Code, RAG, agents, mobile — 88 outils' },
-    ja: { title: 'ローカルLLMソフトウェア', subtitle: '用途別ガイドと比較', footer: 'コーディング・RAG・エージェント — 88ツール' },
-    zh: { title: '本地 LLM 软件', subtitle: '按用例分类的指南与对比', footer: '编码、RAG、代理 — 88 款工具目录' },
-    es: { title: 'Software LLM Local', subtitle: 'Guías y Comparativas por Caso de Uso', footer: 'Código, RAG, agentes — 88 herramientas' },
-    pt: { title: 'Software LLM Local', subtitle: 'Guias e Comparativos por Caso de Uso', footer: 'Código, RAG, agentes — 88 ferramentas' },
-    ar: { title: 'برمجيات LLM المحلية', subtitle: 'أدلة ومقارنات حسب حالة الاستخدام', footer: 'البرمجة، RAG، الوكلاء — 88 أداة' },
-    ko: { title: '로컬 LLM 소프트웨어', subtitle: '용도별 가이드와 비교', footer: '코딩·RAG·에이전트 — 88개 도구' },
+    en: { title: 'Local LLM Software', subtitle: 'Guides & Comparisons by Use Case — coding assistants, RAG stacks, agent frameworks, and mobile runtimes, each compared by hardware needs, licensing, and offline support so you can pick the right local LLM tool for your workflow.', footer: `Coding, RAG, agents, mobile — ${TOOL_COUNT}-tool directory` },
+    de: { title: 'Lokale LLM-Software', subtitle: 'Guides und Vergleiche nach Anwendungsfall — Coding-Assistenten, RAG-Stacks, Agenten-Frameworks und mobile Runtimes, jeweils verglichen nach Hardwarebedarf, Lizenz und Offline-Fähigkeit, damit du das passende lokale LLM-Tool für deinen Workflow findest.', footer: `Coding, RAG, Agenten, Mobile — ${TOOL_COUNT} Tools` },
+    fr: { title: 'Logiciels LLM Locaux', subtitle: "Guides et comparatifs par cas d'usage — assistants de code, piles RAG, frameworks d'agents et runtimes mobiles, comparés selon les besoins matériels, la licence et le fonctionnement hors ligne pour choisir le bon outil LLM local.", footer: `Code, RAG, agents, mobile — ${TOOL_COUNT} outils` },
+    ja: { title: 'ローカルLLMソフトウェア', subtitle: '用途別ガイドと比較 — コーディング支援、RAGスタック、エージェントフレームワーク、モバイル対応ランタイムをハードウェア要件・ライセンス・オフライン対応で比較し、ワークフローに合ったローカルLLMツールを選べます。', footer: `コーディング・RAG・エージェント — ${TOOL_COUNT}ツール` },
+    zh: { title: '本地 LLM 软件', subtitle: '按用例分类的指南与对比 — 涵盖编码助手、RAG检索增强技术栈、多步骤代理框架和移动端运行时，按硬件需求、许可协议和离线支持等维度进行详细对比，帮助你为工作流选择合适的本地LLM工具。', footer: `编码、RAG、代理 — ${TOOL_COUNT} 款工具目录` },
+    es: { title: 'Software LLM Local', subtitle: 'Guías y comparativas por caso de uso — asistentes de código, stacks RAG, frameworks de agentes y runtimes móviles, comparados por requisitos de hardware, licencia y soporte sin conexión para elegir la herramienta LLM local adecuada.', footer: `Código, RAG, agentes — ${TOOL_COUNT} herramientas` },
+    pt: { title: 'Software LLM Local', subtitle: 'Guias e comparativos por caso de uso — assistentes de código, stacks RAG, frameworks de agentes e runtimes móveis, comparados por requisitos de hardware, licença e suporte offline para escolher a ferramenta LLM local certa.', footer: `Código, RAG, agentes — ${TOOL_COUNT} ferramentas` },
+    ar: { title: 'برمجيات LLM المحلية', subtitle: 'أدلة ومقارنات حسب حالة الاستخدام — مساعدات ترميز، وحزم RAG لاسترجاع المعلومات، وأطر عمل للوكلاء متعددة الخطوات، وبيئات تشغيل مخصّصة للجوال، تمت مقارنتها من حيث متطلبات الجهاز والترخيص ومدى الدعم دون اتصال بالإنترنت، لاختيار أداة LLM المحلية المناسبة لسير عملك.', footer: `البرمجة، RAG، الوكلاء — ${TOOL_COUNT} أداة` },
+    ko: { title: '로컬 LLM 소프트웨어', subtitle: '용도별 가이드와 비교 — 코딩 어시스턴트, RAG 스택, 에이전트 프레임워크, 모바일 런타임을 하드웨어 요구사항·라이선스·오프라인 지원 기준으로 비교해 워크플로에 맞는 로컬 LLM 도구를 고를 수 있습니다.', footer: `코딩·RAG·에이전트 — ${TOOL_COUNT}개 도구` },
   },
   'local-llms': {
     en: { title: 'Best Local LLMs', subtitle: 'Ollama, LM Studio, Hardware & VRAM Guide', footer: 'Run Llama 3.2 3B or Qwen3 4B on 8 GB RAM in under 10 min' },
