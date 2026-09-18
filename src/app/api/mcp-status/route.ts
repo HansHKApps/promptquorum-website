@@ -5,14 +5,20 @@
 import { NextResponse } from 'next/server'
 import { getMcpUsageSnapshot } from '@/lib/mcp/usage'
 
-// Must never be cached — this reflects live counter state. The actual
-// no-store Cache-Control comes from next.config.ts's headers() (config-level
-// headers win over anything set here, and the repo's own /api/og and
-// /build-info.json overrides already establish that as the pattern) —
-// force-dynamic here just stops Next from trying to prerender this route
-// as static output in the first place.
+// Must never be cached — this reflects live counter state. Per Vercel's own
+// docs (Cache-Control in Next.js App Router), the reliable mechanism is the
+// Response object's own headers, not next.config.ts alone — the earlier
+// next.config.ts override (still present, harmless as a backup) did not
+// take effect against real production for this dynamic route, confirmed by
+// testing against the live URL, not just local `next start`.
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
-  return NextResponse.json(await getMcpUsageSnapshot())
+  return NextResponse.json(await getMcpUsageSnapshot(), {
+    headers: {
+      'Cache-Control': 'no-store',
+      'CDN-Cache-Control': 'no-store',
+      'Vercel-CDN-Cache-Control': 'no-store',
+    },
+  })
 }

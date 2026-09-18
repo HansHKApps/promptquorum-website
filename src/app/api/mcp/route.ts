@@ -127,4 +127,19 @@ const handler = createMcpHandler(
   }
 )
 
-export { handler as GET, handler as POST }
+// mcp-handler doesn't let us pass response headers through its own options,
+// and next.config.ts's headers() override for this path did not take effect
+// against real production (confirmed by testing the live URL, not just
+// `next start`) — Vercel's docs point at the Response object itself as the
+// reliable mechanism, so wrap the handler to add it directly. Every call is
+// a live tool invocation or protocol handshake; none of it is cacheable.
+async function withNoStore(request: Request): Promise<Response> {
+  const response = await handler(request)
+  const headers = new Headers(response.headers)
+  headers.set('Cache-Control', 'no-store')
+  headers.set('CDN-Cache-Control', 'no-store')
+  headers.set('Vercel-CDN-Cache-Control', 'no-store')
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers })
+}
+
+export { withNoStore as GET, withNoStore as POST }
