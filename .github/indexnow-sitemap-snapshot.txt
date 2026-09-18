@@ -315,6 +315,7 @@ https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/chatterbox-vs-elevenlabs
 https://www.promptquorum.com/power-local-llm/chatty-mini-review
 https://www.promptquorum.com/power-local-llm/chroma-review
+https://www.promptquorum.com/power-local-llm/claude-code-local-review
 https://www.promptquorum.com/power-local-llm/clawrouter-review
 https://www.promptquorum.com/power-local-llm/cline-review
 https://www.promptquorum.com/power-local-llm/codegpt-review
@@ -352,6 +353,7 @@ https://www.promptquorum.com/power-local-llm/enterprise-llm-inference-servers-vl
 https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide
 https://www.promptquorum.com/power-local-llm/exllamav2-explained
 https://www.promptquorum.com/power-local-llm/exo-review
+https://www.promptquorum.com/power-local-llm/farfalle-review
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
@@ -392,6 +394,7 @@ https://www.promptquorum.com/power-local-llm/letta-review
 https://www.promptquorum.com/power-local-llm/librechat-review
 https://www.promptquorum.com/power-local-llm/liquid-apollo-review
 https://www.promptquorum.com/power-local-llm/litellm-review
+https://www.promptquorum.com/power-local-llm/little-coder-review
 https://www.promptquorum.com/power-local-llm/llama-cpp-explained
 https://www.promptquorum.com/power-local-llm/llama-factory-review
 https://www.promptquorum.com/power-local-llm/llamafile-explained
@@ -432,6 +435,9 @@ https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/logseq-copilot-review
+https://www.promptquorum.com/power-local-llm/longmemory-review
+https://www.promptquorum.com/power-local-llm/lorax-review
+https://www.promptquorum.com/power-local-llm/lucebox-review
 https://www.promptquorum.com/power-local-llm/macwhisper-review
 https://www.promptquorum.com/power-local-llm/maid-review
 https://www.promptquorum.com/power-local-llm/maxkb-review
@@ -482,6 +488,7 @@ https://www.promptquorum.com/power-local-llm/qdrant-review
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
 https://www.promptquorum.com/power-local-llm/ragflow-document-understanding-rag-review
+https://www.promptquorum.com/power-local-llm/rapid-mlx-review
 https://www.promptquorum.com/power-local-llm/rapr-ai-review
 https://www.promptquorum.com/power-local-llm/real-esrgan-ai-image-upscaler-review
 https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm
@@ -499,6 +506,7 @@ https://www.promptquorum.com/power-local-llm/sglang-explained
 https://www.promptquorum.com/power-local-llm/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/power-local-llm/shell-gpt-review
 https://www.promptquorum.com/power-local-llm/shimmy-review
+https://www.promptquorum.com/power-local-llm/sidekick-review
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
 https://www.promptquorum.com/power-local-llm/siyuan-review
 https://www.promptquorum.com/power-local-llm/smart-connections-review
@@ -509,12 +517,14 @@ https://www.promptquorum.com/power-local-llm/stable-diffusion-review
 https://www.promptquorum.com/power-local-llm/stableswarmui-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/superagi-review
+https://www.promptquorum.com/power-local-llm/surf-review
 https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/taskweaver-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/text-generator-review
 https://www.promptquorum.com/power-local-llm/tgpt-review
 https://www.promptquorum.com/power-local-llm/toolneuron-review
+https://www.promptquorum.com/power-local-llm/translate-books-with-llms-review
 https://www.promptquorum.com/power-local-llm/turbo-fieldfare-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
