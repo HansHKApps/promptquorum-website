@@ -596,6 +596,14 @@ export const translations = {
     searchNoResults: "Keine Ergebnisse für",
     searchLoading: "Suche wird geladen...",
 
+    // Companion Q&A (German-only, replaces search box — see SearchTrigger.tsx)
+    companionPlaceholder: "Stelle deine Frage...",
+    companionAriaLabel: "Frage an den Assistenten stellen",
+    companionModalAriaLabel: "KI-gestützte Fragen und Antworten",
+    companionLoading: "Antwort wird generiert – das kann bis zu einer Minute dauern...",
+    companionSourcesLabel: "Quellen",
+    companionAskHint: "Frage eingeben und Enter drücken",
+
     // Explore Free Guides Section
     guidesTitle: "Kostenlose Leitfäden entdecken",
     guidesDesc: "Umfassende Einführungen zu KI, Prompts und lokalen LLMs",
