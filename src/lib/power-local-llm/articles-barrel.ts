@@ -300,6 +300,16 @@ import { article as a_mission_control_review } from './articles/mission-control-
 import { article as a_kserve_review } from './articles/kserve-review'
 import { article as a_baserow_review } from './articles/baserow-review'
 import { article as a_shimmy_review } from './articles/shimmy-review'
+import { article as a_longmemory_review } from './articles/longmemory-review'
+import { article as a_lorax_review } from './articles/lorax-review'
+import { article as a_rapid_mlx_review } from './articles/rapid-mlx-review'
+import { article as a_farfalle_review } from './articles/farfalle-review'
+import { article as a_surf_review } from './articles/surf-review'
+import { article as a_claude_code_local_review } from './articles/claude-code-local-review'
+import { article as a_sidekick_review } from './articles/sidekick-review'
+import { article as a_lucebox_review } from './articles/lucebox-review'
+import { article as a_little_coder_review } from './articles/little-coder-review'
+import { article as a_translate_books_with_llms_review } from './articles/translate-books-with-llms-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -641,4 +651,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'kserve-review':                                       a_kserve_review,
   'baserow-review':                                      a_baserow_review,
   'shimmy-review':                                       a_shimmy_review,
+  'longmemory-review':                                   a_longmemory_review,
+  'lorax-review':                                        a_lorax_review,
+  'rapid-mlx-review':                                    a_rapid_mlx_review,
+  'farfalle-review':                                     a_farfalle_review,
+  'surf-review':                                         a_surf_review,
+  'claude-code-local-review':                            a_claude_code_local_review,
+  'sidekick-review':                                     a_sidekick_review,
+  'lucebox-review':                                      a_lucebox_review,
+  'little-coder-review':                                 a_little_coder_review,
+  'translate-books-with-llms-review':                    a_translate_books_with_llms_review,
 }

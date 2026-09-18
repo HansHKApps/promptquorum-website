@@ -37,5 +37,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق macOS أصلي للدردشة مع نموذج لغوي محلي بالكامل يمكنه قراءة ملفاتك ومجلداتك ومواقعك، مدعوم بـ llama.cpp',
     ko: 'llama.cpp 기반으로 파일, 폴더, 웹사이트를 읽을 수 있는 완전한 로컬 LLM과 대화하는 네이티브 macOS 앱',
   },
+  reviewSlug: 'sidekick-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

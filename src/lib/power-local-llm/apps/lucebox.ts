@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال محلي للنماذج اللغوية بنوى مضبوطة يدويًا وفك تشفير تخميني مصمم لوحدات معالجة رسومات استهلاكية محددة',
     ko: '특정 소비자용 GPU에 맞춰 손으로 튜닝한 커널과 추측적 디코딩을 사용하는 로컬 LLM 추론 서버',
   },
+  reviewSlug: 'lucebox-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

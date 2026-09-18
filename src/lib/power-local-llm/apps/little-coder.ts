@@ -24,6 +24,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['code', 'agent'],
   url: 'github.com/itayinbarr/little-coder',
+  reviewSlug: 'little-coder-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Coding agent CLI tuned specifically to get strong results out of small local LLMs on Ollama or LM Studio',
     de: 'Coding-Agent-CLI, speziell darauf abgestimmt, mit kleinen lokalen LLMs auf Ollama oder LM Studio starke Ergebnisse zu erzielen',

@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'محرك بحث بالذكاء الاصطناعي مفتوح المصدر ومستضاف ذاتيًا (على غرار Perplexity) يمكنه العمل بالكامل باستخدام نماذج لغوية محلية',
     ko: '로컬 LLM만으로 완전히 구동 가능한 셀프호스팅 오픈소스 AI 검색 엔진(Perplexity 스타일)',
   },
+  reviewSlug: 'farfalle-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }
