@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve'],
   url: 'github.com/drumih/turbo-fieldfare',
+  reviewSlug: 'turbo-fieldfare-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Native Swift and Metal runtime that runs Gemma 4 26B-A4B locally in about 2 GB of RAM on any M-series MacBook',
     de: 'Native Swift- und Metal-Laufzeitumgebung, die Gemma 4 26B-A4B lokal mit rund 2 GB RAM auf jedem M-Series-MacBook ausführt',

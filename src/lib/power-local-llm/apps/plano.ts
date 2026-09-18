@@ -23,6 +23,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['agent', 'serve'],
   url: 'github.com/katanemo/plano',
+  reviewSlug: 'plano-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Self-hosted, Envoy-based AI proxy and data plane for agentic apps with smart LLM routing, observability, and guardrails',
     de: 'Selbst gehosteter, auf Envoy basierender KI-Proxy und Data Plane für agentenbasierte Anwendungen mit intelligentem LLM-Routing, Observability und Guardrails',

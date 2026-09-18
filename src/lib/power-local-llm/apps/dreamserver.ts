@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'حزمة خادم ذكاء اصطناعي محلية تُثبَّت بأمر واحد وتربط بين استدلال النماذج اللغوية وواجهة الدردشة والصوت والوكلاء وسير العمل وRAG وتوليد الصور',
     ko: '한 줄 명령으로 설치되는 로컬 AI 서버 스택으로, LLM 추론, 채팅 UI, 음성, 에이전트, 워크플로, RAG, 이미지 생성을 하나로 엮어 준다',
   },
+  reviewSlug: 'dreamserver-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

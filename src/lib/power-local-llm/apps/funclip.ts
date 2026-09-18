@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'أداة مستضافة ذاتيًا لقص الفيديو والصوت تستخدم تفريغ FunASR ونموذجًا لغويًا للعثور على اللحظات المطلوبة وقصها',
     ko: 'FunASR 전사와 LLM을 활용해 원하는 장면을 찾아 잘라내는 셀프호스팅 영상/오디오 클립 도구',
   },
+  reviewSlug: 'funclip-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

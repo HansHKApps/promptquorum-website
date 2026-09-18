@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ar: 'موجّه نماذج لغوية مستضاف ذاتيًا ومصمم للوكلاء، يتخذ قرارات توجيه محلية في أقل من ميلي ثانية بين النماذج المتقدمة والنماذج المفتوحة المجانية',
     ko: '최상위 모델과 무료 오픈웨이트 모델 사이에서 1밀리초 미만의 로컬 라우팅 결정을 내리는 에이전트 전용 셀프호스팅 LLM 라우터',
   },
+  reviewSlug: 'clawrouter-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

@@ -447,4 +447,15 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'dynamo-review':                            'dynamo-review',
   'lmdeploy-review':                          'lmdeploy-review',
   'agentic-inbox-review':                     'agentic-inbox-review',
+  // FeatureAppPost batch 3 (ranks 11-20 of the 2026-09-18 directory additions) — 2026-09-19
+  'plano-review':                             'plano-review',
+  'turbo-fieldfare-review':                   'turbo-fieldfare-review',
+  'clawrouter-review':                        'clawrouter-review',
+  'dreamserver-review':                       'dreamserver-review',
+  'intentkit-review':                         'intentkit-review',
+  'funclip-review':                           'funclip-review',
+  'mission-control-review':                   'mission-control-review',
+  'kserve-review':                            'kserve-review',
+  'baserow-review':                           'baserow-review',
+  'shimmy-review':                            'shimmy-review',
 }

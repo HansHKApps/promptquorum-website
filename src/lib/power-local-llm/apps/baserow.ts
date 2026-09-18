@@ -35,5 +35,6 @@ export const app: ToolRecord = {
     ar: 'أداة بناء قواعد بيانات وتطبيقات بلا كود مستضافة ذاتيًا يمكن لحقل الذكاء الاصطناعي فيها العمل على نموذج Ollama محلي بدلًا من واجهة سحابية',
     ko: 'AI 필드를 클라우드 API 대신 로컬 Ollama 모델로 실행할 수 있는 셀프호스팅 노코드 데이터베이스 및 앱 빌더',
   },
+  reviewSlug: 'baserow-review', // dedicated PromptQuorum review — added 2026-09-19
   lastVerifiedDate: '2026-09-18',
 }

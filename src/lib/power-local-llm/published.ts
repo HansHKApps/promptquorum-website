@@ -480,6 +480,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'dynamo-review',
   'lmdeploy-review',
   'agentic-inbox-review',
+  // FeatureAppPost batch 3 (ranks 11-20 of the 2026-09-18 directory additions) — 2026-09-19
+  'plano-review',
+  'turbo-fieldfare-review',
+  'clawrouter-review',
+  'dreamserver-review',
+  'intentkit-review',
+  'funclip-review',
+  'mission-control-review',
+  'kserve-review',
+  'baserow-review',
+  'shimmy-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
