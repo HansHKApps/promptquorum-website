@@ -36,6 +36,8 @@ import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { getCalloutLabel } from '@/lib/calloutLabels'
+import { StarIcon } from '@/components/local-ai-directory/icons'
+import { t as directoryT } from '@/components/local-ai-directory/directory-i18n'
 
 type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
@@ -56,6 +58,14 @@ interface Props {
    * other article, so this prop never alters any other article's output.
    */
   directorySlot?: { sectionKeys: string[]; element: React.ReactNode }
+  /**
+   * Set when this article is a dedicated FeatureAppPost review whose subject
+   * (matched via the ToolRecord's `reviewSlug`) has an active
+   * `founderReviewedDate` — see page-helpers.tsx `buildArticlePageElement`.
+   * Renders the same fact-check credit shown on the tool's directory tile/
+   * drawer (ToolCard.tsx/ToolDrawer.tsx), self-expiring on the same schedule.
+   */
+  founderReviewed?: { appName: string; date: string }
 }
 
 // Section header translations
@@ -1194,7 +1204,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot, founderReviewed }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1258,6 +1268,19 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
 
         {/* Cross-language links */}
         <LangLinksBar cluster="power-local-llm" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
+
+        {/* Founder-reviewed fact-check credit — mirrors the badge/banner shown on
+            this tool's directory tile/drawer (ToolCard.tsx/ToolDrawer.tsx),
+            surfaced here too since this article IS that tool's dedicated review. */}
+        {founderReviewed && (
+          <div className="flex items-start gap-2 rounded-xl border-2 border-amber-500 bg-amber-100 p-3 mb-6">
+            <StarIcon className="h-4 w-4 mt-0.5 shrink-0 fill-amber-600 text-amber-600" />
+            <p className="text-xs text-amber-900">
+              <span className="font-extrabold uppercase tracking-wide">{directoryT('founderReviewedBannerLabel', lang)}</span>{' '}
+              {directoryT('founderReviewedBannerBodyTemplate', lang, { name: founderReviewed.appName })}
+            </p>
+          </div>
+        )}
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (
