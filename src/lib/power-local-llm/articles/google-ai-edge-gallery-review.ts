@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       'free on-device ai app iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Apple Silicon Mac (M1 or later, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery is a free iOS app from [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) that runs Gemma 4 and other open-source models entirely on-device using Google\'s [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) runtime, with no subscription and no per-message cost.** It is the iOS build of the open-source [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) project, which also ships on Android; Google labels the app an "experimental Beta." Once a model is downloaded, chat runs offline, but the App Store privacy label shows Google still collects some device diagnostics and usage data — this is not a zero-telemetry app, even though prompt and chat content stay on-device. Readers who want a more polished, paid, curated alternative should compare it with [Private LLM](/power-local-llm/private-llm-review); readers who want a free, open-source alternative with manual GGUF import should compare it with [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       'kostenlose on-device-ki-app iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Apple Silicon Mac (M1 oder neuer, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery ist eine kostenlose iOS-App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Gemma 4 und andere Open-Source-Modelle vollständig auf dem Gerät über Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung ausführt, ohne Abonnement und ohne Kosten pro Nachricht.** Es handelt sich um die iOS-Version des Open-Source-Projekts [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), das auch für Android erscheint; Google selbst bezeichnet die App als „experimentelle Beta". Sobald ein Modell heruntergeladen ist, läuft der Chat offline, aber das App-Store-Datenschutzlabel zeigt, dass Google weiterhin einige Gerätediagnosen und Nutzungsdaten erfasst — dies ist keine App ohne jegliche Telemetrie, auch wenn Prompt- und Chat-Inhalte auf dem Gerät verbleiben. Leser, die eine ausgereiftere, kostenpflichtige, kuratierte Alternative wünschen, sollten sie mit [Private LLM](/de/power-local-llm/private-llm-review) vergleichen; Leser, die eine kostenlose, quelloffene Alternative mit manuellem GGUF-Import wünschen, mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review).',
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       'app ia locale gratuite iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Mac Apple Silicon (M1 ou plus récent, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery est une application iOS gratuite de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) qui exécute Gemma 4 et d\'autres modèles open source entièrement sur l\'appareil via le moteur [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) de Google, sans abonnement ni coût par message.** C\'est la version iOS du projet open source [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), également disponible sur Android ; Google lui-même qualifie l\'app de « bêta expérimentale ». Une fois un modèle téléchargé, le chat fonctionne hors ligne, mais l\'étiquette de confidentialité App Store montre que Google collecte encore certaines données de diagnostic et d\'utilisation de l\'appareil — ce n\'est pas une app sans aucune télémétrie, même si le contenu des messages reste sur l\'appareil. Les lecteurs qui veulent une alternative payante plus aboutie devraient comparer avec [Private LLM](/fr/power-local-llm/private-llm-review) ; ceux qui veulent une alternative gratuite et open source avec import manuel de GGUF, avec [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       'app ia local gratuita iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Mac con Apple Silicon (M1 o posterior, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery es una app iOS gratuita de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que ejecuta Gemma 4 y otros modelos de código abierto completamente en el dispositivo mediante el motor [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) de Google, sin suscripción y sin costo por mensaje.** Es la versión iOS del proyecto de código abierto [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), que también existe para Android; el propio Google etiqueta la app como "beta experimental". Una vez descargado un modelo, el chat funciona sin conexión, pero la etiqueta de privacidad de la App Store muestra que Google sigue recopilando algunos diagnósticos del dispositivo y datos de uso — no es una app sin ningún tipo de telemetría, aunque el contenido de los mensajes permanece en el dispositivo. Los lectores que quieran una alternativa de pago más pulida deberían compararla con [Private LLM](/es/power-local-llm/private-llm-review); quienes quieran una alternativa gratuita y de código abierto con importación manual de GGUF, con [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       'app ia local gratuito iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Mac com Apple Silicon (M1 ou posterior, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery é um app iOS gratuito da [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que executa o Gemma 4 e outros modelos de código aberto inteiramente no dispositivo por meio do mecanismo [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) da Google, sem assinatura e sem custo por mensagem.** É a versão iOS do projeto de código aberto [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), também disponível para Android; a própria Google rotula o app como "beta experimental". Uma vez baixado um modelo, o chat funciona offline, mas o rótulo de privacidade da App Store mostra que a Google ainda coleta alguns diagnósticos do dispositivo e dados de uso — não é um app sem nenhuma telemetria, mesmo que o conteúdo das mensagens permaneça no dispositivo. Leitores que queiram uma alternativa paga mais polida devem compará-lo com [Private LLM](/pt/power-local-llm/private-llm-review); quem quiser uma alternativa gratuita e de código aberto com importação manual de GGUF, com [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       '無料 ローカルai アプリ iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone（iOS 17以降）', 'iPad（iOS 17以降）', 'Apple Silicon Mac（M1以降、macOS 14以降）', 'Apple Vision Pro（visionOS 1.0以降）'],
     leadAnswerBlock:
       '**Google AI Edge Gallery は、[Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) が提供する無料iOSアプリで、Googleの [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) ランタイムを使いGemma 4など複数のオープンソースモデルを完全にオンデバイスで実行し、サブスクリプションやメッセージ課金はありません。** これはオープンソースプロジェクト [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) のiOS版であり、Android版も提供されています。Google自身がこのアプリを「実験的ベータ版」と位置づけています。モデルをダウンロードすればチャットはオフラインで動作しますが、App Storeのプライバシーラベルによると、Googleは依然として一部のデバイス診断情報や利用データを収集しています——プロンプトやチャット内容自体はデバイス上に留まりますが、テレメトリが完全にゼロというわけではありません。より洗練された有料の代替アプリを求める読者は [Private LLM](/ja/power-local-llm/private-llm-review) と比較すべきであり、手動でGGUFをインポートする無料のオープンソース代替を求める読者は [PocketPal AI](/ja/power-local-llm/pocketpal-ai-review) と比較すべきです。',
@@ -2383,7 +2383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       '免费本地ai应用 iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone（iOS 17+）', 'iPad（iOS 17+）', 'Apple Silicon Mac（M1或更新，macOS 14+）', 'Apple Vision Pro（visionOS 1.0+）'],
     leadAnswerBlock:
       '**Google AI Edge Gallery 是 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 推出的一款免费 iOS 应用，通过谷歌的 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) 运行时完全在设备端运行 Gemma 4 及其他开源模型，无需订阅，也不按消息计费。** 它是开源项目 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) 的 iOS 版本，该项目也提供 Android 版本；谷歌自己将该应用标注为"实验性测试版"。模型下载完成后，聊天可离线运行，但 App Store 隐私标签显示，谷歌仍会收集部分设备诊断和使用数据——这并非零遥测应用，尽管提示词和聊天内容本身留在设备上。希望获得更成熟付费替代品的读者应将其与 [Private LLM](/zh/power-local-llm/private-llm-review) 比较；希望获得免费开源、手动导入 GGUF 的替代品的读者，应与 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 比较。',
@@ -2774,7 +2774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery مقابل pocketpal ai',
       'تطبيق ذكاء اصطناعي محلي مجاني iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Mac بمعالج Apple Silicon (M1 أو أحدث، macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery تطبيق iOS مجاني من [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) يُشغِّل Gemma 4 ونماذج أخرى مفتوحة المصدر بالكامل على الجهاز عبر بيئة تشغيل [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) من جوجل، دون اشتراك ودون تكلفة لكل رسالة.** إنه نسخة iOS من المشروع مفتوح المصدر [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)، والمتوفر أيضاً لـAndroid؛ تُصنِّف جوجل نفسها التطبيق بأنه "نسخة تجريبية اختبارية". بمجرد تنزيل نموذج، تعمل الدردشة بلا اتصال، لكن ملصق خصوصية App Store يُظهر أن جوجل لا تزال تجمع بعض بيانات تشخيص الجهاز والاستخدام — هذا ليس تطبيقاً بلا أي قياس عن بُعد على الإطلاق، رغم أن محتوى الرسائل نفسه يبقى على الجهاز. القرّاء الراغبون في بديل مدفوع أكثر نضجاً يجب أن يقارنوه بـ[Private LLM](/ar/power-local-llm/private-llm-review)؛ ومن يريد بديلاً مجانياً ومفتوح المصدر باستيراد يدوي لملفات GGUF، بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
@@ -3165,7 +3165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'google ai edge gallery vs pocketpal ai',
       '무료 로컬 ai 앱 iphone',
     ],
-    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified', 'Gemma 3n'],
+    current_models_mentioned: ['Gemma 4 E2B', 'Gemma 4 E4B', 'Gemma 4 26B', 'Gemma 4 31B', 'Gemma 4 12B Unified'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'iPad (iOS 17+)', 'Apple Silicon Mac (M1 이상, macOS 14+)', 'Apple Vision Pro (visionOS 1.0+)'],
     leadAnswerBlock:
       '**Google AI Edge Gallery는 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)가 제공하는 무료 iOS 앱으로, 구글의 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) 런타임을 통해 Gemma 4를 비롯한 여러 오픈소스 모델을 완전히 온디바이스로 실행하며, 구독이나 메시지당 비용이 없습니다.** 이는 오픈소스 프로젝트 [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 iOS 버전이며, Android용으로도 제공됩니다. 구글 스스로 이 앱을 "실험적 베타"로 표시합니다. 모델을 다운로드하면 채팅은 오프라인으로 작동하지만, 앱스토어 개인정보 보호 라벨에 따르면 구글은 여전히 일부 기기 진단 정보와 사용 데이터를 수집합니다 — 프롬프트와 채팅 내용 자체는 기기에 남지만, 텔레메트리가 전혀 없는 앱은 아닙니다. 더 완성도 높은 유료 대안을 원하는 독자는 [Private LLM](/ko/power-local-llm/private-llm-review)과 비교해야 하며, 수동 GGUF 가져오기가 가능한 무료 오픈소스 대안을 원하는 독자는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해야 합니다.',

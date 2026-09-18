@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-01',
       last_full_refresh: '2026-09-01',
-      current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Claude Fable 5', 'Gemini 3.1 Pro', 'Gemini 3.7 Flash', 'Gemini 3.5 Flash-Lite', 'DeepSeek-V4', 'Llama 4 Scout'],
+      current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Claude Fable 5.1', 'Gemini 3.1 Pro', 'Gemini 3.8 Flash', 'Gemini 3.5 Flash-Lite', 'DeepSeek-V4', 'Llama 4 Scout'],
       theme: 'Fundamentals',
       heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-en.webp',
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
@@ -207,9 +207,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Context windows:** GPT-5.6 (1M), Claude Opus 5 (1M), Gemini 3.1 Pro (1M) — all three now equal',
             '**Pricing (per 1M tokens):** GPT-5.6 $5/$30, Claude Opus 5 $5/$25, Gemini 3.1 Pro $2/$12',
-            '**Best writing:** Claude Opus 5 — concise, structured, publication-ready (Claude Fable 5 is Anthropic\'s most capable widely released model when depth beats cost)',
+            '**Best writing:** Claude Opus 5 — concise, structured, publication-ready (Claude Fable 5.1 is Anthropic\'s most capable widely released model when depth beats cost)',
             '**Best tool integration:** GPT-5.6 — largest third-party ecosystem (50,000+ integrations)',
-            '**Best cost/quality ratio:** Gemini 3.1 Pro — cheapest frontier model per token; Gemini 3.7 Flash for high-volume work',
+            '**Best cost/quality ratio:** Gemini 3.1 Pro — cheapest frontier model per token; Gemini 3.8 Flash for high-volume work',
             '**Required for China:** DeepSeek or Baidu ERNIE — Western models restricted or high-latency',
             '**Private/local:** Ollama or LM Studio — zero data egress',
           ],
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Strengths:** High-quality writing and summarization; outputs are concise, well-structured, and publication-ready. Excellent code understanding, refactoring, and explanation — often catches bugs that other models miss. Good long-context handling for research and document workflows. Strong safety culture; preferred in regulated industries.',
             '**Best use cases:** Reports, analyses, and knowledge work where structure and clarity are critical. Complex codebases and architecture discussions. Enterprise settings with compliance and safety requirements. Content that requires editing minimization.',
             '**Trade-offs:** Higher price point for top tiers; may be overkill for simple tasks. Some third-party integrations are newer than GPT-5.6 equivalents.',
-            '**Going further:** Anthropic also ships Claude Fable 5, its most capable widely released model. Opus 5 remains the recommended starting point for agentic coding and enterprise work; reach for Fable 5 when reasoning depth matters more than cost.',
+            '**Going further:** Anthropic also ships Claude Fable 5.1, its most capable widely released model. Opus 5 remains the recommended starting point for agentic coding and enterprise work; reach for Fable 5 when reasoning depth matters more than cost.',
             '**Context window:** 1,000,000 tokens (handles ~800 pages of text).',
           ],
         },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Frontier models (most expensive per token):** GPT-5.6 ($5 input / $30 output per million tokens), Claude Opus 5 ($5 input / $25 output per million tokens).',
             '**Cost-effective frontier:** Gemini 3.1 Pro ($2 input / $12 output per million tokens) — the cheapest of the three frontier models.',
-            '**Cost-effective mid-tier:** Gemini 3.7 Flash (~$0.75 input / $3.75 output per million tokens) and GPT-5.6 Luna ($0.20 input / $1.20 output). Gemini 3.5 Flash-Lite is the efficiency tier below that.',
+            '**Cost-effective mid-tier:** Gemini 3.8 Flash (~$0.75 input / $3.75 output per million tokens) and GPT-5.6 Luna ($0.20 input / $1.20 output). Gemini 3.5 Flash-Lite is the efficiency tier below that.',
             '**Competitive budget models:** DeepSeek-V4 (aggressive pricing), local models via Ollama/LM Studio (free, run on-device).',
             '**Rate limits:** Frontier models often start at 100 req/min; scaled tier can reach 10,000+ req/min. Local models depend on your hardware.',
             '[Learn about context windows and how they affect model selection.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         recipe2: {
           title: 'Recipe 2: Compare Coding Quality and Cost for Your Backend Stack',
-          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.6, Claude Opus 5, and Gemini 3.7 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What\'s the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
+          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-5.6, Claude Opus 5, and Gemini 3.8 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What\'s the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
         },
 
         recipe3: {
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How to Choose an AI Model for Your Task',
           numberedItems: [
             '**Define your task type:** Is it factual/analytical (legal analysis, code review, data extraction) or creative/generative (brainstorming, copywriting, design ideation)? Factual tasks favor GPT-5.6 or Claude Opus 5; creative tasks work across all frontier models.',
-            '**Match the model to speed/cost trade-offs:** GPT-5.6 is the broadest all-rounder but not the cheapest. Claude Opus 5 is best for long reasoning and accuracy. Gemini 3.1 Pro is the cheapest frontier model and excels at multimodal and long context (1M tokens); Gemini 3.7 Flash and GPT-5.6 Luna are the low-cost tiers. Use PromptQuorum to benchmark all three against your specific prompt.',
+            '**Match the model to speed/cost trade-offs:** GPT-5.6 is the broadest all-rounder but not the cheapest. Claude Opus 5 is best for long reasoning and accuracy. Gemini 3.1 Pro is the cheapest frontier model and excels at multimodal and long context (1M tokens); Gemini 3.8 Flash and GPT-5.6 Luna are the low-cost tiers. Use PromptQuorum to benchmark all three against your specific prompt.',
             '**Start with a frontier model (GPT-5.6 Sol, Claude Opus 5, or Gemini 3.1 Pro), then downgrade if possible:** A task that works well on GPT-5.6 Sol might run just as well on GPT-5.6 Luna (~25× cheaper). Test your prompt on cheaper models once you have a working version.',
             '**For local/private workflows, use Ollama or LM Studio, but accept lower quality:** Local models handle private data without external API calls but produce lower accuracy than frontier models. Use a hybrid: local model for first pass, frontier model for quality check.',
             '**For geographically distributed users, route by region:** Global users (US, EU, Japan) → GPT-5.6 / Claude / Gemini. China → DeepSeek or Baidu ERNIE (legal requirement). Use PromptQuorum to test each region\'s model independently.',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Using a frontier model for every task',
-              problem: 'GPT-5.6 at $5/$30 per million tokens is 10× more expensive than Gemini 3.7 Flash at ~$0.75/$3.75. Most classification, extraction, and summarization tasks produce identical quality on cheap models.',
+              problem: 'GPT-5.6 at $5/$30 per million tokens is 10× more expensive than Gemini 3.8 Flash at ~$0.75/$3.75. Most classification, extraction, and summarization tasks produce identical quality on cheap models.',
               fix: 'Start with the cheapest model. Upgrade to frontier only when the cheaper model measurably fails on your task.',
             },
             {
@@ -723,9 +723,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Kontextfenster:** GPT-5.6 (1M), Claude Opus 5 (1M), Gemini 3.1 Pro (1M) — alle drei jetzt gleichauf',
             '**Preise (pro 1M Tokens):** GPT-5.6 $5/$30, Claude Opus 5 $5/$25, Gemini 3.1 Pro $2/$12',
-            '**Beste Textqualität:** Claude Opus 5 — prägnant, strukturiert, publikationsreif (Claude Fable 5 ist Anthropics leistungsfähigstes breit verfügbares Modell, wenn Tiefe wichtiger ist als Kosten)',
+            '**Beste Textqualität:** Claude Opus 5 — prägnant, strukturiert, publikationsreif (Claude Fable 5.1 ist Anthropics leistungsfähigstes breit verfügbares Modell, wenn Tiefe wichtiger ist als Kosten)',
             '**Beste Tool-Integration:** GPT-5.6 — größtes Drittanbieter-Ökosystem (50.000+ Integrationen)',
-            '**Bestes Preis-Leistungs-Verhältnis:** Gemini 3.1 Pro — günstigstes Frontier-Modell pro Token; Gemini 3.7 Flash für hohe Volumina',
+            '**Bestes Preis-Leistungs-Verhältnis:** Gemini 3.1 Pro — günstigstes Frontier-Modell pro Token; Gemini 3.8 Flash für hohe Volumina',
             '**Pflicht für China:** DeepSeek oder Baidu ERNIE — westliche Modelle eingeschränkt oder mit hoher Latenz',
             '**Privat/lokal:** Ollama oder LM Studio — kein Datenabfluss',
           ],
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Stärken:** Hochwertige Texte und Zusammenfassungen; die Ausgaben sind prägnant, gut strukturiert und publikationsreif. Sehr gutes Codeverständnis, Refactoring und Erklärungen — findet oft Fehler, die andere Modelle übersehen. Solide Handhabung langer Kontexte für Recherche- und Dokumenten-Workflows. Starke Sicherheitskultur; bevorzugt in regulierten Branchen.',
             '**Beste Anwendungsfälle:** Berichte, Analysen und Wissensarbeit, bei denen Struktur und Klarheit entscheidend sind. Komplexe Codebasen und Architekturdiskussionen. Enterprise-Umgebungen mit Compliance- und Sicherheitsanforderungen. Inhalte, die möglichst wenig Nachbearbeitung erfordern sollen.',
             '**Kompromisse:** Höherer Preis in den Top-Stufen; für einfache Aufgaben oft überdimensioniert. Manche Drittanbieter-Integrationen sind jünger als die GPT-5.6-Pendants.',
-            '**Weitergedacht:** Anthropic bietet zusätzlich Claude Fable 5 an, sein leistungsfähigstes breit verfügbares Modell. Opus 5 bleibt der empfohlene Einstieg für agentisches Programmieren und Enterprise-Arbeit; greifen Sie zu Fable 5, wenn Reasoning-Tiefe wichtiger ist als der Preis.',
+            '**Weitergedacht:** Anthropic bietet zusätzlich Claude Fable 5.1 an, sein leistungsfähigstes breit verfügbares Modell. Opus 5 bleibt der empfohlene Einstieg für agentisches Programmieren und Enterprise-Arbeit; greifen Sie zu Fable 5, wenn Reasoning-Tiefe wichtiger ist als der Preis.',
             '**Kontextfenster:** 1.000.000 Tokens (entspricht etwa 800 Textseiten).',
           ],
         },
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Frontier-Modelle (teuerste pro Token):** GPT-5.6 ($5 Input / $30 Output pro Million Tokens), Claude Opus 5 ($5 Input / $25 Output pro Million Tokens).',
             '**Günstiges Frontier-Modell:** Gemini 3.1 Pro ($2 Input / $12 Output pro Million Tokens) — das günstigste der drei Frontier-Modelle.',
-            '**Kosteneffiziente Mittelklasse:** Gemini 3.7 Flash (ca. $0,75 Input / $3,75 Output pro Million Tokens) und GPT-5.6 Luna ($0,20 Input / $1,20 Output). Darunter liegt Gemini 3.5 Flash-Lite als Effizienzstufe.',
+            '**Kosteneffiziente Mittelklasse:** Gemini 3.8 Flash (ca. $0,75 Input / $3,75 Output pro Million Tokens) und GPT-5.6 Luna ($0,20 Input / $1,20 Output). Darunter liegt Gemini 3.5 Flash-Lite als Effizienzstufe.',
             '**Preisgünstige Alternativen:** DeepSeek-V4 (aggressive Preise), lokale Modelle über Ollama/LM Studio (kostenlos, laufen auf Ihrer Hardware).',
             '**Rate Limits:** Frontier-Modelle starten oft bei 100 Anfragen/Minute; skalierte Stufen erreichen 10.000+ Anfragen/Minute. Bei lokalen Modellen entscheidet Ihre Hardware.',
             '[Mehr zu Kontextfenstern und ihrer Rolle bei der Modellwahl.](/de/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         recipe2: {
           title: 'Rezept 2: Code-Qualität und Kosten für Ihren Backend-Stack vergleichen',
-          blockquote: 'Sie haben eine Python-Codebasis. Test: „Prüfen Sie diese Funktion auf Performance und Fehler. Schlagen Sie ein Refactoring vor." Lassen Sie das durch GPT-5.6, Claude Opus 5 und Gemini 3.7 Flash laufen. Welches Modell findet die meisten Fehler? Welches Refactoring ist am saubersten? Welches ist pro Anfrage am günstigsten? Bewerten Sie die Code-Qualität in PromptQuorum. Möglicherweise findet Gemini Flash 90 % der Probleme zu einem Fünfzigstel der Claude-Kosten. Beispiel: „Optimieren Sie diese Datenbankabfrage auf Geschwindigkeit. Wie ist die Zeitkomplexität?" — an Claude für die tiefe Analyse, an Gemini für budgetbewusstes Iterieren.',
+          blockquote: 'Sie haben eine Python-Codebasis. Test: „Prüfen Sie diese Funktion auf Performance und Fehler. Schlagen Sie ein Refactoring vor." Lassen Sie das durch GPT-5.6, Claude Opus 5 und Gemini 3.8 Flash laufen. Welches Modell findet die meisten Fehler? Welches Refactoring ist am saubersten? Welches ist pro Anfrage am günstigsten? Bewerten Sie die Code-Qualität in PromptQuorum. Möglicherweise findet Gemini Flash 90 % der Probleme zu einem Fünfzigstel der Claude-Kosten. Beispiel: „Optimieren Sie diese Datenbankabfrage auf Geschwindigkeit. Wie ist die Zeitkomplexität?" — an Claude für die tiefe Analyse, an Gemini für budgetbewusstes Iterieren.',
         },
 
         recipe3: {
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'So wählen Sie ein KI-Modell für Ihre Aufgabe',
           numberedItems: [
             '**Bestimmen Sie den Aufgabentyp:** Geht es um Fakten und Analyse (Rechtsanalyse, Code-Review, Datenextraktion) oder um Kreatives (Brainstorming, Copywriting, Ideenfindung)? Faktische Aufgaben sprechen für GPT-5.6 oder Claude Opus 5; kreative Aufgaben funktionieren bei allen Frontier-Modellen.',
-            '**Wägen Sie Geschwindigkeit gegen Kosten ab:** GPT-5.6 ist der breiteste Allrounder, aber nicht der günstigste. Claude Opus 5 ist am besten für langes Reasoning und Genauigkeit. Gemini 3.1 Pro ist das günstigste Frontier-Modell und glänzt bei Multimodalität und langem Kontext (1M Tokens); Gemini 3.7 Flash und GPT-5.6 Luna sind die günstigen Stufen. Vergleichen Sie alle drei mit PromptQuorum an Ihrem konkreten Prompt.',
+            '**Wägen Sie Geschwindigkeit gegen Kosten ab:** GPT-5.6 ist der breiteste Allrounder, aber nicht der günstigste. Claude Opus 5 ist am besten für langes Reasoning und Genauigkeit. Gemini 3.1 Pro ist das günstigste Frontier-Modell und glänzt bei Multimodalität und langem Kontext (1M Tokens); Gemini 3.8 Flash und GPT-5.6 Luna sind die günstigen Stufen. Vergleichen Sie alle drei mit PromptQuorum an Ihrem konkreten Prompt.',
             '**Starten Sie mit einem Frontier-Modell (GPT-5.6 Sol, Claude Opus 5 oder Gemini 3.1 Pro) und stufen Sie dann ab:** Eine Aufgabe, die auf GPT-5.6 Sol gut läuft, läuft womöglich genauso gut auf GPT-5.6 Luna (rund 25× günstiger). Testen Sie Ihren Prompt auf günstigeren Modellen, sobald eine funktionierende Version steht.',
             '**Für lokale/private Workflows Ollama oder LM Studio nutzen — mit Abstrichen bei der Qualität:** Lokale Modelle verarbeiten private Daten ohne externe API-Aufrufe, erreichen aber nicht die Genauigkeit der Frontier-Modelle. Nutzen Sie einen Hybrid: lokales Modell für den ersten Durchlauf, Frontier-Modell für die Qualitätsprüfung.',
             '**Bei geografisch verteilten Nutzern nach Region routen:** Globale Nutzer (USA, EU, Japan) → GPT-5.6 / Claude / Gemini. China → DeepSeek oder Baidu ERNIE (regulatorische Vorgabe). Testen Sie jede Region mit PromptQuorum separat.',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Für jede Aufgabe ein Frontier-Modell einsetzen',
-              problem: 'GPT-5.6 kostet mit $5/$30 pro Million Tokens rund 10× so viel wie Gemini 3.7 Flash mit ca. $0,75/$3,75. Die meisten Klassifikations-, Extraktions- und Zusammenfassungsaufgaben liefern auf günstigen Modellen dieselbe Qualität.',
+              problem: 'GPT-5.6 kostet mit $5/$30 pro Million Tokens rund 10× so viel wie Gemini 3.8 Flash mit ca. $0,75/$3,75. Die meisten Klassifikations-, Extraktions- und Zusammenfassungsaufgaben liefern auf günstigen Modellen dieselbe Qualität.',
               fix: 'Beginnen Sie mit dem günstigsten Modell. Steigen Sie erst dann auf ein Frontier-Modell um, wenn das günstigere bei Ihrer Aufgabe messbar scheitert.',
             },
             {
@@ -1239,9 +1239,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Fenêtres de contexte :** GPT-5.6 (1M), Claude Opus 5 (1M), Gemini 3.1 Pro (1M) — les trois sont désormais à égalité',
             '**Tarifs (par million de tokens) :** GPT-5.6 5 $/30 $, Claude Opus 5 5 $/25 $, Gemini 3.1 Pro 2 $/12 $',
-            '**Meilleure rédaction :** Claude Opus 5 — concis, structuré, prêt à publier (Claude Fable 5 est le modèle le plus performant largement disponible chez Anthropic quand la profondeur prime sur le coût)',
+            '**Meilleure rédaction :** Claude Opus 5 — concis, structuré, prêt à publier (Claude Fable 5.1 est le modèle le plus performant largement disponible chez Anthropic quand la profondeur prime sur le coût)',
             '**Meilleure intégration d\'outils :** GPT-5.6 — le plus grand écosystème tiers (plus de 50 000 intégrations)',
-            '**Meilleur rapport coût/qualité :** Gemini 3.1 Pro — le modèle frontier le moins cher par token ; Gemini 3.7 Flash pour les gros volumes',
+            '**Meilleur rapport coût/qualité :** Gemini 3.1 Pro — le modèle frontier le moins cher par token ; Gemini 3.8 Flash pour les gros volumes',
             '**Indispensable en Chine :** DeepSeek ou Baidu ERNIE — les modèles occidentaux sont restreints ou lents',
             '**Privé/local :** Ollama ou LM Studio — aucune donnée ne sort',
           ],
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Points forts :** rédaction et synthèse de haute qualité ; les sorties sont concises, bien structurées et prêtes à publier. Excellente compréhension du code, refactorisation et explication — il repère souvent des bugs que d\'autres manquent. Bonne gestion du contexte long pour la recherche et les workflows documentaires. Culture de sécurité forte ; privilégié dans les secteurs réglementés.',
             '**Meilleurs cas d\'usage :** rapports, analyses et travail de connaissance où structure et clarté sont déterminantes. Bases de code complexes et discussions d\'architecture. Contextes d\'entreprise avec exigences de conformité et de sécurité. Contenus qui doivent demander un minimum de retouches.',
             '**Compromis :** tarif élevé sur les niveaux supérieurs ; parfois surdimensionné pour des tâches simples. Certaines intégrations tierces sont plus récentes que leurs équivalents GPT-5.6.',
-            '**Pour aller plus loin :** Anthropic propose aussi Claude Fable 5, son modèle le plus performant largement disponible. Opus 5 reste le point de départ recommandé pour le code agentique et l\'usage en entreprise ; passez à Fable 5 quand la profondeur de raisonnement prime sur le coût.',
+            '**Pour aller plus loin :** Anthropic propose aussi Claude Fable 5.1, son modèle le plus performant largement disponible. Opus 5 reste le point de départ recommandé pour le code agentique et l\'usage en entreprise ; passez à Fable 5 quand la profondeur de raisonnement prime sur le coût.',
             '**Fenêtre de contexte :** 1 000 000 de tokens (environ 800 pages de texte).',
           ],
         },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Modèles frontier (les plus chers par token) :** GPT-5.6 (5 $ en entrée / 30 $ en sortie par million de tokens), Claude Opus 5 (5 $ en entrée / 25 $ en sortie par million de tokens).',
             '**Modèle frontier économique :** Gemini 3.1 Pro (2 $ en entrée / 12 $ en sortie par million de tokens) — le moins cher des trois modèles frontier.',
-            '**Milieu de gamme économique :** Gemini 3.7 Flash (environ 0,75 $ en entrée / 3,75 $ en sortie par million de tokens) et GPT-5.6 Luna (0,20 $ en entrée / 1,20 $ en sortie). En dessous, Gemini 3.5 Flash-Lite constitue le palier d\'efficacité.',
+            '**Milieu de gamme économique :** Gemini 3.8 Flash (environ 0,75 $ en entrée / 3,75 $ en sortie par million de tokens) et GPT-5.6 Luna (0,20 $ en entrée / 1,20 $ en sortie). En dessous, Gemini 3.5 Flash-Lite constitue le palier d\'efficacité.',
             '**Alternatives économiques :** DeepSeek-V4 (tarifs agressifs), modèles locaux via Ollama/LM Studio (gratuits, exécutés sur votre machine).',
             '**Limites de débit :** les modèles frontier démarrent souvent à 100 requêtes/minute ; les paliers étendus atteignent plus de 10 000 requêtes/minute. Pour les modèles locaux, tout dépend de votre matériel.',
             '[En savoir plus sur les fenêtres de contexte et leur influence sur le choix du modèle.](/fr/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         recipe2: {
           title: 'Recette 2 : comparer qualité de code et coût pour votre backend',
-          blockquote: 'Vous avez une base de code Python. Test : « Analyse cette fonction pour les performances et les bugs. Propose une refactorisation. » Exécutez-le via GPT-5.6, Claude Opus 5 et Gemini 3.7 Flash. Lequel détecte le plus de bugs ? Quelle refactorisation est la plus propre ? Lequel coûte le moins cher par requête ? Utilisez PromptQuorum pour noter la qualité du code. Vous constaterez peut-être que Gemini Flash détecte 90 % des problèmes pour un cinquantième du coût de Claude. Exemple : « Optimise cette requête de base de données. Quelle est sa complexité temporelle ? » — envoyé à Claude pour l\'analyse fine, à Gemini pour itérer à moindre coût.',
+          blockquote: 'Vous avez une base de code Python. Test : « Analyse cette fonction pour les performances et les bugs. Propose une refactorisation. » Exécutez-le via GPT-5.6, Claude Opus 5 et Gemini 3.8 Flash. Lequel détecte le plus de bugs ? Quelle refactorisation est la plus propre ? Lequel coûte le moins cher par requête ? Utilisez PromptQuorum pour noter la qualité du code. Vous constaterez peut-être que Gemini Flash détecte 90 % des problèmes pour un cinquantième du coût de Claude. Exemple : « Optimise cette requête de base de données. Quelle est sa complexité temporelle ? » — envoyé à Claude pour l\'analyse fine, à Gemini pour itérer à moindre coût.',
         },
 
         recipe3: {
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment choisir un modèle d\'IA pour votre tâche',
           numberedItems: [
             '**Définissez le type de tâche :** est-elle factuelle/analytique (analyse juridique, revue de code, extraction de données) ou créative/générative (brainstorming, rédaction publicitaire, idéation) ? Les tâches factuelles favorisent GPT-5.6 ou Claude Opus 5 ; les tâches créatives fonctionnent sur tous les modèles frontier.',
-            '**Arbitrez entre vitesse et coût :** GPT-5.6 est le généraliste le plus complet, mais pas le moins cher. Claude Opus 5 est le meilleur pour le raisonnement long et la précision. Gemini 3.1 Pro est le modèle frontier le moins cher et excelle en multimodal et en contexte long (1M de tokens) ; Gemini 3.7 Flash et GPT-5.6 Luna constituent les paliers économiques. Comparez les trois sur votre prompt précis avec PromptQuorum.',
+            '**Arbitrez entre vitesse et coût :** GPT-5.6 est le généraliste le plus complet, mais pas le moins cher. Claude Opus 5 est le meilleur pour le raisonnement long et la précision. Gemini 3.1 Pro est le modèle frontier le moins cher et excelle en multimodal et en contexte long (1M de tokens) ; Gemini 3.8 Flash et GPT-5.6 Luna constituent les paliers économiques. Comparez les trois sur votre prompt précis avec PromptQuorum.',
             '**Commencez par un modèle frontier (GPT-5.6 Sol, Claude Opus 5 ou Gemini 3.1 Pro), puis descendez en gamme si possible :** une tâche qui fonctionne bien sur GPT-5.6 Sol tournera peut-être aussi bien sur GPT-5.6 Luna (environ 25 fois moins cher). Testez votre prompt sur des modèles moins chers une fois que vous avez une version qui marche.',
             '**Pour les workflows locaux ou privés, utilisez Ollama ou LM Studio, en acceptant une qualité moindre :** les modèles locaux traitent des données privées sans appel d\'API externe, mais leur précision reste inférieure à celle des modèles frontier. Adoptez une approche hybride : modèle local pour le premier passage, modèle frontier pour le contrôle qualité.',
             '**Pour des utilisateurs répartis géographiquement, routez par région :** utilisateurs mondiaux (États-Unis, UE, Japon) → GPT-5.6 / Claude / Gemini. Chine → DeepSeek ou Baidu ERNIE (exigence réglementaire). Testez chaque région séparément avec PromptQuorum.',
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Utiliser un modèle frontier pour toutes les tâches',
-              problem: 'GPT-5.6 à 5 $/30 $ par million de tokens coûte environ 10 fois plus que Gemini 3.7 Flash à environ 0,75 $/3,75 $. La plupart des tâches de classification, d\'extraction et de résumé donnent une qualité identique sur des modèles bon marché.',
+              problem: 'GPT-5.6 à 5 $/30 $ par million de tokens coûte environ 10 fois plus que Gemini 3.8 Flash à environ 0,75 $/3,75 $. La plupart des tâches de classification, d\'extraction et de résumé donnent une qualité identique sur des modèles bon marché.',
               fix: 'Commencez par le modèle le moins cher. Ne montez vers un modèle frontier que si le modèle économique échoue de façon mesurable sur votre tâche.',
             },
             {
@@ -1755,9 +1755,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**コンテキストウィンドウ：** GPT-5.6（1M）、Claude Opus 5（1M）、Gemini 3.1 Pro（1M） — 3モデルとも同等',
             '**料金（100万トークンあたり）：** GPT-5.6 $5／$30、Claude Opus 5 $5／$25、Gemini 3.1 Pro $2／$12',
-            '**文章品質が最良：** Claude Opus 5 — 簡潔で構造的、そのまま公開できる水準（コストより深さを優先するなら、Anthropicが広く提供する最上位モデルのClaude Fable 5）',
+            '**文章品質が最良：** Claude Opus 5 — 簡潔で構造的、そのまま公開できる水準（コストより深さを優先するなら、Anthropicが広く提供する最上位モデルのClaude Fable 5.1）',
             '**ツール連携が最良：** GPT-5.6 — サードパーティエコシステムが最大規模（5万件以上の連携）',
-            '**コスト／品質比が最良：** Gemini 3.1 Pro — トークン単価が最も安いフロンティアモデル。大量処理にはGemini 3.7 Flash',
+            '**コスト／品質比が最良：** Gemini 3.1 Pro — トークン単価が最も安いフロンティアモデル。大量処理にはGemini 3.8 Flash',
             '**中国では必須：** DeepSeekまたはBaidu ERNIE — 欧米モデルは制限または高レイテンシ',
             '**プライベート／ローカル：** OllamaまたはLM Studio — データ送信ゼロ',
           ],
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**強み：** 高品質な文章と要約。出力は簡潔で構造が整っており、そのまま公開できる水準です。コードの理解、リファクタリング、説明に優れ、他モデルが見落とすバグを発見することも少なくありません。リサーチや文書処理のワークフローで長文コンテキストを適切に扱えます。安全性への姿勢が強く、規制業種で好まれます。',
             '**最適なユースケース：** 構造と明確さが重要なレポート、分析、ナレッジワーク。複雑なコードベースとアーキテクチャの議論。コンプライアンスと安全性の要件がある企業環境。修正を最小限に抑えたいコンテンツ。',
             '**トレードオフ：** 上位ティアは価格が高く、単純なタスクには過剰な場合があります。一部のサードパーティ連携はGPT-5.6の同等機能より新しく、実績が浅めです。',
-            '**さらに上を狙うなら：** AnthropicはClaude Fable 5も提供しています。広く提供されている中で最も高性能なモデルです。エージェント型コーディングと企業利用の出発点としてはOpus 5が推奨されますが、コストより推論の深さが重要な場合はFable 5を選んでください。',
+            '**さらに上を狙うなら：** AnthropicはClaude Fable 5.1も提供しています。広く提供されている中で最も高性能なモデルです。エージェント型コーディングと企業利用の出発点としてはOpus 5が推奨されますが、コストより推論の深さが重要な場合はFable 5を選んでください。',
             '**コンテキストウィンドウ：** 1,000,000トークン（テキスト約800ページ相当）。',
           ],
         },
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**フロンティアモデル（トークン単価が最も高い）：** GPT-5.6（100万トークンあたり入力$5／出力$30）、Claude Opus 5（100万トークンあたり入力$5／出力$25）。',
             '**低コストなフロンティアモデル：** Gemini 3.1 Pro（100万トークンあたり入力$2／出力$12） — フロンティア3モデルの中で最も安価です。',
-            '**コスト効率の高い中位モデル：** Gemini 3.7 Flash（100万トークンあたり入力約$0.75／出力$3.75）とGPT-5.6 Luna（入力$0.20／出力$1.20）。その下の効率重視ティアがGemini 3.5 Flash-Liteです。',
+            '**コスト効率の高い中位モデル：** Gemini 3.8 Flash（100万トークンあたり入力約$0.75／出力$3.75）とGPT-5.6 Luna（入力$0.20／出力$1.20）。その下の効率重視ティアがGemini 3.5 Flash-Liteです。',
             '**価格競争力のある選択肢：** DeepSeek-V4（積極的な価格設定）、Ollama／LM Studio経由のローカルモデル（無料、自分の端末で実行）。',
             '**レート制限：** フロンティアモデルは毎分100リクエストから始まることが多く、上位ティアでは毎分1万リクエスト以上に達します。ローカルモデルはハードウェア次第です。',
             '[コンテキストウィンドウとモデル選定への影響を学ぶ。](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -1944,7 +1944,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         recipe2: {
           title: 'レシピ2：バックエンド開発でコード品質とコストを比較する',
-          blockquote: 'Pythonのコードベースがあるとします。テスト：「この関数の性能とバグを確認し、リファクタリング案を提示してください。」GPT-5.6、Claude Opus 5、Gemini 3.7 Flashで実行します。最も多くバグを検出するのはどれか。最もきれいなリファクタリングはどれか。リクエストあたり最も安いのはどれか。PromptQuorumでコード品質を採点してください。Gemini FlashがClaudeの50分の1のコストで問題の90％を検出する、といった結果が出ることもあります。例：「このデータベースクエリを高速化してください。計算量はどうなりますか？」 — 深い分析はClaude、低コストな反復はGeminiへ。',
+          blockquote: 'Pythonのコードベースがあるとします。テスト：「この関数の性能とバグを確認し、リファクタリング案を提示してください。」GPT-5.6、Claude Opus 5、Gemini 3.8 Flashで実行します。最も多くバグを検出するのはどれか。最もきれいなリファクタリングはどれか。リクエストあたり最も安いのはどれか。PromptQuorumでコード品質を採点してください。Gemini FlashがClaudeの50分の1のコストで問題の90％を検出する、といった結果が出ることもあります。例：「このデータベースクエリを高速化してください。計算量はどうなりますか？」 — 深い分析はClaude、低コストな反復はGeminiへ。',
         },
 
         recipe3: {
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '自分のタスクに合わせたAIモデルの選び方',
           numberedItems: [
             '**タスクの種類を定義する：** 事実・分析型（法務分析、コードレビュー、データ抽出）か、創造・生成型（ブレインストーミング、コピーライティング、アイデア出し）か。事実型ならGPT-5.6かClaude Opus 5が有利で、創造型はどのフロンティアモデルでも機能します。',
-            '**速度とコストのバランスをとる：** GPT-5.6は最も守備範囲の広いオールラウンダーですが、最安ではありません。Claude Opus 5は長い推論と正確さに最適です。Gemini 3.1 Proは最も安価なフロンティアモデルで、マルチモーダルと長文コンテキスト（1Mトークン）に優れます。低コスト帯はGemini 3.7 FlashとGPT-5.6 Lunaです。PromptQuorumで自分のプロンプトを使い3モデルを比較してください。',
+            '**速度とコストのバランスをとる：** GPT-5.6は最も守備範囲の広いオールラウンダーですが、最安ではありません。Claude Opus 5は長い推論と正確さに最適です。Gemini 3.1 Proは最も安価なフロンティアモデルで、マルチモーダルと長文コンテキスト（1Mトークン）に優れます。低コスト帯はGemini 3.8 FlashとGPT-5.6 Lunaです。PromptQuorumで自分のプロンプトを使い3モデルを比較してください。',
             '**まずフロンティアモデル（GPT-5.6 Sol、Claude Opus 5、Gemini 3.1 Pro）から始め、可能なら下位に移行する：** GPT-5.6 Solでうまく動くタスクは、GPT-5.6 Luna（約25分の1のコスト）でも同等に動く場合があります。動くバージョンができたら、より安いモデルでプロンプトを試してください。',
             '**ローカル／プライベートな処理にはOllamaかLM Studioを使う（品質低下は許容する）：** ローカルモデルは外部API呼び出しなしで機密データを処理できますが、精度はフロンティアモデルに劣ります。ハイブリッドで運用してください。一次処理はローカルモデル、品質チェックはフロンティアモデルです。',
             '**地域が分散している場合は地域別にルーティングする：** グローバルユーザー（米国、EU、日本）→ GPT-5.6／Claude／Gemini。中国 → DeepSeekまたはBaidu ERNIE（規制上の要件）。PromptQuorumで各地域のモデルを個別に検証してください。',
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'すべてのタスクでフロンティアモデルを使ってしまう',
-              problem: 'GPT-5.6は100万トークンあたり$5／$30で、約$0.75／$3.75のGemini 3.7 Flashのおよそ10倍のコストです。分類、抽出、要約の大半は、安価なモデルでも同等の品質が得られます。',
+              problem: 'GPT-5.6は100万トークンあたり$5／$30で、約$0.75／$3.75のGemini 3.8 Flashのおよそ10倍のコストです。分類、抽出、要約の大半は、安価なモデルでも同等の品質が得られます。',
               fix: 'まず最も安いモデルから始めてください。安価なモデルが自分のタスクで明確に失敗したときにだけ、フロンティアモデルへ引き上げます。',
             },
             {
@@ -2271,9 +2271,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**上下文窗口：** GPT-5.6（1M）、Claude Opus 5（1M）、Gemini 3.1 Pro（1M）——三者现已持平',
             '**价格（每百万 tokens）：** GPT-5.6 $5／$30，Claude Opus 5 $5／$25，Gemini 3.1 Pro $2／$12',
-            '**写作最佳：** Claude Opus 5——简洁、有结构、可直接发布（若深度比成本更重要，可用 Anthropic 广泛提供的最强模型 Claude Fable 5）',
+            '**写作最佳：** Claude Opus 5——简洁、有结构、可直接发布（若深度比成本更重要，可用 Anthropic 广泛提供的最强模型 Claude Fable 5.1）',
             '**工具集成最佳：** GPT-5.6——第三方生态规模最大（5 万多个集成）',
-            '**性价比最佳：** Gemini 3.1 Pro——每 token 最便宜的前沿模型；大批量任务用 Gemini 3.7 Flash',
+            '**性价比最佳：** Gemini 3.1 Pro——每 token 最便宜的前沿模型；大批量任务用 Gemini 3.8 Flash',
             '**中国大陆必选：** DeepSeek 或文心一言——西方模型受限或延迟很高',
             '**私有／本地：** Ollama 或 LM Studio——数据零外传',
           ],
@@ -2314,7 +2314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**优势：** 写作和摘要质量高，输出简洁、结构清晰、可直接发布。代码理解、重构和讲解能力出色，常能发现其他模型漏掉的 bug。在研究和文档类工作流中能较好处理长上下文。安全文化扎实，在受监管行业更受青睐。',
             '**最佳场景：** 对结构和清晰度要求高的报告、分析和知识工作。复杂代码库与架构讨论。有合规和安全要求的企业环境。希望尽量少返工的内容创作。',
             '**取舍：** 高端档位价格更高，简单任务上可能大材小用。部分第三方集成比 GPT-5.6 的同类集成更新、更不成熟。',
-            '**再进一步：** Anthropic 还提供 Claude Fable 5，是其广泛发布的最强模型。智能体编程和企业场景仍建议从 Opus 5 起步；当推理深度比成本更重要时，再换用 Fable 5。',
+            '**再进一步：** Anthropic 还提供 Claude Fable 5.1，是其广泛发布的最强模型。智能体编程和企业场景仍建议从 Opus 5 起步；当推理深度比成本更重要时，再换用 Fable 5。',
             '**上下文窗口：** 1,000,000 tokens（约相当于 800 页文本）。',
           ],
         },
@@ -2409,7 +2409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**前沿模型（每 token 最贵）：** GPT-5.6（每百万 tokens 输入 $5／输出 $30）、Claude Opus 5（每百万 tokens 输入 $5／输出 $25）。',
             '**高性价比前沿模型：** Gemini 3.1 Pro（每百万 tokens 输入 $2／输出 $12）——三个前沿模型中最便宜的。',
-            '**高性价比中端模型：** Gemini 3.7 Flash（每百万 tokens 输入约 $0.75／输出 $3.75）和 GPT-5.6 Luna（输入 $0.20／输出 $1.20）。再往下的效率档位是 Gemini 3.5 Flash-Lite。',
+            '**高性价比中端模型：** Gemini 3.8 Flash（每百万 tokens 输入约 $0.75／输出 $3.75）和 GPT-5.6 Luna（输入 $0.20／输出 $1.20）。再往下的效率档位是 Gemini 3.5 Flash-Lite。',
             '**价格有竞争力的选项：** DeepSeek-V4（定价激进）、通过 Ollama／LM Studio 运行的本地模型（免费，在自己设备上跑）。',
             '**速率限制：** 前沿模型通常从每分钟 100 次请求起步，扩容档位可达每分钟 1 万次以上。本地模型取决于你的硬件。',
             '[了解上下文窗口及其对模型选型的影响。](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         recipe2: {
           title: '方案 2：对比后端技术栈的代码质量与成本',
-          blockquote: '假设你有一个 Python 代码库。测试："检查这个函数的性能和 bug，并给出重构建议。"分别用 GPT-5.6、Claude Opus 5 和 Gemini 3.7 Flash 跑一遍。哪个发现的 bug 最多？哪个重构最干净？哪个每次请求最便宜？用 PromptQuorum 给代码质量打分。你可能会发现 Gemini Flash 以 Claude 五十分之一的成本发现了 90% 的问题。例如："优化这条数据库查询的速度，时间复杂度是多少？"——深度分析交给 Claude，低成本迭代交给 Gemini。',
+          blockquote: '假设你有一个 Python 代码库。测试："检查这个函数的性能和 bug，并给出重构建议。"分别用 GPT-5.6、Claude Opus 5 和 Gemini 3.8 Flash 跑一遍。哪个发现的 bug 最多？哪个重构最干净？哪个每次请求最便宜？用 PromptQuorum 给代码质量打分。你可能会发现 Gemini Flash 以 Claude 五十分之一的成本发现了 90% 的问题。例如："优化这条数据库查询的速度，时间复杂度是多少？"——深度分析交给 Claude，低成本迭代交给 Gemini。',
         },
 
         recipe3: {
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '如何为你的任务选择 AI 模型',
           numberedItems: [
             '**先定义任务类型：** 是事实／分析型（法务分析、代码评审、数据抽取），还是创意／生成型（头脑风暴、文案、创意构思）？事实型更适合 GPT-5.6 或 Claude Opus 5；创意型在所有前沿模型上都能跑。',
-            '**在速度与成本之间取舍：** GPT-5.6 是覆盖面最广的全能选手，但不是最便宜的。Claude Opus 5 最适合长链条推理和高准确性。Gemini 3.1 Pro 是最便宜的前沿模型，在多模态和长上下文（1M tokens）上表现突出；低成本档位是 Gemini 3.7 Flash 和 GPT-5.6 Luna。用 PromptQuorum 拿你自己的提示把三者比一遍。',
+            '**在速度与成本之间取舍：** GPT-5.6 是覆盖面最广的全能选手，但不是最便宜的。Claude Opus 5 最适合长链条推理和高准确性。Gemini 3.1 Pro 是最便宜的前沿模型，在多模态和长上下文（1M tokens）上表现突出；低成本档位是 Gemini 3.8 Flash 和 GPT-5.6 Luna。用 PromptQuorum 拿你自己的提示把三者比一遍。',
             '**先从前沿模型（GPT-5.6 Sol、Claude Opus 5 或 Gemini 3.1 Pro）起步，可行时再降档：** 在 GPT-5.6 Sol 上跑得好的任务，很可能在 GPT-5.6 Luna（成本约为其 1/25）上同样跑得好。等到有了可用版本，再把提示放到更便宜的模型上试。',
             '**本地／私有工作流用 Ollama 或 LM Studio，但要接受质量下降：** 本地模型无需外部 API 调用即可处理私有数据，但准确度不及前沿模型。建议混合使用：本地模型做第一轮处理，前沿模型做质量把关。',
             '**用户分布在不同地区时，按地区路由：** 全球用户（美国、欧盟、日本）→ GPT-5.6／Claude／Gemini。中国大陆 → DeepSeek 或文心一言（监管要求）。用 PromptQuorum 分别测试每个地区的模型。',
@@ -2501,7 +2501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '所有任务都用前沿模型',
-              problem: 'GPT-5.6 每百万 tokens $5／$30，大约是 Gemini 3.7 Flash（约 $0.75／$3.75）的 10 倍。多数分类、抽取和摘要任务在便宜模型上质量完全一样。',
+              problem: 'GPT-5.6 每百万 tokens $5／$30，大约是 Gemini 3.8 Flash（约 $0.75／$3.75）的 10 倍。多数分类、抽取和摘要任务在便宜模型上质量完全一样。',
               fix: '先从最便宜的模型开始。只有当便宜模型在你的任务上明显不行时，才升级到前沿模型。',
             },
             {
@@ -2842,9 +2842,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Ventanas de contexto:** GPT-5.6 (1M), Claude Opus 5 (1M), Gemini 3.1 Pro (1M) — los tres ahora iguales',
           '**Precios (por 1M tokens):** GPT-5.6 $5/$30, Claude Opus 5 $5/$25, Gemini 3.1 Pro $2/$12',
-          '**Mejor escritura:** Claude Opus 5 — conciso, estructurado, listo para publicación (Claude Fable 5 es el modelo más capaz de Anthropic con disponibilidad general cuando la profundidad importa más que el costo)',
+          '**Mejor escritura:** Claude Opus 5 — conciso, estructurado, listo para publicación (Claude Fable 5.1 es el modelo más capaz de Anthropic con disponibilidad general cuando la profundidad importa más que el costo)',
           '**Mejor integración de herramientas:** GPT-5.6 — mayor ecosistema de terceros (50.000+ integraciones)',
-          '**Mejor relación costo/calidad:** Gemini 3.1 Pro — el modelo frontier más barato por token; Gemini 3.7 Flash para trabajo de alto volumen',
+          '**Mejor relación costo/calidad:** Gemini 3.1 Pro — el modelo frontier más barato por token; Gemini 3.8 Flash para trabajo de alto volumen',
           '**Obligatorio para China:** DeepSeek o Baidu ERNIE — modelos occidentales restringidos o con alta latencia',
           '**Privado/local:** Ollama o LM Studio — cero salida de datos',
         ],
@@ -2885,7 +2885,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Puntos fuertes:** Escritura y resumen de alta calidad; los outputs son concisos, bien estructurados y listos para publicación. Excelente comprensión de código, refactorización y explicación — a menudo detecta bugs que otros modelos pasan por alto. Buen manejo del contexto largo para investigación y flujos de trabajo con documentos. Cultura de seguridad sólida; preferido en industrias reguladas.',
           '**Mejores casos de uso:** Informes, análisis y trabajo del conocimiento donde la estructura y la claridad son críticas. Bases de código complejas y discusiones de arquitectura. Entornos empresariales con requisitos de cumplimiento y seguridad. Contenido que requiere minimizar las revisiones.',
           '**Desventajas:** Punto de precio más alto para los niveles superiores; puede ser excesivo para tareas simples. Algunas integraciones de terceros son más recientes que los equivalentes de GPT-5.6.',
-          '**Yendo más allá:** Anthropic también ofrece Claude Fable 5, su modelo más capaz con disponibilidad general. Opus 5 sigue siendo el punto de partida recomendado para codificación agéntica y trabajo empresarial; recurre a Fable 5 cuando la profundidad de razonamiento importa más que el costo.',
+          '**Yendo más allá:** Anthropic también ofrece Claude Fable 5.1, su modelo más capaz con disponibilidad general. Opus 5 sigue siendo el punto de partida recomendado para codificación agéntica y trabajo empresarial; recurre a Fable 5 cuando la profundidad de razonamiento importa más que el costo.',
           '**Ventana de contexto:** 1.000.000 tokens (gestiona ~800 páginas de texto).',
         ],
       },
@@ -2980,7 +2980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Modelos frontier (más caros por token):** GPT-5.6 ($5 entrada / $30 salida por millón de tokens), Claude Opus 5 ($5 entrada / $25 salida por millón de tokens).',
           '**Frontier rentable:** Gemini 3.1 Pro ($2 entrada / $12 salida por millón de tokens) — el más barato de los tres modelos frontier.',
-          '**Nivel medio rentable:** Gemini 3.7 Flash (~$0.75 entrada / $3.75 salida por millón de tokens) y GPT-5.6 Luna ($0.20 entrada / $1.20 salida). Gemini 3.5 Flash-Lite es el nivel de eficiencia por debajo.',
+          '**Nivel medio rentable:** Gemini 3.8 Flash (~$0.75 entrada / $3.75 salida por millón de tokens) y GPT-5.6 Luna ($0.20 entrada / $1.20 salida). Gemini 3.5 Flash-Lite es el nivel de eficiencia por debajo.',
           '**Modelos de presupuesto competitivos:** DeepSeek (precios agresivos), modelos locales vía Ollama/LM Studio (gratis, se ejecutan en tu dispositivo).',
           '**Límites de frecuencia:** Los modelos frontier a menudo empiezan en 100 solicitudes/min; el nivel escalado puede alcanzar 10.000+ solicitudes/min. Los modelos locales dependen de tu hardware.',
           '[Aprende sobre las ventanas de contexto y cómo afectan la selección de modelos.](/es/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -3030,7 +3030,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe2: {
         title: 'Receta 2: Compara la calidad y el costo de programación para tu stack backend',
-        blockquote: 'Tienes una base de código en Python. Prueba: "Revisa esta función en busca de rendimiento y bugs. Sugiere refactorizaciones." Ejecútalo a través de GPT-5.6, Claude Opus 5 y Gemini 3.7 Flash. ¿Cuál detecta más bugs? ¿Cuál refactorización es más limpia? ¿Cuál es más barata por solicitud? Usa PromptQuorum para puntuar la calidad del código. Puede que descubras que Gemini Flash detecta el 90% de los problemas al 1/50 del costo de Claude. Ejemplo: "Optimiza esta consulta de base de datos por velocidad. ¿Cuál es la complejidad temporal?" — enrutado a Claude para análisis profundo, Gemini para iteración económica.',
+        blockquote: 'Tienes una base de código en Python. Prueba: "Revisa esta función en busca de rendimiento y bugs. Sugiere refactorizaciones." Ejecútalo a través de GPT-5.6, Claude Opus 5 y Gemini 3.8 Flash. ¿Cuál detecta más bugs? ¿Cuál refactorización es más limpia? ¿Cuál es más barata por solicitud? Usa PromptQuorum para puntuar la calidad del código. Puede que descubras que Gemini Flash detecta el 90% de los problemas al 1/50 del costo de Claude. Ejemplo: "Optimiza esta consulta de base de datos por velocidad. ¿Cuál es la complejidad temporal?" — enrutado a Claude para análisis profundo, Gemini para iteración económica.',
       },
 
       recipe3: {
@@ -3071,7 +3071,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Usar un modelo frontier para todas las tareas',
-            problem: 'GPT-5.6 a $5/$30 por millón de tokens es 10 veces más caro que Gemini 3.7 Flash a ~$0.75/$3.75. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
+            problem: 'GPT-5.6 a $5/$30 por millón de tokens es 10 veces más caro que Gemini 3.8 Flash a ~$0.75/$3.75. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
             fix: 'Empieza con el modelo más barato. Sube a frontier solo cuando el modelo más barato falle de forma medible en tu tarea.',
           },
           {
@@ -3331,9 +3331,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Janelas de contexto:** GPT-5.6 (1M), Claude Opus 5 (1M), Gemini 3.1 Pro (1M) — todos os três agora iguais',
           '**Preços (por 1M tokens):** GPT-5.6 $5/$30, Claude Opus 5 $5/$25, Gemini 3.1 Pro $2/$12',
-          '**Melhor escrita:** Claude Opus 5 — conciso, estruturado, pronto para publicação (o Claude Fable 5 é o modelo mais capaz da Anthropic com disponibilidade ampla quando profundidade importa mais que custo)',
+          '**Melhor escrita:** Claude Opus 5 — conciso, estruturado, pronto para publicação (o Claude Fable 5.1 é o modelo mais capaz da Anthropic com disponibilidade ampla quando profundidade importa mais que custo)',
           '**Melhor integração de ferramentas:** GPT-5.6 — maior ecossistema de terceiros (50.000+ integrações)',
-          '**Melhor relação custo/qualidade:** Gemini 3.1 Pro — modelo frontier mais econômico por token; Gemini 3.7 Flash para trabalho de alto volume',
+          '**Melhor relação custo/qualidade:** Gemini 3.1 Pro — modelo frontier mais econômico por token; Gemini 3.8 Flash para trabalho de alto volume',
           '**Obrigatório para a China:** DeepSeek ou Baidu ERNIE — modelos ocidentais restritos ou de alta latência',
           '**Privado/local:** Ollama ou LM Studio — zero saída de dados',
         ],
@@ -3374,7 +3374,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Pontos fortes:** Escrita e resumo de alta qualidade; outputs são concisos, bem estruturados e prontos para publicação. Excelente compreensão de código, refatoração e explicação — frequentemente detecta bugs que outros modelos perdem. Bom manuseio de contexto longo para pesquisa e fluxos de trabalho com documentos. Cultura de segurança sólida; preferido em setores regulados.',
           '**Melhores casos de uso:** Relatórios, análises e trabalho de conhecimento onde estrutura e clareza são críticas. Bases de código complexas e discussões de arquitetura. Ambientes empresariais com requisitos de conformidade e segurança. Conteúdo que requer minimização de revisões.',
           '**Desvantagens:** Ponto de preço mais alto para os níveis superiores; pode ser excessivo para tarefas simples. Algumas integrações de terceiros são mais recentes que os equivalentes do GPT-5.6.',
-          '**Indo além:** A Anthropic também oferece o Claude Fable 5, seu modelo mais capaz com ampla disponibilidade. O Opus 5 continua sendo o ponto de partida recomendado para codificação agêntica e trabalho corporativo; use o Fable 5 quando a profundidade de raciocínio importar mais que o custo.',
+          '**Indo além:** A Anthropic também oferece o Claude Fable 5.1, seu modelo mais capaz com ampla disponibilidade. O Opus 5 continua sendo o ponto de partida recomendado para codificação agêntica e trabalho corporativo; use o Fable 5 quando a profundidade de raciocínio importar mais que o custo.',
           '**Janela de contexto:** 1.000.000 tokens (gerencia ~800 páginas de texto).',
         ],
       },
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Modelos frontier (mais caros por token):** GPT-5.6 ($5 entrada / $30 saída por milhão de tokens), Claude Opus 5 ($5 entrada / $25 saída por milhão de tokens).',
           '**Frontier econômico:** Gemini 3.1 Pro ($2 entrada / $12 saída por milhão de tokens) — o mais barato dos três modelos frontier.',
-          '**Nível médio econômico:** Gemini 3.7 Flash (~$0,75 entrada / $3,75 saída por milhão de tokens) e GPT-5.6 Luna ($0,20 entrada / $1,20 saída). Gemini 3.5 Flash-Lite é o nível de eficiência abaixo desse.',
+          '**Nível médio econômico:** Gemini 3.8 Flash (~$0,75 entrada / $3,75 saída por milhão de tokens) e GPT-5.6 Luna ($0,20 entrada / $1,20 saída). Gemini 3.5 Flash-Lite é o nível de eficiência abaixo desse.',
           '**Modelos de orçamento competitivos:** DeepSeek (preços agressivos), modelos locais via Ollama/LM Studio (gratuito, executados no dispositivo).',
           '**Limites de taxa:** Modelos frontier frequentemente começam em 100 req/min; nível escalado pode chegar a 10.000+ req/min. Modelos locais dependem do seu hardware.',
           '[Aprenda sobre janelas de contexto e como elas afetam a seleção de modelos.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -3519,7 +3519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe2: {
         title: 'Receita 2: Compare Qualidade e Custo de Programação para Sua Stack Backend',
-        blockquote: 'Você tem uma base de código em Python. Teste: "Revise esta função em busca de desempenho e bugs. Sugira refatorações." Execute pelo GPT-5.6, Claude Opus 5 e Gemini 3.7 Flash. Qual detecta mais bugs? Qual refatoração é mais limpa? Qual é mais barato por requisição? Use o PromptQuorum para pontuar a qualidade do código. Você pode descobrir que Gemini Flash detecta 90% dos problemas a 1/50 do custo do Claude. Exemplo: "Otimize esta consulta de banco de dados para velocidade. Qual é a complexidade de tempo?" — roteado para Claude para análise profunda, Gemini para iteração econômica.',
+        blockquote: 'Você tem uma base de código em Python. Teste: "Revise esta função em busca de desempenho e bugs. Sugira refatorações." Execute pelo GPT-5.6, Claude Opus 5 e Gemini 3.8 Flash. Qual detecta mais bugs? Qual refatoração é mais limpa? Qual é mais barato por requisição? Use o PromptQuorum para pontuar a qualidade do código. Você pode descobrir que Gemini Flash detecta 90% dos problemas a 1/50 do custo do Claude. Exemplo: "Otimize esta consulta de banco de dados para velocidade. Qual é a complexidade de tempo?" — roteado para Claude para análise profunda, Gemini para iteração econômica.',
       },
 
       recipe3: {
@@ -3560,7 +3560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Usar um modelo frontier para todas as tarefas',
-            problem: 'GPT-5.6 a $5/$30 por milhão de tokens é 10× mais caro que Gemini 3.7 Flash a ~$0,75/$3,75. A maioria das tarefas de classificação, extração e resumo produz qualidade idêntica em modelos baratos.',
+            problem: 'GPT-5.6 a $5/$30 por milhão de tokens é 10× mais caro que Gemini 3.8 Flash a ~$0,75/$3,75. A maioria das tarefas de classificação, extração e resumo produz qualidade idêntica em modelos baratos.',
             fix: 'Comece com o modelo mais barato. Suba para frontier apenas quando o modelo mais barato falhar de forma mensurável na sua tarefa.',
           },
           {
@@ -3903,9 +3903,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**نوافذ السياق:** GPT-5.6 (1M) وClaude Opus 5 (1M) وGemini 3.1 Pro (1M) — الثلاثة الآن متساوون',
           '**الأسعار (لكل 1M رمز):** GPT-5.6 $5/$30، وClaude Opus 5 $5/$25، وGemini 3.1 Pro $2/$12',
-          '**أفضل كتابة:** Claude Opus 5 — موجز ومنظم وجاهز للنشر (وClaude Fable 5 هو النموذج الأكثر قدرة المتاح على نطاق واسع من Anthropic عندما يكون العمق أهم من التكلفة)',
+          '**أفضل كتابة:** Claude Opus 5 — موجز ومنظم وجاهز للنشر (وClaude Fable 5.1 هو النموذج الأكثر قدرة المتاح على نطاق واسع من Anthropic عندما يكون العمق أهم من التكلفة)',
           '**أفضل تكامل للأدوات:** GPT-5.6 — أكبر نظام بيئي من طرف ثالث (50,000+ تكامل)',
-          '**أفضل نسبة تكلفة/جودة:** Gemini 3.1 Pro — أقل تكلفة لنموذج حديث بالرمز؛ وGemini 3.7 Flash للعمل عالي الحجم',
+          '**أفضل نسبة تكلفة/جودة:** Gemini 3.1 Pro — أقل تكلفة لنموذج حديث بالرمز؛ وGemini 3.8 Flash للعمل عالي الحجم',
           '**إلزامي للصين:** DeepSeek أو Baidu ERNIE — النماذج الغربية مقيدة أو ذات زمن استجابة مرتفع',
           '**خاص/محلي:** Ollama أو LM Studio — صفر خروج للبيانات',
         ],
@@ -3946,7 +3946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**نقاط القوة:** كتابة وتلخيص عالي الجودة؛ الإخراج موجز ومنظم جيداً وجاهز للنشر. فهم ممتاز للكود وإعادة الهيكلة والشرح — غالباً ما يكتشف أخطاء يفوتها نماذج أخرى. معالجة جيدة للسياق الطويل للبحث وسير عمل المستندات. ثقافة أمان قوية؛ مُفضَّل في الصناعات المنظَّمة.',
           '**أفضل حالات الاستخدام:** التقارير والتحليل وعمل المعرفة حيث الهيكل والوضوح حاسمان. قواعد الكود المعقدة ومناقشات البنية. بيئات المؤسسات ذات متطلبات الامتثال والأمان. المحتوى الذي يتطلب تقليل المراجعات.',
           '**العيوب:** نقطة سعر أعلى للمستويات العليا؛ قد يكون مبالغاً فيه للمهام البسيطة. بعض تكاملات الطرف الثالث أحدث من نظيراتها في GPT-5.6.',
-          '**لمزيد من العمق:** توفّر Anthropic أيضاً Claude Fable 5، وهو نموذجها الأكثر قدرة المتاح على نطاق واسع. يبقى Opus 5 نقطة البداية الموصى بها للبرمجة الوكيلة وأعمال المؤسسات؛ ولجأ إلى Fable 5 عندما يكون عمق الاستدلال أهم من التكلفة.',
+          '**لمزيد من العمق:** توفّر Anthropic أيضاً Claude Fable 5.1، وهو نموذجها الأكثر قدرة المتاح على نطاق واسع. يبقى Opus 5 نقطة البداية الموصى بها للبرمجة الوكيلة وأعمال المؤسسات؛ ولجأ إلى Fable 5 عندما يكون عمق الاستدلال أهم من التكلفة.',
           '**نافذة السياق:** 1,000,000 رمز (يتعامل مع ~800 صفحة من النص).',
         ],
       },
@@ -4041,7 +4041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**نماذج الحافة (الأغلى لكل رمز):** GPT-5.6 ($5 إدخال / $30 إخراج لكل مليون رمز)، وClaude Opus 5 ($5 إدخال / $25 إخراج لكل مليون رمز).',
           '**نموذج حديث فعّال التكلفة:** Gemini 3.1 Pro ($2 إدخال / $12 إخراج لكل مليون رمز) — الأرخص بين النماذج الحديثة الثلاثة.',
-          '**المستوى المتوسط الفعّال:** Gemini 3.7 Flash (~$0.75 إدخال / $3.75 إخراج لكل مليون رمز) وGPT-5.6 Luna ($0.20 إدخال / $1.20 إخراج). وGemini 3.5 Flash-Lite هو مستوى الكفاءة الأدنى.',
+          '**المستوى المتوسط الفعّال:** Gemini 3.8 Flash (~$0.75 إدخال / $3.75 إخراج لكل مليون رمز) وGPT-5.6 Luna ($0.20 إدخال / $1.20 إخراج). وGemini 3.5 Flash-Lite هو مستوى الكفاءة الأدنى.',
           '**نماذج الميزانية التنافسية:** DeepSeek (أسعار عدوانية)، والنماذج المحلية عبر Ollama/LM Studio (مجانية، تعمل على جهازك).',
           '**حدود المعدل:** غالباً تبدأ نماذج الحافة بـ100 طلب/دقيقة؛ يمكن أن يصل المستوى المتدرج إلى 10,000+ طلب/دقيقة. تعتمد النماذج المحلية على أجهزتك.',
           '[تعرّف على نوافذ السياق وكيف تؤثر على اختيار النماذج.](/ar/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -4091,7 +4091,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe2: {
         title: 'الوصفة 2: قارن جودة البرمجة وتكلفتها لـstack الخلفية الخاص بك',
-        blockquote: 'لديك قاعدة كود Python. اختبر: "راجع هذه الدالة للأداء والأخطاء. اقترح إعادة هيكلة." شغّله عبر GPT-5.6 وClaude Opus 5 وGemini 3.7 Flash. أيها يكتشف المزيد من الأخطاء؟ أيها إعادة الهيكلة أنظف؟ أيها أرخص لكل طلب؟ استخدم PromptQuorum لتسجيل جودة الكود. قد تكتشف أن Gemini Flash يكتشف 90% من المشكلات بـ1/50 من تكلفة Claude. مثال: "حسّن هذا الاستعلام لقاعدة البيانات من حيث السرعة. ما التعقيد الزمني؟" — موجّه إلى Claude للتحليل العميق، وGemini للتكرار الاقتصادي.',
+        blockquote: 'لديك قاعدة كود Python. اختبر: "راجع هذه الدالة للأداء والأخطاء. اقترح إعادة هيكلة." شغّله عبر GPT-5.6 وClaude Opus 5 وGemini 3.8 Flash. أيها يكتشف المزيد من الأخطاء؟ أيها إعادة الهيكلة أنظف؟ أيها أرخص لكل طلب؟ استخدم PromptQuorum لتسجيل جودة الكود. قد تكتشف أن Gemini Flash يكتشف 90% من المشكلات بـ1/50 من تكلفة Claude. مثال: "حسّن هذا الاستعلام لقاعدة البيانات من حيث السرعة. ما التعقيد الزمني؟" — موجّه إلى Claude للتحليل العميق، وGemini للتكرار الاقتصادي.',
       },
 
       recipe3: {
@@ -4132,7 +4132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'استخدام نموذج حافة لجميع المهام',
-            problem: 'GPT-5.6 بـ$5/$30 لكل مليون رمز أغلى بـ10 مرات من Gemini 3.7 Flash بـ~$0.75/$3.75. معظم مهام التصنيف والاستخراج والتلخيص تنتج جودة متطابقة في النماذج الرخيصة.',
+            problem: 'GPT-5.6 بـ$5/$30 لكل مليون رمز أغلى بـ10 مرات من Gemini 3.8 Flash بـ~$0.75/$3.75. معظم مهام التصنيف والاستخراج والتلخيص تنتج جودة متطابقة في النماذج الرخيصة.',
             fix: 'ابدأ بالنموذج الأرخص. ارتقِ إلى الحافة فقط عندما يفشل النموذج الأرخص بشكل قابل للقياس في مهمتك.',
           },
           {
@@ -4380,9 +4380,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**컨텍스트 창:** GPT-5.6(1M), Claude Opus 5(1M), Gemini 3.1 Pro(1M) — 세 모델 모두 동일',
           '**가격(1M 토큰당):** GPT-5.6 $5/$30, Claude Opus 5 $5/$25, Gemini 3.1 Pro $2/$12',
-          '**최고 작문:** Claude Opus 5 — 간결하고 구조적이며 출판 준비 완료(깊이가 비용보다 중요할 때는 Anthropic이 널리 출시한 가장 강력한 모델인 Claude Fable 5)',
+          '**최고 작문:** Claude Opus 5 — 간결하고 구조적이며 출판 준비 완료(깊이가 비용보다 중요할 때는 Anthropic이 널리 출시한 가장 강력한 모델인 Claude Fable 5.1)',
           '**최고 도구 통합:** GPT-5.6 — 가장 큰 서드파티 에코시스템(50,000개 이상 통합)',
-          '**최고 비용/품질 비율:** Gemini 3.1 Pro — 토큰당 가장 저렴한 프런티어 모델, 대량 작업에는 Gemini 3.7 Flash',
+          '**최고 비용/품질 비율:** Gemini 3.1 Pro — 토큰당 가장 저렴한 프런티어 모델, 대량 작업에는 Gemini 3.8 Flash',
           '**중국 필수:** DeepSeek 또는 Baidu ERNIE — 서양 모델은 제한되거나 지연 시간이 높음',
           '**비공개/로컬:** Ollama 또는 LM Studio — 데이터 외부 전송 없음',
         ],
@@ -4423,7 +4423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**강점:** 고품질 작문 및 요약; 출력이 간결하고 잘 구조화되어 있으며 출판 준비가 완료됩니다. 탁월한 코드 이해, 리팩토링, 설명 — 다른 모델이 놓치는 버그를 종종 발견합니다. 리서치 및 문서 워크플로를 위한 우수한 긴 컨텍스트 처리. 강력한 안전 문화; 규제 산업에서 선호됩니다.',
           '**최적 사용 사례:** 구조와 명확성이 중요한 보고서, 분석, 지식 작업. 복잡한 코드베이스 및 아키텍처 토론. 컴플라이언스 및 안전 요건이 있는 엔터프라이즈 환경. 수정을 최소화해야 하는 콘텐츠.',
           '**트레이드오프:** 최상위 티어의 더 높은 가격; 단순한 작업에는 과도할 수 있습니다. 일부 서드파티 통합은 GPT-5.6 동등 제품보다 최신입니다.',
-          '**더 나아가기:** Anthropic은 널리 출시된 가장 강력한 모델인 Claude Fable 5도 제공합니다. 에이전트형 코딩과 엔터프라이즈 작업에는 Opus 5이 여전히 권장 출발점이며, 추론 깊이가 비용보다 중요할 때 Fable 5을 선택하십시오.',
+          '**더 나아가기:** Anthropic은 널리 출시된 가장 강력한 모델인 Claude Fable 5.1도 제공합니다. 에이전트형 코딩과 엔터프라이즈 작업에는 Opus 5이 여전히 권장 출발점이며, 추론 깊이가 비용보다 중요할 때 Fable 5을 선택하십시오.',
           '**컨텍스트 창:** 1,000,000 토큰(약 800페이지 텍스트 처리).',
         ],
       },
@@ -4518,7 +4518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**프런티어 모델(토큰당 가장 비쌈):** GPT-5.6(100만 토큰당 입력 $5 / 출력 $30), Claude Opus 5(100만 토큰당 입력 $5 / 출력 $25).',
           '**비용 효율적인 프런티어:** Gemini 3.1 Pro(100만 토큰당 입력 $2 / 출력 $12) — 세 프런티어 모델 중 가장 저렴합니다.',
-          '**비용 효율적인 중간 티어:** Gemini 3.7 Flash(100만 토큰당 입력 약 $0.75 / 출력 $3.75)와 GPT-5.6 Luna(입력 $0.20 / 출력 $1.20). 그 아래 효율 티어는 Gemini 3.5 Flash-Lite입니다.',
+          '**비용 효율적인 중간 티어:** Gemini 3.8 Flash(100만 토큰당 입력 약 $0.75 / 출력 $3.75)와 GPT-5.6 Luna(입력 $0.20 / 출력 $1.20). 그 아래 효율 티어는 Gemini 3.5 Flash-Lite입니다.',
           '**경쟁력 있는 예산 모델:** DeepSeek(공격적인 가격), Ollama/LM Studio를 통한 로컬 모델(무료, 기기에서 실행).',
           '**속도 제한:** 프런티어 모델은 종종 분당 100개 요청으로 시작하며, 확장 티어는 분당 10,000개 이상에 도달할 수 있습니다. 로컬 모델은 귀하의 하드웨어에 따라 달라집니다.',
           '[컨텍스트 창과 모델 선택에 미치는 영향에 대해 알아보기.](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -4569,7 +4569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       recipe2: {
         title: '레시피 2: 백엔드 스택의 코딩 품질 및 비용 비교',
-        blockquote: 'Python 코드베이스가 있습니다. 테스트: "이 함수를 성능과 버그에 대해 검토하십시오. 리팩토링을 제안하십시오." GPT-5.6, Claude Opus 5, Gemini 3.7 Flash를 통해 실행하십시오. 어느 것이 가장 많은 버그를 발견합니까? 어느 리팩토링이 가장 깔끔합니까? 요청당 가장 저렴한 것은? PromptQuorum을 사용하여 코드 품질을 점수로 매기십시오. Gemini Flash가 Claude 비용의 1/50로 문제의 90%를 해결한다는 것을 발견할 수도 있습니다. 예시: "이 데이터베이스 쿼리를 속도를 위해 최적화하십시오. 시간 복잡도는 무엇입니까?" — 심층 분석에는 Claude로, 예산에 맞는 반복에는 Gemini로 라우팅.',
+        blockquote: 'Python 코드베이스가 있습니다. 테스트: "이 함수를 성능과 버그에 대해 검토하십시오. 리팩토링을 제안하십시오." GPT-5.6, Claude Opus 5, Gemini 3.8 Flash를 통해 실행하십시오. 어느 것이 가장 많은 버그를 발견합니까? 어느 리팩토링이 가장 깔끔합니까? 요청당 가장 저렴한 것은? PromptQuorum을 사용하여 코드 품질을 점수로 매기십시오. Gemini Flash가 Claude 비용의 1/50로 문제의 90%를 해결한다는 것을 발견할 수도 있습니다. 예시: "이 데이터베이스 쿼리를 속도를 위해 최적화하십시오. 시간 복잡도는 무엇입니까?" — 심층 분석에는 Claude로, 예산에 맞는 반복에는 Gemini로 라우팅.',
       },
 
       recipe3: {
@@ -4610,7 +4610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '모든 작업에 프런티어 모델을 사용하는 것',
-            problem: 'GPT-5.6는 100만 토큰당 $5/$30으로, Gemini 3.7 Flash의 약 $0.75/$3.75 대비 10배 더 비쌉니다. 대부분의 분류, 추출, 요약 작업은 저렴한 모델에서 동일한 품질을 생성합니다.',
+            problem: 'GPT-5.6는 100만 토큰당 $5/$30으로, Gemini 3.8 Flash의 약 $0.75/$3.75 대비 10배 더 비쌉니다. 대부분의 분류, 추출, 요약 작업은 저렴한 모델에서 동일한 품질을 생성합니다.',
             fix: '가장 저렴한 모델로 시작하십시오. 저렴한 모델이 귀하의 작업에서 측정 가능하게 실패할 때만 프런티어로 업그레이드하십시오.',
           },
           {

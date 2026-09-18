@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Apple Silicon Mac 48 GB unified memory', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM is a $4.99 one-time-purchase app for iPhone, iPad, and Mac that runs 140+ open-source AI models entirely on-device, with no account and no subscription.** Made by [Numen Technologies Limited](https://privatellm.app/en), it uses OmniQuant and GPTQ quantization, which the developer says preserves more output quality per bit than the round-to-nearest quantization used in some competing apps. One purchase unlocks the full model library on all three Apple platforms and, via Family Sharing, up to six people. Readers who want a free alternative, or who use Android/Windows/Linux, should compare it with [PocketPal AI](/power-local-llm/pocketpal-ai-review), which is free and open source.',
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Apple Silicon Mac mit 48 GB Unified Memory', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM ist eine App mit 4,99-$-Einmalkauf für iPhone, iPad und Mac, die mehr als 140 Open-Source-KI-Modelle vollständig auf dem Gerät ausführt — ohne Konto und ohne Abonnement.** Entwickelt von [Numen Technologies Limited](https://privatellm.app/en), nutzt sie OmniQuant- und GPTQ-Quantisierung, die laut Entwickler pro Bit mehr Ausgabequalität erhält als die Round-to-Nearest-Quantisierung mancher konkurrierender Apps. Ein Kauf schaltet die vollständige Modellbibliothek auf allen drei Apple-Plattformen frei und über Familienfreigabe für bis zu sechs Personen. Leser, die eine kostenlose Alternative suchen oder Android/Windows/Linux nutzen, sollten sie mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen, das kostenlos und quelloffen ist.',
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac con Apple Silicon y 48 GB de memoria unificada', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM es una app de compra única de 4,99 $ para iPhone, iPad y Mac que ejecuta más de 140 modelos de IA de código abierto completamente en el dispositivo, sin cuenta y sin suscripción.** Creada por [Numen Technologies Limited](https://privatellm.app/en), usa cuantización OmniQuant y GPTQ, que según el desarrollador conserva más calidad de salida por bit que la cuantización round-to-nearest de algunas apps de la competencia. Una sola compra desbloquea toda la biblioteca de modelos en las tres plataformas de Apple y, mediante Compartir en familia, para hasta seis personas. Quienes busquen una alternativa gratuita, o usen Android/Windows/Linux, deberían compararla con [PocketPal AI](/es/power-local-llm/pocketpal-ai-review), que es gratuita y de código abierto.',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac Apple Silicon avec 48 Go de mémoire unifiée', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM est une application à achat unique de 4,99 $ pour iPhone, iPad et Mac qui exécute plus de 140 modèles d\'IA open source entièrement sur l\'appareil, sans compte et sans abonnement.** Développée par [Numen Technologies Limited](https://privatellm.app/en), elle utilise la quantification OmniQuant et GPTQ, dont l\'éditeur affirme qu\'elle préserve davantage de qualité de sortie par bit que la quantification round-to-nearest de certaines applications concurrentes. Un seul achat débloque l\'intégralité de la bibliothèque de modèles sur les trois plateformes Apple et, via le Partage familial, pour jusqu\'à six personnes. Les lecteurs qui souhaitent une alternative gratuite, ou qui utilisent Android/Windows/Linux, devraient la comparer à [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), gratuite et open source.',
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '48GBユニファイドメモリ搭載Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLMはiPhone・iPad・Mac向けの4.99ドル買い切りアプリで、140以上のオープンソースAIモデルを完全にオンデバイスで実行します——アカウント登録もサブスクリプションも不要です。** [Numen Technologies Limited](https://privatellm.app/en)が開発し、OmniQuantとGPTQによる量子化を採用しています。開発者によれば、これは一部の競合アプリが使うround-to-nearest量子化よりもビットあたりの出力品質を維持できるとのことです。一度の購入でApple製3プラットフォームすべてのモデルライブラリがアンロックされ、ファミリー共有で最大6人まで利用できます。無料の代替を求める読者、またはAndroid/Windows/Linuxを使う読者は、無料でオープンソースの[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較すべきです。',
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac com Apple Silicon e 48 GB de memória unificada', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**O Private LLM é um app de compra única de US$ 4,99 para iPhone, iPad e Mac que executa mais de 140 modelos de IA de código aberto inteiramente no dispositivo, sem conta e sem assinatura.** Feito pela [Numen Technologies Limited](https://privatellm.app/en), ele usa quantização OmniQuant e GPTQ, que segundo o desenvolvedor preserva mais qualidade de saída por bit do que a quantização round-to-nearest de alguns apps concorrentes. Uma única compra desbloqueia toda a biblioteca de modelos nas três plataformas da Apple e, via Compartilhamento familiar, para até seis pessoas. Quem busca uma alternativa gratuita, ou usa Android/Windows/Linux, deve comparar com o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review), que é gratuito e de código aberto.',
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'جهاز Mac بمعالج Apple Silicon و48 جيجابايت من الذاكرة الموحدة', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM تطبيق بشراء لمرة واحدة بسعر 4.99 دولار لأجهزة iPhone وiPad وMac يشغّل أكثر من 140 نموذج ذكاء اصطناعي مفتوح المصدر بالكامل على الجهاز، دون حساب ودون اشتراك.** من تطوير [Numen Technologies Limited](https://privatellm.app/en)، يستخدم تكميم OmniQuant وGPTQ، الذي يقول المطوّر إنه يحافظ على جودة إخراج أعلى لكل بت مقارنة بتكميم round-to-nearest في بعض التطبيقات المنافسة. عملية شراء واحدة تفتح مكتبة النماذج الكاملة على منصات Apple الثلاث، وعبر المشاركة العائلية لحتى ستة أشخاص. من يبحث عن بديل مجاني، أو يستخدم Android/Windows/Linux، عليه المقارنة مع [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) المجاني ومفتوح المصدر.',
@@ -3196,7 +3196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '配备48GB统一内存的Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM是一款面向iPhone、iPad和Mac的4.99美元一次性付费应用，可完全在设备端运行140多个开源AI模型——无需账号，无需订阅。** 由[Numen Technologies Limited](https://privatellm.app/en)开发，采用OmniQuant和GPTQ量化技术，开发者称这比一些竞品应用使用的round-to-nearest量化在每比特上能保留更高的输出质量。一次购买即可解锁三个Apple平台上的完整模型库，通过家人共享最多可供六人使用。希望获得免费替代品或使用Android/Windows/Linux的读者，应与免费开源的[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)进行比较。',
@@ -3649,7 +3649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Gemma 3', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '48GB 통합 메모리를 탑재한 Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM은 iPhone, iPad, Mac용 4.99달러 일회성 구매 앱으로, 140개 이상의 오픈소스 AI 모델을 계정이나 구독 없이 완전히 기기 내에서 실행합니다.** [Numen Technologies Limited](https://privatellm.app/en)가 개발했으며, OmniQuant와 GPTQ 양자화를 사용합니다. 개발사에 따르면 이는 일부 경쟁 앱이 사용하는 round-to-nearest 양자화보다 비트당 출력 품질을 더 잘 보존한다고 합니다. 한 번 구매하면 Apple 세 플랫폼 전체에서 전체 모델 라이브러리가 잠금 해제되며, 가족 공유를 통해 최대 6명까지 사용할 수 있습니다. 무료 대안을 원하거나 Android/Windows/Linux를 사용하는 독자는 무료 오픈소스인 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보아야 합니다.',
