@@ -663,6 +663,20 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // The MCP server and its usage-counter status endpoint are live,
+        // per-request state (tool-call results, aggregate call counts) —
+        // never edge-cacheable. Overrides the broader /api/:path*
+        // Cache-Control above (s-maxage=3600), which otherwise served
+        // /api/mcp-status stale for up to an hour after a real tool call
+        // had already incremented the counters.
+        source: '/api/mcp',
+        headers: [{ key: 'Cache-Control', value: 'no-store' }],
+      },
+      {
+        source: '/api/mcp-status',
+        headers: [{ key: 'Cache-Control', value: 'no-store' }],
+      },
+      {
         source: '/:path*',
         headers: [
           {
