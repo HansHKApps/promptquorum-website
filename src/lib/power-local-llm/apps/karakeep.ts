@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق إشارات مرجعية وملاحظات قابل للاستضافة الذاتية، مزوّد بوسم تلقائي بالذكاء الاصطناعي وتلخيص وبحث نصي كامل',
     ko: 'AI 기반 자동 태깅, 요약, 전문 검색을 지원하는 셀프호스팅 가능한 북마크·메모 앱',
   },
+  reviewSlug: 'karakeep-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

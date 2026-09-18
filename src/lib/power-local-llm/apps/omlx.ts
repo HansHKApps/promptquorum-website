@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'خادم استدلال محلي قائم على MLX لمعالجات Apple Silicon مع تخزين مؤقت مقسّم على القرص الصلب SSD، مصمم لتشغيل وكلاء البرمجة المحليين',
     ko: 'Apple Silicon용 MLX 기반 로컬 추론 서버로, 페이지 단위 SSD 캐싱을 지원하며 로컬 코딩 에이전트 구동을 위해 설계됨',
   },
+  reviewSlug: 'omlx-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

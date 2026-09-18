@@ -20,6 +20,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['audio', 'docs'],
   url: 'meetily.ai',
+  reviewSlug: 'meetily-review', // dedicated PromptQuorum review — added 2026-09-18
   tagline: {
     en: 'Privacy-first, 100% local AI meeting assistant with live transcription, speaker diarization, and Ollama-based summaries',
     de: 'Datenschutzorientierter, zu 100 % lokaler KI-Meeting-Assistent mit Live-Transkription, Sprechererkennung und Ollama-basierten Zusammenfassungen',

@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'محرك ذاكرة ذكاء اصطناعي مفتوح المصدر يمنح الوكلاء ذاكرة طويلة الأمد ودائمة ومستضافة ذاتيًا عبر رسم بياني معرفي',
     ko: '지식 그래프를 통해 에이전트에게 영구적이고 셀프호스팅 가능한 장기 기억을 제공하는 오픈소스 AI 메모리 엔진',
   },
+  reviewSlug: 'cognee-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

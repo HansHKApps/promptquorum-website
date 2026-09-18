@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ar: 'تطبيق RAG ووكلاء لقاعدة معرفة محلية مبني على LangChain، يعمل مع نماذج محلية مثل ChatGLM وQwen أو واجهات برمجة سحابية',
     ko: 'LangChain 기반의 로컬 지식베이스 RAG·에이전트 앱으로, ChatGLM·Qwen 같은 로컬 모델이나 클라우드 API와 함께 사용 가능',
   },
+  reviewSlug: 'langchain-chatchat-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

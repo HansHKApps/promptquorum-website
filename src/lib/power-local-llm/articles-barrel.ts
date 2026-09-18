@@ -270,6 +270,16 @@ import { article as a_ypipe_review } from './articles/ypipe-review'
 import { article as a_joplin_ai_agent_review } from './articles/joplin-ai-agent-review'
 import { article as a_logseq_copilot_review } from './articles/logseq-copilot-review'
 import { article as a_smart_connections_review } from './articles/smart-connections-review'
+import { article as a_siyuan_review } from './articles/siyuan-review'
+import { article as a_milvus_review } from './articles/milvus-review'
+import { article as a_langchain_chatchat_review } from './articles/langchain-chatchat-review'
+import { article as a_langfuse_review } from './articles/langfuse-review'
+import { article as a_qdrant_review } from './articles/qdrant-review'
+import { article as a_meetily_review } from './articles/meetily-review'
+import { article as a_cognee_review } from './articles/cognee-review'
+import { article as a_chroma_review } from './articles/chroma-review'
+import { article as a_karakeep_review } from './articles/karakeep-review'
+import { article as a_omlx_review } from './articles/omlx-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -581,4 +591,14 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'logseq-copilot-review':                            a_logseq_copilot_review,
   'joplin-ai-agent-review':                           a_joplin_ai_agent_review,
   'smart-connections-review':                         a_smart_connections_review,
+  'siyuan-review':                                     a_siyuan_review,
+  'milvus-review':                                     a_milvus_review,
+  'langchain-chatchat-review':                         a_langchain_chatchat_review,
+  'langfuse-review':                                   a_langfuse_review,
+  'qdrant-review':                                     a_qdrant_review,
+  'meetily-review':                                    a_meetily_review,
+  'cognee-review':                                     a_cognee_review,
+  'chroma-review':                                     a_chroma_review,
+  'karakeep-review':                                   a_karakeep_review,
+  'omlx-review':                                        a_omlx_review,
 }

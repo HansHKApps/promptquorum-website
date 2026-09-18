@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'منصة مفتوحة المصدر لمراقبة نماذج اللغة الكبيرة، لتتبع وتقييم وتصحيح تطبيقات الذكاء الاصطناعي في بيئة الإنتاج',
     ko: '프로덕션 AI 애플리케이션을 추적·평가·디버깅하는 오픈소스 LLM 옵저버빌리티 플랫폼',
   },
+  reviewSlug: 'langfuse-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }
