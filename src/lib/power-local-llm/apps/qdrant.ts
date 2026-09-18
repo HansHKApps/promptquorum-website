@@ -20,6 +20,7 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['build', 'docs'],
   url: 'qdrant.tech',
+  reviewSlug: 'qdrant-review', // dedicated PromptQuorum review — added 2026-09-18
   tagline: {
     en: 'High-performance open-source vector database and search engine for embeddings-based retrieval and RAG',
     de: 'Leistungsstarke Open-Source-Vektordatenbank und Suchmaschine für Embedding-basierte Retrieval- und RAG-Anwendungen',

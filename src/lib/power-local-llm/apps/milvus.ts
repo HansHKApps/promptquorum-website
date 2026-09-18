@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'قاعدة بيانات متجهة مفتوحة المصدر وعالية الأداء وسحابية النشأة، مخصصة للبحث عن التشابه واسع النطاق وتطبيقات RAG',
     ko: '대규모 유사도 검색과 RAG를 위한 고성능 클라우드 네이티브 오픈소스 벡터 데이터베이스',
   },
+  reviewSlug: 'milvus-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

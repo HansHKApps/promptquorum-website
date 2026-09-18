@@ -858,5 +858,55 @@
     "cluster": "power-local-llm",
     "urlSlug": "vane-review",
     "url": "/power-local-llm/vane-review"
+  },
+  "chroma": {
+    "cluster": "power-local-llm",
+    "urlSlug": "chroma-review",
+    "url": "/power-local-llm/chroma-review"
+  },
+  "cognee": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cognee-review",
+    "url": "/power-local-llm/cognee-review"
+  },
+  "karakeep": {
+    "cluster": "power-local-llm",
+    "urlSlug": "karakeep-review",
+    "url": "/power-local-llm/karakeep-review"
+  },
+  "langchain-chatchat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "langchain-chatchat-review",
+    "url": "/power-local-llm/langchain-chatchat-review"
+  },
+  "langfuse": {
+    "cluster": "power-local-llm",
+    "urlSlug": "langfuse-review",
+    "url": "/power-local-llm/langfuse-review"
+  },
+  "meetily": {
+    "cluster": "power-local-llm",
+    "urlSlug": "meetily-review",
+    "url": "/power-local-llm/meetily-review"
+  },
+  "milvus": {
+    "cluster": "power-local-llm",
+    "urlSlug": "milvus-review",
+    "url": "/power-local-llm/milvus-review"
+  },
+  "omlx": {
+    "cluster": "power-local-llm",
+    "urlSlug": "omlx-review",
+    "url": "/power-local-llm/omlx-review"
+  },
+  "qdrant": {
+    "cluster": "power-local-llm",
+    "urlSlug": "qdrant-review",
+    "url": "/power-local-llm/qdrant-review"
+  },
+  "siyuan": {
+    "cluster": "power-local-llm",
+    "urlSlug": "siyuan-review",
+    "url": "/power-local-llm/siyuan-review"
   }
 }

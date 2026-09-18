@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ar: 'قاعدة بيانات تضمينات وبنية بحث مفتوحة المصدر لبناء تطبيقات RAG وذاكرة الذكاء الاصطناعي',
     ko: 'RAG 및 AI 메모리 애플리케이션 구축을 위한 오픈소스 임베딩 데이터베이스 및 검색 인프라',
   },
+  reviewSlug: 'chroma-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

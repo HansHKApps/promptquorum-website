@@ -425,4 +425,15 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'logseq-copilot-review':                    'logseq-copilot-review',
   // Smart Connections review — 2026-09-12
   'smart-connections-review':                 'smart-connections-review',
+  // FeatureAppPost batch 1 (first 10 of the 2026-09-18 directory additions) — 2026-09-18
+  'siyuan-review':                            'siyuan-review',
+  'milvus-review':                            'milvus-review',
+  'langchain-chatchat-review':                'langchain-chatchat-review',
+  'langfuse-review':                          'langfuse-review',
+  'qdrant-review':                            'qdrant-review',
+  'meetily-review':                           'meetily-review',
+  'cognee-review':                            'cognee-review',
+  'chroma-review':                            'chroma-review',
+  'karakeep-review':                          'karakeep-review',
+  'omlx-review':                              'omlx-review',
 }

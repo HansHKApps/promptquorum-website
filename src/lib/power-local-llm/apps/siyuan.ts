@@ -31,5 +31,6 @@ export const app: ToolRecord = {
     ar: 'مساحة معرفية مستضافة ذاتيًا تركز على الخصوصية، مع مراجع على مستوى الكتلة وتعاون مدمج مع وكلاء الذكاء الاصطناعي',
     ko: '블록 단위 참조와 AI 에이전트 협업을 기본 지원하는 프라이버시 중심 셀프호스팅 지식 워크스페이스',
   },
+  reviewSlug: 'siyuan-review', // dedicated PromptQuorum review — added 2026-09-18
   lastVerifiedDate: '2026-09-18',
 }

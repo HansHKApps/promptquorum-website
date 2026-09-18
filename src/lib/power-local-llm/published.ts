@@ -458,6 +458,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'smart-connections-review',
   // nanobot review (HKUDS/nanobot) — 2026-09-14
   'nanobot-review',
+  // FeatureAppPost batch 1 (first 10 of the 2026-09-18 directory additions) — 2026-09-18
+  'siyuan-review',
+  'milvus-review',
+  'langchain-chatchat-review',
+  'langfuse-review',
+  'qdrant-review',
+  'meetily-review',
+  'cognee-review',
+  'chroma-review',
+  'karakeep-review',
+  'omlx-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

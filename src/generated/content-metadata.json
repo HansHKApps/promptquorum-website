@@ -11098,6 +11098,186 @@
         "ko"
       ],
       "images": []
+    },
+    "siyuan-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "milvus-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "langchain-chatchat-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "langfuse-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "qdrant-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "meetily-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "cognee-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "chroma-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "karakeep-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "omlx-review": {
+      "dateModified": "2026-09-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     }
   },
   "prompt-bites": {
