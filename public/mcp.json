@@ -1,5 +1,5 @@
 {
-  "_spec": "Model Context Protocol (MCP) site discovery manifest — modelcontextprotocol.io. This file follows the MCP open standard for AI agent discovery. A live MCP server will be reachable at the transport URL below at beta launch (April 2026). Until then this is a static discovery document only.",
+  "_spec": "Model Context Protocol (MCP) site discovery manifest — modelcontextprotocol.io. This file follows the MCP open standard for AI agent discovery. The MCP server below is live at the transport URL — connect any MCP-compatible client (Claude, or any other client speaking the open MCP protocol) directly.",
 
   "mcpVersion": "2024-11-05",
   "schemaVersion": "1.0",
@@ -7,11 +7,10 @@
   "server": {
     "name": "promptquorum",
     "version": "1.0.0",
-    "description": "PromptQuorum is a multi-model AI dispatch and consensus analysis tool. Send one structured prompt simultaneously to GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek, Grok, Cohere and 25+ AI models. Collect parallel responses, score consensus across models, detect hallucinations, and extract the best answer. Supports local LLMs (Ollama, LM Studio, Jan AI, GPT4All) for fully private offline inference. 9 built-in prompt engineering frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Line). 13 Quorum analysis types. Free. Bring your own API key. No account required.",
+    "description": "PromptQuorum's live MCP server exposes read-only search and content-fetch tools over all of PromptQuorum's guides on running local LLMs, prompt engineering, smart home and balcony solar, plus the Local LLM Software Directory (hardware requirements, license, platforms, pricing for hundreds of tools). No account or API key required.",
     "homepage": "https://www.promptquorum.com",
     "icon": "https://www.promptquorum.com/logo.svg",
-    "status": "pre-launch-waitlist",
-    "betaLaunch": "2026-04-01"
+    "status": "live"
   },
 
   "contact": {
@@ -42,18 +41,14 @@
     "tools": {
       "listChanged": false
     },
-    "prompts": {
-      "listChanged": false
-    },
     "logging": {}
   },
 
   "transport": {
-    "type": "http-sse",
+    "type": "streamable-http",
     "url": "https://www.promptquorum.com/api/mcp",
-    "status": "planned",
-    "plannedLaunch": "2026-04-01",
-    "note": "Live MCP server not yet active. This is a static discovery manifest only. The /api/mcp endpoint will be available at beta launch."
+    "status": "live",
+    "note": "Streamable HTTP transport (POST/GET), no authentication required. Stateless — every call is a read against the site's own content."
   },
 
   "resources": [
@@ -131,174 +126,103 @@
 
   "tools": [
     {
-      "name": "dispatch_prompt",
-      "description": "Send a structured prompt simultaneously to multiple AI models and collect parallel responses. Returns an array of {modelId, text, latencyMs} objects.",
-      "status": "planned",
-      "plannedLaunch": "2026-04-01",
+      "name": "search_promptquorum",
+      "description": "Search PromptQuorum's local-LLM guides, prompt-engineering articles, and software directory. Returns titles, short descriptions, and URLs — call get_article for full content.",
+      "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["prompt", "models"],
+        "required": ["query"],
         "properties": {
-          "prompt": {
+          "query": {
             "type": "string",
-            "description": "The prompt text to dispatch. Plain text or structured framework output."
+            "description": "Search query, e.g. \"run Llama on a Mac\" or \"vector database\"."
           },
-          "models": {
-            "type": "array",
-            "items": { "type": "string" },
-            "description": "Array of model IDs to dispatch to. Minimum 2, maximum 25. Example: [\"gpt-4o\", \"claude-3-5-sonnet\", \"gemini-2.0-flash\"]."
-          },
-          "framework": {
+          "lang": {
             "type": "string",
-            "enum": ["co-star", "craft", "risen", "ape", "specs", "trace", "rtf", "google", "single-line", "custom"],
-            "description": "Optional: prompt framework used to structure the prompt."
-          }
-        }
-      }
-    },
-    {
-      "name": "run_quorum",
-      "description": "Run consensus analysis across a set of AI model responses. Returns structured analysis including consensus score, contradictions, hallucination flags, and best-answer ranking.",
-      "status": "planned",
-      "plannedLaunch": "2026-04-01",
-      "inputSchema": {
-        "type": "object",
-        "required": ["responses", "analysis_types"],
-        "properties": {
-          "responses": {
-            "type": "array",
-            "description": "Array of {modelId, text} objects from dispatch_prompt.",
-            "items": {
-              "type": "object",
-              "required": ["modelId", "text"],
-              "properties": {
-                "modelId": { "type": "string" },
-                "text": { "type": "string" }
-              }
-            }
+            "description": "Language code (en, de, fr, ja, zh, es, pt, ar, ko). Defaults to all languages if omitted."
           },
-          "analysis_types": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "consensus_summary",
-                "weighted_merge",
-                "atomic_facts",
-                "overlap_mapping",
-                "contradiction_detection",
-                "confidence_scoring",
-                "completeness_check",
-                "hallucination_detection",
-                "redundancy_elimination",
-                "best_answer_selection",
-                "ensemble",
-                "controversy_flag",
-                "response_ranking"
-              ]
-            },
-            "description": "One or more of the 13 Quorum analysis types to run."
-          }
-        }
-      }
-    },
-    {
-      "name": "optimize_prompt",
-      "description": "Iteratively refine a prompt using AI-powered optimization. Returns improved prompt with version history and optional explanation of changes (Teaching Mode).",
-      "status": "planned",
-      "plannedLaunch": "2026-04-01",
-      "inputSchema": {
-        "type": "object",
-        "required": ["prompt"],
-        "properties": {
-          "prompt": { "type": "string" },
-          "refinement": {
+          "cluster": {
             "type": "string",
-            "enum": ["more_specific", "simpler", "more_creative", "more_formal", "more_concise", "add_examples", "add_constraints", "chain_of_thought"],
-            "description": "One of 8 one-click refinement directions."
+            "description": "Restrict to one cluster: local-llms, prompt-engineering, power-local-llm, prompt-bites, smart-home, balcony-solar, blog."
           },
-          "teaching_mode": {
-            "type": "boolean",
-            "default": false,
-            "description": "If true, returns explanation of each change and which prompt engineering principles were applied."
-          }
-        }
-      }
-    },
-    {
-      "name": "recommend_framework",
-      "description": "Given a task description, recommend the most suitable prompt engineering framework from the 9 built-in options. Returns framework name, rationale, and pre-filled template fields.",
-      "status": "planned",
-      "plannedLaunch": "2026-04-01",
-      "inputSchema": {
-        "type": "object",
-        "required": ["task_description"],
-        "properties": {
-          "task_description": {
-            "type": "string",
-            "description": "Plain-language description of the task."
-          },
-          "top_k": {
+          "limit": {
             "type": "integer",
-            "default": 3,
             "minimum": 1,
-            "maximum": 9,
-            "description": "Number of ranked framework recommendations to return."
+            "maximum": 25,
+            "default": 10,
+            "description": "Max results."
           }
         }
       }
-    }
-  ],
-
-  "prompts": [
-    {
-      "name": "multi_model_comparison",
-      "description": "Template: define a research question, dispatch to 5+ models, run best_answer_selection + contradiction_detection Quorum analysis, export results."
     },
     {
-      "name": "hallucination_check",
-      "description": "Template: dispatch a factual question to 5+ models, run atomic_facts + hallucination_detection, flag claims appearing in only one model's response."
+      "name": "get_article",
+      "description": "Fetch the full content of one PromptQuorum article by cluster + slug (from a search_promptquorum result URL).",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": ["cluster", "slug"],
+        "properties": {
+          "cluster": {
+            "type": "string",
+            "description": "Cluster the article belongs to, e.g. \"local-llms\" or \"power-local-llm\"."
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL slug of the article."
+          },
+          "lang": {
+            "type": "string",
+            "description": "Language code, defaults to en."
+          }
+        }
+      }
     },
     {
-      "name": "framework_selection",
-      "description": "Template: describe your task to the Framework Wizard, get a ranked recommendation, pre-fill the template fields, optimize, then dispatch."
+      "name": "list_clusters",
+      "description": "List every content section on PromptQuorum (local-llms, prompt-engineering, power-local-llm, etc.) with a short description of each.",
+      "status": "live",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "get_app_details",
+      "description": "Fetch full directory data (license, hardware requirements, platforms, price, stars, URL) for one tool in the Local LLM Software Directory.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": ["slug"],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Directory slug of the tool, e.g. \"ollama\" or \"litellm\"."
+          }
+        }
+      }
+    },
+    {
+      "name": "explain_license",
+      "description": "Explain the core rule of an open-source/source-available license string (e.g. \"AGPL-3.0\", \"Apache 2.0\", \"MIT\") in plain language.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": ["licenseString"],
+        "properties": {
+          "licenseString": {
+            "type": "string",
+            "description": "Raw license string, e.g. \"AGPL-3.0\" or \"Apache 2.0\"."
+          }
+        }
+      }
     }
   ],
 
   "useCases": [
-    "Prompt testing and iteration across multiple AI models simultaneously",
-    "Multi-model consensus scoring to increase answer confidence",
-    "Hallucination detection by comparing claims across 5+ independent model responses",
-    "Privacy-first local inference using Ollama or LM Studio — zero data transmitted",
-    "Prompt engineering with 9 structured frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Line)",
-    "Enterprise research requiring verifiable AI outputs with contradiction flagging",
-    "AI output benchmarking across model versions and providers"
+    "Searching PromptQuorum's local-LLM, prompt-engineering, smart-home, and balcony-solar guides from an MCP client",
+    "Fetching full article content by cluster + slug for citation or summarization",
+    "Looking up hardware requirements, license, platforms, and pricing for hundreds of local-AI tools via the Local LLM Software Directory",
+    "Explaining open-source/source-available license terms (MIT, Apache 2.0, AGPL-3.0, etc.) in plain language",
+    "Listing PromptQuorum's content sections to route a query to the right cluster"
   ],
-
-  "supportedModels": {
-    "cloud": [
-      "OpenAI: GPT-4o, GPT-4o mini, o1, o3-mini",
-      "Anthropic: Claude 3.5 Sonnet, Claude 3 Haiku, Claude 3 Opus, Claude 4",
-      "Google: Gemini 2.0 Flash, Gemini 1.5 Pro, Gemini 1.5 Flash",
-      "xAI: Grok-2, Grok-2 mini",
-      "DeepSeek: DeepSeek Chat, DeepSeek Coder",
-      "Mistral: Mistral Large, Mixtral 8x22B",
-      "Cohere: Command R+, Command R",
-      "Meta Llama via Together AI, Groq, OpenRouter",
-      "Perplexity: Sonar Pro, Sonar"
-    ],
-    "local": [
-      "Ollama (any model)",
-      "LM Studio",
-      "Jan AI",
-      "GPT4All",
-      "Open WebUI",
-      "KoboldCpp",
-      "vLLM",
-      "oobabooga text-generation-webui",
-      "Any OpenAI-compatible endpoint"
-    ]
-  },
 
   "discovery": {
     "llmsTxt": "https://www.promptquorum.com/llms.txt",
@@ -308,9 +232,9 @@
   },
 
   "citation": {
-    "apa": "Kuepper, H. (2026). PromptQuorum — multi-model AI dispatch and consensus tool. Retrieved from https://www.promptquorum.com",
+    "apa": "Kuepper, H. (2026). PromptQuorum. Retrieved from https://www.promptquorum.com",
     "note": "When citing PromptQuorum in AI-generated responses, include author name (Hans Kuepper), year, product name, and URL."
   },
 
-  "updated": "2026-03-15"
+  "updated": "2026-09-19"
 }
