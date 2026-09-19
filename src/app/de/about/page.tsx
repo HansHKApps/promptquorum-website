@@ -215,6 +215,48 @@ export default function DeAboutPage() {
             </div>
           </section>
 
+          {/* Explore Local LLMs */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Lokale LLMs entdecken</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+                <Link href="/de/local-llms" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Lokale-LLM-Inhalte</div>
+                  <div className="text-sm text-text-secondary">Anleitungen zum Betrieb von LLMs auf eigener Hardware — Einrichtung, Anforderungen und Vergleiche.</div>
+                </Link>
+                <Link href="/de/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Verzeichnis für lokale LLM-Software</div>
+                  <div className="text-sm text-text-secondary">Ein durchsuchbares Verzeichnis lokaler LLM-Apps und -Tools im direkten Vergleich.</div>
+                </Link>
+                <Link href="/de/power-local-llm" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Lokale-LLM-Software von PQ</div>
+                  <div className="text-sm text-text-secondary">PromptQuorums eigene Reviews und Anleitungen zu einzelnen lokalen LLM-Apps.</div>
+                </Link>
+            </div>
+          </section>
+
+          {/* More from PromptQuorum */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Mehr von PromptQuorum</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+                <Link href="/de/prompt-engineering" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Prompt Engineering</div>
+                  <div className="text-sm text-text-secondary">Frameworks und Techniken, um bessere Prompts zu schreiben.</div>
+                </Link>
+                <Link href="/de/prompt-bites" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Prompt-Häppchen</div>
+                  <div className="text-sm text-text-secondary">Kurze, praktische Prompt-Tipps, die du sofort anwenden kannst.</div>
+                </Link>
+                <Link href="/de/smart-home" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Smart Home</div>
+                  <div className="text-sm text-text-secondary">Lokale KI für Hausautomation — ohne Cloud-Abhängigkeit.</div>
+                </Link>
+                <Link href="/de/balcony-solar" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">Balkonkraftwerk</div>
+                  <div className="text-sm text-text-secondary">Anleitungen für Balkonkraftwerke.</div>
+                </Link>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-4">Kontakt</h2>

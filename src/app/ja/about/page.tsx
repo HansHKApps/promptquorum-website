@@ -215,6 +215,48 @@ export default function JaAboutPage() {
             </div>
           </section>
 
+          {/* Explore Local LLMs */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">ローカルLLMを探る</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+                <Link href="/ja/local-llms" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">ローカルLLMコンテンツ</div>
+                  <div className="text-sm text-text-secondary">自分のハードウェアでLLMを動かすためのガイド — セットアップ、必要要件、比較。</div>
+                </Link>
+                <Link href="/ja/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">ローカルLLMソフトウェアディレクトリ</div>
+                  <div className="text-sm text-text-secondary">ローカルLLMアプリ・ツールを横並びで比較できる検索可能なディレクトリ。</div>
+                </Link>
+                <Link href="/ja/power-local-llm" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">PQによるローカルLLMソフトウェア</div>
+                  <div className="text-sm text-text-secondary">個々のローカルLLMアプリに関するPromptQuorum独自のレビューとガイド。</div>
+                </Link>
+            </div>
+          </section>
+
+          {/* More from PromptQuorum */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">PromptQuorumのその他コンテンツ</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+                <Link href="/ja/prompt-engineering" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">プロンプト設計</div>
+                  <div className="text-sm text-text-secondary">より良いプロンプトを書くためのフレームワークと技法。</div>
+                </Link>
+                <Link href="/ja/prompt-bites" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">プロンプト早わかり</div>
+                  <div className="text-sm text-text-secondary">すぐに使える短く実践的なプロンプトのコツ。</div>
+                </Link>
+                <Link href="/ja/smart-home" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">スマートホーム</div>
+                  <div className="text-sm text-text-secondary">クラウド不要でホームオートメーションを実現するローカルAI。</div>
+                </Link>
+                <Link href="/ja/balcony-solar" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">ベランダ太陽光</div>
+                  <div className="text-sm text-text-secondary">ベランダ太陽光発電の設置ガイド。</div>
+                </Link>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-4">お問い合わせ</h2>

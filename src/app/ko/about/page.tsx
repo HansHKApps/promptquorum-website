@@ -215,6 +215,48 @@ export default function KoAboutPage() {
             </div>
           </section>
 
+          {/* Explore Local LLMs */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">로컬 LLM 살펴보기</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+                <Link href="/ko/local-llms" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">로컬 LLM 콘텐츠</div>
+                  <div className="text-sm text-text-secondary">자신의 하드웨어에서 LLM을 실행하는 가이드 — 설치, 요구 사항, 비교.</div>
+                </Link>
+                <Link href="/ko/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">로컬 LLM 소프트웨어 디렉터리</div>
+                  <div className="text-sm text-text-secondary">로컬 LLM 앱과 도구를 나란히 비교할 수 있는 검색 가능한 디렉터리.</div>
+                </Link>
+                <Link href="/ko/power-local-llm" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">PQ의 로컬 LLM 소프트웨어</div>
+                  <div className="text-sm text-text-secondary">개별 로컬 LLM 앱에 대한 PromptQuorum 자체 리뷰와 가이드.</div>
+                </Link>
+            </div>
+          </section>
+
+          {/* More from PromptQuorum */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">PromptQuorum 더 보기</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+                <Link href="/ko/prompt-engineering" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">프롬프트 엔지니어링</div>
+                  <div className="text-sm text-text-secondary">더 나은 프롬프트를 작성하기 위한 프레임워크와 기법.</div>
+                </Link>
+                <Link href="/ko/prompt-bites" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">프롬프트 한입</div>
+                  <div className="text-sm text-text-secondary">바로 사용할 수 있는 짧고 실용적인 프롬프트 팁.</div>
+                </Link>
+                <Link href="/ko/smart-home" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">스마트 홈</div>
+                  <div className="text-sm text-text-secondary">클라우드 의존 없이 홈 자동화를 위한 로컬 AI.</div>
+                </Link>
+                <Link href="/ko/balcony-solar" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">베란다 태양광</div>
+                  <div className="text-sm text-text-secondary">베란다 태양광 발전 설치 가이드.</div>
+                </Link>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-4">연락처</h2>

@@ -214,6 +214,48 @@ export default function ZhAboutPage() {
             </div>
           </section>
 
+          {/* Explore Local LLMs */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">探索本地LLM</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+                <Link href="/zh/local-llms" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">本地LLM内容</div>
+                  <div className="text-sm text-text-secondary">在自己的硬件上运行LLM的指南——搭建、硬件要求与对比。</div>
+                </Link>
+                <Link href="/zh/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">本地LLM软件目录</div>
+                  <div className="text-sm text-text-secondary">可搜索的本地LLM应用与工具目录，方便逐一对比。</div>
+                </Link>
+                <Link href="/zh/power-local-llm" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">PQ出品的本地LLM软件</div>
+                  <div className="text-sm text-text-secondary">PromptQuorum 对具体本地LLM应用的自有评测与指南。</div>
+                </Link>
+            </div>
+          </section>
+
+          {/* More from PromptQuorum */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">PromptQuorum 更多内容</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+                <Link href="/zh/prompt-engineering" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">提示词工程</div>
+                  <div className="text-sm text-text-secondary">编写更好提示词的框架与技巧。</div>
+                </Link>
+                <Link href="/zh/prompt-bites" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">提示词速答</div>
+                  <div className="text-sm text-text-secondary">可立即使用的简短实用提示词技巧。</div>
+                </Link>
+                <Link href="/zh/smart-home" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">智能家居</div>
+                  <div className="text-sm text-text-secondary">无需依赖云端的本地AI家庭自动化。</div>
+                </Link>
+                <Link href="/zh/balcony-solar" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">阳台光伏</div>
+                  <div className="text-sm text-text-secondary">阳台太阳能发电搭建指南。</div>
+                </Link>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-4">联系我们</h2>

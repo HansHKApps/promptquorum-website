@@ -215,6 +215,48 @@ export default function ArAboutPage() {
             </div>
           </section>
 
+          {/* Explore Local LLMs */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">استكشاف النماذج المحلية</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+                <Link href="/ar/local-llms" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">محتوى النماذج المحلية</div>
+                  <div className="text-sm text-text-secondary">أدلة لتشغيل نماذج اللغة الكبيرة على جهازك الخاص — الإعداد والمتطلبات والمقارنات.</div>
+                </Link>
+                <Link href="/ar/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">دليل برمجيات النماذج المحلية</div>
+                  <div className="text-sm text-text-secondary">دليل قابل للبحث لتطبيقات وأدوات النماذج المحلية، مع مقارنة جنبًا إلى جنب.</div>
+                </Link>
+                <Link href="/ar/power-local-llm" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">برمجيات النماذج المحلية من PQ</div>
+                  <div className="text-sm text-text-secondary">مراجعات وأدلة PromptQuorum الخاصة لتطبيقات محددة من برمجيات النماذج المحلية.</div>
+                </Link>
+            </div>
+          </section>
+
+          {/* More from PromptQuorum */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">المزيد من PromptQuorum</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+                <Link href="/ar/prompt-engineering" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">هندسة التعليمات</div>
+                  <div className="text-sm text-text-secondary">أطر وتقنيات لكتابة تعليمات أفضل.</div>
+                </Link>
+                <Link href="/ar/prompt-bites" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">تعليمات سريعة</div>
+                  <div className="text-sm text-text-secondary">نصائح قصيرة وعملية للتعليمات يمكن استخدامها فورًا.</div>
+                </Link>
+                <Link href="/ar/smart-home" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">المنزل الذكي</div>
+                  <div className="text-sm text-text-secondary">ذكاء اصطناعي محلي لأتمتة المنزل، دون الاعتماد على السحابة.</div>
+                </Link>
+                <Link href="/ar/balcony-solar" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                  <div className="text-text-primary font-semibold mb-1">طاقة شمسية للشرفة</div>
+                  <div className="text-sm text-text-secondary">أدلة حول أنظمة الطاقة الشمسية للشرفات.</div>
+                </Link>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-4">اتصل بنا</h2>
