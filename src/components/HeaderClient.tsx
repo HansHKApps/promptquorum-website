@@ -9,17 +9,6 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '../translations'
 
 const NAV_LABELS: Record<string, Record<string, string>> = {
-  blog: {
-    en: 'Blog',
-    de: 'Blog',
-    fr: 'Blog',
-    ja: 'ブログ',
-    zh: '博客',
-    es: 'Blog',
-    pt: 'Blog', // VERIFY
-    ko: '블로그',
-    ar: 'المدونة',
-  },
   promptEngineering: {
     en: 'Prompt Engineering',
     de: 'Prompt Engineering',
@@ -190,7 +179,6 @@ function HeaderInner() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
           <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
-          <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
           <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
           <Link href={directoryHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('directory', lang)}</Link>
           <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
@@ -245,13 +233,6 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('about', lang)}
-        </Link>
-        <Link
-          href={navHref('/blog', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('blog', lang)}
         </Link>
         <Link
           href={navHref('/prompt-engineering', lang)}

@@ -275,7 +275,6 @@ export default function ZhAboutPage() {
             <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← 首页</Link>
             <Link href="/zh/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">工作原理</Link>
             <Link href="/zh/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">比较工具</Link>
-            <Link href="/zh/blog" className="text-primary hover:text-primary/80 font-medium text-sm">博客</Link>
           </div>
 
         </div>

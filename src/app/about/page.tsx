@@ -270,7 +270,6 @@ export default function AboutPage() {
             <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
             <Link href="/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
             <Link href="/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
-            <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 
         </div>

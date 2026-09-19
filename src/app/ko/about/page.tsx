@@ -276,7 +276,6 @@ export default function KoAboutPage() {
             <Link href="/ko" className="text-primary hover:text-primary/80 font-medium text-sm">← 홈</Link>
             <Link href="/ko/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">작동 방식</Link>
             <Link href="/ko/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">도구 비교</Link>
-            <Link href="/ko/blog" className="text-primary hover:text-primary/80 font-medium text-sm">블로그</Link>
           </div>
 
         </div>

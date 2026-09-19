@@ -37,6 +37,9 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
     title: truncateTitle(pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle),
     description: metaDesc,
     alternates: generateAlternates(`/blog/${slug}`, lang, hasTranslation, undefined, [...PATH_PREFIX_LANGS]),
+    // Blog cluster retired 2026-09-20: all posts 301 to /about (next.config.ts). This
+    // robots field is a defensive backstop in case a request reaches the page directly.
+    robots: { index: false, follow: true },
     openGraph: {
       title: pageTitle,
       description: metaDesc,
@@ -61,6 +64,9 @@ export async function buildHubMetadata(lang: Language): Promise<Metadata> {
     title: `${t.blogTitle} | PromptQuorum`,
     description: t.blogSubtitle,
     alternates: generateAlternates('/blog', lang, true, undefined, [...PATH_PREFIX_LANGS]),
+    // Blog cluster retired 2026-09-20: hub + all posts 301 to /about (next.config.ts).
+    // This robots field is a defensive backstop in case a request reaches the page directly.
+    robots: { index: false, follow: true },
     openGraph: {
       title: `${t.blogTitle} | PromptQuorum`,
       description: t.blogSubtitle,

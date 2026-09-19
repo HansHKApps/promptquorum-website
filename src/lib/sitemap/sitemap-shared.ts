@@ -52,6 +52,7 @@ export const EXCLUDED_PATH_PREFIXES = [
   '/prompt-bites',
   '/smart-home', // Smart Home cluster: gated by SMART_HOME_PUBLISHED_SLUGS/SMART_HOME_HUB_PUBLISHED; published paths are whitelisted back in below
   '/balcony-solar', // Balcony Solar cluster: gated by BALCONY_SOLAR_PUBLISHED_SLUGS; bypass below
+  '/blog', // Blog cluster retired 2026-09-20: hub + all posts 301 to /about, noindex'd, no allowlist needed (fully retired, not partially gated)
 ]
 
 export function hasRealContent(cluster: Record<string, ClusterMetadata>, key: string): boolean {

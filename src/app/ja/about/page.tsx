@@ -276,7 +276,6 @@ export default function JaAboutPage() {
             <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← ホーム</Link>
             <Link href="/ja/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">仕組み</Link>
             <Link href="/ja/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">ツールを比較</Link>
-            <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">ブログ</Link>
           </div>
 
         </div>

@@ -34,6 +34,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Blog cluster retired (2026-09-20): hub + all 17 posts, all 9 locales, 301 to /about.
+      // :slug* (zero or more) matches /blog itself as well as /blog/<any-post>.
+      {
+        source: '/blog/:slug*',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/blog/:slug*',
+        destination: '/:lang/about',
+        permanent: true,
+      },
       // PQ Apps consolidation (2026-09-20): /compare, /features (+ its 2 sub-pages),
       // /how-it-works, and /faq were merged into the single /pq-apps page.
       {

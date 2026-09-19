@@ -276,7 +276,6 @@ export default function ArAboutPage() {
             <Link href="/ar" className="text-primary hover:text-primary/80 font-medium text-sm">الرئيسية →</Link>
             <Link href="/ar/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">كيف يعمل</Link>
             <Link href="/ar/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">مقارنة الأدوات</Link>
-            <Link href="/ar/blog" className="text-primary hover:text-primary/80 font-medium text-sm">المدونة</Link>
           </div>
 
         </div>

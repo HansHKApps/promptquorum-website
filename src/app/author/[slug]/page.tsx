@@ -207,14 +207,11 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-6">Articles by Hans Kuepper</h2>
             <p className="text-text-secondary mb-8">
-              Hans contributes regularly to the PromptQuorum blog, covering prompt engineering techniques,
+              Hans writes regularly on Substack, covering prompt engineering techniques,
               AI model comparison, and strategies for building reliable AI workflows.
             </p>
             <div className="flex gap-4">
-              <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/80 transition-colors">
-                View All Articles
-              </Link>
-              <a href="https://substack.com/@promptquorum" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-colors">
+              <a href="https://substack.com/@promptquorum" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/80 transition-colors">
                 Subscribe to Substack
               </a>
             </div>
@@ -243,7 +240,6 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/about" className="text-primary hover:text-primary/80 font-medium text-sm">← About PromptQuorum</Link>
-            <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
             <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">Home</Link>
           </div>
 

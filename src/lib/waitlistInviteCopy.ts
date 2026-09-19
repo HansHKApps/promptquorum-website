@@ -114,7 +114,7 @@ export function waitlistDownloadHref(lang: string) {
 }
 
 export function waitlistGuideHref(lang: string) {
-  return lang === 'en'
-    ? '/blog/promptquorum-desktop-app-beta'
-    : `/${lang}/blog/promptquorum-desktop-app-beta`
+  // Blog cluster retired 2026-09-20 (the install guide previously lived at
+  // /blog/promptquorum-desktop-app-beta) - point at /download instead of a dead link.
+  return lang === 'en' ? '/download' : `/${lang}/download`
 }

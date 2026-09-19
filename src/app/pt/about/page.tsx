@@ -276,7 +276,6 @@ export default function PtAboutPage() {
             <Link href="/pt" className="text-primary hover:text-primary/80 font-medium text-sm">← Início</Link>
             <Link href="/pt/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">Como funciona</Link>
             <Link href="/pt/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Comparar ferramentas</Link>
-            <Link href="/pt/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 
         </div>

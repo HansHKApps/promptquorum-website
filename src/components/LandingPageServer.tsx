@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { InteractivePipeline } from './InteractivePipeline'
 import { LandingPageClient } from './LandingPageClient'
 import { YouTubeFacade } from './YouTubeFacade'
-import { BlogSectionClient } from './BlogSectionClient'
 import { Suspense } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations } from '@/translations'
@@ -668,8 +667,6 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
           </div>
         </div>
       </section>
-
-      <BlogSectionClient initialLang={lang as any} />
 
       {/* Waitlist CTA Section */}
       <section id="waitlist" className="py-20 px-4 sm:px-6 bg-surface">

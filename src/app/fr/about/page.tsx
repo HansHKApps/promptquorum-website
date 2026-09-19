@@ -276,7 +276,6 @@ export default function FrAboutPage() {
             <Link href="/fr" className="text-primary hover:text-primary/80 font-medium text-sm">← Accueil</Link>
             <Link href="/fr/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">Comment ça marche</Link>
             <Link href="/fr/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Comparer les outils</Link>
-            <Link href="/fr/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 
         </div>

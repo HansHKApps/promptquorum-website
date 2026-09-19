@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 const HELPFUL_LINKS = [
   { href: '/', label: 'Home', desc: 'Back to the start' },
   { href: '/pq-apps', label: 'PQ Apps', desc: 'Features, how it works, compare, FAQ' },
-  { href: '/blog', label: 'Blog', desc: 'Latest writing and updates' },
   { href: '/prompt-engineering', label: 'Prompt Engineering', desc: 'Guides, frameworks and techniques' },
 ]
 
@@ -73,7 +72,6 @@ export default function NotFound() {
         <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
           <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
           <Link href="/about" className="text-primary hover:text-primary/80 font-medium text-sm">About</Link>
-          <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           <a href="mailto:hello@promptquorum.com" className="text-primary hover:text-primary/80 font-medium text-sm">Contact</a>
         </div>
 
