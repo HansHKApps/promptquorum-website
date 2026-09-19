@@ -274,8 +274,8 @@ export default function JaAboutPage() {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← ホーム</Link>
-            <Link href="/ja/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">仕組み</Link>
-            <Link href="/ja/compare" className="text-primary hover:text-primary/80 font-medium text-sm">ツールを比較</Link>
+            <Link href="/ja/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">仕組み</Link>
+            <Link href="/ja/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">ツールを比較</Link>
             <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">ブログ</Link>
           </div>
 

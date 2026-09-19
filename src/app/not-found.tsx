@@ -9,10 +9,7 @@ export const metadata: Metadata = {
 
 const HELPFUL_LINKS = [
   { href: '/', label: 'Home', desc: 'Back to the start' },
-  { href: '/features', label: 'Features', desc: 'What PromptQuorum does' },
-  { href: '/how-it-works', label: 'How It Works', desc: 'Step-by-step overview' },
-  { href: '/compare', label: 'Compare Tools', desc: 'How we compare to alternatives' },
-  { href: '/faq', label: 'FAQ', desc: 'Common questions answered' },
+  { href: '/pq-apps', label: 'PQ Apps', desc: 'Features, how it works, compare, FAQ' },
   { href: '/blog', label: 'Blog', desc: 'Latest writing and updates' },
   { href: '/prompt-engineering', label: 'Prompt Engineering', desc: 'Guides, frameworks and techniques' },
 ]

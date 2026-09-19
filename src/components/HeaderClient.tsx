@@ -4,56 +4,11 @@ import Link from 'next/link'
 import { Logo } from './Logo'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { SearchTrigger } from './search/SearchTrigger'
-import { useWaitlist } from '@/context/WaitlistContext'
 import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '../translations'
 
 const NAV_LABELS: Record<string, Record<string, string>> = {
-  compare: {
-    en: 'Compare Tools',
-    de: 'Tools vergleichen',
-    fr: 'Comparer les outils',
-    ja: 'ツール比較',
-    zh: '工具对比',
-    es: 'Comparar herramientas',
-    pt: 'Comparar ferramentas', // VERIFY
-    ko: '도구 비교',
-    ar: 'مقارنة الأدوات',
-  },
-  features: {
-    en: 'Features',
-    de: 'Funktionen',
-    fr: 'Fonctionnalités',
-    ja: '機能',
-    zh: '功能',
-    es: 'Características',
-    pt: 'Recursos', // VERIFY
-    ko: '기능',
-    ar: 'الميزات',
-  },
-  howItWorks: {
-    en: 'How It Works',
-    de: 'So funktioniert es',
-    fr: 'Comment ça marche',
-    ja: '使い方',
-    zh: '使用说明',
-    es: 'Cómo funciona',
-    pt: 'Como funciona', // VERIFY
-    ko: '작동 방식',
-    ar: 'كيف يعمل',
-  },
-  faq: {
-    en: 'FAQ',
-    de: 'FAQ',
-    fr: 'FAQ',
-    ja: 'よくある質問',
-    zh: '常见问题',
-    es: 'FAQ',
-    pt: 'FAQ', // VERIFY
-    ko: 'FAQ',
-    ar: 'الأسئلة الشائعة',
-  },
   blog: {
     en: 'Blog',
     de: 'Blog',
@@ -166,17 +121,6 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '베란다 태양광',
     ar: 'طاقة شمسية للشرفة',
   },
-  waitlist: {
-    en: 'Try Beta',
-    de: 'Beta testen',
-    fr: 'Essayer la bêta',
-    ja: 'ベータを試す',
-    zh: '试用测试版',
-    es: 'Probar la beta',
-    pt: 'Testar a Beta',
-    ko: '베타 체험',
-    ar: 'جرّب النسخة التجريبية',
-  },
   skipToMain: {
     en: 'Skip to main content',
     de: 'Zum Hauptinhalt springen',
@@ -226,15 +170,8 @@ function pqAppsHref(lang: string) {
 }
 
 function HeaderInner() {
-  const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const lang = useLang()
-
-  const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    setMobileMenuOpen(false)
-    openWaitlist()
-  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
@@ -253,10 +190,6 @@ function HeaderInner() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
           <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
-          <Link href={navHref('/compare', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('compare', lang)}</Link>
-          <Link href={navHref('/features', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('features', lang)}</Link>
-          <Link href={navHref('/how-it-works', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
-          <Link href={navHref('/faq', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
           <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
           <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
           <Link href={directoryHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('directory', lang)}</Link>
@@ -265,14 +198,7 @@ function HeaderInner() {
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
           <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
           <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
-          <Link href={pqAppsHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('pqApps', lang)}</Link>
-          <a
-            href="#waitlist"
-            onClick={handleWaitlistClick}
-            className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm"
-          >
-            {t('waitlist', lang)}
-          </a>
+          <Link href={pqAppsHref(lang)} className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm">{t('pqApps', lang)}</Link>
         </nav>
 
         {/* Search + Language Switcher + Mobile Menu */}
@@ -319,34 +245,6 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('about', lang)}
-        </Link>
-        <Link
-          href={navHref('/compare', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('compare', lang)}
-        </Link>
-        <Link
-          href={navHref('/features', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('features', lang)}
-        </Link>
-        <Link
-          href={navHref('/how-it-works', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('howItWorks', lang)}
-        </Link>
-        <Link
-          href={navHref('/faq', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('faq', lang)}
         </Link>
         <Link
           href={navHref('/blog', lang)}
@@ -406,18 +304,11 @@ function HeaderInner() {
         </Link>
         <Link
           href={pqAppsHref(lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('pqApps', lang)}
         </Link>
-        <a
-          href="#waitlist"
-          onClick={handleWaitlistClick}
-          className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
-        >
-          {t('waitlist', lang)}
-        </a>
       </div>
     </header>
   )

@@ -297,7 +297,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
           <div className="flex flex-wrap gap-4 pt-6 border-t border-primary/20">
             <Link href="/frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">← All Frameworks</Link>
             <Link href="/blog/prompt-frameworks" className="text-primary hover:text-primary/80 font-medium text-sm">Framework Comparison Guide</Link>
-            <Link href="/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How PromptQuorum Works</Link>
+            <Link href="/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How PromptQuorum Works</Link>
           </div>
 
         </div>

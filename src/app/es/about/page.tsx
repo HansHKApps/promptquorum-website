@@ -274,8 +274,8 @@ export default function EsAboutPage() {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/es" className="text-primary hover:text-primary/80 font-medium text-sm">← Inicio</Link>
-            <Link href="/es/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">Cómo funciona</Link>
-            <Link href="/es/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Comparar herramientas</Link>
+            <Link href="/es/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">Cómo funciona</Link>
+            <Link href="/es/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Comparar herramientas</Link>
             <Link href="/es/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 

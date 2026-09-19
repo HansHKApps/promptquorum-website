@@ -50,7 +50,7 @@ const SHOW_DELAY_MS = 1000 // fallback timer — was 3000
 const SCROLL_DEPTH_TRIGGER = 0 // was 0.2 — show immediately, no scroll requirement
 
 // Don't show on pages that already carry this exact CTA in-context.
-const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/]
+const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/, /\/pq-apps(\/|$)/]
 
 // High-intent clusters: visitors here are already evaluating local/AI-model
 // tooling, so the widget goes bigger, brighter, and pulses to earn the extra

@@ -519,7 +519,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
             {t.compareDesc}
           </p>
-          <Link href="/compare" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+          <Link href={lang === 'en' ? '/pq-apps#compare-tools' : `/${lang}/pq-apps#compare-tools`} className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
             {t.compareBtn}
           </Link>
         </div>

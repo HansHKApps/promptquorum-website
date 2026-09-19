@@ -274,8 +274,8 @@ export default function DeAboutPage() {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/de" className="text-primary hover:text-primary/80 font-medium text-sm">← Startseite</Link>
-            <Link href="/de/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">So funktioniert&apos;s</Link>
-            <Link href="/de/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Tools vergleichen</Link>
+            <Link href="/de/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">So funktioniert&apos;s</Link>
+            <Link href="/de/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Tools vergleichen</Link>
             <Link href="/de/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 

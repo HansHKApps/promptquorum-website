@@ -268,8 +268,8 @@ export default function AboutPage() {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
+            <Link href="/pq-apps#how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
+            <Link href="/pq-apps#compare-tools" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
             <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 

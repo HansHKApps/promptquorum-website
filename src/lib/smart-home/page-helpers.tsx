@@ -702,47 +702,47 @@ const HUB_RELATED_LINKS: Partial<Record<Lang, { label: string; path: string }[]>
   en: [
     { label: 'Local LLMs', path: '/local-llms' },
     { label: 'Power Local LLM', path: '/power-local-llm' },
-    { label: 'Compare Models', path: '/compare' },
+    { label: 'Compare Models', path: '/pq-apps#compare-tools' },
   ],
   de: [
     { label: 'Lokale LLMs', path: '/de/local-llms' },
     { label: 'Power Local LLM', path: '/de/power-local-llm' },
-    { label: 'Modelle vergleichen', path: '/de/compare' },
+    { label: 'Modelle vergleichen', path: '/de/pq-apps#compare-tools' },
   ],
   fr: [
     { label: 'LLMs locaux', path: '/fr/local-llms' },
     { label: 'Power Local LLM', path: '/fr/power-local-llm' },
-    { label: 'Comparer les modèles', path: '/fr/compare' },
+    { label: 'Comparer les modèles', path: '/fr/pq-apps#compare-tools' },
   ],
   ja: [
     { label: 'ローカルLLM', path: '/ja/local-llms' },
     { label: 'Power Local LLM', path: '/ja/power-local-llm' },
-    { label: 'モデルを比較', path: '/ja/compare' },
+    { label: 'モデルを比較', path: '/ja/pq-apps#compare-tools' },
   ],
   zh: [
     { label: '本地大模型', path: '/zh/local-llms' },
     { label: 'Power Local LLM', path: '/zh/power-local-llm' },
-    { label: '比较模型', path: '/zh/compare' },
+    { label: '比较模型', path: '/zh/pq-apps#compare-tools' },
   ],
   es: [
     { label: 'LLMs locales', path: '/es/local-llms' },
     { label: 'Power Local LLM', path: '/es/power-local-llm' },
-    { label: 'Comparar modelos', path: '/es/compare' },
+    { label: 'Comparar modelos', path: '/es/pq-apps#compare-tools' },
   ],
   pt: [
     { label: 'LLMs locais', path: '/pt/local-llms' },
     { label: 'Power Local LLM', path: '/pt/power-local-llm' },
-    { label: 'Comparar modelos', path: '/pt/compare' },
+    { label: 'Comparar modelos', path: '/pt/pq-apps#compare-tools' },
   ],
   ar: [
     { label: 'نماذج اللغة المحلية', path: '/ar/local-llms' },
     { label: 'Power Local LLM', path: '/ar/power-local-llm' },
-    { label: 'مقارنة النماذج', path: '/ar/compare' },
+    { label: 'مقارنة النماذج', path: '/ar/pq-apps#compare-tools' },
   ],
   ko: [
     { label: '로컬 LLM', path: '/ko/local-llms' },
     { label: 'Power Local LLM', path: '/ko/power-local-llm' },
-    { label: '모델 비교', path: '/ko/compare' },
+    { label: '모델 비교', path: '/ko/pq-apps#compare-tools' },
   ],
 }
 

@@ -34,6 +34,68 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // PQ Apps consolidation (2026-09-20): /compare, /features (+ its 2 sub-pages),
+      // /how-it-works, and /faq were merged into the single /pq-apps page.
+      {
+        source: '/compare',
+        destination: '/pq-apps#compare-tools',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/compare',
+        destination: '/:lang/pq-apps#compare-tools',
+        permanent: true,
+      },
+      {
+        source: '/features',
+        destination: '/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/features',
+        destination: '/:lang/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/features/optimization',
+        destination: '/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/features/optimization',
+        destination: '/:lang/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/features/quorum',
+        destination: '/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/features/quorum',
+        destination: '/:lang/pq-apps#features',
+        permanent: true,
+      },
+      {
+        source: '/how-it-works',
+        destination: '/pq-apps#how-it-works',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/how-it-works',
+        destination: '/:lang/pq-apps#how-it-works',
+        permanent: true,
+      },
+      {
+        source: '/faq',
+        destination: '/pq-apps#faq',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/faq',
+        destination: '/:lang/pq-apps#faq',
+        permanent: true,
+      },
       {
         source: '/local-llms/quantization-offloading-layer-splitting',
         destination: '/local-llms/llm-quantization-explained',
