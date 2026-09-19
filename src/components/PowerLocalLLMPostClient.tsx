@@ -1236,8 +1236,12 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
             <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href={powerLLMHubPath(lang as any)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
-            <span>/</span>
+            {!isDirectoryPage && (
+              <>
+                <a href={powerLLMHubPath(lang as any)} className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Power Local LLM'}</a>
+                <span>/</span>
+              </>
+            )}
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}

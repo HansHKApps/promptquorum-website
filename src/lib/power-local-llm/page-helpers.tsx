@@ -270,11 +270,13 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       url: 'https://www.promptquorum.com',
       logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
     },
-    isPartOf: {
-      '@type': 'WebPage',
-      name: 'Power Local LLM Guide',
-      url: `${BASE}${powerLLMHubPath(lang)}`,
-    },
+    isPartOf: slug === LOCAL_AI_DIRECTORY_SLUG
+      ? { '@type': 'WebPage', name: 'PromptQuorum', url: BASE }
+      : {
+          '@type': 'WebPage',
+          name: 'Power Local LLM Guide',
+          url: `${BASE}${powerLLMHubPath(lang)}`,
+        },
   }
 
   // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
@@ -302,11 +304,16 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     inLanguage: toOutputLocale(lang),
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
-      { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
-      { '@type': 'ListItem', position: 3, name: article.title ?? slugToTitle(slug), item: canonicalUrl },
-    ],
+    itemListElement: slug === LOCAL_AI_DIRECTORY_SLUG
+      ? [
+          { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
+          { '@type': 'ListItem', position: 2, name: article.title ?? slugToTitle(slug), item: canonicalUrl },
+        ]
+      : [
+          { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
+          { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: `${BASE}${powerLLMHubPath(lang)}` },
+          { '@type': 'ListItem', position: 3, name: article.title ?? slugToTitle(slug), item: canonicalUrl },
+        ],
   }
 
   const faqEntries = Object.values(article.sections).flatMap((s) => s.faqs ?? [])

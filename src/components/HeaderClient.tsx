@@ -98,6 +98,17 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '소프트웨어',
     ar: 'البرمجيات',
   },
+  directory: {
+    en: 'Directory',
+    de: 'Verzeichnis',
+    fr: 'Annuaire',
+    ja: 'ディレクトリ',
+    zh: '目录',
+    es: 'Directorio',
+    pt: 'Diretório',
+    ko: '디렉터리',
+    ar: 'الدليل',
+  },
   promptBites: {
     en: 'Prompt Bites',
     de: 'Prompt-Häppchen',
@@ -183,6 +194,11 @@ function balconySolarHref(lang: string) {
   return lang === 'en' ? '/balcony-solar' : `/${lang}/balcony-solar`
 }
 
+function directoryHref(lang: string) {
+  const path = '/power-local-llm/local-llm-software-directory'
+  return lang === 'en' ? path : `/${lang}${path}`
+}
+
 function HeaderInner() {
   const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -216,6 +232,7 @@ function HeaderInner() {
           <Link href={navHref('/faq', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
           <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
           <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
+          <Link href={directoryHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('directory', lang)}</Link>
           <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
           <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
@@ -309,6 +326,13 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('promptEngineering', lang)}
+        </Link>
+        <Link
+          href={directoryHref(lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('directory', lang)}
         </Link>
         <Link
           href={navHref('/local-llms', lang)}
