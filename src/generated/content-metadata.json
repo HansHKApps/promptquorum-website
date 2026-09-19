@@ -8273,6 +8273,24 @@
       ],
       "images": []
     },
+    "microsoft-agent-framework-review": {
+      "dateModified": "2026-09-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "llamaindex-rag-framework-review": {
       "dateModified": "2026-09-02",
       "lastFactChecked": null,

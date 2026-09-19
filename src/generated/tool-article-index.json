@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 282,
+    "totalCount": 283,
     "capped": true
   },
   "llama.cpp": {
@@ -3792,7 +3792,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "AutoGen": {
@@ -3827,6 +3827,14 @@
         "title": "TaskWeaver Review 2026: Features, Status, Alternatives",
         "url": "/power-local-llm/taskweaver-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "microsoft-agent-framework-review",
+        "title": "Microsoft Agent Framework Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/microsoft-agent-framework-review",
+        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
@@ -3868,17 +3876,9 @@
         "url": "/power-local-llm/agent-zero-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "camel-review",
-        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
-        "url": "/power-local-llm/camel-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Semantic Kernel": {
@@ -3888,6 +3888,14 @@
         "slug": "semantic-kernel-review",
         "title": "Semantic Kernel Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/semantic-kernel-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "microsoft-agent-framework-review",
+        "title": "Microsoft Agent Framework Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/microsoft-agent-framework-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       },
@@ -3932,7 +3940,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "LangGraph": {
@@ -3951,6 +3959,14 @@
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
         "url": "/power-local-llm/mission-control-review",
         "dateModified": "2026-09-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "microsoft-agent-framework-review",
+        "title": "Microsoft Agent Framework Review 2026: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/microsoft-agent-framework-review",
+        "dateModified": "2026-09-06",
         "tier": "about"
       },
       {
@@ -4008,17 +4024,9 @@
         "url": "/power-local-llm/camel-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "pydantic-ai-review",
-        "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
-        "url": "/power-local-llm/pydantic-ai-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Pydantic AI": {
@@ -9018,7 +9026,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 172,
+    "totalCount": 173,
     "capped": true
   },
   "Qdrant": {

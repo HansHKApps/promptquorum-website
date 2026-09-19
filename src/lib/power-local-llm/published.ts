@@ -193,6 +193,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'gpt-engineer-review',
   // Agent frameworks series — Pydantic AI review (article 14 of 14, final) — 2026-09-11
   'pydantic-ai-review',
+  // Agent frameworks series — Microsoft Agent Framework review — 2026-09-06
+  'microsoft-agent-framework-review',
   // LlamaIndex deep-dive — 2026-09-02
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
