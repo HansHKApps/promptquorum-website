@@ -722,10 +722,194 @@ export default function PtPQAppsPage() {
           {/* Compare Tools */}
           <section id="compare-tools" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl font-bold text-text-primary mb-4">Comparar ferramentas</h2>
-            <p className="text-text-secondary mb-4">Veja como a PromptQuorum se compara a outras ferramentas de prompt de IA.</p>
-            <Link href="/pt/compare" className="text-primary hover:text-primary/80 font-medium">
-              Ver comparação completa →
-            </Link>
+
+            <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed mb-8">
+              <strong>Nota de precisão:</strong>
+               As informações de recursos e preços foram verificadas em março de 2026 e são fornecidas de boa-fé com base na documentação pública de cada produto. Os produtos mudam com frequência — verifique os recursos atuais diretamente com cada fornecedor. Se você acha que alguma informação desta página está incorreta ou desatualizada, 
+              <a href="mailto:hello@promptquorum.com" className="underline hover:text-amber-900">entre em contato</a>
+               e corrigiremos imediatamente. Esta comparação é produzida pela PromptQuorum e reflete nossa perspectiva como participante neste mercado.
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-xl font-bold text-text-primary mb-3">O que é uma ferramenta de comparação multi-LLM?</h3>
+              <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4 mb-4">
+                <p className="text-text-primary text-[15px] leading-relaxed">Uma ferramenta de comparação multi-LLM envia o mesmo prompt para vários modelos de linguagem grandes de forma simultânea e exibe as respostas lado a lado, permitindo que os usuários avaliem as diferenças em raciocínio, precisão e estilo entre sistemas de IA — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large e outros — sem trocar de aba nem repetir a entrada.</p>
+              </div>
+              <p className="text-text-secondary mb-3">Nenhum modelo de IA individual é autoritativo para todas as tarefas em 2026. GPT-4o, Claude 4.6 Sonnet e Gemini 2.5 Pro têm dados de treinamento, vieses arquiteturais e pontos fortes de raciocínio diferentes. Uma resposta que parece correta de um modelo pode ser contradita, nuançada ou significativamente ampliada por outro.</p>
+              <p className="text-text-secondary">As cinco ferramentas comparadas aqui representam as principais abordagens disponíveis atualmente: plataformas de consumo (Poe by Quora), benchmarks comunitários (LM Arena), suítes de avaliação para desenvolvedores (OpenMark), espaços de trabalho multi-modelo unificados (AiZolo) e plataformas de pontuação de consenso (PromptQuorum). Cada uma serve a um fluxo de trabalho diferente.</p>
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-xl font-bold text-text-primary mb-2">Quais são as diferenças principais entre 5 ferramentas multi-LLM?</h3>
+              <p className="text-text-secondary mb-4">A tabela a seguir compara as cinco ferramentas nos recursos mais importantes para fluxos de trabalho multi-LLM profissionais — envio simultâneo, pontuação de consenso, suporte a LLM local, controle de chave de API e preços.</p>
+              <div className="overflow-x-auto rounded-xl border border-gray-200">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-semibold text-xs uppercase tracking-wider">Ferramenta</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Envio simultâneo</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Pontuação de consenso</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">LLM local</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">Controle de chave API</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider">Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">PromptQuorum</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sim</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Ollama + LM Studio</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Suas chaves</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Beta gratuito</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">Poe (Quora)</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Sequencial / limitado</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Não</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Somente nuvem</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Limitado</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Grátis / $19,99/mês</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">LM Arena</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Apenas 2 modelos</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Apenas votação humana</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Somente nuvem</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Não</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Grátis</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">OpenMark</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Paralelo</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Pontuação determinística</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Somente nuvem</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sim</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Nível gratuito / créditos</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">AiZolo</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sim</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Não</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Somente nuvem</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Sim</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">A partir de $9,90/mês</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs font-mono text-text-secondary mt-3">✓ Sim · ~ Parcial · ✗ Não · Baseado em documentação pública, março de 2026. Os preços e recursos mudam — verifique com cada fornecedor. Esta comparação é produzida pela PromptQuorum.</p>
+            </div>
+
+            <div className="mb-10">
+              <div className="border border-primary/25 bg-primary/5 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-primary">PromptQuorum</span>
+                  <span className="text-xs font-mono bg-green-100 text-green-700 border-green-200 border px-3 py-1 rounded-full">Ideal para: desenvolvedores e usuários avançados</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Beta · Julho de 2026</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">promptquorum.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Chaves API necessárias</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Ollama + LM Studio</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>O PromptQuorum é a única ferramenta entre as analisadas que combina o envio simultâneo de prompts com a pontuação de consenso automatizada.</strong> Você escreve um prompt, seleciona seus modelos — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large e modelos que rodam localmente — e o PromptQuorum os envia a todos em paralelo. O Quorum Verdict então analisa onde os modelos concordam, onde divergem e o que esses padrões significam para a confiabilidade da resposta.</p>
+<p className="text-text-secondary mb-3 leading-relaxed">O recurso definidor é o suporte a LLM local. Por meio da integração com Ollama e LM Studio, o PromptQuorum inclui modelos que rodam localmente — o LLaMA 3.1 7B requer 8 GB de RAM; o 13B requer 16 GB — no envio, de modo que prompts sensíveis nunca saem da sua máquina. Para profissionais do direito, profissionais de saúde, analistas financeiros e desenvolvedores que trabalham com código proprietário, isso não é opcional.</p>
+<p className="text-text-secondary leading-relaxed">O PromptQuorum exige que os usuários tragam suas próprias chaves de API da OpenAI, Anthropic, Google e Mistral. Isso mantém os dados sob seu controle, os custos transparentes e o uso vinculado aos seus próprios termos comerciais com cada fornecedor.</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">Quem deveria usar o PromptQuorum?</h4>
+              <p className="text-text-secondary mb-8">O PromptQuorum foi projetado para desenvolvedores que avaliam qual modelo integrar a um pipeline de produção, pesquisadores que precisam de validação cruzada de descobertas entre modelos e profissionais cujo trabalho envolve informações confidenciais que não podem ser enviadas a servidores na nuvem de terceiros.</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">Poe (by Quora)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: uso casual / consumidor</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">poe.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Grátis / $19,99/mês</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">iOS, Android, Web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Milhões de usuários</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>O Poe, criado pela Quora, é a maior plataforma multi-modelo de IA com acesso a GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama, Grok e milhares de bots criados por usuários a partir de uma única interface.</strong> É a melhor opção para usuários que querem acesso amplo a modelos de IA sem gerenciar chaves de API.</p>
+<p className="text-text-secondary leading-relaxed">O Poe não oferece envio simultâneo — os usuários alternam entre modelos ou comparam dois de cada vez, em vez de enviar um prompt para todos os modelos em paralelo. Não há pontuação de consenso nem análise automatizada de concordância de respostas. Todo o processamento é na nuvem, o que o torna inadequado para trabalho com informações sensíveis.</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">Poe vs PromptQuorum: diferenças principais</h4>
+              <p className="text-text-secondary mb-8">O Poe é melhor para a exploração casual, a descoberta de bots e a conversa sem gerenciamento de chaves de API. O PromptQuorum é melhor para a avaliação controlada de prompts, a análise de consenso e os fluxos de trabalho com LLM local. Eles atendem a casos de uso fundamentalmente diferentes: o Poe é uma plataforma de consumo; o PromptQuorum é uma ferramenta de avaliação profissional.</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">LM Arena (lmarena.ai)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: benchmarking comunitário</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">lmarena.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Grátis</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Somente web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Sistema de votação humana</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>A LM Arena (antiga Chatbot Arena) é o leaderboard de modelos de IA mais citado, utilizando ratings Elo derivados de milhões de votos de preferência humana.</strong> Os usuários enviam prompts e votam em qual de dois modelos anônimos produziu a melhor resposta.</p>
+<p className="text-text-secondary leading-relaxed">A LM Arena exibe dois modelos lado a lado e coleta um voto de preferência humana — não fornece análise de consenso automatizada, não suporta LLMs locais e não permite selecionar modelos específicos no modo de comparação principal. É uma plataforma de benchmarking, não uma ferramenta de fluxo de trabalho.</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">LM Arena vs PromptQuorum: diferenças principais</h4>
+              <p className="text-text-secondary mb-8">A LM Arena é melhor para entender as tendências agregadas de preferência humana no setor. O PromptQuorum é melhor para avaliar seus prompts específicos em seus modelos escolhidos com uma análise consistente e automatizada. A LM Arena diz a você o que a multidão prefere; o PromptQuorum diz a você o que seu prompt produz em cada modelo que importa para você.</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">OpenMark (openmark.ai)</span>
+                  <span className="text-xs font-mono bg-green-50 text-green-700 border-green-200 border px-3 py-1 rounded-full">Ideal para: análise de custo/qualidade</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">openmark.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Nível gratuito / créditos</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Mais de 100 modelos</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Pontuação determinística</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>O OpenMark é uma ferramenta de benchmarking voltada para desenvolvedores que executa prompts contra mais de 100 modelos de IA simultaneamente e pontua os resultados de maneira determinística — o mesmo prompt sempre produz o mesmo resultado classificado.</strong> Mostra exatamente quanto cada modelo custa por prompt junto com as pontuações de qualidade.</p>
+<p className="text-text-secondary leading-relaxed">O OpenMark é sólido em amplitude (mais de 100 modelos) e transparência de custos, mas não produz um veredito de consenso — pontua cada modelo individualmente em vez de analisar padrões de concordância. Não suporta LLMs locais por meio de Ollama ou LM Studio.</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">OpenMark vs PromptQuorum: diferenças principais</h4>
+              <p className="text-text-secondary mb-8">O OpenMark responde "qual modelo individual funciona melhor para esta tarefa e a que custo". O PromptQuorum responde "quanto os modelos concordam neste prompt e o que significa sua discordância?". Ambos exigem chaves de API; o OpenMark suporta mais de 100 modelos; o PromptQuorum adiciona de forma única a inferência de LLM local e a pontuação de consenso.</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">AiZolo (aizolo.com)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">Ideal para: equipes de conteúdo</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">aizolo.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">A partir de $9,90/mês</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">GPT-4o, Claude, Gemini, Grok</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Biblioteca de prompts</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>O AiZolo é um espaço de trabalho multi-modelo unificado projetado para criadores de conteúdo e equipes de marketing, com envio simultâneo para GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro e Grok em paralelo.</strong> A partir de março de 2026, os planos começavam a partir de $9,90/mês — verifique o preço atual em aizolo.com.</p>
+<p className="text-text-secondary leading-relaxed">O AiZolo não oferece pontuação de consenso — exibe as respostas lado a lado, mas deixa a análise para o usuário. Suporta apenas quatro modelos na nuvem, sem opção de LLM local. É uma ferramenta de fluxo de trabalho de produção de conteúdo, não uma plataforma de avaliação técnica.</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">AiZolo vs PromptQuorum: diferenças principais</h4>
+              <p className="text-text-secondary mb-8">O AiZolo é melhor para equipes de conteúdo que precisam de um espaço de trabalho de escrita multi-modelo acessível para uso diário. O PromptQuorum é melhor para usuários avançados que precisam de análise de consenso automatizada, privacidade com LLM local e acesso controlado por chave de API a um conjunto mais amplo de modelos, incluindo sistemas de código aberto.</p>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-6">Qual ferramenta multi-LLM você deveria usar?</h3>
+              <div className="space-y-3">
+                <div className="rounded-lg px-5 py-4 bg-primary/8 border border-primary/20">
+                  <span className="font-semibold text-primary">Escolha o PromptQuorum</span>
+                  <span className="text-text-secondary"> se você precisa de pontuação de consenso entre modelos, suporte a LLM local para trabalho com informações sensíveis ou um fluxo de avaliação controlado com suas próprias chaves de API.</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">Escolha o Poe</span>
+                  <span className="text-text-secondary"> se você quer acesso fácil a GPT-4o, Claude 4.6 Sonnet, Gemini e milhares de bots para conversa casual e exploração sem gerenciar chaves de API.</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">Escolha a LM Arena</span>
+                  <span className="text-text-secondary"> se você quer contribuir ou estudar os dados de preferência de modelos impulsionados pela comunidade e os rankings Elo do setor.</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">Escolha o OpenMark</span>
+                  <span className="text-text-secondary"> se você é um desenvolvedor que seleciona um modelo para uma aplicação de produção e precisa de pontuação de qualidade determinística com dados de custo transparentes em mais de 100 modelos.</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">Escolha o AiZolo</span>
+                  <span className="text-text-secondary"> se você é um criador de conteúdo ou profissional de marketing que precisa de um espaço de trabalho multi-modelo acessível e bem projetado para fluxos de trabalho de escrita diários.</span>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Repeat CTA */}

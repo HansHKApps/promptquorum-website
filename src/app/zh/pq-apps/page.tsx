@@ -718,10 +718,194 @@ export default function ZhPQAppsPage() {
           {/* Compare Tools */}
           <section id="compare-tools" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl font-bold text-text-primary mb-4">工具对比</h2>
-            <p className="text-text-secondary mb-4">查看 PromptQuorum 与其他AI提示词工具的对比。</p>
-            <Link href="/zh/compare" className="text-primary hover:text-primary/80 font-medium">
-              查看完整对比 →
-            </Link>
+
+            <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed mb-8">
+              <strong>准确性声明：</strong>
+               功能和定价信息已于2026年3月根据各产品的公开文档进行了核实，并以诚信提供。产品经常变化——在做决定前，请直接向每个供应商核实当前功能。如果您认为本页面上的任何信息不准确或过时，请
+              <a href="mailto:hello@promptquorum.com" className="underline hover:text-amber-900">联系我们</a>
+              ，我们将立即更正。本比较由PromptQuorum制作，反映了我们作为该市场参与者的视角。
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-xl font-bold text-text-primary mb-3">什么是多LLM比较工具？</h3>
+              <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg px-5 py-4 mb-4">
+                <p className="text-text-primary text-[15px] leading-relaxed">多LLM比较工具将同一提示同时发送到多个大型语言模型，并将响应并排显示——GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Mistral Large等——让用户无需切换标签或重复输入即可评估AI系统之间在推理、准确性和风格上的差异。</p>
+              </div>
+              <p className="text-text-secondary mb-3">2026年，没有单一AI模型对所有任务都具有权威性。GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro各自具有不同的训练数据、架构偏差和推理优势。一个模型看起来正确的回答，可能被另一个模型否定、限定或大幅扩展。</p>
+              <p className="text-text-secondary">这里比较的五个工具代表了目前可用的主要方法：消费者平台（Quora的Poe）、社区基准测试（LM Arena）、开发者评估套件（OpenMark）、统一多模型工作区（AiZolo）和共识评分平台（PromptQuorum）。每个工具服务于不同的工作流程。</p>
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-xl font-bold text-text-primary mb-2">功能比较：5款多LLM工具（2026年）</h3>
+              <p className="text-text-secondary mb-4">下表按对专业多LLM工作流程最重要的功能比较所有五款工具——同时分发、共识评分、本地LLM支持、API密钥控制和定价。</p>
+              <div className="overflow-x-auto rounded-xl border border-gray-200">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-semibold text-xs uppercase tracking-wider">工具</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">同时分发</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">共识评分</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">本地LLM</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider whitespace-nowrap">API密钥控制</th>
+                      <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-text-secondary font-semibold text-xs uppercase tracking-wider">定价</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">PromptQuorum</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Quorum Verdict</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Ollama + LM Studio</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Your keys</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free beta</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">Poe (Quora)</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Sequential / limited</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Limited</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free / $19.99/mo</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">LM Arena</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ 2 models only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Human voting only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">OpenMark</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Parallel</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-amber-500">~ Deterministic scoring</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">Free tier / credits</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-primary font-medium whitespace-nowrap">AiZolo</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ No</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-red-400">✗ Cloud only</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-green-600 font-semibold">✓ Yes</td>
+                      <td className="py-2 sm:py-3 px-2 sm:px-4 text-text-secondary">From $9.90/mo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs font-mono text-text-secondary mt-3">✓ 是 · ~ 部分 · ✗ 否 · 基于2026年3月的公开文档。价格和功能可能变化——请向各供应商核实。本比较由PromptQuorum制作。</p>
+            </div>
+
+            <div className="mb-10">
+              <div className="border border-primary/25 bg-primary/5 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-primary">PromptQuorum</span>
+                  <span className="text-xs font-mono bg-green-100 text-green-700 border-green-200 border px-3 py-1 rounded-full">最适合：开发者和高级用户</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">测试版 · 2026年4月</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">promptquorum.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">需要API密钥</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">Ollama + LM Studio</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>PromptQuorum是所审查工具中唯一将同时提示分发与自动共识评分相结合的工具。</strong> 您编写一个提示，选择模型——GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Mistral Large和本地运行的模型——PromptQuorum并行分发给所有模型。然后Quorum Verdict分析模型在哪里同意、在哪里分歧，以及这些模式对答案可靠性意味着什么。</p>
+<p className="text-text-secondary mb-3 leading-relaxed">决定性功能是本地LLM支持。通过Ollama和LM Studio集成，PromptQuorum在分发中包含本地运行的模型——LLaMA 3.1 7B需要8GB RAM，13B需要16GB——因此敏感提示永远不会离开您的机器。对于法律专业人员、医疗工作者、金融分析师和使用专有代码的开发者来说，这不是可选项，而是必需项。</p>
+<p className="text-text-secondary leading-relaxed">PromptQuorum要求用户携带来自OpenAI、Anthropic、Google和Mistral的自己的API密钥。这使您的数据处于您的控制之下，成本透明，使用与您与每个提供商的商业条款绑定。</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">谁应该使用PromptQuorum？</h4>
+              <p className="text-text-secondary mb-8">PromptQuorum专为以下用户设计：评估将哪个模型集成到生产流水线的开发者、需要跨模型验证研究结果的研究人员，以及工作涉及无法发送到第三方服务器的机密信息的专业人员。</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">Poe (by Quora)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">最适合：休闲/消费者使用</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">poe.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">免费 / 月$19.99</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">iOS、Android、Web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">数百万用户</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>Poe由Quora开发，是最大的多模型AI平台，通过单一界面提供对GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Llama、Grok和数千个用户创建机器人的访问。</strong> 对于想要轻松访问多个AI模型而无需管理API密钥的用户来说，这是最佳选择。</p>
+<p className="text-text-secondary leading-relaxed">Poe不提供真正意义上的同时分发——用户切换模型或一次比较两个，而不是并行向所有模型分发一个提示。没有共识评分或响应一致性的自动分析。所有推理都是基于云的，这使其不适合对隐私敏感的专业用例。</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">Poe vs PromptQuorum：主要区别</h4>
+              <p className="text-text-secondary mb-8">Poe更适合无需API密钥管理的休闲探索、机器人发现和对话。PromptQuorum更适合受控提示评估、共识分析和本地LLM工作流程。它们针对根本不同的用例：Poe是消费者平台；PromptQuorum是专业评估工具。</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">LM Arena (lmarena.ai)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">最适合：社区基准测试</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">lmarena.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">免费</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">仅Web</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">人类投票系统</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>LM Arena（前身为Chatbot Arena）是最常被引用的AI模型排行榜，其Elo评分来源于数百万次人类偏好投票。</strong> 用户提交提示并投票选出两个匿名模型中哪个产生了更好的回答。</p>
+<p className="text-text-secondary leading-relaxed">LM Arena并排显示两个模型并收集人类偏好投票——它不提供自动共识分析，不支持本地LLM，也不允许用户在主要比较模式下选择特定模型。它是基准测试平台，不是工作流程工具。</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">LM Arena vs PromptQuorum：主要区别</h4>
+              <p className="text-text-secondary mb-8">LM Arena更适合了解整个行业的汇总人类偏好趋势。PromptQuorum更适合通过一致的自动化分析评估您在所选模型上的特定提示。LM Arena告诉您社区偏好什么；PromptQuorum告诉您您的提示在您关心的每个模型上产生什么。</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">OpenMark (openmark.ai)</span>
+                  <span className="text-xs font-mono bg-green-50 text-green-700 border-green-200 border px-3 py-1 rounded-full">最适合：成本/质量分析</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">openmark.ai</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">免费层 / 积分</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">100+模型</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">确定性评分</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>OpenMark是一款面向开发者的基准测试工具，可同时对100多个AI模型运行提示，并以确定性方式评分——相同的提示始终产生相同的排名输出。</strong> 它显示每个模型每次提示的精确成本以及质量评分。</p>
+<p className="text-text-secondary leading-relaxed">OpenMark在广度（100+模型）和成本透明度方面表现出色，但不产生共识评定——它单独为每个模型评分，而不是分析跨模型的一致性模式。不支持通过Ollama或LM Studio的本地LLM。</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">OpenMark vs PromptQuorum：主要区别</h4>
+              <p className="text-text-secondary mb-8">OpenMark回答"哪个单一模型在此任务上表现最佳，成本是多少？" PromptQuorum回答"模型在此提示上的一致性如何，它们的分歧意味着什么？"两者都需要API密钥；OpenMark支持100+模型；PromptQuorum独特地添加了本地LLM推理和共识评分。</p>
+              <div className="border border-gray-200 bg-gray-50 rounded-xl p-6 mb-3">
+                <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+                  <span className="text-lg font-bold text-text-primary">AiZolo (aizolo.com)</span>
+                  <span className="text-xs font-mono bg-amber-50 text-amber-700 border-amber-200 border px-3 py-1 rounded-full">最适合：内容团队</span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">aizolo.com</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">月$9.90起</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">GPT-4o、Claude、Gemini、Grok</span>
+                <span className="text-xs font-mono text-text-secondary bg-white border border-gray-200 px-2 py-1 rounded">提示库</span>
+                </div>
+<p className="text-text-secondary mb-3 leading-relaxed"><strong>AiZolo是专为内容创作者和营销团队设计的统一多模型工作区，可同时向GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和Grok并排分发。</strong> 截至2026年3月，计划从每月$9.90起——请在aizolo.com核实当前价格。</p>
+<p className="text-text-secondary leading-relaxed">AiZolo不提供共识评分——它并排显示响应，但将分析完全留给用户。仅支持四个云模型，没有本地LLM选项。这是内容制作工作流程工具，不是技术评估平台。</p>
+              </div>
+              <h4 className="text-base font-semibold text-text-primary mb-2">AiZolo vs PromptQuorum：主要区别</h4>
+              <p className="text-text-secondary mb-8">AiZolo更适合需要日常使用的经济实惠多模型写作工作区的内容团队。PromptQuorum更适合需要自动共识分析、本地LLM隐私保护以及API密钥控制访问包括开放权重系统在内的更广泛模型集的高级用户。</p>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-6">应该使用哪个多LLM工具？</h3>
+              <div className="space-y-3">
+                <div className="rounded-lg px-5 py-4 bg-primary/8 border border-primary/20">
+                  <span className="font-semibold text-primary">选择PromptQuorum</span>
+                  <span className="text-text-secondary"> 如果您需要跨模型的共识评分、隐私敏感工作的本地LLM支持，或使用自己API密钥的受控评估工作流程。</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">选择Poe</span>
+                  <span className="text-text-secondary"> 如果您希望轻松访问GPT-4o、Claude 4.6 Sonnet、Gemini和数千个机器人，用于无需管理API密钥的休闲对话和探索。</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">选择LM Arena</span>
+                  <span className="text-text-secondary"> 如果您想为整个行业的社区驱动模型偏好数据和Elo排名做贡献或进行研究。</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">选择OpenMark</span>
+                  <span className="text-text-secondary"> 如果您是为生产应用程序选择模型的开发者，需要100多个模型的确定性质量评分和透明成本数据。</span>
+                </div>
+                <div className="rounded-lg px-5 py-4 bg-gray-50 border border-gray-100">
+                  <span className="font-semibold text-text-primary">选择AiZolo</span>
+                  <span className="text-text-secondary"> 如果您是内容创作者或营销专业人员，需要日常多模型写作工作流程的经济实惠、设计良好的工作区。</span>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Repeat CTA */}
