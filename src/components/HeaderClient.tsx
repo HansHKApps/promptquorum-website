@@ -109,6 +109,17 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '디렉터리',
     ar: 'الدليل',
   },
+  about: {
+    en: 'About',
+    de: 'Über uns',
+    fr: 'À propos',
+    ja: 'について',
+    zh: '关于',
+    es: 'Acerca de',
+    pt: 'Sobre',
+    ko: '소개',
+    ar: 'حول',
+  },
   promptBites: {
     en: 'Prompt Bites',
     de: 'Prompt-Häppchen',
@@ -238,6 +249,7 @@ function HeaderInner() {
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
           <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
           <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
+          <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -368,6 +380,13 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('balconySolar', lang)}
+        </Link>
+        <Link
+          href={navHref('/about', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('about', lang)}
         </Link>
         <a
           href="#waitlist"
