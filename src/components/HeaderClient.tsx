@@ -237,6 +237,7 @@ function HeaderInner() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
+          <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
           <Link href={navHref('/compare', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('compare', lang)}</Link>
           <Link href={navHref('/features', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('features', lang)}</Link>
           <Link href={navHref('/how-it-works', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
@@ -249,7 +250,6 @@ function HeaderInner() {
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
           <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
           <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
-          <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -297,6 +297,13 @@ function HeaderInner() {
           <LanguageSwitcherWrapper initialLang={lang as Language} />
         </div>
 
+        <Link
+          href={navHref('/about', lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('about', lang)}
+        </Link>
         <Link
           href={navHref('/compare', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
@@ -380,13 +387,6 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('balconySolar', lang)}
-        </Link>
-        <Link
-          href={navHref('/about', lang)}
-          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t('about', lang)}
         </Link>
         <a
           href="#waitlist"
