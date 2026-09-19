@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
+import { Sparkles, Layers, Brain, Zap, Shield } from 'lucide-react'
+import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
+import { OptimizationShowcase } from '@/components/OptimizationShowcase'
+import { QuorumShowcase } from '@/components/QuorumShowcase'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -104,31 +108,129 @@ export default function JaPQAppsPage() {
           {/* Features */}
           <section id="features" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl font-bold text-text-primary mb-6">機能</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">料金</div>
-                  <div className="text-text-primary font-medium">無料。独自のAPIキーを使用。</div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 mb-8">
+              <h3 className="text-lg font-bold text-text-primary mb-4">主要機能の概要</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">9つのプロンプトエンジニアリングフレームワーク（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google、RTF）</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">25以上のクラウドモデルへの同時ディスパッチ（GPT-4o、Claude、Gemini、DeepSeek など）</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">4つのカテゴリ（統合、比較、品質、選択）にわたる13のクォーラムコンセンサス分析タイプ</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">1つのモデルのみ、またはコンセンサスと矛盾する主張にフラグを立てるハルシネーション検出</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">ローカルLLMサポート：Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、vLLM、OpenAI互換エンドポイント</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">プライバシー優先：完全なオフライン実行、登録不要、デバイスから何も送信されない</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">すべてのディスパッチされたモデルのリアルタイム回答の並べて比較</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">8つの改善テクニックによる自動プロンプト最適化でより良いAI出力を実現</span>
+              </li>
+              </ul>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Sparkles size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">プライバシーモデル</div>
-                  <div className="text-text-primary font-medium">BYOM — サーバー送信なし</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">プロンプト最適化</h3>
+                <p className="text-text-secondary">8つの改善テクニックでプロンプトを自動的に改良・最適化します。</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Layers size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">対応AIモデル</div>
-                  <div className="text-text-primary font-medium">クラウド25以上 + Ollama経由で無制限のローカルモデル</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">マルチモデル配信</h3>
+                <p className="text-text-secondary">ChatGPT・Claude・Geminiなど25以上のモデルへ同時並列でプロンプトを送信。</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Brain size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">プロンプトフレームワーク</div>
-                  <div className="text-text-primary font-medium">内蔵9種 + カスタム2枠</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">クォーラムスコアリング</h3>
+                <p className="text-text-secondary">モデル間のコンセンサス回答を信頼スコアで発見。ハルシネーションを即座に検出。</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Zap size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Quorum分析タイプ</div>
-                  <div className="text-text-primary font-medium">ハルシネーション検出を含む13種</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">瞬時比較</h3>
+                <p className="text-text-secondary">数秒で並べて回答を確認。ブラウザタブ間の手動テスト不要。</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Shield size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">オフライン対応</div>
-                  <div className="text-text-primary font-medium">完全対応 — Ollama、LM Studio、Jan AI経由</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">プライバシー優先</h3>
+                <p className="text-text-secondary">ローカル実行オプション。登録不要。プロンプトを完全にコントロール。</p>
+              </div>
+            </div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-8">
+              <PromptOptimizerShowcase lang="ja" />
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-2">最適化結果をどのように確認しますか?</h3>
+              <p className="text-text-secondary mb-6">最適化されたプロンプトの品質評価・バージョン履歴・改善提案を確認できます。</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <OptimizationShowcase lang="ja" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">バージョン管理</h4>
+                  <p className="text-text-secondary text-sm">プロンプトのすべての変更履歴を追跡。いつでも以前のバージョンに戻したり、分岐させて異なる最適化パスを試したりできます。</p>
                 </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">品質インサイト</h4>
+                  <p className="text-text-secondary text-sm">プロンプトがなぜ改善されたのかを正確に理解。強みと改善点について詳細なフィードバックを得られます。</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">スマートリファインメント</h4>
+                  <p className="text-text-secondary text-sm">ワンクリックの改善を適用して、プロンプトを簡潔・明確・プロフェッショナル・詳細にできます。</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">クォーラム — マルチモデルコンセンサスとは?</h3>
+              <p className="text-text-secondary mb-6">25以上のAIモデルから回答を収集し、コンセンサスパターンを分析し、異なる視点からの洞察を統合します。</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <QuorumShowcase lang="ja" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">回答を収集</h4>
+                  <p className="text-text-secondary text-sm">ChatGPT、Claude、Geminiなど25以上のモデルでプロンプトを実行。多様な視点と回答を即座に取得。</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">パターンを分析</h4>
+                  <p className="text-text-secondary text-sm">すべてのモデルが同意する点（コンセンサス）、異なる点、そしてどの回答が用途に最も適しているかを特定。</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">洞察を統合</h4>
+                  <p className="text-text-secondary text-sm">複数モデルの強みを組み合わせて、より良い回答を作成。結果を複数フォーマットでエクスポートしてさらに活用。</p>
+                </div>
+              </div>
             </div>
           </section>
 

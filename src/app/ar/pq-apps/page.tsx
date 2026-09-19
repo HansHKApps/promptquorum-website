@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
+import { Sparkles, Layers, Brain, Zap, Shield } from 'lucide-react'
+import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
+import { OptimizationShowcase } from '@/components/OptimizationShowcase'
+import { QuorumShowcase } from '@/components/QuorumShowcase'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -104,31 +108,129 @@ export default function ArPQAppsPage() {
           {/* Features */}
           <section id="features" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl font-bold text-text-primary mb-6">الميزات</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">التسعير</div>
-                  <div className="text-text-primary font-medium">مجاني. استخدم مفتاح API الخاص بك.</div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 mb-8">
+              <h3 className="text-lg font-bold text-text-primary mb-4">الميزات الرئيسية في لمحة</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">9 أطر عمل لهندسة الموجهات (CO-STAR، CRAFT، RISEN، TRACE، APE، SPECS، Google، RTF)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">إرسال إلى 25+ نموذج سحابي في آنٍ واحد (GPT-4o، Claude، Gemini، DeepSeek والمزيد)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">13 نوع تحليل توافق Quorum عبر 4 فئات (التوليف، المقارنة، الجودة، الاختيار)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">كشف الهلوسة يُعلّم الادعاءات التي تظهر في نموذج واحد فقط أو تتعارض مع التوافق</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">دعم النماذج المحلية: Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، vLLM، وأي نقطة نهاية متوافقة مع OpenAI</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">الخصوصية أولًا: تنفيذ كامل بلا اتصال، لا تسجيل مطلوب، لا شيء يغادر جهازك</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">مقارنة فورية للاستجابات جنبًا إلى جنب عبر جميع النماذج في الوقت الفعلي</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">تحسين تلقائي للموجهات بـ 8 تقنيات تحسين لمخرجات ذكاء اصطناعي أفضل</span>
+              </li>
+              </ul>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Sparkles size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">نموذج الخصوصية</div>
-                  <div className="text-text-primary font-medium">BYOM — بلا نقل بيانات إلى أي خادم</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">تحسين الموجهات</h3>
+                <p className="text-text-secondary">قم بتحسين موجهاتك تلقائيًا باستخدام 8 تقنيات تحسين مجربة لمخرجات ذكاء اصطناعي أفضل.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Layers size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">نماذج الذكاء الاصطناعي المدعومة</div>
-                  <div className="text-text-primary font-medium">25+ سحابيًا + غير محدود محليًا عبر Ollama</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">إرسال متعدد النماذج</h3>
+                <p className="text-text-secondary">شغّل الموجهات عبر ChatGPT وClaude وGemini وأكثر من 25 نموذجًا آخر في آنٍ واحد.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Brain size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">أطر التعليمات</div>
-                  <div className="text-text-primary font-medium">9 مدمجة + خانتان مخصصتان</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">تقييم Quorum</h3>
+                <p className="text-text-secondary">اعثر على إجابات توافقية عبر النماذج مع تقييم الثقة. يكشف الهلوسة على الفور.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Zap size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">أنواع تحليل Quorum</div>
-                  <div className="text-text-primary font-medium">13 نوعًا، بما في ذلك كشف الهلوسة</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">مقارنة فورية</h3>
+                <p className="text-text-secondary">احصل على الاستجابات بالتوازي بنقرة واحدة — دون نسخ ولصق يدوي بين نوافذ المتصفح.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Shield size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">الدعم دون اتصال</div>
-                  <div className="text-text-primary font-medium">كامل — عبر Ollama وLM Studio وJan AI</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">الخصوصية أولًا</h3>
+                <p className="text-text-secondary">خيار التنفيذ المحلي. لا تسجيل مطلوب. تحكم كامل في موجهاتك.</p>
+              </div>
+            </div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-8">
+              <PromptOptimizerShowcase lang="ar" />
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-2">كيف تراجع نتائج التحسين؟</h3>
+              <p className="text-text-secondary mb-6">راجع تقييمات الجودة وسجل الإصدارات واقتراحات التحسين لموجهاتك المُحسَّنة.</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <OptimizationShowcase lang="ar" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">التحكم في الإصدارات</h4>
+                  <p className="text-text-secondary text-sm">تتبّع جميع التكرارات لتعليمتك. ارجع إلى إصدارات سابقة في أي وقت أو تفرّع لاستكشاف مسارات تحسين مختلفة.</p>
                 </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">رؤى الجودة</h4>
+                  <p className="text-text-secondary text-sm">افهم بدقة سبب تحسين تعليمتك. احصل على ملاحظات مفصّلة حول نقاط القوة والمجالات التي تحتاج إلى تحسين.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">تحسينات ذكية</h4>
+                  <p className="text-text-secondary text-sm">طبّق تحسينات بنقرة واحدة لجعل تعليمتك أكثر إيجازًا أو وضوحًا أو احترافية أو تفصيلاً حسب الحاجة.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">ما هو Quorum — التوافق متعدد النماذج؟</h3>
+              <p className="text-text-secondary mb-6">اجمع الاستجابات من 25+ نموذج ذكاء اصطناعي، وحلّل أنماط التوافق، واستخلص الرؤى من منظورات مختلفة.</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <QuorumShowcase lang="ar" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">جمع الاستجابات</h4>
+                  <p className="text-text-secondary text-sm">شغّل تعليمتك عبر ChatGPT وClaude وGemini وأكثر من 25 نموذجًا آخر. احصل على وجهات نظر واستجابات متنوعة فورًا.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">تحليل الأنماط</h4>
+                  <p className="text-text-secondary text-sm">حدّد ما تتفق عليه جميع النماذج (التوافق)، وأين تختلف، وأي الاستجابات الأعلى جودة لحالة استخدامك.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">تجميع الرؤى</h4>
+                  <p className="text-text-secondary text-sm">ادمج نقاط قوة نماذج متعددة للحصول على إجابات أفضل. صدّر النتائج بصيغ متعددة لاستخدامها لاحقًا.</p>
+                </div>
+              </div>
             </div>
           </section>
 

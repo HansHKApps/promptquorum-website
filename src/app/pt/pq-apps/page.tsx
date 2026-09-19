@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
+import { Sparkles, Layers, Brain, Zap, Shield } from 'lucide-react'
+import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
+import { OptimizationShowcase } from '@/components/OptimizationShowcase'
+import { QuorumShowcase } from '@/components/QuorumShowcase'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -104,31 +108,129 @@ export default function PtPQAppsPage() {
           {/* Features */}
           <section id="features" className="mb-16 scroll-mt-24">
             <h2 className="text-2xl font-bold text-text-primary mb-6">Recursos</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Preços</div>
-                  <div className="text-text-primary font-medium">Grátis. Traga sua própria chave de API.</div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 mb-8">
+              <h3 className="text-lg font-bold text-text-primary mb-4">Principais recursos em resumo</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">Envio para 25+ modelos na nuvem simultaneamente (GPT-4o, Claude, Gemini, DeepSeek e mais)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">13 tipos de análise de consenso Quorum em 4 categorias (síntese, comparação, qualidade, seleção)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">A detecção de alucinação sinaliza afirmações que aparecem em apenas um modelo ou que contradizem o consenso</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">Suporte a LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM e qualquer endpoint compatível com OpenAI</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">Privacidade em primeiro lugar: execução totalmente offline, sem necessidade de cadastro, nada sai do seu dispositivo</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">Comparação instantânea de respostas lado a lado de todos os modelos em tempo real</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold text-lg mt-0.5">✓</span>
+                <span className="text-text-secondary">Otimização automática de prompts com 8 técnicas de refinamento para melhores resultados de IA</span>
+              </li>
+              </ul>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Sparkles size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Modelo de privacidade</div>
-                  <div className="text-text-primary font-medium">BYOM — zero transmissão ao servidor</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">Otimização de prompts</h3>
+                <p className="text-text-secondary">Refine e otimize seus prompts automaticamente com 8 técnicas de refinamento comprovadas para melhores resultados de IA.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Layers size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Modelos de IA compatíveis</div>
-                  <div className="text-text-primary font-medium">25+ na nuvem + ilimitados localmente via Ollama</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">Envio multimodelo</h3>
+                <p className="text-text-secondary">Execute prompts no ChatGPT, Claude, Gemini e mais 25+ modelos simultaneamente em paralelo.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Brain size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Frameworks de prompt</div>
-                  <div className="text-text-primary font-medium">9 integrados + 2 slots personalizados</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">Pontuação Quorum</h3>
+                <p className="text-text-secondary">Encontre respostas de consenso entre modelos com pontuação de confiança. A detecção de alucinação sinaliza afirmações que aparecem em apenas um modelo.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Zap size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Tipos de análise Quorum</div>
-                  <div className="text-text-primary font-medium">13, incluindo detecção de alucinações</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">Comparação instantânea</h3>
+                <p className="text-text-secondary">Obtenha respostas em paralelo com um clique — sem copiar e colar manualmente entre abas do navegador.</p>
+              </div>
+              <div className="p-6 rounded-xl bg-card border border-primary/20">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+                  <Shield size={24} />
                 </div>
-                <div className="bg-card border border-primary/20 rounded-xl p-4">
-                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Suporte offline</div>
-                  <div className="text-text-primary font-medium">Total — via Ollama, LM Studio, Jan AI</div>
+                <h3 className="text-lg font-semibold text-text-primary mb-2">Privacidade em primeiro lugar</h3>
+                <p className="text-text-secondary">Opção de execução local. Sem necessidade de cadastro. Controle total sobre seus prompts.</p>
+              </div>
+            </div>
+
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-8">
+              <PromptOptimizerShowcase lang="pt" />
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-2">Como você revisa os resultados da otimização?</h3>
+              <p className="text-text-secondary mb-6">Revise avaliações de qualidade, histórico de versões e sugestões de melhoria para seus prompts otimizados.</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <OptimizationShowcase lang="pt" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Controle de versões</h4>
+                  <p className="text-text-secondary text-sm">Acompanhe todas as iterações do seu prompt. Reverta para versões anteriores a qualquer momento ou crie ramificações para explorar diferentes caminhos de otimização.</p>
                 </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Insights de qualidade</h4>
+                  <p className="text-text-secondary text-sm">Entenda exatamente por que seu prompt foi aprimorado. Receba feedback detalhado sobre pontos fortes e áreas a refinar.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Refinamentos inteligentes</h4>
+                  <p className="text-text-secondary text-sm">Aplique refinamentos com um clique para tornar seu prompt mais conciso, claro, profissional ou detalhado, conforme necessário.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">O que é o Quorum — Consenso multimodelo?</h3>
+              <p className="text-text-secondary mb-6">Colete respostas de 25+ modelos de IA, analise padrões de consenso e sintetize percepções de diferentes perspectivas.</p>
+              <div className="bg-surface-highlight border border-primary/20 rounded-xl p-6 sm:p-8 mb-6">
+                <QuorumShowcase lang="pt" />
+              </div>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Coletar respostas</h4>
+                  <p className="text-text-secondary text-sm">Execute seu prompt no ChatGPT, Claude, Gemini e mais de 25 outros modelos. Obtenha perspectivas e respostas diversas instantaneamente.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Analisar padrões</h4>
+                  <p className="text-text-secondary text-sm">Identifique em que todos os modelos concordam (consenso), onde divergem e quais respostas têm a maior qualidade para seu caso de uso.</p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-text-primary mb-2">Sintetizar insights</h4>
+                  <p className="text-text-secondary text-sm">Combine os pontos fortes de vários modelos em respostas melhores. Exporte os resultados em vários formatos para uso posterior.</p>
+                </div>
+              </div>
             </div>
           </section>
 
