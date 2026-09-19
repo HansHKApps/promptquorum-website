@@ -46,6 +46,7 @@ export default function KoPQAppsPage() {
               'inLanguage': 'ko',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PromptQuorum은 무료인가요?", "acceptedAnswer": {"@type": "Answer", "text": "네. PromptQuorum은 무료로 사용할 수 있습니다. 자신의 API 키를 가져오거나, 로컬 LLM을 사용하거나, 프롬프트 최적화를 위한 무료 테스트 백엔드 서비스를 이용할 수 있습니다."}}, {"@type": "Question", "name": "개인정보 보호는 어떻게 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "데이터의 행방은 사용자가 결정합니다. LM Studio나 Ollama를 사용해 모든 것을 로컬에 유지하거나, 자신의 API 키를 사용하세요. 제로 텔레메트리, 제로 추적, 데이터 수집 없음 — 익명 사용 통계조차 수집하지 않습니다."}}, {"@type": "Question", "name": "어떤 AI 제공업체가 지원되나요?", "acceptedAnswer": {"@type": "Answer", "text": "25개 이상의 AI 제공업체가 포함됩니다: OpenAI(GPT-4, GPT-4o), Anthropic(Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, 그리고 모든 로컬 제공업체(Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga 및 OpenAI 호환 엔드포인트)."}}, {"@type": "Question", "name": "PromptQuorum은 어떤 플랫폼에서 실행되나요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 macOS, Windows, Linux(데스크톱 via Electron)에서 사용 가능합니다. 웹 애플리케이션은 개발 중이며, 그 다음 모바일(iOS 및 Android via Capacitor)이 출시됩니다. 로컬 LLM과 함께 완전히 오프라인으로 작동합니다."}}, {"@type": "Question", "name": "PromptQuorum의 차별점은 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 단일 브라우저 기반 도구에서 프롬프트의 전체 생명 주기를 커버합니다: 9개 프레임워크를 활용한 구조화된 작성, AI 기반 반복 최적화(8가지 정제 유형), 25개 이상의 AI 서비스로의 원클릭 전송, 합의 점수 산정을 위한 13가지 Quorum 분석 — 모두 데이터가 기기를 벗어나지 않고 처리됩니다."}}, {"@type": "Question", "name": "사용 제한이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 측에서는 어떤 제한도 없습니다. 사용량은 API 키나 로컬 LLM 리소스에 의해서만 제한됩니다."}}, {"@type": "Question", "name": "프롬프트 엔지니어링이란 무엇이며 왜 중요한가요?", "acceptedAnswer": {"@type": "Answer", "text": "프롬프트 엔지니어링은 AI 모델에 대한 입력을 설계해 더 정확하고 유용하며 신뢰할 수 있는 출력을 얻는 실천입니다. 테스트에서 프레임워크 필드를 갖춘 구조화된 프롬프트는 구조화되지 않은 입력에 비해 LLM 평가 점수를 25~45% 높입니다. PromptQuorum은 9개의 내장 프레임워크로 이를 자동화합니다 — 전문 지식이 필요 없습니다."}}, {"@type": "Question", "name": "PromptQuorum은 어떻게 프롬프트를 최적화하나요?", "acceptedAnswer": {"@type": "Answer", "text": "연결된 LLM이 프레임워크의 원시 필드를 정밀 프롬프트로 변환합니다. 이후 8가지 원클릭 정제(간결하게 만들기, 세부 사항 확장, 단계로 분해, 단순화, 구체성 높이기, 다중 전문가 상담, 품질 통제 추가, 사용자 정의 지시)로 반복적으로 개선할 수 있습니다. 모든 단계가 버전 기록에 저장되므로 언제든지 되돌릴 수 있습니다."}}, {"@type": "Question", "name": "PromptQuorum에 내장된 프롬프트 프레임워크는 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum에는 9가지 프레임워크가 포함됩니다: Single Prompt Line, APE, CRAFT, CO-STAR(싱가포르 GPT-4 대회 우승), SPECS, RISEN, TRACE, Google Prompt, RTF. 또한 2개의 완전히 사용자 정의 프레임워크를 만들 수 있습니다."}}, {"@type": "Question", "name": "CO-STAR 프레임워크란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "CO-STAR는 Context(맥락), Objective(목표), Style(스타일), Tone(어조), Audience(대상), Response(응답 형식)의 약자입니다. 싱가포르 GPT-4 프롬프트 엔지니어링 대회에서 우승했으며, 비즈니스 커뮤니케이션과 마케팅에 이상적입니다. PromptQuorum이 각 필드를 안내하고 최종 프롬프트를 자동으로 조합합니다."}}, {"@type": "Question", "name": "다중 모델 합의란 무엇이며 왜 가치 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "다중 모델 합의는 동일한 프롬프트를 여러 AI 모델에 보내 일치하는 부분을 찾는 것입니다. 5개의 독립적인 모델이 동일한 답변을 제시할 때 신뢰도는 단일 모델보다 훨씬 높습니다. 모순과 잠재적 환각도 자동으로 발견됩니다."}}, {"@type": "Question", "name": "PromptQuorum은 AI 환각을 어떻게 감지하나요?", "acceptedAnswer": {"@type": "Answer", "text": "Quorum 단계에서 여러 모델의 응답을 수집한 후 LLM이 환각 감지 분석을 실행합니다 — 하나의 모델 응답에만 나타나거나 사실적 합의와 모순되는 주장에 플래그를 답니다. 실행할 분석 유형을 선택하고 자유롭게 조합할 수 있습니다."}}, {"@type": "Question", "name": "Ollama나 LM Studio 같은 로컬 AI 모델과 함께 사용할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. PromptQuorum은 Ollama(localhost:11434), LM Studio(localhost:1234), Jan AI(localhost:1337), GPT4All(localhost:4891), Open WebUI, KoboldCpp, vLLM, oobabooga 및 OpenAI 호환 엔드포인트에 기본으로 연결됩니다. 로컬 모델에는 API 키가 필요 없습니다 — 모든 것이 내 컴퓨터에서 실행됩니다."}}, {"@type": "Question", "name": "PromptQuorum을 완전히 오프라인으로 사용할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. Ollama나 LM Studio 같은 로컬 모델을 사용하면 PromptQuorum이 완전히 오프라인으로 작동합니다. 인터넷 연결이 필요 없습니다. 프롬프트, API 키, 결과가 기기를 벗어나지 않습니다."}}, {"@type": "Question", "name": "BYOM(Bring Your Own Model)이란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "BYOM은 PromptQuorum이 자체 API 키로 LLM을 호출하지 않는다는 의미입니다. 모든 호출은 브라우저에서 선택한 제공업체(클라우드 또는 로컬)로 직접 전달됩니다. API 키는 브라우저의 localStorage에만 저장되며 어떤 PromptQuorum 서버에도 전송되지 않습니다."}}, {"@type": "Question", "name": "Dispatch 기능은 어떻게 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "Dispatch는 최적화된 프롬프트를 한 번의 클릭으로 여러 AI 서비스에 전송합니다. 자동 전송 서비스(ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral 등)의 경우 PromptQuorum이 URL에 프롬프트를 미리 로드합니다. Perplexity는 로드 시 자동으로 제출됩니다. 모든 탭이 병렬로 열리며 1분 안에 모든 응답을 수집할 수 있습니다."}}, {"@type": "Question", "name": "Quorum 분석이란 무엇이며 어떤 유형이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "Quorum 분석은 수집된 모든 AI 응답을 LLM으로 처리합니다. 4개 카테고리 13가지 분석 유형: 합성(합의 요약, 가중 병합, 원자적 사실 추출), 비교(중복 매핑, 모순 감지, 신뢰도 점수), 품질(완전성 검사, 환각 감지, 중복 제거), 추천(최선 답변 선택, 다중 모델 앙상블, 논쟁 표시)."}}, {"@type": "Question", "name": "결과를 내보낼 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. Quorum 결과는 6가지 형식으로 내보낼 수 있습니다: .txt, .md, .json, .csv, .html, .pdf. 여러 형식을 선택하면 .zip 아카이브로 묶입니다. Chrome, Edge, Safari 16+에서는 File System Access API를 사용해 저장 폴더를 선택할 수 있습니다."}}, {"@type": "Question", "name": "프레임워크 마법사는 어떻게 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "프레임워크 마법사가 작업에 관한 몇 가지 질문을 합니다 — 달성하려는 것, 필요한 출력 유형, 대상. 답변을 바탕으로 9가지 내장 옵션 중 가장 적합한 프레임워크를 추천하고 각 프레임워크가 프롬프트에 대해 생성할 내용을 나란히 비교해서 보여줍니다."}}, {"@type": "Question", "name": "스마트 온도 조정이란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "각 최적화 전에 PromptQuorum이 프롬프트 텍스트를 분석하고 이상적인 LLM 온도를 제안합니다: 사실적 작업에는 ~0.2, 균형 있는 작업에는 ~0.7, 창의적 작업에는 ~0.85. 신뢰도가 60% 이상일 때만 표시됩니다. 동일한 의도 유형에 대해 3번 연속 일관된 선택을 하면 자동으로 적용됩니다."}}, {"@type": "Question", "name": "PromptQuorum은 ChatGPT, Claude, Gemini와 함께 작동하나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 설정에서 API 키를 추가하면 ChatGPT(GPT-4, GPT-4o), Anthropic Claude(3, 3.5), Google Gemini(1.5 Pro, Flash)를 최적화 LLM으로 사용할 수 있습니다. Dispatch 페이지에서는 API 키 없이도 세 서비스에 동시에 프롬프트를 전송할 수 있습니다."}}, {"@type": "Question", "name": "프롬프트의 버전 기록이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 모든 최적화 단계와 정제가 읽기 쉬운 레이블(예: \"v2 — 간결하게 만들기 12:36\")과 함께 버전 기록에 자동 저장됩니다. 임의의 버전을 선택해 복원하고 거기서 새 정제를 시작할 수 있습니다. 아무것도 손실되지 않습니다."}}, {"@type": "Question", "name": "PromptQuorum은 어떤 출력 형식과 언어를 지원하나요?", "acceptedAnswer": {"@type": "Answer", "text": "LLM 출력 언어는 세션별로 구성 가능합니다: 영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 중국어, 일본어. 응답 길이는 100~2000단어 사이에서 조정할 수 있습니다."}}, {"@type": "Question", "name": "PromptQuorum은 내 API 키를 어떻게 안전하게 처리하나요?", "acceptedAnswer": {"@type": "Answer", "text": "API 키는 브라우저의 localStorage에만 저장됩니다. 어떤 PromptQuorum 서버에도 전송되지 않고, 기록되지 않으며, 텔레메트리에 포함되지 않습니다(텔레메트리 자체가 없습니다). 설정에서 언제든지 지울 수 있습니다."}}, {"@type": "Question", "name": "PromptQuorum은 기업 또는 팀 사용에 적합한가요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 현재 개인 파워 유저 — 개발자, 연구자, 콘텐츠 크리에이터, AI를 많이 사용하는 전문가를 위해 설계되었습니다. 각 사용자는 자신의 API 키로 자체 인스턴스를 실행합니다. 엔터프라이즈 기능(공유 작업 공간, 팀 기록, 역할 기반 접근)은 로드맵에 있습니다."}}, {"@type": "Question", "name": "티칭 모드란 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "티칭 모드는 모든 최적화 결과 아래에 설명 상자를 추가해 각 변경이 이루어진 이유 — 적용된 프롬프트 엔지니어링 원칙과 그 효과 — 를 정확히 설명합니다. 도구를 사용하면서 프롬프트 엔지니어링을 배우고 싶은 개발자와 연구자를 위해 설계되었습니다."}}, {"@type": "Question", "name": "PromptQuorum은 어떻게 받을 수 있고 비용이 드나요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 무료 퍼블릭 베타 단계입니다. 데스크톱 앱을 직접 다운로드하세요 — 가입, 대기자 명단, 이메일이 필요하지 않습니다."}}, {"@type": "Question", "name": "PromptQuorum 창립자 Hans Kuepper는 누구인가요?", "acceptedAnswer": {"@type": "Answer", "text": "Hans Kuepper는 PromptQuorum의 창립자이자 개발자입니다. 독일 바덴-뷔르템베르크 주, 하이델베르크 근처 크라이히가우 구릉 지대에 거주합니다. 독일어, 영어, 프랑스어, 러시아어 4개 언어를 구사하며 20개 이상의 나라에서 생활하고 일했습니다."}}, {"@type": "Question", "name": "PromptQuorum은 어디에서 개발되나요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 독일 바덴-뷔르템베르크 주의 독립 개발자 Hans Kuepper가 개발합니다. 외부 투자자 없이 프라이버시 우선, 사용자 소유 AI 도구로 개발되고 있습니다."}}, {"@type": "Question", "name": "동일한 프롬프트를 여러 LLM에 동시에 비교할 수 있는 최선의 도구는 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum은 여기서 분석된 도구 중 동시 전송과 자동화된 합의 점수를 결합한 유일한 도구입니다. Poe, AiZolo, OpenMark는 나란히 응답을 제공하지만, GPT-4o, Claude 4.6 Sonnet 등의 모델이 어디서 동의하거나 다른지 자동으로 분석하는 Quorum Verdict를 생성하지 않습니다. 시각적 나란히 비교 이상이 필요한 사용자에게 PromptQuorum이 전용으로 설계된 옵션입니다. 기능 정보는 2026년 3월에 검증되었습니다."}}, {"@type": "Question", "name": "PromptQuorum은 Poe나 LM Arena와 어떻게 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "Poe는 모델을 하나씩 전환하기 위한 소비자 채팅 플랫폼입니다. LM Arena는 커뮤니티 투표를 사용해 모델을 순위 매깁니다. PromptQuorum은 독자적입니다: 선택한 모든 모델에 동시 전송하고 합의 점수를 통해 어디서 동의하거나 다른지 자동으로 분석합니다. Poe는 대화에 최적화되어 있고, LM Arena는 벤치마킹에, PromptQuorum은 제어된 평가와 환각 감지에 최적화되어 있습니다."}}]},
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
@@ -908,6 +909,137 @@ export default function KoPQAppsPage() {
                   <span className="font-semibold text-text-primary">AiZolo 선택</span>
                   <span className="text-text-secondary"> 일상적인 글쓰기 워크플로우를 위한 저렴하고 잘 설계된 멀티 모델 워크스페이스가 필요한 콘텐츠 크리에이터나 마케터인 경우.</span>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className="mb-16 scroll-mt-24">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">자주 묻는 질문</h2>
+            <div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 무료인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. PromptQuorum은 무료로 사용할 수 있습니다. 자신의 API 키를 가져오거나, 로컬 LLM을 사용하거나, 프롬프트 최적화를 위한 무료 테스트 백엔드 서비스를 이용할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">개인정보 보호는 어떻게 작동하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">데이터의 행방은 사용자가 결정합니다. LM Studio나 Ollama를 사용해 모든 것을 로컬에 유지하거나, 자신의 API 키를 사용하세요. 제로 텔레메트리, 제로 추적, 데이터 수집 없음 — 익명 사용 통계조차 수집하지 않습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">어떤 AI 제공업체가 지원되나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">25개 이상의 AI 제공업체가 포함됩니다: OpenAI(GPT-4, GPT-4o), Anthropic(Claude), Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, 그리고 모든 로컬 제공업체(Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga 및 OpenAI 호환 엔드포인트).</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 어떤 플랫폼에서 실행되나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 macOS, Windows, Linux(데스크톱 via Electron)에서 사용 가능합니다. 웹 애플리케이션은 개발 중이며, 그 다음 모바일(iOS 및 Android via Capacitor)이 출시됩니다. 로컬 LLM과 함께 완전히 오프라인으로 작동합니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum의 차별점은 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 단일 브라우저 기반 도구에서 프롬프트의 전체 생명 주기를 커버합니다: 9개 프레임워크를 활용한 구조화된 작성, AI 기반 반복 최적화(8가지 정제 유형), 25개 이상의 AI 서비스로의 원클릭 전송, 합의 점수 산정을 위한 13가지 Quorum 분석 — 모두 데이터가 기기를 벗어나지 않고 처리됩니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">사용 제한이 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 측에서는 어떤 제한도 없습니다. 사용량은 API 키나 로컬 LLM 리소스에 의해서만 제한됩니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">프롬프트 엔지니어링이란 무엇이며 왜 중요한가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">프롬프트 엔지니어링은 AI 모델에 대한 입력을 설계해 더 정확하고 유용하며 신뢰할 수 있는 출력을 얻는 실천입니다. 테스트에서 프레임워크 필드를 갖춘 구조화된 프롬프트는 구조화되지 않은 입력에 비해 LLM 평가 점수를 25~45% 높입니다. PromptQuorum은 9개의 내장 프레임워크로 이를 자동화합니다 — 전문 지식이 필요 없습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 어떻게 프롬프트를 최적화하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">연결된 LLM이 프레임워크의 원시 필드를 정밀 프롬프트로 변환합니다. 이후 8가지 원클릭 정제(간결하게 만들기, 세부 사항 확장, 단계로 분해, 단순화, 구체성 높이기, 다중 전문가 상담, 품질 통제 추가, 사용자 정의 지시)로 반복적으로 개선할 수 있습니다. 모든 단계가 버전 기록에 저장되므로 언제든지 되돌릴 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum에 내장된 프롬프트 프레임워크는 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum에는 9가지 프레임워크가 포함됩니다: Single Prompt Line, APE, CRAFT, CO-STAR(싱가포르 GPT-4 대회 우승), SPECS, RISEN, TRACE, Google Prompt, RTF. 또한 2개의 완전히 사용자 정의 프레임워크를 만들 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">CO-STAR 프레임워크란 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">CO-STAR는 Context(맥락), Objective(목표), Style(스타일), Tone(어조), Audience(대상), Response(응답 형식)의 약자입니다. 싱가포르 GPT-4 프롬프트 엔지니어링 대회에서 우승했으며, 비즈니스 커뮤니케이션과 마케팅에 이상적입니다. PromptQuorum이 각 필드를 안내하고 최종 프롬프트를 자동으로 조합합니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">다중 모델 합의란 무엇이며 왜 가치 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">다중 모델 합의는 동일한 프롬프트를 여러 AI 모델에 보내 일치하는 부분을 찾는 것입니다. 5개의 독립적인 모델이 동일한 답변을 제시할 때 신뢰도는 단일 모델보다 훨씬 높습니다. 모순과 잠재적 환각도 자동으로 발견됩니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 AI 환각을 어떻게 감지하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Quorum 단계에서 여러 모델의 응답을 수집한 후 LLM이 환각 감지 분석을 실행합니다 — 하나의 모델 응답에만 나타나거나 사실적 합의와 모순되는 주장에 플래그를 답니다. 실행할 분석 유형을 선택하고 자유롭게 조합할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Ollama나 LM Studio 같은 로컬 AI 모델과 함께 사용할 수 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. PromptQuorum은 Ollama(localhost:11434), LM Studio(localhost:1234), Jan AI(localhost:1337), GPT4All(localhost:4891), Open WebUI, KoboldCpp, vLLM, oobabooga 및 OpenAI 호환 엔드포인트에 기본으로 연결됩니다. 로컬 모델에는 API 키가 필요 없습니다 — 모든 것이 내 컴퓨터에서 실행됩니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum을 완전히 오프라인으로 사용할 수 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. Ollama나 LM Studio 같은 로컬 모델을 사용하면 PromptQuorum이 완전히 오프라인으로 작동합니다. 인터넷 연결이 필요 없습니다. 프롬프트, API 키, 결과가 기기를 벗어나지 않습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">BYOM(Bring Your Own Model)이란 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">BYOM은 PromptQuorum이 자체 API 키로 LLM을 호출하지 않는다는 의미입니다. 모든 호출은 브라우저에서 선택한 제공업체(클라우드 또는 로컬)로 직접 전달됩니다. API 키는 브라우저의 localStorage에만 저장되며 어떤 PromptQuorum 서버에도 전송되지 않습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Dispatch 기능은 어떻게 작동하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Dispatch는 최적화된 프롬프트를 한 번의 클릭으로 여러 AI 서비스에 전송합니다. 자동 전송 서비스(ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral 등)의 경우 PromptQuorum이 URL에 프롬프트를 미리 로드합니다. Perplexity는 로드 시 자동으로 제출됩니다. 모든 탭이 병렬로 열리며 1분 안에 모든 응답을 수집할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Quorum 분석이란 무엇이며 어떤 유형이 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Quorum 분석은 수집된 모든 AI 응답을 LLM으로 처리합니다. 4개 카테고리 13가지 분석 유형: 합성(합의 요약, 가중 병합, 원자적 사실 추출), 비교(중복 매핑, 모순 감지, 신뢰도 점수), 품질(완전성 검사, 환각 감지, 중복 제거), 추천(최선 답변 선택, 다중 모델 앙상블, 논쟁 표시).</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">결과를 내보낼 수 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. Quorum 결과는 6가지 형식으로 내보낼 수 있습니다: .txt, .md, .json, .csv, .html, .pdf. 여러 형식을 선택하면 .zip 아카이브로 묶입니다. Chrome, Edge, Safari 16+에서는 File System Access API를 사용해 저장 폴더를 선택할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">프레임워크 마법사는 어떻게 작동하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">프레임워크 마법사가 작업에 관한 몇 가지 질문을 합니다 — 달성하려는 것, 필요한 출력 유형, 대상. 답변을 바탕으로 9가지 내장 옵션 중 가장 적합한 프레임워크를 추천하고 각 프레임워크가 프롬프트에 대해 생성할 내용을 나란히 비교해서 보여줍니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">스마트 온도 조정이란 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">각 최적화 전에 PromptQuorum이 프롬프트 텍스트를 분석하고 이상적인 LLM 온도를 제안합니다: 사실적 작업에는 ~0.2, 균형 있는 작업에는 ~0.7, 창의적 작업에는 ~0.85. 신뢰도가 60% 이상일 때만 표시됩니다. 동일한 의도 유형에 대해 3번 연속 일관된 선택을 하면 자동으로 적용됩니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 ChatGPT, Claude, Gemini와 함께 작동하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. 설정에서 API 키를 추가하면 ChatGPT(GPT-4, GPT-4o), Anthropic Claude(3, 3.5), Google Gemini(1.5 Pro, Flash)를 최적화 LLM으로 사용할 수 있습니다. Dispatch 페이지에서는 API 키 없이도 세 서비스에 동시에 프롬프트를 전송할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">프롬프트의 버전 기록이 있나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">네. 모든 최적화 단계와 정제가 읽기 쉬운 레이블(예: "v2 — 간결하게 만들기 12:36")과 함께 버전 기록에 자동 저장됩니다. 임의의 버전을 선택해 복원하고 거기서 새 정제를 시작할 수 있습니다. 아무것도 손실되지 않습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 어떤 출력 형식과 언어를 지원하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">LLM 출력 언어는 세션별로 구성 가능합니다: 영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 중국어, 일본어. 응답 길이는 100~2000단어 사이에서 조정할 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 내 API 키를 어떻게 안전하게 처리하나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">API 키는 브라우저의 localStorage에만 저장됩니다. 어떤 PromptQuorum 서버에도 전송되지 않고, 기록되지 않으며, 텔레메트리에 포함되지 않습니다(텔레메트리 자체가 없습니다). 설정에서 언제든지 지울 수 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 기업 또는 팀 사용에 적합한가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 현재 개인 파워 유저 — 개발자, 연구자, 콘텐츠 크리에이터, AI를 많이 사용하는 전문가를 위해 설계되었습니다. 각 사용자는 자신의 API 키로 자체 인스턴스를 실행합니다. 엔터프라이즈 기능(공유 작업 공간, 팀 기록, 역할 기반 접근)은 로드맵에 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">티칭 모드란 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">티칭 모드는 모든 최적화 결과 아래에 설명 상자를 추가해 각 변경이 이루어진 이유 — 적용된 프롬프트 엔지니어링 원칙과 그 효과 — 를 정확히 설명합니다. 도구를 사용하면서 프롬프트 엔지니어링을 배우고 싶은 개발자와 연구자를 위해 설계되었습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 어떻게 받을 수 있고 비용이 드나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 무료 퍼블릭 베타 단계입니다. 데스크톱 앱을 직접 다운로드하세요 — 가입, 대기자 명단, 이메일이 필요하지 않습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 창립자 Hans Kuepper는 누구인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Hans Kuepper는 PromptQuorum의 창립자이자 개발자입니다. 독일 바덴-뷔르템베르크 주, 하이델베르크 근처 크라이히가우 구릉 지대에 거주합니다. 독일어, 영어, 프랑스어, 러시아어 4개 언어를 구사하며 20개 이상의 나라에서 생활하고 일했습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 어디에서 개발되나요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 독일 바덴-뷔르템베르크 주의 독립 개발자 Hans Kuepper가 개발합니다. 외부 투자자 없이 프라이버시 우선, 사용자 소유 AI 도구로 개발되고 있습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">동일한 프롬프트를 여러 LLM에 동시에 비교할 수 있는 최선의 도구는 무엇인가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum은 여기서 분석된 도구 중 동시 전송과 자동화된 합의 점수를 결합한 유일한 도구입니다. Poe, AiZolo, OpenMark는 나란히 응답을 제공하지만, GPT-4o, Claude 4.6 Sonnet 등의 모델이 어디서 동의하거나 다른지 자동으로 분석하는 Quorum Verdict를 생성하지 않습니다. 시각적 나란히 비교 이상이 필요한 사용자에게 PromptQuorum이 전용으로 설계된 옵션입니다. 기능 정보는 2026년 3월에 검증되었습니다.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum은 Poe나 LM Arena와 어떻게 다른가요?</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Poe는 모델을 하나씩 전환하기 위한 소비자 채팅 플랫폼입니다. LM Arena는 커뮤니티 투표를 사용해 모델을 순위 매깁니다. PromptQuorum은 독자적입니다: 선택한 모든 모델에 동시 전송하고 합의 점수를 통해 어디서 동의하거나 다른지 자동으로 분석합니다. Poe는 대화에 최적화되어 있고, LM Arena는 벤치마킹에, PromptQuorum은 제어된 평가와 환각 감지에 최적화되어 있습니다.</p>
               </div>
             </div>
           </section>

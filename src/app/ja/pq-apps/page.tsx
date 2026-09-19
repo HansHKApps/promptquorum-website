@@ -46,6 +46,7 @@ export default function JaPQAppsPage() {
               'inLanguage': 'ja',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PromptQuorumは無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しいただけます。"}}, {"@type": "Question", "name": "プライバシーはどう機能しますか？", "acceptedAnswer": {"@type": "Answer", "text": "データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。テレメトリーなし、追跡なし、データ収集なし — 匿名の使用統計さえも収集しません。"}}, {"@type": "Question", "name": "どのAIプロバイダーがサポートされていますか？", "acceptedAnswer": {"@type": "Answer", "text": "25以上のAIプロバイダーが含まれています：OpenAI（GPT-4、GPT-4o）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter、そすべてのローカルプロバイダー（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga、およびOpenAI互換エンドポイント）。"}}, {"@type": "Question", "name": "どのプラットフォームで動きますか？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorumはmacOS、Windows、Linux（デスクトップ via Electron）で利用可能です。ウェブアプリケーションは開発中で、その後モバイル（iOS・Android via Capacitor）が続きます。ローカルLLMで完全オフライン動作します。"}}, {"@type": "Question", "name": "PromptQuorumの何が違うのですか？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorumはプロンプトの全ライフサイクルをカバーする唯一のツールです：9つのフレームワークによる構造化された作成、AI駆動の反復最適化、25以上のAIサービスへのワンクリック配信、マルチモデルコンセンサス分析 — すべてデータがデバイスから出ることなく実行されます。"}}, {"@type": "Question", "name": "利用制限はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。"}}, {"@type": "Question", "name": "プロンプトエンジニアリングとは何ですか？なぜ重要なのですか？", "acceptedAnswer": {"@type": "Answer", "text": "プロンプトエンジニアリングとは、AIモデルへの入力をより正確で有用な出力が得られるよう設計する実践です。よく構造化されたプロンプトはAI出力品質を25〜45%向上させます。PromptQuorumは9つの組み込みフレームワークでこれを自動化します — 専門知識は不要です。"}}, {"@type": "Question", "name": "PromptQuorumはどのようにプロンプトを最適化しますか？", "acceptedAnswer": {"@type": "Answer", "text": "接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善（簡潔にする・詳細を拡張・ステップに分解・簡略化・具体性向上・マルチエキスパート相談・品質コントロール追加・カスタム指示）で反復的に改善できます。すべてのステップがバージョン履歴に保存されます。"}}, {"@type": "Question", "name": "PromptQuorumにはどのようなプロンプトフレームワークが組み込まれていますか？", "acceptedAnswer": {"@type": "Answer", "text": "9つのフレームワークが含まれています：Single Prompt Line、APE、CRAFT、CO-STAR（シンガポールGPT-4コンテスト優勝）、SPECS、RISEN、TRACE、Google Prompt、RTF。さらに2つの完全カスタムフレームワークを作成できます。"}}, {"@type": "Question", "name": "CO-STARフレームワークとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "CO-STARはContext（文脈）、Objective（目標）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（回答形式）の略です。シンガポールGPT-4プロンプトエンジニアリングコンテストで優勝し、ビジネスコミュニケーションやマーケティングに最適です。"}}, {"@type": "Question", "name": "マルチモデルコンセンサスとは何ですか？なぜ価値があるのですか？", "acceptedAnswer": {"@type": "Answer", "text": "マルチモデルコンセンサスとは、同じプロンプトを複数のAIモデルに送信し、一致している点を見つけることです。5つの独立したモデルが同じ回答をする場合、1つのモデルだけの回答よりも信頼性がはるかに高まります。矛盾や潜在的なハルシネーションも自動的に浮かび上がります。"}}, {"@type": "Question", "name": "PromptQuorumはAIハルシネーションをどのように検出しますか？", "acceptedAnswer": {"@type": "Answer", "text": "Quorumステップで複数のモデルから回答を収集した後、LLMがハルシネーション検出分析を実行します — 1つのモデルの回答にしか現れない主張や、事実のコンセンサスと矛盾する内容にフラグを立てます。"}}, {"@type": "Question", "name": "OllamaやLM StudioなどのローカルAIモデルで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。PromptQuorumはOllama（localhost:11434）、LM Studio（localhost:1234）、Jan AI（localhost:1337）、GPT4All（localhost:4891）、Open WebUI、KoboldCpp、vLLM、oobabooga、そしてOpenAI互換エンドポイントにネイティブ接続します。ローカルモデルにはAPIキー不要です。"}}, {"@type": "Question", "name": "PromptQuorumを完全にオフラインで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。OllamaやLM Studioなどのローカルモデルを使用すれば、PromptQuorumは完全オフラインで動作します。インターネット接続は不要。プロンプト、APIキー、結果はデバイスから出ません。"}}, {"@type": "Question", "name": "BYOM（Bring Your Own Model）とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "BYOMとは、PromptQuorumが独自のAPIキーでLLMを呼び出さないことを意味します。すべての呼び出しはブラウザから選択したプロバイダーに直接行われます。APIキーはブラウザのlocalStorageにのみ保存され、PromptQuorumのサーバーには絶対に送信されません。"}}, {"@type": "Question", "name": "Dispatch機能はどのように機能しますか？", "acceptedAnswer": {"@type": "Answer", "text": "Dispatchはワンクリックで最適化されたプロンプトを複数のAIサービスに送信します。自動Dispatchサービス（ChatGPT、Gemini、Perplexity、Claude、Copilot、DeepSeek、Mistralなど）では、URLにプロンプトが事前ロードされます。PerplexityはURLロード時に自動送信します。すべてのタブが並列で開き、1分以内にすべての回答を収集できます。"}}, {"@type": "Question", "name": "Quorum分析とはどのようなものですか？どのような種類がありますか？", "acceptedAnswer": {"@type": "Answer", "text": "Quorum分析はすべての収集されたAI回答をLLMで処理します。4カテゴリ13種類の分析タイプ：合成（コンセンサスサマリー、加重マージ、原子的事実抽出）、比較（オーバーラップマッピング、矛盾検出、信頼スコアリング）、品質（完全性チェック、ハルシネーション検出、冗長性除去）、推奨（ベスト回答選択、マルチモデルアンサンブル、論争フラグ）。"}}, {"@type": "Question", "name": "結果をエクスポートできますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。Quorum結果は6つの形式でエクスポートできます：.txt、.md、.json、.csv、.html、.pdf。複数の形式を選択すると.zipアーカイブにまとめられます。Chrome、Edge、Safari 16+ではFile System Access APIで保存フォルダーを選択できます。"}}, {"@type": "Question", "name": "フレームワークウィザードはどのように機能しますか？", "acceptedAnswer": {"@type": "Answer", "text": "フレームワークウィザードはタスクに関するいくつかの質問をします — 何を達成したいか、必要な出力の種類、対象者。回答に基づいて9つの組み込みオプションから最適なフレームワークを推薦し、各フレームワークで生成される内容を並べて比較して表示します。"}}, {"@type": "Question", "name": "スマートTemperature調整とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "各最適化の前に、PromptQuorumがプロンプトテキストを分析し、理想的なLLM温度を提案します：事実的タスクには~0.2、バランスには~0.7、クリエイティブには~0.85。信頼スコアが60%以上の場合のみ表示されます。同じ意図タイプに対して3回連続して一致する選択をすると、自動適用されます。"}}, {"@type": "Question", "name": "PromptQuorumはChatGPT、Claude、Geminiで動きますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。設定でAPIキーを追加することで、ChatGPT（GPT-4、GPT-4o）、Anthropic Claude（3、3.5）、Google Gemini（1.5 Pro、Flash）を最適化LLMとして使用できます。Dispatchページからは、APIキーなしで3つすべてに同時にプロンプトを送信することもできます。"}}, {"@type": "Question", "name": "プロンプトのバージョン履歴はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。すべての最適化ステップと改善は、読みやすいラベル（例：\"v2 — 簡潔にする 12:36\"）とともに自動的にバージョン履歴に保存されます。任意のバージョンに戻り、そこから新しい改善を開始できます。何も失われません。"}}, {"@type": "Question", "name": "ティーチングモードとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ティーチングモードは各最適化結果の下に説明ボックスを追加し、各変更がなぜ行われたか — どのプロンプトエンジニアリング原則が適用されたか、どのような効果があるかを説明します。ツールを使いながらプロンプトエンジニアリングを学びたい開発者や研究者向けです。"}}, {"@type": "Question", "name": "ウェイトリストへの参加方法と早期ユーザーの特典は？", "acceptedAnswer": {"@type": "Answer", "text": "ホームページのウェイトリストフォームにメールアドレスを入力してください。早期アクセスメンバーはプレミアム機能の生涯利用権、優先サポート、製品ロードマップへの直接参加が得られます。登録は無料でいつでもキャンセルできます。"}}, {"@type": "Question", "name": "PromptQuorumの創設者ハンス・キュッパーとは誰ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ハンス・キュッパーはPromptQuorumの創設者・開発者です。ドイツのバーデン＝ヴュルテンベルク州、ハイデルベルク近郊のクライヒガウ丘陵地帯を拠点としています。ドイツ語・英語・フランス語・ロシア語の4か国語を話し、20か国以上で生活・勤務経験があります。"}}, {"@type": "Question", "name": "PromptQuorumはどこで開発されていますか？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorumは、ドイツのバーデン＝ヴュルテンベルク州を拠点とする独立系開発者ハンス・キュッパーによって構築されています。外部投資家はおらず、プライバシー重視のユーザー主導AIツールとして開発されています。"}}, {"@type": "Question", "name": "複数のLLMで同じプロンプトを同時に比較するための最適なツールは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorumは、ここでレビューされたツールの中で、同時ディスパッチと自動コンセンサススコアリングを組み合わせた唯一のツールです。Poe、AiZolo、OpenMarkは並列回答を提供しますが、Quorum Verdict（GPT-4o、Claude 4.6 Sonnetなどのモデルが同意または相違する箇所の自動分析）を生成するものはありません。視覚的な並列比較以上のものが必要なユーザーには、PromptQuorumが専用ツールです。機能情報は2026年3月確認。"}}, {"@type": "Question", "name": "PromptQuorumはPoeやLM Arenaとどう違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Poe（Quora製）は、順番にモデルを切り替えるためのコンシューマーチャットプラットフォーム。LM Arenaはクラウドボーティングでモデルをランク付けします。PromptQuorumはユニーク：すべてのモデルに同時ディスパッチし、コンセンサススコアリングで自動分析。Poeは会話向け；LM Arenaはベンチマーク向け；PromptQuorumは制御された評価と幻覚検出向けです。"}}]},
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
@@ -904,6 +905,125 @@ export default function JaPQAppsPage() {
                   <span className="font-semibold text-text-primary">AiZoloを選ぶ</span>
                   <span className="text-text-secondary"> 日常的なマルチモデルライティングワークフローのために、手頃で使いやすいワークスペースが必要なコンテンツクリエイターまたはマーケティングプロフェッショナルの場合。</span>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className="mb-16 scroll-mt-24">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">よくある質問</h2>
+            <div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumは無料ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しいただけます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">プライバシーはどう機能しますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。テレメトリーなし、追跡なし、データ収集なし — 匿名の使用統計さえも収集しません。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">どのAIプロバイダーがサポートされていますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">25以上のAIプロバイダーが含まれています：OpenAI（GPT-4、GPT-4o）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter、そすべてのローカルプロバイダー（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga、およびOpenAI互換エンドポイント）。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">どのプラットフォームで動きますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorumはmacOS、Windows、Linux（デスクトップ via Electron）で利用可能です。ウェブアプリケーションは開発中で、その後モバイル（iOS・Android via Capacitor）が続きます。ローカルLLMで完全オフライン動作します。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumの何が違うのですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorumはプロンプトの全ライフサイクルをカバーする唯一のツールです：9つのフレームワークによる構造化された作成、AI駆動の反復最適化、25以上のAIサービスへのワンクリック配信、マルチモデルコンセンサス分析 — すべてデータがデバイスから出ることなく実行されます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">利用制限はありますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">プロンプトエンジニアリングとは何ですか？なぜ重要なのですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">プロンプトエンジニアリングとは、AIモデルへの入力をより正確で有用な出力が得られるよう設計する実践です。よく構造化されたプロンプトはAI出力品質を25〜45%向上させます。PromptQuorumは9つの組み込みフレームワークでこれを自動化します — 専門知識は不要です。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumはどのようにプロンプトを最適化しますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善（簡潔にする・詳細を拡張・ステップに分解・簡略化・具体性向上・マルチエキスパート相談・品質コントロール追加・カスタム指示）で反復的に改善できます。すべてのステップがバージョン履歴に保存されます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumにはどのようなプロンプトフレームワークが組み込まれていますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">9つのフレームワークが含まれています：Single Prompt Line、APE、CRAFT、CO-STAR（シンガポールGPT-4コンテスト優勝）、SPECS、RISEN、TRACE、Google Prompt、RTF。さらに2つの完全カスタムフレームワークを作成できます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">CO-STARフレームワークとは何ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">CO-STARはContext（文脈）、Objective（目標）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（回答形式）の略です。シンガポールGPT-4プロンプトエンジニアリングコンテストで優勝し、ビジネスコミュニケーションやマーケティングに最適です。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">マルチモデルコンセンサスとは何ですか？なぜ価値があるのですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">マルチモデルコンセンサスとは、同じプロンプトを複数のAIモデルに送信し、一致している点を見つけることです。5つの独立したモデルが同じ回答をする場合、1つのモデルだけの回答よりも信頼性がはるかに高まります。矛盾や潜在的なハルシネーションも自動的に浮かび上がります。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumはAIハルシネーションをどのように検出しますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Quorumステップで複数のモデルから回答を収集した後、LLMがハルシネーション検出分析を実行します — 1つのモデルの回答にしか現れない主張や、事実のコンセンサスと矛盾する内容にフラグを立てます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">OllamaやLM StudioなどのローカルAIモデルで使えますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい。PromptQuorumはOllama（localhost:11434）、LM Studio（localhost:1234）、Jan AI（localhost:1337）、GPT4All（localhost:4891）、Open WebUI、KoboldCpp、vLLM、oobabooga、そしてOpenAI互換エンドポイントにネイティブ接続します。ローカルモデルにはAPIキー不要です。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumを完全にオフラインで使えますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい。OllamaやLM Studioなどのローカルモデルを使用すれば、PromptQuorumは完全オフラインで動作します。インターネット接続は不要。プロンプト、APIキー、結果はデバイスから出ません。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">BYOM（Bring Your Own Model）とは何ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">BYOMとは、PromptQuorumが独自のAPIキーでLLMを呼び出さないことを意味します。すべての呼び出しはブラウザから選択したプロバイダーに直接行われます。APIキーはブラウザのlocalStorageにのみ保存され、PromptQuorumのサーバーには絶対に送信されません。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Dispatch機能はどのように機能しますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Dispatchはワンクリックで最適化されたプロンプトを複数のAIサービスに送信します。自動Dispatchサービス（ChatGPT、Gemini、Perplexity、Claude、Copilot、DeepSeek、Mistralなど）では、URLにプロンプトが事前ロードされます。PerplexityはURLロード時に自動送信します。すべてのタブが並列で開き、1分以内にすべての回答を収集できます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Quorum分析とはどのようなものですか？どのような種類がありますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Quorum分析はすべての収集されたAI回答をLLMで処理します。4カテゴリ13種類の分析タイプ：合成（コンセンサスサマリー、加重マージ、原子的事実抽出）、比較（オーバーラップマッピング、矛盾検出、信頼スコアリング）、品質（完全性チェック、ハルシネーション検出、冗長性除去）、推奨（ベスト回答選択、マルチモデルアンサンブル、論争フラグ）。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">結果をエクスポートできますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい。Quorum結果は6つの形式でエクスポートできます：.txt、.md、.json、.csv、.html、.pdf。複数の形式を選択すると.zipアーカイブにまとめられます。Chrome、Edge、Safari 16+ではFile System Access APIで保存フォルダーを選択できます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">フレームワークウィザードはどのように機能しますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">フレームワークウィザードはタスクに関するいくつかの質問をします — 何を達成したいか、必要な出力の種類、対象者。回答に基づいて9つの組み込みオプションから最適なフレームワークを推薦し、各フレームワークで生成される内容を並べて比較して表示します。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">スマートTemperature調整とは何ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">各最適化の前に、PromptQuorumがプロンプトテキストを分析し、理想的なLLM温度を提案します：事実的タスクには~0.2、バランスには~0.7、クリエイティブには~0.85。信頼スコアが60%以上の場合のみ表示されます。同じ意図タイプに対して3回連続して一致する選択をすると、自動適用されます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumはChatGPT、Claude、Geminiで動きますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい。設定でAPIキーを追加することで、ChatGPT（GPT-4、GPT-4o）、Anthropic Claude（3、3.5）、Google Gemini（1.5 Pro、Flash）を最適化LLMとして使用できます。Dispatchページからは、APIキーなしで3つすべてに同時にプロンプトを送信することもできます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">プロンプトのバージョン履歴はありますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">はい。すべての最適化ステップと改善は、読みやすいラベル（例："v2 — 簡潔にする 12:36"）とともに自動的にバージョン履歴に保存されます。任意のバージョンに戻り、そこから新しい改善を開始できます。何も失われません。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ティーチングモードとは何ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">ティーチングモードは各最適化結果の下に説明ボックスを追加し、各変更がなぜ行われたか — どのプロンプトエンジニアリング原則が適用されたか、どのような効果があるかを説明します。ツールを使いながらプロンプトエンジニアリングを学びたい開発者や研究者向けです。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ウェイトリストへの参加方法と早期ユーザーの特典は？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">ホームページのウェイトリストフォームにメールアドレスを入力してください。早期アクセスメンバーはプレミアム機能の生涯利用権、優先サポート、製品ロードマップへの直接参加が得られます。登録は無料でいつでもキャンセルできます。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumの創設者ハンス・キュッパーとは誰ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">ハンス・キュッパーはPromptQuorumの創設者・開発者です。ドイツのバーデン＝ヴュルテンベルク州、ハイデルベルク近郊のクライヒガウ丘陵地帯を拠点としています。ドイツ語・英語・フランス語・ロシア語の4か国語を話し、20か国以上で生活・勤務経験があります。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumはどこで開発されていますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorumは、ドイツのバーデン＝ヴュルテンベルク州を拠点とする独立系開発者ハンス・キュッパーによって構築されています。外部投資家はおらず、プライバシー重視のユーザー主導AIツールとして開発されています。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">複数のLLMで同じプロンプトを同時に比較するための最適なツールは何ですか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorumは、ここでレビューされたツールの中で、同時ディスパッチと自動コンセンサススコアリングを組み合わせた唯一のツールです。Poe、AiZolo、OpenMarkは並列回答を提供しますが、Quorum Verdict（GPT-4o、Claude 4.6 Sonnetなどのモデルが同意または相違する箇所の自動分析）を生成するものはありません。視覚的な並列比較以上のものが必要なユーザーには、PromptQuorumが専用ツールです。機能情報は2026年3月確認。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorumはPoeやLM Arenaとどう違いますか？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Poe（Quora製）は、順番にモデルを切り替えるためのコンシューマーチャットプラットフォーム。LM Arenaはクラウドボーティングでモデルをランク付けします。PromptQuorumはユニーク：すべてのモデルに同時ディスパッチし、コンセンサススコアリングで自動分析。Poeは会話向け；LM Arenaはベンチマーク向け；PromptQuorumは制御された評価と幻覚検出向けです。</p>
               </div>
             </div>
           </section>

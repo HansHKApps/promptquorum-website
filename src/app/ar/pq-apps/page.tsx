@@ -46,6 +46,7 @@ export default function ArPQAppsPage() {
               'inLanguage': 'ar',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "هل PromptQuorum مجاني؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. PromptQuorum مجاني الاستخدام. يمكنك إحضار مفتاح API الخاص بك، أو استخدام نموذج لغوي محلي، أو تجربة خدمة الواجهة الخلفية المجانية المحدودة لتحسين التعليمات بشكل تجريبي."}}, {"@type": "Question", "name": "كيف تعمل الخصوصية؟", "acceptedAnswer": {"@type": "Answer", "text": "أنت من يقرر إلى أين تذهب بياناتك. احتفظ بكل شيء محلياً باستخدام LM Studio أو Ollama، أو استخدم مفاتيح API الخاصة بك. صفر بيانات تشخيصية، صفر تتبع، لا جمع للبيانات — ولا حتى إحصاءات استخدام مجهولة الهوية."}}, {"@type": "Question", "name": "ما مزودو الذكاء الاصطناعي المدعومون؟", "acceptedAnswer": {"@type": "Answer", "text": "يشمل التطبيق أكثر من 25 مزوداً: OpenAI (GPT-4، GPT-4o)، Anthropic (Claude)، Google Gemini، Grok، DeepSeek، Mistral، Cohere، Together AI، Groq، OpenRouter، إضافةً إلى جميع المزودين المحليين (Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، KoboldCpp، vLLM، oobabooga وأي نقطة نهاية متوافقة مع OpenAI)."}}, {"@type": "Question", "name": "على أي منصات يعمل PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "يتوفر PromptQuorum لـ macOS و Windows و Linux (سطح المكتب عبر Electron). تطبيق ويب قيد التطوير، يعقبه تطبيقات جوال (iOS و Android عبر Capacitor). يعمل بالكامل دون اتصال بالإنترنت مع نموذج لغوي محلي."}}, {"@type": "Question", "name": "ما الذي يميز PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum هو الأداة الوحيدة التي تغطي دورة حياة التعليمات بالكامل: كتابة منظمة بـ9 أطر عمل، وتحسين تكراري بالذكاء الاصطناعي بـ8 أنواع من التنقيح، وإرسال بنقرة واحدة إلى أكثر من 25 خدمة ذكاء اصطناعي، وتحليل توافق النماذج المتعددة — كل ذلك دون أن تغادر بياناتك جهازك."}}, {"@type": "Question", "name": "هل هناك أي حدود للاستخدام؟", "acceptedAnswer": {"@type": "Answer", "text": "لا توجد حدود من جانب PromptQuorum. يقتصر استخدامك على مفاتيح API الخاصة بك أو موارد النموذج اللغوي المحلي فقط."}}, {"@type": "Question", "name": "ما هندسة التعليمات ولماذا تهم؟", "acceptedAnswer": {"@type": "Answer", "text": "هندسة التعليمات هي ممارسة تصميم مدخلات نماذج الذكاء الاصطناعي للحصول على نتائج أدق وأكثر فائدة. التعليمات المنظمة ذات حقول الإطار تنتج درجات تقييم أعلى بنسبة 25–45% مقارنةً بالمدخلات غير المنظمة. يؤتمت PromptQuorum ذلك بـ9 أطر عمل مدمجة — لا خبرة مسبقة مطلوبة."}}, {"@type": "Question", "name": "كيف يحسّن PromptQuorum تعليماتي؟", "acceptedAnswer": {"@type": "Answer", "text": "يحوّل النموذج اللغوي المتصل حقول الإطار الخام إلى تعليمة دقيقة. بعد ذلك تنقّح بشكل تكراري بـ8 تنقيحات بنقرة واحدة: الإيجاز، وتوسيع التفاصيل، والتقسيم إلى خطوات، والتبسيط، وزيادة التحديد، والاستشارة متعددة الخبراء، وإضافة ضوابط الجودة، والتعليمة المخصصة. يُحفظ كل خطوة في سجل الإصدارات."}}, {"@type": "Question", "name": "ما أطر التعليمات المدمجة في PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "يتضمن PromptQuorum 9 أطر عمل: Single Prompt Line، وAPE، وCRAFT، وCO-STAR (الفائز بمسابقة سنغافورة GPT-4)، وSPECS، وRISEN، وTRACE، وGoogle Prompt، وRTF. يمكنك أيضاً بناء إطارين مخصصين بالكامل."}}, {"@type": "Question", "name": "ما إطار عمل CO-STAR؟", "acceptedAnswer": {"@type": "Answer", "text": "CO-STAR اختصار لـ Context (السياق)، Objective (الهدف)، Style (الأسلوب)، Tone (النبرة)، Audience (الجمهور)، Response (شكل الرد). فاز بمسابقة هندسة التعليمات في سنغافورة GPT-4، وهو مثالي للتواصل التجاري وتسويق المحتوى. يرشدك PromptQuorum عبر كل حقل ويجمع التعليمة النهائية تلقائياً."}}, {"@type": "Question", "name": "ما التوافق متعدد النماذج ولماذا هو قيّم؟", "acceptedAnswer": {"@type": "Answer", "text": "التوافق متعدد النماذج يعني إرسال التعليمة ذاتها إلى عدة نماذج ذكاء اصطناعي وإيجاد نقاط الاتفاق. حين تعطي 5 نماذج مستقلة الإجابة ذاتها، يكون الثقة أعلى بكثير مما لو أجاب نموذج واحد. كما تُكتشف التناقضات والهلوسات المحتملة تلقائياً."}}, {"@type": "Question", "name": "كيف يكشف PromptQuorum عن هلوسات الذكاء الاصطناعي؟", "acceptedAnswer": {"@type": "Answer", "text": "بعد جمع ردود نماذج متعددة في خطوة Quorum، يُجري نموذجك تحليل الكشف عن الهلوسة — يُعلّم الادعاءات التي تظهر في رد نموذج واحد فقط دون غيره، أو تناقض الإجماع الحقيقي. أنت تختار أنواع التحليل التي تشغّلها وتجمعها بحرية."}}, {"@type": "Question", "name": "هل يمكنني استخدام PromptQuorum مع نماذج ذكاء اصطناعي محلية كـOllama أو LM Studio؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. يتصل PromptQuorum بشكل أصيل بـOllama (localhost:11434)، وLM Studio (localhost:1234)، وJan AI (localhost:1337)، وGPT4All (localhost:4891)، وOpen WebUI، وKoboldCpp، وvLLM، وoobabooga، وأي نقطة نهاية متوافقة مع OpenAI. لا حاجة لمفتاح API للنماذج المحلية — كل شيء يعمل على جهازك."}}, {"@type": "Question", "name": "هل يمكنني استخدام PromptQuorum بالكامل دون اتصال بالإنترنت؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. إذا شغّلت نموذجاً محلياً كـOllama أو LM Studio، يعمل PromptQuorum بالكامل دون اتصال. لا حاجة لاتصال بالإنترنت. تعليماتك ومفاتيح API ونتائجك لا تغادر جهازك أبداً."}}, {"@type": "Question", "name": "ما BYOM (أحضر نموذجك الخاص)؟", "acceptedAnswer": {"@type": "Answer", "text": "BYOM يعني أن PromptQuorum لا يستدعي أي نموذج لغوي باستخدام مفاتيح API الخاصة به. كل استدعاء يذهب مباشرةً من متصفحك إلى المزود الذي اخترته — سحابياً أو محلياً. تُخزَّن مفاتيح API فقط في localStorage المتصفح ولا تُرسَل أبداً إلى أي خادم PromptQuorum."}}, {"@type": "Question", "name": "كيف تعمل ميزة الإرسال (Dispatch)؟", "acceptedAnswer": {"@type": "Answer", "text": "ترسل ميزة Dispatch تعليمتك المحسّنة إلى خدمات ذكاء اصطناعي متعددة بنقرة واحدة. للخدمات ذات الإرسال التلقائي (ChatGPT وGemini وPerplexity وClaude وCopilot وDeepSeek وMistral وغيرها)، يُحمّل PromptQuorum تعليمتك في الرابط مسبقاً لتكون جاهزة فوراً. تفتح جميع التبويبات بالتوازي — اجمع كل الردود في أقل من دقيقة."}}, {"@type": "Question", "name": "ما تحليل Quorum وما أنواعه المتاحة؟", "acceptedAnswer": {"@type": "Answer", "text": "يعالج تحليل Quorum جميع ردود الذكاء الاصطناعي المجمّعة عبر نموذجك اللغوي. 13 نوع تحليل في 4 فئات: التوليف (ملخص التوافق، الدمج الموزون، استخراج الحقائق الذرية)، المقارنة (رسم خريطة التداخل، الكشف عن التناقضات، تقييم الثقة)، الجودة (فحص الاكتمال، الكشف عن الهلوسة، إزالة التكرار)، والتوصيات (اختيار أفضل إجابة، مجموعة النماذج المتعددة، تعليم الخلافات)."}}, {"@type": "Question", "name": "هل يمكنني تصدير نتائجي؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. تُصدَّر نتائج Quorum بـ6 تنسيقات: .txt و.md و.json و.csv و.html و.pdf. اختر تنسيقات متعددة وستُحزَّم في أرشيف .zip. في Chrome وEdge وSafari 16+ يمكنك اختيار مجلد الحفظ باستخدام File System Access API."}}, {"@type": "Question", "name": "كيف يعمل معالج الإطار (Framework Wizard)؟", "acceptedAnswer": {"@type": "Answer", "text": "يطرح معالج الإطار بعض الأسئلة حول مهمتك — ما الذي تحاول تحقيقه، ونوع المخرجات التي تحتاجها، وجمهورك المستهدف. بناءً على إجاباتك يوصي بأنسب إطار من 9 خيارات مدمجة، ويعرض مقارنة جنباً إلى جنب لما سيُنتجه كل إطار لتعليمتك."}}, {"@type": "Question", "name": "ما ضبط درجة الحرارة الذكي (Smart Temperature Adjustment)؟", "acceptedAnswer": {"@type": "Answer", "text": "قبل كل تحسين، يحلّل PromptQuorum نص تعليمتك ويقترح درجة الحرارة المثلى للنموذج: ~0.2 للمهام الواقعية، ~0.7 للمتوازنة، ~0.85 للإبداعية. يعرض درجة ثقة ولا يسألك إلا حين تتجاوز الثقة 60%. بعد 3 اختيارات متسقة لنوع النية ذاته، يُطبَّق تفضيلك تلقائياً."}}, {"@type": "Question", "name": "هل يعمل PromptQuorum مع ChatGPT وClaude وGemini؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. يمكنك استخدام ChatGPT (GPT-4، GPT-4o)، وAnthropic Claude (3، 3.5)، وGoogle Gemini (1.5 Pro، Flash) كنموذج تحسين بإضافة مفتاح API في الإعدادات. يمكنك أيضاً إرسال التعليمات إلى الثلاثة في آنٍ واحد عبر صفحة Dispatch دون الحاجة لمفاتيح API للإرسال."}}, {"@type": "Question", "name": "هل يوجد سجل إصدارات لتعليماتي؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. كل خطوة تحسين وتنقيح تُحفظ تلقائياً في سجل الإصدارات بتسمية مقروءة (مثل \"v2 — الإيجاز 12:36\"). يمكنك اختيار أي إصدار لاستعادته والانطلاق بتنقيحات جديدة منه. لا يُفقد شيء."}}, {"@type": "Question", "name": "ما أشكال المخرجات واللغات التي يدعمها PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "لغة مخرجات النموذج اللغوي قابلة للضبط لكل جلسة: الإنجليزية والألمانية والفرنسية والإسبانية والإيطالية والبرتغالية والصينية واليابانية. طول الرد قابل للتعديل من 100 إلى 2000 كلمة."}}, {"@type": "Question", "name": "كيف يتعامل PromptQuorum مع مفاتيح API بأمان؟", "acceptedAnswer": {"@type": "Answer", "text": "تُخزَّن مفاتيح API فقط في localStorage المتصفح — لا تُرسَل إلى أي خادم PromptQuorum، ولا تُسجَّل، ولا تُدرَج في بيانات التشخيص (التي لا توجد أصلاً). يمكنك مسحها في أي وقت من الإعدادات."}}, {"@type": "Question", "name": "هل PromptQuorum مناسب للاستخدام المؤسسي أو الفرق؟", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum مصمم حالياً للمستخدمين المحترفين بشكل فردي — المطورين والباحثين ومنشئي المحتوى والمحترفين المكثفي الاستخدام للذكاء الاصطناعي. كل مستخدم يُشغّل نسخته الخاصة بمفاتيح API الخاصة به. ميزات المؤسسات (مساحات العمل المشتركة، سجل الفريق، التحكم القائم على الأدوار) موجودة في خارطة الطريق."}}, {"@type": "Question", "name": "ما وضع التعليم (Teaching Mode)؟", "acceptedAnswer": {"@type": "Answer", "text": "يضيف وضع التعليم مربع شرح أسفل كل نتيجة تحسين يوضّح بالضبط سبب كل تغيير — مبادئ هندسة التعليمات التي طُبّقت وتأثيرها. مصمم للمطورين والباحثين الراغبين في تعلم هندسة التعليمات أثناء استخدام الأداة."}}, {"@type": "Question", "name": "كيف أحصل على PromptQuorum وهل هناك تكلفة؟", "acceptedAnswer": {"@type": "Answer", "text": "يتوفر PromptQuorum الآن في نسخة تجريبية عامة مجانية. نزّل تطبيق سطح المكتب مباشرة — دون تسجيل، دون قائمة انتظار، ودون الحاجة إلى بريد إلكتروني."}}, {"@type": "Question", "name": "من هو هانس كوبر، مؤسس PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "هانس كوبر هو مؤسس ومطور PromptQuorum. يعمل بشكل مستقل من بادن-فورتمبرغ، ألمانيا، بالقرب من هايدلبرغ في منطقة كرايشغاو. يتحدث أربع لغات — الألمانية والإنجليزية والفرنسية والروسية — وعاش وعمل في أكثر من 20 دولة."}}, {"@type": "Question", "name": "أين يُطوَّر PromptQuorum؟", "acceptedAnswer": {"@type": "Answer", "text": "يُطوَّر PromptQuorum بواسطة هانس كوبر، مطور مستقل في بادن-فورتمبرغ، ألمانيا. المشروع بلا مستثمرين خارجيين وتطوير كأداة ذكاء اصطناعي تُعطي الخصوصية الأولوية ويمتلكها المستخدم."}}, {"@type": "Question", "name": "ما أفضل أداة لمقارنة الطلب ذاته عبر نماذج LLM متعددة في آنٍ واحد؟", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum هو الأداة الوحيدة المُراجَعة هنا التي تجمع الإرسال المتزامن مع تقييم التوافق الآلي. يقدّم Poe وAiZolo وOpenMark إجابات جنبًا إلى جنب، لكن لا أيٌّ منها يُنتج Quorum Verdict — تحليلًا آليًا يحدد أين يتفق GPT-4o وClaude 4.6 Sonnet وغيرهما من النماذج أو يختلفون. بالنسبة للمستخدمين الذين يحتاجون إلى ما هو أكثر من مقارنة بصرية جنبًا إلى جنب، فإن PromptQuorum هو الخيار المصمَّم لهذا الغرض. معلومات الميزات تم التحقق منها في مارس 2026."}}, {"@type": "Question", "name": "ما الفرق بين PromptQuorum وPoe أو LM Arena؟", "acceptedAnswer": {"@type": "Answer", "text": "Poe منصة دردشة استهلاكية للتبديل بين النماذج واحدًا تلو الآخر. تستخدم LM Arena التصويت المجتمعي لترتيب النماذج. PromptQuorum فريد: يُرسل إلى جميع النماذج المحددة في آنٍ واحد ويُحلّل آليًا أين تتفق أو تختلف عبر تقييم التوافق. Poe مُحسَّن للمحادثة؛ LM Arena للمعايرة؛ PromptQuorum للتقييم المضبوط وكشف الهلوسة."}}]},
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
@@ -908,6 +909,137 @@ export default function ArPQAppsPage() {
                   <span className="font-semibold text-text-primary">اختر AiZolo</span>
                   <span className="text-text-secondary"> إذا كنت صانع محتوى أو مسوّقًا يحتاج إلى بيئة عمل متعددة النماذج ميسورة التكلفة ومصمَّمة جيدًا لسير عمل الكتابة اليومية.</span>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className="mb-16 scroll-mt-24">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">الأسئلة الشائعة</h2>
+            <div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل PromptQuorum مجاني؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. PromptQuorum مجاني الاستخدام. يمكنك إحضار مفتاح API الخاص بك، أو استخدام نموذج لغوي محلي، أو تجربة خدمة الواجهة الخلفية المجانية المحدودة لتحسين التعليمات بشكل تجريبي.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف تعمل الخصوصية؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">أنت من يقرر إلى أين تذهب بياناتك. احتفظ بكل شيء محلياً باستخدام LM Studio أو Ollama، أو استخدم مفاتيح API الخاصة بك. صفر بيانات تشخيصية، صفر تتبع، لا جمع للبيانات — ولا حتى إحصاءات استخدام مجهولة الهوية.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما مزودو الذكاء الاصطناعي المدعومون؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يشمل التطبيق أكثر من 25 مزوداً: OpenAI (GPT-4، GPT-4o)، Anthropic (Claude)، Google Gemini، Grok، DeepSeek، Mistral، Cohere، Together AI، Groq، OpenRouter، إضافةً إلى جميع المزودين المحليين (Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، KoboldCpp، vLLM، oobabooga وأي نقطة نهاية متوافقة مع OpenAI).</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">على أي منصات يعمل PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يتوفر PromptQuorum لـ macOS و Windows و Linux (سطح المكتب عبر Electron). تطبيق ويب قيد التطوير، يعقبه تطبيقات جوال (iOS و Android عبر Capacitor). يعمل بالكامل دون اتصال بالإنترنت مع نموذج لغوي محلي.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما الذي يميز PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum هو الأداة الوحيدة التي تغطي دورة حياة التعليمات بالكامل: كتابة منظمة بـ9 أطر عمل، وتحسين تكراري بالذكاء الاصطناعي بـ8 أنواع من التنقيح، وإرسال بنقرة واحدة إلى أكثر من 25 خدمة ذكاء اصطناعي، وتحليل توافق النماذج المتعددة — كل ذلك دون أن تغادر بياناتك جهازك.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل هناك أي حدود للاستخدام؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">لا توجد حدود من جانب PromptQuorum. يقتصر استخدامك على مفاتيح API الخاصة بك أو موارد النموذج اللغوي المحلي فقط.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما هندسة التعليمات ولماذا تهم؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">هندسة التعليمات هي ممارسة تصميم مدخلات نماذج الذكاء الاصطناعي للحصول على نتائج أدق وأكثر فائدة. التعليمات المنظمة ذات حقول الإطار تنتج درجات تقييم أعلى بنسبة 25–45% مقارنةً بالمدخلات غير المنظمة. يؤتمت PromptQuorum ذلك بـ9 أطر عمل مدمجة — لا خبرة مسبقة مطلوبة.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف يحسّن PromptQuorum تعليماتي؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يحوّل النموذج اللغوي المتصل حقول الإطار الخام إلى تعليمة دقيقة. بعد ذلك تنقّح بشكل تكراري بـ8 تنقيحات بنقرة واحدة: الإيجاز، وتوسيع التفاصيل، والتقسيم إلى خطوات، والتبسيط، وزيادة التحديد، والاستشارة متعددة الخبراء، وإضافة ضوابط الجودة، والتعليمة المخصصة. يُحفظ كل خطوة في سجل الإصدارات.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما أطر التعليمات المدمجة في PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يتضمن PromptQuorum 9 أطر عمل: Single Prompt Line، وAPE، وCRAFT، وCO-STAR (الفائز بمسابقة سنغافورة GPT-4)، وSPECS، وRISEN، وTRACE، وGoogle Prompt، وRTF. يمكنك أيضاً بناء إطارين مخصصين بالكامل.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما إطار عمل CO-STAR؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">CO-STAR اختصار لـ Context (السياق)، Objective (الهدف)، Style (الأسلوب)، Tone (النبرة)، Audience (الجمهور)، Response (شكل الرد). فاز بمسابقة هندسة التعليمات في سنغافورة GPT-4، وهو مثالي للتواصل التجاري وتسويق المحتوى. يرشدك PromptQuorum عبر كل حقل ويجمع التعليمة النهائية تلقائياً.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما التوافق متعدد النماذج ولماذا هو قيّم؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">التوافق متعدد النماذج يعني إرسال التعليمة ذاتها إلى عدة نماذج ذكاء اصطناعي وإيجاد نقاط الاتفاق. حين تعطي 5 نماذج مستقلة الإجابة ذاتها، يكون الثقة أعلى بكثير مما لو أجاب نموذج واحد. كما تُكتشف التناقضات والهلوسات المحتملة تلقائياً.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف يكشف PromptQuorum عن هلوسات الذكاء الاصطناعي؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">بعد جمع ردود نماذج متعددة في خطوة Quorum، يُجري نموذجك تحليل الكشف عن الهلوسة — يُعلّم الادعاءات التي تظهر في رد نموذج واحد فقط دون غيره، أو تناقض الإجماع الحقيقي. أنت تختار أنواع التحليل التي تشغّلها وتجمعها بحرية.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل يمكنني استخدام PromptQuorum مع نماذج ذكاء اصطناعي محلية كـOllama أو LM Studio؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. يتصل PromptQuorum بشكل أصيل بـOllama (localhost:11434)، وLM Studio (localhost:1234)، وJan AI (localhost:1337)، وGPT4All (localhost:4891)، وOpen WebUI، وKoboldCpp، وvLLM، وoobabooga، وأي نقطة نهاية متوافقة مع OpenAI. لا حاجة لمفتاح API للنماذج المحلية — كل شيء يعمل على جهازك.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل يمكنني استخدام PromptQuorum بالكامل دون اتصال بالإنترنت؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. إذا شغّلت نموذجاً محلياً كـOllama أو LM Studio، يعمل PromptQuorum بالكامل دون اتصال. لا حاجة لاتصال بالإنترنت. تعليماتك ومفاتيح API ونتائجك لا تغادر جهازك أبداً.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما BYOM (أحضر نموذجك الخاص)؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">BYOM يعني أن PromptQuorum لا يستدعي أي نموذج لغوي باستخدام مفاتيح API الخاصة به. كل استدعاء يذهب مباشرةً من متصفحك إلى المزود الذي اخترته — سحابياً أو محلياً. تُخزَّن مفاتيح API فقط في localStorage المتصفح ولا تُرسَل أبداً إلى أي خادم PromptQuorum.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف تعمل ميزة الإرسال (Dispatch)؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">ترسل ميزة Dispatch تعليمتك المحسّنة إلى خدمات ذكاء اصطناعي متعددة بنقرة واحدة. للخدمات ذات الإرسال التلقائي (ChatGPT وGemini وPerplexity وClaude وCopilot وDeepSeek وMistral وغيرها)، يُحمّل PromptQuorum تعليمتك في الرابط مسبقاً لتكون جاهزة فوراً. تفتح جميع التبويبات بالتوازي — اجمع كل الردود في أقل من دقيقة.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما تحليل Quorum وما أنواعه المتاحة؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يعالج تحليل Quorum جميع ردود الذكاء الاصطناعي المجمّعة عبر نموذجك اللغوي. 13 نوع تحليل في 4 فئات: التوليف (ملخص التوافق، الدمج الموزون، استخراج الحقائق الذرية)، المقارنة (رسم خريطة التداخل، الكشف عن التناقضات، تقييم الثقة)، الجودة (فحص الاكتمال، الكشف عن الهلوسة، إزالة التكرار)، والتوصيات (اختيار أفضل إجابة، مجموعة النماذج المتعددة، تعليم الخلافات).</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل يمكنني تصدير نتائجي؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. تُصدَّر نتائج Quorum بـ6 تنسيقات: .txt و.md و.json و.csv و.html و.pdf. اختر تنسيقات متعددة وستُحزَّم في أرشيف .zip. في Chrome وEdge وSafari 16+ يمكنك اختيار مجلد الحفظ باستخدام File System Access API.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف يعمل معالج الإطار (Framework Wizard)؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يطرح معالج الإطار بعض الأسئلة حول مهمتك — ما الذي تحاول تحقيقه، ونوع المخرجات التي تحتاجها، وجمهورك المستهدف. بناءً على إجاباتك يوصي بأنسب إطار من 9 خيارات مدمجة، ويعرض مقارنة جنباً إلى جنب لما سيُنتجه كل إطار لتعليمتك.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما ضبط درجة الحرارة الذكي (Smart Temperature Adjustment)؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">قبل كل تحسين، يحلّل PromptQuorum نص تعليمتك ويقترح درجة الحرارة المثلى للنموذج: ~0.2 للمهام الواقعية، ~0.7 للمتوازنة، ~0.85 للإبداعية. يعرض درجة ثقة ولا يسألك إلا حين تتجاوز الثقة 60%. بعد 3 اختيارات متسقة لنوع النية ذاته، يُطبَّق تفضيلك تلقائياً.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل يعمل PromptQuorum مع ChatGPT وClaude وGemini؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. يمكنك استخدام ChatGPT (GPT-4، GPT-4o)، وAnthropic Claude (3، 3.5)، وGoogle Gemini (1.5 Pro، Flash) كنموذج تحسين بإضافة مفتاح API في الإعدادات. يمكنك أيضاً إرسال التعليمات إلى الثلاثة في آنٍ واحد عبر صفحة Dispatch دون الحاجة لمفاتيح API للإرسال.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل يوجد سجل إصدارات لتعليماتي؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">نعم. كل خطوة تحسين وتنقيح تُحفظ تلقائياً في سجل الإصدارات بتسمية مقروءة (مثل "v2 — الإيجاز 12:36"). يمكنك اختيار أي إصدار لاستعادته والانطلاق بتنقيحات جديدة منه. لا يُفقد شيء.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما أشكال المخرجات واللغات التي يدعمها PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">لغة مخرجات النموذج اللغوي قابلة للضبط لكل جلسة: الإنجليزية والألمانية والفرنسية والإسبانية والإيطالية والبرتغالية والصينية واليابانية. طول الرد قابل للتعديل من 100 إلى 2000 كلمة.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف يتعامل PromptQuorum مع مفاتيح API بأمان؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">تُخزَّن مفاتيح API فقط في localStorage المتصفح — لا تُرسَل إلى أي خادم PromptQuorum، ولا تُسجَّل، ولا تُدرَج في بيانات التشخيص (التي لا توجد أصلاً). يمكنك مسحها في أي وقت من الإعدادات.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">هل PromptQuorum مناسب للاستخدام المؤسسي أو الفرق؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum مصمم حالياً للمستخدمين المحترفين بشكل فردي — المطورين والباحثين ومنشئي المحتوى والمحترفين المكثفي الاستخدام للذكاء الاصطناعي. كل مستخدم يُشغّل نسخته الخاصة بمفاتيح API الخاصة به. ميزات المؤسسات (مساحات العمل المشتركة، سجل الفريق، التحكم القائم على الأدوار) موجودة في خارطة الطريق.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما وضع التعليم (Teaching Mode)؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يضيف وضع التعليم مربع شرح أسفل كل نتيجة تحسين يوضّح بالضبط سبب كل تغيير — مبادئ هندسة التعليمات التي طُبّقت وتأثيرها. مصمم للمطورين والباحثين الراغبين في تعلم هندسة التعليمات أثناء استخدام الأداة.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">كيف أحصل على PromptQuorum وهل هناك تكلفة؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يتوفر PromptQuorum الآن في نسخة تجريبية عامة مجانية. نزّل تطبيق سطح المكتب مباشرة — دون تسجيل، دون قائمة انتظار، ودون الحاجة إلى بريد إلكتروني.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">من هو هانس كوبر، مؤسس PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">هانس كوبر هو مؤسس ومطور PromptQuorum. يعمل بشكل مستقل من بادن-فورتمبرغ، ألمانيا، بالقرب من هايدلبرغ في منطقة كرايشغاو. يتحدث أربع لغات — الألمانية والإنجليزية والفرنسية والروسية — وعاش وعمل في أكثر من 20 دولة.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">أين يُطوَّر PromptQuorum؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">يُطوَّر PromptQuorum بواسطة هانس كوبر، مطور مستقل في بادن-فورتمبرغ، ألمانيا. المشروع بلا مستثمرين خارجيين وتطوير كأداة ذكاء اصطناعي تُعطي الخصوصية الأولوية ويمتلكها المستخدم.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما أفضل أداة لمقارنة الطلب ذاته عبر نماذج LLM متعددة في آنٍ واحد؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum هو الأداة الوحيدة المُراجَعة هنا التي تجمع الإرسال المتزامن مع تقييم التوافق الآلي. يقدّم Poe وAiZolo وOpenMark إجابات جنبًا إلى جنب، لكن لا أيٌّ منها يُنتج Quorum Verdict — تحليلًا آليًا يحدد أين يتفق GPT-4o وClaude 4.6 Sonnet وغيرهما من النماذج أو يختلفون. بالنسبة للمستخدمين الذين يحتاجون إلى ما هو أكثر من مقارنة بصرية جنبًا إلى جنب، فإن PromptQuorum هو الخيار المصمَّم لهذا الغرض. معلومات الميزات تم التحقق منها في مارس 2026.</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">ما الفرق بين PromptQuorum وPoe أو LM Arena؟</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Poe منصة دردشة استهلاكية للتبديل بين النماذج واحدًا تلو الآخر. تستخدم LM Arena التصويت المجتمعي لترتيب النماذج. PromptQuorum فريد: يُرسل إلى جميع النماذج المحددة في آنٍ واحد ويُحلّل آليًا أين تتفق أو تختلف عبر تقييم التوافق. Poe مُحسَّن للمحادثة؛ LM Arena للمعايرة؛ PromptQuorum للتقييم المضبوط وكشف الهلوسة.</p>
               </div>
             </div>
           </section>

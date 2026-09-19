@@ -46,6 +46,7 @@ export default function ZhPQAppsPage() {
               'inLanguage': 'zh',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PromptQuorum 是免费的吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的，PromptQuorum 免费使用。您可以自带 API 密钥、使用本地 LLM，或试用我们有限的免费后端服务进行提示词优化测试。"}}, {"@type": "Question", "name": "隐私如何保障？", "acceptedAnswer": {"@type": "Answer", "text": "您决定数据的去向。通过 LM Studio 或 Ollama 将所有内容保存在本地，或使用您自己的 API 密钥。零遥测、零追踪、无数据收集——甚至没有匿名使用统计。"}}, {"@type": "Question", "name": "支持哪些 AI 提供商？", "acceptedAnswer": {"@type": "Answer", "text": "已包含 25+ 个 AI 提供商：OpenAI（GPT-4、GPT-4o）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter，以及所有本地提供商（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga 和任何 OpenAI 兼容端点）。"}}, {"@type": "Question", "name": "PromptQuorum 支持哪些平台？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 现已支持 macOS、Windows 和 Linux（桌面应用 via Electron）。网页应用正在开发中，随后将推出移动端（iOS 和 Android via Capacitor）。使用本地 LLM 可完全离线运行。"}}, {"@type": "Question", "name": "PromptQuorum 有何独特之处？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 是唯一覆盖提示词完整生命周期的工具：使用 9 个框架进行结构化编写、AI 驱动的迭代优化、一键分发到 25+ 个 AI 服务、多模型共识分析——所有这些都无需数据离开您的设备。"}}, {"@type": "Question", "name": "有使用限制吗？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 本身没有任何限制。您的使用量仅受 API 密钥或本地 LLM 资源限制。"}}, {"@type": "Question", "name": "什么是提示词工程，为什么重要？", "acceptedAnswer": {"@type": "Answer", "text": "提示词工程是设计 AI 输入以获得更准确、更有用输出的实践。一个结构良好的提示词可以将 AI 输出质量提高 25-45%。PromptQuorum 通过 9 个内置框架自动化这一过程——无需专业知识。"}}, {"@type": "Question", "name": "PromptQuorum 如何优化我的提示词？", "acceptedAnswer": {"@type": "Answer", "text": "您连接的 LLM 将框架的原始字段转化为精准的提示词。然后通过 8 个一键优化功能迭代改进：使其简洁、扩展细节、分解步骤、简化、提高具体性、多专家咨询、添加质量控制和自定义指令。每个步骤都自动保存在版本历史中。"}}, {"@type": "Question", "name": "PromptQuorum 内置了哪些提示词框架？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 包含 9 个框架：Single Prompt Line、APE、CRAFT、CO-STAR（新加坡 GPT-4 竞赛冠军）、SPECS、RISEN、TRACE、Google Prompt 和 RTF。您还可以创建 2 个完全自定义的框架。"}}, {"@type": "Question", "name": "什么是 CO-STAR 框架？", "acceptedAnswer": {"@type": "Answer", "text": "CO-STAR 代表 Context（情境）、Objective（目标）、Style（风格）、Tone（语气）、Audience（受众）和 Response（回答格式）。它赢得了新加坡 GPT-4 提示词工程竞赛，非常适合商务沟通和营销内容。PromptQuorum 会引导您填写每个字段并自动组装最终提示词。"}}, {"@type": "Question", "name": "什么是多模型共识，为什么有价值？", "acceptedAnswer": {"@type": "Answer", "text": "多模型共识是指将相同的提示词发送给多个 AI 模型，找出它们一致的地方。当 5 个独立模型给出相同答案时，置信度远高于单个模型单独回答。矛盾和潜在幻觉也会被自动发现。"}}, {"@type": "Question", "name": "PromptQuorum 如何检测 AI 幻觉？", "acceptedAnswer": {"@type": "Answer", "text": "在 Quorum 步骤收集多个模型的回答后，您的 LLM 会运行幻觉检测分析——标记仅出现在一个模型回答中的声明，或与事实共识相矛盾的内容。"}}, {"@type": "Question", "name": "我可以将 PromptQuorum 与 Ollama 或 LM Studio 等本地 AI 模型一起使用吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。PromptQuorum 原生连接到 Ollama（localhost:11434）、LM Studio（localhost:1234）、Jan AI（localhost:1337）、GPT4All（localhost:4891）、Open WebUI、KoboldCpp、vLLM、oobabooga 和任何 OpenAI 兼容端点。本地模型无需 API 密钥。"}}, {"@type": "Question", "name": "我可以完全离线使用 PromptQuorum 吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。使用 Ollama 或 LM Studio 等本地模型时，PromptQuorum 完全离线运行。无需网络连接。您的提示词、API 密钥和结果永远不会离开您的设备。"}}, {"@type": "Question", "name": "什么是 BYOM（带来您自己的模型）？", "acceptedAnswer": {"@type": "Answer", "text": "BYOM 意味着 PromptQuorum 从不使用自己的 API 密钥调用任何 LLM。每次调用都直接从您的浏览器发送到您选择的提供商。您的 API 密钥仅存储在浏览器的 localStorage 中，永远不会传输到任何 PromptQuorum 服务器。"}}, {"@type": "Question", "name": "分发（Dispatch）功能如何运作？", "acceptedAnswer": {"@type": "Answer", "text": "分发功能一键将您的优化提示词发送到多个 AI 服务。对于自动分发服务（ChatGPT、Gemini、Perplexity、Claude、Copilot、DeepSeek、Mistral 等），PromptQuorum 通过 URL 预加载您的提示词。Perplexity 甚至会在页面加载时自动提交。所有标签页并行打开，一分钟内收集所有回答。"}}, {"@type": "Question", "name": "Quorum 分析是什么，有哪些类型？", "acceptedAnswer": {"@type": "Answer", "text": "Quorum 分析通过您的 LLM 处理所有收集的 AI 回答。4 个类别 13 种分析类型：合成（共识摘要、加权合并、原子事实提取）、比较（重叠映射、矛盾检测、置信度评分）、质量（完整性检查、幻觉检测、冗余消除）和建议（最佳答案选择、多模型集成、争议标记）。"}}, {"@type": "Question", "name": "我可以导出结果吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。Quorum 结果以 6 种格式导出：.txt、.md、.json、.csv、.html 和 .pdf。选择多种格式后它们将被打包为 .zip 压缩包。在 Chrome、Edge 和 Safari 16+ 上，您可以使用 File System Access API 选择保存文件夹。"}}, {"@type": "Question", "name": "框架向导如何运作？", "acceptedAnswer": {"@type": "Answer", "text": "框架向导会询问您一些关于任务的问题——您想实现什么、需要什么类型的输出以及您的受众。根据您的回答，它会从 9 个内置选项中推荐最合适的框架，并显示每个框架将生成内容的并排对比。"}}, {"@type": "Question", "name": "什么是智能温度调整？", "acceptedAnswer": {"@type": "Answer", "text": "在每次优化之前，PromptQuorum 分析您的提示词文本并建议理想的 LLM 温度：~0.2 适用于事实性任务，~0.7 适用于平衡任务，~0.85 适用于创意任务。只有置信度超过 60% 时才会提示您。对同一意图类型连续 3 次一致选择后，会自动应用您的偏好。"}}, {"@type": "Question", "name": "PromptQuorum 可以与 ChatGPT、Claude 和 Gemini 一起使用吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。在设置中添加 API 密钥后，您可以使用 ChatGPT（GPT-4、GPT-4o）、Anthropic Claude（3、3.5）和 Google Gemini（1.5 Pro、Flash）作为优化 LLM。您也可以通过分发页面同时将提示词发送给三者，无需 API 密钥。"}}, {"@type": "Question", "name": "我的提示词有版本历史吗？", "acceptedAnswer": {"@type": "Answer", "text": "有。每个优化步骤和改进都会自动保存在版本历史中，并带有可读标签（例如\"v2 — 使其简洁 12:36\"）。您可以恢复任何版本并从那里开始新的改进。什么都不会丢失。"}}, {"@type": "Question", "name": "什么是教学模式？", "acceptedAnswer": {"@type": "Answer", "text": "教学模式在每个优化结果下方添加一个说明框，解释每次修改的原因——应用了哪些提示词工程原则及其效果。专为希望在使用工具的同时学习提示词工程的开发者和研究人员设计。"}}, {"@type": "Question", "name": "如何获取 PromptQuorum，是否收费？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum 现已开放免费公开测试。直接下载桌面应用即可——无需注册，无需候补名单，无需提供电子邮件。"}}, {"@type": "Question", "name": "PromptQuorum的创始人汉斯·库佩尔是谁？", "acceptedAnswer": {"@type": "Answer", "text": "汉斯·库佩尔（Hans Kuepper）是PromptQuorum的创始人和开发者。他位于德国巴登-符腾堡州，海德堡附近的克莱希高丘陵地区。他会说四种语言——德语、英语、法语和俄语，并曾在20多个国家生活和工作。"}}, {"@type": "Question", "name": "PromptQuorum在哪里开发？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum由汉斯·库佩尔独立开发，他位于德国巴登-符腾堡州。该项目没有外部投资者，是作为以隐私为先、用户自主的AI工具开发的。"}}, {"@type": "Question", "name": "同时跨多个LLM比较同一提示的最佳工具是什么？", "acceptedAnswer": {"@type": "Answer", "text": "PromptQuorum是这里审查的唯一将同时分发与自动共识评分相结合的工具。Poe、AiZolo和OpenMark提供并行响应，但没有一个能生成Quorum Verdict——GPT-4o、Claude 4.6 Sonnet和其他模型同意或分歧位置的自动分析。对于需要超越视觉并排比较的用户，PromptQuorum是专为此目的构建的选项。功能信息经2026年3月核实。"}}, {"@type": "Question", "name": "PromptQuorum与Poe或LM Arena有何不同？", "acceptedAnswer": {"@type": "Answer", "text": "Poe是一个消费者聊天平台，用于逐个切换模型。LM Arena使用社区投票对模型进行排名。PromptQuorum是唯一的：同时向所有模型分发，通过共识评分进行自动分析。Poe针对对话优化；LM Arena针对基准测试优化；PromptQuorum针对受控评估和幻觉检测优化。"}}]},
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
@@ -904,6 +905,125 @@ export default function ZhPQAppsPage() {
                   <span className="font-semibold text-text-primary">选择AiZolo</span>
                   <span className="text-text-secondary"> 如果您是内容创作者或营销专业人员，需要日常多模型写作工作流程的经济实惠、设计良好的工作区。</span>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className="mb-16 scroll-mt-24">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">常见问题</h2>
+            <div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 是免费的吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">是的，PromptQuorum 免费使用。您可以自带 API 密钥、使用本地 LLM，或试用我们有限的免费后端服务进行提示词优化测试。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">隐私如何保障？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">您决定数据的去向。通过 LM Studio 或 Ollama 将所有内容保存在本地，或使用您自己的 API 密钥。零遥测、零追踪、无数据收集——甚至没有匿名使用统计。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">支持哪些 AI 提供商？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">已包含 25+ 个 AI 提供商：OpenAI（GPT-4、GPT-4o）、Anthropic（Claude）、Google Gemini、Grok、DeepSeek、Mistral、Cohere、Together AI、Groq、OpenRouter，以及所有本地提供商（Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、KoboldCpp、vLLM、oobabooga 和任何 OpenAI 兼容端点）。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 支持哪些平台？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 现已支持 macOS、Windows 和 Linux（桌面应用 via Electron）。网页应用正在开发中，随后将推出移动端（iOS 和 Android via Capacitor）。使用本地 LLM 可完全离线运行。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 有何独特之处？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 是唯一覆盖提示词完整生命周期的工具：使用 9 个框架进行结构化编写、AI 驱动的迭代优化、一键分发到 25+ 个 AI 服务、多模型共识分析——所有这些都无需数据离开您的设备。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">有使用限制吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 本身没有任何限制。您的使用量仅受 API 密钥或本地 LLM 资源限制。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是提示词工程，为什么重要？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">提示词工程是设计 AI 输入以获得更准确、更有用输出的实践。一个结构良好的提示词可以将 AI 输出质量提高 25-45%。PromptQuorum 通过 9 个内置框架自动化这一过程——无需专业知识。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 如何优化我的提示词？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">您连接的 LLM 将框架的原始字段转化为精准的提示词。然后通过 8 个一键优化功能迭代改进：使其简洁、扩展细节、分解步骤、简化、提高具体性、多专家咨询、添加质量控制和自定义指令。每个步骤都自动保存在版本历史中。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 内置了哪些提示词框架？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 包含 9 个框架：Single Prompt Line、APE、CRAFT、CO-STAR（新加坡 GPT-4 竞赛冠军）、SPECS、RISEN、TRACE、Google Prompt 和 RTF。您还可以创建 2 个完全自定义的框架。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是 CO-STAR 框架？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">CO-STAR 代表 Context（情境）、Objective（目标）、Style（风格）、Tone（语气）、Audience（受众）和 Response（回答格式）。它赢得了新加坡 GPT-4 提示词工程竞赛，非常适合商务沟通和营销内容。PromptQuorum 会引导您填写每个字段并自动组装最终提示词。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是多模型共识，为什么有价值？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">多模型共识是指将相同的提示词发送给多个 AI 模型，找出它们一致的地方。当 5 个独立模型给出相同答案时，置信度远高于单个模型单独回答。矛盾和潜在幻觉也会被自动发现。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 如何检测 AI 幻觉？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">在 Quorum 步骤收集多个模型的回答后，您的 LLM 会运行幻觉检测分析——标记仅出现在一个模型回答中的声明，或与事实共识相矛盾的内容。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">我可以将 PromptQuorum 与 Ollama 或 LM Studio 等本地 AI 模型一起使用吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">可以。PromptQuorum 原生连接到 Ollama（localhost:11434）、LM Studio（localhost:1234）、Jan AI（localhost:1337）、GPT4All（localhost:4891）、Open WebUI、KoboldCpp、vLLM、oobabooga 和任何 OpenAI 兼容端点。本地模型无需 API 密钥。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">我可以完全离线使用 PromptQuorum 吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">可以。使用 Ollama 或 LM Studio 等本地模型时，PromptQuorum 完全离线运行。无需网络连接。您的提示词、API 密钥和结果永远不会离开您的设备。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是 BYOM（带来您自己的模型）？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">BYOM 意味着 PromptQuorum 从不使用自己的 API 密钥调用任何 LLM。每次调用都直接从您的浏览器发送到您选择的提供商。您的 API 密钥仅存储在浏览器的 localStorage 中，永远不会传输到任何 PromptQuorum 服务器。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">分发（Dispatch）功能如何运作？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">分发功能一键将您的优化提示词发送到多个 AI 服务。对于自动分发服务（ChatGPT、Gemini、Perplexity、Claude、Copilot、DeepSeek、Mistral 等），PromptQuorum 通过 URL 预加载您的提示词。Perplexity 甚至会在页面加载时自动提交。所有标签页并行打开，一分钟内收集所有回答。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">Quorum 分析是什么，有哪些类型？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Quorum 分析通过您的 LLM 处理所有收集的 AI 回答。4 个类别 13 种分析类型：合成（共识摘要、加权合并、原子事实提取）、比较（重叠映射、矛盾检测、置信度评分）、质量（完整性检查、幻觉检测、冗余消除）和建议（最佳答案选择、多模型集成、争议标记）。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">我可以导出结果吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">可以。Quorum 结果以 6 种格式导出：.txt、.md、.json、.csv、.html 和 .pdf。选择多种格式后它们将被打包为 .zip 压缩包。在 Chrome、Edge 和 Safari 16+ 上，您可以使用 File System Access API 选择保存文件夹。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">框架向导如何运作？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">框架向导会询问您一些关于任务的问题——您想实现什么、需要什么类型的输出以及您的受众。根据您的回答，它会从 9 个内置选项中推荐最合适的框架，并显示每个框架将生成内容的并排对比。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是智能温度调整？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">在每次优化之前，PromptQuorum 分析您的提示词文本并建议理想的 LLM 温度：~0.2 适用于事实性任务，~0.7 适用于平衡任务，~0.85 适用于创意任务。只有置信度超过 60% 时才会提示您。对同一意图类型连续 3 次一致选择后，会自动应用您的偏好。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum 可以与 ChatGPT、Claude 和 Gemini 一起使用吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">可以。在设置中添加 API 密钥后，您可以使用 ChatGPT（GPT-4、GPT-4o）、Anthropic Claude（3、3.5）和 Google Gemini（1.5 Pro、Flash）作为优化 LLM。您也可以通过分发页面同时将提示词发送给三者，无需 API 密钥。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">我的提示词有版本历史吗？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">有。每个优化步骤和改进都会自动保存在版本历史中，并带有可读标签（例如"v2 — 使其简洁 12:36"）。您可以恢复任何版本并从那里开始新的改进。什么都不会丢失。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">什么是教学模式？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">教学模式在每个优化结果下方添加一个说明框，解释每次修改的原因——应用了哪些提示词工程原则及其效果。专为希望在使用工具的同时学习提示词工程的开发者和研究人员设计。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">如何获取 PromptQuorum，是否收费？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum 现已开放免费公开测试。直接下载桌面应用即可——无需注册，无需候补名单，无需提供电子邮件。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum的创始人汉斯·库佩尔是谁？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">汉斯·库佩尔（Hans Kuepper）是PromptQuorum的创始人和开发者。他位于德国巴登-符腾堡州，海德堡附近的克莱希高丘陵地区。他会说四种语言——德语、英语、法语和俄语，并曾在20多个国家生活和工作。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum在哪里开发？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum由汉斯·库佩尔独立开发，他位于德国巴登-符腾堡州。该项目没有外部投资者，是作为以隐私为先、用户自主的AI工具开发的。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">同时跨多个LLM比较同一提示的最佳工具是什么？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">PromptQuorum是这里审查的唯一将同时分发与自动共识评分相结合的工具。Poe、AiZolo和OpenMark提供并行响应，但没有一个能生成Quorum Verdict——GPT-4o、Claude 4.6 Sonnet和其他模型同意或分歧位置的自动分析。对于需要超越视觉并排比较的用户，PromptQuorum是专为此目的构建的选项。功能信息经2026年3月核实。</p>
+              </div>
+              <div className="py-5 border-b border-primary/10 last:border-0">
+                <p className="font-semibold text-text-primary mb-2 leading-snug">PromptQuorum与Poe或LM Arena有何不同？</p>
+                <p className="text-sm text-text-secondary leading-relaxed">Poe是一个消费者聊天平台，用于逐个切换模型。LM Arena使用社区投票对模型进行排名。PromptQuorum是唯一的：同时向所有模型分发，通过共识评分进行自动分析。Poe针对对话优化；LM Arena针对基准测试优化；PromptQuorum针对受控评估和幻觉检测优化。</p>
               </div>
             </div>
           </section>
