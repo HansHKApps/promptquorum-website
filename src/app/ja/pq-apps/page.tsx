@@ -80,28 +80,509 @@ export default function JaPQAppsPage() {
 
           {/* How It Works */}
           <section id="how-it-works" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">使い方</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">1</div>
-                <div className="text-text-primary font-semibold mb-1">構造化プロンプトを作成</div>
-                <div className="text-sm text-text-secondary">9つの内蔵フレームワーク（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google Prompt、RTF、Single Prompt Line）のいずれかから始めます。</div>
+            <h2 className="text-2xl font-bold text-text-primary mb-2">使い方</h2>
+            <p className="text-text-secondary mb-3">4段階のワークフロー：構造化されたプロンプトを書き、自分のLLMで最適化し、25以上のAIサービスに送信し、すべての回答をコンセンサスのために分析します。</p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-8">
+              すべてブラウザ内で動作 — PromptQuorumのサーバーがあなたのプロンプトやAPIキーを見ることは一切ありません
+            </div>
+
+            <div className="space-y-8 mb-16">
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">1</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">作成</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">プロンプトを構造化する</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">9つの組み込みプロンプトエンジニアリングフレームワークから選択するか、独自のものを作成します。各フレームワークは、タスクに適したフィールドをガイドします。</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Single Prompt Line — 素早い非構造化プロンプト</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>CRAFT — Context, Role, Action, Format, Target</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>CO-STAR — シンガポールGPT-4コンテスト優勝</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>RISEN — 逐次ステップのエンタープライズタスク</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>TRACE — Few-Shotの例が必要な場合</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>APE, SPECS, Google Prompt, RTF + カスタムスロット×2</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      フレームワークウィザードが、あなたの目標を質問することで最適なものを選ぶのを助けます。
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2</div>
-                <div className="text-text-primary font-semibold mb-1">自分のLLMで最適化</div>
-                <div className="text-sm text-text-secondary">送信前に、接続済みのLLMでプロンプトの構造や表現を任意に改善できます。</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">2</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">最適化</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">自分のLLMで改善する</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善で繰り返し改善できます — プロンプトエンジニアリングの専門知識は不要です。</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>スマートTemperature — 事実的・バランス・クリエイティブな意図を自動検出</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>バージョン履歴 — すべての改善を保存、いつでも元に戻せる</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>品質評価 — 具体的な改善提案付き1〜5星評価</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>ティーチングモード — 各変更がなぜ行われたかを正確に説明</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>簡潔にする・詳細を拡張・ステップに分解・簡略化・品質コントロール追加…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>カスタム指示 — 平易な言葉でのフリーテキスト改善</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      あなたのLLM。あなたのAPIキー。PromptQuorumのサーバーを通過するものは何もありません。
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">3</div>
-                <div className="text-text-primary font-semibold mb-1">25以上のAIモデルに送信</div>
-                <div className="text-sm text-text-secondary">ワンクリックですべての送信先を並行して開きます — GPT-4o、Claude、Gemini、Grok、DeepSeek、Mistralなど、さらにOllama経由のローカルモデルも。</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">3</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">送信</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">すべてのAIに一度に送信</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">最適化されたプロンプトをワンクリックで複数のAIサービスに送信します。PromptQuorumはURLを通じて各送信先にプロンプトを事前にロードします — コピー&ペースト不要。</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>自動送信: ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>コピー&ペースト: Grok, Qwen, Meta AI, Poe, Kimi, LM Studio, Jan AI, GPT4All…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Perplexityは即座に実行 — 到着時にプロンプトが自動送信</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>リストにないAIサービス用のカスタムURLスロット×2</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>送信前にLLMを通じたオプションの最終強化パス</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>合計25以上の送信先</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      すべてのブラウザタブが並列で開きます。1分以内にすべての回答を収集。
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">4</div>
-                <div className="text-text-primary font-semibold mb-1">Quorum分析を実行</div>
-                <div className="text-sm text-text-secondary">13種類の分析で回答を比較 — ハルシネーション検出、矛盾検出、コンセンサス要約など。</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">4</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">クォーラム</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">すべてのAIが同意することを見つける</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">回答をPromptQuorumに貼り付けます。分析タイプを選択します。LLMがすべての回答を読み、重要なことを合成します。</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>コンセンサスサマリー — すべてのモデルにわたる共通テーマと合意</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>矛盾検出 — モデルが不一致だった箇所を明示的にフラグ</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>ハルシネーション検出 — 潜在的に偽りの主張をフラグ</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>信頼スコアリング — モデルごとの確信度</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>ベスト回答選択 — 最も強力な単一回答を選択</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>加重マージ — すべてのベストを合成したハイブリッド回答を生成</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      5つのモデルが回答に同意する場合、1つのモデルが単独で答える場合よりも信頼性がはるかに高くなります。
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">9つの組み込みプロンプトフレームワーク</h3>
+              <p className="text-text-secondary mb-6">各フレームワークは入力を異なる方法で構造化します。フレームワークウィザードが選択を助けます — または完全にカスタムなフレームワークを2つ作成できます。</p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-primary/20">
+                      <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary">フレームワーク</th>
+                      <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary hidden md:table-cell">フィールド</th>
+                      <th className="text-left py-2 sm:py-3 font-semibold text-text-primary">最適な用途</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Single Prompt Line</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">—</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">素早い非構造化プロンプト</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">APE</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Action · Purpose · Expectation</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">シンプルな3フィールドブリッジ</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CRAFT</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Role · Action · Format · Target</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">クリエイティブライティング、汎用</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CO-STAR</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Objective · Style · Tone · Audience · Response</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">ビジネスコミュニケーション、マーケティング</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">SPECS</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Situation · Purpose · Expected Output · Context · Style</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">分析と調査</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RISEN</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Instructions · Steps · End Goal · Narrowing</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">エンタープライズ逐次タスク</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">TRACE</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Request · Action · Context · Example</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">例が必要な場合</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Google Prompt</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Context · Persona</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">ビジネス・プロフェッショナルタスク</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RTF</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Task · Format</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">ミニマル — 最も影響力のある3フィールド</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">13種類のQuorum分析タイプ</h3>
+              <p className="text-text-secondary mb-6">自由に組み合わせ。2つまたはすべての13を同時に実行。各分析はPromptQuorumサーバーではなく、接続されたLLMで実行されます。</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">合成</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      コンセンサスサマリー
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      加重マージ
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      原子的事実抽出
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">比較</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      オーバーラップマッピング
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      矛盾検出
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      信頼スコアリング
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">品質</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      完全性チェック
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      ハルシネーション検出
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      冗長性除去
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">推奨</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      ベスト回答選択
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      マルチモデルアンサンブル
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      論争フラグ
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-6 bg-secondary/30 border border-primary/20 rounded-xl p-6">
+                <div className="text-sm font-semibold text-text-primary mb-2">結果を6つの形式でエクスポート</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.txt</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.md</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.json</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.csv</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.html</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.pdf</span>
+                </div>
+                <p className="text-xs text-text-muted mt-2">複数の形式 → .zipアーカイブとしてダウンロード。フォルダ選択にはFile System Access API（Chrome/Edge/Safari 16+）。</p>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-6">主要な概念</h3>
+              <dl className="grid sm:grid-cols-2 gap-4">
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">マルチモデル・ディスパッチ</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">1つのプロンプトを1クリックで25以上のAIモデルに同時送信。PromptQuorumはURLを通じて各送信先にプロンプトを事前にロード — コピー&ペースト不要、すべてのタブが並列で開きます。</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">Quorum分析</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">複数のAIモデルの回答を構造的に比較し、コンセンサス、矛盾、信頼度を特定。PromptQuorumはハルシネーション検出やベスト回答選択を含む13種類の分析タイプを提供。</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">コンセンサス・スコアリング</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">複数のモデル回答間の一致度から導出される信頼性評価。コンセンサスが高いほど信頼性が高い。コンセンサスが低い場合は不確実性や潜在的ハルシネーションを示します。</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">ハルシネーション検出</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">1つまたは少数のモデルにしか現れない事実的主張を特定し、潜在的なAI捏造を示す。5以上の独立したモデルとの相互参照により、未検出ハルシネーション率が大幅に低下。</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">BYOM — 自分のモデルを持ち込む</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">自分のAPIキーをAIプロバイダーに直接接続。キーはブラウザのlocalStorageにのみ保存され、プロバイダーに直接接続 — PromptQuorumのサーバーが認証情報を受信・送信することは一切ありません。</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">自分のモデルを持ち込む（BYOM）</h3>
+              <p className="text-text-secondary mb-6">PromptQuorumは独自のキーでLLMを呼び出すことはありません。すべての呼び出しはブラウザから選択したプロバイダーに直接送られます。APIキーはブラウザのlocalStorageに保存 — PromptQuorumサーバーには決して送信されません。</p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">クラウドAPI（自分のキーを持参）</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      OpenAI (GPT-4, GPT-4o)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Anthropic (Claude 3.5)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Google Gemini 1.5
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Grok (xAI)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      DeepSeek
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Mistral
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Cohere
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Together AI
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Groq
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      OpenRouter (free tier)
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">ローカル（APIキー不要）</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Ollama (localhost:11434)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      LM Studio (localhost:1234)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Jan AI (localhost:1337)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      GPT4All (localhost:4891)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Open WebUI
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      KoboldCpp
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      vLLM
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      oobabooga
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Any OpenAI-compatible endpoint
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4 mb-16">
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">テレメトリーなし</h3>
+                  <p className="text-text-secondary text-sm">分析なし、追跡なし、データ収集なし。匿名の使用統計さえも。</p>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">登録不要</h3>
+                  <p className="text-text-secondary text-sm">アカウント不要。メール不要。サインイン不要。アプリを開いてすぐに作業開始。</p>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">ローカルで動作</h3>
+                  <p className="text-text-secondary text-sm">ElectronによるデスクトップApp、CapacitorによるモバイルApp。ローカルLLMで完全オフライン動作。</p>
+                </div>
+            </div>
+
+            <div className="bg-card border border-primary/20 rounded-2xl p-6 sm:p-8 mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-3">テスト方法</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-6">PromptQuorumの記事に記載されたパフォーマンス数値は、PromptQuorumを使った管理された配信セッションに基づいています。具体的な数値（プロンプト品質スコア、温度比較、ベンチマーク数値）が引用されている場合、それは編集部によるテストまたは公開ベンチマークデータを反映しており、明示的に記載がない限りPromptQuorum独自の計測値ではありません。</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  プロンプト配信：PromptQuorumのワンクリック配信で指定モデルに同時送信
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  サンプルサイズ：編集部テストは別段の記載がない限り各条件につき最低30プロンプトを使用
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  評価：回答は最低2名の独立した評価者がブラインドレビューで採点
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  サードパーティベンチマーク（HumanEval、SWE-bench、MBPP）：公式モデル論文またはコミュニティリーダーボードから取得、評価日を各記事に記載
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  ローカルモデルテスト：記事に記載の量子化レベルでコンシューマーハードウェア上で実行
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  開示：PromptQuorum内部テストが引用される場合、記事本文内に「Tested in PromptQuorum」と明記
+                </li>
+              </ul>
             </div>
           </section>
 

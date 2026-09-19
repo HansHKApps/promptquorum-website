@@ -80,28 +80,509 @@ export default function DePQAppsPage() {
 
           {/* How It Works */}
           <section id="how-it-works" className="mb-16 scroll-mt-24">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">So funktioniert es</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">1</div>
-                <div className="text-text-primary font-semibold mb-1">Strukturierten Prompt schreiben</div>
-                <div className="text-sm text-text-secondary">Starte mit einem von 9 integrierten Frameworks — CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google Prompt, RTF oder Single Prompt Line.</div>
+            <h2 className="text-2xl font-bold text-text-primary mb-2">So funktioniert es</h2>
+            <p className="text-text-secondary mb-3">Ein 4-stufiger Workflow: strukturierten Prompt schreiben, mit eigenem LLM optimieren, an 25+ KI-Dienste senden und jede Antwort auf Konsens analysieren.</p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-8">
+              Läuft vollständig in Ihrem Browser — kein PromptQuorum-Server sieht jemals Ihre Prompts oder API-Schlüssel
+            </div>
+
+            <div className="space-y-8 mb-16">
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">1</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Schreiben</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Ihren Prompt strukturieren</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">Wählen Sie aus 9 integrierten Prompt-Engineering-Frameworks — oder erstellen Sie Ihr eigenes. Jedes Framework führt Sie durch die richtigen Felder für Ihre Aufgabe.</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Single Prompt Line — schnelle, unstrukturierte Prompts</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>CRAFT — Context, Role, Action, Format, Target</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>CO-STAR — Gewinner des Singapore GPT-4-Wettbewerbs</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>RISEN — Unternehmensaufgaben mit sequenziellen Schritten</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>TRACE — wenn Sie Few-Shot-Beispiele benötigen</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>APE, SPECS, Google Prompt, RTF + 2 benutzerdefinierte Slots</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      Ein Framework-Assistent hilft Ihnen, das richtige zu wählen, indem er fragt, was Sie erreichen möchten.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">2</div>
-                <div className="text-text-primary font-semibold mb-1">Mit deinem eigenen LLM optimieren</div>
-                <div className="text-sm text-text-secondary">Optional kannst du Struktur und Formulierung deines Prompts vor dem Versand über dein verbundenes LLM verfeinern lassen.</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">2</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Optimieren</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Mit eigenem LLM verfeinern</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">Ihr verbundenes LLM wandelt die rohen Framework-Felder in einen präzisen Prompt um. Anschließend verfeinern Sie iterativ mit 8 Ein-Klick-Verfeinerungen — kein Prompt-Engineering-Fachwissen erforderlich.</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Smart Temperature — erkennt automatisch faktische, ausgewogene oder kreative Absicht</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Versionsverlauf — jede Verfeinerung gespeichert, jederzeit rückgängig machen</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Qualitätsbewertung — 1–5 Sterne-Bewertung mit konkreten Verbesserungsvorschlägen</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Lernmodus — erklärt genau, warum jede Änderung vorgenommen wurde</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Kürzer fassen, Detail erweitern, In Schritte aufteilen, Vereinfachen, Qualitätskontrollen hinzufügen…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Benutzerdefinierte Anweisung — Freitext-Verfeinerung in einfacher Sprache</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      Ihr LLM. Ihr API-Schlüssel. Nichts läuft über PromptQuorum-Server.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">3</div>
-                <div className="text-text-primary font-semibold mb-1">An 25+ KI-Modelle senden</div>
-                <div className="text-sm text-text-secondary">Ein Klick öffnet alle Ziele parallel — GPT-4o, Claude, Gemini, Grok, DeepSeek, Mistral und mehr, plus lokale Modelle über Ollama.</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">3</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Senden</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Gleichzeitig an alle KIs senden</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">Senden Sie den optimierten Prompt mit einem Klick an mehrere KI-Dienste. PromptQuorum lädt Ihren Prompt per URL in jedes Ziel vor — kein Kopieren und Einfügen.</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Auto-Dispatch: ChatGPT, Gemini, Perplexity, Claude, Copilot, DeepSeek, Mistral…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Kopieren & Einfügen: Grok, Qwen, Meta AI, Poe, Kimi, LM Studio, Jan AI, GPT4All…</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Perplexity startet sofort — Prompt wird beim Laden automatisch übermittelt</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>2 benutzerdefinierte URL-Slots für jeden KI-Dienst, der nicht auf der Liste steht</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Optionaler letzter Verbesserungsdurchlauf durch Ihr LLM vor dem Senden</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Insgesamt 25+ Ziele</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      Alle Browser-Tabs öffnen parallel. Alle Antworten in unter einer Minute sammeln.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card border border-primary/20 rounded-xl p-5">
-                <div className="text-xs font-bold text-primary uppercase tracking-widest mb-2">4</div>
-                <div className="text-text-primary font-semibold mb-1">Quorum-Analyse durchführen</div>
-                <div className="text-sm text-text-secondary">Vergleiche Antworten mit 13 Analysetypen — Halluzinationserkennung, Widerspruchserkennung, Konsens-Zusammenfassung und mehr.</div>
+              <div className="bg-card border border-primary/20 rounded-2xl overflow-hidden">
+                <div className="flex items-start gap-6 p-6 sm:p-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">4</span>
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Quorum</span>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3 mt-1">Herausfinden, womit alle KIs übereinstimmen</h3>
+                    <p className="text-text-secondary mb-5 text-lg leading-relaxed">Fügen Sie die Antworten zurück in PromptQuorum ein. Wählen Sie Ihre Analysetypen. Ihr LLM liest alle Antworten und synthetisiert das Wesentliche.</p>
+                    <ul className="space-y-2 mb-5">
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Konsens-Zusammenfassung — gemeinsame Themen und Übereinstimmungen über alle Modelle</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Widerspruchserkennung — wo Modelle abwichen, explizit markiert</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Halluzinationserkennung — markiert potenziell falsche Behauptungen</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Konfidenz-Scoring — Sicherheitsniveau pro Modell</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Beste Antwort Auswahl — wählt die stärkste Einzelantwort</span>
+                      </li>
+                      <li className="flex items-start gap-2 text-text-secondary">
+                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">✓</span>
+                        <span>Gewichtete Zusammenführung — synthetisiert eine Hybrid-Antwort aus dem Besten aller</span>
+                      </li>
+                    </ul>
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg px-4 py-3 text-sm text-text-secondary italic">
+                      Wenn 5 Modelle einer Antwort zustimmen, ist die Konfidenz viel höher als wenn 1 Modell allein antwortet.
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">9 integrierte Prompt-Frameworks</h3>
+              <p className="text-text-secondary mb-6">Jedes Framework strukturiert Ihre Eingabe anders. Ein Framework-Assistent hilft Ihnen bei der Auswahl — oder Sie können zwei vollständig benutzerdefinierte Frameworks erstellen.</p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-primary/20">
+                      <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary">Framework</th>
+                      <th className="text-left py-2 sm:py-3 pr-6 font-semibold text-text-primary hidden md:table-cell">Felder</th>
+                      <th className="text-left py-2 sm:py-3 font-semibold text-text-primary">Am besten für</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Single Prompt Line</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">—</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Schnelle, unstrukturierte Prompts</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">APE</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Action · Purpose · Expectation</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Einfache 3-Felder-Brücke</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CRAFT</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Role · Action · Format · Target</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Kreatives Schreiben, allgemeiner Einsatz</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">CO-STAR</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Context · Objective · Style · Tone · Audience · Response</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Geschäftskommunikation, Marketing</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">SPECS</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Situation · Purpose · Expected Output · Context · Style</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Analyse und Forschung</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RISEN</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Instructions · Steps · End Goal · Narrowing</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Sequenzielle Unternehmensaufgaben</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">TRACE</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Request · Action · Context · Example</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Wenn Beispiele benötigt werden</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">Google Prompt</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Task · Context · Persona</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Geschäftliche und professionelle Aufgaben</td>
+                    </tr>
+                    <tr className="border-b border-primary/10">
+                      <td className="py-2 sm:py-3 pr-6 font-semibold text-primary whitespace-nowrap">RTF</td>
+                      <td className="py-2 sm:py-3 pr-6 text-text-muted hidden md:table-cell font-mono text-xs">Role · Task · Format</td>
+                      <td className="py-2 sm:py-3 text-text-secondary">Minimal — die 3 wirkungsvollsten Felder</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">13 Quorum-Analysetypen</h3>
+              <p className="text-text-secondary mb-6">Frei kombinierbar. 2 oder alle 13 gleichzeitig ausführen. Jede Analyse wird von Ihrem verbundenen LLM betrieben, nicht von einem PromptQuorum-Server.</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Synthese</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Konsens-Zusammenfassung
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Gewichtete Zusammenführung
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Atomare Faktenextraktion
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Vergleich</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Überlappungs-Mapping
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Widerspruchserkennung
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Konfidenz-Scoring
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Qualität</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Vollständigkeitsprüfung
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Halluzinationserkennung
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Redundanzelimination
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-5">
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Empfehlungen</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Beste Antwort Auswahl
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Multi-Modell-Ensemble
+                    </li>
+                    <li className="flex items-start gap-2 text-text-secondary text-sm">
+                      <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                      Kontrovers-Markierung
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-6 bg-secondary/30 border border-primary/20 rounded-xl p-6">
+                <div className="text-sm font-semibold text-text-primary mb-2">Ergebnisse in 6 Formaten exportieren</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.txt</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.md</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.json</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.csv</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.html</span>
+                  <span className="px-3 py-1 bg-card border border-primary/20 rounded-full text-xs font-mono text-text-secondary">.pdf</span>
+                </div>
+                <p className="text-xs text-text-muted mt-2">Mehrere Formate → als .zip-Archiv heruntergeladen. File System Access API für Ordnerauswahl (Chrome/Edge/Safari 16+).</p>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-6">Schlüsselbegriffe</h3>
+              <dl className="grid sm:grid-cols-2 gap-4">
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">Multi-Modell-Dispatch</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">Einen Prompt gleichzeitig mit einem Klick an 25+ KI-Modelle senden. PromptQuorum lädt Ihren Prompt per URL in jedes Ziel vor — kein Kopieren und Einfügen, alle Tabs öffnen parallel.</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">Quorum-Analyse</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">Strukturierter Vergleich von Antworten mehrerer KI-Modelle zur Identifikation von Konsens, Widersprüchen und Konfidenzgraden. PromptQuorum bietet 13 Analysetypen, einschließlich Halluzinationserkennung und Beste-Antwort-Auswahl.</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">Konsens-Scoring</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">Eine Vertrauensbewertung, die aus dem Übereinstimmungsgrad mehrerer Modellantworten abgeleitet wird. Höherer Konsens = höhere Zuverlässigkeit. Niedrigerer Konsens markiert Unsicherheitsbereiche oder potenzielle Halluzinationen.</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">Halluzinationserkennung</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">Identifikation von Faktenbehauptungen, die nur in einem oder einer Minderheit von Modellen erscheinen, was auf potenzielle KI-Fabrikation hinweist. Der Abgleich mit 5+ unabhängigen Modellen reduziert die Rate unerkannter Halluzinationen drastisch.</dd>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <dt className="font-semibold text-primary mb-2">BYOM — Eigenes Modell mitbringen</dt>
+                  <dd className="text-text-secondary text-sm leading-relaxed">Verbinden Sie Ihre eigenen API-Schlüssel direkt mit KI-Anbietern. Schlüssel werden nur im localStorage Ihres Browsers gespeichert und verbinden sich direkt mit Anbietern — kein PromptQuorum-Server empfängt oder überträgt jemals Ihre Zugangsdaten.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-xl font-bold text-text-primary mb-2">Eigenes Modell mitbringen (BYOM)</h3>
+              <p className="text-text-secondary mb-6">PromptQuorum ruft kein LLM mit eigenen Schlüsseln auf. Jeder Aufruf geht direkt von Ihrem Browser zu Ihrem gewählten Anbieter. Ihre API-Schlüssel bleiben im localStorage Ihres Browsers — nie an einen PromptQuorum-Server übertragen.</p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Cloud-APIs (eigenen Schlüssel mitbringen)</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      OpenAI (GPT-4, GPT-4o)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Anthropic (Claude 3.5)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Google Gemini 1.5
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Grok (xAI)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      DeepSeek
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Mistral
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Cohere
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Together AI
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      Groq
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      OpenRouter (free tier)
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Lokal (kein API-Schlüssel erforderlich)</div>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Ollama (localhost:11434)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      LM Studio (localhost:1234)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Jan AI (localhost:1337)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      GPT4All (localhost:4891)
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Open WebUI
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      KoboldCpp
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      vLLM
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      oobabooga
+                    </li>
+                    <li className="flex items-center gap-2 text-text-secondary text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                      Any OpenAI-compatible endpoint
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4 mb-16">
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">Keine Telemetrie</h3>
+                  <p className="text-text-secondary text-sm">Keine Analysen, kein Tracking, keine Datenerfassung. Nicht einmal anonyme Nutzungsstatistiken.</p>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">Keine Registrierung</h3>
+                  <p className="text-text-secondary text-sm">Kein Konto erforderlich. Keine E-Mail. Keine Anmeldung. App öffnen und loslegen.</p>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6">
+                  <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2">Läuft lokal</h3>
+                  <p className="text-text-secondary text-sm">Desktop-App via Electron, mobil via Capacitor. Funktioniert vollständig offline mit einem lokalen LLM.</p>
+                </div>
+            </div>
+
+            <div className="bg-card border border-primary/20 rounded-2xl p-6 sm:p-8 mb-8">
+              <h3 className="text-xl font-bold text-text-primary mb-3">Unsere Testmethodik</h3>
+              <p className="text-text-secondary text-sm leading-relaxed mb-6">Leistungsangaben in PromptQuorum-Artikeln basieren auf kontrollierten Dispatch-Sitzungen mit PromptQuorum. Werden konkrete Zahlen zitiert (Prompt-Qualitätsscores, Temperaturvergleiche, Benchmark-Werte), handelt es sich um redaktionelle Tests oder öffentlich zugängliche Benchmark-Daten — nicht um PromptQuorum-eigene Messungen, sofern nicht ausdrücklich gekennzeichnet.</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Prompt-Dispatch: Prompts werden gleichzeitig an die genannten Modelle per PromptQuorum-Einzel-Klick-Dispatch gesendet
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Stichprobengröße: Redaktionelle Tests umfassen mindestens 30 Prompts pro Bedingung, sofern nicht anders angegeben
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Auswertung: Antworten werden von mindestens 2 unabhängigen Bewertern im Blind-Review bewertet
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Drittanbieter-Benchmarks (HumanEval, SWE-bench, MBPP): aus offiziellen Modellpapieren oder Community-Leaderboards; Auswertungsdatum im Artikel angegeben
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Lokale Modelltest: auf Consumer-Hardware mit dem im Artikel genannten Quantisierungsgrad durchgeführt
+                </li>
+                <li className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  Offenlegung: Wo PromptQuorum-interne Tests zitiert werden, sind diese im Artikeltext als „Tested in PromptQuorum" gekennzeichnet
+                </li>
+              </ul>
             </div>
           </section>
 
