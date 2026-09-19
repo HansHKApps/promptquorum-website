@@ -129,10 +129,15 @@ export function ToolCard({
   const stop = (e: React.MouseEvent) => e.stopPropagation()
   const downloadLinks = getDownloadLinks(app, lang)
   const [licenseModalOpen, setLicenseModalOpen] = useState(false)
+  const isFounderReviewed = isFounderStarActive(app.founderReviewedDate)
 
   return (
     <div
-      className="group relative flex flex-col text-left h-full overflow-hidden rounded-xl border border-primary/10 bg-white cursor-pointer transition-all hover:border-primary/40 hover:shadow-lg hover:-translate-y-0.5"
+      className={`group relative flex flex-col text-left h-full overflow-hidden rounded-xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+        isFounderReviewed
+          ? 'border-2 border-amber-400 bg-gradient-to-b from-amber-50 to-white shadow-[0_2px_16px_-4px_rgba(217,119,6,0.35)] hover:border-amber-500 hover:shadow-[0_4px_24px_-4px_rgba(217,119,6,0.45)]'
+          : 'border border-primary/10 bg-white hover:border-primary/40'
+      }`}
       role="button"
       tabIndex={0}
       onClick={() => onOpen(app.slug)}
@@ -143,7 +148,10 @@ export function ToolCard({
         }
       }}
     >
-      <span className={`absolute inset-x-0 top-0 h-1 ${accent.bar}`} aria-hidden="true" />
+      <span
+        className={`absolute inset-x-0 top-0 ${isFounderReviewed ? 'h-1.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500' : `h-1 ${accent.bar}`}`}
+        aria-hidden="true"
+      />
       <span
         className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-primary/5 text-primary/50 transition-colors group-hover:bg-primary/10 group-hover:text-primary"
         aria-hidden="true"
@@ -152,7 +160,7 @@ export function ToolCard({
       </span>
 
       <div className="flex flex-col h-full p-4 pt-5 pr-8">
-        {isFounderStarActive(app.founderReviewedDate) && (
+        {isFounderReviewed && (
           <span
             className="inline-flex items-center gap-1 self-start mb-2.5 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide rounded-full border-2 border-amber-500 bg-amber-100 text-amber-900 shadow-sm"
             title={t('founderReviewedTooltip', lang)}
