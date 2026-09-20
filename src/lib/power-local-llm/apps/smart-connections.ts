@@ -39,5 +39,7 @@ export const app: ToolRecord = {
     ar: 'إضافة بحث دلالي ودردشة لـObsidian',
     ko: 'Obsidian용 의미론적 검색 및 채팅 플러그인',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { noteApp: 'Obsidian', semanticSearch: true, privateDocs: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

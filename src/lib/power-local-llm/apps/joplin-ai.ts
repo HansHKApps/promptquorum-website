@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Joplin AI Agent: Ollama를 통한 검토 기반 Joplin 노트 AI 채팅',
   },
   reviewSlug: 'joplin-ai-agent-review',
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, noteApp: 'Joplin', chatNotes: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

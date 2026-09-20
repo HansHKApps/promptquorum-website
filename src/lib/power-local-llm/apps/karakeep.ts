@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ko: 'AI 기반 자동 태깅, 요약, 전문 검색을 지원하는 셀프호스팅 가능한 북마크·메모 앱',
   },
   reviewSlug: 'karakeep-review', // dedicated PromptQuorum review — added 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, semanticSearch: true },
   lastVerifiedDate: '2026-09-18',
 }

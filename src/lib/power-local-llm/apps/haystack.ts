@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'deepset의 검색 및 RAG 프레임워크',
   },
   reviewSlug: 'haystack-deepset-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, agents: true, dockerDeploy: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

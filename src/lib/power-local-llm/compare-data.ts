@@ -106,6 +106,23 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   headless: 'colHeadless',
   localModels: 'colLocalModels',
   fallback: 'colFallback',
+  visualBuilder: 'colVisualBuilder',
+  localLlm: 'colLocalLlm',
+  agents: 'colAgents',
+  multiVector: 'colMultiVector',
+  dockerDeploy: 'colDockerDeploy',
+  multiFormat: 'colMultiFormat',
+  citations: 'colCitations',
+  embeddedMode: 'colEmbeddedMode',
+  hybridSearch: 'colHybridSearch',
+  metadataFilter: 'colMetadataFilter',
+  clustered: 'colClustered',
+  managedCloud: 'colManagedCloud',
+  noteApp: 'colNoteApp',
+  semanticSearch: 'colSemanticSearch',
+  chatNotes: 'colChatNotes',
+  webSearch: 'colWebSearch',
+  privateDocs: 'colPrivateDocs',
 }
 const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'text-to-speech': 'segTts',
@@ -116,6 +133,11 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'inference-engines': 'segEngines',
   'runtimes-managers': 'segRuntimes',
   'routers-gateways': 'segGateways',
+  'rag-frameworks': 'segRag',
+  'document-chat': 'segDocChat',
+  'vector-databases': 'segVector',
+  'notes-integrations': 'segNotes',
+  'local-search': 'segSearch',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }

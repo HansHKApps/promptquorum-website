@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Obsidian 및 Notion과 동기화되는 개인 AI 제2의 뇌',
   },
   reviewSlug: 'khoj-ai-second-brain-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, multiFormat: true, desktopApp: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

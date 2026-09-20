@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'RAG 프레임워크 / Python 라이브러리 — 맞춤형 개발의 기반',
   },
   reviewSlug: 'llamaindex-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, agents: true, multiVector: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

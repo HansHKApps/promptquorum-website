@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: '벡터 검색과 구조화된 필터링을 결합한 AI·RAG 애플리케이션용 오픈소스 벡터 데이터베이스',
   },
   reviewSlug: 'weaviate-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, hybridSearch: true, metadataFilter: true, clustered: true, managedCloud: true },
   lastVerifiedDate: '2026-09-18',
 }

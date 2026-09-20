@@ -38,5 +38,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'longmemory-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v1.2.3', versionSourceUrl: 'https://github.com/CaviraOSS/LongMemory/releases/tag/v1.2.3' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { agents: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

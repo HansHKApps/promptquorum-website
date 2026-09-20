@@ -32,6 +32,8 @@ export const app: ToolRecord = {
     ar: 'منصة RAG ووكلاء مؤسسية ذاتية الاستضافة تتصل بنماذج DeepSeek وQwen المحلية',
     ko: '로컬 DeepSeek 및 Qwen 모델에 연결되는 자체 호스팅 엔터프라이즈 RAG 및 에이전트 플랫폼',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, agents: true, dockerDeploy: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'maxkb-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: 'arXiv, PubMed, 웹, 자체 문서를 아우르며 로컬 또는 클라우드 LLM으로 다단계 인용 리서치를 수행하는 셀프호스팅 딥리서치 에이전트',
   },
   reviewSlug: 'local-deep-research-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, citations: true, webSearch: true, privateDocs: true },
   lastVerifiedDate: '2026-09-18',
 }

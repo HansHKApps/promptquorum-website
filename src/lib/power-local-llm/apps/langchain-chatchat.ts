@@ -34,5 +34,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'langchain-chatchat-review', // dedicated PromptQuorum review — added 2026-09-18
   pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/chatchat-space/Langchain-Chatchat/releases/tag/v0.3.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'RAG 컴포넌트를 갖춘 시각적 AI 오케스트레이션',
   },
   reviewSlug: 'langflow-visual-ai-orchestration-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { visualBuilder: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

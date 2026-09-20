@@ -38,5 +38,7 @@ export const app: ToolRecord = {
     ko: '파일과 웹페이지를 정리해 노트를 생성해주는 데스크톱 AI 노트 앱으로, 로컬·오픈·클라우드 모델을 자유롭게 선택할 수 있다',
   },
   reviewSlug: 'surf-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, citations: true, desktopApp: true, noteApp: 'Surf' },
   lastVerifiedDate: '2026-09-18',
 }

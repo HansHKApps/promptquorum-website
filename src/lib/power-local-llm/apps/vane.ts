@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ar: 'محرك إجابات ذكاء اصطناعي مستضاف ذاتيًا يجمع بين البحث المحلي ونماذج اللغة المحلية أو السحابية لتقديم إجابات موثقة بمصادرها',
     ko: '로컬 검색과 로컬 또는 클라우드 LLM을 결합해 출처가 명시된 답변을 제공하는 셀프호스팅 AI 답변 엔진',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, dockerDeploy: true, apiServer: true, citations: true, webSearch: true },
   lastVerifiedDate: '2026-09-14',
 }

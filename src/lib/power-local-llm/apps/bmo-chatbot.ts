@@ -33,6 +33,8 @@ export const app: ToolRecord = {
     ar: 'chatbot Obsidian مع نموذج لغوي محلي',
     ko: '로컬 LLM이 있는 Obsidian 챗봇',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, noteApp: 'Obsidian', chatNotes: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'bmo-chatbot-review', // dedicated PromptQuorum review
   pqReview: { date: '2026-09-20', version: '2.3.3', versionSourceUrl: 'https://github.com/longy2k/obsidian-bmo-chatbot/releases/tag/2.3.3' },

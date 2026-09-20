@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '셀프호스팅 개인 지식 어시스턴트',
   },
   reviewSlug: 'quivr-self-hosted-knowledge-assistant-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, multiFormat: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

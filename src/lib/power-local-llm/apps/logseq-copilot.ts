@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'logseq-copilot-review',
   pqReview: { date: '2026-09-20', version: 'v0.7.5', versionSourceUrl: 'https://github.com/jarodise/logseq-copilot/releases/tag/v0.7.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, noteApp: 'Logseq' },
   lastVerifiedDate: '2026-09-12',
 }

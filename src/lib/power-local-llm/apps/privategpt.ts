@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '기업 지향의 완전 오프라인 RAG',
   },
   reviewSlug: 'privategpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, dockerDeploy: true, apiServer: true, multiFormat: true, citations: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
