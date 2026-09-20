@@ -35,10 +35,6 @@ export const app: ToolRecord = {
     ko: '다수 제공업체와 MCP 도구를 지원하는 에이전트 기반 AI 데스크톱 앱',
   },
   reviewSlug: 'cherry-studio-ai-desktop-client-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
-  storeLinks: {
-    github: 'https://github.com/CherryHQ/cherry-studio',
-    web: 'https://cherryai.com',
-  },
   lastVerifiedDate: '2026-09-20', // license, stars, platforms and release status checked against the GitHub repo/releases API; maker statement supplied by the Cherry Studio team by email 2026-09-20
   founderReviewedDate: '2026-09-20', // badge enabled at the operator's direction; the maker supplied the statement and spec corrections by email 2026-09-20
   founder: {
