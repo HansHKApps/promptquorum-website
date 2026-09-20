@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Distributed deployment.** [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document distributed or clustered deployment.',
           '**Docker and self-hosting.** [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document Docker or self-hosted deployment.',
           '**Managed cloud.** [Chroma](/power-local-llm/chroma-review), [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document a hosted cloud offering as well as self-hosting.',
-          '**License.** Chroma, Milvus and Qdrant are Apache-2.0 and Weaviate is BSD-3-Clause — see each tool\'s review for the details.',
+          '**License.** Chroma, Milvus and Qdrant are Apache-2.0 and Weaviate\'s core is BSD-3-Clause, with some gated features under its own Weaviate License — see each tool\'s review for the details.',
         ],
       },
       notesDifferences: {
