@@ -74,11 +74,6 @@ https://www.promptquorum.com/blog/promptquorum-vs-askquorum
 https://www.promptquorum.com/blog/quorum
 https://www.promptquorum.com/blog/research-prompt-optimization-impact
 https://www.promptquorum.com/blog/what-is-ai-consensus-scoring
-https://www.promptquorum.com/compare
-https://www.promptquorum.com/faq
-https://www.promptquorum.com/features
-https://www.promptquorum.com/features/optimization
-https://www.promptquorum.com/features/quorum
 https://www.promptquorum.com/frameworks
 https://www.promptquorum.com/frameworks/ape
 https://www.promptquorum.com/frameworks/co-star
@@ -89,7 +84,6 @@ https://www.promptquorum.com/frameworks/rtf
 https://www.promptquorum.com/frameworks/single-prompt-line
 https://www.promptquorum.com/frameworks/specs
 https://www.promptquorum.com/frameworks/trace
-https://www.promptquorum.com/how-it-works
 https://www.promptquorum.com/local-llms
 https://www.promptquorum.com/local-llms/70b-models-consumer-hardware
 https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026
@@ -558,6 +552,7 @@ https://www.promptquorum.com/power-local-llm/windsurf-review
 https://www.promptquorum.com/power-local-llm/xtts-v2-review
 https://www.promptquorum.com/power-local-llm/ypipe-review
 https://www.promptquorum.com/power-local-llm/zed-review
+https://www.promptquorum.com/pq-apps
 https://www.promptquorum.com/privacy
 https://www.promptquorum.com/prompt-bites
 https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates
