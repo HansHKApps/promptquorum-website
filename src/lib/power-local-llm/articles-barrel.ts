@@ -55,6 +55,7 @@ import { article as a_local_llm_voice_audio_compared } from './articles/local-ll
 import { article as a_local_llm_images_video_compared } from './articles/local-llm-images-video-compared'
 import { article as a_local_llm_run_serve_compared } from './articles/local-llm-run-serve-compared'
 import { article as a_local_llm_knowledge_retrieval_compared } from './articles/local-llm-knowledge-retrieval-compared'
+import { article as a_local_llm_chat_assistants_compared } from './articles/local-llm-chat-assistants-compared'
 import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
@@ -523,6 +524,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-llm-images-video-compared':                a_local_llm_images_video_compared,
   'local-llm-run-serve-compared':                   a_local_llm_run_serve_compared,
   'local-llm-knowledge-retrieval-compared':         a_local_llm_knowledge_retrieval_compared,
+  'local-llm-chat-assistants-compared':             a_local_llm_chat_assistants_compared,
   'coqui-tts-review':                               a_coqui_tts_review,
   'xtts-v2-review':                                 a_xtts_v2_review,
   'bark-tts-review':                                a_bark_tts_review,

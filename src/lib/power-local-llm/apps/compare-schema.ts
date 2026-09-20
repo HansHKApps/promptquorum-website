@@ -270,10 +270,8 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       label: 'Roleplay & companions',
       subs: ['roleplay-companions'],
       attributes: [
-        { key: 'characterCards', label: 'Character cards', kind: 'boolean' },
         { key: 'lorebooks', label: 'Lorebooks / world info', kind: 'boolean' },
         { key: 'groupChats', label: 'Group chats', kind: 'boolean' },
-        { key: 'localBackends', label: 'Connects to local backends', kind: 'boolean' },
       ],
     },
   ],
