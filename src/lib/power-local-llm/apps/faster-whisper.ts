@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'faster-whisper-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.2.1', versionSourceUrl: 'https://github.com/SYSTRAN/faster-whisper/releases/tag/v1.2.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { cpuUsable: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ar: 'منصة ذكاء اصطناعي صوتي مفتوحة المصدر وذاتية الاستضافة — بديل لـVapi وRetell مع إمكانية إحضار نموذجك الخاص',
     ko: '오픈소스 자체 호스팅 음성 AI 플랫폼 — 자체 모델을 사용할 수 있는 Vapi 및 Retell 대안',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { customLlm: true, telephony: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

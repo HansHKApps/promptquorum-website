@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'CPU에서 동작하는 경량 다국어 음성 합성',
   },
   reviewSlug: 'piper-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

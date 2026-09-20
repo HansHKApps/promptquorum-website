@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 Whisper·Parakeet 전사를 위한 일회성 구매 Mac 앱',
   },
   reviewSlug: 'macwhisper-review', // dedicated PromptQuorum review
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { languages: 100, speakerLabels: true },
   lastVerifiedDate: '2026-09-12',
 }

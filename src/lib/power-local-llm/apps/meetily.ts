@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ar: 'مساعد اجتماعات بالذكاء الاصطناعي يعمل محليًا بنسبة 100% ويركز على الخصوصية، مع نسخ صوتي مباشر وفصل المتحدثين وملخصات تعتمد على Ollama',
     ko: '실시간 전사, 화자 분리, Ollama 기반 요약을 지원하는 프라이버시 중심의 100% 로컬 AI 회의 비서',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { realtime: true },
   lastVerifiedDate: '2026-09-18',
 }

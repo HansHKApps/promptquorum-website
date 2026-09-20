@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '음향 효과와 음악을 포함한 생성적 음성 합성',
   },
   reviewSlug: 'bark-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { languages: 13, voiceCloning: false },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
