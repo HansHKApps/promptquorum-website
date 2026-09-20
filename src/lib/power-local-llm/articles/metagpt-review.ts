@@ -41,6 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs from the CLI (`metagpt "Create a 2048 game"`) or as a Python library (`generate_repo(...)`)',
           'Core philosophy: `Code = SOP(Team)` — role-based agents follow a defined Standard Operating Procedure instead of one long single-agent prompt chain',
           'Includes a separate Data Interpreter role for data-analysis and code-execution tasks, alongside the core software-company role set',
+          'Latest tagged release: v0.8.1',
         ],
         updatedDate: '2026-09',
       },

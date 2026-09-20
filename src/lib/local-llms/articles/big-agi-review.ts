@@ -96,6 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Also includes Personas, real-time voice calls, web search with citations, image generation, and PDF import',
           'GitHub repository (github.com/enricoros/big-AGI) shows 7,100+ stars as of September 2026',
           'Hosted version at big-agi.com has a free tier plus an optional Pro plan at $9/month, billed annually ($108/year)',
+          'Latest tagged release: v2.1.0',
         ],
         updatedDate: '2026-09',
       },

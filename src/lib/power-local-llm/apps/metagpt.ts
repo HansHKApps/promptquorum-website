@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '여러 에이전트를 사용한 소프트웨어 회사 시뮬레이션',
   },
   reviewSlug: 'metagpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.8.1', versionSourceUrl: 'https://github.com/FoundationAgents/MetaGPT/releases/tag/v0.8.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
