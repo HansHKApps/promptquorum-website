@@ -397,6 +397,7 @@ https://www.promptquorum.com/power-local-llm/local-llm-code-review-ci-cd
 https://www.promptquorum.com/power-local-llm/local-llm-electricity-cost-balcony-solar
 https://www.promptquorum.com/power-local-llm/local-llm-email-and-calendar-automation
 https://www.promptquorum.com/power-local-llm/local-llm-images-video-compared
+https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared
 https://www.promptquorum.com/power-local-llm/local-llm-personal-knowledge-base-2026
 https://www.promptquorum.com/power-local-llm/local-llm-prompts-for-fiction-writers
 https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared
