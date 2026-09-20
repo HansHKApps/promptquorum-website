@@ -2,6 +2,9 @@
 // Both the EN and locale-prefixed app routes (/de/, /fr/, /ja/, /zh/) call into here so
 // the metadata + JSON-LD + page JSX logic lives in exactly one place.
 
+import { CATEGORY_COMPARE_ARTICLE } from '@/lib/power-local-llm/apps/compare-schema'
+import type { CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
+import { buildCategoryCompareData, getCategoryLinksForReview } from '@/lib/power-local-llm/compare-data'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -413,6 +416,12 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       ? { appName: reviewedApp.name, date: reviewedApp.founderReviewedDate! }
       : undefined
 
+  // Category comparison article: hand its tool-record-derived table data to the client. Tool review:
+  // hand it the category guide + sibling links. Both are undefined for every other article.
+  const compareGroup = (Object.keys(CATEGORY_COMPARE_ARTICLE) as CategoryGroupKey[]).find((g) => CATEGORY_COMPARE_ARTICLE[g] === slug)
+  const compareData = compareGroup ? buildCategoryCompareData(compareGroup) : undefined
+  const categoryLinks = getCategoryLinksForReview(slug) ?? undefined
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -426,7 +435,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} founderReviewed={founderReviewed} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

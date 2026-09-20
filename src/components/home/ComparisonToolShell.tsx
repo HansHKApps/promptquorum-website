@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
+import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
+import { CompareTable } from '@/components/CompareTable'
 import { HomeIcon } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
-import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 
 // Static class strings per category (Tailwind can't see dynamically built names); colors are --cat-* variables.
-const CHIP_CLASS: Record<CategoryGroupKey, { idle: string; active: string }> = {
+const CHIP_CLASS: Record<string, { idle: string; active: string }> = {
   'run-serve': { idle: 'border-cat-run-serve-edge bg-cat-run-serve-tint', active: 'border-cat-run-serve bg-cat-run-serve' },
   'chat-assistants': { idle: 'border-cat-chat-assistants-edge bg-cat-chat-assistants-tint', active: 'border-cat-chat-assistants bg-cat-chat-assistants' },
   'code-development': { idle: 'border-cat-code-development-edge bg-cat-code-development-tint', active: 'border-cat-code-development bg-cat-code-development' },
@@ -16,16 +19,33 @@ const CHIP_CLASS: Record<CategoryGroupKey, { idle: string; active: string }> = {
   'train-operate': { idle: 'border-cat-train-operate-edge bg-cat-train-operate-tint', active: 'border-cat-train-operate bg-cat-train-operate' },
 }
 
+const MAX_TOOLS = 3
+
 /**
- * UI shell only — no comparison-article content exists yet (a separate
- * content commitment, one dedicated comparison article per category, still
- * to be written). The category selector and app-narrowing selector are
- * real and wired to real data (the 7 CATEGORY_GROUPS); the table itself has
- * nothing to render from until that content ships, so it stays a
- * "launching soon" placeholder rather than faking sample rows.
+ * Pick a category, pick up to three tools, compare them side by side. The data comes from the tool
+ * records (built on the server, see compare-data.ts) — the same source as the category articles —
+ * so the tool and the article can never disagree. Categories with no comparison data yet show a
+ * "coming soon" note instead of a table.
  */
-export function ComparisonToolShell() {
+export function ComparisonToolShell({ groups }: { groups: CategoryCompareData[] }) {
   const [category, setCategory] = useState<string | null>(null)
+  const [segmentIdx, setSegmentIdx] = useState(0)
+  const [selected, setSelected] = useState<string[]>([])
+
+  const data = groups.find((g) => g.group === category)
+  const segment = data?.segments[segmentIdx]
+
+  function pickCategory(key: string) {
+    setCategory(key)
+    setSegmentIdx(0)
+    setSelected([])
+  }
+
+  function toggleTool(slug: string) {
+    setSelected((cur) => (cur.includes(slug) ? cur.filter((s) => s !== slug) : cur.length < MAX_TOOLS ? [...cur, slug] : cur))
+  }
+
+  const rows = segment ? segment.rows.filter((r) => selected.includes(r.slug)) : []
 
   return (
     <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
@@ -33,16 +53,14 @@ export function ComparisonToolShell() {
         <HomeIcon name="compare" size={20} />
         Compare Tools
       </h2>
-      <p className="text-sm text-text-secondary mb-4">
-        Comparison tool launching soon — we&apos;re building out category comparisons.
-      </p>
+      <p className="text-sm text-text-secondary mb-4">Pick a category, then choose up to {MAX_TOOLS} tools to compare side by side.</p>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {CATEGORY_GROUPS.map((group) => (
           <button
             key={group.key}
             type="button"
-            onClick={() => setCategory(group.key)}
+            onClick={() => pickCategory(group.key)}
             className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
               category === group.key
                 ? `${CHIP_CLASS[group.key].active} text-primary-foreground`
@@ -54,13 +72,84 @@ export function ComparisonToolShell() {
         ))}
       </div>
 
-      <div className="rounded-lg border border-dashed border-border bg-surface/50 p-8 text-center">
-        <p className="text-sm text-text-muted">
-          {category
-            ? `Comparison tables for "${CATEGORY_GROUP_LABEL[category as keyof typeof CATEGORY_GROUP_LABEL]}" aren't published yet.`
-            : 'Pick a category above to preview its comparison table once it exists.'}
-        </p>
-      </div>
+      {!category && (
+        <div className="rounded-lg border border-dashed border-border bg-surface/50 p-8 text-center">
+          <p className="text-sm text-text-muted">Pick a category above to compare its tools.</p>
+        </div>
+      )}
+
+      {category && !data && (
+        <div className="rounded-lg border border-dashed border-border bg-surface/50 p-8 text-center">
+          <p className="text-sm text-text-muted">
+            The comparison for &ldquo;{CATEGORY_GROUP_LABEL[category as keyof typeof CATEGORY_GROUP_LABEL]}&rdquo; isn&apos;t ready yet.
+          </p>
+        </div>
+      )}
+
+      {data && segment && (
+        <div>
+          {data.segments.length > 1 && (
+            <div role="tablist" className="mb-3 flex flex-wrap gap-2">
+              {data.segments.map((s, i) => (
+                <button
+                  key={s.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === segmentIdx}
+                  onClick={() => {
+                    setSegmentIdx(i)
+                    setSelected([])
+                  }}
+                  className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${
+                    i === segmentIdx ? 'border-primary text-primary bg-white' : 'border-border text-text-secondary'
+                  }`}
+                >
+                  {s.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <fieldset className="mb-4">
+            <legend className="mb-2 text-xs font-bold uppercase tracking-widest text-text-secondary">
+              Choose up to {MAX_TOOLS} ({selected.length} selected)
+            </legend>
+            <div className="flex flex-wrap gap-2">
+              {segment.rows.map((r) => {
+                const on = selected.includes(r.slug)
+                const disabled = !on && selected.length >= MAX_TOOLS
+                return (
+                  <label
+                    key={r.slug}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
+                      on ? 'border-primary bg-white text-primary font-semibold' : 'border-border bg-white text-text-secondary'
+                    } ${disabled ? 'opacity-40' : 'cursor-pointer'}`}
+                  >
+                    <input type="checkbox" className="sr-only" checked={on} disabled={disabled} onChange={() => toggleTool(r.slug)} />
+                    {r.name}
+                  </label>
+                )
+              })}
+            </div>
+          </fieldset>
+
+          {rows.length >= 2 ? (
+            <CompareTable columns={segment.columns} rows={rows} lang="en" />
+          ) : (
+            <div className="rounded-lg border border-dashed border-border bg-surface/50 p-6 text-center">
+              <p className="text-sm text-text-muted">Select at least two tools to see the comparison.</p>
+            </div>
+          )}
+
+          {data.articleSlug && (
+            <p className="mt-3 text-sm">
+              <Link href={`/power-local-llm/${data.articleSlug}`} className="font-bold text-primary hover:underline">
+                Read the full {data.label} comparison →
+              </Link>
+            </p>
+          )}
+        </div>
+      )}
     </div>
   )
 }

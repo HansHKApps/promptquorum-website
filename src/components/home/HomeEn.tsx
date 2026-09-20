@@ -1,14 +1,15 @@
-import { ComparisonToolShell } from "./ComparisonToolShell";
-import { IntentSearchBlock } from "./IntentSearchBlock";
-import { LatestPostsBlock } from "./LatestPostsBlock";
-import { LatestAppsBlock } from "./LatestAppsBlock";
-import { FounderReviewsBlock } from "./FounderReviewsBlock";
-import { TrendingBlock } from "./TrendingBlock";
-import { RecentlyUpdatedBlock } from "./RecentlyUpdatedBlock";
-import { ByTheNumbersBlock } from "./ByTheNumbersBlock";
-import { RecentMentionsBlock } from "./RecentMentionsBlock";
-import { FeedbackBlock } from "./FeedbackBlock";
-import { QuickTipBlock } from "./QuickTipBlock";
+import { ComparisonToolShell } from './ComparisonToolShell'
+import { IntentSearchBlock } from './IntentSearchBlock'
+import { LatestPostsBlock } from './LatestPostsBlock'
+import { LatestAppsBlock } from './LatestAppsBlock'
+import { FounderReviewsBlock } from './FounderReviewsBlock'
+import { TrendingBlock } from './TrendingBlock'
+import { RecentlyUpdatedBlock } from './RecentlyUpdatedBlock'
+import { ByTheNumbersBlock } from './ByTheNumbersBlock'
+import { RecentMentionsBlock } from './RecentMentionsBlock'
+import { FeedbackBlock } from './FeedbackBlock'
+import { QuickTipBlock } from './QuickTipBlock'
+import { getComparableGroups } from '@/lib/power-local-llm/compare-data'
 
 /**
  * The English-only dynamic homepage. Every block surfaces existing content
@@ -34,7 +35,7 @@ export function HomeEn() {
         {/* Tier 1 — large, top of page */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <IntentSearchBlock />
-          <ComparisonToolShell />
+          <ComparisonToolShell groups={getComparableGroups()} />
         </section>
 
         {/* Tier 2 — medium */}
@@ -55,5 +56,5 @@ export function HomeEn() {
         </section>
       </div>
     </main>
-  );
+  )
 }

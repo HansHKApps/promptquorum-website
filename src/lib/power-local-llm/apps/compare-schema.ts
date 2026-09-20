@@ -86,3 +86,17 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
   'images-video': [],
   'train-operate': [],
 }
+
+/**
+ * Slug (in the power-local-llm cluster) of each category's comparison article. `null` = no article
+ * yet, so the homepage tool and review pages simply omit the "full guide" link for that group.
+ */
+export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> = {
+  'voice-audio': 'local-llm-voice-audio-compared',
+  'run-serve': null,
+  'chat-assistants': null,
+  'code-development': null,
+  'knowledge-retrieval': null,
+  'images-video': null,
+  'train-operate': null,
+}
