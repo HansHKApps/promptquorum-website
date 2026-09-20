@@ -33,6 +33,8 @@ export const app: ToolRecord = {
     ar: 'إضافة دردشة نماذج لغوية محلية لـObsidian',
     ko: 'Obsidian용 로컬 LLM 채팅 플러그인',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, noteApp: 'Obsidian' },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'copilot-for-obsidian-review',
   pqReview: { date: '2026-09-20', version: '4.0.9', versionSourceUrl: 'https://github.com/logancyang/obsidian-copilot/releases/tag/4.0.9' },

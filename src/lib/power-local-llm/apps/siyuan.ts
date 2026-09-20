@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: '블록 단위 참조와 AI 에이전트 협업을 기본 지원하는 프라이버시 중심 셀프호스팅 지식 워크스페이스',
   },
   reviewSlug: 'siyuan-review', // dedicated PromptQuorum review — added 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { noteApp: 'SiYuan' },
   lastVerifiedDate: '2026-09-18',
 }

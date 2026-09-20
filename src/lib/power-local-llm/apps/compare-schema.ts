@@ -145,9 +145,71 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
+  // Pilot 4. Tools in several groups (for example Onyx, Karakeep, Surf) appear in each group they belong to.
+  'knowledge-retrieval': [
+    {
+      key: 'rag-frameworks',
+      label: 'RAG frameworks & pipelines',
+      subs: ['rag-frameworks', 'embeddings-indexing'],
+      attributes: [
+        { key: 'visualBuilder', label: 'Visual / drag-and-drop builder', kind: 'boolean' },
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'agents', label: 'Agent support', kind: 'boolean' },
+        { key: 'multiVector', label: 'Several vector stores', kind: 'boolean' },
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'document-chat',
+      label: 'Document & PDF chat',
+      subs: ['document-pdf-chat'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'multiFormat', label: 'Several document formats', kind: 'boolean' },
+        { key: 'citations', label: 'Cites sources', kind: 'boolean' },
+        { key: 'desktopApp', label: 'Desktop app', kind: 'boolean' },
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'vector-databases',
+      label: 'Vector databases',
+      subs: ['vector-databases'],
+      attributes: [
+        { key: 'hybridSearch', label: 'Hybrid search', kind: 'boolean' },
+        { key: 'metadataFilter', label: 'Metadata filtering', kind: 'boolean' },
+        { key: 'clustered', label: 'Distributed / clustered', kind: 'boolean' },
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'managedCloud', label: 'Managed cloud offering', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'notes-integrations',
+      label: 'Notes app integrations',
+      subs: ['notes-integrations'],
+      attributes: [
+        { key: 'noteApp', label: 'Notes app', kind: 'text' },
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'semanticSearch', label: 'Semantic search over notes', kind: 'boolean' },
+        { key: 'chatNotes', label: 'Chat with your notes', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'local-search',
+      label: 'Local search & research',
+      subs: ['local-search'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'webSearch', label: 'Searches the web', kind: 'boolean' },
+        { key: 'privateDocs', label: 'Searches your own files / notes', kind: 'boolean' },
+        { key: 'citations', label: 'Cites sources', kind: 'boolean' },
+      ],
+    },
+  ],
   'chat-assistants': [],
   'code-development': [],
-  'knowledge-retrieval': [],
   'train-operate': [],
 }
 
@@ -160,7 +222,7 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'run-serve': 'local-llm-run-serve-compared',
   'chat-assistants': null,
   'code-development': null,
-  'knowledge-retrieval': null,
+  'knowledge-retrieval': 'local-llm-knowledge-retrieval-compared',
   'images-video': 'local-llm-images-video-compared',
   'train-operate': null,
 }

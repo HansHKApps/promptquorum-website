@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'RAG 기반 자연어 검색으로 자신의 메모를 탐색할 수 있는 오픈소스 셀프호스팅 메모 앱',
   },
   reviewSlug: 'blinko-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { noteApp: 'Blinko' },
   lastVerifiedDate: '2026-09-18',
 }

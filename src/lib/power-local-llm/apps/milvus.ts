@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: '대규모 유사도 검색과 RAG를 위한 고성능 클라우드 네이티브 오픈소스 벡터 데이터베이스',
   },
   reviewSlug: 'milvus-review', // dedicated PromptQuorum review — added 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, hybridSearch: true, metadataFilter: true, clustered: true, managedCloud: true },
   lastVerifiedDate: '2026-09-18',
 }

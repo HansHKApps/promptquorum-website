@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 LLM만으로 완전히 구동 가능한 셀프호스팅 오픈소스 AI 검색 엔진(Perplexity 스타일)',
   },
   reviewSlug: 'farfalle-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, webSearch: true },
   lastVerifiedDate: '2026-09-18',
 }

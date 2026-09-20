@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ar: 'قاعدة بيانات متجهة ومحرك بحث مفتوح المصدر وعالي الأداء، مخصص للاسترجاع القائم على التضمينات وتطبيقات RAG',
     ko: '임베딩 기반 검색과 RAG를 위한 고성능 오픈소스 벡터 데이터베이스 및 검색 엔진',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, hybridSearch: true, metadataFilter: true, clustered: true, managedCloud: true },
   lastVerifiedDate: '2026-09-18',
 }

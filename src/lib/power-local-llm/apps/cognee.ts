@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: '지식 그래프를 통해 에이전트에게 영구적이고 셀프호스팅 가능한 장기 기억을 제공하는 오픈소스 AI 메모리 엔진',
   },
   reviewSlug: 'cognee-review', // dedicated PromptQuorum review — added 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

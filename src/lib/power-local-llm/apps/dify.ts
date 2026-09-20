@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'RAG 및 에이전트 지원을 갖춘 AI 워크플로 빌더',
   },
   reviewSlug: 'dify-ai-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { visualBuilder: true, agents: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

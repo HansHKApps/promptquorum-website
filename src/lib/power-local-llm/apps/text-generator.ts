@@ -33,6 +33,8 @@ export const app: ToolRecord = {
     ar: 'إضافة توليد محتوى لـObsidian',
     ko: 'Obsidian용 콘텐츠 생성 플러그인',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { noteApp: 'Obsidian' },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'text-generator-review', // dedicated PromptQuorum review
 }

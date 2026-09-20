@@ -1165,6 +1165,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
         "url": "/power-local-llm/vane-review",
@@ -1218,17 +1226,9 @@
         "url": "/power-local-llm/h2ogpt-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "librechat-review-2026",
-        "title": "LibreChat Review 2026: Self-Hosted ChatGPT Alternative for Local LLMs",
-        "url": "/power-local-llm/librechat-review-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "Msty": {
@@ -1515,6 +1515,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -1522,7 +1530,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Open Interpreter": {
@@ -3087,6 +3095,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "onyx-review",
         "title": "Onyx Review 2026: Self-Hosted Enterprise Search and RAG (Formerly Danswer)",
         "url": "/power-local-llm/onyx-review",
@@ -3148,17 +3164,9 @@
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "boltai-review",
-        "title": "BoltAI Review 2026: Native Mac AI App, Ollama Ready",
-        "url": "/power-local-llm/boltai-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Quivr": {
@@ -3169,6 +3177,14 @@
         "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
         "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3196,7 +3212,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Khoj": {
@@ -3207,6 +3223,14 @@
         "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
         "url": "/power-local-llm/khoj-ai-second-brain-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3272,18 +3296,10 @@
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "quivr-self-hosted-knowledge-assistant-review",
-        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
-        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Dify": {
     "articles": [
@@ -3293,6 +3309,14 @@
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3358,18 +3382,10 @@
         "url": "/power-local-llm/n8n-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamaindex-rag-framework-review",
-        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
-        "url": "/power-local-llm/llamaindex-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Flowise": {
     "articles": [
@@ -3379,6 +3395,14 @@
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3422,7 +3446,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Langflow": {
@@ -3433,6 +3457,14 @@
         "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3452,7 +3484,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LlamaIndex": {
@@ -3463,6 +3495,14 @@
         "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
         "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3528,17 +3568,9 @@
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-rag-tools",
-        "title": "Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain",
-        "url": "/local-llms/best-local-rag-tools",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "Haystack": {
@@ -3549,6 +3581,14 @@
         "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3616,7 +3656,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "RAGFlow": {
@@ -3627,6 +3667,14 @@
         "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
         "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3670,7 +3718,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "txtai": {
@@ -3681,6 +3729,14 @@
         "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3708,7 +3764,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "LangChain": {
@@ -3719,6 +3775,14 @@
         "title": "LangChain Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/langchain-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3784,17 +3848,9 @@
         "url": "/power-local-llm/n8n-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agent-zero-review",
-        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
-        "url": "/power-local-llm/agent-zero-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
       }
     ],
-    "totalCount": 39,
+    "totalCount": 40,
     "capped": true
   },
   "CrewAI": {
@@ -6479,6 +6535,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "copilot-for-obsidian-review",
         "title": "Copilot for Obsidian Review 2026: Local-Model AI Agent for Your Vault",
         "url": "/power-local-llm/copilot-for-obsidian-review",
@@ -6540,17 +6604,9 @@
         "url": "/power-local-llm/karakeep-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "bmo-chatbot-review",
-        "title": "BMO Chatbot Review 2026: Lightweight Local AI Sidebar for Obsidian",
-        "url": "/power-local-llm/bmo-chatbot-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 14,
     "capped": true
   },
   "Copilot for Obsidian": {
@@ -6561,6 +6617,14 @@
         "title": "Copilot for Obsidian Review 2026: Local-Model AI Agent for Your Vault",
         "url": "/power-local-llm/copilot-for-obsidian-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6626,18 +6690,10 @@
         "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "joplin-ai-agent-review",
-        "title": "Joplin AI Agent Review 2026: Local Models Inside Joplin",
-        "url": "/power-local-llm/joplin-ai-agent-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Text Generator": {
     "articles": [
@@ -6675,6 +6731,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "copilot-for-obsidian-review",
         "title": "Copilot for Obsidian Review 2026: Local-Model AI Agent for Your Vault",
         "url": "/power-local-llm/copilot-for-obsidian-review",
@@ -6690,7 +6754,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "logseq-copilot": {
@@ -6701,6 +6765,14 @@
         "title": "logseq-copilot Review 2026: Local-Model AI Chat Inside Logseq",
         "url": "/power-local-llm/logseq-copilot-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6768,7 +6840,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "BMO Chatbot": {
@@ -6779,6 +6851,14 @@
         "title": "BMO Chatbot Review 2026: Lightweight Local AI Sidebar for Obsidian",
         "url": "/power-local-llm/bmo-chatbot-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6814,7 +6894,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Joplin AI": {
@@ -6825,6 +6905,14 @@
         "title": "Joplin AI Agent Review 2026: Local Models Inside Joplin",
         "url": "/power-local-llm/joplin-ai-agent-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6868,7 +6956,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "BabyAGI": {
@@ -7463,6 +7551,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
         "url": "/power-local-llm/vane-review",
@@ -7486,7 +7582,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "RunAnywhere": {
@@ -7709,6 +7805,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
         "url": "/power-local-llm/vane-review",
@@ -7748,7 +7852,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "PhoneClaw": {
@@ -7974,9 +8078,17 @@
         "url": "/power-local-llm/localai-apexcreator-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LocalAI: Offline AI Chat LLM": {
@@ -8363,6 +8475,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Vane (formerly Perplexica)": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Agentic Inbox": {
     "articles": [
       {
@@ -8433,6 +8559,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "surf-review",
         "title": "Surf Review 2026: Deta's Open-Source AI Notebook",
         "url": "/power-local-llm/surf-review",
@@ -8440,7 +8574,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "candle-vllm": {
@@ -8473,6 +8607,14 @@
         "title": "Chroma Review: Open-Source Vector Database for AI and RAG",
         "url": "/power-local-llm/chroma-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -8538,17 +8680,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "longmemory-review",
-        "title": "LongMemory Review: A Temporal Memory Engine for AI Agents",
-        "url": "/power-local-llm/longmemory-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "claude-code-local": {
@@ -8604,9 +8738,17 @@
         "url": "/power-local-llm/cognee-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "DreamServer": {
@@ -8678,9 +8820,17 @@
         "url": "/power-local-llm/farfalle-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "FunClip": {
@@ -8761,6 +8911,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "blinko-review",
         "title": "Blinko Review 2026: Self-Hosted AI Notes with RAG Search",
         "url": "/power-local-llm/blinko-review",
@@ -8776,7 +8934,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "KServe": {
@@ -8821,6 +8979,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "cognee-review",
         "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
         "url": "/power-local-llm/cognee-review",
@@ -8836,7 +9002,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Langfuse": {
@@ -8973,6 +9139,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "farfalle-review",
         "title": "Farfalle Review: A Self-Hosted, Open-Source AI Search Engine",
         "url": "/power-local-llm/farfalle-review",
@@ -8980,7 +9154,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "LongMemory": {
@@ -8992,9 +9166,17 @@
         "url": "/power-local-llm/longmemory-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "LoRAX": {
@@ -9083,6 +9265,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "qdrant-review",
         "title": "Qdrant Review 2026: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
@@ -9138,7 +9328,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Mission Control": {
@@ -9377,6 +9567,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -9430,17 +9628,9 @@
         "url": "/power-local-llm/blinko-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "claude-code-local-review",
-        "title": "claude-code-local Review 2026: Run Claude Code on a Local Model",
-        "url": "/power-local-llm/claude-code-local-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 176,
+    "totalCount": 177,
     "capped": true
   },
   "Qdrant": {
@@ -9451,6 +9641,14 @@
         "title": "Qdrant Review 2026: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -9516,17 +9714,9 @@
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "txtai-embedded-vector-database-review",
-        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
-        "url": "/power-local-llm/txtai-embedded-vector-database-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "Rapid-MLX": {
@@ -9587,6 +9777,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "baserow-review",
         "title": "Baserow Review 2026: A No-Code Database With a Local-AI Field",
         "url": "/power-local-llm/baserow-review",
@@ -9602,7 +9800,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Shimmy": {
@@ -9644,9 +9842,17 @@
         "url": "/power-local-llm/sidekick-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "SiYuan": {
@@ -9658,9 +9864,17 @@
         "url": "/power-local-llm/siyuan-review",
         "dateModified": "2026-09-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Stable Diffusion WebUI Forge": {
@@ -9702,9 +9916,17 @@
         "url": "/power-local-llm/surf-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "SwiftLM": {
@@ -9823,6 +10045,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-review",
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
@@ -9884,17 +10114,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "longmemory-review",
-        "title": "LongMemory Review: A Temporal Memory Engine for AI Agents",
-        "url": "/power-local-llm/longmemory-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 17,
     "capped": true
   },
   "web-search-mcp": {

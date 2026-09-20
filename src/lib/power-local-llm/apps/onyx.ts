@@ -38,6 +38,8 @@ export const app: ToolRecord = {
     ar: 'مساعد بحث وRAG مؤسسي ذاتي الاستضافة يتصل بأي مزود نماذج، بما في ذلك النماذج المحلية',
     ko: '로컬을 포함한 모든 모델 제공업체에 연결되는 자체 호스팅 엔터프라이즈 검색 및 RAG 어시스턴트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, agents: true, dockerDeploy: true, apiServer: true, webSearch: true, privateDocs: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'onyx-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }
