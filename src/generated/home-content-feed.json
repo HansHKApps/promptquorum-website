@@ -2136,14 +2136,6 @@
     "cluster": "power-local-llm"
   },
   {
-    "title": "The Complete Local LLM Software Directory: 224 Tools to Run AI on Your Own Hardware (2026)",
-    "excerpt": "224 local LLM tools compared across 7 categories, filterable by your hardware. Licenses, links, and real stacks included — find your setup in minutes.",
-    "publishDate": "2026-05-07",
-    "dateModified": "2026-09-13",
-    "url": "/power-local-llm/local-llm-software-directory",
-    "cluster": "power-local-llm"
-  },
-  {
     "title": "AI & Open-Source Software Licenses Explained: MIT vs Apache vs GPL vs AGPL vs Proprietary",
     "excerpt": "Open-source and AI-tool license types explained: permissive, copyleft, AGPL, source-available, and AI-model licenses — what to check before deploying any tool.",
     "publishDate": "2026-09-03",

@@ -10,6 +10,12 @@
 
 export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 0 — Overview & Reference (1)
+  // Kept despite the directory itself moving to /directory 2026-09-20: this
+  // slug string is still used as a "directory feature is live" gate in
+  // src/lib/search/build-search-entries.ts (DIRECTORY_ARTICLE_SLUG check) —
+  // removing it from here would silently drop all 224 directory-tool search
+  // entries. Removed from slugs.ts instead (the postbuild noindex test's
+  // real source of the URLs it checks) — see that file's comment.
   'local-llm-software-directory',
   // AI & open-source license taxonomy (evergreen reference) — 2026-09-03
   'ai-tool-licenses-explained',
