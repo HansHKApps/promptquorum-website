@@ -35,5 +35,11 @@ export const app: ToolRecord = {
     ar: 'إطار عمل مستضاف ذاتيًا لخدمة الاستدلال الموزع بمقياس مراكز البيانات لنشر نماذج لغوية كبيرة عبر وحدات معالجة رسومية وعقد متعددة',
     ko: '여러 GPU와 노드에 걸친 대규모 LLM 배포를 위한 셀프호스팅, 데이터센터급 분산 추론 서빙 프레임워크',
   },
+  // Dynamo ships many model/platform-specific release tags rather than one
+  // canonical version; the article already hedges this correctly as a range
+  // ("v1.4–v1.6") rather than a single pinned number — v1.4.2 (the newest tag
+  // returned by the GitHub API) falls inside that range, so this is a match,
+  // not drift. Recorded as the article's own range string, not the single tag.
+  pqReview: { date: '2026-09-20', version: 'v1.4–v1.6', versionSourceUrl: 'https://github.com/ai-dynamo/dynamo/releases' },
   lastVerifiedDate: '2026-09-18',
 }
