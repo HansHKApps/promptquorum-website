@@ -157,7 +157,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
  */
 export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> = {
   'voice-audio': 'local-llm-voice-audio-compared',
-  'run-serve': null,
+  'run-serve': 'local-llm-run-serve-compared',
   'chat-assistants': null,
   'code-development': null,
   'knowledge-retrieval': null,
