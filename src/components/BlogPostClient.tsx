@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
@@ -195,6 +196,8 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
           </div>
           <LanguageSwitcher />
         </div>
+
+        <ClusterBanner cluster="blog" />
 
         {/* Article Header */}
         <article className="prose prose-invert max-w-none">

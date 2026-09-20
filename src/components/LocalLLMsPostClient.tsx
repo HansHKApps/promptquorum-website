@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect, Fragment } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
@@ -856,6 +857,8 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs }
           </div>
           <LanguageSwitcher initialLang={lang} />
         </div>
+
+        <ClusterBanner cluster="local-llms" />
 
         {/* Article header */}
         <div className="mb-10">
