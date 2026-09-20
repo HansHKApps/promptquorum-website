@@ -9,6 +9,13 @@ export interface SearchEntry {
   tags: string[]
   url: string
   lang: string
+  /**
+   * Optional content-type discriminator, added for the homepage's
+   * Intent-Guided Search block (Find an app / Learn) — every push into
+   * buildAllSearchEntries() sets 'article' except the directory-tools loop,
+   * which sets 'tool'. Additive: no existing consumer reads this today.
+   */
+  contentType?: 'article' | 'tool'
 }
 
 export const SUPPORTED_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const

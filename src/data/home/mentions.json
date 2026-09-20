@@ -1,0 +1,4 @@
+{
+  "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR50+ filtered). Empty until the first real export is dropped in. Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt' -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions.",
+  "mentions": []
+}
