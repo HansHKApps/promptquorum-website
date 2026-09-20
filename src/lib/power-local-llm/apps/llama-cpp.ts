@@ -34,5 +34,11 @@ export const app: ToolRecord = {
     ko: '대부분의 다른 도구 기반에 있는 C++ 엔진, Apple Silicon 포함 어디서나 동작',
   },
   reviewSlug: 'llama-cpp-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  // llama.cpp ships two parallel tag schemes: frequent build-numbered tags
+  // (e.g. b11007, several per week) and a separate, slower formal release
+  // line. This records the formal release (GitHub's own "Latest" marker),
+  // matching what the article now states — not the build-numbered tag,
+  // which changes too often to track as a single "version".
+  pqReview: { date: '2026-09-20', version: 'v0.4.1', versionSourceUrl: 'https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1' },
+  lastVerifiedDate: '2026-09-20',
 }
