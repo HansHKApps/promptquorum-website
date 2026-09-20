@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '에이전트 워크플로를 위한 오케스트레이션 프레임워크',
   },
   reviewSlug: 'openclaw-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  pqReview: { date: '2026-09-20', version: 'v2026.9.5', versionSourceUrl: 'https://github.com/openclaw/openclaw/releases/tag/v2026.9.5' },
+  lastVerifiedDate: '2026-09-20',
 }
