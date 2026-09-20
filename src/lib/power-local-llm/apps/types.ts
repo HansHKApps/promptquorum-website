@@ -71,18 +71,24 @@ export interface ToolRecordHardware {
   variesByModel?: boolean
 }
 
+export type FounderText = string | Partial<Record<Language, string>>
+export type FounderParagraphs = string[] | Partial<Record<Language, string[]>>
+
 export interface ToolRecordFounder {
   who: Partial<Record<Language, string>>
-  why: string
-  best: string
-  limits: string
+  // why/best/limits/fullQuote accept a plain string (English only) or a
+  // per-language map; read them through founderText()/founderParagraphs() in
+  // ../founderText so a missing locale falls back to English.
+  why: FounderText
+  best?: FounderText
+  limits?: FounderText
   providedDate: string
   // Optional full-length quote (one string per paragraph), verbatim from the
   // founder/maintainer, for tools that have a dedicated "From the Maker"
   // section in their review article. Rendered as an expandable, scrollable
   // block in ToolDrawer so it doesn't force the drawer to grow — collapsed
   // by default, `why`/`best`/`limits` above already give the short version.
-  fullQuote?: string[]
+  fullQuote?: FounderParagraphs
 }
 
 export interface ToolRecordReview {

@@ -2855,12 +2855,12 @@ quickAnswerTop: {
 **If a domain, URL, or `site.com`-style reference appears anywhere in reader-facing prose, it must be a markdown link — never bare text.** A reader cannot tap or click a plain-text domain name; it reads as a link but does nothing, which is a broken affordance, not a stylistic choice.
 
 **Wrong:**
-- ❌ "Cherry Studio (cherry-ai.com) is a free, open-source desktop app."
+- ❌ "Cherry Studio (cherryai.com) is a free, open-source desktop app."
 - ❌ "See msty.ai/go for details."
 - ❌ "Available at github.com/mindverse/Second-Me."
 
 **Correct:**
-- ✅ "Cherry Studio ([cherry-ai.com](https://cherry-ai.com)) is a free, open-source desktop app."
+- ✅ "Cherry Studio ([cherryai.com](https://cherryai.com)) is a free, open-source desktop app."
 - ✅ "See [msty.ai/go](https://msty.ai/go) for details."
 - ✅ "Available at [github.com/mindverse/Second-Me](https://github.com/mindverse/Second-Me)."
 
@@ -2869,10 +2869,10 @@ quickAnswerTop: {
 **Internal links**: use a relative path, not the full domain — `[Best GPUs 2026](/local-llms/best-gpus-local-llm)`, not `[Best GPUs 2026](https://promptquorum.com/local-llms/best-gpus-local-llm)`.
 
 **External links**: use the full `https://` URL as the link target, with the visible label kept short — the bare domain or `domain.com/path` a reader would recognize, not the full URL string as the label:
-- ✅ `[cherry-ai.com](https://cherry-ai.com)`
-- ❌ `[https://cherry-ai.com](https://cherry-ai.com)` (redundant, harder to scan)
+- ✅ `[cherryai.com](https://cherryai.com)`
+- ❌ `[https://cherryai.com](https://cherryai.com)` (redundant, harder to scan)
 
-**Why this matters:** A bare domain name in prose looks identical to a link at a glance — readers try to tap it and nothing happens. This was found live on `cherry-studio-ai-desktop-client-2026.ts`'s TL;DR ("Cherry Studio (cherry-ai.com)") and is very likely present across many older articles written before this rule existed.
+**Why this matters:** A bare domain name in prose looks identical to a link at a glance — readers try to tap it and nothing happens. This was found live on `cherry-studio-ai-desktop-client-2026.ts`'s TL;DR ("Cherry Studio (cherryai.com)") and is very likely present across many older articles written before this rule existed.
 
 #### Compliance Checklist
 

@@ -16,6 +16,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
+import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { featureReviewUrl } from './reviewLinks'
@@ -198,7 +199,7 @@ export function ToolCard({
             {/* Prefer his own verbatim words when we have them; `why` is a
                 PromptQuorum paraphrase and shouldn't be shown in quotation
                 marks as if it were a direct quote. */}
-            &ldquo;{app.founder.fullQuote ? app.founder.fullQuote[0] : app.founder.why}&rdquo; <span className="not-italic font-medium">— {t('fromTheMaker', lang)}</span>
+            &ldquo;{founderParagraphs(app.founder.fullQuote, lang)?.[0] ?? founderText(app.founder.why, lang)}&rdquo; <span className="not-italic font-medium">— {t('fromTheMaker', lang)}</span>
           </p>
         )}
 
