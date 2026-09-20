@@ -35,6 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requires an NVIDIA GPU, Ampere generation or newer, with CUDA 11.8+; Linux only',
           'Supports adapters trained with PEFT or Ludwig, loaded from HuggingFace Hub, Predibase, or the local filesystem',
           'Over 3,800 GitHub stars as of this review',
+          'Latest tagged release: v0.12.1 — development has continued past the v0.8.x changelog entries below, including under Rubrik ownership',
         ],
         updatedDate: '2026-09',
       },

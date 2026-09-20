@@ -24,6 +24,16 @@
  * Too slow/rate-limited for the build — run on demand or on a schedule.
  * Never edits app files; only writes a report.
  *
+ * KNOWN GOTCHA (found 2026-09-20, predibase/lorax): the GitHub API's
+ * /releases/latest endpoint returns whichever release is flagged "Latest" in
+ * the repo's own settings — a maintainer can pin an OLD release as "Latest"
+ * independent of chronological or semver order (lorax had lorax-0.4.0 from
+ * Jan 2024 pinned as "Latest" while v0.12.1, Nov 2026, was the real newest
+ * release). This script trusts the API's answer, so a MATCH/DRIFT result can
+ * itself be wrong. If a DRIFT or MATCH result looks implausible (e.g. older
+ * than a date already cited in the article, or the repo clearly has recent
+ * activity), cross-check the repo's full /releases page before trusting it.
+ *
  * Usage:
  *   node scripts/check-app-versions.mjs [--slug=<slug>]
  *
