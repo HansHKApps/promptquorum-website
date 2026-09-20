@@ -39,7 +39,7 @@ jobs:
             CHILD_SITEMAPS=$(echo "$SITEMAP_XML" | grep -oP '(?<=<loc>)[^<]+')
             for child in $CHILD_SITEMAPS; do
               echo "  📥 Fetching child sitemap: $child"
-              curl -s "$child" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/current_urls_raw.txt
+              curl -s "$child" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/current_urls_raw.txt || true  # empty child sitemap (e.g. retired blog) makes grep exit 1
             done
           else
             echo "ℹ️ /sitemap.xml is a flat urlset."
