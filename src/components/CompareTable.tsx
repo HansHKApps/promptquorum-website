@@ -27,6 +27,9 @@ export function CompareTable({ columns, rows, localePrefix = '' }: CompareTableP
                 {c.label}
               </th>
             ))}
+            <th scope="col" className="px-3 py-2 font-bold text-text-primary">
+              Review
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +49,15 @@ export function CompareTable({ columns, rows, localePrefix = '' }: CompareTableP
                   {r.cells[c.key] ?? '—'}
                 </td>
               ))}
+              <td className="whitespace-nowrap px-3 py-2">
+                {r.reviewSlug ? (
+                  <Link href={`${localePrefix}/power-local-llm/${r.reviewSlug}`} className="font-semibold text-primary hover:underline">
+                    Read review →
+                  </Link>
+                ) : (
+                  <span className="text-text-muted">—</span>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
