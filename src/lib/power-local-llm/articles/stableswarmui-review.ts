@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Review (2026)](/power-local-llm/stable-diffusion-review) — the underlying model family SwarmUI runs, including license terms and VRAM needs by version.',
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — broader comparison of local image models and UIs against cloud tools like Midjourney and Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — comprehensive local AI software directory for all platforms.',
+          '[Local LLM Software Directory 2026](/directory) — comprehensive local AI software directory for all platforms.',
         ],
       },
     },
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende Modellfamilie, die SwarmUI ausführt, inklusive Lizenzbedingungen und VRAM-Bedarf je Version.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — breiterer Vergleich lokaler Bildmodelle und Oberflächen mit Cloud-Tools wie Midjourney und Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes Verzeichnis lokaler KI-Software für alle Plattformen.',
+          '[Local LLM Software Directory 2026](/de/directory) — umfassendes Verzeichnis lokaler KI-Software für alle Plattformen.',
         ],
       },
     },
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Stable Diffusion (2026)](/es/power-local-llm/stable-diffusion-review) — la familia de modelos subyacente que ejecuta SwarmUI, incluyendo términos de licencia y necesidades de VRAM por versión.',
           '[Generación local de imágenes con IA vs. la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — comparación más amplia de modelos e interfaces locales de imagen frente a herramientas en la nube como Midjourney y Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — directorio completo de software de IA local para todas las plataformas.',
+          '[Local LLM Software Directory 2026](/es/directory) — directorio completo de software de IA local para todas las plataformas.',
         ],
       },
     },
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Avis Stable Diffusion (2026)](/fr/power-local-llm/stable-diffusion-review) — la famille de modèles sous-jacente exécutée par SwarmUI, y compris les conditions de licence et les besoins en VRAM par version.',
           '[Génération locale d\'images IA vs. cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — comparaison plus large des modèles et interfaces d\'images locaux face à des outils cloud comme Midjourney et Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — répertoire complet de logiciels d\'IA locale pour toutes les plateformes.',
+          '[Local LLM Software Directory 2026](/fr/directory) — répertoire complet de logiciels d\'IA locale pour toutes les plateformes.',
         ],
       },
     },
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusionレビュー(2026)](/ja/power-local-llm/stable-diffusion-review) — SwarmUIが実行する基盤モデルファミリーについて、バージョンごとのライセンス条件とVRAM要件を含めて解説。',
           '[ローカルAI画像生成 vs. クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — MidjourneyやAdobe Fireflyのようなクラウドツールと比較した、ローカル画像モデルとUIのより広い比較。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — すべてのプラットフォーム向けの包括的なローカルAIソフトウェアディレクトリ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — すべてのプラットフォーム向けの包括的なローカルAIソフトウェアディレクトリ。',
         ],
       },
     },
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Stable Diffusion (2026)](/pt/power-local-llm/stable-diffusion-review) — a família de modelos subjacente que o SwarmUI executa, incluindo termos de licença e necessidades de VRAM por versão.',
           '[Geração local de imagens com IA vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — comparação mais ampla de modelos e interfaces locais de imagem contra ferramentas em nuvem como Midjourney e Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de software de IA local para todas as plataformas.',
+          '[Local LLM Software Directory 2026](/pt/directory) — diretório completo de software de IA local para todas as plataformas.',
         ],
       },
     },
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Stable Diffusion (2026)](/ar/power-local-llm/stable-diffusion-review) — عائلة النماذج الأساسية التي يشغّلها SwarmUI، بما في ذلك شروط الترخيص واحتياجات VRAM حسب الإصدار.',
           '[توليد الصور المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أوسع للنماذج والواجهات المحلية للصور مقابل أدوات سحابية مثل Midjourney وAdobe Firefly.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل لبرامج الذكاء الاصطناعي المحلية لجميع المنصات.',
+          '[Local LLM Software Directory 2026](/ar/directory) — دليل شامل لبرامج الذكاء الاصطناعي المحلية لجميع المنصات.',
         ],
       },
     },
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion评测(2026)](/zh/power-local-llm/stable-diffusion-review) — SwarmUI所运行的底层模型系列,包括各版本的许可证条款和VRAM需求。',
           '[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud) — 将本地图像模型和界面与Midjourney、Adobe Firefly等云端工具进行更全面的比较。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 涵盖所有平台的全面本地AI软件目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 涵盖所有平台的全面本地AI软件目录。',
         ],
       },
     },
@@ -2849,7 +2849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion 리뷰(2026)](/ko/power-local-llm/stable-diffusion-review) — SwarmUI가 실행하는 기반 모델 계열, 버전별 라이선스 조건과 VRAM 요구 사항 포함.',
           '[로컬 AI 이미지 생성 대 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — Midjourney, Adobe Firefly 같은 클라우드 도구와 로컬 이미지 모델·UI를 더 폭넓게 비교.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 아우르는 종합 로컬 AI 소프트웨어 디렉터리.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 모든 플랫폼을 아우르는 종합 로컬 AI 소프트웨어 디렉터리.',
         ],
       },
     },

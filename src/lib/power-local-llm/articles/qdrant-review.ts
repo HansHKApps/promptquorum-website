@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud is a separate, optional managed hosting offering on AWS, GCP, or Azure from the same company — not required to use the open-source software',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Qdrant\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Qdrant compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Qdrant\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Qdrant compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. Other Vector Databases and RAG Tools',
-        content: 'Qdrant is one of several tools in the vector-database and RAG-infrastructure space. Here is how it sits next to other options — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Qdrant vs. Milvus comparison](#qdrant-vs-milvus) above for the closest head-to-head.',
+        content: 'Qdrant is one of several tools in the vector-database and RAG-infrastructure space. Here is how it sits next to other options — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Qdrant vs. Milvus comparison](#qdrant-vs-milvus) above for the closest head-to-head.',
         items: [
           '**[Milvus](/power-local-llm/milvus-review)** — another open-source, self-hostable vector database built in Go and C++, aimed at large-scale production deployments; see the dedicated comparison section above.',
           '**[txtai](/power-local-llm/txtai-embedded-vector-database-review)** — an embedded vector search and RAG toolkit that runs in-process rather than as a separate server, a lighter-weight option for smaller datasets.',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/power-local-llm/haystack-deepset-rag-framework-review)** — a RAG and search framework that, like LangChain and LlamaIndex, sits above the vector-database layer and can use Qdrant as a backing store.',
           'See also PromptQuorum\'s own [Pinecone vs. Weaviate vs. Qdrant vs. Chroma comparison](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) for a wider four-way look at the vector-database landscape.',
         ],
-        note: 'This is not an exhaustive list of vector databases — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Qdrant\'s own directory entry.',
+        note: 'This is not an exhaustive list of vector databases — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Qdrant\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Qdrant\'s directory entry alongside other vector databases and RAG tools covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Qdrant\'s directory entry alongside other vector databases and RAG tools covered above.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — a wider four-way comparison of vector databases if you are evaluating more than just Qdrant and Milvus.',
           '[LangChain Review](/power-local-llm/langchain-review) — the orchestration framework most commonly paired with Qdrant to build a complete RAG pipeline.',
           '[LlamaIndex RAG Framework Review](/power-local-llm/llamaindex-rag-framework-review) — a data-framework alternative to LangChain, also compatible with Qdrant as a vector store.',
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud ist ein separates, optionales verwaltetes Hosting-Angebot auf AWS, GCP oder Azure desselben Unternehmens — nicht erforderlich, um die Open-Source-Software zu nutzen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Qdrants Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Qdrant im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Qdrants Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Qdrant im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. andere Vektordatenbanken und RAG-Tools',
-        content: 'Qdrant ist eines von mehreren Tools im Bereich Vektordatenbanken und RAG-Infrastruktur. So schneidet es im Vergleich zu anderen Optionen ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den dedizierten [Qdrant-vs.-Milvus-Vergleich](#qdrant-vs-milvus) oben für den direktesten Vergleich.',
+        content: 'Qdrant ist eines von mehreren Tools im Bereich Vektordatenbanken und RAG-Infrastruktur. So schneidet es im Vergleich zu anderen Optionen ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den dedizierten [Qdrant-vs.-Milvus-Vergleich](#qdrant-vs-milvus) oben für den direktesten Vergleich.',
         items: [
           '**[Milvus](/de/power-local-llm/milvus-review)** — eine weitere quelloffene, selbst hostbare Vektordatenbank, gebaut in Go und C++, ausgerichtet auf großangelegte Produktions-Deployments; siehe den dedizierten Vergleichsabschnitt oben.',
           '**[txtai](/de/power-local-llm/txtai-embedded-vector-database-review)** — ein eingebettetes Vektorsuch- und RAG-Toolkit, das in-process statt als separater Server läuft, eine leichtgewichtigere Option für kleinere Datensätze.',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/de/power-local-llm/haystack-deepset-rag-framework-review)** — ein RAG- und Such-Framework, das, wie LangChain und LlamaIndex, oberhalb der Vektordatenbank-Schicht sitzt und Qdrant als Backing Store nutzen kann.',
           'Siehe auch PromptQuorums eigenen [Vergleich Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) für einen breiteren Vierweg-Blick auf die Vektordatenbank-Landschaft.',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Vektordatenbanken — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Qdrants eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Vektordatenbanken — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Qdrants eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Qdrants Verzeichniseintrag neben anderen oben behandelten Vektordatenbanken und RAG-Tools.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Qdrants Verzeichniseintrag neben anderen oben behandelten Vektordatenbanken und RAG-Tools.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/de/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — ein breiterer Vierweg-Vergleich von Vektordatenbanken, falls Sie mehr als nur Qdrant und Milvus evaluieren.',
           '[LangChain Review](/de/power-local-llm/langchain-review) — das Orchestrierungs-Framework, das am häufigsten mit Qdrant kombiniert wird, um eine vollständige RAG-Pipeline zu bauen.',
           '[LlamaIndex RAG-Framework Review](/de/power-local-llm/llamaindex-rag-framework-review) — eine Datenframework-Alternative zu LangChain, ebenfalls kompatibel mit Qdrant als Vector Store.',
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud est une offre d\'hébergement managée séparée et optionnelle sur AWS, GCP ou Azure proposée par la même entreprise — non requise pour utiliser le logiciel open source',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi à la fiche de Qdrant dans le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Qdrant se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
+          { type: 'note', text: 'Cette review est le complément approfondi à la fiche de Qdrant dans le [répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Qdrant se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
         ],
       },
       overview: {
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. autres bases de données vectorielles et outils RAG',
-        content: 'Qdrant est l\'un des nombreux outils dans l\'espace des bases de données vectorielles et de l\'infrastructure RAG. Voici comment il se positionne face aux autres options — consultez le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée Qdrant vs. Milvus](#qdrant-vs-milvus) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Qdrant est l\'un des nombreux outils dans l\'espace des bases de données vectorielles et de l\'infrastructure RAG. Voici comment il se positionne face aux autres options — consultez le [répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet, et la [comparaison dédiée Qdrant vs. Milvus](#qdrant-vs-milvus) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Milvus](/fr/power-local-llm/milvus-review)** — une autre base de données vectorielle open source et auto-hébergeable, construite en Go et C++, visant les déploiements de production à grande échelle ; voir la section de comparaison dédiée ci-dessus.',
           '**[txtai](/fr/power-local-llm/txtai-embedded-vector-database-review)** — un kit de recherche vectorielle et RAG embarqué, exécuté en process plutôt que comme serveur séparé, une option plus légère pour des jeux de données plus petits.',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/fr/power-local-llm/haystack-deepset-rag-framework-review)** — un framework RAG et de recherche qui, comme LangChain et LlamaIndex, se situe au-dessus de la couche base de données vectorielle et peut utiliser Qdrant comme stockage back-end.',
           'Voir aussi la propre [comparaison Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) de PromptQuorum pour un regard plus large à quatre sur le paysage des bases de données vectorielles.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive de bases de données vectorielles — consultez le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Qdrant.',
+        note: 'Ceci n\'est pas une liste exhaustive de bases de données vectorielles — consultez le [répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Qdrant.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locaux auquel appartient cet article, incluant la fiche de Qdrant aux côtés d\'autres bases de données vectorielles et outils RAG couverts ci-dessus.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locaux auquel appartient cet article, incluant la fiche de Qdrant aux côtés d\'autres bases de données vectorielles et outils RAG couverts ci-dessus.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/fr/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — une comparaison plus large à quatre bases de données vectorielles si vous évaluez plus que Qdrant et Milvus.',
           '[LangChain Review](/fr/power-local-llm/langchain-review) — le framework d\'orchestration le plus couramment associé à Qdrant pour construire un pipeline RAG complet.',
           '[LlamaIndex RAG Framework Review](/fr/power-local-llm/llamaindex-rag-framework-review) — une alternative de framework de données à LangChain, également compatible avec Qdrant comme vector store.',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloudは同社が提供するAWS・GCP・Azure上の別立ての任意の管理ホスティングサービス——オープンソースソフトウェアの利用に必須ではない',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるQdrantのエントリーの詳細版です。他の数十のローカルAIツールとの比較は、そちらのページで一目で確認できます。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるQdrantのエントリーの詳細版です。他の数十のローカルAIツールとの比較は、そちらのページで一目で確認できます。' },
         ],
       },
       overview: {
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. 他のベクトルデータベース・RAGツール',
-        content: 'Qdrantは、ベクトルデータベース・RAGインフラの分野における複数のツールの1つです。他の選択肢と比べた位置づけは以下のとおりです——完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちについては上の[Qdrant vs. Milvus比較](#qdrant-vs-milvus)を参照してください。',
+        content: 'Qdrantは、ベクトルデータベース・RAGインフラの分野における複数のツールの1つです。他の選択肢と比べた位置づけは以下のとおりです——完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も近い一騎打ちについては上の[Qdrant vs. Milvus比較](#qdrant-vs-milvus)を参照してください。',
         items: [
           '**[Milvus](/ja/power-local-llm/milvus-review)** — GoとC++で構築された、大規模なプロダクションデプロイを狙う別のオープンソースかつセルフホスト可能なベクトルデータベース。詳細は上の専用比較セクションを参照。',
           '**[txtai](/ja/power-local-llm/txtai-embedded-vector-database-review)** — 別サーバーではなくインプロセスで動作する組み込み型のベクトル検索・RAGツールキット。小規模データセット向けのより軽量な選択肢。',
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/ja/power-local-llm/haystack-deepset-rag-framework-review)** — LangChainやLlamaIndexと同様にベクトルデータベース層の上に位置し、Qdrantをバッキングストアとして使えるRAG・検索フレームワーク。',
           'ベクトルデータベースの分野をより広く4つ横並びで見たい場合は、PromptQuorum独自の[Pinecone vs. Weaviate vs. Qdrant vs. Chroma比較](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)も参照してください。',
         ],
-        note: 'これはベクトルデータベースの網羅的なリストではありません——Qdrant自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはベクトルデータベースの網羅的なリストではありません——Qdrant自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。上で扱った他のベクトルデータベースやRAGツールと並ぶQdrantのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。上で扱った他のベクトルデータベースやRAGツールと並ぶQdrantのディレクトリエントリーを含む。',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/ja/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — QdrantとMilvus以外も評価したい場合に向けた、より広い4つ横並びのベクトルデータベース比較。',
           '[LangChainレビュー](/ja/power-local-llm/langchain-review) — 完全なRAGパイプラインを構築する際にQdrantと最もよく組み合わされるオーケストレーションフレームワーク。',
           '[LlamaIndex RAGフレームワークレビュー](/ja/power-local-llm/llamaindex-rag-framework-review) — LangChainの代替となるデータフレームワークで、Qdrantともベクトルストアとして互換性がある。',
@@ -1329,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud是同一家公司在AWS、GCP或Azure上提供的独立、可选托管服务——使用开源软件并非必须使用它',
         ],
         callouts: [
-          { type: 'note', text: '本文是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Qdrant条目的深度补充——该页面可让你一目了然地看到Qdrant与其他数十种本地AI工具的对比。' },
+          { type: 'note', text: '本文是[本地LLM软件目录](/zh/directory)中Qdrant条目的深度补充——该页面可让你一目了然地看到Qdrant与其他数十种本地AI工具的对比。' },
         ],
       },
       overview: {
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. 其他向量数据库和RAG工具',
-        content: 'Qdrant是向量数据库和RAG基础设施领域众多工具之一。以下是它与其他选项相比的定位——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的正面对比请见上文的[Qdrant vs. Milvus对比](#qdrant-vs-milvus)。',
+        content: 'Qdrant是向量数据库和RAG基础设施领域众多工具之一。以下是它与其他选项相比的定位——完整目录请见[本地LLM软件目录](/zh/directory)，最接近的正面对比请见上文的[Qdrant vs. Milvus对比](#qdrant-vs-milvus)。',
         items: [
           '**[Milvus](/zh/power-local-llm/milvus-review)** — 另一款用Go和C++构建的开源、可自托管向量数据库，面向大规模生产部署；详见上文的专门对比部分。',
           '**[txtai](/zh/power-local-llm/txtai-embedded-vector-database-review)** — 一款以进程内方式运行、而非作为独立服务器运行的嵌入式向量搜索与RAG工具包，是面向较小数据集的更轻量选项。',
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack（deepset）](/zh/power-local-llm/haystack-deepset-rag-framework-review)** — 一款与LangChain和LlamaIndex类似、位于向量数据库层之上的RAG与搜索框架，可将Qdrant用作后端存储。',
           '另见PromptQuorum自己的[Pinecone vs. Weaviate vs. Qdrant vs. Chroma对比](/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)，从更广的四方视角审视向量数据库格局。',
         ],
-        note: '这并非向量数据库的详尽清单——完整且定期更新的目录（包括Qdrant自己的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非向量数据库的详尽清单——完整且定期更新的目录（包括Qdrant自己的目录条目）请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1531,7 +1531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Qdrant的目录条目，与上文提到的其他向量数据库和RAG工具并列。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Qdrant的目录条目，与上文提到的其他向量数据库和RAG工具并列。',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/zh/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — 如果你评估的不止Qdrant和Milvus，这是一篇更全面的四方向量数据库对比。',
           '[LangChain评测](/zh/power-local-llm/langchain-review) — 构建完整RAG流水线时最常与Qdrant搭配使用的编排框架。',
           '[LlamaIndex RAG框架评测](/zh/power-local-llm/llamaindex-rag-framework-review) — 可替代LangChain的数据框架，同样兼容将Qdrant用作向量存储。',
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud es una oferta de hosting gestionado independiente y opcional en AWS, GCP o Azure de la misma empresa — no es necesaria para usar el software open source',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Qdrant en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Qdrant con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Qdrant en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Qdrant con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. otras bases de datos vectoriales y herramientas RAG',
-        content: 'Qdrant es una de varias herramientas en el espacio de bases de datos vectoriales e infraestructura RAG. Así se sitúa frente a otras opciones — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Qdrant vs. Milvus](#qdrant-vs-milvus) arriba para el enfrentamiento más directo.',
+        content: 'Qdrant es una de varias herramientas en el espacio de bases de datos vectoriales e infraestructura RAG. Así se sitúa frente a otras opciones — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo, y la [comparación dedicada Qdrant vs. Milvus](#qdrant-vs-milvus) arriba para el enfrentamiento más directo.',
         items: [
           '**[Milvus](/es/power-local-llm/milvus-review)** — otra base de datos vectorial open source y autoalojable, construida en Go y C++, orientada a despliegues de producción a gran escala; ver la sección de comparación dedicada arriba.',
           '**[txtai](/es/power-local-llm/txtai-embedded-vector-database-review)** — un kit de búsqueda vectorial y RAG embebido que se ejecuta en proceso en lugar de como servidor separado, una opción más ligera para conjuntos de datos más pequeños.',
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/es/power-local-llm/haystack-deepset-rag-framework-review)** — un framework de RAG y búsqueda que, al igual que LangChain y LlamaIndex, se sitúa por encima de la capa de base de datos vectorial y puede usar Qdrant como almacén de backing.',
           'Consulta también la propia [comparación Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) de PromptQuorum para una mirada más amplia a cuatro bandas sobre el panorama de bases de datos vectoriales.',
         ],
-        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de Qdrant en el directorio.',
+        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de Qdrant en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Qdrant en el directorio junto a otras bases de datos vectoriales y herramientas RAG cubiertas arriba.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Qdrant en el directorio junto a otras bases de datos vectoriales y herramientas RAG cubiertas arriba.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/es/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — una comparación más amplia a cuatro bandas de bases de datos vectoriales si estás evaluando más que solo Qdrant y Milvus.',
           '[LangChain Review](/es/power-local-llm/langchain-review) — el framework de orquestación más comúnmente combinado con Qdrant para construir un pipeline RAG completo.',
           '[LlamaIndex RAG Framework Review](/es/power-local-llm/llamaindex-rag-framework-review) — una alternativa de framework de datos a LangChain, también compatible con Qdrant como vector store.',
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Qdrant Cloud é uma oferta de hospedagem gerenciada separada e opcional na AWS, GCP ou Azure da mesma empresa — não é necessária para usar o software open source',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Qdrant no [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Qdrant com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Qdrant no [diretório de software de LLM local](/pt/directory) — veja essa página para comparar rapidamente o Qdrant com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -2092,7 +2092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. outros bancos de dados vetoriais e ferramentas de RAG',
-        content: 'O Qdrant é uma entre várias ferramentas no espaço de bancos de dados vetoriais e infraestrutura de RAG. Veja como ele se posiciona em relação a outras opções — confira o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Qdrant vs. Milvus](#qdrant-vs-milvus) acima para o confronto mais direto.',
+        content: 'O Qdrant é uma entre várias ferramentas no espaço de bancos de dados vetoriais e infraestrutura de RAG. Veja como ele se posiciona em relação a outras opções — confira o [diretório de software de LLM local](/pt/directory) para o catálogo completo, e a [comparação dedicada Qdrant vs. Milvus](#qdrant-vs-milvus) acima para o confronto mais direto.',
         items: [
           '**[Milvus](/pt/power-local-llm/milvus-review)** — outro banco de dados vetorial open source e auto-hospedável, construído em Go e C++, voltado para implantações de produção em grande escala; veja a seção de comparação dedicada acima.',
           '**[txtai](/pt/power-local-llm/txtai-embedded-vector-database-review)** — um kit de busca vetorial e RAG embutido que roda em processo em vez de como servidor separado, uma opção mais leve para conjuntos de dados menores.',
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (deepset)](/pt/power-local-llm/haystack-deepset-rag-framework-review)** — um framework de RAG e busca que, assim como LangChain e LlamaIndex, fica acima da camada de banco de dados vetorial e pode usar o Qdrant como armazenamento de backend.',
           'Veja também a própria [comparação Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) da PromptQuorum para um olhar mais amplo, com quatro opções lado a lado, sobre o cenário de bancos de dados vetoriais.',
         ],
-        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais — confira o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Qdrant no diretório.',
+        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais — confira o [diretório de software de LLM local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Qdrant no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Qdrant no diretório junto com outros bancos de dados vetoriais e ferramentas de RAG cobertos acima.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Qdrant no diretório junto com outros bancos de dados vetoriais e ferramentas de RAG cobertos acima.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/pt/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — uma comparação mais ampla, com quatro opções lado a lado, de bancos de dados vetoriais, caso você esteja avaliando mais do que apenas Qdrant e Milvus.',
           '[LangChain Review](/pt/power-local-llm/langchain-review) — o framework de orquestração mais comumente combinado com o Qdrant para construir um pipeline RAG completo.',
           '[LlamaIndex RAG Framework Review](/pt/power-local-llm/llamaindex-rag-framework-review) — uma alternativa de framework de dados ao LangChain, também compatível com o Qdrant como vector store.',
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud خدمة استضافة مُدارة منفصلة واختيارية على AWS أو GCP أو Azure من الشركة نفسها — وليست مطلوبة لاستخدام البرنامج مفتوح المصدر',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمل المعمّق لمدخل Qdrant في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Qdrant بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمل المعمّق لمدخل Qdrant في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Qdrant بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant مقابل قواعد بيانات متجهة وأدوات RAG أخرى',
-        content: 'Qdrant واحدة من عدة أدوات في مجال قواعد البيانات المتجهة وبنية RAG التحتية. إليك موقعها مقارنة بالخيارات الأخرى — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، و[المقارنة المخصصة بين Qdrant وMilvus](#qdrant-vs-milvus) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'Qdrant واحدة من عدة أدوات في مجال قواعد البيانات المتجهة وبنية RAG التحتية. إليك موقعها مقارنة بالخيارات الأخرى — راجع [دليل برامج LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، و[المقارنة المخصصة بين Qdrant وMilvus](#qdrant-vs-milvus) أعلاه لأقرب مواجهة مباشرة.',
         items: [
           '**[Milvus](/ar/power-local-llm/milvus-review)** — قاعدة بيانات متجهة أخرى مفتوحة المصدر وقابلة للاستضافة الذاتية، مبنية بلغتَي Go وC++، وموجهة نحو عمليات نشر إنتاجية واسعة النطاق؛ راجع قسم المقارنة المخصص أعلاه.',
           '**[txtai](/ar/power-local-llm/txtai-embedded-vector-database-review)** — مجموعة أدوات مدمجة للبحث المتجهي وRAG تعمل داخل العملية بدلًا من العمل كخادم منفصل، وهي خيار أخف لمجموعات البيانات الأصغر.',
@@ -2415,7 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack (من deepset)](/ar/power-local-llm/haystack-deepset-rag-framework-review)** — إطار عمل للبحث وRAG يقع، مثل LangChain وLlamaIndex، فوق طبقة قاعدة البيانات المتجهة، ويمكنه استخدام Qdrant كمخزن دعم (backing store).',
           'راجع أيضًا [مقارنة Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma](/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) الخاصة بـ PromptQuorum لنظرة أوسع رباعية على مشهد قواعد البيانات المتجهة.',
         ],
-        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهة — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Qdrant نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهة — راجع [دليل برامج LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Qdrant نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2473,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Qdrant في الدليل إلى جانب قواعد بيانات متجهة وأدوات RAG أخرى تناولناها أعلاه.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Qdrant في الدليل إلى جانب قواعد بيانات متجهة وأدوات RAG أخرى تناولناها أعلاه.',
           '[مقارنة Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma](/ar/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — مقارنة رباعية أوسع لقواعد البيانات المتجهة إذا كنت تقيّم أكثر من Qdrant وMilvus فقط.',
           '[مراجعة LangChain](/ar/power-local-llm/langchain-review) — إطار عمل التنسيق (orchestration) الأكثر شيوعًا الذي يُستخدم مع Qdrant لبناء خط RAG كامل.',
           '[مراجعة إطار عمل LlamaIndex RAG](/ar/power-local-llm/llamaindex-rag-framework-review) — بديل من فئة أطر بيانات لـ LangChain، متوافق أيضًا مع Qdrant كـ vector store.',
@@ -2585,7 +2585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant Cloud는 동일한 회사가 AWS·GCP·Azure에서 제공하는 별도의 선택형 관리형 호스팅 서비스이며 — 오픈소스 소프트웨어를 사용하는 데 필수는 아닙니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Qdrant 항목의 심층 보완 자료입니다 — 다른 수십 가지 로컬 AI 도구와 Qdrant를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Qdrant 항목의 심층 보완 자료입니다 — 다른 수십 가지 로컬 AI 도구와 Qdrant를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2720,7 +2720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'qdrant-competitors',
         title: 'Qdrant vs. 다른 벡터 데이터베이스 및 RAG 도구',
-        content: 'Qdrant는 벡터 데이터베이스 및 RAG 인프라 분야의 여러 도구 중 하나입니다. 다른 옵션과 비교했을 때 Qdrant의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 정면 비교는 위의 [Qdrant vs. Milvus 비교](#qdrant-vs-milvus)를 참고하세요.',
+        content: 'Qdrant는 벡터 데이터베이스 및 RAG 인프라 분야의 여러 도구 중 하나입니다. 다른 옵션과 비교했을 때 Qdrant의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 정면 비교는 위의 [Qdrant vs. Milvus 비교](#qdrant-vs-milvus)를 참고하세요.',
         items: [
           '**[Milvus](/ko/power-local-llm/milvus-review)** — Go와 C++로 구축된, 대규모 프로덕션 배포를 목표로 하는 또 다른 오픈소스 셀프 호스팅 벡터 데이터베이스입니다. 자세한 내용은 위의 전용 비교 섹션을 참고하세요.',
           '**[txtai](/ko/power-local-llm/txtai-embedded-vector-database-review)** — 별도 서버가 아닌 인프로세스로 실행되는 내장형 벡터 검색 및 RAG 툴킷으로, 더 작은 데이터셋을 위한 더 가벼운 옵션입니다.',
@@ -2729,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Haystack(deepset)](/ko/power-local-llm/haystack-deepset-rag-framework-review)** — LangChain, LlamaIndex와 마찬가지로 벡터 데이터베이스 계층 위에 위치하며 Qdrant를 백엔드 스토어로 사용할 수 있는 RAG 및 검색 프레임워크입니다.',
           'Qdrant와 Milvus 외에 더 폭넓게 살펴보고 싶다면 PromptQuorum 자체의 [Pinecone vs. Weaviate vs. Qdrant vs. Chroma 비교](/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)도 참고하세요.',
         ],
-        note: '이는 벡터 데이터베이스의 모든 것을 망라한 목록이 아닙니다 — Qdrant 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 벡터 데이터베이스의 모든 것을 망라한 목록이 아닙니다 — Qdrant 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2787,7 +2787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 벡터 데이터베이스 및 RAG 도구와 함께 Qdrant의 디렉터리 항목도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 벡터 데이터베이스 및 RAG 도구와 함께 Qdrant의 디렉터리 항목도 포함합니다.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/ko/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — Qdrant와 Milvus 이상을 평가하고 있다면 참고할 만한, 더 폭넓은 4자 비교 벡터 데이터베이스 자료.',
           '[LangChain 리뷰](/ko/power-local-llm/langchain-review) — 완전한 RAG 파이프라인을 구축할 때 Qdrant와 가장 흔히 결합되는 오케스트레이션 프레임워크.',
           '[LlamaIndex RAG 프레임워크 리뷰](/ko/power-local-llm/llamaindex-rag-framework-review) — LangChain의 대안 데이터 프레임워크로, Qdrant를 vector store로 사용하는 것도 지원합니다.',

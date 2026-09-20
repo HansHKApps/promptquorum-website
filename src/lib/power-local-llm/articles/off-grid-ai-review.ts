@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Platform': '**macOS**', 'Where to get it': '[DMG download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Notes': 'Requires macOS 14+ on Apple Silicon (M1 or later). Desktop stable version 0.0.43.' },
           { 'Platform': '**Windows**', 'Where to get it': '[Setup .exe download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Notes': 'Desktop stable version 0.0.43, same release channel as macOS.' },
         ],
-        note: 'This review is a companion to Off Grid AI\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists it alongside other mobile and cross-platform local-AI apps. All four links above were checked directly for this review and returned a live page at the time of writing; version numbers and pricing can change between releases — confirm the current specifics on [getoffgridai.co](https://getoffgridai.co) before installing.',
+        note: 'This review is a companion to Off Grid AI\'s entry in the [Local LLM Software Directory](/directory), which lists it alongside other mobile and cross-platform local-AI apps. All four links above were checked directly for this review and returned a live page at the time of writing; version numbers and pricing can change between releases — confirm the current specifics on [getoffgridai.co](https://getoffgridai.co) before installing.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         content: [
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
           '[Private LLM Review](/power-local-llm/private-llm-review) — a paid, closed-source Apple-only alternative with 140+ curated models.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — a free, open-source mobile-only alternative.',
           '[Enclave AI Review](/power-local-llm/enclave-ai-review) — another free mobile local-AI app to compare model libraries.',
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': '**macOS**', 'Wo man es bekommt': '[DMG-Download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Hinweise': 'Benötigt macOS 14+ auf Apple Silicon (M1 oder neuer). Desktop-Stabilversion 0.0.43.' },
           { 'Plattform': '**Windows**', 'Wo man es bekommt': '[Setup-.exe-Download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Hinweise': 'Desktop-Stabilversion 0.0.43, gleicher Release-Kanal wie macOS.' },
         ],
-        note: 'Dieser Test ist ein Begleitartikel zum Eintrag von Off Grid AI im [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory), das die App neben anderen mobilen und plattformübergreifenden lokalen KI-Apps listet. Alle vier Links oben wurden für diesen Test direkt geprüft und zeigten zum Zeitpunkt der Erstellung eine aktive Seite; Versionsnummern und Preise können sich zwischen Releases ändern — prüfen Sie die aktuellen Angaben auf [getoffgridai.co](https://getoffgridai.co), bevor Sie installieren.',
+        note: 'Dieser Test ist ein Begleitartikel zum Eintrag von Off Grid AI im [Verzeichnis lokaler LLM-Software](/de/directory), das die App neben anderen mobilen und plattformübergreifenden lokalen KI-Apps listet. Alle vier Links oben wurden für diesen Test direkt geprüft und zeigten zum Zeitpunkt der Erstellung eine aktive Seite; Versionsnummern und Preise können sich zwischen Releases ändern — prüfen Sie die aktuellen Angaben auf [getoffgridai.co](https://getoffgridai.co), bevor Sie installieren.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         content: [
-          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
+          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
           '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine bezahlte, closed-source, nur-Apple-Alternative mit 140+ kuratierten Modellen.',
           '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, nur-mobile Alternative.',
           '[Enclave AI Test](/de/power-local-llm/enclave-ai-review) — eine weitere kostenlose mobile lokale KI-App zum Vergleich der Modellbibliotheken.',
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plateforme': '**macOS**', 'Où l\'obtenir': '[Téléchargement DMG](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Remarques': 'Nécessite macOS 14+ sur Apple Silicon (M1 ou plus récent). Version stable bureau 0.0.43.' },
           { 'Plateforme': '**Windows**', 'Où l\'obtenir': '[Téléchargement du .exe d\'installation](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Remarques': 'Version stable bureau 0.0.43, même canal de version que macOS.' },
         ],
-        note: 'Cet avis est un complément à la fiche d\'Off Grid AI dans le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory), qui le liste aux côtés d\'autres applications mobiles et multiplateformes d\'IA locale. Les quatre liens ci-dessus ont été vérifiés directement pour cet avis et menaient vers une page active au moment de la rédaction ; les numéros de version et les prix peuvent changer entre les versions — vérifiez les détails actuels sur [getoffgridai.co](https://getoffgridai.co) avant d\'installer.',
+        note: 'Cet avis est un complément à la fiche d\'Off Grid AI dans le [répertoire des logiciels LLM locaux](/fr/directory), qui le liste aux côtés d\'autres applications mobiles et multiplateformes d\'IA locale. Les quatre liens ci-dessus ont été vérifiés directement pour cet avis et menaient vers une page active au moment de la rédaction ; les numéros de version et les prix peuvent changer entre les versions — vérifiez les détails actuels sur [getoffgridai.co](https://getoffgridai.co) avant d\'installer.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         content: [
-          '[L\'annuaire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un annuaire plus large d\'outils LLM locaux sur toutes les plateformes.',
+          '[L\'annuaire complet des logiciels LLM locaux](/fr/directory) — un annuaire plus large d\'outils LLM locaux sur toutes les plateformes.',
           '[Avis Private LLM](/fr/power-local-llm/private-llm-review) — une alternative payante, closed source, Apple uniquement, avec 140+ modèles organisés.',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — une alternative gratuite, open source, mobile uniquement.',
           '[Avis Enclave AI](/fr/power-local-llm/enclave-ai-review) — une autre application mobile locale gratuite pour comparer les bibliothèques de modèles.',
@@ -1016,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '**macOS**', 'Dónde conseguirla': '[Descarga en DMG](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Notas': 'Requiere macOS 14+ en Apple Silicon (M1 o posterior). Versión estable de escritorio 0.0.43.' },
           { 'Plataforma': '**Windows**', 'Dónde conseguirla': '[Descarga del instalador .exe](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Notas': 'Versión estable de escritorio 0.0.43, mismo canal de versiones que macOS.' },
         ],
-        note: 'Esta reseña es un complemento a la ficha de Off Grid AI en el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory), que la lista junto a otras apps móviles y multiplataforma de IA local. Los cuatro enlaces anteriores se verificaron directamente para esta reseña y mostraron una página activa al momento de escribirla; los números de versión y precios pueden cambiar entre versiones — confirma los detalles actuales en [getoffgridai.co](https://getoffgridai.co) antes de instalar.',
+        note: 'Esta reseña es un complemento a la ficha de Off Grid AI en el [directorio de software LLM local](/es/directory), que la lista junto a otras apps móviles y multiplataforma de IA local. Los cuatro enlaces anteriores se verificaron directamente para esta reseña y mostraron una página activa al momento de escribirla; los números de versión y precios pueden cambiar entre versiones — confirma los detalles actuales en [getoffgridai.co](https://getoffgridai.co) antes de instalar.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         content: [
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de LLM local en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas de LLM local en todas las plataformas.',
           '[Reseña de Private LLM](/es/power-local-llm/private-llm-review) — una alternativa de pago, de código cerrado, solo para Apple, con 140+ modelos curados.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — una alternativa gratuita, de código abierto, solo móvil.',
           '[Reseña de Enclave AI](/es/power-local-llm/enclave-ai-review) — otra app móvil local gratuita para comparar bibliotecas de modelos.',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '**macOS**', 'Onde conseguir': '[Download em DMG](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Notas': 'Requer macOS 14+ em Apple Silicon (M1 ou mais recente). Versão estável de desktop 0.0.43.' },
           { 'Plataforma': '**Windows**', 'Onde conseguir': '[Download do instalador .exe](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Notas': 'Versão estável de desktop 0.0.43, mesmo canal de lançamento que o macOS.' },
         ],
-        note: 'Esta análise é um complemento à ficha do Off Grid AI no [diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory), que o lista ao lado de outros apps móveis e multiplataforma de IA local. Os quatro links acima foram verificados diretamente para esta análise e mostraram uma página ativa no momento da redação; números de versão e preços podem mudar entre lançamentos — confirme os detalhes atuais em [getoffgridai.co](https://getoffgridai.co) antes de instalar.',
+        note: 'Esta análise é um complemento à ficha do Off Grid AI no [diretório de software LLM local](/pt/directory), que o lista ao lado de outros apps móveis e multiplataforma de IA local. Os quatro links acima foram verificados diretamente para esta análise e mostraram uma página ativa no momento da redação; números de versão e preços podem mudar entre lançamentos — confirme os detalhes atuais em [getoffgridai.co](https://getoffgridai.co) antes de instalar.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         content: [
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em todas as plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em todas as plataformas.',
           '[Análise do Private LLM](/pt/power-local-llm/private-llm-review) — uma alternativa paga, de código fechado, apenas para Apple, com 140+ modelos curados.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — uma alternativa gratuita, de código aberto, apenas móvel.',
           '[Análise do Enclave AI](/pt/power-local-llm/enclave-ai-review) — outro app móvel local gratuito para comparar bibliotecas de modelos.',
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラットフォーム': '**macOS**', '入手先': '[DMGダウンロード](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', '注記': 'Apple Silicon（M1以降）搭載macOS 14以降が必要。デスクトップ安定版0.0.43。' },
           { 'プラットフォーム': '**Windows**', '入手先': '[セットアップ.exeダウンロード](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', '注記': 'デスクトップ安定版0.0.43、macOSと同じリリースチャンネル。' },
         ],
-        note: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)におけるOff Grid AIの掲載情報を補完するもので、他のモバイル・クロスプラットフォームのローカルAIアプリと並んで掲載されています。上記4つのリンクはすべて本レビューのために直接確認され、執筆時点で有効なページが表示されました。バージョン番号や価格はリリース間で変わる可能性があるため、インストール前に[getoffgridai.co](https://getoffgridai.co)で最新情報を確認してください。',
+        note: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるOff Grid AIの掲載情報を補完するもので、他のモバイル・クロスプラットフォームのローカルAIアプリと並んで掲載されています。上記4つのリンクはすべて本レビューのために直接確認され、執筆時点で有効なページが表示されました。バージョン番号や価格はリリース間で変わる可能性があるため、インストール前に[getoffgridai.co](https://getoffgridai.co)で最新情報を確認してください。',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         content: [
-          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォームにわたるローカルLLMツールのより広範なディレクトリ。',
+          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/directory) — 全プラットフォームにわたるローカルLLMツールのより広範なディレクトリ。',
           '[Private LLMレビュー](/ja/power-local-llm/private-llm-review) — 140以上の厳選モデルを持つ有料・クローズドソースのApple専用アプリ。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — 無料・オープンソースのモバイル専用アプリ。',
           '[Enclave AIレビュー](/ja/power-local-llm/enclave-ai-review) — モデルライブラリを比較するためのもう一つの無料モバイルローカルAIアプリ。',
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '平台': '**macOS**', '获取地址': '[DMG下载](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', '备注': '需要搭载Apple Silicon（M1或更新）的macOS 14以上。桌面稳定版0.0.43。' },
           { '平台': '**Windows**', '获取地址': '[安装程序.exe下载](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', '备注': '桌面稳定版0.0.43，与macOS使用相同的发布渠道。' },
         ],
-        note: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Off Grid AI条目的配套文章，该目录将其与其他移动端及跨平台本地AI应用一并列出。上述四个链接均已为本评测直接核实，撰写时均可正常打开；版本号和价格可能在不同发布版本间变化——安装前请在[getoffgridai.co](https://getoffgridai.co)确认最新信息。',
+        note: '本评测是[本地LLM软件目录](/zh/directory)中Off Grid AI条目的配套文章，该目录将其与其他移动端及跨平台本地AI应用一并列出。上述四个链接均已为本评测直接核实，撰写时均可正常打开；版本号和价格可能在不同发布版本间变化——安装前请在[getoffgridai.co](https://getoffgridai.co)确认最新信息。',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         content: [
-          '[完整的本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 涵盖所有平台的更广泛本地LLM工具目录。',
+          '[完整的本地LLM软件目录](/zh/directory) — 涵盖所有平台的更广泛本地LLM工具目录。',
           '[Private LLM评测](/zh/power-local-llm/private-llm-review) — 一款拥有140多个精选模型的付费闭源Apple专属替代品。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — 一款免费开源的仅限移动端替代品。',
           '[Enclave AI评测](/zh/power-local-llm/enclave-ai-review) — 另一款免费移动端本地AI应用，可用于对比模型库。',
@@ -2208,7 +2208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': '**macOS**', 'أين تحصل عليه': '[تنزيل DMG](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'ملاحظات': 'يتطلب macOS 14 فأعلى على Apple Silicon (M1 أو أحدث). إصدار سطح المكتب المستقر 0.0.43.' },
           { 'المنصة': '**Windows**', 'أين تحصل عليه': '[تنزيل ملف التثبيت .exe](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'ملاحظات': 'إصدار سطح المكتب المستقر 0.0.43، ونفس قناة الإصدار الخاصة بـ macOS.' },
         ],
-        note: 'هذه المراجعة مكمّلة لقيد Off Grid AI في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory)، الذي يدرجه إلى جانب تطبيقات أخرى للجوال وعابرة للمنصات للذكاء الاصطناعي المحلي. جميع الروابط الأربعة أعلاه تم التحقق منها مباشرة لهذه المراجعة وأظهرت صفحة نشطة وقت الكتابة؛ قد تتغير أرقام الإصدارات والأسعار بين الإصدارات — تحقق من التفاصيل الحالية على [getoffgridai.co](https://getoffgridai.co) قبل التثبيت.',
+        note: 'هذه المراجعة مكمّلة لقيد Off Grid AI في [دليل برمجيات LLM المحلية](/ar/directory)، الذي يدرجه إلى جانب تطبيقات أخرى للجوال وعابرة للمنصات للذكاء الاصطناعي المحلي. جميع الروابط الأربعة أعلاه تم التحقق منها مباشرة لهذه المراجعة وأظهرت صفحة نشطة وقت الكتابة؛ قد تتغير أرقام الإصدارات والأسعار بين الإصدارات — تحقق من التفاصيل الحالية على [getoffgridai.co](https://getoffgridai.co) قبل التثبيت.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         content: [
-          '[الدليل الشامل لبرمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات النماذج اللغوية المحلية عبر جميع المنصات.',
+          '[الدليل الشامل لبرمجيات النماذج اللغوية المحلية](/ar/directory) — دليل أوسع لأدوات النماذج اللغوية المحلية عبر جميع المنصات.',
           '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — بديل مدفوع ومغلق المصدر خاص بـ Apple فقط مع أكثر من 140 نموذجًا منتقى.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — بديل مجاني ومفتوح المصدر للجوال فقط.',
           '[مراجعة Enclave AI](/ar/power-local-llm/enclave-ai-review) — تطبيق آخر مجاني للجوال للذكاء الاصطناعي المحلي لمقارنة مكتبات النماذج.',
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플랫폼': '**macOS**', '다운로드 위치': '[DMG 다운로드](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', '참고': 'Apple Silicon(M1 이상) 탑재 macOS 14 이상 필요. 데스크톱 안정 버전 0.0.43.' },
           { '플랫폼': '**Windows**', '다운로드 위치': '[설치용 .exe 다운로드](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', '참고': '데스크톱 안정 버전 0.0.43, macOS와 동일한 릴리스 채널.' },
         ],
-        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Off Grid AI 항목의 보완 자료로, 다른 모바일 및 크로스플랫폼 로컬 AI 앱들과 함께 나열되어 있습니다. 위 네 개 링크는 모두 이 리뷰를 위해 직접 확인되었으며 작성 시점에 정상적으로 작동하는 페이지를 보여주었습니다. 버전 번호와 가격은 릴리스마다 변경될 수 있으므로 설치 전 [getoffgridai.co](https://getoffgridai.co)에서 최신 정보를 확인하세요.',
+        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Off Grid AI 항목의 보완 자료로, 다른 모바일 및 크로스플랫폼 로컬 AI 앱들과 함께 나열되어 있습니다. 위 네 개 링크는 모두 이 리뷰를 위해 직접 확인되었으며 작성 시점에 정상적으로 작동하는 페이지를 보여주었습니다. 버전 번호와 가격은 릴리스마다 변경될 수 있으므로 설치 전 [getoffgridai.co](https://getoffgridai.co)에서 최신 정보를 확인하세요.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -2679,7 +2679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         content: [
-          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼에 걸친 더 광범위한 로컬 LLM 도구 디렉터리.',
+          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 모든 플랫폼에 걸친 더 광범위한 로컬 LLM 도구 디렉터리.',
           '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — 140개 이상의 큐레이션 모델을 갖춘 유료, 폐쇄형 소스, Apple 전용 대안.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — 무료, 오픈소스, 모바일 전용 대안.',
           '[Enclave AI 리뷰](/ko/power-local-llm/enclave-ai-review) — 모델 라이브러리를 비교할 수 있는 또 다른 무료 모바일 로컬 AI 앱.',

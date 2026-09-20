@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by [kwaroran](https://github.com/kwaroran) as an open-source community project',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to RisuAI\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how RisuAI compares at a glance to dozens of other roleplay and local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to RisuAI\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how RisuAI compares at a glance to dozens of other roleplay and local AI tools.' },
         ],
       },
       overview: {
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developer: maintained on GitHub by [kwaroran](https://github.com/kwaroran) as an open-source project, with community contributions tracked in the repository\'s issues and pull requests',
           'Canonical repository: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), GPL-3.0 licensed per the repository\'s license metadata',
         ],
-        note: 'Because RisuAI is a frontend rather than a model, the content quality, speed, and any content restrictions in a given conversation come from the connected backend and model, not from RisuAI\'s own code. See the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for how RisuAI\'s backend options compare with other roleplay frontends.',
+        note: 'Because RisuAI is a frontend rather than a model, the content quality, speed, and any content restrictions in a given conversation come from the connected backend and model, not from RisuAI\'s own code. See the [Local LLM Software Directory](https://www.promptquorum.com/directory) for how RisuAI\'s backend options compare with other roleplay frontends.',
       },
       features: {
         id: 'what-risuai-does',
@@ -182,13 +182,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'Competitors and Alternatives',
-        content: 'RisuAI sits in the same roleplay and character-chat client segment as several other frontends. Here is how it compares with the closest alternatives — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog of local AI tools.',
+        content: 'RisuAI sits in the same roleplay and character-chat client segment as several other frontends. Here is how it compares with the closest alternatives — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full catalog of local AI tools.',
         items: [
           '**[SillyTavern](/local-llms/sillytavern-review)** — the closest direct comparison: a free, self-hosted-only roleplay frontend with a wider list of directly supported inference backends and a large community extension ecosystem, at the cost of no official hosted web app.',
           '**[Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026)** — a closed-source desktop app (Windows/Mac) built for point-and-click simplicity, with a built-in Character Hub, and an optional paid cloud tier — a lower-configuration alternative to RisuAI\'s open-source, backend-agnostic approach.',
           '**[Agnai](/power-local-llm/agnai-review)** — another open-source roleplay and character-chat client covering similar ground, worth comparing directly on license terms, hosted-vs-self-hosted options, and backend support.',
         ],
-        note: 'This is not an exhaustive list of roleplay frontends — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including RisuAI\'s own directory entry.',
+        note: 'This is not an exhaustive list of roleplay frontends — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full, regularly updated catalog, including RisuAI\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Backyard AI Review](/power-local-llm/backyard-ai-review-local-roleplay-2026) — a closed-source, point-and-click desktop alternative with a built-in character library.',
           '[Agnai Review](/power-local-llm/agnai-review) — another open-source roleplay and character-chat client for comparison.',
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — model-level guidance that applies to any local roleplay frontend, RisuAI included.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including RisuAI\'s directory entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including RisuAI\'s directory entry.',
         ],
       },
     },
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [kwaroran](https://github.com/kwaroran) als quelloffenes Community-Projekt',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu RisuAIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie sich RisuAI mit Dutzenden anderer Rollenspiel- und lokaler KI-Tools vergleicht.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu RisuAIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) — dort sehen Sie auf einen Blick, wie sich RisuAI mit Dutzenden anderer Rollenspiel- und lokaler KI-Tools vergleicht.' },
         ],
       },
       overview: {
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickler: auf GitHub von [kwaroran](https://github.com/kwaroran) als quelloffenes Projekt gepflegt, mit Community-Beiträgen, die in den Issues und Pull Requests des Repositorys erfasst werden',
           'Kanonisches Repository: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), GPL-3.0-lizenziert laut den Lizenzmetadaten des Repositorys',
         ],
-        note: 'Da RisuAI ein Frontend und kein Modell ist, hängen Inhaltsqualität, Geschwindigkeit und etwaige Inhaltsbeschränkungen eines Gesprächs vom verbundenen Backend und Modell ab, nicht vom eigenen Code von RisuAI. Siehe das [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für einen Vergleich der Backend-Optionen von RisuAI mit anderen Rollenspiel-Frontends.',
+        note: 'Da RisuAI ein Frontend und kein Modell ist, hängen Inhaltsqualität, Geschwindigkeit und etwaige Inhaltsbeschränkungen eines Gesprächs vom verbundenen Backend und Modell ab, nicht vom eigenen Code von RisuAI. Siehe das [Local LLM Software Directory](https://www.promptquorum.com/directory) für einen Vergleich der Backend-Optionen von RisuAI mit anderen Rollenspiel-Frontends.',
       },
       features: {
         id: 'what-risuai-does',
@@ -428,13 +428,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'RisuAI befindet sich im selben Rollenspiel- und Charakter-Chat-Client-Segment wie mehrere andere Frontends. So schneidet es im Vergleich zu den nächstliegenden Alternativen ab — siehe das [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog lokaler KI-Tools.',
+        content: 'RisuAI befindet sich im selben Rollenspiel- und Charakter-Chat-Client-Segment wie mehrere andere Frontends. So schneidet es im Vergleich zu den nächstliegenden Alternativen ab — siehe das [Local LLM Software Directory](https://www.promptquorum.com/directory) für den vollständigen Katalog lokaler KI-Tools.',
         items: [
           '**[SillyTavern](/de/local-llms/sillytavern-review)** — der direkteste Vergleich: ein kostenloses, nur selbst gehostetes Rollenspiel-Frontend mit einer breiteren Liste direkt unterstützter Inferenz-Backends und einem großen Community-Erweiterungs-Ökosystem, allerdings ohne offizielle gehostete Web-App.',
           '**[Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026)** — eine Closed-Source-Desktop-App (Windows/Mac) für Point-and-Click-Einfachheit, mit eingebautem Character Hub und optionaler kostenpflichtiger Cloud-Stufe — eine Alternative mit weniger Konfigurationsaufwand zu RisuAIs quelloffenem, backend-agnostischem Ansatz.',
           '**[Agnai](/de/power-local-llm/agnai-review)** — ein weiterer quelloffener Rollenspiel- und Charakter-Chat-Client mit ähnlichem Funktionsumfang, den direkten Vergleich hinsichtlich Lizenzbedingungen, gehosteten vs. selbst gehosteten Optionen und Backend-Unterstützung wert.',
         ],
-        note: 'Dies ist keine erschöpfende Liste an Rollenspiel-Frontends — siehe das [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich RisuAIs eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste an Rollenspiel-Frontends — siehe das [Local LLM Software Directory](https://www.promptquorum.com/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich RisuAIs eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Backyard AI Review](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine Closed-Source, Point-and-Click-Desktop-Alternative mit eingebauter Charakterbibliothek.',
           '[Agnai Review](/de/power-local-llm/agnai-review) — ein weiterer quelloffener Rollenspiel- und Charakter-Chat-Client zum Vergleich.',
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — modellseitige Hinweise, die für jedes lokale Rollenspiel-Frontend gelten, RisuAI eingeschlossen.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich RisuAIs eigenem Directory-Eintrag.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich RisuAIs eigenem Directory-Eintrag.',
         ],
       },
     },
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [kwaroran](https://github.com/kwaroran) en tant que projet communautaire open source',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de RisuAI dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour voir d\'un coup d\'œil comment RisuAI se compare à des dizaines d\'autres outils de jeu de rôle et d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de RisuAI dans le [Local LLM Software Directory](https://www.promptquorum.com/directory) — consultez cette page pour voir d\'un coup d\'œil comment RisuAI se compare à des dizaines d\'autres outils de jeu de rôle et d\'IA locale.' },
         ],
       },
       overview: {
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développeur : maintenu sur GitHub par [kwaroran](https://github.com/kwaroran) en tant que projet open source, avec des contributions communautaires suivies dans les issues et pull requests du dépôt',
           'Dépôt canonique : [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), sous licence GPL-3.0 selon les métadonnées de licence du dépôt',
         ],
-        note: 'Comme RisuAI est un frontend plutôt qu\'un modèle, la qualité du contenu, la vitesse et toute restriction de contenu dans une conversation donnée proviennent du backend et du modèle connectés, pas du code propre de RisuAI. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour comparer les options de backend de RisuAI à d\'autres frontends de jeu de rôle.',
+        note: 'Comme RisuAI est un frontend plutôt qu\'un modèle, la qualité du contenu, la vitesse et toute restriction de contenu dans une conversation donnée proviennent du backend et du modèle connectés, pas du code propre de RisuAI. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour comparer les options de backend de RisuAI à d\'autres frontends de jeu de rôle.',
       },
       features: {
         id: 'what-risuai-does',
@@ -674,13 +674,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'Concurrents et alternatives',
-        content: 'RisuAI se situe dans le même segment de clients de jeu de rôle et de chat de personnages que plusieurs autres frontends. Voici comment il se compare aux alternatives les plus proches — consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet d\'outils d\'IA locale.',
+        content: 'RisuAI se situe dans le même segment de clients de jeu de rôle et de chat de personnages que plusieurs autres frontends. Voici comment il se compare aux alternatives les plus proches — consultez le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour le catalogue complet d\'outils d\'IA locale.',
         items: [
           '**[SillyTavern](/fr/local-llms/sillytavern-review)** — la comparaison directe la plus proche : un frontend de jeu de rôle gratuit, uniquement auto-hébergé, avec une liste plus large de backends d\'inférence directement pris en charge et un vaste écosystème d\'extensions communautaires, au prix de l\'absence d\'application web hébergée officielle.',
           '**[Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026)** — une application de bureau à code fermé (Windows/Mac) conçue pour la simplicité point-and-click, avec un Character Hub intégré et une offre cloud payante optionnelle — une alternative moins exigeante en configuration à l\'approche open source et agnostique au backend de RisuAI.',
           '**[Agnai](/fr/power-local-llm/agnai-review)** — un autre client de jeu de rôle et de chat de personnages open source couvrant un terrain similaire, à comparer directement sur les conditions de licence, les options hébergées vs auto-hébergées, et le support backend.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive de frontends de jeu de rôle — consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de RisuAI dans l\'annuaire.',
+        note: 'Ceci n\'est pas une liste exhaustive de frontends de jeu de rôle — consultez le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de RisuAI dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — une alternative de bureau à code fermé, point-and-click, avec une bibliothèque de personnages intégrée.',
           '[Avis Agnai](/fr/power-local-llm/agnai-review) — un autre client de jeu de rôle et de chat de personnages open source à comparer.',
           '[LLM locaux sans censure pour l\'écriture créative : éthique, légalité et bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — recommandations au niveau du modèle applicables à tout frontend de jeu de rôle local, RisuAI compris.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de RisuAI dans l\'annuaire.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de RisuAI dans l\'annuaire.',
         ],
       },
     },
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por [kwaroran](https://github.com/kwaroran) como proyecto comunitario de código abierto',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de RisuAI en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara RisuAI con docenas de otras herramientas de rol e IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de RisuAI en el [Local LLM Software Directory](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara RisuAI con docenas de otras herramientas de rol e IA local.' },
         ],
       },
       overview: {
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollador: mantenido en GitHub por [kwaroran](https://github.com/kwaroran) como proyecto de código abierto, con contribuciones de la comunidad registradas en los issues y pull requests del repositorio',
           'Repositorio canónico: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), licenciado bajo GPL-3.0 según los metadatos de licencia del repositorio',
         ],
-        note: 'Como RisuAI es un frontend y no un modelo, la calidad del contenido, la velocidad y cualquier restricción de contenido en una conversación dada dependen del backend y modelo conectados, no del propio código de RisuAI. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para comparar las opciones de backend de RisuAI con otros frontends de rol.',
+        note: 'Como RisuAI es un frontend y no un modelo, la calidad del contenido, la velocidad y cualquier restricción de contenido en una conversación dada dependen del backend y modelo conectados, no del propio código de RisuAI. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/directory) para comparar las opciones de backend de RisuAI con otros frontends de rol.',
       },
       features: {
         id: 'what-risuai-does',
@@ -920,13 +920,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'Competidores y alternativas',
-        content: 'RisuAI se ubica en el mismo segmento de clientes de rol y chat de personajes que otros varios frontends. Así se compara con las alternativas más cercanas — consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo de herramientas de IA local.',
+        content: 'RisuAI se ubica en el mismo segmento de clientes de rol y chat de personajes que otros varios frontends. Así se compara con las alternativas más cercanas — consulta el [Local LLM Software Directory](https://www.promptquorum.com/directory) para el catálogo completo de herramientas de IA local.',
         items: [
           '**[SillyTavern](/es/local-llms/sillytavern-review)** — la comparación directa más cercana: un frontend de rol gratuito y solo autoalojado con una lista más amplia de backends de inferencia directamente compatibles y un gran ecosistema de extensiones comunitarias, a costa de no tener una app web alojada oficial.',
           '**[Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026)** — una app de escritorio de código cerrado (Windows/Mac) pensada para la simplicidad de apuntar y hacer clic, con un Character Hub integrado y un nivel de nube de pago opcional — una alternativa con menos configuración frente al enfoque abierto y agnóstico de backend de RisuAI.',
           '**[Agnai](/es/power-local-llm/agnai-review)** — otro cliente de rol y chat de personajes de código abierto que cubre un terreno similar, y merece la pena comparar directamente en términos de licencia, opciones alojadas frente a autoalojadas, y soporte de backend.',
         ],
-        note: 'Esta no es una lista exhaustiva de frontends de rol — consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de RisuAI en el directorio.',
+        note: 'Esta no es una lista exhaustiva de frontends de rol — consulta el [Local LLM Software Directory](https://www.promptquorum.com/directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de RisuAI en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — una alternativa de escritorio de código cerrado y apuntar-y-hacer-clic con una biblioteca de personajes integrada.',
           '[Reseña de Agnai](/es/power-local-llm/agnai-review) — otro cliente de rol y chat de personajes de código abierto para comparar.',
           '[LLMs locales sin censura para escritura creativa: ética, legalidad y buenas prácticas](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientación a nivel de modelo aplicable a cualquier frontend de rol local, RisuAI incluido.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de RisuAI en el directorio.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de RisuAI en el directorio.',
         ],
       },
     },
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido por [kwaroran](https://github.com/kwaroran) como projeto comunitário open source',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do RisuAI no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o RisuAI com dezenas de outras ferramentas de roleplay e IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do RisuAI no [Local LLM Software Directory](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o RisuAI com dezenas de outras ferramentas de roleplay e IA local.' },
         ],
       },
       overview: {
@@ -1074,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvedor: mantido no GitHub por [kwaroran](https://github.com/kwaroran) como projeto open source, com contribuições da comunidade registradas nas issues e pull requests do repositório',
           'Repositório canônico: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), licenciado sob GPL-3.0 conforme os metadados de licença do repositório',
         ],
-        note: 'Como o RisuAI é um frontend e não um modelo, a qualidade do conteúdo, a velocidade e quaisquer restrições de conteúdo em uma conversa dependem do backend e do modelo conectados, não do próprio código do RisuAI. Veja o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para comparar as opções de backend do RisuAI com outros frontends de roleplay.',
+        note: 'Como o RisuAI é um frontend e não um modelo, a qualidade do conteúdo, a velocidade e quaisquer restrições de conteúdo em uma conversa dependem do backend e do modelo conectados, não do próprio código do RisuAI. Veja o [Local LLM Software Directory](https://www.promptquorum.com/directory) para comparar as opções de backend do RisuAI com outros frontends de roleplay.',
       },
       features: {
         id: 'what-risuai-does',
@@ -1166,13 +1166,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O RisuAI está no mesmo segmento de clientes de roleplay e chat de personagens que vários outros frontends. Veja como ele se compara com as alternativas mais próximas — consulte o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo de ferramentas de IA local.',
+        content: 'O RisuAI está no mesmo segmento de clientes de roleplay e chat de personagens que vários outros frontends. Veja como ele se compara com as alternativas mais próximas — consulte o [Local LLM Software Directory](https://www.promptquorum.com/directory) para o catálogo completo de ferramentas de IA local.',
         items: [
           '**[SillyTavern](/pt/local-llms/sillytavern-review)** — a comparação direta mais próxima: um frontend de roleplay gratuito e apenas autogerenciado, com uma lista mais ampla de backends de inferência diretamente suportados e um grande ecossistema de extensões da comunidade, ao custo de não ter um app web hospedado oficial.',
           '**[Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026)** — um app desktop de código fechado (Windows/Mac) construído para simplicidade de apontar e clicar, com um Character Hub integrado, e um nível de nuvem pago opcional — uma alternativa de menor configuração à abordagem open source e agnóstica de backend do RisuAI.',
           '**[Agnai](/pt/power-local-llm/agnai-review)** — outro cliente de roleplay e chat de personagens open source cobrindo terreno semelhante, que vale comparar diretamente quanto a termos de licença, opções hospedadas vs. autogerenciadas, e suporte a backends.',
         ],
-        note: 'Esta não é uma lista exaustiva de frontends de roleplay — consulte o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do RisuAI no diretório.',
+        note: 'Esta não é uma lista exaustiva de frontends de roleplay — consulte o [Local LLM Software Directory](https://www.promptquorum.com/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do RisuAI no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — uma alternativa desktop de código fechado e apontar-e-clicar com biblioteca de personagens integrada.',
           '[Análise do Agnai](/pt/power-local-llm/agnai-review) — outro cliente de roleplay e chat de personagens open source para comparar.',
           '[LLMs locais sem censura para escrita criativa: ética, legalidade e boas práticas](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientações no nível do modelo aplicáveis a qualquer frontend de roleplay local, incluindo o RisuAI.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do RisuAI no diretório.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do RisuAI no diretório.',
         ],
       },
     },
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[kwaroran](https://github.com/kwaroran)によってオープンソースのコミュニティプロジェクトとして開発',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるRisuAIのエントリーを深掘りする補完記事です——RisuAIが他の数十のロールプレイ・ローカルAIツールと一目でどう比較されるかは、そのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にあるRisuAIのエントリーを深掘りする補完記事です——RisuAIが他の数十のロールプレイ・ローカルAIツールと一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '開発者:[kwaroran](https://github.com/kwaroran)によってGitHub上でオープンソースプロジェクトとしてメンテナンスされ、コミュニティの貢献はリポジトリのissueとプルリクエストで追跡される',
           '正式なリポジトリ:[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)、リポジトリのライセンスメタデータによりGPL-3.0でライセンス',
         ],
-        note: 'RisuAIはモデルではなくフロントエンドであるため、特定の会話における内容の質、速度、コンテンツ制限は、RisuAI自体のコードではなく接続したバックエンドとモデルに由来します。RisuAIのバックエンドオプションが他のロールプレイフロントエンドとどう比較されるかは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'RisuAIはモデルではなくフロントエンドであるため、特定の会話における内容の質、速度、コンテンツ制限は、RisuAI自体のコードではなく接続したバックエンドとモデルに由来します。RisuAIのバックエンドオプションが他のロールプレイフロントエンドとどう比較されるかは、[Local LLM Software Directory](https://www.promptquorum.com/directory)をご覧ください。',
       },
       features: {
         id: 'what-risuai-does',
@@ -1412,13 +1412,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: '競合とその他の選択肢',
-        content: 'RisuAIは、他のいくつかのフロントエンドと同じロールプレイ・キャラクターチャットクライアントのセグメントに位置しています。最も近い代替案との比較は以下の通りです——ローカルAIツールの完全なカタログは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'RisuAIは、他のいくつかのフロントエンドと同じロールプレイ・キャラクターチャットクライアントのセグメントに位置しています。最も近い代替案との比較は以下の通りです——ローカルAIツールの完全なカタログは[Local LLM Software Directory](https://www.promptquorum.com/directory)をご覧ください。',
         items: [
           '**[SillyTavern](/ja/local-llms/sillytavern-review)** — 最も近い直接比較対象:直接サポートされる推論バックエンドの幅広いリストと大規模なコミュニティ拡張エコシステムを持つ、無料でセルフホスト専用のロールプレイフロントエンドですが、公式のホスト型ウェブアプリはありません。',
           '**[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)** — ポイント&クリックの簡便さのために構築されたクローズドソースのデスクトップアプリ(Windows/Mac)で、組み込みのCharacter Hubとオプションの有料クラウドプランを備えています——RisuAIのオープンソースでバックエンドに依存しないアプローチに対して、設定がより簡単な代替案です。',
           '**[Agnai](/ja/power-local-llm/agnai-review)** — 同様の領域をカバーする、もう一つのオープンソースのロールプレイ・キャラクターチャットクライアントで、ライセンス条件、ホスト型対セルフホスト型のオプション、バックエンドサポートについて直接比較する価値があります。',
         ],
-        note: 'これはロールプレイフロントエンドの網羅的なリストではありません——RisuAI自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはロールプレイフロントエンドの網羅的なリストではありません——RisuAI自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](https://www.promptquorum.com/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Backyard AIレビュー](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — 組み込みのキャラクターライブラリを持つ、クローズドソースでポイント&クリック型のデスクトップ代替案。',
           '[Agnaiレビュー](/ja/power-local-llm/agnai-review) — 比較対象となる、もう一つのオープンソースのロールプレイ・キャラクターチャットクライアント。',
           '[創作のための検閲なしローカルLLM:倫理・合法性・ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — RisuAIを含む、あらゆるローカルロールプレイフロントエンドに適用されるモデルレベルのガイダンス。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — この記事が属する、RisuAI自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — この記事が属する、RisuAI自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1552,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由[kwaroran](https://github.com/kwaroran)作为开源社区项目开发',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中RisuAI条目的深度补充——请参阅该页面,一览RisuAI与其他数十款角色扮演和本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[Local LLM Software Directory](https://www.promptquorum.com/directory)中RisuAI条目的深度补充——请参阅该页面,一览RisuAI与其他数十款角色扮演和本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '开发者:由[kwaroran](https://github.com/kwaroran)在GitHub上作为开源项目维护,社区贡献记录在仓库的issue和拉取请求中',
           '正式仓库:[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI),根据仓库的许可证元数据采用GPL-3.0许可',
         ],
-        note: '由于RisuAI是前端而非模型,某次对话的内容质量、速度以及任何内容限制均来自所连接的后端和模型,而非RisuAI自身的代码。请参阅[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory),了解RisuAI的后端选项与其他角色扮演前端的对比。',
+        note: '由于RisuAI是前端而非模型,某次对话的内容质量、速度以及任何内容限制均来自所连接的后端和模型,而非RisuAI自身的代码。请参阅[Local LLM Software Directory](https://www.promptquorum.com/directory),了解RisuAI的后端选项与其他角色扮演前端的对比。',
       },
       features: {
         id: 'what-risuai-does',
@@ -1658,13 +1658,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: '竞品与替代方案',
-        content: 'RisuAI与其他若干前端处于同一角色扮演和角色聊天客户端细分领域。以下是它与最相近替代方案的对比——完整的本地AI工具目录请参阅[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        content: 'RisuAI与其他若干前端处于同一角色扮演和角色聊天客户端细分领域。以下是它与最相近替代方案的对比——完整的本地AI工具目录请参阅[Local LLM Software Directory](https://www.promptquorum.com/directory)。',
         items: [
           '**[SillyTavern](/zh/local-llms/sillytavern-review)** — 最接近的直接对比对象:一款免费、仅限自托管的角色扮演前端,直接支持的推理后端列表更广,拥有庞大的社区扩展生态系统,但代价是没有官方托管网页应用。',
           '**[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)** — 一款闭源桌面应用(Windows/Mac),专为点击即用的简便性而打造,内置Character Hub,并提供可选的付费云端套餐——相较于RisuAI开源、不依赖特定后端的方式,这是一种配置要求更低的替代方案。',
           '**[Agnai](/zh/power-local-llm/agnai-review)** — 另一款覆盖类似领域的开源角色扮演与角色聊天客户端,值得在许可证条款、托管与自托管选项以及后端支持方面进行直接比较。',
         ],
-        note: '这并非角色扮演前端的详尽列表——完整且定期更新的目录(包括RisuAI自身的目录条目)请参阅[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        note: '这并非角色扮演前端的详尽列表——完整且定期更新的目录(包括RisuAI自身的目录条目)请参阅[Local LLM Software Directory](https://www.promptquorum.com/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Backyard AI评测](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) — 一款闭源、点击即用的桌面替代方案,内置角色库。',
           '[Agnai评测](/zh/power-local-llm/agnai-review) — 另一款可供比较的开源角色扮演与角色聊天客户端。',
           '[创意写作的无审查本地LLM:伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 适用于包括RisuAI在内的任何本地角色扮演前端的模型层面指导。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,包括RisuAI自身的目录条目。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录,包括RisuAI自身的目录条目。',
         ],
       },
     },
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّره [kwaroran](https://github.com/kwaroran) كمشروع مجتمعي مفتوح المصدر',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال RisuAI في [دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن RisuAI بسرعة بعشرات من أدوات لعب الأدوار والذكاء الاصطناعي المحلي الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال RisuAI في [دليل برامج LLM المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمعرفة كيف يقارن RisuAI بسرعة بعشرات من أدوات لعب الأدوار والذكاء الاصطناعي المحلي الأخرى.' },
         ],
       },
       overview: {
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المطوّر: يُصان على GitHub بواسطة [kwaroran](https://github.com/kwaroran) كمشروع مفتوح المصدر، مع تتبع مساهمات المجتمع في تذاكر المشاكل وطلبات السحب في المستودع',
           'المستودع الرسمي: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)، مرخّص بموجب GPL-3.0 وفقًا لبيانات الترخيص الوصفية للمستودع',
         ],
-        note: 'نظرًا لأن RisuAI واجهة أمامية وليس نموذجًا، فإن جودة المحتوى والسرعة وأي قيود على المحتوى في محادثة معينة تأتي من الخلفية والنموذج المتصلين، وليس من كود RisuAI نفسه. راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) لمعرفة كيف تقارن خيارات خلفية RisuAI بواجهات لعب الأدوار الأخرى.',
+        note: 'نظرًا لأن RisuAI واجهة أمامية وليس نموذجًا، فإن جودة المحتوى والسرعة وأي قيود على المحتوى في محادثة معينة تأتي من الخلفية والنموذج المتصلين، وليس من كود RisuAI نفسه. راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/directory) لمعرفة كيف تقارن خيارات خلفية RisuAI بواجهات لعب الأدوار الأخرى.',
       },
       features: {
         id: 'what-risuai-does',
@@ -1904,13 +1904,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع RisuAI في نفس شريحة عملاء لعب الأدوار ودردشة الشخصيات جنبًا إلى جنب مع عدة واجهات أمامية أخرى. إليك كيف يقارن بأقرب البدائل — راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية.',
+        content: 'يقع RisuAI في نفس شريحة عملاء لعب الأدوار ودردشة الشخصيات جنبًا إلى جنب مع عدة واجهات أمامية أخرى. إليك كيف يقارن بأقرب البدائل — راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/directory) للحصول على الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية.',
         items: [
           '**[SillyTavern](/ar/local-llms/sillytavern-review)** — أقرب مقارنة مباشرة: واجهة أمامية مجانية ومستضافة ذاتيًا فقط للعب الأدوار مع قائمة أوسع من خلفيات الاستدلال المدعومة مباشرة ومنظومة إضافات مجتمعية كبيرة، مقابل عدم وجود تطبيق ويب مستضاف رسمي.',
           '**[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)** — تطبيق سطح مكتب مغلق المصدر (Windows/Mac) مصمم للبساطة بالنقر والتوجيه، مع Character Hub مدمج وخطة سحابية مدفوعة اختيارية — بديل أقل تعقيدًا في الإعداد مقارنة بنهج RisuAI المفتوح المصدر وغير المرتبط بخلفية معينة.',
           '**[Agnai](/ar/power-local-llm/agnai-review)** — عميل آخر مفتوح المصدر للعب الأدوار ودردشة الشخصيات يغطي مجالًا مشابهًا، يستحق المقارنة المباشرة من حيث شروط الترخيص وخيارات الاستضافة مقابل الاستضافة الذاتية ودعم الخلفية.',
         ],
-        note: 'هذه ليست قائمة شاملة لواجهات لعب الأدوار — راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال RisuAI الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لواجهات لعب الأدوار — راجع [دليل برامج LLM المحلية](https://www.promptquorum.com/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال RisuAI الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1970,7 +1970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — بديل سطح مكتب مغلق المصدر بطريقة النقر والتوجيه، مع مكتبة شخصيات مدمجة.',
           '[مراجعة Agnai](/ar/power-local-llm/agnai-review) — عميل آخر مفتوح المصدر للعب الأدوار ودردشة الشخصيات للمقارنة.',
           '[نماذج LLM المحلية غير الخاضعة للرقابة للكتابة الإبداعية: الأخلاقيات والقانونية وأفضل الممارسات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — إرشادات على مستوى النموذج تنطبق على أي واجهة أمامية للعب الأدوار المحلي، بما في ذلك RisuAI.',
-          '[دليل برامج LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال RisuAI الخاص في الدليل.',
+          '[دليل برامج LLM المحلية](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال RisuAI الخاص في الدليل.',
         ],
       },
     },
@@ -2044,7 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '오픈소스 커뮤니티 프로젝트로서 [kwaroran](https://github.com/kwaroran)이 개발',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 RisuAI 항목의 심층 보완 자료입니다 — RisuAI가 수십 개의 다른 롤플레이 및 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory)에 있는 RisuAI 항목의 심층 보완 자료입니다 — RisuAI가 수십 개의 다른 롤플레이 및 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개발자: [kwaroran](https://github.com/kwaroran)이 오픈소스 프로젝트로 GitHub에서 관리하며, 커뮤니티 기여는 저장소의 이슈와 풀 리퀘스트에서 추적됨',
           '표준 저장소: [github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI), 저장소의 라이선스 메타데이터에 따라 GPL-3.0으로 라이선스됨',
         ],
-        note: 'RisuAI는 모델이 아닌 프런트엔드이기 때문에, 특정 대화의 콘텐츠 품질, 속도, 콘텐츠 제한은 RisuAI 자체 코드가 아니라 연결된 백엔드와 모델에서 비롯됩니다. RisuAI의 백엔드 옵션이 다른 롤플레이 프런트엔드와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: 'RisuAI는 모델이 아닌 프런트엔드이기 때문에, 특정 대화의 콘텐츠 품질, 속도, 콘텐츠 제한은 RisuAI 자체 코드가 아니라 연결된 백엔드와 모델에서 비롯됩니다. RisuAI의 백엔드 옵션이 다른 롤플레이 프런트엔드와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory)를 참고하세요.',
       },
       features: {
         id: 'what-risuai-does',
@@ -2150,13 +2150,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'risuai-competitors',
         title: '경쟁 제품 및 대안',
-        content: 'RisuAI는 여러 다른 프런트엔드와 같은 롤플레이 및 캐릭터 채팅 클라이언트 세그먼트에 속해 있습니다. 가장 가까운 대안과 어떻게 비교되는지 살펴보겠습니다 — 로컬 AI 도구의 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'RisuAI는 여러 다른 프런트엔드와 같은 롤플레이 및 캐릭터 채팅 클라이언트 세그먼트에 속해 있습니다. 가장 가까운 대안과 어떻게 비교되는지 살펴보겠습니다 — 로컬 AI 도구의 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory)를 참고하세요.',
         items: [
           '**[SillyTavern](/ko/local-llms/sillytavern-review)** — 가장 가까운 직접 비교 대상: 직접 지원되는 추론 백엔드의 더 넓은 목록과 대규모 커뮤니티 확장 생태계를 갖춘 무료, 자체 호스팅 전용 롤플레이 프런트엔드지만 공식 호스팅 웹 앱은 없음.',
           '**[Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026)** — 포인트 앤드 클릭 단순성을 위해 만들어진 폐쇄형 소스 데스크톱 앱(Windows/Mac)으로, 내장 Character Hub와 선택적 유료 클라우드 요금제를 제공 — RisuAI의 오픈소스, 백엔드 무관적 접근 방식에 비해 설정이 덜 필요한 대안.',
           '**[Agnai](/ko/power-local-llm/agnai-review)** — 비슷한 영역을 다루는 또 다른 오픈소스 롤플레이 및 캐릭터 채팅 클라이언트로, 라이선스 조건, 호스팅 대 자체 호스팅 옵션, 백엔드 지원 측면에서 직접 비교할 가치가 있음.',
         ],
-        note: '이는 롤플레이 프런트엔드의 전체 목록이 아닙니다 — RisuAI 자체의 디렉토리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 롤플레이 프런트엔드의 전체 목록이 아닙니다 — RisuAI 자체의 디렉토리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2216,7 +2216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Backyard AI 리뷰](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 내장 캐릭터 라이브러리를 갖춘 폐쇄형 소스, 포인트 앤드 클릭 데스크톱 대안.',
           '[Agnai 리뷰](/ko/power-local-llm/agnai-review) — 비교할 만한 또 다른 오픈소스 롤플레이 및 캐릭터 채팅 클라이언트.',
           '[검열 없는 로컬 LLM 창작 글쓰기: 윤리, 합법성, 모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — RisuAI를 포함한 모든 로컬 롤플레이 프런트엔드에 적용되는 모델 수준 가이드.',
-          '[로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한, RisuAI 자체의 디렉토리 항목을 포함한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory) — 이 글이 속한, RisuAI 자체의 디렉토리 항목을 포함한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

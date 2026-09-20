@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows roughly 46,400 stars as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to SiYuan\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how SiYuan compares at a glance to dozens of other local-first AI and knowledge tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to SiYuan\'s entry in the [Local LLM Software Directory](/directory) — see that page for how SiYuan compares at a glance to dozens of other local-first AI and knowledge tools.' },
         ],
       },
       overview: {
@@ -205,14 +205,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. Other Knowledge-Management Tools',
-        content: 'SiYuan sits in a small field of local-first, block- or file-based knowledge-management apps. PromptQuorum does not yet have dedicated FeatureAppPost reviews for Obsidian or Logseq themselves as standalone apps — the closest existing reviews in this sub-segment are noted below, alongside the two most relevant external comparisons. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'SiYuan sits in a small field of local-first, block- or file-based knowledge-management apps. PromptQuorum does not yet have dedicated FeatureAppPost reviews for Obsidian or Logseq themselves as standalone apps — the closest existing reviews in this sub-segment are noted below, alongside the two most relevant external comparisons. See the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Khoj](https://khoj.dev)** — a self-hosted, open-source "second brain" AI assistant that indexes and chats over your own notes and documents; the closest existing PromptQuorum review in the personal-knowledge-assistant segment. See the [Khoj AI review](/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — an AI browser-extension/plugin add-on for the open-source outliner app Logseq, rather than a standalone knowledge-base app like SiYuan; still the closest existing PromptQuorum review that touches block-based, local-first note-taking. See the [Logseq Copilot review](/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — a closed-source but widely used local-Markdown-file note app with a very large plugin/theme ecosystem; see the dedicated comparison section above (no separate PromptQuorum review of Obsidian exists yet).',
           '**[Logseq](https://logseq.com)** — an open-source, local-first outliner with a block-based, bidirectionally linked structure conceptually closer to SiYuan than Obsidian\'s file-based model; see [logseq.com](https://logseq.com) directly, since PromptQuorum does not yet have a standalone Logseq app review.',
         ],
-        note: 'This is not an exhaustive list of local-first knowledge-management tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including SiYuan\'s own directory entry. (Editorial note: since no standalone FeatureAppPost review of Obsidian or Logseq exists on PromptQuorum yet, the two links above to their own official sites substitute for same-segment reviews, alongside the two genuinely existing reviews — Khoj and Logseq Copilot — that are closest to this sub-segment.)',
+        note: 'This is not an exhaustive list of local-first knowledge-management tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including SiYuan\'s own directory entry. (Editorial note: since no standalone FeatureAppPost review of Obsidian or Logseq exists on PromptQuorum yet, the two links above to their own official sites substitute for same-segment reviews, alongside the two genuinely existing reviews — Khoj and Logseq Copilot — that are closest to this sub-segment.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including SiYuan\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including SiYuan\'s directory entry.',
           '[Khoj AI Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted "second brain" AI assistant that chats over your own notes and documents.',
           '[Logseq Copilot Review](/power-local-llm/logseq-copilot-review) — an AI add-on for the open-source, block-based outliner Logseq.',
         ],
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository zeigt Stand September 2026 rund 46.400 Stars',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu SiYuans Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sieht man auf einen Blick, wie SiYuan im Vergleich zu Dutzenden anderer lokal-first KI- und Wissenstools abschneidet.' },
+          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu SiYuans Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie SiYuan im Vergleich zu Dutzenden anderer lokal-first KI- und Wissenstools abschneidet.' },
         ],
       },
       overview: {
@@ -480,14 +480,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. andere Wissensmanagement-Tools',
-        content: 'SiYuan bewegt sich in einem kleinen Feld local-first, block- oder dateibasierter Wissensmanagement-Apps. PromptQuorum hat bislang keine eigenen FeatureAppPost-Tests für Obsidian oder Logseq als eigenständige Apps — die nächstliegenden bestehenden Tests in diesem Teilsegment sind unten aufgeführt, zusammen mit den zwei relevantesten externen Vergleichen. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'SiYuan bewegt sich in einem kleinen Feld local-first, block- oder dateibasierter Wissensmanagement-Apps. PromptQuorum hat bislang keine eigenen FeatureAppPost-Tests für Obsidian oder Logseq als eigenständige Apps — die nächstliegenden bestehenden Tests in diesem Teilsegment sind unten aufgeführt, zusammen mit den zwei relevantesten externen Vergleichen. Siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog.',
         items: [
           '**[Khoj](https://khoj.dev)** — ein selbst gehosteter, quelloffener KI-Assistent als "zweites Gehirn", der die eigenen Notizen und Dokumente indexiert und darüber chattet; der nächstliegende bestehende PromptQuorum-Test im Segment persönlicher Wissensassistenten. Siehe den [Khoj-AI-Test](/de/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — eine KI-Browsererweiterung/-Plugin-Ergänzung für die quelloffene Outliner-App Logseq, keine eigenständige Wissensdatenbank-App wie SiYuan; dennoch der nächstliegende bestehende PromptQuorum-Test, der blockbasierte, local-first Notizen berührt. Siehe den [Logseq-Copilot-Test](/de/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — eine Closed-Source, aber weit verbreitete Notiz-App mit lokalen Markdown-Dateien und einem sehr großen Plugin-/Theme-Ökosystem; siehe den dedizierten Vergleichsabschnitt oben (noch kein eigener PromptQuorum-Test zu Obsidian vorhanden).',
           '**[Logseq](https://logseq.com)** — ein quelloffener, local-first Outliner mit einer blockbasierten, bidirektional verlinkten Struktur, die konzeptionell näher an SiYuan liegt als an Obsidians dateibasiertem Modell; siehe direkt [logseq.com](https://logseq.com), da PromptQuorum noch keinen eigenständigen Logseq-App-Test hat.',
         ],
-        note: 'Dies ist keine vollständige Liste local-first Wissensmanagement-Tools — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich SiYuans eigenem Directory-Eintrag. (Redaktioneller Hinweis: Da bislang kein eigenständiger FeatureAppPost-Test zu Obsidian oder Logseq auf PromptQuorum existiert, ersetzen die beiden obigen Links zu deren offiziellen Websites gleichwertige Tests im selben Segment, zusätzlich zu den zwei tatsächlich existierenden Tests — Khoj und Logseq Copilot —, die diesem Teilsegment am nächsten kommen.)',
+        note: 'Dies ist keine vollständige Liste local-first Wissensmanagement-Tools — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich SiYuans eigenem Directory-Eintrag. (Redaktioneller Hinweis: Da bislang kein eigenständiger FeatureAppPost-Test zu Obsidian oder Logseq auf PromptQuorum existiert, ersetzen die beiden obigen Links zu deren offiziellen Websites gleichwertige Tests im selben Segment, zusätzlich zu den zwei tatsächlich existierenden Tests — Khoj und Logseq Copilot —, die diesem Teilsegment am nächsten kommen.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich SiYuans Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich SiYuans Directory-Eintrag.',
           '[Khoj-AI-Test](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehosteter KI-Assistent als "zweites Gehirn", der mit den eigenen Notizen und Dokumenten chattet.',
           '[Logseq-Copilot-Test](/de/power-local-llm/logseq-copilot-review) — eine KI-Ergänzung für den quelloffenen, blockbasierten Outliner Logseq.',
         ],
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche environ 46 400 étoiles en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de SiYuan dans l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment SiYuan se compare en un coup d\'œil à des dizaines d\'autres outils IA et de connaissances local-first.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de SiYuan dans l\'[annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment SiYuan se compare en un coup d\'œil à des dizaines d\'autres outils IA et de connaissances local-first.' },
         ],
       },
       overview: {
@@ -755,14 +755,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. autres outils de gestion des connaissances',
-        content: 'SiYuan se situe dans un petit champ d\'applications de gestion des connaissances local-first, par blocs ou par fichiers. PromptQuorum n\'a pas encore d\'avis FeatureAppPost dédiés pour Obsidian ou Logseq eux-mêmes en tant qu\'applications autonomes — les avis existants les plus proches dans ce sous-segment sont indiqués ci-dessous, aux côtés des deux comparaisons externes les plus pertinentes. Consultez l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'SiYuan se situe dans un petit champ d\'applications de gestion des connaissances local-first, par blocs ou par fichiers. PromptQuorum n\'a pas encore d\'avis FeatureAppPost dédiés pour Obsidian ou Logseq eux-mêmes en tant qu\'applications autonomes — les avis existants les plus proches dans ce sous-segment sont indiqués ci-dessous, aux côtés des deux comparaisons externes les plus pertinentes. Consultez l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Khoj](https://khoj.dev)** — un assistant IA « second cerveau » auto-hébergé et open source qui indexe et discute avec vos propres notes et documents ; l\'avis PromptQuorum existant le plus proche dans le segment des assistants de connaissances personnelles. Voir l\'[avis Khoj AI](/fr/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — un module complémentaire IA en extension de navigateur/plugin pour l\'application d\'outliner open source Logseq, plutôt qu\'une application de base de connaissances autonome comme SiYuan ; reste l\'avis PromptQuorum existant le plus proche touchant à la prise de notes local-first par blocs. Voir l\'[avis Logseq Copilot](/fr/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — une application de notes en fichiers Markdown locaux à source fermée mais largement utilisée, avec un très grand écosystème de plugins/thèmes ; voir la section de comparaison dédiée ci-dessus (aucun avis PromptQuorum séparé sur Obsidian n\'existe encore).',
           '**[Logseq](https://logseq.com)** — un outliner open source, local-first, avec une structure par blocs et liens bidirectionnels conceptuellement plus proche de SiYuan que du modèle par fichiers d\'Obsidian ; voir directement [logseq.com](https://logseq.com), car PromptQuorum n\'a pas encore d\'avis dédié sur l\'application Logseq elle-même.',
         ],
-        note: 'Ce n\'est pas une liste exhaustive des outils de gestion des connaissances local-first — voir l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de SiYuan dans l\'annuaire. (Note éditoriale : comme aucun avis FeatureAppPost autonome sur Obsidian ou Logseq n\'existe encore sur PromptQuorum, les deux liens ci-dessus vers leurs sites officiels respectifs remplacent des avis du même segment, aux côtés des deux avis réellement existants — Khoj et Logseq Copilot — les plus proches de ce sous-segment.)',
+        note: 'Ce n\'est pas une liste exhaustive des outils de gestion des connaissances local-first — voir l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de SiYuan dans l\'annuaire. (Note éditoriale : comme aucun avis FeatureAppPost autonome sur Obsidian ou Logseq n\'existe encore sur PromptQuorum, les deux liens ci-dessus vers leurs sites officiels respectifs remplacent des avis du même segment, aux côtés des deux avis réellement existants — Khoj et Logseq Copilot — les plus proches de ce sous-segment.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris l\'entrée d\'annuaire de SiYuan.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris l\'entrée d\'annuaire de SiYuan.',
           '[Avis Khoj AI](/fr/power-local-llm/khoj-ai-second-brain-review) — un assistant IA « second cerveau » auto-hébergé qui discute avec vos propres notes et documents.',
           '[Avis Logseq Copilot](/fr/power-local-llm/logseq-copilot-review) — un module IA complémentaire pour l\'outliner open source et par blocs Logseq.',
         ],
@@ -898,7 +898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリのスター数は2026年9月時点で約46,400',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるSiYuanのエントリーを掘り下げた詳細版です。SiYuanが他の数十種類のローカルファーストなAI・ナレッジツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるSiYuanのエントリーを掘り下げた詳細版です。SiYuanが他の数十種類のローカルファーストなAI・ナレッジツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1030,14 +1030,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuanと他のナレッジ管理ツールの比較',
-        content: 'SiYuanは、ローカルファーストでブロックベースまたはファイルベースのナレッジ管理アプリという小さな分野に位置しています。PromptQuorumには、ObsidianやLogseq自体を単独アプリとして扱った専用のFeatureAppPostレビューはまだありません。このサブセグメントで最も近い既存レビューを以下にまとめ、あわせて最も関連の深い2つの外部比較も挙げています。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'SiYuanは、ローカルファーストでブロックベースまたはファイルベースのナレッジ管理アプリという小さな分野に位置しています。PromptQuorumには、ObsidianやLogseq自体を単独アプリとして扱った専用のFeatureAppPostレビューはまだありません。このサブセグメントで最も近い既存レビューを以下にまとめ、あわせて最も関連の深い2つの外部比較も挙げています。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Khoj](https://khoj.dev)** — 自分のノートや文書に対してインデックス作成・チャットができる、セルフホスト型のオープンソース「セカンドブレイン」AIアシスタント。個人向けナレッジアシスタントのセグメントで最も近い既存のPromptQuorumレビュー。[Khoj AIレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
           '**Logseq Copilot** — オープンソースのアウトライナーアプリLogseq向けのAIブラウザ拡張機能/プラグインアドオンであり、SiYuanのようなスタンドアロンのナレッジベースアプリではありません。それでも、ブロックベースでローカルファーストなノート作成に触れる既存のPromptQuorumレビューとしては最も近い存在です。[Logseq Copilotレビュー](/ja/power-local-llm/logseq-copilot-review)を参照。',
           '**[Obsidian](https://obsidian.md)** — クローズドソースながら広く使われているローカルMarkdownファイル型のノートアプリで、非常に大規模なプラグイン/テーマエコシステムを持つ。上記の専用比較セクションを参照（PromptQuorumによるObsidian単体のレビューはまだ存在しません）。',
           '**[Logseq](https://logseq.com)** — オープンソースでローカルファーストなアウトライナーで、ブロックベースかつ双方向リンクされた構造はObsidianのファイルベースモデルよりも概念的にSiYuanに近い。PromptQuorumはLogseq単体のアプリレビューをまだ持っていないため、直接[logseq.com](https://logseq.com)を参照してください。',
         ],
-        note: 'これはローカルファーストなナレッジ管理ツールの網羅的なリストではありません。SiYuan自体のディレクトリエントリーを含む全カタログは、定期的に更新される[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。（編集部注：ObsidianやLogseq単体のFeatureAppPostレビューがPromptQuorumにまだ存在しないため、上記の2つの公式サイトへのリンクは同セグメントのレビューの代わりとして掲載しており、このサブセグメントに最も近い実在の2本のレビュー——KhojとLogseq Copilot——とあわせて紹介しています。）',
+        note: 'これはローカルファーストなナレッジ管理ツールの網羅的なリストではありません。SiYuan自体のディレクトリエントリーを含む全カタログは、定期的に更新される[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。（編集部注：ObsidianやLogseq単体のFeatureAppPostレビューがPromptQuorumにまだ存在しないため、上記の2つの公式サイトへのリンクは同セグメントのレビューの代わりとして掲載しており、このサブセグメントに最も近い実在の2本のレビュー——KhojとLogseq Copilot——とあわせて紹介しています。）',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。SiYuanのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。SiYuanのディレクトリエントリーを含む。',
           '[Khoj AIレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — 自分のノートや文書に対してチャットできる、セルフホスト型の「セカンドブレイン」AIアシスタント。',
           '[Logseq Copilotレビュー](/ja/power-local-llm/logseq-copilot-review) — オープンソースでブロックベースのアウトライナーLogseq向けのAIアドオン。',
         ],
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至 2026 年 9 月，GitHub 仓库星标约 46,400',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 SiYuan 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度补充——该页面可让你一览 SiYuan 与其他数十款本地优先 AI 与知识管理工具的对比。' },
+          { type: 'note', text: '本评测是 SiYuan 在[本地 LLM 软件目录](/zh/directory)中条目的深度补充——该页面可让你一览 SiYuan 与其他数十款本地优先 AI 与知识管理工具的对比。' },
         ],
       },
       overview: {
@@ -1305,14 +1305,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan 对比其他知识管理工具',
-        content: 'SiYuan 所处的赛道是一小片本地优先、基于块或文件的知识管理应用领域。PromptQuorum 目前尚未针对 Obsidian 或 Logseq 本身发布独立的 FeatureAppPost 评测——以下列出了这一细分领域中最接近的现有评测，以及两项最相关的外部对比对象。完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'SiYuan 所处的赛道是一小片本地优先、基于块或文件的知识管理应用领域。PromptQuorum 目前尚未针对 Obsidian 或 Logseq 本身发布独立的 FeatureAppPost 评测——以下列出了这一细分领域中最接近的现有评测，以及两项最相关的外部对比对象。完整目录请参见[本地 LLM 软件目录](/zh/directory)。',
         items: [
           '**[Khoj](https://khoj.dev)**——一款自托管、开源的"第二大脑"AI 助手，可对你自己的笔记和文档进行索引与对话；这是个人知识助手这一细分领域中现有最接近的 PromptQuorum 评测。参见 [Khoj AI 评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
           '**Logseq Copilot**——为开源大纲笔记应用 Logseq 提供的 AI 浏览器扩展/插件，而非像 SiYuan 这样的独立知识库应用；不过它仍是现有最接近块级本地优先笔记这一主题的 PromptQuorum 评测。参见 [Logseq Copilot 评测](/zh/power-local-llm/logseq-copilot-review)。',
           '**[Obsidian](https://obsidian.md)**——一款闭源但广泛使用的本地 Markdown 文件笔记应用，拥有非常庞大的插件/主题生态；详见上方专门的对比章节（目前尚无独立的 PromptQuorum Obsidian 评测）。',
           '**[Logseq](https://logseq.com)**——一款开源、本地优先的大纲笔记应用，其块级、双向链接的结构在概念上比 Obsidian 的文件模型更接近 SiYuan；由于 PromptQuorum 目前还没有独立的 Logseq 应用评测，请直接参见 [logseq.com](https://logseq.com)。',
         ],
-        note: '这并非本地优先知识管理工具的完整列表——完整且持续更新的目录，包括 SiYuan 自己的条目，请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。（编辑说明：由于 PromptQuorum 目前还没有针对 Obsidian 或 Logseq 的独立 FeatureAppPost 评测，上方两个链接指向它们各自的官方网站，作为同类评测的替代，与 Khoj 和 Logseq Copilot 这两篇真实存在、最接近该细分领域的评测并列。）',
+        note: '这并非本地优先知识管理工具的完整列表——完整且持续更新的目录，包括 SiYuan 自己的条目，请参见[本地 LLM 软件目录](/zh/directory)。（编辑说明：由于 PromptQuorum 目前还没有针对 Obsidian 或 Logseq 的独立 FeatureAppPost 评测，上方两个链接指向它们各自的官方网站，作为同类评测的替代，与 Khoj 和 Logseq Copilot 这两篇真实存在、最接近该细分领域的评测并列。）',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地 AI 工具完整目录，包含 SiYuan 的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的本地 AI 工具完整目录，包含 SiYuan 的目录条目。',
           '[Khoj AI 评测](/zh/power-local-llm/khoj-ai-second-brain-review)——一款自托管的"第二大脑"AI 助手，可对你自己的笔记和文档进行对话。',
           '[Logseq Copilot 评测](/zh/power-local-llm/logseq-copilot-review)——为开源块级大纲笔记应用 Logseq 提供的 AI 扩展。',
         ],
@@ -1448,7 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub muestra alrededor de 46.400 estrellas en septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de SiYuan en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara SiYuan con docenas de otras herramientas de IA y conocimiento local-first.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de SiYuan en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara SiYuan con docenas de otras herramientas de IA y conocimiento local-first.' },
         ],
       },
       overview: {
@@ -1580,14 +1580,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. Otras Herramientas de Gestión del Conocimiento',
-        content: 'SiYuan se sitúa en un pequeño grupo de apps de gestión del conocimiento local-first, basadas en bloques o en archivos. PromptQuorum aún no cuenta con reseñas FeatureAppPost dedicadas a Obsidian o Logseq como apps independientes; las reseñas existentes más cercanas en este subsegmento se indican a continuación, junto con las dos comparaciones externas más relevantes. Consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo.',
+        content: 'SiYuan se sitúa en un pequeño grupo de apps de gestión del conocimiento local-first, basadas en bloques o en archivos. PromptQuorum aún no cuenta con reseñas FeatureAppPost dedicadas a Obsidian o Logseq como apps independientes; las reseñas existentes más cercanas en este subsegmento se indican a continuación, junto con las dos comparaciones externas más relevantes. Consulta el [Directorio de Software LLM Local](/es/directory) para ver el catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — un asistente de IA de "segundo cerebro" autoalojado y de código abierto que indexa y conversa sobre tus propias notas y documentos; la reseña existente más cercana de PromptQuorum en el segmento de asistentes de conocimiento personal. Consulta la [reseña de Khoj AI](/es/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — un complemento de extensión de navegador con IA para la app de esquemas de código abierto Logseq, en lugar de una app de base de conocimiento independiente como SiYuan; sigue siendo la reseña existente más cercana de PromptQuorum que aborda las notas locales basadas en bloques. Consulta la [reseña de Logseq Copilot](/es/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — una app de notas en Markdown local de código cerrado pero ampliamente usada, con un ecosistema de plugins/temas muy grande; consulta la sección de comparación dedicada más arriba (todavía no existe una reseña independiente de Obsidian en PromptQuorum).',
           '**[Logseq](https://logseq.com)** — un esquematizador de código abierto y local-first con una estructura basada en bloques enlazados bidireccionalmente conceptualmente más cercana a SiYuan que al modelo basado en archivos de Obsidian; consulta [logseq.com](https://logseq.com) directamente, ya que PromptQuorum aún no cuenta con una reseña independiente de la app Logseq.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de gestión del conocimiento local-first; consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de SiYuan en el directorio. (Nota editorial: como aún no existe ninguna reseña FeatureAppPost independiente de Obsidian o Logseq en PromptQuorum, los dos enlaces anteriores a sus propios sitios oficiales sustituyen a reseñas del mismo segmento, junto con las dos reseñas realmente existentes —Khoj y Logseq Copilot— que son las más cercanas a este subsegmento.)',
+        note: 'Esta no es una lista exhaustiva de herramientas de gestión del conocimiento local-first; consulta el [Directorio de Software LLM Local](/es/directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de SiYuan en el directorio. (Nota editorial: como aún no existe ninguna reseña FeatureAppPost independiente de Obsidian o Logseq en PromptQuorum, los dos enlaces anteriores a sus propios sitios oficiales sustituyen a reseñas del mismo segmento, junto con las dos reseñas realmente existentes —Khoj y Logseq Copilot— que son las más cercanas a este subsegmento.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de SiYuan en el directorio.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de SiYuan en el directorio.',
           '[Reseña de Khoj AI](/es/power-local-llm/khoj-ai-second-brain-review) — un asistente de IA de "segundo cerebro" autoalojado que conversa sobre tus propias notas y documentos.',
           '[Reseña de Logseq Copilot](/es/power-local-llm/logseq-copilot-review) — un complemento de IA para el esquematizador de código abierto basado en bloques Logseq.',
         ],
@@ -1723,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra cerca de 46.400 estrelas em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do SiYuan no [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o SiYuan rapidamente com dezenas de outras ferramentas locais de IA e conhecimento.' },
+          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do SiYuan no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o SiYuan rapidamente com dezenas de outras ferramentas locais de IA e conhecimento.' },
         ],
       },
       overview: {
@@ -1855,14 +1855,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. Outras Ferramentas de Gestão do Conhecimento',
-        content: 'O SiYuan está em um campo pequeno de apps de gestão do conhecimento local-first, baseados em blocos ou em arquivos. A PromptQuorum ainda não tem análises dedicadas do tipo FeatureAppPost para o Obsidian ou o Logseq como apps independentes — as análises existentes mais próximas neste subsegmento estão listadas abaixo, junto com as duas comparações externas mais relevantes. Veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O SiYuan está em um campo pequeno de apps de gestão do conhecimento local-first, baseados em blocos ou em arquivos. A PromptQuorum ainda não tem análises dedicadas do tipo FeatureAppPost para o Obsidian ou o Logseq como apps independentes — as análises existentes mais próximas neste subsegmento estão listadas abaixo, junto com as duas comparações externas mais relevantes. Veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — um assistente de IA "segundo cérebro" self-hosted e de código aberto que indexa e conversa sobre suas próprias notas e documentos; a análise existente mais próxima da PromptQuorum no segmento de assistentes pessoais de conhecimento. Veja a [análise do Khoj AI](/pt/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — um complemento/extensão de navegador com IA para o app de outliner de código aberto Logseq, em vez de um app de base de conhecimento independente como o SiYuan; ainda assim, a análise existente mais próxima da PromptQuorum que toca em anotações locais baseadas em blocos. Veja a [análise do Logseq Copilot](/pt/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — um app de notas em Markdown local de código fechado, mas amplamente usado, com um ecossistema muito grande de plugins/temas; veja a seção de comparação dedicada acima (ainda não existe uma análise própria da PromptQuorum sobre o Obsidian).',
           '**[Logseq](https://logseq.com)** — um outliner local-first e de código aberto, com uma estrutura baseada em blocos e vinculada bidirecionalmente, conceitualmente mais próxima do SiYuan do que do modelo baseado em arquivos do Obsidian; veja diretamente [logseq.com](https://logseq.com), já que a PromptQuorum ainda não tem uma análise própria do app Logseq.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de gestão do conhecimento local-first — veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do SiYuan no diretório. (Nota editorial: como ainda não existe uma análise independente do tipo FeatureAppPost do Obsidian ou do Logseq na PromptQuorum, os dois links acima para seus respectivos sites oficiais substituem análises do mesmo segmento, ao lado das duas análises que realmente existem — Khoj e Logseq Copilot — que são as mais próximas deste subsegmento.)',
+        note: 'Esta não é uma lista exaustiva de ferramentas de gestão do conhecimento local-first — veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do SiYuan no diretório. (Nota editorial: como ainda não existe uma análise independente do tipo FeatureAppPost do Obsidian ou do Logseq na PromptQuorum, os dois links acima para seus respectivos sites oficiais substituem análises do mesmo segmento, ao lado das duas análises que realmente existem — Khoj e Logseq Copilot — que são as mais próximas deste subsegmento.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Softwares de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas locais de IA ao qual este artigo pertence, incluindo a entrada do SiYuan no diretório.',
+          '[Diretório de Softwares de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas locais de IA ao qual este artigo pertence, incluindo a entrada do SiYuan no diretório.',
           '[Análise do Khoj AI](/pt/power-local-llm/khoj-ai-second-brain-review) — um assistente de IA "segundo cérebro" self-hosted que conversa sobre suas próprias notas e documentos.',
           '[Análise do Logseq Copilot](/pt/power-local-llm/logseq-copilot-review) — um complemento de IA para o outliner de código aberto e baseado em blocos Logseq.',
         ],
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُظهر مستودع GitHub نحو 46,400 نجمة اعتبارًا من سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل SiYuan في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن SiYuan بلمحة سريعة بعشرات الأدوات الأخرى للذكاء الاصطناعي والمعرفة المحلية.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل SiYuan في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن SiYuan بلمحة سريعة بعشرات الأدوات الأخرى للذكاء الاصطناعي والمعرفة المحلية.' },
         ],
       },
       overview: {
@@ -2130,14 +2130,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan مقابل أدوات إدارة المعرفة الأخرى',
-        content: 'يقع SiYuan في مجال صغير من تطبيقات إدارة المعرفة المحلية أولًا، القائمة على الكتل أو الملفات. لا تملك PromptQuorum بعد مراجعات FeatureAppPost مخصصة لـ Obsidian أو Logseq بحد ذاتهما كتطبيقين مستقلين — أقرب المراجعات الموجودة في هذا القطاع الفرعي مذكورة أدناه، إلى جانب أقرب مقارنتين خارجيتين ذواتَي صلة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يقع SiYuan في مجال صغير من تطبيقات إدارة المعرفة المحلية أولًا، القائمة على الكتل أو الملفات. لا تملك PromptQuorum بعد مراجعات FeatureAppPost مخصصة لـ Obsidian أو Logseq بحد ذاتهما كتطبيقين مستقلين — أقرب المراجعات الموجودة في هذا القطاع الفرعي مذكورة أدناه، إلى جانب أقرب مقارنتين خارجيتين ذواتَي صلة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Khoj](https://khoj.dev)** — مساعد ذكاء اصطناعي "دماغ ثانٍ" مفتوح المصدر يعمل ذاتيًا، يفهرس ويتحاور حول ملاحظاتك ومستنداتك الخاصة؛ أقرب مراجعة موجودة لدى PromptQuorum في قطاع مساعد المعرفة الشخصية. راجع [مراجعة Khoj AI](/ar/power-local-llm/khoj-ai-second-brain-review).',
           '**Logseq Copilot** — إضافة/امتداد متصفح للذكاء الاصطناعي لتطبيق Logseq المخطِّط مفتوح المصدر، وليس تطبيق قاعدة معرفة مستقلًا مثل SiYuan؛ ومع ذلك تبقى أقرب مراجعة موجودة لدى PromptQuorum تتناول التدوين المحلي أولًا والقائم على الكتل. راجع [مراجعة Logseq Copilot](/ar/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — تطبيق ملاحظات Markdown محلي مغلق المصدر لكنه واسع الاستخدام، بنظام إضافات/قوالب كبير جدًا؛ راجع قسم المقارنة المخصص أعلاه (لا توجد بعد مراجعة PromptQuorum منفصلة لـ Obsidian).',
           '**[Logseq](https://logseq.com)** — مخطِّط مفتوح المصدر يعمل محليًا أولًا، بهيكل قائم على الكتل ومرتبط ثنائي الاتجاه، وهو من الناحية المفاهيمية أقرب إلى SiYuan من نموذج Obsidian القائم على الملفات؛ راجع [logseq.com](https://logseq.com) مباشرة، إذ لا تملك PromptQuorum بعد مراجعة تطبيق مستقلة لـ Logseq.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات إدارة المعرفة المحلية أولًا — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل SiYuan الخاص به. (ملاحظة تحريرية: نظرًا لعدم وجود مراجعة FeatureAppPost مستقلة لـ Obsidian أو Logseq على PromptQuorum بعد، فإن الرابطين أعلاه إلى موقعيهما الرسميين يحلّان محل مراجعات من القطاع نفسه، إلى جانب المراجعتين الحقيقيتين الموجودتين فعليًا — Khoj وLogseq Copilot — وهما الأقرب إلى هذا القطاع الفرعي.)',
+        note: 'هذه ليست قائمة شاملة لأدوات إدارة المعرفة المحلية أولًا — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل SiYuan الخاص به. (ملاحظة تحريرية: نظرًا لعدم وجود مراجعة FeatureAppPost مستقلة لـ Obsidian أو Logseq على PromptQuorum بعد، فإن الرابطين أعلاه إلى موقعيهما الرسميين يحلّان محل مراجعات من القطاع نفسه، إلى جانب المراجعتين الحقيقيتين الموجودتين فعليًا — Khoj وLogseq Copilot — وهما الأقرب إلى هذا القطاع الفرعي.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2195,7 +2195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل SiYuan.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل SiYuan.',
           '[مراجعة Khoj AI](/ar/power-local-llm/khoj-ai-second-brain-review) — مساعد ذكاء اصطناعي "دماغ ثانٍ" يعمل ذاتيًا، يتحاور حول ملاحظاتك ومستنداتك الخاصة.',
           '[مراجعة Logseq Copilot](/ar/power-local-llm/logseq-copilot-review) — إضافة ذكاء اصطناعي لتطبيق Logseq المخطِّط مفتوح المصدر والقائم على الكتل.',
         ],
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소 기준 2026년 9월 현재 약 46,400개의 스타 보유',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 SiYuan 항목의 심층 분석판입니다 — SiYuan이 수십 개의 다른 로컬 우선 AI 및 지식 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 SiYuan 항목의 심층 분석판입니다 — SiYuan이 수십 개의 다른 로컬 우선 AI 및 지식 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2405,14 +2405,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'siyuan-competitors',
         title: 'SiYuan vs. 다른 지식 관리 도구',
-        content: 'SiYuan은 로컬 우선의 블록 또는 파일 기반 지식 관리 앱이라는 작은 분야에 속해 있습니다. PromptQuorum은 아직 Obsidian이나 Logseq 자체를 독립 앱으로 다루는 전용 FeatureAppPost 리뷰를 제공하지 않으며, 이 하위 분야에서 가장 가까운 기존 리뷰들을 아래에 정리하고 가장 관련성 높은 두 개의 외부 비교도 함께 소개합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'SiYuan은 로컬 우선의 블록 또는 파일 기반 지식 관리 앱이라는 작은 분야에 속해 있습니다. PromptQuorum은 아직 Obsidian이나 Logseq 자체를 독립 앱으로 다루는 전용 FeatureAppPost 리뷰를 제공하지 않으며, 이 하위 분야에서 가장 가까운 기존 리뷰들을 아래에 정리하고 가장 관련성 높은 두 개의 외부 비교도 함께 소개합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Khoj](https://khoj.dev)** — 자신의 노트와 문서를 인덱싱하고 대화할 수 있는 셀프 호스팅 오픈소스 "세컨드 브레인" AI 어시스턴트로, 개인 지식 어시스턴트 분야에서 PromptQuorum에 존재하는 가장 가까운 리뷰입니다. [Khoj AI 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)를 참고하세요.',
           '**Logseq Copilot** — SiYuan 같은 독립형 지식 베이스 앱이 아니라, 오픈소스 아웃라이너 앱 Logseq를 위한 AI 브라우저 확장/플러그인 부가 기능이지만, 블록 기반 로컬 우선 노트 작성을 다루는 PromptQuorum의 가장 가까운 기존 리뷰입니다. [Logseq Copilot 리뷰](/ko/power-local-llm/logseq-copilot-review)를 참고하세요.',
           '**[Obsidian](https://obsidian.md)** — 소스는 비공개지만 널리 사용되는 로컬 Markdown 파일 노트 앱으로, 매우 큰 플러그인/테마 생태계를 갖추고 있습니다. 위의 전용 비교 섹션을 참고하세요(아직 PromptQuorum의 별도 Obsidian 리뷰는 없습니다).',
           '**[Logseq](https://logseq.com)** — Obsidian의 파일 기반 모델보다 개념적으로 SiYuan에 더 가까운, 블록 기반의 양방향 링크 구조를 가진 오픈소스 로컬 우선 아웃라이너입니다. PromptQuorum이 아직 독립적인 Logseq 앱 리뷰를 제공하지 않으므로 [logseq.com](https://logseq.com)에서 직접 확인하세요.',
         ],
-        note: '이는 로컬 우선 지식 관리 도구의 전체 목록이 아닙니다 — SiYuan 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요. (편집 참고: PromptQuorum에는 아직 Obsidian이나 Logseq의 독립 FeatureAppPost 리뷰가 없으므로, 위의 두 공식 사이트 링크는 같은 분야의 리뷰를 대신하며, 이 하위 분야에 가장 가까운 실제 존재하는 두 리뷰인 Khoj와 Logseq Copilot도 함께 소개했습니다.)',
+        note: '이는 로컬 우선 지식 관리 도구의 전체 목록이 아닙니다 — SiYuan 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요. (편집 참고: PromptQuorum에는 아직 Obsidian이나 Logseq의 독립 FeatureAppPost 리뷰가 없으므로, 위의 두 공식 사이트 링크는 같은 분야의 리뷰를 대신하며, 이 하위 분야에 가장 가까운 실제 존재하는 두 리뷰인 Khoj와 Logseq Copilot도 함께 소개했습니다.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — SiYuan의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — SiYuan의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Khoj AI 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — 자신의 노트와 문서를 대화형으로 다루는 셀프 호스팅 "세컨드 브레인" AI 어시스턴트.',
           '[Logseq Copilot 리뷰](/ko/power-local-llm/logseq-copilot-review) — 오픈소스 블록 기반 아웃라이너 Logseq용 AI 부가 기능.',
         ],

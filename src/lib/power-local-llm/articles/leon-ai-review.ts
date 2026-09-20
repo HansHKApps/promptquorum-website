@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Preview adds three execution modes (smart, controlled, agent), native and agent (SKILL.md-backed) skills, layered memory, and support for both local and remote AI model providers',
         ],
         callouts: [
-          { type: 'note', text: 'This review covers both the stable `master` branch of Leon and the `develop` branch 2.0 Developer Preview, since the GitHub repository actively maintains both and the project explicitly frames 2.0 as a from-scratch rebuild rather than a version bump. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how Leon AI compares to other agent frameworks at a glance.' },
+          { type: 'note', text: 'This review covers both the stable `master` branch of Leon and the `develop` branch 2.0 Developer Preview, since the GitHub repository actively maintains both and the project explicitly frames 2.0 as a from-scratch rebuild rather than a version bump. See the [Local LLM Software Directory](/directory) for how Leon AI compares to other agent frameworks at a glance.' },
         ],
       },
       history: {
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen Review: Features, Pricing, Alternatives](/power-local-llm/autogen-review) — Microsoft Research\'s multi-agent conversation framework, for teams coordinating several agents rather than running one self-hosted assistant.',
           '[SuperAGI Review: Features, Pricing, Alternatives](/power-local-llm/superagi-review) — another independent, GUI-based open-source autonomous agent project, for comparison against Leon\'s CLI-first setup.',
           '[Hermes Agent Review: Features, Pricing, Alternatives](/power-local-llm/hermes-agent-review) — a closer self-hosted personal-agent comparison, also built around persistent memory.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Leon AI fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where Leon AI fits among agent frameworks.',
         ],
       },
     },
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die 2.0 Developer Preview ergänzt drei Ausführungsmodi (smart, controlled, agent), native und Agent-Skills (auf Basis von SKILL.md), geschichtetes Gedächtnis sowie Unterstützung für lokale und externe KI-Anbieter',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Review behandelt sowohl den stabilen Branch `master` von Leon als auch die 2.0 Developer Preview auf dem Branch `develop`, da das GitHub-Repository beide aktiv pflegt und das Projekt 2.0 ausdrücklich als grundlegenden Umbau und nicht als reine Versionserhöhung einordnet. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für einen schnellen Vergleich von Leon AI mit anderen Agenten-Frameworks.' },
+          { type: 'note', text: 'Dieser Review behandelt sowohl den stabilen Branch `master` von Leon als auch die 2.0 Developer Preview auf dem Branch `develop`, da das GitHub-Repository beide aktiv pflegt und das Projekt 2.0 ausdrücklich als grundlegenden Umbau und nicht als reine Versionserhöhung einordnet. Siehe das [Local LLM Software Directory](/de/directory) für einen schnellen Vergleich von Leon AI mit anderen Agenten-Frameworks.' },
         ],
       },
       history: {
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen Review: Funktionen, Preise, Alternativen](/de/power-local-llm/autogen-review) — das Multi-Agenten-Konversations-Framework von Microsoft Research, für Teams, die mehrere Agenten koordinieren statt einen einzelnen selbst gehosteten Assistenten zu betreiben.',
           '[SuperAGI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/superagi-review) — ein weiteres unabhängiges, GUI-basiertes Open-Source-Projekt für autonome Agenten, im Vergleich zu Leons CLI-first-Setup.',
           '[Hermes Agent Review: Funktionen, Preise, Alternativen](/de/power-local-llm/hermes-agent-review) — ein näherer Vergleich mit einem selbst gehosteten persönlichen Agenten, ebenfalls auf Basis von dauerhaftem Gedächtnis gebaut.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Leon AI unter den Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Leon AI unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La 2.0 Developer Preview ajoute trois modes d\'exécution (smart, controlled, agent), des skills natifs et des skills agent (basés sur SKILL.md), une mémoire en couches, et la prise en charge de fournisseurs d\'IA locaux et distants',
         ],
         callouts: [
-          { type: 'note', text: "Cet avis couvre à la fois la branche stable `master` de Leon et la 2.0 Developer Preview sur la branche `develop`, car le dépôt GitHub maintient activement les deux, et le projet présente explicitement la 2.0 comme une refonte complète plutôt qu'une simple montée de version. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer Leon AI par rapport aux autres frameworks d'agents." },
+          { type: 'note', text: "Cet avis couvre à la fois la branche stable `master` de Leon et la 2.0 Developer Preview sur la branche `develop`, car le dépôt GitHub maintient activement les deux, et le projet présente explicitement la 2.0 comme une refonte complète plutôt qu'une simple montée de version. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour situer Leon AI par rapport aux autres frameworks d'agents." },
         ],
       },
       history: {
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/autogen-review) — le framework de conversation multi-agents de Microsoft Research, pour les équipes qui coordonnent plusieurs agents plutôt que de faire tourner un seul assistant auto-hébergé.',
           '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/superagi-review) — un autre projet open source indépendant d\'agent autonome à interface graphique, à comparer avec l\'installation CLI-first de Leon.',
           '[Avis Hermes Agent : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/hermes-agent-review) — une comparaison plus proche d\'un agent personnel auto-hébergé, également construit autour de la mémoire persistante.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de Leon AI parmi les frameworks d\'agents.',
+          '[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de Leon AI parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La 2.0 Developer Preview añade tres modos de ejecución (smart, controlled, agent), skills nativos y skills de agente (basados en SKILL.md), memoria en capas, y compatibilidad con proveedores de IA locales y remotos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña cubre tanto la rama estable `master` de Leon como la 2.0 Developer Preview en la rama `develop`, ya que el repositorio de GitHub mantiene ambas activamente y el proyecto presenta explícitamente la 2.0 como una reconstrucción desde cero, no como una simple actualización de versión. Consulta el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para ver cómo se compara Leon AI con otros frameworks de agentes.' },
+          { type: 'note', text: 'Esta reseña cubre tanto la rama estable `master` de Leon como la 2.0 Developer Preview en la rama `develop`, ya que el repositorio de GitHub mantiene ambas activamente y el proyecto presenta explícitamente la 2.0 como una reconstrucción desde cero, no como una simple actualización de versión. Consulta el [Directorio de software de LLM locales](/es/directory) para ver cómo se compara Leon AI con otros frameworks de agentes.' },
         ],
       },
       history: {
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de AutoGen: funciones, precios, alternativas](/es/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, para equipos que coordinan varios agentes en lugar de ejecutar un único asistente autoalojado.',
           '[Reseña de SuperAGI: funciones, precios, alternativas](/es/power-local-llm/superagi-review) — otro proyecto independiente de código abierto de agente autónomo con interfaz gráfica, en comparación con la instalación CLI-first de Leon.',
           '[Reseña de Hermes Agent: funciones, precios, alternativas](/es/power-local-llm/hermes-agent-review) — una comparación más cercana con un agente personal autoalojado, también construido en torno a la memoria persistente.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Leon AI entre los frameworks de agentes.',
+          '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Leon AI entre los frameworks de agentes.',
         ],
       },
     },
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A 2.0 Developer Preview adiciona três modos de execução (smart, controlled, agent), skills nativos e skills de agente (baseados em SKILL.md), memória em camadas, e suporte a provedores de IA locais e remotos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise cobre tanto a branch estável `master` do Leon quanto a 2.0 Developer Preview na branch `develop`, já que o repositório do GitHub mantém ambas ativamente e o projeto apresenta explicitamente a 2.0 como uma reconstrução do zero, não apenas um aumento de versão. Veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para comparar o Leon AI com outros frameworks de agentes.' },
+          { type: 'note', text: 'Esta análise cobre tanto a branch estável `master` do Leon quanto a 2.0 Developer Preview na branch `develop`, já que o repositório do GitHub mantém ambas ativamente e o projeto apresenta explicitamente a 2.0 como uma reconstrução do zero, não apenas um aumento de versão. Veja o [Diretório de software de LLM local](/pt/directory) para comparar o Leon AI com outros frameworks de agentes.' },
         ],
       },
       history: {
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do AutoGen: recursos, preços, alternativas](/pt/power-local-llm/autogen-review) — o framework de conversa multiagente do Microsoft Research, para equipes que coordenam vários agentes em vez de rodar um único assistente autoinstalável.',
           '[Análise do SuperAGI: recursos, preços, alternativas](/pt/power-local-llm/superagi-review) — outro projeto independente de código aberto de agente autônomo com GUI, em comparação com a instalação CLI-first do Leon.',
           '[Análise do Hermes Agent: recursos, preços, alternativas](/pt/power-local-llm/hermes-agent-review) — uma comparação mais próxima com um agente pessoal autoinstalável, também construído em torno de memória persistente.',
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Leon AI se encaixa entre os frameworks de agentes.',
+          '[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Leon AI se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1416,7 +1416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Previewでは3つの実行モード（smart、controlled、agent）、ネイティブスキルとエージェントスキル（SKILL.mdベース）、階層化メモリー、ローカルおよびリモートのAIプロバイダー対応が追加される',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューではLeonの安定版`master`ブランチと`develop`ブランチの2.0 Developer Previewの両方を扱います。GitHubリポジトリは両方を積極的に保守しており、プロジェクトは2.0を単なるバージョンアップではなくゼロからの作り直しと明確に位置づけているためです。Leon AIが他のエージェントフレームワークとどう比較されるかは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { type: 'note', text: 'このレビューではLeonの安定版`master`ブランチと`develop`ブランチの2.0 Developer Previewの両方を扱います。GitHubリポジトリは両方を積極的に保守しており、プロジェクトは2.0を単なるバージョンアップではなくゼロからの作り直しと明確に位置づけているためです。Leon AIが他のエージェントフレームワークとどう比較されるかは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       history: {
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGenレビュー：機能・料金・代替ツール](/ja/power-local-llm/autogen-review) — Microsoft Researchのマルチエージェント会話フレームワークで、単一のセルフホスト型アシスタントを動かすのではなく複数エージェントを調整するチーム向け。',
           '[SuperAGIレビュー：機能・料金・代替ツール](/ja/power-local-llm/superagi-review) — もう一つの独立系・GUIベースのオープンソース自律エージェントプロジェクトで、LeonのCLI優先のセットアップとの比較対象。',
           '[Hermes Agentレビュー：機能・料金・代替ツール](/ja/power-local-llm/hermes-agent-review) — 永続的メモリーを中心に構築された、より近いセルフホスト型パーソナルエージェントとの比較。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLeon AIがどこに位置するかを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLeon AIがどこに位置するかを含む。',
         ],
       },
     },
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Preview新增三种执行模式（smart、controlled、agent）、原生技能与智能体技能（基于SKILL.md）、分层记忆，以及对本地和远程AI提供方的支持',
         ],
         callouts: [
-          { type: 'note', text: '本评测同时涵盖Leon的稳定`master`分支和`develop`分支上的2.0 Developer Preview，因为GitHub仓库对两者都在积极维护，且项目明确将2.0定位为从零重构，而不是简单的版本升级。关于Leon AI与其他智能体框架的对比，参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { type: 'note', text: '本评测同时涵盖Leon的稳定`master`分支和`develop`分支上的2.0 Developer Preview，因为GitHub仓库对两者都在积极维护，且项目明确将2.0定位为从零重构，而不是简单的版本升级。关于Leon AI与其他智能体框架的对比，参见[本地LLM软件目录](/zh/directory)。' },
         ],
       },
       history: {
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen评测：功能、价格、替代方案](/zh/power-local-llm/autogen-review)——Microsoft Research的多智能体对话框架，适合需要协调多个智能体、而不是运行单个自托管助手的团队。',
           '[SuperAGI评测：功能、价格、替代方案](/zh/power-local-llm/superagi-review)——另一款独立、基于GUI的开源自主智能体项目，可与Leon以CLI为先的安装方式进行对比。',
           '[Hermes Agent评测：功能、价格、替代方案](/zh/power-local-llm/hermes-agent-review)——一个更接近的自托管个人智能体对比对象，同样围绕持久记忆构建。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含Leon AI在各类智能体框架中的定位。',
+          '[本地LLM软件目录](/zh/directory)——本文所属的本地AI工具完整目录，包含Leon AI在各类智能体框架中的定位。',
         ],
       },
     },
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تضيف نسخة 2.0 Developer Preview ثلاثة أوضاع تنفيذ (smart وcontrolled وagent)، ومهارات أصلية (native skills) ومهارات وكيلية (تعتمد على SKILL.md)، وذاكرة متعددة الطبقات، ودعمًا لمزودي ذكاء اصطناعي محليين وعن بُعد',
         ],
         callouts: [
-          { type: 'note', text: 'تغطي هذه المراجعة فرع Leon المستقر `master` ونسخة 2.0 Developer Preview على فرع `develop` معًا، لأن مستودع GitHub يحافظ عليهما بنشاط، ولأن المشروع يصف 2.0 صراحة بأنها إعادة بناء كاملة وليست مجرد ترقية إصدار. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) لمقارنة سريعة بين Leon AI وأطر العمل الوكيلية الأخرى.' },
+          { type: 'note', text: 'تغطي هذه المراجعة فرع Leon المستقر `master` ونسخة 2.0 Developer Preview على فرع `develop` معًا، لأن مستودع GitHub يحافظ عليهما بنشاط، ولأن المشروع يصف 2.0 صراحة بأنها إعادة بناء كاملة وليست مجرد ترقية إصدار. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) لمقارنة سريعة بين Leon AI وأطر العمل الوكيلية الأخرى.' },
         ],
       },
       history: {
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة AutoGen: الميزات والأسعار والبدائل](/ar/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، للفرق التي تنسّق عدة وكلاء بدلًا من تشغيل مساعد واحد ذاتي الاستضافة.',
           '[مراجعة SuperAGI: الميزات والأسعار والبدائل](/ar/power-local-llm/superagi-review) — مشروع آخر مستقل ومفتوح المصدر لوكيل مستقل بواجهة رسومية، للمقارنة مع إعداد Leon الذي يعتمد على سطر الأوامر أولًا.',
           '[مراجعة Hermes Agent: الميزات والأسعار والبدائل](/ar/power-local-llm/hermes-agent-review) — مقارنة أقرب مع وكيل شخصي ذاتي الاستضافة، مبني أيضًا حول الذاكرة الدائمة.',
-          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Leon AI بين أطر العمل الوكيلية.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Leon AI بين أطر العمل الوكيلية.',
         ],
       },
     },
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2.0 Developer Preview는 세 가지 실행 모드(smart, controlled, agent), 네이티브 스킬과 에이전트 스킬(SKILL.md 기반), 계층화된 메모리, 로컬 및 원격 AI 제공업체 지원을 추가합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 Leon의 안정 `master` 브랜치와 `develop` 브랜치의 2.0 Developer Preview를 모두 다룹니다. GitHub 저장소가 두 브랜치를 모두 적극적으로 유지 관리하고 있고, 프로젝트가 2.0을 단순한 버전 업이 아니라 처음부터 다시 만드는 재구축으로 명시적으로 규정하고 있기 때문입니다. Leon AI가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 Leon의 안정 `master` 브랜치와 `develop` 브랜치의 2.0 Developer Preview를 모두 다룹니다. GitHub 저장소가 두 브랜치를 모두 적극적으로 유지 관리하고 있고, 프로젝트가 2.0을 단순한 버전 업이 아니라 처음부터 다시 만드는 재구축으로 명시적으로 규정하고 있기 때문입니다. Leon AI가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.' },
         ],
       },
       history: {
@@ -2418,7 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen 리뷰: 기능, 가격, 대안](/ko/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 셀프 호스팅 비서 하나를 운영하기보다 여러 에이전트를 조정하는 팀에 적합합니다.',
           '[SuperAGI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/superagi-review) — 또 다른 독립적이고 GUI 기반인 오픈소스 자율 에이전트 프로젝트로, CLI 중심인 Leon의 설정과 비교해볼 만합니다.',
           '[Hermes Agent 리뷰: 기능, 가격, 대안](/ko/power-local-llm/hermes-agent-review) — 지속적인 메모리를 중심으로 만들어진, Leon과 더 가까운 셀프 호스팅 개인 에이전트 비교 대상입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Leon AI가 어디에 위치하는지도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Leon AI가 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

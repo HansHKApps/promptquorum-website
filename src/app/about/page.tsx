@@ -217,7 +217,7 @@ export default function AboutPage() {
                   <div className="text-text-primary font-semibold mb-1">Local LLMs Content</div>
                   <div className="text-sm text-text-secondary">Guides on running LLMs on your own hardware — setup, requirements, and comparisons.</div>
                 </Link>
-                <Link href="/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">Local LLM Software Directory</div>
                   <div className="text-sm text-text-secondary">A searchable directory of local LLM apps and tools, compared side by side.</div>
                 </Link>

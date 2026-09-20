@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows 2,541 stars, verified against [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) on September 5, 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Foundry Local\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Foundry Local compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Foundry Local\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Foundry Local compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -223,13 +223,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. Other Local AI Tools',
-        content: 'Foundry Local sits in the runtimes-and-managers segment, alongside other tools that run models locally through a CLI or API. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Foundry Local sits in the runtimes-and-managers segment, alongside other tools that run models locally through a CLI or API. See the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Ollama](/power-local-llm/ollama-review)** — a general-purpose local model runtime and API built on llama.cpp, fully MIT-licensed, with a larger and more open model library and no Microsoft-specific SDK requirement. The more direct fit if you want the broadest hardware compatibility and model choice rather than native C#/JavaScript/Rust/Python SDKs. See the full [Ollama review](/power-local-llm/ollama-review).',
           '**[LM Studio](/power-local-llm/lm-studio-review)** — a GUI-first desktop app for local inference with a built-in model browser and document-chat feature, aimed at end users rather than developers integrating an SDK. A closer fit than Foundry Local if you want a polished graphical app instead of a CLI-and-SDK developer tool. See the full [LM Studio review](/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/power-local-llm/docker-model-runner-review)** — a CLI-and-API feature bundled with Docker Desktop/Engine for developers already working in a Docker-based workflow, another option to weigh against Foundry Local\'s native-SDK approach if your stack is container-centric. See the full [Docker Model Runner review](/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'This is not an exhaustive list of local-runtime tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Foundry Local\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-runtime tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Foundry Local\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Foundry Local\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Foundry Local\'s own directory entry.',
           '[Ollama Review](/power-local-llm/ollama-review) — a fully open-source, hardware-agnostic local model runtime with a broader model library.',
           '[LM Studio Review](/power-local-llm/lm-studio-review) — a GUI-first, hardware-agnostic alternative for readers who want a polished desktop app instead of a CLI-and-SDK developer tool.',
           '[Docker Model Runner Review](/power-local-llm/docker-model-runner-review) — another developer-focused option for teams already using Docker.',
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub-Repository zeigt 2.541 Sterne, geprüft gegen [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) am 5. September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Foundry Local im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie, wie Foundry Local im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Foundry Local im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie Foundry Local im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -514,13 +514,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. andere lokale KI-Tools',
-        content: 'Foundry Local ist im Segment Laufzeitumgebungen und Manager angesiedelt, neben anderen Tools, die Modelle lokal über eine CLI oder API ausführen. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Foundry Local ist im Segment Laufzeitumgebungen und Manager angesiedelt, neben anderen Tools, die Modelle lokal über eine CLI oder API ausführen. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Ollama](/de/power-local-llm/ollama-review)** — eine universelle lokale Modell-Laufzeitumgebung und API auf Basis von llama.cpp, vollständig MIT-lizenziert, mit einer größeren und offeneren Modellbibliothek und ohne Microsoft-spezifische SDK-Anforderung. Die direktere Wahl, wenn Sie die breitestmögliche Hardware-Kompatibilität und Modellauswahl statt nativer C#/JavaScript/Rust/Python-SDKs wollen. Details in der vollständigen [Ollama-Review](/de/power-local-llm/ollama-review).',
           '**[LM Studio](/de/power-local-llm/lm-studio-review)** — eine GUI-orientierte Desktop-App für lokale Inferenz mit eingebautem Modell-Browser und Dokument-Chat-Funktion, gerichtet an Endnutzer statt an Entwickler, die ein SDK integrieren. Eine engere Wahl als Foundry Local, wenn Sie eine ausgereifte grafische App statt eines CLI- und SDK-Entwickler-Tools wollen. Details in der vollständigen [LM-Studio-Review](/de/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/de/power-local-llm/docker-model-runner-review)** — eine CLI- und API-Funktion, gebündelt mit Docker Desktop/Engine, für Entwickler, die bereits in einem Docker-basierten Workflow arbeiten — eine weitere Option, die Sie gegen den nativen SDK-Ansatz von Foundry Local abwägen können, wenn Ihr Stack containerzentriert ist. Details in der vollständigen [Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Dies ist keine abschließende Liste lokaler Laufzeit-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Eintrags von Foundry Local, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine abschließende Liste lokaler Laufzeit-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Eintrags von Foundry Local, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Eintrags von Foundry Local.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Eintrags von Foundry Local.',
           '[Ollama-Review](/de/power-local-llm/ollama-review) — eine vollständig quelloffene, hardware-unabhängige lokale Modell-Laufzeitumgebung mit breiterer Modellbibliothek.',
           '[LM-Studio-Review](/de/power-local-llm/lm-studio-review) — eine GUI-orientierte, hardware-unabhängige Alternative für Leser, die eine ausgereifte Desktop-App statt eines CLI- und SDK-Entwickler-Tools wollen.',
           '[Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review) — eine weitere entwicklerorientierte Option für Teams, die bereits Docker nutzen.',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche 2 541 étoiles, vérifié sur [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) le 5 septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Foundry Local dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — voir cette page pour comparer Foundry Local en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Foundry Local dans le [Local LLM Software Directory](/fr/directory) — voir cette page pour comparer Foundry Local en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -805,13 +805,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. autres outils d\'IA locale',
-        content: 'Foundry Local se situe dans le segment des runtimes et gestionnaires, aux côtés d\'autres outils qui exécutent des modèles localement via une CLI ou une API. Voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Foundry Local se situe dans le segment des runtimes et gestionnaires, aux côtés d\'autres outils qui exécutent des modèles localement via une CLI ou une API. Voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Ollama](/fr/power-local-llm/ollama-review)** — un runtime local de modèles et API à usage général basé sur llama.cpp, entièrement sous licence MIT, avec une bibliothèque de modèles plus large et plus ouverte et sans exigence de SDK spécifique à Microsoft. Le choix le plus direct si vous voulez la compatibilité matérielle et le choix de modèles les plus larges plutôt que des SDK natifs C#/JavaScript/Rust/Python. Voir la [review complète d\'Ollama](/fr/power-local-llm/ollama-review).',
           '**[LM Studio](/fr/power-local-llm/lm-studio-review)** — une application de bureau axée sur l\'interface graphique pour l\'inférence locale, avec un navigateur de modèles intégré et une fonction de chat avec documents, destinée aux utilisateurs finaux plutôt qu\'aux développeurs intégrant un SDK. Un choix plus proche que Foundry Local si vous voulez une application graphique aboutie plutôt qu\'un outil de développement CLI et SDK. Voir la [review complète de LM Studio](/fr/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/fr/power-local-llm/docker-model-runner-review)** — une fonctionnalité CLI et API intégrée à Docker Desktop/Engine pour les développeurs déjà dans un workflow basé sur Docker, une autre option à comparer à l\'approche SDK natif de Foundry Local si votre pile est centrée sur les conteneurs. Voir la [review complète de Docker Model Runner](/fr/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de runtime local — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Foundry Local.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de runtime local — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Foundry Local.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de Foundry Local.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de Foundry Local.',
           '[Review d\'Ollama](/fr/power-local-llm/ollama-review) — un runtime local de modèles entièrement open source et agnostique du matériel, avec une bibliothèque de modèles plus large.',
           '[Review de LM Studio](/fr/power-local-llm/lm-studio-review) — une alternative axée sur l\'interface graphique et agnostique du matériel pour les lecteurs qui veulent une application de bureau aboutie plutôt qu\'un outil de développement CLI et SDK.',
           '[Review de Docker Model Runner](/fr/power-local-llm/docker-model-runner-review) — une autre option orientée développeurs pour les équipes déjà sous Docker.',
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub muestra 2.541 estrellas, verificado en [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) el 5 de septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Foundry Local en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Foundry Local de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Foundry Local en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara Foundry Local de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1096,13 +1096,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. otras herramientas de IA local',
-        content: 'Foundry Local se sitúa en el segmento de runtimes y gestores, junto a otras herramientas que ejecutan modelos localmente mediante una CLI o API. Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Foundry Local se sitúa en el segmento de runtimes y gestores, junto a otras herramientas que ejecutan modelos localmente mediante una CLI o API. Consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo.',
         items: [
           '**[Ollama](/es/power-local-llm/ollama-review)** — un runtime local de modelos y API de propósito general basado en llama.cpp, totalmente con licencia MIT, con una biblioteca de modelos más grande y abierta y sin requisito de SDK específico de Microsoft. La opción más directa si quieres la compatibilidad de hardware y la elección de modelos más amplias en lugar de SDK nativos de C#/JavaScript/Rust/Python. Consulta la [review completa de Ollama](/es/power-local-llm/ollama-review).',
           '**[LM Studio](/es/power-local-llm/lm-studio-review)** — una app de escritorio centrada en la interfaz gráfica para inferencia local, con un navegador de modelos incorporado y una función de chat con documentos, dirigida a usuarios finales en lugar de a desarrolladores que integran un SDK. Una opción más cercana que Foundry Local si quieres una app gráfica pulida en lugar de una herramienta de desarrollo de CLI y SDK. Consulta la [review completa de LM Studio](/es/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/es/power-local-llm/docker-model-runner-review)** — una función de CLI y API incluida en Docker Desktop/Engine para desarrolladores que ya trabajan en un flujo basado en Docker, otra opción a comparar con el enfoque de SDK nativo de Foundry Local si tu stack está centrado en contenedores. Consulta la [review completa de Docker Model Runner](/es/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de runtime local — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Foundry Local.',
+        note: 'Esta no es una lista exhaustiva de herramientas de runtime local — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Foundry Local.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Foundry Local.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Foundry Local.',
           '[Review de Ollama](/es/power-local-llm/ollama-review) — un runtime local de modelos totalmente de código abierto y agnóstico del hardware, con una biblioteca de modelos más amplia.',
           '[Review de LM Studio](/es/power-local-llm/lm-studio-review) — una alternativa centrada en la interfaz gráfica y agnóstica del hardware para lectores que quieren una app de escritorio pulida en lugar de una herramienta de desarrollo de CLI y SDK.',
           '[Review de Docker Model Runner](/es/power-local-llm/docker-model-runner-review) — otra opción orientada a desarrolladores para equipos que ya usan Docker.',
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra 2.541 estrelas, verificado em [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) em 5 de setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Foundry Local no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Foundry Local rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Foundry Local no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Foundry Local rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1387,13 +1387,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. outras ferramentas de IA local',
-        content: 'O Foundry Local está no segmento de runtimes e gerenciadores, ao lado de outras ferramentas que executam modelos localmente por meio de uma CLI ou API. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Foundry Local está no segmento de runtimes e gerenciadores, ao lado de outras ferramentas que executam modelos localmente por meio de uma CLI ou API. Veja o [Local LLM Software Directory](/pt/directory) para o catálogo completo.',
         items: [
           '**[Ollama](/pt/power-local-llm/ollama-review)** — um runtime local de modelos e API de uso geral baseado em llama.cpp, totalmente licenciado sob MIT, com uma biblioteca de modelos maior e mais aberta e sem exigência de SDK específico da Microsoft. A opção mais direta se você quiser a maior compatibilidade de hardware e escolha de modelos em vez de SDKs nativos de C#/JavaScript/Rust/Python. Veja a [review completa do Ollama](/pt/power-local-llm/ollama-review).',
           '**[LM Studio](/pt/power-local-llm/lm-studio-review)** — um aplicativo de desktop focado em interface gráfica para inferência local, com um navegador de modelos embutido e um recurso de chat com documentos, voltado a usuários finais em vez de desenvolvedores integrando um SDK. Uma opção mais próxima do que o Foundry Local se você quiser um aplicativo gráfico polido em vez de uma ferramenta de desenvolvimento de CLI e SDK. Veja a [review completa do LM Studio](/pt/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/pt/power-local-llm/docker-model-runner-review)** — um recurso de CLI e API incluído no Docker Desktop/Engine para desenvolvedores que já trabalham em um fluxo baseado em Docker, outra opção a comparar com a abordagem de SDK nativo do Foundry Local se sua stack for centrada em contêineres. Veja a [review completa do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de runtime local — veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Foundry Local.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de runtime local — veja o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Foundry Local.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Foundry Local.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Foundry Local.',
           '[Review do Ollama](/pt/power-local-llm/ollama-review) — um runtime local de modelos totalmente de código aberto e agnóstico de hardware, com uma biblioteca de modelos mais ampla.',
           '[Review do LM Studio](/pt/power-local-llm/lm-studio-review) — uma alternativa focada em interface gráfica e agnóstica de hardware para leitores que querem um aplicativo de desktop polido em vez de uma ferramenta de desenvolvimento de CLI e SDK.',
           '[Review do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review) — outra opção voltada a desenvolvedores para equipes que já usam Docker.',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリは2,541のスターを表示、2026年9月5日に[github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)で確認',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるFoundry Localのエントリーを補完する詳細版です — 数十の他のローカルAIツールとFoundry Localが一目でどう比較されるかは、そのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるFoundry Localのエントリーを補完する詳細版です — 数十の他のローカルAIツールとFoundry Localが一目でどう比較されるかは、そのページを参照してください。' },
         ],
       },
       overview: {
@@ -1678,13 +1678,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. その他のローカルAIツール',
-        content: 'Foundry Localは、CLIやAPI経由でローカルにモデルを実行する他のツールと並んで、ランタイム・マネージャーのセグメントに位置します。完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Foundry Localは、CLIやAPI経由でローカルにモデルを実行する他のツールと並んで、ランタイム・マネージャーのセグメントに位置します。完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Ollama](/ja/power-local-llm/ollama-review)** — llama.cppをベースにした汎用のローカルモデルランタイムとAPIで、完全にMITライセンスであり、より大規模で開かれたモデルライブラリを持ち、Microsoft固有のSDK要件はない。C#/JavaScript/Rust/Pythonのネイティブ SDKよりも、最も幅広いハードウェア互換性とモデル選択肢が欲しい場合により直接的な選択肢。詳細は[Ollamaレビューの全文](/ja/power-local-llm/ollama-review)を参照。',
           '**[LM Studio](/ja/power-local-llm/lm-studio-review)** — ローカル推論向けのGUI優先のデスクトップアプリで、SDKを統合する開発者ではなくエンドユーザーを対象とした、組み込みのモデルブラウザとドキュメントチャット機能を備える。CLIとSDKの開発者向けツールではなく、洗練されたグラフィカルアプリが欲しい場合はFoundry Localよりも近い選択肢。詳細は[LM Studioレビューの全文](/ja/power-local-llm/lm-studio-review)を参照。',
           '**[Docker Model Runner](/ja/power-local-llm/docker-model-runner-review)** — Docker Desktop/Engineに同梱されたCLIおよびAPI機能で、すでにDockerベースのワークフローで作業している開発者向け。スタックがコンテナ中心である場合、Foundry Localのネイティブ SDKアプローチと比較検討するもう一つの選択肢。詳細は[Docker Model Runnerレビューの全文](/ja/power-local-llm/docker-model-runner-review)を参照。',
         ],
-        note: 'これはローカルランタイムツールの網羅的なリストではありません — Foundry Local自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルランタイムツールの網羅的なリストではありません — Foundry Local自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1740,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。Foundry Local自身のディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。Foundry Local自身のディレクトリエントリーを含む。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — より広いモデルライブラリを持つ、完全にオープンソースでハードウェアに依存しないローカルモデルランタイム。',
           '[LM Studioレビュー](/ja/power-local-llm/lm-studio-review) — CLIとSDKの開発者向けツールではなく、洗練されたデスクトップアプリが欲しい読者向けの、GUI優先でハードウェアに依存しない代替案。',
           '[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review) — すでにDockerを使用しているチーム向けの、もう一つの開発者向けの選択肢。',
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库显示有2,541个星标，于2026年9月5日在[github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)核实',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Foundry Local条目的深度补充——欲了解Foundry Local与数十种其他本地AI工具的一览对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Foundry Local条目的深度补充——欲了解Foundry Local与数十种其他本地AI工具的一览对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1969,13 +1969,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local 对比其他本地AI工具',
-        content: 'Foundry Local位于运行时与管理工具这一细分领域，与其他通过CLI或API在本地运行模型的工具并列。完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Foundry Local位于运行时与管理工具这一细分领域，与其他通过CLI或API在本地运行模型的工具并列。完整目录请参阅[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Ollama](/zh/power-local-llm/ollama-review)**——一个基于llama.cpp的通用本地模型运行时和API，完全采用MIT许可证，拥有更大、更开放的模型库，且没有微软特定的SDK要求。如果您想要最广泛的硬件兼容性和模型选择，而不是C#/JavaScript/Rust/Python的原生SDK，它是更直接的选择。详情请参阅[Ollama评测全文](/zh/power-local-llm/ollama-review)。',
           '**[LM Studio](/zh/power-local-llm/lm-studio-review)**——一款以图形界面为先的本地推理桌面应用，内置模型浏览器和文档聊天功能，面向终端用户而非集成SDK的开发者。如果您想要一个打磨精良的图形化应用，而不是CLI和SDK的开发者工具，它比Foundry Local更贴近需求。详情请参阅[LM Studio评测全文](/zh/power-local-llm/lm-studio-review)。',
           '**[Docker Model Runner](/zh/power-local-llm/docker-model-runner-review)**——捆绑在Docker Desktop/Engine中的CLI和API功能，面向已经在基于Docker的工作流中工作的开发者；如果您的技术栈以容器为中心，这是与Foundry Local原生SDK方式相比较的另一个选项。详情请参阅[Docker Model Runner评测全文](/zh/power-local-llm/docker-model-runner-review)。',
         ],
-        note: '这不是本地运行时工具的详尽清单——完整且定期更新的目录，包括Foundry Local自身的目录条目，请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这不是本地运行时工具的详尽清单——完整且定期更新的目录，包括Foundry Local自身的目录条目，请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包括Foundry Local自身的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory)——本文所属的本地AI工具完整目录，包括Foundry Local自身的目录条目。',
           '[Ollama评测](/zh/power-local-llm/ollama-review)——一款完全开源、与硬件无关的本地模型运行时，拥有更广泛的模型库。',
           '[LM Studio评测](/zh/power-local-llm/lm-studio-review)——面向想要一款打磨精良的桌面应用，而非CLI和SDK开发者工具的读者的、以图形界面为先、与硬件无关的替代方案。',
           '[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review)——面向已经使用Docker的团队的另一个开发者导向选项。',
@@ -2116,7 +2116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub 2,541 نجمة، تم التحقق منها في [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) بتاريخ 5 سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدخال Foundry Local في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Foundry Local بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدخال Foundry Local في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Foundry Local بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2260,13 +2260,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local مقابل أدوات الذكاء الاصطناعي المحلية الأخرى',
-        content: 'يقع Foundry Local ضمن فئة بيئات التشغيل والمديرين، إلى جانب أدوات أخرى تُشغّل النماذج محليًا عبر أداة سطر أوامر أو واجهة برمجة تطبيقات. راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يقع Foundry Local ضمن فئة بيئات التشغيل والمديرين، إلى جانب أدوات أخرى تُشغّل النماذج محليًا عبر أداة سطر أوامر أو واجهة برمجة تطبيقات. راجع [دليل برامج LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Ollama](/ar/power-local-llm/ollama-review)** — بيئة تشغيل نماذج محلية عامة الغرض وواجهة برمجة تطبيقات مبنية على llama.cpp، مرخّصة بالكامل بموجب MIT، مع مكتبة نماذج أكبر وأكثر انفتاحًا ودون أي شرط SDK خاص بـ Microsoft. الخيار الأنسب مباشرة إذا كنت تريد أوسع توافق مع الأجهزة وأوسع اختيار للنماذج بدلًا من حزم SDK أصلية للغات C#/JavaScript/Rust/Python. راجع [مراجعة Ollama الكاملة](/ar/power-local-llm/ollama-review).',
           '**[LM Studio](/ar/power-local-llm/lm-studio-review)** — تطبيق سطح مكتب يركز أولًا على الواجهة الرسومية للاستدلال المحلي، مع متصفح نماذج مدمج وميزة دردشة مع المستندات، موجّه للمستخدمين النهائيين بدلًا من المطورين الذين يدمجون حزمة SDK. خيار أقرب من Foundry Local إذا كنت تريد تطبيقًا رسوميًا مصقولًا بدلًا من أداة تطوير عبر سطر الأوامر وحزمة SDK. راجع [مراجعة LM Studio الكاملة](/ar/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/ar/power-local-llm/docker-model-runner-review)** — ميزة أداة سطر أوامر وواجهة برمجة تطبيقات مضمّنة في Docker Desktop/Engine للمطورين الذين يعملون بالفعل ضمن سير عمل قائم على Docker، وهو خيار آخر يمكن مقارنته بنهج SDK الأصلي في Foundry Local إذا كانت مجموعتك التقنية متمحورة حول الحاويات. راجع [مراجعة Docker Model Runner الكاملة](/ar/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'هذه ليست قائمة شاملة بأدوات بيئة التشغيل المحلية — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Foundry Local الخاص به في الدليل.',
+        note: 'هذه ليست قائمة شاملة بأدوات بيئة التشغيل المحلية — راجع [دليل برامج LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Foundry Local الخاص به في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Foundry Local الخاص به في الدليل.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Foundry Local الخاص به في الدليل.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — بيئة تشغيل نماذج محلية مفتوحة المصدر بالكامل ومحايدة تجاه الأجهزة، مع مكتبة نماذج أوسع.',
           '[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) — بديل يركز أولًا على الواجهة الرسومية ومحايد تجاه الأجهزة للقراء الذين يريدون تطبيق سطح مكتب مصقولًا بدلًا من أداة تطوير عبر سطر الأوامر وحزمة SDK.',
           '[مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) — خيار آخر موجّه للمطورين للفرق التي تستخدم Docker بالفعل.',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소는 2,541개의 스타를 표시, 2026년 9월 5일 [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)에서 확인',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Foundry Local 항목을 심층적으로 보완합니다 — Foundry Local이 다른 수십 가지 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Foundry Local 항목을 심층적으로 보완합니다 — Foundry Local이 다른 수십 가지 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2551,13 +2551,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'foundry-local-competitors',
         title: 'Foundry Local vs. 다른 로컬 AI 도구',
-        content: 'Foundry Local은 CLI나 API를 통해 로컬로 모델을 실행하는 다른 도구들과 함께 런타임 및 관리자 부문에 속합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        content: 'Foundry Local은 CLI나 API를 통해 로컬로 모델을 실행하는 다른 도구들과 함께 런타임 및 관리자 부문에 속합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
         items: [
           '**[Ollama](/ko/power-local-llm/ollama-review)** — llama.cpp 기반의 범용 로컬 모델 런타임 및 API로, 완전히 MIT 라이선스이며, 더 크고 개방적인 모델 라이브러리를 갖추고 있고 Microsoft 전용 SDK 요구 사항이 없습니다. C#/JavaScript/Rust/Python 네이티브 SDK보다 가장 폭넓은 하드웨어 호환성과 모델 선택지를 원하는 경우 더 직접적으로 맞는 선택지입니다. 자세한 내용은 [Ollama 리뷰 전문](/ko/power-local-llm/ollama-review)을 참조하세요.',
           '**[LM Studio](/ko/power-local-llm/lm-studio-review)** — 로컬 추론을 위한 GUI 우선 데스크톱 앱으로, 내장 모델 브라우저와 문서 채팅 기능을 갖추고 있으며 SDK를 통합하는 개발자가 아닌 최종 사용자를 대상으로 합니다. CLI 및 SDK 개발자 도구가 아니라 세련된 그래픽 앱을 원한다면 Foundry Local보다 더 가까운 선택지입니다. 자세한 내용은 [LM Studio 리뷰 전문](/ko/power-local-llm/lm-studio-review)을 참조하세요.',
           '**[Docker Model Runner](/ko/power-local-llm/docker-model-runner-review)** — 이미 Docker 기반 워크플로에서 작업 중인 개발자를 위해 Docker Desktop/Engine에 번들로 제공되는 CLI 및 API 기능으로, 스택이 컨테이너 중심이라면 Foundry Local의 네이티브 SDK 접근 방식과 비교해볼 만한 또 다른 옵션입니다. 자세한 내용은 [Docker Model Runner 리뷰 전문](/ko/power-local-llm/docker-model-runner-review)을 참조하세요.',
         ],
-        note: '이는 로컬 런타임 도구의 총망라 목록이 아닙니다 — Foundry Local 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 로컬 런타임 도구의 총망라 목록이 아닙니다 — Foundry Local 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2613,7 +2613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Foundry Local 자체의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Foundry Local 자체의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 더 폭넓은 모델 라이브러리를 갖춘, 완전한 오픈소스이자 하드웨어에 구애받지 않는 로컬 모델 런타임.',
           '[LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) — CLI 및 SDK 개발자 도구가 아니라 세련된 데스크톱 앱을 원하는 독자를 위한, GUI 우선의 하드웨어에 구애받지 않는 대안.',
           '[Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) — 이미 Docker를 사용 중인 팀을 위한 또 다른 개발자 중심 옵션.',

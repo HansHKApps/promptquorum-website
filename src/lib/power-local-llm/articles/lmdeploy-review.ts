@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeploy Review: High-Throughput LLM Serving and Quantization',
     seoTitle: 'LMDeploy Review 2026: LLM Inference & Quantization Toolkit',
-    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) is a free, open-source (Apache 2.0) toolkit for compressing, quantizing, and serving large language models, developed by the MMRazor and MMDeploy teams inside the InternLM/OpenMMLab ecosystem. It installs via `pip install lmdeploy` and ships two inference engines — TurboMind and a pure-Python PyTorch engine — plus an OpenAI-compatible API server, with over 8,000 GitHub stars. This review is the companion to LMDeploy\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) and covers what it actually does, how to install it, and who it fits.',
+    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) is a free, open-source (Apache 2.0) toolkit for compressing, quantizing, and serving large language models, developed by the MMRazor and MMDeploy teams inside the InternLM/OpenMMLab ecosystem. It installs via `pip install lmdeploy` and ships two inference engines — TurboMind and a pure-Python PyTorch engine — plus an OpenAI-compatible API server, with over 8,000 GitHub stars. This review is the companion to LMDeploy\'s entry in the [Local LLM Software Directory](/directory) and covers what it actually does, how to install it, and who it fits.',
     metaDescription: 'LMDeploy is a free, open-source LLM inference and quantization toolkit with 8,000+ GitHub stars. Here is how TurboMind serving, AWQ quantization, and pip install work.',
     readTime: '10 min read',
     targetKeywords: [
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Look elsewhere if you',
             list: [
-              'Want a desktop chat application with a window and a model picker — LMDeploy has no GUI; see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for desktop apps instead',
+              'Want a desktop chat application with a window and a model picker — LMDeploy has no GUI; see the [Local LLM Software Directory](/directory) for desktop apps instead',
               'Need CPU-only or Apple Silicon inference — LMDeploy\'s TurboMind engine targets NVIDIA CUDA GPUs; consider [llama.cpp](/power-local-llm/llama-cpp-explained) or [MLX-LM](/power-local-llm/mlx-lm-explained) for those cases',
               'Want the single largest ecosystem and broadest third-party tooling around an inference engine — [vLLM](/power-local-llm/vllm-explained) has a larger community and integration surface',
               'Need enterprise support contracts or an SLA — LMDeploy\'s support channels are GitHub Issues, Discord, and WeChat, typical of a research-lab open-source project rather than a commercial vendor',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM Explained](/power-local-llm/vllm-explained) — the inference engine LMDeploy most directly benchmarks itself against.',
           '[TensorRT-LLM Explained](/power-local-llm/tensorrt-llm-explained) — NVIDIA\'s own compiler-based inference library, for comparison against LMDeploy\'s CUDA-based TurboMind engine.',
           '[SGLang Explained](/power-local-llm/sglang-explained) — another production inference engine, built around RadixAttention caching.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeploy Review: Durchsatzstarkes LLM-Serving und Quantisierung',
     seoTitle: 'LMDeploy Review 2026: LLM-Inference & Quantisierungs-Toolkit',
-    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) ist ein kostenloses, quelloffenes (Apache 2.0) Toolkit zum Komprimieren, Quantisieren und Servieren großer Sprachmodelle, entwickelt von den Teams MMRazor und MMDeploy innerhalb des InternLM/OpenMMLab-Ökosystems. Es wird über `pip install lmdeploy` installiert und bringt zwei Inference-Engines mit — TurboMind und eine reine Python-/PyTorch-Engine — plus einen OpenAI-kompatiblen API-Server, bei über 8.000 GitHub-Stars. Diese Review ist das Pendant zu LMDeploys Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) und beschreibt, was es tatsächlich leistet, wie man es installiert und für wen es geeignet ist.',
+    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) ist ein kostenloses, quelloffenes (Apache 2.0) Toolkit zum Komprimieren, Quantisieren und Servieren großer Sprachmodelle, entwickelt von den Teams MMRazor und MMDeploy innerhalb des InternLM/OpenMMLab-Ökosystems. Es wird über `pip install lmdeploy` installiert und bringt zwei Inference-Engines mit — TurboMind und eine reine Python-/PyTorch-Engine — plus einen OpenAI-kompatiblen API-Server, bei über 8.000 GitHub-Stars. Diese Review ist das Pendant zu LMDeploys Eintrag im [Local LLM Software Directory](/de/directory) und beschreibt, was es tatsächlich leistet, wie man es installiert und für wen es geeignet ist.',
     metaDescription: 'LMDeploy ist ein kostenloses, quelloffenes LLM-Inference- und Quantisierungs-Toolkit mit über 8.000 GitHub-Stars. So funktionieren TurboMind-Serving, AWQ-Quantisierung und pip install.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Schauen Sie sich anderswo um, wenn Sie',
             list: [
-              'eine Desktop-Chat-Anwendung mit Fenster und Modellauswahl möchten — LMDeploy hat keine GUI; siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für Desktop-Apps',
+              'eine Desktop-Chat-Anwendung mit Fenster und Modellauswahl möchten — LMDeploy hat keine GUI; siehe das [Local LLM Software Directory](/de/directory) für Desktop-Apps',
               'CPU-only- oder Apple-Silicon-Inference benötigen — LMDeploys TurboMind-Engine zielt auf NVIDIA-CUDA-GPUs; erwägen Sie [llama.cpp](/de/power-local-llm/llama-cpp-explained) oder [MLX-LM](/de/power-local-llm/mlx-lm-explained) für diese Fälle',
               'das größte Ökosystem und breiteste Drittanbieter-Tooling um eine Inference-Engine möchten — [vLLM](/de/power-local-llm/vllm-explained) hat eine größere Community und Integrationsfläche',
               'Enterprise-Support-Verträge oder ein SLA benötigen — LMDeploys Support-Kanäle sind GitHub Issues, Discord und WeChat, typisch für ein Open-Source-Projekt eines Forschungslabors statt eines kommerziellen Anbieters',
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die Inference-Engine, gegen die sich LMDeploy am direktesten benchmarkt.',
           '[TensorRT-LLM erklärt](/de/power-local-llm/tensorrt-llm-explained) — NVIDIAs eigene compilerbasierte Inference-Library, zum Vergleich mit LMDeploys CUDA-basierter TurboMind-Engine.',
           '[SGLang erklärt](/de/power-local-llm/sglang-explained) — eine weitere produktive Inference-Engine, aufgebaut um RadixAttention-Caching.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeploy Review : service LLM à haut débit et quantification',
     seoTitle: 'LMDeploy Review 2026 : inférence LLM et quantification',
-    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) est une boîte à outils gratuite et open source (Apache 2.0) pour compresser, quantifier et servir de grands modèles de langage, développée par les équipes MMRazor et MMDeploy au sein de l\'écosystème InternLM/OpenMMLab. Elle s\'installe via `pip install lmdeploy` et embarque deux moteurs d\'inférence — TurboMind et un moteur PyTorch en Python pur — plus un serveur API compatible OpenAI, avec plus de 8 000 étoiles GitHub. Cette review complète la fiche de LMDeploy dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) et détaille ce qu\'il fait réellement, comment l\'installer et à qui il convient.',
+    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) est une boîte à outils gratuite et open source (Apache 2.0) pour compresser, quantifier et servir de grands modèles de langage, développée par les équipes MMRazor et MMDeploy au sein de l\'écosystème InternLM/OpenMMLab. Elle s\'installe via `pip install lmdeploy` et embarque deux moteurs d\'inférence — TurboMind et un moteur PyTorch en Python pur — plus un serveur API compatible OpenAI, avec plus de 8 000 étoiles GitHub. Cette review complète la fiche de LMDeploy dans le [Local LLM Software Directory](/fr/directory) et détaille ce qu\'il fait réellement, comment l\'installer et à qui il convient.',
     metaDescription: 'LMDeploy est une boîte à outils gratuite et open source d\'inférence et de quantification LLM avec plus de 8 000 étoiles GitHub. Voici comment fonctionnent TurboMind, la quantification AWQ et pip install.',
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Cherchez ailleurs si vous',
             list: [
-              'voulez une application de chat de bureau avec une fenêtre et un sélecteur de modèle — LMDeploy n\'a aucune interface graphique ; voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour des applications de bureau',
+              'voulez une application de chat de bureau avec une fenêtre et un sélecteur de modèle — LMDeploy n\'a aucune interface graphique ; voir le [Local LLM Software Directory](/fr/directory) pour des applications de bureau',
               'avez besoin d\'inférence CPU seule ou Apple Silicon — le moteur TurboMind de LMDeploy vise les GPU NVIDIA CUDA ; envisagez [llama.cpp](/fr/power-local-llm/llama-cpp-explained) ou [MLX-LM](/fr/power-local-llm/mlx-lm-explained) pour ces cas',
               'voulez le plus grand écosystème et l\'outillage tiers le plus large autour d\'un moteur d\'inférence — [vLLM](/fr/power-local-llm/vllm-explained) dispose d\'une communauté et d\'une surface d\'intégration plus larges',
               'avez besoin de contrats de support entreprise ou d\'un SLA — les canaux de support de LMDeploy sont GitHub Issues, Discord et WeChat, typiques d\'un projet open source de laboratoire de recherche plutôt que d\'un éditeur commercial',
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — le moteur d\'inférence auquel LMDeploy se compare le plus directement.',
           '[TensorRT-LLM expliqué](/fr/power-local-llm/tensorrt-llm-explained) — la bibliothèque d\'inférence basée sur un compilateur propre à NVIDIA, à comparer au moteur TurboMind basé sur CUDA de LMDeploy.',
           '[SGLang expliqué](/fr/power-local-llm/sglang-explained) — un autre moteur d\'inférence en production, construit autour du cache RadixAttention.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeployレビュー: 高スループットLLMサービングと量子化',
     seoTitle: 'LMDeployレビュー2026: LLM推論・量子化ツールキット',
-    intro: 'LMDeploy（[github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)）は、大規模言語モデルの圧縮・量子化・サービングを行う無料のオープンソース（Apache 2.0）ツールキットで、InternLM/OpenMMLabエコシステム内のMMRazorおよびMMDeployチームによって開発されています。`pip install lmdeploy`でインストールでき、TurboMindと純Python製PyTorchエンジンという2つの推論エンジンに加え、OpenAI互換のAPIサーバーを備え、GitHubスターは8,000を超えます。本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLMDeployの項目の関連記事で、実際に何ができるか、インストール方法、どのような人に向いているかを解説します。',
+    intro: 'LMDeploy（[github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)）は、大規模言語モデルの圧縮・量子化・サービングを行う無料のオープンソース（Apache 2.0）ツールキットで、InternLM/OpenMMLabエコシステム内のMMRazorおよびMMDeployチームによって開発されています。`pip install lmdeploy`でインストールでき、TurboMindと純Python製PyTorchエンジンという2つの推論エンジンに加え、OpenAI互換のAPIサーバーを備え、GitHubスターは8,000を超えます。本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLMDeployの項目の関連記事で、実際に何ができるか、インストール方法、どのような人に向いているかを解説します。',
     metaDescription: 'LMDeployは8,000以上のGitHubスターを持つ無料オープンソースのLLM推論・量子化ツールキットです。TurboMindサービング、AWQ量子化、pip installの仕組みを解説します。',
     readTime: '読了時間10分',
     targetKeywords: [
@@ -1040,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな方は他を検討',
             list: [
-              'ウィンドウとモデル選択機能を備えたデスクトップチャットアプリが欲しい場合 — LMDeployにGUIはありません。デスクトップアプリは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください',
+              'ウィンドウとモデル選択機能を備えたデスクトップチャットアプリが欲しい場合 — LMDeployにGUIはありません。デスクトップアプリは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください',
               'CPUのみやApple Silicon上での推論が必要な場合 — LMDeployのTurboMindエンジンはNVIDIA CUDA GPUを対象としています。そうしたケースでは[llama.cpp](/ja/power-local-llm/llama-cpp-explained)や[MLX-LM](/ja/power-local-llm/mlx-lm-explained)を検討してください',
               '推論エンジンをめぐる最大のエコシステムと最も幅広いサードパーティツールを求める場合 — [vLLM](/ja/power-local-llm/vllm-explained)のほうがコミュニティと連携範囲が大きい',
               'エンタープライズ向けサポート契約やSLAが必要な場合 — LMDeployのサポート窓口はGitHub Issues、Discord、WeChatであり、商用ベンダーというより研究機関のオープンソースプロジェクトらしい形態です',
@@ -1117,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM解説](/ja/power-local-llm/vllm-explained) — LMDeployが最も直接的にベンチマークで比較している推論エンジン。',
           '[TensorRT-LLM解説](/ja/power-local-llm/tensorrt-llm-explained) — NVIDIA自身のコンパイラベース推論ライブラリで、LMDeployのCUDAベースのTurboMindエンジンとの比較対象。',
           '[SGLang解説](/ja/power-local-llm/sglang-explained) — RadixAttentionキャッシュを中心に構築された、もうひとつの本番向け推論エンジン。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの総合カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの総合カタログ。',
         ],
       },
     },
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeploy 评测：高吞吐量 LLM 服务与量化',
     seoTitle: 'LMDeploy 评测 2026：LLM 推理与量化工具包',
-    intro: 'LMDeploy（[github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)）是一款免费、开源（Apache 2.0）的工具包，用于压缩、量化和服务大语言模型，由 InternLM/OpenMMLab 生态系统内的 MMRazor 和 MMDeploy 团队开发。它可通过 `pip install lmdeploy` 安装，内置两个推理引擎——TurboMind 与纯 Python 的 PyTorch 引擎——外加一个兼容 OpenAI 的 API 服务器，GitHub 星标超过 8,000。本评测是 [本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) 中 LMDeploy 条目的配套文章，介绍它实际能做什么、如何安装以及适合什么人使用。',
+    intro: 'LMDeploy（[github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)）是一款免费、开源（Apache 2.0）的工具包，用于压缩、量化和服务大语言模型，由 InternLM/OpenMMLab 生态系统内的 MMRazor 和 MMDeploy 团队开发。它可通过 `pip install lmdeploy` 安装，内置两个推理引擎——TurboMind 与纯 Python 的 PyTorch 引擎——外加一个兼容 OpenAI 的 API 服务器，GitHub 星标超过 8,000。本评测是 [本地 LLM 软件目录](/zh/directory) 中 LMDeploy 条目的配套文章，介绍它实际能做什么、如何安装以及适合什么人使用。',
     metaDescription: 'LMDeploy 是一款免费、开源的 LLM 推理与量化工具包，GitHub 星标超过 8,000。本文介绍 TurboMind 服务、AWQ 量化和 pip install 的实际用法。',
     readTime: '10 分钟阅读',
     targetKeywords: [
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '不妨考虑其他方案的情况',
             list: [
-              '想要带窗口和模型选择器的桌面聊天应用——LMDeploy 没有 GUI；桌面应用请参见 [本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)',
+              '想要带窗口和模型选择器的桌面聊天应用——LMDeploy 没有 GUI；桌面应用请参见 [本地 LLM 软件目录](/zh/directory)',
               '需要纯 CPU 或 Apple Silicon 推理——LMDeploy 的 TurboMind 引擎面向 NVIDIA CUDA GPU；这类场景可考虑 [llama.cpp](/zh/power-local-llm/llama-cpp-explained) 或 [MLX-LM](/zh/power-local-llm/mlx-lm-explained)',
               '想要围绕某个推理引擎拥有最大生态和最广泛第三方工具链——[vLLM](/zh/power-local-llm/vllm-explained) 拥有更大的社区和集成面',
               '需要企业支持合同或 SLA——LMDeploy 的支持渠道是 GitHub Issues、Discord 和微信，这更符合研究机构开源项目的特点，而非商业厂商',
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM 详解](/zh/power-local-llm/vllm-explained) —— LMDeploy 最直接进行基准对比的推理引擎。',
           '[TensorRT-LLM 详解](/zh/power-local-llm/tensorrt-llm-explained) —— NVIDIA 自研的基于编译器的推理库，可与 LMDeploy 基于 CUDA 的 TurboMind 引擎作对比。',
           '[SGLang 详解](/zh/power-local-llm/sglang-explained) —— 另一款围绕 RadixAttention 缓存构建的生产级推理引擎。',
-          '[本地 LLM 软件目录 2026](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录。',
+          '[本地 LLM 软件目录 2026](/zh/directory) —— 本文所属的本地 AI 工具完整目录。',
         ],
       },
     },
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'Review de LMDeploy: servicio de LLM de alto rendimiento y cuantización',
     seoTitle: 'Review de LMDeploy 2026: inferencia y cuantización de LLM',
-    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) es un kit de herramientas gratuito y de código abierto (Apache 2.0) para comprimir, cuantizar y servir grandes modelos de lenguaje, desarrollado por los equipos MMRazor y MMDeploy dentro del ecosistema InternLM/OpenMMLab. Se instala con `pip install lmdeploy` e incluye dos motores de inferencia —TurboMind y un motor PyTorch en Python puro— además de un servidor API compatible con OpenAI, con más de 8.000 estrellas en GitHub. Esta review es el complemento de la entrada de LMDeploy en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) y explica qué hace realmente, cómo instalarlo y a quién le conviene.',
+    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) es un kit de herramientas gratuito y de código abierto (Apache 2.0) para comprimir, cuantizar y servir grandes modelos de lenguaje, desarrollado por los equipos MMRazor y MMDeploy dentro del ecosistema InternLM/OpenMMLab. Se instala con `pip install lmdeploy` e incluye dos motores de inferencia —TurboMind y un motor PyTorch en Python puro— además de un servidor API compatible con OpenAI, con más de 8.000 estrellas en GitHub. Esta review es el complemento de la entrada de LMDeploy en el [Directorio de Software LLM Local](/es/directory) y explica qué hace realmente, cómo instalarlo y a quién le conviene.',
     metaDescription: 'LMDeploy es un kit de herramientas gratuito y de código abierto para inferencia y cuantización de LLM, con más de 8.000 estrellas en GitHub. Así funcionan el servicio TurboMind, la cuantización AWQ y pip install.',
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Busque otra opción si usted',
             list: [
-              'quiere una aplicación de chat de escritorio con una ventana y un selector de modelos —LMDeploy no tiene GUI; vea el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para apps de escritorio',
+              'quiere una aplicación de chat de escritorio con una ventana y un selector de modelos —LMDeploy no tiene GUI; vea el [Directorio de Software LLM Local](/es/directory) para apps de escritorio',
               'necesita inferencia solo con CPU o en Apple Silicon —el motor TurboMind de LMDeploy apunta a GPU NVIDIA CUDA; considere [llama.cpp](/es/power-local-llm/llama-cpp-explained) o [MLX-LM](/es/power-local-llm/mlx-lm-explained) para esos casos',
               'quiere el ecosistema más grande y las herramientas de terceros más amplias en torno a un motor de inferencia —[vLLM](/es/power-local-llm/vllm-explained) tiene una comunidad y superficie de integración mayores',
               'necesita contratos de soporte empresarial o un SLA —los canales de soporte de LMDeploy son GitHub Issues, Discord y WeChat, típicos de un proyecto de código abierto de un laboratorio de investigación en lugar de un proveedor comercial',
@@ -1677,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM explicado](/es/power-local-llm/vllm-explained) — el motor de inferencia con el que LMDeploy se compara más directamente.',
           '[TensorRT-LLM explicado](/es/power-local-llm/tensorrt-llm-explained) — la biblioteca de inferencia propia de NVIDIA basada en compilador, para comparar con el motor TurboMind de LMDeploy basado en CUDA.',
           '[SGLang explicado](/es/power-local-llm/sglang-explained) — otro motor de inferencia en producción, construido en torno a la caché RadixAttention.',
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'Review do LMDeploy: serviço de LLM de alto throughput e quantização',
     seoTitle: 'Review do LMDeploy 2026: inferência e quantização de LLM',
-    intro: 'O LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) é um toolkit gratuito e de código aberto (Apache 2.0) para comprimir, quantizar e servir grandes modelos de linguagem, desenvolvido pelas equipes MMRazor e MMDeploy dentro do ecossistema InternLM/OpenMMLab. Ele é instalado via `pip install lmdeploy` e traz dois mecanismos de inferência — TurboMind e um mecanismo PyTorch em Python puro — além de um servidor de API compatível com a OpenAI, com mais de 8.000 estrelas no GitHub. Esta review é o complemento da entrada do LMDeploy no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) e explica o que ele realmente faz, como instalá-lo e para quem ele é indicado.',
+    intro: 'O LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) é um toolkit gratuito e de código aberto (Apache 2.0) para comprimir, quantizar e servir grandes modelos de linguagem, desenvolvido pelas equipes MMRazor e MMDeploy dentro do ecossistema InternLM/OpenMMLab. Ele é instalado via `pip install lmdeploy` e traz dois mecanismos de inferência — TurboMind e um mecanismo PyTorch em Python puro — além de um servidor de API compatível com a OpenAI, com mais de 8.000 estrelas no GitHub. Esta review é o complemento da entrada do LMDeploy no [Diretório de Software LLM Local](/pt/directory) e explica o que ele realmente faz, como instalá-lo e para quem ele é indicado.',
     metaDescription: 'O LMDeploy é um toolkit gratuito e de código aberto de inferência e quantização de LLM, com mais de 8.000 estrelas no GitHub. Veja como funcionam o serviço TurboMind, a quantização AWQ e o pip install.',
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Procure outra opção se você',
             list: [
-              'quer um aplicativo de chat de desktop com uma janela e um seletor de modelos — o LMDeploy não tem GUI; veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para apps de desktop',
+              'quer um aplicativo de chat de desktop com uma janela e um seletor de modelos — o LMDeploy não tem GUI; veja o [Diretório de Software LLM Local](/pt/directory) para apps de desktop',
               'precisa de inferência somente com CPU ou em Apple Silicon — o mecanismo TurboMind do LMDeploy tem como alvo GPUs NVIDIA CUDA; considere [llama.cpp](/pt/power-local-llm/llama-cpp-explained) ou [MLX-LM](/pt/power-local-llm/mlx-lm-explained) para esses casos',
               'quer o maior ecossistema e as ferramentas de terceiros mais amplas em torno de um mecanismo de inferência — o [vLLM](/pt/power-local-llm/vllm-explained) tem uma comunidade e superfície de integração maiores',
               'precisa de contratos de suporte empresarial ou de um SLA — os canais de suporte do LMDeploy são GitHub Issues, Discord e WeChat, típicos de um projeto open source de laboratório de pesquisa, não de um fornecedor comercial',
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM explicado](/pt/power-local-llm/vllm-explained) — o mecanismo de inferência com o qual o LMDeploy se compara mais diretamente.',
           '[TensorRT-LLM explicado](/pt/power-local-llm/tensorrt-llm-explained) — a biblioteca de inferência própria da NVIDIA baseada em compilador, para comparação com o mecanismo TurboMind do LMDeploy baseado em CUDA.',
           '[SGLang explicado](/pt/power-local-llm/sglang-explained) — outro mecanismo de inferência em produção, construído em torno do cache RadixAttention.',
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'مراجعة LMDeploy: خدمة نماذج اللغة الكبيرة بإنتاجية عالية والتكميم',
     seoTitle: 'مراجعة LMDeploy 2026: استدلال وتكميم نماذج اللغة الكبيرة',
-    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) هي مجموعة أدوات مجانية ومفتوحة المصدر (رخصة Apache 2.0) لضغط وتكميم وخدمة نماذج اللغة الكبيرة، طوّرها فريقا MMRazor وMMDeploy ضمن منظومة InternLM/OpenMMLab. تُثبَّت عبر `pip install lmdeploy` وتأتي بمحركَي استدلال — TurboMind ومحرك PyTorch مكتوب بلغة Python خالصة — إضافةً إلى خادم API متوافق مع OpenAI، وتتجاوز نجومها على GitHub 8,000 نجمة. هذه المراجعة مكمّلة لإدراج LMDeploy في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory)، وتوضح ما تفعله فعليًا، وكيفية تثبيتها، ولمن تناسب.',
+    intro: 'LMDeploy ([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy)) هي مجموعة أدوات مجانية ومفتوحة المصدر (رخصة Apache 2.0) لضغط وتكميم وخدمة نماذج اللغة الكبيرة، طوّرها فريقا MMRazor وMMDeploy ضمن منظومة InternLM/OpenMMLab. تُثبَّت عبر `pip install lmdeploy` وتأتي بمحركَي استدلال — TurboMind ومحرك PyTorch مكتوب بلغة Python خالصة — إضافةً إلى خادم API متوافق مع OpenAI، وتتجاوز نجومها على GitHub 8,000 نجمة. هذه المراجعة مكمّلة لإدراج LMDeploy في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory)، وتوضح ما تفعله فعليًا، وكيفية تثبيتها، ولمن تناسب.',
     metaDescription: 'LMDeploy مجموعة أدوات مجانية ومفتوحة المصدر للاستدلال والتكميم في نماذج اللغة الكبيرة، بأكثر من 8,000 نجمة على GitHub. إليك كيفية عمل خدمة TurboMind وتكميم AWQ وأمر pip install.',
     readTime: 'وقت القراءة 10 دقائق',
     targetKeywords: [
@@ -2160,7 +2160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'ابحث عن بديل إذا كنت',
             list: [
-              'تريد تطبيق محادثة لسطح المكتب بنافذة وأداة اختيار نموذج — لا تملك LMDeploy واجهة رسومية؛ راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) لتطبيقات سطح المكتب بدلًا من ذلك',
+              'تريد تطبيق محادثة لسطح المكتب بنافذة وأداة اختيار نموذج — لا تملك LMDeploy واجهة رسومية؛ راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) لتطبيقات سطح المكتب بدلًا من ذلك',
               'تحتاج إلى استدلال يعتمد على المعالج المركزي فقط أو على شرائح Apple Silicon — يستهدف محرك TurboMind الخاص بـLMDeploy معالجات NVIDIA CUDA الرسومية؛ فكّر في [llama.cpp](/ar/power-local-llm/llama-cpp-explained) أو [MLX-LM](/ar/power-local-llm/mlx-lm-explained) لتلك الحالات',
               'تريد أكبر منظومة وأوسع أدوات من أطراف ثالثة حول محرك استدلال — تتمتع [vLLM](/ar/power-local-llm/vllm-explained) بمجتمع ونطاق تكامل أكبر',
               'تحتاج إلى عقود دعم للمؤسسات أو اتفاقية مستوى خدمة — قنوات دعم LMDeploy هي GitHub Issues وDiscord وWeChat، وهي نمطية لمشروع مفتوح المصدر تابع لمختبر بحثي وليست لبائع تجاري',
@@ -2237,7 +2237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — محرك الاستدلال الذي تقارن LMDeploy نفسها به بشكل مباشر أكثر من غيره.',
           '[شرح TensorRT-LLM](/ar/power-local-llm/tensorrt-llm-explained) — مكتبة الاستدلال الخاصة بـNVIDIA القائمة على مترجم برمجي، للمقارنة مع محرك TurboMind القائم على CUDA في LMDeploy.',
           '[شرح SGLang](/ar/power-local-llm/sglang-explained) — محرك استدلال إنتاجي آخر، مبني حول تخزين RadixAttention المؤقت.',
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2253,7 +2253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'LMDeploy',
     title: 'LMDeploy 리뷰: 고처리량 LLM 서빙과 양자화',
     seoTitle: 'LMDeploy 리뷰 2026: LLM 추론 및 양자화 툴킷',
-    intro: 'LMDeploy([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy))는 대형 언어 모델을 압축, 양자화, 서빙하기 위한 무료 오픈소스(Apache 2.0) 툴킷으로, InternLM/OpenMMLab 생태계 내 MMRazor 및 MMDeploy 팀이 개발했습니다. `pip install lmdeploy`로 설치하며 TurboMind와 순수 Python 기반 PyTorch 엔진이라는 두 가지 추론 엔진과 OpenAI 호환 API 서버를 제공하고, GitHub 스타 수는 8,000개를 넘습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 LMDeploy 항목과 짝을 이루는 글로, 실제로 무엇을 할 수 있는지, 어떻게 설치하는지, 누구에게 적합한지를 다룹니다.',
+    intro: 'LMDeploy([github.com/InternLM/lmdeploy](https://github.com/InternLM/lmdeploy))는 대형 언어 모델을 압축, 양자화, 서빙하기 위한 무료 오픈소스(Apache 2.0) 툴킷으로, InternLM/OpenMMLab 생태계 내 MMRazor 및 MMDeploy 팀이 개발했습니다. `pip install lmdeploy`로 설치하며 TurboMind와 순수 Python 기반 PyTorch 엔진이라는 두 가지 추론 엔진과 OpenAI 호환 API 서버를 제공하고, GitHub 스타 수는 8,000개를 넘습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 LMDeploy 항목과 짝을 이루는 글로, 실제로 무엇을 할 수 있는지, 어떻게 설치하는지, 누구에게 적합한지를 다룹니다.',
     metaDescription: 'LMDeploy는 GitHub 스타 8,000개 이상을 보유한 무료 오픈소스 LLM 추론·양자화 툴킷입니다. TurboMind 서빙, AWQ 양자화, pip install이 실제로 어떻게 작동하는지 소개합니다.',
     readTime: '10분 읽기',
     targetKeywords: [
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '이런 경우라면 다른 선택지를 고려하세요',
             list: [
-              '창과 모델 선택기가 있는 데스크톱 채팅 애플리케이션을 원하는 경우 — LMDeploy에는 GUI가 없습니다; 대신 데스크톱 앱은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요',
+              '창과 모델 선택기가 있는 데스크톱 채팅 애플리케이션을 원하는 경우 — LMDeploy에는 GUI가 없습니다; 대신 데스크톱 앱은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요',
               'CPU 전용 또는 Apple Silicon 추론이 필요한 경우 — LMDeploy의 TurboMind 엔진은 NVIDIA CUDA GPU를 대상으로 하므로, 이런 경우에는 [llama.cpp](/ko/power-local-llm/llama-cpp-explained)나 [MLX-LM](/ko/power-local-llm/mlx-lm-explained)을 고려하세요',
               '추론 엔진을 둘러싼 가장 큰 생태계와 가장 폭넓은 서드파티 툴링을 원하는 경우 — [vLLM](/ko/power-local-llm/vllm-explained)이 더 큰 커뮤니티와 연동 범위를 갖추고 있습니다',
               '엔터프라이즈 지원 계약이나 SLA가 필요한 경우 — LMDeploy의 지원 채널은 GitHub Issues, Discord, WeChat으로, 상업 벤더보다는 연구 기관의 오픈소스 프로젝트에 전형적인 형태입니다',
@@ -2517,7 +2517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vLLM 해설](/ko/power-local-llm/vllm-explained) — LMDeploy가 가장 직접적으로 벤치마크 비교 대상으로 삼는 추론 엔진.',
           '[TensorRT-LLM 해설](/ko/power-local-llm/tensorrt-llm-explained) — NVIDIA 자체의 컴파일러 기반 추론 라이브러리로, LMDeploy의 CUDA 기반 TurboMind 엔진과 비교하기 좋음.',
           '[SGLang 해설](/ko/power-local-llm/sglang-explained) — RadixAttention 캐싱을 중심으로 구축된 또 다른 프로덕션 추론 엔진.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },

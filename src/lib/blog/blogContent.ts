@@ -30786,7 +30786,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Quick Answer',
           items: [
-            'The [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026) added a "Your setup" hardware profile and a compatibility badge (Runs well, Marginal, Won\'t run, or Set your hardware) to each of its 167 listed local AI tools.',
+            'The [Local AI Software Directory](/directory) added a "Your setup" hardware profile and a compatibility badge (Runs well, Marginal, Won\'t run, or Set your hardware) to each of its 167 listed local AI tools.',
             'The profile is opt-in and saved only when you click "Save my setup" — it is never written automatically and never sent to a server. It lives in your browser\'s localStorage until you clear it.',
             'Hardware requirement data is researched for 153 of the 167 tools. The badge compares your saved numbers (system RAM, VRAM, or Apple unified memory) against each tool\'s measured requirement.',
             'A "Runs well" verdict needs roughly 30% headroom over a tool\'s measured requirement — meeting the requirement exactly reads as "Marginal", not "Runs well".',
@@ -30796,7 +30796,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'What Changed on the Directory',
           content: [
-            'The [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026) already let visitors filter and sort 167 local AI apps, model runtimes, and agent frameworks by category, license, and hardware footprint. A "My machine" selector let you pick a coarse machine type — graphics card, Apple Silicon, or CPU-only — and see each tool\'s hardware requirement rephrased for that type.',
+            'The [Local AI Software Directory](/directory) already let visitors filter and sort 167 local AI apps, model runtimes, and agent frameworks by category, license, and hardware footprint. A "My machine" selector let you pick a coarse machine type — graphics card, Apple Silicon, or CPU-only — and see each tool\'s hardware requirement rephrased for that type.',
             'The new addition is a "Your setup" panel next to that selector. Instead of a coarse machine type, you can enter your actual numbers — system RAM and VRAM for a graphics-card machine, unified memory for Apple Silicon, or system RAM for a CPU-only machine. Once saved, every tool card and table row shows a compatibility badge that compares your numbers against that tool\'s researched requirement.',
           ],
         },
@@ -30835,7 +30835,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'Try It on the Directory',
-          content: 'Open the [Local AI Software Directory](/power-local-llm/local-llm-software-directory-2026), pick your machine type, save your setup, and see a compatibility badge on all 167 listed tools — from single-purpose local chat apps to full agent frameworks.',
+          content: 'Open the [Local AI Software Directory](/directory), pick your machine type, save your setup, and see a compatibility badge on all 167 listed tools — from single-purpose local chat apps to full agent frameworks.',
         },
         faq: {
           title: 'Frequently Asked Questions',
@@ -30938,7 +30938,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'النقاط الرئيسية',
           items: [
-            'أضاف [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026) لوحة "إعدادات جهازك" وشارة توافق (يعمل بسلاسة، على الحد الأدنى، لن يعمل، أو حدد جهازك) لكل أداة من الأدوات الـ167 المدرجة للذكاء الاصطناعي المحلي.',
+            'أضاف [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) لوحة "إعدادات جهازك" وشارة توافق (يعمل بسلاسة، على الحد الأدنى، لن يعمل، أو حدد جهازك) لكل أداة من الأدوات الـ167 المدرجة للذكاء الاصطناعي المحلي.',
             'هذا الملف اختياري ولا يُحفظ إلا عند النقر على "احفظ إعدادات جهازي" — لا يُكتب تلقائيًا أبدًا ولا يُرسل إلى أي خادم. يبقى في localStorage الخاص بمتصفحك حتى تقوم بمسحه.',
             'بيانات متطلبات الأجهزة موثّقة لـ153 من أصل 167 أداة. تقارن الشارة الأرقام التي حفظتها (ذاكرة RAM للنظام، أو VRAM، أو الذاكرة الموحدة من Apple) بالمتطلبات الفعلية المقاسة لكل أداة.',
             'الحكم بـ"يعمل بسلاسة" يتطلب هامشًا يبلغ نحو 30% فوق المتطلبات المقاسة للأداة — وتحقيق المتطلبات بالضبط يُصنَّف كـ"على الحد الأدنى"، وليس "يعمل بسلاسة".',
@@ -30948,7 +30948,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'ما الذي تغيّر في الدليل',
           content: [
-            'كان [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026) يتيح بالفعل للزوار تصفية وترتيب 167 تطبيقًا للذكاء الاصطناعي المحلي، ومحركات تشغيل النماذج، وأطر عمل الوكلاء، حسب الفئة والترخيص ومتطلبات الأجهزة. كان مُحدد "جهازي" يتيح اختيار نوع جهاز عام — بطاقة رسومية، أو Apple Silicon، أو معالج فقط (CPU) — ويعرض متطلبات الأجهزة لكل أداة معاد صياغتها بما يناسب ذلك النوع.',
+            'كان [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) يتيح بالفعل للزوار تصفية وترتيب 167 تطبيقًا للذكاء الاصطناعي المحلي، ومحركات تشغيل النماذج، وأطر عمل الوكلاء، حسب الفئة والترخيص ومتطلبات الأجهزة. كان مُحدد "جهازي" يتيح اختيار نوع جهاز عام — بطاقة رسومية، أو Apple Silicon، أو معالج فقط (CPU) — ويعرض متطلبات الأجهزة لكل أداة معاد صياغتها بما يناسب ذلك النوع.',
             'الإضافة الجديدة هي لوحة "إعدادات جهازك" بجانب ذلك المُحدد. بدلًا من اختيار نوع جهاز عام، يمكنك إدخال أرقامك الفعلية — ذاكرة RAM للنظام وVRAM لجهاز يحتوي على بطاقة رسومية، أو الذاكرة الموحدة لأجهزة Apple Silicon، أو ذاكرة RAM للنظام لجهاز يعمل بالمعالج فقط. بعد الحفظ، تعرض كل بطاقة أداة وكل صف في الجدول شارة توافق تقارن أرقامك بمتطلبات تلك الأداة الموثّقة.',
           ],
         },
@@ -30987,7 +30987,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'جرّبها في الدليل',
-          content: 'افتح [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory-2026)، وحدد نوع جهازك، واحفظ إعداداتك، وشاهد شارة توافق على جميع الأدوات الـ167 المدرجة — من تطبيقات المحادثة المحلية البسيطة إلى أطر عمل الوكلاء الكاملة.',
+          content: 'افتح [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory)، وحدد نوع جهازك، واحفظ إعداداتك، وشاهد شارة توافق على جميع الأدوات الـ167 المدرجة — من تطبيقات المحادثة المحلية البسيطة إلى أطر عمل الوكلاء الكاملة.',
         },
         faq: {
           title: 'الأسئلة الشائعة',
@@ -31090,7 +31090,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Zusammenfassung',
           items: [
-            'Das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026) hat ein „Ihr Setup"-Hardware-Profil und ein Kompatibilitäts-Badge (Läuft gut, Grenzwertig, Läuft nicht oder Hardware angeben) für jedes der 167 gelisteten lokalen KI-Tools erhalten.',
+            'Das [Local AI Software Directory](/de/directory) hat ein „Ihr Setup"-Hardware-Profil und ein Kompatibilitäts-Badge (Läuft gut, Grenzwertig, Läuft nicht oder Hardware angeben) für jedes der 167 gelisteten lokalen KI-Tools erhalten.',
             'Das Profil ist optional und wird nur gespeichert, wenn Sie auf „Mein Setup speichern" klicken — es wird nie automatisch geschrieben und nie an einen Server gesendet. Es verbleibt im localStorage Ihres Browsers, bis Sie es löschen.',
             'Für 153 der 167 Tools liegen recherchierte Hardware-Anforderungsdaten vor. Das Badge vergleicht Ihre gespeicherten Werte (System-RAM, VRAM oder Apple Unified Memory) mit der gemessenen Anforderung jedes Tools.',
             'Für die Bewertung „Läuft gut" braucht es rund 30 % Puffer über der gemessenen Anforderung eines Tools — die Anforderung exakt zu erreichen zählt als „Grenzwertig", nicht als „Läuft gut".',
@@ -31100,7 +31100,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'Was sich im Directory geändert hat',
           content: [
-            'Das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026) ließ Besucher bereits 167 lokale KI-Apps, Modell-Runtimes und Agenten-Frameworks nach Kategorie, Lizenz und Hardware-Bedarf filtern und sortieren. Eine „Mein Rechner"-Auswahl erlaubte die Wahl eines groben Rechnertyps — Grafikkarte, Apple Silicon oder nur CPU — und zeigte die Hardware-Anforderung jedes Tools passend zu diesem Typ an.',
+            'Das [Local AI Software Directory](/de/directory) ließ Besucher bereits 167 lokale KI-Apps, Modell-Runtimes und Agenten-Frameworks nach Kategorie, Lizenz und Hardware-Bedarf filtern und sortieren. Eine „Mein Rechner"-Auswahl erlaubte die Wahl eines groben Rechnertyps — Grafikkarte, Apple Silicon oder nur CPU — und zeigte die Hardware-Anforderung jedes Tools passend zu diesem Typ an.',
             'Neu ist ein „Ihr Setup"-Panel neben dieser Auswahl. Statt eines groben Rechnertyps können Sie Ihre tatsächlichen Werte eingeben — System-RAM und VRAM bei einer Grafikkarte, Unified Memory bei Apple Silicon oder System-RAM bei einem reinen CPU-Rechner. Nach dem Speichern zeigt jede Tool-Karte und jede Tabellenzeile ein Kompatibilitäts-Badge, das Ihre Werte mit der recherchierten Anforderung dieses Tools vergleicht.',
           ],
         },
@@ -31139,7 +31139,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'Jetzt im Directory ausprobieren',
-          content: 'Öffnen Sie das [Local AI Software Directory](/de/power-local-llm/local-llm-software-directory-2026), wählen Sie Ihren Rechnertyp, speichern Sie Ihr Setup und sehen Sie ein Kompatibilitäts-Badge bei allen 167 gelisteten Tools — von einfachen lokalen Chat-Apps bis zu vollständigen Agenten-Frameworks.',
+          content: 'Öffnen Sie das [Local AI Software Directory](/de/directory), wählen Sie Ihren Rechnertyp, speichern Sie Ihr Setup und sehen Sie ein Kompatibilitäts-Badge bei allen 167 gelisteten Tools — von einfachen lokalen Chat-Apps bis zu vollständigen Agenten-Frameworks.',
         },
         faq: {
           title: 'Häufig gestellte Fragen',
@@ -31242,7 +31242,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Puntos clave',
           items: [
-            'El [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026) añadió un perfil de hardware "Tu equipo" y una insignia de compatibilidad (Funciona bien, Ajustado, No funcionará, o Indica tu hardware) a cada una de las 167 herramientas de IA local listadas.',
+            'El [directorio de software de IA local](/es/directory) añadió un perfil de hardware "Tu equipo" y una insignia de compatibilidad (Funciona bien, Ajustado, No funcionará, o Indica tu hardware) a cada una de las 167 herramientas de IA local listadas.',
             'El perfil es opcional y solo se guarda cuando haces clic en "Guardar mi equipo" — nunca se escribe automáticamente ni se envía a un servidor. Permanece en el localStorage de tu navegador hasta que lo borres.',
             'Los datos de requisitos de hardware están documentados para 153 de las 167 herramientas. La insignia compara tus valores guardados (RAM del sistema, VRAM, o memoria unificada de Apple) con el requisito medido de cada herramienta.',
             'Un veredicto "Funciona bien" necesita alrededor de un 30% de margen sobre el requisito medido de una herramienta — cumplirlo exactamente se traduce en "Ajustado", no en "Funciona bien".',
@@ -31252,7 +31252,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'Qué cambió en el directorio',
           content: [
-            'El [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026) ya permitía filtrar y ordenar 167 apps de IA local, motores de inferencia y frameworks de agentes por categoría, licencia y requisitos de hardware. Un selector "Mi equipo" permitía elegir un tipo de equipo general — tarjeta gráfica, Apple Silicon, o solo CPU — y ver el requisito de hardware de cada herramienta expresado para ese tipo.',
+            'El [directorio de software de IA local](/es/directory) ya permitía filtrar y ordenar 167 apps de IA local, motores de inferencia y frameworks de agentes por categoría, licencia y requisitos de hardware. Un selector "Mi equipo" permitía elegir un tipo de equipo general — tarjeta gráfica, Apple Silicon, o solo CPU — y ver el requisito de hardware de cada herramienta expresado para ese tipo.',
             'Lo nuevo es un panel "Tu equipo" junto a ese selector. En lugar de un tipo de equipo general, puedes introducir tus valores reales — RAM del sistema y VRAM para un equipo con tarjeta gráfica, memoria unificada para Apple Silicon, o RAM del sistema para un equipo solo CPU. Una vez guardado, cada ficha de herramienta y cada fila de la tabla muestra una insignia de compatibilidad que compara tus valores con el requisito documentado de esa herramienta.',
           ],
         },
@@ -31291,7 +31291,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'Pruébalo en el directorio',
-          content: 'Abre el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory-2026), elige tu tipo de equipo, guarda tu configuración y verás una insignia de compatibilidad en las 167 herramientas listadas — desde apps de chat local sencillas hasta frameworks de agentes completos.',
+          content: 'Abre el [directorio de software de IA local](/es/directory), elige tu tipo de equipo, guarda tu configuración y verás una insignia de compatibilidad en las 167 herramientas listadas — desde apps de chat local sencillas hasta frameworks de agentes completos.',
         },
         faq: {
           title: 'Preguntas frecuentes',
@@ -31394,7 +31394,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Points clés',
           items: [
-            "L'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026) a ajouté un profil matériel « Votre configuration » et un badge de compatibilité (Fonctionne bien, Tout juste, Ne fonctionnera pas, ou Indiquer votre matériel) pour chacun des 167 outils IA locale répertoriés.",
+            "L'[annuaire des logiciels IA locale](/fr/directory) a ajouté un profil matériel « Votre configuration » et un badge de compatibilité (Fonctionne bien, Tout juste, Ne fonctionnera pas, ou Indiquer votre matériel) pour chacun des 167 outils IA locale répertoriés.",
             'Le profil est optionnel et n\'est enregistré que si vous cliquez sur « Enregistrer ma configuration » — il n\'est jamais écrit automatiquement ni envoyé à un serveur. Il reste dans le localStorage de votre navigateur jusqu\'à ce que vous l\'effaciez.',
             "Les données de configuration matérielle sont documentées pour 153 des 167 outils. Le badge compare vos valeurs enregistrées (RAM système, VRAM, ou mémoire unifiée Apple) à la configuration mesurée de chaque outil.",
             'Un verdict « Fonctionne bien » nécessite environ 30 % de marge par rapport à la configuration mesurée d\'un outil — l\'atteindre exactement se traduit par « Tout juste », pas par « Fonctionne bien ».',
@@ -31404,7 +31404,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: "Ce qui a changé dans l'annuaire",
           content: [
-            "L'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026) permettait déjà de filtrer et trier 167 applications, moteurs d'inférence et frameworks d'agents IA locale par catégorie, licence et besoin matériel. Un sélecteur « Ma machine » permettait de choisir un type de machine approximatif — carte graphique, Apple Silicon, ou CPU seul — et d'afficher la configuration matérielle de chaque outil reformulée pour ce type.",
+            "L'[annuaire des logiciels IA locale](/fr/directory) permettait déjà de filtrer et trier 167 applications, moteurs d'inférence et frameworks d'agents IA locale par catégorie, licence et besoin matériel. Un sélecteur « Ma machine » permettait de choisir un type de machine approximatif — carte graphique, Apple Silicon, ou CPU seul — et d'afficher la configuration matérielle de chaque outil reformulée pour ce type.",
             'La nouveauté est un panneau « Votre configuration » à côté de ce sélecteur. Au lieu d\'un type de machine approximatif, vous pouvez saisir vos valeurs réelles — RAM système et VRAM pour une machine avec carte graphique, mémoire unifiée pour Apple Silicon, ou RAM système pour une machine CPU seul. Une fois enregistré, chaque fiche outil et chaque ligne de tableau affiche un badge de compatibilité comparant vos valeurs à la configuration documentée de cet outil.',
           ],
         },
@@ -31443,7 +31443,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: "Essayez-le sur l'annuaire",
-          content: "Ouvrez l'[annuaire des logiciels IA locale](/fr/power-local-llm/local-llm-software-directory-2026), choisissez votre type de machine, enregistrez votre configuration, et consultez un badge de compatibilité sur les 167 outils répertoriés — des applications de chat locales aux frameworks d'agents complets.",
+          content: "Ouvrez l'[annuaire des logiciels IA locale](/fr/directory), choisissez votre type de machine, enregistrez votre configuration, et consultez un badge de compatibilité sur les 167 outils répertoriés — des applications de chat locales aux frameworks d'agents complets.",
         },
         faq: {
           title: 'Questions fréquentes',
@@ -31546,7 +31546,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '重要ポイント',
           items: [
-            '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)に「自分の環境」ハードウェアプロファイルと互換性バッジ(快適に動作、ギリギリ、動作不可、スペックを設定)が、掲載167ツールすべてに追加されました。',
+            '[Local AI Software Directory](/ja/directory)に「自分の環境」ハードウェアプロファイルと互換性バッジ(快適に動作、ギリギリ、動作不可、スペックを設定)が、掲載167ツールすべてに追加されました。',
             'このプロファイルは任意設定で、「保存」をクリックしたときだけ保存されます — 自動的に書き込まれることも、サーバーに送信されることもありません。ブラウザのlocalStorageに保存され、削除するまで残ります。',
             'ハードウェア要件データは167ツール中153ツールで調査済みです。バッジは保存した数値(システムRAM、VRAM、またはAppleのユニファイドメモリ)を各ツールの実測要件と比較します。',
             '「快適に動作」の判定には、実測要件に対しておよそ30%の余裕が必要です — 要件をちょうど満たすだけでは「快適に動作」ではなく「ギリギリ」になります。',
@@ -31556,7 +31556,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'ディレクトリで何が変わったか',
           content: [
-            '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)では、これまでも167のローカルAIアプリ、モデルランタイム、エージェントフレームワークをカテゴリ、ライセンス、必要ハードウェアで絞り込み・並べ替えできました。「自分のマシン」セレクターでは、グラフィックカード、Apple Silicon、CPUのみといった大まかなマシンタイプを選ぶと、各ツールのハードウェア要件がそのタイプに合わせて表示されていました。',
+            '[Local AI Software Directory](/ja/directory)では、これまでも167のローカルAIアプリ、モデルランタイム、エージェントフレームワークをカテゴリ、ライセンス、必要ハードウェアで絞り込み・並べ替えできました。「自分のマシン」セレクターでは、グラフィックカード、Apple Silicon、CPUのみといった大まかなマシンタイプを選ぶと、各ツールのハードウェア要件がそのタイプに合わせて表示されていました。',
             '新しく追加されたのは、そのセレクターの隣にある「自分の環境」パネルです。大まかなマシンタイプの代わりに、実際の数値 — グラフィックカード搭載機ならシステムRAMとVRAM、Apple Siliconならユニファイドメモリ、CPUのみのマシンならシステムRAM — を入力できます。保存すると、各ツールカードとテーブルの各行に、入力した数値をそのツールの調査済み要件と比較した互換性バッジが表示されます。',
           ],
         },
@@ -31595,7 +31595,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'ディレクトリで試してみる',
-          content: '[Local AI Software Directory](/ja/power-local-llm/local-llm-software-directory-2026)を開き、マシンタイプを選び、自分の環境を保存すれば、単純なローカルチャットアプリから本格的なエージェントフレームワークまで、掲載167ツールすべてに互換性バッジが表示されます。',
+          content: '[Local AI Software Directory](/ja/directory)を開き、マシンタイプを選び、自分の環境を保存すれば、単純なローカルチャットアプリから本格的なエージェントフレームワークまで、掲載167ツールすべてに互換性バッジが表示されます。',
         },
         faq: {
           title: 'よくある質問',
@@ -31698,7 +31698,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '핵심 내용',
           items: [
-            '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)에 등록된 167개 로컬 AI 도구 각각에 "내 사양" 하드웨어 프로필과 호환성 배지(원활하게 실행됨, 아슬아슬함, 실행 불가, 또는 내 사양 설정)가 추가되었습니다.',
+            '[Local AI Software Directory](/ko/directory)에 등록된 167개 로컬 AI 도구 각각에 "내 사양" 하드웨어 프로필과 호환성 배지(원활하게 실행됨, 아슬아슬함, 실행 불가, 또는 내 사양 설정)가 추가되었습니다.',
             '이 프로필은 선택 사항이며 "내 사양 저장"을 클릭했을 때만 저장됩니다 — 자동으로 기록되거나 서버로 전송되는 일은 절대 없습니다. 삭제하기 전까지는 브라우저의 localStorage에 남아 있습니다.',
             '하드웨어 요구사항 데이터는 167개 도구 중 153개에 대해 조사되어 있습니다. 배지는 저장한 수치(시스템 RAM, VRAM, 또는 Apple 통합 메모리)를 각 도구의 실측 요구사항과 비교합니다.',
             '"원활하게 실행됨" 판정을 받으려면 도구의 실측 요구사항보다 약 30% 정도의 여유가 있어야 합니다 — 요구사항을 정확히 충족하는 수준은 "원활하게 실행됨"이 아니라 "아슬아슬함"으로 판정됩니다.',
@@ -31708,7 +31708,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: '디렉터리에서 무엇이 바뀌었는가',
           content: [
-            '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)는 이미 167개의 로컬 AI 앱, 모델 런타임, 에이전트 프레임워크를 카테고리, 라이선스, 하드웨어 요구사항별로 필터링하고 정렬할 수 있었습니다. "내 컴퓨터" 선택기를 통해 그래픽 카드, Apple Silicon, CPU 전용 중 대략적인 기기 유형을 선택하면, 각 도구의 하드웨어 요구사항이 해당 유형에 맞게 표시되었습니다.',
+            '[Local AI Software Directory](/ko/directory)는 이미 167개의 로컬 AI 앱, 모델 런타임, 에이전트 프레임워크를 카테고리, 라이선스, 하드웨어 요구사항별로 필터링하고 정렬할 수 있었습니다. "내 컴퓨터" 선택기를 통해 그래픽 카드, Apple Silicon, CPU 전용 중 대략적인 기기 유형을 선택하면, 각 도구의 하드웨어 요구사항이 해당 유형에 맞게 표시되었습니다.',
             '새로 추가된 것은 이 선택기 옆에 있는 "내 사양" 패널입니다. 대략적인 기기 유형 대신, 그래픽 카드 기기라면 시스템 RAM과 VRAM, Apple Silicon이라면 통합 메모리, CPU 전용 기기라면 시스템 RAM처럼 실제 수치를 입력할 수 있습니다. 저장하고 나면 모든 도구 카드와 표의 각 행에 사용자의 수치를 해당 도구의 조사된 요구사항과 비교한 호환성 배지가 표시됩니다.',
           ],
         },
@@ -31747,7 +31747,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: '디렉터리에서 직접 사용해 보세요',
-          content: '[Local AI Software Directory](/ko/power-local-llm/local-llm-software-directory-2026)를 열어 기기 유형을 선택하고 내 사양을 저장하면, 단순한 로컬 채팅 앱부터 완전한 에이전트 프레임워크까지 등록된 167개 도구 전체에서 호환성 배지를 확인할 수 있습니다.',
+          content: '[Local AI Software Directory](/ko/directory)를 열어 기기 유형을 선택하고 내 사양을 저장하면, 단순한 로컬 채팅 앱부터 완전한 에이전트 프레임워크까지 등록된 167개 도구 전체에서 호환성 배지를 확인할 수 있습니다.',
         },
         faq: {
           title: '자주 묻는 질문',
@@ -31850,7 +31850,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Pontos principais',
           items: [
-            'O [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026) adicionou um perfil de hardware "Sua configuração" e um selo de compatibilidade (Funciona bem, No limite, Não vai rodar, ou Informe seu hardware) a cada uma das 167 ferramentas de IA local listadas.',
+            'O [diretório de software de IA local](/pt/directory) adicionou um perfil de hardware "Sua configuração" e um selo de compatibilidade (Funciona bem, No limite, Não vai rodar, ou Informe seu hardware) a cada uma das 167 ferramentas de IA local listadas.',
             'O perfil é opcional e só é salvo quando você clica em "Salvar minha configuração" — nunca é gravado automaticamente nem enviado a um servidor. Ele permanece no localStorage do seu navegador até você apagá-lo.',
             'Dados de requisitos de hardware estão documentados para 153 das 167 ferramentas. O selo compara os números que você salvou (RAM do sistema, VRAM, ou memória unificada da Apple) com o requisito medido de cada ferramenta.',
             'Um veredito "Funciona bem" exige cerca de 30% de folga acima do requisito medido de uma ferramenta — atingir o requisito exatamente é classificado como "No limite", não como "Funciona bem".',
@@ -31860,7 +31860,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: 'O que mudou no diretório',
           content: [
-            'O [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026) já permitia filtrar e ordenar 167 apps de IA local, engines de inferência e frameworks de agentes por categoria, licença e exigência de hardware. Um seletor "Meu computador" permitia escolher um tipo de máquina genérico — placa de vídeo, Apple Silicon, ou somente CPU — e ver o requisito de hardware de cada ferramenta reformulado para esse tipo.',
+            'O [diretório de software de IA local](/pt/directory) já permitia filtrar e ordenar 167 apps de IA local, engines de inferência e frameworks de agentes por categoria, licença e exigência de hardware. Um seletor "Meu computador" permitia escolher um tipo de máquina genérico — placa de vídeo, Apple Silicon, ou somente CPU — e ver o requisito de hardware de cada ferramenta reformulado para esse tipo.',
             'A novidade é um painel "Sua configuração" ao lado desse seletor. Em vez de um tipo de máquina genérico, você pode informar seus números reais — RAM do sistema e VRAM para uma máquina com placa de vídeo, memória unificada para Apple Silicon, ou RAM do sistema para uma máquina somente CPU. Depois de salvo, cada cartão de ferramenta e cada linha da tabela mostra um selo de compatibilidade que compara seus números com o requisito documentado daquela ferramenta.',
           ],
         },
@@ -31899,7 +31899,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: 'Experimente no diretório',
-          content: 'Abra o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory-2026), escolha seu tipo de computador, salve sua configuração e veja um selo de compatibilidade nas 167 ferramentas listadas — de apps de chat local simples a frameworks de agentes completos.',
+          content: 'Abra o [diretório de software de IA local](/pt/directory), escolha seu tipo de computador, salve sua configuração e veja um selo de compatibilidade nas 167 ferramentas listadas — de apps de chat local simples a frameworks de agentes completos.',
         },
         faq: {
           title: 'Perguntas frequentes',
@@ -32002,7 +32002,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '核心要点',
           items: [
-            '[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026)为其列出的167款本地AI工具都新增了"你的配置"硬件资料和兼容性徽章(运行流畅、勉强够用、无法运行,或设置你的硬件)。',
+            '[Local AI Software Directory](/zh/directory)为其列出的167款本地AI工具都新增了"你的配置"硬件资料和兼容性徽章(运行流畅、勉强够用、无法运行,或设置你的硬件)。',
             '该配置资料是可选的,只有点击"保存我的配置"才会保存——它绝不会自动写入,也绝不会发送到任何服务器。它保存在你浏览器的localStorage中,直到你清除它为止。',
             '167款工具中有153款已研究并记录了硬件需求数据。该徽章会将你保存的数值(系统RAM、显存VRAM,或Apple统一内存)与每款工具的实测需求进行比对。',
             '"运行流畅"的判定需要比工具的实测需求高出大约30%的余量——刚好达到需求会被判定为"勉强够用",而非"运行流畅"。',
@@ -32012,7 +32012,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whatsNew: {
           title: '目录发生了什么变化',
           content: [
-            '[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026)此前已经支持按类别、许可证和硬件需求对167款本地AI应用、模型运行时和智能体框架进行筛选和排序。一个"我的设备"选择器可以选取一个大致的机型类别——独立显卡、Apple Silicon,或纯CPU——并显示按该类型改写后的每款工具硬件需求。',
+            '[Local AI Software Directory](/zh/directory)此前已经支持按类别、许可证和硬件需求对167款本地AI应用、模型运行时和智能体框架进行筛选和排序。一个"我的设备"选择器可以选取一个大致的机型类别——独立显卡、Apple Silicon,或纯CPU——并显示按该类型改写后的每款工具硬件需求。',
             '新增的是该选择器旁边的"你的配置"面板。你可以输入实际数值,而不是一个大致的机型类别——独立显卡设备填写系统RAM和显存VRAM,Apple Silicon填写统一内存,纯CPU设备填写系统RAM。保存后,每张工具卡片和表格行都会显示一个兼容性徽章,将你的数值与该工具已记录的需求进行比对。',
           ],
         },
@@ -32051,7 +32051,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         cta: {
           title: '在目录中试一试',
-          content: '打开[Local AI Software Directory](/zh/power-local-llm/local-llm-software-directory-2026),选择你的设备类型,保存你的配置,即可在全部167款列出的工具上看到兼容性徽章——从单一用途的本地聊天应用到完整的智能体框架都涵盖在内。',
+          content: '打开[Local AI Software Directory](/zh/directory),选择你的设备类型,保存你的配置,即可在全部167款列出的工具上看到兼容性徽章——从单一用途的本地聊天应用到完整的智能体框架都涵盖在内。',
         },
         faq: {
           title: '常见问题',

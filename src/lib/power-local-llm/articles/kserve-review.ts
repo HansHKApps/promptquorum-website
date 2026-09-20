@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'vLLM', 'Best known for': 'High-throughput LLM inference and serving engine that KServe itself can run as a backend', 'Link': '[vllm.ai](https://vllm.ai)' },
           { 'Tool': 'Seldon Core', 'Best known for': 'Another Kubernetes-native ML model-serving platform, closer to KServe\'s predictive-serving scope', 'Link': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'This list reflects tools commonly discussed alongside KServe in the production/enterprise model-serving space, not an independent PromptQuorum ranking — verify each tool\'s current scope, licensing, and hardware requirements before choosing. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, which also covers single-machine local tools this comparison excludes.',
+        note: 'This list reflects tools commonly discussed alongside KServe in the production/enterprise model-serving space, not an independent PromptQuorum ranking — verify each tool\'s current scope, licensing, and hardware requirements before choosing. See the [Local LLM Software Directory](/directory) for the full catalog, which also covers single-machine local tools this comparison excludes.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including KServe\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including KServe\'s directory entry.',
           '[NVIDIA Dynamo Review](/power-local-llm/dynamo-review) — NVIDIA\'s own distributed LLM inference-serving framework, for comparison against KServe\'s vendor-neutral, Kubernetes-native approach.',
           '[LMDeploy Review](/power-local-llm/lmdeploy-review) — a toolkit for compressing, deploying, and serving LLMs, for comparison against KServe\'s broader generative-plus-predictive scope.',
         ],
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'vLLM', 'Am bekanntesten für': 'Durchsatzstarke LLM-Inferenz- und Serving-Engine, die KServe selbst als Backend nutzen kann', 'Link': '[vllm.ai](https://vllm.ai)' },
           { 'Tool': 'Seldon Core', 'Am bekanntesten für': 'Eine weitere Kubernetes-native ML-Model-Serving-Plattform, näher am prädiktiven Serving-Umfang von KServe', 'Link': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'Diese Liste spiegelt Tools wider, die im Bereich produktives/Enterprise-Model-Serving häufig zusammen mit KServe genannt werden, kein eigenständiges Ranking von PromptQuorum – prüfen Sie Umfang, Lizenzierung und Hardwareanforderungen jedes Tools vor der Wahl. Das vollständige Verzeichnis, das auch lokale Ein-Rechner-Tools außerhalb dieses Vergleichs abdeckt, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Diese Liste spiegelt Tools wider, die im Bereich produktives/Enterprise-Model-Serving häufig zusammen mit KServe genannt werden, kein eigenständiges Ranking von PromptQuorum – prüfen Sie Umfang, Lizenzierung und Hardwareanforderungen jedes Tools vor der Wahl. Das vollständige Verzeichnis, das auch lokale Ein-Rechner-Tools außerhalb dieses Vergleichs abdeckt, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von KServe.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von KServe.',
           '[NVIDIA Dynamo Test](/de/power-local-llm/dynamo-review) — NVIDIAs eigenes verteiltes LLM-Inferenz-Serving-Framework, zum Vergleich mit KServes herstellerneutralem, Kubernetes-nativem Ansatz.',
           '[LMDeploy Test](/de/power-local-llm/lmdeploy-review) — ein Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs, zum Vergleich mit KServes breiterem generativ-plus-prädiktivem Umfang.',
         ],
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'vLLM', 'Réputé pour': 'Moteur d\'inférence et de service LLM à haut débit, que KServe peut lui-même exécuter comme backend', 'Lien': '[vllm.ai](https://vllm.ai)' },
           { 'Outil': 'Seldon Core', 'Réputé pour': 'Autre plateforme de service de modèles ML native Kubernetes, proche du périmètre prédictif de KServe', 'Lien': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'Cette liste reflète les outils habituellement mentionnés aux côtés de KServe dans l\'espace du service de modèles de production/entreprise, et non un classement indépendant de PromptQuorum — vérifiez le périmètre, les licences et les exigences matérielles actuels de chaque outil avant de choisir. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, qui couvre aussi les outils locaux mono-machine exclus de cette comparaison.',
+        note: 'Cette liste reflète les outils habituellement mentionnés aux côtés de KServe dans l\'espace du service de modèles de production/entreprise, et non un classement indépendant de PromptQuorum — vérifiez le périmètre, les licences et les exigences matérielles actuels de chaque outil avant de choisir. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet, qui couvre aussi les outils locaux mono-machine exclus de cette comparaison.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale dont fait partie cet article, incluant la fiche de KServe.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale dont fait partie cet article, incluant la fiche de KServe.',
           '[Avis NVIDIA Dynamo](/fr/power-local-llm/dynamo-review) — le framework de service d\'inférence LLM distribué propre à NVIDIA, à comparer avec l\'approche neutre et native Kubernetes de KServe.',
           '[Avis LMDeploy](/fr/power-local-llm/lmdeploy-review) — une boîte à outils pour compresser, déployer et servir des LLM, à comparer avec le périmètre plus large génératif-et-prédictif de KServe.',
         ],
@@ -1044,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'vLLM', '主な特徴': 'KServe自体がバックエンドとして実行できる、高スループットなLLM推論・サービングエンジン', 'リンク': '[vllm.ai](https://vllm.ai)' },
           { 'ツール': 'Seldon Core', '主な特徴': 'もう1つのKubernetesネイティブなMLモデルサービング・プラットフォームで、KServeの予測サービング範囲に近い', 'リンク': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'このリストは、本番/エンタープライズ向けモデルサービングの領域でKServeと並んでよく取り上げられるツールを反映したものであり、PromptQuorum独自のランキングではありません——選定前に各ツールの現在の範囲、ライセンス、ハードウェア要件を確認してください。この比較から除外している単一マシン向けのローカルツールも含めた全カタログは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'このリストは、本番/エンタープライズ向けモデルサービングの領域でKServeと並んでよく取り上げられるツールを反映したものであり、PromptQuorum独自のランキングではありません——選定前に各ツールの現在の範囲、ライセンス、ハードウェア要件を確認してください。この比較から除外している単一マシン向けのローカルツールも含めた全カタログは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。KServeのディレクトリ項目も含みます。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。KServeのディレクトリ項目も含みます。',
           '[NVIDIA Dynamoレビュー](/ja/power-local-llm/dynamo-review) — NVIDIA自身の分散型LLM推論サービング・フレームワーク。KServeのベンダー中立でKubernetesネイティブなアプローチと比較できます。',
           '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review) — LLMの圧縮・デプロイ・サービングのためのツールキット。KServeのより広い生成AI＋予測AIの範囲と比較できます。',
         ],
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'vLLM', '主要特点': '高吞吐量 LLM 推理与服务引擎,KServe 本身也可将其作为后端运行', '链接': '[vllm.ai](https://vllm.ai)' },
           { '工具': 'Seldon Core', '主要特点': '另一款原生支持 Kubernetes 的机器学习模型服务平台,与 KServe 的预测式服务范围更接近', '链接': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: '此列表反映的是在生产/企业级模型服务领域中常与 KServe 一同被提及的工具,并非 PromptQuorum 独立排名——选择前请核实各工具当前的功能范围、许可证和硬件要求。完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory),其中也涵盖了本次对比未包含的单机本地工具。',
+        note: '此列表反映的是在生产/企业级模型服务领域中常与 KServe 一同被提及的工具,并非 PromptQuorum 独立排名——选择前请核实各工具当前的功能范围、许可证和硬件要求。完整目录请参见[本地 LLM 软件目录](/zh/directory),其中也涵盖了本次对比未包含的单机本地工具。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的完整本地 AI 工具目录,其中包含 KServe 的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的完整本地 AI 工具目录,其中包含 KServe 的目录条目。',
           '[NVIDIA Dynamo 评测](/zh/power-local-llm/dynamo-review)——NVIDIA 自家的分布式 LLM 推理服务框架,可与 KServe 厂商中立、原生支持 Kubernetes 的方式进行对比。',
           '[LMDeploy 评测](/zh/power-local-llm/lmdeploy-review)——一个用于压缩、部署和提供 LLM 服务的工具包,可与 KServe 更广泛的生成式加预测式覆盖范围进行对比。',
         ],
@@ -1596,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'vLLM', 'Conocida por': 'Motor de inferencia y servicio de LLM de alto rendimiento que el propio KServe puede ejecutar como backend', 'Enlace': '[vllm.ai](https://vllm.ai)' },
           { 'Herramienta': 'Seldon Core', 'Conocida por': 'Otra plataforma de servicio de ML nativa de Kubernetes, cercana al alcance predictivo de KServe', 'Enlace': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'Esta lista refleja herramientas comúnmente discutidas junto a KServe en el espacio de servicio de modelos en producción/empresarial, no un ranking independiente de PromptQuorum — verifica el alcance, la licencia y los requisitos de hardware actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo, que también cubre herramientas locales de un solo equipo que esta comparación excluye.',
+        note: 'Esta lista refleja herramientas comúnmente discutidas junto a KServe en el espacio de servicio de modelos en producción/empresarial, no un ranking independiente de PromptQuorum — verifica el alcance, la licencia y los requisitos de hardware actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/directory) para ver el catálogo completo, que también cubre herramientas locales de un solo equipo que esta comparación excluye.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1651,7 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de KServe en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de KServe en el directorio.',
           '[Reseña de NVIDIA Dynamo](/es/power-local-llm/dynamo-review) — el propio framework de NVIDIA de servicio de inferencia LLM distribuida, para comparar con el enfoque neutral y nativo de Kubernetes de KServe.',
           '[Reseña de LMDeploy](/es/power-local-llm/lmdeploy-review) — un kit de herramientas para comprimir, desplegar y servir LLM, para comparar con el alcance más amplio de generativo más predictivo de KServe.',
         ],
@@ -1872,7 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'vLLM', 'Mais conhecida por': 'Motor de inferência e serving de LLM de alta vazão, que o próprio KServe pode executar como backend', 'Link': '[vllm.ai](https://vllm.ai)' },
           { 'Ferramenta': 'Seldon Core', 'Mais conhecida por': 'Outra plataforma de serving de ML nativa em Kubernetes, próxima ao escopo preditivo do KServe', 'Link': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'Esta lista reflete ferramentas comumente discutidas junto ao KServe no espaço de serving de modelos para produção/empresas, e não um ranking independente da PromptQuorum — verifique o escopo, a licença e os requisitos de hardware atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, que também cobre ferramentas locais de máquina única excluídas desta comparação.',
+        note: 'Esta lista reflete ferramentas comumente discutidas junto ao KServe no espaço de serving de modelos para produção/empresas, e não um ranking independente da PromptQuorum — verifique o escopo, a licença e os requisitos de hardware atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, que também cobre ferramentas locais de máquina única excluídas desta comparação.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do KServe no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do KServe no diretório.',
           '[Análise do NVIDIA Dynamo](/pt/power-local-llm/dynamo-review) — o próprio framework de serving de inferência de LLM distribuído da NVIDIA, para comparação com a abordagem neutra em relação a fornecedores e nativa em Kubernetes do KServe.',
           '[Análise do LMDeploy](/pt/power-local-llm/lmdeploy-review) — um kit de ferramentas para comprimir, implantar e servir LLMs, para comparação com o escopo mais amplo de generativo mais preditivo do KServe.',
         ],
@@ -2148,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'vLLM', 'الأشهر في': 'محرك استدلال وتقديم عالي الإنتاجية لـ LLM يمكن لـ KServe نفسها تشغيله كخلفية', 'الرابط': '[vllm.ai](https://vllm.ai)' },
           { 'الأداة': 'Seldon Core', 'الأشهر في': 'منصة تقديم نماذج تعلم آلي أخرى أصيلة لـ Kubernetes، أقرب إلى نطاق التقديم التنبؤي لدى KServe', 'الرابط': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: 'تعكس هذه القائمة أدوات يشيع مناقشتها إلى جانب KServe في مجال تقديم النماذج الإنتاجي/المؤسسي، وليست تصنيفًا مستقلًا من PromptQuorum — تحقق من النطاق والترخيص ومتطلبات العتاد الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، الذي يغطي أيضًا أدوات محلية على جهاز واحد تستثنيها هذه المقارنة.',
+        note: 'تعكس هذه القائمة أدوات يشيع مناقشتها إلى جانب KServe في مجال تقديم النماذج الإنتاجي/المؤسسي، وليست تصنيفًا مستقلًا من PromptQuorum — تحقق من النطاق والترخيص ومتطلبات العتاد الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل، الذي يغطي أيضًا أدوات محلية على جهاز واحد تستثنيها هذه المقارنة.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2203,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج KServe في الدليل.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج KServe في الدليل.',
           '[مراجعة NVIDIA Dynamo](/ar/power-local-llm/dynamo-review) — إطار عمل NVIDIA الخاص بها لاستدلال LLM الموزَّع، للمقارنة مع نهج KServe المحايد تجاه المزوّدين والأصيل لـ Kubernetes.',
           '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review) — أدوات لضغط ونشر وتقديم نماذج LLM، للمقارنة مع نطاق KServe الأوسع الذي يجمع بين التوليدي والتنبؤي.',
         ],
@@ -2424,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'vLLM', '대표 강점': 'KServe가 백엔드로 실행할 수 있는 고처리량 LLM 추론 및 서빙 엔진', '링크': '[vllm.ai](https://vllm.ai)' },
           { '도구': 'Seldon Core', '대표 강점': 'KServe의 예측형 서빙 범위에 더 가까운 또 다른 Kubernetes 네이티브 ML 모델 서빙 플랫폼', '링크': '[seldon.io](https://www.seldon.io)' },
         ],
-        note: '이 목록은 프로덕션/엔터프라이즈 모델 서빙 영역에서 KServe와 함께 자주 언급되는 도구를 정리한 것으로, PromptQuorum의 독자적인 순위가 아닙니다 — 선택 전에 각 도구의 현재 범위, 라이선스, 하드웨어 요구 사항을 직접 확인하시기 바랍니다. 이 비교에서 제외된 단일 머신 로컬 도구를 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이 목록은 프로덕션/엔터프라이즈 모델 서빙 영역에서 KServe와 함께 자주 언급되는 도구를 정리한 것으로, PromptQuorum의 독자적인 순위가 아닙니다 — 선택 전에 각 도구의 현재 범위, 라이선스, 하드웨어 요구 사항을 직접 확인하시기 바랍니다. 이 비교에서 제외된 단일 머신 로컬 도구를 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2479,7 +2479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — KServe의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — KServe의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[NVIDIA Dynamo 리뷰](/ko/power-local-llm/dynamo-review) — KServe의 벤더 중립적인 Kubernetes 네이티브 접근과 비교할 수 있는 NVIDIA 자체 분산 LLM 추론 서빙 프레임워크입니다.',
           '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review) — KServe의 더 폭넓은 생성형+예측형 범위와 비교할 수 있는, LLM 압축·배포·서빙 툴킷입니다.',
         ],

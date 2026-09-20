@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: '**LongMemory is most often compared to other self-hosted RAG and memory-framework tools, since it sits in the same "embeddings and retrieval infrastructure" segment.** Companion to LongMemory\'s own entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LongMemory is most often compared to other self-hosted RAG and memory-framework tools, since it sits in the same "embeddings and retrieval infrastructure" segment.** Companion to LongMemory\'s own entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'Open-source AI memory and knowledge-graph engine for LLM apps and agents', 'Link': '[Cognee review](/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'Embedded, all-in-one vector search and RAG framework', 'Link': '[txtai review](/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee Review](/power-local-llm/cognee-review) — an open-source AI memory and knowledge-graph engine, for comparison against LongMemory\'s temporal-memory approach.',
           '[txtai Review](/power-local-llm/txtai-embedded-vector-database-review) — an embedded, all-in-one vector search and RAG framework.',
           '[LlamaIndex Review](/power-local-llm/llamaindex-rag-framework-review) — a general-purpose data framework for building RAG and agent applications.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Wettbewerber und Alternativen',
-        content: '**LongMemory wird am häufigsten mit anderen selbst gehosteten RAG- und Memory-Framework-Tools verglichen, da es im gleichen Segment "Embeddings- und Retrieval-Infrastruktur" angesiedelt ist.** Ergänzend zu LongMemorys eigenem Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LongMemory wird am häufigsten mit anderen selbst gehosteten RAG- und Memory-Framework-Tools verglichen, da es im gleichen Segment "Embeddings- und Retrieval-Infrastruktur" angesiedelt ist.** Ergänzend zu LongMemorys eigenem Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'Open-Source-KI-Gedächtnis- und Knowledge-Graph-Engine für LLM-Apps und Agenten', 'Link': '[Cognee Review](/de/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'Eingebettetes All-in-one-Vektorsuche- und RAG-Framework', 'Link': '[txtai Review](/de/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee Review](/de/power-local-llm/cognee-review) — eine Open-Source-KI-Gedächtnis- und Knowledge-Graph-Engine, zum Vergleich mit LongMemorys zeitbasiertem Ansatz.',
           '[txtai Review](/de/power-local-llm/txtai-embedded-vector-database-review) — ein eingebettetes All-in-one-Vektorsuche- und RAG-Framework.',
           '[LlamaIndex Review](/de/power-local-llm/llamaindex-rag-framework-review) — ein universelles Daten-Framework zum Bau von RAG- und Agenten-Anwendungen.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: '**LongMemory est le plus souvent comparé à d\'autres outils de framework RAG et de mémoire auto-hébergés, car il se situe dans le même segment « infrastructure d\'embeddings et de récupération ».** En complément de la propre fiche de LongMemory dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LongMemory est le plus souvent comparé à d\'autres outils de framework RAG et de mémoire auto-hébergés, car il se situe dans le même segment « infrastructure d\'embeddings et de récupération ».** En complément de la propre fiche de LongMemory dans le [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'Moteur open source de mémoire IA et de graphe de connaissances pour applications et agents LLM', 'Link': '[Cognee Review](/fr/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'Framework tout-en-un de recherche vectorielle et de RAG intégré', 'Link': '[txtai Review](/fr/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee Review](/fr/power-local-llm/cognee-review) — un moteur open source de mémoire IA et de graphe de connaissances, pour comparaison avec l\'approche de mémoire temporelle de LongMemory.',
           '[txtai Review](/fr/power-local-llm/txtai-embedded-vector-database-review) — un framework tout-en-un de recherche vectorielle et de RAG intégré.',
           '[LlamaIndex Review](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework de données généraliste pour construire des applications RAG et agent.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合と代替ツール',
-        content: '**LongMemoryは、同じ「エンベディングと検索インフラ」領域に属するため、他の自己ホスト型RAG・メモリーフレームワークツールと比較されることが最も多いです。** [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるLongMemory自身のエントリーと合わせて参照してください。',
+        content: '**LongMemoryは、同じ「エンベディングと検索インフラ」領域に属するため、他の自己ホスト型RAG・メモリーフレームワークツールと比較されることが最も多いです。** [Local LLM Software Directory](https://www.promptquorum.com/directory)にあるLongMemory自身のエントリーと合わせて参照してください。',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'LLMアプリとエージェント向けのオープンソースAIメモリー・ナレッジグラフエンジン', 'Link': '[Cognee レビュー](/ja/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': '組み込み型オールインワンのベクトル検索・RAGフレームワーク', 'Link': '[txtai レビュー](/ja/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee レビュー](/ja/power-local-llm/cognee-review) — オープンソースのAIメモリー・ナレッジグラフエンジン。LongMemoryの時間ベースアプローチとの比較用。',
           '[txtai レビュー](/ja/power-local-llm/txtai-embedded-vector-database-review) — 組み込み型オールインワンのベクトル検索・RAGフレームワーク。',
           '[LlamaIndex レビュー](/ja/power-local-llm/llamaindex-rag-framework-review) — RAGおよびエージェントアプリケーション構築用の汎用データフレームワーク。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: '**LongMemory最常与其他自托管的RAG及记忆框架工具做比较，因为它处于同一"嵌入与检索基础设施"细分领域。** 可与LongMemory自身在[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中的条目搭配参考。',
+        content: '**LongMemory最常与其他自托管的RAG及记忆框架工具做比较，因为它处于同一"嵌入与检索基础设施"细分领域。** 可与LongMemory自身在[Local LLM Software Directory](https://www.promptquorum.com/directory)中的条目搭配参考。',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': '面向LLM应用和智能体的开源AI记忆与知识图谱引擎', 'Link': '[Cognee 评测](/zh/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': '嵌入式一体化向量搜索与RAG框架', 'Link': '[txtai 评测](/zh/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -1442,7 +1442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee 评测](/zh/power-local-llm/cognee-review) — 一款开源AI记忆与知识图谱引擎，可与LongMemory的时间性记忆方法进行对比。',
           '[txtai 评测](/zh/power-local-llm/txtai-embedded-vector-database-review) — 一款嵌入式一体化向量搜索与RAG框架。',
           '[LlamaIndex 评测](/zh/power-local-llm/llamaindex-rag-framework-review) — 一款用于构建RAG和智能体应用的通用数据框架。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: '**LongMemory se compara con más frecuencia con otras herramientas de framework RAG y memoria autoalojadas, ya que se sitúa en el mismo segmento de "infraestructura de embeddings y recuperación".** Complementario a la propia entrada de LongMemory en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LongMemory se compara con más frecuencia con otras herramientas de framework RAG y memoria autoalojadas, ya que se sitúa en el mismo segmento de "infraestructura de embeddings y recuperación".** Complementario a la propia entrada de LongMemory en el [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'Motor de memoria de IA y grafo de conocimiento de código abierto para apps y agentes LLM', 'Link': '[Cognee Review](/es/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'Framework de búsqueda vectorial y RAG integrado, todo en uno', 'Link': '[txtai Review](/es/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee Review](/es/power-local-llm/cognee-review) — un motor de memoria de IA y grafo de conocimiento de código abierto, para comparar con el enfoque de memoria temporal de LongMemory.',
           '[txtai Review](/es/power-local-llm/txtai-embedded-vector-database-review) — un framework de búsqueda vectorial y RAG integrado, todo en uno.',
           '[LlamaIndex Review](/es/power-local-llm/llamaindex-rag-framework-review) — un framework de datos de propósito general para construir aplicaciones RAG y de agentes.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1977,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: '**LongMemory é mais frequentemente comparado a outras ferramentas de framework RAG e memória self-hosted, já que ocupa o mesmo segmento de "infraestrutura de embeddings e recuperação".** Complementar à própria entrada do LongMemory no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LongMemory é mais frequentemente comparado a outras ferramentas de framework RAG e memória self-hosted, já que ocupa o mesmo segmento de "infraestrutura de embeddings e recuperação".** Complementar à própria entrada do LongMemory no [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'Motor de memória de IA e grafo de conhecimento de código aberto para apps e agentes LLM', 'Link': '[Cognee Review](/pt/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'Framework de busca vetorial e RAG embutido, tudo em um', 'Link': '[txtai Review](/pt/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee Review](/pt/power-local-llm/cognee-review) — um motor de memória de IA e grafo de conhecimento de código aberto, para comparação com a abordagem de memória temporal do LongMemory.',
           '[txtai Review](/pt/power-local-llm/txtai-embedded-vector-database-review) — um framework de busca vetorial e RAG embutido, tudo em um.',
           '[LlamaIndex Review](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework de dados de propósito geral para construir aplicações RAG e de agentes.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: '**غالبًا ما يُقارَن LongMemory بأدوات RAG وأطر ذاكرة أخرى ذاتية الاستضافة، لأنه يقع في نفس شريحة "بنية التضمينات والاسترجاع التحتية".** مكمّل لإدخال LongMemory الخاص في [دليل برمجيات النماذج اللغوية المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**غالبًا ما يُقارَن LongMemory بأدوات RAG وأطر ذاكرة أخرى ذاتية الاستضافة، لأنه يقع في نفس شريحة "بنية التضمينات والاسترجاع التحتية".** مكمّل لإدخال LongMemory الخاص في [دليل برمجيات النماذج اللغوية المحلية](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'محرك ذاكرة ذكاء اصطناعي ورسم بياني معرفي مفتوح المصدر لتطبيقات ووكلاء النماذج اللغوية الكبيرة', 'Link': '[مراجعة Cognee](/ar/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': 'إطار عمل بحث متجهي وRAG مدمج وشامل', 'Link': '[مراجعة txtai](/ar/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -2309,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Cognee](/ar/power-local-llm/cognee-review) — محرك ذاكرة ذكاء اصطناعي ورسم بياني معرفي مفتوح المصدر، للمقارنة مع نهج الذاكرة الزمنية لـ LongMemory.',
           '[مراجعة txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) — إطار عمل بحث متجهي وRAG مدمج وشامل.',
           '[مراجعة LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار عمل بيانات عام الغرض لبناء تطبيقات RAG والوكلاء.',
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -2555,7 +2555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: '**LongMemory는 동일한 "임베딩 및 검색 인프라" 영역에 속해 있기 때문에 다른 셀프 호스팅 RAG 및 메모리 프레임워크 도구와 가장 자주 비교됩니다.** [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 LongMemory 자체 항목과 함께 참고하십시오.',
+        content: '**LongMemory는 동일한 "임베딩 및 검색 인프라" 영역에 속해 있기 때문에 다른 셀프 호스팅 RAG 및 메모리 프레임워크 도구와 가장 자주 비교됩니다.** [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 LongMemory 자체 항목과 함께 참고하십시오.',
         rows: [
           { 'Tool': 'Cognee', 'Best known for': 'LLM 애플리케이션 및 에이전트를 위한 오픈소스 AI 메모리 및 지식 그래프 엔진', 'Link': '[Cognee 리뷰](/ko/power-local-llm/cognee-review)' },
           { 'Tool': 'txtai', 'Best known for': '임베디드 올인원 벡터 검색 및 RAG 프레임워크', 'Link': '[txtai 리뷰](/ko/power-local-llm/txtai-embedded-vector-database-review)' },
@@ -2598,7 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cognee 리뷰](/ko/power-local-llm/cognee-review) — LongMemory의 시간 기반 메모리 접근 방식과 비교할 오픈소스 AI 메모리 및 지식 그래프 엔진입니다.',
           '[txtai 리뷰](/ko/power-local-llm/txtai-embedded-vector-database-review) — 임베디드 올인원 벡터 검색 및 RAG 프레임워크입니다.',
           '[LlamaIndex 리뷰](/ko/power-local-llm/llamaindex-rag-framework-review) — RAG 및 에이전트 애플리케이션 구축을 위한 범용 데이터 프레임워크입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그입니다.',
         ],
       },
     },

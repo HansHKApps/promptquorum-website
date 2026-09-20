@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built and maintained by [Weaviate B.V.](https://weaviate.io), headquartered in Amsterdam, the Netherlands',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Weaviate\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Weaviate compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Weaviate\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Weaviate compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate vs. Other Vector Databases',
-        content: 'Weaviate is one of several self-hostable vector databases built for RAG and semantic search. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Weaviate vs. Qdrant comparison](#weaviate-vs-qdrant) above for the closest head-to-head.',
+        content: 'Weaviate is one of several self-hostable vector databases built for RAG and semantic search. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Weaviate vs. Qdrant comparison](#weaviate-vs-qdrant) above for the closest head-to-head.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — an Apache-2.0-licensed vector database with REST and gRPC APIs and strong sparse+dense hybrid search support; see the dedicated comparison section above and the full [Qdrant review](/power-local-llm/qdrant-review).',
           '**[Milvus](https://milvus.io)** — an Apache-2.0-licensed vector database built for very large-scale deployments, with a broader set of index types than most alternatives; see the [Milvus review](/power-local-llm/milvus-review) for full details.',
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — an embedded, all-in-one semantic search and RAG library that bundles vector indexing directly into a Python application rather than running as a separate server; see the [txtai review](/power-local-llm/txtai-embedded-vector-database-review) if an embedded, single-process approach fits your project better than a standalone database server.',
           '**[Pinecone](https://www.pinecone.io)** — a fully managed, closed-source vector database with no self-hosting option at all, useful as a contrast case if you specifically want to compare a cloud-only vendor against self-hostable options like Weaviate; see the [Pinecone vs. Weaviate vs. Qdrant vs. Chroma comparison](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) for a direct four-way breakdown.',
         ],
-        note: 'This is not an exhaustive list of vector databases — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Weaviate\'s own directory entry.',
+        note: 'This is not an exhaustive list of vector databases — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Weaviate\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Weaviate\'s directory entry alongside other vector databases covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Weaviate\'s directory entry alongside other vector databases covered above.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — a direct four-way comparison covering Weaviate against three other vector databases in detail.',
           '[Qdrant Review](/power-local-llm/qdrant-review) — the closest head-to-head alternative, covered in the dedicated comparison section above.',
           '[Enterprise RAG Vector Database Deployment Guide](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — a deeper look at deploying a vector database like Weaviate in a production RAG pipeline.',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt und gepflegt von [Weaviate B.V.](https://weaviate.io) mit Sitz in Amsterdam, Niederlande',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der Deep-Dive-Begleiter zu Weaviates Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort finden sich Weaviates Kennzahlen im Vergleich zu Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
+          { type: 'note', text: 'Dieser Test ist der Deep-Dive-Begleiter zu Weaviates Eintrag im [Local LLM Software Directory](/directory) — dort finden sich Weaviates Kennzahlen im Vergleich zu Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate vs. andere Vektordatenbanken',
-        content: 'Weaviate ist eine von mehreren selbst hostbaren Vektordatenbanken für RAG und semantische Suche. So reiht es sich neben anderen Optionen in diesem Bereich ein — siehe das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den dedizierten [Vergleich Weaviate vs. Qdrant](#weaviate-vs-qdrant) oben für das engste Kopf-an-Kopf-Rennen.',
+        content: 'Weaviate ist eine von mehreren selbst hostbaren Vektordatenbanken für RAG und semantische Suche. So reiht es sich neben anderen Optionen in diesem Bereich ein — siehe das [Local LLM Software Directory](/directory) für den vollständigen Katalog und den dedizierten [Vergleich Weaviate vs. Qdrant](#weaviate-vs-qdrant) oben für das engste Kopf-an-Kopf-Rennen.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — eine Apache-2.0-lizenzierte Vektordatenbank mit REST- und gRPC-APIs und starker Sparse+Dense-Hybrid-Suche; siehe den dedizierten Vergleichsabschnitt oben und den vollständigen [Qdrant-Test](/power-local-llm/qdrant-review).',
           '**[Milvus](https://milvus.io)** — eine Apache-2.0-lizenzierte Vektordatenbank für sehr große Deployments, mit einer breiteren Auswahl an Indextypen als die meisten Alternativen; alle Details im [Milvus-Test](/power-local-llm/milvus-review).',
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — eine eingebettete All-in-one-Bibliothek für semantische Suche und RAG, die die Vektorindexierung direkt in eine Python-Anwendung einbettet, statt als separater Server zu laufen; siehe den [txtai-Test](/power-local-llm/txtai-embedded-vector-database-review), falls ein eingebetteter Single-Process-Ansatz besser zu Ihrem Projekt passt als ein eigenständiger Datenbankserver.',
           '**[Pinecone](https://www.pinecone.io)** — eine vollständig verwaltete, closed-source Vektordatenbank ohne jede Self-Hosting-Option, nützlich als Kontrastfall, wenn Sie speziell einen reinen Cloud-Anbieter mit selbst hostbaren Optionen wie Weaviate vergleichen möchten; siehe den [Vergleich Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) für eine direkte Vier-Wege-Gegenüberstellung.',
         ],
-        note: 'Dies ist keine erschöpfende Liste an Vektordatenbanken — siehe das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Weaviates eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste an Vektordatenbanken — siehe das [Local LLM Software Directory](/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Weaviates eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Weaviates eigenem Directory-Eintrag neben anderen oben behandelten Vektordatenbanken.',
+          '[Local LLM Software Directory 2026](/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Weaviates eigenem Directory-Eintrag neben anderen oben behandelten Vektordatenbanken.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — ein direkter Vier-Wege-Vergleich, der Weaviate im Detail drei weiteren Vektordatenbanken gegenüberstellt.',
           '[Qdrant-Test](/power-local-llm/qdrant-review) — die engste Kopf-an-Kopf-Alternative, behandelt im dedizierten Vergleichsabschnitt oben.',
           '[Enterprise RAG Vector Database Deployment Guide](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — ein tieferer Blick auf das Deployment einer Vektordatenbank wie Weaviate in einer produktiven RAG-Pipeline.',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé et maintenu par [Weaviate B.V.](https://weaviate.io), société basée à Amsterdam, aux Pays-Bas',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Weaviate dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Weaviate en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Weaviate dans le [Local LLM Software Directory](/directory) — consultez cette page pour comparer Weaviate en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -782,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate face aux autres bases de données vectorielles',
-        content: 'Weaviate est l\'une des plusieurs bases de données vectorielles auto-hébergeables conçues pour le RAG et la recherche sémantique. Voici comment elle se positionne face aux autres options de ce domaine — voir le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée Weaviate vs. Qdrant](#weaviate-vs-qdrant) ci-dessus pour le duel le plus proche.',
+        content: 'Weaviate est l\'une des plusieurs bases de données vectorielles auto-hébergeables conçues pour le RAG et la recherche sémantique. Voici comment elle se positionne face aux autres options de ce domaine — voir le [Local LLM Software Directory](/directory) pour le catalogue complet, et la [comparaison dédiée Weaviate vs. Qdrant](#weaviate-vs-qdrant) ci-dessus pour le duel le plus proche.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — une base de données vectorielle sous licence Apache-2.0 avec des API REST et gRPC et un fort support de la recherche hybride sparse+dense ; voir la section de comparaison dédiée ci-dessus et l\'[avis Qdrant](/power-local-llm/qdrant-review) complet.',
           '**[Milvus](https://milvus.io)** — une base de données vectorielle sous licence Apache-2.0 conçue pour des déploiements à très grande échelle, avec un plus large éventail de types d\'index que la plupart des alternatives ; voir l\'[avis Milvus](/power-local-llm/milvus-review) pour tous les détails.',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — une bibliothèque tout-en-un embarquée pour la recherche sémantique et le RAG, qui intègre directement l\'indexation vectorielle dans une application Python plutôt que de fonctionner comme un serveur séparé ; voir l\'[avis txtai](/power-local-llm/txtai-embedded-vector-database-review) si une approche embarquée mono-processus convient mieux à votre projet qu\'un serveur de base de données autonome.',
           '**[Pinecone](https://www.pinecone.io)** — une base de données vectorielle entièrement gérée et à code source fermé, sans aucune option d\'auto-hébergement, utile comme cas de contraste si vous souhaitez spécifiquement comparer un fournisseur uniquement cloud à des options auto-hébergeables comme Weaviate ; voir la [comparaison Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) pour une confrontation directe à quatre.',
         ],
-        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Weaviate dans l\'annuaire.',
+        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Weaviate dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre de Weaviate dans l\'annuaire aux côtés des autres bases de données vectorielles couvertes ci-dessus.',
+          '[Local LLM Software Directory 2026](/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre de Weaviate dans l\'annuaire aux côtés des autres bases de données vectorielles couvertes ci-dessus.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — une comparaison directe à quatre confrontant Weaviate à trois autres bases de données vectorielles en détail.',
           '[Avis Qdrant](/power-local-llm/qdrant-review) — l\'alternative la plus proche en duel direct, traitée dans la section de comparaison dédiée ci-dessus.',
           '[Guide de déploiement d\'une base de données vectorielle RAG en entreprise](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — un regard plus approfondi sur le déploiement d\'une base de données vectorielle comme Weaviate dans un pipeline RAG de production.',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado y mantenido por [Weaviate B.V.](https://weaviate.io), con sede en Ámsterdam, Países Bajos',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Weaviate en el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Weaviate de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Weaviate en el [Local LLM Software Directory](/directory) — consulta esa página para ver cómo se compara Weaviate de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1067,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate frente a otras bases de datos vectoriales',
-        content: 'Weaviate es una de varias bases de datos vectoriales autoalojables diseñadas para RAG y búsqueda semántica. Así se sitúa junto a otras opciones en este espacio — ver el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Weaviate vs. Qdrant](#weaviate-vs-qdrant) más arriba para el enfrentamiento más directo.',
+        content: 'Weaviate es una de varias bases de datos vectoriales autoalojables diseñadas para RAG y búsqueda semántica. Así se sitúa junto a otras opciones en este espacio — ver el [Local LLM Software Directory](/directory) para el catálogo completo, y la [comparación dedicada Weaviate vs. Qdrant](#weaviate-vs-qdrant) más arriba para el enfrentamiento más directo.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — una base de datos vectorial con licencia Apache-2.0 con APIs REST y gRPC y un fuerte soporte de búsqueda híbrida sparse+dense; ver la sección de comparación dedicada más arriba y el [análisis completo de Qdrant](/power-local-llm/qdrant-review).',
           '**[Milvus](https://milvus.io)** — una base de datos vectorial con licencia Apache-2.0 diseñada para despliegues a muy gran escala, con un conjunto más amplio de tipos de índice que la mayoría de alternativas; ver el [análisis de Milvus](/power-local-llm/milvus-review) para todos los detalles.',
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — una biblioteca integrada todo en uno de búsqueda semántica y RAG que incorpora la indexación vectorial directamente en una aplicación Python en lugar de ejecutarse como un servidor separado; ver el [análisis de txtai](/power-local-llm/txtai-embedded-vector-database-review) si un enfoque integrado de un solo proceso encaja mejor en tu proyecto que un servidor de base de datos independiente.',
           '**[Pinecone](https://www.pinecone.io)** — una base de datos vectorial totalmente gestionada y de código cerrado, sin ninguna opción de autoalojamiento, útil como caso de contraste si quieres comparar específicamente un proveedor solo en la nube con opciones autoalojables como Weaviate; ver la [comparación Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) para un desglose directo entre cuatro.',
         ],
-        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales — ver el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de Weaviate en el directorio.',
+        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales — ver el [Local LLM Software Directory](/directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de Weaviate en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Weaviate en el directorio junto a otras bases de datos vectoriales tratadas arriba.',
+          '[Local LLM Software Directory 2026](/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Weaviate en el directorio junto a otras bases de datos vectoriales tratadas arriba.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — una comparación directa entre cuatro que enfrenta a Weaviate con otras tres bases de datos vectoriales en detalle.',
           '[Análisis de Qdrant](/power-local-llm/qdrant-review) — la alternativa más directa en el enfrentamiento cara a cara, tratada en la sección de comparación dedicada más arriba.',
           '[Guía de despliegue de bases de datos vectoriales RAG empresariales](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — una mirada más profunda al despliegue de una base de datos vectorial como Weaviate en una canalización RAG de producción.',
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido e mantido pela [Weaviate B.V.](https://weaviate.io), sediada em Amsterdã, Países Baixos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Weaviate no [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Weaviate rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Weaviate no [Local LLM Software Directory](/directory) — veja essa página para comparar o Weaviate rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate vs. outros bancos de dados vetoriais',
-        content: 'O Weaviate é um dos vários bancos de dados vetoriais auto-hospedáveis construídos para RAG e busca semântica. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Weaviate vs. Qdrant](#weaviate-vs-qdrant) acima para o confronto mais direto.',
+        content: 'O Weaviate é um dos vários bancos de dados vetoriais auto-hospedáveis construídos para RAG e busca semântica. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Local LLM Software Directory](/directory) para o catálogo completo, e a [comparação dedicada Weaviate vs. Qdrant](#weaviate-vs-qdrant) acima para o confronto mais direto.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — um banco de dados vetorial licenciado sob Apache-2.0 com APIs REST e gRPC e forte suporte a busca híbrida sparse+dense; veja a seção de comparação dedicada acima e a [análise completa do Qdrant](/power-local-llm/qdrant-review).',
           '**[Milvus](https://milvus.io)** — um banco de dados vetorial licenciado sob Apache-2.0 construído para implantações em escala muito grande, com um conjunto mais amplo de tipos de índice do que a maioria das alternativas; veja a [análise do Milvus](/power-local-llm/milvus-review) para todos os detalhes.',
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — uma biblioteca embutida tudo-em-um de busca semântica e RAG que incorpora a indexação vetorial diretamente em uma aplicação Python em vez de rodar como um servidor separado; veja a [análise do txtai](/power-local-llm/txtai-embedded-vector-database-review) se uma abordagem embutida de processo único se encaixar melhor no seu projeto do que um servidor de banco de dados independente.',
           '**[Pinecone](https://www.pinecone.io)** — um banco de dados vetorial totalmente gerenciado e de código fechado, sem nenhuma opção de auto-hospedagem, útil como caso de contraste se você quiser especificamente comparar um fornecedor somente em nuvem com opções auto-hospedáveis como o Weaviate; veja a [comparação Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) para uma análise direta entre quatro opções.',
         ],
-        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais — consulte o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Weaviate no diretório.',
+        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais — consulte o [Local LLM Software Directory](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Weaviate no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1419,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Weaviate no diretório junto com outros bancos de dados vetoriais cobertos acima.',
+          '[Local LLM Software Directory 2026](/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Weaviate no diretório junto com outros bancos de dados vetoriais cobertos acima.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — uma comparação direta entre quatro opções, colocando o Weaviate lado a lado com outros três bancos de dados vetoriais em detalhes.',
           '[Análise do Qdrant](/power-local-llm/qdrant-review) — a alternativa mais próxima em um confronto direto, abordada na seção de comparação dedicada acima.',
           '[Guia de implantação de banco de dados vetorial RAG para empresas](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — um olhar mais aprofundado sobre a implantação de um banco de dados vetorial como o Weaviate em um pipeline RAG de produção.',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Weaviate B.V.](https://weaviate.io)が開発・保守、本社はオランダ・アムステルダム',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)内のWeaviateの項目を深掘りした補完記事です。他の数十のローカルAIツールとの比較概要はそちらのページを参照してください。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/directory)内のWeaviateの項目を深掘りした補完記事です。他の数十のローカルAIツールとの比較概要はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate vs. 他のベクトルデータベース',
-        content: 'WeaviateはRAGとセマンティック検索向けに構築された、セルフホスト可能な複数のベクトルデータベースの1つです。この分野の他の選択肢との位置づけは以下の通りです。全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)、最も近い一騎討ちの比較は上記の専用[Weaviate vs. Qdrant比較](#weaviate-vs-qdrant)を参照してください。',
+        content: 'WeaviateはRAGとセマンティック検索向けに構築された、セルフホスト可能な複数のベクトルデータベースの1つです。この分野の他の選択肢との位置づけは以下の通りです。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)、最も近い一騎討ちの比較は上記の専用[Weaviate vs. Qdrant比較](#weaviate-vs-qdrant)を参照してください。',
         items: [
           '**[Qdrant](https://qdrant.tech)** — RESTとgRPC APIを持ち、スパース＋デンスのハイブリッド検索サポートが強いApache-2.0ライセンスのベクトルデータベース。上記の専用比較セクションと全文の[Qdrantレビュー](/power-local-llm/qdrant-review)を参照。',
           '**[Milvus](https://milvus.io)** — 非常に大規模な展開向けに構築されたApache-2.0ライセンスのベクトルデータベースで、他の多くの選択肢よりも幅広いインデックスタイプを備える。詳細は[Milvusレビュー](/power-local-llm/milvus-review)を参照。',
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — 独立したサーバーとしてではなく、ベクトルインデックス機能をPythonアプリケーションに直接組み込む、オールインワンの埋め込み型セマンティック検索・RAGライブラリ。組み込み型・単一プロセス方式がスタンドアロンのデータベースサーバーよりプロジェクトに合う場合は[txtaiレビュー](/power-local-llm/txtai-embedded-vector-database-review)を参照。',
           '**[Pinecone](https://www.pinecone.io)** — セルフホストオプションが一切ない、完全マネージド・クローズドソースのベクトルデータベース。Weaviateのようなセルフホスト可能な選択肢とクラウド専用ベンダーを比較する対照事例として有用。4者の直接比較は[Pinecone vs. Weaviate vs. Qdrant vs. Chroma比較](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)を参照。',
         ],
-        note: 'これはベクトルデータベースの網羅的な一覧ではありません。Weaviate自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはベクトルデータベースの網羅的な一覧ではありません。Weaviate自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。上記で扱った他のベクトルデータベースと並ぶWeaviateのディレクトリ項目も含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/directory) — 本記事が属するローカルAIツールの全カタログ。上記で扱った他のベクトルデータベースと並ぶWeaviateのディレクトリ項目も含む。',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — Weaviateと他の3つのベクトルデータベースを詳細に比較する直接的な4者比較。',
           '[Qdrantレビュー](/power-local-llm/qdrant-review) — 上記の専用比較セクションで扱った、最も近い一騎討ちの代替候補。',
           '[エンタープライズRAGベクトルデータベース展開ガイド](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — Weaviateのようなベクトルデータベースを本番RAGパイプラインに展開する方法をさらに深掘りした記事。',
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由总部位于荷兰阿姆斯特丹的[Weaviate B.V.](https://weaviate.io)构建和维护',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Weaviate条目的深度补充——该页面提供Weaviate与数十款其他本地AI工具的一览式对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Weaviate条目的深度补充——该页面提供Weaviate与数十款其他本地AI工具的一览式对比。' },
         ],
       },
       overview: {
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate 对比其他向量数据库',
-        content: 'Weaviate是几款为RAG和语义搜索打造的可自托管向量数据库之一。以下是它在这一领域中与其他选项的对比——完整目录见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)，最接近的正面对比见上文专门的[Weaviate 对比 Qdrant](#weaviate-vs-qdrant)。',
+        content: 'Weaviate是几款为RAG和语义搜索打造的可自托管向量数据库之一。以下是它在这一领域中与其他选项的对比——完整目录见[本地LLM软件目录](/directory)，最接近的正面对比见上文专门的[Weaviate 对比 Qdrant](#weaviate-vs-qdrant)。',
         items: [
           '**[Qdrant](https://qdrant.tech)**——采用Apache-2.0许可的向量数据库，提供REST和gRPC API，稀疏+密集混合搜索支持出色；详见上文专门的对比部分和完整的[Qdrant评测](/power-local-llm/qdrant-review)。',
           '**[Milvus](https://milvus.io)**——为超大规模部署打造的Apache-2.0许可向量数据库，索引类型比大多数替代品更丰富；完整详情见[Milvus评测](/power-local-llm/milvus-review)。',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)**——一个内嵌式、一体化的语义搜索与RAG库，将向量索引直接打包进Python应用，而非作为独立服务器运行；如果内嵌式、单进程方案比独立数据库服务器更适合你的项目，可参考[txtai评测](/power-local-llm/txtai-embedded-vector-database-review)。',
           '**[Pinecone](https://www.pinecone.io)**——完全托管、闭源的向量数据库，完全不提供自托管选项，可作为对照案例，用于对比纯云端厂商与Weaviate等可自托管选项；四方直接对比见[Pinecone 对比 Weaviate 对比 Qdrant 对比 Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)。',
         ],
-        note: '这并非向量数据库的详尽列表——完整、定期更新的目录（包括Weaviate自身的目录条目）见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非向量数据库的详尽列表——完整、定期更新的目录（包括Weaviate自身的目录条目）见[本地LLM软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含Weaviate的目录条目以及上文提到的其他向量数据库。',
+          '[本地LLM软件目录2026](/directory)——本文所属的本地AI工具完整目录，包含Weaviate的目录条目以及上文提到的其他向量数据库。',
           '[Pinecone 对比 Weaviate 对比 Qdrant 对比 Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)——将Weaviate与另外三款向量数据库详细对比的四方直接比较。',
           '[Qdrant评测](/power-local-llm/qdrant-review)——上文专门对比部分中提到的最接近的正面替代方案。',
           '[企业级RAG向量数据库部署指南](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026)——深入探讨如何在生产级RAG流水线中部署像Weaviate这样的向量数据库。',
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تطوّرها وتصونها [Weaviate B.V.](https://weaviate.io)، ومقرها أمستردام، هولندا',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لمدخل Weaviate في [دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن Weaviate بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لمدخل Weaviate في [دليل برمجيات نماذج اللغة المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف تقارن Weaviate بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate مقابل قواعد بيانات متجهية أخرى',
-        content: 'Weaviate واحدة من عدة قواعد بيانات متجهية قابلة للاستضافة الذاتية مصمَّمة لـ RAG والبحث الدلالي. فيما يلي موقعها بين الخيارات الأخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل، و[مقارنة Weaviate مقابل Qdrant](#weaviate-vs-qdrant) المخصصة أعلاه للمقارنة المباشرة الأقرب.',
+        content: 'Weaviate واحدة من عدة قواعد بيانات متجهية قابلة للاستضافة الذاتية مصمَّمة لـ RAG والبحث الدلالي. فيما يلي موقعها بين الخيارات الأخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة المحلية](/directory) للكتالوج الكامل، و[مقارنة Weaviate مقابل Qdrant](#weaviate-vs-qdrant) المخصصة أعلاه للمقارنة المباشرة الأقرب.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — قاعدة بيانات متجهية مرخصة بموجب Apache-2.0 بواجهات REST وgRPC ودعم قوي للبحث الهجين المتناثر والكثيف؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة Qdrant](/power-local-llm/qdrant-review) الكاملة.',
           '**[Milvus](https://milvus.io)** — قاعدة بيانات متجهية مرخصة بموجب Apache-2.0 مصمَّمة للنشر واسع النطاق جدًا، بمجموعة أنواع فهارس أوسع من معظم البدائل؛ راجع [مراجعة Milvus](/power-local-llm/milvus-review) للتفاصيل الكاملة.',
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — مكتبة بحث دلالي وRAG مضمّنة وشاملة تدمج فهرسة المتجهات مباشرة في تطبيق Python بدلًا من التشغيل كخادم منفصل؛ راجع [مراجعة txtai](/power-local-llm/txtai-embedded-vector-database-review) إذا كان النهج المضمّن أحادي العملية مناسبًا لمشروعك أكثر من خادم قاعدة بيانات مستقل.',
           '**[Pinecone](https://www.pinecone.io)** — قاعدة بيانات متجهية مُدارة بالكامل ومغلقة المصدر بلا أي خيار استضافة ذاتية، مفيدة كحالة تباين إذا أردت تحديدًا مقارنة مزوّد سحابي فقط بخيارات قابلة للاستضافة الذاتية مثل Weaviate؛ راجع [مقارنة Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) لتفصيل رباعي مباشر.',
         ],
-        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهية — راجع [دليل برمجيات نماذج اللغة المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Weaviate الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهية — راجع [دليل برمجيات نماذج اللغة المحلية](/directory) للكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Weaviate الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Weaviate في الدليل إلى جانب قواعد البيانات المتجهية الأخرى المذكورة أعلاه.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Weaviate في الدليل إلى جانب قواعد البيانات المتجهية الأخرى المذكورة أعلاه.',
           '[Pinecone مقابل Weaviate مقابل Qdrant مقابل Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — مقارنة رباعية مباشرة تغطي Weaviate مقابل ثلاث قواعد بيانات متجهية أخرى بالتفصيل.',
           '[مراجعة Qdrant](/power-local-llm/qdrant-review) — أقرب بديل للمقارنة المباشرة، الذي تناوله قسم المقارنة المخصص أعلاه.',
           '[دليل نشر قاعدة بيانات متجهية RAG المؤسسية](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — نظرة أعمق على نشر قاعدة بيانات متجهية مثل Weaviate في خط أنابيب RAG إنتاجي.',
@@ -2353,7 +2353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '네덜란드 암스테르담에 본사를 둔 [Weaviate B.V.](https://weaviate.io)가 구축 및 유지 관리',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 실린 Weaviate 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Weaviate를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 실린 Weaviate 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Weaviate를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'weaviate-competitors',
         title: 'Weaviate vs. 다른 벡터 데이터베이스',
-        content: 'Weaviate는 RAG와 시맨틱 검색을 위해 구축된 여러 셀프 호스팅 가능한 벡터 데이터베이스 중 하나입니다. 이 분야의 다른 선택지들 사이에서 Weaviate가 어떻게 자리하는지 살펴보겠습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 근접한 정면 비교는 위의 전용 [Weaviate vs. Qdrant 비교](#weaviate-vs-qdrant)를 참조하세요.',
+        content: 'Weaviate는 RAG와 시맨틱 검색을 위해 구축된 여러 셀프 호스팅 가능한 벡터 데이터베이스 중 하나입니다. 이 분야의 다른 선택지들 사이에서 Weaviate가 어떻게 자리하는지 살펴보겠습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 근접한 정면 비교는 위의 전용 [Weaviate vs. Qdrant 비교](#weaviate-vs-qdrant)를 참조하세요.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — REST 및 gRPC API와 강력한 희소+밀집 하이브리드 검색 지원을 갖춘 Apache-2.0 라이선스 벡터 데이터베이스. 위의 전용 비교 섹션과 전체 [Qdrant 리뷰](/power-local-llm/qdrant-review)를 참조하세요.',
           '**[Milvus](https://milvus.io)** — 매우 대규모의 배포를 위해 구축된 Apache-2.0 라이선스 벡터 데이터베이스로, 대부분의 대안보다 더 다양한 인덱스 유형을 제공. 자세한 내용은 [Milvus 리뷰](/power-local-llm/milvus-review)를 참조하세요.',
@@ -2500,7 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[txtai](https://github.com/neuml/txtai)** — 독립적인 서버로 실행되는 대신 벡터 인덱싱을 Python 애플리케이션에 직접 번들로 포함하는 내장형 올인원 시맨틱 검색 및 RAG 라이브러리. 독립형 데이터베이스 서버보다 내장형 단일 프로세스 방식이 프로젝트에 더 적합하다면 [txtai 리뷰](/power-local-llm/txtai-embedded-vector-database-review)를 참조하세요.',
           '**[Pinecone](https://www.pinecone.io)** — 셀프 호스팅 옵션이 전혀 없는 완전 관리형, 클로즈드 소스 벡터 데이터베이스. 클라우드 전용 업체와 Weaviate 같은 셀프 호스팅 가능한 옵션을 구체적으로 비교하고 싶을 때 대조 사례로 유용. 4자 직접 비교는 [Pinecone vs. Weaviate vs. Qdrant vs. Chroma 비교](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026)를 참조하세요.',
         ],
-        note: '이는 벡터 데이터베이스의 완전한 목록이 아닙니다. Weaviate 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 벡터 데이터베이스의 완전한 목록이 아닙니다. Weaviate 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그. 위에서 다룬 다른 벡터 데이터베이스들과 함께 Weaviate의 디렉터리 항목도 포함.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그. 위에서 다룬 다른 벡터 데이터베이스들과 함께 Weaviate의 디렉터리 항목도 포함.',
           '[Pinecone vs. Weaviate vs. Qdrant vs. Chroma](/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026) — Weaviate와 다른 세 벡터 데이터베이스를 상세히 다루는 4자 직접 비교.',
           '[Qdrant 리뷰](/power-local-llm/qdrant-review) — 위의 전용 비교 섹션에서 다룬, 가장 근접한 정면 대안.',
           '[엔터프라이즈 RAG 벡터 데이터베이스 배포 가이드](/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026) — Weaviate 같은 벡터 데이터베이스를 프로덕션 RAG 파이프라인에 배포하는 방법을 더 깊이 다룬 글.',

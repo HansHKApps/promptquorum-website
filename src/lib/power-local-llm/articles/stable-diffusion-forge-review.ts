@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs on Windows, macOS, and Linux; a GPU is strongly recommended, with no single documented VRAM minimum — it depends on the checkpoint and resolution',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Stable Diffusion WebUI Forge\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Forge compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Stable Diffusion WebUI Forge\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Forge compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -208,14 +208,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge vs. Other Local Image Generation Tools',
-        content: 'Forge is one of several local, open-source interfaces for Stable Diffusion and related image models. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Forge vs. AUTOMATIC1111 WebUI comparison](#forge-vs-automatic1111) above for the closest head-to-head.',
+        content: 'Forge is one of several local, open-source interfaces for Stable Diffusion and related image models. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Forge vs. AUTOMATIC1111 WebUI comparison](#forge-vs-automatic1111) above for the closest head-to-head.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — the original project Forge is built on top of, with the largest extension ecosystem; see the dedicated comparison section above and the [AUTOMATIC1111 review](/power-local-llm/automatic1111-review) for full details.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — a node-based interface for the same underlying Stable Diffusion/Flux models, trading Forge\'s more familiar tab-based UI for a visual workflow graph with finer low-level control; see the [ComfyUI review](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — also created by lllyasviel, but built for the opposite goal: a simplified, opinionated interface aimed at beginners who want good results with minimal parameter tuning, rather than Forge\'s full WebUI parameter set; see the [Fooocus review](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — another polished, actively developed local Stable Diffusion UI with a strong focus on a unified canvas workflow and a more curated feature set than the WebUI-derived tools; see the [InvokeAI review](/power-local-llm/invokeai-review).',
         ],
-        note: 'This is not an exhaustive list of local Stable Diffusion interfaces — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Forge\'s own directory entry.',
+        note: 'This is not an exhaustive list of local Stable Diffusion interfaces — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Forge\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Forge\'s directory entry alongside other image-generation apps covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Forge\'s directory entry alongside other image-generation apps covered above.',
           '[AUTOMATIC1111 Review](/power-local-llm/automatic1111-review) — the original Stable Diffusion WebUI project Forge is built on top of.',
           '[ComfyUI Review](/power-local-llm/comfyui-review) — a node-based alternative interface for the same underlying models.',
           '[Fooocus Review](/power-local-llm/fooocus-review) — a simplified, beginner-focused interface, also from Forge\'s creator.',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Läuft unter Windows, macOS und Linux; eine GPU wird dringend empfohlen, ohne dokumentierte feste VRAM-Untergrenze — abhängig von Checkpoint und Auflösung',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Stable Diffusion WebUI Forge im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Forge im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Stable Diffusion WebUI Forge im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie Forge im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -487,14 +487,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge vs. andere lokale Bildgenerierungs-Tools',
-        content: 'Forge ist eine von mehreren lokalen, quelloffenen Oberflächen für Stable Diffusion und verwandte Bildmodelle. So schlägt es sich im Vergleich zu anderen Optionen in diesem Bereich — das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), den direkten Vergleich im Abschnitt [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) weiter oben.',
+        content: 'Forge ist eine von mehreren lokalen, quelloffenen Oberflächen für Stable Diffusion und verwandte Bildmodelle. So schlägt es sich im Vergleich zu anderen Optionen in diesem Bereich — das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/directory), den direkten Vergleich im Abschnitt [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) weiter oben.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — das ursprüngliche Projekt, auf dem Forge aufbaut, mit dem größten Erweiterungs-Ökosystem; siehe den ausführlichen Vergleichsabschnitt oben sowie das [AUTOMATIC1111-Review](/power-local-llm/automatic1111-review) für alle Details.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — eine knotenbasierte Oberfläche für dieselben zugrunde liegenden Stable-Diffusion-/Flux-Modelle, die Forges vertrautere Tab-basierte Oberfläche gegen einen visuellen Workflow-Graphen mit feinerer Low-Level-Kontrolle eintauscht; siehe das [ComfyUI-Review](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — ebenfalls von lllyasviel entwickelt, aber mit gegenteiligem Ziel: eine vereinfachte, meinungsstarke Oberfläche für Einsteiger, die gute Ergebnisse mit minimaler Parameter-Feinjustierung wollen, statt Forges vollem WebUI-Parameterumfang; siehe das [Fooocus-Review](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — eine weitere ausgereifte, aktiv weiterentwickelte lokale Stable-Diffusion-Oberfläche mit starkem Fokus auf einen einheitlichen Canvas-Workflow und einem stärker kuratierten Funktionsumfang als die WebUI-abgeleiteten Tools; siehe das [InvokeAI-Review](/power-local-llm/invokeai-review).',
         ],
-        note: 'Dies ist keine vollständige Liste lokaler Stable-Diffusion-Oberflächen — das vollständige, regelmäßig aktualisierte Verzeichnis, einschließlich Forges eigenem Eintrag, finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste lokaler Stable-Diffusion-Oberflächen — das vollständige, regelmäßig aktualisierte Verzeichnis, einschließlich Forges eigenem Eintrag, finden Sie im [Local LLM Software Directory](/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Forges Verzeichniseintrag neben anderen oben genannten Bildgenerierungs-Apps.',
+          '[Local LLM Software Directory 2026](/directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Forges Verzeichniseintrag neben anderen oben genannten Bildgenerierungs-Apps.',
           '[AUTOMATIC1111 Review](/power-local-llm/automatic1111-review) — das ursprüngliche Stable-Diffusion-WebUI-Projekt, auf dem Forge aufbaut.',
           '[ComfyUI Review](/power-local-llm/comfyui-review) — eine knotenbasierte alternative Oberfläche für dieselben zugrunde liegenden Modelle.',
           '[Fooocus Review](/power-local-llm/fooocus-review) — eine vereinfachte, einsteigerfreundliche Oberfläche, ebenfalls vom Entwickler von Forge.',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne sous Windows, macOS et Linux ; un GPU est fortement recommandé, sans minimum de VRAM officiellement documenté — cela dépend du checkpoint et de la résolution',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Stable Diffusion WebUI Forge dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Forge en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Stable Diffusion WebUI Forge dans le [Local LLM Software Directory](/directory) — consultez cette page pour comparer Forge en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -766,14 +766,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge vs. autres outils de génération d\'images locale',
-        content: 'Forge est l\'une des nombreuses interfaces locales et open source pour Stable Diffusion et les modèles d\'images apparentés. Voici comment il se positionne par rapport à d\'autres options de ce domaine — consultez le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Forge vs. WebUI AUTOMATIC1111](#forge-vs-automatic1111) ci-dessus pour la confrontation la plus directe.',
+        content: 'Forge est l\'une des nombreuses interfaces locales et open source pour Stable Diffusion et les modèles d\'images apparentés. Voici comment il se positionne par rapport à d\'autres options de ce domaine — consultez le [Local LLM Software Directory](/directory) pour le catalogue complet, et la comparaison dédiée [Forge vs. WebUI AUTOMATIC1111](#forge-vs-automatic1111) ci-dessus pour la confrontation la plus directe.',
         items: [
           '**[WebUI Stable Diffusion AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — le projet d\'origine sur lequel Forge est construit, avec l\'écosystème d\'extensions le plus vaste ; voir la section de comparaison dédiée ci-dessus et l\'[avis AUTOMATIC1111](/power-local-llm/automatic1111-review) pour tous les détails.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — une interface basée sur des nœuds pour les mêmes modèles Stable Diffusion/Flux sous-jacents, échangeant l\'interface à onglets plus familière de Forge contre un graphe de workflow visuel offrant un contrôle bas niveau plus fin ; voir l\'[avis ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — également créé par lllyasviel, mais dans un but opposé : une interface simplifiée et très cadrée pour les débutants voulant de bons résultats avec un réglage minimal des paramètres, plutôt que l\'ensemble complet des paramètres de la WebUI de Forge ; voir l\'[avis Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — une autre interface Stable Diffusion locale aboutie et activement développée, fortement axée sur un workflow de canevas unifié et un ensemble de fonctionnalités plus cadré que les outils dérivés de la WebUI ; voir l\'[avis InvokeAI](/power-local-llm/invokeai-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive — consultez le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour des interfaces Stable Diffusion locales, y compris la fiche de Forge elle-même.',
+        note: 'Cette liste n\'est pas exhaustive — consultez le [Local LLM Software Directory](/directory) pour le catalogue complet et régulièrement mis à jour des interfaces Stable Diffusion locales, y compris la fiche de Forge elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la fiche de Forge aux côtés d\'autres applications de génération d\'images citées ci-dessus.',
+          '[Local LLM Software Directory 2026](/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la fiche de Forge aux côtés d\'autres applications de génération d\'images citées ci-dessus.',
           '[Avis AUTOMATIC1111](/power-local-llm/automatic1111-review) — le projet WebUI Stable Diffusion d\'origine sur lequel Forge est construit.',
           '[Avis ComfyUI](/power-local-llm/comfyui-review) — une interface alternative basée sur des nœuds pour les mêmes modèles sous-jacents.',
           '[Avis Fooocus](/power-local-llm/fooocus-review) — une interface simplifiée orientée débutants, également créée par le créateur de Forge.',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows、macOS、Linuxで動作します。GPUが強く推奨されますが、単一の文書化されたVRAM最低要件はなく、チェックポイントと解像度に依存します',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるStable Diffusion WebUI Forgeのエントリーの詳細版です。数十の他のローカルAIツールとForgeを一目で比較するには、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるStable Diffusion WebUI Forgeのエントリーの詳細版です。数十の他のローカルAIツールとForgeを一目で比較するには、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1045,14 +1045,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forgeと他のローカル画像生成ツールとの比較',
-        content: 'Forgeは、Stable Diffusionおよび関連する画像モデル向けの、ローカルでオープンソースなインターフェースの一つです。この分野の他の選択肢と比べてどう位置づけられるかを見てみましょう。全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[Forge対AUTOMATIC1111 WebUI](#forge-vs-automatic1111)専用セクションをご覧ください。',
+        content: 'Forgeは、Stable Diffusionおよび関連する画像モデル向けの、ローカルでオープンソースなインターフェースの一つです。この分野の他の選択肢と比べてどう位置づけられるかを見てみましょう。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を、最も直接的な比較は上記の[Forge対AUTOMATIC1111 WebUI](#forge-vs-automatic1111)専用セクションをご覧ください。',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forgeが構築元とするオリジナルプロジェクトで、最大の拡張機能エコシステムを持ちます。詳細は上記の専用比較セクションと[AUTOMATIC1111レビュー](/power-local-llm/automatic1111-review)をご覧ください。',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 同じ基盤となるStable Diffusion/Fluxモデル向けのノードベースインターフェースで、Forgeのより馴染みのあるタブベースUIの代わりに、より細かい低レベル制御ができるビジュアルワークフローグラフを採用しています。[ComfyUIレビュー](/power-local-llm/comfyui-review)をご覧ください。',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 同じくlllyasviel氏が作成しましたが、目的は正反対です。Forgeのフルパラメータセットではなく、最小限のパラメータ調整で良い結果を求める初心者向けの、シンプルで方向性の明確なインターフェースです。[Fooocusレビュー](/power-local-llm/fooocus-review)をご覧ください。',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 統一されたキャンバスワークフローに強く焦点を当てた、もう一つの洗練された、活発に開発が続くローカルStable Diffusion UIで、WebUI派生ツールよりも厳選された機能セットを持ちます。[InvokeAIレビュー](/power-local-llm/invokeai-review)をご覧ください。',
         ],
-        note: 'これはローカルStable Diffusionインターフェースの網羅的なリストではありません。Forge自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカルStable Diffusionインターフェースの網羅的なリストではありません。Forge自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。Forgeのディレクトリエントリーや、上記で紹介した他の画像生成アプリも含まれます。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/directory) — この記事が属するローカルAIツールの全カタログ。Forgeのディレクトリエントリーや、上記で紹介した他の画像生成アプリも含まれます。',
           '[AUTOMATIC1111レビュー](/power-local-llm/automatic1111-review) — Forgeが構築元とする、元のStable Diffusion WebUIプロジェクト。',
           '[ComfyUIレビュー](/power-local-llm/comfyui-review) — 同じ基盤モデル向けのノードベースの代替インターフェース。',
           '[Fooocusレビュー](/power-local-llm/fooocus-review) — Forgeの作者による、初心者向けのシンプルなインターフェース。',
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '支持Windows、macOS和Linux；强烈建议使用GPU，官方未记录单一固定的显存下限——具体取决于所用模型和分辨率',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Stable Diffusion WebUI Forge词条的深度补充——请查看该页面，快速了解Forge与数十款其他本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Stable Diffusion WebUI Forge词条的深度补充——请查看该页面，快速了解Forge与数十款其他本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1324,14 +1324,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge与其他本地图像生成工具对比',
-        content: 'Forge是面向Stable Diffusion及相关图像模型的多款本地开源界面之一。以下是它与该领域其他选项相比的定位——完整目录请见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)，最直接的正面对比请见上方专门的[Forge对比AUTOMATIC1111 WebUI](#forge-vs-automatic1111)章节。',
+        content: 'Forge是面向Stable Diffusion及相关图像模型的多款本地开源界面之一。以下是它与该领域其他选项相比的定位——完整目录请见[本地LLM软件目录](/directory)，最直接的正面对比请见上方专门的[Forge对比AUTOMATIC1111 WebUI](#forge-vs-automatic1111)章节。',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forge所基于的原始项目，拥有最大的扩展生态；详见上方专门的对比章节和[AUTOMATIC1111评测](/power-local-llm/automatic1111-review)。',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 面向同样底层Stable Diffusion/Flux模型的节点式界面，以Forge更熟悉的标签页式界面为代价，换取更精细的底层控制的可视化工作流图；详见[ComfyUI评测](/power-local-llm/comfyui-review)。',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 同样由lllyasviel开发，但目标相反：为希望以最少参数调整获得良好结果的初学者打造的简化、观点鲜明的界面，而非Forge完整的WebUI参数集；详见[Fooocus评测](/power-local-llm/fooocus-review)。',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 另一款打磨精良、持续积极开发的本地Stable Diffusion界面，强调统一的画布工作流，功能集也比源自WebUI的工具更为精简；详见[InvokeAI评测](/power-local-llm/invokeai-review)。',
         ],
-        note: '这并非本地Stable Diffusion界面的完整列表——包含Forge自身词条在内的完整、定期更新的目录请见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地Stable Diffusion界面的完整列表——包含Forge自身词条在内的完整、定期更新的目录请见[本地LLM软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Forge的目录词条以及上文提及的其他图像生成应用。',
+          '[2026本地LLM软件目录](/directory) — 本文所属的本地AI工具完整目录，包含Forge的目录词条以及上文提及的其他图像生成应用。',
           '[AUTOMATIC1111评测](/power-local-llm/automatic1111-review) — Forge所基于的原始Stable Diffusion WebUI项目。',
           '[ComfyUI评测](/power-local-llm/comfyui-review) — 针对相同底层模型的节点式替代界面。',
           '[Fooocus评测](/power-local-llm/fooocus-review) — 同样出自Forge作者之手的简化、面向初学者的界面。',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona en Windows, macOS y Linux; se recomienda encarecidamente una GPU, sin un mínimo de VRAM único documentado — depende del modelo y la resolución',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Stable Diffusion WebUI Forge en el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Forge con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Stable Diffusion WebUI Forge en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver de un vistazo cómo se compara Forge con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1603,14 +1603,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge frente a otras herramientas locales de generación de imágenes',
-        content: 'Forge es una de varias interfaces locales y de código abierto para Stable Diffusion y modelos de imagen relacionados. Así se posiciona frente a otras opciones de este espacio — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [Forge frente a AUTOMATIC1111 WebUI](#forge-vs-automatic1111) más arriba para el enfrentamiento más directo.',
+        content: 'Forge es una de varias interfaces locales y de código abierto para Stable Diffusion y modelos de imagen relacionados. Así se posiciona frente a otras opciones de este espacio — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo, y la comparación dedicada [Forge frente a AUTOMATIC1111 WebUI](#forge-vs-automatic1111) más arriba para el enfrentamiento más directo.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — el proyecto original sobre el que se construye Forge, con el ecosistema de extensiones más grande; consulta la sección de comparación dedicada más arriba y el [análisis de AUTOMATIC1111](/power-local-llm/automatic1111-review) para todos los detalles.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — una interfaz basada en nodos para los mismos modelos subyacentes de Stable Diffusion/Flux, que cambia la interfaz de pestañas más familiar de Forge por un grafo de flujo de trabajo visual con un control de bajo nivel más fino; consulta el [análisis de ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — también creado por lllyasviel, pero con el objetivo opuesto: una interfaz simplificada y con criterios propios, pensada para principiantes que quieren buenos resultados con un ajuste mínimo de parámetros, en lugar del conjunto completo de parámetros de la WebUI de Forge; consulta el [análisis de Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — otra interfaz local de Stable Diffusion pulida y activamente desarrollada, con un fuerte enfoque en un flujo de trabajo de lienzo unificado y un conjunto de funciones más curado que las herramientas derivadas de la WebUI; consulta el [análisis de InvokeAI](/power-local-llm/invokeai-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de interfaces locales de Stable Diffusion — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado periódicamente, incluida la propia ficha de Forge.',
+        note: 'Esta no es una lista exhaustiva de interfaces locales de Stable Diffusion — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo y actualizado periódicamente, incluida la propia ficha de Forge.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Forge junto a otras aplicaciones de generación de imágenes mencionadas arriba.',
+          '[Directorio de Software LLM Local 2026](/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Forge junto a otras aplicaciones de generación de imágenes mencionadas arriba.',
           '[Análisis de AUTOMATIC1111](/power-local-llm/automatic1111-review) — el proyecto original de la WebUI de Stable Diffusion sobre el que está construido Forge.',
           '[Análisis de ComfyUI](/power-local-llm/comfyui-review) — una interfaz alternativa basada en nodos para los mismos modelos subyacentes.',
           '[Análisis de Fooocus](/power-local-llm/fooocus-review) — una interfaz simplificada orientada a principiantes, también creada por el autor de Forge.',
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona em Windows, macOS e Linux; uma GPU é fortemente recomendada, sem um mínimo de VRAM único documentado — depende do checkpoint e da resolução',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Stable Diffusion WebUI Forge no [Diretório de Software de LLM Local](/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Forge com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Stable Diffusion WebUI Forge no [Diretório de Software de LLM Local](/directory) — veja essa página para comparar rapidamente o Forge com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1882,14 +1882,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge vs. outras ferramentas locais de geração de imagens',
-        content: 'O Forge é uma entre várias interfaces locais e de código aberto para Stable Diffusion e modelos de imagem relacionados. Veja como ele se posiciona em relação a outras opções desse espaço — consulte o [Diretório de Software de LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) acima para o confronto mais direto.',
+        content: 'O Forge é uma entre várias interfaces locais e de código aberto para Stable Diffusion e modelos de imagem relacionados. Veja como ele se posiciona em relação a outras opções desse espaço — consulte o [Diretório de Software de LLM Local](/directory) para o catálogo completo, e a comparação dedicada [Forge vs. AUTOMATIC1111 WebUI](#forge-vs-automatic1111) acima para o confronto mais direto.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — o projeto original sobre o qual o Forge é construído, com o maior ecossistema de extensões; veja a seção de comparação dedicada acima e a [análise do AUTOMATIC1111](/power-local-llm/automatic1111-review) para todos os detalhes.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — uma interface baseada em nós para os mesmos modelos Stable Diffusion/Flux subjacentes, trocando a interface em abas mais familiar do Forge por um grafo de fluxo de trabalho visual com controle de baixo nível mais refinado; veja a [análise do ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — também criado por lllyasviel, mas com objetivo oposto: uma interface simplificada e opinativa voltada a iniciantes que querem bons resultados com ajuste mínimo de parâmetros, em vez do conjunto completo de parâmetros da WebUI do Forge; veja a [análise do Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — outra interface local de Stable Diffusion polida e ativamente desenvolvida, com forte foco em um fluxo de trabalho de canvas unificado e um conjunto de recursos mais curado do que as ferramentas derivadas da WebUI; veja a [análise do InvokeAI](/power-local-llm/invokeai-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de interfaces locais de Stable Diffusion — consulte o [Diretório de Software de LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Forge.',
+        note: 'Esta não é uma lista exaustiva de interfaces locais de Stable Diffusion — consulte o [Diretório de Software de LLM Local](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Forge.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Forge ao lado de outros aplicativos de geração de imagens citados acima.',
+          '[Diretório de Software de LLM Local 2026](/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Forge ao lado de outros aplicativos de geração de imagens citados acima.',
           '[Análise do AUTOMATIC1111](/power-local-llm/automatic1111-review) — o projeto original de WebUI de Stable Diffusion sobre o qual o Forge é construído.',
           '[Análise do ComfyUI](/power-local-llm/comfyui-review) — uma interface alternativa baseada em nós para os mesmos modelos subjacentes.',
           '[Análise do Fooocus](/power-local-llm/fooocus-review) — uma interface simplificada voltada a iniciantes, também criada pelo criador do Forge.',
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل على Windows وmacOS وLinux؛ يُنصح بشدة باستخدام معالج رسومات، دون حد أدنى موثّق لذاكرة الفيديو — الأمر يعتمد على نقطة التفتيش (checkpoint) ودقة الصورة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لسجل Stable Diffusion WebUI Forge في [دليل برمجيات الذكاء الاصطناعي المحلي](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Forge بسرعة بعشرات الأدوات المحلية الأخرى للذكاء الاصطناعي.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لسجل Stable Diffusion WebUI Forge في [دليل برمجيات الذكاء الاصطناعي المحلي](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Forge بسرعة بعشرات الأدوات المحلية الأخرى للذكاء الاصطناعي.' },
         ],
       },
       overview: {
@@ -2161,14 +2161,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge مقابل أدوات توليد الصور المحلية الأخرى',
-        content: 'Forge هو واحد من عدة واجهات محلية ومفتوحة المصدر لـ Stable Diffusion ونماذج الصور المرتبطة به. إليك كيف يقارَن بالخيارات الأخرى في هذا المجال — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل، والقسم المخصص [Forge مقابل AUTOMATIC1111 WebUI](#forge-vs-automatic1111) أعلاه للمقارنة الأكثر مباشرة.',
+        content: 'Forge هو واحد من عدة واجهات محلية ومفتوحة المصدر لـ Stable Diffusion ونماذج الصور المرتبطة به. إليك كيف يقارَن بالخيارات الأخرى في هذا المجال — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/directory) للحصول على الكتالوج الكامل، والقسم المخصص [Forge مقابل AUTOMATIC1111 WebUI](#forge-vs-automatic1111) أعلاه للمقارنة الأكثر مباشرة.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — المشروع الأصلي الذي بُني Forge فوقه، ويملك أكبر منظومة إضافات؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة AUTOMATIC1111](/power-local-llm/automatic1111-review) لجميع التفاصيل.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — واجهة قائمة على العُقد لنفس نماذج Stable Diffusion/Flux الأساسية، تستبدل واجهة Forge الأكثر إلفة القائمة على علامات التبويب بمخطط سير عمل بصري يوفر تحكمًا أدق على المستوى المنخفض؛ راجع [مراجعة ComfyUI](/power-local-llm/comfyui-review).',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — طوّره lllyasviel أيضًا، لكن بهدف معاكس: واجهة مبسطة وذات توجه واضح موجهة للمبتدئين الذين يريدون نتائج جيدة بأقل قدر من ضبط المعاملات، بدلًا من مجموعة معاملات Forge الكاملة؛ راجع [مراجعة Fooocus](/power-local-llm/fooocus-review).',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — واجهة محلية أخرى مصقولة ونشطة التطوير لـ Stable Diffusion، تركّز بقوة على سير عمل لوحة رسم موحّدة ومجموعة ميزات أكثر انتقائية من الأدوات المشتقة من الواجهة الأصلية؛ راجع [مراجعة InvokeAI](/power-local-llm/invokeai-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لواجهات Stable Diffusion المحلية — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك سجل Forge نفسه.',
+        note: 'هذه ليست قائمة شاملة لواجهات Stable Diffusion المحلية — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك سجل Forge نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2226,7 +2226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلي 2026](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل Forge إلى جانب تطبيقات توليد الصور الأخرى المذكورة أعلاه.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلي 2026](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل Forge إلى جانب تطبيقات توليد الصور الأخرى المذكورة أعلاه.',
           '[مراجعة AUTOMATIC1111](/power-local-llm/automatic1111-review) — مشروع واجهة Stable Diffusion الأصلي الذي بُني Forge فوقه.',
           '[مراجعة ComfyUI](/power-local-llm/comfyui-review) — واجهة بديلة قائمة على العُقد لنفس النماذج الأساسية.',
           '[مراجعة Fooocus](/power-local-llm/fooocus-review) — واجهة مبسطة موجهة للمبتدئين، طوّرها أيضًا مبتكر Forge.',
@@ -2304,7 +2304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows, macOS, Linux에서 실행됩니다. GPU를 강력히 권장하며, 문서화된 단일 VRAM 최소 사양은 없습니다. 체크포인트와 해상도에 따라 다릅니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 등록된 Stable Diffusion WebUI Forge 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Forge를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 등록된 Stable Diffusion WebUI Forge 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Forge를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2440,14 +2440,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'forge-competitors',
         title: 'Forge와 다른 로컬 이미지 생성 도구 비교',
-        content: 'Forge는 Stable Diffusion 및 관련 이미지 모델을 위한 여러 로컬 오픈소스 인터페이스 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 Forge가 어디에 위치하는지 살펴보세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 전용 섹션인 [Forge 대 AUTOMATIC1111 WebUI](#forge-vs-automatic1111)를 참고하세요.',
+        content: 'Forge는 Stable Diffusion 및 관련 이미지 모델을 위한 여러 로컬 오픈소스 인터페이스 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 Forge가 어디에 위치하는지 살펴보세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 직접적인 비교는 위의 전용 섹션인 [Forge 대 AUTOMATIC1111 WebUI](#forge-vs-automatic1111)를 참고하세요.',
         items: [
           '**[AUTOMATIC1111 Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** — Forge가 그 위에 구축된 원본 프로젝트로, 가장 큰 확장 프로그램 생태계를 갖추고 있습니다. 자세한 내용은 위의 전용 비교 섹션과 [AUTOMATIC1111 리뷰](/power-local-llm/automatic1111-review)를 참고하세요.',
           '**[ComfyUI](https://github.com/comfyanonymous/ComfyUI)** — 동일한 기반 Stable Diffusion/Flux 모델을 위한 노드 기반 인터페이스로, Forge의 더 익숙한 탭 기반 UI 대신 더 세밀한 저수준 제어가 가능한 시각적 워크플로 그래프를 제공합니다. [ComfyUI 리뷰](/power-local-llm/comfyui-review)를 참고하세요.',
           '**[Fooocus](https://github.com/lllyasviel/Fooocus)** — 마찬가지로 lllyasviel이 만들었지만 목표는 정반대입니다. Forge의 전체 WebUI 매개변수 세트 대신, 최소한의 매개변수 조정으로 좋은 결과를 원하는 초보자를 위한 단순하고 뚜렷한 지향성을 가진 인터페이스입니다. [Fooocus 리뷰](/power-local-llm/fooocus-review)를 참고하세요.',
           '**[InvokeAI](https://github.com/invoke-ai/InvokeAI)** — 통합된 캔버스 워크플로에 강하게 초점을 맞추고, WebUI 파생 도구보다 더 정제된 기능 세트를 갖춘 또 다른 완성도 높고 활발히 개발 중인 로컬 Stable Diffusion UI입니다. [InvokeAI 리뷰](/power-local-llm/invokeai-review)를 참고하세요.',
         ],
-        note: '이 목록은 로컬 Stable Diffusion 인터페이스의 전체 목록이 아닙니다. Forge 자체 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 목록은 로컬 Stable Diffusion 인터페이스의 전체 목록이 아닙니다. Forge 자체 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 이미지 생성 앱들과 함께 Forge의 디렉터리 항목도 포함되어 있습니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 이미지 생성 앱들과 함께 Forge의 디렉터리 항목도 포함되어 있습니다.',
           '[AUTOMATIC1111 리뷰](/power-local-llm/automatic1111-review) — Forge가 그 위에 구축된 원본 Stable Diffusion WebUI 프로젝트.',
           '[ComfyUI 리뷰](/power-local-llm/comfyui-review) — 동일한 기반 모델을 위한 노드 기반의 대안 인터페이스.',
           '[Fooocus 리뷰](/power-local-llm/fooocus-review) — Forge 제작자가 만든, 단순하고 초보자 친화적인 인터페이스.',

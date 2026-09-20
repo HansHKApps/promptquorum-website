@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install: `pip install pydantic-ai`, with optional extras such as `pip install "pydantic-ai[temporal]"` for Temporal-backed durable execution',
         ],
         callouts: [
-          { type: 'note', text: "Pydantic AI's core job is building validated, type-safe single agents, closest in category to Semantic Kernel. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how Pydantic AI fits among agent frameworks at a glance." },
+          { type: 'note', text: "Pydantic AI's core job is building validated, type-safe single agents, closest in category to Semantic Kernel. See the [Local LLM Software Directory](/directory) for how Pydantic AI fits among agent frameworks at a glance." },
         ],
       },
       history: {
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel Review: Features, Pricing, Alternatives](/power-local-llm/semantic-kernel-review) — Microsoft\'s structured, typed orchestration SDK across C#, Python, and Java, the closest cross-language comparison for teams weighing a similar typed philosophy.',
           '[DSPy Review: Features, Optimizers, Alternatives](/power-local-llm/dspy-review) — a Python-native framework that programs and optimizes prompts and weights, solving a different problem than Pydantic AI\'s output validation.',
           '[CAMEL Review: Features, Role-Playing, Alternatives](/power-local-llm/camel-review) — a multi-agent role-playing framework, for teams that specifically need several agents coordinating rather than one validated agent.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Pydantic AI fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where Pydantic AI fits among agent frameworks.',
         ],
       },
     },
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation: `pip install pydantic-ai`, mit optionalen Extras wie `pip install "pydantic-ai[temporal]"` für Temporal-gestützte dauerhafte Ausführung',
         ],
         callouts: [
-          { type: 'note', text: "Pydantic AIs Kernaufgabe ist der Bau validierter, typsicherer Single-Agenten — konzeptionell am nächsten an Semantic Kernel. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sehen Sie, wo Pydantic AI unter Agenten-Frameworks einzuordnen ist." },
+          { type: 'note', text: "Pydantic AIs Kernaufgabe ist der Bau validierter, typsicherer Single-Agenten — konzeptionell am nächsten an Semantic Kernel. Im [Local LLM Software Directory](/de/directory) sehen Sie, wo Pydantic AI unter Agenten-Frameworks einzuordnen ist." },
         ],
       },
       history: {
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel Review: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — Microsofts strukturiertes, typisiertes Orchestrierungs-SDK über C#, Python und Java hinweg, der engste sprachübergreifende Vergleich für Teams mit ähnlicher typisierter Philosophie.',
           '[DSPy Review: Funktionen, Optimizer, Alternativen](/de/power-local-llm/dspy-review) — ein Python-natives Framework, das Prompts und Gewichte programmiert und optimiert, ein anderes Problem als Pydantic AIs Ausgabenvalidierung.',
           '[CAMEL Review: Funktionen, Role-Playing, Alternativen](/de/power-local-llm/camel-review) — ein Multi-Agent-Role-Playing-Framework, für Teams, die gezielt mehrere koordinierende Agenten statt eines einzelnen validierten Agenten benötigen.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Pydantic AI unter Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Pydantic AI unter Agenten-Frameworks.',
         ],
       },
     },
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation : `pip install pydantic-ai`, avec des extras optionnels comme `pip install "pydantic-ai[temporal]"` pour l\'exécution durable via Temporal',
         ],
         callouts: [
-          { type: 'note', text: "La mission première de Pydantic AI est de construire des agents mono-agent, typés et validés — le plus proche conceptuellement étant Semantic Kernel. Voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour situer Pydantic AI parmi les frameworks d'agents en un coup d'œil." },
+          { type: 'note', text: "La mission première de Pydantic AI est de construire des agents mono-agent, typés et validés — le plus proche conceptuellement étant Semantic Kernel. Voir le [Local LLM Software Directory](/fr/directory) pour situer Pydantic AI parmi les frameworks d'agents en un coup d'œil." },
         ],
       },
       history: {
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel Review : Fonctionnalités, Tarifs, Alternatives](/fr/power-local-llm/semantic-kernel-review) — le SDK d\'orchestration structuré et typé de Microsoft à travers C#, Python et Java, la comparaison multi-langage la plus proche pour les équipes pesant une philosophie typée similaire.',
           '[DSPy Review : Fonctionnalités, Optimiseurs, Alternatives](/fr/power-local-llm/dspy-review) — un framework Python natif qui programme et optimise prompts et poids, résolvant un problème différent de la validation des sorties de Pydantic AI.',
           '[CAMEL Review : Fonctionnalités, Role-Playing, Alternatives](/fr/power-local-llm/camel-review) — un framework de role-playing multi-agents, pour les équipes ayant spécifiquement besoin de plusieurs agents se coordonnant plutôt que d\'un seul agent validé.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la place de Pydantic AI parmi les frameworks d\'agents.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la place de Pydantic AI parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalación: `pip install pydantic-ai`, con extras opcionales como `pip install "pydantic-ai[temporal]"` para ejecución duradera respaldada por Temporal',
         ],
         callouts: [
-          { type: 'note', text: "La función principal de Pydantic AI es construir agentes individuales validados y con tipos seguros, lo más cercano en categoría a Semantic Kernel. Consulte el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver dónde encaja Pydantic AI entre los frameworks de agentes de un vistazo." },
+          { type: 'note', text: "La función principal de Pydantic AI es construir agentes individuales validados y con tipos seguros, lo más cercano en categoría a Semantic Kernel. Consulte el [Local LLM Software Directory](/es/directory) para ver dónde encaja Pydantic AI entre los frameworks de agentes de un vistazo." },
         ],
       },
       history: {
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Semantic Kernel: Funciones, Precios, Alternativas](/es/power-local-llm/semantic-kernel-review) — el SDK de orquestación estructurado y con tipos de Microsoft en C#, Python y Java, la comparación multilenguaje más cercana para equipos que sopesan una filosofía con tipos similar.',
           '[Reseña de DSPy: Funciones, Optimizadores, Alternativas](/es/power-local-llm/dspy-review) — un framework nativo de Python que programa y optimiza prompts y pesos, resolviendo un problema distinto al de la validación de salidas de Pydantic AI.',
           '[Reseña de CAMEL: Funciones, Role-Playing, Alternativas](/es/power-local-llm/camel-review) — un framework de role-playing multiagente, para equipos que necesitan específicamente varios agentes coordinándose en lugar de un solo agente validado.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Pydantic AI entre los frameworks de agentes.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Pydantic AI entre los frameworks de agentes.',
         ],
       },
     },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação: `pip install pydantic-ai`, com extras opcionais como `pip install "pydantic-ai[temporal]"` para execução durável apoiada pelo Temporal',
         ],
         callouts: [
-          { type: 'note', text: "A função principal do Pydantic AI é construir agentes únicos validados e com tipos seguros — a categoria mais próxima é a do Semantic Kernel. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para saber onde o Pydantic AI se encaixa entre os frameworks de agentes rapidamente." },
+          { type: 'note', text: "A função principal do Pydantic AI é construir agentes únicos validados e com tipos seguros — a categoria mais próxima é a do Semantic Kernel. Veja o [Local LLM Software Directory](/pt/directory) para saber onde o Pydantic AI se encaixa entre os frameworks de agentes rapidamente." },
         ],
       },
       history: {
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review do Semantic Kernel: Recursos, Preços, Alternativas](/pt/power-local-llm/semantic-kernel-review) — o SDK de orquestração estruturado e tipado da Microsoft em C#, Python e Java, a comparação multilíngue mais próxima para equipes que avaliam uma filosofia tipada semelhante.',
           '[Review do DSPy: Recursos, Otimizadores, Alternativas](/pt/power-local-llm/dspy-review) — um framework nativo em Python que programa e otimiza prompts e pesos, resolvendo um problema diferente da validação de saídas do Pydantic AI.',
           '[Review do CAMEL: Recursos, Role-Playing, Alternativas](/pt/power-local-llm/camel-review) — um framework de role-playing multiagente, para equipes que precisam especificamente de vários agentes coordenando em vez de um único agente validado.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Pydantic AI se encaixa entre os frameworks de agentes.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Pydantic AI se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インストール：`pip install pydantic-ai`。永続実行向けにTemporalを使うオプション追加パッケージとして`pip install "pydantic-ai[temporal]"`など',
         ],
         callouts: [
-          { type: 'note', text: "Pydantic AIの核となる役割は、検証済みで型安全なシングルエージェントの構築であり、カテゴリとしてはSemantic Kernelに最も近い。[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)で、Pydantic AIがエージェントフレームワークの中でどこに位置するか一目で確認できる。" },
+          { type: 'note', text: "Pydantic AIの核となる役割は、検証済みで型安全なシングルエージェントの構築であり、カテゴリとしてはSemantic Kernelに最も近い。[Local LLM Software Directory](/ja/directory)で、Pydantic AIがエージェントフレームワークの中でどこに位置するか一目で確認できる。" },
         ],
       },
       history: {
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernelレビュー：機能、料金、代替ツール](/ja/power-local-llm/semantic-kernel-review) — C#、Python、Javaにまたがる、Microsoftによる構造化された型付きオーケストレーションSDK。同様の型付き設計思想を検討するチームにとって最も近い多言語比較対象。',
           '[DSPyレビュー：機能、オプティマイザ、代替ツール](/ja/power-local-llm/dspy-review) — プロンプトと重みをプログラム的に扱い最適化する、Pythonネイティブなフレームワーク。Pydantic AIの出力検証とは異なる問題を解決する。',
           '[CAMELレビュー：機能、ロールプレイング、代替ツール](/ja/power-local-llm/camel-review) — マルチエージェント・ロールプレイング・フレームワークで、単一の検証済みエージェントではなく、複数のエージェントが協調することを特に必要とするチーム向け。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。Pydantic AIがエージェントフレームワークの中でどこに位置するかも含まれる。',
+          '[Local LLM Software Directory](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。Pydantic AIがエージェントフレームワークの中でどこに位置するかも含まれる。',
         ],
       },
     },
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装：`pip install pydantic-ai`，还提供如`pip install "pydantic-ai[temporal]"`等可选扩展，用于基于Temporal的持久执行',
         ],
         callouts: [
-          { type: 'note', text: "Pydantic AI的核心任务是构建经过验证的、类型安全的单智能体，类别上最接近Semantic Kernel。参见[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)，一目了然地了解Pydantic AI在智能体框架中的定位。" },
+          { type: 'note', text: "Pydantic AI的核心任务是构建经过验证的、类型安全的单智能体，类别上最接近Semantic Kernel。参见[Local LLM Software Directory](/zh/directory)，一目了然地了解Pydantic AI在智能体框架中的定位。" },
         ],
       },
       history: {
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel评测：功能、价格、替代方案](/zh/power-local-llm/semantic-kernel-review) — 微软推出的结构化、类型化编排SDK，横跨C#、Python和Java，对于权衡类似类型化理念的团队而言是最接近的跨语言比较对象。',
           '[DSPy评测：功能、优化器、替代方案](/zh/power-local-llm/dspy-review) — 一个原生Python框架，以程序化方式编写和优化提示词及权重，解决的是与Pydantic AI输出验证不同的问题。',
           '[CAMEL评测：功能、角色扮演、替代方案](/zh/power-local-llm/camel-review) — 一个多智能体角色扮演框架，适合明确需要多个智能体协调而非单个经验证智能体的团队。',
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中也包括Pydantic AI在智能体框架中的定位。',
+          '[Local LLM Software Directory](/zh/directory) — 本文所属的本地AI工具完整目录，其中也包括Pydantic AI在智能体框架中的定位。',
         ],
       },
     },
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت: `pip install pydantic-ai`، مع إضافات اختيارية مثل `pip install "pydantic-ai[temporal]"` للتنفيذ الدائم المدعوم بـ Temporal',
         ],
         callouts: [
-          { type: 'note', text: "المهمة الأساسية لـ Pydantic AI هي بناء وكلاء فرديين موثّقين وآمنين من حيث النوع — الأقرب فئويًا إلى Semantic Kernel. راجع [Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) لمعرفة مكان Pydantic AI بين أطر عمل الوكلاء بنظرة سريعة." },
+          { type: 'note', text: "المهمة الأساسية لـ Pydantic AI هي بناء وكلاء فرديين موثّقين وآمنين من حيث النوع — الأقرب فئويًا إلى Semantic Kernel. راجع [Local LLM Software Directory](/ar/directory) لمعرفة مكان Pydantic AI بين أطر عمل الوكلاء بنظرة سريعة." },
         ],
       },
       history: {
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Semantic Kernel: الميزات والأسعار والبدائل](/ar/power-local-llm/semantic-kernel-review) — SDK تنسيق منظّم وموثّق النوع من Microsoft عبر C# وPython وJava، أقرب مقارنة متعددة اللغات للفرق التي تزن فلسفة موثّقة النوع مماثلة.',
           '[مراجعة DSPy: الميزات والمحسِّنات والبدائل](/ar/power-local-llm/dspy-review) — إطار عمل أصلي لـ Python يبرمج ويحسّن المطالبات والأوزان، ويحل مشكلة مختلفة عن التحقق من المخرجات في Pydantic AI.',
           '[مراجعة CAMEL: الميزات ولعب الأدوار والبدائل](/ar/power-local-llm/camel-review) — إطار عمل لعب أدوار متعدد الوكلاء، للفرق التي تحتاج تحديدًا إلى عدة وكلاء ينسّقون بدلاً من وكيل واحد موثّق.',
-          '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك مكان Pydantic AI بين أطر عمل الوكلاء.',
+          '[Local LLM Software Directory](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك مكان Pydantic AI بين أطر عمل الوكلاء.',
         ],
       },
     },
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설치: `pip install pydantic-ai`, Temporal 기반 영속 실행을 위한 `pip install "pydantic-ai[temporal]"` 같은 선택적 extras 제공',
         ],
         callouts: [
-          { type: 'note', text: "Pydantic AI의 핵심 역할은 검증되고 타입 안전한 단일 에이전트를 구축하는 것이며, 범주상 Semantic Kernel과 가장 가깝습니다. Pydantic AI가 에이전트 프레임워크 중 어디에 위치하는지 한눈에 보려면 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "Pydantic AI의 핵심 역할은 검증되고 타입 안전한 단일 에이전트를 구축하는 것이며, 범주상 Semantic Kernel과 가장 가깝습니다. Pydantic AI가 에이전트 프레임워크 중 어디에 위치하는지 한눈에 보려면 [Local LLM Software Directory](/ko/directory)를 참고하세요." },
         ],
       },
       history: {
@@ -2391,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — C#, Python, Java에 걸친 Microsoft의 구조화되고 타입이 지정된 오케스트레이션 SDK로, 유사한 타입 지정 철학을 저울질하는 팀에게 가장 가까운 다중 언어 비교 대상입니다.',
           '[DSPy 리뷰: 기능, 옵티마이저, 대안](/ko/power-local-llm/dspy-review) — 프롬프트와 가중치를 프로그래밍하고 최적화하는 Python 네이티브 프레임워크로, Pydantic AI의 출력 검증과는 다른 문제를 해결합니다.',
           '[CAMEL 리뷰: 기능, 롤플레잉, 대안](/ko/power-local-llm/camel-review) — 멀티 에이전트 롤플레잉 프레임워크로, 단일 검증된 에이전트가 아니라 여러 에이전트가 조율하는 것이 특별히 필요한 팀을 위한 것입니다.',
-          '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, Pydantic AI가 에이전트 프레임워크 중 어디에 위치하는지도 포함합니다.',
+          '[Local LLM Software Directory](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, Pydantic AI가 에이전트 프레임워크 중 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — the deep, feature-by-feature roleplay-frontend comparison this article deliberately does not repeat; read it once you have decided you want a roleplay tool rather than an agent framework.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — a broader look at multi-agent and agentic frameworks for software and automation tasks, the category MetaGPT belongs to.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — der ausführliche, Feature-für-Feature-Vergleich der Rollenspiel-Oberflächen, den dieser Artikel bewusst nicht wiederholt; lesenswert, sobald klar ist, dass man ein Rollenspiel-Tool statt eines Agenten-Frameworks will.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — ein breiterer Blick auf Multi-Agent- und agentische Frameworks für Software- und Automatisierungsaufgaben, die Kategorie, zu der MetaGPT gehört.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — la comparaison approfondie, fonctionnalité par fonctionnalité, des interfaces de jeu de rôle que cet article ne répète volontairement pas ; à lire une fois qu'on a décidé de vouloir un outil de jeu de rôle plutôt qu'un framework d'agents.",
           "[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — un regard plus large sur les frameworks multi-agents et agentiques pour les tâches logicielles et d'automatisation, la catégorie à laquelle appartient MetaGPT.",
-          "[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d'IA locale auquel cet article appartient.",
+          "[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d'IA locale auquel cet article appartient.",
         ],
       },
     },
@@ -1567,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — この記事があえて繰り返さない、ロールプレイフロントエンドの詳細な機能ごとの比較。エージェントフレームワークではなくロールプレイツールが欲しいと決まったら読むとよい。',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — ソフトウェアや自動化タスク向けのマルチエージェント・エージェント型フレームワークをより広く見渡した記事で、MetaGPTが属するカテゴリを扱っている。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 本文刻意不重复的角色扮演前端深度逐项功能对比；一旦确定自己想要的是角色扮演工具而不是智能体框架，值得一读。',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — 对面向软件和自动化任务的多智能体及智能体型框架的更广泛概览，正是 MetaGPT 所属的类别。',
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录。',
+          '[Local LLM Software Directory](/zh/directory) — 本文所属的本地 AI 工具完整目录。',
         ],
       },
     },
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — la comparación detallada, función por función, de interfaces de roleplay que este artículo deliberadamente no repite; léela una vez decidido que quieres una herramienta de roleplay y no un framework de agentes.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — una mirada más amplia a los frameworks multiagente y agénticos para tareas de software y automatización, la categoría a la que pertenece MetaGPT.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -2752,7 +2752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — a comparação detalhada, funcionalidade por funcionalidade, de interfaces de roleplay que este artigo deliberadamente não repete; leia depois de decidir que quer uma ferramenta de roleplay, não um framework de agentes.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — um olhar mais amplo sobre frameworks multiagente e agenticos para tarefas de software e automação, a categoria à qual o MetaGPT pertence.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -3147,7 +3147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — المقارنة التفصيلية، ميزة بميزة، لواجهات تقمص الأدوار التي يتعمد هذا المقال عدم تكرارها؛ يستحق القراءة بمجرد أن تقرر أنك تريد أداة تقمص أدوار لا إطار عمل وكلاء.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — نظرة أوسع على أطر العمل متعددة الوكلاء والوكيلية لمهام البرمجيات والأتمتة، الفئة التي تنتمي إليها MetaGPT.',
-          '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[Local LLM Software Directory](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -3542,7 +3542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 이 글이 의도적으로 반복하지 않는, 롤플레이 프런트엔드에 대한 심층 기능별 비교입니다. 에이전트 프레임워크가 아니라 롤플레이 도구를 원한다고 결정한 후에 읽어보세요.',
           '[Best AI Agent Framework](/local-llms/best-ai-agent-framework) — 소프트웨어 및 자동화 작업을 위한 멀티 에이전트·에이전틱 프레임워크를 더 폭넓게 살펴본 글로, MetaGPT가 속한 범주를 다룹니다.',
-          '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[Local LLM Software Directory](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
         ],
       },
     },

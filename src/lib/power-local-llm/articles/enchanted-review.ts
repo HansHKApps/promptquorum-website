@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted vs. Other Local Chat Apps',
-        content: 'Enchanted is one of several chat front ends built specifically around Ollama, and one of the few native Apple-platform options among them. Here is how it compares — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Enchanted is one of several chat front ends built specifically around Ollama, and one of the few native Apple-platform options among them. Here is how it compares — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Msty](/power-local-llm/msty-review)** — a closed-source, cross-platform (macOS/Windows/Linux) app that adds cloud-model support and document RAG search on top of local-model chat; see the full [Enchanted vs. Msty comparison](#enchanted-vs-msty) above.',
           '**[Msty Go](/power-local-llm/msty-go-review)** — a separate autonomous-agent product from the Msty team, not a chat interface at all; not a direct alternative to Enchanted.',
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — a macOS/Windows AI assistant with deep OS-level integration (system-wide shortcuts, app integrations) and both local and cloud model support, closer to Msty\'s scope than Enchanted\'s.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — the same author\'s newer, separate project: a "personal AI agent" platform (always-on agents, scheduled loops, memory, git control) rather than a simple chat client; not a like-for-like replacement for Enchanted\'s use case.',
         ],
-        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Enchanted\'s own directory entry.',
+        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Enchanted\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Enchanted\'s directory entry alongside other chat clients covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Enchanted\'s directory entry alongside other chat clients covered above.',
           '[Msty Review 2026](/power-local-llm/msty-review) — a cross-platform local + cloud chat app, useful context if Enchanted\'s Ollama-only, Apple-only scope is too narrow for your needs.',
           '[Msty Go Review 2026](/power-local-llm/msty-go-review) — a separate autonomous-agent product, for comparison against agent-style tools like Jaz.',
           '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — three cross-platform local chat clients that bundle their own model runtime, unlike Enchanted.',
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted vs. andere lokale Chat-Apps',
-        content: 'Enchanted ist eine von mehreren Chat-Oberflächen, die speziell rund um Ollama gebaut wurden, und eine der wenigen nativen Apple-Plattform-Optionen darunter. So schneidet es im Vergleich ab — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Enchanted ist eine von mehreren Chat-Oberflächen, die speziell rund um Ollama gebaut wurden, und eine der wenigen nativen Apple-Plattform-Optionen darunter. So schneidet es im Vergleich ab — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Msty](/de/power-local-llm/msty-review)** — eine closed-source, plattformübergreifende (macOS/Windows/Linux) App, die Cloud-Modell-Support und Dokumenten-RAG-Suche zum lokalen Chat hinzufügt; siehe den vollständigen [Vergleich Enchanted vs. Msty](#enchanted-vs-msty) oben.',
           '**[Msty Go](/de/power-local-llm/msty-go-review)** — ein separates Agenten-Produkt vom Msty-Team, überhaupt keine Chat-Oberfläche; keine direkte Alternative zu Enchanted.',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — ein KI-Assistent für macOS/Windows mit tiefer Betriebssystem-Integration (systemweite Tastenkürzel, App-Integrationen) und sowohl lokalem als auch Cloud-Modell-Support, näher am Umfang von Msty als an dem von Enchanted.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — das neuere, separate Projekt desselben Autors: eine Plattform für "persönliche KI-Agenten" (dauerhaft laufende Agenten, geplante Durchläufe, Gedächtnis, Git-Steuerung) statt eines einfachen Chat-Clients; kein gleichwertiger Ersatz für den Anwendungsfall von Enchanted.',
         ],
-        note: 'Dies ist keine erschöpfende Liste — die vollständige, regelmäßig aktualisierte Übersicht, einschließlich des eigenen Verzeichniseintrags von Enchanted, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste — die vollständige, regelmäßig aktualisierte Übersicht, einschließlich des eigenen Verzeichniseintrags von Enchanted, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Enchanted neben den oben behandelten Chat-Clients.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Enchanted neben den oben behandelten Chat-Clients.',
           '[Msty Review 2026](/de/power-local-llm/msty-review) — eine plattformübergreifende lokale + Cloud-Chat-App, hilfreich, falls der Ollama-only, Apple-only Umfang von Enchanted für Ihre Zwecke zu eng ist.',
           '[Msty Go Review 2026](/de/power-local-llm/msty-go-review) — ein separates Agenten-Produkt, zum Vergleich mit Agenten-Werkzeugen wie Jaz.',
           '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — drei plattformübergreifende lokale Chat-Clients mit eigener Modell-Laufzeitumgebung, anders als Enchanted.',
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted face aux autres apps de chat locales',
-        content: 'Enchanted fait partie des quelques interfaces de chat construites spécifiquement autour d\'Ollama, et l\'une des rares options natives pour plateformes Apple parmi elles. Voici comment elle se compare — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Enchanted fait partie des quelques interfaces de chat construites spécifiquement autour d\'Ollama, et l\'une des rares options natives pour plateformes Apple parmi elles. Voici comment elle se compare — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Msty](/fr/power-local-llm/msty-review)** — une application closed source, multiplateforme (macOS/Windows/Linux) qui ajoute la prise en charge de modèles cloud et une recherche RAG documentaire au chat local ; voir la [comparaison complète Enchanted vs. Msty](#enchanted-vs-msty) ci-dessus.',
           '**[Msty Go](/fr/power-local-llm/msty-go-review)** — un produit distinct d\'agent autonome de l\'équipe Msty, pas du tout une interface de chat ; ce n\'est pas une alternative directe à Enchanted.',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — un assistant IA pour macOS/Windows avec une intégration système poussée (raccourcis systémiques, intégrations d\'applications) et une prise en charge des modèles locaux et cloud, plus proche du périmètre de Msty que de celui d\'Enchanted.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — le projet plus récent et distinct du même auteur : une plateforme d\'"agent IA personnel" (agents fonctionnant en continu, boucles planifiées, mémoire, contrôle git) plutôt qu\'un simple client de chat ; ce n\'est pas un remplacement équivalent pour l\'usage d\'Enchanted.',
         ],
-        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche du répertoire dédiée à Enchanted.',
+        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche du répertoire dédiée à Enchanted.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche dédiée à Enchanted aux côtés des autres clients de chat évoqués ci-dessus.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche dédiée à Enchanted aux côtés des autres clients de chat évoqués ci-dessus.',
           '[Msty Review 2026](/fr/power-local-llm/msty-review) — une application de chat local + cloud multiplateforme, utile si le périmètre Ollama-uniquement et Apple-uniquement d\'Enchanted est trop restreint pour vos besoins.',
           '[Msty Go Review 2026](/fr/power-local-llm/msty-go-review) — un produit distinct d\'agent autonome, pour comparaison avec des outils de type agent comme Jaz.',
           '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — trois clients de chat locaux multiplateformes qui embarquent leur propre moteur de modèle, contrairement à Enchanted.',
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted frente a otras apps de chat locales',
-        content: 'Enchanted es una de varias interfaces de chat construidas específicamente en torno a Ollama, y una de las pocas opciones nativas para plataformas Apple entre ellas. Así se compara — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Enchanted es una de varias interfaces de chat construidas específicamente en torno a Ollama, y una de las pocas opciones nativas para plataformas Apple entre ellas. Así se compara — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo.',
         items: [
           '**[Msty](/es/power-local-llm/msty-review)** — una app de código cerrado y multiplataforma (macOS/Windows/Linux) que añade soporte de modelos en la nube y búsqueda RAG documental sobre el chat local; consulta la [comparación completa Enchanted vs. Msty](#enchanted-vs-msty) más arriba.',
           '**[Msty Go](/es/power-local-llm/msty-go-review)** — un producto separado de agente autónomo del equipo de Msty, no es una interfaz de chat en absoluto; no es una alternativa directa a Enchanted.',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — un asistente de IA para macOS/Windows con integración profunda a nivel de sistema operativo (atajos globales, integraciones con apps) y soporte tanto de modelos locales como en la nube, más cercano al alcance de Msty que al de Enchanted.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — el proyecto más nuevo y separado del mismo autor: una plataforma de "agente de IA personal" (agentes siempre activos, ciclos programados, memoria, control de git) en lugar de un cliente de chat simple; no es un reemplazo equivalente para el caso de uso de Enchanted.',
         ],
-        note: 'Esta no es una lista exhaustiva — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la ficha propia de Enchanted en el directorio.',
+        note: 'Esta no es una lista exhaustiva — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente, incluida la ficha propia de Enchanted en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1116,7 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Enchanted junto a los demás clientes de chat mencionados arriba.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Enchanted junto a los demás clientes de chat mencionados arriba.',
           '[Msty Review 2026](/es/power-local-llm/msty-review) — una app de chat local + nube multiplataforma, útil si el alcance exclusivo de Ollama y Apple de Enchanted es demasiado limitado para tus necesidades.',
           '[Msty Go Review 2026](/es/power-local-llm/msty-go-review) — un producto separado de agente autónomo, para comparar con herramientas tipo agente como Jaz.',
           '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — tres clientes de chat locales multiplataforma que incluyen su propio motor de modelos, a diferencia de Enchanted.',
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: '他のローカルチャットアプリとの比較',
-        content: 'Enchantedは、Ollamaを中心に特化して構築された複数のチャットフロントエンドの1つであり、その中でも数少ないネイティブなAppleプラットフォーム向けの選択肢です。以下は他ツールとの比較です — 全カタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Enchantedは、Ollamaを中心に特化して構築された複数のチャットフロントエンドの1つであり、その中でも数少ないネイティブなAppleプラットフォーム向けの選択肢です。以下は他ツールとの比較です — 全カタログは[Local LLM Software Directory](/ja/directory)を参照してください。',
         items: [
           '**[Msty](/ja/power-local-llm/msty-review)** — クローズドソースでクロスプラットフォーム（macOS/Windows/Linux）のアプリで、ローカルモデルチャットにクラウドモデル対応とドキュメントRAG検索を追加している。上記の[Enchanted vs. Msty比較](#enchanted-vs-msty)を参照。',
           '**[Msty Go](/ja/power-local-llm/msty-go-review)** — Mstyチームによる別の自律エージェント製品で、チャットインターフェースではまったくない。Enchantedの直接的な代替とはならない。',
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — システムレベルの深い統合（システム全体のショートカット、アプリ連携）とローカル・クラウド両方のモデル対応を備えたmacOS/Windows向けAIアシスタントで、その範囲はEnchantedよりもMstyに近い。',
           '**[Jaz](https://github.com/gluonfield/jaz)** — 同じ作者によるより新しい別プロジェクトで、単純なチャットクライアントではなく「パーソナルAIエージェント」プラットフォーム（常時稼働するエージェント、スケジュール実行のループ、記憶、gitコントロール）。Enchantedの用途に対する同等の代替品ではない。',
         ],
-        note: 'これは網羅的なリストではありません — Enchanted自身のディレクトリ項目を含む、定期更新される完全なカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは網羅的なリストではありません — Enchanted自身のディレクトリ項目を含む、定期更新される完全なカタログは[Local LLM Software Directory](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。上記で扱った他のチャットクライアントと並んでEnchantedのディレクトリ項目も含まれる。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。上記で扱った他のチャットクライアントと並んでEnchantedのディレクトリ項目も含まれる。',
           '[Msty レビュー 2026](/ja/power-local-llm/msty-review) — クロスプラットフォームのローカル＋クラウドチャットアプリ。EnchantedのOllama専用・Apple専用という範囲が自分の用途には狭すぎる場合に参考になる。',
           '[Msty Go レビュー 2026](/ja/power-local-llm/msty-go-review) — 別の自律エージェント製品で、Jazのようなエージェント型ツールとの比較に。',
           '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Enchantedと異なり、それぞれが独自のモデル実行エンジンをバンドルしている3つのクロスプラットフォームなローカルチャットクライアント。',
@@ -1610,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted 与其他本地聊天应用的对比',
-        content: 'Enchanted 是专门围绕 Ollama 构建的多款聊天前端之一，也是其中少数几款苹果平台原生选项之一。以下是它与其他工具的对比——完整目录请见 [Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Enchanted 是专门围绕 Ollama 构建的多款聊天前端之一，也是其中少数几款苹果平台原生选项之一。以下是它与其他工具的对比——完整目录请见 [Local LLM Software Directory](/zh/directory)。',
         items: [
           '**[Msty](/zh/power-local-llm/msty-review)** — 一款闭源、跨平台（macOS/Windows/Linux）的应用，在本地模型聊天的基础上增加了云端模型支持和文档 RAG 搜索；参见上文完整的 [Enchanted vs. Msty 对比](#enchanted-vs-msty)。',
           '**[Msty Go](/zh/power-local-llm/msty-go-review)** — 来自 Msty 团队的一款独立自主智能体产品，根本不是聊天界面；不是 Enchanted 的直接替代品。',
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — 一款适用于 macOS/Windows 的 AI 助手，具有深度的系统级集成（系统级快捷键、应用集成），同时支持本地和云端模型，其定位比起 Enchanted 更接近 Msty。',
           '**[Jaz](https://github.com/gluonfield/jaz)** — 同一作者更新的独立项目：一个"个人 AI 智能体"平台（常驻运行的智能体、定时循环任务、记忆、git 控制），而非简单的聊天客户端；并非 Enchanted 使用场景的对等替代品。',
         ],
-        note: '这并非一份详尽的列表——包括 Enchanted 自身目录条目在内、定期更新的完整目录，请参见 [Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非一份详尽的列表——包括 Enchanted 自身目录条目在内、定期更新的完整目录，请参见 [Local LLM Software Directory](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，其中包含 Enchanted 的目录条目以及上文提到的其他聊天客户端。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的完整本地 AI 工具目录，其中包含 Enchanted 的目录条目以及上文提到的其他聊天客户端。',
           '[Msty 评测 2026](/zh/power-local-llm/msty-review) — 一款跨平台的本地 + 云端聊天应用，如果 Enchanted 仅限 Ollama、仅限苹果平台的定位对你来说太窄，可以参考这篇文章。',
           '[Msty Go 评测 2026](/zh/power-local-llm/msty-go-review) — 一款独立的自主智能体产品，可与 Jaz 这类智能体工具进行对比。',
           '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 三款跨平台本地聊天客户端，与 Enchanted 不同，它们都自带模型运行引擎。',
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted vs. outros apps de chat locais',
-        content: 'O Enchanted é uma das poucas interfaces de chat construídas especificamente em torno do Ollama, e uma das poucas opções nativas para plataformas Apple entre elas. Veja como ele se compara — consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Enchanted é uma das poucas interfaces de chat construídas especificamente em torno do Ollama, e uma das poucas opções nativas para plataformas Apple entre elas. Veja como ele se compara — consulte o [Local LLM Software Directory](/pt/directory) para o catálogo completo.',
         items: [
           '**[Msty](/pt/power-local-llm/msty-review)** — um app de código fechado e multiplataforma (macOS/Windows/Linux) que adiciona suporte a modelos na nuvem e busca RAG em documentos ao chat local; veja a [comparação completa Enchanted vs. Msty](#enchanted-vs-msty) acima.',
           '**[Msty Go](/pt/power-local-llm/msty-go-review)** — um produto separado de agente autônomo da equipe do Msty, não é uma interface de chat de forma alguma; não é uma alternativa direta ao Enchanted.',
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — um assistente de IA para macOS/Windows com integração profunda a nível de sistema (atalhos globais, integrações com apps) e suporte tanto a modelos locais quanto na nuvem, mais próximo do escopo do Msty do que do Enchanted.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — o projeto mais novo e separado do mesmo autor: uma plataforma de "agente de IA pessoal" (agentes sempre ativos, loops agendados, memória, controle via git) em vez de um cliente de chat simples; não é um substituto equivalente para o caso de uso do Enchanted.',
         ],
-        note: 'Esta não é uma lista exaustiva — consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Enchanted no diretório.',
+        note: 'Esta não é uma lista exaustiva — consulte o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Enchanted no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1956,7 +1956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Enchanted no diretório junto aos outros clientes de chat mencionados acima.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Enchanted no diretório junto aos outros clientes de chat mencionados acima.',
           '[Msty Review 2026](/pt/power-local-llm/msty-review) — um app de chat local + nuvem multiplataforma, útil se o escopo exclusivo a Ollama e a Apple do Enchanted for restrito demais para suas necessidades.',
           '[Msty Go Review 2026](/pt/power-local-llm/msty-go-review) — um produto separado de agente autônomo, para comparação com ferramentas do tipo agente como o Jaz.',
           '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — três clientes de chat locais multiplataforma que vêm com motor de modelo próprio, diferente do Enchanted.',
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: 'Enchanted مقابل تطبيقات المحادثة المحلية الأخرى',
-        content: 'Enchanted هو واحد من عدة واجهات محادثة أمامية مبنية خصيصاً حول Ollama، وأحد الخيارات القليلة الأصلية لمنصات آبل بينها. إليك كيف يقارَن بغيره — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'Enchanted هو واحد من عدة واجهات محادثة أمامية مبنية خصيصاً حول Ollama، وأحد الخيارات القليلة الأصلية لمنصات آبل بينها. إليك كيف يقارَن بغيره — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Msty](/ar/power-local-llm/msty-review)** — تطبيق مغلق المصدر متعدد المنصات (macOS/Windows/Linux) يضيف دعماً للنماذج السحابية وبحث RAG في المستندات فوق المحادثة المحلية؛ راجع [المقارنة الكاملة بين Enchanted وMsty](#enchanted-vs-msty) أعلاه.',
           '**[Msty Go](/ar/power-local-llm/msty-go-review)** — منتج منفصل لوكيل مستقل من فريق Msty، وليس واجهة محادثة على الإطلاق؛ وليس بديلاً مباشراً لـ Enchanted.',
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — مساعد ذكاء اصطناعي لأنظمة macOS/Windows بتكامل عميق على مستوى النظام (اختصارات على مستوى النظام، تكاملات مع التطبيقات) ودعم للنماذج المحلية والسحابية معاً، وهو أقرب في نطاقه إلى Msty منه إلى Enchanted.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — المشروع الأحدث والمنفصل لنفس المطوّر: منصة "وكيل ذكاء اصطناعي شخصي" (وكلاء يعملون باستمرار، ودورات مجدولة، وذاكرة، وتحكّم عبر git) بدلاً من عميل محادثة بسيط؛ وليس بديلاً معادلاً لحالة استخدام Enchanted.',
         ],
-        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Enchanted نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Enchanted نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2236,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Enchanted في الدليل إلى جانب عملاء المحادثة الآخرين المذكورين أعلاه.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Enchanted في الدليل إلى جانب عملاء المحادثة الآخرين المذكورين أعلاه.',
           '[مراجعة Msty 2026](/ar/power-local-llm/msty-review) — تطبيق محادثة محلي + سحابي متعدد المنصات، مفيد إذا كان نطاق Enchanted المقتصر على Ollama وآبل فقط ضيقاً جداً لاحتياجاتك.',
           '[مراجعة Msty Go 2026](/ar/power-local-llm/msty-go-review) — منتج منفصل لوكيل مستقل، للمقارنة مع أدوات على غرار الوكلاء مثل Jaz.',
           '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — ثلاثة عملاء محادثة محلية متعددة المنصات تأتي بمحرك نماذج خاص بها، بخلاف Enchanted.',
@@ -2450,7 +2450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'enchanted-competitors',
         title: '다른 로컬 채팅 앱과의 비교',
-        content: 'Enchanted는 Ollama를 중심으로 특별히 구축된 여러 채팅 프런트엔드 중 하나이며, 그중에서도 몇 안 되는 애플 플랫폼 전용 네이티브 옵션입니다. 다른 도구와 비교하면 다음과 같습니다 — 전체 카탈로그는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Enchanted는 Ollama를 중심으로 특별히 구축된 여러 채팅 프런트엔드 중 하나이며, 그중에서도 몇 안 되는 애플 플랫폼 전용 네이티브 옵션입니다. 다른 도구와 비교하면 다음과 같습니다 — 전체 카탈로그는 [Local LLM Software Directory](/ko/directory)를 참고하세요.',
         items: [
           '**[Msty](/ko/power-local-llm/msty-review)** — 로컬 모델 채팅에 클라우드 모델 지원과 문서 RAG 검색을 더한 폐쇄형 소스, 크로스플랫폼(macOS/Windows/Linux) 앱입니다. 위의 [Enchanted vs. Msty 전체 비교](#enchanted-vs-msty)를 참고하세요.',
           '**[Msty Go](/ko/power-local-llm/msty-go-review)** — Msty 팀의 별도 자율 에이전트 제품으로, 채팅 인터페이스가 전혀 아닙니다. Enchanted의 직접적인 대안은 아닙니다.',
@@ -2461,7 +2461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BoltAI](https://boltai.com)** — 시스템 전역 단축키, 앱 통합 등 깊은 운영체제 수준 통합과 로컬·클라우드 모델 지원을 모두 갖춘 macOS/Windows용 AI 어시스턴트로, Enchanted보다는 Msty의 범위에 더 가깝습니다.',
           '**[Jaz](https://github.com/gluonfield/jaz)** — 같은 개발자가 만든 더 새로운 별도 프로젝트로, 단순한 채팅 클라이언트가 아니라 "개인 AI 에이전트" 플랫폼(상시 실행되는 에이전트, 예약된 반복 작업, 메모리, git 제어)입니다. Enchanted의 사용 사례를 대체할 만한 동등한 제품은 아닙니다.',
         ],
-        note: '이 목록은 전부를 망라한 것이 아닙니다 — Enchanted 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 목록은 전부를 망라한 것이 아닙니다 — Enchanted 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [Local LLM Software Directory](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2516,7 +2516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트들과 함께 Enchanted의 디렉터리 항목도 포함되어 있습니다.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트들과 함께 Enchanted의 디렉터리 항목도 포함되어 있습니다.',
           '[Msty 리뷰 2026](/ko/power-local-llm/msty-review) — 크로스플랫폼 로컬 + 클라우드 채팅 앱으로, Enchanted의 Ollama 전용·애플 전용 범위가 자신의 필요에 비해 너무 좁을 경우 참고할 만합니다.',
           '[Msty Go 리뷰 2026](/ko/power-local-llm/msty-go-review) — 별도의 자율 에이전트 제품으로, Jaz 같은 에이전트형 도구와 비교하는 데 참고할 수 있습니다.',
           '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Enchanted와 달리 각각 자체 모델 실행 엔진을 번들로 제공하는 세 가지 크로스플랫폼 로컬 채팅 클라이언트입니다.',

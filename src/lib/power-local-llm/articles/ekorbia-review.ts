@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia Review 2026: Free Open-Source Local AI Desktop App',
     seoTitle: 'Ekorbia Review 2026: Free Local AI Desktop App',
-    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) is a free, open-source desktop chat application, built in Rust and Tauri, for running AI models on your own macOS, Windows, or Linux machine. On macOS it bundles its own inference engine and a curated model catalog; on Windows and Linux it currently connects to [Ollama](https://ollama.com) or any OpenAI-compatible endpoint as the model backend. This review is the deep-dive on Ekorbia\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), covering what the app actually does, its exact pricing (there is none — it is entirely free), real download links, and where it fits next to more established local-chat apps.',
+    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) is a free, open-source desktop chat application, built in Rust and Tauri, for running AI models on your own macOS, Windows, or Linux machine. On macOS it bundles its own inference engine and a curated model catalog; on Windows and Linux it currently connects to [Ollama](https://ollama.com) or any OpenAI-compatible endpoint as the model backend. This review is the deep-dive on Ekorbia\'s entry in the [Local LLM Software Directory](/directory), covering what the app actually does, its exact pricing (there is none — it is entirely free), real download links, and where it fits next to more established local-chat apps.',
     metaDescription: 'Ekorbia is a free, MIT-licensed Rust/Tauri chat app for local AI on macOS, Windows, and Linux. Verified 2026 features, downloads, and macOS-only bundled engine.',
     readTime: '10 min read',
     targetKeywords: [
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installers are unsigned on macOS and Windows, so both platforms show a one-time security warning on first launch (documented with a workaround in the project\'s README)',
         ],
         callouts: [
-          { type: 'note', text: 'The [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) entry for Ekorbia currently lists it as "freemium" and "macOS only." Based on direct verification of [ekorbia.com](https://ekorbia.com) and the GitHub repository for this review, both of those attributes appear to be outdated: Ekorbia has no paid tier at all (fully free) and ships installers for macOS, Windows, and Linux (though several features are macOS-only for now, covered below).' },
+          { type: 'note', text: 'The [Local LLM Software Directory](/directory) entry for Ekorbia currently lists it as "freemium" and "macOS only." Based on direct verification of [ekorbia.com](https://ekorbia.com) and the GitHub repository for this review, both of those attributes appear to be outdated: Ekorbia has no paid tier at all (fully free) and ships installers for macOS, Windows, and Linux (though several features are macOS-only for now, covered below).' },
         ],
       },
       overview: {
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Storage: chats, embeddings, prompts, and saved files live in the platform\'s local application-data directory and a user-chosen prompts folder — nothing is uploaded except when downloading a model, polling a Watch URL, or reaching a backend endpoint you configured',
           'Developer: no founder, team, or company page is published on [ekorbia.com](https://ekorbia.com) or the [GitHub repository](https://github.com/ekorbia/ekorbia-desktop) at the time of this review; the copyright notice in the project\'s [LICENSE file](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) reads "Copyright (c) 2026 Ekorbia" with no individual name attached',
         ],
-        note: 'This review is the deep-dive on Ekorbia\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory). See that directory for how Ekorbia compares to dozens of other local-AI tools across every category.',
+        note: 'This review is the deep-dive on Ekorbia\'s entry in the [Local LLM Software Directory](/directory). See that directory for how Ekorbia compares to dozens of other local-AI tools across every category.',
       },
       history: {
         id: 'ekorbia-history',
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia vs. Other Local Chat Apps',
-        content: 'Ekorbia is one of several desktop apps built around local AI chat. Here is how it sits next to other options covered on this site — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Ekorbia is one of several desktop apps built around local AI chat. Here is how it sits next to other options covered on this site — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Jan](/power-local-llm/jan-review)** — a free, open-source, cross-platform app that bundles its own llama.cpp-based engine on macOS, Windows, and Linux alike, with a multi-year public history; the more mature choice if you need a working bundled engine outside macOS today.',
           '**[Msty](/power-local-llm/msty-review)** — a cross-platform (macOS, Windows, Linux) local+cloud chat app with a genuinely free core tier plus an optional paid add-on, and RAG/agent features built in.',
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — an open-source local chat client from Nomic AI focused on running models fully offline, with a simpler, longer-established feature set than Ekorbia\'s Watch/overlay/memory-file bundle.',
           '**[Open WebUI](/local-llms/open-webui-review)** — a self-hosted, browser-based interface typically run alongside Ollama; unlike Ekorbia, it is deployed as a web app rather than a native desktop client.',
         ],
-        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Ekorbia\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Ekorbia\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Ekorbia\'s directory entry alongside other chat clients covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Ekorbia\'s directory entry alongside other chat clients covered above.',
           '[Jan Review 2026](/power-local-llm/jan-review) — a free, open-source, cross-platform app with a bundled engine on every platform, the closest comparison covered in this review.',
           '[Msty Review 2026](/power-local-llm/msty-review) — a cross-platform local+cloud chat app with a genuinely free core tier, useful if you want a more established alternative.',
           '[BoltAI Review 2026](/power-local-llm/boltai-review) — a closed-source, one-time-purchase native Mac app, a useful comparison if you would rather pay once for a more mature, signed application.',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia Review 2026: Kostenlose Open-Source-Desktop-App für lokale KI',
     seoTitle: 'Ekorbia Review 2026: Kostenlose lokale KI-Desktop-App',
-    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) ist eine kostenlose, quelloffene Desktop-Chat-Anwendung, entwickelt in Rust und Tauri, zum Ausführen von KI-Modellen auf dem eigenen macOS-, Windows- oder Linux-Rechner. Unter macOS bringt die App eine eigene Inferenz-Engine samt kuratiertem Modell-Katalog mit; unter Windows und Linux verbindet sie sich derzeit mit [Ollama](https://ollama.com) oder einem beliebigen OpenAI-kompatiblen Endpunkt als Modell-Backend. Diese Review ist der ausführliche Deep-Dive zu Ekorbias Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) und behandelt, was die App tatsächlich kann, ihre genauen Preise (es gibt keine — sie ist vollständig kostenlos), echte Download-Links und wo sie sich im Vergleich zu etablierteren lokalen Chat-Apps einordnet.',
+    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) ist eine kostenlose, quelloffene Desktop-Chat-Anwendung, entwickelt in Rust und Tauri, zum Ausführen von KI-Modellen auf dem eigenen macOS-, Windows- oder Linux-Rechner. Unter macOS bringt die App eine eigene Inferenz-Engine samt kuratiertem Modell-Katalog mit; unter Windows und Linux verbindet sie sich derzeit mit [Ollama](https://ollama.com) oder einem beliebigen OpenAI-kompatiblen Endpunkt als Modell-Backend. Diese Review ist der ausführliche Deep-Dive zu Ekorbias Eintrag im [Local LLM Software Directory](/de/directory) und behandelt, was die App tatsächlich kann, ihre genauen Preise (es gibt keine — sie ist vollständig kostenlos), echte Download-Links und wo sie sich im Vergleich zu etablierteren lokalen Chat-Apps einordnet.',
     metaDescription: 'Ekorbia ist eine kostenlose, MIT-lizenzierte Rust/Tauri-Chat-App für lokale KI unter macOS, Windows und Linux. Geprüfte Funktionen, Downloads und macOS-exklusive Engine 2026.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Installer sind unter macOS und Windows unsigniert, weshalb beide Plattformen beim ersten Start einmalig eine Sicherheitswarnung anzeigen (im README des Projekts mit Workaround dokumentiert)',
         ],
         callouts: [
-          { type: 'note', text: 'Der Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) listet Ekorbia derzeit als „Freemium" und „nur macOS". Nach direkter Prüfung von [ekorbia.com](https://ekorbia.com) und dem GitHub-Repository für diese Review scheinen beide Angaben veraltet zu sein: Ekorbia hat überhaupt keine kostenpflichtige Stufe (vollständig kostenlos) und liefert Installer für macOS, Windows und Linux (auch wenn einige Funktionen vorerst macOS-exklusiv sind, siehe unten).' },
+          { type: 'note', text: 'Der Eintrag im [Local LLM Software Directory](/de/directory) listet Ekorbia derzeit als „Freemium" und „nur macOS". Nach direkter Prüfung von [ekorbia.com](https://ekorbia.com) und dem GitHub-Repository für diese Review scheinen beide Angaben veraltet zu sein: Ekorbia hat überhaupt keine kostenpflichtige Stufe (vollständig kostenlos) und liefert Installer für macOS, Windows und Linux (auch wenn einige Funktionen vorerst macOS-exklusiv sind, siehe unten).' },
         ],
       },
       overview: {
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Speicherung: Chats, Embeddings, Prompts und gespeicherte Dateien liegen im lokalen Anwendungsdatenverzeichnis der Plattform sowie in einem selbst gewählten Prompts-Ordner — nichts wird hochgeladen, außer beim Herunterladen eines Modells, beim Abrufen einer Watch-URL oder beim Erreichen eines konfigurierten Backend-Endpunkts',
           'Entwickler: Zum Zeitpunkt dieser Review ist weder auf [ekorbia.com](https://ekorbia.com) noch im [GitHub-Repository](https://github.com/ekorbia/ekorbia-desktop) eine Gründer-, Team- oder Unternehmensseite veröffentlicht; der Copyright-Hinweis in der [LICENSE-Datei](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) des Projekts lautet „Copyright (c) 2026 Ekorbia" ohne genannten Einzelnamen',
         ],
-        note: 'Diese Review ist der Deep-Dive zu Ekorbias Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory). Dort finden Sie auch den Vergleich zu Dutzenden weiteren Local-AI-Tools über alle Kategorien hinweg.',
+        note: 'Diese Review ist der Deep-Dive zu Ekorbias Eintrag im [Local LLM Software Directory](/de/directory). Dort finden Sie auch den Vergleich zu Dutzenden weiteren Local-AI-Tools über alle Kategorien hinweg.',
       },
       history: {
         id: 'ekorbia-history',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia vs. andere lokale Chat-Apps',
-        content: 'Ekorbia ist eine von mehreren Desktop-Apps rund um lokalen KI-Chat. Hier ist, wie es sich neben anderen auf dieser Website behandelten Optionen einordnet — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Ekorbia ist eine von mehreren Desktop-Apps rund um lokalen KI-Chat. Hier ist, wie es sich neben anderen auf dieser Website behandelten Optionen einordnet — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Jan](/de/power-local-llm/jan-review)** — eine kostenlose, quelloffene, plattformübergreifende App, die auf macOS, Windows und Linux gleichermaßen eine eigene llama.cpp-basierte Engine mitbringt, mit mehrjähriger öffentlicher Historie; die reifere Wahl, wenn Sie schon heute eine funktionierende mitgelieferte Engine außerhalb von macOS brauchen.',
           '**[Msty](/de/power-local-llm/msty-review)** — eine plattformübergreifende (macOS, Windows, Linux) Local+Cloud-Chat-App mit einer wirklich kostenlosen Kernstufe plus optionaler kostenpflichtiger Zusatzstufe und eingebauten RAG/Agenten-Funktionen.',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — ein quelloffener lokaler Chat-Client von Nomic AI, fokussiert auf vollständig offline laufende Modelle, mit einem einfacheren, länger etablierten Funktionsumfang als Ekorbias Watch/Overlay/Memory-Datei-Paket.',
           '**[Open WebUI](/de/local-llms/open-webui-review)** — eine selbst gehostete, browserbasierte Oberfläche, typischerweise zusammen mit Ollama betrieben; anders als Ekorbia wird sie als Web-App bereitgestellt, nicht als nativer Desktop-Client.',
         ],
-        note: 'Dies ist keine abschließende Liste lokaler Chat-Clients — die vollständige, regelmäßig aktualisierte Übersicht inklusive Ekorbias eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine abschließende Liste lokaler Chat-Clients — die vollständige, regelmäßig aktualisierte Übersicht inklusive Ekorbias eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — die vollständige Übersicht lokaler KI-Tools, zu der dieser Artikel gehört, inklusive Ekorbias Directory-Eintrag neben den oben behandelten Chat-Clients.',
+          '[Local LLM Software Directory 2026](/de/directory) — die vollständige Übersicht lokaler KI-Tools, zu der dieser Artikel gehört, inklusive Ekorbias Directory-Eintrag neben den oben behandelten Chat-Clients.',
           '[Jan Review 2026](/de/power-local-llm/jan-review) — eine kostenlose, quelloffene, plattformübergreifende App mit mitgelieferter Engine auf jeder Plattform, der engste Vergleich in dieser Review.',
           '[Msty Review 2026](/de/power-local-llm/msty-review) — eine plattformübergreifende Local+Cloud-Chat-App mit wirklich kostenloser Kernstufe, nützlich für eine etabliertere Alternative.',
           '[BoltAI Review 2026](/de/power-local-llm/boltai-review) — eine Closed-Source-Mac-App als Einmalkauf, ein nützlicher Vergleich, falls Sie lieber einmal für eine reifere, signierte Anwendung bezahlen.',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia : avis 2026 sur l\'app de bureau IA locale gratuite',
     seoTitle: 'Ekorbia : avis 2026 sur l\'app IA locale gratuite',
-    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) est une application de chat de bureau gratuite et open source, développée en Rust et Tauri, pour exécuter des modèles d\'IA sur votre propre machine macOS, Windows ou Linux. Sur macOS, elle intègre son propre moteur d\'inférence et un catalogue de modèles ; sur Windows et Linux, elle se connecte actuellement à [Ollama](https://ollama.com) ou à tout point de terminaison compatible OpenAI comme moteur de modèles. Cet avis est le dossier complet consacré à la fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory), et couvre ce que l\'application fait réellement, son tarif exact (aucun — elle est entièrement gratuite), de vrais liens de téléchargement, et sa place face à des applications de chat local plus établies.',
+    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) est une application de chat de bureau gratuite et open source, développée en Rust et Tauri, pour exécuter des modèles d\'IA sur votre propre machine macOS, Windows ou Linux. Sur macOS, elle intègre son propre moteur d\'inférence et un catalogue de modèles ; sur Windows et Linux, elle se connecte actuellement à [Ollama](https://ollama.com) ou à tout point de terminaison compatible OpenAI comme moteur de modèles. Cet avis est le dossier complet consacré à la fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/directory), et couvre ce que l\'application fait réellement, son tarif exact (aucun — elle est entièrement gratuite), de vrais liens de téléchargement, et sa place face à des applications de chat local plus établies.',
     metaDescription: 'Ekorbia est une app de chat Rust/Tauri gratuite sous licence MIT pour l\'IA locale sur macOS, Windows et Linux. Fonctionnalités, téléchargements et moteur intégré macOS vérifiés 2026.',
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les installeurs ne sont pas signés sur macOS et Windows, donc les deux plateformes affichent un avertissement de sécurité au premier lancement (documenté avec une solution de contournement dans le README du projet)',
         ],
         callouts: [
-          { type: 'note', text: 'La fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) la classe actuellement comme « freemium » et « macOS uniquement ». Après vérification directe d\'[ekorbia.com](https://ekorbia.com) et du dépôt GitHub pour cet avis, ces deux attributs semblent obsolètes : Ekorbia n\'a aucune offre payante (entièrement gratuite) et propose des installeurs pour macOS, Windows et Linux (bien que plusieurs fonctionnalités restent réservées à macOS pour l\'instant, voir plus bas).' },
+          { type: 'note', text: 'La fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/directory) la classe actuellement comme « freemium » et « macOS uniquement ». Après vérification directe d\'[ekorbia.com](https://ekorbia.com) et du dépôt GitHub pour cet avis, ces deux attributs semblent obsolètes : Ekorbia n\'a aucune offre payante (entièrement gratuite) et propose des installeurs pour macOS, Windows et Linux (bien que plusieurs fonctionnalités restent réservées à macOS pour l\'instant, voir plus bas).' },
         ],
       },
       overview: {
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stockage : conversations, embeddings, prompts et fichiers sauvegardés vivent dans le répertoire de données local de la plateforme et un dossier de prompts choisi par l\'utilisateur — rien n\'est envoyé, sauf lors du téléchargement d\'un modèle, de l\'interrogation d\'une URL Watch, ou de l\'accès à un point de terminaison de backend configuré',
           'Développeur : aucune page fondateur, équipe ou entreprise n\'est publiée sur [ekorbia.com](https://ekorbia.com) ni sur le [dépôt GitHub](https://github.com/ekorbia/ekorbia-desktop) au moment de cet avis ; la mention de copyright dans le [fichier LICENSE](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) du projet indique « Copyright (c) 2026 Ekorbia » sans nom individuel associé',
         ],
-        note: 'Cet avis est le dossier complet consacré à la fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory). Consultez ce répertoire pour voir comment Ekorbia se compare à des dizaines d\'autres outils d\'IA locale dans toutes les catégories.',
+        note: 'Cet avis est le dossier complet consacré à la fiche d\'Ekorbia dans le [Local LLM Software Directory](/fr/directory). Consultez ce répertoire pour voir comment Ekorbia se compare à des dizaines d\'autres outils d\'IA locale dans toutes les catégories.',
       },
       history: {
         id: 'ekorbia-history',
@@ -776,7 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia face aux autres apps de chat local',
-        content: 'Ekorbia est l\'une des nombreuses applications de bureau construites autour du chat IA local. Voici sa place face à d\'autres options couvertes sur ce site — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Ekorbia est l\'une des nombreuses applications de bureau construites autour du chat IA local. Voici sa place face à d\'autres options couvertes sur ce site — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Jan](/fr/power-local-llm/jan-review)** — une application gratuite, open source, multiplateforme, qui intègre son propre moteur basé sur llama.cpp aussi bien sur macOS, Windows que Linux, avec un historique public de plusieurs années ; le choix le plus mature si vous avez besoin dès aujourd\'hui d\'un moteur intégré fonctionnel en dehors de macOS.',
           '**[Msty](/fr/power-local-llm/msty-review)** — une application de chat local+cloud multiplateforme (macOS, Windows, Linux) avec une offre de base vraiment gratuite plus une offre payante optionnelle, et des fonctionnalités RAG/agents intégrées.',
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un client de chat local open source de Nomic AI, axé sur l\'exécution de modèles entièrement hors ligne, avec un éventail de fonctionnalités plus simple et plus établi que le combo Watch/palette/fichier mémoire d\'Ekorbia.',
           '**[Open WebUI](/fr/local-llms/open-webui-review)** — une interface auto-hébergée basée sur navigateur, typiquement exécutée aux côtés d\'Ollama ; contrairement à Ekorbia, elle est déployée comme application web plutôt que comme client de bureau natif.',
         ],
-        note: 'Cette liste n\'est pas exhaustive des clients de chat local — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche d\'Ekorbia elle-même.',
+        note: 'Cette liste n\'est pas exhaustive des clients de chat local — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche d\'Ekorbia elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Ekorbia aux côtés des autres clients de chat couverts ci-dessus.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Ekorbia aux côtés des autres clients de chat couverts ci-dessus.',
           '[Jan : avis 2026](/fr/power-local-llm/jan-review) — une application gratuite, open source, multiplateforme, avec moteur intégré sur chaque plateforme, la comparaison la plus proche couverte dans cet avis.',
           '[Msty : avis 2026](/fr/power-local-llm/msty-review) — une application de chat local+cloud multiplateforme avec une offre de base vraiment gratuite, utile pour une alternative plus établie.',
           '[BoltAI : avis 2026](/fr/power-local-llm/boltai-review) — une application Mac en source fermée à achat unique, une comparaison utile si vous préférez payer une fois pour une application plus mature et signée.',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbiaレビュー2026：無料オープンソースのローカルAIデスクトップアプリ',
     seoTitle: 'Ekorbiaレビュー2026：無料ローカルAIデスクトップアプリ',
-    intro: 'Ekorbia（[ekorbia.com](https://ekorbia.com)）は、Rust と Tauri で構築された無料・オープンソースのデスクトップチャットアプリで、自分の macOS・Windows・Linux マシン上で AI モデルを実行します。macOS では独自の推論エンジンと厳選されたモデルカタログを内蔵し、Windows と Linux では現在 [Ollama](https://ollama.com) または任意の OpenAI 互換エンドポイントをモデルバックエンドとして接続します。本レビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) にある Ekorbia の掲載項目を深掘りするもので、実際にできること、正確な料金（一切ありません — 完全無料です）、実際のダウンロードリンク、そしてより確立された他のローカルチャットアプリとの位置づけを扱います。',
+    intro: 'Ekorbia（[ekorbia.com](https://ekorbia.com)）は、Rust と Tauri で構築された無料・オープンソースのデスクトップチャットアプリで、自分の macOS・Windows・Linux マシン上で AI モデルを実行します。macOS では独自の推論エンジンと厳選されたモデルカタログを内蔵し、Windows と Linux では現在 [Ollama](https://ollama.com) または任意の OpenAI 互換エンドポイントをモデルバックエンドとして接続します。本レビューは、[Local LLM Software Directory](/ja/directory) にある Ekorbia の掲載項目を深掘りするもので、実際にできること、正確な料金（一切ありません — 完全無料です）、実際のダウンロードリンク、そしてより確立された他のローカルチャットアプリとの位置づけを扱います。',
     metaDescription: 'EkorbiaはmacOS・Windows・Linux向けの無料MITライセンスRust/Tauriチャットアプリ。2026年に検証済みの機能、ダウンロード、macOS限定の内蔵エンジンを解説。',
     readTime: '10分で読める',
     targetKeywords: [
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOSとWindowsのインストーラーは署名されていないため、両プラットフォームとも初回起動時に1回限りのセキュリティ警告が表示されます（プロジェクトのREADMEに回避策付きで記載）',
         ],
         callouts: [
-          { type: 'note', text: '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)のEkorbia掲載項目は現在「フリーミアム」「macOSのみ」と記載されています。本レビューのために[ekorbia.com](https://ekorbia.com)とGitHubリポジトリを直接確認した結果、両方の属性は古い情報である可能性が高いです — Ekorbiaには有料プランが一切なく（完全無料）、macOS・Windows・Linux向けにインストーラーを提供しています（ただし一部機能は現時点でmacOS限定です。下記参照）。' },
+          { type: 'note', text: '[Local LLM Software Directory](/ja/directory)のEkorbia掲載項目は現在「フリーミアム」「macOSのみ」と記載されています。本レビューのために[ekorbia.com](https://ekorbia.com)とGitHubリポジトリを直接確認した結果、両方の属性は古い情報である可能性が高いです — Ekorbiaには有料プランが一切なく（完全無料）、macOS・Windows・Linux向けにインストーラーを提供しています（ただし一部機能は現時点でmacOS限定です。下記参照）。' },
         ],
       },
       overview: {
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ストレージ：チャット、埋め込み、プロンプト、保存されたファイルはプラットフォームのローカルアプリケーションデータディレクトリとユーザーが選んだプロンプトフォルダに保存されます — モデルのダウンロード時、Watch URLのポーリング時、または設定されたバックエンドエンドポイントへの到達時を除き、何もアップロードされません',
           '開発者：本レビュー時点で、[ekorbia.com](https://ekorbia.com)にも[GitHubリポジトリ](https://github.com/ekorbia/ekorbia-desktop)にも創業者・チーム・企業ページは公開されていません。プロジェクトの[LICENSEファイル](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE)の著作権表記は「Copyright (c) 2026 Ekorbia」とあり、個人名は付されていません',
         ],
-        note: '本レビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるEkorbiaの掲載項目を深掘りするものです。あらゆるカテゴリにわたる数十の他のローカルAIツールとEkorbiaがどう比較されるかは、そのディレクトリをご覧ください。',
+        note: '本レビューは、[Local LLM Software Directory](/ja/directory)にあるEkorbiaの掲載項目を深掘りするものです。あらゆるカテゴリにわたる数十の他のローカルAIツールとEkorbiaがどう比較されるかは、そのディレクトリをご覧ください。',
       },
       history: {
         id: 'ekorbia-history',
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia対他のローカルチャットアプリ',
-        content: 'Ekorbiaは、ローカルAIチャットを中心に構築された複数のデスクトップアプリの1つです。当サイトで扱う他の選択肢との位置づけは以下のとおりです — 完全なカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'Ekorbiaは、ローカルAIチャットを中心に構築された複数のデスクトップアプリの1つです。当サイトで扱う他の選択肢との位置づけは以下のとおりです — 完全なカタログは[Local LLM Software Directory](/ja/directory)をご覧ください。',
         items: [
           '**[Jan](/ja/power-local-llm/jan-review)** — macOS・Windows・Linuxのいずれでも独自のllama.cppベースエンジンを内蔵する、無料・オープンソース・クロスプラットフォームのアプリで、複数年にわたる公開履歴があります。macOS以外で今すぐ動作する内蔵エンジンが必要なら、より成熟した選択肢です。',
           '**[Msty](/ja/power-local-llm/msty-review)** — 本当に無料のコアプランと任意の有料アドオン、組み込みのRAG/エージェント機能を持つ、クロスプラットフォーム（macOS・Windows・Linux）のローカル+クラウドチャットアプリです。',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 完全オフラインでのモデル実行に注力する、Nomic AIによるオープンソースのローカルチャットクライアントで、EkorbiaのWatch/オーバーレイ/メモリファイルの組み合わせよりシンプルで、より長く確立された機能セットを持ちます。',
           '**[Open WebUI](/ja/local-llms/open-webui-review)** — 通常Ollamaと併用されるセルフホスト型のブラウザベースインターフェースです。Ekorbiaとは異なり、ネイティブデスクトップクライアントではなくWebアプリとしてデプロイされます。',
         ],
-        note: 'これはローカル優先チャットクライアントの網羅的なリストではありません — Ekorbia自身の掲載項目を含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカル優先チャットクライアントの網羅的なリストではありません — Ekorbia自身の掲載項目を含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、上記で扱った他のチャットクライアントと並ぶEkorbiaの掲載項目を含む、ローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — 本記事が属する、上記で扱った他のチャットクライアントと並ぶEkorbiaの掲載項目を含む、ローカルAIツールの完全なカタログ。',
           '[Janレビュー2026](/ja/power-local-llm/jan-review) — すべてのプラットフォームで内蔵エンジンを備えた、無料・オープンソース・クロスプラットフォームのアプリで、本レビューで扱った最も近い比較対象。',
           '[Mstyレビュー2026](/ja/power-local-llm/msty-review) — 本当に無料のコアプランを持つクロスプラットフォームのローカル+クラウドチャットアプリで、より確立された代替を求める場合に有用。',
           '[BoltAIレビュー2026](/ja/power-local-llm/boltai-review) — クローズドソースの買い切り型ネイティブMacアプリで、より成熟した署名済みアプリケーションに一度だけ支払いたい場合に有用な比較対象。',
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia评测2026：免费开源本地AI桌面应用',
     seoTitle: 'Ekorbia评测2026：免费本地AI桌面应用',
-    intro: 'Ekorbia（[ekorbia.com](https://ekorbia.com)）是一款免费开源的桌面聊天应用，使用Rust和Tauri构建，用于在你自己的macOS、Windows或Linux设备上运行AI模型。在macOS上，它内置了自己的推理引擎和精选模型目录；在Windows和Linux上，它目前连接[Ollama](https://ollama.com)或任何兼容OpenAI的端点作为模型后端。本评测是对[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Ekorbia条目的深度剖析，涵盖它实际能做什么、确切的定价（没有定价——它完全免费）、真实的下载链接，以及它相对于更成熟的本地聊天应用所处的位置。',
+    intro: 'Ekorbia（[ekorbia.com](https://ekorbia.com)）是一款免费开源的桌面聊天应用，使用Rust和Tauri构建，用于在你自己的macOS、Windows或Linux设备上运行AI模型。在macOS上，它内置了自己的推理引擎和精选模型目录；在Windows和Linux上，它目前连接[Ollama](https://ollama.com)或任何兼容OpenAI的端点作为模型后端。本评测是对[本地LLM软件目录](/zh/directory)中Ekorbia条目的深度剖析，涵盖它实际能做什么、确切的定价（没有定价——它完全免费）、真实的下载链接，以及它相对于更成熟的本地聊天应用所处的位置。',
     metaDescription: 'Ekorbia是一款免费、MIT许可的Rust/Tauri聊天应用，支持macOS、Windows和Linux本地AI。已核实2026年功能、下载链接和macOS专属内置引擎。',
     readTime: '阅读约10分钟',
     targetKeywords: [
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS和Windows上的安装程序未签名，因此两个平台首次启动时都会显示一次性安全警告（项目README中记录了相应的解决方法）',
         ],
         callouts: [
-          { type: 'note', text: '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Ekorbia的条目目前将其列为「免费增值」和「仅限macOS」。本评测直接核实了[ekorbia.com](https://ekorbia.com)和GitHub代码库后发现，这两项属性似乎都已过时：Ekorbia根本没有付费层级（完全免费），并且提供macOS、Windows和Linux的安装程序（尽管部分功能目前仅限macOS，详见下文）。' },
+          { type: 'note', text: '[本地LLM软件目录](/zh/directory)中Ekorbia的条目目前将其列为「免费增值」和「仅限macOS」。本评测直接核实了[ekorbia.com](https://ekorbia.com)和GitHub代码库后发现，这两项属性似乎都已过时：Ekorbia根本没有付费层级（完全免费），并且提供macOS、Windows和Linux的安装程序（尽管部分功能目前仅限macOS，详见下文）。' },
         ],
       },
       overview: {
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '存储：聊天记录、嵌入、提示词和保存的文件保存在该平台本地的应用数据目录以及用户选择的提示词文件夹中——除下载模型、轮询Watch的URL，或访问你配置的后端端点之外，不会上传任何内容',
           '开发者：截至本评测撰写时，无论是[ekorbia.com](https://ekorbia.com)还是[GitHub代码库](https://github.com/ekorbia/ekorbia-desktop)都未公布创始人、团队或公司页面；项目[LICENSE文件](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE)中的版权声明写着「Copyright (c) 2026 Ekorbia」，没有附带任何个人姓名',
         ],
-        note: '本评测是对[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Ekorbia条目的深度剖析。想了解Ekorbia与其他数十款本地AI工具在各个类别中的对比，请查看该目录。',
+        note: '本评测是对[本地LLM软件目录](/zh/directory)中Ekorbia条目的深度剖析。想了解Ekorbia与其他数十款本地AI工具在各个类别中的对比，请查看该目录。',
       },
       history: {
         id: 'ekorbia-history',
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia对比其他本地聊天应用',
-        content: 'Ekorbia是围绕本地AI聊天构建的众多桌面应用之一。以下是它相对于本站介绍的其他选项所处的位置——完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Ekorbia是围绕本地AI聊天构建的众多桌面应用之一。以下是它相对于本站介绍的其他选项所处的位置——完整目录请参阅[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Jan](/zh/power-local-llm/jan-review)** — 一款免费、开源、跨平台的应用，在macOS、Windows和Linux上都内置了基于llama.cpp的引擎，拥有多年的公开历史；如果你今天就需要一个在macOS之外也能正常工作的内置引擎，这是更成熟的选择。',
           '**[Msty](/zh/power-local-llm/msty-review)** — 一款跨平台（macOS、Windows、Linux）的本地+云端聊天应用，拥有真正免费的核心层级和可选的付费附加层级，并内置RAG/智能体功能。',
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI推出的开源本地聊天客户端，专注于完全离线运行模型，功能集比Ekorbia的Watch/浮层/记忆文件组合更简单，也更早确立地位。',
           '**[Open WebUI](/zh/local-llms/open-webui-review)** — 一款通常与Ollama搭配运行的自托管浏览器界面；与Ekorbia不同的是，它是作为Web应用部署的，而不是原生桌面客户端。',
         ],
-        note: '这不是本地优先聊天客户端的完整列表——完整且定期更新的目录（包括Ekorbia自身的条目）请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这不是本地优先聊天客户端的完整列表——完整且定期更新的目录（包括Ekorbia自身的条目）请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括Ekorbia的条目，与上文介绍的其他聊天客户端并列。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包括Ekorbia的条目，与上文介绍的其他聊天客户端并列。',
           '[Jan评测2026](/zh/power-local-llm/jan-review) — 一款在每个平台都内置引擎的免费开源跨平台应用，是本评测中最接近的对比对象。',
           '[Msty评测2026](/zh/power-local-llm/msty-review) — 一款拥有真正免费核心层级的跨平台本地+云端聊天应用，如果你想要更成熟的替代选项会很有帮助。',
           '[BoltAI评测2026](/zh/power-local-llm/boltai-review) — 一款闭源、一次性购买的原生Mac应用，如果你宁愿为更成熟、已签名的应用一次性付费，这是一个有用的对比对象。',
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia: análisis 2026 de la app de escritorio de IA local gratuita',
     seoTitle: 'Ekorbia: análisis 2026 de la app de IA local gratis',
-    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) es una aplicación de chat de escritorio gratuita y de código abierto, construida en Rust y Tauri, para ejecutar modelos de IA en tu propio equipo macOS, Windows o Linux. En macOS integra su propio motor de inferencia y un catálogo de modelos seleccionado; en Windows y Linux, actualmente se conecta a [Ollama](https://ollama.com) o a cualquier endpoint compatible con OpenAI como backend de modelos. Este análisis es el examen a fondo de la ficha de Ekorbia en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory), y cubre lo que la app realmente hace, su precio exacto (no hay ninguno: es totalmente gratuita), enlaces de descarga reales, y dónde se sitúa frente a apps de chat local más establecidas.',
+    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) es una aplicación de chat de escritorio gratuita y de código abierto, construida en Rust y Tauri, para ejecutar modelos de IA en tu propio equipo macOS, Windows o Linux. En macOS integra su propio motor de inferencia y un catálogo de modelos seleccionado; en Windows y Linux, actualmente se conecta a [Ollama](https://ollama.com) o a cualquier endpoint compatible con OpenAI como backend de modelos. Este análisis es el examen a fondo de la ficha de Ekorbia en el [directorio de software de LLM local](/es/directory), y cubre lo que la app realmente hace, su precio exacto (no hay ninguno: es totalmente gratuita), enlaces de descarga reales, y dónde se sitúa frente a apps de chat local más establecidas.',
     metaDescription: 'Ekorbia es una app de chat Rust/Tauri gratuita bajo licencia MIT para IA local en macOS, Windows y Linux. Funciones, descargas y motor integrado exclusivo de macOS verificados en 2026.',
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los instaladores no están firmados en macOS ni en Windows, por lo que ambas plataformas muestran una advertencia de seguridad única en el primer inicio (documentada con una solución en el README del proyecto)',
         ],
         callouts: [
-          { type: 'note', text: 'La ficha de Ekorbia en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) actualmente la clasifica como "freemium" y "solo macOS". Tras verificar directamente [ekorbia.com](https://ekorbia.com) y el repositorio de GitHub para este análisis, ambos atributos parecen desactualizados: Ekorbia no tiene ningún plan de pago (es totalmente gratuita) y ofrece instaladores para macOS, Windows y Linux (aunque varias funciones son exclusivas de macOS por ahora, ver más abajo).' },
+          { type: 'note', text: 'La ficha de Ekorbia en el [directorio de software de LLM local](/es/directory) actualmente la clasifica como "freemium" y "solo macOS". Tras verificar directamente [ekorbia.com](https://ekorbia.com) y el repositorio de GitHub para este análisis, ambos atributos parecen desactualizados: Ekorbia no tiene ningún plan de pago (es totalmente gratuita) y ofrece instaladores para macOS, Windows y Linux (aunque varias funciones son exclusivas de macOS por ahora, ver más abajo).' },
         ],
       },
       overview: {
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Almacenamiento: chats, embeddings, prompts y archivos guardados residen en el directorio local de datos de aplicación de la plataforma y en una carpeta de prompts elegida por el usuario — nada se sube salvo al descargar un modelo, sondear una URL de Watch, o contactar un endpoint de backend que hayas configurado',
           'Desarrollador: al momento de este análisis, ni [ekorbia.com](https://ekorbia.com) ni el [repositorio de GitHub](https://github.com/ekorbia/ekorbia-desktop) publican una página de fundador, equipo o empresa; el aviso de copyright en el [archivo LICENSE](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) del proyecto dice "Copyright (c) 2026 Ekorbia" sin ningún nombre individual asociado',
         ],
-        note: 'Este análisis es el examen a fondo de la ficha de Ekorbia en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory). Consulta ese directorio para ver cómo se compara Ekorbia con docenas de otras herramientas de IA local en todas las categorías.',
+        note: 'Este análisis es el examen a fondo de la ficha de Ekorbia en el [directorio de software de LLM local](/es/directory). Consulta ese directorio para ver cómo se compara Ekorbia con docenas de otras herramientas de IA local en todas las categorías.',
       },
       history: {
         id: 'ekorbia-history',
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia frente a otras apps de chat local',
-        content: 'Ekorbia es una de varias apps de escritorio construidas en torno al chat de IA local. Así es como se sitúa frente a otras opciones cubiertas en este sitio — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Ekorbia es una de varias apps de escritorio construidas en torno al chat de IA local. Así es como se sitúa frente a otras opciones cubiertas en este sitio — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo.',
         items: [
           '**[Jan](/es/power-local-llm/jan-review)** — una app gratuita, de código abierto y multiplataforma que integra su propio motor basado en llama.cpp tanto en macOS como en Windows y Linux, con un historial público de varios años; la opción más madura si necesitas hoy mismo un motor integrado que funcione fuera de macOS.',
           '**[Msty](/es/power-local-llm/msty-review)** — una app de chat local+nube multiplataforma (macOS, Windows, Linux) con un nivel básico realmente gratuito más un complemento de pago opcional, y funciones de RAG/agentes integradas.',
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un cliente de chat local de código abierto de Nomic AI centrado en ejecutar modelos completamente sin conexión, con un conjunto de funciones más simple y más establecido que el combo Watch/paleta/archivo de memoria de Ekorbia.',
           '**[Open WebUI](/es/local-llms/open-webui-review)** — una interfaz autoalojada basada en navegador, típicamente ejecutada junto a Ollama; a diferencia de Ekorbia, se despliega como app web en lugar de cliente de escritorio nativo.',
         ],
-        note: 'Esta no es una lista exhaustiva de clientes de chat local — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la ficha propia de Ekorbia.',
+        note: 'Esta no es una lista exhaustiva de clientes de chat local — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la ficha propia de Ekorbia.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha propia de Ekorbia junto a otros clientes de chat cubiertos arriba.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha propia de Ekorbia junto a otros clientes de chat cubiertos arriba.',
           '[Jan: análisis 2026](/es/power-local-llm/jan-review) — una app gratuita, de código abierto y multiplataforma con motor integrado en cada plataforma, la comparación más cercana cubierta en este análisis.',
           '[Msty: análisis 2026](/es/power-local-llm/msty-review) — una app de chat local+nube multiplataforma con un nivel básico realmente gratuito, útil si buscas una alternativa más establecida.',
           '[BoltAI: análisis 2026](/es/power-local-llm/boltai-review) — una app de Mac de código cerrado y compra única, una comparación útil si prefieres pagar una vez por una aplicación más madura y firmada.',
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia: análise 2026 do app de IA local gratuito',
     seoTitle: 'Ekorbia: análise 2026 do app de IA local grátis',
-    intro: 'O Ekorbia ([ekorbia.com](https://ekorbia.com)) é um aplicativo de chat de desktop gratuito e de código aberto, construído em Rust e Tauri, para executar modelos de IA no seu próprio computador macOS, Windows ou Linux. No macOS, ele traz embutido um mecanismo de inferência próprio e um catálogo de modelos selecionado; no Windows e Linux, atualmente ele se conecta ao [Ollama](https://ollama.com) ou a qualquer endpoint compatível com OpenAI como backend de modelos. Esta análise é o mergulho profundo na entrada do Ekorbia no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory), cobrindo o que o app realmente faz, seu preço exato (não há nenhum — é totalmente gratuito), links de download reais, e como ele se posiciona diante de outros apps de chat local mais estabelecidos.',
+    intro: 'O Ekorbia ([ekorbia.com](https://ekorbia.com)) é um aplicativo de chat de desktop gratuito e de código aberto, construído em Rust e Tauri, para executar modelos de IA no seu próprio computador macOS, Windows ou Linux. No macOS, ele traz embutido um mecanismo de inferência próprio e um catálogo de modelos selecionado; no Windows e Linux, atualmente ele se conecta ao [Ollama](https://ollama.com) ou a qualquer endpoint compatível com OpenAI como backend de modelos. Esta análise é o mergulho profundo na entrada do Ekorbia no [Diretório de Software LLM Local](/pt/directory), cobrindo o que o app realmente faz, seu preço exato (não há nenhum — é totalmente gratuito), links de download reais, e como ele se posiciona diante de outros apps de chat local mais estabelecidos.',
     metaDescription: 'Ekorbia é um app de chat Rust/Tauri gratuito sob licença MIT para IA local no macOS, Windows e Linux. Recursos, downloads e mecanismo embutido exclusivo do macOS verificados em 2026.',
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os instaladores não são assinados no macOS e no Windows, então ambas as plataformas exibem um aviso de segurança único na primeira execução (documentado com uma solução alternativa no README do projeto)',
         ],
         callouts: [
-          { type: 'note', text: 'A entrada do Ekorbia no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) atualmente o classifica como "freemium" e "somente macOS". Após verificação direta de [ekorbia.com](https://ekorbia.com) e do repositório no GitHub para esta análise, ambos os atributos parecem estar desatualizados: o Ekorbia não tem nenhum plano pago (é totalmente gratuito) e oferece instaladores para macOS, Windows e Linux (embora vários recursos sejam exclusivos do macOS por enquanto, veja abaixo).' },
+          { type: 'note', text: 'A entrada do Ekorbia no [Diretório de Software LLM Local](/pt/directory) atualmente o classifica como "freemium" e "somente macOS". Após verificação direta de [ekorbia.com](https://ekorbia.com) e do repositório no GitHub para esta análise, ambos os atributos parecem estar desatualizados: o Ekorbia não tem nenhum plano pago (é totalmente gratuito) e oferece instaladores para macOS, Windows e Linux (embora vários recursos sejam exclusivos do macOS por enquanto, veja abaixo).' },
         ],
       },
       overview: {
@@ -1786,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Armazenamento: conversas, embeddings, prompts e arquivos salvos ficam no diretório local de dados de aplicativo da plataforma e em uma pasta de prompts escolhida pelo usuário — nada é enviado, exceto ao baixar um modelo, consultar uma URL de Watch, ou acessar um endpoint de backend que você configurou',
           'Desenvolvedor: no momento desta análise, nem [ekorbia.com](https://ekorbia.com) nem o [repositório no GitHub](https://github.com/ekorbia/ekorbia-desktop) publicam uma página de fundador, equipe ou empresa; o aviso de copyright no [arquivo LICENSE](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) do projeto diz "Copyright (c) 2026 Ekorbia" sem nenhum nome individual associado',
         ],
-        note: 'Esta análise é o mergulho profundo na entrada do Ekorbia no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory). Consulte esse diretório para ver como o Ekorbia se compara a dezenas de outras ferramentas de IA local em todas as categorias.',
+        note: 'Esta análise é o mergulho profundo na entrada do Ekorbia no [Diretório de Software LLM Local](/pt/directory). Consulte esse diretório para ver como o Ekorbia se compara a dezenas de outras ferramentas de IA local em todas as categorias.',
       },
       history: {
         id: 'ekorbia-history',
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia vs. outros apps de chat local',
-        content: 'O Ekorbia é um entre vários apps de desktop construídos em torno do chat de IA local. Veja como ele se posiciona diante de outras opções cobertas neste site — consulte o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Ekorbia é um entre vários apps de desktop construídos em torno do chat de IA local. Veja como ele se posiciona diante de outras opções cobertas neste site — consulte o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Jan](/pt/power-local-llm/jan-review)** — um app gratuito, de código aberto e multiplataforma que traz embutido seu próprio mecanismo baseado em llama.cpp tanto no macOS quanto no Windows e Linux, com um histórico público de vários anos; a escolha mais madura se você precisa hoje de um mecanismo embutido funcional fora do macOS.',
           '**[Msty](/pt/power-local-llm/msty-review)** — um app de chat local+nuvem multiplataforma (macOS, Windows, Linux) com um nível básico genuinamente gratuito mais um complemento pago opcional, e recursos de RAG/agentes embutidos.',
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — um cliente de chat local de código aberto da Nomic AI focado em executar modelos totalmente offline, com um conjunto de recursos mais simples e mais estabelecido do que a combinação Watch/paleta/arquivo de memória do Ekorbia.',
           '**[Open WebUI](/pt/local-llms/open-webui-review)** — uma interface auto-hospedada baseada em navegador, tipicamente executada junto com o Ollama; ao contrário do Ekorbia, é implantada como app web em vez de cliente de desktop nativo.',
         ],
-        note: 'Esta não é uma lista exaustiva de clientes de chat local — consulte o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Ekorbia.',
+        note: 'Esta não é uma lista exaustiva de clientes de chat local — consulte o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Ekorbia.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Ekorbia ao lado de outros clientes de chat cobertos acima.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Ekorbia ao lado de outros clientes de chat cobertos acima.',
           '[Jan: análise 2026](/pt/power-local-llm/jan-review) — um app gratuito, de código aberto e multiplataforma com mecanismo embutido em toda plataforma, a comparação mais próxima coberta nesta análise.',
           '[Msty: análise 2026](/pt/power-local-llm/msty-review) — um app de chat local+nuvem multiplataforma com um nível básico genuinamente gratuito, útil se você quer uma alternativa mais estabelecida.',
           '[BoltAI: análise 2026](/pt/power-local-llm/boltai-review) — um app de Mac de código fechado e compra única, uma comparação útil se você prefere pagar uma vez por um aplicativo mais maduro e assinado.',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'مراجعة Ekorbia 2026: تطبيق مكتبي مجاني ومفتوح المصدر للذكاء الاصطناعي المحلي',
     seoTitle: 'مراجعة Ekorbia 2026: تطبيق ذكاء اصطناعي محلي مجاني',
-    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) هو تطبيق دردشة مكتبي مجاني ومفتوح المصدر، مبني بلغة Rust وإطار Tauri، لتشغيل نماذج الذكاء الاصطناعي على جهاز macOS أو Windows أو Linux الخاص بك. على macOS، يتضمن التطبيق محرك استدلال خاصًا به وكتالوج نماذج منتقى؛ أما على Windows وLinux، فيتصل حاليًا بـ[Ollama](https://ollama.com) أو أي نقطة نهاية متوافقة مع OpenAI كمحرك للنماذج. هذه المراجعة هي التحليل المعمّق لمدخل Ekorbia في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory)، وتغطي ما يفعله التطبيق فعليًا، وسعره الدقيق (لا يوجد سعر — فهو مجاني تمامًا)، وروابط تنزيل حقيقية، وموقعه مقارنةً بتطبيقات الدردشة المحلية الأكثر رسوخًا.',
+    intro: 'Ekorbia ([ekorbia.com](https://ekorbia.com)) هو تطبيق دردشة مكتبي مجاني ومفتوح المصدر، مبني بلغة Rust وإطار Tauri، لتشغيل نماذج الذكاء الاصطناعي على جهاز macOS أو Windows أو Linux الخاص بك. على macOS، يتضمن التطبيق محرك استدلال خاصًا به وكتالوج نماذج منتقى؛ أما على Windows وLinux، فيتصل حاليًا بـ[Ollama](https://ollama.com) أو أي نقطة نهاية متوافقة مع OpenAI كمحرك للنماذج. هذه المراجعة هي التحليل المعمّق لمدخل Ekorbia في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory)، وتغطي ما يفعله التطبيق فعليًا، وسعره الدقيق (لا يوجد سعر — فهو مجاني تمامًا)، وروابط تنزيل حقيقية، وموقعه مقارنةً بتطبيقات الدردشة المحلية الأكثر رسوخًا.',
     metaDescription: 'Ekorbia تطبيق دردشة مجاني برخصة MIT مبني بـRust/Tauri للذكاء الاصطناعي المحلي على macOS وWindows وLinux. ميزات وتنزيلات ومحرك مدمج حصري لـmacOS تم التحقق منها 2026.',
     readTime: '10 دقائق للقراءة',
     targetKeywords: [
@@ -2055,7 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'برامج التثبيت غير موقّعة على macOS وWindows، لذا تعرض كلتا المنصتين تحذيرًا أمنيًا لمرة واحدة عند التشغيل الأول (موثّق مع حل بديل في ملف README الخاص بالمشروع)',
         ],
         callouts: [
-          { type: 'note', text: 'يصنّف مدخل Ekorbia حاليًا في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) على أنه "فريميوم" و"حصري لـmacOS". بعد التحقق المباشر من [ekorbia.com](https://ekorbia.com) ومستودع GitHub لأجل هذه المراجعة، يبدو أن كلتا الصفتين قديمتان: فـEkorbia لا يمتلك أي خطة مدفوعة على الإطلاق (مجاني تمامًا) ويوفّر برامج تثبيت لـmacOS وWindows وLinux (رغم أن عدة ميزات تظل حصرية لـmacOS حاليًا، انظر أدناه).' },
+          { type: 'note', text: 'يصنّف مدخل Ekorbia حاليًا في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) على أنه "فريميوم" و"حصري لـmacOS". بعد التحقق المباشر من [ekorbia.com](https://ekorbia.com) ومستودع GitHub لأجل هذه المراجعة، يبدو أن كلتا الصفتين قديمتان: فـEkorbia لا يمتلك أي خطة مدفوعة على الإطلاق (مجاني تمامًا) ويوفّر برامج تثبيت لـmacOS وWindows وLinux (رغم أن عدة ميزات تظل حصرية لـmacOS حاليًا، انظر أدناه).' },
         ],
       },
       overview: {
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التخزين: تقيم المحادثات والتضمينات والتعليمات النصية والملفات المحفوظة في دليل بيانات التطبيق المحلي الخاص بالمنصة وفي مجلد تعليمات نصية يختاره المستخدم — لا يُرفع شيء إلا عند تنزيل نموذج، أو استطلاع رابط Watch، أو الوصول إلى نقطة نهاية محرك خلفي قمت بضبطها',
           'المطوّر: لم تنشر لا [ekorbia.com](https://ekorbia.com) ولا [مستودع GitHub](https://github.com/ekorbia/ekorbia-desktop) وقت إعداد هذه المراجعة صفحة مؤسس أو فريق أو شركة؛ إشعار حقوق النشر في [ملف LICENSE](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE) الخاص بالمشروع يقول "Copyright (c) 2026 Ekorbia" دون ذكر أي اسم فردي',
         ],
-        note: 'هذه المراجعة هي التحليل المعمّق لمدخل Ekorbia في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory). راجع ذلك الدليل لمعرفة كيف يقارَن Ekorbia بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى عبر جميع الفئات.',
+        note: 'هذه المراجعة هي التحليل المعمّق لمدخل Ekorbia في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory). راجع ذلك الدليل لمعرفة كيف يقارَن Ekorbia بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى عبر جميع الفئات.',
       },
       history: {
         id: 'ekorbia-history',
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia مقابل تطبيقات الدردشة المحلية الأخرى',
-        content: 'Ekorbia واحد من عدة تطبيقات سطح مكتب مبنية حول الدردشة المحلية بالذكاء الاصطناعي. إليك موقعه مقارنةً بخيارات أخرى يغطيها هذا الموقع — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'Ekorbia واحد من عدة تطبيقات سطح مكتب مبنية حول الدردشة المحلية بالذكاء الاصطناعي. إليك موقعه مقارنةً بخيارات أخرى يغطيها هذا الموقع — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Jan](/ar/power-local-llm/jan-review)** — تطبيق مجاني ومفتوح المصدر ومتعدد المنصات يتضمّن محركه الخاص المبني على llama.cpp على macOS وWindows وLinux على حد سواء، بتاريخ علني يمتد لعدة سنوات؛ الخيار الأكثر نضجًا إن كنت تحتاج اليوم محركًا مدمجًا يعمل خارج macOS.',
           '**[Msty](/ar/power-local-llm/msty-review)** — تطبيق دردشة محلي+سحابي متعدد المنصات (macOS وWindows وLinux) بمستوى أساسي مجاني فعليًا بالإضافة إلى إضافة مدفوعة اختيارية، وميزات RAG/وكلاء مدمجة.',
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — عميل دردشة محلي مفتوح المصدر من Nomic AI يركّز على تشغيل النماذج بشكل غير متصل بالإنترنت بالكامل، بمجموعة ميزات أبسط وأكثر رسوخًا من حزمة Watch/النافذة/ملف الذاكرة الخاصة بـEkorbia.',
           '**[Open WebUI](/ar/local-llms/open-webui-review)** — واجهة قائمة على متصفح ذاتية الاستضافة، تُشغَّل عادةً إلى جانب Ollama؛ على عكس Ekorbia، تُنشَر كتطبيق ويب وليس كعميل سطح مكتب أصلي.',
         ],
-        note: 'هذه ليست قائمة شاملة بعملاء الدردشة المحليين — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل Ekorbia نفسه.',
+        note: 'هذه ليست قائمة شاملة بعملاء الدردشة المحليين — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل Ekorbia نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Ekorbia نفسه إلى جانب عملاء الدردشة الآخرين المغطّاة أعلاه.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Ekorbia نفسه إلى جانب عملاء الدردشة الآخرين المغطّاة أعلاه.',
           '[مراجعة Jan 2026](/ar/power-local-llm/jan-review) — تطبيق مجاني ومفتوح المصدر ومتعدد المنصات بمحرك مدمج على كل منصة، أقرب مقارنة تناولتها هذه المراجعة.',
           '[مراجعة Msty 2026](/ar/power-local-llm/msty-review) — تطبيق دردشة محلي+سحابي متعدد المنصات بمستوى أساسي مجاني فعليًا، مفيد إن كنت تريد بديلًا أكثر رسوخًا.',
           '[مراجعة BoltAI 2026](/ar/power-local-llm/boltai-review) — تطبيق Mac مغلق المصدر يُشترى دفعة واحدة، مقارنة مفيدة إن كنت تفضّل الدفع مرة واحدة مقابل تطبيق أكثر نضجًا وموقّع.',
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Ekorbia',
     title: 'Ekorbia 리뷰 2026: 무료 오픈소스 로컬 AI 데스크톱 앱',
     seoTitle: 'Ekorbia 리뷰 2026: 무료 로컬 AI 데스크톱 앱',
-    intro: 'Ekorbia([ekorbia.com](https://ekorbia.com))는 Rust와 Tauri로 구축된 무료 오픈소스 데스크톱 채팅 애플리케이션으로, 사용자 자신의 macOS·Windows·Linux 기기에서 AI 모델을 실행합니다. macOS에서는 자체 추론 엔진과 엄선된 모델 카탈로그를 내장하고 있으며, Windows와 Linux에서는 현재 [Ollama](https://ollama.com) 또는 임의의 OpenAI 호환 엔드포인트를 모델 백엔드로 연결합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 Ekorbia 항목을 심층 분석한 것으로, 이 앱이 실제로 무엇을 하는지, 정확한 가격(가격 자체가 없습니다 — 완전 무료입니다), 실제 다운로드 링크, 그리고 더 자리 잡은 다른 로컬 채팅 앱들과 비교했을 때의 위치를 다룹니다.',
+    intro: 'Ekorbia([ekorbia.com](https://ekorbia.com))는 Rust와 Tauri로 구축된 무료 오픈소스 데스크톱 채팅 애플리케이션으로, 사용자 자신의 macOS·Windows·Linux 기기에서 AI 모델을 실행합니다. macOS에서는 자체 추론 엔진과 엄선된 모델 카탈로그를 내장하고 있으며, Windows와 Linux에서는 현재 [Ollama](https://ollama.com) 또는 임의의 OpenAI 호환 엔드포인트를 모델 백엔드로 연결합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Ekorbia 항목을 심층 분석한 것으로, 이 앱이 실제로 무엇을 하는지, 정확한 가격(가격 자체가 없습니다 — 완전 무료입니다), 실제 다운로드 링크, 그리고 더 자리 잡은 다른 로컬 채팅 앱들과 비교했을 때의 위치를 다룹니다.',
     metaDescription: 'Ekorbia는 macOS·Windows·Linux용 무료 MIT 라이선스 Rust/Tauri 채팅 앱입니다. 2026년 검증된 기능, 다운로드, macOS 전용 내장 엔진을 확인하세요.',
     readTime: '10분 읽기',
     targetKeywords: [
@@ -2338,7 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS와 Windows에서는 설치 프로그램이 서명되지 않아 두 플랫폼 모두 첫 실행 시 1회성 보안 경고가 표시됩니다(프로젝트 README에 해결 방법과 함께 문서화되어 있습니다)',
         ],
         callouts: [
-          { type: 'note', text: '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 Ekorbia 항목은 현재 「프리미엄」과 「macOS 전용」으로 표기되어 있습니다. 본 리뷰를 위해 [ekorbia.com](https://ekorbia.com)과 GitHub 저장소를 직접 확인한 결과, 두 속성 모두 오래된 정보로 보입니다 — Ekorbia에는 유료 요금제가 전혀 없으며(완전 무료), macOS·Windows·Linux용 설치 프로그램을 제공합니다(다만 일부 기능은 현재 macOS 전용입니다. 아래 참조).' },
+          { type: 'note', text: '[로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 Ekorbia 항목은 현재 「프리미엄」과 「macOS 전용」으로 표기되어 있습니다. 본 리뷰를 위해 [ekorbia.com](https://ekorbia.com)과 GitHub 저장소를 직접 확인한 결과, 두 속성 모두 오래된 정보로 보입니다 — Ekorbia에는 유료 요금제가 전혀 없으며(완전 무료), macOS·Windows·Linux용 설치 프로그램을 제공합니다(다만 일부 기능은 현재 macOS 전용입니다. 아래 참조).' },
         ],
       },
       overview: {
@@ -2352,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저장소: 채팅, 임베딩, 프롬프트, 저장된 파일은 해당 플랫폼의 로컬 애플리케이션 데이터 디렉터리와 사용자가 선택한 프롬프트 폴더에 저장됩니다 — 모델을 다운로드하거나, Watch URL을 폴링하거나, 사용자가 설정한 백엔드 엔드포인트에 접속할 때를 제외하고는 아무것도 업로드되지 않습니다',
           '개발자: 본 리뷰 작성 시점 기준, [ekorbia.com](https://ekorbia.com)이나 [GitHub 저장소](https://github.com/ekorbia/ekorbia-desktop) 어디에도 창업자·팀·회사 페이지가 공개되어 있지 않습니다. 프로젝트의 [LICENSE 파일](https://github.com/ekorbia/ekorbia-desktop/blob/main/LICENSE)에 있는 저작권 표시는 「Copyright (c) 2026 Ekorbia」라고만 되어 있고 개인 이름은 첨부되어 있지 않습니다',
         ],
-        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 Ekorbia 항목을 심층 분석한 것입니다. Ekorbia가 모든 카테고리에 걸쳐 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지는 해당 디렉터리를 참고하세요.',
+        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Ekorbia 항목을 심층 분석한 것입니다. Ekorbia가 모든 카테고리에 걸쳐 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지는 해당 디렉터리를 참고하세요.',
       },
       history: {
         id: 'ekorbia-history',
@@ -2474,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ekorbia-competitors',
         title: 'Ekorbia와 다른 로컬 채팅 앱 비교',
-        content: 'Ekorbia는 로컬 AI 채팅을 중심으로 구축된 여러 데스크톱 앱 중 하나입니다. 이 사이트에서 다루는 다른 옵션들과 비교했을 때의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Ekorbia는 로컬 AI 채팅을 중심으로 구축된 여러 데스크톱 앱 중 하나입니다. 이 사이트에서 다루는 다른 옵션들과 비교했을 때의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Jan](/ko/power-local-llm/jan-review)** — macOS, Windows, Linux 모두에서 자체 llama.cpp 기반 엔진을 내장하는 무료 오픈소스 크로스플랫폼 앱으로, 수년에 걸친 공개 히스토리를 갖추고 있습니다. macOS 외부에서도 오늘 당장 작동하는 내장 엔진이 필요하다면 더 성숙한 선택지입니다.',
           '**[Msty](/ko/power-local-llm/msty-review)** — 진정으로 무료인 핵심 요금제와 선택적 유료 부가 요금제를 갖춘 크로스플랫폼(macOS, Windows, Linux) 로컬+클라우드 채팅 앱이며, RAG/에이전트 기능이 내장되어 있습니다.',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 완전 오프라인으로 모델을 실행하는 데 초점을 맞춘 Nomic AI의 오픈소스 로컬 채팅 클라이언트로, Ekorbia의 Watch/오버레이/메모리 파일 조합보다 더 단순하고 더 오래전에 자리 잡은 기능 구성을 갖추고 있습니다.',
           '**[Open WebUI](/ko/local-llms/open-webui-review)** — 일반적으로 Ollama와 함께 실행되는, 자체 호스팅되는 브라우저 기반 인터페이스입니다. Ekorbia와 달리 네이티브 데스크톱 클라이언트가 아니라 웹 앱으로 배포됩니다.',
         ],
-        note: '이는 로컬 우선 채팅 클라이언트의 완전한 목록이 아닙니다 — Ekorbia 자체의 등재 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 우선 채팅 클라이언트의 완전한 목록이 아닙니다 — Ekorbia 자체의 등재 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 위에서 다룬 다른 채팅 클라이언트들과 나란히 Ekorbia의 등재 항목을 포함한, 본 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 위에서 다룬 다른 채팅 클라이언트들과 나란히 Ekorbia의 등재 항목을 포함한, 본 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
           '[Jan 리뷰 2026](/ko/power-local-llm/jan-review) — 모든 플랫폼에서 내장 엔진을 갖춘 무료 오픈소스 크로스플랫폼 앱으로, 본 리뷰에서 다룬 가장 근접한 비교 대상.',
           '[Msty 리뷰 2026](/ko/power-local-llm/msty-review) — 진정으로 무료인 핵심 요금제를 갖춘 크로스플랫폼 로컬+클라우드 채팅 앱으로, 더 자리 잡은 대안을 원할 때 유용합니다.',
           '[BoltAI 리뷰 2026](/ko/power-local-llm/boltai-review) — 일회성 구매 방식의 폐쇄형 소스 네이티브 Mac 앱으로, 더 성숙하고 서명된 애플리케이션에 한 번만 비용을 지불하고 싶은 경우 유용한 비교 대상입니다.',

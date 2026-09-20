@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LlamaIndex Review](/power-local-llm/llamaindex-rag-framework-review) — a framework for building RAG applications, for comparison against PrivateGPT\'s API-layer positioning.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted personal AI tool with document search, closer to PrivateGPT\'s original positioning.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LlamaIndex Review](/de/power-local-llm/llamaindex-rag-framework-review) — ein Framework zum Bau von RAG-Anwendungen, zum Vergleich mit PrivateGPTs API-Schicht-Positionierung.',
           '[Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehostetes persönliches KI-Tool mit Dokumentensuche, näher an PrivateGPTs ursprünglicher Positionierung.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Review de LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework pour construire des applications RAG, en comparaison du positionnement en couche API de PrivateGPT.',
           '[Review de Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un outil IA personnel auto-hébergé avec recherche documentaire, plus proche du positionnement original de PrivateGPT.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
         ],
       },
     },
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LlamaIndexレビュー](/ja/power-local-llm/llamaindex-rag-framework-review) — RAGアプリケーションを構築するためのフレームワーク。PrivateGPTのAPIレイヤーとしての位置づけとの比較。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — ドキュメント検索機能を持つセルフホスト型の個人向けAIツール。PrivateGPTの元々の位置づけに近い。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LlamaIndex评测](/zh/power-local-llm/llamaindex-rag-framework-review) — 一个用于构建RAG应用的框架，可与PrivateGPT的API层定位进行比较。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 一款带文档搜索功能的自托管个人AI工具，更接近PrivateGPT最初的定位。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) — un framework para construir aplicaciones RAG, para comparar con el posicionamiento de PrivateGPT como capa de API.',
           '[Reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — una herramienta personal de IA autoalojada con búsqueda de documentos, más cercana al posicionamiento original de PrivateGPT.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Review do LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework para construir aplicações RAG, para comparação com o posicionamento em camada de API do PrivateGPT.',
           '[Review do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — uma ferramenta de IA pessoal auto-hospedada com busca de documentos, mais próxima do posicionamento original do PrivateGPT.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار عمل لبناء تطبيقات RAG، للمقارنة مع تموضع PrivateGPT كطبقة API.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — أداة ذكاء اصطناعي شخصية ذاتية الاستضافة مع بحث في المستندات، أقرب إلى تموضع PrivateGPT الأصلي.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[Local LLM Software Directory 2026](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LlamaIndex 리뷰](/ko/power-local-llm/llamaindex-rag-framework-review) — RAG 애플리케이션을 구축하는 프레임워크로, PrivateGPT의 API 레이어 포지셔닝과 비교하기 위한 것.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — 문서 검색 기능을 갖춘 셀프호스팅 개인용 AI 도구로, PrivateGPT의 원래 포지셔닝에 더 가까움.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

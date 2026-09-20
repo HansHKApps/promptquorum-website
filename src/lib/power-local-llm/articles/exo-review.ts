@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo Review: Distributed AI Inference Across Multiple Devices',
     seoTitle: 'exo Review: Distributed AI Inference Across Devices',
-    intro: 'exo ([exolabs.net](https://exolabs.net), source code at [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) is a free, open-source framework, maintained by exo labs, that connects multiple everyday devices — primarily Apple Silicon Macs, with CPU-only Linux support — into a single distributed inference cluster, so you can run models too large for any one machine by splitting them across the hardware you already own. This review is the companion piece to exo\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) and covers how exo\'s clustering actually works, its license, supported platforms and model formats, and where it sits next to other distributed and cluster-inference tools such as [GPUStack](https://gpustack.ai), [llama.cpp\'s RPC backend](/power-local-llm/llama-cpp-explained), and [Petals](https://github.com/bigscience-workshop/petals).',
+    intro: 'exo ([exolabs.net](https://exolabs.net), source code at [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) is a free, open-source framework, maintained by exo labs, that connects multiple everyday devices — primarily Apple Silicon Macs, with CPU-only Linux support — into a single distributed inference cluster, so you can run models too large for any one machine by splitting them across the hardware you already own. This review is the companion piece to exo\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) and covers how exo\'s clustering actually works, its license, supported platforms and model formats, and where it sits next to other distributed and cluster-inference tools such as [GPUStack](https://gpustack.ai), [llama.cpp\'s RPC backend](/power-local-llm/llama-cpp-explained), and [Petals](https://github.com/bigscience-workshop/petals).',
     metaDescription: 'exo is a free, open-source (Apache-2.0) framework that pools multiple Apple Silicon Macs, or Linux CPUs, into one AI inference cluster via automatic device discovery and MLX-based model sharding.',
     readTime: '11 min read',
     targetKeywords: [
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (Apple Silicon) is the primary, tested platform; Linux runs CPU-only today (GPU support is listed as "under development" in exo\'s own [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md)); Windows is not currently supported',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the companion piece to exo\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how exo compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the companion piece to exo\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how exo compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -195,13 +195,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo vs. Other Distributed Inference Tools',
-        content: 'exo sits in the distributed/cluster local-inference segment, alongside other projects that split a model across multiple machines rather than serving it from one. Here is how it compares — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'exo sits in the distributed/cluster local-inference segment, alongside other projects that split a model across multiple machines rather than serving it from one. Here is how it compares — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full catalog.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — an open-source GPU cluster manager (Apache-2.0) that pools GPUs across Linux, Windows, and macOS and can serve models through Ollama, vLLM, or llama.cpp as backends; a broader, backend-agnostic cluster manager compared to exo\'s MLX-specific, Apple-Silicon-first design. GPUStack has its own entry in PromptQuorum\'s [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          '**[GPUStack](https://gpustack.ai)** — an open-source GPU cluster manager (Apache-2.0) that pools GPUs across Linux, Windows, and macOS and can serve models through Ollama, vLLM, or llama.cpp as backends; a broader, backend-agnostic cluster manager compared to exo\'s MLX-specific, Apple-Silicon-first design. GPUStack has its own entry in PromptQuorum\'s [Local LLM Software Directory](https://www.promptquorum.com/directory).',
           '**[llama.cpp\'s RPC backend](/power-local-llm/llama-cpp-explained)** — llama.cpp ships an experimental `ggml-rpc-server` that offloads computation to remote hosts for distributed inference; its own maintainers label it a "proof-of-concept" that is "fragile and insecure" and warn never to expose it on an open network, a materially different maturity and security posture than exo\'s documented clustering.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — a research project from the BigScience workshop that runs large models "BitTorrent-style" across a public, volunteer-run swarm of consumer GPUs, rather than a private cluster of devices you own; a different trust model from exo\'s LAN-based clustering, aimed at collaborative inference across strangers\' hardware rather than your own local network.',
         ],
-        note: 'This is not an exhaustive list of distributed or cluster-inference tools — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including exo\'s own directory entry.',
+        note: 'This is not an exhaustive list of distributed or cluster-inference tools — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full, regularly updated catalog, including exo\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including exo\'s directory entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including exo\'s directory entry.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — background on the GGUF-first inference engine whose experimental RPC backend is the closest same-project alternative to exo\'s clustering.',
           '[MLX-LM Explained](/power-local-llm/mlx-lm-explained) — the single-device MLX inference library that exo builds distributed clustering on top of.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — a production-grade, single/multi-GPU serving engine, a different scaling approach from exo\'s multi-device clustering.',
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo Review: Verteilte KI-Inferenz über mehrere Geräte',
     seoTitle: 'exo Review: Verteilte KI-Inferenz über Geräte',
-    intro: 'exo ([exolabs.net](https://exolabs.net), Quellcode unter [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) ist ein kostenloses, quelloffenes Framework von exo labs, das mehrere alltägliche Geräte – vor allem Apple-Silicon-Macs, mit reiner CPU-Unterstützung unter Linux – zu einem verteilten Inferenz-Cluster verbindet, sodass Sie Modelle ausführen können, die für ein einzelnes Gerät zu groß sind, indem Sie sie auf bereits vorhandene Hardware aufteilen. Diese Review ist das Begleitstück zu exos Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und behandelt, wie exos Clustering tatsächlich funktioniert, welche Lizenz gilt, welche Plattformen und Modellformate unterstützt werden, und wo es sich im Vergleich zu anderen verteilten Cluster-Inferenz-Tools wie [GPUStack](https://gpustack.ai), [llama.cpps RPC-Backend](/de/power-local-llm/llama-cpp-explained) und [Petals](https://github.com/bigscience-workshop/petals) einordnet.',
+    intro: 'exo ([exolabs.net](https://exolabs.net), Quellcode unter [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) ist ein kostenloses, quelloffenes Framework von exo labs, das mehrere alltägliche Geräte – vor allem Apple-Silicon-Macs, mit reiner CPU-Unterstützung unter Linux – zu einem verteilten Inferenz-Cluster verbindet, sodass Sie Modelle ausführen können, die für ein einzelnes Gerät zu groß sind, indem Sie sie auf bereits vorhandene Hardware aufteilen. Diese Review ist das Begleitstück zu exos Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) und behandelt, wie exos Clustering tatsächlich funktioniert, welche Lizenz gilt, welche Plattformen und Modellformate unterstützt werden, und wo es sich im Vergleich zu anderen verteilten Cluster-Inferenz-Tools wie [GPUStack](https://gpustack.ai), [llama.cpps RPC-Backend](/de/power-local-llm/llama-cpp-explained) und [Petals](https://github.com/bigscience-workshop/petals) einordnet.',
     metaDescription: 'exo ist ein kostenloses, quelloffenes (Apache-2.0) Framework, das mehrere Apple-Silicon-Macs oder Linux-CPUs per automatischer Geräteerkennung und MLX-basiertem Model-Sharding zu einem KI-Cluster bündelt.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (Apple Silicon) ist die primäre, getestete Plattform; Linux läuft aktuell nur mit CPU (GPU-Unterstützung wird laut exos eigener [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md) als „in Entwicklung" geführt); Windows wird derzeit nicht unterstützt',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das Begleitstück zu exos Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) – dort sehen Sie auf einen Blick, wie exo im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das Begleitstück zu exos Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) – dort sehen Sie auf einen Blick, wie exo im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -442,13 +442,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo vs. andere verteilte Inferenz-Tools',
-        content: 'exo bewegt sich im Segment verteiltes/Cluster-basiertes lokales Inferencing, neben anderen Projekten, die ein Modell auf mehrere Maschinen aufteilen, statt es von einer einzigen auszuliefern. So schneidet es im Vergleich ab – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'exo bewegt sich im Segment verteiltes/Cluster-basiertes lokales Inferencing, neben anderen Projekten, die ein Modell auf mehrere Maschinen aufteilen, statt es von einer einzigen auszuliefern. So schneidet es im Vergleich ab – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen Katalog.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — ein quelloffener GPU-Cluster-Manager (Apache-2.0), der GPUs über Linux, Windows und macOS hinweg bündelt und Modelle über Ollama, vLLM oder llama.cpp als Backends ausliefern kann; ein breiterer, backend-agnostischer Cluster-Manager im Vergleich zu exos MLX-spezifischem, auf Apple Silicon zugeschnittenem Design. GPUStack hat einen eigenen Eintrag in PromptQuorums [lokalem KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          '**[GPUStack](https://gpustack.ai)** — ein quelloffener GPU-Cluster-Manager (Apache-2.0), der GPUs über Linux, Windows und macOS hinweg bündelt und Modelle über Ollama, vLLM oder llama.cpp als Backends ausliefern kann; ein breiterer, backend-agnostischer Cluster-Manager im Vergleich zu exos MLX-spezifischem, auf Apple Silicon zugeschnittenem Design. GPUStack hat einen eigenen Eintrag in PromptQuorums [lokalem KI-Software-Verzeichnis](https://www.promptquorum.com/directory).',
           '**[llama.cpps RPC-Backend](/de/power-local-llm/llama-cpp-explained)** — llama.cpp liefert einen experimentellen `ggml-rpc-server`, der Berechnungen für verteilte Inferenz an entfernte Hosts auslagert; die eigenen Maintainer bezeichnen ihn als „proof-of-concept", der „fragile and insecure" sei, und warnen davor, ihn jemals in einem offenen Netzwerk freizugeben – ein deutlich anderer Reife- und Sicherheitsstatus als exos dokumentiertes Clustering.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — ein Forschungsprojekt der BigScience-Workshop-Initiative, das große Modelle „BitTorrent-artig" über einen öffentlichen, von Freiwilligen betriebenen Schwarm von Consumer-GPUs ausführt, statt über einen privaten Cluster eigener Geräte; ein anderes Vertrauensmodell als exos LAN-basiertes Clustering, ausgerichtet auf kollaborative Inferenz über fremde Hardware statt Ihr eigenes lokales Netzwerk.',
         ],
-        note: 'Dies ist keine vollständige Liste verteilter oder Cluster-Inferenz-Tools – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich exos eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine vollständige Liste verteilter oder Cluster-Inferenz-Tools – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich exos eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive exos Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive exos Verzeichniseintrag.',
           '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — Hintergrund zur GGUF-first-Inferenz-Engine, deren experimentelles RPC-Backend die nächstliegende Alternative desselben Genres zu exos Clustering ist.',
           '[MLX-LM erklärt](/de/power-local-llm/mlx-lm-explained) — die Single-Device-MLX-Inferenzbibliothek, auf der exo sein verteiltes Clustering aufbaut.',
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — eine produktionsreife Single-/Multi-GPU-Serving-Engine, ein anderer Skalierungsansatz als exos Multi-Device-Clustering.',
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo Review : inférence IA distribuée sur plusieurs appareils',
     seoTitle: 'exo Review : inférence IA distribuée multi-appareils',
-    intro: 'exo ([exolabs.net](https://exolabs.net), code source sur [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) est un framework gratuit et open source, maintenu par exo labs, qui connecte plusieurs appareils du quotidien — principalement des Mac Apple Silicon, avec un support Linux limité au CPU — en un cluster d\'inférence distribué unique, afin d\'exécuter des modèles trop volumineux pour un seul appareil en les répartissant sur le matériel que vous possédez déjà. Cette review est le complément de l\'entrée d\'exo dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) et couvre le fonctionnement réel du clustering d\'exo, sa licence, les plateformes et formats de modèles pris en charge, ainsi que sa place face à d\'autres outils d\'inférence distribuée/cluster comme [GPUStack](https://gpustack.ai), [le backend RPC de llama.cpp](/fr/power-local-llm/llama-cpp-explained) et [Petals](https://github.com/bigscience-workshop/petals).',
+    intro: 'exo ([exolabs.net](https://exolabs.net), code source sur [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) est un framework gratuit et open source, maintenu par exo labs, qui connecte plusieurs appareils du quotidien — principalement des Mac Apple Silicon, avec un support Linux limité au CPU — en un cluster d\'inférence distribué unique, afin d\'exécuter des modèles trop volumineux pour un seul appareil en les répartissant sur le matériel que vous possédez déjà. Cette review est le complément de l\'entrée d\'exo dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) et couvre le fonctionnement réel du clustering d\'exo, sa licence, les plateformes et formats de modèles pris en charge, ainsi que sa place face à d\'autres outils d\'inférence distribuée/cluster comme [GPUStack](https://gpustack.ai), [le backend RPC de llama.cpp](/fr/power-local-llm/llama-cpp-explained) et [Petals](https://github.com/bigscience-workshop/petals).',
     metaDescription: 'exo est un framework gratuit et open source (Apache-2.0) qui regroupe plusieurs Mac Apple Silicon ou CPU Linux en un cluster d\'inférence IA via découverte automatique des appareils et sharding basé sur MLX.',
     readTime: '11 min de lecture',
     targetKeywords: [
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (Apple Silicon) est la plateforme principale et testée ; Linux fonctionne aujourd\'hui uniquement sur CPU (le support GPU est listé comme « en développement » dans le [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md) d\'exo) ; Windows n\'est actuellement pas pris en charge',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément de l\'entrée d\'exo dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment exo se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément de l\'entrée d\'exo dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) — consultez cette page pour voir en un coup d\'œil comment exo se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -689,13 +689,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo face aux autres outils d\'inférence distribuée',
-        content: 'exo se situe dans le segment de l\'inférence locale distribuée/en cluster, aux côtés d\'autres projets qui répartissent un modèle sur plusieurs machines plutôt que de le servir depuis une seule. Voici comment il se compare — voir l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'exo se situe dans le segment de l\'inférence locale distribuée/en cluster, aux côtés d\'autres projets qui répartissent un modèle sur plusieurs machines plutôt que de le servir depuis une seule. Voici comment il se compare — voir l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) pour le catalogue complet.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — un gestionnaire de cluster GPU open source (Apache-2.0) qui regroupe des GPU sur Linux, Windows et macOS et peut servir des modèles via Ollama, vLLM ou llama.cpp comme backends ; un gestionnaire de cluster plus large et indépendant du backend, comparé à la conception spécifique MLX et centrée Apple Silicon d\'exo. GPUStack a sa propre entrée dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) de PromptQuorum.',
+          '**[GPUStack](https://gpustack.ai)** — un gestionnaire de cluster GPU open source (Apache-2.0) qui regroupe des GPU sur Linux, Windows et macOS et peut servir des modèles via Ollama, vLLM ou llama.cpp comme backends ; un gestionnaire de cluster plus large et indépendant du backend, comparé à la conception spécifique MLX et centrée Apple Silicon d\'exo. GPUStack a sa propre entrée dans l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) de PromptQuorum.',
           '**[Le backend RPC de llama.cpp](/fr/power-local-llm/llama-cpp-explained)** — llama.cpp propose un `ggml-rpc-server` expérimental qui décharge le calcul vers des hôtes distants pour l\'inférence distribuée ; ses propres mainteneurs le qualifient de « proof-of-concept » « fragile and insecure » et déconseillent formellement de l\'exposer sur un réseau ouvert, une posture de maturité et de sécurité nettement différente de celle du clustering documenté d\'exo.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — un projet de recherche de l\'atelier BigScience qui exécute de grands modèles « à la BitTorrent » sur un essaim public de GPU grand public géré par des volontaires, plutôt que sur un cluster privé d\'appareils vous appartenant ; un modèle de confiance différent du clustering en réseau local d\'exo, orienté vers l\'inférence collaborative sur du matériel inconnu plutôt que sur votre propre réseau local.',
         ],
-        note: 'Cette liste n\'est pas exhaustive concernant les outils d\'inférence distribuée ou en cluster — voir l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre d\'exo dans l\'annuaire.',
+        note: 'Cette liste n\'est pas exhaustive concernant les outils d\'inférence distribuée ou en cluster — voir l\'[annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre d\'exo dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée d\'exo dans l\'annuaire.',
+          '[Annuaire des logiciels d\'IA locale](https://www.promptquorum.com/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée d\'exo dans l\'annuaire.',
           '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — contexte sur le moteur d\'inférence GGUF-first dont le backend RPC expérimental est l\'alternative la plus proche, du même genre de projet, au clustering d\'exo.',
           '[MLX-LM expliqué](/fr/power-local-llm/mlx-lm-explained) — la bibliothèque d\'inférence MLX mono-appareil sur laquelle exo construit son clustering distribué.',
           '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — un moteur de service GPU mono/multi-GPU de qualité production, une approche de mise à l\'échelle différente du clustering multi-appareils d\'exo.',
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo Review: inferencia de IA distribuida en múltiples dispositivos',
     seoTitle: 'exo Review: inferencia de IA distribuida multi-dispositivo',
-    intro: 'exo ([exolabs.net](https://exolabs.net), código fuente en [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) es un framework gratuito y de código abierto, mantenido por exo labs, que conecta varios dispositivos cotidianos — principalmente Mac Apple Silicon, con soporte de Linux limitado a CPU — en un único clúster de inferencia distribuida, para poder ejecutar modelos demasiado grandes para un solo equipo repartiéndolos entre el hardware que ya posee. Esta review es el complemento de la entrada de exo en el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) y cubre cómo funciona realmente el clustering de exo, su licencia, las plataformas y formatos de modelo compatibles, y dónde se ubica junto a otras herramientas de inferencia distribuida/en clúster como [GPUStack](https://gpustack.ai), [el backend RPC de llama.cpp](/es/power-local-llm/llama-cpp-explained) y [Petals](https://github.com/bigscience-workshop/petals).',
+    intro: 'exo ([exolabs.net](https://exolabs.net), código fuente en [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) es un framework gratuito y de código abierto, mantenido por exo labs, que conecta varios dispositivos cotidianos — principalmente Mac Apple Silicon, con soporte de Linux limitado a CPU — en un único clúster de inferencia distribuida, para poder ejecutar modelos demasiado grandes para un solo equipo repartiéndolos entre el hardware que ya posee. Esta review es el complemento de la entrada de exo en el [directorio de software de IA local](https://www.promptquorum.com/directory) y cubre cómo funciona realmente el clustering de exo, su licencia, las plataformas y formatos de modelo compatibles, y dónde se ubica junto a otras herramientas de inferencia distribuida/en clúster como [GPUStack](https://gpustack.ai), [el backend RPC de llama.cpp](/es/power-local-llm/llama-cpp-explained) y [Petals](https://github.com/bigscience-workshop/petals).',
     metaDescription: 'exo es un framework gratuito y de código abierto (Apache-2.0) que agrupa varios Mac Apple Silicon o CPU Linux en un clúster de IA mediante descubrimiento automático de dispositivos y sharding basado en MLX.',
     readTime: '11 min de lectura',
     targetKeywords: [
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (Apple Silicon) es la plataforma principal y probada; Linux hoy solo funciona con CPU (el soporte de GPU figura como "en desarrollo" en el propio [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md) de exo); Windows no es compatible actualmente',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento de la entrada de exo en el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara exo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento de la entrada de exo en el [directorio de software de IA local](https://www.promptquorum.com/directory) — consulte esa página para ver de un vistazo cómo se compara exo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -936,13 +936,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo frente a otras herramientas de inferencia distribuida',
-        content: 'exo se ubica en el segmento de inferencia local distribuida/en clúster, junto a otros proyectos que reparten un modelo entre varias máquinas en lugar de servirlo desde una sola. Así se compara: consulte el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'exo se ubica en el segmento de inferencia local distribuida/en clúster, junto a otros proyectos que reparten un modelo entre varias máquinas en lugar de servirlo desde una sola. Así se compara: consulte el [directorio de software de IA local](https://www.promptquorum.com/directory) para el catálogo completo.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — un gestor de clústeres de GPU de código abierto (Apache-2.0) que agrupa GPU en Linux, Windows y macOS y puede servir modelos usando Ollama, vLLM o llama.cpp como backends; un gestor de clústeres más amplio y agnóstico del backend, frente al diseño específico de MLX y centrado en Apple Silicon de exo. GPUStack tiene su propia entrada en el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) de PromptQuorum.',
+          '**[GPUStack](https://gpustack.ai)** — un gestor de clústeres de GPU de código abierto (Apache-2.0) que agrupa GPU en Linux, Windows y macOS y puede servir modelos usando Ollama, vLLM o llama.cpp como backends; un gestor de clústeres más amplio y agnóstico del backend, frente al diseño específico de MLX y centrado en Apple Silicon de exo. GPUStack tiene su propia entrada en el [directorio de software de IA local](https://www.promptquorum.com/directory) de PromptQuorum.',
           '**[El backend RPC de llama.cpp](/es/power-local-llm/llama-cpp-explained)** — llama.cpp incluye un `ggml-rpc-server` experimental que delega el cómputo a hosts remotos para inferencia distribuida; sus propios mantenedores lo califican de "proof-of-concept" "fragile and insecure" y advierten que nunca debe exponerse en una red abierta, una postura de madurez y seguridad muy distinta del clustering documentado de exo.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — un proyecto de investigación del taller BigScience que ejecuta modelos grandes "al estilo BitTorrent" sobre un enjambre público de GPU de consumo gestionado por voluntarios, en lugar de un clúster privado de dispositivos propios; un modelo de confianza distinto del clustering en red local de exo, orientado a inferencia colaborativa sobre hardware ajeno en vez de su propia red local.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de inferencia distribuida o en clúster — consulte el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado periódicamente, incluida la propia entrada de exo en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de inferencia distribuida o en clúster — consulte el [directorio de software de IA local](https://www.promptquorum.com/directory) para el catálogo completo y actualizado periódicamente, incluida la propia entrada de exo en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de exo en el directorio.',
+          '[Directorio de software de IA local](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de exo en el directorio.',
           '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — contexto sobre el motor de inferencia GGUF-first cuyo backend RPC experimental es la alternativa más cercana, del mismo tipo de proyecto, al clustering de exo.',
           '[MLX-LM explicado](/es/power-local-llm/mlx-lm-explained) — la biblioteca de inferencia MLX de un solo dispositivo sobre la que exo construye su clustering distribuido.',
           '[vLLM explicado](/es/power-local-llm/vllm-explained) — un motor de servicio GPU de un solo/múltiples GPU de nivel producción, un enfoque de escalado distinto del clustering multi-dispositivo de exo.',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo Review: inferência de IA distribuída em vários dispositivos',
     seoTitle: 'exo Review: inferência de IA distribuída multi-dispositivo',
-    intro: 'exo ([exolabs.net](https://exolabs.net), código-fonte em [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) é um framework gratuito e de código aberto, mantido pela exo labs, que conecta vários dispositivos do dia a dia — principalmente Mac Apple Silicon, com suporte a Linux limitado a CPU — em um único cluster de inferência distribuída, para que você possa executar modelos grandes demais para um único equipamento distribuindo-os pelo hardware que já possui. Esta review é o complemento à entrada da exo no [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) e cobre como o clustering da exo realmente funciona, sua licença, plataformas e formatos de modelo suportados, e onde ela se posiciona em relação a outras ferramentas de inferência distribuída/em cluster como [GPUStack](https://gpustack.ai), [o backend RPC do llama.cpp](/pt/power-local-llm/llama-cpp-explained) e [Petals](https://github.com/bigscience-workshop/petals).',
+    intro: 'exo ([exolabs.net](https://exolabs.net), código-fonte em [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) é um framework gratuito e de código aberto, mantido pela exo labs, que conecta vários dispositivos do dia a dia — principalmente Mac Apple Silicon, com suporte a Linux limitado a CPU — em um único cluster de inferência distribuída, para que você possa executar modelos grandes demais para um único equipamento distribuindo-os pelo hardware que já possui. Esta review é o complemento à entrada da exo no [diretório de software de IA local](https://www.promptquorum.com/directory) e cobre como o clustering da exo realmente funciona, sua licença, plataformas e formatos de modelo suportados, e onde ela se posiciona em relação a outras ferramentas de inferência distribuída/em cluster como [GPUStack](https://gpustack.ai), [o backend RPC do llama.cpp](/pt/power-local-llm/llama-cpp-explained) e [Petals](https://github.com/bigscience-workshop/petals).',
     metaDescription: 'exo é um framework gratuito e de código aberto (Apache-2.0) que reúne vários Mac Apple Silicon ou CPUs Linux em um cluster de IA via descoberta automática de dispositivos e sharding baseado em MLX.',
     readTime: '11 min de leitura',
     targetKeywords: [
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (Apple Silicon) é a plataforma principal e testada; o Linux hoje roda apenas com CPU (o suporte a GPU consta como "em desenvolvimento" no próprio [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md) da exo); o Windows não é compatível atualmente',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento à entrada da exo no [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente a exo com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento à entrada da exo no [diretório de software de IA local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente a exo com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1183,13 +1183,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo vs. outras ferramentas de inferência distribuída',
-        content: 'A exo se situa no segmento de inferência local distribuída/em cluster, ao lado de outros projetos que dividem um modelo entre várias máquinas em vez de servi-lo a partir de uma só. Veja como ela se compara — consulte o [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'A exo se situa no segmento de inferência local distribuída/em cluster, ao lado de outros projetos que dividem um modelo entre várias máquinas em vez de servi-lo a partir de uma só. Veja como ela se compara — consulte o [diretório de software de IA local](https://www.promptquorum.com/directory) para o catálogo completo.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — um gerenciador de cluster de GPU de código aberto (Apache-2.0) que reúne GPUs em Linux, Windows e macOS e pode servir modelos usando Ollama, vLLM ou llama.cpp como backends; um gerenciador de cluster mais amplo e agnóstico de backend, em comparação com o design específico de MLX e focado em Apple Silicon da exo. O GPUStack tem sua própria entrada no [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) da PromptQuorum.',
+          '**[GPUStack](https://gpustack.ai)** — um gerenciador de cluster de GPU de código aberto (Apache-2.0) que reúne GPUs em Linux, Windows e macOS e pode servir modelos usando Ollama, vLLM ou llama.cpp como backends; um gerenciador de cluster mais amplo e agnóstico de backend, em comparação com o design específico de MLX e focado em Apple Silicon da exo. O GPUStack tem sua própria entrada no [diretório de software de IA local](https://www.promptquorum.com/directory) da PromptQuorum.',
           '**[O backend RPC do llama.cpp](/pt/power-local-llm/llama-cpp-explained)** — o llama.cpp traz um `ggml-rpc-server` experimental que descarrega computação para hosts remotos para inferência distribuída; seus próprios mantenedores o classificam como "proof-of-concept" que é "fragile and insecure" e alertam para nunca expô-lo em uma rede aberta, uma postura de maturidade e segurança bem diferente do clustering documentado da exo.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — um projeto de pesquisa do workshop BigScience que executa modelos grandes "no estilo BitTorrent" em um enxame público de GPUs de consumo operado por voluntários, em vez de um cluster privado de dispositivos próprios; um modelo de confiança diferente do clustering em rede local da exo, voltado para inferência colaborativa em hardware de estranhos, em vez da sua própria rede local.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de inferência distribuída ou em cluster — consulte o [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada da exo no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de inferência distribuída ou em cluster — consulte o [diretório de software de IA local](https://www.promptquorum.com/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada da exo no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada da exo no diretório.',
+          '[Diretório de software de IA local](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada da exo no diretório.',
           '[llama.cpp explicado](/pt/power-local-llm/llama-cpp-explained) — contexto sobre a engine de inferência GGUF-first cujo backend RPC experimental é a alternativa mais próxima, do mesmo tipo de projeto, ao clustering da exo.',
           '[MLX-LM explicado](/pt/power-local-llm/mlx-lm-explained) — a biblioteca de inferência MLX de dispositivo único sobre a qual a exo constrói seu clustering distribuído.',
           '[vLLM explicado](/pt/power-local-llm/vllm-explained) — uma engine de serviço GPU de nível produção, single/multi-GPU, uma abordagem de escalonamento diferente do clustering multi-dispositivo da exo.',
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exoレビュー:複数デバイスにまたがる分散AI推論',
     seoTitle: 'exoレビュー:複数デバイスの分散AI推論',
-    intro: 'exo([exolabs.net](https://exolabs.net)、ソースコードは[github.com/exo-explore/exo](https://github.com/exo-explore/exo))は、exo labsが保守する無料のオープンソースフレームワークで、主にApple SiliconのMac(LinuxはCPUのみ対応)といった日常的な複数のデバイスを1つの分散推論クラスターに接続し、単一マシンには大きすぎるモデルを、すでに所有しているハードウェアに分散させて実行できるようにします。本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるexoのエントリーの補完記事であり、exoのクラスタリングが実際にどう機能するか、ライセンス、対応プラットフォームとモデル形式、そして[GPUStack](https://gpustack.ai)、[llama.cppのRPCバックエンド](/ja/power-local-llm/llama-cpp-explained)、[Petals](https://github.com/bigscience-workshop/petals)といった他の分散/クラスター推論ツールとの位置づけを取り上げます。',
+    intro: 'exo([exolabs.net](https://exolabs.net)、ソースコードは[github.com/exo-explore/exo](https://github.com/exo-explore/exo))は、exo labsが保守する無料のオープンソースフレームワークで、主にApple SiliconのMac(LinuxはCPUのみ対応)といった日常的な複数のデバイスを1つの分散推論クラスターに接続し、単一マシンには大きすぎるモデルを、すでに所有しているハードウェアに分散させて実行できるようにします。本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるexoのエントリーの補完記事であり、exoのクラスタリングが実際にどう機能するか、ライセンス、対応プラットフォームとモデル形式、そして[GPUStack](https://gpustack.ai)、[llama.cppのRPCバックエンド](/ja/power-local-llm/llama-cpp-explained)、[Petals](https://github.com/bigscience-workshop/petals)といった他の分散/クラスター推論ツールとの位置づけを取り上げます。',
     metaDescription: 'exoは無料のオープンソース(Apache-2.0)フレームワークで、自動デバイス検出とMLXベースのモデルシャーディングにより、複数のApple SiliconのMacやLinux CPUを1つのAIクラスターに束ねます。',
     readTime: '11分で読めます',
     targetKeywords: [
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS(Apple Silicon)が主要な、テスト済みのプラットフォーム。Linuxは現時点でCPUのみで動作(GPU対応はexo自身の[PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md)で「開発中」と記載)。Windowsは現在非対応',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるexoのエントリーの補完記事です — exoが他の数十のローカルAIツールと比べてどうかを一目で確認できます。' },
+          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるexoのエントリーの補完記事です — exoが他の数十のローカルAIツールと比べてどうかを一目で確認できます。' },
         ],
       },
       overview: {
@@ -1430,13 +1430,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo対他の分散推論ツール',
-        content: 'exoは、単一マシンからモデルを提供するのではなく複数のマシンにモデルを分割する他のプロジェクトと並んで、分散/クラスター型のローカル推論セグメントに位置する。以下は比較である — 完全なカタログについては[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照。',
+        content: 'exoは、単一マシンからモデルを提供するのではなく複数のマシンにモデルを分割する他のプロジェクトと並んで、分散/クラスター型のローカル推論セグメントに位置する。以下は比較である — 完全なカタログについては[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照。',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — Linux、Windows、macOSにまたがってGPUをプールし、Ollama、vLLM、llama.cppをバックエンドとしてモデルを提供できるオープンソースのGPUクラスターマネージャー(Apache-2.0)。exoのMLX固有でApple Silicon優先の設計と比べ、より広範でバックエンドに依存しないクラスターマネージャーである。GPUStackはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)に独自のエントリーを持つ。',
+          '**[GPUStack](https://gpustack.ai)** — Linux、Windows、macOSにまたがってGPUをプールし、Ollama、vLLM、llama.cppをバックエンドとしてモデルを提供できるオープンソースのGPUクラスターマネージャー(Apache-2.0)。exoのMLX固有でApple Silicon優先の設計と比べ、より広範でバックエンドに依存しないクラスターマネージャーである。GPUStackはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)に独自のエントリーを持つ。',
           '**[llama.cppのRPCバックエンド](/ja/power-local-llm/llama-cpp-explained)** — llama.cppは、分散推論のために計算をリモートホストにオフロードする実験的な`ggml-rpc-server`を提供している。開発者自身がこれを「proof-of-concept」であり「fragile and insecure」であると評しており、オープンネットワーク上で決して公開しないよう警告している。これはexoの文書化されたクラスタリングとは成熟度とセキュリティ面で大きく異なる立ち位置である。',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — BigScienceワークショップの研究プロジェクトで、自分の所有するデバイスによるプライベートクラスターではなく、ボランティアが運営する公開のコンシューマーGPU群にまたがって大規模モデルを「BitTorrent方式」で実行する。exoのLANベースのクラスタリングとは異なる信頼モデルであり、自分のローカルネットワークではなく見知らぬ人のハードウェアにまたがる協調推論を目指している。',
         ],
-        note: 'これは分散/クラスター推論ツールの網羅的なリストではない — 定期的に更新される完全なカタログ(exo自身のディレクトリエントリーを含む)については、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照。',
+        note: 'これは分散/クラスター推論ツールの網羅的なリストではない — 定期的に更新される完全なカタログ(exo自身のディレクトリエントリーを含む)については、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全なカタログ。exoのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — 本記事が属するローカルAIツールの完全なカタログ。exoのディレクトリエントリーを含む。',
           '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained) — GGUF優先の推論エンジンの背景。その実験的なRPCバックエンドは、同じ種類のプロジェクトの中でexoのクラスタリングに最も近い代替手段である。',
           '[MLX-LM解説](/ja/power-local-llm/mlx-lm-explained) — exoが分散クラスタリングの基盤とする単一デバイス向けMLX推論ライブラリ。',
           '[vLLM解説](/ja/power-local-llm/vllm-explained) — 本番グレードの単一/マルチGPUサービングエンジン。exoのマルチデバイスクラスタリングとは異なるスケーリング手法。',
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo评测:跨多设备的分布式AI推理',
     seoTitle: 'exo评测:多设备分布式AI推理',
-    intro: 'exo([exolabs.net](https://exolabs.net),源代码位于[github.com/exo-explore/exo](https://github.com/exo-explore/exo))是由exo labs维护的免费开源框架,可将多台日常设备——主要是Apple Silicon Mac,Linux目前仅支持CPU——连接成单一的分布式推理集群,让你把模型拆分到已经拥有的硬件上运行单台设备装不下的模型。本评测是exo在[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中条目的配套文章,涵盖exo的集群机制实际如何运作、许可证、支持的平台和模型格式,以及它相对于[GPUStack](https://gpustack.ai)、[llama.cpp的RPC后端](/zh/power-local-llm/llama-cpp-explained)、[Petals](https://github.com/bigscience-workshop/petals)等其他分布式/集群推理工具的定位。',
+    intro: 'exo([exolabs.net](https://exolabs.net),源代码位于[github.com/exo-explore/exo](https://github.com/exo-explore/exo))是由exo labs维护的免费开源框架,可将多台日常设备——主要是Apple Silicon Mac,Linux目前仅支持CPU——连接成单一的分布式推理集群,让你把模型拆分到已经拥有的硬件上运行单台设备装不下的模型。本评测是exo在[本地LLM软件目录](https://www.promptquorum.com/directory)中条目的配套文章,涵盖exo的集群机制实际如何运作、许可证、支持的平台和模型格式,以及它相对于[GPUStack](https://gpustack.ai)、[llama.cpp的RPC后端](/zh/power-local-llm/llama-cpp-explained)、[Petals](https://github.com/bigscience-workshop/petals)等其他分布式/集群推理工具的定位。',
     metaDescription: 'exo是一个免费开源(Apache-2.0)框架,通过自动设备发现和基于MLX的模型分片,将多台Apple Silicon Mac或Linux CPU汇集为一个AI推理集群。',
     readTime: '11分钟阅读',
     targetKeywords: [
@@ -1562,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS(Apple Silicon)是主要且经过测试的平台;Linux目前仅能以CPU方式运行(GPU支持在exo自身的[PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md)中标注为"开发中");Windows目前不受支持',
         ],
         callouts: [
-          { type: 'note', text: '本评测是exo在[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中条目的配套文章——请前往该页面一览exo与其他数十款本地AI工具的对比。' },
+          { type: 'note', text: '本评测是exo在[本地LLM软件目录](https://www.promptquorum.com/directory)中条目的配套文章——请前往该页面一览exo与其他数十款本地AI工具的对比。' },
         ],
       },
       overview: {
@@ -1677,13 +1677,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo与其他分布式推理工具对比',
-        content: 'exo属于分布式/集群本地推理这一细分领域,与其他将模型拆分到多台机器而非从单台机器提供服务的项目并列。以下是对比情况——完整目录请参见[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        content: 'exo属于分布式/集群本地推理这一细分领域,与其他将模型拆分到多台机器而非从单台机器提供服务的项目并列。以下是对比情况——完整目录请参见[本地LLM软件目录](https://www.promptquorum.com/directory)。',
         items: [
-          '**[GPUStack](https://gpustack.ai)** ——一个开源GPU集群管理器(Apache-2.0),可跨Linux、Windows和macOS汇集GPU,并可使用Ollama、vLLM或llama.cpp作为后端提供模型服务;相比exo专属于MLX、以Apple Silicon为先的设计,GPUStack是一个更广泛、与后端无关的集群管理器。GPUStack在PromptQuorum的[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中有自己的条目。',
+          '**[GPUStack](https://gpustack.ai)** ——一个开源GPU集群管理器(Apache-2.0),可跨Linux、Windows和macOS汇集GPU,并可使用Ollama、vLLM或llama.cpp作为后端提供模型服务;相比exo专属于MLX、以Apple Silicon为先的设计,GPUStack是一个更广泛、与后端无关的集群管理器。GPUStack在PromptQuorum的[本地LLM软件目录](https://www.promptquorum.com/directory)中有自己的条目。',
           '**[llama.cpp的RPC后端](/zh/power-local-llm/llama-cpp-explained)** ——llama.cpp提供了一个实验性的`ggml-rpc-server`,可将计算卸载到远程主机以实现分布式推理;其维护者自己将其称为"proof-of-concept"(概念验证),"fragile and insecure"(脆弱且不安全),并警告切勿将其暴露在开放网络上,这与exo已记录的集群机制在成熟度和安全姿态上有着显著差异。',
           '**[Petals](https://github.com/bigscience-workshop/petals)** ——BigScience workshop的一个研究项目,以"类似BitTorrent"的方式在由志愿者运营的公共消费级GPU群体上运行大模型,而非在你自己拥有设备组成的私有集群上运行;这与exo基于局域网的集群模式是不同的信任模型,其面向的是在陌生人硬件上进行协作推理,而非你自己的本地网络。',
         ],
-        note: '这并非分布式或集群推理工具的详尽清单——完整且定期更新的目录(包括exo自身的目录条目)请参见[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        note: '这并非分布式或集群推理工具的详尽清单——完整且定期更新的目录(包括exo自身的目录条目)请参见[本地LLM软件目录](https://www.promptquorum.com/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) ——本文所属的本地AI工具完整目录,包含exo的目录条目。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) ——本文所属的本地AI工具完整目录,包含exo的目录条目。',
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) ——关于以GGUF优先的推理引擎的背景介绍,其实验性RPC后端是同类项目中与exo集群机制最接近的替代方案。',
           '[MLX-LM详解](/zh/power-local-llm/mlx-lm-explained) ——exo构建其分布式集群机制所基于的单设备MLX推理库。',
           '[vLLM详解](/zh/power-local-llm/vllm-explained) ——一个生产级的单/多GPU服务引擎,与exo的多设备集群方式是不同的扩展思路。',
@@ -1749,7 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'مراجعة exo: استدلال ذكاء اصطناعي موزّع عبر عدة أجهزة',
     seoTitle: 'مراجعة exo: استدلال ذكاء اصطناعي موزّع عبر الأجهزة',
-    intro: 'exo ([exolabs.net](https://exolabs.net)، والكود المصدري على [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) هو إطار عمل مجاني ومفتوح المصدر تديره exo labs، يربط عدة أجهزة يومية — بشكل أساسي أجهزة Mac بمعالج Apple Silicon، مع دعم لينكس محصور بالمعالج (CPU) فقط — في عنقود استدلال موزّع واحد، حتى تتمكن من تشغيل نماذج أكبر من أن يتسع لها جهاز واحد عبر توزيعها على الأجهزة التي تملكها بالفعل. هذه المراجعة هي المقال المكمّل لإدراج exo في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، وتتناول كيفية عمل تجميع exo فعليًا، ترخيصه، المنصات وصيغ النماذج المدعومة، وموقعه مقارنة بأدوات الاستدلال الموزّع/العنقودي الأخرى مثل [GPUStack](https://gpustack.ai) و[واجهة RPC الخلفية في llama.cpp](/ar/power-local-llm/llama-cpp-explained) و[Petals](https://github.com/bigscience-workshop/petals).',
+    intro: 'exo ([exolabs.net](https://exolabs.net)، والكود المصدري على [github.com/exo-explore/exo](https://github.com/exo-explore/exo)) هو إطار عمل مجاني ومفتوح المصدر تديره exo labs، يربط عدة أجهزة يومية — بشكل أساسي أجهزة Mac بمعالج Apple Silicon، مع دعم لينكس محصور بالمعالج (CPU) فقط — في عنقود استدلال موزّع واحد، حتى تتمكن من تشغيل نماذج أكبر من أن يتسع لها جهاز واحد عبر توزيعها على الأجهزة التي تملكها بالفعل. هذه المراجعة هي المقال المكمّل لإدراج exo في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)، وتتناول كيفية عمل تجميع exo فعليًا، ترخيصه، المنصات وصيغ النماذج المدعومة، وموقعه مقارنة بأدوات الاستدلال الموزّع/العنقودي الأخرى مثل [GPUStack](https://gpustack.ai) و[واجهة RPC الخلفية في llama.cpp](/ar/power-local-llm/llama-cpp-explained) و[Petals](https://github.com/bigscience-workshop/petals).',
     metaDescription: 'exo إطار عمل مجاني ومفتوح المصدر (Apache-2.0) يجمّع عدة أجهزة Mac بمعالج Apple Silicon أو معالجات لينكس في عنقود ذكاء اصطناعي واحد عبر الاكتشاف التلقائي للأجهزة وتقسيم النماذج القائم على MLX.',
     readTime: '11 دقيقة قراءة',
     targetKeywords: [
@@ -1809,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS (بمعالج Apple Silicon) هو المنصة الأساسية والمختبرة؛ يعمل لينكس حاليًا بالمعالج فقط (دعم وحدة المعالجة الرسومية مُدرج كـ"قيد التطوير" في ملف [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md) الخاص بـexo)؛ ويندوز غير مدعوم حاليًا',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المكمّل لإدراج exo في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن exo بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلي الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المقال المكمّل لإدراج exo في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمعرفة كيف يقارن exo بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلي الأخرى.' },
         ],
       },
       overview: {
@@ -1924,13 +1924,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo مقابل أدوات الاستدلال الموزّع الأخرى',
-        content: 'يقع exo ضمن قطاع الاستدلال المحلي الموزّع/العنقودي، إلى جانب مشاريع أخرى تقسّم نموذجًا على عدة أجهزة بدلاً من تقديمه من جهاز واحد. إليك كيف يقارن — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يقع exo ضمن قطاع الاستدلال المحلي الموزّع/العنقودي، إلى جانب مشاريع أخرى تقسّم نموذجًا على عدة أجهزة بدلاً من تقديمه من جهاز واحد. إليك كيف يقارن — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) للاطلاع على الكتالوج الكامل.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — مدير عنقود وحدات معالجة رسومية مفتوح المصدر (Apache-2.0) يجمّع وحدات المعالجة الرسومية عبر لينكس وويندوز وmacOS، ويمكنه تقديم النماذج عبر Ollama أو vLLM أو llama.cpp كخلفيات؛ مدير عنقود أوسع نطاقًا ومستقل عن الخلفية، مقارنة بتصميم exo الخاص بـMLX والموجّه أولاً نحو Apple Silicon. يمتلك GPUStack إدراجًا خاصًا به في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) الخاص بـPromptQuorum.',
+          '**[GPUStack](https://gpustack.ai)** — مدير عنقود وحدات معالجة رسومية مفتوح المصدر (Apache-2.0) يجمّع وحدات المعالجة الرسومية عبر لينكس وويندوز وmacOS، ويمكنه تقديم النماذج عبر Ollama أو vLLM أو llama.cpp كخلفيات؛ مدير عنقود أوسع نطاقًا ومستقل عن الخلفية، مقارنة بتصميم exo الخاص بـMLX والموجّه أولاً نحو Apple Silicon. يمتلك GPUStack إدراجًا خاصًا به في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) الخاص بـPromptQuorum.',
           '**[واجهة RPC الخلفية في llama.cpp](/ar/power-local-llm/llama-cpp-explained)** — يوفّر llama.cpp خادم `ggml-rpc-server` تجريبيًا ينقل الحوسبة إلى مضيفات بعيدة لتحقيق الاستدلال الموزّع؛ ويصفه القائمون على صيانته أنفسهم بأنه "نموذج إثبات مفهوم" (proof-of-concept) "هشّ وغير آمن" (fragile and insecure)، ويحذّرون من عدم تعريضه أبدًا على شبكة مفتوحة، وهو موقف نضج وأمان مختلف جوهريًا عن تجميع exo الموثّق.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — مشروع بحثي من ورشة عمل BigScience يشغّل نماذج كبيرة "بأسلوب BitTorrent" عبر سرب عام من وحدات معالجة رسومية استهلاكية يديره متطوعون، بدلاً من عنقود خاص من أجهزة تملكها؛ نموذج ثقة مختلف عن تجميع exo القائم على الشبكة المحلية، وموجّه نحو الاستدلال التعاوني على أجهزة غرباء بدلاً من شبكتك المحلية الخاصة.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال الموزّع أو العنقودي — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدراج exo الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال الموزّع أو العنقودي — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدراج exo الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، ويشمل إدراج exo في الدليل.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، ويشمل إدراج exo في الدليل.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — خلفية عن محرك الاستدلال الذي يُعطي الأولوية لـGGUF، والذي تُعد واجهة RPC الخلفية التجريبية فيه البديل الأقرب من نفس نوع المشروع لتجميع exo.',
           '[شرح MLX-LM](/ar/power-local-llm/mlx-lm-explained) — مكتبة الاستدلال MLX أحادية الجهاز التي يبني exo تجميعه الموزّع فوقها.',
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — محرك تقديم على مستوى الإنتاج لوحدة معالجة رسومية واحدة/متعددة، وهو نهج توسّع مختلف عن تجميع exo متعدد الأجهزة.',
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'exo',
     title: 'exo 리뷰: 여러 기기에 걸친 분산 AI 추론',
     seoTitle: 'exo 리뷰: 여러 기기의 분산 AI 추론',
-    intro: 'exo([exolabs.net](https://exolabs.net), 소스 코드는 [github.com/exo-explore/exo](https://github.com/exo-explore/exo))는 exo labs가 관리하는 무료 오픈소스 프레임워크로, 주로 Apple Silicon Mac(Linux는 CPU만 지원)과 같은 일상적인 여러 기기를 하나의 분산 추론 클러스터로 연결해, 이미 보유한 하드웨어에 모델을 분산시켜 단일 기기로는 실행할 수 없는 대형 모델을 실행할 수 있게 해줍니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 exo 항목의 보완 자료로, exo의 클러스터링이 실제로 어떻게 작동하는지, 라이선스, 지원 플랫폼 및 모델 형식, 그리고 [GPUStack](https://gpustack.ai), [llama.cpp의 RPC 백엔드](/ko/power-local-llm/llama-cpp-explained), [Petals](https://github.com/bigscience-workshop/petals)와 같은 다른 분산/클러스터 추론 도구들과 비교했을 때의 위치를 다룹니다.',
+    intro: 'exo([exolabs.net](https://exolabs.net), 소스 코드는 [github.com/exo-explore/exo](https://github.com/exo-explore/exo))는 exo labs가 관리하는 무료 오픈소스 프레임워크로, 주로 Apple Silicon Mac(Linux는 CPU만 지원)과 같은 일상적인 여러 기기를 하나의 분산 추론 클러스터로 연결해, 이미 보유한 하드웨어에 모델을 분산시켜 단일 기기로는 실행할 수 없는 대형 모델을 실행할 수 있게 해줍니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 exo 항목의 보완 자료로, exo의 클러스터링이 실제로 어떻게 작동하는지, 라이선스, 지원 플랫폼 및 모델 형식, 그리고 [GPUStack](https://gpustack.ai), [llama.cpp의 RPC 백엔드](/ko/power-local-llm/llama-cpp-explained), [Petals](https://github.com/bigscience-workshop/petals)와 같은 다른 분산/클러스터 추론 도구들과 비교했을 때의 위치를 다룹니다.',
     metaDescription: 'exo는 자동 기기 검색과 MLX 기반 모델 샤딩을 통해 여러 대의 Apple Silicon Mac이나 Linux CPU를 하나의 AI 클러스터로 묶는 무료 오픈소스(Apache-2.0) 프레임워크입니다.',
     readTime: '11분 읽기',
     targetKeywords: [
@@ -2056,7 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS(Apple Silicon)가 주요하고 테스트된 플랫폼이며, Linux는 현재 CPU로만 실행됨(GPU 지원은 exo 자체 [PLATFORMS.md](https://github.com/exo-explore/exo/blob/main/PLATFORMS.md)에서 "개발 중"으로 표기됨). Windows는 현재 지원되지 않음',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 exo 항목의 보완 자료입니다 — exo가 수십 개의 다른 로컬 AI 도구와 비교해 어떤지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 exo 항목의 보완 자료입니다 — exo가 수십 개의 다른 로컬 AI 도구와 비교해 어떤지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2171,13 +2171,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'exo와 다른 분산 추론 도구 비교',
-        content: 'exo는 단일 머신에서 모델을 서비스하는 대신 여러 머신에 모델을 분할하는 다른 프로젝트들과 함께 분산/클러스터 로컬 추론 영역에 속한다. 다음은 비교 내용이다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하라.',
+        content: 'exo는 단일 머신에서 모델을 서비스하는 대신 여러 머신에 모델을 분할하는 다른 프로젝트들과 함께 분산/클러스터 로컬 추론 영역에 속한다. 다음은 비교 내용이다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참고하라.',
         items: [
-          '**[GPUStack](https://gpustack.ai)** — Linux, Windows, macOS 전반에서 GPU를 모으고 Ollama, vLLM, llama.cpp를 백엔드로 모델을 서비스할 수 있는 오픈소스 GPU 클러스터 매니저(Apache-2.0)다. exo의 MLX 전용, Apple Silicon 우선 설계에 비해 더 광범위하고 백엔드에 구애받지 않는 클러스터 매니저다. GPUStack은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 자체 항목이 있다.',
+          '**[GPUStack](https://gpustack.ai)** — Linux, Windows, macOS 전반에서 GPU를 모으고 Ollama, vLLM, llama.cpp를 백엔드로 모델을 서비스할 수 있는 오픈소스 GPU 클러스터 매니저(Apache-2.0)다. exo의 MLX 전용, Apple Silicon 우선 설계에 비해 더 광범위하고 백엔드에 구애받지 않는 클러스터 매니저다. GPUStack은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 자체 항목이 있다.',
           '**[llama.cpp의 RPC 백엔드](/ko/power-local-llm/llama-cpp-explained)** — llama.cpp는 분산 추론을 위해 원격 호스트로 연산을 오프로드하는 실험적인 `ggml-rpc-server`를 제공한다. 이 프로젝트의 유지보수자들 스스로 이를 "취약하고 안전하지 않은"(fragile and insecure) "개념 증명"(proof-of-concept)이라고 표현하며 공개 네트워크에 절대 노출하지 말라고 경고한다. 이는 exo가 문서화한 클러스터링과는 성숙도와 보안 측면에서 상당히 다른 위치에 있다.',
           '**[Petals](https://github.com/bigscience-workshop/petals)** — BigScience 워크숍의 연구 프로젝트로, 자신이 소유한 기기로 구성된 프라이빗 클러스터가 아니라 자원봉사자가 운영하는 공개 소비자용 GPU 무리에서 "BitTorrent 방식"으로 대형 모델을 실행한다. exo의 LAN 기반 클러스터링과는 다른 신뢰 모델로, 자신의 로컬 네트워크가 아니라 낯선 사람의 하드웨어에 걸친 협업 추론을 지향한다.',
         ],
-        note: '이는 분산 또는 클러스터 추론 도구의 총망라 목록이 아니다 — exo 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하라.',
+        note: '이는 분산 또는 클러스터 추론 도구의 총망라 목록이 아니다 — exo 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참고하라.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, exo의 디렉터리 항목을 포함한다.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, exo의 디렉터리 항목을 포함한다.',
           '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained) — GGUF를 우선시하는 추론 엔진에 대한 배경 지식으로, 그 실험적인 RPC 백엔드는 같은 종류의 프로젝트 중 exo의 클러스터링에 가장 가까운 대안이다.',
           '[MLX-LM 설명](/ko/power-local-llm/mlx-lm-explained) — exo가 분산 클러스터링을 구축하는 기반이 되는 단일 기기용 MLX 추론 라이브러리.',
           '[vLLM 설명](/ko/power-local-llm/vllm-explained) — 프로덕션급 단일/다중 GPU 서빙 엔진으로, exo의 다중 기기 클러스터링과는 다른 확장 방식이다.',

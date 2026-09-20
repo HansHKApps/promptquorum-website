@@ -223,7 +223,7 @@ export default function PtAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">Conteúdo de LLMs locais</div>
                   <div className="text-sm text-text-secondary">Guias para rodar LLMs no seu próprio hardware — configuração, requisitos e comparações.</div>
                 </Link>
-                <Link href="/pt/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/pt/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">Diretório de software de LLMs locais</div>
                   <div className="text-sm text-text-secondary">Um diretório pesquisável de apps e ferramentas de LLM locais, comparados lado a lado.</div>
                 </Link>

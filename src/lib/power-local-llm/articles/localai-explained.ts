@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the text-inference engine LocalAI can load as one of its backends.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — the high-throughput GPU serving library LocalAI can also load as a text backend.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
           '[Best GPU Buying Guide for Local LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU tiers to consider if you plan to run LocalAI with GPU-accelerated backends.',
         ],
       },
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die Text-Inferenz-Engine, die LocalAI als eines seiner Backends laden kann.',
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — die Hochdurchsatz-GPU-Serving-Bibliothek, die LocalAI ebenfalls als Text-Backend laden kann.',
-          '[Local LLM Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Klassen zur Orientierung, falls LocalAI mit GPU-beschleunigten Backends betrieben werden soll.',
         ],
       },
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence texte que LocalAI peut charger comme l\'un de ses backends.',
           '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — la bibliothèque de serving GPU à haut débit que LocalAI peut aussi charger comme backend texte.',
-          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie.',
+          '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie.',
           '[Guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — les gammes de GPU à considérer si vous prévoyez de faire tourner LocalAI avec des backends accélérés par GPU.',
         ],
       },
@@ -1128,7 +1128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia de texto que LocalAI puede cargar como uno de sus backends.',
           '[vLLM explicado](/es/power-local-llm/vllm-explained) — la biblioteca de serving GPU de alto rendimiento que LocalAI también puede cargar como backend de texto.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[Guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — niveles de GPU a considerar si planeas ejecutar LocalAI con backends acelerados por GPU.',
         ],
       },
@@ -1411,7 +1411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp explicado](/pt/power-local-llm/llama-cpp-explained) — o motor de inferência de texto que o LocalAI pode carregar como um de seus backends.',
           '[vLLM explicado](/pt/power-local-llm/vllm-explained) — a biblioteca de serving em GPU de alto throughput que o LocalAI também pode carregar como backend de texto.',
-          '[Diretório de software de LLMs locais](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLMs locais](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[Guia de compra de GPU para LLMs locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — níveis de GPU a considerar se você planeja rodar o LocalAI com backends acelerados por GPU.',
         ],
       },
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cppとは](/ja/power-local-llm/llama-cpp-explained) — LocalAIがバックエンドの一つとして読み込めるテキスト推論エンジン。',
           '[vLLMとは](/ja/power-local-llm/vllm-explained) — LocalAIがテキストバックエンドとして読み込める、高スループットGPUサービングライブラリ。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — この記事が属するローカルAIツールの全カタログ。',
           '[ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPUアクセラレーション対応バックエンドでLocalAIを動かす場合に検討すべきGPUクラス。',
         ],
       },
@@ -1977,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp 详解](/zh/power-local-llm/llama-cpp-explained) — LocalAI 可以作为其后端之一加载的文本推理引擎。',
           '[vLLM 详解](/zh/power-local-llm/vllm-explained) — LocalAI 也可以作为文本后端加载的高吞吐量 GPU 服务库。',
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录。',
+          '[本地 LLM 软件目录](/zh/directory) — 本文所属的完整本地 AI 工具目录。',
           '[本地 LLM GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 如果计划用 GPU 加速后端运行 LocalAI,可参考的 GPU 档位选择。',
         ],
       },
@@ -2260,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك استدلال النصوص الذي يمكن لـ LocalAI تحميله كإحدى خلفياته.',
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — مكتبة تقديم عالية الإنتاجية بوحدة معالجة رسومية يمكن لـ LocalAI تحميلها أيضًا كخلفية نصية.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال.',
           '[دليل شراء وحدة معالجة رسومية لنماذج اللغة المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — فئات وحدات المعالجة الرسومية التي تستحق النظر إذا كنت تخطط لتشغيل LocalAI بخلفيات مسرَّعة بوحدة معالجة رسومية.',
         ],
       },
@@ -2543,7 +2543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp 해설](/ko/power-local-llm/llama-cpp-explained) — LocalAI가 백엔드 중 하나로 로드할 수 있는 텍스트 추론 엔진.',
           '[vLLM 해설](/ko/power-local-llm/vllm-explained) — LocalAI가 텍스트 백엔드로도 로드할 수 있는 높은 처리량의 GPU 서빙 라이브러리.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU 가속 백엔드로 LocalAI를 실행할 계획이라면 고려할 만한 GPU 등급.',
         ],
       },

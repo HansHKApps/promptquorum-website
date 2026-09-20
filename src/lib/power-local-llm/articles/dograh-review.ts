@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh Review: Open-Source, Self-Hosted Voice AI Agent Platform',
     seoTitle: 'dograh Review: Self-Hosted Voice AI Agent Platform',
-    intro: 'dograh ([dograh.com](https://dograh.com), source code at [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) is an open-source platform for building production voice agents — phone-answering bots that listen, reason, and speak back in real time — that you deploy yourself via Docker rather than rent from a closed hosted vendor. It positions itself, per its own GitHub description, as an "on-prem, bring-your-own-key" alternative to hosted voice-agent platforms such as Vapi and Retell. This review is the companion piece to dograh\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) and covers what dograh actually is, how to self-host it, its local-model support, its license, and where it sits next to other voice-agent and speech tools such as [Voxa](/power-local-llm/voxa-review) and [Jarvis for Mac](/power-local-llm/jarvis-mac-review).',
+    intro: 'dograh ([dograh.com](https://dograh.com), source code at [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) is an open-source platform for building production voice agents — phone-answering bots that listen, reason, and speak back in real time — that you deploy yourself via Docker rather than rent from a closed hosted vendor. It positions itself, per its own GitHub description, as an "on-prem, bring-your-own-key" alternative to hosted voice-agent platforms such as Vapi and Retell. This review is the companion piece to dograh\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) and covers what dograh actually is, how to self-host it, its local-model support, its license, and where it sits next to other voice-agent and speech tools such as [Voxa](/power-local-llm/voxa-review) and [Jarvis for Mac](/power-local-llm/jarvis-mac-review).',
     metaDescription: 'dograh is an open-source, self-hosted voice AI agent platform (BSD-2-Clause) — a Vapi/Retell alternative with a Docker install and local LLM/STT/TTS support via Ollama, vLLM, and Speaches.',
     readTime: '10 min read',
     targetKeywords: [
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A separate managed cloud option at [app.dograh.com](https://app.dograh.com) costs $0.01/minute plus whatever the connected LLM/STT/TTS providers bill',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the companion piece to dograh\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how dograh compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the companion piece to dograh\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how dograh compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -192,14 +192,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh vs. Other Voice Agent and Speech Tools',
-        content: 'dograh sits in the real-time voice-agent segment, next to tools that focus on speech input/output rather than full call-handling platforms. Here is how it compares to other options in PromptQuorum\'s coverage — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'dograh sits in the real-time voice-agent segment, next to tools that focus on speech input/output rather than full call-handling platforms. Here is how it compares to other options in PromptQuorum\'s coverage — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full catalog.',
         items: [
           '**[Voxa](/power-local-llm/voxa-review)** — a real-time voice assistant focused on personal/desktop use rather than telephony call-handling; see the [Voxa review](/power-local-llm/voxa-review) if you want a conversational voice assistant, not a phone-agent builder.',
           '**[Jarvis for Mac](/power-local-llm/jarvis-mac-review)** — a macOS-native voice assistant; see the [Jarvis review](/power-local-llm/jarvis-mac-review) for a desktop-first alternative to dograh\'s server-deployed, telephony-oriented platform.',
           '**[faster-whisper](/power-local-llm/faster-whisper-review)** — the transcription engine that Speaches (dograh\'s documented local STT/TTS option) itself runs on; see the [faster-whisper review](/power-local-llm/faster-whisper-review) if you only need local speech-to-text, not a full agent platform.',
           '**[Whisper.cpp](/power-local-llm/whisper-cpp-review)** — another local, self-hosted speech-to-text engine; see the [Whisper.cpp review](/power-local-llm/whisper-cpp-review) for a lighter-weight transcription-only option than deploying dograh\'s full stack.',
         ],
-        note: 'This is not an exhaustive list of voice-agent and speech tools — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including dograh\'s own directory entry.',
+        note: 'This is not an exhaustive list of voice-agent and speech tools — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full, regularly updated catalog, including dograh\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including dograh\'s directory entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including dograh\'s directory entry.',
           '[Voxa Review](/power-local-llm/voxa-review) — a real-time desktop voice assistant, a different sub-category from dograh\'s telephony-focused platform.',
           '[Jarvis for Mac Review](/power-local-llm/jarvis-mac-review) — a macOS-native voice assistant alternative.',
           '[faster-whisper Review](/power-local-llm/faster-whisper-review) — the transcription engine underlying dograh\'s documented local STT option, Speaches.',
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh Review: Open-Source-Plattform für selbst gehostete Voice-AI-Agenten',
     seoTitle: 'dograh Review: Selbst gehostete Voice-AI-Plattform',
-    intro: 'dograh ([dograh.com](https://dograh.com), Quellcode unter [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) ist eine Open-Source-Plattform zum Bauen von "Voice Agents" – Bots, die Telefonanrufe entgegennehmen, zuhören, entscheiden und in Echtzeit antworten – die Sie selbst per Docker betreiben, statt sie von einem geschlossenen gehosteten Anbieter zu mieten. Laut eigener GitHub-Beschreibung positioniert sich dograh als "On-Prem, Bring-your-own-Key"-Alternative zu gehosteten Voice-Agent-Plattformen wie Vapi und Retell. Diese Review ist das Begleitstück zu dograhs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und behandelt, was dograh tatsächlich ist, wie Sie es selbst hosten, welche lokalen Modelle es unterstützt, welche Lizenz gilt und wo es sich im Vergleich zu anderen Voice-Agent- und Sprach-Tools wie [Voxa](/de/power-local-llm/voxa-review) und [Jarvis für Mac](/de/power-local-llm/jarvis-mac-review) einordnet.',
+    intro: 'dograh ([dograh.com](https://dograh.com), Quellcode unter [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) ist eine Open-Source-Plattform zum Bauen von "Voice Agents" – Bots, die Telefonanrufe entgegennehmen, zuhören, entscheiden und in Echtzeit antworten – die Sie selbst per Docker betreiben, statt sie von einem geschlossenen gehosteten Anbieter zu mieten. Laut eigener GitHub-Beschreibung positioniert sich dograh als "On-Prem, Bring-your-own-Key"-Alternative zu gehosteten Voice-Agent-Plattformen wie Vapi und Retell. Diese Review ist das Begleitstück zu dograhs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) und behandelt, was dograh tatsächlich ist, wie Sie es selbst hosten, welche lokalen Modelle es unterstützt, welche Lizenz gilt und wo es sich im Vergleich zu anderen Voice-Agent- und Sprach-Tools wie [Voxa](/de/power-local-llm/voxa-review) und [Jarvis für Mac](/de/power-local-llm/jarvis-mac-review) einordnet.',
     metaDescription: 'dograh ist eine quelloffene, selbst gehostete Voice-AI-Agenten-Plattform (BSD-2-Clause) – eine Vapi/Retell-Alternative mit Docker-Installation und lokalem LLM/STT/TTS via Ollama, vLLM und Speaches.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine separate gehostete Cloud-Option unter [app.dograh.com](https://app.dograh.com) kostet 0,01 $/Minute zuzüglich der Kosten der angebundenen LLM-/STT-/TTS-Anbieter',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das Begleitstück zu dograhs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) – dort finden Sie einen schnellen Überblick, wie dograh im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das Begleitstück zu dograhs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) – dort finden Sie einen schnellen Überblick, wie dograh im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -438,14 +438,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh vs. andere Voice-Agent- und Sprach-Tools',
-        content: 'dograh bewegt sich im Segment der Echtzeit-Voice-Agenten, neben Tools, die sich auf Sprach-Ein-/Ausgabe statt auf vollständige Anrufabwicklungsplattformen konzentrieren. So schneidet es im Vergleich zu anderen Optionen in PromptQuorums Berichterstattung ab – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'dograh bewegt sich im Segment der Echtzeit-Voice-Agenten, neben Tools, die sich auf Sprach-Ein-/Ausgabe statt auf vollständige Anrufabwicklungsplattformen konzentrieren. So schneidet es im Vergleich zu anderen Optionen in PromptQuorums Berichterstattung ab – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen Katalog.',
         items: [
           '**[Voxa](/de/power-local-llm/voxa-review)** – ein Echtzeit-Sprachassistent für den persönlichen/Desktop-Einsatz statt für Telefonie-Anrufabwicklung; siehe die [Voxa-Review](/de/power-local-llm/voxa-review) für einen dialogorientierten Sprachassistenten statt eines Telefon-Agenten-Builders.',
           '**[Jarvis für Mac](/de/power-local-llm/jarvis-mac-review)** – ein macOS-nativer Sprachassistent; siehe die [Jarvis-Review](/de/power-local-llm/jarvis-mac-review) für eine Desktop-first-Alternative zu dograhs server-basierter, telefonieorientierter Plattform.',
           '**[faster-whisper](/de/power-local-llm/faster-whisper-review)** – die Transkriptionsengine, auf der Speaches (dograhs dokumentierte lokale STT/TTS-Option) selbst basiert; siehe die [faster-whisper-Review](/de/power-local-llm/faster-whisper-review), falls Sie nur lokales Speech-to-Text statt einer vollständigen Agenten-Plattform benötigen.',
           '**[Whisper.cpp](/de/power-local-llm/whisper-cpp-review)** – eine weitere lokale, selbst gehostete Speech-to-Text-Engine; siehe die [Whisper.cpp-Review](/de/power-local-llm/whisper-cpp-review) für eine leichtgewichtigere, reine Transkriptionsoption gegenüber dem vollständigen dograh-Stack.',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Voice-Agent- und Sprach-Tools – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich dograhs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Voice-Agent- und Sprach-Tools – siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich dograhs eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) – der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich dograhs Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/directory) – der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich dograhs Verzeichniseintrag.',
           '[Voxa-Review](/de/power-local-llm/voxa-review) – ein Echtzeit-Desktop-Sprachassistent, eine andere Unterkategorie als dograhs telefonieorientierte Plattform.',
           '[Jarvis-für-Mac-Review](/de/power-local-llm/jarvis-mac-review) – eine macOS-native Sprachassistenten-Alternative.',
           '[faster-whisper-Review](/de/power-local-llm/faster-whisper-review) – die Transkriptionsengine hinter dograhs dokumentierter lokaler STT-Option Speaches.',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh Review : plateforme open source d\'agents vocaux auto-hébergée',
     seoTitle: 'dograh Review : plateforme de voice AI auto-hébergée',
-    intro: 'dograh ([dograh.com](https://dograh.com), code source sur [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) est une plateforme open source pour construire des « voice agents » — des bots qui répondent au téléphone, écoutent, raisonnent et répondent en temps réel — que vous déployez vous-même via Docker plutôt que de louer chez un fournisseur hébergé fermé. Elle se positionne, selon sa propre description GitHub, comme une alternative « on-prem, bring-your-own-key » aux plateformes hébergées comme Vapi et Retell. Cette review est le complément de la fiche de dograh dans le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) et couvre ce qu\'est réellement dograh, comment l\'auto-héberger, son support des modèles locaux, sa licence, et sa place face à d\'autres outils vocaux comme [Voxa](/fr/power-local-llm/voxa-review) et [Jarvis pour Mac](/fr/power-local-llm/jarvis-mac-review).',
+    intro: 'dograh ([dograh.com](https://dograh.com), code source sur [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) est une plateforme open source pour construire des « voice agents » — des bots qui répondent au téléphone, écoutent, raisonnent et répondent en temps réel — que vous déployez vous-même via Docker plutôt que de louer chez un fournisseur hébergé fermé. Elle se positionne, selon sa propre description GitHub, comme une alternative « on-prem, bring-your-own-key » aux plateformes hébergées comme Vapi et Retell. Cette review est le complément de la fiche de dograh dans le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/directory) et couvre ce qu\'est réellement dograh, comment l\'auto-héberger, son support des modèles locaux, sa licence, et sa place face à d\'autres outils vocaux comme [Voxa](/fr/power-local-llm/voxa-review) et [Jarvis pour Mac](/fr/power-local-llm/jarvis-mac-review).',
     metaDescription: 'dograh est une plateforme open source d\'agents vocaux auto-hébergée (BSD-2-Clause) — une alternative à Vapi/Retell avec installation Docker et support de LLM/STT/TTS locaux via Ollama, vLLM et Speaches.',
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une option cloud gérée distincte sur [app.dograh.com](https://app.dograh.com) coûte 0,01 $/minute plus l\'usage des fournisseurs LLM/STT/TTS connectés',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément de la fiche de dograh dans le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment dograh se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément de la fiche de dograh dans le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/directory) — consultez cette page pour voir en un coup d\'œil comment dograh se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -684,14 +684,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh face aux autres outils vocaux',
-        content: 'dograh se positionne dans le segment des agents vocaux en temps réel, aux côtés d\'outils centrés sur l\'entrée/sortie vocale plutôt que sur des plateformes complètes de gestion d\'appels. Voici comment il se compare à d\'autres options couvertes par PromptQuorum — voir le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'dograh se positionne dans le segment des agents vocaux en temps réel, aux côtés d\'outils centrés sur l\'entrée/sortie vocale plutôt que sur des plateformes complètes de gestion d\'appels. Voici comment il se compare à d\'autres options couvertes par PromptQuorum — voir le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/directory) pour le catalogue complet.',
         items: [
           '**[Voxa](/fr/power-local-llm/voxa-review)** — un assistant vocal en temps réel centré sur l\'usage personnel/de bureau plutôt que sur la gestion d\'appels téléphoniques ; voir la [review Voxa](/fr/power-local-llm/voxa-review) si vous voulez un assistant vocal conversationnel, pas un constructeur d\'agents téléphoniques.',
           '**[Jarvis pour Mac](/fr/power-local-llm/jarvis-mac-review)** — un assistant vocal natif macOS ; voir la [review Jarvis](/fr/power-local-llm/jarvis-mac-review) pour une alternative axée bureau à la plateforme de dograh, déployée sur serveur et orientée téléphonie.',
           '**[faster-whisper](/fr/power-local-llm/faster-whisper-review)** — le moteur de transcription sur lequel Speaches (l\'option STT/TTS locale documentée de dograh) repose lui-même ; voir la [review faster-whisper](/fr/power-local-llm/faster-whisper-review) si vous n\'avez besoin que de reconnaissance vocale locale, pas d\'une plateforme d\'agents complète.',
           '**[Whisper.cpp](/fr/power-local-llm/whisper-cpp-review)** — un autre moteur de reconnaissance vocale local et auto-hébergé ; voir la [review Whisper.cpp](/fr/power-local-llm/whisper-cpp-review) pour une option de transcription seule, plus légère que le déploiement de la pile complète de dograh.',
         ],
-        note: 'Cette liste n\'est pas exhaustive pour les outils d\'agents vocaux et de voix — voir le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche répertoire de dograh.',
+        note: 'Cette liste n\'est pas exhaustive pour les outils d\'agents vocaux et de voix — voir le [répertoire des logiciels d\'IA locale](https://www.promptquorum.com/directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche répertoire de dograh.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Répertoire des logiciels d\'IA locale](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche répertoire de dograh.',
+          '[Répertoire des logiciels d\'IA locale](https://www.promptquorum.com/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche répertoire de dograh.',
           '[Review Voxa](/fr/power-local-llm/voxa-review) — un assistant vocal de bureau en temps réel, une sous-catégorie différente de la plateforme de dograh orientée téléphonie.',
           '[Review Jarvis pour Mac](/fr/power-local-llm/jarvis-mac-review) — une alternative d\'assistant vocal native macOS.',
           '[Review faster-whisper](/fr/power-local-llm/faster-whisper-review) — le moteur de transcription sous-jacent à l\'option STT locale documentée de dograh, Speaches.',
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh Review: plataforma open source de agentes de voz autoalojada',
     seoTitle: 'dograh Review: plataforma de voice AI autoalojada',
-    intro: 'dograh ([dograh.com](https://dograh.com), código fuente en [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) es una plataforma open source para construir "voice agents" — bots que responden llamadas, escuchan, razonan y hablan en tiempo real — que despliegas tú mismo vía Docker en lugar de alquilarla a un proveedor alojado cerrado. Según su propia descripción en GitHub, se posiciona como una alternativa "on-prem, bring-your-own-key" a plataformas alojadas como Vapi y Retell. Esta review es el complemento de la ficha de dograh en el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) y cubre qué es realmente dograh, cómo autoalojarlo, su soporte de modelos locales, su licencia y cómo se compara con otras herramientas de voz como [Voxa](/es/power-local-llm/voxa-review) y [Jarvis para Mac](/es/power-local-llm/jarvis-mac-review).',
+    intro: 'dograh ([dograh.com](https://dograh.com), código fuente en [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) es una plataforma open source para construir "voice agents" — bots que responden llamadas, escuchan, razonan y hablan en tiempo real — que despliegas tú mismo vía Docker en lugar de alquilarla a un proveedor alojado cerrado. Según su propia descripción en GitHub, se posiciona como una alternativa "on-prem, bring-your-own-key" a plataformas alojadas como Vapi y Retell. Esta review es el complemento de la ficha de dograh en el [directorio de software de IA local](https://www.promptquorum.com/directory) y cubre qué es realmente dograh, cómo autoalojarlo, su soporte de modelos locales, su licencia y cómo se compara con otras herramientas de voz como [Voxa](/es/power-local-llm/voxa-review) y [Jarvis para Mac](/es/power-local-llm/jarvis-mac-review).',
     metaDescription: 'dograh es una plataforma open source de agentes de voz autoalojada (BSD-2-Clause) — una alternativa a Vapi/Retell con instalación vía Docker y soporte de LLM/STT/TTS locales mediante Ollama, vLLM y Speaches.',
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una opción de nube gestionada aparte en [app.dograh.com](https://app.dograh.com) cuesta $0.01/minuto más el uso de los proveedores de LLM/STT/TTS conectados',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento de la ficha de dograh en el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara dograh con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento de la ficha de dograh en el [directorio de software de IA local](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara dograh con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -930,14 +930,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh frente a otras herramientas de voz',
-        content: 'dograh se ubica en el segmento de agentes de voz en tiempo real, junto a herramientas centradas en la entrada/salida de voz más que en plataformas completas de gestión de llamadas. Así se compara con otras opciones cubiertas por PromptQuorum — consulta el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'dograh se ubica en el segmento de agentes de voz en tiempo real, junto a herramientas centradas en la entrada/salida de voz más que en plataformas completas de gestión de llamadas. Así se compara con otras opciones cubiertas por PromptQuorum — consulta el [directorio de software de IA local](https://www.promptquorum.com/directory) para el catálogo completo.',
         items: [
           '**[Voxa](/es/power-local-llm/voxa-review)** — un asistente de voz en tiempo real centrado en uso personal/de escritorio en lugar de gestión de llamadas telefónicas; ver la [review de Voxa](/es/power-local-llm/voxa-review) si quieres un asistente de voz conversacional, no un constructor de agentes telefónicos.',
           '**[Jarvis para Mac](/es/power-local-llm/jarvis-mac-review)** — un asistente de voz nativo de macOS; ver la [review de Jarvis](/es/power-local-llm/jarvis-mac-review) como alternativa centrada en escritorio frente a la plataforma de dograh, desplegada en servidor y orientada a telefonía.',
           '**[faster-whisper](/es/power-local-llm/faster-whisper-review)** — el motor de transcripción sobre el que funciona Speaches (la opción de STT/TTS local documentada de dograh); ver la [review de faster-whisper](/es/power-local-llm/faster-whisper-review) si solo necesitas reconocimiento de voz local, no una plataforma completa de agentes.',
           '**[Whisper.cpp](/es/power-local-llm/whisper-cpp-review)** — otro motor de reconocimiento de voz local y autoalojado; ver la [review de Whisper.cpp](/es/power-local-llm/whisper-cpp-review) para una opción de solo transcripción, más ligera que desplegar toda la pila de dograh.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de agentes de voz y voz — ver el [directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de directorio de dograh.',
+        note: 'Esta no es una lista exhaustiva de herramientas de agentes de voz y voz — ver el [directorio de software de IA local](https://www.promptquorum.com/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de directorio de dograh.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de directorio de dograh.',
+          '[Directorio de software de IA local](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de directorio de dograh.',
           '[Review de Voxa](/es/power-local-llm/voxa-review) — un asistente de voz de escritorio en tiempo real, una subcategoría distinta a la plataforma de dograh orientada a telefonía.',
           '[Review de Jarvis para Mac](/es/power-local-llm/jarvis-mac-review) — una alternativa de asistente de voz nativa de macOS.',
           '[Review de faster-whisper](/es/power-local-llm/faster-whisper-review) — el motor de transcripción subyacente a la opción de STT local documentada de dograh, Speaches.',
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh Review: plataforma open source de agentes de voz auto-hospedada',
     seoTitle: 'dograh Review: plataforma de voice AI auto-hospedada',
-    intro: 'dograh ([dograh.com](https://dograh.com), código-fonte em [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) é uma plataforma open source para construir "voice agents" — bots que atendem ligações, escutam, raciocinam e respondem em tempo real — que você mesmo implanta via Docker, em vez de alugar de um fornecedor hospedado fechado. Segundo sua própria descrição no GitHub, ela se posiciona como uma alternativa "on-prem, bring-your-own-key" a plataformas hospedadas como Vapi e Retell. Esta review é o complemento da ficha da dograh no [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) e cobre o que a dograh realmente é, como auto-hospedá-la, seu suporte a modelos locais, sua licença e como ela se compara a outras ferramentas de voz como [Voxa](/pt/power-local-llm/voxa-review) e [Jarvis para Mac](/pt/power-local-llm/jarvis-mac-review).',
+    intro: 'dograh ([dograh.com](https://dograh.com), código-fonte em [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) é uma plataforma open source para construir "voice agents" — bots que atendem ligações, escutam, raciocinam e respondem em tempo real — que você mesmo implanta via Docker, em vez de alugar de um fornecedor hospedado fechado. Segundo sua própria descrição no GitHub, ela se posiciona como uma alternativa "on-prem, bring-your-own-key" a plataformas hospedadas como Vapi e Retell. Esta review é o complemento da ficha da dograh no [diretório de software de IA local](https://www.promptquorum.com/directory) e cobre o que a dograh realmente é, como auto-hospedá-la, seu suporte a modelos locais, sua licença e como ela se compara a outras ferramentas de voz como [Voxa](/pt/power-local-llm/voxa-review) e [Jarvis para Mac](/pt/power-local-llm/jarvis-mac-review).',
     metaDescription: 'dograh é uma plataforma open source de agentes de voz auto-hospedada (BSD-2-Clause) — uma alternativa ao Vapi/Retell com instalação via Docker e suporte a LLM/STT/TTS locais via Ollama, vLLM e Speaches.',
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -1062,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uma opção de nuvem gerenciada separada em [app.dograh.com](https://app.dograh.com) custa $0,01/minuto mais o uso dos provedores de LLM/STT/TTS conectados',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento da ficha da dograh no [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente a dograh com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento da ficha da dograh no [diretório de software de IA local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente a dograh com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1176,14 +1176,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh vs. outras ferramentas de voz',
-        content: 'A dograh se situa no segmento de agentes de voz em tempo real, ao lado de ferramentas focadas em entrada/saída de voz em vez de plataformas completas de atendimento de ligações. Veja como ela se compara a outras opções cobertas pela PromptQuorum — consulte o [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'A dograh se situa no segmento de agentes de voz em tempo real, ao lado de ferramentas focadas em entrada/saída de voz em vez de plataformas completas de atendimento de ligações. Veja como ela se compara a outras opções cobertas pela PromptQuorum — consulte o [diretório de software de IA local](https://www.promptquorum.com/directory) para o catálogo completo.',
         items: [
           '**[Voxa](/pt/power-local-llm/voxa-review)** — um assistente de voz em tempo real focado em uso pessoal/desktop em vez de atendimento de ligações telefônicas; veja a [review da Voxa](/pt/power-local-llm/voxa-review) se você quer um assistente de voz conversacional, não um construtor de agentes telefônicos.',
           '**[Jarvis para Mac](/pt/power-local-llm/jarvis-mac-review)** — um assistente de voz nativo do macOS; veja a [review do Jarvis](/pt/power-local-llm/jarvis-mac-review) como alternativa focada em desktop à plataforma da dograh, implantada em servidor e orientada a telefonia.',
           '**[faster-whisper](/pt/power-local-llm/faster-whisper-review)** — o motor de transcrição sobre o qual o Speaches (a opção de STT/TTS local documentada da dograh) roda; veja a [review do faster-whisper](/pt/power-local-llm/faster-whisper-review) se você só precisa de reconhecimento de voz local, não de uma plataforma completa de agentes.',
           '**[Whisper.cpp](/pt/power-local-llm/whisper-cpp-review)** — outro motor de reconhecimento de voz local e auto-hospedado; veja a [review do Whisper.cpp](/pt/power-local-llm/whisper-cpp-review) para uma opção apenas de transcrição, mais leve do que implantar toda a stack da dograh.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de agentes de voz e voz — veja o [diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha de diretório da dograh.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de agentes de voz e voz — veja o [diretório de software de IA local](https://www.promptquorum.com/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha de diretório da dograh.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha de diretório da dograh.',
+          '[Diretório de software de IA local](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha de diretório da dograh.',
           '[Review da Voxa](/pt/power-local-llm/voxa-review) — um assistente de voz de desktop em tempo real, uma subcategoria diferente da plataforma da dograh orientada a telefonia.',
           '[Review do Jarvis para Mac](/pt/power-local-llm/jarvis-mac-review) — uma alternativa de assistente de voz nativa do macOS.',
           '[Review do faster-whisper](/pt/power-local-llm/faster-whisper-review) — o motor de transcrição por trás da opção de STT local documentada da dograh, o Speaches.',
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograhレビュー：セルフホスト型オープンソース音声AIエージェントプラットフォーム',
     seoTitle: 'dograhレビュー：セルフホスト型音声AIプラットフォーム',
-    intro: 'dograh（[dograh.com](https://dograh.com)、ソースコードは[github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)）は、電話をとって聞き取り、判断し、リアルタイムで応答する「voice agent」を構築するためのオープンソース・プラットフォームです。クローズドなホスト型ベンダーから借りるのではなく、Docker経由で自分自身でデプロイします。GitHub上の公式説明によれば、VapiやRetellのようなホスト型音声エージェントプラットフォームに対する「オンプレミス・Bring-your-own-key」な代替として位置づけられています。このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるdograhのエントリーの詳細版であり、dograhが実際に何であるか、どうセルフホストするか、ローカルモデルのサポート状況、ライセンス、そして[Voxa](/ja/power-local-llm/voxa-review)や[Jarvis for Mac](/ja/power-local-llm/jarvis-mac-review)といった他の音声ツールとの比較を扱います。',
+    intro: 'dograh（[dograh.com](https://dograh.com)、ソースコードは[github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)）は、電話をとって聞き取り、判断し、リアルタイムで応答する「voice agent」を構築するためのオープンソース・プラットフォームです。クローズドなホスト型ベンダーから借りるのではなく、Docker経由で自分自身でデプロイします。GitHub上の公式説明によれば、VapiやRetellのようなホスト型音声エージェントプラットフォームに対する「オンプレミス・Bring-your-own-key」な代替として位置づけられています。このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるdograhのエントリーの詳細版であり、dograhが実際に何であるか、どうセルフホストするか、ローカルモデルのサポート状況、ライセンス、そして[Voxa](/ja/power-local-llm/voxa-review)や[Jarvis for Mac](/ja/power-local-llm/jarvis-mac-review)といった他の音声ツールとの比較を扱います。',
     metaDescription: 'dograhはセルフホスト型のオープンソース音声AIエージェントプラットフォーム（BSD-2-Clause）。Dockerでインストールでき、Ollama・vLLM・SpeachesによるローカルLLM/STT/TTSに対応するVapi/Retellの代替です。',
     readTime: '10分で読了',
     targetKeywords: [
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[app.dograh.com](https://app.dograh.com)の別途マネージドクラウドオプションは、接続したLLM/STT/TTSプロバイダーの利用料に加えて1分あたり$0.01',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるdograhのエントリーの詳細版です — dograhが他の数十のローカルAIツールと比べてどう位置づけられるかは、そちらのページで一覧できます。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるdograhのエントリーの詳細版です — dograhが他の数十のローカルAIツールと比べてどう位置づけられるかは、そちらのページで一覧できます。' },
         ],
       },
       overview: {
@@ -1422,14 +1422,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograhと他の音声エージェント・音声ツールとの比較',
-        content: 'dograhはリアルタイム音声エージェントのセグメントに位置し、完全な通話対応プラットフォームというよりは音声の入出力に焦点を当てたツールと隣り合っています。PromptQuorumが扱う他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'dograhはリアルタイム音声エージェントのセグメントに位置し、完全な通話対応プラットフォームというよりは音声の入出力に焦点を当てたツールと隣り合っています。PromptQuorumが扱う他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照してください。',
         items: [
           '**[Voxa](/ja/power-local-llm/voxa-review)** — 電話テレフォニーの通話対応ではなく、個人・デスクトップ利用に焦点を当てたリアルタイム音声アシスタント；電話エージェントビルダーではなく対話型の音声アシスタントが欲しい場合は[Voxaレビュー](/ja/power-local-llm/voxa-review)を参照。',
           '**[Jarvis for Mac](/ja/power-local-llm/jarvis-mac-review)** — macOSネイティブの音声アシスタント；サーバー展開でテレフォニー志向のdograhのプラットフォームに対するデスクトップ優先の代替として、[Jarvisレビュー](/ja/power-local-llm/jarvis-mac-review)を参照。',
           '**[faster-whisper](/ja/power-local-llm/faster-whisper-review)** — Speaches（dograhがドキュメント化しているローカルSTT/TTSオプション）自体が土台とする文字起こしエンジン；完全なエージェントプラットフォームではなくローカルの音声認識だけが必要な場合は[faster-whisperレビュー](/ja/power-local-llm/faster-whisper-review)を参照。',
           '**[Whisper.cpp](/ja/power-local-llm/whisper-cpp-review)** — もうひとつのローカル・セルフホスト型音声認識エンジン；dograhのフルスタックを展開するより軽量な文字起こし専用の選択肢として[Whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review)を参照。',
         ],
-        note: 'これは音声エージェント・音声ツールの網羅的なリストではありません — dograh自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは音声エージェント・音声ツールの網羅的なリストではありません — dograh自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dograhのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — dograhのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
           '[Voxaレビュー](/ja/power-local-llm/voxa-review) — dograhのテレフォニー志向のプラットフォームとは異なるサブカテゴリの、リアルタイムデスクトップ音声アシスタント。',
           '[Jarvis for Macレビュー](/ja/power-local-llm/jarvis-mac-review) — macOSネイティブの音声アシスタントの代替。',
           '[faster-whisperレビュー](/ja/power-local-llm/faster-whisper-review) — dograhがドキュメント化しているローカルSTTオプションSpeachesの土台となっている文字起こしエンジン。',
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh评测：自托管开源语音AI智能体平台',
     seoTitle: 'dograh评测：自托管语音AI平台',
-    intro: 'dograh（[dograh.com](https://dograh.com)，源代码见[github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)）是一个用于构建"语音智能体"（voice agent）的开源平台——这类机器人能接听电话、聆听、推理并实时语音回应——你通过Docker自行部署，而不是向封闭的托管厂商租用。根据其GitHub自述，dograh将自己定位为Vapi和Retell等托管语音智能体平台的"本地部署、自带密钥"替代方案。本评测是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中dograh条目的深入版本，涵盖dograh究竟是什么、如何自托管、本地模型支持情况、许可证，以及它与[Voxa](/zh/power-local-llm/voxa-review)、[Jarvis for Mac](/zh/power-local-llm/jarvis-mac-review)等其他语音工具的对比。',
+    intro: 'dograh（[dograh.com](https://dograh.com)，源代码见[github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)）是一个用于构建"语音智能体"（voice agent）的开源平台——这类机器人能接听电话、聆听、推理并实时语音回应——你通过Docker自行部署，而不是向封闭的托管厂商租用。根据其GitHub自述，dograh将自己定位为Vapi和Retell等托管语音智能体平台的"本地部署、自带密钥"替代方案。本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中dograh条目的深入版本，涵盖dograh究竟是什么、如何自托管、本地模型支持情况、许可证，以及它与[Voxa](/zh/power-local-llm/voxa-review)、[Jarvis for Mac](/zh/power-local-llm/jarvis-mac-review)等其他语音工具的对比。',
     metaDescription: 'dograh是一个自托管的开源语音AI智能体平台（BSD-2-Clause许可），是Vapi/Retell的替代方案，支持Docker安装，并通过Ollama、vLLM和Speaches提供本地LLM/STT/TTS支持。',
     readTime: '阅读约10分钟',
     targetKeywords: [
@@ -1554,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[app.dograh.com](https://app.dograh.com)上独立的托管云选项按每分钟0.01美元加上所连接LLM/STT/TTS提供商的使用费收费',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中dograh条目的深入版本——该页面可让你一眼看出dograh与其他数十种本地AI工具相比处于什么位置。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中dograh条目的深入版本——该页面可让你一眼看出dograh与其他数十种本地AI工具相比处于什么位置。' },
         ],
       },
       overview: {
@@ -1668,14 +1668,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh与其他语音智能体和语音工具对比',
-        content: 'dograh属于实时语音智能体这一细分领域，与那些专注于语音输入/输出、而非完整通话处理平台的工具相邻。以下是它与PromptQuorum报道过的其他选项的对比——完整目录请参见[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        content: 'dograh属于实时语音智能体这一细分领域，与那些专注于语音输入/输出、而非完整通话处理平台的工具相邻。以下是它与PromptQuorum报道过的其他选项的对比——完整目录请参见[本地LLM软件目录](https://www.promptquorum.com/directory)。',
         items: [
           '**[Voxa](/zh/power-local-llm/voxa-review)** — 一款专注于个人/桌面使用而非电话通话处理的实时语音助手；如果你想要的是对话式语音助手而不是电话智能体构建器，请参见[Voxa评测](/zh/power-local-llm/voxa-review)。',
           '**[Jarvis for Mac](/zh/power-local-llm/jarvis-mac-review)** — 一款macOS原生语音助手；如果你想要一个桌面优先的替代方案，而不是dograh这种服务器部署、面向电话的平台，请参见[Jarvis评测](/zh/power-local-llm/jarvis-mac-review)。',
           '**[faster-whisper](/zh/power-local-llm/faster-whisper-review)** — Speaches（dograh文档中提到的本地STT/TTS选项）自身所依赖的转录引擎；如果你只需要本地语音识别，而不需要完整的智能体平台，请参见[faster-whisper评测](/zh/power-local-llm/faster-whisper-review)。',
           '**[Whisper.cpp](/zh/power-local-llm/whisper-cpp-review)** — 另一款本地自托管语音识别引擎；如果你想要比部署完整dograh技术栈更轻量的纯转录方案，请参见[Whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review)。',
         ],
-        note: '这并非语音智能体和语音工具的详尽列表——完整且定期更新的目录（包括dograh自身的目录条目），请参见[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        note: '这并非语音智能体和语音工具的详尽列表——完整且定期更新的目录（包括dograh自身的目录条目），请参见[本地LLM软件目录](https://www.promptquorum.com/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括dograh的目录条目。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录，包括dograh的目录条目。',
           '[Voxa评测](/zh/power-local-llm/voxa-review) — 一款实时桌面语音助手，与dograh面向电话的平台属于不同的细分类别。',
           '[Jarvis for Mac评测](/zh/power-local-llm/jarvis-mac-review) — 一款macOS原生语音助手替代方案。',
           '[faster-whisper评测](/zh/power-local-llm/faster-whisper-review) — dograh文档记载的本地STT选项Speaches所依赖的转录引擎。',
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'مراجعة dograh: منصة وكلاء صوتيين مفتوحة المصدر وذاتية الاستضافة',
     seoTitle: 'مراجعة dograh: منصة voice AI ذاتية الاستضافة',
-    intro: 'dograh ([dograh.com](https://dograh.com)، والشيفرة المصدرية على [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) هي منصة مفتوحة المصدر لبناء "وكلاء صوتيين" — روبوتات ترد على المكالمات الهاتفية أو تجريها، وتستمع، وتتخذ القرار، وتتحدث في الوقت الفعلي — تقوم بنشرها بنفسك عبر Docker بدلاً من استئجارها من مزوّد مستضاف مغلق. وبحسب وصفها الخاص على GitHub، تُموضع نفسها كبديل "على الخوادم الخاصة، مع مفاتيح خاصة بك" لمنصات وكلاء صوتيين مستضافة مثل Vapi وRetell. هذه المراجعة هي المكمّل لإدخال dograh في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، وتغطي ما هي dograh فعلياً، وكيفية استضافتها ذاتياً، ودعمها للنماذج المحلية، ورخصتها، وموقعها مقارنة بأدوات صوتية أخرى مثل [Voxa](/ar/power-local-llm/voxa-review) و[Jarvis for Mac](/ar/power-local-llm/jarvis-mac-review).',
+    intro: 'dograh ([dograh.com](https://dograh.com)، والشيفرة المصدرية على [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh)) هي منصة مفتوحة المصدر لبناء "وكلاء صوتيين" — روبوتات ترد على المكالمات الهاتفية أو تجريها، وتستمع، وتتخذ القرار، وتتحدث في الوقت الفعلي — تقوم بنشرها بنفسك عبر Docker بدلاً من استئجارها من مزوّد مستضاف مغلق. وبحسب وصفها الخاص على GitHub، تُموضع نفسها كبديل "على الخوادم الخاصة، مع مفاتيح خاصة بك" لمنصات وكلاء صوتيين مستضافة مثل Vapi وRetell. هذه المراجعة هي المكمّل لإدخال dograh في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)، وتغطي ما هي dograh فعلياً، وكيفية استضافتها ذاتياً، ودعمها للنماذج المحلية، ورخصتها، وموقعها مقارنة بأدوات صوتية أخرى مثل [Voxa](/ar/power-local-llm/voxa-review) و[Jarvis for Mac](/ar/power-local-llm/jarvis-mac-review).',
     metaDescription: 'dograh منصة مفتوحة المصدر وذاتية الاستضافة لوكلاء الصوت (رخصة BSD-2-Clause) — بديل لـVapi وRetell مع تثبيت عبر Docker ودعم LLM/STT/TTS محلي عبر Ollama وvLLM وSpeaches.',
     readTime: '10 دقائق للقراءة',
     targetKeywords: [
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'خيار سحابة مُدارة منفصل على [app.dograh.com](https://app.dograh.com) يكلّف 0.01$ في الدقيقة بالإضافة إلى استخدام مزوّدي LLM/STT/TTS المتصلين',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل لإدخال dograh في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن dograh بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل لإدخال dograh في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن dograh بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1914,14 +1914,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh مقابل أدوات الوكلاء الصوتيين الأخرى',
-        content: 'تقع dograh في قطاع الوكلاء الصوتيين في الوقت الفعلي، إلى جانب أدوات تركّز على إدخال/إخراج الصوت أكثر من منصات كاملة للتعامل مع المكالمات. إليك كيف تُقارَن بخيارات أخرى في تغطية PromptQuorum — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل.',
+        content: 'تقع dograh في قطاع الوكلاء الصوتيين في الوقت الفعلي، إلى جانب أدوات تركّز على إدخال/إخراج الصوت أكثر من منصات كاملة للتعامل مع المكالمات. إليك كيف تُقارَن بخيارات أخرى في تغطية PromptQuorum — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) للكتالوج الكامل.',
         items: [
           '**[Voxa](/ar/power-local-llm/voxa-review)** — مساعد صوتي في الوقت الفعلي يركّز على الاستخدام الشخصي/على سطح المكتب بدلاً من التعامل مع المكالمات الهاتفية؛ راجع [مراجعة Voxa](/ar/power-local-llm/voxa-review) إن أردت مساعداً صوتياً محادثاً، لا أداة بناء وكلاء هاتفيين.',
           '**[Jarvis for Mac](/ar/power-local-llm/jarvis-mac-review)** — مساعد صوتي أصلي لنظام macOS؛ راجع [مراجعة Jarvis](/ar/power-local-llm/jarvis-mac-review) كبديل يركّز على سطح المكتب مقابل منصة dograh المنشورة على خادم والموجّهة نحو الهاتف.',
           '**[faster-whisper](/ar/power-local-llm/faster-whisper-review)** — محرك النسخ الصوتي الذي يعمل عليه Speaches نفسه (خيار STT/TTS المحلي الموثّق لدى dograh)؛ راجع [مراجعة faster-whisper](/ar/power-local-llm/faster-whisper-review) إن احتجت فقط إلى تعرف صوتي محلي، لا منصة وكلاء كاملة.',
           '**[Whisper.cpp](/ar/power-local-llm/whisper-cpp-review)** — محرك آخر للتعرف على الكلام محلي وذاتي الاستضافة؛ راجع [مراجعة Whisper.cpp](/ar/power-local-llm/whisper-cpp-review) لخيار نسخ صوتي فقط أخف وزناً من نشر مجموعة dograh الكاملة.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الوكلاء الصوتيين والصوت — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال dograh الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الوكلاء الصوتيين والصوت — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال dograh الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال dograh في الدليل.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال dograh في الدليل.',
           '[مراجعة Voxa](/ar/power-local-llm/voxa-review) — مساعد صوتي لسطح المكتب في الوقت الفعلي، فئة فرعية مختلفة عن منصة dograh الموجّهة نحو الهاتف.',
           '[مراجعة Jarvis for Mac](/ar/power-local-llm/jarvis-mac-review) — بديل مساعد صوتي أصلي لنظام macOS.',
           '[مراجعة faster-whisper](/ar/power-local-llm/faster-whisper-review) — محرك النسخ الصوتي الذي يقوم عليه خيار STT المحلي الموثّق لدى dograh، وهو Speaches.',
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'dograh',
     title: 'dograh 리뷰: 셀프 호스팅 오픈소스 음성 AI 에이전트 플랫폼',
     seoTitle: 'dograh 리뷰: 셀프 호스팅 음성 AI 플랫폼',
-    intro: 'dograh([dograh.com](https://dograh.com), 소스 코드는 [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh))는 전화를 받아 듣고 판단하여 실시간으로 응답하는 "음성 에이전트"를 구축하기 위한 오픈소스 플랫폼으로, 폐쇄형 호스팅 업체에서 빌리는 대신 Docker를 통해 직접 배포합니다. GitHub 자체 설명에 따르면 Vapi 및 Retell 같은 호스팅 음성 에이전트 플랫폼에 대한 "온프레미스, BYOK(자체 키 사용)" 대안으로 자리매김하고 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 dograh 항목의 심화판으로, dograh가 실제로 무엇인지, 셀프 호스팅 방법, 로컬 모델 지원 여부, 라이선스, 그리고 [Voxa](/ko/power-local-llm/voxa-review), [Jarvis for Mac](/ko/power-local-llm/jarvis-mac-review) 같은 다른 음성 도구와의 비교를 다룹니다.',
+    intro: 'dograh([dograh.com](https://dograh.com), 소스 코드는 [github.com/dograh-hq/dograh](https://github.com/dograh-hq/dograh))는 전화를 받아 듣고 판단하여 실시간으로 응답하는 "음성 에이전트"를 구축하기 위한 오픈소스 플랫폼으로, 폐쇄형 호스팅 업체에서 빌리는 대신 Docker를 통해 직접 배포합니다. GitHub 자체 설명에 따르면 Vapi 및 Retell 같은 호스팅 음성 에이전트 플랫폼에 대한 "온프레미스, BYOK(자체 키 사용)" 대안으로 자리매김하고 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 dograh 항목의 심화판으로, dograh가 실제로 무엇인지, 셀프 호스팅 방법, 로컬 모델 지원 여부, 라이선스, 그리고 [Voxa](/ko/power-local-llm/voxa-review), [Jarvis for Mac](/ko/power-local-llm/jarvis-mac-review) 같은 다른 음성 도구와의 비교를 다룹니다.',
     metaDescription: 'dograh는 셀프 호스팅되는 오픈소스 음성 AI 에이전트 플랫폼(BSD-2-Clause)입니다. Docker로 설치하며 Ollama, vLLM, Speaches를 통한 로컬 LLM/STT/TTS를 지원하는 Vapi/Retell 대안입니다.',
     readTime: '10분 읽기',
     targetKeywords: [
@@ -2046,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[app.dograh.com](https://app.dograh.com)의 별도 관리형 클라우드 옵션은 분당 $0.01에 연결된 LLM/STT/TTS 제공자 사용료가 추가됨',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 dograh 항목의 심화판입니다 — dograh가 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지는 해당 페이지에서 한눈에 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 dograh 항목의 심화판입니다 — dograh가 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지는 해당 페이지에서 한눈에 확인할 수 있습니다.' },
         ],
       },
       overview: {
@@ -2160,14 +2160,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'dograh와 다른 음성 에이전트·음성 도구 비교',
-        content: 'dograh는 실시간 음성 에이전트 세그먼트에 속하며, 완전한 통화 처리 플랫폼보다는 음성 입출력에 초점을 맞춘 도구들과 나란히 있습니다. PromptQuorum이 다루는 다른 옵션과 어떻게 비교되는지는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        content: 'dograh는 실시간 음성 에이전트 세그먼트에 속하며, 완전한 통화 처리 플랫폼보다는 음성 입출력에 초점을 맞춘 도구들과 나란히 있습니다. PromptQuorum이 다루는 다른 옵션과 어떻게 비교되는지는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참조하세요.',
         items: [
           '**[Voxa](/ko/power-local-llm/voxa-review)** — 전화 통화 처리보다 개인/데스크톱 사용에 초점을 맞춘 실시간 음성 비서; 전화 에이전트 빌더가 아니라 대화형 음성 비서를 원한다면 [Voxa 리뷰](/ko/power-local-llm/voxa-review)를 참조하세요.',
           '**[Jarvis for Mac](/ko/power-local-llm/jarvis-mac-review)** — macOS 네이티브 음성 비서; 서버에 배포되어 텔레포니에 중점을 둔 dograh의 플랫폼에 대한 데스크톱 우선 대안으로 [Jarvis 리뷰](/ko/power-local-llm/jarvis-mac-review)를 참조하세요.',
           '**[faster-whisper](/ko/power-local-llm/faster-whisper-review)** — Speaches(dograh가 문서화한 로컬 STT/TTS 옵션) 자체가 기반으로 하는 전사 엔진; 완전한 에이전트 플랫폼이 아니라 로컬 음성 인식만 필요하다면 [faster-whisper 리뷰](/ko/power-local-llm/faster-whisper-review)를 참조하세요.',
           '**[Whisper.cpp](/ko/power-local-llm/whisper-cpp-review)** — 또 다른 로컬·셀프 호스팅 음성 인식 엔진; dograh의 전체 스택을 배포하는 것보다 가벼운 전사 전용 옵션으로 [Whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review)를 참조하세요.',
         ],
-        note: '이는 음성 에이전트 및 음성 도구의 완전한 목록이 아닙니다 — dograh 자체 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 음성 에이전트 및 음성 도구의 완전한 목록이 아닙니다 — dograh 자체 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2212,7 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dograh의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — dograh의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
           '[Voxa 리뷰](/ko/power-local-llm/voxa-review) — dograh의 텔레포니 중심 플랫폼과는 다른 하위 카테고리인 실시간 데스크톱 음성 비서.',
           '[Jarvis for Mac 리뷰](/ko/power-local-llm/jarvis-mac-review) — macOS 네이티브 음성 비서 대안.',
           '[faster-whisper 리뷰](/ko/power-local-llm/faster-whisper-review) — dograh가 문서화한 로컬 STT 옵션 Speaches의 기반이 되는 전사 엔진.',

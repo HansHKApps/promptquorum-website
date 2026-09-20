@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 7,050 GitHub stars and 480+ forks as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Plano\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Plano compares at a glance to dozens of other local and self-hosted AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Plano\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Plano compares at a glance to dozens of other local and self-hosted AI tools.' },
         ],
       },
       overview: {
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'Open-source LLM observability, tracing, and evaluation platform', 'Link': '[Langfuse review](/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This list reflects tools commonly compared to Plano in the routing/gateway/observability space, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Plano\'s own directory entry. Verify each tool\'s current pricing and feature set before choosing.',
+        note: 'This list reflects tools commonly compared to Plano in the routing/gateway/observability space, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Plano\'s own directory entry. Verify each tool\'s current pricing and feature set before choosing.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LiteLLM Review](/power-local-llm/litellm-review) — a Python-native unified proxy/SDK for calling 100+ LLM providers, for comparison against Envoy-based Plano.',
           '[Langfuse Review](/power-local-llm/langfuse-review) — an open-source LLM observability and tracing platform, for teams whose primary need is evaluation rather than routing.',
           '[AIClient2API Review](/power-local-llm/aiclient2api-review) — a lightweight local proxy for unifying AI client protocols into one API.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 7.050 GitHub-Stars und 480+ Forks zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Planos Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie, wie Plano im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Planos Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie Plano im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick abschneidet.' },
         ],
       },
       overview: {
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'Quelloffene Plattform für LLM-Observability, Tracing und Evaluierung', 'Link': '[Langfuse Review](/de/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Diese Liste spiegelt Tools wider, mit denen Plano häufig im Bereich Routing/Gateway/Observability verglichen wird, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Planos eigenem Eintrag. Prüfen Sie die aktuellen Preise und den Funktionsumfang jedes Tools, bevor Sie sich entscheiden.',
+        note: 'Diese Liste spiegelt Tools wider, mit denen Plano häufig im Bereich Routing/Gateway/Observability verglichen wird, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Planos eigenem Eintrag. Prüfen Sie die aktuellen Preise und den Funktionsumfang jedes Tools, bevor Sie sich entscheiden.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LiteLLM Review](/de/power-local-llm/litellm-review) — ein Python-natives einheitliches Proxy/SDK für den Aufruf von über 100 LLM-Anbietern, zum Vergleich mit dem Envoy-basierten Plano.',
           '[Langfuse Review](/de/power-local-llm/langfuse-review) — eine quelloffene Plattform für LLM-Observability und Tracing, für Teams, deren Hauptbedarf Evaluierung statt Routing ist.',
           '[AIClient2API Review](/de/power-local-llm/aiclient2api-review) — ein leichtgewichtiger lokaler Proxy zur Vereinheitlichung von KI-Client-Protokollen in einer API.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 7 050 étoiles GitHub et 480+ forks au moment de cette revue',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de Plano dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Plano se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de Plano dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment Plano se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
         ],
       },
       overview: {
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'Plateforme open source d\'observabilité, de traçage et d\'évaluation LLM', 'Link': '[Avis Langfuse](/fr/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Cette liste reflète les outils couramment comparés à Plano dans l\'espace routage/passerelle/observabilité, pas un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Plano. Vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir.',
+        note: 'Cette liste reflète les outils couramment comparés à Plano dans l\'espace routage/passerelle/observabilité, pas un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Plano. Vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis LiteLLM](/fr/power-local-llm/litellm-review) — un proxy/SDK unifié natif Python pour appeler plus de 100 fournisseurs LLM, à comparer avec Plano basé sur Envoy.',
           '[Avis Langfuse](/fr/power-local-llm/langfuse-review) — une plateforme open source d\'observabilité et de traçage LLM, pour les équipes dont le besoin principal est l\'évaluation plutôt que le routage.',
           '[Avis AIClient2API](/fr/power-local-llm/aiclient2api-review) — un proxy local léger pour unifier les protocoles de clients IA en une seule API.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article.',
         ],
       },
     },
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このレビュー時点でGitHubスター7,050以上、フォーク480以上',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるPlanoのエントリーの詳細版です——Planoが他の数十のローカル/セルフホスト型AIツールと一目でどう比較されるかはそちらを参照してください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるPlanoのエントリーの詳細版です——Planoが他の数十のローカル/セルフホスト型AIツールと一目でどう比較されるかはそちらを参照してください。' },
         ],
       },
       overview: {
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'オープンソースのLLM可観測性・トレーシング・評価プラットフォーム', 'Link': '[Langfuse レビュー](/ja/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'このリストは、ルーティング/ゲートウェイ/可観測性の分野でPlanoと比較されることが多いツールを反映したものであり、PromptQuorumによる独自ランキングではありません——PlanoのエントリーもあるPromptQuorumの、定期的に更新される全カタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。選ぶ前に各ツールの現在の料金と機能を確認してください。',
+        note: 'このリストは、ルーティング/ゲートウェイ/可観測性の分野でPlanoと比較されることが多いツールを反映したものであり、PromptQuorumによる独自ランキングではありません——PlanoのエントリーもあるPromptQuorumの、定期的に更新される全カタログについては[Local LLM Software Directory](/ja/directory)を参照してください。選ぶ前に各ツールの現在の料金と機能を確認してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LiteLLM レビュー](/ja/power-local-llm/litellm-review) — EnvoyベースのPlanoと比較するための、Pythonネイティブな統一プロキシ/SDKで100以上のLLMプロバイダーを呼び出せる。',
           '[Langfuse レビュー](/ja/power-local-llm/langfuse-review) — ルーティングよりも評価が主な用途のチーム向けの、オープンソースLLM可観測性・トレーシングプラットフォーム。',
           '[AIClient2API レビュー](/ja/power-local-llm/aiclient2api-review) — AIクライアントプロトコルを1つのAPIに統一する軽量なローカルプロキシ。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属するローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时，GitHub星标超过7,050，fork超过480',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Plano条目的深度扩展篇——想快速了解Plano与其他数十款本地及自托管AI工具的对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Plano条目的深度扩展篇——想快速了解Plano与其他数十款本地及自托管AI工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': '开源LLM可观测性、追踪与评估平台', 'Link': '[Langfuse 评测](/zh/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '此列表反映的是在路由/网关/可观测性领域常与Plano比较的工具，并非PromptQuorum的独立排名——完整、定期更新的目录（包括Plano自身的条目）请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。选择前请核实每款工具当前的定价和功能。',
+        note: '此列表反映的是在路由/网关/可观测性领域常与Plano比较的工具，并非PromptQuorum的独立排名——完整、定期更新的目录（包括Plano自身的条目）请参见[本地LLM软件目录](/zh/directory)。选择前请核实每款工具当前的定价和功能。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LiteLLM 评测](/zh/power-local-llm/litellm-review) — 一个Python原生的统一代理/SDK，可调用100多个LLM提供商，用于与基于Envoy的Plano对比。',
           '[Langfuse 评测](/zh/power-local-llm/langfuse-review) — 一个开源LLM可观测性和追踪平台，适合主要需求是评估而非路由的团队。',
           '[AIClient2API 评测](/zh/power-local-llm/aiclient2api-review) — 一个将AI客户端协议统一为单一API的轻量级本地代理。',
-          '[本地LLM软件目录 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录 2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 7.050 estrellas en GitHub y 480+ forks al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado de la entrada de Plano en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Plano de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
+          { type: 'note', text: 'Esta reseña es el complemento detallado de la entrada de Plano en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara Plano de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'Plataforma de código abierto de observabilidad, trazado y evaluación de LLM', 'Link': '[Reseña de Langfuse](/es/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta lista refleja herramientas comúnmente comparadas con Plano en el espacio de enrutamiento/gateway/observabilidad, no un ranking independiente de PromptQuorum — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Plano. Verifica el precio y las funciones actuales de cada herramienta antes de elegir.',
+        note: 'Esta lista refleja herramientas comúnmente comparadas con Plano en el espacio de enrutamiento/gateway/observabilidad, no un ranking independiente de PromptQuorum — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Plano. Verifica el precio y las funciones actuales de cada herramienta antes de elegir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de LiteLLM](/es/power-local-llm/litellm-review) — un proxy/SDK unificado nativo de Python para llamar a más de 100 proveedores de LLM, para comparar con el Plano basado en Envoy.',
           '[Reseña de Langfuse](/es/power-local-llm/langfuse-review) — una plataforma de código abierto de observabilidad y trazado de LLM, para equipos cuya necesidad principal es la evaluación en lugar del enrutamiento.',
           '[Reseña de AIClient2API](/es/power-local-llm/aiclient2api-review) — un proxy local ligero para unificar protocolos de clientes de IA en una sola API.',
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 7.050 estrelas no GitHub e 480+ forks no momento desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento detalhado da entrada do Plano no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para saber como o Plano se compara rapidamente a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
+          { type: 'note', text: 'Esta análise é o complemento detalhado da entrada do Plano no [Diretório de Software LLM Local](/pt/directory) — veja essa página para saber como o Plano se compara rapidamente a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
         ],
       },
       overview: {
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'Plataforma open source de observabilidade, rastreamento e avaliação de LLM', 'Link': '[Análise do Langfuse](/pt/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta lista reflete ferramentas frequentemente comparadas ao Plano no espaço de roteamento/gateway/observabilidade, não um ranking independente da PromptQuorum — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Plano. Verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher.',
+        note: 'Esta lista reflete ferramentas frequentemente comparadas ao Plano no espaço de roteamento/gateway/observabilidade, não um ranking independente da PromptQuorum — veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Plano. Verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1859,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do LiteLLM](/pt/power-local-llm/litellm-review) — um proxy/SDK unificado nativo em Python para chamar mais de 100 provedores de LLM, para comparação com o Plano baseado em Envoy.',
           '[Análise do Langfuse](/pt/power-local-llm/langfuse-review) — uma plataforma open source de observabilidade e rastreamento de LLM, para equipes cuja necessidade principal é avaliação em vez de roteamento.',
           '[Análise do AIClient2API](/pt/power-local-llm/aiclient2api-review) — um proxy local leve para unificar protocolos de clientes de IA em uma única API.',
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 7,050 نجمة على GitHub وأكثر من 480 fork حتى وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال Plano في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Plano بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والمستضافة ذاتياً الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال Plano في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Plano بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والمستضافة ذاتياً الأخرى.' },
         ],
       },
       overview: {
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': 'منصة مفتوحة المصدر لمراقبة LLM وتتبعه وتقييمه', 'Link': '[مراجعة Langfuse](/ar/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'تعكس هذه القائمة الأدوات التي تُقارن عادة بـPlano في مجال التوجيه/البوابة/المراقبة، وليست ترتيباً مستقلاً من PromptQuorum — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المحدَّث بانتظام، بما في ذلك إدخال Plano الخاص به. تحقق من التسعير والميزات الحالية لكل أداة قبل الاختيار.',
+        note: 'تعكس هذه القائمة الأدوات التي تُقارن عادة بـPlano في مجال التوجيه/البوابة/المراقبة، وليست ترتيباً مستقلاً من PromptQuorum — راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل المحدَّث بانتظام، بما في ذلك إدخال Plano الخاص به. تحقق من التسعير والميزات الحالية لكل أداة قبل الاختيار.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة LiteLLM](/ar/power-local-llm/litellm-review) — وكيل/SDK موحّد أصلي بلغة Python لاستدعاء أكثر من 100 مزود LLM، للمقارنة مع Plano القائم على Envoy.',
           '[مراجعة Langfuse](/ar/power-local-llm/langfuse-review) — منصة مفتوحة المصدر لمراقبة LLM وتتبعه، للفرق التي احتياجها الأساسي هو التقييم بدلاً من التوجيه.',
           '[مراجعة AIClient2API](/ar/power-local-llm/aiclient2api-review) — وكيل محلي خفيف لتوحيد بروتوكولات عملاء الذكاء الاصطناعي في API واحد.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[Local LLM Software Directory 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 시점 기준 GitHub 스타 7,050개 이상, 포크 480개 이상',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Plano 항목의 심화 버전입니다 — Plano가 수십 개의 다른 로컬·셀프 호스팅 AI 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Plano 항목의 심화 버전입니다 — Plano가 수십 개의 다른 로컬·셀프 호스팅 AI 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Langfuse', 'Best known for': '오픈소스 LLM 관측 가능성, 추적, 평가 플랫폼', 'Link': '[Langfuse 리뷰](/ko/power-local-llm/langfuse-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '이 목록은 라우팅/게이트웨이/관측 가능성 영역에서 Plano와 자주 비교되는 도구들을 반영한 것이며, PromptQuorum의 독자적인 순위가 아닙니다 — Plano 자체 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오. 선택하기 전에 각 도구의 현재 가격과 기능을 확인하십시오.',
+        note: '이 목록은 라우팅/게이트웨이/관측 가능성 영역에서 Plano와 자주 비교되는 도구들을 반영한 것이며, PromptQuorum의 독자적인 순위가 아닙니다 — Plano 자체 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오. 선택하기 전에 각 도구의 현재 가격과 기능을 확인하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2391,7 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LiteLLM 리뷰](/ko/power-local-llm/litellm-review) — Envoy 기반 Plano와 비교할 수 있는, 100개 이상의 LLM 제공업체를 호출하는 Python 네이티브 통합 프록시/SDK.',
           '[Langfuse 리뷰](/ko/power-local-llm/langfuse-review) — 라우팅보다 평가가 주된 필요인 팀을 위한 오픈소스 LLM 관측 가능성 및 추적 플랫폼.',
           '[AIClient2API 리뷰](/ko/power-local-llm/aiclient2api-review) — AI 클라이언트 프로토콜을 하나의 API로 통합하는 경량 로컬 프록시.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

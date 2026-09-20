@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Template engine driven by note frontmatter, plus a community hub for discovering and sharing templates',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Text Generator\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Text Generator\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
         ],
       },
       overview: {
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/power-local-llm/bmo-chatbot-review)** — a lightweight chat sidebar scoped to the note you have open, rather than Text Generator\'s template-driven insertion model.',
           '**[Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins)** — a multi-plugin comparison covering Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections, and logseq-copilot side by side.',
         ],
-        note: 'See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for Text Generator\'s own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends this plugin can connect to through its custom-provider setting.',
+        note: 'See the [Local LLM Software Directory](/directory) for Text Generator\'s own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends this plugin can connect to through its custom-provider setting.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Text Generator\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Text Generator\'s directory entry.',
           '[Copilot for Obsidian Review](/power-local-llm/copilot-for-obsidian-review) — a heavier, whole-vault AI agent plugin with a persistent chat interface and active ongoing development.',
           '[BMO Chatbot Review](/power-local-llm/bmo-chatbot-review) — a lightweight chat sidebar scoped to the note you have open.',
           '[Local LLM With Obsidian 2026](/power-local-llm/local-llm-with-obsidian-2026) — a pillar guide to the wider local-LLM-in-Obsidian plugin ecosystem.',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vorlagen-Engine gesteuert über die Frontmatter der Notiz, dazu ein Community-Hub zum Entdecken und Teilen von Vorlagen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Text Generator im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokal-KI-fähiger Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Text Generator im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokal-KI-fähiger Tools abschneidet.' },
         ],
       },
       overview: {
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/de/power-local-llm/bmo-chatbot-review)** — eine schlanke Chat-Seitenleiste, die sich auf die geöffnete Notiz bezieht, statt des vorlagenbasierten Einfüge-Modells von Text Generator.',
           '**[Obsidian- und Logseq-KI-Plugins im Vergleich](/de/power-local-llm/obsidian-logseq-ai-plugins)** — ein Mehrfach-Plugin-Vergleich, der Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections und logseq-copilot nebeneinanderstellt.',
         ],
-        note: 'Den eigenen Verzeichniseintrag von Text Generator neben dem vollständigen Katalog lokaler KI-Tools finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory); die lokalen Modell-Backends, mit denen sich dieses Plugin über seine Einstellung für benutzerdefinierte Anbieter verbinden lässt, behandeln PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review) und [LM Studio Review](/de/power-local-llm/lm-studio-review).',
+        note: 'Den eigenen Verzeichniseintrag von Text Generator neben dem vollständigen Katalog lokaler KI-Tools finden Sie im [Local LLM Software Directory](/de/directory); die lokalen Modell-Backends, mit denen sich dieses Plugin über seine Einstellung für benutzerdefinierte Anbieter verbinden lässt, behandeln PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review) und [LM Studio Review](/de/power-local-llm/lm-studio-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Text Generator.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Text Generator.',
           '[Copilot for Obsidian Review](/de/power-local-llm/copilot-for-obsidian-review) — ein umfangreicheres, tresorweites KI-Agenten-Plugin mit dauerhafter Chat-Oberfläche und aktiver laufender Weiterentwicklung.',
           '[BMO Chatbot Review](/de/power-local-llm/bmo-chatbot-review) — eine schlanke Chat-Seitenleiste, die sich auf die geöffnete Notiz bezieht.',
           '[Local LLM With Obsidian 2026](/de/power-local-llm/local-llm-with-obsidian-2026) — ein Leitfaden zum breiteren Ökosystem lokaler LLM-Plugins in Obsidian.',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Moteur de modèles piloté par le frontmatter des notes, plus un hub communautaire pour découvrir et partager des modèles',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Text Generator dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Text Generator dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/fr/power-local-llm/bmo-chatbot-review)** — une barre latérale de chat légère limitée à la note ouverte, plutôt que le modèle d\'insertion piloté par des modèles de Text Generator.',
           '**[Plugins IA Obsidian et Logseq, comparés](/fr/power-local-llm/obsidian-logseq-ai-plugins)** — une comparaison multi-plugins couvrant Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections et logseq-copilot côte à côte.',
         ],
-        note: 'Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour la fiche propre de Text Generator aux côtés du catalogue complet d\'outils IA locaux, ainsi que la [review Ollama](/fr/power-local-llm/ollama-review) ou la [review LM Studio](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les moteurs de modèles locaux auxquels ce plugin peut se connecter via son paramètre de fournisseur personnalisé.',
+        note: 'Consultez le [Local LLM Software Directory](/fr/directory) pour la fiche propre de Text Generator aux côtés du catalogue complet d\'outils IA locaux, ainsi que la [review Ollama](/fr/power-local-llm/ollama-review) ou la [review LM Studio](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les moteurs de modèles locaux auxquels ce plugin peut se connecter via son paramètre de fournisseur personnalisé.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Text Generator.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Text Generator.',
           '[Review de Copilot for Obsidian](/fr/power-local-llm/copilot-for-obsidian-review) — un plugin agent IA plus lourd, couvrant tout le coffre, avec une interface de chat persistante et un développement actif continu.',
           '[Review de BMO Chatbot](/fr/power-local-llm/bmo-chatbot-review) — une barre latérale de chat légère limitée à la note ouverte.',
           '[Local LLM With Obsidian 2026](/fr/power-local-llm/local-llm-with-obsidian-2026) — un guide de référence sur l\'écosystème plus large des plugins LLM locaux dans Obsidian.',
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Motor de plantillas controlado por el frontmatter de la nota, además de un centro comunitario para descubrir y compartir plantillas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento a fondo de la ficha de Text Generator en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento a fondo de la ficha de Text Generator en el [Local LLM Software Directory](/es/directory) — consulte esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/es/power-local-llm/bmo-chatbot-review)** — una barra lateral de chat ligera limitada a la nota abierta, en lugar del modelo de inserción basado en plantillas de Text Generator.',
           '**[Plugins de IA de Obsidian y Logseq, comparados](/es/power-local-llm/obsidian-logseq-ai-plugins)** — una comparación multi-plugin que analiza Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections y logseq-copilot lado a lado.',
         ],
-        note: 'Consulte el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver la ficha propia de Text Generator junto al catálogo completo de herramientas de IA local, y la [review de Ollama](/es/power-local-llm/ollama-review) o la [review de LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los motores de modelos locales a los que este plugin puede conectarse mediante su ajuste de proveedor personalizado.',
+        note: 'Consulte el [Local LLM Software Directory](/es/directory) para ver la ficha propia de Text Generator junto al catálogo completo de herramientas de IA local, y la [review de Ollama](/es/power-local-llm/ollama-review) o la [review de LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los motores de modelos locales a los que este plugin puede conectarse mediante su ajuste de proveedor personalizado.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Text Generator.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Text Generator.',
           '[Review de Copilot for Obsidian](/es/power-local-llm/copilot-for-obsidian-review) — un plugin agente de IA más pesado que cubre todo el vault, con una interfaz de chat persistente y desarrollo activo continuo.',
           '[Review de BMO Chatbot](/es/power-local-llm/bmo-chatbot-review) — una barra lateral de chat ligera limitada a la nota abierta.',
           '[Local LLM With Obsidian 2026](/es/power-local-llm/local-llm-with-obsidian-2026) — una guía de referencia sobre el ecosistema más amplio de plugins de LLM local en Obsidian.',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mecanismo de modelos controlado pelo frontmatter da nota, além de um hub comunitário para descobrir e compartilhar modelos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Text Generator no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Text Generator no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/pt/power-local-llm/bmo-chatbot-review)** — uma barra lateral de chat leve limitada à nota aberta, em vez do modelo de inserção orientado por modelos do Text Generator.',
           '**[Plugins de IA do Obsidian e Logseq, comparados](/pt/power-local-llm/obsidian-logseq-ai-plugins)** — uma comparação entre vários plugins, incluindo Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections e logseq-copilot lado a lado.',
         ],
-        note: 'Consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para ver a ficha própria do Text Generator ao lado do catálogo completo de ferramentas de IA local, e a [review do Ollama](/pt/power-local-llm/ollama-review) ou a [review do LM Studio](/pt/power-local-llm/lm-studio-review) da PromptQuorum para os mecanismos de modelos locais aos quais este plugin pode se conectar por meio de sua configuração de provedor personalizado.',
+        note: 'Consulte o [Local LLM Software Directory](/pt/directory) para ver a ficha própria do Text Generator ao lado do catálogo completo de ferramentas de IA local, e a [review do Ollama](/pt/power-local-llm/ollama-review) ou a [review do LM Studio](/pt/power-local-llm/lm-studio-review) da PromptQuorum para os mecanismos de modelos locais aos quais este plugin pode se conectar por meio de sua configuração de provedor personalizado.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Text Generator.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Text Generator.',
           '[Review do Copilot for Obsidian](/pt/power-local-llm/copilot-for-obsidian-review) — um plugin de agente de IA mais pesado que cobre todo o cofre, com uma interface de chat persistente e desenvolvimento ativo contínuo.',
           '[Review do BMO Chatbot](/pt/power-local-llm/bmo-chatbot-review) — uma barra lateral de chat leve limitada à nota aberta.',
           '[Local LLM With Obsidian 2026](/pt/power-local-llm/local-llm-with-obsidian-2026) — um guia de referência sobre o ecossistema mais amplo de plugins de LLM local no Obsidian.',
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ノートのフロントマターで駆動されるテンプレートエンジンに加え、テンプレートを発見・共有するためのコミュニティハブ',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるText Generatorのエントリーを深掘りした補足記事です——他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるText Generatorのエントリーを深掘りした補足記事です——他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/ja/power-local-llm/bmo-chatbot-review)** — Text Generatorのテンプレート駆動の挿入モデルとは異なり、現在開いているノートに限定された軽量なチャットサイドバー。',
           '**[ObsidianとLogseqのAIプラグイン比較](/ja/power-local-llm/obsidian-logseq-ai-plugins)** — Text Generator、Copilot for Obsidian、BMO Chatbot、Smart Connections、logseq-copilotを横並びで比較する複数プラグイン比較記事。',
         ],
-        note: 'Text Generator自身のディレクトリエントリーとローカルAIツールの全カタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、このプラグインがカスタムプロバイダー設定を通じて接続できるローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)や[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)を参照してください。',
+        note: 'Text Generator自身のディレクトリエントリーとローカルAIツールの全カタログについては[Local LLM Software Directory](/ja/directory)を、このプラグインがカスタムプロバイダー設定を通じて接続できるローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)や[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、Text Generatorのディレクトリエントリーを含むローカルAIツールの全カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、Text Generatorのディレクトリエントリーを含むローカルAIツールの全カタログ。',
           '[Copilot for Obsidianレビュー](/ja/power-local-llm/copilot-for-obsidian-review) — 常駐型のチャットインターフェースと活発な継続開発を備えた、より重量級のボールト全体対応AIエージェントプラグイン。',
           '[BMO Chatbotレビュー](/ja/power-local-llm/bmo-chatbot-review) — 現在開いているノートに限定された軽量なチャットサイドバー。',
           '[Local LLM With Obsidian 2026](/ja/power-local-llm/local-llm-with-obsidian-2026) — Obsidianにおけるローカルllmプラグインエコシステム全体のガイド。',
@@ -1736,7 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由笔记前言驱动的模板引擎，外加一个用于发现和分享模板的社区中心',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Text Generator条目的深度补充——请查看该页面，快速了解它与数十款其他本地AI工具相比的表现。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Text Generator条目的深度补充——请查看该页面，快速了解它与数十款其他本地AI工具相比的表现。' },
         ],
       },
       overview: {
@@ -1874,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/zh/power-local-llm/bmo-chatbot-review)** — 一个仅针对当前打开笔记的轻量级聊天侧边栏，与Text Generator基于模板的插入模式不同。',
           '**[Obsidian与Logseq AI插件对比](/zh/power-local-llm/obsidian-logseq-ai-plugins)** — 一篇多插件对比文章，将Text Generator、Copilot for Obsidian、BMO Chatbot、Smart Connections和logseq-copilot并列比较。',
         ],
-        note: '关于Text Generator自身的目录条目及本地AI工具的完整目录，请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)；关于该插件可通过其自定义提供商设置连接的本地模型后端，请参见PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
+        note: '关于Text Generator自身的目录条目及本地AI工具的完整目录，请参见[本地LLM软件目录](/zh/directory)；关于该插件可通过其自定义提供商设置连接的本地模型后端，请参见PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中包含Text Generator的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，其中包含Text Generator的目录条目。',
           '[Copilot for Obsidian评测](/zh/power-local-llm/copilot-for-obsidian-review) — 一款更重的整库AI代理插件，具有常驻聊天界面和持续的积极开发。',
           '[BMO Chatbot评测](/zh/power-local-llm/bmo-chatbot-review) — 一个仅针对当前打开笔记的轻量级聊天侧边栏。',
           '[Local LLM With Obsidian 2026](/zh/power-local-llm/local-llm-with-obsidian-2026) — 关于Obsidian中更广泛本地LLM插件生态系统的指南。',
@@ -2013,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'محرك قوالب يتحكّم به الـfrontmatter الخاص بالملاحظة، إضافة إلى مركز مجتمعي لاكتشاف القوالب ومشاركتها',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Text Generator في [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) — راجعوا تلك الصفحة لمعرفة كيف تُقارَن هذه الإضافة بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Text Generator في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجعوا تلك الصفحة لمعرفة كيف تُقارَن هذه الإضافة بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2151,7 +2151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/ar/power-local-llm/bmo-chatbot-review)** — شريط جانبي خفيف للدردشة مقتصر على الملاحظة المفتوحة، بخلاف نموذج إدراج Text Generator القائم على القوالب.',
           '**[إضافات الذكاء الاصطناعي في Obsidian وLogseq، مقارنة](/ar/power-local-llm/obsidian-logseq-ai-plugins)** — مقارنة متعددة الإضافات تشمل Text Generator وCopilot for Obsidian وBMO Chatbot وSmart Connections وlogseq-copilot جنبًا إلى جنب.',
         ],
-        note: 'راجعوا [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على مدخل Text Generator الخاص بها إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، و[مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum لمحركات النماذج المحلية التي يمكن لهذه الإضافة الاتصال بها عبر إعداد المزوّد المخصّص.',
+        note: 'راجعوا [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على مدخل Text Generator الخاص بها إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، و[مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum لمحركات النماذج المحلية التي يمكن لهذه الإضافة الاتصال بها عبر إعداد المزوّد المخصّص.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2209,7 +2209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمّن مدخل Text Generator في الدليل.',
+          '[دليل برامج الذكاء الاصطناعي المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمّن مدخل Text Generator في الدليل.',
           '[مراجعة Copilot for Obsidian](/ar/power-local-llm/copilot-for-obsidian-review) — إضافة وكيل ذكاء اصطناعي أثقل تغطي الخزنة بأكملها، مع واجهة دردشة دائمة وتطوير نشط مستمر.',
           '[مراجعة BMO Chatbot](/ar/power-local-llm/bmo-chatbot-review) — شريط جانبي خفيف للدردشة مقتصر على الملاحظة المفتوحة.',
           '[Local LLM With Obsidian 2026](/ar/power-local-llm/local-llm-with-obsidian-2026) — دليل مرجعي حول نظام إضافات النماذج اللغوية المحلية الأوسع في Obsidian.',
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '노트 프런트매터로 구동되는 템플릿 엔진과, 템플릿을 발견하고 공유하는 커뮤니티 허브',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Text Generator 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Text Generator 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2428,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[BMO Chatbot](/ko/power-local-llm/bmo-chatbot-review)** — Text Generator의 템플릿 기반 삽입 모델과 달리, 열려 있는 노트에 한정된 가벼운 채팅 사이드바.',
           '**[Obsidian과 Logseq AI 플러그인 비교](/ko/power-local-llm/obsidian-logseq-ai-plugins)** — Text Generator, Copilot for Obsidian, BMO Chatbot, Smart Connections, logseq-copilot을 나란히 비교하는 다중 플러그인 비교 글.',
         ],
-        note: 'Text Generator 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하고, 이 플러그인이 사용자 지정 제공업체 설정을 통해 연결할 수 있는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
+        note: 'Text Generator 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하고, 이 플러그인이 사용자 지정 제공업체 설정을 통해 연결할 수 있는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2486,7 +2486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Text Generator의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Text Generator의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Copilot for Obsidian 리뷰](/ko/power-local-llm/copilot-for-obsidian-review) — 지속적인 채팅 인터페이스와 활발한 지속적 개발을 갖춘, 더 무거운 볼트 전체 AI 에이전트 플러그인.',
           '[BMO Chatbot 리뷰](/ko/power-local-llm/bmo-chatbot-review) — 열려 있는 노트에 한정된 가벼운 채팅 사이드바.',
           '[Local LLM With Obsidian 2026](/ko/power-local-llm/local-llm-with-obsidian-2026) — Obsidian의 더 넓은 로컬 LLM 플러그인 생태계에 대한 안내서.',

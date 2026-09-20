@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get ToolNeuron',
         content: [
           '**ToolNeuron is available from Google Play or as a direct APK download from its GitHub Releases page.** Both distribution channels carry the same open-source app.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which indexes local-AI tools across platforms, including ToolNeuron\'s own entry.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which indexes local-AI tools across platforms, including ToolNeuron\'s own entry.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RikkaHub Review](/power-local-llm/rikkahub-review) — another free, open-source Android local-AI chat app.',
           '[Maid Review](/power-local-llm/maid-review) — a free, open-source, cross-platform (Android and iOS) chat client.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — a free, open-source local-AI app with iOS and some Android support.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ToolNeuron holen',
         content: [
           '**ToolNeuron ist über Google Play oder als direkter APK-Download von der GitHub-Releases-Seite erhältlich.** Beide Vertriebskanäle liefern dieselbe quelloffene App.',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags von ToolNeuron.',
+          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags von ToolNeuron.',
         ],
         columns: ['Kanal', 'Holen'],
         rows: [
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RikkaHub-Test](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
           '[Maid-Test](/de/power-local-llm/maid-review) — ein kostenloser, quelloffener, plattformübergreifender (Android und iOS) Chat-Client.',
           '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
-          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
+          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },
     },
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir ToolNeuron',
         content: [
           '**ToolNeuron est disponible sur Google Play ou en téléchargement direct d\'APK depuis sa page GitHub Releases.** Les deux canaux de distribution proposent la même application open source.',
-          'Cet avis complète le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense les outils d\'IA locale sur toutes les plateformes, y compris la propre fiche de ToolNeuron.',
+          'Cet avis complète le [répertoire de logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense les outils d\'IA locale sur toutes les plateformes, y compris la propre fiche de ToolNeuron.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis RikkaHub](/fr/power-local-llm/rikkahub-review) — une autre application de chat Android gratuite et open source pour l\'IA locale.',
           '[Avis Maid](/fr/power-local-llm/maid-review) — un client de chat gratuit, open source et multiplateforme (Android et iOS).',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — une application d\'IA locale gratuite et open source avec support iOS et partiel Android.',
-          '[Le répertoire complet de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux sur toutes les plateformes.',
+          '[Le répertoire complet de logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux sur toutes les plateformes.',
         ],
       },
     },
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Conseguir ToolNeuron',
         content: [
           '**ToolNeuron está disponible en Google Play o como descarga directa de APK desde su página de GitHub Releases.** Ambos canales de distribución ofrecen la misma app de código abierto.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que cataloga herramientas de IA local en distintas plataformas, incluida la propia ficha de ToolNeuron.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que cataloga herramientas de IA local en distintas plataformas, incluida la propia ficha de ToolNeuron.',
         ],
         columns: ['Canal', 'Conseguir'],
         rows: [
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de RikkaHub](/es/power-local-llm/rikkahub-review) — otra app de chat Android gratuita y de código abierto para IA local.',
           '[Reseña de Maid](/es/power-local-llm/maid-review) — un cliente de chat gratuito, de código abierto y multiplataforma (Android e iOS).',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — una app de IA local gratuita y de código abierto con soporte para iOS y parcial para Android.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de LLM local en distintas plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas de LLM local en distintas plataformas.',
         ],
       },
     },
@@ -1546,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o ToolNeuron',
         content: [
           '**O ToolNeuron está disponível no Google Play ou como download direto de APK na página do GitHub Releases.** Ambos os canais de distribuição oferecem o mesmo app de código aberto.',
-          'Esta análise complementa o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que cataloga ferramentas de IA local em várias plataformas, incluindo a própria entrada do ToolNeuron.',
+          'Esta análise complementa o [Diretório de Software LLM Local](/pt/directory) da PromptQuorum, que cataloga ferramentas de IA local em várias plataformas, incluindo a própria entrada do ToolNeuron.',
         ],
         columns: ['Canal', 'Como obter'],
         rows: [
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do RikkaHub](/pt/power-local-llm/rikkahub-review) — outro app de chat Android gratuito e de código aberto para IA local.',
           '[Análise do Maid](/pt/power-local-llm/maid-review) — um cliente de chat gratuito, de código aberto e multiplataforma (Android e iOS).',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — um app de IA local gratuito e de código aberto com suporte para iOS e parcial para Android.',
-          '[O Diretório Completo de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
+          '[O Diretório Completo de Software LLM Local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
         ],
       },
     },
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ToolNeuronの入手方法',
         content: [
           '**ToolNeuronはGoogle Play、またはGitHub Releasesページからの直接APKダウンロードで入手できます。** どちらの配布経路も同じオープンソースアプリです。',
-          '本レビューは、プラットフォームを横断してローカルAIツールを索引化するPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)の姉妹記事で、ToolNeuron自身の項目も含まれています。',
+          '本レビューは、プラットフォームを横断してローカルAIツールを索引化するPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)の姉妹記事で、ToolNeuron自身の項目も含まれています。',
         ],
         columns: ['チャネル', '入手方法'],
         rows: [
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RikkaHubレビュー](/ja/power-local-llm/rikkahub-review)——もう一つの無料・オープンソースのAndroidローカルAIチャットアプリ。',
           '[Maidレビュー](/ja/power-local-llm/maid-review)——無料・オープンソースでクロスプラットフォーム(AndroidとiOS)のチャットクライアント。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review)——iOSと一部のAndroidに対応した、無料・オープンソースのローカルAIアプリ。',
-          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory)——プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/directory)——プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取ToolNeuron',
         content: [
           '**ToolNeuron可通过Google Play获取,也可从其GitHub Releases页面直接下载APK。** 两个分发渠道提供的是同一款开源应用。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的姊妹篇,该目录收录了跨平台的本地AI工具,其中也包括ToolNeuron自身的条目。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的姊妹篇,该目录收录了跨平台的本地AI工具,其中也包括ToolNeuron自身的条目。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -2509,7 +2509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RikkaHub评测](/zh/power-local-llm/rikkahub-review)——另一款免费开源的Android本地AI聊天应用。',
           '[Maid评测](/zh/power-local-llm/maid-review)——一款免费开源、跨平台(Android和iOS)的聊天客户端。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review)——一款免费开源的本地AI应用,支持iOS并部分支持Android。',
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——一个更广泛的跨平台本地LLM工具目录。',
+          '[完整本地LLM软件目录](/zh/directory)——一个更广泛的跨平台本地LLM工具目录。',
         ],
       },
     },
@@ -2626,7 +2626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الحصول على ToolNeuron',
         content: [
           '**يتوفر ToolNeuron عبر Google Play أو كتنزيل مباشر لملف APK من صفحته على GitHub Releases.** يقدّم كلا قناتي التوزيع نفس التطبيق مفتوح المصدر.',
-          'هذه المراجعة مكمّلة لـ[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) الخاص بـ PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلية عبر المنصات، بما في ذلك مدخل ToolNeuron نفسه.',
+          'هذه المراجعة مكمّلة لـ[دليل برمجيات نماذج اللغة المحلية](/ar/directory) الخاص بـ PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلية عبر المنصات، بما في ذلك مدخل ToolNeuron نفسه.',
         ],
         columns: ['القناة', 'طريقة الحصول عليه'],
         rows: [
@@ -2869,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة RikkaHub](/ar/power-local-llm/rikkahub-review) — تطبيق دردشة آخر مجاني ومفتوح المصدر للذكاء الاصطناعي المحلي على أندرويد.',
           '[مراجعة Maid](/ar/power-local-llm/maid-review) — عميل دردشة مجاني ومفتوح المصدر وعبر المنصات (أندرويد وiOS).',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — تطبيق ذكاء اصطناعي محلي مجاني ومفتوح المصدر بدعم لـ iOS ودعم جزئي لأندرويد.',
-          '[الدليل الكامل لبرمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات نماذج اللغة المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات نماذج اللغة المحلية](/ar/directory) — دليل أوسع لأدوات نماذج اللغة المحلية عبر المنصات.',
         ],
       },
     },
@@ -2986,7 +2986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ToolNeuron 받기',
         content: [
           '**ToolNeuron은 구글 플레이 또는 GitHub Releases 페이지에서의 직접 APK 다운로드로 이용할 수 있습니다.** 두 배포 채널 모두 동일한 오픈소스 앱을 제공합니다.',
-          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 글로, 여기에는 ToolNeuron 자체 항목도 포함되어 있습니다.',
+          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 글로, 여기에는 ToolNeuron 자체 항목도 포함되어 있습니다.',
         ],
         columns: ['채널', '받는 방법'],
         rows: [
@@ -3229,7 +3229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[RikkaHub 리뷰](/ko/power-local-llm/rikkahub-review)——또 다른 무료·오픈소스 안드로이드 로컬 AI 채팅 앱.',
           '[Maid 리뷰](/ko/power-local-llm/maid-review)——무료·오픈소스이며 크로스 플랫폼(안드로이드 및 iOS)인 채팅 클라이언트.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review)——iOS를 지원하고 안드로이드도 일부 지원하는 무료·오픈소스 로컬 AI 앱.',
-          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)——플랫폼 전반의 로컬 LLM 도구를 아우르는 더 폭넓은 디렉터리.',
+          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/directory)——플랫폼 전반의 로컬 LLM 도구를 아우르는 더 폭넓은 디렉터리.',
         ],
       },
     },

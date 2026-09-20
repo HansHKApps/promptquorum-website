@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a role-based multi-agent framework for teams whose main need is agent orchestration rather than retrieval and indexing.',
           '[Flowise Review: Visual LangChain Workflow Builder](/power-local-llm/flowise-ai-visual-workflow-builder-review) — the no-code alternative to LlamaIndex, for readers who want a visual canvas instead of Python.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools beyond code-first frameworks.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise Test: Visueller LangChain-Workflow-Builder](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — die No-Code-Alternative zu LlamaIndex für alle, die statt Python eine visuelle Oberfläche wollen.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits von code-first-Frameworks.',
-          '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Avis Flowise : constructeur visuel de workflows LangChain](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review) — l\'alternative no-code à LlamaIndex, pour les lecteurs qui veulent un canevas visuel plutôt que du Python.',
           '[Meilleurs outils RAG pour documents d\'entreprise](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — un guide d\'achat pour les outils RAG de chat documentaire au-delà des frameworks code-first.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Flowise: creador visual de flujos LangChain](/es/power-local-llm/flowise-ai-visual-workflow-builder-review) — la alternativa sin código a LlamaIndex, para quienes quieren un lienzo visual en lugar de Python.',
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — una guía de compra de herramientas RAG de chat documental más allá de los frameworks code-first.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Flowise: construtor visual de fluxos LangChain](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review) — a alternativa sem código ao LlamaIndex, para quem quer uma tela visual em vez de Python.',
           '[Melhores ferramentas RAG para documentos empresariais](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — um guia de compra de ferramentas RAG de chat com documentos além dos frameworks code-first.',
-          '[Diretório de software de LLM locais](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM locais](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowiseレビュー：ビジュアルなLangChainワークフロービルダー](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review) — Pythonではなくビジュアルキャンバスを望む読者向けの、LlamaIndexのノーコード代替。',
           '[ビジネス文書向けの最適なRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — コードファーストなフレームワーク以外のドキュメントチャット型RAGツールの購入ガイド。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise评测：可视化LangChain工作流构建器](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review) — 面向希望使用可视化画布而非Python的读者，LlamaIndex的无代码替代方案。',
           '[面向商业文档的最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 一份超越代码优先框架的文档对话型RAG工具购买指南。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Flowise: أداة بناء بصرية لسير عمل LangChain](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review) — البديل بلا كود لـ LlamaIndex، لمن يريد لوحة بصرية بدلًا من Python.',
           '[أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — دليل شراء لأدوات RAG للدردشة مع المستندات يتجاوز أطر العمل القائمة على الكود أولًا.',
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2404,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Flowise 리뷰: 비주얼 LangChain 워크플로 빌더](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review) — Python 대신 비주얼 캔버스를 원하는 독자를 위한, LlamaIndex의 노코드 대안.',
           '[비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 코드 우선 프레임워크를 넘어선 문서 채팅형 RAG 도구 구매 가이드.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },

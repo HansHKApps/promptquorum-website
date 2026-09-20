@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 2,800 GitHub stars as of this review, per GitHub API',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Lucebox\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Lucebox compares at a glance to dozens of other local AI tools. It is based on Lucebox\'s own README and repository documentation, not hands-on benchmarking by PromptQuorum.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Lucebox\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Lucebox compares at a glance to dozens of other local AI tools. It is based on Lucebox\'s own README and repository documentation, not hands-on benchmarking by PromptQuorum.' },
         ],
       },
       overview: {
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'llama.cpp', 'Best known for': 'The general-purpose C/C++ inference engine that most local AI tools build on top of', 'Link': '[llama.cpp Explained](/power-local-llm/llama-cpp-explained)' },
           { 'Tool': 'vLLM', 'Best known for': 'A high-throughput inference and serving engine widely used for production GPU deployments', 'Link': '[vLLM Explained](/power-local-llm/vllm-explained)' },
         ],
-        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Lucebox\'s own directory entry.',
+        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Lucebox\'s own directory entry.',
       },
       faq: {
         id: 'faq',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy Review](/power-local-llm/shimmy-review) — a minimal, dependency-free, single-binary Rust inference server, for direct comparison against hand-tuned Lucebox.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the general-purpose C/C++ inference engine most local AI tools build on top of, for context on what Lucebox trades away for its per-GPU tuning.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — a high-throughput serving engine widely used for production GPU deployments, for readers comparing throughput-focused options.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 2.800 GitHub-Stars zum Zeitpunkt dieser Review, laut GitHub-API',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Luceboxs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Vergleich von Lucebox mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Luceboxs eigenem README und der Repository-Dokumentation, nicht auf praktischen Benchmarks von PromptQuorum.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Luceboxs Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie einen schnellen Vergleich von Lucebox mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Luceboxs eigenem README und der Repository-Dokumentation, nicht auf praktischen Benchmarks von PromptQuorum.' },
         ],
       },
       overview: {
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'llama.cpp', 'Bekannt für': 'Die allgemeine C/C++-Inferenz-Engine, auf der die meisten lokalen KI-Tools aufbauen', 'Link': '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained)' },
           { 'Tool': 'vLLM', 'Bekannt für': 'Eine durchsatzstarke Inferenz- und Bereitstellungs-Engine, weit verbreitet für produktive GPU-Einsätze', 'Link': '[vLLM Explained](/de/power-local-llm/vllm-explained)' },
         ],
-        note: 'Dies ist keine vollständige Liste lokaler Inferenzserver — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Luceboxs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine vollständige Liste lokaler Inferenzserver — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Luceboxs eigenem Verzeichniseintrag.',
       },
       faq: {
         id: 'faq',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy Review](/de/power-local-llm/shimmy-review) — ein minimaler, abhängigkeitsfreier Rust-Inferenzserver in einer einzigen Binary, zum direkten Vergleich mit dem handoptimierten Lucebox.',
           '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained) — die allgemeine C/C++-Inferenz-Engine, auf der die meisten lokalen KI-Tools aufbauen, als Kontext dafür, worauf Lucebox für seine Pro-GPU-Abstimmung verzichtet.',
           '[vLLM Explained](/de/power-local-llm/vllm-explained) — eine durchsatzstarke Bereitstellungs-Engine, weit verbreitet für produktive GPU-Einsätze, für Leser, die durchsatzfokussierte Optionen vergleichen.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 2 800 étoiles GitHub au moment de cette review, selon l\'API GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Lucebox dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Lucebox en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le propre README et la documentation du dépôt de Lucebox, pas sur un benchmark pratique réalisé par PromptQuorum.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Lucebox dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Lucebox en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le propre README et la documentation du dépôt de Lucebox, pas sur un benchmark pratique réalisé par PromptQuorum.' },
         ],
       },
       overview: {
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'llama.cpp', 'Réputé pour': 'Le moteur d\'inférence généraliste en C/C++ sur lequel s\'appuient la plupart des outils d\'IA locale', 'Lien': '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained)' },
           { 'Outil': 'vLLM', 'Réputé pour': 'Un moteur d\'inférence et de service à haut débit largement utilisé pour les déploiements GPU en production', 'Lien': '[vLLM Explained](/fr/power-local-llm/vllm-explained)' },
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre entrée de Lucebox dans l\'annuaire.',
+        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre entrée de Lucebox dans l\'annuaire.',
       },
       faq: {
         id: 'faq',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy Review](/fr/power-local-llm/shimmy-review) — un serveur d\'inférence Rust minimal, sans dépendances, en un seul binaire, pour une comparaison directe avec Lucebox et ses optimisations sur mesure.',
           '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence généraliste en C/C++ sur lequel s\'appuient la plupart des outils d\'IA locale, pour comprendre ce que Lucebox sacrifie pour son réglage par GPU.',
           '[vLLM Explained](/fr/power-local-llm/vllm-explained) — un moteur de service à haut débit largement utilisé pour les déploiements GPU en production, pour les lecteurs comparant des options axées sur le débit.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub APIによると、このレビュー時点でGitHubスター数は2,800超',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLuceboxの項目を掘り下げたものです。他の数十のローカルAIツールとの比較概要はそちらを参照してください。本記事はLucebox自身のREADMEとリポジトリのドキュメントに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLuceboxの項目を掘り下げたものです。他の数十のローカルAIツールとの比較概要はそちらを参照してください。本記事はLucebox自身のREADMEとリポジトリのドキュメントに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
         ],
       },
       overview: {
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'llama.cpp', '主な特徴': 'ほとんどのローカルAIツールが基盤とする汎用C/C++推論エンジン', 'リンク': '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained)' },
           { 'ツール': 'vLLM', '主な特徴': '本番GPU展開で広く使われている高スループットの推論・提供エンジン', 'リンク': '[vLLM解説](/ja/power-local-llm/vllm-explained)' },
         ],
-        note: 'これはローカル推論サーバーの網羅的なリストではありません。Lucebox自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカル推論サーバーの網羅的なリストではありません。Lucebox自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       faq: {
         id: 'faq',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmyレビュー](/ja/power-local-llm/shimmy-review) — 依存関係のない最小限のシングルバイナリRust推論サーバー。手作業チューニングのLuceboxとの直接比較に。',
           '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained) — ほとんどのローカルAIツールが基盤とする汎用C/C++推論エンジン。LuceboxがGPU別チューニングと引き換えに何を犠牲にしているかを理解するための背景として。',
           '[vLLM解説](/ja/power-local-llm/vllm-explained) — 本番GPU展開で広く使われている高スループットの提供エンジン。スループット重視の選択肢を比較する読者向け。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时,根据GitHub API,GitHub星标数超过2,800',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Lucebox条目的深度补充——该页面提供了Lucebox与数十款其他本地AI工具的快速对比。本评测基于Lucebox自身的README和仓库文档,并非PromptQuorum的实测基准测试。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Lucebox条目的深度补充——该页面提供了Lucebox与数十款其他本地AI工具的快速对比。本评测基于Lucebox自身的README和仓库文档,并非PromptQuorum的实测基准测试。' },
         ],
       },
       overview: {
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'llama.cpp', '主要特点': '大多数本地AI工具所基于的通用C/C++推理引擎', '链接': '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained)' },
           { '工具': 'vLLM', '主要特点': '广泛用于生产级GPU部署的高吞吐量推理与服务引擎', '链接': '[vLLM详解](/zh/power-local-llm/vllm-explained)' },
         ],
-        note: '这并非本地推理服务器的详尽列表——完整且定期更新的目录(包括Lucebox自身的目录条目)请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地推理服务器的详尽列表——完整且定期更新的目录(包括Lucebox自身的目录条目)请参见[本地LLM软件目录](/zh/directory)。',
       },
       faq: {
         id: 'faq',
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy评测](/zh/power-local-llm/shimmy-review) — 一款极简、无依赖的单二进制Rust推理服务器,可与手工调优的Lucebox直接对比。',
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — 大多数本地AI工具所基于的通用C/C++推理引擎,有助于理解Lucebox为按GPU调优所放弃的部分。',
           '[vLLM详解](/zh/power-local-llm/vllm-explained) — 广泛用于生产级GPU部署的高吞吐量服务引擎,适合比较注重吞吐量选项的读者。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录。',
         ],
       },
     },
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 2.800 estrellas en GitHub al momento de esta review, según la API de GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Lucebox en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Lucebox de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README y la documentación del repositorio de Lucebox, no en benchmarks prácticos realizados por PromptQuorum.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Lucebox en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara Lucebox de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README y la documentación del repositorio de Lucebox, no en benchmarks prácticos realizados por PromptQuorum.' },
         ],
       },
       overview: {
@@ -1506,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'llama.cpp', 'Conocida por': 'El motor de inferencia en C/C++ de propósito general sobre el que se construyen la mayoría de las herramientas de IA local', 'Enlace': '[llama.cpp Explained](/es/power-local-llm/llama-cpp-explained)' },
           { 'Herramienta': 'vLLM', 'Conocida por': 'Un motor de inferencia y servicio de alto rendimiento ampliamente usado en despliegues de producción con GPU', 'Enlace': '[vLLM Explained](/es/power-local-llm/vllm-explained)' },
         ],
-        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Lucebox en el directorio.',
+        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Lucebox en el directorio.',
       },
       faq: {
         id: 'faq',
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy Review](/es/power-local-llm/shimmy-review) — un servidor de inferencia en Rust, mínimo, sin dependencias y de un solo binario, para una comparación directa con Lucebox y su enfoque ajustado a mano.',
           '[llama.cpp Explained](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia en C/C++ de propósito general sobre el que se construyen la mayoría de las herramientas de IA local, como contexto de lo que Lucebox sacrifica a cambio de su ajuste por GPU.',
           '[vLLM Explained](/es/power-local-llm/vllm-explained) — un motor de servicio de alto rendimiento ampliamente usado en despliegues de producción con GPU, para lectores que comparan opciones centradas en el rendimiento.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 2.800 estrelas no GitHub no momento desta review, segundo a API do GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Lucebox no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Lucebox rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio README e na documentação do repositório do Lucebox, não em benchmarks práticos feitos pela PromptQuorum.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Lucebox no [Diretório de software de LLM local](/pt/directory) — veja essa página para comparar o Lucebox rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio README e na documentação do repositório do Lucebox, não em benchmarks práticos feitos pela PromptQuorum.' },
         ],
       },
       overview: {
@@ -1763,7 +1763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'llama.cpp', 'Mais conhecida por': 'O mecanismo de inferência C/C++ de propósito geral sobre o qual a maioria das ferramentas de IA local é construída', 'Link': '[llama.cpp Explained](/pt/power-local-llm/llama-cpp-explained)' },
           { 'Ferramenta': 'vLLM', 'Mais conhecida por': 'Um mecanismo de inferência e serving de alto throughput amplamente usado em implantações de produção com GPU', 'Link': '[vLLM Explained](/pt/power-local-llm/vllm-explained)' },
         ],
-        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Lucebox no diretório.',
+        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [Diretório de software de LLM local](/pt/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Lucebox no diretório.',
       },
       faq: {
         id: 'faq',
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy Review](/pt/power-local-llm/shimmy-review) — um servidor de inferência Rust mínimo, sem dependências e de binário único, para comparação direta com o Lucebox ajustado manualmente.',
           '[llama.cpp Explained](/pt/power-local-llm/llama-cpp-explained) — o mecanismo de inferência C/C++ de propósito geral sobre o qual a maioria das ferramentas de IA local é construída, como contexto sobre o que o Lucebox troca em favor do seu ajuste por GPU.',
           '[vLLM Explained](/pt/power-local-llm/vllm-explained) — um mecanismo de serving de alto throughput amplamente usado em implantações de produção com GPU, para leitores comparando opções focadas em throughput.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1871,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 2,800 نجمة على GitHub وقت إعداد هذه المراجعة، بحسب واجهة برمجة تطبيقات GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Lucebox في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين Lucebox وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى ملف README الخاص بـ Lucebox وتوثيق المستودع نفسه، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Lucebox في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Lucebox وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى ملف README الخاص بـ Lucebox وتوثيق المستودع نفسه، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
         ],
       },
       overview: {
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'llama.cpp', 'الأكثر شهرة بـ': 'محرك الاستدلال عام الغرض بلغتي C وC++ الذي تُبنى عليه معظم أدوات الذكاء الاصطناعي المحلية', 'الرابط': '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained)' },
           { 'الأداة': 'vLLM', 'الأكثر شهرة بـ': 'محرك استدلال وخدمة بإنتاجية عالية يُستخدم على نطاق واسع لنشرات إنتاج على وحدات معالجة رسومات', 'الرابط': '[شرح vLLM](/ar/power-local-llm/vllm-explained)' },
         ],
-        note: 'هذه ليست قائمة شاملة لخوادم الاستدلال المحلية — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Lucebox نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لخوادم الاستدلال المحلية — راجع [دليل برامج LLM المحلية](/ar/directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Lucebox نفسه في الدليل.',
       },
       faq: {
         id: 'faq',
@@ -2054,7 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Shimmy](/ar/power-local-llm/shimmy-review) — خادم استدلال بلغة Rust بملف تنفيذي واحد، بسيط وخالٍ من الاعتماديات، للمقارنة المباشرة مع Lucebox المحسَّن يدويًا.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك الاستدلال عام الغرض بلغتي C وC++ الذي تُبنى عليه معظم أدوات الذكاء الاصطناعي المحلية، كسياق لما يتنازل عنه Lucebox مقابل تحسينه لكل GPU.',
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — محرك خدمة بإنتاجية عالية يُستخدم على نطاق واسع لنشرات إنتاج على وحدات معالجة رسومات، لمن يقارن خيارات تركز على الإنتاجية.',
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2128,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub API에 따르면 GitHub 스타 2,800개 이상',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Lucebox 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Lucebox를 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Lucebox 자체의 README 및 저장소 문서에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Lucebox 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Lucebox를 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Lucebox 자체의 README 및 저장소 문서에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
         ],
       },
       overview: {
@@ -2277,7 +2277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'llama.cpp', '주요 특징': '대부분의 로컬 AI 도구가 기반으로 삼는 범용 C/C++ 추론 엔진', '링크': '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained)' },
           { '도구': 'vLLM', '주요 특징': '프로덕션 GPU 배포에 널리 사용되는 고처리량 추론 및 서빙 엔진', '링크': '[vLLM 설명](/ko/power-local-llm/vllm-explained)' },
         ],
-        note: '이는 로컬 추론 서버의 총망라 목록이 아닙니다 — Lucebox 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 로컬 추론 서버의 총망라 목록이 아닙니다 — Lucebox 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       faq: {
         id: 'faq',
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Shimmy 리뷰](/ko/power-local-llm/shimmy-review) — 직접 튜닝된 Lucebox와 직접 비교하기 위한, 최소한의 의존성 없는 단일 바이너리 Rust 추론 서버.',
           '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained) — 대부분의 로컬 AI 도구가 기반으로 삼는 범용 C/C++ 추론 엔진으로, Lucebox가 GPU별 튜닝을 위해 무엇을 포기하는지 이해하기 위한 배경 자료.',
           '[vLLM 설명](/ko/power-local-llm/vllm-explained) — 프로덕션 GPU 배포에 널리 사용되는 고처리량 서빙 엔진으로, 처리량 중심 옵션을 비교하는 독자를 위한 자료.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

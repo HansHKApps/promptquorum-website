@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Maintained by hiyouga (an individual GitHub maintainer, per the GitHub API); repository created May 28, 2023, with commits pushed within days of this review\'s research date, 9,153 forks, and 1,152 open issues',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LLaMA-Factory\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to LLaMA-Factory\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -210,14 +210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. Other Fine-Tuning Tools',
-        content: 'LLaMA-Factory is one of several tools for fine-tuning models on your own hardware. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [LLaMA-Factory vs. Unsloth comparison](#llama-factory-vs-unsloth) above for the closest head-to-head.',
+        content: 'LLaMA-Factory is one of several tools for fine-tuning models on your own hardware. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [LLaMA-Factory vs. Unsloth comparison](#llama-factory-vs-unsloth) above for the closest head-to-head.',
         items: [
           '**[Unsloth](/power-local-llm/unsloth-review)** — a free, Apache-2.0 tool covering LLM, diffusion, TTS, and embedding fine-tuning through a desktop app, web UI, or Python library; see the dedicated comparison section above for how the two differ.',
           '**[Second Me](/power-local-llm/second-me-review-2026)** — an Apache-2.0, self-directed personal-model training tool with a narrower focus (training a personalized model on your own data) than LLaMA-Factory\'s general-purpose 100+ model fine-tuning scope.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — a YAML-config-driven, Apache-2.0 fine-tuning framework with documented multi-node training and a wide alignment-method surface (DPO, ORPO, KTO, and more); no dedicated PromptQuorum review exists yet, but it is a direct alternative for readers comparing config-driven, no-UI fine-tuning frameworks.',
           '**[Ollama](https://ollama.com)** and **[LM Studio](https://lmstudio.ai)** — local inference tools for *running* models rather than training them; a common pattern is fine-tuning with LLaMA-Factory, exporting the result, then running it in Ollama or LM Studio for daily use. See the [Ollama review](/power-local-llm/ollama-review) and [LM Studio review](/power-local-llm/lm-studio-review).',
         ],
-        note: 'This is not an exhaustive list of fine-tuning tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including LLaMA-Factory\'s own directory entry.',
+        note: 'This is not an exhaustive list of fine-tuning tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including LLaMA-Factory\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including LLaMA-Factory\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including LLaMA-Factory\'s directory entry.',
           '[Unsloth Review 2026](/power-local-llm/unsloth-review) — a dedicated review of the closest alternative fine-tuning tool, covering LLMs, diffusion, TTS, and embedding models through a desktop app.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/local-llms/best-llm-fine-tuning-framework-2026) — a direct comparison of local fine-tuning frameworks against cloud fine-tuning APIs.',
           '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) — a deeper look at the LoRA technique LLaMA-Factory and other tools use to fine-tune efficiently.',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gepflegt von hiyouga (laut GitHub-API ein einzelner Maintainer, kein Unternehmen); Repository erstellt am 28. Mai 2023, mit Commits innerhalb weniger Tage vor dem Recherchedatum dieser Review, 9.153 Forks und 1.152 offenen Issues',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LLaMA-Factorys Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LLaMA-Factorys Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -489,14 +489,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. andere Fine-Tuning-Tools',
-        content: 'LLaMA-Factory ist eines von mehreren Tools zum Fine-Tuning von Modellen auf eigener Hardware. Hier, wie es sich neben anderen Optionen in diesem Bereich einordnet — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, und den dedizierten [LLaMA-Factory-vs.-Unsloth-Vergleich](#llama-factory-vs-unsloth) oben für das direkteste Duell.',
+        content: 'LLaMA-Factory ist eines von mehreren Tools zum Fine-Tuning von Modellen auf eigener Hardware. Hier, wie es sich neben anderen Optionen in diesem Bereich einordnet — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, und den dedizierten [LLaMA-Factory-vs.-Unsloth-Vergleich](#llama-factory-vs-unsloth) oben für das direkteste Duell.',
         items: [
           '**[Unsloth](/de/power-local-llm/unsloth-review)** — ein kostenloses Apache-2.0-Tool, das LLM-, Diffusions-, TTS- und Embedding-Fine-Tuning über Desktop-App, Weboberfläche oder Python-Bibliothek abdeckt; siehe den dedizierten Vergleichsabschnitt oben für die Unterschiede.',
           '**[Second Me](/de/power-local-llm/second-me-review-2026)** — ein Apache-2.0-Tool zum selbstgesteuerten Training eines persönlichen Modells, mit engerem Fokus (Training eines personalisierten Modells auf eigenen Daten) als LLaMA-Factorys allgemeinem Fine-Tuning-Umfang für über 100 Modelle.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — ein YAML-konfigurationsgesteuertes, Apache-2.0-lizenziertes Fine-Tuning-Framework mit dokumentiertem Multi-Node-Training und breiter Abdeckung von Alignment-Methoden (DPO, ORPO, KTO u. a.); es gibt noch keine dedizierte PromptQuorum-Review, aber es ist eine direkte Alternative für Leser, die konfigurationsgesteuerte Fine-Tuning-Frameworks ohne UI vergleichen.',
           '**[Ollama](https://ollama.com)** und **[LM Studio](https://lmstudio.ai)** — lokale Inferenz-Tools zum *Ausführen* von Modellen statt sie zu trainieren; ein gängiges Muster ist Fine-Tuning mit LLaMA-Factory, Export des Ergebnisses und anschließendes Ausführen in Ollama oder LM Studio für den täglichen Gebrauch. Siehe die [Ollama-Review](/de/power-local-llm/ollama-review) und die [LM-Studio-Review](/de/power-local-llm/lm-studio-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Fine-Tuning-Tools — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich LLaMA-Factorys eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Fine-Tuning-Tools — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich LLaMA-Factorys eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LLaMA-Factorys Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LLaMA-Factorys Directory-Eintrag.',
           '[Unsloth Review 2026](/de/power-local-llm/unsloth-review) — eine dedizierte Review der nächstliegenden alternativen Fine-Tuning-Lösung, die LLMs, Diffusion, TTS und Embedding-Modelle über eine Desktop-App abdeckt.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/de/local-llms/best-llm-fine-tuning-framework-2026) — ein direkter Vergleich lokaler Fine-Tuning-Frameworks gegenüber Cloud-Fine-Tuning-APIs.',
           '[Fine-Tuning Local LLMs with LoRA](/de/local-llms/fine-tuning-local-llms-lora) — ein tieferer Blick auf die LoRA-Technik, die LLaMA-Factory und andere Tools zum effizienten Fine-Tuning nutzen.',
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Maintenu par hiyouga (un mainteneur individuel sur GitHub, selon l\'API GitHub) ; dépôt créé le 28 mai 2023, avec des commits poussés à quelques jours de la date de recherche de cette review, 9 153 forks et 1 152 issues ouvertes',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de LLaMA-Factory dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment LLaMA-Factory se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de LLaMA-Factory dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment LLaMA-Factory se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -768,14 +768,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. autres outils de fine-tuning',
-        content: 'LLaMA-Factory est l\'un des nombreux outils pour affiner des modèles sur votre propre matériel. Voici comment il se positionne face à d\'autres options dans ce domaine — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) ci-dessus pour le duel le plus direct.',
+        content: 'LLaMA-Factory est l\'un des nombreux outils pour affiner des modèles sur votre propre matériel. Voici comment il se positionne face à d\'autres options dans ce domaine — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, et la [comparaison dédiée LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) ci-dessus pour le duel le plus direct.',
         items: [
           '**[Unsloth](/fr/power-local-llm/unsloth-review)** — un outil gratuit Apache-2.0 couvrant le fine-tuning de LLM, diffusion, TTS et embedding via une app de bureau, une interface web ou une bibliothèque Python ; voir la section de comparaison dédiée ci-dessus pour les différences.',
           '**[Second Me](/fr/power-local-llm/second-me-review-2026)** — un outil Apache-2.0 d\'entraînement autodirigé d\'un modèle personnel, avec un périmètre plus étroit (entraîner un modèle personnalisé sur vos propres données) que la portée généraliste de fine-tuning de LLaMA-Factory pour plus de 100 modèles.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — un framework de fine-tuning Apache-2.0 piloté par configuration YAML, avec entraînement multi-nœud documenté et une large couverture de méthodes d\'alignement (DPO, ORPO, KTO, et plus) ; il n\'existe pas encore de review PromptQuorum dédiée, mais c\'est une alternative directe pour les lecteurs comparant des frameworks de fine-tuning pilotés par configuration, sans interface.',
           '**[Ollama](https://ollama.com)** et **[LM Studio](https://lmstudio.ai)** — des outils d\'inférence locale pour *exécuter* des modèles plutôt que les entraîner ; un schéma courant consiste à affiner avec LLaMA-Factory, exporter le résultat, puis l\'exécuter dans Ollama ou LM Studio pour un usage quotidien. Voir la [review Ollama](/fr/power-local-llm/ollama-review) et la [review LM Studio](/fr/power-local-llm/lm-studio-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de LLaMA-Factory dans le répertoire.',
+        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de LLaMA-Factory dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LLaMA-Factory dans le répertoire.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LLaMA-Factory dans le répertoire.',
           '[Unsloth Review 2026](/fr/power-local-llm/unsloth-review) — une review dédiée de l\'alternative de fine-tuning la plus proche, couvrant les LLM, la diffusion, le TTS et les modèles d\'embedding via une app de bureau.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/fr/local-llms/best-llm-fine-tuning-framework-2026) — une comparaison directe des frameworks de fine-tuning local face aux API de fine-tuning cloud.',
           '[Fine-Tuning Local LLMs with LoRA](/fr/local-llms/fine-tuning-local-llms-lora) — un regard plus approfondi sur la technique LoRA que LLaMA-Factory et d\'autres outils utilisent pour un fine-tuning efficace.',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'hiyouga（GitHub APIによれば個人メンテナー）によって保守されている。リポジトリは2023年5月28日に作成され、本レビューの調査日から数日以内にコミットがプッシュされ、フォーク数9,153、オープンなIssue数1,152',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるLLaMA-Factoryの掲載情報を深掘りする補足記事です——他の数十のローカルAIツールとの比較は同ページで一目で確認できます。' },
+          { type: 'note', text: '本レビューは[Local LLM Software Directory](/ja/directory)にあるLLaMA-Factoryの掲載情報を深掘りする補足記事です——他の数十のローカルAIツールとの比較は同ページで一目で確認できます。' },
         ],
       },
       overview: {
@@ -1047,14 +1047,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. 他のファインチューニングツール',
-        content: 'LLaMA-Factoryは、自前のハードウェアでモデルをファインチューニングするための数あるツールの1つです。この分野の他の選択肢と比べてどう位置づけられるかを以下に示します——全カタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[LLaMA-Factory vs. Unslothの専用比較セクション](#llama-factory-vs-unsloth)を参照してください。',
+        content: 'LLaMA-Factoryは、自前のハードウェアでモデルをファインチューニングするための数あるツールの1つです。この分野の他の選択肢と比べてどう位置づけられるかを以下に示します——全カタログは[Local LLM Software Directory](/ja/directory)を、最も直接的な比較は上記の[LLaMA-Factory vs. Unslothの専用比較セクション](#llama-factory-vs-unsloth)を参照してください。',
         items: [
           '**[Unsloth](/ja/power-local-llm/unsloth-review)** — デスクトップアプリ、Web UI、またはPythonライブラリを通じてLLM・拡散モデル・TTS・埋め込みモデルのファインチューニングをカバーする無料のApache-2.0ツール。両者の違いは上記の専用比較セクションを参照してください。',
           '**[Second Me](/ja/power-local-llm/second-me-review-2026)** — 自分のデータでパーソナライズされたモデルを学習するという、LLaMA-Factoryの汎用的な100以上のモデルファインチューニング範囲よりも狭い焦点を持つApache-2.0の自己主導型パーソナルモデル学習ツール。',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — YAML設定駆動でApache-2.0ライセンスのファインチューニングフレームワークで、マルチノード学習が文書化されており、DPO・ORPO・KTOなど幅広いアライメント手法をカバー。専用のPromptQuorumレビューはまだ存在しないが、設定駆動でUIのないファインチューニングフレームワークを比較する読者にとって直接的な代替となる。',
           '**[Ollama](https://ollama.com)**と**[LM Studio](https://lmstudio.ai)** — モデルを学習するのではなく*実行*するためのローカル推論ツール。よくあるパターンはLLaMA-Factoryでファインチューニングし、結果をエクスポートして、日常利用のためにOllamaやLM Studioで実行することです。[Ollamaレビュー](/ja/power-local-llm/ollama-review)と[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)を参照してください。',
         ],
-        note: 'これはファインチューニングツールの網羅的なリストではありません——LLaMA-Factory自身のディレクトリ掲載情報を含む、定期的に更新される完全なカタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはファインチューニングツールの網羅的なリストではありません——LLaMA-Factory自身のディレクトリ掲載情報を含む、定期的に更新される完全なカタログについては[Local LLM Software Directory](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — LLaMA-Factoryのディレクトリ掲載情報を含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — LLaMA-Factoryのディレクトリ掲載情報を含む、この記事が属するローカルAIツールの完全なカタログ。',
           '[Unslothレビュー2026](/ja/power-local-llm/unsloth-review) — デスクトップアプリを通じてLLM・拡散モデル・TTS・埋め込みモデルをカバーする、最も近い代替ファインチューニングツールの専用レビュー。',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/ja/local-llms/best-llm-fine-tuning-framework-2026) — ローカルファインチューニングフレームワークとクラウドファインチューニングAPIを直接比較する記事。',
           '[Fine-Tuning Local LLMs with LoRA](/ja/local-llms/fine-tuning-local-llms-lora) — LLaMA-Factoryや他のツールが効率的なファインチューニングに使用するLoRA技術を深掘りする記事。',
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由hiyouga维护（根据GitHub API，为个人维护者而非组织）；仓库创建于2023年5月28日，在本评测调研日期前数天内仍有提交推送，拥有9,153次复刻和1,152个未关闭issue',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中LLaMA-Factory词条的深度延伸——该页面可让你一目了然地对比LLaMA-Factory与其他数十款本地AI工具。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中LLaMA-Factory词条的深度延伸——该页面可让你一目了然地对比LLaMA-Factory与其他数十款本地AI工具。' },
         ],
       },
       overview: {
@@ -1326,14 +1326,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory对比其他微调工具',
-        content: 'LLaMA-Factory是众多可在自有硬件上微调模型的工具之一。以下是它在该领域相对于其他选项的定位——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最直接的正面对比请见上方专门的[LLaMA-Factory对比Unsloth](#llama-factory-vs-unsloth)部分。',
+        content: 'LLaMA-Factory是众多可在自有硬件上微调模型的工具之一。以下是它在该领域相对于其他选项的定位——完整目录请见[本地LLM软件目录](/zh/directory)，最直接的正面对比请见上方专门的[LLaMA-Factory对比Unsloth](#llama-factory-vs-unsloth)部分。',
         items: [
           '**[Unsloth](/zh/power-local-llm/unsloth-review)** — 一款免费的Apache-2.0工具，通过桌面应用、Web界面或Python库覆盖LLM、扩散模型、TTS和嵌入模型的微调；两者的差异请见上方专门的对比部分。',
           '**[Second Me](/zh/power-local-llm/second-me-review-2026)** — 一款Apache-2.0的自主个人模型训练工具，专注于在自己的数据上训练一个个性化模型，其范围比LLaMA-Factory面向100多个模型的通用微调范围更窄。',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — 一款由YAML配置驱动、Apache-2.0许可的微调框架，有文档记录的多节点训练，并覆盖广泛的对齐方法（DPO、ORPO、KTO等）；目前还没有专门的PromptQuorum评测，但对于比较配置驱动、无界面微调框架的读者而言，它是一个直接的替代选择。',
           '**[Ollama](https://ollama.com)**和**[LM Studio](https://lmstudio.ai)** — 用于*运行*模型而非训练模型的本地推理工具；一种常见模式是用LLaMA-Factory微调，导出结果，然后在Ollama或LM Studio中运行以供日常使用。参见[Ollama评测](/zh/power-local-llm/ollama-review)和[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
         ],
-        note: '这并非一份详尽的微调工具列表——完整且定期更新的目录（包括LLaMA-Factory自己的目录词条）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非一份详尽的微调工具列表——完整且定期更新的目录（包括LLaMA-Factory自己的目录词条）请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包括LLaMA-Factory自己的目录词条。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录，包括LLaMA-Factory自己的目录词条。',
           '[Unsloth评测2026](/zh/power-local-llm/unsloth-review) — 对最接近的替代微调工具的专门评测，涵盖通过桌面应用进行的LLM、扩散模型、TTS和嵌入模型微调。',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/zh/local-llms/best-llm-fine-tuning-framework-2026) — 将本地微调框架与云端微调API进行直接对比的文章。',
           '[Fine-Tuning Local LLMs with LoRA](/zh/local-llms/fine-tuning-local-llms-lora) — 深入介绍LLaMA-Factory和其他工具用于高效微调的LoRA技术。',
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mantenido por hiyouga (un mantenedor individual en GitHub, según la API de GitHub); repositorio creado el 28 de mayo de 2023, con commits publicados a pocos días de la fecha de investigación de esta review, 9.153 forks y 1.152 issues abiertas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LLaMA-Factory en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara LLaMA-Factory con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LLaMA-Factory en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara LLaMA-Factory con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1605,14 +1605,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. otras herramientas de fine-tuning',
-        content: 'LLaMA-Factory es una de varias herramientas para hacer fine-tuning de modelos en tu propio hardware. Así se posiciona junto a otras opciones en ese espacio — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) arriba para el enfrentamiento más directo.',
+        content: 'LLaMA-Factory es una de varias herramientas para hacer fine-tuning de modelos en tu propio hardware. Así se posiciona junto a otras opciones en ese espacio — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, y la [comparación dedicada LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) arriba para el enfrentamiento más directo.',
         items: [
           '**[Unsloth](/es/power-local-llm/unsloth-review)** — una herramienta gratuita Apache-2.0 que cubre fine-tuning de LLM, difusión, TTS y embedding mediante una app de escritorio, interfaz web o biblioteca de Python; consulta la sección de comparación dedicada arriba para ver las diferencias.',
           '**[Second Me](/es/power-local-llm/second-me-review-2026)** — una herramienta Apache-2.0 de entrenamiento autodirigido de un modelo personal, con un enfoque más estrecho (entrenar un modelo personalizado con tus propios datos) que el alcance general de fine-tuning de más de 100 modelos de LLaMA-Factory.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — un framework de fine-tuning Apache-2.0 dirigido por configuración YAML, con entrenamiento multi-nodo documentado y una amplia cobertura de métodos de alineación (DPO, ORPO, KTO, y más); todavía no existe una review dedicada de PromptQuorum, pero es una alternativa directa para lectores que comparan frameworks de fine-tuning dirigidos por configuración, sin interfaz.',
           '**[Ollama](https://ollama.com)** y **[LM Studio](https://lmstudio.ai)** — herramientas de inferencia local para *ejecutar* modelos en lugar de entrenarlos; un patrón habitual es hacer fine-tuning con LLaMA-Factory, exportar el resultado, y luego ejecutarlo en Ollama o LM Studio para el uso diario. Ver la [review de Ollama](/es/power-local-llm/ollama-review) y la [review de LM Studio](/es/power-local-llm/lm-studio-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de fine-tuning — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LLaMA-Factory en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de fine-tuning — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LLaMA-Factory en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LLaMA-Factory en el directorio.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LLaMA-Factory en el directorio.',
           '[Review de Unsloth 2026](/es/power-local-llm/unsloth-review) — una review dedicada de la alternativa de fine-tuning más cercana, que cubre LLM, difusión, TTS y modelos de embedding mediante una app de escritorio.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/es/local-llms/best-llm-fine-tuning-framework-2026) — una comparación directa de frameworks de fine-tuning local frente a APIs de fine-tuning en la nube.',
           '[Fine-Tuning Local LLMs with LoRA](/es/local-llms/fine-tuning-local-llms-lora) — una mirada más profunda a la técnica LoRA que LLaMA-Factory y otras herramientas usan para un fine-tuning eficiente.',
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mantido por hiyouga (um mantenedor individual no GitHub, segundo a API do GitHub); repositório criado em 28 de maio de 2023, com commits enviados a poucos dias da data de pesquisa desta análise, 9.153 forks e 1.152 issues abertas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do LLaMA-Factory no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o LLaMA-Factory com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do LLaMA-Factory no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o LLaMA-Factory com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1884,14 +1884,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. outras ferramentas de fine-tuning',
-        content: 'O LLaMA-Factory é uma entre várias ferramentas para fazer fine-tuning de modelos no seu próprio hardware. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) acima para o confronto mais direto.',
+        content: 'O LLaMA-Factory é uma entre várias ferramentas para fazer fine-tuning de modelos no seu próprio hardware. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada LLaMA-Factory vs. Unsloth](#llama-factory-vs-unsloth) acima para o confronto mais direto.',
         items: [
           '**[Unsloth](/pt/power-local-llm/unsloth-review)** — uma ferramenta gratuita Apache-2.0 que cobre fine-tuning de LLM, difusão, TTS e embedding via app de desktop, interface web ou biblioteca Python; veja a seção de comparação dedicada acima para as diferenças.',
           '**[Second Me](/pt/power-local-llm/second-me-review-2026)** — uma ferramenta Apache-2.0 de treinamento autodirigido de um modelo pessoal, com foco mais estreito (treinar um modelo personalizado com seus próprios dados) do que o escopo genérico de fine-tuning de mais de 100 modelos do LLaMA-Factory.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — um framework de fine-tuning Apache-2.0 orientado por configuração YAML, com treinamento multi-nó documentado e ampla cobertura de métodos de alinhamento (DPO, ORPO, KTO, e mais); ainda não existe uma análise dedicada da PromptQuorum, mas é uma alternativa direta para leitores comparando frameworks de fine-tuning orientados por configuração, sem interface.',
           '**[Ollama](https://ollama.com)** e **[LM Studio](https://lmstudio.ai)** — ferramentas de inferência local para *executar* modelos em vez de treiná-los; um padrão comum é fazer fine-tuning com o LLaMA-Factory, exportar o resultado, e então executá-lo no Ollama ou no LM Studio para uso diário. Veja a [análise do Ollama](/pt/power-local-llm/ollama-review) e a [análise do LM Studio](/pt/power-local-llm/lm-studio-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de fine-tuning — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do LLaMA-Factory no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de fine-tuning — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do LLaMA-Factory no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do LLaMA-Factory no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do LLaMA-Factory no diretório.',
           '[Análise do Unsloth 2026](/pt/power-local-llm/unsloth-review) — uma análise dedicada da alternativa de fine-tuning mais próxima, cobrindo LLMs, difusão, TTS e modelos de embedding via um app de desktop.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/pt/local-llms/best-llm-fine-tuning-framework-2026) — uma comparação direta de frameworks de fine-tuning local contra APIs de fine-tuning em nuvem.',
           '[Fine-Tuning Local LLMs with LoRA](/pt/local-llms/fine-tuning-local-llms-lora) — um olhar mais profundo sobre a técnica LoRA que o LLaMA-Factory e outras ferramentas usam para fazer fine-tuning de forma eficiente.',
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يصونه hiyouga (مطوّر فردي على GitHub، وفقًا لواجهة برمجة تطبيقات GitHub)؛ أُنشئ المستودع في 28 مايو 2023، مع دفعات تعديل خلال أيام قليلة من تاريخ بحث هذه المراجعة، و9,153 تفريعة و1,152 مشكلة مفتوحة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لبطاقة LLaMA-Factory في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين LLaMA-Factory وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لبطاقة LLaMA-Factory في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين LLaMA-Factory وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2163,14 +2163,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory مقابل أدوات الضبط الأخرى',
-        content: 'LLaMA-Factory هو واحد من عدة أدوات لضبط النماذج على جهازك الخاص. فيما يلي موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، والمقارنة المخصصة أعلاه بين [LLaMA-Factory وUnsloth](#llama-factory-vs-unsloth) للمواجهة الأكثر مباشرة.',
+        content: 'LLaMA-Factory هو واحد من عدة أدوات لضبط النماذج على جهازك الخاص. فيما يلي موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للكتالوج الكامل، والمقارنة المخصصة أعلاه بين [LLaMA-Factory وUnsloth](#llama-factory-vs-unsloth) للمواجهة الأكثر مباشرة.',
         items: [
           '**[Unsloth](/ar/power-local-llm/unsloth-review)** — أداة مجانية برخصة Apache-2.0 تغطي ضبط النماذج اللغوية والانتشار وتحويل النص إلى كلام والتضمين عبر تطبيق سطح مكتب أو واجهة ويب أو مكتبة بايثون؛ راجع قسم المقارنة المخصص أعلاه لمعرفة الاختلافات.',
           '**[Second Me](/ar/power-local-llm/second-me-review-2026)** — أداة برخصة Apache-2.0 ذاتية التوجيه لتدريب نموذج شخصي، بتركيز أضيق (تدريب نموذج مخصص على بياناتك الخاصة) مقارنة بنطاق LLaMA-Factory العام لضبط أكثر من 100 نموذج.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — إطار عمل ضبط مدفوع بتهيئة YAML برخصة Apache-2.0، مع تدريب متعدد العُقد موثق وتغطية واسعة لطرق المحاذاة (DPO وORPO وKTO والمزيد)؛ لا توجد بعد مراجعة مخصصة من PromptQuorum، لكنه بديل مباشر للقراء الذين يقارنون أطر عمل الضبط المدفوعة بالتهيئة دون واجهة.',
           '**[Ollama](https://ollama.com)** وَ**[LM Studio](https://lmstudio.ai)** — أدوات استدلال محلية *لتشغيل* النماذج بدلاً من تدريبها؛ النمط الشائع هو الضبط باستخدام LLaMA-Factory، ثم تصدير النتيجة، ثم تشغيلها في Ollama أو LM Studio للاستخدام اليومي. راجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) وَ[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الضبط — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك بطاقة LLaMA-Factory الخاصة به في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الضبط — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك بطاقة LLaMA-Factory الخاصة به في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2226,7 +2226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك بطاقة LLaMA-Factory في الدليل.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك بطاقة LLaMA-Factory في الدليل.',
           '[مراجعة Unsloth 2026](/ar/power-local-llm/unsloth-review) — مراجعة مخصصة لأقرب بديل لأداة الضبط، تغطي النماذج اللغوية والانتشار وتحويل النص إلى كلام ونماذج التضمين عبر تطبيق سطح مكتب.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/ar/local-llms/best-llm-fine-tuning-framework-2026) — مقارنة مباشرة بين أطر عمل الضبط المحلية وواجهات برمجة تطبيقات الضبط السحابية.',
           '[Fine-Tuning Local LLMs with LoRA](/ar/local-llms/fine-tuning-local-llms-lora) — نظرة أعمق على تقنية LoRA التي تستخدمها LLaMA-Factory وأدوات أخرى للضبط بكفاءة.',
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'hiyouga(GitHub API 기준 개인 관리자)가 유지 관리; 저장소는 2023년 5월 28일에 생성되었으며, 이 리뷰의 조사일로부터 며칠 이내에 커밋이 푸시되었고, 포크 9,153개, 열린 이슈 1,152개를 기록',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 LLaMA-Factory 항목을 심층적으로 다루는 보완 글입니다——다른 수십 개 로컬 AI 도구와의 비교는 해당 페이지에서 한눈에 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 LLaMA-Factory 항목을 심층적으로 다루는 보완 글입니다——다른 수십 개 로컬 AI 도구와의 비교는 해당 페이지에서 한눈에 확인할 수 있습니다.' },
         ],
       },
       overview: {
@@ -2442,14 +2442,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'llama-factory-competitors',
         title: 'LLaMA-Factory vs. 다른 파인튜닝 도구',
-        content: 'LLaMA-Factory는 자체 하드웨어에서 모델을 파인튜닝할 수 있는 여러 도구 중 하나입니다. 이 분야의 다른 선택지와 비교하면 다음과 같이 자리매김합니다——전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 [LLaMA-Factory vs. Unsloth 전용 비교](#llama-factory-vs-unsloth) 섹션을 참고하시기 바랍니다.',
+        content: 'LLaMA-Factory는 자체 하드웨어에서 모델을 파인튜닝할 수 있는 여러 도구 중 하나입니다. 이 분야의 다른 선택지와 비교하면 다음과 같이 자리매김합니다——전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 직접적인 비교는 위의 [LLaMA-Factory vs. Unsloth 전용 비교](#llama-factory-vs-unsloth) 섹션을 참고하시기 바랍니다.',
         items: [
           '**[Unsloth](/ko/power-local-llm/unsloth-review)** — 데스크톱 앱, 웹 UI, 또는 Python 라이브러리를 통해 LLM·디퓨전·TTS·임베딩 파인튜닝을 다루는 무료 Apache-2.0 도구; 두 도구의 차이는 위의 전용 비교 섹션을 참고하세요.',
           '**[Second Me](/ko/power-local-llm/second-me-review-2026)** — 자신의 데이터로 개인화된 모델을 학습시키는 것에 초점을 맞춘, Apache-2.0 기반의 자기 주도형 개인 모델 학습 도구로, 100개 이상의 모델을 다루는 LLaMA-Factory의 범용 파인튜닝 범위보다 초점이 좁음.',
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — YAML 설정 기반의 Apache-2.0 파인튜닝 프레임워크로, 멀티 노드 학습이 문서화되어 있고 DPO, ORPO, KTO 등 폭넓은 정렬(alignment) 방법을 다룸; 아직 전용 PromptQuorum 리뷰는 없지만, 설정 기반이면서 UI가 없는 파인튜닝 프레임워크를 비교하는 독자에게는 직접적인 대안임.',
           '**[Ollama](https://ollama.com)**와 **[LM Studio](https://lmstudio.ai)** — 모델을 학습시키는 대신 *실행*하기 위한 로컬 추론 도구; 흔한 패턴은 LLaMA-Factory로 파인튜닝한 뒤 결과를 내보내고, 일상 사용을 위해 Ollama나 LM Studio에서 실행하는 것입니다. [Ollama 리뷰](/ko/power-local-llm/ollama-review)와 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
         ],
-        note: '이는 파인튜닝 도구의 완전한 목록이 아닙니다——LLaMA-Factory 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하시기 바랍니다.',
+        note: '이는 파인튜닝 도구의 완전한 목록이 아닙니다——LLaMA-Factory 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하시기 바랍니다.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — LLaMA-Factory의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — LLaMA-Factory의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
           '[Unsloth 리뷰 2026](/ko/power-local-llm/unsloth-review) — 데스크톱 앱을 통해 LLM·디퓨전·TTS·임베딩 모델을 다루는, 가장 가까운 대안 파인튜닝 도구에 대한 전용 리뷰.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/ko/local-llms/best-llm-fine-tuning-framework-2026) — 로컬 파인튜닝 프레임워크와 클라우드 파인튜닝 API를 직접 비교하는 글.',
           '[Fine-Tuning Local LLMs with LoRA](/ko/local-llms/fine-tuning-local-llms-lora) — LLaMA-Factory와 다른 도구들이 효율적인 파인튜닝을 위해 사용하는 LoRA 기법을 더 깊이 다루는 글.',

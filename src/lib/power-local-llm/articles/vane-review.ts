@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free with no paid tier; roughly 36,700 GitHub stars and over 4,000 forks as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Vane\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Vane compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Vane\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Vane compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MaxKB Review](/power-local-llm/maxkb-review) — a Docker-deployed self-hosted RAG and agent platform with local Ollama model support.',
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — a lighter-weight, MIT-licensed self-hosted document chat tool.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted personal AI assistant for search over your own notes and documents.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos ohne kostenpflichtige Stufe; rund 36.700 GitHub-Sterne und über 4.000 Forks zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Vanes Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sieht man auf einen Blick, wie Vane im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Vanes Eintrag im [Local LLM Software Directory](/directory) — dort sieht man auf einen Blick, wie Vane im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MaxKB Review](/power-local-llm/maxkb-review) — eine per Docker bereitgestellte, selbst gehostete RAG- und Agenten-Plattform mit lokaler Ollama-Modellunterstützung.',
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — ein leichtgewichtiges, MIT-lizenziertes, selbst gehostetes Dokumenten-Chat-Tool.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehosteter persönlicher KI-Assistent für die Suche über eigene Notizen und Dokumente.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuit sans offre payante ; environ 36 700 étoiles GitHub et plus de 4 000 forks au moment de cet avis',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis complète l\'entrée de Vane dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment Vane se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis complète l\'entrée de Vane dans le [Local LLM Software Directory](/directory) — consultez cette page pour voir en un coup d\'œil comment Vane se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis MaxKB](/power-local-llm/maxkb-review) — une plateforme RAG et agents auto-hébergée déployée via Docker avec prise en charge des modèles Ollama locaux.',
           '[Avis AnythingLLM](/power-local-llm/anythingllm-review) — un outil de chat documentaire auto-hébergé, léger et sous licence MIT.',
           '[Avis Khoj](/power-local-llm/khoj-ai-second-brain-review) — un assistant IA personnel auto-hébergé pour rechercher dans vos propres notes et documents.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory](/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '無料で有料プランなし。本レビュー時点で約36,700個のGitHubスターと4,000を超えるフォーク',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるVaneのエントリーを深掘りする補完記事です――他の数十のローカルAIツールとVaneがひと目でどう比較されるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるVaneのエントリーを深掘りする補完記事です――他の数十のローカルAIツールとVaneがひと目でどう比較されるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MaxKBレビュー](/power-local-llm/maxkb-review) — ローカルOllamaモデル対応の、Dockerでデプロイするセルフホスト型RAG・エージェントプラットフォーム。',
           '[AnythingLLMレビュー](/power-local-llm/anythingllm-review) — 軽量でMITライセンスのセルフホスト型ドキュメントチャットツール。',
           '[Khojレビュー](/power-local-llm/khoj-ai-second-brain-review) — 自分のメモやドキュメントを検索するためのセルフホスト型の個人向けAIアシスタント。',
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — 本記事が属する、ローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/directory) — 本記事が属する、ローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '免费且无付费套餐;截至本评测,GitHub星标数约36,700个,fork数超过4,000个',
         ],
         callouts: [
-          { type: 'note', text: '本评测是对[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Vane条目的深入补充——该页面可让你一目了然地看到Vane与其他数十种本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是对[本地LLM软件目录](/directory)中Vane条目的深入补充——该页面可让你一目了然地看到Vane与其他数十种本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MaxKB评测](/power-local-llm/maxkb-review) ——一款通过Docker部署的自托管RAG与代理平台,支持本地Ollama模型。',
           '[AnythingLLM评测](/power-local-llm/anythingllm-review) ——一款轻量级、MIT许可的自托管文档对话工具。',
           '[Khoj评测](/power-local-llm/khoj-ai-second-brain-review) ——一款用于搜索自己笔记和文档的自托管个人AI助手。',
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) ——本文所属的完整本地AI工具目录。',
+          '[本地LLM软件目录](/directory) ——本文所属的完整本地AI工具目录。',
         ],
       },
     },
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito sin plan de pago; aproximadamente 36.700 estrellas en GitHub y más de 4.000 forks al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado a la entrada de Vane en el [Directorio de software de LLM local](/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Vane con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento detallado a la entrada de Vane en el [Directorio de software de LLM local](/directory) — consulta esa página para ver de un vistazo cómo se compara Vane con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de MaxKB](/power-local-llm/maxkb-review) — una plataforma autoalojada de RAG y agentes desplegada con Docker, con soporte para modelos locales de Ollama.',
           '[Reseña de AnythingLLM](/power-local-llm/anythingllm-review) — una herramienta de chat con documentos autoalojada, ligera y con licencia MIT.',
           '[Reseña de Khoj](/power-local-llm/khoj-ai-second-brain-review) — un asistente de IA personal autoalojado para buscar en tus propias notas y documentos.',
-          '[Directorio de software de LLM local](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software de LLM local](/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito, sem plano pago; aproximadamente 36.700 estrelas no GitHub e mais de 4.000 forks no momento desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Vane no [Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Vane com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Vane no [Diretório de software de LLM local](/directory) — veja essa página para comparar rapidamente o Vane com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do MaxKB](/power-local-llm/maxkb-review) — uma plataforma autohospedada de RAG e agentes implantada via Docker, com suporte a modelos locais do Ollama.',
           '[Análise do AnythingLLM](/power-local-llm/anythingllm-review) — uma ferramenta de chat com documentos autohospedada, leve e licenciada sob MIT.',
           '[Análise do Khoj](/power-local-llm/khoj-ai-second-brain-review) — um assistente de IA pessoal autohospedado para busca nas suas próprias anotações e documentos.',
-          '[Diretório de software de LLM local](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM local](/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1659,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مجاني دون باقة مدفوعة؛ نحو 36,700 نجمة على GitHub وأكثر من 4,000 نسخة متفرعة حتى وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Vane في [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Vane بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Vane في [دليل برمجيات LLM المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Vane بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1813,7 +1813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة MaxKB](/power-local-llm/maxkb-review) — منصة RAG وعملاء مستضافة ذاتيًا تُنشر عبر Docker مع دعم نماذج Ollama المحلية.',
           '[مراجعة AnythingLLM](/power-local-llm/anythingllm-review) — أداة دردشة مستندات خفيفة ومستضافة ذاتيًا ومرخّصة بموجب MIT.',
           '[مراجعة Khoj](/power-local-llm/khoj-ai-second-brain-review) — مساعد ذكاء اصطناعي شخصي مستضاف ذاتيًا للبحث في ملاحظاتك ومستنداتك الخاصة.',
-          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات LLM المحلية](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '유료 플랜 없이 무료; 이 리뷰 작성 시점 기준 약 36,700개의 GitHub 스타와 4,000개 이상의 포크',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Vane 항목의 심화 보완 자료입니다—Vane이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Vane 항목의 심화 보완 자료입니다—Vane이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MaxKB 리뷰](/power-local-llm/maxkb-review) — 로컬 Ollama 모델을 지원하는, Docker로 배포되는 셀프호스팅 RAG 및 에이전트 플랫폼.',
           '[AnythingLLM 리뷰](/power-local-llm/anythingllm-review) — 경량이며 MIT 라이선스인 셀프호스팅 문서 대화 도구.',
           '[Khoj 리뷰](/power-local-llm/khoj-ai-second-brain-review) — 자신의 메모와 문서를 검색하기 위한 셀프호스팅 개인 AI 어시스턴트.',
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Review (2026)](/power-local-llm/stable-diffusion-review) — the base model family ControlNet attaches to, including license terms and VRAM requirements by version.',
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — deeper comparison of local image model families on license terms, VRAM, and real use cases.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — comprehensive app and tool directory for all platforms.',
+          '[Local LLM Software Directory 2026](/directory) — comprehensive app and tool directory for all platforms.',
         ],
       },
     },
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die Basismodellfamilie, an die ControlNet andockt, inkl. Lizenzbedingungen und VRAM-Anforderungen je Version.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — tieferer Vergleich lokaler Bildmodellfamilien nach Lizenzbedingungen, VRAM und realen Anwendungsfällen.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
+          '[Local LLM Software Directory 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },
     },
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análisis de Stable Diffusion (2026)](/es/power-local-llm/stable-diffusion-review) — la familia de modelos base a la que se conecta ControlNet, incluidas las condiciones de licencia y los requisitos de VRAM por versión.',
           '[Generación de imágenes con IA local frente a la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — comparación más profunda de familias de modelos de imagen locales por condiciones de licencia, VRAM y casos de uso reales.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas.',
+          '[Local LLM Software Directory 2026](/es/directory) — directorio completo de apps y herramientas para todas las plataformas.',
         ],
       },
     },
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Test de Stable Diffusion (2026)](/fr/power-local-llm/stable-diffusion-review) — la famille de modèles de base à laquelle ControlNet se rattache, avec les conditions de licence et les besoins en VRAM par version.',
           '[Génération d\'images IA locale vs cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — comparaison plus approfondie des familles de modèles d\'image locaux sur les conditions de licence, la VRAM et les cas d\'usage réels.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
+          '[Local LLM Software Directory 2026](/fr/directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
         ],
       },
     },
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusionレビュー（2026年）](/ja/power-local-llm/stable-diffusion-review) — ControlNetが接続されるベースモデルファミリー。バージョンごとのライセンス条件とVRAM要件を含む。',
           '[ローカルAI画像生成 対 クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — ライセンス条件、VRAM、実際のユースケースに基づくローカル画像モデルファミリーの詳細な比較。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — 全プラットフォーム向けの包括的なアプリ・ツールディレクトリ。',
         ],
       },
     },
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Stable Diffusion (2026)](/pt/power-local-llm/stable-diffusion-review) — a família de modelos base à qual o ControlNet se conecta, incluindo termos de licença e requisitos de VRAM por versão.',
           '[Geração de imagens com IA local vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — comparação mais aprofundada de famílias de modelos de imagem locais quanto a termos de licença, VRAM e casos de uso reais.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
+          '[Local LLM Software Directory 2026](/pt/directory) — diretório completo de apps e ferramentas para todas as plataformas.',
         ],
       },
     },
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Stable Diffusion (2026)](/ar/power-local-llm/stable-diffusion-review) — عائلة النماذج الأساسية التي يلتحق بها ControlNet، بما في ذلك شروط الترخيص ومتطلبات VRAM لكل إصدار.',
           '[توليد الصور بالذكاء الاصطناعي المحلي مقابل السحابي](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أعمق لعائلات نماذج الصور المحلية من حيث شروط الترخيص وVRAM وحالات الاستخدام الواقعية.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
+          '[Local LLM Software Directory 2026](/ar/directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
         ],
       },
     },
@@ -2678,7 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion评测（2026）](/zh/power-local-llm/stable-diffusion-review) —— ControlNet所依附的基础模型系列，包括各版本的许可条款和显存要求。',
           '[本地AI图像生成对比云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud) —— 从许可条款、显存和实际使用场景角度对本地图像模型系列进行更深入的对比。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) —— 面向所有平台的全面应用与工具目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) —— 面向所有平台的全面应用与工具目录。',
         ],
       },
     },
@@ -3012,7 +3012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion 리뷰 (2026)](/ko/power-local-llm/stable-diffusion-review) — ControlNet이 연결되는 기반 모델 계열로, 버전별 라이선스 조건과 VRAM 요구 사항을 포함합니다.',
           '[로컬 AI 이미지 생성 대 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — 라이선스 조건, VRAM, 실제 사용 사례 측면에서 로컬 이미지 모델 계열을 더 깊이 비교합니다.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 위한 포괄적인 앱 및 도구 디렉터리.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 모든 플랫폼을 위한 포괄적인 앱 및 도구 디렉터리.',
         ],
       },
     },

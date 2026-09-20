@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment (ADE): a visual interface for inspecting and editing an agent\'s memory blocks and context while it runs',
         ],
         callouts: [
-          { type: 'note', text: 'This review covers the open-source Letta framework and self-hosted server, the Agent Development Environment (ADE), and Letta Cloud together, since Letta Inc. builds and sells all three as one connected stack. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how Letta compares to other agent tools at a glance.' },
+          { type: 'note', text: 'This review covers the open-source Letta framework and self-hosted server, the Agent Development Environment (ADE), and Letta Cloud together, since Letta Inc. builds and sells all three as one connected stack. See the [Local LLM Software Directory](/directory) for how Letta compares to other agent tools at a glance.' },
         ],
       },
       history: {
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen Review: Features, Pricing, Alternatives](/power-local-llm/autogen-review) — Microsoft Research\'s multi-agent conversation framework, for comparison against Letta\'s single-agent memory focus.',
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — the general-purpose framework most often combined with a dedicated memory layer like Letta.',
           '[Semantic Kernel Review: Features, Pricing, Alternatives](/power-local-llm/semantic-kernel-review) — Microsoft\'s .NET-first alternative for enterprise teams standardized on that stack.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Letta fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where Letta fits among agent frameworks.',
         ],
       },
     },
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment (ADE): eine visuelle Oberfläche zum Betrachten und Bearbeiten der Speicherblöcke und des Kontexts eines Agenten während der Laufzeit',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Bewertung behandelt das quelloffene Letta-Framework und den Self-Hosting-Server, die Agent Development Environment (ADE) und Letta Cloud zusammen, da Letta Inc. alle drei als einen verbundenen Stack baut und verkauft. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für einen schnellen Vergleich von Letta mit anderen Agenten-Tools.' },
+          { type: 'note', text: 'Diese Bewertung behandelt das quelloffene Letta-Framework und den Self-Hosting-Server, die Agent Development Environment (ADE) und Letta Cloud zusammen, da Letta Inc. alle drei als einen verbundenen Stack baut und verkauft. Siehe das [Local LLM Software Directory](/de/directory) für einen schnellen Vergleich von Letta mit anderen Agenten-Tools.' },
         ],
       },
       history: {
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/autogen-review) — Microsoft Researchs Multi-Agenten-Gesprächs-Framework, zum Vergleich mit Lettas Fokus auf Gedächtnis für einen einzelnen Agenten.',
           '[LangChain im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/langchain-review) — das allgemeine Framework, das am häufigsten mit einer dedizierten Gedächtnisschicht wie Letta kombiniert wird.',
           '[Semantic Kernel im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — Microsofts .NET-orientierte Alternative für Unternehmensteams, die auf diesen Stack standardisiert sind.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Letta unter den Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Letta unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Agent Development Environment (ADE) : une interface visuelle pour inspecter et modifier les blocs de mémoire et le contexte d'un agent pendant son exécution",
         ],
         callouts: [
-          { type: 'note', text: "Cette revue couvre ensemble le framework open source Letta et son serveur auto-hébergé, l'Agent Development Environment (ADE) et Letta Cloud, car Letta Inc. construit et vend les trois comme une seule offre connectée. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer Letta par rapport aux autres outils d'agents." },
+          { type: 'note', text: "Cette revue couvre ensemble le framework open source Letta et son serveur auto-hébergé, l'Agent Development Environment (ADE) et Letta Cloud, car Letta Inc. construit et vend les trois comme une seule offre connectée. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour situer Letta par rapport aux autres outils d'agents." },
         ],
       },
       history: {
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Avis AutoGen : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/autogen-review) — le framework de conversation multi-agents de Microsoft Research, à comparer avec l'orientation mémoire d'un agent unique de Letta.",
           "[Avis LangChain : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/langchain-review) — le framework généraliste le plus souvent combiné à une couche de mémoire dédiée comme Letta.",
           "[Avis Semantic Kernel : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/semantic-kernel-review) — l'alternative orientée .NET de Microsoft pour les équipes d'entreprise standardisées sur cette pile.",
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris la place de Letta parmi les frameworks d\'agents.',
+          '[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris la place de Letta parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment (ADE): una interfaz visual para inspeccionar y editar los bloques de memoria y el contexto de un agente mientras se ejecuta',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña cubre juntos el framework de código abierto Letta y su servidor autoalojado, el Agent Development Environment (ADE) y Letta Cloud, ya que Letta Inc. construye y vende los tres como una sola oferta conectada. Consulte el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para ver cómo se compara Letta con otras herramientas de agentes.' },
+          { type: 'note', text: 'Esta reseña cubre juntos el framework de código abierto Letta y su servidor autoalojado, el Agent Development Environment (ADE) y Letta Cloud, ya que Letta Inc. construye y vende los tres como una sola oferta conectada. Consulte el [Directorio de software de LLM locales](/es/directory) para ver cómo se compara Letta con otras herramientas de agentes.' },
         ],
       },
       history: {
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de AutoGen: funciones, precios, alternativas](/es/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, para comparar con el enfoque de memoria de un solo agente de Letta.',
           '[Reseña de LangChain: funciones, precios, alternativas](/es/power-local-llm/langchain-review) — el framework de propósito general que más se combina con una capa de memoria dedicada como Letta.',
           '[Reseña de Semantic Kernel: funciones, precios, alternativas](/es/power-local-llm/semantic-kernel-review) — la alternativa de Microsoft orientada a .NET para equipos empresariales estandarizados en esa pila.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Letta entre los frameworks de agentes.',
+          '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ubicación de Letta entre los frameworks de agentes.',
         ],
       },
     },
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment (ADE): uma interface visual para inspecionar e editar os blocos de memória e o contexto de um agente enquanto ele está em execução',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise cobre juntos o framework de código aberto Letta e seu servidor autoinstalável, o Agent Development Environment (ADE) e o Letta Cloud, já que a Letta Inc. constrói e vende os três como uma oferta conectada. Veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para comparar rapidamente a Letta com outras ferramentas de agentes.' },
+          { type: 'note', text: 'Esta análise cobre juntos o framework de código aberto Letta e seu servidor autoinstalável, o Agent Development Environment (ADE) e o Letta Cloud, já que a Letta Inc. constrói e vende os três como uma oferta conectada. Veja o [Diretório de software de LLM local](/pt/directory) para comparar rapidamente a Letta com outras ferramentas de agentes.' },
         ],
       },
       history: {
@@ -1347,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do AutoGen: recursos, preços, alternativas](/pt/power-local-llm/autogen-review) — o framework de conversação multiagente da Microsoft Research, para comparação com o foco de memória de agente único da Letta.',
           '[Análise do LangChain: recursos, preços, alternativas](/pt/power-local-llm/langchain-review) — o framework de uso geral mais frequentemente combinado com uma camada de memória dedicada como a Letta.',
           '[Análise do Semantic Kernel: recursos, preços, alternativas](/pt/power-local-llm/semantic-kernel-review) — a alternativa da Microsoft voltada para .NET para equipes empresariais padronizadas nessa pilha.',
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde a Letta se encaixa entre os frameworks de agentes.',
+          '[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde a Letta se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment(ADE): エージェントの実行中に記憶ブロックとコンテキストを確認・編集できるビジュアルインターフェース',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューでは、オープンソースのLettaフレームワークとセルフホストサーバー、Agent Development Environment(ADE)、Letta Cloudをまとめて扱います。これはLetta Incがこの3つを1つの連携したスタックとして構築・販売しているためです。Lettaと他のエージェントツールの比較は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { type: 'note', text: 'このレビューでは、オープンソースのLettaフレームワークとセルフホストサーバー、Agent Development Environment(ADE)、Letta Cloudをまとめて扱います。これはLetta Incがこの3つを1つの連携したスタックとして構築・販売しているためです。Lettaと他のエージェントツールの比較は[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       history: {
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGenレビュー: 機能・料金・代替ツール](/ja/power-local-llm/autogen-review) — Microsoft Researchのマルチエージェント会話フレームワークで、Lettaの単一エージェント記憶への焦点と比較。',
           '[LangChainレビュー: 機能・料金・代替ツール](/ja/power-local-llm/langchain-review) — Lettaのような専用の記憶レイヤーと組み合わされることが最も多い汎用フレームワーク。',
           '[Semantic Kernelレビュー: 機能・料金・代替ツール](/ja/power-local-llm/semantic-kernel-review) — そのスタックに標準化されたエンタープライズチーム向けの、Microsoftの.NET中心の代替ツール。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLettaがどこに位置するかを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でLettaがどこに位置するかを含む。',
         ],
       },
     },
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment（ADE）：一个可视化界面，用于在智能体运行时查看和编辑其记忆块与上下文',
         ],
         callouts: [
-          { type: 'note', text: '本评测将开源Letta框架及其自托管服务器、Agent Development Environment（ADE）与Letta Cloud一并讨论，因为Letta Inc.将这三者作为一个互联的整体栈来构建和销售。有关Letta与其他智能体工具的快速比较，请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { type: 'note', text: '本评测将开源Letta框架及其自托管服务器、Agent Development Environment（ADE）与Letta Cloud一并讨论，因为Letta Inc.将这三者作为一个互联的整体栈来构建和销售。有关Letta与其他智能体工具的快速比较，请参阅[本地LLM软件目录](/zh/directory)。' },
         ],
       },
       history: {
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen评测：功能、定价、替代方案](/zh/power-local-llm/autogen-review) — 微软研究院的多智能体对话框架，可与Letta专注单智能体记忆的定位做对比。',
           '[LangChain评测：功能、定价、替代方案](/zh/power-local-llm/langchain-review) — 最常与Letta这类专用记忆层搭配使用的通用框架。',
           '[Semantic Kernel评测：功能、定价、替代方案](/zh/power-local-llm/semantic-kernel-review) — 微软面向已标准化使用.NET技术栈的企业团队的替代方案。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Letta在各类智能体框架中的定位。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包含Letta在各类智能体框架中的定位。',
         ],
       },
     },
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agent Development Environment(ADE): 에이전트가 실행되는 동안 메모리 블록과 맥락을 확인하고 편집할 수 있는 시각적 인터페이스',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 오픈소스 Letta 프레임워크와 셀프 호스팅 서버, Agent Development Environment(ADE), Letta Cloud를 함께 다룹니다. Letta Inc.가 이 세 가지를 하나로 연결된 스택으로 구축하고 판매하기 때문입니다. Letta와 다른 에이전트 도구를 한눈에 비교하려면 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 오픈소스 Letta 프레임워크와 셀프 호스팅 서버, Agent Development Environment(ADE), Letta Cloud를 함께 다룹니다. Letta Inc.가 이 세 가지를 하나로 연결된 스택으로 구축하고 판매하기 때문입니다. Letta와 다른 에이전트 도구를 한눈에 비교하려면 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       history: {
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AutoGen 리뷰: 기능, 가격, 대안](/ko/power-local-llm/autogen-review) — 마이크로소프트 리서치의 다중 에이전트 대화 프레임워크로, 단일 에이전트 기억에 집중하는 Letta와 비교해볼 수 있습니다.',
           '[LangChain 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langchain-review) — Letta 같은 전용 기억 계층과 가장 자주 결합되는 범용 프레임워크입니다.',
           '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — 해당 스택으로 표준화된 기업 팀을 위한 마이크로소프트의 .NET 중심 대안입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Letta의 위치를 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 Letta의 위치를 포함합니다.',
         ],
       },
     },
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'بيئة تطوير العميل (ADE): واجهة مرئية لفحص وتعديل كتل ذاكرة العميل وسياقه أثناء التشغيل',
         ],
         callouts: [
-          { type: 'note', text: 'تتناول هذه المراجعة معًا إطار Letta مفتوح المصدر وخادمه القابل للاستضافة الذاتية، وبيئة تطوير العميل (ADE)، وLetta Cloud، لأن Letta Inc. تبني وتبيع الثلاثة كحزمة مترابطة واحدة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) لمقارنة سريعة بين Letta وأدوات العملاء الأخرى.' },
+          { type: 'note', text: 'تتناول هذه المراجعة معًا إطار Letta مفتوح المصدر وخادمه القابل للاستضافة الذاتية، وبيئة تطوير العميل (ADE)، وLetta Cloud، لأن Letta Inc. تبني وتبيع الثلاثة كحزمة مترابطة واحدة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) لمقارنة سريعة بين Letta وأدوات العملاء الأخرى.' },
         ],
       },
       history: {
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة AutoGen: الميزات والأسعار والبدائل](/ar/power-local-llm/autogen-review) — إطار المحادثة متعدد العملاء من Microsoft Research، للمقارنة مع تركيز Letta على ذاكرة عميل واحد.',
           '[مراجعة LangChain: الميزات والأسعار والبدائل](/ar/power-local-llm/langchain-review) — الإطار عام الغرض الأكثر شيوعًا في الدمج مع طبقة ذاكرة مخصصة مثل Letta.',
           '[مراجعة Semantic Kernel: الميزات والأسعار والبدائل](/ar/power-local-llm/semantic-kernel-review) — بديل مايكروسوفت الذي يركز على .NET للفرق المؤسسية الموحّدة على تلك الحزمة.',
-          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Letta بين أطر العملاء.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Letta بين أطر العملاء.',
         ],
       },
     },

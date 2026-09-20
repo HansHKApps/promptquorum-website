@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'AnythingLLM Review: Open-Source RAG and Document Chat',
     seoTitle: 'AnythingLLM Review: Open-Source RAG Chat App',
-    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), source code at [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) is a free, open-source application for chatting with your own documents using a large language model, built around a retrieval-augmented generation (RAG) pipeline that can run locally or self-hosted. It ships as a signed desktop app for macOS, Windows, and Linux, and as a Docker image for self-hosted, multi-user deployments, with an optional hosted version called AnythingLLM Cloud for people who do not want to run their own server. This review covers what AnythingLLM actually does, how its "workspaces" and document pipeline work, how to download or self-host it, what it costs, and where it fits next to other local-first document-chat tools such as [PrivateGPT](/power-local-llm/privategpt-review) and [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review). It is the companion piece to AnythingLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), and to PromptQuorum\'s separate [AnythingLLM Mobile review](/power-local-llm/anythingllm-mobile-review) and hands-on [AnythingLLM vs. PrivateGPT vs. Open WebUI RAG comparison](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag).',
+    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), source code at [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) is a free, open-source application for chatting with your own documents using a large language model, built around a retrieval-augmented generation (RAG) pipeline that can run locally or self-hosted. It ships as a signed desktop app for macOS, Windows, and Linux, and as a Docker image for self-hosted, multi-user deployments, with an optional hosted version called AnythingLLM Cloud for people who do not want to run their own server. This review covers what AnythingLLM actually does, how its "workspaces" and document pipeline work, how to download or self-host it, what it costs, and where it fits next to other local-first document-chat tools such as [PrivateGPT](/power-local-llm/privategpt-review) and [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review). It is the companion piece to AnythingLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory), and to PromptQuorum\'s separate [AnythingLLM Mobile review](/power-local-llm/anythingllm-mobile-review) and hands-on [AnythingLLM vs. PrivateGPT vs. Open WebUI RAG comparison](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag).',
     metaDescription: 'AnythingLLM is a free, open-source RAG app for chatting with your own documents — MIT-licensed, self-hostable via Docker, or a signed desktop app. Downloads and pricing.',
     readTime: '11 min read',
     targetKeywords: [
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A separate, MIT-licensed [AnythingLLM Mobile](/power-local-llm/anythingllm-mobile-review) Android app can pair with a self-hosted AnythingLLM instance or run a small model on-device',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to AnythingLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how AnythingLLM compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to AnythingLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how AnythingLLM compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -188,14 +188,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM vs. Other RAG and Document-Chat Tools',
-        content: 'AnythingLLM is one of several tools built specifically around retrieval-augmented generation and document chat. Here is how it sits next to other options in that same segment — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog, and PromptQuorum\'s hands-on [AnythingLLM vs. PrivateGPT vs. Open WebUI RAG comparison](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) for a direct, tested three-way comparison.',
+        content: 'AnythingLLM is one of several tools built specifically around retrieval-augmented generation and document chat. Here is how it sits next to other options in that same segment — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full catalog, and PromptQuorum\'s hands-on [AnythingLLM vs. PrivateGPT vs. Open WebUI RAG comparison](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) for a direct, tested three-way comparison.',
         items: [
           '**[PrivateGPT](/power-local-llm/privategpt-review)** — a Python-based, offline-by-design RAG server aimed at strict air-gapped deployments; see the dedicated [PrivateGPT review](/power-local-llm/privategpt-review) for install steps and trade-offs against AnythingLLM.',
           '**[Quivr](/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — a self-hosted, open-source "second brain" knowledge assistant with a similar workspace-style document model; see the [Quivr review](/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review)** — a document-understanding RAG engine focused on citation-grade retrieval from complex documents (tables, layouts); see the [RAGFlow review](/power-local-llm/ragflow-document-understanding-rag-review) if retrieval precision on mixed document sets matters more than a polished chat UI.',
           '**[Khoj](/power-local-llm/khoj-ai-second-brain-review)** — a self-hosted personal knowledge assistant that indexes notes, PDFs, and other files with a similar "chat with your own data" positioning; see the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'This is not an exhaustive list of RAG and document-chat tools — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including AnythingLLM\'s own directory entry.',
+        note: 'This is not an exhaustive list of RAG and document-chat tools — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full, regularly updated catalog, including AnythingLLM\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including AnythingLLM\'s directory entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including AnythingLLM\'s directory entry.',
           '[AnythingLLM Mobile Review](/power-local-llm/anythingllm-mobile-review) — the separate Android companion app, covering on-device and connected modes.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — PromptQuorum\'s hands-on, tested three-way comparison of RAG platforms.',
           '[PrivateGPT Review](/power-local-llm/privategpt-review) — a stricter, offline-by-design alternative for air-gapped deployments.',
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'AnythingLLM Review: Open-Source-RAG und Dokumenten-Chat',
     seoTitle: 'AnythingLLM Review: Open-Source-RAG-Chat-App',
-    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), Quellcode unter [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) ist eine kostenlose, quelloffene Anwendung, mit der Sie über ein großes Sprachmodell mit Ihren eigenen Dokumenten chatten können — aufgebaut auf einer Retrieval-Augmented-Generation-(RAG)-Pipeline, die lokal oder selbst gehostet laufen kann. Die App wird als signierte Desktop-Anwendung für macOS, Windows und Linux sowie als Docker-Image für selbst gehostete Multi-User-Deployments ausgeliefert, mit einer optionalen gehosteten Variante namens AnythingLLM Cloud für alle, die keinen eigenen Server betreiben möchten. Diese Review behandelt, was AnythingLLM tatsächlich kann, wie die "Workspaces" und die Dokumenten-Pipeline funktionieren, wie Sie es herunterladen oder selbst hosten, was es kostet, und wo es sich im Vergleich zu anderen lokal-first Dokumenten-Chat-Tools wie [PrivateGPT](/de/power-local-llm/privategpt-review) und [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review) einordnet. Sie ist das vertiefende Begleitstück zu AnythingLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) sowie zu PromptQuorums separater [AnythingLLM-Mobile-Review](/de/power-local-llm/anythingllm-mobile-review) und dem praxisnahen [Vergleich AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag).',
+    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), Quellcode unter [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) ist eine kostenlose, quelloffene Anwendung, mit der Sie über ein großes Sprachmodell mit Ihren eigenen Dokumenten chatten können — aufgebaut auf einer Retrieval-Augmented-Generation-(RAG)-Pipeline, die lokal oder selbst gehostet laufen kann. Die App wird als signierte Desktop-Anwendung für macOS, Windows und Linux sowie als Docker-Image für selbst gehostete Multi-User-Deployments ausgeliefert, mit einer optionalen gehosteten Variante namens AnythingLLM Cloud für alle, die keinen eigenen Server betreiben möchten. Diese Review behandelt, was AnythingLLM tatsächlich kann, wie die "Workspaces" und die Dokumenten-Pipeline funktionieren, wie Sie es herunterladen oder selbst hosten, was es kostet, und wo es sich im Vergleich zu anderen lokal-first Dokumenten-Chat-Tools wie [PrivateGPT](/de/power-local-llm/privategpt-review) und [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review) einordnet. Sie ist das vertiefende Begleitstück zu AnythingLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) sowie zu PromptQuorums separater [AnythingLLM-Mobile-Review](/de/power-local-llm/anythingllm-mobile-review) und dem praxisnahen [Vergleich AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag).',
     metaDescription: 'AnythingLLM ist eine kostenlose, quelloffene RAG-App zum Chatten mit eigenen Dokumenten — MIT-lizenziert, per Docker selbst hostbar oder als signierte Desktop-App. Downloads und Preise.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine separate, MIT-lizenzierte [AnythingLLM-Mobile](/de/power-local-llm/anythingllm-mobile-review)-Android-App kann sich mit einer selbst gehosteten AnythingLLM-Instanz koppeln oder ein kleines Modell auf dem Gerät ausführen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AnythingLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie AnythingLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AnythingLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — dort finden Sie einen schnellen Überblick, wie AnythingLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -430,14 +430,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM vs. andere RAG- und Dokumenten-Chat-Tools',
-        content: 'AnythingLLM ist eines von mehreren Tools, die speziell um Retrieval-Augmented Generation und Dokumenten-Chat herum gebaut sind. So schneidet es im Vergleich zu anderen Optionen in diesem Segment ab — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, und PromptQuorums praxisnahen [Vergleich AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) für einen direkten, getesteten Dreier-Vergleich.',
+        content: 'AnythingLLM ist eines von mehreren Tools, die speziell um Retrieval-Augmented Generation und Dokumenten-Chat herum gebaut sind. So schneidet es im Vergleich zu anderen Optionen in diesem Segment ab — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen Katalog, und PromptQuorums praxisnahen [Vergleich AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) für einen direkten, getesteten Dreier-Vergleich.',
         items: [
           '**[PrivateGPT](/de/power-local-llm/privategpt-review)** — ein Python-basierter, von Grund auf offline konzipierter RAG-Server für strikt luftgekappte Deployments; siehe die eigene [PrivateGPT-Review](/de/power-local-llm/privategpt-review) für Installationsschritte und Trade-offs gegenüber AnythingLLM.',
           '**[Quivr](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — ein selbst gehosteter, quelloffener "zweites Gehirn"-Wissensassistent mit einem ähnlichen Workspace-Dokumentenmodell; siehe die [Quivr-Review](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review)** — eine auf Dokumentenverständnis fokussierte RAG-Engine mit Fokus auf zitiergenaue Extraktion aus komplexen Dokumenten (Tabellen, Layouts); siehe die [RAGFlow-Review](/de/power-local-llm/ragflow-document-understanding-rag-review), falls Retrieval-Präzision bei gemischten Dokumentenbeständen wichtiger ist als eine polierte Chat-Oberfläche.',
           '**[Khoj](/de/power-local-llm/khoj-ai-second-brain-review)** — ein selbst gehosteter persönlicher Wissensassistent, der Notizen, PDFs und andere Dateien indiziert, mit ähnlicher "Chat mit den eigenen Daten"-Positionierung; siehe die [Khoj-Review](/de/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste von RAG- und Dokumenten-Chat-Tools — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich AnythingLLMs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von RAG- und Dokumenten-Chat-Tools — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich AnythingLLMs eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich AnythingLLMs Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich AnythingLLMs Verzeichniseintrag.',
           '[AnythingLLM-Mobile-Review](/de/power-local-llm/anythingllm-mobile-review) — die separate Android-Begleit-App mit On-Device- und verbundenen Modi.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — PromptQuorums praxisnaher, getesteter Dreier-Vergleich von RAG-Plattformen.',
           '[PrivateGPT-Review](/de/power-local-llm/privategpt-review) — eine strengere, von Grund auf offline konzipierte Alternative für luftgekappte Deployments.',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'Avis AnythingLLM : RAG et chat documentaire open source',
     seoTitle: 'Avis AnythingLLM : app de chat RAG open source',
-    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), code source sur [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) est une application gratuite et open source pour discuter avec ses propres documents via un grand modèle de langage, construite autour d\'un pipeline de génération augmentée par récupération (RAG) qui peut fonctionner localement ou en auto-hébergement. Elle est distribuée comme application de bureau signée pour macOS, Windows et Linux, et comme image Docker pour les déploiements auto-hébergés multi-utilisateurs, avec une version hébergée optionnelle appelée AnythingLLM Cloud pour ceux qui ne veulent pas gérer leur propre serveur. Cet avis couvre ce qu\'AnythingLLM fait réellement, comment fonctionnent ses "espaces de travail" et son pipeline documentaire, comment le télécharger ou l\'auto-héberger, son coût, et où il se situe par rapport à d\'autres outils de chat documentaire local-first comme [PrivateGPT](/fr/power-local-llm/privategpt-review) et [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review). Il complète l\'entrée d\'AnythingLLM dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), ainsi que l\'[avis AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) et la [comparaison pratique AnythingLLM vs PrivateGPT vs Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum.',
+    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), code source sur [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) est une application gratuite et open source pour discuter avec ses propres documents via un grand modèle de langage, construite autour d\'un pipeline de génération augmentée par récupération (RAG) qui peut fonctionner localement ou en auto-hébergement. Elle est distribuée comme application de bureau signée pour macOS, Windows et Linux, et comme image Docker pour les déploiements auto-hébergés multi-utilisateurs, avec une version hébergée optionnelle appelée AnythingLLM Cloud pour ceux qui ne veulent pas gérer leur propre serveur. Cet avis couvre ce qu\'AnythingLLM fait réellement, comment fonctionnent ses "espaces de travail" et son pipeline documentaire, comment le télécharger ou l\'auto-héberger, son coût, et où il se situe par rapport à d\'autres outils de chat documentaire local-first comme [PrivateGPT](/fr/power-local-llm/privategpt-review) et [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review). Il complète l\'entrée d\'AnythingLLM dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory), ainsi que l\'[avis AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) et la [comparaison pratique AnythingLLM vs PrivateGPT vs Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum.',
     metaDescription: 'AnythingLLM est une application RAG gratuite et open source pour discuter avec vos documents — licence MIT, auto-hébergeable via Docker, ou app de bureau signée. Téléchargements et prix.',
     readTime: '11 min de lecture',
     targetKeywords: [
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une application Android séparée sous licence MIT, [AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review), peut se coupler à une instance AnythingLLM auto-hébergée ou exécuter un petit modèle sur l\'appareil',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée d\'AnythingLLM dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment AnythingLLM se compare à des dizaines d\'autres outils d\'IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée d\'AnythingLLM dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) — consultez cette page pour voir en un coup d\'œil comment AnythingLLM se compare à des dizaines d\'autres outils d\'IA locaux.' },
         ],
       },
       overview: {
@@ -672,14 +672,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM face aux autres outils RAG et chat documentaire',
-        content: 'AnythingLLM est l\'un des nombreux outils construits spécifiquement autour de la génération augmentée par récupération et du chat documentaire. Voici comment il se positionne par rapport à d\'autres options de ce même segment — voir le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison pratique [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum pour une comparaison directe et testée à trois.',
+        content: 'AnythingLLM est l\'un des nombreux outils construits spécifiquement autour de la génération augmentée par récupération et du chat documentaire. Voici comment il se positionne par rapport à d\'autres options de ce même segment — voir le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) pour le catalogue complet, et la comparaison pratique [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum pour une comparaison directe et testée à trois.',
         items: [
           '**[PrivateGPT](/fr/power-local-llm/privategpt-review)** — un serveur RAG basé sur Python, conçu hors ligne dès le départ, destiné aux déploiements strictement air-gapped ; voir l\'[avis PrivateGPT](/fr/power-local-llm/privategpt-review) dédié pour les étapes d\'installation et les compromis face à AnythingLLM.',
           '**[Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — un assistant de connaissances "second cerveau" open source et auto-hébergé, avec un modèle documentaire similaire par espaces de travail ; voir l\'[avis Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review)** — un moteur RAG de compréhension de documents axé sur une récupération de niveau citation à partir de documents complexes (tableaux, mises en page) ; voir l\'[avis RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review) si la précision de récupération sur des jeux de documents mixtes compte plus qu\'une interface de chat soignée.',
           '**[Khoj](/fr/power-local-llm/khoj-ai-second-brain-review)** — un assistant de connaissances personnelles auto-hébergé qui indexe notes, PDF et autres fichiers, avec un positionnement similaire de "chat avec vos propres données" ; voir l\'[avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils RAG et de chat documentaire — voir le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet, régulièrement mis à jour, incluant l\'entrée propre d\'AnythingLLM dans le répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils RAG et de chat documentaire — voir le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) pour le catalogue complet, régulièrement mis à jour, incluant l\'entrée propre d\'AnythingLLM dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locaux auquel appartient cet article, incluant l\'entrée d\'AnythingLLM dans le répertoire.',
+          '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) — le catalogue complet d\'outils d\'IA locaux auquel appartient cet article, incluant l\'entrée d\'AnythingLLM dans le répertoire.',
           '[Avis AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) — l\'application Android compagne séparée, couvrant les modes sur l\'appareil et connecté.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — la comparaison pratique et testée à trois de PromptQuorum des plateformes RAG.',
           '[Avis PrivateGPT](/fr/power-local-llm/privategpt-review) — une alternative plus stricte, conçue hors ligne dès le départ, pour les déploiements air-gapped.',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'Reseña de AnythingLLM: RAG y chat documental de código abierto',
     seoTitle: 'Reseña de AnythingLLM: app de chat RAG open source',
-    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), código fuente en [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) es una aplicación gratuita y de código abierto para chatear con tus propios documentos usando un modelo de lenguaje grande, construida sobre un pipeline de generación aumentada por recuperación (RAG) que puede ejecutarse localmente o autoalojado. Se distribuye como aplicación de escritorio firmada para macOS, Windows y Linux, y como imagen Docker para despliegues autoalojados multiusuario, con una versión alojada opcional llamada AnythingLLM Cloud para quienes no quieren gestionar su propio servidor. Esta reseña cubre qué hace realmente AnythingLLM, cómo funcionan sus "espacios de trabajo" y su pipeline de documentos, cómo descargarlo o autoalojarlo, cuánto cuesta, y dónde se sitúa frente a otras herramientas de chat documental local-first como [PrivateGPT](/es/power-local-llm/privategpt-review) y [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review). Es el complemento en profundidad a la entrada de AnythingLLM en el [directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), y a la [reseña de AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review) y la [comparación práctica AnythingLLM vs PrivateGPT vs Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum.',
+    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com), código fuente en [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) es una aplicación gratuita y de código abierto para chatear con tus propios documentos usando un modelo de lenguaje grande, construida sobre un pipeline de generación aumentada por recuperación (RAG) que puede ejecutarse localmente o autoalojado. Se distribuye como aplicación de escritorio firmada para macOS, Windows y Linux, y como imagen Docker para despliegues autoalojados multiusuario, con una versión alojada opcional llamada AnythingLLM Cloud para quienes no quieren gestionar su propio servidor. Esta reseña cubre qué hace realmente AnythingLLM, cómo funcionan sus "espacios de trabajo" y su pipeline de documentos, cómo descargarlo o autoalojarlo, cuánto cuesta, y dónde se sitúa frente a otras herramientas de chat documental local-first como [PrivateGPT](/es/power-local-llm/privategpt-review) y [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review). Es el complemento en profundidad a la entrada de AnythingLLM en el [directorio de software LLM local](https://www.promptquorum.com/directory), y a la [reseña de AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review) y la [comparación práctica AnythingLLM vs PrivateGPT vs Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum.',
     metaDescription: 'AnythingLLM es una app RAG gratuita y open source para chatear con tus documentos — licencia MIT, autoalojable vía Docker, o app de escritorio firmada. Descargas y precios.',
     readTime: '11 min de lectura',
     targetKeywords: [
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una app Android separada bajo licencia MIT, [AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review), puede emparejarse con una instancia AnythingLLM autoalojada o ejecutar un modelo pequeño en el dispositivo',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad a la entrada de AnythingLLM en el [directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara AnythingLLM con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad a la entrada de AnythingLLM en el [directorio de software LLM local](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara AnythingLLM con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -914,14 +914,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM frente a otras herramientas RAG y de chat documental',
-        content: 'AnythingLLM es una de varias herramientas construidas específicamente en torno a la generación aumentada por recuperación y el chat documental. Así se posiciona frente a otras opciones en ese mismo segmento — consulta el [directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación práctica [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum para una comparación directa y probada a tres bandas.',
+        content: 'AnythingLLM es una de varias herramientas construidas específicamente en torno a la generación aumentada por recuperación y el chat documental. Así se posiciona frente a otras opciones en ese mismo segmento — consulta el [directorio de software LLM local](https://www.promptquorum.com/directory) para el catálogo completo, y la comparación práctica [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) de PromptQuorum para una comparación directa y probada a tres bandas.',
         items: [
           '**[PrivateGPT](/es/power-local-llm/privategpt-review)** — un servidor RAG basado en Python, diseñado sin conexión desde el principio, orientado a despliegues estrictamente air-gapped; consulta la [reseña de PrivateGPT](/es/power-local-llm/privategpt-review) dedicada para pasos de instalación y compensaciones frente a AnythingLLM.',
           '**[Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — un asistente de conocimiento "segundo cerebro" autoalojado y de código abierto, con un modelo de documentos por espacios de trabajo similar; consulta la [reseña de Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review)** — un motor RAG de comprensión de documentos centrado en recuperación de nivel citación a partir de documentos complejos (tablas, maquetación); consulta la [reseña de RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review) si la precisión de recuperación en conjuntos de documentos mixtos importa más que una interfaz de chat pulida.',
           '**[Khoj](/es/power-local-llm/khoj-ai-second-brain-review)** — un asistente de conocimiento personal autoalojado que indexa notas, PDF y otros archivos, con un posicionamiento similar de "chatea con tus propios datos"; consulta la [reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas RAG y de chat documental — consulta el [directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo, actualizado regularmente, incluyendo la propia entrada de AnythingLLM en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas RAG y de chat documental — consulta el [directorio de software LLM local](https://www.promptquorum.com/directory) para el catálogo completo, actualizado regularmente, incluyendo la propia entrada de AnythingLLM en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de AnythingLLM en el directorio.',
+          '[Directorio de software LLM local](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de AnythingLLM en el directorio.',
           '[Reseña de AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review) — la app Android complementaria aparte, cubriendo los modos en el dispositivo y conectado.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — la comparación práctica y probada a tres bandas de PromptQuorum de plataformas RAG.',
           '[Reseña de PrivateGPT](/es/power-local-llm/privategpt-review) — una alternativa más estricta, diseñada sin conexión desde el principio, para despliegues air-gapped.',
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'Análise do AnythingLLM: RAG e chat de documentos open source',
     seoTitle: 'Análise do AnythingLLM: app de chat RAG open source',
-    intro: 'O AnythingLLM ([anythingllm.com](https://anythingllm.com), código-fonte em [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) é um aplicativo gratuito e de código aberto para conversar com seus próprios documentos usando um modelo de linguagem grande, construído em torno de um pipeline de geração aumentada por recuperação (RAG) que pode rodar localmente ou de forma autogerenciada. Ele é distribuído como aplicativo de desktop assinado para macOS, Windows e Linux, e como imagem Docker para implantações autogerenciadas multiusuário, com uma versão hospedada opcional chamada AnythingLLM Cloud para quem não quer administrar o próprio servidor. Esta análise cobre o que o AnythingLLM realmente faz, como funcionam seus "workspaces" (espaços de trabalho) e seu pipeline de documentos, como baixá-lo ou hospedá-lo, quanto custa, e como ele se posiciona em relação a outras ferramentas de chat de documentos local-first, como o [PrivateGPT](/pt/power-local-llm/privategpt-review) e o [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review). É o complemento aprofundado da entrada do AnythingLLM no [diretório de software de LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), e da [análise do AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review) e da [comparação prática AnythingLLM vs PrivateGPT vs Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) do PromptQuorum.',
+    intro: 'O AnythingLLM ([anythingllm.com](https://anythingllm.com), código-fonte em [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) é um aplicativo gratuito e de código aberto para conversar com seus próprios documentos usando um modelo de linguagem grande, construído em torno de um pipeline de geração aumentada por recuperação (RAG) que pode rodar localmente ou de forma autogerenciada. Ele é distribuído como aplicativo de desktop assinado para macOS, Windows e Linux, e como imagem Docker para implantações autogerenciadas multiusuário, com uma versão hospedada opcional chamada AnythingLLM Cloud para quem não quer administrar o próprio servidor. Esta análise cobre o que o AnythingLLM realmente faz, como funcionam seus "workspaces" (espaços de trabalho) e seu pipeline de documentos, como baixá-lo ou hospedá-lo, quanto custa, e como ele se posiciona em relação a outras ferramentas de chat de documentos local-first, como o [PrivateGPT](/pt/power-local-llm/privategpt-review) e o [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review). É o complemento aprofundado da entrada do AnythingLLM no [diretório de software de LLM local](https://www.promptquorum.com/directory), e da [análise do AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review) e da [comparação prática AnythingLLM vs PrivateGPT vs Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) do PromptQuorum.',
     metaDescription: 'AnythingLLM é um app RAG gratuito e open source para conversar com seus documentos — licença MIT, hospedável via Docker, ou app de desktop assinado. Downloads e preços.',
     readTime: '11 min de leitura',
     targetKeywords: [
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Um app Android separado sob licença MIT, o [AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review), pode se conectar a uma instância AnythingLLM autogerenciada ou rodar um modelo pequeno no dispositivo',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do AnythingLLM no [diretório de software de LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o AnythingLLM com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do AnythingLLM no [diretório de software de LLM local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o AnythingLLM com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1156,14 +1156,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM vs outras ferramentas de RAG e chat de documentos',
-        content: 'O AnythingLLM é uma de várias ferramentas construídas especificamente em torno da geração aumentada por recuperação e do chat de documentos. Veja como ele se posiciona em relação a outras opções nesse mesmo segmento — consulte o [diretório de software de LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação prática [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) do PromptQuorum para uma comparação direta e testada entre três plataformas.',
+        content: 'O AnythingLLM é uma de várias ferramentas construídas especificamente em torno da geração aumentada por recuperação e do chat de documentos. Veja como ele se posiciona em relação a outras opções nesse mesmo segmento — consulte o [diretório de software de LLM local](https://www.promptquorum.com/directory) para o catálogo completo, e a comparação prática [AnythingLLM vs PrivateGPT vs Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) do PromptQuorum para uma comparação direta e testada entre três plataformas.',
         items: [
           '**[PrivateGPT](/pt/power-local-llm/privategpt-review)** — um servidor RAG baseado em Python, projetado para funcionar offline desde o início, voltado a implantações estritamente air-gapped; veja a [análise do PrivateGPT](/pt/power-local-llm/privategpt-review) dedicada para etapas de instalação e trade-offs em relação ao AnythingLLM.',
           '**[Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — um assistente de conhecimento "segundo cérebro" autogerenciado e open source, com um modelo de documentos por workspaces similar; veja a [análise do Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review)** — um mecanismo RAG de compreensão de documentos focado em recuperação com nível de citação a partir de documentos complexos (tabelas, layouts); veja a [análise do RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review) se a precisão de recuperação em conjuntos mistos de documentos importa mais do que uma interface de chat polida.',
           '**[Khoj](/pt/power-local-llm/khoj-ai-second-brain-review)** — um assistente de conhecimento pessoal autogerenciado que indexa notas, PDFs e outros arquivos, com posicionamento similar de "converse com seus próprios dados"; veja a [análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de RAG e chat de documentos — veja o [diretório de software de LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do AnythingLLM no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de RAG e chat de documentos — veja o [diretório de software de LLM local](https://www.promptquorum.com/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do AnythingLLM no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1208,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do AnythingLLM no diretório.',
+          '[Diretório de software de LLM local](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do AnythingLLM no diretório.',
           '[Análise do AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review) — o app Android complementar separado, cobrindo os modos no dispositivo e conectado.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — a comparação prática e testada entre três plataformas RAG do PromptQuorum.',
           '[Análise do PrivateGPT](/pt/power-local-llm/privategpt-review) — uma alternativa mais rígida, projetada para funcionar offline desde o início, para implantações air-gapped.',
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'AnythingLLMレビュー：オープンソースのRAG・ドキュメントチャット',
     seoTitle: 'AnythingLLMレビュー：オープンソースRAGチャットアプリ',
-    intro: 'AnythingLLM（[anythingllm.com](https://anythingllm.com)、ソースコードは[github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)）は、大規模言語モデルを使って自分のドキュメントとチャットできる無料のオープンソースアプリケーションです。ローカルまたはセルフホストで動作するRetrieval-Augmented Generation（RAG）パイプラインを中心に構築されています。macOS、Windows、Linux向けの署名済みデスクトップアプリとして、またセルフホスト・マルチユーザー展開向けのDockerイメージとして配布されており、自分でサーバーを運用したくない人向けにAnythingLLM Cloudというオプションのホスト版もあります。このレビューでは、AnythingLLMが実際に何をするのか、「ワークスペース」とドキュメントパイプラインの仕組み、ダウンロードまたはセルフホストする方法、料金、そして[PrivateGPT](/ja/power-local-llm/privategpt-review)や[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)など他のローカルファーストなドキュメントチャットツールとの位置づけを解説します。本記事は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるAnythingLLMの項目、およびPromptQuorumの[AnythingLLM Mobileレビュー](/ja/power-local-llm/anythingllm-mobile-review)と実機検証済みの[AnythingLLM対PrivateGPT対Open WebUI RAG比較](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)の詳細な補完記事です。',
+    intro: 'AnythingLLM（[anythingllm.com](https://anythingllm.com)、ソースコードは[github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)）は、大規模言語モデルを使って自分のドキュメントとチャットできる無料のオープンソースアプリケーションです。ローカルまたはセルフホストで動作するRetrieval-Augmented Generation（RAG）パイプラインを中心に構築されています。macOS、Windows、Linux向けの署名済みデスクトップアプリとして、またセルフホスト・マルチユーザー展開向けのDockerイメージとして配布されており、自分でサーバーを運用したくない人向けにAnythingLLM Cloudというオプションのホスト版もあります。このレビューでは、AnythingLLMが実際に何をするのか、「ワークスペース」とドキュメントパイプラインの仕組み、ダウンロードまたはセルフホストする方法、料金、そして[PrivateGPT](/ja/power-local-llm/privategpt-review)や[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)など他のローカルファーストなドキュメントチャットツールとの位置づけを解説します。本記事は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるAnythingLLMの項目、およびPromptQuorumの[AnythingLLM Mobileレビュー](/ja/power-local-llm/anythingllm-mobile-review)と実機検証済みの[AnythingLLM対PrivateGPT対Open WebUI RAG比較](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)の詳細な補完記事です。',
     metaDescription: 'AnythingLLMは自分のドキュメントとチャットできる無料のオープンソースRAGアプリ。MITライセンス、Docker経由でセルフホスト可能、または署名済みデスクトップアプリ。ダウンロードと料金。',
     readTime: '11分で読了',
     targetKeywords: [
@@ -1288,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '別のMITライセンスAndroidアプリ[AnythingLLM Mobile](/ja/power-local-llm/anythingllm-mobile-review)は、セルフホストのAnythingLLMインスタンスとペアリングするか、端末上で小さなモデルを実行できる',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるAnythingLLMの項目を深掘りした補完記事です — AnythingLLMが他の数十のローカルAIツールと比べてどう位置づけられるか、そのページで概要を確認できます。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるAnythingLLMの項目を深掘りした補完記事です — AnythingLLMが他の数十のローカルAIツールと比べてどう位置づけられるか、そのページで概要を確認できます。' },
         ],
       },
       overview: {
@@ -1398,14 +1398,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM対 他のRAG・ドキュメントチャットツール',
-        content: 'AnythingLLMは、Retrieval-Augmented Generationとドキュメントチャットを中心に構築された複数のツールの1つです。同じセグメントの他の選択肢との位置づけは以下の通りです — 全カタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を、直接テストした3者比較はPromptQuorumの[AnythingLLM対PrivateGPT対Open WebUI RAG比較](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)を参照してください。',
+        content: 'AnythingLLMは、Retrieval-Augmented Generationとドキュメントチャットを中心に構築された複数のツールの1つです。同じセグメントの他の選択肢との位置づけは以下の通りです — 全カタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を、直接テストした3者比較はPromptQuorumの[AnythingLLM対PrivateGPT対Open WebUI RAG比較](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)を参照してください。',
         items: [
           '**[PrivateGPT](/ja/power-local-llm/privategpt-review)** — 厳格なエアギャップ展開を対象とした、Pythonベースで最初からオフライン設計のRAGサーバー。インストール手順とAnythingLLMとのトレードオフは専用の[PrivateGPTレビュー](/ja/power-local-llm/privategpt-review)を参照。',
           '**[Quivr](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — 似たようなワークスペース型のドキュメントモデルを持つ、セルフホスト型オープンソースの「セカンドブレイン」ナレッジアシスタント。[Quivrレビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review)を参照。',
           '**[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)** — 複雑なドキュメント（表やレイアウト）からの引用レベルのretrievalに重点を置いた文書理解RAGエンジン。洗練されたチャットUIよりも、多様なドキュメントセットでのretrieval精度が重要な場合は[RAGFlowレビュー](/ja/power-local-llm/ragflow-document-understanding-rag-review)を参照。',
           '**[Khoj](/ja/power-local-llm/khoj-ai-second-brain-review)** — メモ、PDF、その他のファイルをインデックス化する、セルフホスト型の個人向けナレッジアシスタントで、「自分のデータとチャットする」という似た位置づけを持つ。[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
         ],
-        note: 'これはRAG・ドキュメントチャットツールの網羅的なリストではありません — AnythingLLM自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはRAG・ドキュメントチャットツールの網羅的なリストではありません — AnythingLLM自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1450,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。AnythingLLMのディレクトリ項目を含む。',
+          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — この記事が属する、ローカルAIツールの完全なカタログ。AnythingLLMのディレクトリ項目を含む。',
           '[AnythingLLM Mobileレビュー](/ja/power-local-llm/anythingllm-mobile-review) — 別のAndroid併用アプリ。オンデバイスモードと接続モードを解説。',
           '[AnythingLLM対PrivateGPT対Open WebUI RAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — PromptQuorumが実機検証したRAGプラットフォームの3者比較。',
           '[PrivateGPTレビュー](/ja/power-local-llm/privategpt-review) — エアギャップ展開向けの、より厳格でオフライン設計の代替。',
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'AnythingLLM 评测：开源 RAG 与文档聊天',
     seoTitle: 'AnythingLLM 评测：开源 RAG 聊天应用',
-    intro: 'AnythingLLM（[anythingllm.com](https://anythingllm.com)，源代码见 [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)）是一款免费的开源应用程序，让你通过大语言模型与自己的文档聊天，其核心是一套可在本地或自托管环境运行的检索增强生成（RAG）管道。它以签名的桌面应用形式发布，支持 macOS、Windows 和 Linux，也提供用于自托管多用户部署的 Docker 镜像，另外还有一个名为 AnythingLLM Cloud 的可选托管版本，供不想自行运维服务器的用户使用。本评测将介绍 AnythingLLM 实际能做什么、其"工作区"与文档处理管道的工作方式、如何下载或自托管、费用是多少，以及它与 [PrivateGPT](/zh/power-local-llm/privategpt-review)、[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review) 等其他本地优先文档聊天工具相比处于什么位置。本文是 AnythingLLM 在[本地 LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中条目的深度补充，也与 PromptQuorum 的[AnythingLLM Mobile 评测](/zh/power-local-llm/anythingllm-mobile-review)以及实测的[AnythingLLM 对比 PrivateGPT 对比 Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)相互配套。',
+    intro: 'AnythingLLM（[anythingllm.com](https://anythingllm.com)，源代码见 [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)）是一款免费的开源应用程序，让你通过大语言模型与自己的文档聊天，其核心是一套可在本地或自托管环境运行的检索增强生成（RAG）管道。它以签名的桌面应用形式发布，支持 macOS、Windows 和 Linux，也提供用于自托管多用户部署的 Docker 镜像，另外还有一个名为 AnythingLLM Cloud 的可选托管版本，供不想自行运维服务器的用户使用。本评测将介绍 AnythingLLM 实际能做什么、其"工作区"与文档处理管道的工作方式、如何下载或自托管、费用是多少，以及它与 [PrivateGPT](/zh/power-local-llm/privategpt-review)、[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review) 等其他本地优先文档聊天工具相比处于什么位置。本文是 AnythingLLM 在[本地 LLM 软件目录](https://www.promptquorum.com/directory)中条目的深度补充，也与 PromptQuorum 的[AnythingLLM Mobile 评测](/zh/power-local-llm/anythingllm-mobile-review)以及实测的[AnythingLLM 对比 PrivateGPT 对比 Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)相互配套。',
     metaDescription: 'AnythingLLM 是一款免费开源的 RAG 应用，可与你自己的文档聊天——MIT 许可、可通过 Docker 自托管，或作为签名桌面应用运行。下载与定价。',
     readTime: '11 分钟阅读',
     targetKeywords: [
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '独立的 MIT 许可 Android 应用 [AnythingLLM Mobile](/zh/power-local-llm/anythingllm-mobile-review) 可与自托管的 AnythingLLM 实例配对，也可在设备端运行小型模型',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中 AnythingLLM 条目的深度补充——该页面提供了 AnythingLLM 与数十种其他本地 AI 工具相比的一览对照。' },
+          { type: 'note', text: '本评测是[本地 LLM 软件目录](https://www.promptquorum.com/directory)中 AnythingLLM 条目的深度补充——该页面提供了 AnythingLLM 与数十种其他本地 AI 工具相比的一览对照。' },
         ],
       },
       overview: {
@@ -1640,14 +1640,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM 对比其他 RAG 与文档聊天工具',
-        content: 'AnythingLLM 是众多专门围绕检索增强生成与文档聊天构建的工具之一。以下是它与同一细分领域其他选项的对比——完整目录请参阅[本地 LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)，直接实测的三方对比请参阅 PromptQuorum 的[AnythingLLM 对比 PrivateGPT 对比 Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)。',
+        content: 'AnythingLLM 是众多专门围绕检索增强生成与文档聊天构建的工具之一。以下是它与同一细分领域其他选项的对比——完整目录请参阅[本地 LLM 软件目录](https://www.promptquorum.com/directory)，直接实测的三方对比请参阅 PromptQuorum 的[AnythingLLM 对比 PrivateGPT 对比 Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)。',
         items: [
           '**[PrivateGPT](/zh/power-local-llm/privategpt-review)** — 一款基于 Python、从设计之初就离线优先的 RAG 服务器，面向严格气隙部署；安装步骤及与 AnythingLLM 的权衡请参阅专门的[PrivateGPT 评测](/zh/power-local-llm/privategpt-review)。',
           '**[Quivr](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — 一款自托管的开源"第二大脑"知识助手，拥有类似的工作区式文档模型；请参阅[Quivr 评测](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review)。',
           '**[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review)** — 一款专注于从复杂文档（表格、版式）中实现引用级检索的文档理解 RAG 引擎；如果在混合文档集上的检索精度比打磨精美的聊天界面更重要，请参阅[RAGFlow 评测](/zh/power-local-llm/ragflow-document-understanding-rag-review)。',
           '**[Khoj](/zh/power-local-llm/khoj-ai-second-brain-review)** — 一款自托管的个人知识助手，可对笔记、PDF 及其他文件建立索引，具有类似的"与自己的数据聊天"定位；请参阅[Khoj 评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
         ],
-        note: '这并非 RAG 与文档聊天工具的详尽列表——包含 AnythingLLM 自身目录条目在内、定期更新的完整目录，请参阅[本地 LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        note: '这并非 RAG 与文档聊天工具的详尽列表——包含 AnythingLLM 自身目录条目在内、定期更新的完整目录，请参阅[本地 LLM 软件目录](https://www.promptquorum.com/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地 LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，包含 AnythingLLM 的目录条目。',
+          '[本地 LLM 软件目录](https://www.promptquorum.com/directory) — 本文所属的完整本地 AI 工具目录，包含 AnythingLLM 的目录条目。',
           '[AnythingLLM Mobile 评测](/zh/power-local-llm/anythingllm-mobile-review) — 独立的 Android 配套应用，涵盖设备端模式与连接模式。',
           '[AnythingLLM 对比 PrivateGPT 对比 Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — PromptQuorum 实测的三方 RAG 平台对比。',
           '[PrivateGPT 评测](/zh/power-local-llm/privategpt-review) — 一款更严格、从设计之初就离线优先的替代方案，适合气隙部署。',
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'مراجعة AnythingLLM: استرجاع معزز بالتوليد ودردشة مستندات مفتوحة المصدر',
     seoTitle: 'مراجعة AnythingLLM: تطبيق دردشة RAG مفتوح المصدر',
-    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com)، والكود المصدري على [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) هو تطبيق مجاني ومفتوح المصدر للدردشة مع مستنداتك الخاصة باستخدام نموذج لغوي كبير، مبني حول خط أنابيب للاسترجاع المعزز بالتوليد (RAG) يمكن تشغيله محليًا أو عبر استضافة ذاتية. يُوزَّع التطبيق كبرنامج سطح مكتب موقّع لأنظمة macOS وWindows وLinux، وكصورة Docker لعمليات النشر ذات الاستضافة الذاتية متعددة المستخدمين، مع نسخة استضافة اختيارية تُسمى AnythingLLM Cloud لمن لا يريد تشغيل خادمه الخاص. تغطي هذه المراجعة ما يفعله AnythingLLM فعليًا، وكيفية عمل "مساحات العمل" وخط أنابيب المستندات، وكيفية تنزيله أو استضافته ذاتيًا، وتكلفته، وموقعه مقارنة بأدوات دردشة المستندات المحلية الأخرى مثل [PrivateGPT](/ar/power-local-llm/privategpt-review) و[RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review). وهي المكمّل المتعمق لمدخل AnythingLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، ولـ[مراجعة AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review) و[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) العملية من PromptQuorum.',
+    intro: 'AnythingLLM ([anythingllm.com](https://anythingllm.com)، والكود المصدري على [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)) هو تطبيق مجاني ومفتوح المصدر للدردشة مع مستنداتك الخاصة باستخدام نموذج لغوي كبير، مبني حول خط أنابيب للاسترجاع المعزز بالتوليد (RAG) يمكن تشغيله محليًا أو عبر استضافة ذاتية. يُوزَّع التطبيق كبرنامج سطح مكتب موقّع لأنظمة macOS وWindows وLinux، وكصورة Docker لعمليات النشر ذات الاستضافة الذاتية متعددة المستخدمين، مع نسخة استضافة اختيارية تُسمى AnythingLLM Cloud لمن لا يريد تشغيل خادمه الخاص. تغطي هذه المراجعة ما يفعله AnythingLLM فعليًا، وكيفية عمل "مساحات العمل" وخط أنابيب المستندات، وكيفية تنزيله أو استضافته ذاتيًا، وتكلفته، وموقعه مقارنة بأدوات دردشة المستندات المحلية الأخرى مثل [PrivateGPT](/ar/power-local-llm/privategpt-review) و[RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review). وهي المكمّل المتعمق لمدخل AnythingLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory)، ولـ[مراجعة AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review) و[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) العملية من PromptQuorum.',
     metaDescription: 'AnythingLLM تطبيق RAG مجاني ومفتوح المصدر للدردشة مع مستنداتك الخاصة — برخصة MIT، قابل للاستضافة الذاتية عبر Docker، أو كتطبيق سطح مكتب موقّع. التنزيلات والأسعار.',
     readTime: '11 دقيقة قراءة',
     targetKeywords: [
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكن لتطبيق أندرويد منفصل برخصة MIT، [AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review)، الاقتران بمثيل AnythingLLM مستضاف ذاتيًا أو تشغيل نموذج صغير على الجهاز نفسه',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لمدخل AnythingLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة للاطلاع بسرعة على كيفية مقارنة AnythingLLM بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لمدخل AnythingLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة للاطلاع بسرعة على كيفية مقارنة AnythingLLM بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1882,14 +1882,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM مقابل أدوات RAG ودردشة المستندات الأخرى',
-        content: 'AnythingLLM واحدة من عدة أدوات مبنية خصيصًا حول الاسترجاع المعزز بالتوليد ودردشة المستندات. إليك موقعها مقارنة بخيارات أخرى في نفس هذا القطاع — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل، و[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) العملية من PromptQuorum لمقارنة ثلاثية مباشرة ومختبرة.',
+        content: 'AnythingLLM واحدة من عدة أدوات مبنية خصيصًا حول الاسترجاع المعزز بالتوليد ودردشة المستندات. إليك موقعها مقارنة بخيارات أخرى في نفس هذا القطاع — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) للكتالوج الكامل، و[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) العملية من PromptQuorum لمقارنة ثلاثية مباشرة ومختبرة.',
         items: [
           '**[PrivateGPT](/ar/power-local-llm/privategpt-review)** — خادم RAG مبني على Python ومصمم للعمل دون اتصال منذ البداية، موجه لعمليات النشر المعزولة تمامًا؛ راجع [مراجعة PrivateGPT](/ar/power-local-llm/privategpt-review) المخصصة لخطوات التثبيت والمقايضات مقارنة بـ AnythingLLM.',
           '**[Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — مساعد معرفة "دماغ ثانٍ" مستضاف ذاتيًا ومفتوح المصدر، بنموذج مستندات شبيه بمساحات العمل؛ راجع [مراجعة Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review)** — محرك RAG لفهم المستندات يركز على استرجاع بمستوى الاستشهاد من مستندات معقدة (جداول، تخطيطات)؛ راجع [مراجعة RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review) إذا كانت دقة الاسترجاع في مجموعات مستندات مختلطة أهم من واجهة دردشة مصقولة.',
           '**[Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)** — مساعد معرفة شخصية مستضاف ذاتيًا يفهرس الملاحظات وملفات PDF وملفات أخرى، بموقع شبيه بـ"الدردشة مع بياناتك الخاصة"؛ راجع [مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات RAG ودردشة المستندات — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل AnythingLLM الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات RAG ودردشة المستندات — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل AnythingLLM الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1934,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل AnythingLLM في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل AnythingLLM في الدليل.',
           '[مراجعة AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review) — تطبيق أندرويد المصاحب المنفصل، يغطي وضعي الجهاز والاتصال.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة PromptQuorum العملية والمختبرة بين ثلاث منصات RAG.',
           '[مراجعة PrivateGPT](/ar/power-local-llm/privategpt-review) — بديل أكثر صرامة، مصمم للعمل دون اتصال منذ البداية، لعمليات النشر المعزولة.',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'AnythingLLM',
     title: 'AnythingLLM 리뷰: 오픈소스 RAG 및 문서 채팅',
     seoTitle: 'AnythingLLM 리뷰: 오픈소스 RAG 채팅 앱',
-    intro: 'AnythingLLM([anythingllm.com](https://anythingllm.com), 소스 코드는 [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm))은 대형 언어 모델을 사용해 자신의 문서와 대화할 수 있는 무료 오픈소스 애플리케이션으로, 로컬 또는 자체 호스팅 환경에서 실행할 수 있는 검색 증강 생성(RAG) 파이프라인을 중심으로 구축되었습니다. macOS, Windows, Linux용 서명된 데스크톱 앱으로 배포되며, 자체 호스팅 다중 사용자 배포용 Docker 이미지로도 제공되고, 직접 서버를 운영하고 싶지 않은 사람들을 위한 AnythingLLM Cloud라는 선택적 호스팅 버전도 있습니다. 이 리뷰에서는 AnythingLLM이 실제로 무엇을 하는지, "워크스페이스"와 문서 파이프라인이 어떻게 작동하는지, 다운로드하거나 자체 호스팅하는 방법, 비용, 그리고 [PrivateGPT](/ko/power-local-llm/privategpt-review), [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review)와 같은 다른 로컬 우선 문서 채팅 도구와 비교했을 때 어떤 위치에 있는지 다룹니다. 이 글은 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 AnythingLLM 항목과, PromptQuorum의 [AnythingLLM Mobile 리뷰](/ko/power-local-llm/anythingllm-mobile-review) 및 실제 테스트를 거친 [AnythingLLM vs PrivateGPT vs Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)를 보완하는 심화 자료입니다.',
+    intro: 'AnythingLLM([anythingllm.com](https://anythingllm.com), 소스 코드는 [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm))은 대형 언어 모델을 사용해 자신의 문서와 대화할 수 있는 무료 오픈소스 애플리케이션으로, 로컬 또는 자체 호스팅 환경에서 실행할 수 있는 검색 증강 생성(RAG) 파이프라인을 중심으로 구축되었습니다. macOS, Windows, Linux용 서명된 데스크톱 앱으로 배포되며, 자체 호스팅 다중 사용자 배포용 Docker 이미지로도 제공되고, 직접 서버를 운영하고 싶지 않은 사람들을 위한 AnythingLLM Cloud라는 선택적 호스팅 버전도 있습니다. 이 리뷰에서는 AnythingLLM이 실제로 무엇을 하는지, "워크스페이스"와 문서 파이프라인이 어떻게 작동하는지, 다운로드하거나 자체 호스팅하는 방법, 비용, 그리고 [PrivateGPT](/ko/power-local-llm/privategpt-review), [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review)와 같은 다른 로컬 우선 문서 채팅 도구와 비교했을 때 어떤 위치에 있는지 다룹니다. 이 글은 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 AnythingLLM 항목과, PromptQuorum의 [AnythingLLM Mobile 리뷰](/ko/power-local-llm/anythingllm-mobile-review) 및 실제 테스트를 거친 [AnythingLLM vs PrivateGPT vs Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)를 보완하는 심화 자료입니다.',
     metaDescription: 'AnythingLLM은 자신의 문서와 대화할 수 있는 무료 오픈소스 RAG 앱입니다 — MIT 라이선스, Docker로 자체 호스팅 가능, 또는 서명된 데스크톱 앱. 다운로드 및 가격.',
     readTime: '11분 분량',
     targetKeywords: [
@@ -2014,7 +2014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '별도의 MIT 라이선스 Android 앱인 [AnythingLLM Mobile](/ko/power-local-llm/anythingllm-mobile-review)은 자체 호스팅 AnythingLLM 인스턴스와 페어링하거나 기기에서 작은 모델을 직접 실행할 수 있음',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 AnythingLLM 항목을 심화 보완하는 자료입니다 — AnythingLLM이 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 AnythingLLM 항목을 심화 보완하는 자료입니다 — AnythingLLM이 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2124,14 +2124,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'AnythingLLM vs 다른 RAG 및 문서 채팅 도구',
-        content: 'AnythingLLM은 검색 증강 생성과 문서 채팅을 중심으로 특별히 구축된 여러 도구 중 하나입니다. 같은 세그먼트의 다른 옵션과 비교했을 때의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를, 직접적이고 테스트를 거친 3자 비교는 PromptQuorum의 [AnythingLLM vs PrivateGPT vs Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)를 참조하세요.',
+        content: 'AnythingLLM은 검색 증강 생성과 문서 채팅을 중심으로 특별히 구축된 여러 도구 중 하나입니다. 같은 세그먼트의 다른 옵션과 비교했을 때의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를, 직접적이고 테스트를 거친 3자 비교는 PromptQuorum의 [AnythingLLM vs PrivateGPT vs Open WebUI RAG 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)를 참조하세요.',
         items: [
           '**[PrivateGPT](/ko/power-local-llm/privategpt-review)** — 엄격한 에어갭 배포를 대상으로 하는, 처음부터 오프라인 설계된 Python 기반 RAG 서버; 설치 단계와 AnythingLLM 대비 트레이드오프는 전용 [PrivateGPT 리뷰](/ko/power-local-llm/privategpt-review)를 참조하세요.',
           '**[Quivr](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review)** — 비슷한 워크스페이스 형태의 문서 모델을 가진, 자체 호스팅형 오픈소스 "제2의 뇌" 지식 어시스턴트; [Quivr 리뷰](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review)를 참조하세요.',
           '**[RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review)** — 복잡한 문서(표, 레이아웃)에서 인용 수준의 검색에 초점을 맞춘 문서 이해 RAG 엔진; 잘 다듬어진 채팅 UI보다 혼합 문서 세트에서의 검색 정밀도가 더 중요하다면 [RAGFlow 리뷰](/ko/power-local-llm/ragflow-document-understanding-rag-review)를 참조하세요.',
           '**[Khoj](/ko/power-local-llm/khoj-ai-second-brain-review)** — 메모, PDF 및 기타 파일을 색인화하는 자체 호스팅형 개인 지식 어시스턴트로, "자신의 데이터와 대화하기"와 비슷하게 포지셔닝됨; [Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)를 참조하세요.',
         ],
-        note: '이는 RAG 및 문서 채팅 도구의 전체 목록이 아닙니다 — AnythingLLM 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 RAG 및 문서 채팅 도구의 전체 목록이 아닙니다 — AnythingLLM 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2176,7 +2176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, AnythingLLM의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, AnythingLLM의 디렉터리 항목을 포함합니다.',
           '[AnythingLLM Mobile 리뷰](/ko/power-local-llm/anythingllm-mobile-review) — 온디바이스 모드와 연결 모드를 다루는 별도의 Android 동반 앱.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — PromptQuorum이 실제로 테스트한 RAG 플랫폼 3자 비교.',
           '[PrivateGPT 리뷰](/ko/power-local-llm/privategpt-review) — 에어갭 배포를 위한, 처음부터 오프라인 설계된 더 엄격한 대안.',

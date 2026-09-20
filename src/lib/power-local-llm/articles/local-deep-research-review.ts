@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) shows roughly 9,100 stars as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Local Deep Research\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local and self-hosted AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Local Deep Research\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local and self-hosted AI tools.' },
         ],
       },
       overview: {
@@ -215,14 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. Other Research and Agent Tools',
-        content: 'Local Deep Research sits in a broader category of self-hosted tools for AI-assisted search and autonomous research/agent workflows. Here is how it compares to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Local Deep Research vs. Vane comparison](#ldr-vs-vane) above for the closest head-to-head.',
+        content: 'Local Deep Research sits in a broader category of self-hosted tools for AI-assisted search and autonomous research/agent workflows. Here is how it compares to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Local Deep Research vs. Vane comparison](#ldr-vs-vane) above for the closest head-to-head.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (formerly Perplexica) — a self-hosted, Perplexity-style AI answering engine built for fast, single-turn cited search rather than multi-step deep reports; see the dedicated comparison section above and the [Vane review](/power-local-llm/vane-review) for full details.',
           '**[Onyx](https://onyx.app)** (formerly Danswer) — a self-hosted enterprise search and RAG platform built for querying an organization\'s own internal documents and connectors, a different use case from Local Deep Research\'s academic/web research focus; see the [Onyx review](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — a general-purpose autonomous agent framework capable of research among many other task types, broader in scope but not specialized in cited academic research the way Local Deep Research is; see the [Agent Zero review](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — an early, influential autonomous task-management agent framework; useful context for how agentic research loops evolved, though less specialized for cited research output than Local Deep Research; see the [BabyAGI review](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'This is not an exhaustive list of self-hosted research and autonomous-agent tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Local Deep Research\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted research and autonomous-agent tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Local Deep Research\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local and self-hosted AI tools this article belongs to, including Local Deep Research\'s directory entry alongside the research and agent tools covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local and self-hosted AI tools this article belongs to, including Local Deep Research\'s directory entry alongside the research and agent tools covered above.',
           '[Vane Review](/power-local-llm/vane-review) — a self-hosted, Perplexity-style AI answering engine for fast, cited single-turn search, the closest head-to-head comparison to Local Deep Research in this review.',
           '[Agent Zero Review](/power-local-llm/agent-zero-review) — a general-purpose autonomous agent framework, useful if research is only one of several task types you need an agent to handle.',
           '[Onyx Review](/power-local-llm/onyx-review) — a self-hosted enterprise search and RAG platform for querying internal organizational documents.',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) zeigt Stand September 2026 rund 9.100 Sterne',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Local Deep Research im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokaler und selbst gehosteter KI-Tools vergleicht.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Local Deep Research im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokaler und selbst gehosteter KI-Tools vergleicht.' },
         ],
       },
       overview: {
@@ -497,14 +497,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. andere Recherche- und Agenten-Tools',
-        content: 'Local Deep Research gehört zu einer breiteren Kategorie selbst gehosteter Tools für KI-gestützte Suche und autonome Recherche-/Agenten-Workflows. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), das direkteste Duell im dedizierten [Local-Deep-Research-vs.-Vane-Vergleich](#ldr-vs-vane) oben.',
+        content: 'Local Deep Research gehört zu einer breiteren Kategorie selbst gehosteter Tools für KI-gestützte Suche und autonome Recherche-/Agenten-Workflows. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/directory), das direkteste Duell im dedizierten [Local-Deep-Research-vs.-Vane-Vergleich](#ldr-vs-vane) oben.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (früher Perplexica) — eine selbst gehostete, Perplexity-artige KI-Antwortmaschine für schnelle, zitierte Einzelsuche statt mehrstufiger Tiefenberichte; siehe den dedizierten Vergleichsabschnitt oben und die [Vane-Review](/power-local-llm/vane-review) für alle Details.',
           '**[Onyx](https://onyx.app)** (früher Danswer) — eine selbst gehostete Enterprise-Such- und RAG-Plattform für die Abfrage der eigenen internen Dokumente und Konnektoren einer Organisation, ein anderer Anwendungsfall als Local Deep Researchs Fokus auf akademische/Web-Recherche; siehe die [Onyx-Review](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — ein universelles autonomes Agenten-Framework, das unter vielen anderen Aufgabentypen auch Recherche beherrscht, breiter im Umfang, aber nicht so auf zitierte akademische Recherche spezialisiert wie Local Deep Research; siehe die [Agent-Zero-Review](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — ein frühes, einflussreiches autonomes Aufgabenverwaltungs-Framework; nützlicher Kontext dafür, wie sich agentenbasierte Rechercheschleifen entwickelt haben, wenn auch weniger auf zitierte Rechercheergebnisse spezialisiert als Local Deep Research; siehe die [BabyAGI-Review](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Recherche- und autonomer Agenten-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive Local Deep Researchs eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Recherche- und autonomer Agenten-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive Local Deep Researchs eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler und selbst gehosteter KI-Tools, zu dem dieser Artikel gehört, inklusive Local Deep Researchs Directory-Eintrag neben den oben behandelten Recherche- und Agenten-Tools.',
+          '[Local LLM Software Directory 2026](/directory) — der vollständige Katalog lokaler und selbst gehosteter KI-Tools, zu dem dieser Artikel gehört, inklusive Local Deep Researchs Directory-Eintrag neben den oben behandelten Recherche- und Agenten-Tools.',
           '[Vane-Review](/power-local-llm/vane-review) — eine selbst gehostete, Perplexity-artige KI-Antwortmaschine für schnelle, zitierte Einzelsuche, der direkteste Vergleich zu Local Deep Research in dieser Review.',
           '[Agent-Zero-Review](/power-local-llm/agent-zero-review) — ein universelles autonomes Agenten-Framework, nützlich, wenn Recherche nur einer von mehreren Aufgabentypen ist, die ein Agent übernehmen soll.',
           '[Onyx-Review](/power-local-llm/onyx-review) — eine selbst gehostete Enterprise-Such- und RAG-Plattform für die Abfrage interner Organisationsdokumente.',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) affiche environ 9 100 étoiles en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Local Deep Research dans le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — voir cette page pour comparer l\'outil en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Local Deep Research dans le [Répertoire de logiciels LLM locaux](/directory) — voir cette page pour comparer l\'outil en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
         ],
       },
       overview: {
@@ -779,14 +779,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs autres outils de recherche et d\'agents',
-        content: 'Local Deep Research se situe dans une catégorie plus large d\'outils auto-hébergés pour la recherche assistée par IA et les workflows d\'agents/recherche autonomes. Voici comment il se compare à d\'autres options dans cet espace — voir le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Local Deep Research vs Vane](#ldr-vs-vane) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Local Deep Research se situe dans une catégorie plus large d\'outils auto-hébergés pour la recherche assistée par IA et les workflows d\'agents/recherche autonomes. Voici comment il se compare à d\'autres options dans cet espace — voir le [Répertoire de logiciels LLM locaux](/directory) pour le catalogue complet, et la comparaison dédiée [Local Deep Research vs Vane](#ldr-vs-vane) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (anciennement Perplexica) — un moteur de réponse IA auto-hébergé façon Perplexity, conçu pour une recherche citée rapide et en un seul tour plutôt que des rapports approfondis multi-étapes ; voir la section de comparaison dédiée ci-dessus et l\'[avis Vane](/power-local-llm/vane-review) pour tous les détails.',
           '**[Onyx](https://onyx.app)** (anciennement Danswer) — une plateforme de recherche et RAG d\'entreprise auto-hébergée, conçue pour interroger les propres documents et connecteurs internes d\'une organisation, un cas d\'usage différent de la focalisation académique/web de Local Deep Research ; voir l\'[avis Onyx](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — un framework d\'agent autonome généraliste capable de recherche parmi de nombreux autres types de tâches, plus large en portée mais moins spécialisé en recherche académique citée que Local Deep Research ; voir l\'[avis Agent Zero](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — un framework d\'agent autonome de gestion de tâches précoce et influent ; un contexte utile sur l\'évolution des boucles de recherche agentiques, bien que moins spécialisé pour la recherche citée que Local Deep Research ; voir l\'[avis BabyAGI](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de recherche et d\'agents autonomes auto-hébergés — voir le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée de répertoire propre à Local Deep Research.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de recherche et d\'agents autonomes auto-hébergés — voir le [Répertoire de logiciels LLM locaux](/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée de répertoire propre à Local Deep Research.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux 2026](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux et auto-hébergés auquel appartient cet article, incluant l\'entrée de répertoire de Local Deep Research aux côtés des outils de recherche et d\'agents couverts ci-dessus.',
+          '[Répertoire de logiciels LLM locaux 2026](/directory) — le catalogue complet d\'outils IA locaux et auto-hébergés auquel appartient cet article, incluant l\'entrée de répertoire de Local Deep Research aux côtés des outils de recherche et d\'agents couverts ci-dessus.',
           '[Avis Vane](/power-local-llm/vane-review) — un moteur de réponse IA auto-hébergé façon Perplexity pour une recherche citée rapide en un seul tour, la comparaison face-à-face la plus proche de Local Deep Research dans cet avis.',
           '[Avis Agent Zero](/power-local-llm/agent-zero-review) — un framework d\'agent autonome généraliste, utile si la recherche n\'est qu\'un des types de tâches que vous avez besoin qu\'un agent gère.',
           '[Avis Onyx](/power-local-llm/onyx-review) — une plateforme de recherche et RAG d\'entreprise auto-hébergée pour interroger des documents organisationnels internes.',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) muestra alrededor de 9.100 estrellas a septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Local Deep Research en el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Local Deep Research en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
         ],
       },
       overview: {
@@ -1061,14 +1061,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. otras herramientas de investigación y agentes',
-        content: 'Local Deep Research se sitúa en una categoría más amplia de herramientas autoalojadas para búsqueda asistida por IA y flujos de trabajo de investigación/agentes autónomos. Así se compara con otras opciones de ese espacio — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Local Deep Research vs. Vane](#ldr-vs-vane) anterior para el enfrentamiento más cercano.',
+        content: 'Local Deep Research se sitúa en una categoría más amplia de herramientas autoalojadas para búsqueda asistida por IA y flujos de trabajo de investigación/agentes autónomos. Así se compara con otras opciones de ese espacio — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo, y la [comparación dedicada Local Deep Research vs. Vane](#ldr-vs-vane) anterior para el enfrentamiento más cercano.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (antes Perplexica) — un motor de respuestas de IA autoalojado estilo Perplexity, construido para búsqueda citada rápida y de un solo turno en vez de informes profundos de varios pasos; ver la sección de comparación dedicada anterior y la [reseña de Vane](/power-local-llm/vane-review) para todos los detalles.',
           '**[Onyx](https://onyx.app)** (antes Danswer) — una plataforma empresarial autoalojada de búsqueda y RAG construida para consultar los propios documentos y conectores internos de una organización, un caso de uso distinto al enfoque de investigación académica/web de Local Deep Research; ver la [reseña de Onyx](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — un framework de agente autónomo de propósito general capaz de investigar entre muchos otros tipos de tareas, más amplio en alcance pero no especializado en investigación académica citada como lo está Local Deep Research; ver la [reseña de Agent Zero](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — un framework de agente de gestión de tareas autónomo, temprano e influyente; contexto útil sobre cómo han evolucionado los bucles de investigación agéntica, aunque menos especializado en resultados de investigación citados que Local Deep Research; ver la [reseña de BabyAGI](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de investigación y agentes autónomos — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada del directorio de Local Deep Research.',
+        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de investigación y agentes autónomos — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada del directorio de Local Deep Research.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local y autoalojada al que pertenece este artículo, incluida la entrada del directorio de Local Deep Research junto a las herramientas de investigación y agentes cubiertas arriba.',
+          '[Directorio de Software LLM Local 2026](/directory) — el catálogo completo de herramientas de IA local y autoalojada al que pertenece este artículo, incluida la entrada del directorio de Local Deep Research junto a las herramientas de investigación y agentes cubiertas arriba.',
           '[Reseña de Vane](/power-local-llm/vane-review) — un motor de respuestas de IA autoalojado estilo Perplexity para búsqueda citada rápida de un solo turno, la comparación cara a cara más cercana a Local Deep Research en esta reseña.',
           '[Reseña de Agent Zero](/power-local-llm/agent-zero-review) — un framework de agente autónomo de propósito general, útil si la investigación es solo uno de varios tipos de tareas que necesitas que maneje un agente.',
           '[Reseña de Onyx](/power-local-llm/onyx-review) — una plataforma empresarial autoalojada de búsqueda y RAG para consultar documentos organizacionales internos.',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))は2026年9月時点で約9,100スター',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるLocal Deep Researchの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるLocal Deep Researchの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1343,14 +1343,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. 他のリサーチ・エージェントツール',
-        content: 'Local Deep Researchは、AI支援の検索と自律的なリサーチ/エージェントワークフローという、より広いセルフホスト型ツールのカテゴリに属しています。この分野で他の選択肢とどう比較されるかを紹介します。全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちの比較は上記の[Local Deep Research vs. Vane比較](#ldr-vs-vane)を参照してください。',
+        content: 'Local Deep Researchは、AI支援の検索と自律的なリサーチ/エージェントワークフローという、より広いセルフホスト型ツールのカテゴリに属しています。この分野で他の選択肢とどう比較されるかを紹介します。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を、最も近い一騎打ちの比較は上記の[Local Deep Research vs. Vane比較](#ldr-vs-vane)を参照してください。',
         items: [
           '**[Vane](https://github.com/hkuds/vane)**(旧Perplexica) — 多段階の詳細レポートではなく、素早い単発の出典付き検索向けに作られた、セルフホストのPerplexityスタイルAI回答エンジン。詳細は上記の比較セクションと[Vaneレビュー](/power-local-llm/vane-review)を参照。',
           '**[Onyx](https://onyx.app)**(旧Danswer) — 組織自身の内部ドキュメントやコネクタを検索するために作られた、セルフホスト型のエンタープライズ検索・RAGプラットフォームで、Local Deep Researchの学術/Webリサーチ重視とは異なるユースケース。詳細は[Onyxレビュー](/power-local-llm/onyx-review)を参照。',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — リサーチを含む多くのタスクタイプに対応できる汎用の自律エージェントフレームワークで、対応範囲は広いが、Local Deep Researchほど出典付き学術リサーチに特化していない。詳細は[Agent Zeroレビュー](/power-local-llm/agent-zero-review)を参照。',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — 初期の影響力あるautonomousタスク管理エージェントフレームワーク。エージェント的なリサーチループがどう進化してきたかを理解する上で有用だが、Local Deep Researchほど出典付きリサーチ成果物に特化していない。詳細は[BabyAGIレビュー](/power-local-llm/babyagi-review-autonomous-agent)を参照。',
         ],
-        note: 'これはセルフホスト型のリサーチ・自律エージェントツールの網羅的なリストではありません。Local Deep Research自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型のリサーチ・自律エージェントツールの網羅的なリストではありません。Local Deep Research自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory) — この記事が属する、ローカル・セルフホストAIツールの全カタログ。上記で扱ったリサーチ・エージェントツールとともにLocal Deep Researchのディレクトリ項目も掲載。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/directory) — この記事が属する、ローカル・セルフホストAIツールの全カタログ。上記で扱ったリサーチ・エージェントツールとともにLocal Deep Researchのディレクトリ項目も掲載。',
           '[Vaneレビュー](/power-local-llm/vane-review) — 素早い出典付きの単発検索向けのセルフホストPerplexityスタイルAI回答エンジン。このレビューでLocal Deep Researchに最も近い一騎打ちの比較対象。',
           '[Agent Zeroレビュー](/power-local-llm/agent-zero-review) — 汎用の自律エージェントフレームワーク。リサーチがエージェントに求める複数のタスクタイプの1つに過ぎない場合に有用。',
           '[Onyxレビュー](/power-local-llm/onyx-review) — 組織内部のドキュメントを検索するためのセルフホスト型エンタープライズ検索・RAGプラットフォーム。',
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 仓库([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))截至 2026 年 9 月约有 9,100 颗星',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) 中 Local Deep Research 条目的深度补充——想了解它与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
+          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/directory) 中 Local Deep Research 条目的深度补充——想了解它与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
         ],
       },
       overview: {
@@ -1625,14 +1625,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research 对比其他研究与代理工具',
-        content: 'Local Deep Research 属于自托管的 AI 辅助搜索与自主研究/代理工作流这一更广泛类别中的一员。以下是它在这一领域中与其他方案的对比——完整目录见 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory),而与它最直接对标的方案请参见上文专门的 [Local Deep Research vs. Vane 对比](#ldr-vs-vane)。',
+        content: 'Local Deep Research 属于自托管的 AI 辅助搜索与自主研究/代理工作流这一更广泛类别中的一员。以下是它在这一领域中与其他方案的对比——完整目录见 [本地 LLM 软件目录](/directory),而与它最直接对标的方案请参见上文专门的 [Local Deep Research vs. Vane 对比](#ldr-vs-vane)。',
         items: [
           '**[Vane](https://github.com/hkuds/vane)**(原名 Perplexica)——一款自托管、Perplexity 风格的 AI 问答引擎,面向快速、单轮带引用搜索,而非多步骤深度报告;详见上文专门对比部分,以及 [Vane 评测](/power-local-llm/vane-review) 的完整介绍。',
           '**[Onyx](https://onyx.app)**(原名 Danswer)——一款自托管的企业搜索与 RAG 平台,面向查询组织自身的内部文档与各类连接器,与 Local Deep Research 的学术/网络研究定位不同;详见 [Onyx 评测](/power-local-llm/onyx-review)。',
           '**[Agent Zero](https://github.com/frdel/agent-zero)**——一个通用型自主代理框架,能处理包括研究在内的多种任务类型,涵盖范围更广,但在带引用来源的学术研究方面不如 Local Deep Research 专精;详见 [Agent Zero 评测](/power-local-llm/agent-zero-review)。',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)**——一款早期、具有影响力的自主任务管理代理框架;有助于理解代理式研究循环的演进历程,不过在带引用研究输出方面不如 Local Deep Research 专精;详见 [BabyAGI 评测](/power-local-llm/babyagi-review-autonomous-agent)。',
         ],
-        note: '这并非自托管研究与自主代理工具的完整列表——完整且持续更新的目录(包括 Local Deep Research 自身的目录条目)请参见 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管研究与自主代理工具的完整列表——完整且持续更新的目录(包括 Local Deep Research 自身的目录条目)请参见 [本地 LLM 软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地 LLM 软件目录 2026](/power-local-llm/local-llm-software-directory)——本文所属的本地及自托管 AI 工具完整目录,包含 Local Deep Research 的目录条目,以及上文提到的研究与代理类工具。',
+          '[本地 LLM 软件目录 2026](/directory)——本文所属的本地及自托管 AI 工具完整目录,包含 Local Deep Research 的目录条目,以及上文提到的研究与代理类工具。',
           '[Vane 评测](/power-local-llm/vane-review)——一款自托管、Perplexity 风格的 AI 问答引擎,面向快速、带引用来源的单轮搜索,是本评测中与 Local Deep Research 最直接对标的方案。',
           '[Agent Zero 评测](/power-local-llm/agent-zero-review)——一个通用型自主代理框架,适合研究只是你需要代理处理的多种任务之一的情况。',
           '[Onyx 评测](/power-local-llm/onyx-review)——一款自托管的企业搜索与 RAG 平台,用于查询组织内部文档。',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) mostra cerca de 9.100 estrelas em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Local Deep Research no [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local e autohospedada.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Local Deep Research no [Diretório de Software LLM Local](/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local e autohospedada.' },
         ],
       },
       overview: {
@@ -1907,14 +1907,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. Outras Ferramentas de Pesquisa e Agentes',
-        content: 'O Local Deep Research está em uma categoria mais ampla de ferramentas autohospedadas para busca assistida por IA e fluxos de trabalho de pesquisa/agentes autônomos. Veja como ele se compara a outras opções nesse espaço — consulte o [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Local Deep Research vs. Vane](#ldr-vs-vane) acima para o confronto mais direto.',
+        content: 'O Local Deep Research está em uma categoria mais ampla de ferramentas autohospedadas para busca assistida por IA e fluxos de trabalho de pesquisa/agentes autônomos. Veja como ele se compara a outras opções nesse espaço — consulte o [Diretório de Software LLM Local](/directory) para o catálogo completo, e a [comparação dedicada Local Deep Research vs. Vane](#ldr-vs-vane) acima para o confronto mais direto.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (antes Perplexica) — um motor de resposta com IA autohospedado ao estilo Perplexity, feito para busca citada rápida e de turno único, em vez de relatórios profundos multietapas; veja a seção de comparação dedicada acima e a [análise do Vane](/power-local-llm/vane-review) para todos os detalhes.',
           '**[Onyx](https://onyx.app)** (antes Danswer) — uma plataforma empresarial autohospedada de busca e RAG feita para consultar os próprios documentos e conectores internos de uma organização, um caso de uso diferente do foco acadêmico/web do Local Deep Research; veja a [análise do Onyx](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — uma estrutura de agente autônomo de propósito geral capaz de pesquisa entre muitos outros tipos de tarefa, mais ampla em escopo, mas não especializada em pesquisa acadêmica citada como o Local Deep Research; veja a [análise do Agent Zero](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — uma estrutura de agente autônomo de gerenciamento de tarefas influente e pioneira; um contexto útil sobre como os laços de pesquisa agêntica evoluíram, embora menos especializada em resultados de pesquisa citados do que o Local Deep Research; veja a [análise do BabyAGI](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas autohospedadas de pesquisa e agentes autônomos — veja o [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Local Deep Research no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas autohospedadas de pesquisa e agentes autônomos — veja o [Diretório de Software LLM Local](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Local Deep Research no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1968,7 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software LLM Local 2026](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local e autohospedada ao qual este artigo pertence, incluindo a entrada do Local Deep Research no diretório ao lado das ferramentas de pesquisa e agentes cobertas acima.',
+          '[Diretório de Software LLM Local 2026](/directory) — o catálogo completo de ferramentas de IA local e autohospedada ao qual este artigo pertence, incluindo a entrada do Local Deep Research no diretório ao lado das ferramentas de pesquisa e agentes cobertas acima.',
           '[Análise do Vane](/power-local-llm/vane-review) — um motor de resposta com IA autohospedado ao estilo Perplexity, para busca rápida e citada de turno único, a comparação mais direta com o Local Deep Research nesta análise.',
           '[Análise do Agent Zero](/power-local-llm/agent-zero-review) — uma estrutura de agente autônomo de propósito geral, útil se pesquisa for apenas um dos vários tipos de tarefa que você precisa que um agente lide.',
           '[Análise do Onyx](/power-local-llm/onyx-review) — uma plataforma empresarial autohospedada de busca e RAG para consultar documentos internos da organização.',
@@ -2047,7 +2047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) يُظهر نحو 9,100 نجمة حتى سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Local Deep Research في [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Local Deep Research في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
         ],
       },
       overview: {
@@ -2189,14 +2189,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research مقابل أدوات البحث والوكلاء الأخرى',
-        content: 'يقع Local Deep Research ضمن فئة أوسع من الأدوات ذاتية الاستضافة للبحث المدعوم بالذكاء الاصطناعي وسير عمل البحث/الوكلاء المستقلين. إليك كيف يقارَن بخيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل، و[مقارنة Local Deep Research مقابل Vane](#ldr-vs-vane) المخصصة أعلاه للمقارنة الوجهاً لوجه الأقرب.',
+        content: 'يقع Local Deep Research ضمن فئة أوسع من الأدوات ذاتية الاستضافة للبحث المدعوم بالذكاء الاصطناعي وسير عمل البحث/الوكلاء المستقلين. إليك كيف يقارَن بخيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل، و[مقارنة Local Deep Research مقابل Vane](#ldr-vs-vane) المخصصة أعلاه للمقارنة الوجهاً لوجه الأقرب.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)** (المعروف سابقاً باسم Perplexica) — محرك إجابة بالذكاء الاصطناعي ذاتي الاستضافة بأسلوب Perplexity، مصمم لبحث موثّق بمصادر وسريع ومن محادثة واحدة بدلاً من تقارير عميقة متعددة الخطوات؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة Vane](/power-local-llm/vane-review) للتفاصيل الكاملة.',
           '**[Onyx](https://onyx.app)** (المعروف سابقاً باسم Danswer) — منصة بحث مؤسسي وRAG ذاتية الاستضافة مصممة للاستعلام عن مستندات المؤسسة الداخلية والموصلات، وهي حالة استخدام مختلفة عن تركيز Local Deep Research على البحث الأكاديمي/الويبي؛ راجع [مراجعة Onyx](/power-local-llm/onyx-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — إطار عمل وكيل مستقل عام الغرض قادر على البحث ضمن أنواع مهام عديدة أخرى، أوسع نطاقاً لكنه غير متخصص في البحث الأكاديمي الموثّق بمصادر كما هو حال Local Deep Research؛ راجع [مراجعة Agent Zero](/power-local-llm/agent-zero-review).',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — إطار عمل وكيل إدارة مهام مستقل مبكر ومؤثر؛ سياق مفيد لكيفية تطوّر حلقات البحث القائمة على الوكلاء، وإن كان أقل تخصصاً في مخرجات بحث موثّقة بمصادر من Local Deep Research؛ راجع [مراجعة BabyAGI](/power-local-llm/babyagi-review-autonomous-agent).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات البحث والوكلاء المستقلة ذاتية الاستضافة — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Local Deep Research الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات البحث والوكلاء المستقلة ذاتية الاستضافة — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Local Deep Research الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2250,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية وذاتية الاستضافة التي ينتمي إليها هذا المقال، بما في ذلك مدخل Local Deep Research في الدليل إلى جانب أدوات البحث والوكلاء المذكورة أعلاه.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية وذاتية الاستضافة التي ينتمي إليها هذا المقال، بما في ذلك مدخل Local Deep Research في الدليل إلى جانب أدوات البحث والوكلاء المذكورة أعلاه.',
           '[مراجعة Vane](/power-local-llm/vane-review) — محرك إجابة بالذكاء الاصطناعي ذاتي الاستضافة بأسلوب Perplexity لبحث سريع وموثّق بمصادر من محادثة واحدة، أقرب مقارنة وجهاً لوجه مع Local Deep Research في هذه المراجعة.',
           '[مراجعة Agent Zero](/power-local-llm/agent-zero-review) — إطار عمل وكيل مستقل عام الغرض، مفيد إذا كان البحث واحداً فقط من عدة أنواع مهام تحتاج وكيلاً لمعالجتها.',
           '[مراجعة Onyx](/power-local-llm/onyx-review) — منصة بحث مؤسسي وRAG ذاتية الاستضافة للاستعلام عن مستندات المؤسسة الداخلية.',
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))는 2026년 9월 기준 약 9,100개의 스타를 기록',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Local Deep Research 항목의 심층 분석 버전입니다 — 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Local Deep Research 항목의 심층 분석 버전입니다 — 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2471,14 +2471,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'ldr-competitors',
         title: 'Local Deep Research vs. 다른 리서치·에이전트 도구',
-        content: 'Local Deep Research는 AI 지원 검색과 자율 리서치/에이전트 워크플로를 위한 셀프 호스팅 도구라는 더 넓은 범주에 속합니다. 이 영역의 다른 옵션과 어떻게 비교되는지는 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 가까운 맞대결 비교는 위의 전용 [Local Deep Research vs. Vane 비교](#ldr-vs-vane)를 참고하세요.',
+        content: 'Local Deep Research는 AI 지원 검색과 자율 리서치/에이전트 워크플로를 위한 셀프 호스팅 도구라는 더 넓은 범주에 속합니다. 이 영역의 다른 옵션과 어떻게 비교되는지는 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 가까운 맞대결 비교는 위의 전용 [Local Deep Research vs. Vane 비교](#ldr-vs-vane)를 참고하세요.',
         items: [
           '**[Vane](https://github.com/hkuds/vane)**(이전 명칭 Perplexica) — 다단계 심층 보고서가 아니라 빠른 단일 턴 인용 검색을 위해 만들어진 셀프 호스팅 Perplexity 스타일 AI 답변 엔진 — 위의 전용 비교 섹션과 [Vane 리뷰](/power-local-llm/vane-review)에서 전체 내용을 확인하세요.',
           '**[Onyx](https://onyx.app)**(이전 명칭 Danswer) — 조직 자체의 내부 문서와 커넥터를 조회하도록 만들어진 셀프 호스팅 엔터프라이즈 검색·RAG 플랫폼으로, Local Deep Research의 학술/웹 리서치 초점과는 다른 사용 사례 — [Onyx 리뷰](/power-local-llm/onyx-review)를 참고하세요.',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — 리서치를 포함한 여러 작업 유형을 처리할 수 있는 범용 자율 에이전트 프레임워크로, 범위는 더 넓지만 Local Deep Research만큼 인용이 명시된 학술 리서치에 특화되어 있지는 않음 — [Agent Zero 리뷰](/power-local-llm/agent-zero-review)를 참고하세요.',
           '**[BabyAGI](https://github.com/yoheinakajima/babyagi)** — 초기의 영향력 있는 자율 작업 관리 에이전트 프레임워크로, 에이전트 리서치 루프가 어떻게 발전했는지 이해하는 데 유용한 배경이지만 Local Deep Research만큼 인용된 리서치 결과물에 특화되어 있지는 않음 — [BabyAGI 리뷰](/power-local-llm/babyagi-review-autonomous-agent)를 참고하세요.',
         ],
-        note: '이 목록은 셀프 호스팅 리서치 및 자율 에이전트 도구의 전체 목록이 아닙니다 — Local Deep Research의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 목록은 셀프 호스팅 리서치 및 자율 에이전트 도구의 전체 목록이 아닙니다 — Local Deep Research의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/power-local-llm/local-llm-software-directory) — 위에서 다룬 리서치 및 에이전트 도구와 함께 Local Deep Research의 디렉터리 항목을 포함한, 이 기사가 속한 로컬 및 셀프 호스팅 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/directory) — 위에서 다룬 리서치 및 에이전트 도구와 함께 Local Deep Research의 디렉터리 항목을 포함한, 이 기사가 속한 로컬 및 셀프 호스팅 AI 도구의 전체 카탈로그.',
           '[Vane 리뷰](/power-local-llm/vane-review) — 빠른 인용 단일 턴 검색을 위한 셀프 호스팅 Perplexity 스타일 AI 답변 엔진으로, 이 리뷰에서 Local Deep Research와 가장 가까운 맞대결 비교 대상.',
           '[Agent Zero 리뷰](/power-local-llm/agent-zero-review) — 리서치가 에이전트에게 필요한 여러 작업 유형 중 하나일 뿐인 경우 유용한 범용 자율 에이전트 프레임워크.',
           '[Onyx 리뷰](/power-local-llm/onyx-review) — 조직 내부 문서를 조회하기 위한 셀프 호스팅 엔터프라이즈 검색·RAG 플랫폼.',

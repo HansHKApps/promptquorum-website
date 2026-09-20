@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 6,500 GitHub stars and 940+ forks as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to DreamServer\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how DreamServer compares at a glance to dozens of other local AI tools. It is based on the project\'s own README, GitHub repository, and release history, not hands-on benchmarking by PromptQuorum.' },
+          { type: 'note', text: 'This review is the deep-dive companion to DreamServer\'s entry in the [Local LLM Software Directory](/directory) — see that page for how DreamServer compares at a glance to dozens of other local AI tools. It is based on the project\'s own README, GitHub repository, and release history, not hands-on benchmarking by PromptQuorum.' },
         ],
       },
       overview: {
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Best known for': 'Local-first autonomous agent framework, for comparison on the agent side of DreamServer\'s stack', 'Link': '[goose review](/power-local-llm/goose-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This list reflects other runtimes-and-server tools covered in PromptQuorum\'s Local LLM Software Directory, not an independent ranking — verify each tool\'s current pricing and feature set before choosing. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        note: 'This list reflects other runtimes-and-server tools covered in PromptQuorum\'s Local LLM Software Directory, not an independent ranking — verify each tool\'s current pricing and feature set before choosing. See the [Local LLM Software Directory](/directory) for the full catalog.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including DreamServer\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including DreamServer\'s directory entry.',
           '[GPUStack Review](/power-local-llm/gpustack-review) — a GPU cluster management and model-serving tool, for comparison against DreamServer\'s full-stack approach.',
           '[Lemonade Review](/power-local-llm/lemonade-review) — an AMD-sponsored local AI server runtime, another option in the same segment.',
           '[n8n Review](/power-local-llm/n8n-review) — the workflow automation tool DreamServer bundles for agent/automation use cases.',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 6.500 GitHub-Stars und 940+ Forks zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu DreamServers Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den schnellen Vergleich mit Dutzenden weiterer lokaler KI-Tools. Sie basiert auf der eigenen README des Projekts, dem GitHub-Repository und der Release-Historie, nicht auf eigenen Benchmarks von PromptQuorum.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu DreamServers Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den schnellen Vergleich mit Dutzenden weiterer lokaler KI-Tools. Sie basiert auf der eigenen README des Projekts, dem GitHub-Repository und der Release-Historie, nicht auf eigenen Benchmarks von PromptQuorum.' },
         ],
       },
       overview: {
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Bekannt für': 'Lokal-first autonomes Agenten-Framework, zum Vergleich mit der Agenten-Seite von DreamServers Stack', 'Link': '[goose-Review](/de/power-local-llm/goose-review)' },
         ],
         columns: ['Tool', 'Bekannt für', 'Link'],
-        note: 'Diese Liste spiegelt weitere Runtime- und Server-Tools aus PromptQuorums Local LLM Software Directory wider, keine unabhängige Rangfolge — prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung selbst. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Diese Liste spiegelt weitere Runtime- und Server-Tools aus PromptQuorums Local LLM Software Directory wider, keine unabhängige Rangfolge — prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung selbst. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive DreamServers Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive DreamServers Eintrag.',
           '[GPUStack-Review](/de/power-local-llm/gpustack-review) — ein Tool für GPU-Cluster-Management und Model Serving, zum Vergleich mit DreamServers Full-Stack-Ansatz.',
           '[Lemonade-Review](/de/power-local-llm/lemonade-review) — eine von AMD gesponserte lokale KI-Server-Runtime, eine weitere Option im selben Segment.',
           '[n8n-Review](/de/power-local-llm/n8n-review) — das Workflow-Automatisierungstool, das DreamServer für Agenten-/Automatisierungs-Anwendungsfälle bündelt.',
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 6 500 étoiles GitHub et 940+ forks au moment de cet avis',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche DreamServer dans l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer DreamServer en un coup d\'œil à des dizaines d\'autres outils IA locaux. Il s\'appuie sur le README du projet, son dépôt GitHub et son historique de versions, et non sur un benchmark pratique réalisé par PromptQuorum.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche DreamServer dans l\'[Annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer DreamServer en un coup d\'œil à des dizaines d\'autres outils IA locaux. Il s\'appuie sur le README du projet, son dépôt GitHub et son historique de versions, et non sur un benchmark pratique réalisé par PromptQuorum.' },
         ],
       },
       overview: {
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Best known for': 'Framework d\'agent autonome local par défaut, pour comparaison avec le volet agents de la stack DreamServer', 'Link': '[Avis goose](/fr/power-local-llm/goose-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Cette liste reflète d\'autres environnements d\'exécution et outils serveur couverts dans l\'Annuaire des logiciels LLM locaux de PromptQuorum, pas un classement indépendant — vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir. Consultez l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        note: 'Cette liste reflète d\'autres environnements d\'exécution et outils serveur couverts dans l\'Annuaire des logiciels LLM locaux de PromptQuorum, pas un classement indépendant — vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir. Consultez l\'[Annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux dont fait partie cet article, incluant la fiche annuaire de DreamServer.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux dont fait partie cet article, incluant la fiche annuaire de DreamServer.',
           '[Avis GPUStack](/fr/power-local-llm/gpustack-review) — un outil de gestion de cluster GPU et de service de modèles, pour comparaison avec l\'approche stack complète de DreamServer.',
           '[Avis Lemonade](/fr/power-local-llm/lemonade-review) — un environnement d\'exécution de serveur IA local sponsorisé par AMD, une autre option du même segment.',
           '[Avis n8n](/fr/power-local-llm/n8n-review) — l\'outil d\'automatisation de workflows que DreamServer intègre pour les cas d\'usage agents/automatisation.',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 6.500 estrellas en GitHub y más de 940 forks al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de DreamServer en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara DreamServer de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README del proyecto, su repositorio de GitHub y el historial de versiones, no en pruebas prácticas realizadas por PromptQuorum.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de DreamServer en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara DreamServer de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README del proyecto, su repositorio de GitHub y el historial de versiones, no en pruebas prácticas realizadas por PromptQuorum.' },
         ],
       },
       overview: {
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'goose', 'Más conocido por': 'Framework de agente autónomo local-first, para comparar con el lado de agentes del stack de DreamServer', 'Enlace': '[Reseña de goose](/es/power-local-llm/goose-review)' },
         ],
         columns: ['Herramienta', 'Más conocido por', 'Enlace'],
-        note: 'Esta lista refleja otras herramientas de runtimes y servidores cubiertas en el Directorio de Software de LLM Local de PromptQuorum, no es un ranking independiente — verifica el precio y las funciones actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        note: 'Esta lista refleja otras herramientas de runtimes y servidores cubiertas en el Directorio de Software de LLM Local de PromptQuorum, no es un ranking independiente — verifica el precio y las funciones actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de DreamServer en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de DreamServer en el directorio.',
           '[Reseña de GPUStack](/es/power-local-llm/gpustack-review) — una herramienta de gestión de clústeres de GPU y servido de modelos, para comparar con el enfoque de stack completo de DreamServer.',
           '[Reseña de Lemonade](/es/power-local-llm/lemonade-review) — un runtime de servidor de IA local patrocinado por AMD, otra opción en el mismo segmento.',
           '[Reseña de n8n](/es/power-local-llm/n8n-review) — la herramienta de automatización de flujos de trabajo que DreamServer incluye para casos de uso de agentes/automatización.',
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点でGitHubスター数6,500超、フォーク数940超',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のDreamServerのエントリーを深掘りする姉妹記事です。他の数十のローカルAIツールとの一覧比較はそちらのページをご覧ください。本レビューはプロジェクト自身のREADME、GitHubリポジトリ、リリース履歴に基づくものであり、PromptQuorumによる実機ベンチマークではありません。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のDreamServerのエントリーを深掘りする姉妹記事です。他の数十のローカルAIツールとの一覧比較はそちらのページをご覧ください。本レビューはプロジェクト自身のREADME、GitHubリポジトリ、リリース履歴に基づくものであり、PromptQuorumによる実機ベンチマークではありません。' },
         ],
       },
       overview: {
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Best known for': 'DreamServerのスタックのエージェント面と比較するための、ローカルファーストな自律型エージェントフレームワーク', 'Link': '[gooseレビュー](/ja/power-local-llm/goose-review)' },
         ],
         columns: ['ツール', '主な特徴', 'リンク'],
-        note: 'このリストは、PromptQuorumのローカルLLMソフトウェアディレクトリで取り上げている他のランタイム／サーバーツールを反映したものであり、独立したランキングではありません——選ぶ前に各ツールの現在の料金と機能セットを確認してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'このリストは、PromptQuorumのローカルLLMソフトウェアディレクトリで取り上げている他のランタイム／サーバーツールを反映したものであり、独立したランキングではありません——選ぶ前に各ツールの現在の料金と機能セットを確認してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。DreamServerのディレクトリ掲載情報を含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。DreamServerのディレクトリ掲載情報を含む。',
           '[GPUStackレビュー](/ja/power-local-llm/gpustack-review) — DreamServerのフルスタックなアプローチと比較するための、GPUクラスタ管理およびモデル配信ツール。',
           '[Lemonadeレビュー](/ja/power-local-llm/lemonade-review) — AMDがスポンサーとなっている、同じ分野の別の選択肢であるローカルAIサーバーランタイム。',
           '[n8nレビュー](/ja/power-local-llm/n8n-review) — DreamServerがエージェント／自動化のユースケース向けにバンドルする、ワークフロー自動化ツール。',
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时已获得超过 6,500 个 GitHub star 和 940 多个 fork',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 DreamServer 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度配套文章——该页面展示了 DreamServer 与其他数十款本地 AI 工具的一览式对比。本文内容基于该项目自身的 README、GitHub 仓库和发布历史，并非 PromptQuorum 的实测基准测试。' },
+          { type: 'note', text: '本评测是 DreamServer 在[本地 LLM 软件目录](/zh/directory)中条目的深度配套文章——该页面展示了 DreamServer 与其他数十款本地 AI 工具的一览式对比。本文内容基于该项目自身的 README、GitHub 仓库和发布历史，并非 PromptQuorum 的实测基准测试。' },
         ],
       },
       overview: {
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Best known for': '本地优先的自主智能体框架，可与 DreamServer 服务栈中的智能体部分对比', 'Link': '[goose 评测](/zh/power-local-llm/goose-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '此列表反映了 PromptQuorum《本地 LLM 软件目录》中收录的其他运行时与服务器工具，并非独立排名——选择前请核实各工具当前的价格和功能。完整目录请见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '此列表反映了 PromptQuorum《本地 LLM 软件目录》中收录的其他运行时与服务器工具，并非独立排名——选择前请核实各工具当前的价格和功能。完整目录请见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 年本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录，包含 DreamServer 的目录条目。',
+          '[2026 年本地 LLM 软件目录](/zh/directory) —— 本文所属的本地 AI 工具完整目录，包含 DreamServer 的目录条目。',
           '[GPUStack 评测](/zh/power-local-llm/gpustack-review) —— 一款 GPU 集群管理与模型服务工具，可与 DreamServer 的全栈方案对比。',
           '[Lemonade 评测](/zh/power-local-llm/lemonade-review) —— AMD 赞助的本地 AI 服务器运行时，同一细分领域的另一个选择。',
           '[n8n 评测](/zh/power-local-llm/n8n-review) —— DreamServer 捆绑的用于智能体/自动化场景的工作流自动化工具。',
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 6.500 estrelas no GitHub e mais de 940 forks até esta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do DreamServer no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o DreamServer com dezenas de outras ferramentas de IA local. Ela é baseada no próprio README do projeto, no repositório GitHub e no histórico de lançamentos, não em testes práticos feitos pela PromptQuorum.' },
+          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do DreamServer no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o DreamServer com dezenas de outras ferramentas de IA local. Ela é baseada no próprio README do projeto, no repositório GitHub e no histórico de lançamentos, não em testes práticos feitos pela PromptQuorum.' },
         ],
       },
       overview: {
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'goose', 'Best known for': 'Framework de agente autônomo local-first, para comparação com o lado de agentes da stack do DreamServer', 'Link': '[Análise do goose](/pt/power-local-llm/goose-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta lista reflete outras ferramentas de runtimes e servidores cobertas no Diretório de Software de LLM Local da PromptQuorum, não uma classificação independente — verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        note: 'Esta lista reflete outras ferramentas de runtimes e servidores cobertas no Diretório de Software de LLM Local da PromptQuorum, não uma classificação independente — verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do DreamServer no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do DreamServer no diretório.',
           '[Análise do GPUStack](/pt/power-local-llm/gpustack-review) — uma ferramenta de gerenciamento de cluster de GPU e serviço de modelos, para comparação com a abordagem de stack completa do DreamServer.',
           '[Análise do Lemonade](/pt/power-local-llm/lemonade-review) — um runtime de servidor de IA local patrocinado pela AMD, outra opção no mesmo segmento.',
           '[Análise do n8n](/pt/power-local-llm/n8n-review) — a ferramenta de automação de fluxos de trabalho que o DreamServer inclui para casos de uso de agentes/automação.',
@@ -2089,7 +2089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 6,500 نجمة على GitHub وأكثر من 940 fork حتى وقت هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشريك المتعمق لإدخال DreamServer في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن DreamServer سريعًا بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى ملف README الخاص بالمشروع ومستودع GitHub وسجل الإصدارات، وليس إلى اختبار عملي أجرته PromptQuorum.' },
+          { type: 'note', text: 'هذه المراجعة هي الشريك المتعمق لإدخال DreamServer في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن DreamServer سريعًا بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى ملف README الخاص بالمشروع ومستودع GitHub وسجل الإصدارات، وليس إلى اختبار عملي أجرته PromptQuorum.' },
         ],
       },
       overview: {
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'goose', 'الأشهر في': 'إطار عمل وكيل مستقل محلي أولاً، للمقارنة مع جانب الوكلاء في حزمة DreamServer', 'الرابط': '[مراجعة goose](/ar/power-local-llm/goose-review)' },
         ],
         columns: ['الأداة', 'الأشهر في', 'الرابط'],
-        note: 'تعكس هذه القائمة أدوات بيئات تشغيل/خوادم أخرى مُغطاة في دليل PromptQuorum لبرمجيات نماذج اللغة المحلية، وليست ترتيبًا مستقلاً — تحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل.',
+        note: 'تعكس هذه القائمة أدوات بيئات تشغيل/خوادم أخرى مُغطاة في دليل PromptQuorum لبرمجيات نماذج اللغة المحلية، وليست ترتيبًا مستقلاً — تحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للكتالوج الكامل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال DreamServer في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال DreamServer في الدليل.',
           '[مراجعة GPUStack](/ar/power-local-llm/gpustack-review) — أداة إدارة تجميع GPU وخدمة نماذج، للمقارنة مع نهج DreamServer الشامل.',
           '[مراجعة Lemonade](/ar/power-local-llm/lemonade-review) — بيئة تشغيل خادم ذكاء اصطناعي محلي مدعومة من AMD، خيار آخر في القطاع نفسه.',
           '[مراجعة n8n](/ar/power-local-llm/n8n-review) — أداة أتمتة سير العمل التي يضمّها DreamServer لحالات استخدام الوكلاء/الأتمتة.',
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 6,500개 이상, 포크 940개 이상입니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 DreamServer 항목의 심화 버전입니다 — DreamServer가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 프로젝트의 README, GitHub 저장소, 릴리스 이력을 근거로 작성되었으며, PromptQuorum이 직접 벤치마킹한 결과가 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 DreamServer 항목의 심화 버전입니다 — DreamServer가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 프로젝트의 README, GitHub 저장소, 릴리스 이력을 근거로 작성되었으며, PromptQuorum이 직접 벤치마킹한 결과가 아닙니다.' },
         ],
       },
       overview: {
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'goose', '대표 특징': 'DreamServer 스택의 에이전트 측면과 비교할 수 있는, 로컬 우선 자율 에이전트 프레임워크', '링크': '[goose 리뷰](/ko/power-local-llm/goose-review)' },
         ],
         columns: ['도구', '대표 특징', '링크'],
-        note: '이 목록은 PromptQuorum의 로컬 LLM 소프트웨어 디렉터리에서 다루는 다른 런타임/서버 도구를 반영한 것이며, 독립적인 순위가 아닙니다 — 선택하기 전에 각 도구의 현재 가격과 기능을 직접 확인하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이 목록은 PromptQuorum의 로컬 LLM 소프트웨어 디렉터리에서 다루는 다른 런타임/서버 도구를 반영한 것이며, 독립적인 순위가 아닙니다 — 선택하기 전에 각 도구의 현재 가격과 기능을 직접 확인하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — DreamServer의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — DreamServer의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[GPUStack 리뷰](/ko/power-local-llm/gpustack-review) — DreamServer의 풀스택 접근 방식과 비교할 수 있는 GPU 클러스터 관리 및 모델 서빙 도구입니다.',
           '[Lemonade 리뷰](/ko/power-local-llm/lemonade-review) — 같은 세그먼트의 또 다른 선택지인, AMD가 후원하는 로컬 AI 서버 런타임입니다.',
           '[n8n 리뷰](/ko/power-local-llm/n8n-review) — DreamServer가 에이전트/자동화 용도로 번들하는 워크플로 자동화 도구입니다.',

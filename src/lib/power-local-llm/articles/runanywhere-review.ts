@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developer: RunAnywhere, Inc., which describes itself as "a research-first inference lab" building hand-written GPU/NPU kernels for consumer silicon',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to RunAnywhere\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to RunAnywhere\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -215,14 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Competitors and Alternatives',
-        content: 'RunAnywhere sits in the on-device inference SDK/runtime segment, alongside other tools that let developers run models locally rather than through a cloud API. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'RunAnywhere sits in the on-device inference SDK/runtime segment, alongside other tools that let developers run models locally rather than through a cloud API. See the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[MLC LLM](/power-local-llm/mlc-llm-explained)** — an open-source ML-compilation framework for deploying LLMs on phones, browsers, and other edge devices; a closer comparison for teams that want to compile and control the inference graph themselves rather than use a managed SDK.',
           '**[MLC Chat](/power-local-llm/mlc-chat-review)** — the reference mobile chat app built on MLC LLM; useful as a working example of what an on-device SDK looks like from the end-user side, even though it is a downloadable app rather than a developer SDK.',
           '**[llama.cpp](/power-local-llm/llama-cpp-explained)** — the widely used C/C++ inference engine that many local AI tools, including RunAnywhere\'s own Android/Kotlin and Flutter/web engine modules, build on for CPU and cross-platform inference.',
           '**[Docker Model Runner](/power-local-llm/docker-model-runner-review)** — a different integration point for local inference (a Docker Desktop/Engine CLI feature rather than a mobile-app SDK), useful as a contrast for teams deciding between a backend/server-side local-inference approach and an on-device SDK embedded directly in a client app.',
         ],
-        note: 'This is not an exhaustive list of on-device inference SDKs — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including RunAnywhere\'s own directory entry.',
+        note: 'This is not an exhaustive list of on-device inference SDKs — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including RunAnywhere\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including RunAnywhere\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including RunAnywhere\'s directory entry.',
           '[MLC LLM Explained](/power-local-llm/mlc-llm-explained) — an open-source ML-compilation alternative for deploying models on phones and browsers.',
           '[MLC Chat Review](/power-local-llm/mlc-chat-review) — a downloadable mobile chat app built on the MLC LLM engine.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the widely used inference engine several of RunAnywhere\'s own SDK modules build on.',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickler: RunAnywhere, Inc., das sich selbst als „research-first inference lab" beschreibt, das handgeschriebene GPU-/NPU-Kernel für Consumer-Silizium entwickelt',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu RunAnywheres Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie RunAnywhere im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu RunAnywheres Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie RunAnywhere im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -492,14 +492,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Konkurrenten und Alternativen',
-        content: 'RunAnywhere ist im Segment der On-Device-Inferenz-SDKs/-Laufzeitumgebungen angesiedelt, neben anderen Tools, die Entwicklern erlauben, Modelle lokal auszuführen, statt über eine Cloud-API. Siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'RunAnywhere ist im Segment der On-Device-Inferenz-SDKs/-Laufzeitumgebungen angesiedelt, neben anderen Tools, die Entwicklern erlauben, Modelle lokal auszuführen, statt über eine Cloud-API. Siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog.',
         items: [
           '**[MLC LLM](/de/power-local-llm/mlc-llm-explained)** — ein Open-Source-ML-Kompilierungsframework für die Bereitstellung von LLMs auf Smartphones, Browsern und anderen Edge-Geräten; ein näherer Vergleich für Teams, die den Inferenzgraphen selbst kompilieren und kontrollieren möchten, statt ein verwaltetes SDK zu nutzen.',
           '**[MLC Chat](/de/power-local-llm/mlc-chat-review)** — die Referenz-Chat-App für Mobilgeräte, gebaut auf MLC LLM; nützlich als funktionierendes Beispiel dafür, wie sich ein On-Device-SDK aus Endnutzersicht anfühlt, auch wenn es sich um eine herunterladbare App und kein Entwickler-SDK handelt.',
           '**[llama.cpp](/de/power-local-llm/llama-cpp-explained)** — die weit verbreitete C/C++-Inferenz-Engine, auf der viele lokale KI-Tools aufbauen, einschließlich RunAnywheres eigener Android/Kotlin- und Flutter/Web-Engine-Module, für CPU- und plattformübergreifende Inferenz.',
           '**[Docker Model Runner](/de/power-local-llm/docker-model-runner-review)** — ein anderer Integrationspunkt für lokale Inferenz (eine CLI-Funktion von Docker Desktop/Engine statt eines Mobile-App-SDKs), nützlich als Kontrast für Teams, die zwischen einem Backend-/serverseitigen Ansatz für lokale Inferenz und einem in die Client-App eingebetteten On-Device-SDK abwägen.',
         ],
-        note: 'Dies ist keine erschöpfende Liste von On-Device-Inferenz-SDKs — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich RunAnywheres eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von On-Device-Inferenz-SDKs — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich RunAnywheres eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich RunAnywheres Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich RunAnywheres Verzeichniseintrag.',
           '[MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) — eine Open-Source-ML-Kompilierungsalternative für die Bereitstellung von Modellen auf Smartphones und Browsern.',
           '[MLC Chat Review](/de/power-local-llm/mlc-chat-review) — eine herunterladbare Chat-App für Mobilgeräte, gebaut auf der MLC-LLM-Engine.',
           '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die weit verbreitete Inferenz-Engine, auf der mehrere von RunAnywheres eigenen SDK-Modulen aufbauen.',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développeur : RunAnywhere, Inc., qui se décrit comme un « laboratoire d\'inférence axé sur la recherche » développant des noyaux GPU/NPU écrits à la main pour le matériel grand public',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de RunAnywhere dans le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment RunAnywhere se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de RunAnywhere dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment RunAnywhere se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -769,14 +769,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Concurrents et alternatives',
-        content: 'RunAnywhere se situe dans le segment des SDK/runtimes d\'inférence sur l\'appareil, aux côtés d\'autres outils permettant aux développeurs d\'exécuter des modèles localement plutôt que via une API cloud. Consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'RunAnywhere se situe dans le segment des SDK/runtimes d\'inférence sur l\'appareil, aux côtés d\'autres outils permettant aux développeurs d\'exécuter des modèles localement plutôt que via une API cloud. Consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[MLC LLM](/fr/power-local-llm/mlc-llm-explained)** — un framework open source de compilation ML pour déployer des LLM sur téléphones, navigateurs et autres appareils périphériques ; une comparaison plus proche pour les équipes souhaitant compiler et contrôler elles-mêmes le graphe d\'inférence plutôt que d\'utiliser un SDK géré.',
           '**[MLC Chat](/fr/power-local-llm/mlc-chat-review)** — l\'app de chat mobile de référence construite sur MLC LLM ; utile comme exemple concret de ce à quoi ressemble un SDK sur l\'appareil du point de vue de l\'utilisateur final, même s\'il s\'agit d\'une app téléchargeable plutôt que d\'un SDK pour développeurs.',
           '**[llama.cpp](/fr/power-local-llm/llama-cpp-explained)** — le moteur d\'inférence C/C++ largement utilisé sur lequel s\'appuient de nombreux outils d\'IA locale, y compris les propres modules moteur Android/Kotlin et Flutter/web de RunAnywhere, pour l\'inférence CPU et multiplateforme.',
           '**[Docker Model Runner](/fr/power-local-llm/docker-model-runner-review)** — un autre point d\'intégration pour l\'inférence locale (une fonctionnalité CLI de Docker Desktop/Engine plutôt qu\'un SDK d\'app mobile), utile en contraste pour les équipes qui choisissent entre une approche backend/serveur pour l\'inférence locale et un SDK sur l\'appareil intégré directement dans une app client.',
         ],
-        note: 'Cette liste n\'est pas exhaustive concernant les SDK d\'inférence sur l\'appareil — consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la propre fiche de RunAnywhere.',
+        note: 'Cette liste n\'est pas exhaustive concernant les SDK d\'inférence sur l\'appareil — consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris la propre fiche de RunAnywhere.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche de RunAnywhere.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche de RunAnywhere.',
           '[MLC LLM expliqué](/fr/power-local-llm/mlc-llm-explained) — une alternative open source de compilation ML pour déployer des modèles sur téléphones et navigateurs.',
           '[MLC Chat Review](/fr/power-local-llm/mlc-chat-review) — une app de chat mobile téléchargeable construite sur le moteur MLC LLM.',
           '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence largement utilisé sur lequel s\'appuient plusieurs des propres modules SDK de RunAnywhere.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollador: RunAnywhere, Inc., que se describe a sí misma como un "laboratorio de inferencia enfocado en investigación" que construye kernels de GPU/NPU escritos a mano para silicio de consumo',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de RunAnywhere en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara RunAnywhere de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de RunAnywhere en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara RunAnywhere de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1046,14 +1046,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Competidores y alternativas',
-        content: 'RunAnywhere se ubica en el segmento de SDK/runtimes de inferencia en el dispositivo, junto a otras herramientas que permiten a los desarrolladores ejecutar modelos localmente en lugar de a través de una API en la nube. Consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'RunAnywhere se ubica en el segmento de SDK/runtimes de inferencia en el dispositivo, junto a otras herramientas que permiten a los desarrolladores ejecutar modelos localmente en lugar de a través de una API en la nube. Consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo.',
         items: [
           '**[MLC LLM](/es/power-local-llm/mlc-llm-explained)** — un framework de código abierto de compilación de ML para desplegar LLM en teléfonos, navegadores y otros dispositivos periféricos; una comparación más cercana para equipos que quieren compilar y controlar ellos mismos el grafo de inferencia en lugar de usar un SDK gestionado.',
           '**[MLC Chat](/es/power-local-llm/mlc-chat-review)** — la app de chat móvil de referencia construida sobre MLC LLM; útil como ejemplo funcional de cómo se ve un SDK en el dispositivo desde el lado del usuario final, aunque sea una app descargable en lugar de un SDK para desarrolladores.',
           '**[llama.cpp](/es/power-local-llm/llama-cpp-explained)** — el motor de inferencia en C/C++ ampliamente utilizado sobre el que se apoyan muchas herramientas de IA local, incluidos los propios módulos de motor Android/Kotlin y Flutter/web de RunAnywhere, para inferencia en CPU y multiplataforma.',
           '**[Docker Model Runner](/es/power-local-llm/docker-model-runner-review)** — un punto de integración diferente para la inferencia local (una función de CLI de Docker Desktop/Engine en lugar de un SDK de app móvil), útil como contraste para equipos que deciden entre un enfoque de backend/servidor para inferencia local y un SDK en el dispositivo integrado directamente en una app cliente.',
         ],
-        note: 'Esta no es una lista exhaustiva de SDK de inferencia en el dispositivo — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de RunAnywhere en el directorio.',
+        note: 'Esta no es una lista exhaustiva de SDK de inferencia en el dispositivo — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de RunAnywhere en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de RunAnywhere en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de RunAnywhere en el directorio.',
           '[MLC LLM explicado](/es/power-local-llm/mlc-llm-explained) — una alternativa de código abierto de compilación de ML para desplegar modelos en teléfonos y navegadores.',
           '[MLC Chat Review](/es/power-local-llm/mlc-chat-review) — una app de chat móvil descargable construida sobre el motor MLC LLM.',
           '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia ampliamente utilizado en el que se apoyan varios de los propios módulos SDK de RunAnywhere.',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvedor: RunAnywhere, Inc., que se descreve como um "laboratório de inferência voltado à pesquisa" que constrói kernels de GPU/NPU escritos à mão para silício de consumo',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do RunAnywhere no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o RunAnywhere com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do RunAnywhere no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o RunAnywhere com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1323,14 +1323,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Concorrentes e alternativas',
-        content: 'RunAnywhere se posiciona no segmento de SDKs/runtimes de inferência no dispositivo, ao lado de outras ferramentas que permitem aos desenvolvedores executar modelos localmente em vez de por meio de uma API na nuvem. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'RunAnywhere se posiciona no segmento de SDKs/runtimes de inferência no dispositivo, ao lado de outras ferramentas que permitem aos desenvolvedores executar modelos localmente em vez de por meio de uma API na nuvem. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[MLC LLM](/pt/power-local-llm/mlc-llm-explained)** — um framework de código aberto de compilação de ML para implantar LLMs em celulares, navegadores e outros dispositivos de borda; uma comparação mais próxima para equipes que querem compilar e controlar elas mesmas o grafo de inferência em vez de usar um SDK gerenciado.',
           '**[MLC Chat](/pt/power-local-llm/mlc-chat-review)** — o app de chat mobile de referência construído sobre o MLC LLM; útil como exemplo prático de como um SDK no dispositivo se parece do lado do usuário final, ainda que seja um app baixável em vez de um SDK para desenvolvedores.',
           '**[llama.cpp](/pt/power-local-llm/llama-cpp-explained)** — a engine de inferência em C/C++ amplamente usada sobre a qual muitas ferramentas de IA local se apoiam, incluindo os próprios módulos de engine Android/Kotlin e Flutter/web do RunAnywhere, para inferência em CPU e multiplataforma.',
           '**[Docker Model Runner](/pt/power-local-llm/docker-model-runner-review)** — um ponto de integração diferente para inferência local (um recurso de CLI do Docker Desktop/Engine em vez de um SDK de app mobile), útil como contraste para equipes decidindo entre uma abordagem de backend/servidor para inferência local e um SDK no dispositivo embutido diretamente em um app cliente.',
         ],
-        note: 'Esta não é uma lista exaustiva de SDKs de inferência no dispositivo — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do RunAnywhere no diretório.',
+        note: 'Esta não é uma lista exaustiva de SDKs de inferência no dispositivo — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do RunAnywhere no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do RunAnywhere no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do RunAnywhere no diretório.',
           '[MLC LLM explicado](/pt/power-local-llm/mlc-llm-explained) — uma alternativa de código aberto de compilação de ML para implantar modelos em celulares e navegadores.',
           '[MLC Chat Review](/pt/power-local-llm/mlc-chat-review) — um app de chat mobile baixável construído sobre a engine MLC LLM.',
           '[llama.cpp explicado](/pt/power-local-llm/llama-cpp-explained) — a engine de inferência amplamente usada sobre a qual vários dos próprios módulos de SDK do RunAnywhere se apoiam.',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '開発元：RunAnywhere, Inc.——自社を「研究第一の推論ラボ」と位置づけ、コンシューマー向けシリコン向けに手書きのGPU/NPUカーネルを構築している',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)におけるRunAnywhereの項目を深掘りした関連記事です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるRunAnywhereの項目を深掘りした関連記事です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1600,14 +1600,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '競合とその他の選択肢',
-        content: 'RunAnywhereは、クラウドAPI経由ではなくローカルでモデルを実行できるようにする他のツールと並んで、オンデバイス推論SDK/ランタイムの領域に位置しています。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'RunAnywhereは、クラウドAPI経由ではなくローカルでモデルを実行できるようにする他のツールと並んで、オンデバイス推論SDK/ランタイムの領域に位置しています。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[MLC LLM](/ja/power-local-llm/mlc-llm-explained)** — スマートフォン、ブラウザ、その他のエッジデバイスにLLMをデプロイするためのオープンソースMLコンパイルフレームワーク。管理型SDKを使うのではなく、推論グラフを自分でコンパイル・制御したいチームにとってより近い比較対象。',
           '**[MLC Chat](/ja/power-local-llm/mlc-chat-review)** — MLC LLM上に構築されたリファレンス実装のモバイルチャットアプリ。ダウンロード可能なアプリであり開発者向けSDKではありませんが、オンデバイスSDKがエンドユーザー側からどう見えるかの実例として有用。',
           '**[llama.cpp](/ja/power-local-llm/llama-cpp-explained)** — 広く使われているC/C++推論エンジンで、RunAnywhere自身のAndroid/KotlinおよびFlutter/Webエンジンモジュールを含む多くのローカルAIツールが、CPUおよびクロスプラットフォーム推論のために採用している。',
           '**[Docker Model Runner](/ja/power-local-llm/docker-model-runner-review)** — モバイルアプリSDKではなくDocker Desktop/EngineのCLI機能という、ローカル推論への異なる統合方法。ローカル推論に対するバックエンド/サーバーサイドのアプローチと、クライアントアプリに直接組み込むオンデバイスSDKのアプローチのどちらを取るかを検討するチームにとって、対照として有用。',
         ],
-        note: 'これはオンデバイス推論SDKの網羅的なリストではありません。RunAnywhere自身のディレクトリ項目を含む、完全かつ定期的に更新されるカタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはオンデバイス推論SDKの網羅的なリストではありません。RunAnywhere自身のディレクトリ項目を含む、完全かつ定期的に更新されるカタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — RunAnywhereのディレクトリ項目を含む、この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — RunAnywhereのディレクトリ項目を含む、この記事が属するローカルAIツールの全カタログ。',
           '[MLC LLM解説](/ja/power-local-llm/mlc-llm-explained) — スマートフォンやブラウザにモデルをデプロイするためのオープンソースMLコンパイルの代替手段。',
           '[MLC Chatレビュー](/ja/power-local-llm/mlc-chat-review) — MLC LLMエンジン上に構築されたダウンロード可能なモバイルチャットアプリ。',
           '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained) — RunAnywhere自身の複数のSDKモジュールが採用している、広く使われている推論エンジン。',
@@ -1744,7 +1744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '开发方：RunAnywhere, Inc.，该公司将自身定位为"以研究为先的推理实验室"，为消费级芯片手写GPU/NPU内核',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中RunAnywhere条目的深度解读——如需一览RunAnywhere与其他数十种本地AI工具的对比，请查阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中RunAnywhere条目的深度解读——如需一览RunAnywhere与其他数十种本地AI工具的对比，请查阅该页面。' },
         ],
       },
       overview: {
@@ -1877,14 +1877,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '竞品与替代方案',
-        content: 'RunAnywhere所处的领域是设备端推理SDK/运行时，与其他允许开发者在本地而非通过云端API运行模型的工具并列。完整目录请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'RunAnywhere所处的领域是设备端推理SDK/运行时，与其他允许开发者在本地而非通过云端API运行模型的工具并列。完整目录请参见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[MLC LLM](/zh/power-local-llm/mlc-llm-explained)** — 一个开源的机器学习编译框架，用于将LLM部署到手机、浏览器及其他边缘设备；对于希望自行编译和控制推理图、而非使用托管式SDK的团队而言，是更接近的比较对象。',
           '**[MLC Chat](/zh/power-local-llm/mlc-chat-review)** — 基于MLC LLM构建的参考移动聊天应用；虽然它是一款可下载的应用，而非开发者SDK，但作为从终端用户角度理解设备端SDK的一个可运行示例，仍具参考价值。',
           '**[llama.cpp](/zh/power-local-llm/llama-cpp-explained)** — 一个被广泛使用的C/C++推理引擎，许多本地AI工具（包括RunAnywhere自身的Android/Kotlin和Flutter/Web引擎模块）都基于它实现CPU及跨平台推理。',
           '**[Docker Model Runner](/zh/power-local-llm/docker-model-runner-review)** — 本地推理的另一种集成方式（作为Docker Desktop/Engine的CLI功能，而非移动应用SDK），对于在本地推理的后端/服务端方案与直接嵌入客户端应用的设备端SDK之间进行权衡的团队而言，是一个有用的对照。',
         ],
-        note: '这并非设备端推理SDK的详尽列表——如需完整且定期更新的目录（包括RunAnywhere自身的目录条目），请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非设备端推理SDK的详尽列表——如需完整且定期更新的目录（包括RunAnywhere自身的目录条目），请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含RunAnywhere的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录，包含RunAnywhere的目录条目。',
           '[MLC LLM详解](/zh/power-local-llm/mlc-llm-explained) — 一种用于在手机和浏览器上部署模型的开源机器学习编译替代方案。',
           '[MLC Chat评测](/zh/power-local-llm/mlc-chat-review) — 一款基于MLC LLM引擎构建的可下载移动聊天应用。',
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — RunAnywhere自身多个SDK模块所依赖的、被广泛使用的推理引擎。',
@@ -2021,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الجهة المطوّرة: RunAnywhere, Inc.، التي تصف نفسها بأنها "مختبر استدلال يضع البحث في المقام الأول" ويبني نُوى معالجات رسومية ووحدات NPU مكتوبة يدويًا لشرائح الأجهزة الاستهلاكية',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال RunAnywhere في [دليل برامج النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين RunAnywhere وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال RunAnywhere في [دليل برامج النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين RunAnywhere وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2154,14 +2154,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'المنافسون والبدائل',
-        content: 'يقع RunAnywhere ضمن فئة حزم/بيئات تشغيل الاستدلال على الجهاز، إلى جانب أدوات أخرى تتيح للمطورين تشغيل النماذج محليًا بدلاً من عبر واجهة برمجة تطبيقات سحابية. راجع [دليل برامج النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الفهرس الكامل.',
+        content: 'يقع RunAnywhere ضمن فئة حزم/بيئات تشغيل الاستدلال على الجهاز، إلى جانب أدوات أخرى تتيح للمطورين تشغيل النماذج محليًا بدلاً من عبر واجهة برمجة تطبيقات سحابية. راجع [دليل برامج النماذج اللغوية المحلية](/ar/directory) للاطلاع على الفهرس الكامل.',
         items: [
           '**[MLC LLM](/ar/power-local-llm/mlc-llm-explained)** — إطار عمل مفتوح المصدر لتصريف تعلّم الآلة (ML compilation) لنشر النماذج اللغوية على الهواتف والمتصفحات وأجهزة الحوسبة الطرفية الأخرى؛ مقارنة أقرب للفرق التي تريد تصريف مخطط الاستدلال والتحكم فيه بنفسها بدلاً من استخدام حزمة مُدارة.',
           '**[MLC Chat](/ar/power-local-llm/mlc-chat-review)** — تطبيق دردشة مرجعي للجوال مبني على MLC LLM؛ مفيد كمثال عملي على شكل حزمة على الجهاز من منظور المستخدم النهائي، رغم أنه تطبيق قابل للتنزيل وليس حزمة تطوير للمطورين.',
           '**[llama.cpp](/ar/power-local-llm/llama-cpp-explained)** — محرك استدلال بلغة ++C/C واسع الاستخدام تعتمد عليه أدوات ذكاء اصطناعي محلية كثيرة، بما فيها وحدات محرك Android/Kotlin وFlutter/الويب الخاصة بـ RunAnywhere نفسه، للاستدلال على المعالج المركزي وعبر المنصات.',
           '**[Docker Model Runner](/ar/power-local-llm/docker-model-runner-review)** — نقطة تكامل مختلفة للاستدلال المحلي (ميزة سطر أوامر ضمن Docker Desktop/Engine بدلاً من حزمة تطبيق جوال)، مفيدة كنقطة تباين للفرق التي تقرر بين نهج خادم/خلفي للاستدلال المحلي وحزمة على الجهاز مدمجة مباشرة في تطبيق العميل.',
         ],
-        note: 'هذه ليست قائمة شاملة لحزم الاستدلال على الجهاز — راجع [دليل برامج النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الفهرس الكامل والمحدَّث بانتظام، بما في ذلك إدخال RunAnywhere نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لحزم الاستدلال على الجهاز — راجع [دليل برامج النماذج اللغوية المحلية](/ar/directory) للاطلاع على الفهرس الكامل والمحدَّث بانتظام، بما في ذلك إدخال RunAnywhere نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2218,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال RunAnywhere في الدليل.',
+          '[دليل برامج النماذج اللغوية المحلية 2026](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال RunAnywhere في الدليل.',
           '[شرح MLC LLM](/ar/power-local-llm/mlc-llm-explained) — بديل مفتوح المصدر لتصريف تعلّم الآلة لنشر النماذج على الهواتف والمتصفحات.',
           '[مراجعة MLC Chat](/ar/power-local-llm/mlc-chat-review) — تطبيق دردشة للجوال قابل للتنزيل مبني على محرك MLC LLM.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك الاستدلال واسع الاستخدام الذي تعتمد عليه عدة وحدات من حزم SDK الخاصة بـ RunAnywhere نفسه.',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개발사: RunAnywhere, Inc. — 스스로를 "연구를 최우선으로 하는 추론 연구소"로 소개하며, 소비자용 실리콘을 위한 GPU/NPU 커널을 직접 손으로 작성',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 RunAnywhere 항목을 심층적으로 다룬 관련 글입니다. 수십 개의 다른 로컬 AI 도구와 RunAnywhere를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 RunAnywhere 항목을 심층적으로 다룬 관련 글입니다. 수십 개의 다른 로컬 AI 도구와 RunAnywhere를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2431,14 +2431,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '경쟁 서비스 및 대안',
-        content: 'RunAnywhere는 클라우드 API가 아닌 로컬에서 모델을 실행할 수 있게 해주는 다른 도구들과 함께 온디바이스 추론 SDK/런타임 영역에 자리하고 있습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        content: 'RunAnywhere는 클라우드 API가 아닌 로컬에서 모델을 실행할 수 있게 해주는 다른 도구들과 함께 온디바이스 추론 SDK/런타임 영역에 자리하고 있습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
         items: [
           '**[MLC LLM](/ko/power-local-llm/mlc-llm-explained)** — 휴대폰, 브라우저, 기타 엣지 기기에 LLM을 배포하기 위한 오픈소스 ML 컴파일 프레임워크. 관리형 SDK 대신 추론 그래프를 직접 컴파일하고 제어하고 싶은 팀에게 더 가까운 비교 대상입니다.',
           '**[MLC Chat](/ko/power-local-llm/mlc-chat-review)** — MLC LLM 위에 구축된 참조용 모바일 채팅 앱. 개발자용 SDK가 아니라 다운로드 가능한 앱이지만, 최종 사용자 관점에서 온디바이스 SDK가 어떤 모습인지 보여주는 실제 예시로 유용합니다.',
           '**[llama.cpp](/ko/power-local-llm/llama-cpp-explained)** — RunAnywhere 자체의 Android/Kotlin 및 Flutter/웹 엔진 모듈을 포함해 많은 로컬 AI 도구가 CPU 및 크로스 플랫폼 추론에 널리 채택하는 C/C++ 추론 엔진입니다.',
           '**[Docker Model Runner](/ko/power-local-llm/docker-model-runner-review)** — 모바일 앱 SDK가 아니라 Docker Desktop/Engine의 CLI 기능이라는 로컬 추론에 대한 다른 통합 방식입니다. 로컬 추론에 대해 백엔드/서버 측 접근 방식과 클라이언트 앱에 직접 내장되는 온디바이스 SDK 중 어느 쪽을 선택할지 고민하는 팀에게 대조군으로 유용합니다.',
         ],
-        note: '이는 온디바이스 추론 SDK의 총망라 목록이 아닙니다. RunAnywhere 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 온디바이스 추론 SDK의 총망라 목록이 아닙니다. RunAnywhere 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한, RunAnywhere의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한, RunAnywhere의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
           '[MLC LLM 설명](/ko/power-local-llm/mlc-llm-explained) — 휴대폰과 브라우저에 모델을 배포하기 위한 오픈소스 ML 컴파일 대안.',
           '[MLC Chat 리뷰](/ko/power-local-llm/mlc-chat-review) — MLC LLM 엔진 위에 구축된 다운로드 가능한 모바일 채팅 앱.',
           '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained) — RunAnywhere 자체의 여러 SDK 모듈이 기반으로 삼고 있는, 널리 사용되는 추론 엔진.',

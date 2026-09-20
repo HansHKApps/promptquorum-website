@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cloud compute plans are tiered, starting around $19/month per [atomicbot.ai](https://atomicbot.ai/) — reconfirm current pricing before budgeting, since plan details change',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Atomic Bot\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Atomic Bot\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Open-source personal-assistant / "second brain" agent with its own local and cloud modes', 'Link': '[Khoj review](/power-local-llm/khoj-ai-second-brain-review)' },
           { 'Tool': 'Hermes Agent', 'Best known for': 'The alternative backend Atomic Bot itself offers, also available as its own standalone product', 'Link': '[Hermes Agent review](/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'This list reflects tools commonly compared to Atomic Bot, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including Atomic Bot\'s own directory entry, and verify each tool\'s current pricing and feature set before choosing.',
+        note: 'This list reflects tools commonly compared to Atomic Bot, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/directory) for the full catalog, including Atomic Bot\'s own directory entry, and verify each tool\'s current pricing and feature set before choosing.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Atomic Bot\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Atomic Bot\'s directory entry.',
           '[OpenClaw Review](/power-local-llm/openclaw-review) — the open-source personal-assistant agent framework Atomic Bot packages.',
           '[Atomic Chat Review](/power-local-llm/atomic-chat-review) — a related chat-focused product from the same vendor family.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — another open-source personal-assistant agent, with its own local and cloud modes.',
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cloud-Compute-Pläne sind gestaffelt, ab etwa 19 $/Monat laut [atomicbot.ai](https://atomicbot.ai/) — aktuelle Preise vor der Budgetierung erneut prüfen, da sich Plandetails ändern',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Atomic Bots Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderer lokaler KI-Tools.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Atomic Bots Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderer lokaler KI-Tools.' },
         ],
       },
       overview: {
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Bekannt für': 'Quelloffener Agent für persönliche Assistenten / „zweites Gehirn" mit eigenen lokalen und Cloud-Modi', 'Link': '[Khoj-Review](/de/power-local-llm/khoj-ai-second-brain-review)' },
           { 'Tool': 'Hermes Agent', 'Bekannt für': 'Das alternative Backend, das Atomic Bot selbst anbietet, auch als eigenständiges Produkt verfügbar', 'Link': '[Hermes-Agent-Review](/de/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'Diese Liste spiegelt Tools wider, die häufig mit Atomic Bot verglichen werden, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, einschließlich Atomic Bots eigenem Verzeichniseintrag, und prüfen Sie die aktuellen Preise und Funktionen jedes Tools vor der Entscheidung.',
+        note: 'Diese Liste spiegelt Tools wider, die häufig mit Atomic Bot verglichen werden, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, einschließlich Atomic Bots eigenem Verzeichniseintrag, und prüfen Sie die aktuellen Preise und Funktionen jedes Tools vor der Entscheidung.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Atomic Bots Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Atomic Bots Verzeichniseintrag.',
           '[OpenClaw-Review](/de/power-local-llm/openclaw-review) — das quelloffene Agenten-Framework für persönliche Assistenten, das Atomic Bot verpackt.',
           '[Atomic-Chat-Review](/de/power-local-llm/atomic-chat-review) — ein verwandtes, chat-fokussiertes Produkt derselben Anbieterfamilie.',
           '[Khoj-Review](/de/power-local-llm/khoj-ai-second-brain-review) — ein weiterer quelloffener Agent für persönliche Assistenten mit eigenen lokalen und Cloud-Modi.',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les plans de calcul cloud sont échelonnés, à partir d\'environ 19 $/mois selon [atomicbot.ai](https://atomicbot.ai/) — revérifiez les tarifs actuels avant de budgétiser, car les détails des plans changent',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée d\'Atomic Bot dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée d\'Atomic Bot dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'Khoj', 'Connu pour': 'Agent open source pour assistant personnel / « second cerveau » avec ses propres modes local et cloud', 'Lien': '[Revue Khoj](/fr/power-local-llm/khoj-ai-second-brain-review)' },
           { 'Outil': 'Hermes Agent', 'Connu pour': 'Le backend alternatif qu\'Atomic Bot propose lui-même, aussi disponible comme produit autonome', 'Lien': '[Revue Hermes Agent](/fr/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'Cette liste reflète les outils couramment comparés à Atomic Bot, pas un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, y compris la propre entrée d\'Atomic Bot dans le répertoire, et vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir.',
+        note: 'Cette liste reflète les outils couramment comparés à Atomic Bot, pas un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, y compris la propre entrée d\'Atomic Bot dans le répertoire, et vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée d\'Atomic Bot dans le répertoire.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée d\'Atomic Bot dans le répertoire.',
           '[Revue OpenClaw](/fr/power-local-llm/openclaw-review) — le framework d\'agent open source pour assistant personnel qu\'Atomic Bot empaquette.',
           '[Revue Atomic Chat](/fr/power-local-llm/atomic-chat-review) — un produit connexe axé sur le chat, de la même famille de fournisseur.',
           '[Revue Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un autre agent open source pour assistant personnel, avec ses propres modes local et cloud.',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クラウドコンピュートプランは段階制で、[atomicbot.ai](https://atomicbot.ai/)によると月額約19ドルから — プラン内容は変わるため予算化前に最新料金を再確認',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるAtomic Botのエントリーを詳しく掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらをご覧ください。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるAtomic Botのエントリーを詳しく掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらをご覧ください。' },
         ],
       },
       overview: {
@@ -1070,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'Khoj', '主な特徴': '独自のローカル・クラウドモードを持つ、オープンソースのパーソナルアシスタント／「セカンドブレイン」エージェント', 'リンク': '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)' },
           { 'ツール': 'Hermes Agent', '主な特徴': 'Atomic Bot自体が提供する代替バックエンドで、単独の製品としても提供されている', 'リンク': '[Hermes Agentレビュー](/ja/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'このリストはAtomic Botとよく比較されるツールを反映したものであり、PromptQuorumによる独立したランキングではありません — Atomic Bot自身のディレクトリエントリーを含む全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照し、選ぶ前に各ツールの最新の料金と機能を確認してください。',
+        note: 'このリストはAtomic Botとよく比較されるツールを反映したものであり、PromptQuorumによる独立したランキングではありません — Atomic Bot自身のディレクトリエントリーを含む全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照し、選ぶ前に各ツールの最新の料金と機能を確認してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、Atomic Botのディレクトリエントリーを含むローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属する、Atomic Botのディレクトリエントリーを含むローカルAIツールの全カタログ。',
           '[OpenClawレビュー](/ja/power-local-llm/openclaw-review) — Atomic Botがパッケージ化しているオープンソースのパーソナルアシスタントエージェントフレームワーク。',
           '[Atomic Chatレビュー](/ja/power-local-llm/atomic-chat-review) — 同じ提供元ファミリーによる、チャット中心の関連製品。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — 独自のローカル・クラウドモードを持つ、もう1つのオープンソースパーソナルアシスタントエージェント。',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '云计算套餐按等级划分，据[atomicbot.ai](https://atomicbot.ai/)称起价约为每月19美元 — 由于套餐细节会变化，预算前请重新核实当前定价',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Atomic Bot条目的深度延伸阅读 — 关于它与其他数十种本地AI工具的一览对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Atomic Bot条目的深度延伸阅读 — 关于它与其他数十种本地AI工具的一览对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'Khoj', '主要特点': '拥有自己本地与云端模式的开源个人助手／"第二大脑"代理', '链接': '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)' },
           { '工具': 'Hermes Agent', '主要特点': 'Atomic Bot自身提供的替代后端，也作为独立产品提供', '链接': '[Hermes Agent评测](/zh/power-local-llm/hermes-agent-review)' },
         ],
-        note: '此列表反映了常与Atomic Bot进行比较的工具，并非PromptQuorum的独立排名 — 完整目录（包括Atomic Bot自身的目录条目）请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，并在做出选择前核实各工具当前的定价与功能。',
+        note: '此列表反映了常与Atomic Bot进行比较的工具，并非PromptQuorum的独立排名 — 完整目录（包括Atomic Bot自身的目录条目）请参阅[本地LLM软件目录](/zh/directory)，并在做出选择前核实各工具当前的定价与功能。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括Atomic Bot的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包括Atomic Bot的目录条目。',
           '[OpenClaw评测](/zh/power-local-llm/openclaw-review) — Atomic Bot所打包的开源个人助手代理框架。',
           '[Atomic Chat评测](/zh/power-local-llm/atomic-chat-review) — 来自同一厂商系列、专注聊天的相关产品。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 另一款拥有自己本地与云端模式的开源个人助手代理。',
@@ -1493,7 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los planes de cómputo en la nube están escalonados, desde unos 19 $/mes según [atomicbot.ai](https://atomicbot.ai/) — reconfirme los precios actuales antes de presupuestar, ya que los detalles de los planes cambian',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento a fondo de la entrada de Atomic Bot en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento a fondo de la entrada de Atomic Bot en el [Directorio de software de LLM local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'Khoj', 'Conocida por': 'Agente de código abierto para asistente personal / "segundo cerebro" con sus propios modos local y en la nube', 'Enlace': '[Reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review)' },
           { 'Herramienta': 'Hermes Agent', 'Conocida por': 'El backend alternativo que ofrece el propio Atomic Bot, también disponible como producto independiente', 'Enlace': '[Reseña de Hermes Agent](/es/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'Esta lista refleja herramientas comúnmente comparadas con Atomic Bot, no un ranking independiente de PromptQuorum — consulte el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluida la propia entrada de directorio de Atomic Bot, y verifique los precios y funciones actuales de cada herramienta antes de elegir.',
+        note: 'Esta lista refleja herramientas comúnmente comparadas con Atomic Bot, no un ranking independiente de PromptQuorum — consulte el [Directorio de software de LLM local](/es/directory) para el catálogo completo, incluida la propia entrada de directorio de Atomic Bot, y verifique los precios y funciones actuales de cada herramienta antes de elegir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Atomic Bot.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Atomic Bot.',
           '[Reseña de OpenClaw](/es/power-local-llm/openclaw-review) — el framework de agente de código abierto para asistente personal que Atomic Bot empaqueta.',
           '[Reseña de Atomic Chat](/es/power-local-llm/atomic-chat-review) — un producto relacionado centrado en chat de la misma familia de proveedor.',
           '[Reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — otro agente de código abierto para asistente personal, con sus propios modos local y en la nube.',
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os planos de computação em nuvem são escalonados, a partir de cerca de US$ 19/mês segundo [atomicbot.ai](https://atomicbot.ai/) — reconfirme os preços atuais antes de planejar o orçamento, já que os detalhes dos planos mudam',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Atomic Bot no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Atomic Bot no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'Khoj', 'Conhecida por': 'Agente de código aberto para assistente pessoal / "segundo cérebro" com seus próprios modos local e nuvem', 'Link': '[Análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review)' },
           { 'Ferramenta': 'Hermes Agent', 'Conhecida por': 'O backend alternativo que o próprio Atomic Bot oferece, também disponível como produto independente', 'Link': '[Análise do Hermes Agent](/pt/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'Esta lista reflete ferramentas comumente comparadas ao Atomic Bot, não um ranking independente da PromptQuorum — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada de diretório do Atomic Bot, e verifique os preços e recursos atuais de cada ferramenta antes de escolher.',
+        note: 'Esta lista reflete ferramentas comumente comparadas ao Atomic Bot, não um ranking independente da PromptQuorum — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, incluindo a própria entrada de diretório do Atomic Bot, e verifique os preços e recursos atuais de cada ferramenta antes de escolher.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Atomic Bot.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Atomic Bot.',
           '[Análise do OpenClaw](/pt/power-local-llm/openclaw-review) — o framework de agente de código aberto para assistente pessoal que o Atomic Bot empacota.',
           '[Análise do Atomic Chat](/pt/power-local-llm/atomic-chat-review) — um produto relacionado focado em chat, da mesma família de fornecedor.',
           '[Análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — outro agente de código aberto para assistente pessoal, com seus próprios modos local e nuvem.',
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'خطط الحوسبة السحابية متدرّجة، وتبدأ وفقاً لـ[atomicbot.ai](https://atomicbot.ai/) من حوالي 19 دولاراً شهرياً — أعد التحقق من الأسعار الحالية قبل وضع الميزانية، لأن تفاصيل الخطط تتغير',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Atomic Bot في [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Atomic Bot في [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'Khoj', 'تُعرف بـ': 'وكيل مساعد شخصي / "عقل ثانٍ" مفتوح المصدر له وضعاه المحلي والسحابي الخاصان', 'الرابط': '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)' },
           { 'الأداة': 'Hermes Agent', 'تُعرف بـ': 'الواجهة الخلفية البديلة التي يوفّرها Atomic Bot نفسه، متوفرة أيضاً كمنتج مستقل', 'الرابط': '[مراجعة Hermes Agent](/ar/power-local-llm/hermes-agent-review)' },
         ],
-        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـ Atomic Bot، وليست تصنيفاً مستقلاً من PromptQuorum — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، بما في ذلك إدخال Atomic Bot الخاص في الدليل، وتحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار.',
+        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـ Atomic Bot، وليست تصنيفاً مستقلاً من PromptQuorum — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) للكتالوج الكامل، بما في ذلك إدخال Atomic Bot الخاص في الدليل، وتحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2265,7 +2265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Atomic Bot في الدليل.',
+          '[دليل برامج نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Atomic Bot في الدليل.',
           '[مراجعة OpenClaw](/ar/power-local-llm/openclaw-review) — إطار عمل الوكيل مفتوح المصدر للمساعد الشخصي الذي يُعبّئه Atomic Bot.',
           '[مراجعة Atomic Chat](/ar/power-local-llm/atomic-chat-review) — منتج ذو صلة يركّز على الدردشة، من نفس عائلة الشركة المُصنّعة.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — وكيل مساعد شخصي آخر مفتوح المصدر، له وضعاه المحلي والسحابي الخاصان.',
@@ -2345,7 +2345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '클라우드 컴퓨팅 요금제는 등급별로 나뉘며, [atomicbot.ai](https://atomicbot.ai/) 기준 월 약 19달러부터 시작 — 요금제 세부 사항이 변경되므로 예산을 세우기 전 최신 가격을 다시 확인',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Atomic Bot 항목의 심층 보완 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교한 내용은 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Atomic Bot 항목의 심층 보완 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교한 내용은 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2490,7 +2490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'Khoj', '주요 특징': '자체 로컬 및 클라우드 모드를 갖춘 오픈소스 개인 비서 / "제2의 뇌" 에이전트', '링크': '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)' },
           { '도구': 'Hermes Agent', '주요 특징': 'Atomic Bot 자체가 제공하는 대체 백엔드이며, 독립 제품으로도 제공됨', '링크': '[Hermes Agent 리뷰](/ko/power-local-llm/hermes-agent-review)' },
         ],
-        note: '이 목록은 Atomic Bot과 흔히 비교되는 도구들을 반영한 것이며, PromptQuorum의 독립적인 순위가 아닙니다 — Atomic Bot 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하고, 선택하기 전에 각 도구의 현재 가격과 기능을 확인하세요.',
+        note: '이 목록은 Atomic Bot과 흔히 비교되는 도구들을 반영한 것이며, PromptQuorum의 독립적인 순위가 아닙니다 — Atomic Bot 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하고, 선택하기 전에 각 도구의 현재 가격과 기능을 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2549,7 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Atomic Bot의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Atomic Bot의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
           '[OpenClaw 리뷰](/ko/power-local-llm/openclaw-review) — Atomic Bot이 패키징하는 오픈소스 개인 비서 에이전트 프레임워크.',
           '[Atomic Chat 리뷰](/ko/power-local-llm/atomic-chat-review) — 같은 업체 계열의 채팅 중심 관련 제품.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — 자체 로컬 및 클라우드 모드를 갖춘 또 다른 오픈소스 개인 비서 에이전트.',

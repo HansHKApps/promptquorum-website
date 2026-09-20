@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Also offers a first-party MCP server and CLI, plus a markdown-first REST API for scripting and AI-assistant integrations',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Karakeep\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Karakeep compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Karakeep\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Karakeep compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -212,14 +212,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep vs. Other Self-Hosted Knowledge Tools',
-        content: 'Karakeep is one of several self-hosted tools for turning your own notes, bookmarks, and documents into a searchable personal knowledge base. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Karakeep vs. Linkwarden comparison](#karakeep-vs-linkwarden) above for the closest head-to-head.',
+        content: 'Karakeep is one of several self-hosted tools for turning your own notes, bookmarks, and documents into a searchable personal knowledge base. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Karakeep vs. Linkwarden comparison](#karakeep-vs-linkwarden) above for the closest head-to-head.',
         items: [
           '**[Onyx](https://www.onyx.app)** — a self-hosted enterprise search and RAG platform (formerly Danswer) built for indexing much larger, team-scale document sets than a personal bookmark manager; see the [Onyx review](/power-local-llm/onyx-review) for full details.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — a self-hosted AI answering engine (formerly Perplexica) focused on AI-generated answers backed by web and local search rather than bookmark capture; see the [Vane review](/power-local-llm/vane-review).',
           '**[Joplin (AI Agent plugin)](https://joplinapp.org)** — an open-source, end-to-end-encrypted note-taking app with an AI agent plugin, closer to Karakeep in self-hosted philosophy but built around structured notes rather than bookmark-first capture; see the [Joplin AI Agent review](/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — an Obsidian plugin that adds local AI-powered semantic search and chat over your existing vault, for readers who already keep notes in Obsidian rather than a dedicated bookmark app; see the [Smart Connections review](/power-local-llm/smart-connections-review).',
         ],
-        note: 'This is not an exhaustive list of self-hosted bookmark and knowledge-management tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Karakeep\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted bookmark and knowledge-management tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Karakeep\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Karakeep\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Karakeep\'s directory entry.',
           '[Onyx Review](/power-local-llm/onyx-review) — a self-hosted enterprise search and RAG platform for larger, team-scale document sets.',
           '[Joplin AI Agent Review](/power-local-llm/joplin-ai-agent-review) — an end-to-end-encrypted, self-hosted note-taking app with an AI agent plugin.',
           '[Smart Connections Review](/power-local-llm/smart-connections-review) — local AI-powered semantic search and chat inside Obsidian, for readers who keep notes there instead.',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bietet zudem einen offiziellen MCP-Server und eine CLI sowie eine Markdown-first-REST-API für Skripting und KI-Assistenten-Integrationen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Karakeeps Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Karakeep im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Karakeeps Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Karakeep im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -497,14 +497,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep vs. andere selbst gehostete Wissenstools',
-        content: 'Karakeep ist eines von mehreren selbst gehosteten Tools, die Ihre eigenen Notizen, Lesezeichen und Dokumente in eine durchsuchbare persönliche Wissensbasis verwandeln. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory), und den direktesten Vergleich im dedizierten Abschnitt [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) oben.',
+        content: 'Karakeep ist eines von mehreren selbst gehosteten Tools, die Ihre eigenen Notizen, Lesezeichen und Dokumente in eine durchsuchbare persönliche Wissensbasis verwandeln. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory), und den direktesten Vergleich im dedizierten Abschnitt [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) oben.',
         items: [
           '**[Onyx](https://www.onyx.app)** — eine selbst gehostete Enterprise-Such- und RAG-Plattform (ehemals Danswer), gebaut für die Indexierung deutlich größerer, teamweiter Dokumentbestände als ein persönlicher Lesezeichen-Manager; siehe die [Onyx-Review](/de/power-local-llm/onyx-review) für Details.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — eine selbst gehostete KI-Antwortmaschine (ehemals Perplexica), fokussiert auf KI-generierte Antworten auf Basis von Web- und lokaler Suche statt Lesezeichen-Erfassung; siehe die [Vane-Review](/de/power-local-llm/vane-review).',
           '**[Joplin (KI-Agent-Plugin)](https://joplinapp.org)** — eine quelloffene, Ende-zu-Ende-verschlüsselte Notiz-App mit KI-Agent-Plugin, in ihrer Selbst-Hosting-Philosophie näher an Karakeep, aber um strukturierte Notizen statt Lesezeichen-Erfassung herum gebaut; siehe die [Joplin-KI-Agent-Review](/de/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — ein Obsidian-Plugin, das lokale KI-gestützte semantische Suche und Chat über Ihren bestehenden Vault hinzufügt, für Leser, die ihre Notizen bereits in Obsidian statt in einer dedizierten Lesezeichen-App führen; siehe die [Smart-Connections-Review](/de/power-local-llm/smart-connections-review).',
         ],
-        note: 'Dies ist keine vollständige Liste selbst gehosteter Lesezeichen- und Wissensmanagement-Tools — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Karakeeps eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste selbst gehosteter Lesezeichen- und Wissensmanagement-Tools — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Karakeeps eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Karakeeps Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Karakeeps Verzeichniseintrag.',
           '[Onyx-Review](/de/power-local-llm/onyx-review) — eine selbst gehostete Enterprise-Such- und RAG-Plattform für größere, teamweite Dokumentbestände.',
           '[Joplin-KI-Agent-Review](/de/power-local-llm/joplin-ai-agent-review) — eine Ende-zu-Ende-verschlüsselte, selbst gehostete Notiz-App mit KI-Agent-Plugin.',
           '[Smart-Connections-Review](/de/power-local-llm/smart-connections-review) — lokale KI-gestützte semantische Suche und Chat innerhalb von Obsidian, für Leser, die dort ihre Notizen führen.',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Propose aussi un serveur MCP et une CLI officiels, plus une API REST « markdown-first » pour le scripting et les intégrations avec des assistants IA',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Karakeep dans l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Karakeep se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Karakeep dans l\'[annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Karakeep se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -782,14 +782,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep face aux autres outils auto-hébergés',
-        content: 'Karakeep fait partie de plusieurs outils auto-hébergés qui transforment vos propres notes, signets et documents en une base de connaissances personnelle recherchable. Voici sa place face à d\'autres options dans ce domaine — consultez l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Karakeep fait partie de plusieurs outils auto-hébergés qui transforment vos propres notes, signets et documents en une base de connaissances personnelle recherchable. Voici sa place face à d\'autres options dans ce domaine — consultez l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet, et la comparaison dédiée [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Onyx](https://www.onyx.app)** — une plateforme de recherche entreprise et de RAG auto-hébergée (anciennement Danswer), conçue pour indexer des ensembles documentaires bien plus vastes, à l\'échelle d\'une équipe, qu\'un gestionnaire de signets personnel ; voir l\'[avis Onyx](/fr/power-local-llm/onyx-review) pour tous les détails.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — un moteur de réponses IA auto-hébergé (anciennement Perplexica), centré sur des réponses générées par IA à partir de la recherche web et locale plutôt que sur la capture de signets ; voir l\'[avis Vane](/fr/power-local-llm/vane-review).',
           '**[Joplin (plugin agent IA)](https://joplinapp.org)** — une application de prise de notes open source, chiffrée de bout en bout, avec un plugin agent IA, plus proche de Karakeep dans sa philosophie d\'auto-hébergement mais construite autour de notes structurées plutôt que de la capture de signets ; voir l\'[avis Joplin AI Agent](/fr/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — un plugin Obsidian qui ajoute une recherche sémantique et un chat propulsés par une IA locale sur votre coffre existant, pour les lecteurs qui tiennent déjà leurs notes dans Obsidian plutôt que dans une application de signets dédiée ; voir l\'[avis Smart Connections](/fr/power-local-llm/smart-connections-review).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils auto-hébergés de signets et de gestion des connaissances — consultez l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de Karakeep.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils auto-hébergés de signets et de gestion des connaissances — consultez l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de Karakeep.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la fiche de Karakeep.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la fiche de Karakeep.',
           '[Avis Onyx](/fr/power-local-llm/onyx-review) — une plateforme de recherche entreprise et de RAG auto-hébergée pour des ensembles documentaires plus vastes, à l\'échelle d\'une équipe.',
           '[Avis Joplin AI Agent](/fr/power-local-llm/joplin-ai-agent-review) — une application de prise de notes auto-hébergée, chiffrée de bout en bout, avec un plugin agent IA.',
           '[Avis Smart Connections](/fr/power-local-llm/smart-connections-review) — recherche sémantique et chat propulsés par une IA locale dans Obsidian, pour les lecteurs qui y tiennent leurs notes.',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'También ofrece un servidor MCP y una CLI propios, más una API REST orientada a markdown para scripting e integraciones con asistentes de IA',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Karakeep en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Karakeep con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Karakeep en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Karakeep con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1067,14 +1067,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep frente a otras herramientas autoalojadas',
-        content: 'Karakeep es una de varias herramientas autoalojadas para convertir tus propias notas, marcadores y documentos en una base de conocimiento personal buscable. Así se ubica frente a otras opciones en ese espacio — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) arriba para el enfrentamiento más cercano.',
+        content: 'Karakeep es una de varias herramientas autoalojadas para convertir tus propias notas, marcadores y documentos en una base de conocimiento personal buscable. Así se ubica frente a otras opciones en ese espacio — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo, y la comparación dedicada [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) arriba para el enfrentamiento más cercano.',
         items: [
           '**[Onyx](https://www.onyx.app)** — una plataforma de búsqueda empresarial y RAG autoalojada (antes Danswer) construida para indexar conjuntos documentales mucho más grandes, a escala de equipo, que un gestor de marcadores personal; ver la [reseña de Onyx](/es/power-local-llm/onyx-review) para todos los detalles.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — un motor de respuestas por IA autoalojado (antes Perplexica), enfocado en respuestas generadas por IA respaldadas por búsqueda web y local en lugar de captura de marcadores; ver la [reseña de Vane](/es/power-local-llm/vane-review).',
           '**[Joplin (plugin de agente IA)](https://joplinapp.org)** — una app de notas de código abierto y cifrada de extremo a extremo con un plugin de agente IA, más cercana a Karakeep en filosofía de autoalojamiento pero construida alrededor de notas estructuradas en lugar de captura orientada a marcadores; ver la [reseña de Joplin AI Agent](/es/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — un plugin de Obsidian que añade búsqueda semántica y chat impulsados por IA local sobre tu bóveda existente, para lectores que ya guardan sus notas en Obsidian en lugar de una app de marcadores dedicada; ver la [reseña de Smart Connections](/es/power-local-llm/smart-connections-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de marcadores y gestión del conocimiento — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Karakeep en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de marcadores y gestión del conocimiento — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Karakeep en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Karakeep.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Karakeep.',
           '[Reseña de Onyx](/es/power-local-llm/onyx-review) — una plataforma de búsqueda empresarial y RAG autoalojada para conjuntos documentales más grandes, a escala de equipo.',
           '[Reseña de Joplin AI Agent](/es/power-local-llm/joplin-ai-agent-review) — una app de notas autoalojada y cifrada de extremo a extremo con un plugin de agente IA.',
           '[Reseña de Smart Connections](/es/power-local-llm/smart-connections-review) — búsqueda semántica y chat impulsados por IA local dentro de Obsidian, para lectores que guardan sus notas ahí.',
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Também oferece um servidor MCP e uma CLI próprios, além de uma API REST voltada a markdown para scripts e integrações com assistentes de IA',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Karakeep no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Karakeep com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Karakeep no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Karakeep com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1352,14 +1352,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep vs. outras ferramentas auto-hospedadas',
-        content: 'O Karakeep é uma de várias ferramentas auto-hospedadas para transformar suas próprias notas, favoritos e documentos em uma base de conhecimento pessoal pesquisável. Veja como ele se posiciona diante de outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) acima para o confronto mais direto.',
+        content: 'O Karakeep é uma de várias ferramentas auto-hospedadas para transformar suas próprias notas, favoritos e documentos em uma base de conhecimento pessoal pesquisável. Veja como ele se posiciona diante de outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a comparação dedicada [Karakeep vs. Linkwarden](#karakeep-vs-linkwarden) acima para o confronto mais direto.',
         items: [
           '**[Onyx](https://www.onyx.app)** — uma plataforma de busca corporativa e RAG auto-hospedada (antes Danswer), feita para indexar conjuntos de documentos muito maiores, em escala de equipe, do que um gerenciador de favoritos pessoal; veja a [análise do Onyx](/pt/power-local-llm/onyx-review) para todos os detalhes.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — um mecanismo de respostas por IA auto-hospedado (antes Perplexica), focado em respostas geradas por IA com base em busca web e local em vez de captura de favoritos; veja a [análise do Vane](/pt/power-local-llm/vane-review).',
           '**[Joplin (plugin de agente IA)](https://joplinapp.org)** — um app de notas de código aberto e criptografado de ponta a ponta com um plugin de agente IA, mais próximo do Karakeep na filosofia de self-hosting, mas construído em torno de notas estruturadas em vez de captura voltada a favoritos; veja a [análise do Joplin AI Agent](/pt/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — um plugin do Obsidian que adiciona busca semântica e chat com IA local sobre seu cofre existente, para leitores que já mantêm suas notas no Obsidian em vez de um app de favoritos dedicado; veja a [análise do Smart Connections](/pt/power-local-llm/smart-connections-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas auto-hospedadas de favoritos e gestão do conhecimento — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Karakeep no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas auto-hospedadas de favoritos e gestão do conhecimento — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Karakeep no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1419,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Karakeep.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Karakeep.',
           '[Análise do Onyx](/pt/power-local-llm/onyx-review) — uma plataforma de busca corporativa e RAG auto-hospedada para conjuntos de documentos maiores, em escala de equipe.',
           '[Análise do Joplin AI Agent](/pt/power-local-llm/joplin-ai-agent-review) — um app de notas auto-hospedado e criptografado de ponta a ponta com um plugin de agente IA.',
           '[Análise do Smart Connections](/pt/power-local-llm/smart-connections-review) — busca semântica e chat com IA local dentro do Obsidian, para leitores que mantêm suas notas lá.',
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '公式のMCPサーバーとCLI、さらにスクリプティングやAIアシスタント連携向けのmarkdown-firstなREST APIも提供',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のKarakeepの掲載情報を深掘りする補完記事です — Karakeepが他の数十件のローカルAIツールと比較してどう位置づけられるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のKarakeepの掲載情報を深掘りする補完記事です — Karakeepが他の数十件のローカルAIツールと比較してどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1637,14 +1637,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep vs. 他のセルフホスト型ナレッジツール',
-        content: 'Karakeepは、自分のメモ・ブックマーク・文書を検索可能な個人ナレッジベースに変えるための、いくつかあるセルフホスト型ツールの一つです。この分野の他の選択肢と比較した位置づけは以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[Karakeep vs. Linkwarden比較](#karakeep-vs-linkwarden)をご覧ください。',
+        content: 'Karakeepは、自分のメモ・ブックマーク・文書を検索可能な個人ナレッジベースに変えるための、いくつかあるセルフホスト型ツールの一つです。この分野の他の選択肢と比較した位置づけは以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も直接的な比較は上記の[Karakeep vs. Linkwarden比較](#karakeep-vs-linkwarden)をご覧ください。',
         items: [
           '**[Onyx](https://www.onyx.app)** — 個人向けブックマークマネージャーよりもはるかに大規模でチーム単位のドキュメントセットのインデックス化向けに構築された、セルフホスト型のエンタープライズ検索・RAGプラットフォーム（旧Danswer）。詳細は[Onyxレビュー](/ja/power-local-llm/onyx-review)をご覧ください。',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — ブックマークのキャプチャではなく、Webおよびローカル検索に基づくAI生成回答に重点を置いた、セルフホスト型のAI回答エンジン（旧Perplexica）。詳細は[Vaneレビュー](/ja/power-local-llm/vane-review)をご覧ください。',
           '**[Joplin（AIエージェントプラグイン）](https://joplinapp.org)** — AIエージェントプラグインを備えたオープンソースのエンドツーエンド暗号化メモアプリで、セルフホストの思想的にはKarakeepに近いが、ブックマーク優先のキャプチャではなく構造化されたメモを中心に構築されている。詳細は[Joplin AIエージェントレビュー](/ja/power-local-llm/joplin-ai-agent-review)をご覧ください。',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — 既存のVaultに対してローカルAIによるセマンティック検索とチャットを追加するObsidianプラグインで、専用のブックマークアプリではなく、すでにObsidianでメモを管理している読者向け。詳細は[Smart Connectionsレビュー](/ja/power-local-llm/smart-connections-review)をご覧ください。',
         ],
-        note: 'これはセルフホスト型のブックマーク・ナレッジ管理ツールの網羅的なリストではありません — Karakeep自身のディレクトリ掲載を含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはセルフホスト型のブックマーク・ナレッジ管理ツールの網羅的なリストではありません — Karakeep自身のディレクトリ掲載を含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — Karakeepの掲載情報を含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — Karakeepの掲載情報を含む、この記事が属するローカルAIツールの完全なカタログ。',
           '[Onyxレビュー](/ja/power-local-llm/onyx-review) — より大規模でチーム単位の文書セット向けのセルフホスト型エンタープライズ検索・RAGプラットフォーム。',
           '[Joplin AIエージェントレビュー](/ja/power-local-llm/joplin-ai-agent-review) — AIエージェントプラグインを備えたエンドツーエンド暗号化のセルフホスト型メモアプリ。',
           '[Smart Connectionsレビュー](/ja/power-local-llm/smart-connections-review) — Obsidian内でメモを管理する読者向けの、Obsidian内でのローカルAIによるセマンティック検索とチャット。',
@@ -1784,7 +1784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '还提供官方MCP服务器和CLI，以及一个以markdown为核心的REST API，便于脚本编写和AI助手集成',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Karakeep条目的深度补充——请查看该页面，一览Karakeep与其他几十款本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Karakeep条目的深度补充——请查看该页面，一览Karakeep与其他几十款本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1922,14 +1922,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep与其他自托管知识工具对比',
-        content: 'Karakeep是众多自托管工具之一，用于将你自己的笔记、书签和文档转化为可搜索的个人知识库。以下是它在这一领域中相对于其他选项的定位——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最直接的正面对比请见上文的[Karakeep vs. Linkwarden对比](#karakeep-vs-linkwarden)。',
+        content: 'Karakeep是众多自托管工具之一，用于将你自己的笔记、书签和文档转化为可搜索的个人知识库。以下是它在这一领域中相对于其他选项的定位——完整目录请见[本地LLM软件目录](/zh/directory)，最直接的正面对比请见上文的[Karakeep vs. Linkwarden对比](#karakeep-vs-linkwarden)。',
         items: [
           '**[Onyx](https://www.onyx.app)** — 一个自托管的企业级搜索与RAG平台（前身为Danswer），专为索引规模远大于个人书签管理器的团队级文档集而构建；详见[Onyx评测](/zh/power-local-llm/onyx-review)。',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — 一个自托管的AI问答引擎（前身为Perplexica），专注于基于网络与本地搜索生成AI答案，而非书签采集；详见[Vane评测](/zh/power-local-llm/vane-review)。',
           '**[Joplin（AI Agent插件）](https://joplinapp.org)** — 一款带有AI代理插件的开源、端到端加密笔记应用，在自托管理念上更接近Karakeep，但其构建核心是结构化笔记，而非以书签为先的采集方式；详见[Joplin AI Agent评测](/zh/power-local-llm/joplin-ai-agent-review)。',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — 一款Obsidian插件，可在你现有的知识库（vault）上添加本地AI驱动的语义搜索和聊天功能，适合已经在Obsidian中记录笔记、而非使用专门书签应用的读者；详见[Smart Connections评测](/zh/power-local-llm/smart-connections-review)。',
         ],
-        note: '这并非自托管书签与知识管理工具的完整列表——完整且定期更新的目录（包括Karakeep自身的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管书签与知识管理工具的完整列表——完整且定期更新的目录（包括Karakeep自身的目录条目）请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包括Karakeep的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的完整本地AI工具目录，包括Karakeep的目录条目。',
           '[Onyx评测](/zh/power-local-llm/onyx-review) — 一个面向更大规模、团队级文档集的自托管企业级搜索与RAG平台。',
           '[Joplin AI Agent评测](/zh/power-local-llm/joplin-ai-agent-review) — 一款带AI代理插件的端到端加密自托管笔记应用。',
           '[Smart Connections评测](/zh/power-local-llm/smart-connections-review) — 在Obsidian内实现本地AI驱动的语义搜索与聊天，适合在那里记录笔记的读者。',
@@ -2069,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يوفر أيضًا خادم MCP وواجهة سطر أوامر (CLI) رسميين، بالإضافة إلى واجهة برمجة REST قائمة على markdown للبرمجة النصية وتكاملات مساعدات الذكاء الاصطناعي',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيق المتعمق لإدراج Karakeep في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن Karakeep بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيق المتعمق لإدراج Karakeep في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Karakeep بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2207,14 +2207,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep مقابل أدوات المعرفة الأخرى المستضافة ذاتيًا',
-        content: 'Karakeep واحد من عدة أدوات مستضافة ذاتيًا لتحويل ملاحظاتك وإشاراتك المرجعية ومستنداتك الخاصة إلى قاعدة معرفة شخصية قابلة للبحث. إليك موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، والمقارنة المخصصة [Karakeep مقابل Linkwarden](#karakeep-vs-linkwarden) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'Karakeep واحد من عدة أدوات مستضافة ذاتيًا لتحويل ملاحظاتك وإشاراتك المرجعية ومستنداتك الخاصة إلى قاعدة معرفة شخصية قابلة للبحث. إليك موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للكتالوج الكامل، والمقارنة المخصصة [Karakeep مقابل Linkwarden](#karakeep-vs-linkwarden) أعلاه لأقرب مواجهة مباشرة.',
         items: [
           '**[Onyx](https://www.onyx.app)** — منصة بحث مؤسسية وRAG مستضافة ذاتيًا (كانت تُعرف سابقًا باسم Danswer) مبنية لفهرسة مجموعات مستندات أكبر بكثير على مستوى الفريق مقارنة بأداة إدارة إشارات مرجعية شخصية؛ راجع [مراجعة Onyx](/ar/power-local-llm/onyx-review) لكل التفاصيل.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — محرك إجابات بالذكاء الاصطناعي مستضاف ذاتيًا (كان يُعرف سابقًا باسم Perplexica) يركّز على إجابات مولّدة بالذكاء الاصطناعي مدعومة بالبحث على الويب ومحليًا بدلًا من التقاط الإشارات المرجعية؛ راجع [مراجعة Vane](/ar/power-local-llm/vane-review).',
           '**[Joplin (إضافة وكيل الذكاء الاصطناعي)](https://joplinapp.org)** — تطبيق ملاحظات مفتوح المصدر ومشفّر من طرف إلى طرف مزوّد بإضافة وكيل ذكاء اصطناعي، أقرب إلى Karakeep من حيث فلسفة الاستضافة الذاتية، لكنه مبني حول ملاحظات منظمة بدلًا من التقاط يعطي الأولوية للإشارات المرجعية؛ راجع [مراجعة Joplin AI Agent](/ar/power-local-llm/joplin-ai-agent-review).',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — إضافة لـObsidian تضيف بحثًا دلاليًا ومحادثة مدعومين بالذكاء الاصطناعي المحلي فوق مخزنك الحالي، للقراء الذين يحتفظون بالفعل بملاحظاتهم في Obsidian بدلًا من تطبيق إشارات مرجعية مخصص؛ راجع [مراجعة Smart Connections](/ar/power-local-llm/smart-connections-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات إدارة الإشارات المرجعية والمعرفة المستضافة ذاتيًا — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Karakeep نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات إدارة الإشارات المرجعية والمعرفة المستضافة ذاتيًا — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Karakeep نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Karakeep.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Karakeep.',
           '[مراجعة Onyx](/ar/power-local-llm/onyx-review) — منصة بحث مؤسسية وRAG مستضافة ذاتيًا لمجموعات مستندات أكبر على مستوى الفريق.',
           '[مراجعة Joplin AI Agent](/ar/power-local-llm/joplin-ai-agent-review) — تطبيق ملاحظات مستضاف ذاتيًا ومشفّر من طرف إلى طرف مزوّد بإضافة وكيل ذكاء اصطناعي.',
           '[مراجعة Smart Connections](/ar/power-local-llm/smart-connections-review) — بحث دلالي ومحادثة مدعومان بالذكاء الاصطناعي المحلي داخل Obsidian، للقراء الذين يحتفظون بملاحظاتهم هناك.',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '공식 MCP 서버와 CLI, 그리고 스크립팅 및 AI 어시스턴트 연동을 위한 마크다운 우선 REST API도 제공합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Karakeep 항목을 심층적으로 보완하는 글입니다 — Karakeep이 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Karakeep 항목을 심층적으로 보완하는 글입니다 — Karakeep이 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2492,14 +2492,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'karakeep-competitors',
         title: 'Karakeep vs. 다른 셀프호스팅 지식 도구',
-        content: 'Karakeep은 자신의 메모·북마크·문서를 검색 가능한 개인 지식 베이스로 바꿔 주는 여러 셀프호스팅 도구 중 하나입니다. 이 영역에서 다른 선택지들과 비교했을 때 Karakeep의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 [Karakeep vs. Linkwarden 비교](#karakeep-vs-linkwarden)를 참고하세요.',
+        content: 'Karakeep은 자신의 메모·북마크·문서를 검색 가능한 개인 지식 베이스로 바꿔 주는 여러 셀프호스팅 도구 중 하나입니다. 이 영역에서 다른 선택지들과 비교했을 때 Karakeep의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 직접적인 비교는 위의 [Karakeep vs. Linkwarden 비교](#karakeep-vs-linkwarden)를 참고하세요.',
         items: [
           '**[Onyx](https://www.onyx.app)** — 개인 북마크 관리자보다 훨씬 크고 팀 단위의 문서 집합을 색인화하기 위해 구축된 셀프호스팅 엔터프라이즈 검색 및 RAG 플랫폼(이전 이름 Danswer)입니다. 자세한 내용은 [Onyx 리뷰](/ko/power-local-llm/onyx-review)를 참고하세요.',
           '**[Vane](https://github.com/ItzCrazyKns/Perplexica)** — 북마크 캡처가 아니라 웹 및 로컬 검색을 기반으로 한 AI 생성 답변에 초점을 맞춘 셀프호스팅 AI 답변 엔진(이전 이름 Perplexica)입니다. 자세한 내용은 [Vane 리뷰](/ko/power-local-llm/vane-review)를 참고하세요.',
           '**[Joplin(AI 에이전트 플러그인)](https://joplinapp.org)** — AI 에이전트 플러그인을 갖춘 오픈소스 종단 간 암호화 메모 앱으로, 셀프호스팅 철학 면에서는 Karakeep에 더 가깝지만 북마크 우선 캡처가 아니라 구조화된 메모를 중심으로 구축되어 있습니다. 자세한 내용은 [Joplin AI 에이전트 리뷰](/ko/power-local-llm/joplin-ai-agent-review)를 참고하세요.',
           '**[Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)** — 기존 Obsidian 보관함(vault) 위에 로컬 AI 기반 시맨틱 검색과 채팅 기능을 추가하는 Obsidian 플러그인으로, 전용 북마크 앱이 아니라 이미 Obsidian에서 메모를 관리하는 독자에게 적합합니다. 자세한 내용은 [Smart Connections 리뷰](/ko/power-local-llm/smart-connections-review)를 참고하세요.',
         ],
-        note: '이는 셀프호스팅 북마크·지식 관리 도구의 전체 목록이 아닙니다 — Karakeep 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 셀프호스팅 북마크·지식 관리 도구의 전체 목록이 아닙니다 — Karakeep 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Karakeep 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Karakeep 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
           '[Onyx 리뷰](/ko/power-local-llm/onyx-review) — 더 크고 팀 단위의 문서 집합을 위한 셀프호스팅 엔터프라이즈 검색 및 RAG 플랫폼입니다.',
           '[Joplin AI 에이전트 리뷰](/ko/power-local-llm/joplin-ai-agent-review) — AI 에이전트 플러그인을 갖춘 종단 간 암호화 셀프호스팅 메모 앱입니다.',
           '[Smart Connections 리뷰](/ko/power-local-llm/smart-connections-review) — Obsidian 안에서 메모를 관리하는 독자를 위한, Obsidian 내부의 로컬 AI 기반 시맨틱 검색과 채팅입니다.',

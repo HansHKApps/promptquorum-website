@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-hosting is free forever under the plain MIT license; an Enterprise Edition with private deployment and brand customization is available on request, with pricing not published.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to NextChat\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- see that page for how NextChat compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to NextChat\'s entry in the [Local LLM Software Directory](/directory) -- see that page for how NextChat compares at a glance to dozens of other local AI tools.' },
         ],
       },
       quickFacts: {
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Big-AGI](/local-llms/big-agi-review)**', 'Best for': 'Comparing several models on one prompt (Beam)', 'Self-hosted': 'Yes (Docker/Vercel) or hosted', 'Deploy speed': 'One-click Vercel or Docker', 'License': 'MIT' },
           { 'Tool': '**[Open WebUI](/local-llms/open-webui-review)**', 'Best for': 'Multi-user front end tightly tied to Ollama', 'Self-hosted': 'Yes (Docker/pip)', 'Deploy speed': 'Docker only, no Vercel button', 'License': 'Open WebUI License (BSD-derived)' },
         ],
-        note: 'For a wider five-way look including Page Assist and Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'For a wider five-way look including Page Assist and Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -233,14 +233,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'NextChat sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including NextChat\'s own directory entry.',
+        content: 'NextChat sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/directory) for the full catalog, including NextChat\'s own directory entry.',
         items: [
           '**[LobeChat](/local-llms/lobechat-review)** -- a self-hosted, multi-provider chat interface with a more developed plugin marketplace and agent builder, but licensed under the LobeHub Community License rather than plain MIT.',
           '**[Big-AGI](/local-llms/big-agi-review)** -- a self-hosted or hosted, MIT-licensed interface whose standout feature is comparing multiple models on one prompt at once (Beam).',
           '**[Open WebUI](/local-llms/open-webui-review)** -- a self-hosted, multi-user chat interface most tightly integrated with Ollama and local-first workflows, without a one-click Vercel deploy.',
           '**[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)** -- a single-user desktop client rather than a self-hosted server, for people who want zero server setup at all.',
         ],
-        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including NextChat\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including NextChat\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- the full catalog of local AI tools this article belongs to, including NextChat\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including NextChat\'s own directory entry.',
           '[LobeChat Review](/local-llms/lobechat-review) -- a self-hosted alternative with a more developed plugin marketplace and agent builder.',
           '[Big-AGI Review](/local-llms/big-agi-review) -- a self-hosted or hosted alternative built around comparing multiple models on one prompt.',
           '[Open WebUI Review](/local-llms/open-webui-review) -- a self-hosted alternative most tightly integrated with Ollama.',
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-Hosting ist unter der reinen MIT-Lizenz dauerhaft kostenlos; eine Enterprise Edition mit privater Bereitstellung und Branding ist auf Anfrage verfügbar, Preise sind nicht veröffentlicht.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von NextChat im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- dort sehen Sie auf einen Blick, wie NextChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von NextChat im [Local LLM Software Directory](/directory) -- dort sehen Sie auf einen Blick, wie NextChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Big-AGI](/de/local-llms/big-agi-review)**', 'Am besten für': 'Mehrere Modelle bei einem Prompt vergleichen (Beam)', 'Self-hosted': 'Ja (Docker/Vercel) oder gehostet', 'Deploy-Geschwindigkeit': 'Ein-Klick-Vercel oder Docker', 'Lizenz': 'MIT' },
           { 'Tool': '**[Open WebUI](/de/local-llms/open-webui-review)**', 'Am besten für': 'Multi-User-Frontend eng an Ollama gekoppelt', 'Self-hosted': 'Ja (Docker/pip)', 'Deploy-Geschwindigkeit': 'Nur Docker, kein Vercel-Button', 'Lizenz': 'Open WebUI License (BSD-basiert)' },
         ],
-        note: 'Für einen breiteren Fünf-Wege-Vergleich mit Page Assist und Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Für einen breiteren Fünf-Wege-Vergleich mit Page Assist und Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -523,14 +523,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'NextChat gehört zum Segment der selbst gehosteten Multi-Provider-Chat-Oberflächen. So schneidet es im Vergleich zu den nächsten Alternativen in derselben Kategorie ab -- siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, einschließlich des eigenen Verzeichniseintrags von NextChat.',
+        content: 'NextChat gehört zum Segment der selbst gehosteten Multi-Provider-Chat-Oberflächen. So schneidet es im Vergleich zu den nächsten Alternativen in derselben Kategorie ab -- siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, einschließlich des eigenen Verzeichniseintrags von NextChat.',
         items: [
           '**[LobeChat](/de/local-llms/lobechat-review)** -- eine selbst gehostete Multi-Provider-Chat-Oberfläche mit einem weiter entwickelten Plugin-Marktplatz und Agent-Builder, aber lizenziert unter der LobeHub Community License statt reinem MIT.',
           '**[Big-AGI](/de/local-llms/big-agi-review)** -- eine selbst gehostete oder gehostete, MIT-lizenzierte Oberfläche, deren herausragende Funktion der gleichzeitige Vergleich mehrerer Modelle bei einem Prompt ist (Beam).',
           '**[Open WebUI](/de/local-llms/open-webui-review)** -- eine selbst gehostete Multi-User-Chat-Oberfläche, die am engsten mit Ollama und lokalen Workflows verbunden ist, ohne Ein-Klick-Vercel-Deploy.',
           '**[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)** -- ein Einzelnutzer-Desktop-Client statt eines selbst gehosteten Servers, für alle, die gar kein Server-Setup wollen.',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Chat-Oberflächen -- siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von NextChat.',
+        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Chat-Oberflächen -- siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von NextChat.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Verzeichniseintrags von NextChat.',
+          '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Verzeichniseintrags von NextChat.',
           '[LobeChat im Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit einem weiter entwickelten Plugin-Marktplatz und Agent-Builder.',
           '[Big-AGI im Test](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative, die auf dem Vergleich mehrerer Modelle bei einem Prompt aufbaut.',
           '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, die am engsten mit Ollama verbunden ist.',
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'auto-hébergement est gratuit à vie sous licence MIT pure ; une édition Enterprise avec déploiement privé et personnalisation de marque est disponible sur demande, tarifs non publiés.',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé à la fiche de NextChat dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- consultez cette page pour voir en un coup d\'œil comment NextChat se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé à la fiche de NextChat dans le [Local LLM Software Directory](/directory) -- consultez cette page pour voir en un coup d\'œil comment NextChat se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       quickFacts: {
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '**[Big-AGI](/fr/local-llms/big-agi-review)**', 'Idéal pour': 'Comparer plusieurs modèles sur un même prompt (Beam)', 'Auto-hébergé': 'Oui (Docker/Vercel) ou hébergé', 'Vitesse de déploiement': 'Vercel en un clic ou Docker', 'Licence': 'MIT' },
           { 'Outil': '**[Open WebUI](/fr/local-llms/open-webui-review)**', 'Idéal pour': 'Frontend multi-utilisateurs étroitement lié à Ollama', 'Auto-hébergé': 'Oui (Docker/pip)', 'Vitesse de déploiement': 'Docker uniquement, pas de bouton Vercel', 'Licence': 'Open WebUI License (dérivée BSD)' },
         ],
-        note: 'Pour un comparatif à cinq plus large incluant Page Assist et Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory).',
+        note: 'Pour un comparatif à cinq plus large incluant Page Assist et Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/fr/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -813,14 +813,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: 'NextChat se situe dans un segment d\'interfaces de chat auto-hébergées multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches dans cette même catégorie -- voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, incluant la fiche de NextChat elle-même.',
+        content: 'NextChat se situe dans un segment d\'interfaces de chat auto-hébergées multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches dans cette même catégorie -- voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, incluant la fiche de NextChat elle-même.',
         items: [
           '**[LobeChat](/fr/local-llms/lobechat-review)** -- une interface de chat auto-hébergée multi-fournisseurs avec une marketplace de plugins et un créateur d\'agents plus développés, mais sous licence LobeHub Community plutôt que MIT pure.',
           '**[Big-AGI](/fr/local-llms/big-agi-review)** -- une interface auto-hébergée ou hébergée, sous licence MIT, dont la fonctionnalité phare est de comparer plusieurs modèles sur un même prompt à la fois (Beam).',
           '**[Open WebUI](/fr/local-llms/open-webui-review)** -- une interface de chat auto-hébergée multi-utilisateurs la plus étroitement intégrée à Ollama et aux workflows locaux, sans déploiement Vercel en un clic.',
           '**[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)** -- un client de bureau mono-utilisateur plutôt qu\'un serveur auto-hébergé, pour ceux qui veulent zéro configuration serveur.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de NextChat elle-même.',
+        note: 'Ceci n\'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de NextChat elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de NextChat elle-même.',
+          '[Local LLM Software Directory](/fr/directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de NextChat elle-même.',
           '[Avis LobeChat](/fr/local-llms/lobechat-review) -- une alternative auto-hébergée avec une marketplace de plugins et un créateur d\'agents plus développés.',
           '[Avis Big-AGI](/fr/local-llms/big-agi-review) -- une alternative auto-hébergée ou hébergée construite autour de la comparaison de plusieurs modèles sur un même prompt.',
           '[Avis Open WebUI](/fr/local-llms/open-webui-review) -- une alternative auto-hébergée la plus étroitement intégrée à Ollama.',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '純粋なMITライセンスの下でセルフホストは永久に無料です。プライベート展開とブランドカスタマイズを含むEnterprise Editionはリクエスト制で、価格は非公開です。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるNextChatのエントリーの詳細版です。他の数十のローカルAIツールとNextChatを一目で比較するには、そのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるNextChatのエントリーの詳細版です。他の数十のローカルAIツールとNextChatを一目で比較するには、そのページをご覧ください。' },
         ],
       },
       quickFacts: {
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '**[Big-AGI](/ja/local-llms/big-agi-review)**', '最適な用途': '複数モデルを1つのプロンプトで比較（Beam）', 'セルフホスト': 'あり（Docker/Vercel）またはホスト型', 'デプロイ速度': 'ワンクリックVercelまたはDocker', 'ライセンス': 'MIT' },
           { 'ツール': '**[Open WebUI](/ja/local-llms/open-webui-review)**', '最適な用途': 'Ollamaと密結合したマルチユーザーフロントエンド', 'セルフホスト': 'あり（Docker/pip）', 'デプロイ速度': 'Dockerのみ、Vercelボタンなし', 'ライセンス': 'Open WebUI License（BSD派生）' },
         ],
-        note: 'Page AssistやChatboxを含む5つの比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。フルカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'Page AssistやChatboxを含む5つの比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。フルカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1103,14 +1103,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合とその他の選択肢',
-        content: 'NextChatは、セルフホスト型のマルチプロバイダーチャットインターフェースのセグメントに位置します。同じカテゴリーで最も近い代替製品との比較は以下の通りです -- NextChat自体のディレクトリエントリーを含むフルカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'NextChatは、セルフホスト型のマルチプロバイダーチャットインターフェースのセグメントに位置します。同じカテゴリーで最も近い代替製品との比較は以下の通りです -- NextChat自体のディレクトリエントリーを含むフルカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
         items: [
           '**[LobeChat](/ja/local-llms/lobechat-review)** -- より発展したプラグインマーケットプレイスとエージェントビルダーを備えたセルフホスト型のマルチプロバイダーチャットインターフェースですが、純粋なMITではなくLobeHub Community Licenseでライセンスされています。',
           '**[Big-AGI](/ja/local-llms/big-agi-review)** -- セルフホストまたはホスト型のMITライセンスインターフェースで、目玉機能は複数のモデルを1つのプロンプトで同時に比較すること（Beam）です。',
           '**[Open WebUI](/ja/local-llms/open-webui-review)** -- Ollamaとローカルファーストのワークフローに最も密結合したセルフホスト型のマルチユーザーチャットインターフェースで、ワンクリックVercelデプロイはありません。',
           '**[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)** -- セルフホスト型サーバーではなく、シングルユーザー向けデスクトップクライアントで、サーバー設定をまったく必要としない人向けです。',
         ],
-        note: 'これはセルフホスト型チャットインターフェースの網羅的なリストではありません -- NextChat自体のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはセルフホスト型チャットインターフェースの網羅的なリストではありません -- NextChat自体のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) -- この記事が属する、NextChat自体のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) -- この記事が属する、NextChat自体のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
           '[LobeChatレビュー](/ja/local-llms/lobechat-review) -- より発展したプラグインマーケットプレイスとエージェントビルダーを備えたセルフホスト型の代替製品。',
           '[Big-AGIレビュー](/ja/local-llms/big-agi-review) -- 複数のモデルを1つのプロンプトで比較することを軸に構築された、セルフホストまたはホスト型の代替製品。',
           '[Open WebUIレビュー](/ja/local-llms/open-webui-review) -- Ollamaに最も密結合したセルフホスト型の代替製品。',
@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在纯MIT许可证下自托管永久免费；提供按需申请的企业版，支持私有部署和品牌定制，价格未公开。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中NextChat条目的深度补充 -- 请查看该页面，一览NextChat与数十款其他本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中NextChat条目的深度补充 -- 请查看该页面，一览NextChat与数十款其他本地AI工具的对比情况。' },
         ],
       },
       quickFacts: {
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '**[Big-AGI](/zh/local-llms/big-agi-review)**', '最适合': '在一个提示词上比较多个模型（Beam）', '自托管': '是（Docker/Vercel）或托管版', '部署速度': '一键Vercel或Docker', '许可证': 'MIT' },
           { '工具': '**[Open WebUI](/zh/local-llms/open-webui-review)**', '最适合': '与Ollama紧密集成的多用户前端', '自托管': '是（Docker/pip）', '部署速度': '仅Docker，无Vercel按钮', '许可证': 'Open WebUI License（BSD衍生）' },
         ],
-        note: '若需包含Page Assist和Chatbox的更全面五方对比，请参阅[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '若需包含Page Assist和Chatbox的更全面五方对比，请参阅[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请见[本地LLM软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1393,14 +1393,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'NextChat属于自托管、多提供商聊天界面这一细分领域。以下是它与同类别中最接近的替代产品的对比 -- 完整目录（包括NextChat自身的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'NextChat属于自托管、多提供商聊天界面这一细分领域。以下是它与同类别中最接近的替代产品的对比 -- 完整目录（包括NextChat自身的目录条目）请见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[LobeChat](/zh/local-llms/lobechat-review)** -- 一款自托管的多提供商聊天界面，拥有更成熟的插件市场和智能体构建器，但采用LobeHub Community License而非纯MIT许可证。',
           '**[Big-AGI](/zh/local-llms/big-agi-review)** -- 一款自托管或托管的MIT许可证界面，其突出功能是在一个提示词上同时比较多个模型（Beam）。',
           '**[Open WebUI](/zh/local-llms/open-webui-review)** -- 一款与Ollama和本地优先工作流紧密集成的自托管多用户聊天界面，没有一键Vercel部署。',
           '**[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)** -- 一款单用户桌面客户端，而非自托管服务器，适合完全不想进行服务器设置的人。',
         ],
-        note: '这并非自托管聊天界面的详尽列表 -- 完整、定期更新的目录（包括NextChat自身的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管聊天界面的详尽列表 -- 完整、定期更新的目录（包括NextChat自身的目录条目）请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) -- 本文所属的本地AI工具完整目录，包括NextChat自身的目录条目。',
+          '[本地LLM软件目录](/zh/directory) -- 本文所属的本地AI工具完整目录，包括NextChat自身的目录条目。',
           '[LobeChat评测](/zh/local-llms/lobechat-review) -- 一款拥有更成熟插件市场和智能体构建器的自托管替代方案。',
           '[Big-AGI评测](/zh/local-llms/big-agi-review) -- 一款围绕在一个提示词上比较多个模型构建的自托管或托管替代方案。',
           '[Open WebUI评测](/zh/local-llms/open-webui-review) -- 一款与Ollama联系最紧密的自托管替代方案。',
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Auto-alojarla es gratis para siempre bajo la licencia MIT pura; hay una edición Enterprise con despliegue privado y personalización de marca disponible bajo solicitud, precio no publicado.',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento detallado de la entrada de NextChat en el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) -- consulta esa página para ver de un vistazo cómo se compara NextChat con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento detallado de la entrada de NextChat en el [Directorio de Software LLM Local](/directory) -- consulta esa página para ver de un vistazo cómo se compara NextChat con docenas de otras herramientas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '**[Big-AGI](/es/local-llms/big-agi-review)**', 'Mejor para': 'Comparar varios modelos en un mismo prompt (Beam)', 'Auto-alojada': 'Sí (Docker/Vercel) o alojada', 'Velocidad de despliegue': 'Vercel en un clic o Docker', 'Licencia': 'MIT' },
           { 'Herramienta': '**[Open WebUI](/es/local-llms/open-webui-review)**', 'Mejor para': 'Frontend multiusuario estrechamente ligado a Ollama', 'Auto-alojada': 'Sí (Docker/pip)', 'Velocidad de despliegue': 'Solo Docker, sin botón de Vercel', 'Licencia': 'Open WebUI License (derivada de BSD)' },
         ],
-        note: 'Para una comparación más amplia de cinco vías que incluye Page Assist y Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory).',
+        note: 'Para una comparación más amplia de cinco vías que incluye Page Assist y Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Directorio de Software LLM Local](/es/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1683,14 +1683,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'NextChat se ubica en un segmento de interfaces de chat auto-alojadas y multi-proveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluida la propia entrada de NextChat en el directorio.',
+        content: 'NextChat se ubica en un segmento de interfaces de chat auto-alojadas y multi-proveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, incluida la propia entrada de NextChat en el directorio.',
         items: [
           '**[LobeChat](/es/local-llms/lobechat-review)** -- una interfaz de chat auto-alojada y multi-proveedor con un mercado de plugins y un constructor de agentes más desarrollados, pero con licencia LobeHub Community en lugar de MIT pura.',
           '**[Big-AGI](/es/local-llms/big-agi-review)** -- una interfaz auto-alojada o alojada con licencia MIT cuya función distintiva es comparar varios modelos en un mismo prompt a la vez (Beam).',
           '**[Open WebUI](/es/local-llms/open-webui-review)** -- una interfaz de chat auto-alojada multiusuario más estrechamente integrada con Ollama y flujos de trabajo locales, sin despliegue en Vercel con un clic.',
           '**[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)** -- un cliente de escritorio para un solo usuario en lugar de un servidor auto-alojado, para quienes quieren cero configuración de servidor.',
         ],
-        note: 'Esta no es una lista exhaustiva de interfaces de chat auto-alojadas -- consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado periódicamente, incluida la propia entrada de NextChat en el directorio.',
+        note: 'Esta no es una lista exhaustiva de interfaces de chat auto-alojadas -- consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado periódicamente, incluida la propia entrada de NextChat en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1723,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de NextChat en el directorio.',
+          '[Directorio de Software LLM Local](/es/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de NextChat en el directorio.',
           '[Análisis de LobeChat](/es/local-llms/lobechat-review) -- una alternativa auto-alojada con un mercado de plugins y un constructor de agentes más desarrollados.',
           '[Análisis de Big-AGI](/es/local-llms/big-agi-review) -- una alternativa auto-alojada o alojada construida en torno a comparar varios modelos en un mismo prompt.',
           '[Análisis de Open WebUI](/es/local-llms/open-webui-review) -- una alternativa auto-alojada más estrechamente integrada con Ollama.',
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A auto-hospedagem é gratuita para sempre sob a licença MIT pura; uma Enterprise Edition com implantação privada e personalização de marca está disponível mediante solicitação, preço não divulgado.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do NextChat no [Diretório de Software de LLM Local](/power-local-llm/local-llm-software-directory) -- veja essa página para comparar rapidamente o NextChat com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do NextChat no [Diretório de Software de LLM Local](/directory) -- veja essa página para comparar rapidamente o NextChat com dezenas de outras ferramentas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**[Big-AGI](/pt/local-llms/big-agi-review)**', 'Melhor para': 'Comparar vários modelos no mesmo prompt (Beam)', 'Auto-hospedado': 'Sim (Docker/Vercel) ou hospedado', 'Velocidade de deploy': 'Vercel em um clique ou Docker', 'Licença': 'MIT' },
           { 'Ferramenta': '**[Open WebUI](/pt/local-llms/open-webui-review)**', 'Melhor para': 'Frontend multiusuário fortemente ligado ao Ollama', 'Auto-hospedado': 'Sim (Docker/pip)', 'Velocidade de deploy': 'Apenas Docker, sem botão Vercel', 'Licença': 'Open WebUI License (derivada de BSD)' },
         ],
-        note: 'Para uma comparação mais ampla de cinco opções incluindo Page Assist e Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory).',
+        note: 'Para uma comparação mais ampla de cinco opções incluindo Page Assist e Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Diretório de Software de LLM Local](/pt/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1973,14 +1973,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O NextChat se posiciona em um segmento de interfaces de chat auto-hospedadas e multi-provedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada do NextChat no diretório.',
+        content: 'O NextChat se posiciona em um segmento de interfaces de chat auto-hospedadas e multi-provedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, incluindo a própria entrada do NextChat no diretório.',
         items: [
           '**[LobeChat](/pt/local-llms/lobechat-review)** -- uma interface de chat auto-hospedada e multi-provedor com um marketplace de plugins e construtor de agentes mais desenvolvidos, mas licenciada sob a LobeHub Community License em vez de MIT pura.',
           '**[Big-AGI](/pt/local-llms/big-agi-review)** -- uma interface auto-hospedada ou hospedada, licenciada sob MIT, cujo recurso de destaque é comparar vários modelos no mesmo prompt ao mesmo tempo (Beam).',
           '**[Open WebUI](/pt/local-llms/open-webui-review)** -- uma interface de chat auto-hospedada e multiusuário mais fortemente integrada ao Ollama e a fluxos de trabalho locais, sem deploy em um clique na Vercel.',
           '**[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)** -- um cliente de desktop para um único usuário em vez de um servidor auto-hospedado, para quem quer zero configuração de servidor.',
         ],
-        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do NextChat no diretório.',
+        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do NextChat no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2013,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do NextChat no diretório.',
+          '[Diretório de Software de LLM Local](/pt/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do NextChat no diretório.',
           '[Análise do LobeChat](/pt/local-llms/lobechat-review) -- uma alternativa auto-hospedada com um marketplace de plugins e construtor de agentes mais desenvolvidos.',
           '[Análise do Big-AGI](/pt/local-llms/big-agi-review) -- uma alternativa auto-hospedada ou hospedada construída em torno de comparar vários modelos no mesmo prompt.',
           '[Análise do Open WebUI](/pt/local-llms/open-webui-review) -- uma alternativa auto-hospedada mais fortemente integrada ao Ollama.',
@@ -2146,7 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الاستضافة الذاتية مجانية دائمًا بموجب رخصة MIT الخالصة؛ وتتوفر نسخة Enterprise بنشر خاص وتخصيص للعلامة التجارية عند الطلب، دون سعر معلن.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المفصّل لمدخل NextChat في [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) -- راجع تلك الصفحة لمعرفة كيف يقارن NextChat بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المفصّل لمدخل NextChat في [دليل برمجيات LLM المحلية](/directory) -- راجع تلك الصفحة لمعرفة كيف يقارن NextChat بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       quickFacts: {
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**[Big-AGI](/ar/local-llms/big-agi-review)**', 'الأفضل لـ': 'مقارنة عدة نماذج على نفس الموجّه (Beam)', 'استضافة ذاتية': 'نعم (Docker/Vercel) أو مستضاف', 'سرعة النشر': 'نقرة واحدة على Vercel أو Docker', 'الرخصة': 'MIT' },
           { 'الأداة': '**[Open WebUI](/ar/local-llms/open-webui-review)**', 'الأفضل لـ': 'واجهة أمامية متعددة المستخدمين مرتبطة بشدة بـ Ollama', 'استضافة ذاتية': 'نعم (Docker/pip)', 'سرعة النشر': 'Docker فقط، دون زر Vercel', 'الرخصة': 'Open WebUI License (مشتقة من BSD)' },
         ],
-        note: 'لمقارنة أوسع بين خمسة تطبيقات تشمل Page Assist وChatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory).',
+        note: 'لمقارنة أوسع بين خمسة تطبيقات تشمل Page Assist وChatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2263,14 +2263,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع NextChat ضمن فئة واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف يقارن بأقرب البدائل في الفئة نفسها -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، بما في ذلك مدخل NextChat نفسه في الدليل.',
+        content: 'يقع NextChat ضمن فئة واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف يقارن بأقرب البدائل في الفئة نفسها -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل، بما في ذلك مدخل NextChat نفسه في الدليل.',
         items: [
           '**[LobeChat](/ar/local-llms/lobechat-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المزودين بسوق إضافات وأداة بناء وكلاء أكثر تطورًا، لكن مرخصة بموجب LobeHub Community License بدلًا من MIT الخالصة.',
           '**[Big-AGI](/ar/local-llms/big-agi-review)** -- واجهة ذاتية الاستضافة أو مستضافة برخصة MIT، وميزتها البارزة هي مقارنة عدة نماذج في نفس الوقت على موجّه واحد (Beam).',
           '**[Open WebUI](/ar/local-llms/open-webui-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المستخدمين الأكثر تكاملًا مع Ollama وسير العمل المحلي، دون نشر بنقرة واحدة على Vercel.',
           '**[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)** -- عميل سطح مكتب لمستخدم واحد بدلًا من خادم ذاتي الاستضافة، لمن يريد إعداد خادم صفري.',
         ],
-        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل NextChat نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل NextChat نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2303,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل NextChat نفسه في الدليل.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل NextChat نفسه في الدليل.',
           '[مراجعة LobeChat](/ar/local-llms/lobechat-review) -- بديل ذاتي الاستضافة بسوق إضافات وأداة بناء وكلاء أكثر تطورًا.',
           '[مراجعة Big-AGI](/ar/local-llms/big-agi-review) -- بديل ذاتي الاستضافة أو مستضاف مبني حول مقارنة عدة نماذج على موجّه واحد.',
           '[مراجعة Open WebUI](/ar/local-llms/open-webui-review) -- بديل ذاتي الاستضافة الأكثر تكاملًا مع Ollama.',
@@ -2436,7 +2436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '셀프 호스팅은 순수 MIT 라이선스 하에 영구 무료이며, 프라이빗 배포와 브랜드 커스터마이징을 지원하는 Enterprise Edition은 요청 시 제공되며 가격은 공개되지 않았습니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 NextChat 항목의 심층 보완편입니다 -- NextChat이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 해당 페이지에서 확인하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 NextChat 항목의 심층 보완편입니다 -- NextChat이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 해당 페이지에서 확인하세요.' },
         ],
       },
       quickFacts: {
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**[Big-AGI](/ko/local-llms/big-agi-review)**', '적합한 용도': '하나의 프롬프트로 여러 모델 비교(Beam)', '셀프 호스팅': '가능(Docker/Vercel) 또는 호스팅형', '배포 속도': '원클릭 Vercel 또는 Docker', '라이선스': 'MIT' },
           { '도구': '**[Open WebUI](/ko/local-llms/open-webui-review)**', '적합한 용도': 'Ollama와 긴밀히 통합된 다중 사용자 프런트엔드', '셀프 호스팅': '가능(Docker/pip)', '배포 속도': 'Docker만 지원, Vercel 버튼 없음', '라이선스': 'Open WebUI License(BSD 파생)' },
         ],
-        note: 'Page Assist와 Chatbox를 포함한 더 넓은 5개 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: 'Page Assist와 Chatbox를 포함한 더 넓은 5개 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2553,14 +2553,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'NextChat은 셀프 호스팅 멀티 프로바이더 채팅 인터페이스라는 세그먼트에 속합니다. 같은 카테고리에서 가장 가까운 대안과 비교하면 다음과 같습니다 -- NextChat 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'NextChat은 셀프 호스팅 멀티 프로바이더 채팅 인터페이스라는 세그먼트에 속합니다. 같은 카테고리에서 가장 가까운 대안과 비교하면 다음과 같습니다 -- NextChat 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[LobeChat](/ko/local-llms/lobechat-review)** -- 더 발전된 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 멀티 프로바이더 채팅 인터페이스지만, 순수 MIT가 아닌 LobeHub Community License로 라이선스됩니다.',
           '**[Big-AGI](/ko/local-llms/big-agi-review)** -- 셀프 호스팅 또는 호스팅형 MIT 라이선스 인터페이스로, 대표 기능은 하나의 프롬프트로 여러 모델을 동시에 비교하는 것(Beam)입니다.',
           '**[Open WebUI](/ko/local-llms/open-webui-review)** -- Ollama 및 로컬 우선 워크플로와 가장 긴밀하게 통합된 셀프 호스팅 다중 사용자 채팅 인터페이스로, 원클릭 Vercel 배포는 없습니다.',
           '**[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)** -- 셀프 호스팅 서버가 아닌 단일 사용자용 데스크톱 클라이언트로, 서버 설정을 전혀 원하지 않는 사람을 위한 것입니다.',
         ],
-        note: '이는 셀프 호스팅 채팅 인터페이스의 전체 목록이 아닙니다 -- NextChat 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 셀프 호스팅 채팅 인터페이스의 전체 목록이 아닙니다 -- NextChat 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2593,7 +2593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, NextChat 자체의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, NextChat 자체의 디렉터리 항목을 포함합니다.',
           '[LobeChat 리뷰](/ko/local-llms/lobechat-review) -- 더 발전된 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 대안입니다.',
           '[Big-AGI 리뷰](/ko/local-llms/big-agi-review) -- 하나의 프롬프트로 여러 모델을 비교하는 것을 중심으로 만들어진 셀프 호스팅 또는 호스팅형 대안입니다.',
           '[Open WebUI 리뷰](/ko/local-llms/open-webui-review) -- Ollama와 가장 긴밀하게 통합된 셀프 호스팅 대안입니다.',
