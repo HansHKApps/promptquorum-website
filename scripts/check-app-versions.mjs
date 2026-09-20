@@ -52,27 +52,50 @@ function findAppFiles() {
     .sort()
 }
 
+// Matches `field: '...'` preceded by a newline, comma, or `{` — so it finds
+// the field whether the enclosing object is written one-per-line or all on
+// one line (both styles appear across src/lib/power-local-llm/apps/*.ts).
 function extractField(content, field) {
-  const m = content.match(new RegExp(`\\n\\s*${field}:\\s*'([^']*)'`))
+  const m = content.match(new RegExp(`[,{\\n]\\s*${field}:\\s*'([^']*)'`))
   return m ? m[1] : undefined
 }
 
+// Extracts the substring inside a `key: { ... }` block by counting brace
+// depth from the key's opening `{` to its matching `}` — a fixed regex can't
+// reliably span both the single-line and multi-line/nested-object styles
+// tiles use.
+function extractBalancedBlock(content, key) {
+  const keyIdx = content.indexOf(`${key}:`)
+  if (keyIdx === -1) return undefined
+  const openIdx = content.indexOf('{', keyIdx)
+  if (openIdx === -1) return undefined
+  let depth = 0
+  for (let i = openIdx; i < content.length; i++) {
+    if (content[i] === '{') depth++
+    else if (content[i] === '}') {
+      depth--
+      if (depth === 0) return content.slice(openIdx + 1, i)
+    }
+  }
+  return undefined
+}
+
 function extractPqReview(content) {
-  const blockMatch = content.match(/pqReview:\s*\{([\s\S]*?)\n\s{0,2}\}/)
-  if (!blockMatch) return null
-  const block = `\n${blockMatch[1]}`
+  const block = extractBalancedBlock(content, 'pqReview')
+  if (block === undefined) return null
+  const withLeadingNewline = `\n${block}`
   return {
-    version: extractField(block, 'version'),
-    date: extractField(block, 'date'),
-    versionSourceUrl: extractField(block, 'versionSourceUrl'),
+    version: extractField(withLeadingNewline, 'version'),
+    date: extractField(withLeadingNewline, 'date'),
+    versionSourceUrl: extractField(withLeadingNewline, 'versionSourceUrl'),
   }
 }
 
 function extractGithubRepo(content) {
   // storeLinks.github, if present, is a full URL.
-  const storeLinksMatch = content.match(/storeLinks:\s*\{([\s\S]*?)\n\s{0,4}\}/)
-  if (storeLinksMatch) {
-    const ghMatch = storeLinksMatch[1].match(/github:\s*'https?:\/\/github\.com\/([^/']+)\/([^/'"]+)/)
+  const storeLinksBlock = extractBalancedBlock(content, 'storeLinks')
+  if (storeLinksBlock !== undefined) {
+    const ghMatch = storeLinksBlock.match(/github:\s*'https?:\/\/github\.com\/([^/']+)\/([^/'"]+)/)
     if (ghMatch) return { owner: ghMatch[1], repo: ghMatch[2] }
   }
   // `url` is domain-only per its own doc comment, but a handful of

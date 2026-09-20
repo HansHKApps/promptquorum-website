@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'Microsoft의 멀티에이전트 오케스트레이션 프레임워크',
   },
   reviewSlug: 'autogen-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'python-v0.7.5', versionSourceUrl: 'https://github.com/microsoft/autogen/releases/tag/python-v0.7.5' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

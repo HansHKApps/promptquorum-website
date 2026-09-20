@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'Stable Diffusion용 가장 인기 있는 웹 UI — 2025년 이후 릴리스 없음(19개월 이상)',
   },
   reviewSlug: 'automatic1111-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.10.1', versionSourceUrl: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

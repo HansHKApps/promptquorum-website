@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '여러 로컬 백엔드를 지원하는 터미널 AI 채팅',
   },
   reviewSlug: 'aichat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.30.0', versionSourceUrl: 'https://github.com/sigoden/aichat/releases/tag/v0.30.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

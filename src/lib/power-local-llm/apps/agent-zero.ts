@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '코딩 기능을 갖춘 미니멀한 자율 에이전트',
   },
   reviewSlug: 'agent-zero-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v2.12', versionSourceUrl: 'https://github.com/agent0ai/agent-zero/releases/tag/v2.12' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

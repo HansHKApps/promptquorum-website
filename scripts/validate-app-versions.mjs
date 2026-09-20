@@ -53,17 +53,41 @@ function findAppFiles() {
     .sort()
 }
 
+// Matches `field: '...'` preceded by a newline, comma, or `{` — so it finds
+// the field whether the enclosing object is written one-per-line or all on
+// one line (both styles appear across src/lib/power-local-llm/apps/*.ts).
 function extractField(content, field) {
-  const m = content.match(new RegExp(`\\n\\s*${field}:\\s*'([^']*)'`))
+  const m = content.match(new RegExp(`[,{\\n]\\s*${field}:\\s*'([^']*)'`))
   return m ? m[1] : undefined
+}
+
+// Extracts the substring inside a `key: { ... }` block by counting brace
+// depth from the key's opening `{` to its matching `}` — handles both the
+// single-line style most tiles use (`pqReview: { date: '...', version: '...' }`)
+// and a multi-line block with nested objects (hw/text/scores), which a fixed
+// regex can't do reliably in both shapes.
+function extractBalancedBlock(content, key) {
+  const keyIdx = content.indexOf(`${key}:`)
+  if (keyIdx === -1) return undefined
+  const openIdx = content.indexOf('{', keyIdx)
+  if (openIdx === -1) return undefined
+  let depth = 0
+  for (let i = openIdx; i < content.length; i++) {
+    if (content[i] === '{') depth++
+    else if (content[i] === '}') {
+      depth--
+      if (depth === 0) return content.slice(openIdx + 1, i)
+    }
+  }
+  return undefined
 }
 
 // Extracts the pqReview: { ... } block's own version field, scoped to avoid
 // accidentally matching an unrelated top-level `version` key.
 function extractPqReviewVersion(content) {
-  const blockMatch = content.match(/pqReview:\s*\{([\s\S]*?)\n\s{0,2}\}/)
-  if (!blockMatch) return undefined
-  return extractField(`\n${blockMatch[1]}`, 'version')
+  const block = extractBalancedBlock(content, 'pqReview')
+  if (block === undefined) return undefined
+  return extractField(`\n${block}`, 'version')
 }
 
 function findArticleFile(reviewSlug) {
