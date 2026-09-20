@@ -199,7 +199,7 @@ export function ToolCard({
             {/* Prefer his own verbatim words when we have them; `why` is a
                 PromptQuorum paraphrase and shouldn't be shown in quotation
                 marks as if it were a direct quote. */}
-            &ldquo;{founderParagraphs(app.founder.fullQuote, lang)?.[0] ?? founderText(app.founder.why, lang)}&rdquo; <span className="not-italic font-medium">— {t('fromTheMaker', lang)}</span>
+            &ldquo;{app.founder.pullQuote ? founderText(app.founder.pullQuote, lang) : founderParagraphs(app.founder.fullQuote, lang)?.[0] ?? founderText(app.founder.why, lang)}&rdquo; <span className="not-italic font-medium">— {t('fromTheMaker', lang)}</span>
           </p>
         )}
 

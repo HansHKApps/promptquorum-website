@@ -89,6 +89,9 @@ export interface ToolRecordFounder {
   // block in ToolDrawer so it doesn't force the drawer to grow — collapsed
   // by default, `why`/`best`/`limits` above already give the short version.
   fullQuote?: FounderParagraphs
+  // Optional verbatim excerpt shown on the directory tile (which clamps to two lines) instead of the
+  // first paragraph of `fullQuote`, for statements whose opening sentence isn't the strongest one.
+  pullQuote?: FounderText
 }
 
 export interface ToolRecordReview {
