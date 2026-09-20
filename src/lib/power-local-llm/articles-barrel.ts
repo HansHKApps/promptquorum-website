@@ -52,6 +52,7 @@ import { article as a_dograh_review } from './articles/dograh-review'
 import { article as a_exo_review } from './articles/exo-review'
 import { article as a_piper_tts_review } from './articles/piper-tts-review'
 import { article as a_local_llm_voice_audio_compared } from './articles/local-llm-voice-audio-compared'
+import { article as a_local_llm_images_video_compared } from './articles/local-llm-images-video-compared'
 import { article as a_coqui_tts_review } from './articles/coqui-tts-review'
 import { article as a_xtts_v2_review } from './articles/xtts-v2-review'
 import { article as a_bark_tts_review } from './articles/bark-tts-review'
@@ -517,6 +518,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'exo-review':                                    a_exo_review,
   'piper-tts-review':                               a_piper_tts_review,
   'local-llm-voice-audio-compared':                 a_local_llm_voice_audio_compared,
+  'local-llm-images-video-compared':                a_local_llm_images_video_compared,
   'coqui-tts-review':                               a_coqui_tts_review,
   'xtts-v2-review':                                 a_xtts_v2_review,
   'bark-tts-review':                                a_bark_tts_review,

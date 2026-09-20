@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'automatic1111-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.10.1', versionSourceUrl: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { inpainting: true, extensions: true, lowVram: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

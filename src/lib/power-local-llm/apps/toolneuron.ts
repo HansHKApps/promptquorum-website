@@ -41,5 +41,7 @@ export const app: ToolRecord = {
     ko: '온디바이스 AI 채팅, 문서 RAG, 음성을 지원하는 오픈소스(MIT) 암호화 안드로이드 앱',
   },
   reviewSlug: 'toolneuron-review',
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { extensions: true, apiServer: true },
   lastVerifiedDate: null,
 }

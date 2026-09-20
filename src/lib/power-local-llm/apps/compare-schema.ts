@@ -123,6 +123,6 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'chat-assistants': null,
   'code-development': null,
   'knowledge-retrieval': null,
-  'images-video': null,
+  'images-video': 'local-llm-images-video-compared',
   'train-operate': null,
 }

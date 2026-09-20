@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '공간적 가이드로 이미지 생성을 정밀 제어 — 릴리스 없음, 2024년 마지막 커밋(2년 이상)',
   },
   reviewSlug: 'controlnet-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { lowVram: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

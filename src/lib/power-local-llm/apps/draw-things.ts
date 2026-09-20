@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Stable Diffusion을 활용한 macOS 및 iOS용 로컬 이미지 생성',
   },
   reviewSlug: 'draw-things-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { videoGeneration: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

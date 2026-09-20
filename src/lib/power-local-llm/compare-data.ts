@@ -85,11 +85,20 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   bargeIn: 'colBargeIn',
   customLlm: 'colCustomLlm',
   telephony: 'colTelephony',
+  inpainting: 'colInpainting',
+  videoGeneration: 'colVideoGeneration',
+  nodeWorkflow: 'colNodeWorkflow',
+  extensions: 'colExtensions',
+  lowVram: 'colLowVram',
+  ocr: 'colOcr',
+  multiImage: 'colMultiImage',
 }
 const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'text-to-speech': 'segTts',
   'speech-to-text': 'segStt',
   'voice-agents': 'segAgents',
+  'image-video-generation': 'segImageVideo',
+  'vision-ocr': 'segVision',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }

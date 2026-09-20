@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '직관적인 UI를 갖춘 전문가급 이미지 생성 — 활발히 유지 관리, 릴리스 1주 전',
   },
   reviewSlug: 'invokeai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { inpainting: true, nodeWorkflow: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
