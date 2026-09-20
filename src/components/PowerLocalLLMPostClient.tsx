@@ -79,7 +79,12 @@ interface Props {
    * Set only on a tool's dedicated review: the category guide it belongs to plus a few
    * same-segment sibling reviews (page-helpers.tsx, via getCategoryLinksForReview).
    */
-  categoryLinks?: { guideLabel: string; guideSlug: string | null; siblings: { name: string; reviewSlug: string }[] }
+  categoryLinks?: {
+    guideLabel: string
+    guideSlug: string | null
+    siblings: { name: string; reviewSlug: string }[]
+    ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
+  }
 }
 
 // Section header translations
@@ -1305,29 +1310,29 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
 
         {/* Two-way link to this tool's category comparison guide + sibling reviews (English pages only:
             the block's copy is not translated yet). */}
-        {categoryLinks && lang === 'en' && (
+        {categoryLinks && (
           <aside className="mb-6 rounded-xl border border-tone-action-edge bg-tone-action p-4 text-sm">
-            <p className="font-bold text-text-primary mb-1">Part of a category comparison</p>
+            <p className="font-bold text-text-primary mb-1">{categoryLinks.ui.blockTitle}</p>
             <p className="text-text-secondary">
               {categoryLinks.guideSlug ? (
                 <>
-                  Compared with the other tools in{' '}
-                  <Link href={`/power-local-llm/${categoryLinks.guideSlug}`} className="font-semibold text-primary hover:underline">
+                  {categoryLinks.ui.blockComparedIn}{' '}
+                  <Link href={`${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${categoryLinks.guideSlug}`} className="font-semibold text-primary hover:underline">
                     {categoryLinks.guideLabel}
                   </Link>
                   .
                 </>
               ) : (
-                <>Category: {categoryLinks.guideLabel}.</>
+                <>{categoryLinks.ui.blockCategory}: {categoryLinks.guideLabel}.</>
               )}
               {categoryLinks.siblings.length > 0 && (
                 <>
                   {' '}
-                  Also reviewed:{' '}
+                  {categoryLinks.ui.blockAlsoReviewed}:{' '}
                   {categoryLinks.siblings.map((sib, i) => (
                     <span key={sib.reviewSlug}>
                       {i > 0 && ', '}
-                      <Link href={`/power-local-llm/${sib.reviewSlug}`} className="text-primary hover:underline">
+                      <Link href={`${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${sib.reviewSlug}`} className="text-primary hover:underline">
                         {sib.name}
                       </Link>
                     </span>

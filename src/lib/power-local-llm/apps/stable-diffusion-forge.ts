@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '더 빠른 추론과 낮은 VRAM·리소스 사용에 초점을 맞춘 Stable Diffusion WebUI의 최적화 포크',
   },
   reviewSlug: 'stable-diffusion-forge-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { extensions: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

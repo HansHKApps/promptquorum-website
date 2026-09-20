@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 Stable Diffusion을 위한 원클릭 패키징 Mac 앱',
   },
   reviewSlug: 'diffusionbee-review', // dedicated PromptQuorum review
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { inpainting: true, videoGeneration: true },
   lastVerifiedDate: '2026-09-12',
 }

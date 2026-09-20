@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import type { CompareColumn, CompareRow } from '@/lib/power-local-llm/compare-data'
+import type { CompareColumn, CompareRow, CompareTableUi } from '@/lib/power-local-llm/compare-data'
 
 interface CompareTableProps {
   columns: CompareColumn[]
   rows: CompareRow[]
   lang: string
+  ui: CompareTableUi
   /** Prepended to each review path, e.g. '/de' for non-English pages. */
   localePrefix?: string
 }
@@ -13,14 +14,14 @@ interface CompareTableProps {
  * Side-by-side comparison table shared by the category articles and the homepage comparison tool.
  * "—" means "not stated in the project's own documentation", never "no".
  */
-export function CompareTable({ columns, rows, localePrefix = '' }: CompareTableProps) {
+export function CompareTable({ columns, rows, ui, localePrefix = '' }: CompareTableProps) {
   return (
     <div className="overflow-x-auto rounded-xl border border-border">
       <table className="w-full min-w-[640px] border-collapse text-left text-sm">
         <thead className="bg-surface">
           <tr>
             <th scope="col" className="sticky left-0 bg-surface px-3 py-2 font-bold text-text-primary">
-              Tool
+              {ui.tool}
             </th>
             {columns.map((c) => (
               <th key={c.key} scope="col" className="px-3 py-2 font-bold text-text-primary">
@@ -28,7 +29,7 @@ export function CompareTable({ columns, rows, localePrefix = '' }: CompareTableP
               </th>
             ))}
             <th scope="col" className="px-3 py-2 font-bold text-text-primary">
-              Review
+              {ui.review}
             </th>
           </tr>
         </thead>
@@ -52,7 +53,7 @@ export function CompareTable({ columns, rows, localePrefix = '' }: CompareTableP
               <td className="whitespace-nowrap px-3 py-2">
                 {r.reviewSlug ? (
                   <Link href={`${localePrefix}/power-local-llm/${r.reviewSlug}`} className="font-semibold text-primary hover:underline">
-                    Read review →
+                    {ui.readReview} →
                   </Link>
                 ) : (
                   <span className="text-text-muted">—</span>

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '이미지 이해를 위한 로컬 비전 + 언어 모델',
   },
   reviewSlug: 'llava-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { ocr: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

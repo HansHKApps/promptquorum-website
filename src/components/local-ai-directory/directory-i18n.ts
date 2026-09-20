@@ -267,6 +267,7 @@ const DIR_UI = {
   articleCountOne: { en: '{count} article', de: '{count} Artikel', fr: '{count} article', ja: '記事{count}件', zh: '{count}篇文章', es: '{count} artículo', pt: '{count} artigo', ar: '{count} مقال', ko: '기사 {count}개' },
   articleCountOther: { en: '{count} articles', de: '{count} Artikel', fr: '{count} articles', ja: '記事{count}件', zh: '{count}篇文章', es: '{count} artículos', pt: '{count} artigos', ar: '{count} مقالات', ko: '기사 {count}개' },
   readReview: { en: 'Read review', de: 'Testbericht lesen', fr: "Lire l'avis", ja: 'レビューを読む', zh: '阅读评测', es: 'Leer la reseña', pt: 'Ler a análise', ar: 'قراءة المراجعة', ko: '리뷰 읽기' },
+  readGuide: { en: 'Compare with similar tools', de: 'Mit ähnlichen Tools vergleichen', fr: 'Comparer avec des outils similaires', ja: '類似ツールと比較', zh: '与同类工具对比', es: 'Comparar con herramientas similares', pt: 'Comparar com ferramentas semelhantes', ar: 'قارن مع أدوات مماثلة', ko: '유사한 도구와 비교' },
   // Badge/link shown only when the tool has an authoritative, single-subject
   // dedicated review (src/generated/feature-review-index.json) — visually
   // distinct from the plain "Read review" text link and from the "N articles

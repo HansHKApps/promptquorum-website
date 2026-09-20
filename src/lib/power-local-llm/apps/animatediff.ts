@@ -33,6 +33,8 @@ export const app: ToolRecord = {
     ar: 'توليد فيديو من أوامر نصية عبر Stable Diffusion — لا إصدارات، آخر push في 2024 (عامان+)',
     ko: 'Stable Diffusion 텍스트 프롬프트 기반 영상 생성 — 릴리스 없음, 2024년 마지막 커밋(2년 이상)',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { videoGeneration: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'animatediff-video-generation-guide-2026',
 }
