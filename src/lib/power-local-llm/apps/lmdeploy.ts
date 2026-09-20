@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ar: 'مجموعة أدوات مستضافة ذاتيًا لضغط النماذج اللغوية الكبيرة وتكميمها وتقديمها بمحرك استدلال عالي الإنتاجية متوافق مع OpenAI',
     ko: '고처리량 OpenAI 호환 추론 엔진으로 LLM을 압축, 양자화, 서빙하는 셀프호스팅 툴킷',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { nvidiaGpu: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

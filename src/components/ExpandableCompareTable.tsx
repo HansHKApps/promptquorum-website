@@ -11,7 +11,7 @@ function toTsv(columns: CompareColumn[], rows: CompareRow[], localePrefix: strin
   const clean = (v: string) => v.replace(/[\t\r\n]+/g, ' ')
   const header = [ui.tool, ...columns.map((c) => c.label), ui.review].map(clean).join('\t')
   const lines = rows.map((r) =>
-    [r.name, ...columns.map((c) => r.cells[c.key] ?? '—'), r.reviewSlug ? `${SITE}${localePrefix}/power-local-llm/${r.reviewSlug}` : '—'].map(clean).join('\t'),
+    [r.name, ...columns.map((c) => r.cells[c.key] ?? '—'), r.reviewPath ? `${SITE}${localePrefix}${r.reviewPath}` : '—'].map(clean).join('\t'),
   )
   return [header, ...lines].join('\n')
 }

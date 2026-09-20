@@ -36,5 +36,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'clawrouter-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v0.12.279', versionSourceUrl: 'https://github.com/BlockRunAI/ClawRouter/releases/tag/v0.12.279' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { fallback: true },
   lastVerifiedDate: '2026-09-18',
 }

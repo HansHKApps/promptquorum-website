@@ -33,5 +33,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'kserve-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v0.20.0', versionSourceUrl: 'https://github.com/kserve/kserve/releases/tag/v0.20.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

@@ -82,7 +82,7 @@ interface Props {
   categoryLinks?: {
     guideLabel: string
     guideSlug: string | null
-    siblings: { name: string; reviewSlug: string }[]
+    siblings: { name: string; reviewPath: string }[]
     ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
   }
 }
@@ -1330,9 +1330,9 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
                   {' '}
                   {categoryLinks.ui.blockAlsoReviewed}:{' '}
                   {categoryLinks.siblings.map((sib, i) => (
-                    <span key={sib.reviewSlug}>
+                    <span key={sib.reviewPath}>
                       {i > 0 && ', '}
-                      <Link href={`${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${sib.reviewSlug}`} className="text-primary hover:underline">
+                      <Link href={`${lang === 'en' ? '' : `/${lang}`}${sib.reviewPath}`} className="text-primary hover:underline">
                         {sib.name}
                       </Link>
                     </span>

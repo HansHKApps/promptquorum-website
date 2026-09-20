@@ -41,5 +41,7 @@ export const app: ToolRecord = {
   // returned by the GitHub API) falls inside that range, so this is a match,
   // not drift. Recorded as the article's own range string, not the single tag.
   pqReview: { date: '2026-09-20', version: 'v1.4–v1.6', versionSourceUrl: 'https://github.com/ai-dynamo/dynamo/releases' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

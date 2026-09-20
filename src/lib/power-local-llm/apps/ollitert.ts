@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ko: '구글의 LiteRT-LM 런타임을 사용해 안드로이드 폰을 완전 로컬, OpenAI 호환 LLM 추론 서버로 바꿔주는 앱.',
   },
   reviewSlug: 'ollitert-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, cpuInference: true },
   lastVerifiedDate: '2026-09-18',
 }

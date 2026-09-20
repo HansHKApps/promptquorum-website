@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '멀티유저 GPU 배포를 위한 고성능 서빙',
   },
   reviewSlug: 'vllm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, amdGpu: true, cpuInference: true, distributed: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

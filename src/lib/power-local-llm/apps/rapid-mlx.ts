@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ko: 'Claude Code, Cursor, Aider의 백엔드로 바로 사용할 수 있도록 만든 Apple Silicon용 OpenAI 호환 로컬 추론 엔진',
   },
   reviewSlug: 'rapid-mlx-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, appleSilicon: true },
   lastVerifiedDate: '2026-09-18',
 }

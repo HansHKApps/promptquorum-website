@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ar: 'بيئة تشغيل ذكاء اصطناعي على الجهاز من Microsoft مع حزم تطوير لـC# وJavaScript وRust وPython',
     ko: 'C#, JavaScript, Rust, Python용 SDK를 제공하는 Microsoft의 온디바이스 AI 런타임',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, modelLibrary: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

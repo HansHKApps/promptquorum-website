@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '엔터프라이즈 GPU 구성을 위한 NVIDIA 최적화 추론',
   },
   reviewSlug: 'tensorrt-llm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { nvidiaGpu: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

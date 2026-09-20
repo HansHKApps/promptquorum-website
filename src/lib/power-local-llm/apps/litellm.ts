@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '100개 이상의 LLM 제공업체 API를 위한 단일 OpenAI 호환 게이트웨이, 라우팅 및 비용 추적 포함',
   },
   pqReview: { date: '2026-09-20', version: 'v1.101.0', versionSourceUrl: 'https://github.com/BerriAI/litellm/releases/tag/v1.101.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, localModels: true, fallback: true },
   lastVerifiedDate: '2026-09-14',
 }

@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ko: 'Python 없이 MLX 모델을 엄격한 OpenAI 호환 API로 제공하는 Apple 실리콘용 네이티브 Swift 추론 서버.',
   },
   reviewSlug: 'swiftlm-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, appleSilicon: true },
   lastVerifiedDate: '2026-09-18',
 }

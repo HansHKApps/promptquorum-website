@@ -106,7 +106,45 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
-  'run-serve': [],
+  // Pilot 3. "API servers" is not its own segment: nearly every API-server tool is also an inference
+  // engine or a runtime, so it would only duplicate rows. Tools listed only as API servers (h2oGPT,
+  // Tabby, OpenAI Edge TTS) are compared in their own categories instead.
+  'run-serve': [
+    {
+      key: 'inference-engines',
+      label: 'Inference engines',
+      subs: ['inference-engines', 'quantization-conversion'],
+      attributes: [
+        { key: 'openaiApi', label: 'OpenAI-compatible API', kind: 'boolean' },
+        { key: 'nvidiaGpu', label: 'NVIDIA GPU', kind: 'boolean' },
+        { key: 'appleSilicon', label: 'Apple Silicon', kind: 'boolean' },
+        { key: 'amdGpu', label: 'AMD GPU', kind: 'boolean' },
+        { key: 'cpuInference', label: 'CPU inference', kind: 'boolean' },
+        { key: 'distributed', label: 'Multi-GPU / multi-node', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'runtimes-managers',
+      label: 'Runtimes & managers',
+      subs: ['runtimes-managers'],
+      attributes: [
+        { key: 'openaiApi', label: 'OpenAI-compatible API', kind: 'boolean' },
+        { key: 'desktopApp', label: 'Desktop app', kind: 'boolean' },
+        { key: 'modelLibrary', label: 'Built-in model library', kind: 'boolean' },
+        { key: 'headless', label: 'Headless / server mode', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'routers-gateways',
+      label: 'Routers & gateways',
+      subs: ['routers-gateways'],
+      attributes: [
+        { key: 'openaiApi', label: 'OpenAI-compatible API', kind: 'boolean' },
+        { key: 'localModels', label: 'Routes to local models', kind: 'boolean' },
+        { key: 'fallback', label: 'Fallback / load balancing', kind: 'boolean' },
+      ],
+    },
+  ],
   'chat-assistants': [],
   'code-development': [],
   'knowledge-retrieval': [],
@@ -119,7 +157,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
  */
 export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> = {
   'voice-audio': 'local-llm-voice-audio-compared',
-  'run-serve': null,
+  'run-serve': 'local-llm-run-serve-compared',
   'chat-assistants': null,
   'code-development': null,
   'knowledge-retrieval': null,
