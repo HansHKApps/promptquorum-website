@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { CompareTable } from './CompareTable'
+import { ExpandableCompareTable } from './ExpandableCompareTable'
 import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
 
 /** Full per-category comparison inside an article: one tab per segment, all tools in that segment. */
@@ -31,7 +31,7 @@ export function CategoryCompareTable({ data, lang }: { data: CategoryCompareData
           ))}
         </div>
       )}
-      <CompareTable columns={seg.columns} rows={seg.rows} lang={lang} localePrefix={prefix} />
+      <ExpandableCompareTable columns={seg.columns} rows={seg.rows} lang={lang} localePrefix={prefix} title={`${data.label} — ${seg.label}`} />
       <p className="mt-2 text-xs text-text-muted">
         &ldquo;—&rdquo; means the project&apos;s own documentation does not state it, not that the feature is missing. Values come from each
         project&apos;s official README or site and are re-checked when a tool&apos;s review is updated.
