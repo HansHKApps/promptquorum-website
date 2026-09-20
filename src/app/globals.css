@@ -25,6 +25,42 @@
     --border: 240 6% 90%;
     --input: 240 6% 90%;
     --ring: 265 50% 42%;
+
+    /* Homepage card tones — one fill/edge pair per card kind (action, list, stat). */
+    --tone-action: 265 60% 97%;
+    --tone-action-edge: 265 45% 84%;
+    --tone-list: 0 0% 100%;
+    --tone-list-edge: 240 6% 90%;
+    --tone-stat: 265 14% 95%;
+    --tone-stat-edge: 265 14% 86%;
+
+    /* Homepage hero band — color field behind the page title. */
+    --hero-from: 265 60% 95%;
+    --hero-to: 265 40% 90%;
+    --hero-edge: 265 35% 82%;
+
+    /* Category chip accents — strong (selected fill), tint (idle fill), edge (idle border). */
+    --cat-run-serve: 265 55% 38%;
+    --cat-run-serve-tint: 265 70% 96%;
+    --cat-run-serve-edge: 265 45% 78%;
+    --cat-chat-assistants: 213 55% 38%;
+    --cat-chat-assistants-tint: 213 70% 96%;
+    --cat-chat-assistants-edge: 213 45% 78%;
+    --cat-code-development: 150 55% 38%;
+    --cat-code-development-tint: 150 70% 96%;
+    --cat-code-development-edge: 150 45% 78%;
+    --cat-knowledge-retrieval: 32 55% 38%;
+    --cat-knowledge-retrieval-tint: 32 70% 96%;
+    --cat-knowledge-retrieval-edge: 32 45% 78%;
+    --cat-voice-audio: 330 55% 38%;
+    --cat-voice-audio-tint: 330 70% 96%;
+    --cat-voice-audio-edge: 330 45% 78%;
+    --cat-images-video: 12 55% 38%;
+    --cat-images-video-tint: 12 70% 96%;
+    --cat-images-video-edge: 12 45% 78%;
+    --cat-train-operate: 178 55% 38%;
+    --cat-train-operate-tint: 178 70% 96%;
+    --cat-train-operate-edge: 178 45% 78%;
   }
 }
 

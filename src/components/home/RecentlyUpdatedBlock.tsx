@@ -7,11 +7,11 @@ export function RecentlyUpdatedBlock() {
   const updated = getRecentlyUpdated()
 
   if (updated.length === 0) {
-    return <HomeCard size="md" title="Recently Updated Content" emptyState emptyMessage="Updated content tracking coming soon." />
+    return <HomeCard size="md" icon="updated" title="Recently Updated Content" emptyState emptyMessage="Updated content tracking coming soon." />
   }
 
   return (
-    <HomeCard size="md" title="Recently Updated Content">
+    <HomeCard size="md" icon="updated" title="Recently Updated Content">
       <ExpandableList
         items={updated.map((u) => ({
           key: u.url,

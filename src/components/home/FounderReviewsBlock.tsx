@@ -9,7 +9,7 @@ export function FounderReviewsBlock() {
   if (reviews.length === 0) {
     return (
       <HomeCard
-        size="md"
+        size="md" icon="review"
         title="Latest Founder/Maker Reviews"
         emptyState
         emptyMessage="Founder reviews are being added — check back soon."
@@ -18,7 +18,7 @@ export function FounderReviewsBlock() {
   }
 
   return (
-    <HomeCard size="md" title="Latest Founder/Maker Reviews">
+    <HomeCard size="md" icon="review" title="Latest Founder/Maker Reviews">
       <ExpandableList
         items={reviews.map((r) => ({
           key: r.slug,

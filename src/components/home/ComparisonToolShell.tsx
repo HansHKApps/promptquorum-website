@@ -1,7 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, type CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
+
+// Static class strings per category (Tailwind can't see dynamically built names); colors are --cat-* variables.
+const CHIP_CLASS: Record<CategoryGroupKey, { idle: string; active: string }> = {
+  'run-serve': { idle: 'border-cat-run-serve-edge bg-cat-run-serve-tint', active: 'border-cat-run-serve bg-cat-run-serve' },
+  'chat-assistants': { idle: 'border-cat-chat-assistants-edge bg-cat-chat-assistants-tint', active: 'border-cat-chat-assistants bg-cat-chat-assistants' },
+  'code-development': { idle: 'border-cat-code-development-edge bg-cat-code-development-tint', active: 'border-cat-code-development bg-cat-code-development' },
+  'knowledge-retrieval': { idle: 'border-cat-knowledge-retrieval-edge bg-cat-knowledge-retrieval-tint', active: 'border-cat-knowledge-retrieval bg-cat-knowledge-retrieval' },
+  'voice-audio': { idle: 'border-cat-voice-audio-edge bg-cat-voice-audio-tint', active: 'border-cat-voice-audio bg-cat-voice-audio' },
+  'images-video': { idle: 'border-cat-images-video-edge bg-cat-images-video-tint', active: 'border-cat-images-video bg-cat-images-video' },
+  'train-operate': { idle: 'border-cat-train-operate-edge bg-cat-train-operate-tint', active: 'border-cat-train-operate bg-cat-train-operate' },
+}
 
 /**
  * UI shell only — no comparison-article content exists yet (a separate
@@ -15,8 +28,11 @@ export function ComparisonToolShell() {
   const [category, setCategory] = useState<string | null>(null)
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">Compare Tools</h2>
+    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
+      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="compare" size={20} />
+        Compare Tools
+      </h2>
       <p className="text-sm text-text-secondary mb-4">
         Comparison tool launching soon — we&apos;re building out category comparisons.
       </p>
@@ -29,8 +45,8 @@ export function ComparisonToolShell() {
             onClick={() => setCategory(group.key)}
             className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
               category === group.key
-                ? 'border-primary bg-primary text-primary-foreground'
-                : 'border-border text-text-secondary hover:border-primary/50'
+                ? `${CHIP_CLASS[group.key].active} text-primary-foreground`
+                : `${CHIP_CLASS[group.key].idle} text-text-secondary hover:shadow-sm`
             }`}
           >
             {CATEGORY_GROUP_LABEL[group.key]}

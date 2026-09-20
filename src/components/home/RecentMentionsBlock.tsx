@@ -15,7 +15,7 @@ export function RecentMentionsBlock() {
   const mentions = getMentions()
 
   if (mentions.length === 0) {
-    return <HomeCard size="sm" title="Recent Mentions" emptyState emptyMessage="Mentions coming soon." />
+    return <HomeCard size="sm" variant="stat" icon="mentions" title="Recent Mentions" emptyState emptyMessage="Mentions coming soon." />
   }
 
   const current = mentions.slice(0, 10)
@@ -54,7 +54,7 @@ export function RecentMentionsBlock() {
   ]
 
   return (
-    <HomeCard size="sm" title="Recent Mentions">
+    <HomeCard size="sm" variant="stat" icon="mentions" title="Recent Mentions">
       <BatchedList batches={batches} />
     </HomeCard>
   )

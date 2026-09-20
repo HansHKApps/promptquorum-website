@@ -6,11 +6,11 @@ export function TrendingBlock() {
   const batches = getTrendingBatches()
 
   if (batches.length === 0) {
-    return <HomeCard size="md" title="Trending / Most-Read" emptyState emptyMessage="Trending pages coming soon." />
+    return <HomeCard size="md" icon="trending" title="Trending / Most-Read" emptyState emptyMessage="Trending pages coming soon." />
   }
 
   return (
-    <HomeCard size="md" title="Trending / Most-Read">
+    <HomeCard size="md" icon="trending" title="Trending / Most-Read">
       <BatchedList
         batches={batches.map((b) => ({
           batchDate: b.batchDate,

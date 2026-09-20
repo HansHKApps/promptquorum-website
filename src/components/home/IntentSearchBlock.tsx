@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useSearch } from '@/components/search/useSearch'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 
 type Intent = 'compare' | 'learn' | 'find-app'
 
@@ -40,8 +42,11 @@ export function IntentSearchBlock() {
   }
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">Find What You Need</h2>
+    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
+      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="search" size={20} />
+        Find What You Need
+      </h2>
       <p className="text-sm text-text-secondary mb-4">Pick what you're after, then search.</p>
 
       <div className="flex flex-wrap gap-2 mb-3">

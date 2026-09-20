@@ -9,11 +9,11 @@ export function LatestAppsBlock() {
   const apps = getLatestApps()
 
   if (apps.length === 0) {
-    return <HomeCard size="md" title="Latest Apps Added" emptyState emptyMessage="New apps coming soon." />
+    return <HomeCard size="md" icon="apps" title="Latest Apps Added" emptyState emptyMessage="New apps coming soon." />
   }
 
   return (
-    <HomeCard size="md" title="Latest Apps Added">
+    <HomeCard size="md" icon="apps" title="Latest Apps Added">
       <ExpandableList
         items={apps.map((a) => ({
           key: a.slug,
