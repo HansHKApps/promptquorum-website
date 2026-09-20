@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ko: 'AI 필드를 클라우드 API 대신 로컬 Ollama 모델로 실행할 수 있는 셀프호스팅 노코드 데이터베이스 및 앱 빌더',
   },
   reviewSlug: 'baserow-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: '2.3.4', versionSourceUrl: 'https://github.com/baserow/baserow/releases/tag/2.3.4' },
   lastVerifiedDate: '2026-09-18',
 }

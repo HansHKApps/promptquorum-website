@@ -35,4 +35,5 @@ export const app: ToolRecord = {
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'bmo-chatbot-review', // dedicated PromptQuorum review
+  pqReview: { date: '2026-09-20', version: '2.3.3', versionSourceUrl: 'https://github.com/longy2k/obsidian-bmo-chatbot/releases/tag/2.3.3' },
 }

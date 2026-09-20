@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'CTranslate2 양자화를 통한 빠른 Whisper 전사',
   },
   reviewSlug: 'faster-whisper-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.2.1', versionSourceUrl: 'https://github.com/SYSTRAN/faster-whisper/releases/tag/v1.2.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

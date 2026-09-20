@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ko: 'Kubernetes 위에서 생성형 및 예측형 AI 모델을 대규모로 배포하는 표준화된 셀프호스팅 모델 서빙 플랫폼',
   },
   reviewSlug: 'kserve-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v0.20.0', versionSourceUrl: 'https://github.com/kserve/kserve/releases/tag/v0.20.0' },
   lastVerifiedDate: '2026-09-18',
 }

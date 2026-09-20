@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '간단한 설정의 간소화된 Stable Diffusion UI — 2024년 이후 릴리스 없음(2년 이상)',
   },
   reviewSlug: 'fooocus-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v2.5.5', versionSourceUrl: 'https://github.com/lllyasviel/Fooocus/releases/tag/v2.5.5' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

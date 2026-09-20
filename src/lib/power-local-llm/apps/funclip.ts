@@ -32,5 +32,6 @@ export const app: ToolRecord = {
     ko: 'FunASR 전사와 LLM을 활용해 원하는 장면을 찾아 잘라내는 셀프호스팅 영상/오디오 클립 도구',
   },
   reviewSlug: 'funclip-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v2.2.1', versionSourceUrl: 'https://github.com/modelscope/FunClip/releases/tag/v2.2.1' },
   lastVerifiedDate: '2026-09-18',
 }

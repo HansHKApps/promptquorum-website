@@ -38,5 +38,6 @@ export const app: ToolRecord = {
     ko: 'Apple Silicon 기기에서 Claude Code를 클라우드나 API 비용 없이 100% 온디바이스로 실행할 수 있게 해주는 MLX 네이티브 로컬 서버',
   },
   reviewSlug: 'claude-code-local-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v0.3.0', versionSourceUrl: 'https://github.com/nicedreamzapp/claude-code-local/releases/tag/v0.3.0' },
   lastVerifiedDate: '2026-09-18',
 }

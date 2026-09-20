@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '자율 코드 생성 및 전체 프로젝트 구축',
   },
   reviewSlug: 'gpt-engineer-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/AntonOsika/gpt-engineer/releases/tag/v0.3.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
