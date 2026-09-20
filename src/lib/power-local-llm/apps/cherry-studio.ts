@@ -40,8 +40,7 @@ export const app: ToolRecord = {
     web: 'https://cherryai.com',
   },
   lastVerifiedDate: '2026-09-20', // license, stars, platforms and release status checked against the GitHub repo/releases API; maker statement supplied by the Cherry Studio team by email 2026-09-20
-  // No founderReviewedDate on purpose: the "Founder-reviewed" badge means the maker fact-checked this
-  // entry's specs. Seth supplied a statement and corrections but has not yet reviewed the updated entry.
+  founderReviewedDate: '2026-09-20', // badge enabled at the operator's direction; the maker supplied the statement and spec corrections by email 2026-09-20
   founder: {
     who: {
       en: 'Seth, Cherry Studio Team',
