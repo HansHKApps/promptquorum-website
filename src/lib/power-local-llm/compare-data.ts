@@ -119,6 +119,23 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   clustered: 'colClustered',
   managedCloud: 'colManagedCloud',
   noteApp: 'colNoteApp',
+  builtInEngine: 'colBuiltInEngine',
+  ollama: 'colOllama',
+  customEndpoint: 'colCustomEndpoint',
+  mcp: 'colMcp',
+  fileChat: 'colFileChat',
+  voice: 'colVoice',
+  offline: 'colOffline',
+  importModels: 'colImportModels',
+  modelDownloads: 'colModelDownloads',
+  visionInput: 'colVisionInput',
+  multiUser: 'colMultiUser',
+  memory: 'colMemory',
+  toolUse: 'colToolUse',
+  characterCards: 'colCharacterCards',
+  lorebooks: 'colLorebooks',
+  groupChats: 'colGroupChats',
+  localBackends: 'colLocalBackends',
   semanticSearch: 'colSemanticSearch',
   chatNotes: 'colChatNotes',
   webSearch: 'colWebSearch',
@@ -138,6 +155,11 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'vector-databases': 'segVector',
   'notes-integrations': 'segNotes',
   'local-search': 'segSearch',
+  'desktop-chat': 'segDesktop',
+  'mobile-chat': 'segMobile',
+  'web-chat': 'segWebSelf',
+  assistants: 'segAssistants',
+  roleplay: 'segRoleplay',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }
@@ -185,7 +207,7 @@ function commonCell(t: ToolRecord, key: string, cs: CompareStrings): string {
 }
 
 function inSegment(t: ToolRecord, seg: CompareSegment): boolean {
-  return t.categories.some((c) => seg.subs.includes(c))
+  return t.categories.some((c) => seg.subs.includes(c)) && (!seg.interfaces || t.interfaces.some((i) => seg.interfaces!.includes(i)))
 }
 
 /** A guide is only linked once it is publicly indexable, so nothing points at a draft. */
@@ -250,30 +272,34 @@ export function getCategoryLinksForReview(
   reviewSlug: string,
   lang: Language | string = 'en',
 ): {
-  guideLabel: string
-  guideSlug: string | null
+  /** Every comparison guide this tool belongs to (one per category group; a tool can be in several). */
+  guides: { label: string; slug: string | null }[]
   siblings: { name: string; reviewPath: string }[]
   ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
 } | null {
   const cs = compareStrings(lang)
   const tool = localAiApps.find((t) => reviewUrlSlug(t) === reviewSlug)
   if (!tool) return null
+  const guides: { label: string; slug: string | null }[] = []
+  let siblings: { name: string; reviewPath: string }[] = []
   for (const group of Object.keys(COMPARE_SEGMENTS) as CategoryGroupKey[]) {
     const seg = COMPARE_SEGMENTS[group].find((s) => inSegment(tool, s))
     if (!seg) continue
-    const siblings = localAiApps
-      .filter((t) => t.slug !== tool.slug && reviewUrlSlug(t) && inSegment(t, seg))
-      .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
-      .slice(0, 4)
-      .map((t) => ({ name: t.name, reviewPath: reviewPath(t)! }))
-    const gLabel = groupLabel(group, lang)
-    const segLabel = SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label
-    return {
-      guideLabel: `${gLabel} — ${segLabel}`,
-      guideSlug: publishedGuideSlug(group),
-      siblings,
-      ui: { blockTitle: cs.blockTitle, blockComparedIn: cs.blockComparedIn, blockCategory: cs.blockCategory, blockAlsoReviewed: cs.blockAlsoReviewed },
+    // Sibling reviews come from the first matching segment only (the FeatureAppPost "Competitors" cap of 4).
+    if (guides.length === 0) {
+      siblings = localAiApps
+        .filter((t) => t.slug !== tool.slug && reviewUrlSlug(t) && inSegment(t, seg))
+        .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
+        .slice(0, 4)
+        .map((t) => ({ name: t.name, reviewPath: reviewPath(t)! }))
     }
+    const segLabel = SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label
+    guides.push({ label: `${groupLabel(group, lang)} — ${segLabel}`, slug: publishedGuideSlug(group) })
   }
-  return null
+  if (guides.length === 0) return null
+  return {
+    guides,
+    siblings,
+    ui: { blockTitle: cs.blockTitle, blockComparedIn: cs.blockComparedIn, blockCategory: cs.blockCategory, blockAlsoReviewed: cs.blockAlsoReviewed },
+  }
 }

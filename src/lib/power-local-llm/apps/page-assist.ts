@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'page-assist-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.5.83', versionSourceUrl: 'https://github.com/n4ze3m/page-assist/releases/tag/v1.5.83' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { ollama: true, customEndpoint: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

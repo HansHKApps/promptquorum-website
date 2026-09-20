@@ -23,10 +23,11 @@ const schema = read(path.join(LIB, 'apps/compare-schema.ts'))
 const segStart = schema.indexOf('export const COMPARE_SEGMENTS')
 const segBlock = schema.slice(segStart, schema.indexOf('\n}\n', segStart))
 const segments = []
-for (const m of segBlock.matchAll(/key: '([a-z-]+)',\s*label: '[^']*',\s*subs: \[([^\]]*)\],\s*attributes: \[([\s\S]*?)\n\s{6}\],/g)) {
+for (const m of segBlock.matchAll(/key: '([a-z-]+)',\s*label: '[^']*',\s*subs: \[([^\]]*)\],\s*(?:interfaces: \[([^\]]*)\],\s*)?attributes: \[([\s\S]*?)\n\s{6}\],/g)) {
   const subs = [...m[2].matchAll(/'([a-z-]+)'/g)].map((x) => x[1])
-  const attrs = [...m[3].matchAll(/key: '([A-Za-z]+)'/g)].map((x) => x[1])
-  segments.push({ key: m[1], subs, attrs })
+  const ifaces = m[3] ? [...m[3].matchAll(/'([a-z]+)'/g)].map((x) => x[1]) : null
+  const attrs = [...m[4].matchAll(/key: '([A-Za-z]+)'/g)].map((x) => x[1])
+  segments.push({ key: m[1], subs, ifaces, attrs })
 }
 if (segments.length === 0) fail('could not parse any COMPARE_SEGMENTS from compare-schema.ts')
 
@@ -41,7 +42,8 @@ for (const f of readdirSync(appsDir)) {
   if (!f.endsWith('.ts') || ['categories.ts', 'types.ts', 'compare-schema.ts'].includes(f)) continue
   const src = read(path.join(appsDir, f))
   const cats = [...(src.match(/categories: \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([a-z-]+)'/g)].map((x) => x[1])
-  const mine = segments.filter((s) => s.subs.some((c) => cats.includes(c)))
+  const ifs = [...(src.match(/interfaces: \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([a-z]+)'/g)].map((x) => x[1])
+  const mine = segments.filter((s) => s.subs.some((c) => cats.includes(c)) && (!s.ifaces || ifs.some((i) => s.ifaces.includes(i))))
   const compare = src.match(/^\s*compare: \{([^}]*)\},/m)
   if (compare) {
     if (mine.length === 0) fail(`${f}: has a compare block but is in no comparison segment`)

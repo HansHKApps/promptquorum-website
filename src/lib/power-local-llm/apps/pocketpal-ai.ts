@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'iOS 및 Android용 무료 로컬 LLM 클라이언트',
   },
   reviewSlug: 'pocketpal-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voice: true, offline: true, importModels: true, modelDownloads: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

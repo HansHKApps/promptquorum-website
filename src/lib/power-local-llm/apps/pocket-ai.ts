@@ -37,6 +37,8 @@ export const app: ToolRecord = {
     ko: '28개 이상의 모델을 지원하는 무료 iOS 로컬 LLM 클라이언트',
   },
   reviewSlug: 'pocket-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: null, // TODO: not yet independently verified beyond the vendor's own claims
   founderReviewedDate: '2026-09-13', // matches the hardware-field verification note above
   founder: {

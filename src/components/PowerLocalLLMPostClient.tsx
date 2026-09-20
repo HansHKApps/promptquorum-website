@@ -80,8 +80,7 @@ interface Props {
    * same-segment sibling reviews (page-helpers.tsx, via getCategoryLinksForReview).
    */
   categoryLinks?: {
-    guideLabel: string
-    guideSlug: string | null
+    guides: { label: string; slug: string | null }[]
     siblings: { name: string; reviewPath: string }[]
     ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
   }
@@ -1314,17 +1313,22 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           <aside className="mb-6 rounded-xl border border-tone-action-edge bg-tone-action p-4 text-sm">
             <p className="font-bold text-text-primary mb-1">{categoryLinks.ui.blockTitle}</p>
             <p className="text-text-secondary">
-              {categoryLinks.guideSlug ? (
-                <>
-                  {categoryLinks.ui.blockComparedIn}{' '}
-                  <Link href={`${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${categoryLinks.guideSlug}`} className="font-semibold text-primary hover:underline">
-                    {categoryLinks.guideLabel}
-                  </Link>
-                  .
-                </>
-              ) : (
-                <>{categoryLinks.ui.blockCategory}: {categoryLinks.guideLabel}.</>
-              )}
+              {categoryLinks.guides.map((g, gi) => (
+                <span key={g.label}>
+                  {gi > 0 && ' · '}
+                  {g.slug ? (
+                    <>
+                      {gi === 0 && <>{categoryLinks.ui.blockComparedIn}{' '}</>}
+                      <Link href={`${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${g.slug}`} className="font-semibold text-primary hover:underline">
+                        {g.label}
+                      </Link>
+                    </>
+                  ) : (
+                    <>{categoryLinks.ui.blockCategory}: {g.label}</>
+                  )}
+                </span>
+              ))}
+              {'.'}
               {categoryLinks.siblings.length > 0 && (
                 <>
                   {' '}

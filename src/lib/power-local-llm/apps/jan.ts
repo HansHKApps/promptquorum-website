@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'jan-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { openaiApi: true, desktopApp: true, modelLibrary: true },
+  compare: { desktopApp: true, builtInEngine: true, mcp: true, openaiApi: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

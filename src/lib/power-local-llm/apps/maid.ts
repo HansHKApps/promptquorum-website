@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'maid-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v3.0.0', versionSourceUrl: 'https://github.com/Mobile-Artificial-Intelligence/maid/releases/tag/v3.0.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true, importModels: true, modelDownloads: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

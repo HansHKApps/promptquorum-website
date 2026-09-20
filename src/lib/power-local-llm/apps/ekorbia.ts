@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Rust/Tauri 기반 무료 프라이버시 채팅 워크스페이스, Mac에서 온디바이스 엔진',
   },
   reviewSlug: 'ekorbia-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { builtInEngine: true, ollama: true, customEndpoint: true, fileChat: true, voice: true },
   lastVerifiedDate: '2026-09-07',
 }

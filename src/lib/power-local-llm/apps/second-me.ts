@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '자신의 데이터로 개인화된 AI 자아 학습',
   },
   reviewSlug: 'second-me-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

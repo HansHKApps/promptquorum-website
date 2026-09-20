@@ -46,5 +46,7 @@ export const app: ToolRecord = {
     ar: 'زميل عمل بالذكاء الاصطناعي لسطح المكتب والسحابة يحزم حزمة وكيل OpenClaw مفتوحة المصدر، يعمل محلياً أو في السحابة',
     ko: '오픈소스 OpenClaw 에이전트 스택을 패키징한 데스크톱 및 클라우드 AI 동료, 로컬 또는 클라우드에서 실행',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

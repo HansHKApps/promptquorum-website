@@ -10,7 +10,7 @@
 // each with its own attributes; the article and the tool compare within a segment only. Groups
 // with no segments yet render only the common columns until their pilot defines them.
 
-import type { CategoryGroupKey, CategorySubKey } from './categories'
+import type { CategoryGroupKey, CategorySubKey, InterfaceKey } from './categories'
 
 export type CompareAttributeKind = 'boolean' | 'text' | 'number' | 'list'
 
@@ -37,6 +37,8 @@ export interface CompareSegment {
   label: string
   /** A tool belongs to the segment when any of its `categories` is in this list. */
   subs: CategorySubKey[]
+  /** Optional: also require the tool to be delivered through one of these interfaces (desktop/mobile/web/cli/…). */
+  interfaces?: InterfaceKey[]
   attributes: CompareAttribute[]
 }
 
@@ -208,7 +210,71 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
-  'chat-assistants': [],
+  // Pilot 5. general-chat-clients is split by interface (desktop / mobile / web+CLI) because those are different products;
+  // a tool delivered through several interfaces appears in each matching segment.
+  'chat-assistants': [
+    {
+      key: 'desktop-chat',
+      label: 'Desktop chat apps',
+      subs: ['general-chat-clients'],
+      interfaces: ['desktop'],
+      attributes: [
+        { key: 'builtInEngine', label: 'Runs models itself', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'customEndpoint', label: 'OpenAI-compatible endpoints', kind: 'boolean' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+        { key: 'fileChat', label: 'Chat with your files', kind: 'boolean' },
+        { key: 'voice', label: 'Voice input / output', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'mobile-chat',
+      label: 'Mobile chat apps',
+      subs: ['general-chat-clients'],
+      interfaces: ['mobile'],
+      attributes: [
+        { key: 'offline', label: 'Runs fully offline', kind: 'boolean' },
+        { key: 'importModels', label: 'Import your own models', kind: 'boolean' },
+        { key: 'modelDownloads', label: 'In-app model downloads', kind: 'boolean' },
+        { key: 'visionInput', label: 'Image input', kind: 'boolean' },
+        { key: 'voice', label: 'Voice input / output', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'web-chat',
+      label: 'Web & CLI chat clients',
+      subs: ['general-chat-clients'],
+      interfaces: ['web', 'cli'],
+      attributes: [
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'multiUser', label: 'Multiple users', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'customEndpoint', label: 'OpenAI-compatible endpoints', kind: 'boolean' },
+        { key: 'fileChat', label: 'Chat with your files', kind: 'boolean' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'assistants',
+      label: 'Personal assistants',
+      subs: ['personal-assistants'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'voice', label: 'Voice input / output', kind: 'boolean' },
+        { key: 'memory', label: 'Persistent memory', kind: 'boolean' },
+        { key: 'toolUse', label: 'Tool use / actions', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'roleplay',
+      label: 'Roleplay & companions',
+      subs: ['roleplay-companions'],
+      attributes: [
+        { key: 'lorebooks', label: 'Lorebooks / world info', kind: 'boolean' },
+        { key: 'groupChats', label: 'Group chats', kind: 'boolean' },
+      ],
+    },
+  ],
   'code-development': [],
   'train-operate': [],
 }
@@ -220,7 +286,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
 export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> = {
   'voice-audio': 'local-llm-voice-audio-compared',
   'run-serve': 'local-llm-run-serve-compared',
-  'chat-assistants': null,
+  'chat-assistants': 'local-llm-chat-assistants-compared',
   'code-development': null,
   'knowledge-retrieval': 'local-llm-knowledge-retrieval-compared',
   'images-video': 'local-llm-images-video-compared',

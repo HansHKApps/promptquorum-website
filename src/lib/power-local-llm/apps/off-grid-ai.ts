@@ -40,5 +40,7 @@ export const app: ToolRecord = {
     ko: 'iOS, Android, macOS, Windows용 무료 오픈소스 크로스플랫폼 로컬 AI',
   },
   reviewSlug: 'off-grid-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { builtInEngine: true, ollama: true, fileChat: true, voice: true, offline: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
 }

@@ -39,6 +39,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'sidekick-review', // dedicated PromptQuorum review — added 2026-09-19
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, citations: true },
+  compare: { localLlm: true, citations: true, builtInEngine: true, customEndpoint: true, fileChat: true },
   lastVerifiedDate: '2026-09-18',
 }

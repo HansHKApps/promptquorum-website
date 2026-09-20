@@ -35,5 +35,7 @@ export const app: ToolRecord = {
     ko: '자체 API 키를 이용한 선택적 클라우드 폴백을 지원하는 로컬 우선 iOS AI 비서',
   },
   reviewSlug: 'solair-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voice: true, offline: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
 }

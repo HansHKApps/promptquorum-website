@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'nextchat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v2.16.1', versionSourceUrl: 'https://github.com/ChatGPTNextWeb/NextChat/releases/tag/v2.16.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, customEndpoint: true, mcp: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

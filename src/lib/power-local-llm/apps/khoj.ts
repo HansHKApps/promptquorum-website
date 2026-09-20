@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'khoj-ai-second-brain-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, multiFormat: true, desktopApp: true },
+  compare: { localLlm: true, multiFormat: true, desktopApp: true, voice: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

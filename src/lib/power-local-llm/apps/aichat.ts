@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'aichat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.30.0', versionSourceUrl: 'https://github.com/sigoden/aichat/releases/tag/v0.30.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { ollama: true, customEndpoint: true, mcp: true, fileChat: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

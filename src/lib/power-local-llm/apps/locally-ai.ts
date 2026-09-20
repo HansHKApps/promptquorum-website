@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'iPhone/iPad/Mac에서 MLX로 오픈 모델을 온디바이스 실행',
   },
   reviewSlug: 'locally-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voice: true, offline: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

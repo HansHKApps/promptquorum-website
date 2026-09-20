@@ -42,6 +42,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'toolneuron-review',
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { extensions: true, apiServer: true },
+  compare: { apiServer: true, voice: true, offline: true, importModels: true, visionInput: true },
   lastVerifiedDate: null,
 }

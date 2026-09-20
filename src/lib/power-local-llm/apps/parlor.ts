@@ -40,6 +40,6 @@ export const app: ToolRecord = {
   },
   pqReview: { date: '2026-09-20', version: 'v2.0.0', versionSourceUrl: 'https://github.com/fikrikarim/parlor/releases/tag/v2.0.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { fullyLocal: true, bargeIn: true },
+  compare: { localLlm: true, voice: true, toolUse: true },
   lastVerifiedDate: '2026-09-18',
 }

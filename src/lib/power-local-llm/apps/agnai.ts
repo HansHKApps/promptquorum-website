@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ar: 'واجهة لعب أدوار ببطاقات شخصيات',
     ko: '캐릭터 카드가 있는 롤플레이 프런트엔드',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { lorebooks: true, groupChats: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

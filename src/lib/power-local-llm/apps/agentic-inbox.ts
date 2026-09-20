@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ko: '자신의 Cloudflare 계정에서 전적으로 실행되는 셀프호스팅 이메일 클라이언트로, AI 에이전트가 메일을 읽고 검색하며 답장 초안을 작성',
   },
   mcpSupport: true, // README documents an MCP server at /mcp for external AI tools to operate on a mailbox — verified 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { toolUse: true },
   lastVerifiedDate: '2026-09-18',
 }

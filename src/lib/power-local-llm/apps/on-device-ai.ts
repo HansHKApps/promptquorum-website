@@ -39,5 +39,7 @@ export const app: ToolRecord = {
     ko: 'iPhone, iPad, Apple 실리콘 Mac용 온디바이스 채팅 앱, 다운로드 가능한 200개 이상의 로컬 모델(GGUF, MLX) 지원',
   },
   reviewSlug: 'on-device-ai-review',
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { builtInEngine: true, ollama: true, fileChat: true, voice: true, offline: true, importModels: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
 }

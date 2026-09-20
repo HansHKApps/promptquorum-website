@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '가장 인기 있는 ChatGPT 스타일 셀프호스팅 인터페이스, RAG 내장',
   },
   reviewSlug: 'open-webui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, ollama: true, customEndpoint: true, mcp: true, fileChat: true, multiUser: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'big-agi-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v2.1.0', versionSourceUrl: 'https://github.com/enricoros/big-AGI/releases/tag/v2.1.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, ollama: true, customEndpoint: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
