@@ -1,4 +1,5 @@
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { founderText } from '@/lib/power-local-llm/founderText'
 
 export interface FounderReviewEntry {
   slug: string
@@ -25,9 +26,9 @@ export function getFounderReviews(limit = 10): FounderReviewEntry[] {
       slug: tool.slug,
       appName: tool.name,
       founderWho: tool.founder?.who.en ?? '',
-      excerpt: tool.founder?.why ?? '',
+      excerpt: tool.founder ? founderText(tool.founder.why, 'en') : '',
       date: tool.founderReviewedDate ?? tool.founder?.providedDate ?? '',
-      url: tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/power-local-llm/local-llm-software-directory#${tool.slug}`,
+      url: tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`,
     }))
     .filter((entry) => entry.date !== '')
     .sort((a, b) => b.date.localeCompare(a.date))

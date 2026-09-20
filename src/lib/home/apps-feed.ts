@@ -11,7 +11,7 @@ export interface LatestAppEntry {
 }
 
 function toolUrl(tool: ToolRecord): string {
-  return tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/power-local-llm/local-llm-software-directory#${tool.slug}`
+  return tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`
 }
 
 /**
