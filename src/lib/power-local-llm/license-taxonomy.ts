@@ -316,3 +316,26 @@ export function matchLicenseFamilies(raw: string): LicenseFamily[] {
 export function getLicenseFamily(key: LicenseFamilyKey): LicenseFamily {
   return FAMILY_BY_KEY[key]
 }
+
+/**
+ * Canonical display label for a raw `license` string, so the same licence is never
+ * shown as both "Apache 2.0" and "Apache-2.0" in a comparison table. Only rewrites the
+ * exact plain forms; qualified strings ("Apache 2.0 (variant)", custom licences) pass
+ * through unchanged so no nuance is lost.
+ */
+const LICENSE_LABEL_ALIASES: Record<string, string> = {
+  'apache 2.0': 'Apache-2.0',
+  'apache-2.0': 'Apache-2.0',
+  'agpl 3.0': 'AGPL-3.0',
+  'agpl-3.0': 'AGPL-3.0',
+  'gpl 3.0': 'GPL-3.0',
+  'gpl-3.0': 'GPL-3.0',
+  'mpl 2.0': 'MPL-2.0',
+  'mpl-2.0': 'MPL-2.0',
+  'closed source': 'Proprietary',
+  proprietary: 'Proprietary',
+}
+
+export function normalizeLicenseLabel(raw: string): string {
+  return LICENSE_LABEL_ALIASES[raw.trim().toLowerCase()] ?? raw
+}
