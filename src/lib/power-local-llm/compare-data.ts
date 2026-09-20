@@ -272,30 +272,34 @@ export function getCategoryLinksForReview(
   reviewSlug: string,
   lang: Language | string = 'en',
 ): {
-  guideLabel: string
-  guideSlug: string | null
+  /** Every comparison guide this tool belongs to (one per category group; a tool can be in several). */
+  guides: { label: string; slug: string | null }[]
   siblings: { name: string; reviewPath: string }[]
   ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
 } | null {
   const cs = compareStrings(lang)
   const tool = localAiApps.find((t) => reviewUrlSlug(t) === reviewSlug)
   if (!tool) return null
+  const guides: { label: string; slug: string | null }[] = []
+  let siblings: { name: string; reviewPath: string }[] = []
   for (const group of Object.keys(COMPARE_SEGMENTS) as CategoryGroupKey[]) {
     const seg = COMPARE_SEGMENTS[group].find((s) => inSegment(tool, s))
     if (!seg) continue
-    const siblings = localAiApps
-      .filter((t) => t.slug !== tool.slug && reviewUrlSlug(t) && inSegment(t, seg))
-      .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
-      .slice(0, 4)
-      .map((t) => ({ name: t.name, reviewPath: reviewPath(t)! }))
-    const gLabel = groupLabel(group, lang)
-    const segLabel = SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label
-    return {
-      guideLabel: `${gLabel} — ${segLabel}`,
-      guideSlug: publishedGuideSlug(group),
-      siblings,
-      ui: { blockTitle: cs.blockTitle, blockComparedIn: cs.blockComparedIn, blockCategory: cs.blockCategory, blockAlsoReviewed: cs.blockAlsoReviewed },
+    // Sibling reviews come from the first matching segment only (the FeatureAppPost "Competitors" cap of 4).
+    if (guides.length === 0) {
+      siblings = localAiApps
+        .filter((t) => t.slug !== tool.slug && reviewUrlSlug(t) && inSegment(t, seg))
+        .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
+        .slice(0, 4)
+        .map((t) => ({ name: t.name, reviewPath: reviewPath(t)! }))
     }
+    const segLabel = SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label
+    guides.push({ label: `${groupLabel(group, lang)} — ${segLabel}`, slug: publishedGuideSlug(group) })
   }
-  return null
+  if (guides.length === 0) return null
+  return {
+    guides,
+    siblings,
+    ui: { blockTitle: cs.blockTitle, blockComparedIn: cs.blockComparedIn, blockCategory: cs.blockCategory, blockAlsoReviewed: cs.blockAlsoReviewed },
+  }
 }
