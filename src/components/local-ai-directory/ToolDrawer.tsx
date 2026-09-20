@@ -18,6 +18,7 @@ import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
+import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
@@ -181,7 +182,9 @@ export function ToolDrawer({
     ]
 
     if (app.founder) {
-      lines.push('', `${t('fromTheMaker', lang)}:`, app.founder.why, `${t('bestFor', lang)} ${app.founder.best}`, `${t('limits', lang)} ${app.founder.limits}`)
+      lines.push('', `${t('fromTheMaker', lang)}:`, founderText(app.founder.why, lang))
+      if (app.founder.best) lines.push(`${t('bestFor', lang)} ${founderText(app.founder.best, lang)}`)
+      if (app.founder.limits) lines.push(`${t('limits', lang)} ${founderText(app.founder.limits, lang)}`)
     }
 
     if (app.pqReview) {
@@ -346,15 +349,15 @@ export function ToolDrawer({
               {/* From the Maker */}
               <section className="mb-5">
                 <h3 className="text-sm font-bold text-text-primary mb-2">{t('fromTheMaker', lang)}</h3>
-                {app.founder?.fullQuote ? (
+                {app.founder && founderParagraphs(app.founder.fullQuote, lang) ? (
                   // A verbatim quote exists — show his own words only, not a
                   // PromptQuorum paraphrase mixed in underneath.
-                  <FounderFullQuote paragraphs={app.founder.fullQuote} source={app.founder.who[lang] ?? app.founder.who.en} />
+                  <FounderFullQuote paragraphs={founderParagraphs(app.founder.fullQuote, lang) ?? []} source={app.founder.who[lang] ?? app.founder.who.en} />
                 ) : app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
-                    <p>{app.founder.why}</p>
-                    <p><span className="font-semibold text-text-primary">{t('bestFor', lang)}</span> {app.founder.best}</p>
-                    <p><span className="font-semibold text-text-primary">{t('limits', lang)}</span> {app.founder.limits}</p>
+                    <p>{founderText(app.founder.why, lang)}</p>
+                    {app.founder.best && <p><span className="font-semibold text-text-primary">{t('bestFor', lang)}</span> {founderText(app.founder.best, lang)}</p>}
+                    {app.founder.limits && <p><span className="font-semibold text-text-primary">{t('limits', lang)}</span> {founderText(app.founder.limits, lang)}</p>}
                   </div>
                 ) : (
                   <FounderClaimBox key={app.slug} appName={app.name} lang={lang} />

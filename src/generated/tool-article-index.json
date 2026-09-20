@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "baserow-review",
         "title": "Baserow Review 2026: A No-Code Database With a Local-AI Field",
@@ -70,14 +78,6 @@
         "slug": "shimmy-review",
         "title": "Shimmy Review 2026: A 5MB Rust Alternative to Ollama",
         "url": "/power-local-llm/shimmy-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "swiftlm-review",
-        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -836,6 +836,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "little-coder-review",
         "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
@@ -896,14 +904,6 @@
         "slug": "gpustack-review",
         "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
         "url": "/power-local-llm/gpustack-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kilo-code-review",
-        "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
-        "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
@@ -1132,6 +1132,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
@@ -1180,14 +1188,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "h2ogpt-review-2026",
         "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
@@ -1218,19 +1218,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enchanted-review",
         "title": "Enchanted Review 2026: Native macOS/iOS Ollama Client",
         "url": "/power-local-llm/enchanted-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -1298,9 +1298,9 @@
       {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
         "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -2192,9 +2192,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Big-AGI": {
@@ -8954,6 +8962,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "aiclient2api-review",
         "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
@@ -9016,17 +9032,9 @@
         "url": "/power-local-llm/kserve-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "little-coder-review",
-        "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
-        "url": "/power-local-llm/little-coder-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 174,
     "capped": true
   },
   "Qdrant": {
