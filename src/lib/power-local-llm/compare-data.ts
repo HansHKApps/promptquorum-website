@@ -23,7 +23,8 @@ export interface CompareRow {
   /** Bare domain from the tool record, no scheme. */
   url: string | null
   /** Slug of the tool's own review article, when it has one. */
-  reviewSlug: string | null
+  /** Unprefixed path to the tool's own review (e.g. /power-local-llm/piper-tts-review), or null. */
+  reviewPath: string | null
   cells: Record<string, string>
 }
 
@@ -62,8 +63,10 @@ export interface CategoryCompareData {
 
 // Tool slug -> its dedicated review's PUBLIC url slug (build-time index; the tool's `reviewSlug` is the
 // article file key, which can differ from the URL slug, e.g. animatediff).
-const REVIEW_URL_SLUG = featureReviewIndex as Record<string, { urlSlug: string }>
+const REVIEW_URL_SLUG = featureReviewIndex as Record<string, { urlSlug: string; url: string }>
 const reviewUrlSlug = (t: ToolRecord): string | null => REVIEW_URL_SLUG[t.slug]?.urlSlug ?? null
+// Unprefixed path to the review, INCLUDING its section (most are /power-local-llm/…, a few live under /local-llms/…).
+const reviewPath = (t: ToolRecord): string | null => REVIEW_URL_SLUG[t.slug]?.url ?? null
 
 const OS_LABEL: Record<string, string> = { mac: 'macOS', win: 'Windows', linux: 'Linux', ios: 'iOS', android: 'Android', web: 'Web' }
 
@@ -177,7 +180,7 @@ export function buildCategoryCompareData(group: CategoryGroupKey, lang: Language
         const cells: Record<string, string> = {}
         for (const c of COMMON_COLUMNS) cells[c.key] = commonCell(t, c.key, cs)
         for (const a of seg.attributes) cells[a.key] = valueCell(t.compare?.[a.key], cs)
-        return { slug: t.slug, name: t.name, url: t.url, reviewSlug: reviewUrlSlug(t), cells }
+        return { slug: t.slug, name: t.name, url: t.url, reviewPath: reviewPath(t), cells }
       })
     return { key: seg.key, label: SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label, columns, rows }
   })
@@ -221,7 +224,7 @@ export function getCategoryLinksForReview(
 ): {
   guideLabel: string
   guideSlug: string | null
-  siblings: { name: string; reviewSlug: string }[]
+  siblings: { name: string; reviewPath: string }[]
   ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
 } | null {
   const cs = compareStrings(lang)
@@ -234,7 +237,7 @@ export function getCategoryLinksForReview(
       .filter((t) => t.slug !== tool.slug && reviewUrlSlug(t) && inSegment(t, seg))
       .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
       .slice(0, 4)
-      .map((t) => ({ name: t.name, reviewSlug: reviewUrlSlug(t)! }))
+      .map((t) => ({ name: t.name, reviewPath: reviewPath(t)! }))
     const gLabel = groupLabel(group, lang)
     const segLabel = SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label
     return {

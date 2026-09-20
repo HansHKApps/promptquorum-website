@@ -37,8 +37,8 @@ export function CompareTable({ columns, rows, ui, localePrefix = '' }: CompareTa
           {rows.map((r) => (
             <tr key={r.slug} className="border-t border-border">
               <th scope="row" className="sticky left-0 bg-white px-3 py-2 font-semibold text-text-primary">
-                {r.reviewSlug ? (
-                  <Link href={`${localePrefix}/power-local-llm/${r.reviewSlug}`} className="text-primary hover:underline">
+                {r.reviewPath ? (
+                  <Link href={`${localePrefix}${r.reviewPath}`} className="text-primary hover:underline">
                     {r.name}
                   </Link>
                 ) : (
@@ -51,8 +51,8 @@ export function CompareTable({ columns, rows, ui, localePrefix = '' }: CompareTa
                 </td>
               ))}
               <td className="whitespace-nowrap px-3 py-2">
-                {r.reviewSlug ? (
-                  <Link href={`${localePrefix}/power-local-llm/${r.reviewSlug}`} className="font-semibold text-primary hover:underline">
+                {r.reviewPath ? (
+                  <Link href={`${localePrefix}${r.reviewPath}`} className="font-semibold text-primary hover:underline">
                     {ui.readReview} →
                   </Link>
                 ) : (
