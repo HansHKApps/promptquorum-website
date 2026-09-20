@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'Roleplay and story-writing users who want a zero-install local LLM app with a bundled editor, and anyone comparing single-file inference engines to Ollama, LM Studio, or raw llama.cpp',
     primaryTerm: 'KoboldCpp',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is KoboldCpp still maintained, and what does it actually add over llama.cpp?',
-        answer: 'Yes — KoboldCpp ships frequent releases (v1.120 as of late August 2026) from its GitHub repository. It adds a bundled KoboldAI Lite web UI with story-editing and roleplay tools, a single-file zero-install distribution, and built-in image generation and speech-to-text, none of which bare llama.cpp provides on its own.',
+        answer: 'Yes — KoboldCpp ships frequent releases (v1.121 as of September 2026) from its GitHub repository. It adds a bundled KoboldAI Lite web UI with story-editing and roleplay tools, a single-file zero-install distribution, and built-in image generation and speech-to-text, none of which bare llama.cpp provides on its own.',
         bullets: [
           'Single executable file — no installer, no Python, no Docker',
           'License: AGPL 3.0 (copyleft); built on llama.cpp (MIT) underneath',
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is KoboldCpp?',
         content: [
           "**KoboldCpp is a free, single-file program that runs GGUF-format language models locally, built on top of the llama.cpp inference engine and maintained by a pseudonymous developer known as LostRuins.** It descends from the original KoboldAI project's interface conventions, adapted to run on llama.cpp's backend instead of a Python-based inference stack.",
-          'The project is hosted at [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) and released under the GNU Affero General Public License version 3 (AGPL 3.0) — a copyleft license, distinct from the permissive MIT license llama.cpp itself uses underneath. Releases ship frequently; the version current as of testing (late August 2026) was v1.120.',
+          'The project is hosted at [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) and released under the GNU Affero General Public License version 3 (AGPL 3.0) — a copyleft license, distinct from the permissive MIT license llama.cpp itself uses underneath. Releases ship frequently; the version current as of testing (September 2026) was v1.121.',
         ],
         items: [
           'Distributed as one executable per platform — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is KoboldCpp?', a: 'KoboldCpp is a free, single-file local LLM application built on top of llama.cpp. It runs GGUF models with no installation step and ships with the KoboldAI Lite web interface, built for story writing and roleplay.' },
-          { q: 'Who maintains KoboldCpp?', a: 'KoboldCpp is maintained by a pseudonymous developer known as LostRuins, on the repository github.com/LostRuins/koboldcpp. Releases have shipped frequently, with v1.120 current as of late August 2026.' },
+          { q: 'Who maintains KoboldCpp?', a: 'KoboldCpp is maintained by a pseudonymous developer known as LostRuins, on the repository github.com/LostRuins/koboldcpp. Releases have shipped frequently, with v1.121 current as of September 2026.' },
           { q: 'Is KoboldCpp free?', a: 'Yes. KoboldCpp is free and open-source under the AGPL 3.0 license. There is no paid tier and no hosted product — every KoboldCpp deployment runs on hardware you control.' },
           { q: 'What license is KoboldCpp released under?', a: 'AGPL 3.0 (GNU Affero General Public License version 3), a copyleft license. This differs from the MIT license used by llama.cpp, the engine KoboldCpp is built on underneath.' },
           { q: 'Does KoboldCpp require installation?', a: 'No. It is distributed as a single executable file per platform (Windows, Linux, macOS ARM64) — download it and run it directly, with no installer, Python environment, or Docker container needed.' },
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'Rollenspiel- und Story-Schreiber, die eine installationsfreie lokale LLM-App mit integriertem Editor suchen, sowie alle, die Single-File-Inferenz-Engines mit Ollama, LM Studio oder rohem llama.cpp vergleichen',
     primaryTerm: 'KoboldCpp',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wird KoboldCpp noch gepflegt, und was bringt es gegenüber llama.cpp zusätzlich?',
-        answer: 'Ja — KoboldCpp veröffentlicht regelmäßig Releases (v1.120 Stand Ende August 2026) im GitHub-Repository. Es bringt eine gebündelte KoboldAI-Lite-Weboberfläche mit Story- und Rollenspiel-Editier-Tools, eine installationsfreie Single-File-Distribution sowie eingebaute Bildgenerierung und Sprache-zu-Text mit — nichts davon bietet reines llama.cpp von sich aus.',
+        answer: 'Ja — KoboldCpp veröffentlicht regelmäßig Releases (v1.121 Stand September 2026) im GitHub-Repository. Es bringt eine gebündelte KoboldAI-Lite-Weboberfläche mit Story- und Rollenspiel-Editier-Tools, eine installationsfreie Single-File-Distribution sowie eingebaute Bildgenerierung und Sprache-zu-Text mit — nichts davon bietet reines llama.cpp von sich aus.',
         bullets: [
           'Einzelne ausführbare Datei — kein Installer, kein Python, kein Docker',
           'Lizenz: AGPL 3.0 (Copyleft); baut im Hintergrund auf llama.cpp (MIT) auf',
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist KoboldCpp?',
         content: [
           '**KoboldCpp ist ein kostenloses Ein-Datei-Programm, das GGUF-Sprachmodelle lokal ausführt, aufgebaut auf der llama.cpp-Inferenz-Engine und gepflegt von einem pseudonymen Entwickler namens LostRuins.** Es stammt von den Oberflächen-Konventionen des ursprünglichen KoboldAI-Projekts ab, angepasst für den Betrieb auf llama.cpps Backend statt eines Python-basierten Inferenz-Stacks.',
-          'Das Projekt liegt unter [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) und steht unter der GNU Affero General Public License Version 3 (AGPL 3.0) — einer Copyleft-Lizenz, die sich von der freizügigen MIT-Lizenz unterscheidet, die llama.cpp selbst im Hintergrund verwendet. Releases erscheinen häufig; die zum Testzeitpunkt aktuelle Version (Ende August 2026) war v1.120.',
+          'Das Projekt liegt unter [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) und steht unter der GNU Affero General Public License Version 3 (AGPL 3.0) — einer Copyleft-Lizenz, die sich von der freizügigen MIT-Lizenz unterscheidet, die llama.cpp selbst im Hintergrund verwendet. Releases erscheinen häufig; die zum Testzeitpunkt aktuelle Version (September 2026) war v1.121.',
         ],
         items: [
           'Als eine ausführbare Datei je Plattform verteilt — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist KoboldCpp?', a: 'KoboldCpp ist eine kostenlose, auf llama.cpp aufgebaute lokale LLM-Anwendung in einer einzigen Datei. Sie führt GGUF-Modelle ohne Installationsschritt aus und bringt die KoboldAI-Lite-Weboberfläche für Story-Schreiben und Rollenspiel mit.' },
-          { q: 'Wer pflegt KoboldCpp?', a: 'KoboldCpp wird von einem pseudonymen Entwickler namens LostRuins im Repository github.com/LostRuins/koboldcpp gepflegt. Releases erscheinen häufig, mit v1.120 als aktueller Version Stand Ende August 2026.' },
+          { q: 'Wer pflegt KoboldCpp?', a: 'KoboldCpp wird von einem pseudonymen Entwickler namens LostRuins im Repository github.com/LostRuins/koboldcpp gepflegt. Releases erscheinen häufig, mit v1.121 als aktueller Version Stand September 2026.' },
           { q: 'Ist KoboldCpp kostenlos?', a: 'Ja. KoboldCpp ist kostenlos und quelloffen unter der AGPL-3.0-Lizenz. Es gibt keine kostenpflichtige Stufe und kein gehostetes Produkt — jede KoboldCpp-Installation läuft auf selbst kontrollierter Hardware.' },
           { q: 'Unter welcher Lizenz steht KoboldCpp?', a: 'AGPL 3.0 (GNU Affero General Public License Version 3), eine Copyleft-Lizenz. Das unterscheidet sich von der MIT-Lizenz, die llama.cpp, die Engine im Hintergrund, verwendet.' },
           { q: 'Erfordert KoboldCpp eine Installation?', a: 'Nein. Es wird als einzelne ausführbare Datei je Plattform (Windows, Linux, macOS ARM64) verteilt — herunterladen und direkt starten, ohne Installer, Python-Umgebung oder Docker-Container.' },
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'Utilisateurs de jeu de rôle et d\'écriture narrative cherchant une application LLM locale sans installation avec éditeur intégré, et toute personne comparant les moteurs d\'inférence monofichiers à Ollama, LM Studio ou llama.cpp brut',
     primaryTerm: 'KoboldCpp',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'KoboldCpp est-il toujours maintenu, et qu\'apporte-t-il vraiment de plus que llama.cpp ?',
-        answer: 'Oui — KoboldCpp publie des versions fréquentes (v1.120 fin août 2026) sur son dépôt GitHub. Il ajoute une interface web KoboldAI Lite intégrée avec des outils d\'écriture et de jeu de rôle, une distribution monofichier sans installation, ainsi que la génération d\'images et la transcription vocale intégrées — rien de tout cela n\'existe dans llama.cpp seul.',
+        answer: 'Oui — KoboldCpp publie des versions fréquentes (v1.121 en septembre 2026) sur son dépôt GitHub. Il ajoute une interface web KoboldAI Lite intégrée avec des outils d\'écriture et de jeu de rôle, une distribution monofichier sans installation, ainsi que la génération d\'images et la transcription vocale intégrées — rien de tout cela n\'existe dans llama.cpp seul.',
         bullets: [
           'Un seul exécutable — pas d\'installateur, pas de Python, pas de Docker',
           'Licence : AGPL 3.0 (copyleft) ; construit sur llama.cpp (MIT) en arrière-plan',
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu\'est-ce que KoboldCpp ?',
         content: [
           '**KoboldCpp est un programme gratuit en un seul fichier qui fait tourner localement des modèles de langage au format GGUF, construit sur le moteur d\'inférence llama.cpp et maintenu par un développeur pseudonyme connu sous le nom de LostRuins.** Il hérite des conventions d\'interface du projet KoboldAI original, adaptées pour fonctionner sur le backend de llama.cpp plutôt que sur une pile d\'inférence Python.',
-          'Le projet est hébergé sur [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) et publié sous licence GNU Affero General Public License version 3 (AGPL 3.0) — une licence copyleft, distincte de la licence MIT permissive utilisée par llama.cpp lui-même en arrière-plan. Les versions sortent fréquemment ; la version en vigueur au moment des tests (fin août 2026) était la v1.120.',
+          'Le projet est hébergé sur [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) et publié sous licence GNU Affero General Public License version 3 (AGPL 3.0) — une licence copyleft, distincte de la licence MIT permissive utilisée par llama.cpp lui-même en arrière-plan. Les versions sortent fréquemment ; la version en vigueur au moment des tests (septembre 2026) était la v1.121.',
         ],
         items: [
           'Distribué comme un exécutable par plateforme — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce que KoboldCpp ?', a: 'KoboldCpp est une application LLM locale gratuite, en un seul fichier, construite sur llama.cpp. Elle exécute des modèles GGUF sans étape d\'installation et embarque l\'interface web KoboldAI Lite, conçue pour l\'écriture narrative et le jeu de rôle.' },
-          { q: 'Qui maintient KoboldCpp ?', a: 'KoboldCpp est maintenu par un développeur pseudonyme connu sous le nom de LostRuins, sur le dépôt github.com/LostRuins/koboldcpp. Les versions sortent fréquemment, la v1.120 étant en vigueur fin août 2026.' },
+          { q: 'Qui maintient KoboldCpp ?', a: 'KoboldCpp est maintenu par un développeur pseudonyme connu sous le nom de LostRuins, sur le dépôt github.com/LostRuins/koboldcpp. Les versions sortent fréquemment, la v1.121 étant en vigueur en septembre 2026.' },
           { q: 'KoboldCpp est-il gratuit ?', a: 'Oui. KoboldCpp est gratuit et open source sous licence AGPL 3.0. Il n\'existe aucune offre payante ni produit hébergé — chaque déploiement de KoboldCpp tourne sur du matériel que vous contrôlez.' },
           { q: 'Sous quelle licence KoboldCpp est-il publié ?', a: 'AGPL 3.0 (GNU Affero General Public License version 3), une licence copyleft. Cela diffère de la licence MIT utilisée par llama.cpp, le moteur sur lequel repose KoboldCpp.' },
           { q: 'KoboldCpp nécessite-t-il une installation ?', a: 'Non. Il est distribué comme un exécutable unique par plateforme (Windows, Linux, macOS ARM64) — téléchargez-le et lancez-le directement, sans installateur, environnement Python ni conteneur Docker.' },
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'Usuarios de rol y escritura narrativa que buscan una app de LLM local sin instalación con editor integrado, y cualquiera que compare motores de inferencia de un solo archivo con Ollama, LM Studio o llama.cpp puro',
     primaryTerm: 'KoboldCpp',
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Sigue manteniéndose KoboldCpp, y qué aporta realmente frente a llama.cpp?',
-        answer: 'Sí — KoboldCpp publica versiones con frecuencia (v1.120 a finales de agosto de 2026) en su repositorio de GitHub. Añade una interfaz web KoboldAI Lite integrada con herramientas de escritura y rol, distribución de un solo archivo sin instalación, y generación de imágenes y transcripción de voz incorporadas, nada de lo cual ofrece llama.cpp por sí solo.',
+        answer: 'Sí — KoboldCpp publica versiones con frecuencia (v1.121 a septiembre de 2026) en su repositorio de GitHub. Añade una interfaz web KoboldAI Lite integrada con herramientas de escritura y rol, distribución de un solo archivo sin instalación, y generación de imágenes y transcripción de voz incorporadas, nada de lo cual ofrece llama.cpp por sí solo.',
         bullets: [
           'Un solo ejecutable — sin instalador, sin Python, sin Docker',
           'Licencia: AGPL 3.0 (copyleft); construido sobre llama.cpp (MIT) por debajo',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es KoboldCpp?',
         content: [
           '**KoboldCpp es un programa gratuito de un solo archivo que ejecuta modelos de lenguaje en formato GGUF localmente, construido sobre el motor de inferencia llama.cpp y mantenido por un desarrollador seudónimo conocido como LostRuins.** Hereda las convenciones de interfaz del proyecto original KoboldAI, adaptadas para funcionar sobre el backend de llama.cpp en lugar de una pila de inferencia basada en Python.',
-          'El proyecto se aloja en [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) y se publica bajo la GNU Affero General Public License versión 3 (AGPL 3.0), una licencia copyleft, distinta de la licencia MIT permisiva que usa llama.cpp por debajo. Las versiones se publican con frecuencia; la vigente al momento de la revisión (finales de agosto de 2026) era la v1.120.',
+          'El proyecto se aloja en [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) y se publica bajo la GNU Affero General Public License versión 3 (AGPL 3.0), una licencia copyleft, distinta de la licencia MIT permisiva que usa llama.cpp por debajo. Las versiones se publican con frecuencia; la vigente al momento de la revisión (septiembre de 2026) era la v1.121.',
         ],
         items: [
           'Se distribuye como un ejecutable por plataforma — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es KoboldCpp?', a: 'KoboldCpp es una aplicación de LLM local gratuita, de un solo archivo, construida sobre llama.cpp. Ejecuta modelos GGUF sin paso de instalación y trae la interfaz web KoboldAI Lite, pensada para escritura narrativa y rol.' },
-          { q: '¿Quién mantiene KoboldCpp?', a: 'KoboldCpp lo mantiene un desarrollador seudónimo conocido como LostRuins, en el repositorio github.com/LostRuins/koboldcpp. Las versiones se publican con frecuencia; la v1.120 estaba vigente a finales de agosto de 2026.' },
+          { q: '¿Quién mantiene KoboldCpp?', a: 'KoboldCpp lo mantiene un desarrollador seudónimo conocido como LostRuins, en el repositorio github.com/LostRuins/koboldcpp. Las versiones se publican con frecuencia; la v1.121 estaba vigente a septiembre de 2026.' },
           { q: '¿Es gratis KoboldCpp?', a: 'Sí. KoboldCpp es gratuito y de código abierto bajo licencia AGPL 3.0. No hay nivel de pago ni producto alojado: cada despliegue de KoboldCpp corre en hardware que tú controlas.' },
           { q: '¿Bajo qué licencia se publica KoboldCpp?', a: 'AGPL 3.0 (GNU Affero General Public License versión 3), una licencia copyleft. Difiere de la licencia MIT que usa llama.cpp, el motor sobre el que se construye por debajo.' },
           { q: '¿Requiere instalación KoboldCpp?', a: 'No. Se distribuye como un ejecutable único por plataforma (Windows, Linux, macOS ARM64) — se descarga y se ejecuta directamente, sin instalador, entorno Python ni contenedor Docker.' },
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'インストール不要でエディタ内蔵のローカルLLMアプリを求めるロールプレイ・小説執筆ユーザー、およびOllama、LM Studio、素のllama.cppと単一ファイル型推論エンジンを比較したい人',
     primaryTerm: 'KoboldCpp',
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'KoboldCppは今も保守されているか、llama.cppに対して具体的に何が優れているか？',
-        answer: 'はい。KoboldCppはGitHubリポジトリで頻繁にリリースを重ねています（2026年8月末時点でv1.120）。ストーリー編集・ロールプレイ用ツールを備えたKoboldAI Lite Web UI、インストール不要の単一ファイル配布、画像生成と音声認識の内蔵機能を追加しており、これらは素のllama.cppには存在しません。',
+        answer: 'はい。KoboldCppはGitHubリポジトリで頻繁にリリースを重ねています（2026年9月時点でv1.121）。ストーリー編集・ロールプレイ用ツールを備えたKoboldAI Lite Web UI、インストール不要の単一ファイル配布、画像生成と音声認識の内蔵機能を追加しており、これらは素のllama.cppには存在しません。',
         bullets: [
           '実行ファイル1つ — インストーラー、Python、Dockerいずれも不要',
           'ライセンス：AGPL 3.0（コピーレフト）。内部ではllama.cpp（MIT）を利用',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'KoboldCppとは何か',
         content: [
           '**KoboldCppは、llama.cpp推論エンジンを基盤に構築され、LostRuinsという匿名の開発者が保守する、GGUF形式の言語モデルをローカルで実行する無料の単一ファイルプログラムである。** 元のKoboldAIプロジェクトのUI設計思想を受け継ぎつつ、Pythonベースの推論スタックではなくllama.cppのバックエンド上で動作するよう改変されている。',
-          'プロジェクトは[github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)でホストされ、GNU Affero General Public License version 3（AGPL 3.0）というコピーレフトライセンスで公開されている。これはllama.cpp自体が内部で使用している寛容なMITライセンスとは異なる。リリースは頻繁に行われており、確認時点（2026年8月末）の最新版はv1.120だった。',
+          'プロジェクトは[github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)でホストされ、GNU Affero General Public License version 3（AGPL 3.0）というコピーレフトライセンスで公開されている。これはllama.cpp自体が内部で使用している寛容なMITライセンスとは異なる。リリースは頻繁に行われており、確認時点（2026年9月）の最新版はv1.121だった。',
         ],
         items: [
           'プラットフォームごとに実行ファイル1つとして配布 — koboldcpp.exe（Windows）、koboldcpp-linux-x64（Linux）、koboldcpp-mac-arm64（macOS Apple Silicon）',
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'KoboldCppとは何か？', a: 'KoboldCppは、llama.cppを基盤に構築された無料の単一ファイル型ローカルLLMアプリである。インストール手順なしでGGUFモデルを実行でき、小説執筆・ロールプレイ向けに設計されたKoboldAI Lite Web UIを標準搭載している。' },
-          { q: 'KoboldCppは誰が保守しているか？', a: 'KoboldCppは、LostRuinsという匿名の開発者がリポジトリgithub.com/LostRuins/koboldcppで保守している。リリースは頻繁で、2026年8月末時点の最新版はv1.120だった。' },
+          { q: 'KoboldCppは誰が保守しているか？', a: 'KoboldCppは、LostRuinsという匿名の開発者がリポジトリgithub.com/LostRuins/koboldcppで保守している。リリースは頻繁で、2026年9月時点の最新版はv1.121だった。' },
           { q: 'KoboldCppは無料か？', a: 'はい。KoboldCppはAGPL 3.0ライセンスの無料・オープンソースソフトウェアである。有料プランやホスティング製品は存在せず、すべてのKoboldCpp導入は自分で管理するハードウェア上で動作する。' },
           { q: 'KoboldCppはどのライセンスで公開されているか？', a: 'AGPL 3.0（GNU Affero General Public License version 3）というコピーレフトライセンスである。基盤となるllama.cppが使用するMITライセンスとは異なる。' },
           { q: 'KoboldCppにはインストールが必要か？', a: 'いいえ。プラットフォームごとの単一実行ファイル（Windows、Linux、macOS ARM64）として配布されており、インストーラー・Python環境・Dockerコンテナなしでダウンロードしてそのまま実行できる。' },
@@ -1178,7 +1178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: '希望获得零安装、内置编辑器的本地 LLM 应用的角色扮演与故事写作用户,以及正在比较 Ollama、LM Studio 或原生 llama.cpp 等单文件推理引擎的人',
     primaryTerm: 'KoboldCpp',
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'KoboldCpp 是否仍在维护?相比 llama.cpp 它实际增加了什么?',
-        answer: '是的——KoboldCpp 在其 GitHub 仓库上频繁发布新版本(截至 2026 年 8 月底为 v1.120)。它增加了内置 KoboldAI Lite 网页界面(含故事编辑和角色扮演工具)、免安装单文件分发,以及内置的图像生成和语音转文字功能,这些都是原生 llama.cpp 所不具备的。',
+        answer: '是的——KoboldCpp 在其 GitHub 仓库上频繁发布新版本(截至 2026 年 9 月为 v1.121)。它增加了内置 KoboldAI Lite 网页界面(含故事编辑和角色扮演工具)、免安装单文件分发,以及内置的图像生成和语音转文字功能,这些都是原生 llama.cpp 所不具备的。',
         bullets: [
           '单一可执行文件——无需安装程序、Python 或 Docker',
           '许可证:AGPL 3.0(著佐权/copyleft);底层基于 llama.cpp(MIT)',
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'KoboldCpp 是什么',
         content: [
           '**KoboldCpp 是一款免费的单文件程序,基于 llama.cpp 推理引擎构建,在本地运行 GGUF 格式的语言模型,由化名为 LostRuins 的开发者维护。** 它继承了原始 KoboldAI 项目的界面设计理念,并改为运行在 llama.cpp 后端之上,而非基于 Python 的推理栈。',
-          '该项目托管在 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp),以 GNU Affero 通用公共许可证第 3 版(AGPL 3.0)发布——这是一种著佐权许可证,不同于 llama.cpp 自身底层使用的宽松 MIT 许可证。版本更新频繁;截至测试时(2026 年 8 月底)最新版本为 v1.120。',
+          '该项目托管在 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp),以 GNU Affero 通用公共许可证第 3 版(AGPL 3.0)发布——这是一种著佐权许可证,不同于 llama.cpp 自身底层使用的宽松 MIT 许可证。版本更新频繁;截至测试时(2026 年 9 月)最新版本为 v1.121。',
         ],
         items: [
           '按平台分发为单一可执行文件——koboldcpp.exe(Windows)、koboldcpp-linux-x64(Linux)、koboldcpp-mac-arm64(macOS Apple Silicon)',
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'KoboldCpp 是什么?', a: 'KoboldCpp 是一款基于 llama.cpp 构建的免费单文件本地 LLM 应用。它无需安装步骤即可运行 GGUF 模型,并内置了专为故事写作和角色扮演设计的 KoboldAI Lite 网页界面。' },
-          { q: '谁在维护 KoboldCpp?', a: 'KoboldCpp 由化名为 LostRuins 的开发者在仓库 github.com/LostRuins/koboldcpp 上维护。版本更新频繁,截至 2026 年 8 月底最新版本为 v1.120。' },
+          { q: '谁在维护 KoboldCpp?', a: 'KoboldCpp 由化名为 LostRuins 的开发者在仓库 github.com/LostRuins/koboldcpp 上维护。版本更新频繁,截至 2026 年 9 月最新版本为 v1.121。' },
           { q: 'KoboldCpp 免费吗?', a: '是的。KoboldCpp 是采用 AGPL 3.0 许可的免费开源软件。没有付费层级,也没有托管产品——每一次 KoboldCpp 部署都运行在你自己掌控的硬件上。' },
           { q: 'KoboldCpp 采用什么许可证发布?', a: 'AGPL 3.0(GNU Affero 通用公共许可证第 3 版),一种著佐权许可证。这不同于底层引擎 llama.cpp 所使用的 MIT 许可证。' },
           { q: 'KoboldCpp 需要安装吗?', a: '不需要。它以每个平台一个可执行文件的形式分发(Windows、Linux、macOS ARM64)——下载后直接运行,无需安装程序、Python 环境或 Docker 容器。' },
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'Usuários de roleplay e escrita de histórias que querem um app de LLM local sem instalação e com editor embutido, e qualquer pessoa comparando motores de inferência de arquivo único com Ollama, LM Studio ou llama.cpp puro',
     primaryTerm: 'KoboldCpp',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O KoboldCpp ainda é mantido, e o que ele realmente acrescenta em relação ao llama.cpp?',
-        answer: 'Sim — o KoboldCpp lança versões com frequência (v1.120 no final de agosto de 2026) no seu repositório GitHub. Ele adiciona uma interface web KoboldAI Lite embutida com ferramentas de escrita e roleplay, distribuição em arquivo único sem instalação, além de geração de imagens e transcrição de voz integradas — nada disso o llama.cpp puro oferece sozinho.',
+        answer: 'Sim — o KoboldCpp lança versões com frequência (v1.121 em setembro de 2026) no seu repositório GitHub. Ele adiciona uma interface web KoboldAI Lite embutida com ferramentas de escrita e roleplay, distribuição em arquivo único sem instalação, além de geração de imagens e transcrição de voz integradas — nada disso o llama.cpp puro oferece sozinho.',
         bullets: [
           'Um único executável — sem instalador, sem Python, sem Docker',
           'Licença: AGPL 3.0 (copyleft); construído sobre o llama.cpp (MIT) por baixo',
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o KoboldCpp?',
         content: [
           '**O KoboldCpp é um programa gratuito de arquivo único que roda modelos de linguagem em formato GGUF localmente, construído sobre o motor de inferência llama.cpp e mantido por um desenvolvedor pseudônimo conhecido como LostRuins.** Ele herda as convenções de interface do projeto KoboldAI original, adaptadas para rodar sobre o backend do llama.cpp em vez de uma stack de inferência baseada em Python.',
-          'O projeto está hospedado em [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) e é publicado sob a GNU Affero General Public License versão 3 (AGPL 3.0) — uma licença copyleft, diferente da licença MIT permissiva que o próprio llama.cpp usa por baixo. As versões saem com frequência; a vigente no momento do teste (final de agosto de 2026) era a v1.120.',
+          'O projeto está hospedado em [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) e é publicado sob a GNU Affero General Public License versão 3 (AGPL 3.0) — uma licença copyleft, diferente da licença MIT permissiva que o próprio llama.cpp usa por baixo. As versões saem com frequência; a vigente no momento do teste (setembro de 2026) era a v1.121.',
         ],
         items: [
           'Distribuído como um executável por plataforma — koboldcpp.exe (Windows), koboldcpp-linux-x64 (Linux), koboldcpp-mac-arm64 (macOS Apple Silicon)',
@@ -1609,7 +1609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é o KoboldCpp?', a: 'O KoboldCpp é uma aplicação de LLM local gratuita, em um único arquivo, construída sobre o llama.cpp. Ele executa modelos GGUF sem etapa de instalação e traz a interface web KoboldAI Lite, feita para escrita de histórias e roleplay.' },
-          { q: 'Quem mantém o KoboldCpp?', a: 'O KoboldCpp é mantido por um desenvolvedor pseudônimo conhecido como LostRuins, no repositório github.com/LostRuins/koboldcpp. As versões saem com frequência; a v1.120 estava vigente no final de agosto de 2026.' },
+          { q: 'Quem mantém o KoboldCpp?', a: 'O KoboldCpp é mantido por um desenvolvedor pseudônimo conhecido como LostRuins, no repositório github.com/LostRuins/koboldcpp. As versões saem com frequência; a v1.121 estava vigente em setembro de 2026.' },
           { q: 'O KoboldCpp é gratuito?', a: 'Sim. O KoboldCpp é gratuito e de código aberto sob licença AGPL 3.0. Não existe nível pago nem produto hospedado — todo deploy do KoboldCpp roda em hardware que você controla.' },
           { q: 'Sob qual licença o KoboldCpp é publicado?', a: 'AGPL 3.0 (GNU Affero General Public License versão 3), uma licença copyleft. Isso difere da licença MIT usada pelo llama.cpp, o motor sobre o qual o KoboldCpp é construído.' },
           { q: 'O KoboldCpp exige instalação?', a: 'Não. Ele é distribuído como um executável único por plataforma (Windows, Linux, macOS ARM64) — baixe e rode diretamente, sem instalador, ambiente Python ou contêiner Docker.' },
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: 'مستخدمو لعب الأدوار وكتابة القصص الباحثون عن تطبيق نماذج لغوية محلي بلا تثبيت مع محرر مدمج، وأي شخص يقارن محركات الاستدلال ذات الملف الواحد مع Ollama أو LM Studio أو llama.cpp الأصلي',
     primaryTerm: 'KoboldCpp',
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل ما زال KoboldCpp يُصان، وماذا يضيف فعليًا مقارنة بـ llama.cpp؟',
-        answer: 'نعم — يصدر KoboldCpp إصدارات متكررة (v1.120 حتى نهاية أغسطس 2026) على مستودعه في GitHub. يضيف واجهة ويب KoboldAI Lite مدمجة بأدوات تحرير قصصي ولعب أدوار، وتوزيعًا بملف واحد بلا تثبيت، وتوليد صور ونسخ صوتي مدمجَين — لا شيء من هذا يوفره llama.cpp الأصلي وحده.',
+        answer: 'نعم — يصدر KoboldCpp إصدارات متكررة (v1.121 اعتبارًا من سبتمبر 2026) على مستودعه في GitHub. يضيف واجهة ويب KoboldAI Lite مدمجة بأدوات تحرير قصصي ولعب أدوار، وتوزيعًا بملف واحد بلا تثبيت، وتوليد صور ونسخ صوتي مدمجَين — لا شيء من هذا يوفره llama.cpp الأصلي وحده.',
         bullets: [
           'ملف تنفيذي واحد — بلا مثبّت وبلا Python وبلا Docker',
           'الرخصة: AGPL 3.0 (نسخة متروكة/copyleft)؛ مبني في الخلفية على llama.cpp (رخصة MIT)',
@@ -1717,7 +1717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو KoboldCpp؟',
         content: [
           '**KoboldCpp برنامج مجاني بملف واحد يشغّل نماذج لغوية بصيغة GGUF محليًا، مبني على محرك استدلال llama.cpp ويصونه مطور مجهول الهوية يُعرف باسم LostRuins.** يرث اصطلاحات واجهة مشروع KoboldAI الأصلي، مع تكييفها للعمل فوق خلفية llama.cpp بدلاً من مكدس استدلال قائم على Python.',
-          'يستضاف المشروع على [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) ويُنشر بموجب رخصة GNU Affero العمومية العامة الإصدار 3 (AGPL 3.0) — وهي رخصة نسخة متروكة، تختلف عن رخصة MIT المتساهلة التي يستخدمها llama.cpp نفسه في الخلفية. تصدر الإصدارات بشكل متكرر؛ وكان الإصدار السائد وقت المراجعة (نهاية أغسطس 2026) هو v1.120.',
+          'يستضاف المشروع على [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) ويُنشر بموجب رخصة GNU Affero العمومية العامة الإصدار 3 (AGPL 3.0) — وهي رخصة نسخة متروكة، تختلف عن رخصة MIT المتساهلة التي يستخدمها llama.cpp نفسه في الخلفية. تصدر الإصدارات بشكل متكرر؛ وكان الإصدار السائد وقت المراجعة (سبتمبر 2026) هو v1.121.',
         ],
         items: [
           'يُوزَّع كملف تنفيذي واحد لكل منصة — koboldcpp.exe (ويندوز)، koboldcpp-linux-x64 (لينكس)، koboldcpp-mac-arm64 (ماك أو إس Apple Silicon)',
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو KoboldCpp؟', a: 'KoboldCpp تطبيق نماذج لغوية محلي مجاني بملف واحد، مبني على llama.cpp. يشغّل نماذج GGUF دون خطوة تثبيت، ويأتي مزودًا بواجهة KoboldAI Lite على الويب، المصممة لكتابة القصص ولعب الأدوار.' },
-          { q: 'من يصون KoboldCpp؟', a: 'يصون KoboldCpp مطور مجهول الهوية يُعرف باسم LostRuins، على مستودع github.com/LostRuins/koboldcpp. تصدر الإصدارات بتكرار، وكان v1.120 هو السائد حتى نهاية أغسطس 2026.' },
+          { q: 'من يصون KoboldCpp؟', a: 'يصون KoboldCpp مطور مجهول الهوية يُعرف باسم LostRuins، على مستودع github.com/LostRuins/koboldcpp. تصدر الإصدارات بتكرار، وكان v1.121 هو السائد اعتبارًا من سبتمبر 2026.' },
           { q: 'هل KoboldCpp مجاني؟', a: 'نعم. KoboldCpp مجاني ومفتوح المصدر برخصة AGPL 3.0. لا توجد فئة مدفوعة ولا منتج مستضاف — كل نشر لـ KoboldCpp يعمل على عتاد يتحكم به المستخدم بنفسه.' },
           { q: 'ما الرخصة التي يُنشر بموجبها KoboldCpp؟', a: 'AGPL 3.0 (رخصة GNU Affero العمومية العامة الإصدار 3)، وهي رخصة نسخة متروكة. تختلف عن رخصة MIT التي يستخدمها llama.cpp، المحرك الذي يُبنى عليه KoboldCpp في الخلفية.' },
           { q: 'هل يتطلب KoboldCpp تثبيتًا؟', a: 'لا. يُوزَّع كملف تنفيذي واحد لكل منصة (ويندوز، لينكس، ماك أو إس ARM64) — حمّله وشغّله مباشرة، دون مثبّت أو بيئة Python أو حاوية Docker.' },
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-06',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-09-20',
     educationalLevel: 'Beginner',
     audience: '설치 없이 편집기가 내장된 로컬 LLM 앱을 찾는 롤플레이 및 소설 창작 사용자, 그리고 Ollama, LM Studio, 순정 llama.cpp와 단일 파일형 추론 엔진을 비교하려는 사람',
     primaryTerm: 'KoboldCpp',
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'KoboldCpp는 여전히 유지 관리되고 있으며, llama.cpp 대비 실제로 무엇을 추가로 제공합니까?',
-        answer: '그렇습니다. KoboldCpp는 GitHub 저장소에서 자주 새 버전을 출시합니다(2026년 8월 말 기준 v1.120). 스토리 편집·롤플레이 도구를 갖춘 내장 KoboldAI Lite 웹 UI, 설치가 필요 없는 단일 파일 배포, 그리고 내장된 이미지 생성과 음성 인식 기능을 추가로 제공하며, 이는 순정 llama.cpp만으로는 제공되지 않습니다.',
+        answer: '그렇습니다. KoboldCpp는 GitHub 저장소에서 자주 새 버전을 출시합니다(2026년 9월 기준 v1.121). 스토리 편집·롤플레이 도구를 갖춘 내장 KoboldAI Lite 웹 UI, 설치가 필요 없는 단일 파일 배포, 그리고 내장된 이미지 생성과 음성 인식 기능을 추가로 제공하며, 이는 순정 llama.cpp만으로는 제공되지 않습니다.',
         bullets: [
           '실행 파일 하나 — 설치 프로그램, Python, Docker 모두 불필요',
           '라이선스: AGPL 3.0(카피레프트); 내부적으로 llama.cpp(MIT)를 기반으로 함',
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'KoboldCpp란 무엇인가',
         content: [
           '**KoboldCpp는 llama.cpp 추론 엔진을 기반으로 구축되어 GGUF 형식의 언어 모델을 로컬에서 실행하는 무료 단일 파일 프로그램이며, LostRuins라는 익명 개발자가 유지 관리한다.** 원조 KoboldAI 프로젝트의 인터페이스 관례를 계승하되, Python 기반 추론 스택이 아닌 llama.cpp 백엔드 위에서 동작하도록 개조되었다.',
-          '이 프로젝트는 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)에서 호스팅되며 GNU Affero General Public License 버전 3(AGPL 3.0) — 즉 카피레프트 라이선스로 공개된다. 이는 llama.cpp 자체가 내부에서 사용하는 관대한 MIT 라이선스와는 다르다. 버전은 자주 출시되며, 검토 시점(2026년 8월 말) 기준 최신 버전은 v1.120이었다.',
+          '이 프로젝트는 [github.com/LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp)에서 호스팅되며 GNU Affero General Public License 버전 3(AGPL 3.0) — 즉 카피레프트 라이선스로 공개된다. 이는 llama.cpp 자체가 내부에서 사용하는 관대한 MIT 라이선스와는 다르다. 버전은 자주 출시되며, 검토 시점(2026년 9월) 기준 최신 버전은 v1.121이었다.',
         ],
         items: [
           '플랫폼별로 실행 파일 하나로 배포 — koboldcpp.exe(Windows), koboldcpp-linux-x64(Linux), koboldcpp-mac-arm64(macOS Apple Silicon)',
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'KoboldCpp란 무엇인가?', a: 'KoboldCpp는 llama.cpp를 기반으로 구축된 무료 단일 파일 로컬 LLM 애플리케이션이다. 설치 단계 없이 GGUF 모델을 실행하며, 소설 창작과 롤플레이를 위해 설계된 KoboldAI Lite 웹 인터페이스를 기본 제공한다.' },
-          { q: 'KoboldCpp는 누가 유지 관리하는가?', a: 'KoboldCpp는 LostRuins라는 익명 개발자가 저장소 github.com/LostRuins/koboldcpp에서 유지 관리한다. 버전은 자주 출시되며, 2026년 8월 말 기준 최신 버전은 v1.120이었다.' },
+          { q: 'KoboldCpp는 누가 유지 관리하는가?', a: 'KoboldCpp는 LostRuins라는 익명 개발자가 저장소 github.com/LostRuins/koboldcpp에서 유지 관리한다. 버전은 자주 출시되며, 2026년 9월 기준 최신 버전은 v1.121이었다.' },
           { q: 'KoboldCpp는 무료인가?', a: '그렇다. KoboldCpp는 AGPL 3.0 라이선스의 무료 오픈소스 소프트웨어다. 유료 등급이나 호스팅 제품은 존재하지 않으며, 모든 KoboldCpp 배포는 사용자가 직접 관리하는 하드웨어에서 실행된다.' },
           { q: 'KoboldCpp는 어떤 라이선스로 공개되는가?', a: 'AGPL 3.0(GNU Affero General Public License 버전 3)이라는 카피레프트 라이선스다. 이는 기반 엔진인 llama.cpp가 사용하는 MIT 라이선스와는 다르다.' },
           { q: 'KoboldCpp는 설치가 필요한가?', a: '아니다. 플랫폼별 단일 실행 파일(Windows, Linux, macOS ARM64)로 배포되며, 설치 프로그램·Python 환경·Docker 컨테이너 없이 다운로드 후 바로 실행할 수 있다.' },
