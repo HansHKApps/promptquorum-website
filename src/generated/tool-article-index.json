@@ -11,6 +11,38 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "koboldcpp-review",
+        "title": "KoboldCpp Review 2026: One File, No Install, Built for Roleplay",
+        "url": "/power-local-llm/koboldcpp-review",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "baserow-review",
         "title": "Baserow Review 2026: A No-Code Database With a Local-AI Field",
         "url": "/power-local-llm/baserow-review",
@@ -48,38 +80,6 @@
         "url": "/power-local-llm/mlx-serve-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rapid-mlx-review",
-        "title": "Rapid-MLX Review: Native MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/rapid-mlx-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "self-hosted-ai-starter-kit-review",
-        "title": "Self-Hosted AI Starter Kit Review 2026: n8n + Ollama + Qdrant in One Compose File",
-        "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "shimmy-review",
-        "title": "Shimmy Review 2026: A 5MB Rust Alternative to Ollama",
-        "url": "/power-local-llm/shimmy-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "swiftlm-review",
-        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/swiftlm-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 283,
@@ -92,7 +92,15 @@
         "slug": "llama-cpp-explained",
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "koboldcpp-review",
+        "title": "KoboldCpp Review 2026: One File, No Install, Built for Roleplay",
+        "url": "/power-local-llm/koboldcpp-review",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -158,14 +166,6 @@
         "url": "/power-local-llm/sidekick-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "translate-books-with-llms-review",
-        "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
-        "url": "/power-local-llm/translate-books-with-llms-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 150,
@@ -179,6 +179,22 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -235,22 +251,6 @@
         "title": "vllm-mlx Review: vLLM-Style Serving for Apple Silicon",
         "url": "/power-local-llm/vllm-mlx-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "omlx-review",
-        "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
-        "url": "/power-local-llm/omlx-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "litellm-review",
-        "title": "LiteLLM Review 2026: One Gateway for 100+ LLM Provider APIs",
-        "url": "/power-local-llm/litellm-review",
-        "dateModified": "2026-09-14",
         "tier": "about"
       }
     ],
@@ -606,7 +606,7 @@
         "slug": "koboldcpp-review",
         "title": "KoboldCpp Review 2026: One File, No Install, Built for Roleplay",
         "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -697,6 +697,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review 2026: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -716,14 +724,6 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogpt-local-review-2026",
-        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
-        "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
@@ -837,6 +837,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-cpp-explained",
+        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
+        "url": "/power-local-llm/llama-cpp-explained",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "little-coder-review",
         "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
         "url": "/power-local-llm/little-coder-review",
@@ -896,14 +904,6 @@
         "slug": "gpustack-review",
         "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
         "url": "/power-local-llm/gpustack-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kilo-code-review",
-        "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
-        "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
@@ -1508,7 +1508,7 @@
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -3249,6 +3249,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "langfuse-review",
         "title": "Langfuse Review: Open-Source LLM Observability and Evals",
         "url": "/power-local-llm/langfuse-review",
@@ -3261,14 +3269,6 @@
         "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
         "url": "/power-local-llm/n8n-review",
         "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogpt-local-review-2026",
-        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
-        "url": "/power-local-llm/autogpt-local-review-2026",
-        "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
       {
@@ -3352,7 +3352,7 @@
         "slug": "autogpt-local-review-2026",
         "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review-2026",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-09-20",
         "tier": "mentioned"
       },
       {
@@ -3721,6 +3721,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "intentkit-review",
         "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
         "url": "/power-local-llm/intentkit-review",
@@ -3733,14 +3741,6 @@
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
         "url": "/power-local-llm/mission-control-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
         "tier": "about"
       },
       {
@@ -4011,18 +4011,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "cognee-review",
-        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
-        "url": "/power-local-llm/cognee-review",
-        "dateModified": "2026-09-18",
+        "slug": "autogpt-local-review-2026",
+        "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
+        "url": "/power-local-llm/autogpt-local-review-2026",
+        "dateModified": "2026-09-20",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "camel-review",
-        "title": "CAMEL Review 2026: Features, Role-Playing, Alternatives",
-        "url": "/power-local-llm/camel-review",
-        "dateModified": "2026-09-11",
+        "slug": "cognee-review",
+        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
+        "url": "/power-local-llm/cognee-review",
+        "dateModified": "2026-09-18",
         "tier": "mentioned"
       }
     ],
@@ -4228,7 +4228,7 @@
         "slug": "openclaw-review",
         "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
         "url": "/power-local-llm/openclaw-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -8102,7 +8102,7 @@
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-14",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -8955,6 +8955,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "openclaw-review",
+        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
+        "url": "/power-local-llm/openclaw-review",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aiclient2api-review",
         "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
         "url": "/power-local-llm/aiclient2api-review",
@@ -9006,22 +9022,6 @@
         "slug": "funclip-review",
         "title": "FunClip Review: Self-Hosted AI Video Clipping With FunASR",
         "url": "/power-local-llm/funclip-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kserve-review",
-        "title": "KServe Review: Kubernetes-Native Model Serving at Scale",
-        "url": "/power-local-llm/kserve-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "little-coder-review",
-        "title": "little-coder Review: A Coding Agent CLI Built for Small Local Models",
-        "url": "/power-local-llm/little-coder-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
       }

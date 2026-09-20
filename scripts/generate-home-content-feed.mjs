@@ -44,8 +44,20 @@ function articleUrl(hub, slug) {
   return `/${hub}/${slug}`
 }
 
+// Malformed dates sort wrong silently instead of erroring (e.g. a stray
+// 'May 17, 2026' human-readable string sorts ABOVE ISO dates in a
+// descending string compare, since 'M' > '2' — found live on
+// eu-cloud-gpu-gdpr-2026.ts's publishDate and fixed at the source, but
+// guard here too so a similar slip elsewhere gets dropped, not silently
+// corrupting Latest Posts' order again).
+const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
+
 function toEntry(hub, slug, en) {
   if (!en?.title || !en?.publishDate) return null
+  if (!ISO_DATE_RE.test(en.publishDate) || (en.dateModified && !ISO_DATE_RE.test(en.dateModified))) {
+    console.warn(`  [SKIP] ${hub}/${slug}: non-ISO date (publishDate='${en.publishDate}', dateModified='${en.dateModified}')`)
+    return null
+  }
   return {
     title: en.title,
     excerpt: en.metaDescription ?? en.intro ?? '',

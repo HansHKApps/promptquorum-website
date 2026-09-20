@@ -1787,5 +1787,30 @@
     ],
     "reason": "geo-meta-optimizer: stale '10 categories' synced to live TOTAL_CATEGORY_GROUP_COUNT (7), trailing month stamp removed",
     "baseline": null
+  },
+  {
+    "id": "00fe6c61-4922-4d71-b344-b17ee05ba35d",
+    "slug": "/",
+    "date": "2026-09-20T14:05:27.647Z",
+    "fields": [
+      {
+        "field": "homeMetaTitle",
+        "old": "PromptQuorum — AI Prompt Optimization Across 25+ Models",
+        "new": "PromptQuorum: 224+ Local LLM Apps, Guides & Reviews"
+      },
+      {
+        "field": "homeMetaDescription",
+        "old": "Prompt optimization and management across 25+ AI models. Run one prompt, compare outputs, detect hallucinations, and pick the best answer. Free with your API key.",
+        "new": "Browse 224+ local LLM apps, tools, and reviews, updated continuously. Compare software, read guides, and find the right local AI setup, free."
+      }
+    ],
+    "reason": "geo-meta-optimizer: homepage rebuilt from static hero to Local LLM Directory & Guides hub -- old title/meta described removed content (AI Prompt Optimization Across 25+ Models), causing a body-title mismatch (coherence diagnosis A). New title/meta reflects actual page content, brand name kept first to protect #1 branded ranking for 'promptquorum' (pos 1.0, 47%% CTR per GSC).",
+    "baseline": {
+      "position": 9.48,
+      "impressions": 602,
+      "clicks": 47,
+      "ctr": 0.07807308970099668,
+      "period": "2026-08-23 to 2026-09-20 (trailing 28 days)"
+    }
   }
 ]

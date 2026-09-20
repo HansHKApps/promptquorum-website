@@ -74,8 +74,8 @@ export const translations = {
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum — AI Prompt Optimization Across 25+ Models",
-    homeMetaDescription: "Prompt optimization and management across 25+ AI models. Run one prompt, compare outputs, detect hallucinations, and pick the best answer. Free with your API key.",
+    homeMetaTitle: "PromptQuorum: 224+ Local LLM Apps, Guides & Reviews",
+    homeMetaDescription: "Browse 224+ local LLM apps, tools, and reviews, updated continuously. Compare software, read guides, and find the right local AI setup, free.",
     featuresMetaTitle: "Prompt Optimization Features: AI Dispatch & Consensus | PromptQuorum",
     featuresMetaDescription: "PromptQuorum is a prompt optimization and management tool that dispatches to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and scores consensus.",
     howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",

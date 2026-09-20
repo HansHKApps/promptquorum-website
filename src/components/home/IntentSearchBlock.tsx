@@ -71,9 +71,9 @@ export function IntentSearchBlock() {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => void loadIndex()}
           placeholder={`e.g. "${INTENTS.find((i) => i.key === intent)?.example}"`}
-          className="flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/40"
+          className="min-w-0 flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/40"
         />
-        <button type="submit" className="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+        <button type="submit" className="shrink-0 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
           Search
         </button>
       </form>
