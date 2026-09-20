@@ -1,4 +1,54 @@
 {
-  "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR50+ filtered). Empty until the first real export is dropped in. Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt' -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions.",
-  "mentions": []
+  "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR>40 filtered). Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt` -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions. Seeded 2026-09-20 from stored Ahrefs pulls: only the Hostinger row has a page URL; the other five link to the domain root and their dates are approximate (batch range 2026-08-14 to 08-31) -- replace with real page URLs and exact first-seen dates when available.",
+  "mentions": [
+    {
+      "id": "hostinger-llm-statistics",
+      "outlet": "Hostinger",
+      "title": "LLM statistics 2026: Adoption, market growth, and trust data",
+      "url": "https://www.hostinger.com/in/tutorials/llm-statistics",
+      "date": "2026-09-01",
+      "domainRating": 92,
+      "excerpt": "Cites PromptQuorum's tracker as a data source (nofollow link)."
+    },
+    {
+      "id": "smzdm",
+      "outlet": "SMZDM",
+      "title": "Backlinks from 3 pages",
+      "url": "https://post.smzdm.com/",
+      "date": "2026-08-31",
+      "domainRating": 79
+    },
+    {
+      "id": "dataforseo-llm-directory",
+      "outlet": "DataForSEO",
+      "title": "Listed in LLM tools directory",
+      "url": "https://llm.dataforseo.com/",
+      "date": "2026-08-31",
+      "domainRating": 76
+    },
+    {
+      "id": "groundy",
+      "outlet": "Groundy",
+      "title": "Link from an Obsidian / local-LLM article",
+      "url": "https://groundy.com/",
+      "date": "2026-08-31",
+      "domainRating": 69
+    },
+    {
+      "id": "glarity-askai",
+      "outlet": "Glarity Ask AI",
+      "title": "Link from Q&A aggregator",
+      "url": "https://askai.glarity.app/",
+      "date": "2026-08-31",
+      "domainRating": 54
+    },
+    {
+      "id": "promptbuilder",
+      "outlet": "PromptBuilder",
+      "title": "Link flagged as a quality backlink",
+      "url": "https://promptbuilder.cc/",
+      "date": "2026-08-31",
+      "domainRating": 48
+    }
+  ]
 }
