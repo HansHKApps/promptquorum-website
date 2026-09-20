@@ -34,6 +34,11 @@
     --tone-stat: 265 14% 95%;
     --tone-stat-edge: 265 14% 86%;
 
+    /* Homepage hero band — color field behind the page title. */
+    --hero-from: 265 60% 95%;
+    --hero-to: 265 40% 90%;
+    --hero-edge: 265 35% 82%;
+
     /* Category chip accents — strong (selected fill), tint (idle fill), edge (idle border). */
     --cat-run-serve: 265 55% 38%;
     --cat-run-serve-tint: 265 70% 96%;

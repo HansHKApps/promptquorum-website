@@ -30,6 +30,11 @@ module.exports = {
 					'images-video': { DEFAULT: 'hsl(var(--cat-images-video))', tint: 'hsl(var(--cat-images-video-tint))', edge: 'hsl(var(--cat-images-video-edge))' },
 					'train-operate': { DEFAULT: 'hsl(var(--cat-train-operate))', tint: 'hsl(var(--cat-train-operate-tint))', edge: 'hsl(var(--cat-train-operate-edge))' },
 				},
+				hero: {
+					from: 'hsl(var(--hero-from))',
+					to: 'hsl(var(--hero-to))',
+					edge: 'hsl(var(--hero-edge))',
+				},
 				tone: {
 					action: 'hsl(var(--tone-action))',
 					'action-edge': 'hsl(var(--tone-action-edge))',

@@ -1,14 +1,14 @@
-import { ComparisonToolShell } from './ComparisonToolShell'
-import { IntentSearchBlock } from './IntentSearchBlock'
-import { LatestPostsBlock } from './LatestPostsBlock'
-import { LatestAppsBlock } from './LatestAppsBlock'
-import { FounderReviewsBlock } from './FounderReviewsBlock'
-import { TrendingBlock } from './TrendingBlock'
-import { RecentlyUpdatedBlock } from './RecentlyUpdatedBlock'
-import { ByTheNumbersBlock } from './ByTheNumbersBlock'
-import { RecentMentionsBlock } from './RecentMentionsBlock'
-import { FeedbackBlock } from './FeedbackBlock'
-import { QuickTipBlock } from './QuickTipBlock'
+import { ComparisonToolShell } from "./ComparisonToolShell";
+import { IntentSearchBlock } from "./IntentSearchBlock";
+import { LatestPostsBlock } from "./LatestPostsBlock";
+import { LatestAppsBlock } from "./LatestAppsBlock";
+import { FounderReviewsBlock } from "./FounderReviewsBlock";
+import { TrendingBlock } from "./TrendingBlock";
+import { RecentlyUpdatedBlock } from "./RecentlyUpdatedBlock";
+import { ByTheNumbersBlock } from "./ByTheNumbersBlock";
+import { RecentMentionsBlock } from "./RecentMentionsBlock";
+import { FeedbackBlock } from "./FeedbackBlock";
+import { QuickTipBlock } from "./QuickTipBlock";
 
 /**
  * The English-only dynamic homepage. Every block surfaces existing content
@@ -24,31 +24,36 @@ import { QuickTipBlock } from './QuickTipBlock'
  */
 export function HomeEn() {
   return (
-    <main className="container mx-auto px-4 py-10 max-w-7xl">
-      <h1 className="text-2xl font-bold text-text-primary mb-8">PromptQuorum: Local LLM Directory &amp; Guides</h1>
+    <main>
+      <div className="border-b border-hero-edge bg-linear-to-r from-hero-from to-hero-to">
+        <h1 className="container mx-auto px-4 py-5 max-w-7xl text-2xl font-bold text-text-primary">
+          PromptQuorum: Local LLM Directory &amp; Guides
+        </h1>
+      </div>
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Tier 1 — large, top of page */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <IntentSearchBlock />
+          <ComparisonToolShell />
+        </section>
 
-      {/* Tier 1 — large, top of page */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <IntentSearchBlock />
-        <ComparisonToolShell />
-      </section>
+        {/* Tier 2 — medium */}
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-8">
+          <LatestPostsBlock />
+          <LatestAppsBlock />
+          <FounderReviewsBlock />
+          <TrendingBlock />
+          <RecentlyUpdatedBlock />
+        </section>
 
-      {/* Tier 2 — medium */}
-      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-8">
-        <LatestPostsBlock />
-        <LatestAppsBlock />
-        <FounderReviewsBlock />
-        <TrendingBlock />
-        <RecentlyUpdatedBlock />
-      </section>
-
-      {/* Tier 3 — small/compact */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-        <ByTheNumbersBlock />
-        <RecentMentionsBlock />
-        <FeedbackBlock />
-        <QuickTipBlock />
-      </section>
+        {/* Tier 3 — small/compact */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <ByTheNumbersBlock />
+          <RecentMentionsBlock />
+          <FeedbackBlock />
+          <QuickTipBlock />
+        </section>
+      </div>
     </main>
-  )
+  );
 }
