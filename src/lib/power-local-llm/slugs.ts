@@ -279,6 +279,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-voice-audio-compared':          'local-llm-voice-audio-compared',
   'local-llm-images-video-compared':         'local-llm-images-video-compared',
   'local-llm-run-serve-compared':            'local-llm-run-serve-compared',
+  'local-llm-knowledge-retrieval-compared':  'local-llm-knowledge-retrieval-compared',
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',
   'bark-tts-review':                         'bark-tts-review',

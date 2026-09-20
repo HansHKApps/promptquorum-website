@@ -178,7 +178,6 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       label: 'Vector databases',
       subs: ['vector-databases'],
       attributes: [
-        { key: 'embeddedMode', label: 'Embedded / in-process mode', kind: 'boolean' },
         { key: 'hybridSearch', label: 'Hybrid search', kind: 'boolean' },
         { key: 'metadataFilter', label: 'Metadata filtering', kind: 'boolean' },
         { key: 'clustered', label: 'Distributed / clustered', kind: 'boolean' },
