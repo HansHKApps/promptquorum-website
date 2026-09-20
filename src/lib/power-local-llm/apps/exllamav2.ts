@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'RTX GPU에 최적화된 빠른 양자화 추론',
   },
   reviewSlug: 'exllamav2-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.3.2', versionSourceUrl: 'https://github.com/turboderp-org/exllamav2/releases/tag/v0.3.2' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

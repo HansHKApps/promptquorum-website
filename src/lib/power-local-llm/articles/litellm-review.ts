@@ -36,6 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Routes calls to 100+ providers (OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, Ollama, and many more) behind one OpenAI-compatible request/response format',
           'No GPU requirement — it is a request router, not a model-inference engine; production proxy deployments need PostgreSQL and Redis, not a GPU',
           'Deployable via Docker, Helm charts, AWS ECS Fargate (official Terraform module), Google Cloud Run (official Terraform module), or one-click Render/Railway buttons',
+          'Latest tagged release: v1.101.0',
         ],
         updatedDate: '2026-09',
       },

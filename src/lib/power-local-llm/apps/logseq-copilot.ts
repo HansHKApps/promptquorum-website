@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '로컬 또는 클라우드 모델을 사용해 AI 채팅 블록과 슬래시 명령을 추가하는 Logseq 플러그인',
   },
   reviewSlug: 'logseq-copilot-review',
+  pqReview: { date: '2026-09-20', version: 'v0.7.5', versionSourceUrl: 'https://github.com/jarodise/logseq-copilot/releases/tag/v0.7.5' },
   lastVerifiedDate: '2026-09-12',
 }

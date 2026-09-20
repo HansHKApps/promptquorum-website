@@ -36,6 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EXL2 (V2\'s format): mixed 2-8 bit quantization per layer for a target average bitrate',
           'EXL3 (V3\'s format): a streamlined variant of the QTIP quantization approach from Cornell RelaxML',
           'TabbyAPI is the recommended OpenAI-compatible server for either version',
+          'ExLlamaV2\'s last tagged release before archival: v0.3.2',
         ],
         updatedDate: '2026-09',
       },

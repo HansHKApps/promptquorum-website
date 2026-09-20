@@ -36,6 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Created by Justine Tunney, first released by Mozilla\'s innovation group in November 2023, now maintained at mozilla-ai/llamafile',
           'One executable runs on macOS, Linux, BSD, and Windows (4 GB size cap on Windows only)',
           'GPU acceleration via Metal, CUDA, ROCm, and Vulkan, loaded from prebuilt libraries alongside the executable',
+          'Latest tagged release: 0.10.6',
         ],
         updatedDate: '2026-09',
       },

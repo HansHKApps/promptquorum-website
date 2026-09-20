@@ -37,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free and open source — no paid tier is documented',
           'GitHub repository (github.com/jarodise/logseq-copilot) shows 17 stars as of September 12, 2026',
           'Install is manual: download from GitHub Releases and enable in Logseq\'s Settings → Plugins — no confirmed marketplace listing',
+          'Latest tagged release: v0.7.5',
         ],
         updatedDate: '2026-09',
       },

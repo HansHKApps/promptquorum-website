@@ -39,6 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built-in HTTP API endpoints for external applications, plus native Twitter/X and Telegram connectors',
           'Includes a documented web3/on-chain skill set for wallet and blockchain interactions, alongside general-purpose agent skills',
           'Over 6,500 GitHub stars and 700+ forks as of this review',
+          'Latest tagged release: v2.6.3',
         ],
         updatedDate: '2026-09',
       },

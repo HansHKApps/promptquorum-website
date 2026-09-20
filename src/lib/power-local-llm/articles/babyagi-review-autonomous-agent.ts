@@ -41,6 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No documented native local-model (Ollama, LM Studio) support in either version — both require an OpenAI API key',
           'The project\'s own README states it is solo-maintained, experimental, and "not meant for production use"',
           'No paid product or affiliate program exists — BabyAGI is free, open source, and has no commercial tier',
+          'Latest tagged release on the rebuilt repository: v0.1.0',
         ],
         updatedDate: '2026-09',
       },

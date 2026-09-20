@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '고급 이미지 생성 워크플로용 노드 기반 UI — 활발히 유지 관리, 릴리스 1주 전',
   },
   reviewSlug: 'comfyui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.36.0', versionSourceUrl: 'https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

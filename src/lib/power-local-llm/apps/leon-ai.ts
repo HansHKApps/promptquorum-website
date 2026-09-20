@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '오픈소스 개인 AI 비서 프레임워크',
   },
   reviewSlug: 'leon-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.0.0-beta.8', versionSourceUrl: 'https://github.com/leon-ai/leon/releases/tag/v1.0.0-beta.8' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

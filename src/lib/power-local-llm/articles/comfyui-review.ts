@@ -56,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ComfyUI Manager installs and updates community custom nodes from inside the interface.',
           'Runs SD 1.5 on roughly 4–6 GB VRAM; Flux at full precision wants 24 GB+.',
           'Comfy Cloud (paid, separate product) starts at $20/month for 4,200 monthly credits on hosted Blackwell RTX PRO 6000 GPUs.',
+          'Latest tagged release: v0.36.0.',
         ],
         updatedDate: '2026-09',
       },

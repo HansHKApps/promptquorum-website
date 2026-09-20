@@ -35,4 +35,5 @@ export const app: ToolRecord = {
   },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'copilot-for-obsidian-review',
+  pqReview: { date: '2026-09-20', version: '4.0.9', versionSourceUrl: 'https://github.com/logancyang/obsidian-copilot/releases/tag/4.0.9' },
 }

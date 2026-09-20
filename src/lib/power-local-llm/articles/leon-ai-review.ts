@@ -37,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stable branch: master — intent-based NLU, voice + text, documented at docs.getleon.ai',
           '2.0 Developer Preview: develop branch (repository default) — agentic core with tools, memory, and context; docs not yet finished',
           'No hosted product — Leon only runs self-hosted, there is no Leon Cloud',
+          'Latest tagged release: v1.0.0-beta.8',
         ],
         updatedDate: '2026-09',
       },

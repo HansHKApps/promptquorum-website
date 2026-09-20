@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '멀티 에이전트 협업을 위한 소통형 에이전트',
   },
   reviewSlug: 'camel-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: '0.2.90', versionSourceUrl: 'https://github.com/camel-ai/camel/releases/tag/v0.2.90' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
