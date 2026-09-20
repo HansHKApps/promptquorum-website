@@ -4,7 +4,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 
-export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision"] as const
+export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways"] as const
 export type CompareUiKey = (typeof COMPARE_UI_KEYS)[number]
 export type CompareStrings = Record<CompareUiKey, string>
 
@@ -69,7 +69,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "Reads text in images (OCR)",
     "colMultiImage": "Multiple images per prompt",
     "segImageVideo": "Image & video generation",
-    "segVision": "Vision & OCR"
+    "segVision": "Vision & OCR",
+    "colOpenaiApi": "OpenAI-compatible API",
+    "colNvidiaGpu": "NVIDIA GPU",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "AMD GPU",
+    "colCpuInference": "CPU inference",
+    "colDistributed": "Multi-GPU / multi-node",
+    "colDesktopApp": "Desktop app",
+    "colModelLibrary": "Built-in model library",
+    "colHeadless": "Headless / server mode",
+    "colLocalModels": "Routes to local models",
+    "colFallback": "Fallback / load balancing",
+    "segEngines": "Inference engines",
+    "segRuntimes": "Runtimes & managers",
+    "segGateways": "Routers & gateways"
   },
   "de": {
     "tool": "Werkzeug",
@@ -131,7 +145,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "Liest Text in Bildern (OCR)",
     "colMultiImage": "Mehrere Bilder pro Prompt",
     "segImageVideo": "Bild- & Videogenerierung",
-    "segVision": "Vision & OCR"
+    "segVision": "Vision & OCR",
+    "colOpenaiApi": "OpenAI-kompatible API",
+    "colNvidiaGpu": "NVIDIA-GPU",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "AMD-GPU",
+    "colCpuInference": "CPU-Inferenz",
+    "colDistributed": "Multi-GPU / Multi-Node",
+    "colDesktopApp": "Desktop-App",
+    "colModelLibrary": "Integrierte Modellbibliothek",
+    "colHeadless": "Headless- / Servermodus",
+    "colLocalModels": "Leitet an lokale Modelle",
+    "colFallback": "Fallback / Lastverteilung",
+    "segEngines": "Inferenz-Engines",
+    "segRuntimes": "Runtimes & Manager",
+    "segGateways": "Router & Gateways"
   },
   "fr": {
     "tool": "Outil",
@@ -193,7 +221,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "Lit le texte dans les images (OCR)",
     "colMultiImage": "Plusieurs images par prompt",
     "segImageVideo": "Génération d'images et de vidéos",
-    "segVision": "Vision et OCR"
+    "segVision": "Vision et OCR",
+    "colOpenaiApi": "API compatible OpenAI",
+    "colNvidiaGpu": "GPU NVIDIA",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "GPU AMD",
+    "colCpuInference": "Inférence CPU",
+    "colDistributed": "Multi-GPU / multi-nœuds",
+    "colDesktopApp": "Application de bureau",
+    "colModelLibrary": "Bibliothèque de modèles intégrée",
+    "colHeadless": "Mode headless / serveur",
+    "colLocalModels": "Route vers des modèles locaux",
+    "colFallback": "Repli / répartition de charge",
+    "segEngines": "Moteurs d'inférence",
+    "segRuntimes": "Runtimes et gestionnaires",
+    "segGateways": "Routeurs et passerelles"
   },
   "es": {
     "tool": "Herramienta",
@@ -255,7 +297,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "Lee texto en imágenes (OCR)",
     "colMultiImage": "Varias imágenes por prompt",
     "segImageVideo": "Generación de imágenes y video",
-    "segVision": "Visión y OCR"
+    "segVision": "Visión y OCR",
+    "colOpenaiApi": "API compatible con OpenAI",
+    "colNvidiaGpu": "GPU NVIDIA",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "GPU AMD",
+    "colCpuInference": "Inferencia en CPU",
+    "colDistributed": "Multi-GPU / multinodo",
+    "colDesktopApp": "Aplicación de escritorio",
+    "colModelLibrary": "Biblioteca de modelos integrada",
+    "colHeadless": "Modo headless / servidor",
+    "colLocalModels": "Enruta a modelos locales",
+    "colFallback": "Respaldo / balanceo de carga",
+    "segEngines": "Motores de inferencia",
+    "segRuntimes": "Runtimes y gestores",
+    "segGateways": "Enrutadores y pasarelas"
   },
   "ja": {
     "tool": "ツール",
@@ -317,7 +373,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "画像内のテキスト認識（OCR）",
     "colMultiImage": "プロンプトあたり複数画像",
     "segImageVideo": "画像・動画生成",
-    "segVision": "ビジョン・OCR"
+    "segVision": "ビジョン・OCR",
+    "colOpenaiApi": "OpenAI互換API",
+    "colNvidiaGpu": "NVIDIA GPU",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "AMD GPU",
+    "colCpuInference": "CPU推論",
+    "colDistributed": "マルチGPU／マルチノード",
+    "colDesktopApp": "デスクトップアプリ",
+    "colModelLibrary": "内蔵モデルライブラリ",
+    "colHeadless": "ヘッドレス／サーバーモード",
+    "colLocalModels": "ローカルモデルへルーティング",
+    "colFallback": "フォールバック／負荷分散",
+    "segEngines": "推論エンジン",
+    "segRuntimes": "ランタイムと管理ツール",
+    "segGateways": "ルーターとゲートウェイ"
   },
   "zh": {
     "tool": "工具",
@@ -379,7 +449,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "识别图片中的文字（OCR）",
     "colMultiImage": "每个提示词支持多张图片",
     "segImageVideo": "图像与视频生成",
-    "segVision": "视觉与 OCR"
+    "segVision": "视觉与 OCR",
+    "colOpenaiApi": "兼容OpenAI的API",
+    "colNvidiaGpu": "NVIDIA GPU",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "AMD GPU",
+    "colCpuInference": "CPU推理",
+    "colDistributed": "多GPU/多节点",
+    "colDesktopApp": "桌面应用",
+    "colModelLibrary": "内置模型库",
+    "colHeadless": "无头/服务器模式",
+    "colLocalModels": "路由到本地模型",
+    "colFallback": "故障回退/负载均衡",
+    "segEngines": "推理引擎",
+    "segRuntimes": "运行时与管理器",
+    "segGateways": "路由器与网关"
   },
   "pt": {
     "tool": "Ferramenta",
@@ -441,7 +525,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "Lê texto em imagens (OCR)",
     "colMultiImage": "Várias imagens por prompt",
     "segImageVideo": "Geração de imagens e vídeos",
-    "segVision": "Visão e OCR"
+    "segVision": "Visão e OCR",
+    "colOpenaiApi": "API compatível com OpenAI",
+    "colNvidiaGpu": "GPU NVIDIA",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "GPU AMD",
+    "colCpuInference": "Inferência em CPU",
+    "colDistributed": "Multi-GPU / multinó",
+    "colDesktopApp": "Aplicativo de desktop",
+    "colModelLibrary": "Biblioteca de modelos integrada",
+    "colHeadless": "Modo headless / servidor",
+    "colLocalModels": "Roteia para modelos locais",
+    "colFallback": "Fallback / balanceamento de carga",
+    "segEngines": "Engines de inferência",
+    "segRuntimes": "Runtimes e gerenciadores",
+    "segGateways": "Roteadores e gateways"
   },
   "ar": {
     "tool": "الأداة",
@@ -503,7 +601,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "قراءة النص في الصور (OCR)",
     "colMultiImage": "عدة صور لكل موجّه",
     "segImageVideo": "توليد الصور والفيديو",
-    "segVision": "الرؤية و OCR"
+    "segVision": "الرؤية و OCR",
+    "colOpenaiApi": "واجهة API متوافقة مع OpenAI",
+    "colNvidiaGpu": "وحدة معالجة رسومات NVIDIA",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "وحدة معالجة رسومات AMD",
+    "colCpuInference": "الاستدلال على CPU",
+    "colDistributed": "وحدات GPU متعددة / عقد متعددة",
+    "colDesktopApp": "تطبيق سطح المكتب",
+    "colModelLibrary": "مكتبة نماذج مدمجة",
+    "colHeadless": "وضع بدون واجهة / الخادم",
+    "colLocalModels": "يوجّه إلى النماذج المحلية",
+    "colFallback": "التبديل الاحتياطي / توزيع الحمل",
+    "segEngines": "محركات الاستدلال",
+    "segRuntimes": "بيئات التشغيل والمدراء",
+    "segGateways": "الموجّهات والبوابات"
   },
   "ko": {
     "tool": "도구",
@@ -565,7 +677,21 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "colOcr": "이미지 속 텍스트 인식(OCR)",
     "colMultiImage": "프롬프트당 여러 이미지",
     "segImageVideo": "이미지 및 영상 생성",
-    "segVision": "비전 및 OCR"
+    "segVision": "비전 및 OCR",
+    "colOpenaiApi": "OpenAI 호환 API",
+    "colNvidiaGpu": "NVIDIA GPU",
+    "colAppleSilicon": "Apple Silicon",
+    "colAmdGpu": "AMD GPU",
+    "colCpuInference": "CPU 추론",
+    "colDistributed": "멀티 GPU / 멀티 노드",
+    "colDesktopApp": "데스크톱 앱",
+    "colModelLibrary": "내장 모델 라이브러리",
+    "colHeadless": "헤드리스 / 서버 모드",
+    "colLocalModels": "로컬 모델로 라우팅",
+    "colFallback": "폴백 / 로드 밸런싱",
+    "segEngines": "추론 엔진",
+    "segRuntimes": "런타임 및 관리 도구",
+    "segGateways": "라우터 및 게이트웨이"
   }
 }
 

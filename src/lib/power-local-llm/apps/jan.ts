@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '프라이버시 중심의 오프라인 ChatGPT 클론, 완전 오픈소스',
   },
   reviewSlug: 'jan-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, desktopApp: true, modelLibrary: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -38,5 +38,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'omlx-review', // dedicated PromptQuorum review — added 2026-09-18
   pqReview: { date: '2026-09-20', version: 'v0.6.4', versionSourceUrl: 'https://github.com/jundot/omlx/releases/tag/v0.6.4' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, appleSilicon: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

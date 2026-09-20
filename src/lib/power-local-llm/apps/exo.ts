@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ar: 'استدلال موزّع — شغّل نماذج كبيرة عبر تجميع قدرة المعالجة من عدة أجهزة يومية',
     ko: '분산 추론 — 여러 일상 기기의 컴퓨팅 파워를 모아 대형 모델을 실행',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, appleSilicon: true, cpuInference: true, distributed: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

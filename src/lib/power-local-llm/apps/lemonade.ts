@@ -32,6 +32,8 @@ export const app: ToolRecord = {
     ar: 'خادم نموذج لغوي محلي مُحسَّن لمعالجات AMD مع واجهة برمجة متوافقة مع OpenAI للدردشة والرؤية والصور والكلام',
     ko: '채팅, 비전, 이미지, 음성을 위한 OpenAI 호환 API를 갖춘 AMD 최적화 로컬 LLM 서버',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, modelLibrary: true, headless: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'lemonade-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

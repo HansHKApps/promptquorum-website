@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'DeepSeek, Llama 같은 오픈소스 LLM을 OpenAI 호환 API로 제공하는 셀프호스팅 가능한 추론 서버',
   },
   reviewSlug: 'openllm-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true },
   lastVerifiedDate: '2026-09-18',
 }

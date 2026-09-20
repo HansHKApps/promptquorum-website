@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ko: 'Gemini CLI, Codex, Grok, Kiro, Antigravity 클라이언트 프로토콜을 하나의 OpenAI 호환 API로 변환하는 셀프호스팅 프록시',
   },
   pqReview: { date: '2026-09-20', version: 'v3.5.0', versionSourceUrl: 'https://github.com/justlovemaki/AIClient2API/releases/tag/v3.5.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, fallback: true },
   lastVerifiedDate: '2026-09-18',
 }

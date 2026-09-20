@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '모바일 및 엣지 디바이스용 배포 런타임',
   },
   reviewSlug: 'mlc-llm-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

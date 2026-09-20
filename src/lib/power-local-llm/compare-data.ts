@@ -92,6 +92,17 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   lowVram: 'colLowVram',
   ocr: 'colOcr',
   multiImage: 'colMultiImage',
+  openaiApi: 'colOpenaiApi',
+  nvidiaGpu: 'colNvidiaGpu',
+  appleSilicon: 'colAppleSilicon',
+  amdGpu: 'colAmdGpu',
+  cpuInference: 'colCpuInference',
+  distributed: 'colDistributed',
+  desktopApp: 'colDesktopApp',
+  modelLibrary: 'colModelLibrary',
+  headless: 'colHeadless',
+  localModels: 'colLocalModels',
+  fallback: 'colFallback',
 }
 const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'text-to-speech': 'segTts',
@@ -99,6 +110,9 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'voice-agents': 'segAgents',
   'image-video-generation': 'segImageVideo',
   'vision-ocr': 'segVision',
+  'inference-engines': 'segEngines',
+  'runtimes-managers': 'segRuntimes',
+  'routers-gateways': 'segGateways',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '방대한 플러그인 생태계를 갖춘 파워유저용 인터페이스',
   },
   reviewSlug: 'text-generation-webui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true, cpuInference: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

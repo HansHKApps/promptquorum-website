@@ -40,5 +40,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'mlxcel-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v0.7.0', versionSourceUrl: 'https://github.com/lablup/mlxcel/releases/tag/v0.7.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, appleSilicon: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

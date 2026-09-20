@@ -35,5 +35,7 @@ export const app: ToolRecord = {
     ar: 'بيئة تشغيل أصلية بلغة Swift وMetal تُشغّل نموذج Gemma 4 26B-A4B محليًا باستخدام نحو 2 جيجابايت من الذاكرة على أي ماك بوك من سلسلة M',
     ko: '모든 M 시리즈 맥북에서 약 2GB RAM만으로 Gemma 4 26B-A4B를 로컬 실행하는 네이티브 Swift/Metal 런타임',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { appleSilicon: true },
   lastVerifiedDate: '2026-09-18',
 }
