@@ -5,10 +5,12 @@
 // (COMMON_COLUMNS) and from `ToolRecord.compare` (category-specific attributes below). Never
 // hand-write a comparison value into article prose that the record could supply.
 //
-// Groups with an empty attribute list have no category-specific columns yet — they render only
-// the common columns until their pilot defines the attributes.
+// A category group can mix tools that are not comparable on the same attributes (voice-audio holds
+// text-to-speech, speech-to-text and real-time voice agents), so each group is split into SEGMENTS,
+// each with its own attributes; the article and the tool compare within a segment only. Groups
+// with no segments yet render only the common columns until their pilot defines them.
 
-import type { CategoryGroupKey } from './categories'
+import type { CategoryGroupKey, CategorySubKey } from './categories'
 
 export type CompareAttributeKind = 'boolean' | 'text' | 'number' | 'list'
 
@@ -30,14 +32,52 @@ export const COMMON_COLUMNS = [
   { key: 'version', label: 'Version' },
 ] as const
 
-export const COMPARE_ATTRIBUTES: Record<CategoryGroupKey, CompareAttribute[]> = {
-  // Pilot category — attributes to confirm against the real tools before any data is filled in.
+export interface CompareSegment {
+  key: string
+  label: string
+  /** A tool belongs to the segment when any of its `categories` is in this list. */
+  subs: CategorySubKey[]
+  attributes: CompareAttribute[]
+}
+
+export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
+  // Pilot category — attributes are proposals until each is confirmed against the tools' reviews.
   'voice-audio': [
-    { key: 'languages', label: 'Languages', kind: 'number', hint: 'Count of supported languages' },
-    { key: 'voiceCloning', label: 'Voice cloning', kind: 'boolean' },
-    { key: 'realtime', label: 'Real-time streaming', kind: 'boolean' },
-    { key: 'cpuUsable', label: 'Usable on CPU only', kind: 'boolean' },
-    { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+    {
+      key: 'text-to-speech',
+      label: 'Text-to-speech',
+      subs: ['text-to-speech', 'voice-cloning'],
+      attributes: [
+        { key: 'languages', label: 'Languages', kind: 'number', hint: 'Count of supported languages' },
+        { key: 'voiceCloning', label: 'Voice cloning', kind: 'boolean' },
+        { key: 'streaming', label: 'Streaming output', kind: 'boolean' },
+        { key: 'cpuUsable', label: 'Usable on CPU only', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'speech-to-text',
+      label: 'Speech-to-text',
+      subs: ['speech-to-text'],
+      attributes: [
+        { key: 'languages', label: 'Languages', kind: 'number', hint: 'Count of supported languages' },
+        { key: 'realtime', label: 'Real-time transcription', kind: 'boolean' },
+        { key: 'speakerLabels', label: 'Speaker labels', kind: 'boolean' },
+        { key: 'cpuUsable', label: 'Usable on CPU only', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'voice-agents',
+      label: 'Real-time voice agents',
+      subs: ['realtime-voice-agents'],
+      attributes: [
+        { key: 'fullyLocal', label: 'Fully local pipeline', kind: 'boolean' },
+        { key: 'bargeIn', label: 'Interruption (barge-in)', kind: 'boolean' },
+        { key: 'customLlm', label: 'Bring your own LLM', kind: 'boolean' },
+        { key: 'telephony', label: 'Phone / telephony', kind: 'boolean' },
+      ],
+    },
   ],
   'run-serve': [],
   'chat-assistants': [],
