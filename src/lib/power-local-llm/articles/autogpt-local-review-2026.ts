@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Developers evaluating AutoGPT for a local, Ollama-backed agent versus the hosted AutoGPT Platform, and readers confused by the project\'s split MIT/Polyform licensing',
     primaryTerm: 'AutoGPT',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Is AutoGPT still open-source, and does it work with Ollama?',
         answer: 'Only part of it is open-source in the permissive sense: the classic CLI agent under classic/original_autogpt/ is MIT licensed and can point at Ollama via a generic OpenAI-compatible base URL. The current flagship AutoGPT Platform is Polyform Shield licensed (source-available, not OSI open-source) and has no built-in Ollama support.',
         bullets: [
-          'Repo: 187,081 stars, 531 open issues, not archived, pushed 2026-09-02',
+          'Repo: 187,453 stars, 582 open issues, not archived, pushed 2026-09-20',
           'classic/original_autogpt/ (the CLI agent): MIT license',
           'autogpt_platform/ (the hosted product): Polyform Shield License',
           'Local models via OPENAI_API_BASE_URL (generic OpenAI-compatible endpoint), not a named "Ollama integration"',
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'The "AutoGPT" most people remember — a command-line agent you point at your own model — still exists and is still free (MIT), but the company behind it now spends its energy on a separate paid product with a visual builder. Read the license and the folder name before you decide which one you are evaluating.' },
         ],
         items: [
-          'Repository: 187,081 stars, 531 open issues, not archived — actively pushed to as of this review',
+          'Repository: 187,453 stars, 582 open issues, not archived — actively pushed to as of this review',
           'AutoGPT Platform (autogpt_platform/, agpt.co): hosted, paid, visual agent builder — Polyform Shield License (source-available, restricts competing commercial use)',
           'Classic AutoGPT (classic/original_autogpt/): the original autonomous CLI agent — MIT license, still receives security and maintenance commits',
           'Local models: classic supports any OpenAI-API-compatible server (including Ollama) via OPENAI_API_BASE_URL, plus native Llamafile support via LLAMAFILE_API_BASE',
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-hosting the Platform is technically possible (docker-compose.platform.yml, an installer/ script, and a single-container/ option exist in the repo), but the README\'s primary call-to-action is signing up for the hosted product, not self-hosting it',
           'classic/original_autogpt/: the original CLI-driven autonomous agent, now positioned as a legacy component alongside classic/forge (an agent-building framework), classic/benchmark, and classic/frontend',
         ],
-        note: 'The headline star count (187,000+) and issue count (531 open) describe the whole repository, which is dominated by Platform activity. Do not read a high star count as evidence that the classic CLI agent specifically is thriving — the two components have different trajectories under the same roof.',
+        note: 'The headline star count (187,000+) and issue count (582 open) describe the whole repository, which is dominated by Platform activity. Do not read a high star count as evidence that the classic CLI agent specifically is thriving — the two components have different trajectories under the same roof.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'Repository status', 'What it shows': 'Not archived; pushed same day as this review; 531 open issues' },
+          { 'Signal': 'Repository status', 'What it shows': 'Not archived; pushed same day as this review; 582 open issues' },
           { 'Signal': 'classic/ commit pattern', 'What it shows': 'Security fixes and dependency caps land regularly; no major new-feature commits' },
           { 'Signal': 'Where new features land', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace, and Build canvas get the active development' },
           { 'Signal': 'Project framing', 'What it shows': 'README and primary CTA promote the hosted Platform; classic is positioned as the legacy CLI track' },
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is AutoGPT MIT licensed?', a: 'Partly. The classic/ folder (original_autogpt, forge, benchmark, frontend) is MIT licensed. The autogpt_platform/ folder — the current flagship, hosted AutoGPT Platform — is licensed under Polyform Shield, a source-available license, not a permissive open-source one.' },
-          { q: 'Is AutoGPT still maintained?', a: 'Yes. The repository is not archived and was pushed to the same day as this review, with 531 open issues. Active feature development is concentrated in autogpt_platform/; the classic/ folder still receives security and maintenance commits but not new features.' },
+          { q: 'Is AutoGPT still maintained?', a: 'Yes. The repository is not archived and was pushed to the same day as this review, with 582 open issues. Active feature development is concentrated in autogpt_platform/; the classic/ folder still receives security and maintenance commits but not new features.' },
           { q: 'Does AutoGPT work with Ollama?', a: 'The classic CLI agent does, through its generic OpenAI-API-compatible client — set OPENAI_API_BASE_URL to your Ollama server\'s /v1 endpoint. This is not a named, purpose-built "Ollama integration," and it is not supported by the current AutoGPT Platform, whose configuration has no local-model settings.' },
           { q: 'What is the AutoGPT Platform?', a: 'The AutoGPT Platform (agpt.co) is the project\'s current commercial product: a hosted, paid, visual agent builder with a chat-to-agent AutoPilot, an Agents dashboard, a Marketplace of pre-built agents, and a node-based Build canvas. It can technically be self-hosted, but the primary path promoted by the project is the hosted signup.' },
           { q: 'Is AutoGPT free to use?', a: 'Classic AutoGPT (MIT) is free to self-host. The AutoGPT Platform is a paid, hosted product; self-hosting it is possible under the Polyform Shield license, which permits personal or internal use but restricts building a competing commercial offering on top of it.' },
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die AutoGPT als lokalen, Ollama-gestützten Agenten gegenüber der gehosteten AutoGPT Platform bewerten, und Leser, die durch die gesplittete MIT/Polyform-Lizenzierung des Projekts verwirrt sind',
     primaryTerm: 'AutoGPT',
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Ist AutoGPT noch Open Source, und funktioniert es mit Ollama?',
         answer: 'Nur ein Teil davon ist im permissiven Sinn Open Source: Der Classic-CLI-Agent unter classic/original_autogpt/ ist MIT-lizenziert und kann über eine generische OpenAI-kompatible Basis-URL auf Ollama zeigen. Die aktuelle Flaggschiff-AutoGPT-Platform ist unter Polyform Shield lizenziert (source-available, nicht OSI-Open-Source) und hat keine eingebaute Ollama-Unterstützung.',
         bullets: [
-          'Repository: 187.081 Stars, 531 offene Issues, nicht archiviert, gepusht am 2026-09-02',
+          'Repository: 187.453 Stars, 582 offene Issues, nicht archiviert, gepusht am 2026-09-20',
           'classic/original_autogpt/ (der CLI-Agent): MIT-Lizenz',
           'autogpt_platform/ (das gehostete Produkt): Polyform Shield License',
           'Lokale Modelle über OPENAI_API_BASE_URL (generischer OpenAI-kompatibler Endpunkt), keine benannte „Ollama-Integration"',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Das „AutoGPT", an das sich die meisten erinnern — ein Kommandozeilen-Agent, den man auf das eigene Modell zeigen lässt — existiert weiterhin und ist weiterhin kostenlos (MIT), aber das Unternehmen dahinter steckt seine Energie jetzt in ein separates, kostenpflichtiges Produkt mit einem visuellen Builder. Lesen Sie die Lizenz und den Ordnernamen, bevor Sie entscheiden, welches der beiden Sie gerade bewerten.' },
         ],
         items: [
-          'Repository: 187.081 Stars, 531 offene Issues, nicht archiviert — zum Zeitpunkt dieses Reviews aktiv weiterentwickelt',
+          'Repository: 187.453 Stars, 582 offene Issues, nicht archiviert — zum Zeitpunkt dieses Reviews aktiv weiterentwickelt',
           'AutoGPT Platform (autogpt_platform/, agpt.co): gehosteter, kostenpflichtiger, visueller Agent-Builder — Polyform Shield License (source-available, schränkt konkurrierende kommerzielle Nutzung ein)',
           'Classic AutoGPT (classic/original_autogpt/): der ursprüngliche autonome CLI-Agent — MIT-Lizenz, erhält weiterhin Sicherheits- und Wartungs-Commits',
           'Lokale Modelle: Classic unterstützt jeden OpenAI-API-kompatiblen Server (einschließlich Ollama) über OPENAI_API_BASE_URL, plus native Llamafile-Unterstützung über LLAMAFILE_API_BASE',
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Selbst-Hosting der Platform ist technisch möglich (docker-compose.platform.yml, ein installer/-Skript und eine single-container/-Option existieren im Repository), aber der primäre Call-to-Action im README ist die Anmeldung für das gehostete Produkt, nicht das Selbst-Hosting',
           'classic/original_autogpt/: der ursprüngliche CLI-gesteuerte autonome Agent, jetzt positioniert als Legacy-Komponente neben classic/forge (ein Framework zum Bauen von Agenten), classic/benchmark und classic/frontend',
         ],
-        note: 'Die Schlagzeilen-Sternezahl (187.000+) und die Issue-Zahl (531 offen) beschreiben das gesamte Repository, das von der Platform-Aktivität dominiert wird. Eine hohe Sternezahl sollte nicht als Beleg dafür gelesen werden, dass speziell der Classic-CLI-Agent floriert — die beiden Komponenten haben unter demselben Dach unterschiedliche Entwicklungslinien.',
+        note: 'Die Schlagzeilen-Sternezahl (187.000+) und die Issue-Zahl (582 offen) beschreiben das gesamte Repository, das von der Platform-Aktivität dominiert wird. Eine hohe Sternezahl sollte nicht als Beleg dafür gelesen werden, dass speziell der Classic-CLI-Agent floriert — die beiden Komponenten haben unter demselben Dach unterschiedliche Entwicklungslinien.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'Repository-Status', 'What it shows': 'Nicht archiviert; gleicher Tag wie dieses Review gepusht; 531 offene Issues' },
+          { 'Signal': 'Repository-Status', 'What it shows': 'Nicht archiviert; gleicher Tag wie dieses Review gepusht; 582 offene Issues' },
           { 'Signal': 'classic/-Commit-Muster', 'What it shows': 'Sicherheitsfixes und Versionsobergrenzen regelmäßig; keine großen Feature-Commits' },
           { 'Signal': 'Wo neue Funktionen landen', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace und Build-Oberfläche bekommen die aktive Entwicklung' },
           { 'Signal': 'Projekt-Framing', 'What it shows': 'README und primärer CTA bewerben die gehostete Platform; Classic gilt als Legacy-CLI-Spur' },
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist AutoGPT MIT-lizenziert?', a: 'Teilweise. Der classic/-Ordner (original_autogpt, forge, benchmark, frontend) ist MIT-lizenziert. Der Ordner autogpt_platform/ — die aktuelle Flaggschiff-, gehostete AutoGPT Platform — ist unter Polyform Shield lizenziert, einer source-available Lizenz, keiner permissiven Open-Source-Lizenz.' },
-          { q: 'Wird AutoGPT noch gepflegt?', a: 'Ja. Das Repository ist nicht archiviert und wurde am selben Tag wie dieses Review noch gepusht, mit 531 offenen Issues. Aktive Feature-Entwicklung konzentriert sich auf autogpt_platform/; der classic/-Ordner erhält weiterhin Sicherheits- und Wartungs-Commits, aber keine neuen Funktionen.' },
+          { q: 'Wird AutoGPT noch gepflegt?', a: 'Ja. Das Repository ist nicht archiviert und wurde am selben Tag wie dieses Review noch gepusht, mit 582 offenen Issues. Aktive Feature-Entwicklung konzentriert sich auf autogpt_platform/; der classic/-Ordner erhält weiterhin Sicherheits- und Wartungs-Commits, aber keine neuen Funktionen.' },
           { q: 'Funktioniert AutoGPT mit Ollama?', a: 'Der Classic-CLI-Agent schon, über seinen generischen OpenAI-API-kompatiblen Client — setzen Sie OPENAI_API_BASE_URL auf den /v1-Endpunkt Ihres Ollama-Servers. Das ist keine benannte, eigens gebaute „Ollama-Integration", und sie wird von der aktuellen AutoGPT Platform nicht unterstützt, deren Konfiguration keine Lokalmodell-Einstellungen hat.' },
           { q: 'Was ist die AutoGPT Platform?', a: 'Die AutoGPT Platform (agpt.co) ist das aktuelle kommerzielle Produkt des Projekts: ein gehosteter, kostenpflichtiger, visueller Agent-Builder mit einem Chat-zu-Agent-AutoPilot, einem Agents-Dashboard, einem Marketplace vorgefertigter Agenten und einer node-basierten Build-Oberfläche. Sie kann technisch selbst gehostet werden, aber der primäre, vom Projekt beworbene Weg ist die gehostete Anmeldung.' },
           { q: 'Ist AutoGPT kostenlos nutzbar?', a: 'Classic AutoGPT (MIT) ist kostenlos selbst hostbar. Die AutoGPT Platform ist ein bezahltes, gehostetes Produkt; Selbst-Hosting ist unter der Polyform-Shield-Lizenz möglich, die persönliche oder interne Nutzung erlaubt, aber den Aufbau eines konkurrierenden kommerziellen Angebots darauf einschränkt.' },
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui évaluent AutoGPT pour un agent local adossé à Ollama face à l\'AutoGPT Platform hébergée, et lecteurs déroutés par le double régime de licence MIT/Polyform du projet',
     primaryTerm: 'AutoGPT',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'AutoGPT est-il encore open source et fonctionne-t-il avec Ollama ?',
         answer: 'Seule une partie l\'est au sens permissif du terme : l\'agent CLI classique sous classic/original_autogpt/ est sous licence MIT et peut se connecter à Ollama via une URL de base compatible OpenAI générique. L\'AutoGPT Platform actuelle, le produit phare, est sous licence Polyform Shield (source-available, non open-source au sens OSI) et n\'a aucun support Ollama intégré.',
         bullets: [
-          'Dépôt : 187 081 étoiles, 531 issues ouvertes, non archivé, poussé le 2026-09-02',
+          'Dépôt : 187 453 étoiles, 582 issues ouvertes, non archivé, poussé le 2026-09-20',
           'classic/original_autogpt/ (l\'agent CLI) : licence MIT',
           'autogpt_platform/ (le produit hébergé) : Polyform Shield License',
           'Modèles locaux via OPENAI_API_BASE_URL (point de terminaison générique compatible OpenAI), pas une « intégration Ollama » nommée comme telle',
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'L\'« AutoGPT » dont la plupart des gens se souviennent — un agent en ligne de commande que l\'on pointe vers son propre modèle — existe toujours et reste gratuit (MIT), mais l\'entreprise qui le porte consacre désormais son énergie à un produit payant distinct, doté d\'un constructeur visuel. Lisez la licence et le nom du dossier avant de décider lequel des deux vous évaluez.' },
         ],
         items: [
-          'Dépôt : 187 081 étoiles, 531 issues ouvertes, non archivé — activement mis à jour au moment de cette revue',
+          'Dépôt : 187 453 étoiles, 582 issues ouvertes, non archivé — activement mis à jour au moment de cette revue',
           'AutoGPT Platform (autogpt_platform/, agpt.co) : constructeur d\'agents visuel, hébergé et payant — Polyform Shield License (source-available, restreint l\'usage commercial concurrent)',
           'AutoGPT Classic (classic/original_autogpt/) : l\'agent CLI autonome d\'origine — licence MIT, reçoit toujours des commits de sécurité et de maintenance',
           'Modèles locaux : Classic prend en charge tout serveur compatible API OpenAI (dont Ollama) via OPENAI_API_BASE_URL, plus un support natif de Llamafile via LLAMAFILE_API_BASE',
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'auto-hébergement de la Platform est techniquement possible (docker-compose.platform.yml, un script installer/ et une option single-container/ existent dans le dépôt), mais l\'appel à l\'action principal du README est de s\'inscrire au produit hébergé, pas de l\'auto-héberger',
           'classic/original_autogpt/ : l\'agent autonome piloté par CLI d\'origine, désormais positionné comme un composant historique aux côtés de classic/forge (un framework de création d\'agents), classic/benchmark et classic/frontend',
         ],
-        note: 'Le nombre d\'étoiles affiché (plus de 187 000) et le nombre d\'issues (531 ouvertes) décrivent l\'ensemble du dépôt, dominé par l\'activité de la Platform. Ne lisez pas un nombre d\'étoiles élevé comme une preuve que l\'agent CLI classique en particulier est florissant — les deux composants suivent des trajectoires différentes sous le même toit.',
+        note: 'Le nombre d\'étoiles affiché (plus de 187 000) et le nombre d\'issues (582 ouvertes) décrivent l\'ensemble du dépôt, dominé par l\'activité de la Platform. Ne lisez pas un nombre d\'étoiles élevé comme une preuve que l\'agent CLI classique en particulier est florissant — les deux composants suivent des trajectoires différentes sous le même toit.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'Statut du dépôt', 'What it shows': 'Non archivé ; poussé le jour même de cette revue ; 531 issues ouvertes' },
+          { 'Signal': 'Statut du dépôt', 'What it shows': 'Non archivé ; poussé le jour même de cette revue ; 582 issues ouvertes' },
           { 'Signal': 'Rythme de commits sur classic/', 'What it shows': 'Correctifs de sécurité et plafonds de dépendances réguliers ; pas de commits majeurs de nouvelles fonctionnalités' },
           { 'Signal': 'Où atterrissent les nouveautés', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace et canevas Build reçoivent le développement actif' },
           { 'Signal': 'Positionnement du projet', 'What it shows': 'Le README et le CTA principal promeuvent la Platform hébergée ; classic est positionné comme la voie CLI historique' },
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: 'AutoGPT est-il sous licence MIT ?', a: 'En partie. Le dossier classic/ (original_autogpt, forge, benchmark, frontend) est sous licence MIT. Le dossier autogpt_platform/ — l\'AutoGPT Platform hébergée, produit phare actuel — est sous licence Polyform Shield, une licence source-available, pas une licence open-source permissive.' },
-          { q: 'AutoGPT est-il encore maintenu ?', a: 'Oui. Le dépôt n\'est pas archivé et a été poussé le jour même de cette revue, avec 531 issues ouvertes. Le développement actif de fonctionnalités est concentré dans autogpt_platform/ ; le dossier classic/ reçoit toujours des commits de sécurité et de maintenance mais pas de nouvelles fonctionnalités.' },
+          { q: 'AutoGPT est-il encore maintenu ?', a: 'Oui. Le dépôt n\'est pas archivé et a été poussé le jour même de cette revue, avec 582 issues ouvertes. Le développement actif de fonctionnalités est concentré dans autogpt_platform/ ; le dossier classic/ reçoit toujours des commits de sécurité et de maintenance mais pas de nouvelles fonctionnalités.' },
           { q: 'AutoGPT fonctionne-t-il avec Ollama ?', a: 'L\'agent CLI classique oui, via son client générique compatible API OpenAI — définissez OPENAI_API_BASE_URL vers le point de terminaison /v1 de votre serveur Ollama. Ce n\'est pas une « intégration Ollama » nommée et conçue pour cet usage, et ce n\'est pas pris en charge par l\'AutoGPT Platform actuelle, dont la configuration n\'a aucun réglage de modèle local.' },
           { q: 'Qu\'est-ce que l\'AutoGPT Platform ?', a: 'L\'AutoGPT Platform (agpt.co) est le produit commercial actuel du projet : un constructeur d\'agents visuel, hébergé et payant, avec un AutoPilot chat-vers-agent, un tableau de bord Agents, une Marketplace d\'agents prêts à l\'emploi et un canevas Build à base de nœuds. Elle peut techniquement être auto-hébergée, mais le chemin principal promu par le projet est l\'inscription hébergée.' },
           { q: 'AutoGPT est-il gratuit ?', a: 'AutoGPT Classic (MIT) est gratuit à auto-héberger. L\'AutoGPT Platform est un produit payant et hébergé ; l\'auto-héberger est possible sous la licence Polyform Shield, qui autorise un usage personnel ou interne mais restreint la création d\'une offre commerciale concurrente à partir du code.' },
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que evalúan AutoGPT como agente local respaldado por Ollama frente a la AutoGPT Platform alojada, y lectores confundidos por el doble licenciamiento MIT/Polyform del proyecto',
     primaryTerm: 'AutoGPT',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿AutoGPT sigue siendo de código abierto y funciona con Ollama?',
         answer: 'Solo una parte es de código abierto en el sentido permisivo: el agente CLI classic bajo classic/original_autogpt/ tiene licencia MIT y puede apuntar a Ollama mediante una URL base genérica compatible con OpenAI. La actual AutoGPT Platform insignia tiene licencia Polyform Shield (código disponible, no open-source OSI) y no tiene soporte integrado para Ollama.',
         bullets: [
-          'Repositorio: 187.081 estrellas, 531 issues abiertos, no archivado, con commits el 2026-09-02',
+          'Repositorio: 187.453 estrellas, 582 issues abiertos, no archivado, con commits el 2026-09-20',
           'classic/original_autogpt/ (el agente CLI): licencia MIT',
           'autogpt_platform/ (el producto alojado): Polyform Shield License',
           'Modelos locales vía OPENAI_API_BASE_URL (endpoint genérico compatible con OpenAI), no una "integración con Ollama" con nombre propio',
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'El "AutoGPT" que la mayoría recuerda — un agente de línea de comandos que apuntas a tu propio modelo — sigue existiendo y sigue siendo gratuito (MIT), pero la empresa detrás del proyecto ahora concentra su energía en un producto de pago separado con un constructor visual. Lee la licencia y el nombre de la carpeta antes de decidir cuál estás evaluando.' },
         ],
         items: [
-          'Repositorio: 187.081 estrellas, 531 issues abiertos, no archivado — activamente actualizado a fecha de esta reseña',
+          'Repositorio: 187.453 estrellas, 582 issues abiertos, no archivado — activamente actualizado a fecha de esta reseña',
           'AutoGPT Platform (autogpt_platform/, agpt.co): constructor visual de agentes alojado y de pago — Polyform Shield License (código disponible, restringe el uso comercial competidor)',
           'AutoGPT Classic (classic/original_autogpt/): el agente CLI autónomo original — licencia MIT, sigue recibiendo commits de seguridad y mantenimiento',
           'Modelos locales: classic admite cualquier servidor compatible con la API de OpenAI (incluido Ollama) vía OPENAI_API_BASE_URL, además de soporte nativo para Llamafile vía LLAMAFILE_API_BASE',
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Autoalojar la Platform es técnicamente posible (existen docker-compose.platform.yml, un script installer/ y una opción single-container/ en el repositorio), pero la llamada a la acción principal del README es registrarse en el producto alojado, no autoalojarlo',
           'classic/original_autogpt/: el agente autónomo original impulsado por CLI, posicionado ahora como componente heredado junto a classic/forge (un framework de construcción de agentes), classic/benchmark y classic/frontend',
         ],
-        note: 'El número destacado de estrellas (más de 187.000) y de issues (531 abiertos) describe todo el repositorio, dominado por la actividad de la Platform. No interpretes un número alto de estrellas como evidencia de que el agente CLI classic específicamente prospera — los dos componentes tienen trayectorias distintas bajo el mismo techo.',
+        note: 'El número destacado de estrellas (más de 187.000) y de issues (582 abiertos) describe todo el repositorio, dominado por la actividad de la Platform. No interpretes un número alto de estrellas como evidencia de que el agente CLI classic específicamente prospera — los dos componentes tienen trayectorias distintas bajo el mismo techo.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'Estado del repositorio', 'What it shows': 'No archivado; con commits el mismo día de esta reseña; 531 issues abiertos' },
+          { 'Signal': 'Estado del repositorio', 'What it shows': 'No archivado; con commits el mismo día de esta reseña; 582 issues abiertos' },
           { 'Signal': 'Patrón de commits en classic/', 'What it shows': 'Llegan correcciones de seguridad y topes de dependencias con regularidad; sin commits de funciones nuevas relevantes' },
           { 'Signal': 'Dónde llegan las funciones nuevas', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace y el lienzo de construcción reciben el desarrollo activo' },
           { 'Signal': 'Enfoque del proyecto', 'What it shows': 'El README y la CTA principal promocionan la Platform alojada; classic se posiciona como la vía CLI heredada' },
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿AutoGPT tiene licencia MIT?', a: 'En parte. La carpeta classic/ (original_autogpt, forge, benchmark, frontend) tiene licencia MIT. La carpeta autogpt_platform/ — la AutoGPT Platform alojada e insignia actual — tiene licencia Polyform Shield, una licencia con código disponible, no una de código abierto permisiva.' },
-          { q: '¿Sigue mantenido AutoGPT?', a: 'Sí. El repositorio no está archivado y recibió commits el mismo día de esta reseña, con 531 issues abiertos. El desarrollo activo de funciones se concentra en autogpt_platform/; la carpeta classic/ sigue recibiendo commits de seguridad y mantenimiento, pero no funciones nuevas.' },
+          { q: '¿Sigue mantenido AutoGPT?', a: 'Sí. El repositorio no está archivado y recibió commits el mismo día de esta reseña, con 582 issues abiertos. El desarrollo activo de funciones se concentra en autogpt_platform/; la carpeta classic/ sigue recibiendo commits de seguridad y mantenimiento, pero no funciones nuevas.' },
           { q: '¿Funciona AutoGPT con Ollama?', a: 'El agente CLI classic sí, mediante su cliente genérico compatible con la API de OpenAI — establece OPENAI_API_BASE_URL en el endpoint /v1 de tu servidor Ollama. No es una "integración con Ollama" con nombre propio y construida a medida, y no es compatible con la AutoGPT Platform actual, cuya configuración no tiene ajustes de modelos locales.' },
           { q: '¿Qué es la AutoGPT Platform?', a: 'La AutoGPT Platform (agpt.co) es el producto comercial actual del proyecto: un constructor visual de agentes alojado y de pago, con un AutoPilot de chat a agente, un panel de Agents, un Marketplace de agentes prediseñados y un lienzo de construcción basado en nodos. Técnicamente puede autoalojarse, pero la vía principal que promueve el proyecto es el registro alojado.' },
           { q: '¿Es gratuito usar AutoGPT?', a: 'AutoGPT classic (MIT) es gratuito para autoalojar. La AutoGPT Platform es un producto de pago y alojado; autoalojarla es posible bajo la licencia Polyform Shield, que permite el uso personal o interno pero restringe construir una oferta comercial competidora sobre ella.' },
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores avaliando o AutoGPT como agente local baseado em Ollama versus a AutoGPT Platform hospedada, e leitores confusos com o licenciamento dividido MIT/Polyform do projeto',
     primaryTerm: 'AutoGPT',
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O AutoGPT ainda é open-source e funciona com Ollama?',
         answer: 'Só parte dele é open-source no sentido permissivo: o agente CLI clássico em classic/original_autogpt/ é licenciado sob MIT e pode apontar para o Ollama via uma URL base compatível com OpenAI genérica. A atual AutoGPT Platform principal é licenciada sob Polyform Shield (source-available, não open-source segundo a OSI) e não tem suporte nativo a Ollama.',
         bullets: [
-          'Repositório: 187.081 estrelas, 531 issues abertas, não arquivado, com push em 2026-09-02',
+          'Repositório: 187.453 estrelas, 582 issues abertas, não arquivado, com push em 2026-09-20',
           'classic/original_autogpt/ (o agente CLI): licença MIT',
           'autogpt_platform/ (o produto hospedado): licença Polyform Shield',
           'Modelos locais via OPENAI_API_BASE_URL (endpoint genérico compatível com OpenAI), não uma "integração com Ollama" nomeada',
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'O "AutoGPT" que a maioria das pessoas lembra — um agente de linha de comando que você aponta para seu próprio modelo — ainda existe e continua gratuito (MIT), mas a empresa por trás dele agora concentra energia num produto pago separado com um construtor visual. Leia a licença e o nome da pasta antes de decidir qual dos dois você está avaliando.' },
         ],
         items: [
-          'Repositório: 187.081 estrelas, 531 issues abertas, não arquivado — recebendo push ativamente até esta revisão',
+          'Repositório: 187.453 estrelas, 582 issues abertas, não arquivado — recebendo push ativamente até esta revisão',
           'AutoGPT Platform (autogpt_platform/, agpt.co): construtor visual de agentes hospedado e pago — licença Polyform Shield (source-available, restringe uso comercial concorrente)',
           'AutoGPT Clássico (classic/original_autogpt/): o agente CLI autônomo original — licença MIT, ainda recebe commits de segurança e manutenção',
           'Modelos locais: o clássico suporta qualquer servidor compatível com a API OpenAI (incluindo Ollama) via OPENAI_API_BASE_URL, além de suporte nativo a Llamafile via LLAMAFILE_API_BASE',
@@ -1105,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Autogerenciar (self-host) a Platform é tecnicamente possível (docker-compose.platform.yml, um script installer/ e uma opção single-container/ existem no repositório), mas o call-to-action principal do README é o cadastro no produto hospedado, não o autogerenciamento',
           'classic/original_autogpt/: o agente autônomo original guiado por CLI, agora posicionado como um componente legado ao lado de classic/forge (um framework de construção de agentes), classic/benchmark e classic/frontend',
         ],
-        note: 'A contagem de estrelas em destaque (mais de 187.000) e a contagem de issues (531 abertas) descrevem o repositório inteiro, dominado pela atividade da Platform. Não interprete uma contagem alta de estrelas como evidência de que o agente CLI clássico especificamente está prosperando — os dois componentes têm trajetórias diferentes sob o mesmo teto.',
+        note: 'A contagem de estrelas em destaque (mais de 187.000) e a contagem de issues (582 abertas) descrevem o repositório inteiro, dominado pela atividade da Platform. Não interprete uma contagem alta de estrelas como evidência de que o agente CLI clássico especificamente está prosperando — os dois componentes têm trajetórias diferentes sob o mesmo teto.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'Status do repositório', 'What it shows': 'Não arquivado; push no mesmo dia desta revisão; 531 issues abertas' },
+          { 'Signal': 'Status do repositório', 'What it shows': 'Não arquivado; push no mesmo dia desta revisão; 582 issues abertas' },
           { 'Signal': 'Padrão de commits em classic/', 'What it shows': 'Correções de segurança e tetos de dependência entram regularmente; sem commits de recursos novos' },
           { 'Signal': 'Onde novos recursos entram', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace e Build canvas recebem o desenvolvimento ativo' },
           { 'Signal': 'Posicionamento do projeto', 'What it shows': 'README e CTA principal promovem a Platform hospedada; clássico é posicionado como a trilha CLI legada' },
@@ -1244,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'O AutoGPT é licenciado sob MIT?', a: 'Parcialmente. A pasta classic/ (original_autogpt, forge, benchmark, frontend) é licenciada sob MIT. A pasta autogpt_platform/ — a AutoGPT Platform hospedada e principal atual — é licenciada sob Polyform Shield, uma licença source-available, não uma de código aberto permissiva.' },
-          { q: 'O AutoGPT ainda é mantido?', a: 'Sim. O repositório não está arquivado e recebeu push no mesmo dia desta revisão, com 531 issues abertas. O desenvolvimento ativo de recursos está concentrado em autogpt_platform/; a pasta classic/ ainda recebe commits de segurança e manutenção, mas não novos recursos.' },
+          { q: 'O AutoGPT ainda é mantido?', a: 'Sim. O repositório não está arquivado e recebeu push no mesmo dia desta revisão, com 582 issues abertas. O desenvolvimento ativo de recursos está concentrado em autogpt_platform/; a pasta classic/ ainda recebe commits de segurança e manutenção, mas não novos recursos.' },
           { q: 'O AutoGPT funciona com Ollama?', a: 'O agente CLI clássico funciona, por meio do seu cliente genérico compatível com a API OpenAI — defina OPENAI_API_BASE_URL para o endpoint /v1 do seu servidor Ollama. Isso não é uma "integração com Ollama" nomeada e propositalmente construída, e não é suportado pela atual AutoGPT Platform, cuja configuração não tem opções de modelo local.' },
           { q: 'O que é a AutoGPT Platform?', a: 'A AutoGPT Platform (agpt.co) é o produto comercial atual do projeto: um construtor visual de agentes hospedado e pago, com um AutoPilot de chat-para-agente, um painel de Agents, um Marketplace de agentes prontos e um canvas de Build baseado em nós. Ela pode tecnicamente ser autogerenciada, mas o caminho principal promovido pelo projeto é o cadastro hospedado.' },
           { q: 'O AutoGPT é gratuito?', a: 'O AutoGPT clássico (MIT) é gratuito para autogerenciar. A AutoGPT Platform é um produto pago e hospedado; autogerenciá-la é possível sob a licença Polyform Shield, que permite uso pessoal ou interno mas restringe construir uma oferta comercial concorrente sobre ela.' },
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'مطورون يقيّمون AutoGPT كوكيل محلي يعمل عبر Ollama مقارنةً بمنصة AutoGPT Platform المستضافة، وقراء يشعرون بالحيرة إزاء انقسام الترخيص بين MIT وPolyform',
     primaryTerm: 'AutoGPT',
@@ -1304,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل AutoGPT لا يزال مفتوح المصدر، وهل يعمل مع Ollama؟',
         answer: 'جزء منه فقط مفتوح المصدر بالمعنى التساهلي: الوكيل الكلاسيكي تحت classic/original_autogpt/ مرخّص بموجب MIT ويمكن توجيهه إلى Ollama عبر عنوان أساسي عام متوافق مع OpenAI. أما AutoGPT Platform الرئيسية الحالية فمرخّصة بموجب Polyform Shield (متاحة المصدر، وليست مفتوحة المصدر حسب معايير OSI) ولا تدعم Ollama بشكل مدمج.',
         bullets: [
-          'المستودع: 187,081 نجمة، 531 مشكلة مفتوحة، غير مؤرشف، تم الدفع إليه في 2026-09-02',
+          'المستودع: 187,453 نجمة، 582 مشكلة مفتوحة، غير مؤرشف، تم الدفع إليه في 2026-09-20',
           'classic/original_autogpt/ (وكيل CLI): ترخيص MIT',
           'autogpt_platform/ (المنتج المستضاف): ترخيص Polyform Shield',
           'النماذج المحلية عبر OPENAI_API_BASE_URL (نقطة نهاية عامة متوافقة مع OpenAI)، وليست "تكاملًا مع Ollama" باسمه',
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '"AutoGPT" الذي يتذكره معظم الناس — وكيل سطر أوامر توجهه إلى نموذجك الخاص — لا يزال موجودًا ومجانيًا (MIT)، لكن الشركة التي تقف خلفه تركّز طاقتها الآن على منتج منفصل مدفوع بأداة بناء بصرية. اقرأ الترخيص واسم المجلد قبل أن تقرر أيّهما تقيّم.' },
         ],
         items: [
-          'المستودع: 187,081 نجمة، 531 مشكلة مفتوحة، غير مؤرشف — ويتلقى دفعات نشطة حتى وقت كتابة هذه المراجعة',
+          'المستودع: 187,453 نجمة، 582 مشكلة مفتوحة، غير مؤرشف — ويتلقى دفعات نشطة حتى وقت كتابة هذه المراجعة',
           'AutoGPT Platform (autogpt_platform/، agpt.co): أداة بناء وكلاء بصرية مستضافة ومدفوعة — بترخيص Polyform Shield (متاح المصدر، يقيّد الاستخدام التجاري المنافس)',
           'AutoGPT الكلاسيكي (classic/original_autogpt/): وكيل CLI الأصلي المستقل — بترخيص MIT، ولا يزال يتلقى تعديلات أمان وصيانة',
           'النماذج المحلية: النسخة الكلاسيكية تدعم أي خادم متوافق مع واجهة OpenAI (بما فيه Ollama) عبر OPENAI_API_BASE_URL، بالإضافة إلى دعم أصلي لـ Llamafile عبر LLAMAFILE_API_BASE',
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الاستضافة الذاتية للمنصة ممكنة تقنيًا (توجد في المستودع docker-compose.platform.yml، وسكربت installer/، وخيار single-container/)، لكن الدعوة الأساسية في README هي التسجيل في المنتج المستضاف، لا استضافته ذاتيًا',
           'classic/original_autogpt/: الوكيل المستقل الأصلي القائم على CLI، ويُموضع الآن كمكوّن قديم إلى جانب classic/forge (إطار بناء وكلاء)، وclassic/benchmark، وclassic/frontend',
         ],
-        note: 'عدد النجوم الإجمالي (أكثر من 187,000) وعدد المشكلات (531 مفتوحة) يصفان المستودع بأكمله، الذي تهيمن عليه نشاطات المنصة. لا تفسّر ارتفاع عدد النجوم على أنه دليل على ازدهار وكيل CLI الكلاسيكي تحديدًا — فللمكوّنَين مسارَين مختلفَين تحت السقف نفسه.',
+        note: 'عدد النجوم الإجمالي (أكثر من 187,000) وعدد المشكلات (582 مفتوحة) يصفان المستودع بأكمله، الذي تهيمن عليه نشاطات المنصة. لا تفسّر ارتفاع عدد النجوم على أنه دليل على ازدهار وكيل CLI الكلاسيكي تحديدًا — فللمكوّنَين مسارَين مختلفَين تحت السقف نفسه.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'حالة المستودع', 'What it shows': 'غير مؤرشف؛ تم الدفع إليه في نفس يوم هذه المراجعة؛ 531 مشكلة مفتوحة' },
+          { 'Signal': 'حالة المستودع', 'What it shows': 'غير مؤرشف؛ تم الدفع إليه في نفس يوم هذه المراجعة؛ 582 مشكلة مفتوحة' },
           { 'Signal': 'نمط تعديلات classic/', 'What it shows': 'إصلاحات أمان وتحديد سقف تبعيات بانتظام؛ لا تعديلات ميزات كبرى' },
           { 'Signal': 'أين تصل الميزات الجديدة', 'What it shows': 'autogpt_platform/ — AutoPilot والسوق ولوحة البناء تحظى بالتطوير النشط' },
           { 'Signal': 'تأطير المشروع', 'What it shows': 'README والدعوة الأساسية للعمل تروّجان للمنصة المستضافة؛ النسخة الكلاسيكية موضّعة كمسار CLI قديم' },
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل AutoGPT مرخّص بموجب MIT؟', a: 'جزئيًا. مجلد classic/ (original_autogpt، forge، benchmark، frontend) مرخّص بموجب MIT. أما مجلد autogpt_platform/ — المنصة الرئيسية المستضافة الحالية — فمرخّص بموجب Polyform Shield، وهو ترخيص متاح المصدر لا ترخيص مفتوح المصدر تساهلي.' },
-          { q: 'هل AutoGPT لا يزال مدعومًا؟', a: 'نعم. المستودع غير مؤرشف وتم الدفع إليه في نفس يوم هذه المراجعة، مع 531 مشكلة مفتوحة. يتركّز تطوير الميزات النشط في autogpt_platform/؛ لا يزال مجلد classic/ يتلقى تعديلات أمان وصيانة لكن لا ميزات جديدة.' },
+          { q: 'هل AutoGPT لا يزال مدعومًا؟', a: 'نعم. المستودع غير مؤرشف وتم الدفع إليه في نفس يوم هذه المراجعة، مع 582 مشكلة مفتوحة. يتركّز تطوير الميزات النشط في autogpt_platform/؛ لا يزال مجلد classic/ يتلقى تعديلات أمان وصيانة لكن لا ميزات جديدة.' },
           { q: 'هل يعمل AutoGPT مع Ollama؟', a: 'وكيل CLI الكلاسيكي يعمل، عبر عميله العام المتوافق مع واجهة OpenAI — اضبط OPENAI_API_BASE_URL على نقطة نهاية /v1 لخادم Ollama لديك. هذا ليس "تكاملًا مع Ollama" مسمّى ومخصصًا، ولا تدعمه AutoGPT Platform الحالية التي لا تتضمن إعداداتها أي خيارات للنماذج المحلية.' },
           { q: 'ما هي AutoGPT Platform؟', a: 'AutoGPT Platform (agpt.co) هي المنتج التجاري الحالي للمشروع: أداة بناء وكلاء بصرية مستضافة ومدفوعة، مع AutoPilot لتحويل المحادثة إلى وكيل، ولوحة وكلاء، وسوق وكلاء جاهزة، ولوحة بناء قائمة على العُقد. يمكن تقنيًا استضافتها ذاتيًا، لكن المسار الأساسي الذي يروّج له المشروع هو التسجيل المستضاف.' },
           { q: 'هل AutoGPT مجاني للاستخدام؟', a: 'AutoGPT الكلاسيكي (MIT) مجاني للاستضافة الذاتية. أما AutoGPT Platform فمنتج مستضاف مدفوع؛ استضافته ذاتيًا ممكنة بموجب ترخيص Polyform Shield، الذي يسمح بالاستخدام الشخصي أو الداخلي لكنه يقيّد بناء عرض تجاري منافس عليه.' },
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Ollamaを使ったローカルエージェントとしてAutoGPTを検討している開発者、および有料のホスト型AutoGPT Platformとの違い、MIT/Polyformに分かれたライセンス構成に困惑している読者',
     primaryTerm: 'AutoGPT',
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'AutoGPTは今もオープンソースか、Ollamaで動くのか?',
         answer: '寛容な意味でのオープンソースなのは一部だけだ。classic/original_autogpt/配下のクラシック版CLIエージェントはMITライセンスで、汎用のOpenAI互換ベースURLを介してOllamaに接続できる。一方、現在の主力製品であるAutoGPT PlatformはPolyform Shieldライセンス(ソースアベイラブルであり、OSI認定のオープンソースではない)で、Ollamaの組み込みサポートは存在しない。',
         bullets: [
-          'リポジトリ: スター187,081、オープンissue 531件、アーカイブされておらず、2026-09-02にプッシュあり',
+          'リポジトリ: スター187,453、オープンissue 582件、アーカイブされておらず、2026-09-20にプッシュあり',
           'classic/original_autogpt/(CLIエージェント): MITライセンス',
           'autogpt_platform/(ホスト型製品): Polyform Shield License',
           'ローカルモデルはOPENAI_API_BASE_URL(汎用のOpenAI互換エンドポイント)経由であり、名称のついた「Ollama統合」ではない',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '多くの人が「AutoGPT」として記憶している、自分のモデルに接続して使うコマンドラインエージェントは今も存在し、今も無料(MIT)だ。しかし開発元企業はいまや、ビジュアルビルダーを備えた別の有料製品にリソースを注いでいる。どちらを検証しているのか判断する前に、ライセンスとフォルダ名を確認してほしい。' },
         ],
         items: [
-          'リポジトリ: スター187,081、オープンissue 531件、アーカイブされていない — 本レビュー時点でも活発にプッシュされている',
+          'リポジトリ: スター187,453、オープンissue 582件、アーカイブされていない — 本レビュー時点でも活発にプッシュされている',
           'AutoGPT Platform(autogpt_platform/、agpt.co): ホスト型・有料のビジュアルエージェントビルダー — Polyform Shield License(ソースアベイラブル、競合する商用利用を制限)',
           'クラシック版AutoGPT(classic/original_autogpt/): 元々の自律型CLIエージェント — MITライセンス、今もセキュリティ・保守コミットを受けている',
           'ローカルモデル: クラシック版はOPENAI_API_BASE_URL経由で任意のOpenAI API互換サーバー(Ollamaを含む)をサポートし、加えてLLAMAFILE_API_BASE経由でLlamafileをネイティブサポートする',
@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Platformのセルフホストは技術的には可能(docker-compose.platform.yml、installer/スクリプト、single-container/オプションがリポジトリに存在する)が、READMEの主な誘導先はセルフホストではなくホスト型製品への登録である',
           'classic/original_autogpt/: 元々のCLI駆動型自律エージェントで、今はclassic/forge(エージェント構築フレームワーク)、classic/benchmark、classic/frontendと並ぶレガシーコンポーネントとして位置づけられている',
         ],
-        note: 'ヘッドラインのスター数(187,000超)とissue数(531件オープン)はリポジトリ全体の数字であり、その大半はPlatformの活動によるものだ。高いスター数をクラシック版CLIエージェント自体が活発である証拠と読むべきではない — 同じ屋根の下にある2つのコンポーネントは、まったく別の軌跡をたどっている。',
+        note: 'ヘッドラインのスター数(187,000超)とissue数(582件オープン)はリポジトリ全体の数字であり、その大半はPlatformの活動によるものだ。高いスター数をクラシック版CLIエージェント自体が活発である証拠と読むべきではない — 同じ屋根の下にある2つのコンポーネントは、まったく別の軌跡をたどっている。',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': 'リポジトリの状態', 'What it shows': 'アーカイブされておらず、本レビューと同日にプッシュあり; オープンissue 531件' },
+          { 'Signal': 'リポジトリの状態', 'What it shows': 'アーカイブされておらず、本レビューと同日にプッシュあり; オープンissue 582件' },
           { 'Signal': 'classic/のコミット傾向', 'What it shows': 'セキュリティ修正と依存関係の上限設定が定期的に入る; 大きな新機能コミットはなし' },
           { 'Signal': '新機能の追加先', 'What it shows': 'autogpt_platform/ — AutoPilot、Marketplace、Buildキャンバスが活発に開発される' },
           { 'Signal': 'プロジェクトの位置づけ', 'What it shows': 'READMEと主な導線はホスト型Platformを訴求; classicはレガシーCLIトラックとして位置づけ' },
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'AutoGPTはMITライセンスか?', a: '部分的にはそうだ。classic/フォルダ(original_autogpt、forge、benchmark、frontend)はMITライセンスである。現在の主力であるホスト型AutoGPT Platformを含むautogpt_platform/フォルダは、寛容なオープンソースライセンスではなく、ソースアベイラブルなPolyform Shieldの下でライセンスされている。' },
-          { q: 'AutoGPTは今も保守されているか?', a: 'はい。リポジトリはアーカイブされておらず、本レビューと同日にプッシュされており、オープンissueは531件ある。活発な機能開発はautogpt_platform/に集中しているが、classic/フォルダも今もセキュリティ・保守コミットを受けている(新機能は入らない)。' },
+          { q: 'AutoGPTは今も保守されているか?', a: 'はい。リポジトリはアーカイブされておらず、本レビューと同日にプッシュされており、オープンissueは582件ある。活発な機能開発はautogpt_platform/に集中しているが、classic/フォルダも今もセキュリティ・保守コミットを受けている(新機能は入らない)。' },
           { q: 'AutoGPTはOllamaで動くか?', a: 'クラシック版CLIエージェントは、汎用のOpenAI API互換クライアントを通じて動く — OPENAI_API_BASE_URLをOllamaサーバーの/v1エンドポイントに設定すればよい。これは名称のついた専用の「Ollama統合」ではなく、現在のAutoGPT Platformでもサポートされていない(その設定にはローカルモデルの項目がない)。' },
           { q: 'AutoGPT Platformとは何か?', a: 'AutoGPT Platform(agpt.co)はプロジェクトの現在の商用製品であり、チャットからエージェントを作るAutoPilot、Agentsダッシュボード、構築済みエージェントのMarketplace、ノードベースのBuildキャンバスを備えた、ホスト型・有料のビジュアルエージェントビルダーだ。技術的にはセルフホストも可能だが、プロジェクトが訴求する主な導線はホスト型サービスへの登録である。' },
           { q: 'AutoGPTは無料で使えるか?', a: 'クラシック版AutoGPT(MIT)は無料でセルフホストできる。AutoGPT Platformは有料のホスト型製品であり、Polyform Shieldライセンスの下でセルフホストすること自体は可能で、個人・社内利用は許可されるが、その上に競合する商用サービスを構築することは制限される。' },
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: '正在评估是否用 AutoGPT 搭建本地、基于 Ollama 的智能体（而非托管版 AutoGPT Platform）的开发者，以及被该项目 MIT/Polyform 双许可证拆分搞糊涂的读者',
     primaryTerm: 'AutoGPT',
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'AutoGPT 还是开源的吗？能配合 Ollama 使用吗？',
         answer: '严格意义上只有一部分是开源的：位于 classic/original_autogpt/ 下的经典 CLI 智能体采用 MIT 许可证,可以通过通用的 OpenAI 兼容基础 URL 接入 Ollama。目前的旗舰产品 AutoGPT Platform 采用 Polyform Shield 许可（源码可见,非 OSI 认可的开源许可），也没有内置的 Ollama 支持。',
         bullets: [
-          '仓库数据：187,081 星标，531 个未关闭 issue，未归档，2026-09-02 仍有提交',
+          '仓库数据：187,453 星标，582 个未关闭 issue，未归档，2026-09-20 仍有提交',
           'classic/original_autogpt/（CLI 智能体）：MIT 许可证',
           'autogpt_platform/（托管产品）：Polyform Shield License',
           '本地模型通过 OPENAI_API_BASE_URL（通用 OpenAI 兼容端点）接入，而非专门命名的"Ollama 集成"',
@@ -1843,7 +1843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '大多数人记忆中的"AutoGPT"——一个你可以指向自己模型的命令行智能体——依然存在，也依然免费（MIT），但背后的公司现在把精力放在了另一个带可视化构建工具的付费产品上。在决定评估哪一个版本之前，先看清许可证和文件夹名称。' },
         ],
         items: [
-          '仓库数据：187,081 星标，531 个未关闭 issue，未归档——截至本次评测仍在积极提交',
+          '仓库数据：187,453 星标，582 个未关闭 issue，未归档——截至本次评测仍在积极提交',
           'AutoGPT Platform（autogpt_platform/，agpt.co）：托管、付费的可视化智能体构建工具——Polyform Shield License（源码可见，限制竞争性商业使用）',
           '经典版 AutoGPT（classic/original_autogpt/）：原始的自主命令行智能体——MIT 许可证，仍接收安全和维护提交',
           '本地模型：经典版通过 OPENAI_API_BASE_URL 支持任何兼容 OpenAI API 的服务器（包括 Ollama），还通过 LLAMAFILE_API_BASE 原生支持 Llamafile',
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自托管 Platform 在技术上是可行的（仓库中存在 docker-compose.platform.yml、installer/ 脚本和 single-container/ 选项），但 README 的主要行动号召是注册托管产品，而不是自托管',
           'classic/original_autogpt/：原始的 CLI 驱动自主智能体，如今被定位为遗留组件，与 classic/forge（智能体构建框架）、classic/benchmark 和 classic/frontend 并列',
         ],
-        note: '仓库整体的星标数（187,000+）和 issue 数（531 个未关闭）反映的是整个仓库，其中 Platform 相关活动占主导。不要把高星标数当作经典 CLI 智能体本身依然活跃的证据——同一屋檐下的这两个组成部分走的是不同的发展轨迹。',
+        note: '仓库整体的星标数（187,000+）和 issue 数（582 个未关闭）反映的是整个仓库，其中 Platform 相关活动占主导。不要把高星标数当作经典 CLI 智能体本身依然活跃的证据——同一屋檐下的这两个组成部分走的是不同的发展轨迹。',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': '仓库状态', 'What it shows': '未归档；本次评测当天仍有提交；531 个未关闭 issue' },
+          { 'Signal': '仓库状态', 'What it shows': '未归档；本次评测当天仍有提交；582 个未关闭 issue' },
           { 'Signal': 'classic/ 提交模式', 'What it shows': '安全修复和依赖上限定期出现；没有重大新功能提交' },
           { 'Signal': '新功能落地位置', 'What it shows': 'autogpt_platform/——AutoPilot、Marketplace 和 Build 画布获得积极开发' },
           { 'Signal': '项目定位', 'What it shows': 'README 和主要行动号召推广托管版 Platform；classic 被定位为遗留 CLI 分支' },
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'AutoGPT 是 MIT 许可的吗？', a: '部分是。classic/ 文件夹（original_autogpt、forge、benchmark、frontend）采用 MIT 许可证。autogpt_platform/ 文件夹——当前的旗舰托管产品 AutoGPT Platform——则采用 Polyform Shield 许可，这是一种源码可见许可证，而非宽松的开源许可证。' },
-          { q: 'AutoGPT 还有人维护吗？', a: '有。该仓库未被归档，本次评测当天仍有提交，有 531 个未关闭的 issue。活跃的功能开发集中在 autogpt_platform/；classic/ 文件夹仍会收到安全和维护提交，但不再获得新功能。' },
+          { q: 'AutoGPT 还有人维护吗？', a: '有。该仓库未被归档，本次评测当天仍有提交，有 582 个未关闭的 issue。活跃的功能开发集中在 autogpt_platform/；classic/ 文件夹仍会收到安全和维护提交，但不再获得新功能。' },
           { q: 'AutoGPT 能配合 Ollama 使用吗？', a: '经典版 CLI 智能体可以，通过其通用的兼容 OpenAI API 的客户端——将 OPENAI_API_BASE_URL 设置为你 Ollama 服务器的 /v1 端点即可。这不是一个专门命名、专门构建的"Ollama 集成"，当前的 AutoGPT Platform 也不支持它，因为其配置中没有本地模型设置。' },
           { q: 'AutoGPT Platform 是什么？', a: 'AutoGPT Platform（agpt.co）是该项目当前的商业产品：一个托管、付费的可视化智能体构建工具，带有对话生成智能体的 AutoPilot、Agents 仪表盘、预制智能体的 Marketplace，以及基于节点的 Build 画布。技术上可以自托管，但该项目主要推广的路径是托管注册。' },
           { q: 'AutoGPT 是免费的吗？', a: '经典版 AutoGPT（MIT）可以免费自托管。AutoGPT Platform 是一个付费的托管产品；在 Polyform Shield 许可下可以自托管它，该许可允许个人或内部使用，但限制在其基础上构建具有竞争性质的商业产品。' },
@@ -2043,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: '로컬, Ollama 기반 에이전트로 AutoGPT를 도입할지 호스팅형 AutoGPT Platform을 쓸지 검토 중인 개발자, 그리고 이 프로젝트의 MIT/Polyform 이중 라이선스 구조에 혼란을 느끼는 독자',
     primaryTerm: 'AutoGPT',
@@ -2066,7 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'AutoGPT는 여전히 오픈소스이고 Ollama와 함께 작동하는가?',
         answer: '허용적 의미의 오픈소스는 프로젝트의 일부에만 해당한다: classic/original_autogpt/ 아래의 클래식 CLI 에이전트는 MIT 라이선스이며 범용 OpenAI 호환 base URL을 통해 Ollama를 가리킬 수 있다. 현재의 대표 제품인 AutoGPT Platform은 Polyform Shield 라이선스(소스 공개형, OSI 오픈소스는 아님)이며 내장된 Ollama 지원이 없다.',
         bullets: [
-          '저장소: 스타 187,081개, 열린 이슈 531개, 아카이브되지 않음, 2026-09-02에도 푸시됨',
+          '저장소: 스타 187,453개, 열린 이슈 582개, 아카이브되지 않음, 2026-09-20에도 푸시됨',
           'classic/original_autogpt/ (CLI 에이전트): MIT 라이선스',
           'autogpt_platform/ (호스팅형 제품): Polyform Shield License',
           'OPENAI_API_BASE_URL(범용 OpenAI 호환 엔드포인트)을 통한 로컬 모델 연동, 별도로 명명된 "Ollama 통합" 기능은 아님',
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '많은 사람이 기억하는 "AutoGPT" — 자신의 모델을 직접 가리켜 쓰는 커맨드라인 에이전트 — 는 여전히 존재하고 여전히 무료(MIT)지만, 이를 만든 회사는 이제 시각적 빌더를 갖춘 별도의 유료 제품에 힘을 쏟고 있다. 어느 쪽을 검토하는지 판단하기 전에 라이선스와 폴더명을 먼저 확인하라.' },
         ],
         items: [
-          '저장소: 스타 187,081개, 열린 이슈 531개, 아카이브되지 않음 — 이 리뷰 작성 시점에도 활발히 푸시되고 있음',
+          '저장소: 스타 187,453개, 열린 이슈 582개, 아카이브되지 않음 — 이 리뷰 작성 시점에도 활발히 푸시되고 있음',
           'AutoGPT Platform (autogpt_platform/, agpt.co): 호스팅형 유료 비주얼 에이전트 빌더 — Polyform Shield License(소스 공개형, 경쟁 상업적 이용 제한)',
           '클래식 AutoGPT (classic/original_autogpt/): 원조 자율 CLI 에이전트 — MIT 라이선스, 여전히 보안 및 유지보수 커밋을 받는다',
           '로컬 모델: 클래식은 OPENAI_API_BASE_URL을 통해 OpenAI API 호환 서버(Ollama 포함)를 지원하며, LLAMAFILE_API_BASE를 통한 네이티브 Llamafile 지원도 있다',
@@ -2121,7 +2121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Platform을 자체 호스팅하는 것은 기술적으로 가능하다(저장소에 docker-compose.platform.yml, installer/ 스크립트, single-container/ 옵션이 존재한다), 다만 README의 주된 행동 유도는 자체 호스팅이 아니라 호스팅형 제품 가입이다',
           'classic/original_autogpt/: 원조 CLI 기반 자율 에이전트로, 이제 classic/forge(에이전트 구축 프레임워크), classic/benchmark, classic/frontend와 함께 레거시 구성 요소로 자리매김하고 있다',
         ],
-        note: '헤드라인 스타 수(187,000개 이상)와 이슈 수(531건 열림)는 저장소 전체를 나타내며, 이는 대부분 Platform 활동이 차지한다. 이 높은 스타 수를 클래식 CLI 에이전트 자체가 활발히 성장하고 있다는 증거로 읽어서는 안 된다 — 두 구성 요소는 같은 지붕 아래 있지만 서로 다른 궤적을 그리고 있다.',
+        note: '헤드라인 스타 수(187,000개 이상)와 이슈 수(582건 열림)는 저장소 전체를 나타내며, 이는 대부분 Platform 활동이 차지한다. 이 높은 스타 수를 클래식 CLI 에이전트 자체가 활발히 성장하고 있다는 증거로 읽어서는 안 된다 — 두 구성 요소는 같은 지붕 아래 있지만 서로 다른 궤적을 그리고 있다.',
       },
       license: {
         id: 'autogpt-license-explained',
@@ -2148,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         itemHeadings: true,
         rows: [
-          { 'Signal': '저장소 상태', 'What it shows': '아카이브되지 않음; 이 리뷰 작성 당일에도 푸시됨; 열린 이슈 531건' },
+          { 'Signal': '저장소 상태', 'What it shows': '아카이브되지 않음; 이 리뷰 작성 당일에도 푸시됨; 열린 이슈 582건' },
           { 'Signal': 'classic/ 커밋 패턴', 'What it shows': '보안 수정과 의존성 상한 조치는 정기적으로 발생; 주요 신규 기능 커밋은 없음' },
           { 'Signal': '새 기능이 반영되는 곳', 'What it shows': 'autogpt_platform/ — AutoPilot, Marketplace, Build 캔버스가 적극적으로 개발됨' },
           { 'Signal': '프로젝트의 방향성', 'What it shows': 'README와 주된 행동 유도는 호스팅형 Platform을 홍보; classic은 레거시 CLI 트랙으로 자리매김' },
@@ -2260,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'AutoGPT는 MIT 라이선스인가?', a: '부분적으로 그렇다. classic/ 폴더(original_autogpt, forge, benchmark, frontend)는 MIT 라이선스다. 현재의 대표 호스팅형 제품인 autogpt_platform/ 폴더는 허용적 오픈소스가 아닌 소스 공개형 라이선스인 Polyform Shield 아래 라이선스된다.' },
-          { q: 'AutoGPT는 여전히 유지보수되는가?', a: '그렇다. 저장소는 아카이브되지 않았고 이 리뷰 작성 당일에도 푸시되었으며, 열린 이슈가 531건 있다. 적극적인 기능 개발은 autogpt_platform/에 집중되어 있고, classic/ 폴더는 여전히 보안 및 유지보수 커밋을 받지만 새 기능은 받지 않는다.' },
+          { q: 'AutoGPT는 여전히 유지보수되는가?', a: '그렇다. 저장소는 아카이브되지 않았고 이 리뷰 작성 당일에도 푸시되었으며, 열린 이슈가 582건 있다. 적극적인 기능 개발은 autogpt_platform/에 집중되어 있고, classic/ 폴더는 여전히 보안 및 유지보수 커밋을 받지만 새 기능은 받지 않는다.' },
           { q: 'AutoGPT는 Ollama와 함께 작동하는가?', a: '클래식 CLI 에이전트는 범용 OpenAI API 호환 클라이언트를 통해 작동한다 — OPENAI_API_BASE_URL을 Ollama 서버의 /v1 엔드포인트로 설정하면 된다. 이는 명명된, 목적에 맞게 구축된 "Ollama 통합"이 아니며, 로컬 모델 설정이 없는 현재의 AutoGPT Platform에서는 지원되지 않는다.' },
           { q: 'AutoGPT Platform이란 무엇인가?', a: 'AutoGPT Platform(agpt.co)은 이 프로젝트의 현재 상업 제품으로, 채팅으로 에이전트를 만드는 AutoPilot, Agents 대시보드, 사전 제작 에이전트 Marketplace, 노드 기반 Build 캔버스를 갖춘 호스팅형 유료 비주얼 에이전트 빌더다. 기술적으로 자체 호스팅할 수도 있지만, 프로젝트가 홍보하는 주된 경로는 호스팅형 가입이다.' },
           { q: 'AutoGPT는 무료로 사용할 수 있는가?', a: '클래식 AutoGPT(MIT)는 무료로 자체 호스팅할 수 있다. AutoGPT Platform은 유료 호스팅형 제품이며, 자체 호스팅은 Polyform Shield 라이선스 아래 가능하다. 이 라이선스는 개인적 또는 내부적 이용은 허용하지만 이를 기반으로 경쟁 상업 제품을 만드는 것은 제한한다.' },

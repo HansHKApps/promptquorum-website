@@ -34,5 +34,11 @@ export const app: ToolRecord = {
     ko: '클래식 CLI 에이전트, API URL로 Ollama 연결',
   },
   reviewSlug: 'autogpt-local-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  // No pqReview.version: this tile is specifically the classic/local CLI
+  // agent (classic/original_autogpt/ in the monorepo), which ships no
+  // version tags of its own — only the separate autogpt_platform/ product
+  // does (currently autogpt-platform-beta-v0.8.0). Setting a version here
+  // would misattribute the Platform's tag to Classic. Repo-wide stats
+  // (stars/issues/push date) verified 2026-09-20 instead — see the article.
+  lastVerifiedDate: '2026-09-20',
 }
