@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ko: '특정 소비자용 GPU에 맞춰 손으로 튜닝한 커널과 추측적 디코딩을 사용하는 로컬 LLM 추론 서버',
   },
   reviewSlug: 'lucebox-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, amdGpu: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

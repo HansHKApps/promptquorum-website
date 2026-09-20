@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '네이티브 macOS 앱, Ollama/MLX/LM Studio를 통한 로컬 모델',
   },
   reviewSlug: 'osaurus-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, desktopApp: true, headless: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

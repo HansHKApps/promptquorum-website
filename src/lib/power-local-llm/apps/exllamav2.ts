@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'exllamav2-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.3.2', versionSourceUrl: 'https://github.com/turboderp-org/exllamav2/releases/tag/v0.3.2' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { nvidiaGpu: true, distributed: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

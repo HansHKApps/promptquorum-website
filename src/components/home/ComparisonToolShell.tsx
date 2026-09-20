@@ -156,8 +156,8 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
                 {rows.map((r, i) => (
                   <span key={r.slug}>
                     {i > 0 && ' · '}
-                    {r.reviewSlug ? (
-                      <Link href={`${localePrefix}/power-local-llm/${r.reviewSlug}`} className="font-semibold text-primary hover:underline">
+                    {r.reviewPath ? (
+                      <Link href={`${localePrefix}${r.reviewPath}`} className="font-semibold text-primary hover:underline">
                         {r.name}
                       </Link>
                     ) : (

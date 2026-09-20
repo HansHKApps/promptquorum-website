@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ar: 'شغّل نماذج اللغة الكبيرة محليًا عبر واجهة أوامر Docker، مدعومة بـ llama.cpp أو vLLM مع نقطة نهاية متوافقة مع OpenAI',
     ko: 'Docker CLI로 LLM을 로컬에서 실행, llama.cpp 또는 vLLM 기반, OpenAI 호환 엔드포인트 제공',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

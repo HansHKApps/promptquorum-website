@@ -38,5 +38,7 @@ export const app: ToolRecord = {
     ar: 'مدير عنقود وحدات معالجة رسومية مفتوح المصدر لتشغيل وتوسيع النماذج اللغوية المحلية على أجهزة داخل المؤسسة',
     ko: '온프레미스 하드웨어에서 로컬 LLM을 실행하고 확장하는 오픈소스 GPU 클러스터 관리자',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, modelLibrary: true, headless: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

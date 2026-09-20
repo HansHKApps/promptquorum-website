@@ -35,5 +35,7 @@ export const app: ToolRecord = {
     ko: 'Python이나 llama.cpp 없이 로컬 GGUF·SafeTensors 모델을 제공하는, 순수 Rust로 작성된 단일 바이너리 OpenAI 호환 추론 서버',
   },
   reviewSlug: 'shimmy-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true },
   lastVerifiedDate: '2026-09-18',
 }

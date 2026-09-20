@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '에이전트 파이프라인을 위한 구조화 추론 서빙',
   },
   reviewSlug: 'sglang-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { nvidiaGpu: true, amdGpu: true, cpuInference: true, distributed: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

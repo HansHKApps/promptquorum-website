@@ -41,5 +41,7 @@ export const app: ToolRecord = {
   },
   mcpSupport: true, // README lists MCP tool calling as a first-class feature, verified 2026-09-18
   reviewSlug: 'vllm-mlx-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, appleSilicon: true },
   lastVerifiedDate: '2026-09-18',
 }

@@ -38,6 +38,8 @@ export const app: ToolRecord = {
     ar: 'عميل ذكاء اصطناعي محلي معزول تماماً (air-gapped) يجمع محرك استدلال ونماذج وخوادم MCP في ملف تنفيذي واحد',
     ko: '추론 엔진, 모델, MCP 서버를 하나의 실행 파일로 묶은 에어갭 로컬 AI 클라이언트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { desktopApp: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'ypipe-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
   mcpSupport: true, // tagline claims it bundles "MCP servers" into its executable — verified 2026-09-14

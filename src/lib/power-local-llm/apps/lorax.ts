@@ -42,5 +42,7 @@ export const app: ToolRecord = {
   // of chronological/semver order. Verified the real latest via the full
   // /releases page: v0.12.1 (Nov 2026). See check-app-versions.mjs's docstring.
   pqReview: { date: '2026-09-20', version: 'v0.12.1', versionSourceUrl: 'https://github.com/predibase/lorax/releases/tag/v0.12.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { openaiApi: true, nvidiaGpu: true, distributed: true },
   lastVerifiedDate: '2026-09-18',
 }

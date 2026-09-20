@@ -315,6 +315,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-voice-audio-compared',
   // Category comparison guide for images-video (all 9 locales) — generated table, see apps/compare-schema.ts
   'local-llm-images-video-compared',
+  // Category comparison guide for run-serve (all 9 locales) — generated table, see apps/compare-schema.ts
+  'local-llm-run-serve-compared',
   'coqui-tts-review',
   'xtts-v2-review',
   'bark-tts-review',
