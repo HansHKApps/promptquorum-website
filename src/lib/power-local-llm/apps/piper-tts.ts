@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
   engine: 'builtin',
-  license: 'MIT',
+  license: 'GPL-3.0', // maintained repo OHF-Voice/piper1-gpl is GPL-3.0 (verified 2026-09-20); the original rhasspy/piper (MIT) is archived
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/OHF-Voice/piper1-gpl README: "a fast and local neural text-to-speech engine" (compact ONNX voice models) used in Home Assistant, NVDA, and JetsonGPT for offline/embedded use; no numeric RAM minimum is published in the official README, but it is CPU-only by design with no GPU/VRAM requirement — verified 2026-09-13
   stars: 11300,

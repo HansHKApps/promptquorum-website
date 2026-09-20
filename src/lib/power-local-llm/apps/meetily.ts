@@ -13,7 +13,7 @@ export const app: ToolRecord = {
   worksWith: ['Ollama', 'Whisper', 'Parakeet'],
   engine: 'both', // bundles its own local Parakeet/Whisper transcription engine and calls a local Ollama model for summarization, verified 2026-09-18
   license: 'MIT',
-  price: 'free',
+  price: 'freemium', // Community Edition is MIT/free; paid Meetily Pro tier exists (github.com/Zackriya-Solutions/meetily, review says $10/user/month) — verified 2026-09-20
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true },
   stars: 30898, // github.com/Zackriya-Solutions/meetily, verified 2026-09-18
   addedDate: '2026-09-18',
