@@ -119,6 +119,23 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   clustered: 'colClustered',
   managedCloud: 'colManagedCloud',
   noteApp: 'colNoteApp',
+  builtInEngine: 'colBuiltInEngine',
+  ollama: 'colOllama',
+  customEndpoint: 'colCustomEndpoint',
+  mcp: 'colMcp',
+  fileChat: 'colFileChat',
+  voice: 'colVoice',
+  offline: 'colOffline',
+  importModels: 'colImportModels',
+  modelDownloads: 'colModelDownloads',
+  visionInput: 'colVisionInput',
+  multiUser: 'colMultiUser',
+  memory: 'colMemory',
+  toolUse: 'colToolUse',
+  characterCards: 'colCharacterCards',
+  lorebooks: 'colLorebooks',
+  groupChats: 'colGroupChats',
+  localBackends: 'colLocalBackends',
   semanticSearch: 'colSemanticSearch',
   chatNotes: 'colChatNotes',
   webSearch: 'colWebSearch',
@@ -138,6 +155,11 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'vector-databases': 'segVector',
   'notes-integrations': 'segNotes',
   'local-search': 'segSearch',
+  'desktop-chat': 'segDesktop',
+  'mobile-chat': 'segMobile',
+  'web-chat': 'segWebSelf',
+  assistants: 'segAssistants',
+  roleplay: 'segRoleplay',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }
@@ -185,7 +207,7 @@ function commonCell(t: ToolRecord, key: string, cs: CompareStrings): string {
 }
 
 function inSegment(t: ToolRecord, seg: CompareSegment): boolean {
-  return t.categories.some((c) => seg.subs.includes(c))
+  return t.categories.some((c) => seg.subs.includes(c)) && (!seg.interfaces || t.interfaces.some((i) => seg.interfaces!.includes(i)))
 }
 
 /** A guide is only linked once it is publicly indexable, so nothing points at a draft. */

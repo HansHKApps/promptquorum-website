@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '캐릭터 채팅 및 롤플레이용 데스크톱 클라이언트',
   },
   reviewSlug: 'backyard-ai-review-local-roleplay-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { lorebooks: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -38,5 +38,7 @@ export const app: ToolRecord = {
   reviewSlug: 'nanobot-review', // dedicated PromptQuorum review — added 2026-09-14
   mcpSupport: true, // tagline claims "MCP tools" as a first-class feature — verified 2026-09-14
   pqReview: { date: '2026-09-20', version: 'v0.3.5', versionSourceUrl: 'https://github.com/HKUDS/nanobot/releases/tag/v0.3.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true, toolUse: true },
   lastVerifiedDate: '2026-09-20',
 }

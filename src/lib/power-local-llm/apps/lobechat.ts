@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '플러그인 마켓플레이스가 있는 현대적이고 세련된 인터페이스',
   },
   reviewSlug: 'lobechat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, mcp: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

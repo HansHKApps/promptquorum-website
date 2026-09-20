@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'enchanted-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.8.2', versionSourceUrl: 'https://github.com/gluonfield/enchanted/releases/tag/v1.8.2' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { builtInEngine: false, ollama: true, voice: true, visionInput: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

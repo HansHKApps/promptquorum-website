@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'iOS 및 macOS용 세련된 로컬 LLM 앱',
   },
   reviewSlug: 'private-llm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

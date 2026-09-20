@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Android 중심 로컬 LLM 앱',
   },
   reviewSlug: 'layla-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

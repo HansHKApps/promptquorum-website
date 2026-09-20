@@ -39,5 +39,7 @@ export const app: ToolRecord = {
     ko: 'iPhone, iPad, Mac용 무료 멀티 포맷 로컬 AI — GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models 지원, 온디바이스 문서 채팅 포함',
   },
   reviewSlug: 'noema-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true },
   lastVerifiedDate: '2026-09-12',
 }

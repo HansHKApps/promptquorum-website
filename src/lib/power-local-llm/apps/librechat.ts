@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '팀 기능을 갖춘 멀티모델 ChatGPT 대안',
   },
   reviewSlug: 'librechat-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, ollama: true, customEndpoint: true, mcp: true, fileChat: true, multiUser: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: 'iPhone용 구글의 무료 온디바이스 Gemma 4 앱',
   },
   reviewSlug: 'google-ai-edge-gallery-review', // dedicated PromptQuorum review
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voice: true, offline: true, importModels: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
 }

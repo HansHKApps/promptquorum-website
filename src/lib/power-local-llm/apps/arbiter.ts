@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'iOS 온디바이스 채팅 모델, 또는 LAN으로 LM Studio/Ollama 연결',
   },
   reviewSlug: 'arbiter-local-ai-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

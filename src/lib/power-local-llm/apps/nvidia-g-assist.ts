@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ar: 'مساعد ذكاء اصطناعي على الجهاز لأجهزة GeForce RTX، يشغّل نموذج لغة صغيراً محلياً لضبط الألعاب وإعدادات النظام',
     ko: 'GeForce RTX PC용 온디바이스 AI 어시스턴트, 로컬 소형 언어 모델을 실행해 게임 및 시스템 설정을 조정',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, voice: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

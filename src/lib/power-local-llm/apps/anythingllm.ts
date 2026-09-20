@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'anythingllm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, dockerDeploy: true, apiServer: true, multiFormat: true, citations: true, desktopApp: true },
+  compare: { localLlm: true, dockerDeploy: true, apiServer: true, multiFormat: true, citations: true, desktopApp: true, builtInEngine: true, ollama: true, customEndpoint: true, mcp: true, fileChat: true, voice: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

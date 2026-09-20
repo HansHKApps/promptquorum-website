@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '온디바이스 LFM2 채팅, 플러스 OpenRouter 클라우드 및 커스텀 백엔드',
   },
   reviewSlug: 'liquid-apollo-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { modelDownloads: true },
   lastVerifiedDate: '2026-09-12',
 }

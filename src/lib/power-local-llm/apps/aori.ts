@@ -38,5 +38,7 @@ export const app: ToolRecord = {
     ko: 'Windows, macOS, Linux, Android용 로컬 우선 개인 에이전트, Ollama 사용, 클라우드 제공업체는 선택 사항',
   },
   reviewSlug: 'aori-ai-personal-agent-review', // dedicated PromptQuorum review
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { memory: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

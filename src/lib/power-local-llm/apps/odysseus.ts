@@ -38,6 +38,8 @@ export const app: ToolRecord = {
     ar: 'مساحة عمل ذكاء اصطناعي محلية أولاً وذاتية الاستضافة للدردشة والوكلاء والبحث والمستندات — أنشأها Felix Kjellberg (PewDiePie)',
     ko: '채팅, 에이전트, 리서치, 문서를 위한 자체 호스팅 로컬 우선 AI 워크스페이스 — Felix Kjellberg(PewDiePie) 제작',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { localLlm: true, dockerDeploy: true, mcp: true, memory: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'odysseus-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }

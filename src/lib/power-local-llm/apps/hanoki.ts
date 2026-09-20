@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'macOS 분기형 채팅, Ollama로 로컬 실행 또는 클라우드 API',
   },
   reviewSlug: 'hanoki-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { ollama: true, customEndpoint: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
