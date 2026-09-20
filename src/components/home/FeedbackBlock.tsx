@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 
 export function FeedbackBlock() {
   const [text, setText] = useState('')
@@ -25,8 +27,11 @@ export function FeedbackBlock() {
   }
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 h-full flex flex-col">
-      <h3 className="text-sm font-bold text-text-primary mb-2">What&apos;s your biggest local LLM headache?</h3>
+    <div className={`rounded-xl border ${SURFACE_CLASS.stat} p-4 h-full flex flex-col`}>
+      <h3 className="text-sm font-bold text-text-primary mb-2 flex items-center gap-2">
+        <HomeIcon name="feedback" />
+        What&apos;s your biggest local LLM headache?
+      </h3>
       {status === 'sent' ? (
         <p className="text-sm text-primary">Thanks — that helps.</p>
       ) : (

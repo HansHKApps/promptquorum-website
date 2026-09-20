@@ -1,4 +1,6 @@
 import { getHomeStats } from '@/lib/home/stats'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 
 export function ByTheNumbersBlock() {
   const stats = getHomeStats()
@@ -11,8 +13,11 @@ export function ByTheNumbersBlock() {
   ]
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 h-full">
-      <h3 className="text-sm font-bold text-text-primary mb-3">By the Numbers</h3>
+    <div className={`rounded-xl border ${SURFACE_CLASS.stat} p-4 h-full`}>
+      <h3 className="text-sm font-bold text-text-primary mb-3 flex items-center gap-2">
+        <HomeIcon name="stats" />
+        By the Numbers
+      </h3>
       <dl className="grid grid-cols-2 gap-4">
         {items.map((item) => (
           <div key={item.label}>

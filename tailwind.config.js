@@ -21,6 +21,14 @@ module.exports = {
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				tone: {
+					action: 'hsl(var(--tone-action))',
+					'action-edge': 'hsl(var(--tone-action-edge))',
+					list: 'hsl(var(--tone-list))',
+					'list-edge': 'hsl(var(--tone-list-edge))',
+					stat: 'hsl(var(--tone-stat))',
+					'stat-edge': 'hsl(var(--tone-stat-edge))',
+				},
 				foreground: 'hsl(var(--foreground))',
 				// Primary - Deep Violet
 				primary: {

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
 
 /**
@@ -15,8 +17,11 @@ export function ComparisonToolShell() {
   const [category, setCategory] = useState<string | null>(null)
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">Compare Tools</h2>
+    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
+      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="compare" size={20} />
+        Compare Tools
+      </h2>
       <p className="text-sm text-text-secondary mb-4">
         Comparison tool launching soon — we&apos;re building out category comparisons.
       </p>

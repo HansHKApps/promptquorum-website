@@ -7,11 +7,11 @@ export function LatestPostsBlock() {
   const posts = getLatestPosts()
 
   if (posts.length === 0) {
-    return <HomeCard size="md" title="Latest Posts" emptyState emptyMessage="New articles coming soon." />
+    return <HomeCard size="md" icon="posts" title="Latest Posts" emptyState emptyMessage="New articles coming soon." />
   }
 
   return (
-    <HomeCard size="md" title="Latest Posts">
+    <HomeCard size="md" icon="posts" title="Latest Posts">
       <ExpandableList
         items={posts.map((p) => ({
           key: p.url,
