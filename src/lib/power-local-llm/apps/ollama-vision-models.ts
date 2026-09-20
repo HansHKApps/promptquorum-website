@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Ollama를 통한 비전 지원 모델(Llama 3.2 Vision, LLaVA 등)',
   },
   reviewSlug: 'ollama-vision-models-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { ocr: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

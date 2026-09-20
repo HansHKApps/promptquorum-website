@@ -79,11 +79,37 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
+  // Pilot 2. Editing & upscaling (Real-ESRGAN, FunClip) is intentionally not a segment: two unrelated
+  // tools with nothing in common to compare. Tools without their own review are not in the table.
+  'images-video': [
+    {
+      key: 'image-video-generation',
+      label: 'Image & video generation',
+      subs: ['image-generation', 'video-generation'],
+      attributes: [
+        { key: 'inpainting', label: 'Inpainting', kind: 'boolean' },
+        { key: 'videoGeneration', label: 'Video generation', kind: 'boolean' },
+        { key: 'nodeWorkflow', label: 'Node / graph workflow editor', kind: 'boolean' },
+        { key: 'extensions', label: 'Extensions / plugins', kind: 'boolean' },
+        { key: 'lowVram', label: 'Low-VRAM mode', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'vision-ocr',
+      label: 'Vision & OCR',
+      subs: ['vision-ocr'],
+      attributes: [
+        { key: 'ocr', label: 'Reads text in images (OCR)', kind: 'boolean' },
+        { key: 'multiImage', label: 'Multiple images per prompt', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API', kind: 'boolean' },
+      ],
+    },
+  ],
   'run-serve': [],
   'chat-assistants': [],
   'code-development': [],
   'knowledge-retrieval': [],
-  'images-video': [],
   'train-operate': [],
 }
 
@@ -97,6 +123,6 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'chat-assistants': null,
   'code-development': null,
   'knowledge-retrieval': null,
-  'images-video': null,
+  'images-video': 'local-llm-images-video-compared',
   'train-operate': null,
 }

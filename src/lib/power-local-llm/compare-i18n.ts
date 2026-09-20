@@ -4,7 +4,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 
-export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison"] as const
+export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision"] as const
 export type CompareUiKey = (typeof COMPARE_UI_KEYS)[number]
 export type CompareStrings = Record<CompareUiKey, string>
 
@@ -60,7 +60,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "Choose tools ({n} selected)",
     "readFullReviews": "Read the full reviews:",
     "selectAtLeastTwo": "Select at least two tools to see the comparison.",
-    "readFullComparison": "Read the full {label} comparison"
+    "readFullComparison": "Read the full {label} comparison",
+    "colInpainting": "Inpainting",
+    "colVideoGeneration": "Video generation",
+    "colNodeWorkflow": "Node / graph workflow editor",
+    "colExtensions": "Extensions / plugins",
+    "colLowVram": "Low-VRAM mode",
+    "colOcr": "Reads text in images (OCR)",
+    "colMultiImage": "Multiple images per prompt",
+    "segImageVideo": "Image & video generation",
+    "segVision": "Vision & OCR"
   },
   "de": {
     "tool": "Werkzeug",
@@ -113,7 +122,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "Werkzeuge auswählen ({n} ausgewählt)",
     "readFullReviews": "Die vollständigen Tests lesen:",
     "selectAtLeastTwo": "Wähle mindestens zwei Werkzeuge aus, um den Vergleich zu sehen.",
-    "readFullComparison": "Den vollständigen Vergleich zu {label} lesen"
+    "readFullComparison": "Den vollständigen Vergleich zu {label} lesen",
+    "colInpainting": "Inpainting",
+    "colVideoGeneration": "Videogenerierung",
+    "colNodeWorkflow": "Node-/Graph-Workflow-Editor",
+    "colExtensions": "Erweiterungen / Plugins",
+    "colLowVram": "Low-VRAM-Modus",
+    "colOcr": "Liest Text in Bildern (OCR)",
+    "colMultiImage": "Mehrere Bilder pro Prompt",
+    "segImageVideo": "Bild- & Videogenerierung",
+    "segVision": "Vision & OCR"
   },
   "fr": {
     "tool": "Outil",
@@ -166,7 +184,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "Choisir des outils ({n} sélectionnés)",
     "readFullReviews": "Lire les avis complets :",
     "selectAtLeastTwo": "Sélectionnez au moins deux outils pour voir la comparaison.",
-    "readFullComparison": "Lire la comparaison complète {label}"
+    "readFullComparison": "Lire la comparaison complète {label}",
+    "colInpainting": "Inpainting",
+    "colVideoGeneration": "Génération de vidéo",
+    "colNodeWorkflow": "Éditeur de workflow par nœuds / graphe",
+    "colExtensions": "Extensions / plugins",
+    "colLowVram": "Mode faible VRAM",
+    "colOcr": "Lit le texte dans les images (OCR)",
+    "colMultiImage": "Plusieurs images par prompt",
+    "segImageVideo": "Génération d'images et de vidéos",
+    "segVision": "Vision et OCR"
   },
   "es": {
     "tool": "Herramienta",
@@ -219,7 +246,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "Elegir herramientas ({n} seleccionadas)",
     "readFullReviews": "Leer los análisis completos:",
     "selectAtLeastTwo": "Selecciona al menos dos herramientas para ver la comparación.",
-    "readFullComparison": "Leer la comparación completa de {label}"
+    "readFullComparison": "Leer la comparación completa de {label}",
+    "colInpainting": "Inpainting",
+    "colVideoGeneration": "Generación de video",
+    "colNodeWorkflow": "Editor de flujos por nodos / grafos",
+    "colExtensions": "Extensiones / plugins",
+    "colLowVram": "Modo de poca VRAM",
+    "colOcr": "Lee texto en imágenes (OCR)",
+    "colMultiImage": "Varias imágenes por prompt",
+    "segImageVideo": "Generación de imágenes y video",
+    "segVision": "Visión y OCR"
   },
   "ja": {
     "tool": "ツール",
@@ -272,7 +308,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "ツールを選択（{n}件選択中）",
     "readFullReviews": "詳細なレビューを読む:",
     "selectAtLeastTwo": "比較を表示するには、ツールを2つ以上選択してください。",
-    "readFullComparison": "{label}の比較を詳しく読む"
+    "readFullComparison": "{label}の比較を詳しく読む",
+    "colInpainting": "インペイント",
+    "colVideoGeneration": "動画生成",
+    "colNodeWorkflow": "ノード／グラフ型ワークフローエディタ",
+    "colExtensions": "拡張機能／プラグイン",
+    "colLowVram": "低VRAMモード",
+    "colOcr": "画像内のテキスト認識（OCR）",
+    "colMultiImage": "プロンプトあたり複数画像",
+    "segImageVideo": "画像・動画生成",
+    "segVision": "ビジョン・OCR"
   },
   "zh": {
     "tool": "工具",
@@ -325,7 +370,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "选择工具（已选 {n} 个）",
     "readFullReviews": "阅读完整评测:",
     "selectAtLeastTwo": "请至少选择两个工具以查看对比。",
-    "readFullComparison": "阅读完整的{label}对比"
+    "readFullComparison": "阅读完整的{label}对比",
+    "colInpainting": "局部重绘（Inpainting）",
+    "colVideoGeneration": "视频生成",
+    "colNodeWorkflow": "节点/图形工作流编辑器",
+    "colExtensions": "扩展/插件",
+    "colLowVram": "低显存（VRAM）模式",
+    "colOcr": "识别图片中的文字（OCR）",
+    "colMultiImage": "每个提示词支持多张图片",
+    "segImageVideo": "图像与视频生成",
+    "segVision": "视觉与 OCR"
   },
   "pt": {
     "tool": "Ferramenta",
@@ -378,7 +432,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "Escolher ferramentas ({n} selecionadas)",
     "readFullReviews": "Leia as análises completas:",
     "selectAtLeastTwo": "Selecione pelo menos duas ferramentas para ver a comparação.",
-    "readFullComparison": "Leia a comparação completa de {label}"
+    "readFullComparison": "Leia a comparação completa de {label}",
+    "colInpainting": "Inpainting",
+    "colVideoGeneration": "Geração de vídeo",
+    "colNodeWorkflow": "Editor de fluxo por nós / grafos",
+    "colExtensions": "Extensões / plugins",
+    "colLowVram": "Modo de baixa VRAM",
+    "colOcr": "Lê texto em imagens (OCR)",
+    "colMultiImage": "Várias imagens por prompt",
+    "segImageVideo": "Geração de imagens e vídeos",
+    "segVision": "Visão e OCR"
   },
   "ar": {
     "tool": "الأداة",
@@ -431,7 +494,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "اختر الأدوات (تم اختيار {n})",
     "readFullReviews": "اقرأ المراجعات الكاملة:",
     "selectAtLeastTwo": "اختر أداتين على الأقل لعرض المقارنة.",
-    "readFullComparison": "اقرأ مقارنة {label} الكاملة"
+    "readFullComparison": "اقرأ مقارنة {label} الكاملة",
+    "colInpainting": "الإكمال داخل الصورة (Inpainting)",
+    "colVideoGeneration": "توليد الفيديو",
+    "colNodeWorkflow": "محرر سير العمل بالعُقد / المخططات",
+    "colExtensions": "الإضافات / الملحقات",
+    "colLowVram": "وضع VRAM المنخفضة",
+    "colOcr": "قراءة النص في الصور (OCR)",
+    "colMultiImage": "عدة صور لكل موجّه",
+    "segImageVideo": "توليد الصور والفيديو",
+    "segVision": "الرؤية و OCR"
   },
   "ko": {
     "tool": "도구",
@@ -484,7 +556,16 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "chooseTools": "도구 선택 ({n}개 선택됨)",
     "readFullReviews": "전체 리뷰 읽기:",
     "selectAtLeastTwo": "비교를 보려면 도구를 두 개 이상 선택하세요.",
-    "readFullComparison": "{label} 전체 비교 읽기"
+    "readFullComparison": "{label} 전체 비교 읽기",
+    "colInpainting": "인페인팅",
+    "colVideoGeneration": "영상 생성",
+    "colNodeWorkflow": "노드/그래프 워크플로 편집기",
+    "colExtensions": "확장 기능 / 플러그인",
+    "colLowVram": "저VRAM 모드",
+    "colOcr": "이미지 속 텍스트 인식(OCR)",
+    "colMultiImage": "프롬프트당 여러 이미지",
+    "segImageVideo": "이미지 및 영상 생성",
+    "segVision": "비전 및 OCR"
   }
 }
 
