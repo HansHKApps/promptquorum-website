@@ -1,4 +1,4 @@
-export type HomeIconName = 'search' | 'compare' | 'posts' | 'apps' | 'review' | 'trending' | 'updated' | 'stats' | 'mentions' | 'tip' | 'feedback'
+export type HomeIconName = 'search' | 'compare' | 'posts' | 'apps' | 'review' | 'trending' | 'updated' | 'stats' | 'mentions' | 'tip' | 'feedback' | 'globe' | 'verified'
 
 // 24x24 stroke paths; stroke is currentColor so the icon inherits the accent from its parent.
 const PATHS: Record<HomeIconName, string> = {
@@ -12,6 +12,8 @@ const PATHS: Record<HomeIconName, string> = {
   stats: 'M5 20V10M12 20V4M19 20v-7',
   mentions: 'M4 5h16v11H9l-5 4V5Z',
   tip: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z',
+  globe: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.500 5.6 12 3Z',
+  verified: 'M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3ZM9 12l2.2 2.2L15.5 10',
   feedback: 'M4 20l1.5-4.5A8 8 0 1 1 8 18.5L4 20Z',
 }
 

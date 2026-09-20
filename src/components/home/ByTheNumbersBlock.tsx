@@ -1,15 +1,15 @@
 import { getHomeStats } from '@/lib/home/stats'
-import { HomeIcon } from './HomeIcon'
+import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
 
 export function ByTheNumbersBlock() {
   const stats = getHomeStats()
 
-  const items = [
-    { label: 'Apps tracked', value: stats.totalApps.toLocaleString() },
-    { label: 'Languages', value: stats.locales.toString() },
-    { label: 'Founder-verified', value: stats.founderVerified.toString() },
-    { label: 'Articles published', value: stats.totalArticles.toLocaleString() },
+  const items: { label: string; value: string; icon: HomeIconName }[] = [
+    { label: 'Apps tracked', value: stats.totalApps.toLocaleString(), icon: 'apps' },
+    { label: 'Languages', value: stats.locales.toString(), icon: 'globe' },
+    { label: 'Founder-verified', value: stats.founderVerified.toString(), icon: 'verified' },
+    { label: 'Articles published', value: stats.totalArticles.toLocaleString(), icon: 'posts' },
   ]
 
   return (
@@ -18,11 +18,14 @@ export function ByTheNumbersBlock() {
         <HomeIcon name="stats" />
         By the Numbers
       </h3>
-      <dl className="grid grid-cols-2 gap-4">
+      <dl className="grid grid-cols-2 gap-3">
         {items.map((item) => (
-          <div key={item.label}>
-            <dt className="text-xs text-text-secondary">{item.label}</dt>
-            <dd className="text-2xl font-black text-primary">{item.value}</dd>
+          <div key={item.label} className="rounded-lg border border-tone-list-edge bg-tone-list p-3">
+            <dt className="flex items-center gap-1.5 text-xs text-text-secondary">
+              <HomeIcon name={item.icon} size={14} />
+              {item.label}
+            </dt>
+            <dd className="mt-1 text-3xl font-semibold leading-none text-text-primary">{item.value}</dd>
           </div>
         ))}
       </dl>
